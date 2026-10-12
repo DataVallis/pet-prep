@@ -35,7 +35,8 @@ export interface CatGameHookOptions {
 }
 
 function refusalContext(view: ChildPetView): RefusalContext {
-  return { nowIso: view.server_time, timezone: view.timezone, scratchingOnly: onlyScratchingOpen(view.cat) };
+  // M5-R13: a dog brushes too — its refusal texts name the dog.
+  return { nowIso: view.server_time, timezone: view.timezone, scratchingOnly: onlyScratchingOpen(view.cat), dog: view.pet.species !== 'cat' };
 }
 
 function useAbandoned() {

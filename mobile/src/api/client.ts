@@ -234,17 +234,18 @@ export interface GenerateChildPinRequest {
  * A UI feature this app build can show for a new pet (backend `ClientFeature`; the schema
  * types it as `string` because unknown values are dropped server-side, not refused).
  */
-export type ClientFeature = 'behaviour_events' | 'training' | 'species_cat';
+export type ClientFeature = 'behaviour_events' | 'training' | 'species_cat' | 'dog_grooming';
 
 /**
  * What a build declares: the behaviour events ("Pelji ven", luža, pregrizen copat — M5-R02,
- * PR #42), the training mini-game ("Šola" — M5-R03) and — only once the cat HUD exists
+ * PR #42), the training mini-game ("Šola" — M5-R03), dog brushing ("Počeši" — M5-R13) and — only once the cat HUD exists
  * (`CAT_UI_READY`, M5-R06-02 / T4) — cats (`species_cat`). A new pet gets a feature only
  * when BOTH the parent's generate-pin and the child's pin-login sent it — an older build on
  * either phone never gets something it can't show.
  */
 export function clientFeatures(catUiReady: boolean = CAT_UI_READY): readonly ClientFeature[] {
-  return catUiReady ? ['behaviour_events', 'training', 'species_cat'] : ['behaviour_events', 'training'];
+  // M5-R13: this build brushes a dog ("Počeši" chip + the stroke mini-game) → `dog_grooming`.
+  return catUiReady ? ['behaviour_events', 'training', 'species_cat', 'dog_grooming'] : ['behaviour_events', 'training', 'dog_grooming'];
 }
 
 /** This build's features (see {@link clientFeatures}). */

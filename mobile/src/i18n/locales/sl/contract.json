@@ -2,6 +2,7 @@
   "screen": {
     "title": "Pogodba o odgovornosti",
     "body": "Zavezujem se, da bom vsak dan odgovorno skrbel za svojega virtualnega ljubljenčka:\n\n• Hranil ga bom, ko bo lačen.\n• Vsak dan mu bom zagotovil svežo vodo.\n• Vodil ga bom na sprehode za gibanje in zdravje.\n• Redno bom čistil za njim in skrbel za higieno.\n• Odzval se bom na opozorila, preden pride do bolezni ali virtualnega zavetišča.\n\nAli sprejemaš to odgovornost?",
+    "bodyWithBrushing": "Zavezujem se, da bom vsak dan odgovorno skrbel za svojega virtualnega ljubljenčka:\n\n• Hranil ga bom, ko bo lačen.\n• Vsak dan mu bom zagotovil svežo vodo.\n• Vodil ga bom na sprehode za gibanje in zdravje.\n• Redno bom čistil za njim in skrbel za higieno.\n• Redno ga bom česal, da se mu dlaka ne bo zavozlala.\n• Odzval se bom na opozorila, preden pride do bolezni ali virtualnega zavetišča.\n\nAli sprejemaš to odgovornost?",
     "padHint": "Podpiši se s prstom v okvir spodaj",
     "padLabel": "Polje za podpis",
     "clear": "Pobriši",

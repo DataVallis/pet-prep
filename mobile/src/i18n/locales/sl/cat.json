@@ -398,7 +398,8 @@
     },
     "family": {
       "activities": {
-        "fed_pet": "nahranil(a) muco"
+        "fed_pet": "nahranil(a) muco",
+        "groomed_pet": "počesal(a) muco"
       },
       "reasons": {
         "game_over": "Muca je bila odvzeta — igra je končana.",
@@ -415,6 +416,9 @@
         "deleteErrors": {
           "paid_challenge": "Ta izbris odstrani muco, za katero je bil kupljen 12-tedenski izziv. Odkljukajte potrditev, da je nakup porabljen."
         }
+      },
+      "systemActivities": {
+        "pet_coat_matted": "Muci se je zavozlala dlaka"
       }
     },
     "parent": {

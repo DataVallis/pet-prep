@@ -61,8 +61,38 @@ export const KNOWN_BREEDS = Object.keys(BREED_SPECIES) as BreedType[];
  */
 export const GROOMING_CAT_BREEDS: readonly BreedType[] = ['maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal'];
 
+/**
+ * Dog breeds with a weekly brushing routine (M5-R13, David 2026-10-12 "kot pri mački"; server
+ * `grooming_sessions_per_week`, e.g. Rottweiler 1×, Pembroke Welsh Corgi 3×, Yorkshire Terrier
+ * every day). The mutt and the Border Collie have none (no grooming statement in the sources).
+ * A dog brushes only when its pet has `grooming_enabled` (both apps declared `dog_grooming`).
+ */
+export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
+  'labrador_retriever',
+  'golden_retriever',
+  'french_bulldog',
+  'german_shepherd',
+  'cavalier_king_charles_spaniel',
+  'beagle',
+  'standard_poodle',
+  'dachshund',
+  'australian_shepherd',
+  'havanese',
+  'west_highland_white_terrier',
+  'bernese_mountain_dog',
+  'siberian_husky',
+  'rottweiler',
+  'bulldog',
+  'german_shorthaired_pointer',
+  'yorkshire_terrier',
+  'cane_corso',
+  'pembroke_welsh_corgi',
+  'dobermann',
+];
+
+/** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
 export function hasGroomingRoutine(breed: unknown): boolean {
-  return isKnownBreed(breed) && GROOMING_CAT_BREEDS.includes(breed);
+  return isKnownBreed(breed) && (GROOMING_CAT_BREEDS.includes(breed) || GROOMING_DOG_BREEDS.includes(breed));
 }
 
 /**

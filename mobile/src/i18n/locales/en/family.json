@@ -88,7 +88,7 @@
     "played_wand": "played with the feather wand",
     "scooped_litter": "cleaned the litter box",
     "changed_litter": "changed all the litter",
-    "groomed_pet": "brushed the cat",
+    "groomed_pet": "brushed the dog",
     "resolved_scratching": "carried the cat to the scratching post and praised it"
   },
   "systemActivities": {
@@ -98,7 +98,7 @@
     "pet_chewed": "The dog chewed a slipper",
     "pet_scratched": "The cat scratched the sofa",
     "pet_litter_accident": "The cat made a mess next to the litter box",
-    "pet_coat_matted": "The cat's fur got knotted"
+    "pet_coat_matted": "The dog's coat got knotted"
   },
   "petStatus": {
     "game_over": "Game over — the dog was taken away",

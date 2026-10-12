@@ -166,7 +166,7 @@ describe('PetPickerStep', () => {
     const lab = screen.getByTestId('breed-option-labrador_retriever');
     expect(lab).toHaveTextContent(/Labradorec/);
     expect(lab).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
-    expect(lab).toHaveTextContent(/Del 12-tedenskega izziva\./);
+    expect(lab).toHaveTextContent(/Del 12-tedenskega izziva · česanje 1× na teden/);
 
     const suits = screen.getByTestId('breed-suitability-labrador_retriever-suits');
     expect(suits).toHaveTextContent('Primerno za:aktivno družinodružinsko življenjeveliko hišo z vrtomdom z drugimi ljubljenčki');

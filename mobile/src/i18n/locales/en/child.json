@@ -171,5 +171,41 @@
       "needsUpdate": "Health Connect needs to be installed or updated first. Ask a parent to help.",
       "openStore": "Open Google Play"
     }
+  },
+  "grooming": {
+    "title": "Brush your pup",
+    "intro": "Brush its coat gently with your finger, stroke after stroke, from head to tail.",
+    "matted": "Its coat has a knot. This brushing takes a bit longer ({{seconds}} s) and gets the knot out.",
+    "week": "Brushing this week: {{done}} of {{goal}}",
+    "weekDone": "All of this week's brushing is done ✓",
+    "start": "Start brushing",
+    "stroke": "Brush once",
+    "strokeA11y": "Brush your pup once",
+    "stageA11y": "Your pup. Stroke it with your finger to brush its coat.",
+    "steps": {
+      "1": "Head and neck",
+      "2": "Back",
+      "3": "Sides and tail"
+    },
+    "result": {
+      "successTitle": "Soft and shiny!",
+      "success": "Your pup's coat is brushed. This brushing counts for the week.",
+      "failTitle": "This brushing didn't count"
+    },
+    "starting": "Your pup is getting ready …",
+    "chip": "Brush",
+    "chipA11y": "Brush your pup. This week: {{done}} of {{goal}}.",
+    "chipMatted": "Its coat has a knot — brush it.",
+    "errors": {
+      "grooming_not_available": "This pup doesn't need brushing.",
+      "grooming_done_today": "Your pup was already brushed today. Brush it again {{when}}.",
+      "grooming_done_today_no_time": "Your pup was already brushed today. Brush it again tomorrow.",
+      "grooming_quiet_hours": "Your pup is sleeping now. Brush it {{when}}.",
+      "grooming_quiet_hours_no_time": "Your pup is sleeping now. Brush it after quiet hours.",
+      "grooming_session_active": "Someone else is brushing your pup. Try again {{when}}.",
+      "grooming_session_active_no_time": "Someone else is brushing your pup. Try again in a minute.",
+      "care_session_active": "Someone else is doing something with your pup right now. Try again {{when}}.",
+      "care_session_active_no_time": "Someone else is doing something with your pup right now. Try again in a minute."
+    }
   }
 }

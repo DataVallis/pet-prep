@@ -4,7 +4,8 @@
  * time (`openCatGame` refuses a second one). The cat HUD dock (R06-08b) opens a game with
  * `useAppStore.getState().openCatGame(kind)` and places `<CatCareOverlay view={view} />`
  * next to the other HUD overlays. A pet without the matching block (a dog, a domestic cat
- * for grooming, an older server) renders nothing.
+ * for grooming, an older server) renders nothing. M5-R13: a brushed dog has the `grooming`
+ * block, so its "Počeši" opens the same grooming game (with the dog's words).
  */
 
 import { useEffect } from 'react';

@@ -690,7 +690,7 @@ export interface paths {
         get?: never;
         put?: never;
         /**
-         * Grooming of a brushed cat — Maine Coon, Ragdoll, British Shorthair (M5-R06-05, CAT_SPEC Q8): start a combing session
+         * Grooming of a brushed cat (M5-R06-05, CAT_SPEC Q8) or a brushed dog (M5-R13, `grooming_enabled`): start a brushing session
          *     (~30 s; ~60 s while the coat is matted — `session.matted`). 422
          *     grooming_not_available | needs_cleaning | grooming_week_done |
          *     grooming_done_today | grooming_session_active | grooming_quiet_hours
@@ -714,7 +714,7 @@ export interface paths {
         get?: never;
         put?: never;
         /**
-         * Grooming of a brushed cat — Maine Coon, Ragdoll, British Shorthair (M5-R06-05): finish with the comb strokes.
+         * Grooming of a brushed cat (M5-R06-05) or a brushed dog (M5-R13): finish with the brush strokes.
          *     `accepted` = one of the week's groomings (and a matted coat resolved);
          *     `rejected` = not enough (no penalty). 422 grooming_not_available |
          *     care_session_*; 423 while locked
@@ -1710,6 +1710,12 @@ export interface components {
                 /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                 expires_at: string | null;
             };
+            /**
+             * @description M5-R13: the weekly brushing routine can apply to this pet (every profiled
+             *     cat; a dog whose creating apps declared `dog_grooming`). Whether the breed
+             *     has one is its `grooming_sessions_per_week` row — the contract's brushing line.
+             */
+            grooming_enabled: boolean;
         };
         /** Pet */
         Pet: {
@@ -1774,6 +1780,7 @@ export interface components {
             species: components["schemas"]["Species"];
             pet_look_id: number | null;
             name: string | null;
+            grooming_enabled: boolean;
         };
         /**
          * PetOrigin
@@ -2914,9 +2921,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -3398,9 +3405,9 @@ export interface operations {
                                 session_running: boolean;
                             } | null;
                         } | null;
-                        /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                        /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                         grooming: {
-                            /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                            /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                             goal_per_week: number;
                             done_this_week: number;
                             week_started_at: string;
@@ -3902,9 +3909,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -4404,9 +4411,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -4906,9 +4913,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -5408,9 +5415,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -5910,9 +5917,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -6416,9 +6423,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -6922,9 +6929,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -7428,9 +7435,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -7930,9 +7937,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -8436,9 +8443,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -8938,9 +8945,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -9440,9 +9447,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -9946,9 +9953,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -10448,9 +10455,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -10954,9 +10961,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -11456,9 +11463,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -11962,9 +11969,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;
@@ -12468,9 +12475,9 @@ export interface operations {
                                     session_running: boolean;
                                 } | null;
                             } | null;
-                            /** @description M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet. */
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
                             grooming: {
-                                /** @description Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart). */
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
                                 goal_per_week: number;
                                 done_this_week: number;
                                 week_started_at: string;

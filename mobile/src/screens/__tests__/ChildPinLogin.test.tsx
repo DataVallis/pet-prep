@@ -64,6 +64,7 @@ function pinLoginResponse(overrides: Partial<PinLoginResponse> = {}): PinLoginRe
       media_status: 'disabled',
       media: makeMedia(),
       profile: makePetProfile(),
+      grooming_enabled: false,
     },
     awaiting_contract: true,
     ...overrides,
