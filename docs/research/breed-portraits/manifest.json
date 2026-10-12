@@ -25,7 +25,7 @@
             "kind": "ai_photo",
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:b775a1b48d7073964cd089ace027151fbcf996769dba5b2294ffea224e9f9329",
-            "generated_at": "2026-10-10T05:47:20+00:00",
+            "generated_at": "2026-10-10T05:49:32+00:00",
             "cost_usd": 0.15
         },
         {
@@ -230,6 +230,18 @@
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:c8708c3a9eb9df96d2bea4c497a32e695c6bf8e34e1844690415bc9a712b10ed",
             "generated_at": "2026-10-12T04:37:29+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "pembroke_welsh_corgi",
+            "species": "dog",
+            "file": "dog/pembroke-welsh-corgi.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:af22b68d3e35cf939053cf9239b179237a49ca147683a99cb93c917c87706f28",
+            "generated_at": "2026-10-12T07:53:39+00:00",
             "cost_usd": 0.15
         },
         {
