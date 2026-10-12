@@ -1784,7 +1784,7 @@ export interface components {
         };
         /**
          * PetOrigin
-         * @description Where the dog came from (M5-R01, REALISM_SPEC §1, David 2026-10-05): bought from a breeder or adopted from a shelter. Chosen by the parent at pet creation; free for the mutt in every combination. Mirrored in the pets_origin_check constraint.
+         * @description Where the dog came from (M5-R01, REALISM_SPEC §1, David 2026-10-05): bought from a breeder or adopted from a shelter. Chosen by the parent at pet creation. A non-pedigree free breed (mutt / domestic cat) is adoption only: generate-pin turns "bought" into "adopted" for it (David 2026-10-12). Mirrored in the pets_origin_check constraint.
          * @enum {string}
          */
         PetOrigin: "bought" | "adopted";
@@ -2721,6 +2721,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -3205,6 +3213,14 @@ export interface operations {
                                 end: string;
                             } | null;
                             last_fed_at: string;
+                            /**
+                             * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                             *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                             *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                             *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                             *     steps still count.
+                             */
+                            digesting_until: string | null;
                         };
                         water: {
                             times_per_day: string | 0;
@@ -3709,6 +3725,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -4211,6 +4235,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -4713,6 +4745,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -5215,6 +5255,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -5717,6 +5765,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -6223,6 +6279,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -6729,6 +6793,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -7235,6 +7307,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -7737,6 +7817,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -8243,6 +8331,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -8745,6 +8841,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -9247,6 +9351,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -9753,6 +9865,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -10255,6 +10375,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -10761,6 +10889,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -11263,6 +11399,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -11769,6 +11913,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;
@@ -12275,6 +12427,14 @@ export interface operations {
                                     end: string;
                                 } | null;
                                 last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
                             };
                             water: {
                                 times_per_day: string | 0;

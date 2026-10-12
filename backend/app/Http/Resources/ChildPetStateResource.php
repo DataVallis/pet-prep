@@ -201,10 +201,11 @@ class ChildPetStateResource extends JsonResource
                     : null,
                 'last_fed_at' => $iso($feeding?->lastFedAt),
                 /**
-                 * M5-R16 (David 2026-10-12): until this instant the app shows "wait with the
-                 * walk — the dog is digesting" (last meal + the breed's meal / exercise gap,
-                 * Cane Corso / Dobermann 60 min). Null for every other breed, a cat, a legacy
-                 * pet, or once the gap has passed. Only a warning — steps still count.
+                 * M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                 * warning (wait with the walk, the dog is digesting): last meal + the breed's
+                 * meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                 * breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                 * steps still count.
                  *
                  * @var string|null
                  */
