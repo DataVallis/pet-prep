@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "16b413b27a30d940e21db3db7ab959a060190d521907d4cb998cea344d4ddf63"
+      "sha256": "f71d14f9a6ad83ee12cbac82a4b974e3a6644bacbbd8d16b9be4e69b4f74ad2a"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "4c3b19a79ba006682e476a92716c46cb4b9022c9f98352782444a0f61d14e0c3"
+      "sha256": "20857a67ed90c3a8b9ce82e32e083ec788bdf63a22b139e16b879b3b316a8ee8"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,27 +25,27 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "5b390e886e5fabf3044ad7e380f3f7b8f40d83cbdf3efef1e2d98722686471e6"
+      "sha256": "fb2702e1b66b587effac711635345edb8c0566275d036aff6573ae1fd05dbf1c"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "687e25b67f42359c5b92dbf1926cdbc838abb04ae332efaa1122b05ace46ad5b"
+      "sha256": "047f58995de4d75fd22b0426d8e86b0f1715ad16f21792550ea1f4a3420d3baf"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "06d031515a40cf5df27ec3c31e86c58f5608bad8399d68dd1ad50da4f748d49d"
+      "sha256": "c129b92aaa2ff2d0c9b064eb67cfc9f2f00678f0eb7e4b3eaa6d0c5829546be9"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "b4cc7d3ce3a9537b0209dc7272b25521acd9b8473330d2965fdf661715e400c7"
+      "sha256": "a1ada22f45c728cb0e5abddc52c03bccbb9039000d5e6f2f0927cd7be5fd92ea"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "c8ed311e92b55dd5f0cd9a40286548c4d916c29ce93fa4b509492ef042f51c8f"
+      "sha256": "c78bf8da33a265b59ae6a60688897e1d0b411a87573aa00fd8d7d4ee54fa3a9f"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "91ae800a4b7319232f10e9cde2b9282a72263a3aa52f9300faec67c2ee7b054f"
+      "sha256": "eb2b3d4f6d9232f5e3a68a94b949bc273c5c28fedb03eecba2b03e2e20f5eaed"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -177,7 +177,7 @@
         }
       },
       "status": "available",
-      "breed_count": 20,
+      "breed_count": 21,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -12203,6 +12203,603 @@
       ]
     },
     {
+      "id": "dobermann",
+      "species": "dog",
+      "order": 20,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Dobermann",
+        "sl": "Doberman"
+      },
+      "slug": {
+        "en": "dobermann",
+        "sl": "doberman"
+      },
+      "synonyms": {
+        "en": [
+          "Doberman",
+          "Doberman Pinscher",
+          "Dobermann Pinscher"
+        ],
+        "sl": [
+          "dobermann",
+          "doberman pinscher"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S209"
+          ],
+          "ref": "dobermann.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              68,
+              72
+            ],
+            "female": [
+              63,
+              68
+            ]
+          },
+          "source_ids": [
+            "S207"
+          ],
+          "ref": "dobermann.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              40,
+              45
+            ],
+            "female": [
+              32,
+              35
+            ]
+          },
+          "source_ids": [
+            "S207"
+          ],
+          "ref": "dobermann.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "dobermann.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S209"
+          ],
+          "ref": "dobermann.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S209"
+          ],
+          "ref": "dobermann.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S209"
+          ],
+          "ref": "dobermann.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S209"
+          ],
+          "ref": "dobermann.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S209"
+          ],
+          "ref": "dobermann.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 5,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "dobermann.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 143,
+            "group": 2,
+            "section": 1,
+            "origin": "DE"
+          },
+          "source_ids": [
+            "S208"
+          ],
+          "ref": "dobermann.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia_arthritis",
+          "source_ids": [
+            "S211"
+          ],
+          "ref": "dobermann.health.hip_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "wobbler_syndrome",
+          "source_ids": [
+            "S211"
+          ],
+          "ref": "dobermann.health.wobbler",
+          "confidence": "medium"
+        },
+        {
+          "key": "heart_muscle_disease",
+          "source_ids": [
+            "S211"
+          ],
+          "ref": "dobermann.health.heart_dcm",
+          "confidence": "medium"
+        },
+        {
+          "key": "bleeding_disorder_vwd",
+          "source_ids": [
+            "S211"
+          ],
+          "ref": "dobermann.health.von_willebrand",
+          "confidence": "medium"
+        },
+        {
+          "key": "eye_phpv",
+          "source_ids": [
+            "S211"
+          ],
+          "ref": "dobermann.health.eyes_phpv",
+          "confidence": "medium"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S211"
+          ],
+          "ref": "dobermann.health.gdv",
+          "confidence": "medium"
+        },
+        {
+          "key": "certain_cancers",
+          "source_ids": [
+            "S211"
+          ],
+          "ref": "dobermann.health.cancer",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S211"
+          ],
+          "ref": "dobermann.health.hypothyroidism",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S209",
+              "S211"
+            ],
+            "refs": [
+              "dobermann.exercise.adult",
+              "dobermann.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S209"
+            ],
+            "refs": [
+              "dobermann.suitability.rkc_family",
+              "dobermann.behaviour.family"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S209"
+            ],
+            "refs": [
+              "dobermann.suitability.rkc_size_of_home",
+              "dobermann.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S209",
+              "S211"
+            ],
+            "refs": [
+              "dobermann.exercise.adult",
+              "dobermann.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S211"
+            ],
+            "refs": [
+              "dobermann.behaviour.family",
+              "dobermann.suitability.pdsa_children"
+            ]
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S211"
+            ],
+            "refs": [
+              "dobermann.behaviour.experienced_owner",
+              "dobermann.suitability.pdsa_experienced_owner"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S211"
+            ],
+            "refs": [
+              "dobermann.exercise.energy",
+              "dobermann.suitability.pdsa_mental_stimulation"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S209"
+            ],
+            "refs": [
+              "dobermann.suitability.rkc_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 83
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.9
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 83
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.dobermann.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S209"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S209 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.dobermann.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.dobermann.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S212"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 83 (0.75 × 9.2 y, VetCompass median S212)"
+          },
+          {
+            "ref": "proposed_game_parameters.dobermann.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.9 (Coren rank 5, Brightest tier, S35)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S209",
+          "S212"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_vwd1",
+            "level": "minimum",
+            "source_ids": [
+              "S209"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S209"
+            ]
+          },
+          {
+            "key": "dna_dings2",
+            "level": "best_practice",
+            "source_ids": [
+              "S209"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S209"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S209"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S207",
+        "S208",
+        "S209",
+        "S211",
+        "S212",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -15400,6 +15997,41 @@
       "publisher": "PDSA",
       "title": "Welsh Corgi breed information (one page for both corgi breeds)",
       "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/welsh-corgi"
+    },
+    {
+      "id": "S207",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 143 — Dobermann (EN PDF; date of publication of the valid standard 13.11.2015)",
+      "url": "https://fci.be/Nomenclature/Standards/143g02-en.pdf"
+    },
+    {
+      "id": "S208",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Dobermann (143)",
+      "url": "https://www.fci.be/en/nomenclature/DOBERMANN-143.html"
+    },
+    {
+      "id": "S209",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Dobermann — breed information page (Breeds A to Z, older address)",
+      "url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5121"
+    },
+    {
+      "id": "S211",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Dobermann breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/dobermann"
+    },
+    {
+      "id": "S212",
+      "tier": "A",
+      "publisher": "The Veterinary Journal 198(3):638–643 (2013) (RVC repository copy)",
+      "title": "O'Neill D. G., Church D. B., McGreevy P. D., Thomson P. C., Brodbelt D. C. Longevity and mortality of owned dogs in England. doi:10.1016/j.tvjl.2013.09.020",
+      "url": "https://rvc-repository.worktribe.com/OutputFile/1409027"
     },
     {
       "id": "C1",

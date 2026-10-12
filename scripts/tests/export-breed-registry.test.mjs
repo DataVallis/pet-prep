@@ -111,6 +111,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.cane_corso.availability, 'coming_soon');
   assert.deepEqual(byId.pembroke_welsh_corgi.slug, { en: 'pembroke-welsh-corgi', sl: 'welsh-corgi-pembroke' });
   assert.equal(byId.pembroke_welsh_corgi.availability, 'coming_soon');
+  assert.deepEqual(byId.dobermann.slug, { en: 'dobermann', sl: 'doberman' });
+  assert.equal(byId.dobermann.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.equal(byId.british_shorthair.availability, 'coming_soon');
@@ -190,6 +192,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     yorkshire_terrier: { adult: 3000, senior: 2300, seniorFrom: 122, learning: 1.2 },
     cane_corso: { adult: 12000, senior: 9000, seniorFrom: 84, learning: 1.0 },
     pembroke_welsh_corgi: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1.5 },
+    dobermann: { adult: 12000, senior: 9000, seniorFrom: 83, learning: 1.9 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -972,4 +975,30 @@ test('Pembroke Welsh Corgi (M5-R10-24): up to 1 hour (RKC), FCI weight by sex, F
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a docked tail or a non-standard colour, never a percentage.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|docked|merle|\d %\)/i);
+});
+
+test('Dobermann (M5-R10-25): more than 2 hours (RKC), FCI weight by sex, FCI group 2 Germany, RKC "over 10 years", Coren 5, family / large home / not for small children chips', () => {
+  const d = registry.breeds.find((b) => b.id === 'dobermann');
+  assert.deepEqual(d.name, { en: 'Dobermann', sl: 'Doberman' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S209']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 143, group: 2, section: 1, origin: 'DE' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [40, 45], female: [32, 35] }, ['S207']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [68, 72], female: [63, 68] }, ['S207']]]);
+  // Only the RKC band — never the small 2013 VetCompass median (basis of the provisional senior boundary).
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['more_than', 10, ['S209']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 5);
+  assert.deepEqual(d.facts.find((f) => f.field === 'growth_end').value, [15, 18]);
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 12000, cap_month: 12 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 83 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 9000 } });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'family_pet', 'large_home']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds']);
+  assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia_arthritis', 'wobbler_syndrome', 'heart_muscle_disease', 'bleeding_disorder_vwd', 'eye_phpv', 'bloat_gdv', 'certain_cancers', 'hypothyroidism']);
+  // RKC Good Practice (minimum) vWD1; Best Practice eye test, DINGS2, hips.
+  assert.equal(d.breeder_checklist.status, 'listed');
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['dna_vwd1', 'minimum'], ['eye_scheme', 'best_practice'], ['dna_dings2', 'best_practice'], ['hip_scheme', 'best_practice']]);
+  const json = JSON.stringify(d);
+  // The 2013 median appears only in the senior-boundary decision text (game basis), never as a register fact.
+  assert.equal(d.facts.some((f) => f.value === 9.2), false);
+  // Never "hypoallergenic", never cropped ears / a docked tail or a non-standard colour, never a percentage.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|docked|cropped|merle|\d %\)/i);
 });
