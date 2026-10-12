@@ -264,6 +264,103 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/breeds/{breed}/facts": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Facts of one breed for the caller (title / why in the request language)
+         * @description Child token: `audience=child` facts of the breed of a pet the child
+         *     actively cares for, without source links. Parent token: both audiences
+         *     for any breed of the family's pets, with `source_url`, health facts
+         *     flagged `not_vet_reviewed`, and `read_by_children`. A breed that is not
+         *     the caller's (or an unknown breed) → 404 `breed_not_found`. A breed of
+         *     the caller without approved facts (always mutt / domestic cat) → 200
+         *     with an empty `facts` list.
+         *
+         *     GET /api/breeds/{breed}/facts
+         */
+        get: operations["breedFact.index"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/breed-facts/{fact}/read": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Mark a fact read by the caller. Idempotent (the first `read_at` stays).
+         *     A fact the caller may not see (not approved, other audience, another
+         *     family's breed, unknown id) → 404 `fact_not_found`
+         * @description POST /api/breed-facts/{fact}/read
+         */
+        post: operations["breedFact.read"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/child/fact-of-the-day": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * The child's »Ali si vedel?« for today: the next unread fact of their
+         *     active pet's breed + whether the sheet may open on its own
+         *     (`may_auto_show`, the server half of spec §3.2). A child without an
+         *     active pet gets `fact: null`, `reason: no_pet`
+         * @description GET /api/child/fact-of-the-day
+         */
+        get: operations["breedFact.factOfTheDay"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/child/fact-of-the-day/shown": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Record that the sheet opened on its own (counts towards the 2 per
+         *     program week, across the child's devices). Idempotent per
+         *     family-local day: 200 `recorded` | `already_shown`. Not allowed now →
+         *     422 `refused` with the `reason` of `may_auto_show`. Every body carries
+         *     the updated `state` (as GET)
+         * @description POST /api/child/fact-of-the-day/shown
+         */
+        post: operations["breedFact.shown"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/broadcasting/auth": {
         parameters: {
             query?: never;
@@ -2567,6 +2664,222 @@ export interface operations {
                         species: ("dog" | "cat")[];
                         breeds: components["schemas"]["BreedCatalogResource"][];
                     };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "breedFact.index": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                breed: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @description BreedType value of the breed (e.g. border_collie). */
+                        breed: string;
+                        /**
+                         * @description Approved facts the caller may see, in display order. Empty for a breed
+                         *     without approved facts (and always for mutt / domestic cat) — hide every
+                         *     entry point then.
+                         */
+                        facts: {
+                            id: number;
+                            key: string;
+                            breed: string;
+                            /** @enum {string} */
+                            category: "origin" | "body" | "temperament" | "exercise" | "diet" | "grooming" | "training" | "family" | "health";
+                            /** @enum {string} */
+                            audience: "child" | "parent";
+                            title: string;
+                            why: string | null;
+                            source_name: string;
+                            source_url: string | null;
+                            game_rule_key: string | null;
+                            not_vet_reviewed: boolean;
+                            read: boolean;
+                            read_at: string | null;
+                            read_by_children: number[];
+                        }[];
+                        /** @description Facts of this list the caller has read (»8 od 40«). */
+                        read_count: number;
+                        total_count: number;
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "No such breed among your pets.";
+                        /** @constant */
+                        reason: "breed_not_found";
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "breedFact.read": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                fact: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /**
+                         * @description Always `read` (also on a repeated call).
+                         * @constant
+                         */
+                        status: "read";
+                        fact: {
+                            id: number;
+                            key: string;
+                            breed: string;
+                            /** @enum {string} */
+                            category: "origin" | "body" | "temperament" | "exercise" | "diet" | "grooming" | "training" | "family" | "health";
+                            /** @enum {string} */
+                            audience: "child" | "parent";
+                            title: string;
+                            why: string | null;
+                            source_name: string;
+                            source_url: string | null;
+                            game_rule_key: string | null;
+                            not_vet_reviewed: boolean;
+                            read: boolean;
+                            read_at: string | null;
+                            read_by_children: number[];
+                        };
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "No such fact.";
+                        /** @constant */
+                        reason: "fact_not_found";
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "breedFact.factOfTheDay": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /**
+                         * @description The next unread approved child fact of the child's pet (display order), or
+                         *     null when every fact is read / there are none (mutt, domestic cat).
+                         */
+                        fact: {
+                            id: number;
+                            key: string;
+                            breed: string;
+                            /** @enum {string} */
+                            category: "origin" | "body" | "temperament" | "exercise" | "diet" | "grooming" | "training";
+                            /** @constant */
+                            audience: "child";
+                            title: string;
+                            why: string | null;
+                            source_name: string;
+                            source_url: null;
+                            game_rule_key: string | null;
+                            not_vet_reviewed: boolean;
+                            read: boolean;
+                            read_at: string | null;
+                            read_by_children: number[];
+                        } | null;
+                        /**
+                         * @description The server allows the sheet to open on its own now (max 2 per program week,
+                         *     ≥ 2 family-local days apart, not on day 1, not in quiet hours, not while
+                         *     locked, the pet has its picture, an unread fact exists). The app still
+                         *     checks the calm moment (care just done, metrics ≥ 50 %, no mess / overlay)
+                         *     and shows the chip instead when the moment is not calm.
+                         */
+                        may_auto_show: boolean;
+                        /**
+                         * @description Why not (null when it may) — see the return type for the values.
+                         * @enum {string|null}
+                         */
+                        reason: "too_soon" | "week_cap" | "shown_today" | "quiet_hours" | "first_day" | "no_fact" | "no_image" | "locked" | "non_pedigree" | "no_pet" | null;
+                        /** @description An automatic sheet was already recorded today (family-local day). */
+                        shown_today: string;
+                        /** @description Automatic sheets recorded in the current program week (0–2). */
+                        shown_this_week: number;
+                        /** @description 1 = the program week from birth (payment-lock time excluded); null when unborn. */
+                        program_week: number | null;
+                        /** @description The child's progress on their breed (»Prebral si 8 od 40«). */
+                        read_count: number;
+                        total_count: number;
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "breedFact.shown": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": string;
                 };
             };
             401: components["responses"]["AuthenticationException"];
