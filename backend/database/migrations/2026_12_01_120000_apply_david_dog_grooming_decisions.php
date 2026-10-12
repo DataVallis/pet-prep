@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Log;
  * Rows: the 7 tuples in TARGETS (stage `all`, from 0, key
  * `grooming_sessions_per_week`), each with the columns as seeded before
  * (`old`, frozen from the seeder of origin/main 8c51e4df) and after (`new`,
- * frozen from BreedStageParamsSeeder::dogGrooming() — DogGroomingDecisionsTest
+ * frozen from BreedStageParamsSeeder::dogGrooming() — DavidRoutineDecisions20261012Test
  * checks that `new` equals the seeder today).
  *
  * Safety (expand-safe, never deletes data):

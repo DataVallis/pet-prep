@@ -423,6 +423,46 @@ describe('brushing a dog (like the cat, M5-R06-05)', function () {
     });
 });
 
+describe('excused weeks and the payment lock (David 2026-10-12, »ne štej dvakrat«)', function () {
+    // Rottweiler 1× per week. Program week 2 = 27 Oct 08:00 + 7 program days; an 8-day
+    // payment lock (28 Oct – 5 Nov) lengthens it to 11 Nov 08:00 — the lock is neither
+    // blocked time nor week time (before the fix it alone excused the slot).
+    function dgPeriod(Pet $dog, string $kind, string $fromLocal, string $toLocal): void
+    {
+        DB::table('pet_status_periods')->insert([
+            'pet_id' => $dog->id, 'kind' => $kind,
+            'started_at' => Carbon::parse($fromLocal, 'Europe/Ljubljana')->utc(),
+            'ended_at' => Carbon::parse($toLocal, 'Europe/Ljubljana')->utc(),
+            'created_at' => now(), 'updated_at' => now(),
+        ]);
+    }
+
+    it('keeps a weekly brushing slot with a payment lock inside expected — missed if skipped, done in the days left', function () {
+        [, $child, $dog] = dgFamily(BreedType::Rottweiler);
+        dgPeriod($dog, 'payment_lock', '2026-10-28 08:00', '2026-11-05 08:00');
+
+        dgAt('2026-11-11 10:00');
+        expect(dgRoutines($dog, '2026-11-11', '2026-11-11'))->toBe([['2026-11-11', 'grooming', 0, 'missed', null]]);
+
+        dgAt('2026-11-06 10:00');
+        dgBrush($child)->assertOk()->assertJsonPath('status', 'accepted');
+        dgAt('2026-11-11 10:00');
+        expect(dgRoutines($dog, '2026-11-11', '2026-11-11'))->toBe([['2026-11-11', 'grooming', 0, 'done', $child->id]]);
+    });
+
+    it('measures the slot\'s excused share in program time: lock + 2 days ill → missed, lock + 4 days ill → excused', function () {
+        foreach ([['2026-11-08 08:00', [['2026-11-11', 'grooming', 0, 'missed', null]]], ['2026-11-10 08:00', []]] as [$illUntil, $expected]) {
+            [, , $dog] = dgFamily(BreedType::Rottweiler);
+            dgPeriod($dog, 'payment_lock', '2026-10-28 08:00', '2026-11-05 08:00');
+            dgPeriod($dog, 'illness', '2026-11-06 08:00', $illUntil);
+
+            dgAt('2026-11-11 10:00');
+            // Excused = not expected (no routine row), like the cat's mostly hard-stopped week.
+            expect(dgRoutines($dog, '2026-11-11', '2026-11-11'))->toBe($expected, $illUntil);
+        }
+    });
+});
+
 describe('migration 2026_11_28_120000_add_dog_grooming', function () {
     it('adds pets.grooming_enabled (default false); down() drops it, up() adds it again', function () {
         $migration = require database_path('migrations/2026_11_28_120000_add_dog_grooming.php');
