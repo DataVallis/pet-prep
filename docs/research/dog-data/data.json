@@ -12018,6 +12018,15 @@
         "confidence": "high",
         "notes": "RKC (S50) 'Once a week'; PDSA (S53) 'a weekly brush usually enough' (labrador_retriever.suitability.rkc_grooming.notes). Matted coat when the week's brushing is missed (ceil(1 / 2) = 1).",
         "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S53",
+        "quote": "Labradors make perfect family pets, given the right socialisation, as with all breeds.",
+        "confidence": "medium",
+        "notes": "PDSA (S53), verbatim in labrador_retriever.suitability.pdsa_family.quote. The source gives socialisation advice without an amount; the weekly \"new experience\" (a new person, another dog, a new sound, a new place) while a puppy is David's mechanic (M5-R17, 2026-10-12) — never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, »tedenska naloga«)"
       }
     },
     "golden_retriever": {
@@ -12803,6 +12812,15 @@
         "confidence": "low",
         "notes": "RKC (S97) 'More than once a week' without a number; PDSA (S100) 'a few times a week' is a paraphrase without a number (german_shepherd.suitability.rkc_grooming.notes). No source gives a number → Claude's proposal 2 (verified=false). Matted coat at ceil(2 / 2) = 1 missed.",
         "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S100",
+        "quote": "careful training and socialisation will be needed",
+        "confidence": "medium",
+        "notes": "PDSA (S100), verbatim in german_shepherd.behaviour.guarding.quote. The source gives socialisation advice without an amount; the weekly \"new experience\" (a new person, another dog, a new sound, a new place) while a puppy is David's mechanic (M5-R17, 2026-10-12) — never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, »tedenska naloga«)"
       }
     },
     "cavalier_king_charles_spaniel": {
@@ -13248,6 +13266,15 @@
         "confidence": "high",
         "notes": "RKC (S113) 'Once a week'; PDSA (S115) 'A weekly brush should be plenty'. Matted coat when the week's brushing is missed (ceil(1 / 2) = 1).",
         "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S115",
+        "quote": "Due to their loving and tolerant nature, if socialised correctly from a young age Beagles suit family life really well.",
+        "confidence": "medium",
+        "notes": "PDSA (S115), verbatim in beagle.behaviour.family.quote. The source gives socialisation advice without an amount; the weekly \"new experience\" (a new person, another dog, a new sound, a new place) while a puppy is David's mechanic (M5-R17, 2026-10-12) — never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, »tedenska naloga«)"
       }
     },
     "standard_poodle": {
@@ -13472,6 +13499,15 @@
         "confidence": "high",
         "notes": "RKC (S120) 'Every day'; PDSA (S122) 'They need daily grooming'. Professional clipping is not modelled. Matted coat at ceil(7 / 2) = 4 missed.",
         "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): vsak dan (7× na teden); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S122",
+        "quote": "They generally get on well with other pets and children, given the right socialisation as puppies, as with all breeds.",
+        "confidence": "medium",
+        "notes": "PDSA (S122), verbatim in standard_poodle.behaviour.family.quote. The source gives socialisation advice without an amount; the weekly \"new experience\" (a new person, another dog, a new sound, a new place) while a puppy is David's mechanic (M5-R17, 2026-10-12) — never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, »tedenska naloga«)"
       }
     },
     "dachshund": {
@@ -13950,6 +13986,15 @@
         "confidence": "low",
         "notes": "RKC (S133) 'More than once a week'; PDSA (S134) 'give them a brush a few times a week' — neither gives a number → Claude's proposal 2 (verified=false). Matted coat at ceil(2 / 2) = 1 missed.",
         "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S134",
+        "quote": "As long as your Australian Shepherd has been socialised with other dogs from a young age they should be fine with other dogs.",
+        "confidence": "medium",
+        "notes": "PDSA (S134), verbatim in australian_shepherd.behaviour.other_pets.notes. The source gives socialisation advice without an amount; the weekly \"new experience\" (a new person, another dog, a new sound, a new place) while a puppy is David's mechanic (M5-R17, 2026-10-12) — never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, »tedenska naloga«)"
       }
     },
     "havanese": {
@@ -14170,6 +14215,15 @@
         "confidence": "high",
         "notes": "RKC (S138) 'Every day'; PDSA (S140) 'requires daily grooming to prevent knots and tangles'. Matted coat at ceil(7 / 2) = 4 missed.",
         "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): vsak dan (7× na teden); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S140",
+        "quote": "given the right socialisation as puppies.",
+        "confidence": "medium",
+        "notes": "PDSA (S140), verbatim in havanese.behaviour.family.notes. The source gives socialisation advice without an amount; the weekly \"new experience\" (a new person, another dog, a new sound, a new place) while a puppy is David's mechanic (M5-R17, 2026-10-12) — never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, »tedenska naloga«)"
       }
     },
     "west_highland_white_terrier": {
@@ -14915,6 +14969,15 @@
         "confidence": "low",
         "notes": "RKC (S160) 'More than once a week'; PDSA (S162) 'brush your Husky a few times a week' — neither gives a number → Claude's proposal 2 (verified=false). Matted coat at ceil(2 / 2) = 1 missed.",
         "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S162",
+        "quote": "Huskies love company so as long as they have been socialised from a young age, they should get along fine with other dogs.",
+        "confidence": "medium",
+        "notes": "PDSA (S162), verbatim in siberian_husky.behaviour.other_pets.notes. The source gives socialisation advice without an amount; the weekly \"new experience\" (a new person, another dog, a new sound, a new place) while a puppy is David's mechanic (M5-R17, 2026-10-12) — never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, »tedenska naloga«)"
       }
     },
     "rottweiler": {
@@ -15179,6 +15242,15 @@
         "confidence": "high",
         "notes": "One standard colour (S166, S170); white markings are a fault (S166). Breed Watch (S173): moderate muzzle and correct hind conformation in the portrait (welfare rule).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and tan only, natural tail, moderate muzzle, sound hind legs; no white markings"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S169",
+        "quote": "Rottweilers will need socialising from a young age so they grow up to be confident and calm.",
+        "confidence": "medium",
+        "notes": "PDSA (S169), verbatim in rottweiler.behaviour.experienced_owner.notes. The source gives socialisation advice without an amount; the weekly \"new experience\" (a new person, another dog, a new sound, a new place) while a puppy is David's mechanic (M5-R17, 2026-10-12) — never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, »tedenska naloga«)"
       }
     },
     "bulldog": {
@@ -15445,6 +15517,15 @@
         "confidence": "high",
         "notes": "RKC standard (S178): 'Pinched nostrils and heavy over nose roll are unacceptable'; Breed Watch (S182): heavy overnose wrinkle, pinched nostrils, screw tail. Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): moderate face with open nostrils and a light wrinkle, standard colours only (portrait red and white), straight tail, never merle / black / blue"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S180",
+        "quote": "They are very calm dogs and will get on well with other household pets if given the right socialisation when young.",
+        "confidence": "medium",
+        "notes": "PDSA (S180), verbatim in bulldog.behaviour.other_pets.quote. The source gives socialisation advice without an amount; the weekly \"new experience\" (a new person, another dog, a new sound, a new place) while a puppy is David's mechanic (M5-R17, 2026-10-12) — never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, »tedenska naloga«)"
       }
     },
     "german_shorthaired_pointer": {
@@ -16051,13 +16132,13 @@
         "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): premor med obrokom in gibanjem; vir ne navaja dolžine, mehanike ni → ROADMAP M5-R16 (needs-david)"
       },
       "socialisation": {
-        "value": null,
-        "unit": "socialisation with people and new experiences from a young age (sourced need, no number)",
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
         "source_id": "S199",
         "quote": "You’ll need to socialise your Cane Corso with lots of different people and experiences from a young age.",
         "confidence": "medium",
-        "notes": "PDSA (S199); the same page: 'Lots of positive socialisation from a young age' helps with new dogs (paraphrase). The game's school (M5-R03) trains commands (sit, place, come, potty), not socialisation; no frequency or amount in the source → new ROADMAP M5-R17 with a FEATURES 🗓 row. PDSA gives the same advice for other breeds in the app (e.g. Rottweiler S169) — M5-R17 can cover them too.",
-        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): socializacija od mladosti; vir ne navaja količine, mehanike ni → ROADMAP M5-R17 (needs-david)"
+        "notes": "PDSA (S199); the same page: 'Lots of positive socialisation from a young age' helps with new dogs (paraphrase). The game's school (M5-R03) trains commands (sit, place, come, potty), not socialisation; no frequency or amount in the source → new ROADMAP M5-R17 with a FEATURES 🗓 row. PDSA gives the same advice for other breeds in the app (e.g. Rottweiler S169) — M5-R17 can cover them too. Built in M5-R17 (David 2026-10-12): one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): socializacija od mladosti; vir ne navaja količine, mehanika zgrajena v ROADMAP M5-R17 (David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni)"
       },
       "suitability_tags": {
         "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-23); refs = JSON paths in this file. New vocabulary keys not_for_small_children and drools (consider). No percentages in the app.",
@@ -16327,13 +16408,13 @@
         "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2–3× na teden → 3; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       },
       "socialisation": {
-        "value": "socialisation with children and training from a young age",
-        "unit": "—",
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
         "source_id": "S206",
         "quote": "socialisation with children and training at a young age can help to overcome these possible problems.",
         "confidence": "medium",
-        "notes": "PDSA (S206), after 'They may nip at the heels of running children'. The puppy school trains commands only; there is no socialisation mechanic → ROADMAP M5-R17 (opened by the Cane Corso run); this entry is its input.",
-        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): socializacija z otroki od malega; mehanike ni → ROADMAP M5-R17 (needs-david)"
+        "notes": "PDSA (S206), after 'They may nip at the heels of running children'. The puppy school trains commands only; there is no socialisation mechanic → ROADMAP M5-R17 (opened by the Cane Corso run); this entry is its input. Built in M5-R17 (David 2026-10-12): one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): socializacija z otroki od malega; mehanika zgrajena v ROADMAP M5-R17 (David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni)"
       },
       "suitability_tags": {
         "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-24); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
@@ -16546,13 +16627,13 @@
         "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): premor med obrokom in gibanjem; vir ne navaja dolžine, mehanike ni → ROADMAP M5-R16 (needs-david)"
       },
       "socialisation": {
-        "value": null,
-        "unit": "socialisation with people, dogs and new experiences from a young age (sourced need, no number)",
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
         "source_id": "S211",
         "quote": "it’s important to socialise your dog with different experiences, people and dogs from a young age.",
         "confidence": "medium",
-        "notes": "PDSA (S211). The game's school (M5-R03) trains commands, not socialisation; no amount in the source → ROADMAP M5-R17 (already opened for the Cane Corso).",
-        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): socializacija od mladosti; vir ne navaja količine, mehanike ni → ROADMAP M5-R17 (needs-david)"
+        "notes": "PDSA (S211). The game's school (M5-R03) trains commands, not socialisation; no amount in the source → ROADMAP M5-R17 (already opened for the Cane Corso). Built in M5-R17 (David 2026-10-12): one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): socializacija od mladosti; vir ne navaja količine, mehanika zgrajena v ROADMAP M5-R17 (David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni)"
       },
       "suitability_tags": {
         "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-25); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
