@@ -53,7 +53,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "8858a3b807575118f6a059cf73561d91f353eb335052cdb0e7291bd803750caf"
+      "sha256": "4689bce7c8aaa64ce60685817760c6452bb413fbccaf3742fdddb69313abc441"
     }
   },
   "suitability_vocabulary": {
@@ -13705,7 +13705,12 @@
           "S215"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "boxer.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
