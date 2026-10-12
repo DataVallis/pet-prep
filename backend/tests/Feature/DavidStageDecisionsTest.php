@@ -176,7 +176,9 @@ describe('data migration for the rows PR #37 seeded', function () {
             // the cat rows (M5-R06-03) are checked in CatLifeStageDataTest.
             ->and(BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false)
                 // M5-R10-12 / M5-R10-23: the Bernese (76) and Cane Corso (84) senior boundaries are separate open proposals — LifeStageDataTest / their breed tests.
-                ->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso'])->pluck('key')->unique()->values()->all())->toEqualCanonicalizing([
+                ->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso'])
+                // M5-R13: the five "more than once a week" brushing rows (2/week) are Claude's proposals — DogGroomingTest / LifeStageDataTest.
+                ->where('key', '!=', 'grooming_sessions_per_week')->pluck('key')->unique()->values()->all())->toEqualCanonicalizing([
                     'chewing_chance_per_day',
                 ]);
 

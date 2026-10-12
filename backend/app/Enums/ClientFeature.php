@@ -36,6 +36,14 @@ enum ClientFeature: string
     case SpeciesCat = 'species_cat';
 
     /**
+     * Dog grooming (M5-R13, David 2026-10-12 "kot pri mački"): the "Počeši"
+     * chip + brushing mini-game for a dog, POST /api/child/pet/grooming/*
+     * → `pets.grooming_enabled` (a NEW profiled dog, both devices). Cats do
+     * not need it (their brushing came with the cat UI, `species_cat`).
+     */
+    case DogGrooming = 'dog_grooming';
+
+    /**
      * @return list<string>
      */
     public static function values(): array

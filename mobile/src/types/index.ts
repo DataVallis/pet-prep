@@ -76,6 +76,11 @@ export interface Pet {
   /** M3-11 plan (free / challenge + status); read with `readPetPlan`. */
   plan?: unknown;
   certificate_eligible: boolean;
+  /**
+   * M5-R13: the weekly brushing routine can apply (pairing / pin-login, raw pet): every profiled
+   * cat, a dog whose apps declared `dog_grooming`. Missing on older payloads (→ no dog brushing line).
+   */
+  grooming_enabled?: boolean;
 }
 
 /**

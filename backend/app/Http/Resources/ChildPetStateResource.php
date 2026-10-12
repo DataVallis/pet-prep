@@ -60,9 +60,10 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * {@see WandPayload}; null for a dog. A cat's `pet.energy_level` /
  * `steps.energy_level` is its play meter (plan T5).
  * `litter` / `grooming` / `scratching` (M5-R06-05, cats): the litter tray
- * (uses, scoop deadlines, weekly change), the Maine Coon's grooming (week,
+ * (uses, scoop deadlines, weekly change), a brushed cat's grooming (week,
  * matted coat) and the scratching resolve — {@see LitterPayload},
- * {@see GroomingPayload}, {@see ScratchingPayload}; null for a dog.
+ * {@see GroomingPayload}, {@see ScratchingPayload}; null for a dog —
+ * except `grooming` for a brushed dog (M5-R13, `grooming_enabled`).
  *
  * `pet.media` (M4-05): status + signed URLs of the stored reference image and
  * state videos ({@see PetMediaService::mediaFor()}); `current_video_url` is
@@ -262,7 +263,7 @@ class ChildPetStateResource extends JsonResource
             'wand' => WandPayload::for($pet, $actor, $now)?->toArray(),
             // M5-R06-05 cat litter tray (uses, scoop deadlines, weekly change); null for a dog.
             'litter' => LitterPayload::for($pet, $actor, $now)?->toArray(),
-            // M5-R06-05 grooming of a brushed cat (Maine Coon, Ragdoll, British Shorthair: week, matted coat, session); null for every other pet.
+            // M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet.
             'grooming' => GroomingPayload::for($pet, $actor, $now)?->toArray(),
             // M5-R06-05 cat scratching (open mess, redirect + praise session); null for a dog.
             'scratching' => ScratchingPayload::for($pet, $actor, $now)?->toArray(),

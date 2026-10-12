@@ -72,7 +72,8 @@ use Throwable;
  *    birth's wall-clock time; `litter_full_change_days`) that ENDS on the
  *    family-local date: one litter change (`changed_litter` inside the
  *    period) and, for a brushed cat, `grooming_sessions_per_week` grooming
- *    slots (slot i = the period's i-th `groomed_pet`). Not expected when
+ *    slots (slot i = the period's i-th `groomed_pet`) — M5-R13: the same
+ *    grooming slots for a dog with `grooming_enabled` and a breed row. Not expected when
  *    hard stop / vet / game over cover ≥ 50 % of the period's non-quiet
  *    time (like the walk). A weekly routine is never pending past its day.
  *
@@ -572,7 +573,8 @@ class RoutineLedgerService
         }
 
         // Weekly cat routines (M5-R06-05): the program period that ends today.
-        if ($pet->isCat() && ! $pet->isLegacyProfile()) {
+        // M5-R13: a brushed dog's grooming slots the same way (no litter row → no litter change).
+        if ($this->hasWeeklyRoutines($pet)) {
             array_push($routines, ...$this->weeklyCatRoutines($pet, $in, $date, $dayStartUtc, $dayEndUtc, $born, $useNormal, $now));
         }
 
@@ -628,6 +630,17 @@ class RoutineLedgerService
             goal: $goal,
             eventKind: $eventKind,
         );
+    }
+
+    /**
+     * Weekly routines apply (M5-R06-05): every profiled cat (litter change,
+     * a brushed cat's grooming) and — M5-R13 — a dog with `grooming_enabled`
+     * (its breed's grooming slots; a dog has no litter row). Every other dog
+     * is unchanged.
+     */
+    private function hasWeeklyRoutines(Pet $pet): bool
+    {
+        return ! $pet->isLegacyProfile() && ($pet->isCat() || $pet->groomingEnabled());
     }
 
     /**
@@ -774,12 +787,13 @@ class RoutineLedgerService
         $dateFrom = CarbonImmutable::parse($fromDate, 'UTC')->subDay()->toDateString();
         $dateTo = CarbonImmutable::parse($toDate, 'UTC')->addDay()->toDateString();
 
-        // M5-R06-05: weekly cat routines need the whole period before the day.
-        $hasCats = $pets->contains(fn (Pet $p) => $p->isCat());
-        $lookbackUtc = $hasCats ? CarbonImmutable::parse($fromDate, 'UTC')->subDays(self::WEEKLY_LOOKBACK_DAYS) : $fromUtc;
+        // M5-R06-05: weekly cat routines need the whole period before the day
+        // (M5-R13: so does a brushed dog's grooming).
+        $hasWeekly = $pets->contains(fn (Pet $p) => $p->isCat() || $this->hasWeeklyRoutines($p));
+        $lookbackUtc = $hasWeekly ? CarbonImmutable::parse($fromDate, 'UTC')->subDays(self::WEEKLY_LOOKBACK_DAYS) : $fromUtc;
         // QA M1: a program week with a payment lock inside lasts longer than 7 real
         // days — reach back to the start of the period that ends on $fromDate.
-        foreach ($pets->filter(fn (Pet $p) => $p->isCat() && ! $p->isUnborn()) as $cat) {
+        foreach ($pets->filter(fn (Pet $p) => ($p->isCat() || $this->hasWeeklyRoutines($p)) && ! $p->isUnborn()) as $cat) {
             $before = CarbonImmutable::parse($fromDate, $cat->familyTimezone())->startOfDay()->subSecond();
             $changeDays = $this->lifeStages->stageValueOn($cat, $fromDate, StageParamKey::LitterFullChangeDays)['value'] ?? 0;
             foreach (array_unique([7, is_int($changeDays) && $changeDays > 0 ? $changeDays : 7]) as $days) {

@@ -10,8 +10,10 @@ use Carbon\CarbonInterface;
 
 /**
  * The `grooming` object of a pet (M5-R06-05, CAT_SPEC Q8; David 2026-10-08
- * ~22:20) in the child state and PetUpdated: the Maine Coon's combing.
- * Null for every pet without a grooming routine (dogs, the domestic cat).
+ * ~22:20) in the child state and PetUpdated: a brushed cat's combing and,
+ * since M5-R13 (David 2026-10-12), a brushed dog's brushing — same shape.
+ * Null for every pet without a grooming routine (the domestic cat, the
+ * mutt / Border Collie, a dog without `grooming_enabled`, legacy pets).
  *
  * - `goal_per_week` / `done_this_week`: groomings of the current program
  *   week (from one weekly birthday to the next: `week_started_at`,
@@ -51,7 +53,7 @@ final class GroomingPayload
     {
         $chores = app(CatChoreService::class);
         $now = CarbonImmutable::instance($now ?? now())->utc();
-        if ($pet->isUnborn() || ! $pet->isCat()) {
+        if ($pet->isUnborn() || ! $pet->groomingEnabled()) {
             return null;
         }
         $period = $chores->groomingPeriodAt($pet, $now);
@@ -87,7 +89,7 @@ final class GroomingPayload
     public function toArray(): array
     {
         return [
-            // Groomings per program week, per breed (Maine Coon 3, Ragdoll 2, British Shorthair 1; ≥ 1 day apart).
+            // Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart).
             'goal_per_week' => $this->goalPerWeek,
             'done_this_week' => $this->doneThisWeek,
             'week_started_at' => $this->weekStartedAt,

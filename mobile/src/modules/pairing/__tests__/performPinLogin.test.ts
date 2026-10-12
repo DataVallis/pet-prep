@@ -45,6 +45,7 @@ const response: PinLoginResponse = {
     media_status: 'disabled',
     media: makeMedia(),
     profile: makePetProfile(),
+    grooming_enabled: false,
   },
   awaiting_contract: false,
 };

@@ -22,13 +22,14 @@ export type LightReason = 'game_over' | 'phase3_alarm' | 'fell_ill_today' | 'mis
 /**
  * `training` (M5-R03): one completed training session per day, only for a pet with training.
  * M5-R06-04 / 05 (cats): `play` (the day's wand games), `litter_scoop` (one per litter use),
- * `litter_change` (weekly), `grooming` (Maine Coon / Ragdoll / British Shorthair / Siberian / Norwegian Forest Cat / Bengal, weekly slots).
+ * `litter_change` (weekly), `grooming` (Maine Coon / Ragdoll / British Shorthair / Siberian / Norwegian Forest Cat / Bengal, weekly slots;
+ * M5-R13: also a brushed dog — shown for a dog once the server counted a slot).
  */
 export type RoutineType = 'feed' | 'water' | 'clean' | 'walk' | 'training' | 'play' | 'litter_scoop' | 'litter_change' | 'grooming';
 
 export const ROUTINE_TYPES: readonly RoutineType[] = ['feed', 'water', 'clean', 'walk', 'training', 'play', 'litter_scoop', 'litter_change', 'grooming'];
 
-/** The cat-only routine types (a dog's report never shows them unless the server counted one). */
+/** The cat routine types (a dog's report never shows them unless the server counted one — M5-R13: a brushed dog's `grooming`). */
 export const CAT_ROUTINE_TYPES: readonly RoutineType[] = ['play', 'litter_scoop', 'litter_change', 'grooming'];
 
 export interface TrafficLight {
@@ -362,7 +363,9 @@ function hasTotals(t: TypeTotals): boolean {
  * The routine rows of the report, per species (M5-R06-08b): a dog keeps food, water,
  * cleaning, walk and — with training — "Šola"; a cat shows food, water, cleaning, litter,
  * play, the weekly litter change and — brushed cats — brushing (walk / training only if the
- * server counted one). Any type the server counted in the period is always shown.
+ * server counted one). Any type the server counted in the period is always shown — so a brushed
+ * dog (M5-R13, `grooming_enabled` + a breed routine) gets "Česanje" from its first weekly slot,
+ * and an existing dog (no routine) never does.
  */
 export function reportRoutineTypes(
   species: string | null | undefined,
@@ -519,8 +522,8 @@ export function activityText(
 ): string {
   const play = playTimelineText(entry.activity_type, entry.actor_nickname, entry.value ?? null);
   if (play !== null) return play;
-  const system = SYSTEM_ACTIVITY_LABELS[entry.activity_type];
-  if (system) return system;
+  // M5-R13: "Kužku se je zavozlala dlaka" (dog) / the cat's override "Muci …" for a cat.
+  if (SYSTEM_ACTIVITY_LABELS[entry.activity_type]) return tSpecies(`family:systemActivities.${entry.activity_type}`, species);
   // A cat's wording where it differs ("nahranil(a) muco") is `cat:override.family.activities.*` (M5-R06-08c).
   const label =
     ACTIVITY_LABELS[entry.activity_type] !== undefined ? tSpecies(`family:activities.${entry.activity_type}`, species) : entry.activity_type;

@@ -250,13 +250,16 @@ describe('life-stage data against data.json', function () {
 
         // The only open proposal is the general teething chewing chance (as for every dog).
         expect(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'west-highland-white-terrier')->where('verified', false)->pluck('key')->all())
-            ->toBe([StageParamKey::ChewingChancePerDay->value]);
+            // M5-R13: + the brushing routine — "more than once a week" without a number → Claude's proposal 2.
+            ->toBe([StageParamKey::ChewingChancePerDay->value, StageParamKey::GroomingSessionsPerWeek->value]);
     });
 
     it('shares the general dog rows with the Border Collie (only the breed profile differs)', function () {
         $profileKeys = [StageParamKey::StartsAtMonths, StageParamKey::ArrivalAgeMonths, StageParamKey::ExerciseMinutesPerDay,
             StageParamKey::ExerciseMinutesPerAgeMonth, StageParamKey::AdultWeightKg, StageParamKey::GrowthEndMonths,
-            StageParamKey::CorenRank, StageParamKey::TrainingLearningMultiplier, StageParamKey::LifespanYears];
+            StageParamKey::CorenRank, StageParamKey::TrainingLearningMultiplier, StageParamKey::LifespanYears,
+            // M5-R13: the breed's brushing routine (the Border Collie has none).
+            StageParamKey::GroomingSessionsPerWeek];
         $general = fn (string $slug) => collect(BreedStageParamsSeeder::rows())
             ->where('breed_slug', $slug)
             ->reject(fn (array $r) => in_array(StageParamKey::from($r['key']), $profileKeys, true))

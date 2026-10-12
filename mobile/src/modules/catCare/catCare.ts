@@ -25,6 +25,7 @@
 
 import type { ChildPetState } from '@/api/client';
 import { localParts } from '@/modules/childPet/familyTime';
+import { DOG_GROOMING_REFUSALS } from '@/modules/catCare/dogGrooming';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
@@ -712,19 +713,23 @@ export interface RefusalContext {
   timezone: string | null;
   /** `onlyScratchingOpen(care)` — `needs_cleaning` then asks for the scratcher first. */
   scratchingOnly?: boolean;
+  /** M5-R13: the pet is a dog (brushing) — its grooming refusals and locks name the dog. */
+  dog?: boolean;
 }
 
 /** Child text for a refusal code (422 or a `blocked_reason`), with the family-local time when known. */
 export function catRefusalMessage(reason: string | null, nextAllowedAt: string | null, ctx: RefusalContext): string {
   if (!isCatRefusal(reason)) return t('cat:errors.unknown');
   if (reason === 'needs_cleaning') return ctx.scratchingOnly ? t('cat:errors.needs_scratcher_first') : t('cat:errors.needs_cleaning');
+  // M5-R13: a brushed dog's own words ("kuža") where the cat's text names the cat.
+  const base = ctx.dog === true && DOG_GROOMING_REFUSALS.has(reason) ? 'child:grooming.errors' : 'cat:errors';
   if (TIMED.has(reason)) {
     const when = catWhen(nextAllowedAt, ctx.nowIso, ctx.timezone);
     // The keys are checked by the parity test; the typed `t` can't see template keys.
-    const key = when !== null ? `cat:errors.${reason}` : `cat:errors.${reason}_no_time`;
+    const key = when !== null ? `${base}.${reason}` : `${base}.${reason}_no_time`;
     return (t as unknown as (k: string, o?: Record<string, string>) => string)(key, when !== null ? { when } : undefined);
   }
-  return t(`cat:errors.${reason}`);
+  return (t as unknown as (k: string) => string)(`${base}.${reason}`);
 }
 
 // ── Texts ─────────────────────────────────────────────────────

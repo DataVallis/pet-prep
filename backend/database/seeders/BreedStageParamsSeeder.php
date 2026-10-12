@@ -389,6 +389,48 @@ class BreedStageParamsSeeder extends Seeder
      */
     public const CONFIRMED_CAT_GROOMING_2026_10_11 = 'potrdil David 2026-10-11';
 
+    /**
+     * M5-R13 dog grooming (David 2026-10-12, "kot pri mački"): a sourced number per
+     * runbook rule (data.json proposed_game_parameters.<breed>.grooming.decision).
+     */
+    public const CONFIRMED_R13_DOG_GROOMING = 'potrdil David 12. 10. 2026 (pravilo runbooka, M5-R13)';
+
+    /**
+     * M5-R13: the sources say "more than once a week" / "a few times a week" without a
+     * number (German Shepherd, Australian Shepherd, West Highland White Terrier, Bernese
+     * Mountain Dog, Siberian Husky) → Claude's proposal 2 per week, verified=false.
+     */
+    public const PROPOSED_R13_DOG_GROOMING = 'predlog Claude 12. 10. 2026 (»večkrat na teden« brez števila → 2, M5-R13) — čaka Davida';
+
+    /**
+     * M5-R13: dog breed → [sessions per week, source id, verbatim quote (data.json), confidence,
+     * Claude's proposal?]. The mutt and the Border Collie have no grooming statement → no row.
+     *
+     * @var array<string, array{0: int, 1: string, 2: string, 3: string, 4: bool}>
+     */
+    public const DOG_GROOMING = [
+        'labrador_retriever' => [1, 'S50', 'Grooming: Once a week', 'high', false],
+        'golden_retriever' => [3, 'S68', 'Ideally, they should be brushed or combed three times a week at a minimum.', 'medium', false],
+        'french_bulldog' => [1, 'S78', 'Grooming: Once a week', 'high', false],
+        'german_shepherd' => [2, 'S97', 'Grooming: More than once a week', 'low', true],
+        'cavalier_king_charles_spaniel' => [7, 'S108', 'Cavalier King Charles Spaniels have fairly high maintenance coats and you may find they need to be brushed daily', 'medium', false],
+        'beagle' => [1, 'S113', 'Grooming: Once a week', 'high', false],
+        'standard_poodle' => [7, 'S120', 'Grooming: Every day', 'high', false],
+        'dachshund' => [1, 'S125', 'Grooming: Once a week', 'high', false],
+        'australian_shepherd' => [2, 'S133', 'Grooming: More than once a week', 'low', true],
+        'havanese' => [7, 'S138', 'Grooming: Every day', 'high', false],
+        'west_highland_white_terrier' => [2, 'S144', 'Grooming: More than once a week', 'low', true],
+        'bernese_mountain_dog' => [2, 'S152', 'Grooming: More than once a week', 'low', true],
+        'siberian_husky' => [2, 'S160', 'Grooming: More than once a week', 'low', true],
+        'rottweiler' => [1, 'S168', 'Grooming: Once a week', 'high', false],
+        'bulldog' => [1, 'S177', 'Grooming: Once a week', 'high', false],
+        'german_shorthaired_pointer' => [2, 'S188', "Shorthaired pointers will need grooming once or twice a week, with Wirehaired also needing 'stripping' occasionally.", 'medium', false],
+        'yorkshire_terrier' => [7, 'S192', 'Grooming: Every day', 'high', false],
+        'cane_corso' => [1, 'S199', 'A weekly brush should be enough to keep on top of dead hairs.', 'high', false],
+        'pembroke_welsh_corgi' => [3, 'S206', 'Coat care is fairly minimal, with grooming two-three times per week usually enough to remove any dead hair.', 'high', false],
+        'dobermann' => [1, 'S209', 'Grooming: Once a week', 'high', false],
+    ];
+
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
@@ -617,9 +659,47 @@ class BreedStageParamsSeeder extends Seeder
             }
 
             $add('all', 0, StageParamKey::LifespanYears, ...$p['lifespan']);
+
+            // M5-R13 (David 2026-10-12, "kot pri mački"): the breed's weekly brushing
+            // routine; no row = no routine (mutt, Border Collie — no grooming statement).
+            $grooming = self::dogGrooming($breed);
+            if ($grooming !== null) {
+                $add('all', 0, StageParamKey::GroomingSessionsPerWeek, ...$grooming);
+            }
         }
 
         return $rows;
+    }
+
+    /**
+     * M5-R13 dog grooming: `grooming_sessions_per_week` per dog breed from
+     * docs/research/dog-data/data.json proposed_game_parameters.<breed>.grooming
+     * (runbook §3 rule, David 2026-10-11/12: "once a week" → 1, "every day" → 7,
+     * a range A–B → B, "more than once a week" → the most specific number of
+     * another source; no number at all → Claude's proposal 2, verified=false).
+     * Matted coat at ceil(goal / 2) missed (CatChoreService::mattedAfterMissed).
+     * Null = no grooming statement in the sources → no row, no routine.
+     *
+     * @return array{0: int, 1: array<string, mixed>}|null
+     */
+    public static function dogGrooming(BreedType $breed): ?array
+    {
+        $row = self::DOG_GROOMING[$breed->value] ?? null;
+        if ($row === null) {
+            return null;
+        }
+        [$value, $sourceId, $quote, $confidence, $proposal] = $row;
+
+        return [$value, [
+            'unit' => 'brushing sessions/week (≥ 1 day apart)', 'source_id' => $sourceId, 'confidence' => $confidence,
+            'verified' => ! $proposal,
+            'ref' => "proposed_game_parameters.{$breed->value}.grooming",
+            'decision' => $proposal ? self::PROPOSED_R13_DOG_GROOMING : self::CONFIRMED_R13_DOG_GROOMING,
+            'quote' => $quote,
+            'notes' => $proposal
+                ? 'The sources say "more than once a week" without a number → Claude\'s proposal 2 (open for David). Matted coat when ≥ 1 of 2 is missed (ceil(2 / 2)).'
+                : 'Runbook grooming rule (once a week → 1, every day → 7, A–B → B). Matted coat when ≥ ceil('.$value.' / 2) of the week\'s slots are missed.',
+        ]];
     }
 
     /**

@@ -160,13 +160,17 @@ describe('import provenance', function () {
         // M5-R10-12 / M5-R10-23: the Bernese Mountain Dog's (76) and the Cane Corso's (84) senior
         // boundary / senior arrival age are Claude's suggestions (no runbook rule produced a value) —
         // open for David.
+        // M5-R13: the brushing routine of the five breeds whose sources say "more than once a
+        // week" without a number (2 per week — Claude's proposal, open for David).
         $dogOpen = BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false);
-        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso'])->pluck('key')->unique()->values()->all())
+        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso'])->where('key', '!=', StageParamKey::GroomingSessionsPerWeek->value)->pluck('key')->unique()->values()->all())
             ->toEqualCanonicalizing([
                 StageParamKey::ChewingChancePerDay->value,
             ]);
+        expect((clone $dogOpen)->where('key', StageParamKey::GroomingSessionsPerWeek->value)->pluck('breed_slug')->sort()->values()->all())
+            ->toBe(['australian-shepherd', 'bernese-mountain-dog', 'german-shepherd-dog', 'siberian-husky', 'west-highland-white-terrier']);
         foreach (['bernese-mountain-dog', 'cane-corso'] as $slug) {
-            expect((clone $dogOpen)->where('breed_slug', $slug)->where('key', '!=', StageParamKey::ChewingChancePerDay->value)->get()->map(fn ($r) => "{$r->stage}.{$r->key}")->sort()->values()->all())
+            expect((clone $dogOpen)->where('breed_slug', $slug)->whereNotIn('key', [StageParamKey::ChewingChancePerDay->value, StageParamKey::GroomingSessionsPerWeek->value])->get()->map(fn ($r) => "{$r->stage}.{$r->key}")->sort()->values()->all())
                 ->toBe(['senior.'.StageParamKey::ArrivalAgeMonths->value, 'senior.'.StageParamKey::StartsAtMonths->value], $slug);
         }
     });

@@ -69,6 +69,14 @@ class PairedPetResource extends JsonResource
             'current_video_url' => $media->currentVideoUrl,
             'media_status' => $pet->media_status,
             'media' => $media->toArray(),
+            /**
+             * M5-R13: the weekly brushing routine can apply to this pet (every profiled
+             * cat; a dog whose creating apps declared `dog_grooming`). Whether the breed
+             * has one is its `grooming_sessions_per_week` row — the contract's brushing line.
+             *
+             * @var bool
+             */
+            'grooming_enabled' => $pet->groomingEnabled(),
         ];
     }
 }

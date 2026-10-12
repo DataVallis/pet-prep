@@ -112,7 +112,7 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(L.young).toContain('9,000 steps');
       expect(L.adult).toContain('9,000 steps');
       expect(L.senior).toContain('6,800 steps');
-      expect(PICKER_STRINGS.breedHints.labrador_retriever).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.labrador_retriever).toBe('Part of the 12-week challenge · brushing 1× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -124,7 +124,7 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(G.young).toBe('2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
     expect(G.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
     expect(G.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.golden_retriever).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.golden_retriever).toBe('Del 12-tedenskega izziva · česanje 3× na teden');
   });
 
   it('M5-R10-02 Golden Retriever hints in English', async () => {
@@ -135,7 +135,7 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(G.young).toContain('9,000 steps a day, more each week up to 12,000 at 12 months');
       expect(G.adult).toContain('12,000 steps');
       expect(G.senior).toContain('9,000 steps');
-      expect(PICKER_STRINGS.breedHints.golden_retriever).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.golden_retriever).toBe('Part of the 12-week challenge · brushing 3× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -147,7 +147,7 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(F.young).toBe('2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).');
     expect(F.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
     expect(F.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.french_bulldog).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.french_bulldog).toBe('Del 12-tedenskega izziva · česanje 1× na teden');
   });
 
   it('M5-R10-03 French Bulldog hints in English', async () => {
@@ -158,7 +158,7 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(F.young).toContain('6,000 steps');
       expect(F.adult).toContain('6,000 steps');
       expect(F.senior).toContain('4,500 steps');
-      expect(PICKER_STRINGS.breedHints.french_bulldog).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.french_bulldog).toBe('Part of the 12-week challenge · brushing 1× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -169,14 +169,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(C.puppy).toMatch(/^Pride star 2 meseca\..*2\.000 korakov.*do 6\.000 pri 6 mesecih/);
     expect(C.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
     expect(C.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.cavalier_king_charles_spaniel).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.cavalier_king_charles_spaniel).toBe('Del 12-tedenskega izziva · česanje vsak dan');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.cavalier_king_charles_spaniel;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 6,000 at 6 months');
       expect(E.adult).toContain('6,000 steps');
       expect(E.senior).toContain('4,500 steps');
-      expect(PICKER_STRINGS.breedHints.cavalier_king_charles_spaniel).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.cavalier_king_charles_spaniel).toBe('Part of the 12-week challenge · brushing every day');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -187,14 +187,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(P.puppy).toMatch(/^Pride star 2 meseca\..*2\.000 korakov.*do 6\.000 pri 6 mesecih/);
     expect(P.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
     expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.standard_poodle).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.standard_poodle).toBe('Del 12-tedenskega izziva · česanje vsak dan');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.standard_poodle;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 6,000 at 6 months');
       expect(E.adult).toContain('6,000 steps');
       expect(E.senior).toContain('4,500 steps');
-      expect(PICKER_STRINGS.breedHints.standard_poodle).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.standard_poodle).toBe('Part of the 12-week challenge · brushing every day');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -206,14 +206,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(P.young).toBe('2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
     expect(P.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
     expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.siberian_husky).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.siberian_husky).toBe('Del 12-tedenskega izziva · česanje 2× na teden');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.siberian_husky;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 12,000 at 12 months');
       expect(E.adult).toContain('12,000 steps');
       expect(E.senior).toContain('9,000 steps');
-      expect(PICKER_STRINGS.breedHints.siberian_husky).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.siberian_husky).toBe('Part of the 12-week challenge · brushing 2× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -225,14 +225,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(P.young).toBe('2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
     expect(P.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
     expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.dobermann).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.dobermann).toBe('Del 12-tedenskega izziva · česanje 1× na teden');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.dobermann;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 12,000 at 12 months');
       expect(E.adult).toContain('12,000 steps');
       expect(E.senior).toContain('9,000 steps');
-      expect(PICKER_STRINGS.breedHints.dobermann).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.dobermann).toBe('Part of the 12-week challenge · brushing 1× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -244,14 +244,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(P.young).toBe('2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).');
     expect(P.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
     expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.pembroke_welsh_corgi).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.pembroke_welsh_corgi).toBe('Del 12-tedenskega izziva · česanje 3× na teden');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.pembroke_welsh_corgi;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 6,000 at 6 months');
       expect(E.adult).toContain('6,000 steps');
       expect(E.senior).toContain('4,500 steps');
-      expect(PICKER_STRINGS.breedHints.pembroke_welsh_corgi).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.pembroke_welsh_corgi).toBe('Part of the 12-week challenge · brushing 3× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -263,14 +263,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(P.young).toBe('2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
     expect(P.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
     expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.cane_corso).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.cane_corso).toBe('Del 12-tedenskega izziva · česanje 1× na teden');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.cane_corso;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 12,000 at 12 months');
       expect(E.adult).toContain('12,000 steps');
       expect(E.senior).toContain('9,000 steps');
-      expect(PICKER_STRINGS.breedHints.cane_corso).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.cane_corso).toBe('Part of the 12-week challenge · brushing 1× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -282,14 +282,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(P.young).toBe('2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
     expect(P.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
     expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.rottweiler).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.rottweiler).toBe('Del 12-tedenskega izziva · česanje 1× na teden');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.rottweiler;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 12,000 at 12 months');
       expect(E.adult).toContain('12,000 steps');
       expect(E.senior).toContain('9,000 steps');
-      expect(PICKER_STRINGS.breedHints.rottweiler).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.rottweiler).toBe('Part of the 12-week challenge · brushing 1× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -301,14 +301,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(P.young).toBe('2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
     expect(P.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
     expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.german_shorthaired_pointer).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.german_shorthaired_pointer).toBe('Del 12-tedenskega izziva · česanje 2× na teden');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.german_shorthaired_pointer;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 12,000 at 12 months');
       expect(E.young).toBe('2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.');
       expect(E.senior).toContain('9,000 steps');
-      expect(PICKER_STRINGS.breedHints.german_shorthaired_pointer).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.german_shorthaired_pointer).toBe('Part of the 12-week challenge · brushing 2× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -320,14 +320,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(P.young).toBe('2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).');
     expect(P.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
     expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.bulldog).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.bulldog).toBe('Del 12-tedenskega izziva · česanje 1× na teden');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.bulldog;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 6,000 at 6 months');
       expect(E.young).toBe('2 meals a day; walks of 6,000 steps a day (like an adult dog).');
       expect(E.senior).toContain('4,500 steps');
-      expect(PICKER_STRINGS.breedHints.bulldog).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.bulldog).toBe('Part of the 12-week challenge · brushing 1× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -339,14 +339,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(P.young).toBe('2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).');
     expect(P.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
     expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.bernese_mountain_dog).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.bernese_mountain_dog).toBe('Del 12-tedenskega izziva · česanje 2× na teden');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.bernese_mountain_dog;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 6,000 at 6 months');
       expect(E.adult).toContain('6,000 steps');
       expect(E.senior).toContain('4,500 steps');
-      expect(PICKER_STRINGS.breedHints.bernese_mountain_dog).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.bernese_mountain_dog).toBe('Part of the 12-week challenge · brushing 2× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -358,14 +358,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(P.young).toBe('2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).');
     expect(P.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
     expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.west_highland_white_terrier).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.west_highland_white_terrier).toBe('Del 12-tedenskega izziva · česanje 2× na teden');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.west_highland_white_terrier;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 6,000 at 6 months');
       expect(E.adult).toContain('6,000 steps');
       expect(E.senior).toContain('4,500 steps');
-      expect(PICKER_STRINGS.breedHints.west_highland_white_terrier).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.west_highland_white_terrier).toBe('Part of the 12-week challenge · brushing 2× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -377,14 +377,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(P.young).toBe('2 obroka na dan; sprehod 3.000 korakov na dan (kot odrasel pes).');
     expect(P.adult).toBe('2 obroka na dan; sprehod 3.000 korakov na dan.');
     expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 2.300 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.yorkshire_terrier).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.yorkshire_terrier).toBe('Del 12-tedenskega izziva · česanje vsak dan');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.yorkshire_terrier;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 3,000 at 3 months');
       expect(E.young).toBe('2 meals a day; walks of 3,000 steps a day (like an adult dog).');
       expect(E.senior).toContain('2,300 steps');
-      expect(PICKER_STRINGS.breedHints.yorkshire_terrier).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.yorkshire_terrier).toBe('Part of the 12-week challenge · brushing every day');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -396,14 +396,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(P.young).toBe('2 obroka na dan; sprehod 3.000 korakov na dan (kot odrasel pes).');
     expect(P.adult).toBe('2 obroka na dan; sprehod 3.000 korakov na dan.');
     expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 2.300 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.havanese).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.havanese).toBe('Del 12-tedenskega izziva · česanje vsak dan');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.havanese;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 3,000 at 3 months');
       expect(E.adult).toContain('3,000 steps');
       expect(E.senior).toContain('2,300 steps');
-      expect(PICKER_STRINGS.breedHints.havanese).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.havanese).toBe('Part of the 12-week challenge · brushing every day');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -415,14 +415,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(P.young).toBe('2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
     expect(P.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
     expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.australian_shepherd).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.australian_shepherd).toBe('Del 12-tedenskega izziva · česanje 2× na teden');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.australian_shepherd;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 12,000 at 12 months');
       expect(E.adult).toContain('12,000 steps');
       expect(E.senior).toContain('9,000 steps');
-      expect(PICKER_STRINGS.breedHints.australian_shepherd).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.australian_shepherd).toBe('Part of the 12-week challenge · brushing 2× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -433,14 +433,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(P.puppy).toMatch(/^Pride star 2 meseca\..*2\.000 korakov.*do 6\.000 pri 6 mesecih/);
     expect(P.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
     expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.dachshund).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.dachshund).toBe('Del 12-tedenskega izziva · česanje 1× na teden');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.dachshund;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 6,000 at 6 months');
       expect(E.adult).toContain('6,000 steps');
       expect(E.senior).toContain('4,500 steps');
-      expect(PICKER_STRINGS.breedHints.dachshund).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.dachshund).toBe('Part of the 12-week challenge · brushing 1× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -451,14 +451,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(B.puppy).toMatch(/^Pride star 2 meseca\..*2\.000 korakov.*do 6\.000 pri 6 mesecih/);
     expect(B.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
     expect(B.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.beagle).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.beagle).toBe('Del 12-tedenskega izziva · česanje 1× na teden');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.beagle;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 6,000 at 6 months');
       expect(E.adult).toContain('6,000 steps');
       expect(E.senior).toContain('4,500 steps');
-      expect(PICKER_STRINGS.breedHints.beagle).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.beagle).toBe('Part of the 12-week challenge · brushing 1× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -469,14 +469,14 @@ describe('PICKER_STRINGS.ageHints', () => {
     expect(G.puppy).toMatch(/^Pride star 2 meseca\..*2\.000 korakov.*do 12\.000 pri 12 mesecih/);
     expect(G.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
     expect(G.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
-    expect(PICKER_STRINGS.breedHints.german_shepherd).toBe('Del 12-tedenskega izziva.');
+    expect(PICKER_STRINGS.breedHints.german_shepherd).toBe('Del 12-tedenskega izziva · česanje 2× na teden');
     await i18n.changeLanguage('en');
     try {
       const E = PICKER_STRINGS.ageHints.german_shepherd;
       expect(E.puppy).toContain('2,000 steps a day, more each week up to 12,000 at 12 months');
       expect(E.adult).toContain('12,000 steps');
       expect(E.senior).toContain('9,000 steps');
-      expect(PICKER_STRINGS.breedHints.german_shepherd).toBe('Part of the 12-week challenge.');
+      expect(PICKER_STRINGS.breedHints.german_shepherd).toBe('Part of the 12-week challenge · brushing 2× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }

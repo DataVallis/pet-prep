@@ -47,7 +47,7 @@ describe('useBreedCatalogue', () => {
     await waitFor(() => expect(result.current.catalogue?.species).toEqual(['dog', 'cat']));
     expect(result.current.isFallback).toBe(false);
     // This build's features: species_cat is declared.
-    expect(getBreedCatalogue).toHaveBeenCalledWith(['behaviour_events', 'training', 'species_cat'], expect.anything());
+    expect(getBreedCatalogue).toHaveBeenCalledWith(['behaviour_events', 'training', 'species_cat', 'dog_grooming'], expect.anything());
   });
 
   it('server cats off (PETPREP_CATS_ENABLED=false): dogs only, no fallback, no error', async () => {

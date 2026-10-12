@@ -10,10 +10,14 @@
  * ("Glava in vrat → Hrbet → Boki in rep" / "Izprazni → Umij → Napolni"). "Počeši enkrat" /
  * "Podrgni enkrat" records a stroke for VoiceOver / TalkBack. "Ustavi" stops without
  * consequence. The server's verdict decides; a "didn't count" is never shaming.
+ *
+ * M5-R13 (David 2026-10-12, "kot pri mački"): a brushed dog plays the same grooming game —
+ * same session, steps and verdict; only the words ("Počeši kužka", `child:grooming`) and the
+ * drawing (the dog emoji instead of the cat) differ.
  */
 
 import { useMemo, useRef } from 'react';
-import { PanResponder, ScrollView, View } from 'react-native';
+import { PanResponder, ScrollView, StyleSheet, View } from 'react-native';
 import { Brush, Hand, Sparkles } from 'lucide-react-native';
 import { useQueryClient } from '@tanstack/react-query';
 
@@ -33,6 +37,7 @@ import {
 } from '@/modules/catCare/catCare';
 import { addStroke, beginRub, choreProgress, choreStepAt, endRub, moveRub, sessionTime, type RubTracker } from '@/modules/catCare/catGames';
 import { Busy, CatOverlayFrame, CatStage, FailedView, PrimaryButton, SecondaryButton, SegmentDots, styles, useAnnounce } from '@/modules/catCare/CatGameParts';
+import { DOG_GROOMING_STRINGS } from '@/modules/catCare/dogGrooming';
 import { useChoreGame } from '@/modules/catCare/useCatGames';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import type { ClockSources } from '@/modules/training/game';
@@ -40,6 +45,33 @@ import { palette } from '@/theme';
 
 const S = CHORE_STRINGS;
 const C = CAT_COMMON_STRINGS;
+const D = DOG_GROOMING_STRINGS;
+
+/** The words of one stroke game (cat grooming, litter change, or — M5-R13 — dog grooming). */
+interface ChoreTexts {
+  title: string;
+  intro: string;
+  start: string;
+  stroke: string;
+  strokeA11y: string;
+  stageA11y: string;
+  steps: Readonly<Record<'1' | '2' | '3', string>>;
+  result: { successTitle: string; success: string; failTitle: string };
+}
+
+/** A dog brushing (M5-R13): the grooming game of a pet that is not a cat. */
+function isDogChore(kind: ChoreKind, view: ChildPetView): boolean {
+  return kind === 'grooming' && view.pet.species !== 'cat';
+}
+
+/** The grooming week / matted lines (cat or dog words). */
+function groomingLines(dog: boolean): { weekDone: string; week: (done: number, goal: number) => string; matted: (seconds: number) => string } {
+  return dog ? D : S.grooming;
+}
+
+function choreTexts(kind: ChoreKind, view: ChildPetView): ChoreTexts {
+  return isDogChore(kind, view) ? D : S[kind];
+}
 
 export interface ChoreOverlayProps {
   kind: ChoreKind;
@@ -56,9 +88,10 @@ function introFor(kind: ChoreKind, view: ChildPetView): { lines: { text: string;
   if (kind === 'grooming') {
     const g = view.cat.grooming;
     if (g === null) return { lines: [], canStart: false, blocked: 'grooming_not_available', blockedAt: null };
+    const words = groomingLines(isDogChore(kind, view));
     const weekDone = g.goal_per_week > 0 && g.done_this_week >= g.goal_per_week;
-    const lines = [{ text: weekDone ? S.grooming.weekDone : S.grooming.week(g.done_this_week, g.goal_per_week), strong: true, done: weekDone }];
-    if (g.matted) lines.push({ text: S.grooming.matted(g.session_seconds), strong: false, done: false });
+    const lines = [{ text: weekDone ? words.weekDone : words.week(g.done_this_week, g.goal_per_week), strong: true, done: weekDone }];
+    if (g.matted) lines.push({ text: words.matted(g.session_seconds), strong: false, done: false });
     return { lines, canStart: g.can_start, blocked: g.can_start ? null : g.blocked_reason, blockedAt: g.next_allowed_at };
   }
   const change = view.cat.litter?.change ?? null;
@@ -76,7 +109,8 @@ export default function ChoreOverlay({ kind, view, onClose, reduceMotion, clock,
   const queryClient = useQueryClient();
   const game = useChoreGame(kind, view, { clock });
   const { phase } = game;
-  const texts = S[kind];
+  const dog = isDogChore(kind, view);
+  const texts = choreTexts(kind, view);
   const busy = phase.kind === 'starting' || phase.kind === 'finishing';
   const intro = introFor(kind, view);
   const onMediaExpired = () => void queryClient.invalidateQueries({ queryKey: childPetKey });
@@ -100,18 +134,20 @@ export default function ChoreOverlay({ kind, view, onClose, reduceMotion, clock,
           ))}
           {intro.blocked !== null && (
             <Text style={styles.note} testID={`${testID}-blocked`}>
-              {catRefusalMessage(intro.blocked, intro.blockedAt, { nowIso: view.server_time, timezone: view.timezone, scratchingOnly: onlyScratchingOpen(view.cat) })}
+              {catRefusalMessage(intro.blocked, intro.blockedAt, { nowIso: view.server_time, timezone: view.timezone, scratchingOnly: onlyScratchingOpen(view.cat), dog })}
             </Text>
           )}
           <PrimaryButton label={texts.start} onPress={game.start} disabled={!intro.canStart} testID={`${testID}-start`} />
         </ScrollView>
       )}
 
-      {phase.kind === 'starting' && <Busy text={C.starting} testID={`${testID}-starting`} />}
+      {phase.kind === 'starting' && <Busy text={dog ? D.starting : C.starting} testID={`${testID}-starting`} />}
 
       {(phase.kind === 'running' || phase.kind === 'finishing') && (
         <ChoreRunning
           kind={kind}
+          texts={texts}
+          dog={dog}
           view={view}
           session={phase.session}
           strokes={phase.input}
@@ -128,7 +164,7 @@ export default function ChoreOverlay({ kind, view, onClose, reduceMotion, clock,
 
       {phase.kind === 'result' && (
         <ScrollView contentContainerStyle={styles.content}>
-          <ChoreResultView kind={kind} result={phase.result} status={phase.status} onAgain={game.reset} onDone={onClose} testID={testID} />
+          <ChoreResultView kind={kind} texts={texts} result={phase.result} status={phase.status} onAgain={game.reset} onDone={onClose} testID={testID} />
         </ScrollView>
       )}
 
@@ -141,6 +177,7 @@ export default function ChoreOverlay({ kind, view, onClose, reduceMotion, clock,
 
 function ChoreResultView({
   kind,
+  texts: words,
   result,
   status,
   onAgain,
@@ -148,13 +185,14 @@ function ChoreResultView({
   testID,
 }: {
   kind: ChoreKind;
+  texts: ChoreTexts;
   result: ChoreResult;
   status: CatFinishStatus;
   onAgain: () => void;
   onDone: () => void;
   testID: string;
 }) {
-  const texts = S[kind].result;
+  const texts = words.result;
   return (
     <View style={styles.resultBox} testID={`${testID}-result`}>
       <Text style={styles.resultTitle} accessibilityRole="header" testID={`${testID}-result-title`}>
@@ -183,6 +221,8 @@ function ChoreResultView({
 
 function ChoreRunning({
   kind,
+  texts,
+  dog,
   view,
   session,
   strokes,
@@ -196,6 +236,8 @@ function ChoreRunning({
   testID,
 }: {
   kind: ChoreKind;
+  texts: ChoreTexts;
+  dog: boolean;
   view: ChildPetView;
   session: ChoreSession;
   strokes: readonly number[];
@@ -208,7 +250,6 @@ function ChoreRunning({
   onMediaExpired: () => void;
   testID: string;
 }) {
-  const texts = S[kind];
   const time = sessionTime(session.duration_ms, elapsedMs);
   const step = choreStepAt(session, elapsedMs);
   const progress = choreProgress(session, strokes);
@@ -252,7 +293,12 @@ function ChoreRunning({
     [],
   );
 
-  const illustration =
+  const illustration = dog ? (
+    // M5-R13: the dog's drawing — happy once enough strokes are in (a change, not an animation).
+    <Text style={dogStyles.figure} accessible={false}>
+      {progress.strokes >= session.min_strokes ? '🐶' : '🐕'}
+    </Text>
+  ) :
     kind === 'grooming' ? (
       // Content once enough strokes are in (a pose change, not an animation — fine with "reduce motion").
       <CatFigure pose={progress.strokes >= session.min_strokes ? 'happy' : 'sit'} size={140} />
@@ -306,3 +352,10 @@ function ChoreRunning({
     </View>
   );
 }
+
+const dogStyles = StyleSheet.create({
+  figure: {
+    fontSize: 96,
+    textAlign: 'center',
+  },
+});
