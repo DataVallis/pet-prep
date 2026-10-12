@@ -11341,6 +11341,608 @@
       }
     }
   },
+  "boxer": {
+    "_note": "Added 2026-10-12 (M5-R10-26, unattended run — appended after the Dobermann: AKC 2024 No. 17, S174 table row '17 | Boxer'). Quotes as returned by the web-fetch tool on 2026-10-12; spot-check before import (sources.md S213–S220, reused S8, S10, S11, S14, S35, S45, S92, S123, S174). The English FCI standard PDF redirected in a loop; the French FCI standard (S213, valid 01.04.2008) was read instead — French quotes, English in notes. FCI and the RKC standard (S217) agree on heights; the RKC standard gives weights, FCI only 'over 30 kg' / 'about 25 kg'. Colours fawn or brindle with a black mask (all three standards). FCI ears and tail natural; the AKC standard (S218) still describes cropped ears and a docked tail — never drawn. Lifespan: McMillan 2024 median 11.3 y via the Dogs Trust breed table (S123). Welfare: RKC Breed Watch Category 2 — pinched nostrils, excessively short muzzle (S216); VetCompass 2023 (S220): 'a moderately brachycephalic skull shape'; PDSA (S219) lists BOAS 'in some Boxers with shorter faces' → brachycephalic_breathing chip and no marketing (BVA S92). Slovenian name »boksar« (common name; KZS page not opened). Woodgreen and AKC trait ratings not attempted.",
+    "identity": {
+      "value": "FCI No. 144, Group 2 Section 2.1 (Molossoid, Mastiff type), Germany",
+      "unit": "—",
+      "source_id": "S214",
+      "quote": "Boxer (Deutscher Boxer) | 144 | Section 2, Molossian type | Subsection 2.1, Mastiff type | Germany",
+      "confidence": "high",
+      "notes": "FCI nomenclature, Group 2 list (S214), fields as returned (quote assembled from the row fields). FCI standard (S213): Group 2, section 2.1, 'Avec épreuve de travail.' (with working trial); valid standard 01.04.2008. RKC group: Working (S215). AKC name: Boxer (S174)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S215",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "PDSA (S219) key facts: 'Size | Large' — sources agree. Standards: 'medium-sized' (RKC S217, AKC S218) — a proportion word, not a size class."
+    },
+    "height": {
+      "rkc": {
+        "value": {
+          "male": [
+            57,
+            63
+          ],
+          "female": [
+            53,
+            59
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S217",
+        "quote": "Height: dogs: 57-63 cms (22½-25 ins); bitches: 53-59 cms (21-23 ins).",
+        "confidence": "high",
+        "notes": "FCI (S213, French): males 57–63 cm, females 53–59 cm — same. AKC (S218): 'Adult males 23 to 25 inches; females 21½ to 23½ inches at the withers.' PDSA (S219): 'Average height | 53-63 cm'."
+      }
+    },
+    "adult_weight": {
+      "rkc": {
+        "value": {
+          "male": [
+            30,
+            32
+          ],
+          "female": [
+            25,
+            27
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S217",
+        "quote": "Weight: dogs: approximately 30-32 kgs (66-70 lbs); bitches: approximately 25-27 kgs (55-60 lbs).",
+        "confidence": "high",
+        "notes": "RKC breed standard (S217). FCI (S213, French, as summarised by the tool): males over 30 kg (at about 60 cm), females about 25 kg (at about 56 cm). The AKC standard (S218) gives no weight. Game range 25–32 kg (both sexes)."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            30,
+            32
+          ],
+          "female": [
+            25,
+            27
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S219",
+        "quote": "Average weight | 25-27kg (females) 30-32kg (males)",
+        "confidence": "high",
+        "notes": "PDSA key facts (S219) — same as the RKC standard."
+      },
+      "vetcompass_mean": {
+        "value": {
+          "male": 32.99,
+          "female": 27.56
+        },
+        "unit": "kg",
+        "source_id": "S220",
+        "quote": "The mean adult bodyweight of males (32.99 kg, SD 5.42 kg) was heavier than for females (27.56 kg, SD 4.57 kg)",
+        "confidence": "medium",
+        "notes": "O'Neill et al. 2023 (S220), UK primary-care population — background only."
+      },
+      "salt_category": {
+        "value": "IV (20–<30 kg) for females; males (30–32 kg) in V",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8). The Salt 2017 Category IV list names the Boxer (general_by_size note)."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. RKC 25–32 kg (S217) = 55–70.5 lb: males 66–70 lb are 'Large'; bitches 55–60 lb straddle 'Medium (24–59 pounds): 12–15 months' and Large (as the Labrador). PDSA (S219): 'Boxers mature a lot slower than other breeds' (truncated by the tool). The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Boxer growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 11.3,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Boxer | 11.3 | 11.3 - 11.5 | 11294 | 5925",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123, columns Breed | Median Life Expectancy (Years) | Lower and Upper 95% CI | Total Number Individuals (Alive and Deceased) | Number Deceased Individuals). Runbook first choice (McMillan 2024). VetCompass 2023 (S220): 'The median longevity of 346 Boxers that died during the study was 10.46 years' (alternative). RKC (S215) and PDSA (S219): 'Over 10 years' — consistent."
+      },
+      "vetcompass_2023": {
+        "value": 10.46,
+        "unit": "years",
+        "source_id": "S220",
+        "quote": "The median longevity of 346 Boxers that died during the study was 10.46 years",
+        "confidence": "high",
+        "notes": "O'Neill et al. 2023 (S220). Alternative only (runbook prefers McMillan 2024)."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S215",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page (S215). PDSA key facts (S219): 'Average lifespan | Over 10 years' — same. Not 'Under 10 years' → no shorter_lifespan chip."
+      },
+      "senior_from": {
+        "value": 8.475,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 11.3 y (McMillan 2024 via S123) → 0.75 × 11.3 = 8.475 y = 101.7 → 102 months. Not chosen: 94 (0.75 × 10.46 y VetCompass 2023, S220), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 102,
+        "alternative": {
+          "value_years": 7.845,
+          "months": 94,
+          "derived_from": [
+            "S11",
+            "S220"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S215",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "PDSA (S219): 'Your Boxer will need a minimum of two hours exercise every day.' (key facts 'Minimum exercise (per day) | 2 hours') — sources agree; RKC preferred (runbook rule)."
+      },
+      "energy": {
+        "value": "very high energy, playful; keeps a puppy attitude for long",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Boxers are very high energy, active dogs who love playing and being involved in everything going on.",
+        "confidence": "medium",
+        "notes": "PDSA (S219): 'They keep their puppy attitude longer than most dogs so you might find your Boxer rarely has a calm moment at home!' / 'On top of this, your Boxer will also need regular, short training sessions.' Covered by the game's walk, play and school."
+      },
+      "walk_structure": {
+        "value": "split into a few walks with sniffing and exploring, plus secure off-lead running and garden play",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "This should be split into a few walks with plenty of opportunities for sniffing around and exploring.",
+        "confidence": "medium",
+        "notes": "PDSA (S219): 'You should also give your Boxer plenty of time to exercise off lead somewhere secure so they can have a good run around.' / 'A large secure garden is a must if you have a Boxer so they have plenty of space to blow off steam.' The game's walks already count several walks per day; no new mechanic."
+      },
+      "after_meals": {
+        "value": "leave a gap between eating and exercising",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Remember to leave a gap between eating and exercising.",
+        "confidence": "medium",
+        "notes": "PDSA (S219), feeding section ('We usually recommend splitting their daily allowance into two meals.'). The page does not name bloat. → proposed_game_parameters.boxer.meal_exercise_gap (built, M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "equable, biddable, fearless, self-assured; kind and clownish, eager to please, very loyal",
+        "unit": "—",
+        "source_id": "S217",
+        "quote": "Equable, biddable, fearless, self-assured.",
+        "confidence": "high",
+        "notes": "RKC standard (S217). FCI (S213, French, summarised by the tool): strong nerves, self-assured, calm and balanced; very attached to the family, wary of strangers. PDSA (S219): 'They are eager to please and very loyal dogs.'; 'Boxers are friendly dogs but do have a natural guarding instinct and can be protective' (truncated by the tool)."
+      },
+      "family": {
+        "value": "a much-loved family companion; not recommended with younger children (size, boisterous) — an adult-only home or one with teenagers is better",
+        "unit": "—",
+        "source_id": "S215",
+        "quote": "much loved as a family companion for his intelligence and character",
+        "confidence": "high",
+        "notes": "RKC breed page (S215), clause as returned. PDSA (S219): 'Now they're known for their kind and clownish natures which has made them popular family pets.' / 'Generally speaking, Boxers are good around children of all ages given the right training.' but '...we wouldn't recommend a Boxer if you have younger children as they could accidentally knock them over.' and 'An adult only home or one with teenagers is better for a Boxer.' AKC standard (S218): 'With family and friends, his temperament is fundamentally playful, yet patient and stoical with children.' → family_pet and not_for_small_children; never children / small_children (conflicting statements)."
+      },
+      "experienced_owner": {
+        "value": "not recommended for first-time owners; does better with an experienced, patient owner",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "For this reason, we wouldn't recommend a Boxer if you are a first time owner.",
+        "confidence": "medium",
+        "notes": "PDSA (S219): 'Boxers can be very boisterous so do better with an experienced (and patient!) owner.' Basis of experienced_owner (as the Rottweiler, the Cane Corso and the Dobermann); never first_time_owner."
+      },
+      "socialisation": {
+        "value": "socialise with other dogs from a young age (strong guarding instinct)",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Boxers have a strong guarding instinct so it's important to socialise your Boxer with other dogs from a young age.",
+        "confidence": "medium",
+        "notes": "PDSA (S219): 'Puppy socialisation classes are a great way to get your pup used to new dogs.' Built: M5-R17 puppy socialisation (proposed_game_parameters.boxer.socialisation)."
+      },
+      "time_alone": {
+        "value": "loves company — can develop separation anxiety; best with someone at home all day",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Boxers love human company so can develop separation anxiety if left alone.",
+        "confidence": "medium",
+        "notes": "PDSA (S219): 'It's best to have a Boxer if someone is going to be around the house with them all day.' / 'As they get so attached to their owners, it's best to have someone around all day with your dog.' Breed-specific (not only the general four-hour advice) → new consider tag needs_company (runbook 'new tag' rule); never often_alone."
+      },
+      "other_pets": {
+        "value": "very high prey drive — not recommended with smaller pets; may accept a cat it grew up with, always supervise",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Boxers do have a very high prey drive, so we wouldn't recommend keeping them with smaller pets.",
+        "confidence": "medium",
+        "notes": "PDSA (S219): 'They may get along OK with a cat they have grown up with, but you should always supervise your Boxer with smaller pets.' → no other_pets tag; → chases_small_pets (David 2026-10-12 rule)."
+      },
+      "chewing": {
+        "value": "chews when alone or bored",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "If they are alone or bored, they like to chew which means your furniture and belongings will be at risk!",
+        "confidence": "medium",
+        "notes": "PDSA (S219) → chews_when_bored."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag. PDSA (S219) general feeding advice: two meals a day, at similar times."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. Conformation welfare: RKC Breed Watch Category 2 — 'Pinched nostrils', 'Excessively short muzzle' (S216); VetCompass 2023 (S220): 'a moderately brachycephalic skull shape'. PDSA (S219) introduces its list with 'Some of the conditions Boxers may develop include:'.",
+      "brachycephaly_boas": {
+        "value": "moderately short-faced (brachycephalic) skull; BOAS — severe breathing problems in some Boxers with shorter faces",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Brachycephalic obstructive airway syndrome (BOAS) – this can cause severe breathing problems in some Boxers with shorter faces",
+        "confidence": "high",
+        "notes": "PDSA (S219), the sentence as returned (the tool cut it at 125 characters). VetCompass (S220): 'The Boxer is a medium-large sized, active dog with a short coat and a moderately brachycephalic skull shape'; 'Brachycephalic airway obstructive syndrome (BOAS) is widely considered as a common disorder in dogs with extreme brachycephaly'. Basis of brachycephalic_breathing (welfare rule) and of the marketing exclusion (BVA S92)."
+      },
+      "skull_shape": {
+        "value": "moderately brachycephalic skull shape",
+        "unit": "—",
+        "source_id": "S220",
+        "quote": "The Boxer is a medium-large sized, active dog with a short coat and a moderately brachycephalic skull shape",
+        "confidence": "high",
+        "notes": "O'Neill et al. 2023 (S220, VetCompass / RVC). Also: 'The breed standard calls for a muzzle one-third the total length of the head'. FCI (S213): muzzle to skull '1 :2'."
+      },
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 2 — pinched nostrils, excessively short muzzle",
+        "unit": "—",
+        "source_id": "S216",
+        "quote": "Excessively short muzzle",
+        "confidence": "high",
+        "notes": "RKC Breed Watch page (S216), title 'Boxer - Category 2 | Breed Watch | Royal Kennel Club'; points of concern 'Pinched nostrils' and 'Excessively short muzzle'. RKC breed page (S215): 'Category 2'."
+      },
+      "eyes_corneal_ulcers": {
+        "value": "eye problems such as corneal ulcers (skull shape, prominent eyes)",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Eye problems – such as corneal ulcers due to the shape of their skulls and prominence of the eyes.",
+        "confidence": "medium",
+        "notes": "PDSA (S219). VetCompass (S220): 'Conformational predisposition to corneal ulceration among dogs with brachycephaly has been recognised for over a century'. RKC Best Practice eye scheme (S215)."
+      },
+      "skin_folds": {
+        "value": "skin problems — warts, skin tags, skin allergies and skin fold dermatitis; keep face folds clean and dry",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Due to the excess skin around their faces, Boxers are at risk of developing a condition called skin fold dermatitis.",
+        "confidence": "medium",
+        "notes": "PDSA (S219): 'It's important to make sure the folds of skin are kept clean and dry so they don't get infected.'; health list 'Skin problems - such as warts, skin tags, skin allergies and soreness in skin folds around the face (skin fold dermatitis).' VetCompass (S220): skin disorders the most prevalent group (figures stay here). RKC breed page (S215): skin conditions among the breed's health priorities (paraphrase). A sourced need (face-fold care) → ROADMAP M5-R14 (not built, needs David). Not a Breed Watch point → no sensitive_skin chip."
+      },
+      "heart": {
+        "value": "heart problems such as cardiomyopathy or aortic stenosis",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Heart problems – such as cardiomyopathy or aortic stenosis.",
+        "confidence": "medium",
+        "notes": "PDSA (S219); the page adds that parents should be screened before breeding (paraphrase). RKC breed page (S215): heart conditions (aortic stenosis, ARVC) among the breed's health priorities (paraphrase). Research only — no chip (Dobermann precedent)."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia; parents hip-scored (BVA/KC scheme, RKC Best Practice)",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Hip dysplasia – where the hip joint doesn't fit together perfectly, which will eventually lead to arthritis.",
+        "confidence": "medium",
+        "notes": "PDSA (S219). RKC breed page (S215) Best Practice: 'BVA/KC Hip Dysplasia Scheme'. Not a Breed Watch point → no hips_hind_legs chip."
+      },
+      "epilepsy": {
+        "value": "epilepsy",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Epilepsy – a brain disorder causing seizures.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S219)."
+      },
+      "cancer": {
+        "value": "certain cancers",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Certain cancers.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S219); RKC breed page (S215): cancers among the health priorities (paraphrase); VetCompass (S220): neoplasia the second most prevalent disorder group."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 48,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 48 | Boxer |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35): row '48 | Boxer' under 'Average Working/Obedience Intelligence' (ranks 40–54). Coren's own top/bottom-10 article (S34) does not list the breed. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 25 to 40 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier 'Average Working/Obedience Intelligence' (40–54): 'Obey first command: 50% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "clever but boisterous; positive, reward-based training from a young age; matures slowly",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Boxers are clever dogs but can be boisterous, so positive, reward-based training from a young age is really important.",
+        "confidence": "medium",
+        "notes": "PDSA (S219); FCI (S213, summarised): easy to train. The game's school (M5-R03) covers training."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.boxer.learning_multiplier (1.0, runbook rule: Average tier, rank 48).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium-sized, square build, strong bone and well developed muscles, smooth-coated",
+        "unit": "—",
+        "source_id": "S217",
+        "quote": "Great nobility, smooth-coated, medium-sized, square build, strong bone and evident, well developed muscles.",
+        "confidence": "high",
+        "notes": "AKC (S218): 'The ideal Boxer is a medium-sized, square-built dog of good substance'. FCI (S213, French, summarised): medium size, short-haired, stocky and square, strong bone, dry well-marked muscles."
+      },
+      "colours": {
+        "value": [
+          "fawn",
+          "brindle"
+        ],
+        "unit": "list (black mask; white markings up to one third)",
+        "source_id": "S217",
+        "quote": "Fawn or brindle.",
+        "confidence": "high",
+        "notes": "RKC (S217): 'White markings acceptable not exceeding one-third of ground colour.' / 'Fawn: Various shades from dark deer red to light fawn.' / 'Brindle: Black stripes on previously described fawn shades, running parallel to ribs all over body.' FCI (S213, summarised): fawn (light yellow to dark deer red; red fawn most desired) or brindle, black mask, white markings allowed up to one third. AKC (S218): 'The colors are fawn and brindle.'; disqualification 'Boxers that are any color other than fawn or brindle.' Never all-white, black, merle or more than one third white."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Fawn with a black mask first with the highest weight (portrait default), then brindle."
+      },
+      "coat": {
+        "value": "short, glossy, smooth and tight to the body",
+        "unit": "—",
+        "source_id": "S217",
+        "quote": "Short, glossy, smooth and tight to body.",
+        "confidence": "high",
+        "notes": "FCI (S213, French): 'Ras, dur, brillant et serré.' RKC breed page (S215): 'Coat length: Short'."
+      },
+      "ears": {
+        "value": "natural (uncropped), moderate, lying flat and close to the cheek, falling forward when alert",
+        "unit": "—",
+        "source_id": "S217",
+        "quote": "Moderate size, thin, set wide apart on highest part of skull lying flat and close to cheek in repose,",
+        "confidence": "high",
+        "notes": "RKC (S217): 'but falling forward with definite crease when alert.' FCI (S213, summarised): natural. The AKC standard (S218) describes cropped ears ('...the ears are customarily cropped') — never drawn; natural ears in the portrait."
+      },
+      "eyes": {
+        "value": "dark brown, forward looking, not protruding",
+        "unit": "—",
+        "source_id": "S217",
+        "quote": "Dark brown, forward looking, not too small, protruding or deeply set.",
+        "confidence": "high",
+        "notes": "RKC (S217): 'Dark rims with good pigmentation showing no haw.' FCI (S213, summarised): dark, medium size, neither bulging nor deep set."
+      },
+      "nose": {
+        "value": "broad, black, slightly turned up, wide open nostrils; broad, deep muzzle that is never short",
+        "unit": "—",
+        "source_id": "S217",
+        "quote": "Nose broad, black, slightly turned up, wide nostrils with well-defined line between.",
+        "confidence": "high",
+        "notes": "RKC (S217): 'Muzzle broad, deep and powerful, never narrow, pointed, short or shallow.' / 'Balance of skull and muzzle essential, with muzzle never appearing small, viewed from any angle.' FCI (S213, French): truffe 'Large, noire, très légèrement remouchée'; muzzle to skull '1 :2'. Breed Watch (S216): pinched nostrils and an excessively short muzzle are concerns → PetPrep art: a moderate muzzle with wide open nostrils (welfare rule)."
+      },
+      "tail": {
+        "value": "natural (undocked), set high, carried gaily",
+        "unit": "—",
+        "source_id": "S217",
+        "quote": "Undocked: Set on high and carried gaily, of moderate thickness.",
+        "confidence": "high",
+        "notes": "RKC (S217): 'Previously customarily docked.' FCI (S213, summarised): set rather high, normal natural length; a naturally short tail disqualifies. AKC (S218) describes a docked tail — never drawn; natural tail in the portrait."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S215, older address display.aspx?id=5116) and PDSA (S219). The RKC page shows no 'Good with children' field (as returned 2026-10-12). Woodgreen and AKC trait ratings not attempted.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S215",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "PDSA (S219): 'Size | Large'."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S215",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S215",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "Basis of large_home (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S215",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "PDSA (S219): 'A large secure garden is a must if you have a Boxer so they have plenty of space to blow off steam.'"
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S215",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "PDSA (S219): 'They have short fur which only needs a weekly brush to keep it in good condition.' → weekly brushing (M5-R13), 1× a week. Not more than once a week → no frequent_grooming tag."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S215",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "PDSA (S219): 'Coat length | Short'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S215",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PDSA (S219): 'As with any dog, you should expect your Boxer to shed throughout the year, more so in spring and autumn.' — agrees. Basis of the sheds tag."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S215",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S215",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S215",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_family": {
+        "value": "much loved as a family companion",
+        "unit": "—",
+        "source_id": "S215",
+        "quote": "much loved as a family companion for his intelligence and character",
+        "confidence": "high",
+        "notes": "Basis of family_pet (with behaviour.family)."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-12)."
+      },
+      "pdsa_family": {
+        "value": "popular family pets",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Now they're known for their kind and clownish natures which has made them popular family pets.",
+        "confidence": "medium",
+        "notes": "Basis of family_pet (with the RKC)."
+      },
+      "pdsa_children": {
+        "value": "not recommended with younger children (could knock them over); adult-only home or teenagers better",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "...we wouldn't recommend a Boxer if you have younger children as they could accidentally knock them over.",
+        "confidence": "high",
+        "notes": "PDSA (S219), as returned (the sentence begins 'This said, due to their size and boisterous nature'); 'An adult only home or one with teenagers is better for a Boxer.' Basis of not_for_small_children (as the Cane Corso and the Dobermann)."
+      },
+      "pdsa_exercise": {
+        "value": "a minimum of two hours a day",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Your Boxer will need a minimum of two hours exercise every day.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "pdsa_grooming": {
+        "value": "a weekly brush",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "They have short fur which only needs a weekly brush to keep it in good condition.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_experienced_owner": {
+        "value": "not for first-time owners",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "For this reason, we wouldn't recommend a Boxer if you are a first time owner.",
+        "confidence": "medium",
+        "notes": "Basis of experienced_owner."
+      },
+      "pdsa_time_alone": {
+        "value": "best with someone at home all day",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "It's best to have a Boxer if someone is going to be around the house with them all day.",
+        "confidence": "medium",
+        "notes": "Basis of needs_company (new key)."
+      },
+      "pdsa_chewing": {
+        "value": "chews when alone or bored",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "If they are alone or bored, they like to chew which means your furniture and belongings will be at risk!",
+        "confidence": "medium",
+        "notes": "Basis of chews_when_bored."
+      },
+      "pdsa_other_pets": {
+        "value": "very high prey drive — not with smaller pets",
+        "unit": "—",
+        "source_id": "S219",
+        "quote": "Boxers do have a very high prey drive, so we wouldn't recommend keeping them with smaller pets.",
+        "confidence": "medium",
+        "notes": "No other_pets tag; basis of chases_small_pets."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -16838,6 +17440,330 @@
         "confidence": "high",
         "notes": "Colours from the FCI standard (S207: black or brown with rust red tan markings); the RKC (S210) also allows blue and fawn — not drawn (FCI colours only, confirmed by David 2026-10-12). 'White spots' disqualify (FCI, as returned). Natural ears and tail (FCI 2015 'left natural', S207). Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and rust is the portrait default (FCI + RKC colour); natural ears and tail; no white markings"
+      }
+    },
+    "boxer": {
+      "_note": "Unattended run M5-R10-26 (2026-10-12): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. New vocabulary key needs_company (runbook 'new tag' rule). Sourced needs: weekly brushing (RKC S215, PDSA S219) → built (M5-R13); a gap between eating and exercising (PDSA S219) → built (M5-R16); socialisation from a young age (PDSA S219) → built (M5-R17); face folds kept clean and dry (PDSA S219) → ROADMAP M5-R14 (not built, needs David). Marketing: excluded (moderately brachycephalic, S220; BVA S92) — open for David.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S215",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Exercise: More than 2 hours per day' (S215); PDSA 'a minimum of two hours exercise every day' (S219). Rule: one number N ('more than N') → N = 120.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S215 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000 (= Border Collie, Labrador, Golden, German Shepherd, Australian Shepherd, Siberian Husky, Rottweiler, German Shorthaired Pointer, Cane Corso, Dobermann).",
+        "derived_from": [
+          "S215",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 102
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 102 = round(0.75 × 11.3 y × 12) = round(101.7) (S11 + McMillan 2024 median 11.3 y via the Dogs Trust table S123). Alternatives: 94 (VetCompass 2023 median 10.46 y, S220), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_vetcompass_2023": 94,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 102 (0.75 × 11.3 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 102
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 102)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 48 (S35), tier 'Average' (40–54) → 1.0 (as the mixed breed). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 48, Average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PDSA two meals a day at similar times (S219: 'We usually recommend splitting their daily allowance into two meals.') = the game's adult meals.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S215",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC (S215); PDSA (S219): 'They have short fur which only needs a weekly brush to keep it in good condition.' Rule 'Once a week' → 1. Built in M5-R13 (dog grooming); matted coat at ceil(1 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S219",
+        "quote": "Remember to leave a gap between eating and exercising.",
+        "confidence": "medium",
+        "notes": "PDSA (S219), feeding section (boxer.exercise.after_meals). No length in the source. Built in M5-R16 (David 2026-10-12): 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S219",
+        "quote": "Boxers have a strong guarding instinct so it's important to socialise your Boxer with other dogs from a young age.",
+        "confidence": "medium",
+        "notes": "boxer.behaviour.socialisation (PDSA S219). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17)"
+      },
+      "face_fold_care": {
+        "value": null,
+        "unit": "face-fold cleaning (sourced need, not built)",
+        "source_id": "S219",
+        "quote": "It's important to make sure the folds of skin are kept clean and dry so they don't get infected.",
+        "confidence": "medium",
+        "notes": "boxer.health.skin_folds (PDSA S219). No frequency in the source. The game has no face-fold mechanic → ROADMAP M5-R14 (flat-faced dog care, opened for the Bulldog; needs David).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): potreba z virom; mehanika ni zgrajena → ROADMAP M5-R14 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-26); refs = JSON paths in this file. New vocabulary key needs_company (runbook 'new tag' rule). No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S215",
+              "S219"
+            ],
+            "refs": [
+              "boxer.exercise.adult",
+              "boxer.suitability.pdsa_exercise"
+            ],
+            "quote": "S215 'Exercise: More than 2 hours per day'; S219 'Your Boxer will need a minimum of two hours exercise every day.'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S215",
+              "S219"
+            ],
+            "refs": [
+              "boxer.suitability.rkc_family",
+              "boxer.suitability.pdsa_family"
+            ],
+            "quote": "S215 'much loved as a family companion for his intelligence and character'; S219 'which has made them popular family pets.'",
+            "note": "PDSA does not recommend the breed with younger children (S219) → not_for_small_children as well; never children / small_children."
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S215"
+            ],
+            "refs": [
+              "boxer.suitability.rkc_size_of_home",
+              "boxer.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S215 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S215",
+              "S219"
+            ],
+            "refs": [
+              "boxer.exercise.adult",
+              "boxer.suitability.pdsa_exercise"
+            ],
+            "quote": "S215 'More than 2 hours per day'; S219 'a minimum of two hours exercise every day'"
+          },
+          {
+            "tag": "brachycephalic_breathing",
+            "source_ids": [
+              "S219",
+              "S220",
+              "S216"
+            ],
+            "refs": [
+              "boxer.health.brachycephaly_boas",
+              "boxer.health.skull_shape",
+              "boxer.health.breed_watch"
+            ],
+            "quote": "S219 'Brachycephalic obstructive airway syndrome (BOAS) – this can cause severe breathing problems in some Boxers with shorter faces'; S220 'a moderately brachycephalic skull shape'; S216 'Excessively short muzzle'",
+            "note": "Welfare rule §3: moderately short-faced breed with a Breed Watch muzzle / nostril concern. No statistics in the app."
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S219"
+            ],
+            "refs": [
+              "boxer.suitability.pdsa_children"
+            ],
+            "quote": "S219 '...we wouldn't recommend a Boxer if you have younger children as they could accidentally knock them over.'"
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S219"
+            ],
+            "refs": [
+              "boxer.behaviour.experienced_owner",
+              "boxer.suitability.pdsa_experienced_owner"
+            ],
+            "quote": "S219 'we wouldn't recommend a Boxer if you are a first time owner.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S219"
+            ],
+            "refs": [
+              "boxer.behaviour.time_alone",
+              "boxer.suitability.pdsa_time_alone"
+            ],
+            "quote": "S219 'Boxers love human company so can develop separation anxiety if left alone.'; 'It's best to have a Boxer if someone is going to be around the house with them all day.'",
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka, nova oznaka): »ne mara biti sam — nekdo naj bo večino dneva doma« — citat te pasme (PDSA S219); noben obstoječi ključ tega ne pokrije (often_alone je le »suits«)"
+          },
+          {
+            "tag": "chews_when_bored",
+            "source_ids": [
+              "S219"
+            ],
+            "refs": [
+              "boxer.behaviour.chewing",
+              "boxer.suitability.pdsa_chewing"
+            ],
+            "quote": "S219 'If they are alone or bored, they like to chew'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S215"
+            ],
+            "refs": [
+              "boxer.suitability.rkc_shedding"
+            ],
+            "quote": "S215 'Sheds: Yes'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S219"
+            ],
+            "refs": [
+              "boxer.behaviour.other_pets",
+              "boxer.suitability.pdsa_other_pets"
+            ],
+            "quote": "S219 'Boxers do have a very high prey drive, so we wouldn't recommend keeping them with smaller pets.'",
+            "decision": "potrdil David 2026-10-12 (pravilo runbooka): citat iz vnosa te pasme navaja zelo močan lovski nagon (na koncu seznama »Upoštevajte«)"
+          }
+        ],
+        "not_proposed": {
+          "children": "PDSA: good with children of all ages given the right training, but not recommended with younger children (S219) — conflicting → neither children nor small_children.",
+          "small_children": "PDSA advises against it (S219) → not_for_small_children instead.",
+          "first_time_owner": "PDSA: not for first-time owners (S219) → experienced_owner instead.",
+          "apartment": "RKC 'Large house' (S215).",
+          "other_pets": "PDSA: very high prey drive, not with smaller pets (S219) → chases_small_pets instead.",
+          "often_alone": "PDSA: separation anxiety, best with someone at home all day (S219) → needs_company instead.",
+          "older_owners": "No source.",
+          "low_shedding": "Sheds (S215).",
+          "food_motivated_weight": "No breed-specific statement.",
+          "frequent_grooming": "Once a week (S215, S219) — criterion is more than once a week.",
+          "may_herd_children": "No source.",
+          "needs_mental_stimulation": "PDSA asks for regular short training sessions and play (S219) but no mental-stimulation statement like the Dobermann's — not given.",
+          "secure_fencing": "PDSA asks for a large secure garden to run in (S219) — not an escape statement (the Husky criterion).",
+          "shorter_lifespan": "RKC 'Over 10 years' (S215); McMillan 2024 median 11.3 y (S123).",
+          "drools": "No source on the pages read.",
+          "fragile_older_children": "About fragile bones (Yorkshire Terrier) — not this breed's reason.",
+          "sensitive_skin": "Skin fold dermatitis and skin allergies are listed by PDSA (S219) and skin disorders are common in VetCompass (S220), but the RKC Breed Watch points (S216) are nostrils and muzzle only (the Westie / Bulldog criterion is a Breed Watch skin point) — not given; face-fold care → ROADMAP M5-R14.",
+          "welfare_other": "No hips_hind_legs / heart_and_spine / back_spine: hip dysplasia and heart disease are listed by PDSA (S219) — research only (Dobermann precedent)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, large_home; consider long_daily_exercise, brachycephalic_breathing, not_for_small_children, experienced_owner, needs_company (new), chews_when_bored, sheds, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing / store screenshots / social: no",
+        "unit": "—",
+        "source_id": "S92",
+        "quote": "avoiding imagery of brachycephalic dogs in advertising, marketing materials and social media campaigns",
+        "confidence": "medium",
+        "notes": "BVA position, executive summary (S92). The Boxer has 'a moderately brachycephalic skull shape' (VetCompass / RVC, S220) and RKC Breed Watch concerns 'Pinched nostrils' / 'Excessively short muzzle' (S216) → the rule's brachycephalic exclusion (as the French Bulldog and the Bulldog). Only moderately short-faced — open for David whether he wants it in marketing anyway (as he did for the Cavalier).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, NOT in marketing / store screenshots (BVA advice, S92; moderately brachycephalic, S220) — odprto za Davida"
+      },
+      "ai_appearance": {
+        "value": "adult Boxer, fawn (golden to deer red) with a black mask (default), or brindle; short glossy smooth coat tight to the body; moderate, broad and deep muzzle (never extremely short) with wide open nostrils; natural uncropped ears lying close to the cheeks; natural undocked tail carried high; dark brown eyes; square, athletic, muscular build; white markings small (never more than a third, never all white)",
+        "unit": "—",
+        "source_id": "S217",
+        "quote": "Fawn or brindle.",
+        "confidence": "high",
+        "notes": "Colours from the RKC (S217), FCI (S213) and AKC (S218) standards; RKC 'White markings acceptable not exceeding one-third of ground colour.' Natural ears and tail (FCI S213; RKC 'Undocked' S217); the AKC's cropped ears and docked tail are never drawn. Moderate muzzle with open nostrils (welfare rule; Breed Watch S216). Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn with a black mask is the portrait default (all three standards); moderate muzzle with open nostrils; natural ears and tail; never more than a third white"
       }
     }
   }
