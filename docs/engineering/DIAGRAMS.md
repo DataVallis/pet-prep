@@ -393,7 +393,7 @@ sequenceDiagram
   S->>DB: COMMIT
   S-->>App: one PetUpdated after commit ("fed_pet",<br/>or "metric_changed" if only the catch-up changed what shows)
   Note over S,C: M5-R16: state.feeding.digesting_until = last meal + breed meal_exercise_gap_minutes<br/>(Cane Corso / Dobermann 60 min; else null) — a warning only, steps still count
-  Note over S,C: Water: same flow, CareScheduleService::water —<br/>water_times_per_day per local day, ≥ water_min_gap_minutes real minutes<br/>since the last refill (also across midnight) → thirst 100 %, watered_pet row
+  Note over S,C: Water (M5-F11, no daily cap): same flow, CareScheduleService::water —<br/>live thirst (DecayMath) shows ≤ water_refill_below AND ≥ water_min_gap_minutes real minutes<br/>since the last refill (also across midnight) → thirst 100 %, watered_pet row;<br/>else 422 water_too_soon, next_allowed_at = later of gap end and forecast threshold minute
   Note over S,DB: Clean: settles due hygiene events, hygiene 100 %, cleaned_poop row (no window).<br/>Contract: allowed while contract_required; once per pet → pet_contracts row + signed_contract row → 201<br/>(unborn pet: birth in the same transaction, M1-07b); again → 409
 ```
 
@@ -889,8 +889,9 @@ erDiagram
     float thirst_decay_rate
     smallint poops_per_day
     jsonb feed_windows
-    smallint water_times_per_day
+    smallint water_times_per_day "expected refills for the score (M5-F11)"
     smallint water_min_gap_minutes
+    smallint water_refill_below "water at thirst <= this %, default 60 (M5-F11)"
     boolean premium_unlock "only free or paid source (M5-R06-01)"
     string species "dog or cat"
     int sort_order "picker order"
