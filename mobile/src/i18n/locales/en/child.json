@@ -25,6 +25,11 @@
         "meals": "Meals per day"
       }
     },
+    "languageSheet": {
+      "open": "Change language",
+      "title": "Language",
+      "close": "Close"
+    },
     "loading": "Fetching your pup …",
     "loadFailed": "We couldn't load your pup.",
     "autoRetry": "Trying again on its own …",

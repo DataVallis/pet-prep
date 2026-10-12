@@ -5,7 +5,8 @@ namespace App\Enums;
 /**
  * Where the dog came from (M5-R01, REALISM_SPEC §1, David 2026-10-05):
  * bought from a breeder or adopted from a shelter. Chosen by the parent at
- * pet creation; free for the mutt in every combination.
+ * pet creation. A non-pedigree free breed (mutt / domestic cat) is adoption only:
+ * generate-pin turns "bought" into "adopted" for it (David 2026-10-12).
  * Mirrored in the pets_origin_check constraint.
  */
 enum PetOrigin: string

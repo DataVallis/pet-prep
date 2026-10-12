@@ -116,6 +116,7 @@ class GeneratePinRequest extends FormRequest
             return null;
         }
 
+        // A bought free breed is stored as adopted (David 2026-10-12) — see PetProfileChoice::fromArray().
         return PetProfileChoice::fromArray([
             'species' => $this->validated('species'),
             'breed' => $this->validated('breed'),

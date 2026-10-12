@@ -82,6 +82,9 @@
     "searchLabel": "Išči pasmo",
     "searchPlaceholder": "Išči po imenu pasme",
     "searchEmpty": "Nobena pasma se ne ujema z »{{query}}«.",
+    "showAllBreeds": "Pokaži vse pasme ({{count}})",
+    "showFewerBreeds": "Pokaži manj pasem",
+    "originAdoptionOnly": "{{breed}} ni čistokrvna pasma. Vzreditelji vzrejajo samo čistokrvne živali, zato je na voljo samo posvojitev.",
     "badgeFree": "Brezplačno",
     "badgeChallenge": "Izziv",
     "breedHints": {

@@ -25,6 +25,11 @@
         "meals": "Obroki na dan"
       }
     },
+    "languageSheet": {
+      "open": "Spremeni jezik",
+      "title": "Jezik",
+      "close": "Zapri"
+    },
     "loading": "Nalagam kužka …",
     "loadFailed": "Kužka ni bilo mogoče naložiti.",
     "autoRetry": "Poskušam znova samodejno …",
