@@ -238,7 +238,9 @@ describe('life-stage data against data.json', function () {
     it('shares the general dog rows with the Border Collie (only the breed profile differs)', function () {
         $profileKeys = [StageParamKey::StartsAtMonths, StageParamKey::ArrivalAgeMonths, StageParamKey::ExerciseMinutesPerDay,
             StageParamKey::ExerciseMinutesPerAgeMonth, StageParamKey::AdultWeightKg, StageParamKey::GrowthEndMonths,
-            StageParamKey::CorenRank, StageParamKey::TrainingLearningMultiplier, StageParamKey::LifespanYears];
+            StageParamKey::CorenRank, StageParamKey::TrainingLearningMultiplier, StageParamKey::LifespanYears,
+            // M5-R13: the breed's brushing routine (the Border Collie has none).
+            StageParamKey::GroomingSessionsPerWeek];
         $general = fn (string $slug) => collect(BreedStageParamsSeeder::rows())
             ->where('breed_slug', $slug)
             ->reject(fn (array $r) => in_array(StageParamKey::from($r['key']), $profileKeys, true))

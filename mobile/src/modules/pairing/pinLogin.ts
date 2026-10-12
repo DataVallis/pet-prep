@@ -86,6 +86,8 @@ export function petFromPairedPet(pet: PairedPet, childId: number): Pet {
     escalation_level: 0,
     is_game_over: pet.is_game_over,
     certificate_eligible: false,
+    // M5-R13: the contract's brushing line for a dog (missing on an older server → no line).
+    grooming_enabled: pet.grooming_enabled === true,
   };
 }
 

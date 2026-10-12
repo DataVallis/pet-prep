@@ -63,7 +63,7 @@ import CatCareOverlay from '@/modules/catCare/CatCareOverlay';
 import { CatHudChip, CatHudNote, FirstAidNote } from '@/modules/catCare/CatHudChips';
 import {
   CAT_HUD_STRINGS,
-  catChips,
+  careChips,
   dockKinds,
   isCatView,
   scoopDock,
@@ -581,7 +581,8 @@ export default function ChildHudScreen() {
   const showCatGame = catGameOpen && !showAlbum && !showTraining;
   const coveredByOverlay = isWalkModalVisible || showCleaning || showTraining || showAlbum || showPlay || showCatGame;
   // Cat chips (Počeši / Menjava peska), the "Na praskalnik" button and the first-aid note.
-  const chips = catChips(view);
+  // M5-R13: a brushed dog's "Počeši" chip too (careChips).
+  const chips = careChips(view);
   const chipNotes = chips.flatMap((c) => (c.note !== null ? [{ kind: c.kind, text: c.note }] : []));
   const scratcherShown = !coveredByOverlay && showScratcherButton(view);
   const firstAid = showFirstAid(view);

@@ -374,6 +374,10 @@ test('game numbers equal the seeded breed_stage_params rows', { skip: !(hasPhp &
       assert.equal(row(b.id, 'senior', 'exercise_minutes_per_day') * 100, senior.activity.value, `${b.id} senior steps`);
       assert.equal(row(b.id, 'all', 'training_learning_multiplier'), g.rules.find((r) => r.key === 'learning').params.multiplier);
       assert.equal(row(b.id, 'puppy', 'exercise_minutes_per_age_month') * 100, puppy.activity.per_month);
+      // M5-R13: both ways for dogs too — a seeded grooming row always has a register rule.
+      const dogGroom = g.rules.find((r) => r.key === 'grooming_rule');
+      if (dogGroom) assert.equal(row(b.id, 'all', 'grooming_sessions_per_week'), dogGroom.params.per_week, `${b.id} grooming`);
+      else assert.ok(!rows.some((x) => x.breed_slug === b.slug.en && x.key === 'grooming_sessions_per_week'), `${b.slug.en}: grooming row without a register rule`);
     } else {
       assert.equal(row(b.id, 'puppy', 'play_sessions_per_day'), puppy.activity.value);
       assert.equal(row(b.id, 'adult', 'play_sessions_per_day'), adult.activity.value);
@@ -398,16 +402,25 @@ test('game numbers equal the seeded breed_stage_params rows', { skip: !(hasPhp &
   assert.equal(cat.value, registry.species[1].free_plan.adult_activity.value);
 });
 
-test('the app\'s brushed-cat list equals the seeded grooming rows (David 2026-10-11: nothing forgotten)', { skip: !(hasPhp && hasVendor) && 'php or backend/vendor missing' }, () => {
+test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming rows (David 2026-10-11 / 12: nothing forgotten)', { skip: !(hasPhp && hasVendor) && 'php or backend/vendor missing' }, () => {
   const code = `require $argv[1]; echo json_encode(Database\\Seeders\\BreedStageParamsSeeder::allRows());`;
   const rows = JSON.parse(execFileSync('php', ['-r', code, resolve(ROOT, 'backend/vendor/autoload.php')], { encoding: 'utf8', cwd: resolve(ROOT, 'backend') }));
-  const seeded = [...new Set(rows.filter((x) => x.key === 'grooming_sessions_per_week').map((x) => x.breed_slug.replaceAll('-', '_')))].sort();
+  // Seeded slugs → BreedType values (the German Shepherd's slug is german-shepherd-dog, the Poodle's poodle-standard).
+  const slugToBreed = { 'german-shepherd-dog': 'german_shepherd', 'poodle-standard': 'standard_poodle' };
+  const seeded = [...new Set(rows.filter((x) => x.key === 'grooming_sessions_per_week').map((x) => slugToBreed[x.breed_slug] ?? x.breed_slug.replaceAll('-', '_')))].sort();
   const species = readFileSync(resolve(ROOT, 'mobile/src/modules/species/species.ts'), 'utf8');
-  const m = /GROOMING_CAT_BREEDS: readonly BreedType\[\] = \[([^\]]*)\]/.exec(species);
-  assert.ok(m, 'GROOMING_CAT_BREEDS not found in mobile species.ts');
-  const app = [...m[1].matchAll(/'([a-z_]+)'/g)].map((x) => x[1]).sort();
-  assert.deepEqual(app, seeded);
-  assert.deepEqual(seeded, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
+  const list = (name) => {
+    const m = new RegExp(`${name}: readonly BreedType\\[\\] = \\[([^\\]]*)\\]`).exec(species);
+    assert.ok(m, `${name} not found in mobile species.ts`);
+    return [...m[1].matchAll(/'([a-z_]+)'/g)].map((x) => x[1]);
+  };
+  const cats = list('GROOMING_CAT_BREEDS').sort();
+  const dogs = list('GROOMING_DOG_BREEDS').sort();
+  assert.deepEqual([...cats, ...dogs].sort(), seeded);
+  assert.deepEqual(cats, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
+  // M5-R13: every dog breed of the app except the mutt and the Border Collie (no grooming statement).
+  assert.equal(dogs.length, 20);
+  assert.ok(!dogs.includes('mutt') && !dogs.includes('border_collie'));
 });
 
 // ─── breed portraits (M5-R11, David 2026-10-10: AI photos, labelled) ───

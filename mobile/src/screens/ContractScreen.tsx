@@ -115,7 +115,7 @@ export default function ContractScreen() {
             </View>
 
             <ScrollView style={styles.contractScroll}>
-              <Text style={styles.contractBody}>{contractBody(sessionPet?.species, sessionPet?.breed_type)}</Text>
+              <Text style={styles.contractBody}>{contractBody(sessionPet?.species, sessionPet?.breed_type, sessionPet?.grooming_enabled)}</Text>
             </ScrollView>
 
             <Text style={styles.padHint}>{CONTRACT_STRINGS.padHint}</Text>

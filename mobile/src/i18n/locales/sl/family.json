@@ -96,7 +96,7 @@
     "played_wand": "se je igral(a) s palico s peresom",
     "scooped_litter": "počistil(a) pesek",
     "changed_litter": "zamenjal(a) ves pesek",
-    "groomed_pet": "počesal(a) muco",
+    "groomed_pet": "počesal(a) kužka",
     "resolved_scratching": "odnesel(a) muco na praskalnik in jo pohvalil(a)"
   },
   "systemActivities": {
@@ -106,7 +106,7 @@
     "pet_chewed": "Kuža je pregrizel copat",
     "pet_scratched": "Muca je opraskala kavč",
     "pet_litter_accident": "Muca je naredila nered zraven peska",
-    "pet_coat_matted": "Muci se je zavozlala dlaka"
+    "pet_coat_matted": "Kužku se je zavozlala dlaka"
   },
   "petStatus": {
     "game_over": "Igra končana — kuža je bil odvzet",

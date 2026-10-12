@@ -371,6 +371,9 @@ class PairingService
             // M5-R03: training (mini-game + daily training routine) the same way —
             // profile + `training` declared by the parent's PIN and the child's device.
             'training_enabled' => $isDog && $arrivalAge !== null && $profile?->supports(ClientFeature::Training) === true,
+            // M5-R13: dog grooming (the weekly brushing routine of its breed) the same way —
+            // profile + `dog_grooming` declared by the parent's PIN and the child's device.
+            'grooming_enabled' => $isDog && $arrivalAge !== null && $profile?->supports(ClientFeature::DogGrooming) === true,
         ]);
 
         if ($petDna === null && $hasAppearance) {

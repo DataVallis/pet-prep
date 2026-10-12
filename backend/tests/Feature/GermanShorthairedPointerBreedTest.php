@@ -224,7 +224,9 @@ describe('life-stage data against data.json', function () {
         // No open "awaiting David" note and no "proposal, not built" left in the research; the sourced
         // need without a mechanic (weekly brushing) points at its ROADMAP task, recall is already trained.
         expect(json_encode([gspData('german_shorthaired_pointer'), gspData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('awaiting David')->not->toContain('PROPOSAL')->not->toContain('not built"')
-            ->and(gspData("{$pgp}.grooming.value"))->toBe(1)
+            // M5-R13: the range rule applied consistently — PDSA "once or twice a week" → 2 (RKC 1 = alternative).
+            ->and(gspData("{$pgp}.grooming.value"))->toBe(2)
+            ->and(gspData("{$pgp}.grooming.alternatives.rkc_once_a_week"))->toBe(1)
             ->and(gspData("{$pgp}.grooming.decision"))->toContain('ROADMAP M5-R13')
             ->and(gspData("{$pgp}.recall_training.decision"))->toContain('Pridi');
     });
@@ -257,7 +259,9 @@ describe('life-stage data against data.json', function () {
     it('shares the general dog rows with the Border Collie (only the breed profile differs)', function () {
         $profileKeys = [StageParamKey::StartsAtMonths, StageParamKey::ArrivalAgeMonths, StageParamKey::ExerciseMinutesPerDay,
             StageParamKey::ExerciseMinutesPerAgeMonth, StageParamKey::AdultWeightKg, StageParamKey::GrowthEndMonths,
-            StageParamKey::CorenRank, StageParamKey::TrainingLearningMultiplier, StageParamKey::LifespanYears];
+            StageParamKey::CorenRank, StageParamKey::TrainingLearningMultiplier, StageParamKey::LifespanYears,
+            // M5-R13: the breed's brushing routine (the Border Collie has none).
+            StageParamKey::GroomingSessionsPerWeek];
         $general = fn (string $slug) => collect(BreedStageParamsSeeder::rows())
             ->where('breed_slug', $slug)
             ->reject(fn (array $r) => in_array(StageParamKey::from($r['key']), $profileKeys, true))

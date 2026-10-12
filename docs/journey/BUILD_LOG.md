@@ -9,6 +9,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-12 — Kuža se zdaj tudi češe (M5-R13)
+
+**Kaj se je zgodilo:** David je odločil »kot pri mački«: pes dobi tedensko rutino česanja, kot jo že ima muca. Število česanj na teden je iz virov (The Royal Kennel Club, PDSA) za vsako pasmo. Otrok tapne »Počeši« in 30 sekund s prstom češe dlako; če ostane vsaj polovica česanj tedna neopravljena, ima kuža vozel v dlaki — brez kazni, naslednje (daljše) česanje ga razreši. Pri skupnem psu šteje otroku, ki je česal; starš vidi vrstico »Česanje« v poročilu.
+
+**Zakaj je pomembno:** pravilo »vsaka potreba pasme z virom je v aplikaciji« (11. 10.) zdaj velja tudi za pasjo dlako. Yorkshirski terier ali veliki koder sta lepa, a zahtevata vsakodnevno nego — družina to v izzivu občuti, preden kupi psa.
+
+**Številke:** 20 pasem z rutino — 8 pasem 1× na teden (labradorec, francoski buldog, bigel, jazbečar, rotvajler, angleški buldog, cane corso, doberman), 6 pasem 2× (nemški kratkodlaki ptičar po PDSA »enkrat ali dvakrat na teden«; nemški ovčar, avstralski ovčar, westie, bernski planšar in haski, kjer viri pravijo le »večkrat na teden« — 2 je naš predlog), 2 pasmi 3× (zlati prinašalec, welsh corgi pembroke), 4 pasme vsak dan (veliki koder, havanski bišon, yorkshirski terier, kavalir); mešanček in border collie brez česanja (viri molčijo). 25 novih testov (13 na strežniku, 12 v aplikaciji).
+
+**Kako povedati:**
+- 👩 Starši: »Pri pasmi vidite, kolikokrat na teden jo je treba počesati (npr. yorkshirski terier vsak dan, rotvajler enkrat na teden) — in otrok to v igri res dela.«
+- 🧒 Otroci: »Tvoj kuža ima rad, da ga počešeš! Tapni Počeši in s prstom pobožaj dlako.«
+- 💼 Investitorji: »Ena mehanika, dve vrsti: česanje muce smo razširili na 20 pasjih pasem, vsaka številka ima vir ali je jasno označena kot predlog.«
+- 🛠 Tehnično: »`CatChoreService` za psa z `grooming_enabled` (funkcija `dog_grooming`), `BreedStageParamsSeeder::DOG_GROOMING`, isti `ChoreOverlay` s pasjimi besedili; PR #195. Velja za nove pse iz nove aplikacije; na telefonu še ni preverjeno.«
+
+---
+
 ## 2026-10-12 — Popravki na telefone v minutah: OTA posodobitve (M5-F10)
 
 **Kaj se je zgodilo:** PetPrep dobi posodobitve »po zraku« (Expo EAS Update) — *zgrajeno, še ni preverjeno na telefonu; deluje po prvi novi gradnji v trgovini in z žetonom `EXPO_TOKEN`*. Ob vsakem zelenem prenosu mobilne kode na `main` GitHub Actions izračuna prstni odtis nativnega dela aplikacije. Če je enak kot pri gradnji v trgovini, gre posodobitev takoj na telefone. Če ni, CI jasno javi, da je potrebna nova gradnja v trgovini.

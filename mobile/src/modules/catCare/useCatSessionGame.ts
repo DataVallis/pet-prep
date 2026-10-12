@@ -151,7 +151,10 @@ export function catFailureText(error: unknown, ctx: RefusalContext): string {
     case 'refused':
       return catRefusalMessage(failure.reason, failure.nextAllowedAt, ctx);
     case 'locked':
-      return catLockMessage(failure.reason, failure.lockedUntil, ctx.timezone);
+      // M5-R13: a brushed dog's lock is the dog's text (vet / shelter name the dog).
+      return ctx.dog === true
+        ? (lockMessage(failure.reason, failure.lockedUntil, ctx.timezone) ?? CHILD_ACTION_STRINGS.failed)
+        : catLockMessage(failure.reason, failure.lockedUntil, ctx.timezone);
     case 'offline':
       return CHILD_ACTION_STRINGS.offline;
     case 'throttled':

@@ -18,6 +18,7 @@ import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { dockText, dockWhen, type DockHint } from '@/modules/childPet/dockHint';
 import { hasOpenScratching, onlyScratchingEventsOpen } from '@/modules/behaviour/behaviour';
 import { onlyScratchingOpen, type CatGameKind, type ChildGrooming, type LitterChange } from '@/modules/catCare/catCare';
+import { DOG_GROOMING_STRINGS, isDogGrooming } from '@/modules/catCare/dogGrooming';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
@@ -128,16 +129,32 @@ function withPending(a11y: string, pending: boolean): string {
   return pending ? `${a11y} ${CAT_HUD_STRINGS.chips.pendingA11y}` : a11y;
 }
 
-function groomingChip(g: ChildGrooming): CatChip | null {
+/** The chip's words: the cat's (`cat:hud.chips`) or — M5-R13 — the dog's (`child:grooming`). */
+interface GroomingChipTexts {
+  label: string;
+  a11y: (done: number, goal: number) => string;
+  matted: string;
+}
+
+function catGroomingTexts(): GroomingChipTexts {
+  const c = CAT_HUD_STRINGS.chips;
+  return { label: c.grooming, a11y: c.groomingA11y, matted: c.groomingMatted };
+}
+
+function dogGroomingTexts(): GroomingChipTexts {
+  const d = DOG_GROOMING_STRINGS;
+  return { label: d.chip, a11y: d.chipA11y, matted: d.chipMatted };
+}
+
+function groomingChip(g: ChildGrooming, texts: GroomingChipTexts = catGroomingTexts()): CatChip | null {
   const open = g.done_this_week < g.goal_per_week || g.matted;
   if (!open && g.session === null) return null;
-  const c = CAT_HUD_STRINGS.chips;
   return {
     kind: 'grooming',
-    label: c.grooming,
-    a11y: withPending(c.groomingA11y(g.done_this_week, g.goal_per_week), g.can_start || g.session !== null),
+    label: texts.label,
+    a11y: withPending(texts.a11y(g.done_this_week, g.goal_per_week), g.can_start || g.session !== null),
     pending: g.can_start || g.session !== null,
-    note: g.matted ? c.groomingMatted : null,
+    note: g.matted ? texts.matted : null,
   };
 }
 
@@ -165,6 +182,18 @@ export function catChips(view: ChildPetView): CatChip[] {
   return chips;
 }
 
+/**
+ * The care chips above the dock for any pet: a cat's (`catChips`) or — M5-R13, David
+ * 2026-10-12 "kot pri mački" — a brushed dog's "Počeši" (while this week's brushing is open
+ * or the coat is matted; the server's `grooming` block decides, null = no chip).
+ */
+export function careChips(view: ChildPetView): CatChip[] {
+  if (isCatView(view)) return catChips(view);
+  if (view.lock.is_locked || !isDogGrooming(view) || view.cat.grooming === null) return [];
+  const grooming = groomingChip(view.cat.grooming, dogGroomingTexts());
+  return grooming !== null ? [grooming] : [];
+}
+
 // ── "First aid" (C24) ─────────────────────────────────────────
 
 /** Hunger at or below which the cat HUD shows the educational note (phase 1 of the ladder, PRODUCT_SPEC §6). */
@@ -186,7 +215,8 @@ export function showFirstAid(view: ChildPetView): boolean {
  * once so it resumes / is saved, like "Šola" (M5-R03). Null when none runs.
  */
 export function ownCatGame(view: ChildPetView): { kind: CatGameKind; id: string } | null {
-  if (!isCatView(view)) return null;
+  // M5-R13: a brushed dog resumes its own running brushing the same way.
+  if (!isCatView(view)) return view.cat.grooming?.session ? { kind: 'grooming', id: view.cat.grooming.session.id } : null;
   const { wand, grooming, litter, scratching } = view.cat;
   if (wand?.session) return { kind: 'wand', id: wand.session.id };
   if (grooming?.session) return { kind: 'grooming', id: grooming.session.id };

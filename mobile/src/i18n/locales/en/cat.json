@@ -396,7 +396,8 @@
     },
     "family": {
       "activities": {
-        "fed_pet": "fed the cat"
+        "fed_pet": "fed the cat",
+        "groomed_pet": "brushed the cat"
       },
       "reasons": {
         "game_over": "The cat was taken away — the game is over.",
@@ -413,6 +414,9 @@
         "deleteErrors": {
           "paid_challenge": "This deletion removes a cat whose 12-week challenge was purchased. Tick the box to confirm that the purchase is used up."
         }
+      },
+      "systemActivities": {
+        "pet_coat_matted": "The cat's fur got knotted"
       }
     },
     "parent": {

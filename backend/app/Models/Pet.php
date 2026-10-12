@@ -238,6 +238,8 @@ class Pet extends Model
         'behaviour_events_enabled',
         // M5-R03: set once at creation (generate-pin + pin-login `features: ["training"]`).
         'training_enabled',
+        // M5-R13: set once at creation (generate-pin + pin-login `features: ["dog_grooming"]`).
+        'grooming_enabled',
         // M3-11: plan chosen at creation (generate-pin `plan`). Payment state
         // (trial_ends_at, challenge_paid_*, payment_locked_at) is written only
         // by ChallengeService / Pet::giveBirth via forceFill.
@@ -296,6 +298,7 @@ class Pet extends Model
             'potty_clock_started_at' => 'datetime',
             'behaviour_events_enabled' => 'boolean',
             'training_enabled' => 'boolean',
+            'grooming_enabled' => 'boolean',
             'training_learning_factor' => 'float',
             'hunger_level' => 'float',
             'thirst_level' => 'float',
@@ -634,6 +637,24 @@ class Pet extends Model
         // M5-R06-04: dog-only by species at runtime, not only by the stored flag
         // (CAT_SPEC Q10 — a cat has no training with commands in v1).
         return (bool) $this->training_enabled && ! $this->isLegacyProfile() && $this->isDog();
+    }
+
+    /**
+     * The weekly brushing routine (`grooming` routine, "Počeši", matted coat)
+     * can apply to this pet: every profiled cat (M5-R06-05 — whether its
+     * breed has one is the `grooming_sessions_per_week` row) and, since
+     * M5-R13 (David 2026-10-12, "kot pri mački"), a profiled dog whose
+     * creating app builds (parent and child) declared `dog_grooming`. Fixed
+     * at creation; existing dogs: off. The routine itself still needs the
+     * breed's row (CatChoreService::groomingGoalOn).
+     */
+    public function groomingEnabled(): bool
+    {
+        if ($this->isLegacyProfile()) {
+            return false;
+        }
+
+        return $this->isCat() || ($this->isDog() && (bool) $this->grooming_enabled);
     }
 
     /** M5-R06: the dog rules (walk / steps, training, ball play) apply. */

@@ -176,5 +176,41 @@
       "needsUpdate": "Najprej je treba namestiti ali posodobiti Health Connect. Prosi starša za pomoč.",
       "openStore": "Odpri Google Play"
     }
+  },
+  "grooming": {
+    "title": "Počeši kužka",
+    "intro": "S prstom nežno češi njegovo dlako, potezo za potezo, od glave do repa.",
+    "matted": "V dlaki ima vozel. To česanje traja malo dlje ({{seconds}} s) in vozel razreši.",
+    "week": "Česanje ta teden: {{done}} od {{goal}}",
+    "weekDone": "Vsa česanja ta teden so opravljena ✓",
+    "start": "Začni česati",
+    "stroke": "Počeši enkrat",
+    "strokeA11y": "Enkrat počeši kužka",
+    "stageA11y": "Tvoj kuža. Pobožaj ga s prstom, da mu počešeš dlako.",
+    "steps": {
+      "1": "Glava in vrat",
+      "2": "Hrbet",
+      "3": "Boki in rep"
+    },
+    "result": {
+      "successTitle": "Mehak in svetleč!",
+      "success": "Kuža je počesan. To česanje šteje za ta teden.",
+      "failTitle": "To česanje ni štelo"
+    },
+    "starting": "Kuža se pripravlja …",
+    "chip": "Počeši",
+    "chipA11y": "Počeši kužka. Ta teden: {{done}} od {{goal}}.",
+    "chipMatted": "V dlaki ima vozel — počeši ga.",
+    "errors": {
+      "grooming_not_available": "Tega kužka ni treba česati.",
+      "grooming_done_today": "Kuža je danes že počesan. Spet ga počeši {{when}}.",
+      "grooming_done_today_no_time": "Kuža je danes že počesan. Spet ga počeši jutri.",
+      "grooming_quiet_hours": "Kuža zdaj spi. Počeši ga {{when}}.",
+      "grooming_quiet_hours_no_time": "Kuža zdaj spi. Počeši ga po tihih urah.",
+      "grooming_session_active": "Kužka zdaj češe nekdo drug. Poskusi znova {{when}}.",
+      "grooming_session_active_no_time": "Kužka zdaj češe nekdo drug. Poskusi čez minuto.",
+      "care_session_active": "Nekdo drug zdaj nekaj počne s kužkom. Poskusi znova {{when}}.",
+      "care_session_active_no_time": "Nekdo drug zdaj nekaj počne s kužkom. Poskusi čez minuto."
+    }
   }
 }
