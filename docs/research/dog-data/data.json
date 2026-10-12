@@ -2215,7 +2215,7 @@
         "source_id": "S81",
         "quote": "French Bulldogs do have a high prey drive.",
         "confidence": "medium",
-        "notes": "PDSA: 'they will be fine with that cat but are likely to chase unfamiliar cats and smaller pets' (context: a cat they grew up with — paraphrase of the lead-in). Woodgreen (S82): 'Sociable with pets: Low'. → no other_pets tag."
+        "notes": "PDSA: 'they will be fine with that cat but are likely to chase unfamiliar cats and smaller pets' (context: a cat they grew up with — paraphrase of the lead-in). Woodgreen (S82): 'Sociable with pets: Low'. → no other_pets tag. → chases_small_pets (David 2026-10-12)."
       },
       "chewing": {
         "value": null,
@@ -4758,7 +4758,7 @@
         "source_id": "S127",
         "quote": "Dachshunds do have a high prey drive and love to chase so we wouldn’t recommend keeping them with smaller pets.",
         "confidence": "medium",
-        "notes": "PDSA (S127): 'They may get along OK with a cat they have grown up with, but you should always supervise your Dachshund with other animals.' → no other_pets tag."
+        "notes": "PDSA (S127): 'They may get along OK with a cat they have grown up with, but you should always supervise your Dachshund with other animals.' → no other_pets tag. → chases_small_pets (David 2026-10-12)."
       },
       "mental_stimulation": {
         "value": "needs daily training sessions and brain games (scent, puzzles) to avoid boredom",
@@ -6225,7 +6225,7 @@
         "source_id": "S147",
         "quote": "Westies have quite a high prey drive, so we wouldn't recommend keeping them with smaller pets.",
         "confidence": "medium",
-        "notes": "PDSA (S147): 'If they have grown up with a cat in the home, they'll be fine with that cat' → no other_pets tag."
+        "notes": "PDSA (S147): 'If they have grown up with a cat in the home, they'll be fine with that cat' → no other_pets tag. → chases_small_pets (David 2026-10-12)."
       },
       "chewing": {
         "value": "noise and chewing when alone too long",
@@ -7351,7 +7351,7 @@
         "source_id": "S162",
         "quote": "Huskies have such a high prey drive that we wouldn’t recommend keeping them with smaller pets",
         "confidence": "medium",
-        "notes": "PDSA (S162): '…even if they have been introduced from a young age.'; 'Huskies love company so as long as they have been socialised from a young age, they should get along fine with other dogs.' Conditional → no other_pets tag. Cats not mentioned."
+        "notes": "PDSA (S162): '…even if they have been introduced from a young age.'; 'Huskies love company so as long as they have been socialised from a young age, they should get along fine with other dogs.' Conditional → no other_pets tag. Cats not mentioned. → chases_small_pets (David 2026-10-12)."
       },
       "chewing": {
         "value": "destructive when stressed from being alone — may chew furniture",
@@ -10789,7 +10789,7 @@
     }
   },
   "dobermann": {
-    "_note": "Added 2026-10-12 (M5-R10-25, unattended run — appended after the Pembroke Welsh Corgi: AKC 2024 No. 16, S174 table row '16 | Doberman Pinscher'). Quotes as returned by the web-fetch tool on 2026-10-12; spot-check before import (sources.md S207–S212, reused S10, S11, S14, S35, S45, S54, S174). Names: FCI and The Royal Kennel Club call the breed 'Dobermann' (S207, S209, S210), the AKC 'Doberman Pinscher' (S174). FCI (S207, valid standard 13.11.2015) gives two colours (black or brown with rust red tan) and natural ears and tail; the RKC standard (S210, 1 January 2025) also lists blue and fawn (Isabella) — the game draws only the colours both standards share. Lifespan: McMillan 2024 names no Dobermann value in the reachable texts (S54), the Dogs Trust table PDF returned a fetch error → runbook rule: a VetCompass median — O'Neill et al. 2013 (S212), 9.2 y, small sample (37 deaths) → provisional. Not a welfare-concern breed: RKC Breed Watch Category 1 (S209). Woodgreen and AKC trait ratings not attempted.",
+    "_note": "Added 2026-10-12 (M5-R10-25, unattended run — appended after the Pembroke Welsh Corgi: AKC 2024 No. 16, S174 table row '16 | Doberman Pinscher'). Quotes as returned by the web-fetch tool on 2026-10-12; spot-check before import (sources.md S207–S212, reused S10, S11, S14, S35, S45, S54, S174). Names: FCI and The Royal Kennel Club call the breed 'Dobermann' (S207, S209, S210), the AKC 'Doberman Pinscher' (S174). FCI (S207, valid standard 13.11.2015) gives two colours (black or brown with rust red tan) and natural ears and tail; the RKC standard (S210, 1 January 2025) also lists blue and fawn (Isabella) — the game draws only the colours both standards share (FCI only, confirmed by David 2026-10-12). Slovenian name »doberman« confirmed by David 2026-10-12. Lifespan: McMillan 2024 names no Dobermann value in the reachable texts (S54), the Dogs Trust table PDF returned a fetch error → runbook rule: a VetCompass median — O'Neill et al. 2013 (S212), 9.2 y, small sample (37 deaths) → provisional. Not a welfare-concern breed: RKC Breed Watch Category 1 (S209). Woodgreen and AKC trait ratings not attempted.",
     "identity": {
       "value": "FCI No. 143, Group 2 Section 1 (Pinscher and Schnauzer type), Germany",
       "unit": "—",
@@ -10912,7 +10912,7 @@
         "source_id": null,
         "quote": null,
         "confidence": "medium",
-        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 9.2 y (S212) → 0.75 × 9.2 = 6.9 y = 82.8 → 83 months. With the RKC lower bound 'Over 10 years' (S209): 0.75 × 10 = 7.5 y = 90 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 9.2 y (S212) → 0.75 × 9.2 = 6.9 y = 82.8 → 83 months. With the RKC lower bound 'Over 10 years' (S209): 0.75 × 10 = 7.5 y = 90 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked. potrdil David 2026-10-12: ostane 83, dokler ni dostopen McMillan 2024.",
         "derived_from": [
           "S11",
           "S212"
@@ -10993,7 +10993,7 @@
         "source_id": "S211",
         "quote": "Dobermanns are known to have quite a high prey drive and will love any opportunity to chase smaller pets",
         "confidence": "medium",
-        "notes": "PDSA (S211) → no other_pets tag. No vocabulary key for a prey drive (open for David: a chip such as 'may chase small pets' would be a new key; not added in this run — research only)."
+        "notes": "PDSA (S211) → no other_pets tag. → chases_small_pets (new key, David 2026-10-12)."
       },
       "chewing": {
         "value": null,
@@ -12501,6 +12501,17 @@
             ],
             "quote": "S81 'As a flat-faced breed, French Bulldogs can overheat and struggle to breathe really quickly, especially in warmer weather.'; S78 'Some dogs may also have narrow nostrils making it even more difficult to breathe.'; S82 'Frenchies are also more vulnerable to heat stroke than other breeds'; S84 BOAS OR 30.89; S86 brachycephalic heat illness OR 2.10; S93 'Stop and think before buying a flat-faced dog.'",
             "note": "NEW consider key. App chip (David 2026-10-10): SL 'kratek gobček — težave z dihanjem in vročino', EN 'flat face — breathing and heat problems'. The odds ratios (S84, S86) stay in the research — no percentages or statistics in the app."
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S81"
+            ],
+            "refs": [
+              "french_bulldog.behaviour.other_pets"
+            ],
+            "quote": "S81 'French Bulldogs do have a high prey drive.'",
+            "decision": "potrdil David 2026-10-12: nova oznaka »močan lovski nagon — lahko lovi manjše živali« — citat iz vnosa te pasme navaja močan lovski nagon (na koncu seznama »Upoštevajte«)"
           }
         ],
         "not_proposed": {
@@ -12519,7 +12530,7 @@
           "food_motivated_weight": "No French Bulldog-specific source found.",
           "frequent_grooming": "RKC 'Once a week' (S78), Woodgreen grooming 'Low' (S82); skin-fold cleaning is a separate idea (skin_fold_care_idea)."
         },
-        "decision": "potrdil David 2026-10-10: suits apartment, family_pet, children; consider brachycephalic_breathing (new key; no alarmism, no percentages in the app)"
+        "decision": "potrdil David 2026-10-10: suits apartment, family_pet, children; consider brachycephalic_breathing (new key; no alarmism, no percentages in the app); potrdil David 2026-10-12: + chases_small_pets (lovski nagon, S81)"
       },
       "marketing": {
         "value": "in the app: yes; in marketing / store screenshots / social: no",
@@ -13637,6 +13648,17 @@
               "dachshund.behaviour.mental_stimulation"
             ],
             "quote": "S127 'give your Dachshund lots to keep their brain active to stop them getting bored.'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S127"
+            ],
+            "refs": [
+              "dachshund.behaviour.other_pets"
+            ],
+            "quote": "S127 'Dachshunds do have a high prey drive and love to chase so we wouldn’t recommend keeping them with smaller pets.'",
+            "decision": "potrdil David 2026-10-12: nova oznaka »močan lovski nagon — lahko lovi manjše živali« — citat iz vnosa te pasme navaja močan lovski nagon (na koncu seznama »Upoštevajte«)"
           }
         ],
         "not_proposed": {
@@ -13659,7 +13681,7 @@
           "separation_anxiety": "Sourced (S127) but no vocabulary key; only one new key per welfare rule — recorded in behaviour.time_alone and the parent docs.",
           "hypoallergenic": "Never (ROADMAP M5-R10)."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits children; consider back_spine (new key, welfare rule), sheds, needs_mental_stimulation; never hypoallergenic"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits children; consider back_spine (new key, welfare rule), sheds, needs_mental_stimulation; never hypoallergenic; potrdil David 2026-10-12: + chases_small_pets (lovski nagon, S127)"
       },
       "marketing": {
         "value": "in the app: yes (with the back_spine chip); in marketing: yes (no veterinary advice against showing the breed type in advertising found in the sources checked)",
@@ -14366,6 +14388,17 @@
               "west_highland_white_terrier.behaviour.chewing"
             ],
             "quote": "S147 'If they are alone for too long, they are likely to make a lot of noise and could start chewing things around the home.'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S147"
+            ],
+            "refs": [
+              "west_highland_white_terrier.behaviour.other_pets"
+            ],
+            "quote": "S147 'Westies have quite a high prey drive, so we wouldn't recommend keeping them with smaller pets.'",
+            "decision": "potrdil David 2026-10-12: nova oznaka »močan lovski nagon — lahko lovi manjše živali« — citat iz vnosa te pasme navaja močan lovski nagon (na koncu seznama »Upoštevajte«)"
           }
         ],
         "not_proposed": {
@@ -14385,7 +14418,7 @@
           "heart_and_spine": "No source.",
           "back_spine": "No source."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, family_pet, children; consider sensitive_skin (new key, welfare rule: RKC Breed Watch Category 2 dermatitis S146 + PDSA S147), sheds, frequent_grooming, chews_when_bored"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, family_pet, children; consider sensitive_skin (new key, welfare rule: RKC Breed Watch Category 2 dermatitis S146 + PDSA S147), sheds, frequent_grooming, chews_when_bored; potrdil David 2026-10-12: + chases_small_pets (lovski nagon, S147)"
       },
       "marketing": {
         "value": "in the app: yes (with the sensitive_skin chip); in marketing: yes (no veterinary advice against showing the breed in advertising found)",
@@ -14865,6 +14898,17 @@
               "siberian_husky.suitability.pdsa_grooming"
             ],
             "quote": "S160 'Grooming: More than once a week'; S162 'brush your Husky a few times a week'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S162"
+            ],
+            "refs": [
+              "siberian_husky.behaviour.other_pets"
+            ],
+            "quote": "S162 'Huskies have such a high prey drive that we wouldn’t recommend keeping them with smaller pets'",
+            "decision": "potrdil David 2026-10-12: nova oznaka »močan lovski nagon — lahko lovi manjše živali« — citat iz vnosa te pasme navaja močan lovski nagon (na koncu seznama »Upoštevajte«)"
           }
         ],
         "not_proposed": {
@@ -14887,7 +14931,7 @@
           "sensitive_skin": "No source.",
           "shorter_lifespan": "RKC 'Over 10 years' (S160) — criterion is 'Under 10 years'."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, large_home; consider long_daily_exercise, secure_fencing (new key), chews_when_bored, sheds, frequent_grooming"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, large_home; consider long_daily_exercise, secure_fencing (new key), chews_when_bored, sheds, frequent_grooming; potrdil David 2026-10-12: + chases_small_pets (lovski nagon, S162)"
       },
       "marketing": {
         "value": "in the app: yes; in marketing: yes (not a conformation welfare-concern breed; no veterinary advice against showing the breed in advertising)",
@@ -16416,7 +16460,7 @@
       }
     },
     "dobermann": {
-      "_note": "Unattended run M5-R10-25 (2026-10-12): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11); recorded as `decision` per entry. No new vocabulary key. Sourced needs without a dog mechanic (runbook §3, David 2026-10-11): weekly brushing (RKC S209, PDSA S211) → ROADMAP M5-R13; a gap between a meal and exercise (GDV, PDSA S211) → ROADMAP M5-R16; socialisation from a young age (PDSA S211) → ROADMAP M5-R17.",
+      "_note": "Unattended run M5-R10-25 (2026-10-12): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11); recorded as `decision` per entry. No new vocabulary key. Sourced needs without a dog mechanic (runbook §3, David 2026-10-11): weekly brushing (RKC S209, PDSA S211) → ROADMAP M5-R13; a gap between a meal and exercise (GDV, PDSA S211) → ROADMAP M5-R16; socialisation from a young age (PDSA S211) → ROADMAP M5-R17. David 2026-10-12: new suitability key chases_small_pets (prey drive, S211); senior 83 stays until McMillan 2024 is reachable.",
       "exercise_minutes_adult": {
         "value": 120,
         "unit": "minutes/day",
@@ -16483,7 +16527,7 @@
           "senior_rkc_lower_bound": 90,
           "senior_dogs_trust_7_y": 84
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 83 (0.75 × 9.2 y, VetCompass median S212)"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 83 (0.75 × 9.2 y, VetCompass median S212); potrdil David 2026-10-12: ostane 83, dokler ni dostopen McMillan 2024"
       },
       "arrival_age_months": {
         "value": {
@@ -16555,7 +16599,7 @@
         "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): socializacija od mladosti; vir ne navaja količine, mehanike ni → ROADMAP M5-R17 (needs-david)"
       },
       "suitability_tags": {
-        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-25); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-25); refs = JSON paths in this file. No new vocabulary key in the run; chases_small_pets added later (David 2026-10-12). No percentages in the app.",
         "suits": [
           {
             "tag": "active_family",
@@ -16647,6 +16691,18 @@
               "dobermann.suitability.rkc_shedding"
             ],
             "quote": "S209 'Sheds: Yes'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S211"
+            ],
+            "refs": [
+              "dobermann.behaviour.other_pets",
+              "dobermann.suitability.pdsa_other_pets"
+            ],
+            "quote": "S211 'Dobermanns are known to have quite a high prey drive and will love any opportunity to chase smaller pets'",
+            "decision": "potrdil David 2026-10-12: nova oznaka »močan lovski nagon — lahko lovi manjše živali« — citat iz vnosa te pasme navaja močan lovski nagon (na koncu seznama »Upoštevajte«)"
           }
         ],
         "not_proposed": {
@@ -16654,7 +16710,7 @@
           "small_children": "PDSA advises against it (S211) → not_for_small_children instead.",
           "first_time_owner": "PDSA: probably not the best breed for first-time owners (S211) → experienced_owner instead.",
           "apartment": "RKC 'Large house' (S209).",
-          "other_pets": "PDSA: high prey drive, may chase smaller pets (S211). A prey-drive chip would be a new key — open for David, not added.",
+          "other_pets": "PDSA: high prey drive, may chase smaller pets (S211). → chases_small_pets instead (David 2026-10-12).",
           "often_alone": "Only the general PDSA four-hour advice; may be destructive when alone too long (S211).",
           "older_owners": "No source.",
           "low_shedding": "Sheds (S209).",
@@ -16668,7 +16724,7 @@
           "fragile_older_children": "About fragile bones (Yorkshire Terrier) — not this breed's reason.",
           "welfare": "RKC Breed Watch Category 1 (S209) → no brachycephalic_breathing / hips_hind_legs / heart_and_spine / back_spine / sensitive_skin. PDSA lists hip dysplasia, wobbler syndrome and dilated cardiomyopathy (S211) — research only, no chip (Yorkshire Terrier / corgi precedent)."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, large_home; consider long_daily_exercise, not_for_small_children, experienced_owner, needs_mental_stimulation, sheds"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, large_home; consider long_daily_exercise, not_for_small_children, experienced_owner, needs_mental_stimulation, sheds; potrdil David 2026-10-12: + chases_small_pets (lovski nagon, S211)"
       },
       "marketing": {
         "value": "in the app: yes; in marketing: yes (not a welfare breed)",
@@ -16676,7 +16732,7 @@
         "source_id": "S209",
         "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
         "confidence": "high",
-        "notes": "RKC Breed Watch Category 1 (S209); no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health. Predlog Claude 2026-10-12 (not a runbook rule, čaka Davida): marketing never shows the Dobermann with small children (PDSA S211) and never with cropped ears or a docked tail (FCI 2015 natural ears and tail, S207).",
+        "notes": "RKC Breed Watch Category 1 (S209); no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health. No extra marketing limits (David 2026-10-12: not needed).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a welfare breed)"
       },
       "ai_appearance": {
@@ -16685,7 +16741,7 @@
         "source_id": "S207",
         "quote": "The Dobermann is bred in two colour varieties: black or brown with rust red,",
         "confidence": "high",
-        "notes": "Colours from the FCI standard (S207: black or brown with rust red tan markings); the RKC (S210) also allows blue and fawn — not drawn. 'White spots' disqualify (FCI, as returned). Natural ears and tail (FCI 2015 'left natural', S207). Weights unsourced in prompts.",
+        "notes": "Colours from the FCI standard (S207: black or brown with rust red tan markings); the RKC (S210) also allows blue and fawn — not drawn (FCI colours only, confirmed by David 2026-10-12). 'White spots' disqualify (FCI, as returned). Natural ears and tail (FCI 2015 'left natural', S207). Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and rust is the portrait default (FCI + RKC colour); natural ears and tail; no white markings"
       }
     }

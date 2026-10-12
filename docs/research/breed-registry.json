@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "c8b4be0a132c46f9e1e01762c1b2a4ec688b9b26ffaf2e92ad56faa76e9f12ce"
+      "sha256": "cef0bf4c750ea36861072fd78ad490a168db83de25218adb169ab8400f5790a7"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "20857a67ed90c3a8b9ce82e32e083ec788bdf63a22b139e16b879b3b316a8ee8"
+      "sha256": "3022dfa8ebcbc98636021bed7d05701a7d407b057497efb05642e10377ccf476"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,15 +25,15 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "e2fdac589a82f75dc402def86ca1cfc8094965bced42d537346a14f9ee19d463"
+      "sha256": "fdcf029021d7cd15e6a3132ec8978c437cfc3636a0927b594457fda342587501"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "197028fdea34f65bcbaebd382893bdbae0e59540fa0eed249b266a84b523f21e"
+      "sha256": "44d2314f86c38b19535e019dd94966380da1a1070d32868e29fa1f4365babc47"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "d2ee423dd6e62ef0ca167a8e5716fedf95ae87744cad9375ac5d52c20e887dff"
+      "sha256": "691ae4a71e0131b791a8ca477590fad31172bf61f74db03a562fb757daad34db"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
@@ -61,6 +61,7 @@
     "apartment": "suits",
     "back_spine": "consider",
     "brachycephalic_breathing": "consider",
+    "chases_small_pets": "consider",
     "chews_when_bored": "consider",
     "children": "suits",
     "drools": "consider",
@@ -96,6 +97,7 @@
         "apartment": "apartment living",
         "back_spine": "long back — spine problems, avoid jumping",
         "brachycephalic_breathing": "flat face — breathing and heat problems",
+        "chases_small_pets": "strong prey drive — may chase small pets",
         "chews_when_bored": "chews things when bored",
         "children": "families with children",
         "drools": "drools — keep a cloth at hand",
@@ -131,6 +133,7 @@
         "apartment": "življenje v stanovanju",
         "back_spine": "dolg hrbet — težave s hrbtenico, brez skakanja",
         "brachycephalic_breathing": "kratek gobček — težave z dihanjem in vročino",
+        "chases_small_pets": "močan lovski nagon — lahko lovi manjše živali",
         "chews_when_bored": "ko se dolgočasi, grize stvari",
         "children": "družino z otroki",
         "drools": "se slini — imejte pri roki krpo",
@@ -3250,6 +3253,15 @@
               "french_bulldog.health.heat_stroke",
               "french_bulldog.exercise.heat_and_walk_timing"
             ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S81"
+            ],
+            "refs": [
+              "french_bulldog.behaviour.other_pets"
+            ]
           }
         ]
       },
@@ -6094,6 +6106,15 @@
             "refs": [
               "dachshund.behaviour.mental_stimulation"
             ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S127"
+            ],
+            "refs": [
+              "dachshund.behaviour.other_pets"
+            ]
           }
         ]
       },
@@ -7779,6 +7800,15 @@
             "refs": [
               "west_highland_white_terrier.behaviour.chewing"
             ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S147"
+            ],
+            "refs": [
+              "west_highland_white_terrier.behaviour.other_pets"
+            ]
           }
         ]
       },
@@ -8855,6 +8885,15 @@
             "refs": [
               "siberian_husky.suitability.rkc_grooming",
               "siberian_husky.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S162"
+            ],
+            "refs": [
+              "siberian_husky.behaviour.other_pets"
             ]
           }
         ]
@@ -12799,6 +12838,16 @@
             "refs": [
               "dobermann.suitability.rkc_shedding"
             ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S211"
+            ],
+            "refs": [
+              "dobermann.behaviour.other_pets",
+              "dobermann.suitability.pdsa_other_pets"
+            ]
           }
         ]
       },
@@ -12966,7 +13015,7 @@
               "S11",
               "S212"
             ],
-            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 83 (0.75 × 9.2 y, VetCompass median S212)"
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 83 (0.75 × 9.2 y, VetCompass median S212); potrdil David 2026-10-12: ostane 83, dokler ni dostopen McMillan 2024"
           },
           {
             "ref": "proposed_game_parameters.dobermann.learning_multiplier",

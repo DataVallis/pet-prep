@@ -40,7 +40,7 @@ use function Pest\Laravel\postJson;
 | provisional —, arrival 2 / 9 / 36 / 83, learning × 1.9, paid breed, Border Collie care
 | rates, suitability: suits active_family / family_pet / large_home, consider
 | long_daily_exercise / not_for_small_children / experienced_owner /
-| needs_mental_stimulation / sheds; FCI colours black or brown with rust, natural ears
+| needs_mental_stimulation / sheds / chases_small_pets (David 2026-10-12); FCI colours black or brown with rust, natural ears
 | and tail; no welfare chip).
 */
 
@@ -388,7 +388,7 @@ describe('GET /api/breeds', function () {
                 'search_keywords' => BreedConfigsSeeder::configs()[21]['search_keywords'], 'sort_order' => 210,
                 'suitability' => [
                     'suits' => ['active_family', 'family_pet', 'large_home'],
-                    'consider' => ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds'],
+                    'consider' => ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds', 'chases_small_pets'],
                 ],
             ]);
     });

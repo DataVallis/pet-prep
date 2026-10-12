@@ -118,6 +118,12 @@ return [
         // Corso: PDSA S199 "Cane Corsos are known to drool."). A sourced trait a family notices
         // every day that no other key covers; a calm chip, never a number.
         'drools' => 'consider',
+        // David 2026-10-12 ("Da, želim."): the breed's own entry quotes a high prey drive —
+        // it may chase small pets (French Bulldog PDSA S81 "French Bulldogs do have a high prey
+        // drive."; Dachshund S127, Westie S147, Siberian Husky S162, Dobermann S211). Only for a
+        // verbatim prey-drive statement — a supervision advice alone (Beagle, Bernese,
+        // Rottweiler, Cavalier, German Shepherd) is not enough. A calm chip, never a number.
+        'chases_small_pets' => 'consider',
     ],
 
     'breeds' => [
@@ -224,6 +230,8 @@ return [
                     'french_bulldog.health.heat_stroke',
                     'french_bulldog.exercise.heat_and_walk_timing',
                 ]],
+                // S81 "French Bulldogs do have a high prey drive." (David 2026-10-12).
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S81'], 'refs' => ['french_bulldog.behaviour.other_pets']],
             ],
         ],
         // M5-R10-04: german_shepherd.* (S95–S102), runbook rules 2026-10-10
@@ -335,6 +343,8 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S125', 'S127'], 'refs' => ['dachshund.suitability.rkc_shedding', 'dachshund.suitability.pdsa_shedding']],
                 // S127 "give your Dachshund lots to keep their brain active to stop them getting bored."
                 ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S127'], 'refs' => ['dachshund.behaviour.mental_stimulation']],
+                // S127 "Dachshunds do have a high prey drive and love to chase so we wouldn’t recommend keeping them with smaller pets." (David 2026-10-12).
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S127'], 'refs' => ['dachshund.behaviour.other_pets']],
             ],
         ],
         // M5-R10-09: australian_shepherd.* (S131–S135), runbook rules 2026-10-10
@@ -416,6 +426,8 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S144', 'S147'], 'refs' => ['west_highland_white_terrier.suitability.rkc_grooming', 'west_highland_white_terrier.suitability.pdsa_grooming']],
                 // S147 "If they are alone for too long, … could start chewing things around the home."
                 ['tag' => 'chews_when_bored', 'source_ids' => ['S147'], 'refs' => ['west_highland_white_terrier.behaviour.chewing']],
+                // S147 "Westies have quite a high prey drive, so we wouldn't recommend keeping them with smaller pets." (David 2026-10-12).
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S147'], 'refs' => ['west_highland_white_terrier.behaviour.other_pets']],
             ],
         ],
 
@@ -462,6 +474,8 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S160', 'S162'], 'refs' => ['siberian_husky.suitability.rkc_shedding', 'siberian_husky.suitability.pdsa_shedding']],
                 // S160 "Grooming: More than once a week"; S162 "brush your Husky a few times a week".
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S160', 'S162'], 'refs' => ['siberian_husky.suitability.rkc_grooming', 'siberian_husky.suitability.pdsa_grooming']],
+                // S162 "Huskies have such a high prey drive that we wouldn’t recommend keeping them with smaller pets" (David 2026-10-12).
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S162'], 'refs' => ['siberian_husky.behaviour.other_pets']],
             ],
         ],
 
@@ -630,6 +644,8 @@ return [
                 ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S211'], 'refs' => ['dobermann.exercise.energy', 'dobermann.suitability.pdsa_mental_stimulation']],
                 // S209 "Sheds: Yes".
                 ['tag' => 'sheds', 'source_ids' => ['S209'], 'refs' => ['dobermann.suitability.rkc_shedding']],
+                // S211 "Dobermanns are known to have quite a high prey drive and will love any opportunity to chase smaller pets" (David 2026-10-12).
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S211'], 'refs' => ['dobermann.behaviour.other_pets', 'dobermann.suitability.pdsa_other_pets']],
             ],
         ],
     ],

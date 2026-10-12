@@ -300,7 +300,7 @@ describe('PetPickerStep', () => {
       'Primerno za:življenje v stanovanjudružinsko življenjedružino z otroki',
     );
     expect(screen.getByTestId('breed-suitability-french_bulldog-consider')).toHaveTextContent(
-      'Upoštevajte:kratek gobček — težave z dihanjem in vročino',
+      'Upoštevajte:kratek gobček — težave z dihanjem in vročinomočan lovski nagon — lahko lovi manjše živali',
     );
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'buldog');
@@ -471,7 +471,7 @@ describe('PetPickerStep', () => {
     expect(husky).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
     expect(screen.getByTestId('breed-suitability-siberian_husky-suits')).toHaveTextContent(/aktivno družinoveliko hišo z vrtom/);
     expect(screen.getByTestId('breed-suitability-siberian_husky-consider')).toHaveTextContent(
-      /vsak dan potrebuje veliko gibanjarad pobegne — potrebuje varno, visoko ograjoko se dolgočasi, grize stvariizpada mu dlakapotrebuje česanje večkrat na teden/,
+      /vsak dan potrebuje veliko gibanjarad pobegne — potrebuje varno, visoko ograjoko se dolgočasi, grize stvariizpada mu dlakapotrebuje česanje večkrat na tedenmočan lovski nagon — lahko lovi manjše živali/,
     );
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'husky');
@@ -515,6 +515,8 @@ describe('PetPickerStep', () => {
     expect(screen.getByTestId('breed-suitability-dobermann-suits')).toHaveTextContent(/veliko hišo z vrtom/);
     expect(screen.getByTestId('breed-suitability-dobermann-consider')).toHaveTextContent(/velik pes — ni za dom z majhnimi otroki/);
     expect(screen.getByTestId('breed-suitability-dobermann-consider')).toHaveTextContent(/močan pes — potrebuje izkušenega lastnika/);
+    // David 2026-10-12: prey-drive chip (PDSA S211), last in the list.
+    expect(screen.getByTestId('breed-suitability-dobermann-consider')).toHaveTextContent(/močan lovski nagon — lahko lovi manjše živali$/);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'doberman');
     expect(screen.getByTestId('breed-option-dobermann')).toBeTruthy();
@@ -544,6 +546,7 @@ describe('PetPickerStep', () => {
       expect(suits).toHaveTextContent(/family life/);
       expect(consider).toHaveTextContent(/large dog — not for homes with small children/);
       expect(consider).toHaveTextContent(/powerful dog — needs an experienced owner/);
+      expect(consider).toHaveTextContent(/strong prey drive — may chase small pets/);
       expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(screen.getByTestId('breed-option-dobermann')).toHaveTextContent(/Dobermann/);
@@ -852,7 +855,7 @@ describe('PetPickerStep', () => {
       /življenje v stanovanjudružinsko življenjedružino z otroki/,
     );
     expect(screen.getByTestId('breed-suitability-west_highland_white_terrier-consider')).toHaveTextContent(
-      /občutljiva koža — nagnjenost k srbenju in vnetjemizpada mu dlakapotrebuje česanje večkrat na tedenko se dolgočasi, grize stvari/,
+      /občutljiva koža — nagnjenost k srbenju in vnetjemizpada mu dlakapotrebuje česanje večkrat na tedenko se dolgočasi, grize stvarimočan lovski nagon — lahko lovi manjše živali/,
     );
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'westie');
@@ -977,7 +980,7 @@ describe('PetPickerStep', () => {
     expect(dachshund).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
     expect(screen.getByTestId('breed-suitability-dachshund-suits')).toHaveTextContent(/družino z otroki/);
     expect(screen.getByTestId('breed-suitability-dachshund-consider')).toHaveTextContent(
-      /dolg hrbet — težave s hrbtenico, brez skakanjaizpada mu dlakapotrebuje miselne izzive/,
+      /dolg hrbet — težave s hrbtenico, brez skakanjaizpada mu dlakapotrebuje miselne izzivemočan lovski nagon — lahko lovi manjše živali/,
     );
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'teckel');
@@ -1028,7 +1031,7 @@ describe('PetPickerStep', () => {
     try {
       renderPicker(FALLBACK_CATALOGUE);
       const consider = screen.getByTestId('breed-suitability-french_bulldog-consider');
-      expect(consider).toHaveTextContent('Keep in mind:flat face — breathing and heat problems');
+      expect(consider).toHaveTextContent('Keep in mind:flat face — breathing and heat problemsstrong prey drive — may chase small pets');
       expect(consider).not.toHaveTextContent(/\d|%/);
       expect(screen.getByTestId('breed-suitability-french_bulldog-suits')).toHaveTextContent(/apartment livingfamily lifefamilies with children/);
     } finally {

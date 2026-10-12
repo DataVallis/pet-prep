@@ -362,7 +362,7 @@ describe('GET /api/breeds', function () {
                 'search_keywords' => BreedConfigsSeeder::configs()[4]['search_keywords'], 'sort_order' => 40,
                 'suitability' => [
                     'suits' => ['apartment', 'family_pet', 'children'],
-                    'consider' => ['brachycephalic_breathing'],
+                    'consider' => ['brachycephalic_breathing', 'chases_small_pets'],
                 ],
             ]);
     });
