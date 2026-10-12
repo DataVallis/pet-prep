@@ -68,6 +68,8 @@ describe('missed routines with a kind', () => {
 describe('timeline (M5-R02 activity types)', () => {
   it('child actions with the nickname, system rows without', () => {
     expect(activityText({ activity_type: 'took_out_pet', actor_nickname: 'Maja' })).toBe('Maja peljal(a) kužka ven');
+    // An activity type this build does not know (newer server): a generic word, never the raw code.
+    expect(activityText({ activity_type: 'some_future_action', actor_nickname: 'Maja' })).toBe('Maja dejavnost');
     expect(activityText({ activity_type: 'resolved_chewing', actor_nickname: 'Luka' })).toBe(
       'Luka pospravil(a) copat in dal(a) igračo',
     );
