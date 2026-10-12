@@ -254,6 +254,7 @@ describe('PetPickerStep', () => {
       'breed-option-german_shorthaired_pointer',
       'breed-option-yorkshire_terrier',
       'breed-option-cane_corso',
+      'breed-option-pembroke_welsh_corgi',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -492,6 +493,49 @@ describe('PetPickerStep', () => {
       expect(consider).toHaveTextContent(/escapes easily — needs a secure, high fence/);
       expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(screen.getByTestId('breed-option-siberian_husky')).toHaveTextContent(/Siberian Husky/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-24: the Pembroke Welsh Corgi (fallback) shows only "consider" chips, is found as "korgi" and "corgi", and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const corgi = screen.getByTestId('breed-option-pembroke_welsh_corgi');
+    expect(corgi).toHaveTextContent(/Welsh corgi pembroke/);
+    expect(corgi).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    // No sourced "suits" tag → no suits group at all.
+    expect(screen.queryByTestId('breed-suitability-pembroke_welsh_corgi-suits')).toBeNull();
+    expect(screen.getByTestId('breed-suitability-pembroke_welsh_corgi-consider')).toHaveTextContent(/pri igri lahko »pase« otroke/);
+    expect(screen.getByTestId('breed-suitability-pembroke_welsh_corgi-consider')).toHaveTextContent(/potrebuje česanje večkrat na teden/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'korgi');
+    expect(screen.getByTestId('breed-option-pembroke_welsh_corgi')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-cane_corso')).toBeNull();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'corgi');
+    expect(screen.getByTestId('breed-option-pembroke_welsh_corgi')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-pembroke_welsh_corgi'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'pembroke_welsh_corgi', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'pembroke_welsh_corgi' }),
+    );
+  });
+
+  it('M5-R10-24: the Pembroke Welsh Corgi chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const consider = screen.getByTestId('breed-suitability-pembroke_welsh_corgi-consider');
+      expect(consider).toHaveTextContent(/may “herd” children at play/);
+      expect(consider).toHaveTextContent(/needs brushing several times a week/);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-pembroke_welsh_corgi')).toHaveTextContent(/Pembroke Welsh Corgi/);
     } finally {
       await i18n.changeLanguage('sl');
     }

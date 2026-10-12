@@ -40,6 +40,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   german_shorthaired_pointer: 'dog',
   yorkshire_terrier: 'dog',
   cane_corso: 'dog',
+  pembroke_welsh_corgi: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',

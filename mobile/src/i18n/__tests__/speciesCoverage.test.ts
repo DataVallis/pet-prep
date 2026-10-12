@@ -62,6 +62,7 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'pet:picker.ageHints.west_highland_white_terrier': 'the West Highland White Terrier is a dog breed (M5-R10-11)',
   'pet:picker.ageHints.bernese_mountain_dog': 'the Bernese Mountain Dog is a dog breed (M5-R10-12)',
   'pet:picker.ageHints.bulldog': 'the Bulldog is a dog breed (M5-R10-20)',
+  'pet:picker.ageHints.pembroke_welsh_corgi': 'the Pembroke Welsh Corgi is a dog breed (M5-R10-24)',
   'pet:breedSuitability.consider.experienced_owner': 'chip of a dog breed only (Rottweiler, PDSA "powerful dog", M5-R10-19)',
   'pet:breedSuitability.consider.not_for_small_children': 'chip of a dog breed only (Cane Corso, PDSA "large dog", M5-R10-23)',
   'family:breeds.bernese_mountain_dog': 'the breed name itself contains "Dog" / "pes" (M5-R10-12)',
