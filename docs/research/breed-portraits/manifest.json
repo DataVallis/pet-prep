@@ -221,6 +221,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "cane_corso",
+            "species": "dog",
+            "file": "dog/cane-corso.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:c8708c3a9eb9df96d2bea4c497a32e695c6bf8e34e1844690415bc9a712b10ed",
+            "generated_at": "2026-10-12T04:37:29+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
