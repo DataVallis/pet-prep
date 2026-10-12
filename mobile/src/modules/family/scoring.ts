@@ -12,6 +12,7 @@ import { familyClock, localParts } from '@/modules/childPet/familyTime';
 import { BEHAVIOUR_KINDS, PARENT_BEHAVIOUR_STRINGS, type BehaviourKind } from '@/modules/behaviour/behaviour';
 import { playTimelineText } from '@/modules/play/play';
 import { hasGroomingRoutine } from '@/modules/species/species';
+import { readReportSocialisation, socialisationTimelineText, type ReportSocialisation } from '@/modules/socialisation/socialisation';
 import { t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
@@ -136,6 +137,11 @@ export interface ChildReport {
   daily: DayRow[];
   missed: MissedRoutine[];
   illnesses: IllnessPeriod[];
+  /**
+   * M5-R17 the puppy's weekly "new experience" weeks in the period (done / open / missed) —
+   * shown as its own row, never part of the score; null = none in the period / an older server.
+   */
+  socialisation: ReportSocialisation | null;
 }
 
 export type ReportDays = 7 | 30 | 84;
@@ -343,6 +349,7 @@ export function readChildReport(value: unknown): ChildReport | null {
         ? [{ started_at: item.started_at, ended_at: strOrNull(item.ended_at) }]
         : [],
     ),
+    socialisation: readReportSocialisation(value.socialisation),
   };
 }
 
@@ -522,6 +529,9 @@ export function activityText(
 ): string {
   const play = playTimelineText(entry.activity_type, entry.actor_nickname, entry.value ?? null);
   if (play !== null) return play;
+  // M5-R17: "Nova izkušnja: nov zvok · Mia" (value = the experience code).
+  const socialised = socialisationTimelineText(entry.activity_type, entry.actor_nickname, entry.value ?? null);
+  if (socialised !== null) return socialised;
   // M5-R13: "Kužku se je zavozlala dlaka" (dog) / the cat's override "Muci …" for a cat.
   if (SYSTEM_ACTIVITY_LABELS[entry.activity_type]) return tSpecies(`family:systemActivities.${entry.activity_type}`, species);
   // A cat's wording where it differs ("nahranil(a) muco") is `cat:override.family.activities.*` (M5-R06-08c).

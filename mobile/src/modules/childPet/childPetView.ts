@@ -32,6 +32,7 @@ import {
   type ChildBehaviour,
 } from '@/modules/behaviour/behaviour';
 import { readChildTraining, readPetTraining, type ChildTraining } from '@/modules/training/training';
+import { broadcastSocialisation, readChildSocialisation, type ChildSocialisation } from '@/modules/socialisation/socialisation';
 import { broadcastPlay, readChildPlay, type ChildPlay } from '@/modules/play/play';
 
 export type LockReason = 'game_over' | 'inactive' | 'hard_stopped' | 'payment_required' | 'contract_required' | 'ill';
@@ -158,6 +159,11 @@ export interface ChildPetView {
    * older server. Read with `readChildCatCare` (`modules/catCare/catCare.ts`).
    */
   cat: ChildCatCare;
+  /**
+   * M5-R17 the puppy's weekly "new experience" (socialisation): null when this week has no task
+   * (not a puppy week, a breed / pet without it, a cat) and from an older server.
+   */
+  socialisation: ChildSocialisation | null;
   /** ms of `server_time` (whole seconds). */
   snapshotAtMs: number;
   /** ms of the newest applied broadcast `emitted_at`; 0 if none. */
@@ -337,6 +343,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
     play: readChildPlay((raw as { play?: unknown }).play),
     // M5-R06-08a: the four cat blocks (null / missing for a dog and an older server).
     cat: readChildCatCare(raw),
+    // M5-R17: older servers send no `socialisation` → null (no card).
+    socialisation: readChildSocialisation((raw as { socialisation?: unknown }).socialisation),
     snapshotAtMs: msOf(raw.server_time),
     lastEmittedMs,
     clockSkewMs: msOf(raw.server_time) > 0 ? msOf(raw.server_time) - receivedAtMs : 0,
@@ -445,6 +453,8 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
   const play = broadcastPlay(view.play, b.play, lock.is_locked);
   // M5-R06-08b: the cat's wand / litter / grooming / scratching (null blocks for a dog).
   const cat = broadcastCatCare(view.cat, b, lock.is_locked, isNewFamilyDay(view, b.emitted_at));
+  // M5-R17: pet-level `can_record`; a lock turns it off.
+  const socialisation = broadcastSocialisation(view.socialisation, b.socialisation, lock.is_locked);
 
   const next: ChildPetView = {
     ...view,
@@ -457,6 +467,7 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
     training,
     play,
     cat,
+    socialisation,
     lastEmittedMs: emittedMs,
   };
 
@@ -643,7 +654,9 @@ export function nextRefreshDelay(view: ChildPetView, deviceNowMs: number): numbe
   // game) and the grooming block ends — no broadcast marks these moments.
   const wandAt = view.lock.is_locked ? Number.NaN : at(view.cat.wand?.next_allowed_at);
   const groomingAt = view.lock.is_locked ? Number.NaN : at(view.cat.grooming?.next_allowed_at);
-  const future = [nextWindow, windowEnd, water, accident, illnessEnd, trainingEnd, invitationEnd, wandAt, groomingAt].filter(
+  // M5-R17: the puppy's next week (a new "new experience") or the end of quiet hours.
+  const socialisationAt = view.lock.is_locked ? Number.NaN : at(view.socialisation?.next_allowed_at ?? view.socialisation?.week_ends_at);
+  const future = [nextWindow, windowEnd, water, accident, illnessEnd, trainingEnd, invitationEnd, wandAt, groomingAt, socialisationAt].filter(
     (ms) => Number.isFinite(ms) && ms > serverNow,
   );
   future.push(familyCalendar(view.timezone, view.server_time).nextMidnight(serverNow));

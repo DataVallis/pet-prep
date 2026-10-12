@@ -110,6 +110,28 @@ describe('ChildDetailScreen', () => {
     expect(screen.getByTestId('report-illnesses')).toHaveTextContent(/čet 1\. 10\. 10:00 – čet 1\. 10\. 22:00/);
   });
 
+  it('M5-R17: the puppy\'s weekly "Nova izkušnja" row (weeks done / missed / open, not scored); none without it', async () => {
+    renderWithQuery(<ChildDetailScreen child={LUKA} family={FAMILY} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.queryByTestId('report-socialisation')).toBeNull();
+
+    getChildReport.mockResolvedValue({
+      ...report(30, 64),
+      socialisation: {
+        goal_per_week: 1, expected: 3, done: 1, done_by_child: 1, missed: 1, open: 1, scored: false,
+        weeks: [
+          { week: 1, started_at: '2026-09-15T08:00:00+02:00', ends_at: '2026-09-22T08:00:00+02:00', goal: 1, done: 1, status: 'done', experiences: ['dog'], by_child: true },
+          { week: 2, started_at: '2026-09-22T08:00:00+02:00', ends_at: '2026-09-29T08:00:00+02:00', goal: 1, done: 0, status: 'missed', experiences: [], by_child: false },
+          { week: 3, started_at: '2026-09-29T08:00:00+02:00', ends_at: '2026-10-06T08:00:00+02:00', goal: 1, done: 0, status: 'open', experiences: [], by_child: false },
+        ],
+      },
+    });
+    fireEvent.press(screen.getByTestId('period-30'));
+    await flush();
+    expect(screen.getByTestId('report-socialisation')).toHaveTextContent(/Nova izkušnja \(mladiček\)1 od 3 tednov1 zamujen · ta teden še čaka/);
+    expect(screen.getByTestId('report-socialisation-note')).toHaveTextContent('Enkrat na teden, dokler je kuža mladiček. Ne vpliva na oceno skrbi.');
+  });
+
   it('M5-R08: the "Ime" row of the child\'s pet — empty, then the parent\'s name', async () => {
     const { unmount } = renderWithQuery(<ChildDetailScreen child={LUKA} family={FAMILY} onBack={jest.fn()} />);
     await flush();

@@ -1520,6 +1520,26 @@ sequenceDiagram
     Caddy-->>App: image
 ```
 
+### 12e. Puppy socialisation — "Nova izkušnja" (M5-R17, David 2026-10-12)
+
+One "new experience" per program week while the week starts in the puppy stage; never a ledger routine, so it cannot touch the Care Score or the traffic light.
+
+```mermaid
+flowchart TD
+  P([Child taps 'Nova izkušnja' → picks person / dog / sound / place]) --> API["POST /api/child/pet/socialisation {experience}"]
+  API --> L{"Locked for this child?"}
+  L -- yes --> L423["423 + state"]
+  L -- no --> W{"SocialisationService::weekAt<br/>socialisation_enabled · dog · profiled ·<br/>puppy row at arrival + week index?"}
+  W -- no task --> NA["422 socialisation_not_available"]
+  W -- task --> D{"socialised_pet rows in this program week ≥ goal (1)?"}
+  D -- yes --> WD["422 socialisation_week_done<br/>next_allowed_at = next puppy week / null"]
+  D -- no --> Q{"Quiet hours now?"}
+  Q -- yes --> QH["422 socialisation_quiet_hours<br/>next_allowed_at = their end"]
+  Q -- no --> OK["activities_log socialised_pet (value = experience code)<br/>PetUpdated('socialised_pet') after commit<br/>200 + state.socialisation.done = true"]
+  OK --> TL["Parent timeline: 'Nova izkušnja: nov zvok · Mia'"]
+  OK --> RP["Child report: socialisation.weeks (done / open / missed)<br/>— not in by_type, daily, missed, Care Score, light"]
+```
+
 ## 13. Purchases: RevenueCat → webhook → challenge credit → pet (M3-08 ledger, M3-11 per-pet consumable, 2026-10-07)
 
 The app (M3-07, not built yet) logs in to RevenueCat with `appUserID = <parent user id>`. One purchase of the consumable `petprep_challenge_12w` = one challenge credit of the family, assigned to one pet (PAYMENTS_SPEC P1).

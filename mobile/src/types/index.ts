@@ -162,6 +162,11 @@ export interface PetUpdatedBroadcast {
   litter?: unknown;
   grooming?: unknown;
   scratching?: unknown;
+  /**
+   * M5-R17 the puppy's weekly "new experience" (pet level `can_record`); null when this week has
+   * no task, missing from older servers. Read via `broadcastSocialisation` (`modules/socialisation`).
+   */
+  socialisation?: unknown;
   event_type: string | null;
   updated_at: string | null;
   /** When the server emitted this snapshot (ms precision); newer wins. */

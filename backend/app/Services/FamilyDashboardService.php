@@ -52,6 +52,7 @@ class FamilyDashboardService
         private readonly CareScoreService $scores,
         private readonly PetMediaService $media,
         private readonly PlayService $play,
+        private readonly SocialisationService $socialisation,
     ) {}
 
     private const CHILD_ACTIONS = [
@@ -240,7 +241,8 @@ class FamilyDashboardService
      * family-local days (7, 30 or 84 — the whole 12-week challenge):
      * all-time Care Score, the score of the period, traffic light, 12-week
      * progress, totals per routine type, one row per day, the missed
-     * routines and the pet's illnesses in the period.
+     * routines and the pet's illnesses in the period; M5-R17: the puppy's
+     * weekly "new experience" weeks (`socialisation`, never scored).
      *
      * @return array<string, mixed>
      */
@@ -331,6 +333,11 @@ class FamilyDashboardService
             'daily' => $daily,
             'missed' => array_reverse($missed),
             'illnesses' => $illnesses,
+            // M5-R17 puppy socialisation: one row per program week with a "new
+            // experience" task in the period (done / open / missed) — shown, never
+            // scored (not in by_type, daily, missed, the Care Score or the light).
+            // Null when the pet had no such week in the period.
+            'socialisation' => $pet !== null ? $this->socialisation->reportFor($pet, $child->id, $from) : null,
         ];
     }
 

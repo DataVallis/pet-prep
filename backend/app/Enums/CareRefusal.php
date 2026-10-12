@@ -185,4 +185,18 @@ enum CareRefusal: string
      * another kind is ended instead (no penalty).
      */
     case CareSessionActive = 'care_session_active';
+
+    /**
+     * M5-R17 puppy socialisation (David 2026-10-12): no "new experience" task
+     * this program week — not a puppy week, a breed without a socialisation
+     * row, a cat, a legacy pet or a dog whose apps did not declare
+     * `socialisation`.
+     */
+    case SocialisationNotAvailable = 'socialisation_not_available';
+
+    /** This program week's new experience is already done (next_allowed_at = the next puppy week, or null). */
+    case SocialisationWeekDone = 'socialisation_week_done';
+
+    /** The puppy sleeps in quiet hours (next_allowed_at = their end). */
+    case SocialisationQuietHours = 'socialisation_quiet_hours';
 }
