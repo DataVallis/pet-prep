@@ -24,13 +24,12 @@ EAS=(eas)
 
 cd mobile
 
-# The production store build resolves its config with EAS_BUILD_PROFILE=production
-# (app.config.ts: APNs mode) — resolve the same config here, or the runtimes never match.
+# The production store build resolves its config with the production profile env
+# (EXPO_PUBLIC_*, PETPREP_APNS_MODE — app.config.ts) and EAS_BUILD_PROFILE=production —
+# resolve the same config here, or the runtimes never match.
 export EAS_BUILD_PROFILE=production
-
-# Same public env as the production store build.
 while IFS='=' read -r key value; do
-  [[ "$key" == EXPO_PUBLIC_* ]] || continue
+  [[ "$key" =~ ^[A-Z_][A-Z0-9_]*$ ]] || continue
   export "$key=$value"
 done < <(node -e "const e=require('./eas.json').build.production.env||{};for(const[k,v]of Object.entries(e))console.log(k+'='+v)")
 
