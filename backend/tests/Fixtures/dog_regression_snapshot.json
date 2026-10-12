@@ -431,19 +431,6 @@
                     ],
                     [
                         "2026-10-24",
-                        "water",
-                        2,
-                        "pending",
-                        "2026-10-24T06:00:00+00:00",
-                        "2026-10-24T22:00:00+00:00",
-                        null,
-                        null,
-                        null,
-                        null,
-                        null
-                    ],
-                    [
-                        "2026-10-24",
                         "clean",
                         0,
                         "missed",
@@ -525,10 +512,10 @@
                     },
                     "today": {
                         "date": "2026-10-24",
-                        "expected": 8,
+                        "expected": 7,
                         "done": 1,
                         "done_by_child": null,
-                        "pending": 3,
+                        "pending": 2,
                         "missed_count": 4,
                         "missed": [
                             {
@@ -579,10 +566,10 @@
                     },
                     "today": {
                         "date": "2026-10-24",
-                        "expected": 8,
+                        "expected": 7,
                         "done": 1,
                         "done_by_child": 1,
-                        "pending": 3,
+                        "pending": 2,
                         "missed_count": 4,
                         "missed": [
                             {
@@ -690,12 +677,12 @@
                         },
                         {
                             "date": "2026-10-24",
-                            "expected": 8,
-                            "fair_expected": 8,
+                            "expected": 7,
+                            "fair_expected": 7,
                             "done": 1,
                             "done_by_child": 1,
                             "missed": 4,
-                            "pending": 3,
+                            "pending": 2,
                             "walk_steps": 0,
                             "walk_goal": null,
                             "walk_done": null
@@ -1707,19 +1694,6 @@
                     ],
                     [
                         "2026-10-24",
-                        "water",
-                        2,
-                        "missed",
-                        "2026-10-24T06:00:00+00:00",
-                        "2026-10-24T22:00:00+00:00",
-                        null,
-                        null,
-                        null,
-                        null,
-                        null
-                    ],
-                    [
-                        "2026-10-24",
                         "clean",
                         0,
                         "missed",
@@ -1826,19 +1800,6 @@
                         "2026-10-25",
                         "water",
                         1,
-                        "pending",
-                        "2026-10-24T22:00:00+00:00",
-                        "2026-10-25T23:00:00+00:00",
-                        null,
-                        null,
-                        null,
-                        null,
-                        null
-                    ],
-                    [
-                        "2026-10-25",
-                        "water",
-                        2,
                         "pending",
                         "2026-10-24T22:00:00+00:00",
                         "2026-10-25T23:00:00+00:00",
@@ -1969,12 +1930,6 @@
                         "water",
                         1,
                         "missed"
-                    ],
-                    [
-                        "2026-10-24",
-                        "water",
-                        2,
-                        "missed"
                     ]
                 ],
                 "pet_summary": {
@@ -1985,18 +1940,18 @@
                         ]
                     },
                     "care_score": {
-                        "score": 31,
+                        "score": 33,
                         "done": 5,
-                        "expected": 16,
+                        "expected": 15,
                         "illnesses": 0,
                         "since": "2026-10-24T06:00:00+00:00"
                     },
                     "today": {
                         "date": "2026-10-25",
-                        "expected": 11,
+                        "expected": 10,
                         "done": 4,
                         "done_by_child": null,
-                        "pending": 3,
+                        "pending": 2,
                         "missed_count": 4,
                         "missed": [
                             {
@@ -2038,19 +1993,19 @@
                         ]
                     },
                     "care_score": {
-                        "score": 31,
+                        "score": 33,
                         "done": 5,
-                        "expected": 16,
-                        "routines": 16,
+                        "expected": 15,
+                        "routines": 15,
                         "illnesses": 0,
                         "since": "2026-10-24T06:00:00+00:00"
                     },
                     "today": {
                         "date": "2026-10-25",
-                        "expected": 11,
+                        "expected": 10,
                         "done": 4,
                         "done_by_child": 4,
-                        "pending": 3,
+                        "pending": 2,
                         "missed_count": 4,
                         "missed": [
                             {
@@ -2146,11 +2101,11 @@
                         },
                         {
                             "date": "2026-10-24",
-                            "expected": 8,
-                            "fair_expected": 8,
+                            "expected": 7,
+                            "fair_expected": 7,
                             "done": 1,
                             "done_by_child": 1,
-                            "missed": 7,
+                            "missed": 6,
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
@@ -2158,12 +2113,12 @@
                         },
                         {
                             "date": "2026-10-25",
-                            "expected": 11,
-                            "fair_expected": 11,
+                            "expected": 10,
+                            "fair_expected": 10,
                             "done": 4,
                             "done_by_child": 4,
                             "missed": 4,
-                            "pending": 3,
+                            "pending": 2,
                             "walk_steps": 9000,
                             "walk_goal": 2000,
                             "walk_done": true
@@ -3503,19 +3458,6 @@
                     ],
                     [
                         "2026-10-24",
-                        "water",
-                        2,
-                        "missed",
-                        "2026-10-24T06:00:00+00:00",
-                        "2026-10-24T22:00:00+00:00",
-                        null,
-                        null,
-                        null,
-                        null,
-                        null
-                    ],
-                    [
-                        "2026-10-24",
                         "clean",
                         0,
                         "missed",
@@ -3622,19 +3564,6 @@
                         "2026-10-25",
                         "water",
                         1,
-                        "missed",
-                        "2026-10-24T22:00:00+00:00",
-                        "2026-10-25T23:00:00+00:00",
-                        null,
-                        null,
-                        null,
-                        null,
-                        null
-                    ],
-                    [
-                        "2026-10-25",
-                        "water",
-                        2,
                         "missed",
                         "2026-10-24T22:00:00+00:00",
                         "2026-10-25T23:00:00+00:00",
@@ -3776,19 +3705,6 @@
                     ],
                     [
                         "2026-10-26",
-                        "water",
-                        2,
-                        "pending",
-                        "2026-10-25T23:00:00+00:00",
-                        "2026-10-26T23:00:00+00:00",
-                        null,
-                        null,
-                        null,
-                        null,
-                        null
-                    ],
-                    [
-                        "2026-10-26",
                         "feed",
                         0,
                         "missed",
@@ -3871,12 +3787,6 @@
                         "missed"
                     ],
                     [
-                        "2026-10-24",
-                        "water",
-                        2,
-                        "missed"
-                    ],
-                    [
                         "2026-10-25",
                         "clean",
                         0,
@@ -3935,12 +3845,6 @@
                         "water",
                         1,
                         "missed"
-                    ],
-                    [
-                        "2026-10-25",
-                        "water",
-                        2,
-                        "missed"
                     ]
                 ],
                 "pet_summary": {
@@ -3951,18 +3855,18 @@
                         ]
                     },
                     "care_score": {
-                        "score": 25,
+                        "score": 28,
                         "done": 5,
-                        "expected": 20,
+                        "expected": 18,
                         "illnesses": 0,
                         "since": "2026-10-24T06:00:00+00:00"
                     },
                     "today": {
                         "date": "2026-10-26",
-                        "expected": 9,
+                        "expected": 8,
                         "done": 0,
                         "done_by_child": null,
-                        "pending": 7,
+                        "pending": 6,
                         "missed_count": 2,
                         "missed": [
                             {
@@ -3990,19 +3894,19 @@
                         ]
                     },
                     "care_score": {
-                        "score": 25,
+                        "score": 28,
                         "done": 5,
-                        "expected": 20,
-                        "routines": 20,
+                        "expected": 18,
+                        "routines": 18,
                         "illnesses": 0,
                         "since": "2026-10-24T06:00:00+00:00"
                     },
                     "today": {
                         "date": "2026-10-26",
-                        "expected": 9,
+                        "expected": 8,
                         "done": 0,
                         "done_by_child": 0,
-                        "pending": 7,
+                        "pending": 6,
                         "missed_count": 2,
                         "missed": [
                             {
@@ -4072,11 +3976,11 @@
                         },
                         {
                             "date": "2026-10-24",
-                            "expected": 8,
-                            "fair_expected": 8,
+                            "expected": 7,
+                            "fair_expected": 7,
                             "done": 1,
                             "done_by_child": 1,
-                            "missed": 7,
+                            "missed": 6,
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
@@ -4084,11 +3988,11 @@
                         },
                         {
                             "date": "2026-10-25",
-                            "expected": 11,
-                            "fair_expected": 11,
+                            "expected": 10,
+                            "fair_expected": 10,
                             "done": 4,
                             "done_by_child": 4,
-                            "missed": 7,
+                            "missed": 6,
                             "pending": 0,
                             "walk_steps": 9000,
                             "walk_goal": 2000,
@@ -4096,12 +4000,12 @@
                         },
                         {
                             "date": "2026-10-26",
-                            "expected": 8,
-                            "fair_expected": 8,
+                            "expected": 7,
+                            "fair_expected": 7,
                             "done": 0,
                             "done_by_child": 0,
                             "missed": 1,
-                            "pending": 7,
+                            "pending": 6,
                             "walk_steps": 0,
                             "walk_goal": 2000,
                             "walk_done": false
