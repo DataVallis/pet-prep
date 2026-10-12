@@ -2,10 +2,18 @@
   "expo": {
     "name": "PetPrep",
     "slug": "petprep",
-    "version": "3.1.1",
+    "version": "3.1.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "runtimeVersion": {
+      "policy": "fingerprint"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/04c069be-7cf1-43df-98b9-58fd692a7be6",
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0
+    },
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
