@@ -96,6 +96,7 @@ export const CONSIDER_TAGS: readonly ConsiderTag[] = [
   'fragile_older_children',
   'not_for_small_children',
   'drools',
+  'chases_small_pets',
 ] satisfies readonly ConsiderTag[];
 
 /** A breed's suitability tags (empty lists = no sourced tags, e.g. the mutt). */
@@ -250,7 +251,7 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
       sort_order: 40,
       suitability: {
         suits: ['apartment', 'family_pet', 'children'],
-        consider: ['brachycephalic_breathing'],
+        consider: ['brachycephalic_breathing', 'chases_small_pets'],
       },
     },
     {
@@ -315,7 +316,7 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
       sort_order: 90,
       suitability: {
         suits: ['children'],
-        consider: ['back_spine', 'sheds', 'needs_mental_stimulation'],
+        consider: ['back_spine', 'sheds', 'needs_mental_stimulation', 'chases_small_pets'],
       },
     },
     {
@@ -354,7 +355,7 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
       sort_order: 120,
       suitability: {
         suits: ['apartment', 'family_pet', 'children'],
-        consider: ['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored'],
+        consider: ['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored', 'chases_small_pets'],
       },
     },
     {
@@ -380,7 +381,7 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
       sort_order: 140,
       suitability: {
         suits: ['active_family', 'large_home'],
-        consider: ['long_daily_exercise', 'secure_fencing', 'chews_when_bored', 'sheds', 'frequent_grooming'],
+        consider: ['long_daily_exercise', 'secure_fencing', 'chews_when_bored', 'sheds', 'frequent_grooming', 'chases_small_pets'],
       },
     },
     {
@@ -471,7 +472,7 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
       sort_order: 210,
       suitability: {
         suits: ['active_family', 'family_pet', 'large_home'],
-        consider: ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds'],
+        consider: ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds', 'chases_small_pets'],
       },
     },
   ],
