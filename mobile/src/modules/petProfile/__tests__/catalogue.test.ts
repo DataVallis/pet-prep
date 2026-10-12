@@ -541,7 +541,9 @@ describe('species-aware choice', () => {
 
   it('free cat = the domestic cat (no hard-coded mutt); the challenge = Maine Coon', () => {
     const cat = choiceWithSpecies(INITIAL_PICKER_CHOICE, 'cat', [], cats());
-    expect(cat).toEqual({ species: 'cat', plan: null, breed: 'domestic_cat', origin: null, age_stage: null });
+    // No plan yet → no breed preselected (fix 2026-10-12: never a ticked breed without its plan).
+    expect(cat).toEqual({ species: 'cat', plan: null, breed: null, origin: null, age_stage: null });
+    expect(choiceWithPlan(cat, 'free', [], cats()).breed).toBe('domestic_cat');
     const free = { ...choiceWithPlan(cat, 'free', [], cats()), origin: 'adopted' as const, age_stage: 'puppy' as const };
     expect(completeChoice(free, [], cats())).toEqual({ species: 'cat', breed: 'domestic_cat', origin: 'adopted', age_stage: 'puppy', plan: 'free' });
     const challenge = choiceWithPlan(free, 'challenge', [], cats());

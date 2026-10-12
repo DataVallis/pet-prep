@@ -624,6 +624,28 @@ export interface PickerChoice {
 export const INITIAL_PICKER_CHOICE: PickerChoice = { species: null, plan: null, breed: null, origin: null, age_stage: null };
 
 /**
+ * Plan and breed always agree (fix 2026-10-12, David: "Mešanček" was ticked while neither
+ * plan was): the breed belongs to the plan, so without a plan there is no breed either —
+ * the plan has no default (PAYMENTS_SPEC, M5-F03). A choice with a plan is returned as is.
+ */
+export function withConsistentPlan(choice: PickerChoice): PickerChoice {
+  return choice.plan === null && choice.breed !== null ? { ...choice, breed: null } : choice;
+}
+
+/**
+ * The choice after the parent taps a pickable breed. Before a plan is chosen the breed
+ * decides it: the species' free breed (mutt / domestic cat) → free plan, a paid breed →
+ * challenge (M5-F03), so a breed is never selected without its plan. With a plan already
+ * chosen only the breed changes (a breed that plan locks never reaches here).
+ */
+export function choiceWithBreed(choice: PickerChoice, breed: PetBreed, breeds: readonly CatalogueBreed[]): PickerChoice {
+  if (choice.plan !== null) return { ...choice, breed };
+  const entry = breeds.find((b) => b.breed === breed);
+  if (!entry) return choice;
+  return { ...choice, breed, plan: entry.free_plan_allowed ? 'free' : 'challenge' };
+}
+
+/**
  * Breeds that can't be picked with this plan (`breeds` = the chosen species' catalogue
  * entries). The free plan (and no plan yet) takes only the free breed; the challenge only
  * a paid breed (M5-F03, server 422 `challenge_requires_paid_breed`). `serverLocked` =
@@ -683,7 +705,8 @@ export function choiceWithPlan(
 
 /**
  * The choice after the parent picks a species: plan, origin and age stay; the breed is
- * re-chosen inside the new species (its free breed, or the first paid one on the challenge).
+ * re-chosen inside the new species (its free breed, or the first paid one on the challenge;
+ * none while no plan is chosen).
  */
 export function choiceWithSpecies(
   choice: PickerChoice,
@@ -692,8 +715,9 @@ export function choiceWithSpecies(
   breeds: readonly CatalogueBreed[],
 ): PickerChoice {
   if (choice.species === species && choice.breed !== null && breeds.some((b) => b.breed === choice.breed)) return choice;
-  const fresh: PickerChoice = { ...choice, species, breed: freeBreedOf(breeds) };
-  return choice.plan === null ? fresh : choiceWithPlan(fresh, choice.plan, serverLocked, breeds);
+  // No plan yet → no breed either (never a ticked free breed next to an empty plan choice).
+  if (choice.plan === null) return { ...choice, species, breed: null };
+  return choiceWithPlan({ ...choice, species, breed: freeBreedOf(breeds) }, choice.plan, serverLocked, breeds);
 }
 
 /**
