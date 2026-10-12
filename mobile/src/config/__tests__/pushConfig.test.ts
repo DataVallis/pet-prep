@@ -3,6 +3,7 @@
  * per EAS profile (sandbox only for development builds).
  */
 import appJson from '../../../app.json';
+import easJson from '../../../eas.json';
 import { apnsMode, resolveGoogleServicesFile, withPushMode } from '../../../app.config';
 
 describe('expo-notifications config (app.json / app.config.ts)', () => {
@@ -17,6 +18,16 @@ describe('expo-notifications config (app.json / app.config.ts)', () => {
     expect(apnsMode({ EAS_BUILD_PROFILE: 'development' })).toBe('development');
     expect(apnsMode({ EAS_BUILD_PROFILE: 'preview' })).toBe('production');
     expect(apnsMode({ EAS_BUILD_PROFILE: 'production' })).toBe('production');
+  });
+
+  it('M5-F10: PETPREP_APNS_MODE from eas.json wins, so the Mac and the build server resolve the same config', () => {
+    expect(apnsMode({ PETPREP_APNS_MODE: 'production' })).toBe('production');
+    expect(apnsMode({ PETPREP_APNS_MODE: 'development', EAS_BUILD_PROFILE: 'production' })).toBe('development');
+    expect(apnsMode({ PETPREP_APNS_MODE: 'bogus', EAS_BUILD_PROFILE: 'production' })).toBe('production');
+    const profiles = easJson.build as Record<string, { env?: Record<string, string> }>;
+    expect(profiles.development.env?.PETPREP_APNS_MODE).toBe('development');
+    expect(profiles.preview.env?.PETPREP_APNS_MODE).toBe('production');
+    expect(profiles.production.env?.PETPREP_APNS_MODE).toBe('production');
   });
 
   it('sets mode on the plugin entry and leaves other plugins alone', () => {
