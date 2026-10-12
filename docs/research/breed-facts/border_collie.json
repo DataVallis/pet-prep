@@ -19,20 +19,20 @@
       "quote": "Your Collie will need a minimum of two hours exercise every day",
       "game_rule_key": "daily_steps",
       "sort": 1,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-002",
       "category": "training",
       "audience": "child",
       "title": {
-        "en": "In Stanley Coren's survey of obedience judges, 190 of 199 ranked the Border Collie in their top 10.",
-        "sl": "V raziskavi Stanleyja Corena je 190 od 199 sodnikov poslušnosti border collieja uvrstilo med prvih 10."
+        "en": "In Stanley Coren's survey, 190 of 199 judges ranked the Border Collie in their top 10.",
+        "sl": "V raziskavi Stanleyja Corena je 190 od 199 sodnikov border collieja uvrstilo med prvih 10."
       },
       "why": {
-        "en": "That's why your Border Collie learns commands twice as fast in the game.",
-        "sl": "Zato se tvoj border collie v igri uči ukazov dvakrat hitreje."
+        "en": "That's why in the game your Border Collie learns commands twice as fast as a mixed breed.",
+        "sl": "Zato se tvoj border collie v igri uči ukazov dvakrat hitreje kot mešanček."
       },
       "source_id": "S34",
       "source_name": "Stanley Coren, Psychology Today",
@@ -40,8 +40,8 @@
       "quote": "190 of the 199 judges ranked the Border Collie in the top 10.",
       "game_rule_key": "training_speed",
       "sort": 2,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-003",
@@ -61,16 +61,16 @@
       "quote": "Always keep training sessions brief — just five to 10 minutes — and always end on a positive note.",
       "game_rule_key": "training_daily_time",
       "sort": 3,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-004",
       "category": "training",
       "audience": "child",
       "title": {
-        "en": "A reward helps a dog learn the behaviour you want.",
-        "sl": "Nagrada psu pomaga, da se nauči vedenja, ki si ga želiš."
+        "en": "A reward encourages a dog to do the behaviour you want.",
+        "sl": "Nagrada psa spodbudi k vedenju, ki si ga želiš."
       },
       "why": {
         "en": "That's why you tap Praise right when your dog obeys.",
@@ -82,8 +82,8 @@
       "quote": "Positive reinforcement is the process of giving a dog a reward to encourage the behavior you want.",
       "game_rule_key": "training_praise",
       "sort": 4,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-005",
@@ -103,8 +103,8 @@
       "quote": "Puppies can begin very simple training starting as soon as they come home, usually around 8 weeks old.",
       "game_rule_key": "training_start",
       "sort": 5,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-006",
@@ -124,8 +124,8 @@
       "quote": "They also need opportunities to solve problems and use their brains.",
       "game_rule_key": "training_minigame",
       "sort": 6,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-007",
@@ -145,8 +145,8 @@
       "quote": "Puppies eight to 12 weeks old need four meals a day.",
       "game_rule_key": "feed_windows",
       "sort": 7,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-008",
@@ -166,8 +166,8 @@
       "quote": "Feed puppies three to six months old three meals a day.",
       "game_rule_key": "feed_windows",
       "sort": 8,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-009",
@@ -187,16 +187,16 @@
       "quote": "From birth to cessation of rapid growth (~6–9 months, varying with breed and size)",
       "game_rule_key": "life_stage",
       "sort": 9,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-010",
       "category": "temperament",
       "audience": "child",
       "title": {
-        "en": "A Border Collie puppy needs to meet new people, places and sounds, step by step.",
-        "sl": "Mladiček border collieja mora postopoma spoznati nove ljudi, kraje in zvoke."
+        "en": "A Border Collie needs to meet different people, places and sounds, step by step.",
+        "sl": "Border collie mora postopoma spoznati različne ljudi, kraje in zvoke."
       },
       "why": {
         "en": "That's your weekly \"New experience\" task while your dog is a puppy.",
@@ -208,8 +208,8 @@
       "quote": "You'll need to gradually introduce them to different people, places, sounds and experiences.",
       "game_rule_key": "puppy_socialisation",
       "sort": 10,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-011",
@@ -229,8 +229,8 @@
       "quote": "If left alone or not given enough exercise, your Collie will certainly let you know they’re unhappy by chewing anything in paw’s reach!",
       "game_rule_key": "chewing_after_missed_walk",
       "sort": 11,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-012",
@@ -250,8 +250,8 @@
       "quote": "These energetic dogs will settle down for cuddle time when the workday is done.",
       "game_rule_key": "cuddle",
       "sort": 12,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-013",
@@ -268,8 +268,8 @@
       "quote": "Their name comes from the border regions of England and Scotland",
       "game_rule_key": null,
       "sort": 13,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-014",
@@ -286,16 +286,16 @@
       "quote": "ORIGIN: Great-Britain. … UTILIZATION: Sheepdog.",
       "game_rule_key": null,
       "sort": 14,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-015",
       "category": "origin",
       "audience": "child",
       "title": {
-        "en": "Border Collies were bred to make their own decisions while moving livestock over large areas.",
-        "sl": "Border collieje so vzrejali, da se sami odločajo, ko vodijo živino po velikih pašnikih."
+        "en": "Border Collies were developed to make their own decisions while managing livestock over large areas.",
+        "sl": "Border collieje so vzrejali, da se sami odločajo, ko vodijo živino na velikih površinah."
       },
       "why": null,
       "source_id": "S4",
@@ -304,8 +304,8 @@
       "quote": "The Border Collie was developed to make independent decisions while managing livestock over large areas.",
       "game_rule_key": null,
       "sort": 15,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-016",
@@ -322,16 +322,16 @@
       "quote": "Herding is deep in their nature",
       "game_rule_key": null,
       "sort": 16,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-017",
       "category": "temperament",
       "audience": "child",
       "title": {
-        "en": "A Border Collie guides animals with an intense stare called the \"eye\" and a stalking way of moving.",
-        "sl": "Border collie vodi živali z ostrim pogledom, ki mu pravijo »oko«, in s plazečim se gibanjem."
+        "en": "A Border Collie controls livestock with an intense stare called the \"eye\" and a stalking way of moving.",
+        "sl": "Border collie obvladuje živino z ostrim pogledom, ki mu pravijo »oko«, in s plazečim se gibanjem."
       },
       "why": null,
       "source_id": "S3",
@@ -340,8 +340,8 @@
       "quote": "The stock is then controlled with an intense gaze known as “eye”, coupled with a stalking style of movement.",
       "game_rule_key": null,
       "sort": 17,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-018",
@@ -358,8 +358,8 @@
       "quote": "The Border Collie is an agile dog, able to suddenly change speed and direction while maintaining balance and grace.",
       "game_rule_key": null,
       "sort": 18,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-019",
@@ -376,8 +376,8 @@
       "quote": "Endurance is its trademark.",
       "game_rule_key": null,
       "sort": 19,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-020",
@@ -394,8 +394,8 @@
       "quote": "Ideal height at withers: Males: 53 cm (21 ins), Females: slightly less.",
       "game_rule_key": null,
       "sort": 20,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-021",
@@ -412,16 +412,16 @@
       "quote": "Hair: Two varieties: Moderately long or Smooth.",
       "game_rule_key": null,
       "sort": 21,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-022",
       "category": "body",
       "audience": "child",
       "title": {
-        "en": "Under the top coat, a Border Collie has a soft, thick undercoat that protects it from the weather.",
-        "sl": "Pod krovno dlako ima border collie mehko, gosto podlanko, ki ga varuje pred vremenom."
+        "en": "A Border Collie's dense top coat and soft, thick undercoat protect it well from the weather.",
+        "sl": "Gosta krovna dlaka in mehka, gosta podlanka border collieja ga dobro varujeta pred vremenom."
       },
       "why": null,
       "source_id": "S1",
@@ -430,8 +430,8 @@
       "quote": "In both, topcoat dense and medium textured, undercoat soft and dense giving good weather resistance.",
       "game_rule_key": null,
       "sort": 22,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-023",
@@ -448,8 +448,8 @@
       "quote": "Carried erect or semi-erect and sensitive in use.",
       "game_rule_key": null,
       "sort": 23,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-024",
@@ -466,8 +466,8 @@
       "quote": "Moderately long, the bone reaching at least to hock, set on low, well-furnished and with an upward swirl towards the end,",
       "game_rule_key": null,
       "sort": 24,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-025",
@@ -484,8 +484,8 @@
       "quote": "Puzzle feeders are great for Collies.",
       "game_rule_key": null,
       "sort": 25,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-026",
@@ -502,8 +502,8 @@
       "quote": "Border Collies are extremely loving with their families.",
       "game_rule_key": null,
       "sort": 26,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-027",
@@ -520,37 +520,37 @@
       "quote": "Brushing your Collie's fur a couple of times a week should help keep on top of the dead hairs",
       "game_rule_key": null,
       "sort": 27,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-028",
       "category": "health",
       "audience": "parent",
       "title": {
-        "en": "In a Dogs Trust study of UK dogs, Border Collies had a life expectancy of 13.1 years.",
-        "sl": "V raziskavi Dogs Trust o psih v Združenem kraljestvu je bila pričakovana življenjska doba border collieja 13,1 leta."
+        "en": "In a Dogs Trust study, Border Collies had a median life expectancy of 13.1 years.",
+        "sl": "V raziskavi Dogs Trust je bila mediana pričakovane življenjske dobe border collieja 13,1 leta."
       },
       "why": {
-        "en": "PetPrep uses this figure: your dog becomes a senior at 118 months.",
-        "sl": "PetPrep uporablja to številko: vaš pes postane starejši pri 118 mesecih."
+        "en": "Game rule: PetPrep applies the last-25% rule to this figure, so your dog becomes a senior at 118 months.",
+        "sl": "Pravilo igre: PetPrep na to številko uporabi pravilo zadnjih 25 %, zato vaš pes postane starejši pri 118 mesecih."
       },
       "source_id": "S15",
       "source_name": "Dogs Trust",
       "source_url": "https://www.dogstrust.org.uk/about-us/research-expertise/longevity-dog-breeds",
-      "quote": "dogs with typical shaped faces e.g., Border Collie (13.1 years)",
+      "quote": "Across all purebred dogs, median life expectancy was 12.7 years. … dogs with typical shaped faces e.g., Border Collie (13.1 years)",
       "game_rule_key": "life_stage_senior",
       "sort": 28,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-029",
       "category": "body",
       "audience": "parent",
       "title": {
-        "en": "Vets define a dog's senior stage as the last 25% of its estimated lifespan.",
-        "sl": "Veterinarji kot starost psa opredelijo zadnjih 25 % njegove pričakovane življenjske dobe."
+        "en": "AAHA guidelines define a dog's senior stage as the last 25% of its estimated lifespan.",
+        "sl": "Smernice AAHA obdobje starejšega psa opredelijo kot zadnjih 25 % njegove pričakovane življenjske dobe."
       },
       "why": {
         "en": "That's how the game sets the senior stage for each breed.",
@@ -562,8 +562,8 @@
       "quote": "From the last 25% of estimated lifespan through end-of-life.",
       "game_rule_key": "life_stage_senior",
       "sort": 29,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-030",
@@ -580,8 +580,8 @@
       "quote": "While they might not be the best dogs for first time owners",
       "game_rule_key": null,
       "sort": 30,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-031",
@@ -598,8 +598,8 @@
       "quote": "We wouldn't recommend a Collie if you have smaller children",
       "game_rule_key": null,
       "sort": 31,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-032",
@@ -616,8 +616,8 @@
       "quote": "Border Collies can be a great fit for families with older children",
       "game_rule_key": null,
       "sort": 32,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-033",
@@ -634,8 +634,8 @@
       "quote": "Like many dogs, Collies don't do well on their own.",
       "game_rule_key": null,
       "sort": 33,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-034",
@@ -652,8 +652,8 @@
       "quote": "However, you might find they try to herd them to it’s important to supervise your Collie with other pets.",
       "game_rule_key": null,
       "sort": 34,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-035",
@@ -670,8 +670,8 @@
       "quote": "This can sometimes lead to trying to herd or chase cars, other dogs, cyclists, joggers or children.",
       "game_rule_key": null,
       "sort": 35,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-036",
@@ -691,8 +691,8 @@
       "quote": "Without enough physical and mental stimulation, Border Collies can become frustrated and start chasing or herding.",
       "game_rule_key": "daily_steps",
       "sort": 36,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-037",
@@ -709,16 +709,16 @@
       "quote": "Prospective owners should expect to brush their Border Collie daily during shedding season.",
       "game_rule_key": null,
       "sort": 37,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-038",
       "category": "temperament",
       "audience": "parent",
       "title": {
-        "en": "A large genetics study found that breed explains just 9% of behaviour differences between individual dogs.",
-        "sl": "Velika genetska raziskava je pokazala, da pasma pojasni le 9 % razlik v vedenju med posameznimi psi."
+        "en": "A genetics study found that breed explains just 9% of behaviour differences between individual dogs.",
+        "sl": "Genetska raziskava je pokazala, da pasma pojasni le 9 % razlik v vedenju med posameznimi psi."
       },
       "why": {
         "en": "Every dog is an individual: the breed is only part of the story.",
@@ -730,8 +730,8 @@
       "quote": "Breed explains just 9% of behavioral variation in individuals.",
       "game_rule_key": null,
       "sort": 38,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-039",
@@ -748,8 +748,8 @@
       "quote": "It's important to start positive, reward-based training from an early age",
       "game_rule_key": null,
       "sort": 39,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-040",
@@ -766,8 +766,8 @@
       "quote": "Collie Eye Anomaly is an inherited eye condition that can range from mild changes in vision to significant sight loss.",
       "game_rule_key": null,
       "sort": 40,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-041",
@@ -784,8 +784,8 @@
       "quote": "Epilepsy is seen more commonly in Border Collies and can cause seizures.",
       "game_rule_key": null,
       "sort": 41,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "border_collie-042",
@@ -802,8 +802,8 @@
       "quote": "Border Collies can develop conditions such as hip dysplasia, which can cause pain and mobility problems.",
       "game_rule_key": null,
       "sort": 42,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     }
   ]
 }

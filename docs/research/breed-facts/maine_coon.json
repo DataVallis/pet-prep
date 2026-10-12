@@ -19,8 +19,8 @@
       "quote": "breeders recommend combing your Maine Coon two or three times a week.",
       "game_rule_key": "grooming_per_week",
       "sort": 1,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-002",
@@ -31,8 +31,8 @@
         "sl": "Redno česanje ohranja dlako Maine Coona lepo in preprečuje vozle."
       },
       "why": {
-        "en": "If you miss combing, your cat gets a knot in its fur.",
-        "sl": "Če česanje zamudiš, ima tvoja muca vozel v dlaki."
+        "en": "If you miss combing too often, your cat gets a knot in its fur.",
+        "sl": "Če česanje prepogosto zamudiš, ima tvoja muca vozel v dlaki."
       },
       "source_id": "C52",
       "source_name": "GCCF",
@@ -40,8 +40,8 @@
       "quote": "they will require regular grooming to keep the coat in good condition and prevent knots and mats.",
       "game_rule_key": "coat_knot",
       "sort": 2,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-003",
@@ -52,8 +52,8 @@
         "sl": "Muca potrebuje na dan dve ali tri igre, vsaka traja od 10 do 15 minut."
       },
       "why": {
-        "en": "That's why you play with the feather wand twice a day.",
-        "sl": "Zato se s palico s peresom igraš dvakrat na dan."
+        "en": "That's why your grown-up cat gets two feather-wand games a day.",
+        "sl": "Zato ima tvoja odrasla muca na dan dve igri s palico s peresom."
       },
       "source_id": "C10",
       "source_name": "PetMD",
@@ -61,8 +61,8 @@
       "quote": "In general, you should play with your cat for two or three 10- to 15-minute play sessions a day",
       "game_rule_key": "wand_play",
       "sort": 3,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-004",
@@ -82,8 +82,8 @@
       "quote": "Compared to adult cats, kittens have boundless energy and require more frequent and intense play sessions.",
       "game_rule_key": "wand_play",
       "sort": 4,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-005",
@@ -103,8 +103,8 @@
       "quote": "They much prefer the fishing rod toy moving away from the cat, similar to how prey would move.",
       "game_rule_key": "wand_away",
       "sort": 5,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-006",
@@ -124,8 +124,8 @@
       "quote": "Cats are far-sighted, meaning they can't see well under 25 centimetres.",
       "game_rule_key": "wand_away",
       "sort": 6,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-007",
@@ -145,8 +145,8 @@
       "quote": "simulated hunting and foraging opportunities, play, safe territory with vertical space",
       "game_rule_key": "wand_play",
       "sort": 7,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-008",
@@ -166,8 +166,8 @@
       "quote": "Healthy adult cats poo once or twice a day. … Healthy adult cats pee two to four times a day.",
       "game_rule_key": "litter_use",
       "sort": 8,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-009",
@@ -187,8 +187,8 @@
       "quote": "You should remove any poo and pee from their litter tray at least twice a day.",
       "game_rule_key": "litter_scoop",
       "sort": 9,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-010",
@@ -208,8 +208,8 @@
       "quote": "You should clean out the litter tray completely at least once a week.",
       "game_rule_key": "litter_change",
       "sort": 10,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-011",
@@ -220,8 +220,8 @@
         "sl": "Do šestega meseca je za mucke običajno najbolje, da dobijo tri obroke na dan."
       },
       "why": {
-        "en": "That's why your kitten has three meal times a day.",
-        "sl": "Zato ima tvoj mucek tri obroke na dan."
+        "en": "That's why your kitten has three meal times a day until 6 months.",
+        "sl": "Zato ima tvoj mucek do 6. meseca tri obroke na dan."
       },
       "source_id": "C2",
       "source_name": "Cornell Feline Health Center",
@@ -229,16 +229,16 @@
       "quote": "Until they are six months old, kittens will usually do best when fed three meals a day.",
       "game_rule_key": "feed_windows",
       "sort": 11,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-012",
       "category": "body",
       "audience": "child",
       "title": {
-        "en": "Vets call a cat a kitten from birth until it is 1 year old.",
-        "sl": "Veterinarji mački pravijo mucek od rojstva do 1. leta starosti."
+        "en": "Vet guidelines call a cat a kitten from birth up to 1 year old.",
+        "sl": "Veterinarske smernice mački pravijo mucek od rojstva do 1. leta starosti."
       },
       "why": {
         "en": "In the game, your kitten becomes a young cat at 12 months.",
@@ -250,8 +250,8 @@
       "quote": "kitten, from birth up to 1 year old",
       "game_rule_key": "life_stage",
       "sort": 12,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-013",
@@ -263,7 +263,7 @@
       },
       "why": {
         "en": "That's why your young Maine Coon still looks like it is growing.",
-        "sl": "Zato tvoja mlada muca Maine Coon še vedno raste."
+        "sl": "Zato je tvoja mlada muca Maine Coon še vedno videti, kot da raste."
       },
       "source_id": "C51",
       "source_name": "The Cat Fanciers' Association (CFA)",
@@ -271,8 +271,8 @@
       "quote": "This is a slow-maturing breed that can take up to three years to reach full growth.",
       "game_rule_key": "growth_appearance",
       "sort": 13,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-014",
@@ -292,8 +292,8 @@
       "quote": "Provide your cat with a sturdy scratching post, at least three feet high.",
       "game_rule_key": "scratching_post",
       "sort": 14,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-015",
@@ -313,8 +313,8 @@
       "quote": "Maine Coon cats are affectionate and tactile pets – always up for a cuddle",
       "game_rule_key": "cuddle",
       "sort": 15,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-016",
@@ -331,8 +331,8 @@
       "quote": "it was named the official cat of the state of Maine, where it originated",
       "game_rule_key": null,
       "sort": 16,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-017",
@@ -349,8 +349,8 @@
       "quote": "traces its origin to the working cat … found on the farms of Northeast America.",
       "game_rule_key": null,
       "sort": 17,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-018",
@@ -367,8 +367,8 @@
       "quote": "the largest of all pedigreed cats",
       "game_rule_key": null,
       "sort": 18,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-019",
@@ -385,8 +385,8 @@
       "quote": "Lynx-tufts are desirable. Tufts of hair in the ears extend beyond outer edges of ears.",
       "game_rule_key": null,
       "sort": 19,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-020",
@@ -403,8 +403,8 @@
       "quote": "Large, round and well tufted between the toes",
       "game_rule_key": null,
       "sort": 20,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-021",
@@ -421,8 +421,8 @@
       "quote": "At least as long as the body from shoulder-blade to base of tail.",
       "game_rule_key": null,
       "sort": 21,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-022",
@@ -439,8 +439,8 @@
       "quote": "Short on head, shoulders and legs, becoming gradually longer down the back and sides",
       "game_rule_key": null,
       "sort": 22,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-023",
@@ -448,7 +448,7 @@
       "audience": "child",
       "title": {
         "en": "A Maine Coon's heavy coat is built-in protection from the cold.",
-        "sl": "Gost kožuh Maine Coona jo varuje pred mrazom."
+        "sl": "Težek kožuh Maine Coona je vgrajena zaščita pred mrazom."
       },
       "why": null,
       "source_id": "C51",
@@ -457,8 +457,8 @@
       "quote": "These cats have heavy, flowing coats for built-in protection from the cold",
       "game_rule_key": null,
       "sort": 23,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-024",
@@ -475,8 +475,8 @@
       "quote": "Their daily conversation may include chirps, trills, and purrs as well as an occasional meow",
       "game_rule_key": null,
       "sort": 24,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-025",
@@ -493,8 +493,8 @@
       "quote": "Fond of water, many will watch a dripping faucet in fascination",
       "game_rule_key": null,
       "sort": 25,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-026",
@@ -511,8 +511,8 @@
       "quote": "they are said to be very intelligent and can be taught to fetch, walk on leads and open doors.",
       "game_rule_key": null,
       "sort": 26,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-027",
@@ -529,8 +529,8 @@
       "quote": "Retaining their playful ways throughout their life, a Maine Coon is an affectionate and fun companion.",
       "game_rule_key": null,
       "sort": 27,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-028",
@@ -550,8 +550,8 @@
       "quote": "Pedigree kittens are usually rehomed over 12-13 weeks old",
       "game_rule_key": "arrival_age",
       "sort": 28,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-029",
@@ -571,8 +571,8 @@
       "quote": "Once the cat becomes an adult, at about one year of age, feeding once or twice a day is appropriate in most cases.",
       "game_rule_key": "feed_windows",
       "sort": 29,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-030",
@@ -592,8 +592,8 @@
       "quote": "Please keep your cat indoors. Outdoor cats do not live as long as indoor cats.",
       "game_rule_key": "indoor_cat",
       "sort": 30,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-031",
@@ -604,8 +604,8 @@
         "sl": "PDSA svetuje vsakodnevno nego dlake Maine Coona, da je manj vozlov in zapletov."
       },
       "why": {
-        "en": "Sources range from daily to weekly; PetPrep uses 3 times a week.",
-        "sl": "Viri svetujejo od vsak dan do enkrat na teden; PetPrep uporablja 3-krat na teden."
+        "en": "Game rule: PetPrep uses 3 combing sessions a week.",
+        "sl": "Pravilo igre: PetPrep uporablja 3 česanja na teden."
       },
       "source_id": "C53",
       "source_name": "PDSA",
@@ -613,8 +613,8 @@
       "quote": "The Maine Coon coat needs daily attention to reduce the chance of knots and tangles.",
       "game_rule_key": "grooming_per_week",
       "sort": 31,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-032",
@@ -631,8 +631,8 @@
       "quote": "They can shed quite heavily in the Spring, when extra care will have to be taken to ensure any old, dead coat is removed.",
       "game_rule_key": null,
       "sort": 32,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-033",
@@ -649,8 +649,8 @@
       "quote": "They get along well with children and other animals",
       "game_rule_key": null,
       "sort": 33,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-034",
@@ -667,8 +667,8 @@
       "quote": "Fairly independent, Maine Coon Cats need a moderate amount of human interaction",
       "game_rule_key": null,
       "sort": 34,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-035",
@@ -685,8 +685,8 @@
       "quote": "They are high energy, and because of their large size need plenty of room to play",
       "game_rule_key": null,
       "sort": 35,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-036",
@@ -703,8 +703,8 @@
       "quote": "Average weight | 7kg",
       "game_rule_key": null,
       "sort": 36,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-037",
@@ -721,8 +721,8 @@
       "quote": "1 MCO 23.775 24,7%",
       "game_rule_key": null,
       "sort": 37,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-038",
@@ -733,17 +733,17 @@
         "sl": "Leta 1959 je ameriško združenje CFA Maine Coon razglasilo za izumrlo pasmo."
       },
       "why": {
-        "en": "The breed survived: today it is one of the most popular.",
-        "sl": "Pasma je preživela in je danes med najbolj priljubljenimi."
+        "en": "The breed survived: it is one of the world's most popular breeds.",
+        "sl": "Pasma je preživela: je ena najbolj priljubljenih pasem na svetu."
       },
       "source_id": "C52",
       "source_name": "GCCF",
       "source_url": "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/maine-coon/",
-      "quote": "in 1959 the Maine Coon was declared extinct by CFA.",
+      "quote": "in 1959 the Maine Coon was declared extinct by CFA. … the Maine Coon is the one of the world’s most popular breeds",
       "game_rule_key": null,
       "sort": 38,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-039",
@@ -760,8 +760,8 @@
       "quote": "Average lifespan | 12-15 years",
       "game_rule_key": null,
       "sort": 39,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-040",
@@ -771,26 +771,23 @@
         "en": "There is a DNA test for HCM, a heart condition, in Maine Coons.",
         "sl": "Za HCM, bolezen srca, obstaja pri Maine Coonu test DNK."
       },
-      "why": {
-        "en": "Ask the breeder about the parents' test results.",
-        "sl": "Vzreditelja vprašajte za rezultate testov staršev."
-      },
+      "why": null,
       "source_id": "C52",
       "source_name": "GCCF",
       "source_url": "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/maine-coon/",
       "quote": "Hypertrophic Cardiomyopathy (HCM) … There is a DNA test for HCM in Maine Coon cats",
       "game_rule_key": null,
       "sort": 40,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-041",
       "category": "health",
       "audience": "parent",
       "title": {
-        "en": "In the UK, the GCCF requires DNA tests for MC HCM, SMA and PKdef for its breeding register.",
-        "sl": "V Združenem kraljestvu GCCF za vpis v register za vzrejo zahteva teste DNK za MC HCM, SMA in PKdef."
+        "en": "From 1 January 2024, the GCCF requires DNA tests for MC HCM, SMA and PKdef for its Active Register.",
+        "sl": "GCCF od 1. 1. 2024 za vpis v register Active Register zahteva teste DNK za MC HCM, SMA in PKdef."
       },
       "why": null,
       "source_id": "K18",
@@ -799,8 +796,8 @@
       "quote": "DNA testing for MC HCM, SMA, PKdef will be require for registration on the Active Register from 1.1.24.",
       "game_rule_key": null,
       "sort": 41,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-042",
@@ -817,8 +814,8 @@
       "quote": "there is no simple gene test for this condition. … breeding cats can be X-rayed to assess the conformation of the hip joints",
       "game_rule_key": null,
       "sort": 42,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     },
     {
       "key": "maine_coon-043",
@@ -835,8 +832,8 @@
       "quote": "We’d recommend discussing the medical history of your potential kitten’s parents and grandparents",
       "game_rule_key": null,
       "sort": 43,
-      "status": "draft",
-      "verified_by": null
+      "status": "verified",
+      "verified_by": "claude-verifier"
     }
   ]
 }
