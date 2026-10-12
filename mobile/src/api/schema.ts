@@ -1412,7 +1412,7 @@ export interface components {
              */
             suitability: {
                 suits: ("active_family" | "family_pet" | "children" | "small_children" | "first_time_owner" | "apartment" | "large_home" | "other_pets" | "older_owners" | "often_alone" | "low_shedding")[];
-                consider: ("long_daily_exercise" | "needs_mental_stimulation" | "may_herd_children" | "chews_when_bored" | "sheds" | "food_motivated_weight" | "frequent_grooming" | "brachycephalic_breathing" | "hips_hind_legs" | "heart_and_spine" | "back_spine" | "sensitive_skin" | "shorter_lifespan" | "secure_fencing" | "experienced_owner" | "fragile_older_children" | "not_for_small_children" | "drools")[];
+                consider: ("long_daily_exercise" | "needs_mental_stimulation" | "may_herd_children" | "chews_when_bored" | "sheds" | "food_motivated_weight" | "frequent_grooming" | "brachycephalic_breathing" | "hips_hind_legs" | "heart_and_spine" | "back_spine" | "sensitive_skin" | "shorter_lifespan" | "secure_fencing" | "experienced_owner" | "fragile_older_children" | "not_for_small_children" | "drools" | "chases_small_pets")[];
             };
         };
         /**

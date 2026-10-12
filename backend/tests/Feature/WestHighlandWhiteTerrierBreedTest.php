@@ -380,7 +380,7 @@ describe('GET /api/breeds', function () {
                 'search_keywords' => BreedConfigsSeeder::configs()[12]['search_keywords'], 'sort_order' => 120,
                 'suitability' => [
                     'suits' => ['apartment', 'family_pet', 'children'],
-                    'consider' => ['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored'],
+                    'consider' => ['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored', 'chases_small_pets'],
                 ],
             ]);
     });

@@ -26,6 +26,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-12 — Nova oznaka: močan lovski nagon (M5-R10)
+
+**Kaj se je zgodilo:** David je potrdil novo oznako v izbirniku pasem: **»močan lovski nagon — lahko lovi manjše živali«** (EN »strong prey drive — may chase small pets«). Dobi jo samo pet pasem, pri katerih vir (PDSA) dobesedno piše o močnem lovskem nagonu: francoski buldog, jazbečar, zahodnoškotski beli terier, sibirski haski in doberman. Ob tem je David zaključil odprta vprašanja pri dobermanu: meja starejšega psa ostane 83 mesecev (dokler ni dostopna študija McMillan 2024), slovensko ime »doberman« je pravo, v igri samo barve standarda FCI, posebnih omejitev za marketing ni.
+
+**Zakaj je pomembno:** Družine, ki doma že imajo zajca, morskega prašička ali mačko, morajo to vedeti pred izbiro psa. Oznaka je mirna in brez številk, in jo dobi le pasma z izrecnim citatom — pri biglu, bernskem planšarskem psu, rotvajlerju, kavalirju in nemškem ovčarju viri le svetujejo nadzor, zato je nimajo.
+
+**Številke:** 1 nova oznaka, 5 pasem, 0 novih virov (vsi citati so že bili v raziskavi: S81, S127, S147, S162, S211). Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Imate doma manjšo žival? PetPrep pri vsaki pasmi z virom pove, ali ima močan lovski nagon.«
+- 🤝 Partnerji (zavetišča): »Pes z močnim lovskim nagonom in zajec v istem domu — PetPrep na to opozori že ob izbiri pasme.«
+- 🛠 Tehnično: »Nov ključ `chases_small_pets` v zaprtem besednjaku oznak; test preveri, da ga ima natanko pet pasem in da vsak sklic kaže na citat z besedami ›high prey drive‹.«
+
+---
+
 ## 2026-10-12 — Po obroku počitek, potem sprehod (M5-R16)
 
 **Kaj se je zgodilo:** David je odločil »1 ura, samo opozorilo«. Ko otrok nahrani cane corsa ali dobermana, aplikacija 60 minut nad gumbi in na zaslonu sprehoda pokaže mirno opozorilo: »Počakaj s sprehodom. Kuža prebavlja. Velik pes naj po obroku počiva približno eno uro. Na sprehod lahko greš ob 12:40.« Koraki se štejejo naprej, ni kazni in ni točk.

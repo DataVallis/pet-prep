@@ -165,7 +165,7 @@ describe('readBreedCatalogue', () => {
     );
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (David 2026-10-10).
     expect(frenchie?.search_keywords).toEqual(['french bulldog', 'frenchie', 'french', 'bulldog', 'francoski buldog', 'buldog']);
-    expect(frenchie?.suitability).toEqual({ suits: ['apartment', 'family_pet', 'children'], consider: ['brachycephalic_breathing'] });
+    expect(frenchie?.suitability).toEqual({ suits: ['apartment', 'family_pet', 'children'], consider: ['brachycephalic_breathing', 'chases_small_pets'] });
     const shepherd = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'german_shepherd');
     expect(shepherd).toEqual(
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 50 }),
@@ -203,7 +203,7 @@ describe('readBreedCatalogue', () => {
     );
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-08, runbook rules; back_spine = welfare rule).
     expect(dachshund?.search_keywords).toEqual(['dachshund', 'sausage dog', 'teckel', 'jazbečar', 'jazbecar']);
-    expect(dachshund?.suitability).toEqual({ suits: ['children'], consider: ['back_spine', 'sheds', 'needs_mental_stimulation'] });
+    expect(dachshund?.suitability).toEqual({ suits: ['children'], consider: ['back_spine', 'sheds', 'needs_mental_stimulation', 'chases_small_pets'] });
     const aussie = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'australian_shepherd');
     expect(aussie).toEqual(
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 100 }),
@@ -229,7 +229,7 @@ describe('readBreedCatalogue', () => {
     expect(westie?.search_keywords).toEqual(['west highland white terrier', 'westie', 'westy', 'zahodnoškotski beli terier', 'zahodnoskotski beli terier', 'west highland terier', 'vestie']);
     expect(westie?.suitability).toEqual({
       suits: ['apartment', 'family_pet', 'children'],
-      consider: ['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored'],
+      consider: ['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored', 'chases_small_pets'],
     });
     const berner = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'bernese_mountain_dog');
     expect(berner).toEqual(
@@ -249,7 +249,7 @@ describe('readBreedCatalogue', () => {
     expect(husky?.search_keywords).toEqual(['siberian husky', 'husky', 'huskie', 'sibirski haski', 'haski', 'sibirski husky', 'sibirec']);
     expect(husky?.suitability).toEqual({
       suits: ['active_family', 'large_home'],
-      consider: ['long_daily_exercise', 'secure_fencing', 'chews_when_bored', 'sheds', 'frequent_grooming'],
+      consider: ['long_daily_exercise', 'secure_fencing', 'chews_when_bored', 'sheds', 'frequent_grooming', 'chases_small_pets'],
     });
     const rottweiler = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'rottweiler');
     expect(rottweiler).toEqual(
@@ -309,7 +309,7 @@ describe('readBreedCatalogue', () => {
     expect(dobermann?.search_keywords).toEqual(['dobermann', 'doberman', 'doberman pinscher', 'dobie', 'dobermann pinscher']);
     expect(dobermann?.suitability).toEqual({
       suits: ['active_family', 'family_pet', 'large_home'],
-      consider: ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds'],
+      consider: ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds', 'chases_small_pets'],
     });
     const corgi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pembroke_welsh_corgi');
     expect(corgi).toEqual(
@@ -394,7 +394,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(18);
+    expect(CONSIDER_TAGS).toHaveLength(19);
+    // David 2026-10-12: strong prey drive — may chase small pets (only breeds with a sourced prey-drive quote); no numbers.
+    expect(CONSIDER_TAGS).toContain('chases_small_pets');
     // M5-R10-23 (runbook new-tag rule): large dog — not for homes with small children; drools; no numbers.
     expect(CONSIDER_TAGS).toContain('not_for_small_children');
     expect(CONSIDER_TAGS).toContain('drools');

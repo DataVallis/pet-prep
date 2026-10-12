@@ -375,7 +375,7 @@ describe('GET /api/breeds', function () {
                 'search_keywords' => BreedConfigsSeeder::configs()[9]['search_keywords'], 'sort_order' => 90,
                 'suitability' => [
                     'suits' => ['children'],
-                    'consider' => ['back_spine', 'sheds', 'needs_mental_stimulation'],
+                    'consider' => ['back_spine', 'sheds', 'needs_mental_stimulation', 'chases_small_pets'],
                 ],
             ]);
     });

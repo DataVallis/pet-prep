@@ -78,7 +78,7 @@ class BreedCatalogResource extends JsonResource
              * The app translates each key (`breedSuitability.<tag>`). Empty
              * lists = no sourced tags yet (mutt, cats). Never "hypoallergenic".
              *
-             * @var array{suits: list<'active_family'|'family_pet'|'children'|'small_children'|'first_time_owner'|'apartment'|'large_home'|'other_pets'|'older_owners'|'often_alone'|'low_shedding'>, consider: list<'long_daily_exercise'|'needs_mental_stimulation'|'may_herd_children'|'chews_when_bored'|'sheds'|'food_motivated_weight'|'frequent_grooming'|'brachycephalic_breathing'|'hips_hind_legs'|'heart_and_spine'|'back_spine'|'sensitive_skin'|'shorter_lifespan'|'secure_fencing'|'experienced_owner'|'fragile_older_children'|'not_for_small_children'|'drools'>}
+             * @var array{suits: list<'active_family'|'family_pet'|'children'|'small_children'|'first_time_owner'|'apartment'|'large_home'|'other_pets'|'older_owners'|'often_alone'|'low_shedding'>, consider: list<'long_daily_exercise'|'needs_mental_stimulation'|'may_herd_children'|'chews_when_bored'|'sheds'|'food_motivated_weight'|'frequent_grooming'|'brachycephalic_breathing'|'hips_hind_legs'|'heart_and_spine'|'back_spine'|'sensitive_skin'|'shorter_lifespan'|'secure_fencing'|'experienced_owner'|'fragile_older_children'|'not_for_small_children'|'drools'|'chases_small_pets'>}
              */
             'suitability' => $entry['suitability'],
         ];
