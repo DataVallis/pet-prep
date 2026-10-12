@@ -66,7 +66,8 @@
     "waitingTitle": "Izziv je končan!",
     "waitingBody": "Starš ti bo pripravil certifikat.",
     "finishedTitle": "Izziv je končan",
-    "finishedBody": "Bravo, da si vztrajal(a)! Hvala, da si skrbel(a) za svojega ljubljenčka.",
+    "finishedBody": "Izziv je končan. Hvala za vso skrb za tvojega ljubljenčka!",
+    "lockedFinished": "Tvoj 12-tedenski izziv je končan. Hvala za vso skrb za tvojega ljubljenčka.",
     "close": "Zapri"
   },
   "date": "{{day}}. {{month}} {{year}}"

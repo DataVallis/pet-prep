@@ -137,7 +137,7 @@ describe('ChildCertificateSheet', () => {
     renderWithQuery(<ChildCertificateSheet visible certificate={readChildCertificate(REPORT)} onClose={jest.fn()} />);
     expect(screen.getByTestId('hud-certificate-finished')).toBeTruthy();
     expect(screen.getByText('Izziv je končan')).toBeTruthy();
-    expect(screen.getByText(/Bravo, da si vztrajal\(a\)!/)).toBeTruthy();
+    expect(screen.getByText(/Hvala za vso skrb za tvojega ljubljenčka!/)).toBeTruthy();
     expect(screen.queryByTestId('hud-certificate-score')).toBeNull();
     expect(screen.queryByTestId('hud-certificate-open-pdf')).toBeNull();
     expect(screen.queryByText(/Care Score/)).toBeNull();

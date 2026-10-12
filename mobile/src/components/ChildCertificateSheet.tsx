@@ -6,7 +6,7 @@
  *    "Radovednež" mark, "12-tedenski PetPrep izziv", "Certifikat odgovornosti", the name,
  *    Care Score / pet / completion date, the number) + "Odpri PDF" (system viewer);
  *  - not generated yet → "Izziv je končan! Starš ti bo pripravil certifikat.";
- *  - report → a kind "Izziv je končan. Bravo, da si vztrajal(a)!" — never a score or a
+ *  - report → a kind "Izziv je končan. Hvala za vso skrb …" — never a score or a
  *    reason (no shaming; the server sends neither).
  *
  * Child voice: "ti", short. The PDF URL is refreshed before opening (it expires).

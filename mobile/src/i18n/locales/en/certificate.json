@@ -66,7 +66,8 @@
     "waitingTitle": "Challenge complete!",
     "waitingBody": "Your parent will prepare your certificate.",
     "finishedTitle": "Challenge complete",
-    "finishedBody": "Well done for sticking with it! Thank you for caring for your pet.",
+    "finishedBody": "Challenge complete. Thank you for all the care you gave your pet!",
+    "lockedFinished": "Your 12-week challenge has ended. Thank you for all the care you gave your pet.",
     "close": "Close"
   },
   "date": "{{day}} {{month}} {{year}}"

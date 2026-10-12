@@ -38,6 +38,8 @@ export interface LockDetails {
   until: string | null;
   /** Family IANA timezone for showing `until`. */
   timezone: string | null;
+  /** M2-01d: this child's 12-week challenge has ended (a game-over pet shows a kind line). */
+  challengeFinished?: boolean;
 }
 
 /**

@@ -252,6 +252,7 @@ function useSessionSync(view: ChildPetView | undefined): void {
     setLockState(lockStateFromView(view), {
       until: view.lock.until ?? view.pet.illness_until,
       timezone: view.timezone,
+      challengeFinished: view.certificate !== null,
     });
     // For the lock overlay after a relaunch, before this state loads (hotfix 2026-10-06).
     rememberFamilyTimezone(view.timezone);

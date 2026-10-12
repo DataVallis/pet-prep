@@ -142,3 +142,25 @@ describe('LockedScreen (M1-16)', () => {
     expect(lockedCopy('illness', none).body).toBe(LOCKED_STRINGS.illness.bodyNoTime);
   });
 });
+
+describe('LockedScreen — challenge finished (M2-01d)', () => {
+  afterEach(() => {
+    useAppStore.setState({ lockState: 'none', lockDetails: { until: null, timezone: null } });
+  });
+
+  it('game over after the challenge ended shows the kind "challenge finished" line', () => {
+    useAppStore.setState({ lockState: 'game_over', lockDetails: { until: null, timezone: null, challengeFinished: true } });
+    render(<LockedScreen />);
+    expect(screen.getByTestId('locked-challenge-finished')).toBeTruthy();
+  });
+
+  it('no line without a finished challenge or on another lock', () => {
+    useAppStore.setState({ lockState: 'game_over', lockDetails: { until: null, timezone: null } });
+    const { unmount } = render(<LockedScreen />);
+    expect(screen.queryByTestId('locked-challenge-finished')).toBeNull();
+    unmount();
+    useAppStore.setState({ lockState: 'hard_stop', lockDetails: { until: null, timezone: null, challengeFinished: true } });
+    render(<LockedScreen />);
+    expect(screen.queryByTestId('locked-challenge-finished')).toBeNull();
+  });
+});
