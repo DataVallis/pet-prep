@@ -101,18 +101,27 @@ function megIso(string $local): string
 }
 
 describe('seeded value', function () {
-    it('seeds 60 minutes for the Cane Corso and the Dobermann only, each citing its PDSA quote from data.json', function () {
+    it('seeds 60 minutes for every breed with a verbatim source quote (Cane Corso, Dobermann), each citing data.json', function () {
         $rows = collect(BreedStageParamsSeeder::rows())->where('key', StageParamKey::MealExerciseGapMinutes->value);
+        $breeds = array_keys(BreedStageParamsSeeder::MEAL_EXERCISE_GAP);
 
-        expect($rows->pluck('breed_slug')->sort()->values()->all())->toBe(['cane-corso', 'dobermann']);
-        foreach (['cane-corso' => ['cane_corso', 'S199'], 'dobermann' => ['dobermann', 'S211']] as $slug => [$key, $source]) {
-            $row = $rows->firstWhere('breed_slug', $slug);
+        // Both ways: a data.json gap with a value ⇔ a seeded row (a later breed run adds both).
+        $inData = collect(megData('proposed_game_parameters'))
+            ->filter(fn ($p) => is_array($p) && ($p['meal_exercise_gap']['value'] ?? null) !== null)->keys()->sort()->values()->all();
+        expect($inData)->toBe(collect($breeds)->sort()->values()->all())
+            ->and($breeds)->toContain('cane_corso', 'dobermann')
+            ->and($rows->pluck('breed_slug')->sort()->values()->all())
+            ->toBe(collect($breeds)->map(fn (string $b) => BreedType::from($b)->slug())->sort()->values()->all());
+        expect(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['cane_corso'][0])->toBe('S199')
+            ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['dobermann'][0])->toBe('S211');
+
+        foreach ($breeds as $key) {
+            $row = $rows->firstWhere('breed_slug', BreedType::from($key)->slug());
             $entry = megData("proposed_game_parameters.{$key}.meal_exercise_gap");
             expect($row['stage'])->toBe('all')
                 ->and($row['value'])->toBe(60)
                 ->and($row['value'])->toBe($entry['value'])
                 ->and($row['verified'])->toBeTrue()
-                ->and($row['source_id'])->toBe($source)
                 ->and($row['source_id'])->toBe($entry['source_id'])
                 ->and($row['quote'])->toBe($entry['quote'])
                 ->and($row['ref'])->toBe("proposed_game_parameters.{$key}.meal_exercise_gap")
@@ -127,8 +136,10 @@ describe('seeded value', function () {
     it('lands in breed_stage_params (insert-only) and validates its shape', function () {
         seedLifeStageData();
 
-        expect(BreedStageParam::where('key', StageParamKey::MealExerciseGapMinutes->value)->orderBy('breed_slug')->pluck('value', 'breed_slug')->all())
-            ->toBe(['cane-corso' => 60, 'dobermann' => 60])
+        $seeded = BreedStageParam::where('key', StageParamKey::MealExerciseGapMinutes->value)->pluck('value', 'breed_slug')->all();
+        expect($seeded)->toHaveKeys(['cane-corso', 'dobermann'])
+            ->and(array_unique(array_values($seeded)))->toBe([60])
+            ->and(count($seeded))->toBe(count(BreedStageParamsSeeder::MEAL_EXERCISE_GAP))
             ->and(StageParamKey::MealExerciseGapMinutes->isBreedLevel())->toBeTrue()
             ->and(StageParamKey::MealExerciseGapMinutes->validate(0))->not->toBeNull()
             ->and(StageParamKey::MealExerciseGapMinutes->validate(241))->not->toBeNull()
