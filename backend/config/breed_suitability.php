@@ -124,6 +124,19 @@ return [
         // verbatim prey-drive statement — a supervision advice alone (Beagle, Bernese,
         // Rottweiler, Cavalier, German Shepherd) is not enough. A calm chip, never a number.
         'chases_small_pets' => 'consider',
+        // M5-R10-26 (runbook "new tag" rule, 2026-10-12): loves company — can develop separation
+        // anxiety and is best with someone at home most of the day (Boxer: PDSA S219 "Boxers love
+        // human company so can develop separation anxiety if left alone.", "It's best to have a Boxer
+        // if someone is going to be around the house with them all day."). A sourced, important
+        // trait no other key covers (`often_alone` is only ever a `suits` tag); a calm chip, never
+        // a number.
+        'needs_company' => 'consider',
+        // M5-R10-26 (runbook welfare rule, "a new one per the row above", 2026-10-12): a moderately
+        // short-faced breed whose muzzle / nostrils are a welfare point of concern — breathing problems in
+        // dogs with shorter faces (Boxer: VetCompass S220 "a moderately brachycephalic skull shape", RKC
+        // Breed Watch S216 "Excessively short muzzle", PDSA S219 BOAS "in some Boxers with shorter faces").
+        // Not `brachycephalic_breathing` (flat face, heat). A calm chip, never a percentage.
+        'short_muzzle_breathing' => 'consider',
     ],
 
     'breeds' => [
@@ -646,6 +659,44 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S209'], 'refs' => ['dobermann.suitability.rkc_shedding']],
                 // S211 "Dobermanns are known to have quite a high prey drive and will love any opportunity to chase smaller pets" (David 2026-10-12).
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S211'], 'refs' => ['dobermann.behaviour.other_pets', 'dobermann.suitability.pdsa_other_pets']],
+            ],
+        ],
+
+        // M5-R10-26: boxer.* (S213–S220), runbook rules (data.json
+        // proposed_game_parameters.boxer.suitability_tags). RKC (S215) + PDSA (S219) + welfare.
+        // `family_pet` from the RKC / PDSA sentences, but never `children` / `small_children`
+        // (PDSA S219 does not recommend the breed with younger children → `not_for_small_children`),
+        // not `first_time_owner` (→ `experienced_owner`), not `other_pets` (very high prey drive),
+        // not `often_alone` (→ new `needs_company`). Welfare breed (moderately brachycephalic,
+        // VetCompass S220; RKC Breed Watch Category 2 S216) → the new `short_muzzle_breathing`
+        // (not `brachycephalic_breathing`: that chip says "flat face … heat", and no Boxer source names heat).
+        'boxer' => [
+            'suits' => [
+                // S215 "Exercise: More than 2 hours per day"; S219 "a minimum of two hours exercise every day".
+                ['tag' => 'active_family', 'source_ids' => ['S215', 'S219'], 'refs' => ['boxer.exercise.adult', 'boxer.suitability.pdsa_exercise']],
+                // S215 "much loved as a family companion"; S219 "popular family pets".
+                ['tag' => 'family_pet', 'source_ids' => ['S215', 'S219'], 'refs' => ['boxer.suitability.rkc_family', 'boxer.suitability.pdsa_family']],
+                // S215 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S215'], 'refs' => ['boxer.suitability.rkc_size_of_home', 'boxer.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S215 "More than 2 hours per day"; S219 "a minimum of two hours exercise every day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S215', 'S219'], 'refs' => ['boxer.exercise.adult', 'boxer.suitability.pdsa_exercise']],
+                // Welfare rule (new key, not the flat-face chip): S219 BOAS "in some Boxers with shorter faces";
+                // S220 "a moderately brachycephalic skull shape"; S216 "Excessively short muzzle".
+                ['tag' => 'short_muzzle_breathing', 'source_ids' => ['S219', 'S220', 'S216'], 'refs' => ['boxer.health.brachycephaly_boas', 'boxer.health.skull_shape', 'boxer.health.breed_watch']],
+                // S219 "we wouldn't recommend a Boxer if you have younger children as they could accidentally knock them over."
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S219'], 'refs' => ['boxer.suitability.pdsa_children']],
+                // S219 "we wouldn't recommend a Boxer if you are a first time owner."
+                ['tag' => 'experienced_owner', 'source_ids' => ['S219'], 'refs' => ['boxer.behaviour.experienced_owner', 'boxer.suitability.pdsa_experienced_owner']],
+                // S219 "Boxers love human company so can develop separation anxiety if left alone."
+                ['tag' => 'needs_company', 'source_ids' => ['S219'], 'refs' => ['boxer.behaviour.time_alone', 'boxer.suitability.pdsa_time_alone']],
+                // S219 "If they are alone or bored, they like to chew".
+                ['tag' => 'chews_when_bored', 'source_ids' => ['S219'], 'refs' => ['boxer.behaviour.chewing', 'boxer.suitability.pdsa_chewing']],
+                // S215 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S215'], 'refs' => ['boxer.suitability.rkc_shedding']],
+                // S219 "Boxers do have a very high prey drive, so we wouldn't recommend keeping them with smaller pets."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S219'], 'refs' => ['boxer.behaviour.other_pets', 'boxer.suitability.pdsa_other_pets']],
             ],
         ],
     ],

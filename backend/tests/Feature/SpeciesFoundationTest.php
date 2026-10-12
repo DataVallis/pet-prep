@@ -505,10 +505,12 @@ describe('GET /api/breeds', function () {
             ->assertJsonPath('breeds.20.breed', 'pembroke_welsh_corgi')
             // M5-R10-25: the Dobermann (paid, sort_order 210).
             ->assertJsonPath('breeds.21.breed', 'dobermann')
-            ->assertJsonCount(22, 'breeds');
+            // M5-R10-26: the Boxer (paid, sort_order 220).
+            ->assertJsonPath('breeds.22.breed', 'boxer')
+            ->assertJsonCount(23, 'breeds');
 
         // Flag off: the cat feature alone changes nothing.
-        spCatalogue($parent, ['features' => ['species_cat']])->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(22, 'breeds');
+        spCatalogue($parent, ['features' => ['species_cat']])->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(23, 'breeds');
         spCatalogue($parent, ['species' => 'cat', 'features' => ['species_cat']])->assertOk()->assertJsonCount(0, 'breeds');
     });
 
@@ -516,11 +518,11 @@ describe('GET /api/breeds', function () {
         spCatsOn();
         $parent = User::factory()->parent()->create();
 
-        spCatalogue($parent)->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(22, 'breeds');
+        spCatalogue($parent)->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(23, 'breeds');
 
         $all = spCatalogue($parent, ['features' => ['species_cat', 'unknown_future']])->assertOk()
             ->assertJsonPath('species', ['dog', 'cat']);
-        expect(array_column($all->json('breeds'), 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal']);
+        expect(array_column($all->json('breeds'), 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal']);
 
         $cats = spCatalogue($parent, ['species' => 'cat', 'features' => ['species_cat']])->assertOk();
         expect(array_column($cats->json('breeds'), 'breed'))->toBe(['domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal'])
@@ -536,7 +538,7 @@ describe('GET /api/breeds', function () {
 
         $breeds = spCatalogue($parent, ['species' => 'dog'])->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann'])
+        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer'])
             ->and($breeds[0]['sort_order'])->toBe(50)
             ->and($breeds[1]['label_key'])->toBe('breeds.collie')
             ->and($breeds[1]['search_keywords'])->toBe(['bc']);

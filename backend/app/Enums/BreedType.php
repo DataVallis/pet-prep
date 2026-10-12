@@ -36,6 +36,7 @@ enum BreedType: string
     case CaneCorso = 'cane_corso';
     case PembrokeWelshCorgi = 'pembroke_welsh_corgi';
     case Dobermann = 'dobermann';
+    case Boxer = 'boxer';
     case DomesticCat = 'domestic_cat';
     case MaineCoon = 'maine_coon';
     case BritishShorthair = 'british_shorthair';
@@ -72,6 +73,7 @@ enum BreedType: string
             self::CaneCorso => 'cane-corso',
             self::PembrokeWelshCorgi => 'pembroke-welsh-corgi',
             self::Dobermann => 'dobermann',
+            self::Boxer => 'boxer',
             self::DomesticCat => 'domestic-cat',
             self::MaineCoon => 'maine-coon',
             self::BritishShorthair => 'british-shorthair',
@@ -96,7 +98,7 @@ enum BreedType: string
     public function species(): Species
     {
         return match ($this) {
-            self::Mutt, self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::Rottweiler, self::Bulldog, self::GermanShorthairedPointer, self::YorkshireTerrier, self::CaneCorso, self::PembrokeWelshCorgi, self::Dobermann => Species::Dog,
+            self::Mutt, self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::Rottweiler, self::Bulldog, self::GermanShorthairedPointer, self::YorkshireTerrier, self::CaneCorso, self::PembrokeWelshCorgi, self::Dobermann, self::Boxer => Species::Dog,
             self::DomesticCat, self::MaineCoon, self::BritishShorthair, self::Ragdoll, self::SiberianCat, self::NorwegianForestCat, self::Bengal => Species::Cat,
         };
     }
@@ -122,7 +124,7 @@ enum BreedType: string
     {
         return match ($this) {
             self::Mutt, self::DomesticCat => false,
-            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::Rottweiler, self::Bulldog, self::GermanShorthairedPointer, self::YorkshireTerrier, self::CaneCorso, self::PembrokeWelshCorgi, self::Dobermann, self::MaineCoon, self::BritishShorthair, self::Ragdoll, self::SiberianCat, self::NorwegianForestCat, self::Bengal => true,
+            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::Rottweiler, self::Bulldog, self::GermanShorthairedPointer, self::YorkshireTerrier, self::CaneCorso, self::PembrokeWelshCorgi, self::Dobermann, self::Boxer, self::MaineCoon, self::BritishShorthair, self::Ragdoll, self::SiberianCat, self::NorwegianForestCat, self::Bengal => true,
         };
     }
 

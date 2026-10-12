@@ -393,6 +393,7 @@ const SPECIES = [
       { id: 'cane_corso', availability: 'in_app', synonyms: { en: ['Cane Corso Italiano', 'Italian Cane Corso', 'Italian Corso Dog', 'Corso'], sl: ['italijanski cane corso', 'cane corso italiano', 'korzo', 'corso'] } },
       { id: 'pembroke_welsh_corgi', availability: 'in_app', synonyms: { en: ['Welsh Corgi (Pembroke)', 'Welsh Corgi Pembroke', 'Pembroke', 'Corgi'], sl: ['welsh corgi', 'pembroke', 'korgi', 'valižanski korgi'] } },
       { id: 'dobermann', availability: 'in_app', synonyms: { en: ['Doberman', 'Doberman Pinscher', 'Dobermann Pinscher'], sl: ['dobermann', 'doberman pinscher'] } },
+      { id: 'boxer', availability: 'in_app', synonyms: { en: ['German Boxer', 'Deutscher Boxer'], sl: ['nemški boksar', 'nemski boksar', 'boxer'] } },
     ],
   },
   {
@@ -825,6 +826,33 @@ const DOG_FACTS = {
       ['hypothyroidism', 'health.hypothyroidism'],
     ],
   },
+  // M5-R10-26. Not exported: lifespan.vetcompass_2023 (alternative to McMillan), lifespan.senior_from
+  // (derived), adult_weight.pdsa (same as the RKC standard), adult_weight.vetcompass_mean (the pet
+  // population — would read as a target weight), adult_weight.salt_category (our assignment),
+  // health.skull_shape / breed_watch (behind the short-face key), every VetCompass percentage (S220).
+  // Weight and height = the RKC standard (S217; FCI gives only "over 30 kg" / "about 25 kg");
+  // lifespan = McMillan 2024 via the Dogs Trust table (S123) and the RKC band "Over 10 years" (S215).
+  // Own health keys: the Boxer is only moderately short-faced (flat_face_breathing says "flat-faced"),
+  // its skin-fold advice is "clean and dry" (skin_fold_infections says "daily cleaning").
+  boxer: {
+    height: ['height.rkc'],
+    weight: [['adult_weight.rkc', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['short_face_breathing', 'health.brachycephaly_boas'],
+      ['corneal_ulcers', 'health.eyes_corneal_ulcers'],
+      ['skin_folds_allergies', 'health.skin_folds'],
+      ['heart_cardiomyopathy_aortic_stenosis', 'health.heart'],
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['epilepsy', 'health.epilepsy'],
+      ['certain_cancers', 'health.cancer'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -995,6 +1023,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.dobermann.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.dobermann.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.dobermann.exercise_minutes_senior',
+  },
+  boxer: {
+    adult_minutes: ['proposed_game_parameters.boxer.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.boxer.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.boxer.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.boxer.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.boxer.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.boxer.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],

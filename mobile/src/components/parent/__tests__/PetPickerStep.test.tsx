@@ -263,6 +263,7 @@ describe('PetPickerStep', () => {
       'breed-option-cane_corso',
       'breed-option-pembroke_welsh_corgi',
       'breed-option-dobermann',
+      'breed-option-boxer',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -501,6 +502,59 @@ describe('PetPickerStep', () => {
       expect(consider).toHaveTextContent(/escapes easily — needs a secure, high fence/);
       expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(screen.getByTestId('breed-option-siberian_husky')).toHaveTextContent(/Siberian Husky/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-26: the Boxer (fallback) shows its chips, is found as "boksar", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const boxer = screen.getByTestId('breed-option-boxer');
+    expect(boxer).toHaveTextContent(/Boksar/);
+    expect(boxer).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-boxer-suits')).toHaveTextContent(/aktivno družino/);
+    expect(screen.getByTestId('breed-suitability-boxer-suits')).toHaveTextContent(/družinsko življenje/);
+    expect(screen.getByTestId('breed-suitability-boxer-suits')).toHaveTextContent(/veliko hišo z vrtom/);
+    const consider = screen.getByTestId('breed-suitability-boxer-consider');
+    expect(consider).toHaveTextContent(/krajši gobček — lahko težje diha/);
+    expect(consider).not.toHaveTextContent(/vročin/);
+    expect(consider).toHaveTextContent(/velik pes — ni za dom z majhnimi otroki/);
+    expect(consider).toHaveTextContent(/močan pes — potrebuje izkušenega lastnika/);
+    // M5-R10-26 new chip (PDSA S219): separation anxiety, someone at home most of the day.
+    expect(consider).toHaveTextContent(/rad ima družbo — naj bo nekdo večino dneva doma/);
+    expect(consider).toHaveTextContent(/ko se dolgočasi, grize stvari/);
+    expect(consider).toHaveTextContent(/močan lovski nagon — lahko lovi manjše živali$/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'boksar');
+    expect(screen.getByTestId('breed-option-boxer')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-dobermann')).toBeNull();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-boxer'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'boxer', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'boxer' }),
+    );
+  });
+
+  it('M5-R10-26: the Boxer chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-boxer-suits');
+      const consider = screen.getByTestId('breed-suitability-boxer-consider');
+      expect(suits).toHaveTextContent(/family life/);
+      expect(consider).toHaveTextContent(/shorter muzzle — can have breathing problems/);
+      expect(consider).toHaveTextContent(/loves company — best with someone home most of the day/);
+      expect(consider).toHaveTextContent(/strong prey drive — may chase small pets/);
+      expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-boxer')).toHaveTextContent(/Boxer/);
     } finally {
       await i18n.changeLanguage('sl');
     }

@@ -184,7 +184,7 @@ describe('values per breed (runbook grooming rule, data.json)', function () {
             'cavalier_king_charles_spaniel' => 4, 'beagle' => 1, 'standard_poodle' => 7, 'dachshund' => 1,
             'australian_shepherd' => 2, 'havanese' => 7, 'west_highland_white_terrier' => 2, 'bernese_mountain_dog' => 2,
             'siberian_husky' => 2, 'rottweiler' => 1, 'bulldog' => 1, 'german_shorthaired_pointer' => 2,
-            'yorkshire_terrier' => 7, 'cane_corso' => 1, 'pembroke_welsh_corgi' => 3, 'dobermann' => 1,
+            'yorkshire_terrier' => 7, 'cane_corso' => 1, 'pembroke_welsh_corgi' => 3, 'dobermann' => 1, 'boxer' => 1,
         ];
         // David 2026-10-12: his own decisions (no longer Claude's proposals — every row verified).
         $twice = ['german_shepherd', 'australian_shepherd', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky'];
