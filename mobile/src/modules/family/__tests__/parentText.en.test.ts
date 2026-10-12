@@ -75,7 +75,7 @@ describe('parent texts in English', () => {
     expect(breedLabel('mutt')).toBe('Mixed breed');
     expect(activityText({ activity_type: 'fed_pet', actor_nickname: 'Mia' })).toBe('Mia fed the dog');
     expect(activityText({ activity_type: 'fed_pet', actor_nickname: null })).toBe('Fed the dog');
-    expect(activityText({ activity_type: 'something_new', actor_nickname: null })).toBe('Something_new');
+    expect(activityText({ activity_type: 'something_new', actor_nickname: null })).toBe('Activity'); // never the raw code (post-merge review 2026-10-12)
     await switchLanguage('sl');
     expect(LIGHT_LABELS.green).toBe('Vse v redu');
   });

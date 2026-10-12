@@ -178,7 +178,7 @@
     },
     "digesting": {
       "title": "Počakaj s sprehodom",
-      "body": "Kuža prebavlja. Velik pes naj po obroku počiva približno eno uro.",
+      "body": "Kuža prebavlja. S sprehodom še malo počakaj.",
       "until": "Na sprehod lahko greš ob {{time}}."
     }
   },

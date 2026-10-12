@@ -536,7 +536,10 @@ export function activityText(
   if (SYSTEM_ACTIVITY_LABELS[entry.activity_type]) return tSpecies(`family:systemActivities.${entry.activity_type}`, species);
   // A cat's wording where it differs ("nahranil(a) muco") is `cat:override.family.activities.*` (M5-R06-08c).
   const label =
-    ACTIVITY_LABELS[entry.activity_type] !== undefined ? tSpecies(`family:activities.${entry.activity_type}`, species) : entry.activity_type;
+    ACTIVITY_LABELS[entry.activity_type] !== undefined
+      ? tSpecies(`family:activities.${entry.activity_type}`, species)
+      : // An activity type this build does not know yet (a newer server) — never show the raw code.
+        tSpecies('family:activityFallback', species);
   return entry.actor_nickname ? `${entry.actor_nickname} ${label}` : label.charAt(0).toUpperCase() + label.slice(1);
 }
 

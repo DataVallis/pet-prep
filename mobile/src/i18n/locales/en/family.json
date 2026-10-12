@@ -227,5 +227,6 @@
       "offline": "Can't reach the server. Please try again.",
       "server": "Joining didn't work. Please try again."
     }
-  }
+  },
+  "activityFallback": "activity"
 }
