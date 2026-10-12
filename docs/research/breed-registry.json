@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "41e87886d7deb4f007135e9881296de12f0eb4bfada1c4181c363279c8259840"
+      "sha256": "26f7294866f5c8c5ec9caee476187ba6b754fa216a5caac787dc79bc5820f749"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -4090,7 +4090,7 @@
             "basis_source_ids": [
               "S97"
             ],
-            "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
+            "decision": "potrdil David 2026-10-12: 2× na teden (vir pravi »večkrat na teden« brez števila; prej predlog Claude), mehanika česanja psa ROADMAP M5-R13"
           }
         ],
         "basis_source_ids": [
@@ -4615,7 +4615,7 @@
           {
             "key": "grooming_rule",
             "params": {
-              "per_week": 7
+              "per_week": 4
             }
           }
         ],
@@ -4682,7 +4682,7 @@
             "basis_source_ids": [
               "S108"
             ],
-            "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): vsak dan (7× na teden, PDSA »morda vsak dan«; alternativa 2 za Davida); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+            "decision": "potrdil David 2026-10-12: 4× na teden (PDSA S108 'may find they need to be brushed daily' je previden zapis); prej vsak dan (7) po pravilu runbooka; mehanika česanja psa ROADMAP M5-R13"
           }
         ],
         "basis_source_ids": [
@@ -6875,7 +6875,7 @@
             "basis_source_ids": [
               "S133"
             ],
-            "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
+            "decision": "potrdil David 2026-10-12: 2× na teden (vir pravi »večkrat na teden« brez števila; prej predlog Claude), mehanika česanja psa ROADMAP M5-R13"
           }
         ],
         "basis_source_ids": [
@@ -7989,7 +7989,7 @@
             "basis_source_ids": [
               "S144"
             ],
-            "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
+            "decision": "potrdil David 2026-10-12: 2× na teden (vir pravi »večkrat na teden« brez števila; prej predlog Claude), mehanika česanja psa ROADMAP M5-R13"
           }
         ],
         "basis_source_ids": [
@@ -8512,7 +8512,7 @@
             "basis_source_ids": [
               "S152"
             ],
-            "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
+            "decision": "potrdil David 2026-10-12: 2× na teden (vir pravi »večkrat na teden« brez števila; prej predlog Claude), mehanika česanja psa ROADMAP M5-R13"
           }
         ],
         "basis_source_ids": [
@@ -9076,7 +9076,7 @@
             "basis_source_ids": [
               "S160"
             ],
-            "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
+            "decision": "potrdil David 2026-10-12: 2× na teden (vir pravi »večkrat na teden« brez števila; prej predlog Claude), mehanika česanja psa ROADMAP M5-R13"
           }
         ],
         "basis_source_ids": [
@@ -10840,7 +10840,7 @@
             "basis_source_ids": [
               "S188"
             ],
-            "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): razpon PDSA 1–2 → 2 (prej 1 po RKC); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+            "decision": "potrdil David 2026-10-12: 2× na teden (razpon PDSA 1–2 → 2, prej 1 po RKC); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
           }
         ],
         "basis_source_ids": [

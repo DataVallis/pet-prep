@@ -6,8 +6,10 @@ use App\Enums\SocialisationExperience;
 use App\Enums\StageParamKey;
 use App\Events\PetUpdated;
 use App\Models\ActivityLog;
+use App\Models\BreedStageParam;
 use App\Models\Pet;
 use App\Models\PetContract;
+use App\Models\PetStatusPeriod;
 use App\Models\User;
 use App\Services\ChildProfileService;
 use App\Services\FamilyService;
@@ -30,9 +32,12 @@ use function Pest\Laravel\postJson;
 | 1 dog month) the child gets one "new experience" per program week — a new
 | person, another dog, a new sound, a new place — marked with one tap. The
 | parent sees a weekly row in the report and a timeline entry. No penalty:
-| never a routine, Care Score, traffic light or metric. Breeds whose
-| data.json holds a verbatim A/B socialisation quote; gated per pet
-| (`socialisation_enabled`, ClientFeature `socialisation`).
+| never a routine, Care Score, traffic light or metric. Every dog breed
+| since David 2026-10-12 (verbatim A/B quote where data.json has one,
+| otherwise David's decision); never cats; gated per pet
+| (`socialisation_enabled`, ClientFeature `socialisation`). A week mostly
+| blocked by illness / a pause is excused (»opravičen«), and a child's
+| report starts when that child started caring.
 | Europe/Ljubljana, quiet hours 21–07, DST on 25 Oct 2026.
 */
 
@@ -135,7 +140,8 @@ describe('breeds (verbatim A/B socialisation quote in data.json)', function () {
     it('seeds one puppy-stage row (1 per week, David\'s decision) per sourced breed, traced to data.json', function () {
         $breeds = ['labrador_retriever', 'german_shepherd', 'beagle', 'standard_poodle', 'australian_shepherd', 'havanese',
             'siberian_husky', 'rottweiler', 'bulldog', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann'];
-        $rows = collect(BreedStageParamsSeeder::rows())->where('key', StageParamKey::SocialisationTasksPerWeek->value);
+        // The sourced rows (every other dog breed: David's decision, next test).
+        $rows = collect(BreedStageParamsSeeder::rows())->where('key', StageParamKey::SocialisationTasksPerWeek->value)->whereNotNull('source_id');
 
         expect($rows->pluck('breed_slug')->sort()->values()->all())
             ->toBe(collect($breeds)->map(fn (string $b) => BreedType::from($b)->slug())->sort()->values()->all());
@@ -176,14 +182,29 @@ describe('breeds (verbatim A/B socialisation quote in data.json)', function () {
         }
     });
 
-    it('gives the mutt, the Border Collie and the breeds without a quote no row', function () {
-        $slugs = collect(BreedStageParamsSeeder::rows())->where('key', StageParamKey::SocialisationTasksPerWeek->value)->pluck('breed_slug');
-        foreach ([BreedType::Mutt, BreedType::BorderCollie, BreedType::FrenchBulldog, BreedType::CavalierKingCharlesSpaniel, BreedType::Dachshund,
+    it('gives EVERY other dog breed the row from David\'s decision (no quote, no source) and never a cat', function () {
+        // David 2026-10-12: »socializacija za vse mladičke« — the mutt, the Border Collie and the breeds without a quote too.
+        $rows = collect(BreedStageParamsSeeder::rows())->where('key', StageParamKey::SocialisationTasksPerWeek->value);
+        expect($rows->pluck('breed_slug')->sort()->values()->all())
+            ->toBe(collect(BreedStageParamsSeeder::DOG_BREEDS)->map(fn (BreedType $b) => $b->slug())->sort()->values()->all());
+
+        $entry = soData('proposed_game_parameters.puppy_socialisation');
+        expect($entry)->toMatchArray(['value' => 1, 'source_id' => null, 'quote' => null])
+            ->and($entry['decision'])->toStartWith('potrdil David 2026-10-12: socializacija za vse mladičke');
+        foreach ([BreedType::Mutt, BreedType::BorderCollie, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::CavalierKingCharlesSpaniel, BreedType::Dachshund,
             BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier] as $breed) {
-            expect($slugs)->not->toContain($breed->slug());
+            expect(BreedStageParamsSeeder::DOG_SOCIALISATION)->not->toHaveKey($breed->value)
+                ->and($rows->firstWhere('breed_slug', $breed->slug()))->toMatchArray([
+                    'stage' => 'puppy', 'age_from_months' => 0, 'value' => 1, 'verified' => true,
+                    'source_id' => null, 'quote' => null, // never a fake quote
+                    'ref' => 'proposed_game_parameters.puppy_socialisation',
+                    'decision' => BreedStageParamsSeeder::CONFIRMED_R17_ALL_PUPPIES,
+                ]);
         }
-        // No cat row either (dogs only).
-        expect(collect(BreedStageParamsSeeder::allRows())->where('key', StageParamKey::SocialisationTasksPerWeek->value)->count())->toBe(12);
+        // No cat row (dogs only): one row per dog breed.
+        expect(collect(BreedStageParamsSeeder::allRows())->where('key', StageParamKey::SocialisationTasksPerWeek->value)->count())
+            ->toBe(count(BreedStageParamsSeeder::DOG_BREEDS))
+            ->and(collect(BreedStageParamsSeeder::catRows())->where('key', StageParamKey::SocialisationTasksPerWeek->value)->count())->toBe(0);
     });
 
     it('validates the value 0–7 whole tasks per week', function () {
@@ -207,13 +228,16 @@ describe('the gate (ClientFeature socialisation → pets.socialisation_enabled)'
             ->and(soCreateViaPin(['features' => ['socialisation']], ['socialisation'])->socialisation_enabled)->toBeFalse();
     });
 
-    it('gives an existing dog (older app), a breed without a row and a grown dog no task', function () {
+    it('gives an existing dog (older app), a breed whose row was removed and a grown dog no task', function () {
         [, $child] = soFamily(BreedType::Rottweiler, enabled: false);
         soAt('2026-10-21 10:00');
         expect(soState($child)['socialisation'])->toBeNull();
         soPost($child, 'dog')->assertStatus(422)->assertJsonPath('reason', 'socialisation_not_available');
 
+        // An admin removed the mutt's row in Filament → no task.
         [, $mutt] = soFamily(BreedType::Mutt);
+        BreedStageParam::where(['breed_slug' => 'mutt', 'key' => StageParamKey::SocialisationTasksPerWeek->value])->delete();
+        LifeStageService::forgetBreed('mutt');
         soAt('2026-10-21 10:00');
         expect(soState($mutt)['socialisation'])->toBeNull();
         soPost($mutt, 'dog')->assertStatus(422)->assertJsonPath('reason', 'socialisation_not_available');
@@ -246,6 +270,13 @@ describe('the weekly task (child)', function () {
             'can_record' => true,
         ]);
     });
+
+    it('gives every puppy the task — the free mutt, the Border Collie and a breed without a quote (David 2026-10-12)', function (BreedType $breed) {
+        [, $child] = soFamily($breed);
+        soAt('2026-10-21 10:00');
+        expect(soState($child)['socialisation'])->toMatchArray(['goal_per_week' => 1, 'week' => 1, 'can_record' => true]);
+        soPost($child, 'sound')->assertOk();
+    })->with([BreedType::Mutt, BreedType::BorderCollie, BreedType::FrenchBulldog, BreedType::YorkshireTerrier]);
 
     it('records one experience per program week: one row, one broadcast, then week_done until the next week', function () {
         [, $child, $dog] = soFamily();
@@ -402,6 +433,63 @@ describe('the parent (report row + timeline, never scored)', function () {
             ->and(collect(RoutineType::cases())->map->value->all())->not->toContain('socialisation');
         $routines = app(RoutineLedgerService::class)->routinesFor(collect([$dog->fresh()]), '2026-10-20', '2026-10-28')[$dog->id] ?? [];
         expect(collect($routines)->map(fn ($r) => $r->type->value)->unique()->values()->all())->not->toContain('socialised_pet');
+    });
+
+    it('shows a week mostly blocked by a pause / illness as excused (opravičen), not missed — the ledger\'s weekly excuse share', function () {
+        [$parent, $child, $dog] = soFamily();
+        $utc = fn (string $local) => Carbon::parse($local, 'Europe/Ljubljana')->utc();
+        // Week 1 (20–27 Oct): a hard stop of 4 days = 56 of 98 non-quiet hours (≥ 50 %) → excused.
+        PetStatusPeriod::create(['pet_id' => $dog->id, 'kind' => 'hard_stop', 'started_at' => $utc('2026-10-21 08:00'), 'ended_at' => $utc('2026-10-25 08:00')]);
+        // Week 2 (27 Oct – 3 Nov): one 12-hour vet visit (11 of 98 h) → still missed.
+        PetStatusPeriod::create(['pet_id' => $dog->id, 'kind' => 'illness', 'started_at' => $utc('2026-10-28 10:00'), 'ended_at' => $utc('2026-10-28 22:00')]);
+        soAt('2026-11-04 10:00');
+
+        $report = soReport($parent, $child, 30)['socialisation'];
+        expect($report)->toMatchArray(['expected' => 2, 'done' => 0, 'missed' => 1, 'open' => 1, 'excused' => 1, 'scored' => false])
+            ->and(array_column($report['weeks'], 'status'))->toBe(['excused', 'missed', 'open']);
+        // The share of the WHOLE week is what counts (RoutineLedgerService::WHOLE_DAY_EXCUSE_SHARE).
+        expect(RoutineLedgerService::WHOLE_DAY_EXCUSE_SHARE)->toBe(0.5);
+
+        // Done beats excused: an experience in the blocked week still counts as done.
+        DB::table('activities_log')->insert([
+            'pet_id' => $dog->id, 'actor_user_id' => $child->id, 'activity_type' => 'socialised_pet',
+            'value' => SocialisationExperience::Place->code(), 'created_at' => $utc('2026-10-20 18:00'),
+        ]);
+        expect(array_column(soReport($parent, $child, 30)['socialisation']['weeks'], 'status'))->toBe(['done', 'missed', 'open']);
+    });
+
+    it('turns a running week excused only once an ongoing pause already covers half of it (never back)', function () {
+        [$parent, $child, $dog] = soFamily();
+        PetStatusPeriod::create(['pet_id' => $dog->id, 'kind' => 'hard_stop', 'started_at' => Carbon::parse('2026-10-21 08:00', 'Europe/Ljubljana')->utc(), 'ended_at' => null]);
+
+        soAt('2026-10-22 10:00'); // 16 h of the pause so far
+        expect(array_column(soReport($parent, $child, 7)['socialisation']['weeks'], 'status'))->toBe(['open']);
+        soAt('2026-10-26 10:00'); // 72 h so far (≥ 49 of 98)
+        expect(array_column(soReport($parent, $child, 7)['socialisation']['weeks'], 'status'))->toBe(['excused']);
+        // The week ends while the pause goes on: excused for good; the next week is judged on its own.
+        soAt('2026-10-28 10:00');
+        expect(array_column(soReport($parent, $child, 7)['socialisation']['weeks'], 'status'))->toBe(['excused', 'open']);
+    });
+
+    it('counts a child\'s weeks only from when they started caring — a late join in the week is excused', function () {
+        [$parent, $child, $dog] = soFamily();
+        $sibling = User::factory()->child()->create(['parent_id' => $parent->id, 'name' => 'Tim']);
+        app(FamilyService::class)->addCaretaker($dog, $sibling, true);
+        // The sibling signs their contract late in week 2 (27 Oct – 3 Nov): 72 of 98 h before it.
+        soAt('2026-11-01 10:00');
+        PetContract::create(['pet_id' => $dog->id, 'user_id' => $sibling->id, 'signature_format' => 'svg_path', 'signature' => 'M1 1 L2 2', 'signed_at' => now()]);
+        soAt('2026-11-04 10:00');
+
+        $sib = soReport($parent, $sibling, 30)['socialisation'];
+        expect(array_map(fn (array $w) => [$w['week'], $w['status']], $sib['weeks']))->toBe([[2, 'excused'], [3, 'open']])
+            ->and($sib)->toMatchArray(['expected' => 1, 'missed' => 0, 'excused' => 1, 'open' => 1]);
+        // The first child cared all along: both weeks missed, week 3 open.
+        expect(array_column(soReport($parent, $child, 30)['socialisation']['weeks'], 'status'))->toBe(['missed', 'missed', 'open']);
+
+        // A caretaker who has not signed yet has no row at all.
+        $late = User::factory()->child()->create(['parent_id' => $parent->id, 'name' => 'Ana']);
+        app(FamilyService::class)->addCaretaker($dog, $late, true);
+        expect(app(SocialisationService::class)->reportFor($dog->fresh(), $late->id, '2026-10-20', caretaker: ['start' => null, 'end' => null]))->toBeNull();
     });
 
     it('has no socialisation row for a pet without the task', function () {

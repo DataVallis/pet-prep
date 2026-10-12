@@ -11893,6 +11893,16 @@
       "notes": "UNSOURCED — Claude proposal (M5-R03b): a dog that arrives grown has usually learnt some basics in its previous home or shelter; no source gives numbers. Applied once at pet creation, only for pets with training; not a session.",
       "decision": "potrdil David 2026-10-06: young, adult and senior arrivals start with sit 50 %, potty 70 %, come 30 %, place 0 %; a puppy (also bought) starts at 0 %"
     },
+    "puppy_socialisation": {
+      "value": 1,
+      "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+      "source_id": null,
+      "quote": null,
+      "confidence": "low",
+      "applies_to": "every dog breed without its own proposed_game_parameters.<breed>.socialisation entry (the mutt, Border Collie, Golden Retriever, French Bulldog, Cavalier King Charles Spaniel, Dachshund, West Highland White Terrier, Bernese Mountain Dog, German Shorthaired Pointer, Yorkshire Terrier and every future dog breed); never cats",
+      "notes": "No breed-specific A/B quote and no general_by_size socialisation entry in this file — the basis is David's decision alone (no quote is invented). The 12 breeds with a verbatim PDSA quote keep their own entry. Built in M5-R17: one \"new experience\" (a new person, another dog, a new sound, a new place) per program week while a puppy; shown to the parent, no penalty.",
+      "decision": "potrdil David 2026-10-12: socializacija za vse mladičke (1 nova izkušnja na teden, dokler je mladiček; brez kazni, M5-R17)"
+    },
     "labrador_retriever": {
       "step_goal_adult": {
         "value": 9000,
@@ -12821,8 +12831,8 @@
         "source_id": "S97",
         "quote": "Grooming: More than once a week",
         "confidence": "low",
-        "notes": "RKC (S97) 'More than once a week' without a number; PDSA (S100) 'a few times a week' is a paraphrase without a number (german_shepherd.suitability.rkc_grooming.notes). No source gives a number → Claude's proposal 2 (verified=false). Matted coat at ceil(2 / 2) = 1 missed.",
-        "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
+        "notes": "RKC (S97) 'More than once a week' without a number; PDSA (S100) 'a few times a week' is a paraphrase without a number (german_shepherd.suitability.rkc_grooming.notes). No source gives a number → Claude's proposal 2, confirmed by David 2026-10-12 (verified; the number is David's decision, not the source's). Matted coat at ceil(2 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-12: 2× na teden (vir pravi »večkrat na teden« brez števila; prej predlog Claude), mehanika česanja psa ROADMAP M5-R13"
       },
       "socialisation": {
         "value": 1,
@@ -13061,13 +13071,17 @@
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): Blenheim portrait default, tricolour / ruby / black-and-tan options, visible muzzle and non-protruding eyes, never chocolate"
       },
       "grooming": {
-        "value": 7,
+        "value": 4,
         "unit": "brushing sessions per week (sourced need)",
         "source_id": "S108",
         "quote": "Cavalier King Charles Spaniels have fairly high maintenance coats and you may find they need to be brushed daily",
         "confidence": "medium",
-        "notes": "PDSA (S108) 'may find they need to be brushed daily' — the most specific number (RKC S105 'More than once a week' has none) → every day = 7. The PDSA wording is hedged ('may find'); alternative for David: 2 (RKC without a number). Matted coat at ceil(7 / 2) = 4 missed.",
-        "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): vsak dan (7× na teden, PDSA »morda vsak dan«; alternativa 2 za Davida); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+        "notes": "PDSA (S108) 'may find they need to be brushed daily' stays the source (RKC S105 'More than once a week' has no number). The PDSA wording is hedged ('may find'); David 2026-10-12 chose 4 per week — 4 is David's choice, not the source's number (the runbook rule would read 'daily' = 7). Matted coat at ceil(4 / 2) = 2 missed.",
+        "decision": "potrdil David 2026-10-12: 4× na teden (PDSA S108 'may find they need to be brushed daily' je previden zapis); prej vsak dan (7) po pravilu runbooka; mehanika česanja psa ROADMAP M5-R13",
+        "alternatives": {
+          "pdsa_daily": 7,
+          "rkc_more_than_once_a_week": 2
+        }
       }
     },
     "beagle": {
@@ -14006,8 +14020,8 @@
         "source_id": "S133",
         "quote": "Grooming: More than once a week",
         "confidence": "low",
-        "notes": "RKC (S133) 'More than once a week'; PDSA (S134) 'give them a brush a few times a week' — neither gives a number → Claude's proposal 2 (verified=false). Matted coat at ceil(2 / 2) = 1 missed.",
-        "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
+        "notes": "RKC (S133) 'More than once a week'; PDSA (S134) 'give them a brush a few times a week' — neither gives a number → Claude's proposal 2, confirmed by David 2026-10-12 (verified; the number is David's decision, not the source's). Matted coat at ceil(2 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-12: 2× na teden (vir pravi »večkrat na teden« brez števila; prej predlog Claude), mehanika česanja psa ROADMAP M5-R13"
       },
       "socialisation": {
         "value": 1,
@@ -14498,8 +14512,8 @@
         "source_id": "S144",
         "quote": "Grooming: More than once a week",
         "confidence": "low",
-        "notes": "RKC (S144) 'More than once a week'; PDSA (S147) 'brushing a few times a week' — neither gives a number → Claude's proposal 2 (verified=false). The professional trim is not modelled. Matted coat at ceil(2 / 2) = 1 missed.",
-        "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
+        "notes": "RKC (S144) 'More than once a week'; PDSA (S147) 'brushing a few times a week' — neither gives a number → Claude's proposal 2, confirmed by David 2026-10-12 (verified; the number is David's decision, not the source's). The professional trim is not modelled. Matted coat at ceil(2 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-12: 2× na teden (vir pravi »večkrat na teden« brez števila; prej predlog Claude), mehanika česanja psa ROADMAP M5-R13"
       }
     },
     "bernese_mountain_dog": {
@@ -14753,8 +14767,8 @@
         "source_id": "S152",
         "quote": "Grooming: More than once a week",
         "confidence": "low",
-        "notes": "RKC (S152) 'More than once a week'; PDSA (S154) 'Their coats are fairly high maintenance.' (brushing 'several times a week' in the notes, no number); Woodgreen (S155) 'High' → Claude's proposal 2 (verified=false). Matted coat at ceil(2 / 2) = 1 missed.",
-        "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
+        "notes": "RKC (S152) 'More than once a week'; PDSA (S154) 'Their coats are fairly high maintenance.' (brushing 'several times a week' in the notes, no number); Woodgreen (S155) 'High' → Claude's proposal 2, confirmed by David 2026-10-12 (verified; the number is David's decision, not the source's). Matted coat at ceil(2 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-12: 2× na teden (vir pravi »večkrat na teden« brez števila; prej predlog Claude), mehanika česanja psa ROADMAP M5-R13"
       }
     },
     "siberian_husky": {
@@ -15011,8 +15025,8 @@
         "source_id": "S160",
         "quote": "Grooming: More than once a week",
         "confidence": "low",
-        "notes": "RKC (S160) 'More than once a week'; PDSA (S162) 'brush your Husky a few times a week' — neither gives a number → Claude's proposal 2 (verified=false). Matted coat at ceil(2 / 2) = 1 missed.",
-        "decision": "predlog Claude 2026-10-12: vir pravi »večkrat na teden« brez števila → 2× na teden (najmanj, kar je »več kot enkrat«), M5-R13; čaka Davida"
+        "notes": "RKC (S160) 'More than once a week'; PDSA (S162) 'brush your Husky a few times a week' — neither gives a number → Claude's proposal 2, confirmed by David 2026-10-12 (verified; the number is David's decision, not the source's). Matted coat at ceil(2 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-12: 2× na teden (vir pravi »večkrat na teden« brez števila; prej predlog Claude), mehanika česanja psa ROADMAP M5-R13"
       },
       "socialisation": {
         "value": 1,
@@ -15693,7 +15707,7 @@
         "alternatives": {
           "rkc_once_a_week": 1
         },
-        "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): razpon PDSA 1–2 → 2 (prej 1 po RKC); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+        "decision": "potrdil David 2026-10-12: 2× na teden (razpon PDSA 1–2 → 2, prej 1 po RKC); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       },
       "recall_training": {
         "value": "recall",
@@ -16172,8 +16186,8 @@
         "source_id": "S199",
         "quote": "Remember to leave a gap after eating and before exercising.",
         "confidence": "medium",
-        "notes": "PDSA (S199), feeding section; the same page lists GDV ('bloat') as 'an emergency' (health.gdv). The source gives no length of the gap. Built in M5-R16 (David 2026-10-12): for 60 minutes after a meal the child app shows a calm 'wait with the walk, the dog is digesting' warning; steps still count, no penalty, no score (seeded as breed_stage_params meal_exercise_gap_minutes). The Bernese Mountain Dog's PDSA page (S154) gives the same advice, but it is recorded only as a paraphrase → no row until a verbatim quote is fetched.",
-        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16); prej potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): premor med obrokom in gibanjem"
+        "notes": "PDSA (S199), feeding section; the same page lists GDV ('bloat') as 'an emergency' (health.gdv). The source gives no length of the gap. Built in M5-R16 (David 2026-10-12): for 60 minutes after a meal the child app shows a calm 'wait with the walk, the dog is digesting' warning; steps still count, no penalty, no score (seeded as breed_stage_params meal_exercise_gap_minutes). The Bernese Mountain Dog's PDSA page (S154) gives the same advice, but it is recorded only as a paraphrase → no row until a verbatim quote is fetched. David 2026-10-12: a meal the parent gives in quiet hours (parent_fed_pet) starts the warning too (confirmed, as built).",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo; tudi obrok starša v tihih urah sproži opozorilo (ROADMAP M5-R16); prej potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): premor med obrokom in gibanjem"
       },
       "socialisation": {
         "value": 1,
@@ -16667,8 +16681,8 @@
         "source_id": "S211",
         "quote": "Remember to leave at a gap after eating and before exercising.",
         "confidence": "medium",
-        "notes": "PDSA (S211), feeding section, as returned (sic 'at a gap'); the same page lists GDV ('bloat') (health.gdv). No length in the source. Built in M5-R16 (David 2026-10-12): 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score (breed_stage_params meal_exercise_gap_minutes).",
-        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16); prej potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): premor med obrokom in gibanjem"
+        "notes": "PDSA (S211), feeding section, as returned (sic 'at a gap'); the same page lists GDV ('bloat') (health.gdv). No length in the source. Built in M5-R16 (David 2026-10-12): 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score (breed_stage_params meal_exercise_gap_minutes). David 2026-10-12: a meal the parent gives in quiet hours (parent_fed_pet) starts the warning too (confirmed, as built).",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo; tudi obrok starša v tihih urah sproži opozorilo (ROADMAP M5-R16); prej potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): premor med obrokom in gibanjem"
       },
       "socialisation": {
         "value": 1,

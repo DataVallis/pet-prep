@@ -398,33 +398,50 @@ class BreedStageParamsSeeder extends Seeder
     /**
      * M5-R13: the sources say "more than once a week" / "a few times a week" without a
      * number (German Shepherd, Australian Shepherd, West Highland White Terrier, Bernese
-     * Mountain Dog, Siberian Husky) → Claude's proposal 2 per week, verified=false.
+     * Mountain Dog, Siberian Husky) → Claude's proposal 2 per week, until 2026-10-12
+     * verified=false. Kept for the data migration 2026_12_01_120000 (the old text).
      */
     public const PROPOSED_R13_DOG_GROOMING = 'predlog Claude 12. 10. 2026 (»večkrat na teden« brez števila → 2, M5-R13) — čaka Davida';
 
     /**
+     * David 2026-10-12: the five "more than once a week" breeds stay at 2 per week —
+     * confirmed (verified). The source has no number; 2 is David's decision.
+     */
+    public const CONFIRMED_DAVID_2026_10_12_TWICE = 'potrdil David 2026-10-12: 2× na teden';
+
+    /**
+     * David 2026-10-12: Cavalier King Charles Spaniel 4 per week instead of 7. The source
+     * stays PDSA S108 with its quote; 4 is David's choice, not the source's number.
+     */
+    public const CONFIRMED_DAVID_2026_10_12_CAVALIER = 'potrdil David 2026-10-12: 4× na teden (PDSA S108 \'may find they need to be brushed daily\' je previden zapis)';
+
+    /** David 2026-10-12: German Shorthaired Pointer stays 2 per week (PDSA "once or twice a week" → 2). */
+    public const CONFIRMED_DAVID_2026_10_12 = 'potrdil David 2026-10-12';
+
+    /**
      * M5-R13: dog breed → [sessions per week, source id, verbatim quote (data.json), confidence,
-     * Claude's proposal?]. The mutt and the Border Collie have no grooming statement → no row.
+     * Claude's proposal?, David's own decision (null = the runbook rule)]. The mutt and the
+     * Border Collie have no grooming statement → no row.
      *
-     * @var array<string, array{0: int, 1: string, 2: string, 3: string, 4: bool}>
+     * @var array<string, array{0: int, 1: string, 2: string, 3: string, 4: bool, 5?: string}>
      */
     public const DOG_GROOMING = [
         'labrador_retriever' => [1, 'S50', 'Grooming: Once a week', 'high', false],
         'golden_retriever' => [3, 'S68', 'Ideally, they should be brushed or combed three times a week at a minimum.', 'medium', false],
         'french_bulldog' => [1, 'S78', 'Grooming: Once a week', 'high', false],
-        'german_shepherd' => [2, 'S97', 'Grooming: More than once a week', 'low', true],
-        'cavalier_king_charles_spaniel' => [7, 'S108', 'Cavalier King Charles Spaniels have fairly high maintenance coats and you may find they need to be brushed daily', 'medium', false],
+        'german_shepherd' => [2, 'S97', 'Grooming: More than once a week', 'low', false, self::CONFIRMED_DAVID_2026_10_12_TWICE],
+        'cavalier_king_charles_spaniel' => [4, 'S108', 'Cavalier King Charles Spaniels have fairly high maintenance coats and you may find they need to be brushed daily', 'medium', false, self::CONFIRMED_DAVID_2026_10_12_CAVALIER],
         'beagle' => [1, 'S113', 'Grooming: Once a week', 'high', false],
         'standard_poodle' => [7, 'S120', 'Grooming: Every day', 'high', false],
         'dachshund' => [1, 'S125', 'Grooming: Once a week', 'high', false],
-        'australian_shepherd' => [2, 'S133', 'Grooming: More than once a week', 'low', true],
+        'australian_shepherd' => [2, 'S133', 'Grooming: More than once a week', 'low', false, self::CONFIRMED_DAVID_2026_10_12_TWICE],
         'havanese' => [7, 'S138', 'Grooming: Every day', 'high', false],
-        'west_highland_white_terrier' => [2, 'S144', 'Grooming: More than once a week', 'low', true],
-        'bernese_mountain_dog' => [2, 'S152', 'Grooming: More than once a week', 'low', true],
-        'siberian_husky' => [2, 'S160', 'Grooming: More than once a week', 'low', true],
+        'west_highland_white_terrier' => [2, 'S144', 'Grooming: More than once a week', 'low', false, self::CONFIRMED_DAVID_2026_10_12_TWICE],
+        'bernese_mountain_dog' => [2, 'S152', 'Grooming: More than once a week', 'low', false, self::CONFIRMED_DAVID_2026_10_12_TWICE],
+        'siberian_husky' => [2, 'S160', 'Grooming: More than once a week', 'low', false, self::CONFIRMED_DAVID_2026_10_12_TWICE],
         'rottweiler' => [1, 'S168', 'Grooming: Once a week', 'high', false],
         'bulldog' => [1, 'S177', 'Grooming: Once a week', 'high', false],
-        'german_shorthaired_pointer' => [2, 'S188', "Shorthaired pointers will need grooming once or twice a week, with Wirehaired also needing 'stripping' occasionally.", 'medium', false],
+        'german_shorthaired_pointer' => [2, 'S188', "Shorthaired pointers will need grooming once or twice a week, with Wirehaired also needing 'stripping' occasionally.", 'medium', false, self::CONFIRMED_DAVID_2026_10_12],
         'yorkshire_terrier' => [7, 'S192', 'Grooming: Every day', 'high', false],
         'cane_corso' => [1, 'S199', 'A weekly brush should be enough to keep on top of dead hairs.', 'high', false],
         'pembroke_welsh_corgi' => [3, 'S206', 'Coat care is fairly minimal, with grooming two-three times per week usually enough to remove any dead hair.', 'high', false],
@@ -457,12 +474,21 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R17_SOCIALISATION = 'potrdil David 12. 10. 2026: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (M5-R17)';
 
     /**
+     * David 2026-10-12: socialisation for ALL puppies — every dog breed without a sourced
+     * quote gets the weekly "new experience" too (no fake quote, no source id).
+     */
+    public const CONFIRMED_R17_ALL_PUPPIES = 'potrdil David 12. 10. 2026: socializacija za vse mladičke (1 nova izkušnja na teden, dokler je mladiček; brez kazni, M5-R17)';
+
+    /**
      * M5-R17 puppy socialisation (David 2026-10-12): dog breed → [source id, verbatim
      * quote (data.json `proposed_game_parameters.<breed>.socialisation`)]. A breed gets
      * the weekly "new experience" while a puppy when an A/B source in data.json gives
      * socialisation advice verbatim (runbook §3); the number (1 per week) is David's.
-     * The mutt, Border Collie, French Bulldog, Cavalier, Dachshund, Westie, Bernese
-     * (paraphrase only), GSP and Yorkshire Terrier have no quote → no row, no task.
+     * Since David 2026-10-12 (»socializacija za vse mladičke«) every other dog breed —
+     * the mutt, Border Collie, French Bulldog, Cavalier, Dachshund, Westie, Bernese
+     * (paraphrase only), GSP, Yorkshire Terrier, Golden Retriever and every future
+     * dog breed — gets the same row from David's decision (no source quote, see
+     * dogSocialisation()).
      *
      * @var array<string, array{0: string, 1: string}>
      */
@@ -723,12 +749,9 @@ class BreedStageParamsSeeder extends Seeder
                 $add('all', 0, StageParamKey::MealExerciseGapMinutes, ...$gap);
             }
 
-            // M5-R17 (David 2026-10-12): the puppy's weekly "new experience"; no row =
-            // no task (breeds without a sourced socialisation statement).
-            $socialisation = self::dogSocialisation($breed);
-            if ($socialisation !== null) {
-                $add('puppy', 0, StageParamKey::SocialisationTasksPerWeek, ...$socialisation);
-            }
+            // M5-R17 (David 2026-10-12): the puppy's weekly "new experience" — every dog
+            // breed (»socializacija za vse mladičke«), sourced quote where data.json has one.
+            $add('puppy', 0, StageParamKey::SocialisationTasksPerWeek, ...self::dogSocialisation($breed));
         }
 
         return $rows;
@@ -752,16 +775,22 @@ class BreedStageParamsSeeder extends Seeder
             return null;
         }
         [$value, $sourceId, $quote, $confidence, $proposal] = $row;
+        $david = $row[5] ?? null;
+        $matted = 'Matted coat when ≥ ceil('.$value.' / 2) of the week\'s slots are missed.';
 
         return [$value, [
             'unit' => 'brushing sessions/week (≥ 1 day apart)', 'source_id' => $sourceId, 'confidence' => $confidence,
             'verified' => ! $proposal,
             'ref' => "proposed_game_parameters.{$breed->value}.grooming",
-            'decision' => $proposal ? self::PROPOSED_R13_DOG_GROOMING : self::CONFIRMED_R13_DOG_GROOMING,
+            'decision' => $david ?? ($proposal ? self::PROPOSED_R13_DOG_GROOMING : self::CONFIRMED_R13_DOG_GROOMING),
             'quote' => $quote,
-            'notes' => $proposal
-                ? 'The sources say "more than once a week" without a number → Claude\'s proposal 2 (open for David). Matted coat when ≥ 1 of 2 is missed (ceil(2 / 2)).'
-                : 'Runbook grooming rule (once a week → 1, every day → 7, A–B → B). Matted coat when ≥ ceil('.$value.' / 2) of the week\'s slots are missed.',
+            'notes' => match (true) {
+                $proposal => 'The sources say "more than once a week" without a number → Claude\'s proposal 2 (open for David). Matted coat when ≥ 1 of 2 is missed (ceil(2 / 2)).',
+                $david === self::CONFIRMED_DAVID_2026_10_12_TWICE => 'The sources say "more than once a week" without a number; 2 per week is David\'s decision (2026-10-12). '.$matted,
+                $david === self::CONFIRMED_DAVID_2026_10_12_CAVALIER => 'The source (hedged "may find they need to be brushed daily") stays the basis; 4 per week is David\'s choice (2026-10-12), not the source\'s number. '.$matted,
+                $david !== null => 'Runbook grooming rule (A–B → B: "once or twice a week" → 2), confirmed by David (2026-10-12). '.$matted,
+                default => 'Runbook grooming rule (once a week → 1, every day → 7, A–B → B). '.$matted,
+            },
         ]];
     }
 
@@ -795,15 +824,25 @@ class BreedStageParamsSeeder extends Seeder
      * M5-R17 puppy socialisation: `socialisation_tasks_per_week` = 1 on the puppy
      * stage for the breeds of DOG_SOCIALISATION (verbatim A/B quote in data.json;
      * the number is David's decision 2026-10-12, so verified). Never scored.
-     * Null = no sourced socialisation statement → no row, no task.
+     * Every other dog breed (David 2026-10-12, »socializacija za vse mladičke«):
+     * the same value from David's decision alone — source id and quote null,
+     * one shared data.json entry `proposed_game_parameters.puppy_socialisation`.
+     * Cats never get a row (dog breeds only).
      *
-     * @return array{0: int, 1: array<string, mixed>}|null
+     * @return array{0: int, 1: array<string, mixed>}
      */
-    public static function dogSocialisation(BreedType $breed): ?array
+    public static function dogSocialisation(BreedType $breed): array
     {
         $row = self::DOG_SOCIALISATION[$breed->value] ?? null;
         if ($row === null) {
-            return null;
+            return [1, [
+                'unit' => 'new-experience tasks/week while a puppy (never scored)', 'source_id' => null, 'confidence' => 'low',
+                'verified' => true,
+                'ref' => 'proposed_game_parameters.puppy_socialisation',
+                'decision' => self::CONFIRMED_R17_ALL_PUPPIES,
+                'quote' => null,
+                'notes' => 'No breed-specific source quote in data.json; David (12 Oct 2026): every puppy gets one "new experience" (a new person, another dog, a new sound, a new place) per program week while a puppy — shown to the parent, no penalty.',
+            ]];
         }
         [$sourceId, $quote] = $row;
 
