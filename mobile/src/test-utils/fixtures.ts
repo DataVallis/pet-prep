@@ -200,6 +200,8 @@ export function makeChildState(
       min_gap_minutes: 0,
       used_today: 0,
       remaining_today: 0,
+      // M5-F11 (additive): water allowed at displayed thirst ≤ this.
+      refill_below: 60,
       last_watered_at: '',
       can_water: 'false',
       next_allowed_at: '',

@@ -292,7 +292,7 @@
         "refused": {
           "alreadyFed": "Your kitty has already eaten. You can feed it again {{when}}.",
           "alreadyFedNoTime": "Your kitty has already eaten.",
-          "waterDailyLimit": "Your kitty has had enough fresh water today. More tomorrow!",
+          "waterDailyLimit": "Your kitty has enough fresh water until tomorrow. You can refill it tomorrow!",
           "needsCleaning": "Clean up after your kitty first!"
         },
         "locked": {
