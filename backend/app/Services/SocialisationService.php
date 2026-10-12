@@ -8,6 +8,7 @@ use App\Enums\SocialisationExperience;
 use App\Enums\StageParamKey;
 use App\Models\ActivityLog;
 use App\Models\Pet;
+use App\Models\QuietHours;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Collection;
@@ -35,7 +36,9 @@ use Illuminate\Support\Collection;
  * traffic light, no metric, no penalty (David: »brez kazni«). A week without
  * the experience only shows as missed in the parent's report row — or as
  * excused (»opravičen«) when illness / a paused game covered at least half
- * of it (the ledger's weekly excuse rule, statusOf()). The
+ * of its program time (the ledger's weekly excuse rule, statusOf(); a
+ * payment lock is not program time, so it neither excuses a week nor
+ * counts in its length — David 2026-10-12, »ne štej dvakrat«). The
  * source of truth is the `socialised_pet` rows of `activities_log`
  * (value = SocialisationExperience::code()).
  */
@@ -153,26 +156,30 @@ class SocialisationService
      * Status of one task week (David 2026-10-12): done (goal reached, by any
      * caretaker) › excused (»opravičen«: blocked time covers at least
      * RoutineLedgerService::WHOLE_DAY_EXCUSE_SHARE of the week's non-quiet
-     * time — the rule the ledger uses for the weekly grooming / litter
-     * routines) › open (not over yet) › missed. Blocks = the pet's status
-     * periods (hard stop, vet, inactive / game over, payment lock) plus any
-     * extra blocks of the caller (a child's time before / after caring for
-     * the pet). The share is always taken of the WHOLE week; an ongoing
-     * block (no end) counts only up to $now, so a running week turns
-     * excused only once the blocked time already covers that share (it can
-     * never turn back).
+     * PROGRAM time — the rule the ledger uses for the weekly grooming /
+     * litter routines) › open (not over yet) › missed. Blocks = the pet's
+     * status periods (hard stop, vet, inactive / game over) plus any extra
+     * blocks of the caller (a child's time before / after caring for the
+     * pet). $pauses = the payment locks (RoutineLedgerService::programPauses):
+     * the program week already stretches over them, so they are neither
+     * blocked nor week time (David 2026-10-12, »ne štej dvakrat«). The
+     * share is always taken of the WHOLE week; an ongoing block or lock (no
+     * end) counts only up to $now, so a running week turns excused only
+     * once the blocked time already covers that share (it can never turn
+     * back).
      *
      * @param  array{start: CarbonImmutable, end: CarbonImmutable, goal: int, done: int}  $week
      * @param  list<array{0: CarbonImmutable, 1: CarbonImmutable|null}>  $blocks
+     * @param  list<array{0: CarbonImmutable, 1: CarbonImmutable|null}>  $pauses
      * @return 'done'|'excused'|'open'|'missed'
      */
-    public function statusOf(Pet $pet, array $week, array $blocks, CarbonImmutable $now): string
+    public function statusOf(?QuietHours $quiet, array $week, array $blocks, array $pauses, CarbonImmutable $now): string
     {
         if ($week['done'] >= $week['goal']) {
             return 'done';
         }
-        $capped = array_map(fn (array $b) => [$b[0], $b[1] ?? ($now->greaterThan($b[0]) ? $now : $b[0])], $blocks);
-        $share = $this->ledger->blockedShare($pet->quietHours(), $capped, $week['start'], $week['end']);
+        $cap = fn (array $b) => [$b[0], $b[1] ?? ($now->greaterThan($b[0]) ? $now : $b[0])];
+        $share = $this->ledger->blockedShare($quiet, array_map($cap, $blocks), $week['start'], $week['end'], true, array_map($cap, $pauses));
         if ($share >= RoutineLedgerService::WHOLE_DAY_EXCUSE_SHARE - 1e-9) {
             return 'excused';
         }
@@ -192,20 +199,33 @@ class SocialisationService
      */
     public function weeks(Pet $pet, CarbonInterface $now): array
     {
+        return $this->weeksWithContext($pet, $now)['weeks'];
+    }
+
+    /**
+     * weeks() plus what their statuses were computed from (loaded once):
+     * the status blocks, the payment-lock pauses and the quiet hours —
+     * reportFor() reuses them for the per-child statuses.
+     *
+     * @return array{weeks: list<array<string, mixed>>, blocks: list<array{0: CarbonImmutable, 1: CarbonImmutable|null}>, pauses: list<array{0: CarbonImmutable, 1: CarbonImmutable|null}>, quiet: QuietHours|null}
+     */
+    private function weeksWithContext(Pet $pet, CarbonInterface $now): array
+    {
         $now = CarbonImmutable::instance($now)->utc();
+        $empty = ['weeks' => [], 'blocks' => [], 'pauses' => [], 'quiet' => null];
         if ($pet->isUnborn() || ! $pet->socialisationEnabled()) {
-            return [];
+            return $empty;
         }
         $period = $this->lifeStages->programPeriodAt($pet, $now, self::PERIOD_DAYS);
         if ($period === null) {
-            return [];
+            return $empty;
         }
 
         // The task weeks (cheap: cached breed rows), then their periods — walking
         // back from the current week, one program period at a time.
         $indices = array_values(array_filter(range(0, $period['index']), fn (int $i) => $this->goalForWeek($pet, $i) > 0));
         if ($indices === []) {
-            return [];
+            return $empty;
         }
         $periods = [];
         for ($p = $period; $p !== null && $p['index'] >= $indices[0];) {
@@ -217,12 +237,15 @@ class SocialisationService
             $p = $previous !== null && $previous['index'] < $p['index'] ? $previous : null;
         }
         if ($periods === []) {
-            return [];
+            return $empty;
         }
         $periods = array_reverse($periods);
 
         $rows = $this->rowsBetween($pet, $periods[0]['start'], $now->addSecond());
+        // Loaded once for every week (and reused by reportFor()).
         $blocks = $this->ledger->statusBlocks($pet, $periods[0]['start'], $periods[array_key_last($periods)]['end']);
+        $pauses = $this->ledger->programPauses($pet);
+        $quiet = $pet->quietHours();
         $weeks = [];
         foreach ($periods as $p) {
             $in = $rows->filter(fn (ActivityLog $r) => $r->created_at->greaterThanOrEqualTo($p['start']) && $r->created_at->lessThan($p['end']))->values();
@@ -234,7 +257,7 @@ class SocialisationService
                 'end' => $p['end'],
                 'goal' => $p['goal'],
                 'done' => $done,
-                'status' => $this->statusOf($pet, ['start' => $p['start'], 'end' => $p['end'], 'goal' => $p['goal'], 'done' => $done], $blocks, $now),
+                'status' => $this->statusOf($quiet, ['start' => $p['start'], 'end' => $p['end'], 'goal' => $p['goal'], 'done' => $done], $blocks, $pauses, $now),
                 'entries' => $in->map(fn (ActivityLog $r) => [
                     'experience' => SocialisationExperience::fromCode($r->value !== null ? (int) $r->value : null)?->value,
                     'actor_user_id' => $r->actor_user_id !== null ? (int) $r->actor_user_id : null,
@@ -243,7 +266,7 @@ class SocialisationService
             ];
         }
 
-        return $weeks;
+        return ['weeks' => $weeks, 'blocks' => $blocks, 'pauses' => $pauses, 'quiet' => $quiet];
     }
 
     /**
@@ -273,7 +296,8 @@ class SocialisationService
         $now = CarbonImmutable::instance($now ?? now())->utc();
         $tz = $pet->familyTimezone();
         $fromUtc = CarbonImmutable::parse($fromDate, $tz)->startOfDay()->utc();
-        $weeks = array_values(array_filter($this->weeks($pet, $now), fn (array $w) => $w['end']->greaterThan($fromUtc)));
+        $context = $this->weeksWithContext($pet, $now);
+        $weeks = array_values(array_filter($context['weeks'], fn (array $w) => $w['end']->greaterThan($fromUtc)));
 
         $extra = [];
         if ($caretaker !== null) {
@@ -295,9 +319,9 @@ class SocialisationService
         }
         if ($extra !== []) {
             // The child's own status: their time outside caring is blocked too.
-            $blocks = array_merge($this->ledger->statusBlocks($pet, $weeks[0]['start'], $weeks[array_key_last($weeks)]['end']), $extra);
+            $blocks = array_merge($context['blocks'], $extra);
             foreach ($weeks as $i => $w) {
-                $weeks[$i]['status'] = $this->statusOf($pet, $w, $blocks, $now);
+                $weeks[$i]['status'] = $this->statusOf($context['quiet'], $w, $blocks, $context['pauses'], $now);
             }
         }
 
@@ -311,8 +335,9 @@ class SocialisationService
                 'ends_at' => $local($w['end']),
                 'goal' => $w['goal'],
                 'done' => $w['done'],
-                // done / excused (»opravičen«: illness, pause, game over, payment lock or the
-                // child not caring yet covered ≥ 50 % of the week) / open / missed.
+                // done / excused (»opravičen«: illness, pause, game over or the child not
+                // caring yet covered ≥ 50 % of the week's program time — a payment
+                // lock is not program time, David 2026-10-12) / open / missed.
                 'status' => $w['status'],
                 // The experiences of the week (any caretaker), oldest first.
                 'experiences' => array_values(array_filter(array_map(fn (array $e) => $e['experience'], $w['entries']))),
