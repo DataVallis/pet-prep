@@ -384,7 +384,7 @@ describe('GET /api/breeds', function () {
                 'search_keywords' => BreedConfigsSeeder::configs()[14]['search_keywords'], 'sort_order' => 140,
                 'suitability' => [
                     'suits' => ['active_family', 'large_home'],
-                    'consider' => ['long_daily_exercise', 'secure_fencing', 'chews_when_bored', 'sheds', 'frequent_grooming'],
+                    'consider' => ['long_daily_exercise', 'secure_fencing', 'chews_when_bored', 'sheds', 'frequent_grooming', 'chases_small_pets'],
                 ],
             ]);
     });

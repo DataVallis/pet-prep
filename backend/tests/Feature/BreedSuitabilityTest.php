@@ -101,7 +101,7 @@ it('returns tag keys per kind; breeds without sourced tags get empty lists', fun
         ])
         ->and($suitability->for(BreedType::FrenchBulldog))->toBe([
             'suits' => ['apartment', 'family_pet', 'children'],
-            'consider' => ['brachycephalic_breathing'],
+            'consider' => ['brachycephalic_breathing', 'chases_small_pets'],
         ])
         ->and($suitability->for(BreedType::BorderCollie))->toBe([
             'suits' => ['active_family'],
@@ -157,7 +157,7 @@ it('gives the French Bulldog the first sourced `apartment` tag and the new brach
 
     $frenchie = app(BreedSuitability::class)->for(BreedType::FrenchBulldog);
     expect($frenchie['suits'])->toContain('apartment', 'children')->not->toContain('small_children')->not->toContain('other_pets')
-        ->and($frenchie['consider'])->toBe(['brachycephalic_breathing']);
+        ->and($frenchie['consider'])->toBe(['brachycephalic_breathing', 'chases_small_pets']);
 
     // Only the flat-faced breed gets the breathing tag; only it suits a flat so far.
     foreach ([BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever] as $breed) {
@@ -241,7 +241,7 @@ it('gives the Dachshund the new back_spine tag (welfare rule), children, sheds a
     expect($dachshund['suits'])->toBe(['children'])
         // Supervise (S127), not with smaller pets (S127), RKC "Small house" (S125), does not do well alone (S127).
         ->and($dachshund['suits'])->not->toContain('small_children')->not->toContain('other_pets')->not->toContain('apartment')->not->toContain('large_home')->not->toContain('often_alone')
-        ->and($dachshund['consider'])->toBe(['back_spine', 'sheds', 'needs_mental_stimulation'])
+        ->and($dachshund['consider'])->toBe(['back_spine', 'sheds', 'needs_mental_stimulation', 'chases_small_pets'])
         // Long back, not a flat face; the Cavalier's heart / Chiari tag is a different problem.
         ->and($dachshund['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('heart_and_spine')->not->toContain('hips_hind_legs');
 
@@ -291,7 +291,7 @@ it('gives the West Highland White Terrier the new sensitive_skin tag (welfare ru
     expect($westie['suits'])->toBe(['apartment', 'family_pet', 'children'])
         // PDSA: always supervise → no small_children; prey drive → no other_pets; separation anxiety → no often_alone.
         ->and($westie['suits'])->not->toContain('small_children')->not->toContain('other_pets')->not->toContain('often_alone')->not->toContain('first_time_owner')->not->toContain('low_shedding')
-        ->and($westie['consider'])->toBe(['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored'])
+        ->and($westie['consider'])->toBe(['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored', 'chases_small_pets'])
         ->and($westie['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('long_daily_exercise');
 
     // Only the Westie and the Bulldog (Breed Watch skin-fold dermatitis, M5-R10-20) carry the chip so far.
@@ -337,7 +337,7 @@ it('gives the Siberian Husky the new secure_fencing tag, active_family, large_ho
     expect($husky['suits'])->toBe(['active_family', 'large_home'])
         // PDSA: adult-only or teenage households, not with smaller children; not with smaller pets.
         ->and($husky['suits'])->not->toContain('family_pet')->not->toContain('children')->not->toContain('small_children')->not->toContain('other_pets')->not->toContain('often_alone')->not->toContain('first_time_owner')
-        ->and($husky['consider'])->toBe(['long_daily_exercise', 'secure_fencing', 'chews_when_bored', 'sheds', 'frequent_grooming'])
+        ->and($husky['consider'])->toBe(['long_daily_exercise', 'secure_fencing', 'chews_when_bored', 'sheds', 'frequent_grooming', 'chases_small_pets'])
         // Breed Watch Category 2 is body condition only ("Too fat" / "Too thin"): no conformation chip.
         ->and($husky['consider'])->not->toContain('hips_hind_legs')->not->toContain('shorter_lifespan')->not->toContain('food_motivated_weight');
 
@@ -497,7 +497,7 @@ it('gives the Pembroke Welsh Corgi may_herd_children, sheds and frequent_groomin
 it('gives the Dobermann active_family, family_pet, large_home and the PDSA cautions — never children, no welfare chip (runbook 2026-10-12)', function () {
     $dobermann = app(BreedSuitability::class)->for(BreedType::Dobermann);
     expect($dobermann['suits'])->toBe(['active_family', 'family_pet', 'large_home'])
-        ->and($dobermann['consider'])->toBe(['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds'])
+        ->and($dobermann['consider'])->toBe(['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds', 'chases_small_pets'])
         // PDSA does not recommend the breed with young children or first-time owners; high prey drive.
         ->and($dobermann['suits'])->not->toContain('children')->not->toContain('small_children')
         ->not->toContain('first_time_owner')->not->toContain('other_pets')
@@ -509,4 +509,39 @@ it('gives the Dobermann active_family, family_pet, large_home and the PDSA cauti
         ->and(bsEntry('dobermann.suitability.pdsa_children')['quote'])->toBe('due to their large size and strong build we wouldn’t recommend a Dobermann if you have young children.')
         ->and(bsEntry('dobermann.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Large house')
         ->and(bsEntry('dobermann.exercise.adult')['quote'])->toBe('Exercise: More than 2 hours per day');
+});
+
+it('gives chases_small_pets only to the five breeds whose own entry quotes a high prey drive (David 2026-10-12)', function () {
+    expect(BreedSuitability::vocabulary())->toMatchArray(['chases_small_pets' => BreedSuitability::CONSIDER]);
+
+    $expected = [
+        BreedType::FrenchBulldog->value => 'french_bulldog.behaviour.other_pets',
+        BreedType::Dachshund->value => 'dachshund.behaviour.other_pets',
+        BreedType::WestHighlandWhiteTerrier->value => 'west_highland_white_terrier.behaviour.other_pets',
+        BreedType::SiberianHusky->value => 'siberian_husky.behaviour.other_pets',
+        BreedType::Dobermann->value => 'dobermann.behaviour.other_pets',
+    ];
+
+    foreach (BreedType::cases() as $breed) {
+        $consider = app(BreedSuitability::class)->for($breed)['consider'];
+        if (! array_key_exists($breed->value, $expected)) {
+            // Beagle / Bernese / Rottweiler / Cavalier / German Shepherd: supervision advice only, no prey-drive statement.
+            expect($consider)->not->toContain('chases_small_pets');
+
+            continue;
+        }
+
+        // Appended at the end of the breed's consider list.
+        expect(end($consider))->toBe('chases_small_pets');
+
+        $entry = collect(config("breed_suitability.breeds.{$breed->value}.consider"))->firstWhere('tag', 'chases_small_pets');
+        expect($entry['refs'])->toContain($expected[$breed->value]);
+        foreach ($entry['refs'] as $ref) {
+            // Every ref is a verbatim quote naming a high prey drive.
+            expect(bsEntry($ref)['quote'])->toContain('high prey drive');
+        }
+    }
+
+    expect(bsEntry('french_bulldog.behaviour.other_pets')['quote'])->toBe('French Bulldogs do have a high prey drive.')
+        ->and(bsEntry('dobermann.suitability.pdsa_other_pets')['source_id'])->toBe('S211');
 });
