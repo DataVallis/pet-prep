@@ -10788,6 +10788,559 @@
       }
     }
   },
+  "dobermann": {
+    "_note": "Added 2026-10-12 (M5-R10-25, unattended run — appended after the Pembroke Welsh Corgi: AKC 2024 No. 16, S174 table row '16 | Doberman Pinscher'). Quotes as returned by the web-fetch tool on 2026-10-12; spot-check before import (sources.md S207–S212, reused S10, S11, S14, S35, S45, S54, S174). Names: FCI and The Royal Kennel Club call the breed 'Dobermann' (S207, S209, S210), the AKC 'Doberman Pinscher' (S174). FCI (S207, valid standard 13.11.2015) gives two colours (black or brown with rust red tan) and natural ears and tail; the RKC standard (S210, 1 January 2025) also lists blue and fawn (Isabella) — the game draws only the colours both standards share. Lifespan: McMillan 2024 names no Dobermann value in the reachable texts (S54), the Dogs Trust table PDF returned a fetch error → runbook rule: a VetCompass median — O'Neill et al. 2013 (S212), 9.2 y, small sample (37 deaths) → provisional. Not a welfare-concern breed: RKC Breed Watch Category 1 (S209). Woodgreen and AKC trait ratings not attempted.",
+    "identity": {
+      "value": "FCI No. 143, Group 2 Section 1 (Pinscher and Schnauzer type), Germany",
+      "unit": "—",
+      "source_id": "S208",
+      "quote": "Group: n°2 - Pinscher and Schnauzer - Molossoid and Swiss Mountain and Cattledogs; Section: Pinscher and Schnauzer type; Country of origin: GERMANY",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S208, fields as returned): 'DOBERMANN' '143'; subsection 'Pinscher'; 'Subject to a working trial according to the FCI Breeds Nomenclature'; definitive acceptance '1/1/1955'; valid standard '11/13/2015'. Quote assembled from the nomenclature fields as returned. RKC group: Working (S210). AKC name: Doberman Pinscher (S174)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S209",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "PDSA (S211) key facts: 'Size | Large' — sources agree. FCI (S207) says 'medium size' in the general appearance (proportion wording, not a size class)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            68,
+            72
+          ],
+          "female": [
+            63,
+            68
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S207",
+        "quote": "Height at the withers: Males: 68 – 72 cm.",
+        "confidence": "high",
+        "notes": "FCI (S207): 'Females: 63 – 68 cm.' RKC standard (S210): 'Ideal height at withers: dogs: 69 cms (27 ins); bitches: 65 cms (25½ ins).' PDSA (S211): 'Average height | 65-69 cm'."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            40,
+            45
+          ],
+          "female": [
+            32,
+            35
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S207",
+        "quote": "Weight: Males: about 40 – 45 kg.",
+        "confidence": "high",
+        "notes": "FCI (S207): 'Females: about 32 – 35 kg.' Game range 32–45 kg (both sexes). The RKC standard (S210) gives no weight."
+      },
+      "pdsa": {
+        "value": [
+          30,
+          40
+        ],
+        "unit": "kg",
+        "source_id": "S211",
+        "quote": "Average weight | 30kg-40kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S211), one range for both sexes — a little lighter than FCI."
+      },
+      "salt_category": {
+        "value": "V (30–<40 kg) for females; males (40–45 kg) span V / VI",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8). Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 32–45 kg (S207) = 70.5–99.2 lb → 'Large (59–99 pounds)' (the males' upper end touches 'Giant'). Same as the German Shepherd."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Dobermann growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 9.2,
+        "unit": "years",
+        "source_id": "S212",
+        "quote": "Doberman 9.2 6.2-11.0 2.1-13.0 37",
+        "confidence": "medium",
+        "notes": "O'Neill et al. 2013 (S212), VetCompass England, Table 1 row as returned (columns: breed, median years, IQR, range, number of dogs) — 37 deaths, a small sample. The SVEPM 2012 poster (S71) lists no Dobermann row (fewer than 50 animals). McMillan 2024 (S54) and the Dogs Trust table (S123) not reachable this run — runbook rule: else a VetCompass median. Provisional."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S209",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "RKC breed page (S209). PDSA key facts (S211): 'Average lifespan | Over 10 years' — same. Not 'Under 10 years' → no shorter_lifespan chip."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024: the Author Correction (S54) names no Dobermann; the Dogs Trust 'shortest and longest' PDF returned a fetch error and the breed table (S123) was not reachable this run; press summaries (Science News, BBC Science Focus) name no Dobermann value. UNSOURCED value — verify in McMillan 2024 Supplementary Table / S123 before replacing the VetCompass median."
+      },
+      "senior_from": {
+        "value": 6.9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 9.2 y (S212) → 0.75 × 9.2 = 6.9 y = 82.8 → 83 months. With the RKC lower bound 'Over 10 years' (S209): 0.75 × 10 = 7.5 y = 90 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S212"
+        ],
+        "months": 83,
+        "alternative": {
+          "value_years": 7.5,
+          "months": 90,
+          "derived_from": [
+            "S11",
+            "S209"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S209",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "PDSA (S211): 'Dobermanns need a minimum of two hours of exercise every day to help burn off their large amounts of energy.' (key facts 'Minimum exercise (per day) | 2 hours') — sources agree; RKC preferred (runbook rule)."
+      },
+      "energy": {
+        "value": "very energetic; needs plenty of mental and physical exercise",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "very energetic and will need plenty of mental and physical exercise",
+        "confidence": "medium",
+        "notes": "PDSA (S211), clause as returned. FCI (S207): 'The Dobermann is of medium size, strong and muscularly built.' RKC standard (S210): 'Capable of great speed.' Covered by the game's walk, play and school — basis of needs_mental_stimulation."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "friendly and calm, very devoted to the family; medium temperament and alertness",
+        "unit": "—",
+        "source_id": "S207",
+        "quote": "The disposition of the Dobermann is friendly and calm; very devoted to the family.",
+        "confidence": "high",
+        "notes": "FCI (S207): 'Medium temperament and medium sharpness (alertness) is desired.' RKC standard (S210): 'Intelligent and firm of character, loyal and obedient.' / 'Bold and alert. Shyness or viciousness very highly undesirable.'"
+      },
+      "family": {
+        "value": "an excellent family dog (RKC); not recommended with young children because of size and strength (PDSA)",
+        "unit": "—",
+        "source_id": "S209",
+        "quote": "However, his loyal and obedient nature equips him to be an excellent family dog, a role in which he is equally comfortable.",
+        "confidence": "high",
+        "notes": "RKC breed page (S209). PDSA (S211): 'due to their large size and strong build we wouldn’t recommend a Dobermann if you have young children.' → family_pet (RKC) and not_for_small_children (PDSA); never children / small_children."
+      },
+      "experienced_owner": {
+        "value": "probably not the best breed for first-time owners",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "their large size means they probably aren’t the best breed for families with young children or first-time owners.",
+        "confidence": "medium",
+        "notes": "PDSA (S211), clause as returned. Basis of experienced_owner (as the Rottweiler and the Cane Corso); never first_time_owner."
+      },
+      "socialisation": {
+        "value": "socialise with different experiences, people and dogs from a young age (can be protective)",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "it’s important to socialise your dog with different experiences, people and dogs from a young age.",
+        "confidence": "medium",
+        "notes": "PDSA (S211); the same page: 'Dobermanns form strong bonds with their family and can be protective'. A sourced need (runbook §3, David 2026-10-11): the game's school (M5-R03) trains commands, not socialisation → ROADMAP M5-R17 (needs-david); see proposed_game_parameters.dobermann.socialisation."
+      },
+      "time_alone": {
+        "value": "general PDSA advice — never alone for more than four hours; may become destructive",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "As with any dog, your Dobermann should never be left on their own for more than four hours.",
+        "confidence": "low",
+        "notes": "PDSA (S211) general advice ('As with any dog'); also: 'your Dobermann can’t even cope with this and may be destructive around the home to let you know they are unhappy.' → no often_alone tag."
+      },
+      "other_pets": {
+        "value": "high prey drive — may chase smaller pets; careful introductions",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "Dobermanns are known to have quite a high prey drive and will love any opportunity to chase smaller pets",
+        "confidence": "medium",
+        "notes": "PDSA (S211) → no other_pets tag. No vocabulary key for a prey drive (open for David: a chip such as 'may chase small pets' would be a new key; not added in this run — research only)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA mentions destructiveness only when left alone too long (time_alone) → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. Not a welfare-concern breed: RKC Breed Watch Category 1, 'Currently no points of concern specific to this breed have been identified for special attention by judges' (S209). PDSA (S211) introduces its list with 'Some of the conditions Dobermanns may develop include:'.",
+      "hip_dysplasia": {
+        "value": "hip dysplasia — a poorly fitting hip joint leading to arthritis; parents hip-scored (BVA/KC scheme, RKC Best Practice)",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "Hip dysplasia – where hip joint that doesn’t fit together perfectly, which will eventually lead to arthritis.",
+        "confidence": "medium",
+        "notes": "PDSA (S211). RKC breed page (S209) Best Practice: 'Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme'. Not a Breed Watch point → no hips_hind_legs chip (research only)."
+      },
+      "wobbler": {
+        "value": "wobbler syndrome (unstable neck bones, weak back legs)",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "Wobbler Syndrome – where the bones in the neck are unstable and cause their back legs to be weak.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S211)."
+      },
+      "cancer": {
+        "value": "certain cancers",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "Certain cancers.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S211)."
+      },
+      "von_willebrand": {
+        "value": "von Willebrand's disease (bleeding disorder); DNA test vWD1 (RKC Good Practice)",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "Von Willebrand's disease – a bleeding disorder which stops blood from clotting properly",
+        "confidence": "medium",
+        "notes": "PDSA (S211). RKC breed page (S209) Good Practice: 'DNA test for von Willebrand disease (vWD1)'."
+      },
+      "eyes_phpv": {
+        "value": "eye problems such as PHPV (present before birth); eye testing (RKC Best Practice)",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "Eye problems, such as Persistent Hyperplastic Primary Vitreous (PHPV) – an eye defect which occurs before birth.",
+        "confidence": "medium",
+        "notes": "PDSA (S211). RKC (S209) Best Practice: 'Dogs to be eye tested minimum of once prior to being used for breeding (for PHPV)'."
+      },
+      "heart_dcm": {
+        "value": "dilated cardiomyopathy (heart disease — an enlarged heart)",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "Dilated Cardiomyopathy – a type of heart disease which means their heart is bigger than it should be",
+        "confidence": "medium",
+        "notes": "PDSA (S211). Not a Breed Watch point → no heart chip (research only; the Cavalier's heart_and_spine chip is about the skull-shape-related CM/SM as well)."
+      },
+      "gdv": {
+        "value": "gastric dilatation volvulus ('bloat') — an emergency",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "Gastric Dilatation Volvulus (GDV) – often known as ‘bloat’, this is where the stomach twists.",
+        "confidence": "medium",
+        "notes": "PDSA (S211); the feeding section: 'Remember to leave at a gap after eating and before exercising.' (as returned) → proposed_game_parameters.dobermann.meal_exercise_gap (ROADMAP M5-R16)."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism (underactive thyroid)",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "Hypothyroidism – an underactive thyroid, causing problems with weight, skin and energy levels.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S211)."
+      },
+      "dings2": {
+        "value": "DNA test for DINGS2 (RKC Best Practice)",
+        "unit": "—",
+        "source_id": "S209",
+        "quote": "DNA test for DINGS2",
+        "confidence": "medium",
+        "notes": "RKC breed page (S209) Best Practice test (no description on the page; DINGS = dancing Dobermann disease, a neurological condition — background, not quoted)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 5,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "5 | Doberman Pinscher",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35): row '5 | Doberman Pinscher' under 'Brightest Dogs' (ranks 1–10). Coren's own top-10 article (S34) not fetched this run. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Brightest",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: fewer than 5 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier 'Brightest Dogs' (1–10): 'Obey first command: 95% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "intelligent and eager to learn; reward-based training, consistent and fair (can be wilful)",
+        "unit": "—",
+        "source_id": "S209",
+        "quote": "The Dobermann's intelligence and trainability have been harnessed by the armed forces and the police",
+        "confidence": "medium",
+        "notes": "RKC breed page (S209), clause as returned. PDSA (S211, paraphrase): intelligent and eager to learn, reward-based training; can be wilful, so consistency is needed."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.dobermann.learning_multiplier (1.9, runbook rule: Brightest tier, rank 5).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium size, strong and muscular, elegant lines, proud stature",
+        "unit": "—",
+        "source_id": "S207",
+        "quote": "The Dobermann is of medium size, strong and muscularly built.",
+        "confidence": "high",
+        "notes": "RKC standard (S210): 'Medium size, muscular and elegant, with well-set body. Of proud carriage, compact and tough. Capable of great speed.'"
+      },
+      "colours": {
+        "value": [
+          "black and rust",
+          "brown and rust"
+        ],
+        "unit": "list (with clearly defined rust red tan markings)",
+        "source_id": "S207",
+        "quote": "The Dobermann is bred in two colour varieties: black or brown with rust red,",
+        "confidence": "high",
+        "notes": "FCI (S207): 'clearly defined and clear markings (tan markings)'; disqualifying fault 'White spots' (paraphrase as returned). RKC standard (S210): 'Definite black, brown, blue or fawn (Isabella) only, with rust red markings.' / 'White markings of any kind highly undesirable.' The game draws only the two colours both standards share (black, brown with rust); blue and fawn are RKC-only. Never white markings, never merle or solid colours."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Black and rust first with the highest weight (portrait default), then brown and rust."
+      },
+      "coat": {
+        "value": "short, hard and dense, lying tight and smooth; no undercoat",
+        "unit": "—",
+        "source_id": "S207",
+        "quote": "The hair is short, hard and dense. It lies tight and smooth and is equally distributed over the whole surface.",
+        "confidence": "high",
+        "notes": "RKC (S210): 'Smooth, short, hard, thick and close-lying. Imperceptible undercoat on neck permissible.' RKC breed page (S209): 'Coat length: Short'."
+      },
+      "ears": {
+        "value": "natural (uncropped), set high, lying close to the cheeks",
+        "unit": "—",
+        "source_id": "S207",
+        "quote": "The ears, are left natural and of an appropriate size;",
+        "confidence": "high",
+        "notes": "FCI (S207, paraphrase of the rest): set on the highest point of the skull, ideally lying close to the cheeks. RKC standard (S210): 'Small, neat, set high on head, dropped and lying close to the cheeks.' Natural drop ears in the portrait (never cropped)."
+      },
+      "eyes": {
+        "value": "medium sized, oval, dark",
+        "unit": "—",
+        "source_id": "S207",
+        "quote": "Medium sized, oval and dark in colour. Lighter shades are permitted for brown dogs.",
+        "confidence": "high",
+        "notes": "RKC (S210): 'Almond-shaped, not round, moderately deep set, not prominent, with lively, alert expression.'"
+      },
+      "nose": {
+        "value": "black in black dogs, lighter in brown dogs; long head like a blunt wedge",
+        "unit": "—",
+        "source_id": "S207",
+        "quote": "Black – in black dogs; in brown dogs, corresponding lighter shades.",
+        "confidence": "high",
+        "notes": "RKC (S210): 'Seen from above and side, resembles an elongated blunt wedge. Upper part of head flat and free from wrinkle.' Not flat-faced."
+      },
+      "tail": {
+        "value": "natural (undocked), carried high in a slight curve",
+        "unit": "—",
+        "source_id": "S207",
+        "quote": "The tail is left natural and is ideally carried high in a slight curve.",
+        "confidence": "high",
+        "notes": "FCI 2015 (S207). RKC standard (S210) has both: 'Previously customarily docked.' and the undocked wording 'Appears to be a continuation of spine without material drop, kink or deformity.' Natural tail in the portrait (a standard option)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S209, older address display.aspx?id=5121) and PDSA (S211). The RKC page shows no 'Good with children' field (as returned 2026-10-12). Woodgreen and AKC trait ratings not attempted.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S209",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "PDSA (S211): 'Size | Large'."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S209",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S209",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "Basis of large_home (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S209",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S209",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "PDSA (S211): brushing around once a week → sourced need, ROADMAP M5-R13 (dog brushing). Not more than once a week → no frequent_grooming tag."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S209",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "PDSA (S211): 'Coat length | Short'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S209",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PDSA (S211): 'They do shed, but not nearly as much as other, longer-coated dogs' — agrees that it sheds. Basis of the sheds tag."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S209",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S209",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S209",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_family": {
+        "value": "an excellent family dog",
+        "unit": "—",
+        "source_id": "S209",
+        "quote": "However, his loyal and obedient nature equips him to be an excellent family dog, a role in which he is equally comfortable.",
+        "confidence": "high",
+        "notes": "Basis of family_pet (with behaviour.family)."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-12)."
+      },
+      "pdsa_children": {
+        "value": "not recommended with young children (size and strength)",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "due to their large size and strong build we wouldn’t recommend a Dobermann if you have young children.",
+        "confidence": "high",
+        "notes": "Basis of not_for_small_children (as the Cane Corso)."
+      },
+      "pdsa_exercise": {
+        "value": "a minimum of two hours a day",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "Dobermanns need a minimum of two hours of exercise every day to help burn off their large amounts of energy.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "pdsa_grooming": {
+        "value": "brushing around once a week",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "their very short fur only needs brushing around once a week to keep in good condition.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_experienced_owner": {
+        "value": "probably not the best breed for first-time owners",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "their large size means they probably aren’t the best breed for families with young children or first-time owners.",
+        "confidence": "medium",
+        "notes": "Basis of experienced_owner."
+      },
+      "pdsa_mental_stimulation": {
+        "value": "plenty of mental and physical exercise",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "very energetic and will need plenty of mental and physical exercise",
+        "confidence": "medium",
+        "notes": "Basis of needs_mental_stimulation."
+      },
+      "pdsa_other_pets": {
+        "value": "high prey drive — may chase smaller pets",
+        "unit": "—",
+        "source_id": "S211",
+        "quote": "Dobermanns are known to have quite a high prey drive and will love any opportunity to chase smaller pets",
+        "confidence": "medium",
+        "notes": "No other_pets tag."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -15743,6 +16296,281 @@
         "confidence": "high",
         "notes": "Colours from the FCI / RKC standards (S202, S205). Weight unsourced in prompts. Natural undocked tail (standard option, S205). Moderate body length (not exaggeratedly long or low).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): red with white markings (the first standard colour) is the portrait default; undocked tail; moderate body"
+      }
+    },
+    "dobermann": {
+      "_note": "Unattended run M5-R10-25 (2026-10-12): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11); recorded as `decision` per entry. No new vocabulary key. Sourced needs without a dog mechanic (runbook §3, David 2026-10-11): weekly brushing (RKC S209, PDSA S211) → ROADMAP M5-R13; a gap between a meal and exercise (GDV, PDSA S211) → ROADMAP M5-R16; socialisation from a young age (PDSA S211) → ROADMAP M5-R17.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S209",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Exercise: More than 2 hours per day' (S209); PDSA 'a minimum of two hours of exercise every day' (S211). Rule: one number N ('more than N') → N = 120.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S209 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000 (= Border Collie, Labrador, Golden, German Shepherd, Australian Shepherd, Siberian Husky, Rottweiler, German Shorthaired Pointer, Cane Corso).",
+        "derived_from": [
+          "S209",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 83
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 83 = round(0.75 × 9.2 y × 12) = round(82.8) (S11 + VetCompass median 9.2 y, O'Neill et al. 2013, S212 — 37 deaths). No McMillan 2024 value reachable. Alternatives: 90 (RKC 'Over 10 years', S209), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S212"
+        ],
+        "alternatives": {
+          "senior_rkc_lower_bound": 90,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 83 (0.75 × 9.2 y, VetCompass median S212)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 83
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 83)"
+      },
+      "learning_multiplier": {
+        "value": 1.9,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 5 (S35), tier 'Brightest' (1–10): max(1.8, round(2.0 − 4/30, 1)) = 1.9 (as the Golden Retriever, rank 4). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.9 (Coren rank 5, Brightest tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PDSA two meals a day at consistent times (S211, paraphrase) = the game's adult meals.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S209",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC (S209); PDSA (S211): 'their very short fur only needs brushing around once a week to keep in good condition.' The game has no dog grooming mechanic yet (cats only, M5-R06-05) — too large for a breed run → ROADMAP M5-R13 (already lists other dogs); this value is its input. PDSA: more brushing while moulting in spring and autumn (paraphrase; moult not modelled).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa še ni zgrajena → ROADMAP M5-R13 (needs-david)"
+      },
+      "meal_exercise_gap": {
+        "value": null,
+        "unit": "minutes between a meal and exercise (sourced need, no number)",
+        "source_id": "S211",
+        "quote": "Remember to leave at a gap after eating and before exercising.",
+        "confidence": "medium",
+        "notes": "PDSA (S211), feeding section, as returned (sic 'at a gap'); the same page lists GDV ('bloat') (health.gdv). No length in the source → ROADMAP M5-R16 (already opened for the Cane Corso).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): premor med obrokom in gibanjem; vir ne navaja dolžine, mehanike ni → ROADMAP M5-R16 (needs-david)"
+      },
+      "socialisation": {
+        "value": null,
+        "unit": "socialisation with people, dogs and new experiences from a young age (sourced need, no number)",
+        "source_id": "S211",
+        "quote": "it’s important to socialise your dog with different experiences, people and dogs from a young age.",
+        "confidence": "medium",
+        "notes": "PDSA (S211). The game's school (M5-R03) trains commands, not socialisation; no amount in the source → ROADMAP M5-R17 (already opened for the Cane Corso).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): socializacija od mladosti; vir ne navaja količine, mehanike ni → ROADMAP M5-R17 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-25); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S209",
+              "S211"
+            ],
+            "refs": [
+              "dobermann.exercise.adult",
+              "dobermann.suitability.pdsa_exercise"
+            ],
+            "quote": "S209 'Exercise: More than 2 hours per day'; S211 'Dobermanns need a minimum of two hours of exercise every day'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S209"
+            ],
+            "refs": [
+              "dobermann.suitability.rkc_family",
+              "dobermann.behaviour.family"
+            ],
+            "quote": "S209 'his loyal and obedient nature equips him to be an excellent family dog'",
+            "note": "PDSA does not recommend the breed with young children (S211) → not_for_small_children as well; never children / small_children."
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S209"
+            ],
+            "refs": [
+              "dobermann.suitability.rkc_size_of_home",
+              "dobermann.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S209 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S209",
+              "S211"
+            ],
+            "refs": [
+              "dobermann.exercise.adult",
+              "dobermann.suitability.pdsa_exercise"
+            ],
+            "quote": "S209 'More than 2 hours per day'; S211 'a minimum of two hours of exercise every day'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S211"
+            ],
+            "refs": [
+              "dobermann.behaviour.family",
+              "dobermann.suitability.pdsa_children"
+            ],
+            "quote": "S211 'due to their large size and strong build we wouldn’t recommend a Dobermann if you have young children.'"
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S211"
+            ],
+            "refs": [
+              "dobermann.behaviour.experienced_owner",
+              "dobermann.suitability.pdsa_experienced_owner"
+            ],
+            "quote": "S211 'they probably aren’t the best breed for families with young children or first-time owners.'"
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S211"
+            ],
+            "refs": [
+              "dobermann.exercise.energy",
+              "dobermann.suitability.pdsa_mental_stimulation"
+            ],
+            "quote": "S211 'very energetic and will need plenty of mental and physical exercise'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S209"
+            ],
+            "refs": [
+              "dobermann.suitability.rkc_shedding"
+            ],
+            "quote": "S209 'Sheds: Yes'"
+          }
+        ],
+        "not_proposed": {
+          "children": "PDSA does not recommend the breed with young children (S211).",
+          "small_children": "PDSA advises against it (S211) → not_for_small_children instead.",
+          "first_time_owner": "PDSA: probably not the best breed for first-time owners (S211) → experienced_owner instead.",
+          "apartment": "RKC 'Large house' (S209).",
+          "other_pets": "PDSA: high prey drive, may chase smaller pets (S211). A prey-drive chip would be a new key — open for David, not added.",
+          "often_alone": "Only the general PDSA four-hour advice; may be destructive when alone too long (S211).",
+          "older_owners": "No source.",
+          "low_shedding": "Sheds (S209).",
+          "food_motivated_weight": "No breed-specific statement.",
+          "chews_when_bored": "No chewing statement (S211 names destructiveness only when left alone).",
+          "frequent_grooming": "Once a week (S209, S211) — criterion is more than once a week.",
+          "may_herd_children": "No source.",
+          "secure_fencing": "PDSA mentions only off-lead running in a secure area (paraphrase) — no fence advice.",
+          "shorter_lifespan": "RKC 'Over 10 years' (S209); the VetCompass median 9.2 y (S212) is a median, not an upper bound (runbook criterion).",
+          "drools": "No source.",
+          "fragile_older_children": "About fragile bones (Yorkshire Terrier) — not this breed's reason.",
+          "welfare": "RKC Breed Watch Category 1 (S209) → no brachycephalic_breathing / hips_hind_legs / heart_and_spine / back_spine / sensitive_skin. PDSA lists hip dysplasia, wobbler syndrome and dilated cardiomyopathy (S211) — research only, no chip (Yorkshire Terrier / corgi precedent)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, large_home; consider long_daily_exercise, not_for_small_children, experienced_owner, needs_mental_stimulation, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S209",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S209); no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health. Predlog Claude 2026-10-12 (not a runbook rule, čaka Davida): marketing never shows the Dobermann with small children (PDSA S211) and never with cropped ears or a docked tail (FCI 2015 natural ears and tail, S207).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a welfare breed)"
+      },
+      "ai_appearance": {
+        "value": "adult Dobermann, black with clearly defined rust red tan markings (default); short hard smooth shiny coat; natural uncropped ears dropped and lying close to the cheeks; natural undocked tail; long head like a blunt wedge, dark almond eyes, black nose; strong, muscular, elegant square build; no white markings",
+        "unit": "—",
+        "source_id": "S207",
+        "quote": "The Dobermann is bred in two colour varieties: black or brown with rust red,",
+        "confidence": "high",
+        "notes": "Colours from the FCI standard (S207: black or brown with rust red tan markings); the RKC (S210) also allows blue and fawn — not drawn. 'White spots' disqualify (FCI, as returned). Natural ears and tail (FCI 2015 'left natural', S207). Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and rust is the portrait default (FCI + RKC colour); natural ears and tail; no white markings"
       }
     }
   }
