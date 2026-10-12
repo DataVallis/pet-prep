@@ -112,7 +112,7 @@ describe('readBreedCatalogue', () => {
     expect(catalogue?.breeds.some((b) => b.species === 'cat')).toBe(false);
   });
 
-  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90; M5-R10-09: + Australian Shepherd, sort 100; M5-R10-10: + Havanese, sort 110; M5-R10-11: + West Highland White Terrier, sort 120; M5-R10-12: + Bernese Mountain Dog, sort 130; M5-R10-13: + Siberian Husky, sort 140; M5-R10-19: + Rottweiler, sort 150; M5-R10-20: + Bulldog, sort 160; M5-R10-21: + German Shorthaired Pointer, sort 170; M5-R10-22: + Yorkshire Terrier, sort 180; M5-R10-23: + Cane Corso, sort 190; M5-R10-24: + Pembroke Welsh Corgi, sort 200), never a cat', () => {
+  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90; M5-R10-09: + Australian Shepherd, sort 100; M5-R10-10: + Havanese, sort 110; M5-R10-11: + West Highland White Terrier, sort 120; M5-R10-12: + Bernese Mountain Dog, sort 130; M5-R10-13: + Siberian Husky, sort 140; M5-R10-19: + Rottweiler, sort 150; M5-R10-20: + Bulldog, sort 160; M5-R10-21: + German Shorthaired Pointer, sort 170; M5-R10-22: + Yorkshire Terrier, sort 180; M5-R10-23: + Cane Corso, sort 190; M5-R10-24: + Pembroke Welsh Corgi, sort 200; M5-R10-25: + Dobermann, sort 210), never a cat', () => {
     expect(FALLBACK_CATALOGUE.species).toEqual(['dog']);
     expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual([
       'mutt',
@@ -136,6 +136,7 @@ describe('readBreedCatalogue', () => {
       'yorkshire_terrier',
       'cane_corso',
       'pembroke_welsh_corgi',
+      'dobermann',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -300,6 +301,16 @@ describe('readBreedCatalogue', () => {
       suits: ['active_family'],
       consider: ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'shorter_lifespan', 'sheds', 'drools'],
     });
+    const dobermann = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'dobermann');
+    expect(dobermann).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 210 }),
+    );
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-25, runbook rules).
+    expect(dobermann?.search_keywords).toEqual(['dobermann', 'doberman', 'doberman pinscher', 'dobie', 'dobermann pinscher']);
+    expect(dobermann?.suitability).toEqual({
+      suits: ['active_family', 'family_pet', 'large_home'],
+      consider: ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds'],
+    });
     const corgi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pembroke_welsh_corgi');
     expect(corgi).toEqual(
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 200 }),
@@ -334,6 +345,7 @@ describe('readBreedCatalogue', () => {
       'yorkshire_terrier',
       'cane_corso',
       'pembroke_welsh_corgi',
+      'dobermann',
     ]);
   });
 });
@@ -458,6 +470,13 @@ describe('breed search', () => {
     expect(find('frenchie')).toEqual(['french_bulldog']);
     // M5-R10-20: "buldog" also finds the (English) Bulldog.
     expect(find('buldog')).toEqual(['french_bulldog', 'bulldog']);
+  });
+
+  it('M5-R10-25: finds the Dobermann by its SL / EN names and the AKC name', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('doberman')).toEqual(['dobermann']);
+    expect(find('dobermann')).toEqual(['dobermann']);
+    expect(find('pinscher')).toEqual(['dobermann']);
   });
 
   it('M5-R10-24: finds the Pembroke Welsh Corgi by its SL / EN names and nicknames', () => {

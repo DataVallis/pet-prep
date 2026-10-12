@@ -231,6 +231,13 @@ class FalAiService
                 .'low-set sturdy body of moderate length with a level back, natural undocked tail, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-25: FCI 143 (S207) — black with rust red tan markings as the anchor (first
+            // standard colour); ears and tail left natural (FCI 2015), never cropped or docked.
+            BreedType::Dobermann => 'A calm, alert Dobermann dog with a black coat and clearly defined rust red tan markings, '
+                .'short hard smooth shiny coat, natural uncropped ears dropped close to the cheeks, long wedge-shaped head, '
+                .'medium oval dark eyes, black nose, strong muscular elegant square build, natural undocked tail, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -543,6 +550,18 @@ class FalAiService
                 'eye_color' => 'brown',
                 'fur_texture' => 'medium-length, straight, with a dense undercoat',
                 'markings' => 'white markings on the legs, chest and neck',
+            ],
+            // M5-R10-25: FCI 143 (S207) — black or brown with rust red tan markings; never white
+            // markings, blue, fawn or merle.
+            BreedType::Dobermann => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'black and rust',
+                    1 => 'brown and rust',
+                    2 => 'black and rust',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, hard, smooth and tight-lying',
+                'markings' => 'clearly defined rust red tan markings on the muzzle, cheeks, eyebrows, chest and legs',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

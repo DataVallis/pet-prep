@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -313,6 +313,17 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_PEMBROKE_WELSH_CORGI = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-24)';
 
     /**
+     * M5-R10-25 Dobermann (unattended run 2026-10-12, data.json
+     * proposed_game_parameters.dobermann.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min, senior 90 min, puppy 10 min × age capped at 120, stages 9 / 36 / 83
+     * (senior from the VetCompass median 9.2 y, O'Neill et al. 2013, S212 — provisional until
+     * McMillan 2024 is checked), arrival 2 / 9 / 36 / 83, learning multiplier 1.9 (Coren 5,
+     * Brightest); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_DOBERMANN = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-25)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -382,7 +393,7 @@ class BreedStageParamsSeeder extends Seeder
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -825,6 +836,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-24 (docs/research/dog-data/data.json pembroke_welsh_corgi,
             // S202–S206; runbook rules in proposed_game_parameters.pembroke_welsh_corgi).
             BreedType::PembrokeWelshCorgi => self::pembrokeWelshCorgiProfile(),
+            // M5-R10-25 (docs/research/dog-data/data.json dobermann,
+            // S207–S212; runbook rules in proposed_game_parameters.dobermann).
+            BreedType::Dobermann => self::dobermannProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -2258,6 +2272,79 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'pembroke_welsh_corgi.lifespan.rkc',
                 'quote' => 'Lifespan: Over 12 years',
                 'notes' => 'RKC breed page lower bound (S204); PDSA "Over 12 years" (S206) the same. No McMillan 2024 / VetCompass median reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Dobermann (M5-R10-25). Stage boundaries, arrival ages, exercise minutes and the learning
+     * multiplier follow the runbook's standing rules (CONFIRMED_R10_DOBERMANN); weight, growth,
+     * Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function dobermannProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_DOBERMANN;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S212', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.dobermann.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog finishes growing at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [83, $boundary('Derived game boundary: last 25 % of lifespan (S11) × VetCompass median 9.2 y (O\'Neill et al. 2013, S212 — 37 deaths) = 6.9 y = 82.8 → 83 months. No McMillan 2024 value was reachable. Not chosen: 90 (RKC "Over 10 years", S209), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 83],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.dobermann.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S209', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.dobermann.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S209) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA "a minimum of two hours of exercise every day" (S211) agrees.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.dobermann.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[32.0, 45.0], [
+                'unit' => 'kg', 'source_id' => 'S207', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'dobermann.adult_weight.fci',
+                'quote' => 'Weight: Males: about 40 – 45 kg.',
+                'notes' => 'FCI (S207): males about 40–45 kg, females about 32–35 kg → game range 32–45 kg (both sexes). PDSA "30kg-40kg" (S211); the RKC standard gives no weight.',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'dobermann.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (32–45 kg ≈ 70–99 lb, the Large class of S10; RKC size "Large").',
+            ]],
+            'coren_rank' => [5, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'dobermann.trainability.coren_rank',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 5 ("Doberman Pinscher"), tier "Brightest Dogs" (ranks 1–10). Coren\'s own article (S34) not fetched this run.',
+            ]],
+            'learning_multiplier' => [1.9, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.dobermann.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 5 (S35) in the "Brightest" tier → max(1.8, round(2.0 − 4/30, 1)) = 1.9 (as the Golden Retriever, rank 4). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [9.2, [
+                'unit' => 'years', 'source_id' => 'S212', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'dobermann.lifespan.median_uk',
+                'quote' => 'Doberman 9.2 6.2-11.0 2.1-13.0 37',
+                'notes' => 'VetCompass median (O\'Neill et al. 2013, S212, 37 deaths). RKC / PDSA "Over 10 years" (S209, S211). No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

@@ -255,6 +255,7 @@ describe('PetPickerStep', () => {
       'breed-option-yorkshire_terrier',
       'breed-option-cane_corso',
       'breed-option-pembroke_welsh_corgi',
+      'breed-option-dobermann',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -493,6 +494,52 @@ describe('PetPickerStep', () => {
       expect(consider).toHaveTextContent(/escapes easily — needs a secure, high fence/);
       expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(screen.getByTestId('breed-option-siberian_husky')).toHaveTextContent(/Siberian Husky/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-25: the Dobermann (fallback) shows its chips, is found as "doberman" and "pinscher", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const dobermann = screen.getByTestId('breed-option-dobermann');
+    expect(dobermann).toHaveTextContent(/Doberman/);
+    expect(dobermann).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-dobermann-suits')).toHaveTextContent(/družinsko življenje/);
+    expect(screen.getByTestId('breed-suitability-dobermann-suits')).toHaveTextContent(/veliko hišo z vrtom/);
+    expect(screen.getByTestId('breed-suitability-dobermann-consider')).toHaveTextContent(/velik pes — ni za dom z majhnimi otroki/);
+    expect(screen.getByTestId('breed-suitability-dobermann-consider')).toHaveTextContent(/močan pes — potrebuje izkušenega lastnika/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'doberman');
+    expect(screen.getByTestId('breed-option-dobermann')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-pembroke_welsh_corgi')).toBeNull();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'pinscher');
+    expect(screen.getByTestId('breed-option-dobermann')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-dobermann'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'dobermann', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'dobermann' }),
+    );
+  });
+
+  it('M5-R10-25: the Dobermann chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-dobermann-suits');
+      const consider = screen.getByTestId('breed-suitability-dobermann-consider');
+      expect(suits).toHaveTextContent(/family life/);
+      expect(consider).toHaveTextContent(/large dog — not for homes with small children/);
+      expect(consider).toHaveTextContent(/powerful dog — needs an experienced owner/);
+      expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-dobermann')).toHaveTextContent(/Dobermann/);
     } finally {
       await i18n.changeLanguage('sl');
     }
