@@ -9,6 +9,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-12 — Doberman: sedma pasma po dvajsetih (M5-R10-25)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **dobermana** (16. mesto). Enaindvajseta plačljiva pasma psa: vsaj dve uri gibanja na dan (12.000 korakov za odraslega, 9.000 za starejšega), starejši od 6,9 leta (začasno), uči se 1,9-krat hitreje kot mešanček (Coren: 5. mesto).
+
+**Zakaj je pomembno:** Doberman je odličen družinski pes (The Royal Kennel Club), a velik, močan in zelo dejaven: PDSA ga ne priporoča družinam z majhnimi otroki in ne kot prvega psa. Zato izbirnik pokaže oboje — »Primerno za: aktivno družino, družinsko življenje, veliko hišo z vrtom« in »velik pes — ni za dom z majhnimi otroki«, »močan pes — potrebuje izkušenega lastnika«. Česanje 1× na teden, premor med obrokom in gibanjem ter socializacijo od malega je postopek zapisal kot potrebe z virom (naloge M5-R13, M5-R16 in M5-R17 — *načrt*), čeprav jih igra še ne vodi. V igri ima doberman vedno naravna ušesa in naraven rep — tako kot predvideva standard FCI.
+
+**Številke:** 6 novih virov (S207–S212), 1 migracija, 0 novih oznak, 4 novi ključi zdravja in 1 nov ključ testa v registru; Pest **2.516** testov, Jest **2.088**, izvoz registra **45** testov (vsi zeleni). Meja starejšega psa (83 mesecev) je začasna: temelji na mediani VetCompass iz le 37 primerov. Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Doberman je predan družini, a potrebuje vsaj dve uri gibanja na dan in izkušenega lastnika. V PetPrepu boste videli, ali vaš otrok zmore tak tempo — preden pripeljete domov velikega psa.«
+- 🧒 Otroci: »Doberman je hiter, pameten in se zelo hitro uči. Rad bi tekel s teboj vsak dan — dve uri!«
+- 💼 Investitorji: »Sedma pasma, ki jo je sistem sam izbral po javni lestvici AKC — z jasno oznako, za koga pasma ni primerna, in odprtimi vprašanji za ustanovitelja v enem samodejnem zagonu.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri dobermanu pove, naj vzreditelj pokaže DNA test za von Willebrandovo bolezen, pregled oči, DNA test DINGS2 in rentgen kolkov staršev (RKC) — in nikoli ne obljublja zdravja.«
+- 📣 Omrežja: »Dve uri gibanja na dan, vsak dan. Kmalu boste lahko dobermana preizkusili v PetPrepu — z naravnimi ušesi in repom.« *(ko bo nakup v trgovini deloval)*
+- 🛠 Tehnično: »Brez novega ključa oznak: vse oznake dobermana so že obstajale; vse številke igre so iz stalnih pravil runbooka.«
+
+---
+
 ## 2026-10-12 — Welsh corgi pembroke: šesta pasma po dvajsetih (M5-R10-24)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **welsh corgija pembroke** (15. mesto). Dvajseta plačljiva pasma psa: okoli ena ura gibanja na dan (6.000 korakov za odraslega, 4.500 za starejšega), starejši od 9 let, uči se 1,5-krat hitreje kot mešanček (Coren: 11. mesto).
