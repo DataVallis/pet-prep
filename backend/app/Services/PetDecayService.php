@@ -171,8 +171,9 @@ class PetDecayService
             // M5-R06-04 (QA): a cat's wand game that ran out (TTL) or was hit by a
             // lock ends here — broadcast so no app keeps showing it as running.
             $wandEnded = $locked->isCat() && $this->wand->expireStale($locked, now()->startOfSecond()) > 0;
-            // M5-R06-05: the same for a grooming / litter change / scratching session.
-            $careEnded = $locked->isCat() && $this->chores->expireStale($locked, now()->startOfSecond()) > 0;
+            // M5-R06-05: the same for a grooming / litter change / scratching session
+            // (M5-R13: also a brushed dog's grooming).
+            $careEnded = ($locked->isCat() || $locked->groomingEnabled()) && $this->chores->expireStale($locked, now()->startOfSecond()) > 0;
 
             return [$locked, $changed, $playFlipped, $wandEnded, $careEnded];
         };
@@ -388,9 +389,9 @@ class PetDecayService
         // costs every command some progress (once per day, pointer on the pet).
         $this->training->applyDecay($pet, $now);
 
-        // M5-R06-05 (brushed cats): the end of a program week with ≥ ceil(goal / 2)
-        // of its groomings missed → matted coat (state only, no metric effect).
-        $matted = $pet->isCat() && $this->chores->closeGroomingWeek($pet, $now);
+        // M5-R06-05 (brushed cats; M5-R13 brushed dogs): the end of a program week with
+        // ≥ ceil(goal / 2) of its groomings missed → matted coat (state only, no metric effect).
+        $matted = $pet->groomingEnabled() && $this->chores->closeGroomingWeek($pet, $now);
 
         // Hygiene (M1-05): no gradual decay; scheduled random events that
         // fall into this interval drop it to 0. The neglect clock starts at

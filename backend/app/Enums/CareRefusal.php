@@ -139,7 +139,7 @@ enum CareRefusal: string
     /** Another child's litter change is running (next_allowed_at = its expiry). */
     case LitterChangeSessionActive = 'litter_change_session_active';
 
-    /** Grooming is a brushed cat's routine (CAT_SPEC Q8: Maine Coon, Ragdoll, British Shorthair) — not for other breeds / species / legacy pets. */
+    /** Grooming is a brushed cat's / dog's routine (CAT_SPEC Q8; M5-R13 dogs with `grooming_enabled`) — not for breeds without a grooming row, other pets or legacy pets. */
     case GroomingNotAvailable = 'grooming_not_available';
 
     /**
@@ -151,10 +151,10 @@ enum CareRefusal: string
     /** All of this program week's groomings are done (next_allowed_at = the next week). */
     case GroomingWeekDone = 'grooming_week_done';
 
-    /** The cat sleeps in quiet hours — no grooming (like the wand game; next_allowed_at = their end). */
+    /** The pet sleeps in quiet hours — no grooming (like the wand game; next_allowed_at = their end). */
     case GroomingQuietHours = 'grooming_quiet_hours';
 
-    /** Another child is grooming the cat (next_allowed_at = its expiry). */
+    /** Another child is grooming the pet (next_allowed_at = its expiry). */
     case GroomingSessionActive = 'grooming_session_active';
 
     /** No scratching mess is open — nothing to redirect. */

@@ -254,8 +254,9 @@ describe('life-stage data against data.json', function () {
         // boundary / senior arrival age (76 — Claude's suggestion, no runbook rule produced a value).
         $open = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'bernese-mountain-dog')->where('verified', false);
         expect($open->map(fn (array $r) => "{$r['stage']}.{$r['key']}")->values()->all())
-            ->toEqualCanonicalizing(['senior.'.StageParamKey::StartsAtMonths->value, 'senior.'.StageParamKey::ArrivalAgeMonths->value, 'puppy.'.StageParamKey::ChewingChancePerDay->value]);
-        foreach ($open->where('key', '!=', StageParamKey::ChewingChancePerDay->value) as $row) {
+            // M5-R13: + the brushing routine ("more than once a week" without a number → Claude's proposal 2).
+            ->toEqualCanonicalizing(['senior.'.StageParamKey::StartsAtMonths->value, 'senior.'.StageParamKey::ArrivalAgeMonths->value, 'puppy.'.StageParamKey::ChewingChancePerDay->value, 'all.'.StageParamKey::GroomingSessionsPerWeek->value]);
+        foreach ($open->whereNotIn('key', [StageParamKey::ChewingChancePerDay->value, StageParamKey::GroomingSessionsPerWeek->value]) as $row) {
             expect($row['decision'])->toBe(BreedStageParamsSeeder::PROPOSED_R10_BERNESE_SENIOR)
                 ->and($row['ref'])->toBe('proposed_game_parameters.bernese_mountain_dog.senior_boundary_months')
                 ->and($row['value'])->toBe(bmdData('proposed_game_parameters.bernese_mountain_dog.senior_boundary_months.value'))
@@ -266,7 +267,9 @@ describe('life-stage data against data.json', function () {
     it('shares the general dog rows with the Border Collie (only the breed profile differs)', function () {
         $profileKeys = [StageParamKey::StartsAtMonths, StageParamKey::ArrivalAgeMonths, StageParamKey::ExerciseMinutesPerDay,
             StageParamKey::ExerciseMinutesPerAgeMonth, StageParamKey::AdultWeightKg, StageParamKey::GrowthEndMonths,
-            StageParamKey::CorenRank, StageParamKey::TrainingLearningMultiplier, StageParamKey::LifespanYears];
+            StageParamKey::CorenRank, StageParamKey::TrainingLearningMultiplier, StageParamKey::LifespanYears,
+            // M5-R13: the breed's brushing routine (the Border Collie has none).
+            StageParamKey::GroomingSessionsPerWeek];
         $general = fn (string $slug) => collect(BreedStageParamsSeeder::rows())
             ->where('breed_slug', $slug)
             ->reject(fn (array $r) => in_array(StageParamKey::from($r['key']), $profileKeys, true))

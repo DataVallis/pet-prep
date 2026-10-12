@@ -49,6 +49,12 @@ use Illuminate\Support\Str;
  * the missed routines count. The next grooming lasts ~2×
  * (`matted_session_seconds`) and clears it.
  *
+ * Dogs (M5-R13, David 2026-10-12 "kot pri mački"): grooming applies to a
+ * dog exactly like to a cat — same sessions, limits, ledger slots and
+ * matted coat — when the dog has `grooming_enabled` (Pet::groomingEnabled)
+ * and its breed has a `grooming_sessions_per_week` row (mutt / Border
+ * Collie: none). The litter change stays cat-only.
+ *
  * Every caller that writes holds the pet's row lock (backend/CLAUDE.md).
  */
 class CatChoreService
@@ -77,10 +83,14 @@ class CatChoreService
     //  Numbers
     // ──────────────────────────────────────────────────────────────
 
-    /** Groomings per program week on a family-local date (Maine Coon 3, Ragdoll 2, British Shorthair 1; 0 = no grooming routine). */
+    /**
+     * Groomings per program week on a family-local date (Maine Coon 3, Ragdoll 2, British Shorthair 1;
+     * M5-R13 dogs per breed, e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7;
+     * 0 = no grooming routine — no breed row, a legacy pet, a dog without `grooming_enabled`).
+     */
     public function groomingGoalOn(Pet $pet, string $localDate): int
     {
-        if (! $pet->isCat() || $pet->isLegacyProfile()) {
+        if (! $pet->groomingEnabled()) {
             return 0;
         }
         $value = $this->lifeStages->stageValueOn($pet, $localDate, StageParamKey::GroomingSessionsPerWeek)['value'] ?? null;
@@ -217,7 +227,7 @@ class CatChoreService
             return null;
         }
 
-        // Grooming (brushed cats: Maine Coon, Ragdoll, British Shorthair).
+        // Grooming (brushed cats; M5-R13 brushed dogs).
         $period = $this->groomingPeriodAt($pet, $now);
         if ($period === null) {
             return $refuse(CareRefusal::GroomingNotAvailable);
@@ -530,7 +540,7 @@ class CatChoreService
      */
     public function closeGroomingWeek(Pet $pet, CarbonInterface $now): bool
     {
-        if ($pet->isUnborn() || ! $pet->isCat() || $pet->isLegacyProfile()) {
+        if ($pet->isUnborn() || ! $pet->groomingEnabled()) {
             return false;
         }
         $period = $this->lifeStages->programPeriodAt($pet, $now, self::GROOMING_PERIOD_DAYS);
@@ -552,7 +562,7 @@ class CatChoreService
         $date = $pet->localDate($weekEnd);
         $goal = $this->groomingGoalOn($pet, $date);
         if ($goal <= 0) {
-            return false; // no grooming routine (domestic cat)
+            return false; // no grooming routine (domestic cat, a dog breed without a row)
         }
         $missed = 0;
         foreach ($this->ledger->routinesFor(collect([$pet]), $date, $date, $now)[$pet->id] ?? [] as $routine) {

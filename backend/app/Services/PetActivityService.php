@@ -560,7 +560,7 @@ class PetActivityService
     }
 
     /**
-     * Start the weekly full litter change / a Maine Coon grooming (server-led
+     * Start the weekly full litter change / a brushed cat's or dog's grooming (server-led
      * stroke mini-game, CatChoreService). Locks first (423); refusals 422
      * (`next_allowed_at` where it ends). One `PetUpdated('{kind}_started')`.
      */
