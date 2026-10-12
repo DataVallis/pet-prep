@@ -1097,7 +1097,7 @@ return [
             'ear_carriage' => 'S202 "Pricked, medium sized, slightly rounded."',
             'eye_color' => 'S202 "Well set, round, medium size, brown, blending with colour of coat."',
             'tail' => 'S205 "Previously customarily docked short." undocked: "set in line with the topline."',
-            'body' => 'S205 "Medium length, well-sprung ribs, not short coupled, slightly tapering, when viewed from above. Level topline."; welfare: PDSA S206 intervertebral disc disease → moderate length, enough ground clearance',
+            'body' => 'S205 "Medium length, well-sprung ribs, not short coupled, slightly tapering, when viewed from above. Level topline."; precaution (not a welfare breed): PDSA S206 lists intervertebral disc disease → moderate length, enough ground clearance',
         ],
         'traits' => [
             'size' => ['small, low-set'],

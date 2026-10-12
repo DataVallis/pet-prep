@@ -18,11 +18,11 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 **Številke:** 5 novih virov (S202–S206), 1 migracija, 0 novih oznak, 1 nov ključ zdravja v registru; Pest **2.488** testov, Jest **2.079**, izvoz registra **44** testov (vsi zeleni). Na telefonu še ni preverjeno.
 
 **Kako povedati:**
-- 👩 Starši: »Corgi je prijazen in rad uči nove stvari, a zna pasti otroke in jih grizljati za pete. V PetPrepu boste videli, ali vaš otrok zmore uro sprehoda na dan in redno česanje.«
+- 👩 Starši: »Corgi je prijazen in se rad uči, a zna pasti otroke in jih grizljati za pete. V PetPrepu boste videli, ali vaš otrok zmore uro sprehoda na dan.« *(česanja psov aplikacija še ne vodi — načrt, M5-R13)*
 - 🧒 Otroci: »Corgi je majhen pastirski pes z velikim srcem. Rad teče in se igra — ampak ko tečeš, te lahko poskusi »pasti«!«
 - 💼 Investitorji: »Šesta pasma, ki jo je sistem sam izbral po javni lestvici AKC — od raziskave do odprtih vprašanj za ustanovitelja v enem samodejnem zagonu.«
 - 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri corgiju pove, naj vzreditelj pokaže rentgen kolkov staršev (RKC) — in nikoli ne obljublja zdravja.«
-- 📣 Omrežja: »Kratke noge, veliko energije: ura gibanja na dan in česanje večkrat na teden. Kmalu boste lahko corgija preizkusili v PetPrepu.« *(ko bo nakup v trgovini deloval)*
+- 📣 Omrežja: »Kratke noge, veliko energije: ura gibanja na dan. Kmalu boste lahko corgija preizkusili v PetPrepu.« *(ko bo nakup v trgovini deloval)*
 - 🛠 Tehnično: »Prva pasma s prazno skupino »Primerno za« — izbirnik jo preprosto skrije; vse številke igre so iz stalnih pravil runbooka.«
 
 ---
