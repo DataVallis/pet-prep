@@ -252,6 +252,7 @@ describe('PetPickerStep', () => {
       'breed-option-rottweiler',
       'breed-option-bulldog',
       'breed-option-german_shorthaired_pointer',
+      'breed-option-yorkshire_terrier',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -490,6 +491,47 @@ describe('PetPickerStep', () => {
       expect(consider).toHaveTextContent(/escapes easily — needs a secure, high fence/);
       expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(screen.getByTestId('breed-option-siberian_husky')).toHaveTextContent(/Siberian Husky/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-22: the Yorkshire Terrier (fallback) shows its chips incl. the new older-children chip, is found as "jorkširski" and "yorkie", and quotes 3.000 / 2.300 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const yorkie = screen.getByTestId('breed-option-yorkshire_terrier');
+    expect(yorkie).toHaveTextContent(/Yorkshirski terier/);
+    expect(yorkie).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-yorkshire_terrier-suits')).toHaveTextContent(/življenje v stanovanjudom, kjer želite manj dlak/);
+    expect(screen.getByTestId('breed-suitability-yorkshire_terrier-consider')).toHaveTextContent(/krhke kosti — bolje za starejše otrokepotrebuje česanje večkrat na teden/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'jorkširski');
+    expect(screen.getByTestId('breed-option-yorkshire_terrier')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-west_highland_white_terrier')).toBeNull();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'yorkie');
+    expect(screen.getByTestId('breed-option-yorkshire_terrier')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-yorkshire_terrier'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 3\.000 pri 3 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/3\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/2\.300 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'yorkshire_terrier', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'yorkshire_terrier' }),
+    );
+  });
+
+  it('M5-R10-22: the Yorkshire Terrier chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const consider = screen.getByTestId('breed-suitability-yorkshire_terrier-consider');
+      expect(consider).toHaveTextContent(/fragile bones — better with older children/);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-suitability-yorkshire_terrier-suits')).not.toHaveTextContent(/hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-yorkshire_terrier')).toHaveTextContent(/Yorkshire Terrier/);
     } finally {
       await i18n.changeLanguage('sl');
     }

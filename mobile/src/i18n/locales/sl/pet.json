@@ -103,6 +103,7 @@
       "rottweiler": "Del 12-tedenskega izziva.",
       "bulldog": "Del 12-tedenskega izziva.",
       "german_shorthaired_pointer": "Del 12-tedenskega izziva.",
+      "yorkshire_terrier": "Del 12-tedenskega izziva.",
       "domestic_cat": "Kratka dlaka · brezplačna",
       "maine_coon": "Dolga dlaka · česanje 3× na teden",
       "british_shorthair": "Kratka, gosta dlaka · česanje 1× na teden",
@@ -239,6 +240,12 @@
         "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
         "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
       },
+      "yorkshire_terrier": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 3.000 pri 3 mesecih.",
+        "young": "2 obroka na dan; sprehod 3.000 korakov na dan (kot odrasel pes).",
+        "adult": "2 obroka na dan; sprehod 3.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 2.300 korakov na dan."
+      },
       "domestic_cat": {
         "puppy": "Pride kot mucek, star 2 meseca.",
         "young": "Pride kot mlada mačka, stara 1 leto.",
@@ -365,7 +372,8 @@
       "sensitive_skin": "občutljiva koža — nagnjenost k srbenju in vnetjem",
       "shorter_lifespan": "krajša življenjska doba",
       "secure_fencing": "rad pobegne — potrebuje varno, visoko ograjo",
-      "experienced_owner": "močan pes — potrebuje izkušenega lastnika"
+      "experienced_owner": "močan pes — potrebuje izkušenega lastnika",
+      "fragile_older_children": "krhke kosti — bolje za starejše otroke"
     }
   },
   "media": {

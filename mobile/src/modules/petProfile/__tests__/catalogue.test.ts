@@ -112,7 +112,7 @@ describe('readBreedCatalogue', () => {
     expect(catalogue?.breeds.some((b) => b.species === 'cat')).toBe(false);
   });
 
-  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90; M5-R10-09: + Australian Shepherd, sort 100; M5-R10-10: + Havanese, sort 110; M5-R10-11: + West Highland White Terrier, sort 120; M5-R10-12: + Bernese Mountain Dog, sort 130; M5-R10-13: + Siberian Husky, sort 140; M5-R10-19: + Rottweiler, sort 150; M5-R10-20: + Bulldog, sort 160; M5-R10-21: + German Shorthaired Pointer, sort 170), never a cat', () => {
+  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90; M5-R10-09: + Australian Shepherd, sort 100; M5-R10-10: + Havanese, sort 110; M5-R10-11: + West Highland White Terrier, sort 120; M5-R10-12: + Bernese Mountain Dog, sort 130; M5-R10-13: + Siberian Husky, sort 140; M5-R10-19: + Rottweiler, sort 150; M5-R10-20: + Bulldog, sort 160; M5-R10-21: + German Shorthaired Pointer, sort 170; M5-R10-22: + Yorkshire Terrier, sort 180), never a cat', () => {
     expect(FALLBACK_CATALOGUE.species).toEqual(['dog']);
     expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual([
       'mutt',
@@ -133,6 +133,7 @@ describe('readBreedCatalogue', () => {
       'rottweiler',
       'bulldog',
       'german_shorthaired_pointer',
+      'yorkshire_terrier',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -277,6 +278,16 @@ describe('readBreedCatalogue', () => {
       suits: ['active_family', 'large_home'],
       consider: ['long_daily_exercise', 'sheds'],
     });
+    const yorkie = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'yorkshire_terrier');
+    expect(yorkie).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 180 }),
+    );
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-22, runbook rules; new chip fragile_older_children).
+    expect(yorkie?.search_keywords).toEqual(['yorkshire terrier', 'yorkshire', 'yorkie', 'yorki', 'yorkshirski terier', 'jorkširski terier', 'jorksirski terier', 'jorki']);
+    expect(yorkie?.suitability).toEqual({
+      suits: ['apartment', 'low_shedding'],
+      consider: ['fragile_older_children', 'frequent_grooming'],
+    });
     expect(FALLBACK_CATALOGUE.breeds[0].suitability).toEqual({ suits: [], consider: [] });
     // The fallback is already in picker order.
     expect(readBreedCatalogue(FALLBACK_CATALOGUE)?.breeds.map((b) => b.breed)).toEqual([
@@ -298,6 +309,7 @@ describe('readBreedCatalogue', () => {
       'rottweiler',
       'bulldog',
       'german_shorthaired_pointer',
+      'yorkshire_terrier',
     ]);
   });
 });
@@ -346,7 +358,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(15);
+    expect(CONSIDER_TAGS).toHaveLength(16);
+    // M5-R10-22 (runbook new-tag rule): fragile bones — better with older children; no numbers.
+    expect(CONSIDER_TAGS).toContain('fragile_older_children');
     // M5-R10-13 (runbook new-tag rule): escapes easily — needs a secure, high fence; no numbers.
     expect(CONSIDER_TAGS).toContain('secure_fencing');
     // M5-R10-19 (runbook new-tag rule): powerful dog — needs an experienced owner; no numbers.
@@ -417,6 +431,15 @@ describe('breed search', () => {
     expect(find('frenchie')).toEqual(['french_bulldog']);
     // M5-R10-20: "buldog" also finds the (English) Bulldog.
     expect(find('buldog')).toEqual(['french_bulldog', 'bulldog']);
+  });
+
+  it('M5-R10-22: finds the Yorkshire Terrier by its SL / EN names and nicknames', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('yorkshirski terier')).toEqual(['yorkshire_terrier']);
+    expect(find('jorkširski')).toEqual(['yorkshire_terrier']);
+    expect(find('jorksirski')).toEqual(['yorkshire_terrier']);
+    expect(find('yorkie')).toEqual(['yorkshire_terrier']);
+    expect(find('jorki')).toEqual(['yorkshire_terrier']);
   });
 
   it('M5-R10-21: finds the German Shorthaired Pointer by its SL / EN names, never the German Shepherd for "ptičar"', () => {
