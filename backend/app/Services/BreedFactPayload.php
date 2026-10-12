@@ -23,6 +23,18 @@ namespace App\Services;
  */
 final class BreedFactPayload
 {
+    /** Values of `reason` (fact of the day, /shown). */
+    public const REASONS = "'no_pet'|'non_pedigree'|'locked'|'no_image'|'no_fact'|'first_day'|'quiet_hours'|'shown_today'|'week_cap'|'too_soon'";
+
+    /** PHPDoc shape of the fact-of-the-day body (also the /shown `state`), for #[Response] attributes. */
+    public const DAY_SHAPE = "array{fact: array{id: int, key: string, breed: string, category: 'origin'|'body'|'temperament'|'exercise'|'diet'|'grooming'|'training', audience: 'child', title: string, why: string|null, source_name: string, source_url: null, game_rule_key: string|null, not_vet_reviewed: bool, read: bool, read_at: string|null, read_by_children: list<int>}|null, may_auto_show: bool, reason: ".self::REASONS.'|null, shown_today: bool, shown_this_week: int, program_week: int|null, read_count: int, total_count: int}';
+
+    /** /shown 200 body. */
+    public const SHOWN_OK_SHAPE = "array{status: 'recorded'|'already_shown', reason: null, state: ".self::DAY_SHAPE.'}';
+
+    /** /shown 422 body (not Laravel's validation shape). */
+    public const SHOWN_REFUSED_SHAPE = "array{status: 'refused', reason: ".self::REASONS.', state: '.self::DAY_SHAPE.'}';
+
     /**
      * @param  array{breed: string, facts: list<array<string, mixed>>, read_count: int, total_count: int}  $list
      * @return array{breed: string, facts: list<array{id: int, key: string, breed: string, category: 'origin'|'body'|'temperament'|'exercise'|'diet'|'grooming'|'training'|'family'|'health', audience: 'child'|'parent', title: string, why: string|null, source_name: string, source_url: string|null, game_rule_key: string|null, not_vet_reviewed: bool, read: bool, read_at: string|null, read_by_children: list<int>}>, read_count: int, total_count: int}
@@ -43,6 +55,25 @@ final class BreedFactPayload
             // Facts of this list the caller has read (»8 od 40«).
             'read_count' => $list['read_count'],
             'total_count' => $list['total_count'],
+        ];
+    }
+
+    /**
+     * Body of POST /api/child/fact-of-the-day/shown (200 recorded | already_shown, 422 refused).
+     *
+     * @param  array{status: 'recorded'|'already_shown'|'refused', reason: string|null}  $result
+     * @param  array{fact: array<string, mixed>|null, may_auto_show: bool, reason: string|null, shown_today: bool, shown_this_week: int, program_week: int|null, read_count: int, total_count: int}  $day
+     * @return array{status: 'recorded'|'already_shown'|'refused', reason: 'no_pet'|'non_pedigree'|'locked'|'no_image'|'no_fact'|'first_day'|'quiet_hours'|'shown_today'|'week_cap'|'too_soon'|null, state: array{fact: array{id: int, key: string, breed: string, category: 'origin'|'body'|'temperament'|'exercise'|'diet'|'grooming'|'training', audience: 'child', title: string, why: string|null, source_name: string, source_url: null, game_rule_key: string|null, not_vet_reviewed: bool, read: bool, read_at: string|null, read_by_children: list<int>}|null, may_auto_show: bool, reason: 'no_pet'|'non_pedigree'|'locked'|'no_image'|'no_fact'|'first_day'|'quiet_hours'|'shown_today'|'week_cap'|'too_soon'|null, shown_today: bool, shown_this_week: int, program_week: int|null, read_count: int, total_count: int}}
+     */
+    public static function shown(array $result, array $day): array
+    {
+        return [
+            // recorded: counted now · already_shown: today's sheet was already recorded (idempotent) · refused: not allowed now (422).
+            'status' => $result['status'],
+            // Why refused (same values as fact-of-the-day `reason`); null when recorded / already_shown.
+            'reason' => $result['reason'],
+            // The updated GET /api/child/fact-of-the-day body.
+            'state' => self::factOfTheDay($day),
         ];
     }
 
@@ -71,7 +102,7 @@ final class BreedFactPayload
             // Why not (null when it may) — see the return type for the values.
             'reason' => $day['reason'],
             // An automatic sheet was already recorded today (family-local day).
-            'shown_today' => $day['shown_today'],
+            'shown_today' => (bool) $day['shown_today'],
             // Automatic sheets recorded in the current program week (0–2).
             'shown_this_week' => $day['shown_this_week'],
             // 1 = the program week from birth (payment-lock time excluded); null when unborn.

@@ -39,6 +39,15 @@ function bfiDir(?callable $edit = null, string $file = 'border_collie.json'): st
     return $dir;
 }
 
+/** verified_hash for a fact of a file (same definition as the README / --print-hashes). */
+function bfiHash(string $breed, array $f): string
+{
+    $values = [$breed, $f['category'], $f['audience'], $f['title']['en'], $f['title']['sl'], $f['why']['en'] ?? null, $f['why']['sl'] ?? null,
+        $f['source_id'], $f['source_name'], $f['source_url'], $f['quote'], $f['game_rule_key'] ?? null];
+
+    return hash('sha256', (string) json_encode($values, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
+}
+
 function bfiImport(string $dir, array $options = [])
 {
     return test()->artisan('breeds:import-facts', array_merge(['--dir' => $dir], $options));
@@ -68,7 +77,7 @@ describe('import', function () {
 
         $snapshot = fn () => BreedFact::orderBy('id')->get()->map(fn (BreedFact $f) => [$f->id, $f->status->value, $f->content_hash, $f->updated_at->toIso8601String()])->all();
         $before = $snapshot();
-        bfiImport($dir)->expectsOutputToContain('0 new, 0 updated, 0 approved → re-review, 0 draft → verified, 3 unchanged')->assertSuccessful();
+        bfiImport($dir)->expectsOutputToContain('0 new, 0 updated, 0 approved → re-review, 0 draft → verified, 0 reordered, 3 unchanged')->assertSuccessful();
         expect($snapshot())->toBe($before);
     });
 
@@ -101,6 +110,7 @@ describe('import', function () {
         $admin = User::factory()->create(['role' => 'parent', 'is_superadmin' => true]);
         app(BreedFactReviewService::class)->approve(BreedFact::where('key', 'border_collie-001')->sole(), $admin);
 
+        // New text, the file still carries the OLD verified_hash → draft (not re-verified).
         bfiImport(bfiDir(function (array $d) {
             $d['facts'][0]['title']['sl'] = 'Border collie potrebuje več kot 2 uri gibanja na dan.';
 
@@ -108,23 +118,91 @@ describe('import', function () {
         }))
             ->expectsOutputToContain('1 approved → re-review')
             ->expectsOutputToContain('border_collie-001: approved content changed')
+            ->expectsOutputToContain('without a matching verified_hash (kept as draft): border_collie-001')
             ->assertSuccessful();
 
         expect(BreedFact::where('key', 'border_collie-001')->sole())
-            ->status->toBe(BreedFactStatus::Verified)
+            ->status->toBe(BreedFactStatus::Draft)
+            ->verified_by->toBeNull()
             ->approved_by->toBeNull()
             ->approved_at->toBeNull()
             ->title_sl->toBe('Border collie potrebuje več kot 2 uri gibanja na dan.');
+
+        // Re-verified for the new text (verified_hash = new content hash) → verified.
+        bfiImport(bfiDir(function (array $d) {
+            $d['facts'][0]['title']['sl'] = 'Border collie potrebuje več kot 2 uri gibanja na dan.';
+            $d['facts'][0]['verified_hash'] = bfiHash('border_collie', $d['facts'][0]);
+
+            return $d;
+        }))->expectsOutputToContain('1 draft → verified')->assertSuccessful();
+        expect(BreedFact::where('key', 'border_collie-001')->sole()->status)->toBe(BreedFactStatus::Verified);
+    });
+
+    it('imports "verified" only with a verified_hash of the exact text (also new facts)', function () {
+        bfiImport(bfiDir(function (array $d) {
+            unset($d['facts'][0]['verified_hash']);                // no proof
+            $d['facts'][2]['verified_hash'] = str_repeat('0', 64); // proof for another text
+
+            return $d;
+        }))
+            ->expectsOutputToContain('3 new')
+            ->expectsOutputToContain('without a matching verified_hash (kept as draft): border_collie-001, border_collie-003')
+            ->assertSuccessful();
+
+        expect(BreedFact::orderBy('sort')->pluck('status')->map->value->all())->toBe(['draft', 'draft', 'draft'])
+            ->and(BreedFact::whereNotNull('verified_by')->count())->toBe(0);
+    });
+
+    it('sends a changed verified (not approved) fact to draft unless re-verified', function () {
+        bfiImport(bfiDir())->assertSuccessful();
+
+        bfiImport(bfiDir(function (array $d) {
+            $d['facts'][2]['quote'] = 'A different verbatim quote.';
+
+            return $d;
+        }))->expectsOutputToContain('1 updated')->assertSuccessful();
+        expect(BreedFact::where('key', 'border_collie-003')->sole())->status->toBe(BreedFactStatus::Draft)->verified_by->toBeNull();
+    });
+
+    it('changes the order without re-opening the review (sort is not content)', function () {
+        bfiImport(bfiDir())->assertSuccessful();
+        $admin = User::factory()->create(['role' => 'parent', 'is_superadmin' => true]);
+        $fact = BreedFact::where('key', 'border_collie-001')->sole();
+        app(BreedFactReviewService::class)->approve($fact, $admin);
+
+        bfiImport(bfiDir(function (array $d) {
+            $d['facts'][0]['sort'] = 10;
+
+            return $d;
+        }))->expectsOutputToContain('1 reordered')->assertSuccessful();
+        expect($fact->fresh())->sort->toBe(10)->status->toBe(BreedFactStatus::Approved)->approved_by->toBe($admin->id);
+    });
+
+    it('prints the content hashes (verified_hash values)', function () {
+        $data = json_decode((string) file_get_contents(BF_FIXTURE), true);
+        $hash = bfiHash('border_collie', $data['facts'][1]);
+
+        bfiImport(bfiDir(), ['--print-hashes' => true])
+            ->expectsOutputToContain('border_collie-001 '.$data['facts'][0]['verified_hash'].' verified_hash-ok')
+            ->expectsOutputToContain("border_collie-002 {$hash} no-verified_hash")
+            ->assertSuccessful();
+        expect(BreedFact::count())->toBe(0)
+            ->and(BreedFact::hashOf([
+                'breed' => 'border_collie', 'category' => 'origin', 'audience' => 'child',
+                'title_en' => $data['facts'][1]['title']['en'], 'title_sl' => $data['facts'][1]['title']['sl'],
+                'source_id' => 'S1', 'source_name' => 'FCI', 'source_url' => 'https://www.fci.be/', 'quote' => 'Test fixture quote.',
+            ]))->toBe($hash);
     });
 
     it('updates drafts, promotes draft → verified, never demotes an admin verify', function () {
         bfiImport(bfiDir())->assertSuccessful();
         $draft = BreedFact::where('key', 'border_collie-002')->sole();
 
-        // Same content, the file now says verified → promoted.
+        // Same content, the file now says verified (with the hash) → promoted.
         bfiImport(bfiDir(function (array $d) {
             $d['facts'][1]['status'] = 'verified';
             $d['facts'][1]['verified_by'] = 'claude-verifier';
+            $d['facts'][1]['verified_hash'] = bfiHash('border_collie', $d['facts'][1]);
 
             return $d;
         }))->expectsOutputToContain('1 draft → verified')->assertSuccessful();
@@ -262,6 +340,26 @@ describe('import', function () {
 
             return $d;
         }, 'duplicate key'],
+        'unknown fact key' => [function ($d) {
+            $d['facts'][0]['verifed_by'] = 'typo';
+
+            return $d;
+        }, 'border_collie-001: unknown key(s): verifed_by'],
+        'unknown language' => [function ($d) {
+            $d['facts'][0]['title']['de'] = 'Hund';
+
+            return $d;
+        }, 'title: unknown language key(s): de'],
+        'bad verified_hash' => [function ($d) {
+            $d['facts'][0]['verified_hash'] = 'ABC';
+
+            return $d;
+        }, 'verified_hash must be null or a lower-case sha256 hex'],
+        'unknown top-level key' => [function ($d) {
+            $d['version'] = 2;
+
+            return $d;
+        }, 'unknown top-level key(s): version'],
         'facts not a list' => [function ($d) {
             $d['facts'] = ['a' => 1];
 
@@ -358,7 +456,14 @@ describe('admin review', function () {
         expect($draft->fresh())->status->toBe(BreedFactStatus::Draft)->approved_by->toBeNull()->approved_at->toBeNull()->verified_by->toBeNull();
 
         $parent = User::factory()->parent()->create();
-        expect(fn () => $review->approve(BreedFact::where('key', 'border_collie-001')->sole(), $parent))->toThrow(InvalidArgumentException::class, 'superadmin');
+        $draft2 = BreedFact::where('key', 'border_collie-002')->sole();
+        expect(fn () => $review->approve(BreedFact::where('key', 'border_collie-001')->sole(), $parent))->toThrow(InvalidArgumentException::class, 'superadmin')
+            ->and(fn () => $review->verify($draft2, $parent))->toThrow(InvalidArgumentException::class, 'superadmin')
+            ->and(fn () => $review->reject(BreedFact::where('key', 'border_collie-001')->sole(), $parent))->toThrow(InvalidArgumentException::class, 'superadmin')
+            ->and(fn () => $review->approveMany([BreedFact::where('key', 'border_collie-001')->sole()], $parent))->toThrow(InvalidArgumentException::class, 'superadmin')
+            ->and($draft2->fresh()->status)->toBe(BreedFactStatus::Draft)
+            ->and($parent->can('verify', $draft2))->toBeFalse()
+            ->and($admin->can('verify', $draft2))->toBeTrue();
     });
 
     it('needs the source fields before verifying', function () {
@@ -375,8 +480,13 @@ describe('admin review', function () {
         $this->actingAs($admin);
         $facts = BreedFact::orderBy('sort')->get();
 
+        // Default order: breed, sort, id (not id alone).
+        $facts[0]->forceFill(['sort' => 10])->save();
+        Livewire::test(ListBreedFacts::class)->assertCanSeeTableRecords([$facts[1], $facts[2], $facts[0]], inOrder: true);
+        $facts[0]->forceFill(['sort' => 1])->save();
+
         Livewire::test(ListBreedFacts::class)
-            ->assertCanSeeTableRecords($facts)
+            ->assertCanSeeTableRecords($facts, inOrder: true)
             ->filterTable('status', 'draft')
             ->assertCanSeeTableRecords($facts->where('key', 'border_collie-002'))
             ->assertCanNotSeeTableRecords($facts->where('key', 'border_collie-001'))

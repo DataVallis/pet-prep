@@ -34,14 +34,17 @@ use JsonException;
  *    | verified (`approved` is refused — only David approves, in the admin),
  *    verified needs verified_by;
  *  - a key that already belongs to another breed is refused.
+ *  - unknown keys (top level or per fact) are errors;
+ *  - `verified` counts only with proof for the exact text: `verified_hash`
+ *    must equal the fact's content hash (BreedFact::hashOf, also for new
+ *    facts) — otherwise the fact is imported as a DRAFT and reported
+ *    (QA PR #210).
  * Upsert by key:
- *  - new key → inserted with the file's status;
- *  - approved row, content hash unchanged → not touched;
- *  - approved row, content changed → new content, status back to the
- *    file's status, approved_by / approved_at cleared (re-approve);
- *  - draft / verified row: content changed → new content + the file's
- *    status; content unchanged → the file may promote draft → verified, it
- *    never demotes (a verify done in the admin stays);
+ *  - new key → inserted (verified with proof, else draft);
+ *  - content hash unchanged → only `sort` may change (not content) and
+ *    draft → verified with proof; never demoted, an approval stays;
+ *  - content changed (any status) → new content, verified with proof else
+ *    draft, approval cleared (David approves again);
  *  - facts in the DB but missing in the file are kept and reported.
  * Idempotent: a second run changes nothing.
  */
@@ -54,6 +57,15 @@ class BreedFactImportService
     public const DOCS_DIR = '../docs/research/breed-facts';
 
     public const KEY_MAX = 100;
+
+    /** Allowed top-level keys of a file (QA PR #210: unknown keys are errors). */
+    public const FILE_KEYS = ['breed', 'facts'];
+
+    /** Allowed keys of one fact. */
+    public const FACT_KEYS = [
+        'key', 'category', 'audience', 'title', 'why', 'source_id', 'source_name', 'source_url',
+        'quote', 'game_rule_key', 'sort', 'status', 'verified_by', 'verified_hash',
+    ];
 
     /** Breeds without a pedigree never get facts (David 2026-10-09, spec §0.5). */
     public const NON_PEDIGREE = [BreedType::Mutt, BreedType::DomesticCat];
@@ -89,13 +101,13 @@ class BreedFactImportService
     /**
      * Validate and (unless $dryRun) apply one file.
      *
-     * @return array{file: string, breed: string|null, ok: bool, errors: list<string>, created: list<string>, updated: list<string>, reopened: list<string>, promoted: list<string>, unchanged: list<string>, missing: list<string>}
+     * @return array{file: string, breed: string|null, ok: bool, errors: list<string>, created: list<string>, updated: list<string>, reopened: list<string>, promoted: list<string>, reordered: list<string>, unchanged: list<string>, unproven: list<string>, missing: list<string>}
      */
     public function importFile(string $path, bool $dryRun = false): array
     {
         $result = [
             'file' => basename($path), 'breed' => null, 'ok' => false, 'errors' => [],
-            'created' => [], 'updated' => [], 'reopened' => [], 'promoted' => [], 'unchanged' => [], 'missing' => [],
+            'created' => [], 'updated' => [], 'reopened' => [], 'promoted' => [], 'reordered' => [], 'unchanged' => [], 'unproven' => [], 'missing' => [],
         ];
 
         [$breed, $rows, $errors] = $this->parse($path);
@@ -122,46 +134,49 @@ class BreedFactImportService
             $hash = BreedFact::hashOf($row['content']);
             /** @var BreedFact|null $fact */
             $fact = $existing->get($key);
-            $fileStatus = $row['status'];
+            // QA PR #210: "verified" only with proof for THIS text — verified_hash
+            // must equal the content hash, else the fact arrives as a draft.
+            $proven = $row['status'] === BreedFactStatus::Verified && $row['verified_hash'] === $hash;
+            if ($row['status'] === BreedFactStatus::Verified && ! $proven) {
+                $result['unproven'][] = $key;
+            }
+            $review = $proven
+                ? ['status' => BreedFactStatus::Verified->value, 'verified_by' => $row['verified_by']]
+                : ['status' => BreedFactStatus::Draft->value, 'verified_by' => null];
 
             if ($fact === null) {
                 $result['created'][] = $key;
-                $writes[] = ['create', $key, $row['content'] + ['key' => $key, 'status' => $fileStatus->value, 'verified_by' => $row['verified_by'], 'content_hash' => $hash]];
+                $writes[] = ['create', $key, $row['content'] + ['key' => $key, 'sort' => $row['sort'], 'content_hash' => $hash] + $review];
 
                 continue;
             }
 
-            $changed = $fact->content_hash !== $hash;
-            if ($fact->isApproved()) {
-                if (! $changed) {
-                    $result['unchanged'][] = $key;
-
-                    continue;
-                }
-                $result['reopened'][] = $key;
+            if ($fact->content_hash !== $hash) {
+                // New text: never keeps an earlier verify / approval.
+                $result[$fact->isApproved() ? 'reopened' : 'updated'][] = $key;
                 $writes[] = ['update', $key, $row['content'] + [
-                    'status' => $fileStatus->value, 'verified_by' => $row['verified_by'],
-                    'approved_by' => null, 'approved_at' => null, 'content_hash' => $hash,
-                ]];
+                    'sort' => $row['sort'], 'content_hash' => $hash, 'approved_by' => null, 'approved_at' => null,
+                ] + $review];
 
                 continue;
             }
 
-            if ($changed) {
-                $result['updated'][] = $key;
-                $writes[] = ['update', $key, $row['content'] + ['status' => $fileStatus->value, 'verified_by' => $row['verified_by'], 'content_hash' => $hash]];
-
-                continue;
+            // Same text. Order may change (sort is not content); draft → verified with proof; never demoted.
+            $attributes = [];
+            if ($fact->sort !== $row['sort']) {
+                $attributes['sort'] = $row['sort'];
             }
-
-            if ($fact->status === BreedFactStatus::Draft && $fileStatus === BreedFactStatus::Verified) {
+            if ($fact->status === BreedFactStatus::Draft && $proven) {
+                $attributes += $review;
                 $result['promoted'][] = $key;
-                $writes[] = ['update', $key, ['status' => BreedFactStatus::Verified->value, 'verified_by' => $row['verified_by']]];
-
-                continue;
+            } elseif ($attributes !== []) {
+                $result['reordered'][] = $key;
+            } else {
+                $result['unchanged'][] = $key;
             }
-
-            $result['unchanged'][] = $key;
+            if ($attributes !== []) {
+                $writes[] = ['update', $key, $attributes];
+            }
         }
 
         $result['missing'] = BreedFact::where('breed', $breed->value)
@@ -188,7 +203,7 @@ class BreedFactImportService
     /**
      * Read + validate a file.
      *
-     * @return array{0: BreedType|null, 1: array<string, array{content: array<string, mixed>, status: BreedFactStatus, verified_by: string|null}>, 2: list<string>}
+     * @return array{0: BreedType|null, 1: array<string, array{content: array<string, mixed>, sort: int, status: BreedFactStatus, verified_by: string|null, verified_hash: string|null}>, 2: list<string>}
      */
     public function parse(string $path): array
     {
@@ -205,7 +220,12 @@ class BreedFactImportService
             return [null, [], ['the file must be a JSON object {"breed": …, "facts": […]}']];
         }
 
+        $unknownTop = array_diff(array_keys($data), self::FILE_KEYS);
+        if ($unknownTop !== []) {
+            return [null, [], ['unknown top-level key(s): '.implode(', ', $unknownTop).' (allowed: '.implode(', ', self::FILE_KEYS).')']];
+        }
         $breed = is_string($data['breed'] ?? null) ? BreedType::tryFrom($data['breed']) : null;
+
         if ($breed === null) {
             return [null, [], ['unknown breed '.json_encode($data['breed'] ?? null)]];
         }
@@ -257,10 +277,11 @@ class BreedFactImportService
                     'source_url' => $fact['source_url'],
                     'quote' => $fact['quote'],
                     'game_rule_key' => $fact['game_rule_key'] ?? null,
-                    'sort' => $fact['sort'],
                 ],
+                'sort' => $fact['sort'],
                 'status' => BreedFactStatus::from($fact['status']),
                 'verified_by' => $fact['verified_by'] ?? null,
+                'verified_hash' => $fact['verified_hash'] ?? null,
             ];
         }
 
@@ -274,6 +295,15 @@ class BreedFactImportService
     private function validateFact(BreedType $breed, array $fact): array
     {
         $errors = [];
+        $unknown = array_diff(array_keys($fact), self::FACT_KEYS);
+        if ($unknown !== []) {
+            $errors[] = 'unknown key(s): '.implode(', ', $unknown);
+        }
+        foreach (['title', 'why'] as $field) {
+            if (is_array($fact[$field] ?? null) && ($extra = array_diff(array_keys($fact[$field]), ['en', 'sl'])) !== []) {
+                $errors[] = "{$field}: unknown language key(s): ".implode(', ', $extra);
+            }
+        }
         $text = fn (mixed $v): bool => is_string($v) && trim($v) !== '';
         $len = fn (string $v): int => mb_strlen($v);
 
@@ -353,6 +383,10 @@ class BreedFactImportService
         }
         if ($status === BreedFactStatus::Verified->value && ! $text($verifiedBy)) {
             $errors[] = 'a verified fact needs verified_by';
+        }
+        $verifiedHash = $fact['verified_hash'] ?? null;
+        if ($verifiedHash !== null && (! is_string($verifiedHash) || ! preg_match('/^[0-9a-f]{64}$/', $verifiedHash))) {
+            $errors[] = 'verified_hash must be null or a lower-case sha256 hex (64 chars)';
         }
 
         return $errors;

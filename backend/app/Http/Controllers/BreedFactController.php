@@ -10,7 +10,7 @@ use App\Models\User;
 use App\Services\BreedFactPayload;
 use App\Services\BreedFactService;
 use App\Services\FamilyService;
-use Carbon\CarbonImmutable;
+use Dedoc\Scramble\Attributes\Response;
 use Illuminate\Http\JsonResponse;
 
 /**
@@ -70,13 +70,17 @@ class BreedFactController extends Controller
             return response()->json(['message' => 'No such fact.', 'reason' => 'fact_not_found'], 404);
         }
 
-        $read = $this->facts->markRead($user, $row);
+        $this->facts->markRead($user, $row);
 
         return response()->json([
             // Always `read` (also on a repeated call).
             'status' => 'read',
-            /** @var array{id: int, key: string, breed: string, category: 'origin'|'body'|'temperament'|'exercise'|'diet'|'grooming'|'training'|'family'|'health', audience: 'child'|'parent', title: string, why: string|null, source_name: string, source_url: string|null, game_rule_key: string|null, not_vet_reviewed: bool, read: bool, read_at: string|null, read_by_children: list<int>} */
-            'fact' => $this->facts->row($row, $user, CarbonImmutable::instance($read->read_at)->utc()),
+            /**
+             * The fact as the caller sees it now (parent: `read_by_children` filled).
+             *
+             * @var array{id: int, key: string, breed: string, category: 'origin'|'body'|'temperament'|'exercise'|'diet'|'grooming'|'training'|'family'|'health', audience: 'child'|'parent', title: string, why: string|null, source_name: string, source_url: string|null, game_rule_key: string|null, not_vet_reviewed: bool, read: bool, read_at: string|null, read_by_children: list<int>}
+             */
+            'fact' => $this->facts->rowFor($user, $row),
         ]);
     }
 
@@ -107,22 +111,24 @@ class BreedFactController extends Controller
      *
      * POST /api/child/fact-of-the-day/shown
      */
+    #[Response(200, 'Recorded, or already recorded today (idempotent).', type: BreedFactPayload::SHOWN_OK_SHAPE)]
+    #[Response(422, 'Not allowed now: `reason` says why; `state` is the current fact of the day.', type: BreedFactPayload::SHOWN_REFUSED_SHAPE)]
     public function shown(ChildPetRequest $request): JsonResponse
     {
         /** @var User $child */
         $child = $request->user();
         $pet = $this->families->activePetOf($child);
 
+        /** @var array{status: 'recorded'|'already_shown'|'refused', reason: string|null} $result */
         $result = $pet !== null
             ? $this->facts->recordShown($child, $pet)
             : ['status' => 'refused', 'reason' => 'no_pet'];
+        $body = BreedFactPayload::shown($result, $this->facts->factOfTheDay($child, $this->families->activePetOf($child)));
 
-        return response()->json([
-            /** @var 'recorded'|'already_shown'|'refused' */
-            'status' => $result['status'],
-            /** @var 'no_pet'|'non_pedigree'|'locked'|'no_image'|'no_fact'|'first_day'|'quiet_hours'|'shown_today'|'week_cap'|'too_soon'|null */
-            'reason' => $result['reason'],
-            'state' => BreedFactPayload::factOfTheDay($this->facts->factOfTheDay($child, $pet)),
-        ], $result['status'] === 'refused' ? 422 : 200);
+        if ($result['status'] === 'refused') {
+            return response()->json($body, 422);
+        }
+
+        return response()->json($body);
     }
 }

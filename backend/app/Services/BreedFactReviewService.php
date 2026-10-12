@@ -10,7 +10,7 @@ use InvalidArgumentException;
 
 /**
  * Status workflow of a breed fact in the admin (M5-R09b, spec §5):
- * draft → verified (source fields required) → approved (superadmin only,
+ * draft → verified (source fields required) → approved (every step superadmin only — BreedFactPolicy,
  * records approved_by / approved_at). Approving needs a verified fact; a fact
  * can be sent back to draft (clears the approval). Content is edited in git
  * (breeds:import-facts), not here — a changed approved fact comes back
@@ -20,6 +20,9 @@ class BreedFactReviewService
 {
     public function verify(BreedFact $fact, User $by): BreedFact
     {
+        if (! $by->can('verify', $fact)) {
+            throw new InvalidArgumentException('Only a superadmin can change the status.');
+        }
         if ($fact->status !== BreedFactStatus::Draft) {
             throw new InvalidArgumentException('Only a draft can be verified.');
         }
@@ -33,7 +36,7 @@ class BreedFactReviewService
 
     public function approve(BreedFact $fact, User $by): BreedFact
     {
-        if (! $by->isSuperadmin()) {
+        if (! $by->can('approve', $fact)) {
             throw new InvalidArgumentException('Only a superadmin can approve.');
         }
         if ($fact->status !== BreedFactStatus::Verified) {
@@ -48,14 +51,14 @@ class BreedFactReviewService
     }
 
     /**
-     * Approve every verified fact of $ids (others are skipped).
+     * Approve every verified fact of the list (others are skipped).
      *
      * @param  iterable<BreedFact>  $facts
      * @return array{approved: int, skipped: int}
      */
     public function approveMany(iterable $facts, User $by): array
     {
-        if (! $by->isSuperadmin()) {
+        if (! $by->can('approveAny', BreedFact::class)) {
             throw new InvalidArgumentException('Only a superadmin can approve.');
         }
         $approved = 0;
@@ -77,7 +80,7 @@ class BreedFactReviewService
     /** Back to draft (e.g. an error was found); clears verify + approval. */
     public function reject(BreedFact $fact, User $by): BreedFact
     {
-        if (! $by->isSuperadmin()) {
+        if (! $by->can('reject', $fact)) {
             throw new InvalidArgumentException('Only a superadmin can change the status.');
         }
         $fact->update(['status' => BreedFactStatus::Draft->value, 'verified_by' => null, 'approved_by' => null, 'approved_at' => null]);

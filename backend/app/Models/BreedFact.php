@@ -41,10 +41,13 @@ use Illuminate\Support\Carbon;
  */
 class BreedFact extends Model
 {
-    /** Fields that make up the content (content_hash; a change re-opens an approved row). */
+    /**
+     * The verifiable content, in hash order (content_hash / verified_hash).
+     * `sort` is NOT part of it: reordering never re-opens a review.
+     */
     public const CONTENT_FIELDS = [
         'breed', 'category', 'audience', 'title_en', 'title_sl', 'why_en', 'why_sl',
-        'source_id', 'source_name', 'source_url', 'quote', 'game_rule_key', 'sort',
+        'source_id', 'source_name', 'source_url', 'quote', 'game_rule_key',
     ];
 
     public const TITLE_MAX = 120;
@@ -76,21 +79,23 @@ class BreedFact extends Model
     }
 
     /**
-     * sha256 of the content fields (key order fixed, nulls kept), so the
-     * importer can tell whether an approved fact changed in git.
+     * The content hash (docs/research/breed-facts/README.md, »verified_hash«):
+     * lower-case hex sha256 of the UTF-8 JSON array of CONTENT_FIELDS in that
+     * order (null kept as null), serialised like JavaScript JSON.stringify —
+     * no spaces, `/` and non-ASCII not escaped. Same value as
+     * `php artisan breeds:import-facts --print-hashes`.
      *
      * @param  array<string, mixed>  $content
      */
     public static function hashOf(array $content): string
     {
-        $normalized = [];
+        $values = [];
         foreach (self::CONTENT_FIELDS as $field) {
             $value = $content[$field] ?? null;
-            $normalized[$field] = $value instanceof \BackedEnum ? $value->value : $value;
+            $values[] = $value instanceof \BackedEnum ? $value->value : $value;
         }
-        $normalized['sort'] = (int) ($normalized['sort'] ?? 0);
 
-        return hash('sha256', (string) json_encode($normalized, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
+        return hash('sha256', (string) json_encode($values, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_LINE_TERMINATORS | JSON_THROW_ON_ERROR));
     }
 
     /** The current content hash of this row (from its attributes). */

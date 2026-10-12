@@ -242,6 +242,17 @@ describe('POST /api/breed-facts/{fact}/read', function () {
         bfPost($parent, "/api/breed-facts/{$parentOnly->id}/read")->assertOk();
         expect(BreedFactRead::count())->toBe(1);
     });
+
+    it('fills read_by_children for a parent (child: always empty)', function () {
+        [$parent, $child] = bfFamily();
+        $fact = bfFact('border_collie', 1);
+        bfPost($child, "/api/breed-facts/{$fact->id}/read")->assertOk()->assertJsonPath('fact.read_by_children', []);
+
+        bfPost($parent, "/api/breed-facts/{$fact->id}/read")->assertOk()
+            ->assertJsonPath('fact.read', true)
+            ->assertJsonPath('fact.read_by_children', [$child->id])
+            ->assertJsonPath('fact.source_url', 'https://www.thekennelclub.org.uk/');
+    });
 });
 
 describe('GET /api/child/fact-of-the-day', function () {
@@ -287,7 +298,11 @@ describe('GET /api/child/fact-of-the-day', function () {
 
         bfAt('2026-10-21 10:00'); // Wed: only 1 day later
         expect(bfDay($child))->toMatchArray(['may_auto_show' => false, 'reason' => 'too_soon']);
-        bfPost($child, '/api/child/fact-of-the-day/shown')->assertStatus(422)->assertJsonPath('status', 'refused')->assertJsonPath('reason', 'too_soon');
+        $refused = bfPost($child, '/api/child/fact-of-the-day/shown')->assertStatus(422)->json();
+        expect(array_keys($refused))->toBe(['status', 'reason', 'state'])
+            ->and($refused['status'])->toBe('refused')
+            ->and($refused['reason'])->toBe('too_soon')
+            ->and($refused['state'])->toMatchArray(['may_auto_show' => false, 'reason' => 'too_soon', 'shown_this_week' => 1]);
 
         bfAt('2026-10-22 00:05'); // Thu, just after midnight: 2 local days later
         bfPost($child, '/api/child/fact-of-the-day/shown')->assertOk()->assertJsonPath('status', 'recorded');
@@ -407,6 +422,17 @@ describe('GET /api/child/fact-of-the-day', function () {
         bfPost($child, '/api/child/fact-of-the-day/shown')->assertStatus(422)->assertJsonPath('reason', 'no_pet');
         bfGet($parent, '/api/child/fact-of-the-day')->assertForbidden();
     });
+});
+
+it('decides /shown on a fresh pet row (a lock set after the controller loaded the pet)', function () {
+    [, $child, $pet] = bfFamily();
+    bfFact('border_collie', 1);
+    bfAt('2026-10-21 12:00');
+    $stale = $pet->fresh();
+    $pet->fresh()->forceFill(['is_hard_stopped' => true])->saveQuietly();
+
+    expect(app(BreedFactService::class)->recordShown($child, $stale))->toBe(['status' => 'refused', 'reason' => 'locked'])
+        ->and(BreedFactShow::count())->toBe(0);
 });
 
 describe('privacy', function () {

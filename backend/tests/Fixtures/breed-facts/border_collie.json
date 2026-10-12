@@ -14,7 +14,8 @@
       "game_rule_key": "daily_steps",
       "sort": 1,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "1122ede85cf066391be6c671fb8ea18976bb85c74719aed51bff8a6fade65655"
     },
     {
       "key": "border_collie-002",
@@ -44,7 +45,8 @@
       "game_rule_key": null,
       "sort": 3,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "205b5c7df90dea970e218d5d20cb6b62349b6165fd360b903f8834d20b1802ae"
     }
   ]
 }

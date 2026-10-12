@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Enums\BreedType;
+use App\Models\BreedFact;
 use App\Services\BreedFactImportService;
 use Illuminate\Console\Command;
 
@@ -20,6 +21,7 @@ class ImportBreedFactsCommand extends Command
     protected $signature = 'breeds:import-facts
         {--breed=* : Only these breeds (BreedType value "border_collie" or slug "border-collie"; repeatable)}
         {--dry-run : Validate and print what would change; nothing is written}
+        {--print-hashes : Print "<key> <content hash> <verified_hash state>" per fact (the value for verified_hash); nothing is written}
         {--dir= : Folder with <breed>.json (absolute, or relative to backend/; default database/data/breed-facts)}';
 
     protected $description = 'Import breed facts (»Ali si vedel?«) from JSON files — upsert by key';
@@ -52,6 +54,10 @@ class ImportBreedFactsCommand extends Command
             return self::SUCCESS;
         }
 
+        if ($this->option('print-hashes')) {
+            return $this->printHashes($importer, $files);
+        }
+
         $failed = 0;
         foreach ($files as $file) {
             $r = $importer->importFile($file, $dryRun);
@@ -65,9 +71,12 @@ class ImportBreedFactsCommand extends Command
                 continue;
             }
             $this->info(sprintf(
-                '%s: %d new, %d updated, %d approved → re-review, %d draft → verified, %d unchanged',
-                $r['file'], count($r['created']), count($r['updated']), count($r['reopened']), count($r['promoted']), count($r['unchanged']),
+                '%s: %d new, %d updated, %d approved → re-review, %d draft → verified, %d reordered, %d unchanged',
+                $r['file'], count($r['created']), count($r['updated']), count($r['reopened']), count($r['promoted']), count($r['reordered']), count($r['unchanged']),
             ));
+            if ($r['unproven'] !== []) {
+                $this->warn('  "verified" without a matching verified_hash (kept as draft): '.implode(', ', $r['unproven']));
+            }
             foreach ($r['reopened'] as $key) {
                 $this->line("  ! {$key}: approved content changed — back to review, approve again in /admin");
             }
@@ -78,6 +87,37 @@ class ImportBreedFactsCommand extends Command
 
         if ($dryRun) {
             $this->comment('Dry run — nothing was written.');
+        }
+
+        return $failed > 0 ? self::FAILURE : self::SUCCESS;
+    }
+
+    /**
+     * @param  list<string>  $files
+     */
+    private function printHashes(BreedFactImportService $importer, array $files): int
+    {
+        $failed = 0;
+        foreach ($files as $file) {
+            [, $rows, $errors] = $importer->parse($file);
+            if ($errors !== []) {
+                $failed++;
+                $this->error(basename($file).': '.count($errors).' error(s) — fix them first');
+                foreach ($errors as $error) {
+                    $this->line("  - {$error}");
+                }
+
+                continue;
+            }
+            foreach ($rows as $key => $row) {
+                $hash = BreedFact::hashOf($row['content']);
+                $state = match (true) {
+                    $row['verified_hash'] === null => 'no-verified_hash',
+                    $row['verified_hash'] === $hash => 'verified_hash-ok',
+                    default => 'verified_hash-MISMATCH',
+                };
+                $this->line("{$key} {$hash} {$state}");
+            }
         }
 
         return $failed > 0 ? self::FAILURE : self::SUCCESS;

@@ -2759,6 +2759,7 @@ export interface operations {
                          * @constant
                          */
                         status: "read";
+                        /** @description The fact as the caller sees it now (parent: `read_by_children` filled). */
                         fact: {
                             id: number;
                             key: string;
@@ -2849,7 +2850,7 @@ export interface operations {
                          */
                         reason: "too_soon" | "week_cap" | "shown_today" | "quiet_hours" | "first_day" | "no_fact" | "no_image" | "locked" | "non_pedigree" | "no_pet" | null;
                         /** @description An automatic sheet was already recorded today (family-local day). */
-                        shown_today: string;
+                        shown_today: boolean;
                         /** @description Automatic sheets recorded in the current program week (0–2). */
                         shown_this_week: number;
                         /** @description 1 = the program week from birth (payment-lock time excluded); null when unborn. */
@@ -2874,17 +2875,91 @@ export interface operations {
         };
         requestBody?: never;
         responses: {
+            /** @description Recorded, or already recorded today (idempotent). */
             200: {
                 headers: {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": string;
+                    "application/json": {
+                        /** @enum {string} */
+                        status: "recorded" | "already_shown";
+                        reason: null;
+                        state: {
+                            fact: {
+                                id: number;
+                                key: string;
+                                breed: string;
+                                /** @enum {string} */
+                                category: "origin" | "body" | "temperament" | "exercise" | "diet" | "grooming" | "training";
+                                /** @constant */
+                                audience: "child";
+                                title: string;
+                                why: string | null;
+                                source_name: string;
+                                source_url: null;
+                                game_rule_key: string | null;
+                                not_vet_reviewed: boolean;
+                                read: boolean;
+                                read_at: string | null;
+                                read_by_children: number[];
+                            } | null;
+                            may_auto_show: boolean;
+                            /** @enum {string|null} */
+                            reason: "no_pet" | "non_pedigree" | "locked" | "no_image" | "no_fact" | "first_day" | "quiet_hours" | "shown_today" | "week_cap" | "too_soon" | null;
+                            shown_today: boolean;
+                            shown_this_week: number;
+                            program_week: number | null;
+                            read_count: number;
+                            total_count: number;
+                        };
+                    };
                 };
             };
             401: components["responses"]["AuthenticationException"];
             403: components["responses"]["AuthorizationException"];
-            422: components["responses"]["ValidationException"];
+            /** @description Not allowed now: `reason` says why; `state` is the current fact of the day. */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        status: "refused";
+                        /** @enum {string} */
+                        reason: "no_pet" | "non_pedigree" | "locked" | "no_image" | "no_fact" | "first_day" | "quiet_hours" | "shown_today" | "week_cap" | "too_soon";
+                        state: {
+                            fact: {
+                                id: number;
+                                key: string;
+                                breed: string;
+                                /** @enum {string} */
+                                category: "origin" | "body" | "temperament" | "exercise" | "diet" | "grooming" | "training";
+                                /** @constant */
+                                audience: "child";
+                                title: string;
+                                why: string | null;
+                                source_name: string;
+                                source_url: null;
+                                game_rule_key: string | null;
+                                not_vet_reviewed: boolean;
+                                read: boolean;
+                                read_at: string | null;
+                                read_by_children: number[];
+                            } | null;
+                            may_auto_show: boolean;
+                            /** @enum {string|null} */
+                            reason: "no_pet" | "non_pedigree" | "locked" | "no_image" | "no_fact" | "first_day" | "quiet_hours" | "shown_today" | "week_cap" | "too_soon" | null;
+                            shown_today: boolean;
+                            shown_this_week: number;
+                            program_week: number | null;
+                            read_count: number;
+                            total_count: number;
+                        };
+                    };
+                };
+            };
         };
     };
     "broadcast.authenticate": {

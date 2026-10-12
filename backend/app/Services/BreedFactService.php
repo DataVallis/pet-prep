@@ -191,6 +191,20 @@ class BreedFactService
     // ─────────────────────────── payloads ───────────────────────────
 
     /**
+     * One fact as the caller sees it now (own read + — for a parent — the
+     * family's children who read it). Used by POST /api/breed-facts/{fact}/read.
+     *
+     * @return array<string, mixed>
+     */
+    public function rowFor(User $user, BreedFact $fact): array
+    {
+        $reads = $this->readsOf($user->id, [$fact->id]);
+        $childReads = $user->isChild() ? [] : $this->childReadsFor($user, [$fact->id]);
+
+        return $this->row($fact, $user, $reads[$fact->id] ?? null, $childReads[$fact->id] ?? []);
+    }
+
+    /**
      * Facts of a breed as API rows for $user, localized to the request
      * language, plus the caller's progress.
      *
@@ -351,6 +365,13 @@ class BreedFactService
         return DB::transaction(function () use ($child, $pet, $now): array {
             // Serialises the child's devices (only this child's row is locked).
             User::whereKey($child->id)->lockForUpdate()->first();
+            // QA PR #210: decide on a fresh pet row (lock, birth, payment periods may
+            // have changed since the controller loaded it). The pet row is not locked
+            // — this writes nothing on the pet.
+            $pet = Pet::find($pet->id);
+            if ($pet === null) {
+                return ['status' => 'refused', 'reason' => 'no_pet'];
+            }
 
             if (BreedFactShow::where('user_id', $child->id)->where('pet_id', $pet->id)->where('local_date', $pet->localDate($now))->exists()) {
                 return ['status' => 'already_shown', 'reason' => null];

@@ -17,6 +17,7 @@ use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use InvalidArgumentException;
@@ -101,8 +102,8 @@ class BreedFactResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->defaultSort('breed')
-            ->modifyQueryUsing(fn ($query) => $query->orderBy('sort'))
+            // QA PR #210: breed, then the display order, then id (stable pages).
+            ->defaultSort(fn (Builder $query): Builder => $query->orderBy('breed')->orderBy('sort')->orderBy('id'))
             ->defaultKeySort()
             ->columns([
                 Tables\Columns\TextColumn::make('key')->label(__('admin.breed_facts.key'))->searchable()->sortable(),
@@ -154,7 +155,7 @@ class BreedFactResource extends Resource
                     ->color('success')
                     ->requiresConfirmation()
                     ->modalDescription(__('admin.breed_facts.approve_selected_help'))
-                    ->visible(fn (): bool => self::admin()?->isSuperadmin() === true)
+                    ->visible(fn (): bool => self::admin()?->can('approveAny', BreedFact::class) === true)
                     ->deselectRecordsAfterCompletion()
                     ->action(function (Collection $records): void {
                         $result = app(BreedFactReviewService::class)->approveMany($records, self::admin());
@@ -197,7 +198,7 @@ class BreedFactResource extends Resource
             ->color('info')
             ->requiresConfirmation()
             ->modalDescription(__('admin.breed_facts.verify_help'))
-            ->visible(fn (BreedFact $record): bool => $record->status === BreedFactStatus::Draft && self::admin()?->isSuperadmin() === true)
+            ->visible(fn (BreedFact $record): bool => $record->status === BreedFactStatus::Draft && self::admin()?->can('verify', $record) === true)
             ->action(fn (BreedFact $record) => self::run($record, 'admin.breed_facts.verified', fn ($s, $r, $u) => $s->verify($r, $u)));
     }
 
@@ -210,7 +211,7 @@ class BreedFactResource extends Resource
             ->color('success')
             ->requiresConfirmation()
             ->modalDescription(__('admin.breed_facts.approve_help'))
-            ->visible(fn (BreedFact $record): bool => $record->status === BreedFactStatus::Verified && self::admin()?->isSuperadmin() === true)
+            ->visible(fn (BreedFact $record): bool => $record->status === BreedFactStatus::Verified && self::admin()?->can('approve', $record) === true)
             ->action(fn (BreedFact $record) => self::run($record, 'admin.breed_facts.approved', fn ($s, $r, $u) => $s->approve($r, $u)));
     }
 
@@ -223,7 +224,7 @@ class BreedFactResource extends Resource
             ->color('danger')
             ->requiresConfirmation()
             ->modalDescription(__('admin.breed_facts.reject_help'))
-            ->visible(fn (BreedFact $record): bool => $record->status !== BreedFactStatus::Draft && self::admin()?->isSuperadmin() === true)
+            ->visible(fn (BreedFact $record): bool => $record->status !== BreedFactStatus::Draft && self::admin()?->can('reject', $record) === true)
             ->action(fn (BreedFact $record) => self::run($record, 'admin.breed_facts.rejected', fn ($s, $r, $u) => $s->reject($r, $u)));
     }
 

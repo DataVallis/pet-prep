@@ -24,7 +24,24 @@ class BreedFactPolicy
         return app(BreedFactService::class)->mayRead($user, $fact);
     }
 
+    /** Admin review (M5-R09b, QA PR #210): every status change is superadmin only. */
+    public function verify(User $user, BreedFact $fact): bool
+    {
+        return $user->isSuperadmin();
+    }
+
     public function approve(User $user, BreedFact $fact): bool
+    {
+        return $user->isSuperadmin();
+    }
+
+    /** Bulk approve (no single record). */
+    public function approveAny(User $user): bool
+    {
+        return $user->isSuperadmin();
+    }
+
+    public function reject(User $user, BreedFact $fact): bool
     {
         return $user->isSuperadmin();
     }
