@@ -132,6 +132,8 @@ describe('QA B1: hunger / thirst and hygiene at 0 together after the day is used
     it('sends the child the mess push, not nothing', function (string $species, string $zeroMetric, HygieneEventKind $mess, string $body) {
         [, $child, $pet] = pmpFamily($species);
         pmpDayUsedUp($pet, $child, $species === 'cat' ? 2 : 3);
+        // M5-F11: no daily water cap — water is "over for today" only while the gap runs past midnight.
+        pmpLog($pet, $child, ActivityType::WateredPet, '2026-10-21 21:00');
         pmpAt('2026-10-21 21:30');
         Pet::whereKey($pet->id)->update([$zeroMetric.'_level' => 0, $zeroMetric.'_zero_since' => now()->subMinutes(10), 'escalation_level' => 1]);
         $pet = pmpOpen($pet->fresh(), [$mess]);
@@ -183,10 +185,13 @@ describe('QA m1: the remaining M3-12 combinations', function () {
             ->toBe('Your dog is thirsty, but the mess has to be cleaned up first. You can give it water again at 14:00.');
     });
 
-    it('thirst after the daily water limit with a mess: the mess push (dog and cat)', function (string $species, string $body) {
+    // M5-F11 (David 2026-10-12): no daily cap — "not again today" now means the gap ends
+    // after midnight (this test used to say "after the daily water limit").
+    it('thirst with a mess when the next water is only tomorrow (gap past midnight): the mess push (dog and cat)', function (string $species, string $body) {
         [, $child, $pet] = pmpFamily($species, '2026-10-21 07:00');
         pmpDayUsedUp($pet, $child, $species === 'cat' ? 2 : 3);
-        pmpAt('2026-10-21 19:00');
+        pmpLog($pet, $child, ActivityType::WateredPet, '2026-10-21 21:00');
+        pmpAt('2026-10-21 21:30');
         Pet::whereKey($pet->id)->update(['thirst_level' => 25]);
         $pet = pmpOpen($pet->fresh(), [$species === 'cat' ? HygieneEventKind::LitterAccident : HygieneEventKind::Poop]);
 
@@ -196,6 +201,21 @@ describe('QA m1: the remaining M3-12 combinations', function () {
     })->with([
         'dog' => ['dog', 'Your dog is giving you a gentle look and pointing at a mess that needs cleaning up.'],
         'cat' => ['cat', 'Your cat is giving you a gentle look — there’s a mess next to the litter tray that needs cleaning up.'],
+    ]);
+
+    it('M5-F11: thirst with a mess after the usual refills — "clean first", then water (no daily cap)', function (string $species, string $variant, array $replace) {
+        [, $child, $pet] = pmpFamily($species, '2026-10-21 07:00');
+        pmpDayUsedUp($pet, $child, $species === 'cat' ? 2 : 3);
+        pmpAt('2026-10-21 19:00');
+        Pet::whereKey($pet->id)->update(['thirst_level' => 25, 'last_decay_at' => now()]);
+        $pet = pmpOpen($pet->fresh(), [$species === 'cat' ? HygieneEventKind::LitterAccident : HygieneEventKind::Poop]);
+
+        expect(pmpCopy($pet, PushType::SoftWarning, 'thirst'))->toBe(['variant' => $variant, 'replace' => $replace]);
+    })->with([
+        // Dog: last refill 17:00 + 180 min → 20:00 (still today).
+        'dog' => ['dog', PushCopy::VARIANT_CLEAN_FIRST_WAIT, ['time' => '20:00']],
+        // Cat: last refill 12:00 + 240 min → over; water right after cleaning.
+        'cat' => ['cat', PushCopy::VARIANT_CLEAN_FIRST, []],
     ]);
 
     it('chewing open after the last meal: the tidy push (critical: the critical tidy text)', function () {

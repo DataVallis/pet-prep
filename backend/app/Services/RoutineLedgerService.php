@@ -37,10 +37,13 @@ use Throwable;
  *    pet's life stage that day, M5-R01); done = a `fed_pet` row inside
  *    [start, end); missed when the window ended unfed. A window that lies
  *    entirely in quiet hours is done by the parent: not expected.
- *  - water: `water_times_per_day` refills per day, pro rata to the part of
+ *  - water: `water_times_per_day` refills per day — the EXPECTED MINIMUM, not a
+ *    cap (M5-F11, David 2026-10-12: the child may water whenever thirst shows
+ *    ≤ water_refill_below and the gap passed) — pro rata to the part of
  *    the day's non-quiet time the pet was in play (birth day, hard stop,
  *    vet, game over), rounded half up; done = `watered_pet` rows that day
  *    (in order, up to the expected number); the rest is missed at day end.
+ *    Extra refills beyond the expected number are ignored, never a penalty.
  *  - clean: one routine per hygiene event that happened (`applied`) — a
  *    poop, a puppy accident or a chewing event (M5-R02, `eventKind`); done =
  *    resolved within 2 hours counted outside quiet hours (cleaned, or for

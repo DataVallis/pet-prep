@@ -116,7 +116,9 @@ it('chewing open, feeding possible: "tidy first", never "clean first" (EN + SL)'
 
 it('water while chewing is open: "tidy first, then you can give it water"', function () {
     [, , $dog] = dpvFamily();
-    $dog = dpvOpen($dog, [HygieneEventKind::Chewing]);
+    // M5-F11: thirst at the critical level — at 100 % water would wait for the refill threshold.
+    Pet::whereKey($dog->id)->update(['thirst_level' => 10, 'last_decay_at' => now()]);
+    $dog = dpvOpen($dog->fresh(), [HygieneEventKind::Chewing]);
 
     $copy = dpvCopy($dog, PushType::CriticalAlert, 'thirst');
     expect($copy)->toBe(['variant' => PushCopy::VARIANT_TIDY_FIRST, 'replace' => []])

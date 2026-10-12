@@ -922,9 +922,9 @@ class PetActivityService
     }
 
     /**
-     * Fresh water (PRODUCT_SPEC §5): at most breed water_times_per_day per
-     * family-local day, at least water_min_gap_minutes since the last refill,
-     * thirst → 100 %. Refused while the mess isn't cleaned.
+     * Fresh water (PRODUCT_SPEC §5, M5-F11 "Dolij, ko se prazni"): no daily cap —
+     * live thirst shows ≤ breed water_refill_below and at least
+     * water_min_gap_minutes since the last refill, thirst → 100 %. Refused while the mess isn't cleaned.
      * Activity value = thirst shown before the refill.
      */
     public function water(Pet $pet, ?User $actor = null): ActionResult

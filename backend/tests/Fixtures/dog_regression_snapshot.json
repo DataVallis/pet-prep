@@ -3,18 +3,18 @@
         [
             "A water",
             "2026-10-24T07:30:00+00:00",
-            200,
-            "accepted",
-            null,
-            null
+            422,
+            "refused",
+            "water_too_soon",
+            "2026-10-24T16:28:00+02:00"
         ],
         [
             "B water",
             "2026-10-24T07:35:00+00:00",
-            200,
-            "accepted",
-            null,
-            null
+            422,
+            "refused",
+            "water_too_soon",
+            "2026-10-24T10:39:00+02:00"
         ],
         [
             "A take-out",
@@ -43,10 +43,10 @@
         [
             "A water",
             "2026-10-24T12:00:00+00:00",
-            200,
-            "accepted",
-            null,
-            null
+            422,
+            "refused",
+            "water_too_soon",
+            "2026-10-24T16:28:00+02:00"
         ],
         [
             "B water",
@@ -294,7 +294,7 @@
             "puppy": {
                 "pet": {
                     "hunger": 32.4,
-                    "thirst": 27.5,
+                    "thirst": 12.5,
                     "energy": 100,
                     "hygiene": 0,
                     "pet_state": "sick",
@@ -336,12 +336,6 @@
                 ],
                 "activities": [
                     [
-                        "watered_pet",
-                        "2026-10-24T07:30:00+00:00",
-                        99,
-                        "child"
-                    ],
-                    [
                         "took_out_pet",
                         "2026-10-24T08:00:00+00:00",
                         null,
@@ -352,12 +346,6 @@
                         "2026-10-24T09:00:00+00:00",
                         98,
                         null
-                    ],
-                    [
-                        "watered_pet",
-                        "2026-10-24T12:00:00+00:00",
-                        87,
-                        "child"
                     ],
                     [
                         "pet_accident",
@@ -419,11 +407,11 @@
                         "2026-10-24",
                         "water",
                         0,
-                        "done",
+                        "pending",
                         "2026-10-24T06:00:00+00:00",
                         "2026-10-24T22:00:00+00:00",
-                        "2026-10-24T07:30:00+00:00",
-                        "child",
+                        null,
+                        null,
                         null,
                         null,
                         null
@@ -432,11 +420,11 @@
                         "2026-10-24",
                         "water",
                         1,
-                        "done",
+                        "pending",
                         "2026-10-24T06:00:00+00:00",
                         "2026-10-24T22:00:00+00:00",
-                        "2026-10-24T12:00:00+00:00",
-                        "child",
+                        null,
+                        null,
                         null,
                         null,
                         null
@@ -529,18 +517,18 @@
                         ]
                     },
                     "care_score": {
-                        "score": 43,
-                        "done": 3,
-                        "expected": 7,
+                        "score": 20,
+                        "done": 1,
+                        "expected": 5,
                         "illnesses": 0,
                         "since": "2026-10-24T06:00:00+00:00"
                     },
                     "today": {
                         "date": "2026-10-24",
                         "expected": 8,
-                        "done": 3,
+                        "done": 1,
                         "done_by_child": null,
-                        "pending": 1,
+                        "pending": 3,
                         "missed_count": 4,
                         "missed": [
                             {
@@ -582,19 +570,19 @@
                         ]
                     },
                     "care_score": {
-                        "score": 43,
-                        "done": 3,
-                        "expected": 7,
-                        "routines": 7,
+                        "score": 20,
+                        "done": 1,
+                        "expected": 5,
+                        "routines": 5,
                         "illnesses": 0,
                         "since": "2026-10-24T06:00:00+00:00"
                     },
                     "today": {
                         "date": "2026-10-24",
                         "expected": 8,
-                        "done": 3,
-                        "done_by_child": 3,
-                        "pending": 1,
+                        "done": 1,
+                        "done_by_child": 1,
+                        "pending": 3,
                         "missed_count": 4,
                         "missed": [
                             {
@@ -704,10 +692,10 @@
                             "date": "2026-10-24",
                             "expected": 8,
                             "fair_expected": 8,
-                            "done": 3,
-                            "done_by_child": 3,
+                            "done": 1,
+                            "done_by_child": 1,
                             "missed": 4,
-                            "pending": 1,
+                            "pending": 3,
                             "walk_steps": 0,
                             "walk_goal": null,
                             "walk_done": null
@@ -766,6 +754,7 @@
                     "pet": {
                         "breed_type": "mutt",
                         "species": "dog",
+                        "name": null,
                         "born_at": "2026-10-24T08:00:00+02:00",
                         "awaiting_contract": false,
                         "caretakers_count": 1,
@@ -826,7 +815,7 @@
                             }
                         },
                         "hunger_level": 32,
-                        "thirst_level": 28,
+                        "thirst_level": 13,
                         "energy_level": 100,
                         "hygiene_level": 0,
                         "pet_state": "sick",
@@ -883,16 +872,18 @@
                             "start": "2026-10-25T07:00:00+01:00",
                             "end": "2026-10-25T09:00:00+01:00"
                         },
-                        "last_fed_at": "2026-10-24T11:00:00+02:00"
+                        "last_fed_at": "2026-10-24T11:00:00+02:00",
+                        "digesting_until": null
                     },
                     "water": {
                         "times_per_day": 3,
                         "min_gap_minutes": 180,
-                        "used_today": 2,
-                        "remaining_today": 1,
-                        "last_watered_at": "2026-10-24T14:00:00+02:00",
+                        "used_today": 0,
+                        "remaining_today": 3,
+                        "last_watered_at": null,
                         "can_water": false,
-                        "next_allowed_at": null
+                        "next_allowed_at": null,
+                        "refill_below": 60
                     },
                     "steps": {
                         "steps_today": 0,
@@ -960,7 +951,12 @@
                         "my_seconds_left": 250,
                         "can_start": true
                     },
-                    "play": null
+                    "play": null,
+                    "wand": null,
+                    "litter": null,
+                    "grooming": null,
+                    "scratching": null,
+                    "socialisation": null
                 }
             },
             "collie": {
@@ -1002,12 +998,6 @@
                 ],
                 "activities": [
                     [
-                        "watered_pet",
-                        "2026-10-24T07:35:00+00:00",
-                        76,
-                        "child"
-                    ],
-                    [
                         "ignored_warning",
                         "2026-10-24T10:00:00+00:00",
                         10,
@@ -1021,21 +1011,21 @@
                     ],
                     [
                         "ignored_warning",
-                        "2026-10-24T11:50:00+00:00",
+                        "2026-10-24T10:40:00+00:00",
                         30,
+                        null
+                    ],
+                    [
+                        "ignored_warning",
+                        "2026-10-24T12:00:00+00:00",
+                        10,
                         null
                     ],
                     [
                         "watered_pet",
                         "2026-10-24T12:10:00+00:00",
-                        31,
+                        8,
                         "child"
-                    ],
-                    [
-                        "ignored_warning",
-                        "2026-10-24T13:30:00+00:00",
-                        10,
-                        null
                     ],
                     [
                         "ignored_warning",
@@ -1070,7 +1060,7 @@
                         "done",
                         "2026-10-24T06:00:00+00:00",
                         "2026-10-24T22:00:00+00:00",
-                        "2026-10-24T07:35:00+00:00",
+                        "2026-10-24T12:10:00+00:00",
                         "child",
                         null,
                         null,
@@ -1083,7 +1073,7 @@
                         "done",
                         "2026-10-24T06:00:00+00:00",
                         "2026-10-24T22:00:00+00:00",
-                        "2026-10-24T12:10:00+00:00",
+                        "2026-10-24T18:00:00+00:00",
                         "child",
                         null,
                         null,
@@ -1093,11 +1083,11 @@
                         "2026-10-24",
                         "water",
                         2,
-                        "done",
+                        "pending",
                         "2026-10-24T06:00:00+00:00",
                         "2026-10-24T22:00:00+00:00",
-                        "2026-10-24T18:00:00+00:00",
-                        "child",
+                        null,
+                        null,
                         null,
                         null,
                         null
@@ -1137,17 +1127,17 @@
                     },
                     "care_score": {
                         "score": 100,
-                        "done": 5,
-                        "expected": 5,
+                        "done": 4,
+                        "expected": 4,
                         "illnesses": 0,
                         "since": "2026-10-24T06:00:00+00:00"
                     },
                     "today": {
                         "date": "2026-10-24",
                         "expected": 5,
-                        "done": 5,
+                        "done": 4,
                         "done_by_child": null,
-                        "pending": 0,
+                        "pending": 1,
                         "missed_count": 0,
                         "missed": []
                     }
@@ -1159,18 +1149,18 @@
                     },
                     "care_score": {
                         "score": 100,
-                        "done": 5,
-                        "expected": 5,
-                        "routines": 5,
+                        "done": 4,
+                        "expected": 4,
+                        "routines": 4,
                         "illnesses": 0,
                         "since": "2026-10-24T06:00:00+00:00"
                     },
                     "today": {
                         "date": "2026-10-24",
                         "expected": 5,
-                        "done": 5,
-                        "done_by_child": 5,
-                        "pending": 0,
+                        "done": 4,
+                        "done_by_child": 4,
+                        "pending": 1,
                         "missed_count": 0,
                         "missed": []
                     },
@@ -1251,10 +1241,10 @@
                             "date": "2026-10-24",
                             "expected": 5,
                             "fair_expected": 5,
-                            "done": 5,
-                            "done_by_child": 5,
+                            "done": 4,
+                            "done_by_child": 4,
                             "missed": 0,
-                            "pending": 0,
+                            "pending": 1,
                             "walk_steps": 4000,
                             "walk_goal": null,
                             "walk_done": null
@@ -1279,19 +1269,19 @@
                     ],
                     [
                         "soft_warning",
-                        "hunger",
+                        "thirst",
                         "queued",
                         null,
                         null,
-                        "2026-10-24T11:50:00+00:00"
+                        "2026-10-24T10:40:00+00:00"
                     ],
                     [
                         "critical_alert",
-                        "hunger",
+                        "thirst",
                         "queued",
                         null,
                         null,
-                        "2026-10-24T13:30:00+00:00"
+                        "2026-10-24T12:00:00+00:00"
                     ],
                     [
                         "parent_intervention_alarm",
@@ -1315,6 +1305,7 @@
                     "pet": {
                         "breed_type": "border_collie",
                         "species": "dog",
+                        "name": null,
                         "born_at": "2026-10-24T08:00:00+02:00",
                         "awaiting_contract": false,
                         "caretakers_count": 1,
@@ -1406,16 +1397,18 @@
                             "start": "2026-10-25T06:00:00+01:00",
                             "end": "2026-10-25T10:00:00+01:00"
                         },
-                        "last_fed_at": "2026-10-24T17:30:00+02:00"
+                        "last_fed_at": "2026-10-24T17:30:00+02:00",
+                        "digesting_until": null
                     },
                     "water": {
                         "times_per_day": 3,
                         "min_gap_minutes": 180,
-                        "used_today": 3,
-                        "remaining_today": 0,
+                        "used_today": 2,
+                        "remaining_today": 1,
                         "last_watered_at": "2026-10-24T20:00:00+02:00",
                         "can_water": false,
-                        "next_allowed_at": "2026-10-25T00:00:00+02:00"
+                        "next_allowed_at": "2026-10-25T03:21:00+01:00",
+                        "refill_below": 60
                     },
                     "steps": {
                         "steps_today": 4000,
@@ -1447,7 +1440,12 @@
                         "my_seconds_left": 0,
                         "can_start": false
                     },
-                    "play": null
+                    "play": null,
+                    "wand": null,
+                    "litter": null,
+                    "grooming": null,
+                    "scratching": null,
+                    "socialisation": null
                 }
             }
         },
@@ -1524,12 +1522,6 @@
                 ],
                 "activities": [
                     [
-                        "watered_pet",
-                        "2026-10-24T07:30:00+00:00",
-                        99,
-                        "child"
-                    ],
-                    [
                         "took_out_pet",
                         "2026-10-24T08:00:00+00:00",
                         null,
@@ -1540,12 +1532,6 @@
                         "2026-10-24T09:00:00+00:00",
                         98,
                         null
-                    ],
-                    [
-                        "watered_pet",
-                        "2026-10-24T12:00:00+00:00",
-                        87,
-                        "child"
                     ],
                     [
                         "pet_accident",
@@ -1622,7 +1608,7 @@
                     [
                         "watered_pet",
                         "2026-10-25T11:05:00+00:00",
-                        5,
+                        0,
                         "child"
                     ],
                     [
@@ -1697,11 +1683,11 @@
                         "2026-10-24",
                         "water",
                         0,
-                        "done",
+                        "missed",
                         "2026-10-24T06:00:00+00:00",
                         "2026-10-24T22:00:00+00:00",
-                        "2026-10-24T07:30:00+00:00",
-                        "child",
+                        null,
+                        null,
                         null,
                         null,
                         null
@@ -1710,11 +1696,11 @@
                         "2026-10-24",
                         "water",
                         1,
-                        "done",
+                        "missed",
                         "2026-10-24T06:00:00+00:00",
                         "2026-10-24T22:00:00+00:00",
-                        "2026-10-24T12:00:00+00:00",
-                        "child",
+                        null,
+                        null,
                         null,
                         null,
                         null
@@ -1976,13 +1962,13 @@
                         "2026-10-24",
                         "water",
                         0,
-                        "done"
+                        "missed"
                     ],
                     [
                         "2026-10-24",
                         "water",
                         1,
-                        "done"
+                        "missed"
                     ],
                     [
                         "2026-10-24",
@@ -1999,8 +1985,8 @@
                         ]
                     },
                     "care_score": {
-                        "score": 44,
-                        "done": 7,
+                        "score": 31,
+                        "done": 5,
                         "expected": 16,
                         "illnesses": 0,
                         "since": "2026-10-24T06:00:00+00:00"
@@ -2052,8 +2038,8 @@
                         ]
                     },
                     "care_score": {
-                        "score": 44,
-                        "done": 7,
+                        "score": 31,
+                        "done": 5,
                         "expected": 16,
                         "routines": 16,
                         "illnesses": 0,
@@ -2162,9 +2148,9 @@
                             "date": "2026-10-24",
                             "expected": 8,
                             "fair_expected": 8,
-                            "done": 3,
-                            "done_by_child": 3,
-                            "missed": 5,
+                            "done": 1,
+                            "done_by_child": 1,
+                            "missed": 7,
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
@@ -2281,6 +2267,7 @@
                     "pet": {
                         "breed_type": "mutt",
                         "species": "dog",
+                        "name": null,
                         "born_at": "2026-10-24T08:00:00+02:00",
                         "awaiting_contract": false,
                         "caretakers_count": 1,
@@ -2398,7 +2385,8 @@
                             "start": "2026-10-26T07:00:00+01:00",
                             "end": "2026-10-26T09:00:00+01:00"
                         },
-                        "last_fed_at": "2026-10-25T11:00:00+01:00"
+                        "last_fed_at": "2026-10-25T11:00:00+01:00",
+                        "digesting_until": null
                     },
                     "water": {
                         "times_per_day": 3,
@@ -2407,7 +2395,8 @@
                         "remaining_today": 2,
                         "last_watered_at": "2026-10-25T12:05:00+01:00",
                         "can_water": false,
-                        "next_allowed_at": null
+                        "next_allowed_at": null,
+                        "refill_below": 60
                     },
                     "steps": {
                         "steps_today": 9000,
@@ -2475,7 +2464,12 @@
                         "my_seconds_left": 250,
                         "can_start": true
                     },
-                    "play": null
+                    "play": null,
+                    "wand": null,
+                    "litter": null,
+                    "grooming": null,
+                    "scratching": null,
+                    "socialisation": null
                 }
             },
             "collie": {
@@ -2526,12 +2520,6 @@
                 ],
                 "activities": [
                     [
-                        "watered_pet",
-                        "2026-10-24T07:35:00+00:00",
-                        76,
-                        "child"
-                    ],
-                    [
                         "ignored_warning",
                         "2026-10-24T10:00:00+00:00",
                         10,
@@ -2545,21 +2533,21 @@
                     ],
                     [
                         "ignored_warning",
-                        "2026-10-24T11:50:00+00:00",
+                        "2026-10-24T10:40:00+00:00",
                         30,
+                        null
+                    ],
+                    [
+                        "ignored_warning",
+                        "2026-10-24T12:00:00+00:00",
+                        10,
                         null
                     ],
                     [
                         "watered_pet",
                         "2026-10-24T12:10:00+00:00",
-                        31,
+                        8,
                         "child"
-                    ],
-                    [
-                        "ignored_warning",
-                        "2026-10-24T13:30:00+00:00",
-                        10,
-                        null
                     ],
                     [
                         "ignored_warning",
@@ -2648,7 +2636,7 @@
                         "done",
                         "2026-10-24T06:00:00+00:00",
                         "2026-10-24T22:00:00+00:00",
-                        "2026-10-24T07:35:00+00:00",
+                        "2026-10-24T12:10:00+00:00",
                         "child",
                         null,
                         null,
@@ -2661,7 +2649,7 @@
                         "done",
                         "2026-10-24T06:00:00+00:00",
                         "2026-10-24T22:00:00+00:00",
-                        "2026-10-24T12:10:00+00:00",
+                        "2026-10-24T18:00:00+00:00",
                         "child",
                         null,
                         null,
@@ -2671,11 +2659,11 @@
                         "2026-10-24",
                         "water",
                         2,
-                        "done",
+                        "missed",
                         "2026-10-24T06:00:00+00:00",
                         "2026-10-24T22:00:00+00:00",
-                        "2026-10-24T18:00:00+00:00",
-                        "child",
+                        null,
+                        null,
                         null,
                         null,
                         null
@@ -2827,7 +2815,7 @@
                         "2026-10-24",
                         "water",
                         2,
-                        "done"
+                        "missed"
                     ]
                 ],
                 "pet_summary": {
@@ -2839,8 +2827,8 @@
                         ]
                     },
                     "care_score": {
-                        "score": 72,
-                        "done": 9,
+                        "score": 63,
+                        "done": 8,
                         "expected": 11,
                         "illnesses": 1,
                         "since": "2026-10-24T06:00:00+00:00"
@@ -2879,8 +2867,8 @@
                         ]
                     },
                     "care_score": {
-                        "score": 72,
-                        "done": 9,
+                        "score": 63,
+                        "done": 8,
                         "expected": 11,
                         "routines": 11,
                         "illnesses": 1,
@@ -2975,9 +2963,9 @@
                             "date": "2026-10-24",
                             "expected": 5,
                             "fair_expected": 5,
-                            "done": 5,
-                            "done_by_child": 5,
-                            "missed": 0,
+                            "done": 4,
+                            "done_by_child": 4,
+                            "missed": 1,
                             "pending": 0,
                             "walk_steps": 4000,
                             "walk_goal": null,
@@ -3015,19 +3003,19 @@
                     ],
                     [
                         "soft_warning",
-                        "hunger",
+                        "thirst",
                         "queued",
                         null,
                         null,
-                        "2026-10-24T11:50:00+00:00"
+                        "2026-10-24T10:40:00+00:00"
                     ],
                     [
                         "critical_alert",
-                        "hunger",
+                        "thirst",
                         "queued",
                         null,
                         null,
-                        "2026-10-24T13:30:00+00:00"
+                        "2026-10-24T12:00:00+00:00"
                     ],
                     [
                         "parent_intervention_alarm",
@@ -3099,6 +3087,7 @@
                     "pet": {
                         "breed_type": "border_collie",
                         "species": "dog",
+                        "name": null,
                         "born_at": "2026-10-24T08:00:00+02:00",
                         "awaiting_contract": false,
                         "caretakers_count": 1,
@@ -3190,7 +3179,8 @@
                             "start": "2026-10-26T06:00:00+01:00",
                             "end": "2026-10-26T10:00:00+01:00"
                         },
-                        "last_fed_at": "2026-10-25T07:40:00+01:00"
+                        "last_fed_at": "2026-10-25T07:40:00+01:00",
+                        "digesting_until": null
                     },
                     "water": {
                         "times_per_day": 3,
@@ -3199,7 +3189,8 @@
                         "remaining_today": 1,
                         "last_watered_at": "2026-10-25T12:10:00+01:00",
                         "can_water": false,
-                        "next_allowed_at": null
+                        "next_allowed_at": null,
+                        "refill_below": 60
                     },
                     "steps": {
                         "steps_today": 20000,
@@ -3237,7 +3228,12 @@
                         "my_seconds_left": 0,
                         "can_start": false
                     },
-                    "play": null
+                    "play": null,
+                    "wand": null,
+                    "litter": null,
+                    "grooming": null,
+                    "scratching": null,
+                    "socialisation": null
                 }
             }
         },
@@ -3322,12 +3318,6 @@
                 ],
                 "activities": [
                     [
-                        "watered_pet",
-                        "2026-10-24T07:30:00+00:00",
-                        99,
-                        "child"
-                    ],
-                    [
                         "took_out_pet",
                         "2026-10-24T08:00:00+00:00",
                         null,
@@ -3338,12 +3328,6 @@
                         "2026-10-24T09:00:00+00:00",
                         98,
                         null
-                    ],
-                    [
-                        "watered_pet",
-                        "2026-10-24T12:00:00+00:00",
-                        87,
-                        "child"
                     ],
                     [
                         "pet_accident",
@@ -3420,7 +3404,7 @@
                     [
                         "watered_pet",
                         "2026-10-25T11:05:00+00:00",
-                        5,
+                        0,
                         "child"
                     ],
                     [
@@ -3495,11 +3479,11 @@
                         "2026-10-24",
                         "water",
                         0,
-                        "done",
+                        "missed",
                         "2026-10-24T06:00:00+00:00",
                         "2026-10-24T22:00:00+00:00",
-                        "2026-10-24T07:30:00+00:00",
-                        "child",
+                        null,
+                        null,
                         null,
                         null,
                         null
@@ -3508,11 +3492,11 @@
                         "2026-10-24",
                         "water",
                         1,
-                        "done",
+                        "missed",
                         "2026-10-24T06:00:00+00:00",
                         "2026-10-24T22:00:00+00:00",
-                        "2026-10-24T12:00:00+00:00",
-                        "child",
+                        null,
+                        null,
                         null,
                         null,
                         null
@@ -3878,13 +3862,13 @@
                         "2026-10-24",
                         "water",
                         0,
-                        "done"
+                        "missed"
                     ],
                     [
                         "2026-10-24",
                         "water",
                         1,
-                        "done"
+                        "missed"
                     ],
                     [
                         "2026-10-24",
@@ -3967,8 +3951,8 @@
                         ]
                     },
                     "care_score": {
-                        "score": 35,
-                        "done": 7,
+                        "score": 25,
+                        "done": 5,
                         "expected": 20,
                         "illnesses": 0,
                         "since": "2026-10-24T06:00:00+00:00"
@@ -4006,8 +3990,8 @@
                         ]
                     },
                     "care_score": {
-                        "score": 35,
-                        "done": 7,
+                        "score": 25,
+                        "done": 5,
                         "expected": 20,
                         "routines": 20,
                         "illnesses": 0,
@@ -4090,9 +4074,9 @@
                             "date": "2026-10-24",
                             "expected": 8,
                             "fair_expected": 8,
-                            "done": 3,
-                            "done_by_child": 3,
-                            "missed": 5,
+                            "done": 1,
+                            "done_by_child": 1,
+                            "missed": 7,
                             "pending": 0,
                             "walk_steps": 0,
                             "walk_goal": null,
@@ -4229,6 +4213,7 @@
                     "pet": {
                         "breed_type": "mutt",
                         "species": "dog",
+                        "name": null,
                         "born_at": "2026-10-24T08:00:00+02:00",
                         "awaiting_contract": false,
                         "caretakers_count": 1,
@@ -4346,7 +4331,8 @@
                             "start": "2026-10-26T15:00:00+01:00",
                             "end": "2026-10-26T17:00:00+01:00"
                         },
-                        "last_fed_at": "2026-10-25T11:00:00+01:00"
+                        "last_fed_at": "2026-10-25T11:00:00+01:00",
+                        "digesting_until": null
                     },
                     "water": {
                         "times_per_day": 3,
@@ -4355,7 +4341,8 @@
                         "remaining_today": 3,
                         "last_watered_at": "2026-10-25T12:05:00+01:00",
                         "can_water": false,
-                        "next_allowed_at": null
+                        "next_allowed_at": null,
+                        "refill_below": 60
                     },
                     "steps": {
                         "steps_today": 0,
@@ -4423,7 +4410,12 @@
                         "my_seconds_left": 300,
                         "can_start": true
                     },
-                    "play": null
+                    "play": null,
+                    "wand": null,
+                    "litter": null,
+                    "grooming": null,
+                    "scratching": null,
+                    "socialisation": null
                 }
             },
             "collie": {
@@ -4482,12 +4474,6 @@
                 ],
                 "activities": [
                     [
-                        "watered_pet",
-                        "2026-10-24T07:35:00+00:00",
-                        76,
-                        "child"
-                    ],
-                    [
                         "ignored_warning",
                         "2026-10-24T10:00:00+00:00",
                         10,
@@ -4501,21 +4487,21 @@
                     ],
                     [
                         "ignored_warning",
-                        "2026-10-24T11:50:00+00:00",
+                        "2026-10-24T10:40:00+00:00",
                         30,
+                        null
+                    ],
+                    [
+                        "ignored_warning",
+                        "2026-10-24T12:00:00+00:00",
+                        10,
                         null
                     ],
                     [
                         "watered_pet",
                         "2026-10-24T12:10:00+00:00",
-                        31,
+                        8,
                         "child"
-                    ],
-                    [
-                        "ignored_warning",
-                        "2026-10-24T13:30:00+00:00",
-                        10,
-                        null
                     ],
                     [
                         "ignored_warning",
@@ -4610,7 +4596,7 @@
                         "done",
                         "2026-10-24T06:00:00+00:00",
                         "2026-10-24T22:00:00+00:00",
-                        "2026-10-24T07:35:00+00:00",
+                        "2026-10-24T12:10:00+00:00",
                         "child",
                         null,
                         null,
@@ -4623,7 +4609,7 @@
                         "done",
                         "2026-10-24T06:00:00+00:00",
                         "2026-10-24T22:00:00+00:00",
-                        "2026-10-24T12:10:00+00:00",
+                        "2026-10-24T18:00:00+00:00",
                         "child",
                         null,
                         null,
@@ -4633,11 +4619,11 @@
                         "2026-10-24",
                         "water",
                         2,
-                        "done",
+                        "missed",
                         "2026-10-24T06:00:00+00:00",
                         "2026-10-24T22:00:00+00:00",
-                        "2026-10-24T18:00:00+00:00",
-                        "child",
+                        null,
+                        null,
                         null,
                         null,
                         null
@@ -4841,7 +4827,7 @@
                         "2026-10-24",
                         "water",
                         2,
-                        "done"
+                        "missed"
                     ],
                     [
                         "2026-10-25",
@@ -4892,8 +4878,8 @@
                         "reasons": []
                     },
                     "care_score": {
-                        "score": 65,
-                        "done": 9,
+                        "score": 57,
+                        "done": 8,
                         "expected": 12,
                         "illnesses": 1,
                         "since": "2026-10-24T06:00:00+00:00"
@@ -4914,8 +4900,8 @@
                         "reasons": []
                     },
                     "care_score": {
-                        "score": 65,
-                        "done": 9,
+                        "score": 57,
+                        "done": 8,
                         "expected": 12,
                         "routines": 12,
                         "illnesses": 1,
@@ -4983,9 +4969,9 @@
                             "date": "2026-10-24",
                             "expected": 5,
                             "fair_expected": 5,
-                            "done": 5,
-                            "done_by_child": 5,
-                            "missed": 0,
+                            "done": 4,
+                            "done_by_child": 4,
+                            "missed": 1,
                             "pending": 0,
                             "walk_steps": 4000,
                             "walk_goal": null,
@@ -5035,19 +5021,19 @@
                     ],
                     [
                         "soft_warning",
-                        "hunger",
+                        "thirst",
                         "queued",
                         null,
                         null,
-                        "2026-10-24T11:50:00+00:00"
+                        "2026-10-24T10:40:00+00:00"
                     ],
                     [
                         "critical_alert",
-                        "hunger",
+                        "thirst",
                         "queued",
                         null,
                         null,
-                        "2026-10-24T13:30:00+00:00"
+                        "2026-10-24T12:00:00+00:00"
                     ],
                     [
                         "parent_intervention_alarm",
@@ -5135,6 +5121,7 @@
                     "pet": {
                         "breed_type": "border_collie",
                         "species": "dog",
+                        "name": null,
                         "born_at": "2026-10-24T08:00:00+02:00",
                         "awaiting_contract": false,
                         "caretakers_count": 1,
@@ -5229,7 +5216,8 @@
                             "start": "2026-10-26T06:00:00+01:00",
                             "end": "2026-10-26T10:00:00+01:00"
                         },
-                        "last_fed_at": "2026-10-25T07:40:00+01:00"
+                        "last_fed_at": "2026-10-25T07:40:00+01:00",
+                        "digesting_until": null
                     },
                     "water": {
                         "times_per_day": 3,
@@ -5238,7 +5226,8 @@
                         "remaining_today": 3,
                         "last_watered_at": "2026-10-25T12:10:00+01:00",
                         "can_water": true,
-                        "next_allowed_at": null
+                        "next_allowed_at": null,
+                        "refill_below": 60
                     },
                     "steps": {
                         "steps_today": 0,
@@ -5270,7 +5259,12 @@
                         "my_seconds_left": 0,
                         "can_start": false
                     },
-                    "play": null
+                    "play": null,
+                    "wand": null,
+                    "litter": null,
+                    "grooming": null,
+                    "scratching": null,
+                    "socialisation": null
                 }
             }
         }
