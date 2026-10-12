@@ -11,6 +11,9 @@
 const { SourceSkips } = require('expo/fingerprint');
 
 module.exports = {
-  sourceSkips: SourceSkips.ExpoConfigExtraSection,
+  // `sourceSkips` REPLACES the default (it is not merged): keep the default
+  // PackageJsonAndroidAndIosScriptsIfNotContainRun — `expo prebuild` on the EAS build server
+  // rewrites the `android` / `ios` scripts to `expo run:*`, the Mac keeps `expo start --*`.
+  sourceSkips: SourceSkips.PackageJsonAndroidAndIosScriptsIfNotContainRun | SourceSkips.ExpoConfigExtraSection,
   ignorePaths: ['**/google-services.json'],
 };
