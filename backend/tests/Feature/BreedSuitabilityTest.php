@@ -475,3 +475,18 @@ it('gives the Cane Corso the new not_for_small_children and drools tags, active_
         ->and(bsEntry('cane_corso.lifespan.pdsa')['quote'])->toBe('Average lifespan: Under 10 years')
         ->and(bsEntry('cane_corso.exercise.adult')['quote'])->toBe('Your Cane Corso will need around two hours’ exercise every day.');
 });
+
+it('gives the Pembroke Welsh Corgi may_herd_children, sheds and frequent_grooming — no suits tag, no welfare chip (runbook 2026-10-12)', function () {
+    $corgi = app(BreedSuitability::class)->for(BreedType::PembrokeWelshCorgi);
+    // RKC "Small house" (not Flat/ Apartment, not Large house), 60 min, no family / children rating → no suits tag.
+    expect($corgi['suits'])->toBe([])
+        ->and($corgi['consider'])->toBe(['may_herd_children', 'sheds', 'frequent_grooming'])
+        // RKC Breed Watch Category 1 → no welfare chip; PDSA's IVDD / hip items stay in research.
+        ->and($corgi['consider'])->not->toContain('back_spine')->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')
+        ->not->toContain('shorter_lifespan')->not->toContain('long_daily_exercise');
+
+    expect(bsEntry('pembroke_welsh_corgi.suitability.pdsa_children')['quote'])->toBe('They may nip at the heels of running children')
+        ->and(bsEntry('pembroke_welsh_corgi.suitability.rkc_shedding')['quote'])->toBe('Sheds: Yes')
+        ->and(bsEntry('pembroke_welsh_corgi.suitability.rkc_grooming')['quote'])->toBe('Grooming: More than once a week')
+        ->and(bsEntry('pembroke_welsh_corgi.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Small house');
+});

@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -302,6 +302,17 @@ class BreedStageParamsSeeder extends Seeder
     public const PROPOSED_R10_CANE_CORSO_SENIOR = 'predlog Claude 2026-10-12 (najbližja vrstica pravila runbooka, M5-R10-23) — čaka Davida';
 
     /**
+     * M5-R10-24 Pembroke Welsh Corgi (unattended run 2026-10-12, data.json
+     * proposed_game_parameters.pembroke_welsh_corgi.*.decision): every value follows a standing
+     * rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min, senior 45 min, puppy 10 min × age capped at 60, stages 9 / 36 / 108
+     * (senior from the RKC lower bound "Over 12 years", S204 — provisional until McMillan 2024
+     * is checked), arrival 2 / 9 / 36 / 108, learning multiplier 1.5 (Coren 11, Excellent);
+     * care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_PEMBROKE_WELSH_CORGI = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-24)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -371,7 +382,7 @@ class BreedStageParamsSeeder extends Seeder
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -811,6 +822,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-23 (docs/research/dog-data/data.json cane_corso,
             // S197–S201; runbook rules in proposed_game_parameters.cane_corso).
             BreedType::CaneCorso => self::caneCorsoProfile(),
+            // M5-R10-24 (docs/research/dog-data/data.json pembroke_welsh_corgi,
+            // S202–S206; runbook rules in proposed_game_parameters.pembroke_welsh_corgi).
+            BreedType::PembrokeWelshCorgi => self::pembrokeWelshCorgiProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -2171,6 +2185,79 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'cane_corso.lifespan.median_international',
                 'quote' => 'The median lifespan of the whole examined group is 9.29 years (IQR 6.98-11.12, IQR = Interquartile Range).',
                 'notes' => 'Korec et al. 2017 (S201), 232 dogs from kennels and owners in 25 countries. PDSA "Under 10 years" (S199) agrees. McMillan 2024 (S54 / S135) gives no reachable value. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Pembroke Welsh Corgi (M5-R10-24). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_PEMBROKE_WELSH_CORGI);
+     * weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function pembrokeWelshCorgiProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_PEMBROKE_WELSH_CORGI;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S204', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.pembroke_welsh_corgi.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog finishes growing at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S204; PDSA S206 the same) = 9 y = 108 months. No McMillan 2024 / VetCompass median was reachable. Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.pembroke_welsh_corgi.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S204', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.pembroke_welsh_corgi.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S204) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA "around an hour of exercise per day" (S206) agrees.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.pembroke_welsh_corgi.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[9.0, 12.0], [
+                'unit' => 'kg', 'source_id' => 'S202', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'pembroke_welsh_corgi.adult_weight.fci',
+                'quote' => '10-12 kg.',
+                'notes' => 'FCI (S202): males 10–12 kg, females 9–11 kg → game range 9–12 kg (both sexes). RKC standard (S205) the same; PDSA "9-12 kg" (S206).',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'pembroke_welsh_corgi.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (9–12 kg ≈ 20–26 lb, mostly the Small class of S10; RKC size "Small").',
+            ]],
+            'coren_rank' => [11, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'pembroke_welsh_corgi.trainability.coren_rank',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 11, tier "Excellent Working Dogs" (ranks 11–26). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.pembroke_welsh_corgi.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 11 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S204', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'pembroke_welsh_corgi.lifespan.rkc',
+                'quote' => 'Lifespan: Over 12 years',
+                'notes' => 'RKC breed page lower bound (S204); PDSA "Over 12 years" (S206) the same. No McMillan 2024 / VetCompass median reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
