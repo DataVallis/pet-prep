@@ -6,11 +6,17 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "PETPREP_APNS_MODE": "development"
+      }
     },
     "preview": {
       "distribution": "internal",
-      "channel": "preview"
+      "channel": "preview",
+      "env": {
+        "PETPREP_APNS_MODE": "production"
+      }
     },
     "production": {
       "channel": "production",
@@ -21,7 +27,8 @@
         "EXPO_PUBLIC_REVERB_HOST": "api.petprep.si",
         "EXPO_PUBLIC_REVERB_PORT": "443",
         "EXPO_PUBLIC_REVERB_SCHEME": "https",
-        "EXPO_PUBLIC_REVENUECAT_IOS_KEY": "appl_zRZeXTGFukezyzuLRqOgJTbzoMA"
+        "EXPO_PUBLIC_REVENUECAT_IOS_KEY": "appl_zRZeXTGFukezyzuLRqOgJTbzoMA",
+        "PETPREP_APNS_MODE": "production"
       }
     }
   },

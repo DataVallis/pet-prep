@@ -43,8 +43,16 @@ export function resolveGitSha(
 
 type PluginEntry = NonNullable<ExpoConfig['plugins']>[number];
 
-/** APNs environment for the build: sandbox only for EAS `development` / local dev builds. */
+/**
+ * APNs environment for the build: sandbox only for EAS `development` / local dev builds.
+ * `PETPREP_APNS_MODE` (set per profile in `eas.json` `env`) wins: `eas build` applies the
+ * profile env both on the Mac and on the build server, while `EAS_BUILD_PROFILE` exists only
+ * on the server — with the OTA fingerprint (M5-F10) the two config evaluations must match,
+ * or EAS refuses the build ("Runtime version calculated on local machine not equal …").
+ */
 export function apnsMode(vars: Readonly<Record<string, string | undefined>> = env): 'development' | 'production' {
+  const explicit = vars.PETPREP_APNS_MODE?.trim();
+  if (explicit === 'development' || explicit === 'production') return explicit;
   const profile = vars.EAS_BUILD_PROFILE?.trim();
   return profile && profile !== 'development' ? 'production' : 'development';
 }
