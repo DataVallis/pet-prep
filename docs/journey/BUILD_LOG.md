@@ -9,6 +9,23 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-12 — Mladiček spoznava svet: »Nova izkušnja« (M5-R17)
+
+**Kaj se je zgodilo:** David je odločil »tedenska naloga«: dokler je kuža mladiček (do 9 mesecev starosti v igri), otrok enkrat na teden izbere novo izkušnjo — nov človek, drug kuža, nov zvok ali novo mesto — in jo z enim tapom označi kot opravljeno. Starš jo vidi v poročilu (tedenska vrstica) in v časovnici. Brez kazni: zamujen teden se pokaže kot zamujen, ocena skrbi in semafor ostaneta enaka.
+
+**Zakaj je pomembno:** viri (PDSA) pri več pasmah pravijo, da mora mladiček od malega spoznati veliko ljudi, psov in novih izkušenj — sicer lahko odraste v plašnega ali preveč zaščitniškega psa. Šola v igri uči ukaze, socializacije pa do zdaj ni bilo. Zdaj otrok že v igri vadi navado, ki jo pravi mladiček nujno potrebuje.
+
+**Številke:** 12 pasem z nalogo (labradorec, nemški ovčar, bigel, veliki koder, avstralski ovčar, havanski bišon, sibirski haski, rotvajler, angleški buldog, cane corso, welsh corgi pembroke, doberman) — pri vsaki je dobeseden citat PDSA v naših podatkih; 1 naloga na teden; mladiček, ki pride star 2 meseca, ima 7 takih tednov. Mešanček, border collie in 7 drugih pasem naloge (še) nimajo — David odloči, ali jo dobijo vsi mladički. 34 novih testov (19 na strežniku, 15 v aplikaciji), med njimi test, da opravljen ali zamujen teden ne spremeni ocene skrbi.
+
+**Kako povedati:**
+- 👩 Starši: »Mladiček mora spoznati svet. V PetPrep otrok vsak teden kužku pokaže nekaj novega — novega človeka, drugega psa, nov zvok ali novo mesto — vi pa v poročilu vidite, ali je to res naredil.«
+- 🧒 Otroci: »Tvoj mladiček se uči o svetu! Vsak teden mu pokaži nekaj novega in tapni, kaj je bilo.«
+- 💼 Investitorji: »Vsaka potreba pasme iz vira je v igri — zdaj tudi socializacija mladička, brez kazni, a vidna staršem.«
+- 🤝 Partnerji (zavetišča, vzreditelji, veterinarji): »Socializacija v prvih mesecih je eden najpomembnejših nasvetov za nove lastnike — PetPrep ga otroku pokaže kot tedensko nalogo.«
+- 🛠 Tehnično: »`SocialisationService` (teden programa, obdobje mladička iz `breed_stage_params`), `POST /api/child/pet/socialisation`, vrata `socialisation_enabled` kot pri česanju; namenoma ni rutina v knjigi rutin, zato ne more vplivati na Care Score. Velja za nove pse iz nove aplikacije; na telefonu še ni preverjeno.«
+
+---
+
 ## 2026-10-12 — Kuža se zdaj tudi češe (M5-R13)
 
 **Kaj se je zgodilo:** David je odločil »kot pri mački«: pes dobi tedensko rutino česanja, kot jo že ima muca. Število česanj na teden je iz virov (The Royal Kennel Club, PDSA) za vsako pasmo. Otrok tapne »Počeši« in 30 sekund s prstom češe dlako; če ostane vsaj polovica česanj tedna neopravljena, ima kuža vozel v dlaki — brez kazni, naslednje (daljše) česanje ga razreši. Pri skupnem psu šteje otroku, ki je česal; starš vidi vrstico »Česanje« v poročilu.
