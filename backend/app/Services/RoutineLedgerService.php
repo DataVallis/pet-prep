@@ -75,7 +75,9 @@ use Throwable;
  *    slots (slot i = the period's i-th `groomed_pet`) — M5-R13: the same
  *    grooming slots for a dog with `grooming_enabled` and a breed row. Not expected when
  *    hard stop / vet / game over cover ≥ 50 % of the period's non-quiet
- *    time (like the walk). A weekly routine is never pending past its day.
+ *    PROGRAM time (like the walk); a payment lock already lengthens the
+ *    period, so it is neither blocked nor period time (David 2026-10-12,
+ *    »ne štej dvakrat«). A weekly routine is never pending past its day.
  *
  * Not expected at all: before birth (an unborn pet has none), before
  * FIRST_LEDGER_DATE, and — unless it was done anyway — any routine whose
@@ -648,7 +650,7 @@ class RoutineLedgerService
      * $date — the full litter change (1 slot) and a brushed cat's grooming
      * (`grooming_sessions_per_week` slots). Opens at the period start, due
      * at its end (the next weekly birthday); excused when freezes cover ≥
-     * 50 % of the period's non-quiet time.
+     * 50 % of the period's non-quiet program time (payment locks excluded).
      *
      * @param  array<string, mixed>  $in
      * @return list<Routine>
@@ -657,6 +659,7 @@ class RoutineLedgerService
     {
         $quiet = $in['quiet'];
         $blocks = $in['blocks'];
+        $pauses = $this->programPauses($pet);
         $changeDays = $this->lifeStages->stageValueOn($pet, $date, StageParamKey::LitterFullChangeDays)['value'] ?? 0;
         $routines = [];
 
@@ -686,8 +689,10 @@ class RoutineLedgerService
                 continue;
             }
 
-            // Excused like the walk: freezes cover ≥ 50 % of the period's (non-quiet) time.
-            $excused = $this->blockedShare($quiet, $blocks, $opens, $due, $useNormal) >= self::WHOLE_DAY_EXCUSE_SHARE - 1e-9;
+            // Excused like the walk: freezes cover ≥ 50 % of the period's (non-quiet)
+            // PROGRAM time — a payment lock already stretches the period, so it is
+            // neither blocked nor period time (David 2026-10-12, »ne štej dvakrat«).
+            $excused = $this->blockedShare($quiet, $blocks, $opens, $due, $useNormal, $pauses) >= self::WHOLE_DAY_EXCUSE_SHARE - 1e-9;
 
             $rows = array_values(array_filter(
                 $in['activities'],
@@ -894,22 +899,47 @@ class RoutineLedgerService
      * The weekly routines compare it with WHOLE_DAY_EXCUSE_SHARE; M5-R17
      * socialisation uses the same rule for its "excused" weeks.
      *
+     * $excluded (David 2026-10-12, »ne štej dvakrat«): spans that are not
+     * program time at all — the payment locks a program week already
+     * stretches over (LifeStageService::programPeriodAt). They count neither
+     * as blocked nor as week time: the share is measured on [$from, $to)
+     * minus $excluded, in both the numerator and the denominator.
+     *
      * @param  list<array{0: CarbonImmutable, 1: CarbonImmutable|null}>  $blocks
+     * @param  list<array{0: CarbonImmutable, 1: CarbonImmutable|null}>  $excluded
      */
-    public function blockedShare(?QuietHours $quiet, array $blocks, CarbonImmutable $from, CarbonImmutable $to, bool $useNormal = true): float
+    public function blockedShare(?QuietHours $quiet, array $blocks, CarbonImmutable $from, CarbonImmutable $to, bool $useNormal = true, array $excluded = []): float
     {
-        $split = QuietHours::splitSecondsBetween($quiet, $from, $to);
-        $total = $useNormal ? $split['normal'] : $split['normal'] + $split['quiet'];
+        $total = 0.0;
+        foreach ($this->subtract($from, $to, $excluded) as [$a, $b]) {
+            $part = QuietHours::splitSecondsBetween($quiet, $a, $b);
+            $total += $useNormal ? $part['normal'] : $part['normal'] + $part['quiet'];
+        }
         if ($total <= 0) {
             return 1.0;
         }
         $playable = 0.0;
-        foreach ($this->subtract($from, $to, $blocks) as [$a, $b]) {
+        foreach ($this->subtract($from, $to, array_merge($excluded, $blocks)) as [$a, $b]) {
             $part = QuietHours::splitSecondsBetween($quiet, $a, $b);
             $playable += $useNormal ? $part['normal'] : $part['normal'] + $part['quiet'];
         }
 
-        return 1 - $playable / $total;
+        return max(0.0, 1 - $playable / $total);
+    }
+
+    /**
+     * The pet's payment-lock spans (Pet::paymentLockSpans — the pauses of
+     * the program clock) as [start, end|null] in UTC: the `$excluded` of
+     * blockedShare() for a program-week rule.
+     *
+     * @return list<array{0: CarbonImmutable, 1: CarbonImmutable|null}>
+     */
+    public function programPauses(Pet $pet): array
+    {
+        return array_map(
+            fn (array $s) => [CarbonImmutable::createFromTimestampUTC($s[0]), $s[1] !== null ? CarbonImmutable::createFromTimestampUTC($s[1]) : null],
+            $pet->paymentLockSpans(),
+        );
     }
 
     /**

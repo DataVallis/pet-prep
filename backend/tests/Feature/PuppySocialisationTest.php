@@ -492,6 +492,42 @@ describe('the parent (report row + timeline, never scored)', function () {
         expect(app(SocialisationService::class)->reportFor($dog->fresh(), $late->id, '2026-10-20', caretaker: ['start' => null, 'end' => null]))->toBeNull();
     });
 
+    // David 2026-10-12 (»ne štej dvakrat«): a payment lock already lengthens the program
+    // week (LifeStageService::programPeriodAt), so it is neither blocked nor week time.
+    // Week 2 = 27 Oct 08:00 + 7 program days; an 8-day lock (28 Oct – 5 Nov) moves its end
+    // to 11 Nov 08:00. Before the fix the lock alone (112 of 210 non-quiet h) excused it.
+    it('does not excuse a week because of a payment lock — the remaining program days still count', function () {
+        [$parent, $child, $dog] = soFamily();
+        $utc = fn (string $local) => Carbon::parse($local, 'Europe/Ljubljana')->utc();
+        PetStatusPeriod::create(['pet_id' => $dog->id, 'kind' => 'payment_lock', 'started_at' => $utc('2026-10-28 08:00'), 'ended_at' => $utc('2026-11-05 08:00')]);
+        $service = app(SocialisationService::class);
+
+        soAt('2026-11-06 10:00');
+        $weeks = $service->weeks($dog->fresh(), now());
+        expect(array_map(fn (array $w) => [$w['week'], $w['status']], $weeks))->toBe([[1, 'missed'], [2, 'open']])
+            ->and($weeks[1]['end']->toIso8601String())->toBe($utc('2026-11-11 08:00')->toIso8601String());
+        // Over without the experience: missed, not excused.
+        expect(array_column($service->weeks($dog->fresh(), $utc('2026-11-11 09:00')), 'status'))->toBe(['missed', 'missed', 'open']);
+
+        // The child can still do it in the program days left after the lock.
+        soPost($child, 'sound')->assertOk();
+        expect(array_column(soReport($parent, $child, 30)['socialisation']['weeks'], 'status'))->toBe(['missed', 'done']);
+    });
+
+    it('measures the excused share in program time: lock + 2 days ill → missed, lock + 4 days ill → excused', function () {
+        $utc = fn (string $local) => Carbon::parse($local, 'Europe/Ljubljana')->utc();
+        foreach ([['2026-11-08 08:00', 'missed'], ['2026-11-10 08:00', 'excused']] as [$illUntil, $expected]) {
+            [$parent, $child, $dog] = soFamily();
+            PetStatusPeriod::create(['pet_id' => $dog->id, 'kind' => 'payment_lock', 'started_at' => $utc('2026-10-28 08:00'), 'ended_at' => $utc('2026-11-05 08:00')]);
+            // Illness in the program days after the lock: 2 days = 28 of 98 h (< 50 %), 4 days = 56 of 98 h.
+            PetStatusPeriod::create(['pet_id' => $dog->id, 'kind' => 'illness', 'started_at' => $utc('2026-11-06 08:00'), 'ended_at' => $utc($illUntil)]);
+            soAt('2026-11-11 09:00');
+
+            expect(array_map(fn (array $w) => [$w['week'], $w['status']], soReport($parent, $child, 30)['socialisation']['weeks']))
+                ->toBe([[1, 'missed'], [2, $expected], [3, 'open']], $illUntil);
+        }
+    });
+
     it('has no socialisation row for a pet without the task', function () {
         [$parent, $child] = soFamily(BreedType::Rottweiler, enabled: false);
         soAt('2026-10-28 12:00');
