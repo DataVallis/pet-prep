@@ -216,6 +216,14 @@ class FalAiService
                 .'dark sparkling eyes, black nose, natural undocked tail, tiny compact toy body, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-23: FCI 343 (S197) — natural uncropped ears and natural tail (FCI 2023;
+            // cropping / docking illegal in the UK, PDSA S199); short shiny dense coat; strong
+            // square moderate muzzle; solid black as the anchor (first FCI colour).
+            BreedType::CaneCorso => 'A calm, alert Cane Corso dog with a solid black short shiny dense coat, '
+                .'natural uncropped triangular ears held close to the cheeks, dark eyes, strong square moderate muzzle, '
+                .'tight lips and eyelids, natural undocked tail, robust athletic build slightly longer than tall, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -504,6 +512,18 @@ class FalAiService
                     2 => 'long, straight and silky with a parting down the back',
                 },
                 'markings' => 'tan head, chest and legs; darker blue tail',
+            ],
+            // M5-R10-23: FCI 343 (S197) colours only — never black-and-tan (AKC S200), never large
+            // white patches; a small white patch on the chest is acceptable (S197).
+            BreedType::CaneCorso => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'solid black',
+                    1 => 'solid grey (blue)',
+                    2 => 'black brindle',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'short, shiny and very dense',
+                'markings' => 'none, or a small white patch on the chest',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

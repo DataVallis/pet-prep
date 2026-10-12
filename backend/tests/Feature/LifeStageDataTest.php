@@ -157,15 +157,18 @@ describe('import provenance', function () {
         // (minutes, progress, decay), the starting progress and the two training
         // effects (David 2026-10-07) are David's decisions (verified).
         // M5-R06-03: dog breeds only — the cat rowset is checked in its own describe below.
-        // M5-R10-12: the Bernese Mountain Dog's senior boundary / senior arrival age (76) is
-        // Claude's suggestion (no runbook rule produced a value) — open for David.
+        // M5-R10-12 / M5-R10-23: the Bernese Mountain Dog's (76) and the Cane Corso's (84) senior
+        // boundary / senior arrival age are Claude's suggestions (no runbook rule produced a value) —
+        // open for David.
         $dogOpen = BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false);
-        expect((clone $dogOpen)->where('breed_slug', '!=', 'bernese-mountain-dog')->pluck('key')->unique()->values()->all())
+        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso'])->pluck('key')->unique()->values()->all())
             ->toEqualCanonicalizing([
                 StageParamKey::ChewingChancePerDay->value,
-            ])
-            ->and((clone $dogOpen)->where('breed_slug', 'bernese-mountain-dog')->where('key', '!=', StageParamKey::ChewingChancePerDay->value)->get()->map(fn ($r) => "{$r->stage}.{$r->key}")->sort()->values()->all())
-            ->toBe(['senior.'.StageParamKey::ArrivalAgeMonths->value, 'senior.'.StageParamKey::StartsAtMonths->value]);
+            ]);
+        foreach (['bernese-mountain-dog', 'cane-corso'] as $slug) {
+            expect((clone $dogOpen)->where('breed_slug', $slug)->where('key', '!=', StageParamKey::ChewingChancePerDay->value)->get()->map(fn ($r) => "{$r->stage}.{$r->key}")->sort()->values()->all())
+                ->toBe(['senior.'.StageParamKey::ArrivalAgeMonths->value, 'senior.'.StageParamKey::StartsAtMonths->value], $slug);
+        }
     });
 
     it('marks David\'s 2026-10-05 answers verified as decisions and keeps the underlying source ids — data_verified turns true', function () {

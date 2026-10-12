@@ -253,6 +253,7 @@ describe('PetPickerStep', () => {
       'breed-option-bulldog',
       'breed-option-german_shorthaired_pointer',
       'breed-option-yorkshire_terrier',
+      'breed-option-cane_corso',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -491,6 +492,49 @@ describe('PetPickerStep', () => {
       expect(consider).toHaveTextContent(/escapes easily — needs a secure, high fence/);
       expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(screen.getByTestId('breed-option-siberian_husky')).toHaveTextContent(/Siberian Husky/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-23: the Cane Corso (fallback) shows its chips incl. the two new chips, is found as "korzo" and "cane corso", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const corso = screen.getByTestId('breed-option-cane_corso');
+    expect(corso).toHaveTextContent(/Cane corso/);
+    expect(corso).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-cane_corso-consider')).toHaveTextContent(/velik pes — ni za dom z majhnimi otroki/);
+    expect(screen.getByTestId('breed-suitability-cane_corso-consider')).toHaveTextContent(/se slini — imejte pri roki krpo/);
+    expect(screen.getByTestId('breed-suitability-cane_corso-consider')).toHaveTextContent(/potrebuje izkušenega lastnika/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'korzo');
+    expect(screen.getByTestId('breed-option-cane_corso')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-rottweiler')).toBeNull();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'cane corso');
+    expect(screen.getByTestId('breed-option-cane_corso')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-cane_corso'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'cane_corso', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'cane_corso' }),
+    );
+  });
+
+  it('M5-R10-23: the Cane Corso chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const consider = screen.getByTestId('breed-suitability-cane_corso-consider');
+      expect(consider).toHaveTextContent(/large dog — not for homes with small children/);
+      expect(consider).toHaveTextContent(/drools — keep a cloth at hand/);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-suitability-cane_corso-suits')).not.toHaveTextContent(/hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-cane_corso')).toHaveTextContent(/Cane Corso/);
     } finally {
       await i18n.changeLanguage('sl');
     }

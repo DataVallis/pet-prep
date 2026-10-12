@@ -118,7 +118,7 @@ class BreedConfigResource extends Resource
                     ->unique(ignoreRecord: true)
                     ->maxLength(255)
                     ->alphaDash()
-                    ->helperText('Unique slug identifying the breed (e.g., mutt, border-collie, labrador-retriever, golden-retriever, french-bulldog, german-shepherd-dog, cavalier-king-charles-spaniel, beagle, poodle-standard, dachshund, australian-shepherd, havanese, west-highland-white-terrier, bernese-mountain-dog, siberian-husky, rottweiler, bulldog, german-shorthaired-pointer, yorkshire-terrier).'),
+                    ->helperText('Unique slug identifying the breed (e.g., mutt, border-collie, labrador-retriever, golden-retriever, french-bulldog, german-shepherd-dog, cavalier-king-charles-spaniel, beagle, poodle-standard, dachshund, australian-shepherd, havanese, west-highland-white-terrier, bernese-mountain-dog, siberian-husky, rottweiler, bulldog, german-shorthaired-pointer, yorkshire-terrier, cane-corso).'),
 
                 Forms\Components\TextInput::make('daily_steps_required')
                     ->required()
@@ -211,7 +211,7 @@ class BreedConfigResource extends Resource
                     ->options(collect(Species::cases())->mapWithKeys(fn (Species $s): array => [$s->value => ucfirst($s->value)])->all())
                     ->default(Species::Dog->value)
                     ->required()
-                    ->helperText('Dog / cat. For a breed the app knows (mutt, border-collie, labrador-retriever, golden-retriever, french-bulldog, german-shepherd-dog, cavalier-king-charles-spaniel, beagle, poodle-standard, dachshund, australian-shepherd, havanese, west-highland-white-terrier, bernese-mountain-dog, siberian-husky, rottweiler, bulldog, german-shorthaired-pointer, yorkshire-terrier, domestic-cat, maine-coon, british-shorthair, ragdoll, siberian-cat, norwegian-forest-cat, bengal) the species is fixed by the code and this value is ignored.'),
+                    ->helperText('Dog / cat. For a breed the app knows (mutt, border-collie, labrador-retriever, golden-retriever, french-bulldog, german-shepherd-dog, cavalier-king-charles-spaniel, beagle, poodle-standard, dachshund, australian-shepherd, havanese, west-highland-white-terrier, bernese-mountain-dog, siberian-husky, rottweiler, bulldog, german-shorthaired-pointer, yorkshire-terrier, cane-corso, domestic-cat, maine-coon, british-shorthair, ragdoll, siberian-cat, norwegian-forest-cat, bengal) the species is fixed by the code and this value is ignored.'),
 
                 Forms\Components\TextInput::make('sort_order')
                     ->integer()

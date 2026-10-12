@@ -108,6 +108,16 @@ return [
         // important trait no other key covers (`small_children` is only ever a `suits` tag);
         // a calm chip, never a number.
         'fragile_older_children' => 'consider',
+        // M5-R10-23 (runbook "new tag" rule, 2026-10-12): a sourced advice against homes with
+        // small children (Cane Corso: PDSA S199 "We really wouldn’t recommend having a Cane Corso
+        // if you have small children" — they could be knocked over). A sourced, important trait no
+        // other key covers (`small_children` is only ever a `suits` tag; `fragile_older_children`
+        // is about the dog's fragile bones); a calm chip, never a number.
+        'not_for_small_children' => 'consider',
+        // M5-R10-23 (runbook "new tag" rule, 2026-10-12): the breed is known to drool (Cane
+        // Corso: PDSA S199 "Cane Corsos are known to drool."). A sourced trait a family notices
+        // every day that no other key covers; a calm chip, never a number.
+        'drools' => 'consider',
     ],
 
     'breeds' => [
@@ -544,6 +554,35 @@ return [
                 ['tag' => 'fragile_older_children', 'source_ids' => ['S194'], 'refs' => ['yorkshire_terrier.suitability.pdsa_children', 'yorkshire_terrier.behaviour.family']],
                 // S192 "Grooming: Every day"; S194 daily grooming.
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S192', 'S194'], 'refs' => ['yorkshire_terrier.suitability.rkc_grooming', 'yorkshire_terrier.suitability.pdsa_grooming']],
+            ],
+        ],
+
+        // M5-R10-23: cane_corso.* (S197–S201), runbook rules (data.json
+        // proposed_game_parameters.cane_corso.suitability_tags). No RKC breed page (breed not
+        // RKC-recognised) → PDSA (S199) only; no `large_home` / `apartment` (RKC criteria). No
+        // welfare chip (no Breed Watch / vet-association conformation point; not flat-faced).
+        // Not `children` / `small_children` / `family_pet` (PDSA S199: suits adult-only homes or
+        // families with older children → new `not_for_small_children`).
+        'cane_corso' => [
+            'suits' => [
+                // S199 "Your Cane Corso will need around two hours’ exercise every day."
+                ['tag' => 'active_family', 'source_ids' => ['S199'], 'refs' => ['cane_corso.exercise.adult', 'cane_corso.suitability.pdsa_exercise']],
+            ],
+            'consider' => [
+                // S199 "around two hours’ exercise every day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S199'], 'refs' => ['cane_corso.exercise.adult', 'cane_corso.suitability.pdsa_exercise']],
+                // S199 "We really wouldn’t recommend having a Cane Corso if you have small children".
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S199'], 'refs' => ['cane_corso.behaviour.family', 'cane_corso.suitability.pdsa_children']],
+                // S199 "due to their size they’re better suited to experienced dog owners."
+                ['tag' => 'experienced_owner', 'source_ids' => ['S199'], 'refs' => ['cane_corso.behaviour.experienced_owner', 'cane_corso.suitability.pdsa_experienced_owner']],
+                // S199 "Cane Corsos love to be kept occupied and hate being bored."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S199'], 'refs' => ['cane_corso.exercise.energy', 'cane_corso.suitability.pdsa_mental_stimulation']],
+                // S199 "Average lifespan: Under 10 years"; S201 median 9.29 years.
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S199', 'S201'], 'refs' => ['cane_corso.lifespan.pdsa', 'cane_corso.lifespan.median_international']],
+                // S199 "they do shed and will do so more in spring and autumn".
+                ['tag' => 'sheds', 'source_ids' => ['S199'], 'refs' => ['cane_corso.suitability.pdsa_shedding']],
+                // S199 "Cane Corsos are known to drool."
+                ['tag' => 'drools', 'source_ids' => ['S199'], 'refs' => ['cane_corso.behaviour.drooling', 'cane_corso.suitability.pdsa_drooling']],
             ],
         ],
     ],

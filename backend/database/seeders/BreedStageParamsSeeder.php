@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -281,6 +281,27 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_YORKSHIRE_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-22)';
 
     /**
+     * M5-R10-23 Cane Corso (unattended run 2026-10-12, data.json
+     * proposed_game_parameters.cane_corso.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise
+     * 120 min (PDSA; the breed has no RKC page), senior 90 min, puppy 10 min × age capped at
+     * 120, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 1.0 (not ranked
+     * by Coren); care rates the Border Collie's. The senior boundary uses the closest rule row
+     * (a peer-reviewed breed median, S201) and is NOT covered by the confirmation: see
+     * PROPOSED_R10_CANE_CORSO_SENIOR.
+     */
+    public const CONFIRMED_R10_CANE_CORSO = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-23)';
+
+    /**
+     * M5-R10-23 Cane Corso senior boundary / senior arrival (84 months): Claude's suggestion
+     * from the closest rule row (0.75 × breed median 9.29 y, Korec et al. 2017, S201) — no
+     * runbook rule produced a value (no McMillan 2024 value, no VetCompass paper, no RKC page),
+     * so the rows are verified=false until David decides (data.json
+     * proposed_game_parameters.cane_corso.senior_boundary_months).
+     */
+    public const PROPOSED_R10_CANE_CORSO_SENIOR = 'predlog Claude 2026-10-12 (najbližja vrstica pravila runbooka, M5-R10-23) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -350,7 +371,7 @@ class BreedStageParamsSeeder extends Seeder
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -787,6 +808,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-22 (docs/research/dog-data/data.json yorkshire_terrier,
             // S190–S196; runbook rules in proposed_game_parameters.yorkshire_terrier).
             BreedType::YorkshireTerrier => self::yorkshireTerrierProfile(),
+            // M5-R10-23 (docs/research/dog-data/data.json cane_corso,
+            // S197–S201; runbook rules in proposed_game_parameters.cane_corso).
+            BreedType::CaneCorso => self::caneCorsoProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -2062,6 +2086,91 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'yorkshire_terrier.lifespan.median_uk',
                 'quote' => 'the median age at death was 13.56 years (IQR 11.30–15.15, range 0.06–19.08)',
                 'notes' => 'O\'Neill et al. 2025 (S195), VetCompass UK 2016. RKC / PDSA "Over 12 years" (S192, S194) agree. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Cane Corso (M5-R10-23). Young / adult boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_CANE_CORSO); the
+     * senior boundary is Claude's suggestion (PROPOSED_R10_CANE_CORSO_SENIOR, verified=false);
+     * weight, growth and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function caneCorsoProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_CANE_CORSO;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S201', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.cane_corso.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a giant / large dog finishes growing at 18–24 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [84, [
+                    'unit' => 'months', 'source_id' => 'S11,S201', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.cane_corso.senior_boundary_months', 'decision' => self::PROPOSED_R10_CANE_CORSO_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × breed median lifespan 9.29 y (Korec et al. 2017, 232 dogs from 25 countries, S201) = 6.97 y = 83.61 → 84 months. No McMillan 2024 value and no VetCompass median were reachable, and the breed has no RKC breed page (PDSA "Under 10 years", S199, has no lower bound). Dogs Trust > 7 y (S14) gives the same 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 84],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.cane_corso.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.cane_corso.senior_boundary_months', 'decision' => self::PROPOSED_R10_CANE_CORSO_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 84 months (0.75 × 9.29 y, S201).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (18–24 months for a giant dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S199', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.cane_corso.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Your Cane Corso will need around two hours’ exercise every day.',
+                'notes' => 'PDSA (S199), key facts "Minimum exercise (per day): 2 hours" → 120 min = 12,000 steps (runbook rule: one number N → N). The breed has no RKC breed page (not RKC-recognised).',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.cane_corso.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[40.0, 50.0], [
+                'unit' => 'kg', 'source_id' => 'S197', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'cane_corso.adult_weight.fci',
+                'quote' => 'Males: 45 – 50 kg.',
+                'notes' => 'FCI standard (S197): males 45–50 kg, "Females: 40 – 45 kg." → overall range. PDSA key facts "Average weight: 40-50 kg" (S199) agree.',
+            ]],
+            'growth_end' => [[18, 24], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'cane_corso.growth.adult_weight_reached',
+                'quote' => 'Giant (over 100 pounds) | 18–24 months',
+                'notes' => 'Size-class value, not breed-specific (FCI males 45–50 kg ≈ 99–110 lb reach the Giant class of S10; females 40–45 kg are Large, 15–18 months).',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'cane_corso.trainability.coren_rank',
+                'notes' => 'Not ranked: the Cane Corso is not in the Wikipedia table of Coren\'s ranking (S35, checked 2026-10-12); the ranking predates the breed\'s FCI recognition (S198).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.cane_corso.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): not ranked by Coren (S35) → 1.0, the mixed breed\'s speed (PDSA S199: positive, reward-based training from a young age). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [9.29, [
+                'unit' => 'years', 'source_id' => 'S201', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'cane_corso.lifespan.median_international',
+                'quote' => 'The median lifespan of the whole examined group is 9.29 years (IQR 6.98-11.12, IQR = Interquartile Range).',
+                'notes' => 'Korec et al. 2017 (S201), 232 dogs from kennels and owners in 25 countries. PDSA "Under 10 years" (S199) agrees. McMillan 2024 (S54 / S135) gives no reachable value. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

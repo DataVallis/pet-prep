@@ -975,6 +975,30 @@
       },
       "tests": []
     },
+    "cane_corso": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S199",
+        "quote": "make sure the parents of your puppy have had the relevant health screening"
+      },
+      "tests": [
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip x-ray screening through the BVA/Kennel Club Hip Dysplasia Scheme",
+          "source_id": "S199",
+          "quote": "Before breeding, dogs should be screened by x-rays through the BVA/Kennel Club Hip Dysplasia Scheme."
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "other_scheme",
+          "name": "Elbow x-ray screening through the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S199",
+          "quote": "Before breeding, dogs should be screened by x-rays through the BVA/KC Elbow Dysplasia Scheme."
+        }
+      ],
+      "notes": "The Cane Corso is not recognised by The Royal Kennel Club, so there is no RKC breed page with Good Practice / Best Practice tests (searched 2026-10-12). PDSA (dog-data S199) names the hip and elbow x-ray schemes for the breed → other_scheme (no RKC list to rank them as minimum). The FCI breed club rules in Slovenia (KZS, K7) may set other tests."
+    },
     "maine_coon": {
       "status": "listed",
       "basis": {
