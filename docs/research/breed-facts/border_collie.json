@@ -1,0 +1,809 @@
+{
+  "breed": "border_collie",
+  "facts": [
+    {
+      "key": "border_collie-001",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "A Border Collie needs at least two hours of exercise every day.",
+        "sl": "Border collie potrebuje vsak dan vsaj dve uri gibanja."
+      },
+      "why": {
+        "en": "That's why your adult dog's daily goal is 12,000 steps.",
+        "sl": "Zato je dnevni cilj tvojega odraslega psa 12.000 korakov."
+      },
+      "source_id": "S7",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/border-collie",
+      "quote": "Your Collie will need a minimum of two hours exercise every day",
+      "game_rule_key": "daily_steps",
+      "sort": 1,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-002",
+      "category": "training",
+      "audience": "child",
+      "title": {
+        "en": "In Stanley Coren's survey of obedience judges, 190 of 199 ranked the Border Collie in their top 10.",
+        "sl": "V raziskavi Stanleyja Corena je 190 od 199 sodnikov poslušnosti border collieja uvrstilo med prvih 10."
+      },
+      "why": {
+        "en": "That's why your Border Collie learns commands twice as fast in the game.",
+        "sl": "Zato se tvoj border collie v igri uči ukazov dvakrat hitreje."
+      },
+      "source_id": "S34",
+      "source_name": "Stanley Coren, Psychology Today",
+      "source_url": "https://www.psychologytoday.com/us/blog/canine-corner/200907/canine-intelligence-breed-does-matter",
+      "quote": "190 of the 199 judges ranked the Border Collie in the top 10.",
+      "game_rule_key": "training_speed",
+      "sort": 2,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-003",
+      "category": "training",
+      "audience": "child",
+      "title": {
+        "en": "Dog training sessions should be short: just five to 10 minutes, ending on a positive note.",
+        "sl": "Vaja šolanja naj bo kratka: samo pet do 10 minut in naj se konča z nečim lepim."
+      },
+      "why": {
+        "en": "That's why your dog trains for up to 5 minutes a day in the app.",
+        "sl": "Zato tvoj kuža v aplikaciji vadi največ 5 minut na dan."
+      },
+      "source_id": "S36",
+      "source_name": "American Kennel Club",
+      "source_url": "https://www.akc.org/expert-advice/training/teach-your-puppy-these-5-basic-commands/",
+      "quote": "Always keep training sessions brief — just five to 10 minutes — and always end on a positive note.",
+      "game_rule_key": "training_daily_time",
+      "sort": 3,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-004",
+      "category": "training",
+      "audience": "child",
+      "title": {
+        "en": "A reward helps a dog learn the behaviour you want.",
+        "sl": "Nagrada psu pomaga, da se nauči vedenja, ki si ga želiš."
+      },
+      "why": {
+        "en": "That's why you tap Praise right when your dog obeys.",
+        "sl": "Zato pritisneš »Pohvali« takoj, ko kuža uboga."
+      },
+      "source_id": "S36",
+      "source_name": "American Kennel Club",
+      "source_url": "https://www.akc.org/expert-advice/training/teach-your-puppy-these-5-basic-commands/",
+      "quote": "Positive reinforcement is the process of giving a dog a reward to encourage the behavior you want.",
+      "game_rule_key": "training_praise",
+      "sort": 4,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-005",
+      "category": "training",
+      "audience": "child",
+      "title": {
+        "en": "Puppies can start very simple training as soon as they come home, usually at around 8 weeks old.",
+        "sl": "Mladiček se lahko čisto preprostih stvari začne učiti takoj, ko pride domov, običajno pri približno 8 tednih."
+      },
+      "why": {
+        "en": "Your puppy arrives at 8 weeks, so it starts every command from zero.",
+        "sl": "Tvoj mladiček pride star 8 tednov, zato se vseh ukazov uči od začetka."
+      },
+      "source_id": "S36",
+      "source_name": "American Kennel Club",
+      "source_url": "https://www.akc.org/expert-advice/training/teach-your-puppy-these-5-basic-commands/",
+      "quote": "Puppies can begin very simple training starting as soon as they come home, usually around 8 weeks old.",
+      "game_rule_key": "training_start",
+      "sort": 5,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-006",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "Border Collies also need chances to solve problems and use their brains.",
+        "sl": "Border collie potrebuje tudi priložnosti, da rešuje uganke in uporablja možgane."
+      },
+      "why": {
+        "en": "Training games in the app are brain work for your dog.",
+        "sl": "Vaje šolanja v aplikaciji so za tvojega kužka delo za možgane."
+      },
+      "source_id": "S213",
+      "source_name": "Battersea",
+      "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
+      "quote": "They also need opportunities to solve problems and use their brains.",
+      "game_rule_key": "training_minigame",
+      "sort": 6,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-007",
+      "category": "diet",
+      "audience": "child",
+      "title": {
+        "en": "Puppies aged eight to 12 weeks need four meals a day.",
+        "sl": "Mladički, stari od osem do 12 tednov, potrebujejo štiri obroke na dan."
+      },
+      "why": {
+        "en": "That's why your very young puppy has four meal times a day.",
+        "sl": "Zato ima tvoj čisto majhen mladiček štiri obroke na dan."
+      },
+      "source_id": "S18",
+      "source_name": "ASPCA",
+      "source_url": "https://www.aspca.org/pet-care/dog-care/general-dog-care",
+      "quote": "Puppies eight to 12 weeks old need four meals a day.",
+      "game_rule_key": "feed_windows",
+      "sort": 7,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-008",
+      "category": "diet",
+      "audience": "child",
+      "title": {
+        "en": "Puppies aged three to six months need three meals a day.",
+        "sl": "Mladički, stari od tri do šest mesecev, potrebujejo tri obroke na dan."
+      },
+      "why": {
+        "en": "That's why your puppy gets three meal times a day from 3 months.",
+        "sl": "Zato ima tvoj mladiček od 3. meseca tri obroke na dan."
+      },
+      "source_id": "S18",
+      "source_name": "ASPCA",
+      "source_url": "https://www.aspca.org/pet-care/dog-care/general-dog-care",
+      "quote": "Feed puppies three to six months old three meals a day.",
+      "game_rule_key": "feed_windows",
+      "sort": 8,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-009",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A dog is a puppy until its fast growth stops, at around 6–9 months.",
+        "sl": "Pes je mladiček, dokler ne neha hitro rasti — pri približno 6–9 mesecih."
+      },
+      "why": {
+        "en": "In the game, your puppy becomes a young dog at 9 months.",
+        "sl": "V igri tvoj mladiček pri 9 mesecih postane mlad pes."
+      },
+      "source_id": "S11",
+      "source_name": "AAHA",
+      "source_url": "https://www.aaha.org/resources/life-stage-canine-2019/canine-life-stage-definitions/",
+      "quote": "From birth to cessation of rapid growth (~6–9 months, varying with breed and size)",
+      "game_rule_key": "life_stage",
+      "sort": 9,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-010",
+      "category": "temperament",
+      "audience": "child",
+      "title": {
+        "en": "A Border Collie puppy needs to meet new people, places and sounds, step by step.",
+        "sl": "Mladiček border collieja mora postopoma spoznati nove ljudi, kraje in zvoke."
+      },
+      "why": {
+        "en": "That's your weekly \"New experience\" task while your dog is a puppy.",
+        "sl": "Zato imaš vsak teden nalogo »Nova izkušnja«, dokler je kuža mladiček."
+      },
+      "source_id": "S213",
+      "source_name": "Battersea",
+      "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
+      "quote": "You'll need to gradually introduce them to different people, places, sounds and experiences.",
+      "game_rule_key": "puppy_socialisation",
+      "sort": 10,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-011",
+      "category": "temperament",
+      "audience": "child",
+      "title": {
+        "en": "A Border Collie without enough exercise may show it is unhappy by chewing things.",
+        "sl": "Border collie, ki nima dovolj gibanja, lahko pokaže, da je nesrečen, tako da grize stvari."
+      },
+      "why": {
+        "en": "That's why a missed walk can mean a chewed slipper the next day.",
+        "sl": "Zato lahko zamujen sprehod naslednji dan pomeni pregrizen copat."
+      },
+      "source_id": "S7",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/border-collie",
+      "quote": "If left alone or not given enough exercise, your Collie will certainly let you know they’re unhappy by chewing anything in paw’s reach!",
+      "game_rule_key": "chewing_after_missed_walk",
+      "sort": 11,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-012",
+      "category": "temperament",
+      "audience": "child",
+      "title": {
+        "en": "When the work is done, Border Collies like to settle down for cuddle time.",
+        "sl": "Ko je delo opravljeno, se border collie rad umiri in crklja."
+      },
+      "why": {
+        "en": "When the care is done, a cuddle in the app makes your dog happy.",
+        "sl": "Ko je skrb opravljena, kužka razveseli crkljanje v aplikaciji."
+      },
+      "source_id": "S214",
+      "source_name": "American Kennel Club",
+      "source_url": "https://www.akc.org/dog-breeds/border-collie/",
+      "quote": "These energetic dogs will settle down for cuddle time when the workday is done.",
+      "game_rule_key": "cuddle",
+      "sort": 12,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-013",
+      "category": "origin",
+      "audience": "child",
+      "title": {
+        "en": "The Border Collie's name comes from the border area between England and Scotland.",
+        "sl": "Ime border collie izvira iz obmejnih krajev med Anglijo in Škotsko."
+      },
+      "why": null,
+      "source_id": "S7",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/border-collie",
+      "quote": "Their name comes from the border regions of England and Scotland",
+      "game_rule_key": null,
+      "sort": 13,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-014",
+      "category": "origin",
+      "audience": "child",
+      "title": {
+        "en": "The Border Collie is a sheepdog from Great Britain.",
+        "sl": "Border collie je ovčarski pes iz Velike Britanije."
+      },
+      "why": null,
+      "source_id": "S1",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/297g01-en.pdf",
+      "quote": "ORIGIN: Great-Britain. … UTILIZATION: Sheepdog.",
+      "game_rule_key": null,
+      "sort": 14,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-015",
+      "category": "origin",
+      "audience": "child",
+      "title": {
+        "en": "Border Collies were bred to make their own decisions while moving livestock over large areas.",
+        "sl": "Border collieje so vzrejali, da se sami odločajo, ko vodijo živino po velikih pašnikih."
+      },
+      "why": null,
+      "source_id": "S4",
+      "source_name": "American Kennel Club",
+      "source_url": "https://www.akc.org/expert-advice/dog-breeds/border-collie-right-for-you/",
+      "quote": "The Border Collie was developed to make independent decisions while managing livestock over large areas.",
+      "game_rule_key": null,
+      "sort": 15,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-016",
+      "category": "temperament",
+      "audience": "child",
+      "title": {
+        "en": "Herding is deep in a Border Collie's nature.",
+        "sl": "Vodenje črede je border collieju v krvi."
+      },
+      "why": null,
+      "source_id": "S7",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/border-collie",
+      "quote": "Herding is deep in their nature",
+      "game_rule_key": null,
+      "sort": 16,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-017",
+      "category": "temperament",
+      "audience": "child",
+      "title": {
+        "en": "A Border Collie guides animals with an intense stare called the \"eye\" and a stalking way of moving.",
+        "sl": "Border collie vodi živali z ostrim pogledom, ki mu pravijo »oko«, in s plazečim se gibanjem."
+      },
+      "why": null,
+      "source_id": "S3",
+      "source_name": "AKC breed standard (Border Collie Society of America)",
+      "source_url": "https://www.bordercolliesociety.com/breed-info",
+      "quote": "The stock is then controlled with an intense gaze known as “eye”, coupled with a stalking style of movement.",
+      "game_rule_key": null,
+      "sort": 17,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-018",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A Border Collie can suddenly change speed and direction and still keep its balance.",
+        "sl": "Border collie lahko nenadoma spremeni hitrost in smer, pa vseeno ohrani ravnotežje."
+      },
+      "why": null,
+      "source_id": "S3",
+      "source_name": "AKC breed standard (Border Collie Society of America)",
+      "source_url": "https://www.bordercolliesociety.com/breed-info",
+      "quote": "The Border Collie is an agile dog, able to suddenly change speed and direction while maintaining balance and grace.",
+      "game_rule_key": null,
+      "sort": 18,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-019",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "Endurance is the Border Collie's trademark.",
+        "sl": "Vzdržljivost je zaščitni znak border collieja."
+      },
+      "why": null,
+      "source_id": "S3",
+      "source_name": "AKC breed standard (Border Collie Society of America)",
+      "source_url": "https://www.bordercolliesociety.com/breed-info",
+      "quote": "Endurance is its trademark.",
+      "game_rule_key": null,
+      "sort": 19,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-020",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The ideal height of a male Border Collie is 53 cm at the shoulders; females are slightly smaller.",
+        "sl": "Idealna višina samca border collieja je 53 cm do vihra; samice so nekoliko nižje."
+      },
+      "why": null,
+      "source_id": "S1",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/297g01-en.pdf",
+      "quote": "Ideal height at withers: Males: 53 cm (21 ins), Females: slightly less.",
+      "game_rule_key": null,
+      "sort": 20,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-021",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "Border Collies have one of two coat types: moderately long or smooth.",
+        "sl": "Border collie ima eno od dveh vrst dlake: srednje dolgo ali gladko."
+      },
+      "why": null,
+      "source_id": "S1",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/297g01-en.pdf",
+      "quote": "Hair: Two varieties: Moderately long or Smooth.",
+      "game_rule_key": null,
+      "sort": 21,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-022",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "Under the top coat, a Border Collie has a soft, thick undercoat that protects it from the weather.",
+        "sl": "Pod krovno dlako ima border collie mehko, gosto podlanko, ki ga varuje pred vremenom."
+      },
+      "why": null,
+      "source_id": "S1",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/297g01-en.pdf",
+      "quote": "In both, topcoat dense and medium textured, undercoat soft and dense giving good weather resistance.",
+      "game_rule_key": null,
+      "sort": 22,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-023",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A Border Collie carries its ears upright or half upright.",
+        "sl": "Border collie nosi ušesa pokončno ali napol pokončno."
+      },
+      "why": null,
+      "source_id": "S1",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/297g01-en.pdf",
+      "quote": "Carried erect or semi-erect and sensitive in use.",
+      "game_rule_key": null,
+      "sort": 23,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-024",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A Border Collie's tail is set low and has an upward swirl at the end.",
+        "sl": "Rep border collieja je nizko nasajen in se na koncu zavihne navzgor."
+      },
+      "why": null,
+      "source_id": "S1",
+      "source_name": "FCI",
+      "source_url": "https://www.fci.be/Nomenclature/Standards/297g01-en.pdf",
+      "quote": "Moderately long, the bone reaching at least to hock, set on low, well-furnished and with an upward swirl towards the end,",
+      "game_rule_key": null,
+      "sort": 24,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-025",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "Puzzle feeders are great for Border Collies.",
+        "sl": "Igrače z ugankami za hrano so za border collieja odlične."
+      },
+      "why": null,
+      "source_id": "S7",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/border-collie",
+      "quote": "Puzzle feeders are great for Collies.",
+      "game_rule_key": null,
+      "sort": 25,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-026",
+      "category": "temperament",
+      "audience": "child",
+      "title": {
+        "en": "Border Collies are very loving with their families.",
+        "sl": "Border collie je do svoje družine zelo ljubeč."
+      },
+      "why": null,
+      "source_id": "S4",
+      "source_name": "American Kennel Club",
+      "source_url": "https://www.akc.org/expert-advice/dog-breeds/border-collie-right-for-you/",
+      "quote": "Border Collies are extremely loving with their families.",
+      "game_rule_key": null,
+      "sort": 26,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-027",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "Brushing a Border Collie a couple of times a week helps remove dead hairs.",
+        "sl": "Če border collieja krtačiš nekajkrat na teden, odstraniš odmrle dlake."
+      },
+      "why": null,
+      "source_id": "S7",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/border-collie",
+      "quote": "Brushing your Collie's fur a couple of times a week should help keep on top of the dead hairs",
+      "game_rule_key": null,
+      "sort": 27,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-028",
+      "category": "health",
+      "audience": "parent",
+      "title": {
+        "en": "In a Dogs Trust study of UK dogs, Border Collies had a life expectancy of 13.1 years.",
+        "sl": "V raziskavi Dogs Trust o psih v Združenem kraljestvu je bila pričakovana življenjska doba border collieja 13,1 leta."
+      },
+      "why": {
+        "en": "PetPrep uses this figure: your dog becomes a senior at 118 months.",
+        "sl": "PetPrep uporablja to številko: vaš pes postane starejši pri 118 mesecih."
+      },
+      "source_id": "S15",
+      "source_name": "Dogs Trust",
+      "source_url": "https://www.dogstrust.org.uk/about-us/research-expertise/longevity-dog-breeds",
+      "quote": "dogs with typical shaped faces e.g., Border Collie (13.1 years)",
+      "game_rule_key": "life_stage_senior",
+      "sort": 28,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-029",
+      "category": "body",
+      "audience": "parent",
+      "title": {
+        "en": "Vets define a dog's senior stage as the last 25% of its estimated lifespan.",
+        "sl": "Veterinarji kot starost psa opredelijo zadnjih 25 % njegove pričakovane življenjske dobe."
+      },
+      "why": {
+        "en": "That's how the game sets the senior stage for each breed.",
+        "sl": "Tako igra določi začetek starosti pri vsaki pasmi."
+      },
+      "source_id": "S11",
+      "source_name": "AAHA",
+      "source_url": "https://www.aaha.org/resources/life-stage-canine-2019/canine-life-stage-definitions/",
+      "quote": "From the last 25% of estimated lifespan through end-of-life.",
+      "game_rule_key": "life_stage_senior",
+      "sort": 29,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-030",
+      "category": "family",
+      "audience": "parent",
+      "title": {
+        "en": "According to PDSA, Border Collies might not be the best dogs for first-time owners.",
+        "sl": "Po navedbah PDSA border collie morda ni najprimernejši pes za tiste, ki imajo psa prvič."
+      },
+      "why": null,
+      "source_id": "S7",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/border-collie",
+      "quote": "While they might not be the best dogs for first time owners",
+      "game_rule_key": null,
+      "sort": 30,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-031",
+      "category": "family",
+      "audience": "parent",
+      "title": {
+        "en": "PDSA does not recommend a Border Collie for families with smaller children.",
+        "sl": "PDSA border collieja ne priporoča družinam z manjšimi otroki."
+      },
+      "why": null,
+      "source_id": "S7",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/border-collie",
+      "quote": "We wouldn't recommend a Collie if you have smaller children",
+      "game_rule_key": null,
+      "sort": 31,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-032",
+      "category": "family",
+      "audience": "parent",
+      "title": {
+        "en": "According to Battersea, Border Collies can be a great fit for families with older children.",
+        "sl": "Po navedbah Battersea se border collie lahko odlično znajde v družini s starejšimi otroki."
+      },
+      "why": null,
+      "source_id": "S213",
+      "source_name": "Battersea",
+      "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
+      "quote": "Border Collies can be a great fit for families with older children",
+      "game_rule_key": null,
+      "sort": 32,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-033",
+      "category": "family",
+      "audience": "parent",
+      "title": {
+        "en": "Like many dogs, Border Collies do not cope well on their own.",
+        "sl": "Kot mnogi psi border collie slabo prenaša samoto."
+      },
+      "why": null,
+      "source_id": "S7",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/border-collie",
+      "quote": "Like many dogs, Collies don't do well on their own.",
+      "game_rule_key": null,
+      "sort": 33,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-034",
+      "category": "family",
+      "audience": "parent",
+      "title": {
+        "en": "A Border Collie may try to herd other pets, so it is important to supervise them together.",
+        "sl": "Border collie lahko poskuša voditi druge živali v hiši kot čredo, zato jih je dobro nadzorovati."
+      },
+      "why": null,
+      "source_id": "S7",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/border-collie",
+      "quote": "However, you might find they try to herd them to it’s important to supervise your Collie with other pets.",
+      "game_rule_key": null,
+      "sort": 34,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-035",
+      "category": "temperament",
+      "audience": "parent",
+      "title": {
+        "en": "Border Collies may try to herd or chase cars, other dogs, cyclists, joggers or children.",
+        "sl": "Border collie lahko poskuša voditi ali loviti avtomobile, druge pse, kolesarje, tekače ali otroke."
+      },
+      "why": null,
+      "source_id": "S213",
+      "source_name": "Battersea",
+      "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
+      "quote": "This can sometimes lead to trying to herd or chase cars, other dogs, cyclists, joggers or children.",
+      "game_rule_key": null,
+      "sort": 35,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-036",
+      "category": "exercise",
+      "audience": "parent",
+      "title": {
+        "en": "Without enough physical and mental activity, Border Collies can get frustrated and start chasing or herding.",
+        "sl": "Brez dovolj telesne in miselne dejavnosti je border collie lahko frustriran in začne loviti ali voditi."
+      },
+      "why": {
+        "en": "This is why the daily step goal matters for this breed.",
+        "sl": "Zato je pri tej pasmi dnevni cilj korakov tako pomemben."
+      },
+      "source_id": "S213",
+      "source_name": "Battersea",
+      "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
+      "quote": "Without enough physical and mental stimulation, Border Collies can become frustrated and start chasing or herding.",
+      "game_rule_key": "daily_steps",
+      "sort": 36,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-037",
+      "category": "grooming",
+      "audience": "parent",
+      "title": {
+        "en": "During shedding season, the AKC advises brushing a Border Collie daily.",
+        "sl": "V času menjave dlake AKC svetuje, da border collieja krtačite vsak dan."
+      },
+      "why": null,
+      "source_id": "S4",
+      "source_name": "American Kennel Club",
+      "source_url": "https://www.akc.org/expert-advice/dog-breeds/border-collie-right-for-you/",
+      "quote": "Prospective owners should expect to brush their Border Collie daily during shedding season.",
+      "game_rule_key": null,
+      "sort": 37,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-038",
+      "category": "temperament",
+      "audience": "parent",
+      "title": {
+        "en": "A large genetics study found that breed explains just 9% of behaviour differences between individual dogs.",
+        "sl": "Velika genetska raziskava je pokazala, da pasma pojasni le 9 % razlik v vedenju med posameznimi psi."
+      },
+      "why": {
+        "en": "Every dog is an individual: the breed is only part of the story.",
+        "sl": "Vsak pes je svoja osebnost: pasma pove le del zgodbe."
+      },
+      "source_id": "S42",
+      "source_name": "Science (Morrill et al. 2022)",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9675396",
+      "quote": "Breed explains just 9% of behavioral variation in individuals.",
+      "game_rule_key": null,
+      "sort": 38,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-039",
+      "category": "training",
+      "audience": "parent",
+      "title": {
+        "en": "PDSA advises starting positive, reward-based training with a Border Collie from an early age.",
+        "sl": "PDSA svetuje, da z border colliejem že zgodaj začnete s pozitivnim šolanjem z nagradami."
+      },
+      "why": null,
+      "source_id": "S7",
+      "source_name": "PDSA",
+      "source_url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/border-collie",
+      "quote": "It's important to start positive, reward-based training from an early age",
+      "game_rule_key": null,
+      "sort": 39,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-040",
+      "category": "health",
+      "audience": "parent",
+      "title": {
+        "en": "Collie eye anomaly is an inherited eye condition; its effect ranges from mild vision changes to sight loss.",
+        "sl": "Anomalija očesa pri collijih je dedna bolezen oči; učinek sega od blagih sprememb vida do izgube vida."
+      },
+      "why": null,
+      "source_id": "S213",
+      "source_name": "Battersea",
+      "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
+      "quote": "Collie Eye Anomaly is an inherited eye condition that can range from mild changes in vision to significant sight loss.",
+      "game_rule_key": null,
+      "sort": 40,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-041",
+      "category": "health",
+      "audience": "parent",
+      "title": {
+        "en": "Epilepsy is seen more commonly in Border Collies.",
+        "sl": "Epilepsija se pri border collieju pojavlja pogosteje."
+      },
+      "why": null,
+      "source_id": "S213",
+      "source_name": "Battersea",
+      "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
+      "quote": "Epilepsy is seen more commonly in Border Collies and can cause seizures.",
+      "game_rule_key": null,
+      "sort": 41,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "border_collie-042",
+      "category": "health",
+      "audience": "parent",
+      "title": {
+        "en": "Border Collies can develop hip dysplasia, which can affect how comfortably they move.",
+        "sl": "Pri border collieju se lahko razvije displazija kolkov, ki lahko vpliva na gibanje."
+      },
+      "why": null,
+      "source_id": "S213",
+      "source_name": "Battersea",
+      "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
+      "quote": "Border Collies can develop conditions such as hip dysplasia, which can cause pain and mobility problems.",
+      "game_rule_key": null,
+      "sort": 42,
+      "status": "draft",
+      "verified_by": null
+    }
+  ]
+}

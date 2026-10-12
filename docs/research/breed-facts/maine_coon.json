@@ -1,0 +1,842 @@
+{
+  "breed": "maine_coon",
+  "facts": [
+    {
+      "key": "maine_coon-001",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "Breeders recommend combing a Maine Coon two or three times a week.",
+        "sl": "Vzrejevalci svetujejo, da Maine Coon počešeš dva- do trikrat na teden."
+      },
+      "why": {
+        "en": "That's why you comb your cat 3 times a week in the game.",
+        "sl": "Zato v igri svojo muco počešeš 3-krat na teden."
+      },
+      "source_id": "C51",
+      "source_name": "The Cat Fanciers' Association (CFA)",
+      "source_url": "https://cfa.org/maine-coon/",
+      "quote": "breeders recommend combing your Maine Coon two or three times a week.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 1,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-002",
+      "category": "grooming",
+      "audience": "child",
+      "title": {
+        "en": "Regular grooming keeps a Maine Coon's coat in good condition and prevents knots.",
+        "sl": "Redno česanje ohranja dlako Maine Coona lepo in preprečuje vozle."
+      },
+      "why": {
+        "en": "If you miss combing, your cat gets a knot in its fur.",
+        "sl": "Če česanje zamudiš, ima tvoja muca vozel v dlaki."
+      },
+      "source_id": "C52",
+      "source_name": "GCCF",
+      "source_url": "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/maine-coon/",
+      "quote": "they will require regular grooming to keep the coat in good condition and prevent knots and mats.",
+      "game_rule_key": "coat_knot",
+      "sort": 2,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-003",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "Cats need two or three play sessions of 10 to 15 minutes a day.",
+        "sl": "Muca potrebuje na dan dve ali tri igre, vsaka traja od 10 do 15 minut."
+      },
+      "why": {
+        "en": "That's why you play with the feather wand twice a day.",
+        "sl": "Zato se s palico s peresom igraš dvakrat na dan."
+      },
+      "source_id": "C10",
+      "source_name": "PetMD",
+      "source_url": "https://www.petmd.com/cat/care/how-long-should-you-play-your-cats-each-day",
+      "quote": "In general, you should play with your cat for two or three 10- to 15-minute play sessions a day",
+      "game_rule_key": "wand_play",
+      "sort": 3,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-004",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "Kittens have lots of energy and need more frequent play than adult cats.",
+        "sl": "Mucki imajo ogromno energije in se morajo igrati pogosteje kot odrasle mačke."
+      },
+      "why": {
+        "en": "That's why a kitten needs 3 wand games a day.",
+        "sl": "Zato mucek potrebuje 3 igre s palico na dan."
+      },
+      "source_id": "C10",
+      "source_name": "PetMD",
+      "source_url": "https://www.petmd.com/cat/care/how-long-should-you-play-your-cats-each-day",
+      "quote": "Compared to adult cats, kittens have boundless energy and require more frequent and intense play sessions.",
+      "game_rule_key": "wand_play",
+      "sort": 4,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-005",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "Cats prefer a wand toy that moves away from them, the way prey would move.",
+        "sl": "Muca ima najraje igračo na palici, ki se umika od nje, tako kot plen."
+      },
+      "why": {
+        "en": "That's why you pull the feather away from your cat in the game.",
+        "sl": "Zato v igri pero vlečeš stran od muce."
+      },
+      "source_id": "C11",
+      "source_name": "Cats Protection",
+      "source_url": "https://cats.org.uk/cats-blog/simons-cat-play-time",
+      "quote": "They much prefer the fishing rod toy moving away from the cat, similar to how prey would move.",
+      "game_rule_key": "wand_away",
+      "sort": 5,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-006",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "Cats are far-sighted: they can't see well closer than 25 centimetres.",
+        "sl": "Mačke so daljnovidne: bližje od 25 centimetrov ne vidijo dobro."
+      },
+      "why": {
+        "en": "So don't wave the feather right in front of your cat's face.",
+        "sl": "Zato pera ne mahaj muci tik pred obrazom."
+      },
+      "source_id": "C11",
+      "source_name": "Cats Protection",
+      "source_url": "https://cats.org.uk/cats-blog/simons-cat-play-time",
+      "quote": "Cats are far-sighted, meaning they can't see well under 25 centimetres.",
+      "game_rule_key": "wand_away",
+      "sort": 6,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-007",
+      "category": "exercise",
+      "audience": "child",
+      "title": {
+        "en": "An indoor cat needs pretend hunting, play and high places to climb.",
+        "sl": "Muca, ki živi v stanovanju, potrebuje lov za igračo, igro in visoka mesta za plezanje."
+      },
+      "why": {
+        "en": "Your game cat lives indoors, so your wand game is its hunt.",
+        "sl": "Tvoja muca v igri živi v stanovanju, zato je igra s palico njen lov."
+      },
+      "source_id": "C22",
+      "source_name": "AAFP",
+      "source_url": "https://catvets.com/resource/2024-indoor-outdoor-lifestyle/",
+      "quote": "simulated hunting and foraging opportunities, play, safe territory with vertical space",
+      "game_rule_key": "wand_play",
+      "sort": 7,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-008",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A healthy adult cat poos once or twice a day and pees two to four times a day.",
+        "sl": "Zdrava odrasla mačka kaka enkrat ali dvakrat na dan in lula dva- do štirikrat na dan."
+      },
+      "why": {
+        "en": "That's why your cat uses the litter tray in the game every day.",
+        "sl": "Zato tvoja muca v igri vsak dan uporabi pesek."
+      },
+      "source_id": "C6",
+      "source_name": "Cats Protection",
+      "source_url": "https://www.cats.org.uk/cats-blog/how-often-should-cats-poo-and-pee",
+      "quote": "Healthy adult cats poo once or twice a day. … Healthy adult cats pee two to four times a day.",
+      "game_rule_key": "litter_use",
+      "sort": 8,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-009",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "Poo and pee should be removed from the litter tray at least twice a day.",
+        "sl": "Iz peska je treba vsaj dvakrat na dan odstraniti kakce in lulo."
+      },
+      "why": {
+        "en": "That's why you scoop the litter soon after your cat uses it.",
+        "sl": "Zato pesek počistiš kmalu po tem, ko ga muca uporabi."
+      },
+      "source_id": "C6",
+      "source_name": "Cats Protection",
+      "source_url": "https://www.cats.org.uk/cats-blog/how-often-should-cats-poo-and-pee",
+      "quote": "You should remove any poo and pee from their litter tray at least twice a day.",
+      "game_rule_key": "litter_scoop",
+      "sort": 9,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-010",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The litter tray should be cleaned out completely at least once a week.",
+        "sl": "Pesek je treba vsaj enkrat na teden v celoti zamenjati in pladenj očistiti."
+      },
+      "why": {
+        "en": "That's why you change all the litter once a week.",
+        "sl": "Zato ves pesek zamenjaš enkrat na teden."
+      },
+      "source_id": "C6",
+      "source_name": "Cats Protection",
+      "source_url": "https://www.cats.org.uk/cats-blog/how-often-should-cats-poo-and-pee",
+      "quote": "You should clean out the litter tray completely at least once a week.",
+      "game_rule_key": "litter_change",
+      "sort": 10,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-011",
+      "category": "diet",
+      "audience": "child",
+      "title": {
+        "en": "Until they are six months old, kittens usually do best with three meals a day.",
+        "sl": "Do šestega meseca je za mucke običajno najbolje, da dobijo tri obroke na dan."
+      },
+      "why": {
+        "en": "That's why your kitten has three meal times a day.",
+        "sl": "Zato ima tvoj mucek tri obroke na dan."
+      },
+      "source_id": "C2",
+      "source_name": "Cornell Feline Health Center",
+      "source_url": "https://vet.cornell.edu/departments/cornell-feline-health-center/health-information/feline-health-topics/how-often-should-you-feed-your-cat",
+      "quote": "Until they are six months old, kittens will usually do best when fed three meals a day.",
+      "game_rule_key": "feed_windows",
+      "sort": 11,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-012",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "Vets call a cat a kitten from birth until it is 1 year old.",
+        "sl": "Veterinarji mački pravijo mucek od rojstva do 1. leta starosti."
+      },
+      "why": {
+        "en": "In the game, your kitten becomes a young cat at 12 months.",
+        "sl": "V igri tvoj mucek pri 12 mesecih postane mlada mačka."
+      },
+      "source_id": "C1",
+      "source_name": "AAHA/AAFP (via AVMA)",
+      "source_url": "https://www.avma.org/javma-news/2021-04-15/aaha-aafp-update-feline-life-stage-guidelines",
+      "quote": "kitten, from birth up to 1 year old",
+      "game_rule_key": "life_stage",
+      "sort": 12,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-013",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Maine Coon matures slowly: it can take up to three years to reach full size.",
+        "sl": "Maine Coon dozoreva počasi: do polne velikosti lahko potrebuje do tri leta."
+      },
+      "why": {
+        "en": "That's why your young Maine Coon still looks like it is growing.",
+        "sl": "Zato tvoja mlada muca Maine Coon še vedno raste."
+      },
+      "source_id": "C51",
+      "source_name": "The Cat Fanciers' Association (CFA)",
+      "source_url": "https://cfa.org/maine-coon/",
+      "quote": "This is a slow-maturing breed that can take up to three years to reach full growth.",
+      "game_rule_key": "growth_appearance",
+      "sort": 13,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-014",
+      "category": "temperament",
+      "audience": "child",
+      "title": {
+        "en": "A cat needs a sturdy, tall scratching post.",
+        "sl": "Muca potrebuje trden in visok praskalnik."
+      },
+      "why": {
+        "en": "That's where you take your cat when it scratches the couch.",
+        "sl": "Tja odneseš muco, ko opraska kavč."
+      },
+      "source_id": "C5",
+      "source_name": "ASPCA",
+      "source_url": "https://www.aspca.org/pet-care/cat-care/general-cat-care",
+      "quote": "Provide your cat with a sturdy scratching post, at least three feet high.",
+      "game_rule_key": "scratching_post",
+      "sort": 14,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-015",
+      "category": "temperament",
+      "audience": "child",
+      "title": {
+        "en": "Maine Coons are affectionate and always up for a cuddle.",
+        "sl": "Muca Maine Coon je ljubeča in vedno pripravljena na crkljanje."
+      },
+      "why": {
+        "en": "When the care is done, a cuddle in the app makes your cat happy.",
+        "sl": "Ko je skrb opravljena, muco razveseli crkljanje v aplikaciji."
+      },
+      "source_id": "C52",
+      "source_name": "GCCF",
+      "source_url": "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/maine-coon/",
+      "quote": "Maine Coon cats are affectionate and tactile pets – always up for a cuddle",
+      "game_rule_key": "cuddle",
+      "sort": 15,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-016",
+      "category": "origin",
+      "audience": "child",
+      "title": {
+        "en": "The Maine Coon is the official cat of the US state of Maine, where the breed comes from.",
+        "sl": "Maine Coon je uradna mačka ameriške zvezne države Maine, od koder pasma izvira."
+      },
+      "why": null,
+      "source_id": "C52",
+      "source_name": "GCCF",
+      "source_url": "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/maine-coon/",
+      "quote": "it was named the official cat of the state of Maine, where it originated",
+      "game_rule_key": null,
+      "sort": 16,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-017",
+      "category": "origin",
+      "audience": "child",
+      "title": {
+        "en": "The Maine Coon comes from working cats that lived on farms in north-east America.",
+        "sl": "Maine Coon izvira iz delovnih mačk, ki so živele na kmetijah na severovzhodu Amerike."
+      },
+      "why": null,
+      "source_id": "C16",
+      "source_name": "FIFe",
+      "source_url": "https://fifeweb.org/dnld/std/MCO.pdf",
+      "quote": "traces its origin to the working cat … found on the farms of Northeast America.",
+      "game_rule_key": null,
+      "sort": 17,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-018",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "The Cat Fanciers' Association calls the Maine Coon the largest of all pedigree cats.",
+        "sl": "Ameriško združenje CFA Maine Coon imenuje največjo od vseh rodovniških mačk."
+      },
+      "why": null,
+      "source_id": "C51",
+      "source_name": "The Cat Fanciers' Association (CFA)",
+      "source_url": "https://cfa.org/maine-coon/",
+      "quote": "the largest of all pedigreed cats",
+      "game_rule_key": null,
+      "sort": 18,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-019",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "In the breed standard, lynx-like tufts of hair on the ears are desirable.",
+        "sl": "Po standardu pasme so risji čopki dlake na ušesih zaželeni."
+      },
+      "why": null,
+      "source_id": "C16",
+      "source_name": "FIFe",
+      "source_url": "https://fifeweb.org/dnld/std/MCO.pdf",
+      "quote": "Lynx-tufts are desirable. Tufts of hair in the ears extend beyond outer edges of ears.",
+      "game_rule_key": null,
+      "sort": 19,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-020",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A Maine Coon has large, round paws with tufts of fur between the toes.",
+        "sl": "Muca Maine Coon ima velike, okrogle tace s šopki dlake med prsti."
+      },
+      "why": null,
+      "source_id": "C16",
+      "source_name": "FIFe",
+      "source_url": "https://fifeweb.org/dnld/std/MCO.pdf",
+      "quote": "Large, round and well tufted between the toes",
+      "game_rule_key": null,
+      "sort": 20,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-021",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A Maine Coon's tail is at least as long as its body.",
+        "sl": "Rep muce Maine Coon je vsaj tako dolg kot njeno telo."
+      },
+      "why": null,
+      "source_id": "C16",
+      "source_name": "FIFe",
+      "source_url": "https://fifeweb.org/dnld/std/MCO.pdf",
+      "quote": "At least as long as the body from shoulder-blade to base of tail.",
+      "game_rule_key": null,
+      "sort": 21,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-022",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A Maine Coon's fur is short on the head and shoulders and gets longer down the back and sides.",
+        "sl": "Dlaka Maine Coona je na glavi in ramenih kratka, po hrbtu in bokih pa vedno daljša."
+      },
+      "why": null,
+      "source_id": "C16",
+      "source_name": "FIFe",
+      "source_url": "https://fifeweb.org/dnld/std/MCO.pdf",
+      "quote": "Short on head, shoulders and legs, becoming gradually longer down the back and sides",
+      "game_rule_key": null,
+      "sort": 22,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-023",
+      "category": "body",
+      "audience": "child",
+      "title": {
+        "en": "A Maine Coon's heavy coat is built-in protection from the cold.",
+        "sl": "Gost kožuh Maine Coona jo varuje pred mrazom."
+      },
+      "why": null,
+      "source_id": "C51",
+      "source_name": "The Cat Fanciers' Association (CFA)",
+      "source_url": "https://cfa.org/maine-coon/",
+      "quote": "These cats have heavy, flowing coats for built-in protection from the cold",
+      "game_rule_key": null,
+      "sort": 23,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-024",
+      "category": "temperament",
+      "audience": "child",
+      "title": {
+        "en": "A Maine Coon \"talks\" with chirps, trills and purrs, and only meows now and then.",
+        "sl": "Maine Coon se »pogovarja« s čivkanjem, žvrgolenjem in predenjem, mijavka pa le včasih."
+      },
+      "why": null,
+      "source_id": "C51",
+      "source_name": "The Cat Fanciers' Association (CFA)",
+      "source_url": "https://cfa.org/maine-coon/",
+      "quote": "Their daily conversation may include chirps, trills, and purrs as well as an occasional meow",
+      "game_rule_key": null,
+      "sort": 24,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-025",
+      "category": "temperament",
+      "audience": "child",
+      "title": {
+        "en": "Many Maine Coons are fond of water and will watch a dripping tap with fascination.",
+        "sl": "Veliko muc Maine Coon ima rado vodo in navdušeno opazuje kapljajočo pipo."
+      },
+      "why": null,
+      "source_id": "C51",
+      "source_name": "The Cat Fanciers' Association (CFA)",
+      "source_url": "https://cfa.org/maine-coon/",
+      "quote": "Fond of water, many will watch a dripping faucet in fascination",
+      "game_rule_key": null,
+      "sort": 25,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-026",
+      "category": "training",
+      "audience": "child",
+      "title": {
+        "en": "Maine Coons can be taught to fetch, walk on a lead and open doors.",
+        "sl": "Maine Coon se lahko nauči prinašati, hoditi na povodcu in odpirati vrata."
+      },
+      "why": null,
+      "source_id": "C52",
+      "source_name": "GCCF",
+      "source_url": "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/maine-coon/",
+      "quote": "they are said to be very intelligent and can be taught to fetch, walk on leads and open doors.",
+      "game_rule_key": null,
+      "sort": 26,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-027",
+      "category": "temperament",
+      "audience": "child",
+      "title": {
+        "en": "A Maine Coon stays playful all its life.",
+        "sl": "Muca Maine Coon ostane igriva vse življenje."
+      },
+      "why": null,
+      "source_id": "C52",
+      "source_name": "GCCF",
+      "source_url": "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/maine-coon/",
+      "quote": "Retaining their playful ways throughout their life, a Maine Coon is an affectionate and fun companion.",
+      "game_rule_key": null,
+      "sort": 27,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-028",
+      "category": "family",
+      "audience": "parent",
+      "title": {
+        "en": "Pedigree kittens usually go to their new home when they are over 12–13 weeks old.",
+        "sl": "Rodovniški mucki gredo v nov dom običajno, ko so stari več kot 12–13 tednov."
+      },
+      "why": {
+        "en": "That is why a Maine Coon kitten arrives in PetPrep at 3 months.",
+        "sl": "Zato mucek Maine Coon v PetPrep pride star 3 mesece."
+      },
+      "source_id": "C13",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/kittens-cats/things-to-think-about-before-getting-a-kitten",
+      "quote": "Pedigree kittens are usually rehomed over 12-13 weeks old",
+      "game_rule_key": "arrival_age",
+      "sort": 28,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-029",
+      "category": "diet",
+      "audience": "parent",
+      "title": {
+        "en": "Once a cat is adult, at about one year, feeding once or twice a day is appropriate in most cases.",
+        "sl": "Ko je mačka odrasla, pri približno enem letu, sta v večini primerov primerna en ali dva obroka na dan."
+      },
+      "why": {
+        "en": "PetPrep uses two meal times a day for adult cats.",
+        "sl": "PetPrep pri odraslih mačkah uporablja dve okni za obrok na dan."
+      },
+      "source_id": "C2",
+      "source_name": "Cornell Feline Health Center",
+      "source_url": "https://vet.cornell.edu/departments/cornell-feline-health-center/health-information/feline-health-topics/how-often-should-you-feed-your-cat",
+      "quote": "Once the cat becomes an adult, at about one year of age, feeding once or twice a day is appropriate in most cases.",
+      "game_rule_key": "feed_windows",
+      "sort": 29,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-030",
+      "category": "family",
+      "audience": "parent",
+      "title": {
+        "en": "ASPCA advises keeping cats indoors: outdoor cats do not live as long as indoor cats.",
+        "sl": "ASPCA svetuje, da mačka živi v stanovanju: zunanje mačke ne živijo tako dolgo kot notranje."
+      },
+      "why": {
+        "en": "The cat in PetPrep is an indoor cat.",
+        "sl": "Muca v PetPrep je notranja mačka."
+      },
+      "source_id": "C5",
+      "source_name": "ASPCA",
+      "source_url": "https://www.aspca.org/pet-care/cat-care/general-cat-care",
+      "quote": "Please keep your cat indoors. Outdoor cats do not live as long as indoor cats.",
+      "game_rule_key": "indoor_cat",
+      "sort": 30,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-031",
+      "category": "grooming",
+      "audience": "parent",
+      "title": {
+        "en": "PDSA advises daily coat care for a Maine Coon to reduce the chance of knots and tangles.",
+        "sl": "PDSA svetuje vsakodnevno nego dlake Maine Coona, da je manj vozlov in zapletov."
+      },
+      "why": {
+        "en": "Sources range from daily to weekly; PetPrep uses 3 times a week.",
+        "sl": "Viri svetujejo od vsak dan do enkrat na teden; PetPrep uporablja 3-krat na teden."
+      },
+      "source_id": "C53",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/kittens-cats/maine-coon",
+      "quote": "The Maine Coon coat needs daily attention to reduce the chance of knots and tangles.",
+      "game_rule_key": "grooming_per_week",
+      "sort": 31,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-032",
+      "category": "grooming",
+      "audience": "parent",
+      "title": {
+        "en": "Maine Coons can shed quite heavily in spring, when old, dead coat needs extra care to remove.",
+        "sl": "Maine Coon se spomladi lahko precej močno lini, takrat je treba odmrlo dlako skrbneje odstranjevati."
+      },
+      "why": null,
+      "source_id": "C52",
+      "source_name": "GCCF",
+      "source_url": "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/maine-coon/",
+      "quote": "They can shed quite heavily in the Spring, when extra care will have to be taken to ensure any old, dead coat is removed.",
+      "game_rule_key": null,
+      "sort": 32,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-033",
+      "category": "family",
+      "audience": "parent",
+      "title": {
+        "en": "According to the CFA, Maine Coons get along well with children and other animals.",
+        "sl": "Po navedbah CFA se Maine Coon dobro razume z otroki in drugimi živalmi."
+      },
+      "why": null,
+      "source_id": "C51",
+      "source_name": "The Cat Fanciers' Association (CFA)",
+      "source_url": "https://cfa.org/maine-coon/",
+      "quote": "They get along well with children and other animals",
+      "game_rule_key": null,
+      "sort": 33,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-034",
+      "category": "family",
+      "audience": "parent",
+      "title": {
+        "en": "Fairly independent, Maine Coons need a moderate amount of human interaction.",
+        "sl": "Muca Maine Coon je precej samostojna in potrebuje zmerno mero druženja z ljudmi."
+      },
+      "why": null,
+      "source_id": "C51",
+      "source_name": "The Cat Fanciers' Association (CFA)",
+      "source_url": "https://cfa.org/maine-coon/",
+      "quote": "Fairly independent, Maine Coon Cats need a moderate amount of human interaction",
+      "game_rule_key": null,
+      "sort": 34,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-035",
+      "category": "exercise",
+      "audience": "parent",
+      "title": {
+        "en": "Maine Coons are high-energy and, because of their size, need plenty of room to play.",
+        "sl": "Muca Maine Coon ima veliko energije in zaradi svoje velikosti potrebuje dovolj prostora za igro."
+      },
+      "why": null,
+      "source_id": "C52",
+      "source_name": "GCCF",
+      "source_url": "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/maine-coon/",
+      "quote": "They are high energy, and because of their large size need plenty of room to play",
+      "game_rule_key": null,
+      "sort": 35,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-036",
+      "category": "body",
+      "audience": "parent",
+      "title": {
+        "en": "PDSA gives an average weight of 7 kg for a Maine Coon.",
+        "sl": "PDSA navaja povprečno težo Maine Coona 7 kg."
+      },
+      "why": null,
+      "source_id": "C53",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/kittens-cats/maine-coon",
+      "quote": "Average weight | 7kg",
+      "game_rule_key": null,
+      "sort": 36,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-037",
+      "category": "origin",
+      "audience": "parent",
+      "title": {
+        "en": "In the breeding statistics of FIFe, the international cat federation, the Maine Coon is number 1.",
+        "sl": "V statistiki vzreje mednarodne mačje zveze FIFe je Maine Coon na 1. mestu."
+      },
+      "why": null,
+      "source_id": "C19",
+      "source_name": "FIFe",
+      "source_url": "https://fifeweb.org/wp-content/uploads/2025/06/FIFe-breeding-statistics-2024.pdf",
+      "quote": "1 MCO 23.775 24,7%",
+      "game_rule_key": null,
+      "sort": 37,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-038",
+      "category": "origin",
+      "audience": "parent",
+      "title": {
+        "en": "In 1959, the CFA declared the Maine Coon extinct.",
+        "sl": "Leta 1959 je ameriško združenje CFA Maine Coon razglasilo za izumrlo pasmo."
+      },
+      "why": {
+        "en": "The breed survived: today it is one of the most popular.",
+        "sl": "Pasma je preživela in je danes med najbolj priljubljenimi."
+      },
+      "source_id": "C52",
+      "source_name": "GCCF",
+      "source_url": "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/maine-coon/",
+      "quote": "in 1959 the Maine Coon was declared extinct by CFA.",
+      "game_rule_key": null,
+      "sort": 38,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-039",
+      "category": "health",
+      "audience": "parent",
+      "title": {
+        "en": "PDSA gives the Maine Coon an average lifespan of 12–15 years.",
+        "sl": "PDSA navaja povprečno življenjsko dobo Maine Coona 12–15 let."
+      },
+      "why": null,
+      "source_id": "C53",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/kittens-cats/maine-coon",
+      "quote": "Average lifespan | 12-15 years",
+      "game_rule_key": null,
+      "sort": 39,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-040",
+      "category": "health",
+      "audience": "parent",
+      "title": {
+        "en": "There is a DNA test for HCM, a heart condition, in Maine Coons.",
+        "sl": "Za HCM, bolezen srca, obstaja pri Maine Coonu test DNK."
+      },
+      "why": {
+        "en": "Ask the breeder about the parents' test results.",
+        "sl": "Vzreditelja vprašajte za rezultate testov staršev."
+      },
+      "source_id": "C52",
+      "source_name": "GCCF",
+      "source_url": "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/maine-coon/",
+      "quote": "Hypertrophic Cardiomyopathy (HCM) … There is a DNA test for HCM in Maine Coon cats",
+      "game_rule_key": null,
+      "sort": 40,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-041",
+      "category": "health",
+      "audience": "parent",
+      "title": {
+        "en": "In the UK, the GCCF requires DNA tests for MC HCM, SMA and PKdef for its breeding register.",
+        "sl": "V Združenem kraljestvu GCCF za vpis v register za vzrejo zahteva teste DNK za MC HCM, SMA in PKdef."
+      },
+      "why": null,
+      "source_id": "K18",
+      "source_name": "World Cat Congress",
+      "source_url": "https://worldcatcongress.org/wp/cat_breed_comp_mco.php",
+      "quote": "DNA testing for MC HCM, SMA, PKdef will be require for registration on the Active Register from 1.1.24.",
+      "game_rule_key": null,
+      "sort": 41,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-042",
+      "category": "health",
+      "audience": "parent",
+      "title": {
+        "en": "Hip dysplasia has no simple gene test, but breeding cats can be X-rayed to check their hips.",
+        "sl": "Za displazijo kolkov ni preprostega genskega testa, lahko pa se plemenskim mačkam kolke slika z rentgenom."
+      },
+      "why": null,
+      "source_id": "C52",
+      "source_name": "GCCF",
+      "source_url": "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/maine-coon/",
+      "quote": "there is no simple gene test for this condition. … breeding cats can be X-rayed to assess the conformation of the hip joints",
+      "game_rule_key": null,
+      "sort": 42,
+      "status": "draft",
+      "verified_by": null
+    },
+    {
+      "key": "maine_coon-043",
+      "category": "health",
+      "audience": "parent",
+      "title": {
+        "en": "PDSA recommends discussing the medical history of a kitten's parents and grandparents.",
+        "sl": "PDSA priporoča, da se pozanimate o zdravstveni zgodovini staršev in starih staršev mucka."
+      },
+      "why": null,
+      "source_id": "C53",
+      "source_name": "PDSA",
+      "source_url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/kittens-cats/maine-coon",
+      "quote": "We’d recommend discussing the medical history of your potential kitten’s parents and grandparents",
+      "game_rule_key": null,
+      "sort": 43,
+      "status": "draft",
+      "verified_by": null
+    }
+  ]
+}
