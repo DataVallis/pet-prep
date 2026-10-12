@@ -25,11 +25,12 @@ import { i18n } from '@/i18n';
  * (M5-R10-22, S192 / S194), senior 23 (yorkshireTerrierProfile); Cane Corso 120 min
  * (M5-R10-23, S199), senior 90 (caneCorsoProfile); Pembroke Welsh Corgi 60 min
  * (M5-R10-24, S204 / S206), senior 45 (pembrokeWelshCorgiProfile); Dobermann 120 min
- * (M5-R10-25, S209 / S211), senior 90 (dobermannProfile);
+ * (M5-R10-25, S209 / S211), senior 90 (dobermannProfile); Boxer 120 min
+ * (M5-R10-26, S215 / S219), senior 90 (boxerProfile);
  * arrival puppy 2, young 9 months.
  */
-type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel' | 'beagle' | 'standard_poodle' | 'dachshund' | 'australian_shepherd' | 'havanese' | 'west_highland_white_terrier' | 'bernese_mountain_dog' | 'siberian_husky' | 'rottweiler' | 'bulldog' | 'german_shorthaired_pointer' | 'yorkshire_terrier' | 'cane_corso' | 'pembroke_welsh_corgi' | 'dobermann'>;
-const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann'];
+type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel' | 'beagle' | 'standard_poodle' | 'dachshund' | 'australian_shepherd' | 'havanese' | 'west_highland_white_terrier' | 'bernese_mountain_dog' | 'siberian_husky' | 'rottweiler' | 'bulldog' | 'german_shorthaired_pointer' | 'yorkshire_terrier' | 'cane_corso' | 'pembroke_welsh_corgi' | 'dobermann' | 'boxer'>;
+const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer'];
 const ADULT_MINUTES: Record<DogBreed, number> = {
   mutt: 60,
   border_collie: 120,
@@ -53,6 +54,7 @@ const ADULT_MINUTES: Record<DogBreed, number> = {
   cane_corso: 120,
   pembroke_welsh_corgi: 60,
   dobermann: 120,
+  boxer: 120,
 };
 const ARRIVAL_MONTHS: Partial<Record<LifeStage, number>> = { puppy: 2, young: 9 };
 
@@ -233,6 +235,25 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(E.adult).toContain('12,000 steps');
       expect(E.senior).toContain('9,000 steps');
       expect(PICKER_STRINGS.breedHints.dobermann).toBe('Part of the 12-week challenge · brushing 1× a week');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-26 Boxer: 2.000 → 12.000 (reached at 12 months), young 9.000 → 12.000, adult 12.000, senior 9.000 — SL and EN', async () => {
+    const P = PICKER_STRINGS.ageHints.boxer;
+    expect(P.puppy).toMatch(/^Pride star 2 meseca\..*2\.000 korakov.*do 12\.000 pri 12 mesecih/);
+    expect(P.young).toBe('2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
+    expect(P.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
+    expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.boxer).toBe('Del 12-tedenskega izziva · česanje 1× na teden');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.boxer;
+      expect(E.puppy).toContain('2,000 steps a day, more each week up to 12,000 at 12 months');
+      expect(E.adult).toContain('12,000 steps');
+      expect(E.senior).toContain('9,000 steps');
+      expect(PICKER_STRINGS.breedHints.boxer).toBe('Part of the 12-week challenge · brushing 1× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }

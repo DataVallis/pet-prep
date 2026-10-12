@@ -112,7 +112,7 @@ describe('readBreedCatalogue', () => {
     expect(catalogue?.breeds.some((b) => b.species === 'cat')).toBe(false);
   });
 
-  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90; M5-R10-09: + Australian Shepherd, sort 100; M5-R10-10: + Havanese, sort 110; M5-R10-11: + West Highland White Terrier, sort 120; M5-R10-12: + Bernese Mountain Dog, sort 130; M5-R10-13: + Siberian Husky, sort 140; M5-R10-19: + Rottweiler, sort 150; M5-R10-20: + Bulldog, sort 160; M5-R10-21: + German Shorthaired Pointer, sort 170; M5-R10-22: + Yorkshire Terrier, sort 180; M5-R10-23: + Cane Corso, sort 190; M5-R10-24: + Pembroke Welsh Corgi, sort 200; M5-R10-25: + Dobermann, sort 210), never a cat', () => {
+  it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90; M5-R10-09: + Australian Shepherd, sort 100; M5-R10-10: + Havanese, sort 110; M5-R10-11: + West Highland White Terrier, sort 120; M5-R10-12: + Bernese Mountain Dog, sort 130; M5-R10-13: + Siberian Husky, sort 140; M5-R10-19: + Rottweiler, sort 150; M5-R10-20: + Bulldog, sort 160; M5-R10-21: + German Shorthaired Pointer, sort 170; M5-R10-22: + Yorkshire Terrier, sort 180; M5-R10-23: + Cane Corso, sort 190; M5-R10-24: + Pembroke Welsh Corgi, sort 200; M5-R10-25: + Dobermann, sort 210; M5-R10-26: + Boxer, sort 220), never a cat', () => {
     expect(FALLBACK_CATALOGUE.species).toEqual(['dog']);
     expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual([
       'mutt',
@@ -137,6 +137,7 @@ describe('readBreedCatalogue', () => {
       'cane_corso',
       'pembroke_welsh_corgi',
       'dobermann',
+      'boxer',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -311,6 +312,16 @@ describe('readBreedCatalogue', () => {
       suits: ['active_family', 'family_pet', 'large_home'],
       consider: ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds', 'chases_small_pets'],
     });
+    const boxer = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'boxer');
+    expect(boxer).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 220 }),
+    );
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-26, runbook rules; new tag needs_company).
+    expect(boxer?.search_keywords).toEqual(['boxer', 'boksar', 'deutscher boxer']);
+    expect(boxer?.suitability).toEqual({
+      suits: ['active_family', 'family_pet', 'large_home'],
+      consider: ['long_daily_exercise', 'brachycephalic_breathing', 'not_for_small_children', 'experienced_owner', 'needs_company', 'chews_when_bored', 'sheds', 'chases_small_pets'],
+    });
     const corgi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pembroke_welsh_corgi');
     expect(corgi).toEqual(
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 200 }),
@@ -346,6 +357,7 @@ describe('readBreedCatalogue', () => {
       'cane_corso',
       'pembroke_welsh_corgi',
       'dobermann',
+      'boxer',
     ]);
   });
 });
@@ -394,7 +406,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(19);
+    expect(CONSIDER_TAGS).toHaveLength(20);
+    // M5-R10-26 (runbook new-tag rule): loves company — best with someone home most of the day; no numbers.
+    expect(CONSIDER_TAGS).toContain('needs_company');
     // David 2026-10-12: strong prey drive — may chase small pets (only breeds with a sourced prey-drive quote); no numbers.
     expect(CONSIDER_TAGS).toContain('chases_small_pets');
     // M5-R10-23 (runbook new-tag rule): large dog — not for homes with small children; drools; no numbers.
@@ -472,6 +486,13 @@ describe('breed search', () => {
     expect(find('frenchie')).toEqual(['french_bulldog']);
     // M5-R10-20: "buldog" also finds the (English) Bulldog.
     expect(find('buldog')).toEqual(['french_bulldog', 'bulldog']);
+  });
+
+  it('M5-R10-26: finds the Boxer by its SL / EN / German names', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('boxer')).toEqual(['boxer']);
+    expect(find('boksar')).toEqual(['boxer']);
+    expect(find('Boksar')).toEqual(['boxer']);
   });
 
   it('M5-R10-25: finds the Dobermann by its SL / EN names and the AKC name', () => {

@@ -110,6 +110,7 @@
       "cane_corso": "Del 12-tedenskega izziva · česanje 1× na teden",
       "pembroke_welsh_corgi": "Del 12-tedenskega izziva · česanje 3× na teden",
       "dobermann": "Del 12-tedenskega izziva · česanje 1× na teden",
+      "boxer": "Del 12-tedenskega izziva · česanje 1× na teden",
       "domestic_cat": "Kratka dlaka · brezplačna",
       "maine_coon": "Dolga dlaka · česanje 3× na teden",
       "british_shorthair": "Kratka, gosta dlaka · česanje 1× na teden",
@@ -270,6 +271,12 @@
         "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
         "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
       },
+      "boxer": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "young": "2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
+      },
       "domestic_cat": {
         "puppy": "Pride kot mucek, star 2 meseca.",
         "young": "Pride kot mlada mačka, stara 1 leto.",
@@ -400,7 +407,8 @@
       "fragile_older_children": "krhke kosti — bolje za starejše otroke",
       "not_for_small_children": "velik pes — ni za dom z majhnimi otroki",
       "drools": "se slini — imejte pri roki krpo",
-      "chases_small_pets": "močan lovski nagon — lahko lovi manjše živali"
+      "chases_small_pets": "močan lovski nagon — lahko lovi manjše živali",
+      "needs_company": "rad ima družbo — naj bo nekdo večino dneva doma"
     }
   },
   "media": {
