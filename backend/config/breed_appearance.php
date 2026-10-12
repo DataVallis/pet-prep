@@ -199,6 +199,17 @@
 | customarily docked") → the game shows the natural tail. One colour; the trait list is an
 | unchecked draft → `verified => false`.
 |
+| Cane Corso (M5-R10-23, docs/research/dog-data cane_corso.appearance): medium to large,
+| robust and sturdy molosser with some elegance, slightly longer than tall; short, shiny,
+| very dense coat; uncropped ears ("Ears are un-cropped."); natural tail ("Natural."); iris
+| as dark as possible; muzzle strong and square, about half the skull length (FCI 343, 2023,
+| S197; AKC S200). Colours: black, grey (blue) shades, fawn (with mask), stag red, dark wheat,
+| black / grey brindle — "All colours not indicated in the standard; large white patches."
+| disqualify (S197); never black-and-tan (AKC S200). Ear cropping and tail docking are illegal
+| in the UK (PDSA S199) → natural ears and tail only. PDSA lists eyelid problems (S199) → the
+| `muzzle` trait asks for a moderate face without exaggerated loose skin. Colour weights are
+| unsourced → `verified => false`; solid black weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1021,6 +1032,44 @@ return [
             'tail' => ['natural undocked tail with plenty of darker blue hair'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-23 (docs/research/dog-data/data.json cane_corso.appearance; runbook rules
+    // 2026-10-10: standard colours only, moderate face; natural ears and tail per FCI 2023).
+    'cane_corso' => [
+        'display_name' => 'Cane Corso',
+        // Colour frequencies are in no source (cane_corso.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 343 (S197, https://www.fci.be/Nomenclature/Standards/343g02-en.pdf), AKC standard via the Cane Corso Association of America (S200), PDSA (S199) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S199 "Size: Large" (PDSA key facts); S197 "Males: 64 cm – 68 cm." "Females: 60 cm – 64 cm."',
+            'build' => 'S197 "Medium to large sized. Robust and sturdy dog, nevertheless with some elegance." "The dog is rectangular in outline and is slightly longer than tall."',
+            'coat_length' => 'S197 "Hair: Short, shiny, very dense with a slight undercoat of vitreous texture."',
+            'coat_color' => 'S197 "Black, lead-grey (blue), slate-grey (blue), light grey (blue), light fawn; dark fawn and stag red;" "dark wheat colour; black brindle, grey (blue) brindle" — "All colours not indicated in the standard; large white patches." disqualify; S200 disqualifies "Any color with tan pattern markings as seen in black-and-tan breeds." (weights unsourced)',
+            'ear_carriage' => 'S197 "Ears are un-cropped."; S200 "If uncropped, they are medium size, triangular in shape, held tight to the cheeks"; ear cropping is illegal in the UK (S199)',
+            'eye_color' => 'S197 "The colour of the iris is as dark as possible but according to the coat colour."',
+            'tail' => 'S197 "Natural. Set on fairly high; very broad at the root."; tail docking is illegal in the UK (S199)',
+            'muzzle' => 'S197 "Muzzle: Strong, square, noticeably shorter than the skull, ratio muzzle: skull approximately 1 : 2." "Nose: Black."; S199 eyelid problems (entropion, ectropion, cherry eye) → moderate face, no exaggerated loose skin (welfare rule)',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'robust, sturdy and athletic with some elegance, slightly longer than tall', 'weight' => 3], 'muscular and agile, standing alert'],
+            'coat_length' => ['short, shiny, very dense coat'],
+            // FCI colours only (S197); solid black highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'solid black', 'weight' => 4],
+                ['value' => 'solid grey (blue)', 'weight' => 3],
+                ['value' => 'black brindle', 'weight' => 2],
+                ['value' => 'grey (blue) brindle', 'weight' => 2],
+                ['value' => 'fawn with a black mask not beyond the eyes', 'weight' => 2],
+                'stag red with a dark mask',
+                'dark wheat',
+            ],
+            'ear_carriage' => ['natural uncropped medium triangular ears held close to the cheeks'],
+            'eye_color' => ['dark, alert'],
+            'tail' => ['natural undocked tail, broad at the root'],
+            'muzzle' => ['strong square moderate muzzle with a black nose, tight lips and eyelids, no exaggerated loose skin'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

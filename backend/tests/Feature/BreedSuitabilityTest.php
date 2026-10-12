@@ -317,9 +317,10 @@ it('gives the Bernese Mountain Dog the new shorter_lifespan tag, family_pet, lar
         // RKC Breed Watch Category 1: no conformation welfare chip.
         ->and($berner['consider'])->not->toContain('hips_hind_legs')->not->toContain('long_daily_exercise')->not->toContain('chews_when_bored');
 
-    // Only the Bernese, the Rottweiler (RKC "Under 10 years", M5-R10-19) and the Bulldog (M5-R10-20) carry the chip so far.
+    // Only the Bernese, the Rottweiler (RKC "Under 10 years", M5-R10-19), the Bulldog (M5-R10-20) and the
+    // Cane Corso (PDSA "Under 10 years", M5-R10-23) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::BerneseMountainDog, BreedType::Rottweiler, BreedType::Bulldog], true)) {
+        if (! in_array($breed, [BreedType::BerneseMountainDog, BreedType::Rottweiler, BreedType::Bulldog, BreedType::CaneCorso], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('shorter_lifespan');
         }
     }
@@ -363,9 +364,9 @@ it('gives the Rottweiler the new experienced_owner tag, hips_hind_legs, shorter_
         // Weekly brushing only (RKC "Once a week"); not flat-faced; no breed-specific chewing.
         ->and($rottweiler['consider'])->not->toContain('frequent_grooming')->not->toContain('brachycephalic_breathing')->not->toContain('chews_when_bored');
 
-    // Only the Rottweiler carries the new chip so far.
+    // Only the Rottweiler and the Cane Corso (PDSA S199, M5-R10-23) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if ($breed !== BreedType::Rottweiler) {
+        if (! in_array($breed, [BreedType::Rottweiler, BreedType::CaneCorso], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('experienced_owner');
         }
     }
@@ -444,4 +445,33 @@ it('gives the Yorkshire Terrier the new fragile_older_children tag, apartment, l
     expect(bsEntry('yorkshire_terrier.suitability.pdsa_children')['quote'])->toBe('They are better suited to families with older children as they have very fragile bones')
         ->and(bsEntry('yorkshire_terrier.suitability.rkc_shedding')['quote'])->toBe('Sheds: No')
         ->and(bsEntry('yorkshire_terrier.suitability.rkc_grooming')['quote'])->toBe('Grooming: Every day');
+});
+
+it('gives the Cane Corso the new not_for_small_children and drools tags, active_family and the PDSA chips — no welfare chip (runbook 2026-10-12)', function () {
+    expect(BreedSuitability::vocabulary())->toMatchArray([
+        'not_for_small_children' => BreedSuitability::CONSIDER,
+        'drools' => BreedSuitability::CONSIDER,
+    ]);
+
+    $corso = app(BreedSuitability::class)->for(BreedType::CaneCorso);
+    expect($corso['suits'])->toBe(['active_family'])
+        // PDSA: not with small children, adult-only homes or older children → no children / small_children / family_pet;
+        // no RKC page → no large_home / apartment.
+        ->and($corso['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('family_pet')->not->toContain('large_home')->not->toContain('apartment')
+        ->and($corso['consider'])->toBe(['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'shorter_lifespan', 'sheds', 'drools'])
+        // No Breed Watch / vet-association conformation point; not flat-faced; weekly brush only.
+        ->and($corso['consider'])->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')
+        ->not->toContain('sensitive_skin')->not->toContain('frequent_grooming')->not->toContain('fragile_older_children');
+
+    // Only the Cane Corso carries the two new chips so far.
+    foreach (BreedType::cases() as $breed) {
+        if ($breed !== BreedType::CaneCorso) {
+            expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('not_for_small_children')->not->toContain('drools');
+        }
+    }
+
+    expect(bsEntry('cane_corso.suitability.pdsa_children')['quote'])->toBe('We really wouldn’t recommend having a Cane Corso if you have small children')
+        ->and(bsEntry('cane_corso.suitability.pdsa_drooling')['quote'])->toBe('Despite not needing much attention for their fur, Cane Corsos are known to drool.')
+        ->and(bsEntry('cane_corso.lifespan.pdsa')['quote'])->toBe('Average lifespan: Under 10 years')
+        ->and(bsEntry('cane_corso.exercise.adult')['quote'])->toBe('Your Cane Corso will need around two hours’ exercise every day.');
 });
