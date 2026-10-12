@@ -33,6 +33,7 @@ import {
 } from '@/modules/behaviour/behaviour';
 import { readChildTraining, readPetTraining, type ChildTraining } from '@/modules/training/training';
 import { broadcastPlay, readChildPlay, type ChildPlay } from '@/modules/play/play';
+import { readChildCertificate, type ChildCertificate } from '@/modules/certificate/certificate';
 
 export type LockReason = 'game_over' | 'inactive' | 'hard_stopped' | 'payment_required' | 'contract_required' | 'ill';
 
@@ -158,6 +159,11 @@ export interface ChildPetView {
    * older server. Read with `readChildCatCare` (`modules/catCare/catCare.ts`).
    */
   cat: ChildCatCare;
+  /**
+   * M2-01d: this child's own 12-week challenge end on this pet (`readChildCertificate`);
+   * null while it runs and from an older server. A report carries no score or reason.
+   */
+  certificate: ChildCertificate | null;
   /** ms of `server_time` (whole seconds). */
   snapshotAtMs: number;
   /** ms of the newest applied broadcast `emitted_at`; 0 if none. */
@@ -337,6 +343,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
     play: readChildPlay((raw as { play?: unknown }).play),
     // M5-R06-08a: the four cat blocks (null / missing for a dog and an older server).
     cat: readChildCatCare(raw),
+    // M2-01d: Scramble types it as a string → always through the reader.
+    certificate: readChildCertificate((raw as { certificate?: unknown }).certificate),
     snapshotAtMs: msOf(raw.server_time),
     lastEmittedMs,
     clockSkewMs: msOf(raw.server_time) > 0 ? msOf(raw.server_time) - receivedAtMs : 0,

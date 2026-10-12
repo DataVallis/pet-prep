@@ -60,4 +60,7 @@ Starši nastavijo **tihe ure**. Takrat kuža počiva in te ne moti — tudi obve
 - Če zanj ne skrbiš cel dan, ga odpelje zavetišče. Ampak lahko poskusiš znova!
 
 ## Na koncu
-Po **12 tednih** je tvoj kuža star 1 leto. Če si skrbel zanj, dobiš **Certifikat odgovornosti** — dokaz, da si pripravljen na pravega psa! 🏅 *(kmalu)*
+Po **12 tednih** je tvoj kuža star 1 leto. Če si skrbel zanj, dobiš **Certifikat odgovornosti** — dokaz, da si pripravljen na pravega psa! 🏅 *(v aplikaciji od 12. 10. 2026)*
+- Ko je izziv končan, se v glavi tvojega zaslona pokaže okrogel gumb z značko. Tapni ga.
+- Dokler starš certifikata ne pripravi, piše: »Izziv je končan! Starš ti bo pripravil certifikat.« Potem tam vidiš svoj certifikat (tvoje ime, Care Score, ime ljubljenčka, datum in številko) in ga odpreš z »Odpri PDF«.
+- Če certifikata tokrat ni, ti aplikacija samo prijazno pove, da je izziv končan — bravo, da si vztrajal(a)!

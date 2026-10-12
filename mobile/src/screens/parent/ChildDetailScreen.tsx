@@ -14,6 +14,7 @@
  * M5-R06-08b: for a cat the routine rows are food, water, cleaning, litter, play, the weekly
  * litter change and (Maine Coon) brushing; a day shows its wand games instead of steps; the
  * timeline names the cat's actions; a "good to know" card about cats that stop eating (C24).
+ * M2-01d: the certificate / report card on top once the child's challenge ended.
  */
 
 import { useCallback, useMemo, useState } from 'react';
@@ -40,6 +41,7 @@ import { normalizePetMedia, toBreedType } from '@/modules/petMedia/petMedia';
 import { isSpecies } from '@/modules/species/species';
 import PetMediaView from '@/components/PetMediaView';
 import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
+import CertificateCard from '@/components/parent/CertificateCard';
 import { canBuyChallenge } from '@/modules/plan/purchaseEntry';
 import { parentPetGrowthKey, useGrowthRefresh, useParentPetGrowth } from '@/hooks/queries/usePetGrowth';
 import PetAlbum from '@/components/PetAlbum';
@@ -223,6 +225,13 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
         </View>
 
         <ScrollView style={styles.flex} contentContainerStyle={styles.content}>
+          {/* M2-01d: the finished challenge first — certificate or report (→ the 84-day period). */}
+          <CertificateCard
+            certificate={child.certificate}
+            childName={child.name}
+            onOpenReport={() => setDays(84)}
+            testID="detail-certificate"
+          />
           {onOpenChallenge && canBuyChallenge(pet) && (
             <ChallengeBuyButton onPress={onOpenChallenge} childName={child.name} species={pet?.species ?? null} testID="detail-buy-challenge" />
           )}

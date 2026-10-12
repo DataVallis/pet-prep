@@ -11,6 +11,8 @@ export const PUSH_TYPES = [
   'parent_intervention_alarm',
   'illness_triggered',
   'game_over_virtual_shelter',
+  // M2-01d: a child's 12-week challenge ended (parents only, once per child).
+  'challenge_completed',
 ] as const;
 
 export type PushType = (typeof PUSH_TYPES)[number];
@@ -36,8 +38,15 @@ export function parsePushData(data: unknown): PushData | null {
 
 /**
  * Phase 2 and above: sound in the foreground too (Android channel "alarm" on the server
- * side). The daily walk reminder is never urgent (PR #35).
+ * side). The daily walk reminder is never urgent (PR #35), nor is the end of a challenge.
  */
 export function isUrgentPush(type: PushType | null | undefined): boolean {
-  return type !== null && type !== undefined && type !== 'soft_warning' && type !== 'walk_reminder';
+  return (
+    type !== null &&
+    type !== undefined &&
+    type !== 'soft_warning' &&
+    type !== 'walk_reminder' &&
+    // Good news, never an alarm (M2-01d).
+    type !== 'challenge_completed'
+  );
 }

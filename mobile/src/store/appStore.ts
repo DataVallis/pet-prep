@@ -22,6 +22,8 @@ export interface AppUser {
 /** Where a tapped push should lead (parent app): the pet it is about. */
 export interface PushTarget {
   petId: number;
+  /** The tapped push's type (M2-01d: `challenge_completed` opens the finished child). */
+  type?: string;
 }
 
 export type PairingStatus = 'unpaired' | 'pairing' | 'paired' | 'error';

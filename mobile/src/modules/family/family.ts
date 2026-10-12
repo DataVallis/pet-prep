@@ -27,6 +27,7 @@ import { readPlayToday, type PlayToday } from '@/modules/play/play';
 import { t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { breedName, isSpecies } from '@/modules/species/species';
+import { readCertificate, type ParentCertificate } from '@/modules/certificate/certificate';
 
 /** One pet of the family as the generated schema types it (raw API). */
 export type FamilyPetRaw = NonNullable<ParentDashboardResponse['family']>['pets'][number];
@@ -90,6 +91,11 @@ export interface FamilyChild {
   last_7_days: DayRow[];
   /** 12-week challenge since the child's contract; null before it. */
   progress: ChallengeProgress | null;
+  /**
+   * M2-01d: how this child's 12-week challenge on `pet_id` ended (certificate / report,
+   * `readCertificate`); null while it runs or from an older server.
+   */
+  certificate: ParentCertificate | null;
 }
 
 export interface FamilyParent {
@@ -153,6 +159,7 @@ function normalizeChild(raw: FamilyChild): FamilyChild {
     today: c.today === undefined ? emptyToday() : readToday(c.today),
     last_7_days: readDayRows(c.last_7_days),
     progress: readProgress(c.progress),
+    certificate: readCertificate(c.certificate),
   };
 }
 

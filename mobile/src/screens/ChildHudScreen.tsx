@@ -51,6 +51,7 @@ import {
   Sparkles,
   WifiOff,
   Globe,
+  Award,
 } from 'lucide-react-native';
 import { useQueryClient } from '@tanstack/react-query';
 
@@ -114,6 +115,8 @@ import { nextStageLine, originLine, stageLine } from '@/modules/petProfile/petPr
 import { profileHeaderA11y, profileSheetRows } from '@/modules/petProfile/profileSheet';
 import PetProfileSheet from '@/components/PetProfileSheet';
 import ChildLanguageSheet from '@/components/ChildLanguageSheet';
+import ChildCertificateSheet from '@/components/ChildCertificateSheet';
+import { CERTIFICATE_CHILD_STRINGS, childCertificateEntry } from '@/modules/certificate/certificate';
 import TrainingChip from '@/modules/training/TrainingChip';
 import TrainingOverlay from '@/modules/training/TrainingOverlay';
 import { showTrainingDot, showTrainingEntry } from '@/modules/training/training';
@@ -397,6 +400,8 @@ export default function ChildHudScreen() {
   const [isProfileVisible, setProfileVisible] = useState(false);
   /** David 2026-10-12: the child can change the app language from the HUD, not only before sign-in. */
   const [isLanguageVisible, setLanguageVisible] = useState(false);
+  // M2-01d: the finished challenge (certificate / "the parent will prepare it" / kind note).
+  const [isCertificateVisible, setCertificateVisible] = useState(false);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const showToast = useCallback((next: Toast) => {
     if (toastTimer.current) clearTimeout(toastTimer.current);
@@ -708,6 +713,21 @@ export default function ChildHudScreen() {
             >
               <Globe color={palette.n400} size={16} />
             </Pressable>
+            {childCertificateEntry(view.certificate).kind !== 'none' && (
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={
+                  childCertificateEntry(view.certificate).kind === 'generated'
+                    ? CERTIFICATE_CHILD_STRINGS.open
+                    : CERTIFICATE_CHILD_STRINGS.finishedOpen
+                }
+                testID="hud-certificate-open"
+                style={({ pressed }) => [styles.logoutButton, styles.certificateButton, pressed && styles.pressed]}
+                onPress={() => setCertificateVisible(true)}
+              >
+                <Award color={palette.graphite} size={16} />
+              </Pressable>
+            )}
             {albumAvailable && (
               <Pressable
                 accessibilityRole="button"
@@ -1013,6 +1033,11 @@ export default function ChildHudScreen() {
         />
       )}
       <ChildLanguageSheet visible={isLanguageVisible} onClose={() => setLanguageVisible(false)} />
+      <ChildCertificateSheet
+        visible={isCertificateVisible}
+        certificate={view.certificate}
+        onClose={() => setCertificateVisible(false)}
+      />
       <PetProfileSheet visible={isProfileVisible && profileRows.length > 0} rows={profileRows} onClose={() => setProfileVisible(false)} />
       {showAlbum && (
         <PetAlbum
@@ -1188,6 +1213,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  /** M2-01d: the finished challenge — the one solid mint badge in the header. */
+  certificateButton: { backgroundColor: palette.mint, borderRadius: 17 },
   /** Row between the screen's left edge and the metric column; centres its pill. */
   bannerSlot: {
     position: 'absolute',

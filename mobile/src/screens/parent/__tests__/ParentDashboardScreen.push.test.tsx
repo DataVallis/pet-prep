@@ -6,7 +6,8 @@ import { act, screen } from '@testing-library/react-native';
 import { api } from '@/api/client';
 import ParentDashboardScreen from '@/screens/parent/ParentDashboardScreen';
 import { useAppStore } from '@/store/appStore';
-import { makeFamilyPet, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
+import { makeCertificatePayload, makeFamilyPet, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
+import { readCertificate } from '@/modules/certificate/certificate';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import { maybeAskForPush } from '@/modules/push/pushPrompt';
 import { resetFirstViewPromptForTests } from '@/modules/push/usePushPromptOnFirstView';
@@ -88,6 +89,32 @@ describe('ParentDashboardScreen — push tap (M3-02)', () => {
 
     expect(screen.queryByTestId('detail-back')).toBeNull();
     expect(screen.getByTestId('child-card-2')).toBeTruthy();
+    expect(useAppStore.getState().pushTarget).toBeNull();
+  });
+
+  it('challenge_completed (M2-01d) opens the child whose challenge ended, with the certificate card on top', async () => {
+    const shared = makeFamilyPet({
+      id: 7,
+      caretakers: [
+        { child_id: 2, contract_signed: true },
+        { child_id: 5, contract_signed: true },
+      ],
+    });
+    getParentDashboard.mockResolvedValue(
+      makeScoredDashboard(
+        [
+          makeScoredChild(),
+          makeScoredChild({ id: 5, name: 'Maja', pet_id: 7, certificate: readCertificate(makeCertificatePayload({ id: 40, child_id: 5 })) }),
+        ],
+        [shared],
+      ),
+    );
+    useAppStore.getState().setPushTarget({ petId: 7, type: 'challenge_completed' });
+    renderWithQuery(<ParentDashboardScreen />);
+    await flush();
+
+    expect(api.getChildReport).toHaveBeenCalledWith(5, 7);
+    expect(screen.getByTestId('detail-certificate-ready')).toBeTruthy();
     expect(useAppStore.getState().pushTarget).toBeNull();
   });
 });
