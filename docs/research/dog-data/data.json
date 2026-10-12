@@ -12141,7 +12141,7 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "UNSOURCED idea, not built (post-MVP backlog; no decision asked). Golden needs clearly more grooming than the Labrador: PDSA 'brushed or combed three times a week at a minimum' (S68), RKC 'More than once a week' (S65; Labrador 'Once a week', S50), Woodgreen grooming/shedding 'High' (S69). Idea: a brushing action ~3×/week; no number beyond the PDSA minimum sourced."
+        "notes": "Superseded by proposed_game_parameters.golden_retriever.grooming (built in M5-R13, David 2026-10-12: 3 brushings per program week, PDSA S68 'three times a week at a minimum'). Original idea: Golden needs clearly more grooming than the Labrador: PDSA 'brushed or combed three times a week at a minimum' (S68), RKC 'More than once a week' (S65; Labrador 'Once a week', S50), Woodgreen grooming/shedding 'High' (S69). Idea: a brushing action ~3×/week; no number beyond the PDSA minimum sourced."
       },
       "mouthy_puppy_event": {
         "value": null,
