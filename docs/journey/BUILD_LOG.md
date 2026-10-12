@@ -9,6 +9,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-12 — Davidove odločitve: vsi mladički, opravičeni tedni, česanje kavalirja 4× na teden
+
+**Kaj se je zgodilo:** David je zaprl odprta vprašanja treh novih funkcij. »Nova izkušnja« (socializacija) velja zdaj za **vse mladičke** — za vseh 22 pasem psov, tudi za brezplačnega mešančka. Teden, ko je bil kuža večinoma bolan ali je bila igra ustavljena, v poročilu ni več »zamujen«, ampak **»opravičen«**; poročilo otroka šteje tedne šele od dneva, ko je začel skrbeti za psa. Pri česanju je kavalir zdaj **4× na teden** (prej 7), pet pasem »večkrat na teden« ostane pri 2× (zdaj potrjeno), nemški kratkodlaki ptičar pri 2×. Obe funkciji ostaneta samo za nove pse. Opozorilo »Počakaj s sprehodom« se pokaže tudi po obroku, ki ga ponoči da starš.
+
+**Zakaj je pomembno:** pravila so zdaj poštena do otroka — kar ni bilo v njegovi moči (bolezen psa, pavza, čas pred pridružitvijo), ne izgleda kot zamuda. Socializacija je dobra za vsakega mladička, ne le za pasme, pri katerih jo vir izrecno omeni.
+
+**Številke:** 22 pasem psov z novo izkušnjo (12 s citatom PDSA, 10 po Davidovi odločitvi); opravičen teden = bolezen / pavza pokrije vsaj 50 % tedna (isto pravilo kot pri tedenskih rutinah); 7 vrstic česanja posodobljenih v produkciji z enkratno migracijo (urejanja v administraciji imajo prednost).
+
+**Kako povedati:**
+- 👩 Starši: »Če je bil kuža bolan ali ste igro ustavili, teden ni zamujen — v poročilu piše ›opravičen‹.«
+- 🧒 Otroci: »Vsak mladiček, tudi mešanček, se uči o svetu — vsak teden mu pokaži nekaj novega!«
+- 💼 Investitorji: »Pravila so poštena do otroka: poročilo loči med zamujenim in opravičenim tednom.«
+- 🛠 Tehnično: »`SocialisationService::statusOf` uporabi isto pravilo kot dnevnik rutin (`RoutineLedgerService::blockedShare`, 50 % tedna); podatkovna migracija posodobi le nedotaknjene vrstice in zapiše revizijo.«
+
+---
+
 ## 2026-10-12 — Mladiček spoznava svet: »Nova izkušnja« (M5-R17)
 
 **Kaj se je zgodilo:** David je odločil »tedenska naloga«: dokler je kuža mladiček (do 9 mesecev starosti v igri), otrok enkrat na teden izbere novo izkušnjo — nov človek, drug kuža, nov zvok ali novo mesto — in jo z enim tapom označi kot opravljeno. Starš jo vidi v poročilu (tedenska vrstica) in v časovnici. Brez kazni: zamujen teden se pokaže kot zamujen, ocena skrbi in semafor ostaneta enaka.

@@ -27,8 +27,8 @@ namespace App\Enums;
  *    LITTER_FULL_CHANGE_DAYS, GROOMING_SESSIONS_PER_WEEK (Maine Coon 3, Ragdoll 2,
  *    British Shorthair 1; no row = no grooming routine) and SCRATCHING_AFTER_MISSED_PLAY (bool).
  *  - M5-R17 stage key SOCIALISATION_TASKS_PER_WEEK (David 2026-10-12): the
- *    puppy's weekly "new experience" (1, stage puppy only; no row = no task —
- *    breeds without a sourced socialisation statement). Never scored.
+ *    puppy's weekly "new experience" (1, stage puppy only; every dog breed since
+ *    David 2026-10-12 — no row = no task, cats never). Never scored.
  *  - M5-R16 dog breed key MEAL_EXERCISE_GAP_MINUTES (David 2026-10-12, "1 ura,
  *    samo opozorilo"): minutes after a meal during which the child app shows
  *    "wait with the walk, the dog is digesting" (GDV / bloat advice of an A/B

@@ -4,10 +4,11 @@
  * another dog, a new sound or a new place and mark it done with one tap
  * (`POST /api/child/pet/socialisation {experience}`). The parent sees a weekly row in the
  * report and the experience in the timeline. Never scored: no routine, Care Score, traffic
- * light or metric — a missed week only shows as missed.
+ * light or metric — a missed week only shows as missed; a week mostly blocked by illness or a
+ * paused game shows as excused (»opravičen«, David 2026-10-12).
  *
  * Whether there is a task is the server's: the `socialisation` block of the child state /
- * `PetUpdated` is non-null only in a puppy week of a breed with a sourced socialisation row,
+ * `PetUpdated` is non-null only in a puppy week (every dog breed since David 2026-10-12),
  * for a dog whose apps declared `socialisation`. No game rule is re-implemented here.
  */
 
@@ -160,7 +161,13 @@ export function socialisationTimelineText(activityType: string, nickname: string
 
 // ── Parent report row ─────────────────────────────────────────
 
-export type ReportWeekStatus = 'done' | 'open' | 'missed';
+/** `excused` (David 2026-10-12): illness, a pause or the child not caring yet covered ≥ half of the week. */
+export type ReportWeekStatus = 'done' | 'open' | 'missed' | 'excused';
+const WEEK_STATUSES: readonly ReportWeekStatus[] = ['done', 'open', 'missed', 'excused'];
+
+function isWeekStatus(value: unknown): value is ReportWeekStatus {
+  return typeof value === 'string' && (WEEK_STATUSES as readonly string[]).includes(value);
+}
 
 export interface ReportSocialisationWeek {
   week: number;
@@ -177,6 +184,8 @@ export interface ReportSocialisation {
   done_by_child: number;
   missed: number;
   open: number;
+  /** Weeks excused (not expected); 0 from an older server. */
+  excused: number;
   weeks: ReportSocialisationWeek[];
 }
 
@@ -185,7 +194,7 @@ export function readReportSocialisation(raw: unknown): ReportSocialisation | nul
   if (!isObj(raw) || !Array.isArray(raw.weeks)) return null;
   const weeks = raw.weeks.flatMap((w): ReportSocialisationWeek[] => {
     if (!isObj(w)) return [];
-    const status = w.status === 'done' || w.status === 'open' || w.status === 'missed' ? w.status : null;
+    const status = isWeekStatus(w.status) ? w.status : null;
     if (status === null) return [];
     return [
       {
@@ -205,14 +214,16 @@ export function readReportSocialisation(raw: unknown): ReportSocialisation | nul
     done_by_child: count(raw.done_by_child),
     missed: count(raw.missed),
     open: count(raw.open),
+    excused: count(raw.excused),
     weeks,
   };
 }
 
-/** "2 od 3 tednov" + "· 1 zamujen" + "· ta teden še čaka" — the row's right side. */
+/** "2 od 3 tednov" + "· 1 zamujen" + "· 1 opravičen" + "· ta teden še čaka" — the row's right side. */
 export function reportSocialisationLine(r: ReportSocialisation): { count: string; detail: string } {
   const parts = [
     r.missed > 0 ? t('socialisation:parent.missed', { count: r.missed }) : null,
+    r.excused > 0 ? t('socialisation:parent.excused', { count: r.excused }) : null,
     r.open > 0 ? t('socialisation:parent.open') : null,
   ].filter((x): x is string => x !== null);
   return { count: t('socialisation:parent.weeksOf', { count: r.expected, done: r.done }), detail: parts.join(' · ') };

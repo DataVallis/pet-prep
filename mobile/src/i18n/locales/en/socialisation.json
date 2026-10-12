@@ -45,8 +45,10 @@
     "weeksOf_other": "{{done}} of {{count}} weeks",
     "missed_one": "{{count}} missed",
     "missed_other": "{{count}} missed",
+    "excused_one": "{{count}} excused",
+    "excused_other": "{{count}} excused",
     "open": "this week still open",
-    "notScored": "Once a week while the dog is a puppy. Doesn't affect the Care Score.",
+    "notScored": "Once a week while the dog is a puppy. Doesn't affect the Care Score. A week mostly spent ill, paused or before your child joined is excused.",
     "experiences": {
       "person": "a new person",
       "dog": "another dog",

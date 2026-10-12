@@ -167,8 +167,8 @@ class ChildPetController extends Controller
     /**
      * Puppy socialisation (M5-R17, David 2026-10-12): mark this program
      * week's "new experience" — `experience` person | dog | sound | place.
-     * One per week while the dog is a puppy (breeds with sourced
-     * socialisation advice; a dog whose apps declared `socialisation`).
+     * One per week while the dog is a puppy (every dog breed since David
+     * 2026-10-12; a dog whose apps declared `socialisation`).
      * Never scored — no routine, Care Score, traffic light or metric. The
      * response carries `socialisation` {experience}. 422
      * socialisation_not_available | socialisation_week_done (next_allowed_at
