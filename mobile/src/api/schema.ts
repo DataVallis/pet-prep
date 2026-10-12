@@ -463,7 +463,8 @@ export interface paths {
         get?: never;
         put?: never;
         /**
-         * Fresh water (limit per family-local day, minimum gap) → thirst 100 %
+         * Fresh water (thirst at or below the breed's refill threshold, minimum gap; no
+         *     daily cap — M5-F11) → thirst 100 %. 422 `water_too_soon` + `next_allowed_at`
          * @description POST /api/child/pet/water
          */
         post: operations["childPet.water"];
@@ -855,8 +856,8 @@ export interface paths {
         /**
          * Puppy socialisation (M5-R17, David 2026-10-12): mark this program
          *     week's "new experience" — `experience` person | dog | sound | place.
-         *     One per week while the dog is a puppy (breeds with sourced
-         *     socialisation advice; a dog whose apps declared `socialisation`).
+         *     One per week while the dog is a puppy (every dog breed since David
+         *     2026-10-12; a dog whose apps declared `socialisation`).
          *     Never scored — no routine, Care Score, traffic light or metric. The
          *     response carries `socialisation` {experience}. 422
          *     socialisation_not_available | socialisation_week_done (next_allowed_at
@@ -3011,15 +3012,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -3527,15 +3542,29 @@ export interface operations {
                              */
                             digesting_until: string | null;
                         };
+                        /**
+                         * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                         *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                         */
                         water: {
+                            /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                             times_per_day: string | 0;
                             min_gap_minutes: string | 0;
                             used_today: string | 0;
+                            /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                             remaining_today: string | 0;
                             last_watered_at: string;
                             can_water: string;
-                            /** @description Earliest next refill by the water rules; null when allowed now. */
+                            /**
+                             * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                             *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                             */
                             next_allowed_at: string;
+                            /**
+                             * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                             *     `water_refill_below`, default 60).
+                             */
+                            refill_below: number;
                         };
                         steps: {
                             steps_today: number;
@@ -4063,15 +4092,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -4597,15 +4640,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -5131,15 +5188,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -5665,15 +5736,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -6199,15 +6284,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -6737,15 +6836,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -7275,15 +7388,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -7813,15 +7940,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -8347,15 +8488,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -8885,15 +9040,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -9419,15 +9588,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -9953,15 +10136,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -10491,15 +10688,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -11025,15 +11236,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -11563,15 +11788,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -12097,15 +12336,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -12635,15 +12888,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -13173,15 +13440,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;
@@ -13711,15 +13992,29 @@ export interface operations {
                                  */
                                 digesting_until: string | null;
                             };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
                             water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
                                 times_per_day: string | 0;
                                 min_gap_minutes: string | 0;
                                 used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
                                 remaining_today: string | 0;
                                 last_watered_at: string;
                                 can_water: string;
-                                /** @description Earliest next refill by the water rules; null when allowed now. */
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
                                 next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
                             };
                             steps: {
                                 steps_today: number;

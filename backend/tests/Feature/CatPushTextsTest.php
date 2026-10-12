@@ -357,7 +357,9 @@ describe('rendering per species (EN + SL)', function () {
 
 describe('M3-12 for a cat: food / water / hygiene reminders never ask for what the app refuses', function () {
     it('names the right first step for every combination of open scratching / litter accident / mess', function (array $kinds, string $food, ?string $hygiene) {
-        [, , $cat] = cptCatFamily();
+        // M5-F11: thirst at the soft-warning level (a thirst push never fires above 30 %);
+        // at 100 % water would now wait for the refill threshold (`_wait` + a time).
+        [, , $cat] = cptCatFamily(attributes: ['thirst_level' => 30]);
         $cat = cptOpen($cat, $kinds);
 
         foreach ([PushType::SoftWarning, PushType::CriticalAlert] as $type) {

@@ -185,4 +185,11 @@ return [
         'history_empty' => 'No changes yet (default: off).',
         'system' => 'system',
     ],
+
+    // M5-F11: BreedConfigResource (only the new field is localized; the older fields are English).
+    'breed_configs' => [
+        'water_refill_below' => 'Water allowed at thirst ≤',
+        'water_refill_below_help' => 'Water allowed when the thirst the child sees is at or below this percent AND the minimum gap has passed. No daily cap (M5-F11).',
+        'water_refill_below_column' => 'Water at ≤',
+    ],
 ];

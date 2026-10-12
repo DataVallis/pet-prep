@@ -28,9 +28,12 @@ use Illuminate\Support\Facades\Log;
  *   ≤ EMERGENCY_FEED_THRESHOLD (rule A).
  *   feedCheck() / waterCheck() are the one answer to "may the child feed /
  *   water now" (actions, child state, push copy).
- * - Water: at most `water_times_per_day` refills per family-local day and at
- *   least `water_min_gap_minutes` real minutes between two refills (the gap
- *   also applies across midnight).
+ * - Water (M5-F11, David 2026-10-12 "Dolij, ko se prazni"): no daily cap. A
+ *   refill is allowed when the live thirst shows ≤ the breed's
+ *   `water_refill_below` (60 %) AND at least `water_min_gap_minutes` real
+ *   minutes passed since the last refill (the gap also applies across
+ *   midnight). `water_times_per_day` is only the score's expected minimum
+ *   (RoutineLedgerService).
  *
  * Every wall-clock rule is evaluated in Pet::familyTimezone(); instants come
  * back in that zone, queries run in UTC. DST: windows follow the local wall
@@ -170,10 +173,12 @@ class CareScheduleService
         $now = CarbonImmutable::instance($now)->setTimezone($tz);
         $timesPerDay = max(0, (int) $config->water_times_per_day);
         $gapMinutes = max(0, (int) $config->water_min_gap_minutes);
+        $refillBelow = self::refillBelow($config);
 
         $dayStart = $now->startOfDay();
         $nextDayStart = $now->addDay()->startOfDay();
 
+        // Refills today: only the score's expected count and the HUD use it (M5-F11 — no cap).
         $usedToday = ActivityLog::where('pet_id', $pet->id)
             ->where('activity_type', ActivityType::WateredPet->value)
             ->where('created_at', '>=', $dayStart->utc())
@@ -189,27 +194,50 @@ class CareScheduleService
 
         $gapEnd = $lastAt?->addMinutes($gapMinutes);
         $tooSoon = $gapEnd !== null && $now->lessThan($gapEnd);
-        $limitReached = $usedToday >= $timesPerDay;
+
+        // M5-F11: the bowl must be emptying — live thirst (decayed to now, not the
+        // stored value of the last tick) shown at or below the breed threshold.
+        $rate = (float) $config->thirst_decay_rate;
+        $quiet = DecayMath::decays($pet) ? $pet->quietHours() : null;
+        $live = DecayMath::liveValue($pet, 'thirst_level', $rate, $now, $quiet);
+        $thirstShown = Pet::displayValue($live);
+        $notThirsty = $thirstShown > $refillBelow;
 
         $nextAllowedAt = null;
-        if ($limitReached) {
-            // Tomorrow, unless the breed allows no water at all.
-            if ($timesPerDay > 0) {
-                $nextAllowedAt = $gapEnd !== null && $gapEnd->greaterThan($nextDayStart) ? $gapEnd : $nextDayStart;
+        if ($tooSoon || $notThirsty) {
+            // Frozen / locked pets and a zero rate never reach the threshold: no time.
+            $thresholdAt = $notThirsty && DecayMath::decays($pet)
+                ? DecayMath::firstMinuteAtOrBelow($live, $rate, $refillBelow, $now, $quiet)?->setTimezone($tz)
+                : null;
+            if (! $notThirsty) {
+                $nextAllowedAt = $gapEnd;
+            } elseif ($thresholdAt !== null) {
+                $nextAllowedAt = $tooSoon && $gapEnd->greaterThan($thresholdAt) ? $gapEnd : $thresholdAt;
             }
-        } elseif ($tooSoon) {
-            $nextAllowedAt = $gapEnd;
         }
 
         return new WaterStatus(
             timesPerDay: $timesPerDay,
             minGapMinutes: $gapMinutes,
+            refillBelow: $refillBelow,
             usedToday: $usedToday,
             lastAt: $lastAt,
             nextAllowedAt: $nextAllowedAt,
-            limitReached: $limitReached,
             tooSoon: $tooSoon,
+            notThirsty: $notThirsty,
+            thirstShown: $thirstShown,
         );
+    }
+
+    /**
+     * The breed's refill threshold in percent (M5-F11, `breed_configs.water_refill_below`,
+     * default WaterStatus::DEFAULT_REFILL_BELOW), clamped to 1–100 like the CHECK.
+     */
+    public static function refillBelow(BreedConfig $config): int
+    {
+        $value = $config->water_refill_below;
+
+        return $value === null ? WaterStatus::DEFAULT_REFILL_BELOW : max(1, min(100, (int) $value));
     }
 
     /**
@@ -250,8 +278,12 @@ class CareScheduleService
 
     /**
      * May the child give water now by the game rules (M3-12, same role as
-     * feedCheck)? Hygiene 0 % → needs_cleaning; then the daily limit and the
-     * minimum gap (next_allowed_at from water()).
+     * feedCheck)? Hygiene 0 % → needs_cleaning; then (M5-F11, David 2026-10-12
+     * "Dolij, ko se prazni") `water_too_soon` while the minimum gap runs OR the
+     * live thirst shows above the breed's `water_refill_below`, with
+     * next_allowed_at = the later of the gap end and the forecast threshold
+     * minute (water()). There is no daily cap: `water_daily_limit` is never
+     * returned any more (the enum case stays for old app builds).
      */
     public function waterCheck(Pet $pet, BreedConfig $config, CarbonInterface $now, ?WaterStatus $water = null): CareCheck
     {
@@ -261,10 +293,7 @@ class CareScheduleService
 
         $water ??= $this->water($pet, $config, $now);
 
-        if ($water->limitReached) {
-            return CareCheck::refuse(CareRefusal::WaterDailyLimit, $water->nextAllowedAt);
-        }
-        if ($water->tooSoon) {
+        if (! $water->allowedNow()) {
             return CareCheck::refuse(CareRefusal::WaterTooSoon, $water->nextAllowedAt);
         }
 

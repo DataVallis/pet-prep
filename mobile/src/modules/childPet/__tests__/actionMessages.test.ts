@@ -73,7 +73,7 @@ describe('refusalMessage (family timezone)', () => {
 
   it('water_daily_limit, needs_cleaning, unknown', () => {
     expect(refusalMessage('water_daily_limit', '2026-10-05T00:00:00+02:00', lj)).toBe(
-      'Danes je kuža popil dovolj vode. Nova voda jutri.',
+      'Posoda je še dovolj polna do jutri. Novo vodo lahko daš jutri.',
     );
     expect(refusalMessage('needs_cleaning', null, lj)).toBe('Najprej pospravi za kužkom!');
     expect(refusalMessage('something_new', null, lj)).toBe(CHILD_ACTION_STRINGS.refused.other);

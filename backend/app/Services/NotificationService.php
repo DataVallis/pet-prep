@@ -650,11 +650,15 @@ class NotificationService
      * reminder may use right now — CareScheduleService decides, exactly as for
      * the feed / water actions:
      *  - the action is allowed (meal window, emergency meal after a missed
-     *    window at ≤ 20 % hunger, water left) → the normal text (variant null);
+     *    window at ≤ 20 % hunger, water gap passed and thirst ≤ the breed's
+     *    refill threshold — M5-F11) → the normal text (variant null);
      *  - hygiene shows 0 % (food and water refused) → `clean_first`;
-     *  - refused until a later time today (next meal window, water gap) →
+     *  - refused until a later time today (next meal window, water gap / the
+     *    forecast minute thirst reaches the refill threshold) →
      *    `wait` with that family-local time;
-     *  - not possible again today (water limit, last window over) → null:
+     *  - not possible again today (last window over; water whose next time is
+     *    tomorrow or cannot be forecast — there is no daily water cap since
+     *    M5-F11) → null:
      *    the reminder is not sent.
      * Hygiene reminders point to "Pospravi in daj igračo" while a chewed item
      * is open (hygieneVariant). Every other push (walk, parent alarm, illness,

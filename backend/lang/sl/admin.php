@@ -184,4 +184,11 @@ return [
         'history_empty' => 'Še ni sprememb (privzeto: izklopljeno).',
         'system' => 'sistem',
     ],
+
+    // M5-F11: BreedConfigResource (only the new field is localized; the older fields are English).
+    'breed_configs' => [
+        'water_refill_below' => 'Voda dovoljena pri žeji ≤',
+        'water_refill_below_help' => 'Voda je dovoljena, ko žeja, ki jo otrok vidi, pade na ta odstotek ali nižje IN je minil najmanjši razmik. Dnevne omejitve ni (M5-F11).',
+        'water_refill_below_column' => 'Voda pri ≤',
+    ],
 ];

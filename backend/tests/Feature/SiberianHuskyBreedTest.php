@@ -251,8 +251,8 @@ describe('life-stage data against data.json', function () {
 
         // The only open proposal is the general teething chewing chance (as for every dog).
         expect(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'siberian-husky')->where('verified', false)->pluck('key')->all())
-            // M5-R13: + the brushing routine — "more than once a week" without a number → Claude's proposal 2.
-            ->toBe([StageParamKey::ChewingChancePerDay->value, StageParamKey::GroomingSessionsPerWeek->value]);
+            // M5-R13: the brushing routine (2 per week, "more than once a week" without a number) — confirmed by David 2026-10-12.
+            ->toBe([StageParamKey::ChewingChancePerDay->value]);
     });
 
     it('shares the general dog rows with the Border Collie (only the breed profile differs)', function () {

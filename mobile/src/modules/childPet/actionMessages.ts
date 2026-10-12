@@ -271,7 +271,7 @@ export function feedHint(view: ChildPetView): string | null {
   return feedDockHint(view)?.a11y ?? null;
 }
 
-/** Dock hint under a disabled "Voda": "ob 15:30", "jutri" (daily limit), "Najprej pospravi". */
+/** Dock hint under a disabled "Voda": "ob 15:30", "jutri" (the bowl lasts until tomorrow — M5-F11, no daily cap), "Najprej pospravi". */
 export function waterDockHint(view: ChildPetView): DockHint | null {
   if (view.water.can_water || view.lock.is_locked) return null;
   if (view.pet.needs_cleaning) return cleanFirstHint(view);

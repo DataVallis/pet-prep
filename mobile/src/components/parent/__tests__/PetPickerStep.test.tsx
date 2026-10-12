@@ -1103,9 +1103,71 @@ describe('PetPickerStep', () => {
       ]);
     });
 
+    it('the open list also closes from the top ("Pokaži manj pasem" above the breeds, ≥ 44 px, labelled)', () => {
+      renderPicker(FALLBACK_CATALOGUE, jest.fn(), jest.fn(), false);
+      expect(screen.queryByTestId('breed-show-fewer-top')).toBeNull();
+      fireEvent.press(screen.getByTestId('breed-show-all'));
+      const top = screen.getByTestId('breed-show-fewer-top');
+      expect(top).toHaveTextContent('Pokaži manj pasem');
+      expect(top.props.accessibilityLabel).toBe('Pokaži manj pasem');
+      expect(top.props.accessibilityRole).toBe('button');
+      expect(top.props.accessibilityState).toEqual({ expanded: true });
+      // Above the first breed row.
+      const all = screen.getAllByTestId(/^(breed-show-fewer-top|breed-option-.*|breed-show-all)$/).map((n) => n.props.testID);
+      expect(all[0]).toBe('breed-show-fewer-top');
+      expect(all[all.length - 1]).toBe('breed-show-all');
+      fireEvent.press(top);
+      expect(ids()).toHaveLength(BREED_PREVIEW_COUNT);
+      expect(screen.queryByTestId('breed-show-fewer-top')).toBeNull();
+      expect(screen.getByTestId('breed-show-all')).toHaveTextContent(`Pokaži vse pasme (${FALLBACK_CATALOGUE.breeds.length})`);
+    });
+
     it('a short catalogue has no toggle', () => {
       renderPicker(readBreedCatalogue({ species: ['dog'], breeds: FALLBACK_CATALOGUE.breeds.slice(0, 3) }), jest.fn(), jest.fn(), false);
       expect(screen.queryByTestId('breed-show-all')).toBeNull();
+    });
+  });
+
+  describe('fix 2026-10-12: plan and breed always agree', () => {
+    const state = (id: string) => screen.getByTestId(id).props.accessibilityState;
+
+    it('dog: nothing preselected — no plan and no ticked breed', () => {
+      renderPicker(FALLBACK_CATALOGUE, jest.fn(), jest.fn(), false);
+      expect(state('plan-option-free').checked).toBe(false);
+      expect(state('plan-option-challenge').checked).toBe(false);
+      expect(state('breed-option-mutt')).toEqual({ checked: false, disabled: false });
+    });
+
+    it('dog: tapping the mutt selects the free plan with it', () => {
+      renderPicker(FALLBACK_CATALOGUE, jest.fn(), jest.fn(), false);
+      fireEvent.press(screen.getByTestId('breed-option-mutt'));
+      expect(state('breed-option-mutt')).toEqual({ checked: true, disabled: false });
+      expect(state('plan-option-free').checked).toBe(true);
+      expect(state('plan-option-challenge').checked).toBe(false);
+    });
+
+    it('cat: after the species tile nothing is preselected; the domestic cat selects the free plan', () => {
+      renderPicker(BOTH);
+      fireEvent.press(screen.getByTestId('species-option-cat'));
+      expect(state('plan-option-free').checked).toBe(false);
+      expect(state('plan-option-challenge').checked).toBe(false);
+      expect(state('breed-option-domestic_cat').checked).toBe(false);
+      fireEvent.press(screen.getByTestId('breed-option-domestic_cat'));
+      expect(state('breed-option-domestic_cat').checked).toBe(true);
+      expect(state('plan-option-free').checked).toBe(true);
+    });
+
+    it('a restored choice with a breed but no plan never shows the breed ticked', () => {
+      render(
+        <PetPickerStep
+          childName="Maja"
+          catalogue={FALLBACK_CATALOGUE}
+          initial={{ species: 'dog', plan: null, breed: 'mutt', origin: null, age_stage: null }}
+          onConfirm={jest.fn()}
+        />,
+      );
+      expect(state('breed-option-mutt').checked).toBe(false);
+      expect(state('plan-option-free').checked).toBe(false);
     });
   });
 

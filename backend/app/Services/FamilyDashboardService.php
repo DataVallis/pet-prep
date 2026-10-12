@@ -345,10 +345,14 @@ class FamilyDashboardService
             'missed' => array_reverse($missed),
             'illnesses' => $illnesses,
             // M5-R17 puppy socialisation: one row per program week with a "new
-            // experience" task in the period (done / open / missed) — shown, never
-            // scored (not in by_type, daily, missed, the Care Score or the light).
-            // Null when the pet had no such week in the period.
-            'socialisation' => $pet !== null ? $this->socialisation->reportFor($pet, $child->id, $from) : null,
+            // experience" task in the period (done / excused / open / missed) — shown,
+            // never scored (not in by_type, daily, missed, the Care Score or the light).
+            // Only the weeks since this child started caring (the board's start / end,
+            // David 2026-10-12). Null when the pet had no such week in the period.
+            'socialisation' => $pet !== null ? $this->socialisation->reportFor($pet, $child->id, $from, caretaker: [
+                'start' => $board['starts'][$pet->id][$child->id] ?? null,
+                'end' => $board['ends'][$pet->id][$child->id] ?? null,
+            ]) : null,
         ];
     }
 

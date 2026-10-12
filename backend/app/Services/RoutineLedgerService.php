@@ -37,10 +37,16 @@ use Throwable;
  *    pet's life stage that day, M5-R01); done = a `fed_pet` row inside
  *    [start, end); missed when the window ended unfed. A window that lies
  *    entirely in quiet hours is done by the parent: not expected.
- *  - water: `water_times_per_day` refills per day, pro rata to the part of
+ *  - water: `water_times_per_day` refills per day — the EXPECTED MINIMUM, not a
+ *    cap (M5-F11, David 2026-10-12: the child may water whenever thirst shows
+ *    ≤ water_refill_below and the gap passed) — pro rata to the part of
  *    the day's non-quiet time the pet was in play (birth day, hard stop,
  *    vet, game over), rounded half up; done = `watered_pet` rows that day
  *    (in order, up to the expected number); the rest is missed at day end.
+ *    Extra refills beyond the expected number are ignored, never a penalty.
+ *    Capped at what the day allows (`achievableRefills`: thirst lost over the
+ *    day ÷ drop from full to the threshold) — a slow breed with long quiet
+ *    hours (school) is never expected to water more often than it can.
  *  - clean: one routine per hygiene event that happened (`applied`) — a
  *    poop, a puppy accident or a chewing event (M5-R02, `eventKind`); done =
  *    resolved within 2 hours counted outside quiet hours (cleaned, or for
@@ -75,7 +81,9 @@ use Throwable;
  *    slots (slot i = the period's i-th `groomed_pet`) — M5-R13: the same
  *    grooming slots for a dog with `grooming_enabled` and a breed row. Not expected when
  *    hard stop / vet / game over cover ≥ 50 % of the period's non-quiet
- *    time (like the walk). A weekly routine is never pending past its day.
+ *    PROGRAM time (like the walk); a payment lock already lengthens the
+ *    period, so it is neither blocked nor period time (David 2026-10-12,
+ *    »ne štej dvakrat«). A weekly routine is never pending past its day.
  *
  * Not expected at all: before birth (an unborn pet has none), before
  * FIRST_LEDGER_DATE, and — unless it was done anyway — any routine whose
@@ -436,6 +444,10 @@ class RoutineLedgerService
         $expectedWater = $denominator > 0
             ? (int) min($timesPerDay, max(0, round($timesPerDay * $playable / $denominator, 0, PHP_ROUND_HALF_UP)))
             : 0;
+        // M5-F11: never expect more refills than the day allows — water is possible
+        // only once the bowl emptied to the threshold, so a slow breed in a family
+        // with long quiet hours (e.g. school) may not reach `water_times_per_day`.
+        $expectedWater = min($expectedWater, $this->achievableRefills($config, $quiet, $dayStartUtc, $dayEndUtc));
         $waterRows = array_values(array_filter(
             $in['activities'],
             fn ($r) => $r['type'] === ActivityType::WateredPet->value && $r['at']->greaterThanOrEqualTo($dayStartUtc) && $r['at']->lessThan($dayEndUtc),
@@ -648,7 +660,7 @@ class RoutineLedgerService
      * $date — the full litter change (1 slot) and a brushed cat's grooming
      * (`grooming_sessions_per_week` slots). Opens at the period start, due
      * at its end (the next weekly birthday); excused when freezes cover ≥
-     * 50 % of the period's non-quiet time.
+     * 50 % of the period's non-quiet program time (payment locks excluded).
      *
      * @param  array<string, mixed>  $in
      * @return list<Routine>
@@ -657,6 +669,7 @@ class RoutineLedgerService
     {
         $quiet = $in['quiet'];
         $blocks = $in['blocks'];
+        $pauses = $this->programPauses($pet);
         $changeDays = $this->lifeStages->stageValueOn($pet, $date, StageParamKey::LitterFullChangeDays)['value'] ?? 0;
         $routines = [];
 
@@ -686,15 +699,10 @@ class RoutineLedgerService
                 continue;
             }
 
-            // Excused like the walk: freezes cover ≥ 50 % of the period's (non-quiet) time.
-            $playable = 0.0;
-            $split = QuietHours::splitSecondsBetween($quiet, $opens, $due);
-            $total = $useNormal ? $split['normal'] : $split['normal'] + $split['quiet'];
-            foreach ($this->subtract($opens, $due, $blocks) as [$a, $b]) {
-                $part = QuietHours::splitSecondsBetween($quiet, $a, $b);
-                $playable += $useNormal ? $part['normal'] : $part['normal'] + $part['quiet'];
-            }
-            $excused = ($total > 0 ? 1 - $playable / $total : 1.0) >= self::WHOLE_DAY_EXCUSE_SHARE - 1e-9;
+            // Excused like the walk: freezes cover ≥ 50 % of the period's (non-quiet)
+            // PROGRAM time — a payment lock already stretches the period, so it is
+            // neither blocked nor period time (David 2026-10-12, »ne štej dvakrat«).
+            $excused = $this->blockedShare($quiet, $blocks, $opens, $due, $useNormal, $pauses) >= self::WHOLE_DAY_EXCUSE_SHARE - 1e-9;
 
             $rows = array_values(array_filter(
                 $in['activities'],
@@ -892,6 +900,77 @@ class RoutineLedgerService
     // ──────────────────────────────────────────────────────────────
     //  Helpers
     // ──────────────────────────────────────────────────────────────
+
+    /**
+     * Share (0–1) of [$from, $to) covered by the blocking periods (hard stop,
+     * vet, inactive / game over, payment lock — or any extra block a caller
+     * adds), measured in non-quiet time ($useNormal, the default) or in all
+     * time. A stretch without any measured time counts as fully blocked.
+     * The weekly routines compare it with WHOLE_DAY_EXCUSE_SHARE; M5-R17
+     * socialisation uses the same rule for its "excused" weeks.
+     *
+     * $excluded (David 2026-10-12, »ne štej dvakrat«): spans that are not
+     * program time at all — the payment locks a program week already
+     * stretches over (LifeStageService::programPeriodAt). They count neither
+     * as blocked nor as week time: the share is measured on [$from, $to)
+     * minus $excluded, in both the numerator and the denominator.
+     *
+     * @param  list<array{0: CarbonImmutable, 1: CarbonImmutable|null}>  $blocks
+     * @param  list<array{0: CarbonImmutable, 1: CarbonImmutable|null}>  $excluded
+     */
+    public function blockedShare(?QuietHours $quiet, array $blocks, CarbonImmutable $from, CarbonImmutable $to, bool $useNormal = true, array $excluded = []): float
+    {
+        $total = 0.0;
+        foreach ($this->subtract($from, $to, $excluded) as [$a, $b]) {
+            $part = QuietHours::splitSecondsBetween($quiet, $a, $b);
+            $total += $useNormal ? $part['normal'] : $part['normal'] + $part['quiet'];
+        }
+        if ($total <= 0) {
+            return 1.0;
+        }
+        $playable = 0.0;
+        foreach ($this->subtract($from, $to, array_merge($excluded, $blocks)) as [$a, $b]) {
+            $part = QuietHours::splitSecondsBetween($quiet, $a, $b);
+            $playable += $useNormal ? $part['normal'] : $part['normal'] + $part['quiet'];
+        }
+
+        return max(0.0, 1 - $playable / $total);
+    }
+
+    /**
+     * The pet's payment-lock spans (Pet::paymentLockSpans — the pauses of
+     * the program clock) as [start, end|null] in UTC: the `$excluded` of
+     * blockedShare() for a program-week rule.
+     *
+     * @return list<array{0: CarbonImmutable, 1: CarbonImmutable|null}>
+     */
+    public function programPauses(Pet $pet): array
+    {
+        return array_map(
+            fn (array $s) => [CarbonImmutable::createFromTimestampUTC($s[0]), $s[1] !== null ? CarbonImmutable::createFromTimestampUTC($s[1]) : null],
+            $pet->paymentLockSpans(),
+        );
+    }
+
+    /**
+     * The pet's blocking periods (`pet_status_periods`, every kind) that
+     * reach into [$from, $to): [start, end|null] in UTC — the ledger's
+     * `blocks` for one pet.
+     *
+     * @return list<array{0: CarbonImmutable, 1: CarbonImmutable|null}>
+     */
+    public function statusBlocks(Pet $pet, CarbonInterface $from, CarbonInterface $to): array
+    {
+        return PetStatusPeriod::where('pet_id', $pet->id)
+            ->where('started_at', '<', CarbonImmutable::instance($to)->utc())
+            ->where(fn ($q) => $q->whereNull('ended_at')->orWhere('ended_at', '>', CarbonImmutable::instance($from)->utc()))
+            ->orderBy('started_at')
+            ->toBase()
+            ->get(['started_at', 'ended_at'])
+            ->map(fn ($r) => [$this->utc($r->started_at), $r->ended_at !== null ? $this->utc($r->ended_at) : null])
+            ->values()
+            ->all();
+    }
 
     /**
      * The instant at which $seconds of non-quiet time have passed since
@@ -1111,5 +1190,23 @@ class RoutineLedgerService
             'created_at' => $now->format('Y-m-d H:i:s'),
             'updated_at' => $now->format('Y-m-d H:i:s'),
         ];
+    }
+
+    /**
+     * How many refills a whole day can need (M5-F11, "Dolij, ko se prazni"):
+     * thirst lost over the day (breed rate, quiet hours at ×0.1) divided by the
+     * drop from a full bowl to the refill threshold (shown ≤ threshold = below
+     * threshold + 0.5). A child who waters every time the app allows is never
+     * marked as missing water.
+     */
+    private function achievableRefills(BreedConfig $config, ?QuietHours $quiet, CarbonInterface $dayStart, CarbonInterface $dayEnd): int
+    {
+        $rate = max(0.0, (float) $config->thirst_decay_rate);
+        $perRefill = 100.0 - (CareScheduleService::refillBelow($config) + 0.5);
+        if ($rate <= 0.0 || $perRefill <= 0.0) {
+            return $rate <= 0.0 ? 0 : PHP_INT_MAX;
+        }
+
+        return (int) floor($rate * DecayMath::weightedHours($quiet, $dayStart, $dayEnd) / $perRefill);
     }
 }

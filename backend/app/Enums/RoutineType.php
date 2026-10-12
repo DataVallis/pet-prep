@@ -11,7 +11,7 @@ enum RoutineType: string
     /** One per breed feed window. */
     case Feed = 'feed';
 
-    /** water_times_per_day refills per family-local day (pro rata on partial days). */
+    /** water_times_per_day expected refills per family-local day (pro rata on partial days; a minimum, extra refills never count against the child — M5-F11). */
     case Water = 'water';
 
     /** One per hygiene event: clean within 2 hours outside quiet hours. */

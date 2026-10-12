@@ -93,8 +93,9 @@ trait HandlesChildPet
         return match ($refusal) {
             CareRefusal::OutsideFeedWindow => 'Feeding is only possible inside a feeding window.',
             CareRefusal::AlreadyFedThisWindow => 'The pet was already fed in this feeding window.',
+            // Never returned since M5-F11 (no daily cap); kept for old clients.
             CareRefusal::WaterDailyLimit => 'No more water refills today.',
-            CareRefusal::WaterTooSoon => 'Too soon since the last water refill.',
+            CareRefusal::WaterTooSoon => 'Too soon for fresh water: the bowl is still full enough or the last refill was recent.',
             CareRefusal::NeedsCleaning => 'Clean up the mess first.',
             CareRefusal::ContractAlreadySigned => 'The contract is already signed.',
             CareRefusal::TakeOutNotNeeded => 'Only a puppy needs to be taken out on a schedule.',

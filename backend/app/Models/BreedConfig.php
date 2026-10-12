@@ -17,8 +17,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property float $thirst_decay_rate % per hour outside quiet hours.
  * @property int $poops_per_day Random hygiene events per family-local day (M1-05).
  * @property list<array{0: string, 1: string}> $feed_windows Family-local [start, end) "HH:MM" pairs (M1-07).
- * @property int $water_times_per_day Max water refills per family-local day (M1-07).
+ * @property int $water_times_per_day Expected water refills per family-local day for the Care Score — a minimum, not a cap (M1-07, M5-F11).
  * @property int $water_min_gap_minutes Minimum gap between refills (M1-07).
+ * @property int $water_refill_below Displayed thirst (%) at or below which water is allowed (M5-F11, default 60).
  * @property int|null $daily_steps_cap Optional cap on the stage-derived step goal (M5-R01; null = none, David 2026-10-05).
  * @property bool $premium_unlock Paid breed (12-week challenge). Since M5-R06-01 the ONLY source of the
  *                                free / paid rule (BreedType::isPremium(), BreedCatalogService).
@@ -53,6 +54,7 @@ class BreedConfig extends Model
         'feed_windows',
         'water_times_per_day',
         'water_min_gap_minutes',
+        'water_refill_below',
         'premium_unlock',
         'daily_steps_cap',
         'species',
@@ -104,6 +106,7 @@ class BreedConfig extends Model
             'feed_windows' => 'array',
             'water_times_per_day' => 'integer',
             'water_min_gap_minutes' => 'integer',
+            'water_refill_below' => 'integer',
             'premium_unlock' => 'boolean',
             'daily_steps_cap' => 'integer',
             'species' => Species::class,

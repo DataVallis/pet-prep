@@ -49,8 +49,12 @@
     "missed_two": "{{count}} zamujena",
     "missed_few": "{{count}} zamujeni",
     "missed_other": "{{count}} zamujenih",
+    "excused_one": "{{count}} opravičen",
+    "excused_two": "{{count}} opravičena",
+    "excused_few": "{{count}} opravičeni",
+    "excused_other": "{{count}} opravičenih",
     "open": "ta teden še čaka",
-    "notScored": "Enkrat na teden, dokler je kuža mladiček. Ne vpliva na oceno skrbi.",
+    "notScored": "Enkrat na teden, dokler je kuža mladiček. Ne vpliva na oceno skrbi. Teden, ko je bil kuža večinoma bolan, je bila igra ustavljena ali otrok še ni skrbel zanj, je opravičen.",
     "experiences": {
       "person": "nov človek",
       "dog": "drug pes",
