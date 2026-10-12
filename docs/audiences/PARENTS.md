@@ -82,6 +82,12 @@ Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), odrasel potrebuje 
 - Otrok tapne **»Počeši«** in 30 sekund s prstom češe dlako. Največ enkrat na dan, ne v tihih urah. Pri skupnem psu šteje otroku, ki je česal.
 - Če ostane neopravljena vsaj polovica česanj tedna, ima kuža **vozel v dlaki**. To ni kazen: naslednje česanje traja malo dlje in vozel razreši; v oceni štejejo le zamujena česanja kot zamujene rutine. V poročilu vidite vrstico »Česanje«, v časovnici »počesal(a) kužka«.
 
+**Nova izkušnja za mladička** *(od 12. 10. 2026 na strežniku in v aplikaciji — aplikacija še ni v trgovini; velja samo za nove pse, ustvarjene z različico aplikacije, ki to zna; mačke je nimajo)*:
+- Mladički se o svetu učijo z novimi doživetji. Veterinarska dobrodelna organizacija PDSA pri več pasmah svetuje socializacijo od malega (npr. rotvajler, doberman, cane corso, bigel, labradorec) — zato otrok, **dokler je kuža mladiček** (do 9 mesecev starosti v igri), **enkrat na teden** dobi nalogo »Nova izkušnja«.
+- Otrok tapne **»Nova izkušnja«**, izbere, kaj je kuža doživel — **nov človek, drug kuža, nov zvok ali novo mesto** — in z enim tapom označi, da je opravljeno. Ena na teden za psa (pri skupnem psu jo lahko opravi kateri koli otrok), ne v tihih urah.
+- **Brez kazni:** to ni rutina in ne vpliva na oceno skrbi ali semafor. V poročilu otroka vidite vrstico **»Nova izkušnja (mladiček)«** — koliko tednov je bilo opravljenih, zamujenih in ali ta teden še čaka; v časovnici npr. »Nova izkušnja: nov zvok · Mia«.
+- Zaenkrat le pasme, kjer vir to izrecno svetuje (12 pasem); mešanček, border collie in nekatere druge pasme naloge še nimajo (*odločitev, ali jo dobijo vsi mladički, še čaka*).
+
 **Počitek po obroku** *(od 12. 10. 2026 na strežniku in v aplikaciji — aplikacija še ni v trgovini)*:
 - Pri nekaterih velikih pasmah viri svetujejo, naj pes po obroku malo počiva, preden gre na sprehod (nevarnost zasuka želodca). Za **cane corsa** in **dobermana** (PDSA) zato otrok 60 minut po obroku na svojem zaslonu vidi mirno opozorilo »Počakaj s sprehodom — kuža prebavlja« in uro, ko lahko gre ven.
 - To je samo opozorilo in navada, ki se je otrok nauči: koraki se štejejo tudi takrat, ni kazni in ni točk. Uro (60 minut) je določil David, ker viri dolžine ne povedo.

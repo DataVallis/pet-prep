@@ -62,6 +62,8 @@ import { applyBroadcastToCache, childPetKey, isRecoverableError, useChildPet } f
 import { useClean, useFeed, useResolveChewing, useTakeOut, useWater } from '@/hooks/queries/useChildActions';
 import CatCareOverlay from '@/modules/catCare/CatCareOverlay';
 import { CatHudChip, CatHudNote, FirstAidNote } from '@/modules/catCare/CatHudChips';
+import SocialisationSheet, { SocialisationChip } from '@/modules/socialisation/SocialisationSheet';
+import { showSocialisationChip } from '@/modules/socialisation/socialisation';
 import {
   CAT_HUD_STRINGS,
   careChips,
@@ -402,6 +404,8 @@ export default function ChildHudScreen() {
   const [isLanguageVisible, setLanguageVisible] = useState(false);
   // M2-01d: the finished challenge (certificate / "the parent will prepare it" / kind note).
   const [isCertificateVisible, setCertificateVisible] = useState(false);
+  // M5-R17: the puppy's weekly "Nova izkušnja" card (UI-only state, like the language sheet).
+  const [isSocialisationVisible, setSocialisationVisible] = useState(false);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const showToast = useCallback((next: Toast) => {
     if (toastTimer.current) clearTimeout(toastTimer.current);
@@ -594,6 +598,8 @@ export default function ChildHudScreen() {
   // M5-R13: a brushed dog's "Počeši" chip too (careChips).
   const chips = careChips(view);
   const chipNotes = chips.flatMap((c) => (c.note !== null ? [{ kind: c.kind, text: c.note }] : []));
+  // M5-R17: "Nova izkušnja" while this puppy week's task is open (the server's block decides).
+  const socialisationChip = !cat && !coveredByOverlay && showSocialisationChip(view.socialisation, locked);
   const scratcherShown = !coveredByOverlay && showScratcherButton(view);
   const firstAid = showFirstAid(view);
   // M5-R16: after a meal of a breed with the GDV advice — only a note, the walk stays enabled.
@@ -945,7 +951,7 @@ export default function ChildHudScreen() {
                 : null
             }
             footer={
-              hasTraining || entry.kind !== 'hidden' || moodScene !== null || chips.length > 0 || firstAid || digestion !== null ? (
+              hasTraining || entry.kind !== 'hidden' || moodScene !== null || chips.length > 0 || socialisationChip || firstAid || digestion !== null ? (
                 <>
                   {firstAid && <FirstAidNote />}
                   {digestion !== null && <DigestionNote note={digestion} />}
@@ -958,7 +964,7 @@ export default function ChildHudScreen() {
                       reduceMotion={reduceMotion}
                     />
                   )}
-                  {(hasTraining || entry.kind === 'button' || chips.length > 0) && (
+                  {(hasTraining || entry.kind === 'button' || chips.length > 0 || socialisationChip) && (
                     <View style={styles.chipRow}>
                       {hasTraining && (
                         <TrainingChip
@@ -969,6 +975,9 @@ export default function ChildHudScreen() {
                       {chips.map((chip) => (
                         <CatHudChip key={chip.kind} chip={chip} onPress={() => openCat(chip.kind)} />
                       ))}
+                      {socialisationChip && view.socialisation !== null && (
+                        <SocialisationChip pending={view.socialisation.can_record} onPress={() => setSocialisationVisible(true)} />
+                      )}
                       {entry.kind === 'button' &&
                         (cat ? (
                           // A cat only cuddles (CAT_SPEC §5.5): straight to the cuddle, no ball.
@@ -1037,6 +1046,13 @@ export default function ChildHudScreen() {
         visible={isCertificateVisible}
         certificate={view.certificate}
         onClose={() => setCertificateVisible(false)}
+      />
+      <SocialisationSheet
+        visible={isSocialisationVisible && !locked && !cat}
+        socialisation={view.socialisation}
+        nowIso={view.server_time}
+        timezone={view.timezone}
+        onClose={() => setSocialisationVisible(false)}
       />
       <PetProfileSheet visible={isProfileVisible && profileRows.length > 0} rows={profileRows} onClose={() => setProfileVisible(false)} />
       {showAlbum && (

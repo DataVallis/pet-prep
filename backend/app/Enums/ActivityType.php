@@ -51,6 +51,11 @@ enum ActivityType: string
     case PetScratched = 'pet_scratched';
     case PetLitterAccident = 'pet_litter_accident';
     case PetCoatMatted = 'pet_coat_matted';
+    // M5-R17 (David 2026-10-12): a child marked the puppy's weekly "new
+    // experience" (socialisation). value = SocialisationExperience::code()
+    // (1 person, 2 dog, 3 sound, 4 place). Parent timeline + the report's
+    // weekly socialisation row only — never a routine, score or stat.
+    case SocialisedPet = 'socialised_pet';
 
     /**
      * Rows that describe something that happened to the dog, not a care

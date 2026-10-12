@@ -1,0 +1,60 @@
+{
+  "child": {
+    "chip": "New experience",
+    "chipA11y": "A new experience for your pup. Still open this week.",
+    "title": "A new experience",
+    "week": "Puppy week {{week}}",
+    "intro": "Puppies learn about the world through new experiences. This week, show your pup something new. What will it be?",
+    "pick": "Once your pup has had it, tap your choice.",
+    "tip": "Go slowly and praise a lot. If your pup gets scared, step back and try another day.",
+    "success": "Well done! Your pup discovered something new.",
+    "doneWith": "Done this week ✓ ({{experience}})",
+    "saving": "Saving …",
+    "close": "Close"
+  },
+  "experiences": {
+    "person": {
+      "label": "A new person",
+      "hint": "Your pup meets someone new – a neighbour, grandma or a friend."
+    },
+    "dog": {
+      "label": "Another dog",
+      "hint": "Your pup calmly says hello to another friendly dog."
+    },
+    "sound": {
+      "label": "A new sound",
+      "hint": "Your pup hears something new – a vacuum cleaner, the doorbell or rain on the window."
+    },
+    "place": {
+      "label": "A new place",
+      "hint": "Your pup visits a new place – a park, a new street or a car ride."
+    }
+  },
+  "errors": {
+    "socialisation_not_available": "Your pup has no new experience this week.",
+    "socialisation_week_done": "This week's new experience is already done. The next one is waiting {{when}}.",
+    "socialisation_week_done_no_time": "This week's new experience is already done. Well done!",
+    "socialisation_quiet_hours": "Your pup is sleeping now. Show it something new {{when}}.",
+    "socialisation_quiet_hours_no_time": "Your pup is sleeping now. Show it something new after quiet hours.",
+    "offline": "No connection. Try again.",
+    "other": "That didn't work. Try again."
+  },
+  "parent": {
+    "label": "New experience (puppy)",
+    "weeksOf_one": "{{done}} of {{count}} week",
+    "weeksOf_other": "{{done}} of {{count}} weeks",
+    "missed_one": "{{count}} missed",
+    "missed_other": "{{count}} missed",
+    "open": "this week still open",
+    "notScored": "Once a week while the dog is a puppy. Doesn't affect the Care Score.",
+    "experiences": {
+      "person": "a new person",
+      "dog": "another dog",
+      "sound": "a new sound",
+      "place": "a new place"
+    },
+    "timeline": "New experience: {{what}}",
+    "timelinePlain": "New experience",
+    "timelineBy": "{{text}} · {{child}}"
+  }
+}

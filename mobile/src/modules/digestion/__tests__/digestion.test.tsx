@@ -116,14 +116,14 @@ describe('reading the server state', () => {
   it('words it calmly in Slovenian and English, with the family-local time and no pet name', async () => {
     expect(digestionNote(viewOf(corso()), T0)).toEqual({
       title: 'Počakaj s sprehodom',
-      body: 'Kuža prebavlja. Velik pes naj po obroku počiva približno eno uro.',
+      body: 'Kuža prebavlja. S sprehodom še malo počakaj.',
       until: 'Na sprehod lahko greš ob 12:40.',
-      a11y: 'Počakaj s sprehodom. Kuža prebavlja. Velik pes naj po obroku počiva približno eno uro. Na sprehod lahko greš ob 12:40.',
+      a11y: 'Počakaj s sprehodom. Kuža prebavlja. S sprehodom še malo počakaj. Na sprehod lahko greš ob 12:40.',
     });
     await i18n.changeLanguage('en');
     expect(digestionNote(viewOf(corso()), T0)).toMatchObject({
       title: 'Wait with the walk',
-      body: 'Your pup is digesting. A big dog should rest about an hour after a meal.',
+      body: 'Your pup is digesting. Wait a little before the walk.',
       until: 'You can go for a walk at 12:40.',
     });
     expect(digestionNote(viewOf(corso()), Date.parse(UNTIL))).toBeNull();

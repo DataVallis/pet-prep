@@ -31,7 +31,7 @@ class CareActivityChart extends ChartWidget
         'feeding' => ['color' => '#f59e0b', 'types' => [ActivityType::FedPet, ActivityType::WateredPet, ActivityType::ParentFedPet]],
         'outside' => ['color' => '#3b82f6', 'types' => [ActivityType::WalkedPet, ActivityType::TookOutPet]],
         'hygiene' => ['color' => '#14b8a6', 'types' => [ActivityType::CleanedPoop, ActivityType::ScoopedLitter, ActivityType::ChangedLitter, ActivityType::GroomedPet, ActivityType::ResolvedChewing, ActivityType::ResolvedScratching]],
-        'fun' => ['color' => '#a855f7', 'types' => [ActivityType::TrainedPet, ActivityType::PlayedWithPet, ActivityType::CuddledPet, ActivityType::PlayedWand]],
+        'fun' => ['color' => '#a855f7', 'types' => [ActivityType::TrainedPet, ActivityType::PlayedWithPet, ActivityType::CuddledPet, ActivityType::PlayedWand, ActivityType::SocialisedPet]],
         'incidents' => ['color' => '#ef4444', 'types' => [ActivityType::PetAccident, ActivityType::PetChewed, ActivityType::PetScratched, ActivityType::PetLitterAccident, ActivityType::PetCoatMatted, ActivityType::IgnoredWarning]],
     ];
 

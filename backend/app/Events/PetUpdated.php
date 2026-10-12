@@ -11,6 +11,7 @@ use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
 use App\Services\PlayPayload;
 use App\Services\ScratchingPayload;
+use App\Services\SocialisationPayload;
 use App\Services\TrainingPayload;
 use App\Services\WandPayload;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -185,6 +186,8 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             'litter' => LitterPayload::for($pet)?->toArray(),
             'grooming' => GroomingPayload::for($pet)?->toArray(),
             'scratching' => ScratchingPayload::for($pet)?->toArray(),
+            // M5-R17: the puppy's weekly "new experience" (pet-level `can_record`); null when this week has no task.
+            'socialisation' => SocialisationPayload::for($pet)?->toArray(),
             // AI media (M4-05): signed URLs (≤ 90 min) to our copies — the channel is
             // private to the pet's caretakers and family parents; legacy fields mirror it.
             'current_video_url' => $media->currentVideoUrl,

@@ -7,6 +7,7 @@ use App\Enums\CareRefusal;
 use App\Enums\CareSessionKind;
 use App\Enums\PetLockReason;
 use App\Enums\PlayKind;
+use App\Enums\SocialisationExperience;
 use App\Enums\TrainingCommand;
 use App\Events\PetUpdated;
 use App\Models\ActivityLog;
@@ -69,6 +70,7 @@ class PetActivityService
         private LitterService $litter,
         private CatChoreService $chores,
         private ScratchingService $scratching,
+        private SocialisationService $socialisation,
     ) {}
 
     /**
@@ -415,6 +417,40 @@ class PetActivityService
                     'kind' => $event->kind->value,
                     'source' => $event->source->value,
                 ],
+            ]);
+        });
+    }
+
+    /**
+     * Puppy socialisation (M5-R17, David 2026-10-12): the child marks this
+     * program week's "new experience" — a new person, another dog, a new
+     * sound or a new place. Locks first (423), then 422
+     * socialisation_not_available (no task this week) /
+     * socialisation_week_done (next_allowed_at = the next puppy week, or
+     * null) / socialisation_quiet_hours (next_allowed_at = their end). One
+     * `socialised_pet` row (value = the experience code) and one
+     * `PetUpdated('socialised_pet')`. Never a routine, score or metric.
+     */
+    public function socialise(Pet $pet, User $child, SocialisationExperience $experience): ActionResult
+    {
+        return $this->withLockedPet($pet, ActivityType::SocialisedPet, function (Pet $locked) use ($child, $experience): ActionResult {
+            $now = now()->startOfSecond();
+
+            if ($reason = $locked->actionLockReasonFor($child)) {
+                return $this->locked($locked, $reason);
+            }
+
+            // Due messes / the midnight happen first (same as every action).
+            $this->decay->catchUpLocked($locked);
+
+            if (($refusal = $this->socialisation->refusal($locked, $now)) !== null) {
+                return $this->refused($locked, $refusal['refusal'], $refusal['next_allowed_at']);
+            }
+
+            $this->logActivity($locked, ActivityType::SocialisedPet, $experience->code(), $child->id);
+
+            return $this->result(ActionResult::ACCEPTED, $locked, extra: [
+                'socialisation' => ['experience' => $experience->value],
             ]);
         });
     }

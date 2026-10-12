@@ -10,6 +10,7 @@ use App\Http\Requests\FinishScratchingRequest;
 use App\Http\Requests\FinishTrainingRequest;
 use App\Http\Requests\FinishWandRequest;
 use App\Http\Requests\PlayRequest;
+use App\Http\Requests\SocialiseRequest;
 use App\Http\Requests\StartTrainingRequest;
 use App\Http\Requests\StartWandRequest;
 use App\Http\Requests\SyncStepsRequest;
@@ -161,6 +162,26 @@ class ChildPetController extends Controller
         $pet = $this->childPet($request);
 
         return $this->actionResponse($this->activities->play($pet, $request->user(), $request->kind()), $pet, $request);
+    }
+
+    /**
+     * Puppy socialisation (M5-R17, David 2026-10-12): mark this program
+     * week's "new experience" — `experience` person | dog | sound | place.
+     * One per week while the dog is a puppy (breeds with sourced
+     * socialisation advice; a dog whose apps declared `socialisation`).
+     * Never scored — no routine, Care Score, traffic light or metric. The
+     * response carries `socialisation` {experience}. 422
+     * socialisation_not_available | socialisation_week_done (next_allowed_at
+     * = the next puppy week, or null) | socialisation_quiet_hours
+     * (next_allowed_at = their end); 423 while locked.
+     *
+     * POST /api/child/pet/socialisation
+     */
+    public function socialise(SocialiseRequest $request): JsonResponse
+    {
+        $pet = $this->childPet($request);
+
+        return $this->actionResponse($this->activities->socialise($pet, $request->user(), $request->experience()), $pet, $request);
     }
 
     /**

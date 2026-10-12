@@ -248,6 +248,8 @@ class Pet extends Model
         'training_enabled',
         // M5-R13: set once at creation (generate-pin + pin-login `features: ["dog_grooming"]`).
         'grooming_enabled',
+        // M5-R17: set once at creation (generate-pin + pin-login `features: ["socialisation"]`).
+        'socialisation_enabled',
         // M3-11: plan chosen at creation (generate-pin `plan`). Payment state
         // (trial_ends_at, challenge_paid_*, payment_locked_at) is written only
         // by ChallengeService / Pet::giveBirth via forceFill.
@@ -309,6 +311,7 @@ class Pet extends Model
             'behaviour_events_enabled' => 'boolean',
             'training_enabled' => 'boolean',
             'grooming_enabled' => 'boolean',
+            'socialisation_enabled' => 'boolean',
             'training_learning_factor' => 'float',
             'hunger_level' => 'float',
             'thirst_level' => 'float',
@@ -666,6 +669,19 @@ class Pet extends Model
         }
 
         return $this->isCat() || ($this->isDog() && (bool) $this->grooming_enabled);
+    }
+
+    /**
+     * M5-R17 puppy socialisation (David 2026-10-12): the weekly "new
+     * experience" task can apply — a profiled dog whose creating app builds
+     * (parent and child) declared `socialisation`. Fixed at creation;
+     * existing pets: off. Whether a given program week has a task is the
+     * breed's puppy-stage `socialisation_tasks_per_week` row
+     * (SocialisationService::goalForWeek).
+     */
+    public function socialisationEnabled(): bool
+    {
+        return (bool) $this->socialisation_enabled && ! $this->isLegacyProfile() && $this->isDog();
     }
 
     /** M5-R06: the dog rules (walk / steps, training, ball play) apply. */

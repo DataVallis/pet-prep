@@ -44,6 +44,14 @@ enum ClientFeature: string
     case DogGrooming = 'dog_grooming';
 
     /**
+     * Puppy socialisation (M5-R17, David 2026-10-12): the weekly "Nova
+     * izkušnja" card, POST /api/child/pet/socialisation → `pets.socialisation_enabled`
+     * (a NEW profiled dog, both devices), so an older app never shows missed weeks
+     * it could not do.
+     */
+    case Socialisation = 'socialisation';
+
+    /**
      * @return list<string>
      */
     public static function values(): array

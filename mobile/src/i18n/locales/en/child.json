@@ -178,7 +178,7 @@
     },
     "digesting": {
       "title": "Wait with the walk",
-      "body": "Your pup is digesting. A big dog should rest about an hour after a meal.",
+      "body": "Your pup is digesting. Wait a little before the walk.",
       "until": "You can go for a walk at {{time}}."
     }
   },

@@ -243,5 +243,6 @@
       "offline": "Ni povezave s strežnikom. Poskusite znova.",
       "server": "Pridružitev ni uspela. Poskusite znova."
     }
-  }
+  },
+  "activityFallback": "dejavnost"
 }

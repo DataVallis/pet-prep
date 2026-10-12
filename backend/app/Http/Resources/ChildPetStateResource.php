@@ -17,6 +17,7 @@ use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
 use App\Services\PlayPayload;
 use App\Services\ScratchingPayload;
+use App\Services\SocialisationPayload;
 use App\Services\TrainingPayload;
 use App\Services\TrainingService;
 use App\Services\WandPayload;
@@ -66,6 +67,9 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * matted coat) and the scratching resolve — {@see LitterPayload},
  * {@see GroomingPayload}, {@see ScratchingPayload}; null for a dog —
  * except `grooming` for a brushed dog (M5-R13, `grooming_enabled`).
+ * `socialisation` (M5-R17, David 2026-10-12): the puppy's weekly "new
+ * experience" — {@see SocialisationPayload}; null when this program week has
+ * no task (not a puppy week, no breed row, a cat, `socialisation_enabled` off).
  *
  * `feeding.digesting_until` (M5-R16): end of the "wait with the walk, the dog
  * is digesting" warning after a meal, for breeds whose source advises a gap
@@ -291,6 +295,8 @@ class ChildPetStateResource extends JsonResource
             'scratching' => ScratchingPayload::for($pet, $actor, $now)?->toArray(),
             // M2-01d: this child's 12-week challenge end on this pet (null while it runs).
             'certificate' => $actor !== null ? app(ChallengeCertificateService::class)->childPayload($pet, $actor, $tz)?->toArray() : null,
+            // M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task.
+            'socialisation' => SocialisationPayload::for($pet, $actor, $now)?->toArray(),
         ];
     }
 }

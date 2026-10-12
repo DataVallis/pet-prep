@@ -241,18 +241,22 @@ export interface GenerateChildPinRequest {
  * A UI feature this app build can show for a new pet (backend `ClientFeature`; the schema
  * types it as `string` because unknown values are dropped server-side, not refused).
  */
-export type ClientFeature = 'behaviour_events' | 'training' | 'species_cat' | 'dog_grooming';
+export type ClientFeature = 'behaviour_events' | 'training' | 'species_cat' | 'dog_grooming' | 'socialisation';
 
 /**
  * What a build declares: the behaviour events ("Pelji ven", luža, pregrizen copat — M5-R02,
- * PR #42), the training mini-game ("Šola" — M5-R03), dog brushing ("Počeši" — M5-R13) and — only once the cat HUD exists
+ * PR #42), the training mini-game ("Šola" — M5-R03), dog brushing ("Počeši" — M5-R13), the puppy's weekly
+ * "Nova izkušnja" (M5-R17) and — only once the cat HUD exists
  * (`CAT_UI_READY`, M5-R06-02 / T4) — cats (`species_cat`). A new pet gets a feature only
  * when BOTH the parent's generate-pin and the child's pin-login sent it — an older build on
  * either phone never gets something it can't show.
  */
 export function clientFeatures(catUiReady: boolean = CAT_UI_READY): readonly ClientFeature[] {
   // M5-R13: this build brushes a dog ("Počeši" chip + the stroke mini-game) → `dog_grooming`.
-  return catUiReady ? ['behaviour_events', 'training', 'species_cat', 'dog_grooming'] : ['behaviour_events', 'training', 'dog_grooming'];
+  // M5-R17: it shows the puppy's weekly "Nova izkušnja" card → `socialisation`.
+  return catUiReady
+    ? ['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation']
+    : ['behaviour_events', 'training', 'dog_grooming', 'socialisation'];
 }
 
 /** This build's features (see {@link clientFeatures}). */
@@ -752,6 +756,17 @@ export const api = {
 
   /** POST /api/child/pet/resolve-chewing — "Pospravi in daj igračo" (M5-R02); `unchanged` when nothing is chewed. */
   resolveChewing: () => apiRequest<ChildActionResponse>('/api/child/pet/resolve-chewing', { method: 'POST' }),
+
+  /**
+   * POST /api/child/pet/socialisation {experience} — the puppy's weekly "new experience"
+   * (M5-R17). 422 `socialisation_not_available` / `socialisation_week_done` /
+   * `socialisation_quiet_hours` (+ `next_allowed_at`, `state`); 423 while locked.
+   */
+  socialisePet: (experience: components['schemas']['SocialiseRequest']['experience']) =>
+    apiRequest<ChildActionResponse>('/api/child/pet/socialisation', {
+      method: 'POST',
+      body: { experience } satisfies components['schemas']['SocialiseRequest'],
+    }),
 
   /**
    * POST /api/child/pet/training/start {command} (M5-R03) — the server's schedule for one

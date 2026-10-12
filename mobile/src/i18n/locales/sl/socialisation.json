@@ -1,0 +1,64 @@
+{
+  "child": {
+    "chip": "Nova izkušnja",
+    "chipA11y": "Nova izkušnja za kužka. Ta teden še čaka.",
+    "title": "Nova izkušnja",
+    "week": "{{week}}. teden mladička",
+    "intro": "Mladički se o svetu učijo z novimi doživetji. Ta teden pokaži kužku nekaj novega. Kaj bo to?",
+    "pick": "Ko kuža to doživi, tapni svojo izbiro.",
+    "tip": "Pojdi počasi in ga veliko pohvali. Če se kuža ustraši, se umakni in poskusi drug dan.",
+    "success": "Bravo! Kuža je spoznal nekaj novega.",
+    "doneWith": "Ta teden opravljeno ✓ ({{experience}})",
+    "saving": "Shranjujem …",
+    "close": "Zapri"
+  },
+  "experiences": {
+    "person": {
+      "label": "Nov človek",
+      "hint": "Kuža spozna nekoga novega – soseda, babico ali prijatelja."
+    },
+    "dog": {
+      "label": "Drug kuža",
+      "hint": "Kuža mirno pozdravi drugega prijaznega psa."
+    },
+    "sound": {
+      "label": "Nov zvok",
+      "hint": "Kuža sliši nekaj novega – sesalnik, zvonec ali dež na oknu."
+    },
+    "place": {
+      "label": "Novo mesto",
+      "hint": "Kuža obišče nov kraj – park ali novo ulico – ali se pelje z avtom."
+    }
+  },
+  "errors": {
+    "socialisation_not_available": "Ta teden kuža nima nove izkušnje.",
+    "socialisation_week_done": "Nova izkušnja za ta teden je že opravljena. Naslednja čaka {{when}}.",
+    "socialisation_week_done_no_time": "Nova izkušnja za ta teden je že opravljena. Bravo!",
+    "socialisation_quiet_hours": "Kuža zdaj spi. Novo izkušnjo mu pokaži {{when}}.",
+    "socialisation_quiet_hours_no_time": "Kuža zdaj spi. Novo izkušnjo mu pokaži po tihih urah.",
+    "offline": "Ni povezave. Poskusi znova.",
+    "other": "Ni uspelo. Poskusi znova."
+  },
+  "parent": {
+    "label": "Nova izkušnja (mladiček)",
+    "weeksOf_one": "{{done}} od {{count}} tedna",
+    "weeksOf_two": "{{done}} od {{count}} tednov",
+    "weeksOf_few": "{{done}} od {{count}} tednov",
+    "weeksOf_other": "{{done}} od {{count}} tednov",
+    "missed_one": "{{count}} zamujen",
+    "missed_two": "{{count}} zamujena",
+    "missed_few": "{{count}} zamujeni",
+    "missed_other": "{{count}} zamujenih",
+    "open": "ta teden še čaka",
+    "notScored": "Enkrat na teden, dokler je kuža mladiček. Ne vpliva na oceno skrbi.",
+    "experiences": {
+      "person": "nov človek",
+      "dog": "drug pes",
+      "sound": "nov zvok",
+      "place": "novo mesto"
+    },
+    "timeline": "Nova izkušnja: {{what}}",
+    "timelinePlain": "Nova izkušnja",
+    "timelineBy": "{{text}} · {{child}}"
+  }
+}
