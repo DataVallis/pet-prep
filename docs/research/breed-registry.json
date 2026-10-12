@@ -53,7 +53,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "82ca9e90ee3d11b615e07f72d2b49d64fa7c4a6eb7ab4ad580f6ad1ab7b2733e"
+      "sha256": "8858a3b807575118f6a059cf73561d91f353eb335052cdb0e7291bd803750caf"
     }
   },
   "suitability_vocabulary": {
@@ -12733,7 +12733,12 @@
           "S212"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "dobermann.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
