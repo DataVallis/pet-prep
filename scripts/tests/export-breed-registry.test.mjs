@@ -113,6 +113,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.pembroke_welsh_corgi.availability, 'in_app');
   assert.deepEqual(byId.dobermann.slug, { en: 'dobermann', sl: 'doberman' });
   assert.equal(byId.dobermann.availability, 'in_app');
+  assert.deepEqual(byId.boxer.slug, { en: 'boxer', sl: 'boksar' });
+  assert.equal(byId.boxer.availability, 'in_app');
   assert.equal(byId.maine_coon.availability, 'in_app'); // cats are hidden in the app
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.equal(byId.british_shorthair.availability, 'in_app');
@@ -193,6 +195,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     cane_corso: { adult: 12000, senior: 9000, seniorFrom: 84, learning: 1.0 },
     pembroke_welsh_corgi: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1.5 },
     dobermann: { adult: 12000, senior: 9000, seniorFrom: 83, learning: 1.9 },
+    boxer: { adult: 12000, senior: 9000, seniorFrom: 102, learning: 1.0 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -419,7 +422,7 @@ test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming row
   assert.deepEqual([...cats, ...dogs].sort(), seeded);
   assert.deepEqual(cats, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
   // M5-R13: every dog breed of the app except the mutt and the Border Collie (no grooming statement).
-  assert.equal(dogs.length, 20);
+  assert.equal(dogs.length, 21);
   assert.ok(!dogs.includes('mutt') && !dogs.includes('border_collie'));
 });
 
@@ -1012,6 +1015,31 @@ test('Dobermann (M5-R10-25): more than 2 hours (RKC), FCI weight by sex, FCI gro
   const json = JSON.stringify(d);
   // The 2013 median appears only in the senior-boundary decision text (game basis), never as a register fact.
   assert.equal(d.facts.some((f) => f.value === 9.2), false);
+  // Never "hypoallergenic", never cropped ears / a docked tail or a non-standard colour, never a percentage.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|docked|cropped|merle|\d %\)/i);
+});
+
+test('Boxer (M5-R10-26): more than 2 hours (RKC), RKC standard weight by sex, FCI group 2 section 2 Germany, McMillan median + RKC band, Coren 48, short-face chip, needs_company, brushing 1x a week', () => {
+  const d = registry.breeds.find((b) => b.id === 'boxer');
+  assert.deepEqual(d.name, { en: 'Boxer', sl: 'Boksar' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S215']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 144, group: 2, section: 2, origin: 'DE' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [30, 32], female: [25, 27] }, ['S217']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [57, 63], female: [53, 59] }, ['S217']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['median', 11.3, ['S123']], ['more_than', 10, ['S215']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 48);
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 12000, cap_month: 12 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 102 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 9000 } });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'family_pet', 'large_home']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'brachycephalic_breathing', 'not_for_small_children', 'experienced_owner', 'needs_company', 'chews_when_bored', 'sheds', 'chases_small_pets']);
+  assert.deepEqual(d.health.map((h) => h.key), ['short_face_breathing', 'corneal_ulcers', 'skin_folds_allergies', 'heart_cardiomyopathy_aortic_stenosis', 'hip_dysplasia_arthritis', 'epilepsy', 'certain_cancers']);
+  // RKC Best Practice only: elbow, eye and hip schemes.
+  assert.equal(d.breeder_checklist.status, 'listed');
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['elbow_scheme', 'best_practice'], ['eye_scheme', 'best_practice'], ['hip_scheme', 'best_practice']]);
+  const json = JSON.stringify(d);
+  // The VetCompass 2023 median and the pet-population weights stay in research.
+  assert.equal(d.facts.some((f) => f.value === 10.46), false);
+  assert.doesNotMatch(json, /32\.99|27\.56|17\.74|10\.71/);
   // Never "hypoallergenic", never cropped ears / a docked tail or a non-standard colour, never a percentage.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|docked|cropped|merle|\d %\)/i);
 });

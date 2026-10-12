@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "26f7294866f5c8c5ec9caee476187ba6b754fa216a5caac787dc79bc5820f749"
+      "sha256": "78f63a1e1e4f377806b194879bd0d4ddb8696871aa213ec64deaf1580e3f0aab"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "3022dfa8ebcbc98636021bed7d05701a7d407b057497efb05642e10377ccf476"
+      "sha256": "4e5bc0fc1d8aa7b7b59d1975740f98fb063ee76fb6d803b4137bc1c9d4f5fda3"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,27 +25,27 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "fdcf029021d7cd15e6a3132ec8978c437cfc3636a0927b594457fda342587501"
+      "sha256": "d39e2972142b9a7c73062790f01654289056ab82f96d646160bfdae3a6524963"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "44d2314f86c38b19535e019dd94966380da1a1070d32868e29fa1f4365babc47"
+      "sha256": "13d4e5ee255d80bdddc9227e37799cc83b05125d093e53a0a43cf39c00b99e79"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "691ae4a71e0131b791a8ca477590fad31172bf61f74db03a562fb757daad34db"
+      "sha256": "ab3a10a0553845a0ae71e24fd2df46a201a2b9bac4ee39cc11c76e5a99db4a5e"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "877bbf4ca1409068ec5427dc59d47fedf8f2873d76a40c0354569a209cadd6ac"
+      "sha256": "cf6c3ff3151caf26542f6b07ab2fe34b73da5b0f8198c8212acc8e318ee0cdb1"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "caaae2c370c0e0af0cfccc1f1751807911b35f5414ff75d7ecf8c5569b595bde"
+      "sha256": "0fa35d6e15b4b4481e72ba6d59b9eedbbfe39f1aa9a5482584a03669f9238ccf"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "eb2b3d4f6d9232f5e3a68a94b949bc273c5c28fedb03eecba2b03e2e20f5eaed"
+      "sha256": "06728365fa284379167d098fbe34baec32595daca1df9c0bba5f7e2d4bc460a4"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -77,6 +77,7 @@
     "long_daily_exercise": "consider",
     "low_shedding": "suits",
     "may_herd_children": "consider",
+    "needs_company": "consider",
     "needs_mental_stimulation": "consider",
     "not_for_small_children": "consider",
     "often_alone": "suits",
@@ -113,6 +114,7 @@
         "long_daily_exercise": "needs lots of exercise every day",
         "low_shedding": "homes that prefer less shedding",
         "may_herd_children": "may “herd” children at play",
+        "needs_company": "loves company — best with someone home most of the day",
         "needs_mental_stimulation": "needs mental challenges",
         "not_for_small_children": "large dog — not for homes with small children",
         "often_alone": "families who are out for a few hours",
@@ -149,6 +151,7 @@
         "long_daily_exercise": "vsak dan potrebuje veliko gibanja",
         "low_shedding": "dom, kjer želite manj dlak",
         "may_herd_children": "pri igri lahko »pase« otroke",
+        "needs_company": "rad ima družbo — naj bo nekdo večino dneva doma",
         "needs_mental_stimulation": "potrebuje miselne izzive",
         "not_for_small_children": "velik pes — ni za dom z majhnimi otroki",
         "often_alone": "družino, ki je nekaj ur zdoma",
@@ -180,7 +183,7 @@
         }
       },
       "status": "available",
-      "breed_count": 21,
+      "breed_count": 22,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -13117,6 +13120,649 @@
       ]
     },
     {
+      "id": "boxer",
+      "species": "dog",
+      "order": 21,
+      "availability": "in_app",
+      "name": {
+        "en": "Boxer",
+        "sl": "Boksar"
+      },
+      "slug": {
+        "en": "boxer",
+        "sl": "boksar"
+      },
+      "synonyms": {
+        "en": [
+          "German Boxer",
+          "Deutscher Boxer"
+        ],
+        "sl": [
+          "nemški boksar",
+          "nemski boksar",
+          "boxer"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S215"
+          ],
+          "ref": "boxer.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              57,
+              63
+            ],
+            "female": [
+              53,
+              59
+            ]
+          },
+          "source_ids": [
+            "S217"
+          ],
+          "ref": "boxer.height.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              30,
+              32
+            ],
+            "female": [
+              25,
+              27
+            ]
+          },
+          "source_ids": [
+            "S217"
+          ],
+          "ref": "boxer.adult_weight.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "boxer.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 11.3,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "boxer.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S215"
+          ],
+          "ref": "boxer.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S215"
+          ],
+          "ref": "boxer.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S215"
+          ],
+          "ref": "boxer.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S215"
+          ],
+          "ref": "boxer.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S215"
+          ],
+          "ref": "boxer.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 48,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "boxer.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 144,
+            "group": 2,
+            "section": 2,
+            "origin": "DE"
+          },
+          "source_ids": [
+            "S214"
+          ],
+          "ref": "boxer.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "short_face_breathing",
+          "source_ids": [
+            "S219"
+          ],
+          "ref": "boxer.health.brachycephaly_boas",
+          "confidence": "high"
+        },
+        {
+          "key": "corneal_ulcers",
+          "source_ids": [
+            "S219"
+          ],
+          "ref": "boxer.health.eyes_corneal_ulcers",
+          "confidence": "medium"
+        },
+        {
+          "key": "skin_folds_allergies",
+          "source_ids": [
+            "S219"
+          ],
+          "ref": "boxer.health.skin_folds",
+          "confidence": "medium"
+        },
+        {
+          "key": "heart_cardiomyopathy_aortic_stenosis",
+          "source_ids": [
+            "S219"
+          ],
+          "ref": "boxer.health.heart",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_dysplasia_arthritis",
+          "source_ids": [
+            "S219"
+          ],
+          "ref": "boxer.health.hip_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S219"
+          ],
+          "ref": "boxer.health.epilepsy",
+          "confidence": "medium"
+        },
+        {
+          "key": "certain_cancers",
+          "source_ids": [
+            "S219"
+          ],
+          "ref": "boxer.health.cancer",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S215",
+              "S219"
+            ],
+            "refs": [
+              "boxer.exercise.adult",
+              "boxer.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S215",
+              "S219"
+            ],
+            "refs": [
+              "boxer.suitability.rkc_family",
+              "boxer.suitability.pdsa_family"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S215"
+            ],
+            "refs": [
+              "boxer.suitability.rkc_size_of_home",
+              "boxer.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S215",
+              "S219"
+            ],
+            "refs": [
+              "boxer.exercise.adult",
+              "boxer.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "brachycephalic_breathing",
+            "source_ids": [
+              "S216",
+              "S219",
+              "S220"
+            ],
+            "refs": [
+              "boxer.health.brachycephaly_boas",
+              "boxer.health.skull_shape",
+              "boxer.health.breed_watch"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S219"
+            ],
+            "refs": [
+              "boxer.suitability.pdsa_children"
+            ]
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S219"
+            ],
+            "refs": [
+              "boxer.behaviour.experienced_owner",
+              "boxer.suitability.pdsa_experienced_owner"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S219"
+            ],
+            "refs": [
+              "boxer.behaviour.time_alone",
+              "boxer.suitability.pdsa_time_alone"
+            ]
+          },
+          {
+            "tag": "chews_when_bored",
+            "source_ids": [
+              "S219"
+            ],
+            "refs": [
+              "boxer.behaviour.chewing",
+              "boxer.suitability.pdsa_chewing"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S215"
+            ],
+            "refs": [
+              "boxer.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S219"
+            ],
+            "refs": [
+              "boxer.behaviour.other_pets",
+              "boxer.suitability.pdsa_other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 102
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 102
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.boxer.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S215"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S215 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.boxer.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.boxer.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 102 (0.75 × 11.3 y, McMillan 2024 via S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.boxer.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 48, Average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.boxer.grooming",
+            "basis_source_ids": [
+              "S215"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S215"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S215"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S215"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S215"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S215"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S214",
+        "S215",
+        "S216",
+        "S217",
+        "S219",
+        "S220",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -16349,6 +16995,48 @@
       "publisher": "The Veterinary Journal 198(3):638–643 (2013) (RVC repository copy)",
       "title": "O'Neill D. G., Church D. B., McGreevy P. D., Thomson P. C., Brodbelt D. C. Longevity and mortality of owned dogs in England. doi:10.1016/j.tvjl.2013.09.020",
       "url": "https://rvc-repository.worktribe.com/OutputFile/1409027"
+    },
+    {
+      "id": "S214",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Group 2 list (Boxer row)",
+      "url": "https://www.fci.be/en/nomenclature/2-Pinscher-and-Schnauzer-Molossoid-and-Swiss-Mountain-and-Cattledogs.html"
+    },
+    {
+      "id": "S215",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Boxer — breed information page (Breeds A to Z, older address)",
+      "url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5116"
+    },
+    {
+      "id": "S216",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Boxer - Category 2 — Breed Watch",
+      "url": "https://www.royalkennelclub.com/activities/heritage-sports/dog-showing/judging-dog-shows/breed-watch-health-and-welfare-of-show-dogs/boxer-category-2/"
+    },
+    {
+      "id": "S217",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breed standard: Boxer",
+      "url": "https://thekennelclub.org.uk/breed-standards/working/boxer"
+    },
+    {
+      "id": "S219",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Boxer breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/boxer"
+    },
+    {
+      "id": "S220",
+      "tier": "A",
+      "publisher": "Canine Medicine and Genetics 10:6 (2023) (PMC copy)",
+      "title": "O'Neill D. G., Skipper A. M., Barrett K., Church D. B., Packer R. M. A., Brodbelt D. C. Demography, common disorders and mortality of Boxer dogs under primary veterinary care in the UK. doi:10.1186/s40575-023-00129-w",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10234096"
     },
     {
       "id": "C1",
