@@ -105,6 +105,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.bulldog.availability, 'coming_soon');
   assert.deepEqual(byId.german_shorthaired_pointer.slug, { en: 'german-shorthaired-pointer', sl: 'nemski-kratkodlaki-pticar' });
   assert.equal(byId.german_shorthaired_pointer.availability, 'coming_soon');
+  assert.deepEqual(byId.yorkshire_terrier.slug, { en: 'yorkshire-terrier', sl: 'yorkshirski-terier' });
+  assert.equal(byId.yorkshire_terrier.availability, 'coming_soon');
   assert.equal(byId.maine_coon.availability, 'coming_soon'); // cats are hidden in the app
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.equal(byId.british_shorthair.availability, 'coming_soon');
@@ -181,6 +183,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     rottweiler: { adult: 12000, senior: 9000, seniorFrom: 81, learning: 1.8 },
     bulldog: { adult: 6000, senior: 4500, seniorFrom: 88, learning: 0.5 },
     german_shorthaired_pointer: { adult: 12000, senior: 9000, seniorFrom: 121, learning: 1.5 },
+    yorkshire_terrier: { adult: 3000, senior: 2300, seniorFrom: 122, learning: 1.2 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -880,4 +883,31 @@ test('German Shorthaired Pointer (M5-R10-21): more than 2 hours, AKC weight by s
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a docked tail or a disqualifying colour, no CI / counts from the McMillan table.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|docked|lemon|3313|947|13\.3 - 13\.6/i);
+});
+
+test('Yorkshire Terrier (M5-R10-22): up to 30 minutes, FCI "up to 3.2 kg", FCI group 3 GB, VetCompass median + RKC "over 12 years", Coren 27, fragile_older_children chip', () => {
+  const d = registry.breeds.find((b) => b.id === 'yorkshire_terrier');
+  assert.deepEqual(d.name, { en: 'Yorkshire Terrier', sl: 'Yorkshirski terier' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[30, 'up_to', ['S192']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 86, group: 3, section: 4, origin: 'GB' });
+  // FCI / RKC give only an upper limit → "up to 3.2 kg" (both sexes); no standard height → PDSA average 20 cm.
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.qualifier, f.source_ids]), [[[3.2, 3.2], 'up_to', ['S190']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[[20, 20], ['S194']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['median', 13.56, ['S195']], ['more_than', 12, ['S192']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'growth_end').value, [8, 12]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 27);
+  assert.deepEqual(d.facets, { size: 'small', exercise: 'under_1h', grooming: 'daily' });
+  // 10 min × age reaches the 30-minute cap at 3 months; senior 23 min from 122 months.
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 3000, cap_month: 3 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 122 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 2300 } });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['apartment', 'low_shedding']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['fragile_older_children', 'frequent_grooming']);
+  assert.equal(registry.suitability_labels.en.tags.fragile_older_children, 'fragile bones — better with older children');
+  assert.equal(registry.suitability_labels.sl.tags.fragile_older_children, 'krhke kosti — bolje za starejše otroke');
+  assert.deepEqual(d.health.map((h) => h.key), ['dental_disease_tooth_brushing', 'kneecap_luxation', 'windpipe_collapse', 'eye_problems_pra_lens_dry_eye', 'liver_shunt']);
+  // RKC: "does not have any recommended pre-breeding health screening in place".
+  assert.equal(d.breeder_checklist.status, 'none_recommended');
+  const json = JSON.stringify(d);
+  // Never "hypoallergenic", never a docked tail or a non-standard colour, never the heavier pet-population weight.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|docked|merle|fawn|5\.06|11\.30/i);
 });

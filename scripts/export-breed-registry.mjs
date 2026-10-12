@@ -388,6 +388,7 @@ const SPECIES = [
       { id: 'rottweiler', availability: 'coming_soon', synonyms: { en: ['Rottie', 'Rotty', 'Rott'], sl: ['rottweiler', 'rotvajlerka', 'rottie'] } },
       { id: 'bulldog', availability: 'coming_soon', synonyms: { en: ['English Bulldog', 'British Bulldog'], sl: ['buldog', 'angleski buldog', 'bulldog', 'english bulldog', 'british bulldog'] } },
       { id: 'german_shorthaired_pointer', availability: 'coming_soon', synonyms: { en: ['GSP', 'German Pointer', 'Shorthair', 'Deutsch Kurzhaar', 'Kurzhaar'], sl: ['kratkodlaki ptičar', 'kratkodlaki pticar', 'nemski kratkodlaki pticar', 'kurzhaar', 'gsp'] } },
+      { id: 'yorkshire_terrier', availability: 'coming_soon', synonyms: { en: ['Yorkie', 'Yorkshire'], sl: ['jorkširski terier', 'jorksirski terier', 'yorkie', 'jorki'] } },
     ],
   },
   {
@@ -730,6 +731,29 @@ const DOG_FACTS = {
       ['entropion_cherry_eye', 'health.eyes'],
     ],
   },
+  // M5-R10-22. Not exported: lifespan.mcmillan_2024 (no value), lifespan.senior_from (derived),
+  // adult_weight.pdsa (same 3.2 kg as the FCI limit), adult_weight.uk_pet_population_median (the heavier
+  // pet population, VetCompass S195 — would read as a target weight), adult_weight.salt_category (our
+  // assignment), health.legg_perthes / other_pdsa (research only), every VetCompass percentage (S195 / S196).
+  // Weight = the FCI upper limit "Up to 3,2 kgs" (one value, both sexes, qualifier up_to); height = the PDSA
+  // average 20 cm (no standard gives a height).
+  yorkshire_terrier: {
+    height: ['height.pdsa_average'],
+    weight: [['adult_weight.fci', 'up_to']],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['dental_disease_tooth_brushing', 'health.dental'],
+      ['kneecap_luxation', 'health.luxating_patella'],
+      ['windpipe_collapse', 'health.tracheal_collapse'],
+      ['eye_problems_pra_lens_dry_eye', 'health.eyes'],
+      ['liver_shunt', 'health.portosystemic_shunt'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -868,6 +892,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.german_shorthaired_pointer.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.german_shorthaired_pointer.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.german_shorthaired_pointer.exercise_minutes_senior',
+  },
+  yorkshire_terrier: {
+    adult_minutes: ['proposed_game_parameters.yorkshire_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.yorkshire_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.yorkshire_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.yorkshire_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.yorkshire_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.yorkshire_terrier.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],

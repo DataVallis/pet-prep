@@ -9537,7 +9537,7 @@
         "source_id": "S196",
         "quote": "Yorkshire Terriers appear predisposed to dental (periodontal) disease and persistent deciduous teeth.",
         "confidence": "high",
-        "notes": "RVC VetCompass summary (S196) of O'Neill et al. 2025 (S195): 'Dental disease was by far the most common disorder diagnosed in Yorkshire Terriers'; advice: 'Owners are encouraged to undertake daily preventative home care to improve dental health e.g tooth brushing' (as returned, split by the fetch tool). PDSA (S194) health list: 'Dental problems'. Sourced need (daily tooth brushing) → proposed_game_parameters.yorkshire_terrier.tooth_brushing (ROADMAP M5-R15, not built)."
+        "notes": "RVC VetCompass summary (S196) of O'Neill et al. 2025 (S195): 'Dental disease was by far the most common disorder diagnosed in Yorkshire Terriers'; advice: 'Owners are encouraged to undertake daily preventative home care to improve dental health e.g tooth brushing' (as returned, split by the fetch tool). PDSA (S194) health list: 'Dental problems'. Sourced need (daily tooth brushing) → proposed_game_parameters.yorkshire_terrier.tooth_brushing (no tooth-brushing mechanic yet → ROADMAP M5-R15)."
       },
       "luxating_patella": {
         "value": "luxating patellas — kneecaps slipping out of place",
