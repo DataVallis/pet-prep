@@ -26,6 +26,9 @@ namespace App\Enums;
  *    PLAY_MIN_GAP_MINUTES, LITTER_SCOOP_DEADLINE_HOURS,
  *    LITTER_FULL_CHANGE_DAYS, GROOMING_SESSIONS_PER_WEEK (Maine Coon 3, Ragdoll 2,
  *    British Shorthair 1; no row = no grooming routine) and SCRATCHING_AFTER_MISSED_PLAY (bool).
+ *  - M5-R17 stage key SOCIALISATION_TASKS_PER_WEEK (David 2026-10-12): the
+ *    puppy's weekly "new experience" (1, stage puppy only; no row = no task —
+ *    breeds without a sourced socialisation statement). Never scored.
  */
 enum StageParamKey: string
 {
@@ -68,6 +71,8 @@ enum StageParamKey: string
     case LitterFullChangeDays = 'litter_full_change_days';
     case GroomingSessionsPerWeek = 'grooming_sessions_per_week';
     case ScratchingAfterMissedPlay = 'scratching_after_missed_play';
+    // M5-R17 stage key (puppy only): "new experience" tasks per program week.
+    case SocialisationTasksPerWeek = 'socialisation_tasks_per_week';
 
     public function isBreedLevel(): bool
     {
@@ -131,6 +136,8 @@ enum StageParamKey: string
                 ? null : 'Expected whole sessions per week, 0–7.',
             self::ScratchingAfterMissedPlay => is_bool($value)
                 ? null : 'Expected true or false.',
+            self::SocialisationTasksPerWeek => is_int($value) && $value >= 0 && $value <= 7
+                ? null : 'Expected whole tasks per week, 0–7.',
         };
     }
 

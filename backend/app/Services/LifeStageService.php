@@ -481,7 +481,19 @@ class LifeStageService
      */
     public function stageValueOn(Pet $pet, string $localDate, StageParamKey $key): ?array
     {
-        $age = $this->ageMonthsOn($pet, $localDate);
+        return $this->stageValueAtAge($pet, $this->ageMonthsOn($pet, $localDate), $key);
+    }
+
+    /**
+     * The value of $key for this pet's breed at a dog age in months (the
+     * stage that age falls in, its sub-band, else the breed row) — e.g. the
+     * age a program week starts with (M5-R17). Null for a null age, no stage
+     * data or no row.
+     *
+     * @return array{value: mixed, stage: LifeStage, age: int, verified: bool, source_id: string|null}|null
+     */
+    public function stageValueAtAge(Pet $pet, ?int $age, StageParamKey $key): ?array
+    {
         if ($age === null) {
             return null;
         }

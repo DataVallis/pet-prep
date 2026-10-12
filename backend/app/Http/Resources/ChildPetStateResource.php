@@ -15,6 +15,7 @@ use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
 use App\Services\PlayPayload;
 use App\Services\ScratchingPayload;
+use App\Services\SocialisationPayload;
 use App\Services\TrainingPayload;
 use App\Services\TrainingService;
 use App\Services\WandPayload;
@@ -64,6 +65,9 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * matted coat) and the scratching resolve — {@see LitterPayload},
  * {@see GroomingPayload}, {@see ScratchingPayload}; null for a dog —
  * except `grooming` for a brushed dog (M5-R13, `grooming_enabled`).
+ * `socialisation` (M5-R17, David 2026-10-12): the puppy's weekly "new
+ * experience" — {@see SocialisationPayload}; null when this program week has
+ * no task (not a puppy week, no breed row, a cat, `socialisation_enabled` off).
  *
  * `pet.media` (M4-05): status + signed URLs of the stored reference image and
  * state videos ({@see PetMediaService::mediaFor()}); `current_video_url` is
@@ -267,6 +271,8 @@ class ChildPetStateResource extends JsonResource
             'grooming' => GroomingPayload::for($pet, $actor, $now)?->toArray(),
             // M5-R06-05 cat scratching (open mess, redirect + praise session); null for a dog.
             'scratching' => ScratchingPayload::for($pet, $actor, $now)?->toArray(),
+            // M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task.
+            'socialisation' => SocialisationPayload::for($pet, $actor, $now)?->toArray(),
         ];
     }
 }

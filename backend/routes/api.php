@@ -204,6 +204,8 @@ Route::middleware(['auth:sanctum', 'ability:child', 'throttle:api'])
             Route::post('pet/grooming/finish', [ChildPetController::class, 'finishGrooming']);
             Route::post('pet/scratching/start', [ChildPetController::class, 'startScratching']);
             Route::post('pet/scratching/finish', [ChildPetController::class, 'finishScratching']);
+            // M5-R17 puppy socialisation: the weekly "new experience".
+            Route::post('pet/socialisation', [ChildPetController::class, 'socialise']);
             Route::post('pet/steps', [ChildPetController::class, 'steps']);
             Route::post('contract', [ChildContractController::class, 'store']);
         });

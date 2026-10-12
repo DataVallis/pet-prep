@@ -431,6 +431,34 @@ class BreedStageParamsSeeder extends Seeder
         'dobermann' => [1, 'S209', 'Grooming: Once a week', 'high', false],
     ];
 
+    /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
+    public const CONFIRMED_R17_SOCIALISATION = 'potrdil David 12. 10. 2026: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (M5-R17)';
+
+    /**
+     * M5-R17 puppy socialisation (David 2026-10-12): dog breed → [source id, verbatim
+     * quote (data.json `proposed_game_parameters.<breed>.socialisation`)]. A breed gets
+     * the weekly "new experience" while a puppy when an A/B source in data.json gives
+     * socialisation advice verbatim (runbook §3); the number (1 per week) is David's.
+     * The mutt, Border Collie, French Bulldog, Cavalier, Dachshund, Westie, Bernese
+     * (paraphrase only), GSP and Yorkshire Terrier have no quote → no row, no task.
+     *
+     * @var array<string, array{0: string, 1: string}>
+     */
+    public const DOG_SOCIALISATION = [
+        'labrador_retriever' => ['S53', 'Labradors make perfect family pets, given the right socialisation, as with all breeds.'],
+        'german_shepherd' => ['S100', 'careful training and socialisation will be needed'],
+        'beagle' => ['S115', 'Due to their loving and tolerant nature, if socialised correctly from a young age Beagles suit family life really well.'],
+        'standard_poodle' => ['S122', 'They generally get on well with other pets and children, given the right socialisation as puppies, as with all breeds.'],
+        'australian_shepherd' => ['S134', 'As long as your Australian Shepherd has been socialised with other dogs from a young age they should be fine with other dogs.'],
+        'havanese' => ['S140', 'given the right socialisation as puppies.'],
+        'siberian_husky' => ['S162', 'Huskies love company so as long as they have been socialised from a young age, they should get along fine with other dogs.'],
+        'rottweiler' => ['S169', 'Rottweilers will need socialising from a young age so they grow up to be confident and calm.'],
+        'bulldog' => ['S180', 'They are very calm dogs and will get on well with other household pets if given the right socialisation when young.'],
+        'cane_corso' => ['S199', 'You’ll need to socialise your Cane Corso with lots of different people and experiences from a young age.'],
+        'pembroke_welsh_corgi' => ['S206', 'socialisation with children and training at a young age can help to overcome these possible problems.'],
+        'dobermann' => ['S211', 'it’s important to socialise your dog with different experiences, people and dogs from a young age.'],
+    ];
+
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
@@ -666,6 +694,13 @@ class BreedStageParamsSeeder extends Seeder
             if ($grooming !== null) {
                 $add('all', 0, StageParamKey::GroomingSessionsPerWeek, ...$grooming);
             }
+
+            // M5-R17 (David 2026-10-12): the puppy's weekly "new experience"; no row =
+            // no task (breeds without a sourced socialisation statement).
+            $socialisation = self::dogSocialisation($breed);
+            if ($socialisation !== null) {
+                $add('puppy', 0, StageParamKey::SocialisationTasksPerWeek, ...$socialisation);
+            }
         }
 
         return $rows;
@@ -699,6 +734,32 @@ class BreedStageParamsSeeder extends Seeder
             'notes' => $proposal
                 ? 'The sources say "more than once a week" without a number → Claude\'s proposal 2 (open for David). Matted coat when ≥ 1 of 2 is missed (ceil(2 / 2)).'
                 : 'Runbook grooming rule (once a week → 1, every day → 7, A–B → B). Matted coat when ≥ ceil('.$value.' / 2) of the week\'s slots are missed.',
+        ]];
+    }
+
+    /**
+     * M5-R17 puppy socialisation: `socialisation_tasks_per_week` = 1 on the puppy
+     * stage for the breeds of DOG_SOCIALISATION (verbatim A/B quote in data.json;
+     * the number is David's decision 2026-10-12, so verified). Never scored.
+     * Null = no sourced socialisation statement → no row, no task.
+     *
+     * @return array{0: int, 1: array<string, mixed>}|null
+     */
+    public static function dogSocialisation(BreedType $breed): ?array
+    {
+        $row = self::DOG_SOCIALISATION[$breed->value] ?? null;
+        if ($row === null) {
+            return null;
+        }
+        [$sourceId, $quote] = $row;
+
+        return [1, [
+            'unit' => 'new-experience tasks/week while a puppy (never scored)', 'source_id' => $sourceId, 'confidence' => 'medium',
+            'verified' => true,
+            'ref' => "proposed_game_parameters.{$breed->value}.socialisation",
+            'decision' => self::CONFIRMED_R17_SOCIALISATION,
+            'quote' => $quote,
+            'notes' => 'The source advises socialisation from a young age without an amount; David (2026-10-12): one "new experience" (a new person, another dog, a new sound, a new place) per program week while a puppy — shown to the parent, no penalty.',
         ]];
     }
 
