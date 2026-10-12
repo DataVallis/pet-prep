@@ -244,10 +244,15 @@ class CareScoreService
     }
 
     /**
+     * Care Score of one child. `$fromDate` / `$toDate` (family-local Y-m-d,
+     * inclusive) limit the routines and illnesses counted — `$toDate` is the
+     * frozen final score of a finished challenge (M2-01d: routines after the
+     * local completion date never count).
+     *
      * @param  array<string, mixed>  $board
      * @return array<string, mixed>
      */
-    public function childScore(array $board, int $childId, ?Pet $pet, ?string $fromDate = null): array
+    public function childScore(array $board, int $childId, ?Pet $pet, ?string $fromDate = null, ?string $toDate = null): array
     {
         $start = $pet !== null ? ($board['starts'][$pet->id][$childId] ?? null) : null;
         if ($pet === null || $start === null) {
@@ -258,7 +263,8 @@ class CareScoreService
         $done = 0;
         $count = 0;
         foreach ($board['routines'][$pet->id] ?? [] as $r) {
-            if ($r->isPending() || ($fromDate !== null && $r->localDate < $fromDate)) {
+            if ($r->isPending() || ($fromDate !== null && $r->localDate < $fromDate)
+                || ($toDate !== null && $r->localDate > $toDate)) {
                 continue;
             }
             $n = $this->sharers($board, $pet, $r, $childId);
@@ -275,7 +281,8 @@ class CareScoreService
         $illnesses = count(array_filter(
             $board['illnesses'][$pet->id] ?? [],
             fn (CarbonImmutable $at) => $at->greaterThanOrEqualTo($start)
-                && ($fromDate === null || $at->setTimezone($board['timezone'])->toDateString() >= $fromDate),
+                && ($fromDate === null || $at->setTimezone($board['timezone'])->toDateString() >= $fromDate)
+                && ($toDate === null || $at->setTimezone($board['timezone'])->toDateString() <= $toDate),
         ));
 
         return [

@@ -7,6 +7,8 @@ use App\Models\Pet;
 use App\Models\User;
 use App\Services\BehaviourPayload;
 use App\Services\CareScheduleService;
+use App\Services\ChallengeCertificateService;
+use App\Services\ChildCertificatePayload;
 use App\Services\GroomingPayload;
 use App\Services\LitterPayload;
 use App\Services\Media\PetMediaPayload;
@@ -73,6 +75,12 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * `feeding.digesting_until` (M5-R16): end of the "wait with the walk, the dog
  * is digesting" warning after a meal, for breeds whose source advises a gap
  * between eating and exercise (bloat / GDV); null otherwise. A warning only.
+ *
+ * `certificate` (M2-01d): this child's own challenge end on this pet —
+ * null while it runs; `{outcome: 'report', …null}` without score or reason
+ * (the child just sees "challenge finished"); for a certificate the names,
+ * score, number and — once a parent generated it — the signed PDF URL
+ * ({@see ChildCertificatePayload}).
  *
  * `pet.media` (M4-05): status + signed URLs of the stored reference image and
  * state videos ({@see PetMediaService::mediaFor()}); `current_video_url` is
@@ -298,6 +306,8 @@ class ChildPetStateResource extends JsonResource
             'grooming' => GroomingPayload::for($pet, $actor, $now)?->toArray(),
             // M5-R06-05 cat scratching (open mess, redirect + praise session); null for a dog.
             'scratching' => ScratchingPayload::for($pet, $actor, $now)?->toArray(),
+            // M2-01d: this child's 12-week challenge end on this pet (null while it runs).
+            'certificate' => $actor !== null ? app(ChallengeCertificateService::class)->childPayload($pet, $actor, $tz)?->toArray() : null,
             // M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task.
             'socialisation' => SocialisationPayload::for($pet, $actor, $now)?->toArray(),
         ];

@@ -22,6 +22,8 @@ export interface AppUser {
 /** Where a tapped push should lead (parent app): the pet it is about. */
 export interface PushTarget {
   petId: number;
+  /** The tapped push's type (M2-01d: `challenge_completed` opens the finished child). */
+  type?: string;
 }
 
 export type PairingStatus = 'unpaired' | 'pairing' | 'paired' | 'error';
@@ -36,6 +38,8 @@ export interface LockDetails {
   until: string | null;
   /** Family IANA timezone for showing `until`. */
   timezone: string | null;
+  /** M2-01d: this child's 12-week challenge has ended (a game-over pet shows a kind line). */
+  challengeFinished?: boolean;
 }
 
 /**

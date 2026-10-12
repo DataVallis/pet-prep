@@ -9,7 +9,8 @@
  * messes, and the 7-day take-outs / tidied slippers. M5-F01: "12-week challenge — buy"
  * under the header while the dog's challenge can be bought (`canBuyChallenge`).
  * M5-R05: "Danes: 3× igra z žogo, 2× crkljanje" in the pet block (dogs with play only;
- * a count, never a score).
+ * a count, never a score). M2-01d: once the child's challenge ended, the certificate block
+ * ("Ustvari certifikat" / "Odpri certifikat" / "Poročilo o izzivu") under the header.
  */
 
 import { Pressable, StyleSheet, View } from 'react-native';
@@ -43,6 +44,7 @@ import {
 import PetThumbnail from '@/components/parent/PetThumbnail';
 import PlanBadge from '@/components/parent/PlanBadge';
 import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
+import CertificateCard from '@/components/parent/CertificateCard';
 import { canBuyChallenge } from '@/modules/plan/purchaseEntry';
 import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
@@ -133,6 +135,15 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
       {onOpenChallenge && canBuyChallenge(pet) && (
         <ChallengeBuyButton onPress={onOpenChallenge} childName={child.name} species={species} testID={`child-buy-${id}`} />
       )}
+
+      {/* M2-01d: the challenge ended — create / open the certificate, or the report. */}
+      <CertificateCard
+        certificate={child.certificate}
+        childName={child.name}
+        framed={false}
+        onOpenReport={() => onOpen(child)}
+        testID={`child-certificate-${id}`}
+      />
 
       {child.traffic_light.reasons.length > 0 && (
         <View style={styles.reasons}>

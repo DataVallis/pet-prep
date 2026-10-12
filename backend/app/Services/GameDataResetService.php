@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Queue;
+use Illuminate\Support\Facades\Storage;
 use Throwable;
 
 /**
@@ -44,6 +45,8 @@ class GameDataResetService
     /** Reference / framework tables kept untouched. */
     public const KEEP = [
         'migrations',
+        // M2-01d certificate number counters: numbers are never reused (like sequences).
+        'challenge_certificate_numbers',
         'breed_configs',
         'breed_stage_params',
         'breed_stage_param_changes',
@@ -77,6 +80,8 @@ class GameDataResetService
         'media_lab_results',
         'media_lab_runs',
         // everything that hangs off a pet
+        // M2-01d certificates / reports (→ pets, users, families)
+        'challenge_certificates',
         'activities_log',
         'pet_care_sessions',
         'pet_caretakers',
@@ -369,6 +374,12 @@ class GameDataResetService
             if (! $this->isKeptFile($path)) {
                 $disk->delete($path);
             }
+        }
+
+        // M2-01d: the certificate PDFs (one directory per pet) go with the rows.
+        $certificates = Storage::disk(ChallengeCertificateService::DISK);
+        foreach ($certificates->directories() as $directory) {
+            $certificates->deleteDirectory($directory);
         }
 
         return $usage;

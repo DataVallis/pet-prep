@@ -221,4 +221,11 @@ return [
             'parent_no_trial' => 'Muca varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva.',
         ],
     ],
+
+    // M2-01d (CERTIFICATE_SPEC, David 2026-10-12): a child's challenge ended — parents only,
+    // species-neutral (no cat text needed), no names.
+    'challenge_completed' => [
+        'certificate' => '12-tedenski izziv PetPrep vašega otroka je končan! V aplikaciji ustvarite certifikat odgovornosti.',
+        'report' => '12-tedenski izziv PetPrep vašega otroka se je končal. Poročilo o izzivu vas čaka v aplikaciji.',
+    ],
 ];

@@ -99,6 +99,15 @@ class AppServiceProvider extends ServiceProvider
             return Limit::perMinute(30)->by($request->user()?->id ?: $request->ip());
         });
 
+        // M2-01d: generating a certificate renders a PDF (CPU) — 10 / min per parent.
+        RateLimiter::for('certificates', function (Request $request) {
+            if (app()->environment('testing')) {
+                return Limit::none();
+            }
+
+            return Limit::perMinute(10)->by($request->user()?->id ?: $request->ip());
+        });
+
         RateLimiter::for('pairing', function (Request $request) {
             if (app()->environment('testing')) {
                 return Limit::none();

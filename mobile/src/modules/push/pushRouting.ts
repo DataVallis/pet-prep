@@ -5,7 +5,8 @@
  *  - Tap, child: the child app has one place — the HUD. Close the album over it and
  *    refetch the pet so the HUD shows the state the push was about.
  *  - Tap, parent: ask the dashboard (store `pushTarget`) to open the detail of the
- *    child caring for that pet, and refetch the dashboard.
+ *    child caring for that pet, and refetch the dashboard. `challenge_completed`
+ *    (M2-01d) opens the child whose challenge ended — the certificate card is on top.
  */
 
 import type { QueryClient } from '@tanstack/react-query';
@@ -54,7 +55,7 @@ export function routePushTap(
     store.setAlbumVisible(false);
     void queryClient.invalidateQueries({ queryKey: childPetKey });
   } else {
-    store.setPushTarget({ petId: push.petId });
+    store.setPushTarget({ petId: push.petId, type: push.type });
     void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
   }
   return push;

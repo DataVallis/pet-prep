@@ -35,6 +35,8 @@ describe('parsePushData', () => {
     expect(parsePushData({ type: 'critical_alert', pet_id: 7 })).toEqual({ type: 'critical_alert', petId: 7 });
     expect(parsePushData({ type: 'soft_warning', pet_id: '12' })).toEqual({ type: 'soft_warning', petId: 12 });
     expect(parsePushData({ type: 'walk_reminder', pet_id: 3 })).toEqual({ type: 'walk_reminder', petId: 3 });
+    // M2-01d
+    expect(parsePushData({ type: 'challenge_completed', pet_id: 5 })).toEqual({ type: 'challenge_completed', petId: 5 });
   });
 
   it.each([null, 'x', {}, { type: 'marketing', pet_id: 1 }, { type: 'soft_warning' }, { type: 'soft_warning', pet_id: -1 }, { type: 'soft_warning', pet_id: 1.5 }])(
@@ -48,6 +50,8 @@ describe('parsePushData', () => {
     expect(isUrgentPush('soft_warning')).toBe(false);
     expect(isUrgentPush('critical_alert')).toBe(true);
     expect(isUrgentPush('walk_reminder')).toBe(false);
+    // M2-01d: good news — no alarm sound.
+    expect(isUrgentPush('challenge_completed')).toBe(false);
     expect(isUrgentPush('parent_intervention_alarm')).toBe(true);
     expect(isUrgentPush(null)).toBe(false);
   });
@@ -93,7 +97,17 @@ describe('routePushTap', () => {
 
     routePushTap({ type: 'parent_intervention_alarm', pet_id: 9 }, 'parent', client);
 
-    expect(useAppStore.getState().pushTarget).toEqual({ petId: 9 });
+    expect(useAppStore.getState().pushTarget).toEqual({ petId: 9, type: 'parent_intervention_alarm' });
+    expect(invalidate).toHaveBeenCalledWith({ queryKey: parentDashboardKey });
+  });
+
+  it('parent, challenge_completed (M2-01d): the target carries the type for the certificate child', () => {
+    const client = new QueryClient();
+    const invalidate = jest.spyOn(client, 'invalidateQueries');
+
+    routePushTap({ type: 'challenge_completed', pet_id: 7 }, 'parent', client);
+
+    expect(useAppStore.getState().pushTarget).toEqual({ petId: 7, type: 'challenge_completed' });
     expect(invalidate).toHaveBeenCalledWith({ queryKey: parentDashboardKey });
   });
 
@@ -142,7 +156,7 @@ describe('usePushNotifications', () => {
 
     renderHook(() => usePushNotifications());
 
-    await waitFor(() => expect(useAppStore.getState().pushTarget).toEqual({ petId: 4 }));
+    await waitFor(() => expect(useAppStore.getState().pushTarget).toEqual({ petId: 4, type: 'illness_triggered' }));
     expect(Notifications.clearLastNotificationResponseAsync).toHaveBeenCalledTimes(1);
     expect(invalidate).toHaveBeenCalledWith({ queryKey: parentDashboardKey });
   });

@@ -281,6 +281,76 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/certificates/{certificate}/pdf": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * The PDF (`application/pdf`, `PetPrep-Certificate-<number>.pdf`). The URL
+         *     is a short-lived capability (relative signed route → 403 when expired or
+         *     tampered), issued only inside authorized responses. A request that DOES
+         *     carry a Sanctum token must come from a parent of the family or the
+         *     child of the row, otherwise 403. Not generated yet → 404
+         * @description GET /api/certificates/{certificate}/pdf?expires=…&v=…&signature=…
+         */
+        get: operations["certificates.pdf"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/parent/certificates": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Every finished challenge of the parent's family (newest first):
+         *     certificates and reports, with the form defaults and — once generated —
+         *     a signed `pdf_url`. A parent without a family gets an empty list
+         * @description GET /api/parent/certificates
+         */
+        get: operations["certificate.index"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/parent/certificates/{certificate}/generate": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Generate (or regenerate) the PDF: language + the names to print. Only
+         *     for outcome `certificate` (a report → 409 `not_eligible`). Number, score
+         *     and dates never change; the old file is replaced. 422 codes: see
+         *     GenerateCertificateRequest. Another family's row / unknown id → 404
+         *     `certificate_not_found`; a child token → 403
+         * @description POST /api/parent/certificates/{certificate}/generate
+         */
+        post: operations["certificate.generate"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/child/pin-login": {
         parameters: {
             query?: never;
@@ -1552,6 +1622,30 @@ export interface components {
                 away: boolean;
             }[];
         };
+        /**
+         * GenerateCertificateRequest
+         * @description POST /api/parent/certificates/{certificate}/generate (M2-01d, CERTIFICATE_SPEC §1).
+         *     Body `{"locale": "sl", "child_name": "Maja", "pet_name": "Luna"}` — all
+         *     required. Parents only (UserPolicy::manageFamily → 403 for a child).
+         *
+         *     Names are normalized like a pet name (PetNameService::normalize: trimmed,
+         *     whitespace collapsed, ’ → ', NFKC) and checked by CertificateNames (1–30
+         *     characters, letters / digits / space / ' - ., Latin script the fonts can
+         *     print, EN / SL word filter). 422 body = Laravel's validation body + `codes`
+         *     {field: code} + `reason` (first code): `locale_invalid`, `name_invalid`,
+         *     `name_too_long`, `name_unsupported_script`, `name_not_allowed`.
+         */
+        GenerateCertificateRequest: {
+            /**
+             * @description Language of the certificate: en | sl.
+             * @enum {string}
+             */
+            locale: "en" | "sl";
+            /** @description Printed child name, 1–30 characters (default: the child's nickname). */
+            child_name: string;
+            /** @description Printed pet name, 1–30 characters (default: the pet's name or breed). */
+            pet_name: string;
+        };
         /** GeneratePinRequest */
         GeneratePinRequest: {
             /**
@@ -2500,6 +2594,148 @@ export interface operations {
             401: components["responses"]["AuthenticationException"];
         };
     };
+    "certificates.pdf": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description The certificate ID */
+                certificate: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/pdf": string;
+                };
+            };
+            /** @description An error */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /**
+                         * @description Error overview.
+                         * @example
+                         */
+                        message: string;
+                    };
+                };
+            };
+            404: components["responses"]["ModelNotFoundException"];
+        };
+    };
+    "certificate.index": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        certificates: {
+                            id: number;
+                            child_id: number;
+                            /** @description The child's current nickname (null if unknown). */
+                            child_nickname: unknown;
+                            pet_id: number;
+                            /** @description dog | cat */
+                            species: string;
+                            breed_type: string;
+                            /**
+                             * @description certificate: final Care Score ≥ 70 and no game over — the parent may generate the PDF;
+                             *     report: no certificate (see `reason`).
+                             * @enum {string}
+                             */
+                            outcome: "certificate" | "report";
+                            /** @enum {string|null} */
+                            reason: "low_score" | "game_over" | null;
+                            /** @description Final Care Score (frozen; null when the child had no scored routine). */
+                            care_score: number | null;
+                            /** @description PP-YYYY-NNNNNN — only for outcome `certificate`. */
+                            number: string | null;
+                            started_at: string;
+                            /** @description End of the 84 program days (or the game over). */
+                            completed_at: string;
+                            completed_local_date: string;
+                            /** @description A parent generated the PDF (pdf_url is set). */
+                            generated: boolean;
+                            generated_at: string;
+                            /** @description As printed on the last generated PDF (null before the first generation). */
+                            child_name: string | null;
+                            pet_name: string | null;
+                            /** @enum {string|null} */
+                            locale: "en" | "sl" | null;
+                            defaults: {
+                                child_name: string;
+                                pet_name: string;
+                                locale: string | "en";
+                            };
+                            pdf_url: string | null;
+                        }[];
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            /** @description An error */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /**
+                         * @description Error overview.
+                         * @example
+                         */
+                        message: string;
+                    };
+                };
+            };
+        };
+    };
+    "certificate.generate": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                certificate: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["GenerateCertificateRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": Record<string, never>;
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            422: components["responses"]["ValidationException"];
+        };
+    };
     "childAuth.pinLogin": {
         parameters: {
             query?: never;
@@ -3063,6 +3299,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -3591,6 +3829,8 @@ export interface operations {
                             } | null;
                             session_running: boolean;
                         } | null;
+                        /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                        certificate: string | null;
                         /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                         socialisation: {
                             /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -4139,6 +4379,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -4685,6 +4927,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -5231,6 +5475,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -5777,6 +6023,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -6323,6 +6571,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -6873,6 +7123,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -7423,6 +7675,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -7973,6 +8227,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -8519,6 +8775,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -9069,6 +9327,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -9615,6 +9875,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -10161,6 +10423,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -10711,6 +10975,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -11257,6 +11523,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -11807,6 +12075,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -12353,6 +12623,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -12903,6 +13175,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -13453,6 +13727,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
@@ -14003,6 +14279,8 @@ export interface operations {
                                 } | null;
                                 session_running: boolean;
                             } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
                             /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
                             socialisation: {
                                 /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */

@@ -170,6 +170,12 @@ function rgSeed(): array
         'family_id' => $family->id, 'purchase_event_id' => $purchaseId, 'product_id' => 'petprep_challenge_12w', 'purchased_at' => $now,
         'pet_id' => $pet->id, 'assigned_at' => $now, 'assigned_via' => 'parent',
     ]);
+    // M2-01d: a finished challenge (certificate row) goes with the game data.
+    rgInsert('challenge_certificates', [
+        'family_id' => $family->id, 'pet_id' => $pet->id, 'child_user_id' => $child->id, 'number' => 'PP-2026-000001',
+        'outcome' => 'certificate', 'care_score' => 90, 'started_at' => $now, 'completed_at' => $now, 'completed_local_date' => $today,
+        'species' => 'dog', 'breed_type' => 'mutt',
+    ]);
 
     rgInsert('sessions', ['id' => Str::random(40), 'user_id' => $admin->id, 'payload' => 'x', 'last_activity' => $now->timestamp]);
     rgInsert('password_reset_tokens', ['email' => 'mama@example.com', 'token' => 'hash', 'created_at' => $now]);

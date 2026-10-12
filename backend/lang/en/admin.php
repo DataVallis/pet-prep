@@ -29,6 +29,8 @@ return [
         'stage_value_model' => 'life-stage value',
         'credits' => 'Challenge credits',
         'credit_model' => 'challenge credit',
+        'certificates' => 'Certificates',
+        'certificate_model' => 'certificate',
         'purchase_events' => 'Purchase events',
         'purchase_event_model' => 'purchase event',
         'activity_log' => 'Activity log',

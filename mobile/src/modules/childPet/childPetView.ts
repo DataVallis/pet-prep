@@ -34,6 +34,7 @@ import {
 import { readChildTraining, readPetTraining, type ChildTraining } from '@/modules/training/training';
 import { broadcastSocialisation, readChildSocialisation, type ChildSocialisation } from '@/modules/socialisation/socialisation';
 import { broadcastPlay, readChildPlay, type ChildPlay } from '@/modules/play/play';
+import { readChildCertificate, type ChildCertificate } from '@/modules/certificate/certificate';
 
 export type LockReason = 'game_over' | 'inactive' | 'hard_stopped' | 'payment_required' | 'contract_required' | 'ill';
 
@@ -159,6 +160,11 @@ export interface ChildPetView {
    * older server. Read with `readChildCatCare` (`modules/catCare/catCare.ts`).
    */
   cat: ChildCatCare;
+  /**
+   * M2-01d: this child's own 12-week challenge end on this pet (`readChildCertificate`);
+   * null while it runs and from an older server. A report carries no score or reason.
+   */
+  certificate: ChildCertificate | null;
   /**
    * M5-R17 the puppy's weekly "new experience" (socialisation): null when this week has no task
    * (not a puppy week, a breed / pet without it, a cat) and from an older server.
@@ -343,6 +349,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
     play: readChildPlay((raw as { play?: unknown }).play),
     // M5-R06-08a: the four cat blocks (null / missing for a dog and an older server).
     cat: readChildCatCare(raw),
+    // M2-01d: Scramble types it as a string → always through the reader.
+    certificate: readChildCertificate((raw as { certificate?: unknown }).certificate),
     // M5-R17: older servers send no `socialisation` → null (no card).
     socialisation: readChildSocialisation((raw as { socialisation?: unknown }).socialisation),
     snapshotAtMs: msOf(raw.server_time),

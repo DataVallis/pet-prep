@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\DB;
 
 /**
  * The child's signed responsibility contract (PRODUCT_SPEC §3, M1-07).
@@ -14,6 +15,20 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class PetContract extends Model
 {
+    /**
+     * M2-01d: a new or changed caretaker / contract can start a challenge —
+     * the certificate scan looks at the pet again (pets.certificate_next_check_at).
+     */
+    protected static function booted(): void
+    {
+        $reset = function (self $row): void {
+            DB::table('pets')->where('id', $row->pet_id)->whereNotNull('certificate_next_check_at')
+                ->update(['certificate_next_check_at' => null]);
+        };
+        static::created($reset);
+        static::updated($reset);
+    }
+
     public const FORMAT_SVG_PATH = 'svg_path';
 
     public const FORMAT_PNG = 'png';

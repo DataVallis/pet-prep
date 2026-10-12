@@ -104,6 +104,11 @@ export default function LockedScreen() {
         </View>
         <Text style={styles.title}>{title}</Text>
         <Text style={[styles.body, translucent && styles.bodyOnGlass]}>{body}</Text>
+        {lockState === 'game_over' && details.challengeFinished === true && (
+          <Text style={styles.finished} testID="locked-challenge-finished">
+            {t('certificate:child.lockedFinished')}
+          </Text>
+        )}
       </View>
     </View>
   );
@@ -161,4 +166,5 @@ const styles = StyleSheet.create({
     color: palette.n400,
   },
   bodyOnGlass: { color: palette.n300 },
+  finished: { marginTop: 16, maxWidth: 280, textAlign: 'center', fontSize: 16, lineHeight: 24, color: palette.mint },
 });

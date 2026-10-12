@@ -1614,3 +1614,26 @@ stateDiagram-v2
     Assigned --> Revoked: refund → pet Locked (a pre-M3-13 pet inside its old trial → LegacyTrial)
     Revoked --> [*]
 ```
+
+## 14. Responsibility Certificate: challenge end → push → parent generates the PDF (M2-01d, David 2026-10-12)
+
+```mermaid
+flowchart TD
+    T["pets:process-decay (every minute)<br/>… → closeDueDays() → processCompletions()"] --> C{"per active caretaker<br/>of a challenge pet"}
+    C -->|"84 program days reached + end day closed<br/>(payment lock excluded, ends ≥ launch)"| S["final Care Score<br/>routines ≤ local end date (incl.)"]
+    C -->|"game over before the end"| G["report · game_over<br/>(end = game over)"]
+    C -->|"still running / free plan"| N["nothing"]
+    S -->|"≥ 70"| Cert["certificate<br/>number PP-YYYY-NNNNNN"]
+    S -->|"< 70"| L["report · low_score"]
+    Cert --> R[("challenge_certificates<br/>one row per (pet, child)")]
+    L --> R
+    G --> R
+    R --> P["push challenge_completed → parents<br/>{type, pet_id} only, once"]
+    P --> A["parent app: GET /api/parent/certificates"]
+    A -->|"certificate"| Gen["POST …/{id}/generate<br/>locale en|sl, child_name, pet_name"]
+    Gen --> PDF["dompdf → private disk 'certificates'<br/>(regenerate keeps number, score, dates)"]
+    PDF --> U["signed pdf_url (60–90 min)<br/>GET /api/certificates/{id}/pdf"]
+    U --> Parent["parents of the family"]
+    U --> Child["the child (child state `certificate`)"]
+    A -->|"report"| Rep["parent sees score + reason;<br/>child only 'challenge finished'"]
+```

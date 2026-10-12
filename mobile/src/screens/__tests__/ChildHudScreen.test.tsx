@@ -312,7 +312,7 @@ describe('ChildHudScreen', () => {
     fireEvent.press(screen.getByTestId('action-water'));
 
     await waitFor(() => expect(useAppStore.getState().lockState).toBe('illness'));
-    expect(useAppStore.getState().lockDetails).toEqual({ until: '2026-10-04T18:30:00+02:00', timezone: 'Europe/Ljubljana' });
+    expect(useAppStore.getState().lockDetails).toEqual({ until: '2026-10-04T18:30:00+02:00', timezone: 'Europe/Ljubljana', challengeFinished: false });
     expect(await screen.findByText('Kuža je pri veterinarju do 18:30.')).toBeTruthy();
   });
 

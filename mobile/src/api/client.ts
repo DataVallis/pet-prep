@@ -99,6 +99,13 @@ export interface PetNameErrorBody extends ValidationErrorBody {
 /** `PATCH /api/parent/pets/{pet}/name` 200 body: the name as stored (null = none). */
 export type PetNameResponse = operations['petName.update']['responses'][200]['content']['application/json'];
 
+/** `GET /api/parent/certificates` 200 body (M2-01d). */
+export type CertificatesResponse =
+  operations['certificate.index']['responses'][200]['content']['application/json'];
+
+/** `POST /api/parent/certificates/{id}/generate` body (M2-01d). */
+export type GenerateCertificateBody = components['schemas']['GenerateCertificateRequest'];
+
 /** `POST /api/register` 422 body: validation errors + `codes` {field: code}. */
 export interface RegisterErrorBody extends ValidationErrorBody {
   codes?: Partial<Record<string, RegisterErrorCode>>;
@@ -936,6 +943,25 @@ export const api = {
    */
   activateChallenge: (petId: number) =>
     apiRequest<unknown>(`/api/parent/pets/${petId}/challenge/activate`, { method: 'POST' }),
+
+  /**
+   * GET /api/parent/certificates (M2-01d, parent only) — every finished child challenge of
+   * the family (certificates and reports, newest first). Read items with `readCertificate`.
+   */
+  getCertificates: () =>
+    apiRequest<CertificatesResponse>('/api/parent/certificates'),
+
+  /**
+   * POST /api/parent/certificates/{id}/generate (M2-01d, parent only) — (re)generate the
+   * PDF with a language and the printed names. 200 = `CertificatePayload` (Scramble types it
+   * as `{}` → read with `readCertificate`); 422 `{codes: {field: code}}`, 409 `not_eligible`
+   * (a report), 404 `certificate_not_found`.
+   */
+  generateCertificate: (certificateId: number, body: GenerateCertificateBody) =>
+    apiRequest<unknown>(`/api/parent/certificates/${certificateId}/generate`, {
+      method: 'POST',
+      body,
+    }),
 
   /** POST /api/parent/invite-parent — code for a second parent (revokes this parent's previous code). */
   inviteParent: () => apiRequest<InviteParentResponse>('/api/parent/invite-parent', { method: 'POST' }),

@@ -9,6 +9,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-12 — Certifikat odgovornosti (M2-01d)
+
+**Kaj se je zgodilo:** Ko otrok konča 12-tedenski izziv (84 dni programa od podpisa pogodbe, čas čakanja na plačilo se ne šteje), strežnik izračuna končni Care Score iz vseh zaključenih dni. **70 ali več → Certifikat odgovornosti**, manj → **Poročilo o izzivu** z oceno. Starš dobi obvestilo, v aplikaciji tapne »Ustvari certifikat«, izbere jezik (angleščina ali slovenščina), po želji popravi ime otroka in ime ljubljenčka in dobi PDF (A4, v slogu PetPrep: metin rob, Radovednež, pečat, številka PP-2026-…). Ponovno ga lahko ustvari s popravki; številka in ocena ostaneta. Otrok certifikat vidi na svojem zaslonu. Pri skupnem psu ima vsak otrok svoj certifikat in svojo oceno.
+
+**Zakaj je pomembno:** Certifikat je obljuba izziva — objektiven dokaz, da je otrok 12 tednov res skrbel. Prag 70 pomeni, da certifikat nekaj velja; poročilo pod pragom je pošten odgovor »še ni pripravljen«.
+
+**Številke:** 34 novih testov strežnika (vseh 2.579 zelenih), ~55 novih testov aplikacije; PDF se izriše v ~0,4 s; brez novih nativnih modulov (ni potreben nov build). Ni preverjeno na telefonu.
+
+**Kako povedati:**
+- 👩 Starši: »Po 12 tednih dobite certifikat z oceno skrbi — v jeziku, ki ga izberete, z imenom, kot ga želite.«
+- 🧒 Otroci: »Ko izziv končaš, te čaka tvoj certifikat.«
+- 💼 Investitorji: »Izziv se konča z dokazom, ne z občutkom: prag 70 od 100, ocena iz tisočih zabeleženih rutin.«
+- 🛠 Tehnično: »Zapis se ustvari šele, ko je zadnji dan zaprt — ocena je deterministična; PDF z dompdf, podpisani URL, brez oddaljenih virov.«
+
+---
+
 ## 2026-10-12 — »Dolij, ko se prazni«: voda brez dnevne omejitve (M5-F11)
 
 **Kaj se je zgodilo:** David je na telefonu opazil, da otrok, ki je dal vodo ob 8., 11. in 14. uri, ob 17:00 pri 72 % žeje ni mogel več — aplikacija je rekla »jutri«. Odločil je »Dolij, ko se prazni«: **dnevne omejitve vode ni več.** Vodo lahko daš, ko žeja pade na **60 % ali manj** (prag je nastavljiv po pasmi) in je od zadnjega dolivanja minilo vsaj 3 ure (muca 4 ure). Če še ni čas, aplikacija pove točno uro (»Vodo mu lahko daš ob 18:10«) — izračunano po enakem upadanju kot v igri, tudi čez tihe ure. *Zgrajeno na strežniku; na telefonu še ni preverjeno — tudi obstoječe aplikacije pokažejo uro brez posodobitve.*

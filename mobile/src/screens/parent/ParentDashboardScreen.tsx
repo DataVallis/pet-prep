@@ -38,6 +38,7 @@ import ChildDetailScreen from '@/screens/parent/ChildDetailScreen';
 import { t } from '@/i18n';
 import { catCount, petCountText } from '@/modules/species/species';
 import { strings } from '@/i18n/strings';
+import { pushTargetChild } from '@/modules/certificate/certificate';
 
 /** User-visible strings (`parent:dashboard`, M1-18). */
 export const DASHBOARD_STRINGS = strings('parent', 'dashboard', {
@@ -111,7 +112,8 @@ export default function ParentDashboardScreen() {
     if (detailMissing) setOverlay({ kind: 'none' });
   }, [detailMissing]);
 
-  // A tapped push (M3-02) → the detail of the (first) child caring for that pet. Waits
+  // A tapped push (M3-02) → the detail of the (first) child caring for that pet; M2-01d
+  // `challenge_completed` → the child whose challenge ended (`pushTargetChild`). Waits
   // for the dashboard; a pet that is not (any more) in the family just clears the target.
   // PR #35: first view of the session → ask about alarms while undecided.
   usePushPromptOnFirstView('parent');
@@ -119,7 +121,7 @@ export default function ParentDashboardScreen() {
   const setPushTarget = useAppStore((s) => s.setPushTarget);
   useEffect(() => {
     if (pushTarget === null || dashboard.data === undefined) return;
-    const child = children.find((c) => c.pet_id === pushTarget.petId);
+    const child = pushTargetChild(children, pushTarget.petId, pushTarget.type ?? null);
     if (child) {
       setActiveTab('dashboard');
       setOverlay({ kind: 'child', childId: child.id });

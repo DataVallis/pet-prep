@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Enums\FamilyRole;
 use App\Enums\Species;
 use App\Exceptions\AccountDeletionException;
+use App\Models\ChallengeCertificate;
 use App\Models\DevicePushToken;
 use App\Models\Family;
 use App\Models\FamilyMember;
@@ -27,8 +28,9 @@ use Laravel\Sanctum\PersonalAccessToken;
  * caretakers, contracts INCLUDING the child's signature — the family's own
  * drawing, SVG path data or base64 PNG), the full history (activities, steps,
  * walks, routines, pause / illness periods, hygiene events), scores (Care
- * Score + traffic light per child and pet) and signed, expiring URLs of the
- * stored AI images / videos (no binaries).
+ * Score + traffic light per child and pet), the finished challenges with
+ * their certificate PDFs (M2-01d) and signed, expiring URLs of the stored AI
+ * images / videos (no binaries).
  *
  * Never exported: password hashes, remember tokens, API tokens (only a device
  * count), Expo push tokens (only platform / app version / dates), PIN hashes / legacy pairing PINs, invite codes, RevenueCat ids, fal
@@ -49,6 +51,7 @@ class AccountExportService
         private readonly FamilyDashboardService $dashboard,
         private readonly PetMediaService $media,
         private readonly PetGrowthService $growth,
+        private readonly ChallengeCertificateService $certificates,
     ) {}
 
     /**
@@ -272,8 +275,10 @@ class AccountExportService
             ->orderBy('local_date')->orderBy('kind')
             ->get()->groupBy('pet_id');
         $expires = $this->media->urlExpiry();
+        // M2-01d: finished challenges (certificate / report) per pet, with the printed names.
+        $certificates = ChallengeCertificate::whereIn('pet_id', $petIds)->orderBy('id')->get()->groupBy('pet_id');
 
-        return $pets->map(function (Pet $pet) use ($caretakers, $contracts, $activities, $steps, $walks, $routines, $periods, $hygiene, $skills, $sessions, $careSessions, $plays, $freePlays, $expires): array {
+        return $pets->map(function (Pet $pet) use ($certificates, $caretakers, $contracts, $activities, $steps, $walks, $routines, $periods, $hygiene, $skills, $sessions, $careSessions, $plays, $freePlays, $expires): array {
             $dna = is_array($pet->pet_dna) ? $pet->pet_dna : [];
             $rows = fn (Collection $group) => $group->get($pet->id, collect());
             $album = $this->growth->albumFor($pet, $expires)->toArray()['growth'];
@@ -419,6 +424,22 @@ class AccountExportService
                 // stages (archived ones included), oldest first, signed URLs.
                 'growth' => $album,
                 'growth_expires_at' => $album === [] ? null : $expires->toIso8601String(),
+                // M2-01d: how each child's 12-week challenge on this pet ended; the PDF as a signed URL.
+                'certificates' => $certificates->get($pet->id, collect())->map(fn (ChallengeCertificate $c) => [
+                    'child_id' => $c->child_user_id,
+                    'outcome' => $c->outcome->value,
+                    'reason' => $c->reason?->value,
+                    'care_score' => $c->care_score,
+                    'number' => $c->number,
+                    'started_at' => $this->iso($c->started_at),
+                    'completed_at' => $this->iso($c->completed_at),
+                    'completed_local_date' => $c->localDate(),
+                    'child_name' => $c->child_name,
+                    'pet_name' => $c->pet_name,
+                    'locale' => $c->locale,
+                    'generated_at' => $this->iso($c->generated_at),
+                    'pdf_url' => $this->certificates->signedPdfUrl($c, $expires),
+                ])->values()->all(),
             ];
         })->values()->all();
     }

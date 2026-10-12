@@ -6,6 +6,7 @@ use App\Enums\ActivityType;
 use App\Enums\PetStatusPeriodKind;
 use App\Enums\RoutineType;
 use App\Models\ActivityLog;
+use App\Models\ChallengeCertificate;
 use App\Models\Family;
 use App\Models\Pet;
 use App\Models\PetCaretaker;
@@ -52,6 +53,7 @@ class FamilyDashboardService
         private readonly CareScoreService $scores,
         private readonly PetMediaService $media,
         private readonly PlayService $play,
+        private readonly ChallengeCertificateService $certificates,
         private readonly SocialisationService $socialisation,
     ) {}
 
@@ -116,6 +118,10 @@ class FamilyDashboardService
         $timelines = $this->timelines($pets, $children->pluck('name', 'id')->all());
         // M5-R05: today's ball games / cuddles per pet (all children, one query).
         $playToday = $this->play->todayCounts($pets);
+        // M2-01d: finished challenges (certificate / report rows) of the family, one query.
+        $certificates = ChallengeCertificate::where('family_id', $family->id)->get()
+            ->each(fn (ChallengeCertificate $c) => $c->setRelation('child', $children->firstWhere('id', $c->child_user_id))
+                ->setRelation('pet', $pets->firstWhere('id', $c->pet_id)));
 
         $from = now()->setTimezone($tz)->startOfDay()->subDays(self::STATS_DAYS - 1);
         $fromUtc = $from->copy()->utc();
@@ -146,11 +152,13 @@ class FamilyDashboardService
                 'name' => $p->name,
                 'is_me' => $p->id === $viewer->id,
             ])->values()->all(),
-            'children' => $children->map(function (User $child) use ($caretakers, $pets, $actionCounts, $steps, $contracts, $devices, $board) {
+            'children' => $children->map(function (User $child) use ($caretakers, $pets, $actionCounts, $steps, $contracts, $devices, $board, $certificates, $tz) {
                 $petIds = $caretakers->where('user_id', $child->id)->pluck('pet_id');
                 $current = $pets->whereIn('id', $petIds)->sortByDesc(fn (Pet $p) => [(int) $p->is_active, $p->id])->first();
                 $counts = $this->countsByType($actionCounts->get($child->id, collect()));
                 $stepRow = $steps->get($child->id);
+                $certificate = $current === null ? null
+                    : $certificates->first(fn (ChallengeCertificate $c) => $c->child_user_id === $child->id && $c->pet_id === $current->id);
 
                 return [
                     'id' => $child->id,
@@ -184,6 +192,9 @@ class FamilyDashboardService
                     // M2-06: traffic_light {color, reasons}, care_score,
                     // today, last_7_days, progress (12-week challenge).
                     ...$this->scores->childSummary($board, $child->id, $current),
+                    // M2-01d: how this child's 12-week challenge on `pet_id` ended (certificate /
+                    // report, same shape as a GET /api/parent/certificates item); null while it runs.
+                    'certificate' => $certificate !== null ? $this->certificates->payload($certificate, $tz)->toArray() : null,
                 ];
             })->values()->all(),
             'pets' => $pets->map(fn (Pet $pet) => array_merge([

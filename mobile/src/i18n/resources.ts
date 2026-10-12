@@ -19,6 +19,7 @@ import en_paywall from './locales/en/paywall.json';
 import en_purchases from './locales/en/purchases.json';
 import en_play from './locales/en/play.json';
 import en_cat from './locales/en/cat.json';
+import en_certificate from './locales/en/certificate.json';
 import en_socialisation from './locales/en/socialisation.json';
 import sl_common from './locales/sl/common.json';
 import sl_auth from './locales/sl/auth.json';
@@ -35,9 +36,10 @@ import sl_paywall from './locales/sl/paywall.json';
 import sl_purchases from './locales/sl/purchases.json';
 import sl_play from './locales/sl/play.json';
 import sl_cat from './locales/sl/cat.json';
+import sl_certificate from './locales/sl/certificate.json';
 import sl_socialisation from './locales/sl/socialisation.json';
 
-export const NAMESPACES = ['common', 'auth', 'child', 'behaviour', 'training', 'contract', 'parent', 'family', 'account', 'pet', 'push', 'paywall', 'purchases', 'play', 'cat', 'socialisation'] as const;
+export const NAMESPACES = ['common', 'auth', 'child', 'behaviour', 'training', 'contract', 'parent', 'family', 'account', 'pet', 'push', 'paywall', 'purchases', 'play', 'cat', 'certificate', 'socialisation'] as const;
 export type Namespace = (typeof NAMESPACES)[number];
 
 export const en = {
@@ -56,6 +58,7 @@ export const en = {
   purchases: en_purchases,
   play: en_play,
   cat: en_cat,
+  certificate: en_certificate,
   socialisation: en_socialisation,
 } as const;
 
@@ -76,6 +79,7 @@ const sl = {
   purchases: sl_purchases,
   play: sl_play,
   cat: sl_cat,
+  certificate: sl_certificate,
   socialisation: sl_socialisation,
 };
 

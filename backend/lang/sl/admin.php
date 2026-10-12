@@ -28,6 +28,8 @@ return [
         'stage_value_model' => 'vrednost obdobja',
         'credits' => 'Krediti izzivov',
         'credit_model' => 'kredit izziva',
+        'certificates' => 'Certifikati',
+        'certificate_model' => 'certifikat',
         'purchase_events' => 'Dogodki nakupov',
         'purchase_event_model' => 'dogodek nakupa',
         'activity_log' => 'Dnevnik aktivnosti',

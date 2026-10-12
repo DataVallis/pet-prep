@@ -220,6 +220,8 @@ export function makeChildState(
     litter: null,
     grooming: null,
     scratching: null,
+    // M2-01d: the challenge is still running.
+    certificate: null,
     // M5-R17 the puppy's weekly "new experience": null = no task this week.
     socialisation: null,
   };
@@ -383,6 +385,7 @@ export function makeFamilyChild(overrides: Partial<FamilyChild> = {}): FamilyChi
     today: { date: '2026-10-04', expected: 0, done: 0, done_by_child: 0, pending: 0, missed_count: 0, missed: [] },
     last_7_days: [],
     progress: null,
+    certificate: null,
     ...overrides,
   };
 }
@@ -800,4 +803,52 @@ export function makeScratchingState(overrides: Record<string, unknown> = {}) {
     session_running: false,
     ...overrides,
   };
+}
+
+/**
+ * M2-01d: a `CertificatePayload` (raw, as the server sends it — dashboard child `certificate`,
+ * list item, generate body). Default: a certificate that waits for "Ustvari certifikat".
+ */
+export function makeCertificatePayload(overrides: Record<string, unknown> = {}): Record<string, unknown> {
+  return {
+    id: 31,
+    child_id: 2,
+    child_nickname: 'Luka',
+    pet_id: 7,
+    species: 'dog',
+    breed_type: 'border_collie',
+    outcome: 'certificate',
+    reason: null,
+    care_score: 86,
+    number: 'PP-2026-000031',
+    started_at: '2026-07-20T16:00:00+02:00',
+    completed_at: '2026-10-12T16:00:00+02:00',
+    completed_local_date: '2026-10-12',
+    generated: false,
+    generated_at: null,
+    child_name: null,
+    pet_name: null,
+    locale: null,
+    defaults: { child_name: 'Luka', pet_name: 'Luna', locale: 'sl' },
+    pdf_url: null,
+    ...overrides,
+  };
+}
+
+/** M2-01d: the same payload, generated (printed names, signed PDF URL). */
+export function makeGeneratedCertificatePayload(overrides: Record<string, unknown> = {}): Record<string, unknown> {
+  return makeCertificatePayload({
+    generated: true,
+    generated_at: '2026-10-12T18:00:00+02:00',
+    child_name: 'Luka',
+    pet_name: 'Luna',
+    locale: 'sl',
+    pdf_url: 'https://api.petprep.si/api/certificates/31/pdf?expires=1&v=abc&signature=sig',
+    ...overrides,
+  });
+}
+
+/** M2-01d: a report (no certificate): score below 70 by default. */
+export function makeReportPayload(overrides: Record<string, unknown> = {}): Record<string, unknown> {
+  return makeCertificatePayload({ outcome: 'report', reason: 'low_score', care_score: 58, number: null, ...overrides });
 }

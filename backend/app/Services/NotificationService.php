@@ -222,6 +222,18 @@ class NotificationService
         return $use === null ? null : $this->escalation($pet, PushType::LitterReminder, self::litterMetric($use->id));
     }
 
+    /**
+     * M2-01d (CERTIFICATE_SPEC): one child's 12-week challenge ended — one push
+     * to the family's parents (metric `certificate` | `report`). Called by
+     * ChallengeCertificateService inside the transaction that creates the row
+     * (queued after commit). Held over quiet hours, sent even when the pet is
+     * locked / game over (PushType::isLockNews). Payload {type, pet_id} only.
+     */
+    public function challengeCompleted(Pet $pet, string $outcome): ?PushNotification
+    {
+        return $this->escalation($pet, PushType::ChallengeCompleted, $outcome === 'report' ? 'report' : 'certificate');
+    }
+
     /** Minutes of outside-quiet time before a scoop deadline when the litter reminder is decided. */
     public const LITTER_REMINDER_MINUTES = 60;
 
@@ -544,6 +556,8 @@ class NotificationService
             PushType::Illness, PushType::GameOver, PushType::PaymentRequired => $parents()->concat($children()),
             // M3-11: billing is the parent's business.
             PushType::TrialEnding => $parents(),
+            // M2-01d: the parent generates the certificate / reads the report.
+            PushType::ChallengeCompleted => $parents(),
         };
 
         return $list->unique('user_id')->values()->all();
@@ -557,6 +571,11 @@ class NotificationService
     {
         // QA M5-R06-05 m2: the litter reminder is once per litter use (litterReminder), not per type.
         if ($type === PushType::LitterReminder) {
+            return false;
+        }
+        // M2-01d: once per certificate row (ChallengeCertificateService guards with
+        // `notified_at`); two children of a shared pet may finish within minutes.
+        if ($type === PushType::ChallengeCompleted) {
             return false;
         }
 
