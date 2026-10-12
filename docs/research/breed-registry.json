@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "f71d14f9a6ad83ee12cbac82a4b974e3a6644bacbbd8d16b9be4e69b4f74ad2a"
+      "sha256": "6884188317d62cd21807db13e8cc24681e448717ae847044907c933c21fbeebd"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "fb2702e1b66b587effac711635345edb8c0566275d036aff6573ae1fd05dbf1c"
+      "sha256": "e2fdac589a82f75dc402def86ca1cfc8094965bced42d537346a14f9ee19d463"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -12517,7 +12517,6 @@
               "S211"
             ],
             "refs": [
-              "dobermann.behaviour.family",
               "dobermann.suitability.pdsa_children"
             ]
           },

@@ -800,7 +800,7 @@ const DOG_FACTS = {
       ['cataracts_lens_luxation', 'health.eyes'],
     ],
   },
-  // M5-R10-25. Not exported: lifespan.median_uk (VetCompass 2013 median of only 37 deaths — basis of the
+  // M5-R10-25. Not exported: lifespan.median_uk as a fact (VetCompass 2013 median of only 37 deaths — appears only inside the senior-boundary decision string, basis of the
   // provisional senior boundary, not a register fact), lifespan.mcmillan_2024 (no value),
   // lifespan.senior_from (derived), adult_weight.pdsa / salt_category (FCI is the register's standard;
   // our assignment), health.dings2 (in the breeder checklist). Lifespan = the RKC band 'Over 10 years' (S209).

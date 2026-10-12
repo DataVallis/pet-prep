@@ -623,7 +623,7 @@ return [
                 // S209 "More than 2 hours per day"; S211 "a minimum of two hours of exercise every day".
                 ['tag' => 'long_daily_exercise', 'source_ids' => ['S209', 'S211'], 'refs' => ['dobermann.exercise.adult', 'dobermann.suitability.pdsa_exercise']],
                 // S211 "due to their large size and strong build we wouldn’t recommend a Dobermann if you have young children."
-                ['tag' => 'not_for_small_children', 'source_ids' => ['S211'], 'refs' => ['dobermann.behaviour.family', 'dobermann.suitability.pdsa_children']],
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S211'], 'refs' => ['dobermann.suitability.pdsa_children']],
                 // S211 "they probably aren’t the best breed for families with young children or first-time owners."
                 ['tag' => 'experienced_owner', 'source_ids' => ['S211'], 'refs' => ['dobermann.behaviour.experienced_owner', 'dobermann.suitability.pdsa_experienced_owner']],
                 // S211 "very energetic and will need plenty of mental and physical exercise".
