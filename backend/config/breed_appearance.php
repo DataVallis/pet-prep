@@ -230,6 +230,18 @@
 | white markings. Not a welfare-concern breed (RKC Breed Watch Category 1). Colour weights
 | are unsourced → `verified => false`; black and rust weighted highest (the register portrait).
 |
+| Boxer (M5-R10-26, docs/research/dog-data boxer.appearance): medium-sized, square build,
+| strong bone and well developed muscles; short, glossy, smooth coat tight to the body; broad,
+| deep muzzle that is "never narrow, pointed, short or shallow" with a broad black nose and
+| wide nostrils (RKC standard S217); dark brown eyes; ears lying flat and close to the cheek,
+| natural (FCI 144, S213) — never cropped (the AKC S218 cropping is not drawn); natural
+| undocked tail. Colours: fawn or brindle with a black mask, white markings up to a third
+| (all three standards). Welfare (moderately brachycephalic, VetCompass S220; Breed Watch
+| Category 2 "Pinched nostrils" / "Excessively short muzzle", S216): a `muzzle` trait asks
+| for a moderate muzzle with wide open nostrils (as the French Bulldog). Colour weights are
+| unsourced → `verified => false`; fawn with a black mask weighted highest (the register
+| portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1156,6 +1168,40 @@ return [
             'tail' => ['natural undocked tail carried in a slight curve'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-26 (docs/research/dog-data/data.json boxer.appearance; runbook rules
+    // 2026-10-10: standard colours only; natural ears and tail; welfare breed → moderate muzzle).
+    'boxer' => [
+        'display_name' => 'Boxer',
+        // Colour frequencies are in no source (boxer.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'RKC breed standard (S217, https://thekennelclub.org.uk/breed-standards/working/boxer), FCI-Standard N° 144 (S213), RKC breed page (S215), RKC Breed Watch (S216) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S215 "Size: Large"; S217 "Height: dogs: 57-63 cms (22½-25 ins); bitches: 53-59 cms (21-23 ins)."',
+            'build' => 'S217 "Great nobility, smooth-coated, medium-sized, square build, strong bone and evident, well developed muscles."',
+            'coat_length' => 'S217 "Short, glossy, smooth and tight to body."',
+            'coat_color' => 'S217 "Fawn or brindle." "White markings acceptable not exceeding one-third of ground colour." (weights unsourced)',
+            'ear_carriage' => 'S217 "Moderate size, thin, set wide apart on highest part of skull lying flat and close to cheek in repose,"; FCI S213 natural ears',
+            'eye_color' => 'S217 "Dark brown, forward looking, not too small, protruding or deeply set."',
+            'tail' => 'S217 "Undocked: Set on high and carried gaily, of moderate thickness."',
+            'muzzle' => 'S217 "Muzzle broad, deep and powerful, never narrow, pointed, short or shallow."; "Nose broad, black, slightly turned up, wide nostrils with well-defined line between."; S216 "Pinched nostrils", "Excessively short muzzle" (welfare rule: moderate, never extreme)',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'square, athletic and muscular', 'weight' => 3], 'strong-boned and powerful'],
+            'coat_length' => ['short, glossy, smooth coat tight to the body'],
+            // Standard colours only (S217); fawn highest → the register portrait. White never over a third.
+            'coat_color' => [
+                ['value' => 'golden to deer-red fawn with a black mask', 'weight' => 3],
+                'brindle (black stripes on fawn) with a black mask',
+            ],
+            'ear_carriage' => ['natural uncropped ears lying flat and close to the cheeks'],
+            'eye_color' => ['dark brown'],
+            'tail' => ['natural undocked tail set high'],
+            // Welfare rule (S216, S220): never an extreme face — moderate muzzle, open nostrils.
+            'muzzle' => ['broad, deep, moderate muzzle (never extremely short) with a black nose and wide open nostrils'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',
