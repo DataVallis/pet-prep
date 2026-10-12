@@ -245,7 +245,7 @@ Rutina je ena obveznost, ki jo otrok pravočasno opravi ali zamudi. Vse po **lok
 | Rutina | Koliko | Opravljena | Zamujena |
 |---|---|---|---|
 | **Hrana** | eno okno hranjenja tistega dne = ena rutina (okna po starosti psa, M5-R01: mladiček 4 / 3 / 2, sicer 2) | hranjenje znotraj okna | okno se konča brez hranjenja (nujni obrok izven okna, M3-12, okna ne reši) |
-| **Voda** | `water_times_per_day` (3) na lokalni dan — pričakovani minimum, ne omejitev (M5-F11) | vsako dolivanje tega dne (po vrsti, do pričakovanega števila; dodatna se ne štejejo in ne škodijo) | vsako manjkajoče dolivanje ob koncu dneva |
+| **Voda** | `water_times_per_day` (3) na lokalni dan — pričakovani minimum, ne omejitev (M5-F11); **nikoli več, kot jih dan dopušča**: žeja, ki jo pes izgubi v dnevu (hitrost pasme, tihe ure × 0,1), deljeno s padcem od polne posode do praga (39,5 %), navzdol (npr. mešanček s tihimi urami 21–07 in šolo 8–13 → 2) | vsako dolivanje tega dne (po vrsti, do pričakovanega števila; dodatna se ne štejejo in ne škodijo) | vsako manjkajoče dolivanje ob koncu dneva |
 | **Čiščenje** | vsak nered = ena rutina: "kakec", **luža mladička** in **uničevanje** (M5-R02, David 6. 10. 2026; vrsta je zapisana pri rutini) | počiščeno (luža, kakec) oz. pospravljeno z igračo (uničevanje) v **2 urah, šteto samo izven tihih ur** | ni rešeno v tem času |
 | **Sprehod** | dnevni cilj korakov (po starosti psa tisti dan) | koraki dneva ≥ cilj | dan se konča pod ciljem |
 | **Šolanje** (M5-R03, David 6. 10. 2026) | ena vaja na lokalni dan — samo pes s šolanjem (nov pes iz aplikacije, ki šolanje zna; nikoli legacy) | dokončana vaja (mini-igra) tega dne; šteje otroku, ki je vadil | dan se konča brez dokončane vaje (→ napredek ukazov upade, §5) |

@@ -225,6 +225,38 @@ describe('routine ledger — water', function () {
         expect(array_map(fn ($r) => $r->status, $water))->toBe([RoutineStatus::Done, RoutineStatus::Done, RoutineStatus::Missed])
             ->and($water[2]->dueAt->toDateTimeString())->toBe('2026-10-13 22:00:00');
     });
+
+    it('M5-F11: never expects more refills than the day allows (mutt, night 21–07 + school 08–13 → 2, not 3)', function () {
+        [$parent, $child, $pet] = rsFamily();
+        setQuietHours([
+            'parent_id' => $parent->id,
+            'school_start' => '08:00', 'school_end' => '13:00',
+            'bedtime_start' => '21:00', 'bedtime_end' => '07:00',
+            'is_active' => true,
+        ]);
+        // Mutt −10 %/h: 9 normal h + 15 quiet h × 0.1 = 10.5 weighted h → 105 % per day;
+        // one refill needs the bowl to drop 100 → 60.5 (39.5 %) → floor(2.66) = 2.
+        rsAct($pet, 'watered_pet', '2026-10-13 11:30:00', $child); // 13:30
+        rsAct($pet, 'watered_pet', '2026-10-13 15:30:00', $child); // 17:30
+
+        rsAt('2026-10-13 22:00:00'); // local midnight
+        $water = rsDay($pet, '2026-10-13', RoutineType::Water);
+        expect(array_map(fn ($r) => $r->status, $water))->toBe([RoutineStatus::Done, RoutineStatus::Done]);
+    });
+
+    it('M5-F11: a faster breed keeps the full expected minimum (Border Collie −15 %/h, same quiet hours → 3)', function () {
+        [$parent, $child, $pet] = rsFamily();
+        $pet->update(['breed_type' => 'border_collie']);
+        setQuietHours([
+            'parent_id' => $parent->id,
+            'school_start' => '08:00', 'school_end' => '13:00',
+            'bedtime_start' => '21:00', 'bedtime_end' => '07:00',
+            'is_active' => true,
+        ]);
+
+        rsAt('2026-10-13 22:00:00');
+        expect(rsDay($pet->fresh(), '2026-10-13', RoutineType::Water))->toHaveCount(3);
+    });
 });
 
 describe('routine ledger — cleaning', function () {
