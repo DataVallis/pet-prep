@@ -50,6 +50,7 @@
  *        litter ................... cat general.litter.game_uses_per_day_*, game_scoop_deadline,
  *                                   full_change
  *        grooming (pedigree cats) . cat <breed>.grooming.game_sessions_per_week (Maine Coon, British Shorthair, Ragdoll, Siberian, Norwegian Forest Cat, Bengal)
+ *  dogs  grooming (M5-R13) ........ dog proposed_game_parameters.<breed>.grooming (every brushed dog breed; not the mutt / Border Collie)
  *
  * Breed portraits (M5-R11, David 2026-10-10 — optional input):
  *   docs/research/breed-portraits/manifest.json      written by `php artisan breeds:portraits`
@@ -1138,6 +1139,15 @@ function dogGame(R) {
     const youngSteps = Math.min(a.young * stepsPerMonth, adultSteps);
     const values = [general.steps_per_exercise_minute, general.puppy_exercise_minutes_per_age_month, general.meals, general.arrival].map(({ value, ...m }) => m);
     values.push(adult.meta, senior.meta, seniorFrom.meta, learning.meta);
+    // M5-R13 (David 2026-10-12, "kot pri mački"): every dog breed whose data.json has a grooming
+    // game value brushes N× per program week; the export test checks it against the seeder and
+    // the app list (the mutt / Border Collie have no grooming statement → no rule).
+    const extraRules = [];
+    if (R.entry('proposed_game_parameters')[id]?.grooming !== undefined) {
+      const groom = read([`proposed_game_parameters.${id}.grooming`]);
+      values.push(groom.meta);
+      extraRules.push({ key: 'grooming_rule', params: { per_week: groom.value } });
+    }
     return {
       stages: [
         { stage: 'puppy', starts: { arrival_months: a.puppy }, meals: mealSteps(general.meals.value.puppy, a.puppy), activity: { kind: 'steps_growing', per_month: stepsPerMonth, first: Math.min(a.puppy * stepsPerMonth, adultSteps), cap: adultSteps, cap_month: capMonth } },
@@ -1151,6 +1161,7 @@ function dogGame(R) {
         { key: 'learning', params: { multiplier: learning.value } },
         { key: 'senior_share', params: { months: seniorFrom.value } },
         { key: 'walk_sensor', params: {} },
+        ...extraRules,
       ],
       values,
       basis_source_ids: [...new Set(values.flatMap((v) => v.basis_source_ids))].sort(bySourceId),
