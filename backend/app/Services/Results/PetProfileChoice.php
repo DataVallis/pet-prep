@@ -54,10 +54,18 @@ final readonly class PetProfileChoice
 
         $breed = BreedType::tryFrom((string) ($data['breed'] ?? ''));
         $species = Species::tryFrom((string) ($data['species'] ?? '')) ?? $breed?->species() ?? Species::Dog;
+        $breed ??= $species->freeBreed();
+        $origin = PetOrigin::tryFrom((string) ($data['origin'] ?? '')) ?? PetOrigin::Bought;
+        // M5-F09 (David 2026-10-12): a non-pedigree free breed (mutt / domestic cat) is never
+        // bought from a breeder — it is adopted. Here, not in the request, so a PIN stored
+        // before this rule (read back at pin-login) and old builds get the same answer.
+        if ($origin === PetOrigin::Bought && ! $breed->isPremium()) {
+            $origin = PetOrigin::Adopted;
+        }
 
         return new self(
-            $breed ?? $species->freeBreed(),
-            PetOrigin::tryFrom((string) ($data['origin'] ?? '')) ?? PetOrigin::Bought,
+            $breed,
+            $origin,
             LifeStage::tryFrom((string) ($data['age_stage'] ?? '')) ?? LifeStage::Puppy,
             $features,
             $species,

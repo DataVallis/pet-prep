@@ -694,6 +694,7 @@ export default function ChildHudScreen() {
               accessibilityRole="button"
               accessibilityLabel={t('child:hud.languageSheet.open')}
               testID="hud-language-open"
+              hitSlop={5}
               style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
               onPress={() => setLanguageVisible(true)}
             >

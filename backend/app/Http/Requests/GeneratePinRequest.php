@@ -116,22 +116,13 @@ class GeneratePinRequest extends FormRequest
             return null;
         }
 
-        $choice = PetProfileChoice::fromArray([
+        // A bought free breed is stored as adopted (David 2026-10-12) — see PetProfileChoice::fromArray().
+        return PetProfileChoice::fromArray([
             'species' => $this->validated('species'),
             'breed' => $this->validated('breed'),
             'origin' => $this->validated('origin'),
             'age_stage' => $this->validated('age_stage'),
             'features' => ClientFeature::known($this->validated('features') ?? []),
         ]);
-
-        // David 2026-10-12: a non-pedigree free breed (mutt / domestic cat) is never bought
-        // from a breeder — it is adopted. Current apps no longer offer "bought" for it;
-        // older builds may still send it, so it is corrected here instead of refused (422
-        // would break onboarding on a tester's old build).
-        if ($choice->origin === PetOrigin::Bought && ! $choice->breed->isPremium()) {
-            return new PetProfileChoice($choice->breed, PetOrigin::Adopted, $choice->ageStage, $choice->features, $choice->species);
-        }
-
-        return $choice;
     }
 }

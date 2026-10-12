@@ -1,8 +1,10 @@
 <?php
 
+use App\Enums\PetOrigin;
 use App\Models\Pet;
 use App\Models\User;
 use App\Services\ChildProfileService;
+use App\Services\Results\PetProfileChoice;
 use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Carbon;
 use Illuminate\Testing\TestResponse;
@@ -56,4 +58,12 @@ it('keeps an adopted mutt and a bought pedigree dog as chosen', function () {
 
     expect(Pet::findOrFail($mutt)->origin->value)->toBe('adopted')
         ->and(Pet::findOrFail($collie)->origin->value)->toBe('bought');
+});
+
+it('a stored profile read back at pin-login (PIN issued before the rule) also gives an adopted mutt', function () {
+    $choice = PetProfileChoice::fromArray(['breed' => 'mutt', 'origin' => 'bought', 'age_stage' => 'puppy', 'features' => [], 'species' => 'dog']);
+    $collie = PetProfileChoice::fromArray(['breed' => 'border_collie', 'origin' => 'bought', 'age_stage' => 'puppy']);
+
+    expect($choice->origin)->toBe(PetOrigin::Adopted)
+        ->and($collie->origin)->toBe(PetOrigin::Bought);
 });

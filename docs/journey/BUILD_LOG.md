@@ -15,7 +15,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Pasem bo na stotine; seznam z oznakami bi bil na telefonu neuporaben, iskanje pa je hitrejše. Izvor živali mora biti realen — igra uči, kako pride žival v družino. Otroci si jezik pogosto izberejo sami, ne le starši.
 
-**Številke:** 4 pasme v predogledu; 15 novih testov (12 v aplikaciji, 3 na strežniku), posodobljeni obstoječi testi, kjer je bil mešanček »kupljen«.
+**Številke:** 4 pasme v predogledu; 18 novih testov (14 v aplikaciji, 4 na strežniku), posodobljeni obstoječi testi, kjer je bil mešanček »kupljen«.
 
 **Kako povedati:**
 - 👩 Starši: »Izbira pasme je zdaj pregledna: najbolj priljubljene takoj, vse ostale z enim dotikom ali iskanjem.«
