@@ -486,6 +486,28 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.pembroke_welsh_corgi',
                 'search_keywords' => ['pembroke welsh corgi', 'welsh corgi pembroke', 'pembroke', 'corgi', 'welsh corgi', 'korgi', 'valizanski korgi', 'valižanski korgi'],
             ],
+            // M5-R10-25 Dobermann (docs/research/dog-data/data.json dobermann,
+            // sources S207–S212; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal
+            // (proposed_game_parameters.dobermann.step_goal_adult: 120 min × 100 steps/min
+            // — RKC S209 "More than 2 hours per day", PDSA S211 "a minimum of two hours") — only
+            // the legacy-profile fallback. Hunger / thirst decay, poops and water are the Border
+            // Collie's (no per-breed number).
+            [
+                'breed_slug' => BreedType::Dobermann->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 210,
+                'label_key' => 'breeds.dobermann',
+                'search_keywords' => ['dobermann', 'doberman', 'doberman pinscher', 'dobie', 'dobermann pinscher'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

@@ -221,6 +221,15 @@
 | `body` trait (as the Dachshund). Colour weights are unsourced → `verified => false`;
 | red with white markings weighted highest (the register portrait).
 |
+| Dobermann (M5-R10-25, docs/research/dog-data dobermann.appearance): medium size, strong
+| and muscular with elegant lines and a proud stature; short, hard, dense, tight-lying coat
+| without undercoat; long head like a blunt wedge; medium, oval, dark eyes; ears and tail
+| "left natural" (FCI 143, 2015, S207) — natural drop ears lying close to the cheeks and a
+| natural tail, never cropped or docked. Colours: black or brown with clearly defined rust
+| red tan markings (FCI; the RKC standard S210 also lists blue and fawn — not drawn); never
+| white markings. Not a welfare-concern breed (RKC Breed Watch Category 1). Colour weights
+| are unsourced → `verified => false`; black and rust weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1116,6 +1125,37 @@ return [
             'body' => ['body of moderate length with a level back and enough ground clearance, sturdy short legs'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'body'],
+    ],
+    // M5-R10-25 (docs/research/dog-data/data.json dobermann.appearance; runbook rules
+    // 2026-10-10: standard colours only; natural ears and tail as in the FCI standard).
+    'dobermann' => [
+        'display_name' => 'Dobermann',
+        // Colour frequencies are in no source (dobermann.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 143 (S207, https://fci.be/Nomenclature/Standards/143g02-en.pdf), RKC breed standard (S210), RKC breed page (S209) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S209 "Size: Large"; S207 "Height at the withers: Males: 68 – 72 cm."',
+            'build' => 'S207 "The Dobermann is of medium size, strong and muscularly built."',
+            'coat_length' => 'S207 "The hair is short, hard and dense. It lies tight and smooth and is equally distributed over the whole surface."',
+            'coat_color' => 'S207 "The Dobermann is bred in two colour varieties: black or brown with rust red," (weights unsourced)',
+            'ear_carriage' => 'S207 "The ears, are left natural and of an appropriate size;"; S210 "Small, neat, set high on head, dropped and lying close to the cheeks."',
+            'eye_color' => 'S207 "Medium sized, oval and dark in colour. Lighter shades are permitted for brown dogs."',
+            'tail' => 'S207 "The tail is left natural and is ideally carried high in a slight curve."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'strong, muscular and elegant, square build', 'weight' => 3], 'athletic and elegant'],
+            'coat_length' => ['short, hard, smooth, tight-lying shiny coat'],
+            // Standard colours only (S207); black and rust highest → the register portrait. Never white markings.
+            'coat_color' => [
+                ['value' => 'black with clearly defined rust red tan markings', 'weight' => 3],
+                'brown with clearly defined rust red tan markings',
+            ],
+            'ear_carriage' => ['natural uncropped ears, set high and dropped close to the cheeks'],
+            'eye_color' => ['medium, oval, dark'],
+            'tail' => ['natural undocked tail carried in a slight curve'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

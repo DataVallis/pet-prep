@@ -364,9 +364,9 @@ it('gives the Rottweiler the new experienced_owner tag, hips_hind_legs, shorter_
         // Weekly brushing only (RKC "Once a week"); not flat-faced; no breed-specific chewing.
         ->and($rottweiler['consider'])->not->toContain('frequent_grooming')->not->toContain('brachycephalic_breathing')->not->toContain('chews_when_bored');
 
-    // Only the Rottweiler and the Cane Corso (PDSA S199, M5-R10-23) carry the chip so far.
+    // Only the Rottweiler, the Cane Corso (PDSA S199, M5-R10-23) and the Dobermann (PDSA S211, M5-R10-25) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Rottweiler, BreedType::CaneCorso], true)) {
+        if (! in_array($breed, [BreedType::Rottweiler, BreedType::CaneCorso, BreedType::Dobermann], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('experienced_owner');
         }
     }
@@ -463,10 +463,13 @@ it('gives the Cane Corso the new not_for_small_children and drools tags, active_
         ->and($corso['consider'])->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')
         ->not->toContain('sensitive_skin')->not->toContain('frequent_grooming')->not->toContain('fragile_older_children');
 
-    // Only the Cane Corso carries the two new chips so far.
+    // Only the Cane Corso carries `drools`; `not_for_small_children` also the Dobermann (PDSA S211, M5-R10-25).
     foreach (BreedType::cases() as $breed) {
         if ($breed !== BreedType::CaneCorso) {
-            expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('not_for_small_children')->not->toContain('drools');
+            expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('drools');
+        }
+        if (! in_array($breed, [BreedType::CaneCorso, BreedType::Dobermann], true)) {
+            expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('not_for_small_children');
         }
     }
 
@@ -489,4 +492,21 @@ it('gives the Pembroke Welsh Corgi may_herd_children, sheds and frequent_groomin
         ->and(bsEntry('pembroke_welsh_corgi.suitability.rkc_shedding')['quote'])->toBe('Sheds: Yes')
         ->and(bsEntry('pembroke_welsh_corgi.suitability.rkc_grooming')['quote'])->toBe('Grooming: More than once a week')
         ->and(bsEntry('pembroke_welsh_corgi.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Small house');
+});
+
+it('gives the Dobermann active_family, family_pet, large_home and the PDSA cautions — never children, no welfare chip (runbook 2026-10-12)', function () {
+    $dobermann = app(BreedSuitability::class)->for(BreedType::Dobermann);
+    expect($dobermann['suits'])->toBe(['active_family', 'family_pet', 'large_home'])
+        ->and($dobermann['consider'])->toBe(['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds'])
+        // PDSA does not recommend the breed with young children or first-time owners; high prey drive.
+        ->and($dobermann['suits'])->not->toContain('children')->not->toContain('small_children')
+        ->not->toContain('first_time_owner')->not->toContain('other_pets')
+        // RKC Breed Watch Category 1 → no welfare chip; RKC "Over 10 years" → no shorter_lifespan.
+        ->and($dobermann['consider'])->not->toContain('hips_hind_legs')->not->toContain('heart_and_spine')
+        ->not->toContain('brachycephalic_breathing')->not->toContain('shorter_lifespan');
+
+    expect(bsEntry('dobermann.suitability.rkc_family')['quote'])->toBe('However, his loyal and obedient nature equips him to be an excellent family dog, a role in which he is equally comfortable.')
+        ->and(bsEntry('dobermann.suitability.pdsa_children')['quote'])->toBe('due to their large size and strong build we wouldn’t recommend a Dobermann if you have young children.')
+        ->and(bsEntry('dobermann.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Large house')
+        ->and(bsEntry('dobermann.exercise.adult')['quote'])->toBe('Exercise: More than 2 hours per day');
 });

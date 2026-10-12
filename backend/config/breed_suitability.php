@@ -603,5 +603,34 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S204', 'S206'], 'refs' => ['pembroke_welsh_corgi.suitability.rkc_grooming', 'pembroke_welsh_corgi.suitability.pdsa_grooming']],
             ],
         ],
+
+        // M5-R10-25: dobermann.* (S207–S212), runbook rules (data.json
+        // proposed_game_parameters.dobermann.suitability_tags). RKC (S209) + PDSA (S211).
+        // `family_pet` from the RKC sentence, but never `children` / `small_children` (PDSA S211
+        // does not recommend the breed with young children → `not_for_small_children`), not
+        // `first_time_owner` (→ `experienced_owner`), not `other_pets` (high prey drive, S211).
+        // Not a welfare-concern breed (RKC Breed Watch Category 1) → no welfare chip.
+        'dobermann' => [
+            'suits' => [
+                // S209 "Exercise: More than 2 hours per day"; S211 "a minimum of two hours of exercise every day".
+                ['tag' => 'active_family', 'source_ids' => ['S209', 'S211'], 'refs' => ['dobermann.exercise.adult', 'dobermann.suitability.pdsa_exercise']],
+                // S209 "his loyal and obedient nature equips him to be an excellent family dog".
+                ['tag' => 'family_pet', 'source_ids' => ['S209'], 'refs' => ['dobermann.suitability.rkc_family', 'dobermann.behaviour.family']],
+                // S209 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S209'], 'refs' => ['dobermann.suitability.rkc_size_of_home', 'dobermann.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S209 "More than 2 hours per day"; S211 "a minimum of two hours of exercise every day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S209', 'S211'], 'refs' => ['dobermann.exercise.adult', 'dobermann.suitability.pdsa_exercise']],
+                // S211 "due to their large size and strong build we wouldn’t recommend a Dobermann if you have young children."
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S211'], 'refs' => ['dobermann.behaviour.family', 'dobermann.suitability.pdsa_children']],
+                // S211 "they probably aren’t the best breed for families with young children or first-time owners."
+                ['tag' => 'experienced_owner', 'source_ids' => ['S211'], 'refs' => ['dobermann.behaviour.experienced_owner', 'dobermann.suitability.pdsa_experienced_owner']],
+                // S211 "very energetic and will need plenty of mental and physical exercise".
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S211'], 'refs' => ['dobermann.exercise.energy', 'dobermann.suitability.pdsa_mental_stimulation']],
+                // S209 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S209'], 'refs' => ['dobermann.suitability.rkc_shedding']],
+            ],
+        ],
     ],
 ];
