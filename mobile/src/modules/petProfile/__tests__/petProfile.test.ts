@@ -185,15 +185,17 @@ describe('picker choice', () => {
     expect(choiceWithPlan(muttFree, 'challenge', ['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog'], D).breed).toBe('german_shorthaired_pointer');
     // M5-R10-22: … and the German Shorthaired Pointer refused → the Yorkshire Terrier.
     expect(choiceWithPlan(muttFree, 'challenge', ['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer'], D).breed).toBe('yorkshire_terrier');
-    const refused = ['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier'] as const;
+    // M5-R10-23: … and the Yorkshire Terrier refused → the Cane Corso.
+    expect(choiceWithPlan(muttFree, 'challenge', ['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier'], D).breed).toBe('cane_corso');
+    const refused = ['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso'] as const;
     const stuck = choiceWithPlan(muttFree, 'challenge', refused, D);
     expect(stuck.plan).toBe('challenge');
     expect(completeChoice(stuck, refused, D)).toBeNull();
   });
 
   it('premium breeds need the challenge plan; the free plan is always the free breed', () => {
-    expect(lockedBreedsFor('free', [], D)).toEqual(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier']);
-    expect(lockedBreedsFor(null, [], D)).toEqual(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier']);
+    expect(lockedBreedsFor('free', [], D)).toEqual(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso']);
+    expect(lockedBreedsFor(null, [], D)).toEqual(['border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso']);
     expect(lockedBreedsFor('challenge', ['border_collie'], D)).toEqual(['mutt', 'border_collie']);
     expect(breedLockReason('labrador_retriever', 'free', [], D)).toBe('challenge_only');
     expect(breedLockReason('labrador_retriever', 'challenge', [], D)).toBeNull();
@@ -229,6 +231,8 @@ describe('picker choice', () => {
     expect(breedLockReason('german_shorthaired_pointer', 'challenge', [], D)).toBeNull();
     expect(breedLockReason('yorkshire_terrier', 'free', [], D)).toBe('challenge_only');
     expect(breedLockReason('yorkshire_terrier', 'challenge', [], D)).toBeNull();
+    expect(breedLockReason('cane_corso', 'free', [], D)).toBe('challenge_only');
+    expect(breedLockReason('cane_corso', 'challenge', [], D)).toBeNull();
     expect(isBreedLocked('mutt', lockedBreedsFor(null, [], D))).toBe(false);
     expect(isBreedLocked(null, [])).toBe(true);
     expect(completeChoice({ ...dog, plan: 'challenge', breed: 'border_collie', origin: 'bought', age_stage: 'young' }, [], D)).toEqual({
