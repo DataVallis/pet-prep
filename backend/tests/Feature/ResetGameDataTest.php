@@ -177,6 +177,15 @@ function rgSeed(): array
         'species' => 'dog', 'breed_type' => 'mutt',
     ]);
 
+    // M5-R09b: a breed fact (content, kept — approved by the admin) with a child's read and automatic sheet (game data).
+    $factId = rgInsert('breed_facts', [
+        'key' => 'border_collie-001', 'breed' => 'border_collie', 'category' => 'exercise', 'audience' => 'child',
+        'title_en' => 'Fact', 'title_sl' => 'Zanimivost', 'source_id' => 'S5', 'source_name' => 'RKC', 'source_url' => 'https://example.org',
+        'quote' => 'Quote.', 'sort' => 1, 'status' => 'approved', 'approved_by' => $admin->id, 'approved_at' => $now, 'content_hash' => str_repeat('a', 64),
+    ]);
+    rgInsert('breed_fact_reads', ['user_id' => $child->id, 'breed_fact_id' => $factId, 'read_at' => $now]);
+    rgInsert('breed_fact_shows', ['user_id' => $child->id, 'pet_id' => $pet->id, 'breed_fact_id' => $factId, 'program_week' => 1, 'local_date' => $today, 'shown_at' => $now]);
+
     rgInsert('sessions', ['id' => Str::random(40), 'user_id' => $admin->id, 'payload' => 'x', 'last_activity' => $now->timestamp]);
     rgInsert('password_reset_tokens', ['email' => 'mama@example.com', 'token' => 'hash', 'created_at' => $now]);
     rgInsert('cache', ['key' => 'petprep:throttle', 'value' => 'i:1;', 'expiration' => $now->timestamp + 60]);
@@ -360,6 +369,7 @@ it('deletes all game data and media, keeps admins, their tokens and breed data; 
         'migrations' => rgSnapshot('migrations'),
         'breed_configs' => rgSnapshot('breed_configs'),
         'breed_stage_params' => rgSnapshot('breed_stage_params'),
+        'breed_facts' => rgSnapshot('breed_facts'),
         'breed_stage_param_changes' => rgSnapshot('breed_stage_param_changes', fn ($q) => $q->where('id', '!=', $s['userEdit'])),
     ];
     $adminToken = PersonalAccessToken::where('tokenable_id', $s['admin']->id)->sole();
