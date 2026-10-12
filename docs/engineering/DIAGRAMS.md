@@ -1637,3 +1637,26 @@ flowchart TD
     U --> Child["the child (child state `certificate`)"]
     A -->|"report"| Rep["parent sees score + reason;<br/>child only 'challenge finished'"]
 ```
+
+## 15. »Ali si vedel?« breed facts: git → import → admin approval → apps (M5-R09b, 2026-10-12)
+
+```mermaid
+flowchart TD
+    W["content agents write + verify<br/>docs/research/breed-facts/&lt;breed&gt;.json<br/>(status draft | verified, verbatim quote)"] --> CP["copy byte for byte →<br/>backend/database/data/breed-facts/<br/>(BreedFactImportTest: must match)"]
+    CP --> I["php artisan breeds:import-facts<br/>(manual; --dry-run first)"]
+    I -->|"any error in a file<br/>(mutt / domestic cat, status approved, lengths, sources…)"| X["file rejected, nothing written"]
+    I -->|"upsert by key"| DB[("breed_facts")]
+    I -->|"approved + content changed"| RE["back to the file's status,<br/>approval cleared"]
+    RE --> DB
+    DB --> AD["/admin → Breed facts<br/>draft → verified → approved<br/>(superadmin, bulk for verified)"]
+    AD --> DB
+    DB -->|"approved only"| API1["GET /api/breeds/{breed}/facts"]
+    API1 -->|"child token: child facts of own pet's breed,<br/>no source_url"| CH["child: Moja pasma (R09c)"]
+    API1 -->|"parent token: both audiences, family breeds,<br/>source_url, not_vet_reviewed, read_by_children"| PA["parent: Vodnik po pasmi (R09d)"]
+    DB -->|"next unread child fact"| FOD["GET /api/child/fact-of-the-day<br/>may_auto_show: ≤ 2 / program week,<br/>≥ 2 local days apart, not day 1, not locked,<br/>picture stored, not quiet hours"]
+    FOD --> APP{"app: calm moment?<br/>(care done, metrics ≥ 50 %, no mess / overlay)"}
+    APP -->|"yes"| SHEET["sheet opens → POST …/fact-of-the-day/shown<br/>(breed_fact_shows, idempotent per local day)"]
+    APP -->|"no"| CHIP["chip »Nekaj novega o tvoji pasmi«"]
+    SHEET --> READ["POST /api/breed-facts/{fact}/read<br/>(breed_fact_reads, idempotent)"]
+    CHIP --> READ
+```

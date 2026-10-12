@@ -9,6 +9,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-12 — »Ali si vedel?«: strežnik in administracija za zanimivosti o pasmah (M5-R09b)
+
+**Kaj se je zgodilo:** Strežnik zdaj zna hraniti in deliti resnične zanimivosti o pasmah. Vsaka zanimivost ima vir, dobesedni citat in povezavo; v aplikacijo pride šele, ko jo David v administraciji **odobri** (osnutek → preverjeno → odobreno). Otrok vidi samo otroške zanimivosti pasme svojega ljubljenčka (brez povezav ven), starš vse za pasme svoje družine — pri zdravju z opombo »ni veterinarsko preverjeno«. Samodejno okno pri otroku strežnik omeji na **največ 2-krat na teden** in vsaj 2 dni narazen, nikoli prvi dan in nikoli med zaklepom. Vsebina se piše v repozitoriju in se uvozi z enim ukazom. Mešanček in domača mačka zanimivosti nimata.
+
+**Zakaj je pomembno:** »Nič brez vira« je zdaj pravilo v kodi, ne samo v dokumentu: neodobreno se ne more pokazati, sprememba odobrenega besedila ga samodejno vrne v pregled. Zanimivosti so nagrada, ne motnja — strežnik skrbi, da jih ni preveč, tudi če ima otrok dva telefona.
+
+**Številke:** 3 nove tabele, 4 nove končne točke, 55 novih testov strežnika. Aplikacija tega še ne prikaže (R09c otrok, R09d starš); vsebina (R09a) se še piše.
+
+**Kako povedati:**
+- 👩 Starši: »Vsaka zanimivost o pasmi ima vir, ki ga lahko odprete — in vsako pred objavo preverimo.«
+- 🧒 Otroci: *načrt* — »Dvakrat na teden izveš nekaj novega o svoji pasmi.«
+- 💼 Investitorji: »Vsebina z revizijsko sledjo: vir, citat, preverjanje in odobritev za vsako zanimivost — nove zanimivosti brez nove verzije aplikacije.«
+- 🛠 Tehnično: »Vsebina v gitu, uvoz z upsert po ključu in razpršilom vsebine; omejitev 2 na teden programa (čas zaklepa do plačila se ne šteje) po družinskem času, čez več naprav.«
+
+---
+
 ## 2026-10-12 — Certifikat odgovornosti (M2-01d)
 
 **Kaj se je zgodilo:** Ko otrok konča 12-tedenski izziv (84 dni programa od podpisa pogodbe, čas čakanja na plačilo se ne šteje), strežnik izračuna končni Care Score iz vseh zaključenih dni. **70 ali več → Certifikat odgovornosti**, manj → **Poročilo o izzivu** z oceno. Starš dobi obvestilo, v aplikaciji tapne »Ustvari certifikat«, izbere jezik (angleščina ali slovenščina), po želji popravi ime otroka in ime ljubljenčka in dobi PDF (A4, v slogu PetPrep: metin rob, Radovednež, pečat, številka PP-2026-…). Ponovno ga lahko ustvari s popravki; številka in ocena ostaneta. Otrok certifikat vidi na svojem zaslonu. Pri skupnem psu ima vsak otrok svoj certifikat in svojo oceno.
