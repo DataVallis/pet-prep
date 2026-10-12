@@ -16086,13 +16086,13 @@
         "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       },
       "meal_exercise_gap": {
-        "value": null,
-        "unit": "minutes between a meal and exercise (sourced need, no number)",
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
         "source_id": "S199",
         "quote": "Remember to leave a gap after eating and before exercising.",
         "confidence": "medium",
-        "notes": "PDSA (S199), feeding section; the same page lists GDV ('bloat') as 'an emergency' (health.gdv). The source gives no length of the gap → the mechanic and its number are for David. The game has no rule linking meals and walks (steps count whenever the child walks) — too large for a breed run (rule, child UI, report) → new ROADMAP M5-R16 with a FEATURES 🗓 row. The same PDSA advice appears for other large breeds already in the app (e.g. Bernese Mountain Dog S154) — M5-R16 can cover them too.",
-        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): premor med obrokom in gibanjem; vir ne navaja dolžine, mehanike ni → ROADMAP M5-R16 (needs-david)"
+        "notes": "PDSA (S199), feeding section; the same page lists GDV ('bloat') as 'an emergency' (health.gdv). The source gives no length of the gap. Built in M5-R16 (David 2026-10-12): for 60 minutes after a meal the child app shows a calm 'wait with the walk, the dog is digesting' warning; steps still count, no penalty, no score (seeded as breed_stage_params meal_exercise_gap_minutes). The Bernese Mountain Dog's PDSA page (S154) gives the same advice, but it is recorded only as a paraphrase → no row until a verbatim quote is fetched.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16); prej potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): premor med obrokom in gibanjem"
       },
       "socialisation": {
         "value": null,
@@ -16581,13 +16581,13 @@
         "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
       },
       "meal_exercise_gap": {
-        "value": null,
-        "unit": "minutes between a meal and exercise (sourced need, no number)",
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
         "source_id": "S211",
         "quote": "Remember to leave at a gap after eating and before exercising.",
         "confidence": "medium",
-        "notes": "PDSA (S211), feeding section, as returned (sic 'at a gap'); the same page lists GDV ('bloat') (health.gdv). No length in the source → ROADMAP M5-R16 (already opened for the Cane Corso).",
-        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): premor med obrokom in gibanjem; vir ne navaja dolžine, mehanike ni → ROADMAP M5-R16 (needs-david)"
+        "notes": "PDSA (S211), feeding section, as returned (sic 'at a gap'); the same page lists GDV ('bloat') (health.gdv). No length in the source. Built in M5-R16 (David 2026-10-12): 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score (breed_stage_params meal_exercise_gap_minutes).",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16); prej potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): premor med obrokom in gibanjem"
       },
       "socialisation": {
         "value": null,

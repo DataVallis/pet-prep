@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Enums\ActivityType;
 use App\Enums\CareRefusal;
+use App\Enums\StageParamKey;
 use App\Models\ActivityLog;
 use App\Models\BreedConfig;
 use App\Models\Pet;
@@ -139,6 +140,28 @@ class CareScheduleService
             lastFedAt: $lastFedAt,
             missedMeal: $missedMeal,
         );
+    }
+
+    /**
+     * M5-R16 (David 2026-10-12, "1 ura, samo opozorilo"): the end of the digestion
+     * warning — the last meal (child, emergency or parent-covered) plus the breed's
+     * `meal_exercise_gap_minutes` (breed_stage_params; Cane Corso, Dobermann: 60). Null
+     * when the breed has no such row (every other breed, cats, legacy pets), nothing was
+     * fed, or the gap has passed. A duration, so the family timezone does not matter.
+     * Only a warning: steps, energy and the score never read it.
+     */
+    public function digestingUntil(Pet $pet, ?CarbonInterface $lastFedAt, CarbonInterface $now): ?CarbonImmutable
+    {
+        if ($lastFedAt === null) {
+            return null;
+        }
+        $gap = $this->lifeStages->stageValueOn($pet, $pet->localDate($lastFedAt), StageParamKey::MealExerciseGapMinutes)['value'] ?? null;
+        if (! is_int($gap) || $gap <= 0) {
+            return null;
+        }
+        $until = CarbonImmutable::instance($lastFedAt)->addMinutes($gap);
+
+        return $until->greaterThan($now) ? $until : null;
     }
 
     public function water(Pet $pet, BreedConfig $config, CarbonInterface $now): WaterStatus

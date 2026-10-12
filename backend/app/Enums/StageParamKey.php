@@ -26,6 +26,10 @@ namespace App\Enums;
  *    PLAY_MIN_GAP_MINUTES, LITTER_SCOOP_DEADLINE_HOURS,
  *    LITTER_FULL_CHANGE_DAYS, GROOMING_SESSIONS_PER_WEEK (Maine Coon 3, Ragdoll 2,
  *    British Shorthair 1; no row = no grooming routine) and SCRATCHING_AFTER_MISSED_PLAY (bool).
+ *  - M5-R16 dog breed key MEAL_EXERCISE_GAP_MINUTES (David 2026-10-12, "1 ura,
+ *    samo opozorilo"): minutes after a meal during which the child app shows
+ *    "wait with the walk, the dog is digesting" (GDV / bloat advice of an A/B
+ *    source). Only a warning — steps still count, no score. No row = no warning.
  */
 enum StageParamKey: string
 {
@@ -68,6 +72,8 @@ enum StageParamKey: string
     case LitterFullChangeDays = 'litter_full_change_days';
     case GroomingSessionsPerWeek = 'grooming_sessions_per_week';
     case ScratchingAfterMissedPlay = 'scratching_after_missed_play';
+    // M5-R16 dog (breed key): digestion warning after a meal (bloat / GDV advice)
+    case MealExerciseGapMinutes = 'meal_exercise_gap_minutes';
 
     public function isBreedLevel(): bool
     {
@@ -79,6 +85,7 @@ enum StageParamKey: string
             self::PottyTrainingAccidentReduction, self::PlaceTrainingChewingReduction,
             self::PlayMinGapMinutes, self::LitterScoopDeadlineHours, self::LitterFullChangeDays,
             self::GroomingSessionsPerWeek, self::ScratchingAfterMissedPlay,
+            self::MealExerciseGapMinutes,
         ], true);
     }
 
@@ -131,6 +138,8 @@ enum StageParamKey: string
                 ? null : 'Expected whole sessions per week, 0–7.',
             self::ScratchingAfterMissedPlay => is_bool($value)
                 ? null : 'Expected true or false.',
+            self::MealExerciseGapMinutes => is_int($value) && $value >= 1 && $value <= 240
+                ? null : 'Expected whole minutes after a meal, 1–240.',
         };
     }
 

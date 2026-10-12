@@ -175,6 +175,11 @@
       "openSettings": "Odpri Health Connect",
       "needsUpdate": "Najprej je treba namestiti ali posodobiti Health Connect. Prosi starša za pomoč.",
       "openStore": "Odpri Google Play"
+    },
+    "digesting": {
+      "title": "Počakaj s sprehodom",
+      "body": "Kuža prebavlja. Velik pes naj po obroku počiva približno eno uro.",
+      "until": "Na sprehod lahko greš ob {{time}}."
     }
   },
   "grooming": {
