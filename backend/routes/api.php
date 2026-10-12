@@ -4,6 +4,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BillingController;
 use App\Http\Controllers\BreedController;
+use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\ChildAuthController;
 use App\Http\Controllers\ChildContractController;
 use App\Http\Controllers\ChildPetController;
@@ -89,6 +90,10 @@ Route::get('media/{media}', [PetMediaController::class, 'show'])
 Route::get('media/history/{history}', [PetMediaController::class, 'showHistory'])
     ->middleware(['signed:relative', 'throttle:media'])
     ->name('media.history.show');
+// M2-01d: Responsibility Certificate PDF (parents of the family + the child of the row).
+Route::get('certificates/{certificate}/pdf', [CertificateController::class, 'pdf'])
+    ->middleware(['signed:relative', 'throttle:media'])
+    ->name('certificates.pdf');
 
 /*
 |--------------------------------------------------------------------------
@@ -150,6 +155,10 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
         // payment status; assign a purchase (challenge credit) to a pet.
         Route::get('billing', [BillingController::class, 'index']);
         Route::post('pets/{pet}/challenge/activate', [BillingController::class, 'activate']);
+
+        // M2-01d Responsibility Certificate: finished challenges of the family; generate the PDF.
+        Route::get('certificates', [CertificateController::class, 'index']);
+        Route::post('certificates/{certificate}/generate', [CertificateController::class, 'generate']);
     });
 
 /*

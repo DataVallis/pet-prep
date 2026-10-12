@@ -81,6 +81,15 @@ class PetNameService
     }
 
     /**
+     * Invisible Hangul fillers, enclosing marks or 3+ stacked combining marks
+     * (M2-01d: also refused in the certificate's child name).
+     */
+    public static function hasInvisibleOrStackedMarks(string $name): bool
+    {
+        return preg_match(self::INVISIBLE_OR_STACKED, $name) === 1;
+    }
+
+    /**
      * False when the name hits the filter list (config/pet_names.php):
      * case- and diacritic-insensitive, on whole words, on the name with
      * spaces / hyphens / apostrophes removed, and — for `fragments` — inside

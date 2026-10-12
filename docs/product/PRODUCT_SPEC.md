@@ -230,7 +230,7 @@ Pragovi se primerjajo s prikazano (zaokroženo) vrednostjo.
 ## 11. Ocenjevanje in certifikat
 
 - **7. dan:** "Puppy Promoter" značka staršu (prvi dokaz vrednosti, točka aktivacije garancije).
-- **12. teden:** Certifikat odgovornosti s "Care Score" (delež pravočasno opravljenih rutin), brez game overa.
+- **12. teden:** Certifikat odgovornosti s "Care Score" (delež pravočasno opravljenih rutin), brez game overa — pravila v §11.3.
 
 ### 11.1 Rutine (David, 4. 10. 2026; strežnik M2-06)
 Rutina je ena obveznost, ki jo otrok pravočasno opravi ali zamudi. Vse po **lokalnem času družine**; iz podatkov, ki jih že imamo (od otroka ne zahtevamo ničesar novega).
@@ -270,6 +270,13 @@ Zaključeni dnevi se zapišejo (strežnik) in se pozneje ne preračunajo: spreme
 - **Dan pridružitve:** otrok, ki se pridruži sredi dneva, ta dan ne deli vode in sprehoda (rutini se začneta ob polnoči), deli pa okna hranjenja in nered po podpisu.
 
 **Napredek izziva:** teden N od 12 (dnevi od podpisa pogodbe otroka / 7 + 1), izziv končan po 84 dneh.
+
+### 11.3 Certifikat odgovornosti (David, 12. 10. 2026; strežnik M2-01d)
+Podrobno: [`CERTIFICATE_SPEC.md`](CERTIFICATE_SPEC.md).
+- Izziv **otroka** je končan po **84 dneh programa** od njegovega začetka (čas zaklepa do plačila se ne šteje, M3-11b); vsak otrok skupnega ljubljenčka ima svoj zaključek. Samo plačan izziv (brezplačni plan nikoli).
+- **Končna ocena** = Care Score otroka (§11.2) iz rutin do vključno lokalnega dneva zaključka; pozneje se ne spremeni.
+- **Prag: ocena ≥ 70 → certifikat**; pod 70 → poročilo o izzivu (razlog `low_score`); **game over pred koncem** → poročilo (razlog `game_over`, zapisano ob game overju).
+- Starš ustvari PDF (jezik EN / SL, popravljivo ime otroka in ljubljenčka); številka `PP-LLLL-NNNNNN`, ocena in datumi ostanejo ob ponovnem ustvarjanju. Starš dobi en push, ko je izziv otroka končan; otrok vidi certifikat, pri poročilu samo »izziv končan« (brez ocene).
 
 ## 12. Faza 2 (po MVP) — Real-World AI asistent
 

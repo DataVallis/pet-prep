@@ -14,6 +14,7 @@ use App\Enums\PetPlan;
 use App\Enums\PetStateEnum;
 use App\Enums\PetStatusPeriodKind;
 use App\Enums\Species;
+use App\Jobs\DeleteCertificateFiles;
 use App\Jobs\DeletePetMediaFiles;
 use App\Services\FamilyService;
 use App\Services\LifeStageService;
@@ -54,6 +55,8 @@ class Pet extends Model
         // for its bulk deletes, which fire no model events.
         static::deleted(function (Pet $pet): void {
             DeletePetMediaFiles::dispatch([$pet->id])->afterCommit();
+            // M2-01d: certificate rows cascade in the DB; the PDFs go after commit.
+            DeleteCertificateFiles::dispatch([$pet->id])->afterCommit();
         });
 
         // Start the decay clock at creation so the first tick decays from birth.

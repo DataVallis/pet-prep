@@ -49,6 +49,17 @@ return [
             'report' => false,
         ],
 
+        // Responsibility certificates (M2-01d): private PDFs, served only through the
+        // signed GET /api/certificates/{certificate}/pdf. `{pet_id}/certificate-{id}.pdf`.
+        'certificates' => [
+            'driver' => 'local',
+            'root' => storage_path('app/private/certificates'),
+            'visibility' => 'private',
+            'serve' => false,
+            'throw' => true,
+            'report' => false,
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

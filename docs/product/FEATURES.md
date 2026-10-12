@@ -189,7 +189,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **📱 Na telefonu 7
 | Poročilo 7 / 30 / 84 dni | Ocena obdobja, hrana / voda / čiščenje / sprehod posebej, koraki proti cilju po dnevih, bolezni, časovnica z »Naloži več«. | starš | ✅ | M2-05 | 2026-10-04 |
 | V živo | Vrednosti se posodobijo v trenutku (zasebni kanal na psa); brez povezave osvežitev vsakih 30 s. | starš | ✅ | M2-05, M1-15 | 2026-10-04 |
 | Značka »Puppy Promoter« (7. dan) | — | starš | 🗓 | backlog / M3 | — |
-| Certifikat odgovornosti (12. teden) | Certifikat po otroku iz njegovih dejanj; PDF in fizična licenca po pošti kasneje. | otrok, starš | 🗓 (PDF, licenca ⏸) | M2-01d | — |
+| Certifikat odgovornosti (12. teden) | Certifikat po otroku iz njegovih dejanj: po 84 dneh programa strežnik zapiše končno oceno (≥ 70 → certifikat, sicer poročilo; game over → poročilo) in pošlje staršu push; starš ustvari PDF (A4, EN / SL, popravljivo ime otroka in ljubljenčka, številka PP-LLLL-NNNNNN), otrok ga vidi na svojem zaslonu. Aplikacija še ne; fizična licenca po pošti kasneje. | otrok, starš | 🛠 (aplikacija 🗓, licenca ⏸) | M2-01d | 2026-10-12 |
 
 ## 8. Obvestila
 
@@ -280,7 +280,7 @@ Samo za nove pse iz različice aplikacije, ki šolanje zna. **📱 Na telefonu 7
 | Koraki iz Apple Zdravje / Health Connect | Glej §3 (zgrajeno; čaka nov native build in preizkus na telefonu). | otrok | ✅ (ni na napravi) | M3-04, M3-05, M3-06 |
 | Angleščina v aplikaciji | Glej §10 »Jezik aplikacije«. | vsi | ✅ | M1-18 |
 | Plačila | Glej §12 (zgrajeno; čaka nastavitev trgovin in RevenueCat ter native build). | starš | ✅ (ni na napravi) | M3-07, M3-09 |
-| Certifikat odgovornosti | Glej §7. | otrok, starš | 🗓 | M2-01d |
+| Certifikat odgovornosti | Glej §7. | otrok, starš | 🛠 | M2-01d |
 | Zaprta beta (TestFlight + Google Play, 20–50 družin) | — | — | 🗓 | M5-07 |
 | Breed Matchmaker | Primerna pasma iz 12-tedenskih podatkov otroka. | starš | ⏸ | backlog |
 | Faza 2: asistent za pravega psa | Gumb »Kupili smo pravo žival«: ovratnice, AI prvi stik z napotitvijo k veterinarju, rast in prehrana. | lastnik | ⏸ | backlog, `PHASE2_SPEC.md` |

@@ -178,6 +178,8 @@ final class PushCopy
             // `no_trial` = the challenge started without a free trial (every birth since
             // M3-13) — parents get no "the free trial has ended".
             PushType::PaymentRequired => $line('payment_required.'.$audience.($metric === 'no_trial' && $audience === PushNotification::AUDIENCE_PARENT ? '_no_trial' : '')),
+            // M2-01d: parents only; species-neutral, no names (`report` = no certificate this time).
+            PushType::ChallengeCompleted => $line('challenge_completed.'.($metric === 'report' ? 'report' : 'certificate')),
         };
     }
 

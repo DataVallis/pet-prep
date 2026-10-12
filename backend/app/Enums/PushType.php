@@ -63,20 +63,30 @@ enum PushType: string
      */
     case PaymentRequired = 'payment_required';
 
+    /**
+     * M2-01d (CERTIFICATE_SPEC, David 2026-10-12): a child's 12-week challenge
+     * ended — parents only, once per (pet, child) row of
+     * `challenge_certificates` (metric `certificate` = ready to generate,
+     * `report` = the report is available). News, not a reminder: also sent
+     * for a game-over pet, held over quiet hours.
+     */
+    case ChallengeCompleted = 'challenge_completed';
+
     /** Phase 2 and above (not the walk reminder, not billing news): high priority, Android channel "alarm". */
     public function isUrgent(): bool
     {
-        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TrialEnding, self::PaymentRequired], true);
+        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted], true);
     }
 
     /**
      * Sent even while the pet is hard-stopped / inactive / game over / ill /
      * payment-locked, and held (not dropped) over quiet hours: the news itself
-     * is the lock (or, for the trial reminder, a once-only billing notice).
+     * is the lock (or, for the trial reminder, a once-only billing notice;
+     * M2-01d: the end of a child's challenge, which may follow a game over).
      */
     public function isLockNews(): bool
     {
-        return in_array($this, [self::Illness, self::GameOver, self::TrialEnding, self::PaymentRequired], true);
+        return in_array($this, [self::Illness, self::GameOver, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted], true);
     }
 
     /**
@@ -114,7 +124,7 @@ enum PushType: string
         return match ($this) {
             self::SoftWarning, self::CriticalAlert, self::WalkReminder, self::PlayReminder, self::LitterReminder => 3600,
             self::ParentAlarm => 3 * 3600,
-            self::Illness, self::GameOver, self::TrialEnding, self::PaymentRequired => 12 * 3600,
+            self::Illness, self::GameOver, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted => 12 * 3600,
         };
     }
 }

@@ -7,8 +7,10 @@ use App\Enums\Species;
 use App\Enums\UserRole;
 use App\Events\PetUpdated;
 use App\Exceptions\AccountDeletionException;
+use App\Jobs\DeleteCertificateFiles;
 use App\Jobs\DeletePetMediaFiles;
 use App\Models\AiSpendLedger;
+use App\Models\ChallengeCertificate;
 use App\Models\ChildLoginPin;
 use App\Models\Family;
 use App\Models\FamilyInvite;
@@ -35,7 +37,7 @@ use Laravel\Sanctum\PersonalAccessToken;
  *  - deleteParentAccount(): the parent's own account. The LAST parent of a
  *    family takes the whole family with them (children, pets, media files,
  *    contracts incl. signatures, logs, tokens, push devices, PINs, invites, quiet hours,
- *    routines) — plus orphaned legacy child accounts that point at one of its
+ *    routines, M2-01d certificates + their PDFs) — plus orphaned legacy child accounts that point at one of its
  *    parents (users.parent_id) but belong to no family. If another parent
  *    remains, only this parent goes (user, tokens, invites); the deprecated
  *    mirrors that point at them are handed to the remaining parent first,
@@ -250,6 +252,13 @@ class AccountDeletionService
             $this->assertPaidChallengeAcknowledged($toDelete, $acknowledgePaidChallenge);
             $deleted = $this->deletePets($toDelete);
             ChildLoginPin::where('child_user_id', $child->id)->delete();
+            // M2-01d: the child's certificates / reports (rows with the printed name)
+            // and their PDFs on pets that stay; the deleted pets' files go with them.
+            $certificatePaths = ChallengeCertificate::where('child_user_id', $child->id)->whereNotNull('pdf_path')->pluck('pdf_path')->all();
+            ChallengeCertificate::where('child_user_id', $child->id)->delete();
+            if ($certificatePaths !== []) {
+                DeleteCertificateFiles::dispatch([], $certificatePaths)->afterCommit();
+            }
             FamilyMember::where('user_id', $child->id)->delete();
             // Contract and per-child step rows cascade with the user;
             // activities_log / pet_daily_routines keep their rows with
@@ -528,6 +537,8 @@ class AccountDeletionService
         // queue one job per pet — one job for all of them here).
         $deleted = Pet::whereIn('id', $ids)->delete();
         DeletePetMediaFiles::dispatch($ids)->afterCommit();
+        // M2-01d: certificate rows cascade with the pet; their PDFs go after commit.
+        DeleteCertificateFiles::dispatch($ids)->afterCommit();
 
         return $deleted;
     }

@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Services\ChallengeCertificateService;
 use App\Services\ChallengeService;
 use App\Services\EscalationService;
 use App\Services\PetDecayService;
@@ -18,12 +19,12 @@ class ProcessPetDecayCommand extends Command
     /**
      * The console command description.
      */
-    protected $description = 'Process minutely metric decay, escalation checks and the routine ledger for all pets';
+    protected $description = 'Process minutely metric decay, escalation checks, the routine ledger and challenge ends for all pets';
 
     /**
      * Execute the console command.
      */
-    public function handle(PetDecayService $decayService, EscalationService $escalationService, RoutineLedgerService $ledger, ChallengeService $challenges): int
+    public function handle(PetDecayService $decayService, EscalationService $escalationService, RoutineLedgerService $ledger, ChallengeService $challenges, ChallengeCertificateService $certificates): int
     {
         // M3-11 / M3-13: payment locks first, so a pet that has to wait for a
         // purchase is frozen before this tick's decay / escalation.
@@ -44,6 +45,12 @@ class ProcessPetDecayCommand extends Command
         // After decay + escalation, so the night's walk row exists.
         $ledgerResult = $ledger->closeDueDays();
         $this->info("Routines: checked {$ledgerResult['pets']} pets, closed {$ledgerResult['days']} days.");
+
+        // M2-01d: children whose 12-week challenge just ended (84 program days, or
+        // game over before that) get one certificate / report row + one parent push.
+        // Last, so this tick's game over and closed days are already in.
+        $certificateResult = $certificates->processCompletions();
+        $this->info("Certificates: checked {$certificateResult['pets']} pets, recorded {$certificateResult['created']} challenge ends.");
 
         return self::SUCCESS;
     }

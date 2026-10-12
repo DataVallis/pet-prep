@@ -220,4 +220,11 @@ return [
             'parent_no_trial' => 'The cat is waiting safely until you unlock the 12-week challenge in the app.',
         ],
     ],
+
+    // M2-01d (CERTIFICATE_SPEC, David 2026-10-12): a child's challenge ended — parents only,
+    // species-neutral (no cat text needed), no names.
+    'challenge_completed' => [
+        'certificate' => 'Your child’s 12-week PetPrep challenge is complete! Open the app to create the Certificate of Responsibility.',
+        'report' => 'Your child’s 12-week PetPrep challenge has ended. The challenge report is waiting for you in the app.',
+    ],
 ];
