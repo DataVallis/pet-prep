@@ -53,7 +53,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "ea4faf7ac5503c39b9fee10c4cd5afeeb2c7c3f721bf1a5c3bc3783e978eee36"
+      "sha256": "2cf99306cb6e78ea4670f87b10ae4c38fbede670206b91d1ec82cdd162676c3a"
     }
   },
   "suitability_vocabulary": {
@@ -11111,7 +11111,12 @@
           "S195"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "yorkshire-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "none_recommended",
         "tests": [],
