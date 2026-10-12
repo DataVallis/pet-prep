@@ -9809,6 +9809,495 @@
       }
     }
   },
+  "cane_corso": {
+    "_note": "Added 2026-10-12 (M5-R10-23, unattended run — fifth breed appended after the 20: AKC 2024 No. 14 in the full-list table, S174; No. 12 Australian Shepherd and No. 13 Cavalier King Charles Spaniel are already in the app). Quotes as returned by the web-fetch tool on 2026-10-12; spot-check before import (sources.md S197–S201, reused S10, S11, S14, S24, S35, S45, S174). The breed is not recognised by The Royal Kennel Club (no RKC breed page, no RKC standard, no Breed Watch entry) and is 'a relatively uncommon breed in the UK' (PDSA S199): there is no VetCompass breed paper and no McMillan 2024 value was reachable (the Dogs Trust 'shortest and longest' PDF returned a fetch error; the Dogs Trust breed table S123 was not in the reachable set). Exercise, size, grooming and family advice therefore come from PDSA (S199, tier B — runbook: 'RKC breed page preferred … else PDSA'); weight, height and appearance from the FCI standard (S197, valid 25.09.2023) and the AKC standard (S200); lifespan from the one peer-reviewed breed study found (Korec et al. 2017, S201). The fetch tool split PDSA sentences longer than ~125 characters: only passages it returned in quotation marks are used as quotes; condensed passages are marked '(paraphrase)'. Woodgreen, Dogs Trust breed page and AKC trait ratings not attempted.",
+    "identity": {
+      "value": "FCI No. 343, Group 2 Section 2.1 (Molossian type, Mastiff type), Italy",
+      "unit": "—",
+      "source_id": "S198",
+      "quote": "Group: n°2 - Pinscher and Schnauzer - Molossoid and Swiss Mountain and Cattledogs; Section: Molossian type; Country of origin: ITALY",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S198): breed name 'CANE CORSO ITALIANO (343)'; subsection 'Mastiff type'; provisional acceptance '11/12/1996'; definitive acceptance '5/21/2007'; valid standard '9/25/2023'; 'Subject to a working trial according to the FCI Breeds Nomenclature'. FCI standard PDF (S197): 'ORIGIN: Italy.' and 'Section 2.1 Molossian, Mastiff type.' Quote assembled from the nomenclature fields as returned."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S199",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "PDSA key-facts box (S199). FCI (S197): 'Medium to large sized. Robust and sturdy dog, nevertheless with some elegance.' FCI weights males 45–50 kg / females 40–45 kg (S197) → the game treats it as a large dog; the growth class follows the weight (S10, below)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            64,
+            68
+          ],
+          "female": [
+            60,
+            64
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S197",
+        "quote": "Males: 64 cm – 68 cm.",
+        "confidence": "high",
+        "notes": "FCI (S197): 'Females: 60 cm – 64 cm.' and 'With a tolerance of 2 cm, more or less taller.' Over- or under-size is a severe fault (S197)."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            63.5,
+            69.9
+          ],
+          "female": [
+            59.7,
+            66.0
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S200",
+        "quote": "Height - Dogs 25 to 27½ inches; bitches 23½ to 26 inches.",
+        "confidence": "high",
+        "notes": "AKC standard (S200, approved 2009, effective 2010). Inches converted to cm (× 2.54) by us."
+      },
+      "pdsa_average": {
+        "value": [
+          58,
+          70
+        ],
+        "unit": "cm",
+        "source_id": "S199",
+        "quote": "Average height: 58-70 cm",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (label wording as returned)."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            45,
+            50
+          ],
+          "female": [
+            40,
+            45
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S197",
+        "quote": "Males: 45 – 50 kg.",
+        "confidence": "high",
+        "notes": "FCI (S197): 'Females: 40 – 45 kg.' Game range 40–50 kg (both sexes). The AKC standard (S200) gives no number: 'Weight - Proportionate to height.'"
+      },
+      "pdsa": {
+        "value": [
+          40,
+          50
+        ],
+        "unit": "kg",
+        "source_id": "S199",
+        "quote": "Average weight: 40-50 kg",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box, one range for both sexes — agrees with FCI."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI males 45–50 kg (≈ 99–110 lb) reach the 'Giant (over 100 pounds)' class; females 40–45 kg (≈ 88–99 lb) are 'Large (59–99 pounds): 15–18 months' — the same split as the Rottweiler and the Bernese Mountain Dog, so the same 18–24 months. The game is unaffected (the puppy cap of 120 min is reached at 12 months either way)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Cane Corso growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_international": {
+        "value": 9.29,
+        "unit": "years",
+        "source_id": "S201",
+        "quote": "The median lifespan of the whole examined group is 9.29 years (IQR 6.98-11.12, IQR = Interquartile Range).",
+        "confidence": "medium",
+        "notes": "Korec E., Chalupa O., Hančl M., Korcová J., Bydžovská M. (2017), Open Veterinary Journal 7(2):170–173, doi:10.4314/ovj.v7i2.15 (S201): 'data of 232 dogs of the Cane Corso Italiano breed collected from kennels and individual owners from 25 countries.'; males 9.25 y (IQR 6.97-11.00), females 9.33 y (IQR 7.00-11.31), no significant sex difference. Not a UK primary-care population and the first author runs a Cane Corso kennel (koreccorso.cz) — used because McMillan 2024 (S54 / S135 / S123) has no reachable Cane Corso value, there is no VetCompass Cane Corso paper and there is no RKC breed page (the breed is not RKC-recognised). Consistent with the PDSA band 'Under 10 years' (S199)."
+      },
+      "pdsa": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S199",
+        "quote": "Average lifespan: Under 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box (S199). Basis of the shorter_lifespan chip together with S201 (runbook criterion: an A/B source gives an upper bound of 10 years or less)."
+      },
+      "rkc": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no RKC breed page — the Cane Corso is not recognised by The Royal Kennel Club (a UK parliament petition asks for recognition; no RKC page in the search results 2026-10-12)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024 Cane Corso median not reachable: the Dogs Trust 'shortest and longest' PDF returned a fetch error and the Dogs Trust breed table (S123) was not in the reachable set (2026-10-12); the paper text (S135) and Author Correction (S54) carry no per-breed table. The breed may not be in the UK dataset at all (PDSA S199: 'The Cane Corso is a relatively uncommon breed in the UK.'). Verify in McMillan 2024 Supplementary Table 3 before replacing the S201 median."
+      },
+      "senior_from": {
+        "value": 6.97,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 9.29 y (S201) → 0.75 × 9.29 = 6.9675 y = 83.61 → 84 months. The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value: no McMillan value reachable, no VetCompass paper, no RKC page (PDSA 'Under 10 years' has no lower bound). Closest rule row = a peer-reviewed breed median (as the Bernese Mountain Dog, M5-R10-12) → seeded verified=false. Alternative: Dogs Trust > 7 y = 84 months (S14) — the same number.",
+        "derived_from": [
+          "S11",
+          "S201"
+        ],
+        "months": 84,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "around 120",
+        "unit": "minutes/day",
+        "source_id": "S199",
+        "quote": "Your Cane Corso will need around two hours’ exercise every day.",
+        "confidence": "high",
+        "notes": "PDSA (S199); key facts 'Minimum exercise (per day): 2 hours'. No RKC breed page exists (breed not RKC-recognised) → runbook: else PDSA. 'This should include a couple of longer, brisk walks (or even a jog) with time to play off-lead somewhere secure.' (S199)."
+      },
+      "energy": {
+        "value": "active, likes tasks and being kept occupied; hates being bored",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "Cane Corsos love to be kept occupied and hate being bored.",
+        "confidence": "medium",
+        "notes": "PDSA (S199): 'Cane Corsos like being given specific tasks to make them feel useful.' and 'Puzzle games are perfect for Cane Corsos because they enjoy having something to focus on.' FCI (S197): 'extremely agile and responsive.'"
+      },
+      "off_lead_secure": {
+        "value": "off-lead play only somewhere secure",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "This should include a couple of longer, brisk walks (or even a jog) with time to play off-lead somewhere secure.",
+        "confidence": "low",
+        "notes": "PDSA (S199). No fence / escape advice → no secure_fencing tag."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "guardian of property, family and livestock; agile and responsive; sociable and loving with its owners",
+        "unit": "—",
+        "source_id": "S197",
+        "quote": "Guardian of property, family and livestock; extremely agile and responsive.",
+        "confidence": "high",
+        "notes": "PDSA (S199): 'Cane Corsos are sociable and loving dogs who enjoy the company of their owners and being out exploring.' AKC (S200): 'The Cane Corso as a protector of his property and owners is unequaled.' FCI disqualifying fault (S197): 'Aggressive or overly shy dogs.'"
+      },
+      "family": {
+        "value": "not recommended with small children (could be knocked over); suits adult-only homes or families with older children or teenagers",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "We really wouldn’t recommend having a Cane Corso if you have small children",
+        "confidence": "high",
+        "notes": "PDSA (S199), sentence continues 'as they could get hurt if they are accidentally knocked over.'; 'They suit adult-only homes best, or families with older children or teenagers who understand the breed.' Basis of the new consider tag not_for_small_children; never children / small_children / family_pet."
+      },
+      "experienced_owner": {
+        "value": "better suited to experienced dog owners",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "due to their size they’re better suited to experienced dog owners.",
+        "confidence": "medium",
+        "notes": "PDSA (S199) (clause as returned). Training: 'It’s really important they are trained using positive, reward-based training from a young age' (S199). Basis of experienced_owner (as the Rottweiler)."
+      },
+      "socialisation": {
+        "value": "socialise with many people and experiences from a young age",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "You’ll need to socialise your Cane Corso with lots of different people and experiences from a young age.",
+        "confidence": "medium",
+        "notes": "PDSA (S199). The game's training already covers reward-based training; socialisation has no separate mechanic — general advice for every puppy (no breed-specific frequency or amount)."
+      },
+      "time_alone": {
+        "value": "general PDSA advice — never alone for longer than four hours",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "As with any dog, you should never leave your Cane Corso alone for longer than four hours.",
+        "confidence": "low",
+        "notes": "PDSA (S199) general advice ('As with any dog') → no often_alone tag."
+      },
+      "other_pets": {
+        "value": "likely OK with a pet it grew up with; always supervise",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "you should always supervise them with other pets.",
+        "confidence": "medium",
+        "notes": "PDSA (S199): 'If they’ve grown up with another pet in the home, your Cane Corso is likely to be OK with them' → conditional, no other_pets tag."
+      },
+      "drooling": {
+        "value": "known to drool — keep a drool cloth at hand",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "Despite not needing much attention for their fur, Cane Corsos are known to drool.",
+        "confidence": "high",
+        "notes": "PDSA (S199): keep a drool cloth with you at all times (paraphrase; the fragment 'it's a good idea to keep a drool cloth with you at all times' was returned). Basis of the new consider tag drools. Wiping drool is an owner habit, not a care routine of the dog with a sourced frequency → no game mechanic."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found (S199)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific appetite statement. PDSA (S199) feeding advice: 'it’s usually recommended to split their daily allowance into two meals.' (= the game's two adult meals) and 'Remember to leave a gap after eating and before exercising.' (GDV, see health.gdv and proposed_game_parameters.cane_corso.meal_exercise_gap) → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages exist for this breed in the sources used. PDSA (S199): 'The Cane Corso is a relatively uncommon breed in the UK.' 'Because of this, we can’t be sure which health conditions will be more common with the breed.' Not a conformation welfare breed in the sources: no RKC Breed Watch entry (breed not RKC-recognised), no BVA / UFAW / VetCompass statement; not flat-faced (FCI muzzle : skull ≈ 1 : 2, 'noticeably shorter than the skull', S197) → no brachycephalic chip and no veterinary advice against advertising the breed type. Ear cropping and tail docking are illegal in the UK (PDSA S199) and the FCI 2023 standard requires natural ears and tail (S197).",
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia — x-ray screening of the parents before breeding",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "Hip dysplasia – where the hip joint doesn’t fit together perfectly, which will eventually lead to arthritis.",
+        "confidence": "medium",
+        "notes": "PDSA (S199): 'Before breeding, dogs should be screened by x-rays through the BVA/Kennel Club Hip Dysplasia Scheme.'; 'Elbow dysplasia – where the elbow joint doesn’t fit together perfectly, which will eventually lead to arthritis.'; 'Before breeding, dogs should be screened by x-rays through the BVA/KC Elbow Dysplasia Scheme.' Basis of the breeder checklist (K23). No Breed Watch point → no hips_hind_legs chip."
+      },
+      "gdv": {
+        "value": "gastric dilatation volvulus (bloat) — an emergency",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "Gastric Dilatation Volvulus (GDV) – often known as ‘bloat’, this is where the stomach twists.",
+        "confidence": "medium",
+        "notes": "PDSA (S199): 'It is an emergency and requires urgent veterinary attention.' Prevention advice on the same page: 'Remember to leave a gap after eating and before exercising.' → proposed_game_parameters.cane_corso.meal_exercise_gap."
+      },
+      "eyes": {
+        "value": "eyelid problems — entropion, ectropion, cherry eye",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "A range of eye problems including entropion, ectropion and cherry eye.",
+        "confidence": "medium",
+        "notes": "PDSA (S199)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35) lists neither 'Cane Corso' nor 'Cane Corso Italiano' (checked 2026-10-12) — Coren's 1994 ranking predates the breed's recognition (FCI provisional 1996, S198). Runbook rule: unranked → 1.0."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked (S35)."
+      },
+      "training_notes": {
+        "value": "positive, reward-based training from a young age; socialise early; likes specific tasks",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "It’s really important they are trained using positive, reward-based training from a young age",
+        "confidence": "medium",
+        "notes": "PDSA (S199): 'Cane Corsos like being given specific tasks to make them feel useful.'"
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.cane_corso.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium to large, robust and sturdy molosser with some elegance; slightly longer than tall",
+        "unit": "—",
+        "source_id": "S197",
+        "quote": "Medium to large sized. Robust and sturdy dog, nevertheless with some elegance.",
+        "confidence": "high",
+        "notes": "FCI (S197): 'The dog is rectangular in outline and is slightly longer than tall.'"
+      },
+      "colours": {
+        "value": [
+          "black",
+          "grey (blue) — lead-grey, slate-grey, light grey",
+          "black brindle",
+          "grey (blue) brindle",
+          "fawn — light or dark, with a black or grey mask",
+          "stag red",
+          "dark wheat"
+        ],
+        "unit": "list",
+        "source_id": "S197",
+        "quote": "Black, lead-grey (blue), slate-grey (blue), light grey (blue), light fawn; dark fawn and stag red;",
+        "confidence": "high",
+        "notes": "FCI (S197) continues: 'dark wheat colour; black brindle, grey (blue) brindle, in brindle dogs fawn stripes can be of different shades;' and 'in fawn and brindle dogs the black or grey (blue) mask on the muzzle should not go beyond the line of the eyes.' 'A small white patch on the chest, on the tip of the toes and on the bridge of the nose is acceptable.' Disqualifying: 'All colours not indicated in the standard; large white patches.' AKC (S200): black, grey, fawn and red, brindling allowed; disqualifies 'Any color with tan pattern markings as seen in black-and-tan breeds.' Never black-and-tan, never merle, never large white patches (runbook §3 colour rule)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Black first with the highest weight (the first colour of the FCI list and the portrait default), then grey, brindles, fawn, stag red and dark wheat."
+      },
+      "coat": {
+        "value": "short, shiny, very dense, slight undercoat",
+        "unit": "—",
+        "source_id": "S197",
+        "quote": "Hair: Short, shiny, very dense with a slight undercoat of vitreous texture.",
+        "confidence": "high",
+        "notes": "AKC (S200): 'The coat is short, stiff, shiny, adherent and dense with a light undercoat that becomes thicker in cold weather.' FCI disqualifying (S197): 'Semi-long, smooth or fringed hair.'"
+      },
+      "ears": {
+        "value": "natural (uncropped), medium-sized, triangular, held close to the cheeks",
+        "unit": "—",
+        "source_id": "S197",
+        "quote": "Ears are un-cropped.",
+        "confidence": "high",
+        "notes": "AKC (S200): 'If uncropped, they are medium size, triangular in shape, held tight to the cheeks' (the AKC standard also describes cropping). Ear cropping is illegal in the UK (PDSA S199). The portrait shows natural ears only."
+      },
+      "eyes": {
+        "value": "iris as dark as possible, according to the coat colour",
+        "unit": "—",
+        "source_id": "S197",
+        "quote": "The colour of the iris is as dark as possible but according to the coat colour.",
+        "confidence": "high",
+        "notes": "AKC disqualification (S200): 'Yellow bird of prey; blue eyes.'"
+      },
+      "nose": {
+        "value": "black (a grey mask may have a grey nose); muzzle strong, square, about half the skull length",
+        "unit": "—",
+        "source_id": "S197",
+        "quote": "Muzzle: Strong, square, noticeably shorter than the skull, ratio muzzle: skull approximately 1 : 2.",
+        "confidence": "high",
+        "notes": "FCI (S197): 'Nose: Black. A grey mask may have a nose colour of the same nuance.' Not a flat face; the AI appearance keeps a moderate muzzle and no exaggerated loose skin (welfare rule §3 — eyelid problems listed by PDSA S199)."
+      },
+      "tail": {
+        "value": "natural (undocked) tail, set fairly high, very broad at the root",
+        "unit": "—",
+        "source_id": "S197",
+        "quote": "Natural. Set on fairly high; very broad at the root.",
+        "confidence": "high",
+        "notes": "FCI (S197) 2023 standard: natural tail (docking not mentioned). The AKC standard (S200) still describes docking ('It is docked at the fourth vertebrae.'); tail docking is illegal in the UK (PDSA S199). The portrait shows the natural tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S199) only: the breed has no RKC breed page (not RKC-recognised), so there are no rkc_* fields (no 'Size of home', no 'Good with children'). Woodgreen, Dogs Trust breed page and AKC trait ratings not attempted.",
+      "pdsa_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": ""
+      },
+      "pdsa_exercise": {
+        "value": "around two hours every day",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "Your Cane Corso will need around two hours’ exercise every day.",
+        "confidence": "high",
+        "notes": "Key facts 'Minimum exercise (per day): 2 hours'."
+      },
+      "pdsa_grooming": {
+        "value": "a weekly brush",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "A weekly brush should be enough to keep on top of dead hairs.",
+        "confidence": "high",
+        "notes": "Not frequent_grooming (criterion: more than once a week). A sourced need: dog grooming has no game mechanic yet → ROADMAP M5-R13 (runbook §3, David 2026-10-11)."
+      },
+      "pdsa_shedding": {
+        "value": "sheds, more in spring and autumn",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "Like any dog, they do shed and will do so more in spring and autumn so remember you may need to vacuum a little more then.",
+        "confidence": "medium",
+        "notes": "Basis of the sheds tag."
+      },
+      "pdsa_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": ""
+      },
+      "pdsa_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "Average lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "shorter_lifespan criterion (A/B upper bound ≤ 10 years) met; Korec 2017 median 9.29 y (S201) agrees."
+      },
+      "pdsa_children": {
+        "value": "not recommended with small children; suits adult-only homes or families with older children or teenagers",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "We really wouldn’t recommend having a Cane Corso if you have small children",
+        "confidence": "high",
+        "notes": "→ new consider tag not_for_small_children; no children / small_children / family_pet tag."
+      },
+      "pdsa_experienced_owner": {
+        "value": "better suited to experienced dog owners",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "due to their size they’re better suited to experienced dog owners.",
+        "confidence": "medium",
+        "notes": "Basis of experienced_owner; never first_time_owner."
+      },
+      "pdsa_mental_stimulation": {
+        "value": "loves being kept occupied, hates being bored; puzzle games and specific tasks",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "Cane Corsos love to be kept occupied and hate being bored.",
+        "confidence": "medium",
+        "notes": "PDSA (S199): 'Puzzle games are perfect for Cane Corsos because they enjoy having something to focus on.' Basis of needs_mental_stimulation."
+      },
+      "pdsa_drooling": {
+        "value": "known to drool",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "Despite not needing much attention for their fur, Cane Corsos are known to drool.",
+        "confidence": "high",
+        "notes": "Basis of the new consider tag drools."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -14254,6 +14743,292 @@
         "confidence": "high",
         "notes": "Colours from the FCI / RKC standards (S190, S193: steel blue and tan only). Weight unsourced in prompts. Natural undocked tail (standard option, S190).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): dark steel blue and tan (the only standard colour) is the portrait default; natural coat length, undocked tail"
+      }
+    },
+    "cane_corso": {
+      "_note": "Unattended run M5-R10-23 (2026-10-12): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10); recorded as `decision` per entry. The senior boundary uses the closest rule row (a peer-reviewed breed median, S201, as the Bernese Mountain Dog) and is Claude's suggestion (verified=false, waiting for David). Two new consider keys by the runbook's 'new tag' rule: not_for_small_children and drools (PDSA S199). Sourced needs without a game mechanic: weekly brushing (S199) → ROADMAP M5-R13; a gap between a meal and exercise (GDV, S199) → new ROADMAP M5-R16 (runbook §3, David 2026-10-11).",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S199",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA 'around two hours’ exercise every day' (S199), key facts 'Minimum exercise (per day): 2 hours'. No RKC breed page (breed not RKC-recognised). Rule: one number N → N = 120.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (PDSA S199 'around two hours’ exercise every day'; no RKC page)"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000 (= Border Collie, Labrador, Golden, German Shepherd, Australian Shepherd, Siberian Husky, Rottweiler, German Shorthaired Pointer).",
+        "derived_from": [
+          "S199",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 84
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 84 = round(0.75 × 9.29 y × 12) = round(83.61) (S11 + Korec et al. 2017 breed median 9.29 y, S201 — no McMillan 2024 value reachable, no VetCompass Cane Corso paper, no RKC page). Alternative: 84 (Dogs Trust > 7 y, S14) — the same number. The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S201"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 84 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 84,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 9.29 y × 12) = round(83.61) = 84 (AAHA last 25 % of lifespan S11 × Korec et al. 2017 breed median 9.29 y, S201 — 232 dogs from 25 countries, kennel and owner data). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value for this breed: no McMillan 2024 value reachable, no VetCompass Cane Corso paper and no RKC breed page (PDSA 'Under 10 years', S199, has no lower bound). Closest rule row = a peer-reviewed breed median (as the Bernese Mountain Dog, M5-R10-12). Alternative: Dogs Trust > 7 y (S14) = 84 — the same number. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit.",
+        "derived_from": [
+          "S11",
+          "S201"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "predlog Claude 2026-10-12 (najbližja vrstica pravila runbooka, M5-R10-23) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 84
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 84 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not in Coren's ranking (S35) → unranked → 1.0. PDSA: positive, reward-based training from a young age (S199) — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PDSA two meals a day (S199) = the game's adult meals.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S199",
+        "quote": "A weekly brush should be enough to keep on top of dead hairs.",
+        "confidence": "high",
+        "notes": "PDSA (S199). The game has no dog grooming mechanic yet (cats only, M5-R06-05) — too large for a breed run → ROADMAP M5-R13 with a FEATURES 🗓 row; this value is its input.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa še ni zgrajena → ROADMAP M5-R13 (needs-david)"
+      },
+      "meal_exercise_gap": {
+        "value": null,
+        "unit": "minutes between a meal and exercise (sourced need, no number)",
+        "source_id": "S199",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "medium",
+        "notes": "PDSA (S199), feeding section; the same page lists GDV ('bloat') as 'an emergency' (health.gdv). The source gives no length of the gap → the mechanic and its number are for David. The game has no rule linking meals and walks (steps count whenever the child walks) — too large for a breed run (rule, child UI, report) → new ROADMAP M5-R16 with a FEATURES 🗓 row. The same PDSA advice appears for other large breeds already in the app (e.g. Bernese Mountain Dog S154) — M5-R16 can cover them too.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): premor med obrokom in gibanjem; vir ne navaja dolžine, mehanike ni → ROADMAP M5-R16 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-23); refs = JSON paths in this file. New vocabulary keys not_for_small_children and drools (consider). No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S199"
+            ],
+            "refs": [
+              "cane_corso.exercise.adult",
+              "cane_corso.suitability.pdsa_exercise"
+            ],
+            "quote": "S199 'Your Cane Corso will need around two hours’ exercise every day.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S199"
+            ],
+            "refs": [
+              "cane_corso.exercise.adult",
+              "cane_corso.suitability.pdsa_exercise"
+            ],
+            "quote": "S199 'around two hours’ exercise every day'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S199"
+            ],
+            "refs": [
+              "cane_corso.behaviour.family",
+              "cane_corso.suitability.pdsa_children"
+            ],
+            "quote": "S199 'We really wouldn’t recommend having a Cane Corso if you have small children'",
+            "note": "NEW consider key (runbook 'new tag' rule): no vocabulary key covers it (small_children is only ever a suits tag; fragile_older_children is about fragile bones). Calm chip, no number."
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S199"
+            ],
+            "refs": [
+              "cane_corso.behaviour.experienced_owner",
+              "cane_corso.suitability.pdsa_experienced_owner"
+            ],
+            "quote": "S199 'due to their size they’re better suited to experienced dog owners.'"
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S199"
+            ],
+            "refs": [
+              "cane_corso.exercise.energy",
+              "cane_corso.suitability.pdsa_mental_stimulation"
+            ],
+            "quote": "S199 'Cane Corsos love to be kept occupied and hate being bored.'"
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S199",
+              "S201"
+            ],
+            "refs": [
+              "cane_corso.lifespan.pdsa",
+              "cane_corso.lifespan.median_international"
+            ],
+            "quote": "S199 'Average lifespan: Under 10 years'; S201 'The median lifespan of the whole examined group is 9.29 years'",
+            "note": "Runbook criterion: an A/B source gives an upper bound of 10 years or less (no RKC page). No number in the chip."
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S199"
+            ],
+            "refs": [
+              "cane_corso.suitability.pdsa_shedding"
+            ],
+            "quote": "S199 'Like any dog, they do shed and will do so more in spring and autumn'"
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S199"
+            ],
+            "refs": [
+              "cane_corso.behaviour.drooling",
+              "cane_corso.suitability.pdsa_drooling"
+            ],
+            "quote": "S199 'Cane Corsos are known to drool.'",
+            "note": "NEW consider key (runbook 'new tag' rule): a sourced trait a family notices every day; no vocabulary key covers it. Calm chip, no number."
+          }
+        ],
+        "not_proposed": {
+          "children": "PDSA does not recommend the breed with small children (S199); older children only.",
+          "small_children": "PDSA advises against it (S199) → not_for_small_children instead.",
+          "family_pet": "PDSA: suits adult-only homes best, or families with older children or teenagers (S199) — no plain family-pet statement.",
+          "first_time_owner": "PDSA: better suited to experienced dog owners (S199) → experienced_owner instead.",
+          "apartment": "No RKC 'Size of home' field (no RKC page); large dog — no source for a flat.",
+          "large_home": "Criterion is RKC 'Large house' — no RKC page.",
+          "other_pets": "PDSA: likely OK only with a pet it grew up with, always supervise (S199).",
+          "often_alone": "Only the general PDSA four-hour advice (S199).",
+          "older_owners": "No source.",
+          "low_shedding": "Sheds (S199).",
+          "food_motivated_weight": "No breed-specific appetite statement (S199).",
+          "chews_when_bored": "No chewing statement (S199).",
+          "frequent_grooming": "A weekly brush (S199) — criterion is more than once a week.",
+          "may_herd_children": "No source.",
+          "brachycephalic_breathing": "Not flat-faced (FCI muzzle : skull ≈ 1 : 2, S197).",
+          "hips_hind_legs": "Hip / elbow dysplasia listed by PDSA (S199) but no Breed Watch / vet-association conformation point (breed not RKC-recognised) → recorded under health and the breeder checklist.",
+          "heart_and_spine": "No source.",
+          "back_spine": "No source.",
+          "sensitive_skin": "No source.",
+          "secure_fencing": "PDSA mentions only off-lead play 'somewhere secure' (S199), no fence advice.",
+          "fragile_older_children": "About fragile bones (Yorkshire Terrier) — not this breed's reason → not_for_small_children."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family; consider long_daily_exercise, not_for_small_children (new key), experienced_owner, needs_mental_stimulation, shorter_lifespan, sheds, drools (new key)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (no veterinary advice against showing the breed in advertising); never with small children, never with cropped ears or a docked tail",
+        "unit": "—",
+        "source_id": "S199",
+        "quote": "We really wouldn’t recommend having a Cane Corso if you have small children",
+        "confidence": "high",
+        "notes": "Not a welfare-concern breed in the sources (no BVA / UK Brachycephalic Working Group / UFAW / RVC / RKC statement; not flat-faced, S197). The only veterinary advice against advertising a breed type is for flat-faced breeds (S92). Marketing never promises health; per PDSA (S199) the breed is never shown as a dog for families with small children or first-time owners, and never with cropped ears or a docked tail (illegal in the UK, S199; the FCI 2023 standard has natural ears and tail, S197). The 'never with small children / cropped ears' limits are Claude's reading of the sources, open for David.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising the breed)"
+      },
+      "ai_appearance": {
+        "value": "adult Cane Corso, solid black (default); short shiny dense coat; natural uncropped medium triangular ears held close to the cheeks; natural undocked tail; dark eyes; strong square muzzle about half the skull length, moderate — no exaggerated loose skin or droopy eyelids; robust, athletic, slightly longer than tall; no large white patches, never black-and-tan or merle",
+        "unit": "—",
+        "source_id": "S197",
+        "quote": "Black, lead-grey (blue), slate-grey (blue), light grey (blue), light fawn; dark fawn and stag red;",
+        "confidence": "high",
+        "notes": "Colours from the FCI standard (S197); 'All colours not indicated in the standard; large white patches.' disqualify (S197); AKC disqualifies tan pattern markings (S200). Natural ears and tail (S197; cropping and docking illegal in the UK, S199). Moderate face and eyelids (PDSA eyelid problems S199 — welfare rule §3).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): FCI colours only (portrait black), natural ears and tail, moderate muzzle and eyelids; no large white patches"
       }
     }
   }
