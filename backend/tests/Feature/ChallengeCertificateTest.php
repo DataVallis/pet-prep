@@ -293,6 +293,109 @@ describe('completion', function () {
     });
 });
 
+describe('end day, launch and scan (QA)', function () {
+    it('waits until the end day is closed and counts that whole day (QA M2)', function () {
+        [, $child, $pet] = certFamily();
+        certPlant($pet, $child, 69, 30); // 69 / 99 would round to 70
+        DB::table('pets')->where('id', $pet->id)->update(['routines_closed_through' => '2026-12-27']);
+
+        certTick(CERT_DONE);
+        expect(certRow($pet, $child))->toBeNull();
+
+        // The evening feed of the end day (after the 09:00 end) is missed — it counts.
+        PetDailyRoutine::create([
+            'pet_id' => $pet->id, 'local_date' => '2026-12-28', 'routine_type' => 'feed', 'slot' => 1,
+            'opens_at' => Carbon::parse('2026-12-28 16:00:00', 'UTC'), 'due_at' => Carbon::parse('2026-12-28 18:00:00', 'UTC'),
+            'status' => 'missed',
+        ]);
+        DB::table('pets')->where('id', $pet->id)->update(['routines_closed_through' => '2026-12-28']);
+        certTick('2026-12-28 23:10:00');
+
+        $row = certRow($pet, $child);
+        expect($row->care_score)->toBe(69) // 69 / 100: the whole end day counts
+            ->and($row->outcome)->toBe(CertificateOutcome::Report)
+            ->and($row->completed_at->utc()->toDateTimeString())->toBe(CERT_DONE);
+    });
+
+    it('never backfills challenges that ended before the launch (QA M3)', function () {
+        // Born 2026-07-01: the 84 days ended 2026-09-23, before certificates existed.
+        certAt('2026-07-01 08:00:00');
+        $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        $child = User::factory()->child()->create(['parent_id' => $parent->id]);
+        $pet = disableHygieneEvents(Pet::factory()->labradorRetriever()->create(['user_id' => $child->id]));
+        DB::table('pets')->where('id', $pet->id)->update(['routines_closed_through' => '2027-03-31']);
+        certPlant($pet->fresh(), $child, 90, 10, '2026-07-02');
+        // A game over before the launch as well.
+        [, $child2, $pet2] = certFamily('borderCollie');
+        certPlant($pet2, $child2, 10, 0);
+        DB::table('pets')->where('id', $pet2->id)->update(['is_game_over' => true, 'is_active' => false]);
+        DB::table('activities_log')->insert(['pet_id' => $pet2->id, 'activity_type' => 'ignored_warning', 'value' => -2, 'created_at' => '2026-10-10 10:00:00']);
+
+        certTick('2026-10-13 10:00:00');
+        certTick(CERT_DONE);
+
+        expect(ChallengeCertificate::count())->toBe(0)
+            ->and(PushNotification::count())->toBe(0);
+    });
+
+    it('creates nothing when the child had no scored routine (QA M3)', function () {
+        [, $child, $pet] = certFamily();
+
+        certTick(CERT_DONE);
+
+        expect(certRow($pet, $child))->toBeNull()
+            ->and(DB::table('pets')->where('id', $pet->id)->value('certificate_next_check_at'))->toStartWith('2999-12-31');
+    });
+
+    it('never lets pets waiting for payment starve a due pet (QA M1)', function () {
+        certAt(CERT_BORN);
+        $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        for ($i = 0; $i < ChallengeCertificateService::MAX_PETS_PER_TICK + 1; $i++) {
+            $c = User::factory()->child()->create(['parent_id' => $parent->id]);
+            $locked = Pet::factory()->labradorRetriever()->create(['user_id' => $c->id]);
+            DB::table('pets')->where('id', $locked->id)->update(['payment_locked_at' => now(), 'routines_closed_through' => '2027-03-31']);
+        }
+        [, $child, $pet] = certFamily();
+        certPlant($pet, $child, 90, 10);
+
+        expect(certTick(CERT_DONE)['pets'])->toBe(1);
+        expect(certRow($pet, $child))->not->toBeNull();
+    });
+
+    it('moves pets that cannot finish yet to the back of the scan (QA M1)', function () {
+        certAt(CERT_BORN);
+        $parent = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        for ($i = 0; $i < ChallengeCertificateService::MAX_PETS_PER_TICK + 1; $i++) {
+            $c = User::factory()->child()->create(['parent_id' => $parent->id]);
+            $paused = Pet::factory()->labradorRetriever()->create(['user_id' => $c->id]);
+            // A finished 10-day payment lock: these end 10 days later.
+            PetStatusPeriod::create(['pet_id' => $paused->id, 'kind' => 'payment_lock',
+                'started_at' => Carbon::parse('2026-11-01 08:00:00', 'UTC'), 'ended_at' => Carbon::parse('2026-11-11 08:00:00', 'UTC')]);
+        }
+        [, $child, $pet] = certFamily();
+        certPlant($pet, $child, 90, 10);
+
+        certTick(CERT_DONE);
+        expect(certRow($pet, $child))->toBeNull(); // 200 older pets came first …
+        certTick('2026-12-28 08:01:00');
+        expect(certRow($pet, $child))->not->toBeNull(); // … and wait for their own end now
+    });
+
+    it('looks again at once when the pet goes to the shelter', function () {
+        [, $child, $pet] = certFamily();
+        certPlant($pet, $child, 40, 0);
+        // Looked at before (e.g. a sibling's end) and parked until the child's own end.
+        DB::table('pets')->where('id', $pet->id)->update(['certificate_next_check_at' => CERT_DONE]);
+
+        certAt('2026-11-04 10:00:00');
+        DB::table('activities_log')->insert(['pet_id' => $pet->id, 'activity_type' => 'ignored_warning', 'value' => -2, 'created_at' => now()]);
+        Pet::find($pet->id)->update(['is_game_over' => true, 'is_active' => false]);
+        certTick('2026-11-04 10:01:00');
+
+        expect(certRow($pet, $child)->reason)->toBe(CertificateReason::GameOver);
+    });
+});
+
 describe('push texts', function () {
     it('tells parents in English and Slovenian without names or species', function () {
         expect(PushCopy::body(PushType::ChallengeCompleted, 'certificate', 'parent', 'en'))->toContain('Certificate of Responsibility')
@@ -357,6 +460,50 @@ describe('parent API', function () {
         expect(CertificatePdfRenderer::pageCount($pdf))->toBe(1);
     });
 
+    it('fits the longest single-word names by their measured width (QA M5)', function () {
+        $w = str_repeat('W', 30);
+        $size = CertificatePdfRenderer::childNameSize($w);
+        expect(CertificatePdfRenderer::textWidth($w, 'BricolageExtraBold', $size, CertificatePdfRenderer::childNameLetterSpacing($size)))
+            ->toBeLessThanOrEqual(CertificatePdfRenderer::CHILD_NAME_WIDTH)
+            ->and(CertificatePdfRenderer::childNameSize('Maja'))->toBe(68)
+            ->and(CertificatePdfRenderer::petNameSize('Luna'))->toBe(28)
+            // Too wide for the card even at the minimum: it wraps (break-word) instead.
+            ->and(CertificatePdfRenderer::petNameSize($w))->toBe(14);
+        foreach (['en', 'sl'] as $locale) {
+            $pdf = app(CertificatePdfRenderer::class)->render([
+                'locale' => $locale, 'child_name' => $w, 'pet_name' => $w, 'breed_label' => 'Kavalir King Charles španjel',
+                'care_score' => 100, 'number' => 'PP-2026-123456', 'completed_local_date' => '2026-12-28',
+            ]);
+            expect(CertificatePdfRenderer::pageCount($pdf))->toBe(1);
+        }
+    });
+
+    it('refuses names the certificate fonts cannot print and never offers one as a default (QA M4)', function () {
+        [$parent, $child, $pet] = certFamily();
+        certPlant($pet, $child, 86, 14);
+        certTick(CERT_DONE);
+        $row = certRow($pet, $child);
+
+        certGenerate($parent, $row, ['child_name' => 'Маша'])->assertStatus(422)->assertJsonPath('codes.child_name', 'name_unsupported_script');
+        certGenerate($parent, $row, ['pet_name' => '小白'])->assertStatus(422)->assertJsonPath('codes.pet_name', 'name_unsupported_script');
+        certGenerate($parent, $row, ['child_name' => 'Žiga Čebašek', 'pet_name' => "D'Artagnan"])->assertOk();
+
+        DB::table('users')->where('id', $child->id)->update(['name' => 'Маша']);
+        actingAsRole($parent);
+        expect(getJson('/api/parent/certificates')->json('certificates.0.defaults.child_name'))->toBe('');
+    });
+
+    it('cleans a breed default with parentheses into a valid pet name (QA m2)', function () {
+        [$parent, $child, $pet] = certFamily('standardPoodle');
+        certPlant($pet, $child, 86, 14);
+        certTick(CERT_DONE);
+
+        actingAsRole($parent);
+        $defaults = getJson('/api/parent/certificates', ['Accept-Language' => 'en'])->json('certificates.0.defaults');
+        expect($defaults['pet_name'])->toBe('Poodle Standard');
+        certGenerate($parent, certRow($pet, $child), ['pet_name' => $defaults['pet_name'], 'child_name' => $defaults['child_name']])->assertOk();
+    });
+
     it('validates the language and both names', function () {
         [$parent, $child, $pet] = certFamily();
         certPlant($pet, $child, 86, 14);
@@ -392,7 +539,7 @@ describe('PDF access', function () {
     it('lets the family parents and the child open the signed PDF, nobody else', function () {
         [$parent, $child, $pet] = certFamily();
         certPlant($pet, $child, 86, 14);
-        [, $otherChild] = certFamily('borderCollie');
+        [$otherParent, $otherChild] = certFamily('borderCollie');
         certTick(CERT_DONE);
         $row = certRow($pet, $child);
 
@@ -416,6 +563,9 @@ describe('PDF access', function () {
         app('auth')->forgetGuards();
         actingAsRole($otherChild);
         $this->get($path)->assertForbidden();
+        app('auth')->forgetGuards();
+        actingAsRole($otherParent);
+        $this->get($path)->assertForbidden(); // a valid URL + another family's parent token
 
         app('auth')->forgetGuards();
         $this->get(str_replace('signature=', 'signature=0', $path))->assertForbidden();

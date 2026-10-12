@@ -30,6 +30,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Support\Facades\DB;
 
 class Pet extends Model
 {
@@ -143,6 +144,10 @@ class Pet extends Model
             }
             // A payment lock / payment just opened or closed a period (M3-11b).
             $pet->forgetProgramPauses();
+            // M2-01d: a game over ends the running challenges — the certificate scan looks again.
+            if ($pet->wasChanged('is_game_over') && $pet->is_game_over) {
+                DB::table('pets')->where('id', $pet->id)->update(['certificate_next_check_at' => null]);
+            }
         });
 
         // Freeze bookkeeping (M1-02). Hard stop and illness freeze both the
@@ -277,6 +282,8 @@ class Pet extends Model
         // M5-R06-05 bookkeeping (the apps get GroomingPayload instead).
         'coat_matted_at',
         'grooming_weeks_checked',
+        // M2-01d bookkeeping: when ChallengeCertificateService looks at the pet again.
+        'certificate_next_check_at',
     ];
 
     /**
@@ -328,6 +335,7 @@ class Pet extends Model
             'happy_until' => 'datetime',
             'coat_matted_at' => 'datetime',
             'grooming_weeks_checked' => 'integer',
+            'certificate_next_check_at' => 'datetime',
         ];
     }
 

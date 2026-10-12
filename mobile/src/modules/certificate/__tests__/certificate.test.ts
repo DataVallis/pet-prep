@@ -252,3 +252,11 @@ describe('setDashboardCertificate', () => {
     expect(setDashboardCertificate(undefined, cert(makeCertificatePayload()))).toBeUndefined();
   });
 });
+
+describe('name_unsupported_script', () => {
+  it('maps the server code to the field', () => {
+    expect(
+      classifyCertificateError(new ApiError('x', 422, { codes: { child_name: 'name_unsupported_script' }, reason: 'name_unsupported_script' })),
+    ).toEqual({ child_name: 'name_unsupported_script' });
+  });
+});

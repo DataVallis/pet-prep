@@ -5,6 +5,7 @@ namespace App\Services;
 use Carbon\CarbonImmutable;
 use Dompdf\Dompdf;
 use Dompdf\Options;
+use FontLib\Font;
 use Illuminate\Support\Facades\File;
 
 /**
@@ -39,6 +40,11 @@ class CertificatePdfRenderer
             'number' => $data['number'],
             'date' => self::formatDate($data['completed_local_date'], $locale),
             'childNameSize' => self::childNameSize($data['child_name']),
+            'childNameSpacing' => self::childNameLetterSpacing(self::childNameSize($data['child_name'])),
+            // dompdf's line box of a small name is tighter: keep the underline clear of it.
+            'underlineGap' => (int) round(2 + (68 - self::childNameSize($data['child_name'])) * 0.3),
+            // A pet name that wraps moves the card's content up so the breed stays inside.
+            'petNameWraps' => self::textWidth($data['pet_name'], 'BricolageBold', self::petNameSize($data['pet_name'])) > self::PET_NAME_WIDTH,
             'petNameSize' => self::petNameSize($data['pet_name']),
             'fonts' => self::fonts(),
             'mark' => self::svgDataUri('mark.svg'),
@@ -89,36 +95,110 @@ class CertificatePdfRenderer
         return $locale === 'sl' ? $d->format('j. n. Y') : $d->format('j M Y');
     }
 
-    /** The child's name shrinks so up to 30 characters fit the 606 px column (design: 68 px). */
+    /** Text column of the child's name (px) and the pet card's inner width. */
+    public const CHILD_NAME_WIDTH = 606;
+
+    public const PET_NAME_WIDTH = 168;
+
+    /**
+     * The child's name: the largest size from the design's 68 px down to 20 px
+     * whose MEASURED width (font advance widths + letter spacing) fits the
+     * 606 px column; below that it wraps (break-word). Up to 30 characters of
+     * the widest letter fit at 20 px.
+     */
     public static function childNameSize(string $name): int
     {
-        $len = mb_strlen($name);
-
-        return match (true) {
-            $len <= 12 => 68,
-            $len <= 16 => 56,
-            $len <= 22 => 42,
-            default => 32,
-        };
+        return self::fitSize($name, 'BricolageExtraBold', 68, 20, self::CHILD_NAME_WIDTH, true);
     }
 
-    /** The pet's name inside its 192 px card (design: 28 px). */
+    /** The pet's name inside its card (design 28 px, down to 14 px, then it wraps). */
     public static function petNameSize(string $name): int
     {
-        $len = mb_strlen($name);
+        return self::fitSize($name, 'BricolageBold', 28, 14, self::PET_NAME_WIDTH, false);
+    }
 
-        return match (true) {
-            $len <= 10 => 28,
-            $len <= 14 => 22,
-            $len <= 20 => 17,
-            default => 14,
-        };
+    /** Letter spacing of the child's name at $size px (design: −2 px at 68 px). */
+    public static function childNameLetterSpacing(int $size): float
+    {
+        return round(-2 * $size / 68, 2);
+    }
+
+    private static function fitSize(string $text, string $family, int $max, int $min, int $width, bool $childSpacing): int
+    {
+        for ($size = $max; $size > $min; $size--) {
+            $spacing = $childSpacing ? self::childNameLetterSpacing($size) : 0.0;
+            if (self::textWidth($text, $family, $size, $spacing) <= $width) {
+                return $size;
+            }
+        }
+
+        return $min;
+    }
+
+    /**
+     * Width in px of $text set in $family at $size px: sum of the glyph
+     * advance widths (php-font-lib, the TTF dompdf embeds) + letter spacing
+     * per character. Kerning is ignored (it only narrows the text).
+     */
+    public static function textWidth(string $text, string $family, float $size, float $letterSpacing = 0.0): float
+    {
+        $m = self::metrics($family);
+        $units = 0;
+        $chars = mb_str_split($text);
+        foreach ($chars as $char) {
+            $units += $m['widths'][mb_ord($char)] ?? $m['upm'];
+        }
+
+        return $units / $m['upm'] * $size + $letterSpacing * count($chars);
+    }
+
+    /**
+     * True when every character of $text has a glyph in $family (QA M4: the
+     * brand fonts are Latin / Latin-ext only — anything else would print blank).
+     */
+    public static function supports(string $text, string $family): bool
+    {
+        $m = self::metrics($family);
+        foreach (mb_str_split($text) as $char) {
+            if (! isset($m['widths'][mb_ord($char)])) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /** @var array<string, array{upm: int, widths: array<int, int>}> */
+    private static array $metrics = [];
+
+    /**
+     * @return array{upm: int, widths: array<int, int>} code point → advance width (font units)
+     */
+    private static function metrics(string $family): array
+    {
+        if (isset(self::$metrics[$family])) {
+            return self::$metrics[$family];
+        }
+
+        $font = Font::load(self::fonts()[$family]);
+        $font->parse();
+        $upm = (int) $font->getData('head', 'unitsPerEm');
+        $hmtx = $font->getData('hmtx');
+        $widths = [];
+        foreach ($font->getUnicodeCharMap() as $codePoint => $glyph) {
+            if (isset($hmtx[$glyph][0])) {
+                $widths[(int) $codePoint] = (int) $hmtx[$glyph][0];
+            }
+        }
+        $font->close();
+
+        return self::$metrics[$family] = ['upm' => $upm, 'widths' => $widths];
     }
 
     /**
      * @return array<string, string> family → absolute TTF path
      */
-    private static function fonts(): array
+    public static function fonts(): array
     {
         return [
             'BricolageBold' => resource_path('fonts/BricolageGrotesque-700.ttf'),

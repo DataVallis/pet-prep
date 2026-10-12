@@ -72,7 +72,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
     - [x] Preostanek *(2026-10-04, `feat/M2-05-parent-dashboard-ui`)*: kartica na otroka s psom in metrikami tega psa, nadzor po psu (skrbniki, hard stop s `pet_id`), statistika / poročilo po otroku, "Povabi drugega starša" (koda + deljenje) in "Imate kodo družine?" (vnos kode, napake 409/422/429)
   - [ ] M2-01b Odstrani zastarele `users.parent_id`, `pets.user_id`, ogledalo `users.timezone` in mostne model hooke, ko jih aplikacija ne bere več
   - [x] M2-01c Formula ocene / semaforja po otroku (skupni pes) — David 4. 10.: "pošten delež" (PRODUCT_SPEC §11.2); zgrajeno z M2-06 *(2026-10-04, `feat/M2-05-dashboard-scoring`)*
-  - [ ] M2-01d Certifikat po otroku (12 tednov) iz dejanj otroka
+  - [x] M2-01d Certifikat po otroku (12 tednov) iz dejanj otroka — *2026-10-12 (`feat/M2-01d-certificate`, David 12. 10.): zaključek po 84 dneh programa, Care Score ≥ 70 → certifikat, sicer poročilo; starš ustvari PDF (jezik EN/SL, popravi ime otroka in ljubljenčka), otrok ga vidi, push staršu; `docs/product/CERTIFICATE_SPEC.md`. Ni preverjeno na telefonu.*
   - [ ] Odprto **(D)**: nov pes po game overu za istega otroka, skrbnik zapusti skupnega psa, starš zapusti družino, združevanje družin
 - [~] M2-02 Otroški profil brez emaila (**odločeno**): starš ustvari otroka (ime, starost), PIN pairing izda Sanctum token z abilities `child:*`; odstraniti email/geslo prijavo za otroka
   - [x] Starševski zaslon "Dodaj otroka" (obstoječi `POST /api/parent/generate-pin`): PIN `734 912`, odštevanje 15 min, "Nova koda", 429 ohladitev, samodejna potrditev, ko se otrok poveže *(2026-10-03, ista veja)*

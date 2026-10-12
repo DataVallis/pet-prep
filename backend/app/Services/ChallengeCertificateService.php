@@ -37,20 +37,32 @@ use Throwable;
  * CareScoreService::progress() turns `completed`. Only a challenge-plan pet
  * (never the free plan, M3-11), only ACTIVE caretakers (a deleted child's
  * tombstone gets nothing). For each such (pet, child) without a row:
- *  - final score = the child's fair-share Care Score of routines with a
- *    family-local date ≤ the local end date (CareScoreService::childScore
- *    `$toDate`; routines still pending at the tick are not scored, like
- *    everywhere else) — frozen, never recomputed;
+ *  - the row is written once the family-local END DAY is closed by the
+ *    routine ledger (`pets.routines_closed_through` ≥ that date — QA M2):
+ *    final score = the child's fair-share Care Score of every routine up to
+ *    AND INCLUDING the end day (CareScoreService::childScore `$toDate`),
+ *    deterministic, never recomputed;
  *  - outcome `certificate` when score ≥ CERTIFICATE_MIN_SCORE (70), else
- *    `report` / `low_score` (also when the child had no scored routine);
+ *    `report` / `low_score`; no scored routine at all (score null) → no row;
  *  - game over BEFORE the end → `report` / `game_over`, written at the first
  *    tick after the game over for every caretaker who had started by then
- *    (completed_at = the game over, score up to that local day). A game over
- *    after the 84 days does not change an ended challenge.
+ *    (completed_at = the game over; score = closed days up to the game-over
+ *    day, null when none is closed yet). A game over after the 84 days does
+ *    not change an ended challenge;
+ *  - only ends at / after `config('certificates.launched_at')` (QA M3: the
+ *    first deploy never backfills history);
  *  - a pet switched off by an admin (inactive, no game over) is skipped.
  * One row per (pet, child) (unique + re-check under the pet row lock), one
  * push `challenge_completed` to the parents in the same transaction
  * (`notified_at`, queued after commit).
+ *
+ * Scan (QA M1): SQL keeps only pets that can end now — active, not waiting
+ * for payment, with a caretaker who started ≥ 84 days ago; or game over after
+ * the launch — ordered by `pets.certificate_next_check_at` (null first). After
+ * a pet is looked at, that column is set to the earliest moment something can
+ * change (a caretaker's end, a retry), else far in the future; a new caretaker
+ * / contract or a game over resets it. So pets that cannot finish never starve
+ * the others.
  *
  * Generation (`generate()`, parent): outcome `certificate` only; renders the
  * PDF locally (CertificatePdfRenderer, no external HTTP) into the private
@@ -65,13 +77,22 @@ class ChallengeCertificateService
     /** 12 weeks of program time. */
     public const CHALLENGE_DAYS = CareScoreService::CHALLENGE_WEEKS * 7;
 
-    /** Candidate pets looked at per tick (oldest id first). */
+    /** Candidate pets looked at per tick (next check first, then oldest id). */
     public const MAX_PETS_PER_TICK = 200;
 
     /** Longest name printed on the certificate (child and pet). */
     public const MAX_NAME_LENGTH = 30;
 
     public const DISK = 'certificates';
+
+    /** `certificate_next_check_at` of a pet with nothing left to finish (reset by new caretakers / contracts / game over). */
+    public const NEVER = '2999-12-31 00:00:00';
+
+    /** A pet whose end day is not closed yet (or that failed) is looked at again this much later. */
+    public const RETRY_MINUTES = 5;
+
+    /** A pet whose end cannot be computed now (open payment lock) is looked at again this much later. */
+    public const LOCKED_RECHECK_HOURS = 6;
 
     public function __construct(
         private readonly CareScoreService $scores,
@@ -85,6 +106,12 @@ class ChallengeCertificateService
         return Storage::disk(self::DISK);
     }
 
+    /** Feature launch (config/certificates.php): earlier ends get no row. */
+    public static function launchedAt(): CarbonImmutable
+    {
+        return CarbonImmutable::parse((string) config('certificates.launched_at', '2026-10-12T00:00:00Z'))->utc();
+    }
+
     // ──────────────────────────────────────────────────────────────
     //  Completion (tick)
     // ──────────────────────────────────────────────────────────────
@@ -96,23 +123,35 @@ class ChallengeCertificateService
     {
         $now = CarbonImmutable::instance($now ?? now())->utc();
         $cutoff = $now->subDays(self::CHALLENGE_DAYS);
+        $launch = self::launchedAt();
+
+        // Lower bound of a caretaker's start (completion ≥ start + 84 days).
+        $start = 'COALESCE(c.started_at, (SELECT MIN(k.signed_at) FROM pet_contracts k WHERE k.pet_id = c.pet_id AND k.user_id = c.user_id), '
+            .'CASE WHEN c.requires_contract THEN NULL ELSE pets.born_at END)';
+        $pending = fn ($q) => $q->selectRaw('1')
+            ->from('pet_caretakers as c')
+            ->whereColumn('c.pet_id', 'pets.id')
+            ->whereNotNull('c.user_id')
+            ->whereNull('c.ended_at')
+            ->whereNotExists(fn ($q) => $q->selectRaw('1')->from('challenge_certificates as cc')
+                ->whereColumn('cc.pet_id', 'c.pet_id')->whereColumn('cc.child_user_id', 'c.user_id'));
 
         $pets = Pet::born()
             ->where('plan', PetPlan::Challenge->value)
-            ->where(fn ($q) => $q->where(fn ($q) => $q->where('is_active', true)->where('born_at', '<=', $cutoff))
-                ->orWhere('is_game_over', true))
-            ->whereExists(fn ($q) => $q->selectRaw('1')
-                ->from('pet_caretakers as c')
-                ->whereColumn('c.pet_id', 'pets.id')
-                ->whereNotNull('c.user_id')
-                ->whereNull('c.ended_at')
-                ->whereNotExists(fn ($q) => $q->selectRaw('1')->from('challenge_certificates as cc')
-                    ->whereColumn('cc.pet_id', 'c.pet_id')->whereColumn('cc.child_user_id', 'c.user_id'))
-                ->where(fn ($q) => $q->whereNotNull('c.started_at')
-                    ->orWhere('c.requires_contract', false)
-                    ->orWhereExists(fn ($q) => $q->selectRaw('1')->from('pet_contracts as k')
-                        ->whereColumn('k.pet_id', 'c.pet_id')->whereColumn('k.user_id', 'c.user_id')
-                        ->whereNotNull('k.signed_at'))))
+            ->where(fn ($q) => $q->whereNull('certificate_next_check_at')->orWhere('certificate_next_check_at', '<=', $now))
+            ->where(fn ($q) => $q
+                // Ending by time: active, not waiting for payment, a caretaker 84+ days in.
+                ->where(fn ($q) => $q->where('is_active', true)->whereNull('payment_locked_at')
+                    ->whereExists(fn ($q) => $pending($q)->whereRaw("{$start} <= ?", [$cutoff])))
+                // Ending by a game over after the launch, with a caretaker who had started.
+                ->orWhere(fn ($q) => $q->where('is_game_over', true)
+                    ->whereExists(fn ($q) => $q->selectRaw('1')->from('activities_log as g')
+                        ->whereColumn('g.pet_id', 'pets.id')
+                        ->where('g.activity_type', ActivityType::IgnoredWarning->value)
+                        ->where('g.value', -2)
+                        ->where('g.created_at', '>=', $launch))
+                    ->whereExists(fn ($q) => $pending($q)->whereRaw("{$start} IS NOT NULL"))))
+            ->orderByRaw('certificate_next_check_at ASC NULLS FIRST')
             ->orderBy('id')
             ->limit(self::MAX_PETS_PER_TICK)
             ->with(['family', 'paymentLockPeriods'])
@@ -123,9 +162,10 @@ class ChallengeCertificateService
             try {
                 $created += $this->processPet($pet, $now);
             } catch (Throwable $e) {
-                // One pet never stops the tick; retried next minute.
+                // One pet never stops the tick; it moves to the back and is retried later.
                 Log::error('ChallengeCertificateService: completion failed', ['pet_id' => $pet->id, 'error' => $e->getMessage()]);
                 report($e);
+                $this->setNextCheck($pet, $now->addMinutes(self::RETRY_MINUTES));
             }
         }
 
@@ -133,19 +173,32 @@ class ChallengeCertificateService
     }
 
     /**
-     * Rows created for one pet (0 when nobody finished yet).
+     * Rows created for one pet (0 when nobody finished yet). Always moves the
+     * pet's `certificate_next_check_at`.
      */
     public function processPet(Pet $pet, CarbonImmutable $now): int
     {
         if ($pet->isFreePlan() || $pet->isUnborn() || (! $pet->is_active && ! $pet->is_game_over)) {
+            $this->setNextCheck($pet, null);
+
             return 0;
         }
 
+        $tz = $pet->familyTimezone();
+        $launch = self::launchedAt();
+        $closedThrough = $pet->routines_closed_through !== null ? substr((string) $pet->routines_closed_through, 0, 10) : null;
         $caretakers = PetCaretaker::where('pet_id', $pet->id)->orderBy('id')->get();
         $contracts = PetContract::where('pet_id', $pet->id)->get(['pet_id', 'user_id', 'signed_at']);
         $existing = ChallengeCertificate::where('pet_id', $pet->id)->pluck('child_user_id')->map(fn ($id) => (int) $id)->all();
         $gameOverAt = $pet->is_game_over ? $this->gameOverAt($pet) : null;
 
+        $next = null;
+        $bump = function (CarbonImmutable $at) use (&$next): void {
+            $next = $next === null || $at->lessThan($next) ? $at : $next;
+        };
+        $retry = $now->addMinutes(self::RETRY_MINUTES);
+
+        // [child id, start, end, game over?, score up to (Y-m-d|null)]
         $due = [];
         foreach ($caretakers as $c) {
             if ($c->isTombstone() || in_array((int) $c->user_id, $existing, true)) {
@@ -153,46 +206,84 @@ class ChallengeCertificateService
             }
             $start = $this->startOf($pet, $c, $contracts);
             if ($start === null) {
-                continue;
+                continue; // signing the contract resets the next check
             }
             $completion = $this->completionAt($pet, $start);
 
             if ($gameOverAt !== null) {
-                if ($start->greaterThanOrEqualTo($gameOverAt)) {
+                if ($gameOverAt->lessThan($launch) || $start->greaterThanOrEqualTo($gameOverAt)) {
+                    continue; // before the launch / never started: nothing, ever
+                }
+                if ($completion === null || $completion->greaterThan($gameOverAt)) {
+                    $goDate = $gameOverAt->setTimezone($tz)->toDateString();
+                    $scoreTo = $closedThrough === null ? null : min($closedThrough, $goDate);
+                    $due[] = [(int) $c->user_id, $start, $gameOverAt, true, $scoreTo];
+
                     continue;
                 }
-                $due[] = $completion !== null && $completion->lessThanOrEqualTo($gameOverAt)
-                    ? [(int) $c->user_id, $start, $completion, false]
-                    : [(int) $c->user_id, $start, $gameOverAt, true];
-            } elseif ($completion !== null && $completion->lessThanOrEqualTo($now)) {
-                $due[] = [(int) $c->user_id, $start, $completion, false];
+                // Ended before the game over: a normal end (below).
             }
-        }
 
-        if ($due === []) {
-            return 0;
-        }
+            if ($completion === null) {
+                $bump($now->addHours(self::LOCKED_RECHECK_HOURS)); // open payment lock
 
-        $tz = $pet->familyTimezone();
-        $board = $this->scores->board(collect([$pet]), $tz, $caretakers, $contracts, $now);
+                continue;
+            }
+            if ($completion->lessThan($launch)) {
+                continue; // ended before the feature existed: no backfill
+            }
+            if ($completion->greaterThan($now)) {
+                $bump($completion);
+
+                continue;
+            }
+            $endDate = $completion->setTimezone($tz)->toDateString();
+            if ($closedThrough === null || $closedThrough < $endDate) {
+                $bump($retry); // wait until the ledger closed the end day
+
+                continue;
+            }
+            $due[] = [(int) $c->user_id, $start, $completion, false, $endDate];
+        }
 
         $created = 0;
-        foreach ($due as [$childId, $start, $endAt, $gameOver]) {
-            $localDate = $endAt->setTimezone($tz)->toDateString();
-            $score = $this->scores->childScore($board, $childId, $pet, null, $localDate)['score'];
+        if ($due !== []) {
+            $board = $this->scores->board(collect([$pet]), $tz, $caretakers, $contracts, $now);
 
-            [$outcome, $reason] = match (true) {
-                $gameOver => [CertificateOutcome::Report, CertificateReason::GameOver],
-                $score !== null && $score >= self::CERTIFICATE_MIN_SCORE => [CertificateOutcome::Certificate, null],
-                default => [CertificateOutcome::Report, CertificateReason::LowScore],
-            };
+            foreach ($due as [$childId, $start, $endAt, $gameOver, $scoreTo]) {
+                $score = $scoreTo === null ? null : $this->scores->childScore($board, $childId, $pet, null, $scoreTo)['score'];
 
-            if ($this->record($pet, $childId, $start, $endAt, $localDate, $score, $outcome, $reason) !== null) {
-                $created++;
+                if (! $gameOver && $score === null) {
+                    // No scored routine in the whole challenge: nothing to certify or report.
+                    Log::warning('Challenge ended without any scored routine — no certificate row', ['pet_id' => $pet->id]);
+
+                    continue;
+                }
+
+                [$outcome, $reason] = match (true) {
+                    $gameOver => [CertificateOutcome::Report, CertificateReason::GameOver],
+                    $score >= self::CERTIFICATE_MIN_SCORE => [CertificateOutcome::Certificate, null],
+                    default => [CertificateOutcome::Report, CertificateReason::LowScore],
+                };
+
+                $localDate = $endAt->setTimezone($tz)->toDateString();
+                if ($this->record($pet, $childId, $start, $endAt, $localDate, $score, $outcome, $reason) !== null) {
+                    $created++;
+                }
             }
         }
 
+        $this->setNextCheck($pet, $next);
+
         return $created;
+    }
+
+    /** Null = nothing left to wait for (far future; reset by new caretakers / contracts / game over). */
+    private function setNextCheck(Pet $pet, ?CarbonImmutable $at): void
+    {
+        DB::table('pets')->where('id', $pet->id)->update([
+            'certificate_next_check_at' => $at?->format('Y-m-d H:i:s') ?? self::NEVER,
+        ]);
     }
 
     /**
@@ -360,9 +451,12 @@ class ChallengeCertificateService
                 'completed_local_date' => $locked->localDate(),
             ]);
 
-            // Same path on every regenerate: the old file is replaced.
+            // Same path on every regenerate: written to a temp file, then renamed over
+            // the old one (atomic on the local disk — a reader never sees half a PDF).
             $path = self::pathFor($locked);
-            $this->disk()->put($path, $pdf);
+            $tmp = $path.'.tmp-'.bin2hex(random_bytes(6));
+            $this->disk()->put($tmp, $pdf);
+            $this->disk()->move($tmp, $path);
 
             $locked->forceFill([
                 'child_name' => $childName,
@@ -379,7 +473,13 @@ class ChallengeCertificateService
 
     public static function pathFor(ChallengeCertificate $certificate): string
     {
-        return $certificate->pet_id.'/certificate-'.$certificate->id.'.pdf';
+        return self::pathOf($certificate->pet_id, $certificate->id);
+    }
+
+    /** `{pet_id}/certificate-{id}.pdf` on the `certificates` disk. */
+    public static function pathOf(int $petId, int $certificateId): string
+    {
+        return $petId.'/certificate-'.$certificateId.'.pdf';
     }
 
     public static function breedLabel(string $breedType, string $locale): string
@@ -422,9 +522,11 @@ class ChallengeCertificateService
         $petName = $certificate->relationLoaded('pet') ? $certificate->pet?->name : $certificate->pet()->value('name');
 
         /** @var 'en'|'sl' $locale */
+        // Printable or "" (the parent then types one): CertificateNames rules.
+        $names = app(CertificateNames::class);
         $defaults = [
-            'child_name' => mb_substr((string) ($nickname ?? ''), 0, self::MAX_NAME_LENGTH),
-            'pet_name' => mb_substr((string) ($petName ?? $certificate->default_pet_name ?? self::breedLabel($certificate->breed_type->value, $locale)), 0, self::MAX_NAME_LENGTH),
+            'child_name' => $names->printableDefault('child_name', $nickname),
+            'pet_name' => $names->printableDefault('pet_name', $petName ?? $certificate->default_pet_name ?? self::breedLabel($certificate->breed_type->value, $locale)),
             'locale' => $locale,
         ];
 

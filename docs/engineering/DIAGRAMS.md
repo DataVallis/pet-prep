@@ -1599,7 +1599,7 @@ stateDiagram-v2
 ```mermaid
 flowchart TD
     T["pets:process-decay (every minute)<br/>… → closeDueDays() → processCompletions()"] --> C{"per active caretaker<br/>of a challenge pet"}
-    C -->|"84 program days reached<br/>(payment lock excluded)"| S["final Care Score<br/>routines ≤ local end date"]
+    C -->|"84 program days reached + end day closed<br/>(payment lock excluded, ends ≥ launch)"| S["final Care Score<br/>routines ≤ local end date (incl.)"]
     C -->|"game over before the end"| G["report · game_over<br/>(end = game over)"]
     C -->|"still running / free plan"| N["nothing"]
     S -->|"≥ 70"| Cert["certificate<br/>number PP-YYYY-NNNNNN"]

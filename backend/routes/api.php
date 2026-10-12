@@ -158,7 +158,8 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
 
         // M2-01d Responsibility Certificate: finished challenges of the family; generate the PDF.
         Route::get('certificates', [CertificateController::class, 'index']);
-        Route::post('certificates/{certificate}/generate', [CertificateController::class, 'generate']);
+        Route::post('certificates/{certificate}/generate', [CertificateController::class, 'generate'])
+            ->middleware('throttle:certificates');
     });
 
 /*

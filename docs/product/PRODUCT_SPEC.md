@@ -274,7 +274,9 @@ Zaključeni dnevi se zapišejo (strežnik) in se pozneje ne preračunajo: spreme
 ### 11.3 Certifikat odgovornosti (David, 12. 10. 2026; strežnik M2-01d)
 Podrobno: [`CERTIFICATE_SPEC.md`](CERTIFICATE_SPEC.md).
 - Izziv **otroka** je končan po **84 dneh programa** od njegovega začetka (čas zaklepa do plačila se ne šteje, M3-11b); vsak otrok skupnega ljubljenčka ima svoj zaključek. Samo plačan izziv (brezplačni plan nikoli).
-- **Končna ocena** = Care Score otroka (§11.2) iz rutin do vključno lokalnega dneva zaključka; pozneje se ne spremeni.
+- **Končna ocena** = Care Score otroka (§11.2) iz rutin do vključno lokalnega dneva zaključka; strežnik jo zapiše, ko je ta dan zaprt (po polnoči), pozneje se ne spremeni. Brez nobene ocenjene rutine ni ne certifikata ne poročila.
+- **Od zagona funkcije:** samo izzivi, ki se končajo od 12. 10. 2026 naprej (brez zgodovine).
+- **Imena na certifikatu:** samo latinica (pisave certifikata); drugo → napaka `name_unsupported_script`.
 - **Prag: ocena ≥ 70 → certifikat**; pod 70 → poročilo o izzivu (razlog `low_score`); **game over pred koncem** → poročilo (razlog `game_over`, zapisano ob game overju).
 - Starš ustvari PDF (jezik EN / SL, popravljivo ime otroka in ljubljenčka); številka `PP-LLLL-NNNNNN`, ocena in datumi ostanejo ob ponovnem ustvarjanju. Starš dobi en push, ko je izziv otroka končan; otrok vidi certifikat, pri poročilu samo »izziv končan« (brez ocene).
 

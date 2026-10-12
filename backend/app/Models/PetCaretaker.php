@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 
 /**
  * A child who cares for a pet (M2-01, ADR-012). A shared pet has several.
@@ -35,6 +36,20 @@ use Illuminate\Support\Carbon;
  */
 class PetCaretaker extends Model
 {
+    /**
+     * M2-01d: a new or changed caretaker / contract can start a challenge —
+     * the certificate scan looks at the pet again (pets.certificate_next_check_at).
+     */
+    protected static function booted(): void
+    {
+        $reset = function (self $row): void {
+            DB::table('pets')->where('id', $row->pet_id)->whereNotNull('certificate_next_check_at')
+                ->update(['certificate_next_check_at' => null]);
+        };
+        static::created($reset);
+        static::updated($reset);
+    }
+
     /**
      * @var list<string>
      */

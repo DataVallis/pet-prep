@@ -41,6 +41,7 @@
       "name_too_long": "The name is too long (at most {{max}} characters).",
       "name_invalid": "The name contains characters that are not allowed.",
       "name_not_allowed": "Please choose a different name.",
+      "name_unsupported_script": "The certificate can only print Latin letters. Please write the name in Latin letters.",
       "locale_invalid": "Choose the certificate language.",
       "not_eligible": "A certificate cannot be created for this challenge.",
       "not_found": "This certificate no longer exists. Refresh the overview.",

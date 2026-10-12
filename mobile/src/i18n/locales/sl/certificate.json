@@ -41,6 +41,7 @@
       "name_too_long": "Ime je predolgo (največ {{max}} znakov).",
       "name_invalid": "Ime vsebuje nedovoljene znake.",
       "name_not_allowed": "Izberite drugo ime.",
+      "name_unsupported_script": "Certifikat lahko izpiše samo latinične črke. Ime zapišite z latinico.",
       "locale_invalid": "Izberite jezik certifikata.",
       "not_eligible": "Za ta izziv certifikata ni mogoče ustvariti.",
       "not_found": "Certifikata ni več. Osvežite pregled.",

@@ -9,6 +9,20 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-12 — Certifikat odgovornosti (M2-01d)
+
+**Kaj se je zgodilo:** Ko otrok konča 12-tedenski izziv (84 dni programa od podpisa pogodbe, čas čakanja na plačilo se ne šteje), strežnik izračuna končni Care Score iz vseh zaključenih dni. **70 ali več → Certifikat odgovornosti**, manj → **Poročilo o izzivu** z oceno. Starš dobi obvestilo, v aplikaciji tapne »Ustvari certifikat«, izbere jezik (angleščina ali slovenščina), po želji popravi ime otroka in ime ljubljenčka in dobi PDF (A4, v slogu PetPrep: metin rob, Radovednež, pečat, številka PP-2026-…). Ponovno ga lahko ustvari s popravki; številka in ocena ostaneta. Otrok certifikat vidi na svojem zaslonu. Pri skupnem psu ima vsak otrok svoj certifikat in svojo oceno.
+
+**Zakaj je pomembno:** Certifikat je obljuba izziva — objektiven dokaz, da je otrok 12 tednov res skrbel. Prag 70 pomeni, da certifikat nekaj velja; poročilo pod pragom je pošten odgovor »še ni pripravljen«.
+
+**Številke:** 34 novih testov strežnika (vseh 2.579 zelenih), ~55 novih testov aplikacije; PDF se izriše v ~0,4 s; brez novih nativnih modulov (ni potreben nov build). Ni preverjeno na telefonu.
+
+**Kako povedati:**
+- 👩 Starši: »Po 12 tednih dobite certifikat z oceno skrbi — v jeziku, ki ga izberete, z imenom, kot ga želite.«
+- 🧒 Otroci: »Ko izziv končaš, te čaka tvoj certifikat.«
+- 💼 Investitorji: »Izziv se konča z dokazom, ne z občutkom: prag 70 od 100, ocena iz tisočih zabeleženih rutin.«
+- 🛠 Tehnično: »Zapis se ustvari šele, ko je zadnji dan zaprt — ocena je deterministična; PDF z dompdf, podpisani URL, brez oddaljenih virov.«
+
 ## 2026-10-12 — Nova oznaka: močan lovski nagon (M5-R10)
 
 **Kaj se je zgodilo:** David je potrdil novo oznako v izbirniku pasem: **»močan lovski nagon — lahko lovi manjše živali«** (EN »strong prey drive — may chase small pets«). Dobi jo samo pet pasem, pri katerih vir (PDSA) dobesedno piše o močnem lovskem nagonu: francoski buldog, jazbečar, zahodnoškotski beli terier, sibirski haski in doberman. Ob tem je David zaključil odprta vprašanja pri dobermanu: meja starejšega psa ostane 83 mesecev (dokler ni dostopna študija McMillan 2024), slovensko ime »doberman« je pravo, v igri samo barve standarda FCI, posebnih omejitev za marketing ni.

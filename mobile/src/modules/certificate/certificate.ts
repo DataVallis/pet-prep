@@ -222,7 +222,7 @@ export interface CertificateFormValues {
 }
 
 export type CertificateNameField = 'child_name' | 'pet_name';
-export type CertificateFieldError = 'required' | 'name_too_long' | 'name_invalid' | 'name_not_allowed';
+export type CertificateFieldError = 'required' | 'name_too_long' | 'name_invalid' | 'name_not_allowed' | 'name_unsupported_script';
 export type CertificateFormErrorKind = 'not_eligible' | 'not_found' | 'forbidden' | 'offline' | 'server' | 'locale_invalid';
 
 export interface CertificateFormErrors {
@@ -279,7 +279,7 @@ export function validateCertificateForm(
   };
 }
 
-const FIELD_CODES: readonly string[] = ['name_too_long', 'name_invalid', 'name_not_allowed'];
+const FIELD_CODES: readonly string[] = ['name_too_long', 'name_invalid', 'name_not_allowed', 'name_unsupported_script'];
 
 /** A failed generate → field errors (422 `codes`) or one form-level error. */
 export function classifyCertificateError(error: unknown): CertificateFormErrors {

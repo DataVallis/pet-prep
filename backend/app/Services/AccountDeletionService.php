@@ -10,7 +10,6 @@ use App\Exceptions\AccountDeletionException;
 use App\Jobs\DeleteCertificateFiles;
 use App\Jobs\DeletePetMediaFiles;
 use App\Models\AiSpendLedger;
-use App\Models\ChallengeCertificate;
 use App\Models\ChildLoginPin;
 use App\Models\Family;
 use App\Models\FamilyInvite;
@@ -254,8 +253,12 @@ class AccountDeletionService
             ChildLoginPin::where('child_user_id', $child->id)->delete();
             // M2-01d: the child's certificates / reports (rows with the printed name)
             // and their PDFs on pets that stay; the deleted pets' files go with them.
-            $certificatePaths = ChallengeCertificate::where('child_user_id', $child->id)->whereNotNull('pdf_path')->pluck('pdf_path')->all();
-            ChallengeCertificate::where('child_user_id', $child->id)->delete();
+            // DELETE … RETURNING + the deterministic path (QA m1): a generate that
+            // committed meanwhile can never leave an orphaned file behind.
+            $certificatePaths = array_map(
+                fn ($row): string => ChallengeCertificateService::pathOf((int) $row->pet_id, (int) $row->id),
+                DB::select('DELETE FROM challenge_certificates WHERE child_user_id = ? RETURNING id, pet_id', [$child->id]),
+            );
             if ($certificatePaths !== []) {
                 DeleteCertificateFiles::dispatch([], $certificatePaths)->afterCommit();
             }

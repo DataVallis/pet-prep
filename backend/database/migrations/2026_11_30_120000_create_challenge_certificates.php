@@ -21,6 +21,10 @@ use Illuminate\Support\Facades\Schema;
  *  - `challenge_certificate_numbers`: per-year counter for the certificate
  *    number PP-YYYY-NNNNNN (atomic upsert … RETURNING, never reused).
  *  - push type `challenge_completed` (parents, once per row).
+ *  - `pets.certificate_next_check_at` (QA M1): when the tick looks at the pet
+ *    again (null = now). The scan orders by it, so pets that cannot finish yet
+ *    move to the back and never starve newer ones; a new caretaker row or a
+ *    signed contract resets it (PetCaretaker / PetContract hooks).
  */
 return new class extends Migration
 {
@@ -31,6 +35,11 @@ return new class extends Migration
 
     public function up(): void
     {
+        Schema::table('pets', function (Blueprint $table) {
+            $table->timestamp('certificate_next_check_at')->nullable();
+            $table->index('certificate_next_check_at');
+        });
+
         Schema::create('challenge_certificate_numbers', function (Blueprint $table) {
             $table->unsignedSmallInteger('year')->primary();
             $table->unsignedInteger('last_number');
@@ -87,5 +96,10 @@ return new class extends Migration
 
         Schema::dropIfExists('challenge_certificates');
         Schema::dropIfExists('challenge_certificate_numbers');
+
+        Schema::table('pets', function (Blueprint $table) {
+            $table->dropIndex(['certificate_next_check_at']);
+            $table->dropColumn('certificate_next_check_at');
+        });
     }
 };

@@ -45,8 +45,8 @@ td { padding: 0; vertical-align: top; }
         <div class="bri7" style="margin-top: 3px; font-size: 32px; line-height: 36px; letter-spacing: -0.6px;">{{ $t('title') }}</div>
 
         <div class="muted" style="margin-top: 28px; font-size: 16px; line-height: 24px;">{{ $t('awarded_to') }}</div>
-        <div class="bri8" style="margin-top: 0; font-size: {{ $childNameSize }}px; line-height: {{ $childNameSize + 2 }}px; letter-spacing: {{ $childNameSize >= 56 ? -2 : -1 }}px;">{{ $childName }}</div>
-        <table style="margin: 2px auto 0;"><tr><td style="width: 120px; height: 3px; background: #121614; border-radius: 2px;"></td></tr></table>
+        <div class="bri8" style="margin: 0 auto; width: 606px; word-wrap: break-word; font-size: {{ $childNameSize }}px; line-height: {{ $childNameSize + 2 }}px; letter-spacing: {{ $childNameSpacing }}px;">{{ $childName }}</div>
+        <table style="margin: {{ $underlineGap }}px auto 0;"><tr><td style="width: 120px; height: 3px; background: #121614; border-radius: 2px;"></td></tr></table>
         <div style="margin: 20px auto 0; width: 440px; font-size: 18px; line-height: 22px;">{{ $t('sentence') }}</div>
 
         <table style="margin-top: 34px; width: 606px;">
@@ -61,8 +61,8 @@ td { padding: 0; vertical-align: top; }
                 <td style="width: 15px;"></td>
                 <td style="width: 192px;">
                     <div class="card card-line">
-                        <div class="in6 eyebrow muted" style="padding-top: 25px;">{{ $t('pet') }}</div>
-                        <div class="bri7" style="margin: 2px 10px 0; font-size: {{ $petNameSize }}px; line-height: {{ $petNameSize }}px;">{{ $petName }}</div>
+                        <div class="in6 eyebrow muted" style="padding-top: {{ $petNameWraps ? 12 : 25 }}px;">{{ $t('pet') }}</div>
+                        <div class="bri7" style="margin: 2px auto 0; width: 168px; word-wrap: break-word; font-size: {{ $petNameSize }}px; line-height: {{ $petNameSize }}px;">{{ $petName }}</div>
                         <div class="muted" style="margin: 0 10px 0; font-size: 15px; line-height: 18px;">{{ $breedLabel }}</div>
                     </div>
                 </td>

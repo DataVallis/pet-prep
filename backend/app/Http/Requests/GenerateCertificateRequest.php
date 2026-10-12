@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Models\User;
+use App\Services\CertificateNames;
 use App\Services\ChallengeCertificateService;
 use App\Services\PetNameService;
 use Illuminate\Contracts\Validation\Validator as ValidatorContract;
@@ -16,19 +17,14 @@ use Illuminate\Validation\Validator;
  * required. Parents only (UserPolicy::manageFamily → 403 for a child).
  *
  * Names are normalized like a pet name (PetNameService::normalize: trimmed,
- * whitespace collapsed, ’ → ', NFKC), 1–30 characters, and go through the same
- * EN / SL word filter. Pet name: the pet-name characters (letters, space,
- * hyphen, apostrophe). Child name: the nickname characters (letters, digits,
- * space, hyphen, apostrophe, dot — CreateChildRequest), so the default
- * nickname always passes. 422 body = Laravel's validation body + `codes`
+ * whitespace collapsed, ’ → ', NFKC) and checked by CertificateNames (1–30
+ * characters, letters / digits / space / ' - ., Latin script the fonts can
+ * print, EN / SL word filter). 422 body = Laravel's validation body + `codes`
  * {field: code} + `reason` (first code): `locale_invalid`, `name_invalid`,
- * `name_too_long`, `name_not_allowed`.
+ * `name_too_long`, `name_unsupported_script`, `name_not_allowed`.
  */
 class GenerateCertificateRequest extends FormRequest
 {
-    /** Nickname characters (CreateChildRequest `display_name`). */
-    private const CHILD_NAME_PATTERN = "/^[\\pL\\pM\\pN][\\pL\\pM\\pN '\\-.]*$/u";
-
     /** @var array<string, string> */
     private array $codes = [];
 
@@ -71,27 +67,22 @@ class GenerateCertificateRequest extends FormRequest
                 if ($validator->errors()->has('locale')) {
                     $this->codes['locale'] = 'locale_invalid';
                 }
+                $messages = [
+                    CertificateNames::TOO_LONG => 'The name may not be longer than '.ChallengeCertificateService::MAX_NAME_LENGTH.' characters.',
+                    CertificateNames::INVALID => 'The name contains characters that are not allowed.',
+                    CertificateNames::UNSUPPORTED_SCRIPT => 'The certificate can only print Latin letters.',
+                    CertificateNames::NOT_ALLOWED => 'Please choose a different name.',
+                ];
                 foreach (['child_name', 'pet_name'] as $field) {
                     if ($validator->errors()->has($field)) {
-                        $this->codes[$field] = 'name_invalid';
+                        $this->codes[$field] = CertificateNames::INVALID;
 
                         continue;
                     }
-                    $name = (string) $this->input($field);
-                    $max = ChallengeCertificateService::MAX_NAME_LENGTH;
-                    $validChars = $field === 'pet_name'
-                        ? PetNameService::hasValidCharacters($name)
-                        : preg_match(self::CHILD_NAME_PATTERN, $name) === 1 && ! PetNameService::hasInvisibleOrStackedMarks($name);
-
-                    if (mb_strlen($name, 'UTF-8') > $max) {
-                        $this->codes[$field] = 'name_too_long';
-                        $validator->errors()->add($field, "The name may not be longer than {$max} characters.");
-                    } elseif (! $validChars) {
-                        $this->codes[$field] = 'name_invalid';
-                        $validator->errors()->add($field, 'The name contains characters that are not allowed.');
-                    } elseif (! app(PetNameService::class)->isAllowed($name)) {
-                        $this->codes[$field] = 'name_not_allowed';
-                        $validator->errors()->add($field, 'Please choose a different name.');
+                    $code = app(CertificateNames::class)->problem($field, (string) $this->input($field));
+                    if ($code !== null) {
+                        $this->codes[$field] = $code;
+                        $validator->errors()->add($field, $messages[$code]);
                     }
                 }
             },
@@ -110,9 +101,9 @@ class GenerateCertificateRequest extends FormRequest
         throw new HttpResponseException(response()->json([
             'message' => is_string($first) ? $first : 'The given data was invalid.',
             'errors' => $errors,
-            /** @var array<string, 'locale_invalid'|'name_invalid'|'name_too_long'|'name_not_allowed'> */
+            /** @var array<string, 'locale_invalid'|'name_invalid'|'name_too_long'|'name_unsupported_script'|'name_not_allowed'> */
             'codes' => $codes,
-            /** @var 'locale_invalid'|'name_invalid'|'name_too_long'|'name_not_allowed' */
+            /** @var 'locale_invalid'|'name_invalid'|'name_too_long'|'name_unsupported_script'|'name_not_allowed' */
             'reason' => (string) reset($codes),
         ], 422));
     }
