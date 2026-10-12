@@ -9,6 +9,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-12 — Izbirnik za stotine pasem, pošten izvor mešančka in jezik za otroka (M5-F09)
+
+**Kaj se je zgodilo:** David je na telefonu pregledal izbirnik in otroško aplikacijo ter dal tri pripombe, ki so isti dan v kodi. (1) Izbirnik pasem pokaže samo **prve 4 pasme** (brezplačno in najbolj priljubljene), ostale so za gumbom **»Pokaži vse pasme«**; iskanje vedno išče po vseh. (2) **Mešanček in domača mačka sta samo »posvojena«** — možnost »kupljen pri vzreditelju« pri njiju izgine, z razlago, da vzreditelji vzrejajo samo čistokrvne živali; strežnik enako pravilo uveljavi tudi za starejše gradnje. (3) Otrok lahko **jezik zamenja tudi po prijavi** — gumb z globusom v glavi zaslona.
+
+**Zakaj je pomembno:** Pasem bo na stotine; seznam z oznakami bi bil na telefonu neuporaben, iskanje pa je hitrejše. Izvor živali mora biti realen — igra uči, kako pride žival v družino. Otroci si jezik pogosto izberejo sami, ne le starši.
+
+**Številke:** 4 pasme v predogledu; 15 novih testov (12 v aplikaciji, 3 na strežniku), posodobljeni obstoječi testi, kjer je bil mešanček »kupljen«.
+
+**Kako povedati:**
+- 👩 Starši: »Izbira pasme je zdaj pregledna: najbolj priljubljene takoj, vse ostale z enim dotikom ali iskanjem.«
+- 🧒 Otroci: »Jezik lahko zamenjaš kar v igri — tapni globus.«
+- 💼 Investitorji: »Izbirnik je pripravljen na katalog s stotinami pasem.«
+- 🛠 Tehnično: »`visibleBreeds` + `BREED_PREVIEW_COUNT`, pravilo izvora `originsFor` / `withValidOrigin` v aplikaciji in popravek v `GeneratePinRequest` (brez 422 za stare gradnje).«
+
+---
+
 ## 2026-10-12 — Doberman: sedma pasma po dvajsetih (M5-R10-25)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **dobermana** (16. mesto). Enaindvajseta plačljiva pasma psa: vsaj dve uri gibanja na dan (12.000 korakov za odraslega, 9.000 za starejšega), starejši od 6,9 leta (začasno), uči se 1,9-krat hitreje kot mešanček (Coren: 5. mesto).
