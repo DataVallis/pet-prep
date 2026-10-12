@@ -181,6 +181,27 @@ describe('the parent report row (never scored)', () => {
     expect(reportSocialisationLine(report!)).toEqual({ count: '1 of 3 weeks', detail: '1 missed · this week still open' });
   });
 
+  it('reads excused weeks (David 2026-10-12: illness / pause → »opravičen«) and words them, older servers read as 0', async () => {
+    const withExcused = {
+      ...raw,
+      expected: 2,
+      missed: 0,
+      excused: 1,
+      weeks: [raw.weeks[0], { ...raw.weeks[1], status: 'excused' }, raw.weeks[2]],
+    };
+    const report = readReportSocialisation(withExcused);
+    expect(report?.weeks.map((w) => w.status)).toEqual(['done', 'excused', 'open']);
+    expect(report?.excused).toBe(1);
+    expect(reportSocialisationLine(report!)).toEqual({ count: '1 od 2 tednov', detail: '1 opravičen · ta teden še čaka' });
+    expect(reportSocialisationLine({ ...report!, excused: 2, open: 0 }).detail).toBe('2 opravičena');
+    expect(reportSocialisationLine({ ...report!, excused: 3, missed: 1, open: 0 }).detail).toBe('1 zamujen · 3 opravičeni');
+    // An unknown status is dropped; a missing `excused` (older server) reads as 0.
+    expect(readReportSocialisation({ ...raw, weeks: [{ ...raw.weeks[0], status: 'skipped' }] })).toBeNull();
+    expect(readReportSocialisation(raw)?.excused).toBe(0);
+    await i18n.changeLanguage('en');
+    expect(reportSocialisationLine(report!)).toEqual({ count: '1 of 2 weeks', detail: '1 excused · this week still open' });
+  });
+
   it('is null without weeks / from an older server, and part of the child report reader', () => {
     expect(readReportSocialisation(null)).toBeNull();
     expect(readReportSocialisation({ weeks: [] })).toBeNull();
