@@ -475,8 +475,10 @@ describe('regression: dogs unchanged by M5-R06-03', function () {
         // Fingerprints computed from main's seeders before this change. M5-R10 added
         // the Labrador: the fingerprint covers the two dog breeds of that time
         // (same order → the same hash), so mutt / Border Collie stay byte-identical.
+        // David 2026-10-12 added one row on purpose to both (M5-R17 socialisation for all
+        // puppies, checked in PuppySocialisationTest) — every other row stays byte-identical.
         $oldDogs = ['mutt', 'border-collie'];
-        expect($hash(array_values(array_filter(BreedStageParamsSeeder::rows(), fn (array $r) => in_array($r['breed_slug'], $oldDogs, true)))))->toBe('28d500305a87d3ce98d4c3de9dc470d49ef60c7773a1c934daf081d2143ef199')
+        expect($hash(array_values(array_filter(BreedStageParamsSeeder::rows(), fn (array $r) => in_array($r['breed_slug'], $oldDogs, true) && $r['key'] !== StageParamKey::SocialisationTasksPerWeek->value))))->toBe('28d500305a87d3ce98d4c3de9dc470d49ef60c7773a1c934daf081d2143ef199')
             ->and($hash($configs->where('species', 'dog')->whereIn('breed_slug', $oldDogs)->values()->all()))->toBe('e159cb38c1e2127ea7b4b2f35ce3ba9f93601b190d20af8a0266ea2180b66450')
             // M5-R10-14 added the British Shorthair: the fingerprint covers the two cats of that time.
             ->and($hash($configs->where('species', 'cat')->whereIn('breed_slug', ['domestic-cat', 'maine-coon'])->values()->all()))->toBe('4470d9b9e1f44d9ce4db857683834f71b2a100d37df70bac30039e3a19f48d72')

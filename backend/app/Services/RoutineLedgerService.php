@@ -697,14 +697,7 @@ class RoutineLedgerService
             }
 
             // Excused like the walk: freezes cover ≥ 50 % of the period's (non-quiet) time.
-            $playable = 0.0;
-            $split = QuietHours::splitSecondsBetween($quiet, $opens, $due);
-            $total = $useNormal ? $split['normal'] : $split['normal'] + $split['quiet'];
-            foreach ($this->subtract($opens, $due, $blocks) as [$a, $b]) {
-                $part = QuietHours::splitSecondsBetween($quiet, $a, $b);
-                $playable += $useNormal ? $part['normal'] : $part['normal'] + $part['quiet'];
-            }
-            $excused = ($total > 0 ? 1 - $playable / $total : 1.0) >= self::WHOLE_DAY_EXCUSE_SHARE - 1e-9;
+            $excused = $this->blockedShare($quiet, $blocks, $opens, $due, $useNormal) >= self::WHOLE_DAY_EXCUSE_SHARE - 1e-9;
 
             $rows = array_values(array_filter(
                 $in['activities'],
@@ -902,6 +895,52 @@ class RoutineLedgerService
     // ──────────────────────────────────────────────────────────────
     //  Helpers
     // ──────────────────────────────────────────────────────────────
+
+    /**
+     * Share (0–1) of [$from, $to) covered by the blocking periods (hard stop,
+     * vet, inactive / game over, payment lock — or any extra block a caller
+     * adds), measured in non-quiet time ($useNormal, the default) or in all
+     * time. A stretch without any measured time counts as fully blocked.
+     * The weekly routines compare it with WHOLE_DAY_EXCUSE_SHARE; M5-R17
+     * socialisation uses the same rule for its "excused" weeks.
+     *
+     * @param  list<array{0: CarbonImmutable, 1: CarbonImmutable|null}>  $blocks
+     */
+    public function blockedShare(?QuietHours $quiet, array $blocks, CarbonImmutable $from, CarbonImmutable $to, bool $useNormal = true): float
+    {
+        $split = QuietHours::splitSecondsBetween($quiet, $from, $to);
+        $total = $useNormal ? $split['normal'] : $split['normal'] + $split['quiet'];
+        if ($total <= 0) {
+            return 1.0;
+        }
+        $playable = 0.0;
+        foreach ($this->subtract($from, $to, $blocks) as [$a, $b]) {
+            $part = QuietHours::splitSecondsBetween($quiet, $a, $b);
+            $playable += $useNormal ? $part['normal'] : $part['normal'] + $part['quiet'];
+        }
+
+        return 1 - $playable / $total;
+    }
+
+    /**
+     * The pet's blocking periods (`pet_status_periods`, every kind) that
+     * reach into [$from, $to): [start, end|null] in UTC — the ledger's
+     * `blocks` for one pet.
+     *
+     * @return list<array{0: CarbonImmutable, 1: CarbonImmutable|null}>
+     */
+    public function statusBlocks(Pet $pet, CarbonInterface $from, CarbonInterface $to): array
+    {
+        return PetStatusPeriod::where('pet_id', $pet->id)
+            ->where('started_at', '<', CarbonImmutable::instance($to)->utc())
+            ->where(fn ($q) => $q->whereNull('ended_at')->orWhere('ended_at', '>', CarbonImmutable::instance($from)->utc()))
+            ->orderBy('started_at')
+            ->toBase()
+            ->get(['started_at', 'ended_at'])
+            ->map(fn ($r) => [$this->utc($r->started_at), $r->ended_at !== null ? $this->utc($r->ended_at) : null])
+            ->values()
+            ->all();
+    }
 
     /**
      * The instant at which $seconds of non-quiet time have passed since
