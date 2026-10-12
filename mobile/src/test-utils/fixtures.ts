@@ -192,6 +192,8 @@ export function makeChildState(
       emergency_threshold: 20,
       next_feed_window: null,
       last_fed_at: '',
+      // M5-R16 (additive): no digestion warning.
+      digesting_until: null,
     },
     water: {
       times_per_day: 0,
@@ -284,6 +286,7 @@ export function makeLiveChildState(o: LiveStateOverrides = {}): ChildPetState {
       emergency_threshold: 20,
       next_feed_window: { start: '2026-10-04T17:00:00+02:00', end: '2026-10-04T21:00:00+02:00' },
       last_fed_at: '2026-10-04T07:10:00+02:00',
+      digesting_until: null,
       ...o.feeding,
     },
     water: {
