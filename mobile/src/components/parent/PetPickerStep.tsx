@@ -8,7 +8,7 @@
  * 3. **Breed** — the server's list (`GET /api/breeds`) with search (case- and
  *    diacritic-insensitive, synonyms) over the whole catalogue; without a search only the
  *    first few breeds show, the rest behind "Pokaži vse pasme" (David 2026-10-12, hundreds
- *    of breeds are coming). Free breed first with a "Brezplačno" badge, paid
+ *    of breeds are coming); the open list has "Pokaži manj pasem" at its top and bottom. Free breed first with a "Brezplačno" badge, paid
  *    breeds with "Izziv"; a breed the plan doesn't take is greyed and explained on tap (M5-F03).
  *    Each breed with sourced tags shows "Primerno za:" / "Upoštevajte:" chips (M5-R10).
  * 4. **Origin** and **age at arrival**, as before (texts per species, T8). A non-pedigree
@@ -17,7 +17,8 @@
  *
  * Premium breeds need the challenge (server 422 `breed_locked` otherwise); the challenge
  * needs a paid breed (422 `challenge_requires_paid_breed`). Plan, origin and age have no
- * default. Price shown honestly: from the store when loaded, else the list price; no
+ * default, and neither has the breed while no plan is chosen — tapping the free breed picks the
+ * free plan, so a breed is never ticked without its plan. Price shown honestly: from the store when loaded, else the list price; no
  * automatic charge. Light parent theme (ADR-007). Test IDs keep the M5-R04 names
  * (`dog-picker*`) so existing flows stay stable.
  */
@@ -36,6 +37,7 @@ import {
   breedLockReason,
   breedsOf,
   CHALLENGE_LIST_PRICE,
+  choiceWithBreed,
   choiceWithPlan,
   choiceWithSpecies,
   completeChoice,
@@ -61,6 +63,7 @@ import {
   type PickerChoice,
   type PickerText,
   visibleBreeds,
+  withConsistentPlan,
   withValidOrigin,
 } from '@/modules/petProfile/picker';
 import { breedName, foldForSearch, speciesName } from '@/modules/species/species';
@@ -106,7 +109,11 @@ export default function PetPickerStep(props: PetPickerStepProps) {
   return <PickerBody key={props.catalogue.species.join(',')} {...props} catalogue={props.catalogue} />;
 }
 
-/** The choice to start from: a species the catalogue still offers (or its only one) and a valid breed. */
+/**
+ * The choice to start from: a species the catalogue still offers (or its only one) and a valid
+ * breed. Without a plan nothing is preselected — neither plan nor breed (the plan has no default,
+ * and a ticked "Mešanček" next to two empty plan radios was the bug of 2026-10-12).
+ */
 function startChoice(initial: PickerChoice, catalogue: BreedCatalogue, serverLocked: readonly PetBreed[]): PickerChoice {
   const only = catalogue.species.length === 1 ? catalogue.species[0] : null;
   const species = initial.species !== null && catalogue.species.includes(initial.species) ? initial.species : only;
@@ -115,7 +122,7 @@ function startChoice(initial: PickerChoice, catalogue: BreedCatalogue, serverLoc
   const choice = { ...initial, species };
   const valid = choice.breed !== null && breeds.some((b) => b.breed === choice.breed);
   if (valid && !isBreedLocked(choice.breed, lockedBreedsFor(choice.plan, serverLocked, breeds))) return choice;
-  if (choice.plan === null) return { ...choice, breed: freeBreedOf(breeds) };
+  if (choice.plan === null) return { ...choice, breed: null };
   return choiceWithPlan(choice, choice.plan, serverLocked, breeds);
 }
 
@@ -130,10 +137,14 @@ function PickerBody({
   onBack,
 }: PetPickerStepProps & { catalogue: BreedCatalogue }) {
   const [choice, setChoice] = useState<PickerChoice>(() =>
-    withValidOrigin(startChoice(initial, catalogue, serverLockedBreeds), catalogue.breeds),
+    withValidOrigin(withConsistentPlan(startChoice(initial, catalogue, serverLockedBreeds)), catalogue.breeds),
   );
-  /** Every change goes through the origin rule (a mutt can't stay "bought from a breeder"). */
-  const update = (change: (c: PickerChoice) => PickerChoice) => setChoice((c) => withValidOrigin(change(c), catalogue.breeds));
+  /**
+   * Every change goes through the plan ↔ breed rule (never a breed without its plan) and the
+   * origin rule (a mutt can't stay "bought from a breeder").
+   */
+  const update = (change: (c: PickerChoice) => PickerChoice) =>
+    setChoice((c) => withValidOrigin(withConsistentPlan(change(c)), catalogue.breeds));
   const [stage, setStage] = useState<'species' | 'details'>(() => (choice.species === null ? 'species' : 'details'));
   /** The locked breed the parent tapped last (explains why), null when none. */
   const [lockedTapped, setLockedTapped] = useState<PetBreed | null>(null);
@@ -240,6 +251,20 @@ function PickerBody({
           testID="breed-search"
         />
       </View>
+      {canToggleAll && allBreeds && (
+        // The long list also closes from the top, so the parent never scrolls to the end to collapse it.
+        <Pressable
+          onPress={() => setAllBreeds(false)}
+          hitSlop={8}
+          accessibilityRole="button"
+          accessibilityLabel={S.showFewerBreeds}
+          accessibilityState={{ expanded: true }}
+          style={({ pressed }) => [styles.showAllButton, pressed && styles.pressed]}
+          testID="breed-show-fewer-top"
+        >
+          <Text style={styles.linkText}>{S.showFewerBreeds}</Text>
+        </Pressable>
+      )}
       {listed.map((entry) => (
         <BreedRow
           key={entry.breed}
@@ -253,7 +278,8 @@ function PickerBody({
               return;
             }
             setLockedTapped(null);
-            update((c) => ({ ...c, breed: entry.breed }));
+            // Before a plan, the breed picks it (free breed → free plan, M5-F03).
+            update((c) => choiceWithBreed(c, entry.breed, breeds));
           }}
         />
       ))}
@@ -262,6 +288,7 @@ function PickerBody({
           onPress={() => setAllBreeds((open) => !open)}
           hitSlop={8}
           accessibilityRole="button"
+          accessibilityLabel={allBreeds ? S.showFewerBreeds : S.showAllBreeds(shown.length)}
           accessibilityState={{ expanded: allBreeds }}
           style={({ pressed }) => [styles.showAllButton, pressed && styles.pressed]}
           testID="breed-show-all"
