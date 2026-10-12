@@ -74,6 +74,9 @@
     "searchLabel": "Search breeds",
     "searchPlaceholder": "Search by breed name",
     "searchEmpty": "No breed matches “{{query}}”.",
+    "showAllBreeds": "Show all breeds ({{count}})",
+    "showFewerBreeds": "Show fewer breeds",
+    "originAdoptionOnly": "{{breed}} isn’t a pedigree breed. Breeders only raise pedigree animals, so adoption is the only option.",
     "badgeFree": "Free",
     "badgeChallenge": "Challenge",
     "breedHints": {
