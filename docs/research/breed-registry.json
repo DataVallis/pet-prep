@@ -53,7 +53,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "04bdda06a5d29e64930297ff1f65e3d96d8cbe1ead0f16c9190bf4945dceb1f1"
+      "sha256": "82ca9e90ee3d11b615e07f72d2b49d64fa7c4a6eb7ab4ad580f6ad1ab7b2733e"
     }
   },
   "suitability_vocabulary": {
@@ -12154,7 +12154,12 @@
           "S204"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "pembroke-welsh-corgi.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
