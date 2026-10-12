@@ -223,7 +223,7 @@ test('French Bulldog (M5-R10-03): "up to 1 hour", origin France, puppy cap at 6 
   assert.deepEqual(fb.facts.find((f) => f.field === 'fci_standard').value, { number: 101, group: 9, section: 11, origin: 'FR' });
   assert.deepEqual(fb.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
   assert.deepEqual(fb.game.stages[1].activity, { kind: 'steps', value: 6000 });
-  assert.deepEqual(fb.suitability.consider.map((t) => t.tag), ['brachycephalic_breathing']);
+  assert.deepEqual(fb.suitability.consider.map((t) => t.tag), ['brachycephalic_breathing', 'chases_small_pets']);
   assert.deepEqual(fb.health.map((h) => h.key), ['flat_face_breathing', 'heat_stroke_risk', 'skin_fold_ear_problems', 'merle_colour_risk']);
   // The median age at death of a very young 2013 population is not a lifespan; no odds ratio or % anywhere.
   const json = JSON.stringify(fb);
@@ -520,7 +520,7 @@ test('Dachshund (M5-R10-08): up to 1 hour, RKC weight, FCI group 4 Germany witho
   assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
   assert.deepEqual(d.game.stages[3].activity, { kind: 'steps', value: 4500 });
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['children']);
-  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['back_spine', 'sheds', 'needs_mental_stimulation']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['back_spine', 'sheds', 'needs_mental_stimulation', 'chases_small_pets']);
   assert.deepEqual(d.health.map((h) => h.key), ['back_disc_disease']);
   // Only the RKC lower bound — the Miniature Dachshund's 14.0 y (S130) is research only.
   assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value]), [['more_than', 12]]);
@@ -582,7 +582,7 @@ test('West Highland White Terrier (M5-R10-11): up to 1 hour, PDSA weight, FCI gr
   assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
   assert.deepEqual(d.game.stages[3].activity, { kind: 'steps', value: 4500 });
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['apartment', 'family_pet', 'children']);
-  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored', 'chases_small_pets']);
   assert.deepEqual(d.health.map((h) => h.key), ['skin_allergies', 'westie_lung', 'jaw_bone_disorder', 'kneecap_luxation', 'dry_eye']);
   const json = JSON.stringify(d);
   // No VetCompass percentages / CIs, no McMillan placeholder, never "hypoallergenic".
@@ -626,7 +626,7 @@ test('Siberian Husky (M5-R10-13): more than 2 hours, FCI weight by sex, FCI grou
   assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 12000, cap_month: 12 });
   assert.deepEqual(d.game.stages[3].activity, { kind: 'steps', value: 9000 });
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'large_home']);
-  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'secure_fencing', 'chews_when_bored', 'sheds', 'frequent_grooming']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'secure_fencing', 'chews_when_bored', 'sheds', 'frequent_grooming', 'chases_small_pets']);
   assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia', 'inherited_eye_disease', 'epilepsy']);
   const json = JSON.stringify(d);
   // No Finnish average, no screening percentages, never "hypoallergenic", never merle.
@@ -1004,7 +1004,7 @@ test('Dobermann (M5-R10-25): more than 2 hours (RKC), FCI weight by sex, FCI gro
   assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 12000, cap_month: 12 });
   assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 83 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 9000 } });
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'family_pet', 'large_home']);
-  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds', 'chases_small_pets']);
   assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia_arthritis', 'wobbler_syndrome', 'heart_muscle_disease', 'bleeding_disorder_vwd', 'eye_phpv', 'bloat_gdv', 'certain_cancers', 'hypothyroidism']);
   // RKC Good Practice (minimum) vWD1; Best Practice eye test, DINGS2, hips.
   assert.equal(d.breeder_checklist.status, 'listed');
