@@ -245,6 +245,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "dobermann",
+            "species": "dog",
+            "file": "dog/dobermann.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:cd9dceea33bf15290871fe17bcdaf953a9f2fd7e6d5804389203826417f52a93",
+            "generated_at": "2026-10-12T10:30:20+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
