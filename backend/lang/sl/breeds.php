@@ -29,6 +29,7 @@ return [
     'cane_corso' => 'Cane corso',
     'pembroke_welsh_corgi' => 'Welsh corgi pembroke',
     'dobermann' => 'Doberman',
+    'boxer' => 'Boksar',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

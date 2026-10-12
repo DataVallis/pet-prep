@@ -320,7 +320,7 @@ describe('readBreedCatalogue', () => {
     expect(boxer?.search_keywords).toEqual(['boxer', 'boksar', 'deutscher boxer']);
     expect(boxer?.suitability).toEqual({
       suits: ['active_family', 'family_pet', 'large_home'],
-      consider: ['long_daily_exercise', 'brachycephalic_breathing', 'not_for_small_children', 'experienced_owner', 'needs_company', 'chews_when_bored', 'sheds', 'chases_small_pets'],
+      consider: ['long_daily_exercise', 'short_muzzle_breathing', 'not_for_small_children', 'experienced_owner', 'needs_company', 'chews_when_bored', 'sheds', 'chases_small_pets'],
     });
     const corgi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pembroke_welsh_corgi');
     expect(corgi).toEqual(
@@ -406,7 +406,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(20);
+    expect(CONSIDER_TAGS).toHaveLength(21);
+    // M5-R10-26 (runbook welfare rule, new key): shorter muzzle — can have breathing problems (the Boxer; not the flat-face chip).
+    expect(CONSIDER_TAGS).toContain('short_muzzle_breathing');
     // M5-R10-26 (runbook new-tag rule): loves company — best with someone home most of the day; no numbers.
     expect(CONSIDER_TAGS).toContain('needs_company');
     // David 2026-10-12: strong prey drive — may chase small pets (only breeds with a sourced prey-drive quote); no numbers.

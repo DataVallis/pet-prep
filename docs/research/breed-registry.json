@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "78f63a1e1e4f377806b194879bd0d4ddb8696871aa213ec64deaf1580e3f0aab"
+      "sha256": "a02e3f876324901bca735724921ab83d949d5773c4857ede51a2384c76dff37b"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -25,15 +25,15 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "d39e2972142b9a7c73062790f01654289056ab82f96d646160bfdae3a6524963"
+      "sha256": "bde359dffad36376673cb3226ba58e445c8e3e1a69862c68d8daf89563d14e77"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "13d4e5ee255d80bdddc9227e37799cc83b05125d093e53a0a43cf39c00b99e79"
+      "sha256": "e8ee4635bc81f5d9b3c60e27f245cec16d77800527bb7913e1a46f243e261884"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "ab3a10a0553845a0ae71e24fd2df46a201a2b9bac4ee39cc11c76e5a99db4a5e"
+      "sha256": "68426b7314bafc59294681d5a2e344d4ab29931898b5d78fb3694f96506a7d28"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
@@ -86,6 +86,7 @@
     "secure_fencing": "consider",
     "sensitive_skin": "consider",
     "sheds": "consider",
+    "short_muzzle_breathing": "consider",
     "shorter_lifespan": "consider",
     "small_children": "suits"
   },
@@ -123,6 +124,7 @@
         "secure_fencing": "escapes easily — needs a secure, high fence",
         "sensitive_skin": "sensitive skin — prone to itching and inflammation",
         "sheds": "sheds",
+        "short_muzzle_breathing": "shorter muzzle — can have breathing problems",
         "shorter_lifespan": "shorter lifespan",
         "small_children": "families with small children"
       }
@@ -160,6 +162,7 @@
         "secure_fencing": "rad pobegne — potrebuje varno, visoko ograjo",
         "sensitive_skin": "občutljiva koža — nagnjenost k srbenju in vnetjem",
         "sheds": "izpada mu dlaka",
+        "short_muzzle_breathing": "krajši gobček — lahko težje diha",
         "shorter_lifespan": "krajša življenjska doba",
         "small_children": "družino z majhnimi otroki"
       }
@@ -13435,7 +13438,7 @@
             ]
           },
           {
-            "tag": "brachycephalic_breathing",
+            "tag": "short_muzzle_breathing",
             "source_ids": [
               "S216",
               "S219",

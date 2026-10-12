@@ -98,6 +98,7 @@ export const CONSIDER_TAGS: readonly ConsiderTag[] = [
   'drools',
   'chases_small_pets',
   'needs_company',
+  'short_muzzle_breathing',
 ] satisfies readonly ConsiderTag[];
 
 /** A breed's suitability tags (empty lists = no sourced tags, e.g. the mutt). */
@@ -486,7 +487,7 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
       sort_order: 220,
       suitability: {
         suits: ['active_family', 'family_pet', 'large_home'],
-        consider: ['long_daily_exercise', 'brachycephalic_breathing', 'not_for_small_children', 'experienced_owner', 'needs_company', 'chews_when_bored', 'sheds', 'chases_small_pets'],
+        consider: ['long_daily_exercise', 'short_muzzle_breathing', 'not_for_small_children', 'experienced_owner', 'needs_company', 'chews_when_bored', 'sheds', 'chases_small_pets'],
       },
     },
   ],

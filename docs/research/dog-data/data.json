@@ -11342,7 +11342,7 @@
     }
   },
   "boxer": {
-    "_note": "Added 2026-10-12 (M5-R10-26, unattended run — appended after the Dobermann: AKC 2024 No. 17, S174 table row '17 | Boxer'). Quotes as returned by the web-fetch tool on 2026-10-12; spot-check before import (sources.md S213–S220, reused S8, S10, S11, S14, S35, S45, S92, S123, S174). The English FCI standard PDF redirected in a loop; the French FCI standard (S213, valid 01.04.2008) was read instead — French quotes, English in notes. FCI and the RKC standard (S217) agree on heights; the RKC standard gives weights, FCI only 'over 30 kg' / 'about 25 kg'. Colours fawn or brindle with a black mask (all three standards). FCI ears and tail natural; the AKC standard (S218) still describes cropped ears and a docked tail — never drawn. Lifespan: McMillan 2024 median 11.3 y via the Dogs Trust breed table (S123). Welfare: RKC Breed Watch Category 2 — pinched nostrils, excessively short muzzle (S216); VetCompass 2023 (S220): 'a moderately brachycephalic skull shape'; PDSA (S219) lists BOAS 'in some Boxers with shorter faces' → brachycephalic_breathing chip and no marketing (BVA S92). Slovenian name »boksar« (common name; KZS page not opened). Woodgreen and AKC trait ratings not attempted.",
+    "_note": "Added 2026-10-12 (M5-R10-26, unattended run — appended after the Dobermann: AKC 2024 No. 17, S174 table row '17 | Boxer'). Quotes as returned by the web-fetch tool on 2026-10-12; spot-check before import (sources.md S213–S220, reused S8, S10, S11, S14, S35, S45, S92, S123, S174). The English FCI standard PDF redirected in a loop; the French FCI standard (S213, valid 01.04.2008) was read instead — French quotes, English in notes. FCI and the RKC standard (S217) agree on heights; the RKC standard gives weights, FCI only 'over 30 kg' / 'about 25 kg'. Colours fawn or brindle with a black mask (all three standards). FCI ears and tail natural; the AKC standard (S218) still describes cropped ears and a docked tail — never drawn. Lifespan: McMillan 2024 median 11.3 y via the Dogs Trust breed table (S123). Welfare: RKC Breed Watch Category 2 — pinched nostrils, excessively short muzzle (S216); VetCompass 2023 (S220): 'a moderately brachycephalic skull shape'; PDSA (S219) lists BOAS 'in some Boxers with shorter faces' → new short_muzzle_breathing chip (not the flat-face chip) and no marketing (BVA S92). Slovenian name »boksar« (common name; KZS page not opened). Woodgreen and AKC trait ratings not attempted.",
     "identity": {
       "value": "FCI No. 144, Group 2 Section 2.1 (Molossoid, Mastiff type), Germany",
       "unit": "—",
@@ -11606,7 +11606,7 @@
         "source_id": "S219",
         "quote": "Brachycephalic obstructive airway syndrome (BOAS) – this can cause severe breathing problems in some Boxers with shorter faces",
         "confidence": "high",
-        "notes": "PDSA (S219), the sentence as returned (the tool cut it at 125 characters). VetCompass (S220): 'The Boxer is a medium-large sized, active dog with a short coat and a moderately brachycephalic skull shape'; 'Brachycephalic airway obstructive syndrome (BOAS) is widely considered as a common disorder in dogs with extreme brachycephaly'. Basis of brachycephalic_breathing (welfare rule) and of the marketing exclusion (BVA S92)."
+        "notes": "PDSA (S219), the sentence as returned (the tool cut it at 125 characters). VetCompass (S220): 'The Boxer is a medium-large sized, active dog with a short coat and a moderately brachycephalic skull shape'; 'Brachycephalic airway obstructive syndrome (BOAS) is widely considered as a common disorder in dogs with extreme brachycephaly'. Basis of short_muzzle_breathing (welfare rule) and of the marketing exclusion (BVA S92)."
       },
       "skull_shape": {
         "value": "moderately brachycephalic skull shape",
@@ -17443,7 +17443,7 @@
       }
     },
     "boxer": {
-      "_note": "Unattended run M5-R10-26 (2026-10-12): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. New vocabulary key needs_company (runbook 'new tag' rule). Sourced needs: weekly brushing (RKC S215, PDSA S219) → built (M5-R13); a gap between eating and exercising (PDSA S219) → built (M5-R16); socialisation from a young age (PDSA S219) → built (M5-R17); face folds kept clean and dry (PDSA S219) → ROADMAP M5-R14 (not built, needs David). Marketing: excluded (moderately brachycephalic, S220; BVA S92) — open for David.",
+      "_note": "Unattended run M5-R10-26 (2026-10-12): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. New vocabulary keys needs_company (runbook 'new tag' rule) and short_muzzle_breathing (welfare rule: a moderately short-faced breed, not the flat-face chip). Sourced needs: weekly brushing (RKC S215, PDSA S219) → built (M5-R13); a gap between eating and exercising (PDSA S219) → built (M5-R16); socialisation from a young age (PDSA S219) → built (M5-R17); face folds kept clean and dry (PDSA S219) → ROADMAP M5-R14 (not built, needs David). Marketing: excluded (moderately brachycephalic, S220; BVA S92) — open for David.",
       "exercise_minutes_adult": {
         "value": 120,
         "unit": "minutes/day",
@@ -17591,7 +17591,7 @@
         "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): potreba z virom; mehanika ni zgrajena → ROADMAP M5-R14 (needs-david)"
       },
       "suitability_tags": {
-        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-26); refs = JSON paths in this file. New vocabulary key needs_company (runbook 'new tag' rule). No percentages in the app.",
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-26); refs = JSON paths in this file. New vocabulary keys needs_company and short_muzzle_breathing (runbook 'new tag' / welfare rules). No percentages in the app.",
         "suits": [
           {
             "tag": "active_family",
@@ -17644,7 +17644,7 @@
             "quote": "S215 'More than 2 hours per day'; S219 'a minimum of two hours exercise every day'"
           },
           {
-            "tag": "brachycephalic_breathing",
+            "tag": "short_muzzle_breathing",
             "source_ids": [
               "S219",
               "S220",
@@ -17656,7 +17656,8 @@
               "boxer.health.breed_watch"
             ],
             "quote": "S219 'Brachycephalic obstructive airway syndrome (BOAS) – this can cause severe breathing problems in some Boxers with shorter faces'; S220 'a moderately brachycephalic skull shape'; S216 'Excessively short muzzle'",
-            "note": "Welfare rule §3: moderately short-faced breed with a Breed Watch muzzle / nostril concern. No statistics in the app."
+            "note": "Welfare rule §3 ('a new one per the row above'): moderately short-faced breed with a Breed Watch muzzle / nostril concern — its own chip, not the flat-face brachycephalic_breathing ('flat face — breathing and heat problems'; no Boxer source names heat). No statistics in the app.",
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka, dobrobit — nova oznaka): »krajši gobček — lahko težje diha« / »shorter muzzle — can have breathing problems«"
           },
           {
             "tag": "not_for_small_children",
@@ -17743,9 +17744,10 @@
           "drools": "No source on the pages read.",
           "fragile_older_children": "About fragile bones (Yorkshire Terrier) — not this breed's reason.",
           "sensitive_skin": "Skin fold dermatitis and skin allergies are listed by PDSA (S219) and skin disorders are common in VetCompass (S220), but the RKC Breed Watch points (S216) are nostrils and muzzle only (the Westie / Bulldog criterion is a Breed Watch skin point) — not given; face-fold care → ROADMAP M5-R14.",
-          "welfare_other": "No hips_hind_legs / heart_and_spine / back_spine: hip dysplasia and heart disease are listed by PDSA (S219) — research only (Dobermann precedent)."
+          "welfare_other": "No hips_hind_legs / heart_and_spine / back_spine: hip dysplasia and heart disease are listed by PDSA (S219) — research only (Dobermann precedent).",
+          "brachycephalic_breathing": "That chip reads 'flat face — breathing and heat problems'; the Boxer is only moderately short-faced (S220) and no Boxer source names heat → short_muzzle_breathing instead (QA review 2026-10-12)."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, large_home; consider long_daily_exercise, brachycephalic_breathing, not_for_small_children, experienced_owner, needs_company (new), chews_when_bored, sheds, chases_small_pets"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, large_home; consider long_daily_exercise, short_muzzle_breathing (new), not_for_small_children, experienced_owner, needs_company (new), chews_when_bored, sheds, chases_small_pets"
       },
       "marketing": {
         "value": "in the app: yes; in marketing / store screenshots / social: no",
@@ -17754,7 +17756,7 @@
         "quote": "avoiding imagery of brachycephalic dogs in advertising, marketing materials and social media campaigns",
         "confidence": "medium",
         "notes": "BVA position, executive summary (S92). The Boxer has 'a moderately brachycephalic skull shape' (VetCompass / RVC, S220) and RKC Breed Watch concerns 'Pinched nostrils' / 'Excessively short muzzle' (S216) → the rule's brachycephalic exclusion (as the French Bulldog and the Bulldog). Only moderately short-faced — open for David whether he wants it in marketing anyway (as he did for the Cavalier).",
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, NOT in marketing / store screenshots (BVA advice, S92; moderately brachycephalic, S220) — odprto za Davida"
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu / posnetkih zaslona ne (BVA S92; zmerno brahicefalen, S220); izjema odprta za Davida"
       },
       "ai_appearance": {
         "value": "adult Boxer, fawn (golden to deer red) with a black mask (default), or brindle; short glossy smooth coat tight to the body; moderate, broad and deep muzzle (never extremely short) with wide open nostrils; natural uncropped ears lying close to the cheeks; natural undocked tail carried high; dark brown eyes; square, athletic, muscular build; white markings small (never more than a third, never all white)",

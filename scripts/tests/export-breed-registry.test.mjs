@@ -1031,7 +1031,7 @@ test('Boxer (M5-R10-26): more than 2 hours (RKC), RKC standard weight by sex, FC
   assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 12000, cap_month: 12 });
   assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 102 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 9000 } });
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'family_pet', 'large_home']);
-  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'brachycephalic_breathing', 'not_for_small_children', 'experienced_owner', 'needs_company', 'chews_when_bored', 'sheds', 'chases_small_pets']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'short_muzzle_breathing', 'not_for_small_children', 'experienced_owner', 'needs_company', 'chews_when_bored', 'sheds', 'chases_small_pets']);
   assert.deepEqual(d.health.map((h) => h.key), ['short_face_breathing', 'corneal_ulcers', 'skin_folds_allergies', 'heart_cardiomyopathy_aortic_stenosis', 'hip_dysplasia_arthritis', 'epilepsy', 'certain_cancers']);
   // RKC Best Practice only: elbow, eye and hip schemes.
   assert.equal(d.breeder_checklist.status, 'listed');

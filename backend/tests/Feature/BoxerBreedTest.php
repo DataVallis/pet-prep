@@ -39,7 +39,7 @@ use function Pest\Laravel\postJson;
 | age capped at 120, stages 9 / 36 / 102 — senior from the McMillan 2024 median 11.3 y
 | via the Dogs Trust table S123 —, arrival 2 / 9 / 36 / 102, learning × 1.0, paid breed,
 | Border Collie care rates, suitability: suits active_family / family_pet / large_home,
-| consider long_daily_exercise / brachycephalic_breathing / not_for_small_children /
+| consider long_daily_exercise / short_muzzle_breathing (new) / not_for_small_children /
 | experienced_owner / needs_company (new) / chews_when_bored / sheds / chases_small_pets;
 | fawn or brindle with a black mask, natural ears and tail, moderate muzzle with open
 | nostrils; welfare breed → not in marketing, BVA S92).
@@ -393,7 +393,7 @@ describe('GET /api/breeds', function () {
                 'search_keywords' => BreedConfigsSeeder::configs()[22]['search_keywords'], 'sort_order' => 220,
                 'suitability' => [
                     'suits' => ['active_family', 'family_pet', 'large_home'],
-                    'consider' => ['long_daily_exercise', 'brachycephalic_breathing', 'not_for_small_children', 'experienced_owner', 'needs_company', 'chews_when_bored', 'sheds', 'chases_small_pets'],
+                    'consider' => ['long_daily_exercise', 'short_muzzle_breathing', 'not_for_small_children', 'experienced_owner', 'needs_company', 'chews_when_bored', 'sheds', 'chases_small_pets'],
                 ],
             ]);
     });
@@ -467,13 +467,15 @@ describe('no health statistics in the app; welfare chip, not in marketing (runbo
         $consider = app(BreedSuitability::class)->for(BreedType::Boxer)['consider'];
         expect(array_keys(config('breed_suitability.vocabulary')))->not->toContain('hypoallergenic')
             ->and(config('breed_suitability.vocabulary.needs_company'))->toBe('consider')
-            ->and($consider)->toContain('brachycephalic_breathing')
+            ->and(config('breed_suitability.vocabulary.short_muzzle_breathing'))->toBe('consider')
+            ->and($consider)->toContain('short_muzzle_breathing')
+            ->and($consider)->not->toContain('brachycephalic_breathing')
             ->and($consider)->toContain('needs_company')
             ->and($consider)->not->toContain('hips_hind_legs')
             ->and($consider)->not->toContain('heart_and_spine')
             ->and($consider)->not->toContain('sensitive_skin')
             ->and($consider)->not->toContain('shorter_lifespan')
             ->and(bxData('proposed_game_parameters.boxer.marketing.source_id'))->toBe('S92')
-            ->and(bxData('proposed_game_parameters.boxer.marketing.decision'))->toContain('NOT in marketing');
+            ->and(bxData('proposed_game_parameters.boxer.marketing.decision'))->toContain('v marketingu / posnetkih zaslona ne');
     });
 });

@@ -516,7 +516,8 @@ describe('PetPickerStep', () => {
     expect(screen.getByTestId('breed-suitability-boxer-suits')).toHaveTextContent(/družinsko življenje/);
     expect(screen.getByTestId('breed-suitability-boxer-suits')).toHaveTextContent(/veliko hišo z vrtom/);
     const consider = screen.getByTestId('breed-suitability-boxer-consider');
-    expect(consider).toHaveTextContent(/kratek gobček — težave z dihanjem in vročino/);
+    expect(consider).toHaveTextContent(/krajši gobček — lahko težje diha/);
+    expect(consider).not.toHaveTextContent(/vročin/);
     expect(consider).toHaveTextContent(/velik pes — ni za dom z majhnimi otroki/);
     expect(consider).toHaveTextContent(/močan pes — potrebuje izkušenega lastnika/);
     // M5-R10-26 new chip (PDSA S219): separation anxiety, someone at home most of the day.
@@ -548,7 +549,7 @@ describe('PetPickerStep', () => {
       const suits = screen.getByTestId('breed-suitability-boxer-suits');
       const consider = screen.getByTestId('breed-suitability-boxer-consider');
       expect(suits).toHaveTextContent(/family life/);
-      expect(consider).toHaveTextContent(/flat face — breathing and heat problems/);
+      expect(consider).toHaveTextContent(/shorter muzzle — can have breathing problems/);
       expect(consider).toHaveTextContent(/loves company — best with someone home most of the day/);
       expect(consider).toHaveTextContent(/strong prey drive — may chase small pets/);
       expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);

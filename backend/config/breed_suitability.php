@@ -131,6 +131,12 @@ return [
         // trait no other key covers (`often_alone` is only ever a `suits` tag); a calm chip, never
         // a number.
         'needs_company' => 'consider',
+        // M5-R10-26 (runbook welfare rule, "a new one per the row above", 2026-10-12): a moderately
+        // short-faced breed whose muzzle / nostrils are a welfare point of concern — breathing problems in
+        // dogs with shorter faces (Boxer: VetCompass S220 "a moderately brachycephalic skull shape", RKC
+        // Breed Watch S216 "Excessively short muzzle", PDSA S219 BOAS "in some Boxers with shorter faces").
+        // Not `brachycephalic_breathing` (flat face, heat). A calm chip, never a percentage.
+        'short_muzzle_breathing' => 'consider',
     ],
 
     'breeds' => [
@@ -662,7 +668,8 @@ return [
         // (PDSA S219 does not recommend the breed with younger children → `not_for_small_children`),
         // not `first_time_owner` (→ `experienced_owner`), not `other_pets` (very high prey drive),
         // not `often_alone` (→ new `needs_company`). Welfare breed (moderately brachycephalic,
-        // VetCompass S220; RKC Breed Watch Category 2 S216) → `brachycephalic_breathing`.
+        // VetCompass S220; RKC Breed Watch Category 2 S216) → the new `short_muzzle_breathing`
+        // (not `brachycephalic_breathing`: that chip says "flat face … heat", and no Boxer source names heat).
         'boxer' => [
             'suits' => [
                 // S215 "Exercise: More than 2 hours per day"; S219 "a minimum of two hours exercise every day".
@@ -675,9 +682,9 @@ return [
             'consider' => [
                 // S215 "More than 2 hours per day"; S219 "a minimum of two hours exercise every day".
                 ['tag' => 'long_daily_exercise', 'source_ids' => ['S215', 'S219'], 'refs' => ['boxer.exercise.adult', 'boxer.suitability.pdsa_exercise']],
-                // Welfare rule: S219 BOAS "in some Boxers with shorter faces"; S220 "a moderately brachycephalic
-                // skull shape"; S216 "Excessively short muzzle".
-                ['tag' => 'brachycephalic_breathing', 'source_ids' => ['S219', 'S220', 'S216'], 'refs' => ['boxer.health.brachycephaly_boas', 'boxer.health.skull_shape', 'boxer.health.breed_watch']],
+                // Welfare rule (new key, not the flat-face chip): S219 BOAS "in some Boxers with shorter faces";
+                // S220 "a moderately brachycephalic skull shape"; S216 "Excessively short muzzle".
+                ['tag' => 'short_muzzle_breathing', 'source_ids' => ['S219', 'S220', 'S216'], 'refs' => ['boxer.health.brachycephaly_boas', 'boxer.health.skull_shape', 'boxer.health.breed_watch']],
                 // S219 "we wouldn't recommend a Boxer if you have younger children as they could accidentally knock them over."
                 ['tag' => 'not_for_small_children', 'source_ids' => ['S219'], 'refs' => ['boxer.suitability.pdsa_children']],
                 // S219 "we wouldn't recommend a Boxer if you are a first time owner."
