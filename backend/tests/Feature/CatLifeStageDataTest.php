@@ -436,10 +436,13 @@ describe('pairing a cat with a profile (QA M1)', function () {
 describe('migration 2026_10_25_120000_add_cat_stage_param_keys', function () {
     it('down() removes only the rows of the new keys and restores the old check; up() again lets the seeder re-add them', function () {
         seedLifeStageData();
-        // A real rollback runs the later migrations that add keys first (M5-R17 socialisation).
-        $later = require database_path('migrations/2026_11_30_120000_add_puppy_socialisation.php');
-        $later->down();
         $migration = require database_path('migrations/2026_10_25_120000_add_cat_stage_param_keys.php');
+        // M5-R16 / M5-R17: later key migrations are rolled back first, newest first (as
+        // `migrate:rollback` would) — the old check does not know their keys.
+        $socialisation = require database_path('migrations/2026_11_30_120000_add_puppy_socialisation.php');
+        $socialisation->down();
+        $later = require database_path('migrations/2026_11_29_130000_add_meal_exercise_gap_key.php');
+        $later->down();
         $newKeys = ['play_sessions_per_day', 'play_min_gap_minutes', 'litter_uses_per_day', 'litter_scoop_deadline_hours',
             'litter_full_change_days', 'grooming_sessions_per_week', 'scratching_after_missed_play'];
         $others = DB::table('breed_stage_params')->whereNotIn('key', $newKeys)->orderBy('id')->get()->map(fn ($r) => (array) $r)->all();
@@ -454,6 +457,7 @@ describe('migration 2026_10_25_120000_add_cat_stage_param_keys', function () {
 
         $migration->up();
         $later->up();
+        $socialisation->up();
         (new BreedStageParamsSeeder)->run();
         expect(BreedStageParam::count())->toBe(count(BreedStageParamsSeeder::allRows()));
     });

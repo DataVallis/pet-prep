@@ -431,6 +431,28 @@ class BreedStageParamsSeeder extends Seeder
         'dobermann' => [1, 'S209', 'Grooming: Once a week', 'high', false],
     ];
 
+    /**
+     * M5-R16 meal / exercise gap (David 2026-10-12, "1 ura, samo opozorilo"): the 60 minutes
+     * are David's decision; the source only says "leave a gap" (no length).
+     */
+    public const CONFIRMED_R16_MEAL_EXERCISE_GAP = 'potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)';
+
+    /** M5-R16: David's length of the digestion warning, in minutes (all breeds with a source). */
+    public const MEAL_EXERCISE_GAP_MINUTES = 60;
+
+    /**
+     * M5-R16: dog breed → [source id, verbatim quote (data.json
+     * proposed_game_parameters.<breed>.meal_exercise_gap)]. Only breeds whose A/B source
+     * states the advice verbatim; no row = no warning. The Bernese Mountain Dog's PDSA page
+     * (S154) is recorded only as a paraphrase → no row until a verbatim quote is fetched.
+     *
+     * @var array<string, array{0: string, 1: string}>
+     */
+    public const MEAL_EXERCISE_GAP = [
+        'cane_corso' => ['S199', 'Remember to leave a gap after eating and before exercising.'],
+        'dobermann' => ['S211', 'Remember to leave at a gap after eating and before exercising.'],
+    ];
+
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
     public const CONFIRMED_R17_SOCIALISATION = 'potrdil David 12. 10. 2026: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (M5-R17)';
 
@@ -695,6 +717,12 @@ class BreedStageParamsSeeder extends Seeder
                 $add('all', 0, StageParamKey::GroomingSessionsPerWeek, ...$grooming);
             }
 
+            // M5-R16 (David 2026-10-12): the digestion warning after a meal; no row = no warning.
+            $gap = self::mealExerciseGap($breed);
+            if ($gap !== null) {
+                $add('all', 0, StageParamKey::MealExerciseGapMinutes, ...$gap);
+            }
+
             // M5-R17 (David 2026-10-12): the puppy's weekly "new experience"; no row =
             // no task (breeds without a sourced socialisation statement).
             $socialisation = self::dogSocialisation($breed);
@@ -734,6 +762,32 @@ class BreedStageParamsSeeder extends Seeder
             'notes' => $proposal
                 ? 'The sources say "more than once a week" without a number → Claude\'s proposal 2 (open for David). Matted coat when ≥ 1 of 2 is missed (ceil(2 / 2)).'
                 : 'Runbook grooming rule (once a week → 1, every day → 7, A–B → B). Matted coat when ≥ ceil('.$value.' / 2) of the week\'s slots are missed.',
+        ]];
+    }
+
+    /**
+     * M5-R16 meal / exercise gap: `meal_exercise_gap_minutes` for a dog breed whose A/B source
+     * says to leave a gap after eating and before exercise (GDV / bloat). The value (60) is
+     * David's decision (2026-10-12) — the source gives no length; the row cites the source of
+     * the advice. Null = no such statement → no row, no warning.
+     *
+     * @return array{0: int, 1: array<string, mixed>}|null
+     */
+    public static function mealExerciseGap(BreedType $breed): ?array
+    {
+        $row = self::MEAL_EXERCISE_GAP[$breed->value] ?? null;
+        if ($row === null) {
+            return null;
+        }
+        [$sourceId, $quote] = $row;
+
+        return [self::MEAL_EXERCISE_GAP_MINUTES, [
+            'unit' => 'minutes after a meal (digestion warning only)', 'source_id' => $sourceId, 'confidence' => 'medium',
+            'verified' => true,
+            'ref' => "proposed_game_parameters.{$breed->value}.meal_exercise_gap",
+            'decision' => self::CONFIRMED_R16_MEAL_EXERCISE_GAP,
+            'quote' => $quote,
+            'notes' => 'The source advises a gap after eating and before exercising (GDV) without a length; 60 minutes is David\'s decision. Only a warning in the child app — steps still count, no score.',
         ]];
     }
 

@@ -84,6 +84,10 @@ Border Collie (zahtevnejša pasma) je lačen hitreje (~8 ur), odrasel potrebuje 
 - **Brez kazni:** to ni rutina in ne vpliva na oceno skrbi ali semafor. V poročilu otroka vidite vrstico **»Nova izkušnja (mladiček)«** — koliko tednov je bilo opravljenih, zamujenih in ali ta teden še čaka; v časovnici npr. »Nova izkušnja: nov zvok · Mia«.
 - Zaenkrat le pasme, kjer vir to izrecno svetuje (12 pasem); mešanček, border collie in nekatere druge pasme naloge še nimajo (*odločitev, ali jo dobijo vsi mladički, še čaka*).
 
+**Počitek po obroku** *(od 12. 10. 2026 na strežniku in v aplikaciji — aplikacija še ni v trgovini)*:
+- Pri nekaterih velikih pasmah viri svetujejo, naj pes po obroku malo počiva, preden gre na sprehod (nevarnost zasuka želodca). Za **cane corsa** in **dobermana** (PDSA) zato otrok 60 minut po obroku na svojem zaslonu vidi mirno opozorilo »Počakaj s sprehodom — kuža prebavlja« in uro, ko lahko gre ven.
+- To je samo opozorilo in navada, ki se je otrok nauči: koraki se štejejo tudi takrat, ni kazni in ni točk. Uro (60 minut) je določil David, ker viri dolžine ne povedo.
+
 **Igra z žogo in crkljanje** *(od 8. 10. 2026 na strežniku in v aplikaciji — aplikacija še ni v trgovini; samo plačan 12-tedenski izziv (in psi, ki so stari 7-dnevni preizkus začeli pred 8. 10. 2026, do njegovega konca); brezplačni mešanček in psi iz prejšnjih izzivov igre nimajo — slednje je naš predlog, ki ga še preverjamo)*:
 - Ko je za kužka vse narejeno, je z njim še vedno kaj za početi. Otrok nad gumbi tapne **»Igra«** in izbere **»Žoga«** (povleče žogo navzgor, kuža jo prinese nazaj — 3 meti) ali **»Crkljanje«** (5-krat pogladi kužka s prstom). Za otroke, ki potega ne zmorejo ali uporabljajo bralnik zaslona, sta gumba **»Vrzi žogo«** in **»Drži in pobožaj«**; pri vklopljenem »zmanjšaj gibanje« se nič ne premika po zaslonu. Igra traja manj kot pol minute.
 - **Igra je nagrada brez kazni:** ne prinaša točk, ne šteje v Care Score, rutine ali semafor in ne vpliva na lakoto, žejo ali bolezen. Kuža je po igri **30 minut vesel** (video igranja, če ga pes ima, sicer srčki in napis »Kuža je vesel«) — a vesel kuža nikoli ne skrije potrebe (lačen ostane lačen).

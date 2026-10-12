@@ -3,6 +3,9 @@ import { Text } from '@/components/ui/Text';
 import { Footprints, HeartPulse, RefreshCw, X } from 'lucide-react-native';
 
 import type { ChildPetView } from '@/modules/childPet/childPetView';
+import DigestionNote from '@/modules/digestion/DigestionNote';
+import { digestionNote } from '@/modules/digestion/digestion';
+import { useDigestionClock } from '@/modules/digestion/useDigestionClock';
 import { formatSteps } from '@/modules/steps/stepCounter';
 import type { StepHealth, StepSync } from '@/modules/steps/useStepSync';
 import { alpha, fonts, palette, tightTracking } from '@/theme';
@@ -99,6 +102,9 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
   const { permission, health } = stepSync;
   // The health card already offers a way to count steps → no "can't count" dead end.
   const healthOffered = health.status === 'undetermined' || health.status === 'denied' || health.status === 'needs_update';
+  // M5-R16: after a meal of a breed with the GDV advice — a calm note; steps still count.
+  const digestionNow = useDigestionClock(view);
+  const digestion = digestionNote(view, digestionNow);
 
   return (
     <View style={styles.backdrop} testID="walk-overlay" accessibilityViewIsModal>
@@ -119,6 +125,8 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
             <X color={palette.white} size={20} />
           </Pressable>
         </View>
+
+        {digestion !== null && <DigestionNote note={digestion} testID="walk-digesting" />}
 
         <View style={styles.stats}>
           <Text style={styles.steps} adjustsFontSizeToFit numberOfLines={1}>

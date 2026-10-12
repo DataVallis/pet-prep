@@ -392,6 +392,7 @@ sequenceDiagram
   end
   S->>DB: COMMIT
   S-->>App: one PetUpdated after commit ("fed_pet",<br/>or "metric_changed" if only the catch-up changed what shows)
+  Note over S,C: M5-R16: state.feeding.digesting_until = last meal + breed meal_exercise_gap_minutes<br/>(Cane Corso / Dobermann 60 min; else null) — a warning only, steps still count
   Note over S,C: Water: same flow, CareScheduleService::water —<br/>water_times_per_day per local day, ≥ water_min_gap_minutes real minutes<br/>since the last refill (also across midnight) → thirst 100 %, watered_pet row
   Note over S,DB: Clean: settles due hygiene events, hygiene 100 %, cleaned_poop row (no window).<br/>Contract: allowed while contract_required; once per pet → pet_contracts row + signed_contract row → 201<br/>(unborn pet: birth in the same transaction, M1-07b); again → 409
 ```
@@ -481,6 +482,7 @@ sequenceDiagram
   Q-->>Store: lockStateFromView → setLockState(hard_stop | illness | game_over | inactive, until, tz)<br/>awaiting_contract → setAwaitingContract(true)
   Store-->>HUD: AppNavigator: LockedScreen over the HUD (unlocks live) · ContractScreen instead of the HUD
   Note over HUD,Q: timer at the earliest of next window start, current window end,<br/>water next_allowed_at, next family midnight → refetch GET (also while live)
+  Note over HUD,Q: M5-R16: while feeding.digesting_until is ahead → "Počakaj s sprehodom" note<br/>(HUD + walk screen); hidden by a local timer at that instant, no refetch
   loop on mount (sensor granted or Health connected), on foreground (≤ 1/min), every 5 min, on walk overlay close
     HUD->>API: POST /api/child/pet/steps {steps_today, source, recorded_at ±HH:MM}<br/>max of Apple Health / Health Connect and the sensor (iOS: CoreMotion since the FAMILY midnight · Android: live counter per child), family day — only if > my_steps_today of that family day (§5b′)
     API-->>Q: replace with response.state (any status; 423 too)

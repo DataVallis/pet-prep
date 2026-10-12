@@ -26,6 +26,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-12 — Po obroku počitek, potem sprehod (M5-R16)
+
+**Kaj se je zgodilo:** David je odločil »1 ura, samo opozorilo«. Ko otrok nahrani cane corsa ali dobermana, aplikacija 60 minut nad gumbi in na zaslonu sprehoda pokaže mirno opozorilo: »Počakaj s sprehodom. Kuža prebavlja. Velik pes naj po obroku počiva približno eno uro. Na sprehod lahko greš ob 12:40.« Koraki se štejejo naprej, ni kazni in ni točk.
+
+**Zakaj je pomembno:** PDSA za obe pasmi piše »Remember to leave a gap after eating and before exercising.« — zasuk želodca (GDV) je nujno stanje. Prava navada lastnika velikega psa, ki se je otrok nauči v igri, brez strahu in brez kaznovanja. Številka 60 je Davidova odločitev, vir je zapisan pri vsaki pasmi.
+
+**Številke:** 2 pasmi z opozorilom (cane corso S199, doberman S211), 60 minut, 1 nova nastavitev pasme (`meal_exercise_gap_minutes`, urejanje v administraciji), 1 nova vrednost v stanju za otroka (`digesting_until`); novi testi: Pest **11**, Jest **7**. Bernski planšarski pes počaka na preverjen citat vira (v podatkih je le povzetek). Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Pri velikih pasmah, kot sta cane corso in doberman, aplikacija otroka po obroku spomni, naj s sprehodom počaka približno uro — tako kot svetujejo veterinarji PDSA.«
+- 🧒 Otroci: »Kuža je pojedel? Naj malo počiva — trebušček prebavlja. Na sprehod gresta čez eno uro!«
+- 💼 Investitorji: »Vsaka potreba pasme z virom postane del igre — tudi majhna navada, kot je počitek po obroku. Brez kazni: igra uči, ne straši.«
+- 🛠 Tehnično: »`breed_stage_params` `meal_exercise_gap_minutes` (vrstica samo za pasme z dobesednim citatom), `CareScheduleService::digestingUntil`, `feeding.digesting_until` v stanju otroka, `DigestionNote` v HUD-u in na zaslonu sprehoda (ena ura brez osveževanja); PR #199.«
+
+---
+
 ## 2026-10-12 — Kuža se zdaj tudi češe (M5-R13)
 
 **Kaj se je zgodilo:** David je odločil »kot pri mački«: pes dobi tedensko rutino česanja, kot jo že ima muca. Število česanj na teden je iz virov (The Royal Kennel Club, PDSA) za vsako pasmo. Otrok tapne »Počeši« in 30 sekund s prstom češe dlako; če ostane vsaj polovica česanj tedna neopravljena, ima kuža vozel v dlaki — brez kazni, naslednje (daljše) česanje ga razreši. Pri skupnem psu šteje otroku, ki je česal; starš vidi vrstico »Česanje« v poročilu.

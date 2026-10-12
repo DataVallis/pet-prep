@@ -126,6 +126,9 @@ import HeartsLayer from '@/modules/play/HeartsLayer';
 import PlayOverlay from '@/modules/play/PlayOverlay';
 import { moodSceneAt, playBlockText, playEntry, playRefusalMessage, type PlayKind } from '@/modules/play/play';
 import { usePlayClock } from '@/modules/play/usePlayClock';
+import DigestionNote from '@/modules/digestion/DigestionNote';
+import { digestionNote } from '@/modules/digestion/digestion';
+import { useDigestionClock } from '@/modules/digestion/useDigestionClock';
 import type { PetState, PetUpdatedBroadcast } from '@/types';
 import type { CatGameKind } from '@/modules/catCare/catCare';
 import { breedName } from '@/modules/species/species';
@@ -338,6 +341,8 @@ export default function ChildHudScreen() {
 
   // M5-R05 play & cuddle: the clock of the happy scene / invitation, "Mogoče kasneje".
   const playNow = usePlayClock(view);
+  // M5-R16: the "wait with the walk — digesting" note ends by the clock (one timer).
+  const digestionNow = useDigestionClock(view);
   const reduceMotion = useReduceMotion();
   const play = usePlay();
   // "Mogoče kasneje" lives in the session store (survives the HUD remounting).
@@ -592,6 +597,8 @@ export default function ChildHudScreen() {
   const socialisationChip = !cat && !coveredByOverlay && showSocialisationChip(view.socialisation, locked);
   const scratcherShown = !coveredByOverlay && showScratcherButton(view);
   const firstAid = showFirstAid(view);
+  // M5-R16: after a meal of a breed with the GDV advice — only a note, the walk stays enabled.
+  const digestion = !cat && !coveredByOverlay ? digestionNote(view, digestionNow) : null;
   const openCat = (kind: CatGameKind) => {
     openCatGame(kind);
   };
@@ -924,9 +931,10 @@ export default function ChildHudScreen() {
                 : null
             }
             footer={
-              hasTraining || entry.kind !== 'hidden' || moodScene !== null || chips.length > 0 || socialisationChip || firstAid ? (
+              hasTraining || entry.kind !== 'hidden' || moodScene !== null || chips.length > 0 || socialisationChip || firstAid || digestion !== null ? (
                 <>
                   {firstAid && <FirstAidNote />}
+                  {digestion !== null && <DigestionNote note={digestion} />}
                   {moodScene !== null && <HappyBadge />}
                   {entry.kind === 'invitation' && (
                     <PlayInvitationCard

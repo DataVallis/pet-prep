@@ -175,6 +175,11 @@
       "openSettings": "Open Health Connect",
       "needsUpdate": "Health Connect needs to be installed or updated first. Ask a parent to help.",
       "openStore": "Open Google Play"
+    },
+    "digesting": {
+      "title": "Wait with the walk",
+      "body": "Your pup is digesting. A big dog should rest about an hour after a meal.",
+      "until": "You can go for a walk at {{time}}."
     }
   },
   "grooming": {

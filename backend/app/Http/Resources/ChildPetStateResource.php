@@ -69,6 +69,10 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * experience" — {@see SocialisationPayload}; null when this program week has
  * no task (not a puppy week, no breed row, a cat, `socialisation_enabled` off).
  *
+ * `feeding.digesting_until` (M5-R16): end of the "wait with the walk, the dog
+ * is digesting" warning after a meal, for breeds whose source advises a gap
+ * between eating and exercise (bloat / GDV); null otherwise. A warning only.
+ *
  * `pet.media` (M4-05): status + signed URLs of the stored reference image and
  * state videos ({@see PetMediaService::mediaFor()}); `current_video_url` is
  * the video for `pet_state`, falling back to idle.
@@ -200,6 +204,16 @@ class ChildPetStateResource extends JsonResource
                     ? ['start' => $iso($feeding->nextStart), 'end' => $iso($feeding->nextEnd)]
                     : null,
                 'last_fed_at' => $iso($feeding?->lastFedAt),
+                /**
+                 * M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                 * warning (wait with the walk, the dog is digesting): last meal + the breed's
+                 * meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                 * breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                 * steps still count.
+                 *
+                 * @var string|null
+                 */
+                'digesting_until' => $iso($schedule->digestingUntil($pet, $feeding?->lastFedAt, $now)),
             ],
             'water' => [
                 'times_per_day' => $water->timesPerDay ?? 0,

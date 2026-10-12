@@ -116,6 +116,12 @@ export interface ChildPetView {
     next_feed_window: TimeWindow | null;
     last_fed_at: string | null;
     /**
+     * M5-R16: until this instant the HUD shows "wait with the walk — the dog is digesting"
+     * (last meal + the breed's meal / exercise gap; Cane Corso, Dobermann 60 min). Null for
+     * every other pet, once the gap has passed, and from an older server. Only a warning.
+     */
+    digesting_until: string | null;
+    /**
      * Today's windows of the pet's stage with who covers them (`pet.profile.today.feed_windows`,
      * also for a legacy pet); [] when the server sends none (older server).
      */
@@ -309,6 +315,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
       emergency_threshold: thresholdOrNull((raw.feeding as { emergency_threshold?: unknown }).emergency_threshold),
       next_feed_window: windowOrNull(raw.feeding.next_feed_window),
       last_fed_at: isoOrNull(raw.feeding.last_fed_at),
+      // M5-R16: an older server sends no key (typed as required by the current schema).
+      digesting_until: isoOrNull((raw.feeding as { digesting_until?: unknown }).digesting_until),
       today: readTodayFeedWindows((p as { profile?: unknown }).profile),
     },
     water: {

@@ -29,6 +29,10 @@ namespace App\Enums;
  *  - M5-R17 stage key SOCIALISATION_TASKS_PER_WEEK (David 2026-10-12): the
  *    puppy's weekly "new experience" (1, stage puppy only; no row = no task —
  *    breeds without a sourced socialisation statement). Never scored.
+ *  - M5-R16 dog breed key MEAL_EXERCISE_GAP_MINUTES (David 2026-10-12, "1 ura,
+ *    samo opozorilo"): minutes after a meal during which the child app shows
+ *    "wait with the walk, the dog is digesting" (GDV / bloat advice of an A/B
+ *    source). Only a warning — steps still count, no score. No row = no warning.
  */
 enum StageParamKey: string
 {
@@ -73,6 +77,8 @@ enum StageParamKey: string
     case ScratchingAfterMissedPlay = 'scratching_after_missed_play';
     // M5-R17 stage key (puppy only): "new experience" tasks per program week.
     case SocialisationTasksPerWeek = 'socialisation_tasks_per_week';
+    // M5-R16 dog (breed key): digestion warning after a meal (bloat / GDV advice)
+    case MealExerciseGapMinutes = 'meal_exercise_gap_minutes';
 
     public function isBreedLevel(): bool
     {
@@ -84,6 +90,7 @@ enum StageParamKey: string
             self::PottyTrainingAccidentReduction, self::PlaceTrainingChewingReduction,
             self::PlayMinGapMinutes, self::LitterScoopDeadlineHours, self::LitterFullChangeDays,
             self::GroomingSessionsPerWeek, self::ScratchingAfterMissedPlay,
+            self::MealExerciseGapMinutes,
         ], true);
     }
 
@@ -138,6 +145,8 @@ enum StageParamKey: string
                 ? null : 'Expected true or false.',
             self::SocialisationTasksPerWeek => is_int($value) && $value >= 0 && $value <= 7
                 ? null : 'Expected whole tasks per week, 0–7.',
+            self::MealExerciseGapMinutes => is_int($value) && $value >= 1 && $value <= 240
+                ? null : 'Expected whole minutes after a meal, 1–240.',
         };
     }
 
