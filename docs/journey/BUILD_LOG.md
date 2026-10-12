@@ -9,6 +9,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-12 — Cane corso: peta pasma po dvajsetih (M5-R10-23)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **cane corsa** (14. mesto; 12. avstralski ovčar in 13. kavalir sta že v aplikaciji). Raziskava: **5 novih virov (S197–S201)** — standard FCI (2023) in nomenklatura, standard AKC, PDSA in raziskava o življenjski dobi pasme (Korec idr. 2017, mediana **9,29 leta**). Pasme The Royal Kennel Club ne priznava, zato so gibanje, nega in oznake iz PDSA. Pravila igre: odrasel **120 minut = 12.000 korakov** na dan, starejši 90 minut = 9.000, mladiček od 2.000 navzgor (12.000 doseže pri 12 mesecih); uči se enako hitro kot mešanček (ni v Corenovi lestvici). Meja starejšega psa (**84 mesecev = 7 let**) je **predlog Claude, čaka Davida** — nobeno potrjeno pravilo ni dalo vrednosti.
+
+**Zakaj je pomembno:** Cane corso je velik in močan pes. PDSA ga ne priporoča družinam z majhnimi otroki (lahko jih po nesreči podre), primernejši je za izkušene lastnike, potrebuje okoli dve uri gibanja in miselne izzive, in se slini — zato sta nastali **dve novi oznaki**: »velik pes — ni za dom z majhnimi otroki« in »se slini — imejte pri roki krpo«. Standard FCI iz leta 2023 predvideva **nekupirana ušesa in naraven rep**; tako ga kaže tudi PetPrep. Dve potrebi z virom igra še ne vodi in sta zapisani kot naloga: česanje 1× na teden (M5-R13) in **premor med obrokom in gibanjem** zaradi nevarnosti zasuka želodca (nova naloga M5-R16). Ni pasma s skrbjo za dobrobit zaradi telesne oblike, zato je lahko v marketingu — nikoli z majhnimi otroki in nikoli s kupiranimi ušesi.
+
+**Številke:** 5 novih virov (S197–S201), 1 migracija, 2 novi oznaki, 1 nova naloga (M5-R16), 1 nova država izvora v registru (Italija); Pest **2.461** testov, Jest **2.070**, izvoz registra **43** testov (vsi zeleni). Na telefonu še ni preverjeno; nakup v trgovini še ne deluje.
+
+**Kako povedati:**
+- 👩 Starši: »Cane corso potrebuje veliko gibanja, izkušenega lastnika in ni za dom z majhnimi otroki. V PetPrepu boste videli, ali vaša družina zmore dve uri sprehoda na dan.«
+- 🧒 Otroci: »Cane corso je velik in močan pes, ki rad dela in se uči. Po obroku mora malo počivati, preden gre na sprehod.«
+- 💼 Investitorji: »Peta pasma, ki jo je sistem sam izbral po javni lestvici AKC — tudi ko kinološka zveza pasme ne pozna, postopek najde druge preverjene vire in vse, česar ne ve zagotovo, označi za odločitev ustanovitelja.«
+- 🤝 Partnerji (veterinarji, zavetišča): »PetPrep pri cane corsu jasno pove: ni za dom z majhnimi otroki in potrebuje izkušenega lastnika — to so pogosti razlogi, da veliki psi končajo v zavetišču.«
+- 📣 Omrežja: »Velik pes, velike obveznosti: dve uri gibanja na dan in izkušene roke. Kmalu boste lahko cane corsa preizkusili v PetPrepu, preden ga pripeljete domov.« *(ko bo nakup v trgovini deloval)*
+- 🛠 Tehnično: »Prva pasma brez strani The Royal Kennel Club (pravilo »sicer PDSA«), dve novi oznaki naenkrat in druga meja starejšega psa z `verified=false`.«
+
+---
+
 ## 2026-10-12 — Yorkshirski terier: četrta pasma po dvajsetih (M5-R10-22)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **yorkshirskega terierja** (11. mesto). Raziskava: **7 novih virov (S190–S196)** — standard FCI in nomenklatura, standard in stran The Royal Kennel Club, PDSA ter velika britanska raziskava VetCompass (O'Neill idr. 2025) z mediano življenjske dobe **13,56 leta**. Pravila igre: odrasel **30 minut = 3.000 korakov** na dan, starejši 23 minut = 2.300, mladiček od 2.000 navzgor (3.000 doseže pri 3 mesecih); starejši je od **122. meseca** (začasno, dokler ne preverimo McMillan 2024); uči se **1,2-krat hitreje** kot mešanček (Coren: 27. mesto).
