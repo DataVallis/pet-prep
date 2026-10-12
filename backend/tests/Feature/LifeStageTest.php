@@ -717,16 +717,16 @@ describe('pet creation with origin and age stage', function () {
             ->and($login['pet']['profile']['today']['step_goal'])->toBe(4000);
     });
 
-    it('creates a bought mutt puppy with stage rules when the full profile is sent (breed optional → mutt)', function () {
+    it('creates a mutt puppy with stage rules when the full profile is sent (breed optional → mutt; "bought" → adopted, M5-F09)', function () {
         lsAt('2026-10-05 08:00:00');
         $parent = User::factory()->parent()->create();
 
         [$pin, $login] = lsCreateViaPin($parent, ['origin' => 'bought', 'age_stage' => 'puppy']);
         $pet = Pet::findOrFail($login['pet']['id']);
 
-        expect($pin['pet_profile'])->toBe(['breed' => 'mutt', 'origin' => 'bought', 'age_stage' => 'puppy', 'features' => [], 'species' => 'dog'])
+        expect($pin['pet_profile'])->toBe(['breed' => 'mutt', 'origin' => 'adopted', 'age_stage' => 'puppy', 'features' => [], 'species' => 'dog'])
             ->and($pet->breed_type->value)->toBe('mutt')
-            ->and($pet->origin)->toBe(PetOrigin::Bought)
+            ->and($pet->origin)->toBe(PetOrigin::Adopted)
             ->and($pet->arrival_age_months)->toBe(2)
             ->and($pet->life_stage)->toBe(LifeStage::Puppy)
             ->and($login['pet']['profile']['legacy'])->toBeFalse()
