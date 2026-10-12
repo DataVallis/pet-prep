@@ -673,6 +673,8 @@ flowchart TD
 
 Cats only (hidden behind `PETPREP_CATS_ENABLED`). A litter use is **not** a mess; only an unscooped tray becomes one. Numbers: `litter_uses_per_day` 3 / 2, `litter_scoop_deadline_hours` 4, `litter_full_change_days` 7, `grooming_sessions_per_week` 3 (Maine Coon) / 2 (Ragdoll) / 1 (British Shorthair, Siberian, Norwegian Forest Cat, Bengal) from `breed_stage_params`; overdue 2 h, scratching 2 h and "matted after ≥ ceil(goal / 2) missed" are game rules traced to `cat-data/data.json`; mini-game mechanics in `config/cat_care.php`.
 
+**M5-R13 (David 2026-10-12):** grooming is no longer cats only — a dog with `pets.grooming_enabled` (both apps declared `dog_grooming`) and a breed `grooming_sessions_per_week` row (1–7 per program week; mutt / Border Collie none) takes the same grooming flow below; litter and scratching stay cats only.
+
 ```mermaid
 flowchart TD
   U([Litter use at a random minute outside quiet hours<br/>kitten 3 · cat 2 a day]) --> D["tick: due_at = 4 h outside quiet hours<br/>2 h while last week's change was missed and not done since"]
@@ -714,11 +716,11 @@ sequenceDiagram
 
 ```mermaid
 flowchart TD
-  G([Maine Coon grooming — POST /pet/grooming/start + finish]) --> R{"Refused?"}
-  R -- "week done (3) · today done · quiet hours · another child · mess open" --> NO["422 + next_allowed_at"]
+  G([Brushed cat / dog grooming (M5-R13) — POST /pet/grooming/start + finish]) --> R{"Refused?"}
+  R -- "not available (no flag / no breed row) · week done (N) · today done · quiet hours · another child · mess open" --> NO["422 + next_allowed_at"]
   R -- no --> S["30 s comb strokes (60 s while matted)"]
   S --> OKG["groomed_pet → a grooming slot of the week · matted coat cleared"]
-  WE([Weekly birthday — tick closeGroomingWeek]) --> M{"≥ 2 of the week's 3 slots missed?"}
+  WE([Weekly birthday — tick closeGroomingWeek]) --> M{"≥ ceil(N / 2) of the week's N slots missed?"}
   M -- yes --> MAT["coat_matted_at + pet_coat_matted row<br/>visible only: no illness, no metric / mood effect"]
   M -- no --> FINE["nothing"]
   MAT --> S
@@ -735,7 +737,7 @@ flowchart TD
   K -->|cat| CD["Hrani · Voda · Pesek · Igra · Očisti<br/>no walk / steps / Šola"]
   CD -->|Pesek| O1["openCatGame('scoop')"]
   CD -->|Igra| O2["openCatGame('wand')"]
-  CH["Chips: Počeši (brushed cats) · Menjava peska · Crkljanje"] -->|tap| O3["openCatGame('grooming' / 'litter_change')<br/>or PlayOverlay 'cuddle'"]
+  CH["Chips (careChips): Počeši (brushed cats; M5-R13 brushed dogs) · Menjava peska · Crkljanje"] -->|tap| O3["openCatGame('grooming' / 'litter_change')<br/>or PlayOverlay 'cuddle'"]
   SC["Scratched-sofa card: Na praskalnik"] --> O4["openCatGame('scratching')"]
   O1 & O2 & O3 & O4 --> OV["CatCareOverlay → start / finish (server judges)"]
   OV --> ST["state from the 200 / 422 → cache"]
