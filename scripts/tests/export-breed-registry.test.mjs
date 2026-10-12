@@ -907,6 +907,8 @@ test('Yorkshire Terrier (M5-R10-22): up to 30 minutes, FCI "up to 3.2 kg", FCI g
   assert.deepEqual(d.health.map((h) => h.key), ['dental_disease_tooth_brushing', 'kneecap_luxation', 'windpipe_collapse', 'eye_problems_pra_lens_dry_eye', 'liver_shunt']);
   // RKC: "does not have any recommended pre-breeding health screening in place".
   assert.equal(d.breeder_checklist.status, 'none_recommended');
+  // A source URL with parentheses must be percent-encoded (the sources.md parser stops at ')').
+  assert.match(registry.sources.find((x) => x.id === 'S196').url, /%284%29\.pdf$/);
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a docked tail or a non-standard colour, never the heavier pet-population weight.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|docked|merle|fawn|5\.06|11\.30/i);

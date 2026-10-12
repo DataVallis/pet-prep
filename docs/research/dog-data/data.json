@@ -9593,9 +9593,9 @@
         "value": 27,
         "unit": "rank (working/obedience intelligence)",
         "source_id": "S35",
-        "quote": "Chesapeake Bay Retriever, Puli, Yorkshire Terrier",
+        "quote": null,
         "confidence": "medium",
-        "notes": "Wikipedia table of Coren's ranking (S35): rank 27 shared with the Chesapeake Bay Retriever and the Puli (breed names as returned; the fetch tool did not return the row verbatim), tier 'Above Average Working Dogs' (ranks 27–39). Coren's own top / bottom-10 article (S34) does not list the breed."
+        "notes": "Wikipedia table of Coren's ranking (S35): rank 27 shared with the Chesapeake Bay Retriever and the Puli (breed names as returned — the fetch tool did not return the table row verbatim, so no quote is stored), tier 'Above Average Working Dogs' (ranks 27–39). Coren's own top / bottom-10 article (S34) does not list the breed."
       },
       "coren_tier": {
         "value": "Above average",
@@ -14159,9 +14159,9 @@
         "value": 7,
         "unit": "tooth-brushing sessions per week (sourced need)",
         "source_id": "S196",
-        "quote": "Yorkshire Terriers appear predisposed to dental (periodontal) disease and persistent deciduous teeth.",
+        "quote": "Owners are encouraged to undertake daily preventative home care to improve dental health e.g tooth brushing and to consider feeding specific dental diets to maintain oral hygiene.",
         "confidence": "medium",
-        "notes": "RVC VetCompass summary (S196) of O'Neill et al. 2025 (S195): owners are encouraged to undertake daily preventative home care, e.g. tooth brushing (as returned, split by the fetch tool). The game has no tooth-brushing mechanic → new ROADMAP M5-R15; this value is its input.",
+        "notes": "RVC VetCompass summary (S196) of O'Neill et al. 2025 (S195); the fetch tool returned the sentence split in two parts (joined here). Same summary: 'Yorkshire Terriers appear predisposed to dental (periodontal) disease and persistent deciduous teeth.' The game has no tooth-brushing mechanic → new ROADMAP M5-R15; this value is its input.",
         "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ščetkanje zob vsak dan (7× na teden); mehanike ni → ROADMAP M5-R15 (needs-david)"
       },
       "suitability_tags": {
@@ -14243,7 +14243,7 @@
         "source_id": "S192",
         "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
         "confidence": "high",
-        "notes": "RKC Breed Watch Category 1 (S192); no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health and never shows the dog with small children (PDSA S194: better with older children).",
+        "notes": "RKC Breed Watch Category 1 (S192); no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health. Predlog Claude 2026-10-12 (not a runbook rule, čaka Davida): marketing does not show the Yorkshire Terrier with small children (PDSA S194: better suited to families with older children — fragile bones).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a welfare breed)"
       },
       "ai_appearance": {

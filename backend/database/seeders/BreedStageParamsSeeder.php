@@ -2037,7 +2037,7 @@ class BreedStageParamsSeeder extends Seeder
                 'unit' => 'kg', 'source_id' => 'S194', 'confidence' => 'medium', 'verified' => true,
                 'ref' => 'yorkshire_terrier.adult_weight.pdsa',
                 'quote' => 'Average weight | 3.2 kg',
-                'notes' => 'PDSA key facts (S194), one average for both sexes; equal to the FCI / RKC upper limit "Up to 3,2 kgs" (S190, S193), which gives no lower bound. The UK pet population is heavier (VetCompass median 5.06 kg, S195) — background only.',
+                'notes' => 'PDSA key facts (S194), one average for both sexes; equal to the FCI / RKC upper limit "Up to 3,2 kgs" (S190, S193), which gives no lower bound. The UK pet population is heavier (S195) — background only.',
             ]],
             'growth_end' => [[8, 12], [
                 'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
@@ -2048,7 +2048,6 @@ class BreedStageParamsSeeder extends Seeder
             'coren_rank' => [27, [
                 'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
                 'ref' => 'yorkshire_terrier.trainability.coren_rank',
-                'quote' => 'Chesapeake Bay Retriever, Puli, Yorkshire Terrier',
                 'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 27 (shared), tier "Above Average Working Dogs" (ranks 27–39). Coren\'s own article (S34) lists only the top and bottom 10.',
             ]],
             'learning_multiplier' => [1.2, [

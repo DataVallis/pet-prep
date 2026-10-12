@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "f5acb09fc14572eed61f2519bcdbb2a16c5859fc6755ca3c0ae8bfb6e36b9cfa"
+      "sha256": "614f179c3bb10932cbf7305d1b5031f32034f36d497b5125ceba7c89bc2d3bb6"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "db5aaad4defa39878da8b8dc1d829a6055bd2c06e097177b5320a50090f9721e"
+      "sha256": "cebcd9b0992f02fbe8573eb254cce680ece37a6ecc1147f057d6dbd5e6a8926a"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -14289,7 +14289,7 @@
       "tier": "B",
       "publisher": "Royal Veterinary College — VetCompass",
       "title": "Yorkshire Terrier infographic (summary of S195, 15.08.2025) (PDF)",
-      "url": "https://www.rvc.ac.uk/Media/Default/VetCompass/250815%20Yorkshire%20Terrier%20infographic%20(4"
+      "url": "https://www.rvc.ac.uk/Media/Default/VetCompass/250815%20Yorkshire%20Terrier%20infographic%20%284%29.pdf"
     },
     {
       "id": "C1",

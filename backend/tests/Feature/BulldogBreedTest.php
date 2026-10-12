@@ -169,7 +169,7 @@ describe('breed, config and database', function () {
         $others = collect(BreedStageParamsSeeder::rows())->where('breed_slug', '!=', 'bulldog');
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'bulldog');
 
-        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese', 'west-highland-white-terrier', 'bernese-mountain-dog', 'siberian-husky', 'rottweiler', 'german-shorthaired-pointer'])
+        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese', 'west-highland-white-terrier', 'bernese-mountain-dog', 'siberian-husky', 'rottweiler', 'german-shorthaired-pointer', 'yorkshire-terrier'])
             ->and($others->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_BULLDOG)->all())->toBe([]);
         // No other breed's decision text (every CONFIRMED_R10* / PROPOSED_R10* constant except the Bulldog's).
         $constants = array_filter(
