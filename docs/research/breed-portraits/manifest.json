@@ -209,6 +209,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "yorkshire_terrier",
+            "species": "dog",
+            "file": "dog/yorkshire-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:ddd42b5ea81b9df3e5d31f00e14d2f6e1de1e507b9e661bd0b7ab5277d068f28",
+            "generated_at": "2026-10-12T01:15:35+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
