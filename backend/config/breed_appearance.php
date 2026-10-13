@@ -300,6 +300,15 @@
 | never white body splashes or a predominantly white head. Colour weights are unsourced →
 | `verified => false`; blue merle weighted highest (the register portrait).
 |
+| Chihuahua (M5-R10-33, docs/research/dog-data chihuahua.appearance): the Smooth Coat variety (RKC S275) —
+| small, dainty, compact (KC standard S274, FCI 218 S273); well-rounded 'apple dome' skull, definite stop,
+| muzzle moderately short and slightly pointed; large round eyes, not protruding; large flaring ears at
+| about 45°; medium-length sickle tail over the back; smooth, soft, close, glossy coat. Colours: any
+| colour or mixture of colours, never merle (KC "Never merle (dapple).", FCI disqualifying). Welfare:
+| the dog trait `muzzle` asks for a moderate dome and muzzle with eyes that are not protruding (no
+| exaggerated tiny-dog features). Colour weights are unsourced → `verified => false`; fawn weighted
+| highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1477,6 +1486,44 @@ return [
             'tail' => ['natural undocked tail hanging in a slight curve'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-33 (docs/research/dog-data/data.json chihuahua.appearance; runbook rules 2026-10-10:
+    // standard colours only — never merle; Smooth Coat; moderate, non-exaggerated head).
+    'chihuahua' => [
+        'display_name' => 'Chihuahua',
+        // Colour frequencies are in no source (chihuahua.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'KC breed standard (S274, hosted by KUSA), FCI-Standard N° 218 (S273, Italian text hosted by ENCI), RKC breed page Smooth Coat (S275) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S275 "Size: Small"; S274 "Up to 2.7kg, with 1.8kg – 2.7kg preferred."',
+            'build' => 'S274 "Small, dainty, compact."',
+            'coat_length' => 'S274 "Smooth Coat: smooth, of soft texture, close and glossy, with undercoat and ruff permissible."',
+            'coat_color' => 'S274 "Any colour or mixture of colours." "Never merle (dapple)."; S273 all colours except merle (weights unsourced)',
+            'ear_carriage' => 'S274 "Large, flaring, set on at an angle of approximately 45, giving breadth between ears."',
+            'eye_color' => 'S274 "Large, round, but not protruding; set well apart; …" "dark or ruby. Light eyes in light colours permissible."',
+            'tail' => 'S274 "Medium length, set high, carried up and over back (sickle tail)."',
+            'muzzle' => 'S274 "Well-rounded \'apple dome\' skull, cheeks and jaws lean, muzzle moderately short, slightly pointed. Definite stop." (the game draws a moderate dome, eyes not protruding)',
+        ],
+        'traits' => [
+            'size' => ['tiny toy-sized'],
+            'build' => [['value' => 'small, dainty and compact', 'weight' => 3], 'small, compact and alert'],
+            'coat_length' => ['short, smooth, soft, close and glossy coat'],
+            // Every colour but merle (S274 / S273); fawn highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'fawn', 'weight' => 4],
+                ['value' => 'cream', 'weight' => 2],
+                ['value' => 'black and tan', 'weight' => 2],
+                'chocolate',
+                'white',
+                'fawn and white',
+            ],
+            'ear_carriage' => ['large, flaring, erect ears set at about 45 degrees'],
+            'eye_color' => [['value' => 'dark, large and round, not protruding', 'weight' => 3], 'ruby, large and round, not protruding'],
+            'tail' => ['medium-length sickle tail carried up over the back'],
+            // Welfare: moderate head, never an exaggerated dome or bulging eyes.
+            'muzzle' => ['moderately rounded apple-dome head with a moderately short, slightly pointed muzzle'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

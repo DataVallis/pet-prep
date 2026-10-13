@@ -526,10 +526,10 @@ it('gives the Boxer the new needs_company and short_muzzle_breathing tags and th
         ->and($boxer['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('sensitive_skin')->not->toContain('shorter_lifespan')
         ->not->toContain('hips_hind_legs')->not->toContain('heart_and_spine')->not->toContain('frequent_grooming');
 
-    // Only the Boxer, the Boston Terrier (AKC S260, M5-R10-31) and the Miniature American Shepherd (PetMD S269, M5-R10-32)
-    // carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
+    // Only the Boxer, the Boston Terrier (AKC S260, M5-R10-31), the Miniature American Shepherd (PetMD S269, M5-R10-32)
+    // and the Chihuahua (PDSA S277, M5-R10-33) carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd], true)) {
+        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('needs_company');
         }
         if (! in_array($breed, [BreedType::Boxer, BreedType::ShihTzu], true)) {
@@ -661,9 +661,9 @@ it('gives the Pomeranian the new older_children tag (AKC), apartment, family_pet
         ->and($pom['consider'])->not->toContain('fragile_older_children')->not->toContain('not_for_small_children')
         ->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')->not->toContain('hips_hind_legs');
 
-    // Only the Pomeranian carries older_children so far.
+    // Only the Pomeranian and the Chihuahua (PDSA S277, M5-R10-33) carry older_children.
     foreach (BreedType::cases() as $breed) {
-        if ($breed !== BreedType::Pomeranian) {
+        if (! in_array($breed, [BreedType::Pomeranian, BreedType::Chihuahua], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('older_children');
         }
     }
@@ -710,4 +710,23 @@ it('gives the Miniature American Shepherd family_pet, children, other_pets and t
         ->and(bsEntry('miniature_american_shepherd.behaviour.time_alone')['quote'])->toBe("Their devotion to family can lead to separation anxiety when they're left alone.")
         ->and(bsEntry('miniature_american_shepherd.suitability.petmd_grooming')['quote'])->toContain('a couple times a week')
         ->and(bsEntry('miniature_american_shepherd.suitability.petmd_children_pets')['quote'])->toContain('supervised initially');
+});
+
+it('gives the Chihuahua apartment, other_pets and the older-children / company / shedding chips — never family_pet or children, no welfare chip (runbook 2026-10-13)', function () {
+    $chi = app(BreedSuitability::class)->for(BreedType::Chihuahua);
+    expect($chi['suits'])->toBe(['apartment', 'other_pets'])
+        // AKC "aren’t recommended for homes with children" (S278) → no family_pet / children / small_children.
+        ->and($chi['suits'])->not->toContain('family_pet')->not->toContain('children')->not->toContain('small_children')
+        // PDSA: does not cope well with even very short periods alone (S277) → never often_alone.
+        ->and($chi['suits'])->not->toContain('often_alone')->not->toContain('active_family')->not->toContain('large_home')
+        ->and($chi['consider'])->toBe(['older_children', 'needs_company', 'sheds'])
+        // Weekly brushing (RKC "Once a week") → no frequent_grooming; not flat-faced and no returned Breed Watch point → no welfare chip;
+        // chasing unfamiliar pets is not a "high prey drive" quote → no chases_small_pets; the large-dog chip does not fit a toy dog.
+        ->and($chi['consider'])->not->toContain('frequent_grooming')->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
+        ->not->toContain('chases_small_pets')->not->toContain('not_for_small_children')->not->toContain('fragile_older_children')->not->toContain('shorter_lifespan');
+
+    expect(bsEntry('chihuahua.suitability.pdsa_children')['quote'])->toBe("Because of this, they're better suited to families with slightly older children")
+        ->and(bsEntry('chihuahua.behaviour.time_alone')['quote'])->toBe('As companion dogs Chihuahuas love company and need someone around the home all the time.')
+        ->and(bsEntry('chihuahua.suitability.akc_children')['quote'])->toContain('aren’t recommended for homes with children')
+        ->and(bsEntry('chihuahua.suitability.rkc_grooming')['quote'])->toBe('Grooming: Once a week');
 });

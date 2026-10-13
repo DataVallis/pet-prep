@@ -298,6 +298,15 @@ class FalAiService
                 .'almond-shaped eyes fully surrounded by colour, moderate muzzle, natural undocked tail, '
                 .'small, agile body slightly longer than tall, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-33: KC standard (S274) / FCI 218 (S273) — every colour except merle; fawn as the anchor;
+            // smooth coat (the RKC Smooth Coat breed, S275); welfare: a moderate apple-dome head and muzzle,
+            // eyes not protruding (S274 "not protruding"); natural sickle tail.
+            BreedType::Chihuahua => 'A small, alert, smooth-coated Chihuahua dog with a fawn coat, '
+                .'short soft close and glossy coat, moderately rounded apple-dome head with a moderately short, slightly pointed muzzle, '
+                .'large round dark eyes that are not protruding, large flaring erect ears, '
+                .'medium-length sickle tail carried up over the back, tiny dainty compact body, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -725,6 +734,17 @@ class FalAiService
                 },
                 'fur_texture' => 'medium-length, straight to wavy, weather resistant',
                 'markings' => 'white collar, chest and legs with copper points',
+            ],
+            // M5-R10-33: any colour or mixture of colours except merle (KC S274 / FCI S273).
+            BreedType::Chihuahua => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'fawn',
+                    1 => 'cream',
+                    2 => 'black and tan',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'short, soft, close and glossy',
+                'markings' => 'none or small white chest marking',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

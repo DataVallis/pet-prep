@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -408,6 +408,25 @@ class BreedStageParamsSeeder extends Seeder
     public const PROPOSED_R10_MINIATURE_AMERICAN_SHEPHERD_SENIOR = 'predlog Claude 2026-10-13 (najbližja vrstica pravila runbooka, M5-R10-32) — čaka Davida';
 
     /**
+     * M5-R10-33 Chihuahua (Smooth Coat; unattended run 2026-10-13, data.json
+     * proposed_game_parameters.chihuahua.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 30 min
+     * (RKC S275 "Up to 30 minutes per day"), senior 23 min, puppy 10 min × age capped at 30, stages
+     * young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 0.7 (Coren rank 67, Fair); care rates
+     * the Border Collie's. The senior boundary is NOT covered by the confirmation: see
+     * PROPOSED_R10_CHIHUAHUA_SENIOR.
+     */
+    public const CONFIRMED_R10_CHIHUAHUA = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-33)';
+
+    /**
+     * M5-R10-33 Chihuahua senior boundary / senior arrival (108 months): Claude's suggestion — the RKC /
+     * PDSA lower bound "Over 12 years" (S275 / S277) instead of the rule's next row, the VetCompass median
+     * 8.2 y (S279, → 74), which its authors say is biased downwards by a young population. verified=false
+     * until David decides (data.json proposed_game_parameters.chihuahua.senior_boundary_months).
+     */
+    public const PROPOSED_R10_CHIHUAHUA_SENIOR = 'predlog Claude 2026-10-13 (spodnja meja RKC / PDSA namesto pristranske mediane VetCompass, M5-R10-33) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -537,6 +556,7 @@ class BreedStageParamsSeeder extends Seeder
         'pomeranian' => [3, 'S250', 'They have a double coat that needs brushing two-three times per week, and more often when shedding.', 'high', false],
         'boston_terrier' => [1, 'S255', 'Grooming: Once a week', 'high', false],
         'miniature_american_shepherd' => [2, 'S269', 'The Miniature American Shepherd needs to be brushed a couple times a week to control shedding and minimize matting.', 'medium', false],
+        'chihuahua' => [1, 'S275', 'Grooming: Once a week', 'high', false],
     ];
 
     /**
@@ -562,6 +582,7 @@ class BreedStageParamsSeeder extends Seeder
         'boxer' => ['S219', 'Remember to leave a gap between eating and exercising.'],
         'shih_tzu' => ['S233', 'Remember to leave a gap after eating and before exercising.'],
         'great_dane' => ['S243', "Remember to leave at a gap after eating and before exercising to help prevent GDV (Gastric dilatation volvulus or 'bloat')."],
+        'chihuahua' => ['S277', 'Remember to leave a gap after eating and before exercising.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -605,13 +626,14 @@ class BreedStageParamsSeeder extends Seeder
         'pomeranian' => ['S251', 'Like with any breed, early socialization and puppy training classes are highly recommended.'],
         'boston_terrier' => ['S260', 'Like all breeds, early socialization and puppy training courses are strongly recommended for Boston Terriers.'],
         'miniature_american_shepherd' => ['S267', "They can be weary of new faces, but early, consistent socialization will build up a Mini American's confidence in new situations."],
+        'chihuahua' => ['S277', "This is why it's really important to socialise your Chihuahua from a young age"],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1194,6 +1216,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-32 (docs/research/dog-data/data.json miniature_american_shepherd,
             // S264–S271; runbook rules in proposed_game_parameters.miniature_american_shepherd).
             BreedType::MiniatureAmericanShepherd => self::miniatureAmericanShepherdProfile(),
+            // M5-R10-33 (docs/research/dog-data/data.json chihuahua,
+            // S272–S280; runbook rules in proposed_game_parameters.chihuahua).
+            BreedType::Chihuahua => self::chihuahuaProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -3214,6 +3239,90 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'miniature_american_shepherd.lifespan.petmd',
                 'quote' => 'The average Miniature American Shepherd lifespan is 12–13 years, and they\'re considered a generally healthy breed.',
                 'notes' => 'PetMD (S269) "12–13 years", lower bound. No McMillan 2024 row (S123), no VetCompass paper, RKC page not reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * M5-R10-33 Chihuahua (Smooth Coat) — docs/research/dog-data/data.json chihuahua +
+     * proposed_game_parameters.chihuahua. The senior boundary is Claude's suggestion
+     * (PROPOSED_R10_CHIHUAHUA_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function chihuahuaProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_CHIHUAHUA;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S275', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.chihuahua.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a toy dog finishes growing at 8–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, [
+                    'unit' => 'months', 'source_id' => 'S11,S275', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.chihuahua.senior_boundary_months', 'decision' => self::PROPOSED_R10_CHIHUAHUA_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S275; PDSA S277 the same) = 9 y = 108 months. The rule\'s VetCompass row (median 8.2 y, S279 → 74 months) is biased downwards by a young population (its authors) and contradicts both UK bands; no McMillan 2024 value was reachable. Alternatives: 74 (S279), 84 (Dogs Trust > 7 y, S14).',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chihuahua.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.chihuahua.senior_boundary_months', 'decision' => self::PROPOSED_R10_CHIHUAHUA_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 108 months (0.75 × 12 y, S275).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (8–12 months for a toy dog, S10); capped at the adult 30 minutes, which 10 × age reaches at 3 months.',
+            'adult_minutes' => [30, [
+                'unit' => 'minutes/day', 'source_id' => 'S275', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chihuahua.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 30 minutes per day',
+                'notes' => 'RKC "Up to 30 minutes per day" (S275) → 30 min = 3,000 steps (runbook rule: "up to N" → N). PDSA "a minimum of half an hour exercise" every day (S277) agrees.',
+            ]],
+            'senior_minutes' => [23, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chihuahua.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 30 minutes = 22.5 → 23 min (half up) = 2,300 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[1.8, 2.7], [
+                'unit' => 'kg', 'source_id' => 'S274', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'chihuahua.adult_weight.rkc',
+                'quote' => 'Up to 2.7kg, with 1.8kg – 2.7kg preferred.',
+                'notes' => 'KC breed standard (S274): preferred 1.8–2.7 kg (both sexes); PDSA "Average weight | 1.8-2.7 kg" (S277) agrees. FCI (S273): ideal 1.5–2.5 kg, accepted 1–3 kg.',
+            ]],
+            'growth_end' => [[8, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'chihuahua.growth.adult_weight_reached',
+                'quote' => 'Toy (5–12 pounds): 8–12 months',
+                'notes' => 'Size-class value, not breed-specific (1.8–2.7 kg ≈ 4–6 lb, at the lower edge of the Toy class of S10 — the smallest class it gives; RKC / PDSA size "Small").',
+            ]],
+            'coren_rank' => [67, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'chihuahua.trainability.coren_rank',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 67, tier "Fair Working/Obedience Intelligence" (ranks 55–69). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [0.7, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chihuahua.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 67 (S35) in the "Fair" tier (ranks 55–69) → 0.7. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S275', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'chihuahua.lifespan.rkc',
+                'quote' => 'Lifespan: Over 12 years',
+                'notes' => 'RKC breed page lower bound (S275); PDSA "Over 12 years" (S277) the same. The VetCompass median of a young population (8.2 y, S279) is not used. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

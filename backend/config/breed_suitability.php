@@ -873,5 +873,27 @@ return [
             ],
         ],
 
+        // M5-R10-33: chihuahua.* (S272–S280), runbook rules (data.json proposed_game_parameters.chihuahua
+        // .suitability_tags). RKC Smooth Coat (S275) + PDSA (S277); AKC (S278) advises against homes with
+        // children → never family_pet / children / small_children, the PDSA's older_children instead.
+        // other_pets with the PDSA caveat (pets it grew up with). Not flat-faced; Breed Watch Category 2
+        // without returned points → no welfare chip (open for David).
+        'chihuahua' => [
+            'suits' => [
+                // S275 "Size of home: Flat/ Apartment" / "Size of garden: Small/ medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S275'], 'refs' => ['chihuahua.suitability.rkc_size_of_home', 'chihuahua.suitability.rkc_size_of_garden']],
+                // S277 "Generally speaking, your Chihuahua will live happily with another pet they have grown up with."
+                ['tag' => 'other_pets', 'source_ids' => ['S277'], 'refs' => ['chihuahua.behaviour.other_pets']],
+            ],
+            'consider' => [
+                // S277 "Because of this, they're better suited to families with slightly older children".
+                ['tag' => 'older_children', 'source_ids' => ['S277'], 'refs' => ['chihuahua.behaviour.family', 'chihuahua.suitability.pdsa_children']],
+                // S277 "As companion dogs Chihuahuas love company and need someone around the home all the time."
+                ['tag' => 'needs_company', 'source_ids' => ['S277'], 'refs' => ['chihuahua.behaviour.time_alone', 'chihuahua.suitability.pdsa_time_alone']],
+                // S275 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S275'], 'refs' => ['chihuahua.suitability.rkc_shedding']],
+            ],
+        ],
+
     ],
 ];

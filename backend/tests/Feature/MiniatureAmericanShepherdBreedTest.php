@@ -147,11 +147,11 @@ describe('breed, config and database', function () {
         expect(fn () => DB::transaction(fn () => $migration->down()))->toThrow(QueryException::class);
         DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'border_collie']);
         $migration->down();
-        expect($refused(['breed_type' => 'miniature_american_shepherd']))->toThrow(QueryException::class);
+        expect($refused(['breed_type' => 'miniature_american_shepherd', 'chihuahua']))->toThrow(QueryException::class);
         // The Boston Terrier (previous dog migration) stays allowed after the rollback.
         DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'boston_terrier']);
         $migration->up();
-        DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'miniature_american_shepherd']);
+        DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'miniature_american_shepherd', 'chihuahua']);
         expect(Pet::findOrFail($pet->id)->breed_type)->toBe(BreedType::MiniatureAmericanShepherd);
         // The cat list of pets_species_breed_check is untouched: a Bengal is still a cat.
         expect($refused(['breed_type' => 'bengal']))->toThrow(QueryException::class);
@@ -172,7 +172,7 @@ describe('breed, config and database', function () {
         $others = collect(BreedStageParamsSeeder::rows())->where('breed_slug', '!=', 'miniature-american-shepherd');
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'miniature-american-shepherd');
 
-        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese', 'west-highland-white-terrier', 'bernese-mountain-dog', 'siberian-husky', 'rottweiler', 'bulldog', 'german-shorthaired-pointer', 'yorkshire-terrier', 'cane-corso', 'pembroke-welsh-corgi', 'dobermann', 'boxer', 'miniature-schnauzer', 'shih-tzu', 'great-dane', 'pomeranian', 'boston-terrier'])
+        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese', 'west-highland-white-terrier', 'bernese-mountain-dog', 'siberian-husky', 'rottweiler', 'bulldog', 'german-shorthaired-pointer', 'yorkshire-terrier', 'cane-corso', 'pembroke-welsh-corgi', 'dobermann', 'boxer', 'miniature-schnauzer', 'shih-tzu', 'great-dane', 'pomeranian', 'boston-terrier', 'chihuahua'])
             ->and($others->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_MINIATURE_AMERICAN_SHEPHERD)->all())->toBe([])
             ->and($others->where('decision', BreedStageParamsSeeder::PROPOSED_R10_MINIATURE_AMERICAN_SHEPHERD_SENIOR)->all())->toBe([]);
         // Every other R10 decision constant, found by reflection, is absent from the Miniature American Shepherd's rows.
@@ -415,7 +415,7 @@ describe('GET /api/breeds', function () {
 
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd'])
+        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua'])
             ->and($breeds[28])->toBe([
                 'breed' => 'miniature_american_shepherd', 'slug' => 'miniature-american-shepherd', 'species' => 'dog', 'premium' => true,
                 'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.miniature_american_shepherd',
