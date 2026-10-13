@@ -9,6 +9,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-13 — Bostonski terier: trinajsta pasma po dvajsetih (M5-R10-31)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **bostonskega terierja** (23. mesto). Sedemindvajseta plačljiva pasma psa; v izbirniku je zdaj 28 psov (z mešančkom). Bostonski terier je majhen, živahen pes za stanovanje: do ena ura gibanja na dan (6.000 korakov za odraslega psa, 4.500 za starejšega), česanje 1× na teden (RKC, PDSA in AKC enako) in tedenska »Nova izkušnja« za mladička (AKC priporoča zgodnjo socializacijo).
+
+**Zakaj je pomembno:** Bostonski terier je pes s sploščenim obrazom (PDSA, The Royal Kennel Club), zato ima v izbirniku mirno oznako »kratek gobček — težave z dihanjem in vročino« in ga **ne uporabljamo v marketingu** (priporočilo BVA, kot francoski in angleški buldog, boksar in shih tzu). Oznako »družino z otroki« ima s pogojema virov: prava socializacija mladička in otroci, ki znajo z živalmi ravnati nežno. Dve potrebi z virom igra še ne vodi — sprehod ne v vročini dneva (PDSA) in redno striženje krempljev (AKC) — *načrt* (M5-R14, nova M5-R19). Kuža v igri postane »starejši« pri 7,5 leta (90 mesecev; začasno, dokler ne preverimo še ene raziskave o življenjski dobi).
+
+**Številke:** 11 novih virov (S253–S263), 1 migracija, brez nove oznake, 1 nov ključ zdravja v registru (izbuljene oči — poškodbe in suhe oči), 3 + 2 oznak v izbirniku (oznake o dlaki ni, ker se RKC in AKC ne ujemata), 2 zgrajeni potrebi z virom (česanje 1× na teden, socializacija) in 2 v načrtu, dnevni cilj 6.000 korakov, meja starejšega 90 mesecev (začasno, spodnja meja RKC »več kot 10 let« — odprto za Davida), 28 psov v izbirniku (27 plačljivih + mešanček); testi: Pest 2.868 testov, Jest 157 skupin / 2.363 testov, izvoz registra 55 / 55. Portret in stran v registru sledita v ločenih PR. Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Bostonski terier je majhen, prijazen pes za stanovanje, ki rad ima družbo — a ima sploščen obraz, zato lahko težje diha in ne prenaša vročine. V PetPrepu boste videli, ali vaš otrok zmore redno, nežno skrb, preden se odločite za pravega kužka.«
+- 🧒 Otroci: »Bostonski terier je majhen, vesel kuža z belimi lisami — enkrat na teden ga lepo počeši in z njim ravnaj nežno!«
+- 💼 Investitorji: »Trinajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC — vse številke iz virov ali stalnih pravil; pravilo dobrobiti samodejno izključi pasmo s sploščenim obrazom iz marketinga, potreba z virom brez mehanike (kremplji) pa samodejno postane naloga v načrtu.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri bostonskem terierju upošteva stališče BVA o brahicefalnih psih in nasvet PDSA, naj se ne giblje v vročini dneva — brez obljub o zdravju; The Royal Kennel Club za to pasmo ne navaja testov staršev, zato aplikacija pokaže splošni seznam.«
+- 📣 Omrežja: bostonskega terierja **ne objavljamo** (pes s sploščenim obrazom — priporočilo BVA, kot francoski in angleški buldog, boksar in shih tzu); v seznamu vseh pasem ga lahko navedemo kot dejstvo.
+- 🛠 Tehnično: »Brez novega ključa oznak (`brachycephalic_breathing` od francoskega buldoga); česanje in socializacija sta samo novi vrstici v `breed_stage_params`; meja starejšega psa je označena kot začasna; izvoz registra dobi nov ključ zdravja `prominent_eyes_injury_dry_eye`.«
+
+---
+
 ## 2026-10-13 — Pomeranec: dvanajsta pasma po dvajsetih (M5-R10-30)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **pomeranca** (22. mesto). Šestindvajseta plačljiva pasma psa; v izbirniku je zdaj 27 psov (z mešančkom). Pomeranec je majhen špic za stanovanje: do 30 minut gibanja na dan (3.000 korakov za odraslega psa, 2.300 za starejšega), česanje 3× na teden (PDSA: »two-three times per week«) in tedenska »Nova izkušnja« za mladička (AKC priporoča zgodnjo socializacijo). Prvič je dodana oznaka »majhen pes — bolje za starejše otroke«: AKC piše, da se pomeranec bolje znajde v družinah s starejšimi otroki.
