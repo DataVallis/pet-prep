@@ -93,6 +93,7 @@ class AccountExportService
                 'quiet_hours' => null,
                 'invites' => [],
                 'pets' => [],
+                'breed_facts' => $this->breedFacts([$parent->id], []),
                 'scores' => ['children' => [], 'pets' => []],
             ];
         }
@@ -137,6 +138,8 @@ class AccountExportService
                     'used_by' => $r->used_by,
                 ])->all(),
             'pets' => $this->pets($petIds),
+            // M5-R09b: which breed facts each member read; the child's automatic sheets.
+            'breed_facts' => $this->breedFacts(array_merge($parentIds, $childIds), $petIds),
             'scores' => $this->scores($family, $parent),
         ];
     }
@@ -234,6 +237,41 @@ class AccountExportService
             'bedtime_end' => $q->bedtime_end,
             'is_active' => (bool) $q->is_active,
             'updated_at' => $this->iso($q->updated_at),
+        ];
+    }
+
+    /**
+     * M5-R09b: breed facts read per member (fact key + time) and the child's
+     * automatic »Ali si vedel?« sheets per pet. The fact texts themselves are
+     * PetPrep content, not family data.
+     *
+     * @param  list<int>  $userIds
+     * @param  list<int>  $petIds
+     * @return array{reads: list<array{user_id: int, fact_key: string, read_at: string|null}>, auto_shows: list<array{user_id: int, pet_id: int, program_week: int, local_date: string, shown_at: string|null}>}
+     */
+    private function breedFacts(array $userIds, array $petIds): array
+    {
+        $reads = DB::table('breed_fact_reads as r')->join('breed_facts as f', 'f.id', '=', 'r.breed_fact_id')
+            ->whereIn('r.user_id', $userIds === [] ? [0] : $userIds)
+            ->orderBy('r.user_id')->orderBy('r.read_at')->orderBy('r.id')
+            ->get(['r.user_id', 'f.key', 'r.read_at']);
+        $shows = DB::table('breed_fact_shows')->whereIn('pet_id', $petIds === [] ? [0] : $petIds)
+            ->orderBy('pet_id')->orderBy('local_date')->orderBy('id')
+            ->get(['user_id', 'pet_id', 'program_week', 'local_date', 'shown_at']);
+
+        return [
+            'reads' => $reads->map(fn ($r) => [
+                'user_id' => (int) $r->user_id,
+                'fact_key' => (string) $r->key,
+                'read_at' => $this->iso($r->read_at),
+            ])->values()->all(),
+            'auto_shows' => $shows->map(fn ($r) => [
+                'user_id' => (int) $r->user_id,
+                'pet_id' => (int) $r->pet_id,
+                'program_week' => (int) $r->program_week,
+                'local_date' => substr((string) $r->local_date, 0, 10),
+                'shown_at' => $this->iso($r->shown_at),
+            ])->values()->all(),
         ];
     }
 
