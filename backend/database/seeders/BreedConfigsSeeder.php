@@ -530,6 +530,50 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.dobermann',
                 'search_keywords' => ['dobermann', 'doberman', 'doberman pinscher', 'dobie', 'dobermann pinscher'],
             ],
+            // M5-R10-26 Boxer (docs/research/dog-data/data.json boxer, sources S213–S220;
+            // runbook rules confirmed by David 2026-10-10: paid). daily_steps_required = the adult
+            // step goal (proposed_game_parameters.boxer.step_goal_adult: 120 min × 100 steps/min
+            // — RKC S215 "More than 2 hours per day", PDSA S219 "a minimum of two hours") — only
+            // the legacy-profile fallback. Hunger / thirst decay, poops and water are the Border
+            // Collie's (no per-breed number).
+            [
+                'breed_slug' => BreedType::Boxer->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 220,
+                'label_key' => 'breeds.boxer',
+                'search_keywords' => ['boxer', 'boksar', 'deutscher boxer'],
+            ],
+            // M5-R10-27 Miniature Schnauzer (docs/research/dog-data/data.json miniature_schnauzer,
+            // sources S221–S228; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal (proposed_game_parameters.miniature_schnauzer
+            // .step_goal_adult: 60 min × 100 steps/min — RKC S223 "Up to 1 hour per day", PDSA S226
+            // "around an hour of exercise daily") — only the legacy-profile fallback. Hunger / thirst
+            // decay, poops and water are the Border Collie's (no per-breed number).
+            [
+                'breed_slug' => BreedType::MiniatureSchnauzer->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 230,
+                'label_key' => 'breeds.miniature_schnauzer',
+                'search_keywords' => ['miniature schnauzer', 'pritlikavi šnavcer', 'pritlikavi snavcer', 'mali šnavcer', 'zwergschnauzer', 'schnauzer', 'šnavcer', 'mini schnauzer'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

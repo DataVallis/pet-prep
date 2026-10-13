@@ -364,9 +364,9 @@ it('gives the Rottweiler the new experienced_owner tag, hips_hind_legs, shorter_
         // Weekly brushing only (RKC "Once a week"); not flat-faced; no breed-specific chewing.
         ->and($rottweiler['consider'])->not->toContain('frequent_grooming')->not->toContain('brachycephalic_breathing')->not->toContain('chews_when_bored');
 
-    // Only the Rottweiler, the Cane Corso (PDSA S199, M5-R10-23) and the Dobermann (PDSA S211, M5-R10-25) carry the chip so far.
+    // Only the Rottweiler, the Cane Corso (PDSA S199, M5-R10-23), the Dobermann (PDSA S211, M5-R10-25) and the Boxer (PDSA S219, M5-R10-26) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Rottweiler, BreedType::CaneCorso, BreedType::Dobermann], true)) {
+        if (! in_array($breed, [BreedType::Rottweiler, BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('experienced_owner');
         }
     }
@@ -397,7 +397,7 @@ it('gives the Bulldog the flat-face and skin welfare chips, shorter_lifespan, sh
         ->and($bulldog['consider'])->toBe(['brachycephalic_breathing', 'sensitive_skin', 'shorter_lifespan', 'sheds'])
         // Weekly brushing only (RKC "Once a week"); up to 1 hour of exercise.
         ->and($bulldog['consider'])->not->toContain('frequent_grooming')->not->toContain('long_daily_exercise');
-    // The flat-faced breeds are the only ones with the breathing chip.
+    // The flat-faced breeds are the only ones with the breathing chip (the moderately short-faced Boxer has its own, M5-R10-26).
     foreach (BreedType::cases() as $breed) {
         if (! in_array($breed, [BreedType::FrenchBulldog, BreedType::Bulldog], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('brachycephalic_breathing');
@@ -463,12 +463,12 @@ it('gives the Cane Corso the new not_for_small_children and drools tags, active_
         ->and($corso['consider'])->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')
         ->not->toContain('sensitive_skin')->not->toContain('frequent_grooming')->not->toContain('fragile_older_children');
 
-    // Only the Cane Corso carries `drools`; `not_for_small_children` also the Dobermann (PDSA S211, M5-R10-25).
+    // Only the Cane Corso carries `drools`; `not_for_small_children` also the Dobermann (PDSA S211, M5-R10-25) and the Boxer (PDSA S219, M5-R10-26).
     foreach (BreedType::cases() as $breed) {
         if ($breed !== BreedType::CaneCorso) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('drools');
         }
-        if (! in_array($breed, [BreedType::CaneCorso, BreedType::Dobermann], true)) {
+        if (! in_array($breed, [BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('not_for_small_children');
         }
     }
@@ -511,7 +511,52 @@ it('gives the Dobermann active_family, family_pet, large_home and the PDSA cauti
         ->and(bsEntry('dobermann.exercise.adult')['quote'])->toBe('Exercise: More than 2 hours per day');
 });
 
-it('gives chases_small_pets only to the five breeds whose own entry quotes a high prey drive (David 2026-10-12)', function () {
+it('gives the Boxer the new needs_company and short_muzzle_breathing tags and the PDSA cautions — never children, never the flat-face chip (runbook 2026-10-12)', function () {
+    expect(BreedSuitability::vocabulary())->toMatchArray(['needs_company' => BreedSuitability::CONSIDER, 'short_muzzle_breathing' => BreedSuitability::CONSIDER]);
+
+    $boxer = app(BreedSuitability::class)->for(BreedType::Boxer);
+    expect($boxer['suits'])->toBe(['active_family', 'family_pet', 'large_home'])
+        ->and($boxer['consider'])->toBe(['long_daily_exercise', 'short_muzzle_breathing', 'not_for_small_children', 'experienced_owner', 'needs_company', 'chews_when_bored', 'sheds', 'chases_small_pets'])
+        // PDSA: not with younger children or first-time owners; very high prey drive; separation anxiety.
+        ->and($boxer['suits'])->not->toContain('children')->not->toContain('small_children')
+        ->not->toContain('first_time_owner')->not->toContain('other_pets')->not->toContain('often_alone')
+        // Breed Watch points are nostrils / muzzle only → no skin chip; RKC "Over 10 years" → no shorter_lifespan.
+        ->and($boxer['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('sensitive_skin')->not->toContain('shorter_lifespan')
+        ->not->toContain('hips_hind_legs')->not->toContain('heart_and_spine')->not->toContain('frequent_grooming');
+
+    // Only the Boxer carries the new chips so far.
+    foreach (BreedType::cases() as $breed) {
+        if ($breed !== BreedType::Boxer) {
+            expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('needs_company')->not->toContain('short_muzzle_breathing');
+        }
+    }
+
+    expect(bsEntry('boxer.behaviour.time_alone')['quote'])->toBe('Boxers love human company so can develop separation anxiety if left alone.')
+        ->and(bsEntry('boxer.suitability.pdsa_time_alone')['quote'])->toBe("It's best to have a Boxer if someone is going to be around the house with them all day.")
+        ->and(bsEntry('boxer.health.skull_shape')['quote'])->toContain('moderately brachycephalic skull shape')
+        ->and(bsEntry('boxer.health.breed_watch')['quote'])->toBe('Excessively short muzzle')
+        ->and(bsEntry('boxer.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Large house')
+        ->and(bsEntry('boxer.exercise.adult')['quote'])->toBe('Exercise: More than 2 hours per day');
+});
+
+it('gives the Miniature Schnauzer apartment, children, low_shedding and frequent_grooming — no welfare chip, never hypoallergenic (runbook 2026-10-13)', function () {
+    $schnauzer = app(BreedSuitability::class)->for(BreedType::MiniatureSchnauzer);
+    expect($schnauzer['suits'])->toBe(['apartment', 'children', 'low_shedding'])
+        ->and($schnauzer['consider'])->toBe(['frequent_grooming'])
+        // PDSA's statement is conditional and no rating → never small_children; RKC "companion dogs" → no family_pet.
+        ->and($schnauzer['suits'])->not->toContain('small_children')->not->toContain('family_pet')->not->toContain('other_pets')
+        // RKC Breed Watch Category 1 → no welfare chip; RKC "Over 10 years" → no shorter_lifespan; "Sheds: No" → no sheds.
+        ->and($schnauzer['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
+        ->not->toContain('sensitive_skin')->not->toContain('back_spine')->not->toContain('shorter_lifespan')->not->toContain('sheds');
+
+    expect(bsEntry('miniature_schnauzer.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Flat/ Apartment')
+        ->and(bsEntry('miniature_schnauzer.suitability.rkc_shedding')['quote'])->toBe('Sheds: No')
+        ->and(bsEntry('miniature_schnauzer.suitability.pdsa_children')['quote'])->toBe("They can get on well with children if they're introduced at an early age.")
+        ->and(bsEntry('miniature_schnauzer.behaviour.family')['notes'])->toContain('early introduction')
+        ->and(bsEntry('miniature_schnauzer.suitability.pdsa_grooming')['quote'])->toBe('Grooming is needed 2-3 times a week');
+});
+
+it('gives chases_small_pets only to the six breeds whose own entry quotes a high prey drive (David 2026-10-12)', function () {
     expect(BreedSuitability::vocabulary())->toMatchArray(['chases_small_pets' => BreedSuitability::CONSIDER]);
 
     $expected = [
@@ -520,6 +565,7 @@ it('gives chases_small_pets only to the five breeds whose own entry quotes a hig
         BreedType::WestHighlandWhiteTerrier->value => 'west_highland_white_terrier.behaviour.other_pets',
         BreedType::SiberianHusky->value => 'siberian_husky.behaviour.other_pets',
         BreedType::Dobermann->value => 'dobermann.behaviour.other_pets',
+        BreedType::Boxer->value => 'boxer.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {

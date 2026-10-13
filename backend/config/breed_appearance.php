@@ -230,6 +230,27 @@
 | white markings. Not a welfare-concern breed (RKC Breed Watch Category 1). Colour weights
 | are unsourced → `verified => false`; black and rust weighted highest (the register portrait).
 |
+| Boxer (M5-R10-26, docs/research/dog-data boxer.appearance): medium-sized, square build,
+| strong bone and well developed muscles; short, glossy, smooth coat tight to the body; broad,
+| deep muzzle that is "never narrow, pointed, short or shallow" with a broad black nose and
+| wide nostrils (RKC standard S217); dark brown eyes; ears lying flat and close to the cheek,
+| natural (FCI 144, S213) — never cropped (the AKC S218 cropping is not drawn); natural
+| undocked tail. Colours: fawn or brindle with a black mask, white markings up to a third
+| (all three standards). Welfare (moderately brachycephalic, VetCompass S220; Breed Watch
+| Category 2 "Pinched nostrils" / "Excessively short muzzle", S216): a `muzzle` trait asks
+| for a moderate muzzle with wide open nostrils (as the French Bulldog). Colour weights are
+| unsourced → `verified => false`; fawn with a black mask weighted highest (the register
+| portrait).
+|
+| Miniature Schnauzer (M5-R10-27, docs/research/dog-data miniature_schnauzer.appearance): small,
+| strong, stocky, nearly square; harsh, wiry, dense coat with a dense undercoat, beard and
+| eyebrows (FCI 183 S221, RKC standard S224); natural V-shaped drop ears (FCI S221) — never
+| cropped (the AKC S225 cropping is not drawn); natural tail (FCI "Natural"). Colours: pepper and
+| salt (with a dark facial mask), black and silver, pure black. White is standard in FCI / RKC
+| but disqualifies under AKC (S225) → not drawn (open for David). Not a welfare-concern breed
+| (RKC Breed Watch Category 1, S223). Colour weights are unsourced → `verified => false`; pepper
+| and salt weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1154,6 +1175,72 @@ return [
             'ear_carriage' => ['natural uncropped ears, set high and dropped close to the cheeks'],
             'eye_color' => ['medium, oval, dark'],
             'tail' => ['natural undocked tail carried in a slight curve'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-26 (docs/research/dog-data/data.json boxer.appearance; runbook rules
+    // 2026-10-10: standard colours only; natural ears and tail; welfare breed → moderate muzzle).
+    'boxer' => [
+        'display_name' => 'Boxer',
+        // Colour frequencies are in no source (boxer.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'RKC breed standard (S217, https://thekennelclub.org.uk/breed-standards/working/boxer), FCI-Standard N° 144 (S213), RKC breed page (S215), RKC Breed Watch (S216) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S215 "Size: Large"; S217 "Height: dogs: 57-63 cms (22½-25 ins); bitches: 53-59 cms (21-23 ins)."',
+            'build' => 'S217 "Great nobility, smooth-coated, medium-sized, square build, strong bone and evident, well developed muscles."',
+            'coat_length' => 'S217 "Short, glossy, smooth and tight to body."',
+            'coat_color' => 'S217 "Fawn or brindle." "White markings acceptable not exceeding one-third of ground colour." (weights unsourced)',
+            'ear_carriage' => 'S217 "Moderate size, thin, set wide apart on highest part of skull lying flat and close to cheek in repose,"; FCI S213 natural ears',
+            'eye_color' => 'S217 "Dark brown, forward looking, not too small, protruding or deeply set."',
+            'tail' => 'S217 "Undocked: Set on high and carried gaily, of moderate thickness."',
+            'muzzle' => 'S217 "Muzzle broad, deep and powerful, never narrow, pointed, short or shallow."; "Nose broad, black, slightly turned up, wide nostrils with well-defined line between."; S216 "Pinched nostrils", "Excessively short muzzle" (welfare rule: moderate, never extreme)',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'square, athletic and muscular', 'weight' => 3], 'strong-boned and powerful'],
+            'coat_length' => ['short, glossy, smooth coat tight to the body'],
+            // Standard colours only (S217); fawn highest → the register portrait. White never over a third.
+            'coat_color' => [
+                ['value' => 'golden to deer-red fawn with a black mask', 'weight' => 3],
+                'brindle (black stripes on fawn) with a black mask',
+            ],
+            'ear_carriage' => ['natural uncropped ears lying flat and close to the cheeks'],
+            'eye_color' => ['dark brown'],
+            'tail' => ['natural undocked tail set high'],
+            // Welfare rule (S216, S220): never an extreme face — moderate muzzle, open nostrils.
+            'muzzle' => ['broad, deep, moderate muzzle (never extremely short) with a black nose and wide open nostrils'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-27 (docs/research/dog-data/data.json miniature_schnauzer.appearance; runbook rules
+    // 2026-10-10: standard colours only — never a disqualifying one; natural ears and tail).
+    'miniature_schnauzer' => [
+        'display_name' => 'Miniature Schnauzer',
+        // Colour frequencies are in no source (miniature_schnauzer.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 183 (S221, https://dev.fci.be/Nomenclature/Standards/183g02-en.pdf), RKC breed standard (S224, KUSA copy), AKC standard (S225, AMSC copy), RKC breed page (S223) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S223 "Size: Small"; S221 "Height at withers Dogs and bitches between 30 and 35 cm."',
+            'build' => 'S221 "Small, strong, stocky rather than slim, rough coated, elegant."',
+            'coat_length' => 'S221 "The coat should be wiry, harsh and dense."',
+            'coat_color' => 'S221 "Pure black with black undercoat." "Pepper and Salt." "Black/Silver."; S225 "salt and pepper, black and silver and solid black." (white: FCI / RKC yes, AKC disqualifies — not drawn; weights unsourced)',
+            'ear_carriage' => 'S221 "Drop ears, set high, V-shaped with inner edges lying close to the cheeks, evenly carried"',
+            'eye_color' => 'S221 "Medium sized, oval, facing foreward, dark with lively expression."',
+            'tail' => 'S221 "Natural; a sabre or sickle carriage is sought after."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'sturdy, nearly square and compact', 'weight' => 3], 'small, strong and stocky'],
+            'coat_length' => ['harsh, wiry, dense coat with bushy eyebrows and a beard'],
+            // Standard colours only (S221, S225); pepper and salt highest → the register portrait. Never white.
+            'coat_color' => [
+                ['value' => 'pepper and salt (banded grey) with a dark facial mask', 'weight' => 3],
+                'black and silver',
+                'solid black',
+            ],
+            'ear_carriage' => ['natural uncropped V-shaped ears folding forward'],
+            'eye_color' => ['dark'],
+            'tail' => ['natural undocked tail carried high'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],

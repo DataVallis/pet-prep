@@ -1057,6 +1057,65 @@
       ],
       "notes": "RKC breed page (older address display.aspx?id=5121, dog-data S209, 2026-10-12): section 'Pre-breeding health screening' with the headings 'Good Practice schemes and tests' (= minimum: vWD1 DNA test) and 'Best Practice schemes and tests' (eye test for PHPV, DINGS2 DNA test, BVA/KC hip scheme). PDSA (S211) names hip x-rays under the BVA/KC scheme and screening for vWD and PHPV. No heart (DCM) screening scheme on the RKC page — not added (never guess a test). New test key dna_dings2 needs website words."
     },
+    "boxer": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S215",
+        "level_quotes": {
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S215",
+          "quote": "BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "BVA/KC/ISDS Eye Scheme",
+          "source_id": "S215",
+          "quote": "BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S215",
+          "quote": "BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (older address display.aspx?id=5116, dog-data S215, 2026-10-12): section 'Pre-breeding health screening' with only the heading 'Best Practice schemes and tests' (elbow, eye and hip schemes) — no minimum list. PDSA (S219) says parents should be screened for heart problems (paraphrase only) → no heart scheme added (never guess a test). No new test key."
+    },
+    "miniature_schnauzer": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S223",
+        "level_quotes": {
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "dna_mac",
+          "level": "best_practice",
+          "name": "DNA test for mycobacterium avium (MAC)",
+          "source_id": "S223",
+          "quote": "DNA test for mycobacterium avium (MAC)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme (including litter screening)",
+          "source_id": "S223",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme (including litter screening)"
+        }
+      ],
+      "notes": "RKC breed page (older address display.aspx?id=4096, dog-data S223, 2026-10-13): no minimum list; under 'Best Practice schemes and tests': 'To support the breed's health, responsible breeders should ensure they complete all tests in best practice.' — MAC DNA test and the BVA/KC/ISDS eye scheme. New test key dna_mac."
+    },
     "maine_coon": {
       "status": "listed",
       "basis": {

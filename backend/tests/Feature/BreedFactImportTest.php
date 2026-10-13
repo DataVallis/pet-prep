@@ -1,6 +1,7 @@
 <?php
 
 use App\Enums\BreedFactStatus;
+use App\Enums\BreedType;
 use App\Filament\Resources\BreedFactResource;
 use App\Filament\Resources\BreedFactResource\Pages\ListBreedFacts;
 use App\Filament\Resources\BreedFactResource\Pages\ViewBreedFact;
@@ -381,6 +382,29 @@ describe('import', function () {
         file_put_contents($bad.'/border_collie.json', '{not json');
         bfiImport($bad)->expectsOutputToContain('invalid JSON')->assertFailed();
         expect(BreedFact::count())->toBe(0);
+    });
+
+    it('accepts every pedigree BreedType (also breeds added later) and no other', function () {
+        $service = app(BreedFactImportService::class);
+        foreach (BreedType::cases() as $breed) {
+            $file = bfiDir(function (array $d) use ($breed) {
+                $d['breed'] = $breed->value;
+                foreach ($d['facts'] as $i => $f) {
+                    $d['facts'][$i]['key'] = $breed->value.'-00'.($i + 1);
+                    $d['facts'][$i]['verified_hash'] = null;
+                    $d['facts'][$i]['status'] = 'draft';
+                    $d['facts'][$i]['verified_by'] = null;
+                }
+
+                return $d;
+            }, $breed->value.'.json').'/'.$breed->value.'.json';
+            $errors = $service->parse($file)[2];
+            in_array($breed, BreedFactImportService::NON_PEDIGREE, true)
+                ? expect($errors[0] ?? '')->toContain('has no pedigree')
+                : expect($errors)->toBe([], $breed->value);
+        }
+        expect(BreedFactResource::breedOptions())->toHaveKeys(['boxer', 'miniature_schnauzer'])
+            ->not->toHaveKeys(['mutt', 'domestic_cat']);
     });
 
     it('refuses a key that already belongs to another breed', function () {

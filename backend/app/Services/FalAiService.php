@@ -238,6 +238,22 @@ class FalAiService
                 .'medium oval dark eyes, black nose, strong muscular elegant square build, natural undocked tail, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-26: RKC standard (S217) / FCI 144 (S213) — fawn with a black mask as the anchor
+            // (first standard colour); natural ears and tail, never cropped or docked; welfare rule
+            // (Breed Watch S216, VetCompass S220): moderate muzzle with wide open nostrils.
+            BreedType::Boxer => 'A friendly, alert Boxer dog with a golden fawn coat and a black mask, '
+                .'short glossy smooth coat, natural uncropped ears lying close to the cheeks, '
+                .'broad, deep, moderate muzzle with wide open nostrils, dark brown eyes, '
+                .'square, athletic, muscular build, natural undocked tail, '
+                .'photorealistic, studio quality, natural lighting',
+
+            // M5-R10-27: FCI 183 (S221) / AKC (S225) — pepper and salt as the anchor (all three
+            // standards); natural drop ears and tail, never cropped or docked; never white.
+            BreedType::MiniatureSchnauzer => 'A friendly, alert Miniature Schnauzer dog with a pepper and salt coat and a dark facial mask, '
+                .'harsh wiry dense coat with bushy eyebrows and a beard, natural uncropped V-shaped ears folding forward, '
+                .'dark oval eyes, black nose, small, sturdy, nearly square build, natural undocked tail, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -562,6 +578,38 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'short, hard, smooth and tight-lying',
                 'markings' => 'clearly defined rust red tan markings on the muzzle, cheeks, eyebrows, chest and legs',
+            ],
+            // M5-R10-26: RKC (S217) "Fawn or brindle." with a black mask; white markings never
+            // more than a third; never all white, black or merle.
+            BreedType::Boxer => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'fawn with a black mask',
+                    1 => 'brindle with a black mask',
+                    2 => 'fawn with a black mask',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, glossy, smooth and tight to the body',
+                'markings' => match ($variantIndex) {
+                    0 => 'black mask on the muzzle',
+                    1 => 'black mask on the muzzle',
+                    2 => 'black mask and small white markings on the chest and paws',
+                },
+            ],
+            // M5-R10-27: FCI 183 (S221) pepper and salt, black/silver, black; white is not drawn
+            // (AKC S225 disqualifies it); never white patches or merle.
+            BreedType::MiniatureSchnauzer => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'pepper and salt',
+                    1 => 'black and silver',
+                    2 => 'pepper and salt',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'harsh, wiry and dense with bushy eyebrows and a beard',
+                'markings' => match ($variantIndex) {
+                    0 => 'dark facial mask',
+                    1 => 'silver eyebrows, muzzle, chest and legs',
+                    2 => 'lighter grey beard, eyebrows and legs',
+                },
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

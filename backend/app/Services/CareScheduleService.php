@@ -148,7 +148,7 @@ class CareScheduleService
     /**
      * M5-R16 (David 2026-10-12, "1 ura, samo opozorilo"): the end of the digestion
      * warning — the last meal (child, emergency or parent-covered) plus the breed's
-     * `meal_exercise_gap_minutes` (breed_stage_params; Cane Corso, Dobermann: 60). Null
+     * `meal_exercise_gap_minutes` (breed_stage_params; Cane Corso, Dobermann, Boxer: 60). Null
      * when the breed has no such row (every other breed, cats, legacy pets), nothing was
      * fed, or the gap has passed. A duration, so the family timezone does not matter.
      * Only a warning: steps, energy and the score never read it.

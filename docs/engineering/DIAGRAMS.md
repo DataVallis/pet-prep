@@ -392,7 +392,7 @@ sequenceDiagram
   end
   S->>DB: COMMIT
   S-->>App: one PetUpdated after commit ("fed_pet",<br/>or "metric_changed" if only the catch-up changed what shows)
-  Note over S,C: M5-R16: state.feeding.digesting_until = last meal + breed meal_exercise_gap_minutes<br/>(Cane Corso / Dobermann 60 min; else null) — a warning only, steps still count
+  Note over S,C: M5-R16: state.feeding.digesting_until = last meal + breed meal_exercise_gap_minutes<br/>(Cane Corso / Dobermann / Boxer 60 min; else null) — a warning only, steps still count
   Note over S,C: Water (M5-F11, no daily cap): same flow, CareScheduleService::water —<br/>live thirst (DecayMath) shows ≤ water_refill_below AND ≥ water_min_gap_minutes real minutes<br/>since the last refill (also across midnight) → thirst 100 %, watered_pet row;<br/>else 422 water_too_soon, next_allowed_at = later of gap end and forecast threshold minute
   Note over S,DB: Clean: settles due hygiene events, hygiene 100 %, cleaned_poop row (no window).<br/>Contract: allowed while contract_required; once per pet → pet_contracts row + signed_contract row → 201<br/>(unborn pet: birth in the same transaction, M1-07b); again → 409
 ```
@@ -862,7 +862,7 @@ erDiagram
     bigint id
     bigint family_id
     bigint user_id "deprecated"
-    string breed_type "mutt border_collie labrador_retriever golden_retriever french_bulldog german_shepherd cavalier_king_charles_spaniel beagle standard_poodle dachshund australian_shepherd havanese west_highland_white_terrier bernese_mountain_dog siberian_husky rottweiler bulldog german_shorthaired_pointer yorkshire_terrier cane_corso pembroke_welsh_corgi dobermann domestic_cat maine_coon british_shorthair ragdoll siberian_cat norwegian_forest_cat bengal"
+    string breed_type "mutt border_collie labrador_retriever golden_retriever french_bulldog german_shepherd cavalier_king_charles_spaniel beagle standard_poodle dachshund australian_shepherd havanese west_highland_white_terrier bernese_mountain_dog siberian_husky rottweiler bulldog german_shorthaired_pointer yorkshire_terrier cane_corso pembroke_welsh_corgi dobermann boxer miniature_schnauzer domestic_cat maine_coon british_shorthair ragdoll siberian_cat norwegian_forest_cat bengal"
     string species "dog or cat, follows breed (M5-R06-01)"
     string name "optional label set by a parent, null = none (M5-R08)"
     double hunger_level
