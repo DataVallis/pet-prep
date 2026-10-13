@@ -53,7 +53,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "fe3b3f1167b4c222512780a2aee4efb0068a7b9d9f94f422405b4936fc4173fd"
+      "sha256": "51c708d06e3336379e6b8121ee5c2eb17efb420e034496f3b7ff8b850a0dbf86"
     }
   },
   "suitability_vocabulary": {
@@ -15397,7 +15397,12 @@
           "S241"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "great-dane.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
