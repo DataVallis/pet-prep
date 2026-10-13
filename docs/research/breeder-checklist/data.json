@@ -1271,6 +1271,32 @@
         }
       ],
       "notes": "GCCF (UK) Active Register rule via World Cat Congress: a Bengal goes on the breeding (Active) Register when it, or both parents, or every pedigree line, tested normal for PRA-b and PK def (paraphrase of the rest of the cell; \"PRA Band\" = \"PRA-b and\" as returned by the fetch tool). FIFe on the same page: \"Bengals of generations F1–F4 are not allowed for breeding*.\" (a generation rule, not a health test — not listed). PRA / PK deficiency: PetMD C45 in cat-data."
+    },
+    "pomeranian": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S247",
+        "level_quotes": {
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "cm_sm_mri",
+          "level": "best_practice",
+          "name": "CM/SM screening using the KC/ BVA Chiari-like malformation/ syringomyelia (CM/SM) screening scheme",
+          "source_id": "S247",
+          "quote": "CM/SM screening using the KC/ BVA Chiari-like malformation/ syringomyelia (CM/SM) screening scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S247",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ],
+      "notes": "RKC breed page (current address, dog-data S247, 2026-10-13): no minimum list; under 'Pre-breeding Health Screening' → 'Best Practice schemes and tests': the KC/BVA CM/SM screening scheme and the BVA/KC/ISDS eye scheme. Older address (S248): 'To support the breed's health, responsible breeders should ensure they complete all tests in best practice.'; 'We don't currently offer a breed-specific DNA testing package for this breed'. Existing keys only (cm_sm_mri, eye_scheme)."
     }
   }
 }

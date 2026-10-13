@@ -13593,6 +13593,542 @@
       }
     }
   },
+  "pomeranian": {
+    "_note": "Added 2026-10-13 (M5-R10-30, unattended run — appended after the Great Dane: AKC 2024 No. 22, S174 table row '22 | Pomeranian'). Quotes as returned by the web-fetch tool on 2026-10-13 (the tool limits quotes to ~125 characters — long sentences are quoted in pieces); spot-check before import (sources.md S245–S252, reused S8, S10, S11, S14, S35, S45, S54, S123, S174). FCI keeps the Pomeranian as variety e) of the German Spitz (standard N° 97, S245 / S246); the FCI standard gives a height (21 cm ± 3 cm) but no weight ('should have a weight corresponding to its size') → game weight = the RKC breed standard (S249, per sex). Lifespan: McMillan 2024 (S54) / the Dogs Trust breed table (S123) not reachable this run (PMC browser check, 'shortest and longest' PDF fetch error); no VetCompass Pomeranian paper found → runbook rule: the RKC lower bound 'Over 12 years' (S247). Wikipedia (S252, tier C) cites McMillan 2024 = 12.2 years — alternative only, never alone. RKC Breed Watch Category 2 (S248) but the breed's points of concern were not returned (royalkennelclub.com page fetch error) → no welfare chip; open for David. Woodgreen and AKC trait ratings not attempted.",
+    "identity": {
+      "value": "FCI No. 97, Group 5 Section 4 (European Spitz), Germany",
+      "unit": "—",
+      "source_id": "S246",
+      "quote": "FCI-CLASSIFICATION: Group 5 Spitz and primitive types.",
+      "confidence": "high",
+      "notes": "FCI standard N° 97 (S246, EN PDF): 'Section 4 European Spitz.'; 'ORIGIN: Germany'; 'UTILIZATION: Watch and Companion dog.'; date of publication as returned '04/09/2019' (the nomenclature, S245, lists a newer valid standard 9/3/2024 — re-check). FCI nomenclature (S245): 'DEUTSCHER SPITZ (97)', English 'GERMAN SPITZ', varieties a)–e) with 'e) Pomeranian'; not subject to a working trial; definitive acceptance 1/1/1957. The FCI breed is the German Spitz; the Pomeranian is its toy variety ('German Toy Spitz/Pomeranian'). RKC group: Toy (S249 'TOY GROUP: Pomeranian'). AKC name: Pomeranian (S174)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S247",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "PDSA (S250) key facts: 'Size | Small' — sources agree. RKC group: Toy (S249). RKC weight 1.8–2.5 kg (S249) = the smallest weight band (S8)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            18,
+            24
+          ],
+          "female": [
+            18,
+            24
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S246",
+        "quote": "German Toy Spitz/Pomeranian: 21 cm ± 3 cm.",
+        "confidence": "high",
+        "notes": "FCI standard (S246), height at withers, one value for both sexes → 18–24 cm (stored per sex). PDSA (S250): 'Average height | 25-27 cm' (taller than the FCI range — background only). The RKC standard (S249) gives no height."
+      }
+    },
+    "adult_weight": {
+      "rkc": {
+        "value": {
+          "male": [
+            1.8,
+            2.0
+          ],
+          "female": [
+            2.0,
+            2.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S249",
+        "quote": "Males: 1.8kg – 2kg.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S249, KC standard hosted by KUSA, effective 01/07/2025): 'Females: 2kg – 2.5kg.' The RKC page of the standard (as summarised by the tool) calls these ideal weights and the standard a guide. FCI (S246) gives no weight: 'The German Toy Spitz/Pomeranian should have a weight corresponding to its size.' The game range (adult_weight_kg)."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            2,
+            3
+          ],
+          "female": [
+            2,
+            3
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S250",
+        "quote": "Average weight | 2-3 kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S250), one range for both sexes (stored per sex) — slightly heavier than the RKC standard (S249). Background only; the register shows the standard."
+      },
+      "salt_category": {
+        "value": "I",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 1.8–2.5 kg = the smallest band. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "8–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Toy (5–12 pounds): 8–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. The RKC weight 1.8–2.5 kg (S249) ≈ 4–5.5 lb is a little below the 'Toy (5–12 pounds)' band — the smallest class PetMD gives, used as the nearest. The game is unaffected (the puppy cap of 30 min is reached at 3 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Pomeranian growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S247",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC breed page (S247; older address S248 the same). PDSA (S250): 'Average lifespan | Over 12 years' — same. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024: PMC (PMC10834484) returned a browser check, the Dogs Trust 'shortest and longest' PDF returned a fetch error and the DOAJ record names no breed values (2026-10-13). Wikipedia (S252, tier C) quotes McMillan 2024 as 12.2 years — UNSOURCED as an A/B value; verify in McMillan 2024 Supplementary Table / S123 before replacing the RKC lower bound.",
+        "alternatives": [
+          {
+            "value": 12.2,
+            "source_id": "S252",
+            "notes": "Wikipedia (tier C) citing McMillan et al. 2024 (paraphrase as returned: 'A UK study found a life expectancy of 12.2 years'); never shown alone. With it the senior boundary would be round(0.75 × 12.2 × 12) = 110 months."
+          }
+        ]
+      },
+      "senior_from": {
+        "value": 9.0,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12 y (RKC lower bound 'Over 12 years', S247) → 0.75 × 12 = 9 y = 108 months. With McMillan 12.2 y (via S252, tier C): 110 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S247"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 30",
+        "unit": "minutes/day",
+        "source_id": "S247",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "PDSA (S250): 'Pomeranians need around half an hour of exercise per day.' (key facts 'Minimum exercise (per day) | 30 minutes'); 'They don’t require a large amount of exercise.' — sources agree; RKC preferred (runbook rule)."
+      },
+      "energy": {
+        "value": "lively, curious and very playful",
+        "unit": "—",
+        "source_id": "S250",
+        "quote": "Pomeranians are lively, curious and very playful, always interested in a game if there’s one on offer!",
+        "confidence": "medium",
+        "notes": "PDSA (S250). AKC (S251): 'Poms enjoy short walks, runs, and outdoor playtime.' Covered by the game's walk and play (M5-R05) — nothing new to build."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "extrovert, lively and intelligent; companionable and cheerful",
+        "unit": "—",
+        "source_id": "S249",
+        "quote": "Extrovert, lively, and intelligent.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S249) 'Temperament'. FCI (S246): 'Its companionable and cheerful character makes it the ideal companion and family dog' (clause as returned; it describes the whole German Spitz breed). RKC breed page (S248): 'aided by its dainty appearance and extrovert character.'"
+      },
+      "family": {
+        "value": "ideal companion and family dog (FCI); a better fit for families with older children (AKC)",
+        "unit": "—",
+        "source_id": "S246",
+        "quote": "Its companionable and cheerful character makes it the ideal companion and family dog",
+        "confidence": "high",
+        "notes": "FCI (S246). AKC (S251): 'Pomeranians tend to be a better fit for families with older children.' and 'It's important that children are old enough to recognize the difference between a small dog and a toy.' → family_pet and the new consider tag older_children; never children / small_children. Not fragile_older_children: no A/B source here names fragile bones (the breeder site pomeranian.org — tier C — warns of broken legs when dropped; not used)."
+      },
+      "socialisation": {
+        "value": "early socialisation and puppy training classes are highly recommended",
+        "unit": "—",
+        "source_id": "S251",
+        "quote": "Like with any breed, early socialization and puppy training classes are highly recommended.",
+        "confidence": "medium",
+        "notes": "AKC (S251). → proposed_game_parameters.pomeranian.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (RKC S247 / S248, PDSA S250 and AKC S251 checked) → no often_alone / needs_company tag."
+      },
+      "other_pets": {
+        "value": "can get along well with other animals, especially if socialised early",
+        "unit": "—",
+        "source_id": "S251",
+        "quote": "Poms can get along well with other animals, especially if socialized early.",
+        "confidence": "medium",
+        "notes": "AKC (S251). Basis of other_pets (with the socialisation caveat, Standard Poodle precedent). No prey-drive statement → no chases_small_pets."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (PDSA S250, AKC S251 checked) → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag. RKC breed page on Toy breeds in general (S248, paraphrase): some are fussy eaters — not breed-specific."
+      },
+      "housetraining": {
+        "value": "housetraining can be a challenge",
+        "unit": "—",
+        "source_id": "S251",
+        "quote": "It's important to note that housetraining can be a challenge for this breed.",
+        "confidence": "medium",
+        "notes": "AKC (S251). The game's potty training (M1) already models accidents and training — nothing new to build; no tag in the vocabulary."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 2 (S248) — the breed's points of concern were not returned (royalkennelclub.com Breed Watch page fetch error 2026-10-13), so no welfare chip is given; the RKC breed page (S248): 'This breed can be affected by conformational concerns' — open for David. Main topics (PDSA S250): kneecaps, windpipe, eyes, elbows, CM/SM, thyroid.",
+      "luxating_patella": {
+        "value": "luxating patellas — kneecaps slipping out of place",
+        "unit": "—",
+        "source_id": "S250",
+        "quote": "Luxating patellas – the kneecaps slipping temporarily out of place.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S250)."
+      },
+      "tracheal_collapse": {
+        "value": "tracheal collapse — the windpipe rings collapse, making breathing difficult",
+        "unit": "—",
+        "source_id": "S250",
+        "quote": "Tracheal collapse – a condition where the tracheal rings collapse, obstructing the airway and making breathing difficult.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S250)."
+      },
+      "eyes": {
+        "value": "progressive retinal atrophy, cataracts, entropion (eyelids turning inwards); eye testing available",
+        "unit": "—",
+        "source_id": "S250",
+        "quote": "Progressive retinal atrophy – gradual deterioration of the retina of the eye.",
+        "confidence": "medium",
+        "notes": "PDSA (S250): 'Symptoms can start with night blindness and progress to total blindness.'; cataracts 'opacity of the lens of the eye – giving a ‘cloudy’ appearance.'; entropion 'inward turning eyelids.' RKC best-practice eye testing (S247): 'Eye testing using the BVA/KC/ISDS Eye Scheme'."
+      },
+      "elbow_dysplasia": {
+        "value": "elbow dysplasia — leading to arthritis",
+        "unit": "—",
+        "source_id": "S250",
+        "quote": "Elbow dysplasia - elbow joint laxity as a result of poor development, which will eventually lead to arthritis.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S250). Not a Breed Watch point → no hips_hind_legs chip (that chip is about hind legs / hips)."
+      },
+      "syringomyelia": {
+        "value": "Chiari-like malformation / syringomyelia (CM/SM); a BVA/KC screening scheme exists",
+        "unit": "—",
+        "source_id": "S247",
+        "quote": "CM/SM screening using the KC/ BVA Chiari-like malformation/ syringomyelia (CM/SM) screening scheme",
+        "confidence": "medium",
+        "notes": "RKC breed page best-practice test (S247). PDSA (S250, paraphrase as returned): a painful neurological condition in which fluid-filled cavities form in the spinal cord near the brain; a BVA/Kennel Club scheme can test for it. Not a conformation chip (no Breed Watch point returned; the Cavalier's heart_and_spine chip is for heart disease + CM/SM)."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism — less thyroid hormone",
+        "unit": "—",
+        "source_id": "S250",
+        "quote": "a condition in which there’s a decrease in thyroid hormone production.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S250), 'Hypothyroidism' (line as returned)."
+      },
+      "other_pdsa": {
+        "value": "hydrocephalus, Cushing’s syndrome",
+        "unit": "—",
+        "source_id": "S250",
+        "quote": "Hydrocephalus – increased accumulation of cerebrospinal fluid (CSF) in the ventricles of the brain.",
+        "confidence": "medium",
+        "notes": "PDSA (S250): Cushing's syndrome (Hyperadrenocorticism) 'hormonal disorder which results in the production off too much cortisol.' (sic). Research only — not exported."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 23,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-10-13): rank 23, the Pomeranian alone (the next row, 24, is the Irish Water Spaniel — as returned; the table row itself was not returned verbatim, so no quote is stored), tier 'Excellent Working Dogs' (ranks 11–26). Coren's own top / bottom-10 article (S34) does not list the breed. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Excellent",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Excellent Working Dogs Understanding of new commands: 5 to 15 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier definition as returned: 'Obey first command: 85% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "intelligent; patient, consistent, reward-based training",
+        "unit": "—",
+        "source_id": "S251",
+        "quote": "Pomeranians are very intelligent, but require patient, consistent training.",
+        "confidence": "medium",
+        "notes": "AKC (S251). PDSA (S250): 'Training will require patience, but can be achieved using reward-based techniques.' Not a first-time-owner statement → no first_time_owner / experienced_owner tag."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.pomeranian.learning_multiplier (1.5, runbook rule: Excellent tier, rank 23).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "compact, short-coupled toy spitz with a fox-like head, a profuse double coat with a frill and a tail carried flat over the back",
+        "unit": "—",
+        "source_id": "S249",
+        "quote": "Compact, short-coupled dog, well-knit in frame.",
+        "confidence": "high",
+        "notes": "RKC standard (S249): 'Exhibiting great intelligence in expression; activity and buoyancy in deportment.' 'Sound, vivacious, and dainty.'"
+      },
+      "colours": {
+        "value": [
+          "orange",
+          "cream",
+          "white",
+          "black",
+          "brown"
+        ],
+        "unit": "list",
+        "source_id": "S249",
+        "quote": "All whole colours permissible, but free from black or white shadings.",
+        "confidence": "high",
+        "notes": "RKC (S249): 'Whole colours are: white, black, brown, light or dark, blue as pale as possible.' 'Orange, which should be self-coloured and bright as possible.' 'Beaver.' 'Cream dogs have black noses and black eye-rims.' 'Merles not permissible.' Parti-colours and shaded sables are allowed by the RKC. FCI (S246): 'White, black, brown, orange, grey-shaded, other colours.'; disqualifying 'Definite white markings or spots in all non-white Toy Spitz dogs/Pomeranians.' The game draws only whole colours both standards name (orange, cream, white, black, brown) — never merle, never white markings on a coloured dog, no parti-colour (FCI disqualifies white markings)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Orange first with the highest weight (portrait default), then cream, white, black, brown."
+      },
+      "coat": {
+        "value": "double coat: soft fluffy undercoat, long straight harsh outer coat; abundant frill round neck and shoulders",
+        "unit": "—",
+        "source_id": "S249",
+        "quote": "Two coats, an undercoat and an outercoat.",
+        "confidence": "high",
+        "notes": "RKC (S249): 'Former soft, fluffy; the latter long, perfectly straight, harsh in texture and covering whole of body;' 'very abundant round neck and fore part of shoulders and chest; forming frill, extending over shoulders.' FCI (S246): 'Hair must not look like being modelled.' The game draws a natural, untrimmed coat (not a sculpted show trim)."
+      },
+      "ears": {
+        "value": "small, set high, carried perfectly erect",
+        "unit": "—",
+        "source_id": "S249",
+        "quote": "Relatively small, not set too wide apart or too low down, but carried perfectly erect.",
+        "confidence": "high",
+        "notes": "FCI (S246): 'The small ears are set high and relatively close to each other'."
+      },
+      "eyes": {
+        "value": "medium size, slightly oval, dark and bright",
+        "unit": "—",
+        "source_id": "S249",
+        "quote": "Medium size, slightly oval, not full or set too wide apart; bright, dark, and showing great intelligence.",
+        "confidence": "high",
+        "notes": "FCI (S246): 'The eyes are of medium size, almond-shaped, slightly slanting and dark.'"
+      },
+      "nose": {
+        "value": "black in orange, cream, white and shaded sable dogs; brown in brown dogs; fox-like head with a fine muzzle",
+        "unit": "—",
+        "source_id": "S249",
+        "quote": "Nose black in white, orange, and shaded sable dogs;",
+        "confidence": "high",
+        "notes": "RKC (S249): 'brown in chocolate-tipped sable dogs, but in other colours may be self-coloured, never parti-coloured or flesh.'; 'Cream dogs have black noses and black eye-rims.'; 'Head and nose foxy in outline, skull slightly flat, large in proportion to muzzle,' (truncated). Not flat-faced."
+      },
+      "tail": {
+        "value": "set high, turned over the back, carried flat and straight, profusely covered with long harsh hair",
+        "unit": "—",
+        "source_id": "S249",
+        "quote": "High-set, turned over back and carried flat and straight, profusely covered with long, harsh, spreading hair.",
+        "confidence": "high",
+        "notes": "FCI (S246): 'The tail is set on high and of medium length.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S247 current address, S248 older address — same values) and PDSA (S250); AKC (S251) for children / other pets. The RKC page shows no 'Good with children' field (as returned 2026-10-13). Woodgreen not attempted.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S247",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "PDSA (S250): 'Size | Small'."
+      },
+      "rkc_exercise": {
+        "value": "Up to 30 minutes per day",
+        "unit": "—",
+        "source_id": "S247",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S247",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "Basis of the apartment tag (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S247",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S247",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "No number → the PDSA number (S250, 'two-three times per week') decides the brushing routine (runbook dog-grooming rule). Basis of frequent_grooming (with PDSA)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S247",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "PDSA (S250): 'Coat length | Medium'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S247",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PDSA (S250): '… and more often when shedding.' — agrees. Basis of the sheds tag."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S247",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "Not shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S247",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S247",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 2",
+        "unit": "—",
+        "source_id": "S248",
+        "quote": "This breed can be affected by conformational concerns, more information can be found here",
+        "confidence": "medium",
+        "notes": "RKC breed page (older address, S248): Breed watch category 'Category 2' (label value as returned). The points of concern were not returned (royalkennelclub.com Breed Watch page: fetch error) → no welfare chip; open for David."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page (S247, S248) has no 'Good with children' field."
+      },
+      "pdsa_exercise": {
+        "value": "around half an hour a day",
+        "unit": "—",
+        "source_id": "S250",
+        "quote": "Pomeranians need around half an hour of exercise per day.",
+        "confidence": "medium",
+        "notes": ""
+      },
+      "pdsa_grooming": {
+        "value": "double coat brushed two to three times a week, more often when shedding",
+        "unit": "—",
+        "source_id": "S250",
+        "quote": "They have a double coat that needs brushing two-three times per week, and more often when shedding.",
+        "confidence": "medium",
+        "notes": "Basis of the brushing routine (range 2–3 → 3, runbook rule) and frequent_grooming."
+      },
+      "akc_children": {
+        "value": "better fit for families with older children",
+        "unit": "—",
+        "source_id": "S251",
+        "quote": "Pomeranians tend to be a better fit for families with older children.",
+        "confidence": "medium",
+        "notes": "AKC (S251): 'It's important that children are old enough to recognize the difference between a small dog and a toy.' Basis of older_children."
+      },
+      "akc_other_pets": {
+        "value": "can get along well with other animals, especially if socialised early",
+        "unit": "—",
+        "source_id": "S251",
+        "quote": "Poms can get along well with other animals, especially if socialized early.",
+        "confidence": "medium",
+        "notes": "Basis of other_pets."
+      },
+      "akc_grooming": {
+        "value": "brushed frequently; a professional groomer every four to six weeks",
+        "unit": "—",
+        "source_id": "S251",
+        "quote": "A Pom's coat should be brushed frequently to keep the hair healthy and ensure they look their best.",
+        "confidence": "medium",
+        "notes": "AKC (S251): 'taking the dog to a professional groomer every four to six weeks is highly recommended.' No weekly number → PDSA decides. Professional grooming is not modelled (no mechanic needed for a monthly visit)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -20227,6 +20763,267 @@
         "confidence": "high",
         "notes": "Colours shared by the FCI (S239) and RKC (S242) standards only — fawn, brindle, harlequin, black, blue; never merle (FCI-only) or mantle (RKC-only), never albino or white blazes. Tight eyelids and a natural, moderate build (welfare: Breed Watch S244). Natural ears (FCI 'Naturally pendant', S239). Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn with a black mask is the portrait default (FCI + RKC colour; FCI 'Black mask desired.'); natural ears and tail; tight eyelids (Breed Watch)"
+      }
+    },
+    "pomeranian": {
+      "_note": "Unattended run M5-R10-30 (2026-10-13): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. New consider tag older_children (AKC S251 — the Yorkshire Terrier's fragile_older_children names fragile bones, which no A/B source here says). Sourced needs built from day one: brushing 2–3× a week (PDSA S250; RKC S247 'More than once a week') → 3× (M5-R13); early socialisation (AKC S251) → M5-R17. Senior 108 = RKC lower bound (S247) — provisional until McMillan 2024 is checked. Breed Watch Category 2 without returned points → no welfare chip (open for David).",
+      "exercise_minutes_adult": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": "S247",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'Up to 30 minutes per day' (S247); PDSA 'around half an hour of exercise per day' (S250) — sources agree. Rule: one number N ('up to N') → N = 30.",
+        "alternatives": [
+          {
+            "value": 30,
+            "source_id": "S250",
+            "notes": "PDSA (key facts minimum 30 minutes)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S247 'Up to 30 minutes per day'; PDSA S250 'around half an hour')"
+      },
+      "step_goal_adult": {
+        "value": 3000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 30 min × 100 steps/min (S45) = 3,000.",
+        "derived_from": [
+          "S247",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min × 100 steps/min → 3,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 23,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 30) = 22.5 → 23 min (half up) → 2,300 steps.",
+        "steps": 2300,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 30 reached at 3 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 30 min (reached at 3 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) = 108 (S11 + RKC lower bound 'Over 12 years', S247). No McMillan 2024 / VetCompass value reachable. Alternatives: 110 (McMillan 12.2 y via Wikipedia S252, tier C — not used alone), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S247"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 110,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S247)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 23 (S35), tier 'Excellent' (11–26) → 1.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 23, Excellent tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 3,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S250",
+        "quote": "They have a double coat that needs brushing two-three times per week, and more often when shedding.",
+        "confidence": "high",
+        "notes": "PDSA (S250) 'two-three times per week' → upper bound 3 (runbook dog-grooming rule: a range A–B → B). RKC (S247) 'Grooming: More than once a week' (no number); AKC (S251) 'brushed frequently' (no number). 'more often when shedding' = seasonal (moult not modelled). Built in M5-R13; matted coat at ceil(3 / 2) = 2 missed.",
+        "alternatives": [
+          {
+            "value": 2,
+            "source_id": "S250",
+            "notes": "PDSA lower bound (not chosen — rule takes the upper bound)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 3× na teden (PDSA »two-three times per week« → zgornja meja); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S251",
+        "quote": "Like with any breed, early socialization and puppy training classes are highly recommended.",
+        "confidence": "medium",
+        "notes": "pomeranian.behaviour.socialisation (AKC S251). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat AKC S251)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-30); refs = JSON paths in this file. New vocabulary key older_children (consider). No percentages in the app.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S247"
+            ],
+            "refs": [
+              "pomeranian.suitability.rkc_size_of_home",
+              "pomeranian.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S247 'Size of home: Flat/ Apartment' / 'Size of garden: Small/ medium garden'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S246"
+            ],
+            "refs": [
+              "pomeranian.behaviour.family",
+              "pomeranian.behaviour.temperament"
+            ],
+            "quote": "S246 'Its companionable and cheerful character makes it the ideal companion and family dog'",
+            "note": "AKC: a better fit for families with older children (S251) → older_children as well; never children / small_children."
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S251"
+            ],
+            "refs": [
+              "pomeranian.behaviour.other_pets",
+              "pomeranian.suitability.akc_other_pets"
+            ],
+            "quote": "S251 'Poms can get along well with other animals, especially if socialized early.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "older_children",
+            "source_ids": [
+              "S251"
+            ],
+            "refs": [
+              "pomeranian.behaviour.family",
+              "pomeranian.suitability.akc_children"
+            ],
+            "quote": "S251 'Pomeranians tend to be a better fit for families with older children.'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S247",
+              "S250"
+            ],
+            "refs": [
+              "pomeranian.suitability.rkc_grooming",
+              "pomeranian.suitability.pdsa_grooming"
+            ],
+            "quote": "S247 'Grooming: More than once a week'; S250 'needs brushing two-three times per week'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S247",
+              "S250"
+            ],
+            "refs": [
+              "pomeranian.suitability.rkc_shedding",
+              "pomeranian.suitability.pdsa_grooming"
+            ],
+            "quote": "S247 'Sheds: Yes'; S250 'more often when shedding'"
+          }
+        ],
+        "not_proposed": {
+          "children": "AKC: a better fit for families with older children (S251) → the consider tag older_children instead.",
+          "small_children": "AKC: children old enough to tell a small dog from a toy (S251).",
+          "fragile_older_children": "Its chip names fragile bones — no A/B source here says so (only a tier-C breeder site) → older_children.",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No source.",
+          "large_home": "RKC 'Flat/ Apartment' (S247).",
+          "active_family": "RKC 'Up to 30 minutes per day' (S247).",
+          "long_daily_exercise": "30 min (S247).",
+          "often_alone": "No source.",
+          "needs_company": "No source.",
+          "older_owners": "No source.",
+          "low_shedding": "RKC 'Sheds: Yes' (S247).",
+          "needs_mental_stimulation": "No breed-specific statement.",
+          "food_motivated_weight": "No breed-specific statement.",
+          "chews_when_bored": "No source.",
+          "may_herd_children": "No source.",
+          "secure_fencing": "No source.",
+          "chases_small_pets": "No prey-drive statement (AKC: gets along with other animals, S251).",
+          "shorter_lifespan": "RKC 'Over 12 years' (S247).",
+          "welfare": "RKC Breed Watch Category 2 (S248) but the points of concern were not returned → no welfare chip (open for David); not flat-faced (fox-like head, S249)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, family_pet, other_pets; consider older_children (new key, AKC S251), frequent_grooming, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (no veterinary advice against advertising the breed type)",
+        "unit": "—",
+        "source_id": "S248",
+        "quote": "This breed can be affected by conformational concerns, more information can be found here",
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 2 (S248), points of concern not returned; the only veterinary advice against advertising a breed type is for flat-faced breeds (BVA S92) — not this breed (fox-like head, S249). Marketing never promises health. Claude's proposal (Yorkshire Terrier precedent, not a runbook rule, čaka Davida): marketing does not show the Pomeranian with small children (AKC S251: a better fit for families with older children).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising)"
+      },
+      "ai_appearance": {
+        "value": "adult Pomeranian, bright self-coloured orange (default); profuse natural double coat — soft fluffy undercoat, long straight harsh outer coat, abundant frill round the neck and chest; small erect ears set high; fox-like head with a fine muzzle, black nose, medium dark slightly oval eyes; tail set high, turned over the back and carried flat; tiny compact toy spitz; no white markings, never merle",
+        "unit": "—",
+        "source_id": "S249",
+        "quote": "Orange, which should be self-coloured and bright as possible.",
+        "confidence": "high",
+        "notes": "Colours named by both standards (RKC S249, FCI S246): orange, cream, white, black, brown — never merle (RKC 'Merles not permissible.'), never white markings on a coloured dog (FCI disqualifying). Natural, untrimmed coat (FCI 'Hair must not look like being modelled.'). Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): orange (self-coloured, RKC + FCI colour) is the portrait default; natural untrimmed coat, erect ears, tail over the back"
       }
     }
   }
