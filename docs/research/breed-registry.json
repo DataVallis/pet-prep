@@ -57,7 +57,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "a38faaaefe3ea7bffd42c201f547829b60d2bd79a921e7cc2e9ba8b8702c4210"
+      "sha256": "98e9a75eb8138237c2ef9a999f821e2ed6ef2ae590db928818c588fe5d647f8b"
     }
   },
   "suitability_vocabulary": {
@@ -16996,7 +16996,12 @@
           "S269"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "miniature-american-shepherd.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
