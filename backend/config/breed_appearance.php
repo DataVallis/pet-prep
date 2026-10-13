@@ -279,6 +279,17 @@
 | "Merles not permissible."), never white markings on a coloured dog (FCI disqualifying). Colour
 | weights are unsourced → `verified => false`; orange weighted highest (the register portrait).
 |
+| Boston Terrier (M5-R10-31, docs/research/dog-data boston_terrier.appearance): a lively, smooth-coated,
+| short-headed, compactly built, short-tailed, well-balanced dog (FCI 140 S254, RKC standard S257);
+| short, smooth, bright, fine coat; small erect ears (natural — never cropped); wide-apart, large,
+| round, dark eyes, not overly prominent; low-set, short, fine, tapering tail (natural — the FCI
+| disqualifies a docked tail). Colours: brindle, seal or black, always with the required white markings
+| (white muzzle band, blaze between the eyes, forechest; S254); never solid colours, grey / blue, liver,
+| fawn or merle. Welfare breed (brachycephalic — PDSA S259, RKC S255 / S261, BVA S92): the dog trait
+| `muzzle` asks for a moderate, square muzzle free from wrinkles with clearly open nostrils (FCI fault
+| "Pinched nostrils.", RKC "Nostrils open."). Colour weights are unsourced → `verified => false`;
+| brindle and white weighted highest (the colour both standards prefer — the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1379,6 +1390,45 @@ return [
             'tail' => ['plumed tail set high, turned over the back and carried flat'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-31 (docs/research/dog-data/data.json boston_terrier.appearance; runbook rules
+    // 2026-10-10: standard colours only, always with white markings; welfare breed → moderate muzzle,
+    // open nostrils; natural ears and tail).
+    'boston_terrier' => [
+        'display_name' => 'Boston Terrier',
+        // Colour frequencies are in no source (boston_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 140 (S254), RKC breed standard (S257, KUSA copy S258), RKC breed page (S255), PDSA (S259), RKC / University of Cambridge BOAS research (S261) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S255 "Size: Small"; PDSA S259 the same',
+            'build' => 'S254 "The Boston Terrier is a lively, highly intelligent, smooth coated, short-headed, compactly built,"; FCI fault "Blocky or chunky in appearance."',
+            'coat_length' => 'S254 "Hair: Short, smooth, bright and fine in texture."',
+            'coat_color' => 'S254 "Colour: Brindle, seal or black with white markings. Brindle is preferred only if all other qualities are equal." (weights unsourced; never solid colours, grey or liver — FCI disqualifying)',
+            'coat_pattern' => 'S254 "Required markings: White muzzle band, white blaze between the eyes, white forechest."',
+            'ear_carriage' => 'S254 "Small, carried erect, either natural or cropped to conform to the shape of the head" (drawn natural — never cropped)',
+            'eye_color' => 'S254 "Wide apart, large, round and dark in colour."; RKC S257 overly prominent eyes highly undesirable',
+            'tail' => 'S254 "Set-on low, short, fine and tapering, straight or screw and must not be carried above the horizontal."; FCI disqualifying "Docked tail."',
+            'muzzle' => 'S254 "Black and wide, with a well defined line between the nostrils." muzzle "free from wrinkles"; fault "Pinched nostrils."; RKC S257 "Nostrils open."; welfare rule (BOAS S261, BVA S92): drawn moderate with open nostrils',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'compact, well balanced and lively, never blocky', 'weight' => 3], 'small, sturdy and square'],
+            'coat_length' => ['short, smooth, bright and fine'],
+            // Standard colours only, always with white (S254, S257); brindle and white highest → the register portrait.
+            // Never solid, grey / blue, liver, fawn or merle.
+            'coat_color' => [
+                ['value' => 'brindle and white', 'weight' => 45],
+                ['value' => 'black and white', 'weight' => 30],
+                ['value' => 'seal and white', 'weight' => 25],
+            ],
+            'coat_pattern' => ['with a white muzzle band, a white blaze between the eyes and a white forechest'],
+            'ear_carriage' => ['small, natural, uncropped and erect'],
+            'eye_color' => ['dark, large and round, set wide apart, not bulging'],
+            'tail' => ['short, natural, undocked and straight, carried low'],
+            // Welfare rule: moderate, never an extreme flat face.
+            'muzzle' => ['moderate short square muzzle free from wrinkles, with a black wide nose and clearly open nostrils'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

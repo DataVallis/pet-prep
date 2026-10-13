@@ -821,5 +821,29 @@ return [
             ],
         ],
 
+        // M5-R10-31: boston_terrier.* (S253–S263), runbook rules (data.json
+        // proposed_game_parameters.boston_terrier.suitability_tags). RKC (S255) + PDSA (S259) + AKC (S260).
+        // `children` with the caveats (PDSA: the right socialisation as a puppy; AKC: children who know
+        // how to be gentle) — never `small_children`. Welfare breed (flat-faced, PDSA S259 / RKC S261,
+        // heat warning S259) → brachycephalic_breathing, as the French Bulldog and the Bulldog.
+        // Sheds: conflicting sources (RKC yes, AKC minimally) → neither sheds nor low_shedding.
+        'boston_terrier' => [
+            'suits' => [
+                // S255 "Size of home: Flat/ Apartment" / "Size of garden: Small/ medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S255'], 'refs' => ['boston_terrier.suitability.rkc_size_of_home', 'boston_terrier.suitability.rkc_size_of_garden']],
+                // S259 "They enjoy playing games and will join in with plenty of enthusiasm, making them perfect family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S259'], 'refs' => ['boston_terrier.suitability.pdsa_family', 'boston_terrier.behaviour.family']],
+                // S259 "and are especially good with children."; S260 "They do well with children who know how to be gentle with animals."
+                ['tag' => 'children', 'source_ids' => ['S259', 'S260'], 'refs' => ['boston_terrier.suitability.pdsa_children', 'boston_terrier.behaviour.family']],
+            ],
+            'consider' => [
+                // S259 "Boston Terriers are a brachycephalic (flat-faced) breed."; S255 BOAS text; S261 RKC / Cambridge
+                // BOAS research; S93 "Stop and think before buying a flat-faced dog."; S259 heat warning.
+                ['tag' => 'brachycephalic_breathing', 'source_ids' => ['S259', 'S255', 'S261', 'S93'], 'refs' => ['boston_terrier.health.brachycephaly_boas', 'boston_terrier.exercise.heat_and_walk_timing']],
+                // S260 "This breed doesn’t fare well when left alone for extended periods of time."
+                ['tag' => 'needs_company', 'source_ids' => ['S260'], 'refs' => ['boston_terrier.behaviour.time_alone', 'boston_terrier.suitability.akc_time_alone']],
+            ],
+        ],
+
     ],
 ];

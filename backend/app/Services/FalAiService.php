@@ -279,6 +279,17 @@ class FalAiService
                 .'plumed tail turned over the back, tiny compact toy body, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-31: FCI 140 (S254) / RKC standard (S257) — brindle with white markings as the anchor
+            // (the colour both standards prefer); natural erect ears (never cropped) and a short natural
+            // tail (never docked); welfare breed (brachycephalic — PDSA S259, RKC S261, BVA S92): moderate
+            // muzzle with clearly open nostrils, no wrinkles; never solid, blue, liver, fawn or merle.
+            BreedType::BostonTerrier => 'A friendly, lively Boston Terrier dog with a brindle coat and white markings, '
+                .'white muzzle band, white blaze between the eyes and white forechest, short smooth bright coat, '
+                .'small natural erect ears, large round dark eyes set wide apart that are not bulging, '
+                .'moderate short square muzzle free from wrinkles with a black wide nose and clearly open nostrils, '
+                .'compact well-balanced body, short natural straight tail carried low, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -679,6 +690,18 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'profuse, fluffy double coat with a frill round the neck',
                 'markings' => 'none (whole-coloured)',
+            ],
+            // M5-R10-31: brindle, seal or black, always with the required white markings (FCI S254 /
+            // RKC S257); never solid colours, grey / blue, liver, fawn or merle.
+            BreedType::BostonTerrier => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'brindle and white',
+                    1 => 'black and white',
+                    2 => 'seal and white',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'short, smooth, bright and fine',
+                'markings' => 'white muzzle band, white blaze between the eyes and white forechest',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
