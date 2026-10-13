@@ -1077,6 +1077,7 @@ test('Miniature Schnauzer (M5-R10-27): up to 1 hour (RKC), FCI weight and height
 test('Shih Tzu (M5-R10-28): up to 1 hour (RKC), FCI weight for both sexes, PDSA height, FCI group 9 section 5 Tibet (China), VetCompass median + RKC band, Coren 70, short-muzzle chip, brushing every day', () => {
   const d = registry.breeds.find((b) => b.id === 'shih_tzu');
   assert.deepEqual(d.name, { en: 'Shih Tzu', sl: 'Shih tzu' });
+  assert.deepEqual(d.portrait, { file: 'shih-tzu.webp', width: 1024, height: 1024, kind: 'ai_photo' });
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S231']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 208, group: 9, section: 5, origin: 'CN-XZ' });
   assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [4.5, 8], female: [4.5, 8] }, ['S229']]]);
@@ -1088,8 +1089,10 @@ test('Shih Tzu (M5-R10-28): up to 1 hour (RKC), FCI weight for both sexes, PDSA 
   assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 114 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['apartment', 'family_pet', 'first_time_owner']);
   assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['frequent_grooming', 'short_muzzle_breathing']);
-  assert.deepEqual(d.health.map((h) => h.key), ['short_face_breathing', 'dental_disease_care', 'eye_problems_pra_cataracts_dry_eye']);
+  assert.deepEqual(d.health.map((h) => h.key), ['shorter_face_boas', 'dental_disease_care', 'eye_problems_dry_eye_cataracts_pra_retina']);
   // RKC: no additional health screening schemes or DNA tests.
+  // RKC "Sheds: No" vs PDSA seasonal shedding → no shedding fact.
+  assert.equal(d.facts.some((f) => f.field === 'shedding'), false);
   assert.equal(d.breeder_checklist.status, 'none_recommended');
   assert.deepEqual(d.breeder_checklist.tests, []);
   const json = JSON.stringify(d);

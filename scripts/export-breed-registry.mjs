@@ -891,12 +891,15 @@ const DOG_FACTS = {
     exercise: [['exercise.adult', 'up_to']],
     coat: ['suitability.rkc_coat_length'],
     grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
-    shedding: ['suitability.rkc_shedding'],
+    // RKC "Sheds: No" (S231) and PDSA seasonal shedding (S233) disagree → no shedding fact (no chip either).
+    shedding: [],
     food_motivation: null,
+    // Own health keys (M5-R10-28 portrait PR): the Boxer's `short_face_breathing` says "moderately
+    // short-faced" and the Schnauzer's eye key promises eye testing (the RKC lists none for the Shih Tzu).
     health: [
-      ['short_face_breathing', 'health.brachycephaly_boas'],
+      ['shorter_face_boas', 'health.brachycephaly_boas'],
       ['dental_disease_care', 'health.dental'],
-      ['eye_problems_pra_cataracts_dry_eye', 'health.eyes'],
+      ['eye_problems_dry_eye_cataracts_pra_retina', 'health.eyes'],
     ],
   },
 };
