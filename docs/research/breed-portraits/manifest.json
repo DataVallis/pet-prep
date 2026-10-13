@@ -25,7 +25,7 @@
             "kind": "ai_photo",
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:b775a1b48d7073964cd089ace027151fbcf996769dba5b2294ffea224e9f9329",
-            "generated_at": "2026-10-10T05:47:20+00:00",
+            "generated_at": "2026-10-10T05:49:32+00:00",
             "cost_usd": 0.15
         },
         {
@@ -241,7 +241,7 @@
             "kind": "ai_photo",
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:af22b68d3e35cf939053cf9239b179237a49ca147683a99cb93c917c87706f28",
-            "generated_at": "2026-10-12T07:53:39+00:00",
+            "generated_at": "2026-10-12T07:54:57+00:00",
             "cost_usd": 0.15
         },
         {
@@ -314,6 +314,18 @@
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:971fe15e0805a7dc6bff967f369a9974f6dbf07409b835c21b27abe62f0bc5d4",
             "generated_at": "2026-10-13T10:37:16+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "boston_terrier",
+            "species": "dog",
+            "file": "dog/boston-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:cfda36134a92ab5760b1ebad58bb70262fb801b5e0ffa10cdca22b2cd32c1d98",
+            "generated_at": "2026-10-13T14:01:16+00:00",
             "cost_usd": 0.15
         },
         {
