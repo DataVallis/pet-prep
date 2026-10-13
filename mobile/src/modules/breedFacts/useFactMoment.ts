@@ -3,14 +3,18 @@
  *
  * Reads the child's breed facts and the fact of the day (TanStack Query), watches the care
  * mutations for a success (the mutation cache — every care hook keeps its own key) and the step
- * goal, and opens the sheet by itself only in a calm moment (`calmMomentBlockers`) after the
- * server agreed (`POST …/shown`). A refusal keeps the chip; nothing is shown as an error.
- * Which sheet / guide is open is UI state in `appStore`.
+ * goal, and opens the sheet by itself only in a calm moment (`calmMomentBlockers`, never while a
+ * care request runs) after the server recorded it now (`POST …/shown` → `recorded`).
+ * `already_shown` (another device used today's card) and a 422 refusal open nothing and only
+ * write the server's state; nothing is shown as an error. Tapping the chip IS today's card
+ * (David 2026-10-13, option A): it opens at once and records `shown` (a refusal is ignored — the
+ * child asked). Which sheet / guide is open is UI state in `appStore`.
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { AppState } from 'react-native';
-import { useQueryClient } from '@tanstack/react-query';
+import { useIsMutating, useQueryClient } from '@tanstack/react-query';
+import { useTranslation } from 'react-i18next';
 
 import type { BreedFact } from '@/api/client';
 import {
@@ -26,7 +30,8 @@ import {
   stepGoalReached,
   type CalmBlocker,
 } from '@/modules/breedFacts/breedFacts';
-import { useBreedFacts, useFactOfTheDay, useMarkFactRead, useRecordFactShown } from '@/hooks/queries/useBreedFacts';
+import { factOfTheDayRoot, useBreedFacts, useFactOfTheDay, useMarkFactRead, useRecordFactShown } from '@/hooks/queries/useBreedFacts';
+import { currentLanguageTag } from '@/i18n';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { useServerNow } from '@/hooks/useServerNow';
 import { useAppStore } from '@/store/appStore';
@@ -73,10 +78,14 @@ export function useFactMoment({ view, overlayOpen, dockCovered }: FactMomentInpu
   const serverNow = useServerNow(skew, view !== undefined && breed !== null, FACT_DAY_TICK_MS);
   const day = view ? familyDay(view, serverNow) : '';
 
-  const listQuery = useBreedFacts(breed);
+  // Facts come localized: the language is part of the query keys (a switch refetches).
+  const { i18n } = useTranslation();
+  void i18n.language; // re-render on a switch
+  const lang = currentLanguageTag();
+  const listQuery = useBreedFacts(breed, lang);
   const facts = useMemo(() => listQuery.data?.facts ?? [], [listQuery.data]);
   const hasFacts = breed !== null && facts.length > 0;
-  const factQuery = useFactOfTheDay(day, hasFacts && day !== '');
+  const factQuery = useFactOfTheDay(day, lang, hasFacts && day !== '');
   const fotd = factQuery.data ?? null;
 
   const sheetFactId = useAppStore((s) => s.factSheetId);
@@ -85,17 +94,22 @@ export function useFactMoment({ view, overlayOpen, dockCovered }: FactMomentInpu
   const guideOpen = useAppStore((s) => s.isBreedGuideVisible);
   const setGuideVisible = useAppStore((s) => s.setBreedGuideVisible);
   const askedDay = useAppStore((s) => s.factAutoAskedDay);
-  const refusedDay = useAppStore((s) => s.factRefusedDay);
+  const pendingDay = useAppStore((s) => s.factPendingDay);
   const setAskedDay = useAppStore((s) => s.setFactAutoAskedDay);
-  const setRefusedDay = useAppStore((s) => s.setFactRefusedDay);
+  const setPendingDay = useAppStore((s) => s.setFactPendingDay);
 
-  // ── "Care just done" (device clock; only differences matter) ──
+  // ── "Care just done" (device clock; only differences matter). Every newer success restarts
+  // the settle wait; a running care request blocks (`busy`). ──
   const [careDoneAt, setCareDoneAt] = useState<number | null>(null);
+  const careInFlight = useIsMutating({ mutationKey: ['child', 'pet'] }) > 0;
   useEffect(
     () =>
       client.getMutationCache().subscribe((event) => {
         if (event.type !== 'updated' || event.action.type !== 'success') return;
-        if (careKindOfMutation(event.mutation.options.mutationKey, event.action.data) !== null) setCareDoneAt(Date.now());
+        if (careKindOfMutation(event.mutation.options.mutationKey, event.action.data) === null) return;
+        setCareDoneAt(Date.now());
+        // The server's decision may change after a care (e.g. the lock lifted): ask again.
+        void client.invalidateQueries({ queryKey: factOfTheDayRoot });
       }),
     [client],
   );
@@ -129,6 +143,7 @@ export function useFactMoment({ view, overlayOpen, dockCovered }: FactMomentInpu
     ...live,
     overlayOpen: overlayOpen || sheetFactId !== null || guideOpen,
     handledToday: readToday || askedDay === day,
+    careInFlight,
   };
   const blockers = calmMomentBlockers(calmInput);
   const calm = blockers.length === 0;
@@ -151,21 +166,20 @@ export function useFactMoment({ view, overlayOpen, dockCovered }: FactMomentInpu
     setAskedDay(day);
     record(undefined, {
       onSuccess: (result) => {
-        if (result.outcome === 'refused') {
-          setRefusedDay(day);
-          return;
-        }
+        // `already_shown` (another device) and `refused`: the server's state is written, nothing opens.
+        if (result.outcome !== 'shown') return;
         const fact = result.state.fact;
         const now = latest.current;
-        // Recorded but the moment has passed (a game opened, a lock, midnight): the chip stays.
+        // Recorded (one weekly card used) but the moment has passed (a game opened, a lock,
+        // midnight): the chip keeps today's card reachable.
         if (fact === null || now.overlay || now.locked || now.day !== day) {
-          setRefusedDay(day);
+          if (fact !== null && now.day === day) setPendingDay(day);
           return;
         }
         openFactSheet(fact.id);
       },
     });
-  }, [calm, day, record, setAskedDay, setRefusedDay, openFactSheet]);
+  }, [calm, day, record, setAskedDay, setPendingDay, openFactSheet]);
 
   // ── The sheet's fact, marked read once it shows ──
   const sheetFact: BreedFact | null =
@@ -178,6 +192,11 @@ export function useFactMoment({ view, overlayOpen, dockCovered }: FactMomentInpu
     marked.current.add(sheetFact.id);
     mark(sheetFact);
   }, [sheetFact, mark]);
+  // Once per opening: a mark that failed (offline undo) is tried again the next time the card
+  // opens — never in a loop while it stays open.
+  useEffect(() => {
+    if (sheetFactId === null) marked.current.clear();
+  }, [sheetFactId]);
 
   // A lock closes the sheet and the guide (they would reopen when it lifts).
   const locked = live.locked && view !== undefined;
@@ -191,15 +210,21 @@ export function useFactMoment({ view, overlayOpen, dockCovered }: FactMomentInpu
     hasFacts &&
     showFactChip({
       fact: fotd,
-      refusedToday: refusedDay === day,
+      pendingToday: pendingDay === day,
       readToday,
       locked: live.locked,
       covered: dockCovered || guideOpen,
     });
 
+  // Option A: the chip is today's card — open at once, record `shown` (refusal ignored: the
+  // child asked); the automatic card is then done for today on this device.
+  const pendingToday = pendingDay === day;
   const openChip = useCallback(() => {
-    if (fotd?.fact) openFactSheet(fotd.fact.id);
-  }, [fotd, openFactSheet]);
+    if (!fotd?.fact) return;
+    openFactSheet(fotd.fact.id);
+    setAskedDay(day);
+    if (!pendingToday) record(undefined);
+  }, [fotd, openFactSheet, setAskedDay, day, pendingToday, record]);
   const openFact = useCallback((fact: BreedFact) => openFactSheet(fact.id), [openFactSheet]);
   const openGuide = useCallback(() => {
     closeFactSheet();

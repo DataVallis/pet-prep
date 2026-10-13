@@ -24,33 +24,42 @@ import {
   type FactOfTheDayResponse,
   type FactShownRefusal,
 } from '@/api/client';
-import { markReadInList } from '@/modules/breedFacts/breedFacts';
+import { childFactsOnly, isTimedReason, markReadInList } from '@/modules/breedFacts/breedFacts';
+import { currentLanguageTag } from '@/i18n';
 import { currentUserId, sameSession, type SessionContext } from '@/hooks/queries/useChildActions';
 
 export const breedFactsRoot = ['child', 'breedFacts'] as const;
-export const breedFactsKey = (breed: string) => [...breedFactsRoot, breed] as const;
+/** The language is part of the key: facts come localized (Accept-Language), a switch refetches. */
+export const breedFactsKey = (breed: string, lang: string = currentLanguageTag()) => [...breedFactsRoot, breed, lang] as const;
 export const factOfTheDayRoot = ['child', 'factOfTheDay'] as const;
-export const factOfTheDayKey = (day: string) => [...factOfTheDayRoot, day] as const;
+export const factOfTheDayKey = (day: string, lang: string = currentLanguageTag()) => [...factOfTheDayRoot, day, lang] as const;
 
 /** Facts change only when David approves new ones; a list is fresh for 10 minutes. */
 export const BREED_FACTS_STALE_MS = 10 * 60_000;
 export const FACT_OF_THE_DAY_STALE_MS = 5 * 60_000;
+/** While the server's "no" is time-based (quiet hours, too soon …) the decision is re-asked this often. */
+export const FACT_OF_THE_DAY_POLL_MS = 5 * 60_000;
 
-export function useBreedFacts(breed: string | null) {
+export function useBreedFacts(breed: string | null, lang: string) {
   return useQuery<BreedFactsResponse>({
-    queryKey: breedFactsKey(breed ?? ''),
-    queryFn: ({ signal }) => api.getBreedFacts(breed ?? '', signal),
+    queryKey: breedFactsKey(breed ?? '', lang),
+    queryFn: async ({ signal }) => {
+      const body = await api.getBreedFacts(breed ?? '', signal);
+      // Second guard: a child never sees parent-only facts, whatever the server sent.
+      return childFactsOnly(body);
+    },
     enabled: breed !== null,
     staleTime: BREED_FACTS_STALE_MS,
   });
 }
 
-export function useFactOfTheDay(day: string, enabled: boolean) {
+export function useFactOfTheDay(day: string, lang: string, enabled: boolean) {
   return useQuery<FactOfTheDayResponse>({
-    queryKey: factOfTheDayKey(day),
+    queryKey: factOfTheDayKey(day, lang),
     queryFn: ({ signal }) => api.getFactOfTheDay(signal),
     enabled,
     staleTime: FACT_OF_THE_DAY_STALE_MS,
+    refetchInterval: (query) => (isTimedReason(query.state.data?.reason ?? null) ? FACT_OF_THE_DAY_POLL_MS : false),
   });
 }
 
@@ -70,8 +79,13 @@ function writeFactOfTheDay(client: QueryClient, state: FactOfTheDayResponse): vo
   client.setQueriesData<FactOfTheDayResponse>({ queryKey: factOfTheDayRoot }, () => state);
 }
 
+/**
+ * `shown` = recorded now (this device's card); `already_shown` = another device / an earlier
+ * request already used today's card — nothing opens by itself; `refused` = 422.
+ */
 export type ShownOutcome =
   | { outcome: 'shown'; state: FactOfTheDayResponse }
+  | { outcome: 'already_shown'; state: FactOfTheDayResponse }
   | { outcome: 'refused'; reason: FactShownRefusal['reason']; state: FactOfTheDayResponse };
 
 export function useRecordFactShown() {
@@ -85,7 +99,7 @@ export function useRecordFactShown() {
     mutationFn: async () => {
       try {
         const body = await api.recordFactShown();
-        return { outcome: 'shown', state: body.state };
+        return body.status === 'already_shown' ? { outcome: 'already_shown', state: body.state } : { outcome: 'shown', state: body.state };
       } catch (error) {
         const refusal = readShownRefusal(error);
         if (refusal) return { outcome: 'refused', reason: refusal.reason, state: refusal.state };

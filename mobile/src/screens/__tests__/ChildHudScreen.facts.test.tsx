@@ -99,6 +99,14 @@ async function flush(ms = 0) {
   });
 }
 
+/** Move the clock to the next day and fire the minute tick that re-reads the family day. */
+async function nextDay() {
+  jest.setSystemTime(Date.now() + 24 * 3_600_000);
+  await flush(60_000);
+  await flush(0);
+  await flush(0);
+}
+
 async function renderHud(state: ChildPetState = collieState()) {
   getChildPet.mockResolvedValue(state);
   const utils = renderWithQuery(<ChildHudScreen />);
@@ -115,7 +123,8 @@ async function water(state: ChildPetState = collieState()) {
   fireEvent.press(screen.getByTestId('action-water'));
   await flush(0);
   await flush(0);
-  await flush(2_000);
+  // The 3 s toast and the settle wait (3.5 s) come first.
+  await flush(4_000);
 }
 
 beforeEach(() => {
@@ -229,7 +238,7 @@ describe('HUD — calm moment', () => {
     expect(recordFactShown).toHaveBeenCalledTimes(1);
   });
 
-  it('server refuses (422 refused) → no sheet, no error, the chip stays', async () => {
+  it('server refuses (422 refused) → no sheet, no error; the server state decides the chip (option A)', async () => {
     recordFactShown.mockRejectedValue(
       new ApiError('refused', 422, { status: 'refused', reason: 'week_cap', state: makeFactOfTheDay({ may_auto_show: false, reason: 'week_cap' }) }),
     );
@@ -239,13 +248,74 @@ describe('HUD — calm moment', () => {
     await flush(0);
     expect(recordFactShown).toHaveBeenCalledTimes(1);
     expect(screen.queryByTestId('fact-sheet')).toBeNull();
-    expect(screen.getByTestId('hud-fact-chip')).toBeTruthy();
-    // The child only sees the usual water toast, never a refusal text.
-    expect(screen.getByTestId('hud-toast')).not.toHaveTextContent(/week_cap|refused/);
+    // week_cap: not a card day any more → no chip.
+    expect(screen.queryByTestId('hud-fact-chip')).toBeNull();
+    // Never a refusal text for the child.
+    expect(screen.queryByText(/week_cap|refused/)).toBeNull();
+    // The book still opens every fact.
+    expect(screen.getByTestId('hud-facts-open')).toBeTruthy();
+  });
 
-    fireEvent.press(screen.getByTestId('hud-fact-chip'));
+  it('already_shown (another device used today\'s card) → nothing opens, the chip goes', async () => {
+    recordFactShown.mockResolvedValue({
+      status: 'already_shown',
+      reason: null,
+      state: makeFactOfTheDay({ may_auto_show: false, reason: 'shown_today', shown_today: true, shown_this_week: 1 }),
+    });
+    await renderHud();
+    await flush(11_000);
+    await water();
     await flush(0);
-    expect(screen.getByTestId('fact-sheet-title')).toHaveTextContent(FACT_1.title);
+    await flush(0);
+    expect(recordFactShown).toHaveBeenCalledTimes(1);
+    expect(screen.queryByTestId('fact-sheet')).toBeNull();
+    expect(screen.queryByTestId('hud-fact-chip')).toBeNull();
+  });
+
+  it('a newer care success restarts the settle wait', async () => {
+    await renderHud();
+    await flush(11_000);
+    waterPet.mockResolvedValue({ status: 'accepted', state: collieState() });
+    fireEvent.press(screen.getByTestId('action-water'));
+    await flush(0);
+    await flush(3_000);
+    // A second care 3 s later: the wait starts again.
+    fireEvent.press(screen.getByTestId('action-water'));
+    await flush(0);
+    await flush(3_000);
+    expect(recordFactShown).not.toHaveBeenCalled();
+    await flush(1_000);
+    expect(recordFactShown).toHaveBeenCalledTimes(1);
+  });
+
+  it('busy: a care in flight blocks the first card until it settles + 3.5 s', async () => {
+    await renderHud();
+    await flush(11_000);
+    let resolveWater: (v: unknown) => void = () => undefined;
+    waterPet.mockReturnValueOnce(new Promise((r) => (resolveWater = r)));
+    fireEvent.press(screen.getByTestId('action-water'));
+    await flush(10_000);
+    expect(recordFactShown).not.toHaveBeenCalled();
+    await act(async () => resolveWater({ status: 'accepted', state: collieState() }));
+    await flush(1_000);
+    expect(recordFactShown).not.toHaveBeenCalled();
+    await flush(3_000);
+    expect(recordFactShown).toHaveBeenCalledTimes(1);
+  });
+
+  it('reaching today\'s step goal counts as care (the walk) → the card opens', async () => {
+    const { client } = await renderHud(collieState({ steps: { steps_today: 3_900, goal: 4_000 } }));
+    await flush(11_000);
+    expect(recordFactShown).not.toHaveBeenCalled();
+    getChildPet.mockResolvedValue(collieState({ steps: { steps_today: 4_100, goal: 4_000 } }));
+    await act(async () => {
+      await client.invalidateQueries({ queryKey: ['child', 'pet'] });
+    });
+    await flush(0);
+    await flush(4_000);
+    expect(recordFactShown).toHaveBeenCalledTimes(1);
+    await flush(0);
+    expect(screen.getByTestId('fact-sheet')).toBeTruthy();
   });
 
   it.each<[string, Parameters<typeof collieState>[0]]>([
@@ -285,6 +355,106 @@ describe('HUD — calm moment', () => {
     await flush(5_000);
     expect(recordFactShown).not.toHaveBeenCalled();
     expect(screen.queryByTestId('hud-fact-chip')).toBeNull();
+  });
+});
+
+describe('HUD — chip (option A: the chip is today\'s card)', () => {
+  it('tapping the chip opens the card at once and records it as shown', async () => {
+    await renderHud();
+    fireEvent.press(screen.getByTestId('hud-fact-chip'));
+    await flush(0);
+    expect(screen.getByTestId('fact-sheet-title')).toHaveTextContent(FACT_1.title);
+    expect(recordFactShown).toHaveBeenCalledTimes(1);
+    fireEvent.press(screen.getByTestId('fact-sheet-great'));
+    await flush(0);
+    // Read today → no chip; no automatic card after a care either.
+    expect(screen.queryByTestId('hud-fact-chip')).toBeNull();
+    await flush(11_000);
+    await water();
+    await flush(5_000);
+    expect(recordFactShown).toHaveBeenCalledTimes(1);
+  });
+
+  it('a refusal on the chip tap is ignored for opening (the child asked)', async () => {
+    recordFactShown.mockRejectedValue(
+      new ApiError('refused', 422, { status: 'refused', reason: 'quiet_hours', state: makeFactOfTheDay({ may_auto_show: false, reason: 'quiet_hours' }) }),
+    );
+    await renderHud();
+    fireEvent.press(screen.getByTestId('hud-fact-chip'));
+    await flush(0);
+    await flush(0);
+    expect(recordFactShown).toHaveBeenCalledTimes(1);
+    expect(screen.getByTestId('fact-sheet-title')).toHaveTextContent(FACT_1.title);
+  });
+
+  it('over several days: chip only on card days, gone after reading, back on the next card day', async () => {
+    // Day 1 (card day): chip, tap, read.
+    await renderHud();
+    expect(screen.getByTestId('hud-fact-chip')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('hud-fact-chip'));
+    await flush(0);
+    fireEvent.press(screen.getByTestId('fact-sheet-great'));
+    await flush(0);
+    expect(screen.queryByTestId('hud-fact-chip')).toBeNull();
+
+    // Day 2 (too soon): after family midnight the server says no → no chip.
+    getFactOfTheDay.mockResolvedValue(makeFactOfTheDay({ fact: FACT_2 as never, may_auto_show: false, reason: 'too_soon', total_count: 2, read_count: 1 }));
+    await nextDay();
+    expect(screen.queryByTestId('hud-fact-chip')).toBeNull();
+
+    // Day 3 (card day again): the chip is back with the next fact.
+    getFactOfTheDay.mockResolvedValue(makeFactOfTheDay({ fact: FACT_2 as never, total_count: 2, read_count: 1 }));
+    await nextDay();
+    expect(screen.getByTestId('hud-fact-chip')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('hud-fact-chip'));
+    await flush(0);
+    expect(screen.getByTestId('fact-sheet-title')).toHaveTextContent(FACT_2.title);
+    expect(recordFactShown).toHaveBeenCalledTimes(2);
+  });
+});
+
+describe('HUD — read marks', () => {
+  it('offline: the read mark is undone (»Novo« comes back) and retried the next time the card shows', async () => {
+    markBreedFactRead.mockRejectedValue(new TypeError('Network request failed'));
+    await renderHud();
+    fireEvent.press(screen.getByTestId('hud-facts-open'));
+    await flush(0);
+    fireEvent.press(screen.getByTestId('breed-guide-fact-2'));
+    await flush(0);
+    // 2 offline retries (TanStack default delays), then undone.
+    await flush(10_000);
+    expect(markBreedFactRead).toHaveBeenCalledWith(2);
+    const calls = markBreedFactRead.mock.calls.length;
+    // One attempt + 2 offline retries, never a loop while the card stays open.
+    expect(calls).toBe(3);
+    fireEvent.press(screen.getByTestId('fact-sheet-great'));
+    await flush(0);
+    expect(screen.getByTestId('breed-guide-new-2')).toBeTruthy();
+    expect(screen.getByTestId('breed-guide-progress')).toHaveTextContent('Prebrano: 0 od 2');
+
+    markBreedFactRead.mockResolvedValue({ status: 'read', fact: { ...FACT_2, read: true, read_at: '2026-10-04T10:05:00Z' } });
+    fireEvent.press(screen.getByTestId('breed-guide-fact-2'));
+    await flush(0);
+    expect(markBreedFactRead.mock.calls.length).toBeGreaterThan(calls);
+  });
+
+  it('parent-only facts from the server never reach the child (second guard)', async () => {
+    getBreedFacts.mockResolvedValue(makeBreedFacts([FACT_1, makeBreedFact({ id: 9, audience: 'parent', category: 'health', title: 'Zdravje: samo za starše.' })]));
+    await renderHud();
+    fireEvent.press(screen.getByTestId('hud-facts-open'));
+    await flush(0);
+    expect(screen.queryByTestId('breed-guide-fact-9')).toBeNull();
+    expect(screen.getByTestId('breed-guide-progress')).toHaveTextContent('Prebrano: 0 od 1');
+  });
+
+  it('a language switch fetches the facts again (localized texts)', async () => {
+    await renderHud();
+    const before = getBreedFacts.mock.calls.length;
+    await act(async () => {
+      await i18n.changeLanguage('en');
+    });
+    await flush(0);
+    expect(getBreedFacts.mock.calls.length).toBeGreaterThan(before);
   });
 });
 

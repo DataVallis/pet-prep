@@ -15,7 +15,7 @@
  * open lives in `appStore` (UI state).
  */
 
-import type { BreedFact } from '@/api/client';
+import type { BreedFact, FactOfTheDayResponse } from '@/api/client';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { familyCalendar } from '@/modules/childPet/familyTime';
 import { foldForSearch, isKnownBreed } from '@/modules/species/species';
@@ -49,8 +49,11 @@ export function breedFactsBreed(breed: string | null | undefined): BreedType | n
 
 /** No automatic sheet within this long after the app opened / came back from the background. */
 export const APP_OPEN_QUIET_MS = 10_000;
-/** The sheet waits this long after a care success (the toast and the filling meter come first). */
-export const CARE_SETTLE_MS = 1_500;
+/**
+ * The sheet waits this long after the newest care success: the HUD's 3 s toast (`TOAST_MS`) and
+ * the filling meter come first. Every newer success restarts the wait.
+ */
+export const CARE_SETTLE_MS = 3_500;
 /** A care success older than this no longer makes the moment calm (the child moved on). */
 export const CARE_WINDOW_MS = 120_000;
 /** Metric threshold: every displayed meter at or above it (spec "vse metrike ≥ 50 %"). */
@@ -59,6 +62,7 @@ export const CALM_METRIC_MIN = 50;
 export type CalmBlocker =
   | 'server'
   | 'no_fact'
+  | 'busy'
   | 'no_care'
   | 'settling'
   | 'app_just_opened'
@@ -88,6 +92,8 @@ export interface CalmMomentInput {
   quietHours: boolean;
   /** The child already read a fact today, or this device already asked the server today. */
   handledToday: boolean;
+  /** A care request is still running (`isMutating(['child','pet']) > 0`) — never a card mid-care. */
+  careInFlight: boolean;
 }
 
 /** Every reason the sheet may not open by itself right now (empty = a calm moment). */
@@ -96,6 +102,7 @@ export function calmMomentBlockers(input: CalmMomentInput): CalmBlocker[] {
   if (input.fact === null || !input.fact.may_auto_show) blockers.push('server');
   if (input.fact !== null && input.fact.fact === null) blockers.push('no_fact');
   if (input.handledToday) blockers.push('handled_today');
+  if (input.careInFlight) blockers.push('busy');
   if (input.careDoneAtMs === null || input.nowMs - input.careDoneAtMs > CARE_WINDOW_MS) blockers.push('no_care');
   else if (input.nowMs - input.careDoneAtMs < CARE_SETTLE_MS) blockers.push('settling');
   if (input.nowMs - input.appOpenedAtMs < APP_OPEN_QUIET_MS) blockers.push('app_just_opened');
@@ -210,8 +217,11 @@ export function readOnDay(facts: readonly Pick<BreedFact, 'read_at'>[], day: str
 
 export interface ChipInput {
   fact: { fact: object | null; may_auto_show: boolean; shown_today: boolean } | null;
-  /** This device asked to open the sheet today and the server refused (spec: keep the chip). */
-  refusedToday: boolean;
+  /**
+   * This device recorded today's card but the moment had passed before it opened (a game, a lock):
+   * the card is used for the week (DECISIONS 2026-10-13), so the chip keeps it reachable today.
+   */
+  pendingToday: boolean;
   /** A fact was read today. */
   readToday: boolean;
   locked: boolean;
@@ -220,15 +230,39 @@ export interface ChipInput {
 }
 
 /**
- * »Nekaj novega o tvoji pasmi« above the care buttons: a fact is waiting and today the sheet
- * may open by itself (or this device was refused just now) but hasn't — gone once a fact is read
- * today, at family midnight (the state is refetched then) and under a lock / layer.
+ * »Nekaj novega o tvoji pasmi« above the care buttons (David 2026-10-13, option A): only on a day
+ * the server says is a card day and today's card hasn't been used (`may_auto_show && !shown_today`)
+ * — the chip IS today's card (tapping it records `shown`), so chip + automatic card stay ≤ 2 a week.
+ * Gone once a fact is read today, at family midnight (new state) and under a lock / layer.
  */
 export function showFactChip(input: ChipInput): boolean {
   if (input.fact === null || input.fact.fact === null) return false;
   if (input.readToday || input.locked || input.covered) return false;
-  if (input.refusedToday) return true;
+  if (input.pendingToday) return true;
   return input.fact.may_auto_show && !input.fact.shown_today;
+}
+
+type FactReason = FactOfTheDayResponse['reason'];
+
+/** Reasons that may change by themselves later the same day — re-ask the server then. */
+const TIMED_REASONS: readonly NonNullable<FactReason>[] = ['quiet_hours', 'locked', 'first_day', 'no_image'];
+
+export function isTimedReason(reason: FactReason): boolean {
+  return reason !== null && TIMED_REASONS.includes(reason);
+}
+
+/** Categories a child never sees (spec §2: Družina / Zdravje are parent-only). */
+const PARENT_ONLY: readonly FactCategory[] = ['family', 'health'];
+
+/** Client-side second guard: only `audience=child` facts outside the parent-only categories. */
+export function isChildFact(f: Pick<BreedFact, 'audience' | 'category'>): boolean {
+  return f.audience === 'child' && !PARENT_ONLY.includes(f.category);
+}
+
+export function childFactsOnly<T extends { facts: BreedFact[]; read_count: number; total_count: number }>(list: T): T {
+  if (!Array.isArray(list.facts) || list.facts.every(isChildFact)) return list;
+  const facts = list.facts.filter(isChildFact);
+  return { ...list, facts, read_count: facts.filter((f) => f.read).length, total_count: facts.length };
 }
 
 /** The book's raspberry dot: an unread approved fact exists. */

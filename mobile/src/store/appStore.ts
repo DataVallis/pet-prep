@@ -200,8 +200,9 @@ interface AppStore {
   abandonCatSession: (id: string) => void;
   /**
    * M5-R09c »Ali si vedel?«: the fact shown in the child's sheet (id; null = closed), the
-   * »Moja pasma« guide, and the family day this device last asked the server to open the sheet
-   * by itself / was refused (keeps the chip). Session UI state, cleared on sign-out.
+   * »Moja pasma« guide, the family day this device last asked the server to open the sheet by
+   * itself, and the day a recorded card could not open any more (the chip keeps it). Session UI
+   * state, cleared on sign-out.
    */
   factSheetId: number | null;
   openFactSheet: (id: number) => void;
@@ -210,8 +211,8 @@ interface AppStore {
   setBreedGuideVisible: (visible: boolean) => void;
   factAutoAskedDay: string | null;
   setFactAutoAskedDay: (day: string) => void;
-  factRefusedDay: string | null;
-  setFactRefusedDay: (day: string) => void;
+  factPendingDay: string | null;
+  setFactPendingDay: (day: string) => void;
 
   // Logout / reset
   reset: () => void;
@@ -344,8 +345,8 @@ export const useAppStore = create<AppStore>((set, get) => ({
     set((state) => (state.isBreedGuideVisible === isBreedGuideVisible ? {} : { isBreedGuideVisible })),
   factAutoAskedDay: null,
   setFactAutoAskedDay: (factAutoAskedDay) => set({ factAutoAskedDay }),
-  factRefusedDay: null,
-  setFactRefusedDay: (factRefusedDay) => set({ factRefusedDay }),
+  factPendingDay: null,
+  setFactPendingDay: (factPendingDay) => set({ factPendingDay }),
 
   // Logout / reset — leaves the app on the login screen (bootStatus 'ready').
   reset: () =>
@@ -372,6 +373,6 @@ export const useAppStore = create<AppStore>((set, get) => ({
       factSheetId: null,
       isBreedGuideVisible: false,
       factAutoAskedDay: null,
-      factRefusedDay: null,
+      factPendingDay: null,
     }),
 }));

@@ -2,7 +2,7 @@
   "child": {
     "book": "Did you know? Facts about your breed",
     "bookUnread": "Did you know? Facts about your breed, new facts waiting",
-    "bookHint": "Opens My breed",
+    "bookHint": "Opens the My breed screen",
     "chip": "Something new about your breed",
     "chipHint": "Opens a fact about your breed",
     "eyebrow": "DID YOU KNOW?",
@@ -12,8 +12,6 @@
     "progressA11y": "Read {{read}} of {{total}}",
     "great": "Great!",
     "more": "More about my breed",
-    "close": "Close",
-    "swipeHint": "Swipe down to close",
     "dialogLabel": "Did you know? {{title}}",
     "dialogRead": "{{title}}. {{why}} Source: {{source}}.",
     "dialogReadNoWhy": "{{title}}. Source: {{source}}.",

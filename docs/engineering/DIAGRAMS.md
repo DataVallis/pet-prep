@@ -1654,12 +1654,12 @@ flowchart TD
     API1 -->|"child token: child facts of own pet's breed,<br/>no source_url"| CH["child: Moja pasma (R09c)"]
     API1 -->|"parent token: both audiences, family breeds,<br/>source_url, not_vet_reviewed, read_by_children"| PA["parent: Vodnik po pasmi (R09d)"]
     DB -->|"next unread child fact"| FOD["GET /api/child/fact-of-the-day<br/>may_auto_show: ≤ 2 / program week,<br/>≥ 2 local days apart, not day 1, not locked,<br/>picture stored, not quiet hours"]
-    FOD --> APP{"app (R09c useFactMoment): calm moment?<br/>care accepted ≤ 2 min ago (≥ 1.5 s), metrics ≥ 50 %,<br/>no mess / lock / overlay / sheet, not asleep,<br/>≥ 10 s since the app opened, not asked today"}
+    FOD --> APP{"app (R09c useFactMoment): calm moment?<br/>no care in flight, newest care accepted 3.5 s – 2 min ago, metrics ≥ 50 %,<br/>no mess / lock / overlay / sheet, not asleep,<br/>≥ 10 s since the app opened, not asked today"}
     APP -->|"yes"| SHOWN["POST …/fact-of-the-day/shown<br/>(breed_fact_shows, idempotent per local day)"]
     SHOWN -->|"200 recorded / already_shown<br/>and still calm"| SHEET["FactSheet opens"]
-    SHOWN -->|"422 refused (not an error)"| CHIP
-    APP -->|"no"| CHIP["chip »Nekaj novega o tvoji pasmi«<br/>(may_auto_show && !shown_today, or refused today;<br/>gone after a read today / family midnight)"]
-    CHIP -->|"tap"| SHEET
+    SHOWN -->|"already_shown / 422 refused<br/>(not an error): write state, open nothing"| NONE["nothing opens"]
+    APP -->|"no"| CHIP["chip »Nekaj novega o tvoji pasmi«<br/>(only may_auto_show && !shown_today — option A;<br/>gone after a read today / family midnight)"]
+    CHIP -->|"tap = today's card:<br/>open + POST …/shown (refusal ignored)"| SHEET
     BOOK["book button (raspberry dot = unread)"] --> GUIDE["BreedGuideScreen »Moja pasma«<br/>search (diacritic-insensitive), categories"]
     GUIDE -->|"tap a fact"| SHEET
     SHEET --> READ["POST /api/breed-facts/{fact}/read<br/>(breed_fact_reads, idempotent)"]

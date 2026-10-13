@@ -30,6 +30,8 @@
 ### 3.1 Vstopa (osnutek »Otrok · vstopa na glavnem zaslonu«)
 1. **Gumb »knjiga«** (52 px, steklo) desno od naslova v zgornji vrstici. Drobna malinasta pika = neprebrana zanimivost (edini malinast poudarek na zaslonu, po CGP).
 2. **Čip »Nekaj novega o tvoji pasmi«** nad vrstico gumbov skrbi na dan, ko je okno na vrsti, pa se še ni odprlo samo (trenutek ni bil miren). Dotik odpre list. Čip izgine po branju ali ob polnoči (družinski čas); okno se prestavi na naslednji dan.
+   **David 13. 10. 2026 (možnost A):** dotik čipa **šteje kot okno tega dne** — aplikacija zabeleži `shown` (če strežnik zavrne, se zanimivost vseeno odpre, ker jo je otrok sam želel), zato čip in samodejno okno skupaj ostaneta **največ 2-krat na teden**. Čip je viden **samo**, ko strežnik pravi, da je danes dan okna in ga še ni bilo (`may_auto_show` in ne `shown_today`); sicer ne. Okno, ki ga strežnik zabeleži, a se zaradi spremembe trenutka (igra, zaklep) ne odpre, porabi eno tedensko okno — ta dan ostane dosegljivo prek čipa.
+   **Prebrano:** zanimivost šteje kot prebrana, ko se okno pokaže (David 13. 10. 2026).
 
 ### 3.2 Kdaj se okno odpre samo (»miren trenutek«)
 **2-krat na teden** (David): v vsakem tednu izziva dva dneva »na vrsti«, vsaj 2 dni narazen (npr. 2. in 5. dan tedna od rojstva ljubljenčka). Na tak dan veljajo vsi pogoji hkrati:
@@ -52,7 +54,7 @@ Zapre se s potegom navzdol ali »Super!«. Brez zvoka, brez konfetov (miren vmes
 
 ### 3.4 Moja pasma (osnutek »Otrok · Moja pasma«)
 - glava: slika ljubljenčka, eyebrow »Ovčarski pes · Velika Britanija«, ime pasme (h1);
-- **3 hitra dejstva** v ploščicah (»2+ h gibanja na dan«, »13 let običajno živi«, »53 cm visok samec«) — vsako z virom ob dotiku;
+- **3 hitra dejstva** v ploščicah (»2+ h gibanja na dan«, »13 let običajno živi«, »53 cm visok samec«) — vsako z virom ob dotiku. **David 13. 10. 2026: zdaj brez ploščic;** dodamo jih kasneje kot posebna polja z virom in citatom, skupaj z manjkajočimi viri (ROADMAP M5-R09);
 - **iskanje** (»Išči med zanimivostmi«) + čipi kategorij (Vse, Gibanje, Značaj, Telo, Izvor, Nega …);
 - napredek »Prebral si 8 od 40«;
 - seznam kartic; neprebrane z oznako **»Novo«**. Dotik odpre isto kartico kot §3.3.

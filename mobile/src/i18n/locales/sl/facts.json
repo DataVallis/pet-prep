@@ -2,7 +2,7 @@
   "child": {
     "book": "Ali si vedel? Zanimivosti o tvoji pasmi",
     "bookUnread": "Ali si vedel? Zanimivosti o tvoji pasmi, čakajo nove zanimivosti",
-    "bookHint": "Odpre Moja pasma",
+    "bookHint": "Odpre zaslon Moja pasma",
     "chip": "Nekaj novega o tvoji pasmi",
     "chipHint": "Odpre zanimivost o tvoji pasmi",
     "eyebrow": "ALI SI VEDEL?",
@@ -12,8 +12,6 @@
     "progressA11y": "Prebrano {{read}} od {{total}}",
     "great": "Super!",
     "more": "Več o moji pasmi",
-    "close": "Zapri",
-    "swipeHint": "Povleci navzdol, da zapreš",
     "dialogLabel": "Ali si vedel? {{title}}",
     "dialogRead": "{{title}}. {{why}} Vir: {{source}}.",
     "dialogReadNoWhy": "{{title}}. Vir: {{source}}.",

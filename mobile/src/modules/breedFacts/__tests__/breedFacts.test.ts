@@ -4,6 +4,9 @@
  */
 import {
   APP_OPEN_QUIET_MS,
+  childFactsOnly,
+  isChildFact,
+  isTimedReason,
   CARE_SETTLE_MS,
   CARE_WINDOW_MS,
   breedFactsBreed,
@@ -40,6 +43,7 @@ function calm(overrides: Partial<CalmMomentInput> = {}): CalmMomentInput {
     overlayOpen: false,
     quietHours: false,
     handledToday: false,
+    careInFlight: false,
     ...overrides,
   };
 }
@@ -80,6 +84,8 @@ describe('calm moment (§3.2)', () => {
     ['a game / layer / sheet is open', { overlayOpen: true }, 'overlay'],
     ['quiet hours', { quietHours: true }, 'quiet_hours'],
     ['already asked / read today', { handledToday: true }, 'handled_today'],
+    ['a care request is still running (no card mid-care)', { careInFlight: true }, 'busy'],
+    ['the 3 s care toast is still showing', { careDoneAtMs: NOW - 3_000 }, 'settling'],
   ])('%s → blocked', (_name, overrides, blocker) => {
     const input = calm(overrides);
     expect(calmMomentBlockers(input)).toContain(blocker);
@@ -165,13 +171,17 @@ describe('careKindOfMutation — "care just done"', () => {
 
 describe('chip vs sheet (§3.1)', () => {
   const fotd = { fact: makeFact(), may_auto_show: true, shown_today: false };
-  const base = { fact: fotd, refusedToday: false, readToday: false, locked: false, covered: false };
+  const base = { fact: fotd, pendingToday: false, readToday: false, locked: false, covered: false };
 
   it('a day the sheet may open but has not → chip', () => {
     expect(showFactChip(base)).toBe(true);
   });
-  it('server refused this device today (422) → chip stays even without may_auto_show', () => {
-    expect(showFactChip({ ...base, refusedToday: true, fact: { ...fotd, may_auto_show: false } })).toBe(true);
+  it('option A: only on a card day — not after a refusal / on another day', () => {
+    expect(showFactChip({ ...base, fact: { ...fotd, may_auto_show: false } })).toBe(false);
+  });
+  it('a card recorded on this device whose moment passed stays reachable as the chip today', () => {
+    expect(showFactChip({ ...base, pendingToday: true, fact: { ...fotd, may_auto_show: false, shown_today: true } })).toBe(true);
+    expect(showFactChip({ ...base, pendingToday: true, readToday: true })).toBe(false);
   });
   it('already shown today (another device) / not allowed → no chip', () => {
     expect(showFactChip({ ...base, fact: { ...fotd, shown_today: true } })).toBe(false);
@@ -236,5 +246,28 @@ describe('guide search + categories (§3.4)', () => {
   });
   it('presentCategories in display order, only those present', () => {
     expect(presentCategories(facts)).toEqual(['exercise', 'temperament', 'origin']);
+  });
+});
+
+describe('server reasons and the child guard', () => {
+  it('time-based reasons are re-asked; cap reasons are not', () => {
+    expect(isTimedReason('quiet_hours')).toBe(true);
+    expect(isTimedReason('locked')).toBe(true);
+    expect(isTimedReason('week_cap')).toBe(false);
+    expect(isTimedReason('too_soon')).toBe(false);
+    expect(isTimedReason(null)).toBe(false);
+  });
+
+  it('childFactsOnly keeps audience child outside Družina / Zdravje', () => {
+    expect(isChildFact(makeFact())).toBe(true);
+    expect(isChildFact(makeFact({ audience: 'parent' }))).toBe(false);
+    expect(isChildFact(makeFact({ category: 'health' }))).toBe(false);
+    expect(isChildFact(makeFact({ category: 'family' }))).toBe(false);
+    const list = { breed: 'border_collie', facts: [makeFact({ id: 1, read: true }), makeFact({ id: 2, audience: 'parent', read: true }), makeFact({ id: 3, category: 'health' })], read_count: 2, total_count: 3 };
+    const out = childFactsOnly(list);
+    expect(out.facts.map((f) => f.id)).toEqual([1]);
+    expect(out).toMatchObject({ read_count: 1, total_count: 1 });
+    const clean = { ...list, facts: [makeFact()] };
+    expect(childFactsOnly(clean)).toBe(clean);
   });
 });

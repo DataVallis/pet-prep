@@ -119,7 +119,8 @@ export default function FactSheet({
             accessibilityLabel={t('facts:child.dialogLabel', { title: fact.title })}
             testID={testID}
           >
-            <View style={styles.handle} accessibilityHint={t('facts:child.swipeHint')} testID={`${testID}-handle`} />
+            {/* Decorative drag handle (screen readers close with »Super!»). */}
+            <View style={styles.handle} accessible={false} importantForAccessibility="no" testID={`${testID}-handle`} />
             <PetAvatar url={imageUrl} size={84} testID={`${testID}-pet`} />
             <View accessible accessibilityLabel={factA11yText(fact)} style={styles.body} testID={`${testID}-content`}>
               <Text style={styles.eyebrow}>{t('facts:child.eyebrow')}</Text>
@@ -196,13 +197,13 @@ const styles = StyleSheet.create({
   meta: { color: palette.n400, fontSize: 13, fontWeight: '600', textAlign: 'center' },
   title: {
     color: palette.white,
-    fontSize: 26,
-    lineHeight: 32,
+    fontSize: 28,
+    lineHeight: 34,
     fontFamily: fonts.display,
-    letterSpacing: tightTracking(26),
+    letterSpacing: tightTracking(28),
     textAlign: 'center',
   },
-  why: { color: alpha(palette.white, 0.85), fontSize: 17, lineHeight: 24, textAlign: 'center' },
+  why: { color: alpha(palette.white, 0.85), fontSize: 18, lineHeight: 25, textAlign: 'center' },
   source: { color: palette.n400, fontSize: 13, textAlign: 'center' },
   progressRow: { alignSelf: 'stretch', flexDirection: 'row', alignItems: 'center', gap: 10 },
   track: { flex: 1, height: 4, borderRadius: 2, backgroundColor: alpha(palette.white, 0.12), overflow: 'hidden' },
