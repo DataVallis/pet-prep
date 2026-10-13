@@ -400,6 +400,7 @@ const SPECIES = [
       { id: 'miniature_schnauzer', synonyms: { en: ['Zwergschnauzer', 'Mini Schnauzer'], sl: ['mali šnavcer', 'pritlikavi snavcer', 'zwergschnauzer'] } },
       { id: 'shih_tzu', synonyms: { en: ['Shih-Tzu', 'Shihtzu'], sl: ['ši-cu', 'šicu', 'shih-tzu'] } },
       { id: 'great_dane', synonyms: { en: ['Deutsche Dogge'], sl: ['doga', 'deutsche dogge'] } },
+      { id: 'pomeranian', synonyms: { en: ['Pom', 'German Toy Spitz', 'Zwergspitz'], sl: ['pom', 'nemški špic', 'nemski spic', 'zwergspitz'] } },
     ],
   },
   {
@@ -929,6 +930,31 @@ const DOG_FACTS = {
       ['certain_cancers', 'health.cancer'],
     ],
   },
+  // M5-R10-30. Not exported: adult_weight.pdsa (the RKC standard's range is shown), adult_weight.salt_category
+  // (our assignment), lifespan.mcmillan_2024 (null — its 12.2 y alternative is tier C, Wikipedia S252),
+  // lifespan.senior_from (derived), health.other_pdsa (research only), suitability.rkc_breed_watch (Category 2
+  // without returned points — no chip, open for David). Weight = the RKC standard (S249, per sex; FCI gives no
+  // weight); height = FCI 97 (S246, 21 cm ± 3 cm, both sexes); lifespan = the RKC band (S247). Own health keys:
+  // the Yorkshire Terrier's `windpipe_collapse` names weakness and collapse (PDSA S250 here: breathing), and no
+  // shared eye / elbow / CM/SM sentence matches this breed's sources.
+  pomeranian: {
+    height: ['height.fci'],
+    weight: [['adult_weight.rkc', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.luxating_patella'],
+      ['windpipe_collapse_breathing', 'health.tracheal_collapse'],
+      ['eye_problems_pra_cataracts_entropion', 'health.eyes'],
+      ['elbow_dysplasia_arthritis', 'health.elbow_dysplasia'],
+      ['cm_sm_screening', 'health.syringomyelia'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1138,6 +1164,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.great_dane.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.great_dane.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.great_dane.exercise_minutes_senior',
+  },
+  pomeranian: {
+    adult_minutes: ['proposed_game_parameters.pomeranian.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.pomeranian.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.pomeranian.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.pomeranian.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.pomeranian.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.pomeranian.exercise_minutes_senior',
   },
 };
 
