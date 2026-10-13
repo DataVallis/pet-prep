@@ -293,6 +293,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "great_dane",
+            "species": "dog",
+            "file": "dog/great-dane.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:86aac914d16bd21801d4d23ee71a6f2ada4c6012d0e455c4a456d3c4be184cb8",
+            "generated_at": "2026-10-13T07:54:14+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
