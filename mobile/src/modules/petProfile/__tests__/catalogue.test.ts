@@ -142,6 +142,7 @@ describe('readBreedCatalogue', () => {
       'shih_tzu',
       'great_dane',
       'pomeranian',
+      'boston_terrier',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -357,6 +358,13 @@ describe('readBreedCatalogue', () => {
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-30, runbook rules; new tag older_children).
     expect(pomeranian?.search_keywords).toEqual(['pomeranian', 'pomeranec', 'pom', 'nemški špic', 'nemski spic', 'german toy spitz', 'toy spitz']);
     expect(pomeranian?.suitability).toEqual({ suits: ['apartment', 'family_pet', 'other_pets'], consider: ['older_children', 'frequent_grooming', 'sheds'] });
+    const boston = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'boston_terrier');
+    expect(boston).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 270 }),
+    );
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-31, runbook rules; flat-faced chip first as the French Bulldog / Bulldog; no new tag).
+    expect(boston?.search_keywords).toEqual(['boston terrier', 'bostonski terier', 'boston', 'american gentleman']);
+    expect(boston?.suitability).toEqual({ suits: ['apartment', 'family_pet', 'children'], consider: ['brachycephalic_breathing', 'needs_company'] });
     const corgi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pembroke_welsh_corgi');
     expect(corgi).toEqual(
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 200 }),
@@ -397,6 +405,7 @@ describe('readBreedCatalogue', () => {
       'shih_tzu',
       'great_dane',
       'pomeranian',
+      'boston_terrier',
     ]);
   });
 });
@@ -556,6 +565,14 @@ describe('breed search', () => {
     expect(find('šicu')).toEqual(['shih_tzu']);
     expect(find('sicu')).toEqual(['shih_tzu']);
     expect(find('ši-cu')).toEqual(['shih_tzu']);
+  });
+
+  it('M5-R10-31: finds the Boston Terrier by its EN / SL names and the nickname', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('boston terrier')).toEqual(['boston_terrier']);
+    expect(find('Bostonski terier')).toEqual(['boston_terrier']);
+    expect(find('boston')).toEqual(['boston_terrier']);
+    expect(find('American Gentleman')).toEqual(['boston_terrier']);
   });
 
   it('M5-R10-30: finds the Pomeranian by its EN / SL names, the nickname and the toy-spitz name (with and without š)', () => {

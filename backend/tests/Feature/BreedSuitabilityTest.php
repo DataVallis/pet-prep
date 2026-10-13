@@ -397,9 +397,10 @@ it('gives the Bulldog the flat-face and skin welfare chips, shorter_lifespan, sh
         ->and($bulldog['consider'])->toBe(['brachycephalic_breathing', 'sensitive_skin', 'shorter_lifespan', 'sheds'])
         // Weekly brushing only (RKC "Once a week"); up to 1 hour of exercise.
         ->and($bulldog['consider'])->not->toContain('frequent_grooming')->not->toContain('long_daily_exercise');
-    // The flat-faced breeds are the only ones with the breathing chip (the moderately short-faced Boxer has its own, M5-R10-26).
+    // The flat-faced breeds are the only ones with the breathing chip (the moderately short-faced Boxer has its own, M5-R10-26;
+    // the Boston Terrier is flat-faced with a heat warning, M5-R10-31).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::FrenchBulldog, BreedType::Bulldog], true)) {
+        if (! in_array($breed, [BreedType::FrenchBulldog, BreedType::Bulldog, BreedType::BostonTerrier], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('brachycephalic_breathing');
         }
     }
@@ -525,9 +526,9 @@ it('gives the Boxer the new needs_company and short_muzzle_breathing tags and th
         ->and($boxer['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('sensitive_skin')->not->toContain('shorter_lifespan')
         ->not->toContain('hips_hind_legs')->not->toContain('heart_and_spine')->not->toContain('frequent_grooming');
 
-    // Only the Boxer carries needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
+    // Only the Boxer and the Boston Terrier (AKC S260, M5-R10-31) carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
     foreach (BreedType::cases() as $breed) {
-        if ($breed !== BreedType::Boxer) {
+        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('needs_company');
         }
         if (! in_array($breed, [BreedType::Boxer, BreedType::ShihTzu], true)) {
@@ -671,4 +672,23 @@ it('gives the Pomeranian the new older_children tag (AKC), apartment, family_pet
         ->and(bsEntry('pomeranian.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Flat/ Apartment')
         ->and(bsEntry('pomeranian.suitability.rkc_shedding')['quote'])->toBe('Sheds: Yes')
         ->and(bsEntry('pomeranian.suitability.rkc_breed_watch')['value'])->toBe('Category 2');
+});
+
+it('gives the Boston Terrier apartment, family_pet, children and the flat-face and company chips — never small_children, no new tag (runbook 2026-10-13)', function () {
+    $boston = app(BreedSuitability::class)->for(BreedType::BostonTerrier);
+    expect($boston['suits'])->toBe(['apartment', 'family_pet', 'children'])
+        // Caveats (PDSA: the right socialisation as a puppy; AKC: gentle children) → never small_children.
+        ->and($boston['suits'])->not->toContain('small_children')->not->toContain('other_pets')->not->toContain('often_alone')
+        ->and($boston['consider'])->toBe(['brachycephalic_breathing', 'needs_company'])
+        // Flat-faced with a heat warning → not the moderate short-muzzle chip; conflicting shedding sources → neither tag;
+        // weekly brushing only → not frequent_grooming.
+        ->and($boston['consider'])->not->toContain('short_muzzle_breathing')->not->toContain('sheds')->not->toContain('frequent_grooming')
+        ->and($boston['suits'])->not->toContain('low_shedding');
+
+    expect(bsEntry('boston_terrier.health.brachycephaly_boas')['quote'])->toBe('Boston Terriers are a brachycephalic (flat-faced) breed.')
+        ->and(bsEntry('boston_terrier.exercise.heat_and_walk_timing')['quote'])->toContain('prone to overheating')
+        ->and(bsEntry('boston_terrier.suitability.pdsa_children')['notes'])->toContain('the right socialisation as a puppy')
+        ->and(bsEntry('boston_terrier.suitability.akc_time_alone')['quote'])->toBe('This breed doesn’t fare well when left alone for extended periods of time.')
+        ->and(bsEntry('boston_terrier.suitability.rkc_shedding')['notes'])->toContain('shed minimally')
+        ->and(bsEntry('boston_terrier.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Flat/ Apartment');
 });

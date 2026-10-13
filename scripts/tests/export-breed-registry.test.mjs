@@ -100,6 +100,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.shih_tzu.slug, { en: 'shih-tzu', sl: 'shih-tzu' });
   assert.deepEqual(byId.great_dane.slug, { en: 'great-dane', sl: 'nemska-doga' });
   assert.deepEqual(byId.pomeranian.slug, { en: 'pomeranian', sl: 'pomeranec' });
+  assert.deepEqual(byId.boston_terrier.slug, { en: 'boston-terrier', sl: 'bostonski-terier' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -222,6 +223,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     shih_tzu: { adult: 6000, senior: 4500, seniorFrom: 114, learning: 0.5 },
     great_dane: { adult: 12000, senior: 9000, seniorFrom: 54, learning: 1 },
     pomeranian: { adult: 3000, senior: 2300, seniorFrom: 108, learning: 1.5 },
+    boston_terrier: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 1 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -448,7 +450,7 @@ test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming row
   assert.deepEqual([...cats, ...dogs].sort(), seeded);
   assert.deepEqual(cats, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
   // M5-R13: every dog breed of the app except the mutt and the Border Collie (no grooming statement).
-  assert.equal(dogs.length, 25);
+  assert.equal(dogs.length, 26);
   assert.ok(!dogs.includes('mutt') && !dogs.includes('border_collie'));
 });
 
@@ -1163,6 +1165,33 @@ test('Pomeranian (M5-R10-30): up to 30 minutes (RKC), RKC weight per sex, FCI he
   assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['cm_sm_mri', 'best_practice'], ['eye_scheme', 'best_practice']]);
   const json = JSON.stringify(d);
   assert.doesNotMatch(json, /12\.2/);
+  // Never "hypoallergenic", never merle, never a percentage.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|merle|\d %\)/i);
+});
+
+test('Boston Terrier (M5-R10-31): up to 1 hour (RKC), PDSA weight and height, FCI group 9 section 11 USA, RKC lifespan band, Coren 54, flat-faced welfare chip, no shedding fact, brushing 1× a week', () => {
+  const d = registry.breeds.find((b) => b.id === 'boston_terrier');
+  assert.deepEqual(d.name, { en: 'Boston Terrier', sl: 'Bostonski terier' });
+  assert.equal(d.facets.size, 'small');
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S255']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 140, group: 9, section: 11, origin: 'US' });
+  // FCI / RKC give weight classes only (the lightest has no lower bound) → the PDSA average range.
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [7, 11], female: [7, 11] }, ['S259']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[[38, 43], ['S259']]]);
+  // No McMillan 2024 / VetCompass value reachable — only the RKC band (the 11.8 y via Wikipedia stays in research).
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['more_than', 10, ['S255']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 54);
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 90 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['apartment', 'family_pet', 'children']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['brachycephalic_breathing', 'needs_company']);
+  // RKC "Sheds: Yes" and AKC "shed minimally" disagree → no shedding fact and no chip.
+  assert.equal(d.facts.filter((f) => f.field === 'shedding').length, 0);
+  assert.deepEqual(d.health.map((h) => h.key), ['flat_face_breathing', 'heat_stroke_risk', 'prominent_eyes_injury_dry_eye']);
+  // The RKC lists no pre-breeding test for the breed → not_found (German Shorthaired Pointer precedent).
+  assert.equal(d.breeder_checklist.status, 'not_found');
+  const json = JSON.stringify(d);
+  assert.doesNotMatch(json, /11\.8/);
   // Never "hypoallergenic", never merle, never a percentage.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|merle|\d %\)/i);
 });

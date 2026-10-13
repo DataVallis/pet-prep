@@ -14129,6 +14129,607 @@
       }
     }
   },
+  "boston_terrier": {
+    "_note": "Added 2026-10-13 (M5-R10-31, unattended run — appended after the Pomeranian: AKC 2024 No. 23, S174 table row '| **23** | Boston Terrier |'). Quotes as returned by the web-fetch tool on 2026-10-13 (the tool limits quotes to ~125 characters — long sentences are quoted in pieces; curly apostrophes as returned); spot-check before import (sources.md S253–S263, reused S10, S11, S14, S24, S35, S45, S54, S92, S93, S135, S174). Lifespan: McMillan et al. 2024 names no Boston Terrier median in the published text or the corrected Fig. 3 legend (S54 checked 2026-10-13; S135 and the Dogs Trust breed table S123 refused by the fetch tool — provenance; the Dogs Trust 'shortest and longest' PDF a fetch error); no VetCompass Boston Terrier longevity paper found → runbook rule: the RKC lower bound 'Over 10 years' (S255). Wikipedia (S262, tier C) cites McMillan 2024 = 11.8 years — alternative only, never alone. Weight: the FCI (S254) and RKC (S257) standards give weight classes up to 25 lb / 11.35–11.5 kg (lightest class 'under 15 pounds' without a lower bound) → game range 7–11 kg = PDSA (S259), inside the standards' maximum. No standard gives a height → PDSA 38–43 cm (S259). RKC Breed Watch Category 2 (S255, S256) — points of concern not returned (no Breed Watch page found). This is a flat-faced (brachycephalic) welfare breed (PDSA S259, RKC breed page S255, RKC / University of Cambridge BOAS research S261): the French Bulldog rules apply (welfare chip, no marketing — BVA S92). Woodgreen and AKC trait ratings not attempted (the AKC breed page returned navigation only).",
+    "identity": {
+      "value": "FCI No. 140, Group 9 Section 11 (Small Molossian type), USA",
+      "unit": "—",
+      "source_id": "S254",
+      "quote": "FCI-CLASSIFICATION: Group 9 Companion and Toy Dogs.",
+      "confidence": "high",
+      "notes": "FCI standard N° 140 (S254, EN PDF): 'Section 11 Small Molossian Dogs.'; 'Without working trial.'; 'ORIGIN: U.S.A.'; 'UTILIZATION: Companion.'; 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 28.01.2013'. FCI nomenclature (S253): 'BOSTON TERRIER', standard 140, 'n°9 - Companion and Toy Dogs', section 'Small Molossian type Dogs', country of origin 'UNITED STATES OF AMERICA', definitive acceptance '1/29/1955', valid standard '1/28/2013', 'Not subject to a working trial according to the FCI breeds nomenclature'. RKC group: Utility (S255 'The Utility breed group'). English name: Boston Terrier (RKC, AKC); nickname 'the American Gentleman' (Wikipedia S262, tier C)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S255",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "PDSA (S259) key facts: 'Small' — sources agree. Weight up to 11.5 kg (S257)."
+    },
+    "height": {
+      "pdsa_average": {
+        "value": [
+          38,
+          43
+        ],
+        "unit": "cm",
+        "source_id": "S259",
+        "quote": "38-43 cm",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box 'Average height' (label as returned by the tool; value verbatim). The FCI (S254) and RKC (S257) standards give no height. Wikipedia (S262, tier C) infobox '9–15 in (23–38 cm)' — lower; not used. Spot-check the PDSA value."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            6.8,
+            11.35
+          ],
+          "female": [
+            6.8,
+            11.35
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S254",
+        "quote": "20 pounds and not to exceed 25 pounds (9 to 11,35 kg).",
+        "confidence": "high",
+        "notes": "FCI (S254) weight classes, not per sex: 'Weight is divided by classes as follows:' / 'under 15 pounds (6,8 kg),' / '15 pounds and under 20 pounds (6,8 to 9 kg),' / '20 pounds and not to exceed 25 pounds (9 to 11,35 kg).' The lightest class has no lower bound → stored as 6.8–11.35 kg (middle + heavy classes); maximum 11.35 kg."
+      },
+      "rkc": {
+        "value": {
+          "male": [
+            6.8,
+            11.5
+          ],
+          "female": [
+            6.8,
+            11.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S257",
+        "quote": "Weight not exceeding 11.5 kgs (25 lbs)",
+        "confidence": "high",
+        "notes": "RKC breed standard (S257, 'Last updated November 2025'): lightweight under 6.8 kg, middleweight 6.8 to under 9.1 kg, heavyweight 9.1 to under 11.4 kg (paraphrase as returned); the KC standard as hosted by KUSA (S258): 'Lightweight: under 6.8kg.' / 'Middleweight: 6.8kg and under 9.1kg.' / 'Heavyweight: 9.1kg and under 11.4kg.' Stored as 6.8–11.5 kg (lightest class without a lower bound). AKC (S260): 'Boston Terriers are short-tailed little dogs that weigh no more than 25 pounds.'"
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            7,
+            11
+          ],
+          "female": [
+            7,
+            11
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S259",
+        "quote": "7-11 kg",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box 'Average weight' (label as returned), one range for both sexes (stored per sex). Inside the FCI / RKC maximum. The game range (adult_weight_kg 7–11)."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 7–11 kg (S259) ≈ 15.4–24.3 lb → the 'Small (12–24 pounds)' class (the top touches 'Medium'). The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Boston Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S255",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page (S255; older address S256 the same). PDSA (S259) key facts 'Average lifespan': 'Over 10 years' — sources agree. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable)."
+      },
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S259",
+        "quote": "Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key-facts box 'Average lifespan' (label as returned)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024: the corrected Fig. 3 legend (S54, read 2026-10-13) names eight breeds, not the Boston Terrier; the published text (S135) and the Dogs Trust breed table (S123) were refused by the fetch tool (provenance), the 'shortest and longest' PDF returned a fetch error, the LJMU news, Dogs Trust research page and Science News article name no Boston Terrier value. Wikipedia (S262, tier C) quotes McMillan 2024 as 11.8 years — UNSOURCED as an A/B value; verify in the McMillan 2024 supplementary table / S123 before replacing the RKC lower bound.",
+        "alternatives": [
+          {
+            "value": 11.8,
+            "source_id": "S262",
+            "notes": "Wikipedia (tier C) citing McMillan et al. 2024: 'A 2024 UK study found a life expectancy of 11.8 years for the breed'; never shown alone. With it the senior boundary would be round(0.75 × 11.8 × 12) = round(106.2) = 106 months."
+          }
+        ]
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 10 y (RKC lower bound 'Over 10 years', S255) → 0.75 × 10 = 7.5 y = 90 months. With McMillan 11.8 y (via S262, tier C): 106 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S255"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S255",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "PDSA (S259): 'They’ll need up to an hour’s exercise per day,' (key facts minimum exercise '1 hour') — sources agree on 60. AKC (S260): 'A couple brisk walks or dedicated time to run and play every day will help keep a Boston happy.' (no number)."
+      },
+      "heat_and_walk_timing": {
+        "value": "never exercise in the heat of the day — prone to overheating",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": "but it’s important to remember that they should never be exercised in the heat of the day as they are prone to overheating.",
+        "confidence": "high",
+        "notes": "PDSA (S259). A sourced need: the game has no heat / walk-time mechanic and no weather data (CLAUDE.md scope guard: no weather API) → ROADMAP M5-R14 (runbook §3, David 2026-10-11; as the Bulldog)."
+      },
+      "energy": {
+        "value": "lively; conveys determination, strength and activity",
+        "unit": "—",
+        "source_id": "S254",
+        "quote": "The dog conveys an impression of determination, strength and activity, with style of a high order;",
+        "confidence": "medium",
+        "notes": "FCI (S254). RKC standard (S257) temperament 'Lively, intelligent, determined and strong willed.' No energy rating returned."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "friendly and lively; excellent disposition, highly intelligent companion",
+        "unit": "—",
+        "source_id": "S254",
+        "quote": "The Boston Terrier is a friendly and lively dog.",
+        "confidence": "high",
+        "notes": "FCI (S254): 'The breed has an excellent disposition and a high degree of intelligence,' / 'which makes the Boston Terrier an incomparable companion.' RKC standard (S257): 'Lively, intelligent, determined and strong willed.' FCI disqualifying fault: 'Aggressive or overly shy dogs.' AKC (S260): 'Boston Terriers are a well-mannered, friendly breed, making them a good choice for families.'"
+      },
+      "family": {
+        "value": "perfect family pets; especially good with children given the right socialisation as a puppy",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": "They enjoy playing games and will join in with plenty of enthusiasm, making them perfect family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S259). Children (PDSA): 'Boston Terriers are affectionate, fun-loving dogs that get on well with everyone given the right socialisation as a puppy,' / 'and are especially good with children.' — condition kept: the right socialisation as a puppy. AKC (S260): 'They do well with children who know how to be gentle with animals.' (caveat: children who know how to be gentle) and 'Boston Terriers are a well-mannered, friendly breed, making them a good choice for families.' → family_pet and children (with the caveat); no rating for small children → never small_children."
+      },
+      "socialisation": {
+        "value": "early socialisation and puppy training courses are strongly recommended",
+        "unit": "—",
+        "source_id": "S260",
+        "quote": "Like all breeds, early socialization and puppy training courses are strongly recommended for Boston Terriers.",
+        "confidence": "medium",
+        "notes": "AKC (S260). PDSA (S259) as a condition: 'Boston Terriers are affectionate, fun-loving dogs that get on well with everyone given the right socialisation as a puppy,' → proposed_game_parameters.boston_terrier.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "time_alone": {
+        "value": "does not fare well when left alone for extended periods",
+        "unit": "—",
+        "source_id": "S260",
+        "quote": "This breed doesn’t fare well when left alone for extended periods of time.",
+        "confidence": "medium",
+        "notes": "AKC (S260) — breed-specific ('This breed …'), not the general four-hour advice → consider tag needs_company (Boxer precedent); never often_alone. PDSA (S259) has no time-alone statement."
+      },
+      "other_pets": {
+        "value": "can get along well with other dogs",
+        "unit": "—",
+        "source_id": "S260",
+        "quote": "They form strong connections with family members and can get along well with other dogs.",
+        "confidence": "medium",
+        "notes": "AKC (S260): also 'They’re highly sociable and tend to be open with children, unfamiliar faces, and other dogs.' (as returned). Other dogs only — no statement about cats or small household pets → no other_pets tag. No prey-drive statement → no chases_small_pets."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (PDSA S259, AKC S260 checked) → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific appetite statement found → no food_motivated_weight tag. AKC (S260): 'Treats are a good incentive in motivating a Boston Terrier during training.' — a training tip, not a weight statement."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; percentages stay here and are never shown in the app, the register export or audience docs. Flat-faced (brachycephalic) welfare breed: PDSA (S259) 'Boston Terriers are a brachycephalic (flat-faced) breed.'; RKC / University of Cambridge BOAS research (S261) 'Boston Terriers are brachycephalic, which is why they were included in our research alongside other breeds.' → brachycephalic_breathing chip (flat face + heat, PDSA S259; as the French Bulldog and the Bulldog); BVA advises against brachycephalic imagery in advertising (S92) → in the app yes, in marketing no. RKC Breed Watch Category 2 (S255) — points of concern not returned.",
+      "brachycephaly_boas": {
+        "value": "flat-faced (brachycephalic) breed; brachycephalic obstructive airway syndrome (BOAS) — narrowed nostrils, elongated soft palate, noisy or difficult breathing",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": "Boston Terriers are a brachycephalic (flat-faced) breed.",
+        "confidence": "high",
+        "notes": "PDSA (S259): 'Boston Terriers are likely to suffer from serious health and welfare issues due to their physical conformation,' / 'including severe breathing difficulties and eye problems.'; health list: brachycephalic obstructive airway syndrome (upper-airway abnormalities incl. narrowed nostrils and an elongated soft palate — paraphrase). RKC breed page (S255): 'Dogs with a flat, wide-shaped head, are said to be brachycephalic' / 'The soft tissue in the nose and throat of some brachycephalic dogs may be excessive for the airways,' / 'making it difficult for them to breathe normally (causing heavy panting or noisy breathing).' RKC / University of Cambridge BOAS Research Group (S261): 'Boston Terriers are brachycephalic, which is why they were included in our research alongside other breeds.'; 'the findings confirm that Boston Terriers are affected by BOAS'; 'they are less severely impacted than some of the more popular flat-faced breeds'; key risk factors 'stenotic nostrils, facial foreshortening' (as returned; the share of unaffected dogs is research only). The RKC plans to expand the Respiratory Function Grading scheme to the breed (S261, paraphrase) — not yet a listed scheme. Standards: FCI fault 'Pinched nostrils.' (S254); RKC 'Nostrils open.' (S257). UK Brachycephalic Working Group (S93): 'Stop and think before buying a flat-faced dog.'"
+      },
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 2 — points of concern not returned",
+        "unit": "—",
+        "source_id": "S255",
+        "quote": "Category 2",
+        "confidence": "medium",
+        "notes": "RKC breed page (S255) key fact 'Breed Watch category' (label as returned); older address (S256): 'This breed can be affected by conformational concerns'. No Breed Watch page / tally sheet for the breed found (2026-10-13) → no Breed-Watch-based chip (eyelid_problems, sensitive_skin); the welfare chip comes from the flat face."
+      },
+      "eyes": {
+        "value": "prominent eyes at risk of trauma, ulcers and dryness; dry eye (KCS), cherry eye",
+        "unit": "—",
+        "source_id": "S255",
+        "quote": "Some brachycephalic dogs may have shallow eye sockets, causing their eyes to become more prominent",
+        "confidence": "medium",
+        "notes": "RKC breed page (S255): 'at a higher risk of trauma, ulcers and increasing the chance of them becoming dry and painful'. PDSA (S259) health list: dry eye (KCS), cherry eye (paraphrase); 'including severe breathing difficulties and eye problems.' RKC standard (S257): overly prominent eyes 'highly undesirable' (as returned). FCI fault 'Eyes showing too much white or haw.' No eye-care frequency found → no routine."
+      },
+      "spine_hemivertebrae": {
+        "value": "hemivertebrae — malformed spinal bones pressing on the spinal cord",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S259) health list (paraphrase as returned: spinal bone deformities press on the spinal cord, causing weakness, loss of hind-limb function and incontinence). No verbatim quote → no chip (back_spine needs a quoted source)."
+      },
+      "luxating_patella": {
+        "value": "luxating patellas (kneecaps slip out of place)",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S259) health list (paraphrase)."
+      },
+      "skin_atopy": {
+        "value": "atopy (allergic itchy skin)",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S259) health list (paraphrase). RKC breed page (S255): 'Some brachycephalic dogs may have an excess of skin, which creates folds, especially around the front of the face.' — general brachycephalic text; the breed standards ask for a skull and muzzle 'free from wrinkles' (FCI S254) → no face-fold routine, no sensitive_skin chip (no Breed Watch point returned)."
+      },
+      "teeth": {
+        "value": "shortened jaw with the same number of teeth — crowding",
+        "unit": "—",
+        "source_id": "S255",
+        "quote": "Dogs with a shortened skull will often have a shortened jaw, but the number and size of teeth will stay the same.",
+        "confidence": "medium",
+        "notes": "RKC breed page (S255), general brachycephalic text (dental / gum problems — paraphrase). No tooth-brushing frequency for the breed → no routine (ROADMAP M5-R15 covers tooth brushing in general)."
+      },
+      "birth": {
+        "value": "difficult births; caesarean sections often needed",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S259) health list (paraphrase). Background for parents only — the game has no breeding."
+      },
+      "cushings": {
+        "value": "Cushing's syndrome",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA (S259) health list (paraphrase)."
+      },
+      "heat": {
+        "value": "prone to overheating — never exercise in the heat of the day",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": "but it’s important to remember that they should never be exercised in the heat of the day as they are prone to overheating.",
+        "confidence": "high",
+        "notes": "PDSA (S259). Wikipedia (S262, tier C): hyperthermia through 'an inability to effectively reduce body temperature via panting.' → exercise.heat_and_walk_timing (ROADMAP M5-R14)."
+      },
+      "welfare_advice_to_buyers": {
+        "value": "PDSA strongly recommends considering a healthier breed, crossbreed or mongrel; UK vets: stop and think before buying a flat-faced dog",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": "rather than health and function, we strongly recommends owners consider a healthier breed, crossbreed or mongrel.",
+        "confidence": "high",
+        "notes": "PDSA (S259): 'Due to the degree of potential suffering caused by breeding for exaggerated physical features' (first half of the sentence, as returned; 'recommends' as on the page). UK BWG (S93): 'Stop and think before buying a flat-faced dog.' BVA (S92): 'avoiding imagery of brachycephalic dogs in advertising, marketing materials and social media campaigns' → not used in PetPrep marketing (proposed_game_parameters.boston_terrier.marketing). PDSA (S259): check that the parents were screened under the Canine Health Schemes (paraphrase)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 54,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 54 | Boston Terrier |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-10-13): rank 54, shared with the Akita, under 'Average Working/Obedience Intelligence' (ranks 40–54). Coren's own top / bottom-10 article (S34) does not list the breed (runbook: rank from S35). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 25 to 40 repetitions.; Obey first command: 50% of the time or better.;",
+        "confidence": "medium",
+        "notes": "Tier 'Average Working/Obedience Intelligence' = ranks 40–54 (S35, as returned). Tier definitions from Wikipedia; verify in book."
+      },
+      "training_notes": {
+        "value": "responds well to training; eager to please; sensitive — no harsh methods",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": "They respond well to training and enjoy the extra mental stimulation.",
+        "confidence": "medium",
+        "notes": "PDSA (S259): reward-based techniques. AKC (S260): 'Bostons are eager to please their owners, making them generally easier to train.' / 'Being a more sensitive breed, Bostons don’t respond well to harsh training methods.' Not a first-time-owner statement → no first_time_owner tag."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.boston_terrier.learning_multiplier (1.0, runbook rule: Average tier, rank 54).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "lively, smooth-coated, short-headed, compactly built, short-tailed, well balanced; brindle, seal or black, evenly marked with white",
+        "unit": "—",
+        "source_id": "S254",
+        "quote": "The Boston Terrier is a lively, highly intelligent, smooth coated, short-headed, compactly built,",
+        "confidence": "high",
+        "notes": "FCI (S254): 'shorttailed, well balanced dog, brindle, seal or black in colour and evenly marked with white.' RKC (S257): 'A small, smooth-coated, square-headed, compactly built, short-tailed and wellbalanced dog.'"
+      },
+      "colours": {
+        "value": [
+          "brindle with white markings",
+          "seal with white markings",
+          "black with white markings"
+        ],
+        "unit": "list",
+        "source_id": "S254",
+        "quote": "Colour: Brindle, seal or black with white markings. Brindle is preferred only if all other qualities are equal.",
+        "confidence": "high",
+        "notes": "FCI (S254): '(Note : Seal defined : Seal appears black except it has a red cast when viewed in the sun or bright light).'; 'Required markings: White muzzle band, white blaze between the eyes, white forechest.'; disqualifying 'Solid black, solid brindle, or solid seal without required white markings.' and 'Grey or liver colours.' RKC (S257): 'Brindle: being a mixture of any shade of brown and black with white markings;' / 'Any other colour or combination of colours unacceptable'; brindle with white preferred (paraphrase; KUSA copy S258: 'Black with white markings but brindles with white markings preferred.'). Never solid colours without white, grey (blue), liver, fawn / red, merle; FCI disqualifies blue eyes and a Dudley nose."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). No colour frequencies. Draw over the three standard colours, always with the required white markings; brindle and white weighted highest so the register portrait is brindle and white — the colour both the FCI (S254) and the RKC (S257 / S258) name as preferred. Proposal: brindle and white 0.45, black and white 0.30, seal and white 0.25."
+      },
+      "coat": {
+        "value": "short, smooth, bright and fine",
+        "unit": "—",
+        "source_id": "S254",
+        "quote": "Hair: Short, smooth, bright and fine in texture.",
+        "confidence": "high",
+        "notes": "RKC standard (S257): 'Short, smooth, lustrous and fine in texture.' RKC breed page (S255): 'Coat length: Short'."
+      },
+      "ears": {
+        "value": "small, erect, set near the corners of the skull — natural (never cropped)",
+        "unit": "—",
+        "source_id": "S254",
+        "quote": "Small, carried erect, either natural or cropped to conform to the shape of the head",
+        "confidence": "high",
+        "notes": "FCI (S254): 'and situated as near to the corners of the skull as possible.' RKC (S257): 'Small, thin, triangular in shape with height slightly greater than width, tapering to tip.' The AI portrait shows natural ears only (ear cropping is not shown)."
+      },
+      "eyes": {
+        "value": "wide apart, large, round, dark; not overly prominent",
+        "unit": "—",
+        "source_id": "S254",
+        "quote": "Wide apart, large, round and dark in colour.",
+        "confidence": "high",
+        "notes": "RKC (S257): 'Set wide apart, relatively large, round, dark in colour.'; overly prominent eyes 'highly undesirable' (as returned). FCI fault: 'Eyes showing too much white or haw.'; disqualifying 'Eyes blue in colour or any trace of blue.'"
+      },
+      "nose": {
+        "value": "black, wide nose with open nostrils; muzzle short, square, wide and deep, free from wrinkles, about one-third of the skull length",
+        "unit": "—",
+        "source_id": "S254",
+        "quote": "Black and wide, with a well defined line between the nostrils.",
+        "confidence": "high",
+        "notes": "FCI (S254) muzzle: 'Short, square, wide and deep and in proportion to the skull.' / 'It is free from wrinkles, shorter in length than in width or depth;' / 'not exceeding in length approximately one-third of the length of the skull.'; fault 'Pinched nostrils.'. RKC (S257): 'Muzzle relatively short, square, wide, and deep;' / 'Nostrils open.' BOAS risk factors stenotic nostrils and facial foreshortening (S261) → the AI appearance keeps a moderate, not extremely short muzzle with open nostrils and no wrinkles (welfare rule, as for the French Bulldog)."
+      },
+      "tail": {
+        "value": "set low, short, fine and tapering, straight or screw, never above the horizontal; natural (never docked)",
+        "unit": "—",
+        "source_id": "S254",
+        "quote": "Set-on low, short, fine and tapering, straight or screw and must not be carried above the horizontal.",
+        "confidence": "high",
+        "notes": "FCI disqualifying fault 'Docked tail.' RKC (S257): 'Set on low; short, fine, tapering, straight or curled; devoid of fringes or coarse hair, never carried above horizontal.' The portrait shows a short natural straight tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S255; older address S256 the same), PDSA (S259) and AKC (S260). The RKC page shows no 'Good with children' field (as returned 2026-10-13). Woodgreen and AKC trait ratings not attempted.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S255",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "PDSA (S259): 'Small'."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S255",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S255",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "Basis of apartment (runbook: only from RKC 'Flat/ Apartment')."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S255",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S255",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "PDSA (S259): 'Grooming will be needed once a week to keep the coat in tip-top condition.'; AKC (S260): 'Weekly brushing will help to remove loose hair.' — sources agree on 1× per week. Not frequent_grooming (criterion: more than once a week). Built in M5-R13 (dog grooming)."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S255",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "PDSA (S259): 'Short'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S255",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "AKC (S260): 'Bostons’ coats are fine and sleek, and shed minimally.' — conflicting sources (sheds yes vs minimally) → neither sheds nor low_shedding (runbook §3)."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S255",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "Not 'Under 10 years' → no shorter_lifespan chip."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S255",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S255",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_breed_watch": {
+        "value": "Category 2",
+        "unit": "—",
+        "source_id": "S255",
+        "quote": "Category 2",
+        "confidence": "medium",
+        "notes": "Points of concern not returned → health.breed_watch."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-13)."
+      },
+      "pdsa_family": {
+        "value": "perfect family pets",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": "They enjoy playing games and will join in with plenty of enthusiasm, making them perfect family pets.",
+        "confidence": "high",
+        "notes": "Basis of family_pet."
+      },
+      "pdsa_children": {
+        "value": "especially good with children, given the right socialisation as a puppy",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": "and are especially good with children.",
+        "confidence": "high",
+        "notes": "PDSA (S259), second half of the sentence 'Boston Terriers are affectionate, fun-loving dogs that get on well with everyone given the right socialisation as a puppy,' — caveat kept: the right socialisation as a puppy; AKC (S260) adds the caveat 'They do well with children who know how to be gentle with animals.' Basis of children (with the caveat); no small-children rating → never small_children."
+      },
+      "pdsa_exercise": {
+        "value": "up to an hour a day; never in the heat of the day",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": "They’ll need up to an hour’s exercise per day,",
+        "confidence": "medium",
+        "notes": "PDSA (S259); heat: exercise.heat_and_walk_timing."
+      },
+      "pdsa_grooming": {
+        "value": "grooming once a week",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": "Grooming will be needed once a week to keep the coat in tip-top condition.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "pdsa_breed_advice": {
+        "value": "consider a healthier breed, crossbreed or mongrel",
+        "unit": "—",
+        "source_id": "S259",
+        "quote": "rather than health and function, we strongly recommends owners consider a healthier breed, crossbreed or mongrel.",
+        "confidence": "high",
+        "notes": "Shown to parents through the brachycephalic_breathing chip and the register's health text — calmly, no statistics."
+      },
+      "akc_children": {
+        "value": "does well with children who know how to be gentle with animals",
+        "unit": "—",
+        "source_id": "S260",
+        "quote": "They do well with children who know how to be gentle with animals.",
+        "confidence": "medium",
+        "notes": "AKC (S260) — caveat for the children tag."
+      },
+      "akc_time_alone": {
+        "value": "does not fare well when left alone for extended periods",
+        "unit": "—",
+        "source_id": "S260",
+        "quote": "This breed doesn’t fare well when left alone for extended periods of time.",
+        "confidence": "medium",
+        "notes": "Basis of needs_company."
+      },
+      "akc_grooming": {
+        "value": "weekly brushing; occasional baths; nails trimmed regularly",
+        "unit": "—",
+        "source_id": "S260",
+        "quote": "Bostons only require occasional bathing, and their nails should be trimmed regularly.",
+        "confidence": "medium",
+        "notes": "AKC (S260): 'Weekly brushing will help to remove loose hair.' Nail trimming 'regularly' (no frequency) — a sourced need without a game mechanic → proposed_game_parameters.boston_terrier.nail_trimming → ROADMAP M5-R19 (needs-david)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -21033,6 +21634,278 @@
         "confidence": "high",
         "notes": "RKC whole colours (S249): orange, cream, white, black, brown — the FCI (S246) names all but cream ('other colours') — never merle (RKC 'Merles not permissible.'), never white markings on a coloured dog (FCI disqualifying). Natural, untrimmed coat (FCI 'Hair must not look like being modelled.'). Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): orange (self-coloured; named by both the RKC and the FCI) is the portrait default; natural untrimmed coat, erect ears, tail over the back"
+      }
+    },
+    "boston_terrier": {
+      "_note": "Unattended run M5-R10-31 (2026-10-13): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: weekly brushing (RKC S255, PDSA S259, AKC S260) → 1× (M5-R13); early socialisation (AKC S260) → M5-R17. Sourced needs without a game mechanic: no exercise in the heat of the day (PDSA S259) → ROADMAP M5-R14 (as the Bulldog); regular nail trimming (AKC S260, no frequency) → ROADMAP M5-R19 (needs-david). Senior 90 = RKC lower bound 'Over 10 years' (S255) — provisional until McMillan 2024 is checked (11.8 y via Wikipedia S262 → 106). Flat-faced breed → brachycephalic_breathing chip, not in marketing (BVA S92).",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S255",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'Up to 1 hour per day' (S255); PDSA 'up to an hour’s exercise per day' (S259) — sources agree. Rule: one number N ('up to N') → N = 60.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S259",
+            "notes": "PDSA (key facts minimum exercise 1 hour)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S255 'Up to 1 hour per day'; PDSA S259 the same)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000 (= French Bulldog, Bulldog).",
+        "derived_from": [
+          "S255",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) = 90 (S11 + RKC lower bound 'Over 10 years', S255). No McMillan 2024 / VetCompass value reachable. Alternatives: 106 (McMillan 11.8 y via Wikipedia S262, tier C — not used alone), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S255"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 106,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S255)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 54 (S35, shared with the Akita), tier 'Average' (40–54) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 54, Average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S255",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC (S255) 'Once a week'; PDSA (S259) 'Grooming will be needed once a week to keep the coat in tip-top condition.'; AKC (S260) 'Weekly brushing will help to remove loose hair.' — sources agree. Rule: 'Once a week' → 1. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S260",
+        "quote": "Like all breeds, early socialization and puppy training courses are strongly recommended for Boston Terriers.",
+        "confidence": "medium",
+        "notes": "boston_terrier.behaviour.socialisation (AKC S260). PDSA (S259) also names 'the right socialisation as a puppy' (boston_terrier.behaviour.family notes). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat AKC S260)"
+      },
+      "no_exercise_in_heat": {
+        "value": "never in the heat of the day",
+        "unit": "walk timing (sourced need)",
+        "source_id": "S259",
+        "quote": "but it’s important to remember that they should never be exercised in the heat of the day as they are prone to overheating.",
+        "confidence": "high",
+        "notes": "PDSA (S259), boston_terrier.exercise.heat_and_walk_timing. The game has no walk-time / heat rule and may not use weather data (CLAUDE.md scope guard) → ROADMAP M5-R14 (as the Bulldog) with its FEATURES 🗓 row.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ne v vročini dneva; mehanika še ni zgrajena → ROADMAP M5-R14 (needs-david)"
+      },
+      "nail_trimming": {
+        "value": "regularly (no frequency given)",
+        "unit": "nail trimming (sourced need)",
+        "source_id": "S260",
+        "quote": "Bostons only require occasional bathing, and their nails should be trimmed regularly.",
+        "confidence": "medium",
+        "notes": "AKC (S260), boston_terrier.suitability.akc_grooming. The game has no nail-trimming mechanic → ROADMAP M5-R19 'Striženje krempljev psa' (needs-david) with a FEATURES 🗓 row; the source gives no frequency, so the mechanic (and any number) is David's decision.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno striženje krempljev; mehanike ni → ROADMAP M5-R19 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-31); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S255"
+            ],
+            "refs": [
+              "boston_terrier.suitability.rkc_size_of_home",
+              "boston_terrier.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S255 'Size of home: Flat/ Apartment' / 'Size of garden: Small/ medium garden'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S259"
+            ],
+            "refs": [
+              "boston_terrier.suitability.pdsa_family",
+              "boston_terrier.behaviour.family"
+            ],
+            "quote": "S259 'They enjoy playing games and will join in with plenty of enthusiasm, making them perfect family pets.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S259",
+              "S260"
+            ],
+            "refs": [
+              "boston_terrier.suitability.pdsa_children",
+              "boston_terrier.behaviour.family",
+              "boston_terrier.suitability.akc_children"
+            ],
+            "quote": "S259 'and are especially good with children.'; S260 'They do well with children who know how to be gentle with animals.'",
+            "note": "Caveats kept in notes: the right socialisation as a puppy (PDSA), children who know how to be gentle (AKC). No small-children rating → never small_children."
+          }
+        ],
+        "consider": [
+          {
+            "tag": "brachycephalic_breathing",
+            "source_ids": [
+              "S259",
+              "S255",
+              "S261",
+              "S93"
+            ],
+            "refs": [
+              "boston_terrier.health.brachycephaly_boas",
+              "boston_terrier.exercise.heat_and_walk_timing"
+            ],
+            "quote": "S259 'Boston Terriers are a brachycephalic (flat-faced) breed.'; S255 'The soft tissue in the nose and throat of some brachycephalic dogs may be excessive for the airways,'; S261 'Boston Terriers are brachycephalic, which is why they were included in our research alongside other breeds.'; S93 'Stop and think before buying a flat-faced dog.'; S259 heat 'but it’s important to remember that they should never be exercised in the heat of the day as they are prone to overheating.'",
+            "note": "Welfare rule §3: flat-faced breed with a sourced heat warning (as the French Bulldog and the Bulldog; not short_muzzle_breathing, which is for a moderately short face without heat). No statistics in the app."
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S260"
+            ],
+            "refs": [
+              "boston_terrier.behaviour.time_alone",
+              "boston_terrier.suitability.akc_time_alone"
+            ],
+            "quote": "S260 'This breed doesn’t fare well when left alone for extended periods of time.'",
+            "note": "Breed-specific statement (Boxer precedent); never often_alone."
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No small-children rating; PDSA / AKC caveats (socialisation, gentle children).",
+          "older_children": "No source advises older children.",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No source.",
+          "large_home": "RKC 'Flat/ Apartment' (S255).",
+          "active_family": "RKC 'Up to 1 hour per day' (S255) — moderate.",
+          "long_daily_exercise": "≤ 1 h/day (S255, S259).",
+          "often_alone": "AKC: does not fare well alone for extended periods (S260) → needs_company.",
+          "older_owners": "No source.",
+          "other_pets": "AKC names other dogs only (S260); no statement about cats or small pets.",
+          "chases_small_pets": "No prey-drive statement.",
+          "sheds": "Conflicting sources: RKC 'Sheds: Yes' (S255) vs AKC 'shed minimally' (S260) → neither (runbook §3).",
+          "low_shedding": "Conflicting sources (S255 vs S260) → neither.",
+          "frequent_grooming": "Once a week (S255, S259, S260) — criterion is more than once a week.",
+          "needs_mental_stimulation": "PDSA 'enjoy the extra mental stimulation' (S259) — enjoyment, not a need.",
+          "food_motivated_weight": "No appetite / weight statement (AKC treats are a training tip, S260).",
+          "chews_when_bored": "No source.",
+          "may_herd_children": "No source.",
+          "secure_fencing": "No source.",
+          "shorter_lifespan": "RKC 'Over 10 years' (S255).",
+          "sensitive_skin": "Atopy only in the PDSA list (paraphrase, S259); no Breed Watch point returned.",
+          "eyelid_problems": "No Breed Watch eyelid point returned; eye problems recorded under health.eyes.",
+          "back_spine": "Hemivertebrae only as a PDSA paraphrase (S259), no quote → recorded under health.",
+          "hips_hind_legs": "No source.",
+          "heart_and_spine": "No source.",
+          "short_muzzle_breathing": "Flat-faced with a heat warning → brachycephalic_breathing instead."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, family_pet, children; consider brachycephalic_breathing, needs_company"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing / store screenshots / social: no",
+        "unit": "—",
+        "source_id": "S92",
+        "quote": "avoiding imagery of brachycephalic dogs in advertising, marketing materials and social media campaigns",
+        "confidence": "high",
+        "notes": "BVA position, executive summary (S92, re-read 2026-10-13; the sentence continues 'to reduce demand' / 'and prevent the normalisation of their associated health issues'). The BVA documents (S92, S236) do not name the Boston Terrier, but PDSA (S259) 'Boston Terriers are a brachycephalic (flat-faced) breed.' and the RKC (S255, S261) 'Boston Terriers are brachycephalic, which is why they were included in our research alongside other breeds.' name it a brachycephalic breed → the same exclusion as the French Bulldog, Bulldog and Shih Tzu. A normal breed in the app (picker, register on the website with sourced health facts), never in PetPrep advertising, store screenshots, social posts or decks.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): v aplikaciji da, v marketingu / posnetkih zaslona ne (BVA S92; brahicefalna pasma po PDSA S259 in RKC S261)"
+      },
+      "ai_appearance": {
+        "value": "adult Boston Terrier, brindle with white markings (default): white muzzle band, white blaze between the eyes, white forechest (and collar / lower legs); moderate (not extreme) short, square muzzle free from wrinkles with a black, wide nose and clearly open nostrils; large round dark eyes set wide apart, not bulging; small natural erect ears (never cropped); short smooth bright coat; compact, well balanced, lively, not blocky; short natural straight tail carried low (never docked); standard colours only (brindle, seal or black, always with white markings); never solid colours, grey / blue, liver, fawn / red or merle, never blue eyes",
+        "unit": "—",
+        "source_id": "S254",
+        "quote": "Black and wide, with a well defined line between the nostrils.",
+        "confidence": "high",
+        "notes": "FCI (S254): required markings, muzzle 'free from wrinkles' about one-third of the skull, fault 'Pinched nostrils.', 'Blocky or chunky in appearance.' a fault, disqualifying docked tail / blue eyes / colours without white; RKC (S257) 'Nostrils open.' and overly prominent eyes undesirable; BOAS risk factors stenotic nostrils and facial foreshortening (S261). Welfare traits: muzzle (moderate length, open nostrils) — add `muzzle` to media.breed_portraits.traits / prompt_order / sources (as the French Bulldog). Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): brindle and white (FCI / RKC preferred colour) is the portrait default; moderate muzzle with open nostrils, natural ears and tail, standard colours only (never solid, blue, liver, fawn or merle)"
       }
     }
   }

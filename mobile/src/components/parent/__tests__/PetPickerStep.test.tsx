@@ -268,6 +268,7 @@ describe('PetPickerStep', () => {
       'breed-option-shih_tzu',
       'breed-option-great_dane',
       'breed-option-pomeranian',
+      'breed-option-boston_terrier',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -656,6 +657,57 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(screen.getByTestId('breed-option-shih_tzu')).toHaveTextContent(/Shih Tzu/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-31: the Boston Terrier (fallback) shows its chips, is found as "bostonski" and "boston", and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const boston = screen.getByTestId('breed-option-boston_terrier');
+    expect(boston).toHaveTextContent(/Bostonski terier/);
+    expect(boston).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-boston_terrier-suits');
+    expect(suits).toHaveTextContent(/življenje v stanovanju/);
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    const consider = screen.getByTestId('breed-suitability-boston_terrier-consider');
+    expect(consider).toHaveTextContent(/kratek gobček — težave z dihanjem in vročino/);
+    expect(consider).toHaveTextContent(/rad ima družbo — naj bo nekdo večino dneva doma/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'bostonski');
+    expect(screen.getByTestId('breed-option-boston_terrier')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-pomeranian')).toBeNull();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'boston');
+    expect(screen.getByTestId('breed-option-boston_terrier')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-boston_terrier'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'boston_terrier', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'boston_terrier' }),
+    );
+  });
+
+  it('M5-R10-31: the Boston Terrier chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-boston_terrier-suits');
+      const consider = screen.getByTestId('breed-suitability-boston_terrier-consider');
+      expect(suits).toHaveTextContent(/apartment living/);
+      expect(suits).toHaveTextContent(/family life/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(consider).toHaveTextContent(/flat face — breathing and heat problems/);
+      expect(consider).toHaveTextContent(/loves company — best with someone home most of the day/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-boston_terrier')).toHaveTextContent(/Boston Terrier/);
     } finally {
       await i18n.changeLanguage('sl');
     }
