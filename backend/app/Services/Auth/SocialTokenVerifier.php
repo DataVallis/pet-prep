@@ -83,7 +83,8 @@ class SocialTokenVerifier
 
         $aud = $claims['aud'] ?? null;
         $audiences = is_string($aud) ? [$aud] : (is_array($aud) ? array_filter($aud, 'is_string') : []);
-        if (array_intersect($audiences, $provider->audiences()) === []) {
+        $matched = array_values(array_intersect($audiences, $provider->audiences()));
+        if ($matched === []) {
             throw $this->reject($provider, 'aud');
         }
 
@@ -146,6 +147,7 @@ class SocialTokenVerifier
             emailLinkable: $emailLinkable,
             name: $name,
             issuedAt: CarbonImmutable::createFromTimestampUTC((int) $iat),
+            audience: $matched[0],
         );
     }
 

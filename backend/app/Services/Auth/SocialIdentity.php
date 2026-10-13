@@ -32,6 +32,8 @@ final class SocialIdentity
         public readonly ?string $name,
         /** `iat` — when the user authenticated with the provider. */
         public readonly CarbonImmutable $issuedAt,
+        /** The token's `aud` that matched our configuration (Apple: the client id the app signed in with). */
+        public readonly string $audience = '',
     ) {}
 
     /** The e-mail only when the provider verified it. */

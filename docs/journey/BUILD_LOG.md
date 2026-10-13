@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-13 — Izbris računa prekliče tudi prijavo z Apple (M2-10c)
+
+**Kaj:** ko starš, ki se prijavlja z Apple, izbriše račun, strežnik v ozadju pri Applu prekliče žetone (Apple REST `/auth/token` + `/auth/revoke`, lasten podpis ES256 brez dodatne knjižnice, ločena čakalna vrsta `auth`, ker koda velja le 5 minut). Testi: 28 novih, vsi zeleni.
+**Zakaj:** App Store (smernica 5.1.1(v)) to zahteva za vsako aplikacijo s prijavo z Apple — brez tega bi bila oddaja zavrnjena.
+**Kako povedati:** 👩 »Ko izbrišete račun, izbrišemo vse — tudi povezavo z vašim Apple ID-jem.« · 🛠 ES256 client secret z openssl, DER→R‖S.
+
+---
+
 ## 2026-10-13 — Prijava z Googlom in Apple za starše (M2-10c)
 
 **Kaj:** starš se lahko registrira in prijavi z enim dotikom — »Nadaljuj z Googlom« (iPhone in Android) ali »Nadaljuj z Apple« (iPhone). Strežnik sam preveri podpis žetona pri Googlu / Apple (brez dodatne knjižnice), račun z geslom se zaradi varnosti nikoli ne poveže samodejno, izbris računa pa starš brez gesla potrdi s ponovno prijavo. Otrok ostane na PIN-u. Testi: 2.927 strežniških (Pest) in 2.440 aplikacijskih (Jest), vsi zeleni.

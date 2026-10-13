@@ -275,6 +275,41 @@ sequenceDiagram
   end
 ```
 
+### Apple token revocation on account deletion (M2-10c, App Store 5.1.1(v))
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Parent
+  participant App as Mobile app
+  participant API as Laravel API
+  participant DB as PostgreSQL
+  participant Q as Queue worker
+  participant A as appleid.apple.com
+  Parent->>App: "Izbriši račun" → Sign in with Apple again
+  App->>API: POST /api/parent/account/delete {confirm, provider: apple,<br/>id_token, nonce, authorization_code}
+  API->>A: JWKS (cached) — verify fresh linked Apple token
+  API->>DB: transaction: delete account (+ family if last parent)
+  API->>Q: RevokeAppleTokenJob(code, aud of the verified Apple token, Apple sub)<br/>queue auth, after commit, encrypted payload
+  API-->>App: 200 {status: deleted}
+  alt no APPLE_SIGN_IN_PRIVATE_KEY
+    Q->>Q: log warning, no HTTP
+  else key configured
+    Q->>Q: client_secret = ES256 JWT (team id, key id, bundle id)
+    Q->>A: POST /auth/token {client_id, client_secret, code, grant_type}
+    alt invalid_grant (code > 5 min / used)
+      A-->>Q: 400 → info log, stop (other refusals → error log)
+    else ok
+      A-->>Q: id_token + refresh_token (or access_token)
+      Q->>Q: id_token sub == deleted parent's Apple sub? else error log, stop
+      Q->>A: POST /auth/revoke {client_id, client_secret, token, token_type_hint} (3× in place)
+      opt still unavailable
+        Q->>Q: RevokeAppleRefreshTokenJob(token) — 5 tries, 1 / 5 / 15 / 60 min
+      end
+    end
+  end
+```
+
 Children never use this path (403 `not_a_parent` for a child's e-mail). A password-less parent confirms deletions (§2e) with `{provider, id_token, nonce?}` of a linked provider issued ≤ 10 min ago instead of a password (else 422 `reauth_required`).
 
 ## 2e. Account deletion and data export (M2-08, 2026-10-05)
