@@ -42,7 +42,7 @@ use function Pest\Laravel\postJson;
 | Border Collie care rates, brushing 2× a week (PetMD "a couple times a week", M5-R13), puppy
 | socialisation with the AKC quote (M5-R17), no meal / walk warning (no source), suitability: suits
 | family_pet / children / other_pets, consider needs_mental_stimulation / may_herd_children /
-| needs_company / sheds / frequent_grooming; blue merle (portrait), black, red merle or red — merle is
+| needs_company / sheds (no frequent_grooming — AKC weekly vs PetMD a couple of times); blue merle (portrait), black, red merle or red — merle is
 | standard for this breed —, natural undocked tail; not a welfare breed → in marketing).
 */
 
@@ -422,7 +422,7 @@ describe('GET /api/breeds', function () {
                 'search_keywords' => BreedConfigsSeeder::configs()[28]['search_keywords'], 'sort_order' => 280,
                 'suitability' => [
                     'suits' => ['family_pet', 'children', 'other_pets'],
-                    'consider' => ['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds', 'frequent_grooming'],
+                    'consider' => ['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds'],
                 ],
             ]);
     });
@@ -490,7 +490,7 @@ describe('no health statistics in the app; not a welfare breed, in marketing (ru
         }
         $consider = app(BreedSuitability::class)->for(BreedType::MiniatureAmericanShepherd)['consider'];
         expect(array_keys(config('breed_suitability.vocabulary')))->not->toContain('hypoallergenic')
-            ->and($consider)->toBe(['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds', 'frequent_grooming'])
+            ->and($consider)->toBe(['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds'])
             ->and(array_intersect($consider, ['brachycephalic_breathing', 'short_muzzle_breathing', 'hips_hind_legs', 'back_spine', 'heart_and_spine', 'sensitive_skin', 'eyelid_problems']))->toBe([])
             ->and(masData('proposed_game_parameters.miniature_american_shepherd.marketing.value'))->toContain('in marketing: yes')
             ->and(masData('miniature_american_shepherd.health.mdr1.source_id'))->toBe('S269');

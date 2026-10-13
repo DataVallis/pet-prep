@@ -728,7 +728,7 @@ describe('PetPickerStep', () => {
     expect(consider).toHaveTextContent(/pri igri lahko »pase« otroke/);
     expect(consider).toHaveTextContent(/rad ima družbo — naj bo nekdo večino dneva doma/);
     expect(consider).toHaveTextContent(/izpada mu dlaka/);
-    expect(consider).toHaveTextContent(/potrebuje česanje večkrat na teden/);
+    expect(consider).not.toHaveTextContent(/potrebuje česanje večkrat na teden/);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'ameriški');
     expect(screen.getByTestId('breed-option-miniature_american_shepherd')).toBeTruthy();
@@ -761,7 +761,7 @@ describe('PetPickerStep', () => {
       expect(consider).toHaveTextContent(/needs mental challenges/);
       expect(consider).toHaveTextContent(/may “herd” children at play/);
       expect(consider).toHaveTextContent(/loves company — best with someone home most of the day/);
-      expect(consider).toHaveTextContent(/needs brushing several times a week/);
+      expect(consider).not.toHaveTextContent(/needs brushing several times a week/);
       expect(suits).not.toHaveTextContent(/\d|%/);
       expect(consider).not.toHaveTextContent(/\d|%/);
       expect(screen.getByTestId('breed-option-miniature_american_shepherd')).toHaveTextContent(/Miniature American Shepherd/);

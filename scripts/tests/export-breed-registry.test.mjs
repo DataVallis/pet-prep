@@ -1198,11 +1198,11 @@ test('Boston Terrier (M5-R10-31): up to 1 hour (RKC), PDSA weight and height, FC
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|merle|\d %\)/i);
 });
 
-test('Miniature American Shepherd (M5-R10-32): at least 1 hour (PetMD, game value), AKC weight chart, FCI height and group 1 section 1 USA, PetMD lifespan range, not ranked by Coren, no welfare chip, brushing 2× a week', () => {
+test('Miniature American Shepherd (M5-R10-32): at least 1 hour (PetMD, game value), AKC weight chart, FCI height and group 1 section 1 USA, PetMD lifespan range, not ranked by Coren, no welfare chip, no frequent_grooming chip (sources conflict), FCI size small, brushing 2× a week', () => {
   const d = registry.breeds.find((b) => b.id === 'miniature_american_shepherd');
   assert.deepEqual(d.name, { en: 'Miniature American Shepherd', sl: 'Mali ameriški ovčar' });
   assert.equal(d.availability, 'coming_soon');
-  assert.equal(d.facets.size, 'medium');
+  assert.equal(d.facets.size, 'small');
   assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'at_least', ['S269']]]);
   assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 367, group: 1, section: 1, origin: 'US' });
   assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [9.1, 18.1], female: [9.1, 18.1] }, ['S268']]]);
@@ -1213,7 +1213,7 @@ test('Miniature American Shepherd (M5-R10-32): at least 1 hour (PetMD, game valu
   assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
   assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 108 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['family_pet', 'children', 'other_pets']);
-  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds', 'frequent_grooming']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds']);
   assert.deepEqual(d.health.map((h) => h.key), ['drug_sensitivity_mdr1', 'inherited_eye_disease', 'hip_dysplasia', 'kneecap_luxation']);
   // The RKC lists no test for the breed; PetMD names the parents' tests → other_scheme (Cane Corso precedent).
   assert.equal(d.breeder_checklist.status, 'listed');

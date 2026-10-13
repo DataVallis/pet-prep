@@ -14741,12 +14741,19 @@
       "notes": "FCI nomenclature (S264): standard 367, group 'n°1 - Sheepdogs and Cattledogs (except Swiss Cattledogs)', section 'Sheepdogs', country of origin 'UNITED STATES OF AMERICA', provisional acceptance '9/4/2019', 'Not subject to a working trial according to the FCI breeds nomenclature'. FCI standard (S265): 'FCI-CLASSIFICATION: Group 1 Sheepdogs and Cattledogs (except Swiss Cattledogs)', 'Section 1 Sheepdogs', 'ORIGIN: United States of America.', 'UTILIZATION: Farm and ranch shepherd dog.', 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 04/09/2019.' AKC: Herding group, recognised 2015 (Wikipedia S271, tier C: 'was recognised by the American Kennel Club (AKC) in 2015 and is the club's 186th breed.'). Former name (AKC S270): 'Initially, the breed's name was Miniature Australian Shepherds'. English name: Miniature American Shepherd (AKC, FCI); nicknames 'Mini American', 'MAS' (S271, tier C)."
     },
     "size_class": {
-      "value": "medium",
+      "value": "small",
       "unit": "—",
-      "source_id": "S269",
-      "quote": "high-quality puppy food for medium-sized dogs",
+      "source_id": "S265",
+      "quote": "The Miniature American Shepherd is a small size herding dog that originated in the United States.",
       "confidence": "medium",
-      "notes": "PetMD (S269) — the only size wording on the breed pages read (nutrition section). AKC breed weight chart 20–40 lb (S268) ≈ 9.1–18.1 kg spans the top of PetMD's 'Small (12–24 pounds)' and the 'Medium (24–59 pounds)' classes (S10); most of the range is Medium. No RKC / PDSA size field reachable."
+      "notes": "FCI standard (S265, tier A). Alternative: PetMD (S269) uses 'medium-sized dogs' in its nutrition section ('high-quality puppy food for medium-sized dogs'); the AKC weight chart 20–40 lb (S268) ≈ 9.1–18.1 kg spans the top of the S10 'Small (12–24 pounds)' and the 'Medium (24–59 pounds)' weight classes — growth end uses the Medium weight class (S10). No RKC / PDSA size field reachable. Tier A preferred → small (QA review 2026-10-13).",
+      "alternatives": [
+        {
+          "value": "medium",
+          "source_id": "S269",
+          "notes": "PetMD nutrition wording"
+        }
+      ]
     },
     "height": {
       "fci": {
@@ -15148,7 +15155,7 @@
         "source_id": "S269",
         "quote": "The Miniature American Shepherd needs to be brushed a couple times a week to control shedding and minimize matting.",
         "confidence": "medium",
-        "notes": "PetMD (S269); during the heavy shedding seasons 'their coat should be brushed every day.' Basis of the brushing goal 2× a week (M5-R13) and of frequent_grooming (more than once a week)."
+        "notes": "PetMD (S269); during the heavy shedding seasons 'their coat should be brushed every day.' Basis of the brushing goal 2× a week (M5-R13). Not frequent_grooming: AKC (S267) says weekly brushing is sufficient most of the year — conflicting sources → no chip (runbook §3, as the Boston Terrier's shedding)."
       },
       "akc_shedding": {
         "value": "sheds a fair amount, heavier once or twice a year",
@@ -22371,7 +22378,7 @@
       }
     },
     "miniature_american_shepherd": {
-      "_note": "Unattended run M5-R10-32 (2026-10-13): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: brushing 'a couple times a week' (PetMD S269) → 2× a week (M5-R13; AKC S267 weekly = alternative; the reading of 'a couple' as 2 is listed for David); early, consistent socialisation (AKC S267) → M5-R17. Sourced need without a game mechanic: regular nail trimming (AKC S267) → ROADMAP M5-R19 (needs-david). Senior 108 = Claude's suggestion (verified=false, PetMD lower bound 12 y, S269) — no McMillan 2024 / VetCompass / RKC value. Not a welfare breed → in marketing.",
+      "_note": "Unattended run M5-R10-32 (2026-10-13): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: brushing 'a couple times a week' (PetMD S269) → 2× a week (M5-R13; AKC S267 weekly = alternative; Claude's reading of 'a couple' as 2 is listed for David, the value is the rule's); early, consistent socialisation (AKC S267) → M5-R17. Sourced need without a game mechanic: regular nail trimming (AKC S267) → ROADMAP M5-R19 (needs-david). Senior 108 = Claude's suggestion (verified=false, PetMD lower bound 12 y, S269) — no McMillan 2024 / VetCompass / RKC value. Not a welfare breed → in marketing. Not built and not needed as a routine: the monthly bath (AKC S270 — a paraphrase only, no verbatim quote; general care, Boston Terrier 'occasional bathing' precedent). Size class small (FCI S265, tier A).",
       "exercise_minutes_adult": {
         "value": 60,
         "unit": "minutes/day",
@@ -22511,7 +22518,7 @@
         "source_id": "S269",
         "quote": "The Miniature American Shepherd needs to be brushed a couple times a week to control shedding and minimize matting.",
         "confidence": "medium",
-        "notes": "PetMD (S269) 'a couple times a week' read as 2 (a couple = two); daily during the heavy shedding seasons (seasonal — moult is not modelled). AKC (S267) 'Weekly brushing is sufficient during most of the year' = 1 → alternatives (rule: the upper number; a single lower number goes to alternatives). Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed. Claude's reading of 'a couple' as 2 is listed for David in HANDOFF.",
+        "notes": "PetMD (S269) 'a couple times a week' read as the number 2 (a couple = two; runbook dog-grooming rule: the upper number, a single lower number of another source goes to alternatives); daily during the heavy shedding seasons (seasonal — moult is not modelled). AKC (S267) 'Weekly brushing is sufficient during most of the year' = 1 → alternatives. Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed. Claude's reading of 'a couple' as 2 is listed for David in HANDOFF (as the Cavalier's hedged 'may need daily'); the value is the rule's, so it is seeded verified.",
         "alternatives": [
           {
             "value": 1,
@@ -22625,17 +22632,6 @@
               "miniature_american_shepherd.suitability.petmd_shedding"
             ],
             "quote": "S267 'The breed sheds a fair amount, with heavier seasons of shedding once or twice a year.'; S269 'This breed sheds year-round, with one or two heavy shedding seasons (in the spring and/or fall) every year.'"
-          },
-          {
-            "tag": "frequent_grooming",
-            "source_ids": [
-              "S269"
-            ],
-            "refs": [
-              "miniature_american_shepherd.suitability.petmd_grooming"
-            ],
-            "quote": "S269 'The Miniature American Shepherd needs to be brushed a couple times a week to control shedding and minimize matting.'",
-            "note": "More than once a week (2× a week, the game's brushing goal); AKC weekly out of season (S267) is the alternative."
           }
         ],
         "not_proposed": {
@@ -22656,9 +22652,10 @@
           "secure_fencing": "No escape statement.",
           "shorter_lifespan": "12–13 years (S269).",
           "hips_hind_legs": "Hip dysplasia only as a screening advice (S269), no Breed Watch / welfare concern → breeder checklist, not a chip.",
-          "welfare chips (brachycephalic_breathing, short_muzzle_breathing, back_spine, heart_and_spine, sensitive_skin, eyelid_problems)": "No source."
+          "welfare chips (brachycephalic_breathing, short_muzzle_breathing, back_spine, heart_and_spine, sensitive_skin, eyelid_problems)": "No source.",
+          "frequent_grooming": "Conflicting sources: PetMD 'a couple times a week' (S269) vs AKC 'Weekly brushing is sufficient during most of the year' (S267) → no chip (runbook §3); the game still brushes 2× a week (grooming rule, upper number)."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children, other_pets; consider needs_mental_stimulation, may_herd_children, needs_company, sheds, frequent_grooming"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children, other_pets; consider needs_mental_stimulation, may_herd_children, needs_company, sheds"
       },
       "marketing": {
         "value": "in the app: yes; in marketing: yes (never as a dog for small children)",

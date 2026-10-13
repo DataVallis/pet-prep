@@ -1229,7 +1229,8 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.boston_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.boston_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.boston_terrier.exercise_minutes_senior',
-  },  miniature_american_shepherd: {
+  },
+  miniature_american_shepherd: {
     adult_minutes: ['proposed_game_parameters.miniature_american_shepherd.exercise_minutes_adult'],
     senior_minutes: ['proposed_game_parameters.miniature_american_shepherd.exercise_minutes_senior'],
     senior_from: ['proposed_game_parameters.miniature_american_shepherd.stage_boundaries_months', (e) => e.value.senior],

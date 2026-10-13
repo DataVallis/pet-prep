@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "9e7dd1a892442180eec441bd5e76470a4f7d89896e3acb74c1a40471f03cebb0"
+      "sha256": "720da8f3bd0b65dd4cbe5785b5d8a011288f5a6d223f60297bf9685b25410d0b"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "6e0f1a697a8a30d379c4cd5d182e54bb0f23d0f07b5fff7be85ee8345c6a1bf4"
+      "sha256": "3f5694b055e292ba98ba598b2807e2b97cfdf3f9c2aa84b2c81e5480e717bc1c"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -16565,7 +16565,7 @@
         ]
       },
       "facets": {
-        "size": "medium",
+        "size": "small",
         "exercise": "h1_2"
       },
       "facts": [
@@ -16573,9 +16573,9 @@
           "group": "size",
           "field": "size",
           "kind": "category",
-          "value": "medium",
+          "value": "small",
           "source_ids": [
-            "S269"
+            "S265"
           ],
           "ref": "miniature_american_shepherd.size_class",
           "confidence": "medium"
@@ -16799,15 +16799,6 @@
             "refs": [
               "miniature_american_shepherd.suitability.akc_shedding",
               "miniature_american_shepherd.suitability.petmd_shedding"
-            ]
-          },
-          {
-            "tag": "frequent_grooming",
-            "source_ids": [
-              "S269"
-            ],
-            "refs": [
-              "miniature_american_shepherd.suitability.petmd_grooming"
             ]
           }
         ]

@@ -694,15 +694,17 @@ it('gives the Boston Terrier apartment, family_pet, children and the flat-face a
         ->and(bsEntry('boston_terrier.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Flat/ Apartment');
 });
 
-it('gives the Miniature American Shepherd family_pet, children, other_pets and the herding / company / coat chips — never small_children, no new tag (runbook 2026-10-13)', function () {
+it('gives the Miniature American Shepherd family_pet, children, other_pets and the herding / company / shedding chips — never small_children, no new tag (runbook 2026-10-13)', function () {
     $mas = app(BreedSuitability::class)->for(BreedType::MiniatureAmericanShepherd);
     expect($mas['suits'])->toBe(['family_pet', 'children', 'other_pets'])
         // Caveats (AKC: may herd children; PetMD: supervise at first) → never small_children; RKC page not reachable → no apartment / large_home.
         ->and($mas['suits'])->not->toContain('small_children')->not->toContain('apartment')->not->toContain('large_home')->not->toContain('often_alone')
         // At least 1 h a day (PetMD) → not the ~2 h active_family / long_daily_exercise pair.
         ->and($mas['suits'])->not->toContain('active_family')
-        ->and($mas['consider'])->toBe(['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds', 'frequent_grooming'])
-        ->and($mas['consider'])->not->toContain('long_daily_exercise')->not->toContain('chases_small_pets');
+        ->and($mas['consider'])->toBe(['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds'])
+        ->and($mas['consider'])->not->toContain('long_daily_exercise')->not->toContain('chases_small_pets')
+        // PetMD "a couple times a week" vs AKC weekly most of the year → conflicting sources, no frequent_grooming chip.
+        ->and($mas['consider'])->not->toContain('frequent_grooming');
 
     expect(bsEntry('miniature_american_shepherd.suitability.akc_children')['quote'])->toBe('They tend to be good with children, but may try to herd them.')
         ->and(bsEntry('miniature_american_shepherd.behaviour.time_alone')['quote'])->toBe("Their devotion to family can lead to separation anxiety when they're left alone.")

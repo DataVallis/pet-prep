@@ -849,7 +849,9 @@ return [
         // proposed_game_parameters.miniature_american_shepherd.suitability_tags). AKC (S267) + PetMD (S269);
         // the RKC breed page could not be fetched → no apartment / large_home. `children` and `other_pets`
         // with the caveats (may herd children, supervise at first) — never `small_children`. Not
-        // `active_family` / `long_daily_exercise` (at least 1 h a day). Not a welfare breed → no welfare chip.
+        // `active_family` / `long_daily_exercise` (at least 1 h a day). Not `frequent_grooming`: PetMD "a couple
+        // times a week" vs AKC "Weekly brushing is sufficient during most of the year" → conflicting sources, no chip
+        // (the game still brushes 2× a week). Not a welfare breed → no welfare chip.
         'miniature_american_shepherd' => [
             'suits' => [
                 // S267 "Mini Americans can make for great family dogs, …"; S269 "… make great family dogs …".
@@ -868,8 +870,6 @@ return [
                 ['tag' => 'needs_company', 'source_ids' => ['S269'], 'refs' => ['miniature_american_shepherd.behaviour.time_alone']],
                 // S267 "The breed sheds a fair amount, …"; S269 "This breed sheds year-round, …".
                 ['tag' => 'sheds', 'source_ids' => ['S267', 'S269'], 'refs' => ['miniature_american_shepherd.suitability.akc_shedding', 'miniature_american_shepherd.suitability.petmd_shedding']],
-                // S269 "… needs to be brushed a couple times a week …" (2× a week).
-                ['tag' => 'frequent_grooming', 'source_ids' => ['S269'], 'refs' => ['miniature_american_shepherd.suitability.petmd_grooming']],
             ],
         ],
 

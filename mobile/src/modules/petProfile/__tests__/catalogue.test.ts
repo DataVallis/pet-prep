@@ -374,7 +374,7 @@ describe('readBreedCatalogue', () => {
     expect(mas?.search_keywords).toEqual(['miniature american shepherd', 'mali ameriški ovčar', 'mali ameriski ovcar', 'mini american', 'mini aussie', 'miniature australian shepherd']);
     expect(mas?.suitability).toEqual({
       suits: ['family_pet', 'children', 'other_pets'],
-      consider: ['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds', 'frequent_grooming'],
+      consider: ['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds'],
     });
     const corgi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pembroke_welsh_corgi');
     expect(corgi).toEqual(

@@ -567,7 +567,7 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
       sort_order: 280,
       suitability: {
         suits: ['family_pet', 'children', 'other_pets'],
-        consider: ['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds', 'frequent_grooming'],
+        consider: ['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds'],
       },
     },
   ],
