@@ -341,6 +341,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "chihuahua",
+            "species": "dog",
+            "file": "dog/chihuahua.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:5c5ce6b424f21e701d4a4ab1354a961f6561ef5c91a5c27c00e9707b55fb3c76",
+            "generated_at": "2026-10-13T21:13:22+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
