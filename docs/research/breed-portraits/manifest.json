@@ -305,6 +305,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "pomeranian",
+            "species": "dog",
+            "file": "dog/pomeranian.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:971fe15e0805a7dc6bff967f369a9974f6dbf07409b835c21b27abe62f0bc5d4",
+            "generated_at": "2026-10-13T10:37:16+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",

@@ -57,7 +57,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "51c708d06e3336379e6b8121ee5c2eb17efb420e034496f3b7ff8b850a0dbf86"
+      "sha256": "de31397b4aefd2ce682efa47db031fb92087cb2d637a8ad7c25ec5b573513551"
     }
   },
   "suitability_vocabulary": {
@@ -15985,7 +15985,12 @@
           "S250"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "pomeranian.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
