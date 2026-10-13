@@ -505,6 +505,7 @@ describe('no health statistics in the app; not flat-faced, in marketing (runbook
             ->and(chiData('proposed_game_parameters.chihuahua.marketing.value'))->toContain('in marketing: yes')
             // The VetCompass median of a young population is research only — never a seeded value.
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'chihuahua')->pluck('value')->all())->not->toContain(8.2)
+            ->and(json_encode(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'chihuahua')->pluck('notes')->all(), JSON_UNESCAPED_UNICODE))->not->toContain('8.2')
             ->and(chiData('chihuahua.health.dental_weight.source_id'))->toBe('S280');
     });
 });

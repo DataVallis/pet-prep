@@ -421,7 +421,7 @@ class BreedStageParamsSeeder extends Seeder
     /**
      * M5-R10-33 Chihuahua senior boundary / senior arrival (108 months): Claude's suggestion — the RKC /
      * PDSA lower bound "Over 12 years" (S275 / S277) instead of the rule's next row, the VetCompass median
-     * 8.2 y (S279, → 74), which its authors say is biased downwards by a young population. verified=false
+     * (S279, → 74), which its authors say is biased downwards by a young population. verified=false
      * until David decides (data.json proposed_game_parameters.chihuahua.senior_boundary_months).
      */
     public const PROPOSED_R10_CHIHUAHUA_SENIOR = 'predlog Claude 2026-10-13 (spodnja meja RKC / PDSA namesto pristranske mediane VetCompass, M5-R10-33) — čaka Davida';
@@ -3266,7 +3266,7 @@ class BreedStageParamsSeeder extends Seeder
                 'senior' => [108, [
                     'unit' => 'months', 'source_id' => 'S11,S275', 'confidence' => 'low', 'verified' => false,
                     'ref' => 'proposed_game_parameters.chihuahua.senior_boundary_months', 'decision' => self::PROPOSED_R10_CHIHUAHUA_SENIOR,
-                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S275; PDSA S277 the same) = 9 y = 108 months. The rule\'s VetCompass row (median 8.2 y, S279 → 74 months) is biased downwards by a young population (its authors) and contradicts both UK bands; no McMillan 2024 value was reachable. Alternatives: 74 (S279), 84 (Dogs Trust > 7 y, S14).',
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S275; PDSA S277 the same) = 9 y = 108 months. The rule\'s VetCompass row (O\'Neill et al. 2020, S279 → 74 months) is biased downwards by a young population (its authors) and contradicts both UK bands; no McMillan 2024 value was reachable. Alternatives: 74 (S279), 84 (Dogs Trust > 7 y, S14).',
                 ]],
             ],
             'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
@@ -3322,7 +3322,7 @@ class BreedStageParamsSeeder extends Seeder
                 'unit' => 'years', 'source_id' => 'S275', 'confidence' => 'medium', 'verified' => true,
                 'ref' => 'chihuahua.lifespan.rkc',
                 'quote' => 'Lifespan: Over 12 years',
-                'notes' => 'RKC breed page lower bound (S275); PDSA "Over 12 years" (S277) the same. The VetCompass median of a young population (8.2 y, S279) is not used. Background for the senior boundary only — never shown as a statistic in the app.',
+                'notes' => 'RKC breed page lower bound (S275); PDSA "Over 12 years" (S277) the same. The VetCompass median of a young population (S279) is not used. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

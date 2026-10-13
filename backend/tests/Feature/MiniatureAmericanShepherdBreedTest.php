@@ -147,11 +147,11 @@ describe('breed, config and database', function () {
         expect(fn () => DB::transaction(fn () => $migration->down()))->toThrow(QueryException::class);
         DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'border_collie']);
         $migration->down();
-        expect($refused(['breed_type' => 'miniature_american_shepherd', 'chihuahua']))->toThrow(QueryException::class);
+        expect($refused(['breed_type' => 'miniature_american_shepherd']))->toThrow(QueryException::class);
         // The Boston Terrier (previous dog migration) stays allowed after the rollback.
         DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'boston_terrier']);
         $migration->up();
-        DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'miniature_american_shepherd', 'chihuahua']);
+        DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'miniature_american_shepherd']);
         expect(Pet::findOrFail($pet->id)->breed_type)->toBe(BreedType::MiniatureAmericanShepherd);
         // The cat list of pets_species_breed_check is untouched: a Bengal is still a cat.
         expect($refused(['breed_type' => 'bengal']))->toThrow(QueryException::class);
