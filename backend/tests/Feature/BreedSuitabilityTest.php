@@ -526,9 +526,10 @@ it('gives the Boxer the new needs_company and short_muzzle_breathing tags and th
         ->and($boxer['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('sensitive_skin')->not->toContain('shorter_lifespan')
         ->not->toContain('hips_hind_legs')->not->toContain('heart_and_spine')->not->toContain('frequent_grooming');
 
-    // Only the Boxer and the Boston Terrier (AKC S260, M5-R10-31) carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
+    // Only the Boxer, the Boston Terrier (AKC S260, M5-R10-31) and the Miniature American Shepherd (PetMD S269, M5-R10-32)
+    // carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier], true)) {
+        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('needs_company');
         }
         if (! in_array($breed, [BreedType::Boxer, BreedType::ShihTzu], true)) {
@@ -691,4 +692,20 @@ it('gives the Boston Terrier apartment, family_pet, children and the flat-face a
         ->and(bsEntry('boston_terrier.suitability.akc_time_alone')['quote'])->toBe('This breed doesn’t fare well when left alone for extended periods of time.')
         ->and(bsEntry('boston_terrier.suitability.rkc_shedding')['notes'])->toContain('shed minimally')
         ->and(bsEntry('boston_terrier.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Flat/ Apartment');
+});
+
+it('gives the Miniature American Shepherd family_pet, children, other_pets and the herding / company / coat chips — never small_children, no new tag (runbook 2026-10-13)', function () {
+    $mas = app(BreedSuitability::class)->for(BreedType::MiniatureAmericanShepherd);
+    expect($mas['suits'])->toBe(['family_pet', 'children', 'other_pets'])
+        // Caveats (AKC: may herd children; PetMD: supervise at first) → never small_children; RKC page not reachable → no apartment / large_home.
+        ->and($mas['suits'])->not->toContain('small_children')->not->toContain('apartment')->not->toContain('large_home')->not->toContain('often_alone')
+        // At least 1 h a day (PetMD) → not the ~2 h active_family / long_daily_exercise pair.
+        ->and($mas['suits'])->not->toContain('active_family')
+        ->and($mas['consider'])->toBe(['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds', 'frequent_grooming'])
+        ->and($mas['consider'])->not->toContain('long_daily_exercise')->not->toContain('chases_small_pets');
+
+    expect(bsEntry('miniature_american_shepherd.suitability.akc_children')['quote'])->toBe('They tend to be good with children, but may try to herd them.')
+        ->and(bsEntry('miniature_american_shepherd.behaviour.time_alone')['quote'])->toBe("Their devotion to family can lead to separation anxiety when they're left alone.")
+        ->and(bsEntry('miniature_american_shepherd.suitability.petmd_grooming')['quote'])->toContain('a couple times a week')
+        ->and(bsEntry('miniature_american_shepherd.suitability.petmd_children_pets')['quote'])->toContain('supervised initially');
 });

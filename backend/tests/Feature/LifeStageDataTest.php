@@ -157,19 +157,19 @@ describe('import provenance', function () {
         // (minutes, progress, decay), the starting progress and the two training
         // effects (David 2026-10-07) are David's decisions (verified).
         // M5-R06-03: dog breeds only — the cat rowset is checked in its own describe below.
-        // M5-R10-12 / M5-R10-23: the Bernese Mountain Dog's (76) and the Cane Corso's (84) senior
-        // boundary / senior arrival age are Claude's suggestions (no runbook rule produced a value) —
-        // open for David.
+        // M5-R10-12 / M5-R10-23 / M5-R10-32: the Bernese Mountain Dog's (76), the Cane Corso's (84) and the
+        // Miniature American Shepherd's (108) senior boundary / senior arrival age are Claude's suggestions
+        // (no runbook rule produced a value) — open for David.
         // M5-R13: the brushing routine of the five breeds whose sources say "more than once a
         // week" without a number — 2 per week, confirmed by David 2026-10-12 (no longer open).
         $dogOpen = BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false);
-        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso'])->pluck('key')->unique()->values()->all())
+        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd'])->pluck('key')->unique()->values()->all())
             ->toEqualCanonicalizing([
                 StageParamKey::ChewingChancePerDay->value,
             ]);
         expect((clone $dogOpen)->where('key', StageParamKey::GroomingSessionsPerWeek->value)->count())->toBe(0)
             ->and((clone $dogOpen)->where('key', StageParamKey::SocialisationTasksPerWeek->value)->count())->toBe(0);
-        foreach (['bernese-mountain-dog', 'cane-corso'] as $slug) {
+        foreach (['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd'] as $slug) {
             expect((clone $dogOpen)->where('breed_slug', $slug)->whereNotIn('key', [StageParamKey::ChewingChancePerDay->value])->get()->map(fn ($r) => "{$r->stage}.{$r->key}")->sort()->values()->all())
                 ->toBe(['senior.'.StageParamKey::ArrivalAgeMonths->value, 'senior.'.StageParamKey::StartsAtMonths->value], $slug);
         }

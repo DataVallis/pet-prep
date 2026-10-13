@@ -35,6 +35,7 @@ return [
     'great_dane' => 'Nemška doga',
     'pomeranian' => 'Pomeranec',
     'boston_terrier' => 'Bostonski terier',
+    'miniature_american_shepherd' => 'Mali ameriški ovčar',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

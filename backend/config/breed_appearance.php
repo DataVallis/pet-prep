@@ -290,6 +290,16 @@
 | "Pinched nostrils.", RKC "Nostrils open."). Colour weights are unsourced → `verified => false`;
 | brindle and white weighted highest (the colour both standards prefer — the register portrait).
 |
+| Miniature American Shepherd (M5-R10-32, docs/research/dog-data miniature_american_shepherd.appearance):
+| a small, athletic herding dog, slightly longer than tall (FCI 367 S265, AKC standard S266); medium
+| texture, straight-to-wavy, weather-resistant, medium-length coat; triangular, moderate, high-set ears
+| that fold (prick ears a severe fault); eyes brown, blue, hazel, amber or any combination, fully
+| surrounded by colour; natural undocked tail (the standards prefer docked / natural bobtail — the game
+| never draws docking). Colours: black, blue merle, red (liver), red (liver) merle, with or without white
+| and tan markings, "with no order of preference" — merle is standard here (as the Australian Shepherd);
+| never white body splashes or a predominantly white head. Colour weights are unsourced →
+| `verified => false`; blue merle weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1429,6 +1439,44 @@ return [
             'muzzle' => ['moderate short square muzzle free from wrinkles, with a black wide nose and clearly open nostrils'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-32 (docs/research/dog-data/data.json miniature_american_shepherd.appearance; runbook rules
+    // 2026-10-10: standard colours only — merle is standard for this breed; natural undocked tail).
+    'miniature_american_shepherd' => [
+        'display_name' => 'Miniature American Shepherd',
+        // Colour frequencies are in no source (miniature_american_shepherd.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 367 (S265), AKC standard (S266), PetMD (S269) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S265 "The Miniature American Shepherd is a small size herding dog that originated in the United States."; males 35.5–46 cm, females 33–43.5 cm',
+            'build' => 'S265 slightly longer than tall, moderate bone, athletic (paraphrase as returned); PetMD S269 "They are athletic and have a lot of energy"',
+            'coat_length' => 'S265 "Hair is of medium texture, straight to wavy, weather resistant, and of medium length."',
+            'coat_color' => 'S265 "With no order of preference, the recognized colors are black, blue merle, red, liver and red or liver merle." (weights unsourced)',
+            'coat_pattern' => 'S265 "The hairline of a white collar does not exceed the withers at the skin."; "White on the head does not predominate, and the eyes are fully surrounded by color and pigment."; disqualifying white body splashes',
+            'ear_carriage' => 'S265 "Are triangular, of moderate size, set high on the head."; "Severe Fault - Prick ears and ears that hang with no lift."',
+            'eye_color' => 'S265 "Acceptable in all coat colors, one or both eyes may be brown, blue, hazel, amber or any color combination thereof"',
+            'tail' => 'S265 "The undocked tail when at rest may hang in a slight curve." (the game draws a natural undocked tail — no docking)',
+        ],
+        'traits' => [
+            'size' => ['small to medium-sized'],
+            'build' => [['value' => 'athletic, slightly longer than tall, moderate bone', 'weight' => 3], 'compact, agile herding build'],
+            'coat_length' => ['medium-length, straight to wavy, weather-resistant coat'],
+            // Standard colours only (S265, S266); blue merle highest → the register portrait is blue merle.
+            'coat_color' => [
+                ['value' => 'blue merle', 'weight' => 35],
+                ['value' => 'black', 'weight' => 25],
+                ['value' => 'red merle', 'weight' => 20],
+                ['value' => 'red', 'weight' => 20],
+            ],
+            'coat_pattern' => [
+                ['value' => 'white collar, chest and legs with copper points, eyes fully surrounded by colour', 'weight' => 3],
+                'small white blaze, white chest and feet with copper points, eyes fully surrounded by colour',
+            ],
+            'ear_carriage' => ['triangular, set high, folding forward'],
+            'eye_color' => [['value' => 'brown', 'weight' => 3], 'blue', 'amber', 'hazel'],
+            'tail' => ['natural undocked tail hanging in a slight curve'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',
