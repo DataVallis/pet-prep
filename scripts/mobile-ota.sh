@@ -34,6 +34,7 @@ while IFS='=' read -r key value; do
 done < <(node -e "const e=require('./eas.json').build.production.env||{};for(const[k,v]of Object.entries(e))console.log(k+'='+v)")
 
 needs_build=()
+published=()
 for platform in ios android; do
   runtime=$(npx expo-updates runtimeversion:resolve --platform "$platform" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(JSON.parse(s).runtimeVersion))')
   count=$("${EAS[@]}" build:list --platform "$platform" --status finished --channel production \
@@ -45,6 +46,7 @@ for platform in ios android; do
     if [[ "$DRY_RUN" != "--dry-run" ]]; then
       "${EAS[@]}" update --channel production --environment production --platform "$platform" \
         --message "$MESSAGE" --non-interactive
+      published+=("$platform")
     fi
   else
     needs_build+=("$platform")
@@ -55,4 +57,10 @@ done
 
 if [[ ${#needs_build[@]} -gt 0 ]]; then
   echo "Store build needed for: ${needs_build[*]}"
+fi
+
+# Both platforms got this bundle → mobile-ota.yml records it in docs/research/app-release.json,
+# so the website register shows the new breeds as "in the app" (David 2026-10-13).
+if [[ ${#published[@]} -eq 2 ]]; then
+  echo "released=true" >>"${GITHUB_OUTPUT:-/dev/null}"
 fi
