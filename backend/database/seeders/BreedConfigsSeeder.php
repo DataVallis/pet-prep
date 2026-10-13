@@ -574,6 +574,28 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.miniature_schnauzer',
                 'search_keywords' => ['miniature schnauzer', 'pritlikavi šnavcer', 'pritlikavi snavcer', 'mali šnavcer', 'zwergschnauzer', 'schnauzer', 'šnavcer', 'mini schnauzer'],
             ],
+            // M5-R10-28 Shih Tzu (docs/research/dog-data/data.json shih_tzu, sources S229–S236;
+            // runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal (proposed_game_parameters.shih_tzu
+            // .step_goal_adult: 60 min × 100 steps/min — RKC S231 "Up to 1 hour per day", PDSA S233
+            // "an hour exercise every day") — only the legacy-profile fallback. Hunger / thirst
+            // decay, poops and water are the Border Collie's (no per-breed number).
+            [
+                'breed_slug' => BreedType::ShihTzu->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 240,
+                'label_key' => 'breeds.shih_tzu',
+                'search_keywords' => ['shih tzu', 'shih-tzu', 'shihtzu', 'ši-cu', 'šicu', 'ši cu', 'sicu'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -345,6 +345,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_MINIATURE_SCHNAUZER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-27)';
 
     /**
+     * M5-R10-28 Shih Tzu (unattended run 2026-10-13, data.json
+     * proposed_game_parameters.shih_tzu.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise
+     * 60 min, senior 45 min, puppy 10 min × age capped at 60, stages 9 / 36 / 114 (senior from
+     * the VetCompass median 12.7 y, S234 — provisional until McMillan 2024 is checked), arrival
+     * 2 / 9 / 36 / 114, learning multiplier 0.5 (Coren 70, Lowest); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_SHIH_TZU = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-28)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -469,6 +479,7 @@ class BreedStageParamsSeeder extends Seeder
         'dobermann' => [1, 'S209', 'Grooming: Once a week', 'high', false],
         'boxer' => [1, 'S215', 'Grooming: Once a week', 'high', false],
         'miniature_schnauzer' => [3, 'S226', 'Grooming is needed 2-3 times a week', 'high', false],
+        'shih_tzu' => [7, 'S231', 'Grooming: Every day', 'high', false],
     ];
 
     /**
@@ -492,6 +503,7 @@ class BreedStageParamsSeeder extends Seeder
         'cane_corso' => ['S199', 'Remember to leave a gap after eating and before exercising.'],
         'dobermann' => ['S211', 'Remember to leave at a gap after eating and before exercising.'],
         'boxer' => ['S219', 'Remember to leave a gap between eating and exercising.'],
+        'shih_tzu' => ['S233', 'Remember to leave a gap after eating and before exercising.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -530,13 +542,14 @@ class BreedStageParamsSeeder extends Seeder
         'pembroke_welsh_corgi' => ['S206', 'socialisation with children and training at a young age can help to overcome these possible problems.'],
         'dobermann' => ['S211', 'it’s important to socialise your dog with different experiences, people and dogs from a young age.'],
         'boxer' => ['S219', "Boxers have a strong guarding instinct so it's important to socialise your Boxer with other dogs from a young age."],
+        'shih_tzu' => ['S233', 'Shih Tzus can be good-natured family pets if they’ve been given the right socialisation and training'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1104,6 +1117,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-27 (docs/research/dog-data/data.json miniature_schnauzer,
             // S221–S228; runbook rules in proposed_game_parameters.miniature_schnauzer).
             BreedType::MiniatureSchnauzer => self::miniatureSchnauzerProfile(),
+            // M5-R10-28 (docs/research/dog-data/data.json shih_tzu,
+            // S229–S236; runbook rules in proposed_game_parameters.shih_tzu).
+            BreedType::ShihTzu => self::shihTzuProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -2756,6 +2772,77 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'miniature_schnauzer.lifespan.median_uk',
                 'quote' => 'The median age at death of Miniature Schnauzers overall was 11.6 years (IQR 9.3–13.1, range 0.5–17.0).',
                 'notes' => 'O\'Neill et al. 2019 (S227), VetCompass UK 2013. RKC / PDSA "Over 10 years" (S223, S226) agree. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * M5-R10-28 Shih Tzu — docs/research/dog-data/data.json shih_tzu + proposed_game_parameters.shih_tzu.
+     *
+     * @return array<string, mixed>
+     */
+    private static function shihTzuProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_SHIH_TZU;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S234', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.shih_tzu.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog finishes growing at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [114, $boundary('Derived game boundary: last 25 % of lifespan (S11) × VetCompass median 12.7 y (Dale et al. 2024, S234) = 9.525 y = 114.3 → 114 months. No McMillan 2024 value was reachable. Not chosen: 90 (RKC "Over 10 years", S231), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 114],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shih_tzu.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S231', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shih_tzu.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S231) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA "an hour exercise every day" (S233) agrees.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shih_tzu.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[4.5, 8.0], [
+                'unit' => 'kg', 'source_id' => 'S229', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'shih_tzu.adult_weight.fci',
+                'quote' => 'Weight: 4.5 to 8 kg. Ideal weight 4.5 - 7.5 kg',
+                'notes' => 'FCI standard N° 208 (S229): one range for both sexes (ideal 4.5–7.5 kg). RKC standard (S232) the same; PDSA average 4.5–7.5 kg (S233). The UK pet population mean (S234) — background only.',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'shih_tzu.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (FCI 4.5–8 kg ≈ 10–17.6 lb at the Toy / Small edge of S10; the UK mean adult weight (S234) falls in Small; RKC / PDSA size "Small").',
+            ]],
+            'coren_rank' => [70, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'shih_tzu.trainability.coren_rank',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 70, tier "Lowest Degree of Working/Obedience Intelligence" (ranks 70–79). Coren\'s own article (S34) not reachable this run.',
+            ]],
+            'learning_multiplier' => [0.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shih_tzu.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 70 (S35) in the "Lowest" tier (ranks 70–79) → 0.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.7, [
+                'unit' => 'years', 'source_id' => 'S234', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'shih_tzu.lifespan.median_uk',
+                'quote' => 'The median age of death was 12.7 years (IQR 8.7–14.3, range 2.0–19.9)',
+                'notes' => 'Dale et al. 2024 (S234), VetCompass UK 2016. RKC / PDSA "Over 10 years" (S231, S233) agree. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

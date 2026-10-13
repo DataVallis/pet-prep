@@ -395,6 +395,7 @@ const SPECIES = [
       { id: 'dobermann', availability: 'in_app', synonyms: { en: ['Doberman', 'Doberman Pinscher', 'Dobermann Pinscher'], sl: ['dobermann', 'doberman pinscher'] } },
       { id: 'boxer', availability: 'in_app', synonyms: { en: ['German Boxer', 'Deutscher Boxer'], sl: ['nemški boksar', 'nemski boksar', 'boxer'] } },
       { id: 'miniature_schnauzer', availability: 'in_app', synonyms: { en: ['Zwergschnauzer', 'Mini Schnauzer'], sl: ['mali šnavcer', 'pritlikavi snavcer', 'zwergschnauzer'] } },
+      { id: 'shih_tzu', availability: 'in_app', synonyms: { en: ['Shih-Tzu', 'Shihtzu'], sl: ['ši-cu', 'šicu', 'shih-tzu'] } },
     ],
   },
   {
@@ -420,7 +421,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -876,6 +877,28 @@ const DOG_FACTS = {
       ['skin_comedo_allergy', 'health.skin'],
     ],
   },
+  // M5-R10-28. Not exported: height.fci (an upper bound only — the PDSA average is shown, Yorkshire
+  // Terrier precedent), adult_weight.pdsa (the standard's ideal range), adult_weight.vetcompass_mean (the pet
+  // population — would read as a target weight), lifespan.mcmillan_2024 (null), lifespan.senior_from (derived),
+  // health.breed_watch (no concern), health.skull_shape (the BVA basis of the chip), health.face_care (an
+  // unbuilt need — ROADMAP M5-R14), health.other (a list without advice), every VetCompass percentage (S234).
+  // Weight = FCI 208 (S229, one range for both sexes); lifespan = the VetCompass median (S234, McMillan 2024
+  // not reachable) and the RKC band (S231).
+  shih_tzu: {
+    height: ['height.pdsa_average'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['short_face_breathing', 'health.brachycephaly_boas'],
+      ['dental_disease_care', 'health.dental'],
+      ['eye_problems_pra_cataracts_dry_eye', 'health.eyes'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1062,6 +1085,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.miniature_schnauzer.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.miniature_schnauzer.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.miniature_schnauzer.exercise_minutes_senior',
+  },
+  shih_tzu: {
+    adult_minutes: ['proposed_game_parameters.shih_tzu.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.shih_tzu.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.shih_tzu.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.shih_tzu.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.shih_tzu.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.shih_tzu.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],

@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "c776c07da63e45e947326fa7366d617ab42267984718e165ee229db7f1c040a7"
+      "sha256": "407c191b47a8261e919e6098e5e7caafa9aa540a050c8931ffbd68f02ed7a00a"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "61ce0ffafd64054c0daad9906bb73fe4f1b8bf1f229c844c574d8226a22a86ef"
+      "sha256": "e29a9009e419ca333fb957bfbc654184c50394032120e62514854388c1b4b7fd"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,27 +25,27 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "7465424c6be6dc2c342f5c4e1c2284cce24ad84c8cc50bbd819b7f96fecb011f"
+      "sha256": "73615d2745c7f4d21deddad5abdccc18e48c66f5c7844937e18968c6f19e4a9a"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "ab5dd35121c1b64ffa329dd19cf4908445629a839139fc64ba89d8dfeda02d7f"
+      "sha256": "0649220f0e3b906f237aad537001bb8f9b4b6656903f48a06e1d52176f5d966a"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "fa9f6bf3d6a9ef0935d12298dd755d9fffe131b708af3d95241b27175078017c"
+      "sha256": "bf4e574710d23cb257868ebebd345940844662c92cf893ce34918fc8fa3f139e"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "6081bc0b4d7a37a39bed4bd343ba689ff0a9c77f213b1787ae28e5c57353a5fc"
+      "sha256": "985aee93e5842a67e0e0952f41799e6575ef0ec06f9476416d4aa6c15206d3de"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "3d0616c137af996851275807ea33cc50da639527295e5b471c18b875988e0e99"
+      "sha256": "3dacd162999ba755709c30e41c826f7fa23b86511d4466d65a6ab4b4080f597c"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "23c152337a6900062698a11cfa186ea5174907a19c6fce8570741c46a76fb8b0"
+      "sha256": "4bf52fe36ffc4b549c570d575a90b8ad860f5d598b4637b3e63b1b7809807f21"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -186,7 +186,7 @@
         }
       },
       "status": "available",
-      "breed_count": 23,
+      "breed_count": 24,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -14313,6 +14313,525 @@
       ]
     },
     {
+      "id": "shih_tzu",
+      "species": "dog",
+      "order": 23,
+      "availability": "in_app",
+      "name": {
+        "en": "Shih Tzu",
+        "sl": "Shih tzu"
+      },
+      "slug": {
+        "en": "shih-tzu",
+        "sl": "shih-tzu"
+      },
+      "synonyms": {
+        "en": [
+          "Shih-Tzu",
+          "Shihtzu"
+        ],
+        "sl": [
+          "ši-cu",
+          "šicu",
+          "shih-tzu"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S231"
+          ],
+          "ref": "shih_tzu.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": [
+            27,
+            27
+          ],
+          "source_ids": [
+            "S233"
+          ],
+          "ref": "shih_tzu.height.pdsa_average",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              4.5,
+              8
+            ],
+            "female": [
+              4.5,
+              8
+            ]
+          },
+          "source_ids": [
+            "S229"
+          ],
+          "ref": "shih_tzu.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "shih_tzu.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 12.7,
+          "source_ids": [
+            "S234"
+          ],
+          "ref": "shih_tzu.lifespan.median_uk",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S231"
+          ],
+          "ref": "shih_tzu.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S231"
+          ],
+          "ref": "shih_tzu.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "long"
+          ],
+          "source_ids": [
+            "S231"
+          ],
+          "ref": "shih_tzu.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S231"
+          ],
+          "ref": "shih_tzu.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S231"
+          ],
+          "ref": "shih_tzu.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 70,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "shih_tzu.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 208,
+            "group": 9,
+            "section": 5,
+            "origin": "CN-XZ"
+          },
+          "source_ids": [
+            "S230"
+          ],
+          "ref": "shih_tzu.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "short_face_breathing",
+          "source_ids": [
+            "S233"
+          ],
+          "ref": "shih_tzu.health.brachycephaly_boas",
+          "confidence": "high"
+        },
+        {
+          "key": "dental_disease_care",
+          "source_ids": [
+            "S235"
+          ],
+          "ref": "shih_tzu.health.dental",
+          "confidence": "high"
+        },
+        {
+          "key": "eye_problems_pra_cataracts_dry_eye",
+          "source_ids": [
+            "S233"
+          ],
+          "ref": "shih_tzu.health.eyes",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S231"
+            ],
+            "refs": [
+              "shih_tzu.suitability.rkc_size_of_home",
+              "shih_tzu.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S233"
+            ],
+            "refs": [
+              "shih_tzu.suitability.pdsa_family",
+              "shih_tzu.behaviour.family"
+            ]
+          },
+          {
+            "tag": "first_time_owner",
+            "source_ids": [
+              "S233"
+            ],
+            "refs": [
+              "shih_tzu.suitability.pdsa_first_time_owner"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S231",
+              "S233"
+            ],
+            "refs": [
+              "shih_tzu.suitability.rkc_grooming",
+              "shih_tzu.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "short_muzzle_breathing",
+            "source_ids": [
+              "S233",
+              "S236"
+            ],
+            "refs": [
+              "shih_tzu.health.brachycephaly_boas",
+              "shih_tzu.health.skull_shape"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 114
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 114
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.shih_tzu.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S231"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S231 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.shih_tzu.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.shih_tzu.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S234"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 114 (0.75 × 12.7 y, VetCompass median S234)"
+          },
+          {
+            "ref": "proposed_game_parameters.shih_tzu.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 70, Lowest tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.shih_tzu.grooming",
+            "basis_source_ids": [
+              "S231"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S231",
+          "S234"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "none_recommended",
+        "tests": [],
+        "basis_source_ids": [
+          "S231"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S229",
+        "S230",
+        "S231",
+        "S233",
+        "S234",
+        "S235",
+        "S236",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -17629,6 +18148,55 @@
       "publisher": "Royal Veterinary College — VetCompass",
       "title": "Miniature Schnauzer (VetCompass infographic / summary of S227, 2019-02-21) (PDF)",
       "url": "https://www.rvc.ac.uk/Media/Default/VetCompass/190221%20Miniature%20Schnauzer.pdf"
+    },
+    {
+      "id": "S229",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 208 — Shih Tzu (EN PDF, dev.fci.be host; date of publication of the valid standard 22.08.2017)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/208g09-en.pdf"
+    },
+    {
+      "id": "S230",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Shih Tzu (208)",
+      "url": "https://www.fci.be/EN/nomenclature/SHIH-TZU-208.html"
+    },
+    {
+      "id": "S231",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Shih Tzu — breed information page (Breeds A to Z, older address)",
+      "url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4102"
+    },
+    {
+      "id": "S233",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Shih Tzu breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/shih-tzu"
+    },
+    {
+      "id": "S234",
+      "tier": "A",
+      "publisher": "Canine Medicine and Genetics 11:1 (2024)",
+      "title": "Dale F., Brodbelt D. C., West G., Church D. B., Lee Y. H., O'Neill D. G. Demography, common disorders and mortality of Shih Tzu dogs under primary veterinary care in the UK. doi:10.1186/s40575-023-00135-y",
+      "url": "https://doaj.org/article/657d6c33d0c3436bb75e64d9ee6250eb"
+    },
+    {
+      "id": "S235",
+      "tier": "B",
+      "publisher": "Royal Veterinary College — VetCompass",
+      "title": "Shih Tzu (VetCompass infographic / summary of S234, 2024-01-24) (PDF)",
+      "url": "https://www.rvc.ac.uk/Media/Default/VetCompass/240124%20VetCompass%20-%20Shih%20Tzu%20infographic.pdf"
+    },
+    {
+      "id": "S236",
+      "tier": "A",
+      "publisher": "British Veterinary Association",
+      "title": "BVA brachycephalic dogs policy position, January 2018 (full position, PDF)",
+      "url": "https://www.bva.co.uk/media/1183/bva-position-on-brachycephalic-dogs-full.pdf"
     },
     {
       "id": "C1",

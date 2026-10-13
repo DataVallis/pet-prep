@@ -31,6 +31,7 @@ return [
     'dobermann' => 'Dobermann',
     'boxer' => 'Boxer',
     'miniature_schnauzer' => 'Miniature Schnauzer',
+    'shih_tzu' => 'Shih Tzu',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',
