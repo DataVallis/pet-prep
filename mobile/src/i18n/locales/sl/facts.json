@@ -1,0 +1,48 @@
+{
+  "child": {
+    "book": "Ali si vedel? Zanimivosti o tvoji pasmi",
+    "bookUnread": "Ali si vedel? Zanimivosti o tvoji pasmi, čakajo nove zanimivosti",
+    "bookHint": "Odpre zaslon Moja pasma",
+    "chip": "Nekaj novega o tvoji pasmi",
+    "chipHint": "Odpre zanimivost o tvoji pasmi",
+    "eyebrow": "ALI SI VEDEL?",
+    "meta": "{{breed}} · {{category}}",
+    "source": "Vir: {{source}}",
+    "progress": "{{read}} / {{total}}",
+    "progressA11y": "Prebrano {{read}} od {{total}}",
+    "great": "Super!",
+    "more": "Več o moji pasmi",
+    "dialogLabel": "Ali si vedel? {{title}}",
+    "dialogRead": "{{title}}. {{why}} Vir: {{source}}.",
+    "dialogReadNoWhy": "{{title}}. Vir: {{source}}.",
+    "petImage": "Slika tvojega ljubljenčka"
+  },
+  "guide": {
+    "title": "Moja pasma",
+    "eyebrow": "MOJA PASMA",
+    "back": "Nazaj",
+    "search": "Išči med zanimivostmi",
+    "searchA11y": "Išči med zanimivostmi o tvoji pasmi",
+    "clearSearch": "Počisti iskanje",
+    "all": "Vse",
+    "progress": "Prebrano: {{read}} od {{total}}",
+    "new": "Novo",
+    "newA11y": "novo",
+    "noResults": "Nič ne najdem. Poskusi z drugo besedo.",
+    "loading": "Nalagam zanimivosti …",
+    "loadFailed": "Zanimivosti se niso naložile.",
+    "retry": "Poskusi znova",
+    "openFactHint": "Odpre zanimivost"
+  },
+  "categories": {
+    "origin": "Izvor",
+    "body": "Telo",
+    "temperament": "Značaj",
+    "exercise": "Gibanje",
+    "diet": "Prehrana",
+    "grooming": "Nega",
+    "training": "Šolanje",
+    "family": "Družina",
+    "health": "Zdravje"
+  }
+}

@@ -69,3 +69,12 @@ jest.mock('expo-sensors', () => ({
 // Mock laravel-echo and pusher-js
 jest.mock('laravel-echo', () => jest.fn());
 jest.mock('pusher-js', () => jest.fn());
+
+// No test may reach the real API (the app defaults to production). An endpoint a test does not
+// mock fails like an offline phone; tests that exercise the client assign their own fetch.
+// M5-R09c: the HUD of a pedigree pet now also asks for its breed facts.
+// A plain function (not jest.fn) so `jest.restoreAllMocks()` never brings the real fetch back.
+globalThis.fetch = ((input: unknown) =>
+  Promise.reject(
+    new TypeError(`Network request failed (no fetch in tests): ${typeof input === 'string' ? input : String((input as { url?: unknown })?.url ?? input)}`),
+  )) as typeof fetch;

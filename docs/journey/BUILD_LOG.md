@@ -22,6 +22,19 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 🧒 Otroci: »Doga je ogromna in rada teče! Vsak dan jo pelji na dolg sprehod — a po obroku najprej malo počakaj, da kuža v miru prebavi.«
 - 💼 Investitorji: »Enajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC — vse številke iz virov ali stalnih pravil; ko vir pokaže skrb za dobrobit, ki je noben obstoječi ključ ne pokrije, sistem doda novo mirno oznako (tu: veke).«
 - 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri nemški dogi upošteva točke Breed Watch The Royal Kennel Club (veke, zadnje noge) in priporočene teste staršev (DNK test IMGD, kolki, komolci, oči) — brez obljub o zdravju.«
+## 2026-10-13 — »Ali si vedel?« v otrokovi aplikaciji (M5-R09c)
+
+**Kaj se je zgodilo:** Otrok s pasemskim ljubljenčkom (danes border collie ali maine coon) ima v aplikaciji gumb **knjiga** in zaslon **»Moja pasma«**: resnične zanimivosti o svoji pasmi, vsaka z virom, iskanje (deluje tudi brez šumnikov), teme in »Prebrano: 8 od 40«. Okno **»Ali si vedel?«** s sliko lastnega ljubljenčka se pokaže samo od sebe največ 2-krat na teden — in samo v **mirnem trenutku**: ko je otrok pravkar uspešno poskrbel za ljubljenčka, so vse vrednosti vsaj 50 %, ni nereda, igre ali zaklepa, niso tihe ure in ni prvih 10 sekund po odprtju. Sicer otrok vidi le čip »Nekaj novega o tvoji pasmi« — tudi dotik čipa šteje kot okno tega dne (David, 13. 10.), zato sta skupaj največ dve na teden. Strežnik ima zadnjo besedo (dve napravi nikoli ne pokažeta dveh oken).
+
+**Zakaj je pomembno:** Zanimivost je **nagrada za skrb, ne prekinitev** — in pogosto razloži pravilo igre (»zato je tvoj cilj toliko korakov«). Miren vmesnik po CGP: brez zvoka, brez konfetov, ena drobna rožnata pika.
+
+**Številke:** 4 nove končne točke v aplikaciji (že na strežniku od R09b), 3 novi zasloni / elementi (okno, čip, »Moja pasma«), 69 novih testov (skupaj 2320). Ploščic s hitrimi številkami ni, ker zanje ni vira. Na telefonu še ni preverjeno; zanimivosti se pokažejo, ko jih David odobri v administraciji.
+
+**Kako povedati:**
+- 👩 Starši: »Vaš otrok med skrbjo izve resnične stvari o pasmi svojega ljubljenčka — vsaka z virom, največ dvakrat na teden samodejno in nikoli sredi igre ali v tihih urah.«
+- 🧒 Otroci: »Tapni knjigo in odkrij, kaj zna tvoja pasma! Ko lepo poskrbiš za ljubljenčka, te včasih čaka presenečenje: Ali si vedel?«
+- 💼 Investitorji: »Vsebina z revizijsko sledjo, ki se v aplikaciji pokaže ob pravem trenutku — pravila 'mirnega trenutka' so preizkušena s testi, nova vsebina ne potrebuje nove verzije aplikacije.«
+- 🛠 Tehnično: »'Miren trenutek' je čista funkcija (vsaka ovira posebej testirana); kontrolni hook posluša predpomnilnik mutacij TanStack Query za sprejete skrbi, 422 `refused` je odgovor, ne napaka.«
 
 ---
 

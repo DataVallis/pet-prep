@@ -50,6 +50,10 @@ Starši izberejo, ali je tvoj kuža **mladiček**, **mlad pes**, **odrasel** ali
 
 Na desni strani zaslona vidiš štiri stolpce. **Zelena** = kuža je vesel. **Rumena** = pazi. **Rdeča** = kuža te zelo potrebuje!
 
+## Ali si vedel? 📖 *(v aplikaciji od 13. 10. 2026 — še ni v trgovini; samo za pasemske ljubljenčke, npr. border collie in maine coon)*
+Če ima tvoj ljubljenček pasmo, v zgornji vrstici vidiš **gumb s knjigo**. Tapni ga in odpre se **»Moja pasma«**: resnične zanimivosti o tvoji pasmi — vsaka ima vir, od kod je (npr. »Vir: The Royal Kennel Club«). Lahko iščeš (npr. »gibanje«) in izbereš temo. Drobna rožnata pika na knjigi pomeni, da te čaka nekaj novega; zanimivosti, ki so zate še nove, imajo oznako **»Novo«**. Vse lahko prebereš takoj.
+Dvakrat na teden se zanimivost pokaže sama — ampak samo, ko je mirno: ko je ljubljenček pravkar dobil tvojo skrb in je z njim vse v redu. Če takrat ni mirno, nad gumbi piše **»Nekaj novega o tvoji pasmi«** — tapni, ko imaš čas. Zanimivost ti pove tudi, **zakaj je to pomembno zate** (npr. zakaj ima tvoj ljubljenček tak cilj korakov). Mešanček in domača mačka tega nimata.
+
 ## Ko si v šoli ali spiš
 Starši nastavijo **tihe ure**. Takrat kuža počiva in te ne moti — tudi obvestil ne pošilja.
 
