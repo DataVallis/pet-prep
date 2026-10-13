@@ -46,6 +46,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   miniature_schnauzer: 'dog',
   shih_tzu: 'dog',
   great_dane: 'dog',
+  pomeranian: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -96,6 +97,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'miniature_schnauzer',
   'shih_tzu',
   'great_dane',
+  'pomeranian',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */

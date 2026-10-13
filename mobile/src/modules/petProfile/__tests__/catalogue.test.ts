@@ -141,6 +141,7 @@ describe('readBreedCatalogue', () => {
       'miniature_schnauzer',
       'shih_tzu',
       'great_dane',
+      'pomeranian',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -349,6 +350,13 @@ describe('readBreedCatalogue', () => {
       suits: ['active_family', 'family_pet', 'large_home'],
       consider: ['long_daily_exercise', 'not_for_small_children', 'shorter_lifespan', 'hips_hind_legs', 'eyelid_problems', 'chews_when_bored', 'sheds', 'drools', 'chases_small_pets'],
     });
+    const pomeranian = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pomeranian');
+    expect(pomeranian).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 260 }),
+    );
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-30, runbook rules; new tag older_children).
+    expect(pomeranian?.search_keywords).toEqual(['pomeranian', 'pomeranec', 'pom', 'nemški špic', 'nemski spic', 'german toy spitz', 'toy spitz']);
+    expect(pomeranian?.suitability).toEqual({ suits: ['apartment', 'family_pet', 'other_pets'], consider: ['older_children', 'frequent_grooming', 'sheds'] });
     const corgi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pembroke_welsh_corgi');
     expect(corgi).toEqual(
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 200 }),
@@ -388,6 +396,7 @@ describe('readBreedCatalogue', () => {
       'miniature_schnauzer',
       'shih_tzu',
       'great_dane',
+      'pomeranian',
     ]);
   });
 });
@@ -436,7 +445,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(22);
+    expect(CONSIDER_TAGS).toHaveLength(23);
+    // M5-R10-30 (runbook new-tag rule): small dog — better with older children (the Pomeranian, AKC S251); no numbers.
+    expect(CONSIDER_TAGS).toContain('older_children');
     // M5-R10-29 (runbook welfare rule, new key): eyelids and eyes — check eye tests (the Great Dane, RKC Breed Watch).
     expect(CONSIDER_TAGS).toContain('eyelid_problems');
     // M5-R10-26 (runbook welfare rule, new key): shorter muzzle — can have breathing problems (the Boxer; not the flat-face chip).
@@ -545,6 +556,17 @@ describe('breed search', () => {
     expect(find('šicu')).toEqual(['shih_tzu']);
     expect(find('sicu')).toEqual(['shih_tzu']);
     expect(find('ši-cu')).toEqual(['shih_tzu']);
+  });
+
+  it('M5-R10-30: finds the Pomeranian by its EN / SL names, the nickname and the toy-spitz name (with and without š)', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('pomeranian')).toEqual(['pomeranian']);
+    expect(find('pomeranec')).toEqual(['pomeranian']);
+    expect(find('nemški špic')).toEqual(['pomeranian']);
+    expect(find('nemski spic')).toEqual(['pomeranian']);
+    expect(find('German Toy Spitz')).toEqual(['pomeranian']);
+    // Never the Miniature Schnauzer (»pritlikavi šnavcer«) — no »pritlikavi« keyword.
+    expect(find('Pritlikavi')).toEqual(['miniature_schnauzer']);
   });
 
   it('M5-R10-29: finds the Great Dane by its EN / SL / German names (with and without š)', () => {

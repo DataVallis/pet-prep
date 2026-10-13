@@ -62,6 +62,7 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'pet:picker.ageHints.dachshund': 'the Dachshund is a dog breed (M5-R10-08)',
   'pet:picker.ageHints.havanese': 'the Havanese is a dog breed (M5-R10-10)',
   'pet:picker.ageHints.yorkshire_terrier': 'the Yorkshire Terrier is a dog breed (M5-R10-22)',
+  'pet:picker.ageHints.pomeranian': 'the Pomeranian is a dog breed (M5-R10-30)',
   'pet:picker.ageHints.west_highland_white_terrier': 'the West Highland White Terrier is a dog breed (M5-R10-11)',
   'pet:picker.ageHints.bernese_mountain_dog': 'the Bernese Mountain Dog is a dog breed (M5-R10-12)',
   'pet:picker.ageHints.bulldog': 'the Bulldog is a dog breed (M5-R10-20)',
@@ -70,6 +71,7 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'pet:picker.ageHints.shih_tzu': 'the Shih Tzu is a dog breed (M5-R10-28)',
   'pet:breedSuitability.consider.experienced_owner': 'chip of a dog breed only (Rottweiler, PDSA "powerful dog", M5-R10-19)',
   'pet:breedSuitability.consider.not_for_small_children': 'chip of a dog breed only (Cane Corso, PDSA "large dog", M5-R10-23)',
+  'pet:breedSuitability.consider.older_children': 'chip of a dog breed only (Pomeranian, AKC "small dog", M5-R10-30)',
   'family:breeds.bernese_mountain_dog': 'the breed name itself contains "Dog" / "pes" (M5-R10-12)',
   // ── Names the species on purpose ──
   'family:species.dog': 'the species name "Dog" / "Pes"',
