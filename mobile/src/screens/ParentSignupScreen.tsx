@@ -1,19 +1,18 @@
 /**
- * ParentSignupScreen (M2-10a) — parent self-registration with e-mail + password
+ * ParentSignupScreen (M2-10a) — parent self-registration with Google / Apple (M2-10c,
+ * `SocialSignInSection`, same terms consent in a sheet) or e-mail + password
  * (`POST /api/register`). Same dark style as ParentLoginScreen. On success the token
  * is stored like a login and AppNavigator routes the parent to the dashboard, whose
  * empty state offers "Dodaj otroka". The device timezone becomes the family timezone.
  */
 
 import { useState } from 'react';
-import { ActivityIndicator, KeyboardAvoidingView, Linking, Platform, Pressable, ScrollView, StyleSheet, View, type TextInputProps } from 'react-native';
+import { ActivityIndicator, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, View, type TextInputProps } from 'react-native';
 import { Text, TextInput } from '@/components/ui/Text';
-import { Check, ChevronLeft, Eye, EyeOff, UserPlus } from 'lucide-react-native';
+import { ChevronLeft, Eye, EyeOff, UserPlus } from 'lucide-react-native';
 
 import {
-  PRIVACY_URL,
   SIGNUP_STRINGS,
-  TERMS_URL,
   deviceTimezone,
   mapSignupError,
   performSignup,
@@ -27,6 +26,8 @@ import { deviceName } from '@/modules/pairing/deviceName';
 import { useAppStore } from '@/store/appStore';
 import { light, palette } from '@/theme';
 import { AUTH_STYLES } from '@/components/auth/authStyles';
+import SocialSignInSection from '@/components/auth/SocialSignInSection';
+import TermsCheckbox from '@/components/auth/TermsCheckbox';
 import { BrandLogo } from '@/components/brand/BrandLogo';
 
 const S = SIGNUP_STRINGS;
@@ -90,7 +91,10 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
   const [general, setGeneral] = useState<string | null>(null);
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  // M2-10c: a Google / Apple flow is running — the e-mail form waits.
+  const [socialBusy, setSocialBusy] = useState(false);
   const signIn = useAppStore((s) => s.signIn);
+  const formLocked = isLoading || socialBusy;
 
   const update = <K extends keyof SignupForm>(field: K, value: SignupForm[K]) => {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -104,7 +108,7 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
   };
 
   const handleSubmit = async () => {
-    if (isLoading) return;
+    if (formLocked) return;
     const clientErrors = validateSignup(form);
     setErrors(clientErrors);
     setGeneral(null);
@@ -121,10 +125,6 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
       setGeneral(failure.general);
       setIsLoading(false);
     }
-  };
-
-  const openLink = (url: string) => {
-    void Linking.openURL(url).catch(() => undefined);
   };
 
   return (
@@ -148,6 +148,8 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
           </View>
 
           <View style={styles.formCard}>
+            <SocialSignInSection disabled={isLoading} onBusyChange={setSocialBusy} testID="signup-social" />
+
             <View style={styles.inputsContainer}>
               <View>
                 <TextInput
@@ -160,7 +162,7 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
                   maxLength={80}
                   value={form.name}
                   onChangeText={(v) => update('name', v)}
-                  editable={!isLoading}
+                  editable={!formLocked}
                   testID="signup-name"
                 />
                 <FieldError message={errors.name} testID="signup-name-error" />
@@ -178,7 +180,7 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
                   textContentType="emailAddress"
                   value={form.email}
                   onChangeText={(v) => update('email', v)}
-                  editable={!isLoading}
+                  editable={!formLocked}
                   testID="signup-email"
                 />
                 <FieldError message={errors.email} testID="signup-email-error" />
@@ -192,7 +194,7 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
                   invalid={errors.password !== undefined}
                   value={form.password}
                   onChangeText={(v) => update('password', v)}
-                  editable={!isLoading}
+                  editable={!formLocked}
                   testID="signup-password"
                 />
                 {errors.password ? (
@@ -210,7 +212,7 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
                   invalid={errors.passwordRepeat !== undefined}
                   value={form.passwordRepeat}
                   onChangeText={(v) => update('passwordRepeat', v)}
-                  editable={!isLoading}
+                  editable={!formLocked}
                   onSubmitEditing={() => void handleSubmit()}
                   testID="signup-password-repeat"
                 />
@@ -218,31 +220,13 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
               </View>
             </View>
 
-            <View style={styles.termsRow}>
-              <Pressable
-                onPress={() => update('acceptTerms', !form.acceptTerms)}
-                hitSlop={8}
-                accessibilityRole="checkbox"
-                accessibilityState={{ checked: form.acceptTerms }}
-                accessibilityLabel={`${S.termsPrefix}${S.termsLink}${S.termsMiddle}${S.privacyLink}`}
-                style={[styles.checkbox, form.acceptTerms && styles.checkboxChecked, errors.acceptTerms !== undefined && styles.inputInvalid]}
-                disabled={isLoading}
-                testID="signup-terms"
-              >
-                {form.acceptTerms && <Check color={palette.white} size={16} />}
-              </Pressable>
-              <Text style={styles.termsText}>
-                {S.termsPrefix}
-                <Text style={styles.link} onPress={() => openLink(TERMS_URL)} accessibilityRole="link">
-                  {S.termsLink}
-                </Text>
-                {S.termsMiddle}
-                <Text style={styles.link} onPress={() => openLink(PRIVACY_URL)} accessibilityRole="link">
-                  {S.privacyLink}
-                </Text>
-                {S.termsSuffix}
-              </Text>
-            </View>
+            <TermsCheckbox
+              checked={form.acceptTerms}
+              onToggle={() => update('acceptTerms', !form.acceptTerms)}
+              disabled={formLocked}
+              invalid={errors.acceptTerms !== undefined}
+              testID="signup-terms"
+            />
             <FieldError message={errors.acceptTerms} testID="signup-terms-error" />
 
             {general && (
@@ -252,9 +236,9 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
             )}
 
             <Pressable
-              style={({ pressed }) => [styles.primaryButton, isLoading && styles.buttonDisabled, pressed && styles.pressed]}
+              style={({ pressed }) => [styles.primaryButton, formLocked && styles.buttonDisabled, pressed && styles.pressed]}
               onPress={() => void handleSubmit()}
-              disabled={isLoading}
+              disabled={formLocked}
               accessibilityRole="button"
               accessibilityLabel={S.submit}
               testID="signup-submit"
@@ -269,7 +253,7 @@ export default function ParentSignupScreen({ onBack, onLogin }: ParentSignupScre
               )}
             </Pressable>
 
-            <Pressable onPress={onLogin} hitSlop={8} style={styles.switchRow} accessibilityRole="button" disabled={isLoading}>
+            <Pressable onPress={onLogin} hitSlop={8} style={styles.switchRow} accessibilityRole="button" disabled={formLocked}>
               <Text style={styles.switchText}>{S.haveAccount}</Text>
             </Pressable>
           </View>
@@ -285,18 +269,4 @@ const styles = StyleSheet.create({
   passwordInput: { flex: 1, height: '100%', fontSize: 15, color: light.ink },
   hint: { marginTop: 6, fontSize: 12, color: light.inkMuted },
   fieldError: { marginTop: 6, fontSize: 12, color: light.danger },
-  termsRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 10, marginTop: 16 },
-  checkbox: {
-    width: 24,
-    height: 24,
-    borderRadius: 7,
-    borderWidth: 1.5,
-    borderColor: palette.n400,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 1,
-  },
-  checkboxChecked: { backgroundColor: light.action, borderColor: light.action },
-  termsText: { flex: 1, fontSize: 13, lineHeight: 19, color: light.inkMuted },
-  link: { color: light.mintText, textDecorationLine: 'underline' },
 });

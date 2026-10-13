@@ -101,7 +101,8 @@
           }
         }
       ],
-      "expo-background-task"
+      "expo-background-task",
+      "expo-apple-authentication"
     ],
     "extra": {
       "eas": {

@@ -87,7 +87,10 @@ class ChildProfileController extends Controller
      *
      * 200 `{status: deleted, child_id, pets_deleted, pets_kept}`; 404
      * `child_not_found` (another family / missing / not a child); 422
-     * `invalid_password`; 429 `too_many_attempts` + `Retry-After` after 5 wrong
+     * `invalid_password` (or `reauth_required` for a parent without a password
+     * who confirmed with `provider` + `id_token` (+ `nonce` for Apple) — a
+     * linked provider, token ≤ 10 min old, M2-10c; 503 `provider_unavailable` /
+     * `provider_disabled`); 429 `too_many_attempts` + `Retry-After` after 5 wrong
      * passwords in 15 min (only failed attempts count; separate from the
      * account deletion).
      *
@@ -107,7 +110,14 @@ class ChildProfileController extends Controller
         }
 
         try {
-            $deletion->confirmPassword($parent, $request->password(), AccountDeletionService::SCOPE_CHILD);
+            $deletion->confirmIdentity(
+                $parent,
+                $request->password(),
+                $request->provider(),
+                $request->idToken(),
+                $request->nonce(),
+                AccountDeletionService::SCOPE_CHILD,
+            );
             $result = $deletion->deleteChildProfile($parent, $profile, $request->acknowledgesPaidChallenge());
         } catch (AccountDeletionException $e) {
             return $e->toResponse();

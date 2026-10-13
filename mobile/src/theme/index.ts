@@ -4,7 +4,7 @@
  * Icons: Lucide, 2 px stroke. Touch targets ≥ 44 pt.
  */
 
-export { alpha, dark, light, meter, palette } from './colors';
+export { alpha, dark, google, light, meter, palette } from './colors';
 export { fonts, tightTracking } from './typography';
 
 export const radius = {

@@ -55,6 +55,9 @@ return Application::configure(basePath: dirname(__DIR__))
         );
     })
     ->withExceptions(function (Exceptions $exceptions) {
+        // M2-10c: provider tokens / codes are credentials — never flashed to a session.
+        $exceptions->dontFlash(['id_token', 'nonce', 'authorization_code']);
+
         // API clients (pusher-js' channel authorizer among them) don't always
         // send `Accept: application/json`; a guest must still get a JSON 401,
         // never a redirect to a web login route that doesn't exist.

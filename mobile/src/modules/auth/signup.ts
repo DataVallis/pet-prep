@@ -18,6 +18,7 @@ import {
   type ValidationErrorBody,
 } from '@/api/client';
 import type { SignInPayload } from '@/store/appStore';
+import { saveSignInMethod } from '@/modules/session/signInMethod';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
@@ -228,10 +229,13 @@ export async function performSignup(body: RegisterParentRequest): Promise<SignIn
     response = await api.register(withoutTimezone);
   }
   await saveAuthToken(response.token);
+  // M2-10c: an e-mail account confirms deletions with its password.
+  await saveSignInMethod('password');
   return {
     token: response.token,
     user: response.user,
     pet: response.pet,
     awaitingContract: response.awaiting_contract,
+    signInMethod: 'password',
   };
 }

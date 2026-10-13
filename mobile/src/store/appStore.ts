@@ -10,6 +10,8 @@ import { create } from 'zustand';
 import type { Pet, PetUpdatedBroadcast } from '@/types';
 import type { VideoState } from '@/modules/petMedia/petMedia';
 import type { CatGameKind } from '@/modules/catCare/catCare';
+import type { SignInMethod } from '@/modules/session/signInMethod';
+import { readAuthMethods, type AuthMethods } from '@/modules/session/authMethods';
 
 export interface AppUser {
   id: number;
@@ -17,6 +19,9 @@ export interface AppUser {
   /** null for a PIN-only child profile (M2-02). */
   email: string | null;
   role: 'parent' | 'child';
+  /** M2-10c: server fields of the sign-in / `/api/user` payload (read into `authMethods`). */
+  has_password?: boolean;
+  linked_providers?: string[];
 }
 
 /** Where a tapped push should lead (parent app): the pet it is about. */
@@ -67,6 +72,11 @@ export interface SignInPayload {
    * overlay shows the vet end time in it before the child state loads.
    */
   familyTimezone?: string | null;
+  /**
+   * M2-10c: how the parent signed in on this device (`signInMethod.ts`) — decides whether
+   * a deletion asks for the password or a fresh Google / Apple sign-in. Missing → password.
+   */
+  signInMethod?: SignInMethod;
 }
 
 /** The session pet with the server's per-child contract flag applied (if any). */
@@ -115,6 +125,11 @@ interface AppStore {
   // Auth & pairing
   authToken: string | null;
   user: AppUser | null;
+  /** M2-10c: how this parent signed in here — fallback for `authMethods` (older payloads). */
+  signInMethod: SignInMethod;
+  /** M2-10c (QA m1): the server's `has_password` / `linked_providers`; null = unknown. */
+  authMethods: AuthMethods | null;
+  setAuthMethods: (authMethods: AuthMethods | null) => void;
   pairingStatus: PairingStatus;
   pairingError: string | null;
   setAuthToken: (token: string | null) => void;
@@ -222,17 +237,22 @@ export const useAppStore = create<AppStore>((set, get) => ({
   // Auth & pairing
   authToken: null,
   user: null,
+  signInMethod: 'password',
+  authMethods: null,
+  setAuthMethods: (authMethods) => set({ authMethods }),
   pairingStatus: 'unpaired',
   pairingError: null,
   setAuthToken: (token) => set({ authToken: token }),
   setUser: (user) => set({ user }),
   setPairingStatus: (status, error = null) =>
     set({ pairingStatus: status, pairingError: error }),
-  signIn: ({ token, user, pet, awaitingContract, familyTimezone }) => {
+  signIn: ({ token, user, pet, awaitingContract, familyTimezone, signInMethod }) => {
     const sessionPet = petWithContractFlag(pet, awaitingContract);
     set({
       authToken: token,
       user: { id: user.id, name: user.name, email: user.email, role: user.role },
+      signInMethod: signInMethod ?? 'password',
+      authMethods: readAuthMethods(user),
       pet: sessionPet,
       pairingStatus: sessionPet ? 'paired' : 'unpaired',
       pairingError: null,
@@ -354,6 +374,8 @@ export const useAppStore = create<AppStore>((set, get) => ({
       bootStatus: 'ready',
       authToken: null,
       user: null,
+      signInMethod: 'password',
+      authMethods: null,
       pairingStatus: 'unpaired',
       pairingError: null,
       pet: null,

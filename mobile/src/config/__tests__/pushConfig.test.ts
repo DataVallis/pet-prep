@@ -4,7 +4,7 @@
  */
 import appJson from '../../../app.json';
 import easJson from '../../../eas.json';
-import { apnsMode, resolveGoogleServicesFile, withPushMode } from '../../../app.config';
+import { apnsMode, resolveGoogleServicesFile, withGoogleSignInPlugin, withPushMode } from '../../../app.config';
 
 describe('expo-notifications config (app.json / app.config.ts)', () => {
   it('declares the plugin with the default Android channel and an EAS project id', () => {
@@ -48,3 +48,35 @@ describe('expo-notifications config (app.json / app.config.ts)', () => {
     expect(resolveGoogleServicesFile({}, () => false)).toBeUndefined();
   });
 });
+
+describe('M2-10c: social sign-in config', () => {
+  const SCHEME = 'com.googleusercontent.apps.1029107925972-fm90sk3l07phkqbkfcnjli2jddp4bqfu';
+
+  it('adds the Google sign-in plugin (always with iosUrlScheme) only when the scheme env is set', () => {
+    expect(withGoogleSignInPlugin(['expo-font'], {})).toEqual(['expo-font']);
+    expect(withGoogleSignInPlugin(['expo-font'], { EXPO_PUBLIC_GOOGLE_IOS_URL_SCHEME: '  ' })).toEqual(['expo-font']);
+    expect(withGoogleSignInPlugin(['expo-font'], { EXPO_PUBLIC_GOOGLE_IOS_URL_SCHEME: SCHEME })).toEqual([
+      'expo-font',
+      ['@react-native-google-signin/google-signin', { iosUrlScheme: SCHEME }],
+    ]);
+    // Never twice, and never the option-less (Firebase) form.
+    expect(
+      withGoogleSignInPlugin(['@react-native-google-signin/google-signin', 'expo-font'], { EXPO_PUBLIC_GOOGLE_IOS_URL_SCHEME: SCHEME }),
+    ).toEqual(['expo-font', ['@react-native-google-signin/google-signin', { iosUrlScheme: SCHEME }]]);
+  });
+
+  it('Apple sign-in plugin in app.json; Google client IDs in every EAS profile', () => {
+    expect(appJson.expo.plugins).toContain('expo-apple-authentication');
+    const profiles = easJson.build as Record<string, { env?: Record<string, string> }>;
+    for (const name of ['development', 'preview', 'production']) {
+      const env = profiles[name].env ?? {};
+      expect(env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID).toMatch(/\.apps\.googleusercontent\.com$/);
+      expect(env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID).toMatch(/\.apps\.googleusercontent\.com$/);
+      // The scheme is the reversed iOS client ID.
+      expect(env.EXPO_PUBLIC_GOOGLE_IOS_URL_SCHEME).toBe(
+        `com.googleusercontent.apps.${env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID.replace('.apps.googleusercontent.com', '')}`,
+      );
+    }
+  });
+});
+

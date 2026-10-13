@@ -132,6 +132,37 @@ class User extends Authenticatable implements FilamentUser
     }
 
     /**
+     * Google / Apple identities linked to this parent (M2-10c).
+     */
+    public function socialAccounts(): HasMany
+    {
+        return $this->hasMany(UserSocialAccount::class);
+    }
+
+    /**
+     * Providers linked to this account (M2-10c), sorted, without duplicates.
+     *
+     * @return list<'google'|'apple'>
+     */
+    public function linkedProviders(): array
+    {
+        return $this->socialAccounts()->get(['provider'])
+            ->map(fn (UserSocialAccount $a): string => $a->provider->value)
+            ->unique()->sort()->values()->all();
+    }
+
+    /**
+     * Does the account have a password (e-mail sign-up / legacy)? Parents
+     * created by social sign-in and PIN-only children have none (M2-10c).
+     */
+    public function hasPassword(): bool
+    {
+        $hash = $this->getAuthPassword();
+
+        return is_string($hash) && $hash !== '';
+    }
+
+    /**
      * Pets this child cares for (pet_caretakers, M2-01). A shared pet has
      * several caretakers; a child has at most one active pet.
      */

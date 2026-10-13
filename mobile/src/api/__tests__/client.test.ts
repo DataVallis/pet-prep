@@ -274,3 +274,41 @@ describe('deletion confirm word (M1-18)', () => {
     expect(JSON.parse(String((fetchMock.mock.calls[1][1] as RequestInit).body))).toEqual({ password: 'pw', confirm: true });
   });
 });
+
+describe('M2-10c: social sign-in + provider re-auth for deletions', () => {
+  it('socialSignIn posts the body anonymously to /api/auth/social', async () => {
+    (SecureStore.getItemAsync as jest.Mock).mockResolvedValue('stale-token');
+    const fetchMock = mockFetch(200, { token: 't', user: { id: 1, name: 'A', email: 'a@b.si', role: 'parent' }, pet: null, awaiting_contract: null, created: true });
+    await api.socialSignIn({ provider: 'apple', id_token: 'jwt', nonce: 'raw', timezone: 'Europe/Ljubljana', terms_accepted: true });
+    const [url, init] = fetchMock.mock.calls[0] as [string, RequestInit & { headers: Record<string, string> }];
+    expect(url).toMatch(/\/api\/auth\/social$/);
+    expect(init.method).toBe('POST');
+    expect(init.headers.Authorization).toBeUndefined();
+    expect(JSON.parse(String(init.body))).toEqual({ provider: 'apple', id_token: 'jwt', nonce: 'raw', timezone: 'Europe/Ljubljana', terms_accepted: true });
+  });
+
+  it('a provider proof replaces the password in both deletion bodies', async () => {
+    (SecureStore.getItemAsync as jest.Mock).mockResolvedValue('tok');
+    const fetchMock = mockFetch(200, { deleted: true });
+    await api.deleteAccount({ provider: 'google', id_token: 'g.jwt' }, 'IZBRIŠI');
+    await api.deleteChild(3, { provider: 'apple', id_token: 'a.jwt', nonce: 'raw', authorization_code: 'apple-code' }, 'IZBRIŠI', true);
+    // Never for Google (the server prohibits it there).
+    await api.deleteAccount({ provider: 'google', id_token: 'g.jwt', authorization_code: 'stray' }, 'IZBRIŠI');
+    expect(JSON.parse(String((fetchMock.mock.calls[0][1] as RequestInit).body))).toEqual({
+      provider: 'google',
+      id_token: 'g.jwt',
+      confirm: true,
+      confirm_word: 'IZBRIŠI',
+    });
+    expect(JSON.parse(String((fetchMock.mock.calls[1][1] as RequestInit).body))).toEqual({
+      provider: 'apple',
+      id_token: 'a.jwt',
+      nonce: 'raw',
+      authorization_code: 'apple-code',
+      confirm: true,
+      confirm_word: 'IZBRIŠI',
+      acknowledge_paid_challenge: true,
+    });
+    expect(JSON.parse(String((fetchMock.mock.calls[2][1] as RequestInit).body))).not.toHaveProperty('authorization_code');
+  });
+});

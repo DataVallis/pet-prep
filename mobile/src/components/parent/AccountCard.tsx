@@ -2,7 +2,8 @@
  * "Račun" section of the Nadzor tab (M2-08): export the family's data (GDPR art. 15 /
  * 20 — JSON through the share sheet) and delete the parent's own account. The
  * deletion explains its consequences first (last parent → the whole family incl.
- * children and pets), then asks for the password and the typed confirmation word ("IZBRIŠI" / "DELETE"); on
+ * children and pets), then asks for the password (or a Google / Apple re-sign-in for a parent
+ * without one, M2-10c) and the typed confirmation word ("IZBRIŠI" / "DELETE"); on
  * success the app signs out to the StartScreen.
  */
 
@@ -11,6 +12,7 @@ import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { Download, Trash2 } from 'lucide-react-native';
 
+import type { DeletionProof } from '@/api/client';
 import DeletionConfirmForm from '@/components/parent/DeletionConfirmForm';
 import { Card, PARENT_COLORS as C, SectionTitle } from '@/components/parent/ParentUi';
 import {
@@ -88,12 +90,12 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
     }
   };
 
-  const runDelete = async (password: string, acknowledgePaidChallenge: boolean) => {
+  const runDelete = async (proof: DeletionProof, acknowledgePaidChallenge: boolean) => {
     setDeleteError(null);
     setDeleting(true);
     try {
       // Success signs out: the navigator unmounts this screen (StartScreen).
-      await deleteAccountAndLogout(password, undefined, undefined, acknowledgePaidChallenge);
+      await deleteAccountAndLogout(proof, undefined, undefined, acknowledgePaidChallenge);
     } catch (err) {
       const kind = classifyDeletionError(err);
       if (kind === 'paid_challenge') setPaidRequired(true);
@@ -141,7 +143,7 @@ export default function AccountCard({ family }: { family: FamilyOverview | null 
           }}
           paidChallenge={paidRequired || (impact.lastParent && deletionLosesPurchase((family?.pets ?? []).map((p) => p.id), billing.data))}
           paidPetGroup={paidGroup}
-          onSubmit={(password, ack) => void runDelete(password, ack)}
+          onSubmit={(proof, ack) => void runDelete(proof, ack)}
           testID="account-delete-form"
         />
       ) : (

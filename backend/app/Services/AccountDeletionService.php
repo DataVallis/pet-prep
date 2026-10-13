@@ -3,10 +3,12 @@
 namespace App\Services;
 
 use App\Enums\FamilyRole;
+use App\Enums\SocialProvider;
 use App\Enums\Species;
 use App\Enums\UserRole;
 use App\Events\PetUpdated;
 use App\Exceptions\AccountDeletionException;
+use App\Exceptions\SocialAuthException;
 use App\Jobs\DeleteCertificateFiles;
 use App\Jobs\DeletePetMediaFiles;
 use App\Models\AiSpendLedger;
@@ -19,6 +21,8 @@ use App\Models\PetCaretaker;
 use App\Models\PetContract;
 use App\Models\QuietHours;
 use App\Models\User;
+use App\Models\UserSocialAccount;
+use App\Services\Auth\SocialTokenVerifier;
 use App\Services\Push\PushDeviceService;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Collection;
@@ -63,6 +67,9 @@ use Laravel\Sanctum\PersonalAccessToken;
  *
  * Password confirmation is throttled per scope (account / child) and counts
  * only FAILED attempts: PASSWORD_ATTEMPTS per PASSWORD_DECAY_SECONDS per user.
+ * A parent without a password (social sign-in, M2-10c) confirms instead with
+ * a fresh ID token of a linked provider (confirmIdentity); failures count in
+ * the same limiter.
  *
  * Late work for deleted pets is harmless by design: queued media jobs find no
  * pet / slot and return; a late fal webhook matches the ledger row (slot gone)
@@ -90,6 +97,84 @@ class AccountDeletionService
 
     public const SCOPE_CHILD = 'child';
 
+    /** M2-10c: a re-authentication token must be at most this old (`iat`). */
+    public const REAUTH_MAX_AGE_SECONDS = 600;
+
+    /**
+     * Confirm an irreversible deletion (M2-08 / M2-10c).
+     *
+     * - The parent has a password → the password decides, exactly as before
+     *   (provider fields are ignored).
+     * - No password (signed up with Google / Apple) and an `id_token` sent →
+     *   the token must verify, belong to a provider identity LINKED to this
+     *   parent and be fresh (`iat` ≤ 10 min old); otherwise 422
+     *   `reauth_required` (the app re-runs the provider sign-in). Counted in the
+     *   same 5 / 15 min limiter as wrong passwords. Provider down / disabled →
+     *   503 `provider_unavailable` / `provider_disabled` (not counted).
+     * - No password and no token → the password path → `invalid_password`.
+     *
+     * Makes external HTTP (provider keys) — call it before any transaction.
+     *
+     * @throws AccountDeletionException
+     */
+    public function confirmIdentity(
+        User $user,
+        ?string $password,
+        ?SocialProvider $provider,
+        ?string $idToken,
+        ?string $nonce,
+        string $scope,
+    ): void {
+        if ($user->hasPassword() || $provider === null || $idToken === null || $idToken === '') {
+            $this->confirmPassword($user, (string) $password, $scope);
+
+            return;
+        }
+
+        $key = "deletion-password:{$scope}:{$user->id}";
+        $this->assertNotLockedOut($key);
+
+        try {
+            $identity = app(SocialTokenVerifier::class)->verify($provider, $idToken, $nonce);
+        } catch (SocialAuthException $e) {
+            if (in_array($e->reason, [SocialAuthException::PROVIDER_DISABLED, SocialAuthException::PROVIDER_UNAVAILABLE], true)) {
+                throw new AccountDeletionException($e->reason, $e->getMessage(), $e->status);
+            }
+            $this->failReauth($key);
+        }
+
+        $linked = UserSocialAccount::where('user_id', $user->id)
+            ->where('provider', $identity->provider->value)
+            ->where('subject', $identity->subject)
+            ->exists();
+        $fresh = $identity->issuedAt->getTimestamp() >= now()->getTimestamp() - self::REAUTH_MAX_AGE_SECONDS;
+
+        if (! $linked || ! $fresh) {
+            $this->failReauth($key);
+        }
+
+        RateLimiter::clear($key);
+    }
+
+    private function assertNotLockedOut(string $key): void
+    {
+        if (RateLimiter::tooManyAttempts($key, self::PASSWORD_ATTEMPTS)) {
+            throw new AccountDeletionException(
+                'too_many_attempts',
+                'Too many wrong passwords. Please try again later.',
+                429,
+                RateLimiter::availableIn($key),
+            );
+        }
+    }
+
+    private function failReauth(string $key): never
+    {
+        RateLimiter::hit($key, self::PASSWORD_DECAY_SECONDS);
+
+        throw new AccountDeletionException('reauth_required', 'Please sign in again with your provider to confirm.', 422);
+    }
+
     /**
      * Check the parent's password before an irreversible deletion. Only wrong
      * passwords count against the limit (a success clears it).
@@ -99,17 +184,10 @@ class AccountDeletionService
     public function confirmPassword(User $user, string $password, string $scope): void
     {
         $key = "deletion-password:{$scope}:{$user->id}";
+        $this->assertNotLockedOut($key);
 
-        if (RateLimiter::tooManyAttempts($key, self::PASSWORD_ATTEMPTS)) {
-            throw new AccountDeletionException(
-                'too_many_attempts',
-                'Too many wrong passwords. Please try again later.',
-                429,
-                RateLimiter::availableIn($key),
-            );
-        }
-
-        // A parent without a password (admin-created / legacy) cannot confirm —
+        // A parent without a password (social sign-in / admin-created / legacy)
+        // cannot confirm with one —
         // same answer as a wrong password.
         if ($user->password === null || ! Hash::check($password, $user->password)) {
             RateLimiter::hit($key, self::PASSWORD_DECAY_SECONDS);

@@ -4,10 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Enums\TokenAbility;
 use App\Exceptions\EmailTakenException;
+use App\Exceptions\SocialAuthException;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterParentRequest;
+use App\Http\Requests\SocialSignInRequest;
 use App\Models\Pet;
 use App\Models\User;
+use App\Services\Auth\SocialSignInService;
+use App\Services\Auth\SocialTokenVerifier;
 use App\Services\ChildProfileService;
 use App\Services\ParentRegistrationService;
 use Illuminate\Http\JsonResponse;
@@ -67,11 +71,78 @@ class AuthController extends Controller
                 'name' => $user->name,
                 'email' => $user->email,
                 'role' => $user->role->value,
+                // M2-10c: how this account signs in (parents; a child: false / []).
+                'has_password' => $user->hasPassword(),
+                'linked_providers' => $user->linkedProviders(),
             ],
             // A new family has no pet yet; the parent adds a child next.
             'pet' => null,
             'awaiting_contract' => null,
         ], 201);
+    }
+
+    /**
+     * Parent sign-in / sign-up with Google or Apple (M2-10c). The app sends
+     * the ID token from the native SDK; the API verifies it (signature via
+     * the provider's JWKS, `iss`, `aud` = our client IDs, `exp`; Apple: `nonce`
+     * = sha256 of the raw `nonce` sent here) and then:
+     *
+     * - identity already linked → signs that parent in (`created: false`);
+     * - unknown identity, no account with its e-mail → creates the parent +
+     *   their own family (like `POST /api/register`) when `terms_accepted` is
+     *   true (`created: true`), else 422 `terms_required` (nothing created —
+     *   the app shows the terms and retries with the same token);
+     * - unknown identity, the e-mail belongs to an account without a password
+     *   (made with the other provider) and the provider verified the e-mail →
+     *   links it and signs in;
+     * - the e-mail belongs to an account WITH a password → 409 `email_in_use`
+     *   (sign in with e-mail + password; never linked automatically).
+     *
+     * 200 = the `POST /api/login` body + `created`. Errors `{message, code}`:
+     * 401 `invalid_token`, 403 `not_a_parent` / `superadmin_protected`,
+     * 409 `email_in_use`, 422 `terms_required`, 503 `provider_disabled`
+     * (no client ID configured) / `provider_unavailable` (provider keys
+     * unreachable). Validation errors are the usual 422 `errors`. Children
+     * never use this (PIN only). Throttled: 10 / min and 30 / hour per IP.
+     *
+     * POST /api/auth/social
+     *
+     * @throws SocialAuthException
+     */
+    public function social(SocialSignInRequest $request, SocialTokenVerifier $verifier, SocialSignInService $signIn): JsonResponse
+    {
+        // External HTTP (JWKS) — before any DB transaction. Refusals are
+        // SocialAuthException, rendered as `{message, code}`.
+        $identity = $verifier->verify($request->provider(), $request->idToken(), $request->rawNonce());
+        $result = $signIn->signIn(
+            $identity,
+            $request->termsAccepted(),
+            $request->familyTimezone(),
+            $request->displayName(),
+            $request->deviceName(),
+        );
+
+        $user = $result->user;
+        $activePet = $this->sessionPet($user);
+
+        return response()->json([
+            'token' => $result->token,
+            'abilities' => TokenAbility::abilitiesFor($user),
+            'user' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+                'role' => $user->role->value,
+                // M2-10c: how this account signs in (parents; a child: false / []).
+                'has_password' => $user->hasPassword(),
+                'linked_providers' => $user->linkedProviders(),
+            ],
+            'pet' => $this->petPayload($activePet, null),
+            // Parents never sign a contract.
+            'awaiting_contract' => null,
+            // true = a new account (and family) was created just now.
+            'created' => $result->created,
+        ], 200);
     }
 
     /**
@@ -117,6 +188,9 @@ class AuthController extends Controller
                 'name' => $user->name,
                 'email' => $user->email,
                 'role' => $user->role->value,
+                // M2-10c: how this account signs in (parents; a child: false / []).
+                'has_password' => $user->hasPassword(),
+                'linked_providers' => $user->linkedProviders(),
             ],
             'pet' => $this->petPayload($activePet, $awaiting),
             // Per child (M2-02): this child must sign before acting. null for a parent.
@@ -145,6 +219,9 @@ class AuthController extends Controller
             'name' => $user->name,
             'email' => $user->email,
             'role' => $user->role->value,
+            // M2-10c: how this account signs in (parents; a child: false / []).
+            'has_password' => $user->hasPassword(),
+            'linked_providers' => $user->linkedProviders(),
             'pet' => $this->petPayload($activePet, $awaiting),
             'awaiting_contract' => $awaiting,
         ], 200);

@@ -37,6 +37,11 @@ Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register'])
     ->middleware('throttle:register');
 
+// M2-10c: parent sign-in / sign-up with a Google or Apple ID token (verified
+// against the provider's keys). Per-IP throttle (10/min, 30/h).
+Route::post('auth/social', [AuthController::class, 'social'])
+    ->middleware('throttle:social');
+
 // M2-02: a child signs in with the one-time PIN their parent generated for
 // their profile (no e-mail / password). Hard per-IP throttle on the route +
 // failed-attempt lockouts (per IP and global) in ChildPinLoginService.

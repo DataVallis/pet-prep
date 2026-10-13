@@ -10,6 +10,7 @@ import {
   type CreateChildRequest,
   type CreateChildResponse,
   type DeleteChildResponse,
+  type DeletionProof,
   type RevokeChildTokensResponse,
 } from '@/api/client';
 import { parentDashboardKey } from '@/hooks/queries/useParentDashboard';
@@ -24,12 +25,15 @@ export function useCreateChild() {
   });
 }
 
-/** M2-08: delete a child profile (password re-entry). Refreshes the family afterwards. */
+/**
+ * M2-08: delete a child profile (password re-entry, or a provider re-sign-in for a parent
+ * without a password — M2-10c). Refreshes the family afterwards.
+ */
 export function useDeleteChild() {
   const queryClient = useQueryClient();
-  return useMutation<DeleteChildResponse, unknown, { childId: number; password: string; acknowledgePaidChallenge?: boolean }>({
-    mutationFn: ({ childId, password, acknowledgePaidChallenge }) =>
-      api.deleteChild(childId, password, deleteConfirmWord(), acknowledgePaidChallenge === true),
+  return useMutation<DeleteChildResponse, unknown, { childId: number; proof: DeletionProof; acknowledgePaidChallenge?: boolean }>({
+    mutationFn: ({ childId, proof, acknowledgePaidChallenge }) =>
+      api.deleteChild(childId, proof, deleteConfirmWord(), acknowledgePaidChallenge === true),
     retry: false,
     // Also after a failure: without an answer the deletion may have happened (PR #29 m6).
     onSettled: () => queryClient.invalidateQueries({ queryKey: parentDashboardKey }),
