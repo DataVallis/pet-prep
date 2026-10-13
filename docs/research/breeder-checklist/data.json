@@ -1297,6 +1297,11 @@
         }
       ],
       "notes": "RKC breed page (current address, dog-data S247, 2026-10-13): no minimum list; under 'Pre-breeding Health Screening' → 'Best Practice schemes and tests': the KC/BVA CM/SM screening scheme and the BVA/KC/ISDS eye scheme. Older address (S248): 'To support the breed's health, responsible breeders should ensure they complete all tests in best practice.'; 'We don't currently offer a breed-specific DNA testing package for this breed'. Existing keys only (cm_sm_mri, eye_scheme)."
+    },
+    "boston_terrier": {
+      "status": "not_found",
+      "tests": [],
+      "notes": "RKC breed page (current address, dog-data S255, 2026-10-13) shows the 'Good Practice schemes and tests' and 'Best Practice schemes and tests' headings but returned no individual test; the older address (S256) the same, plus 'There are not currently any additional breed specific restrictions in place for this breed.' The RKC Health Standard (dog-data S263, thekennelclub.org.uk/BreedSpecificRequirements) lists the Boston Terrier with no test in either column and no breed club scheme (no verbatim sentence returned, so not recorded as none_recommended — German Shorthaired Pointer precedent). The University of Cambridge / Kennel Club Respiratory Function Grading scheme is only planned for the breed (S261, paraphrase) → not listed as boas_grading. PDSA (dog-data S259): check that the parents were screened under the Canine Health Schemes (no named test). Show the general dog checklist only."
     }
   }
 }
