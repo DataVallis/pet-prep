@@ -9,6 +9,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-13 — »Ali si vedel?« v otrokovi aplikaciji (M5-R09c)
+
+**Kaj se je zgodilo:** Otrok s pasemskim ljubljenčkom (danes border collie ali maine coon) ima v aplikaciji gumb **knjiga** in zaslon **»Moja pasma«**: resnične zanimivosti o svoji pasmi, vsaka z virom, iskanje (deluje tudi brez šumnikov), teme in »Prebrano: 8 od 40«. Okno **»Ali si vedel?«** s sliko lastnega ljubljenčka se pokaže samo od sebe največ 2-krat na teden — in samo v **mirnem trenutku**: ko je otrok pravkar uspešno poskrbel za ljubljenčka, so vse vrednosti vsaj 50 %, ni nereda, igre ali zaklepa, niso tihe ure in ni prvih 10 sekund po odprtju. Sicer otrok vidi le čip »Nekaj novega o tvoji pasmi« — tudi dotik čipa šteje kot okno tega dne (David, 13. 10.), zato sta skupaj največ dve na teden. Strežnik ima zadnjo besedo (dve napravi nikoli ne pokažeta dveh oken).
+
+**Zakaj je pomembno:** Zanimivost je **nagrada za skrb, ne prekinitev** — in pogosto razloži pravilo igre (»zato je tvoj cilj toliko korakov«). Miren vmesnik po CGP: brez zvoka, brez konfetov, ena drobna rožnata pika.
+
+**Številke:** 4 nove končne točke v aplikaciji (že na strežniku od R09b), 3 novi zasloni / elementi (okno, čip, »Moja pasma«), 69 novih testov (skupaj 2320). Ploščic s hitrimi številkami ni, ker zanje ni vira. Na telefonu še ni preverjeno; zanimivosti se pokažejo, ko jih David odobri v administraciji.
+
+**Kako povedati:**
+- 👩 Starši: »Vaš otrok med skrbjo izve resnične stvari o pasmi svojega ljubljenčka — vsaka z virom, največ dvakrat na teden samodejno in nikoli sredi igre ali v tihih urah.«
+- 🧒 Otroci: »Tapni knjigo in odkrij, kaj zna tvoja pasma! Ko lepo poskrbiš za ljubljenčka, te včasih čaka presenečenje: Ali si vedel?«
+- 💼 Investitorji: »Vsebina z revizijsko sledjo, ki se v aplikaciji pokaže ob pravem trenutku — pravila 'mirnega trenutka' so preizkušena s testi, nova vsebina ne potrebuje nove verzije aplikacije.«
+- 🛠 Tehnično: »'Miren trenutek' je čista funkcija (vsaka ovira posebej testirana); kontrolni hook posluša predpomnilnik mutacij TanStack Query za sprejete skrbi, 422 `refused` je odgovor, ne napaka.«
+
+---
+
 ## 2026-10-13 — »Ali si vedel?«: prvih 85 preverjenih zanimivosti (M5-R09a)
 
 **Kaj se je zgodilo:** Za border collieja (42) in maine coona (43) je pripravljenih **85 zanimivosti** v angleščini in slovenščini — 54 za otroke, 31 za starše. Vsaka ima vir (npr. FCI, Battersea, PDSA, CFA, GCCF), povezavo in dobesedni citat. Drugi, neodvisni pregled je vsak citat ponovno prebral na izvirni strani: **19 besedil je zožil** na to, kar vir res pove, 2 citata podaljšal, zavrnil ni nobenega. Vsaka zanimivost nosi »prstni odtis« preverjenega besedila — če se besedilo kdaj spremeni, gre samodejno nazaj v pregled.

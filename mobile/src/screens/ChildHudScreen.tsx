@@ -29,6 +29,10 @@
  * praskalnik" on the scratched-sofa card, the "first aid" note while hungry (C24) and the cat
  * mini-games (`CatCareOverlay`, opened with `openCatGame`). Child texts switch to the cat's
  * (`setTextSpecies`). A dog's HUD is unchanged.
+ * M5-R09c »Ali si vedel?«: a pedigree pet with approved facts gets the book button in the header
+ * (raspberry dot while a fact is unread) → »Moja pasma«; the card opens by itself in a calm moment
+ * after a care success (`modules/breedFacts/useFactMoment`), otherwise the chip »Nekaj novega o
+ * tvoji pasmi« sits above the dock. A mutt / domestic cat / breed without facts sees nothing new.
  */
 
 import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
@@ -52,6 +56,7 @@ import {
   WifiOff,
   Globe,
   Award,
+  BookOpen,
 } from 'lucide-react-native';
 import { useQueryClient } from '@tanstack/react-query';
 
@@ -140,6 +145,10 @@ import { setTextSpecies, t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { isolatePetName } from '@/modules/petName/petName';
 import { useTranslation } from 'react-i18next';
+import { useFactMoment } from '@/modules/breedFacts/useFactMoment';
+import FactSheet from '@/modules/breedFacts/FactSheet';
+import FactChip from '@/modules/breedFacts/FactChip';
+import BreedGuideScreen from '@/modules/breedFacts/BreedGuideScreen';
 
 /**
  * User-visible strings of the HUD (`child:hud`, M1-18). `autoRetry` sits under the error
@@ -505,6 +514,15 @@ export default function ChildHudScreen() {
     void logout();
   };
 
+  // M5-R09c »Ali si vedel?«: never over a game, a layer or another sheet; the chip waits under a layer.
+  const dockLayerOpen =
+    isWalkModalVisible || isCleaningOverlayVisible || isAlbumVisible || isTrainingVisible || playOverlay !== null || catOverlay !== null || messToScrub;
+  const facts = useFactMoment({
+    view,
+    overlayOpen: dockLayerOpen || isProfileVisible || isLanguageVisible || isCertificateVisible || isSocialisationVisible,
+    dockCovered: dockLayerOpen,
+  });
+
   // ── Loading / error without any state yet ────────────────────
   if (!view) {
     return (
@@ -595,6 +613,11 @@ export default function ChildHudScreen() {
   // M5-R06-08b: a cat game covers the HUD (the album closes it from the dock side — never both).
   const showCatGame = catGameOpen && !showAlbum && !showTraining;
   const coveredByOverlay = isWalkModalVisible || showCleaning || showTraining || showAlbum || showPlay || showCatGame;
+  // M5-R09c: the »Moja pasma« layer covers the HUD like the album (video paused, hidden from TalkBack).
+  const showGuide = facts.guideOpen && !locked;
+  const factChip = facts.showChip && !coveredByOverlay && !locked;
+  const breedLabel = breedName(pet.breed_type, pet.species);
+  const petImage = pet.media.referenceImageUrl ?? pet.reference_image_url;
   // Cat chips (Počeši / Menjava peska), the "Na praskalnik" button and the first-aid note.
   // M5-R13: a brushed dog's "Počeši" chip too (careChips).
   const chips = careChips(view);
@@ -613,7 +636,7 @@ export default function ChildHudScreen() {
   // The free tier has no `playing` video: the usual one plays and the app draws hearts.
   const showHearts = moodScene !== null && hudVideoState !== 'playing' && !coveredByOverlay;
   // Android: TalkBack must not reach the HUD under the album / training game (iOS: accessibilityViewIsModal).
-  const hiddenUnderAlbum = showAlbum || showTraining || showPlay || showCatGame
+  const hiddenUnderAlbum = showAlbum || showTraining || showPlay || showCatGame || showGuide
     ? ({ importantForAccessibility: 'no-hide-descendants', accessibilityElementsHidden: true } as const)
     : ({ importantForAccessibility: 'auto', accessibilityElementsHidden: false } as const);
 
@@ -632,7 +655,7 @@ export default function ChildHudScreen() {
           // Vet visit / hard stop: the sick / sleeping video keeps playing under the
           // translucent grey lock (PRODUCT_SPEC §7). Paused under the opaque game-over /
           // inactive screen, the walk tracker, the album (one player at a time) and in the background.
-          active={!opaqueLock && !isWalkModalVisible && !showAlbum && !showTraining && !showPlay && !showCatGame}
+          active={!opaqueLock && !isWalkModalVisible && !showAlbum && !showTraining && !showPlay && !showCatGame && !showGuide}
           onMediaExpired={onMediaExpired}
           // The vet veil darkens when a substitute (sleeping / idle) stands in for `sick`.
           onVideoStateChange={setHudVideoState}
@@ -709,6 +732,20 @@ export default function ChildHudScreen() {
           </Pressable>
 
           <View style={styles.topBarRight}>
+            {facts.showBook && (
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={facts.unread ? t('facts:child.bookUnread') : t('facts:child.book')}
+                accessibilityHint={t('facts:child.bookHint')}
+                testID="hud-facts-open"
+                hitSlop={4}
+                style={({ pressed }) => [styles.bookButton, pressed && styles.pressed]}
+                onPress={facts.openGuide}
+              >
+                <BookOpen color={palette.mint} size={20} />
+                {facts.unread && <View style={styles.unreadDot} testID="hud-facts-unread" />}
+              </Pressable>
+            )}
             <WsStatusDot status={wsStatus} />
             <Pressable
               accessibilityRole="button"
@@ -952,8 +989,13 @@ export default function ChildHudScreen() {
                 : null
             }
             footer={
-              hasTraining || entry.kind !== 'hidden' || moodScene !== null || chips.length > 0 || socialisationChip || firstAid || digestion !== null ? (
+              hasTraining || entry.kind !== 'hidden' || moodScene !== null || chips.length > 0 || socialisationChip || firstAid || digestion !== null || factChip ? (
                 <>
+                  {factChip && (
+                    <View style={styles.chipRow}>
+                      <FactChip onPress={facts.openChip} />
+                    </View>
+                  )}
                   {firstAid && <FirstAidNote />}
                   {digestion !== null && <DigestionNote note={digestion} />}
                   {moodScene !== null && <HappyBadge />}
@@ -1056,6 +1098,30 @@ export default function ChildHudScreen() {
         onClose={() => setSocialisationVisible(false)}
       />
       <PetProfileSheet visible={isProfileVisible && profileRows.length > 0} rows={profileRows} onClose={() => setProfileVisible(false)} />
+      {showGuide && (
+        <BreedGuideScreen
+          breedLabel={breedLabel}
+          imageUrl={petImage}
+          facts={facts.facts}
+          readCount={facts.readCount}
+          totalCount={facts.totalCount}
+          isLoading={facts.list.isLoading}
+          isError={facts.list.isError}
+          onRetry={facts.list.refetch}
+          onOpenFact={facts.openFact}
+          onClose={facts.closeGuide}
+        />
+      )}
+      <FactSheet
+        fact={locked ? null : facts.sheetFact}
+        breedLabel={breedLabel}
+        imageUrl={petImage}
+        readCount={facts.readCount}
+        totalCount={facts.totalCount}
+        reduceMotion={reduceMotion}
+        onClose={facts.closeSheet}
+        onMore={facts.openGuide}
+      />
       {showAlbum && (
         <PetAlbum
           media={pet.media}
@@ -1229,6 +1295,28 @@ const styles = StyleSheet.create({
     backgroundColor: alpha(palette.white, 0.08),
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  /** M5-R09c: the book (glass, ≥ 44 pt + hitSlop → 52 pt target) with the one raspberry accent. */
+  bookButton: {
+    width: 44,
+    height: 44,
+    borderRadius: 14,
+    backgroundColor: alpha(palette.white, 0.1),
+    borderWidth: 1,
+    borderColor: alpha(palette.white, 0.15),
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  unreadDot: {
+    position: 'absolute',
+    top: 7,
+    right: 7,
+    width: 9,
+    height: 9,
+    borderRadius: 5,
+    backgroundColor: palette.raspberry,
+    borderWidth: 1.5,
+    borderColor: palette.graphite,
   },
   /** M2-01d: the finished challenge — the one solid mint badge in the header. */
   certificateButton: { backgroundColor: palette.mint, borderRadius: 17 },

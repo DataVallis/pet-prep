@@ -349,3 +349,29 @@ describe('signed_contract broadcast (M1-07b)', () => {
     expect(isAwaitingContract(useAppStore.getState().pet)).toBe(false);
   });
 });
+
+describe('M5-R09c »Ali si vedel?« UI state', () => {
+  it('open / close the card and the guide; reset() clears every new field', () => {
+    const s = useAppStore.getState();
+    s.openFactSheet(5);
+    s.setBreedGuideVisible(true);
+    s.setFactAutoAskedDay('2026-10-13');
+    s.setFactPendingDay('2026-10-13');
+    expect(useAppStore.getState()).toMatchObject({
+      factSheetId: 5,
+      isBreedGuideVisible: true,
+      factAutoAskedDay: '2026-10-13',
+      factPendingDay: '2026-10-13',
+    });
+    useAppStore.getState().closeFactSheet();
+    expect(useAppStore.getState().factSheetId).toBeNull();
+    useAppStore.getState().openFactSheet(6);
+    useAppStore.getState().reset();
+    expect(useAppStore.getState()).toMatchObject({
+      factSheetId: null,
+      isBreedGuideVisible: false,
+      factAutoAskedDay: null,
+      factPendingDay: null,
+    });
+  });
+});

@@ -2,7 +2,7 @@
  * Shared test fixtures (not shipped: only imported from __tests__).
  */
 
-import type { ChildPetState, PetGrowthResponse } from '@/api/client';
+import type { BreedFact, BreedFactsResponse, ChildPetState, FactOfTheDayResponse, PetGrowthResponse } from '@/api/client';
 import type { FamilyChild, FamilyPetRaw } from '@/modules/family/family';
 import type { Pet, PetMedia, PetUpdatedBroadcast } from '@/types';
 
@@ -851,4 +851,45 @@ export function makeGeneratedCertificatePayload(overrides: Record<string, unknow
 /** M2-01d: a report (no certificate): score below 70 by default. */
 export function makeReportPayload(overrides: Record<string, unknown> = {}): Record<string, unknown> {
   return makeCertificatePayload({ outcome: 'report', reason: 'low_score', care_score: 58, number: null, ...overrides });
+}
+
+/** M5-R09c: one approved child fact as `GET /api/breeds/{breed}/facts` sends it (border collie, unread). */
+export function makeBreedFact(overrides: Partial<BreedFact> = {}): BreedFact {
+  return {
+    id: 1,
+    key: 'border_collie-001',
+    breed: 'border_collie',
+    category: 'exercise',
+    audience: 'child',
+    title: 'Border collieji so bili vzrejeni za delo z ovcami.',
+    why: 'Zato tvoj ljubljenček potrebuje veliko gibanja.',
+    source_name: 'The Royal Kennel Club',
+    source_url: null,
+    game_rule_key: 'daily_steps',
+    not_vet_reviewed: false,
+    read: false,
+    read_at: null,
+    read_by_children: [],
+    ...overrides,
+  };
+}
+
+/** M5-R09c: a breed's fact list (read count derived from the facts). */
+export function makeBreedFacts(facts: BreedFact[], breed = 'border_collie'): BreedFactsResponse {
+  return { breed, facts, read_count: facts.filter((f) => f.read).length, total_count: facts.length };
+}
+
+/** M5-R09c: `GET /api/child/fact-of-the-day` — a day the sheet may open by itself. */
+export function makeFactOfTheDay(overrides: Partial<FactOfTheDayResponse> = {}): FactOfTheDayResponse {
+  return {
+    fact: makeBreedFact() as FactOfTheDayResponse['fact'],
+    may_auto_show: true,
+    reason: null,
+    shown_today: false,
+    shown_this_week: 0,
+    program_week: 2,
+    read_count: 0,
+    total_count: 1,
+    ...overrides,
+  };
 }
