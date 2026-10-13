@@ -54,6 +54,9 @@ class GameDataResetService
         // test parent ids of deleted users simply match nobody any more).
         'app_settings',
         'app_setting_changes',
+        // M5-R09b breed facts: PetPrep content (imported from git, approved in the
+        // admin); approved_by → users is SET NULL.
+        'breed_facts',
     ];
 
     /** Tables where only some rows go (see keptQuery()). */
@@ -79,6 +82,9 @@ class GameDataResetService
         'ai_spend_ledger',
         'media_lab_results',
         'media_lab_runs',
+        // M5-R09b: reads / automatic sheets of breed facts (→ users, pets, breed_facts)
+        'breed_fact_reads',
+        'breed_fact_shows',
         // everything that hangs off a pet
         // M2-01d certificates / reports (→ pets, users, families)
         'challenge_certificates',

@@ -9,6 +9,55 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-13 — Pritlikavi šnavcer: deveta pasma po dvajsetih (M5-R10-27)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **pritlikavega šnavcerja** (18. mesto). Triindvajseta plačljiva pasma psa: okoli ena ura gibanja na dan (6.000 korakov za odraslega, 4.500 za starejšega), starejši od 8,7 leta (0,75 × mediana 11,6 leta iz britanske raziskave VetCompass — začasno, dokler ne preverimo še raziskave McMillan 2024), uči se 1,5-krat hitreje kot mešanček (Coren: 12. mesto).
+
+**Zakaj je pomembno:** Pritlikavi šnavcer je majhen pes za stanovanje, ki mu dlaka ne izpada — a zato potrebuje redno nego: PDSA svetuje česanje 2- do 3-krat na teden, zato ga otrok v igri češe 3× na teden (»Počeši«, od prvega dne). Socializacijo (»Nova izkušnja«) dobi kot vsak mladiček. Ni pasma s skrbjo za dobrobit (The Royal Kennel Club Breed Watch kategorija 1), zato je lahko v marketingu. Britanska veterinarska raziskava (RVC / VetCompass) lastnikom svetuje, naj dajo prednost negi zob — tega igra še ne vodi, *načrt* (M5-R15). Bele barve igra (še) ne riše, ker jo ameriški standard izključi; odloči David.
+
+**Številke:** 8 novih virov (S221–S228), 1 migracija, brez nove oznake, 4 novi ključi zdravja in 1 nov test staršev v registru, 3 + 1 oznak v izbirniku; število testov: glej PR #212. Portret in stran v registru sledita v ločenih PR. Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Pritlikavi šnavcer je majhen, igriv in radoveden pes, primeren tudi za stanovanje, dlaka mu ne izpada — a ni ‚hipoalergen' in potrebuje česanje večkrat na teden. V PetPrepu boste videli, ali vaš otrok zmore redno nego, preden pripeljete domov psa z brado.«
+- 🧒 Otroci: »Pritlikavi šnavcer ima brado in košate obrvi — in rad je počesan. Trikrat na teden ga počeši, pa bo videti kot pravi gospod!«
+- 💼 Investitorji: »Deveta pasma, ki jo je sistem sam izbral po javni lestvici AKC — vse številke iz virov ali stalnih pravil, odprta vprašanja (barva, meja starosti, nega zob) zapisana za ustanovitelja.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri pritlikavem šnavcerju svetuje, naj vzreditelj pokaže DNK test staršev za MAC in pregled oči (RKC) — in opozori na nego zob, brez obljub o zdravju.«
+- 📣 Omrežja: »Majhen pes, velika brada: pritlikavi šnavcer je zdaj v PetPrepu. Ali bo vaš otrok zmogel česanje 3× na teden?« *(brez obljub o zdravju, nikoli »hipoalergen«)*
+- 🛠 Tehnično: »Brez novega ključa oznak; vse številke igre so iz stalnih pravil runbooka, česanje in socializacija sta samo novi vrstici v `breed_stage_params`; meja starejšega psa je označena kot začasna.«
+
+---
+
+## 2026-10-12 — »Ali si vedel?«: strežnik in administracija za zanimivosti o pasmah (M5-R09b)
+
+**Kaj se je zgodilo:** Strežnik zdaj zna hraniti in deliti resnične zanimivosti o pasmah. Vsaka zanimivost ima vir, dobesedni citat in povezavo; v aplikacijo pride šele, ko jo David v administraciji **odobri** (osnutek → preverjeno → odobreno). Otrok vidi samo otroške zanimivosti pasme svojega ljubljenčka (brez povezav ven), starš vse za pasme svoje družine — pri zdravju z opombo »ni veterinarsko preverjeno«. Samodejno okno pri otroku strežnik omeji na **največ 2-krat na teden** in vsaj 2 dni narazen, nikoli prvi dan in nikoli med zaklepom. Vsebina se piše v repozitoriju in se uvozi z enim ukazom. Mešanček in domača mačka zanimivosti nimata.
+
+**Zakaj je pomembno:** »Nič brez vira« je zdaj pravilo v kodi, ne samo v dokumentu: neodobreno se ne more pokazati, sprememba odobrenega besedila ga samodejno vrne v pregled. Zanimivosti so nagrada, ne motnja — strežnik skrbi, da jih ni preveč, tudi če ima otrok dva telefona.
+
+**Številke:** 3 nove tabele, 4 nove končne točke, 55 novih testov strežnika. Aplikacija tega še ne prikaže (R09c otrok, R09d starš); vsebina (R09a) se še piše.
+
+**Kako povedati:**
+- 👩 Starši: »Vsaka zanimivost o pasmi ima vir, ki ga lahko odprete — in vsako pred objavo preverimo.«
+- 🧒 Otroci: *načrt* — »Dvakrat na teden izveš nekaj novega o svoji pasmi.«
+- 💼 Investitorji: »Vsebina z revizijsko sledjo: vir, citat, preverjanje in odobritev za vsako zanimivost — nove zanimivosti brez nove verzije aplikacije.«
+- 🛠 Tehnično: »Vsebina v gitu, uvoz z upsert po ključu in razpršilom vsebine; omejitev 2 na teden programa (čas zaklepa do plačila se ne šteje) po družinskem času, čez več naprav.«
+## 2026-10-12 — Boksar: osma pasma po dvajsetih (M5-R10-26)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **boksarja** (17. mesto). Dvaindvajseta plačljiva pasma psa: vsaj dve uri gibanja na dan (12.000 korakov za odraslega, 9.000 za starejšega), starejši od 8,5 leta (0,75 × mediana 11,3 leta iz raziskave McMillan 2024 — ni začasno), uči se enako hitro kot mešanček (Coren: 48. mesto).
+
+**Zakaj je pomembno:** Boksar je prva pasma, ki je od prvega dne dobila vse tri nove mehanike skrbi: česanje 1× na teden (»Počeši«), opozorilo »Počakaj s sprehodom« 60 minut po obroku in tedensko »Novo izkušnjo« za mladička — vse iz citatov PDSA in The Royal Kennel Club. Ker PDSA piše, da boksar rad ima družbo ljudi in sam doma lahko postane tesnoben, je dobil novo mirno oznako »rad ima družbo — naj bo nekdo večino dneva doma«. Boksar ima zmerno kratek gobček (VetCompass; The Royal Kennel Club Breed Watch kategorija 2), zato ima v izbirniku novo mirno oznako »krajši gobček — lahko težje diha« (ne »kratek gobček — težave z dihanjem in vročino« kot buldoga — noben vir boksarja ne omenja vročine) in po pravilu dobrobiti (BVA) ni v marketingu — odločitev je odprta za Davida, ker je obraz le zmerno kratek. Čiščenje gub na obrazu (PDSA: »čiste in suhe«) igra še ne vodi — *načrt* (M5-R14).
+
+**Številke:** 8 novih virov (S213–S220), 1 migracija, 2 novi oznaki (`needs_company`, `short_muzzle_breathing`), 4 novi ključi zdravja v registru, 3 + 8 oznak v izbirniku; izvoz registra **46** testov (zeleni). Portret in stran v registru sledita v ločenih PR. Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Boksar je vesel, igriv družinski pes, a potrebuje vsaj dve uri gibanja na dan, nekoga, ki je večino dneva doma, in ni za dom z majhnimi otroki. V PetPrepu boste videli, ali vaš otrok zmore tak tempo — preden pripeljete domov velikega psa.«
+- 🧒 Otroci: »Boksar je pravi klovn — rad se igra in rad je s tabo. Po obroku pa mora malo počivati, preden gresta ven!«
+- 💼 Investitorji: »Osma pasma, ki jo je sistem sam izbral po javni lestvici AKC — prva, ki je ob dodajanju takoj dobila vse nove mehanike skrbi, z novo oznako iz vira in odprtim vprašanjem o marketingu za ustanovitelja.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri boksarju svetuje, naj vzreditelj pokaže preglede komolcev, oči in kolkov staršev (RKC) — in pove, da je obraz zmerno kratek, brez obljub o zdravju.«
+- 📣 Omrežja: *(boksarja v marketingu za zdaj ne prikazujemo — priporočilo BVA za pse s kratkim gobčkom; odloči David)*
+- 🛠 Tehnično: »Dva nova ključa oznak (`needs_company`, `short_muzzle_breathing`, dodatno v API-ju in `schema.ts`); vse številke igre so iz stalnih pravil runbooka, mehanike česanja, premora po obroku in socializacije pa so samo nove vrstice v `breed_stage_params`.«
+
+---
+
 ## 2026-10-12 — Certifikat odgovornosti (M2-01d)
 
 **Kaj se je zgodilo:** Ko otrok konča 12-tedenski izziv (84 dni programa od podpisa pogodbe, čas čakanja na plačilo se ne šteje), strežnik izračuna končni Care Score iz vseh zaključenih dni. **70 ali več → Certifikat odgovornosti**, manj → **Poročilo o izzivu** z oceno. Starš dobi obvestilo, v aplikaciji tapne »Ustvari certifikat«, izbere jezik (angleščina ali slovenščina), po želji popravi ime otroka in ime ljubljenčka in dobi PDF (A4, v slogu PetPrep: metin rob, Radovednež, pečat, številka PP-2026-…). Ponovno ga lahko ustvari s popravki; številka in ocena ostaneta. Otrok certifikat vidi na svojem zaslonu. Pri skupnem psu ima vsak otrok svoj certifikat in svojo oceno.

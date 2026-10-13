@@ -190,7 +190,7 @@ describe('texts per species', () => {
 
 describe('breeds and build features', () => {
   it('every brushed dog breed has a routine; the mutt and the Border Collie have none', () => {
-    expect(GROOMING_DOG_BREEDS).toHaveLength(20);
+    expect(GROOMING_DOG_BREEDS).toHaveLength(22);
     for (const breed of GROOMING_DOG_BREEDS) expect(hasGroomingRoutine(breed)).toBe(true);
     expect(hasGroomingRoutine('mutt')).toBe(false);
     expect(hasGroomingRoutine('border_collie')).toBe(false);

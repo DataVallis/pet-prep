@@ -264,6 +264,103 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/breeds/{breed}/facts": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Facts of one breed for the caller (title / why in the request language)
+         * @description Child token: `audience=child` facts of the breed of a pet the child
+         *     actively cares for, without source links. Parent token: both audiences
+         *     for any breed of the family's pets, with `source_url`, health facts
+         *     flagged `not_vet_reviewed`, and `read_by_children`. A breed that is not
+         *     the caller's (or an unknown breed) → 404 `breed_not_found`. A breed of
+         *     the caller without approved facts (always mutt / domestic cat) → 200
+         *     with an empty `facts` list.
+         *
+         *     GET /api/breeds/{breed}/facts
+         */
+        get: operations["breedFact.index"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/breed-facts/{fact}/read": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Mark a fact read by the caller. Idempotent (the first `read_at` stays).
+         *     A fact the caller may not see (not approved, other audience, another
+         *     family's breed, unknown id) → 404 `fact_not_found`
+         * @description POST /api/breed-facts/{fact}/read
+         */
+        post: operations["breedFact.read"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/child/fact-of-the-day": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * The child's »Ali si vedel?« for today: the next unread fact of their
+         *     active pet's breed + whether the sheet may open on its own
+         *     (`may_auto_show`, the server half of spec §3.2). A child without an
+         *     active pet gets `fact: null`, `reason: no_pet`
+         * @description GET /api/child/fact-of-the-day
+         */
+        get: operations["breedFact.factOfTheDay"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/child/fact-of-the-day/shown": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Record that the sheet opened on its own (counts towards the 2 per
+         *     program week, across the child's devices). Idempotent per
+         *     family-local day: 200 `recorded` | `already_shown`. Not allowed now →
+         *     422 `refused` with the `reason` of `may_auto_show`. Every body carries
+         *     the updated `state` (as GET)
+         * @description POST /api/child/fact-of-the-day/shown
+         */
+        post: operations["breedFact.shown"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/broadcasting/auth": {
         parameters: {
             query?: never;
@@ -1457,7 +1554,7 @@ export interface components {
              * @description Enum value sent as `breed` to POST /api/parent/generate-pin.
              * @enum {string}
              */
-            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
             /** @description breed_configs slug (admin / analytics key). */
             slug: string;
             /** @enum {string} */
@@ -1483,7 +1580,7 @@ export interface components {
              */
             suitability: {
                 suits: ("active_family" | "family_pet" | "children" | "small_children" | "first_time_owner" | "apartment" | "large_home" | "other_pets" | "older_owners" | "often_alone" | "low_shedding")[];
-                consider: ("long_daily_exercise" | "needs_mental_stimulation" | "may_herd_children" | "chews_when_bored" | "sheds" | "food_motivated_weight" | "frequent_grooming" | "brachycephalic_breathing" | "hips_hind_legs" | "heart_and_spine" | "back_spine" | "sensitive_skin" | "shorter_lifespan" | "secure_fencing" | "experienced_owner" | "fragile_older_children" | "not_for_small_children" | "drools" | "chases_small_pets")[];
+                consider: ("long_daily_exercise" | "needs_mental_stimulation" | "may_herd_children" | "chews_when_bored" | "sheds" | "food_motivated_weight" | "frequent_grooming" | "brachycephalic_breathing" | "hips_hind_legs" | "heart_and_spine" | "back_spine" | "sensitive_skin" | "shorter_lifespan" | "secure_fencing" | "experienced_owner" | "fragile_older_children" | "not_for_small_children" | "drools" | "chases_small_pets" | "needs_company" | "short_muzzle_breathing")[];
             };
         };
         /**
@@ -1491,7 +1588,7 @@ export interface components {
          * @description Breeds (M5-R06_PLAN T1, T9): the enum stays (it is used in payments and ~20 files), the free / paid rule is data — `breed_configs.premium_unlock` is the single source of truth (read through BreedCatalogService, cached). Every new case needs: slug(), species(), defaultPremium(), the `pets_breed_type_check` / `pets_species_breed_check` constraints and a BreedConfigsSeeder row.
          * @enum {string}
          */
-        BreedType: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+        BreedType: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
         /**
          * ChallengePaidSource
          * @description Why a challenge pet counts as paid (pets.challenge_paid_source, M3-11). Mirrored by the pets_challenge_paid_check constraint.
@@ -2574,6 +2671,297 @@ export interface operations {
             422: components["responses"]["ValidationException"];
         };
     };
+    "breedFact.index": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                breed: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @description BreedType value of the breed (e.g. border_collie). */
+                        breed: string;
+                        /**
+                         * @description Approved facts the caller may see, in display order. Empty for a breed
+                         *     without approved facts (and always for mutt / domestic cat) — hide every
+                         *     entry point then.
+                         */
+                        facts: {
+                            id: number;
+                            key: string;
+                            breed: string;
+                            /** @enum {string} */
+                            category: "origin" | "body" | "temperament" | "exercise" | "diet" | "grooming" | "training" | "family" | "health";
+                            /** @enum {string} */
+                            audience: "child" | "parent";
+                            title: string;
+                            why: string | null;
+                            source_name: string;
+                            source_url: string | null;
+                            game_rule_key: string | null;
+                            not_vet_reviewed: boolean;
+                            read: boolean;
+                            read_at: string | null;
+                            read_by_children: number[];
+                        }[];
+                        /** @description Facts of this list the caller has read (»8 od 40«). */
+                        read_count: number;
+                        total_count: number;
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "No such breed among your pets.";
+                        /** @constant */
+                        reason: "breed_not_found";
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "breedFact.read": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                fact: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /**
+                         * @description Always `read` (also on a repeated call).
+                         * @constant
+                         */
+                        status: "read";
+                        /** @description The fact as the caller sees it now (parent: `read_by_children` filled). */
+                        fact: {
+                            id: number;
+                            key: string;
+                            breed: string;
+                            /** @enum {string} */
+                            category: "origin" | "body" | "temperament" | "exercise" | "diet" | "grooming" | "training" | "family" | "health";
+                            /** @enum {string} */
+                            audience: "child" | "parent";
+                            title: string;
+                            why: string | null;
+                            source_name: string;
+                            source_url: string | null;
+                            game_rule_key: string | null;
+                            not_vet_reviewed: boolean;
+                            read: boolean;
+                            read_at: string | null;
+                            read_by_children: number[];
+                        };
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "No such fact.";
+                        /** @constant */
+                        reason: "fact_not_found";
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "breedFact.factOfTheDay": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /**
+                         * @description The next unread approved child fact of the child's pet (display order), or
+                         *     null when every fact is read / there are none (mutt, domestic cat).
+                         */
+                        fact: {
+                            id: number;
+                            key: string;
+                            breed: string;
+                            /** @enum {string} */
+                            category: "origin" | "body" | "temperament" | "exercise" | "diet" | "grooming" | "training";
+                            /** @constant */
+                            audience: "child";
+                            title: string;
+                            why: string | null;
+                            source_name: string;
+                            source_url: null;
+                            game_rule_key: string | null;
+                            not_vet_reviewed: boolean;
+                            read: boolean;
+                            read_at: string | null;
+                            read_by_children: number[];
+                        } | null;
+                        /**
+                         * @description The server allows the sheet to open on its own now (max 2 per program week,
+                         *     ≥ 2 family-local days apart, not on day 1, not in quiet hours, not while
+                         *     locked, the pet has its picture, an unread fact exists). The app still
+                         *     checks the calm moment (care just done, metrics ≥ 50 %, no mess / overlay)
+                         *     and shows the chip instead when the moment is not calm.
+                         */
+                        may_auto_show: boolean;
+                        /**
+                         * @description Why not (null when it may) — see the return type for the values.
+                         * @enum {string|null}
+                         */
+                        reason: "too_soon" | "week_cap" | "shown_today" | "quiet_hours" | "first_day" | "no_fact" | "no_image" | "locked" | "non_pedigree" | "no_pet" | null;
+                        /** @description An automatic sheet was already recorded today (family-local day). */
+                        shown_today: boolean;
+                        /** @description Automatic sheets recorded in the current program week (0–2). */
+                        shown_this_week: number;
+                        /** @description 1 = the program week from birth (payment-lock time excluded); null when unborn. */
+                        program_week: number | null;
+                        /** @description The child's progress on their breed (»Prebral si 8 od 40«). */
+                        read_count: number;
+                        total_count: number;
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "breedFact.shown": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Recorded, or already recorded today (idempotent). */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @enum {string} */
+                        status: "recorded" | "already_shown";
+                        reason: null;
+                        state: {
+                            fact: {
+                                id: number;
+                                key: string;
+                                breed: string;
+                                /** @enum {string} */
+                                category: "origin" | "body" | "temperament" | "exercise" | "diet" | "grooming" | "training";
+                                /** @constant */
+                                audience: "child";
+                                title: string;
+                                why: string | null;
+                                source_name: string;
+                                source_url: null;
+                                game_rule_key: string | null;
+                                not_vet_reviewed: boolean;
+                                read: boolean;
+                                read_at: string | null;
+                                read_by_children: number[];
+                            } | null;
+                            may_auto_show: boolean;
+                            /** @enum {string|null} */
+                            reason: "no_pet" | "non_pedigree" | "locked" | "no_image" | "no_fact" | "first_day" | "quiet_hours" | "shown_today" | "week_cap" | "too_soon" | null;
+                            shown_today: boolean;
+                            shown_this_week: number;
+                            program_week: number | null;
+                            read_count: number;
+                            total_count: number;
+                        };
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            /** @description Not allowed now: `reason` says why; `state` is the current fact of the day. */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        status: "refused";
+                        /** @enum {string} */
+                        reason: "no_pet" | "non_pedigree" | "locked" | "no_image" | "no_fact" | "first_day" | "quiet_hours" | "shown_today" | "week_cap" | "too_soon";
+                        state: {
+                            fact: {
+                                id: number;
+                                key: string;
+                                breed: string;
+                                /** @enum {string} */
+                                category: "origin" | "body" | "temperament" | "exercise" | "diet" | "grooming" | "training";
+                                /** @constant */
+                                audience: "child";
+                                title: string;
+                                why: string | null;
+                                source_name: string;
+                                source_url: null;
+                                game_rule_key: string | null;
+                                not_vet_reviewed: boolean;
+                                read: boolean;
+                                read_at: string | null;
+                                read_by_children: number[];
+                            } | null;
+                            may_auto_show: boolean;
+                            /** @enum {string|null} */
+                            reason: "no_pet" | "non_pedigree" | "locked" | "no_image" | "no_fact" | "first_day" | "quiet_hours" | "shown_today" | "week_cap" | "too_soon" | null;
+                            shown_today: boolean;
+                            shown_this_week: number;
+                            program_week: number | null;
+                            read_count: number;
+                            total_count: number;
+                        };
+                    };
+                };
+            };
+        };
+    };
     "broadcast.authenticate": {
         parameters: {
             query?: never;
@@ -3006,7 +3394,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -3536,7 +3924,7 @@ export interface operations {
                             /**
                              * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                              *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                             *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                             *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                              *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                              *     steps still count.
                              */
@@ -4086,7 +4474,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -4634,7 +5022,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -5182,7 +5570,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -5730,7 +6118,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -6278,7 +6666,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -6830,7 +7218,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -7382,7 +7770,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -7934,7 +8322,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -8482,7 +8870,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -9034,7 +9422,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -9582,7 +9970,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -10130,7 +10518,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -10682,7 +11070,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -11230,7 +11618,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -11782,7 +12170,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -12330,7 +12718,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -12882,7 +13270,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -13434,7 +13822,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -13986,7 +14374,7 @@ export interface operations {
                                 /**
                                  * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
                                  *     warning (wait with the walk, the dog is digesting): last meal + the breed's
-                                 *     meal / exercise gap (Cane Corso, Dobermann 60 min). Null for every other
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
                                  *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
                                  *     steps still count.
                                  */
@@ -14743,7 +15131,7 @@ export interface operations {
                          */
                         pet_profile: {
                             /** @enum {string} */
-                            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
                             /** @enum {string} */
                             origin: "bought" | "adopted";
                             /** @enum {string} */

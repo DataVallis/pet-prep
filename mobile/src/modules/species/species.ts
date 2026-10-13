@@ -42,6 +42,8 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   cane_corso: 'dog',
   pembroke_welsh_corgi: 'dog',
   dobermann: 'dog',
+  boxer: 'dog',
+  miniature_schnauzer: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -88,6 +90,8 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'cane_corso',
   'pembroke_welsh_corgi',
   'dobermann',
+  'boxer',
+  'miniature_schnauzer',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */

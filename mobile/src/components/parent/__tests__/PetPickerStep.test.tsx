@@ -263,6 +263,8 @@ describe('PetPickerStep', () => {
       'breed-option-cane_corso',
       'breed-option-pembroke_welsh_corgi',
       'breed-option-dobermann',
+      'breed-option-boxer',
+      'breed-option-miniature_schnauzer',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -501,6 +503,105 @@ describe('PetPickerStep', () => {
       expect(consider).toHaveTextContent(/escapes easily — needs a secure, high fence/);
       expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(screen.getByTestId('breed-option-siberian_husky')).toHaveTextContent(/Siberian Husky/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-26: the Boxer (fallback) shows its chips, is found as "boksar", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const boxer = screen.getByTestId('breed-option-boxer');
+    expect(boxer).toHaveTextContent(/Boksar/);
+    expect(boxer).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(screen.getByTestId('breed-suitability-boxer-suits')).toHaveTextContent(/aktivno družino/);
+    expect(screen.getByTestId('breed-suitability-boxer-suits')).toHaveTextContent(/družinsko življenje/);
+    expect(screen.getByTestId('breed-suitability-boxer-suits')).toHaveTextContent(/veliko hišo z vrtom/);
+    const consider = screen.getByTestId('breed-suitability-boxer-consider');
+    expect(consider).toHaveTextContent(/krajši gobček — lahko težje diha/);
+    expect(consider).not.toHaveTextContent(/vročin/);
+    expect(consider).toHaveTextContent(/velik pes — ni za dom z majhnimi otroki/);
+    expect(consider).toHaveTextContent(/močan pes — potrebuje izkušenega lastnika/);
+    // M5-R10-26 new chip (PDSA S219): separation anxiety, someone at home most of the day.
+    expect(consider).toHaveTextContent(/rad ima družbo — naj bo nekdo večino dneva doma/);
+    expect(consider).toHaveTextContent(/ko se dolgočasi, grize stvari/);
+    expect(consider).toHaveTextContent(/močan lovski nagon — lahko lovi manjše živali$/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'boksar');
+    expect(screen.getByTestId('breed-option-boxer')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-dobermann')).toBeNull();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-boxer'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'boxer', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'boxer' }),
+    );
+  });
+
+  it('M5-R10-26: the Boxer chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-boxer-suits');
+      const consider = screen.getByTestId('breed-suitability-boxer-consider');
+      expect(suits).toHaveTextContent(/family life/);
+      expect(consider).toHaveTextContent(/shorter muzzle — can have breathing problems/);
+      expect(consider).toHaveTextContent(/loves company — best with someone home most of the day/);
+      expect(consider).toHaveTextContent(/strong prey drive — may chase small pets/);
+      expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-boxer')).toHaveTextContent(/Boxer/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-27: the Miniature Schnauzer (fallback) shows its chips, is found as "šnavcer", and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const schnauzer = screen.getByTestId('breed-option-miniature_schnauzer');
+    expect(schnauzer).toHaveTextContent(/Pritlikavi šnavcer/);
+    expect(schnauzer).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-miniature_schnauzer-suits');
+    expect(suits).toHaveTextContent(/življenje v stanovanju/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    expect(suits).toHaveTextContent(/dom, kjer želite manj dlak/);
+    expect(screen.getByTestId('breed-suitability-miniature_schnauzer-consider')).toHaveTextContent(/potrebuje česanje večkrat na teden/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'šnavcer');
+    expect(screen.getByTestId('breed-option-miniature_schnauzer')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-boxer')).toBeNull();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-miniature_schnauzer'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'miniature_schnauzer', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'miniature_schnauzer' }),
+    );
+  });
+
+  it('M5-R10-27: the Miniature Schnauzer chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-miniature_schnauzer-suits');
+      const consider = screen.getByTestId('breed-suitability-miniature_schnauzer-consider');
+      expect(suits).toHaveTextContent(/apartment living/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(suits).toHaveTextContent(/homes that prefer less shedding/);
+      expect(consider).toHaveTextContent(/needs brushing several times a week/);
+      expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-miniature_schnauzer')).toHaveTextContent(/Miniature Schnauzer/);
     } finally {
       await i18n.changeLanguage('sl');
     }

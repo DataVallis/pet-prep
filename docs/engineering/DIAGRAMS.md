@@ -392,7 +392,7 @@ sequenceDiagram
   end
   S->>DB: COMMIT
   S-->>App: one PetUpdated after commit ("fed_pet",<br/>or "metric_changed" if only the catch-up changed what shows)
-  Note over S,C: M5-R16: state.feeding.digesting_until = last meal + breed meal_exercise_gap_minutes<br/>(Cane Corso / Dobermann 60 min; else null) — a warning only, steps still count
+  Note over S,C: M5-R16: state.feeding.digesting_until = last meal + breed meal_exercise_gap_minutes<br/>(Cane Corso / Dobermann / Boxer 60 min; else null) — a warning only, steps still count
   Note over S,C: Water (M5-F11, no daily cap): same flow, CareScheduleService::water —<br/>live thirst (DecayMath) shows ≤ water_refill_below AND ≥ water_min_gap_minutes real minutes<br/>since the last refill (also across midnight) → thirst 100 %, watered_pet row;<br/>else 422 water_too_soon, next_allowed_at = later of gap end and forecast threshold minute
   Note over S,DB: Clean: settles due hygiene events, hygiene 100 %, cleaned_poop row (no window).<br/>Contract: allowed while contract_required; once per pet → pet_contracts row + signed_contract row → 201<br/>(unborn pet: birth in the same transaction, M1-07b); again → 409
 ```
@@ -862,7 +862,7 @@ erDiagram
     bigint id
     bigint family_id
     bigint user_id "deprecated"
-    string breed_type "mutt border_collie labrador_retriever golden_retriever french_bulldog german_shepherd cavalier_king_charles_spaniel beagle standard_poodle dachshund australian_shepherd havanese west_highland_white_terrier bernese_mountain_dog siberian_husky rottweiler bulldog german_shorthaired_pointer yorkshire_terrier cane_corso pembroke_welsh_corgi dobermann domestic_cat maine_coon british_shorthair ragdoll siberian_cat norwegian_forest_cat bengal"
+    string breed_type "mutt border_collie labrador_retriever golden_retriever french_bulldog german_shepherd cavalier_king_charles_spaniel beagle standard_poodle dachshund australian_shepherd havanese west_highland_white_terrier bernese_mountain_dog siberian_husky rottweiler bulldog german_shorthaired_pointer yorkshire_terrier cane_corso pembroke_welsh_corgi dobermann boxer miniature_schnauzer domestic_cat maine_coon british_shorthair ragdoll siberian_cat norwegian_forest_cat bengal"
     string species "dog or cat, follows breed (M5-R06-01)"
     string name "optional label set by a parent, null = none (M5-R08)"
     double hunger_level
@@ -1636,4 +1636,27 @@ flowchart TD
     U --> Parent["parents of the family"]
     U --> Child["the child (child state `certificate`)"]
     A -->|"report"| Rep["parent sees score + reason;<br/>child only 'challenge finished'"]
+```
+
+## 15. »Ali si vedel?« breed facts: git → import → admin approval → apps (M5-R09b, 2026-10-12)
+
+```mermaid
+flowchart TD
+    W["content agents write + verify<br/>docs/research/breed-facts/&lt;breed&gt;.json<br/>(status draft | verified, verbatim quote)"] --> CP["copy byte for byte →<br/>backend/database/data/breed-facts/<br/>(BreedFactImportTest: must match)"]
+    CP --> I["php artisan breeds:import-facts<br/>(manual; --dry-run first)"]
+    I -->|"any error in a file<br/>(mutt / domestic cat, status approved, lengths, sources…)"| X["file rejected, nothing written"]
+    I -->|"upsert by key"| DB[("breed_facts")]
+    I -->|"approved + content changed"| RE["back to the file's status,<br/>approval cleared"]
+    RE --> DB
+    DB --> AD["/admin → Breed facts<br/>draft → verified → approved<br/>(superadmin, bulk for verified)"]
+    AD --> DB
+    DB -->|"approved only"| API1["GET /api/breeds/{breed}/facts"]
+    API1 -->|"child token: child facts of own pet's breed,<br/>no source_url"| CH["child: Moja pasma (R09c)"]
+    API1 -->|"parent token: both audiences, family breeds,<br/>source_url, not_vet_reviewed, read_by_children"| PA["parent: Vodnik po pasmi (R09d)"]
+    DB -->|"next unread child fact"| FOD["GET /api/child/fact-of-the-day<br/>may_auto_show: ≤ 2 / program week,<br/>≥ 2 local days apart, not day 1, not locked,<br/>picture stored, not quiet hours"]
+    FOD --> APP{"app: calm moment?<br/>(care done, metrics ≥ 50 %, no mess / overlay)"}
+    APP -->|"yes"| SHEET["sheet opens → POST …/fact-of-the-day/shown<br/>(breed_fact_shows, idempotent per local day)"]
+    APP -->|"no"| CHIP["chip »Nekaj novega o tvoji pasmi«"]
+    SHEET --> READ["POST /api/breed-facts/{fact}/read<br/>(breed_fact_reads, idempotent)"]
+    CHIP --> READ
 ```

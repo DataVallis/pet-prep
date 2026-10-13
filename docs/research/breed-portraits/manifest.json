@@ -257,6 +257,30 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "boxer",
+            "species": "dog",
+            "file": "dog/boxer.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:de32c160b772d0d3498b9fe0a7b4a358991936f3b14a95059c1904b83cc8f5fc",
+            "generated_at": "2026-10-12T22:51:39+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "miniature_schnauzer",
+            "species": "dog",
+            "file": "dog/miniature-schnauzer.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:24d5bcde6f58d263a655fbdc5ac6e846ff9425958a4f94a380f29f056c8fb4a6",
+            "generated_at": "2026-10-13T01:43:20+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",

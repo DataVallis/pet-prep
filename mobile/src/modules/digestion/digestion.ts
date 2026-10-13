@@ -3,7 +3,7 @@
  * opozorilo".
  *
  * After a meal the server sends `feeding.digesting_until` (last meal + the breed's gap —
- * Cane Corso, Dobermann 60 min, PDSA advice; null for every other pet). Until then the HUD
+ * Cane Corso, Dobermann, Boxer 60 min, PDSA advice; null for every other pet). Until then the HUD
  * and the walk screen show a calm "wait with the walk — your pup is digesting" note. It is
  * ONLY a warning: steps still count, the walk button stays enabled, nothing is scored and
  * the child gets no statistics. The note disappears by the clock (server time) — no refetch.

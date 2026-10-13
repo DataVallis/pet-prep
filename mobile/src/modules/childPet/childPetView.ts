@@ -118,7 +118,7 @@ export interface ChildPetView {
     last_fed_at: string | null;
     /**
      * M5-R16: until this instant the HUD shows "wait with the walk — the dog is digesting"
-     * (last meal + the breed's meal / exercise gap; Cane Corso, Dobermann 60 min). Null for
+     * (last meal + the breed's meal / exercise gap; Cane Corso, Dobermann, Boxer 60 min). Null for
      * every other pet, once the gap has passed, and from an older server. Only a warning.
      */
     digesting_until: string | null;

@@ -117,6 +117,7 @@ Record each as `"decision": "potrdil David 2026-10-10 (pravilo runbooka): …"` 
 | `backend/app/Http/Controllers/PairingController.php` | `@var` breed union |
 | `backend/app/Filament/Resources/BreedConfigResource.php` | slug examples in two helper texts |
 | `backend/database/factories/PetFactory.php` | `<camelKey>()` state |
+| `backend/lang/{en,sl}/breeds.php` | breed name for the responsibility certificate (EN name / SL name; `ChallengeCertificateTest` checks every `BreedType`) — added after the Boxer run (M5-R10-26) |
 | Tests | new `tests/Feature/<Breed>BreedTest.php` (copy `FrenchBulldogBreedTest.php`: config, migration reversibility, insert-only seed, rows vs data.json, stage rules dataset, senior month, learning, generate-pin paid rule, `/api/breeds` entry, appearance / portrait traits, no statistics); update counts / lists in `BreedConfigTest`, `SpeciesFoundationTest`, `LabradorBreedTest`, `GoldenRetrieverBreedTest`, `FrenchBulldogBreedTest` (breed lists), `BreedSuitabilityTest` (per-breed tags + a test for a new tag), `BreedPortraitTest` (breed lists, counts "Generated N", "$X", `Stopped: N more`, ledger count / sum, manifest indexes) |
 
 ### Mobile commit — `feat(mobile): <Breed> in the picker [M5-R10]`
