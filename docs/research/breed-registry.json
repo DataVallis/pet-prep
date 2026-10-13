@@ -13,7 +13,7 @@
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "e29a9009e419ca333fb957bfbc654184c50394032120e62514854388c1b4b7fd"
+      "sha256": "11b74c862fca92ecc90739fb631e9075fc67522dc8a55df1fafa82db8108e152"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -21,7 +21,7 @@
     },
     "cat_sources": {
       "path": "docs/research/cat-data/sources.md",
-      "sha256": "c23c7d63478cda279daeb74bafcd5c24a053b2a0039f92fe271a24a54f557295"
+      "sha256": "098a022ac7b4c0f5496e64475a721920116e046b41549a1fe8f6f611d072e977"
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
