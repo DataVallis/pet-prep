@@ -329,6 +329,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "miniature_american_shepherd",
+            "species": "dog",
+            "file": "dog/miniature-american-shepherd.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:0db3428dd0e748e567f97a962808b134bba79d6d24af50d800d8f36c88b96347",
+            "generated_at": "2026-10-13T16:56:32+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
