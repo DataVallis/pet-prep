@@ -11,6 +11,7 @@ use App\Exceptions\AccountDeletionException;
 use App\Exceptions\SocialAuthException;
 use App\Jobs\DeleteCertificateFiles;
 use App\Jobs\DeletePetMediaFiles;
+use App\Jobs\RevokeAppleTokenJob;
 use App\Models\AiSpendLedger;
 use App\Models\ChildLoginPin;
 use App\Models\Family;
@@ -22,6 +23,7 @@ use App\Models\PetContract;
 use App\Models\QuietHours;
 use App\Models\User;
 use App\Models\UserSocialAccount;
+use App\Services\Auth\SocialIdentity;
 use App\Services\Auth\SocialTokenVerifier;
 use App\Services\Push\PushDeviceService;
 use Carbon\CarbonImmutable;
@@ -115,6 +117,8 @@ class AccountDeletionService
      *
      * Makes external HTTP (provider keys) — call it before any transaction.
      *
+     * @return SocialIdentity|null the verified provider identity (social path), null for the password path
+     *
      * @throws AccountDeletionException
      */
     public function confirmIdentity(
@@ -124,11 +128,11 @@ class AccountDeletionService
         ?string $idToken,
         ?string $nonce,
         string $scope,
-    ): void {
+    ): ?SocialIdentity {
         if ($user->hasPassword() || $provider === null || $idToken === null || $idToken === '') {
             $this->confirmPassword($user, (string) $password, $scope);
 
-            return;
+            return null;
         }
 
         $key = "deletion-password:{$scope}:{$user->id}";
@@ -154,6 +158,8 @@ class AccountDeletionService
         }
 
         RateLimiter::clear($key);
+
+        return $identity;
     }
 
     private function assertNotLockedOut(string $key): void
@@ -206,16 +212,58 @@ class AccountDeletionService
      * `$acknowledgePaidChallenge` (M3-11 P5): required when a deleted pet has
      * a paid, unfinished challenge (the purchase stays used).
      *
+     * `$appleAuthorizationCode` (M2-10c, App Store 5.1.1(v)): when the parent
+     * had a linked Apple identity and the app sent the sign-in's code, a
+     * RevokeAppleTokenJob is queued (queue `auth`) after the deletion commits
+     * (it no-ops without a configured Apple key). `$appleClientId` = the `aud`
+     * of the Apple token verified for this deletion (the client id the code
+     * was issued to); the job also gets the linked Apple subject to compare
+     * with Apple's answer. Apple-linked without a code (older app) → only a
+     * neutral log line. Admin / Filament deletions have no code → no revocation.
+     *
      * @throws AccountDeletionException not_a_parent (403), superadmin_protected (403),
      *                                  paid_challenge_ack_required (422)
      */
-    public function deleteParentAccount(User $parent, bool $acknowledgePaidChallenge = false): array
-    {
+    public function deleteParentAccount(
+        User $parent,
+        bool $acknowledgePaidChallenge = false,
+        ?string $appleAuthorizationCode = null,
+        ?string $appleClientId = null,
+    ): array {
         if (! $parent->isParent()) {
             throw new AccountDeletionException('not_a_parent', 'Only a parent account can be deleted here.', 403);
         }
         $this->assertNotSuperadmin($parent);
 
+        // Read before the rows cascade away with the user.
+        $appleSubject = UserSocialAccount::where('user_id', $parent->id)
+            ->where('provider', SocialProvider::Apple->value)
+            ->orderBy('id')
+            ->value('subject');
+        $appleLinked = is_string($appleSubject) && $appleSubject !== '';
+
+        $summary = $this->deleteParentAccountRows($parent, $acknowledgePaidChallenge);
+
+        if ($appleLinked && $summary['parents_deleted'] > 0) {
+            if ($appleAuthorizationCode !== null && $appleAuthorizationCode !== '') {
+                // After commit (the transaction above is closed; afterCommit also
+                // holds when a caller wraps this in its own transaction).
+                RevokeAppleTokenJob::dispatch($appleAuthorizationCode, $appleClientId, $appleSubject)
+                    ->onQueue(RevokeAppleTokenJob::QUEUE)
+                    ->afterCommit();
+            } else {
+                Log::info('Apple token revocation skipped: no authorization code sent with the deletion.');
+            }
+        }
+
+        return $summary;
+    }
+
+    /**
+     * @return array{scope: 'family'|'parent', family_deleted: bool, parents_deleted: int, children_deleted: int, pets_deleted: int}
+     */
+    private function deleteParentAccountRows(User $parent, bool $acknowledgePaidChallenge): array
+    {
         return DB::transaction(function () use ($parent, $acknowledgePaidChallenge): array {
             $familyId = FamilyMember::where('user_id', $parent->id)->value('family_id');
 

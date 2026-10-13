@@ -17,7 +17,7 @@ use Illuminate\Validation\Validator;
  * `{password: the parent's current password, confirm: true, confirm_word?}`.
  * A parent WITHOUT a password (signed up with Google / Apple, M2-10c) sends
  * `{provider, id_token, nonce?, authorization_code?}` instead of `password`
- * (`authorization_code`: Apple only, reserved for token revocation, unused): a fresh ID token (≤ 10
+ * (`authorization_code`: Apple only — account deletion revokes the Apple tokens with it): a fresh ID token (≤ 10
  * min) of a provider linked to the account; wrong / stale / unlinked → 422
  * `reauth_required` (AccountDeletionService::confirmIdentity). For a parent
  * WITH a password the password stays required and the provider fields are
@@ -53,9 +53,10 @@ class ConfirmDeletionRequest extends FormRequest
             'id_token' => ['nullable', 'string', 'max:'.SocialSignInRequest::MAX_ID_TOKEN_LENGTH],
             // Apple: the RAW nonce of that sign-in.
             'nonce' => ['nullable', 'string', 'max:255'],
-            // Apple only: the sign-in's authorization code. RESERVED for revoking
-            // the Apple token on account deletion (needs David's Apple .p8 key) —
-            // accepted and validated, not used yet; never logged, never stored.
+            // Apple only: the authorization code of that Apple sign-in. Account
+            // deletion uses it to revoke the Apple tokens (queued
+            // RevokeAppleTokenJob, encrypted payload); child deletion ignores it.
+            // Never logged, never stored in the database.
             'authorization_code' => ['nullable', 'string', 'max:2048', 'prohibited_unless:provider,apple'],
             'confirm' => ['required', 'accepted'],
             // M3-11 P5: the parent saw that a paid, unfinished 12-week challenge
@@ -168,6 +169,14 @@ class ConfirmDeletionRequest extends FormRequest
         $token = $this->input('id_token');
 
         return is_string($token) && $token !== '' ? $token : null;
+    }
+
+    /** M2-10c: Apple authorization code for token revocation (null when not sent). */
+    public function authorizationCode(): ?string
+    {
+        $code = $this->validated('authorization_code');
+
+        return is_string($code) && $code !== '' ? $code : null;
     }
 
     public function nonce(): ?string

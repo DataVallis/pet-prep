@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\SocialProvider;
 use App\Exceptions\AccountDeletionException;
 use App\Http\Requests\ConfirmDeletionRequest;
 use App\Models\User;
@@ -34,7 +35,9 @@ class AccountController extends Controller
      * `password` required, `confirm` must be true); a parent without a password
      * (Google / Apple sign-up, M2-10c) sends `provider` + `id_token` (+ `nonce`
      * for Apple) of a linked provider, issued ≤ 10 min ago, instead of
-     * `password` → else 422 `reauth_required` (503 `provider_unavailable` /
+     * `password` (Apple: + `authorization_code` of that sign-in → after the
+     * deletion commits, the Apple tokens are revoked by a queued job — App
+     * Store 5.1.1(v)) → else 422 `reauth_required` (503 `provider_unavailable` /
      * `provider_disabled` when the provider cannot be checked); 403 `superadmin_protected`;
      * 429 `too_many_attempts` + `Retry-After` after 5 wrong passwords in 15 min
      * (only failed attempts count; separate from the child deletion).
@@ -50,7 +53,7 @@ class AccountController extends Controller
         }
 
         try {
-            $this->deletion->confirmIdentity(
+            $identity = $this->deletion->confirmIdentity(
                 $parent,
                 $request->password(),
                 $request->provider(),
@@ -58,7 +61,13 @@ class AccountController extends Controller
                 $request->nonce(),
                 AccountDeletionService::SCOPE_ACCOUNT,
             );
-            $result = $this->deletion->deleteParentAccount($parent, $request->acknowledgesPaidChallenge());
+            $result = $this->deletion->deleteParentAccount(
+                $parent,
+                $request->acknowledgesPaidChallenge(),
+                $request->authorizationCode(),
+                // The client id the Apple code was issued to = aud of the verified Apple token.
+                $identity?->provider === SocialProvider::Apple ? $identity->audience : null,
+            );
         } catch (AccountDeletionException $e) {
             return $this->refusal($e);
         }
