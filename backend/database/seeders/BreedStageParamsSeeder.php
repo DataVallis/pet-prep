@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -355,6 +355,17 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_SHIH_TZU = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-28)';
 
     /**
+     * M5-R10-29 Great Dane (unattended run 2026-10-13, data.json
+     * proposed_game_parameters.great_dane.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise
+     * 120 min, senior 90 min, puppy 10 min × age capped at 120, stages 9 / 36 / 54 (senior from
+     * the VetCompass median 6.0 y, S212 — 23 deaths, provisional until McMillan 2024 is checked),
+     * arrival 2 / 9 / 36 / 54, learning multiplier 1.0 (Coren 48, Average); care rates the Border
+     * Collie's.
+     */
+    public const CONFIRMED_R10_GREAT_DANE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-29)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -480,6 +491,7 @@ class BreedStageParamsSeeder extends Seeder
         'boxer' => [1, 'S215', 'Grooming: Once a week', 'high', false],
         'miniature_schnauzer' => [3, 'S226', 'Grooming is needed 2-3 times a week', 'high', false],
         'shih_tzu' => [7, 'S231', 'Grooming: Every day', 'high', false],
+        'great_dane' => [1, 'S241', 'Grooming: Once a week', 'high', false],
     ];
 
     /**
@@ -504,6 +516,7 @@ class BreedStageParamsSeeder extends Seeder
         'dobermann' => ['S211', 'Remember to leave at a gap after eating and before exercising.'],
         'boxer' => ['S219', 'Remember to leave a gap between eating and exercising.'],
         'shih_tzu' => ['S233', 'Remember to leave a gap after eating and before exercising.'],
+        'great_dane' => ['S243', "Remember to leave at a gap after eating and before exercising to help prevent GDV (Gastric dilatation volvulus or 'bloat')."],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -543,13 +556,14 @@ class BreedStageParamsSeeder extends Seeder
         'dobermann' => ['S211', 'it’s important to socialise your dog with different experiences, people and dogs from a young age.'],
         'boxer' => ['S219', "Boxers have a strong guarding instinct so it's important to socialise your Boxer with other dogs from a young age."],
         'shih_tzu' => ['S233', 'Shih Tzus can be good-natured family pets if they’ve been given the right socialisation and training'],
+        'great_dane' => ['S243', "This is why it's really important to socialise your Great Dane with different experiences, people and dogs from a young age."],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1120,6 +1134,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-28 (docs/research/dog-data/data.json shih_tzu,
             // S229–S236; runbook rules in proposed_game_parameters.shih_tzu).
             BreedType::ShihTzu => self::shihTzuProfile(),
+            // M5-R10-29 (docs/research/dog-data/data.json great_dane,
+            // S239–S244; runbook rules in proposed_game_parameters.great_dane).
+            BreedType::GreatDane => self::greatDaneProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -2843,6 +2860,77 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'shih_tzu.lifespan.median_uk',
                 'quote' => 'The median age of death was 12.7 years (IQR 8.7–14.3, range 2.0–19.9)',
                 'notes' => 'Dale et al. 2024 (S234), VetCompass UK 2016. RKC / PDSA "Over 10 years" (S231, S233) agree. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * M5-R10-29 Great Dane — docs/research/dog-data/data.json great_dane + proposed_game_parameters.great_dane.
+     *
+     * @return array<string, mixed>
+     */
+    private static function greatDaneProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_GREAT_DANE;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S212', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.great_dane.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a giant dog finishes growing at 18–24 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [54, $boundary('Derived game boundary: last 25 % of lifespan (S11) × VetCompass median 6.0 y (O\'Neill et al. 2013, S212 — 23 deaths) = 4.5 y = 54 months. No McMillan 2024 value was reachable; the RKC band "Under 10 years" (S241) has no lower bound. Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked (small sample — open for David).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 54],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.great_dane.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (18–24 months for a giant dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S241', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.great_dane.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S241) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA "a minimum of two hours of exercise every day" (S243) agrees.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.great_dane.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[46.0, 54.0], [
+                'unit' => 'kg', 'source_id' => 'S243', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'great_dane.adult_weight.pdsa',
+                'quote' => 'Average weight | 46-54 kg',
+                'notes' => 'PDSA key facts (S243): one range for both sexes. RKC standard (S242): minimum weight over 18 months dogs 54 kg, bitches 46 kg (the same numbers as minimums). The FCI standard (S239) gives no weight.',
+            ]],
+            'growth_end' => [[18, 24], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'great_dane.growth.adult_weight_reached',
+                'quote' => 'Giant (over 100 pounds) | 18–24 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA 46–54 kg ≈ 101–119 lb = Giant in S10; RKC size "Extra large"). Same as the Bernese Mountain Dog.',
+            ]],
+            'coren_rank' => [48, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'great_dane.trainability.coren_rank',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 48 (shared with the Boxer), tier "Average Working/Obedience Intelligence" (ranks 40–54). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.great_dane.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 48 (S35) in the "Average" tier (40–54) → 1.0, the mixed-breed speed. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [6.0, [
+                'unit' => 'years', 'source_id' => 'S212', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'great_dane.lifespan.median_uk',
+                'quote' => 'Great Dane 6.0 4.0-9.0 0.0-11.0 23',
+                'notes' => 'O\'Neill et al. 2013 (S212), VetCompass England, Table 1 — 23 deaths (small sample). RKC / PDSA "Under 10 years" (S241, S243) agree. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

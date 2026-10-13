@@ -137,6 +137,12 @@ return [
         // Breed Watch S216 "Excessively short muzzle", PDSA S219 BOAS "in some Boxers with shorter faces").
         // Not `brachycephalic_breathing` (flat face, heat). A calm chip, never a percentage.
         'short_muzzle_breathing' => 'consider',
+        // M5-R10-29 (runbook welfare rule, "a new one per the row above", 2026-10-13): eyelids turned
+        // inwards or outwards are an RKC Breed Watch point of concern (Great Dane: RKC Breed Watch S244
+        // "Eyelids not in normal contact with the eyeball, they are turned inwards or outwards"; PDSA
+        // S243 entropion / ectropion; RKC breed page S241 eye scheme). A calm chip asking for eye-tested
+        // parents, never a percentage.
+        'eyelid_problems' => 'consider',
     ],
 
     'breeds' => [
@@ -742,6 +748,44 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S231', 'S233'], 'refs' => ['shih_tzu.suitability.rkc_grooming', 'shih_tzu.suitability.pdsa_grooming']],
                 // S233 BOAS "caused by their shorter faces"; S236 BVA brachycephalic breeds (Figure 1).
                 ['tag' => 'short_muzzle_breathing', 'source_ids' => ['S233', 'S236'], 'refs' => ['shih_tzu.health.brachycephaly_boas', 'shih_tzu.health.skull_shape']],
+            ],
+        ],
+
+        // M5-R10-29: great_dane.* (S239–S244), runbook rules (data.json
+        // proposed_game_parameters.great_dane.suitability_tags). RKC (S241) + PDSA (S243) + Breed Watch (S244).
+        // `family_pet` from the RKC / PDSA sentences, but never `children` / `small_children` (PDSA S243
+        // does not recommend the breed with younger children → `not_for_small_children`); neither
+        // `first_time_owner` nor `experienced_owner` (PDSA only suggests a trainer's help); not
+        // `other_pets` (fairly strong prey drive). Welfare rule: RKC Breed Watch Category 2 (S244) →
+        // `hips_hind_legs` (as the German Shepherd Dog and the Rottweiler) and the new `eyelid_problems`.
+        'great_dane' => [
+            'suits' => [
+                // S241 "Exercise: More than 2 hours per day"; S243 "a minimum of two hours of exercise every day".
+                ['tag' => 'active_family', 'source_ids' => ['S241', 'S243'], 'refs' => ['great_dane.exercise.adult', 'great_dane.suitability.pdsa_exercise']],
+                // S241 "Despite the size, the Great Dane makes a wonderful family dog"; S243 "they can make great family pets".
+                ['tag' => 'family_pet', 'source_ids' => ['S241', 'S243'], 'refs' => ['great_dane.suitability.rkc_family', 'great_dane.suitability.pdsa_family']],
+                // S241 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S241'], 'refs' => ['great_dane.suitability.rkc_size_of_home', 'great_dane.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S241 "More than 2 hours per day"; S243 "a minimum of two hours of exercise every day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S241', 'S243'], 'refs' => ['great_dane.exercise.adult', 'great_dane.suitability.pdsa_exercise']],
+                // S243 "we wouldn’t recommend a Great Dane if you have younger children".
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S243'], 'refs' => ['great_dane.suitability.pdsa_children']],
+                // S241 "Lifespan: Under 10 years"; S243 "Average lifespan | Under 10 years".
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S241', 'S243'], 'refs' => ['great_dane.health.shorter_lifespan', 'great_dane.lifespan.rkc']],
+                // Welfare rule: S244 "Incorrect hind conformation and/or poor rear movement"; S243 hip dysplasia.
+                ['tag' => 'hips_hind_legs', 'source_ids' => ['S244', 'S243'], 'refs' => ['great_dane.health.breed_watch', 'great_dane.health.hind_conformation']],
+                // Welfare rule (new key): S244 "Eyelids not in normal contact with the eyeball …"; S243 entropion / ectropion.
+                ['tag' => 'eyelid_problems', 'source_ids' => ['S244', 'S243'], 'refs' => ['great_dane.health.breed_watch', 'great_dane.health.eyelids']],
+                // S243 "You might find that they chew your furniture and possessions when they're bored or left alone".
+                ['tag' => 'chews_when_bored', 'source_ids' => ['S243'], 'refs' => ['great_dane.behaviour.chewing', 'great_dane.suitability.pdsa_chewing']],
+                // S241 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S241'], 'refs' => ['great_dane.suitability.rkc_shedding']],
+                // S243 "Great Danes are, however, known for drooling!"
+                ['tag' => 'drools', 'source_ids' => ['S243'], 'refs' => ['great_dane.behaviour.drooling', 'great_dane.suitability.pdsa_drooling']],
+                // S243 "Great Danes do have a fairly strong prey drive, though, so all introductions need to be done very carefully."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S243'], 'refs' => ['great_dane.behaviour.other_pets', 'great_dane.suitability.pdsa_other_pets']],
             ],
         ],
 

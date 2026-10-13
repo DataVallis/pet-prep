@@ -260,6 +260,16 @@
 | nostrils (trait `muzzle`). Colour weights are unsourced → `verified => false`; gold and white
 | weighted highest (the register portrait).
 |
+| Great Dane (M5-R10-29, docs/research/dog-data great_dane.appearance): a very large, powerful, well
+| constructed body combining pride, strength and elegance (FCI 235 S239); very short, dense,
+| smooth, glossy coat; long, narrow head with a broad muzzle; medium, dark eyes; ears naturally
+| pendant, set on high (natural, never cropped); tail reaching to the hocks. Colours: only those
+| both standards share (FCI S239 / RKC S242) — fawn (black mask desired), brindle, harlequin,
+| black, blue; never merle (FCI only), mantle (RKC only), albino or a white blaze / collar.
+| Welfare (RKC Breed Watch Category 2, S244: eyelids turned in or out, hind conformation): tight
+| eyelids and a sound, natural build in the eye and build traits. Colour weights are unsourced →
+| `verified => false`; fawn weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1287,6 +1297,41 @@ return [
             'muzzle' => ['short square muzzle, moderate, with clearly open nostrils'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-29 (docs/research/dog-data/data.json great_dane.appearance; runbook rules
+    // 2026-10-10: colours both standards list — never merle; welfare (Breed Watch) → tight eyelids).
+    'great_dane' => [
+        'display_name' => 'Great Dane',
+        // Colour frequencies are in no source (great_dane.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 235 (S239, https://WWW.FCI.BE/Nomenclature/Standards/235g02-en.pdf), RKC breed standard (S242), RKC breed page (S241), RKC Breed Watch (S244) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S241 "Size: Extra large"; S239 "Males: at least 80 cm, should not exceed 90 cm."',
+            'build' => 'S239 "The Great Dane in his noble appearance combines a large, powerful well constructed body with pride, strength and elegance."; S244 "Incorrect hind conformation and/or poor rear movement" (welfare: a sound, natural build)',
+            'coat_length' => 'S239 "Very short, dense, smooth and close lying, glossy."',
+            'coat_color' => 'S239 "Fawn: Light gold fawn to deep gold fawn, evenly shaded throughout the body." / "Black mask desired."; RKC S242 brindles, fawns, blues, blacks, harlequins (weights unsourced)',
+            'ear_carriage' => 'S239 "Naturally pendant set on high, but not lifted above skull or hanging low."',
+            'eye_color' => 'S239 "Of medium size with lively friendly intelligent expression."; S242 "preferably dark"; S244 "Eyelids not in normal contact with the eyeball, they are turned inwards or outwards" (welfare: tight eyelids)',
+            'tail' => 'S239 "Reaching to the hocks, must not be too long or too short."',
+        ],
+        'traits' => [
+            'size' => ['very large'],
+            'build' => [['value' => 'tall, powerful and elegant, sound and well balanced', 'weight' => 3], 'tall, muscular and noble'],
+            'coat_length' => ['very short, smooth, glossy coat'],
+            // Colours both standards share (S239, S242); fawn highest → the register portrait. Never merle.
+            'coat_color' => [
+                ['value' => 'fawn with a black mask', 'weight' => 3],
+                ['value' => 'brindle with a black mask', 'weight' => 2],
+                'harlequin (white with torn black patches)',
+                'black',
+                'steel blue',
+            ],
+            'ear_carriage' => ['natural uncropped ears, folded forward and set high'],
+            // Welfare rule (Breed Watch S244): tight eyelids, never droopy or turned.
+            'eye_color' => ['dark, medium-sized, with tight eyelids'],
+            'tail' => ['natural tail reaching to the hocks, carried low'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

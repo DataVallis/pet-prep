@@ -109,13 +109,14 @@ describe('seeded value', function () {
         $inData = collect(megData('proposed_game_parameters'))
             ->filter(fn ($p) => is_array($p) && ($p['meal_exercise_gap']['value'] ?? null) !== null)->keys()->sort()->values()->all();
         expect($inData)->toBe(collect($breeds)->sort()->values()->all())
-            ->and($breeds)->toContain('cane_corso', 'dobermann', 'boxer', 'shih_tzu')
+            ->and($breeds)->toContain('cane_corso', 'dobermann', 'boxer', 'shih_tzu', 'great_dane')
             ->and($rows->pluck('breed_slug')->sort()->values()->all())
             ->toBe(collect($breeds)->map(fn (string $b) => BreedType::from($b)->slug())->sort()->values()->all());
         expect(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['cane_corso'][0])->toBe('S199')
             ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['dobermann'][0])->toBe('S211')
             ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['boxer'][0])->toBe('S219')
-            ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['shih_tzu'][0])->toBe('S233');
+            ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['shih_tzu'][0])->toBe('S233')
+            ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['great_dane'][0])->toBe('S243');
 
         foreach ($breeds as $key) {
             $row = $rows->firstWhere('breed_slug', BreedType::from($key)->slug());
@@ -139,7 +140,7 @@ describe('seeded value', function () {
         seedLifeStageData();
 
         $seeded = BreedStageParam::where('key', StageParamKey::MealExerciseGapMinutes->value)->pluck('value', 'breed_slug')->all();
-        expect($seeded)->toHaveKeys(['cane-corso', 'dobermann', 'boxer', 'shih-tzu'])
+        expect($seeded)->toHaveKeys(['cane-corso', 'dobermann', 'boxer', 'shih-tzu', 'great-dane'])
             ->and(array_unique(array_values($seeded)))->toBe([60])
             ->and(count($seeded))->toBe(count(BreedStageParamsSeeder::MEAL_EXERCISE_GAP))
             ->and(StageParamKey::MealExerciseGapMinutes->isBreedLevel())->toBeTrue()
