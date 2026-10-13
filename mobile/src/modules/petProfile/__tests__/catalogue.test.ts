@@ -337,7 +337,7 @@ describe('readBreedCatalogue', () => {
     );
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-28, runbook rules; no new tag).
     expect(shihTzu?.search_keywords).toEqual(['shih tzu', 'shih-tzu', 'shihtzu', 'ši-cu', 'šicu', 'ši cu', 'sicu']);
-    expect(shihTzu?.suitability).toEqual({ suits: ['apartment', 'family_pet', 'first_time_owner', 'low_shedding'], consider: ['frequent_grooming', 'short_muzzle_breathing'] });
+    expect(shihTzu?.suitability).toEqual({ suits: ['apartment', 'family_pet', 'first_time_owner'], consider: ['frequent_grooming', 'short_muzzle_breathing'] });
     const corgi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pembroke_welsh_corgi');
     expect(corgi).toEqual(
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 200 }),

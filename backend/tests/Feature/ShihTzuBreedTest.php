@@ -40,7 +40,7 @@ use function Pest\Laravel\postJson;
 | 12.7 y, S234, provisional until McMillan 2024 is checked —, arrival 2 / 9 / 36 / 114,
 | learning × 0.5, paid breed, Border Collie care rates, brushing every day (M5-R13),
 | 60-minute meal / walk warning (M5-R16), puppy socialisation with the PDSA quote (M5-R17),
-| suitability: suits apartment / family_pet / first_time_owner / low_shedding, consider
+| suitability: suits apartment / family_pet / first_time_owner (no shedding chip — RKC and PDSA disagree), consider
 | frequent_grooming / short_muzzle_breathing; gold and white (portrait), black and white or
 | liver and white — never merle —, moderate muzzle with open nostrils; brachycephalic
 | welfare breed (BVA) → NOT in marketing).
@@ -406,7 +406,7 @@ describe('GET /api/breeds', function () {
                 'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.shih_tzu',
                 'search_keywords' => BreedConfigsSeeder::configs()[24]['search_keywords'], 'sort_order' => 240,
                 'suitability' => [
-                    'suits' => ['apartment', 'family_pet', 'first_time_owner', 'low_shedding'],
+                    'suits' => ['apartment', 'family_pet', 'first_time_owner'],
                     'consider' => ['frequent_grooming', 'short_muzzle_breathing'],
                 ],
             ]);

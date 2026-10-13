@@ -617,7 +617,7 @@ describe('PetPickerStep', () => {
     expect(suits).toHaveTextContent(/življenje v stanovanju/);
     expect(suits).toHaveTextContent(/družinsko življenje/);
     expect(suits).toHaveTextContent(/začetnike/);
-    expect(suits).toHaveTextContent(/dom, kjer želite manj dlak/);
+    expect(suits).not.toHaveTextContent(/dom, kjer želite manj dlak/);
     const consider = screen.getByTestId('breed-suitability-shih_tzu-consider');
     expect(consider).toHaveTextContent(/potrebuje česanje večkrat na teden/);
     expect(consider).toHaveTextContent(/krajši gobček — lahko težje diha/);
@@ -648,7 +648,7 @@ describe('PetPickerStep', () => {
       expect(suits).toHaveTextContent(/apartment living/);
       expect(suits).toHaveTextContent(/family life/);
       expect(suits).toHaveTextContent(/first-time owners/);
-      expect(suits).toHaveTextContent(/homes that prefer less shedding/);
+      expect(suits).not.toHaveTextContent(/homes that prefer less shedding/);
       expect(consider).toHaveTextContent(/needs brushing several times a week/);
       expect(consider).toHaveTextContent(/shorter muzzle — can have breathing problems/);
       expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);

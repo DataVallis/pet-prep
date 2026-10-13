@@ -1086,7 +1086,7 @@ test('Shih Tzu (M5-R10-28): up to 1 hour (RKC), FCI weight for both sexes, PDSA 
   assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 70);
   assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
   assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 114 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
-  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['apartment', 'family_pet', 'first_time_owner', 'low_shedding']);
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['apartment', 'family_pet', 'first_time_owner']);
   assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['frequent_grooming', 'short_muzzle_breathing']);
   assert.deepEqual(d.health.map((h) => h.key), ['short_face_breathing', 'dental_disease_care', 'eye_problems_pra_cataracts_dry_eye']);
   // RKC: no additional health screening schemes or DNA tests.

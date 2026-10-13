@@ -512,7 +512,7 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
       search_keywords: ['shih tzu', 'shih-tzu', 'shihtzu', 'ši-cu', 'šicu', 'ši cu', 'sicu'],
       sort_order: 240,
       suitability: {
-        suits: ['apartment', 'family_pet', 'first_time_owner', 'low_shedding'],
+        suits: ['apartment', 'family_pet', 'first_time_owner'],
         consider: ['frequent_grooming', 'short_muzzle_breathing'],
       },
     },

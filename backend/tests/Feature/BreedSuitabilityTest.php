@@ -595,19 +595,21 @@ it('gives chases_small_pets only to the six breeds whose own entry quotes a high
         ->and(bsEntry('dobermann.suitability.pdsa_other_pets')['source_id'])->toBe('S211');
 });
 
-it('gives the Shih Tzu apartment, family_pet, first_time_owner, low_shedding, frequent_grooming and the short-muzzle chip — never hypoallergenic (runbook 2026-10-13)', function () {
+it('gives the Shih Tzu apartment, family_pet, first_time_owner, frequent_grooming and the short-muzzle chip — no shedding chip — never hypoallergenic (runbook 2026-10-13)', function () {
     $shihTzu = app(BreedSuitability::class)->for(BreedType::ShihTzu);
-    expect($shihTzu['suits'])->toBe(['apartment', 'family_pet', 'first_time_owner', 'low_shedding'])
+    expect($shihTzu['suits'])->toBe(['apartment', 'family_pet', 'first_time_owner'])
         ->and($shihTzu['consider'])->toBe(['frequent_grooming', 'short_muzzle_breathing'])
         // PDSA only advises supervision with children → never children / small_children; pets it grew up with → no other_pets.
-        ->and($shihTzu['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('other_pets')
+        ->and($shihTzu['suits'])->not->toContain('low_shedding')->not->toContain('children')->not->toContain('small_children')->not->toContain('other_pets')
         // Brachycephalic (BVA) but no Shih Tzu source names heat → the Boxer's short-muzzle chip, not the flat-face one;
-        // RKC "Over 10 years" → no shorter_lifespan; "Sheds: No" → no sheds; no prey-drive statement.
+        // RKC "Over 10 years" → no shorter_lifespan; RKC "Sheds: No" vs PDSA seasonal shedding → neither shedding chip;
+        // no prey-drive statement.
         ->and($shihTzu['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('shorter_lifespan')
         ->not->toContain('sheds')->not->toContain('chases_small_pets');
 
     expect(bsEntry('shih_tzu.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Flat/ Apartment')
         ->and(bsEntry('shih_tzu.suitability.rkc_shedding')['quote'])->toBe('Sheds: No')
+        ->and(bsEntry('shih_tzu.suitability.pdsa_shedding')['quote'])->toBe('Expect them to shed more in autumn and spring')
         ->and(bsEntry('shih_tzu.suitability.pdsa_first_time_owner')['quote'])->toBe('Shih Tzus are an ideal pet for first-time owners.')
         ->and(bsEntry('shih_tzu.suitability.pdsa_children')['notes'])->toContain('no children / small_children')
         ->and(bsEntry('shih_tzu.health.skull_shape')['quote'])->toContain('Shih-tzu')

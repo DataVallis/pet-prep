@@ -12922,7 +12922,15 @@
         "source_id": "S231",
         "quote": "Sheds: No",
         "confidence": "high",
-        "notes": "Basis of low_shedding (never 'hypoallergenic'). PDSA (S233): 'Expect them to shed more in autumn and spring' — a seasonal remark, not a conflicting rating; low_shedding kept from the RKC field (open for David)."
+        "notes": "RKC breed page (S231). PDSA (S233): 'Expect them to shed more in autumn and spring' (suitability.pdsa_shedding) — the sources disagree → neither low_shedding nor sheds (runbook rule: conflicting sources → neither tag)."
+      },
+      "pdsa_shedding": {
+        "value": "sheds more in autumn and spring",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "Expect them to shed more in autumn and spring",
+        "confidence": "medium",
+        "notes": "PDSA (S233), grooming section, fragment as returned (the tool cut the sentence: '…, but otherwise a daily brush and quick go around…'). Conflicts with RKC 'Sheds: No' (S231) → no shedding chip."
       },
       "rkc_lifespan": {
         "value": "Over 10 years",
@@ -19240,16 +19248,6 @@
               "shih_tzu.suitability.pdsa_first_time_owner"
             ],
             "quote": "S233 'Shih Tzus are an ideal pet for first-time owners.'"
-          },
-          {
-            "tag": "low_shedding",
-            "source_ids": [
-              "S231"
-            ],
-            "refs": [
-              "shih_tzu.suitability.rkc_shedding"
-            ],
-            "quote": "S231 'Sheds: No'"
           }
         ],
         "consider": [
@@ -19292,12 +19290,13 @@
           "large_home": "RKC 'Flat/ Apartment' (S231).",
           "active_family": "RKC 'Up to 1 hour per day' (S231).",
           "long_daily_exercise": "60 min (S231, S233).",
-          "sheds": "RKC 'Sheds: No' (S231); PDSA's seasonal remark kept in notes.",
+          "sheds": "Same conflict (S231 vs S233) → neither tag.",
           "food_motivated_weight": "No food-motivation statement.",
           "shorter_lifespan": "RKC 'Over 10 years' (S231); VetCompass median 12.7 y (S234).",
-          "sensitive_skin": "Not a Breed Watch point (S231)."
+          "sensitive_skin": "Not a Breed Watch point (S231).",
+          "low_shedding": "RKC 'Sheds: No' (S231) and PDSA 'Expect them to shed more in autumn and spring' (S233) disagree → neither tag (runbook rule)."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, family_pet, first_time_owner, low_shedding; consider frequent_grooming, short_muzzle_breathing (no new key)"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, family_pet, first_time_owner; consider frequent_grooming, short_muzzle_breathing (no new key; no shedding chip — RKC and PDSA disagree)"
       },
       "marketing": {
         "value": "in the app: yes; in marketing / store screenshots / social: no",

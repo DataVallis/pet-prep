@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "85f0a3b90a0eceb0480dea83fd833f5d5cee80648263920b95dc8c081582832e"
+      "sha256": "407c191b47a8261e919e6098e5e7caafa9aa540a050c8931ffbd68f02ed7a00a"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "491d3de393f974d46aa249d6290e11f01dae91cc03870f9498eed7bde047198d"
+      "sha256": "73615d2745c7f4d21deddad5abdccc18e48c66f5c7844937e18968c6f19e4a9a"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -14571,15 +14571,6 @@
             ],
             "refs": [
               "shih_tzu.suitability.pdsa_first_time_owner"
-            ]
-          },
-          {
-            "tag": "low_shedding",
-            "source_ids": [
-              "S231"
-            ],
-            "refs": [
-              "shih_tzu.suitability.rkc_shedding"
             ]
           }
         ],

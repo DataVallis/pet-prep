@@ -734,8 +734,8 @@ return [
                 ['tag' => 'family_pet', 'source_ids' => ['S233'], 'refs' => ['shih_tzu.suitability.pdsa_family', 'shih_tzu.behaviour.family']],
                 // S233 "Shih Tzus are an ideal pet for first-time owners."
                 ['tag' => 'first_time_owner', 'source_ids' => ['S233'], 'refs' => ['shih_tzu.suitability.pdsa_first_time_owner']],
-                // S231 "Sheds: No" (never "hypoallergenic").
-                ['tag' => 'low_shedding', 'source_ids' => ['S231'], 'refs' => ['shih_tzu.suitability.rkc_shedding']],
+                // Not `low_shedding` / `sheds`: RKC "Sheds: No" (S231) and PDSA "Expect them to shed more
+                // in autumn and spring" (S233) disagree → neither tag (runbook rule).
             ],
             'consider' => [
                 // S231 "Grooming: Every day"; S233 "They’ll need a daily brush to keep their coat knot-free".
