@@ -117,6 +117,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.boxer.availability, 'in_app');
   assert.deepEqual(byId.miniature_schnauzer.slug, { en: 'miniature-schnauzer', sl: 'pritlikavi-snavcer' });
   assert.equal(byId.miniature_schnauzer.availability, 'in_app');
+  assert.deepEqual(byId.shih_tzu.slug, { en: 'shih-tzu', sl: 'shih-tzu' });
+  assert.equal(byId.shih_tzu.availability, 'in_app');
   assert.equal(byId.maine_coon.availability, 'in_app'); // cats are hidden in the app
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.equal(byId.british_shorthair.availability, 'in_app');
@@ -199,6 +201,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     dobermann: { adult: 12000, senior: 9000, seniorFrom: 83, learning: 1.9 },
     boxer: { adult: 12000, senior: 9000, seniorFrom: 102, learning: 1.0 },
     miniature_schnauzer: { adult: 6000, senior: 4500, seniorFrom: 104, learning: 1.5 },
+    shih_tzu: { adult: 6000, senior: 4500, seniorFrom: 114, learning: 0.5 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -425,7 +428,7 @@ test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming row
   assert.deepEqual([...cats, ...dogs].sort(), seeded);
   assert.deepEqual(cats, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
   // M5-R13: every dog breed of the app except the mutt and the Border Collie (no grooming statement).
-  assert.equal(dogs.length, 22);
+  assert.equal(dogs.length, 23);
   assert.ok(!dogs.includes('mutt') && !dogs.includes('border_collie'));
 });
 
@@ -1069,4 +1072,29 @@ test('Miniature Schnauzer (M5-R10-27): up to 1 hour (RKC), FCI weight and height
   assert.doesNotMatch(json, /10\.8 kg|9\.0 kg|17\.4|8\.3%/);
   // Never "hypoallergenic", never cropped ears / a docked tail or a non-standard colour, never a percentage.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|docked|cropped|merle|\d %\)/i);
+});
+
+test('Shih Tzu (M5-R10-28): up to 1 hour (RKC), FCI weight for both sexes, PDSA height, FCI group 9 section 5 Tibet (China), VetCompass median + RKC band, Coren 70, short-muzzle chip, brushing every day', () => {
+  const d = registry.breeds.find((b) => b.id === 'shih_tzu');
+  assert.deepEqual(d.name, { en: 'Shih Tzu', sl: 'Shih tzu' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S231']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 208, group: 9, section: 5, origin: 'CN-XZ' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [4.5, 8], female: [4.5, 8] }, ['S229']]]);
+  // The FCI gives only an upper bound (not more than 27 cm) → the PDSA average is shown.
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[[27, 27], ['S233']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['median', 12.7, ['S234']], ['more_than', 10, ['S231']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 70);
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 114 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['apartment', 'family_pet', 'first_time_owner', 'low_shedding']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['frequent_grooming', 'short_muzzle_breathing']);
+  assert.deepEqual(d.health.map((h) => h.key), ['short_face_breathing', 'dental_disease_care', 'eye_problems_pra_cataracts_dry_eye']);
+  // RKC: no additional health screening schemes or DNA tests.
+  assert.equal(d.breeder_checklist.status, 'none_recommended');
+  assert.deepEqual(d.breeder_checklist.tests, []);
+  const json = JSON.stringify(d);
+  // The pet-population weight and the VetCompass percentages stay in research.
+  assert.doesNotMatch(json, /7\.9 kg|11,082|9\.5%/);
+  // Never "hypoallergenic", never merle, never a percentage.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|merle|\d %\)/i);
 });

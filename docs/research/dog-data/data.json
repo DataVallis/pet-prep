@@ -12486,21 +12486,23 @@
     },
     "height": {
       "fci": {
-        "value": {
-          "male": [
-            null,
-            27
-          ],
-          "female": [
-            null,
-            27
-          ]
-        },
+        "value": "≤ 27",
         "unit": "cm",
         "source_id": "S229",
         "quote": "Height at the withers: Not more than 27 cm",
         "confidence": "high",
-        "notes": "FCI standard (S229) — an upper bound only, both sexes. RKC standard (S232): 'not more than 27cm (approx. 10½”).' PDSA (S233): 'Average height' '27 cm'."
+        "notes": "FCI standard (S229) — an upper bound only, both sexes (stored as text; the register shows the PDSA average). RKC standard (S232): 'not more than 27cm (approx. 10½”).'"
+      },
+      "pdsa_average": {
+        "value": [
+          27,
+          27
+        ],
+        "unit": "cm",
+        "source_id": "S233",
+        "quote": "27 cm",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S233), 'Average height' (cell as returned), one average for both sexes — at the FCI upper bound (S229). Shown in the register (Yorkshire Terrier precedent)."
       }
     },
     "adult_weight": {
