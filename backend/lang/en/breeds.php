@@ -33,6 +33,7 @@ return [
     'miniature_schnauzer' => 'Miniature Schnauzer',
     'shih_tzu' => 'Shih Tzu',
     'great_dane' => 'Great Dane',
+    'pomeranian' => 'Pomeranian',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

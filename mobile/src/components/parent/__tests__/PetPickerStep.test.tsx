@@ -267,6 +267,7 @@ describe('PetPickerStep', () => {
       'breed-option-miniature_schnauzer',
       'breed-option-shih_tzu',
       'breed-option-great_dane',
+      'breed-option-pomeranian',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -655,6 +656,57 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(screen.getByTestId('breed-option-shih_tzu')).toHaveTextContent(/Shih Tzu/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-30: the Pomeranian (fallback) shows its chips, is found as "pomeranec" and "špic", and quotes 3.000 / 2.300 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const pom = screen.getByTestId('breed-option-pomeranian');
+    expect(pom).toHaveTextContent(/Pomeranec/);
+    expect(pom).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-pomeranian-suits');
+    expect(suits).toHaveTextContent(/življenje v stanovanju/);
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/dom z drugimi ljubljenčki/);
+    const consider = screen.getByTestId('breed-suitability-pomeranian-consider');
+    expect(consider).toHaveTextContent(/majhen pes — bolje za starejše otroke/);
+    expect(consider).toHaveTextContent(/potrebuje česanje večkrat na teden/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'pomeranec');
+    expect(screen.getByTestId('breed-option-pomeranian')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-great_dane')).toBeNull();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'špic');
+    expect(screen.getByTestId('breed-option-pomeranian')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-pomeranian'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 3\.000 pri 3 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/3\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/2\.300 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'pomeranian', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'pomeranian' }),
+    );
+  });
+
+  it('M5-R10-30: the Pomeranian chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-pomeranian-suits');
+      const consider = screen.getByTestId('breed-suitability-pomeranian-consider');
+      expect(suits).toHaveTextContent(/apartment living/);
+      expect(suits).toHaveTextContent(/homes with other pets/);
+      expect(consider).toHaveTextContent(/small dog — better with older children/);
+      expect(consider).toHaveTextContent(/needs brushing several times a week/);
+      expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-pomeranian')).toHaveTextContent(/Pomeranian/);
     } finally {
       await i18n.changeLanguage('sl');
     }

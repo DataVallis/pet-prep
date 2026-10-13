@@ -9,6 +9,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-13 — Pomeranec: dvanajsta pasma po dvajsetih (M5-R10-30)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **pomeranca** (22. mesto). Šestindvajseta plačljiva pasma psa; v izbirniku je zdaj 27 psov (z mešančkom). Pomeranec je majhen špic za stanovanje: do 30 minut gibanja na dan (3.000 korakov za odraslega psa, 2.300 za starejšega), česanje 3× na teden (PDSA: »two-three times per week«) in tedenska »Nova izkušnja« za mladička (AKC priporoča zgodnjo socializacijo). Prvič je dodana oznaka »majhen pes — bolje za starejše otroke«: AKC piše, da se pomeranec bolje znajde v družinah s starejšimi otroki.
+
+**Zakaj je pomembno:** Pomeranec je pes, ki ga družine pogosto izberejo prav zaradi majhnosti — in prav zato je pomembno pošteno povedati, da drobnemu psu bolj ustrezajo starejši otroci, ki znajo z njim nežno ravnati. Kuža v igri postane »starejši« pri 9 letih (108 mesecev; začasno, dokler ne preverimo še ene raziskave o življenjski dobi). Vse potrebe z virom so v igri od prvega dne.
+
+**Številke:** 8 novih virov (S245–S252), 1 migracija, 1 nova oznaka (`older_children`), 3 + 3 oznake v izbirniku, 2 zgrajeni potrebi z virom (česanje 3× na teden, socializacija), dnevni cilj 3.000 korakov, meja starejšega 108 mesecev (začasno, spodnja meja RKC »več kot 12 let« — odprto za Davida), 27 psov v izbirniku (26 plačljivih + mešanček).
+
+**Kako povedati:**
+- 👩 Starši: »Pomeranec je majhen, vesel pes za stanovanje — a njegova gosta dvojna dlaka potrebuje česanje večkrat na teden, drobnemu psu pa bolj ustrezajo starejši otroci. V PetPrepu boste videli, ali vaš otrok zmore redno, nežno nego, preden pripeljete domov pravega kužka.«
+- 🧒 Otroci: »Pomeranec je majhna puhasta kepica! Večkrat na teden ga lepo počeši in z njim ravnaj zelo nežno — je čisto majhen.«
+- 💼 Investitorji: »Dvanajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC — vse številke iz virov ali stalnih pravil; ko vir pove nekaj, česar noben obstoječi ključ ne pokrije, sistem doda novo mirno oznako (tu: bolje za starejše otroke).«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri pomerancu upošteva priporočene teste staršev The Royal Kennel Club (slikanje CM/SM, shema za oči BVA/KC/ISDS) in nasvet AKC o starejših otrocih — brez obljub o zdravju.«
+
+---
+
 ## 2026-10-13 — Nemška doga: enajsta pasma po dvajsetih (M5-R10-29)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **nemško dogo** (21. mesto). Petindvajseta plačljiva pasma psa: več kot dve uri gibanja na dan (12.000 korakov za odraslega psa, 9.000 za starejšega), česanje 1× na teden, po obroku eno uro opozorilo »Počakaj s sprehodom« (PDSA svari pred zasukom želodca) in tedenska »Nova izkušnja« za mladička. Prvič je dodana oznaka »veke in oči — preverite preglede oči«: The Royal Kennel Club pri tej pasmi sodnikom naroča, naj pazijo na veke, ki niso v stiku z očesom.

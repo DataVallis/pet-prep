@@ -270,6 +270,15 @@ class FalAiService
                 .'natural tail reaching to the hocks, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-30: RKC standard (S249) / FCI 97 (S246) — bright orange as the anchor (a whole
+            // colour both standards name by name); natural untrimmed double coat; never merle, never white
+            // markings on a coloured dog.
+            BreedType::Pomeranian => 'A lively, friendly Pomeranian dog with a bright orange coat, '
+                .'profuse natural double coat with a full frill round the neck and chest, small erect ears set high, '
+                .'fox-like head with a fine muzzle, dark medium-sized eyes, black nose, '
+                .'plumed tail turned over the back, tiny compact toy body, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -658,6 +667,18 @@ class FalAiService
                     1 => 'black stripes and a black mask',
                     2 => 'torn black patches on a pure white base',
                 },
+            ],
+            // M5-R10-30: RKC whole colours the FCI allows (RKC S249 / FCI S246); never merle,
+            // never white markings on a coloured dog.
+            BreedType::Pomeranian => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'bright orange',
+                    1 => 'cream',
+                    2 => 'white',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'profuse, fluffy double coat with a frill round the neck',
+                'markings' => 'none (whole-coloured)',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

@@ -30,10 +30,11 @@ import { i18n } from '@/i18n';
  * (M5-R10-27, S223 / S226), senior 45 (miniatureSchnauzerProfile); Shih Tzu 60 min
  * (M5-R10-28, S231 / S233), senior 45 (shihTzuProfile);
  * Great Dane 120 min (M5-R10-29, S241 / S243), senior 90 (greatDaneProfile);
+ * Pomeranian 30 min (M5-R10-30, S247 / S250), senior 23 (pomeranianProfile);
  * arrival puppy 2, young 9 months.
  */
-type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel' | 'beagle' | 'standard_poodle' | 'dachshund' | 'australian_shepherd' | 'havanese' | 'west_highland_white_terrier' | 'bernese_mountain_dog' | 'siberian_husky' | 'rottweiler' | 'bulldog' | 'german_shorthaired_pointer' | 'yorkshire_terrier' | 'cane_corso' | 'pembroke_welsh_corgi' | 'dobermann' | 'boxer' | 'miniature_schnauzer' | 'shih_tzu' | 'great_dane'>;
-const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane'];
+type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel' | 'beagle' | 'standard_poodle' | 'dachshund' | 'australian_shepherd' | 'havanese' | 'west_highland_white_terrier' | 'bernese_mountain_dog' | 'siberian_husky' | 'rottweiler' | 'bulldog' | 'german_shorthaired_pointer' | 'yorkshire_terrier' | 'cane_corso' | 'pembroke_welsh_corgi' | 'dobermann' | 'boxer' | 'miniature_schnauzer' | 'shih_tzu' | 'great_dane' | 'pomeranian'>;
+const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian'];
 const ADULT_MINUTES: Record<DogBreed, number> = {
   mutt: 60,
   border_collie: 120,
@@ -61,6 +62,7 @@ const ADULT_MINUTES: Record<DogBreed, number> = {
   miniature_schnauzer: 60,
   shih_tzu: 60,
   great_dane: 120,
+  pomeranian: 30,
 };
 const ARRIVAL_MONTHS: Partial<Record<LifeStage, number>> = { puppy: 2, young: 9 };
 
@@ -298,6 +300,25 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(E.adult).toContain('6,000 steps');
       expect(E.senior).toContain('4,500 steps');
       expect(PICKER_STRINGS.breedHints.shih_tzu).toBe('Part of the 12-week challenge · brushing every day');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-30 Pomeranian: 2.000 → 3.000 (reached at 3 months), young 3.000, adult 3.000, senior 2.300, brushing 3× a week — SL and EN', async () => {
+    const P = PICKER_STRINGS.ageHints.pomeranian;
+    expect(P.puppy).toMatch(/^Pride star 2 meseca\..*2\.000 korakov.*do 3\.000 pri 3 mesecih/);
+    expect(P.young).toBe('2 obroka na dan; sprehod 3.000 korakov na dan (kot odrasel pes).');
+    expect(P.adult).toBe('2 obroka na dan; sprehod 3.000 korakov na dan.');
+    expect(P.senior).toBe('2 obroka na dan; krajši sprehod — 2.300 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.pomeranian).toBe('Del 12-tedenskega izziva · česanje 3× na teden');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.pomeranian;
+      expect(E.puppy).toContain('2,000 steps a day, more each week up to 3,000 at 3 months');
+      expect(E.adult).toContain('3,000 steps');
+      expect(E.senior).toContain('2,300 steps');
+      expect(PICKER_STRINGS.breedHints.pomeranian).toBe('Part of the 12-week challenge · brushing 3× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }
