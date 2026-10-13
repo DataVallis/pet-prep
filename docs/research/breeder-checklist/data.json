@@ -1125,6 +1125,46 @@
       "tests": [],
       "notes": "RKC breed page (older address display.aspx?id=4102, dog-data S231, 2026-10-13): under 'We strongly recommend that all breeders, both assured breeders (ABs) and non ABs, use the following (or equivalent) schemes, tests and advice.' the page lists none; 'You may want to speak to your breeder, vet or local breed club about any health issues in the breed.' No test is guessed."
     },
+    "great_dane": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S239",
+        "level_quotes": {
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "dna_imgd",
+          "level": "best_practice",
+          "name": "DNA test for inherited myopathy of Great Danes (IMGD)",
+          "source_id": "S239",
+          "quote": "DNA test for inherited myopathy of Great Danes (IMGD)"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S239",
+          "quote": "BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "BVA/KC/ISDS Eye Scheme",
+          "source_id": "S239",
+          "quote": "BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S239",
+          "quote": "BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (current address, dog-data S239, 2026-10-13): Best Practice schemes and tests only (the page uses no minimum heading) — IMGD DNA test, elbow, eye and hip schemes; 'There are not currently any additional breed specific restrictions in place for this breed.' PDSA (S241) names the IMGD DNA test and BVA/KC screening too. New test key dna_imgd."
+    },
     "maine_coon": {
       "status": "listed",
       "basis": {
