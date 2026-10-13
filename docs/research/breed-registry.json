@@ -53,7 +53,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "9319647e2529cc664c90996077d47138dfc7a490bc027693855642ce91efbac3"
+      "sha256": "fe3b3f1167b4c222512780a2aee4efb0068a7b9d9f94f422405b4936fc4173fd"
     }
   },
   "suitability_vocabulary": {
@@ -14470,17 +14470,6 @@
           "confidence": "high"
         },
         {
-          "group": "grooming",
-          "field": "shedding",
-          "kind": "category",
-          "value": "no",
-          "source_ids": [
-            "S231"
-          ],
-          "ref": "shih_tzu.suitability.rkc_shedding",
-          "confidence": "high"
-        },
-        {
           "group": "training",
           "field": "coren_rank",
           "kind": "statement",
@@ -14513,12 +14502,11 @@
         "weight": 2,
         "exercise": 6,
         "grooming_frequency": 8,
-        "shedding": 9,
         "lifespan": 4
       },
       "health": [
         {
-          "key": "short_face_breathing",
+          "key": "shorter_face_boas",
           "source_ids": [
             "S233"
           ],
@@ -14534,7 +14522,7 @@
           "confidence": "high"
         },
         {
-          "key": "eye_problems_pra_cataracts_dry_eye",
+          "key": "eye_problems_dry_eye_cataracts_pra_retina",
           "source_ids": [
             "S233"
           ],
@@ -14793,7 +14781,12 @@
           "S234"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "shih-tzu.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "none_recommended",
         "tests": [],

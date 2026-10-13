@@ -103,7 +103,7 @@ function clPairedPet(array $profile): Pet
 describe('cat import provenance (cat-data/data.json)', function () {
     it('takes every cat value from cat-data/data.json with a listed C source or a David decision; UNSOURCED (D) would stay unverified', function () {
         $known = clSourceIds();
-        expect($known)->toHaveCount(50)->toContain('C1', 'C13', 'C25', 'C28', 'C32', 'C35', 'C41', 'C50');
+        expect($known)->toHaveCount(53)->toContain('C1', 'C13', 'C25', 'C28', 'C32', 'C35', 'C41', 'C50', 'C53');
 
         $rows = BreedStageParamsSeeder::catRows();
         expect($rows)->not->toBeEmpty();
