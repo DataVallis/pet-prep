@@ -290,6 +290,14 @@ class FalAiService
                 .'compact well-balanced body, short natural straight tail carried low, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-32: FCI 367 (S265) / AKC standard (S266) — colours "with no order of preference",
+            // blue merle as the anchor (merle is standard for this breed, as the Australian Shepherd);
+            // triangular high-set folding ears, natural undocked tail (the game never draws docking).
+            BreedType::MiniatureAmericanShepherd => 'An alert, athletic Miniature American Shepherd dog with a blue merle coat with white and copper markings, '
+                .'medium-length straight to wavy weather-resistant coat, triangular high-set ears folding forward, '
+                .'almond-shaped eyes fully surrounded by colour, moderate muzzle, natural undocked tail, '
+                .'small, agile body slightly longer than tall, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -702,6 +710,21 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'short, smooth, bright and fine',
                 'markings' => 'white muzzle band, white blaze between the eyes and white forechest',
+            ],
+            // M5-R10-32: black, blue merle, red (liver), red merle, with or without white and tan
+            // markings (FCI S265 / AKC S266); never white body splashes.
+            BreedType::MiniatureAmericanShepherd => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'blue merle',
+                    1 => 'black',
+                    2 => 'red merle',
+                },
+                'eye_color' => match ($variantIndex) {
+                    0 => 'blue',
+                    1, 2 => 'brown',
+                },
+                'fur_texture' => 'medium-length, straight to wavy, weather resistant',
+                'markings' => 'white collar, chest and legs with copper points',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

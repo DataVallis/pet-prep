@@ -14730,6 +14730,475 @@
       }
     }
   },
+  "miniature_american_shepherd": {
+    "_note": "Added 2026-10-13 (M5-R10-32, unattended run — appended after the Boston Terrier: AKC 2024 No. 24, S174 full-list table 'ranks 20–30: … Boston Terrier, Miniature American Shepherd, Havanese …'). Quotes as returned by the web-fetch tool on 2026-10-13 (the tool limits quotes to ~125 characters — long sentences are quoted in pieces; apostrophes as returned); spot-check before import (sources.md S264–S271, reused S10, S11, S14, S24, S35, S45, S123, S174). The breed is provisionally recognised by the FCI (No. 367, 2019, S264) and was recognised by The Royal Kennel Club in April 2026 (imported register — the RKC breed page and news item were found by search but every fetch of royalkennelclub.com returned an error, so no RKC key facts). No PDSA, Woodgreen or Dogs Trust breed page; no McMillan 2024 row (Dogs Trust table S123: no row); no VetCompass paper. Required fields therefore come from tier B: adult weight = AKC breed weight chart (S268, 'Is it a good fit' S267 agrees), exercise = PetMD (S269, DVM-written and DVM-reviewed, the S10 / S37 precedent for PetMD as tier B), lifespan = PetMD 12–13 years (S269) → senior boundary seeded verified=false (Claude's suggestion, open for David — runbook §3 closest row, Bernese / Cane Corso precedent). Not a welfare-concern breed (no conformation concern in any source) → in marketing.",
+    "identity": {
+      "value": "FCI No. 367, Group 1 Section 1 (Sheepdogs), USA",
+      "unit": "—",
+      "source_id": "S264",
+      "quote": "Recognized on a provisional basis",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S264): standard 367, group 'n°1 - Sheepdogs and Cattledogs (except Swiss Cattledogs)', section 'Sheepdogs', country of origin 'UNITED STATES OF AMERICA', provisional acceptance '9/4/2019', 'Not subject to a working trial according to the FCI breeds nomenclature'. FCI standard (S265): 'FCI-CLASSIFICATION: Group 1 Sheepdogs and Cattledogs (except Swiss Cattledogs)', 'Section 1 Sheepdogs', 'ORIGIN: United States of America.', 'UTILIZATION: Farm and ranch shepherd dog.', 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 04/09/2019.' AKC: Herding group, recognised 2015 (Wikipedia S271, tier C: 'was recognised by the American Kennel Club (AKC) in 2015 and is the club's 186th breed.'). Former name (AKC S270): 'Initially, the breed's name was Miniature Australian Shepherds'. English name: Miniature American Shepherd (AKC, FCI); nicknames 'Mini American', 'MAS' (S271, tier C)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S265",
+      "quote": "The Miniature American Shepherd is a small size herding dog that originated in the United States.",
+      "confidence": "medium",
+      "notes": "FCI standard (S265, tier A). Alternative: PetMD (S269) uses 'medium-sized dogs' in its nutrition section ('high-quality puppy food for medium-sized dogs'); the AKC weight chart 20–40 lb (S268) ≈ 9.1–18.1 kg spans the top of the S10 'Small (12–24 pounds)' and the 'Medium (24–59 pounds)' weight classes — growth end uses the Medium weight class (S10). No RKC / PDSA size field reachable. Tier A preferred → small (QA review 2026-10-13).",
+      "alternatives": [
+        {
+          "value": "medium",
+          "source_id": "S269",
+          "notes": "PetMD nutrition wording"
+        }
+      ]
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            35.5,
+            46
+          ],
+          "female": [
+            33,
+            43.5
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S265",
+        "quote": "Males: 35.5 cm up to 46 cm at the top of the withers",
+        "confidence": "high",
+        "notes": "FCI (S265): 'Females: 33 cm up to and including 43.5 cm at the top of the withers.'; disqualification outside these limits (dogs under 35.5 or over 46 cm, bitches under 33 or over 43.5 cm — paraphrase; not applied under six months). AKC standard (S266): 'Height for dogs is 14 inches up to and including 18 inches at the top of the withers.' / 'Height for bitches is 13 inches up to and including 17 inches at top of withers.'"
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": [
+            9.1,
+            18.1
+          ],
+          "female": [
+            9.1,
+            18.1
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S268",
+        "quote": "Miniature American Shepherd | 20-40 pounds | 20-40 pounds",
+        "confidence": "medium",
+        "notes": "AKC breed weight chart (S268), row as returned (male | female): 20–40 lb for both sexes = 9.07–18.14 kg → stored as 9.1–18.1 kg. AKC (S267): 'Mini Americans stand between 13 and 18 inches at the shoulder, and weigh between 20 and 40 pounds.' PetMD (S269): 'A full-grown Miniature American Shepherd stands 13–18 inches tall and weighs 20–40 pounds.' — sources agree. Neither standard gives a weight (FCI S265: 'Healthy weight will vary based on individual size, sex and substance.'; AKC standard S266 has no weight statement). The game range (adult_weight_kg 9.1–18.1)."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. 20–40 lb (S268) → mostly the 'Medium' class (the bottom touches 'Small (12–24 pounds): 9–12 months'). The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Miniature American Shepherd growth curve found."
+      }
+    },
+    "lifespan": {
+      "petmd": {
+        "value": "12–13",
+        "unit": "years",
+        "source_id": "S269",
+        "quote": "The average Miniature American Shepherd lifespan is 12–13 years, and they're considered a generally healthy breed.",
+        "confidence": "medium",
+        "notes": "PetMD (S269, Michelle Diener DVM, reviewed by Sarah Wooten DVM, updated 2026-09-29). The only A/B lifespan value found. Wikipedia (S271, tier C): 'The MAS has an expected lifespan of 13–15 years.' (citing Vetstreet) — alternative only, never alone. The lower bound 12 is the basis of the senior suggestion (verified=false)."
+      },
+      "rkc": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — the RKC breed page (imported register, recognised April 2026) was found by search (royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/miniature-american-shepherd-imp/) but every fetch returned an error (2026-10-13); no lifespan field read."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Miniature American Shepherd row in the Dogs Trust table of McMillan et al. 2024 (S123, checked 2026-10-13: 'NO ROW'; Australian Shepherd row present). No VetCompass Miniature American Shepherd longevity paper found."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12 y (PetMD lower bound '12–13 years', S269) → 0.75 × 12 = 9 y = 108 months. The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value for this breed → closest row (Bernese Mountain Dog / Cane Corso precedent): a tier-B breed range from a vet-reviewed page, seeded verified=false (Claude's suggestion, open for David). Alternatives: Wikipedia 13–15 y (S271, tier C) → 0.75 × 13 × 12 = 117; Dogs Trust > 7 y (S14) = 84.",
+        "derived_from": [
+          "S11",
+          "S269"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 60",
+        "unit": "minutes/day",
+        "source_id": "S269",
+        "quote": "This breed has a lot of energy and needs at least one hour (ideally two) of exercise every day.",
+        "confidence": "medium",
+        "notes": "PetMD (S269). Runbook rule: 'at least N' → N = 60 ('ideally two' hours = 120 recorded as an alternative). AKC (S267): 'Mini Americans are an active, athletic breed and require a moderate amount of exercise.' / 'neglecting to give them regular exercise will cause them to misbehave.' (no number); AKC (S270): 'This breed requires more than average exercise but can still be adaptable to their family's way of life.' No RKC / PDSA exercise field reachable.",
+        "alternatives": [
+          {
+            "value": 120,
+            "source_id": "S269",
+            "notes": "PetMD 'ideally two' hours — not the rule's number (at least N → N)."
+          }
+        ]
+      },
+      "energy": {
+        "value": "athletic and energetic; strength and stamina for an active lifestyle",
+        "unit": "—",
+        "source_id": "S269",
+        "quote": "They are athletic and have a lot of energy",
+        "confidence": "medium",
+        "notes": "PetMD (S269). AKC (S270): 'Despite its smaller size, this breed has enough strength and stamina to keep pace with any active lifestyle.'"
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "intelligent working dog of strong herding and guardian instincts; protective, good natured, devoted and loyal with the family; reserved with strangers",
+        "unit": "—",
+        "source_id": "S266",
+        "quote": "The Miniature American Shepherd is intelligent, primarily a working dog of strong herding and guardian instincts.",
+        "confidence": "high",
+        "notes": "AKC standard (S266): 'With his family he is protective, good natured, devoted and loyal.' FCI (S265) the same first sentence. AKC (S270): 'With family members, Miniature American Shepherds are affectionate, loving, and sometimes cuddly'; 'Miniature American Shepherds have strong guardian instincts.' AKC (S267): 'They can be weary of new faces, but early, consistent socialization will build up a Mini American's confidence in new situations.'"
+      },
+      "family": {
+        "value": "can make great family dogs (with obedience training and early socialisation); good with children but may try to herd them",
+        "unit": "—",
+        "source_id": "S267",
+        "quote": "Mini Americans can make for great family dogs, especially with proper obedience training and early socialization.",
+        "confidence": "medium",
+        "notes": "AKC (S267): 'They tend to be good with children, but may try to herd them.' / 'Kids who understand the nature of dogs and the responsibility of owning a pet will likely be better suited for this breed.' PetMD (S269): 'Miniature American Shepherds make great family dogs due to their affection, intellect' and 'They are good with children and other pets but should be supervised initially when they are getting to know a new family member.' → family_pet, children (caveats kept: supervision at first, kids who understand dogs) and may_herd_children; no small-children rating → never small_children."
+      },
+      "herding_children": {
+        "value": "may try to herd children",
+        "unit": "—",
+        "source_id": "S267",
+        "quote": "They tend to be good with children, but may try to herd them.",
+        "confidence": "medium",
+        "notes": "AKC (S267). Herding with nipping at heels (AKC S270): 'With some nipping at heels, this breed herds small flocks of goats, sheep, and ducks.' → may_herd_children (Australian Shepherd / Pembroke Welsh Corgi precedent)."
+      },
+      "socialisation": {
+        "value": "early, consistent socialisation builds confidence (can be wary of new faces)",
+        "unit": "—",
+        "source_id": "S267",
+        "quote": "They can be weary of new faces, but early, consistent socialization will build up a Mini American's confidence in new situations.",
+        "confidence": "medium",
+        "notes": "AKC (S267, 'weary' as returned). AKC (S267): 'Early socialization and puppy training courses are recommended for all breeds.' PetMD (S269): 'Enrolling your pup into a socialization class and/or puppy obedience class can help them grow up to be a well-behaved dog.' → proposed_game_parameters.miniature_american_shepherd.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "mental_stimulation": {
+        "value": "needs jobs to stay active and prevent boredom; happiest when the mind is engaged",
+        "unit": "—",
+        "source_id": "S269",
+        "quote": "Miniature American Shepherds need to be given jobs to stay active and prevent boredom.",
+        "confidence": "medium",
+        "notes": "PetMD (S269): 'Along with physical activity, Miniature American Shepherds are happiest when their minds are engaged' → needs_mental_stimulation (a need, not just enjoyment)."
+      },
+      "time_alone": {
+        "value": "devotion to family can lead to separation anxiety when left alone",
+        "unit": "—",
+        "source_id": "S269",
+        "quote": "Their devotion to family can lead to separation anxiety when they're left alone.",
+        "confidence": "medium",
+        "notes": "PetMD (S269), breed-specific ('Their devotion to family …'); the article recommends crate training puppies and interactive toys (paraphrase) → consider tag needs_company (Boxer / Boston Terrier precedent); never often_alone."
+      },
+      "other_pets": {
+        "value": "affectionate and friendly with other pets; good with other pets (supervise at first)",
+        "unit": "—",
+        "source_id": "S267",
+        "quote": "They’re extremely affectionate and friendly with their families and other pets.",
+        "confidence": "medium",
+        "notes": "AKC (S267). PetMD (S269): 'They are good with children and other pets but should be supervised initially when they are getting to know a new family member.' → other_pets (with the caveat). No prey-drive statement → no chases_small_pets."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (AKC S267 / S270, PetMD S269 checked) → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific appetite statement → no food_motivated_weight tag. PetMD (S269): two meals a day, 'Always measure the food for each meal.' (general feeding advice)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages exist in these sources and none are ever shown in the app, the register export or audience docs. PetMD (S269): 'considered a generally healthy breed'. Not a conformation welfare-concern breed (no BVA / RKC Breed Watch / VetCompass concern found) → no welfare chip; in marketing.",
+      "eyes": {
+        "value": "collie eye anomaly, progressive retinal atrophy, cataracts — eye examination / DNA testing of the parents",
+        "unit": "—",
+        "source_id": "S269",
+        "quote": "Reputable breeders will have their dogs’ eyes examined and/or be genetically tested for this condition.",
+        "confidence": "medium",
+        "notes": "PetMD (S269) on collie eye anomaly; PRA: 'This condition is usually diagnosed in Miniature American Shepherds when they are 3–9 years old.'; cataracts: 'Cataracts are usually hereditary, so ask breeders about eye screening for the parents.'"
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia — screened parents",
+        "unit": "—",
+        "source_id": "S269",
+        "quote": "Reputable Miniature American Shepherd breeders make sure their dogs are screened for this genetic condition.",
+        "confidence": "medium",
+        "notes": "PetMD (S269), hip dysplasia section."
+      },
+      "luxating_patella": {
+        "value": "luxating patella — evaluate before breeding",
+        "unit": "—",
+        "source_id": "S269",
+        "quote": "Miniature American Shepherds should be evaluated for patellar luxation before breeding or if they have rear leg lameness.",
+        "confidence": "medium",
+        "notes": "PetMD (S269)."
+      },
+      "mdr1": {
+        "value": "MDR1 gene mutation (sensitivity to some medicines) — every dog should be tested",
+        "unit": "—",
+        "source_id": "S269",
+        "quote": "All Miniature American Shepherds should be tested for this genetic mutation.",
+        "confidence": "medium",
+        "notes": "PetMD (S269), MDR1 section (as for the Australian Shepherd, the breed it was developed from)."
+      },
+      "merle": {
+        "value": "merle is a standard colour",
+        "unit": "—",
+        "source_id": "S265",
+        "quote": "With no order of preference, the recognized colors are black, blue merle, red, liver and red or liver merle.",
+        "confidence": "high",
+        "notes": "FCI (S265). The game draws standard colours only; the register never advises merle-to-merle breeding (no source read for it here — background only)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35) does not list the Miniature American Shepherd — the ranking (1994) predates the breed's AKC recognition (2015, S271). Runbook rule: unranked → 1.0."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked (S35)."
+      },
+      "training_notes": {
+        "value": "intelligent and eager to please — easy to train",
+        "unit": "—",
+        "source_id": "S269",
+        "quote": "Miniature American Shepherds are intelligent and eager-to-please dogs, which makes them easy to train.",
+        "confidence": "medium",
+        "notes": "PetMD (S269). AKC (S267): 'Miniature American Shepherds are bright by nature, and eager to please their owners.'; AKC (S270): 'They catch on quickly to new ideas, and accompanying you on a walk is a real treat for this breed.' Not a first-time-owner statement → no first_time_owner tag."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.miniature_american_shepherd.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "small, athletic herding dog, slightly longer than tall, moderate bone; medium-length straight-to-wavy coat; black, blue merle, red / liver or red / liver merle, with or without white and tan markings",
+        "unit": "—",
+        "source_id": "S265",
+        "quote": "The Miniature American Shepherd is a small size herding dog that originated in the United States.",
+        "confidence": "high",
+        "notes": "FCI (S265): slightly longer than tall, moderate bone, smooth balanced movement, athletic and intelligent (paraphrase as returned)."
+      },
+      "colours": {
+        "value": [
+          "blue merle",
+          "black",
+          "red merle",
+          "red (liver)"
+        ],
+        "unit": "list",
+        "source_id": "S265",
+        "quote": "With no order of preference, the recognized colors are black, blue merle, red, liver and red or liver merle.",
+        "confidence": "high",
+        "notes": "AKC standard (S266): 'With no order of preference, the recognized colors are black, blue merle, red (liver) and red merle.' White and tan markings are permitted within limits (paraphrase); FCI (S265): 'The hairline of a white collar does not exceed the withers at the skin.'; 'White on the head does not predominate, and the eyes are fully surrounded by color and pigment.'; disqualifying 'White body splashes, which means any conspicuous, isolated spot or patch of white' and colours other than the recognised ones. Merle is a standard colour for this breed (runbook §3, as the Australian Shepherd)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). No colour frequencies; both standards rank no colour ('no order of preference'). Proposal (Australian Shepherd precedent): blue merle with white and tan markings 0.35 (the register portrait), black 0.25, red merle 0.20, red 0.20, each with or without white and tan markings within the limits."
+      },
+      "coat": {
+        "value": "medium texture, straight to wavy, weather resistant, medium length; moderate",
+        "unit": "—",
+        "source_id": "S265",
+        "quote": "Hair is of medium texture, straight to wavy, weather resistant, and of medium length.",
+        "confidence": "high",
+        "notes": "AKC standard (S266): 'Moderation is the overall impression of the coat.' AKC (S270): 'Their weather-resistant double coat is medium-length.'"
+      },
+      "ears": {
+        "value": "triangular, moderate size, set high — folding (never prick)",
+        "unit": "—",
+        "source_id": "S265",
+        "quote": "Are triangular, of moderate size, set high on the head.",
+        "confidence": "high",
+        "notes": "FCI (S265): 'Severe Fault - Prick ears and ears that hang with no lift.'"
+      },
+      "eyes": {
+        "value": "brown, blue, hazel, amber or any combination; eyes fully surrounded by colour",
+        "unit": "—",
+        "source_id": "S265",
+        "quote": "Acceptable in all coat colors, one or both eyes may be brown, blue, hazel, amber or any color combination thereof",
+        "confidence": "high",
+        "notes": "FCI (S265); oval-set, almond-shaped (paraphrase); eye rims match the nose pigmentation (paraphrase)."
+      },
+      "tail": {
+        "value": "docked or natural bobtail preferred; the undocked tail may hang in a slight curve — drawn natural, undocked",
+        "unit": "—",
+        "source_id": "S265",
+        "quote": "The undocked tail when at rest may hang in a slight curve.",
+        "confidence": "high",
+        "notes": "FCI (S265): 'A docked or natural bobtail is preferred.' (AKC S266 the same). The game draws a natural, undocked tail (no docking — Australian Shepherd precedent)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = AKC (S267, S270) and PetMD (S269). The RKC breed page could not be fetched (error), the breed has no PDSA / Woodgreen page → no RKC fields (size of home, garden, town or country). Not `apartment` (RKC only); PetMD (S269): 'apartments are not ideal for them unless they participate in daily exercise' / 'The perfect home for this breed has a large, fenced yard where they can run around with other dogs.' — no tag (large_home is RKC only; a 'perfect home' is not a secure-fencing need).",
+      "akc_family": {
+        "value": "can make great family dogs",
+        "unit": "—",
+        "source_id": "S267",
+        "quote": "Mini Americans can make for great family dogs, especially with proper obedience training and early socialization.",
+        "confidence": "medium",
+        "notes": "Basis of family_pet (with PetMD S269)."
+      },
+      "petmd_family": {
+        "value": "great family dogs",
+        "unit": "—",
+        "source_id": "S269",
+        "quote": "Miniature American Shepherds make great family dogs due to their affection, intellect",
+        "confidence": "medium",
+        "notes": "PetMD (S269), caring section (sentence continues '… and good temperament around children and other pets.' as returned in paraphrase)."
+      },
+      "akc_children": {
+        "value": "tend to be good with children, but may try to herd them",
+        "unit": "—",
+        "source_id": "S267",
+        "quote": "They tend to be good with children, but may try to herd them.",
+        "confidence": "medium",
+        "notes": "Basis of children (caveat: herding; AKC 'Kids who understand the nature of dogs and the responsibility of owning a pet will likely be better suited for this breed.') and may_herd_children. No small-children rating → never small_children."
+      },
+      "petmd_children_pets": {
+        "value": "good with children and other pets; supervise at first",
+        "unit": "—",
+        "source_id": "S269",
+        "quote": "They are good with children and other pets but should be supervised initially when they are getting to know a new family member.",
+        "confidence": "medium",
+        "notes": "Caveat kept: supervised initially with a new family member."
+      },
+      "akc_other_pets": {
+        "value": "affectionate and friendly with other pets",
+        "unit": "—",
+        "source_id": "S267",
+        "quote": "They’re extremely affectionate and friendly with their families and other pets.",
+        "confidence": "medium",
+        "notes": "Basis of other_pets (with PetMD S269)."
+      },
+      "akc_grooming": {
+        "value": "weekly brushing most of the year, daily during shedding season; mats and tangles",
+        "unit": "—",
+        "source_id": "S267",
+        "quote": "Weekly brushing is sufficient during most of the year, with daily brushing during shedding season.",
+        "confidence": "medium",
+        "notes": "AKC (S267): 'Be mindful of mats and tangles.' AKC (S270): monthly bath and weekly brushing, daily brushing during shedding (paraphrase). The out-of-season number 1 is the alternative to PetMD's 'a couple times a week' (2)."
+      },
+      "petmd_grooming": {
+        "value": "brushed a couple times a week",
+        "unit": "—",
+        "source_id": "S269",
+        "quote": "The Miniature American Shepherd needs to be brushed a couple times a week to control shedding and minimize matting.",
+        "confidence": "medium",
+        "notes": "PetMD (S269); during the heavy shedding seasons 'their coat should be brushed every day.' Basis of the brushing goal 2× a week (M5-R13). Not frequent_grooming: AKC (S267) says weekly brushing is sufficient most of the year — conflicting sources → no chip (runbook §3, as the Boston Terrier's shedding)."
+      },
+      "akc_shedding": {
+        "value": "sheds a fair amount, heavier once or twice a year",
+        "unit": "—",
+        "source_id": "S267",
+        "quote": "The breed sheds a fair amount, with heavier seasons of shedding once or twice a year.",
+        "confidence": "medium",
+        "notes": "Basis of sheds (with PetMD S269)."
+      },
+      "petmd_shedding": {
+        "value": "sheds year-round with one or two heavy seasons",
+        "unit": "—",
+        "source_id": "S269",
+        "quote": "This breed sheds year-round, with one or two heavy shedding seasons (in the spring and/or fall) every year.",
+        "confidence": "medium",
+        "notes": "Sources agree → sheds."
+      },
+      "akc_nails": {
+        "value": "nails trimmed regularly",
+        "unit": "—",
+        "source_id": "S267",
+        "quote": "Like with all breeds, you should trim a Miniature American Shepherd's nails regularly to prevent discomfort.",
+        "confidence": "medium",
+        "notes": "AKC (S267) — a sourced need without a game mechanic → proposed_game_parameters.miniature_american_shepherd.nail_trimming → ROADMAP M5-R19 (needs-david)."
+      },
+      "akc_home": {
+        "value": "adaptable — city, suburbs or rural",
+        "unit": "—",
+        "source_id": "S267",
+        "quote": "Miniature American Shepherds are an adaptable breed, and would be happy in the city, suburbs, or more rural areas.",
+        "confidence": "medium",
+        "notes": "No apartment / large_home tag (both are RKC-only criteria)."
+      },
+      "rkc_page": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — the RKC breed page (imported register) returned a fetch error on every attempt (2026-10-13); no RKC fields recorded."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -21906,6 +22375,305 @@
         "confidence": "high",
         "notes": "FCI (S254): required markings, muzzle 'free from wrinkles' about one-third of the skull, fault 'Pinched nostrils.', 'Blocky or chunky in appearance.' a fault, disqualifying docked tail / blue eyes / colours without white; RKC (S257) 'Nostrils open.' and overly prominent eyes undesirable; BOAS risk factors stenotic nostrils and facial foreshortening (S261). Welfare traits: muzzle (moderate length, open nostrils) — add `muzzle` to media.breed_portraits.traits / prompt_order / sources (as the French Bulldog). Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): brindle and white (FCI / RKC preferred colour) is the portrait default; moderate muzzle with open nostrils, natural ears and tail, standard colours only (never solid, blue, liver, fawn or merle)"
+      }
+    },
+    "miniature_american_shepherd": {
+      "_note": "Unattended run M5-R10-32 (2026-10-13): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: brushing 'a couple times a week' (PetMD S269) → 2× a week (M5-R13; AKC S267 weekly = alternative; Claude's reading of 'a couple' as 2 is listed for David, the value is the rule's); early, consistent socialisation (AKC S267) → M5-R17. Sourced need without a game mechanic: regular nail trimming (AKC S267) → ROADMAP M5-R19 (needs-david). Senior 108 = Claude's suggestion (verified=false, PetMD lower bound 12 y, S269) — no McMillan 2024 / VetCompass / RKC value. Not a welfare breed → in marketing. Not built and not needed as a routine: the monthly bath (AKC S270 — a paraphrase only, no verbatim quote; general care, Boston Terrier 'occasional bathing' precedent). Size class small (FCI S265, tier A).",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S269",
+        "quote": "This breed has a lot of energy and needs at least one hour (ideally two) of exercise every day.",
+        "confidence": "medium",
+        "notes": "PetMD 'at least one hour (ideally two)' (S269). Rule: 'at least N' → N = 60. No RKC / PDSA value reachable.",
+        "alternatives": [
+          {
+            "value": 120,
+            "source_id": "S269",
+            "notes": "'ideally two' hours"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PetMD S269 'at least one hour')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S269",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + PetMD lower bound '12–13 years', S269 — no McMillan 2024 row (S123), no VetCompass paper, RKC page not reachable). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S269"
+        ],
+        "alternatives": {
+          "senior_wikipedia_13_y": 117,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 108 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 108,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 12 y × 12) = 108 (AAHA last 25 % of lifespan S11 × PetMD lower bound 12 y, S269). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value for this breed: no McMillan 2024 row (Dogs Trust table S123), no VetCompass paper, the RKC page could not be fetched. Closest rule row (Bernese Mountain Dog / Cane Corso precedent) = the lower bound of a vet-reviewed tier-B range. Alternatives: Wikipedia 13–15 y (tier C, S271) → 117; Dogs Trust > 7 y (S14) = 84. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S269"
+        ],
+        "alternatives": {
+          "senior_wikipedia_13_y": 117,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "predlog Claude 2026-10-13 (najbližja vrstica pravila runbooka, M5-R10-32) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 108 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not in Coren's ranking (S35) → unranked → 1.0. PetMD 'easy to train' (S269) — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S269",
+        "quote": "The Miniature American Shepherd needs to be brushed a couple times a week to control shedding and minimize matting.",
+        "confidence": "medium",
+        "notes": "PetMD (S269) 'a couple times a week' read as the number 2 (a couple = two; runbook dog-grooming rule: the upper number, a single lower number of another source goes to alternatives); daily during the heavy shedding seasons (seasonal — moult is not modelled). AKC (S267) 'Weekly brushing is sufficient during most of the year' = 1 → alternatives. Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed. Claude's reading of 'a couple' as 2 is listed for David in HANDOFF (as the Cavalier's hedged 'may need daily'); the value is the rule's, so it is seeded verified.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S267",
+            "notes": "AKC weekly (out of the shedding season)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (PetMD »a couple times a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S267",
+        "quote": "They can be weary of new faces, but early, consistent socialization will build up a Mini American's confidence in new situations.",
+        "confidence": "medium",
+        "notes": "miniature_american_shepherd.behaviour.socialisation (AKC S267). PetMD (S269) also advises a socialisation class. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat AKC S267)"
+      },
+      "nail_trimming": {
+        "value": "regularly (no frequency given)",
+        "unit": "nail trimming (sourced need)",
+        "source_id": "S267",
+        "quote": "Like with all breeds, you should trim a Miniature American Shepherd's nails regularly to prevent discomfort.",
+        "confidence": "medium",
+        "notes": "AKC (S267), miniature_american_shepherd.suitability.akc_nails. The game has no nail-trimming mechanic → ROADMAP M5-R19 'Striženje krempljev psa' (needs-david) with its FEATURES 🗓 row; the source gives no frequency.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno striženje krempljev; mehanike ni → ROADMAP M5-R19 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-32); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S267",
+              "S269"
+            ],
+            "refs": [
+              "miniature_american_shepherd.suitability.akc_family",
+              "miniature_american_shepherd.suitability.petmd_family"
+            ],
+            "quote": "S267 'Mini Americans can make for great family dogs, especially with proper obedience training and early socialization.'; S269 'Miniature American Shepherds make great family dogs due to their affection, intellect'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S267",
+              "S269"
+            ],
+            "refs": [
+              "miniature_american_shepherd.suitability.akc_children",
+              "miniature_american_shepherd.suitability.petmd_children_pets"
+            ],
+            "quote": "S267 'They tend to be good with children, but may try to herd them.'; S269 'They are good with children and other pets but should be supervised initially when they are getting to know a new family member.'",
+            "note": "Caveats kept in notes: may herd children (→ may_herd_children), supervise at first (PetMD), kids who understand dogs (AKC). No small-children rating → never small_children."
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S267",
+              "S269"
+            ],
+            "refs": [
+              "miniature_american_shepherd.suitability.akc_other_pets",
+              "miniature_american_shepherd.suitability.petmd_children_pets"
+            ],
+            "quote": "S267 'They’re extremely affectionate and friendly with their families and other pets.'; S269 'They are good with children and other pets but should be supervised initially when they are getting to know a new family member.'",
+            "note": "Caveat: supervise at first (PetMD)."
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S269"
+            ],
+            "refs": [
+              "miniature_american_shepherd.behaviour.mental_stimulation"
+            ],
+            "quote": "S269 'Miniature American Shepherds need to be given jobs to stay active and prevent boredom.'"
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S267"
+            ],
+            "refs": [
+              "miniature_american_shepherd.behaviour.herding_children",
+              "miniature_american_shepherd.suitability.akc_children"
+            ],
+            "quote": "S267 'They tend to be good with children, but may try to herd them.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S269"
+            ],
+            "refs": [
+              "miniature_american_shepherd.behaviour.time_alone"
+            ],
+            "quote": "S269 'Their devotion to family can lead to separation anxiety when they're left alone.'",
+            "note": "Breed-specific statement (Boxer / Boston Terrier precedent); never often_alone."
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S267",
+              "S269"
+            ],
+            "refs": [
+              "miniature_american_shepherd.suitability.akc_shedding",
+              "miniature_american_shepherd.suitability.petmd_shedding"
+            ],
+            "quote": "S267 'The breed sheds a fair amount, with heavier seasons of shedding once or twice a year.'; S269 'This breed sheds year-round, with one or two heavy shedding seasons (in the spring and/or fall) every year.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No small-children rating; AKC / PetMD caveats (herding, supervision).",
+          "older_children": "No source advises older children only.",
+          "first_time_owner": "No source ('easy to train' is not such a statement).",
+          "experienced_owner": "No source.",
+          "apartment": "RKC page not reachable; PetMD: apartments are not ideal unless the dog gets daily exercise (S269).",
+          "large_home": "RKC-only criterion (page not reachable); PetMD 'perfect home … large, fenced yard' is not an RKC field.",
+          "active_family": "≥ 1 h/day (S269) — moderate; the tag is for ~2 h a day breeds.",
+          "long_daily_exercise": "≥ 1 h/day (S269); 'ideally two' is not the rule's number.",
+          "often_alone": "PetMD: separation anxiety when left alone (S269) → needs_company.",
+          "older_owners": "No source.",
+          "chases_small_pets": "No prey-drive statement (herding of livestock with nipping at heels, S270, is not a prey-drive quote).",
+          "low_shedding": "Sheds (S267, S269).",
+          "food_motivated_weight": "No appetite / weight statement.",
+          "chews_when_bored": "No source.",
+          "secure_fencing": "No escape statement.",
+          "shorter_lifespan": "12–13 years (S269).",
+          "hips_hind_legs": "Hip dysplasia only as a screening advice (S269), no Breed Watch / welfare concern → breeder checklist, not a chip.",
+          "welfare chips (brachycephalic_breathing, short_muzzle_breathing, back_spine, heart_and_spine, sensitive_skin, eyelid_problems)": "No source.",
+          "frequent_grooming": "Conflicting sources: PetMD 'a couple times a week' (S269) vs AKC 'Weekly brushing is sufficient during most of the year' (S267) → no chip (runbook §3); the game still brushes 2× a week (grooming rule, upper number)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children, other_pets; consider needs_mental_stimulation, may_herd_children, needs_company, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (never as a dog for small children)",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a welfare-concern breed: no BVA, UK Brachycephalic Working Group, UFAW, RVC/VetCompass or RKC conformation concern found; no veterinary advice against showing the breed in advertising → stays in marketing (runbook §3, David 2026-10-10). Never shown as a dog for small children (may herd children, AKC S267 — Claude's proposal, as the Australian Shepherd).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): v aplikaciji da, v marketingu da (ni pasma s težavami zaradi telesne oblike)"
+      },
+      "ai_appearance": {
+        "value": "adult Miniature American Shepherd, blue merle with white and tan markings (default), black, red merle or red with or without white and tan markings; small, athletic, slightly longer than tall; medium-length straight-to-wavy coat; triangular, moderate, high-set ears that fold (never prick); eyes brown, blue, hazel or amber, fully surrounded by colour; natural undocked tail hanging in a slight curve; no white body splashes; standard colours only",
+        "unit": "—",
+        "source_id": "S265",
+        "quote": "With no order of preference, the recognized colors are black, blue merle, red, liver and red or liver merle.",
+        "confidence": "high",
+        "notes": "Colours from the FCI (S265) / AKC (S266) standards, 'no order of preference'; merle is standard for this breed (runbook §3, Australian Shepherd precedent). Colour weights are ours (unsourced). Natural tail chosen (no docking).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): blue merle (white and tan markings) portrait default, black / red merle / red options, standard colours and white limits only, natural undocked tail"
       }
     }
   }

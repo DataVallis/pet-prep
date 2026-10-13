@@ -139,7 +139,7 @@ function soCreateViaPin(array $body, ?array $childFeatures): Pet
 describe('breeds (verbatim A/B socialisation quote in data.json)', function () {
     it('seeds one puppy-stage row (1 per week, David\'s decision) per sourced breed, traced to data.json', function () {
         $breeds = ['labrador_retriever', 'german_shepherd', 'beagle', 'standard_poodle', 'australian_shepherd', 'havanese',
-            'siberian_husky', 'rottweiler', 'bulldog', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier'];
+            'siberian_husky', 'rottweiler', 'bulldog', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd'];
         // The sourced rows (every other dog breed: David's decision, next test).
         $rows = collect(BreedStageParamsSeeder::rows())->where('key', StageParamKey::SocialisationTasksPerWeek->value)->whereNotNull('source_id');
 
@@ -158,7 +158,7 @@ describe('breeds (verbatim A/B socialisation quote in data.json)', function () {
                 ->and($entry['source_id'])->toBe($row['source_id'])
                 ->and($entry['quote'])->toBe($row['quote'])
                 ->and($entry['decision'])->toContain('M5-R17')
-                // British "socialise" (PDSA) or American "socialization" (AKC, the Pomeranian S251, the Boston Terrier S260).
+                // British "socialise" (PDSA) or American "socialization" (AKC, the Pomeranian S251, the Boston Terrier S260, the Miniature American Shepherd S267).
                 ->and(mb_strtolower($row['quote']))->toMatch('/sociali[sz]/');
         }
     });
@@ -182,6 +182,7 @@ describe('breeds (verbatim A/B socialisation quote in data.json)', function () {
             'great_dane' => 'great_dane.behaviour.socialisation.quote',
             'pomeranian' => 'pomeranian.behaviour.socialisation.quote',
             'boston_terrier' => 'boston_terrier.behaviour.socialisation.quote',
+            'miniature_american_shepherd' => 'miniature_american_shepherd.behaviour.socialisation.quote',
         ];
         foreach ($paths as $breed => $path) {
             expect((string) soData($path))->toContain(BreedStageParamsSeeder::DOG_SOCIALISATION[$breed][1]);

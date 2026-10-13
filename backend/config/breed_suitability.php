@@ -845,5 +845,33 @@ return [
             ],
         ],
 
+        // M5-R10-32: miniature_american_shepherd.* (S264–S271), runbook rules (data.json
+        // proposed_game_parameters.miniature_american_shepherd.suitability_tags). AKC (S267) + PetMD (S269);
+        // the RKC breed page could not be fetched → no apartment / large_home. `children` and `other_pets`
+        // with the caveats (may herd children, supervise at first) — never `small_children`. Not
+        // `active_family` / `long_daily_exercise` (at least 1 h a day). Not `frequent_grooming`: PetMD "a couple
+        // times a week" vs AKC "Weekly brushing is sufficient during most of the year" → conflicting sources, no chip
+        // (the game still brushes 2× a week). Not a welfare breed → no welfare chip.
+        'miniature_american_shepherd' => [
+            'suits' => [
+                // S267 "Mini Americans can make for great family dogs, …"; S269 "… make great family dogs …".
+                ['tag' => 'family_pet', 'source_ids' => ['S267', 'S269'], 'refs' => ['miniature_american_shepherd.suitability.akc_family', 'miniature_american_shepherd.suitability.petmd_family']],
+                // S267 "They tend to be good with children, but may try to herd them."; S269 "They are good with children and other pets …".
+                ['tag' => 'children', 'source_ids' => ['S267', 'S269'], 'refs' => ['miniature_american_shepherd.suitability.akc_children', 'miniature_american_shepherd.suitability.petmd_children_pets']],
+                // S267 "They’re extremely affectionate and friendly with their families and other pets."; S269 the same sentence as above.
+                ['tag' => 'other_pets', 'source_ids' => ['S267', 'S269'], 'refs' => ['miniature_american_shepherd.suitability.akc_other_pets', 'miniature_american_shepherd.suitability.petmd_children_pets']],
+            ],
+            'consider' => [
+                // S269 "Miniature American Shepherds need to be given jobs to stay active and prevent boredom."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S269'], 'refs' => ['miniature_american_shepherd.behaviour.mental_stimulation']],
+                // S267 "… but may try to herd them."
+                ['tag' => 'may_herd_children', 'source_ids' => ['S267'], 'refs' => ['miniature_american_shepherd.behaviour.herding_children', 'miniature_american_shepherd.suitability.akc_children']],
+                // S269 "Their devotion to family can lead to separation anxiety when they're left alone."
+                ['tag' => 'needs_company', 'source_ids' => ['S269'], 'refs' => ['miniature_american_shepherd.behaviour.time_alone']],
+                // S267 "The breed sheds a fair amount, …"; S269 "This breed sheds year-round, …".
+                ['tag' => 'sheds', 'source_ids' => ['S267', 'S269'], 'refs' => ['miniature_american_shepherd.suitability.akc_shedding', 'miniature_american_shepherd.suitability.petmd_shedding']],
+            ],
+        ],
+
     ],
 ];

@@ -402,6 +402,7 @@ const SPECIES = [
       { id: 'great_dane', synonyms: { en: ['Deutsche Dogge'], sl: ['doga', 'deutsche dogge'] } },
       { id: 'pomeranian', synonyms: { en: ['Pom', 'German Toy Spitz', 'Zwergspitz'], sl: ['pom', 'nemški špic', 'nemski spic', 'zwergspitz'] } },
       { id: 'boston_terrier', synonyms: { en: ['Boston', 'American Gentleman'], sl: ['boston', 'boston terier'] } },
+      { id: 'miniature_american_shepherd', synonyms: { en: ['Mini American', 'MAS', 'Miniature Australian Shepherd', 'Mini Aussie'], sl: ['mali ameriski ovcar', 'mini aussie'] } },
     ],
   },
   {
@@ -979,6 +980,30 @@ const DOG_FACTS = {
       ['prominent_eyes_injury_dry_eye', 'health.eyes'],
     ],
   },
+  // M5-R10-32. The RKC breed page could not be fetched and the breed has no PDSA page, so the register
+  // shows the FCI height, the AKC weight chart (S268) and the PetMD lifespan range (S269, 'span') and
+  // exercise minimum (the game value, 'at_least' — Labrador precedent). Not exported: lifespan.rkc /
+  // mcmillan_2024 (null), lifespan.senior_from (derived), suitability.petmd_grooming / akc_grooming
+  // (free text, no category word — the game's brushing rule is shown instead), akc_shedding /
+  // petmd_shedding (free text; the app's `sheds` chip carries it), health.merle (background).
+  // Coren: not ranked (S35) → coren_rank: false.
+  miniature_american_shepherd: {
+    height: ['height.fci'],
+    weight: [['adult_weight.akc', null]],
+    lifespan: [['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.miniature_american_shepherd.exercise_minutes_adult', 'at_least']],
+    coat: [],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    coren_rank: false,
+    health: [
+      ['drug_sensitivity_mdr1', 'health.mdr1'],
+      ['inherited_eye_disease', 'health.eyes'],
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['kneecap_luxation', 'health.luxating_patella'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1205,6 +1230,14 @@ const DOG_GAME = {
     step_goal_check: 'proposed_game_parameters.boston_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.boston_terrier.exercise_minutes_senior',
   },
+  miniature_american_shepherd: {
+    adult_minutes: ['proposed_game_parameters.miniature_american_shepherd.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.miniature_american_shepherd.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.miniature_american_shepherd.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.miniature_american_shepherd.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.miniature_american_shepherd.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.miniature_american_shepherd.exercise_minutes_senior',
+  },
 };
 
 function dogBreedFacts(R, id) {
@@ -1220,7 +1253,7 @@ function dogBreedFacts(R, id) {
   }
   facts.push(R.fact(p('growth.adult_weight_reached'), { group: 'stages', field: 'growth_end', kind: 'quantity', unit: 'months', qualifier: 'about', note: 'size_class_guidance' }, parseRange));
   for (const [rel, q] of spec.lifespan) {
-    facts.push(R.fact(p(rel), { group: 'lifespan', field: 'lifespan', kind: 'quantity', unit: 'years', qualifier: q }, (v, ref) => (q === 'more_than' ? parseMoreThan(v, ref) : q === 'less_than' ? parseLessThan(v, ref) : Number(v))));
+    facts.push(R.fact(p(rel), { group: 'lifespan', field: 'lifespan', kind: 'quantity', unit: 'years', qualifier: q }, (v, ref) => (q === 'more_than' ? parseMoreThan(v, ref) : q === 'less_than' ? parseLessThan(v, ref) : q === 'span' ? parseRange(v, ref) : Number(v))));
   }
   for (const [rel, q] of spec.exercise) {
     facts.push(R.fact(p(rel), { group: 'exercise', field: 'exercise', kind: 'quantity', unit: 'min_per_day', qualifier: q }, (v, ref) => (q === 'more_than' ? parseMoreThan(v, ref) : q === 'up_to' ? parseUpTo(v, ref) : Number(v))));

@@ -9,6 +9,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-13 — Mali ameriški ovčar: štirinajsta pasma po dvajsetih (M5-R10-32)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **malega ameriškega ovčarja** (24. mesto). Osemindvajseta plačljiva pasma psa; v izbirniku je zdaj 29 psov (z mešančkom). Mali ameriški ovčar je energičen pastirski pes, po standardu FCI majhen (9,1–18,1 kg): vsaj ena ura gibanja na dan (6.000 korakov za odraslega psa, 4.500 za starejšega), česanje 2× na teden in tedenska »Nova izkušnja« za mladička (AKC priporoča zgodnjo, dosledno socializacijo).
+
+**Zakaj je pomembno:** Za to pasmo The Royal Kennel Club (pasmo je priznal aprila 2026; strani ni bilo mogoče odpreti) in PDSA nista dala podatkov — sistem je pravila zgradil iz standardov FCI in AKC, tabele tež AKC in strani PetMD, ki jo je napisala in pregledala veterinarka. Ker raziskave o življenjski dobi za pasmo ni, je meja starejšega psa (108 mesecev = 9 let, iz spodnje meje PetMD »12–13 let«) **predlog, ki ga mora David še potrditi**. Česanje 2× na teden je vrednost po pravilu (PetMD »a couple times a week«); oznake »potrebuje česanje večkrat na teden« pa pes nima, ker se viri ne ujemata (AKC: večji del leta zadošča enkrat na teden). Pes nima težav zaradi telesne zgradbe, zato **sme biti v marketingu** — nikoli kot pes za majhne otroke, ker jih lahko »pase«. Redno striženje krempljev (AKC) igra še ne vodi — *načrt* (M5-R19).
+
+**Številke:** 8 novih virov (S264–S271), 1 migracija, brez nove oznake, 1 nov ključ testa staršev (pregled pogačice), 4 ključi zdravja v registru (brez statistik), 3 + 4 oznake v izbirniku, 2 zgrajeni potrebi z virom (česanje 2× na teden, socializacija) in 1 v načrtu (kremplji), dnevni cilj 6.000 korakov, meja starejšega 108 mesecev (predlog Claude — odprto za Davida), 29 psov v izbirniku (28 plačljivih + mešanček); testi: Pest 2.895 testov, Jest 157 skupin / 2.372 testov, izvoz registra 56 / 56. Portret in stran v registru sledita v ločenih PR. Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Mali ameriški ovčar je pameten, ljubeč družinski pes, ki potrebuje vsaj uro gibanja na dan, »službo« za glavo in družbo — sam doma ne zdrži dobro. V PetPrepu boste videli, ali vaš otrok zmore vsakodnevne sprehode in česanje dvakrat na teden, preden se odločite za pravega kužka.«
+- 🧒 Otroci: »Mali ameriški ovčar je pisan pastirski kuža — rad bi te »pasel«, zato ga vsak dan pelji na dolg sprehod in mu daj kakšno nalogo!«
+- 💼 Investitorji: »Štirinajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC — tudi brez britanskih virov so vse številke iz virov ali stalnih pravil, kjer pravilo ne da vrednosti, pa sistem številko označi kot predlog za ustanovitelja, namesto da bi jo izmislil.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri malem ameriškem ovčarju pokaže teste staršev, ki jih navaja PetMD — test DNK MDR1, pregled oči, kolkov in pogačice — brez obljub o zdravju.«
+- 📣 Omrežja: malega ameriškega ovčarja **lahko objavljamo** (barva merle je v standardu, rep vedno naraven), nikoli kot psa za majhne otroke.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje in socializacija sta samo novi vrstici v `breed_stage_params`; meja starejšega in prihod starejšega sta `verified=false`; izvoz registra dobi razpon življenjske dobe in nov ključ testa staršev `patella_scheme`.«
+
+---
+
 ## 2026-10-13 — Bostonski terier: trinajsta pasma po dvajsetih (M5-R10-31)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **bostonskega terierja** (23. mesto). Sedemindvajseta plačljiva pasma psa; v izbirniku je zdaj 28 psov (z mešančkom). Bostonski terier je majhen, živahen pes za stanovanje: do ena ura gibanja na dan (6.000 korakov za odraslega psa, 4.500 za starejšega), česanje 1× na teden (RKC, PDSA in AKC enako) in tedenska »Nova izkušnja« za mladička (AKC priporoča zgodnjo socializacijo).

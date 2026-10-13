@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -388,6 +388,26 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_BOSTON_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-31)';
 
     /**
+     * M5-R10-32 Miniature American Shepherd (unattended run 2026-10-13, data.json
+     * proposed_game_parameters.miniature_american_shepherd.*.decision): every value follows a standing
+     * rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise
+     * 60 min (PetMD S269 "at least one hour"; RKC page not reachable), senior 45 min, puppy 10 min × age
+     * capped at 60, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 1.0 (not ranked by
+     * Coren); care rates the Border Collie's. The senior boundary uses the closest rule row (PetMD lower
+     * bound 12 y, S269) and is NOT covered by the confirmation: see PROPOSED_R10_MINIATURE_AMERICAN_SHEPHERD_SENIOR.
+     */
+    public const CONFIRMED_R10_MINIATURE_AMERICAN_SHEPHERD = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-32)';
+
+    /**
+     * M5-R10-32 Miniature American Shepherd senior boundary / senior arrival (108 months): Claude's
+     * suggestion from the closest rule row (0.75 × PetMD lower bound 12 y, S269) — no runbook rule
+     * produced a value (no McMillan 2024 row, no VetCompass paper, RKC page not reachable), so the rows
+     * are verified=false until David decides (data.json
+     * proposed_game_parameters.miniature_american_shepherd.senior_boundary_months).
+     */
+    public const PROPOSED_R10_MINIATURE_AMERICAN_SHEPHERD_SENIOR = 'predlog Claude 2026-10-13 (najbližja vrstica pravila runbooka, M5-R10-32) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -516,6 +536,7 @@ class BreedStageParamsSeeder extends Seeder
         'great_dane' => [1, 'S241', 'Grooming: Once a week', 'high', false],
         'pomeranian' => [3, 'S250', 'They have a double coat that needs brushing two-three times per week, and more often when shedding.', 'high', false],
         'boston_terrier' => [1, 'S255', 'Grooming: Once a week', 'high', false],
+        'miniature_american_shepherd' => [2, 'S269', 'The Miniature American Shepherd needs to be brushed a couple times a week to control shedding and minimize matting.', 'medium', false],
     ];
 
     /**
@@ -583,13 +604,14 @@ class BreedStageParamsSeeder extends Seeder
         'great_dane' => ['S243', "This is why it's really important to socialise your Great Dane with different experiences, people and dogs from a young age."],
         'pomeranian' => ['S251', 'Like with any breed, early socialization and puppy training classes are highly recommended.'],
         'boston_terrier' => ['S260', 'Like all breeds, early socialization and puppy training courses are strongly recommended for Boston Terriers.'],
+        'miniature_american_shepherd' => ['S267', "They can be weary of new faces, but early, consistent socialization will build up a Mini American's confidence in new situations."],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1169,6 +1191,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-31 (docs/research/dog-data/data.json boston_terrier,
             // S253–S263; runbook rules in proposed_game_parameters.boston_terrier).
             BreedType::BostonTerrier => self::bostonTerrierProfile(),
+            // M5-R10-32 (docs/research/dog-data/data.json miniature_american_shepherd,
+            // S264–S271; runbook rules in proposed_game_parameters.miniature_american_shepherd).
+            BreedType::MiniatureAmericanShepherd => self::miniatureAmericanShepherdProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -3105,6 +3130,90 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'boston_terrier.lifespan.rkc',
                 'quote' => 'Lifespan: Over 10 years',
                 'notes' => 'RKC breed page lower bound (S255); PDSA "Over 10 years" (S259) the same. No McMillan 2024 / VetCompass median reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * M5-R10-32 Miniature American Shepherd — docs/research/dog-data/data.json miniature_american_shepherd +
+     * proposed_game_parameters.miniature_american_shepherd. The senior boundary is Claude's suggestion
+     * (PROPOSED_R10_MINIATURE_AMERICAN_SHEPHERD_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function miniatureAmericanShepherdProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_MINIATURE_AMERICAN_SHEPHERD;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S269', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.miniature_american_shepherd.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, [
+                    'unit' => 'months', 'source_id' => 'S11,S269', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.miniature_american_shepherd.senior_boundary_months', 'decision' => self::PROPOSED_R10_MINIATURE_AMERICAN_SHEPHERD_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × PetMD lower bound 12 y ("12–13 years", S269) = 9 y = 108 months. No McMillan 2024 row (Dogs Trust table S123), no VetCompass paper, and the RKC breed page could not be fetched. Alternatives: Wikipedia 13–15 y (tier C, S271) → 117; Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.miniature_american_shepherd.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.miniature_american_shepherd.senior_boundary_months', 'decision' => self::PROPOSED_R10_MINIATURE_AMERICAN_SHEPHERD_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 108 months (0.75 × 12 y, S269).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S269', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.miniature_american_shepherd.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'This breed has a lot of energy and needs at least one hour (ideally two) of exercise every day.',
+                'notes' => 'PetMD (S269) "at least one hour" → 60 min = 6,000 steps (runbook rule: "at least N" → N; "ideally two" hours is an alternative). The RKC breed page could not be fetched; the breed has no PDSA page.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.miniature_american_shepherd.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[9.1, 18.1], [
+                'unit' => 'kg', 'source_id' => 'S268', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'miniature_american_shepherd.adult_weight.akc',
+                'quote' => 'Miniature American Shepherd | 20-40 pounds | 20-40 pounds',
+                'notes' => 'AKC breed weight chart (S268): 20–40 lb for males and females = 9.07–18.14 kg → 9.1–18.1 kg. AKC (S267) and PetMD (S269) give the same 20–40 lb; neither standard gives a weight.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'miniature_american_shepherd.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (20–40 lb → mostly the Medium class of S10).',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'miniature_american_shepherd.trainability.coren_rank',
+                'notes' => 'Not ranked: the Miniature American Shepherd is not in the Wikipedia table of Coren\'s ranking (S35, checked 2026-10-13); the ranking predates the breed\'s AKC recognition (2015).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.miniature_american_shepherd.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): not ranked by Coren (S35) → 1.0, the mixed breed\'s speed (PetMD S269: intelligent and eager to please). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S269', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'miniature_american_shepherd.lifespan.petmd',
+                'quote' => 'The average Miniature American Shepherd lifespan is 12–13 years, and they\'re considered a generally healthy breed.',
+                'notes' => 'PetMD (S269) "12–13 years", lower bound. No McMillan 2024 row (S123), no VetCompass paper, RKC page not reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

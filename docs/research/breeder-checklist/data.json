@@ -1302,6 +1302,44 @@
       "status": "not_found",
       "tests": [],
       "notes": "RKC breed page (current address, dog-data S255, 2026-10-13) shows the 'Good Practice schemes and tests' and 'Best Practice schemes and tests' headings but returned no individual test; the older address (S256) the same, plus 'There are not currently any additional breed specific restrictions in place for this breed.' The RKC Health Standard (dog-data S263, thekennelclub.org.uk/BreedSpecificRequirements) lists the Boston Terrier with no test in either column and no breed club scheme (no verbatim sentence returned, so not recorded as none_recommended — German Shorthaired Pointer precedent). The University of Cambridge / Kennel Club Respiratory Function Grading scheme is only planned for the breed (S261, paraphrase) → not listed as boas_grading. PDSA (dog-data S259): check that the parents were screened under the Canine Health Schemes (no named test). Show the general dog checklist only."
+    },
+    "miniature_american_shepherd": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S269",
+        "quote": "All Miniature American Shepherds should be tested for this genetic mutation."
+      },
+      "tests": [
+        {
+          "key": "dna_mdr1",
+          "level": "other_scheme",
+          "name": "Genetic test for the MDR1 mutation",
+          "source_id": "S269",
+          "quote": "All Miniature American Shepherds should be tested for this genetic mutation."
+        },
+        {
+          "key": "eye_scheme",
+          "level": "other_scheme",
+          "name": "Eye examination and / or genetic test for collie eye anomaly",
+          "source_id": "S269",
+          "quote": "Reputable breeders will have their dogs’ eyes examined and/or be genetically tested for this condition."
+        },
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip dysplasia screening",
+          "source_id": "S269",
+          "quote": "Reputable Miniature American Shepherd breeders make sure their dogs are screened for this genetic condition."
+        },
+        {
+          "key": "patella_scheme",
+          "level": "other_scheme",
+          "name": "Evaluation for patellar luxation before breeding",
+          "source_id": "S269",
+          "quote": "Miniature American Shepherds should be evaluated for patellar luxation before breeding or if they have rear leg lameness."
+        }
+      ],
+      "notes": "The RKC breed page (imported register since April 2026) could not be fetched (error, 2026-10-13) and the RKC Health Standard (breed-specific requirements page) has no row for the breed ('Any breed that does not appear on the list currently has no breed-specific health screening requirements', as returned in part). PetMD (dog-data S269, DVM-written and reviewed) names the parents' tests → other_scheme (no RKC list to rank them as minimum; Cane Corso precedent). PetMD also advises asking about eye screening for cataracts (covered by the eye examination). The FCI breed club rules in Slovenia (KZS, K7) may set other tests."
     }
   }
 }

@@ -143,6 +143,7 @@ describe('readBreedCatalogue', () => {
       'great_dane',
       'pomeranian',
       'boston_terrier',
+      'miniature_american_shepherd',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -365,6 +366,16 @@ describe('readBreedCatalogue', () => {
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-31, runbook rules; flat-faced chip first as the French Bulldog / Bulldog; no new tag).
     expect(boston?.search_keywords).toEqual(['boston terrier', 'bostonski terier', 'boston', 'american gentleman']);
     expect(boston?.suitability).toEqual({ suits: ['apartment', 'family_pet', 'children'], consider: ['brachycephalic_breathing', 'needs_company'] });
+    const mas = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'miniature_american_shepherd');
+    expect(mas).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 280 }),
+    );
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-32, runbook rules; no new tag).
+    expect(mas?.search_keywords).toEqual(['miniature american shepherd', 'mali ameriški ovčar', 'mali ameriski ovcar', 'mini american', 'mini aussie', 'miniature australian shepherd']);
+    expect(mas?.suitability).toEqual({
+      suits: ['family_pet', 'children', 'other_pets'],
+      consider: ['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds'],
+    });
     const corgi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pembroke_welsh_corgi');
     expect(corgi).toEqual(
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 200 }),
@@ -406,6 +417,7 @@ describe('readBreedCatalogue', () => {
       'great_dane',
       'pomeranian',
       'boston_terrier',
+      'miniature_american_shepherd',
     ]);
   });
 });
@@ -573,6 +585,14 @@ describe('breed search', () => {
     expect(find('Bostonski terier')).toEqual(['boston_terrier']);
     expect(find('boston')).toEqual(['boston_terrier']);
     expect(find('American Gentleman')).toEqual(['boston_terrier']);
+  });
+
+  it('M5-R10-32: finds the Miniature American Shepherd by its EN / SL names and the nicknames', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('miniature american shepherd')).toEqual(['miniature_american_shepherd']);
+    expect(find('Mali ameriški ovčar')).toEqual(['miniature_american_shepherd']);
+    expect(find('mali ameriski')).toEqual(['miniature_american_shepherd']);
+    expect(find('mini aussie')).toEqual(['miniature_american_shepherd']);
   });
 
   it('M5-R10-30: finds the Pomeranian by its EN / SL names, the nickname and the toy-spitz name (with and without š)', () => {

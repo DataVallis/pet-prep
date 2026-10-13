@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "3dc415e51267390e87b192f8a919de165c69ca14330f6a24540b185440afaba0"
+      "sha256": "720da8f3bd0b65dd4cbe5785b5d8a011288f5a6d223f60297bf9685b25410d0b"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "cf685ac436da4e468e0bb2e9d8a8dd6002cf6b638442ddca25512a235fe3163e"
+      "sha256": "3806421e3ed5f6ca468d53524fa52706dab11ff7ef75eaf1c02f41af89af0030"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,27 +25,27 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "1b67f7bdc2e9ac63f27f00b378f8033561b64bc0aa1896f196578e57ca7e0d4a"
+      "sha256": "3f5694b055e292ba98ba598b2807e2b97cfdf3f9c2aa84b2c81e5480e717bc1c"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "3ff0999601e33602619cc82aa0ace2eb705ea38b2652ad00bc942fa318891637"
+      "sha256": "ea4ac0cd194fbb432c34e6170589d211078f1d611a95848fc4c609d63dcc171e"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "b95e6ba90ab78f86f9814a8d9cd3205e08723b3b0e3cf40aa851f3b02663b15b"
+      "sha256": "a9506a5f2aafcb17201232567d2b130d0e2b38e779f098ae02788e7e03e4187f"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "aa5898453aa68e06fdb901bf49b88ee49ab5459b1ddfedda371a79c6db106053"
+      "sha256": "fee0ac26fb25fabbae7d594e84c8580a02330b2ce4cbceb2e0c2a5271e36c4c4"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "c576f36a8054e2c2323afb923e363f770eb2aae827fd24ed7f2b4ca55a8412e0"
+      "sha256": "0aeffa8aedd882bae445178469d0b92d2ffbb173436872a961c68a5c6445e40f"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "da7cb50954c718bb45d5b5a62ebf7a8879a8237b830027f54d5e5585bb4af228"
+      "sha256": "210c9945318cec3174b7307a76b323beb7350f7d12809e6ee26609e368cafe95"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -196,7 +196,7 @@
         }
       },
       "status": "available",
-      "breed_count": 27,
+      "breed_count": 28,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -16540,6 +16540,528 @@
       ]
     },
     {
+      "id": "miniature_american_shepherd",
+      "species": "dog",
+      "order": 27,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Miniature American Shepherd",
+        "sl": "Mali ameriški ovčar"
+      },
+      "slug": {
+        "en": "miniature-american-shepherd",
+        "sl": "mali-ameriski-ovcar"
+      },
+      "synonyms": {
+        "en": [
+          "Mini American",
+          "MAS",
+          "Miniature Australian Shepherd",
+          "Mini Aussie"
+        ],
+        "sl": [
+          "mali ameriski ovcar",
+          "mini aussie"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "h1_2"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S265"
+          ],
+          "ref": "miniature_american_shepherd.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              35.5,
+              46
+            ],
+            "female": [
+              33,
+              43.5
+            ]
+          },
+          "source_ids": [
+            "S265"
+          ],
+          "ref": "miniature_american_shepherd.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              9.1,
+              18.1
+            ],
+            "female": [
+              9.1,
+              18.1
+            ]
+          },
+          "source_ids": [
+            "S268"
+          ],
+          "ref": "miniature_american_shepherd.adult_weight.akc",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "miniature_american_shepherd.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            13
+          ],
+          "source_ids": [
+            "S269"
+          ],
+          "ref": "miniature_american_shepherd.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 60,
+          "source_ids": [
+            "S269"
+          ],
+          "ref": "proposed_game_parameters.miniature_american_shepherd.exercise_minutes_adult",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 367,
+            "group": 1,
+            "section": 1,
+            "origin": "US"
+          },
+          "source_ids": [
+            "S264"
+          ],
+          "ref": "miniature_american_shepherd.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "drug_sensitivity_mdr1",
+          "source_ids": [
+            "S269"
+          ],
+          "ref": "miniature_american_shepherd.health.mdr1",
+          "confidence": "medium"
+        },
+        {
+          "key": "inherited_eye_disease",
+          "source_ids": [
+            "S269"
+          ],
+          "ref": "miniature_american_shepherd.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S269"
+          ],
+          "ref": "miniature_american_shepherd.health.hip_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S269"
+          ],
+          "ref": "miniature_american_shepherd.health.luxating_patella",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S267",
+              "S269"
+            ],
+            "refs": [
+              "miniature_american_shepherd.suitability.akc_family",
+              "miniature_american_shepherd.suitability.petmd_family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S267",
+              "S269"
+            ],
+            "refs": [
+              "miniature_american_shepherd.suitability.akc_children",
+              "miniature_american_shepherd.suitability.petmd_children_pets"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S267",
+              "S269"
+            ],
+            "refs": [
+              "miniature_american_shepherd.suitability.akc_other_pets",
+              "miniature_american_shepherd.suitability.petmd_children_pets"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S269"
+            ],
+            "refs": [
+              "miniature_american_shepherd.behaviour.mental_stimulation"
+            ]
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S267"
+            ],
+            "refs": [
+              "miniature_american_shepherd.behaviour.herding_children",
+              "miniature_american_shepherd.suitability.akc_children"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S269"
+            ],
+            "refs": [
+              "miniature_american_shepherd.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S267",
+              "S269"
+            ],
+            "refs": [
+              "miniature_american_shepherd.suitability.akc_shedding",
+              "miniature_american_shepherd.suitability.petmd_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_american_shepherd.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S269"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PetMD S269 'at least one hour')"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_american_shepherd.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_american_shepherd.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S269"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 108 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_american_shepherd.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_american_shepherd.grooming",
+            "basis_source_ids": [
+              "S269"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (PetMD »a couple times a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S269"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_mdr1",
+            "level": "other_scheme",
+            "source_ids": [
+              "S269"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "S269"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "S269"
+            ]
+          },
+          {
+            "key": "patella_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "S269"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S269"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S264",
+        "S265",
+        "S267",
+        "S268",
+        "S269",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -20003,6 +20525,41 @@
       "publisher": "The Royal Kennel Club (UK) — news (University of Cambridge BOAS Research Group)",
       "title": "New research explores respiratory health of Boston Terriers",
       "url": "https://thekennelclub.org.uk/media-centre/2025/january/new-research-explores-respiratory-health-of-boston-terriers"
+    },
+    {
+      "id": "S264",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Miniature American Shepherd (367)",
+      "url": "https://www.fci.be/en/nomenclature/MINIATURE-AMERICAN-SHEPHERD-367.html"
+    },
+    {
+      "id": "S265",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 367 — Miniature American Shepherd (EN PDF, 04/09/2019)",
+      "url": "https://www.fci.be/Nomenclature/Standards/367g01-en.pdf"
+    },
+    {
+      "id": "S267",
+      "tier": "B",
+      "publisher": "American Kennel Club — M. Erickson (updated 2026-02-11)",
+      "title": "Is the Miniature American Shepherd a Good Fit for Your Lifestyle?",
+      "url": "https://www.akc.org/expert-advice/dog-breeds/miniature-american-shepherd-right-for-you/"
+    },
+    {
+      "id": "S268",
+      "tier": "B",
+      "publisher": "American Kennel Club",
+      "title": "Breed Weight Chart",
+      "url": "https://www.akc.org/expert-advice/nutrition/breed-weight-chart/"
+    },
+    {
+      "id": "S269",
+      "tier": "B",
+      "publisher": "PetMD — Michelle Diener, DVM; reviewed by Sarah Wooten, DVM (updated 2026-09-29)",
+      "title": "Miniature American Shepherd Dog Breed Health and Care",
+      "url": "https://www.petmd.com/dog/breeds/miniature-american-shepherd"
     },
     {
       "id": "C1",
