@@ -266,6 +266,7 @@ describe('PetPickerStep', () => {
       'breed-option-boxer',
       'breed-option-miniature_schnauzer',
       'breed-option-shih_tzu',
+      'breed-option-great_dane',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -654,6 +655,58 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(screen.getByTestId('breed-option-shih_tzu')).toHaveTextContent(/Shih Tzu/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-29: the Great Dane (fallback) shows its chips, is found as "doga", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const dane = screen.getByTestId('breed-option-great_dane');
+    expect(dane).toHaveTextContent(/Nemška doga/);
+    expect(dane).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-great_dane-suits');
+    expect(suits).toHaveTextContent(/aktivno družino/);
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/veliko hišo z vrtom/);
+    const consider = screen.getByTestId('breed-suitability-great_dane-consider');
+    expect(consider).toHaveTextContent(/krajša življenjska doba/);
+    expect(consider).toHaveTextContent(/kolki in zadnje noge/);
+    expect(consider).toHaveTextContent(/veke in oči — preverite preglede oči/);
+    expect(consider).toHaveTextContent(/se slini/);
+    expect(consider).toHaveTextContent(/močan lovski nagon/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'doga');
+    expect(screen.getByTestId('breed-option-great_dane')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-shih_tzu')).toBeNull();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-great_dane'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'great_dane', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'great_dane' }),
+    );
+  });
+
+  it('M5-R10-29: the Great Dane chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-great_dane-suits');
+      const consider = screen.getByTestId('breed-suitability-great_dane-consider');
+      expect(suits).toHaveTextContent(/an active family/);
+      expect(suits).toHaveTextContent(/a large house and garden/);
+      expect(consider).toHaveTextContent(/eyelids and eyes — check eye tests/);
+      expect(consider).toHaveTextContent(/hips and hind legs — check joint health/);
+      expect(consider).toHaveTextContent(/shorter lifespan/);
+      expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-great_dane')).toHaveTextContent(/Great Dane/);
     } finally {
       await i18n.changeLanguage('sl');
     }

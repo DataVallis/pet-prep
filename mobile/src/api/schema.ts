@@ -1554,7 +1554,7 @@ export interface components {
              * @description Enum value sent as `breed` to POST /api/parent/generate-pin.
              * @enum {string}
              */
-            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
             /** @description breed_configs slug (admin / analytics key). */
             slug: string;
             /** @enum {string} */
@@ -1580,7 +1580,7 @@ export interface components {
              */
             suitability: {
                 suits: ("active_family" | "family_pet" | "children" | "small_children" | "first_time_owner" | "apartment" | "large_home" | "other_pets" | "older_owners" | "often_alone" | "low_shedding")[];
-                consider: ("long_daily_exercise" | "needs_mental_stimulation" | "may_herd_children" | "chews_when_bored" | "sheds" | "food_motivated_weight" | "frequent_grooming" | "brachycephalic_breathing" | "hips_hind_legs" | "heart_and_spine" | "back_spine" | "sensitive_skin" | "shorter_lifespan" | "secure_fencing" | "experienced_owner" | "fragile_older_children" | "not_for_small_children" | "drools" | "chases_small_pets" | "needs_company" | "short_muzzle_breathing")[];
+                consider: ("long_daily_exercise" | "needs_mental_stimulation" | "may_herd_children" | "chews_when_bored" | "sheds" | "food_motivated_weight" | "frequent_grooming" | "brachycephalic_breathing" | "hips_hind_legs" | "heart_and_spine" | "back_spine" | "sensitive_skin" | "shorter_lifespan" | "secure_fencing" | "experienced_owner" | "fragile_older_children" | "not_for_small_children" | "drools" | "chases_small_pets" | "needs_company" | "short_muzzle_breathing" | "eyelid_problems")[];
             };
         };
         /**
@@ -1588,7 +1588,7 @@ export interface components {
          * @description Breeds (M5-R06_PLAN T1, T9): the enum stays (it is used in payments and ~20 files), the free / paid rule is data — `breed_configs.premium_unlock` is the single source of truth (read through BreedCatalogService, cached). Every new case needs: slug(), species(), defaultPremium(), the `pets_breed_type_check` / `pets_species_breed_check` constraints and a BreedConfigsSeeder row.
          * @enum {string}
          */
-        BreedType: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+        BreedType: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
         /**
          * ChallengePaidSource
          * @description Why a challenge pet counts as paid (pets.challenge_paid_source, M3-11). Mirrored by the pets_challenge_paid_check constraint.
@@ -15131,7 +15131,7 @@ export interface operations {
                          */
                         pet_profile: {
                             /** @enum {string} */
-                            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
                             /** @enum {string} */
                             origin: "bought" | "adopted";
                             /** @enum {string} */

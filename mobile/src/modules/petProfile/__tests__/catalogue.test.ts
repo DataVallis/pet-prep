@@ -140,6 +140,7 @@ describe('readBreedCatalogue', () => {
       'boxer',
       'miniature_schnauzer',
       'shih_tzu',
+      'great_dane',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -338,6 +339,16 @@ describe('readBreedCatalogue', () => {
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-28, runbook rules; no new tag).
     expect(shihTzu?.search_keywords).toEqual(['shih tzu', 'shih-tzu', 'shihtzu', 'ši-cu', 'šicu', 'ši cu', 'sicu']);
     expect(shihTzu?.suitability).toEqual({ suits: ['apartment', 'family_pet', 'first_time_owner'], consider: ['frequent_grooming', 'short_muzzle_breathing'] });
+    const greatDane = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'great_dane');
+    expect(greatDane).toEqual(
+      expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 250 }),
+    );
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-29, runbook rules; new welfare tag eyelid_problems).
+    expect(greatDane?.search_keywords).toEqual(['great dane', 'nemška doga', 'nemska doga', 'doga', 'deutsche dogge', 'dogge', 'dane']);
+    expect(greatDane?.suitability).toEqual({
+      suits: ['active_family', 'family_pet', 'large_home'],
+      consider: ['long_daily_exercise', 'not_for_small_children', 'shorter_lifespan', 'hips_hind_legs', 'eyelid_problems', 'chews_when_bored', 'sheds', 'drools', 'chases_small_pets'],
+    });
     const corgi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pembroke_welsh_corgi');
     expect(corgi).toEqual(
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 200 }),
@@ -376,6 +387,7 @@ describe('readBreedCatalogue', () => {
       'boxer',
       'miniature_schnauzer',
       'shih_tzu',
+      'great_dane',
     ]);
   });
 });
@@ -531,6 +543,14 @@ describe('breed search', () => {
     expect(find('šicu')).toEqual(['shih_tzu']);
     expect(find('sicu')).toEqual(['shih_tzu']);
     expect(find('ši-cu')).toEqual(['shih_tzu']);
+  });
+
+  it('M5-R10-29: finds the Great Dane by its EN / SL / German names (with and without š)', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('great dane')).toEqual(['great_dane']);
+    expect(find('nemška doga')).toEqual(['great_dane']);
+    expect(find('nemska doga')).toEqual(['great_dane']);
+    expect(find('Deutsche Dogge')).toEqual(['great_dane']);
   });
 
   it('M5-R10-25: finds the Dobermann by its SL / EN names and the AKC name', () => {
