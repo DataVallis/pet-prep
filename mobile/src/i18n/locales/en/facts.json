@@ -1,0 +1,50 @@
+{
+  "child": {
+    "book": "Did you know? Facts about your breed",
+    "bookUnread": "Did you know? Facts about your breed, new facts waiting",
+    "bookHint": "Opens My breed",
+    "chip": "Something new about your breed",
+    "chipHint": "Opens a fact about your breed",
+    "eyebrow": "DID YOU KNOW?",
+    "meta": "{{breed}} · {{category}}",
+    "source": "Source: {{source}}",
+    "progress": "{{read}} / {{total}}",
+    "progressA11y": "Read {{read}} of {{total}}",
+    "great": "Great!",
+    "more": "More about my breed",
+    "close": "Close",
+    "swipeHint": "Swipe down to close",
+    "dialogLabel": "Did you know? {{title}}",
+    "dialogRead": "{{title}}. {{why}} Source: {{source}}.",
+    "dialogReadNoWhy": "{{title}}. Source: {{source}}.",
+    "petImage": "Picture of your pet"
+  },
+  "guide": {
+    "title": "My breed",
+    "eyebrow": "MY BREED",
+    "back": "Back",
+    "search": "Search the facts",
+    "searchA11y": "Search the facts about your breed",
+    "clearSearch": "Clear search",
+    "all": "All",
+    "progress": "Read: {{read}} of {{total}}",
+    "new": "New",
+    "newA11y": "new",
+    "noResults": "Nothing found. Try another word.",
+    "loading": "Loading the facts …",
+    "loadFailed": "The facts didn't load.",
+    "retry": "Try again",
+    "openFactHint": "Opens the fact"
+  },
+  "categories": {
+    "origin": "Origin",
+    "body": "Body",
+    "temperament": "Character",
+    "exercise": "Exercise",
+    "diet": "Food",
+    "grooming": "Grooming",
+    "training": "Training",
+    "family": "Family",
+    "health": "Health"
+  }
+}

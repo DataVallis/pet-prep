@@ -280,6 +280,19 @@ export function generatePinBody(
   return { child_id: body.child_id };
 }
 
+/** `GET /api/breeds/{breed}/facts` 200 body (M5-R09b »Ali si vedel?»). */
+export type BreedFactsResponse = operations['breedFact.index']['responses'][200]['content']['application/json'];
+/** One fact of a breed list (child: `audience=child`, `source_url: null`). */
+export type BreedFact = BreedFactsResponse['facts'][number];
+/** `POST /api/breed-facts/{fact}/read` 200 body. */
+export type BreedFactReadResponse = operations['breedFact.read']['responses'][200]['content']['application/json'];
+/** `GET /api/child/fact-of-the-day` 200 body. */
+export type FactOfTheDayResponse = operations['breedFact.factOfTheDay']['responses'][200]['content']['application/json'];
+/** `POST /api/child/fact-of-the-day/shown` 200 body (`recorded` | `already_shown`). */
+export type FactShownResponse = operations['breedFact.shown']['responses'][200]['content']['application/json'];
+/** `POST /api/child/fact-of-the-day/shown` 422 body — `refused` is an answer, not an error to show. */
+export type FactShownRefusal = operations['breedFact.shown']['responses'][422]['content']['application/json'];
+
 /** `GET /api/breeds` 200 body (M5-R06-01 picker catalogue) — read it through `readBreedCatalogue`. */
 export type BreedCatalogueResponse =
   operations['breed.index']['responses'][200]['content']['application/json'];
@@ -684,6 +697,28 @@ export const api = {
    */
   getBreedCatalogue: (features: readonly ClientFeature[] = CLIENT_FEATURES, signal?: AbortSignal) =>
     apiRequest<BreedCatalogueResponse>(breedCataloguePath(features), { signal }),
+
+  /**
+   * GET /api/breeds/{breed}/facts (M5-R09b, parent or child) — approved facts of a breed of the
+   * caller's pets, localized (Accept-Language). Mutt / domestic cat → 200 with `facts: []`;
+   * another breed → 404 `breed_not_found`.
+   */
+  getBreedFacts: (breed: string, signal?: AbortSignal) =>
+    apiRequest<BreedFactsResponse>(`/api/breeds/${encodeURIComponent(breed)}/facts`, { signal }),
+
+  /** POST /api/breed-facts/{fact}/read (M5-R09b) — idempotent; 404 `fact_not_found`. */
+  markBreedFactRead: (factId: number) =>
+    apiRequest<BreedFactReadResponse>(`/api/breed-facts/${factId}/read`, { method: 'POST' }),
+
+  /** GET /api/child/fact-of-the-day (M5-R09b, child) — next unread fact + `may_auto_show`. */
+  getFactOfTheDay: (signal?: AbortSignal) => apiRequest<FactOfTheDayResponse>('/api/child/fact-of-the-day', { signal }),
+
+  /**
+   * POST /api/child/fact-of-the-day/shown (M5-R09b, child) — record an automatic sheet.
+   * 422 `{status: refused, reason, state}` when not allowed now (thrown as ApiError; read it
+   * with `readShownRefusal`).
+   */
+  recordFactShown: () => apiRequest<FactShownResponse>('/api/child/fact-of-the-day/shown', { method: 'POST' }),
 
   /** DELETE /api/parent/children/{child}/tokens — sign the child out on every device. */
   revokeChildTokens: (childId: number) =>

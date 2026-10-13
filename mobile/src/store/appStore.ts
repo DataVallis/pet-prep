@@ -198,6 +198,20 @@ interface AppStore {
   /** Session ids of cat games the child stopped (never resumed; session UI state, cleared on sign-out). */
   abandonedCatSessions: readonly string[];
   abandonCatSession: (id: string) => void;
+  /**
+   * M5-R09c »Ali si vedel?«: the fact shown in the child's sheet (id; null = closed), the
+   * »Moja pasma« guide, and the family day this device last asked the server to open the sheet
+   * by itself / was refused (keeps the chip). Session UI state, cleared on sign-out.
+   */
+  factSheetId: number | null;
+  openFactSheet: (id: number) => void;
+  closeFactSheet: () => void;
+  isBreedGuideVisible: boolean;
+  setBreedGuideVisible: (visible: boolean) => void;
+  factAutoAskedDay: string | null;
+  setFactAutoAskedDay: (day: string) => void;
+  factRefusedDay: string | null;
+  setFactRefusedDay: (day: string) => void;
 
   // Logout / reset
   reset: () => void;
@@ -322,6 +336,16 @@ export const useAppStore = create<AppStore>((set, get) => ({
         // Bounded: a session lives ≤ ~2 min; keep the newest few.
         : { abandonedCatSessions: [...state.abandonedCatSessions, id].slice(-20) },
     ),
+  factSheetId: null,
+  openFactSheet: (factSheetId) => set({ factSheetId }),
+  closeFactSheet: () => set((state) => (state.factSheetId === null ? {} : { factSheetId: null })),
+  isBreedGuideVisible: false,
+  setBreedGuideVisible: (isBreedGuideVisible) =>
+    set((state) => (state.isBreedGuideVisible === isBreedGuideVisible ? {} : { isBreedGuideVisible })),
+  factAutoAskedDay: null,
+  setFactAutoAskedDay: (factAutoAskedDay) => set({ factAutoAskedDay }),
+  factRefusedDay: null,
+  setFactRefusedDay: (factRefusedDay) => set({ factRefusedDay }),
 
   // Logout / reset — leaves the app on the login screen (bootStatus 'ready').
   reset: () =>
@@ -345,5 +369,9 @@ export const useAppStore = create<AppStore>((set, get) => ({
       pushTarget: null,
       catOverlay: null,
       abandonedCatSessions: [],
+      factSheetId: null,
+      isBreedGuideVisible: false,
+      factAutoAskedDay: null,
+      factRefusedDay: null,
     }),
 }));
