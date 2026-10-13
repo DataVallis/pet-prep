@@ -719,5 +719,31 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S223', 'S226'], 'refs' => ['miniature_schnauzer.suitability.rkc_grooming', 'miniature_schnauzer.suitability.pdsa_grooming']],
             ],
         ],
+
+        // M5-R10-28: shih_tzu.* (S229–S236), runbook rules (data.json
+        // proposed_game_parameters.shih_tzu.suitability_tags). RKC (S231) + PDSA (S233) + BVA (S236).
+        // `family_pet` from PDSA (condition: right socialisation and training), never `children` /
+        // `small_children` (PDSA only advises supervision). Welfare rule: brachycephalic breed (BVA
+        // S236, PDSA BOAS S233) → `short_muzzle_breathing` (no Shih Tzu source names heat — Boxer
+        // precedent). No new vocabulary key.
+        'shih_tzu' => [
+            'suits' => [
+                // S231 "Size of home: Flat/ Apartment" / "Size of garden: Small/ medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S231'], 'refs' => ['shih_tzu.suitability.rkc_size_of_home', 'shih_tzu.suitability.rkc_size_of_garden']],
+                // S233 "… make great family pets in the right household."
+                ['tag' => 'family_pet', 'source_ids' => ['S233'], 'refs' => ['shih_tzu.suitability.pdsa_family', 'shih_tzu.behaviour.family']],
+                // S233 "Shih Tzus are an ideal pet for first-time owners."
+                ['tag' => 'first_time_owner', 'source_ids' => ['S233'], 'refs' => ['shih_tzu.suitability.pdsa_first_time_owner']],
+                // S231 "Sheds: No" (never "hypoallergenic").
+                ['tag' => 'low_shedding', 'source_ids' => ['S231'], 'refs' => ['shih_tzu.suitability.rkc_shedding']],
+            ],
+            'consider' => [
+                // S231 "Grooming: Every day"; S233 "They’ll need a daily brush to keep their coat knot-free".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S231', 'S233'], 'refs' => ['shih_tzu.suitability.rkc_grooming', 'shih_tzu.suitability.pdsa_grooming']],
+                // S233 BOAS "caused by their shorter faces"; S236 BVA brachycephalic breeds (Figure 1).
+                ['tag' => 'short_muzzle_breathing', 'source_ids' => ['S233', 'S236'], 'refs' => ['shih_tzu.health.brachycephaly_boas', 'shih_tzu.health.skull_shape']],
+            ],
+        ],
+
     ],
 ];
