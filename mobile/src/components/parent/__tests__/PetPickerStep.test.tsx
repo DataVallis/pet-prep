@@ -264,6 +264,7 @@ describe('PetPickerStep', () => {
       'breed-option-pembroke_welsh_corgi',
       'breed-option-dobermann',
       'breed-option-boxer',
+      'breed-option-miniature_schnauzer',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -555,6 +556,52 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(screen.getByTestId('breed-option-boxer')).toHaveTextContent(/Boxer/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-27: the Miniature Schnauzer (fallback) shows its chips, is found as "šnavcer", and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const schnauzer = screen.getByTestId('breed-option-miniature_schnauzer');
+    expect(schnauzer).toHaveTextContent(/Pritlikavi šnavcer/);
+    expect(schnauzer).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-miniature_schnauzer-suits');
+    expect(suits).toHaveTextContent(/življenje v stanovanju/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    expect(suits).toHaveTextContent(/dom, kjer želite manj dlak/);
+    expect(screen.getByTestId('breed-suitability-miniature_schnauzer-consider')).toHaveTextContent(/potrebuje česanje večkrat na teden/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'šnavcer');
+    expect(screen.getByTestId('breed-option-miniature_schnauzer')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-boxer')).toBeNull();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-miniature_schnauzer'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'miniature_schnauzer', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'miniature_schnauzer' }),
+    );
+  });
+
+  it('M5-R10-27: the Miniature Schnauzer chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-miniature_schnauzer-suits');
+      const consider = screen.getByTestId('breed-suitability-miniature_schnauzer-consider');
+      expect(suits).toHaveTextContent(/apartment living/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(suits).toHaveTextContent(/homes that prefer less shedding/);
+      expect(consider).toHaveTextContent(/needs brushing several times a week/);
+      expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-miniature_schnauzer')).toHaveTextContent(/Miniature Schnauzer/);
     } finally {
       await i18n.changeLanguage('sl');
     }

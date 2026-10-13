@@ -539,6 +539,23 @@ it('gives the Boxer the new needs_company and short_muzzle_breathing tags and th
         ->and(bsEntry('boxer.exercise.adult')['quote'])->toBe('Exercise: More than 2 hours per day');
 });
 
+it('gives the Miniature Schnauzer apartment, children, low_shedding and frequent_grooming — no welfare chip, never hypoallergenic (runbook 2026-10-13)', function () {
+    $schnauzer = app(BreedSuitability::class)->for(BreedType::MiniatureSchnauzer);
+    expect($schnauzer['suits'])->toBe(['apartment', 'children', 'low_shedding'])
+        ->and($schnauzer['consider'])->toBe(['frequent_grooming'])
+        // PDSA's statement is conditional and no rating → never small_children; RKC "companion dogs" → no family_pet.
+        ->and($schnauzer['suits'])->not->toContain('small_children')->not->toContain('family_pet')->not->toContain('other_pets')
+        // RKC Breed Watch Category 1 → no welfare chip; RKC "Over 10 years" → no shorter_lifespan; "Sheds: No" → no sheds.
+        ->and($schnauzer['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
+        ->not->toContain('sensitive_skin')->not->toContain('back_spine')->not->toContain('shorter_lifespan')->not->toContain('sheds');
+
+    expect(bsEntry('miniature_schnauzer.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Flat/ Apartment')
+        ->and(bsEntry('miniature_schnauzer.suitability.rkc_shedding')['quote'])->toBe('Sheds: No')
+        ->and(bsEntry('miniature_schnauzer.suitability.pdsa_children')['quote'])->toBe("They can get on well with children if they're introduced at an early age.")
+        ->and(bsEntry('miniature_schnauzer.behaviour.family')['notes'])->toContain('early introduction')
+        ->and(bsEntry('miniature_schnauzer.suitability.pdsa_grooming')['quote'])->toBe('Grooming is needed 2-3 times a week');
+});
+
 it('gives chases_small_pets only to the six breeds whose own entry quotes a high prey drive (David 2026-10-12)', function () {
     expect(BreedSuitability::vocabulary())->toMatchArray(['chases_small_pets' => BreedSuitability::CONSIDER]);
 

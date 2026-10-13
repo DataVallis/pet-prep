@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "a02e3f876324901bca735724921ab83d949d5773c4857ede51a2384c76dff37b"
+      "sha256": "c776c07da63e45e947326fa7366d617ab42267984718e165ee229db7f1c040a7"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "4e5bc0fc1d8aa7b7b59d1975740f98fb063ee76fb6d803b4137bc1c9d4f5fda3"
+      "sha256": "61ce0ffafd64054c0daad9906bb73fe4f1b8bf1f229c844c574d8226a22a86ef"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,27 +25,27 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "bde359dffad36376673cb3226ba58e445c8e3e1a69862c68d8daf89563d14e77"
+      "sha256": "7465424c6be6dc2c342f5c4e1c2284cce24ad84c8cc50bbd819b7f96fecb011f"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "e8ee4635bc81f5d9b3c60e27f245cec16d77800527bb7913e1a46f243e261884"
+      "sha256": "ab5dd35121c1b64ffa329dd19cf4908445629a839139fc64ba89d8dfeda02d7f"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "68426b7314bafc59294681d5a2e344d4ab29931898b5d78fb3694f96506a7d28"
+      "sha256": "fa9f6bf3d6a9ef0935d12298dd755d9fffe131b708af3d95241b27175078017c"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "cf6c3ff3151caf26542f6b07ab2fe34b73da5b0f8198c8212acc8e318ee0cdb1"
+      "sha256": "6081bc0b4d7a37a39bed4bd343ba689ff0a9c77f213b1787ae28e5c57353a5fc"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "0fa35d6e15b4b4481e72ba6d59b9eedbbfe39f1aa9a5482584a03669f9238ccf"
+      "sha256": "3d0616c137af996851275807ea33cc50da639527295e5b471c18b875988e0e99"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "06728365fa284379167d098fbe34baec32595daca1df9c0bba5f7e2d4bc460a4"
+      "sha256": "23c152337a6900062698a11cfa186ea5174907a19c6fce8570741c46a76fb8b0"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -186,7 +186,7 @@
         }
       },
       "status": "available",
-      "breed_count": 22,
+      "breed_count": 23,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -13771,6 +13771,543 @@
       ]
     },
     {
+      "id": "miniature_schnauzer",
+      "species": "dog",
+      "order": 22,
+      "availability": "in_app",
+      "name": {
+        "en": "Miniature Schnauzer",
+        "sl": "Pritlikavi šnavcer"
+      },
+      "slug": {
+        "en": "miniature-schnauzer",
+        "sl": "pritlikavi-snavcer"
+      },
+      "synonyms": {
+        "en": [
+          "Zwergschnauzer",
+          "Mini Schnauzer"
+        ],
+        "sl": [
+          "mali šnavcer",
+          "pritlikavi snavcer",
+          "zwergschnauzer"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S223"
+          ],
+          "ref": "miniature_schnauzer.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              30,
+              35
+            ],
+            "female": [
+              30,
+              35
+            ]
+          },
+          "source_ids": [
+            "S221"
+          ],
+          "ref": "miniature_schnauzer.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              4,
+              8
+            ],
+            "female": [
+              4,
+              8
+            ]
+          },
+          "source_ids": [
+            "S221"
+          ],
+          "ref": "miniature_schnauzer.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "miniature_schnauzer.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 11.6,
+          "source_ids": [
+            "S227"
+          ],
+          "ref": "miniature_schnauzer.lifespan.median_uk",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S223"
+          ],
+          "ref": "miniature_schnauzer.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S223"
+          ],
+          "ref": "miniature_schnauzer.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S223"
+          ],
+          "ref": "miniature_schnauzer.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S223"
+          ],
+          "ref": "miniature_schnauzer.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S223"
+          ],
+          "ref": "miniature_schnauzer.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 12,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "miniature_schnauzer.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 183,
+            "group": 2,
+            "section": 1,
+            "origin": "DE"
+          },
+          "source_ids": [
+            "S222"
+          ],
+          "ref": "miniature_schnauzer.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "dental_disease_care",
+          "source_ids": [
+            "S228"
+          ],
+          "ref": "miniature_schnauzer.health.dental",
+          "confidence": "high"
+        },
+        {
+          "key": "bladder_stones",
+          "source_ids": [
+            "S226"
+          ],
+          "ref": "miniature_schnauzer.health.bladder_stones",
+          "confidence": "medium"
+        },
+        {
+          "key": "eye_problems_pra_cataracts_dry_eye",
+          "source_ids": [
+            "S226"
+          ],
+          "ref": "miniature_schnauzer.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "skin_comedo_allergy",
+          "source_ids": [
+            "S226"
+          ],
+          "ref": "miniature_schnauzer.health.skin",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S223"
+            ],
+            "refs": [
+              "miniature_schnauzer.suitability.rkc_size_of_home",
+              "miniature_schnauzer.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S226"
+            ],
+            "refs": [
+              "miniature_schnauzer.suitability.pdsa_children",
+              "miniature_schnauzer.behaviour.family"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S223"
+            ],
+            "refs": [
+              "miniature_schnauzer.suitability.rkc_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S223",
+              "S226"
+            ],
+            "refs": [
+              "miniature_schnauzer.suitability.rkc_grooming",
+              "miniature_schnauzer.suitability.pdsa_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 104
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 104
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 3
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_schnauzer.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S223"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S223 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_schnauzer.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_schnauzer.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S227"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 104 (0.75 × 11.6 y, VetCompass median S227)"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_schnauzer.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 12, Excellent tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.miniature_schnauzer.grooming",
+            "basis_source_ids": [
+              "S226"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2–3× na teden → 3; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S223",
+          "S226",
+          "S227"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_mac",
+            "level": "best_practice",
+            "source_ids": [
+              "S223"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S223"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S223"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S221",
+        "S222",
+        "S223",
+        "S226",
+        "S227",
+        "S228",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -17045,6 +17582,48 @@
       "publisher": "Canine Medicine and Genetics 10:6 (2023) (PMC copy)",
       "title": "O'Neill D. G., Skipper A. M., Barrett K., Church D. B., Packer R. M. A., Brodbelt D. C. Demography, common disorders and mortality of Boxer dogs under primary veterinary care in the UK. doi:10.1186/s40575-023-00129-w",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10234096"
+    },
+    {
+      "id": "S221",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 183 — Zwergschnauzer (Miniature Schnauzer) (EN PDF, dev.fci.be host; date of publication of the valid standard 06.03.2007)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/183g02-en.pdf"
+    },
+    {
+      "id": "S222",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Zwergschnauzer (Miniature Schnauzer) (183)",
+      "url": "https://fci.be/en/nomenclature/ZWERGSCHNAUZER-183.html"
+    },
+    {
+      "id": "S223",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Miniature Schnauzer — breed information page (Breeds A to Z, older address)",
+      "url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4096"
+    },
+    {
+      "id": "S226",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Miniature Schnauzer breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/miniature-schnauzer"
+    },
+    {
+      "id": "S227",
+      "tier": "A",
+      "publisher": "Canine Genetics and Epidemiology 6:1 (2019)",
+      "title": "O'Neill D. G., Butcher C., Church D. B., Brodbelt D. C., Gough A. G. Miniature Schnauzers under primary veterinary care in the UK in 2013: demography, mortality and disorders. doi:10.1186/s40575-019-0069-0",
+      "url": "https://link.springer.com/article/10.1186/s40575-019-0069-0"
+    },
+    {
+      "id": "S228",
+      "tier": "B",
+      "publisher": "Royal Veterinary College — VetCompass",
+      "title": "Miniature Schnauzer (VetCompass infographic / summary of S227, 2019-02-21) (PDF)",
+      "url": "https://www.rvc.ac.uk/Media/Default/VetCompass/190221%20Miniature%20Schnauzer.pdf"
     },
     {
       "id": "C1",

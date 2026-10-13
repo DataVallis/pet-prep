@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -334,6 +334,17 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_BOXER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-26)';
 
     /**
+     * M5-R10-27 Miniature Schnauzer (unattended run 2026-10-13, data.json
+     * proposed_game_parameters.miniature_schnauzer.*.decision): every value follows a standing
+     * rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min, senior 45 min, puppy 10 min × age capped at 60, stages 9 / 36 / 104
+     * (senior from the VetCompass median 11.6 y, S227 — provisional until McMillan 2024 is
+     * checked), arrival 2 / 9 / 36 / 104, learning multiplier 1.5 (Coren 12, Excellent); care
+     * rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_MINIATURE_SCHNAUZER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-27)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -457,6 +468,7 @@ class BreedStageParamsSeeder extends Seeder
         'pembroke_welsh_corgi' => [3, 'S206', 'Coat care is fairly minimal, with grooming two-three times per week usually enough to remove any dead hair.', 'high', false],
         'dobermann' => [1, 'S209', 'Grooming: Once a week', 'high', false],
         'boxer' => [1, 'S215', 'Grooming: Once a week', 'high', false],
+        'miniature_schnauzer' => [3, 'S226', 'Grooming is needed 2-3 times a week', 'high', false],
     ];
 
     /**
@@ -524,7 +536,7 @@ class BreedStageParamsSeeder extends Seeder
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1089,6 +1101,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-26 (docs/research/dog-data/data.json boxer,
             // S213–S220; runbook rules in proposed_game_parameters.boxer).
             BreedType::Boxer => self::boxerProfile(),
+            // M5-R10-27 (docs/research/dog-data/data.json miniature_schnauzer,
+            // S221–S228; runbook rules in proposed_game_parameters.miniature_schnauzer).
+            BreedType::MiniatureSchnauzer => self::miniatureSchnauzerProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -2668,6 +2683,79 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'boxer.lifespan.median_uk',
                 'quote' => 'Boxer | 11.3 | 11.3 - 11.5 | 11294 | 5925',
                 'notes' => 'McMillan et al. 2024 median as tabled by Dogs Trust (S123). VetCompass 2023 median 10.46 y (S220); RKC / PDSA "Over 10 years" (S215, S219). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Miniature Schnauzer (M5-R10-27). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_MINIATURE_SCHNAUZER);
+     * weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function miniatureSchnauzerProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_MINIATURE_SCHNAUZER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S227', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.miniature_schnauzer.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog finishes growing at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [104, $boundary('Derived game boundary: last 25 % of lifespan (S11) × VetCompass median 11.6 y (O\'Neill et al. 2019, S227) = 8.7 y = 104.4 → 104 months. No McMillan 2024 value was reachable. Not chosen: 90 (RKC "Over 10 years", S223), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 104],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.miniature_schnauzer.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S223', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.miniature_schnauzer.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S223) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA "around an hour of exercise daily" (S226) agrees.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.miniature_schnauzer.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[4.0, 8.0], [
+                'unit' => 'kg', 'source_id' => 'S221', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'miniature_schnauzer.adult_weight.fci',
+                'quote' => 'Weight Dogs and bitches approximately 4 to 8 kg.',
+                'notes' => 'FCI standard N° 183 (S221): one range for both sexes. PDSA average 6–7 kg (S226) lies inside it; the RKC and AKC standards give no weight. The UK pet population is heavier (S227) — background only.',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'miniature_schnauzer.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (FCI 4–8 kg ≈ 9–18 lb at the Toy / Small edge of S10; PDSA 6–7 kg ≈ 13–15 lb = Small; RKC / PDSA size "Small").',
+            ]],
+            'coren_rank' => [12, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'miniature_schnauzer.trainability.coren_rank',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 12, tier "Excellent Working Dogs" (ranks 11–26). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.miniature_schnauzer.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 12 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [11.6, [
+                'unit' => 'years', 'source_id' => 'S227', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'miniature_schnauzer.lifespan.median_uk',
+                'quote' => 'The median age at death of Miniature Schnauzers overall was 11.6 years (IQR 9.3–13.1, range 0.5–17.0).',
+                'notes' => 'O\'Neill et al. 2019 (S227), VetCompass UK 2013. RKC / PDSA "Over 10 years" (S223, S226) agree. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

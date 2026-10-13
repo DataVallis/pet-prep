@@ -699,5 +699,25 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S219'], 'refs' => ['boxer.behaviour.other_pets', 'boxer.suitability.pdsa_other_pets']],
             ],
         ],
+
+        // M5-R10-27: miniature_schnauzer.* (S221–S228), runbook rules (data.json
+        // proposed_game_parameters.miniature_schnauzer.suitability_tags). RKC (S223) + PDSA (S226).
+        // `children` from PDSA's explicit statement (condition: introduced at an early age), never
+        // `small_children` (no rating); not `family_pet` (RKC says companion dogs). Not a welfare
+        // breed (RKC Breed Watch Category 1, S223). No new vocabulary key.
+        'miniature_schnauzer' => [
+            'suits' => [
+                // S223 "Size of home: Flat/ Apartment" / "Size of garden: Small/ medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S223'], 'refs' => ['miniature_schnauzer.suitability.rkc_size_of_home', 'miniature_schnauzer.suitability.rkc_size_of_garden']],
+                // S226 "They can get on well with children if they're introduced at an early age."
+                ['tag' => 'children', 'source_ids' => ['S226'], 'refs' => ['miniature_schnauzer.suitability.pdsa_children', 'miniature_schnauzer.behaviour.family']],
+                // S223 "Sheds: No" (never "hypoallergenic").
+                ['tag' => 'low_shedding', 'source_ids' => ['S223'], 'refs' => ['miniature_schnauzer.suitability.rkc_shedding']],
+            ],
+            'consider' => [
+                // S223 "Grooming: More than once a week"; S226 "Grooming is needed 2-3 times a week".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S223', 'S226'], 'refs' => ['miniature_schnauzer.suitability.rkc_grooming', 'miniature_schnauzer.suitability.pdsa_grooming']],
+            ],
+        ],
     ],
 ];

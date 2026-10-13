@@ -242,6 +242,15 @@
 | unsourced → `verified => false`; fawn with a black mask weighted highest (the register
 | portrait).
 |
+| Miniature Schnauzer (M5-R10-27, docs/research/dog-data miniature_schnauzer.appearance): small,
+| strong, stocky, nearly square; harsh, wiry, dense coat with a dense undercoat, beard and
+| eyebrows (FCI 183 S221, RKC standard S224); natural V-shaped drop ears (FCI S221) — never
+| cropped (the AKC S225 cropping is not drawn); natural tail (FCI "Natural"). Colours: pepper and
+| salt (with a dark facial mask), black and silver, pure black. White is standard in FCI / RKC
+| but disqualifies under AKC (S225) → not drawn (open for David). Not a welfare-concern breed
+| (RKC Breed Watch Category 1, S223). Colour weights are unsourced → `verified => false`; pepper
+| and salt weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1202,6 +1211,38 @@ return [
             'muzzle' => ['broad, deep, moderate muzzle (never extremely short) with a black nose and wide open nostrils'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-27 (docs/research/dog-data/data.json miniature_schnauzer.appearance; runbook rules
+    // 2026-10-10: standard colours only — never a disqualifying one; natural ears and tail).
+    'miniature_schnauzer' => [
+        'display_name' => 'Miniature Schnauzer',
+        // Colour frequencies are in no source (miniature_schnauzer.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 183 (S221, https://dev.fci.be/Nomenclature/Standards/183g02-en.pdf), RKC breed standard (S224, KUSA copy), AKC standard (S225, AMSC copy), RKC breed page (S223) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S223 "Size: Small"; S221 "Height at withers Dogs and bitches between 30 and 35 cm."',
+            'build' => 'S221 "Small, strong, stocky rather than slim, rough coated, elegant."',
+            'coat_length' => 'S221 "The coat should be wiry, harsh and dense."',
+            'coat_color' => 'S221 "Pure black with black undercoat." "Pepper and Salt." "Black/Silver."; S225 "salt and pepper, black and silver and solid black." (white: FCI / RKC yes, AKC disqualifies — not drawn; weights unsourced)',
+            'ear_carriage' => 'S221 "Drop ears, set high, V-shaped with inner edges lying close to the cheeks, evenly carried"',
+            'eye_color' => 'S221 "Medium sized, oval, facing foreward, dark with lively expression."',
+            'tail' => 'S221 "Natural; a sabre or sickle carriage is sought after."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'sturdy, nearly square and compact', 'weight' => 3], 'small, strong and stocky'],
+            'coat_length' => ['harsh, wiry, dense coat with bushy eyebrows and a beard'],
+            // Standard colours only (S221, S225); pepper and salt highest → the register portrait. Never white.
+            'coat_color' => [
+                ['value' => 'pepper and salt (banded grey) with a dark facial mask', 'weight' => 3],
+                'black and silver',
+                'solid black',
+            ],
+            'ear_carriage' => ['natural uncropped V-shaped ears folding forward'],
+            'eye_color' => ['dark'],
+            'tail' => ['natural undocked tail carried high'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

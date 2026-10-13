@@ -115,6 +115,8 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.equal(byId.dobermann.availability, 'in_app');
   assert.deepEqual(byId.boxer.slug, { en: 'boxer', sl: 'boksar' });
   assert.equal(byId.boxer.availability, 'in_app');
+  assert.deepEqual(byId.miniature_schnauzer.slug, { en: 'miniature-schnauzer', sl: 'pritlikavi-snavcer' });
+  assert.equal(byId.miniature_schnauzer.availability, 'in_app');
   assert.equal(byId.maine_coon.availability, 'in_app'); // cats are hidden in the app
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.equal(byId.british_shorthair.availability, 'in_app');
@@ -196,6 +198,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     pembroke_welsh_corgi: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1.5 },
     dobermann: { adult: 12000, senior: 9000, seniorFrom: 83, learning: 1.9 },
     boxer: { adult: 12000, senior: 9000, seniorFrom: 102, learning: 1.0 },
+    miniature_schnauzer: { adult: 6000, senior: 4500, seniorFrom: 104, learning: 1.5 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -422,7 +425,7 @@ test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming row
   assert.deepEqual([...cats, ...dogs].sort(), seeded);
   assert.deepEqual(cats, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
   // M5-R13: every dog breed of the app except the mutt and the Border Collie (no grooming statement).
-  assert.equal(dogs.length, 21);
+  assert.equal(dogs.length, 22);
   assert.ok(!dogs.includes('mutt') && !dogs.includes('border_collie'));
 });
 
@@ -1040,6 +1043,30 @@ test('Boxer (M5-R10-26): more than 2 hours (RKC), RKC standard weight by sex, FC
   // The VetCompass 2023 median and the pet-population weights stay in research.
   assert.equal(d.facts.some((f) => f.value === 10.46), false);
   assert.doesNotMatch(json, /32\.99|27\.56|17\.74|10\.71/);
+  // Never "hypoallergenic", never cropped ears / a docked tail or a non-standard colour, never a percentage.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|docked|cropped|merle|\d %\)/i);
+});
+
+test('Miniature Schnauzer (M5-R10-27): up to 1 hour (RKC), FCI weight and height for both sexes, FCI group 2 section 1 Germany, VetCompass median + RKC band, Coren 12, apartment / children / low shedding, brushing 3x a week', () => {
+  const d = registry.breeds.find((b) => b.id === 'miniature_schnauzer');
+  assert.deepEqual(d.name, { en: 'Miniature Schnauzer', sl: 'Pritlikavi šnavcer' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S223']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 183, group: 2, section: 1, origin: 'DE' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [4, 8], female: [4, 8] }, ['S221']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [30, 35], female: [30, 35] }, ['S221']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['median', 11.6, ['S227']], ['more_than', 10, ['S223']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 12);
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 104 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['apartment', 'children', 'low_shedding']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['frequent_grooming']);
+  assert.deepEqual(d.health.map((h) => h.key), ['dental_disease_care', 'bladder_stones', 'eye_problems_pra_cataracts_dry_eye', 'skin_comedo_allergy']);
+  // RKC Best Practice only: MAC DNA test and the eye scheme.
+  assert.equal(d.breeder_checklist.status, 'listed');
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['dna_mac', 'best_practice'], ['eye_scheme', 'best_practice']]);
+  const json = JSON.stringify(d);
+  // The pet-population weights and the VetCompass percentages stay in research.
+  assert.doesNotMatch(json, /10\.8 kg|9\.0 kg|17\.4|8\.3%/);
   // Never "hypoallergenic", never cropped ears / a docked tail or a non-standard colour, never a percentage.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|docked|cropped|merle|\d %\)/i);
 });

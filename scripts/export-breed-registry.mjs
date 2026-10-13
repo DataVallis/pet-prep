@@ -394,6 +394,7 @@ const SPECIES = [
       { id: 'pembroke_welsh_corgi', availability: 'in_app', synonyms: { en: ['Welsh Corgi (Pembroke)', 'Welsh Corgi Pembroke', 'Pembroke', 'Corgi'], sl: ['welsh corgi', 'pembroke', 'korgi', 'valižanski korgi'] } },
       { id: 'dobermann', availability: 'in_app', synonyms: { en: ['Doberman', 'Doberman Pinscher', 'Dobermann Pinscher'], sl: ['dobermann', 'doberman pinscher'] } },
       { id: 'boxer', availability: 'in_app', synonyms: { en: ['German Boxer', 'Deutscher Boxer'], sl: ['nemški boksar', 'nemski boksar', 'boxer'] } },
+      { id: 'miniature_schnauzer', availability: 'in_app', synonyms: { en: ['Zwergschnauzer', 'Mini Schnauzer'], sl: ['mali šnavcer', 'pritlikavi snavcer', 'zwergschnauzer'] } },
     ],
   },
   {
@@ -853,6 +854,28 @@ const DOG_FACTS = {
       ['certain_cancers', 'health.cancer'],
     ],
   },
+  // M5-R10-27. Not exported: lifespan.mcmillan_2024 (null), lifespan.senior_from (derived),
+  // adult_weight.pdsa (average inside the FCI range), adult_weight.vetcompass_mean (the pet population —
+  // would read as a target weight), health.breed_watch (no concern), health.weight (a VetCompass
+  // percentage), health.mac (in the breeder checklist), health.other (a list without advice), every
+  // VetCompass percentage (S227). Weight and height = FCI 183 (S221, one range for both sexes);
+  // lifespan = the VetCompass median (S227, McMillan 2024 not reachable) and the RKC band (S223).
+  miniature_schnauzer: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['dental_disease_care', 'health.dental'],
+      ['bladder_stones', 'health.bladder_stones'],
+      ['eye_problems_pra_cataracts_dry_eye', 'health.eyes'],
+      ['skin_comedo_allergy', 'health.skin'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1031,6 +1054,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.boxer.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.boxer.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.boxer.exercise_minutes_senior',
+  },
+  miniature_schnauzer: {
+    adult_minutes: ['proposed_game_parameters.miniature_schnauzer.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.miniature_schnauzer.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.miniature_schnauzer.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.miniature_schnauzer.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.miniature_schnauzer.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.miniature_schnauzer.exercise_minutes_senior',
   },
   mutt: {
     adult_minutes: ['medium_mixed_breed.exercise.adult_game_target'],
