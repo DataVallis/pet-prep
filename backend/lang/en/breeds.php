@@ -30,6 +30,7 @@ return [
     'pembroke_welsh_corgi' => 'Pembroke Welsh Corgi',
     'dobermann' => 'Dobermann',
     'boxer' => 'Boxer',
+    'miniature_schnauzer' => 'Miniature Schnauzer',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

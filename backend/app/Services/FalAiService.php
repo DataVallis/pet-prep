@@ -247,6 +247,13 @@ class FalAiService
                 .'square, athletic, muscular build, natural undocked tail, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-27: FCI 183 (S221) / AKC (S225) — pepper and salt as the anchor (all three
+            // standards); natural drop ears and tail, never cropped or docked; never white.
+            BreedType::MiniatureSchnauzer => 'A friendly, alert Miniature Schnauzer dog with a pepper and salt coat and a dark facial mask, '
+                .'harsh wiry dense coat with bushy eyebrows and a beard, natural uncropped V-shaped ears folding forward, '
+                .'dark oval eyes, black nose, small, sturdy, nearly square build, natural undocked tail, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -586,6 +593,22 @@ class FalAiService
                     0 => 'black mask on the muzzle',
                     1 => 'black mask on the muzzle',
                     2 => 'black mask and small white markings on the chest and paws',
+                },
+            ],
+            // M5-R10-27: FCI 183 (S221) pepper and salt, black/silver, black; white is not drawn
+            // (AKC S225 disqualifies it); never white patches or merle.
+            BreedType::MiniatureSchnauzer => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'pepper and salt',
+                    1 => 'black and silver',
+                    2 => 'pepper and salt',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'harsh, wiry and dense with bushy eyebrows and a beard',
+                'markings' => match ($variantIndex) {
+                    0 => 'dark facial mask',
+                    1 => 'silver eyebrows, muzzle, chest and legs',
+                    2 => 'lighter grey beard, eyebrows and legs',
                 },
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
