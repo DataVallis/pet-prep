@@ -265,6 +265,7 @@ describe('PetPickerStep', () => {
       'breed-option-dobermann',
       'breed-option-boxer',
       'breed-option-miniature_schnauzer',
+      'breed-option-shih_tzu',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -602,6 +603,57 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
       expect(screen.getByTestId('breed-option-miniature_schnauzer')).toHaveTextContent(/Miniature Schnauzer/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-28: the Shih Tzu (fallback) shows its chips, is found as "šicu", and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const shihTzu = screen.getByTestId('breed-option-shih_tzu');
+    expect(shihTzu).toHaveTextContent(/Shih tzu/);
+    expect(shihTzu).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-shih_tzu-suits');
+    expect(suits).toHaveTextContent(/življenje v stanovanju/);
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/začetnike/);
+    expect(suits).not.toHaveTextContent(/dom, kjer želite manj dlak/);
+    const consider = screen.getByTestId('breed-suitability-shih_tzu-consider');
+    expect(consider).toHaveTextContent(/potrebuje česanje večkrat na teden/);
+    expect(consider).toHaveTextContent(/krajši gobček — lahko težje diha/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'šicu');
+    expect(screen.getByTestId('breed-option-shih_tzu')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-miniature_schnauzer')).toBeNull();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-shih_tzu'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'shih_tzu', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'shih_tzu' }),
+    );
+  });
+
+  it('M5-R10-28: the Shih Tzu chips in English, without numbers and never "hypoallergenic"', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-shih_tzu-suits');
+      const consider = screen.getByTestId('breed-suitability-shih_tzu-consider');
+      expect(suits).toHaveTextContent(/apartment living/);
+      expect(suits).toHaveTextContent(/family life/);
+      expect(suits).toHaveTextContent(/first-time owners/);
+      expect(suits).not.toHaveTextContent(/homes that prefer less shedding/);
+      expect(consider).toHaveTextContent(/needs brushing several times a week/);
+      expect(consider).toHaveTextContent(/shorter muzzle — can have breathing problems/);
+      expect(suits).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(consider).not.toHaveTextContent(/\d|%|hypoallergenic/i);
+      expect(screen.getByTestId('breed-option-shih_tzu')).toHaveTextContent(/Shih Tzu/);
     } finally {
       await i18n.changeLanguage('sl');
     }

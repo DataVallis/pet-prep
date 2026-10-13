@@ -25,6 +25,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-13 — Shih tzu: deseta pasma po dvajsetih (M5-R10-28)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **shih tzuja** (20. mesto; 19. bernski planšarski pes je že v aplikaciji). Štiriindvajseta plačljiva pasma psa: do ena ura gibanja na dan (6.000 korakov za odraslega, 4.500 za starejšega), starejši od 9,5 leta (0,75 × mediana 12,7 leta iz britanske raziskave VetCompass — začasno, dokler ne preverimo še raziskave McMillan 2024), uči se pol tako hitro kot mešanček (Coren: 70. mesto).
+
+**Zakaj je pomembno:** Shih tzu je majhen pes za stanovanje in po PDSA odličen za začetnike — a z veliko nege: The Royal Kennel Club svetuje česanje vsak dan, zato ga otrok v igri češe vsak dan (»Počeši«, od prvega dne). PDSA svetuje tudi premor med obrokom in gibanjem (otrok po obroku vidi opozorilo »Počakaj s sprehodom«) in socializacijo od mladosti (»Nova izkušnja«). Ima krajši gobček (britansko veterinarsko združenje BVA ga uvršča med brahicefalne pasme), zato ima v izbirniku mirno oznako »krajši gobček — lahko težje diha« in ga **ne uporabljamo v marketingu**. Nege obraza (PDSA) in ščetkanja zob (VetCompass / RVC) igra še ne vodi — *načrt* (M5-R14, M5-R15).
+
+**Številke:** 8 novih virov (S229–S236), 1 migracija, brez nove oznake, brez novih ključev zdravja, 1 nova koda države izvora v registru (Tibet (Kitajska)), 3 + 2 oznak v izbirniku (oznake o dlaki ni, ker se RKC in PDSA ne ujemata), 3 zgrajene potrebe z virom (česanje vsak dan, premor po obroku, socializacija) in 2 v načrtu; število testov: glej PR #214. Portret in stran v registru sledita v ločenih PR. Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Shih tzu je majhen, prijazen pes, primeren tudi za stanovanje in za začetnike — a potrebuje česanje vsak dan. V PetPrepu boste videli, ali vaš otrok zmore vsakodnevno nego, preden pripeljete domov psa z dolgo dlako.«
+- 🧒 Otroci: »Shih tzu ima dolgo, mehko dlako — in rad je počesan. Vsak dan ga počeši, pa po obroku malo počakaj s sprehodom, da kuža v miru prebavi!«
+- 💼 Investitorji: »Deseta pasma, ki jo je sistem sam izbral po javni lestvici AKC — vse številke iz virov ali stalnih pravil; pravilo dobrobiti samodejno izključi pasmo s krajšim gobčkom iz marketinga, odprta vprašanja (meja starosti, oznaka za gobček) so zapisana za ustanovitelja.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri shih tzuju upošteva stališče BVA o brahicefalnih psih in opozori na nego obraza in zob — brez obljub o zdravju; The Royal Kennel Club za to pasmo trenutno ne navaja dodatnih testov staršev.«
+- 📣 Omrežja: shih tzuja **ne objavljamo** (pes s krajšim gobčkom — priporočilo BVA, kot francoski in angleški buldog ter boksar); v seznamu vseh pasem ga lahko navedemo kot dejstvo.
+- 🛠 Tehnično: »Brez novega ključa oznak (`short_muzzle_breathing` od boksarja); česanje, opozorilo po obroku in socializacija so samo nove vrstice v `breed_stage_params`; meja starejšega psa je označena kot začasna; izvoz registra dobi novo kodo države FCI `CN-XZ`.«
+
+---
+
 ## 2026-10-13 — Pritlikavi šnavcer: deveta pasma po dvajsetih (M5-R10-27)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **pritlikavega šnavcerja** (18. mesto). Triindvajseta plačljiva pasma psa: okoli ena ura gibanja na dan (6.000 korakov za odraslega, 4.500 za starejšega), starejši od 8,7 leta (0,75 × mediana 11,6 leta iz britanske raziskave VetCompass — začasno, dokler ne preverimo še raziskave McMillan 2024), uči se 1,5-krat hitreje kot mešanček (Coren: 12. mesto).

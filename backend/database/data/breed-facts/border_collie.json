@@ -123,7 +123,7 @@
         "en": "Training games in the app are brain work for your dog.",
         "sl": "Vaje šolanja v aplikaciji so za tvojega kužka delo za možgane."
       },
-      "source_id": "S229",
+      "source_id": "S237",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "They also need opportunities to solve problems and use their brains.",
@@ -131,7 +131,7 @@
       "sort": 6,
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "cbffe3579fb685325ca79fab15fed905380f17726e6044f65103c739f3a8aceb"
+      "verified_hash": "88b261e4b4c757c47ad6c3ae364da1cb6f7aa977a118bceab8ac9aa9bf14ea1e"
     },
     {
       "key": "border_collie-007",
@@ -211,7 +211,7 @@
         "en": "That's your weekly \"New experience\" task while your dog is a puppy.",
         "sl": "Zato imaš vsak teden nalogo »Nova izkušnja«, dokler je kuža mladiček."
       },
-      "source_id": "S229",
+      "source_id": "S237",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "You'll need to gradually introduce them to different people, places, sounds and experiences.",
@@ -219,7 +219,7 @@
       "sort": 10,
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "82f72ad79b063289ece792688ae141df6c9e254276945f06f4f8d71793b6e73e"
+      "verified_hash": "b1963e45e022954bfe1bce8c43f11a20c7e3f0e141130f14fbf317de9108b330"
     },
     {
       "key": "border_collie-011",
@@ -255,7 +255,7 @@
         "en": "When the care is done, a cuddle in the app makes your dog happy.",
         "sl": "Ko je skrb opravljena, kužka razveseli crkljanje v aplikaciji."
       },
-      "source_id": "S230",
+      "source_id": "S238",
       "source_name": "American Kennel Club",
       "source_url": "https://www.akc.org/dog-breeds/border-collie/",
       "quote": "These energetic dogs will settle down for cuddle time when the workday is done.",
@@ -263,7 +263,7 @@
       "sort": 12,
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "025829605b5d0dd6b1833fc48d414f790b586db61f715ca55300819b32a538c0"
+      "verified_hash": "440d4fddfae271a9db517e634c10f10cc03f8e76ad94ffb7d509dd910a651a31"
     },
     {
       "key": "border_collie-013",
@@ -641,7 +641,7 @@
         "sl": "Po navedbah Battersea se border collie lahko odlično znajde v družini s starejšimi otroki."
       },
       "why": null,
-      "source_id": "S229",
+      "source_id": "S237",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "Border Collies can be a great fit for families with older children",
@@ -649,7 +649,7 @@
       "sort": 32,
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "55606acc819f7b8181cc93be17265f337ad410f2c7532e6775fec6da262f7e8e"
+      "verified_hash": "13ceb7ec4f4bbc14a0d441d2ff81eb6aa3ded841080535be3ff4c3bcb9cd811c"
     },
     {
       "key": "border_collie-033",
@@ -698,7 +698,7 @@
         "sl": "Border collie lahko poskuša voditi ali loviti avtomobile, druge pse, kolesarje, tekače ali otroke."
       },
       "why": null,
-      "source_id": "S229",
+      "source_id": "S237",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "This can sometimes lead to trying to herd or chase cars, other dogs, cyclists, joggers or children.",
@@ -706,7 +706,7 @@
       "sort": 35,
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ffb8c13655f69539c7a3a01c7c4945a448f3492c9bb9bc8531175348f70ad8fd"
+      "verified_hash": "c945590c153d3c9690fb39ac642a9255d6c8f0c92878841f2e23fe0980aa2b7a"
     },
     {
       "key": "border_collie-036",
@@ -720,7 +720,7 @@
         "en": "This is why the daily step goal matters for this breed.",
         "sl": "Zato je pri tej pasmi dnevni cilj korakov tako pomemben."
       },
-      "source_id": "S229",
+      "source_id": "S237",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "Without enough physical and mental stimulation, Border Collies can become frustrated and start chasing or herding.",
@@ -728,7 +728,7 @@
       "sort": 36,
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a41aa9d3da830f554f72337fce19d391b38d530e9a8c6db834d3762f11c54800"
+      "verified_hash": "4d50495a390aa9ae1d554d473b148b92511aa7e44bab6e442fb0f6404786aba8"
     },
     {
       "key": "border_collie-037",
@@ -799,7 +799,7 @@
         "sl": "Anomalija očesa pri collijih je dedna bolezen oči; učinek sega od blagih sprememb vida do izgube vida."
       },
       "why": null,
-      "source_id": "S229",
+      "source_id": "S237",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "Collie Eye Anomaly is an inherited eye condition that can range from mild changes in vision to significant sight loss.",
@@ -807,7 +807,7 @@
       "sort": 40,
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b09e427a2b27d2e39778f6e7e98e994b2563211776102ec39ba0bc93f62379fe"
+      "verified_hash": "b0a2238c68902e0a047a43e71b2974f983d2dc3b9c6e8627cecbaad110f547ee"
     },
     {
       "key": "border_collie-041",
@@ -818,7 +818,7 @@
         "sl": "Epilepsija se pri border collieju pojavlja pogosteje."
       },
       "why": null,
-      "source_id": "S229",
+      "source_id": "S237",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "Epilepsy is seen more commonly in Border Collies and can cause seizures.",
@@ -826,7 +826,7 @@
       "sort": 41,
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "531eda58325bb23a0d4412dee12e91cd1b075a1cdfe52b038ef8aaec9bda9ec8"
+      "verified_hash": "1f6006be69afa359025e0a385a97073bfb303fff00f13bc9aff3f34f8b0610c8"
     },
     {
       "key": "border_collie-042",
@@ -837,7 +837,7 @@
         "sl": "Pri border collieju se lahko razvije displazija kolkov, ki lahko vpliva na gibanje."
       },
       "why": null,
-      "source_id": "S229",
+      "source_id": "S237",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "Border Collies can develop conditions such as hip dysplasia, which can cause pain and mobility problems.",
@@ -845,7 +845,7 @@
       "sort": 42,
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "82d32ef9bb177c58b5fe9a7647c11b2613e42773efe0b22df30628fa5f6e7aaf"
+      "verified_hash": "d6e82078e82d5ec6a7ed08764abe7fe478103474d88ce1f6888c6222fa940fc2"
     }
   ]
 }

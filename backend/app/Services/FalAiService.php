@@ -254,6 +254,14 @@ class FalAiService
                 .'dark oval eyes, black nose, small, sturdy, nearly square build, natural undocked tail, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-28: FCI 208 (S229) / RKC standard (S232) — gold and white parti-colour as the
+            // anchor; welfare breed (BVA S236): moderate muzzle with open nostrils; never merle.
+            BreedType::ShihTzu => 'A friendly, alert Shih Tzu dog with a long gold and white coat, '
+                .'long dense straight coat, large dark round eyes that are not prominent, large drooping ears with long hair, '
+                .'short square muzzle drawn moderate with clearly open nostrils, black nose, small sturdy body, '
+                .'heavily plumed tail carried over the back, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -609,6 +617,22 @@ class FalAiService
                     0 => 'dark facial mask',
                     1 => 'silver eyebrows, muzzle, chest and legs',
                     2 => 'lighter grey beard, eyebrows and legs',
+                },
+            ],
+            // M5-R10-28: parti-colours only (RKC S232 "All colours permissible except merle"; FCI S229
+            // white blaze / white tail tip in parti-colours); never merle.
+            BreedType::ShihTzu => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'gold and white',
+                    1 => 'black and white',
+                    2 => 'gold and white',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'long, dense and straight with a moderate undercoat',
+                'markings' => match ($variantIndex) {
+                    0 => 'white blaze on the forehead and white tail tip',
+                    1 => 'white blaze, chest and paws',
+                    2 => 'gold ears and white face',
                 },
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.

@@ -31,6 +31,7 @@ return [
     'dobermann' => 'Doberman',
     'boxer' => 'Boksar',
     'miniature_schnauzer' => 'Pritlikavi šnavcer',
+    'shih_tzu' => 'Shih tzu',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

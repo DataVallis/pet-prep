@@ -251,6 +251,15 @@
 | (RKC Breed Watch Category 1, S223). Colour weights are unsourced → `verified => false`; pepper
 | and salt weighted highest (the register portrait).
 |
+| Shih Tzu (M5-R10-28, docs/research/dog-data shih_tzu.appearance): sturdy, abundantly coated
+| small dog with a "chrysanthemum-like" face (RKC standard S232); long, dense, straight outer coat
+| with a moderate undercoat; large dark round eyes, not prominent; large drooping ears; heavily
+| plumed tail carried over the back (FCI 208 S229). Colours: "All colours permissible except merle"
+| (S232) → parti-colours only: gold and white, black and white, liver and white. Welfare breed
+| (brachycephalic — BVA S236, PDSA BOAS S233): a moderate, short square muzzle with clearly open
+| nostrils (trait `muzzle`). Colour weights are unsourced → `verified => false`; gold and white
+| weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1243,6 +1252,41 @@ return [
             'tail' => ['natural undocked tail carried high'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-28 (docs/research/dog-data/data.json shih_tzu.appearance; runbook rules
+    // 2026-10-10: standard colours only — never merle; welfare breed → moderate face).
+    'shih_tzu' => [
+        'display_name' => 'Shih Tzu',
+        // Colour frequencies are in no source (shih_tzu.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 208 (S229, https://dev.fci.be/Nomenclature/Standards/208g09-en.pdf), RKC breed standard (S232, KUSA copy), RKC breed page (S231), PDSA (S233), BVA (S236) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S231 "Size: Small"; S229 "Height at the withers: Not more than 27 cm"',
+            'build' => 'S232 "Sturdy, abundantly, but not excessively, coated dog with distinctly arrogant carriage and \'chrysanthemum-like\' face."',
+            'coat_length' => 'S229 "Hair: Outer coat long, dense, not curly, with moderate undercoat, not woolly."',
+            'coat_color' => 'S232 "All colours permissible except merle, which is unacceptable."; S229 "white blaze on forehead and white tip to tail highly desirable in parti-colours" (weights unsourced)',
+            'ear_carriage' => 'S229 "Ears: Large, with long leathers, carried drooping."',
+            'eye_color' => 'S229 "Eyes: Large, dark, round, placed well apart but not prominent."',
+            'tail' => 'S229 "TAIL: Heavily plumed carried gaily well over back. Set on high."',
+            'muzzle' => 'S229 "Muzzle: Of ample width, square, short, not wrinkled; flat and hairy."; welfare rule (BVA S236, PDSA BOAS S233): drawn moderate with open nostrils',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'sturdy and compact', 'weight' => 3], 'small and sturdy with a proud carriage'],
+            'coat_length' => ['long, dense, straight coat with long hair on the head'],
+            // Parti-colours (S229, S232); gold and white highest → the register portrait. Never merle.
+            'coat_color' => [
+                ['value' => 'gold and white', 'weight' => 3],
+                'black and white',
+                'liver and white',
+            ],
+            'ear_carriage' => ['large drooping ears covered in long hair'],
+            'eye_color' => ['dark, round, not prominent'],
+            'tail' => ['heavily plumed tail carried over the back'],
+            // Welfare rule: moderate, never an extreme flat face.
+            'muzzle' => ['short square muzzle, moderate, with clearly open nostrils'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',
