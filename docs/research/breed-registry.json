@@ -57,7 +57,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "98e9a75eb8138237c2ef9a999f821e2ed6ef2ae590db928818c588fe5d647f8b"
+      "sha256": "d4c9ea1d27b8812083dfe197446b325c28f26fd1173bceca60065fae1fa2cf61"
     }
   },
   "suitability_vocabulary": {
@@ -17585,7 +17585,12 @@
           "S275"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "chihuahua.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
