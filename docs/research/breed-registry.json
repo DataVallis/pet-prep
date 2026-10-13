@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "720da8f3bd0b65dd4cbe5785b5d8a011288f5a6d223f60297bf9685b25410d0b"
+      "sha256": "5dadd9e8940a14ee9d1ff3e831c236a05875653645fa3d317e901f69b08e1919"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "3806421e3ed5f6ca468d53524fa52706dab11ff7ef75eaf1c02f41af89af0030"
+      "sha256": "be0ad88f5dd3ebb81555025457b2a7b4c106185c88749a3f7d67755b0ad5771b"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,27 +25,27 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "3f5694b055e292ba98ba598b2807e2b97cfdf3f9c2aa84b2c81e5480e717bc1c"
+      "sha256": "d835c5352fe3697283536a8276b936c49eb74ff2a983a2458061fdc0be485021"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "ea4ac0cd194fbb432c34e6170589d211078f1d611a95848fc4c609d63dcc171e"
+      "sha256": "43f08ca1146b6a65913cb943bf70d02cdeb810ffdf35f42455c7707451b9b59b"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "a9506a5f2aafcb17201232567d2b130d0e2b38e779f098ae02788e7e03e4187f"
+      "sha256": "78a4a232816a16cd51421ea25e09ef36625b3a34787bf49896c4b4b46d73711c"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "fee0ac26fb25fabbae7d594e84c8580a02330b2ce4cbceb2e0c2a5271e36c4c4"
+      "sha256": "26da2a41af70cf7e3aaa182235dfc30d814daad52d1f50bfeb3a5798ff601bfd"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "0aeffa8aedd882bae445178469d0b92d2ffbb173436872a961c68a5c6445e40f"
+      "sha256": "93bda812d2647ccc0f83e346ab79a6f83c37d3a336c0fe97187ee38a651b9f25"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "210c9945318cec3174b7307a76b323beb7350f7d12809e6ee26609e368cafe95"
+      "sha256": "a07df222f5e143b752de6cbd979cf245870bc6b931ce40f80256b8d065cdc93d"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -196,7 +196,7 @@
         }
       },
       "status": "available",
-      "breed_count": 28,
+      "breed_count": 29,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -17067,6 +17067,597 @@
       ]
     },
     {
+      "id": "chihuahua",
+      "species": "dog",
+      "order": 28,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Chihuahua",
+        "sl": "Čivava"
+      },
+      "slug": {
+        "en": "chihuahua",
+        "sl": "civava"
+      },
+      "synonyms": {
+        "en": [
+          "Chi",
+          "Chihuahueño",
+          "Smooth Coat Chihuahua"
+        ],
+        "sl": [
+          "civava",
+          "chihuahua",
+          "čihuahua"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S275"
+          ],
+          "ref": "chihuahua.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              12,
+              20
+            ],
+            "female": [
+              12,
+              20
+            ]
+          },
+          "source_ids": [
+            "S277"
+          ],
+          "ref": "chihuahua.height.pdsa_average",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              1.8,
+              2.7
+            ],
+            "female": [
+              1.8,
+              2.7
+            ]
+          },
+          "source_ids": [
+            "S274"
+          ],
+          "ref": "chihuahua.adult_weight.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            8,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "chihuahua.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S275"
+          ],
+          "ref": "chihuahua.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 30,
+          "source_ids": [
+            "S275"
+          ],
+          "ref": "chihuahua.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S275"
+          ],
+          "ref": "chihuahua.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S275"
+          ],
+          "ref": "chihuahua.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S275"
+          ],
+          "ref": "chihuahua.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 67,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "chihuahua.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 218,
+            "group": 9,
+            "section": 6,
+            "origin": "MX"
+          },
+          "source_ids": [
+            "S272"
+          ],
+          "ref": "chihuahua.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S277"
+          ],
+          "ref": "chihuahua.health.luxating_patella",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_dysplasia_arthritis",
+          "source_ids": [
+            "S277"
+          ],
+          "ref": "chihuahua.health.hip_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "legg_perthes",
+          "source_ids": [
+            "S277"
+          ],
+          "ref": "chihuahua.health.legg_perthes",
+          "confidence": "medium"
+        },
+        {
+          "key": "hydrocephalus",
+          "source_ids": [
+            "S277"
+          ],
+          "ref": "chihuahua.health.hydrocephalus",
+          "confidence": "medium"
+        },
+        {
+          "key": "eye_problems_dry_eye_entropion_lens_luxation",
+          "source_ids": [
+            "S277"
+          ],
+          "ref": "chihuahua.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "heart_valve_screening",
+          "source_ids": [
+            "S277"
+          ],
+          "ref": "chihuahua.health.heart",
+          "confidence": "medium"
+        },
+        {
+          "key": "windpipe_collapse_breathing",
+          "source_ids": [
+            "S277"
+          ],
+          "ref": "chihuahua.health.tracheal_collapse",
+          "confidence": "medium"
+        },
+        {
+          "key": "cm_sm_screening",
+          "source_ids": [
+            "S275"
+          ],
+          "ref": "chihuahua.health.syringomyelia",
+          "confidence": "medium"
+        },
+        {
+          "key": "dental_weight_problems",
+          "source_ids": [
+            "S280"
+          ],
+          "ref": "chihuahua.health.dental_weight",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S275"
+            ],
+            "refs": [
+              "chihuahua.suitability.rkc_size_of_home",
+              "chihuahua.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S277"
+            ],
+            "refs": [
+              "chihuahua.behaviour.other_pets"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "older_children",
+            "source_ids": [
+              "S277"
+            ],
+            "refs": [
+              "chihuahua.behaviour.family",
+              "chihuahua.suitability.pdsa_children"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S277"
+            ],
+            "refs": [
+              "chihuahua.behaviour.time_alone",
+              "chihuahua.suitability.pdsa_time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S275"
+            ],
+            "refs": [
+              "chihuahua.suitability.rkc_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 3000,
+              "cap_month": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2300
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 3000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 30,
+              "steps": 3000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.7
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.chihuahua.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S275"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S275 'Up to 30 minutes per day'; PDSA S277 'a minimum of half an hour')"
+          },
+          {
+            "ref": "proposed_game_parameters.chihuahua.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+          },
+          {
+            "ref": "proposed_game_parameters.chihuahua.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S275"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 108 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.chihuahua.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 67, Fair tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.chihuahua.grooming",
+            "basis_source_ids": [
+              "S275"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S275"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "cm_sm_mri",
+            "level": "best_practice",
+            "source_ids": [
+              "S275"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S275"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "S277"
+            ]
+          },
+          {
+            "key": "heart_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "S277"
+            ]
+          },
+          {
+            "key": "patella_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "S277"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S275"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S272",
+        "S274",
+        "S275",
+        "S277",
+        "S280",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -20565,6 +21156,41 @@
       "publisher": "PetMD — Michelle Diener, DVM; reviewed by Sarah Wooten, DVM (updated 2026-09-29)",
       "title": "Miniature American Shepherd Dog Breed Health and Care",
       "url": "https://www.petmd.com/dog/breeds/miniature-american-shepherd"
+    },
+    {
+      "id": "S272",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — CHIHUAHUEÑO (218)",
+      "url": "https://www.fci.be/EN/nomenclature/CHIHUAHUA-218.html"
+    },
+    {
+      "id": "S274",
+      "tier": "A",
+      "publisher": "The Kennel Club (UK) breed standard, hosted by KUSA",
+      "title": "Chihuahua (2 varieties) — KC [01-2015] (PDF)",
+      "url": "https://www.kusa.co.za/images/Breed%20Standards%202024/Chihuahua%20(2%20varieties"
+    },
+    {
+      "id": "S275",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Chihuahua (Smooth Coat) — Breeds A to Z",
+      "url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/chihuahua-smooth-coat"
+    },
+    {
+      "id": "S277",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Chihuahua breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/chihuahua"
+    },
+    {
+      "id": "S280",
+      "tier": "B",
+      "publisher": "RVC VetCompass",
+      "title": "Chihuahua infographic (2020) (PDF)",
+      "url": "https://rvc-web-app01.live01.azure.rvc.ac.uk/Media/Default/VetCompass/200214%20Chihuahua%20infographic-1.pdf"
     },
     {
       "id": "C1",
