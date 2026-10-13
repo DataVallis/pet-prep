@@ -97,6 +97,22 @@ export const meter = {
   low: palette.dangerDark,
 } as const;
 
+/**
+ * Third-party sign-in branding (M2-10c) — NOT brand colours. Google's "Sign in with
+ * Google" light button (white fill, #747775 stroke, #1F1F1F text) and the four colours
+ * of the official "G" mark, exactly as Google's branding guidelines require. Use only in
+ * `GoogleSignInButton`; Apple's button is the native `AppleAuthenticationButton`.
+ */
+export const google = {
+  surface: '#FFFFFF',
+  stroke: '#747775',
+  text: '#1F1F1F',
+  blue: '#4285F4',
+  green: '#34A853',
+  yellow: '#FBBC05',
+  red: '#EA4335',
+} as const;
+
 /** `rgba()` from a `#RRGGBB` token — for glass and scrims. */
 export function alpha(hex: string, opacity: number): string {
   const r = parseInt(hex.slice(1, 3), 16);

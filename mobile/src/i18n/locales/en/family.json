@@ -195,7 +195,9 @@
       "invalid": "Enter your password and confirm the deletion.",
       "unknown": "We don't know whether the deletion went through — please check the list of children.",
       "server": "Deleting didn't work. Nothing was deleted — please try again.",
-      "paid_challenge": "This deletion removes a dog whose 12-week challenge was purchased. Tick the box to confirm that the purchase is used up."
+      "paid_challenge": "This deletion removes a dog whose 12-week challenge was purchased. Tick the box to confirm that the purchase is used up.",
+      "reauth_required": "The sign-in confirmation expired or doesn't match this account. Nothing was deleted — confirm again.",
+      "provider_unavailable": "The sign-in service can't be reached right now. Nothing was deleted — try again in a moment."
     }
   },
   "parents": {

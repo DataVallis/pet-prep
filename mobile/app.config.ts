@@ -17,6 +17,13 @@
  * Android needs Firebase's `google-services.json` for FCM: the EAS file env var
  * `GOOGLE_SERVICES_JSON` (path on the build server), else `./google-services.json` if
  * present locally (gitignored), else nothing (Android push then can't get a token).
+ *
+ * Google sign-in (M2-10c): the `@react-native-google-signin/google-signin` plugin (iOS URL
+ * scheme in Info.plist) is added only when `EXPO_PUBLIC_GOOGLE_IOS_URL_SCHEME` is set
+ * (`eas.json` env of every profile, or `mobile/.env`). Without it the build still works and
+ * the app hides the Google button on iOS. Always WITH `iosUrlScheme` — the plugin without
+ * options would switch to its Firebase mode. Apple sign-in: `expo-apple-authentication`
+ * plugin in app.json (entitlement `com.apple.developer.applesignin`).
  */
 
 import { execSync } from 'node:child_process';
@@ -69,6 +76,19 @@ export function withPushMode(plugins: ExpoConfig['plugins'], mode: 'development'
   });
 }
 
+const GOOGLE_SIGNIN_PLUGIN = '@react-native-google-signin/google-signin';
+
+/** Add the Google sign-in plugin with the iOS URL scheme from the env (no scheme → unchanged). */
+export function withGoogleSignInPlugin(
+  plugins: ExpoConfig['plugins'],
+  vars: Readonly<Record<string, string | undefined>> = env,
+): ExpoConfig['plugins'] {
+  const iosUrlScheme = vars.EXPO_PUBLIC_GOOGLE_IOS_URL_SCHEME?.trim();
+  const rest = (plugins ?? []).filter((entry) => (Array.isArray(entry) ? entry[0] : entry) !== GOOGLE_SIGNIN_PLUGIN);
+  if (!iosUrlScheme) return plugins === undefined ? undefined : rest;
+  return [...rest, [GOOGLE_SIGNIN_PLUGIN, { iosUrlScheme }]];
+}
+
 /** Firebase config for Android push: EAS file env var, else a local file, else none. */
 export function resolveGoogleServicesFile(
   vars: Readonly<Record<string, string | undefined>> = env,
@@ -83,7 +103,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
   const googleServicesFile = resolveGoogleServicesFile();
   return {
     ...config,
-    plugins: withPushMode(config.plugins, apnsMode()),
+    plugins: withGoogleSignInPlugin(withPushMode(config.plugins, apnsMode())),
     android: {
       ...config.android,
       ...(googleServicesFile ? { googleServicesFile } : {}),

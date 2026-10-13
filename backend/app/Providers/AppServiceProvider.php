@@ -24,6 +24,11 @@ class AppServiceProvider extends ServiceProvider
 
     public const REGISTER_PER_HOUR = 20;
 
+    /** M2-10c: POST /api/auth/social per IP. */
+    public const SOCIAL_SIGN_IN_PER_MINUTE = 10;
+
+    public const SOCIAL_SIGN_IN_PER_HOUR = 30;
+
     /**
      * Data exports per user per hour (M2-08).
      */
@@ -135,6 +140,18 @@ class AppServiceProvider extends ServiceProvider
             return [
                 Limit::perMinute(self::REGISTER_PER_MINUTE)->by($key.':minute'),
                 Limit::perHour(self::REGISTER_PER_HOUR)->by($key.':hour'),
+            ];
+        });
+
+        // Parent sign-in with Google / Apple (M2-10c): unauthenticated, may
+        // create rows and fetch the provider's keys → 10 per minute and 30 per
+        // hour per IP (IPv6 /64). Live in testing too (like register).
+        RateLimiter::for('social', function (Request $request) {
+            $key = 'social:'.ClientIp::rateLimitKey($request->ip());
+
+            return [
+                Limit::perMinute(self::SOCIAL_SIGN_IN_PER_MINUTE)->by($key.':minute'),
+                Limit::perHour(self::SOCIAL_SIGN_IN_PER_HOUR)->by($key.':hour'),
             ];
         });
 

@@ -37,11 +37,11 @@
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "fee0ac26fb25fabbae7d594e84c8580a02330b2ce4cbceb2e0c2a5271e36c4c4"
+      "sha256": "4e5295aee77b6e129d0dfed524d98f95165deddd7b16b6db98180d74ed30c35d"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "0aeffa8aedd882bae445178469d0b92d2ffbb173436872a961c68a5c6445e40f"
+      "sha256": "88527f8bda3b813731ce7e0eba043156291e25af4d4b75d50c12fdcaae15f7a3"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",

@@ -31,7 +31,11 @@ class AccountController extends Controller
      *
      * 200 `{status: deleted, scope: family|parent, family_deleted, parents_deleted,
      * children_deleted, pets_deleted}`; 422 `invalid_password` (or validation:
-     * `password` required, `confirm` must be true); 403 `superadmin_protected`;
+     * `password` required, `confirm` must be true); a parent without a password
+     * (Google / Apple sign-up, M2-10c) sends `provider` + `id_token` (+ `nonce`
+     * for Apple) of a linked provider, issued ≤ 10 min ago, instead of
+     * `password` → else 422 `reauth_required` (503 `provider_unavailable` /
+     * `provider_disabled` when the provider cannot be checked); 403 `superadmin_protected`;
      * 429 `too_many_attempts` + `Retry-After` after 5 wrong passwords in 15 min
      * (only failed attempts count; separate from the child deletion).
      *
@@ -46,7 +50,14 @@ class AccountController extends Controller
         }
 
         try {
-            $this->deletion->confirmPassword($parent, $request->password(), AccountDeletionService::SCOPE_ACCOUNT);
+            $this->deletion->confirmIdentity(
+                $parent,
+                $request->password(),
+                $request->provider(),
+                $request->idToken(),
+                $request->nonce(),
+                AccountDeletionService::SCOPE_ACCOUNT,
+            );
             $result = $this->deletion->deleteParentAccount($parent, $request->acknowledgesPaidChallenge());
         } catch (AccountDeletionException $e) {
             return $this->refusal($e);

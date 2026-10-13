@@ -2,6 +2,7 @@
 
 use App\Filament\Resources\UserResource\Pages\EditUser;
 use App\Models\User;
+use App\Models\UserSocialAccount;
 use Livewire\Livewire;
 
 use function Pest\Laravel\actingAs;
@@ -47,4 +48,22 @@ it('lets a record keep its own e-mail in another letter case', function () {
         ->assertHasNoFormErrors();
 
     expect($parent->fresh()->email)->toBe('me@example.com');
+});
+
+it('M2-10c: a parent with a linked Google / Apple identity may have no e-mail; other parents still need one', function () {
+    $social = User::factory()->create(['role' => 'parent', 'email' => 'social@example.com', 'password' => null]);
+    UserSocialAccount::create(['user_id' => $social->id, 'provider' => 'google', 'subject' => 'g-1']);
+
+    Livewire::test(EditUser::class, ['record' => $social->getRouteKey()])
+        ->fillForm(['email' => null])
+        ->call('save')
+        ->assertHasNoFormErrors();
+    expect($social->fresh()->email)->toBeNull();
+
+    $plain = User::factory()->create(['role' => 'parent', 'email' => 'plain@example.com']);
+    Livewire::test(EditUser::class, ['record' => $plain->getRouteKey()])
+        ->fillForm(['email' => null])
+        ->call('save')
+        ->assertHasFormErrors(['email' => 'required']);
+    expect($plain->fresh()->email)->toBe('plain@example.com');
 });
