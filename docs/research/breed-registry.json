@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "407c191b47a8261e919e6098e5e7caafa9aa540a050c8931ffbd68f02ed7a00a"
+      "sha256": "8e681d0c46dbc4936452bd6cbd8d4556155599e930f690e2c780a985b9c1f6d3"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "11b74c862fca92ecc90739fb631e9075fc67522dc8a55df1fafa82db8108e152"
+      "sha256": "b5999ae559ef2d5c04556a2e5d061b0d61d80d9b5abb7112c25f71c88778979e"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,27 +25,27 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "73615d2745c7f4d21deddad5abdccc18e48c66f5c7844937e18968c6f19e4a9a"
+      "sha256": "83383f926d72fd47ddc8d53036c235ff685ecd9756f9a5e3e23ede9459c8ecb4"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "0649220f0e3b906f237aad537001bb8f9b4b6656903f48a06e1d52176f5d966a"
+      "sha256": "ca45ef05cc7bc1d5eace67643900b9adb669fe7f1de0e0776da6e38f0b31b734"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "bf4e574710d23cb257868ebebd345940844662c92cf893ce34918fc8fa3f139e"
+      "sha256": "0d15445188225a6b413e883ea254500312279ff8839aa1701d6016d492e2a14b"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "985aee93e5842a67e0e0952f41799e6575ef0ec06f9476416d4aa6c15206d3de"
+      "sha256": "b7464a7880fe966564398e797b05166a76d7a5a1840818fc0e87327c7735e151"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "3dacd162999ba755709c30e41c826f7fa23b86511d4466d65a6ab4b4080f597c"
+      "sha256": "b7251f4dd416a908955a44cf0e7c6e8a68947ba0e6809c5f348f9103531adcc6"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "4bf52fe36ffc4b549c570d575a90b8ad860f5d598b4637b3e63b1b7809807f21"
+      "sha256": "e5653ecd65cec3f94d1335f5106c0898be507455e414bbd5d2aa7fc4f811f40f"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -66,6 +66,7 @@
     "children": "suits",
     "drools": "consider",
     "experienced_owner": "consider",
+    "eyelid_problems": "consider",
     "family_pet": "suits",
     "first_time_owner": "suits",
     "food_motivated_weight": "consider",
@@ -104,6 +105,7 @@
         "children": "families with children",
         "drools": "drools — keep a cloth at hand",
         "experienced_owner": "powerful dog — needs an experienced owner",
+        "eyelid_problems": "eyelids and eyes — check eye tests",
         "family_pet": "family life",
         "first_time_owner": "first-time owners",
         "food_motivated_weight": "loves food — watch the weight",
@@ -142,6 +144,7 @@
         "children": "družino z otroki",
         "drools": "se slini — imejte pri roki krpo",
         "experienced_owner": "močan pes — potrebuje izkušenega lastnika",
+        "eyelid_problems": "veke in oči — preverite preglede oči",
         "family_pet": "družinsko življenje",
         "first_time_owner": "začetnike",
         "food_motivated_weight": "rad je — pazite na težo",
@@ -186,7 +189,7 @@
         }
       },
       "status": "available",
-      "breed_count": 24,
+      "breed_count": 25,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -14825,6 +14828,641 @@
       ]
     },
     {
+      "id": "great_dane",
+      "species": "dog",
+      "order": 24,
+      "availability": "in_app",
+      "name": {
+        "en": "Great Dane",
+        "sl": "Nemška doga"
+      },
+      "slug": {
+        "en": "great-dane",
+        "sl": "nemska-doga"
+      },
+      "synonyms": {
+        "en": [
+          "Deutsche Dogge"
+        ],
+        "sl": [
+          "doga",
+          "deutsche dogge"
+        ]
+      },
+      "facets": {
+        "size": "giant",
+        "exercise": "over_2h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "giant",
+          "source_ids": [
+            "S241"
+          ],
+          "ref": "great_dane.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              80,
+              90
+            ],
+            "female": [
+              72,
+              84
+            ]
+          },
+          "source_ids": [
+            "S239"
+          ],
+          "ref": "great_dane.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              46,
+              54
+            ],
+            "female": [
+              46,
+              54
+            ]
+          },
+          "source_ids": [
+            "S243"
+          ],
+          "ref": "great_dane.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            18,
+            24
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "great_dane.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "less_than",
+          "value": 10,
+          "source_ids": [
+            "S241"
+          ],
+          "ref": "great_dane.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S241"
+          ],
+          "ref": "great_dane.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S241"
+          ],
+          "ref": "great_dane.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S241"
+          ],
+          "ref": "great_dane.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S241"
+          ],
+          "ref": "great_dane.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 48,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "great_dane.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 235,
+            "group": 2,
+            "section": 2,
+            "origin": "DE"
+          },
+          "source_ids": [
+            "S239"
+          ],
+          "ref": "great_dane.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S243"
+          ],
+          "ref": "great_dane.health.gdv",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S243"
+          ],
+          "ref": "great_dane.health.hip_elbow_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "eyelid_problems",
+          "source_ids": [
+            "S243"
+          ],
+          "ref": "great_dane.health.eyelids",
+          "confidence": "medium"
+        },
+        {
+          "key": "heart_muscle_disease",
+          "source_ids": [
+            "S243"
+          ],
+          "ref": "great_dane.health.heart_dcm",
+          "confidence": "medium"
+        },
+        {
+          "key": "wobbler_syndrome",
+          "source_ids": [
+            "S243"
+          ],
+          "ref": "great_dane.health.wobbler",
+          "confidence": "medium"
+        },
+        {
+          "key": "certain_cancers",
+          "source_ids": [
+            "S243"
+          ],
+          "ref": "great_dane.health.cancer",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S241",
+              "S243"
+            ],
+            "refs": [
+              "great_dane.exercise.adult",
+              "great_dane.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S241",
+              "S243"
+            ],
+            "refs": [
+              "great_dane.suitability.rkc_family",
+              "great_dane.suitability.pdsa_family"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S241"
+            ],
+            "refs": [
+              "great_dane.suitability.rkc_size_of_home",
+              "great_dane.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S241",
+              "S243"
+            ],
+            "refs": [
+              "great_dane.exercise.adult",
+              "great_dane.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S243"
+            ],
+            "refs": [
+              "great_dane.suitability.pdsa_children"
+            ]
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S241",
+              "S243"
+            ],
+            "refs": [
+              "great_dane.health.shorter_lifespan",
+              "great_dane.lifespan.rkc"
+            ]
+          },
+          {
+            "tag": "hips_hind_legs",
+            "source_ids": [
+              "S243",
+              "S244"
+            ],
+            "refs": [
+              "great_dane.health.hind_conformation",
+              "great_dane.health.hip_elbow_dysplasia"
+            ]
+          },
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S243",
+              "S244"
+            ],
+            "refs": [
+              "great_dane.health.breed_watch",
+              "great_dane.health.eyelids"
+            ]
+          },
+          {
+            "tag": "chews_when_bored",
+            "source_ids": [
+              "S243"
+            ],
+            "refs": [
+              "great_dane.behaviour.chewing",
+              "great_dane.suitability.pdsa_chewing"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S241"
+            ],
+            "refs": [
+              "great_dane.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S243"
+            ],
+            "refs": [
+              "great_dane.behaviour.drooling",
+              "great_dane.suitability.pdsa_drooling"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S243"
+            ],
+            "refs": [
+              "great_dane.behaviour.other_pets",
+              "great_dane.suitability.pdsa_other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 54
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 54
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.great_dane.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S241"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S241 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.great_dane.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.great_dane.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S212"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 54 (0.75 × 6.0 y, VetCompass median S212)"
+          },
+          {
+            "ref": "proposed_game_parameters.great_dane.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 48, Average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.great_dane.grooming",
+            "basis_source_ids": [
+              "S241"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S212",
+          "S241"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_imgd",
+            "level": "best_practice",
+            "source_ids": [
+              "S241"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S241"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S241"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S241"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S241"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S212",
+        "S239",
+        "S241",
+        "S243",
+        "S244",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -18190,6 +18828,34 @@
       "publisher": "British Veterinary Association",
       "title": "BVA brachycephalic dogs policy position, January 2018 (full position, PDF)",
       "url": "https://www.bva.co.uk/media/1183/bva-position-on-brachycephalic-dogs-full.pdf"
+    },
+    {
+      "id": "S239",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 235 — Great Dane (Deutsche Dogge) (EN PDF; date of publication of the valid standard 21.08.2024)",
+      "url": "https://WWW.FCI.BE/Nomenclature/Standards/235g02-en.pdf"
+    },
+    {
+      "id": "S241",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Great Dane — breed information page (Breeds A to Z, current address)",
+      "url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/working/great-dane"
+    },
+    {
+      "id": "S243",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Great Dane breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/great-dane"
+    },
+    {
+      "id": "S244",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breed Watch — Great Dane (Category 2)",
+      "url": "https://www.thekennelclub.org.uk/services/public/breed/watch/display.aspx?breed=5124"
     },
     {
       "id": "C1",

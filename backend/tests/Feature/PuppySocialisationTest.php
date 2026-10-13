@@ -139,7 +139,7 @@ function soCreateViaPin(array $body, ?array $childFeatures): Pet
 describe('breeds (verbatim A/B socialisation quote in data.json)', function () {
     it('seeds one puppy-stage row (1 per week, David\'s decision) per sourced breed, traced to data.json', function () {
         $breeds = ['labrador_retriever', 'german_shepherd', 'beagle', 'standard_poodle', 'australian_shepherd', 'havanese',
-            'siberian_husky', 'rottweiler', 'bulldog', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'shih_tzu'];
+            'siberian_husky', 'rottweiler', 'bulldog', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'shih_tzu', 'great_dane'];
         // The sourced rows (every other dog breed: David's decision, next test).
         $rows = collect(BreedStageParamsSeeder::rows())->where('key', StageParamKey::SocialisationTasksPerWeek->value)->whereNotNull('source_id');
 
@@ -178,6 +178,7 @@ describe('breeds (verbatim A/B socialisation quote in data.json)', function () {
             'dobermann' => 'dobermann.behaviour.socialisation.quote',
             'boxer' => 'boxer.behaviour.socialisation.quote',
             'shih_tzu' => 'shih_tzu.behaviour.socialisation.quote',
+            'great_dane' => 'great_dane.behaviour.socialisation.quote',
         ];
         foreach ($paths as $breed => $path) {
             expect((string) soData($path))->toContain(BreedStageParamsSeeder::DOG_SOCIALISATION[$breed][1]);

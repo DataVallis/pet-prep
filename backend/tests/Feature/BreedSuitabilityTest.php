@@ -317,10 +317,10 @@ it('gives the Bernese Mountain Dog the new shorter_lifespan tag, family_pet, lar
         // RKC Breed Watch Category 1: no conformation welfare chip.
         ->and($berner['consider'])->not->toContain('hips_hind_legs')->not->toContain('long_daily_exercise')->not->toContain('chews_when_bored');
 
-    // Only the Bernese, the Rottweiler (RKC "Under 10 years", M5-R10-19), the Bulldog (M5-R10-20) and the
-    // Cane Corso (PDSA "Under 10 years", M5-R10-23) carry the chip so far.
+    // Only the Bernese, the Rottweiler (RKC "Under 10 years", M5-R10-19), the Bulldog (M5-R10-20), the
+    // Cane Corso (PDSA "Under 10 years", M5-R10-23) and the Great Dane (RKC "Under 10 years", M5-R10-29) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::BerneseMountainDog, BreedType::Rottweiler, BreedType::Bulldog, BreedType::CaneCorso], true)) {
+        if (! in_array($breed, [BreedType::BerneseMountainDog, BreedType::Rottweiler, BreedType::Bulldog, BreedType::CaneCorso, BreedType::GreatDane], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('shorter_lifespan');
         }
     }
@@ -463,12 +463,13 @@ it('gives the Cane Corso the new not_for_small_children and drools tags, active_
         ->and($corso['consider'])->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')
         ->not->toContain('sensitive_skin')->not->toContain('frequent_grooming')->not->toContain('fragile_older_children');
 
-    // Only the Cane Corso carries `drools`; `not_for_small_children` also the Dobermann (PDSA S211, M5-R10-25) and the Boxer (PDSA S219, M5-R10-26).
+    // `drools` also the Great Dane (PDSA S243, M5-R10-29); `not_for_small_children` also the Dobermann (PDSA S211,
+    // M5-R10-25), the Boxer (PDSA S219, M5-R10-26) and the Great Dane (PDSA S243, M5-R10-29).
     foreach (BreedType::cases() as $breed) {
-        if ($breed !== BreedType::CaneCorso) {
+        if (! in_array($breed, [BreedType::CaneCorso, BreedType::GreatDane], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('drools');
         }
-        if (! in_array($breed, [BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer], true)) {
+        if (! in_array($breed, [BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::GreatDane], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('not_for_small_children');
         }
     }
@@ -559,7 +560,7 @@ it('gives the Miniature Schnauzer apartment, children, low_shedding and frequent
         ->and(bsEntry('miniature_schnauzer.suitability.pdsa_grooming')['quote'])->toBe('Grooming is needed 2-3 times a week');
 });
 
-it('gives chases_small_pets only to the six breeds whose own entry quotes a high prey drive (David 2026-10-12)', function () {
+it('gives chases_small_pets only to the seven breeds whose own entry quotes a high prey drive (David 2026-10-12)', function () {
     expect(BreedSuitability::vocabulary())->toMatchArray(['chases_small_pets' => BreedSuitability::CONSIDER]);
 
     $expected = [
@@ -569,6 +570,8 @@ it('gives chases_small_pets only to the six breeds whose own entry quotes a high
         BreedType::SiberianHusky->value => 'siberian_husky.behaviour.other_pets',
         BreedType::Dobermann->value => 'dobermann.behaviour.other_pets',
         BreedType::Boxer->value => 'boxer.behaviour.other_pets',
+        // M5-R10-29: PDSA S243 "a fairly strong prey drive" (strong = high, runbook §3).
+        BreedType::GreatDane->value => 'great_dane.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {
@@ -586,8 +589,8 @@ it('gives chases_small_pets only to the six breeds whose own entry quotes a high
         $entry = collect(config("breed_suitability.breeds.{$breed->value}.consider"))->firstWhere('tag', 'chases_small_pets');
         expect($entry['refs'])->toContain($expected[$breed->value]);
         foreach ($entry['refs'] as $ref) {
-            // Every ref is a verbatim quote naming a high prey drive.
-            expect(bsEntry($ref)['quote'])->toContain('high prey drive');
+            // Every ref is a verbatim quote naming a high (or strong) prey drive.
+            expect(bsEntry($ref)['quote'])->toMatch('/(high|strong) prey drive/');
         }
     }
 
@@ -614,4 +617,33 @@ it('gives the Shih Tzu apartment, family_pet, first_time_owner, frequent_groomin
         ->and(bsEntry('shih_tzu.suitability.pdsa_children')['notes'])->toContain('no children / small_children')
         ->and(bsEntry('shih_tzu.health.skull_shape')['quote'])->toContain('Shih-tzu')
         ->and(bsEntry('shih_tzu.suitability.rkc_grooming')['quote'])->toBe('Grooming: Every day');
+});
+
+it('gives the Great Dane the new eyelid_problems tag and hips_hind_legs (welfare rule), shorter_lifespan and the PDSA cautions — never children (runbook 2026-10-13)', function () {
+    expect(BreedSuitability::vocabulary())->toMatchArray(['eyelid_problems' => BreedSuitability::CONSIDER]);
+
+    $dane = app(BreedSuitability::class)->for(BreedType::GreatDane);
+    expect($dane['suits'])->toBe(['active_family', 'family_pet', 'large_home'])
+        // PDSA does not recommend the breed with younger children; only suggests a trainer's help for first-time owners.
+        ->and($dane['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('first_time_owner')->not->toContain('other_pets')->not->toContain('apartment')
+        ->and($dane['consider'])->toBe(['long_daily_exercise', 'not_for_small_children', 'shorter_lifespan', 'hips_hind_legs', 'eyelid_problems', 'chews_when_bored', 'sheds', 'drools', 'chases_small_pets'])
+        // Not flat-faced; weekly brush only; "like most dogs" upset when alone is not the Boxer's warning.
+        ->and($dane['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
+        ->not->toContain('frequent_grooming')->not->toContain('needs_company')->not->toContain('experienced_owner');
+
+    // Only the Great Dane carries eyelid_problems so far.
+    foreach (BreedType::cases() as $breed) {
+        if ($breed !== BreedType::GreatDane) {
+            expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('eyelid_problems');
+        }
+    }
+
+    // The RKC Breed Watch points are the quoted welfare source.
+    expect(bsEntry('great_dane.health.breed_watch')['quote'])->toBe('Eyelids not in normal contact with the eyeball, they are turned inwards or outwards')
+        ->and(bsEntry('great_dane.health.hind_conformation')['quote'])->toBe('Incorrect hind conformation and/or poor rear movement')
+        ->and(bsEntry('great_dane.health.eyelids')['quote'])->toContain('(entropion/ectropion) of the eyelids')
+        ->and(bsEntry('great_dane.suitability.pdsa_children')['quote'])->toBe('we wouldn’t recommend a Great Dane if you have younger children')
+        ->and(bsEntry('great_dane.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Large house')
+        ->and(bsEntry('great_dane.lifespan.rkc')['quote'])->toBe('Lifespan: Under 10 years')
+        ->and(bsEntry('great_dane.suitability.pdsa_drooling')['quote'])->toBe('Great Danes are, however, known for drooling!');
 });

@@ -396,6 +396,7 @@ const SPECIES = [
       { id: 'boxer', availability: 'in_app', synonyms: { en: ['German Boxer', 'Deutscher Boxer'], sl: ['nemški boksar', 'nemski boksar', 'boxer'] } },
       { id: 'miniature_schnauzer', availability: 'in_app', synonyms: { en: ['Zwergschnauzer', 'Mini Schnauzer'], sl: ['mali šnavcer', 'pritlikavi snavcer', 'zwergschnauzer'] } },
       { id: 'shih_tzu', availability: 'in_app', synonyms: { en: ['Shih-Tzu', 'Shihtzu'], sl: ['ši-cu', 'šicu', 'shih-tzu'] } },
+      { id: 'great_dane', availability: 'in_app', synonyms: { en: ['Deutsche Dogge'], sl: ['doga', 'deutsche dogge'] } },
     ],
   },
   {
@@ -902,6 +903,30 @@ const DOG_FACTS = {
       ['eye_problems_dry_eye_cataracts_pra_retina', 'health.eyes'],
     ],
   },
+  // M5-R10-29. Not exported: adult_weight.rkc_minimum (minimums only — the PDSA range is shown),
+  // lifespan.median_uk (VetCompass 2013, only 23 deaths — Dobermann precedent: a small-sample median would
+  // mislead), lifespan.mcmillan_2024 (null), lifespan.senior_from (derived), health.breed_watch and
+  // health.hind_conformation (the basis of the welfare chips), health.shorter_lifespan (the chip),
+  // health.imgd (in the breeder checklist as dna_imgd). Weight = PDSA (S243, one range for both sexes;
+  // the RKC standard's minimums are the same numbers); lifespan = the RKC band (S241).
+  great_dane: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.rkc', 'less_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['bloat_gdv', 'health.gdv'],
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['eyelid_problems', 'health.eyelids'],
+      ['heart_muscle_disease', 'health.heart_dcm'],
+      ['wobbler_syndrome', 'health.wobbler'],
+      ['certain_cancers', 'health.cancer'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1103,6 +1128,14 @@ const DOG_GAME = {
     senior_from: ['proposed_game_parameters.arrival_age_months', (e) => e.value.senior.medium_mixed_breed],
     learning: ['medium_mixed_breed.trainability.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.step_goal_mixed_adult',
+  },
+  great_dane: {
+    adult_minutes: ['proposed_game_parameters.great_dane.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.great_dane.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.great_dane.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.great_dane.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.great_dane.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.great_dane.exercise_minutes_senior',
   },
 };
 

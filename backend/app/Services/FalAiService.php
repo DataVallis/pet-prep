@@ -262,6 +262,14 @@ class FalAiService
                 .'heavily plumed tail carried over the back, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-29: FCI 235 (S239) / RKC standard (S242) — fawn with a black mask as the anchor;
+            // welfare (RKC Breed Watch S244): tight eyelids and a sound build; natural ears; never merle.
+            BreedType::GreatDane => 'A friendly, noble Great Dane dog with a fawn coat and a black mask, '
+                .'very short smooth glossy coat, dark medium-sized eyes with tight eyelids, natural uncropped ears folded forward, '
+                .'long narrow head with a broad muzzle, black nose, very large, powerful and elegant body, '
+                .'natural tail reaching to the hocks, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -633,6 +641,22 @@ class FalAiService
                     0 => 'white blaze on the forehead and white tail tip',
                     1 => 'white blaze, chest and paws',
                     2 => 'gold ears and white face',
+                },
+            ],
+            // M5-R10-29: colours both standards list (FCI S239 / RKC S242); never merle, never a
+            // white blaze or collar.
+            BreedType::GreatDane => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'fawn',
+                    1 => 'brindle',
+                    2 => 'harlequin',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'very short, smooth and glossy',
+                'markings' => match ($variantIndex) {
+                    0 => 'black mask',
+                    1 => 'black stripes and a black mask',
+                    2 => 'torn black patches on a pure white base',
                 },
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
