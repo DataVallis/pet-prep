@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: read
+  contents: write   # only to record a published OTA in docs/research/app-release.json (see the last step)
 
 jobs:
   ota:
@@ -81,6 +81,7 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: OTA update or store build
+        id: ota
         if: steps.changed.outputs.mobile == 'true' && env.EXPO_TOKEN != ''
         run: |
           msg="$(git log -1 --pretty=%s)"
@@ -89,3 +90,26 @@ jobs:
           else
             scripts/mobile-ota.sh "$msg"
           fi
+
+      # David 2026-10-13: the website must show only what users really have. After an OTA reached
+      # iOS AND Android, record the published commit's breeds; the next register export marks them
+      # in_app (until then they are coming_soon). Docs-only commit by GITHUB_TOKEN → triggers no
+      # workflow (no CI / deploy / OTA loop). The website follows with its next registry sync PR.
+      - name: Record the release for the website register
+        if: steps.ota.outputs.released == 'true'
+        env:
+          SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: |
+          git fetch -q --depth=50 origin main
+          git checkout -q -B main origin/main
+          node scripts/record-app-release.mjs --kind ota --commit "$SHA"
+          node scripts/export-breed-registry.mjs
+          if git diff --quiet -- docs/research/app-release.json docs/research/breed-registry.json; then
+            echo "Release already recorded."; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/research/app-release.json docs/research/breed-registry.json
+          git commit -q -m "chore(release): record OTA $(git rev-parse --short "$SHA") in app-release.json [skip ci]"
+          git push -q origin main
+          echo "- 🌐 Recorded in \`docs/research/app-release.json\` — sync the website register (ADD_BREED_RUNBOOK §9b)" >>"$GITHUB_STEP_SUMMARY"

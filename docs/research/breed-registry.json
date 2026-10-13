@@ -51,6 +51,10 @@
       "path": "docs/research/breeder-checklist/sources.md",
       "sha256": "491b02b806cc0d572c19911123dffbb762dddf9f3fc3f39f45c8f2c58ce5c5dc"
     },
+    "app_release": {
+      "path": "docs/research/app-release.json",
+      "sha256": "16f27ba5454191e5e6198f17edfae7686198ee5a8172ab9a178717edb4177b79"
+    },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
       "sha256": "51c708d06e3336379e6b8121ee5c2eb17efb420e034496f3b7ff8b850a0dbf86"
@@ -13129,7 +13133,7 @@
       "id": "boxer",
       "species": "dog",
       "order": 21,
-      "availability": "in_app",
+      "availability": "coming_soon",
       "name": {
         "en": "Boxer",
         "sl": "Boksar"
@@ -13777,7 +13781,7 @@
       "id": "miniature_schnauzer",
       "species": "dog",
       "order": 22,
-      "availability": "in_app",
+      "availability": "coming_soon",
       "name": {
         "en": "Miniature Schnauzer",
         "sl": "Pritlikavi šnavcer"
@@ -14319,7 +14323,7 @@
       "id": "shih_tzu",
       "species": "dog",
       "order": 23,
-      "availability": "in_app",
+      "availability": "coming_soon",
       "name": {
         "en": "Shih Tzu",
         "sl": "Shih tzu"
@@ -14831,7 +14835,7 @@
       "id": "great_dane",
       "species": "dog",
       "order": 24,
-      "availability": "in_app",
+      "availability": "coming_soon",
       "name": {
         "en": "Great Dane",
         "sl": "Nemška doga"

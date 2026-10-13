@@ -24,6 +24,7 @@ import {
   renderRegistry,
   slugify,
 } from '../export-breed-registry.mjs';
+import { APP_RELEASE, breedsFromSpeciesTs, releasedBreeds } from '../record-app-release.mjs';
 
 const hasPhp = spawnSync('php', ['-v']).status === 0;
 const hasVendor = existsSync(resolve(ROOT, 'backend/vendor/autoload.php'));
@@ -74,69 +75,83 @@ test('species → breeds model: slugs, availability, groups', () => {
     }
   }
   const byId = Object.fromEntries(registry.breeds.map((b) => [b.id, b]));
-  assert.equal(byId.border_collie.availability, 'in_app');
   assert.equal(byId.labrador_retriever.slug.sl, 'labradorec');
   assert.equal(byId.golden_retriever.slug.sl, 'zlati-prinasalec');
   assert.deepEqual(byId.french_bulldog.slug, { en: 'french-bulldog', sl: 'francoski-buldog' });
-  assert.equal(byId.french_bulldog.availability, 'in_app');
   assert.deepEqual(byId.german_shepherd.slug, { en: 'german-shepherd-dog', sl: 'nemski-ovcar' }); // EN = RKC name
-  assert.equal(byId.german_shepherd.availability, 'in_app');
   assert.deepEqual(byId.cavalier_king_charles_spaniel.slug, { en: 'cavalier-king-charles-spaniel', sl: 'kavalir-king-charles-spanjel' });
-  assert.equal(byId.cavalier_king_charles_spaniel.availability, 'in_app');
   assert.deepEqual(byId.beagle.slug, { en: 'beagle', sl: 'bigl' });
-  assert.equal(byId.beagle.availability, 'in_app');
   assert.deepEqual(byId.standard_poodle.slug, { en: 'poodle-standard', sl: 'veliki-koder' });
-  assert.equal(byId.standard_poodle.availability, 'in_app');
   assert.deepEqual(byId.dachshund.slug, { en: 'dachshund', sl: 'jazbecar' });
-  assert.equal(byId.dachshund.availability, 'in_app');
   assert.deepEqual(byId.australian_shepherd.slug, { en: 'australian-shepherd', sl: 'avstralski-ovcar' });
-  assert.equal(byId.australian_shepherd.availability, 'in_app');
   assert.deepEqual(byId.havanese.slug, { en: 'havanese', sl: 'havanski-bison' });
-  assert.equal(byId.havanese.availability, 'in_app');
   assert.deepEqual(byId.west_highland_white_terrier.slug, { en: 'west-highland-white-terrier', sl: 'zahodnoskotski-beli-terier' });
-  assert.equal(byId.west_highland_white_terrier.availability, 'in_app');
   assert.deepEqual(byId.bernese_mountain_dog.slug, { en: 'bernese-mountain-dog', sl: 'bernski-plansarski-pes' });
-  assert.equal(byId.bernese_mountain_dog.availability, 'in_app');
   assert.deepEqual(byId.siberian_husky.slug, { en: 'siberian-husky', sl: 'sibirski-haski' });
-  assert.equal(byId.siberian_husky.availability, 'in_app');
   assert.deepEqual(byId.rottweiler.slug, { en: 'rottweiler', sl: 'rotvajler' });
-  assert.equal(byId.rottweiler.availability, 'in_app');
   assert.deepEqual(byId.bulldog.slug, { en: 'bulldog', sl: 'angleski-buldog' });
-  assert.equal(byId.bulldog.availability, 'in_app');
   assert.deepEqual(byId.german_shorthaired_pointer.slug, { en: 'german-shorthaired-pointer', sl: 'nemski-kratkodlaki-pticar' });
-  assert.equal(byId.german_shorthaired_pointer.availability, 'in_app');
   assert.deepEqual(byId.yorkshire_terrier.slug, { en: 'yorkshire-terrier', sl: 'yorkshirski-terier' });
-  assert.equal(byId.yorkshire_terrier.availability, 'in_app');
   assert.deepEqual(byId.cane_corso.slug, { en: 'cane-corso', sl: 'cane-corso' });
-  assert.equal(byId.cane_corso.availability, 'in_app');
   assert.deepEqual(byId.pembroke_welsh_corgi.slug, { en: 'pembroke-welsh-corgi', sl: 'welsh-corgi-pembroke' });
-  assert.equal(byId.pembroke_welsh_corgi.availability, 'in_app');
   assert.deepEqual(byId.dobermann.slug, { en: 'dobermann', sl: 'doberman' });
-  assert.equal(byId.dobermann.availability, 'in_app');
   assert.deepEqual(byId.boxer.slug, { en: 'boxer', sl: 'boksar' });
-  assert.equal(byId.boxer.availability, 'in_app');
   assert.deepEqual(byId.miniature_schnauzer.slug, { en: 'miniature-schnauzer', sl: 'pritlikavi-snavcer' });
-  assert.equal(byId.miniature_schnauzer.availability, 'in_app');
   assert.deepEqual(byId.shih_tzu.slug, { en: 'shih-tzu', sl: 'shih-tzu' });
-  assert.equal(byId.shih_tzu.availability, 'in_app');
   assert.deepEqual(byId.great_dane.slug, { en: 'great-dane', sl: 'nemska-doga' });
-  assert.equal(byId.great_dane.availability, 'in_app');
-  assert.equal(byId.maine_coon.availability, 'in_app'); // cats are hidden in the app
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
-  assert.equal(byId.british_shorthair.availability, 'in_app');
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
-  assert.equal(byId.ragdoll.availability, 'in_app');
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
   assert.deepEqual(byId.siberian_cat.slug, { en: 'siberian-cat', sl: 'sibirska-macka' });
-  assert.equal(byId.siberian_cat.availability, 'in_app');
   assert.notEqual(byId.siberian_cat.slug.en, byId.siberian_husky.slug.en);
   // M5-R10-17
   assert.deepEqual(byId.norwegian_forest_cat.slug, { en: 'norwegian-forest-cat', sl: 'norveska-gozdna-macka' });
-  assert.equal(byId.norwegian_forest_cat.availability, 'in_app');
   // M5-R10-18
   assert.deepEqual(byId.bengal.slug, { en: 'bengal', sl: 'bengalska-macka' });
-  assert.equal(byId.bengal.availability, 'in_app');
   assert.equal(slugify('Zlati prinašalec'), 'zlati-prinasalec');
+});
+
+// David 2026-10-13: the site shows what users really have — availability follows app-release.json.
+test('availability is derived from the recorded app release', () => {
+  const release = JSON.parse(readFileSync(resolve(ROOT, APP_RELEASE), 'utf8'));
+  const released = releasedBreeds(release);
+  const built = new Set(breedsFromSpeciesTs(readFileSync(resolve(ROOT, 'mobile/src/modules/species/species.ts'), 'utf8')));
+  for (const b of registry.breeds) {
+    if (b.availability === 'info_only') continue;
+    assert.equal(b.availability, released.has(b.id) ? 'in_app' : 'coming_soon', `${b.id}`);
+    // A breed can only be released if it is still in the app on main (no stale "in app").
+    if (b.availability === 'in_app') assert.ok(built.has(b.id), `${b.id} released but not in BREED_SPECIES`);
+  }
+  for (const sp of registry.species) {
+    const ours = registry.breeds.filter((b) => b.species === sp.id);
+    assert.equal(sp.status === 'available', ours.some((b) => b.availability === 'in_app'), sp.id);
+  }
+});
+
+test('a newly built breed that is not released yet exports as coming_soon', () => {
+  const texts = readInputs();
+  const release = JSON.parse(texts.app_release);
+  const before = buildRegistry(texts).breeds.find((b) => b.id === 'border_collie');
+  assert.equal(before.availability, release.breeds.includes('border_collie') ? 'in_app' : 'coming_soon');
+  const unreleased = { ...release, breeds: release.breeds.filter((id) => id !== 'border_collie') };
+  const after = buildRegistry({ ...texts, app_release: JSON.stringify(unreleased) });
+  assert.equal(after.breeds.find((b) => b.id === 'border_collie').availability, 'coming_soon');
+  assert.equal(after.breeds.find((b) => b.id === 'border_collie').game !== null, true, 'coming_soon keeps its game rules');
+});
+
+test('app-release.json is validated', () => {
+  const texts = readInputs();
+  const release = JSON.parse(texts.app_release);
+  for (const bad of [{ kind: 'beta' }, { commit: 'main' }, { date: '12.10.2026' }, { breeds: [] }, { breeds: ['mutt', 'mutt'] }]) {
+    assert.throws(() => buildRegistry({ ...texts, app_release: JSON.stringify({ ...release, ...bad }) }), /app-release\.json/);
+  }
+});
+
+test('BREED_SPECIES parser reads the app breed list', () => {
+  const src = "export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {\n  mutt: 'dog',\n  boxer: 'dog',\n  bengal: 'cat',\n};\n";
+  assert.deepEqual(breedsFromSpeciesTs(src), ['mutt', 'boxer', 'bengal']);
+  assert.throws(() => breedsFromSpeciesTs('export const OTHER = {};'), /BREED_SPECIES not found/);
+  assert.throws(() => breedsFromSpeciesTs("export const BREED_SPECIES = {\n  mutt: 'dog',\n  mutt: 'dog',\n};\n"), /duplicate/);
 });
 
 test('every fact, health item and tag has a known source; facts come from sourced entries', () => {
@@ -648,7 +663,6 @@ test('Siberian Husky (M5-R10-13): more than 2 hours, FCI weight by sex, FCI grou
 test('British Shorthair (M5-R10-14): paid cat, kitten at 3 months, CFA weight by sex, growth 3–5 years, C14 "British" life expectancy, weekly comb, grooming 1× per week (David 2026-10-11)', () => {
   const bsh = registry.breeds.find((b) => b.id === 'british_shorthair');
   assert.equal(bsh.species, 'cat');
-  assert.equal(bsh.availability, 'in_app');
   const fact = (field) => bsh.facts.find((f) => f.field === field);
   assert.deepEqual([fact('weight').value, fact('weight').source_ids], [{ male: [4.1, 7.7], female: [3.2, 5.4] }, ['C27']]);
   assert.deepEqual([fact('growth_end').value, fact('growth_end').source_ids], [[36, 60], ['C27', 'C28']]);
@@ -746,7 +760,6 @@ test('checklist: wrong data fails loudly', () => {
 test('Ragdoll (M5-R10-15): paid cat, kitten at 3 months, CFA weight by sex, full size at about 4 years, C14 life expectancy, combing once or twice a week, health keys only', () => {
   const rag = registry.breeds.find((b) => b.id === 'ragdoll');
   assert.equal(rag.species, 'cat');
-  assert.equal(rag.availability, 'in_app');
   const fact = (field) => rag.facts.find((f) => f.field === field);
   assert.deepEqual([fact('weight').value, fact('weight').source_ids], [{ male: [6.8, 9.1], female: [4.5, 6.8] }, ['C30']]);
   assert.deepEqual([fact('growth_end').value, fact('growth_end').qualifier, fact('growth_end').source_ids], [48, 'about', ['C30']]);
@@ -771,7 +784,6 @@ test('Ragdoll (M5-R10-15): paid cat, kitten at 3 months, CFA weight by sex, full
 test('Siberian (M5-R10-16): paid cat, kitten at 3 months, GCCF weight by sex, growth 4–5 years, lifespan 12–15 years, combing at least once a week, health keys only, never hypoallergenic', () => {
   const sib = registry.breeds.find((b) => b.id === 'siberian_cat');
   assert.equal(sib.species, 'cat');
-  assert.equal(sib.availability, 'in_app');
   const fact = (field) => sib.facts.find((f) => f.field === field);
   assert.deepEqual([fact('weight').value, fact('weight').source_ids], [{ male: [7.7, 11.8], female: [5.9, 7.7] }, ['C34']]);
   assert.deepEqual([fact('growth_end').value, fact('growth_end').qualifier, fact('growth_end').source_ids], [[48, 60], 'about', ['C34']]);
@@ -797,7 +809,6 @@ test('Siberian (M5-R10-16): paid cat, kitten at 3 months, GCCF weight by sex, gr
 test('Norwegian Forest Cat (M5-R10-17): paid cat, kitten at 3 months, GCCF weight by sex, growth 4–5 years, lifespan 14–16 years, combing at least once a week, health keys only', () => {
   const nfo = registry.breeds.find((b) => b.id === 'norwegian_forest_cat');
   assert.equal(nfo.species, 'cat');
-  assert.equal(nfo.availability, 'in_app');
   const fact = (field) => nfo.facts.find((f) => f.field === field);
   assert.deepEqual([fact('weight').value, fact('weight').source_ids], [{ male: [5.4, 7.3], female: [4.1, 5.4] }, ['C37']]);
   assert.deepEqual([fact('growth_end').value, fact('growth_end').qualifier, fact('growth_end').source_ids], [[48, 60], 'about', ['C37']]);
@@ -823,7 +834,6 @@ test('Norwegian Forest Cat (M5-R10-17): paid cat, kitten at 3 months, GCCF weigh
 test('Bengal (M5-R10-18): paid cat, kitten at 3 months, PDSA average weight, growth up to 2 years, C14 life expectancy, brushing once a week, health keys only', () => {
   const ben = registry.breeds.find((b) => b.id === 'bengal');
   assert.equal(ben.species, 'cat');
-  assert.equal(ben.availability, 'in_app');
   const fact = (field) => ben.facts.find((f) => f.field === field);
   assert.deepEqual([fact('weight').value, fact('weight').qualifier, fact('weight').source_ids], [5.5, 'about', ['C44']]);
   assert.deepEqual([fact('growth_end').value, fact('growth_end').qualifier, fact('growth_end').source_ids], [24, 'up_to', ['C46']]);

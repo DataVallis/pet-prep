@@ -21,9 +21,12 @@
  *              suitability tags, game rules, source ids
  *   sources[]  every cited source (S… dogs, C… cats) with publisher, title and URL
  *
- * `availability` lives HERE (SPECIES[].breeds below), next to the list of breeds in the register,
- * because membership and app status change together in this repo (a breed ships with a backend
- * enum + seeder; info_only breeds exist only as research). The website only renders it.
+ * `availability` is DERIVED (David 2026-10-13: the site must show what users really have):
+ *   in_app      the breed is in docs/research/app-release.json (the JS bundle of the last
+ *               production store build / OTA update — scripts/record-app-release.mjs)
+ *   coming_soon in the register and the game, but not released yet (merged on main only)
+ *   info_only   `availability: 'info_only'` on the SPECIES entry (research only, not playable)
+ * A SPECIES entry never says in_app / coming_soon itself. The website only renders it.
  *
  * Fact items are generic so the website can render any species without species-specific layout:
  *   { group, field, kind: quantity | category | statement, value, unit?, qualifier?, context?,
@@ -72,6 +75,7 @@ import { createHash } from 'node:crypto';
 import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { basename, dirname, isAbsolute, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { APP_RELEASE, releasedBreeds } from './record-app-release.mjs';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const SCHEMA_VERSION = 2;
@@ -88,6 +92,7 @@ export const INPUTS = {
   family_sl: 'mobile/src/i18n/locales/sl/family.json',
   checklist_data: 'docs/research/breeder-checklist/data.json',
   checklist_sources: 'docs/research/breeder-checklist/sources.md',
+  app_release: APP_RELEASE,
 };
 
 /** Optional input: AI breed portraits (`php artisan breeds:portraits`); missing → every portrait null. */
@@ -357,10 +362,8 @@ function sexValue(v, ref) {
 
 /**
  * The register. Order of `breeds` = PetPrep's order (the breeds of the app first, then the
- * rollout order of ROADMAP M5-R10). `availability`:
- *   in_app      playable in the store release of the app
- *   coming_soon built in the app, not in a store release yet (or hidden behind a flag)
- *   info_only   in the register with sourced facts, not playable in the app
+ * rollout order of ROADMAP M5-R10). `availability` is derived from docs/research/app-release.json
+ * (see the header); only a research-only breed carries `availability: 'info_only'`.
  */
 const SPECIES = [
   {
@@ -372,31 +375,31 @@ const SPECIES = [
     facets: ['size', 'exercise', 'grooming'],
     compare_fields: ['size', 'weight', 'exercise', 'grooming_frequency', 'shedding', 'lifespan', 'game_activity'],
     breeds: [
-      { id: 'border_collie', availability: 'in_app', synonyms: { en: [], sl: [] } },
-      { id: 'labrador_retriever', availability: 'in_app', synonyms: { en: ['Labrador', 'Lab'], sl: ['labradorski prinašalec', 'labrador'] } },
-      { id: 'golden_retriever', availability: 'in_app', synonyms: { en: ['Golden'], sl: ['golden', 'golden retriver'] } },
-      { id: 'french_bulldog', availability: 'in_app', synonyms: { en: ['Frenchie'], sl: ['frenchie', 'francoski buldog', 'french bulldog'] } },
-      { id: 'german_shepherd', availability: 'in_app', synonyms: { en: ['Alsatian', 'GSD'], sl: ['nemški ovčar', 'nemski ovcar', 'german shepherd'] } },
-      { id: 'cavalier_king_charles_spaniel', availability: 'in_app', synonyms: { en: ['Cavalier', 'CKCS', 'Cavalier King Charles'], sl: ['kavalir king charles španjel', 'kavalir king charles spanjel', 'kavalir', 'cavalier'] } },
-      { id: 'beagle', availability: 'in_app', synonyms: { en: [], sl: ['bigl', 'beagle'] } },
-      { id: 'standard_poodle', availability: 'in_app', synonyms: { en: ['Standard Poodle', 'Poodle'], sl: ['koder', 'veliki pudelj', 'pudelj', 'standardni pudelj', 'poodle'] } },
-      { id: 'dachshund', availability: 'in_app', synonyms: { en: ['Sausage dog', 'Teckel', 'Standard Dachshund'], sl: ['jazbečar', 'jazbecar', 'dachshund', 'teckel'] } },
-      { id: 'australian_shepherd', availability: 'in_app', synonyms: { en: ['Aussie'], sl: ['avstralski ovčar', 'avstralski ovcar', 'aussie'] } },
-      { id: 'havanese', availability: 'in_app', synonyms: { en: ['Bichon Havanais'], sl: ['havanski bišon', 'havanski bison', 'havanez', 'bichon havanais'] } },
-      { id: 'west_highland_white_terrier', availability: 'in_app', synonyms: { en: ['Westie', 'West Highland Terrier'], sl: ['zahodnoškotski beli terier', 'zahodnoskotski beli terier', 'westie', 'west highland terier'] } },
-      { id: 'bernese_mountain_dog', availability: 'in_app', synonyms: { en: ['Berner', 'Berner Sennenhund', 'Bernese'], sl: ['bernski planšarski pes', 'bernski plansarski pes', 'bernski planšar', 'bernski plansar', 'berner'] } },
-      { id: 'siberian_husky', availability: 'in_app', synonyms: { en: ['Husky', 'Huskie'], sl: ['haski', 'sibirski husky', 'husky', 'sibirec'] } },
-      { id: 'rottweiler', availability: 'in_app', synonyms: { en: ['Rottie', 'Rotty', 'Rott'], sl: ['rottweiler', 'rotvajlerka', 'rottie'] } },
-      { id: 'bulldog', availability: 'in_app', synonyms: { en: ['English Bulldog', 'British Bulldog'], sl: ['buldog', 'angleski buldog', 'bulldog', 'english bulldog', 'british bulldog'] } },
-      { id: 'german_shorthaired_pointer', availability: 'in_app', synonyms: { en: ['GSP', 'German Pointer', 'Shorthair', 'Deutsch Kurzhaar', 'Kurzhaar'], sl: ['kratkodlaki ptičar', 'kratkodlaki pticar', 'nemski kratkodlaki pticar', 'kurzhaar', 'gsp'] } },
-      { id: 'yorkshire_terrier', availability: 'in_app', synonyms: { en: ['Yorkie', 'Yorkshire'], sl: ['jorkširski terier', 'jorksirski terier', 'yorkie', 'jorki'] } },
-      { id: 'cane_corso', availability: 'in_app', synonyms: { en: ['Cane Corso Italiano', 'Italian Cane Corso', 'Italian Corso Dog', 'Corso'], sl: ['italijanski cane corso', 'cane corso italiano', 'korzo', 'corso'] } },
-      { id: 'pembroke_welsh_corgi', availability: 'in_app', synonyms: { en: ['Welsh Corgi (Pembroke)', 'Welsh Corgi Pembroke', 'Pembroke', 'Corgi'], sl: ['welsh corgi', 'pembroke', 'korgi', 'valižanski korgi'] } },
-      { id: 'dobermann', availability: 'in_app', synonyms: { en: ['Doberman', 'Doberman Pinscher', 'Dobermann Pinscher'], sl: ['dobermann', 'doberman pinscher'] } },
-      { id: 'boxer', availability: 'in_app', synonyms: { en: ['German Boxer', 'Deutscher Boxer'], sl: ['nemški boksar', 'nemski boksar', 'boxer'] } },
-      { id: 'miniature_schnauzer', availability: 'in_app', synonyms: { en: ['Zwergschnauzer', 'Mini Schnauzer'], sl: ['mali šnavcer', 'pritlikavi snavcer', 'zwergschnauzer'] } },
-      { id: 'shih_tzu', availability: 'in_app', synonyms: { en: ['Shih-Tzu', 'Shihtzu'], sl: ['ši-cu', 'šicu', 'shih-tzu'] } },
-      { id: 'great_dane', availability: 'in_app', synonyms: { en: ['Deutsche Dogge'], sl: ['doga', 'deutsche dogge'] } },
+      { id: 'border_collie', synonyms: { en: [], sl: [] } },
+      { id: 'labrador_retriever', synonyms: { en: ['Labrador', 'Lab'], sl: ['labradorski prinašalec', 'labrador'] } },
+      { id: 'golden_retriever', synonyms: { en: ['Golden'], sl: ['golden', 'golden retriver'] } },
+      { id: 'french_bulldog', synonyms: { en: ['Frenchie'], sl: ['frenchie', 'francoski buldog', 'french bulldog'] } },
+      { id: 'german_shepherd', synonyms: { en: ['Alsatian', 'GSD'], sl: ['nemški ovčar', 'nemski ovcar', 'german shepherd'] } },
+      { id: 'cavalier_king_charles_spaniel', synonyms: { en: ['Cavalier', 'CKCS', 'Cavalier King Charles'], sl: ['kavalir king charles španjel', 'kavalir king charles spanjel', 'kavalir', 'cavalier'] } },
+      { id: 'beagle', synonyms: { en: [], sl: ['bigl', 'beagle'] } },
+      { id: 'standard_poodle', synonyms: { en: ['Standard Poodle', 'Poodle'], sl: ['koder', 'veliki pudelj', 'pudelj', 'standardni pudelj', 'poodle'] } },
+      { id: 'dachshund', synonyms: { en: ['Sausage dog', 'Teckel', 'Standard Dachshund'], sl: ['jazbečar', 'jazbecar', 'dachshund', 'teckel'] } },
+      { id: 'australian_shepherd', synonyms: { en: ['Aussie'], sl: ['avstralski ovčar', 'avstralski ovcar', 'aussie'] } },
+      { id: 'havanese', synonyms: { en: ['Bichon Havanais'], sl: ['havanski bišon', 'havanski bison', 'havanez', 'bichon havanais'] } },
+      { id: 'west_highland_white_terrier', synonyms: { en: ['Westie', 'West Highland Terrier'], sl: ['zahodnoškotski beli terier', 'zahodnoskotski beli terier', 'westie', 'west highland terier'] } },
+      { id: 'bernese_mountain_dog', synonyms: { en: ['Berner', 'Berner Sennenhund', 'Bernese'], sl: ['bernski planšarski pes', 'bernski plansarski pes', 'bernski planšar', 'bernski plansar', 'berner'] } },
+      { id: 'siberian_husky', synonyms: { en: ['Husky', 'Huskie'], sl: ['haski', 'sibirski husky', 'husky', 'sibirec'] } },
+      { id: 'rottweiler', synonyms: { en: ['Rottie', 'Rotty', 'Rott'], sl: ['rottweiler', 'rotvajlerka', 'rottie'] } },
+      { id: 'bulldog', synonyms: { en: ['English Bulldog', 'British Bulldog'], sl: ['buldog', 'angleski buldog', 'bulldog', 'english bulldog', 'british bulldog'] } },
+      { id: 'german_shorthaired_pointer', synonyms: { en: ['GSP', 'German Pointer', 'Shorthair', 'Deutsch Kurzhaar', 'Kurzhaar'], sl: ['kratkodlaki ptičar', 'kratkodlaki pticar', 'nemski kratkodlaki pticar', 'kurzhaar', 'gsp'] } },
+      { id: 'yorkshire_terrier', synonyms: { en: ['Yorkie', 'Yorkshire'], sl: ['jorkširski terier', 'jorksirski terier', 'yorkie', 'jorki'] } },
+      { id: 'cane_corso', synonyms: { en: ['Cane Corso Italiano', 'Italian Cane Corso', 'Italian Corso Dog', 'Corso'], sl: ['italijanski cane corso', 'cane corso italiano', 'korzo', 'corso'] } },
+      { id: 'pembroke_welsh_corgi', synonyms: { en: ['Welsh Corgi (Pembroke)', 'Welsh Corgi Pembroke', 'Pembroke', 'Corgi'], sl: ['welsh corgi', 'pembroke', 'korgi', 'valižanski korgi'] } },
+      { id: 'dobermann', synonyms: { en: ['Doberman', 'Doberman Pinscher', 'Dobermann Pinscher'], sl: ['dobermann', 'doberman pinscher'] } },
+      { id: 'boxer', synonyms: { en: ['German Boxer', 'Deutscher Boxer'], sl: ['nemški boksar', 'nemski boksar', 'boxer'] } },
+      { id: 'miniature_schnauzer', synonyms: { en: ['Zwergschnauzer', 'Mini Schnauzer'], sl: ['mali šnavcer', 'pritlikavi snavcer', 'zwergschnauzer'] } },
+      { id: 'shih_tzu', synonyms: { en: ['Shih-Tzu', 'Shihtzu'], sl: ['ši-cu', 'šicu', 'shih-tzu'] } },
+      { id: 'great_dane', synonyms: { en: ['Deutsche Dogge'], sl: ['doga', 'deutsche dogge'] } },
     ],
   },
   {
@@ -407,14 +410,13 @@ const SPECIES = [
     fact_groups: ['play', 'litter', 'scratching', 'grooming', 'feeding', 'water', 'lifespan', 'stages', 'size'],
     facets: [],
     compare_fields: ['weight', 'grooming_sources_differ', 'lifespan', 'game_activity'],
-    // Cats are hidden in the app (PETPREP_CATS_ENABLED=false) → coming soon.
     breeds: [
-      { id: 'maine_coon', availability: 'in_app', synonyms: { en: [], sl: [] } },
-      { id: 'british_shorthair', availability: 'in_app', synonyms: { en: ['British Blue', 'BSH'], sl: ['britanska kratkodlaka', 'britanska kratkodlaka macka', 'britanka', 'british shorthair'] } },
-      { id: 'ragdoll', availability: 'in_app', synonyms: { en: ['Rag doll'], sl: ['ragdoll mačka', 'ragdoll macka', 'ragdol'] } },
-      { id: 'siberian_cat', availability: 'in_app', synonyms: { en: ['Siberian Forest Cat'], sl: ['sibirska macka', 'sibirka', 'sibirska gozdna mačka'] } },
-      { id: 'norwegian_forest_cat', availability: 'in_app', synonyms: { en: ['Wegie', 'Skogkatt', 'Norwegian Forest'], sl: ['norveska gozdna macka', 'norveška mačka', 'skogkatt'] } },
-      { id: 'bengal', availability: 'in_app', synonyms: { en: ['Bengal cat'], sl: ['bengalska macka', 'bengalka', 'bengal'] } },
+      { id: 'maine_coon', synonyms: { en: [], sl: [] } },
+      { id: 'british_shorthair', synonyms: { en: ['British Blue', 'BSH'], sl: ['britanska kratkodlaka', 'britanska kratkodlaka macka', 'britanka', 'british shorthair'] } },
+      { id: 'ragdoll', synonyms: { en: ['Rag doll'], sl: ['ragdoll mačka', 'ragdoll macka', 'ragdol'] } },
+      { id: 'siberian_cat', synonyms: { en: ['Siberian Forest Cat'], sl: ['sibirska macka', 'sibirka', 'sibirska gozdna mačka'] } },
+      { id: 'norwegian_forest_cat', synonyms: { en: ['Wegie', 'Skogkatt', 'Norwegian Forest'], sl: ['norveska gozdna macka', 'norveška mačka', 'skogkatt'] } },
+      { id: 'bengal', synonyms: { en: ['Bengal cat'], sl: ['bengalska macka', 'bengalka', 'bengal'] } },
     ],
   },
 ];
@@ -1713,6 +1715,7 @@ export function buildRegistry(texts) {
   const sources = { ...dogSources, ...catSources, ...checklistSources };
   const names = { en: JSON.parse(texts.family_en).breeds, sl: JSON.parse(texts.family_sl).breeds };
   const allBreedIds = SPECIES.flatMap((s) => s.breeds.map((b) => b.id));
+  const released = releasedBreeds(JSON.parse(texts.app_release));
   const suitability = exportSuitability(parsePhpReturn(texts.suitability), readers, sources, allBreedIds);
   const game = { dog: dogGame(readers.dog), cat: catGame(readers.cat) };
   const general = { dog: dogGeneralFacts(readers.dog), cat: catGeneralFacts(readers.cat) };
@@ -1742,19 +1745,22 @@ export function buildRegistry(texts) {
         if (seen[l].has(slug[l]) || RESERVED_SLUGS.includes(slug[l])) throw new Error(`${spec.id}: slug "${slug[l]}" (${l}) is taken or reserved`);
         seen[l].add(slug[l]);
       }
-      if (!['in_app', 'coming_soon', 'info_only'].includes(spec.availability)) throw new Error(`${spec.id}: bad availability`);
+      if (spec.availability !== undefined && spec.availability !== 'info_only') {
+        throw new Error(`${spec.id}: availability is derived from ${APP_RELEASE} — only 'info_only' may be set by hand`);
+      }
+      const availability = spec.availability === 'info_only' ? 'info_only' : released.has(spec.id) ? 'in_app' : 'coming_soon';
       const compare = {};
       for (const field of sp.compare_fields) {
         if (field === 'game_activity') continue;
         const f = facts.find((x) => x.field === field);
         if (f) compare[field] = facts.indexOf(f);
       }
-      const g = spec.availability === 'info_only' ? null : game[sp.id].forBreed(spec.id);
+      const g = availability === 'info_only' ? null : game[sp.id].forBreed(spec.id);
       const entry = {
         id: spec.id,
         species: sp.id,
         order,
-        availability: spec.availability,
+        availability,
         name,
         slug,
         synonyms: spec.synonyms,
