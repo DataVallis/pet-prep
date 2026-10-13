@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "24e4fbf8ad97f746794600a0c88a8ae8d2f0e7d089dc14fd7fda328096000a9e"
+      "sha256": "8e681d0c46dbc4936452bd6cbd8d4556155599e930f690e2c780a985b9c1f6d3"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "67aa32e4c6dcf31aa3b25920872664f18d7f82a1c15319ce1d548e4999ca3097"
+      "sha256": "b5999ae559ef2d5c04556a2e5d061b0d61d80d9b5abb7112c25f71c88778979e"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "08454d583bc875c316dd5632bfc086186798feeca86617103a88cf76fcb6b6b7"
+      "sha256": "83383f926d72fd47ddc8d53036c235ff685ecd9756f9a5e3e23ede9459c8ecb4"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -15146,8 +15146,8 @@
               "S244"
             ],
             "refs": [
-              "great_dane.health.breed_watch",
-              "great_dane.health.hind_conformation"
+              "great_dane.health.hind_conformation",
+              "great_dane.health.hip_elbow_dysplasia"
             ]
           },
           {

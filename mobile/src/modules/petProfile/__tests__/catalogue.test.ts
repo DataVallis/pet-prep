@@ -436,7 +436,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(21);
+    expect(CONSIDER_TAGS).toHaveLength(22);
+    // M5-R10-29 (runbook welfare rule, new key): eyelids and eyes — check eye tests (the Great Dane, RKC Breed Watch).
+    expect(CONSIDER_TAGS).toContain('eyelid_problems');
     // M5-R10-26 (runbook welfare rule, new key): shorter muzzle — can have breathing problems (the Boxer; not the flat-face chip).
     expect(CONSIDER_TAGS).toContain('short_muzzle_breathing');
     // M5-R10-26 (runbook new-tag rule): loves company — best with someone home most of the day; no numbers.

@@ -775,7 +775,7 @@ return [
                 // S241 "Lifespan: Under 10 years"; S243 "Average lifespan | Under 10 years".
                 ['tag' => 'shorter_lifespan', 'source_ids' => ['S241', 'S243'], 'refs' => ['great_dane.health.shorter_lifespan', 'great_dane.lifespan.rkc']],
                 // Welfare rule: S244 "Incorrect hind conformation and/or poor rear movement"; S243 hip dysplasia.
-                ['tag' => 'hips_hind_legs', 'source_ids' => ['S244', 'S243'], 'refs' => ['great_dane.health.breed_watch', 'great_dane.health.hind_conformation']],
+                ['tag' => 'hips_hind_legs', 'source_ids' => ['S244', 'S243'], 'refs' => ['great_dane.health.hind_conformation', 'great_dane.health.hip_elbow_dysplasia']],
                 // Welfare rule (new key): S244 "Eyelids not in normal contact with the eyeball …"; S243 entropion / ectropion.
                 ['tag' => 'eyelid_problems', 'source_ids' => ['S244', 'S243'], 'refs' => ['great_dane.health.breed_watch', 'great_dane.health.eyelids']],
                 // S243 "You might find that they chew your furniture and possessions when they're bored or left alone".

@@ -20124,8 +20124,8 @@
               "S243"
             ],
             "refs": [
-              "great_dane.health.breed_watch",
-              "great_dane.health.hind_conformation"
+              "great_dane.health.hind_conformation",
+              "great_dane.health.hip_elbow_dysplasia"
             ],
             "quote": "S244 'Incorrect hind conformation and/or poor rear movement'; S243 'Hip dysplasia – where the hip joint doesn't fit together perfectly'",
             "note": "Welfare rule §3 (RKC Breed Watch point), as the German Shepherd Dog and the Rottweiler."
@@ -20186,7 +20186,7 @@
               "great_dane.suitability.pdsa_other_pets"
             ],
             "quote": "S243 'Great Danes do have a fairly strong prey drive, though, so all introductions need to be done very carefully.'",
-            "decision": "potrdil David 2026-10-12 (pravilo runbooka): citat iz vnosa te pasme navaja močan lovski nagon (na koncu seznama »Upoštevajte«)"
+            "decision": "pravilo runbooka (David 2026-10-12, citat o močnem lovskem nagonu iz vnosa te pasme): Claude bere PDSA »fairly strong prey drive« kot močan lovski nagon — odprto za Davida (pravilo navaja »high prey drive«); na koncu seznama »Upoštevajte«"
           }
         ],
         "not_proposed": {
