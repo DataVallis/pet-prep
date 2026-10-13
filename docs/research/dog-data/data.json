@@ -14726,7 +14726,7 @@
         "source_id": "S260",
         "quote": "Bostons only require occasional bathing, and their nails should be trimmed regularly.",
         "confidence": "medium",
-        "notes": "AKC (S260): 'Weekly brushing will help to remove loose hair.' Nail trimming 'regularly' (no frequency) — a sourced need without a game mechanic → proposed_game_parameters.boston_terrier.nail_trimming (needs-david, new ROADMAP task suggested)."
+        "notes": "AKC (S260): 'Weekly brushing will help to remove loose hair.' Nail trimming 'regularly' (no frequency) — a sourced need without a game mechanic → proposed_game_parameters.boston_terrier.nail_trimming → ROADMAP M5-R19 (needs-david)."
       }
     }
   },
@@ -21637,7 +21637,7 @@
       }
     },
     "boston_terrier": {
-      "_note": "Unattended run M5-R10-31 (2026-10-13): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: weekly brushing (RKC S255, PDSA S259, AKC S260) → 1× (M5-R13); early socialisation (AKC S260) → M5-R17. Sourced needs without a game mechanic: no exercise in the heat of the day (PDSA S259) → ROADMAP M5-R14 (as the Bulldog); regular nail trimming (AKC S260, no frequency) → new ROADMAP task (suggested M5-R19, needs-david). Senior 90 = RKC lower bound 'Over 10 years' (S255) — provisional until McMillan 2024 is checked (11.8 y via Wikipedia S262 → 106). Flat-faced breed → brachycephalic_breathing chip, not in marketing (BVA S92).",
+      "_note": "Unattended run M5-R10-31 (2026-10-13): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: weekly brushing (RKC S255, PDSA S259, AKC S260) → 1× (M5-R13); early socialisation (AKC S260) → M5-R17. Sourced needs without a game mechanic: no exercise in the heat of the day (PDSA S259) → ROADMAP M5-R14 (as the Bulldog); regular nail trimming (AKC S260, no frequency) → ROADMAP M5-R19 (needs-david). Senior 90 = RKC lower bound 'Over 10 years' (S255) — provisional until McMillan 2024 is checked (11.8 y via Wikipedia S262 → 106). Flat-faced breed → brachycephalic_breathing chip, not in marketing (BVA S92).",
       "exercise_minutes_adult": {
         "value": 60,
         "unit": "minutes/day",
@@ -21787,8 +21787,8 @@
         "source_id": "S260",
         "quote": "Bostons only require occasional bathing, and their nails should be trimmed regularly.",
         "confidence": "medium",
-        "notes": "AKC (S260), boston_terrier.suitability.akc_grooming. The game has no nail-trimming mechanic and no ROADMAP task exists yet (checked M5-R13 … M5-R18) → suggested new ROADMAP M5-R19 'Striženje krempljev psa' with a FEATURES 🗓 row; the source gives no frequency, so the mechanic (and any number) is David's decision.",
-        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno striženje krempljev; mehanike ni → nova naloga ROADMAP (predlog M5-R19, needs-david)"
+        "notes": "AKC (S260), boston_terrier.suitability.akc_grooming. The game has no nail-trimming mechanic → ROADMAP M5-R19 'Striženje krempljev psa' (needs-david) with a FEATURES 🗓 row; the source gives no frequency, so the mechanic (and any number) is David's decision.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno striženje krempljev; mehanike ni → ROADMAP M5-R19 (needs-david)"
       },
       "suitability_tags": {
         "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-31); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
@@ -21823,7 +21823,8 @@
             ],
             "refs": [
               "boston_terrier.suitability.pdsa_children",
-              "boston_terrier.behaviour.family"
+              "boston_terrier.behaviour.family",
+              "boston_terrier.suitability.akc_children"
             ],
             "quote": "S259 'and are especially good with children.'; S260 'They do well with children who know how to be gentle with animals.'",
             "note": "Caveats kept in notes: the right socialisation as a puppy (PDSA), children who know how to be gentle (AKC). No small-children rating → never small_children."

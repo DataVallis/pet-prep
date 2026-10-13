@@ -401,7 +401,7 @@ const SPECIES = [
       { id: 'shih_tzu', synonyms: { en: ['Shih-Tzu', 'Shihtzu'], sl: ['ši-cu', 'šicu', 'shih-tzu'] } },
       { id: 'great_dane', synonyms: { en: ['Deutsche Dogge'], sl: ['doga', 'deutsche dogge'] } },
       { id: 'pomeranian', synonyms: { en: ['Pom', 'German Toy Spitz', 'Zwergspitz'], sl: ['pom', 'nemški špic', 'nemski spic', 'zwergspitz'] } },
-      { id: 'boston_terrier', synonyms: { en: ['Boston', 'American Gentleman', 'Boston Bull Terrier'], sl: ['boston', 'bostonec', 'boston terier'] } },
+      { id: 'boston_terrier', synonyms: { en: ['Boston', 'American Gentleman'], sl: ['boston', 'boston terier'] } },
     ],
   },
   {

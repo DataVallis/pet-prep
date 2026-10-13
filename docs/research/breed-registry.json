@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "ad1f5caf126a72f9cb8eb740792afdd2050cd613fbb3a7fe1a1ae460f25917a3"
+      "sha256": "3dc415e51267390e87b192f8a919de165c69ca14330f6a24540b185440afaba0"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "90bca16ccc6b6edf5def2c26f1bf46a963626534146c94c49f679c9a55bbd772"
+      "sha256": "1b67f7bdc2e9ac63f27f00b378f8033561b64bc0aa1896f196578e57ca7e0d4a"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -16057,12 +16057,10 @@
       "synonyms": {
         "en": [
           "Boston",
-          "American Gentleman",
-          "Boston Bull Terrier"
+          "American Gentleman"
         ],
         "sl": [
           "boston",
-          "bostonec",
           "boston terier"
         ]
       },
@@ -16277,7 +16275,8 @@
             ],
             "refs": [
               "boston_terrier.suitability.pdsa_children",
-              "boston_terrier.behaviour.family"
+              "boston_terrier.behaviour.family",
+              "boston_terrier.suitability.akc_children"
             ]
           }
         ],

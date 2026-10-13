@@ -834,7 +834,7 @@ return [
                 // S259 "They enjoy playing games and will join in with plenty of enthusiasm, making them perfect family pets."
                 ['tag' => 'family_pet', 'source_ids' => ['S259'], 'refs' => ['boston_terrier.suitability.pdsa_family', 'boston_terrier.behaviour.family']],
                 // S259 "and are especially good with children."; S260 "They do well with children who know how to be gentle with animals."
-                ['tag' => 'children', 'source_ids' => ['S259', 'S260'], 'refs' => ['boston_terrier.suitability.pdsa_children', 'boston_terrier.behaviour.family']],
+                ['tag' => 'children', 'source_ids' => ['S259', 'S260'], 'refs' => ['boston_terrier.suitability.pdsa_children', 'boston_terrier.behaviour.family', 'boston_terrier.suitability.akc_children']],
             ],
             'consider' => [
                 // S259 "Boston Terriers are a brachycephalic (flat-faced) breed."; S255 BOAS text; S261 RKC / Cambridge
