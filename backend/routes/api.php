@@ -4,6 +4,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BillingController;
 use App\Http\Controllers\BreedController;
+use App\Http\Controllers\BreedFactController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\ChildAuthController;
 use App\Http\Controllers\ChildContractController;
@@ -174,6 +175,19 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
 
 /*
 |--------------------------------------------------------------------------
+| Breed facts »Ali si vedel?« (M5-R09b) — parent AND child tokens
+|--------------------------------------------------------------------------
+| Approved facts only; a child sees child facts of their own pet's breed (no
+| source links), a parent both audiences for the family's breeds. Which
+| breed / fact a caller may see: BreedFactService (else 404).
+*/
+Route::middleware(['auth:sanctum', 'ability:parent,child', 'throttle:api'])->group(function () {
+    Route::get('breeds/{breed}/facts', [BreedFactController::class, 'index']);
+    Route::post('breed-facts/{fact}/read', [BreedFactController::class, 'read']);
+});
+
+/*
+|--------------------------------------------------------------------------
 | Child Endpoints — token ability `child` (M2-03; legacy '*' tokens pass)
 |--------------------------------------------------------------------------
 */
@@ -190,6 +204,9 @@ Route::middleware(['auth:sanctum', 'ability:child', 'throttle:api'])
         Route::get('pet', [ChildPetController::class, 'show']);
         // Growth album (M5-R04): the pet's pictures across life stages.
         Route::get('pet/growth', [PetGrowthController::class, 'child']);
+        // M5-R09b »Ali si vedel?«: next unread breed fact + the automatic-sheet cap.
+        Route::get('fact-of-the-day', [BreedFactController::class, 'factOfTheDay']);
+        Route::post('fact-of-the-day/shown', [BreedFactController::class, 'shown']);
 
         Route::middleware('throttle:child-actions')->group(function () {
             Route::post('pet/feed', [ChildPetController::class, 'feed']);
