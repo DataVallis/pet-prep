@@ -9,6 +9,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-13 — Nemška doga: enajsta pasma po dvajsetih (M5-R10-29)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **nemško dogo** (21. mesto). Petindvajseta plačljiva pasma psa: več kot dve uri gibanja na dan (12.000 korakov za odraslega psa, 9.000 za starejšega), česanje 1× na teden, po obroku eno uro opozorilo »Počakaj s sprehodom« (PDSA svari pred zasukom želodca) in tedenska »Nova izkušnja« za mladička. Prvič je dodana oznaka »veke in oči — preverite preglede oči«: The Royal Kennel Club pri tej pasmi sodnikom naroča, naj pazijo na veke, ki niso v stiku z očesom.
+
+**Zakaj je pomembno:** Nemška doga je največja pasma, ki jo imamo — in hkrati pasma s kratkim življenjem (The Royal Kennel Club: manj kot 10 let). Kuža v igri postane »starejši« že pri 4,5 leta (začasno, iz majhne britanske raziskave), kar družini pošteno pokaže, kako hitro se pri velikih psih spremenijo potrebe. Vse potrebe z virom so v igri od prvega dne.
+
+**Številke:** 6 novih virov (S239–S244), 1 migracija, 1 nova oznaka (`eyelid_problems`), 3 + 9 oznak v izbirniku, 3 zgrajene potrebe z virom (česanje, premor po obroku, socializacija), 1 nov ključ testa staršev (DNK test IMGD), meja starejšega 54 mesecev (začasno, mediana VetCompass 6,0 leta iz 23 primerov — odprto za Davida).
+
+**Kako povedati:**
+- 👩 Starši: »Nemška doga je nežen velikan — a potrebuje več kot dve uri gibanja na dan, veliko hišo z vrtom in običajno živi manj kot 10 let. V PetPrepu boste videli, ali vaš otrok zmore vsakodnevne dolge sprehode, preden pripeljete domov psa, večjega od njega.«
+- 🧒 Otroci: »Doga je ogromna in rada teče! Vsak dan jo pelji na dolg sprehod — a po obroku najprej malo počakaj, da kuža v miru prebavi.«
+- 💼 Investitorji: »Enajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC — vse številke iz virov ali stalnih pravil; ko vir pokaže skrb za dobrobit, ki je noben obstoječi ključ ne pokrije, sistem doda novo mirno oznako (tu: veke).«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri nemški dogi upošteva točke Breed Watch The Royal Kennel Club (veke, zadnje noge) in priporočene teste staršev (DNK test IMGD, kolki, komolci, oči) — brez obljub o zdravju.«
+
+---
+
 ## 2026-10-13 — »Ali si vedel?«: prvih 85 preverjenih zanimivosti (M5-R09a)
 
 **Kaj se je zgodilo:** Za border collieja (42) in maine coona (43) je pripravljenih **85 zanimivosti** v angleščini in slovenščini — 54 za otroke, 31 za starše. Vsaka ima vir (npr. FCI, Battersea, PDSA, CFA, GCCF), povezavo in dobesedni citat. Drugi, neodvisni pregled je vsak citat ponovno prebral na izvirni strani: **19 besedil je zožil** na to, kar vir res pove, 2 citata podaljšal, zavrnil ni nobenega. Vsaka zanimivost nosi »prstni odtis« preverjenega besedila — če se besedilo kdaj spremeni, gre samodejno nazaj v pregled.
