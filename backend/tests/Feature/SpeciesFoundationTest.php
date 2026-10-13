@@ -519,10 +519,12 @@ describe('GET /api/breeds', function () {
             ->assertJsonPath('breeds.27.breed', 'boston_terrier')
             // M5-R10-32: the Miniature American Shepherd (paid, sort_order 280).
             ->assertJsonPath('breeds.28.breed', 'miniature_american_shepherd')
-            ->assertJsonCount(29, 'breeds');
+            // M5-R10-33: the Chihuahua (paid, sort_order 290).
+            ->assertJsonPath('breeds.29.breed', 'chihuahua')
+            ->assertJsonCount(30, 'breeds');
 
         // Flag off: the cat feature alone changes nothing.
-        spCatalogue($parent, ['features' => ['species_cat']])->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(29, 'breeds');
+        spCatalogue($parent, ['features' => ['species_cat']])->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(30, 'breeds');
         spCatalogue($parent, ['species' => 'cat', 'features' => ['species_cat']])->assertOk()->assertJsonCount(0, 'breeds');
     });
 
@@ -530,11 +532,11 @@ describe('GET /api/breeds', function () {
         spCatsOn();
         $parent = User::factory()->parent()->create();
 
-        spCatalogue($parent)->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(29, 'breeds');
+        spCatalogue($parent)->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(30, 'breeds');
 
         $all = spCatalogue($parent, ['features' => ['species_cat', 'unknown_future']])->assertOk()
             ->assertJsonPath('species', ['dog', 'cat']);
-        expect(array_column($all->json('breeds'), 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal']);
+        expect(array_column($all->json('breeds'), 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal']);
 
         $cats = spCatalogue($parent, ['species' => 'cat', 'features' => ['species_cat']])->assertOk();
         expect(array_column($cats->json('breeds'), 'breed'))->toBe(['domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal'])
@@ -550,7 +552,7 @@ describe('GET /api/breeds', function () {
 
         $breeds = spCatalogue($parent, ['species' => 'dog'])->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd'])
+        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua'])
             ->and($breeds[0]['sort_order'])->toBe(50)
             ->and($breeds[1]['label_key'])->toBe('breeds.collie')
             ->and($breeds[1]['search_keywords'])->toBe(['bc']);

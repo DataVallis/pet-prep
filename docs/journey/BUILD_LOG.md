@@ -9,6 +9,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-13 — Čivava: petnajsta pasma po dvajsetih (M5-R10-33)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **čivavo** (27. mesto; havanski bišon in sibirski haski z 25. in 26. mesta sta že v aplikaciji). Devetindvajseta plačljiva pasma psa; v izbirniku je zdaj 30 psov (z mešančkom). Igra gradi kratkodlako čivavo (1,8–2,7 kg): pol ure gibanja na dan (3.000 korakov za odraslega psa, 2.300 za starejšega), česanje 1× na teden, opozorilo »počakaj s sprehodom« eno uro po obroku in tedenska »Nova izkušnja« za mladička.
+
+**Zakaj je pomembno:** Čivava je drobna, a zahtevna: viri (PDSA, American Kennel Club) pravijo, da ni za družine z majhnimi otroki in da težko ostane sama — zato v izbirniku dobi oznaki »majhen pes — bolje za starejše otroke« in »rad ima družbo«, ne pa »družinsko življenje«. Edina velika britanska raziskava o čivavah (VetCompass) zajema predvsem mlade pse in sama opozarja, da je njena srednja (mediana) starost ob smrti zato prenizka; sistem te številke ni slepo uporabil, ampak je mejo starejšega psa (9 let) predlagal iz »več kot 12 let« (The Royal Kennel Club, PDSA) in jo označil kot **predlog za Davida**. Ni pes s sploščenim obrazom, zato **sme biti v marketingu** — nikoli z otroki ali kot modni dodatek (Royal Veterinary College odsvetuje nakup »na hitro ali kot dodatek«). Nege zob ter čiščenja ušes in kopanja igra še ne vodi — *načrt* (M5-R15, nova M5-R20).
+
+**Številke:** 9 novih virov (S272–S280), 1 migracija, brez nove oznake, 5 novih ključev zdravja v registru (brez statistik), 2 + 3 oznake v izbirniku, 3 zgrajene potrebe z virom (česanje, premor po obroku, socializacija) in 2 v načrtu (zobje; ušesa in kopanje), dnevni cilj 3.000 korakov, učenje 0,7×, meja starejšega 108 mesecev (predlog Claude — odprto za Davida), 30 psov v izbirniku (29 plačljivih + mešanček); testi: Pest 2.922 testov, Jest 157 skupin / 2.381 testov, izvoz registra 57 / 57. Portret in stran v registru sledita v ločenih PR. Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Čivava je majhna, a ni igračka: potrebuje nekoga doma skoraj ves čas, nežne otroke in vsak dan pol ure gibanja. V PetPrepu boste videli, ali vaš otrok zmore skrb tudi za takega malčka, preden se odločite za pravega.«
+- 🧒 Otroci: »Čivava je drobcena, zato je ne dvigaj kar tako — rada ima mir in družbo. Vsak dan jo pelji na sprehod in jo enkrat na teden počeši!«
+- 💼 Investitorji: »Petnajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC — in sam opazil, da edina raziskava o življenjski dobi zaradi mlade populacije daje prenizko številko, zato je mejo predlagal ustanovitelju, namesto da bi jo slepo uporabil.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri čivavi pokaže teste staršev — presejanje CM/SM, pregled oči, kolkov, srca in pogačice — in opozori, da so bolezni zob pri čivavah pogoste, brez obljub o zdravju.«
+- 📣 Omrežja: čivavo **lahko objavljamo** (ni pes s sploščenim obrazom, nikoli merle), nikoli z otroki ali kot modni dodatek.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje, premor po obroku in socializacija so samo nove vrstice v `breed_stage_params`; meja starejšega in prihod starejšega sta `verified=false`; izvoz registra dobi izvor FCI Mehika in pet novih ključev zdravja.«
+
+---
+
 ## 2026-10-13 — Izbris računa prekliče tudi prijavo z Apple (M2-10c)
 
 **Kaj:** ko starš, ki se prijavlja z Apple, izbriše račun, strežnik v ozadju pri Applu prekliče žetone (Apple REST `/auth/token` + `/auth/revoke`, lasten podpis ES256 brez dodatne knjižnice, ločena čakalna vrsta `auth`, ker koda velja le 5 minut). Testi: 28 novih, vsi zeleni.
@@ -22,6 +40,9 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 **Kaj:** starš se lahko registrira in prijavi z enim dotikom — »Nadaljuj z Googlom« (iPhone in Android) ali »Nadaljuj z Apple« (iPhone). Strežnik sam preveri podpis žetona pri Googlu / Apple (brez dodatne knjižnice), račun z geslom se zaradi varnosti nikoli ne poveže samodejno, izbris računa pa starš brez gesla potrdi s ponovno prijavo. Otrok ostane na PIN-u. Testi: 2.927 strežniških (Pest) in 2.440 aplikacijskih (Jest), vsi zeleni.
 **Zakaj:** registracija z e-pošto in geslom je največji upad pri prvem zagonu; prijava z enim dotikom je standard, ki ga starši pričakujejo. Apple prijava je na iPhonu obvezna, če ponudimo Google.
 **Kako povedati:** 👩 »Brez novega gesla — prijavite se z Googlom ali Apple, otrok pa še vedno samo s PIN-om.« · 💼 nižje trenje pri registraciji (aktivacija) · 🛠 lastno preverjanje RS256 JWT nad JWKS, zaščita pred prevzemom računa s predregistracijo.
+
+---
+
 ## 2026-10-13 — Mali ameriški ovčar: štirinajsta pasma po dvajsetih (M5-R10-32)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **malega ameriškega ovčarja** (24. mesto). Osemindvajseta plačljiva pasma psa; v izbirniku je zdaj 29 psov (z mešančkom). Mali ameriški ovčar je energičen pastirski pes, po standardu FCI majhen (9,1–18,1 kg): vsaj ena ura gibanja na dan (6.000 korakov za odraslega psa, 4.500 za starejšega), česanje 2× na teden in tedenska »Nova izkušnja« za mladička (AKC priporoča zgodnjo, dosledno socializacijo).

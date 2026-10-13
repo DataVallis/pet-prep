@@ -144,6 +144,7 @@ describe('readBreedCatalogue', () => {
       'pomeranian',
       'boston_terrier',
       'miniature_american_shepherd',
+      'chihuahua',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -376,6 +377,11 @@ describe('readBreedCatalogue', () => {
       suits: ['family_pet', 'children', 'other_pets'],
       consider: ['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds'],
     });
+    const chi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'chihuahua');
+    expect(chi).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 290 }));
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-33, runbook rules; no new tag).
+    expect(chi?.search_keywords).toEqual(['chihuahua', 'čivava', 'civava', 'chi']);
+    expect(chi?.suitability).toEqual({ suits: ['apartment', 'other_pets'], consider: ['older_children', 'needs_company', 'sheds'] });
     const corgi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pembroke_welsh_corgi');
     expect(corgi).toEqual(
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 200 }),
@@ -418,6 +424,7 @@ describe('readBreedCatalogue', () => {
       'pomeranian',
       'boston_terrier',
       'miniature_american_shepherd',
+      'chihuahua',
     ]);
   });
 });
@@ -593,6 +600,13 @@ describe('breed search', () => {
     expect(find('Mali ameriški ovčar')).toEqual(['miniature_american_shepherd']);
     expect(find('mali ameriski')).toEqual(['miniature_american_shepherd']);
     expect(find('mini aussie')).toEqual(['miniature_american_shepherd']);
+  });
+
+  it('M5-R10-33: finds the Chihuahua by its EN / SL names, with and without the caron', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('chihuahua')).toEqual(['chihuahua']);
+    expect(find('Čivava')).toEqual(['chihuahua']);
+    expect(find('civava')).toEqual(['chihuahua']);
   });
 
   it('M5-R10-30: finds the Pomeranian by its EN / SL names, the nickname and the toy-spitz name (with and without š)', () => {

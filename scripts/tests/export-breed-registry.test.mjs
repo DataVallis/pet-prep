@@ -102,6 +102,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.pomeranian.slug, { en: 'pomeranian', sl: 'pomeranec' });
   assert.deepEqual(byId.boston_terrier.slug, { en: 'boston-terrier', sl: 'bostonski-terier' });
   assert.deepEqual(byId.miniature_american_shepherd.slug, { en: 'miniature-american-shepherd', sl: 'mali-ameriski-ovcar' });
+  assert.deepEqual(byId.chihuahua.slug, { en: 'chihuahua', sl: 'civava' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -226,6 +227,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     pomeranian: { adult: 3000, senior: 2300, seniorFrom: 108, learning: 1.5 },
     boston_terrier: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 1 },
     miniature_american_shepherd: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1 },
+    chihuahua: { adult: 3000, senior: 2300, seniorFrom: 108, learning: 0.7 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -452,7 +454,7 @@ test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming row
   assert.deepEqual([...cats, ...dogs].sort(), seeded);
   assert.deepEqual(cats, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
   // M5-R13: every dog breed of the app except the mutt and the Border Collie (no grooming statement).
-  assert.equal(dogs.length, 27);
+  assert.equal(dogs.length, 28);
   assert.ok(!dogs.includes('mutt') && !dogs.includes('border_collie'));
 });
 
@@ -1221,4 +1223,29 @@ test('Miniature American Shepherd (M5-R10-32): at least 1 hour (PetMD, game valu
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a percentage; the Wikipedia lifespan (tier C) stays in research.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|13–15/i);
+});
+
+test('Chihuahua (M5-R10-33): up to 30 minutes (RKC Smooth Coat), KC / PDSA weight, PDSA height, FCI group 9 section 6 Mexico, RKC "over 12 years" (never the young-population VetCompass median), Coren 67, no welfare chip, brushing 1× a week', () => {
+  const d = registry.breeds.find((b) => b.id === 'chihuahua');
+  assert.deepEqual(d.name, { en: 'Chihuahua', sl: 'Čivava' });
+  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.facets.size, 'small');
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[30, 'up_to', ['S275']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 218, group: 9, section: 6, origin: 'MX' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [1.8, 2.7], female: [1.8, 2.7] }, ['S274']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [12, 20], female: [12, 20] }, ['S277']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['more_than', 12, ['S275']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 67);
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 3000, cap_month: 3 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 108 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 2300 } });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['apartment', 'other_pets']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['older_children', 'needs_company', 'sheds']);
+  assert.deepEqual(d.health.map((h) => h.key), ['kneecap_luxation', 'hip_dysplasia_arthritis', 'legg_perthes', 'hydrocephalus', 'eye_problems_dry_eye_entropion_lens_luxation', 'heart_valve_screening', 'windpipe_collapse_breathing', 'cm_sm_screening', 'dental_weight_problems']);
+  // RKC best practice (CM/SM, eyes) + the PDSA's parent checks (hips, heart, kneecaps) as other_scheme.
+  assert.equal(d.breeder_checklist.status, 'listed');
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['cm_sm_mri', 'best_practice'], ['eye_scheme', 'best_practice'], ['hip_scheme', 'other_scheme'], ['heart_scheme', 'other_scheme'], ['patella_scheme', 'other_scheme']]);
+  const json = JSON.stringify(d);
+  // Never "hypoallergenic", never a percentage; the VetCompass median of a young population (8.2 y) stays in research.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|8\.2 y|"8\.2"/i);
+  assert.ok(!d.facts.some((f) => f.field === 'lifespan' && f.value === 8.2));
 });

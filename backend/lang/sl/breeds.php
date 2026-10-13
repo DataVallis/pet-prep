@@ -36,6 +36,7 @@ return [
     'pomeranian' => 'Pomeranec',
     'boston_terrier' => 'Bostonski terier',
     'miniature_american_shepherd' => 'Mali ameriški ovčar',
+    'chihuahua' => 'Čivava',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

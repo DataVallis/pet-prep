@@ -403,6 +403,7 @@ const SPECIES = [
       { id: 'pomeranian', synonyms: { en: ['Pom', 'German Toy Spitz', 'Zwergspitz'], sl: ['pom', 'nemški špic', 'nemski spic', 'zwergspitz'] } },
       { id: 'boston_terrier', synonyms: { en: ['Boston', 'American Gentleman'], sl: ['boston', 'boston terier'] } },
       { id: 'miniature_american_shepherd', synonyms: { en: ['Mini American', 'MAS', 'Miniature Australian Shepherd', 'Mini Aussie'], sl: ['mali ameriski ovcar', 'mini aussie'] } },
+      { id: 'chihuahua', synonyms: { en: ['Chi', 'Chihuahueño', 'Smooth Coat Chihuahua'], sl: ['civava', 'chihuahua', 'čihuahua'] } },
     ],
   },
   {
@@ -427,7 +428,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -1004,6 +1005,36 @@ const DOG_FACTS = {
       ['kneecap_luxation', 'health.luxating_patella'],
     ],
   },
+  // M5-R10-33 (Smooth Coat). Not exported: adult_weight.fci (the KC / PDSA range is shown; FCI ideal
+  // 1.5–2.5 kg stays in research), adult_weight.salt_category (our assignment), lifespan.vetcompass
+  // (8.2 y — the median age at death of a young population, biased downwards by its own authors' account;
+  // never shown), lifespan.mcmillan_2024 (null), lifespan.senior_from (derived), health.dental (the RVC
+  // sentence health.dental_weight is shown), health.merle / other_pdsa (background), suitability.rkc_breed_watch
+  // (Category 2 without returned points — no chip, open for David). Height: no standard gives one → the PDSA
+  // average range (Bulldog / Boston Terrier precedent). Own health keys: legg_perthes, hydrocephalus,
+  // eye_problems_dry_eye_entropion_lens_luxation, heart_valve_screening and dental_weight_problems (no shared
+  // sentence matches this breed's sources).
+  chihuahua: {
+    height: ['height.pdsa_average'],
+    weight: [['adult_weight.rkc', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.luxating_patella'],
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['legg_perthes', 'health.legg_perthes'],
+      ['hydrocephalus', 'health.hydrocephalus'],
+      ['eye_problems_dry_eye_entropion_lens_luxation', 'health.eyes'],
+      ['heart_valve_screening', 'health.heart'],
+      ['windpipe_collapse_breathing', 'health.tracheal_collapse'],
+      ['cm_sm_screening', 'health.syringomyelia'],
+      ['dental_weight_problems', 'health.dental_weight'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1237,6 +1268,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.miniature_american_shepherd.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.miniature_american_shepherd.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.miniature_american_shepherd.exercise_minutes_senior',
+  },
+  chihuahua: {
+    adult_minutes: ['proposed_game_parameters.chihuahua.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.chihuahua.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.chihuahua.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.chihuahua.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.chihuahua.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.chihuahua.exercise_minutes_senior',
   },
 };
 

@@ -27,8 +27,8 @@ import { BREED_SPECIES, breedName, foldForSearch, isKnownBreed, isSpecies } from
  * Puppy / young: 10 min × age in months up to the adult goal (mutt 60 min, Border Collie
  * 120 min, Labrador 90 min — reached at 9 months, Golden Retriever 120 min — reached at
  * 12 months, French Bulldog, Miniature Schnauzer, Shih Tzu, Boston Terrier and Miniature American Shepherd 60 min — reached at 6 months, German Shepherd 120 min — reached at
- * 12 months, Cavalier King Charles Spaniel, Beagle, Standard Poodle and Dachshund 60 min — reached at 6 months, Australian Shepherd 120 min — reached at 12 months, Havanese, Yorkshire Terrier and Pomeranian 30 min — reached at 3 months, West Highland White Terrier and Bernese Mountain Dog 60 min — reached at 6 months, Siberian Husky and Rottweiler 120 min — reached at 12 months, Bulldog 60 min — reached at 6 months, German Shorthaired Pointer, Cane Corso, Dobermann, Boxer and Great Dane 120 min — reached at 12 months, Pembroke Welsh Corgi 60 min — reached at 6 months); senior 75 % of adult (Labrador 68 min, whole minutes on the server; Golden 90 min;
- * French Bulldog 45 min; German Shepherd 90 min; Cavalier 45 min; Beagle 45 min; Standard Poodle 45 min; Dachshund 45 min; Australian Shepherd 90 min; Havanese 23 min; West Highland White Terrier 45 min; Bernese Mountain Dog 45 min; Siberian Husky 90 min; Rottweiler 90 min; Bulldog 45 min; German Shorthaired Pointer 90 min; Yorkshire Terrier 23 min; Cane Corso 90 min; Pembroke Welsh Corgi 45 min; Dobermann 90 min; Boxer 90 min; Miniature Schnauzer 45 min; Shih Tzu 45 min; Great Dane 90 min; Pomeranian 23 min; Boston Terrier 45 min; Miniature American Shepherd 45 min). Arrival age: puppy 2, young 9 months (§4). Cat texts
+ * 12 months, Cavalier King Charles Spaniel, Beagle, Standard Poodle and Dachshund 60 min — reached at 6 months, Australian Shepherd 120 min — reached at 12 months, Havanese, Yorkshire Terrier, Pomeranian and Chihuahua 30 min — reached at 3 months, West Highland White Terrier and Bernese Mountain Dog 60 min — reached at 6 months, Siberian Husky and Rottweiler 120 min — reached at 12 months, Bulldog 60 min — reached at 6 months, German Shorthaired Pointer, Cane Corso, Dobermann, Boxer and Great Dane 120 min — reached at 12 months, Pembroke Welsh Corgi 60 min — reached at 6 months); senior 75 % of adult (Labrador 68 min, whole minutes on the server; Golden 90 min;
+ * French Bulldog 45 min; German Shepherd 90 min; Cavalier 45 min; Beagle 45 min; Standard Poodle 45 min; Dachshund 45 min; Australian Shepherd 90 min; Havanese 23 min; West Highland White Terrier 45 min; Bernese Mountain Dog 45 min; Siberian Husky 90 min; Rottweiler 90 min; Bulldog 45 min; German Shorthaired Pointer 90 min; Yorkshire Terrier 23 min; Cane Corso 90 min; Pembroke Welsh Corgi 45 min; Dobermann 90 min; Boxer 90 min; Miniature Schnauzer 45 min; Shih Tzu 45 min; Great Dane 90 min; Pomeranian 23 min; Boston Terrier 45 min; Miniature American Shepherd 45 min; Chihuahua 23 min). Arrival age: puppy 2, young 9 months (§4). Cat texts
  * that differ by species live under `pet:picker.cat` (M5-R06_PLAN T8) — read them through
  * {@link pickerText}.
  */
@@ -568,6 +568,19 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
       suitability: {
         suits: ['family_pet', 'children', 'other_pets'],
         consider: ['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds'],
+      },
+    },
+    {
+      breed: 'chihuahua',
+      species: 'dog',
+      premium: true,
+      free_plan_allowed: false,
+      challenge_allowed: true,
+      search_keywords: ['chihuahua', 'čivava', 'civava', 'chi'],
+      sort_order: 290,
+      suitability: {
+        suits: ['apartment', 'other_pets'],
+        consider: ['older_children', 'needs_company', 'sheds'],
       },
     },
   ],

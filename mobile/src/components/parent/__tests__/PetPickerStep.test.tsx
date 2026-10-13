@@ -270,6 +270,7 @@ describe('PetPickerStep', () => {
       'breed-option-pomeranian',
       'breed-option-boston_terrier',
       'breed-option-miniature_american_shepherd',
+      'breed-option-chihuahua',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -765,6 +766,54 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/\d|%/);
       expect(consider).not.toHaveTextContent(/\d|%/);
       expect(screen.getByTestId('breed-option-miniature_american_shepherd')).toHaveTextContent(/Miniature American Shepherd/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-33: the Chihuahua (fallback) shows its chips, is found as "čivava" and "civava", and quotes 3.000 / 2.300 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const chi = screen.getByTestId('breed-option-chihuahua');
+    expect(chi).toHaveTextContent(/Čivava/);
+    expect(chi).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-chihuahua-suits');
+    expect(suits).toHaveTextContent(/dom z drugimi ljubljenčki/);
+    const consider = screen.getByTestId('breed-suitability-chihuahua-consider');
+    expect(consider).toHaveTextContent(/majhen pes — bolje za starejše otroke/);
+    expect(consider).toHaveTextContent(/rad ima družbo — naj bo nekdo večino dneva doma/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+    expect(suits).not.toHaveTextContent(/družino z otroki/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'čivava');
+    expect(screen.getByTestId('breed-option-chihuahua')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'civava');
+    expect(screen.getByTestId('breed-option-chihuahua')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-chihuahua'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 3\.000 pri 3 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/3\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/2\.300 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'chihuahua', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'chihuahua' }),
+    );
+  });
+
+  it('M5-R10-33: the Chihuahua chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-chihuahua-suits');
+      const consider = screen.getByTestId('breed-suitability-chihuahua-consider');
+      expect(suits).toHaveTextContent(/homes with other pets/);
+      expect(consider).toHaveTextContent(/small dog — better with older children/);
+      expect(consider).toHaveTextContent(/loves company — best with someone home most of the day/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-chihuahua')).toHaveTextContent(/Chihuahua/);
     } finally {
       await i18n.changeLanguage('sl');
     }
