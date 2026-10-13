@@ -33,7 +33,9 @@ export interface paths {
          *     `password` required, `confirm` must be true); a parent without a password
          *     (Google / Apple sign-up, M2-10c) sends `provider` + `id_token` (+ `nonce`
          *     for Apple) of a linked provider, issued ≤ 10 min ago, instead of
-         *     `password` → else 422 `reauth_required` (503 `provider_unavailable` /
+         *     `password` (Apple: + `authorization_code` of that sign-in → after the
+         *     deletion commits, the Apple tokens are revoked by a queued job — App
+         *     Store 5.1.1(v)) → else 422 `reauth_required` (503 `provider_unavailable` /
          *     `provider_disabled` when the provider cannot be checked); 403 `superadmin_protected`;
          *     429 `too_many_attempts` + `Retry-After` after 5 wrong passwords in 15 min
          *     (only failed attempts count; separate from the child deletion).
@@ -1656,7 +1658,7 @@ export interface components {
          *     `{password: the parent's current password, confirm: true, confirm_word?}`.
          *     A parent WITHOUT a password (signed up with Google / Apple, M2-10c) sends
          *     `{provider, id_token, nonce?, authorization_code?}` instead of `password`
-         *     (`authorization_code`: Apple only, reserved for token revocation, unused): a fresh ID token (≤ 10
+         *     (`authorization_code`: Apple only — account deletion revokes the Apple tokens with it): a fresh ID token (≤ 10
          *     min) of a provider linked to the account; wrong / stale / unlinked → 422
          *     `reauth_required` (AccountDeletionService::confirmIdentity). For a parent
          *     WITH a password the password stays required and the provider fields are
@@ -1684,9 +1686,10 @@ export interface components {
             /** @description Apple: the RAW nonce of that sign-in. */
             nonce?: string | null;
             /**
-             * @description Apple only: the sign-in's authorization code. RESERVED for revoking
-             *     the Apple token on account deletion (needs David's Apple .p8 key) —
-             *     accepted and validated, not used yet; never logged, never stored.
+             * @description Apple only: the authorization code of that Apple sign-in. Account
+             *     deletion uses it to revoke the Apple tokens (queued
+             *     RevokeAppleTokenJob, encrypted payload); child deletion ignores it.
+             *     Never logged, never stored in the database.
              */
             authorization_code?: string | null;
             /** @enum {unknown} */
@@ -14961,9 +14964,10 @@ export interface operations {
                 /** @description Apple: the RAW nonce of that sign-in. */
                 nonce?: string | null;
                 /**
-                 * @description Apple only: the sign-in's authorization code. RESERVED for revoking
-                 *     the Apple token on account deletion (needs David's Apple .p8 key) —
-                 *     accepted and validated, not used yet; never logged, never stored.
+                 * @description Apple only: the authorization code of that Apple sign-in. Account
+                 *     deletion uses it to revoke the Apple tokens (queued
+                 *     RevokeAppleTokenJob, encrypted payload); child deletion ignores it.
+                 *     Never logged, never stored in the database.
                  */
                 authorization_code?: string | null;
                 confirm: "yes" | "on" | "1" | 1 | "true" | true;

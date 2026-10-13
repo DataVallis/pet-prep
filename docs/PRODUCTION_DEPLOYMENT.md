@@ -81,7 +81,7 @@ The stack runs as a single-server Docker Compose environment inside an isolated 
    - Broadcasts `pet.updated` on the private channel `private-pet.{petId}` to the child app and the parent dashboard. Channel auth: `POST /api/broadcasting/auth` (Sanctum bearer token, served by `app`).
 
 4. **Queue Workers (`queue`, `queue-broadcasts`):**
-   - `queue`: `php artisan queue:work redis --queue=default --tries=3 --timeout=90` (fal.ai reference images).
+   - `queue`: `php artisan queue:work redis --queue=auth,default --tries=3 --timeout=90` (`auth` first — M2-10c Apple token revocation after an account deletion, the Apple code lives 5 min; then fal.ai reference images).
    - `queue-broadcasts`: `php artisan queue:work redis --queue=broadcasts --tries=3 --backoff=2 --timeout=15` — delivers queued `PetUpdated` events to Reverb, so a Reverb outage never blocks the scheduler (M1-09).
    - Both restarted after each deployment (`queue:restart`).
 

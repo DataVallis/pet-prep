@@ -96,6 +96,20 @@ return [
         // later, a Services ID for Android / web. Comma-separated. Empty → disabled.
         'audiences' => array_values(array_filter(array_map('trim', explode(',', (string) env('APPLE_AUDIENCES', 'com.datavallis.petprep'))))),
         'jwks_url' => 'https://appleid.apple.com/auth/keys',
+
+        // Token revocation when a parent deletes the account (M2-10c, App Store
+        // guideline 5.1.1(v)). Team / key ids are public identifiers (defaults);
+        // the private key (.p8) is a SECRET — base64 of the whole file (one line)
+        // or raw PEM with `\n` escapes. Without it revocation is skipped (logged),
+        // the deletion itself still succeeds.
+        'team_id' => env('APPLE_TEAM_ID', '4345XU4MU8'),
+        'key_id' => env('APPLE_KEY_ID', 'Z8WR3WL68G'),
+        'private_key' => env('APPLE_SIGN_IN_PRIVATE_KEY'),
+        // client_id of the token / revoke calls = the iOS bundle id (empty → the
+        // first of `audiences`, else com.datavallis.petprep).
+        'client_id' => env('APPLE_CLIENT_ID'),
+        'token_url' => 'https://appleid.apple.com/auth/token',
+        'revoke_url' => 'https://appleid.apple.com/auth/revoke',
     ],
 
 ];
