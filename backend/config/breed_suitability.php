@@ -707,7 +707,7 @@ return [
         // breed (RKC Breed Watch Category 1, S223). No new vocabulary key.
         'miniature_schnauzer' => [
             'suits' => [
-                // S223 "Size of home: Flat/Apartment" / "Size of garden: Small/medium garden".
+                // S223 "Size of home: Flat/ Apartment" / "Size of garden: Small/ medium garden".
                 ['tag' => 'apartment', 'source_ids' => ['S223'], 'refs' => ['miniature_schnauzer.suitability.rkc_size_of_home', 'miniature_schnauzer.suitability.rkc_size_of_garden']],
                 // S226 "They can get on well with children if they're introduced at an early age."
                 ['tag' => 'children', 'source_ids' => ['S226'], 'refs' => ['miniature_schnauzer.suitability.pdsa_children', 'miniature_schnauzer.behaviour.family']],

@@ -12052,7 +12052,7 @@
         "source_id": "S227",
         "quote": "The median age at death of Miniature Schnauzers overall was 11.6 years (IQR 9.3–13.1, range 0.5–17.0).",
         "confidence": "medium",
-        "notes": "O'Neill et al. 2019 (S227), VetCompass UK 2013 ('There were 86 deaths recorded during the study.'). The article gives 11.7 y in one Results passage (tool note); the RVC summary (S228): '11.7 years, which is similar to the average of 12.0 years for dogs overall.' McMillan 2024 (S54) and the Dogs Trust breed table (S123) not reachable this run — runbook rule: else a VetCompass median. Consistent with the breed-page band 'Over 10 years' (S223, S226)."
+        "notes": "O'Neill et al. 2019 (S227), VetCompass UK 2013 ('There were 86 deaths recorded during the study.'). The same sentence and value appear in the Abstract, Results and Discussion (re-read 2026-10-13); one Results sentence ('Given the median longevity value for Miniature Schnauzers of 11.7 years reported in the next section') says 11.7 y, which would give a senior boundary of 105 months; the RVC summary (S228): '11.7 years, which is similar to the average of 12.0 years for dogs overall.' McMillan 2024 (S54) and the Dogs Trust breed table (S123) not reachable this run — runbook rule: else a VetCompass median. Consistent with the breed-page band 'Over 10 years' (S223, S226)."
       },
       "rkc": {
         "value": "> 10",
@@ -12076,7 +12076,7 @@
         "source_id": null,
         "quote": null,
         "confidence": "medium",
-        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 11.6 y (S227) → 0.75 × 11.6 = 8.7 y = 104.4 → 104 months. With the breed-page 'Over 10 years' (S223): 0.75 × 10 = 7.5 y = 90 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 11.6 y (S227) → 0.75 × 11.6 = 8.7 y = 104.4 → 104 months. With 11.7 y (one passage of S227, RVC summary S228): 105 months. With the breed-page 'Over 10 years' (S223): 0.75 × 10 = 7.5 y = 90 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
         "derived_from": [
           "S11",
           "S227"
@@ -12361,18 +12361,18 @@
         "notes": ""
       },
       "rkc_size_of_home": {
-        "value": "Flat/Apartment",
+        "value": "Flat/ Apartment",
         "unit": "—",
         "source_id": "S223",
-        "quote": "Size of home: Flat/Apartment",
+        "quote": "Size of home: Flat/ Apartment",
         "confidence": "high",
-        "notes": "Basis of apartment (runbook: only from RKC 'Flat/Apartment')."
+        "notes": "Basis of apartment (runbook: only from RKC 'Flat/ Apartment')."
       },
       "rkc_size_of_garden": {
-        "value": "Small/medium garden",
+        "value": "Small/ medium garden",
         "unit": "—",
         "source_id": "S223",
-        "quote": "Size of garden: Small/medium garden",
+        "quote": "Size of garden: Small/ medium garden",
         "confidence": "high",
         "notes": ""
       },
@@ -18349,13 +18349,14 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 104 = round(0.75 × 11.6 y × 12) = round(104.4) (S11 + VetCompass median 11.6 y, S227). No McMillan 2024 value reachable. Alternatives: 90 (RKC 'Over 10 years', S223), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 104 = round(0.75 × 11.6 y × 12) = round(104.4) (S11 + VetCompass median 11.6 y, S227). No McMillan 2024 value reachable. Alternatives: 105 (the paper's one 11.7 y passage and the RVC summary S228), 90 (RKC 'Over 10 years', S223), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
         "derived_from": [
           "S11",
           "S10",
           "S227"
         ],
         "alternatives": {
+          "senior_vetcompass_11_7_y": 105,
           "senior_rkc_lower_bound": 90,
           "senior_dogs_trust_7_y": 84
         },
@@ -18433,7 +18434,7 @@
               "miniature_schnauzer.suitability.rkc_size_of_home",
               "miniature_schnauzer.suitability.rkc_size_of_garden"
             ],
-            "quote": "S223 'Size of home: Flat/Apartment' / 'Size of garden: Small/medium garden'"
+            "quote": "S223 'Size of home: Flat/ Apartment' / 'Size of garden: Small/ medium garden'"
           },
           {
             "tag": "children",
@@ -18477,7 +18478,7 @@
           "small_children": "No rating; PDSA's statement is conditional (S226).",
           "first_time_owner": "No source (PDSA: stubborn, patience in training, S226).",
           "experienced_owner": "No source.",
-          "large_home": "RKC 'Flat/Apartment' (S223).",
+          "large_home": "RKC 'Flat/ Apartment' (S223).",
           "active_family": "RKC 'Up to 1 hour per day' (S223).",
           "long_daily_exercise": "60 min (S223, S226).",
           "other_pets": "No source.",

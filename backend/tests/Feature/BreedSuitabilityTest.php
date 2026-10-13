@@ -549,7 +549,7 @@ it('gives the Miniature Schnauzer apartment, children, low_shedding and frequent
         ->and($schnauzer['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
         ->not->toContain('sensitive_skin')->not->toContain('back_spine')->not->toContain('shorter_lifespan')->not->toContain('sheds');
 
-    expect(bsEntry('miniature_schnauzer.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Flat/Apartment')
+    expect(bsEntry('miniature_schnauzer.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Flat/ Apartment')
         ->and(bsEntry('miniature_schnauzer.suitability.rkc_shedding')['quote'])->toBe('Sheds: No')
         ->and(bsEntry('miniature_schnauzer.suitability.pdsa_children')['quote'])->toBe("They can get on well with children if they're introduced at an early age.")
         ->and(bsEntry('miniature_schnauzer.behaviour.family')['notes'])->toContain('early introduction')
