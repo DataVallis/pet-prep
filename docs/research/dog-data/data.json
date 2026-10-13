@@ -15199,6 +15199,608 @@
       }
     }
   },
+  "chihuahua": {
+    "_note": "Added 2026-10-13 (M5-R10-33, unattended run — appended after the Miniature American Shepherd: AKC 2024 No. 27, S174 full-list table 'ranks 24–30: Miniature American Shepherd, Havanese, Siberian Husky, Chihuahua, …' — Havanese and Siberian Husky are already in). Quotes as returned by the web-fetch tool on 2026-10-13 (the tool limits quotes to ~125 characters — long sentences are quoted in pieces; apostrophes as returned); spot-check before import (sources.md S272–S280, reused S10, S11, S14, S24, S35, S45, S92, S174). The game builds the **Smooth Coat** variety: The Royal Kennel Club lists Chihuahua (Smooth Coat) and Chihuahua (Long Coat) as two breeds (S275), the FCI keeps one breed with two varieties (S272); grooming, coat and the portrait follow the smooth coat (Dachshund 'smooth coat' precedent). Lifespan: no McMillan 2024 value reachable (Dogs Trust tables S123 and 'shortest and longest' returned a provenance block / fetch error, PMC a browser check); the VetCompass breed paper (S279) gives a median age at death of 8.2 years but its authors call the population 'young expanding' and say this biases age at death downwards — so the senior boundary uses the RKC / PDSA lower bound 'Over 12 years' (108 months) as Claude's suggestion, seeded verified=false (open for David; the strict rule order would give 74). Not a flat-faced breed (KC S274 'muzzle moderately short, slightly pointed'; no BVA / VetCompass source calls it brachycephalic) → in marketing; RKC Breed Watch Category 2 (S276) without returned points → no welfare chip (Pomeranian precedent, open for David).",
+    "identity": {
+      "value": "FCI No. 218, Group 9 Section 6 (Chihuahueño), Mexico",
+      "unit": "—",
+      "source_id": "S272",
+      "quote": "CHIHUAHUEÑO (218)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S272): group 'n°9 - Chiens d'agrément et de compagnie', section 'Chihuahueno', country 'MEXIQUE' (as returned, French page); varieties 'a) Poil long' and 'b) Poil court'; the English standard row names it 'CHIHUAHUA'; not subject to a working trial; valid standard 04/09/2019. FCI standard (S273, Italian text hosted by ENCI): 'CLASSIFICAZIONE FCI: Gruppo 9 Cani da compagnia' (Section 6), 'ORIGINE: Messico.'"
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S275",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "PDSA (S277): 'Size | Small' — sources agree. RKC group: Toy (S275). Weight 1.8–2.7 kg (S274) = the smallest weight band (S8)."
+    },
+    "height": {
+      "pdsa_average": {
+        "value": {
+          "male": [
+            12,
+            20
+          ],
+          "female": [
+            12,
+            20
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S277",
+        "quote": "Average height | 12-20 cm",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S277), one range for both sexes (stored per sex). No breed standard gives a height: FCI (S273) 'In questa razza non si tiene conto della taglia, ma solo del peso.' (size is not taken into account, only weight); the KC standard (S274) gives weight only. Bulldog / Boston Terrier precedent: the PDSA average range."
+      }
+    },
+    "adult_weight": {
+      "rkc": {
+        "value": {
+          "male": [
+            1.8,
+            2.7
+          ],
+          "female": [
+            1.8,
+            2.7
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S274",
+        "quote": "Up to 2.7kg, with 1.8kg – 2.7kg preferred.",
+        "confidence": "high",
+        "notes": "KC breed standard (S274, hosted by KUSA, KC [01-2015]), one range for both sexes (stored per sex). PDSA (S277): 'Average weight | 1.8-2.7 kg' — agrees. The game range (adult_weight_kg)."
+      },
+      "fci": {
+        "value": {
+          "male": [
+            1.5,
+            2.5
+          ],
+          "female": [
+            1.5,
+            2.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S273",
+        "quote": "Peso ideale: fra 1,5 kg. e 2,5 kg.",
+        "confidence": "high",
+        "notes": "FCI standard (S273, Italian): ideal weight 1.5–2.5 kg; 'Peso: da 1 a 3 kg.' (accepted 1–3 kg); 'I cani che pesano meno di 1 kg. e più di 3 kg. saranno squalificati.' (under 1 kg or over 3 kg disqualified). Background only; the register shows the KC / PDSA range."
+      },
+      "salt_category": {
+        "value": "I",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 1.8–2.7 kg = the smallest band. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "8–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Toy (5–12 pounds): 8–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. 1.8–2.7 kg ≈ 4–6 lb sits at the lower edge of 'Toy (5–12 pounds)' — the smallest class PetMD gives, used as the nearest (Pomeranian precedent). The game is unaffected (the puppy cap of 30 min is reached at 3 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Chihuahua growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S275",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC breed page (S275). PDSA (S277): 'Average lifespan | Over 12 years' — same. The basis of the senior suggestion (verified=false — see senior_from)."
+      },
+      "vetcompass": {
+        "value": 8.2,
+        "unit": "years",
+        "source_id": "S279",
+        "quote": "Median age at death from this young expanding population was 8.2 years (IQR 3.5–12.1).",
+        "confidence": "medium",
+        "notes": "O'Neill et al. 2020, BMC Veterinary Research 16:42 (S279, RVC repository copy), VetCompass 2016. 'The median age of the Chihuahuas overall was 2.8 years (interquartile range [IQR] 1.6–4.9, range 0.1–18.6).' The authors (Discussion): a young population 'would have the effect of biasing the age at death results downwards.' RVC infographic (S280): 'live on average 8.2 years'. Not shown in the app or the register (a misleading median of a young population — runbook §4 export rule); background for the senior decision only."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024: the Dogs Trust breed table (S123) URL was refused by the fetch tool (not in this session's provenance set), the Dogs Trust 'shortest and longest' PDF returned a fetch error, PMC (PMC11021557) a browser check, Science News (no breed value) — 2026-10-13. Check S123 before replacing the RKC lower bound."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12 y (RKC / PDSA lower bound 'Over 12 years', S275 / S277) → 0.75 × 12 = 9 y = 108 months. The strict runbook order (McMillan 2024, else a VetCompass median, else the RKC lower bound) would take the VetCompass median 8.2 y (S279) → round(0.75 × 8.2 × 12) = 74 months, but its own authors say the young population biases age at death downwards; 74 months (6 years) would also contradict both the RKC and the PDSA 'Over 12 years'. → Claude's suggestion 108, seeded verified=false (also the senior arrival age), open for David. Dogs Trust rule of thumb > 7 y = 84 months (S14).",
+        "derived_from": [
+          "S11",
+          "S275"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        },
+        "alternative_vetcompass": {
+          "value_years": 8.2,
+          "months": 74,
+          "derived_from": [
+            "S11",
+            "S279"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 30",
+        "unit": "minutes/day",
+        "source_id": "S275",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "PDSA (S277): 'Your Chihuahua will need a minimum of half an hour exercise' / 'every day to stay happy and healthy.' (key facts 'Minimum exercise (per day) | 30 minutes'); AKC (S278): 'They require minimal exercise and are happy to curl up in their owner’s lap.' — sources agree on 30; RKC preferred (runbook rule)."
+      },
+      "after_meals": {
+        "value": "leave a gap after eating and before exercising",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "medium",
+        "notes": "PDSA (S277), feeding section; also 'it's usually recommended to split their daily allowance into two meals.' (= the game's two adult meals). → proposed_game_parameters.chihuahua.meal_exercise_gap (M5-R16, Shih Tzu precedent)."
+      },
+      "walks": {
+        "value": "split into two smaller walks",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "We'd recommend splitting this into two smaller walks so they can have a sniff and explore.",
+        "confidence": "medium",
+        "notes": "PDSA (S277). The game's walk counts steps over the whole day — nothing new to build."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "gay, spirited and intelligent; bold, saucy, outgoing and confident",
+        "unit": "—",
+        "source_id": "S274",
+        "quote": "Gay, spirited, and intelligent, neither snappy nor withdrawn.",
+        "confidence": "high",
+        "notes": "KC standard (S274) 'Temperament'. RKC breed page (S275): 'Bold and saucy in temperament, the breed comes in two varieties'; 'Outgoing and confident, the Chihuahua has a huge personality in a tiny frame.' FCI (S273): 'Svelto, sveglio, vivace e molto coraggioso.' (quick, alert, lively and very brave). PDSA (S277): personalities vary — 'some are reported to be feisty and confident,' / 'not afraid to stand up for themselves, while others can be timid, shy and fearful.'"
+      },
+      "family": {
+        "value": "better suited to families with slightly older children; AKC: not recommended for homes with children",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Because of this, they're better suited to families with slightly older children",
+        "confidence": "medium",
+        "notes": "PDSA (S277): 'As Chihuahuas are small and light weight, they're very tempting for children to pick up and play with' / 'which they're unlikely to enjoy.' / 'who understand that they may not want to be picked up or fussed all the time.' AKC (S278): 'Chihuahuas can make good family pets, but aren’t recommended for homes with children.'; 'Chihuahuas are too small for roughhousing, and overly-excited children could be dangerous for them.' → consider older_children (PDSA, the Pomeranian's chip 'small dog — better with older children'); never children / small_children / family_pet (AKC advises against homes with children)."
+      },
+      "socialisation": {
+        "value": "socialise from a young age with lots of different people, experiences and places",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "This is why it's really important to socialise your Chihuahua from a young age",
+        "confidence": "medium",
+        "notes": "PDSA (S277): 'with lots of different people, experiences and places so they grow up to be a well-rounded adult.' AKC (S278): 'Early socialization and training can help make a Chihuahua more open to people and other pets.' → proposed_game_parameters.chihuahua.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "time_alone": {
+        "value": "love company, need someone around the home all the time; do not cope well with even very short periods alone",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "As companion dogs Chihuahuas love company and need someone around the home all the time.",
+        "confidence": "medium",
+        "notes": "PDSA (S277): 'They tend not to cope well with even very short periods alone' / 'so we wouldn't recommend a Chihuahua if you're away from home a lot without them' / 'as they can quickly develop separation anxiety.' → consider needs_company (Boxer precedent); never often_alone."
+      },
+      "other_pets": {
+        "value": "will live happily with another pet they have grown up with, but may chase unfamiliar pets",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Generally speaking, your Chihuahua will live happily with another pet they have grown up with.",
+        "confidence": "medium",
+        "notes": "PDSA (S277): 'However, this won't stop them from chasing any unfamiliar pets in their garden!' AKC (S278): 'Chihuahuas are somewhat social.' Basis of other_pets (with the grown-up-together caveat, Pomeranian / Standard Poodle precedent). Chasing unfamiliar pets is not a 'high prey drive' statement → no chases_small_pets (runbook rule)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (RKC S275, PDSA S277, AKC S278 checked) → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag. RVC infographic (S280): obesity is a common problem — health.dental_weight, not a food-motivation statement. RKC Toy group text (S275, as returned): 'some can be finicky eaters' — group, not breed."
+      },
+      "training_notes": {
+        "value": "clever; positive, reward-based, consistent training",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Chihuahuas are clever little dogs who respond really well to positive, reward-based training.",
+        "confidence": "medium",
+        "notes": "PDSA (S277): 'and to be treated with a firm but fair attitude.' AKC (S278): 'Chihuahuas are eager to please their owners, making them an easier breed to train.' Not a first-time-owner statement → no first_time_owner / experienced_owner tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 2 (S276) — the breed's points of concern were not returned (the page shows only the category), so no welfare chip is given (Pomeranian precedent, open for David). Main topics (PDSA S277): luxating patellas, hip dysplasia, hydrocephalus, eye problems, heart disease, tracheal collapse, Legg-Perthes disease, dental problems, dystocia, cryptorchidism, CM/SM. VetCompass (S279 / S280): dental disease and obesity particularly common.",
+      "luxating_patella": {
+        "value": "luxating patellas — kneecaps slipping temporarily out of place",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Luxating patellas – where the kneecaps slip temporarily out of place.",
+        "confidence": "medium",
+        "notes": "PDSA (S277): 'Before breeding parents can be checked by a vet for this.' (→ breeder checklist patella_scheme, other_scheme)."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia — leading to arthritis",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Hip dysplasia – where the hip joint doesn’t fit together perfectly, which will eventually lead to arthritis.",
+        "confidence": "medium",
+        "notes": "PDSA (S277): 'Before breeding, dogs should be screened by x-rays through the BVA/Kennel Club Hip Dysplasia Scheme.' (→ breeder checklist hip_scheme, other_scheme). Not a Breed Watch point → no hips_hind_legs chip."
+      },
+      "legg_perthes": {
+        "value": "Legg-Perthes disease — the hip joint dies and crumbles",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Legg-Perthes disease (Legg-Calvé-Perthes) – a painful condition which causes the hip joint to die and crumble.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S277)."
+      },
+      "hydrocephalus": {
+        "value": "hydrocephalus — fluid build-up around the brain",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Hydrocephalus – a build-up of fluid around the brain.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S277)."
+      },
+      "eyes": {
+        "value": "dry eye (KCS), entropion, lens luxation; eye testing available",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Entropion – inward rolling of the eyelids which can often cause irritation to the eye.",
+        "confidence": "medium",
+        "notes": "PDSA (S277): 'Dry eye (Keratoconjunctivitis sicca or KCS)' / 'a condition that stops your dog producing tears and causes dry, painful eyes.'; 'Lens luxation'. RKC best-practice eye testing (S275): 'Eye testing using the BVA/KC/ISDS Eye Scheme'."
+      },
+      "heart": {
+        "value": "heart disease — heart scans can screen parents for heart valve problems",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Heart disease – heart scans can screen parents for heart valve problems.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S277) (→ breeder checklist heart_scheme, other_scheme). RVC infographic (S280) lists heart murmur among common disorders (layout unclear — background)."
+      },
+      "tracheal_collapse": {
+        "value": "tracheal collapse — the windpipe weakens and collapses, causing breathing problems",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Tracheal collapse – a condition where the windpipe gradually gets weaker and ‘collapses’ causing breathing problems.",
+        "confidence": "medium",
+        "notes": "PDSA health list (S277)."
+      },
+      "syringomyelia": {
+        "value": "Chiari-like malformation / syringomyelia (CM/SM); a BVA/KC screening scheme exists",
+        "unit": "—",
+        "source_id": "S275",
+        "quote": "CM/SM screening using the KC/ BVA Chiari-like malformation/ syringomyelia (CM/SM) screening scheme",
+        "confidence": "medium",
+        "notes": "RKC breed page best-practice test (S275). PDSA (S277): 'Chiari malformation and Syringomyelia (CM/SM) – a very painful condition where fluid-filled areas' / 'develop within the spinal cord near the brain.' / 'There is currently a BVA/KC scheme for this.'"
+      },
+      "dental": {
+        "value": "overcrowding of the teeth, retained puppy teeth and dental disease",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Dental problems – due to the shape of their jaw, they can experience overcrowding of the teeth,",
+        "confidence": "medium",
+        "notes": "PDSA (S277): 'retention of puppy teeth and dental disease.'; equipment list names 'pet-safe toothpaste and toothbrushes,'. → proposed_game_parameters.chihuahua.tooth_brushing (sourced need, ROADMAP M5-R15)."
+      },
+      "dental_weight": {
+        "value": "dental disease and obesity particularly common; owners can help prevent them",
+        "unit": "—",
+        "source_id": "S280",
+        "quote": "Dental disease and obesity are particularly common problems in Chihuahuas, which owners can take measures to help prevent.",
+        "confidence": "medium",
+        "notes": "RVC VetCompass infographic (S280) of O'Neill et al. 2020 (S279). 'Owners should avoid purchasing these puppies on impulse or as accessories.' (S280). No frequency."
+      },
+      "merle": {
+        "value": "merle not a standard colour; merle carries a higher risk of hearing and sight problems",
+        "unit": "—",
+        "source_id": "S276",
+        "quote": "the merle gene in this breed carries an increased risk of impaired hearing and sight problems.",
+        "confidence": "medium",
+        "notes": "RKC breed page (S276, as returned): the RKC will not register certain merle-related litters. KC standard (S274): 'Never merle (dapple).'; FCI (S273): merle disqualifying. The game never draws merle. Background only."
+      },
+      "other_pdsa": {
+        "value": "dystocia, cryptorchidism",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Cryptorchidism – a condition where one testicle does not descend into the scrotal sac.",
+        "confidence": "medium",
+        "notes": "PDSA (S277): 'Dystocia – this breed can struggle to give birth to puppies (dystocia),'. Research only — not exported."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 67,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-10-13): rank 67, the Chihuahua alone, tier 'Fair Working/Obedience Intelligence' (ranks 55–69; the table row itself was not returned verbatim, so no quote is stored). Coren's own top / bottom-10 article (S34) does not list the breed. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Fair",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 40 to 80 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier definition as returned: 'Obey first command: 30% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "clever; positive, reward-based, consistent, firm but fair",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Chihuahuas are clever little dogs who respond really well to positive, reward-based training.",
+        "confidence": "medium",
+        "notes": "PDSA (S277); AKC (S278): 'It’s important to be gentle yet firm with Chihuahuas while training.', 'Like all dogs, it is crucial to begin training early.'"
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.chihuahua.learning_multiplier (0.7, runbook rule: Fair tier, rank 67).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "small, dainty, compact toy dog with a well-rounded 'apple dome' skull, large flaring ears and a sickle tail",
+        "unit": "—",
+        "source_id": "S274",
+        "quote": "Small, dainty, compact.",
+        "confidence": "high",
+        "notes": "KC standard (S274): 'Alert little dog; swift moving with brisk, forceful action, and saucy expression.' FCI (S273): 'È un cane dalla costruzione compatta.' (a compact dog)."
+      },
+      "colours": {
+        "value": [
+          "fawn",
+          "cream",
+          "black and tan",
+          "chocolate",
+          "white",
+          "fawn and white"
+        ],
+        "unit": "list",
+        "source_id": "S274",
+        "quote": "Any colour or mixture of colours.",
+        "confidence": "high",
+        "notes": "KC (S274): 'Never merle (dapple).' FCI (S273): 'Tutti i colori, con tutte le possibili sfumature e combinazioni sono accettati, tranne il “merle”.' (all colours and combinations except merle). The list = common examples of permitted colours (the standards list none by name) — never merle."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Fawn first with the highest weight (portrait default), then cream, black and tan, chocolate, white, fawn and white."
+      },
+      "coat": {
+        "value": "smooth coat: soft texture, close and glossy (undercoat and ruff permissible)",
+        "unit": "—",
+        "source_id": "S274",
+        "quote": "Smooth Coat: smooth, of soft texture, close and glossy, with undercoat and ruff permissible.",
+        "confidence": "high",
+        "notes": "FCI (S273), short-haired variety: 'Il pelo è corto e ben adagiato su tutto il corpo.' (short, close-lying over the whole body). The game builds the Smooth Coat (RKC S275)."
+      },
+      "ears": {
+        "value": "large, flaring, erect, set at about 45°",
+        "unit": "—",
+        "source_id": "S274",
+        "quote": "Large, flaring, set on at an angle of approximately 45, giving breadth between ears.",
+        "confidence": "high",
+        "notes": "KC (S274): 'Tipped or broken-down ears highly undesirable.' FCI (S273): 'Larghi, eretti, largamente aperti' (large, erect, wide open)."
+      },
+      "eyes": {
+        "value": "large, round, not protruding, set well apart, dark or ruby",
+        "unit": "—",
+        "source_id": "S274",
+        "quote": "Large, round, but not protruding; set well apart; centre of eye is on a plane with lowest point of ear and base of stop;",
+        "confidence": "high",
+        "notes": "KC (S274): 'dark or ruby. Light eyes in light colours permissible.' FCI (S273): 'Larghi, rotondeggianti nella forma, molto espressivi, non sporgenti, perfettamente scuri.'"
+      },
+      "nose": {
+        "value": "well-rounded 'apple dome' skull, definite stop, muzzle moderately short and slightly pointed",
+        "unit": "—",
+        "source_id": "S274",
+        "quote": "Well-rounded 'apple dome' skull, cheeks and jaws lean, muzzle moderately short, slightly pointed. Definite stop.",
+        "confidence": "high",
+        "notes": "FCI (S273): 'Testa ben arrotondata a forma di mela (una caratteristica della razza).'; nose 'Moderatamente corto, diretto leggermente verso l'alto.'; muzzle 'Corto, diritto se visto di lato, ampio all'inserzione'. Not flat-faced; the game draws a moderate dome and muzzle (no exaggerated skull, no protruding eyes)."
+      },
+      "tail": {
+        "value": "medium length, set high, carried up and over the back (sickle tail)",
+        "unit": "—",
+        "source_id": "S274",
+        "quote": "Medium length, set high, carried up and over back (sickle tail).",
+        "confidence": "high",
+        "notes": "KC (S274): 'Furry, flattish in appearance, broadening slightly in centre and tapering to point.' FCI (S273): 'Inserita alta, piatta in apparenza, di lunghezza moderata'."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S275, Smooth Coat) and PDSA (S277); AKC (S278) for children / grooming. The RKC page shows no 'Good with children' field (as returned 2026-10-13). Woodgreen not attempted.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S275",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "PDSA (S277): 'Size | Small'."
+      },
+      "rkc_exercise": {
+        "value": "Up to 30 minutes per day",
+        "unit": "—",
+        "source_id": "S275",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S275",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "Basis of the apartment tag (with the garden). AKC (S278): 'make an especially ideal pet for city dwellers.'"
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S275",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S275",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "Basis of the brushing routine (1× a week, runbook dog-grooming rule). Not frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S275",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "PDSA (S277): 'Coat length | Short' (longer haired Chihuahuas also exist — the Long Coat breed)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S275",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PDSA (S277): 'As with any breed, you should expect your Chihuahua to shed, especially over spring and autumn.' — agrees. Basis of the sheds tag."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S275",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "Not shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S275",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S275",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 2",
+        "unit": "—",
+        "source_id": "S276",
+        "quote": "This breed can be affected by conformational concerns, more information can be found here",
+        "confidence": "medium",
+        "notes": "RKC breed page (S275 key facts 'Breed watch category' 'Category 2'; S276 Health section as returned). The points of concern were not returned → no welfare chip; open for David."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page (S275) has no 'Good with children' field."
+      },
+      "pdsa_exercise": {
+        "value": "a minimum of half an hour a day",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Your Chihuahua will need a minimum of half an hour exercise",
+        "confidence": "medium",
+        "notes": "PDSA (S277): 'every day to stay happy and healthy.'"
+      },
+      "pdsa_grooming": {
+        "value": "a weekly brush for short coats; two to three times a week for longer haired Chihuahuas",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "A weekly brush for your short coated and two to three times per week for your longer haired Chihuahua",
+        "confidence": "medium",
+        "notes": "PDSA (S277): 'should be more than enough to keep on top of the dead hairs.' The game builds the Smooth Coat → weekly (agrees with RKC 'Once a week')."
+      },
+      "pdsa_children": {
+        "value": "better suited to families with slightly older children",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "Because of this, they're better suited to families with slightly older children",
+        "confidence": "medium",
+        "notes": "Basis of older_children."
+      },
+      "pdsa_time_alone": {
+        "value": "do not cope well with even very short periods alone",
+        "unit": "—",
+        "source_id": "S277",
+        "quote": "They tend not to cope well with even very short periods alone",
+        "confidence": "medium",
+        "notes": "Basis of needs_company (with behaviour.time_alone)."
+      },
+      "akc_children": {
+        "value": "not recommended for homes with children",
+        "unit": "—",
+        "source_id": "S278",
+        "quote": "Chihuahuas can make good family pets, but aren’t recommended for homes with children.",
+        "confidence": "medium",
+        "notes": "AKC (S278): 'Chihuahuas are too small for roughhousing, and overly-excited children could be dangerous for them.' Stronger than PDSA; the chip stays older_children (PDSA) and never family_pet / children."
+      },
+      "akc_grooming": {
+        "value": "smooth coats: occasional brushing and regular baths; ears checked and cleaned regularly",
+        "unit": "—",
+        "source_id": "S278",
+        "quote": "Chihuahuas with smooth coats require occasional brushing and regular baths to keep them looking their best.",
+        "confidence": "medium",
+        "notes": "AKC (S278): 'Chihuahua’s ears should be checked and cleaned regularly.' Brushing → RKC / PDSA weekly decides. Regular baths and ear cleaning = sourced needs without a game mechanic → proposed_game_parameters.chihuahua.ear_care_bathing → new ROADMAP M5-R20 (needs-david)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -22674,6 +23276,298 @@
         "confidence": "high",
         "notes": "Colours from the FCI (S265) / AKC (S266) standards, 'no order of preference'; merle is standard for this breed (runbook §3, Australian Shepherd precedent). Colour weights are ours (unsourced). Natural tail chosen (no docking).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): blue merle (white and tan markings) portrait default, black / red merle / red options, standard colours and white limits only, natural undocked tail"
+      }
+    },
+    "chihuahua": {
+      "_note": "Unattended run M5-R10-33 (2026-10-13): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. Smooth Coat variety. No new vocabulary key. Sourced needs built from day one: brushing once a week (RKC S275 / PDSA S277) → 1× (M5-R13); socialisation from a young age (PDSA S277) → M5-R17; a gap after eating before exercise (PDSA S277) → M5-R16. Sourced needs without a game mechanic: tooth care (PDSA S277 dental problems, RVC S280 'owners can take measures to help prevent') → ROADMAP M5-R15; ears checked and cleaned regularly and regular baths (AKC S278) → new ROADMAP M5-R20 (needs-david). Senior 108 = Claude's suggestion (verified=false, RKC / PDSA lower bound 12 y) — the VetCompass median 8.2 y (S279) is biased downwards by a young population (its authors) → 74 not used. Not a flat-faced breed → in marketing (never as a dog for children).",
+      "exercise_minutes_adult": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": "S275",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC 'Up to 30 minutes per day' (S275); PDSA 'a minimum of half an hour exercise' every day (S277) — sources agree. Rule: one number N ('up to N') → N = 30.",
+        "alternatives": [
+          {
+            "value": 30,
+            "source_id": "S277",
+            "notes": "PDSA (key facts minimum 30 minutes)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S275 'Up to 30 minutes per day'; PDSA S277 'a minimum of half an hour')"
+      },
+      "step_goal_adult": {
+        "value": 3000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 30 min × 100 steps/min (S45) = 3,000.",
+        "derived_from": [
+          "S275",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min × 100 steps/min → 3,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 23,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 30) = 22.5 → 23 min (half up) → 2,300 steps.",
+        "steps": 2300,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 30 reached at 3 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 30 min (reached at 3 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + RKC lower bound 'Over 12 years', S275; PDSA S277 the same). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S275"
+        ],
+        "alternatives": {
+          "senior_vetcompass_8_2_y": 74,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 108 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 108,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 12 y × 12) = 108 (AAHA last 25 % of lifespan S11 × RKC lower bound 'Over 12 years', S275; PDSA S277 'Over 12 years'). The rule's order would take the VetCompass median 8.2 y (O'Neill et al. 2020, S279) → round(0.75 × 8.2 × 12) = 74, but that paper calls its population 'young expanding' and says this biases age at death downwards, and 74 months contradicts both UK bands. No McMillan 2024 value reachable (S123 not fetchable this run). Alternatives: 74 (VetCompass S279), 84 (Dogs Trust > 7 y, S14). Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S275"
+        ],
+        "alternatives": {
+          "senior_vetcompass_8_2_y": 74,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "predlog Claude 2026-10-13 (spodnja meja RKC / PDSA namesto pristranske mediane VetCompass, M5-R10-33) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 108 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 67 (S35), tier 'Fair' (55–69) → 0.7. PDSA / AKC 'easy to train' statements (S277, S278) — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 67, Fair tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S275",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC (S275) 'Once a week' → 1 (runbook dog-grooming rule). PDSA (S277) 'A weekly brush for your short coated' — agrees; AKC (S278) 'occasional brushing' (no number). Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S277",
+            "notes": "PDSA weekly brush for the short coat"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S277",
+        "quote": "This is why it's really important to socialise your Chihuahua from a young age",
+        "confidence": "medium",
+        "notes": "chihuahua.behaviour.socialisation (PDSA S277). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S277)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S277",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "medium",
+        "notes": "PDSA (S277), feeding section (chihuahua.exercise.after_meals). No length in the source. Built in M5-R16 (David 2026-10-12): 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "tooth_brushing": {
+        "value": null,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S280",
+        "quote": "Dental disease and obesity are particularly common problems in Chihuahuas, which owners can take measures to help prevent.",
+        "confidence": "medium",
+        "notes": "RVC VetCompass infographic (S280) of O'Neill et al. 2020 (S279); PDSA (S277) dental problems and 'pet-safe toothpaste and toothbrushes' in the equipment list. No frequency in the sources. The game has no tooth-brushing mechanic → ROADMAP M5-R15; value null until David decides.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): potreba z virom (nega zob); mehanike ni → ROADMAP M5-R15 (needs-david); vir ne navaja pogostosti"
+      },
+      "ear_care_bathing": {
+        "value": "ears checked and cleaned regularly; regular baths (no frequency given)",
+        "unit": "ear cleaning / bathing (sourced need)",
+        "source_id": "S278",
+        "quote": "Chihuahuas with smooth coats require occasional brushing and regular baths to keep them looking their best.",
+        "confidence": "medium",
+        "notes": "AKC (S278), chihuahua.suitability.akc_grooming: 'Chihuahua’s ears should be checked and cleaned regularly.' The game has no ear-cleaning or bathing mechanic → new ROADMAP M5-R20 'Čiščenje ušes in kopanje psa' (needs-david) with its FEATURES 🗓 row; the source gives no frequency.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno čiščenje ušes in kopanje; mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-33); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S275"
+            ],
+            "refs": [
+              "chihuahua.suitability.rkc_size_of_home",
+              "chihuahua.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S275 'Size of home: Flat/ Apartment' / 'Size of garden: Small/ medium garden'"
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S277"
+            ],
+            "refs": [
+              "chihuahua.behaviour.other_pets"
+            ],
+            "quote": "S277 'Generally speaking, your Chihuahua will live happily with another pet they have grown up with.'",
+            "note": "PDSA: may still chase unfamiliar pets (no prey-drive statement → no chases_small_pets)."
+          }
+        ],
+        "consider": [
+          {
+            "tag": "older_children",
+            "source_ids": [
+              "S277"
+            ],
+            "refs": [
+              "chihuahua.behaviour.family",
+              "chihuahua.suitability.pdsa_children"
+            ],
+            "quote": "S277 'they're better suited to families with slightly older children'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S277"
+            ],
+            "refs": [
+              "chihuahua.behaviour.time_alone",
+              "chihuahua.suitability.pdsa_time_alone"
+            ],
+            "quote": "S277 'As companion dogs Chihuahuas love company and need someone around the home all the time.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S275"
+            ],
+            "refs": [
+              "chihuahua.suitability.rkc_shedding"
+            ],
+            "quote": "S275 'Sheds: Yes'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "AKC: 'aren’t recommended for homes with children' (S278) — a family-pet chip would contradict it.",
+          "children": "PDSA: better with slightly older children (S277); AKC: not recommended for homes with children (S278).",
+          "small_children": "PDSA S277 / AKC S278.",
+          "not_for_small_children": "Its chip says 'large dog' — the Chihuahua is tiny → older_children ('small dog — better with older children').",
+          "fragile_older_children": "Its chip names fragile bones — no A/B source here says so.",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No source.",
+          "large_home": "RKC 'Flat/ Apartment' (S275).",
+          "active_family": "RKC 'Up to 30 minutes per day' (S275).",
+          "long_daily_exercise": "30 min (S275).",
+          "often_alone": "PDSA: does not cope well with even very short periods alone (S277).",
+          "older_owners": "No source.",
+          "low_shedding": "RKC 'Sheds: Yes' (S275).",
+          "frequent_grooming": "RKC 'Once a week' (S275).",
+          "needs_mental_stimulation": "No breed-specific statement.",
+          "food_motivated_weight": "No breed-specific statement (obesity common, S280 — not a food-motivation statement).",
+          "chews_when_bored": "No source.",
+          "may_herd_children": "No source.",
+          "secure_fencing": "No source.",
+          "chases_small_pets": "PDSA: may chase unfamiliar pets in the garden (S277) — not a 'high prey drive' statement.",
+          "shorter_lifespan": "RKC 'Over 12 years' (S275).",
+          "welfare": "RKC Breed Watch Category 2 (S276) but the points of concern were not returned → no welfare chip (open for David); not flat-faced (KC S274 'muzzle moderately short, slightly pointed')."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, other_pets; consider older_children, needs_company, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (never as a dog for children)",
+        "unit": "—",
+        "source_id": "S276",
+        "quote": "This breed can be affected by conformational concerns, more information can be found here",
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 2 (S276), points of concern not returned; the only veterinary advice against advertising a breed type is for flat-faced breeds (BVA S92) — not this breed (muzzle moderately short, slightly pointed, S274). Marketing never promises health. Claude's proposal (Pomeranian / Yorkshire Terrier precedent, not a runbook rule, čaka Davida): marketing never shows the Chihuahua with children or as a toy / accessory (AKC S278 'aren’t recommended for homes with children'; RVC S280 'Owners should avoid purchasing these puppies on impulse or as accessories.').",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no veterinary advice against advertising)"
+      },
+      "ai_appearance": {
+        "value": "adult smooth-coated Chihuahua, fawn (default); short, soft, close and glossy coat; well-rounded apple-dome skull, moderately short slightly pointed muzzle, definite stop; large round dark eyes, not protruding; large flaring erect ears at about 45°; medium-length sickle tail carried up over the back; small dainty compact body; never merle",
+        "unit": "—",
+        "source_id": "S274",
+        "quote": "Any colour or mixture of colours.",
+        "confidence": "high",
+        "notes": "KC (S274) / FCI (S273) allow every colour except merle — the most typical (fawn) is the portrait default. Welfare: moderate, non-exaggerated dome and muzzle, eyes not protruding (S274 'not protruding') — a `muzzle` trait in breed_appearance.php. Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn (a permitted colour; the standards forbid only merle) is the portrait default; smooth coat, moderate apple-dome head, erect ears, sickle tail"
       }
     }
   }
