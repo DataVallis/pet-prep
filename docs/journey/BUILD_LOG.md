@@ -9,6 +9,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-13 — Pritlikavi šnavcer: deveta pasma po dvajsetih (M5-R10-27)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **pritlikavega šnavcerja** (18. mesto). Triindvajseta plačljiva pasma psa: okoli ena ura gibanja na dan (6.000 korakov za odraslega, 4.500 za starejšega), starejši od 8,7 leta (0,75 × mediana 11,6 leta iz britanske raziskave VetCompass — začasno, dokler ne preverimo še raziskave McMillan 2024), uči se 1,5-krat hitreje kot mešanček (Coren: 12. mesto).
+
+**Zakaj je pomembno:** Pritlikavi šnavcer je majhen pes za stanovanje, ki mu dlaka ne izpada — a zato potrebuje redno nego: PDSA svetuje česanje 2- do 3-krat na teden, zato ga otrok v igri češe 3× na teden (»Počeši«, od prvega dne). Socializacijo (»Nova izkušnja«) dobi kot vsak mladiček. Ni pasma s skrbjo za dobrobit (The Royal Kennel Club Breed Watch kategorija 1), zato je lahko v marketingu. Britanska veterinarska raziskava (RVC / VetCompass) lastnikom svetuje, naj dajo prednost negi zob — tega igra še ne vodi, *načrt* (M5-R15). Bele barve igra (še) ne riše, ker jo ameriški standard izključi; odloči David.
+
+**Številke:** 8 novih virov (S221–S228), 1 migracija, brez nove oznake, 4 novi ključi zdravja in 1 nov test staršev v registru, 3 + 1 oznak v izbirniku; število testov: glej PR #212. Portret in stran v registru sledita v ločenih PR. Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Pritlikavi šnavcer je majhen, igriv in radoveden pes, primeren tudi za stanovanje, dlaka mu ne izpada — a ni ‚hipoalergen' in potrebuje česanje večkrat na teden. V PetPrepu boste videli, ali vaš otrok zmore redno nego, preden pripeljete domov psa z brado.«
+- 🧒 Otroci: »Pritlikavi šnavcer ima brado in košate obrvi — in rad je počesan. Trikrat na teden ga počeši, pa bo videti kot pravi gospod!«
+- 💼 Investitorji: »Deveta pasma, ki jo je sistem sam izbral po javni lestvici AKC — vse številke iz virov ali stalnih pravil, odprta vprašanja (barva, meja starosti, nega zob) zapisana za ustanovitelja.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri pritlikavem šnavcerju svetuje, naj vzreditelj pokaže DNK test staršev za MAC in pregled oči (RKC) — in opozori na nego zob, brez obljub o zdravju.«
+- 📣 Omrežja: »Majhen pes, velika brada: pritlikavi šnavcer je zdaj v PetPrepu. Ali bo vaš otrok zmogel česanje 3× na teden?« *(brez obljub o zdravju, nikoli »hipoalergen«)*
+- 🛠 Tehnično: »Brez novega ključa oznak; vse številke igre so iz stalnih pravil runbooka, česanje in socializacija sta samo novi vrstici v `breed_stage_params`; meja starejšega psa je označena kot začasna.«
+
+---
+
 ## 2026-10-12 — Boksar: osma pasma po dvajsetih (M5-R10-26)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **boksarja** (17. mesto). Dvaindvajseta plačljiva pasma psa: vsaj dve uri gibanja na dan (12.000 korakov za odraslega, 9.000 za starejšega), starejši od 8,5 leta (0,75 × mediana 11,3 leta iz raziskave McMillan 2024 — ni začasno), uči se enako hitro kot mešanček (Coren: 48. mesto).
