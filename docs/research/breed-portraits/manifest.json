@@ -281,6 +281,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "shih_tzu",
+            "species": "dog",
+            "file": "dog/shih-tzu.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:2d9135ab38862e2ca95013e19c5ba030927fe7f8b82d6974777fd6338cd7760b",
+            "generated_at": "2026-10-13T04:10:14+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
