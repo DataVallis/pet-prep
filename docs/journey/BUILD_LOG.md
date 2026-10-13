@@ -9,6 +9,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-13 — Curio, maskota PetPrepa, na TikToku
+
+- **Kaj:** znak »Radovednež« iz logotipa je postal 3D lik Curio (DNA, referenčni list, profilna slika). Trije reeli: »Meet Curio«, »Feeding time« in zgodba »The Promise« (Day 1 vs Day 14). Prva dva sta dobila ~350–600 ogledov in skoraj nič sledilcev.
+- **Zakaj je pomembno:** brez zgodbe in brez enotne vloge lika ljudje gledajo, a ne sledijo. Odločitev: Curio je vedno ljubljenček, format je serija z obljubo nadaljevanja.
+- **Za koga:** starši (prepoznavna obljuba otroka), investitorji (organski kanal z nizkimi stroški: slike brezplačno, video ~9 kreditov Higgsfield na posnetek).
+
 ## 2026-10-13 — Bostonski terier: trinajsta pasma po dvajsetih (M5-R10-31)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **bostonskega terierja** (23. mesto). Sedemindvajseta plačljiva pasma psa; v izbirniku je zdaj 28 psov (z mešančkom). Bostonski terier je majhen, živahen pes za stanovanje: do ena ura gibanja na dan (6.000 korakov za odraslega psa, 4.500 za starejšega), česanje 1× na teden (RKC, PDSA in AKC enako) in tedenska »Nova izkušnja« za mladička (AKC priporoča zgodnjo socializacijo).
