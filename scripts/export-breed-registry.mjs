@@ -401,6 +401,7 @@ const SPECIES = [
       { id: 'shih_tzu', synonyms: { en: ['Shih-Tzu', 'Shihtzu'], sl: ['ši-cu', 'šicu', 'shih-tzu'] } },
       { id: 'great_dane', synonyms: { en: ['Deutsche Dogge'], sl: ['doga', 'deutsche dogge'] } },
       { id: 'pomeranian', synonyms: { en: ['Pom', 'German Toy Spitz', 'Zwergspitz'], sl: ['pom', 'nemški špic', 'nemski spic', 'zwergspitz'] } },
+      { id: 'boston_terrier', synonyms: { en: ['Boston', 'American Gentleman', 'Boston Bull Terrier'], sl: ['boston', 'bostonec', 'boston terier'] } },
     ],
   },
   {
@@ -955,6 +956,29 @@ const DOG_FACTS = {
       ['hypothyroidism', 'health.hypothyroidism'],
     ],
   },
+  // M5-R10-31. Not exported: adult_weight.fci / rkc (weight classes — the lightest has no lower bound, so the
+  // PDSA average range is shown, Great Dane precedent), lifespan.pdsa (same band as RKC), lifespan.mcmillan_2024
+  // (null — its 11.8 y alternative is tier C, Wikipedia S262), lifespan.senior_from (derived), health.breed_watch
+  // (Category 2 without returned points), health.teeth / birth / welfare_advice_to_buyers (no website sentence
+  // needed), health.spine_hemivertebrae / luxating_patella / skin_atopy / cushings (PDSA paraphrases without a
+  // quote). Height: no breed standard gives one → the PDSA average range (Bulldog precedent). Shedding: RKC
+  // "Sheds: Yes" (S255) and AKC "shed minimally" (S260) disagree → no shedding fact (Shih Tzu precedent).
+  // Own eye key: the shared eye sentences promise eye testing, which the RKC lists none of for this breed.
+  boston_terrier: {
+    height: ['height.pdsa_average'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['flat_face_breathing', 'health.brachycephaly_boas'],
+      ['heat_stroke_risk', 'health.heat'],
+      ['prominent_eyes_injury_dry_eye', 'health.eyes'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1172,6 +1196,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.pomeranian.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.pomeranian.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.pomeranian.exercise_minutes_senior',
+  },
+  boston_terrier: {
+    adult_minutes: ['proposed_game_parameters.boston_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.boston_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.boston_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.boston_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.boston_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.boston_terrier.exercise_minutes_senior',
   },
 };
 

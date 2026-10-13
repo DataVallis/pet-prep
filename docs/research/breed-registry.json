@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "92256de1ebba781ab426f76ec710b6603f7709e4684610aad3fee2b9007a89eb"
+      "sha256": "ad1f5caf126a72f9cb8eb740792afdd2050cd613fbb3a7fe1a1ae460f25917a3"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "9e20533632ff359aef1a3518911040c461a37e780949c3beceeaa9e7ed0b9d7c"
+      "sha256": "cf685ac436da4e468e0bb2e9d8a8dd6002cf6b638442ddca25512a235fe3163e"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,31 +25,31 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "15f63e1d37ea2427899e3850583658ef002e428870de1c13f4bff6d83634a3a6"
+      "sha256": "90bca16ccc6b6edf5def2c26f1bf46a963626534146c94c49f679c9a55bbd772"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "5170defc18faf165f558a4adbd38db6401971227792ee5579761fed27405407d"
+      "sha256": "3ff0999601e33602619cc82aa0ace2eb705ea38b2652ad00bc942fa318891637"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "223ba6a5c92e2b16cfd08bf00b1bc1320236fee1668983c1dda811e389af8836"
+      "sha256": "b95e6ba90ab78f86f9814a8d9cd3205e08723b3b0e3cf40aa851f3b02663b15b"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "8920ad4881c13b2929e1f8b4b5d535f500021ffe41aa14fa554b70cb92abdd47"
+      "sha256": "aa5898453aa68e06fdb901bf49b88ee49ab5459b1ddfedda371a79c6db106053"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "0a68b5e823fbf25d88d5411f5f85580d13cdb0a3c547c9a7159883516ba181b9"
+      "sha256": "c576f36a8054e2c2323afb923e363f770eb2aae827fd24ed7f2b4ca55a8412e0"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "d8390c8d6218b6177907ebd5c7ce2b0adbefc27e85641f065a5914221783d214"
+      "sha256": "da7cb50954c718bb45d5b5a62ebf7a8879a8237b830027f54d5e5585bb4af228"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "491b02b806cc0d572c19911123dffbb762dddf9f3fc3f39f45c8f2c58ce5c5dc"
+      "sha256": "3b412c2683a4a5e70aab67bb829fd6ee8467d451213a5798da6af938943684bd"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -196,7 +196,7 @@
         }
       },
       "status": "available",
-      "breed_count": 26,
+      "breed_count": 27,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -16042,6 +16042,500 @@
       ]
     },
     {
+      "id": "boston_terrier",
+      "species": "dog",
+      "order": 26,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Boston Terrier",
+        "sl": "Bostonski terier"
+      },
+      "slug": {
+        "en": "boston-terrier",
+        "sl": "bostonski-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Boston",
+          "American Gentleman",
+          "Boston Bull Terrier"
+        ],
+        "sl": [
+          "boston",
+          "bostonec",
+          "boston terier"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S255"
+          ],
+          "ref": "boston_terrier.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": [
+            38,
+            43
+          ],
+          "source_ids": [
+            "S259"
+          ],
+          "ref": "boston_terrier.height.pdsa_average",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              7,
+              11
+            ],
+            "female": [
+              7,
+              11
+            ]
+          },
+          "source_ids": [
+            "S259"
+          ],
+          "ref": "boston_terrier.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "boston_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S255"
+          ],
+          "ref": "boston_terrier.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S255"
+          ],
+          "ref": "boston_terrier.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S255"
+          ],
+          "ref": "boston_terrier.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S255"
+          ],
+          "ref": "boston_terrier.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 54,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "boston_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 140,
+            "group": 9,
+            "section": 11,
+            "origin": "US"
+          },
+          "source_ids": [
+            "S254"
+          ],
+          "ref": "boston_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "flat_face_breathing",
+          "source_ids": [
+            "S259"
+          ],
+          "ref": "boston_terrier.health.brachycephaly_boas",
+          "confidence": "high"
+        },
+        {
+          "key": "heat_stroke_risk",
+          "source_ids": [
+            "S259"
+          ],
+          "ref": "boston_terrier.health.heat",
+          "confidence": "high"
+        },
+        {
+          "key": "prominent_eyes_injury_dry_eye",
+          "source_ids": [
+            "S255"
+          ],
+          "ref": "boston_terrier.health.eyes",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S255"
+            ],
+            "refs": [
+              "boston_terrier.suitability.rkc_size_of_home",
+              "boston_terrier.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S259"
+            ],
+            "refs": [
+              "boston_terrier.suitability.pdsa_family",
+              "boston_terrier.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S259",
+              "S260"
+            ],
+            "refs": [
+              "boston_terrier.suitability.pdsa_children",
+              "boston_terrier.behaviour.family"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "brachycephalic_breathing",
+            "source_ids": [
+              "S93",
+              "S255",
+              "S259",
+              "S261"
+            ],
+            "refs": [
+              "boston_terrier.health.brachycephaly_boas",
+              "boston_terrier.exercise.heat_and_walk_timing"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S260"
+            ],
+            "refs": [
+              "boston_terrier.behaviour.time_alone",
+              "boston_terrier.suitability.akc_time_alone"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.boston_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S255"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S255 'Up to 1 hour per day'; PDSA S259 the same)"
+          },
+          {
+            "ref": "proposed_game_parameters.boston_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.boston_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S255"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S255)"
+          },
+          {
+            "ref": "proposed_game_parameters.boston_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 54, Average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.boston_terrier.grooming",
+            "basis_source_ids": [
+              "S255"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S255"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_found",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S93",
+        "S254",
+        "S255",
+        "S259",
+        "S260",
+        "S261",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -19470,6 +19964,41 @@
       "publisher": "American Kennel Club — M. Erickson (updated 2025-12-04)",
       "title": "Is a Pomeranian the Right Dog Breed for You?",
       "url": "https://www.akc.org/expert-advice/dog-breeds/pomeranian-right-for-you/"
+    },
+    {
+      "id": "S254",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 140 — Boston Terrier (EN PDF, valid standard 28.01.2013)",
+      "url": "https://fci.be/Nomenclature/Standards/140g09-en.pdf"
+    },
+    {
+      "id": "S255",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Boston Terrier — breed information page (Breeds A to Z, current address)",
+      "url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/utility/boston-terrier"
+    },
+    {
+      "id": "S259",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Boston Terrier breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/boston-terrier"
+    },
+    {
+      "id": "S260",
+      "tier": "B",
+      "publisher": "American Kennel Club — M. Erickson (published 2026-01-23)",
+      "title": "Is the Boston Terrier a Good Fit for You?",
+      "url": "https://www.akc.org/expert-advice/dog-breeds/boston-terrier-right-for-you/"
+    },
+    {
+      "id": "S261",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK) — news (University of Cambridge BOAS Research Group)",
+      "title": "New research explores respiratory health of Boston Terriers",
+      "url": "https://thekennelclub.org.uk/media-centre/2025/january/new-research-explores-respiratory-health-of-boston-terriers"
     },
     {
       "id": "C1",
