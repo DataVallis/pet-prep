@@ -269,6 +269,7 @@ describe('PetPickerStep', () => {
       'breed-option-great_dane',
       'breed-option-pomeranian',
       'breed-option-boston_terrier',
+      'breed-option-miniature_american_shepherd',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -708,6 +709,62 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/\d|%/);
       expect(consider).not.toHaveTextContent(/\d|%/);
       expect(screen.getByTestId('breed-option-boston_terrier')).toHaveTextContent(/Boston Terrier/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-32: the Miniature American Shepherd (fallback) shows its chips, is found as "ameriški" and "mini aussie", and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const mas = screen.getByTestId('breed-option-miniature_american_shepherd');
+    expect(mas).toHaveTextContent(/Mali ameriški ovčar/);
+    expect(mas).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-miniature_american_shepherd-suits');
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    expect(suits).toHaveTextContent(/dom z drugimi ljubljenčki/);
+    const consider = screen.getByTestId('breed-suitability-miniature_american_shepherd-consider');
+    expect(consider).toHaveTextContent(/potrebuje miselne izzive/);
+    expect(consider).toHaveTextContent(/pri igri lahko »pase« otroke/);
+    expect(consider).toHaveTextContent(/rad ima družbo — naj bo nekdo večino dneva doma/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+    expect(consider).toHaveTextContent(/potrebuje česanje večkrat na teden/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'ameriški');
+    expect(screen.getByTestId('breed-option-miniature_american_shepherd')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-australian_shepherd')).toBeNull();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'mini aussie');
+    expect(screen.getByTestId('breed-option-miniature_american_shepherd')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-miniature_american_shepherd'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'miniature_american_shepherd', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'miniature_american_shepherd' }),
+    );
+  });
+
+  it('M5-R10-32: the Miniature American Shepherd chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-miniature_american_shepherd-suits');
+      const consider = screen.getByTestId('breed-suitability-miniature_american_shepherd-consider');
+      expect(suits).toHaveTextContent(/family life/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(suits).toHaveTextContent(/homes with other pets/);
+      expect(consider).toHaveTextContent(/needs mental challenges/);
+      expect(consider).toHaveTextContent(/may “herd” children at play/);
+      expect(consider).toHaveTextContent(/loves company — best with someone home most of the day/);
+      expect(consider).toHaveTextContent(/needs brushing several times a week/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-miniature_american_shepherd')).toHaveTextContent(/Miniature American Shepherd/);
     } finally {
       await i18n.changeLanguage('sl');
     }

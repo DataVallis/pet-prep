@@ -64,6 +64,7 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'pet:picker.ageHints.yorkshire_terrier': 'the Yorkshire Terrier is a dog breed (M5-R10-22)',
   'pet:picker.ageHints.pomeranian': 'the Pomeranian is a dog breed (M5-R10-30)',
   'pet:picker.ageHints.boston_terrier': 'the Boston Terrier is a dog breed (M5-R10-31)',
+  'pet:picker.ageHints.miniature_american_shepherd': 'the Miniature American Shepherd is a dog breed (M5-R10-32)',
   'pet:picker.ageHints.west_highland_white_terrier': 'the West Highland White Terrier is a dog breed (M5-R10-11)',
   'pet:picker.ageHints.bernese_mountain_dog': 'the Bernese Mountain Dog is a dog breed (M5-R10-12)',
   'pet:picker.ageHints.bulldog': 'the Bulldog is a dog breed (M5-R10-20)',
