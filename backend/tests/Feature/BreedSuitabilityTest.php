@@ -647,3 +647,28 @@ it('gives the Great Dane the new eyelid_problems tag and hips_hind_legs (welfare
         ->and(bsEntry('great_dane.lifespan.rkc')['quote'])->toBe('Lifespan: Under 10 years')
         ->and(bsEntry('great_dane.suitability.pdsa_drooling')['quote'])->toBe('Great Danes are, however, known for drooling!');
 });
+
+it('gives the Pomeranian the new older_children tag (AKC), apartment, family_pet, other_pets — never children and no welfare chip (runbook 2026-10-13)', function () {
+    expect(BreedSuitability::vocabulary())->toMatchArray(['older_children' => BreedSuitability::CONSIDER]);
+
+    $pom = app(BreedSuitability::class)->for(BreedType::Pomeranian);
+    expect($pom['suits'])->toBe(['apartment', 'family_pet', 'other_pets'])
+        ->and($pom['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('first_time_owner')
+        ->and($pom['consider'])->toBe(['older_children', 'frequent_grooming', 'sheds'])
+        // Not the fragile-bones chip (no A/B source names fragile bones); no welfare chip (Breed Watch points not returned).
+        ->and($pom['consider'])->not->toContain('fragile_older_children')->not->toContain('not_for_small_children')
+        ->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')->not->toContain('hips_hind_legs');
+
+    // Only the Pomeranian carries older_children so far.
+    foreach (BreedType::cases() as $breed) {
+        if ($breed !== BreedType::Pomeranian) {
+            expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('older_children');
+        }
+    }
+
+    expect(bsEntry('pomeranian.suitability.akc_children')['quote'])->toBe('Pomeranians tend to be a better fit for families with older children.')
+        ->and(bsEntry('pomeranian.suitability.akc_other_pets')['quote'])->toBe('Poms can get along well with other animals, especially if socialized early.')
+        ->and(bsEntry('pomeranian.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Flat/ Apartment')
+        ->and(bsEntry('pomeranian.suitability.rkc_shedding')['quote'])->toBe('Sheds: Yes')
+        ->and(bsEntry('pomeranian.suitability.rkc_breed_watch')['value'])->toBe('Category 2');
+});

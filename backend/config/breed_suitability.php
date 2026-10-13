@@ -143,6 +143,12 @@ return [
         // S243 entropion / ectropion; RKC breed page S241 eye scheme). A calm chip asking for eye-tested
         // parents, never a percentage.
         'eyelid_problems' => 'consider',
+        // M5-R10-30 (runbook "new tag" rule, 2026-10-13): a small dog that is a better fit for
+        // families with older children (Pomeranian: AKC S251 "Pomeranians tend to be a better fit for
+        // families with older children."; "It's important that children are old enough to recognize the
+        // difference between a small dog and a toy."). Not `fragile_older_children` — that chip names
+        // fragile bones, which no A/B source says for this breed. A calm chip, never a number.
+        'older_children' => 'consider',
     ],
 
     'breeds' => [
@@ -786,6 +792,32 @@ return [
                 ['tag' => 'drools', 'source_ids' => ['S243'], 'refs' => ['great_dane.behaviour.drooling', 'great_dane.suitability.pdsa_drooling']],
                 // S243 "Great Danes do have a fairly strong prey drive, though, so all introductions need to be done very carefully."
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S243'], 'refs' => ['great_dane.behaviour.other_pets', 'great_dane.suitability.pdsa_other_pets']],
+            ],
+        ],
+
+        // M5-R10-30: pomeranian.* (S245–S252), runbook rules (data.json
+        // proposed_game_parameters.pomeranian.suitability_tags). RKC (S247) + PDSA (S250) + AKC (S251) + FCI (S246).
+        // `family_pet` from the FCI sentence, but never `children` / `small_children` (AKC S251: a better
+        // fit for families with older children → the new `older_children`); `other_pets` with the
+        // socialisation caveat (Standard Poodle precedent). No welfare chip: RKC Breed Watch Category 2
+        // (S248), but its points of concern were not returned (open for David); not flat-faced.
+        'pomeranian' => [
+            'suits' => [
+                // S247 "Size of home: Flat/ Apartment" / "Size of garden: Small/ medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S247'], 'refs' => ['pomeranian.suitability.rkc_size_of_home', 'pomeranian.suitability.rkc_size_of_garden']],
+                // S246 "Its companionable and cheerful character makes it the ideal companion and family dog"
+                // (the FCI standard's sentence for the whole German Spitz breed, of which the Pomeranian is a variety).
+                ['tag' => 'family_pet', 'source_ids' => ['S246'], 'refs' => ['pomeranian.behaviour.family', 'pomeranian.behaviour.temperament']],
+                // S251 "Poms can get along well with other animals, especially if socialized early."
+                ['tag' => 'other_pets', 'source_ids' => ['S251'], 'refs' => ['pomeranian.behaviour.other_pets', 'pomeranian.suitability.akc_other_pets']],
+            ],
+            'consider' => [
+                // S251 "Pomeranians tend to be a better fit for families with older children."
+                ['tag' => 'older_children', 'source_ids' => ['S251'], 'refs' => ['pomeranian.behaviour.family', 'pomeranian.suitability.akc_children']],
+                // S247 "Grooming: More than once a week"; S250 "needs brushing two-three times per week".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S247', 'S250'], 'refs' => ['pomeranian.suitability.rkc_grooming', 'pomeranian.suitability.pdsa_grooming']],
+                // S247 "Sheds: Yes"; S250 "more often when shedding".
+                ['tag' => 'sheds', 'source_ids' => ['S247', 'S250'], 'refs' => ['pomeranian.suitability.rkc_shedding', 'pomeranian.suitability.pdsa_grooming']],
             ],
         ],
 

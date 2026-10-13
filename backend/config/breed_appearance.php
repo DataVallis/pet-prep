@@ -270,6 +270,15 @@
 | eyelids and a sound, natural build in the eye and build traits. Colour weights are unsourced →
 | `verified => false`; fawn weighted highest (the register portrait).
 |
+| Pomeranian (M5-R10-30, docs/research/dog-data pomeranian.appearance): a compact, short-coupled
+| toy spitz (RKC standard S249); double coat — soft fluffy undercoat, long straight harsh outer coat,
+| abundant frill round the neck and chest, natural and untrimmed (FCI S246 "Hair must not look like
+| being modelled."); small erect ears set high; fox-like head with a fine muzzle; medium, slightly
+| oval, dark eyes; tail set high, turned over the back and carried flat. Colours: RKC whole colours
+| (S249) — orange, cream, white, black, brown (the FCI S246 names all but cream: 'other colours'); never merle (RKC
+| "Merles not permissible."), never white markings on a coloured dog (FCI disqualifying). Colour
+| weights are unsourced → `verified => false`; orange weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1330,6 +1339,44 @@ return [
             // Welfare rule (Breed Watch S244): tight eyelids, never droopy or turned.
             'eye_color' => ['dark, medium-sized, with tight eyelids'],
             'tail' => ['natural tail reaching to the hocks, carried low'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-30 (docs/research/dog-data/data.json pomeranian.appearance; runbook rules
+    // 2026-10-10: RKC whole colours the FCI allows — never merle, never white markings).
+    'pomeranian' => [
+        'display_name' => 'Pomeranian',
+        // Colour frequencies are in no source (pomeranian.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'RKC breed standard (S249, KC standard hosted by KUSA), FCI-Standard N° 97 (S246, https://dev.fci.be/Nomenclature/Standards/097g05-en.pdf), RKC breed page (S247) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S247 "Size: Small"; S246 "German Toy Spitz/Pomeranian: 21 cm ± 3 cm."',
+            'build' => 'S249 "Compact, short-coupled dog, well-knit in frame."',
+            'coat_length' => 'S249 "Two coats, an undercoat and an outercoat." "very abundant round neck and fore part of shoulders and chest; forming frill, extending over shoulders."; S246 "Hair must not look like being modelled."',
+            'coat_color' => 'S249 "Orange, which should be self-coloured and bright as possible." "Merles not permissible."; S246 "White, black, brown, orange, grey-shaded, other colours." (weights unsourced)',
+            'ear_carriage' => 'S249 "Relatively small, not set too wide apart or too low down, but carried perfectly erect."',
+            'eye_color' => 'S249 "Medium size, slightly oval, not full or set too wide apart; bright, dark, and showing great intelligence."',
+            'tail' => 'S249 "High-set, turned over back and carried flat and straight, profusely covered with long, harsh, spreading hair."',
+        ],
+        'traits' => [
+            'size' => ['tiny toy-sized'],
+            'build' => [['value' => 'compact and short-backed, with a fox-like head and a fine muzzle', 'weight' => 3], 'small, dainty and lively'],
+            'coat_length' => [
+                ['value' => 'profuse natural double coat with a soft fluffy undercoat, a long straight outer coat and a full frill round the neck and chest, untrimmed', 'weight' => 3],
+                'thick fluffy double coat with a frill round the neck, untrimmed',
+            ],
+            // RKC whole colours (S249) the FCI allows (S246, cream as 'other colours'); orange highest → the register portrait.
+            // Never merle, never white markings on a coloured dog.
+            'coat_color' => [
+                ['value' => 'bright self-coloured orange', 'weight' => 3],
+                ['value' => 'cream', 'weight' => 2],
+                'white',
+                'black',
+                'brown',
+            ],
+            'ear_carriage' => ['small erect ears set high'],
+            'eye_color' => ['dark, medium-sized, slightly oval'],
+            'tail' => ['plumed tail set high, turned over the back and carried flat'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],

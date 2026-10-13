@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -366,6 +366,17 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_GREAT_DANE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-29)';
 
     /**
+     * M5-R10-30 Pomeranian (unattended run 2026-10-13, data.json
+     * proposed_game_parameters.pomeranian.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise
+     * 30 min, senior 23 min, puppy 10 min × age capped at 30, stages 9 / 36 / 108 (senior from
+     * the RKC lower bound "Over 12 years", S247 — provisional until McMillan 2024 is checked),
+     * arrival 2 / 9 / 36 / 108, learning multiplier 1.5 (Coren 23, Excellent); care rates the
+     * Border Collie's.
+     */
+    public const CONFIRMED_R10_POMERANIAN = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-30)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -492,6 +503,7 @@ class BreedStageParamsSeeder extends Seeder
         'miniature_schnauzer' => [3, 'S226', 'Grooming is needed 2-3 times a week', 'high', false],
         'shih_tzu' => [7, 'S231', 'Grooming: Every day', 'high', false],
         'great_dane' => [1, 'S241', 'Grooming: Once a week', 'high', false],
+        'pomeranian' => [3, 'S250', 'They have a double coat that needs brushing two-three times per week, and more often when shedding.', 'high', false],
     ];
 
     /**
@@ -557,13 +569,14 @@ class BreedStageParamsSeeder extends Seeder
         'boxer' => ['S219', "Boxers have a strong guarding instinct so it's important to socialise your Boxer with other dogs from a young age."],
         'shih_tzu' => ['S233', 'Shih Tzus can be good-natured family pets if they’ve been given the right socialisation and training'],
         'great_dane' => ['S243', "This is why it's really important to socialise your Great Dane with different experiences, people and dogs from a young age."],
+        'pomeranian' => ['S251', 'Like with any breed, early socialization and puppy training classes are highly recommended.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1137,6 +1150,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-29 (docs/research/dog-data/data.json great_dane,
             // S239–S244; runbook rules in proposed_game_parameters.great_dane).
             BreedType::GreatDane => self::greatDaneProfile(),
+            // M5-R10-30 (docs/research/dog-data/data.json pomeranian,
+            // S245–S252; runbook rules in proposed_game_parameters.pomeranian).
+            BreedType::Pomeranian => self::pomeranianProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -2931,6 +2947,77 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'great_dane.lifespan.median_uk',
                 'quote' => 'Great Dane 6.0 4.0-9.0 0.0-11.0 23',
                 'notes' => 'O\'Neill et al. 2013 (S212), VetCompass England, Table 1 — 23 deaths (small sample). RKC / PDSA "Under 10 years" (S241, S243) agree. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * M5-R10-30 Pomeranian — docs/research/dog-data/data.json pomeranian + proposed_game_parameters.pomeranian.
+     *
+     * @return array<string, mixed>
+     */
+    private static function pomeranianProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_POMERANIAN;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S247', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.pomeranian.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a toy dog finishes growing at 8–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S247; PDSA S250 the same) = 9 y = 108 months. No McMillan 2024 / VetCompass median was reachable (12.2 y via Wikipedia S252 is tier C → 110, not used alone). Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.pomeranian.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (8–12 months for a toy dog, S10); capped at the adult 30 minutes, which 10 × age reaches at 3 months.',
+            'adult_minutes' => [30, [
+                'unit' => 'minutes/day', 'source_id' => 'S247', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.pomeranian.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 30 minutes per day',
+                'notes' => 'RKC "Up to 30 minutes per day" (S247) → 30 min = 3,000 steps (runbook rule: "up to N" → N). PDSA "around half an hour of exercise per day" (S250) agrees.',
+            ]],
+            'senior_minutes' => [23, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.pomeranian.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 30 minutes = 22.5 → 23 min (half up) = 2,300 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[1.8, 2.5], [
+                'unit' => 'kg', 'source_id' => 'S249', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'pomeranian.adult_weight.rkc',
+                'quote' => 'Males: 1.8kg – 2kg.',
+                'notes' => 'RKC breed standard (S249): males 1.8–2 kg, females 2–2.5 kg → game range 1.8–2.5 kg (both sexes). FCI (S246) gives no weight ("a weight corresponding to its size"); PDSA "Average weight | 2-3 kg" (S250).',
+            ]],
+            'growth_end' => [[8, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'pomeranian.growth.adult_weight_reached',
+                'quote' => 'Toy (5–12 pounds): 8–12 months',
+                'notes' => 'Size-class value, not breed-specific (1.8–2.5 kg ≈ 4–5.5 lb, just below the Toy class of S10 — the smallest class it gives; RKC / PDSA size "Small").',
+            ]],
+            'coren_rank' => [23, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'pomeranian.trainability.coren_rank',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 23, tier "Excellent Working Dogs" (ranks 11–26). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.pomeranian.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 23 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S247', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'pomeranian.lifespan.rkc',
+                'quote' => 'Lifespan: Over 12 years',
+                'notes' => 'RKC breed page lower bound (S247); PDSA "Over 12 years" (S250) the same. No McMillan 2024 / VetCompass median reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
