@@ -317,6 +317,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "boston_terrier",
+            "species": "dog",
+            "file": "dog/boston-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:cfda36134a92ab5760b1ebad58bb70262fb801b5e0ffa10cdca22b2cd32c1d98",
+            "generated_at": "2026-10-13T14:01:16+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
