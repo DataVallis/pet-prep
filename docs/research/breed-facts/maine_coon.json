@@ -20,7 +20,8 @@
       "game_rule_key": "grooming_per_week",
       "sort": 1,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "98c3127292f895a5fd59d4fa4c604fceb54c4ccae6e8138fad67e4bae90c0329"
     },
     {
       "key": "maine_coon-002",
@@ -41,7 +42,8 @@
       "game_rule_key": "coat_knot",
       "sort": 2,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "5c2594ef5ad0f5cb7315658d472f3f6e8a2097b295fdf94cb3a7453136afd7a0"
     },
     {
       "key": "maine_coon-003",
@@ -62,7 +64,8 @@
       "game_rule_key": "wand_play",
       "sort": 3,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "473a354abe84b64364c264cddcbaf82fd9475b9caeb348f75075a07e6956ab42"
     },
     {
       "key": "maine_coon-004",
@@ -83,7 +86,8 @@
       "game_rule_key": "wand_play",
       "sort": 4,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "81d739f89a2d9ea1bfb3b8162f65285b69013ec1624afa7e33eccb62473f2e11"
     },
     {
       "key": "maine_coon-005",
@@ -104,7 +108,8 @@
       "game_rule_key": "wand_away",
       "sort": 5,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "0a2e3317bc5ed7e03b60bb35d3c00b6f499a467dce7bf2d3915413f365cc38bb"
     },
     {
       "key": "maine_coon-006",
@@ -125,7 +130,8 @@
       "game_rule_key": "wand_away",
       "sort": 6,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "46071bf3aa04f91a55fcebd677d43a90e13f6436a39c23ee6c6c8ce77d75362c"
     },
     {
       "key": "maine_coon-007",
@@ -146,7 +152,8 @@
       "game_rule_key": "wand_play",
       "sort": 7,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "6b97262c25a157b16df94d3cdb10fd9d743ee2dfbee61e50b2b2bf4237514f9a"
     },
     {
       "key": "maine_coon-008",
@@ -167,7 +174,8 @@
       "game_rule_key": "litter_use",
       "sort": 8,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "2f76e7ad7006735063821abb78074bdb3ba433b9ddf5f6fa8dfe6852018130e7"
     },
     {
       "key": "maine_coon-009",
@@ -188,7 +196,8 @@
       "game_rule_key": "litter_scoop",
       "sort": 9,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "c8f0ad16c5e2e2d379749dc89438b4ca7f7974945b58464f6a616ab90cb92e58"
     },
     {
       "key": "maine_coon-010",
@@ -209,7 +218,8 @@
       "game_rule_key": "litter_change",
       "sort": 10,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "7246aca61a50d035c2729fc5407770cfa852339051d156ffcd0408f675a76c38"
     },
     {
       "key": "maine_coon-011",
@@ -230,7 +240,8 @@
       "game_rule_key": "feed_windows",
       "sort": 11,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "3f02dc0682440f6828a789038c67806ab04d05da892228411b4cca4139e68fd8"
     },
     {
       "key": "maine_coon-012",
@@ -251,7 +262,8 @@
       "game_rule_key": "life_stage",
       "sort": 12,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "a0de93d00cb5eb99248bfddce53fc10b3082e452599d6def42671d20f0a10ee4"
     },
     {
       "key": "maine_coon-013",
@@ -272,7 +284,8 @@
       "game_rule_key": "growth_appearance",
       "sort": 13,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "c836c20b87fab3ea46508b9c06d1769042f959e3706ea13e5c318d30c5bcbe5b"
     },
     {
       "key": "maine_coon-014",
@@ -293,7 +306,8 @@
       "game_rule_key": "scratching_post",
       "sort": 14,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "63f3936987dfd651955085dad1edd8ad400cf2e2f2591071f02c844676cb48c6"
     },
     {
       "key": "maine_coon-015",
@@ -314,7 +328,8 @@
       "game_rule_key": "cuddle",
       "sort": 15,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "3522584df4d39a93abe1dc77d62fe06d842eef396ab81013eddb9d6559e7335e"
     },
     {
       "key": "maine_coon-016",
@@ -332,7 +347,8 @@
       "game_rule_key": null,
       "sort": 16,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "a3a43e6e1ad93b5e2c73fae4d8bd7e16794e1d43703b887570d5586c11ff2780"
     },
     {
       "key": "maine_coon-017",
@@ -350,7 +366,8 @@
       "game_rule_key": null,
       "sort": 17,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "ef34c554632cb66f2044b8ed3618f1f765eb5cc3e0466347d2ef0788132893cd"
     },
     {
       "key": "maine_coon-018",
@@ -368,7 +385,8 @@
       "game_rule_key": null,
       "sort": 18,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "96f5f5e4a1253d401df523fc774286a81816c4f0cd1cd6c407760280dcdf66a5"
     },
     {
       "key": "maine_coon-019",
@@ -386,7 +404,8 @@
       "game_rule_key": null,
       "sort": 19,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "c0d51e25aec6769a32043c69cc91e608af41513c2cc8382b77c0354b99e54482"
     },
     {
       "key": "maine_coon-020",
@@ -404,7 +423,8 @@
       "game_rule_key": null,
       "sort": 20,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "17778e2de0120f0011f6f126cfaac73f7d2e20556436dbbb657016b6cde5adff"
     },
     {
       "key": "maine_coon-021",
@@ -422,7 +442,8 @@
       "game_rule_key": null,
       "sort": 21,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "facfaeb5972a300f4be77d76bd2775dfb95a4d589d6d97698eaf353b26ef5bb8"
     },
     {
       "key": "maine_coon-022",
@@ -440,7 +461,8 @@
       "game_rule_key": null,
       "sort": 22,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "b09f1b798057371cf4275ecb02850636f7ba1e5853b8aa923d8aa28219567aa1"
     },
     {
       "key": "maine_coon-023",
@@ -458,7 +480,8 @@
       "game_rule_key": null,
       "sort": 23,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "cca6ac410409f7bf31d16540067a0926ae4ea0f7f3361da6f26107869db34da3"
     },
     {
       "key": "maine_coon-024",
@@ -476,7 +499,8 @@
       "game_rule_key": null,
       "sort": 24,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "b7b62289bb085987db1199d93277a5afb26ab32179a3e50d651672681d41caca"
     },
     {
       "key": "maine_coon-025",
@@ -494,7 +518,8 @@
       "game_rule_key": null,
       "sort": 25,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "258c6338ef7b9b25ece8dd4234c31468ab86ddcd79c3a7eae4aef6edbf878ee0"
     },
     {
       "key": "maine_coon-026",
@@ -512,7 +537,8 @@
       "game_rule_key": null,
       "sort": 26,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "8c64389c1c1ef0a6b32ec21bb6c121158ea11c7d28375b3f1eae6ee1054d04ab"
     },
     {
       "key": "maine_coon-027",
@@ -530,7 +556,8 @@
       "game_rule_key": null,
       "sort": 27,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "01eb483a02d42cee24d098967710ca9e63788e68a969c64da0c1a13030dea472"
     },
     {
       "key": "maine_coon-028",
@@ -551,7 +578,8 @@
       "game_rule_key": "arrival_age",
       "sort": 28,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "0c0d07edf40e12427403e13dc6d4310df00e51138d837a7b13dbc1d608ff3588"
     },
     {
       "key": "maine_coon-029",
@@ -572,7 +600,8 @@
       "game_rule_key": "feed_windows",
       "sort": 29,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "dfc65e9886eb617f48366ed390f9ce939f2b9527ab14ff96c7ac89badd3a177b"
     },
     {
       "key": "maine_coon-030",
@@ -593,7 +622,8 @@
       "game_rule_key": "indoor_cat",
       "sort": 30,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "ab1562586444fb7068a022467b3dc9532969e27dfd186ca74998517f358b09f5"
     },
     {
       "key": "maine_coon-031",
@@ -614,7 +644,8 @@
       "game_rule_key": "grooming_per_week",
       "sort": 31,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "2dfce062480ed02cf58922efa306fb9517d3574d586113ab101b2ce1e9b5ef02"
     },
     {
       "key": "maine_coon-032",
@@ -632,7 +663,8 @@
       "game_rule_key": null,
       "sort": 32,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "93b428bd7e9d85a7367f6237274cf36fcd3811100a18ccf5719cee7c11a91986"
     },
     {
       "key": "maine_coon-033",
@@ -650,7 +682,8 @@
       "game_rule_key": null,
       "sort": 33,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "10ed35313b9b86c32dfc4c232011df0c369ec356d4f90da0247f3d8bdac0491f"
     },
     {
       "key": "maine_coon-034",
@@ -668,7 +701,8 @@
       "game_rule_key": null,
       "sort": 34,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "5bd87827b6d388a73dc9a1316ee070fd1687f6c0ac60ae6ef82d026a952d03e9"
     },
     {
       "key": "maine_coon-035",
@@ -686,7 +720,8 @@
       "game_rule_key": null,
       "sort": 35,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "f06b76e0b3f1ee23eb08e984c1f8bb47e548763e20342f31d09dbaf165572baf"
     },
     {
       "key": "maine_coon-036",
@@ -704,7 +739,8 @@
       "game_rule_key": null,
       "sort": 36,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "3d6aa96d334b985029a54b501e7f2d5f8836d1326aea95ceb517da130ba3074e"
     },
     {
       "key": "maine_coon-037",
@@ -722,7 +758,8 @@
       "game_rule_key": null,
       "sort": 37,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "bdad2a260e66afb4c60047434f70ab85dd7b8df4e8b8342c4d0cba62d7ab67b9"
     },
     {
       "key": "maine_coon-038",
@@ -743,7 +780,8 @@
       "game_rule_key": null,
       "sort": 38,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "7fc2003e58fad2198990ff8cd8672e88ccc69ad6706a288a929f8bfe1fa577bd"
     },
     {
       "key": "maine_coon-039",
@@ -761,7 +799,8 @@
       "game_rule_key": null,
       "sort": 39,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "1b3b66eab3ed184922d17e20db155b518f6cf3e4adc3b071b8fb78de30e645f4"
     },
     {
       "key": "maine_coon-040",
@@ -779,7 +818,8 @@
       "game_rule_key": null,
       "sort": 40,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "5b5b6b960b044d40a6e68c46a2c7d24227a0ed5a407ccc558f7814b80da198a9"
     },
     {
       "key": "maine_coon-041",
@@ -797,7 +837,8 @@
       "game_rule_key": null,
       "sort": 41,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "2021fee04fa1e3bc251c90550c22c20878a7f4850e51931e4e278f41ceaea345"
     },
     {
       "key": "maine_coon-042",
@@ -815,7 +856,8 @@
       "game_rule_key": null,
       "sort": 42,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "8f8c9c48389feb6b05eb11bf6df76aa63c0b9d3ffa70c44bd00ad673ce993190"
     },
     {
       "key": "maine_coon-043",
@@ -833,7 +875,8 @@
       "game_rule_key": null,
       "sort": 43,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "a4f011686b5a04a1c7ba6cf14c7c063dd33d2d34fa1929b5e684e6bbed7e08f4"
     }
   ]
 }

@@ -20,7 +20,8 @@
       "game_rule_key": "daily_steps",
       "sort": 1,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "2b86fad1fb96873b2d116cfd3817f04e59694fb313bbcb4607624abac48b6dd0"
     },
     {
       "key": "border_collie-002",
@@ -41,7 +42,8 @@
       "game_rule_key": "training_speed",
       "sort": 2,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "23a2c59bf0627e1e9a8261f448a9744e0d499dfe521052e0148269ee2db7272d"
     },
     {
       "key": "border_collie-003",
@@ -62,7 +64,8 @@
       "game_rule_key": "training_daily_time",
       "sort": 3,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "6db065948faa4af215b18ff52cd9a5a1b89f7e0c43eb262df3432563277f8932"
     },
     {
       "key": "border_collie-004",
@@ -83,7 +86,8 @@
       "game_rule_key": "training_praise",
       "sort": 4,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "60282e113630a25e9f6d12616baa9f88fec747a028dff198ecca4cc306729f7b"
     },
     {
       "key": "border_collie-005",
@@ -104,7 +108,8 @@
       "game_rule_key": "training_start",
       "sort": 5,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "e5ad710315447f8a2b57d3996809f908359e1fb7bfded61adafd010297f46f70"
     },
     {
       "key": "border_collie-006",
@@ -118,14 +123,15 @@
         "en": "Training games in the app are brain work for your dog.",
         "sl": "Vaje šolanja v aplikaciji so za tvojega kužka delo za možgane."
       },
-      "source_id": "S213",
+      "source_id": "S229",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "They also need opportunities to solve problems and use their brains.",
       "game_rule_key": "training_minigame",
       "sort": 6,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "cbffe3579fb685325ca79fab15fed905380f17726e6044f65103c739f3a8aceb"
     },
     {
       "key": "border_collie-007",
@@ -146,7 +152,8 @@
       "game_rule_key": "feed_windows",
       "sort": 7,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "ebfe6cbda9d23a28315d088517a2ad9556905daa58b4cbe09dc640e84bfe5303"
     },
     {
       "key": "border_collie-008",
@@ -167,7 +174,8 @@
       "game_rule_key": "feed_windows",
       "sort": 8,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "3406377b1a050976fa21e2479885d4e7943753c15f21346f50105dcef553d670"
     },
     {
       "key": "border_collie-009",
@@ -188,7 +196,8 @@
       "game_rule_key": "life_stage",
       "sort": 9,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "5b4185427a45e16d0f760650832f971f95c685408d83b14ffb91ddbdf47898e4"
     },
     {
       "key": "border_collie-010",
@@ -202,14 +211,15 @@
         "en": "That's your weekly \"New experience\" task while your dog is a puppy.",
         "sl": "Zato imaš vsak teden nalogo »Nova izkušnja«, dokler je kuža mladiček."
       },
-      "source_id": "S213",
+      "source_id": "S229",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "You'll need to gradually introduce them to different people, places, sounds and experiences.",
       "game_rule_key": "puppy_socialisation",
       "sort": 10,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "82f72ad79b063289ece792688ae141df6c9e254276945f06f4f8d71793b6e73e"
     },
     {
       "key": "border_collie-011",
@@ -230,7 +240,8 @@
       "game_rule_key": "chewing_after_missed_walk",
       "sort": 11,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "da5649c6a1ba0e1893a988d193bf348734c2f12e3b6bfda6352de5fa6770f3e2"
     },
     {
       "key": "border_collie-012",
@@ -244,14 +255,15 @@
         "en": "When the care is done, a cuddle in the app makes your dog happy.",
         "sl": "Ko je skrb opravljena, kužka razveseli crkljanje v aplikaciji."
       },
-      "source_id": "S214",
+      "source_id": "S230",
       "source_name": "American Kennel Club",
       "source_url": "https://www.akc.org/dog-breeds/border-collie/",
       "quote": "These energetic dogs will settle down for cuddle time when the workday is done.",
       "game_rule_key": "cuddle",
       "sort": 12,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "025829605b5d0dd6b1833fc48d414f790b586db61f715ca55300819b32a538c0"
     },
     {
       "key": "border_collie-013",
@@ -269,7 +281,8 @@
       "game_rule_key": null,
       "sort": 13,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "97fdc65e4b520cdc5a4c1ccc5f4c633a68f1f10b757f28891d85a33920fc6bde"
     },
     {
       "key": "border_collie-014",
@@ -287,7 +300,8 @@
       "game_rule_key": null,
       "sort": 14,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "b6c104bf600a20a89d7c998e57fda5faccaa07d2a5df71ef68dcbd6c7756247a"
     },
     {
       "key": "border_collie-015",
@@ -305,7 +319,8 @@
       "game_rule_key": null,
       "sort": 15,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "25310eebce7be13cd926a001eb42c4b69310d762772ddbe23ef4bb08cbd13115"
     },
     {
       "key": "border_collie-016",
@@ -323,7 +338,8 @@
       "game_rule_key": null,
       "sort": 16,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "4aa24c2f6aab3e65dcecf97937a83cb9028b4febde2068fc75b08898f245fed8"
     },
     {
       "key": "border_collie-017",
@@ -341,7 +357,8 @@
       "game_rule_key": null,
       "sort": 17,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "fe4dec36620e284d4490ae6dba84c32717cf5c7f3d0d8d8599f90802ceea2439"
     },
     {
       "key": "border_collie-018",
@@ -359,7 +376,8 @@
       "game_rule_key": null,
       "sort": 18,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "6db69b410550334e47f4a3ce30c00994b159d7d18b93508b079c74617456c581"
     },
     {
       "key": "border_collie-019",
@@ -377,7 +395,8 @@
       "game_rule_key": null,
       "sort": 19,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "b1531dd694d956ad427e1cbe15416eb63914672c2949500726d26f2ffc46fc1e"
     },
     {
       "key": "border_collie-020",
@@ -395,7 +414,8 @@
       "game_rule_key": null,
       "sort": 20,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "55e3a94bb46e11983b9c4d7bdc980aec46a9299085b8223233457ec3e616ade0"
     },
     {
       "key": "border_collie-021",
@@ -413,7 +433,8 @@
       "game_rule_key": null,
       "sort": 21,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "a9541c6ad159c41b25e3006bc5e2b4bade75dddaf018f77d0fff9a502ce53e06"
     },
     {
       "key": "border_collie-022",
@@ -431,7 +452,8 @@
       "game_rule_key": null,
       "sort": 22,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "7846c532f4f40af697173b7acc0f39f4e4167f15489747e658656d6d561a60bf"
     },
     {
       "key": "border_collie-023",
@@ -449,7 +471,8 @@
       "game_rule_key": null,
       "sort": 23,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "8167178cf48944c01a9322d651e8919e92dd2fade72e88cd2a5d71d57f4a245d"
     },
     {
       "key": "border_collie-024",
@@ -467,7 +490,8 @@
       "game_rule_key": null,
       "sort": 24,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "27b997596a556388c4dd9cc575f3b548db282f849e16f30aaa22389e787fe64d"
     },
     {
       "key": "border_collie-025",
@@ -485,7 +509,8 @@
       "game_rule_key": null,
       "sort": 25,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "c449aa6c54369c8bd77e53daaab056eb8b8b7b42b9d3c7f9dbf91b15981771d7"
     },
     {
       "key": "border_collie-026",
@@ -503,7 +528,8 @@
       "game_rule_key": null,
       "sort": 26,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "4030ed5b318e16843d7719c5b597a38b5e93ee63fff31ccacfa5828d064a355a"
     },
     {
       "key": "border_collie-027",
@@ -521,7 +547,8 @@
       "game_rule_key": null,
       "sort": 27,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "647e48619b5eb12de1bbcf81357d533e10edb5ba2f11045f09134bf9015e8c04"
     },
     {
       "key": "border_collie-028",
@@ -542,7 +569,8 @@
       "game_rule_key": "life_stage_senior",
       "sort": 28,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "75d9473f92d6d4373fd3c6daa005422fe20d3f743118699ed58754797547f88f"
     },
     {
       "key": "border_collie-029",
@@ -563,7 +591,8 @@
       "game_rule_key": "life_stage_senior",
       "sort": 29,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "fbd289a3941183c52c477872c501bf89ef469aa9b0ed6bc1b74d33433a4e6567"
     },
     {
       "key": "border_collie-030",
@@ -581,7 +610,8 @@
       "game_rule_key": null,
       "sort": 30,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "39c4143a3c0196c8ed2da885012a7bf85fd385cbdadecfd0c374129143719d2d"
     },
     {
       "key": "border_collie-031",
@@ -599,7 +629,8 @@
       "game_rule_key": null,
       "sort": 31,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "aace429cdc9c6558cedf1255f4a7ce96c4fb9818231f7dcd7ccf8c98fc8964d6"
     },
     {
       "key": "border_collie-032",
@@ -610,14 +641,15 @@
         "sl": "Po navedbah Battersea se border collie lahko odlično znajde v družini s starejšimi otroki."
       },
       "why": null,
-      "source_id": "S213",
+      "source_id": "S229",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "Border Collies can be a great fit for families with older children",
       "game_rule_key": null,
       "sort": 32,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "55606acc819f7b8181cc93be17265f337ad410f2c7532e6775fec6da262f7e8e"
     },
     {
       "key": "border_collie-033",
@@ -635,7 +667,8 @@
       "game_rule_key": null,
       "sort": 33,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "83f826188387ef9237dbead605faee60fd8739d158516c4436a30f70fa746344"
     },
     {
       "key": "border_collie-034",
@@ -653,7 +686,8 @@
       "game_rule_key": null,
       "sort": 34,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "19e54d00062249a3631503e2b80a55eef92ae212cb1fa58c599e762de739a524"
     },
     {
       "key": "border_collie-035",
@@ -664,14 +698,15 @@
         "sl": "Border collie lahko poskuša voditi ali loviti avtomobile, druge pse, kolesarje, tekače ali otroke."
       },
       "why": null,
-      "source_id": "S213",
+      "source_id": "S229",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "This can sometimes lead to trying to herd or chase cars, other dogs, cyclists, joggers or children.",
       "game_rule_key": null,
       "sort": 35,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "ffb8c13655f69539c7a3a01c7c4945a448f3492c9bb9bc8531175348f70ad8fd"
     },
     {
       "key": "border_collie-036",
@@ -685,14 +720,15 @@
         "en": "This is why the daily step goal matters for this breed.",
         "sl": "Zato je pri tej pasmi dnevni cilj korakov tako pomemben."
       },
-      "source_id": "S213",
+      "source_id": "S229",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "Without enough physical and mental stimulation, Border Collies can become frustrated and start chasing or herding.",
       "game_rule_key": "daily_steps",
       "sort": 36,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "a41aa9d3da830f554f72337fce19d391b38d530e9a8c6db834d3762f11c54800"
     },
     {
       "key": "border_collie-037",
@@ -710,7 +746,8 @@
       "game_rule_key": null,
       "sort": 37,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "60b8eef410a4f962c7942adf38d2097fcafcb5ba16b1f6286580c6cef1720f8c"
     },
     {
       "key": "border_collie-038",
@@ -731,7 +768,8 @@
       "game_rule_key": null,
       "sort": 38,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "a8a9b74dbc5125a8369896c766d4ef6b342f5059fe5ae3980b70baa0c254c6d9"
     },
     {
       "key": "border_collie-039",
@@ -749,7 +787,8 @@
       "game_rule_key": null,
       "sort": 39,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "99c5ec2a030a886b6a284276d737087a00d71d2f9e1e62bd38eb2cdf1e87bf91"
     },
     {
       "key": "border_collie-040",
@@ -760,14 +799,15 @@
         "sl": "Anomalija očesa pri collijih je dedna bolezen oči; učinek sega od blagih sprememb vida do izgube vida."
       },
       "why": null,
-      "source_id": "S213",
+      "source_id": "S229",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "Collie Eye Anomaly is an inherited eye condition that can range from mild changes in vision to significant sight loss.",
       "game_rule_key": null,
       "sort": 40,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "b09e427a2b27d2e39778f6e7e98e994b2563211776102ec39ba0bc93f62379fe"
     },
     {
       "key": "border_collie-041",
@@ -778,14 +818,15 @@
         "sl": "Epilepsija se pri border collieju pojavlja pogosteje."
       },
       "why": null,
-      "source_id": "S213",
+      "source_id": "S229",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "Epilepsy is seen more commonly in Border Collies and can cause seizures.",
       "game_rule_key": null,
       "sort": 41,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "531eda58325bb23a0d4412dee12e91cd1b075a1cdfe52b038ef8aaec9bda9ec8"
     },
     {
       "key": "border_collie-042",
@@ -796,14 +837,15 @@
         "sl": "Pri border collieju se lahko razvije displazija kolkov, ki lahko vpliva na gibanje."
       },
       "why": null,
-      "source_id": "S213",
+      "source_id": "S229",
       "source_name": "Battersea",
       "source_url": "https://www.battersea.org.uk/pet-advice/dog-advice/border-collie",
       "quote": "Border Collies can develop conditions such as hip dysplasia, which can cause pain and mobility problems.",
       "game_rule_key": null,
       "sort": 42,
       "status": "verified",
-      "verified_by": "claude-verifier"
+      "verified_by": "claude-verifier",
+      "verified_hash": "82d32ef9bb177c58b5fe9a7647c11b2613e42773efe0b22df30628fa5f6e7aaf"
     }
   ]
 }

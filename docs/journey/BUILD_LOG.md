@@ -9,6 +9,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-13 — »Ali si vedel?«: prvih 85 preverjenih zanimivosti (M5-R09a)
+
+**Kaj se je zgodilo:** Za border collieja (42) in maine coona (43) je pripravljenih **85 zanimivosti** v angleščini in slovenščini — 54 za otroke, 31 za starše. Vsaka ima vir (npr. FCI, Battersea, PDSA, CFA, GCCF), povezavo in dobesedni citat. Drugi, neodvisni pregled je vsak citat ponovno prebral na izvirni strani: **19 besedil je zožil** na to, kar vir res pove, 2 citata podaljšal, zavrnil ni nobenega. Vsaka zanimivost nosi »prstni odtis« preverjenega besedila — če se besedilo kdaj spremeni, gre samodejno nazaj v pregled.
+
+**Zakaj je pomembno:** »Nič brez vira« zdaj velja tudi za vsebino, ne le za kodo. Pri treh virih se nasvet razlikuje (nega maine coona: PDSA vsak dan, CFA 2- do 3-krat na teden, GCCF tedensko) — zanimivosti zato poimenujejo vir, namesto da bi si izmislile povprečje.
+
+**Številke:** 85 zanimivosti, 26 virov, 0 zavrnjenih; 6 virov ni bilo mogoče odpreti (*načrt*: poznejši dodatek). Na strežnik še ni uvoženo, David jih mora še odobriti; aplikacija jih še ne prikaže (R09c / R09d).
+
+**Kako povedati:**
+- 👩 Starši: »Vsaka zanimivost o pasmi ima vir in dobesedni citat, preverila sta jo dva neodvisna pregleda, objavi pa jo šele ustanovitelj.«
+- 🧒 Otroci: *načrt* — »Ali si vedel, da je maine coon največja pasemska mačka?«
+- 💼 Investitorji: »85 zanimivosti z revizijsko sledjo (vir, citat, prstni odtis preverjanja) — dodajanje vsebine brez nove verzije aplikacije.«
+- 🛠 Tehnično: »Vsebina v gitu, `verified_hash` = SHA-256 preverjenega besedila; uvoz je idempotenten, spremenjeno besedilo pade nazaj v osnutek.«
+
+---
+
 ## 2026-10-13 — Pritlikavi šnavcer: deveta pasma po dvajsetih (M5-R10-27)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **pritlikavega šnavcerja** (18. mesto). Triindvajseta plačljiva pasma psa: okoli ena ura gibanja na dan (6.000 korakov za odraslega, 4.500 za starejšega), starejši od 8,7 leta (0,75 × mediana 11,6 leta iz britanske raziskave VetCompass — začasno, dokler ne preverimo še raziskave McMillan 2024), uči se 1,5-krat hitreje kot mešanček (Coren: 12. mesto).
