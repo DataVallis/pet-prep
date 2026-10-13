@@ -23,6 +23,14 @@ export interface SessionUser {
   /** null for a PIN-only child profile (M2-02). */
   email: string | null;
   role: UserRole;
+  /**
+   * M2-10c: the account has a password (e-mail sign-up). Sent by `/api/login`,
+   * `/api/register`, `/api/auth/social` and `GET /api/user`; missing from older servers —
+   * read through `readAuthMethods`.
+   */
+  has_password?: boolean;
+  /** M2-10c: Google / Apple identities linked to the account (`google` | `apple`). */
+  linked_providers?: string[];
 }
 
 /** `GET /api/user` response. */
@@ -54,6 +62,36 @@ export type RegisterParentRequest = components['schemas']['RegisterParentRequest
  * policy, terms), 429 with `Retry-After`.
  */
 export type RegisterResponse = LoginResponse;
+
+/** `POST /api/auth/social` body (M2-10c): parent sign-in / sign-up with a Google or Apple ID token. */
+export type SocialSignInRequest = components['schemas']['SocialSignInRequest'];
+
+/**
+ * `POST /api/auth/social` 200 body — the `POST /api/login` shape + `created` (a new account
+ * and family were made just now). Hand-typed like `LoginResponse` (Scramble types `role`
+ * as a plain string).
+ */
+export interface SocialSignInResponse extends LoginResponse {
+  created: boolean;
+}
+
+/**
+ * Machine-readable `code` of a refused social sign-in (`{message, code}`): 401
+ * `invalid_token`, 403 `not_a_parent` / `superadmin_protected`, 409 `email_in_use` /
+ * `email_link_unavailable`, 422
+ * `terms_required` (no account yet — retry with `terms_accepted: true`), 503
+ * `provider_disabled` / `provider_unavailable`.
+ */
+export type SocialSignInErrorCode =
+  | 'invalid_token'
+  | 'not_a_parent'
+  | 'superadmin_protected'
+  | 'email_in_use'
+  /** 409: the e-mail belongs to a password-less account that signs in with another provider identity. */
+  | 'email_link_unavailable'
+  | 'terms_required'
+  | 'provider_disabled'
+  | 'provider_unavailable';
 
 /**
  * `POST /api/devices` body (M3-02): this install's Expo push token, plus the push language
@@ -347,12 +385,34 @@ export interface DeleteChildResponse {
   pets_kept: number;
 }
 
-/** Machine-readable `reason` of a refused deletion / export (M2-08). */
+/**
+ * M2-10c: a parent WITHOUT a password confirms a deletion with a fresh ID token (≤ 10 min)
+ * of a provider linked to the account instead of the password (`ConfirmDeletionRequest`).
+ */
+export interface ProviderReauth {
+  provider: 'google' | 'apple';
+  id_token: string;
+  /** Apple: the RAW nonce of that sign-in. */
+  nonce?: string;
+  /**
+   * Apple: the one-time authorization code of that sign-in (reserved on the server for
+   * revoking Apple tokens on account deletion). Secret-ish — never log it.
+   */
+  authorization_code?: string;
+}
+
+/** What proves the parent's identity for a deletion: the password, or a provider re-sign-in. */
+export type DeletionProof = string | ProviderReauth;
+
+/** Machine-readable `reason` of a refused deletion / export (M2-08, M2-10c). */
 export type AccountDeletionReason =
   | 'invalid_password'
   | 'superadmin_protected'
   | 'child_not_found'
-  | 'export_too_large';
+  | 'export_too_large'
+  | 'reauth_required'
+  | 'provider_disabled'
+  | 'provider_unavailable';
 
 /**
  * `GET /api/parent/account/export` 200 body (M2-08, GDPR art. 15 / 20) — the family's
@@ -530,10 +590,20 @@ function retryAfterFrom(response: Response): number | null {
  * confirmation word of the app language ("IZBRIŠI" / "DELETE"), sent once the parent's
  * input matched it; the server accepts the word of any supported language.
  */
-function confirmBody(password: string, confirmWord?: string, acknowledgePaidChallenge = false): Record<string, unknown> {
+function confirmBody(proof: DeletionProof, confirmWord?: string, acknowledgePaidChallenge = false): Record<string, unknown> {
+  // M2-10c: a parent without a password sends `{provider, id_token, nonce?}` instead.
+  const identity: ConfirmDeletionRequest =
+    typeof proof === 'string'
+      ? { password: proof, confirm: true }
+      : {
+          provider: proof.provider,
+          id_token: proof.id_token,
+          ...(proof.nonce ? { nonce: proof.nonce } : {}),
+          ...(proof.provider === 'apple' && proof.authorization_code ? { authorization_code: proof.authorization_code } : {}),
+          confirm: true,
+        };
   return {
-    password,
-    confirm: true,
+    ...identity,
     ...(confirmWord ? { confirm_word: confirmWord } : {}),
     // M3-11 P5: the parent confirmed that a purchased, unfinished challenge is lost.
     ...(acknowledgePaidChallenge ? { acknowledge_paid_challenge: true } : {}),
@@ -622,6 +692,18 @@ export const api = {
    */
   register: (body: RegisterParentRequest) =>
     apiRequest<RegisterResponse>('/api/register', {
+      method: 'POST',
+      body: { ...body },
+      anonymous: true,
+    }),
+
+  /**
+   * POST /api/auth/social (M2-10c, public) — parent sign-in / sign-up with the ID token of
+   * the native Google / Apple SDK. Errors `{message, code}` (`SocialSignInErrorCode`);
+   * 422 `terms_required` = no account yet: retry with the same token + `terms_accepted`.
+   */
+  socialSignIn: (body: SocialSignInRequest) =>
+    apiRequest<SocialSignInResponse>('/api/auth/social', {
       method: 'POST',
       body: { ...body },
       anonymous: true,
@@ -727,23 +809,25 @@ export const api = {
   /**
    * DELETE /api/parent/children/{child} (M2-08) — delete a child profile, irreversibly.
    * A pet only this child cared for goes with it; a shared pet stays. 404
-   * `child_not_found`, 422 `invalid_password`, 429 (5 per 15 min).
+   * `child_not_found`, 422 `invalid_password` / `reauth_required` (M2-10c), 429 (5 per 15 min).
+   * `proof` = the password, or a fresh provider sign-in for a parent without one.
    */
-  deleteChild: (childId: number, password: string, confirmWord?: string, acknowledgePaidChallenge = false) =>
+  deleteChild: (childId: number, proof: DeletionProof, confirmWord?: string, acknowledgePaidChallenge = false) =>
     apiRequest<DeleteChildResponse>(`/api/parent/children/${childId}`, {
       method: 'DELETE',
-      body: confirmBody(password, confirmWord, acknowledgePaidChallenge),
+      body: confirmBody(proof, confirmWord, acknowledgePaidChallenge),
     }),
 
   /**
    * POST /api/parent/account/delete (M2-08) — delete the parent's own account; the last
    * parent deletes the whole family. Every token is revoked → the app must log out
-   * locally afterwards. 422 `invalid_password`, 403 `superadmin_protected`, 429.
+   * locally afterwards. 422 `invalid_password` / `reauth_required` (M2-10c), 403
+   * `superadmin_protected`, 429. `proof` as in `deleteChild`.
    */
-  deleteAccount: (password: string, confirmWord?: string, acknowledgePaidChallenge = false) =>
+  deleteAccount: (proof: DeletionProof, confirmWord?: string, acknowledgePaidChallenge = false) =>
     apiRequest<DeleteAccountResponse>('/api/parent/account/delete', {
       method: 'POST',
-      body: confirmBody(password, confirmWord, acknowledgePaidChallenge),
+      body: confirmBody(proof, confirmWord, acknowledgePaidChallenge),
     }),
 
   /** GET /api/parent/account/export (M2-08) — the family's data as JSON. 413 too large, 429 (3/h). */

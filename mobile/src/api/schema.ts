@@ -30,7 +30,11 @@ export interface paths {
          *     the app signs out afterwards
          * @description 200 `{status: deleted, scope: family|parent, family_deleted, parents_deleted,
          *     children_deleted, pets_deleted}`; 422 `invalid_password` (or validation:
-         *     `password` required, `confirm` must be true); 403 `superadmin_protected`;
+         *     `password` required, `confirm` must be true); a parent without a password
+         *     (Google / Apple sign-up, M2-10c) sends `provider` + `id_token` (+ `nonce`
+         *     for Apple) of a linked provider, issued ≤ 10 min ago, instead of
+         *     `password` → else 422 `reauth_required` (503 `provider_unavailable` /
+         *     `provider_disabled` when the provider cannot be checked); 403 `superadmin_protected`;
          *     429 `too_many_attempts` + `Retry-After` after 5 wrong passwords in 15 min
          *     (only failed attempts count; separate from the child deletion).
          *
@@ -129,6 +133,47 @@ export interface paths {
          *     POST /api/register
          */
         post: operations["auth.register"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/auth/social": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Parent sign-in / sign-up with Google or Apple (M2-10c). The app sends
+         *     the ID token from the native SDK; the API verifies it (signature via
+         *     the provider's JWKS, `iss`, `aud` = our client IDs, `exp`; Apple: `nonce`
+         *     = sha256 of the raw `nonce` sent here) and then:
+         * @description - identity already linked → signs that parent in (`created: false`);
+         *     - unknown identity, no account with its e-mail → creates the parent +
+         *       their own family (like `POST /api/register`) when `terms_accepted` is
+         *       true (`created: true`), else 422 `terms_required` (nothing created —
+         *       the app shows the terms and retries with the same token);
+         *     - unknown identity, the e-mail belongs to an account without a password
+         *       (made with the other provider) and the provider verified the e-mail →
+         *       links it and signs in;
+         *     - the e-mail belongs to an account WITH a password → 409 `email_in_use`
+         *       (sign in with e-mail + password; never linked automatically).
+         *
+         *     200 = the `POST /api/login` body + `created`. Errors `{message, code}`:
+         *     401 `invalid_token`, 403 `not_a_parent` / `superadmin_protected`,
+         *     409 `email_in_use`, 422 `terms_required`, 503 `provider_disabled`
+         *     (no client ID configured) / `provider_unavailable` (provider keys
+         *     unreachable). Validation errors are the usual 422 `errors`. Children
+         *     never use this (PIN only). Throttled: 10 / min and 30 / hour per IP.
+         *
+         *     POST /api/auth/social
+         */
+        post: operations["auth.social"];
         delete?: never;
         options?: never;
         head?: never;
@@ -1055,7 +1100,10 @@ export interface paths {
          *     for the pet, without a name
          * @description 200 `{status: deleted, child_id, pets_deleted, pets_kept}`; 404
          *     `child_not_found` (another family / missing / not a child); 422
-         *     `invalid_password`; 429 `too_many_attempts` + `Retry-After` after 5 wrong
+         *     `invalid_password` (or `reauth_required` for a parent without a password
+         *     who confirmed with `provider` + `id_token` (+ `nonce` for Apple) — a
+         *     linked provider, token ≤ 10 min old, M2-10c; 503 `provider_unavailable` /
+         *     `provider_disabled`); 429 `too_many_attempts` + `Retry-After` after 5 wrong
          *     passwords in 15 min (only failed attempts count; separate from the
          *     account deletion).
          *
@@ -1606,6 +1654,13 @@ export interface components {
          *     `POST /api/parent/account/delete` and `DELETE /api/parent/children/{child}`.
          *
          *     `{password: the parent's current password, confirm: true, confirm_word?}`.
+         *     A parent WITHOUT a password (signed up with Google / Apple, M2-10c) sends
+         *     `{provider, id_token, nonce?, authorization_code?}` instead of `password`
+         *     (`authorization_code`: Apple only, reserved for token revocation, unused): a fresh ID token (≤ 10
+         *     min) of a provider linked to the account; wrong / stale / unlinked → 422
+         *     `reauth_required` (AccountDeletionService::confirmIdentity). For a parent
+         *     WITH a password the password stays required and the provider fields are
+         *     ignored.
          *     The app makes the parent type the confirmation word of its language
          *     ("IZBRIŠI" in Slovenian, "DELETE" in English — lang/<locale>/account.php)
          *     before it sends the request. `confirm_word` is optional (app builds before
@@ -1617,7 +1672,23 @@ export interface components {
          *     request language (M1-18).
          */
         ConfirmDeletionRequest: {
-            password: string;
+            /** @description Required for a parent who has a password (checked in after()). */
+            password?: string | null;
+            /**
+             * @description M2-10c — parents without a password: re-authenticate with a linked provider.
+             * @enum {string|null}
+             */
+            provider?: "google" | "apple" | null;
+            /** @description Fresh ID token (issued ≤ 10 minutes ago) from the provider's native SDK. */
+            id_token?: string | null;
+            /** @description Apple: the RAW nonce of that sign-in. */
+            nonce?: string | null;
+            /**
+             * @description Apple only: the sign-in's authorization code. RESERVED for revoking
+             *     the Apple token on account deletion (needs David's Apple .p8 key) —
+             *     accepted and validated, not used yet; never logged, never stored.
+             */
+            authorization_code?: string | null;
             /** @enum {unknown} */
             confirm: "yes" | "on" | "1" | 1 | "true" | true;
             /**
@@ -2154,6 +2225,39 @@ export interface components {
             signature: string;
         };
         /**
+         * SocialSignInRequest
+         * @description POST /api/auth/social (M2-10c) — parent sign-in / sign-up with a Google or
+         *     Apple ID token from the native SDK. Public; throttled per IP
+         *     (`throttle:social`).
+         */
+        SocialSignInRequest: {
+            /**
+             * @example google
+             * @enum {string}
+             */
+            provider: "google" | "apple";
+            /** @description The provider's ID token (JWT) from the native sign-in SDK. */
+            id_token: string;
+            /** @description Apple: the RAW nonce (the app passed its SHA-256 to Apple). Ignored for Google. */
+            nonce?: string | null;
+            /**
+             * @description Apple sends the name only on the first authorization (client side);
+             *     Google's name comes from the token and wins.
+             */
+            name?: string | null;
+            /** @description IANA identifier of the device (e.g. "Europe/Ljubljana"). */
+            timezone: string;
+            /** @description Must be true to create a new account (terms of use + privacy policy). */
+            terms_accepted?: boolean | null;
+            /**
+             * @description Language of the app; accepted for forward compatibility, texts
+             *     follow Accept-Language.
+             * @enum {string|null}
+             */
+            locale?: "en" | "sl" | null;
+            device_name?: string | null;
+        };
+        /**
          * SocialisationExperience
          * @description M5-R17 puppy socialisation (David 2026-10-12): the kinds of "new  * experience" (»nova izkušnja«) a child can pick for the puppy's weekly task — a new person, another dog, a new sound, a new place. Stored as `activities_log.value` of a `socialised_pet` row via code() (the column is an integer); the apps word them (EN + SL).
          * @enum {string}
@@ -2442,6 +2546,9 @@ export interface operations {
                             name: string;
                             email: string | null;
                             role: string;
+                            /** @description M2-10c: how this account signs in (parents; a child: false / []). */
+                            has_password: boolean;
+                            linked_providers: string[];
                         };
                         pet: components["schemas"]["Pet"] | null;
                         /** @description Per child (M2-02): this child must sign before acting. null for a parent. */
@@ -2491,10 +2598,56 @@ export interface operations {
                             name: string;
                             email: string | null;
                             role: string;
+                            /** @description M2-10c: how this account signs in (parents; a child: false / []). */
+                            has_password: boolean;
+                            linked_providers: string[];
                         };
                         /** @description A new family has no pet yet; the parent adds a child next. */
                         pet: null;
                         awaiting_contract: null;
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "auth.social": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["SocialSignInRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        token: string;
+                        abilities: [
+                            string
+                        ];
+                        user: {
+                            id: number;
+                            name: string;
+                            email: string | null;
+                            role: string;
+                            /** @description M2-10c: how this account signs in (parents; a child: false / []). */
+                            has_password: boolean;
+                            linked_providers: string[];
+                        };
+                        pet: components["schemas"]["Pet"] | null;
+                        /** @description Parents never sign a contract. */
+                        awaiting_contract: null;
+                        /** @description true = a new account (and family) was created just now. */
+                        created: boolean;
                     };
                 };
             };
@@ -2520,6 +2673,9 @@ export interface operations {
                         name: string;
                         email: string | null;
                         role: string;
+                        /** @description M2-10c: how this account signs in (parents; a child: false / []). */
+                        has_password: boolean;
+                        linked_providers: string[];
                         pet: components["schemas"]["Pet"] | null;
                         awaiting_contract: boolean | null;
                     };
@@ -14796,7 +14952,20 @@ export interface operations {
     "childProfile.destroy": {
         parameters: {
             query: {
-                password: string;
+                /** @description Required for a parent who has a password (checked in after()). */
+                password?: string | null;
+                /** @description M2-10c — parents without a password: re-authenticate with a linked provider. */
+                provider?: "google" | "apple" | null;
+                /** @description Fresh ID token (issued ≤ 10 minutes ago) from the provider's native SDK. */
+                id_token?: string | null;
+                /** @description Apple: the RAW nonce of that sign-in. */
+                nonce?: string | null;
+                /**
+                 * @description Apple only: the sign-in's authorization code. RESERVED for revoking
+                 *     the Apple token on account deletion (needs David's Apple .p8 key) —
+                 *     accepted and validated, not used yet; never logged, never stored.
+                 */
+                authorization_code?: string | null;
                 confirm: "yes" | "on" | "1" | 1 | "true" | true;
                 /**
                  * @description M3-11 P5: the parent saw that a paid, unfinished 12-week challenge

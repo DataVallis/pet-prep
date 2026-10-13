@@ -210,7 +210,9 @@
       "invalid": "Vpišite geslo in potrdite brisanje.",
       "unknown": "Ni znano, ali je bil izbris izveden — preverite seznam otrok.",
       "server": "Brisanje ni uspelo. Nič ni bilo izbrisano — poskusite znova.",
-      "paid_challenge": "Ta izbris odstrani psa, za katerega je bil kupljen 12-tedenski izziv. Odkljukajte potrditev, da je nakup porabljen."
+      "paid_challenge": "Ta izbris odstrani psa, za katerega je bil kupljen 12-tedenski izziv. Odkljukajte potrditev, da je nakup porabljen.",
+      "reauth_required": "Potrditev prijave je potekla ali ne ustreza temu računu. Nič ni bilo izbrisano — potrdite znova.",
+      "provider_unavailable": "Storitev za prijavo trenutno ni dosegljiva. Nič ni bilo izbrisano — poskusite znova čez trenutek."
     }
   },
   "parents": {

@@ -11,6 +11,7 @@ import { ApiError, api, clearAuthToken, getAuthToken } from '@/api/client';
 import type { SignInPayload } from '@/store/appStore';
 import { unregisterStepSyncTask } from '@/modules/steps/backgroundSteps';
 import { loadFamilyTimezone } from './familyTimezone';
+import { loadSignInMethod } from './signInMethod';
 
 export type RestoreResult =
   | { status: 'anonymous' }
@@ -32,7 +33,9 @@ export async function restoreSession(): Promise<RestoreResult> {
     const { pet, awaiting_contract: awaitingContract, ...user } = await api.getUser();
     // Hotfix 2026-10-06: the lock overlay needs the family zone before the child state loads.
     const familyTimezone = user.role === 'child' ? await loadFamilyTimezone() : null;
-    return { status: 'authenticated', session: { token, user, pet, awaitingContract, familyTimezone } };
+    // M2-10c: password vs. Google / Apple decides how a parent confirms a deletion.
+    const signInMethod = user.role === 'parent' ? await loadSignInMethod() : 'password';
+    return { status: 'authenticated', session: { token, user, pet, awaitingContract, familyTimezone, signInMethod } };
   } catch (error) {
     if (error instanceof ApiError && error.status === 401) {
       await clearAuthToken();

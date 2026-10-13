@@ -27,6 +27,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-13 — Prijava z Googlom in Apple za starše (M2-10c)
+
+**Kaj:** starš se lahko registrira in prijavi z enim dotikom — »Nadaljuj z Googlom« (iPhone in Android) ali »Nadaljuj z Apple« (iPhone). Strežnik sam preveri podpis žetona pri Googlu / Apple (brez dodatne knjižnice), račun z geslom se zaradi varnosti nikoli ne poveže samodejno, izbris računa pa starš brez gesla potrdi s ponovno prijavo. Otrok ostane na PIN-u. Testi: 2.927 strežniških (Pest) in 2.440 aplikacijskih (Jest), vsi zeleni.
+**Zakaj:** registracija z e-pošto in geslom je največji upad pri prvem zagonu; prijava z enim dotikom je standard, ki ga starši pričakujejo. Apple prijava je na iPhonu obvezna, če ponudimo Google.
+**Kako povedati:** 👩 »Brez novega gesla — prijavite se z Googlom ali Apple, otrok pa še vedno samo s PIN-om.« · 💼 nižje trenje pri registraciji (aktivacija) · 🛠 lastno preverjanje RS256 JWT nad JWKS, zaščita pred prevzemom računa s predregistracijo.
+
+---
+
 ## 2026-10-13 — Mali ameriški ovčar: štirinajsta pasma po dvajsetih (M5-R10-32)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **malega ameriškega ovčarja** (24. mesto). Osemindvajseta plačljiva pasma psa; v izbirniku je zdaj 29 psov (z mešančkom). Mali ameriški ovčar je energičen pastirski pes, po standardu FCI majhen (9,1–18,1 kg): vsaj ena ura gibanja na dan (6.000 korakov za odraslega psa, 4.500 za starejšega), česanje 2× na teden in tedenska »Nova izkušnja« za mladička (AKC priporoča zgodnjo, dosledno socializacijo).

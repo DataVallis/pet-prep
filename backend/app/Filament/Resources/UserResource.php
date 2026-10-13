@@ -44,6 +44,20 @@ class UserResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
 
+    /**
+     * E-mail is required for parents, except a parent with a linked Google /
+     * Apple identity (M2-10c); never for a child (PIN-only, M2-02).
+     */
+    public static function emailRequired(mixed $role, ?User $record): bool
+    {
+        $role = $role instanceof UserRole ? $role : UserRole::tryFrom((string) $role);
+        if ($role === UserRole::Child) {
+            return false;
+        }
+
+        return ! ($record?->exists && $record->socialAccounts()->exists());
+    }
+
     public static function form(Form $form): Form
     {
         return $form
@@ -57,7 +71,9 @@ class UserResource extends Resource
                 // (same rule as POST /api/register and the lower(email) index).
                 Forms\Components\TextInput::make('email')
                     ->email()
-                    ->requiredUnless('role', UserRole::Child->value)
+                    // M2-10c: a parent who signs in with Google / Apple may have no
+                    // e-mail (provider gave none or was not authoritative for it).
+                    ->required(fn (Forms\Get $get, ?User $record): bool => self::emailRequired($get('role'), $record))
                     ->dehydrateStateUsing(fn (?string $state): ?string => filled($state) ? User::normalizeEmail($state) : null)
                     ->rule(fn (?User $record): Closure => function (string $attribute, mixed $value, Closure $fail) use ($record): void {
                         if (is_string($value) && User::emailTaken($value, $record?->getKey())) {

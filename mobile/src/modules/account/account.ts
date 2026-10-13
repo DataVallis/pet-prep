@@ -4,8 +4,10 @@
  * account followed by a local logout (every token is gone on the server).
  *
  * Deletion is immediate and irreversible (no grace period in the MVP). The server
- * requires the password + `confirm: true`; the app additionally makes the parent
- * type the confirmation word of the app language (`deleteConfirmWord()`).
+ * requires the password + `confirm: true` — or, for a parent who signed in with Google /
+ * Apple and has no password (M2-10c), a fresh sign-in with that provider; the app
+ * additionally makes the parent type the confirmation word of the app language
+ * (`deleteConfirmWord()`).
  */
 
 import { Share } from 'react-native';
@@ -15,8 +17,11 @@ import {
   ApiError,
   type AccountDeletionReason,
   type DeleteAccountResponse,
+  type DeletionProof,
   type FamilyExport,
+  type ProviderReauth,
 } from '@/api/client';
+import { obtainProviderCredential, type ProviderResult, type SocialProvider } from '@/modules/auth/socialSdk';
 import type { FamilyChild, FamilyOverview } from '@/modules/family/family';
 import { logout } from '@/modules/session/logout';
 import { t, type PetGroup } from '@/i18n';
@@ -41,6 +46,28 @@ export function isConfirmWord(text: string): boolean {
 /** The delete button is enabled only with a password and the confirmation word. */
 export function canSubmitDeletion(password: string, confirmText: string): boolean {
   return password.length > 0 && isConfirmWord(confirmText);
+}
+
+/**
+ * M2-10c: a parent without a password (signed in with Google / Apple) proves who they are
+ * with a fresh sign-in of that provider instead — a new ID token (≤ 10 min old on the
+ * server), for Apple with a new nonce and its fresh `authorization_code`. Null when the parent closed the provider UI;
+ * throws `SocialProviderError` when the provider fails.
+ */
+export async function obtainDeletionProof(
+  provider: SocialProvider,
+  obtain: (provider: SocialProvider) => Promise<ProviderResult> = obtainProviderCredential,
+): Promise<ProviderReauth | null> {
+  const result = await obtain(provider);
+  if (result.kind === 'cancelled') return null;
+  const { credential } = result;
+  return {
+    provider: credential.provider,
+    id_token: credential.idToken,
+    ...(credential.nonce ? { nonce: credential.nonce } : {}),
+    // Apple's fresh one-time code (server: token revocation on deletion). Never logged.
+    ...(credential.provider === 'apple' && credential.authorizationCode ? { authorization_code: credential.authorizationCode } : {}),
+  };
 }
 
 export interface AccountDeletionImpact {
@@ -119,7 +146,11 @@ export type DeletionErrorKind =
   | 'unknown'
   | 'server'
   /** M3-11 P5: the deletion removes a dog with a purchased challenge — confirm first. */
-  | 'paid_challenge';
+  | 'paid_challenge'
+  /** M2-10c: the provider re-sign-in was stale / not this account's — confirm again. */
+  | 'reauth_required'
+  /** M2-10c: the server couldn't check the provider token (provider down / disabled). */
+  | 'provider_unavailable';
 
 function reasonOf(error: ApiError): AccountDeletionReason | null {
   const data = error.data;
@@ -141,6 +172,8 @@ export function classifyDeletionError(error: unknown): DeletionErrorKind {
   if (reason === 'invalid_password') return 'invalid_password';
   if (reason === 'superadmin_protected') return 'protected';
   if ((reason as string | null) === 'paid_challenge_ack_required') return 'paid_challenge';
+  if (reason === 'reauth_required') return 'reauth_required';
+  if (reason === 'provider_unavailable' || reason === 'provider_disabled') return 'provider_unavailable';
   if (error.status === 404) return 'not_found';
   if (error.status === 429) return 'throttled';
   if (error.status === 422) return 'invalid';
@@ -214,15 +247,16 @@ export async function shareFamilyExport(
 /**
  * Delete the account, then sign out locally. The server already revoked every token,
  * so `logout` skips its own revoke call; the navigator then shows the StartScreen.
+ * `proof` = the password, or a provider re-sign-in (M2-10c, `obtainDeletionProof`).
  */
 export async function deleteAccountAndLogout(
-  password: string,
-  deleteAccount: (password: string, acknowledgePaidChallenge?: boolean) => Promise<DeleteAccountResponse> = (password, ack) =>
-    api.deleteAccount(password, deleteConfirmWord(), ack === true),
+  proof: DeletionProof,
+  deleteAccount: (proof: DeletionProof, acknowledgePaidChallenge?: boolean) => Promise<DeleteAccountResponse> = (proof, ack) =>
+    api.deleteAccount(proof, deleteConfirmWord(), ack === true),
   signOut: (options: { revoke: boolean }) => Promise<void> = logout,
   acknowledgePaidChallenge = false,
 ): Promise<DeleteAccountResponse> {
-  const result = await deleteAccount(password, acknowledgePaidChallenge);
+  const result = await deleteAccount(proof, acknowledgePaidChallenge);
   await signOut({ revoke: false });
   return result;
 }

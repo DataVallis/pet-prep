@@ -97,6 +97,8 @@ This document describes all environment variables used by the PetPrep production
 | `REVENUECAT_CHALLENGE_PRODUCTS` | Optional | No | Comma-separated store product id(s) of the consumable 12-week challenge (M3-11, PAYMENTS_SPEC P1); each purchase = one challenge credit. Replaces `REVENUECAT_ENTITLEMENTS` (never deployed, no longer read) | `petprep_challenge_12w` (default) |
 | `REVENUECAT_ACCEPT_SANDBOX` | Optional | No | Whether SANDBOX purchases create / revoke challenge credits (they are always stored). Default `false` when `APP_ENV=production`, `true` elsewhere — set `true` in production only for a store review / TestFlight phase | `false` |
 | `REVENUECAT_PUBLIC_KEY` | Optional | No | RevenueCat public SDK key | `test_...` or `appl_...` |
+| `GOOGLE_CLIENT_IDS` | Optional (M2-10c) | No (public ids) | Comma-separated Google OAuth client IDs (web, iOS, Android) accepted as the `aud` of a Google ID token at `POST /api/auth/social`. **Default = PetPrep's own web / iOS / Android ids (in `config/services.php`) — no server change needed**; set only to override. An explicitly empty value (`GOOGLE_CLIENT_IDS=`) disables Google sign-in (503 `provider_disabled`) | `<web-id>.apps.googleusercontent.com,<ios-id>.apps.googleusercontent.com` |
+| `APPLE_AUDIENCES` | Optional | No (public ids) | Comma-separated `aud` values accepted for Sign in with Apple (M2-10c): the iOS bundle id, later a Services ID for Android / web. Unset → `com.datavallis.petprep` (Apple works without any env); an empty value disables Apple sign-in | `com.datavallis.petprep` |
 | `MAIL_MAILER` | Optional | No | Mail driver (`log`, `smtp`, `resend`, `ses`) | `log` |
 
 ---

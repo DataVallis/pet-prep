@@ -232,7 +232,50 @@ sequenceDiagram
   end
 ```
 
-Not yet (M2-10b): e-mail verification and password reset need a mail provider; `email_verified_at` stays null. Apple / Google sign-in is M2-10c.
+Not yet (M2-10b): e-mail verification and password reset need a mail provider; `email_verified_at` stays null. Apple / Google sign-in: §2d′.
+
+## 2d′. Parent sign-in with Google / Apple (M2-10c, 2026-10-13)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Parent
+  participant App as Mobile app
+  participant P as Google / Apple SDK
+  participant API as Laravel API
+  participant K as Provider JWKS
+  participant DB as PostgreSQL
+  Parent->>App: "Nadaljuj z Googlom" / "Nadaljuj z Apple"
+  App->>P: sign in (Apple: nonce = sha256(raw nonce))
+  P-->>App: id_token (JWT, RS256) [+ Apple: name, first time only]
+  App->>API: POST /api/auth/social {provider, id_token, nonce (raw, Apple),<br/>name?, timezone, terms_accepted?} (throttle 10/min + 30/h per IP)
+  alt no client id configured
+    API-->>App: 503 provider_disabled
+  else
+    API->>K: GET keys (cached by max-age; unknown kid → one re-fetch / min; 5 s timeout)
+    K-->>API: JWKS (or failure → 503 provider_unavailable)
+    API->>API: RS256 signature, iss, aud ∈ our client ids, exp/iat (60 s leeway),<br/>Apple nonce == sha256(raw) — else 401 invalid_token
+    API->>DB: transaction: find (provider, sub) in user_social_accounts
+    alt linked
+      API->>DB: token (ability parent)
+      API-->>App: 200 {token, user, …, created: false}
+    else e-mail belongs to an account WITH a password
+      API-->>App: 409 email_in_use → "Prijavite se z e-pošto in geslom"
+    else password-less parent, but e-mail not authoritative (Google non-Gmail without hd, unverified)<br/>or the account already has another identity of this provider
+      API-->>App: 409 email_link_unavailable → "uporabite drug način prijave"
+    else e-mail belongs to a password-less parent and the provider is authoritative for it
+      API->>DB: link (provider, sub) + token
+      API-->>App: 200 {…, created: false}
+    else no account and terms_accepted ≠ true
+      API-->>App: 422 terms_required (nothing written) → terms checkbox → retry same id_token
+    else no account
+      API->>DB: users (parent, password null, authoritative e-mail or null, terms_accepted_at)<br/>+ families + family_user + user_social_accounts + token
+      API-->>App: 200 {token, abilities ["parent"], user {…, has_password, linked_providers}, pet: null, created: true}
+    end
+  end
+```
+
+Children never use this path (403 `not_a_parent` for a child's e-mail). A password-less parent confirms deletions (§2e) with `{provider, id_token, nonce?}` of a linked provider issued ≤ 10 min ago instead of a password (else 422 `reauth_required`).
 
 ## 2e. Account deletion and data export (M2-08, 2026-10-05)
 
@@ -786,6 +829,7 @@ erDiagram
   PETS ||--o{ PET_DAILY_ROUTINES : "closed days' routines (M2-06)"
   USERS ||--o{ PET_DAILY_ROUTINES : "actor (child)"
   USERS ||--o{ CHILD_LOGIN_PINS : "one-time PIN for a child (M2-02)"
+  USERS ||--o{ USER_SOCIAL_ACCOUNTS : "Google / Apple identity of a parent (M2-10c)"
   FAMILIES ||--o{ CHILD_LOGIN_PINS : "issued in"
   BREED_CONFIGS ||--o{ PETS : "tunables by breed_slug"
   FAMILIES {
@@ -809,6 +853,12 @@ erDiagram
     string environment "SANDBOX or PRODUCTION"
     jsonb payload "without subscriber_attributes"
     string outcome
+  }
+  USER_SOCIAL_ACCOUNTS {
+    bigint user_id "cascade"
+    string provider "google or apple"
+    string subject "provider sub, unique with provider"
+    string email "as reported at link time, nullable"
   }
   CHILD_LOGIN_PINS {
     bigint child_user_id

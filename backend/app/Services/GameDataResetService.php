@@ -111,6 +111,9 @@ class GameDataResetService
         'family_user',
         'quiet_hours',
         // auth, framework
+        // M2-10c Google / Apple identities: all of them go (superadmins cannot
+        // use social sign-in, so a kept admin loses nothing it can use).
+        'user_social_accounts',
         'personal_access_tokens',
         'sessions',
         'password_reset_tokens',

@@ -15,6 +15,8 @@ import { queryClient } from '@/api/queryClient';
 import { useAppStore } from '@/store/appStore';
 import { channelAuthGate, childPetFetchGate } from '@/modules/childPet/refetchGovernor';
 import { forgetFamilyTimezone } from './familyTimezone';
+import { forgetSignInMethod } from './signInMethod';
+import { readAuthMethods } from './authMethods';
 
 /** The server revoke is best effort: give up after this long so "Odjava" never hangs offline. */
 export const REVOKE_TIMEOUT_MS = 5_000;
@@ -60,6 +62,8 @@ export async function logout({ revoke = true }: LogoutOptions = {}): Promise<voi
   // M3-06: no background step sync for a signed-out phone (never throws).
   await unregisterStepSyncTask();
   await forgetFamilyTimezone(SecureStore);
+  // M2-10c: the next parent on this phone states their own sign-in method.
+  await forgetSignInMethod(SecureStore);
   // The next user starts with a fresh fetch budget (the server limit is per user).
   childPetFetchGate.reset();
   channelAuthGate.reset();
@@ -69,8 +73,12 @@ export async function logout({ revoke = true }: LogoutOptions = {}): Promise<voi
 
 /** Re-read the active pet after a child pairs (parent side) — keeps `/api/user` the source of truth. */
 export async function refreshSessionPet(): Promise<void> {
-  const { pet } = await api.getUser();
+  const user = await api.getUser();
+  const { pet } = user;
   const store = useAppStore.getState();
+  // M2-10c: keep the parent's sign-in methods current (a provider linked meanwhile).
+  const methods = readAuthMethods(user);
+  if (methods) store.setAuthMethods(methods);
   store.setPet(pet);
   store.setPairingStatus(pet ? 'paired' : 'unpaired');
 }

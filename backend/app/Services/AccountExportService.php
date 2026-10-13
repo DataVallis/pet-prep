@@ -12,6 +12,7 @@ use App\Models\FamilyMember;
 use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\User;
+use App\Models\UserSocialAccount;
 use App\Services\Media\PetGrowthService;
 use App\Services\Media\PetMediaService;
 use Carbon\CarbonImmutable;
@@ -23,7 +24,8 @@ use Laravel\Sanctum\PersonalAccessToken;
  * Data export of a family (M2-08, GDPR art. 15 access / art. 20 portability).
  *
  * Everything the family put into PetPrep or PetPrep derived from it, as one
- * JSON document: parents (name, e-mail, timezone, terms acceptance), children
+ * JSON document: parents (name, e-mail, timezone, terms acceptance, sign-in
+ * methods incl. linked Google / Apple identities — M2-10c), children
  * (nickname, birth year), quiet hours, invites, pets (state, appearance traits,
  * caretakers, contracts INCLUDING the child's signature — the family's own
  * drawing, SVG path data or base64 PNG), the full history (activities, steps,
@@ -32,7 +34,7 @@ use Laravel\Sanctum\PersonalAccessToken;
  * their certificate PDFs (M2-01d) and signed, expiring URLs of the stored AI
  * images / videos (no binaries).
  *
- * Never exported: password hashes, remember tokens, API tokens (only a device
+ * Never exported: provider user ids (`sub`), password hashes, remember tokens, API tokens (only a device
  * count), Expo push tokens (only platform / app version / dates), PIN hashes / legacy pairing PINs, invite codes, RevenueCat ids, fal
  * request ids / source URLs / prompts and seeds, cost data.
  *
@@ -180,6 +182,16 @@ class AccountExportService
             'email' => $u->email,
             'timezone' => $u->timezone,
             'terms_accepted_at' => $this->iso($u->terms_accepted_at),
+            // M2-10c: how this parent signs in — e-mail + password and / or the
+            // linked Google / Apple identities (provider, e-mail the provider
+            // reported, link date; never the provider's user id).
+            'password_login' => $u->hasPassword(),
+            'linked_providers' => UserSocialAccount::where('user_id', $u->id)->orderBy('id')->get()
+                ->map(fn (UserSocialAccount $a) => [
+                    'provider' => $a->provider->value,
+                    'email' => $a->email,
+                    'linked_at' => $this->iso($a->created_at),
+                ])->values()->all(),
             'devices' => (int) ($devices[$u->id] ?? 0),
             'push_devices' => $push[$u->id] ?? [],
             'created_at' => $this->iso($u->created_at),

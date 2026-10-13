@@ -38,7 +38,9 @@
       "invalid": "Vpišite geslo in potrdite brisanje.",
       "unknown": "Ni znano, ali je bil izbris izveden — preverite s ponovno prijavo.",
       "server": "Brisanje ni uspelo. Nič ni bilo izbrisano — poskusite znova.",
-      "paid_challenge": "Ta izbris odstrani psa, za katerega je bil kupljen 12-tedenski izziv. Odkljukajte potrditev, da je nakup porabljen."
+      "paid_challenge": "Ta izbris odstrani psa, za katerega je bil kupljen 12-tedenski izziv. Odkljukajte potrditev, da je nakup porabljen.",
+      "reauth_required": "Potrditev prijave je potekla ali ne ustreza temu računu. Nič ni bilo izbrisano — potrdite znova.",
+      "provider_unavailable": "Storitev za prijavo trenutno ni dosegljiva. Nič ni bilo izbrisano — poskusite znova čez trenutek."
     },
     "exportErrors": {
       "too_large": "Podatkov je preveč za izvoz v aplikaciji. Pišite nam na podporo.",
@@ -55,6 +57,15 @@
     "cancel": "Prekliči",
     "irreversible": "Brisanje je takojšnje in ga ni mogoče razveljaviti.",
     "paidWarning": "Za tega psa je bil kupljen 12-tedenski izziv. Če ga izbrišete, je nakup porabljen — za novega psa boste morali izziv kupiti znova.",
-    "paidAck": "Razumem: nakup je porabljen in se ne povrne."
+    "paidAck": "Razumem: nakup je porabljen in se ne povrne.",
+    "reauth": {
+      "googleHint": "Za potrditev se boste znova prijavili z Googlom.",
+      "appleHint": "Za potrditev se boste znova prijavili z Apple.",
+      "google": "Potrdi z Googlom",
+      "apple": "Potrdi z Apple",
+      "failed": "Vaše istovetnosti nismo mogli potrditi. Poskusite znova.",
+      "anyHint": "Za potrditev se znova prijavite z enim od računov, povezanih s PetPrepom.",
+      "unavailable": "Vaš račun se prijavlja na način, ki ga ta telefon ne podpira (npr. Apple v Androidu). Izbrišite ga v napravi, s katero se prijavljate."
+    }
   }
 }

@@ -39,7 +39,7 @@ describe('restoreSession', () => {
 
     await expect(restoreSession()).resolves.toEqual({
       status: 'authenticated',
-      session: { token: 'tok-123', user: { id: 2, name: 'Otrok', email: 'c@x.si', role: 'child' }, pet, familyTimezone: null },
+      session: { token: 'tok-123', user: { id: 2, name: 'Otrok', email: 'c@x.si', role: 'child' }, pet, familyTimezone: null, signInMethod: 'password' },
     });
   });
 
@@ -51,7 +51,7 @@ describe('restoreSession', () => {
     const result = await restoreSession();
     expect(result).toEqual({
       status: 'authenticated',
-      session: { token: 'tok-9', user: { id: 3, name: 'Bor', email: null, role: 'child' }, pet, awaitingContract: true, familyTimezone: null },
+      session: { token: 'tok-9', user: { id: 3, name: 'Bor', email: null, role: 'child' }, pet, awaitingContract: true, familyTimezone: null, signInMethod: 'password' },
     });
     if (result.status === 'authenticated') expect(result.session.user).not.toHaveProperty('awaiting_contract');
   });
@@ -69,7 +69,7 @@ describe('restoreSession', () => {
     getUser.mockResolvedValueOnce({ id: 4, name: 'Ana', email: null, role: 'child', pet: makePet() });
     const garbage = await restoreSession();
     expect(garbage.status === 'authenticated' && garbage.session.familyTimezone).toBeNull();
-    getItem.mockReset();
+    getItem.mockImplementation(() => Promise.resolve(null));
     getItem.mockResolvedValue(null);
   });
 
@@ -98,5 +98,19 @@ describe('restoreSession', () => {
 
     expect((await restoreSession()).status).toBe('offline');
     expect(deleteItem).not.toHaveBeenCalled();
+  });
+
+  it('M2-10c: a parent session carries the stored sign-in method (Google / Apple → re-auth for deletions)', async () => {
+    const values: Record<string, string> = { petprep_auth_token: 'tok-p', petprep_sign_in_method: 'apple' };
+    getItem.mockImplementation(async (key: string) => values[key] ?? null);
+    getUser.mockResolvedValueOnce({ id: 1, name: 'Mama', email: 'm@x.si', role: 'parent', pet: null, awaiting_contract: null });
+    const result = await restoreSession();
+    expect(result.status === 'authenticated' && result.session.signInMethod).toBe('apple');
+
+    values.petprep_sign_in_method = 'something-else';
+    getUser.mockResolvedValueOnce({ id: 1, name: 'Mama', email: 'm@x.si', role: 'parent', pet: null, awaiting_contract: null });
+    const unknown = await restoreSession();
+    expect(unknown.status === 'authenticated' && unknown.session.signInMethod).toBe('password');
+    getItem.mockImplementation(() => Promise.resolve(null));
   });
 });

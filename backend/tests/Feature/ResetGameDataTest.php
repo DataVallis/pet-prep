@@ -10,6 +10,7 @@ use App\Models\PetContract;
 use App\Models\PetDailyStep;
 use App\Models\PetMedia;
 use App\Models\User;
+use App\Models\UserSocialAccount;
 use App\Services\FamilyService;
 use App\Services\GameDataResetService;
 use App\Services\Media\PetMediaService;
@@ -149,6 +150,8 @@ function rgSeed(): array
     FamilyInvite::create(['family_id' => $family->id, 'created_by' => $parent->id, 'code' => strtoupper(Str::random(8)), 'expires_at' => $now->copy()->addDay()]);
     ChildLoginPin::create(['family_id' => $family->id, 'child_user_id' => $child->id, 'created_by' => $parent->id, 'pin_hash' => hash_hmac('sha256', '123456', 'k'), 'expires_at' => $now->copy()->addMinutes(15)]);
 
+    // M2-10c: a linked Google identity of the parent.
+    UserSocialAccount::create(['user_id' => $parent->id, 'provider' => 'google', 'subject' => 'google-sub-1', 'email' => 'parent@example.com']);
     $parentToken = $parent->createToken('iPhone', ['parent']);
     $child->createToken('iPad', ['child']);
     $admin->createToken('iPhone', ['parent']);

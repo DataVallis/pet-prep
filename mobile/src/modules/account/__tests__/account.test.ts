@@ -16,6 +16,7 @@ import {
   exportFileName,
   ExportTooLargeToShareError,
   isConfirmWord,
+  obtainDeletionProof,
   shareFamilyExport,
   utf8Bytes,
 } from '@/modules/account/account';
@@ -87,6 +88,23 @@ describe('errors', () => {
     expect(classifyDeletionError(new ApiError('x', 500, null))).toBe('server');
     // No HTTP answer: the deletion may have happened — never "nothing deleted".
     expect(classifyDeletionError(new TypeError('Network request failed'))).toBe('unknown');
+    // M2-10c: provider re-auth.
+    expect(classifyDeletionError(new ApiError('x', 422, { reason: 'reauth_required' }))).toBe('reauth_required');
+    expect(classifyDeletionError(new ApiError('x', 503, { reason: 'provider_unavailable' }))).toBe('provider_unavailable');
+    expect(classifyDeletionError(new ApiError('x', 503, { reason: 'provider_disabled' }))).toBe('provider_unavailable');
+  });
+
+  it('M2-10c: obtainDeletionProof — a fresh provider sign-in as {provider, id_token, nonce?}; null on cancel', async () => {
+    await expect(
+      obtainDeletionProof('apple', async () => ({
+        kind: 'credential',
+        credential: { provider: 'apple', idToken: 'a', nonce: 'raw', name: 'Ana', authorizationCode: 'code' },
+      })),
+    ).resolves.toEqual({ provider: 'apple', id_token: 'a', nonce: 'raw', authorization_code: 'code' });
+    await expect(
+      obtainDeletionProof('google', async () => ({ kind: 'credential', credential: { provider: 'google', idToken: 'g' } })),
+    ).resolves.toEqual({ provider: 'google', id_token: 'g' });
+    await expect(obtainDeletionProof('google', async () => ({ kind: 'cancelled' }))).resolves.toBeNull();
   });
 
   it('maps export refusals', () => {
