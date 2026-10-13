@@ -13938,7 +13938,7 @@
         "source_id": "S249",
         "quote": "All whole colours permissible, but free from black or white shadings.",
         "confidence": "high",
-        "notes": "RKC (S249): 'Whole colours are: white, black, brown, light or dark, blue as pale as possible.' 'Orange, which should be self-coloured and bright as possible.' 'Beaver.' 'Cream dogs have black noses and black eye-rims.' 'Merles not permissible.' Parti-colours and shaded sables are allowed by the RKC. FCI (S246): 'White, black, brown, orange, grey-shaded, other colours.'; disqualifying 'Definite white markings or spots in all non-white Toy Spitz dogs/Pomeranians.' The game draws only whole colours both standards name (orange, cream, white, black, brown) — never merle, never white markings on a coloured dog, no parti-colour (FCI disqualifies white markings)."
+        "notes": "RKC (S249): 'Whole colours are: white, black, brown, light or dark, blue as pale as possible.' 'Orange, which should be self-coloured and bright as possible.' 'Beaver.' 'Cream dogs have black noses and black eye-rims.' 'Merles not permissible.' Parti-colours and shaded sables are allowed by the RKC. FCI (S246): 'White, black, brown, orange, grey-shaded, other colours.'; disqualifying 'Definite white markings or spots in all non-white Toy Spitz dogs/Pomeranians.' The game draws only RKC whole colours (S249) the FCI also allows (orange, white, black, brown by name; cream under FCI 'other colours') — never merle, never white markings on a coloured dog, no parti-colour (FCI disqualifies white markings)."
       },
       "colour_weights": {
         "value": null,
@@ -14125,7 +14125,7 @@
         "source_id": "S251",
         "quote": "A Pom's coat should be brushed frequently to keep the hair healthy and ensure they look their best.",
         "confidence": "medium",
-        "notes": "AKC (S251): 'taking the dog to a professional groomer every four to six weeks is highly recommended.' No weekly number → PDSA decides. Professional grooming is not modelled (no mechanic needed for a monthly visit)."
+        "notes": "AKC (S251): 'taking the dog to a professional groomer every four to six weeks is highly recommended.' No weekly number → PDSA decides the brushing routine. The professional groomer visit is a sourced need without a game mechanic → proposed_game_parameters.pomeranian.professional_grooming → new ROADMAP M5-R18 (needs-david)."
       }
     }
   },
@@ -20766,7 +20766,7 @@
       }
     },
     "pomeranian": {
-      "_note": "Unattended run M5-R10-30 (2026-10-13): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. New consider tag older_children (AKC S251 — the Yorkshire Terrier's fragile_older_children names fragile bones, which no A/B source here says). Sourced needs built from day one: brushing 2–3× a week (PDSA S250; RKC S247 'More than once a week') → 3× (M5-R13); early socialisation (AKC S251) → M5-R17. Senior 108 = RKC lower bound (S247) — provisional until McMillan 2024 is checked. Breed Watch Category 2 without returned points → no welfare chip (open for David).",
+      "_note": "Unattended run M5-R10-30 (2026-10-13): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. New consider tag older_children (AKC S251 — the Yorkshire Terrier's fragile_older_children names fragile bones, which no A/B source here says). Sourced needs built from day one: brushing 2–3× a week (PDSA S250; RKC S247 'More than once a week') → 3× (M5-R13); early socialisation (AKC S251) → M5-R17. A professional groomer every 4–6 weeks (AKC S251) has no mechanic → new ROADMAP M5-R18 (needs-david). Senior 108 = RKC lower bound (S247) — provisional until McMillan 2024 is checked. Breed Watch Category 2 without returned points → no welfare chip (open for David).",
       "exercise_minutes_adult": {
         "value": 30,
         "unit": "minutes/day",
@@ -20908,6 +20908,15 @@
         "notes": "pomeranian.behaviour.socialisation (AKC S251). Built in M5-R17.",
         "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat AKC S251)"
       },
+      "professional_grooming": {
+        "value": "a professional groomer every 4–6 weeks",
+        "unit": "visits (sourced need)",
+        "source_id": "S251",
+        "quote": "taking the dog to a professional groomer every four to six weeks is highly recommended.",
+        "confidence": "medium",
+        "notes": "AKC (S251), pomeranian.suitability.akc_grooming. The game has no groomer / clipping mechanic (the Standard Poodle, Westie, Miniature Schnauzer and Shih Tzu sources name professional grooming too) → new ROADMAP M5-R18; this value is its input.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): obisk pasjega frizerja vsakih 4–6 tednov; mehanike ni → ROADMAP M5-R18 (needs-david)"
+      },
       "suitability_tags": {
         "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-30); refs = JSON paths in this file. New vocabulary key older_children (consider). No percentages in the app.",
         "suits": [
@@ -21022,8 +21031,8 @@
         "source_id": "S249",
         "quote": "Orange, which should be self-coloured and bright as possible.",
         "confidence": "high",
-        "notes": "Colours named by both standards (RKC S249, FCI S246): orange, cream, white, black, brown — never merle (RKC 'Merles not permissible.'), never white markings on a coloured dog (FCI disqualifying). Natural, untrimmed coat (FCI 'Hair must not look like being modelled.'). Weights unsourced in prompts.",
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): orange (self-coloured, RKC + FCI colour) is the portrait default; natural untrimmed coat, erect ears, tail over the back"
+        "notes": "RKC whole colours (S249): orange, cream, white, black, brown — the FCI (S246) names all but cream ('other colours') — never merle (RKC 'Merles not permissible.'), never white markings on a coloured dog (FCI disqualifying). Natural, untrimmed coat (FCI 'Hair must not look like being modelled.'). Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): orange (self-coloured; named by both the RKC and the FCI) is the portrait default; natural untrimmed coat, erect ears, tail over the back"
       }
     }
   }
