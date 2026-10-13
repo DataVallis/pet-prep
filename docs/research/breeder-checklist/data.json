@@ -1116,6 +1116,15 @@
       ],
       "notes": "RKC breed page (older address display.aspx?id=4096, dog-data S223, 2026-10-13): no minimum list; under 'Best Practice schemes and tests': 'To support the breed's health, responsible breeders should ensure they complete all tests in best practice.' — MAC DNA test and the BVA/KC/ISDS eye scheme. New test key dna_mac."
     },
+    "shih_tzu": {
+      "status": "none_recommended",
+      "basis": {
+        "source_id": "S231",
+        "quote": "Currently there are no additional health screening schemes or DNA tests for this breed."
+      },
+      "tests": [],
+      "notes": "RKC breed page (older address display.aspx?id=4102, dog-data S231, 2026-10-13): under 'We strongly recommend that all breeders, both assured breeders (ABs) and non ABs, use the following (or equivalent) schemes, tests and advice.' the page lists none; 'You may want to speak to your breeder, vet or local breed club about any health issues in the breed.' No test is guessed."
+    },
     "maine_coon": {
       "status": "listed",
       "basis": {

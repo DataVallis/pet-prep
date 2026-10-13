@@ -12466,6 +12466,536 @@
       }
     }
   },
+  "shih_tzu": {
+    "_note": "Added 2026-10-13 (M5-R10-28, unattended run — appended after the Miniature Schnauzer: AKC 2024 No. 20, S174 table row '20 | Shih Tzu'; No. 19 Bernese Mountain Dog is already in the app). Quotes as returned by the web-fetch tool on 2026-10-13; spot-check before import (sources.md S229–S236, reused S10, S11, S14, S35, S45, S92, S174). FCI standard N° 208 (S229, EN PDF on dev.fci.be, valid standard 22.08.2017): height not more than 27 cm, weight 4.5–8 kg (ideal 4.5–7.5 kg), 'All colours permissible'; the FCI nomenclature page (S230) names a newer valid standard (08/09/2026) that the tool only paraphrased ('All colours are permitted except merle') — the RKC standard (S232, KUSA copy, effective 01/01/2026) says verbatim 'All colours permissible except merle, which is unacceptable.' → the game draws parti-colours only (gold and white default, black and white, liver and white), never merle. Lifespan: VetCompass 2016 median 12.7 y (Dale et al. 2024, S234) — McMillan 2024 / Dogs Trust table (S123) not reachable this run (fetch refused). RKC Breed Watch Category 1 (S231), but the BVA names the Shih-tzu among brachycephalic breeds (S236, Figure 1) and PDSA lists BOAS 'caused by their shorter faces' (S233) → welfare rule: short_muzzle_breathing chip (no Shih Tzu source names heat — Boxer precedent), NOT in marketing (BVA S92). Slovenian name »shih tzu« (common name used by Slovenian breeders; KZS page not opened). Woodgreen and AKC trait ratings not attempted.",
+    "identity": {
+      "value": "FCI No. 208, Group 9 Section 5 (Tibetan breeds), Tibet (China)",
+      "unit": "—",
+      "source_id": "S230",
+      "quote": "Country of origin: TIBET (CHINE)",
+      "confidence": "high",
+      "notes": "FCI nomenclature page (S230), fields as returned (French labels): 'SHIH TZU', No. 208, group 'n°9 - Chiens d'agrément et de compagnie', section 'Chiens du Tibet', patronage 'GRANDE-BRETAGNE', not subject to a working trial, definitive acceptance 16/12/1957, valid standard 08/09/2026. FCI standard (S229): 'ORIGIN: Tibet (China).', 'PATRONAGE: Great Britain.', 'UTILIZATION: Companion Dog.', 'FCI-CLASSIFICATION: Group 9 Companion and Toy Dogs.' 'Section 5 Tibetan breeds.' 'Without working trial.' RKC group: Utility (S231). AKC name: Shih Tzu (S174)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S231",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "PDSA (S233) key facts: 'Small' — sources agree. Height not more than 27 cm (S229)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            null,
+            27
+          ],
+          "female": [
+            null,
+            27
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S229",
+        "quote": "Height at the withers: Not more than 27 cm",
+        "confidence": "high",
+        "notes": "FCI standard (S229) — an upper bound only, both sexes. RKC standard (S232): 'not more than 27cm (approx. 10½”).' PDSA (S233): 'Average height' '27 cm'."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            4.5,
+            8
+          ],
+          "female": [
+            4.5,
+            8
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S229",
+        "quote": "Weight: 4.5 to 8 kg. Ideal weight 4.5 - 7.5 kg",
+        "confidence": "high",
+        "notes": "FCI standard (S229) — one range for both sexes; ideal 4.5–7.5 kg. RKC standard (S232): '4.5kg – 8kg. Ideal weight 4.5kg – 7.5kg.' Game range 4.5–8 kg."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            4.5,
+            7.5
+          ],
+          "female": [
+            4.5,
+            7.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S233",
+        "quote": "4.5-7.5 kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S233), 'Average weight' (cell as returned) — the standard's ideal range."
+      },
+      "vetcompass_mean": {
+        "value": {
+          "all": 7.9
+        },
+        "unit": "kg",
+        "source_id": "S234",
+        "quote": "mean adult bodyweight was 7.9 kg (SD: 1.9 kg)",
+        "confidence": "medium",
+        "notes": "Dale et al. 2024 (S234), UK primary-care population (both sexes together, as returned) — background only, never a game value."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 4.5–8 kg (S229) ≈ 10–17.6 lb straddles 'Toy (5–12 pounds): 8–12 months' and 'Small'; the UK mean adult weight 7.9 kg (S234) ≈ 17.4 lb → 'Small'. Both classes end at 12 months. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Shih Tzu growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 12.7,
+        "unit": "years",
+        "source_id": "S234",
+        "quote": "The median age of death was 12.7 years (IQR 8.7–14.3, range 2.0–19.9)",
+        "confidence": "medium",
+        "notes": "Dale et al. 2024 (S234), VetCompass UK 2016 (11,082 Shih Tzus; the number of deaths was not returned). Same sentence via the core.ac.uk and DOAJ records. RVC infographic (S235): 'On average, Shih Tzu dogs lived to 12.7 years'. McMillan 2024 (S54) and the Dogs Trust breed table (S123) not reachable this run — runbook rule: else a VetCompass median. Consistent with the breed-page band 'Over 10 years' (S231, S233)."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S231",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page (S231). PDSA key facts (S233): 'Over 10 years' — same. Not 'Under 10 years' → no shorter_lifespan chip."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024: the Dogs Trust breed table (S123) was refused by the fetch tool (provenance) and the 'shortest and longest' PDF returned a fetch error. UNSOURCED value — verify in McMillan 2024 before replacing the VetCompass median."
+      },
+      "senior_from": {
+        "value": 9.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12.7 y (S234) → 0.75 × 12.7 = 9.525 y = 114.3 → 114 months. With the breed-page 'Over 10 years' (S231): 0.75 × 10 = 7.5 y = 90 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S234"
+        ],
+        "months": 114,
+        "alternative": {
+          "value_years": 7.5,
+          "months": 90,
+          "derived_from": [
+            "S11",
+            "S231"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S231",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "PDSA (S233): 'Your Shih Tzu will need an hour exercise every day' (key facts 'Minimum exercise (per day)' '1 hour') — sources agree; RKC preferred (runbook rule). PDSA: 'This should be split into a couple of short walks with lots of time to sniff, explore and play off-lead in a secure area.'"
+      },
+      "after_meals": {
+        "value": "leave a gap after eating and before exercising",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "medium",
+        "notes": "PDSA (S233), feeding section. No length in the source → M5-R16 (60 min warning, David 2026-10-12)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "intelligent, active and alert; friendly and independent",
+        "unit": "—",
+        "source_id": "S229",
+        "quote": "Intelligent, active and alert. Friendly and independent.",
+        "confidence": "high",
+        "notes": "FCI standard (S229). RKC standard (S232): 'Intelligent, active, and alert.' / 'Friendly and independent.' PDSA (S233): 'Shih Tzus are alert, lively little dogs and eager to learn, so do really well with positive, reward-based training'."
+      },
+      "family": {
+        "value": "make great family pets in the right household, given the right socialisation and training; always supervise with children",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "Shih Tzus are bred to be loyal and loving companions and make great family pets in the right household.",
+        "confidence": "medium",
+        "notes": "PDSA (S233). Also: 'Shih Tzus can be good-natured family pets if they’ve been given the right socialisation and training' and 'You should always supervise your Shih Tzu with children.' → family_pet (Labrador precedent: a family statement with a socialisation condition), never children / small_children (no statement about children, only a supervision advice)."
+      },
+      "socialisation": {
+        "value": "socialise with a variety of people and experiences from a young age",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "Shih Tzus can be good-natured family pets if they’ve been given the right socialisation and training",
+        "confidence": "medium",
+        "notes": "PDSA (S233), verbatim fragment as returned (the tool cut the sentence; apostrophe as returned). Also: 'Socialising your Shih Tzu with a variety of people and experiences from a young age…' (cut by the tool). A socialisation condition → M5-R17 breed row."
+      },
+      "time_alone": {
+        "value": "not more than four hours a day (as with any dog)",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "As with any dog, your Shih Tzu shouldn’t be left alone for more than four hours a day.",
+        "confidence": "medium",
+        "notes": "PDSA (S233) — a general dog statement, not a breed trait → no often_alone / needs_company tag."
+      },
+      "other_pets": {
+        "value": "can get along with pets they have grown up with, may still chase another pet — supervise",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "Due to their sociable nature, Shih Tzus can get along with other pets they have grown up with…",
+        "confidence": "medium",
+        "notes": "PDSA (S233), cut by the tool; continues '…but this certainly doesn’t mean they won’t chase another pet if the mood takes them!' and 'Always supervise your dog with other pets.' No high-prey-drive statement → no chases_small_pets; only pets they grew up with → no other_pets (German Shepherd precedent)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No statement on the pages read."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation statement. PDSA (S233): 'Treats shouldn’t make up more than 10% of their calories or they can unbalance their diet.' — general feeding advice."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S231); the BVA counts the Shih-tzu among brachycephalic breeds (S236) and PDSA lists BOAS (S233) → welfare rule (short-muzzle chip, not in marketing).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S231",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges, other than those covered routinely by The Kennel Club breed standard.",
+        "confidence": "high",
+        "notes": "RKC breed page (S231). The welfare rule still applies through the BVA (S236) — brachycephalic breed."
+      },
+      "brachycephaly_boas": {
+        "value": "brachycephalic obstructive airway syndrome (BOAS) — breathing problems caused by the shorter face",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "this can cause severe breathing problems and is caused by their shorter faces",
+        "confidence": "high",
+        "notes": "PDSA health list (S233): 'Brachycephalic obstructive airway syndrome (BOAS)'. Standards: muzzle 'short' and 'flat' (S229, S232). No Shih Tzu source on the pages read names heat → short_muzzle_breathing, not brachycephalic_breathing (Boxer precedent)."
+      },
+      "skull_shape": {
+        "value": "brachycephalic breed (BVA)",
+        "unit": "—",
+        "source_id": "S236",
+        "quote": "Boxer Bulldog French Bulldog Pug Shih-tzu",
+        "confidence": "high",
+        "notes": "BVA position, January 2018 (S236): Figure 1 legend (as returned) — 'Figure 1: Graph demonstrating the rise in proportional annual birth rates amongst brachycephalic breeds'. BVA definition: 'a dog with a shortened skull shape.' Basis of the marketing exclusion (S92)."
+      },
+      "eyes": {
+        "value": "eye conditions — dry eye, cataracts, progressive retinal atrophy, retinal detachment; eye discharge needs gentle wiping",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "Due to their head shape and quite large eyes, you may notice gunk collects by the corner of their eye.",
+        "confidence": "medium",
+        "notes": "PDSA (S233): 'This will need gently wiping away to keep them clean and prevent coat staining.'; health list: dry eye (KCS), cataracts, progressive retinal atrophy, retinal detachment. Dale et al. 2024 (S234): ophthalmological disorders among the most prevalent groups (figures stay out)."
+      },
+      "face_care": {
+        "value": "keep the fur around the mouth and nose trimmed and the area clean; wipe the eyes",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "Keep a close eye on the fur around you Shih Tzu’s mouth and nose, trimming it occasionally and keeping the area clean…",
+        "confidence": "medium",
+        "notes": "PDSA (S233), cut by the tool (spelling 'you' as in the source); the summary returned the continuation 'keeping the area clean as food can collect around there and make the skin sore'. No frequency → ROADMAP M5-R14 (face care, needs David)."
+      },
+      "dental": {
+        "value": "periodontal disease is the most common disorder; dental checks and tooth brushing",
+        "unit": "—",
+        "source_id": "S235",
+        "quote": "as well as tooth brushing in Shih Tzu",
+        "confidence": "high",
+        "notes": "RVC VetCompass infographic (S235), fragments as returned: 'highlighting the importance of regular veterinary dental checks' … 'as well as tooth brushing in Shih Tzu.' Dale et al. 2024 (S234): 'Oral hygiene was highlighted as a healthcare priority.' PDSA (S233): 'Rostral bite problems – crowding and displaced teeth, due to a lack of space in the mouth.' No frequency → proposed_game_parameters.shih_tzu.tooth_brushing → ROADMAP M5-R15 (not built, needs David)."
+      },
+      "other": {
+        "value": "renal dysplasia, intervertebral disc disease, Cushing's disease, umbilical hernia; anal sac impaction and ear disorders common",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "Renal dysplasia",
+        "confidence": "medium",
+        "notes": "PDSA health list (S233) with one-line descriptions; Dale et al. 2024 (S234): anal sac impaction and ear disorders after periodontal disease. Research only — no chip (not Breed Watch points)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 70,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "70 | Shih Tzu",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35): row '70 | Shih Tzu' under 'Lowest Degree of Working/Obedience Intelligence' (ranks 70–79). Coren's own article (S34) not reachable this run. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Lowest",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 80 to 100 repetitions or more.",
+        "confidence": "medium",
+        "notes": "S35 tier 'Lowest Degree of Working/Obedience Intelligence': 'Obey first command: 25% of the time or worse.'"
+      },
+      "training_notes": {
+        "value": "eager to learn — positive, reward-based training",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "Shih Tzus are alert, lively little dogs and eager to learn, so do really well with positive, reward-based training",
+        "confidence": "medium",
+        "notes": "PDSA (S233). The game's school (M5-R03) covers training."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.shih_tzu.learning_multiplier (0.5, runbook rule: Lowest tier, rank 70).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "sturdy, abundantly coated small dog with an arrogant carriage and a 'chrysanthemum-like' face",
+        "unit": "—",
+        "source_id": "S232",
+        "quote": "Sturdy, abundantly, but not excessively, coated dog with distinctly arrogant carriage and 'chrysanthemum-like' face.",
+        "confidence": "high",
+        "notes": "RKC standard (S232)."
+      },
+      "colours": {
+        "value": [
+          "gold_and_white",
+          "black_and_white",
+          "liver_and_white"
+        ],
+        "unit": "list (parti-colours; any colour except merle is standard — only these three are drawn)",
+        "source_id": "S232",
+        "quote": "All colours permissible except merle, which is unacceptable.",
+        "confidence": "high",
+        "notes": "RKC standard (S232). FCI 2017 (S229): 'Colour: All colours permissible, white blaze on forehead and white tip to tail highly desirable in parti-colours.' The newer FCI standard (S230, 08/09/2026) excludes merle (tool paraphrase). Liver named in the standards' nose sentence ('dark liver in liver or liver-marked dogs'). Never merle."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Gold and white first with the highest weight (portrait default), then black and white, then liver and white."
+      },
+      "coat": {
+        "value": "long, dense outer coat, not curly, with a moderate undercoat",
+        "unit": "—",
+        "source_id": "S229",
+        "quote": "Hair: Outer coat long, dense, not curly, with moderate undercoat, not woolly.",
+        "confidence": "high",
+        "notes": "RKC standard (S232): 'Outer coat long, dense, not curly, with moderate undercoat, not woolly.' RKC breed page (S231): 'Coat length: Long'. PDSA (S233): most owners keep the fur clipped (every 6–8 weeks, professional groomer) — the portrait shows a natural long coat."
+      },
+      "ears": {
+        "value": "large, long leathers, carried drooping",
+        "unit": "—",
+        "source_id": "S229",
+        "quote": "Ears: Large, with long leathers, carried drooping.",
+        "confidence": "high",
+        "notes": "RKC (S232): 'Large, with long leathers, carried drooping.'"
+      },
+      "eyes": {
+        "value": "large, dark, round, placed well apart but not prominent",
+        "unit": "—",
+        "source_id": "S229",
+        "quote": "Eyes: Large, dark, round, placed well apart but not prominent.",
+        "confidence": "high",
+        "notes": "RKC (S232) adds 'Warm expression.'"
+      },
+      "nose": {
+        "value": "black (dark liver in liver dogs); level or slightly tip-tilted",
+        "unit": "—",
+        "source_id": "S229",
+        "quote": "Nose: Black but dark liver in liver or liver marked dogs.",
+        "confidence": "high",
+        "notes": "RKC (S232): 'Nose level or slightly tip-tilted.'"
+      },
+      "muzzle": {
+        "value": "short, square, of ample width, not wrinkled — drawn moderate with open nostrils",
+        "unit": "—",
+        "source_id": "S229",
+        "quote": "Muzzle: Of ample width, square, short, not wrinkled; flat and hairy.",
+        "confidence": "high",
+        "notes": "Welfare rule: moderate, non-exaggerated face in the portrait (dog trait 'muzzle')."
+      },
+      "tail": {
+        "value": "heavily plumed, carried gaily well over the back, set high",
+        "unit": "—",
+        "source_id": "S229",
+        "quote": "TAIL: Heavily plumed carried gaily well over back. Set on high.",
+        "confidence": "high",
+        "notes": "RKC (S232) the same."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page fields (S231, older address display.aspx?id=4102) and PDSA (S233). The RKC page shows no 'Good with children' field (as returned 2026-10-13). Woodgreen and AKC trait ratings not attempted.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S231",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "PDSA (S233): 'Small'."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S231",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S231",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "Basis of apartment (runbook: only from RKC 'Flat/ Apartment')."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S231",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S231",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "PDSA (S233): daily brush → weekly brushing routine (M5-R13), 7× a week; basis of frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Long",
+        "unit": "—",
+        "source_id": "S231",
+        "quote": "Coat length: Long",
+        "confidence": "high",
+        "notes": "PDSA (S233): 'Long'."
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S231",
+        "quote": "Sheds: No",
+        "confidence": "high",
+        "notes": "Basis of low_shedding (never 'hypoallergenic'). PDSA (S233): 'Expect them to shed more in autumn and spring' — a seasonal remark, not a conflicting rating; low_shedding kept from the RKC field (open for David)."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S231",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S231",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S231",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-10-13)."
+      },
+      "pdsa_family": {
+        "value": "make great family pets in the right household",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "Shih Tzus are bred to be loyal and loving companions and make great family pets in the right household.",
+        "confidence": "medium",
+        "notes": "Basis of family_pet. Condition kept: 'if they’ve been given the right socialisation and training'."
+      },
+      "pdsa_children": {
+        "value": "always supervise with children",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "You should always supervise your Shih Tzu with children.",
+        "confidence": "medium",
+        "notes": "A supervision advice, not a statement of suitability → no children / small_children tag."
+      },
+      "pdsa_first_time_owner": {
+        "value": "an ideal pet for first-time owners",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "Shih Tzus are an ideal pet for first-time owners.",
+        "confidence": "medium",
+        "notes": "PDSA (S233), as returned (the tool cut the sentence's start). Basis of first_time_owner."
+      },
+      "pdsa_exercise": {
+        "value": "an hour a day",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "Your Shih Tzu will need an hour exercise every day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "pdsa_grooming": {
+        "value": "a daily brush; clipping every 6–8 weeks (usually a professional groomer)",
+        "unit": "—",
+        "source_id": "S233",
+        "quote": "They’ll need a daily brush to keep their coat knot-free as they have what is known as a ‘double coat’.",
+        "confidence": "high",
+        "notes": "PDSA (S233): 'This will need doing every 6-8 weeks, usually by a professional groomer.' Professional clipping is not modelled (Poodle / Westie / Miniature Schnauzer precedent)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -18514,6 +19044,276 @@
         "confidence": "high",
         "notes": "Colours from the FCI (S221), RKC (S224) and AKC (S225) standards; white is not drawn (AKC disqualification, open for David). Natural drop ears and natural tail (FCI S221: 'Natural; a sabre or sickle carriage is sought after.'); the AKC's cropped ears and docked tail are never drawn. Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): pepper and salt (all three standards) is the portrait default; natural ears and tail; never white"
+      }
+    },
+    "shih_tzu": {
+      "_note": "Unattended run M5-R10-28 (2026-10-13): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs: daily brushing (RKC S231, PDSA S233) → built (M5-R13), 7× a week; meal / exercise gap (PDSA S233) → built (M5-R16, 60 min warning); puppy socialisation with the PDSA quote → built (M5-R17); face care — mouth / nose area kept clean, eyes wiped (PDSA S233, no frequency) → ROADMAP M5-R14 (not built, needs David); tooth brushing (RVC VetCompass S235, no frequency) → ROADMAP M5-R15 (not built, needs David). Professional clipping (PDSA S233) is not modelled. Marketing: no (brachycephalic — BVA S236 / S92).",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S231",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Exercise: Up to 1 hour per day' (S231); PDSA 'an hour exercise every day' (S233). Rule: one number N ('up to N') → N = 60.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S231 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S231",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 114
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 114 = round(0.75 × 12.7 y × 12) = round(114.3) (S11 + VetCompass median 12.7 y, S234). No McMillan 2024 value reachable. Alternatives: 90 (RKC 'Over 10 years', S231), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S234"
+        ],
+        "alternatives": {
+          "senior_rkc_lower_bound": 90,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 114 (0.75 × 12.7 y, VetCompass median S234)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 114
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 114)"
+      },
+      "learning_multiplier": {
+        "value": 0.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 70 (S35), tier 'Lowest' (70–79) → 0.5. No individual variation (pedigree). PDSA (S233): eager to learn, reward-based training — the multiplier only sets the game's learning speed.",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 70, Lowest tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PDSA (S233): 'it’s usually recommended to split their daily allowance into two meals' — the game's meal plan already uses the general rule.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S231",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "RKC (S231) 'Every day'; PDSA (S233) 'They’ll need a daily brush to keep their coat knot-free'. Rule: 'Every day' / 'daily' → 7. Professional clipping every 6–8 weeks (PDSA S233) is not modelled. Built in M5-R13 (dog grooming); matted coat at ceil(7 / 2) = 4 missed.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S233",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "medium",
+        "notes": "PDSA (S233), feeding section (shih_tzu.exercise.after_meals). No length in the source. Built in M5-R16 (David 2026-10-12): 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S233",
+        "quote": "Shih Tzus can be good-natured family pets if they’ve been given the right socialisation and training",
+        "confidence": "medium",
+        "notes": "shih_tzu.behaviour.socialisation (PDSA S233). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17)"
+      },
+      "face_care": {
+        "value": null,
+        "unit": "face care — mouth / nose area kept clean, eye discharge wiped (sourced need, not built)",
+        "source_id": "S233",
+        "quote": "Due to their head shape and quite large eyes, you may notice gunk collects by the corner of their eye.",
+        "confidence": "medium",
+        "notes": "shih_tzu.health.face_care and shih_tzu.health.eyes (PDSA S233): 'This will need gently wiping away to keep them clean and prevent coat staining.'; mouth and nose area kept clean ('as food can collect around there and make the skin sore'). No frequency in the source. The game has no face-care mechanic → ROADMAP M5-R14 (flat-faced dog care, opened for the Bulldog; needs David).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): potreba z virom; mehanika ni zgrajena → ROADMAP M5-R14 (needs-david); vir ne navaja pogostosti"
+      },
+      "tooth_brushing": {
+        "value": null,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S235",
+        "quote": "as well as tooth brushing in Shih Tzu",
+        "confidence": "medium",
+        "notes": "RVC VetCompass infographic (S235) of Dale et al. 2024 (S234); periodontal disease the most prevalent disorder (S234). No frequency in the source. The game has no tooth-brushing mechanic → ROADMAP M5-R15; value null until David decides.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): potreba z virom (ščetkanje zob); mehanike ni → ROADMAP M5-R15 (needs-david); vir ne navaja pogostosti"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-28); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S231"
+            ],
+            "refs": [
+              "shih_tzu.suitability.rkc_size_of_home",
+              "shih_tzu.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S231 'Size of home: Flat/ Apartment' / 'Size of garden: Small/ medium garden'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S233"
+            ],
+            "refs": [
+              "shih_tzu.suitability.pdsa_family",
+              "shih_tzu.behaviour.family"
+            ],
+            "quote": "S233 'Shih Tzus are bred to be loyal and loving companions and make great family pets in the right household.'",
+            "note": "Condition kept (right socialisation and training); always supervise with children → never children / small_children."
+          },
+          {
+            "tag": "first_time_owner",
+            "source_ids": [
+              "S233"
+            ],
+            "refs": [
+              "shih_tzu.suitability.pdsa_first_time_owner"
+            ],
+            "quote": "S233 'Shih Tzus are an ideal pet for first-time owners.'"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S231"
+            ],
+            "refs": [
+              "shih_tzu.suitability.rkc_shedding"
+            ],
+            "quote": "S231 'Sheds: No'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S231",
+              "S233"
+            ],
+            "refs": [
+              "shih_tzu.suitability.rkc_grooming",
+              "shih_tzu.suitability.pdsa_grooming"
+            ],
+            "quote": "S231 'Grooming: Every day'; S233 'They’ll need a daily brush to keep their coat knot-free'"
+          },
+          {
+            "tag": "short_muzzle_breathing",
+            "source_ids": [
+              "S233",
+              "S236"
+            ],
+            "refs": [
+              "shih_tzu.health.brachycephaly_boas",
+              "shih_tzu.health.skull_shape"
+            ],
+            "quote": "S233 BOAS 'this can cause severe breathing problems and is caused by their shorter faces'; S236 Figure 1 brachycephalic breeds 'Boxer Bulldog French Bulldog Pug Shih-tzu'",
+            "note": "Welfare rule §3: brachycephalic breed (BVA). No Shih Tzu source names heat → the Boxer's short_muzzle_breathing chip, not brachycephalic_breathing ('flat face — breathing and heat problems'). No statistics in the app.",
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka, dobrobit): »krajši gobček — lahko težje diha« (obstoječa oznaka, M5-R10-26)"
+          }
+        ],
+        "not_proposed": {
+          "children": "PDSA only advises supervision (S233) — no statement of suitability.",
+          "small_children": "No rating; supervision advice (S233).",
+          "brachycephalic_breathing": "No Shih Tzu source on the pages read names heat (Boxer precedent) — open for David whether the flat-face chip fits better.",
+          "other_pets": "Only pets they have grown up with, may still chase (S233).",
+          "chases_small_pets": "No high-prey-drive statement (S233 'won’t chase another pet if the mood takes them' is not a prey-drive statement).",
+          "often_alone": "PDSA: not more than four hours, as with any dog (S233).",
+          "needs_company": "No breed-specific statement.",
+          "experienced_owner": "PDSA: ideal for first-time owners (S233).",
+          "large_home": "RKC 'Flat/ Apartment' (S231).",
+          "active_family": "RKC 'Up to 1 hour per day' (S231).",
+          "long_daily_exercise": "60 min (S231, S233).",
+          "sheds": "RKC 'Sheds: No' (S231); PDSA's seasonal remark kept in notes.",
+          "food_motivated_weight": "No food-motivation statement.",
+          "shorter_lifespan": "RKC 'Over 10 years' (S231); VetCompass median 12.7 y (S234).",
+          "sensitive_skin": "Not a Breed Watch point (S231)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, family_pet, first_time_owner, low_shedding; consider frequent_grooming, short_muzzle_breathing (no new key)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing / store screenshots / social: no",
+        "unit": "—",
+        "source_id": "S92",
+        "quote": "avoiding imagery of brachycephalic dogs in advertising, marketing materials and social media campaigns",
+        "confidence": "high",
+        "notes": "BVA position, executive summary (S92); the BVA's full position (S236) names the Shih-tzu among brachycephalic breeds (Figure 1). The Shih Tzu is a normal breed in the app (picker, register with sourced health facts), but it is never used in PetPrep advertising, store screenshots, social posts or decks.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): v aplikaciji da, v marketingu / posnetkih zaslona ne (BVA S92; brahicefalna pasma po BVA S236)"
+      },
+      "ai_appearance": {
+        "value": "adult Shih Tzu, gold and white parti-colour (default), or black and white, or liver and white; long dense straight coat (natural, not clipped), hair on the head long; large dark round eyes, not prominent; large drooping ears with long hair; heavily plumed tail carried over the back; short square muzzle drawn moderate with clearly open nostrils; sturdy small body; never merle",
+        "unit": "—",
+        "source_id": "S232",
+        "quote": "All colours permissible except merle, which is unacceptable.",
+        "confidence": "high",
+        "notes": "Colours: RKC (S232) / FCI (S229); parti-colours with white blaze (S229). Moderate face (welfare rule, trait 'muzzle'). Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): gold and white is the portrait default; moderate muzzle with open nostrils; never merle"
       }
     }
   }
