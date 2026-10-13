@@ -53,7 +53,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "4689bce7c8aaa64ce60685817760c6452bb413fbccaf3742fdddb69313abc441"
+      "sha256": "9319647e2529cc664c90996077d47138dfc7a490bc027693855642ce91efbac3"
     }
   },
   "suitability_vocabulary": {
@@ -14255,7 +14255,12 @@
           "S227"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "miniature-schnauzer.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
