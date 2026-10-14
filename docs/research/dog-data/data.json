@@ -18344,7 +18344,7 @@
         "source_id": "S316",
         "quote": "Mals would fare best in families with older, responsible kids.",
         "confidence": "medium",
-        "notes": "AKC (S316); also 'supervision around children is a must'. PetMD (S317): 'They may also try to use their herding skills to round up toddlers and children.' → older_children + may_herd_children; never family_pet / children / small_children."
+        "notes": "AKC (S316); also 'supervision around children is a must'. PetMD (S317): 'They may also try to use their herding skills to round up toddlers and children.' → not_for_small_children + may_herd_children; never family_pet / children / small_children."
       },
       "experienced_owner": {
         "value": "not for first-time owners; needs a dedicated, experienced owner",
@@ -18648,7 +18648,7 @@
         "source_id": "S316",
         "quote": "Mals would fare best in families with older, responsible kids.",
         "confidence": "medium",
-        "notes": "AKC (S316). Basis of older_children (Pomeranian precedent, AKC S251)."
+        "notes": "AKC (S316); 'supervision around children is a must'. Basis of not_for_small_children (the older_children chip says 'small dog' — not this breed)."
       },
       "petmd_herding_children": {
         "value": "may try to round up toddlers and children",
@@ -27889,7 +27889,7 @@
             "quote": "S316 'don't make them a good choice for first-time dog owners'; S317 'need a dedicated and experienced pet parent'"
           },
           {
-            "tag": "older_children",
+            "tag": "not_for_small_children",
             "source_ids": [
               "S316"
             ],
@@ -27957,7 +27957,6 @@
           "family_pet": "No family-pet statement; AKC (S316) older, responsible kids only.",
           "children": "AKC (S316): older kids only, supervision a must; PetMD (S317) herds toddlers.",
           "small_children": "No rating; sources advise against.",
-          "not_for_small_children": "AKC 'older, responsible kids' is a positive advice → older_children (Pomeranian precedent), not the PDSA-style advice against.",
           "apartment": "RKC 'Large house' (S314).",
           "other_pets": "High prey drive (S317); territorial towards other animals (S316).",
           "first_time_owner": "Sources say the opposite (experienced_owner).",
@@ -27965,9 +27964,10 @@
           "low_shedding": "RKC 'Sheds: Yes'.",
           "shorter_lifespan": "RKC 'Over 10 years'.",
           "hips_hind_legs": "Hip / elbow dysplasia only as a PetMD heading; Breed Watch Category 1 → no welfare chip.",
-          "welfare": "RKC Breed Watch Category 1 (S314)."
+          "welfare": "RKC Breed Watch Category 1 (S314).",
+          "older_children": "Its chip reads 'small dog — better with older children' (Pomeranian, AKC S251) — wrong for a medium-large dog; AKC 'older, responsible kids' + 'supervision around children is a must' (S316) → not_for_small_children ('large dog — not for homes with small children', Cane Corso / Dobermann precedent)."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, large_home; consider long_daily_exercise, experienced_owner, older_children, may_herd_children, needs_mental_stimulation, needs_company, sheds, chases_small_pets"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, large_home; consider long_daily_exercise, experienced_owner, not_for_small_children, may_herd_children, needs_mental_stimulation, needs_company, sheds, chases_small_pets"
       },
       "marketing": {
         "value": "in the app: yes; in marketing: yes (not a flat-faced breed)",
