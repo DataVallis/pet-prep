@@ -16049,21 +16049,13 @@
     },
     "health": {
       "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 1 (S284): 'Currently no points of concern specific to this breed have been identified for special attention by judges' → no welfare chip. PDSA (S285) health list: hip dysplasia, elbow dysplasia, progressive retinal atrophy, ear infections. Wikipedia (S288, tier C, background only) names skin conditions and chronic hepatitis — not used without an A/B source.",
-      "hip_dysplasia": {
-        "value": "hip dysplasia — leading to arthritis",
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia — leading to arthritis; parents' hips and elbows tested before breeding",
         "unit": "—",
         "source_id": "S285",
         "quote": "Hip dysplasia – hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
         "confidence": "medium",
-        "notes": "PDSA (S285). RKC (S284) minimum: 'Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme' (→ breeder checklist hip_scheme). Not a Breed Watch point → no hips_hind_legs chip."
-      },
-      "elbow_dysplasia": {
-        "value": "elbow dysplasia — leading to arthritis",
-        "unit": "—",
-        "source_id": "S285",
-        "quote": "Elbow dysplasia – elbow joint laxity as a result of poor development, which will eventually lead to arthritis.",
-        "confidence": "medium",
-        "notes": "PDSA (S285). RKC (S284) minimum: elbow scheme (→ breeder checklist elbow_scheme)."
+        "notes": "PDSA (S285); also 'Elbow dysplasia – elbow joint laxity as a result of poor development, which will eventually lead to arthritis.' RKC (S284) Good Practice (minimum): 'Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme' and 'Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme' (→ breeder checklist hip_scheme / elbow_scheme). Not a Breed Watch point → no hips_hind_legs chip."
       },
       "pra": {
         "value": "progressive retinal atrophy — gradual deterioration of the retina",

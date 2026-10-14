@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "9ab7e5796319343af58931124e42e95d1fd320d1643cf19659707325e32d7d2b"
+      "sha256": "166e877920875dfd41a551784839e0514cb1f3406523a9718c3cf71d1c78b8b5"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "be0ad88f5dd3ebb81555025457b2a7b4c106185c88749a3f7d67755b0ad5771b"
+      "sha256": "f3029cd79c9fdf06aee7c5b53bbfd2b265b31d77a3d07cae4456a9da1d6d7a3d"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,27 +25,27 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "d835c5352fe3697283536a8276b936c49eb74ff2a983a2458061fdc0be485021"
+      "sha256": "8357bea7ecbd3980e82774ac729d03b63e5bf35e40822fb2b7f52dda1ad11a83"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "43f08ca1146b6a65913cb943bf70d02cdeb810ffdf35f42455c7707451b9b59b"
+      "sha256": "d2d70deeba3ddef8e9ce1c62331d0a17e69bc6f406cbf138e34c0f5899b4be86"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "78a4a232816a16cd51421ea25e09ef36625b3a34787bf49896c4b4b46d73711c"
+      "sha256": "99fa2b715cbd6c2cf4d69fb5815966b9d5790fc5bdc029522fe8bf99342d625d"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "696859faafb90b2b69a776f45b9fc9db211f400ee26718b81aa673e5a330d796"
+      "sha256": "bdb5ff855e3c25309de87d2d6e0e7ac21d12c625dee2d40b946a799fe57368d0"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "77563ca58d39a27467472fa7c5ea9a7bebedaed3a01ba6addb1f7d5f06fedc74"
+      "sha256": "eae87ae5b86da254ee4c23b2da3a6ba1638d2750a7f504282ca5b3a4325c8c0f"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "a07df222f5e143b752de6cbd979cf245870bc6b931ce40f80256b8d065cdc93d"
+      "sha256": "a6a1d781998645def06e49738b5f873adb48bbda8fa8f23dfab80bdde0ae95a3"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -196,7 +196,7 @@
         }
       },
       "status": "available",
-      "breed_count": 29,
+      "breed_count": 30,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -17663,6 +17663,622 @@
       ]
     },
     {
+      "id": "english_springer_spaniel",
+      "species": "dog",
+      "order": 29,
+      "availability": "coming_soon",
+      "name": {
+        "en": "English Springer Spaniel",
+        "sl": "Angleški springer španjel"
+      },
+      "slug": {
+        "en": "english-springer-spaniel",
+        "sl": "angleski-springer-spanjel"
+      },
+      "synonyms": {
+        "en": [
+          "Springer Spaniel",
+          "Springer",
+          "ESS"
+        ],
+        "sl": [
+          "springer španjel",
+          "angleski springer spanjel",
+          "springer"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S284"
+          ],
+          "ref": "english_springer_spaniel.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              51,
+              51
+            ],
+            "female": [
+              51,
+              51
+            ]
+          },
+          "source_ids": [
+            "S282"
+          ],
+          "ref": "english_springer_spaniel.height.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              18,
+              23
+            ],
+            "female": [
+              18,
+              23
+            ]
+          },
+          "source_ids": [
+            "S285"
+          ],
+          "ref": "english_springer_spaniel.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "english_springer_spaniel.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 13.5,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "english_springer_spaniel.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S284"
+          ],
+          "ref": "english_springer_spaniel.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S284"
+          ],
+          "ref": "english_springer_spaniel.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S284"
+          ],
+          "ref": "english_springer_spaniel.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S284"
+          ],
+          "ref": "english_springer_spaniel.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S284"
+          ],
+          "ref": "english_springer_spaniel.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 13,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "english_springer_spaniel.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 125,
+            "group": 8,
+            "section": 2,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S281"
+          ],
+          "ref": "english_springer_spaniel.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S285"
+          ],
+          "ref": "english_springer_spaniel.health.hip_elbow_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "pra_eye_disease",
+          "source_ids": [
+            "S285"
+          ],
+          "ref": "english_springer_spaniel.health.pra",
+          "confidence": "medium"
+        },
+        {
+          "key": "ear_infections_long_ears",
+          "source_ids": [
+            "S285"
+          ],
+          "ref": "english_springer_spaniel.health.ear_infections",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S284",
+              "S285",
+              "S286"
+            ],
+            "refs": [
+              "english_springer_spaniel.exercise.adult",
+              "english_springer_spaniel.suitability.pdsa_exercise",
+              "english_springer_spaniel.suitability.akc_active_household"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S285"
+            ],
+            "refs": [
+              "english_springer_spaniel.suitability.pdsa_family",
+              "english_springer_spaniel.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S285"
+            ],
+            "refs": [
+              "english_springer_spaniel.suitability.pdsa_children"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S285"
+            ],
+            "refs": [
+              "english_springer_spaniel.behaviour.other_pets",
+              "english_springer_spaniel.suitability.pdsa_children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S284",
+              "S285"
+            ],
+            "refs": [
+              "english_springer_spaniel.exercise.adult",
+              "english_springer_spaniel.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S286"
+            ],
+            "refs": [
+              "english_springer_spaniel.behaviour.time_alone",
+              "english_springer_spaniel.suitability.akc_time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S284"
+            ],
+            "refs": [
+              "english_springer_spaniel.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S284",
+              "S285"
+            ],
+            "refs": [
+              "english_springer_spaniel.suitability.rkc_grooming",
+              "english_springer_spaniel.suitability.pdsa_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 122
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 122
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.english_springer_spaniel.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S284"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S284 'More than 2 hours per day'; PDSA S285 'over 2 hours')"
+          },
+          {
+            "ref": "proposed_game_parameters.english_springer_spaniel.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.english_springer_spaniel.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 122 (0.75 × 13.5 y, McMillan 2024 via S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.english_springer_spaniel.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 13, Excellent tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.english_springer_spaniel.grooming",
+            "basis_source_ids": [
+              "S285"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC »More than once a week« brez števila → PDSA »once or twice a week« → 2); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S284",
+          "S285"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "elbow_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S284"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S284"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S284"
+            ]
+          },
+          {
+            "key": "dna_ams",
+            "level": "best_practice",
+            "source_ids": [
+              "S284"
+            ]
+          },
+          {
+            "key": "dna_dams",
+            "level": "best_practice",
+            "source_ids": [
+              "S284"
+            ]
+          },
+          {
+            "key": "dna_fuco",
+            "level": "best_practice",
+            "source_ids": [
+              "S284"
+            ]
+          },
+          {
+            "key": "dna_pfk",
+            "level": "best_practice",
+            "source_ids": [
+              "S284"
+            ]
+          },
+          {
+            "key": "dna_pra_cord1",
+            "level": "best_practice",
+            "source_ids": [
+              "S284"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S284"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S281",
+        "S282",
+        "S284",
+        "S285",
+        "S286",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -21196,6 +21812,41 @@
       "publisher": "RVC VetCompass",
       "title": "Chihuahua infographic (2020) (PDF)",
       "url": "https://rvc-web-app01.live01.azure.rvc.ac.uk/Media/Default/VetCompass/200214%20Chihuahua%20infographic-1.pdf"
+    },
+    {
+      "id": "S281",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — ENGLISH SPRINGER SPANIEL (125)",
+      "url": "https://www.fci.be/EN/nomenclature/ENGLISH-SPRINGER-SPANIEL-125.html"
+    },
+    {
+      "id": "S282",
+      "tier": "A",
+      "publisher": "The Kennel Club (UK) breed standard, hosted by KUSA",
+      "title": "Spaniel (English Springer) — KC [01-2026] (PDF)",
+      "url": "https://www.kusa.co.za/images/breed%20stds%20djaki/Spaniel%20(English%20Springer"
+    },
+    {
+      "id": "S284",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Spaniel (English Springer) — breed information page (Breeds A to Z, older address)",
+      "url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=2053"
+    },
+    {
+      "id": "S285",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "English Springer Spaniel breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/english-springer-spaniel"
+    },
+    {
+      "id": "S286",
+      "tier": "B",
+      "publisher": "American Kennel Club — Micaela Erickson (published 2025-03-20)",
+      "title": "Is the English Springer Spaniel a Good Fit for You?",
+      "url": "https://www.akc.org/expert-advice/dog-breeds/english-springer-spaniel-right-fit-for-you/"
     },
     {
       "id": "C1",

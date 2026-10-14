@@ -404,6 +404,7 @@ const SPECIES = [
       { id: 'boston_terrier', synonyms: { en: ['Boston', 'American Gentleman'], sl: ['boston', 'boston terier'] } },
       { id: 'miniature_american_shepherd', synonyms: { en: ['Mini American', 'MAS', 'Miniature Australian Shepherd', 'Mini Aussie'], sl: ['mali ameriski ovcar', 'mini aussie'] } },
       { id: 'chihuahua', synonyms: { en: ['Chi', 'Chihuahueño', 'Smooth Coat Chihuahua'], sl: ['civava', 'chihuahua', 'čihuahua'] } },
+      { id: 'english_springer_spaniel', synonyms: { en: ['Springer Spaniel', 'Springer', 'ESS'], sl: ['springer španjel', 'angleski springer spanjel', 'springer'] } },
     ],
   },
   {
@@ -1035,6 +1036,27 @@ const DOG_FACTS = {
       ['dental_weight_problems', 'health.dental_weight'],
     ],
   },
+  // M5-R10-34. Not exported: adult_weight.akc (approximate single figures — the PDSA range is shown),
+  // adult_weight.salt_category (our assignment), height.akc (inches; the KC / PDSA 51 cm is shown),
+  // lifespan.vetcompass_life_table (Teng 2022 mean life expectancy, alternative only), lifespan.senior_from
+  // (derived), health.dna_tests (breeder checklist), suitability.rkc_breed_watch (Category 1, no points).
+  // Lifespan = McMillan 2024 via the Dogs Trust table (S123) and the RKC band "Over 10 years". Own health key:
+  // ear_infections_long_ears (no shared sentence names the long ears).
+  english_springer_spaniel: {
+    height: ['height.rkc'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['pra_eye_disease', 'health.pra'],
+      ['ear_infections_long_ears', 'health.ear_infections'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1276,6 +1298,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.chihuahua.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.chihuahua.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.chihuahua.exercise_minutes_senior',
+  },
+  english_springer_spaniel: {
+    adult_minutes: ['proposed_game_parameters.english_springer_spaniel.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.english_springer_spaniel.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.english_springer_spaniel.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.english_springer_spaniel.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.english_springer_spaniel.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.english_springer_spaniel.exercise_minutes_senior',
   },
 };
 

@@ -103,6 +103,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.boston_terrier.slug, { en: 'boston-terrier', sl: 'bostonski-terier' });
   assert.deepEqual(byId.miniature_american_shepherd.slug, { en: 'miniature-american-shepherd', sl: 'mali-ameriski-ovcar' });
   assert.deepEqual(byId.chihuahua.slug, { en: 'chihuahua', sl: 'civava' });
+  assert.deepEqual(byId.english_springer_spaniel.slug, { en: 'english-springer-spaniel', sl: 'angleski-springer-spanjel' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -228,6 +229,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     boston_terrier: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 1 },
     miniature_american_shepherd: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1 },
     chihuahua: { adult: 3000, senior: 2300, seniorFrom: 108, learning: 0.7 },
+    english_springer_spaniel: { adult: 12000, senior: 9000, seniorFrom: 122, learning: 1.5 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -454,7 +456,7 @@ test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming row
   assert.deepEqual([...cats, ...dogs].sort(), seeded);
   assert.deepEqual(cats, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
   // M5-R13: every dog breed of the app except the mutt and the Border Collie (no grooming statement).
-  assert.equal(dogs.length, 28);
+  assert.equal(dogs.length, 29);
   assert.ok(!dogs.includes('mutt') && !dogs.includes('border_collie'));
 });
 
@@ -1248,4 +1250,28 @@ test('Chihuahua (M5-R10-33): up to 30 minutes (RKC Smooth Coat), KC / PDSA weigh
   // Never "hypoallergenic", never a percentage; the VetCompass median of a young population (8.2 y) stays in research.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|8\.2 y|"8\.2"/i);
   assert.ok(!d.facts.some((f) => f.field === 'lifespan' && f.value === 8.2));
+});
+
+test('English Springer Spaniel (M5-R10-34): more than 2 hours (RKC), PDSA weight, KC height, FCI group 8 section 2 Great Britain, McMillan 2024 median + RKC "over 10 years", Coren 13, no welfare chip, brushing 2× a week', () => {
+  const d = registry.breeds.find((b) => b.id === 'english_springer_spaniel');
+  assert.deepEqual(d.name, { en: 'English Springer Spaniel', sl: 'Angleški springer španjel' });
+  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.facets.size, 'medium');
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S284']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 125, group: 8, section: 2, origin: 'GB' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [18, 23], female: [18, 23] }, ['S285']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [51, 51], female: [51, 51] }, ['S282']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['median', 13.5, ['S123']], ['more_than', 10, ['S284']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 13);
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 12000, cap_month: 12 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 122 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 9000 } });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'family_pet', 'children', 'other_pets']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'needs_company', 'sheds', 'frequent_grooming']);
+  assert.deepEqual(d.health.map((h) => h.key), ['hip_elbow_dysplasia', 'pra_eye_disease', 'ear_infections_long_ears']);
+  // RKC Good Practice (elbows, eyes, hips) = minimum; five DNA tests = best practice.
+  assert.equal(d.breeder_checklist.status, 'listed');
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['elbow_scheme', 'minimum'], ['eye_scheme', 'minimum'], ['hip_scheme', 'minimum'], ['dna_ams', 'best_practice'], ['dna_dams', 'best_practice'], ['dna_fuco', 'best_practice'], ['dna_pfk', 'best_practice'], ['dna_pra_cord1', 'best_practice']]);
+  const json = JSON.stringify(d);
+  // Never "hypoallergenic", never a percentage; the Teng 2022 life expectancy (11.9 y, a mean) stays in research.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|11\.9/i);
 });
