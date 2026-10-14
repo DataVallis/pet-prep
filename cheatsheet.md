@@ -111,6 +111,15 @@ docker compose -f /opt/petprep/repo/backend/compose.production.yaml logs -f cadd
 /opt/petprep/scripts/backup-production-db.sh
 ```
 
+### Varnostna kopija izven strežnika (baza + mediji, D5):
+```bash
+/opt/petprep/scripts/backup-offsite.sh            # ročni zagon (sicer cron vsako noč 02:17 UTC)
+/opt/petprep/scripts/backup-offsite.sh verify     # preizkus obnove (enkrat na mesec)
+/opt/petprep/scripts/backup-offsite.sh snapshots  # seznam posnetkov
+cat /opt/petprep/backups/offsite-last-success     # zadnji uspešen zagon
+```
+Nastavitev in obnova: `docs/PRODUCTION_DEPLOYMENT.md` §6b in §7.
+
 ### Obnovitev baze iz varnostne kopije (Restore):
 ```bash
 /opt/petprep/scripts/restore-production-db.sh /opt/petprep/backups/<ime_fajla>.sql.gz

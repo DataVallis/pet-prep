@@ -146,7 +146,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [x] M5-01 Strežnik postavljen (Docker Compose + Caddy) — `docs/PRODUCTION_DEPLOYMENT.md`
 - [x] M5-02 Domena `api.petprep.si` + avtomatski TLS (Caddy)
 - [~] M5-03 Deploy skripta + GitHub Action obstajata; manjka ročna odobritev in delujoč test job (M0-08)
-- [~] M5-04 Backup pred vsakim deployem obstaja (7 dni, isti disk) → dodati dnevni cron, off-site kopijo in test obnove
+- [~] M5-04 Backup pred vsakim deployem obstaja (7 dni, isti disk) → **dnevna off-site kopija baze + medijev zgrajena 14. 10. 2026** (`scripts/backup-offsite.sh`, restic → Hetzner Storage Box, hramba ≈ 35 dni, `verify` = preizkus obnove; D5) — čaka Davidovo enkratno nastavitev (PRODUCTION_DEPLOYMENT §6b) in prvi preizkus obnove. Odprto: dnevnik izbrisov (da obnova ne vrne izbrisanih družin), PITR.
 - [ ] M5-05 Sentry (Laravel + RN), uptime monitoring, Laravel Pulse / Horizon
 - [ ] M5-06 Politika zasebnosti, pogoji, privolitev staršev, App Store "Kids" / Family policy pregled
 - [ ] M5-07 TestFlight + Google Play Internal testing; 20–50 beta družin (waitlist)
