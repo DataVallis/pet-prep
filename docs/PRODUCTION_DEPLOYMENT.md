@@ -165,6 +165,8 @@ Configure in **Settings > Environments > production** (or Repository Secrets):
 
 **Why:** every merge to `main` (10+ a day, also the unattended breed PRs) used to deploy production, and each deploy's maintenance mode + Reverb restart dropped the phone app's connection. Now merges only run CI; production changes when David decides.
 
+**One-time check before the first dispatch (David):** on the server, `grep -E '^(APP_URL|PETPREP_API_DOMAIN|PETPREP_CADDY_SITES)=' /opt/petprep/.env` must show `APP_URL=https://api.petprep.si` (or pin `PETPREP_API_DOMAIN=api.petprep.si` and `PETPREP_CADDY_SITES=production` there). Otherwise the deploy refuses with "this server's API domain is … but the deploy expects 'api.petprep.si'" before changing anything — and a wrong value would make Caddy serve another domain. Manual runs on the server: `/opt/petprep/scripts/deploy-production.sh --expect-domain api.petprep.si <SHA>`.
+
 **Deploy production:** Actions → **CI & Deploy** → **Run workflow** → branch `main`, target **production**, or `gh workflow run deploy-production.yml --ref main -f target=production`. The run tests everything on the current `main` head, then "Deploy to Hetzner Production" (guard, upload, `deploy-production.sh --expect-domain api.petprep.si`). Check: `curl -fsS https://api.petprep.si/up`, `gh run list --workflow deploy-production.yml --limit 3`. Afterwards "Mobile OTA update" publishes the production OTA when `mobile/` changed since the last release (needs a production store build with the same fingerprint). Claude runs the deploy only when David explicitly asks.
 
 **Rollback:** revert commit on `main` (PR + merge), then Run workflow → target `production` (§7). "Re-run" of an old production run is refused by the deploy guard.
@@ -323,7 +325,7 @@ bash /opt/petprep/repo/scripts/reset-game-data.sh
 ## 7. Rollback Procedure
 
 ### Code Rollback
-A failed deploy reverts the code by itself when the failure happens before migrations succeed. For a deliberate rollback to an older commit, merge a **revert commit** (normal PR + merge → tested and deployed like any change), or move `main` where it should be and use **"Run workflow"** on `main`. **Re-running an old run fails by design** (deploy guard, DEPLOYMENT.md D16: its commit is no longer the head of `main`); "Re-run all jobs" of the run of the *current* `main` head still redeploys it. Only roll code back past a migration if that migration is backward compatible — otherwise restore the database too (below). `cat /opt/petprep/repo/.deployed-sha` shows what is live.
+A failed deploy reverts the code by itself when the failure happens before migrations succeed. For a deliberate rollback to an older commit, merge a **revert commit** (normal PR + merge — since D18 a merge deploys nothing), then **Run workflow** on `main` → target `production`. **Re-running an old run fails by design** (deploy guard, DEPLOYMENT.md D16: its commit is no longer the head of `main`); "Re-run all jobs" redeploys only a **production dispatch run of the current `main` head** — re-running a push run deploys nothing. Only roll code back past a migration if that migration is backward compatible — otherwise restore the database too (below). `cat /opt/petprep/repo/.deployed-sha` shows what is live.
 
 ### Rollback of the runtime (M4-05b: PHP-FPM image → Sail image)
 

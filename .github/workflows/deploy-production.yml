@@ -29,8 +29,11 @@ on:
           - production
         default: none
 
+# Dispatch runs (manual production deploys) get their own group: a push run queued behind
+# a pending dispatch in the same group would replace it silently (GitHub keeps only one
+# pending run per group). The deploy job itself serialises on `production`.
 concurrency:
-  group: ci-${{ github.ref }}
+  group: ci-${{ github.ref }}-${{ github.event_name == 'workflow_dispatch' && 'dispatch' || 'ci' }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 permissions:

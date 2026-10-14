@@ -9,9 +9,12 @@
 #                                            (docs/research/app-release.json; unknown → yes).
 #                                            Publishes exactly the deployed commit.
 #   other CI runs (target none, red, …)    → nothing
-#   manual "Run workflow" of mobile-ota.yml → the explicit `channel` input (production |
-#                                            preview); only the current head of main is
-#                                            published (dry runs excepted).
+#   manual "Run workflow" of mobile-ota.yml → the explicit `channel` input:
+#                                            preview    → only the current head of main
+#                                            production → only when HEAD is the commit of
+#                                                         the last successful production
+#                                                         deploy (refused otherwise)
+#                                            (dry runs excepted from both checks).
 #
 # Env: EVENT_NAME (workflow_run | workflow_dispatch), WR_EVENT, WR_CONCLUSION, WR_RUN_ID
 # (the CI run), INPUT_CHANNEL, DRY_RUN (true|false), REPO, GH_TOKEN, GITHUB_OUTPUT.
@@ -37,7 +40,30 @@ if [ "$EVENT_NAME" = workflow_dispatch ]; then
     *) echo "::error::channel must be production or preview (got '${INPUT_CHANNEL:-}')"; exit 1 ;;
   esac
   mobile=true; reason="manual run (channel ${channel})"
-  if [ "$DRY_RUN" != true ]; then
+  if [ "$channel" = production ] && [ "$DRY_RUN" != true ]; then
+    # Production users may only get JS of the commit production runs: HEAD must be the
+    # head_sha of the newest green "Run workflow" run whose production deploy succeeded
+    # (same lookup as scripts/ci-plan.sh last_deployed_sha).
+    REPO="${REPO:?REPO is required}"
+    deployed=""
+    if ! runs="$("$GH" api "repos/${REPO}/actions/workflows/deploy-production.yml/runs?branch=main&event=workflow_dispatch&status=success&per_page=50" \
+          --jq '.workflow_runs[] | select(.event == "workflow_dispatch") | select(.head_repository.full_name == "'"${REPO}"'") | "\(.id) \(.head_sha)"' 2>/dev/null)"; then
+      echo "::error::cannot list the CI runs — not publishing to production"; exit 1
+    fi
+    while read -r id sha; do
+      [ -n "$id" ] || continue
+      if ! n="$("$GH" api "repos/${REPO}/actions/runs/${id}/jobs?per_page=100" \
+            --jq '[.jobs[] | select(.name == "'"${PROD_JOB}"'" and .conclusion == "success")] | length' 2>/dev/null)"; then
+        echo "::error::cannot read the jobs of CI run ${id} — not publishing to production"; exit 1
+      fi
+      if [ "${n:-0}" -gt 0 ]; then deployed="$sha"; break; fi
+    done <<< "$runs"
+    if [ "$(git rev-parse HEAD)" != "$deployed" ]; then
+      echo "::error::$(git rev-parse --short HEAD) is not the commit production runs (${deployed:0:7}${deployed:+ }from the last production deploy) — deploy production first (CI & Deploy → Run workflow → target production) or use channel preview."
+      exit 1
+    fi
+    reason="manual run (channel production, = last production deploy ${deployed:0:7})"
+  elif [ "$DRY_RUN" != true ]; then
     git fetch -q "$REMOTE" main   # full clone (blob:none) — no --depth, it would make it shallow
     if [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]; then
       mobile=false; reason="$(git rev-parse --short HEAD) is not the head of main"

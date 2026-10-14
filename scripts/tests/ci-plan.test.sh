@@ -106,8 +106,8 @@ pr_merge() {
   git -C "$W" checkout -q --detach main
   git -C "$W" merge -q --no-ff --no-edit feature
 }
-green_runs() { # green_runs SHA [EVENT] [REPO_FULL]: one successful main run that deployed
-  jq -n --arg s "$1" --arg e "${2:-push}" --arg r "${3:-$REPO_NAME}" \
+green_runs() { # green_runs SHA [EVENT] [REPO_FULL]: one successful main run that deployed (D18: dispatch)
+  jq -n --arg s "$1" --arg e "${2:-workflow_dispatch}" --arg r "${3:-$REPO_NAME}" \
     '{workflow_runs:[{id:1,event:$e,head_sha:$s,head_repository:{full_name:$r}}]}' > "$FIX/runs.json"
   jobs_json 1 success
 }
@@ -115,9 +115,9 @@ jobs_json() { # jobs_json RUN_ID DEPLOY_CONCLUSION (success / skipped / failure)
   jq -n --arg c "$2" '{jobs:[{name:"Plan (changed paths, tested tree)",conclusion:"success"},
     {name:"CI OK",conclusion:"success"},{name:"Deploy to Hetzner Production",conclusion:$c}]}' > "$FIX/jobs-$1.json"
 }
-runs_list() { # runs_list "ID SHA" ...: successful main push runs, newest first
+runs_list() { # runs_list "ID SHA" ...: successful main Run workflow runs, newest first (D18)
   local r
-  for r in "$@"; do echo "$r"; done | jq -R 'split(" ") | {id:(.[0]|tonumber),event:"push",head_sha:.[1],head_repository:{full_name:"'"$REPO_NAME"'"}}' \
+  for r in "$@"; do echo "$r"; done | jq -R 'split(" ") | {id:(.[0]|tonumber),event:"workflow_dispatch",head_sha:.[1],head_repository:{full_name:"'"$REPO_NAME"'"}}' \
     | jq -s '{workflow_runs:.}' > "$FIX/runs.json"
 }
 marker() { # marker SUITE TREE RUN_ID [HEAD_REPO_ID] [EXPIRED]
@@ -367,16 +367,65 @@ check "failed production deploy → nothing" "false  0" "$(ota workflow_run work
 rm -f "$FIX/jobs-9.json"
 check "jobs API error → fail (never guess production)" "  1" "$(ota workflow_run workflow_dispatch success)"
 # Manual OTA runs.
-ota_repo; ota_push
-check "manual production → production" "true production 0" "$(ota workflow_dispatch "" "" production)"
+ota_repo; ota_push; green_runs "$(sha)"   # the last production deploy ran this commit
+check "manual production of the deployed commit → production" "true production 0" "$(ota workflow_dispatch "" "" production)"
 check "manual preview → preview" "true preview 0" "$(ota workflow_dispatch "" "" preview)"
 check "manual without channel → error" "  1" "$(ota workflow_dispatch "" "" "")"
 check "manual unknown channel → error" "  1" "$(ota workflow_dispatch "" "" staging)"
+commit mobile/src/a.ts; ota_push
+check "manual production of a commit production does NOT run → refused" "  1" "$(ota workflow_dispatch "" "" production)"
+r=1; grep -q 'is not the commit production runs' "$FIX/ota.stdout" && r=0
+check "… and says why" 0 "$r"
+check "… preview of that commit is fine" "true preview 0" "$(ota workflow_dispatch "" "" preview)"
+check "… dry run is not refused" "true production 0" "$(ota workflow_dispatch "" "" production true)"
+echo '{"workflow_runs":[]}' > "$FIX/runs.json"
+check "manual production, no production deploy at all → refused" "  1" "$(ota workflow_dispatch "" "" production)"
+green_runs "$(sha)"
+check "manual production, jobs API error → refused" "  1" "$(GH_FAIL_MATCH='/jobs' ota workflow_dispatch "" "" production)"
 commit docs/X.md; ota_push; git -C "$W" checkout -q HEAD~1
-check "manual run off the head of main → nothing" "false production 0" "$(ota workflow_dispatch "" "" production)"
+check "manual preview off the head of main → nothing" "false preview 0" "$(ota workflow_dispatch "" "" preview)"
 r=1; grep -q 'is not the head of main' "$FIX/ota.stdout" && r=0
 check "… and says why" 0 "$r"
-check "… unless dry run" "true production 0" "$(ota workflow_dispatch "" "" production true)"
+
+echo "== mobile-ota.sh: channel profile from eas.json (stubbed npx / eas) =="
+OTA_SH="${HERE}/../mobile-ota.sh"
+mkdir -p "$TMP/obin"
+# npx expo-updates runtimeversion:resolve → fixed runtime; eas build:list → one build; eas update → log.
+cat > "$TMP/obin/npx" <<'SHIM'
+#!/usr/bin/env bash
+echo '{"runtimeVersion":"rt-1"}'
+SHIM
+cat > "$TMP/obin/eas" <<'SHIM'
+#!/usr/bin/env bash
+echo "eas $* | API=${EXPO_PUBLIC_API_URL:-unset}" >> "$OTA_LOG"
+case "$1" in build:list) echo '[{"id":"b1"}]' ;; esac
+SHIM
+chmod +x "$TMP/obin"/*
+ota_sh() { # ota_sh EAS_JSON ARGS... → rc; log $TMP/ota-sh.log, output $TMP/ota-sh.out
+  local d="$TMP/otash$RANDOM" rc=0
+  mkdir -p "$d/mobile"; printf '%s' "$1" > "$d/mobile/eas.json"; shift
+  : > "$TMP/ota-sh.log"
+  ( cd "$d" && PATH="$TMP/obin:$PATH" OTA_LOG="$TMP/ota-sh.log" GITHUB_OUTPUT="$TMP/ota-sh.gho" \
+      bash "$OTA_SH" "msg" "$@" > "$TMP/ota-sh.out" 2>&1 ) || rc=$?
+  echo "$rc"
+}
+EAS_OK='{"build":{"production":{"channel":"production","env":{"EXPO_PUBLIC_API_URL":"https://api.petprep.si"}},"preview":{"channel":"preview","env":{}}}}'
+: > "$TMP/ota-sh.gho"
+check "production channel publishes with the profile env" 0 "$(ota_sh "$EAS_OK" --channel production)"
+r=1; grep -q 'eas update --channel production --environment production --platform ios .*API=https://api.petprep.si' "$TMP/ota-sh.log" && r=0
+check "… EXPO_PUBLIC_* of the profile exported" 0 "$r"
+r=1; grep -q '^released=true$' "$TMP/ota-sh.gho" && r=0
+check "… both platforms → released=true" 0 "$r"
+check "missing profile → exit 1" 1 "$(ota_sh '{"build":{"production":{"channel":"production"}}}' --channel preview)"
+r=0; [ -s "$TMP/ota-sh.log" ] && r=1
+check "… nothing published (no eas call)" 0 "$r"
+r=1; grep -q "has no build profile 'preview'" "$TMP/ota-sh.out" && r=0
+check "… says why" 0 "$r"
+check "profile with another channel → exit 1" 1 "$(ota_sh '{"build":{"preview":{"channel":"production"}}}' --channel preview)"
+: > "$TMP/ota-sh.gho"
+check "preview publishes, never a release" 0 "$(ota_sh "$EAS_OK" --channel preview)"
+r=0; grep -q 'released' "$TMP/ota-sh.gho" && r=1
+check "… no released=true" 0 "$r"
 
 echo "== remote deploy step (scripts/ci-remote-deploy.sh) =="
 REMOTE_SH="${HERE}/../ci-remote-deploy.sh"
@@ -415,6 +464,11 @@ echo "== push to main: green run filter (event / repo) =="
 new_repo; base="$(sha)"; commit backend/app/A.php; green_runs "$base" workflow_dispatch
 plan push refs/heads/main
 check "workflow_dispatch run counts as green base" diff "$o_mode"
+new_repo; base="$(sha)"; commit docs/X.md; green_runs "$base" push
+plan push refs/heads/main
+check "push run is not a deploy base since D18 → full" full "$o_mode"
+r=1; grep -q 'runs?branch=main&event=workflow_dispatch&status=success' "$FIX/gh.log" && r=0
+check "API query lists only Run workflow runs" 0 "$r"
 new_repo; base="$(sha)"; commit docs/X.md; green_runs "$base" pull_request
 plan push refs/heads/main
 check "pull_request run is not a main base → full" full "$o_mode"; check "→ deploy" true "$o_deploy"

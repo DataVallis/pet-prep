@@ -35,6 +35,9 @@ permissions:
 jobs:
   portraits:
     runs-on: ubuntu-latest
+    # Production SSH key: from the `production` environment once David moves the secrets
+    # there (DEPLOYMENT.md D20); repository secrets keep working until then.
+    environment: production
     timeout-minutes: 30
     steps:
       - name: Generate on the production server

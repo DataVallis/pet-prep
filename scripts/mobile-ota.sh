@@ -48,10 +48,13 @@ cd mobile
 # PETPREP_APNS_MODE — app.config.ts) and EAS_BUILD_PROFILE=<profile> — resolve the same
 # config here, or the runtimes never match.
 export EAS_BUILD_PROFILE="$CHANNEL"
+# Captured first: a failure inside `< <(…)` would be ignored by set -e.
+profile_env="$(node -e "const p=require('./eas.json').build[process.argv[1]];if(!p||p.channel!==process.argv[1]){console.error('eas.json: no build profile with channel '+process.argv[1]);process.exit(1)}for(const[k,v]of Object.entries(p.env||{}))console.log(k+'='+v)" "$CHANNEL")" \
+  || { echo "::error::eas.json has no build profile '${CHANNEL}' with channel '${CHANNEL}' — nothing published."; exit 1; }
 while IFS='=' read -r key value; do
   [[ "$key" =~ ^[A-Z_][A-Z0-9_]*$ ]] || continue
   export "$key=$value"
-done < <(node -e "const p=require('./eas.json').build[process.argv[1]];if(!p||p.channel!==process.argv[1]){console.error('eas.json: no build profile with channel '+process.argv[1]);process.exit(1)}for(const[k,v]of Object.entries(p.env||{}))console.log(k+'='+v)" "$CHANNEL")
+done <<< "$profile_env"
 
 echo "- 📡 channel **${CHANNEL}** (API \`${EXPO_PUBLIC_API_URL:-default}\`)" >>"$SUMMARY"
 needs_build=()

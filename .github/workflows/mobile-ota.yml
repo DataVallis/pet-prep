@@ -20,12 +20,13 @@ on:
   workflow_dispatch:
     inputs:
       channel:
-        description: 'EAS channel to publish to: production (store builds) or preview (internal builds of the eas.json preview profile)'
+        description: 'EAS channel to publish to: production (store builds — only the commit production runs) or preview (internal builds of the eas.json preview profile)'
         type: choice
+        required: true
         options:
-          - production
           - preview
-        default: production
+          - production
+        default: preview
       dry_run:
         description: 'Only report OTA vs store build, publish nothing'
         type: boolean

@@ -18,7 +18,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 **Kako povedati:**
 - 👩 Starši: »Vaša aplikacija se posodobi samo, ko je posodobitev preverjena in jo izdamo — ne vsakič, ko programer kaj spremeni.«
 - 💼 Investitorji: »Ročna odobritev vsake produkcijske izdaje — standardna praksa pred javnim zagonom.«
-- 🛠 Tehnično: »Push na `main` = samo CI; deploy samo `workflow_dispatch` s `target=production`, deploy skripta zavrne napačen strežnik (`--expect-domain`); 236 + 269 avtomatskih preverjanj.«
+- 🛠 Tehnično: »Push na `main` = samo CI; deploy samo `workflow_dispatch` s `target=production`, deploy skripta zavrne napačen strežnik (`--expect-domain`); 236 + 285 avtomatskih preverjanj.«
 
 ---
 
