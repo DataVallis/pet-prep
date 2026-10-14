@@ -15801,6 +15801,551 @@
       }
     }
   },
+  "english_springer_spaniel": {
+    "_note": "Added 2026-10-14 (M5-R10-34, unattended run — appended after the Chihuahua: AKC 2024 No. 28, S174 full-list table 'ranks 20–30: … Chihuahua, English Springer Spaniel, Shetland Sheepdog, Border Collie'). Quotes as returned by the web-fetch tool on 2026-10-14 (the tool limits quotes to ~125 characters — long sentences are quoted in pieces; apostrophes as returned); spot-check before import (sources.md S281–S288, reused S10, S11, S14, S24, S35, S45, S92, S123, S174). The game builds the English Springer Spaniel as described by the UK / FCI standards (show and working lines are one breed; working types can be lighter — Wikipedia S288, background only). Lifespan: McMillan 2024 median 13.5 y via the Dogs Trust table (S123) → senior 122 months by the confirmed rule. RKC Breed Watch Category 1 with no points of concern (S284) → no welfare chip; not flat-faced → in marketing.",
+    "identity": {
+      "value": "FCI No. 125, Group 8 Section 2 (Flushing Dogs), Great Britain",
+      "unit": "—",
+      "source_id": "S281",
+      "quote": "ENGLISH SPRINGER SPANIEL (125)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S281, French labels as returned): 'Group : n°8 - Chiens rapporteurs de gibier - Chiens leveurs de gibier - Chiens d'eau', section 'Chiens leveurs de gibier et broussailleurs' (flushing dogs = Section 2), country 'GRANDE-BRETAGNE'; accepted on a definitive basis 29/12/1954; valid standard 08/09/2026; 'Soumise à épreuve de travail selon la Nomenclature des races de la FCI' (subject to a working trial). The English FCI standard PDF (125g08-en.pdf) was refused by the fetch tool → the KC standard (S282) and the AKC standard (S283) for the body."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S284",
+      "quote": "Size: Medium",
+      "confidence": "high",
+      "notes": "RKC breed page key facts (S284) 'Size' 'Medium'; PDSA (S285): 'Size | Medium' — sources agree. RKC group: Gundog."
+    },
+    "height": {
+      "rkc": {
+        "value": {
+          "male": [
+            51,
+            51
+          ],
+          "female": [
+            51,
+            51
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S282",
+        "quote": "Approximate height: 51cm (approx. 20\").",
+        "confidence": "high",
+        "notes": "KC breed standard (S282, hosted by KUSA, KC [01-2026]): 'Height at withers:' one approximate figure for both sexes (stored per sex). PDSA (S285): 'Average height | 51 cm' — agrees."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            50.8,
+            50.8
+          ],
+          "female": [
+            48.3,
+            48.3
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S283",
+        "quote": "Ideal height at the shoulder for dogs is 20 inches; for bitches, it is 19 inches.",
+        "confidence": "high",
+        "notes": "AKC official standard (S283, approved August 8, 2023). Inches converted to cm (× 2.54) by us."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            18,
+            23
+          ],
+          "female": [
+            18,
+            23
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S285",
+        "quote": "Average weight | 18-23 kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S285), one range for both sexes (stored per sex). The game range (adult_weight_kg). The KC standard (S282) gives no weight ('The document does not specify a weight', tool summary)."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            22.7,
+            22.7
+          ],
+          "female": [
+            18.1,
+            18.1
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S283",
+        "quote": "A 20 inch dog, well-proportioned and in good condition, will weigh approximately 50 pounds;",
+        "confidence": "high",
+        "notes": "AKC standard (S283): 'a 19 inch bitch will weigh approximately 40 pounds.' Pounds converted to kg (× 0.4536) by us: 50 lb ≈ 22.7 kg, 40 lb ≈ 18.1 kg — inside the PDSA range."
+      },
+      "salt_category": {
+        "value": "IV",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 18–23 kg. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 18–23 kg (S285) ≈ 40–51 lb; AKC 40–50 lb (S283) → the 'Medium (24–59 pounds)' class. The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no English Springer Spaniel growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 13.5,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "English Springer Spaniel | 13.5 | 13.4 - 13.6 | 17905 | 6221",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123; columns Breed | Median Life Expectancy (Years) | Lower and Upper 95% CI* | Total Number Individuals (Alive and Deceased) | Number Deceased Individuals). Runbook first choice (McMillan 2024). RKC (S284) 'Lifespan: Over 10 years'; PDSA (S285) 'Average lifespan | Over 10 years' — consistent. Background for the senior boundary only — never shown as a statistic in the app."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S284",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S284). PDSA (S285) the same. Not shorter_lifespan."
+      },
+      "vetcompass_life_table": {
+        "value": 11.9,
+        "unit": "years",
+        "source_id": "S287",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Teng et al. 2022 (Sci Rep), VetCompass life tables, as shown on the RVC infographic (S287): 'Springer Spaniel: 11.9' (life expectancy at age 0; the infographic does not say 'English'). Wikipedia (S288, tier C): 'A 2022 UK study found a life expectancy of 11.92 years for the breed'. A mean life expectancy, not a median — alternative only; the rule takes McMillan 2024."
+      },
+      "senior_from": {
+        "value": 10.125,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 13.5 y (McMillan 2024 via S123) → 0.75 × 13.5 = 10.125 y = 121.5 → 122 months (half up). Not chosen: 84 (Dogs Trust > 7 y, S14); 107 (0.75 × 11.9 y, Teng 2022 S287).",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 122,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S284",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S284). PDSA (S285): 'Minimum exercise (per day) | 2 hours'; 'will need an owner who’s prepared to give them over 2 hours of exercise per day.' — agrees. AKC (S286): 'require regular exercise to keep them happy and healthy.'"
+      },
+      "energy": {
+        "value": "high energy levels; needs plenty of walks",
+        "unit": "—",
+        "source_id": "S285",
+        "quote": "Springers need plenty of walks due to their high energy levels",
+        "confidence": "medium",
+        "notes": "PDSA (S285). AKC (S286): 'A more active household would be the best fit for an English Springer Spaniel.' Basis of active_family / long_daily_exercise."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "friendly, happy disposition, biddable",
+        "unit": "—",
+        "source_id": "S282",
+        "quote": "Friendly, happy disposition, biddable. Timidity or aggression unacceptable.",
+        "confidence": "high",
+        "notes": "KC standard (S282) 'Temperament'. AKC standard (S283): 'The typical Springer is friendly, eager to please, quick to learn and willing to obey.'"
+      },
+      "family": {
+        "value": "good family dogs; get along well with children and other household pets",
+        "unit": "—",
+        "source_id": "S285",
+        "quote": "They make good family dogs; they’re well behaved, love to be kept involved in family activities",
+        "confidence": "medium",
+        "notes": "PDSA (S285): 'get along well with children and other household pets.' AKC (S286): 'Springers were bred to work closely with humans, so they can make for great family dogs.'; 'An English Springer Spaniel would be happiest with a family eager to include their new dog on their outings.' Basis of family_pet / children (no supervision caveat in the source; no rating for small children → no small_children)."
+      },
+      "socialisation": {
+        "value": "early socialisation and puppy training courses are key",
+        "unit": "—",
+        "source_id": "S286",
+        "quote": "Like with any breed, early socialization and puppy training courses are key",
+        "confidence": "medium",
+        "notes": "AKC (S286): 'to ensuring your English Springer Spaniel grows into a well-behaved adult.' → proposed_game_parameters.english_springer_spaniel.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "time_alone": {
+        "value": "should not be left alone for long periods",
+        "unit": "—",
+        "source_id": "S286",
+        "quote": "Springers should not be left alone for long periods of time, and require regular exercise to keep them happy and healthy.",
+        "confidence": "medium",
+        "notes": "AKC (S286): 'Because English Springer Spaniels are a social, active breed,' / 'leaving them alone for long periods of time can result in undesirable behaviors.'; 'Springers crave company and thrive off of interacting with their humans.' → consider needs_company (Boxer / Chihuahua precedent); never often_alone."
+      },
+      "other_pets": {
+        "value": "get along well with other dogs and animals / household pets",
+        "unit": "—",
+        "source_id": "S285",
+        "quote": "get along well with children and other household pets.",
+        "confidence": "medium",
+        "notes": "PDSA (S285). AKC (S286): 'In addition to making loyal family companions, they tend to get along well with other dogs and animals.' Basis of other_pets. No prey-drive statement on the pages read → no chases_small_pets."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (RKC S284, PDSA S285, AKC S286 checked) → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag."
+      },
+      "training_notes": {
+        "value": "obedient and keen to learn; training relatively easy; gentle, continued training",
+        "unit": "—",
+        "source_id": "S285",
+        "quote": "They’re obedient and keen to learn, so training should be relatively easy",
+        "confidence": "medium",
+        "notes": "PDSA (S285): 'they often enjoy the mental stimulation that this provides.' AKC (S286): 'Springers are highly intelligent and eager to please, but owners should utilize gentle, continued training methods.' Not a first-time-owner statement → no first_time_owner / experienced_owner tag; enjoying training is not a 'needs mental stimulation' warning → no needs_mental_stimulation."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 1 (S284): 'Currently no points of concern specific to this breed have been identified for special attention by judges' → no welfare chip. PDSA (S285) health list: hip dysplasia, elbow dysplasia, progressive retinal atrophy, ear infections. Wikipedia (S288, tier C, background only) names skin conditions and chronic hepatitis — not used without an A/B source.",
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia — leading to arthritis; parents' hips and elbows tested before breeding",
+        "unit": "—",
+        "source_id": "S285",
+        "quote": "Hip dysplasia – hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
+        "confidence": "medium",
+        "notes": "PDSA (S285); also 'Elbow dysplasia – elbow joint laxity as a result of poor development, which will eventually lead to arthritis.' RKC (S284) Good Practice (minimum): 'Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme' and 'Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme' (→ breeder checklist hip_scheme / elbow_scheme). Not a Breed Watch point → no hips_hind_legs chip."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy — gradual deterioration of the retina",
+        "unit": "—",
+        "source_id": "S285",
+        "quote": "Progressive retinal atrophy – gradual deterioration of the retina of the eye.",
+        "confidence": "medium",
+        "notes": "PDSA (S285): 'Symptoms can start with night blindness and progress to total blindness.' RKC (S284) best practice: 'DNA test for Progressive retinal atrophy (PRA(cord1))' (→ breeder checklist dna_pra_cord1); minimum: eye scheme with gonioscopy for PLA (→ eye_scheme)."
+      },
+      "ear_infections": {
+        "value": "ear infections (otitis externa) because of the long ears",
+        "unit": "—",
+        "source_id": "S285",
+        "quote": "Ear infections can occur in Springer Spaniels due to their long ears.",
+        "confidence": "medium",
+        "notes": "PDSA (S285): 'Bacteria can build up in the ears and cause otitis externa.' A health risk, not a care instruction (no source on the pages read tells owners to check or clean the ears) → no ear-care need recorded (Chihuahua's AKC instruction is different, ROADMAP M5-R20)."
+      },
+      "dna_tests": {
+        "value": "DNA tests for AMS, DAMS, fucosidosis, PFK and PRA (cord1)",
+        "unit": "—",
+        "source_id": "S284",
+        "quote": "DNA test for Fucosidosis (fuco) - Find a list of tested dogs here",
+        "confidence": "medium",
+        "notes": "RKC breed page (S284) 'Best Practice schemes and tests' — the conditions are named for the breeder checklist only (no percentages, no descriptions beyond the test names)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 13,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 13 | English Springer Spaniel |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-10-14): rank 13, the English Springer Spaniel alone, tier 'Excellent Working Dogs' (ranks 11–26). Coren's own top / bottom-10 article (S34) does not list the breed. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Excellent",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 5 to 15 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier definition as returned: 'Obey first command: 85% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "obedient, keen to learn; friendly, eager to please, quick to learn and willing to obey",
+        "unit": "—",
+        "source_id": "S285",
+        "quote": "They’re obedient and keen to learn, so training should be relatively easy",
+        "confidence": "medium",
+        "notes": "PDSA (S285); AKC standard (S283) 'The typical Springer is friendly, eager to please, quick to learn and willing to obey.'"
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.english_springer_spaniel.learning_multiplier (1.5, runbook rule: Excellent tier, rank 13).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "symmetrically built, compact, strong, merry, active; the highest on leg and raciest of the British land spaniels",
+        "unit": "—",
+        "source_id": "S282",
+        "quote": null,
+        "confidence": "high",
+        "notes": "KC standard (S282) 'General appearance' (as returned, condensed by the tool — paraphrase): 'Symmetrically built, compact, strong, merry, active. Highest on leg and raciest in build of all British land Spaniels.'"
+      },
+      "colours": {
+        "value": [
+          "liver and white",
+          "black and white",
+          "liver and white with tan markings",
+          "black and white with tan markings"
+        ],
+        "unit": "list",
+        "source_id": "S282",
+        "quote": "Any other colour or combination of colours unacceptable.",
+        "confidence": "high",
+        "notes": "KC standard (S282): 'Liver and white', 'Black and white', 'Either of these colours with tan markings.' AKC (S283) also allows blue or liver roan and 'Off colors such as lemon, red or orange are not to place.' The game uses the KC colours only (the FCI follows the UK standard) — never roan, lemon, red or orange."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Liver and white first with the highest weight (portrait default), then black and white, liver and white with tan, black and white with tan."
+      },
+      "coat": {
+        "value": "close, straight and weather-resisting, never coarse; moderate feathering on ears, forelegs, body and hindquarters",
+        "unit": "—",
+        "source_id": "S282",
+        "quote": "Close, straight, and weather resisting, never coarse. Moderate feathering on ears, forelegs, body, and hindquarters.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "ears": {
+        "value": "lobular, good length and width, fairly close to the head, set in line with the eye, nicely feathered",
+        "unit": "—",
+        "source_id": "S282",
+        "quote": "Lobular, good length and width, fairly close to head, set in line with eye. Nicely feathered.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "eyes": {
+        "value": "medium size, almond-shaped, dark hazel, alert and kind expression",
+        "unit": "—",
+        "source_id": "S282",
+        "quote": "Medium size, almond-shaped, not prominent nor sunken, well set in (not showing haw), alert, kind expression.",
+        "confidence": "high",
+        "notes": "KC (S282): 'Dark hazel. Light eyes undesirable.'"
+      },
+      "nose": {
+        "value": "skull of medium length, fairly broad, slightly rounded; foreface of proportionate length, fairly broad and deep",
+        "unit": "—",
+        "source_id": "S282",
+        "quote": "Skull of medium length, fairly broad, slightly rounded, rising from foreface, making a brow or stop, divided by fluting",
+        "confidence": "high",
+        "notes": "Not a short-faced breed (foreface 'of proportionate length to skull', S282, as summarised by the tool)."
+      },
+      "tail": {
+        "value": "set low, never carried above the level of the back, well feathered, lively action; natural (undocked) in the game",
+        "unit": "—",
+        "source_id": "S282",
+        "quote": "Set low, never carried above level of back. Well-feathered with lively action.",
+        "confidence": "high",
+        "notes": "KC (S282): 'Previously customarily docked.' AKC (S283): 'The tail is carried horizontally or slightly elevated and displays a characteristic lively, merry action,'. The UK standard describes docking as past practice → the portrait shows the natural tail."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page key facts (S284, older address) and PDSA (S285); AKC (S286) for time alone, other pets and grooming. The RKC page shows no 'Good with children' field (as returned 2026-10-14). Woodgreen / Dogs Trust breed pages not attempted.",
+      "rkc_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S284",
+        "quote": "Size: Medium",
+        "confidence": "high",
+        "notes": "PDSA (S285): 'Size | Medium'."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S284",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S284",
+        "quote": "Size of home: Small house",
+        "confidence": "high",
+        "notes": "Not apartment, not large_home (runbook: apartment only from 'Flat/ Apartment', large_home from 'Large house')."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S284",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "Background only (large_home needs 'Large house')."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S284",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "No number → the brushing value comes from PDSA (S285) 'once or twice a week' → 2 (runbook dog-grooming rule). Basis of frequent_grooming (German Shepherd precedent: RKC 'More than once a week')."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S284",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "PDSA (S285): 'Coat length | Medium'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S284",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "Basis of the sheds tag. No source says otherwise."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S284",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "Not shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S284",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S284",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S284",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S284) key facts 'Breed Watch category' 'Category 1'. No welfare chip."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page (S284) has no 'Good with children' field (the family sentence there is about the Gundog group)."
+      },
+      "pdsa_exercise": {
+        "value": "over 2 hours of exercise per day",
+        "unit": "—",
+        "source_id": "S285",
+        "quote": "will need an owner who’s prepared to give them over 2 hours of exercise per day.",
+        "confidence": "medium",
+        "notes": "PDSA key facts 'Minimum exercise (per day) | 2 hours'."
+      },
+      "pdsa_family": {
+        "value": "good family dogs",
+        "unit": "—",
+        "source_id": "S285",
+        "quote": "They make good family dogs; they’re well behaved, love to be kept involved in family activities",
+        "confidence": "medium",
+        "notes": "Basis of family_pet."
+      },
+      "pdsa_children": {
+        "value": "get along well with children and other household pets",
+        "unit": "—",
+        "source_id": "S285",
+        "quote": "get along well with children and other household pets.",
+        "confidence": "medium",
+        "notes": "Basis of children and other_pets (explicit statement, no supervision caveat in the source)."
+      },
+      "pdsa_grooming": {
+        "value": "grooming once or twice a week, plus clipping every 3 months",
+        "unit": "—",
+        "source_id": "S285",
+        "quote": "They need grooming once or twice a week, plus clipping every 3 months.",
+        "confidence": "medium",
+        "notes": "Brushing 'once or twice a week' → 2 (range A–B → B, runbook dog-grooming rule). Clipping every 3 months = a professional-grooming need without a game mechanic → proposed_game_parameters.english_springer_spaniel.professional_grooming → ROADMAP M5-R18 (needs-david)."
+      },
+      "akc_grooming": {
+        "value": "routine grooming; weekly brushing; trimming by the owner or a groomer; nails trimmed regularly",
+        "unit": "—",
+        "source_id": "S286",
+        "quote": "Weekly brushing helps ensure the breed’s coat remains healthy and free of dirt and debris.",
+        "confidence": "medium",
+        "notes": "AKC (S286): 'English Springer Spaniels require routine grooming.'; 'The Springer can be trimmed by the owner or taken to a professional groomer' / 'to keep the areas around their feet, head, neck, and undertail looking sharp.'; 'Their nails should be trimmed regularly.' Weekly brushing = alternative 1. Nail trimming = sourced need without a mechanic → ROADMAP M5-R19 (needs-david)."
+      },
+      "akc_time_alone": {
+        "value": "should not be left alone for long periods",
+        "unit": "—",
+        "source_id": "S286",
+        "quote": "Springers should not be left alone for long periods of time, and require regular exercise to keep them happy and healthy.",
+        "confidence": "medium",
+        "notes": "Basis of needs_company (with behaviour.time_alone)."
+      },
+      "akc_active_household": {
+        "value": "a more active household is the best fit",
+        "unit": "—",
+        "source_id": "S286",
+        "quote": "A more active household would be the best fit for an English Springer Spaniel.",
+        "confidence": "medium",
+        "notes": "Basis of active_family (with the exercise fields)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -23568,6 +24113,303 @@
         "confidence": "high",
         "notes": "KC (S274) / FCI (S273) allow every colour except merle — the most typical (fawn) is the portrait default. Welfare: moderate, non-exaggerated dome and muzzle, eyes not protruding (S274 'not protruding') — a `muzzle` trait in breed_appearance.php. Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn (a permitted colour; the standards forbid only merle) is the portrait default; smooth coat, moderate apple-dome head, erect ears, sickle tail"
+      }
+    },
+    "english_springer_spaniel": {
+      "_note": "Unattended run M5-R10-34 (2026-10-14): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: brushing (RKC S284 'More than once a week' without a number → PDSA S285 'once or twice a week' → 2×, M5-R13); early socialisation (AKC S286) → M5-R17. Sourced needs without a game mechanic: clipping every 3 months (PDSA S285) → ROADMAP M5-R18; nails trimmed regularly (AKC S286) → ROADMAP M5-R19 (needs-david). Senior 122 from McMillan 2024 (13.5 y, S123). Not a welfare breed → in marketing.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S284",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'More than 2 hours per day' (S284); PDSA 'over 2 hours of exercise per day' / key facts '2 hours' (S285) agrees. Rule: one number N ('more than N') → N = 120.",
+        "alternatives": [
+          {
+            "value": 120,
+            "source_id": "S285",
+            "notes": "PDSA (key facts minimum 2 hours)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S284 'More than 2 hours per day'; PDSA S285 'over 2 hours')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000 (= Border Collie, Labrador, Golden, German Shepherd, Australian Shepherd, Siberian Husky, Rottweiler, German Shorthaired Pointer).",
+        "derived_from": [
+          "S284",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 122
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 122 = round(0.75 × 13.5 y × 12) = round(121.5), half up (S11 + McMillan 2024 median 13.5 y via the Dogs Trust table S123). Alternatives: 84 (Dogs Trust > 7 y, S14); 107 (Teng 2022 life expectancy 11.9 y, S287).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84,
+          "senior_teng_2022_11_9_y": 107
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 122 (0.75 × 13.5 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 122
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 122)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 13 (S35), tier Excellent (ranks 11–26) → 1.5. PDSA 'obedient and keen to learn' (S285), AKC standard 'quick to learn and willing to obey' (S283) — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 13, Excellent tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S285",
+        "quote": "They need grooming once or twice a week, plus clipping every 3 months.",
+        "confidence": "medium",
+        "notes": "english_springer_spaniel.suitability.pdsa_grooming. RKC (S284) 'More than once a week' has no number → the most specific number of another A/B source: PDSA 'once or twice a week' → upper bound 2 (runbook dog-grooming rule, German Shorthaired Pointer precedent). AKC (S286) 'Weekly brushing' = alternative 1. Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S286",
+            "notes": "AKC weekly brushing"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC »More than once a week« brez števila → PDSA »once or twice a week« → 2); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S286",
+        "quote": "Like with any breed, early socialization and puppy training courses are key",
+        "confidence": "medium",
+        "notes": "english_springer_spaniel.behaviour.socialisation (AKC S286). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat AKC S286)"
+      },
+      "professional_grooming": {
+        "value": "clipping every 3 months",
+        "unit": "professional clipping / trimming (sourced need)",
+        "source_id": "S285",
+        "quote": "They need grooming once or twice a week, plus clipping every 3 months.",
+        "confidence": "medium",
+        "notes": "PDSA (S285), english_springer_spaniel.suitability.pdsa_grooming; AKC (S286): 'The Springer can be trimmed by the owner or taken to a professional groomer'. The game has no groomer / clipping mechanic → ROADMAP M5-R18 (Pomeranian precedent, needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): striženje vsake 3 mesece; mehanike ni → ROADMAP M5-R18 (needs-david)"
+      },
+      "nail_trimming": {
+        "value": "nails trimmed regularly (no frequency given)",
+        "unit": "nail trimming (sourced need)",
+        "source_id": "S286",
+        "quote": "Their nails should be trimmed regularly.",
+        "confidence": "medium",
+        "notes": "AKC (S286), english_springer_spaniel.suitability.akc_grooming. The game has no nail-trimming mechanic → ROADMAP M5-R19 (Boston Terrier precedent, needs-david); the source gives no frequency.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno striženje krempljev; mehanike ni → ROADMAP M5-R19 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-34); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S284",
+              "S285",
+              "S286"
+            ],
+            "refs": [
+              "english_springer_spaniel.exercise.adult",
+              "english_springer_spaniel.suitability.pdsa_exercise",
+              "english_springer_spaniel.suitability.akc_active_household"
+            ],
+            "quote": "S284 'Exercise: More than 2 hours per day'; S285 'over 2 hours of exercise per day'; S286 'A more active household would be the best fit'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S285"
+            ],
+            "refs": [
+              "english_springer_spaniel.suitability.pdsa_family",
+              "english_springer_spaniel.behaviour.family"
+            ],
+            "quote": "S285 'They make good family dogs'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S285"
+            ],
+            "refs": [
+              "english_springer_spaniel.suitability.pdsa_children"
+            ],
+            "quote": "S285 'get along well with children and other household pets.'"
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S285"
+            ],
+            "refs": [
+              "english_springer_spaniel.behaviour.other_pets",
+              "english_springer_spaniel.suitability.pdsa_children"
+            ],
+            "quote": "S285 'get along well with children and other household pets.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S284",
+              "S285"
+            ],
+            "refs": [
+              "english_springer_spaniel.exercise.adult",
+              "english_springer_spaniel.suitability.pdsa_exercise"
+            ],
+            "quote": "S284 'Exercise: More than 2 hours per day'; S285 'over 2 hours of exercise per day'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S286"
+            ],
+            "refs": [
+              "english_springer_spaniel.behaviour.time_alone",
+              "english_springer_spaniel.suitability.akc_time_alone"
+            ],
+            "quote": "S286 'Springers should not be left alone for long periods of time'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S284"
+            ],
+            "refs": [
+              "english_springer_spaniel.suitability.rkc_shedding"
+            ],
+            "quote": "S284 'Sheds: Yes'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S284",
+              "S285"
+            ],
+            "refs": [
+              "english_springer_spaniel.suitability.rkc_grooming",
+              "english_springer_spaniel.suitability.pdsa_grooming"
+            ],
+            "quote": "S284 'Grooming: More than once a week'; S285 'once or twice a week, plus clipping every 3 months'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No rating for small children (PDSA S285 says children in general).",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No source.",
+          "apartment": "RKC 'Small house' (S284) — not 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S284) — runbook: large_home only from 'Large house'.",
+          "often_alone": "AKC: should not be left alone for long periods (S286).",
+          "older_owners": "No source.",
+          "low_shedding": "RKC 'Sheds: Yes' (S284).",
+          "needs_mental_stimulation": "PDSA: 'they often enjoy the mental stimulation' of training (S285) — not a warning.",
+          "food_motivated_weight": "No source.",
+          "chews_when_bored": "No source.",
+          "may_herd_children": "No source.",
+          "secure_fencing": "No source.",
+          "chases_small_pets": "No prey-drive statement on the pages read.",
+          "shorter_lifespan": "McMillan 2024 median 13.5 y (S123); RKC 'Over 10 years' (S284).",
+          "welfare": "RKC Breed Watch Category 1, no points of concern (S284) → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, children, other_pets; consider long_daily_exercise, needs_company, sheds, frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S284",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S284); no conformation welfare concern and no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health and never hides the 2-hour daily exercise.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a welfare breed)"
+      },
+      "ai_appearance": {
+        "value": "adult English Springer Spaniel, liver and white (default); close, straight, weather-resisting coat with moderate feathering on ears, legs, body and hindquarters; long lobular feathered ears set in line with the eye; medium almond dark hazel eyes; medium-length, slightly rounded skull with a proportionate, fairly broad and deep foreface; natural undocked tail carried low; compact, strong, active, high on leg; never roan, lemon, red or orange",
+        "unit": "—",
+        "source_id": "S282",
+        "quote": "Any other colour or combination of colours unacceptable.",
+        "confidence": "high",
+        "notes": "KC (S282) colours: liver and white, black and white, either with tan markings — liver and white is the portrait default. The KC standard says the tail was 'Previously customarily docked.' → natural tail. Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — liver and white (default), black and white, either with tan markings; natural tail (KC: docking is past practice)"
       }
     }
   }

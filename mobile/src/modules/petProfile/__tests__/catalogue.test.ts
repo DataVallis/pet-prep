@@ -145,6 +145,7 @@ describe('readBreedCatalogue', () => {
       'boston_terrier',
       'miniature_american_shepherd',
       'chihuahua',
+      'english_springer_spaniel',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -382,6 +383,14 @@ describe('readBreedCatalogue', () => {
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-33, runbook rules; no new tag).
     expect(chi?.search_keywords).toEqual(['chihuahua', 'čivava', 'civava', 'chi']);
     expect(chi?.suitability).toEqual({ suits: ['apartment', 'other_pets'], consider: ['older_children', 'needs_company', 'sheds'] });
+    const ess = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'english_springer_spaniel');
+    expect(ess).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 300 }));
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-34, runbook rules; no new tag).
+    expect(ess?.search_keywords).toEqual(['english springer spaniel', 'angleški springer španjel', 'angleski springer spanjel', 'springer spaniel', 'springer španjel', 'springer']);
+    expect(ess?.suitability).toEqual({
+      suits: ['active_family', 'family_pet', 'children', 'other_pets'],
+      consider: ['long_daily_exercise', 'needs_company', 'sheds', 'frequent_grooming'],
+    });
     const corgi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pembroke_welsh_corgi');
     expect(corgi).toEqual(
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 200 }),
@@ -425,6 +434,7 @@ describe('readBreedCatalogue', () => {
       'boston_terrier',
       'miniature_american_shepherd',
       'chihuahua',
+      'english_springer_spaniel',
     ]);
   });
 });
@@ -602,6 +612,14 @@ describe('breed search', () => {
     expect(find('mini aussie')).toEqual(['miniature_american_shepherd']);
   });
 
+  it('M5-R10-34: finds the English Springer Spaniel by its EN / SL names, with and without the carons, and as "springer"', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('english springer spaniel')).toEqual(['english_springer_spaniel']);
+    expect(find('Angleški springer španjel')).toEqual(['english_springer_spaniel']);
+    expect(find('angleski springer spanjel')).toEqual(['english_springer_spaniel']);
+    expect(find('springer')).toEqual(['english_springer_spaniel']);
+  });
+
   it('M5-R10-33: finds the Chihuahua by its EN / SL names, with and without the caron', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('chihuahua')).toEqual(['chihuahua']);
@@ -673,7 +691,8 @@ describe('breed search', () => {
   it('M5-R10-20: finds the Bulldog by its SL / EN names, never the French Bulldog for "angleški"', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('angleški buldog')).toEqual(['bulldog']);
-    expect(find('angleski')).toEqual(['bulldog']);
+    // M5-R10-34: »angleški« is also the start of the English Springer Spaniel's SL name — still never the French Bulldog.
+    expect(find('angleski')).toEqual(['bulldog', 'english_springer_spaniel']);
     expect(find('english bulldog')).toEqual(['bulldog']);
     expect(find('british')).toEqual(['bulldog']);
   });

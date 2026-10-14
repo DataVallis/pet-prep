@@ -37,6 +37,7 @@ return [
     'boston_terrier' => 'Boston Terrier',
     'miniature_american_shepherd' => 'Miniature American Shepherd',
     'chihuahua' => 'Chihuahua',
+    'english_springer_spaniel' => 'English Springer Spaniel',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

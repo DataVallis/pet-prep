@@ -309,6 +309,15 @@
 | exaggerated tiny-dog features). Colour weights are unsourced → `verified => false`; fawn weighted
 | highest (the register portrait).
 |
+| English Springer Spaniel (M5-R10-34, docs/research/dog-data english_springer_spaniel.appearance):
+| symmetrically built, compact, strong, merry, active, the highest on leg of the British land spaniels
+| (KC standard S282); skull of medium length, fairly broad, slightly rounded, foreface of proportionate
+| length; medium, almond-shaped, dark hazel eyes; lobular, long, well-feathered ears set in line with
+| the eye; close, straight, weather-resisting coat with moderate feathering; tail set low, never above
+| the back — natural (KC "Previously customarily docked."). Colours (KC): liver and white, black and
+| white, either with tan markings — never roan, lemon, red or orange in the game. Colour weights are
+| unsourced → `verified => false`; liver and white weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1524,6 +1533,39 @@ return [
             'muzzle' => ['moderately rounded apple-dome head with a moderately short, slightly pointed muzzle'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-34 (docs/research/dog-data/data.json english_springer_spaniel.appearance; runbook rules
+    // 2026-10-10: KC standard colours only — never roan / lemon / red / orange; natural tail).
+    'english_springer_spaniel' => [
+        'display_name' => 'English Springer Spaniel',
+        // Colour frequencies are in no source (english_springer_spaniel.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'KC breed standard (S282, hosted by KUSA), AKC standard (S283), RKC breed page (S284), PDSA (S285) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S284 "Size: Medium"; S282 "Approximate height: 51cm (approx. 20")."',
+            'build' => 'S282 general appearance (symmetrically built, compact, strong, merry, active; highest on leg of the British land spaniels)',
+            'coat_length' => 'S282 "Close, straight, and weather resisting, never coarse. Moderate feathering on ears, forelegs, body, and hindquarters."',
+            'coat_color' => 'S282 "Liver and white" "Black and white" "Either of these colours with tan markings." "Any other colour or combination of colours unacceptable." (weights unsourced)',
+            'ear_carriage' => 'S282 "Lobular, good length and width, fairly close to head, set in line with eye. Nicely feathered."',
+            'eye_color' => 'S282 "Medium size, almond-shaped, not prominent nor sunken, well set in (not showing haw), alert, kind expression." "Dark hazel."',
+            'tail' => 'S282 "Previously customarily docked." "Set low, never carried above level of back. Well-feathered with lively action." (the game draws the natural tail)',
+        ],
+        'traits' => [
+            'size' => ['medium-sized'],
+            'build' => [['value' => 'compact, strong and athletic, fairly high on the leg', 'weight' => 3], 'symmetrical, merry and active'],
+            'coat_length' => ['close, straight, medium-length coat with moderate feathering on the ears, legs, chest and belly'],
+            // KC colours only (S282); liver and white highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'liver and white', 'weight' => 4],
+                ['value' => 'black and white', 'weight' => 3],
+                'liver and white with tan markings',
+                'black and white with tan markings',
+            ],
+            'ear_carriage' => ['long, lobular, well-feathered ears hanging close to the head'],
+            'eye_color' => ['dark hazel, medium-sized and almond-shaped, with a kind, alert expression'],
+            'tail' => ['natural, undocked, feathered tail carried low, never above the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

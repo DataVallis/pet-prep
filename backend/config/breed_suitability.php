@@ -894,6 +894,31 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S275'], 'refs' => ['chihuahua.suitability.rkc_shedding']],
             ],
         ],
+        // M5-R10-34: english_springer_spaniel.* (S281–S288), runbook rules (data.json
+        // proposed_game_parameters.english_springer_spaniel.suitability_tags). RKC (S284) + PDSA (S285) + AKC (S286).
+        // PDSA "get along well with children and other household pets" → children + other_pets (no rating for
+        // small children). RKC "Small house" → neither apartment nor large_home. Breed Watch Category 1 with
+        // no points of concern → no welfare chip.
+        'english_springer_spaniel' => [
+            'suits' => [
+                // S284 "Exercise: More than 2 hours per day"; S285 "over 2 hours of exercise per day"; S286 "A more active household would be the best fit".
+                ['tag' => 'active_family', 'source_ids' => ['S284', 'S285', 'S286'], 'refs' => ['english_springer_spaniel.exercise.adult', 'english_springer_spaniel.suitability.pdsa_exercise', 'english_springer_spaniel.suitability.akc_active_household']],
+                // S285 "They make good family dogs; they’re well behaved, love to be kept involved in family activities".
+                ['tag' => 'family_pet', 'source_ids' => ['S285'], 'refs' => ['english_springer_spaniel.suitability.pdsa_family', 'english_springer_spaniel.behaviour.family']],
+                // S285 "get along well with children and other household pets."
+                ['tag' => 'children', 'source_ids' => ['S285'], 'refs' => ['english_springer_spaniel.suitability.pdsa_children']],
+                ['tag' => 'other_pets', 'source_ids' => ['S285'], 'refs' => ['english_springer_spaniel.behaviour.other_pets', 'english_springer_spaniel.suitability.pdsa_children']],
+            ],
+            'consider' => [
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S284', 'S285'], 'refs' => ['english_springer_spaniel.exercise.adult', 'english_springer_spaniel.suitability.pdsa_exercise']],
+                // S286 "Springers should not be left alone for long periods of time, …"
+                ['tag' => 'needs_company', 'source_ids' => ['S286'], 'refs' => ['english_springer_spaniel.behaviour.time_alone', 'english_springer_spaniel.suitability.akc_time_alone']],
+                // S284 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S284'], 'refs' => ['english_springer_spaniel.suitability.rkc_shedding']],
+                // S284 "Grooming: More than once a week"; S285 "once or twice a week, plus clipping every 3 months".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S284', 'S285'], 'refs' => ['english_springer_spaniel.suitability.rkc_grooming', 'english_springer_spaniel.suitability.pdsa_grooming']],
+            ],
+        ],
 
     ],
 ];
