@@ -57,7 +57,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "1599426aa28bfac3b4f57d81b3e22d72ebc77665a9706f42a8f709ac07b0bd7e"
+      "sha256": "0e045a15f9ec7a091fcae4e471080a0c7d37945acc4c9dede8f03c8665fd7f87"
     }
   },
   "suitability_vocabulary": {
@@ -19933,7 +19933,12 @@
           "S305"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "american-cocker-spaniel.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

@@ -389,6 +389,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "american_cocker_spaniel",
+            "species": "dog",
+            "file": "dog/american-cocker-spaniel.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:57fb73ff32e62146bbad940f97b74794b7c973e81bec91fdbed8f52f9d86f8a1",
+            "generated_at": "2026-10-14T16:32:05+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
