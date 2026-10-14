@@ -919,6 +919,30 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S284', 'S285'], 'refs' => ['english_springer_spaniel.suitability.rkc_grooming', 'english_springer_spaniel.suitability.pdsa_grooming']],
             ],
         ],
+        // M5-R10-35: shetland_sheepdog.* (S289–S295), runbook rules (data.json
+        // proposed_game_parameters.shetland_sheepdog.suitability_tags). RKC (S291) + PDSA (S293) + AKC (S294).
+        // PDSA "get along happily with children" → children (no rating for small children); AKC "would fare
+        // best in a home with older children due to their herding instincts" → may_herd_children. RKC
+        // "Small house" → neither apartment nor large_home. Breed Watch Category 2 without a named point
+        // (S292) → no welfare chip (open for David). AKC "will chase just about anything" is not a named
+        // high prey drive → no chases_small_pets.
+        'shetland_sheepdog' => [
+            'suits' => [
+                // S293 "Shelties often fit well into family life and get along happily with children."
+                ['tag' => 'family_pet', 'source_ids' => ['S293'], 'refs' => ['shetland_sheepdog.suitability.pdsa_family', 'shetland_sheepdog.behaviour.family']],
+                ['tag' => 'children', 'source_ids' => ['S293'], 'refs' => ['shetland_sheepdog.suitability.pdsa_family']],
+            ],
+            'consider' => [
+                // S294 "Shelties are quite athletic, and require regular mental and physical exercise to keep them from acting out."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S294'], 'refs' => ['shetland_sheepdog.behaviour.mental_stimulation', 'shetland_sheepdog.suitability.akc_mental_exercise']],
+                // S294 "They can do well with kids, but would fare best in a home with older children due to their herding instincts."
+                ['tag' => 'may_herd_children', 'source_ids' => ['S294'], 'refs' => ['shetland_sheepdog.behaviour.herding_children', 'shetland_sheepdog.suitability.akc_children']],
+                // S291 "Grooming: Every day"; S293 "They need daily grooming to keep their thick coat in tip-top condition."
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S291', 'S293'], 'refs' => ['shetland_sheepdog.suitability.rkc_grooming', 'shetland_sheepdog.suitability.pdsa_grooming']],
+                // S291 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S291'], 'refs' => ['shetland_sheepdog.suitability.rkc_shedding']],
+            ],
+        ],
 
     ],
 ];

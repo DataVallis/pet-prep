@@ -318,6 +318,16 @@
 | white, either with tan markings — never roan, lemon, red or orange in the game. Colour weights are
 | unsourced → `verified => false`; liver and white weighted highest (the register portrait).
 |
+| Shetland Sheepdog (M5-R10-35, docs/research/dog-data shetland_sheepdog.appearance):
+| small, long-haired working dog of great beauty, lithe and graceful (FCI standard S290); head a
+| long, blunt wedge tapering from ear to nose; medium, oblique, almond-shaped dark brown eyes (blue
+| allowed in merles); small ears carried semi-erect with the tips falling forward; double coat with a
+| long, harsh, straight outer coat and abundant mane and frill; tail set low with abundant hair, never
+| over the back. Colours (FCI): sable, tricolour, blue merle, black and white, black and tan — white
+| only on the blaze, collar, chest, frill, legs and tail tip; never brindle, never white patches on
+| the body, never a mostly white double merle. Colour weights are unsourced → `verified => false`;
+| sable and white weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1566,6 +1576,42 @@ return [
             'tail' => ['natural, undocked, feathered tail carried low, never above the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-35 (docs/research/dog-data/data.json shetland_sheepdog.appearance; runbook rules
+    // 2026-10-10: FCI standard colours only — never brindle, white body patches or a double merle).
+    'shetland_sheepdog' => [
+        'display_name' => 'Shetland Sheepdog',
+        // Colour frequencies are in no source (shetland_sheepdog.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI standard (S290), RKC breed page (S291), PDSA (S293), AKC (S294) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S291 "Size: Small"; S290 ideal height males 37 cm, females 35.5 cm',
+            'build' => 'S290 "Small, long-haired working dog of great beauty, free from cloddiness and coarseness, action lithe and graceful."',
+            'coat_length' => 'S290 "Double; outer coat of long hair, harsh-textured and straight." "Undercoat soft, short and close."',
+            'coat_color' => 'S290 sable, tricolour, blue merle, black and white, black and tan; "Patches of white on body highly undesirable." "Any other colour or combination of colours unacceptable." (weights unsourced)',
+            'ear_carriage' => 'S290 "Small, moderately wide at base, placed fairly close together on top of skull." carried semi-erect with tips falling forward when alert',
+            'eye_color' => 'S290 "Medium size obliquely set, almond-shape with black rims." dark brown (blue allowed in merles)',
+            'tail' => 'S290 "Set low; tapering bone reaches to at least hock; with abundant hair and slight upward sweep."',
+            'muzzle' => 'S290 the head "a long, blunt wedge, tapering from ear to nose"; skull "Flat, moderately wide between ears"',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'small, lithe and graceful, well balanced', 'weight' => 3], 'small, elegant working build'],
+            'coat_length' => ['long, harsh, straight double coat with an abundant mane and frill and a soft undercoat'],
+            // FCI colours only (S290); sable and white highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'sable and white (golden sable with a white collar, frill, chest, legs and tail tip)', 'weight' => 4],
+                ['value' => 'tricolour (black with tan markings and a white collar, frill, chest, legs and tail tip)', 'weight' => 3],
+                ['value' => 'blue merle (silvery blue marbled with black, with white and tan markings)', 'weight' => 2],
+                'black and white',
+                'black and tan',
+            ],
+            'ear_carriage' => ['small ears carried semi-erect with the tips folding forward'],
+            'eye_color' => ['dark brown, medium-sized, almond-shaped and obliquely set, with a gentle expression'],
+            'tail' => ['natural tail set low with abundant hair, carried low with a slight upward sweep'],
+            'muzzle' => ['refined head shaped like a long, blunt wedge tapering from the ears to the nose, with a moderate stop'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

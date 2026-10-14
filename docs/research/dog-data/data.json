@@ -16346,6 +16346,608 @@
       }
     }
   },
+  "shetland_sheepdog": {
+    "_note": "Added 2026-10-14 (M5-R10-35, unattended run — appended after the English Springer Spaniel: AKC 2024 No. 29, S174 full-list table 'ranks 26–32: Siberian Husky, Chihuahua, English Springer Spaniel, Shetland Sheepdog, Border Collie, Brittany, Cocker Spaniel'). Quotes as returned by the web-fetch tool on 2026-10-14 (the tool limits quotes to ~125 characters; apostrophes as returned); spot-check before import (sources.md S289–S295, reused S10, S11, S14, S24, S34, S35, S45, S92, S174). Lifespan: McMillan 2024 / Dogs Trust table (S123) refused by the fetch tool (provenance) → RKC lower bound 'Over 10 years' → senior 90 months, provisional (Wikipedia S295, tier C, quotes McMillan 2024 as 13.4 y → 121, not used alone). RKC Breed Watch Category 2 with only the general line 'can be affected by conformational concerns' (S292) and no named point → no welfare chip (Pomeranian / Boston Terrier precedent, open for David); not flat-faced → in marketing.",
+    "identity": {
+      "value": "FCI No. 88, Group 1 Section 1 (Sheepdogs), Great Britain",
+      "unit": "—",
+      "source_id": "S289",
+      "quote": "SHETLAND SHEEPDOG (88)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S289): Group 'n°1 - Sheepdogs and Cattledogs (except Swiss Cattledogs)', section 'Sheepdogs', country 'GREAT BRITAIN'; accepted on a definitive basis 11/9/1954; official valid standard published 9/8/2026 (FCI standard S290: 08.09.2026); 'Not subject to a working trial according to the FCI breeds nomenclature'."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S291",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "RKC breed page key facts (S291). PDSA (S293) key facts 'Size | Medium' — sources disagree; the RKC value is taken (runbook: RKC breed page preferred). PDSA 9 kg (S293) and AKC 15–25 lb (S294) sit in the Small class of S10. RKC group: Pastoral."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            37,
+            37
+          ],
+          "female": [
+            35.5,
+            35.5
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S290",
+        "quote": null,
+        "confidence": "high",
+        "notes": "FCI standard (S290) 'Size and weight', as returned: ideal height 'Males 37 cm' and 'Females 35,5 cm'; deviations of more than 2.5 cm above or below 'highly undesirable'. Quoted in pieces by the tool → quote null (paraphrase of the line)."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            35,
+            37
+          ],
+          "female": [
+            35,
+            37
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S293",
+        "quote": "Average height | 35-37 cm",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S293), one range for both sexes (stored per sex)."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            33,
+            40.6
+          ],
+          "female": [
+            33,
+            40.6
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S294",
+        "quote": "averaging between 13 and 16 inches tall and weighing 15 to 25 pounds.",
+        "confidence": "medium",
+        "notes": "AKC (S294). Inches converted to cm (× 2.54) by us: 13–16 in ≈ 33–40.6 cm."
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": [
+            6.8,
+            11.3
+          ],
+          "female": [
+            6.8,
+            11.3
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S294",
+        "quote": "averaging between 13 and 16 inches tall and weighing 15 to 25 pounds.",
+        "confidence": "medium",
+        "notes": "AKC breed article (S294), one range for both sexes (stored per sex). Pounds converted to kg (× 0.4536) by us: 15 lb ≈ 6.8 kg, 25 lb ≈ 11.3 kg. The game range (adult_weight_kg). The FCI standard (S290) gives no weight ('The standard does not specify a weight', tool summary)."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            9,
+            9
+          ],
+          "female": [
+            9,
+            9
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S293",
+        "quote": "Average weight | 9 kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S293), one average for both sexes — inside the AKC range."
+      },
+      "salt_category": {
+        "value": "II",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): about 7–11 kg. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 9 kg (S293) ≈ 20 lb; AKC 15–25 lb (S294) → mostly the 'Small (12–24 pounds)' class. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Shetland Sheepdog growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S291",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S291; older address S292 the same). PDSA (S293) 'Average lifespan | Over 10 years' — sources agree. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S293",
+        "quote": "Average lifespan | Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S293)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024: the Dogs Trust breed table (S123) was refused by the fetch tool on 2026-10-14 (provenance); the Dogs Trust research page names no Shetland Sheepdog value. Wikipedia (S295, tier C) quotes the McMillan 2024 study as 13.4 years — UNSOURCED as an A/B value; verify in S123 before replacing the RKC lower bound.",
+        "alternatives": [
+          {
+            "value": 13.4,
+            "source_id": "S295",
+            "notes": "Wikipedia (tier C): 'found a life expectancy of 13.4 years for the breed' (UK study, McMillan et al. 2024 in the reference list); never shown alone. With it the senior boundary would be round(0.75 × 13.4 × 12) = round(120.6) = 121 months."
+          }
+        ]
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 10 y (RKC lower bound 'Over 10 years', S291) → 0.75 × 10 = 7.5 y = 90 months. With McMillan 13.4 y (via S295, tier C): 121 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S291"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S291",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S291). PDSA (S293): 'Minimum exercise (per day) | 1 hour'; 'Shelties need around an hour of exercise daily and will enjoy playing games.' — agrees."
+      },
+      "energy": {
+        "value": "athletic; needs regular mental and physical exercise",
+        "unit": "—",
+        "source_id": "S294",
+        "quote": "Shelties are quite athletic, and require regular mental and physical exercise to keep them from acting out.",
+        "confidence": "medium",
+        "notes": "AKC (S294): 'As long as a Sheltie has plenty of opportunities to exercise, they’ll be happy.' Basis of needs_mental_stimulation (a need, not only enjoyment)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "alert, gentle, intelligent, strong and active; affectionate, reserved towards strangers, never nervous",
+        "unit": "—",
+        "source_id": "S290",
+        "quote": "Alert, gentle, intelligent, strong and active.",
+        "confidence": "high",
+        "notes": "FCI standard (S290) 'Behaviour/Temperament'; affectionate and loyal to its owner, 'reserved towards strangers, never nervous.' PDSA (S293): 'Shetland Sheepdogs, or ‘Shelties’ as they’re more affectionately known, are very gentle, playful, obedient dogs.'"
+      },
+      "family": {
+        "value": "often fit well into family life; get along happily with children",
+        "unit": "—",
+        "source_id": "S293",
+        "quote": "Shelties often fit well into family life and get along happily with children.",
+        "confidence": "medium",
+        "notes": "PDSA (S293). RKC (S292): 'its sweet temperament has won it a firm place as one of the most popular family companions.' AKC (S294): 'They can do well with kids, but would fare best in a home with older children due to their herding instincts.' Basis of family_pet / children (explicit statement) and may_herd_children (AKC); no rating for small children → no small_children."
+      },
+      "herding_children": {
+        "value": "may herd; would fare best with older children because of herding instincts",
+        "unit": "—",
+        "source_id": "S294",
+        "quote": "They can do well with kids, but would fare best in a home with older children due to their herding instincts.",
+        "confidence": "medium",
+        "notes": "AKC (S294): 'Herding breeds have the desire to chase or gather deeply rooted in their nature.' → may_herd_children (Australian Shepherd / Pembroke Welsh Corgi / Miniature American Shepherd precedent). Not older_children: PDSA (S293) says Shelties 'get along happily with children' (open for David)."
+      },
+      "mental_stimulation": {
+        "value": "needs regular mental and physical exercise",
+        "unit": "—",
+        "source_id": "S294",
+        "quote": "Shelties are quite athletic, and require regular mental and physical exercise to keep them from acting out.",
+        "confidence": "medium",
+        "notes": "AKC (S294) → needs_mental_stimulation."
+      },
+      "socialisation": {
+        "value": "training and socialisation very important at a young age",
+        "unit": "—",
+        "source_id": "S293",
+        "quote": "Training, along with socialisation, is very important at a young age",
+        "confidence": "medium",
+        "notes": "PDSA (S293). AKC (S294): 'Early socialization and training will is recommended to ensure that they don’t become fearful of new faces and situations.' (sic) → proposed_game_parameters.shetland_sheepdog.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No statement on time alone (PDSA S293, AKC S294: only 'relax on the couch as long as their person is close by' — not a time-alone statement) → no needs_company / often_alone."
+      },
+      "other_pets": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No explicit statement on other pets. AKC (S294): 'energetic and loving with their families and other familiar animals' (tool summary) and 'Shelties will chase just about anything from squirrels to cars.' — a chasing statement, not a named high prey drive → no other_pets, no chases_small_pets (runbook rule; open for David)."
+      },
+      "barking": {
+        "value": "very vocal; can be taught to keep excessive barking to a minimum",
+        "unit": "—",
+        "source_id": "S294",
+        "quote": "Shelties are known to be very vocal, but they can be taught to keep excessive barking to a minimum.",
+        "confidence": "medium",
+        "notes": "AKC (S294). Background for parents (register text only); no vocabulary key and not a care need → no chip."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (RKC S291, PDSA S293, AKC S294 checked) → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag."
+      },
+      "training_notes": {
+        "value": "intelligent, responds well to training; star students",
+        "unit": "—",
+        "source_id": "S294",
+        "quote": "Shelties are star students when it comes to intelligence and trainability.",
+        "confidence": "medium",
+        "notes": "AKC (S294). PDSA (S293): intelligent and respond well to training (tool summary). Not a first-time-owner statement → no first_time_owner / experienced_owner tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 2 (S292): the breed 'can be affected by conformational concerns' — no named point → no welfare chip (open for David). PDSA (S293) health list: Collie eye anomaly, progressive retinal atrophy, hip dysplasia, Legg-Perthes disease, luxating patellas, von Willebrand's disease, distichiasis, hypothyroidism.",
+      "eye_conditions": {
+        "value": "Collie eye anomaly and progressive retinal atrophy; eye-tested and DNA-tested parents",
+        "unit": "—",
+        "source_id": "S293",
+        "quote": "Collie eye anomaly – abnormality in the back of the eye",
+        "confidence": "medium",
+        "notes": "PDSA (S293); PRA: gradual deterioration of the retina that can start with night blindness (tool summary). RKC (S291) Good Practice: 'Eye testing using the BVA/KC/ISDS Eye Scheme (including litter screening)'; Best Practice DNA tests for CEA/CH, BBS2-PRA and CNGA1-PRA (→ breeder checklist)."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia — leading to arthritis",
+        "unit": "—",
+        "source_id": "S293",
+        "quote": "hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
+        "confidence": "medium",
+        "notes": "PDSA (S293). RKC (S291) Best Practice: hip and elbow schemes. Not a Breed Watch point → no hips_hind_legs chip."
+      },
+      "von_willebrand": {
+        "value": "von Willebrand's disease — a bleeding disorder",
+        "unit": "—",
+        "source_id": "S293",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S293), tool summary (paraphrase): a deficiency that causes excessive bleeding. RKC (S291) Best Practice: 'DNA test for von Willebrand disease (vWD3-2)'."
+      },
+      "mdr1": {
+        "value": "multi-drug resistance (MDR1) — DNA test",
+        "unit": "—",
+        "source_id": "S291",
+        "quote": "DNA test for Multi-drug resistance (MDR1))",
+        "confidence": "medium",
+        "notes": "RKC breed page (S291) Best Practice — named for the breeder checklist only (text as returned, with the page's double bracket)."
+      },
+      "other": {
+        "value": "Legg-Perthes disease, luxating patellas, distichiasis, hypothyroidism",
+        "unit": "—",
+        "source_id": "S293",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S293) list, tool summary (paraphrase). Background only."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 6,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 6 | Shetland Sheepdog |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-10-14): rank 6, tier 'Brightest Dogs' (ranks 1–10). Coren's own article (S34, read 2026-10-14) lists the Shetland Sheepdog sixth among the ten brightest ('Border Collie', 'Poodle', 'German Shepherd Dog', 'Golden Retriever', 'Doberman Pinscher', 'Shetland Sheepdog', …) — agrees."
+      },
+      "coren_tier": {
+        "value": "Brightest",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: fewer than 5 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier definition as returned: 'Obey first command: 95% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "star students in intelligence and trainability",
+        "unit": "—",
+        "source_id": "S294",
+        "quote": "Shelties are star students when it comes to intelligence and trainability.",
+        "confidence": "medium",
+        "notes": "AKC (S294); PDSA (S293) 'very gentle, playful, obedient dogs'."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.shetland_sheepdog.learning_multiplier (1.8, runbook rule: Brightest tier, rank 6).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "small, long-haired working dog of great beauty, free from cloddiness and coarseness, action lithe and graceful",
+        "unit": "—",
+        "source_id": "S290",
+        "quote": "Small, long-haired working dog of great beauty, free from cloddiness and coarseness, action lithe and graceful.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "colours": {
+        "value": [
+          "sable",
+          "tricolour",
+          "blue merle",
+          "black and white",
+          "black and tan"
+        ],
+        "unit": "list",
+        "source_id": "S290",
+        "quote": "Any other colour or combination of colours unacceptable.",
+        "confidence": "high",
+        "notes": "FCI standard (S290): sable 'clear or shaded, any colour from pale gold to deep mahogany' ('Wolf-sable and grey undesirable'); tricolour 'intense black on body, rich tan markings preferable'; blue merle 'clear silvery blue, splashed and marbled with black'; black and white, black and tan; white only in blaze, collar and chest, frill, legs and tip of tail; 'Patches of white on body highly undesirable.' Merle is a standard colour here (the RKC registers no merle-to-merle puppies, S292 — the game never draws a mostly white 'double merle'). Never brindle, never white patches on the body."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Sable (and white) first with the highest weight (portrait default), then tricolour, blue merle, black and white, black and tan."
+      },
+      "coat": {
+        "value": "double; outer coat of long, harsh-textured, straight hair; soft, short, close undercoat; abundant mane and frill",
+        "unit": "—",
+        "source_id": "S290",
+        "quote": "Double; outer coat of long hair, harsh-textured and straight.",
+        "confidence": "high",
+        "notes": "FCI (S290): 'Undercoat soft, short and close.' 'Smooth-coated specimens highly undesirable.'"
+      },
+      "ears": {
+        "value": "small, moderately wide at the base, close together on top of the skull; semi-erect with tips falling forward when alert",
+        "unit": "—",
+        "source_id": "S290",
+        "quote": "Small, moderately wide at base, placed fairly close together on top of skull.",
+        "confidence": "high",
+        "notes": "FCI (S290): 'In repose, thrown back; when alert brought forward and carried semi-erect with tips falling forward.'"
+      },
+      "eyes": {
+        "value": "medium, obliquely set, almond-shaped with black rims; dark brown (blue or blue-flecked allowed in merles)",
+        "unit": "—",
+        "source_id": "S290",
+        "quote": "Medium size obliquely set, almond-shape with black rims.",
+        "confidence": "high",
+        "notes": "FCI (S290): 'Dark brown except in the case of merles, where one or both may be blue or blue flecked.'"
+      },
+      "nose": {
+        "value": "head a long, blunt wedge tapering from ear to nose; flat skull; well-rounded muzzle",
+        "unit": "—",
+        "source_id": "S290",
+        "quote": null,
+        "confidence": "high",
+        "notes": "FCI (S290), as returned in pieces: skull 'Flat, moderately wide between ears, with no prominence of occipital bone.'; the head 'a long, blunt wedge, tapering from ear to nose.' Not a short-faced breed."
+      },
+      "tail": {
+        "value": "set low, reaching at least the hock, abundant hair, slight upward sweep; never over the back, never kinked",
+        "unit": "—",
+        "source_id": "S290",
+        "quote": "Set low; tapering bone reaches to at least hock; with abundant hair and slight upward sweep.",
+        "confidence": "high",
+        "notes": "FCI (S290): 'may be slightly raised when moving but never over level of back.' 'Never kinked.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page key facts (S291; older address S292) and PDSA (S293); AKC (S294) for herding, mental exercise, socialisation, grooming and nails. The RKC page shows no 'Good with children' field (as returned 2026-10-14). Woodgreen / Dogs Trust breed pages not attempted.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S291",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "PDSA (S293): 'Size | Medium' — conflicting; RKC taken."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S291",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S291",
+        "quote": "Size of home: Small house",
+        "confidence": "high",
+        "notes": "Not apartment, not large_home (runbook: apartment only from 'Flat/ Apartment', large_home from 'Large house')."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S291",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S291",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "Basis of the daily brushing (7×, runbook dog-grooming rule) and frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S291",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "PDSA (S293): 'Coat length | Medium'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S291",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "AKC (S294): 'Shelties’ profuse, double coat sheds a lot throughout the year, with more pronounced shedding once to twice a year.' — agrees. Basis of the sheds tag."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S291",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "Not shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S291",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S291",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 2",
+        "unit": "—",
+        "source_id": "S292",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC breed page (older address S292; new address S291 the same): Breed Watch Category 2; the only line returned is that the breed 'can be affected by conformational concerns' (tool summary); no named point of concern → no welfare chip (Pomeranian / Boston Terrier precedent, open for David). The RKC does not register puppies from merle-to-merle matings (from 6 July 2010) because of impaired vision and hearing (S291, tool summary) — the game never shows a double merle."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page (S291) has no 'Good with children' field."
+      },
+      "pdsa_exercise": {
+        "value": "around an hour of exercise daily",
+        "unit": "—",
+        "source_id": "S293",
+        "quote": "Shelties need around an hour of exercise daily and will enjoy playing games.",
+        "confidence": "medium",
+        "notes": "PDSA key facts 'Minimum exercise (per day) | 1 hour'."
+      },
+      "pdsa_family": {
+        "value": "often fit well into family life",
+        "unit": "—",
+        "source_id": "S293",
+        "quote": "Shelties often fit well into family life and get along happily with children.",
+        "confidence": "medium",
+        "notes": "Basis of family_pet and children (explicit statement, no supervision caveat in the source)."
+      },
+      "pdsa_grooming": {
+        "value": "daily grooming",
+        "unit": "—",
+        "source_id": "S293",
+        "quote": "They need daily grooming to keep their thick coat in tip-top condition.",
+        "confidence": "medium",
+        "notes": "Agrees with RKC 'Grooming: Every day' (S291) → 7× a week."
+      },
+      "akc_grooming": {
+        "value": "weekly brushing; profuse double coat sheds a lot; no regular bathing; nails and foot-pad hair trimmed regularly",
+        "unit": "—",
+        "source_id": "S294",
+        "quote": "Weekly brushing is key to keeping a Shetland Sheepdog looking their best, keeping the coat clean and mat- free.",
+        "confidence": "medium",
+        "notes": "AKC (S294): 'Matting most commonly occurs behind the ears, under the elbow on each front leg, and in the “pants” under the tail.'; 'The breed doesn’t require regular bathing.' Weekly brushing = alternative 1 (the rule takes RKC 'Every day')."
+      },
+      "akc_nails": {
+        "value": "nails and the hair around the foot pads trimmed regularly",
+        "unit": "—",
+        "source_id": "S294",
+        "quote": "As with all dogs, you should trim Shelties’ nails and the hair around the foot pads should be trimmed regularly.",
+        "confidence": "medium",
+        "notes": "AKC (S294). Nail trimming = sourced need without a mechanic → ROADMAP M5-R19 (needs-david)."
+      },
+      "akc_children": {
+        "value": "can do well with kids; best with older children because of herding instincts",
+        "unit": "—",
+        "source_id": "S294",
+        "quote": "They can do well with kids, but would fare best in a home with older children due to their herding instincts.",
+        "confidence": "medium",
+        "notes": "Basis of may_herd_children (with behaviour.herding_children)."
+      },
+      "akc_mental_exercise": {
+        "value": "regular mental and physical exercise",
+        "unit": "—",
+        "source_id": "S294",
+        "quote": "Shelties are quite athletic, and require regular mental and physical exercise to keep them from acting out.",
+        "confidence": "medium",
+        "notes": "Basis of needs_mental_stimulation."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -24410,6 +25012,272 @@
         "confidence": "high",
         "notes": "KC (S282) colours: liver and white, black and white, either with tan markings — liver and white is the portrait default. The KC standard says the tail was 'Previously customarily docked.' → natural tail. Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — liver and white (default), black and white, either with tan markings; natural tail (KC: docking is past practice)"
+      }
+    },
+    "shetland_sheepdog": {
+      "_note": "Unattended run M5-R10-35 (2026-10-14): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: brushing every day (RKC S291 'Grooming: Every day', PDSA S293 'daily grooming' → 7×, M5-R13); socialisation at a young age (PDSA S293) → M5-R17. Sourced need without a game mechanic: nails trimmed regularly (AKC S294) → ROADMAP M5-R19 (needs-david). Senior 90 provisional (RKC lower bound — McMillan 2024 not reachable). Breed Watch Category 2 without a named point → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S291",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S291); PDSA 'around an hour of exercise daily' / key facts '1 hour' (S293) agrees. Rule: one number N ('up to N') → N = 60.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S293",
+            "notes": "PDSA (key facts minimum 1 hour)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S291 'Up to 1 hour per day'; PDSA S293 'around an hour')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S291",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) = 90 (S11 + RKC lower bound 'Over 10 years', S291). No McMillan 2024 / VetCompass value reachable. Alternatives: 121 (McMillan 13.4 y via Wikipedia S295, tier C — not used alone), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S291"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 121,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S291)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.8,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 6 (S35; S34 the same), tier Brightest (ranks 1–10) → max(1.8, round(2.0 − 5/30, 1)) = max(1.8, 1.8) = 1.8 (= Labrador, rank 7). AKC 'star students' (S294) — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.8 (Coren rank 6, Brightest tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S291",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "shetland_sheepdog.suitability.rkc_grooming. RKC (S291) 'Every day' → 7 (runbook dog-grooming rule, Yorkshire Terrier / Shih Tzu precedent); PDSA (S293) 'They need daily grooming to keep their thick coat in tip-top condition.' agrees. AKC (S294) 'Weekly brushing' = alternative 1. Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S294",
+            "notes": "AKC weekly brushing"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 7× na teden (RKC »Every day«, PDSA »daily grooming«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S293",
+        "quote": "Training, along with socialisation, is very important at a young age",
+        "confidence": "medium",
+        "notes": "shetland_sheepdog.behaviour.socialisation (PDSA S293); AKC (S294) agrees. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S293)"
+      },
+      "nail_trimming": {
+        "value": "nails and foot-pad hair trimmed regularly (no frequency given)",
+        "unit": "nail trimming (sourced need)",
+        "source_id": "S294",
+        "quote": "As with all dogs, you should trim Shelties’ nails and the hair around the foot pads should be trimmed regularly.",
+        "confidence": "medium",
+        "notes": "AKC (S294), shetland_sheepdog.suitability.akc_nails. The game has no nail-trimming mechanic → ROADMAP M5-R19 (Boston Terrier / English Springer Spaniel precedent, needs-david); the source gives no frequency.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno striženje krempljev; mehanike ni → ROADMAP M5-R19 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-35); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S293"
+            ],
+            "refs": [
+              "shetland_sheepdog.suitability.pdsa_family",
+              "shetland_sheepdog.behaviour.family"
+            ],
+            "quote": "S293 'Shelties often fit well into family life'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S293"
+            ],
+            "refs": [
+              "shetland_sheepdog.suitability.pdsa_family"
+            ],
+            "quote": "S293 'get along happily with children.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S294"
+            ],
+            "refs": [
+              "shetland_sheepdog.behaviour.mental_stimulation",
+              "shetland_sheepdog.suitability.akc_mental_exercise"
+            ],
+            "quote": "S294 'require regular mental and physical exercise to keep them from acting out.'"
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S294"
+            ],
+            "refs": [
+              "shetland_sheepdog.behaviour.herding_children",
+              "shetland_sheepdog.suitability.akc_children"
+            ],
+            "quote": "S294 'would fare best in a home with older children due to their herding instincts.'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S291",
+              "S293"
+            ],
+            "refs": [
+              "shetland_sheepdog.suitability.rkc_grooming",
+              "shetland_sheepdog.suitability.pdsa_grooming"
+            ],
+            "quote": "S291 'Grooming: Every day'; S293 'They need daily grooming'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S291"
+            ],
+            "refs": [
+              "shetland_sheepdog.suitability.rkc_shedding"
+            ],
+            "quote": "S291 'Sheds: Yes'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No rating for small children; AKC (S294) prefers older children.",
+          "older_children": "PDSA (S293) 'get along happily with children' — the AKC preference for older children is shown as may_herd_children (open for David).",
+          "other_pets": "No explicit statement (AKC S294 only 'other familiar animals', tool summary).",
+          "chases_small_pets": "AKC (S294) 'will chase just about anything from squirrels to cars' — no named high prey drive (runbook rule; open for David).",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No source.",
+          "apartment": "RKC 'Small house' (S291) — not 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S291).",
+          "active_family": "RKC 'Up to 1 hour per day' (S291) — moderate exercise.",
+          "long_daily_exercise": "RKC 'Up to 1 hour per day' (S291).",
+          "needs_company": "No time-alone statement.",
+          "often_alone": "No source.",
+          "older_owners": "No source.",
+          "low_shedding": "RKC 'Sheds: Yes' (S291).",
+          "food_motivated_weight": "No source.",
+          "chews_when_bored": "No source.",
+          "secure_fencing": "No source.",
+          "shorter_lifespan": "RKC 'Over 10 years' (S291).",
+          "barking": "AKC 'very vocal' (S294) — no vocabulary key; register text only.",
+          "welfare": "RKC Breed Watch Category 2 with no named point (S292) → no welfare chip (open for David)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children; consider needs_mental_stimulation, may_herd_children, frequent_grooming, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a flat-faced breed)",
+        "unit": "—",
+        "source_id": "S292",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 2 without a named point (S292); no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health, never shows a double merle, never as a quiet dog (AKC 'very vocal').",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a flat-faced breed; Breed Watch Category 2 without a named point — open for David)"
+      },
+      "ai_appearance": {
+        "value": "adult Shetland Sheepdog, sable and white (default); double coat with long, harsh, straight outer coat, abundant mane and frill; small semi-erect ears with tips falling forward; medium almond dark brown eyes; head a long blunt wedge; natural low-set tail with abundant hair; small, lithe and graceful; never brindle, never white patches on the body, never a mostly white double merle",
+        "unit": "—",
+        "source_id": "S290",
+        "quote": "Any other colour or combination of colours unacceptable.",
+        "confidence": "high",
+        "notes": "FCI (S290) colours: sable, tricolour, blue merle, black and white, black and tan — sable (with the standard's white collar, frill, legs and tail tip) is the portrait default. Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — sable (default), tricolour, blue merle, black and white, black and tan; never brindle, never white body patches"
       }
     }
   }

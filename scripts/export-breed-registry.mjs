@@ -405,6 +405,7 @@ const SPECIES = [
       { id: 'miniature_american_shepherd', synonyms: { en: ['Mini American', 'MAS', 'Miniature Australian Shepherd', 'Mini Aussie'], sl: ['mali ameriski ovcar', 'mini aussie'] } },
       { id: 'chihuahua', synonyms: { en: ['Chi', 'Chihuahueño', 'Smooth Coat Chihuahua'], sl: ['civava', 'chihuahua', 'čihuahua'] } },
       { id: 'english_springer_spaniel', synonyms: { en: ['Springer Spaniel', 'Springer', 'ESS'], sl: ['springer španjel', 'angleski springer spanjel', 'springer'] } },
+      { id: 'shetland_sheepdog', synonyms: { en: ['Sheltie', 'Shetland Collie'], sl: ['sheltie', 'šeltie', 'setlandski ovcar'] } },
     ],
   },
   {
@@ -1057,6 +1058,28 @@ const DOG_FACTS = {
       ['ear_infections_long_ears', 'health.ear_infections'],
     ],
   },
+  // M5-R10-35. Not exported: height.pdsa / height.akc (the FCI ideal heights are shown), adult_weight.pdsa
+  // (one average, inside the AKC range shown), adult_weight.salt_category (our assignment),
+  // lifespan.mcmillan_2024 (null — the Wikipedia figure is tier C), lifespan.senior_from (derived),
+  // suitability.akc_grooming (free text; the RKC "Every day" is shown), suitability.rkc_breed_watch
+  // (Category 2 without a named point), behaviour.barking (no category). Lifespan = the RKC band
+  // "Over 10 years" (S291). Own health key: collie_eye_pra (CEA and PRA together).
+  shetland_sheepdog: {
+    height: ['height.fci'],
+    weight: [['adult_weight.akc', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['collie_eye_pra', 'health.eye_conditions'],
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+      ['drug_sensitivity_mdr1', 'health.mdr1'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1306,6 +1329,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.english_springer_spaniel.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.english_springer_spaniel.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.english_springer_spaniel.exercise_minutes_senior',
+  },
+  shetland_sheepdog: {
+    adult_minutes: ['proposed_game_parameters.shetland_sheepdog.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.shetland_sheepdog.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.shetland_sheepdog.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.shetland_sheepdog.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.shetland_sheepdog.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.shetland_sheepdog.exercise_minutes_senior',
   },
 };
 

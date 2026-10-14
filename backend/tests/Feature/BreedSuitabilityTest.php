@@ -748,3 +748,21 @@ it('gives the English Springer Spaniel active_family / family_pet / children / o
         ->and(bsEntry('english_springer_spaniel.suitability.rkc_grooming')['quote'])->toBe('Grooming: More than once a week')
         ->and(bsEntry('english_springer_spaniel.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Small house');
 });
+
+it('gives the Shetland Sheepdog family_pet / children and the mental-exercise, herding, grooming and shedding chips — no welfare chip (runbook 2026-10-14)', function () {
+    $sheltie = app(BreedSuitability::class)->for(BreedType::ShetlandSheepdog);
+    expect($sheltie['suits'])->toBe(['family_pet', 'children'])
+        // PDSA names children in general, AKC prefers older children (herding) → may_herd_children, never small_children.
+        ->and($sheltie['suits'])->not->toContain('small_children')->not->toContain('apartment')->not->toContain('large_home')
+        // No explicit other-pets statement; RKC "Up to 1 hour per day" → no active_family.
+        ->and($sheltie['suits'])->not->toContain('other_pets')->not->toContain('active_family')->not->toContain('often_alone')
+        ->and($sheltie['consider'])->toBe(['needs_mental_stimulation', 'may_herd_children', 'frequent_grooming', 'sheds'])
+        // Breed Watch Category 2 without a named point → no welfare chip; AKC "will chase" is no named prey drive; RKC "Over 10 years".
+        ->and($sheltie['consider'])->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
+        ->not->toContain('chases_small_pets')->not->toContain('shorter_lifespan')->not->toContain('long_daily_exercise')->not->toContain('older_children');
+
+    expect(bsEntry('shetland_sheepdog.suitability.pdsa_family')['quote'])->toBe('Shelties often fit well into family life and get along happily with children.')
+        ->and(bsEntry('shetland_sheepdog.behaviour.herding_children')['quote'])->toContain('due to their herding instincts')
+        ->and(bsEntry('shetland_sheepdog.suitability.rkc_grooming')['quote'])->toBe('Grooming: Every day')
+        ->and(bsEntry('shetland_sheepdog.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Small house');
+});

@@ -272,6 +272,7 @@ describe('PetPickerStep', () => {
       'breed-option-miniature_american_shepherd',
       'breed-option-chihuahua',
       'breed-option-english_springer_spaniel',
+      'breed-option-shetland_sheepdog',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -767,6 +768,57 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/\d|%/);
       expect(consider).not.toHaveTextContent(/\d|%/);
       expect(screen.getByTestId('breed-option-miniature_american_shepherd')).toHaveTextContent(/Miniature American Shepherd/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-35: the Shetland Sheepdog (fallback) shows its chips, is found as "šetlandski ovčar" and "sheltie", and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const shs = screen.getByTestId('breed-option-shetland_sheepdog');
+    expect(shs).toHaveTextContent(/Šetlandski ovčar/);
+    expect(shs).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-shetland_sheepdog-suits');
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    const consider = screen.getByTestId('breed-suitability-shetland_sheepdog-consider');
+    expect(consider).toHaveTextContent(/potrebuje miselne izzive/);
+    expect(consider).toHaveTextContent(/pri igri lahko »pase« otroke/);
+    expect(consider).toHaveTextContent(/potrebuje česanje večkrat na teden/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'šetlandski ovčar');
+    expect(screen.getByTestId('breed-option-shetland_sheepdog')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'sheltie');
+    expect(screen.getByTestId('breed-option-shetland_sheepdog')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-shetland_sheepdog'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'shetland_sheepdog', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'shetland_sheepdog' }),
+    );
+  });
+
+  it('M5-R10-35: the Shetland Sheepdog chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-shetland_sheepdog-suits');
+      const consider = screen.getByTestId('breed-suitability-shetland_sheepdog-consider');
+      expect(suits).toHaveTextContent(/family life/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(consider).toHaveTextContent(/needs mental challenges/);
+      expect(consider).toHaveTextContent(/may “herd” children at play/);
+      expect(consider).toHaveTextContent(/needs brushing several times a week/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-shetland_sheepdog')).toHaveTextContent(/Shetland Sheepdog/);
     } finally {
       await i18n.changeLanguage('sl');
     }
