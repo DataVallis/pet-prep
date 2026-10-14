@@ -147,6 +147,7 @@ describe('readBreedCatalogue', () => {
       'chihuahua',
       'english_springer_spaniel',
       'shetland_sheepdog',
+      'brittany',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -400,6 +401,14 @@ describe('readBreedCatalogue', () => {
       suits: ['family_pet', 'children'],
       consider: ['needs_mental_stimulation', 'may_herd_children', 'frequent_grooming', 'sheds'],
     });
+    const br = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'brittany');
+    expect(br).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 320 }));
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-36, runbook rules; no new tag).
+    expect(br?.search_keywords).toEqual(['brittany', 'bretonski ptičar', 'bretonski pticar', 'epagneul breton', 'bretonski španjel', 'brittany spaniel']);
+    expect(br?.suitability).toEqual({
+      suits: ['active_family', 'family_pet', 'children'],
+      consider: ['long_daily_exercise', 'needs_mental_stimulation', 'needs_company', 'sheds', 'chases_small_pets'],
+    });
     const corgi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pembroke_welsh_corgi');
     expect(corgi).toEqual(
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 200 }),
@@ -445,6 +454,7 @@ describe('readBreedCatalogue', () => {
       'chihuahua',
       'english_springer_spaniel',
       'shetland_sheepdog',
+      'brittany',
     ]);
   });
 });
@@ -622,6 +632,14 @@ describe('breed search', () => {
     expect(find('mini aussie')).toEqual(['miniature_american_shepherd']);
   });
 
+  it('M5-R10-36: finds the Brittany by its EN / SL names, with and without the carons, and as "epagneul breton"', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('brittany')).toEqual(['brittany']);
+    expect(find('Bretonski ptičar')).toEqual(['brittany']);
+    expect(find('bretonski pticar')).toEqual(['brittany']);
+    expect(find('epagneul breton')).toEqual(['brittany']);
+  });
+
   it('M5-R10-35: finds the Shetland Sheepdog by its EN / SL names, with and without the carons, and as "sheltie"', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('shetland sheepdog')).toEqual(['shetland_sheepdog']);
@@ -700,7 +718,8 @@ describe('breed search', () => {
   it('M5-R10-21: finds the German Shorthaired Pointer by its SL / EN names, never the German Shepherd for "ptičar"', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('nemški kratkodlaki ptičar')).toEqual(['german_shorthaired_pointer']);
-    expect(find('pticar')).toEqual(['german_shorthaired_pointer']);
+    // M5-R10-36: the Brittany (»bretonski ptičar«) is a pointer too — never the German Shepherd.
+    expect(find('pticar')).toEqual(['german_shorthaired_pointer', 'brittany']);
     expect(find('kurzhaar')).toEqual(['german_shorthaired_pointer']);
     expect(find('pointer')).toEqual(['german_shorthaired_pointer']);
     expect(find('gsp')).toEqual(['german_shorthaired_pointer']);
