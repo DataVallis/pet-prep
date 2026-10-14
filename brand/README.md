@@ -27,7 +27,7 @@ live reference implementation: https://petprep.si (repo `DataVallis/pet-prep-web
 | `app-icon/android-icon-background.png` | Adaptive background, solid mint `#7FE0B4` | `android.adaptiveIcon.backgroundImage` (+ `backgroundColor: "#7FE0B4"`) |
 | `app-icon/android-icon-monochrome.png` | Themed-icon / notification silhouette (eyes cut out) | `android.adaptiveIcon.monochromeImage`, `expo-notifications` `icon` |
 | `app-icon/splash-icon.png` | Face on transparent | `expo-splash-screen` image on `#121614` (dark) or `#F3F5F2` (light) |
-| `MASCOT.md` + `mascot/` | Curio ("Radovednež"), the 3D mascot for promo videos: role, character DNA, prompting rules, reference images, cutout, social profile pictures | TikTok / Reels / any video with the character |
+| `MASCOT.md` + `mascot/` (incl. `mascot/STORIES.md` story bank) | Curio ("Radovednež"), the 3D mascot for promo videos: role, character DNA, prompting rules, reference images, cutout, social profile pictures | TikTok / Reels / any video with the character |
 | `fonts/*.woff2` | Bricolage Grotesque 700/800, Instrument Sans 400–700 (latin + latin-ext) | web only — React Native needs TTF: use `@expo-google-fonts/bricolage-grotesque` and `@expo-google-fonts/instrument-sans` (OFL) |
 
 Mobile: copy the `app-icon/*.png` files over `mobile/assets/` (same file names already referenced in `app.json`),
