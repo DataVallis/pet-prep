@@ -2,9 +2,10 @@
 # PetPrep production deployment script.
 #
 # Usage:
-#   deploy-production.sh --from /opt/petprep/incoming <COMMIT_SHA>   # CI (GitHub Actions)
+#   deploy-production.sh --from /opt/petprep/incoming [--expect-domain HOST] <COMMIT_SHA>   # CI
 #   deploy-production.sh <COMMIT_SHA>                                # manual, git checkout in repo/
 #   deploy-production.sh                                             # manual, re-deploy tree in place
+#   --expect-domain HOST: refuse (before any change) unless this server's API domain is HOST.
 #
 # RUNTIME (M4-05b, DEPLOYMENT.md D14)
 #   The PHP containers (app = php-fpm, reverb, queue, queue-broadcasts, scheduler)
@@ -22,7 +23,8 @@
 #
 # STEPS
 #   1. Env preflight (QUEUE_CONNECTION=redis, BROADCAST_CONNECTION=reverb, REDIS_QUEUE
-#      unset|default). Runs before ANY git/docker command; prints only these keys.
+#      unset|default) and the server identity (SERVER below). Runs before ANY git/docker
+#      command; prints only these keys and the public API domain.
 #   2. Record the previous release: PREV_SHA (repo/.deployed-sha, or git HEAD in git
 #      mode) and, for --from deploys, a copy of the current tree in
 #      /opt/petprep/releases/previous.
@@ -62,6 +64,21 @@
 #   does not exist while an app container runs, the project name is wrong → abort.
 #   After `up -d` (old containers gone) the chown runs once more (warn-only) for files
 #   an old root process may have created in between.
+#
+# SERVER (D18, 2026-10-14)
+#   The server's identity comes from /opt/petprep/.env, not from this script (production =
+#   api.petprep.si; a second API-only server such as the postponed dev server works with
+#   the same script and Caddyfile):
+#     PETPREP_API_DOMAIN   default = host of APP_URL (fallback api.petprep.si)
+#     PETPREP_CADDY_SITES  default = `production` when the domain is api.petprep.si,
+#                          else `api-only` (no petprep.si / www / raw-IP sites, no
+#                          certificates for them). Anything else → preflight error.
+#   Both are exported (compose passes them into caddy's environment, the Caddyfile
+#   uses them) and appended to repo/backend/.env when missing there, so a manual
+#   `docker compose -f repo/backend/compose.production.yaml up -d caddy` gets the same
+#   values. Health check: https://<PETPREP_API_DOMAIN>/up (DEPLOY_HEALTH_HOST
+#   overrides); the plain-HTTP raw-IP fallback exists only with `production`
+#   (DEPLOY_HEALTH_IP_HOST overrides, empty = no fallback).
 #
 # CADDY
 #   caddy bind-mounts the single file deployment/Caddyfile. A sync/checkout replaces a
@@ -131,8 +148,10 @@ CADDYFILE="${REPO_DIR}/deployment/Caddyfile"
 CADDY_RUNNING_COPY="${PETPREP_ROOT}/releases/Caddyfile.running"
 RETRY_SLEEP="${DEPLOY_RETRY_SLEEP:-3}"
 APP_WAIT_TRIES="${DEPLOY_APP_WAIT_TRIES:-40}"
-HEALTH_HOST="${DEPLOY_HEALTH_HOST:-api.petprep.si}"
-HEALTH_IP_HOST="${DEPLOY_HEALTH_IP_HOST:-138.199.172.97}"
+PROD_API_DOMAIN="api.petprep.si"
+PROD_IP_HOST="138.199.172.97"
+HEALTH_HOST=""          # set by the env preflight (SERVER above)
+HEALTH_IP_HOST=""
 APP_SERVICES=(app reverb queue queue-broadcasts scheduler caddy)
 WORKER_SERVICES=(reverb queue queue-broadcasts scheduler)
 IMAGES=(petprep-app petprep-web)
@@ -164,9 +183,10 @@ RSYNC_EXCLUDES=(
     --exclude=/mobile/node_modules
 )
 
-usage() { sed -n '4,7p' "$0" | sed 's/^# \{0,1\}//'; }
+usage() { sed -n '4,8p' "$0" | sed 's/^# \{0,1\}//'; }
 
 SOURCE_DIR=""
+EXPECT_DOMAIN=""
 while [ $# -gt 0 ]; do
     case "$1" in
         --from)
@@ -174,6 +194,11 @@ while [ $# -gt 0 ]; do
             [ -n "$SOURCE_DIR" ] || { echo "ERROR: --from needs a directory" >&2; exit 2; }
             shift 2 ;;
         --from=*) SOURCE_DIR="${1#--from=}"; shift ;;
+        --expect-domain)
+            EXPECT_DOMAIN="${2:-}"
+            [ -n "$EXPECT_DOMAIN" ] || { echo "ERROR: --expect-domain needs a host name" >&2; exit 2; }
+            shift 2 ;;
+        --expect-domain=*) EXPECT_DOMAIN="${1#--expect-domain=}"; shift ;;
         -h|--help) usage; exit 0 ;;
         --) shift; break ;;
         -*) echo "ERROR: unknown option $1" >&2; usage >&2; exit 2 ;;
@@ -306,12 +331,13 @@ wait_for_app() {
     return 1
 }
 
-# End-to-end through Caddy: real TLS name first, then the plain-HTTP IP site.
+# End-to-end through Caddy: real TLS name first, then the plain-HTTP IP site — only
+# where that site exists (`production` site set).
 health_status() {
     local s
     s=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 \
         --resolve "${HEALTH_HOST}:443:127.0.0.1" "https://${HEALTH_HOST}/up" || true)
-    if [ "$s" != "200" ]; then
+    if [ "$s" != "200" ] && [ -n "$HEALTH_IP_HOST" ]; then
         s=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 \
             -H "Host: ${HEALTH_IP_HOST}" "http://127.0.0.1/up" || true)
     fi
@@ -424,7 +450,40 @@ for pair in "AI_REFERENCE_IMAGE_PROFILE=nano_banana_pro" "AI_STATE_VIDEO_PROFILE
         echo "WARNING: ${key}='${have}' in ${ENV_FILE} overrides the production default '${want}' — remove the line unless intended." >&2
     fi
 done
-log "Env preflight OK."
+# Server identity (SERVER above): API domain + Caddy site set.
+app_url=$(env_value APP_URL)
+app_host="${app_url#*://}"; app_host="${app_host%%/*}"; app_host="${app_host%%:*}"
+PETPREP_API_DOMAIN=$(env_value PETPREP_API_DOMAIN)
+PETPREP_API_DOMAIN="${PETPREP_API_DOMAIN:-${app_host:-$PROD_API_DOMAIN}}"
+if ! [[ "$PETPREP_API_DOMAIN" =~ ^[a-z0-9]([a-z0-9.-]*[a-z0-9])?$ ]]; then
+    echo "ERROR: API domain '${PETPREP_API_DOMAIN}' (PETPREP_API_DOMAIN or the APP_URL host in ${ENV_FILE}) is not a plain lower-case host name." >&2
+    exit 1
+fi
+PETPREP_CADDY_SITES=$(env_value PETPREP_CADDY_SITES)
+if [ -z "$PETPREP_CADDY_SITES" ]; then
+    if [ "$PETPREP_API_DOMAIN" = "$PROD_API_DOMAIN" ]; then PETPREP_CADDY_SITES=production; else PETPREP_CADDY_SITES=api-only; fi
+fi
+case "$PETPREP_CADDY_SITES" in
+    production|api-only) ;;
+    *) echo "ERROR: PETPREP_CADDY_SITES must be 'production' or 'api-only' in ${ENV_FILE} (found '${PETPREP_CADDY_SITES}')." >&2; exit 1 ;;
+esac
+# CI names the server it means (production job → api.petprep.si): a wrong host secret
+# stops here, unchanged.
+if [ -n "$EXPECT_DOMAIN" ] && [ "$EXPECT_DOMAIN" != "$PETPREP_API_DOMAIN" ]; then
+    echo "ERROR: this server's API domain is '${PETPREP_API_DOMAIN}' (${ENV_FILE}), but the deploy expects '${EXPECT_DOMAIN}' — wrong server? Nothing was changed." >&2
+    exit 1
+fi
+if [ -n "$app_host" ] && [ "$app_host" != "$PETPREP_API_DOMAIN" ]; then
+    echo "WARNING: APP_URL host '${app_host}' differs from PETPREP_API_DOMAIN '${PETPREP_API_DOMAIN}' — signed media URLs and fal.ai webhooks use APP_URL." >&2
+fi
+export PETPREP_API_DOMAIN PETPREP_CADDY_SITES
+HEALTH_HOST="${DEPLOY_HEALTH_HOST:-$PETPREP_API_DOMAIN}"
+if [ "$PETPREP_CADDY_SITES" = production ]; then
+    HEALTH_IP_HOST="${DEPLOY_HEALTH_IP_HOST-$PROD_IP_HOST}"
+else
+    HEALTH_IP_HOST="${DEPLOY_HEALTH_IP_HOST:-}"
+fi
+log "Env preflight OK (API domain ${PETPREP_API_DOMAIN}, Caddy sites ${PETPREP_CADDY_SITES})."
 
 # ---- 2. Record the previous release ----------------------------------------------
 cd "$REPO_DIR"
@@ -551,6 +610,12 @@ log "Deploying commit: ${DEPLOYED_SHA}"
 rm -f "${REPO_DIR}/backend/.env"
 cp "$ENV_FILE" "${REPO_DIR}/backend/.env"
 chmod 600 "${REPO_DIR}/backend/.env"
+# Derived server identity for compose interpolation in manual runs (SERVER above).
+for key in PETPREP_API_DOMAIN PETPREP_CADDY_SITES; do
+    if ! grep -qE "^${key}=" "${REPO_DIR}/backend/.env"; then
+        printf '\n%s=%s\n' "$key" "${!key}" >> "${REPO_DIR}/backend/.env"
+    fi
+done
 log "Installed production .env into ${REPO_DIR}/backend/.env"
 
 log "Promoting images: :next -> :production (old :production kept as :previous)..."

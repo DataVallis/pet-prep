@@ -12,7 +12,8 @@
 #
 # Variables interpolated here come from backend/.env (copy of /opt/petprep/.env
 # written by the deploy script) or the shell: PETPREP_IMAGE_TAG (default
-# production), PET_MEDIA_SERVE_VIA (default caddy), PUSH_ENABLED (default true), DB_*.
+# production), PET_MEDIA_SERVE_VIA (default caddy), PUSH_ENABLED (default true), DB_*,
+# PETPREP_API_DOMAIN / PETPREP_CADDY_SITES (caddy, D18 — production defaults).
 
 x-php: &php
   image: petprep-app:${PETPREP_IMAGE_TAG:-production}
@@ -47,6 +48,13 @@ services:
       - "443:443"
     env_file:
       - /opt/petprep/.env
+    environment:
+      # Server identity (D18): the Caddyfile serves {$PETPREP_API_DOMAIN} and imports the
+      # site set {$PETPREP_CADDY_SITES} (production = + petprep.si / www / raw IP;
+      # api-only = dev server). deploy-production.sh derives both from APP_URL and
+      # exports them; the defaults are production's.
+      PETPREP_API_DOMAIN: ${PETPREP_API_DOMAIN:-api.petprep.si}
+      PETPREP_CADDY_SITES: ${PETPREP_CADDY_SITES:-production}
     volumes:
       - ../deployment/Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data

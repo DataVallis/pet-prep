@@ -1,18 +1,18 @@
 name: CI & Deploy
 
-# Pipeline (2026-10-06, DEPLOYMENT.md D16):
+# Pipeline (2026-10-06, DEPLOYMENT.md D16; manual production deploys D18, 2026-10-14):
 #   plan ─┬─ backend-tests ───────┐
 #         ├─ mobile-checks ───────┤
-#         ├─ deploy-script-tests ─┼─ ci-ok (the one required status) ─ deploy (main only)
+#         ├─ deploy-script-tests ─┼─ ci-ok (the one required status) ─ deploy (Run workflow, target production)
 #         └─ production-image ────┘
 # `plan` (scripts/ci-plan.sh) runs only the suites whose paths changed and, on a push to
 # main, skips a suite that already passed in a successful PR run on the identical git
 # tree (marker artifacts "ci-green-<suite>-<tree>", uploaded below on pull_request).
 # `ci-ok` fails unless every suite either passed or was skipped because plan said so.
-# `deploy` runs only when plan and ci-ok succeeded (explicit result checks — see the job)
-# and only when backend/, deployment/, scripts/ or this file changed since the last main
-# run that really deployed, or on "Run workflow";
-# its first step refuses a commit that is no longer the head of main.
+# A push / merge to main runs CI only and deploys NOTHING (David 2026-10-14). Production is
+# deployed only by "Run workflow" on main with target = production (scripts/ci-deploy-target.sh),
+# which tests everything; the deploy job runs only when plan and ci-ok succeeded (explicit
+# result checks — see the job) and its first step refuses a re-run of an older commit.
 
 on:
   push:
@@ -20,6 +20,14 @@ on:
       - main
   pull_request:
   workflow_dispatch:
+    inputs:
+      target:
+        description: "none = full test run only; production = test everything on main, then deploy to api.petprep.si"
+        type: choice
+        options:
+          - none
+          - production
+        default: none
 
 concurrency:
   group: ci-${{ github.ref }}
@@ -41,6 +49,7 @@ jobs:
       scripts: ${{ steps.plan.outputs.scripts }}
       image: ${{ steps.plan.outputs.image }}
       deploy: ${{ steps.plan.outputs.deploy }}
+      target: ${{ steps.target.outputs.target }}
     steps:
       - name: Checkout Code (full history, no blobs)
         uses: actions/checkout@v4
@@ -48,6 +57,17 @@ jobs:
           fetch-depth: 0
           filter: blob:none
 
+      # production | none (D18): only "Run workflow" with target production deploys.
+      - name: Deploy target
+        id: target
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          GIT_REF: ${{ github.ref }}
+          INPUT_TARGET: ${{ inputs.target }}
+        run: bash scripts/ci-deploy-target.sh
+
+      # Push runs diff against the last production deploy (which can be several merges
+      # back now): only test selection depends on it — fail closed, markers still skip.
       - name: Plan
         id: plan
         env:
@@ -198,14 +218,15 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Shellcheck
-        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh scripts/restore-production-db.sh scripts/backup-production-db.sh scripts/tests/backup-production-db.test.sh scripts/backup-offsite.sh scripts/tests/backup-offsite.test.sh
+        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh scripts/restore-production-db.sh scripts/backup-production-db.sh scripts/tests/backup-production-db.test.sh scripts/backup-offsite.sh scripts/tests/backup-offsite.test.sh scripts/ci-deploy-target.sh scripts/ci-remote-deploy.sh scripts/mobile-ota-plan.sh scripts/mobile-ota.sh
 
       # Stubbed docker/git/curl in a temp dir; needs only bash, git and rsync.
       - name: Harness (deploy-production.sh)
         run: bash scripts/tests/deploy-production.test.sh
 
-      # Stubbed gh over JSON fixtures, real git + jq; also the deploy guard (bare origin).
-      - name: Harness (ci-plan.sh + ci-deploy-guard.sh)
+      # Stubbed gh over JSON fixtures, real git + jq; also the deploy guard (bare origin),
+      # the dev / production target (D18), the mobile OTA channel plan and the remote deploy step.
+      - name: Harness (ci-plan.sh + ci-deploy-guard.sh + D18 routing)
         run: bash scripts/tests/ci-plan.test.sh
 
       # Stubbed docker + backup script (D17 production reset wrapper).
@@ -287,10 +308,28 @@ jobs:
           tags: petprep-web:ci
           cache-from: type=gha,scope=petprep-production
 
-      - name: Validate the Caddyfile with the production Caddy image
+      # D18: one Caddyfile for both servers. Production = the defaults (no env), exactly as
+      # compose passes them on api.petprep.si; a second API-only server (dev server, postponed)
+      # = api-dev.petprep.si + site set api-only,
+      # which must not serve (or request certificates for) petprep.si / www / the raw IP.
+      - name: Validate the Caddyfile with the production Caddy image (production + dev)
         run: |
-          docker run --rm -v "$PWD/deployment/Caddyfile:/etc/caddy/Caddyfile:ro" petprep-web:ci \
+          set -eu
+          cf="$PWD/deployment/Caddyfile"
+          docker run --rm -v "$cf:/etc/caddy/Caddyfile:ro" petprep-web:ci \
             caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile
+          docker run --rm -v "$cf:/etc/caddy/Caddyfile:ro" petprep-web:ci \
+            caddy adapt --config /etc/caddy/Caddyfile --adapter caddyfile > prod.json
+          docker run --rm -e PETPREP_API_DOMAIN=api-dev.petprep.si -e PETPREP_CADDY_SITES=api-only \
+            -v "$cf:/etc/caddy/Caddyfile:ro" petprep-web:ci \
+            caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile
+          docker run --rm -e PETPREP_API_DOMAIN=api-dev.petprep.si -e PETPREP_CADDY_SITES=api-only \
+            -v "$cf:/etc/caddy/Caddyfile:ro" petprep-web:ci \
+            caddy adapt --config /etc/caddy/Caddyfile --adapter caddyfile > dev.json
+          hosts() { jq -c '[.apps.http.servers[].routes[].match[]?.host[]?] | sort' "$1"; }
+          echo "production hosts: $(hosts prod.json)"; echo "dev hosts: $(hosts dev.json)"
+          test "$(hosts prod.json)" = '["138.199.172.97","api.petprep.si","petprep.si","www.petprep.si"]'
+          test "$(hosts dev.json)" = '["api-dev.petprep.si"]'
 
       - name: Smoke test the app image
         run: |
@@ -361,22 +400,22 @@ jobs:
           verdict production-image "$PLAN_IMAGE" "$IMAGE_RESULT"
           [ "$ok" = 1 ]
 
+  # D18 (David 2026-10-14): manual production deploys. Only "Run workflow" on main with
+  # input target = production deploys (scripts/ci-deploy-target.sh); a push / merge to main
+  # runs CI only. EXPLICIT status checks, NOT the implicit success(): GitHub's job-level
+  # success() looks at every upstream job transitively, so suites that plan skipped (behind
+  # ci-ok) skipped the deploy even with ci-ok green (run 37467604915, 2026-10-06).
+  # !cancelled() lets it be evaluated; it runs only when plan AND ci-ok themselves
+  # succeeded — ci-ok is red whenever a suite failed, was cancelled or was skipped against
+  # the plan.
   deploy:
+    # The job name marks a deployed main run for scripts/ci-plan.sh — keep it.
     name: Deploy to Hetzner Production
     needs: [plan, ci-ok]
-    # Explicit status checks, NOT the implicit success(): GitHub's job-level success()
-    # looks at every upstream job transitively, so suites that plan skipped (behind ci-ok)
-    # skipped this job even with ci-ok green (run 37467604915, 2026-10-06). !cancelled()
-    # lets it be evaluated; it runs only when plan AND ci-ok themselves succeeded — ci-ok
-    # is red whenever a suite failed, was cancelled or was skipped against the plan.
-    # Pre-production phase (David, 2026-10-03): every push/merge to main that changes
-    # backend/, deployment/, scripts/ or this workflow deploys automatically once ci-ok is
-    # green; "Run workflow" on main always tests everything and deploys. To require manual
-    # deploys again, restrict this to workflow_dispatch — see docs/engineering/DEPLOYMENT.md D2.
     if: >-
       !cancelled() && needs.plan.result == 'success' && needs.ci-ok.result == 'success' &&
-      needs.plan.outputs.deploy == 'true' && github.ref == 'refs/heads/main' &&
-      (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+      needs.plan.outputs.deploy == 'true' && needs.plan.outputs.target == 'production' &&
+      github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch'
     concurrency:
       group: production
       cancel-in-progress: false
@@ -390,8 +429,8 @@ jobs:
         uses: actions/checkout@v4
 
       # Refuses (red, not skipped) when this run's commit is no longer the head of main —
-      # push runs and every re-run; "Run workflow" (attempt 1) is not checked. Rollback =
-      # revert commit or "Run workflow" on main (DEPLOYMENT.md D16).
+      # every re-run; "Run workflow" (attempt 1) is not checked. Rollback = revert commit
+      # on main, then "Run workflow" → target production (DEPLOYMENT.md D16).
       - name: Deploy guard (commit is still the head of main)
         env:
           EVENT_NAME: ${{ github.event_name }}
@@ -399,41 +438,13 @@ jobs:
           COMMIT_SHA: ${{ github.sha }}
         run: bash scripts/ci-deploy-guard.sh
 
-      - name: Setup SSH Key & Deploy
+      - name: Upload + deploy-production.sh on the production server
         env:
+          TARGET: production
+          KEY_SECRET: PRODUCTION_SSH_PRIVATE_KEY
           SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
           SSH_HOST: ${{ secrets.PRODUCTION_HOST || '138.199.172.97' }}
           SSH_USER: ${{ secrets.PRODUCTION_USER || 'deploy' }}
+          EXPECT_DOMAIN: api.petprep.si
           COMMIT_SHA: ${{ github.sha }}
-        run: |
-          if [ -z "$SSH_PRIVATE_KEY" ]; then
-            echo "ERROR: PRODUCTION_SSH_PRIVATE_KEY secret is not set in GitHub repository settings."
-            exit 1
-          fi
-
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
-
-          # Add remote host key to known_hosts safely
-          ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
-
-          # Upload to a staging dir, NOT into /opt/petprep/repo: the containers bind-mount
-          # repo/, so writing there would switch the running app to the new code before
-          # maintenance mode and migrations. deploy-production.sh syncs incoming/ → repo/
-          # inside the maintenance window and reverts on a pre-migration failure.
-          echo "1. Uploading exact commit files to the staging dir on the production server..."
-          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=accept-new "${SSH_USER}@${SSH_HOST}" \
-            "mkdir -p /opt/petprep/incoming"
-          rsync -az --delete \
-            --exclude '.git' \
-            --exclude '.idea' \
-            --exclude 'backend/storage' \
-            --exclude 'backend/vendor' \
-            --exclude 'mobile/node_modules' \
-            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=accept-new" \
-            ./ "${SSH_USER}@${SSH_HOST}:/opt/petprep/incoming/"
-
-          echo "2. Triggering production deployment script for commit: $COMMIT_SHA..."
-          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=accept-new "${SSH_USER}@${SSH_HOST}" \
-            "/opt/petprep/incoming/scripts/deploy-production.sh --from /opt/petprep/incoming $COMMIT_SHA"
+        run: bash scripts/ci-remote-deploy.sh

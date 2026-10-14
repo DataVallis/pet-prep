@@ -40,6 +40,8 @@ cat > "${SHIMS}/docker" <<'EOF'
 args="$*"
 code=$(cat "${PETPREP_ROOT}/repo/backend/app.txt" 2>/dev/null || echo "?")
 tag=""; [ -n "${PETPREP_IMAGE_TAG:-}" ] && tag="PETPREP_IMAGE_TAG=${PETPREP_IMAGE_TAG} "
+# Server identity exported by the script for compose (D18), logged with `up`/`run` calls.
+case "$args" in *" up -d"*|*" run "*) tag="${tag}[sites=${PETPREP_CADDY_SITES:-unset} domain=${PETPREP_API_DOMAIN:-unset}] " ;; esac
 echo "docker ${tag}${args} [code=${code}]" >> "$CALL_LOG"
 bump() { local f="${PETPREP_ROOT}/.$1"; local n; n=$(cat "$f" 2>/dev/null || echo 0); n=$((n + 1)); echo "$n" > "$f"; echo "$n"; }
 if [[ "$args" == *"artisan up"* ]]; then
@@ -490,6 +492,89 @@ run_deploy -- --from "$ROOT/incoming" sha-v2
 check "second run exit 0" rc_is 0
 check "previous release recorded as sha-v2" out_has "Previous release: sha-v2"
 check "code v2" eq "$(code_on_disk)" v2
+finish
+
+start identity_prod "server identity: production .env (APP_URL api.petprep.si) → production sites, unchanged health check"
+new_root dir; echo "APP_URL=https://api.petprep.si" >> "$ROOT/.env"
+run_deploy -- --from "$ROOT/incoming" --expect-domain api.petprep.si sha-v2
+check "exit 0" rc_is 0
+check "says domain + site set" out_has "API domain api.petprep.si, Caddy sites production"
+check "compose sees the production site set" called '\[sites=production domain=api.petprep.si\] .*up -d --remove-orphans app'
+check "derived keys appended to repo/backend/.env" test "$(grep -c '^PETPREP_CADDY_SITES=production$' "$ROOT/repo/backend/.env")" -eq 1
+check "health check on api.petprep.si" called 'curl .*--resolve api.petprep.si:443:127.0.0.1 https://api.petprep.si/up'
+check "no env secret in output" no_secret
+finish
+
+start identity_default "server identity: no APP_URL at all → production defaults"
+new_root dir; run_deploy CURL_STATUS=502 -- --from "$ROOT/incoming" sha-v2
+check "exit != 0 (health stubbed to 502)" rc_nonzero
+check "production site set" out_has "Caddy sites production"
+check "IP-site fallback still on production" called 'curl .*-H Host: 138.199.172.97 http://127.0.0.1/up'
+finish
+
+start identity_dev "server identity: second API-only server (APP_URL api-dev.petprep.si) → api-only, health on its domain, no IP fallback"
+new_root dir; echo 'APP_URL="https://api-dev.petprep.si/"' >> "$ROOT/.env"
+run_deploy CURL_STATUS=502 -- --from "$ROOT/incoming" --expect-domain api-dev.petprep.si sha-v2
+check "exit != 0 (health stubbed to 502)" rc_nonzero
+check "says domain + site set" out_has "API domain api-dev.petprep.si, Caddy sites api-only"
+check "compose sees api-only" called '\[sites=api-only domain=api-dev.petprep.si\] .*up -d --remove-orphans app'
+check "health check on the dev domain" called 'curl .*--resolve api-dev.petprep.si:443:127.0.0.1 https://api-dev.petprep.si/up'
+check "never api.petprep.si" not_called 'api\.petprep\.si'
+check "no raw-IP fallback (would be a false 200)" not_called 'Host: 138.199.172.97'
+check "5 attempts, TLS name only" test "$(grep -c '^curl' "$CALL_LOG")" -eq 5
+check "derived keys appended to repo/backend/.env" test "$(grep -c '^PETPREP_API_DOMAIN=api-dev.petprep.si$' "$ROOT/repo/backend/.env")" -eq 1
+finish
+
+start identity_dev_ok "server identity: dev deploy succeeds"
+new_root dir; echo "APP_URL=https://api-dev.petprep.si" >> "$ROOT/.env"
+run_deploy -- --from "$ROOT/incoming" --expect-domain=api-dev.petprep.si sha-v2
+check "exit 0" rc_is 0
+check "new code on disk" eq "$(code_on_disk)" v2
+finish
+
+start identity_explicit "server identity: explicit PETPREP_* in .env win (kept, not duplicated)"
+new_root dir; printf 'APP_URL=https://api-dev.petprep.si\nPETPREP_API_DOMAIN=api-dev.petprep.si\nPETPREP_CADDY_SITES=production\n' >> "$ROOT/.env"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "explicit site set used" out_has "Caddy sites production"
+check "not appended twice" test "$(grep -c '^PETPREP_CADDY_SITES=' "$ROOT/repo/backend/.env")" -eq 1
+finish
+
+start identity_bad_sites "server identity: unknown PETPREP_CADDY_SITES → preflight error, no docker"
+new_root dir; echo "PETPREP_CADDY_SITES=website" >> "$ROOT/.env"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "explains" out_has "PETPREP_CADDY_SITES must be 'production' or 'api-only'"
+check "no docker/git/curl call at all" test ! -s "$CALL_LOG"
+finish
+
+start identity_bad_domain "server identity: APP_URL host with odd characters → preflight error"
+new_root dir; echo 'APP_URL=https://API_Dev.petprep.si' >> "$ROOT/.env"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "explains" out_has "is not a plain lower-case host name"
+check "no docker/git/curl call at all" test ! -s "$CALL_LOG"
+finish
+
+start expect_mismatch "--expect-domain api-dev.petprep.si on the PRODUCTION server (wrong host) → refuse, nothing changed"
+new_root dir; echo "APP_URL=https://api.petprep.si" >> "$ROOT/.env"
+run_deploy -- --from "$ROOT/incoming" --expect-domain api-dev.petprep.si sha-v2
+check "exit != 0" rc_nonzero
+check "explains" out_has "but the deploy expects 'api-dev.petprep.si' — wrong server?"
+check "no docker/git/curl call at all" test ! -s "$CALL_LOG"
+check "code untouched" eq "$(code_on_disk)" v1
+finish
+
+start expect_missing_arg "--expect-domain without a value → usage error"
+new_root dir; run_deploy -- --from "$ROOT/incoming" --expect-domain
+check "exit 2" rc_is 2
+finish
+
+start health_override "DEPLOY_HEALTH_HOST / empty DEPLOY_HEALTH_IP_HOST override the derived values"
+new_root dir; run_deploy CURL_STATUS=502 DEPLOY_HEALTH_HOST=api.example.test DEPLOY_HEALTH_IP_HOST= -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "health on the override host" called 'curl .*https://api.example.test/up'
+check "empty IP host = no fallback" not_called 'Host: 138.199.172.97'
 finish
 
 start ops-lock "a running game-data reset holds the ops lock (D17)"
