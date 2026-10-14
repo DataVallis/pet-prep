@@ -16,6 +16,7 @@ use App\Models\PetLook;
 use App\Models\PetMedia;
 use App\Models\PetMediaHistory;
 use App\Services\FalAiService;
+use App\Services\Results\LookRegeneration;
 use Carbon\CarbonImmutable;
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Http\File;
@@ -1083,6 +1084,83 @@ class PetMediaService
         return $query->firstOrFail();
     }
 
+    /**
+     * Regenerate the media of a shared look (M5-R21 admin action; also works
+     * for a free pool look). Only the look rows of the life stages its ACTIVE
+     * pets are at get a new generation; rows of other stages stay READY (so a
+     * later-stage edit still grows from the older-stage image, and pets that
+     * reach a stage later reuse its file). Every active pet at those stages
+     * waits for the new files — its current ones stay visible until they are
+     * stored (one fal call per look row, not per pet). Same seed and traits
+     * (the look's DNA is never rewritten).
+     *
+     * Busy = a row of those stages is really being generated: `running` with a
+     * live claim, or `pending` with a fal request (a submitted video). A
+     * `pending` row without a request, or a dead claim (running, no request,
+     * older than STALE_CLAIM_MINUTES), is stale and does not block.
+     */
+    public function regenerateLook(PetLook $look): LookRegeneration
+    {
+        if (! $this->fal->isEnabled()) {
+            return new LookRegeneration(LookRegeneration::AI_OFF);
+        }
+
+        $pets = Pet::query()->where('pet_look_id', $look->id)->where('is_active', true)->whereNotNull('life_stage')->orderBy('id')->get();
+        $stages = $pets->map(fn (Pet $pet) => $pet->life_stage instanceof LifeStage ? $pet->life_stage->value : (string) $pet->life_stage)
+            ->unique()->values()->all();
+
+        if ($stages === []) {
+            return new LookRegeneration(LookRegeneration::NO_ACTIVE_PETS);
+        }
+
+        $rows = PetMedia::query()->where('pet_look_id', $look->id)->whereIn('life_stage', $stages)->get();
+
+        if ($rows->contains(fn (PetMedia $r) => self::lookRowBusy($r))) {
+            return new LookRegeneration(LookRegeneration::BUSY, 0, $stages);
+        }
+
+        foreach ($rows as $row) {
+            // A stale pending row is already pending (no bump needed): its next claim generates it.
+            $this->resetForNewGeneration($row, bump: true);
+        }
+
+        $queued = 0;
+
+        foreach ($pets as $pet) {
+            $image = $this->imageSlot($pet);
+
+            if ($image->isInFlight() || ! $this->resetForNewGeneration($image, bump: true)) {
+                continue;
+            }
+
+            // The videos follow once the new image is linked (queueStateVideos: older source generation).
+            $pet->updateQuietly(['media_status' => 'pending', 'media_error' => null]);
+            GeneratePetReferenceImage::dispatch($pet->id);
+            $queued++;
+        }
+
+        Log::info('PetMediaService: shared look regenerated', ['pet_look_id' => $look->id, 'pets' => $queued, 'stages' => $stages]);
+
+        return new LookRegeneration(LookRegeneration::QUEUED, $queued, $stages);
+    }
+
+    /** A look row fal is working on right now (see regenerateLook). */
+    private static function lookRowBusy(PetMedia $row): bool
+    {
+        if ($row->status === PetMedia::STATUS_PENDING) {
+            return $row->request_id !== null;
+        }
+
+        if ($row->status !== PetMedia::STATUS_RUNNING) {
+            return false;
+        }
+
+        $deadClaim = $row->request_id === null && $row->source_url === null
+            && $row->updated_at !== null && $row->updated_at->lt(now()->subMinutes(self::STALE_CLAIM_MINUTES));
+
+        return ! $deadClaim;
+    }
+
     /** The look's stored image of the stage a look video row is made for (start frame). */
     public function lookImageRow(PetMedia $row): ?PetMedia
     {
@@ -1272,7 +1350,9 @@ class PetMediaService
 
         $image = $this->lookImageRow($row);
 
-        if ($image === null || ! $image->isServable()) {
+        // M5-R21: also wait while the look image is being regenerated (its old
+        // file is still servable) — a video is always made from the CURRENT image.
+        if ($image === null || ! $image->isServable() || $image->status !== PetMedia::STATUS_READY) {
             $row->update(['status' => PetMedia::STATUS_PENDING]);
 
             return true;

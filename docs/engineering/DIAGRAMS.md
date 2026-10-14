@@ -1424,6 +1424,38 @@ sequenceDiagram
   Note over L: failure → fan-out failure (reason copied);<br/>daily retry re-runs the pets, which re-claims the row
 ```
 
+
+### 10d′. Paid breeds: colour + shared media per breed + colour (M5-R21, David 2026-10-14)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Parent
+  participant App
+  participant API as Laravel API
+  participant DB as PostgreSQL
+  participant Q as Queue
+  participant Fal as fal.ai
+  App->>API: GET /api/breeds → colours [{key, label}] per paid breed
+  Parent->>App: breed + colour (e.g. Labrador, chocolate)
+  App->>API: POST /api/parent/generate-pin {breed, colour, origin, age_stage, plan}
+  API-->>App: pin + pet_profile.colour (422 colour_invalid)
+  Note over API,DB: child pin-login → PairingService::createPet (pairing transaction)
+  alt unique_pet_media OFF (default)
+    API->>DB: pet_looks (breed, colour_key) — insertOrIgnore, one per pair<br/>pet.pet_look_id, pet.coat_colour, pet_dna = look DNA
+    Q->>DB: look row of the stage stored? → link the file (0 $)
+    opt first pet of this breed + colour + stage
+      Q->>Fal: one image (+ videos after birth), claimed per look row
+      Fal-->>Q: result → StorePetMedia → fan-out to every waiting pet
+    end
+  else ON
+    API->>DB: unique DNA v2 (coat_color fixed to the chosen colour)
+    Q->>Fal: own image + videos per pet
+  end
+```
+
+Admin: Feature switches → "Unique AI media per pet" (default off); AI media → Shared looks → Regenerate (one new generation per look row of the stages its active pets are at, for all those pets; other stages stay READY; outcome queued / busy / no active pets / AI off). A paid breed without a colour list still shares (colour from its appearance weights). Free breeds keep §10d.
+
 ## 11. Push notifications (M3-02, 2026-10-05)
 
 ### 11a. Escalation → push

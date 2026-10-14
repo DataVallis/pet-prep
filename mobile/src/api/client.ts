@@ -267,6 +267,11 @@ export interface NewPetProfile {
    * species' free breed (the server refuses a paid one). Sent with the profile only.
    */
   plan: PetPlanType;
+  /**
+   * M5-R21: coat colour key of a paid breed (`colours[].key` of `GET /api/breeds`); omitted when
+   * the breed offers none (free breed, older server) → the server samples it by weight.
+   */
+  colour?: string;
 }
 
 /** `POST /api/parent/generate-pin` body — always with `child_id` (the legacy call is deprecated). */
@@ -315,8 +320,18 @@ export function generatePinBody(
 ): Record<string, number | string | ClientFeature[]> {
   if (body.pet_id != null) return { child_id: body.child_id, pet_id: body.pet_id };
   if (body.profile) {
-    const { species, breed, origin, age_stage, plan } = body.profile;
-    return { child_id: body.child_id, species, breed, origin, age_stage, plan, features: [...features] };
+    const { species, breed, origin, age_stage, plan, colour } = body.profile;
+    // M5-R21: `colour` only when chosen (an older server never offered one, so never gets one).
+    return {
+      child_id: body.child_id,
+      species,
+      breed,
+      origin,
+      age_stage,
+      plan,
+      ...(colour !== undefined ? { colour } : {}),
+      features: [...features],
+    };
   }
   return { child_id: body.child_id };
 }

@@ -9,7 +9,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * One breed of the picker catalogue (GET /api/breeds, M5-R06-01). Breed
  * names are not sent as text: the app translates `label_key` (i18n).
  *
- * @property array{breed: string, slug: string, species: string, premium: bool, free_plan_allowed: bool, challenge_allowed: bool, label_key: string, search_keywords: list<string>, sort_order: int, suitability: array{suits: list<string>, consider: list<string>}} $resource
+ * @property array{breed: string, slug: string, species: string, premium: bool, free_plan_allowed: bool, challenge_allowed: bool, label_key: string, search_keywords: list<string>, sort_order: int, suitability: array{suits: list<string>, consider: list<string>}, colours: list<array{key: string, label: string}>} $resource
  */
 class BreedCatalogResource extends JsonResource
 {
@@ -81,6 +81,16 @@ class BreedCatalogResource extends JsonResource
              * @var array{suits: list<'active_family'|'family_pet'|'children'|'small_children'|'first_time_owner'|'apartment'|'large_home'|'other_pets'|'older_owners'|'often_alone'|'low_shedding'>, consider: list<'long_daily_exercise'|'needs_mental_stimulation'|'may_herd_children'|'chews_when_bored'|'sheds'|'food_motivated_weight'|'frequent_grooming'|'brachycephalic_breathing'|'hips_hind_legs'|'heart_and_spine'|'back_spine'|'sensitive_skin'|'shorter_lifespan'|'secure_fencing'|'experienced_owner'|'fragile_older_children'|'not_for_small_children'|'drools'|'chases_small_pets'|'needs_company'|'short_muzzle_breathing'|'eyelid_problems'|'older_children'>}
              */
             'suitability' => $entry['suitability'],
+            /**
+             * M5-R21 (David 2026-10-14): coat colours the parent may pick for a
+             * paid breed — only colours the breed standard allows. Send `key` as
+             * `colour` to POST /api/parent/generate-pin; `label` is in the
+             * request language (en | sl). One entry = nothing to choose (show it,
+             * no picker); [] = free breed (no colour choice).
+             *
+             * @var list<array{key: string, label: string}>
+             */
+            'colours' => $entry['colours'] ?? [],
         ];
     }
 }

@@ -121,6 +121,7 @@ class ChildPinLoginService
                 // M5-R06-01: breed ↔ species, cats only when available (switch for this family + `species_cat`).
                 $this->pairing->assertSpeciesAllowed($profile, $family);
                 $this->pairing->assertProfileAllowed($profile, $plan);
+                $this->pairing->assertColourAllowed($profile);
             }
             // M5-F03: an explicitly chosen challenge needs a paid breed (no profile → mutt).
             if ($mode === self::MODE_NEW_PET && $planChosen) {

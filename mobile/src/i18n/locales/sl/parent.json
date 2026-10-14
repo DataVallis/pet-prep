@@ -118,7 +118,8 @@
       "offline": "Ni povezave s strežnikom. Preverite internet in poskusite znova.",
       "server": "Kode trenutno ni bilo mogoče ustvariti. Poskusite znova.",
       "breed_species_mismatch": "Pasma ne spada k izbrani vrsti. Izberite znova.",
-      "species_unavailable": "Ta vrsta še ni na voljo. Izberite drugo vrsto."
+      "species_unavailable": "Ta vrsta še ni na voljo. Izberite drugo vrsto.",
+      "colour_invalid": "Te barve pri tej pasmi ni več. Izberite barvo znova."
     },
     "changeDog": "Izberi drugega kužka",
     "editDog": "Spremeni kužka",

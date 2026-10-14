@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property int $pool_index
  * @property string $trait_fingerprint
  * @property array<string, mixed> $dna
+ * @property string|null $colour_key M5-R21: shared look of a paid breed (one per breed + colour); null = free pool look
  */
 class PetLook extends Model
 {
@@ -29,6 +30,7 @@ class PetLook extends Model
         'pool_index',
         'trait_fingerprint',
         'dna',
+        'colour_key',
     ];
 
     /**

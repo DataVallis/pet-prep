@@ -114,7 +114,8 @@
       "offline": "Can't reach the server. Check your internet connection and try again.",
       "server": "The code couldn't be created right now. Please try again.",
       "breed_species_mismatch": "This breed doesn’t belong to the chosen species. Please choose again.",
-      "species_unavailable": "This species isn’t available yet. Please choose another one."
+      "species_unavailable": "This species isn’t available yet. Please choose another one.",
+      "colour_invalid": "This colour isn’t available for this breed any more. Please choose the colour again."
     },
     "changeDog": "Choose another dog",
     "editDog": "Change the dog",

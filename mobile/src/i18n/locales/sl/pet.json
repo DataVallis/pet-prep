@@ -133,6 +133,10 @@
       "bengal": "Kratka, mehka, pegasta ali marmorirana dlaka · česanje 1× na teden"
     },
     "breedLockedNote": "Te pasme zdaj ni mogoče izbrati. Izberite mešančka ali poskusite pozneje.",
+    "colourTitle": "Barva",
+    "colourHint": "Samo barve, ki jih dovoljuje standard pasme.",
+    "colourOnly": "Ta pasma je samo ene barve: {{colour}}",
+    "colourA11y": "Barva: {{colour}}",
     "lockedA11y": "{{breed}}, zaklenjeno — del plačljivega izziva",
     "lockedFreeOnlyA11y": "{{breed}}, ni na voljo — samo v brezplačnem načrtu",
     "originTitle": "Od kod pride",
@@ -412,6 +416,7 @@
       "breed": "Pasma",
       "origin": "Izvor",
       "age": "Starost ob prihodu",
+      "colour": "Barva",
       "plan": "Načrt"
     },
     "planNames": {

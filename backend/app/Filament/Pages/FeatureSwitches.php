@@ -11,6 +11,7 @@ use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
@@ -73,6 +74,7 @@ class FeatureSwitches extends Page implements HasForms
         $this->form->fill([
             'cats_mode' => $stored['mode']->value,
             'cats_test_parent_ids' => array_map('strval', $stored['test_parent_ids']),
+            'unique_pet_media' => $settings->uniquePetMedia(),
         ]);
     }
 
@@ -108,6 +110,14 @@ class FeatureSwitches extends Page implements HasForms
                             ->hiddenLabel()
                             ->content(new HtmlString(__('admin.features.help'))),
                     ]),
+                // M5-R21 (David 2026-10-14): unique vs shared AI media of paid breeds.
+                Section::make(__('admin.features.media_section'))
+                    ->description(__('admin.features.media_description'))
+                    ->schema([
+                        Toggle::make('unique_pet_media')
+                            ->label(__('admin.features.unique_media'))
+                            ->default(false),
+                    ]),
             ]);
     }
 
@@ -119,15 +129,29 @@ class FeatureSwitches extends Page implements HasForms
         /** @var list<int|string> $ids */
         $ids = array_values($data['cats_test_parent_ids'] ?? []);
 
+        $stored = $settings->storedCats();
+        $storedIds = $stored['test_parent_ids'];
+        $newIds = array_values(array_unique(array_map('intval', $ids)));
+        sort($newIds);
+        $unique = (bool) ($data['unique_pet_media'] ?? false);
+
         try {
-            $settings->updateCats($this->admin(), $mode, $ids);
+            // Each switch is written only when its own fields changed, so saving
+            // one switch never adds an audit row (or a no-row default) for the other.
+            if ($mode !== $stored['mode'] || $newIds !== $storedIds) {
+                $settings->updateCats($this->admin(), $mode, $ids);
+            }
+            if ($unique !== $settings->uniquePetMedia()) {
+                $settings->updateUniquePetMedia($this->admin(), $unique);
+            }
         } catch (InvalidArgumentException $e) {
             Notification::make()->title(__('admin.features.not_saved'))->body($e->getMessage())->danger()->send();
 
             return;
         }
 
-        Notification::make()->title(__('admin.features.saved'))->body(__('admin.features.saved_body', ['mode' => $mode->label()]))->success()->send();
+        $media = $settings->uniquePetMedia() ? __('admin.features.unique_media_on') : __('admin.features.unique_media_off');
+        Notification::make()->title(__('admin.features.saved'))->body(__('admin.features.saved_body_media', ['mode' => $mode->label(), 'media' => $media]))->success()->send();
     }
 
     /**
@@ -136,7 +160,7 @@ class FeatureSwitches extends Page implements HasForms
     public function getChanges(): Collection
     {
         return AppSettingChange::with('user:id,name,email')
-            ->where('key', AppSettingsService::CATS_KEY)
+            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY])
             ->latest('id')->limit(20)->get();
     }
 

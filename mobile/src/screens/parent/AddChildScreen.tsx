@@ -24,7 +24,7 @@ import type { ChildPinResponse, NewPetProfile, PetBreed, PinLoginMode } from '@/
 import { useQueryClient } from '@tanstack/react-query';
 
 import PetPickerStep from '@/components/parent/PetPickerStep';
-import { breedCatalogueKey, useBreedCatalogue } from '@/hooks/queries/useBreedCatalogue';
+import { breedCatalogueRoot, useBreedCatalogue } from '@/hooks/queries/useBreedCatalogue';
 import { INITIAL_PICKER_CHOICE, type PickerChoice } from '@/modules/petProfile/picker';
 import { challengePackage, useOfferings } from '@/modules/purchases';
 import { useCreateChild } from '@/hooks/queries/useFamilyMutations';
@@ -215,8 +215,14 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
               // M5-R06-01: the species was switched off meanwhile — reload what is offered and choose
               // again. Reset (not invalidate): the stale catalogue with that species must never show
               // again while the new one loads (QA PR #94 m4).
-              void queryClient.resetQueries({ queryKey: breedCatalogueKey() });
-              setPickerChoice((c) => ({ ...c, species: null, breed: null }));
+              void queryClient.resetQueries({ queryKey: breedCatalogueRoot });
+              setPickerChoice((c) => ({ ...c, species: null, breed: null, colour: null }));
+            }
+            if (kind === 'colour_invalid') {
+              // M5-R21: the breed's colours changed meanwhile — reload them (reset, so the stale
+              // list never shows) and let the parent choose the colour again (the first is preselected).
+              void queryClient.resetQueries({ queryKey: breedCatalogueRoot });
+              setPickerChoice((c) => ({ ...c, colour: null }));
             }
             setPickerNotice(tSpecies(`parent:addChild.errors.${kind}`, newPetProfile?.species));
             setStep('dog');
@@ -415,7 +421,8 @@ type ProfileRejection =
   | 'invalid_profile'
   | 'challenge_requires_paid_breed'
   | 'breed_species_mismatch'
-  | 'species_unavailable';
+  | 'species_unavailable'
+  | 'colour_invalid';
 
 const PROFILE_REJECTIONS: readonly ProfileRejection[] = [
   'breed_locked',
@@ -423,6 +430,7 @@ const PROFILE_REJECTIONS: readonly ProfileRejection[] = [
   'challenge_requires_paid_breed',
   'breed_species_mismatch',
   'species_unavailable',
+  'colour_invalid',
 ];
 
 function profileRejectionOf(kind: string | undefined): ProfileRejection | null {
