@@ -132,7 +132,7 @@ describe('breed, config and database', function () {
             ->toBe([(float) $care['hunger_decay_per_hour'], (float) $care['thirst_decay_per_hour'], $care['poops_per_day'], $care['water_per_day'], $care['water_min_gap_minutes']]);
     });
 
-    it('accepts an Belgian Malinois pet only as a dog (breed / species CHECKs) and the migration is reversible', function () {
+    it('accepts a Belgian Malinois pet only as a dog (breed / species CHECKs) and the migration is reversible', function () {
         $pet = bmPet(36);
         expect($pet->species)->toBe(Species::Dog)
             ->and(DB::table('pets')->where('id', $pet->id)->value('breed_type'))->toBe('belgian_malinois');
@@ -142,7 +142,7 @@ describe('breed, config and database', function () {
             ->and($refused(['breed_type' => 'belgian_tervuren']))->toThrow(QueryException::class);
 
         $migration = require database_path('migrations/2026_12_16_120000_add_belgian_malinois_breed.php');
-        // down() refuses while an Belgian Malinois exists (no silent data loss).
+        // down() refuses while a Belgian Malinois exists (no silent data loss).
         expect(fn () => DB::transaction(fn () => $migration->down()))->toThrow(QueryException::class);
         DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'border_collie']);
         $migration->down();

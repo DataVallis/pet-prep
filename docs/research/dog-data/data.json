@@ -27783,7 +27783,7 @@
         "unit": "brushing sessions per week (sourced need)",
         "source_id": "S314",
         "quote": "Grooming: More than once a week",
-        "confidence": "medium",
+        "confidence": "low",
         "notes": "belgian_malinois.suitability.rkc_grooming. RKC (S314) 'More than once a week' has no number; AKC (S316) 'only require occasional brushing' and PetMD (S317) 'brushing their coat occasionally' give none → runbook dog-grooming rule: 2, seeded verified=false (Claude's proposal, open for David). Seasonal daily brushing while shedding (AKC S316) is not modelled. Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed.",
         "alternatives": [
           {
@@ -27965,9 +27965,9 @@
           "shorter_lifespan": "RKC 'Over 10 years'.",
           "hips_hind_legs": "Hip / elbow dysplasia only as a PetMD heading; Breed Watch Category 1 → no welfare chip.",
           "welfare": "RKC Breed Watch Category 1 (S314).",
-          "older_children": "Its chip reads 'small dog — better with older children' (Pomeranian, AKC S251) — wrong for a medium-large dog; AKC 'older, responsible kids' + 'supervision around children is a must' (S316) → not_for_small_children ('large dog — not for homes with small children', Cane Corso / Dobermann precedent)."
+          "older_children": "Its chip reads 'small dog — better with older children' (Pomeranian, AKC S251) — wrong for a medium-large dog; AKC 'older, responsible kids' + 'supervision around children is a must' (S316) → not_for_small_children ('large dog — not for homes with small children', Cane Corso / Dobermann precedent). Claude's reading (branje Claude, odprto za Davida)."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, large_home; consider long_daily_exercise, experienced_owner, not_for_small_children, may_herd_children, needs_mental_stimulation, needs_company, sheds, chases_small_pets"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, large_home; consider long_daily_exercise, experienced_owner, not_for_small_children, may_herd_children, needs_mental_stimulation, needs_company, sheds, chases_small_pets (not_for_small_children namesto older_children = branje Claude, odprto za Davida)"
       },
       "marketing": {
         "value": "in the app: yes; in marketing: yes (not a flat-faced breed)",
