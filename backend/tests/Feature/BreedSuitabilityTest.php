@@ -786,3 +786,23 @@ it('gives the Brittany active_family / family_pet / children and the exercise, m
         ->and(bsEntry('brittany.suitability.rkc_exercise')['quote'])->toBe('Exercise: More than 2 hours per day')
         ->and(bsEntry('brittany.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Small house');
 });
+
+it('gives the American Cocker Spaniel family_pet / children / other_pets and the grooming, weight and shedding chips — no exercise or welfare chip (runbook 2026-10-14)', function () {
+    $cocker = app(BreedSuitability::class)->for(BreedType::AmericanCockerSpaniel);
+    expect($cocker['suits'])->toBe(['family_pet', 'children', 'other_pets'])
+        // No rating for small children → never small_children; RKC "Small house" → neither apartment nor large_home.
+        ->and($cocker['suits'])->not->toContain('small_children')->not->toContain('apartment')->not->toContain('large_home')
+        // RKC "More than 2 hours per day" vs AKC / PetMD "don't require a lot / high levels of exercise" → no exercise chip.
+        ->and($cocker['suits'])->not->toContain('active_family')->not->toContain('often_alone')->not->toContain('first_time_owner')
+        ->and($cocker['consider'])->toBe(['frequent_grooming', 'food_motivated_weight', 'sheds'])
+        // Breed Watch Category 2 without a named point → no welfare chip; no prey-drive statement; RKC "Over 10 years".
+        ->and($cocker['consider'])->not->toContain('long_daily_exercise')->not->toContain('sensitive_skin')->not->toContain('eyelid_problems')
+        ->not->toContain('chases_small_pets')->not->toContain('shorter_lifespan')->not->toContain('needs_company');
+
+    expect(bsEntry('american_cocker_spaniel.suitability.rkc_grooming')['quote'])->toBe('Grooming: Every day')
+        ->and(bsEntry('american_cocker_spaniel.suitability.vca_children')['quote'])->toBe('Usually very good with children.')
+        ->and(bsEntry('american_cocker_spaniel.suitability.vca_other_pets')['quote'])->toBe('Gets along well with other pets and dogs.')
+        ->and(bsEntry('american_cocker_spaniel.behaviour.obesity_tendency')['quote'])->toBe('Cockers have a tendency to become overweight.')
+        ->and(bsEntry('american_cocker_spaniel.exercise.adult')['notes'])->toContain('no exercise chip')
+        ->and(bsEntry('american_cocker_spaniel.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Small house');
+});

@@ -327,6 +327,13 @@ class FalAiService
                 .'high-set triangular ears slightly rounded at the tip lying flat against the cheeks, expressive brown eyes, '
                 .'slightly rounded skull with a tapered muzzle, naturally short bob tail, leggy and agile pointing-dog build, '
                 .'photorealistic, studio quality, natural lighting',
+            // M5-R10-37: AKC standard (S307) / FCI 167 (S304) — buff as the anchor (also black, black and tan, red,
+            // chocolate, parti-colours with white; never merle, never blue eyes); natural undocked tail in the game.
+            BreedType::AmericanCockerSpaniel => 'A small, compact and sturdy American Cocker Spaniel dog with a buff coat, '
+                .'silky, flat or slightly wavy coat with moderate feathering on the ears, chest, belly and legs, '
+                .'long lobular well-feathered ears set low, round full dark brown eyes, '
+                .'rounded skull with a pronounced stop and a broad deep muzzle, natural undocked tail carried level with the back, '
+                .'photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -799,6 +806,17 @@ class FalAiService
                 'eye_color' => 'brown',
                 'fur_texture' => 'dense, fairly fine, flat or slightly wavy medium-length coat',
                 'markings' => 'white with orange or liver patches, light ticking on the muzzle and legs',
+            ],
+            // M5-R10-37: AKC / FCI standard varieties (S307, S304) — ASCOB, black, parti-colour.
+            BreedType::AmericanCockerSpaniel => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'buff',
+                    1 => 'black',
+                    2 => 'red and white parti-colour',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'silky, flat or slightly wavy coat with moderate feathering',
+                'markings' => 'solid colour, white only on the chest or throat for solid colours',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

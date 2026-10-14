@@ -469,6 +469,16 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is an American Cocker Spaniel (paid breed, M5-R10-37).
+     */
+    public function americanCockerSpaniel(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::AmericanCockerSpaniel->value,
+        ]);
+    }
+
+    /**
      * Indicate the pet is a British Shorthair (paid cat breed, M5-R10-14; species follows the breed).
      */
     public function britishShorthair(): static

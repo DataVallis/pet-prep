@@ -971,6 +971,30 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S302'], 'refs' => ['brittany.behaviour.other_pets']],
             ],
         ],
+        // M5-R10-37: american_cocker_spaniel.* (S303–S311), runbook rules (data.json
+        // proposed_game_parameters.american_cocker_spaniel.suitability_tags). RKC (S305) + AKC (S308) +
+        // PetMD (S309) + VCA (S310). RKC "More than 2 hours per day" conflicts with AKC / PetMD "don't
+        // require a lot / high levels of exercise" → no active_family / long_daily_exercise. RKC "Small
+        // house" → neither apartment nor large_home. Breed Watch Category 2 without a named point → no
+        // welfare chip.
+        'american_cocker_spaniel' => [
+            'suits' => [
+                // S309 "At home, these sweet-tempered pups love being close to their people and make great family dogs."
+                ['tag' => 'family_pet', 'source_ids' => ['S309'], 'refs' => ['american_cocker_spaniel.suitability.petmd_family', 'american_cocker_spaniel.behaviour.family']],
+                // S310 "Usually very good with children."; S308 "They generally enjoy spending time with children …"
+                ['tag' => 'children', 'source_ids' => ['S310', 'S308'], 'refs' => ['american_cocker_spaniel.suitability.vca_children', 'american_cocker_spaniel.suitability.akc_children']],
+                // S310 "Gets along well with other pets and dogs."; S309 "… both with people and with other animals."
+                ['tag' => 'other_pets', 'source_ids' => ['S310', 'S309'], 'refs' => ['american_cocker_spaniel.suitability.vca_other_pets', 'american_cocker_spaniel.suitability.petmd_other_animals']],
+            ],
+            'consider' => [
+                // S305 "Grooming: Every day"; S310 "brushing and combing two to three times a week".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S305', 'S310'], 'refs' => ['american_cocker_spaniel.suitability.rkc_grooming', 'american_cocker_spaniel.suitability.vca_grooming']],
+                // S310 "Cockers have a tendency to become overweight."; S309 "often easily motivated by rewards of food".
+                ['tag' => 'food_motivated_weight', 'source_ids' => ['S310', 'S309'], 'refs' => ['american_cocker_spaniel.behaviour.obesity_tendency', 'american_cocker_spaniel.behaviour.food_motivation']],
+                // S305 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S305'], 'refs' => ['american_cocker_spaniel.suitability.rkc_shedding']],
+            ],
+        ],
 
     ],
 ];

@@ -337,6 +337,16 @@
 | white spots on the ears (FCI). AKC (S300) allows only orange or liver and white. Colour weights are
 | unsourced → `verified => false`; orange and white weighted highest (the register portrait).
 |
+| American Cocker Spaniel (M5-R10-37, docs/research/dog-data american_cocker_spaniel.appearance): the
+| smallest of the sporting dogs, compact and sturdy (AKC standard S307, FCI S304); rounded skull,
+| pronounced stop, broad and deep muzzle; round, full, dark brown eyes (blue eyes disqualify, FCI);
+| long lobular well-feathered ears set no higher than the lower part of the eye; silky, flat or
+| slightly wavy coat with moderate feathering (pet length in the game, not a floor-length show skirt).
+| Varieties (AKC / FCI): black (incl. black and tan), any solid colour other than black (cream / buff to
+| red, brown), parti-colours with white (incl. roan, tricolour) — never merle. The standards describe a
+| docked tail; the game shows a natural undocked tail (Claude's proposal, open for David). Colour weights
+| are unsourced → `verified => false`; buff weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1656,6 +1666,45 @@ return [
             'eye_color' => ['expressive brown to dark eyes in harmony with the coat colour'],
             'tail' => ['naturally short bob tail set high, carried horizontally'],
             'muzzle' => ['slightly rounded skull with a tapered muzzle that is not snipy and a moderate stop'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-37 (docs/research/dog-data/data.json american_cocker_spaniel.appearance; runbook rules
+    // 2026-10-10: standard colours only — never merle, never blue eyes).
+    'american_cocker_spaniel' => [
+        'display_name' => 'American Cocker Spaniel',
+        // Colour frequencies are in no source (american_cocker_spaniel.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'AKC standard (S307), FCI standard (S304), RKC breed page (S305) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S305 "Size: Small"; S307 ideal height 15 in (dogs) / 14 in (bitches)',
+            'build' => 'S307 "The Cocker Spaniel is the smallest member of the Sporting Group."; S304 compact and sturdy',
+            'coat_length' => 'S307 "The coat is silky, flat or slightly wavy and of a texture which permits easy care."; S305 "Coat length: Long"',
+            'coat_color' => 'S307 black, ASCOB "Any solid color other than black, ranging from lightest cream to darkest red, including brown and brown with tan points.", parti-color (weights unsourced)',
+            'ear_carriage' => 'S307 "Lobular, long, of fine leather, well feathered, and placed no higher than a line to the lower part of the eye."',
+            'eye_color' => 'S307 "Eyeballs are round and full and look directly forward."; S304 dark brown, blue eyes disqualify',
+            'tail' => 'S307 "The docked tail is set on and carried on a line with the topline of the back, or slightly higher." — the game shows a natural undocked tail',
+            'muzzle' => 'S307 "The muzzle is broad and deep, with square even jaws."; skull "Rounded but not exaggerated with no tendency toward flatness."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'compact, sturdy and well balanced, the smallest sporting spaniel', 'weight' => 3], 'small, compact spaniel build with a sloping topline'],
+            'coat_length' => ['silky, flat or slightly wavy coat with moderate feathering on the ears, chest, belly and legs (pet length, not a floor-length show coat)'],
+            // AKC / FCI varieties only (S307, S304); buff highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'buff (solid light golden cream)', 'weight' => 4],
+                ['value' => 'black (solid black)', 'weight' => 3],
+                ['value' => 'black and tan (black with small tan points over the eyes, on the muzzle, chest and legs)', 'weight' => 2],
+                'red (solid deep red)',
+                'chocolate (solid brown)',
+                'black and white parti-colour',
+                'red and white parti-colour',
+                'tricolour (black and white with tan points)',
+            ],
+            'ear_carriage' => ['long lobular ears set low, well feathered with silky hair'],
+            'eye_color' => ['round, full, dark brown eyes looking directly forward'],
+            'tail' => ['natural undocked tail carried level with the back'],
+            'muzzle' => ['rounded skull with a pronounced stop and a broad, deep muzzle with square jaws'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
