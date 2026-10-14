@@ -1532,6 +1532,11 @@
         }
       ],
       "notes": "RKC breed page (dog-data S291, 2026-10-14): 'Pre-breeding Health Screening' with 'Good Practice schemes and tests' (= minimum; 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding'): genetic diversity (inbreeding_coi, Dachshund / Siberian Husky precedent) and the eye scheme with litter screening; 'Best Practice schemes and tests': DNA tests for CEA/CH, MDR1, BBS2-PRA, CNGA1-PRA and vWD3-2, elbow and hip schemes. The page prints the MDR1 line with a double bracket ('(MDR1))') — the name is written without it. PDSA (dog-data S293) recommends checking that the parents were screened under the BVA/KC Canine Health Schemes. New test keys dna_bbs2_pra, dna_cnga1_pra, dna_vwd3 need website words."
+    },
+    "brittany": {
+      "status": "not_found",
+      "tests": [],
+      "notes": "RKC breed page (dog-data S298, 2026-10-14) describes the Good Practice and Best Practice tiers but returned no individual test for the Brittany ('The page does not list the specific tests in either tier', tool summary) and 'no breed-specific DNA testing package'. The RKC Health Standard (dog-data S263, thekennelclub.org.uk/BreedSpecificRequirements, read 2026-10-14) lists the Brittany with empty Good Practice and Best Practice columns (no verbatim sentence returned, so not recorded as none_recommended — Boston Terrier / German Shorthaired Pointer precedent). No PDSA Brittany page. PetMD (dog-data S302) names hip dysplasia, epilepsy, hypothyroidism and cataracts but no test → nothing guessed. Show the general dog checklist only."
     }
   }
 }
