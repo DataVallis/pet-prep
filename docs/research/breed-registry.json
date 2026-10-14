@@ -57,7 +57,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "909d00c4222cf8c08cdbb4a2abf5a2b16b9a7d9feb6e3e7d2c3e116aea1532bf"
+      "sha256": "1599426aa28bfac3b4f57d81b3e22d72ebc77665a9706f42a8f709ac07b0bd7e"
     }
   },
   "suitability_vocabulary": {
@@ -19389,7 +19389,12 @@
           "S301"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "brittany.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_found",
         "tests": [],
