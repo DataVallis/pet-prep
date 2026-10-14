@@ -786,7 +786,7 @@ class BreedConfigsSeeder extends Seeder
                 'species' => 'dog',
                 'sort_order' => 330,
                 'label_key' => 'breeds.american_cocker_spaniel',
-                'search_keywords' => ['american cocker spaniel', 'ameriški koker španjel', 'ameriski koker spanjel', 'cocker spaniel', 'koker španjel', 'koker spanjel', 'cocker', 'koker'],
+                'search_keywords' => ['american cocker spaniel', 'ameriški koker španjel', 'ameriski koker spanjel', 'american cocker', 'ameriški koker', 'ameriski koker'],
             ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.

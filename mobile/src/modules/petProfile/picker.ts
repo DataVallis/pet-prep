@@ -628,7 +628,7 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
       premium: true,
       free_plan_allowed: false,
       challenge_allowed: true,
-      search_keywords: ['american cocker spaniel', 'ameriški koker španjel', 'ameriski koker spanjel', 'cocker spaniel', 'koker španjel', 'koker spanjel', 'cocker', 'koker'],
+      search_keywords: ['american cocker spaniel', 'ameriški koker španjel', 'ameriski koker spanjel', 'american cocker', 'ameriški koker', 'ameriski koker'],
       sort_order: 330,
       suitability: {
         suits: ['family_pet', 'children', 'other_pets'],

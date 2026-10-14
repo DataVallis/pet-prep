@@ -17536,7 +17536,7 @@
     }
   },
   "american_cocker_spaniel": {
-    "_note": "Added 2026-10-14 (M5-R10-37, unattended run — appended after the Brittany: AKC 2024 No. 32 'Cocker Spaniel', S174 full-list table '31 Brittany', '32 Cocker Spaniel', '36 English Cocker Spaniel'; the AKC 'Cocker Spaniel' is the American Cocker Spaniel of the FCI / RKC, not the English Cocker Spaniel). Quotes as returned by the web-fetch tool on 2026-10-14 (the tool limits quotes to ~125 characters; apostrophes as returned); spot-check before import (sources.md S303–S311, reused S8, S10, S11, S14, S24, S45, S92, S174). The FCI standard (S304) was read in French (the English PDF was refused by the fetch tool) — tool summary, French quotes only where returned. No PDSA American Cocker Spaniel page exists (the PDSA 'Cocker Spaniel' page is the English Cocker). Lifespan: McMillan 2024 / Dogs Trust table (S123) not reachable (no fetchable URL) — Wikipedia (S311, tier C) quotes McMillan 2024 at 13.3 years, background only → RKC lower bound 'Over 10 years' → senior 90 months, provisional. RKC Breed Watch Category 2 without a named point (S306) → no welfare chip; not flat-faced → in marketing. Exercise sources conflict (RKC 'More than 2 hours per day' vs AKC / PetMD 'don't require a lot / high levels of exercise') → minutes from the RKC by the rule, no exercise chip.",
+    "_note": "Added 2026-10-14 (M5-R10-37, unattended run — appended after the Brittany: AKC 2024 No. 32 'Cocker Spaniel', S174 full-list table '31 Brittany', '32 Cocker Spaniel', '36 English Cocker Spaniel'; the AKC 'Cocker Spaniel' is the American Cocker Spaniel of the FCI / RKC, not the English Cocker Spaniel). Quotes as returned by the web-fetch tool on 2026-10-14 (the tool limits quotes to ~125 characters; apostrophes as returned); spot-check before import (sources.md S303–S311, reused S8, S10, S11, S14, S24, S35, S45, S92, S174). The FCI standard (S304) was read in French (the English PDF was refused by the fetch tool) — tool summary, French quotes only where returned. No PDSA American Cocker Spaniel page exists (the PDSA 'Cocker Spaniel' page is the English Cocker). Lifespan: McMillan 2024 / Dogs Trust table (S123) not reachable (no fetchable URL) — Wikipedia (S311, tier C) quotes McMillan 2024 at 13.3 years, background only → RKC lower bound 'Over 10 years' → senior 90 months, provisional. RKC Breed Watch Category 2 without a named point (S306) → no welfare chip; not flat-faced → in marketing. Exercise sources conflict (RKC 'More than 2 hours per day' vs AKC / PetMD 'don't require a lot / high levels of exercise') → minutes from the RKC by the rule, no exercise chip.",
     "identity": {
       "value": "FCI No. 167, Group 8 Section 2 (Flushing Dogs), USA",
       "unit": "—",
@@ -17844,10 +17844,10 @@
       "coren_rank": {
         "value": 20,
         "unit": "rank (working/obedience intelligence)",
-        "source_id": "S311",
-        "quote": "The breed ranks 20th in Stanley Coren's The Intelligence of Dogs",
+        "source_id": "S35",
+        "quote": "| 20 | Cocker Spaniel |",
         "confidence": "low",
-        "notes": "Wikipedia breed article (S311, tier C) citing Coren 2006; rank 20 lies in 'Excellent Working Dogs' (ranks 11–26, S35). Coren's own article (S34) lists only the top and bottom 10 — runbook: rank from Wikipedia. Coren's 'Cocker Spaniel' (rank 20) is the American breed; the English Cocker Spaniel is listed separately. Verify in The Intelligence of Dogs."
+        "notes": "Wikipedia table (S35, tier C, read 2026-10-14): rank 20 'Cocker Spaniel' under 'Excellent Working Dogs' (ranks 11–26); Coren's 'Cocker Spaniel' is the American breed — the English Cocker Spaniel is listed separately at rank 18 ('also listed: English Cocker Spaniel'). Coren's own article (S34) lists only the top and bottom 10 — runbook: rank from S35. The breed article (S311) agrees: 'The breed ranks 20th in Stanley Coren's The Intelligence of Dogs'. Verify in The Intelligence of Dogs."
       },
       "coren_tier": {
         "value": "excellent: 5 to 15 repetitions, obeys first command ≥85%",
@@ -17873,7 +17873,7 @@
         "confidence": "low",
         "notes": "Game value — see proposed_game_parameters.american_cocker_spaniel.learning_multiplier (1.5, runbook rule: Excellent tier, rank 20).",
         "derived_from": [
-          "S311"
+          "S35"
         ]
       }
     },
@@ -26858,12 +26858,12 @@
         "source_id": null,
         "quote": null,
         "confidence": "low",
-        "notes": "Coren rank 20 (S311 citing Coren 2006), tier Excellent (ranks 11–26, S35) → 1.5 (= Brittany, rank 19). No individual variation (pedigree).",
+        "notes": "Coren rank 20 (S35; S311 agrees), tier Excellent (ranks 11–26) → 1.5 (= Brittany, rank 19). No individual variation (pedigree).",
         "derived_from": [
-          "S311"
+          "S35"
         ],
         "alternatives": [],
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 20, Excellent tier, S311 / S35)"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 20, Excellent tier, S35)"
       },
       "care_rates": {
         "value": {

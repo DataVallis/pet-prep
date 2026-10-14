@@ -116,7 +116,7 @@ describe('breed, config and database', function () {
             ->and($breed->isPremium())->toBeTrue()
             ->and([$config->species, $config->premium_unlock, $config->sort_order, $config->label_key])
             ->toBe([Species::Dog, true, 330, 'breeds.american_cocker_spaniel'])
-            ->and($config->search_keywords)->toBe(['american cocker spaniel', 'ameriški koker španjel', 'ameriski koker spanjel', 'cocker spaniel', 'koker španjel', 'koker spanjel', 'cocker', 'koker'])
+            ->and($config->search_keywords)->toBe(['american cocker spaniel', 'ameriški koker španjel', 'ameriski koker spanjel', 'american cocker', 'ameriški koker', 'ameriski koker'])
             // Legacy fallback = the adult step goal (120 min × 100 steps).
             ->and($config->daily_steps_required)->toBe((int) acsData('proposed_game_parameters.american_cocker_spaniel.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(12000);
@@ -246,7 +246,7 @@ describe('life-stage data against data.json', function () {
             ->and(acsRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(acsData('american_cocker_spaniel.adult_weight.akc.quote'))
             ->and(acsRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([9, 12])
             ->and(acsData('american_cocker_spaniel.growth.adult_weight_reached.value'))->toStartWith('9–12 months')
-            // Coren rank 20 (S311 citing Coren), Excellent tier → learning 1.5.
+            // Coren rank 20 (S35), Excellent tier → learning 1.5.
             ->and(acsRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(20)
             ->and(acsData('american_cocker_spaniel.trainability.coren_rank.value'))->toBe(20)
             ->and(acsRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('american_cocker_spaniel.lifespan.rkc')

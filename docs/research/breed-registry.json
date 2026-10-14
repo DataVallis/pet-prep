@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "710b3ca7de039ddeed8c71842a107f82063137f51278a12ec758eaa6ea9f7e43"
+      "sha256": "72bd3164c9918aeadaef939c9684a0d9ff0a70292b6413dda82351434713ccd4"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "46569ffefa2dcac9b292679d1fb41dd8e3c6e92993403d9b39bd58461634f085"
+      "sha256": "db4d1321983cfb4a73b41e532af4ba224aeccb8fb8e8883196e1d5ddf3847e4f"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -19444,12 +19444,10 @@
       },
       "synonyms": {
         "en": [
-          "Cocker Spaniel",
-          "Cocker",
-          "Merry Cocker"
+          "American Cocker",
+          "Cocker Spaniel (USA)"
         ],
         "sl": [
-          "koker španjel",
           "ameriški koker",
           "ameriski koker spanjel"
         ]
@@ -19608,7 +19606,7 @@
           "kind": "statement",
           "value": 20,
           "source_ids": [
-            "S311"
+            "S35"
           ],
           "ref": "american_cocker_spaniel.trainability.coren_rank",
           "confidence": "low"
@@ -19910,9 +19908,9 @@
           {
             "ref": "proposed_game_parameters.american_cocker_spaniel.learning_multiplier",
             "basis_source_ids": [
-              "S311"
+              "S35"
             ],
-            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 20, Excellent tier, S311 / S35)"
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 20, Excellent tier, S35)"
           },
           {
             "ref": "proposed_game_parameters.american_cocker_spaniel.grooming",
@@ -19930,9 +19928,9 @@
           "S19",
           "S21",
           "S24",
+          "S35",
           "S45",
-          "S305",
-          "S311"
+          "S305"
         ]
       },
       "portrait": null,
@@ -19980,6 +19978,7 @@
         "S19",
         "S21",
         "S24",
+        "S35",
         "S45",
         "S303",
         "S305",
@@ -19987,7 +19986,6 @@
         "S308",
         "S309",
         "S310",
-        "S311",
         "K1",
         "K2",
         "K3",
@@ -23689,13 +23687,6 @@
       "publisher": "VCA Animal Hospitals",
       "title": "American Cocker Spaniel — dog breed page",
       "url": "https://vcahospitals.com/know-your-pet/dog-breeds/american-cocker-spaniel"
-    },
-    {
-      "id": "S311",
-      "tier": "C",
-      "publisher": "Wikipedia",
-      "title": "American Cocker Spaniel",
-      "url": "https://en.wikipedia.org/wiki/American_Cocker_Spaniel"
     },
     {
       "id": "C1",

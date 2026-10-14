@@ -407,7 +407,7 @@ const SPECIES = [
       { id: 'english_springer_spaniel', synonyms: { en: ['Springer Spaniel', 'Springer', 'ESS'], sl: ['springer španjel', 'angleski springer spanjel', 'springer'] } },
       { id: 'shetland_sheepdog', synonyms: { en: ['Sheltie', 'Shetland Collie'], sl: ['sheltie', 'šeltie', 'setlandski ovcar'] } },
       { id: 'brittany', synonyms: { en: ['Brittany Spaniel', 'Epagneul Breton'], sl: ['epagneul breton', 'bretonski španjel', 'bretonski pticar'] } },
-      { id: 'american_cocker_spaniel', synonyms: { en: ['Cocker Spaniel', 'Cocker', 'Merry Cocker'], sl: ['koker španjel', 'ameriški koker', 'ameriski koker spanjel'] } },
+      { id: 'american_cocker_spaniel', synonyms: { en: ['American Cocker', 'Cocker Spaniel (USA)'], sl: ['ameriški koker', 'ameriski koker spanjel'] } },
     ],
   },
   {

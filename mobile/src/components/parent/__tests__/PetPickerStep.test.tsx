@@ -860,7 +860,7 @@ describe('PetPickerStep', () => {
     }
   });
 
-  it('M5-R10-37: the American Cocker Spaniel (fallback) shows its chips, is found as "ameriški koker" and "cocker", and quotes 12.000 / 9.000 steps', () => {
+  it('M5-R10-37: the American Cocker Spaniel (fallback) shows its chips, is found as "ameriški koker" and "american cocker", and quotes 12.000 / 9.000 steps', () => {
     const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
     const acs = screen.getByTestId('breed-option-american_cocker_spaniel');
     expect(acs).toHaveTextContent(/Ameriški koker španjel/);
@@ -878,7 +878,7 @@ describe('PetPickerStep', () => {
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'ameriški koker');
     expect(screen.getByTestId('breed-option-american_cocker_spaniel')).toBeTruthy();
-    fireEvent.changeText(screen.getByTestId('breed-search'), 'cocker');
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'american cocker');
     expect(screen.getByTestId('breed-option-american_cocker_spaniel')).toBeTruthy();
     fireEvent.press(screen.getByTestId('plan-option-challenge'));
     fireEvent.press(screen.getByTestId('breed-option-american_cocker_spaniel'));

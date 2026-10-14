@@ -3668,15 +3668,15 @@ class BreedStageParamsSeeder extends Seeder
                 'notes' => 'Size-class value, not breed-specific (20–30 lb straddles the Small and Medium classes of S10; RKC size "Small", S305, decides).',
             ]],
             'coren_rank' => [20, [
-                'unit' => 'rank', 'source_id' => 'S311', 'confidence' => 'low', 'verified' => true,
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
                 'ref' => 'american_cocker_spaniel.trainability.coren_rank',
-                'quote' => 'The breed ranks 20th in Stanley Coren\'s The Intelligence of Dogs',
-                'notes' => 'Wikipedia breed article (S311) citing Coren 2006, rank 20, tier "Excellent Working Dogs" (ranks 11–26, S35). Coren\'s own article (S34) lists only the top and bottom 10.',
+                'quote' => '| 20 | Cocker Spaniel |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 20 "Cocker Spaniel" (the American breed; the English Cocker Spaniel is listed at 18), tier "Excellent Working Dogs" (ranks 11–26). Coren\'s own article (S34) lists only the top and bottom 10.',
             ]],
             'learning_multiplier' => [1.5, [
-                'unit' => '× mixed-breed learning speed', 'source_id' => 'S311', 'confidence' => 'low', 'verified' => true,
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
                 'ref' => 'proposed_game_parameters.american_cocker_spaniel.learning_multiplier', 'decision' => $decided,
-                'notes' => 'Game value (no literature factor): Coren rank 20 (S311) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+                'notes' => 'Game value (no literature factor): Coren rank 20 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
             ]],
             // Like the other pedigree breeds: no individual variation row.
             'individual_variation' => null,
