@@ -16951,7 +16951,7 @@
   "brittany": {
     "_note": "Added 2026-10-14 (M5-R10-36, unattended run — appended after the Shetland Sheepdog: AKC 2024 No. 31, S174 full-list table '28 English Springer Spaniel', '29 Shetland Sheepdog', '30 Border Collie', '31 Brittany'). Quotes as returned by the web-fetch tool on 2026-10-14 (the tool limits quotes to ~125 characters; apostrophes as returned); spot-check before import (sources.md S296–S302, reused S8, S10, S11, S14, S24, S35, S45, S92, S123, S174, S263). The FCI standard (S297) was read in French (the English PDF was refused by the fetch tool) — French quotes, English in notes. Lifespan: McMillan 2024 / Dogs Trust table (S123) refused by the fetch tool (provenance), no VetCompass Brittany median found → RKC lower bound 'Over 10 years' → senior 90 months, provisional (PetMD S302 '12–14 years', tier B, alternative only). RKC Breed Watch Category 1 (S298) → no welfare chip; not flat-faced → in marketing.",
     "identity": {
-      "value": "FCI No. 95, Group 7 Section 1 (Continental Pointing Dogs), France",
+      "value": "FCI No. 95, Group 7 Section 1.2 (Continental Pointing Dogs, Spaniel type), France",
       "unit": "—",
       "source_id": "S296",
       "quote": "EPAGNEUL BRETON (95)",
