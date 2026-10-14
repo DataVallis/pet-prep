@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "30c615542747725fc59a569224f150b9795c24b82cdfbd98501adfb5e8a1f38a"
+      "sha256": "3ec671e1325adc5084a808bf6a963da356f3d3690561b8de72f2e24bf8b860bd"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "79340abdac4d7f3ae9257e48a02e596d6f89002f9bc9c3ab817a2d4e34dcbfaa"
+      "sha256": "76635d98b41b18af89454c88cc3cf70ea83a26bf980abb75759f1c1d94a62881"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,27 +25,27 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "777bb61641fb7ba34ff23d0b1dca33a71eb91ef2694c286f9a099bf648e130d2"
+      "sha256": "6a22636c6ccc6971b0f39055cdd0e2d5c105095a36ed9a5e79bedeb2144d72b7"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "a39efb0ef508e0aceeb423216589c16247ce3de195e20aa14b6cb9431bcbf8f1"
+      "sha256": "fb9445b53ed525235acd9c21fa640542281791a837b7fbdab42184b5b1dacbbe"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "4976a961f76aced88cff8955eba3e99801c48f72291a59d82f0ce60ef46e6522"
+      "sha256": "2b714f02b4978d7d9e47d58a541adedd1c09e9ba38804c732f1f9fbee41617bf"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "d7c5ac2d76e1c9e429c1aa162433ca4a376a22a39b9e7be5c1883a9d770ef0f8"
+      "sha256": "62d35b0b722d646e7e06687267753a842ee33a700decc1681f03f785200e38d4"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "1bbae5a2d0e374464d4ec8e2f1edb7050c55001a151f7db1f824516b04b8a14c"
+      "sha256": "6a3ecea34ac7623be0f3c108d56d033c3ef01f1260231a9043e70d874514c50c"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "3620a50260ee095a7d56ff5e1dab6378a7881c1863a31c49a78ad97399966502"
+      "sha256": "772839134c2c154bfd6dbdaa1a7fce243abc209b17d3221bccadfc2fd36ed022"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -196,7 +196,7 @@
         }
       },
       "status": "available",
-      "breed_count": 31,
+      "breed_count": 32,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -18878,6 +18878,553 @@
       ]
     },
     {
+      "id": "brittany",
+      "species": "dog",
+      "order": 31,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Brittany",
+        "sl": "Bretonski ptičar"
+      },
+      "slug": {
+        "en": "brittany",
+        "sl": "bretonski-pticar"
+      },
+      "synonyms": {
+        "en": [
+          "Brittany Spaniel",
+          "Epagneul Breton"
+        ],
+        "sl": [
+          "epagneul breton",
+          "bretonski španjel",
+          "bretonski pticar"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S298"
+          ],
+          "ref": "brittany.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              48,
+              51
+            ],
+            "female": [
+              47,
+              50
+            ]
+          },
+          "source_ids": [
+            "S299"
+          ],
+          "ref": "brittany.height.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              13.6,
+              18.1
+            ],
+            "female": [
+              13.6,
+              18.1
+            ]
+          },
+          "source_ids": [
+            "S300"
+          ],
+          "ref": "brittany.adult_weight.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "brittany.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S298"
+          ],
+          "ref": "brittany.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S298"
+          ],
+          "ref": "brittany.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S298"
+          ],
+          "ref": "brittany.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S298"
+          ],
+          "ref": "brittany.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S298"
+          ],
+          "ref": "brittany.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 19,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "brittany.trainability.coren_rank",
+          "confidence": "low"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 95,
+            "group": 7,
+            "section": 1,
+            "origin": "FR"
+          },
+          "source_ids": [
+            "S296"
+          ],
+          "ref": "brittany.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia_arthritis",
+          "source_ids": [
+            "S302"
+          ],
+          "ref": "brittany.health.hip_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S302"
+          ],
+          "ref": "brittany.health.epilepsy",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S302"
+          ],
+          "ref": "brittany.health.hypothyroidism",
+          "confidence": "medium"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S302"
+          ],
+          "ref": "brittany.health.cataracts",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S298",
+              "S301"
+            ],
+            "refs": [
+              "brittany.exercise.adult",
+              "brittany.exercise.energy"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S302"
+            ],
+            "refs": [
+              "brittany.suitability.petmd_family",
+              "brittany.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S301",
+              "S302"
+            ],
+            "refs": [
+              "brittany.suitability.petmd_children",
+              "brittany.suitability.akc_children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S298"
+            ],
+            "refs": [
+              "brittany.exercise.adult",
+              "brittany.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S301"
+            ],
+            "refs": [
+              "brittany.behaviour.mental_stimulation",
+              "brittany.suitability.akc_mental_exercise"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S302"
+            ],
+            "refs": [
+              "brittany.behaviour.time_alone",
+              "brittany.suitability.petmd_time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S298"
+            ],
+            "refs": [
+              "brittany.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S302"
+            ],
+            "refs": [
+              "brittany.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.brittany.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S298"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S298 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.brittany.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.brittany.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S298"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S298)"
+          },
+          {
+            "ref": "proposed_game_parameters.brittany.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 19, Excellent tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.brittany.grooming",
+            "basis_source_ids": [
+              "S301"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »More than once a week« brez števila → AKC »Weekly brushing« → 1; PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S298",
+          "S301"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_found",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S296",
+        "S298",
+        "S299",
+        "S300",
+        "S301",
+        "S302",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -22481,6 +23028,48 @@
       "publisher": "American Kennel Club — Micaela Erickson (published 2026-04-22)",
       "title": "Is the Shetland Sheepdog a Good Fit for You?",
       "url": "https://www.akc.org/expert-advice/dog-breeds/shetland-sheepdog-right-for-you/"
+    },
+    {
+      "id": "S296",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — EPAGNEUL BRETON (95)",
+      "url": "https://fci.be/EN/nomenclature/EPAGNEUL-BRETON-95.html"
+    },
+    {
+      "id": "S298",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Brittany — breed information page (Breeds A to Z)",
+      "url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/gundog/brittany"
+    },
+    {
+      "id": "S299",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club",
+      "title": "Brittany — breed standard",
+      "url": "https://www.thekennelclub.org.uk/breed-standards/gundog/brittany"
+    },
+    {
+      "id": "S300",
+      "tier": "A",
+      "publisher": "American Kennel Club",
+      "title": "Official Standard for the Brittany (PDF, approved 1990-04-10)",
+      "url": "https://images.akc.org/pdf/breeds/standards/Brittany.pdf"
+    },
+    {
+      "id": "S301",
+      "tier": "B",
+      "publisher": "American Kennel Club",
+      "title": "Is the Brittany a Good Fit for Your Lifestyle?",
+      "url": "https://www.akc.org/expert-advice/dog-breeds/brittany-right-for-you/"
+    },
+    {
+      "id": "S302",
+      "tier": "B",
+      "publisher": "PetMD",
+      "title": "Brittany (Brittany Spaniel) — dog breed health and care",
+      "url": "https://www.petmd.com/dog/breeds/brittany-spaniel"
     },
     {
       "id": "C1",
