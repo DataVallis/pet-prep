@@ -187,7 +187,18 @@
     "createPin": "Create a code",
     "awaitingContract": "The dog is waiting for {{name}} to sign the Responsibility Contract.",
     "details": "Details",
-    "detailsA11y": "Details: {{name}}"
+    "detailsA11y": "Details: {{name}}",
+    "playAs": "Play as {{name}}",
+    "playAsHint": "Opens {{name}}'s game on this phone and signs you out. To come back, sign in again.",
+    "playAsSteps": "{{name}}'s steps count only while their profile is chosen. Choose this profile before a walk.",
+    "playAsErrors": {
+      "no_pet": "First create a sign-in code and enter it in the child's profile.",
+      "not_found": "This child is no longer in your family.",
+      "update_required": "Update the app to play with this pet.",
+      "throttled": "Too many switches. Please try again in a minute.",
+      "offline": "Can't reach the server. Check your internet connection and try again.",
+      "failed": "Switching didn't work. Please try again."
+    }
   },
   "petControls": {
     "caretakers": "Cared for by {{names}}",

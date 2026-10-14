@@ -5,11 +5,13 @@
  */
 
 import { useCallback, useEffect, useRef } from 'react';
+import { AppState } from 'react-native';
 
 import { setUnauthorizedHandler } from '@/api/client';
 import { useAppStore } from '@/store/appStore';
 import { logout } from './logout';
-import { restoreSession } from './restoreSession';
+import { migrateLegacyProfiles, restoreSession } from './restoreSession';
+import { retryPendingRevokes } from './profiles';
 
 export function useSessionBootstrap(): { retry: () => void } {
   // Only the newest run may apply its result (e.g. a quick double "Poskusi znova",
@@ -21,6 +23,12 @@ export function useSessionBootstrap(): { retry: () => void } {
     const store = useAppStore.getState();
     store.setBootStatus('restoring');
     const result = await restoreSession();
+    // M2-11: revoke + delete what the first profile-switch draft left (dev builds only).
+    if (runId === 1) {
+      void migrateLegacyProfiles().catch(() => undefined);
+      // M2-11 QA n1: tokens that couldn't be revoked last time (offline).
+      void retryPendingRevokes();
+    }
     if (runId !== runIdRef.current) return;
     if (result.status === 'authenticated') {
       useAppStore.getState().signIn(result.session);
@@ -36,9 +44,14 @@ export function useSessionBootstrap(): { retry: () => void } {
       void logout({ revoke: false });
     });
     void run();
+    // M2-11 QA n1: queued token revokes are retried whenever the app comes back.
+    const foreground = AppState.addEventListener('change', (state) => {
+      if (state === 'active') void retryPendingRevokes();
+    });
     return () => {
       runIdRef.current += 1; // invalidate an in-flight run on unmount
       setUnauthorizedHandler(null);
+      foreground.remove();
     };
   }, [run]);
 

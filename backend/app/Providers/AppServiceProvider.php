@@ -24,6 +24,9 @@ class AppServiceProvider extends ServiceProvider
 
     public const REGISTER_PER_HOUR = 20;
 
+    /** M2-11: POST /api/parent/children/{child}/device-session per parent. */
+    public const CHILD_DEVICE_SESSION_PER_MINUTE = 20;
+
     /** M2-10c: POST /api/auth/social per IP. */
     public const SOCIAL_SIGN_IN_PER_MINUTE = 10;
 
@@ -153,6 +156,14 @@ class AppServiceProvider extends ServiceProvider
                 Limit::perMinute(self::SOCIAL_SIGN_IN_PER_MINUTE)->by($key.':minute'),
                 Limit::perHour(self::SOCIAL_SIGN_IN_PER_HOUR)->by($key.':hour'),
             ];
+        });
+
+        // Profile switching on one phone (M2-11): a parent switches a few times a
+        // day; 20 / min per parent stops a loop from churning child tokens. Live
+        // in testing (like register).
+        RateLimiter::for('child-device-session', function (Request $request) {
+            return Limit::perMinute(self::CHILD_DEVICE_SESSION_PER_MINUTE)
+                ->by('child-device-session:'.($request->user()?->id ?: ClientIp::rateLimitKey($request->ip())));
         });
 
         // Second-parent invite codes (M2-01): a parent needs one or two;

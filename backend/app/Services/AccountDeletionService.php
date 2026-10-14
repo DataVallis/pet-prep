@@ -688,6 +688,9 @@ class AccountDeletionService
         // of a deleted account, even from a send job already queued.
         app(PushDeviceService::class)->removeForUsers($userIds);
         PersonalAccessToken::where('tokenable_type', User::class)->whereIn('tokenable_id', $userIds)->delete();
+        // M2-11: child sessions these users opened on a shared phone die with
+        // them (a parent leaving a family keeps no way into its children).
+        $this->deleteSharedChildSessions($userIds);
         DB::table('sessions')->whereIn('user_id', $userIds)->delete();
 
         $emails = User::whereIn('id', $userIds)->whereNotNull('email')->pluck('email')->all();
@@ -696,6 +699,22 @@ class AccountDeletionService
         }
 
         User::whereIn('id', $userIds)->delete();
+    }
+
+    /**
+     * Delete the shared-phone child sessions (M2-11) opened by these parents:
+     * child tokens named `shared:p{parentId}:…` (ChildPinLoginService).
+     *
+     * @param  list<int>  $parentIds
+     */
+    private function deleteSharedChildSessions(array $parentIds): void
+    {
+        foreach ($parentIds as $parentId) {
+            $prefix = addcslashes(ChildPinLoginService::SHARED_TOKEN_PREFIX.$parentId.':', '\\%_');
+            PersonalAccessToken::where('tokenable_type', User::class)
+                ->where('name', 'like', $prefix.'%')
+                ->delete();
+        }
     }
 
     private function assertNotSuperadmin(User $user): void

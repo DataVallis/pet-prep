@@ -77,6 +77,11 @@ export interface SignInPayload {
    * a deletion asks for the password or a fresh Google / Apple sign-in. Missing → password.
    */
   signInMethod?: SignInMethod;
+  /**
+   * M2-11: a child session the parent opened on this phone with »Igraj kot« (stored in
+   * `profiles.ts`). Its "Starš?" opens the parent login instead of the parental gate.
+   */
+  sharedSession?: boolean;
 }
 
 /** The session pet with the server's per-child contract flag applied (if any). */
@@ -127,6 +132,11 @@ interface AppStore {
   user: AppUser | null;
   /** M2-10c: how this parent signed in here — fallback for `authMethods` (older payloads). */
   signInMethod: SignInMethod;
+  /** M2-11: the active child session was opened by a parent on this phone (»Igraj kot«). */
+  sharedSession: boolean;
+  /** M2-11: the parent login is shown over a shared child session (»Nazaj k staršu«). */
+  parentLoginOpen: boolean;
+  setParentLoginOpen: (open: boolean) => void;
   /** M2-10c (QA m1): the server's `has_password` / `linked_providers`; null = unknown. */
   authMethods: AuthMethods | null;
   setAuthMethods: (authMethods: AuthMethods | null) => void;
@@ -238,6 +248,9 @@ export const useAppStore = create<AppStore>((set, get) => ({
   authToken: null,
   user: null,
   signInMethod: 'password',
+  sharedSession: false,
+  parentLoginOpen: false,
+  setParentLoginOpen: (parentLoginOpen) => set((state) => (state.parentLoginOpen === parentLoginOpen ? {} : { parentLoginOpen })),
   authMethods: null,
   setAuthMethods: (authMethods) => set({ authMethods }),
   pairingStatus: 'unpaired',
@@ -246,12 +259,14 @@ export const useAppStore = create<AppStore>((set, get) => ({
   setUser: (user) => set({ user }),
   setPairingStatus: (status, error = null) =>
     set({ pairingStatus: status, pairingError: error }),
-  signIn: ({ token, user, pet, awaitingContract, familyTimezone, signInMethod }) => {
+  signIn: ({ token, user, pet, awaitingContract, familyTimezone, signInMethod, sharedSession }) => {
     const sessionPet = petWithContractFlag(pet, awaitingContract);
     set({
       authToken: token,
       user: { id: user.id, name: user.name, email: user.email, role: user.role },
       signInMethod: signInMethod ?? 'password',
+      sharedSession: user.role === 'child' && sharedSession === true,
+      parentLoginOpen: false,
       authMethods: readAuthMethods(user),
       pet: sessionPet,
       pairingStatus: sessionPet ? 'paired' : 'unpaired',
@@ -375,6 +390,8 @@ export const useAppStore = create<AppStore>((set, get) => ({
       authToken: null,
       user: null,
       signInMethod: 'password',
+      sharedSession: false,
+      parentLoginOpen: false,
       authMethods: null,
       pairingStatus: 'unpaired',
       pairingError: null,

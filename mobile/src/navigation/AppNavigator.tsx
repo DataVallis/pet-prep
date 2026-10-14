@@ -1,5 +1,5 @@
 import { Component, useEffect, type ErrorInfo, type ReactNode } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { BackHandler, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 
 import { isAwaitingContract, useAppStore, type LockState } from '@/store/appStore';
@@ -9,6 +9,8 @@ import { usePushNotifications } from '@/modules/push/usePushNotifications';
 import { usePurchasesSession } from '@/modules/purchases/usePurchases';
 import SplashScreen from '@/screens/SplashScreen';
 import StartScreen from '@/screens/StartScreen';
+import ParentLoginScreen from '@/screens/ParentLoginScreen';
+import { afterParentSignIn } from '@/modules/session/profileSwitch';
 import ContractScreen from '@/screens/ContractScreen';
 import LockedScreen from '@/screens/LockedScreen';
 import ChildHudScreen from '@/screens/ChildHudScreen';
@@ -72,9 +74,23 @@ function DarkStatusBar() {
   return null;
 }
 
+/**
+ * M2-11: whenever a parent account becomes active (login, sign-up, Google / Apple, restore),
+ * close shared children's step windows and drop other parents' stored child sessions.
+ */
+function useParentSignInHousekeeping(): void {
+  const parentId = useAppStore((s) => (s.authToken !== null && s.bootStatus === 'ready' && s.user?.role === 'parent' ? s.user.id : null));
+  useEffect(() => {
+    if (parentId === null) return;
+    void afterParentSignIn(parentId).catch(() => undefined);
+  }, [parentId]);
+}
+
 export default function AppNavigator() {
   const authToken = useAppStore((s) => s.authToken);
   const user = useAppStore((s) => s.user);
+  const parentLoginOpen = useAppStore((s) => s.parentLoginOpen);
+  const setParentLoginOpen = useAppStore((s) => s.setParentLoginOpen);
   const pet = useAppStore((s) => s.pet);
   const lockState = useAppStore((s) => s.lockState);
   const bootStatus = useAppStore((s) => s.bootStatus);
@@ -86,6 +102,16 @@ export default function AppNavigator() {
   usePushNotifications();
   // M3-07: identify a parent session with RevenueCat (never a child; no-op without keys).
   usePurchasesSession();
+  useParentSignInHousekeeping();
+  // M2-11: Android back on the parent login over a shared child session → back to the child.
+  useEffect(() => {
+    if (!parentLoginOpen) return;
+    const subscription = BackHandler.addEventListener('hardwareBackPress', () => {
+      setParentLoginOpen(false);
+      return true;
+    });
+    return () => subscription.remove();
+  }, [parentLoginOpen, setParentLoginOpen]);
 
   if (bootStatus !== 'ready') {
     return (
@@ -114,6 +140,10 @@ export default function AppNavigator() {
           <StartScreen />
         ) : user.role === 'parent' ? (
           <ParentDashboardScreen />
+        ) : parentLoginOpen ? (
+          // M2-11 »Nazaj k staršu« in a shared child session: the parent's real sign-in.
+          // »Nazaj« returns to the child; a successful login makes the parent active.
+          <ParentLoginScreen onBack={() => setParentLoginOpen(false)} />
         ) : (
           <>
             {pet !== null && <DarkStatusBar />}

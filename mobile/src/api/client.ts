@@ -236,6 +236,9 @@ export interface PinLoginErrorBody {
   retry_after?: number;
 }
 
+/** `POST /api/parent/children/{child}/device-session` body (M2-11). */
+export type ChildDeviceSessionRequest = components['schemas']['ChildDeviceSessionRequest'];
+
 /** `POST /api/parent/children` body / 201 response (M2-02). */
 export type CreateChildRequest = components['schemas']['CreateChildRequest'];
 export type CreateChildResponse =
@@ -619,9 +622,14 @@ async function apiRequest<T>(
     signal?: AbortSignal;
     /** Send no Bearer token (public endpoints such as the child PIN login). */
     anonymous?: boolean;
+    /**
+     * M2-11: send THIS token instead of the stored one (a token that is not the active
+     * session). A 401 for it never triggers the unauthorized handler.
+     */
+    token?: string;
   } = {},
 ): Promise<T> {
-  const token = options.anonymous ? null : await getAuthToken();
+  const token = options.anonymous ? null : options.token !== undefined ? options.token : await getAuthToken();
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
     Accept: 'application/json',
@@ -684,6 +692,9 @@ export const api = {
     apiRequest<LoginResponse>('/api/login', {
       method: 'POST',
       body: { email, password, device_name: deviceName },
+      // Public endpoint: never send the active session's token. M2-11 QA B1: over a shared
+      // child session a wrong password (401) must not look like a rejected session token.
+      anonymous: true,
     }),
 
   /**
@@ -734,6 +745,28 @@ export const api = {
       body: { expo_push_token: expoPushToken } satisfies components['schemas']['UnregisterDeviceRequest'],
       signal,
     }),
+
+  /**
+   * M2-11: revoke a token that is NOT the active session (the parent's when »Igraj kot«
+   * starts, a stored shared child session). A 401 never triggers the unauthorized handler.
+   */
+  logoutToken: (token: string, signal?: AbortSignal) =>
+    apiRequest<{ message: string }>('/api/logout', { method: 'POST', signal, token }),
+
+  /**
+   * POST /api/parent/children/{child}/device-session (M2-11, parent token) — open this
+   * child's profile on the parent's phone without a PIN. 200 = the pin-login body
+   * (`mode: relogin`); one shared session per parent and child (a new call replaces the
+   * previous token). 404 `child_not_found`, 409 `no_pet`, 422 `app_update_required`, 429.
+   */
+  childDeviceSession: (childId: number, deviceName: string) =>
+    apiRequest<PinLoginResponse>(`/api/parent/children/${childId}/device-session`, {
+      method: 'POST',
+      body: { device_name: deviceName, features: [...CLIENT_FEATURES] } satisfies ChildDeviceSessionRequest,
+    }),
+
+  /** M2-11: `GET /api/user` for a stored shared child session's token (checked before reuse). */
+  getUserWithToken: (token: string) => apiRequest<UserResponse>('/api/user', { token }),
 
   /** POST /api/logout — Revoke the current token. Pass a signal to abort (offline logout). */
   logout: (signal?: AbortSignal) =>

@@ -148,6 +148,30 @@ describe('useStepSync', () => {
     expect(client.getQueryData<ChildPetView>(childPetKey)?.steps.steps_today).toBe(2400);
   });
 
+  it('M2-11 shared session: iOS counts only the child\'s active windows of today (summed)', async () => {
+    useAppStore.setState({ sharedSession: true });
+    const { pedometer } = makePedometer({
+      getStepCountAsync: jest.fn(async (start: Date) => ({ steps: start.getUTCHours() === 5 ? 700 : 300 })),
+    } as Partial<StepSyncDeps['pedometer']>);
+    const stepWindows = jest.fn(async () => ({
+      '2': [
+        { start: Date.parse('2026-10-04T05:00:00Z'), end: Date.parse('2026-10-04T06:00:00Z') },
+        { start: Date.parse('2026-10-04T09:30:00Z'), end: null },
+      ],
+      '5': [{ start: Date.parse('2026-10-04T06:00:00Z'), end: Date.parse('2026-10-04T09:30:00Z') }],
+    }));
+    setup({ platform: 'ios', pedometer, stepWindows }, { mine: 0 });
+    await flush();
+    await flush();
+
+    const calls = (pedometer.getStepCountAsync as jest.Mock).mock.calls as Array<[Date, Date]>;
+    expect(calls.map(([a, b]) => [a.toISOString(), b.toISOString()])).toEqual([
+      ['2026-10-04T05:00:00.000Z', '2026-10-04T06:00:00.000Z'],
+      ['2026-10-04T09:30:00.000Z', '2026-10-04T10:00:00.000Z'],
+    ]);
+    expect((syncSteps.mock.calls[0][0] as { steps_today: number }).steps_today).toBe(1000);
+  });
+
   it('iOS, family New York: at 02:00Z the family day is still 3 Oct → from 04:00Z on 3 Oct', async () => {
     jest.setSystemTime(new Date('2026-10-04T02:00:00Z'));
     const { pedometer } = makePedometer();

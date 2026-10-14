@@ -14,6 +14,8 @@
   "parentalGate": {
     "link": "Parent?",
     "linkA11y": "For parents: sign the child out",
+    "linkA11ySwitch": "For parents: parent sign-in",
+    "backToParent": "Back to parent",
     "title": "For parents",
     "prompt": "To continue, please answer:",
     "question": "What is {{a}} × {{b}}?",

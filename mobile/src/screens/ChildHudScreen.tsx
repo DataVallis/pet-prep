@@ -108,9 +108,8 @@ import { computeHudLayout, METRICS_RESERVED_RIGHT, METRICS_RIGHT, type HudLayout
 import { WS_BADGE_STRINGS, wsBadge } from '@/modules/hud/wsBadge';
 import { formatSteps } from '@/modules/steps/stepCounter';
 import { useStepSync } from '@/modules/steps/useStepSync';
-import { logout } from '@/modules/session/logout';
-import ParentalGate from '@/components/ParentalGate';
-import { useParentalGate } from '@/modules/parentalGate/useParentalGate';
+import { useChildExit } from '@/modules/session/useChildExit';
+import ParentalGate, { PARENTAL_GATE_STRINGS } from '@/components/ParentalGate';
 import ActionButton from '@/components/ActionButton';
 import PetAlbum from '@/components/PetAlbum';
 import { ALBUM_STRINGS, hasAlbum } from '@/modules/petMedia/album';
@@ -513,9 +512,10 @@ export default function ChildHudScreen() {
   );
 
   // David 2026-10-14: the child can't sign out by accident — the logout goes through the
-  // parental gate (a lost session needs the parent's new PIN).
-  const logoutGate = useParentalGate({ onPass: () => void logout() });
-  const handleLogout = logoutGate.open;
+  // parental gate (a lost session needs the parent's new PIN). M2-11: in a shared session
+  // (»Igraj kot« on the parent's phone) the same button opens the parent login.
+  const childExit = useChildExit();
+  const handleLogout = childExit.open;
 
   // M5-R09c »Ali si vedel?«: never over a game, a layer or another sheet; the chip waits under a layer.
   const dockLayerOpen =
@@ -551,7 +551,7 @@ export default function ChildHudScreen() {
             <Pressable accessibilityRole="button" onPress={handleLogout} style={styles.linkButton} testID="hud-error-logout">
               <Text style={styles.linkText}>{HUD_STRINGS.logout}</Text>
             </Pressable>
-            <ParentalGate {...logoutGate.props} />
+            <ParentalGate {...childExit.gateProps} />
           </View>
         ) : (
           <View style={styles.centeredBox} testID="hud-loading">
@@ -789,14 +789,14 @@ export default function ChildHudScreen() {
             )}
             <Pressable
               accessibilityRole="button"
-              accessibilityLabel={HUD_STRINGS.logout}
+              accessibilityLabel={childExit.shared ? PARENTAL_GATE_STRINGS.backToParent : HUD_STRINGS.logout}
               style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
               onPress={handleLogout}
               testID="hud-logout"
             >
               <LogOut color={palette.n400} size={16} />
             </Pressable>
-            <ParentalGate {...logoutGate.props} />
+            <ParentalGate {...childExit.gateProps} />
           </View>
         </View>
 
