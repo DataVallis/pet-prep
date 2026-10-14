@@ -1245,7 +1245,7 @@ flowchart TD
 
   J --> G
   LJ --> G
-  G["FalGateway (only fal HTTP client)<br/>LogicException inside a DB transaction<br/>profile from config/media.php"] --> R{"AiSpendGuard::reserve<br/>advisory lock, own short transaction<br/>pets budget (/admin → AI budget, else env) or separate lab budget (env)<br/>today + month (reserved + committed)"}
+  G["FalGateway (only fal HTTP client)<br/>LogicException inside a DB transaction<br/>profile from config/media.php"] --> R{"AiSpendGuard::reserve<br/>advisory lock, own short transaction<br/>pets budget (/admin → AI budget, else env) or separate lab budget (/admin → AI budget → AI Lab, else env)<br/>today + month (reserved + committed)"}
   R -- over cap --> X1["AiCallException budget_daily / budget_monthly<br/>no HTTP; pet: media_status failed + media_error"]
   R -- "ok: ledger row reserved" --> H["HTTP outside any transaction<br/>sync: fal.run/endpoint (images)<br/>queue: queue.fal.run/endpoint + fal_webhook (videos)"]
   H -- 2xx --> C[ledger committed]
