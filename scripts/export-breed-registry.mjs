@@ -408,6 +408,7 @@ const SPECIES = [
       { id: 'shetland_sheepdog', synonyms: { en: ['Sheltie', 'Shetland Collie'], sl: ['sheltie', 'šeltie', 'setlandski ovcar'] } },
       { id: 'brittany', synonyms: { en: ['Brittany Spaniel', 'Epagneul Breton'], sl: ['epagneul breton', 'bretonski španjel', 'bretonski pticar'] } },
       { id: 'american_cocker_spaniel', synonyms: { en: ['American Cocker', 'Cocker Spaniel (USA)'], sl: ['ameriški koker', 'ameriski koker spanjel'] } },
+      { id: 'belgian_malinois', synonyms: { en: ['Malinois', 'Belgian Shepherd Dog (Malinois)', 'Mal'], sl: ['malinois', 'belgijski ovcar malinois'] } },
     ],
   },
   {
@@ -432,7 +433,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -1125,6 +1126,27 @@ const DOG_FACTS = {
       ['pra_eye_disease', 'health.prcd_pra'],
     ],
   },
+  // M5-R10-38. Not exported: adult_weight.akc_article / adult_weight.petmd (wider / heavier than the FCI
+  // standard), adult_weight.salt_category (our assignment), lifespan.petmd (not in the runbook's lifespan
+  // order), lifespan.mcmillan_2024 (Wikipedia, tier C), lifespan.senior_from (derived), suitability.rkc_coat_length
+  // (RKC "Medium" vs the standards' short coat), suitability.akc_grooming / petmd_grooming (free text "occasional";
+  // the RKC "More than once a week" is shown), suitability.rkc_breed_watch (Category 1). Food motivation: no source.
+  // Lifespan = the RKC band "Over 10 years" (S314). New health key pra_inherited_blindness (no test claim).
+  belgian_malinois: {
+    height: ['height.fci', 'height.akc'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: [],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_joint_disease', 'health.hip_elbow_dysplasia'],
+      ['cataracts', 'health.cataracts'],
+      ['pra_inherited_blindness', 'health.pra'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1398,6 +1420,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.american_cocker_spaniel.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.american_cocker_spaniel.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.american_cocker_spaniel.exercise_minutes_senior',
+  },
+  belgian_malinois: {
+    adult_minutes: ['proposed_game_parameters.belgian_malinois.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.belgian_malinois.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.belgian_malinois.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.belgian_malinois.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.belgian_malinois.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.belgian_malinois.exercise_minutes_senior',
   },
 };
 
