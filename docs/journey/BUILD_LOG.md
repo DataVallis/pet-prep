@@ -9,6 +9,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-14 — Šetlandski ovčar: sedemnajsta pasma po dvajsetih (M5-R10-35)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **šetlandskega ovčarja** ali »sheltieja« (29. mesto; 30. mesto, border collie, je v aplikaciji že od začetka). Enaintrideseta plačljiva pasma psa; v izbirniku je zdaj 32 psov (z mešančkom). Majhen ovčarski pes iz Velike Britanije (po standardu FCI idealno 37 cm za psa in 35,5 cm za psico, 6,8–11,3 kg po American Kennel Club): do ene ure gibanja na dan (6.000 korakov za odraslega psa, 4.500 za starejšega), česanje vsak dan in tedenska »Nova izkušnja« za mladička.
+
+**Zakaj je pomembno:** Sheltie je nežen družinski pes, a z dvojno dlako in pastirskim nagonom: The Royal Kennel Club in PDSA pišeta, da ga je treba česati vsak dan, American Kennel Club pa, da potrebuje redno telesno in miselno zaposlitev in da se zaradi pastirskega nagona najbolje znajde s starejšimi otroki. Zato v izbirniku dobi oznaki »družinsko življenje« in »z otroki«, a tudi »potrebuje miselne izzive«, »pri igri lahko »pase« otroke«, »potrebuje česanje večkrat na teden« in »izpada mu dlaka« — česanje vsak dan je tako najpogostejša rutina v 12-tedenskem izzivu. Mejo starejšega psa (7 let in 6 mesecev) je sistem tokrat vzel iz spodnje meje »več kot 10 let« (The Royal Kennel Club, PDSA), ker velike britanske raziskave življenjske dobe (McMillan 2024) v tem zagonu ni mogel prebrati — meja je **začasna** in čaka Davida. Pasma **sme biti v marketingu** (ni pes s sploščenim obrazom), a nikoli kot pretežno bel dvojni merle in nikoli kot tih pes (American Kennel Club: »very vocal«). Striženja krempljev in dlake med blazinicami tačk (American Kennel Club) igra še ne vodi — *načrt* (M5-R19).
+
+**Številke:** 7 novih virov (S289–S295), 1 migracija, brez nove oznake, 1 nov ključ zdravja v registru (brez statistik), 3 novi ključi testov DNK za vzreditelja, 2 + 4 oznake v izbirniku, 2 zgrajeni potrebi z virom (česanje vsak dan, socializacija) in 1 v načrtu (kremplji), dnevni cilj 6.000 korakov, učenje 1,8×, meja starejšega 90 mesecev (začasno), 32 psov v izbirniku (31 plačljivih + mešanček); testi: nov `ShetlandSheepdogBreedTest`, izvoz registra 59 testov, 3.080 testov Pest in 2.530 testov Jest zelenih. Portret in stran v registru sledita po objavi (do naslednje izdaje aplikacije stran kaže »Kmalu«). Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Sheltie je nežen družinski pes, a njegova dolga dlaka potrebuje česanje vsak dan in rad bi imel tudi nalogo za glavo. V PetPrepu boste videli, ali vaš otrok res vsak dan zmore počesati psa in z njim prehoditi 6.000 korakov, preden se odločite za pravega.«
+- 🧒 Otroci: »Sheltie je majhen, pameten ovčar s puhasto grivo. Vsak dan ga počeši, pelji na sprehod in ga nauči kaj novega!«
+- 💼 Investitorji: »Sedemnajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC; vse vrednosti po potrjenih pravilih in z viri; odprta vprašanja (začasna meja starejšega psa, Breed Watch brez imenovane točke) so zapisana za ustanovitelja.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri sheltieju pokaže teste staršev po The Royal Kennel Club — genetsko raznolikost in pregled oči z leglom kot minimum ter teste DNK (CEA/CH, MDR1, dve obliki PRA, von Willebrandova bolezen) in pregled komolcev in kolkov kot najboljšo prakso — brez obljub o zdravju.«
+- 📣 Omrežja: sheltieja **lahko objavljamo** (ni pes s sploščenim obrazom), sable z belim ovratnikom; nikoli pretežno bel dvojni merle in nikoli kot »tih pes«.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje (7× na teden) in socializacija sta samo novi vrstici v `breed_stage_params`; meja starejšega 90 iz spodnje meje RKC je začasna (na seznamu za Davida); izvoz registra dobi en nov ključ zdravja (`collie_eye_pra`) in tri nove ključe testov za vzreditelja.«
+
+---
+
 ## 2026-10-14 — Angleški springer španjel: šestnajsta pasma po dvajsetih (M5-R10-34)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **angleškega springer španjela** (28. mesto). Trideseta plačljiva pasma psa; v izbirniku je zdaj 31 psov (z mešančkom). Srednje velik lovski pes iz Velike Britanije (18–23 kg, približno 51 cm): več kot 2 uri gibanja na dan (12.000 korakov za odraslega psa, 9.000 za starejšega), česanje 2× na teden in tedenska »Nova izkušnja« za mladička.
