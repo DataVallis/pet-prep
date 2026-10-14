@@ -135,7 +135,9 @@ class FeatureSwitches extends Page implements HasForms
      */
     public function getChanges(): Collection
     {
-        return AppSettingChange::with('user:id,name,email')->latest('id')->limit(20)->get();
+        return AppSettingChange::with('user:id,name,email')
+            ->where('key', AppSettingsService::CATS_KEY)
+            ->latest('id')->limit(20)->get();
     }
 
     /**

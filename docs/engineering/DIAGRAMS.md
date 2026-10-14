@@ -1245,14 +1245,14 @@ flowchart TD
 
   J --> G
   LJ --> G
-  G["FalGateway (only fal HTTP client)<br/>LogicException inside a DB transaction<br/>profile from config/media.php"] --> R{"AiSpendGuard::reserve<br/>advisory lock, own short transaction<br/>pets budget or separate lab budget<br/>today + month (reserved + committed)"}
+  G["FalGateway (only fal HTTP client)<br/>LogicException inside a DB transaction<br/>profile from config/media.php"] --> R{"AiSpendGuard::reserve<br/>advisory lock, own short transaction<br/>pets budget (/admin → AI budget, else env) or separate lab budget (env)<br/>today + month (reserved + committed)"}
   R -- over cap --> X1["AiCallException budget_daily / budget_monthly<br/>no HTTP; pet: media_status failed + media_error"]
   R -- "ok: ledger row reserved" --> H["HTTP outside any transaction<br/>sync: fal.run/endpoint (images)<br/>queue: queue.fal.run/endpoint + fal_webhook (videos)"]
   H -- 2xx --> C[ledger committed]
   H -- "402 / 403 exhausted balance" --> B["ledger void, fal_balance<br/>Log::critical once per hour<br/>Filament flag 24 h"]
   H -- "4xx/5xx answer or not sent (DNS / connect / TLS)" --> E["ledger void, http_error<br/>reference image: queue retry"]
   H -- "timeout / reset after sending" --> T["ledger committed + http_error (cost kept)<br/>lab video: status unknown"]
-  X1 -.-> RT["daily media:retry<br/>(budget / balance: images, then videos) + Filament Retry image"]
+  X1 -.-> RT["daily media:retry<br/>(budget / balance: images, then videos) + Filament Retry image<br/>+ /admin → AI budget → Retry blocked media now"]
   S2 -.-> SW["hourly media:sweep-lab: running > 1 h → timed_out"]
   C --> S1["image url (*.fal.media) → pet_media image slot → StorePetMedia / lab result"]
   C --> S2["request_id → pet_media / media_lab_results"]
@@ -1304,7 +1304,7 @@ sequenceDiagram
 
 ```mermaid
 flowchart LR
-  F{"failure"} --> B["budget / fal balance / disabled"] --> BF["slot failed + reason<br/>pet playable without media"] --> RT["daily media:retry (00:23 UTC)<br/>within budget: images, then videos"]
+  F{"failure"} --> B["budget / fal balance / disabled"] --> BF["slot failed + reason<br/>pet playable without media"] --> RT["daily media:retry (00:23 UTC)<br/>or /admin → AI budget → Retry blocked media now<br/>within budget: images, then videos"]
   F --> N["fal 5xx / network before acceptance"] --> QR["queue retry 30 s · 2 min · 10 min"] --> GF["failed http_error"]
   F --> T["submit timed out after sending"] --> TK["failed http_error, cost kept"]
   F --> E["webhook ERROR / non-fal URL"] --> EF["failed generation_failed / invalid_response"]
