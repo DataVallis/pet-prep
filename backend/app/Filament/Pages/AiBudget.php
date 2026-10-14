@@ -20,6 +20,7 @@ use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
 use InvalidArgumentException;
 
 /**
@@ -75,6 +76,7 @@ class AiBudget extends Page implements HasForms
         $this->form->fill([
             'daily_usd' => $stored['daily_usd'],
             'monthly_usd' => $stored['monthly_usd'],
+            ...self::prefixed('lab_', $settings->storedAiLabBudget()),
         ]);
     }
 
@@ -121,7 +123,52 @@ class AiBudget extends Page implements HasForms
                             ->hiddenLabel()
                             ->content(__('admin.ai_budget.help')),
                     ]),
+                // M4-07c: the separate AI Lab budget (model comparisons, breed portraits).
+                Section::make(__('admin.ai_budget.lab_section'))
+                    ->description(__('admin.ai_budget.lab_description'))
+                    ->schema([
+                        Placeholder::make('lab_spent')
+                            ->label(__('admin.ai_budget.spent'))
+                            ->content(fn (): string => __('admin.ai_budget.spent_value', [
+                                'today' => sprintf('%.2f', $guard->spentTodayUsd(true)),
+                                'daily' => sprintf('%.2f', $guard->labDailyCapUsd()),
+                                'month' => sprintf('%.2f', $guard->spentThisMonthUsd(true)),
+                                'monthly' => sprintf('%.2f', $guard->labMonthlyCapUsd()),
+                                'tz' => $guard->timezone(),
+                            ])),
+                        self::amountInput('lab_daily_usd', __('admin.ai_budget.daily'), AppSettingsService::AI_LAB_MAX_DAILY_USD, $guard->envLabDailyCapUsd(), 'AI_LAB_DAILY_USD'),
+                        self::amountInput('lab_monthly_usd', __('admin.ai_budget.monthly'), AppSettingsService::AI_LAB_MAX_MONTHLY_USD, $guard->envLabMonthlyCapUsd(), 'AI_LAB_MONTHLY_USD'),
+                        self::amountInput('lab_max_run_usd', __('admin.ai_budget.lab_max_run'), AppSettingsService::AI_LAB_MAX_RUN_CEILING_USD, $guard->envLabMaxRunUsd(), 'AI_LAB_MAX_RUN_USD'),
+                    ]),
             ]);
+    }
+
+    private static function amountInput(string $name, string $label, float $max, float $envDefault, string $envKey): TextInput
+    {
+        return TextInput::make($name)
+            ->label($label)
+            ->numeric()
+            ->prefix('$')
+            ->minValue(0)
+            ->maxValue($max)
+            ->step(0.01)
+            ->nullable()
+            ->placeholder(sprintf('%.2f', $envDefault))
+            ->helperText(__('admin.ai_budget.env_default', ['value' => sprintf('%.2f', $envDefault), 'env' => $envKey]));
+    }
+
+    /**
+     * @param  array<string, float|null>  $values
+     * @return array<string, float|null>
+     */
+    private static function prefixed(string $prefix, array $values): array
+    {
+        $out = [];
+        foreach ($values as $key => $value) {
+            $out[$prefix.$key] = $value;
+        }
+
+        return $out;
     }
 
     public function save(AppSettingsService $settings): void
@@ -130,7 +177,16 @@ class AiBudget extends Page implements HasForms
         $data = $this->form->getState();
 
         try {
-            $settings->updateAiBudget($this->admin(), self::amount($data['daily_usd'] ?? null), self::amount($data['monthly_usd'] ?? null));
+            // Both or neither (QA m1): one invalid value must not leave the other saved.
+            DB::transaction(function () use ($settings, $data): void {
+                $settings->updateAiBudget($this->admin(), self::amount($data['daily_usd'] ?? null), self::amount($data['monthly_usd'] ?? null));
+                $settings->updateAiLabBudget(
+                    $this->admin(),
+                    self::amount($data['lab_daily_usd'] ?? null),
+                    self::amount($data['lab_monthly_usd'] ?? null),
+                    self::amount($data['lab_max_run_usd'] ?? null),
+                );
+            });
         } catch (InvalidArgumentException $e) {
             Notification::make()->title(__('admin.ai_budget.not_saved'))->body($e->getMessage())->danger()->send();
 
@@ -149,6 +205,15 @@ class AiBudget extends Page implements HasForms
             Notification::make()
                 ->title(__('admin.ai_budget.daily_above_monthly'))
                 ->body(__('admin.ai_budget.daily_above_monthly_body', ['monthly' => sprintf('%.2f', $guard->monthlyCapUsd()), 'month' => sprintf('%.2f', $guard->spentThisMonthUsd())]))
+                ->warning()
+                ->persistent()
+                ->send();
+        }
+
+        if ($guard->labDailyCapUsd() > $guard->labMonthlyCapUsd()) {
+            Notification::make()
+                ->title(__('admin.ai_budget.lab_daily_above_monthly'))
+                ->body(__('admin.ai_budget.daily_above_monthly_body', ['monthly' => sprintf('%.2f', $guard->labMonthlyCapUsd()), 'month' => sprintf('%.2f', $guard->spentThisMonthUsd(true))]))
                 ->warning()
                 ->persistent()
                 ->send();
@@ -214,7 +279,7 @@ class AiBudget extends Page implements HasForms
     public function getChanges(): Collection
     {
         return AppSettingChange::with('user:id,name,email')
-            ->where('key', AppSettingsService::AI_BUDGET_KEY)
+            ->whereIn('key', [AppSettingsService::AI_BUDGET_KEY, AppSettingsService::AI_LAB_BUDGET_KEY])
             ->latest('id')->limit(20)->get();
     }
 

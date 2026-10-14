@@ -198,7 +198,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Shellcheck
-        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh scripts/restore-production-db.sh scripts/backup-production-db.sh scripts/tests/backup-production-db.test.sh
+        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh scripts/restore-production-db.sh scripts/backup-production-db.sh scripts/tests/backup-production-db.test.sh scripts/backup-offsite.sh scripts/tests/backup-offsite.test.sh
 
       # Stubbed docker/git/curl in a temp dir; needs only bash, git and rsync.
       - name: Harness (deploy-production.sh)
@@ -215,6 +215,10 @@ jobs:
       # Stubbed docker; retention must stay top-level and never fail the backup.
       - name: Harness (backup-production-db.sh)
         run: bash scripts/tests/backup-production-db.test.sh
+
+      # Stubbed docker / curl / date; D5 off-site backup (db + pet media via restic).
+      - name: Harness (backup-offsite.sh)
+        run: bash scripts/tests/backup-offsite.test.sh
 
       # M5-R11: breed registry export for the website (deterministic, every fact sourced,
       # committed docs/research/breed-registry.json up to date; PHP cross-check when php exists).

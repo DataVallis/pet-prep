@@ -357,7 +357,7 @@ class MediaLabService
      */
     private function assertAffordable(float $estimate): void
     {
-        $maxRun = (float) config('media.lab.max_run_usd', 3);
+        $maxRun = $this->guard->labMaxRunUsd();
 
         if ($estimate > $maxRun + 1e-9) {
             throw new AiCallException(AiCallFailure::BudgetRun, sprintf('This run would cost ~$%.2f; the lab limit per run is $%.2f.', $estimate, $maxRun));

@@ -384,7 +384,7 @@ exec 9>"$OPS_LOCK"
 if ! flock -n 9; then
     log "Another ops run holds ${OPS_LOCK} (a game-data reset or a deploy) — waiting up to ${LOCK_WAIT} s..."
     if ! flock -w "$LOCK_WAIT" 9; then
-        echo "ERROR: ${OPS_LOCK} is still held after ${LOCK_WAIT} s (reset-game-data.sh or another deploy running) — nothing was changed. Re-run the deploy when it has finished." >&2
+        echo "ERROR: ${OPS_LOCK} is still held after ${LOCK_WAIT} s (reset-game-data.sh, another deploy or the off-site backup's DB dump running) — nothing was changed. Re-run the deploy when it has finished." >&2
         exit 1
     fi
 fi
@@ -571,7 +571,7 @@ fi
 
 # Install ops scripts (copy + rename: never overwrite a running script in place).
 mkdir -p "$SCRIPTS_DIR"
-for s in backup-production-db.sh restore-production-db.sh deploy-production.sh; do
+for s in backup-production-db.sh backup-offsite.sh restore-production-db.sh deploy-production.sh; do
     if [ -f "${REPO_DIR}/scripts/${s}" ]; then
         cp "${REPO_DIR}/scripts/${s}" "${SCRIPTS_DIR}/.${s}.tmp"
         chmod +x "${SCRIPTS_DIR}/.${s}.tmp"

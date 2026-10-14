@@ -261,3 +261,103 @@ describe('admin page', function () {
         Queue::assertNothingPushed();
     });
 });
+
+describe('AI Lab budget (M4-07c)', function () {
+    it('uses the env lab caps while nothing is set', function () {
+        config(['media.lab.daily_usd' => 3.0, 'media.lab.monthly_usd' => 30.0, 'media.lab.max_run_usd' => 3.0]);
+        $guard = app(AiSpendGuard::class);
+
+        expect($guard->labDailyCapUsd())->toBe(3.0)
+            ->and($guard->labMonthlyCapUsd())->toBe(30.0)
+            ->and($guard->labMaxRunUsd())->toBe(3.0);
+    });
+
+    it('overrides the lab caps from the admin without touching the pets budget', function () {
+        config(['media.lab.daily_usd' => 3.0, 'media.lab.monthly_usd' => 30.0, 'media.lab.max_run_usd' => 3.0]);
+        app(AppSettingsService::class)->updateAiLabBudget(abAdmin(), 10.0, null, 5.0);
+        $guard = app(AiSpendGuard::class);
+
+        expect($guard->labDailyCapUsd())->toBe(10.0)
+            ->and($guard->labMonthlyCapUsd())->toBe(30.0)
+            ->and($guard->labMaxRunUsd())->toBe(5.0)
+            ->and($guard->dailyCapUsd())->toBe(5.0)
+            ->and(AppSettingChange::sole()->key)->toBe(AppSettingsService::AI_LAB_BUDGET_KEY);
+    });
+
+    it('is the real gate for lab spend', function () {
+        config(['media.lab.daily_usd' => 3.0, 'media.lab.monthly_usd' => 30.0]);
+        abSpend(2.9, 'lab');
+        $guard = app(AiSpendGuard::class);
+        expect($guard->refusalFor(0.5, AiSpendPurpose::Lab))->toBe(AiCallFailure::BudgetLab);
+
+        app(AppSettingsService::class)->updateAiLabBudget(abAdmin(), 10.0, null, null);
+
+        expect(app(AiSpendGuard::class)->refusalFor(0.5, AiSpendPurpose::Lab))->toBeNull();
+    });
+
+    it('refuses absurd lab values', function (?float $daily, ?float $monthly, ?float $run) {
+        expect(fn () => app(AppSettingsService::class)->updateAiLabBudget(abAdmin(), $daily, $monthly, $run))
+            ->toThrow(InvalidArgumentException::class);
+        expect(AppSetting::count())->toBe(0);
+    })->with([
+        'negative' => [-1.0, null, null],
+        'daily too high' => [AppSettingsService::AI_LAB_MAX_DAILY_USD + 1, null, null],
+        'run too high' => [null, null, AppSettingsService::AI_LAB_MAX_RUN_CEILING_USD + 1],
+    ]);
+
+    it('saves both budgets from the page, audited separately', function () {
+        $this->actingAs(abAdmin());
+
+        Livewire::test(AiBudget::class)
+            ->assertFormSet(['lab_daily_usd' => null, 'lab_monthly_usd' => null, 'lab_max_run_usd' => null])
+            ->fillForm(['daily_usd' => '20', 'lab_daily_usd' => '8', 'lab_max_run_usd' => '4'])
+            ->call('save')
+            ->assertHasNoFormErrors();
+
+        expect(app(AppSettingsService::class)->storedAiLabBudget())->toBe(['daily_usd' => 8.0, 'monthly_usd' => null, 'max_run_usd' => 4.0])
+            ->and(AppSettingChange::pluck('key')->sort()->values()->all())->toBe(['ai_budget', 'ai_lab_budget']);
+
+        Livewire::test(AiBudget::class)->assertFormSet(['lab_daily_usd' => 8.0, 'lab_max_run_usd' => 4.0]);
+    });
+
+    it('lets an AI Lab run through the per-run limit set in the admin', function () {
+        config(['media.lab.max_run_usd' => 0.5]);
+        expect(app(AiSpendGuard::class)->labMaxRunUsd())->toBe(0.5);
+
+        app(AppSettingsService::class)->updateAiLabBudget(abAdmin(), null, null, 3.0);
+
+        expect(app(AiSpendGuard::class)->labMaxRunUsd())->toBe(3.0);
+    });
+
+    it('writes no audit row when an already stored lab budget is saved unchanged (jsonb key order)', function () {
+        $admin = abAdmin();
+        app(AppSettingsService::class)->updateAiLabBudget($admin, 8.0, null, 4.0);
+        app(AppSettingsService::class)->updateAiLabBudget($admin, 8.0, null, 4.0);
+
+        expect(AppSettingChange::count())->toBe(1);
+
+        $this->actingAs($admin);
+        Livewire::test(AiBudget::class)->fillForm(['daily_usd' => '20'])->call('save');
+
+        expect(AppSettingChange::where('key', AppSettingsService::AI_LAB_BUDGET_KEY)->count())->toBe(1)
+            ->and(AppSettingChange::where('key', AppSettingsService::AI_BUDGET_KEY)->count())->toBe(1);
+    });
+
+    it('still audits clearing a stored lab budget back to the env defaults', function () {
+        $admin = abAdmin();
+        app(AppSettingsService::class)->updateAiLabBudget($admin, 8.0, null, null);
+        app(AppSettingsService::class)->updateAiLabBudget($admin, null, null, null);
+
+        expect(AppSettingChange::count())->toBe(2)
+            ->and(app(AppSettingsService::class)->storedAiLabBudget()['daily_usd'])->toBeNull();
+    });
+
+    it('warns when the lab daily budget is above the lab monthly one', function () {
+        $this->actingAs(abAdmin());
+
+        Livewire::test(AiBudget::class)
+            ->fillForm(['lab_daily_usd' => '50', 'lab_monthly_usd' => '10'])
+            ->call('save')
+            ->assertNotified(__('admin.ai_budget.lab_daily_above_monthly'));
+    });
+});

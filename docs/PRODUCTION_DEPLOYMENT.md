@@ -201,6 +201,56 @@ ls -lh /opt/petprep/backups/
 - **Location:** `/opt/petprep/backups/petprep_petprep_production_YYYY-MM-DD_HHMMSS.sql.gz`
 - **Retention:** Automatically deletes backups older than 7 days to preserve disk space on the 40 GB SSD.
 
+### 6b. Off-site backups — database + pet media (D5, 2026-10-14)
+
+`/opt/petprep/scripts/backup-offsite.sh` (installed by every deploy) sends the **database** (pg_dump streamed into restic) and the **pet media** (AI images / videos in the `backend_app_storage` volume, `app/pet-media`, tag `media`) to an encrypted, incremental [restic](https://restic.net) repository off the server — by default a Hetzner Storage Box. restic runs in its official Docker image (`restic/restic:0.17.3`); nothing to install on the host.
+
+- **DB snapshots are all-or-nothing:** stored with tag `db-pending`, re-tagged `db` only when pg_dump exited 0; a failed or killed run's snapshot is forgotten (also at the start of the next run). `latest --tag db` is always a complete dump.
+- **Ops lock only for the dump** (waits ≤ 30 min for a deploy / reset, then releases it before the media upload, retention and check) — deploys are never blocked by a long upload.
+- **Retention (David 2026-10-14):** every snapshot of the last **35 days** per tag (`--keep-within 35d`). Data of a deleted family leaves the backups within 35 days (PRODUCT_SPEC §5, audiences/PARENTS.md).
+- Sundays `restic check` with a 5 % data sample; every restic call has a hard timeout; sftp keep-alive from the ssh config.
+- The `.sql.gz` dumps in `/opt/petprep/backups` (before every deploy, 7 days) stay — the fast local rollback; the off-site copy is the disaster recovery.
+
+**One-time setup (David):**
+1. Hetzner Console → order a **Storage Box** (smallest size is plenty to start; another location than the server, e.g. Helsinki) → enable **SSH support**, note the user (`u123456`).
+2. On the server, as the deploy user:
+   ```bash
+   mkdir -p /opt/petprep/backup-ssh && chmod 700 /opt/petprep/backup-ssh
+   ssh-keygen -t ed25519 -N '' -f /opt/petprep/backup-ssh/id_ed25519
+   cat > /opt/petprep/backup-ssh/config <<'CFG'
+   Host storagebox
+     HostName u123456.your-storagebox.de
+     User u123456
+     Port 23
+     IdentityFile /root/.ssh/id_ed25519
+     UserKnownHostsFile /root/.ssh/known_hosts
+     ServerAliveInterval 60
+     ServerAliveCountMax 5
+   CFG
+   ssh-keyscan -p 23 u123456.your-storagebox.de > /opt/petprep/backup-ssh/known_hosts
+   # install the public key on the Storage Box (asks for the box password once):
+   cat /opt/petprep/backup-ssh/id_ed25519.pub | ssh -p 23 u123456@u123456.your-storagebox.de install-ssh-key
+   ```
+   The paths say `/root/.ssh` because ssh runs as root inside the restic container; the script passes this config with `-F` (a `~/.ssh/config` owned by the deploy user would be refused there).
+3. `/opt/petprep/backup.env` (`chmod 600`, never in git) — **`KEY=value` only: no quotes, no comments** (Docker passes them literally; the script refuses them):
+   ```
+   RESTIC_REPOSITORY=sftp:storagebox:petprep
+   RESTIC_PASSWORD=<output of: openssl rand -base64 48>
+   BACKUP_HEALTHCHECK_URL=https://hc-ping.com/<uuid>
+   ```
+   `BACKUP_HEALTHCHECK_URL` is optional but recommended (e.g. a free healthchecks.io check, period 1 day, grace 2 h → an e-mail when a night fails or is missed).
+   **Store `RESTIC_PASSWORD` and the whole `/opt/petprep/.env` (APP_KEY, DB password, provider keys) in your password manager.** Without the restic password no backup can ever be read; without APP_KEY a restored database cannot decrypt its encrypted fields or verify child PINs.
+4. First run + restore test: `/opt/petprep/scripts/backup-offsite.sh && /opt/petprep/scripts/backup-offsite.sh verify` (the first media upload can take a while).
+5. Nightly cron (deploy user, `crontab -e`; 02:17 UTC = after `media:retry`, before the families' morning):
+   ```
+   17 2 * * * /opt/petprep/scripts/backup-offsite.sh >> /opt/petprep/backups/offsite.log 2>&1
+   ```
+   The last success time is in `/opt/petprep/backups/offsite-last-success`.
+
+Any S3 repository works instead (`RESTIC_REPOSITORY=s3:https://…/bucket` + `AWS_ACCESS_KEY_ID` / `AWS_SECRET_ACCESS_KEY` in `backup.env`, no `backup-ssh/`).
+
+**Commands:** `backup-offsite.sh snapshots` (list), `backup-offsite.sh verify` (latest `db` snapshot is a complete pg_dump; latest media snapshot holds files when the volume has some) — **run `verify` monthly**. A run killed hard can leave a stale restic lock; restic ignores locks older than ~30 min, otherwise `docker run --rm -i --env-file /opt/petprep/backup.env -v /opt/petprep/backup-ssh:/root/.ssh:ro restic/restic:0.17.3 -o "sftp.command=ssh -F /root/.ssh/config storagebox -s sftp" unlock`. Restore: §7 "Off-site restore".
+
 ### 6a. One-off: reset all game data before the beta (DEPLOYMENT.md D17)
 
 David decided on 2026-10-08 13:50 to start the ~20-tester beta from an empty game: every family, parent, child, pet, purchase, AI spend / AI Lab row and pet media file goes; **superadmin accounts (Filament) and the breed reference data stay**. The work is done by `php artisan petprep:reset-game-data` (dry run by default) through the host wrapper `scripts/reset-game-data.sh`, which takes the backups first. Run it only after the PR that adds it is deployed (`cat /opt/petprep/repo/.deployed-sha`).
@@ -285,6 +335,32 @@ The first deploy of the production image is the risky one. What happens and what
 4. **A later release on the new runtime misbehaves:** `petprep-app:previous` / `petprep-web:previous` hold the release before; redeploy that commit through GitHub Actions (the build is a cache hit), or — no migrations in between — `docker tag petprep-app:previous petprep-app:production && docker tag petprep-web:previous petprep-web:production`, sync the previous tree into `repo/` and `docker compose -f /opt/petprep/repo/backend/compose.production.yaml up -d`.
 
 Remove `petprep-backend:production` and the unused `app_bootstrap_cache` volume only after a stable week on the new runtime (DEPLOYMENT.md D14).
+
+### Off-site restore (lost disk / new server, D5)
+Run on the (new) server after the stack is deployed with the old `/opt/petprep/.env` (from the password manager — same APP_KEY) and `backup.env` + `backup-ssh/` are back:
+
+```bash
+cd /opt/petprep/repo/backend
+R="docker run --rm -i --env-file /opt/petprep/backup.env --hostname petprep-production -v /opt/petprep/backup-ssh:/root/.ssh:ro"
+O='-o sftp.command=ssh -F /root/.ssh/config storagebox -s sftp'
+docker compose -p backend -f compose.production.yaml exec app php artisan down
+$R restic/restic:0.17.3 "$O" snapshots --tag db     # pick the snapshot ID (newest = latest)
+
+# Database: chosen snapshot → .sql.gz; check the trailer, then a strict restore
+$R restic/restic:0.17.3 "$O" dump <ID> /db/petprep.sql | gzip > /opt/petprep/backups/offsite-restore.sql.gz
+zcat /opt/petprep/backups/offsite-restore.sql.gz | tail -n 20 | grep -q "PostgreSQL database dump complete" \
+  || { echo "TRUNCATED dump — pick an older snapshot ID"; exit 1; }
+RESTORE_STRICT=1 /opt/petprep/scripts/restore-production-db.sh /opt/petprep/backups/offsite-restore.sql.gz
+
+# Pet media: into the volume
+docker run --rm -i --env-file /opt/petprep/backup.env --hostname petprep-production \
+  -v /opt/petprep/backup-ssh:/root/.ssh:ro -v backend_app_storage:/data restic/restic:0.17.3 "$O" \
+  restore latest --tag media --target /
+docker run --rm -v backend_app_storage:/data alpine:3.20 chown -R 1000:1000 /data/app/pet-media   # user `petprep` of the PHP image
+docker compose -p backend -f compose.production.yaml exec app php artisan up
+```
+
+**Deleted accounts come back with a restore:** a family deleted after the snapshot is in the restored database again. There is no deletion log yet (open, DEPLOYMENT.md D5) — until there is, check the parent support inbox / admin notes for deletions since the snapshot date and delete those families again in the admin before `artisan up`.
 
 ### Database Restore (Disaster Recovery)
 If a destructive migration occurred and database rollback is needed:

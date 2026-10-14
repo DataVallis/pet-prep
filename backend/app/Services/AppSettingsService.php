@@ -28,7 +28,11 @@ use InvalidArgumentException;
  * `ai_budget` (M4-07b, David 2026-10-14: raise the AI budget in /admin, not
  * in the server .env) = {daily_usd: float|null, monthly_usd: float|null}.
  * Null / no row → the env cap (AI_DAILY_BUDGET_USD / AI_MONTHLY_BUDGET_USD)
- * applies. Read by AiSpendGuard; the AI Lab budget stays env-only.
+ * applies. Read by AiSpendGuard.
+ *
+ * `ai_lab_budget` (M4-07c, David 2026-10-14) = {daily_usd, monthly_usd,
+ * max_run_usd}: the separate AI Lab budget (AI_LAB_DAILY_USD /
+ * AI_LAB_MONTHLY_USD / AI_LAB_MAX_RUN_USD), same rules.
  */
 class AppSettingsService
 {
@@ -47,6 +51,14 @@ class AppSettingsService
      * colour (false, the default: no row → false).
      */
     public const UNIQUE_MEDIA_KEY = 'unique_pet_media';
+
+    public const AI_LAB_BUDGET_KEY = 'ai_lab_budget';
+
+    public const AI_LAB_MAX_DAILY_USD = 200.0;
+
+    public const AI_LAB_MAX_MONTHLY_USD = 2000.0;
+
+    public const AI_LAB_MAX_RUN_CEILING_USD = 50.0;
 
     public const CACHE_TTL_SECONDS = 60;
 
@@ -170,6 +182,52 @@ class AppSettingsService
     }
 
     /**
+     * The AI Lab budget set in /admin (null = the env value applies).
+     *
+     * @return array{daily_usd: float|null, monthly_usd: float|null, max_run_usd: float|null}
+     */
+    public function storedAiLabBudget(): array
+    {
+        /** @var array<string, mixed> $value */
+        $value = Cache::remember(self::cacheKey(self::AI_LAB_BUDGET_KEY), self::CACHE_TTL_SECONDS,
+            fn (): array => AppSetting::find(self::AI_LAB_BUDGET_KEY)?->value ?? []);
+
+        $read = fn (mixed $v): ?float => is_numeric($v) ? max(0.0, (float) $v) : null;
+
+        return [
+            'daily_usd' => $read($value['daily_usd'] ?? null),
+            'monthly_usd' => $read($value['monthly_usd'] ?? null),
+            'max_run_usd' => $read($value['max_run_usd'] ?? null),
+        ];
+    }
+
+    /**
+     * Save the AI Lab budget (superadmin), audited. Null = the env value.
+     *
+     * @throws InvalidArgumentException a value is negative or above the sanity ceiling
+     */
+    public function updateAiLabBudget(User $actor, ?float $dailyUsd, ?float $monthlyUsd, ?float $maxRunUsd): void
+    {
+        foreach ([
+            [$dailyUsd, self::AI_LAB_MAX_DAILY_USD, 'daily AI Lab budget'],
+            [$monthlyUsd, self::AI_LAB_MAX_MONTHLY_USD, 'monthly AI Lab budget'],
+            [$maxRunUsd, self::AI_LAB_MAX_RUN_CEILING_USD, 'AI Lab limit per run'],
+        ] as [$value, $max, $name]) {
+            if ($value !== null && (! is_finite($value) || $value < 0 || $value > $max)) {
+                throw new InvalidArgumentException("The {$name} must be between 0 and {$max} USD.");
+            }
+        }
+
+        $fmt = fn (?float $v): ?string => $v === null ? null : sprintf('%.2f', $v);
+
+        $this->store($actor, self::AI_LAB_BUDGET_KEY, [
+            'daily_usd' => $fmt($dailyUsd),
+            'monthly_usd' => $fmt($monthlyUsd),
+            'max_run_usd' => $fmt($maxRunUsd),
+        ]);
+    }
+
+    /**
      * One audited write of a setting (row lock, change row, log), then the cache
      * is forgotten after the commit so the next read in any container sees it.
      *
@@ -181,7 +239,12 @@ class AppSettingsService
         DB::transaction(function () use ($actor, $key, $new, $default): void {
             $row = AppSetting::whereKey($key)->lockForUpdate()->first();
             $old = $row?->value;
-            if ($old === $new || ($old === null && $default !== null && $new === $default)) {
+            // "No row" and "every value empty" mean the same (env defaults):
+            // saving an untouched form must not write an audit row.
+            $blank = fn (mixed $v): bool => $v === null || (is_array($v) && array_filter($v, fn ($x) => $x !== null) === []);
+            // jsonb returns keys reordered (by length, then bytes): compare without key order.
+            // M5-R21: a key may name the value "no row" stands for ($default).
+            if (self::sameValue($old, $new) || ($row === null && ($blank($new) || ($default !== null && self::sameValue($new, $default))))) {
                 return;
             }
 
@@ -220,6 +283,23 @@ class AppSettingsService
     {
         // No row already means "off", so saving "off" over no row is not a change.
         $this->store($actor, self::UNIQUE_MEDIA_KEY, ['enabled' => $enabled], ['enabled' => false]);
+    }
+
+    /** Equal settings values, ignoring the key order of (nested) arrays. */
+    private static function sameValue(mixed $a, mixed $b): bool
+    {
+        $norm = function (mixed $v) use (&$norm): mixed {
+            if (! is_array($v)) {
+                return $v;
+            }
+            if (! array_is_list($v)) {
+                ksort($v);
+            }
+
+            return array_map($norm, $v);
+        };
+
+        return $norm($a) === $norm($b);
     }
 
     public static function cacheKey(string $key): string
