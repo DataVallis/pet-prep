@@ -35,7 +35,8 @@
 ## 4. Podatkovna baza
 | Sprožilec | Ukrep |
 |---|---|
-| Pred javno beto | **Varnostne kopije izven strežnika** (Hetzner Storage Box ali Object Storage), dnevno + preizkus obnove; WAL arhiv za obnovo na točko v času (PITR). |
+| Pred javno beto | **Varnostne kopije izven strežnika** — ✅ zgrajeno 14. 10. 2026 (`scripts/backup-offsite.sh`, restic → Hetzner Storage Box: baza + mediji ljubljenčkov vsako noč, šifrirano, hramba ≈ 35 dni, `verify` za preizkus obnove; čaka Davidovo enkratno nastavitev, PRODUCTION_DEPLOYMENT §6b). Še odprto: WAL arhiv za obnovo na točko v času (PITR). |
+| Mediji > 100 GB | Mediji ljubljenčkov iz Docker volumna v objektno shrambo (S3 / Hetzner Object Storage) s CDN; varnostna kopija potem z verzioniranjem vedra. |
 | DB > 50 % RAM-a ali počasne poizvedbe | Postgres na svoj strežnik (ali upravljana baza), `pg_stat_statements`, indeksi. |
 | Veliko branja (dashboard, poročila) | Bralna replika za poročila; agregati (tedenski / 12-tedenski) materializirani. |
 | `activities_log` > 10 M vrstic | Particioniranje po mesecih, arhiviranje starih podatkov po poteku izziva (tudi zaradi GDPR minimizacije). |
@@ -45,6 +46,15 @@
 - Centralni logi z omejenim hranjenjem; nadzorna plošča metrik (p95, napake, aktivni psi, poraba AI na dan).
 - Obremenitveni test (k6) pred vsakim večjim lansiranjem: npr. 5.000 otrok × akcije + tick + WebSocket.
 - Staging okolje (kopija produkcije brez osebnih podatkov) — konec samodejnega deploya na `main` brez preverjanja (DEPLOYMENT D2).
+
+## 5a. Prijava otrok s PIN-om (David 14. 10. 2026: »zabeleži za pin«)
+Danes: 6 števk (1.000.000 kod), enkratna, velja 15 min, unikatna med odprtimi PIN-i (delni unikatni indeks `child_login_pins_open_pin_unique`) — **dva otroka nikoli nimata iste veljavne kode**, napačna prijava zaradi trka ni mogoča. Zaščita pred ugibanjem: 10 poskusov / min na IP, zaklep po napakah na IP in **globalna zavora 100 napačnih poskusov / 15 min za vse** (`ChildPinLoginService::MAX_GLOBAL_FAILURES`).
+
+| Sprožilec | Ukrep |
+|---|---|
+| > ~5.000 hkrati odprtih PIN-ov (verjetnost, da naključen poskus zadane *nekoga*, > 0,5 %) ali pred javnim zagonom | Daljša koda: 8 znakov iz abecede brez zamenljivih znakov (brez 0/O, 1/I/L) ≈ 10¹² kombinacij; aplikacija (polje, lepljenje iz odložišča — trenutno pravilo »točno 6 števk se prijavi takoj«) in strežnik hkrati, stare 6-mestne kode veljajo do poteka. |
+| Običajne tipkarske napake se približajo 100 / 15 min (≈ nekaj 10.000 prijav na dan) | **Globalna zavora bi zaklenila prijavo vsem otrokom.** Prag sorazmeren s prometom (npr. delež napak glede na uspešne prijave v oknu) namesto fiksnih 100, opozorilo adminu namesto tihe zavore; po potrebi CAPTCHA / zakasnitev samo za sumljive IP-je. |
+| Botnet (veliko IP-jev) | Omejitev na ASN / državo, Cloudflare Turnstile pred `pin-login`, krajša veljavnost PIN-a (npr. 10 min). |
 
 ## 6. Nove države
 | Področje | Ukrep |
@@ -67,3 +77,4 @@
 |---|---|---|
 | 2026-10-05 | Dokument ustvarjen; v delu produkcijski PHP runtime + Caddy za medije (M4-05b). | — |
 | 2026-10-05 | M4-05b v kodi: PHP-FPM + OPcache (lastna produkcijska slika), Caddy streže statične datoteke in medije (X-Accel-Redirect); §0, §1, §2 posodobljeni. Odprto: omejitev povezav na IP. | `feat/M4-05b-prod-runtime` |
+| 2026-10-14 | Varnostne kopije izven strežnika zgrajene (§4, D5); mediji v objektni shrambi zapisani kot naslednji korak (§4); omejitve PIN-a pri velikem obsegu (§5a). | `feat/D5-offsite-backups` |

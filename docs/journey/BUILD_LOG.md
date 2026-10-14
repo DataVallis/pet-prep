@@ -9,6 +9,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-14 — Varnostne kopije baze in medijev izven strežnika — pripravljene (D5)
+
+**Kaj se je zgodilo:** Zgradili smo nočno varnostno kopijo, ki bazo ter vse AI slike in videe ljubljenčkov šifrirano pošlje v ločeno shrambo v drugem podatkovnem centru (restic na Hetzner Storage Box). Kopija baze je »vse ali nič« — nepopolna kopija se zavrže. Kopije hranimo **približno 35 dni** (vsi posnetki zadnjih 35 dni), zato podatki izbrisane družine iz kopij izginejo najkasneje v 35 dneh. *Začne teči, ko David nastavi shrambo (enkratna nastavitev); prvi preizkus obnove sledi takrat.*
+
+**Zakaj je pomembno:** Doslej so bile kopije baze na istem disku kot baza, slike in videi pa sploh niso imeli kopije. Če bi disk odpovedal, bi družine izgubile zgodovino svojega ljubljenčka, mi pa bi morali vse AI medije plačati še enkrat.
+
+**Številke:** 1 skripta, 41 avtomatskih preverjanj; hramba ≈ 35 dni; posodablja se samo novo (inkrementalno).
+
+**Kako povedati** *(šele ko teče in je obnova preizkušena)*:
+- 👩 Starši: »Slike in videi vašega ljubljenčka ter napredek otroka so vsako noč shranjeni tudi na drugem mestu. Ko račun izbrišete, iz varnostnih kopij izginejo najkasneje v 35 dneh.«
+- 💼 Investitorji: »Šifrirane nočne kopije v drugem podatkovnem centru z dokumentiranim postopkom obnove.«
+- 🛠 Tehnično: »restic v Dockerju, pg_dump prek stdin z oznako db-pending → db, media volumen samo za branje, ops ključavnica samo za dump, časovne omejitve, healthcheck ping.«
+
+---
+
 ## 2026-10-14 — Ameriški koker španjel: devetnajsta pasma po dvajsetih (M5-R10-37)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **ameriškega koker španjela** (32. mesto; v ZDA mu rečejo kar »Cocker Spaniel«, angleški koker španjel je na 36. mestu). Triintrideseta plačljiva pasma psa; v izbirniku je za bretonskim ptičarjem z namigom »česanje vsak dan«.
