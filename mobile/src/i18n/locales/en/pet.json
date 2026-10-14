@@ -126,6 +126,10 @@
       "bengal": "Short, soft, spotted or marbled coat · brushing 1× a week"
     },
     "breedLockedNote": "This breed can't be chosen right now. Choose a mixed breed or try again later.",
+    "colourTitle": "Colour",
+    "colourHint": "Only colours the breed standard allows.",
+    "colourOnly": "This breed comes in one colour: {{colour}}",
+    "colourA11y": "Colour: {{colour}}",
     "lockedA11y": "{{breed}}, locked — part of the paid challenge",
     "lockedFreeOnlyA11y": "{{breed}}, not available — only on the free plan",
     "originTitle": "Where it comes from",
@@ -411,6 +415,7 @@
       "breed": "Breed",
       "origin": "Origin",
       "age": "Age at arrival",
+      "colour": "Colour",
       "plan": "Plan"
     },
     "planNames": {

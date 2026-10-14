@@ -54,6 +54,9 @@ export const PICKER_STRINGS = strings('pet', 'picker', {
   searchEmpty: (query: string) => t('pet:picker.searchEmpty', { query }),
   showAllBreeds: (count: number) => t('pet:picker.showAllBreeds', { count }),
   originAdoptionOnly: (breed: string) => t('pet:picker.originAdoptionOnly', { breed }),
+  /** M5-R21: a breed with a single colour — shown as fact, nothing to choose. */
+  colourOnly: (colour: string) => t('pet:picker.colourOnly', { colour }),
+  colourA11y: (colour: string) => t('pet:picker.colourA11y', { colour }),
   cat: {
     title: (name: string) => t('pet:picker.cat.title', { name }),
   },
@@ -177,6 +180,40 @@ export interface CatalogueBreed {
   sort_order: number;
   /** "Za koga je primerna" tags (M5-R10); none for a breed without sourced tags. */
   suitability: BreedSuitability;
+  /**
+   * M5-R21: coat colours the parent may pick (paid breeds only; labels already in the app
+   * language). [] = no colour choice (free breed, an older server, the offline fallback).
+   */
+  colours: readonly BreedColour[];
+}
+
+/**
+ * One coat colour of a paid breed (`GET /api/breeds` → `colours[]`, M5-R21): `key` is sent as
+ * `colour` to generate-pin, `label` is in the request language (Accept-Language), shown as is.
+ */
+export type BreedColour = components['schemas']['BreedCatalogResource']['colours'][number];
+
+export const NO_COLOURS: readonly BreedColour[] = [];
+
+/**
+ * Loose `colours` → typed: entries without a non-empty string `key` and `label` are dropped,
+ * a repeated key keeps its first entry; anything else (missing on an older server) → none.
+ */
+export function readColours(raw: unknown): readonly BreedColour[] {
+  if (!Array.isArray(raw)) return NO_COLOURS;
+  const seen = new Set<string>();
+  const colours: BreedColour[] = [];
+  for (const item of raw) {
+    if (typeof item !== 'object' || item === null) continue;
+    const { key, label } = item as Record<string, unknown>;
+    if (typeof key !== 'string' || typeof label !== 'string') continue;
+    const k = key.trim();
+    const l = label.trim();
+    if (k === '' || l === '' || seen.has(k)) continue;
+    seen.add(k);
+    colours.push({ key: k, label: l });
+  }
+  return colours;
 }
 
 /** The picker catalogue: species the parent may choose (in order) and their breeds. */
@@ -191,472 +228,479 @@ export interface BreedCatalogue {
  * can't be loaded (offline, server error) so dog onboarding never breaks. Never cats —
  * those exist only when the server says so.
  */
+const FALLBACK_BREEDS: ReadonlyArray<Omit<CatalogueBreed, 'colours'>> = [
+  {
+    breed: 'mutt',
+    species: 'dog',
+    premium: false,
+    free_plan_allowed: true,
+    challenge_allowed: false,
+    search_keywords: ['mešanček', 'mesancek', 'mutt', 'mixed'],
+    sort_order: 0,
+    suitability: NO_SUITABILITY,
+  },
+  {
+    breed: 'border_collie',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['border collie', 'koli'],
+    sort_order: 10,
+    suitability: {
+      suits: ['active_family'],
+      consider: ['long_daily_exercise', 'needs_mental_stimulation', 'may_herd_children', 'chews_when_bored'],
+    },
+  },
+  {
+    breed: 'labrador_retriever',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: [
+      'labrador',
+      'labrador retriever',
+      'labradorec',
+      'labradorski prinašalec',
+      'labradorski prinasalec',
+      'lab',
+      'retriever',
+      'prinašalec',
+      'prinasalec',
+    ],
+    sort_order: 20,
+    suitability: {
+      suits: ['active_family', 'family_pet', 'large_home', 'other_pets'],
+      consider: ['sheds', 'long_daily_exercise', 'food_motivated_weight'],
+    },
+  },
+  {
+    breed: 'golden_retriever',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['golden', 'golden retriever', 'zlati prinašalec', 'zlati prinasalec', 'retriever'],
+    sort_order: 30,
+    suitability: {
+      suits: ['active_family', 'family_pet', 'children', 'first_time_owner', 'large_home', 'other_pets'],
+      consider: ['long_daily_exercise', 'sheds', 'food_motivated_weight', 'frequent_grooming'],
+    },
+  },
+  {
+    breed: 'french_bulldog',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['french bulldog', 'frenchie', 'french', 'bulldog', 'francoski buldog', 'buldog'],
+    sort_order: 40,
+    suitability: {
+      suits: ['apartment', 'family_pet', 'children'],
+      consider: ['brachycephalic_breathing', 'chases_small_pets'],
+    },
+  },
+  {
+    breed: 'german_shepherd',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['german shepherd', 'german shepherd dog', 'gsd', 'alsatian', 'nemški ovčar', 'nemski ovcar', 'ovčar', 'ovcar'],
+    sort_order: 50,
+    suitability: {
+      suits: ['active_family', 'family_pet', 'large_home'],
+      consider: ['long_daily_exercise', 'sheds', 'frequent_grooming', 'chews_when_bored', 'hips_hind_legs'],
+    },
+  },
+  {
+    breed: 'cavalier_king_charles_spaniel',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['cavalier king charles spaniel', 'cavalier', 'king charles', 'ckcs', 'spaniel', 'kavalir king charles španjel', 'kavalir king charles spanjel', 'kavalir', 'španjel', 'spanjel'],
+    sort_order: 60,
+    suitability: {
+      suits: ['apartment', 'family_pet', 'children'],
+      consider: ['sheds', 'frequent_grooming', 'heart_and_spine'],
+    },
+  },
+  {
+    breed: 'beagle',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['beagle', 'bigl'],
+    sort_order: 70,
+    suitability: {
+      suits: ['family_pet'],
+      consider: ['sheds', 'chews_when_bored'],
+    },
+  },
+  {
+    breed: 'standard_poodle',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['poodle (standard)', 'standard poodle', 'poodle', 'veliki koder', 'koder', 'veliki pudelj', 'pudelj', 'standardni pudelj'],
+    sort_order: 80,
+    suitability: {
+      suits: ['children', 'large_home', 'other_pets', 'low_shedding'],
+      consider: ['frequent_grooming'],
+    },
+  },
+  {
+    breed: 'dachshund',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['dachshund', 'sausage dog', 'teckel', 'jazbečar', 'jazbecar'],
+    sort_order: 90,
+    suitability: {
+      suits: ['children'],
+      consider: ['back_spine', 'sheds', 'needs_mental_stimulation', 'chases_small_pets'],
+    },
+  },
+  {
+    breed: 'australian_shepherd',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['australian shepherd', 'aussie', 'avstralski ovčar', 'avstralski ovcar'],
+    sort_order: 100,
+    suitability: {
+      suits: ['active_family', 'family_pet', 'large_home'],
+      consider: ['long_daily_exercise', 'needs_mental_stimulation', 'may_herd_children', 'chews_when_bored', 'sheds', 'frequent_grooming'],
+    },
+  },
+  {
+    breed: 'havanese',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['havanese', 'havanski bišon', 'havanski bison', 'bichon havanais', 'havanez'],
+    sort_order: 110,
+    suitability: {
+      suits: ['apartment', 'family_pet', 'children', 'low_shedding'],
+      consider: ['frequent_grooming'],
+    },
+  },
+  {
+    breed: 'west_highland_white_terrier',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['west highland white terrier', 'westie', 'westy', 'zahodnoškotski beli terier', 'zahodnoskotski beli terier', 'west highland terier', 'vestie'],
+    sort_order: 120,
+    suitability: {
+      suits: ['apartment', 'family_pet', 'children'],
+      consider: ['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored', 'chases_small_pets'],
+    },
+  },
+  {
+    breed: 'bernese_mountain_dog',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['bernese mountain dog', 'berner', 'berner sennenhund', 'bernese', 'bernski planšarski pes', 'bernski plansarski pes', 'bernski planšar', 'bernski plansar'],
+    sort_order: 130,
+    suitability: {
+      suits: ['family_pet', 'large_home'],
+      consider: ['shorter_lifespan', 'sheds', 'frequent_grooming'],
+    },
+  },
+  {
+    breed: 'siberian_husky',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['siberian husky', 'husky', 'huskie', 'sibirski haski', 'haski', 'sibirski husky', 'sibirec'],
+    sort_order: 140,
+    suitability: {
+      suits: ['active_family', 'large_home'],
+      consider: ['long_daily_exercise', 'secure_fencing', 'chews_when_bored', 'sheds', 'frequent_grooming', 'chases_small_pets'],
+    },
+  },
+  {
+    breed: 'rottweiler',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['rottweiler', 'rottie', 'rotty', 'rott', 'rotvajler', 'rotvajlerka', 'rotweiler', 'rotvailer'],
+    sort_order: 150,
+    suitability: {
+      suits: ['active_family', 'family_pet', 'large_home'],
+      consider: ['long_daily_exercise', 'experienced_owner', 'hips_hind_legs', 'shorter_lifespan', 'sheds'],
+    },
+  },
+  {
+    breed: 'bulldog',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['bulldog', 'english bulldog', 'british bulldog', 'angleški buldog', 'angleski buldog', 'buldog'],
+    sort_order: 160,
+    suitability: {
+      suits: ['family_pet', 'other_pets'],
+      consider: ['brachycephalic_breathing', 'sensitive_skin', 'shorter_lifespan', 'sheds'],
+    },
+  },
+  {
+    breed: 'german_shorthaired_pointer',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['german shorthaired pointer', 'german short-haired pointer', 'german pointer', 'gsp', 'shorthair', 'deutsch kurzhaar', 'kurzhaar', 'nemški kratkodlaki ptičar', 'nemski kratkodlaki pticar', 'kratkodlaki ptičar', 'kratkodlaki pticar', 'ptičar', 'pticar'],
+    sort_order: 170,
+    suitability: {
+      suits: ['active_family', 'large_home'],
+      consider: ['long_daily_exercise', 'sheds'],
+    },
+  },
+  {
+    breed: 'yorkshire_terrier',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['yorkshire terrier', 'yorkshire', 'yorkie', 'yorki', 'yorkshirski terier', 'jorkširski terier', 'jorksirski terier', 'jorki'],
+    sort_order: 180,
+    suitability: {
+      suits: ['apartment', 'low_shedding'],
+      consider: ['fragile_older_children', 'frequent_grooming'],
+    },
+  },
+  {
+    breed: 'cane_corso',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['cane corso', 'cane corso italiano', 'italian cane corso', 'italian corso dog', 'corso', 'italijanski cane corso', 'korzo', 'kane korso'],
+    sort_order: 190,
+    suitability: {
+      suits: ['active_family'],
+      consider: ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'shorter_lifespan', 'sheds', 'drools'],
+    },
+  },
+  {
+    breed: 'pembroke_welsh_corgi',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['pembroke welsh corgi', 'welsh corgi pembroke', 'pembroke', 'corgi', 'welsh corgi', 'korgi', 'valizanski korgi', 'valižanski korgi'],
+    sort_order: 200,
+    suitability: {
+      suits: [],
+      consider: ['may_herd_children', 'sheds', 'frequent_grooming'],
+    },
+  },
+  {
+    breed: 'dobermann',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['dobermann', 'doberman', 'doberman pinscher', 'dobie', 'dobermann pinscher'],
+    sort_order: 210,
+    suitability: {
+      suits: ['active_family', 'family_pet', 'large_home'],
+      consider: ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds', 'chases_small_pets'],
+    },
+  },
+  {
+    breed: 'boxer',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['boxer', 'boksar', 'deutscher boxer'],
+    sort_order: 220,
+    suitability: {
+      suits: ['active_family', 'family_pet', 'large_home'],
+      consider: ['long_daily_exercise', 'short_muzzle_breathing', 'not_for_small_children', 'experienced_owner', 'needs_company', 'chews_when_bored', 'sheds', 'chases_small_pets'],
+    },
+  },
+  {
+    breed: 'miniature_schnauzer',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['miniature schnauzer', 'pritlikavi šnavcer', 'pritlikavi snavcer', 'mali šnavcer', 'zwergschnauzer', 'schnauzer', 'šnavcer', 'mini schnauzer'],
+    sort_order: 230,
+    suitability: {
+      suits: ['apartment', 'children', 'low_shedding'],
+      consider: ['frequent_grooming'],
+    },
+  },
+  {
+    breed: 'shih_tzu',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['shih tzu', 'shih-tzu', 'shihtzu', 'ši-cu', 'šicu', 'ši cu', 'sicu'],
+    sort_order: 240,
+    suitability: {
+      suits: ['apartment', 'family_pet', 'first_time_owner'],
+      consider: ['frequent_grooming', 'short_muzzle_breathing'],
+    },
+  },
+  {
+    breed: 'great_dane',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['great dane', 'nemška doga', 'nemska doga', 'doga', 'deutsche dogge', 'dogge', 'dane'],
+    sort_order: 250,
+    suitability: {
+      suits: ['active_family', 'family_pet', 'large_home'],
+      consider: ['long_daily_exercise', 'not_for_small_children', 'shorter_lifespan', 'hips_hind_legs', 'eyelid_problems', 'chews_when_bored', 'sheds', 'drools', 'chases_small_pets'],
+    },
+  },
+  {
+    breed: 'pomeranian',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['pomeranian', 'pomeranec', 'pom', 'nemški špic', 'nemski spic', 'german toy spitz', 'toy spitz'],
+    sort_order: 260,
+    suitability: {
+      suits: ['apartment', 'family_pet', 'other_pets'],
+      consider: ['older_children', 'frequent_grooming', 'sheds'],
+    },
+  },
+  {
+    breed: 'boston_terrier',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['boston terrier', 'bostonski terier', 'boston', 'american gentleman'],
+    sort_order: 270,
+    suitability: {
+      suits: ['apartment', 'family_pet', 'children'],
+      consider: ['brachycephalic_breathing', 'needs_company'],
+    },
+  },
+  {
+    breed: 'miniature_american_shepherd',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['miniature american shepherd', 'mali ameriški ovčar', 'mali ameriski ovcar', 'mini american', 'mini aussie', 'miniature australian shepherd'],
+    sort_order: 280,
+    suitability: {
+      suits: ['family_pet', 'children', 'other_pets'],
+      consider: ['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds'],
+    },
+  },
+  {
+    breed: 'chihuahua',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['chihuahua', 'čivava', 'civava', 'chi'],
+    sort_order: 290,
+    suitability: {
+      suits: ['apartment', 'other_pets'],
+      consider: ['older_children', 'needs_company', 'sheds'],
+    },
+  },
+  {
+    breed: 'english_springer_spaniel',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['english springer spaniel', 'angleški springer španjel', 'angleski springer spanjel', 'springer spaniel', 'springer španjel', 'springer'],
+    sort_order: 300,
+    suitability: {
+      suits: ['active_family', 'family_pet', 'children', 'other_pets'],
+      consider: ['long_daily_exercise', 'needs_company', 'sheds', 'frequent_grooming'],
+    },
+  },
+  {
+    breed: 'shetland_sheepdog',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['shetland sheepdog', 'šetlandski ovčar', 'setlandski ovcar', 'sheltie', 'šeltie', 'shetland'],
+    sort_order: 310,
+    suitability: {
+      suits: ['family_pet', 'children'],
+      consider: ['needs_mental_stimulation', 'may_herd_children', 'frequent_grooming', 'sheds'],
+    },
+  },
+  {
+    breed: 'brittany',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['brittany', 'bretonski ptičar', 'bretonski pticar', 'epagneul breton', 'bretonski španjel', 'brittany spaniel'],
+    sort_order: 320,
+    suitability: {
+      suits: ['active_family', 'family_pet', 'children'],
+      consider: ['long_daily_exercise', 'needs_mental_stimulation', 'needs_company', 'sheds', 'chases_small_pets'],
+    },
+  },
+  {
+    breed: 'american_cocker_spaniel',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['american cocker spaniel', 'ameriški koker španjel', 'ameriski koker spanjel', 'american cocker', 'ameriški koker', 'ameriski koker'],
+    sort_order: 330,
+    suitability: {
+      suits: ['family_pet', 'children', 'other_pets'],
+      consider: ['frequent_grooming', 'food_motivated_weight', 'sheds'],
+    },
+  },
+  {
+    breed: 'belgian_malinois',
+    species: 'dog',
+    premium: true,
+    free_plan_allowed: false,
+    challenge_allowed: true,
+    search_keywords: ['belgian malinois', 'belgijski ovčar malinois', 'belgijski ovcar malinois', 'malinois', 'belgian shepherd malinois', 'belgian shepherd dog malinois'],
+    sort_order: 340,
+    suitability: {
+      suits: ['active_family', 'large_home'],
+      consider: ['long_daily_exercise', 'experienced_owner', 'not_for_small_children', 'may_herd_children', 'needs_mental_stimulation', 'needs_company', 'sheds', 'chases_small_pets'],
+    },
+  },
+];
+
+/**
+ * Today's dogs (see {@link FALLBACK_BREEDS}). No colours offline (M5-R21): the labels come from
+ * the server in the app language, so without the catalogue nothing is sent and the server picks
+ * the colour by the breed's weights.
+ */
 export const FALLBACK_CATALOGUE: BreedCatalogue = {
   species: ['dog'],
-  breeds: [
-    {
-      breed: 'mutt',
-      species: 'dog',
-      premium: false,
-      free_plan_allowed: true,
-      challenge_allowed: false,
-      search_keywords: ['mešanček', 'mesancek', 'mutt', 'mixed'],
-      sort_order: 0,
-      suitability: NO_SUITABILITY,
-    },
-    {
-      breed: 'border_collie',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['border collie', 'koli'],
-      sort_order: 10,
-      suitability: {
-        suits: ['active_family'],
-        consider: ['long_daily_exercise', 'needs_mental_stimulation', 'may_herd_children', 'chews_when_bored'],
-      },
-    },
-    {
-      breed: 'labrador_retriever',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: [
-        'labrador',
-        'labrador retriever',
-        'labradorec',
-        'labradorski prinašalec',
-        'labradorski prinasalec',
-        'lab',
-        'retriever',
-        'prinašalec',
-        'prinasalec',
-      ],
-      sort_order: 20,
-      suitability: {
-        suits: ['active_family', 'family_pet', 'large_home', 'other_pets'],
-        consider: ['sheds', 'long_daily_exercise', 'food_motivated_weight'],
-      },
-    },
-    {
-      breed: 'golden_retriever',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['golden', 'golden retriever', 'zlati prinašalec', 'zlati prinasalec', 'retriever'],
-      sort_order: 30,
-      suitability: {
-        suits: ['active_family', 'family_pet', 'children', 'first_time_owner', 'large_home', 'other_pets'],
-        consider: ['long_daily_exercise', 'sheds', 'food_motivated_weight', 'frequent_grooming'],
-      },
-    },
-    {
-      breed: 'french_bulldog',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['french bulldog', 'frenchie', 'french', 'bulldog', 'francoski buldog', 'buldog'],
-      sort_order: 40,
-      suitability: {
-        suits: ['apartment', 'family_pet', 'children'],
-        consider: ['brachycephalic_breathing', 'chases_small_pets'],
-      },
-    },
-    {
-      breed: 'german_shepherd',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['german shepherd', 'german shepherd dog', 'gsd', 'alsatian', 'nemški ovčar', 'nemski ovcar', 'ovčar', 'ovcar'],
-      sort_order: 50,
-      suitability: {
-        suits: ['active_family', 'family_pet', 'large_home'],
-        consider: ['long_daily_exercise', 'sheds', 'frequent_grooming', 'chews_when_bored', 'hips_hind_legs'],
-      },
-    },
-    {
-      breed: 'cavalier_king_charles_spaniel',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['cavalier king charles spaniel', 'cavalier', 'king charles', 'ckcs', 'spaniel', 'kavalir king charles španjel', 'kavalir king charles spanjel', 'kavalir', 'španjel', 'spanjel'],
-      sort_order: 60,
-      suitability: {
-        suits: ['apartment', 'family_pet', 'children'],
-        consider: ['sheds', 'frequent_grooming', 'heart_and_spine'],
-      },
-    },
-    {
-      breed: 'beagle',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['beagle', 'bigl'],
-      sort_order: 70,
-      suitability: {
-        suits: ['family_pet'],
-        consider: ['sheds', 'chews_when_bored'],
-      },
-    },
-    {
-      breed: 'standard_poodle',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['poodle (standard)', 'standard poodle', 'poodle', 'veliki koder', 'koder', 'veliki pudelj', 'pudelj', 'standardni pudelj'],
-      sort_order: 80,
-      suitability: {
-        suits: ['children', 'large_home', 'other_pets', 'low_shedding'],
-        consider: ['frequent_grooming'],
-      },
-    },
-    {
-      breed: 'dachshund',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['dachshund', 'sausage dog', 'teckel', 'jazbečar', 'jazbecar'],
-      sort_order: 90,
-      suitability: {
-        suits: ['children'],
-        consider: ['back_spine', 'sheds', 'needs_mental_stimulation', 'chases_small_pets'],
-      },
-    },
-    {
-      breed: 'australian_shepherd',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['australian shepherd', 'aussie', 'avstralski ovčar', 'avstralski ovcar'],
-      sort_order: 100,
-      suitability: {
-        suits: ['active_family', 'family_pet', 'large_home'],
-        consider: ['long_daily_exercise', 'needs_mental_stimulation', 'may_herd_children', 'chews_when_bored', 'sheds', 'frequent_grooming'],
-      },
-    },
-    {
-      breed: 'havanese',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['havanese', 'havanski bišon', 'havanski bison', 'bichon havanais', 'havanez'],
-      sort_order: 110,
-      suitability: {
-        suits: ['apartment', 'family_pet', 'children', 'low_shedding'],
-        consider: ['frequent_grooming'],
-      },
-    },
-    {
-      breed: 'west_highland_white_terrier',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['west highland white terrier', 'westie', 'westy', 'zahodnoškotski beli terier', 'zahodnoskotski beli terier', 'west highland terier', 'vestie'],
-      sort_order: 120,
-      suitability: {
-        suits: ['apartment', 'family_pet', 'children'],
-        consider: ['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored', 'chases_small_pets'],
-      },
-    },
-    {
-      breed: 'bernese_mountain_dog',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['bernese mountain dog', 'berner', 'berner sennenhund', 'bernese', 'bernski planšarski pes', 'bernski plansarski pes', 'bernski planšar', 'bernski plansar'],
-      sort_order: 130,
-      suitability: {
-        suits: ['family_pet', 'large_home'],
-        consider: ['shorter_lifespan', 'sheds', 'frequent_grooming'],
-      },
-    },
-    {
-      breed: 'siberian_husky',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['siberian husky', 'husky', 'huskie', 'sibirski haski', 'haski', 'sibirski husky', 'sibirec'],
-      sort_order: 140,
-      suitability: {
-        suits: ['active_family', 'large_home'],
-        consider: ['long_daily_exercise', 'secure_fencing', 'chews_when_bored', 'sheds', 'frequent_grooming', 'chases_small_pets'],
-      },
-    },
-    {
-      breed: 'rottweiler',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['rottweiler', 'rottie', 'rotty', 'rott', 'rotvajler', 'rotvajlerka', 'rotweiler', 'rotvailer'],
-      sort_order: 150,
-      suitability: {
-        suits: ['active_family', 'family_pet', 'large_home'],
-        consider: ['long_daily_exercise', 'experienced_owner', 'hips_hind_legs', 'shorter_lifespan', 'sheds'],
-      },
-    },
-    {
-      breed: 'bulldog',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['bulldog', 'english bulldog', 'british bulldog', 'angleški buldog', 'angleski buldog', 'buldog'],
-      sort_order: 160,
-      suitability: {
-        suits: ['family_pet', 'other_pets'],
-        consider: ['brachycephalic_breathing', 'sensitive_skin', 'shorter_lifespan', 'sheds'],
-      },
-    },
-    {
-      breed: 'german_shorthaired_pointer',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['german shorthaired pointer', 'german short-haired pointer', 'german pointer', 'gsp', 'shorthair', 'deutsch kurzhaar', 'kurzhaar', 'nemški kratkodlaki ptičar', 'nemski kratkodlaki pticar', 'kratkodlaki ptičar', 'kratkodlaki pticar', 'ptičar', 'pticar'],
-      sort_order: 170,
-      suitability: {
-        suits: ['active_family', 'large_home'],
-        consider: ['long_daily_exercise', 'sheds'],
-      },
-    },
-    {
-      breed: 'yorkshire_terrier',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['yorkshire terrier', 'yorkshire', 'yorkie', 'yorki', 'yorkshirski terier', 'jorkširski terier', 'jorksirski terier', 'jorki'],
-      sort_order: 180,
-      suitability: {
-        suits: ['apartment', 'low_shedding'],
-        consider: ['fragile_older_children', 'frequent_grooming'],
-      },
-    },
-    {
-      breed: 'cane_corso',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['cane corso', 'cane corso italiano', 'italian cane corso', 'italian corso dog', 'corso', 'italijanski cane corso', 'korzo', 'kane korso'],
-      sort_order: 190,
-      suitability: {
-        suits: ['active_family'],
-        consider: ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'shorter_lifespan', 'sheds', 'drools'],
-      },
-    },
-    {
-      breed: 'pembroke_welsh_corgi',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['pembroke welsh corgi', 'welsh corgi pembroke', 'pembroke', 'corgi', 'welsh corgi', 'korgi', 'valizanski korgi', 'valižanski korgi'],
-      sort_order: 200,
-      suitability: {
-        suits: [],
-        consider: ['may_herd_children', 'sheds', 'frequent_grooming'],
-      },
-    },
-    {
-      breed: 'dobermann',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['dobermann', 'doberman', 'doberman pinscher', 'dobie', 'dobermann pinscher'],
-      sort_order: 210,
-      suitability: {
-        suits: ['active_family', 'family_pet', 'large_home'],
-        consider: ['long_daily_exercise', 'not_for_small_children', 'experienced_owner', 'needs_mental_stimulation', 'sheds', 'chases_small_pets'],
-      },
-    },
-    {
-      breed: 'boxer',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['boxer', 'boksar', 'deutscher boxer'],
-      sort_order: 220,
-      suitability: {
-        suits: ['active_family', 'family_pet', 'large_home'],
-        consider: ['long_daily_exercise', 'short_muzzle_breathing', 'not_for_small_children', 'experienced_owner', 'needs_company', 'chews_when_bored', 'sheds', 'chases_small_pets'],
-      },
-    },
-    {
-      breed: 'miniature_schnauzer',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['miniature schnauzer', 'pritlikavi šnavcer', 'pritlikavi snavcer', 'mali šnavcer', 'zwergschnauzer', 'schnauzer', 'šnavcer', 'mini schnauzer'],
-      sort_order: 230,
-      suitability: {
-        suits: ['apartment', 'children', 'low_shedding'],
-        consider: ['frequent_grooming'],
-      },
-    },
-    {
-      breed: 'shih_tzu',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['shih tzu', 'shih-tzu', 'shihtzu', 'ši-cu', 'šicu', 'ši cu', 'sicu'],
-      sort_order: 240,
-      suitability: {
-        suits: ['apartment', 'family_pet', 'first_time_owner'],
-        consider: ['frequent_grooming', 'short_muzzle_breathing'],
-      },
-    },
-    {
-      breed: 'great_dane',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['great dane', 'nemška doga', 'nemska doga', 'doga', 'deutsche dogge', 'dogge', 'dane'],
-      sort_order: 250,
-      suitability: {
-        suits: ['active_family', 'family_pet', 'large_home'],
-        consider: ['long_daily_exercise', 'not_for_small_children', 'shorter_lifespan', 'hips_hind_legs', 'eyelid_problems', 'chews_when_bored', 'sheds', 'drools', 'chases_small_pets'],
-      },
-    },
-    {
-      breed: 'pomeranian',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['pomeranian', 'pomeranec', 'pom', 'nemški špic', 'nemski spic', 'german toy spitz', 'toy spitz'],
-      sort_order: 260,
-      suitability: {
-        suits: ['apartment', 'family_pet', 'other_pets'],
-        consider: ['older_children', 'frequent_grooming', 'sheds'],
-      },
-    },
-    {
-      breed: 'boston_terrier',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['boston terrier', 'bostonski terier', 'boston', 'american gentleman'],
-      sort_order: 270,
-      suitability: {
-        suits: ['apartment', 'family_pet', 'children'],
-        consider: ['brachycephalic_breathing', 'needs_company'],
-      },
-    },
-    {
-      breed: 'miniature_american_shepherd',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['miniature american shepherd', 'mali ameriški ovčar', 'mali ameriski ovcar', 'mini american', 'mini aussie', 'miniature australian shepherd'],
-      sort_order: 280,
-      suitability: {
-        suits: ['family_pet', 'children', 'other_pets'],
-        consider: ['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds'],
-      },
-    },
-    {
-      breed: 'chihuahua',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['chihuahua', 'čivava', 'civava', 'chi'],
-      sort_order: 290,
-      suitability: {
-        suits: ['apartment', 'other_pets'],
-        consider: ['older_children', 'needs_company', 'sheds'],
-      },
-    },
-    {
-      breed: 'english_springer_spaniel',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['english springer spaniel', 'angleški springer španjel', 'angleski springer spanjel', 'springer spaniel', 'springer španjel', 'springer'],
-      sort_order: 300,
-      suitability: {
-        suits: ['active_family', 'family_pet', 'children', 'other_pets'],
-        consider: ['long_daily_exercise', 'needs_company', 'sheds', 'frequent_grooming'],
-      },
-    },
-    {
-      breed: 'shetland_sheepdog',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['shetland sheepdog', 'šetlandski ovčar', 'setlandski ovcar', 'sheltie', 'šeltie', 'shetland'],
-      sort_order: 310,
-      suitability: {
-        suits: ['family_pet', 'children'],
-        consider: ['needs_mental_stimulation', 'may_herd_children', 'frequent_grooming', 'sheds'],
-      },
-    },
-    {
-      breed: 'brittany',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['brittany', 'bretonski ptičar', 'bretonski pticar', 'epagneul breton', 'bretonski španjel', 'brittany spaniel'],
-      sort_order: 320,
-      suitability: {
-        suits: ['active_family', 'family_pet', 'children'],
-        consider: ['long_daily_exercise', 'needs_mental_stimulation', 'needs_company', 'sheds', 'chases_small_pets'],
-      },
-    },
-    {
-      breed: 'american_cocker_spaniel',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['american cocker spaniel', 'ameriški koker španjel', 'ameriski koker spanjel', 'american cocker', 'ameriški koker', 'ameriski koker'],
-      sort_order: 330,
-      suitability: {
-        suits: ['family_pet', 'children', 'other_pets'],
-        consider: ['frequent_grooming', 'food_motivated_weight', 'sheds'],
-      },
-    },
-    {
-      breed: 'belgian_malinois',
-      species: 'dog',
-      premium: true,
-      free_plan_allowed: false,
-      challenge_allowed: true,
-      search_keywords: ['belgian malinois', 'belgijski ovčar malinois', 'belgijski ovcar malinois', 'malinois', 'belgian shepherd malinois', 'belgian shepherd dog malinois'],
-      sort_order: 340,
-      suitability: {
-        suits: ['active_family', 'large_home'],
-        consider: ['long_daily_exercise', 'experienced_owner', 'not_for_small_children', 'may_herd_children', 'needs_mental_stimulation', 'needs_company', 'sheds', 'chases_small_pets'],
-      },
-    },
-  ],
+  breeds: FALLBACK_BREEDS.map((b) => ({ ...b, colours: NO_COLOURS })),
 };
 
 function readEntry(raw: unknown): CatalogueBreed | null {
@@ -676,6 +720,8 @@ function readEntry(raw: unknown): CatalogueBreed | null {
       : [],
     sort_order: typeof o.sort_order === 'number' && Number.isFinite(o.sort_order) ? o.sort_order : 0,
     suitability: readSuitability(o.suitability),
+    // Only a paid breed has a colour choice (the server sends [] for a free one anyway).
+    colours: premium ? readColours(o.colours) : NO_COLOURS,
   };
 }
 
@@ -800,9 +846,36 @@ export interface PickerChoice {
   breed: PetBreed | null;
   origin: PetOrigin | null;
   age_stage: LifeStage | null;
+  /**
+   * M5-R21: the coat colour key of the chosen paid breed (null = none: a breed without
+   * colours, or not chosen yet — {@link withValidColour} then preselects the first). Optional:
+   * a choice from before M5-R21 simply has none.
+   */
+  colour?: string | null;
 }
 
 export const INITIAL_PICKER_CHOICE: PickerChoice = { species: null, plan: null, breed: null, origin: null, age_stage: null };
+
+/**
+ * The colours the parent chooses from for this choice: those of the chosen paid breed on the
+ * challenge; none on the free plan, before a plan or for a breed without colours.
+ */
+export function coloursFor(choice: PickerChoice, breeds: readonly CatalogueBreed[]): readonly BreedColour[] {
+  if (choice.plan !== 'challenge' || choice.breed === null) return NO_COLOURS;
+  return breeds.find((b) => b.breed === choice.breed)?.colours ?? NO_COLOURS;
+}
+
+/**
+ * The choice with a colour its breed offers (M5-R21, David 2026-10-14): a kept colour that
+ * still fits stays; otherwise the breed's FIRST colour is preselected, so the colour never
+ * blocks the PIN and a breed change never carries a colour of another breed. No colours → null.
+ */
+export function withValidColour(choice: PickerChoice, breeds: readonly CatalogueBreed[]): PickerChoice {
+  const colours = coloursFor(choice, breeds);
+  const current = choice.colour ?? null;
+  const colour = colours.some((c) => c.key === current) ? current : (colours[0]?.key ?? null);
+  return colour === current ? choice : { ...choice, colour };
+}
 
 /**
  * Plan and breed always agree (fix 2026-10-12, David: "Mešanček" was ticked while neither
@@ -916,7 +989,18 @@ export function completeChoice(
   if (breed === null || !ofSpecies.some((b) => b.breed === breed)) return null;
   if (isBreedLocked(breed, lockedBreedsFor(choice.plan, serverLocked, ofSpecies))) return null;
   if (!originsFor(choice, ofSpecies).includes(choice.origin)) return null;
-  return { species: choice.species, breed, origin: choice.origin, age_stage: choice.age_stage, plan: choice.plan };
+  const profile: NewPetProfile = { species: choice.species, breed, origin: choice.origin, age_stage: choice.age_stage, plan: choice.plan };
+  // M5-R21: a breed with colours always sends one it offers (also the only one, shown as fixed).
+  const colours = coloursFor({ ...choice, breed }, ofSpecies);
+  if (colours.length === 0) return profile;
+  const colour = colours.find((c) => c.key === choice.colour)?.key;
+  return colour === undefined ? null : { ...profile, colour };
+}
+
+/** The label of the profile's colour (summary), null without a colour or an unknown key. */
+export function colourLabel(profile: NewPetProfile, breeds: readonly CatalogueBreed[]): string | null {
+  if (profile.colour === undefined) return null;
+  return breeds.find((b) => b.breed === profile.breed)?.colours.find((c) => c.key === profile.colour)?.label ?? null;
 }
 
 /** Texts that differ by species (T8): dog keys unchanged, cat keys under `pet:picker.cat`. */

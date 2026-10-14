@@ -29,11 +29,11 @@
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "aefe4ac4a23d38de78677aa836071e1da708b4bbccfa3ae22244e948a5fba9cf"
+      "sha256": "9a82956698f7a3763f98204ae6591c70f382791e4f2ed08485e6fdfac6377823"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "bc648df3c040cef27b7f45a8d177e8d5a5ce927abfc9f1980cb3a0df2ffce17c"
+      "sha256": "f2841558e74eb5874cbb1a2121f2a35958ee89e8063fb6d45dbf1e2110c179e8"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",

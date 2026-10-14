@@ -23,6 +23,11 @@ use App\Enums\Species;
  * request refuses a mismatch with 422 `breed_species_mismatch`). A PIN
  * stored before M5-R06-01 has no `species` → the breed's species (a dog). No
  * breed → the free breed of the species (mutt / domestic cat).
+ *
+ * `colour` (M5-R21, David 2026-10-14): the coat colour key the parent picked
+ * for a paid breed (config/breed_colours.php); null = no choice (old app
+ * builds) → the colour is sampled by the breed's weights. A PIN stored before
+ * M5-R21 has no key → null.
  */
 final readonly class PetProfileChoice
 {
@@ -35,6 +40,7 @@ final readonly class PetProfileChoice
         public LifeStage $ageStage = LifeStage::Puppy,
         public array $features = [],
         public Species $species = Species::Dog,
+        public ?string $colour = null,
     ) {}
 
     public static function default(): self
@@ -69,6 +75,7 @@ final readonly class PetProfileChoice
             LifeStage::tryFrom((string) ($data['age_stage'] ?? '')) ?? LifeStage::Puppy,
             $features,
             $species,
+            is_string($data['colour'] ?? null) && $data['colour'] !== '' ? $data['colour'] : null,
         );
     }
 
@@ -80,7 +87,7 @@ final readonly class PetProfileChoice
      */
     public function withOnlyFeatures(array $features): self
     {
-        return new self($this->breed, $this->origin, $this->ageStage, array_values(array_intersect($this->features, $features)), $this->species);
+        return new self($this->breed, $this->origin, $this->ageStage, array_values(array_intersect($this->features, $features)), $this->species, $this->colour);
     }
 
     public function supports(ClientFeature $feature): bool
@@ -89,7 +96,7 @@ final readonly class PetProfileChoice
     }
 
     /**
-     * @return array{breed: string, origin: string, age_stage: string, features: list<string>, species: string}
+     * @return array{breed: string, origin: string, age_stage: string, features: list<string>, species: string, colour: string|null}
      */
     public function toArray(): array
     {
@@ -100,6 +107,8 @@ final readonly class PetProfileChoice
             'features' => $this->features,
             // M5-R06-01 (additive, last key).
             'species' => $this->species->value,
+            // M5-R21 (additive, last key).
+            'colour' => $this->colour,
         ];
     }
 }

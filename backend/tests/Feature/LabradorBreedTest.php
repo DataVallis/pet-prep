@@ -336,6 +336,15 @@ describe('GET /api/breeds', function () {
                     'suits' => ['active_family', 'family_pet', 'large_home', 'other_pets'],
                     'consider' => ['sheds', 'long_daily_exercise', 'food_motivated_weight'],
                 ],
+                // M5-R21: the colour picker (standard colours, labels in the request language).
+                'colours' => [
+                    ['key' => 'black', 'label' => 'Black'],
+                    ['key' => 'yellow', 'label' => 'Yellow'],
+                    ['key' => 'light-cream', 'label' => 'Light cream'],
+                    ['key' => 'fox-red', 'label' => 'Fox red'],
+                    ['key' => 'chocolate', 'label' => 'Chocolate'],
+                    ['key' => 'light-liver', 'label' => 'Light liver'],
+                ],
             ])
             ->and($breeds[0]['suitability'])->toBe(['suits' => [], 'consider' => []]);
     });

@@ -461,6 +461,8 @@ describe('GET /api/breeds', function () {
                 'search_keywords' => ['mešanček', 'mesancek', 'mutt', 'mixed'], 'sort_order' => 0,
                 // M5-R10: no sourced suitability tags for the mutt yet.
                 'suitability' => ['suits' => [], 'consider' => []],
+                // M5-R21: a free breed has no colour picker.
+                'colours' => [],
             ])
             ->assertJsonPath('breeds.1.breed', 'border_collie')
             ->assertJsonPath('breeds.1.premium', true)

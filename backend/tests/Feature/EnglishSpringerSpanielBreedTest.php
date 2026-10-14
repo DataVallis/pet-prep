@@ -401,7 +401,7 @@ describe('GET /api/breeds', function () {
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
         expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois'])
-            ->and($breeds[30])->toBe([
+            ->and(collect($breeds[30])->except('colours')->all())->toBe([
                 'breed' => 'english_springer_spaniel', 'slug' => 'english-springer-spaniel', 'species' => 'dog', 'premium' => true,
                 'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.english_springer_spaniel',
                 'search_keywords' => BreedConfigsSeeder::configs()[30]['search_keywords'], 'sort_order' => 300,

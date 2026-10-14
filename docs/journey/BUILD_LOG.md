@@ -25,6 +25,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 📣 Omrežja: malinoisa **lahko objavljamo** (ni pes s sploščenim obrazom), plav (fawn) s črno masko, z naravnimi pokončnimi ušesi in celim repom; nikoli kot pes za začetnike, nikoli z majhnimi otroki, nikoli kot pes čuvaj ali zaščitni pes.
 - 🛠 Tehnično: »Brez novega ključa oznak; česanje (2× na teden, `verified=false`) in socializacija sta samo novi vrstici v `breed_stage_params`; meja starejšega 90 iz spodnje meje The Royal Kennel Club je začasna (na seznamu za Davida); izvoz registra dobi nov izvor FCI (Belgija / BE) in nov ključ zdravja `pra_inherited_blindness` — besedila na spletni strani pridejo s PR spletne strani.«
 
+## 2026-10-14 — Barva psa in skupni AI mediji za plačljive pasme (M5-R21)
+
+**Kaj se je zgodilo:** Starš pri plačljivi pasmi zdaj izbere tudi **barvo dlake** — samo barve, ki jih dovoljuje standard pasme (39 plačljivih pasem — 33 psov in 6 mačk — skupaj 178 barv; pri 3 pasmah je barva ena sama, zato izbire ni). Hkrati se je spremenilo, kako nastajajo slike in videi: dokler je v administraciji stikalo »Unikatni AI mediji za vsakega ljubljenčka« izklopljeno (privzeto), si vsi novi ljubljenčki iste pasme in barve **delijo en videz** — slike in videi se ustvarijo enkrat, ob prvem ljubljenčku, vsak naslednji (tudi v drugi družini) jih dobi takoj in brez novega klica AI. Ko je stikalo vklopljeno, ima vsak ljubljenček svoj unikaten videz kot doslej. Mešanček in domača mačka ostaneta na skupnem naboru 20 videzov (M4-10). Administrator lahko skupni videz ustvari znova; na novo nastanejo samo obdobja, v katerih so aktivni ljubljenčki, ostala obdržijo svoje slike.
+
+**Zakaj je pomembno:** Unikaten nabor medijev stane ≈ 4,63 $ na kupljenega mladička plačljive pasme (slika 0,15 $ + 8 videov po 0,56 $) in podobno ob vsakem prehodu obdobja. S skupnimi mediji je to enkraten strošek na pasmo + barvo + obdobje, vsak nadaljnji nakup iste kombinacije pa ≈ 0 $ — za zagon to pomeni, da strošek AI ne raste z vsakim novim uporabnikom. Starš pa dobi psa take barve, kot si ga družina res želi.
+
+**Številke:** 39 plačljivih pasem s seznamom barv (178 barv), 1 migracija (`pets.coat_colour`, `pet_looks.colour_key` z edinstvenim indeksom pasma + barva), 1 novo stikalo v administraciji (privzeto izklopljeno), 0 $ za drugo in vsako nadaljnjo žival iste pasme + barve, ko so mediji obdobja shranjeni. Dve družini, ki hkrati kupita isto pasmo in barvo, sprožita **eno** generiranje.
+
+**Kako povedati:**
+- 👩 Starši: »Izberete lahko barvo psa — samo barve, ki jih priznava standard pasme, zato je pes videti kot pravi predstavnik svoje pasme. Če imate dva psa iste pasme in barve, sta videti enaka.«
+- 🧒 Otroci: »Izberi, ali bo tvoj labradorec črn, rumen ali čokoladen!«
+- 💼 Investitorji: »Strošek AI medijev pri plačljivih pasmah ni več strošek na uporabnika, ampak enkraten strošek na kombinacijo pasma + barva + obdobje; unikatne medije lahko kadar koli vklopimo z enim stikalom.«
+- 🤝 Partnerji (vzreditelji): »Izbirnik barv sledi standardu pasme — barv, ki jih standard izključuje, ni mogoče izbrati.«
+- 📣 Omrežja: »Kakšne barve bo vaš kuža?« — prikaz izbirnika barv pri izbiri pasme (na telefonu še ni preverjeno).
+- 🛠 Tehnično: »Skupni videz se ustvari z insert-or-ignore na delnem edinstvenem indeksu (pasma, barva), generiranje si prisvoji ena vrstica, ostali ljubljenčki počakajo in se povežejo, ko je datoteka shranjena; pasma brez seznama barv varno ostane pri skupnem videzu (barva iz uteži videza), nikoli nenamerno unikatna.«
+
 ---
 
 ## 2026-10-14 — Tudi proračun AI laboratorija v administraciji (M4-07c)

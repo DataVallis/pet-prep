@@ -9,17 +9,24 @@
  * - `catalogue` is null only while the first request is still running, and at most
  *   {@link CATALOGUE_LOADING_LIMIT_MS}: a hung request (no answer, no error) then shows the
  *   fallback too, so the picker never spins forever (QA PR #94 m1). A late answer replaces it.
+ * - M5-R21: colour labels come in the request language (`Accept-Language`), so the app
+ *   language is part of the key — a language switch loads the catalogue again.
  */
 
 import { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
+import { useTranslation } from 'react-i18next';
 
 import { api, CLIENT_FEATURES, type ClientFeature } from '@/api/client';
 import { shouldRetry } from '@/api/queryClient';
+import { currentLanguageTag } from '@/i18n';
 import { FALLBACK_CATALOGUE, readBreedCatalogue, type BreedCatalogue } from '@/modules/petProfile/picker';
 
-export const breedCatalogueKey = (features: readonly ClientFeature[] = CLIENT_FEATURES) =>
-  ['parent', 'breeds', [...features].sort().join(',')] as const;
+/** Prefix of every catalogue key (all feature sets and languages) — reset it to reload. */
+export const breedCatalogueRoot = ['parent', 'breeds'] as const;
+
+export const breedCatalogueKey = (features: readonly ClientFeature[] = CLIENT_FEATURES, lang: string = currentLanguageTag()) =>
+  [...breedCatalogueRoot, [...features].sort().join(','), lang] as const;
 
 /** Longest the picker shows a spinner before it falls back to today's dogs. */
 export const CATALOGUE_LOADING_LIMIT_MS = 5_000;
@@ -36,8 +43,10 @@ export function useBreedCatalogue(
   options: { enabled?: boolean; features?: readonly ClientFeature[] } = {},
 ): BreedCatalogueState {
   const { enabled = true, features = CLIENT_FEATURES } = options;
+  const { i18n } = useTranslation();
+  void i18n.language; // re-render on a language switch → the new key loads localized labels
   const query = useQuery<BreedCatalogue | null>({
-    queryKey: breedCatalogueKey(features),
+    queryKey: breedCatalogueKey(features, currentLanguageTag()),
     enabled,
     queryFn: async ({ signal }) => readBreedCatalogue(await api.getBreedCatalogue(features, signal)),
     staleTime: 60 * 60_000,

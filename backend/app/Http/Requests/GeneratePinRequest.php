@@ -54,6 +54,10 @@ class GeneratePinRequest extends FormRequest
             // needs the server flag + `features: ["species_cat"]` (422 species_unavailable).
             'species' => ['sometimes', 'nullable', Rule::enum(Species::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
             'breed' => ['sometimes', 'nullable', Rule::enum(BreedType::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
+            // M5-R21 (David 2026-10-14): coat colour key of a paid breed, from
+            // `colours` of GET /api/breeds. Needs `breed`; a key the breed does not
+            // have → 422 `colour_invalid`. Omitted (old builds) → sampled by weight.
+            'colour' => ['sometimes', 'nullable', 'string', 'max:40', 'prohibited_if:breed,null', 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
             'origin' => ['nullable', 'required_with:breed,age_stage', 'required_if:species,cat', Rule::enum(PetOrigin::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
             'age_stage' => ['nullable', 'required_with:breed,origin', 'required_if:species,cat', Rule::enum(LifeStage::class), 'prohibited_unless:pet_id,null', 'prohibited_if:child_id,null'],
             // M5-R02 (PR #42 B1): what this app build can show for the new pet,
@@ -123,6 +127,7 @@ class GeneratePinRequest extends FormRequest
             'origin' => $this->validated('origin'),
             'age_stage' => $this->validated('age_stage'),
             'features' => ClientFeature::known($this->validated('features') ?? []),
+            'colour' => $this->validated('colour'),
         ]);
     }
 }

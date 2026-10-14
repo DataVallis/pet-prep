@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Enums\BreedType;
 use App\Enums\Species;
 use App\Models\BreedConfig;
+use App\Services\Media\BreedColourCatalogue;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 use Throwable;
@@ -134,7 +135,7 @@ class BreedCatalogService
      * added here and never cached.
      *
      * @param  list<Species>  $availableSpecies
-     * @return list<array{breed: string, slug: string, species: string, premium: bool, free_plan_allowed: bool, challenge_allowed: bool, label_key: string, search_keywords: list<string>, sort_order: int, suitability: array{suits: list<string>, consider: list<string>}}>
+     * @return list<array{breed: string, slug: string, species: string, premium: bool, free_plan_allowed: bool, challenge_allowed: bool, label_key: string, search_keywords: list<string>, sort_order: int, suitability: array{suits: list<string>, consider: list<string>}, colours: list<array{key: string, label: string}>}>
      */
     public function catalogue(array $availableSpecies, ?Species $species = null): array
     {
@@ -155,6 +156,8 @@ class BreedCatalogService
                 'free_plan_allowed' => ! $entry['premium'],
                 'challenge_allowed' => $entry['premium'],
                 'suitability' => $this->suitability->for(BreedType::from($entry['breed'])),
+                // M5-R21: the colour picker of a paid breed (labels in the request language).
+                'colours' => $entry['premium'] ? app(BreedColourCatalogue::class)->pickerFor(BreedType::from($entry['breed']), app()->getLocale()) : [],
             ];
         }
 
