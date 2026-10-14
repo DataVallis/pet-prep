@@ -57,7 +57,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "d4c9ea1d27b8812083dfe197446b325c28f26fd1173bceca60065fae1fa2cf61"
+      "sha256": "4f03be2f92799ba62f1b06e3554954d59ffd6d8611009739d18102da7d6dacc3"
     }
   },
   "suitability_vocabulary": {
@@ -18184,7 +18184,12 @@
           "S285"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "english-springer-spaniel.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

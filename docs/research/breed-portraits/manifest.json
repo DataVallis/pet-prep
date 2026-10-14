@@ -353,6 +353,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "english_springer_spaniel",
+            "species": "dog",
+            "file": "dog/english-springer-spaniel.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:6ec714d430473d4c7466120242650e492d313d7f2777ffcccef09fde4f22271d",
+            "generated_at": "2026-10-14T08:56:19+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
