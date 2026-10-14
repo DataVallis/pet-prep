@@ -365,6 +365,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "shetland_sheepdog",
+            "species": "dog",
+            "file": "dog/shetland-sheepdog.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:d5575746fc0673c12a3f0337c4a82579c66c00cbe6912decd431fe930887a314",
+            "generated_at": "2026-10-14T10:48:13+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
