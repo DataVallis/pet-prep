@@ -51,6 +51,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   miniature_american_shepherd: 'dog',
   chihuahua: 'dog',
   english_springer_spaniel: 'dog',
+  shetland_sheepdog: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -106,6 +107,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'miniature_american_shepherd',
   'chihuahua',
   'english_springer_spaniel',
+  'shetland_sheepdog',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */

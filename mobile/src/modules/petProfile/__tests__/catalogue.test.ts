@@ -146,6 +146,7 @@ describe('readBreedCatalogue', () => {
       'miniature_american_shepherd',
       'chihuahua',
       'english_springer_spaniel',
+      'shetland_sheepdog',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -391,6 +392,14 @@ describe('readBreedCatalogue', () => {
       suits: ['active_family', 'family_pet', 'children', 'other_pets'],
       consider: ['long_daily_exercise', 'needs_company', 'sheds', 'frequent_grooming'],
     });
+    const shs = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'shetland_sheepdog');
+    expect(shs).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 310 }));
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-35, runbook rules; no new tag).
+    expect(shs?.search_keywords).toEqual(['shetland sheepdog', 'šetlandski ovčar', 'setlandski ovcar', 'sheltie', 'šeltie', 'shetland']);
+    expect(shs?.suitability).toEqual({
+      suits: ['family_pet', 'children'],
+      consider: ['needs_mental_stimulation', 'may_herd_children', 'frequent_grooming', 'sheds'],
+    });
     const corgi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pembroke_welsh_corgi');
     expect(corgi).toEqual(
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 200 }),
@@ -435,6 +444,7 @@ describe('readBreedCatalogue', () => {
       'miniature_american_shepherd',
       'chihuahua',
       'english_springer_spaniel',
+      'shetland_sheepdog',
     ]);
   });
 });
@@ -610,6 +620,14 @@ describe('breed search', () => {
     expect(find('Mali ameriški ovčar')).toEqual(['miniature_american_shepherd']);
     expect(find('mali ameriski')).toEqual(['miniature_american_shepherd']);
     expect(find('mini aussie')).toEqual(['miniature_american_shepherd']);
+  });
+
+  it('M5-R10-35: finds the Shetland Sheepdog by its EN / SL names, with and without the carons, and as "sheltie"', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('shetland sheepdog')).toEqual(['shetland_sheepdog']);
+    expect(find('Šetlandski ovčar')).toEqual(['shetland_sheepdog']);
+    expect(find('setlandski ovcar')).toEqual(['shetland_sheepdog']);
+    expect(find('sheltie')).toEqual(['shetland_sheepdog']);
   });
 
   it('M5-R10-34: finds the English Springer Spaniel by its EN / SL names, with and without the carons, and as "springer"', () => {
