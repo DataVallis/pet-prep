@@ -3499,7 +3499,7 @@ class BreedStageParamsSeeder extends Seeder
             // Like the other pedigree breeds: no individual variation row.
             'individual_variation' => null,
             'lifespan' => [10.0, [
-                'unit' => 'years', 'source_id' => 'S291', 'confidence' => 'medium', 'verified' => true,
+                'unit' => 'years', 'source_id' => 'S291', 'confidence' => 'high', 'verified' => true,
                 'ref' => 'shetland_sheepdog.lifespan.rkc',
                 'quote' => 'Lifespan: Over 10 years',
                 'notes' => 'RKC breed page lower bound (S291); PDSA "Over 10 years" (S293) the same. No McMillan 2024 / VetCompass median reachable. Background for the senior boundary only — never shown as a statistic in the app.',
