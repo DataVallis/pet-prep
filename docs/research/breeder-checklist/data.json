@@ -1537,6 +1537,47 @@
       "status": "not_found",
       "tests": [],
       "notes": "RKC breed page (dog-data S298, 2026-10-14) describes the Good Practice and Best Practice tiers but returned no individual test for the Brittany ('The page does not list the specific tests in either tier', tool summary) and 'no breed-specific DNA testing package'. The RKC Health Standard (dog-data S263, thekennelclub.org.uk/BreedSpecificRequirements, read 2026-10-14) lists the Brittany with empty Good Practice and Best Practice columns (no verbatim sentence returned, so not recorded as none_recommended — Boston Terrier / German Shorthaired Pointer precedent). No PDSA Brittany page. PetMD (dog-data S302) names hip dysplasia, epilepsy, hypothyroidism and cataracts but no test → nothing guessed. Show the general dog checklist only."
+    },
+    "american_cocker_spaniel": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S305",
+        "level_quotes": {
+          "minimum": "Good Practice schemes and tests",
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S305",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S305",
+          "quote": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "dna_prcd_pra",
+          "level": "best_practice",
+          "name": "DNA test for progressive retinal atrophy (prcd-PRA)",
+          "source_id": "S305",
+          "quote": "DNA test for progressive retinal atrophy (prcd-PRA)"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S305",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S305, 2026-10-14): 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding' — Good Practice schemes and tests (= minimum): genetic diversity (inbreeding_coi, Shetland Sheepdog precedent) and the eye scheme with gonioscopy for PLA; Best Practice: DNA prcd-PRA and the hip scheme. The older page (S306) also names a PFK DNA test under 'Other available' — not added (not a recommended tier). No new test key."
     }
   }
 }
