@@ -25,7 +25,7 @@
             "kind": "ai_photo",
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:b775a1b48d7073964cd089ace027151fbcf996769dba5b2294ffea224e9f9329",
-            "generated_at": "2026-10-10T05:47:20+00:00",
+            "generated_at": "2026-10-10T05:49:32+00:00",
             "cost_usd": 0.15
         },
         {
@@ -241,7 +241,7 @@
             "kind": "ai_photo",
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:af22b68d3e35cf939053cf9239b179237a49ca147683a99cb93c917c87706f28",
-            "generated_at": "2026-10-12T07:53:39+00:00",
+            "generated_at": "2026-10-12T07:54:57+00:00",
             "cost_usd": 0.15
         },
         {
@@ -374,6 +374,18 @@
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:d5575746fc0673c12a3f0337c4a82579c66c00cbe6912decd431fe930887a314",
             "generated_at": "2026-10-14T10:48:13+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "brittany",
+            "species": "dog",
+            "file": "dog/brittany.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:fcd9fa074ea3665a9b9e923a80183c66fc48802a69ea5cdc4f88b671d824330f",
+            "generated_at": "2026-10-14T13:57:56+00:00",
             "cost_usd": 0.15
         },
         {
