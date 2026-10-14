@@ -9,6 +9,18 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-14 — Posodobitev brez »smo v vzdrževanju« (D19)
+
+**Kaj se je zgodilo:** Deploy zdaj najprej vpraša bazo, ali nova različica prinaša spremembe sheme. Če ne, strežnik ne gre v način vzdrževanja: zamenja delavce, nato aplikacijo, strežnik za sprotne posodobitve (Reverb) pa pusti pri miru, kadar se njegove nastavitve niso spremenile.
+
+**Zakaj je pomembno:** Prej je vsak deploy za minuto ali več vračal »503« in prekinil povezavo vseh telefonov. Zdaj sprememba brez migracije pomeni le nekaj sekund preklopa, odprte povezave pa ostanejo.
+
+**Kako povedati:**
+- 👩 Starši: »Ko izboljšamo aplikacijo, vaš pes ne izgine niti za minuto.«
+- 🛠 Tehnično: »`migrate:status --pending=3` z novo sliko pred vzdrževanjem; Reverb ostane, ko se prstni odtis njegovih vhodov (config, composer.lock, .env …) ne spremeni; 307 preverjanj v testni skripti.«
+
+---
+
 ## 2026-10-14 — Produkcija se spreminja samo, ko se tako odločimo (D18)
 
 **Kaj se je zgodilo:** Združena koda na `main` zdaj sproži samo teste. Produkcijski strežnik, na katerem so družine, posodobimo ročno z enim klikom v GitHubu (Run workflow → `production`); posodobitev aplikacije (OTA) gre ven šele za tem. Razvojni strežnik smo zaenkrat preložili.

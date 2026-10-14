@@ -9,7 +9,9 @@
 #           DOWN_FAILS (same for `artisan down`), NO_PREV_IMAGES=1 (`image inspect`
 #           fails: first deploy of the M4-05b runtime, no petprep-*:production yet),
 #           NO_VOLUME=1 (`volume inspect` fails), APP_RUNNING=0 (`ps -q app` empty),
-#           STORAGE_BAD=1 (the uid-1000 storage check in the new image fails).
+#           STORAGE_BAD=1 (the uid-1000 storage check in the new image fails),
+#           PENDING_RC (exit of `migrate:status --pending=3`: 3 = pending — default,
+#           0 = none → no maintenance, other = unknown), REVERB_RUNNING=0.
 #           PETPREP_IMAGE_TAG (compose against the new tree) is logged in front.
 #   git     logs the call, then runs the real git (git-mode cases use a real temp repo).
 #   curl    prints CURL_STATUS (default 200).
@@ -57,6 +59,9 @@ case "$args" in
     *" ps -q app"*) [ "${APP_RUNNING:-1}" = "1" ] && echo "c0ffee" ;;
     *"--entrypoint sh app -c "*) [ "${STORAGE_BAD:-0}" = "1" ] && exit 1 ;;
     *"ps -q --status running postgres"*) echo "c0ffee" ;;
+    *"ps -q --status running reverb"*) [ "${REVERB_RUNNING:-1}" = "1" ] && echo "c0ffee" ;;
+    # D19: exit 3 = migrations pending (default: the classic maintenance flow), 0 = none.
+    *"migrate:status --pending=3"*) exit "${PENDING_RC:-3}" ;;
     *"exec -T caddy cat /etc/caddy/Caddyfile"*)
         [ -f "${PETPREP_ROOT}/caddy.running" ] || exit 1
         cat "${PETPREP_ROOT}/caddy.running" ;;
@@ -243,7 +248,7 @@ new_root dir; run_deploy STORAGE_BAD=1 -- --from "$ROOT/incoming" sha-v2
 check "exit != 0" rc_nonzero
 check "explains" out_has "storage is not fully writable as uid 1000"
 check "never entered maintenance" not_called 'artisan down'
-check "no backup / migrate" not_called 'migrate'
+check "no backup / migrate" not_called 'migrate --force'
 check "code untouched" eq "$(code_on_disk)" v1
 finish
 
@@ -284,7 +289,7 @@ check "no artisan up needed" not_called 'artisan up'
 check "code untouched" eq "$(code_on_disk)" v1
 check ".deployed-sha still sha-v1" sha_is sha-v1
 check "no image promoted" not_called ' tag '
-check "no migrate" not_called 'migrate'
+check "no migrate" not_called 'migrate --force'
 check "vendor/ preserved" vendor_kept
 check "no env secret in output" no_secret
 finish
@@ -479,7 +484,7 @@ new_root dir; echo "caddy-config-BROKEN" > "$ROOT/incoming/deployment/Caddyfile"
 run_deploy FAIL_MATCH='caddy validate' -- --from "$ROOT/incoming" sha-v2
 check "exit != 0" rc_nonzero
 check "explains" out_has "Caddyfile is invalid"
-check "no migrate" not_called 'migrate'
+check "no migrate" not_called 'migrate --force'
 check "caddy not recreated" not_called 'force-recreate'
 check "images restored" called 'tag petprep-web:previous petprep-web:production'
 check "old code + old Caddyfile back on disk" eq "$(code_on_disk) $(cat "$ROOT/repo/deployment/Caddyfile")" "v1 caddy-config-same"
@@ -575,6 +580,164 @@ new_root dir; run_deploy CURL_STATUS=502 DEPLOY_HEALTH_HOST=api.example.test DEP
 check "exit != 0" rc_nonzero
 check "health on the override host" called 'curl .*https://api.example.test/up'
 check "empty IP host = no fallback" not_called 'Host: 138.199.172.97'
+finish
+
+# ---- D19: no pending migrations → no maintenance; reverb kept when unchanged ----------
+start nomaint "no pending migrations → no artisan down/up, everything else as before"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "pending check with the NEW image, no deps" called 'PETPREP_IMAGE_TAG=next .*run --rm --no-deps -T app php artisan migrate:status --pending=3 \[code=v1\]'
+check "pending check after the smoke test" before 'artisan optimize' 'migrate:status'
+check "pending check before the backup" test "$(grep -n 'Checking for pending migrations' "$ROOT/out.log" | cut -d: -f1)" -lt "$(grep -n 'Creating pre-deployment database backup' "$ROOT/out.log" | cut -d: -f1)"
+check "says so" out_has "No pending migrations — deploying WITHOUT maintenance mode"
+check "never artisan down" not_called 'artisan down'
+check "backup still runs" out_has "backup (v2)"
+check "images promoted" called 'tag petprep-app:next petprep-app:production \[code=v2\]'
+check "migrate --force still runs (no-op guard)" called 'migrate --force \[code=v2\]'
+check "workers recreated first" before 'up -d --no-deps queue queue-broadcasts scheduler' 'up -d --remove-orphans app'
+check "workers recreated after migrate" before 'migrate --force' 'up -d --no-deps queue queue-broadcasts scheduler'
+check "app services recreated" called 'up -d --remove-orphans app reverb queue queue-broadcasts scheduler caddy \[code=v2\]'
+check "php-fpm-ping before queue:restart" before 'php-fpm-ping' 'queue:restart'
+check "one idempotent artisan up (lifts an old flag)" test "$(grep -c 'artisan up' "$CALL_LOG")" -eq 1
+check "artisan up after queue:restart" before 'queue:restart' 'artisan up'
+check "health check" called 'curl .*https://api.petprep.si/up'
+check "new code on disk" eq "$(code_on_disk)" v2
+check "no maintenance error text" not_out "STILL IN MAINTENANCE"
+check "no env secret in output" no_secret
+finish
+
+start pending "pending migrations → classic maintenance flow"
+new_root dir; run_deploy PENDING_RC=3 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "says so" out_has "Pending migrations — maintenance mode for the schema change"
+check "down on the OLD code" called 'artisan down --retry=15 \[code=v1\]'
+check "pending check before down" before 'migrate:status' 'artisan down'
+check "down before migrate" before 'artisan down' 'migrate --force'
+check "no separate worker-first recreate" not_called 'up -d --no-deps queue queue-broadcasts scheduler'
+check "artisan up once at the end" test "$(grep -c 'artisan up' "$CALL_LOG")" -eq 1
+finish
+
+start pending_unknown "pending check fails (DB down / first deploy) → maintenance (fail safe)"
+new_root dir; run_deploy PENDING_RC=1 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "warns" out_has "could not tell whether migrations are pending (exit 1"
+check "maintenance used" called 'artisan down --retry=15'
+finish
+
+start force_maint "DEPLOY_FORCE_MAINTENANCE=1 → maintenance, no pending check"
+new_root dir; run_deploy PENDING_RC=0 DEPLOY_FORCE_MAINTENANCE=1 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "no pending check" not_called 'migrate:status'
+check "maintenance used" called 'artisan down --retry=15'
+finish
+
+start nomaint_migrate_fail "no pending migrations, migrate fails anyway → revert, never went down"
+new_root dir; run_deploy PENDING_RC=0 FAIL_MATCH='migrate --force' -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "old code back" eq "$(code_on_disk)" v1
+check "images restored" called 'tag petprep-app:previous petprep-app:production'
+check "never artisan down" not_called 'artisan down'
+check "no artisan up needed (not in maintenance)" not_called 'artisan up'
+finish
+
+start nomaint_backup_fail "no pending migrations, backup fails → abort before the switch, never went down"
+new_root dir; printf '#!/usr/bin/env bash\nexit 3\n' > "$ROOT/incoming/scripts/backup-production-db.sh"
+run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "code never switched" eq "$(code_on_disk)" v1
+check "no promote" not_called ' tag '
+check "never artisan down / up" not_called 'artisan (down|up)'
+finish
+
+start nomaint_post_fail "no pending migrations, health check fails → not reverted, exit != 0, no down"
+new_root dir; run_deploy PENDING_RC=0 CURL_STATUS=502 -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "new code stays" eq "$(code_on_disk)" v2
+check "never artisan down" not_called 'artisan down'
+finish
+
+start nomaint_up_fails "no pending migrations, the idempotent artisan up fails → warning only"
+new_root dir; run_deploy PENDING_RC=0 UP_FAILS=999 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "warns" out_has "artisan up (no-op check) failed"
+finish
+
+start nomaint_git "git mode, no pending migrations → no maintenance"
+new_root git; run_deploy PENDING_RC=0 -- "$V2_SHA"
+check "exit 0" rc_is 0
+check "pending check on the build-src image" called 'build-src/backend/compose.production.yaml --env-file .* run --rm --no-deps -T app php artisan migrate:status --pending=3'
+check "never artisan down" not_called 'artisan down'
+check "new code on disk" eq "$(code_on_disk)" v2
+finish
+
+start reverb_first "first D19 deploy (no reverb fingerprint) → reverb recreated, fingerprint recorded"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "reverb in the up -d" called 'up -d --remove-orphans app reverb queue'
+check "fingerprint written" test -s "$ROOT/releases/reverb.fingerprint"
+finish
+
+start reverb_kept "second deploy, reverb inputs unchanged → reverb kept (WebSockets stay open)"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+fp1="$(cat "$ROOT/releases/reverb.fingerprint")"
+echo "v3" > "$ROOT/incoming/backend/app.txt"; mkdir -p "$ROOT/incoming/backend/app/Http"; echo "x" > "$ROOT/incoming/backend/app/Http/C.php"
+: > "$CALL_LOG"; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v3
+check "exit 0" rc_is 0
+check "says reverb kept" out_has "reverb unchanged — kept"
+check "up -d without reverb, --no-deps" called 'up -d --remove-orphans --no-deps app queue queue-broadcasts scheduler caddy \[code=v3\]'
+check "reverb not in any up -d" not_called 'up -d .*reverb'
+check "fingerprint unchanged" eq "$(cat "$ROOT/releases/reverb.fingerprint")" "$fp1"
+finish
+
+start reverb_config "reverb inputs changed (backend/config) → reverb recreated, new fingerprint"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+fp1="$(cat "$ROOT/releases/reverb.fingerprint")"
+mkdir -p "$ROOT/incoming/backend/config"; echo "<?php return ['x' => 2];" > "$ROOT/incoming/backend/config/reverb.php"
+: > "$CALL_LOG"; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v3
+check "exit 0" rc_is 0
+check "reverb recreated" called 'up -d --remove-orphans app reverb queue'
+check "fingerprint changed" test "$(cat "$ROOT/releases/reverb.fingerprint")" != "$fp1"
+finish
+
+start reverb_env "server .env changed → reverb recreated"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+echo "REVERB_APP_SECRET=${SECRET}-rotated" >> "$ROOT/.env"
+: > "$CALL_LOG"; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "reverb recreated" called 'up -d --remove-orphans app reverb queue'
+check "no env secret in output" no_secret
+finish
+
+start reverb_composer "composer.lock changed → reverb recreated"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+echo '{"packages":[1]}' > "$ROOT/incoming/backend/composer.lock"
+: > "$CALL_LOG"; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v3
+check "reverb recreated" called 'up -d --remove-orphans app reverb queue'
+finish
+
+start reverb_down "reverb not running → recreated even with the same fingerprint"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+: > "$CALL_LOG"; run_deploy PENDING_RC=0 REVERB_RUNNING=0 -- --from "$ROOT/incoming" sha-v2
+check "reverb recreated" called 'up -d --remove-orphans app reverb queue'
+finish
+
+start reverb_forced "DEPLOY_RECREATE_REVERB=1 → recreated"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+: > "$CALL_LOG"; run_deploy PENDING_RC=0 DEPLOY_RECREATE_REVERB=1 -- --from "$ROOT/incoming" sha-v2
+check "reverb recreated" called 'up -d --remove-orphans app reverb queue'
+finish
+
+start reverb_failed_deploy "a failed deploy never records a fingerprint"
+new_root dir; run_deploy PENDING_RC=0 CURL_STATUS=502 -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "no fingerprint" test ! -e "$ROOT/releases/reverb.fingerprint"
+finish
+
+start reverb_kept_post_fail "reverb kept, post-migration failure → trap restarts app services incl. reverb definition"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+: > "$CALL_LOG"; run_deploy PENDING_RC=0 FAIL_MATCH='php-fpm-ping' DEPLOY_APP_WAIT_TRIES=1 -- --from "$ROOT/incoming" sha-v3
+check "exit != 0" rc_nonzero
+check "trap brings every service up" called 'up -d --remove-orphans app reverb queue queue-broadcasts scheduler caddy'
 finish
 
 start ops-lock "a running game-data reset holds the ops lock (D17)"

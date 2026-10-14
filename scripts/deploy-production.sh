@@ -35,6 +35,8 @@
 #      the production env. Then normalise the storage volume for the non-root
 #      runtime (STORAGE below). Still BEFORE maintenance mode: a failure here
 #      aborts the deploy while the old release keeps serving (nothing changed).
+#   3b. Pending migrations? (MAINTENANCE below) — none → steps 4 and `artisan up` of
+#      step 9 are skipped.
 #   4. `artisan down --retry=15` on the OLD code (`exec --user 1000:1000` in the
 #      running app container, so the down file belongs to uid 1000; fallback
 #      `run --rm`, which runs as uid 1000 in both the Sail and the FPM image; if both
@@ -64,6 +66,40 @@
 #   does not exist while an app container runs, the project name is wrong → abort.
 #   After `up -d` (old containers gone) the chown runs once more (warn-only) for files
 #   an old root process may have created in between.
+#
+# MAINTENANCE (D19, David 2026-10-14: shorter downtime)
+#   Maintenance mode exists for the schema change: new code must never run on the old
+#   schema and a failed migration must be revertable. After the smoke test (step 3) the
+#   NEW image asks the live database `php artisan migrate:status --pending=3` (Laravel 11:
+#   exit 3 = something pending, 0 = nothing pending):
+#     pending  → the full flow below (down → backup → switch → migrate → up -d → up).
+#     none     → NO `artisan down` / `artisan up`: backup, code switch, image promote,
+#                Caddyfile validation, `migrate --force` (a no-op, kept as a guard), seeder,
+#                then queue + queue-broadcasts + scheduler are recreated FIRST and the
+#                app / caddy after them (no old worker gets a job of the new code),
+#                php-fpm-ping, queue:restart, health check. The old release serves until
+#                its container is replaced; php-fpm stops with SIGQUIT (graceful), so the
+#                gap is the new container's start (~seconds) instead of the whole window.
+#                The revert / failure semantics below are unchanged (MAINTENANCE_ON=0, so
+#                there is nothing to leave). A final idempotent `artisan up` lifts a flag
+#                an earlier failed run may have left.
+#     unknown  → any other exit (no migrations table, database down, first deploy):
+#                maintenance, as before.
+#   DEPLOY_FORCE_MAINTENANCE=1 forces the maintenance flow.
+#
+# REVERB (D19)
+#   Every deploy used to recreate reverb (new image) and drop every open WebSocket. Reverb
+#   runs only the framework + config (channel auth is an HTTP call to `app`, events are
+#   pushed by queue-broadcasts), so it is KEPT when nothing it runs on changed since it was
+#   last (re)created by a deploy: a sha256 over backend/composer.{json,lock},
+#   backend/compose.production.yaml, backend/config/**, backend/bootstrap/** (minus caches),
+#   backend/app/Providers/**, backend/docker/production/** of the new tree and
+#   /opt/petprep/.env, stored in releases/reverb.fingerprint after a successful deploy that
+#   recreated it. Kept → `up -d --no-deps` of the other services (caddy depends on reverb).
+#   No fingerprint yet, a difference, reverb not running or DEPLOY_RECREATE_REVERB=1 →
+#   recreated as before. A kept reverb keeps its old image (never pruned while in use).
+#   Not covered: a refreshed upstream php:8.3-fpm base image (same Dockerfile) — deploy
+#   once with DEPLOY_RECREATE_REVERB=1 after a base-image security update.
 #
 # SERVER (D18, 2026-10-14)
 #   The server's identity comes from /opt/petprep/.env, not from this script (production =
@@ -153,7 +189,9 @@ PROD_IP_HOST="138.199.172.97"
 HEALTH_HOST=""          # set by the env preflight (SERVER above)
 HEALTH_IP_HOST=""
 APP_SERVICES=(app reverb queue queue-broadcasts scheduler caddy)
+APP_SERVICES_NO_REVERB=(app queue queue-broadcasts scheduler caddy)
 WORKER_SERVICES=(reverb queue queue-broadcasts scheduler)
+REVERB_FP_FILE="${PETPREP_ROOT}/releases/reverb.fingerprint"
 IMAGES=(petprep-app petprep-web)
 # Compose project = network + volume prefix. Default "backend" = the directory of
 # the compose file (what production has always used); explicit so the build tree
@@ -315,6 +353,23 @@ restore_images() {
         docker tag "${img}:previous" "${img}:production" || rc=1
     done
     return "$rc"
+}
+
+# Hash of everything the reverb process runs on (REVERB above) in TREE + the server env.
+# Prints nothing on any error (→ reverb is recreated).
+reverb_fingerprint() {
+    local tree=$1
+    {
+        # find exits 1 for a missing path (e.g. no composer.lock in a test tree): ignored,
+        # the listed files are what exists.
+        (cd "$tree" || exit 0
+         find backend/composer.json backend/composer.lock backend/compose.production.yaml \
+            backend/config backend/bootstrap backend/app/Providers backend/docker/production \
+            -type f ! -path 'backend/bootstrap/cache/*' 2>/dev/null
+         exit 0) | LC_ALL=C sort \
+            | while IFS= read -r f; do printf '%s %s\n' "$f" "$(sha256sum < "${tree}/${f}" | cut -d' ' -f1)"; done
+        echo "env $(sha256sum < "$ENV_FILE" | cut -d' ' -f1)"
+    } | sha256sum | cut -d' ' -f1
 }
 
 # PHP-FPM answers its ping (caches built by the entrypoint, pool up).
@@ -557,8 +612,31 @@ if ! dc exec -T caddy cat /etc/caddy/Caddyfile > "$CADDY_RUNNING_COPY" 2>/dev/nu
     warn "could not read the running Caddyfile (caddy not running?) — treating it as changed."
 fi
 
-# ---- 4. Maintenance mode BEFORE touching the code --------------------------------
-enter_maintenance
+# ---- 3b. Pending migrations? (D19, see MAINTENANCE above) -------------------------
+# Asked with the NEW image against the live database, still before anything changed.
+# Laravel 11 `migrate:status --pending=N` exits N when a migration is pending, 0 when
+# none is; any other code (no migrations table, database down) → unknown → maintenance.
+MIGRATIONS="unknown"
+if [ "${DEPLOY_FORCE_MAINTENANCE:-0}" = "1" ]; then
+    log "DEPLOY_FORCE_MAINTENANCE=1 — maintenance mode whatever the migrations."
+else
+    log "Checking for pending migrations (new image, live database)..."
+    pending_rc=0
+    dcn run --rm --no-deps -T app php artisan migrate:status --pending=3 || pending_rc=$?
+    case "$pending_rc" in
+        0) MIGRATIONS="none" ;;
+        3) MIGRATIONS="pending" ;;
+        *) warn "could not tell whether migrations are pending (exit ${pending_rc}; database not running / first deploy?) — using maintenance mode." ;;
+    esac
+fi
+
+# ---- 4. Maintenance mode BEFORE touching the code (only when the schema changes) ---
+if [ "$MIGRATIONS" = "none" ]; then
+    log "No pending migrations — deploying WITHOUT maintenance mode (the old release serves until its containers are replaced)."
+else
+    [ "$MIGRATIONS" = "pending" ] && log "Pending migrations — maintenance mode for the schema change."
+    enter_maintenance
+fi
 
 # ---- 5. Pre-migration database backup --------------------------------------------
 # The backup script of the release being deployed wins over the installed copy
@@ -662,9 +740,30 @@ dc run --rm app php artisan db:seed --class='Database\Seeders\BreedConfigsSeeder
     || warn "BreedConfigsSeeder failed."
 
 # ---- 8. Containers (caches are built per container on start), workers -------------
-log "Starting all application services on the new images..."
+# Reverb keeps its container (open WebSockets survive the deploy) when nothing it runs on
+# changed since it was last started by a deploy (REVERB above).
+KEEP_REVERB=0
+REVERB_FP_NEW="$(reverb_fingerprint "$REPO_DIR")" || REVERB_FP_NEW=""
+if [ "${DEPLOY_RECREATE_REVERB:-0}" != "1" ] && [ -n "$REVERB_FP_NEW" ] && [ -f "$REVERB_FP_FILE" ] \
+    && [ "$(cat "$REVERB_FP_FILE")" = "$REVERB_FP_NEW" ] \
+    && [ -n "$(dc ps -q --status running reverb 2>/dev/null || true)" ]; then
+    KEEP_REVERB=1
+fi
 CONTAINERS_RECREATED=1
-dc up -d --remove-orphans "${APP_SERVICES[@]}"
+if [ "$MIGRATIONS" = "none" ]; then
+    # No maintenance: workers first, so no OLD worker ever takes a job the NEW app
+    # dispatched (new workers handling jobs of the old app was already normal: jobs
+    # queued before a maintenance window ran on the new workers too).
+    log "Recreating queue workers + scheduler on the new image first..."
+    dc up -d --no-deps queue queue-broadcasts scheduler
+fi
+if [ "$KEEP_REVERB" = "1" ]; then
+    log "Starting the application services on the new images (reverb unchanged — kept, WebSockets stay open)..."
+    dc up -d --remove-orphans --no-deps "${APP_SERVICES_NO_REVERB[@]}"
+else
+    log "Starting all application services on the new images..."
+    dc up -d --remove-orphans "${APP_SERVICES[@]}"
+fi
 if [ "$CADDY_CHANGED" = "1" ]; then
     # Single-file bind mount: only a new container sees the new Caddyfile.
     log "Recreating caddy for the new Caddyfile..."
@@ -683,6 +782,11 @@ dc exec -T queue php artisan queue:restart || warn "queue:restart failed."
 
 # ---- 9. Leave maintenance, health check ------------------------------------------
 leave_maintenance || exit 1
+if [ "$MIGRATIONS" = "none" ]; then
+    # Never went down in this deploy; lift a maintenance flag left by an earlier failed
+    # run (a deploy always ended with `artisan up` before D19). Idempotent.
+    artisan up || warn "artisan up (no-op check) failed — check maintenance mode by hand."
+fi
 
 log "Verifying service health (through Caddy)..."
 dc ps
@@ -699,7 +803,13 @@ if [ "$HTTP_STATUS" != "200" ]; then
     exit 1
 fi
 
-# Untagged images of older releases (keeps :production, :previous and the Sail image).
+# Reverb now runs on this release's inputs (it was recreated) — remember them.
+if [ "$KEEP_REVERB" = "0" ] && [ -n "$REVERB_FP_NEW" ]; then
+    echo "$REVERB_FP_NEW" > "$REVERB_FP_FILE" || warn "could not record the reverb fingerprint (next deploy recreates reverb)."
+fi
+
+# Untagged images of older releases (keeps :production, :previous and the Sail image;
+# an image a container still runs — e.g. a kept reverb — is never pruned).
 docker image prune -f > /dev/null || warn "docker image prune failed."
 # Build cache: drop entries older than 7 days, but always keep up to 5 GB (layers of
 # the PHP extension build — the expensive part of a rebuild).
