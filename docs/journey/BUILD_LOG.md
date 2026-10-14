@@ -19,7 +19,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Kako povedati:**
 - 👩 Starši: »Bretonski ptičar je nežen z otroki, a potrebuje več kot dve uri gibanja na dan in ne mara biti dolgo sam. V PetPrepu boste videli, ali vaš otrok res vsak dan zmore z njim prehoditi 12.000 korakov, preden se odločite za pravega.«
-- 🧒 Otroci: »Bretonski ptičar je oranžno-bel lovski pes z naravno kratkim repom. Rad teče, rad se uči in ne mara biti sam — greš z njim na dolg sprehod?«
+- 🧒 Otroci: »Bretonski ptičar je oranžno-bel lovski pes, pogosto z naravno kratkim repom. Rad teče, rad se uči in ne mara biti sam — greš z njim na dolg sprehod?«
 - 💼 Investitorji: »Osemnajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC; vse vrednosti po potrjenih pravilih in z viri; odprta vprašanja (začasna meja starejšega psa, česanje 1× proti RKC »več kot enkrat na teden«, oznaki za druge ljubljenčke in pogosto česanje) so zapisana za ustanovitelja.«
 - 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri bretonskem ptičarju ne ugiba: ker The Royal Kennel Club za pasmo ne navaja testov staršev, jih ne navajamo niti mi; displazijo kolkov, epilepsijo, hipotiroidizem in sivo mreno (PetMD) omenjamo samo kot ozadje, brez obljub o zdravju.«
 - 📣 Omrežja: bretonskega ptičarja **lahko objavljamo** (ni pes s sploščenim obrazom), oranžno-bel z naravno kratkim repom; nikoli kot »miren hišni pes« in nikoli s kupiranim repom kot ciljem.

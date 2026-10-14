@@ -26013,13 +26013,13 @@
         "notes": "AKC (S301), brittany.suitability.akc_nails. The game has no nail-trimming mechanic → ROADMAP M5-R19 (Boston Terrier / Shetland Sheepdog precedent, needs-david).",
         "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): striženje krempljev enkrat na mesec po potrebi; mehanike ni → ROADMAP M5-R19 (needs-david)"
       },
-      "ear_care": {
+      "ear_care_bathing": {
         "value": "ears checked regularly and cleaned as needed (no frequency given)",
-        "unit": "ear cleaning (sourced need)",
+        "unit": "ear cleaning / bathing (sourced need)",
         "source_id": "S301",
         "quote": "Their ears should be checked regularly and cleaned as needed.",
         "confidence": "medium",
-        "notes": "AKC (S301), brittany.suitability.akc_ears; PetMD (S302) floppy ears trap debris and moisture, clean them after a bath. The game has no ear-cleaning mechanic → ROADMAP M5-R20 (Chihuahua precedent, needs-david); the source gives no frequency.",
+        "notes": "AKC (S301), brittany.suitability.akc_ears; PetMD (S302) floppy ears trap debris and moisture, clean them after a bath. The game has no ear-cleaning mechanic → ROADMAP M5-R20 (Chihuahua precedent, needs-david); the source gives no frequency. Key named like the Chihuahua's (M5-R20 reads `ear_care_bathing`); no bathing statement for the Brittany except PetMD 'clean your Brittany’s ears after you bathe them' (no frequency).",
         "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno pregledovanje in čiščenje ušes; mehanike ni → ROADMAP M5-R20 (needs-david)"
       },
       "suitability_tags": {

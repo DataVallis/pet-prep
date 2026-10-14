@@ -231,7 +231,7 @@ describe('life-stage data against data.json', function () {
             ->and(brData("{$pgp}.grooming.value"))->toBe(1)
             ->and(brData("{$pgp}.grooming.decision"))->toContain('ROADMAP M5-R13')
             ->and(brData("{$pgp}.nail_trimming.decision"))->toContain('ROADMAP M5-R19')
-            ->and(brData("{$pgp}.ear_care.decision"))->toContain('ROADMAP M5-R20')
+            ->and(brData("{$pgp}.ear_care_bathing.decision"))->toContain('ROADMAP M5-R20')
             ->and(brData("{$pgp}.socialisation.quote"))->toBe(BreedStageParamsSeeder::DOG_SOCIALISATION['brittany'][1])
             ->and(brData('brittany.behaviour.socialisation.quote'))->toBe(BreedStageParamsSeeder::DOG_SOCIALISATION['brittany'][1])
             // No source quotes a gap after meals → no digestion warning.
