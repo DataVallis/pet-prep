@@ -5,6 +5,7 @@ namespace App\Services\Media;
 use App\Enums\AiCallFailure;
 use App\Enums\AiSpendPurpose;
 use App\Models\AiSpendLedger;
+use App\Services\AppSettingsService;
 use Carbon\CarbonImmutable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
@@ -14,7 +15,8 @@ use Illuminate\Support\Facades\DB;
  *
  * Two separate budgets (PR #22 review):
  *  - production (reference_image, state_video): AI_DAILY_BUDGET_USD / AI_MONTHLY_BUDGET_USD,
- *    counted only over production rows;
+ *    counted only over production rows — overridden by the superadmin in
+ *    /admin → AI budget (M4-07b, AppSettingsService `ai_budget`);
  *  - AI Lab (lab): AI_LAB_DAILY_USD / AI_LAB_MONTHLY_USD, counted only over lab rows,
  *    so lab runs can never starve new pets' reference images.
  *
@@ -29,12 +31,28 @@ class AiSpendGuard
 {
     private const ADVISORY_LOCK_KEY = 4_407_202_610;
 
+    public function __construct(private readonly AppSettingsService $settings) {}
+
+    /** Production daily cap: the /admin value, else the env cap. */
     public function dailyCapUsd(): float
+    {
+        return $this->settings->storedAiBudget()['daily_usd'] ?? $this->envDailyCapUsd();
+    }
+
+    /** Production monthly cap: the /admin value, else the env cap. */
+    public function monthlyCapUsd(): float
+    {
+        return $this->settings->storedAiBudget()['monthly_usd'] ?? $this->envMonthlyCapUsd();
+    }
+
+    /** AI_DAILY_BUDGET_USD — the default when /admin has no value. */
+    public function envDailyCapUsd(): float
     {
         return max(0.0, (float) config('media.budget.daily_usd', 5));
     }
 
-    public function monthlyCapUsd(): float
+    /** AI_MONTHLY_BUDGET_USD — the default when /admin has no value. */
+    public function envMonthlyCapUsd(): float
     {
         return max(0.0, (float) config('media.budget.monthly_usd', 50));
     }
@@ -103,6 +121,10 @@ class AiSpendGuard
     public function reserve(ModelProfile $profile, AiSpendPurpose $purpose, ?int $petId = null, ?int $labResultId = null, ?int $petMediaId = null): AiSpendLedger
     {
         $cost = $profile->estimatedCostUsd();
+
+        // M4-07b: warm the admin budget before the advisory lock, so the read
+        // inside it is a cache hit (no cache write / slow store while locked).
+        $this->settings->storedAiBudget();
 
         return DB::transaction(function () use ($profile, $purpose, $petId, $labResultId, $petMediaId, $cost) {
             if (DB::getDriverName() === 'pgsql') {

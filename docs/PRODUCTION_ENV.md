@@ -71,8 +71,8 @@ This document describes all environment variables used by the PetPrep production
 | `FAL_AI_API_KEY` | Optional | **Yes** | fal.ai API key for Kling 3.0 / Flux | `fal_key_...` |
 | `FAL_AI_JWKS_URL` | Optional | No | fal.ai public keys for ED25519 webhook verification (no shared secret needed) | `https://rest.fal.ai/.well-known/jwks.json` |
 | `FAL_AI_MEDIA_HOSTS` | Optional | No | Allowed hosts for generated media | `fal.media` |
-| `AI_DAILY_BUDGET_USD` | Optional | No | Cap on **estimated** fal.ai spend per day (M4-07); calls over it are refused (fail closed), pets work without media. `0` = no AI calls | `5` |
-| `AI_MONTHLY_BUDGET_USD` | Optional | No | Cap on estimated fal.ai spend per month | `50` |
+| `AI_DAILY_BUDGET_USD` | Optional | No | Cap on **estimated** fal.ai spend per day (M4-07); calls over it are refused (fail closed), pets work without media. `0` = no AI calls. **Default only** — since M4-07b the superadmin sets the budget in `/admin → AI budget` (no restart); an empty admin field falls back to this value | `5` |
+| `AI_MONTHLY_BUDGET_USD` | Optional | No | Cap on estimated fal.ai spend per month — default only, overridden in `/admin → AI budget` (M4-07b) | `50` |
 | `AI_BUDGET_TIMEZONE` | Optional | No | Day / month boundary for the caps (operations clock) | `UTC` |
 | `AI_REFERENCE_IMAGE_PROFILE` | Optional | No | Image profile from `config/media.php` for new pets' reference image (David 2026-10-05: Nano Banana Pro). **Remove the line** from an old `/opt/petprep/.env` that still says `flux_schnell` — an unknown key falls back to the default with an error log; the deploy preflight warns about non-default values | `nano_banana_pro` |
 | `AI_STATE_VIDEO_PROFILE` | Optional | No | Video profile for the pet state videos (M4-03; David 2026-10-05: Kling 3.0 Pro, 5 s, no audio). `kling_v16_legacy` no longer exists (falls back to the default + error log) | `kling_v3_pro` |
