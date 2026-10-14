@@ -17535,6 +17535,603 @@
       }
     }
   },
+  "american_cocker_spaniel": {
+    "_note": "Added 2026-10-14 (M5-R10-37, unattended run — appended after the Brittany: AKC 2024 No. 32 'Cocker Spaniel', S174 full-list table '31 Brittany', '32 Cocker Spaniel', '36 English Cocker Spaniel'; the AKC 'Cocker Spaniel' is the American Cocker Spaniel of the FCI / RKC, not the English Cocker Spaniel). Quotes as returned by the web-fetch tool on 2026-10-14 (the tool limits quotes to ~125 characters; apostrophes as returned); spot-check before import (sources.md S303–S311, reused S8, S10, S11, S14, S24, S35, S45, S92, S174). The FCI standard (S304) was read in French (the English PDF was refused by the fetch tool) — tool summary, French quotes only where returned. No PDSA American Cocker Spaniel page exists (the PDSA 'Cocker Spaniel' page is the English Cocker). Lifespan: McMillan 2024 / Dogs Trust table (S123) not reachable (no fetchable URL) — Wikipedia (S311, tier C) quotes McMillan 2024 at 13.3 years, background only → RKC lower bound 'Over 10 years' → senior 90 months, provisional. RKC Breed Watch Category 2 without a named point (S306) → no welfare chip; not flat-faced → in marketing. Exercise sources conflict (RKC 'More than 2 hours per day' vs AKC / PetMD 'don't require a lot / high levels of exercise') → minutes from the RKC by the rule, no exercise chip.",
+    "identity": {
+      "value": "FCI No. 167, Group 8 Section 2 (Flushing Dogs), USA",
+      "unit": "—",
+      "source_id": "S303",
+      "quote": "AMERICAN COCKER SPANIEL",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S303): group 'n°8 - Retrievers - Flushing Dogs - Water Dogs', section 'Flushing Dogs', country 'UNITED STATES OF AMERICA'; definitive acceptance 1/1/1965; valid standard published 7/27/2021 (English listing 9/13/2021); 'Not subject to a working trial according to the FCI breeds nomenclature'. The AKC (S307, S308) calls the breed 'Cocker Spaniel'; the RKC (S305, S306) 'Spaniel (American Cocker)'; Wikipedia (S311): 'Cocker Spaniel (in USA), Cocker, Merry Cocker' (other names). Not the English Cocker Spaniel (FCI No. 5)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S305",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "RKC breed page key facts (S305). AKC 20–30 lb (S308) ≈ 9.1–13.6 kg straddles the Small / Medium bands of S10; RKC 'Small' decides. RKC group: Gundog."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            36.83,
+            39.37
+          ],
+          "female": [
+            34.29,
+            36.83
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S304",
+        "quote": null,
+        "confidence": "high",
+        "notes": "FCI standard (S304, French, tool summary): ideal height at the withers 38.10 cm for males and 35.56 cm for females, tolerance 1.27 cm either way; males over 39.37 cm and females over 36.83 cm eliminated; smaller dogs penalised. Returned as a summary → quote null (paraphrase)."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            38.1,
+            39.4
+          ],
+          "female": [
+            35.6,
+            36.8
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S307",
+        "quote": "The ideal height at the withers for an adult dog is 15 inches and for an adult bitch, 14 inches.",
+        "confidence": "high",
+        "notes": "AKC standard (S307): ideal 15 in (dogs) / 14 in (bitches); 'A dog whose height exceeds 15½ inches or a bitch whose height exceeds 14½ inches shall be disqualified.' Stored as ideal → disqualification limit; inches × 2.54 by us. AKC article (S308) 'standing between 13.5 and 15.5 inches tall'."
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": [
+            9.1,
+            13.6
+          ],
+          "female": [
+            9.1,
+            13.6
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S308",
+        "quote": "standing between 13.5 and 15.5 inches tall, and weighing about 20 to 30 pounds.",
+        "confidence": "medium",
+        "notes": "AKC breed article (S308), one range for both sexes (stored per sex). Pounds converted to kg (× 0.4536) by us: 20 lb ≈ 9.1 kg, 30 lb ≈ 13.6 kg. The game range (adult_weight_kg). PetMD (S309) 'The average Cocker Spaniel size is 13.5–15.5 inches tall and 20–30 pounds' agrees. The FCI (S304) and AKC (S307) standards give no weight."
+      },
+      "vca": {
+        "value": {
+          "male": [
+            10.9,
+            12.7
+          ],
+          "female": [
+            10.9,
+            12.7
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S310",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "VCA Animal Hospitals (S310) key facts '24 - 28 pounds' (≈ 10.9–12.7 kg, converted by us) — inside the AKC range; alternative only."
+      },
+      "salt_category": {
+        "value": "I",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): about 9–14 kg. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. AKC 20–30 lb (S308) straddles 'Small (12–24 pounds)' and 'Medium (24–59 pounds)' (12–15 months); RKC 'Size: Small' (S305) → Small. The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no American Cocker Spaniel growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S305",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S305). The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "10–14",
+        "unit": "years",
+        "source_id": "S309",
+        "quote": "The typical Cocker Spaniel lifespan is 10–14 years, so they’ll be a longtime companion.",
+        "confidence": "medium",
+        "notes": "PetMD (S309, tier B). Lower bound 10 y agrees with the RKC → same senior boundary (90)."
+      },
+      "vca": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S310",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "VCA (S310) key facts '12 - 15 years' (as returned). Not in the runbook's lifespan order → alternative only (108 months)."
+      },
+      "mcmillan_2024": {
+        "value": 13.3,
+        "unit": "years",
+        "source_id": "S311",
+        "quote": "A 2024 study in the UK found a life expectancy of 13.3 years for the breed",
+        "confidence": "low",
+        "notes": "McMillan et al. 2024 as quoted by Wikipedia (S311, tier C — never alone). The Dogs Trust breed table (S123) and the paper (S54) were not reachable on 2026-10-14 → not used as the basis; with it the senior boundary would be round(0.75 × 13.3 × 12) = 120 months. Verify in S123 before replacing the RKC lower bound."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 10 y (RKC lower bound 'Over 10 years', S305) → 0.75 × 10 = 7.5 y = 90 months. With McMillan 2024 13.3 y (via S311): 120 months; with VCA 12 y (S310): 108 months; Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S305"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S305",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S305); the older RKC page (S306) agrees. Conflicting sources without a number: AKC (S308) 'They don’t require a lot of exercise to blow off energy.' and PetMD (S309) 'While Cocker Spaniels are sporting dogs, they don’t require high levels of exercise to stave off excess energy.'; VCA (S310) 'Requires daily exercise in the form of a long walk, jog, or energetic games.' Rule: RKC value preferred → 120; the others in alternatives. Because the sources conflict, no exercise chip (long_daily_exercise / active_family) — open for David."
+      },
+      "energy": {
+        "value": "needs daily exercise — a long walk, jog or energetic games",
+        "unit": "—",
+        "source_id": "S310",
+        "quote": "Requires daily exercise in the form of a long walk, jog, or energetic games.",
+        "confidence": "medium",
+        "notes": "VCA (S310). Background only (conflicts with AKC S308 / PetMD S309)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "equable, never timid; sweet-tempered, friendly, wants to please",
+        "unit": "—",
+        "source_id": "S307",
+        "quote": "Equable in temperament with no suggestion of timidity.",
+        "confidence": "high",
+        "notes": "AKC standard (S307); FCI (S304, French): 'nullement craintif' (not at all fearful). PetMD (S309): 'Cocker Spaniels offer a friendly personality, both with people and with other animals.'"
+      },
+      "family": {
+        "value": "sweet-tempered, close to their people, great family dogs; usually very good with children",
+        "unit": "—",
+        "source_id": "S309",
+        "quote": "At home, these sweet-tempered pups love being close to their people and make great family dogs.",
+        "confidence": "medium",
+        "notes": "PetMD (S309). VCA (S310): 'Usually very good with children.' AKC (S308): 'They generally enjoy spending time with children and participating in family activities.' Basis of family_pet / children. No rating for small children → no small_children. Wikipedia (S311, tier C): 'Cockers can be easily stressed by loud noises and by rough treatment or handling.' (background, kids' copy: gentle handling)."
+      },
+      "socialisation": {
+        "value": "start socialisation and training classes early",
+        "unit": "—",
+        "source_id": "S309",
+        "quote": "Start socialization and training classes early so your Cocker Spaniel puppy learns good manners.",
+        "confidence": "medium",
+        "notes": "PetMD (S309). AKC (S308): 'early socialization and puppy training classes are recommended' (as returned). → proposed_game_parameters.american_cocker_spaniel.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No time-alone statement (AKC S308, PetMD S309, VCA S310 checked). PetMD: 'Cockers love to be close to their people, and they are known to follow their pet parents around the house.' — closeness, not a time-alone rule → no needs_company tag."
+      },
+      "other_pets": {
+        "value": "gets along well with other pets and dogs",
+        "unit": "—",
+        "source_id": "S310",
+        "quote": "Gets along well with other pets and dogs.",
+        "confidence": "medium",
+        "notes": "VCA (S310). PetMD (S309): 'Cocker Spaniels offer a friendly personality, both with people and with other animals.'; AKC (S308): 'Cockers usually do well in multi-dog households.' No prey-drive statement → other_pets; no chases_small_pets."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": "often easily motivated by food and praise",
+        "unit": "—",
+        "source_id": "S309",
+        "quote": "Cocker Spaniels want to please their pet parents, meaning they’re often easily motivated by rewards of food and praise.",
+        "confidence": "medium",
+        "notes": "PetMD (S309). With obesity_tendency → food_motivated_weight (Labrador / Golden precedent)."
+      },
+      "obesity_tendency": {
+        "value": "tendency to become overweight; restrict calories if gaining",
+        "unit": "—",
+        "source_id": "S310",
+        "quote": "Cockers have a tendency to become overweight.",
+        "confidence": "medium",
+        "notes": "VCA (S310): 'Adult dogs should be fed a balanced diet, with restricted calories if the dog starts to gain too much weight.' PetMD (S309): 'Cocker Spaniels that serve exclusively as family pets can easily become overweight.' → food_motivated_weight."
+      },
+      "training_notes": {
+        "value": "sensitive; no harsh corrections — food, praise and play",
+        "unit": "—",
+        "source_id": "S308",
+        "quote": "They’re a more sensitive breed, and don’t respond to harsh corrections or disapproving tones.",
+        "confidence": "medium",
+        "notes": "AKC (S308). Not a first-time-owner statement → no first_time_owner / experienced_owner tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere (the prevalence figures on Wikipedia S311 are not copied). RKC Breed Watch Category 2 without a named point (S306) → no welfare chip (Shetland Sheepdog precedent).",
+      "ear_infections": {
+        "value": "ear infections — long, feathered ears",
+        "unit": "—",
+        "source_id": "S309",
+        "quote": "Ear Infections",
+        "confidence": "medium",
+        "notes": "PetMD (S309) health section heading (quote = the heading) 'Ear Infections'; 'routine cleaning with a veterinary-approved ear cleanser is vital in maintaining healthy ear canals' (as returned, partial sentence). → ear care, ROADMAP M5-R20 (needs-david)."
+      },
+      "skin_infections": {
+        "value": "skin infections (pyoderma)",
+        "unit": "—",
+        "source_id": "S309",
+        "quote": "Skin Infections",
+        "confidence": "medium",
+        "notes": "PetMD (S309) health section heading (quote = the heading) 'Skin Infections'. AKC (S308) warns about irritation of their sensitive skin when bathing (paraphrase). Background only; no sensitive_skin chip (not a Breed Watch point)."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S309",
+        "quote": "Hip Dysplasia",
+        "confidence": "medium",
+        "notes": "PetMD (S309) health section heading (quote = the heading) 'Hip Dysplasia'. RKC best-practice hip scheme (S305). Background only."
+      },
+      "von_willebrand": {
+        "value": "von Willebrand disease (a bleeding disorder)",
+        "unit": "—",
+        "source_id": "S309",
+        "quote": "Von Willebrand Disease (vWD)",
+        "confidence": "medium",
+        "notes": "PetMD (S309) heading. Background only."
+      },
+      "prcd_pra": {
+        "value": "progressive retinal atrophy (prcd-PRA) — an inherited eye disease",
+        "unit": "—",
+        "source_id": "S305",
+        "quote": "DNA test for progressive retinal atrophy (prcd-PRA)",
+        "confidence": "high",
+        "notes": "RKC best-practice test (S305); the RKC eye scheme with gonioscopy for PLA (glaucoma risk) is a minimum test. Background only."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 20,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 20 | Cocker Spaniel |",
+        "confidence": "low",
+        "notes": "Wikipedia table (S35, tier C, read 2026-10-14): rank 20 'Cocker Spaniel' under 'Excellent Working Dogs' (ranks 11–26); Coren's 'Cocker Spaniel' is the American breed — the English Cocker Spaniel is listed separately at rank 18 ('also listed: English Cocker Spaniel'). Coren's own article (S34) lists only the top and bottom 10 — runbook: rank from S35. The breed article (S311) agrees: 'The breed ranks 20th in Stanley Coren's The Intelligence of Dogs'. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "excellent: 5 to 15 repetitions, obeys first command ≥85%",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 5 to 15 repetitions.; Obey first command: 85% of the time or better.;",
+        "confidence": "low",
+        "notes": "Tier 'Excellent Working Dogs' = ranks 11–26 (S35). Tier definitions from Wikipedia; verify in book."
+      },
+      "training_notes": {
+        "value": "wants to please; positive reinforcement",
+        "unit": "—",
+        "source_id": "S309",
+        "quote": "Cocker Spaniels want to please their pet parents, meaning they’re often easily motivated by rewards of food and praise.",
+        "confidence": "medium",
+        "notes": "PetMD (S309); AKC (S308) sensitive, no harsh corrections."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.american_cocker_spaniel.learning_multiplier (1.5, runbook rule: Excellent tier, rank 20).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "the smallest of the sporting dogs; compact, sturdy, balanced",
+        "unit": "—",
+        "source_id": "S307",
+        "quote": "The Cocker Spaniel is the smallest member of the Sporting Group.",
+        "confidence": "high",
+        "notes": "AKC standard (S307); FCI (S304): 'Le Cocker Américain est le plus petit du groupe des chiens pour amateurs de chasse et de pêche.'"
+      },
+      "colours": {
+        "value": [
+          "buff",
+          "black",
+          "black and tan",
+          "red",
+          "chocolate",
+          "black and white",
+          "red and white",
+          "tricolour"
+        ],
+        "unit": "list",
+        "source_id": "S307",
+        "quote": "Any solid color other than black, ranging from lightest cream to darkest red, including brown and brown with tan points.",
+        "confidence": "high",
+        "notes": "AKC standard (S307) varieties: Black ('Solid color black to include black with tan points.'), ASCOB (quote; cream / buff to red, brown), Parti-color ('Two or more solid, well broken colors, one of which must be white.'); tan points ≤ 10 %. FCI (S304) the same three varieties incl. roan in parti-colours; white only on chest / throat in solid colours. Never merle (not listed), never blue eyes (FCI disqualification)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Buff first with the highest weight (portrait default — the lightest-cream-to-red ASCOB variety), then black, black and tan, red, chocolate, black and white, red and white, tricolour."
+      },
+      "coat": {
+        "value": "silky, flat or slightly wavy; ears, chest, abdomen and legs well feathered",
+        "unit": "—",
+        "source_id": "S307",
+        "quote": "The coat is silky, flat or slightly wavy and of a texture which permits easy care.",
+        "confidence": "high",
+        "notes": "AKC standard (S307); FCI (S304): moderate furnishings, heavy / curly / cottony coats severely penalised (tool summary). RKC 'Coat length: Long' (S305). The portrait shows a moderate pet-length coat, not a floor-length show skirt."
+      },
+      "ears": {
+        "value": "lobular, long, fine leather, well feathered, set no higher than the lower part of the eye",
+        "unit": "—",
+        "source_id": "S307",
+        "quote": "Lobular, long, of fine leather, well feathered, and placed no higher than a line to the lower part of the eye.",
+        "confidence": "high",
+        "notes": "AKC standard (S307); FCI (S304) the same."
+      },
+      "eyes": {
+        "value": "round, full, looking forward; dark brown, darker preferred",
+        "unit": "—",
+        "source_id": "S307",
+        "quote": "Eyeballs are round and full and look directly forward.",
+        "confidence": "high",
+        "notes": "AKC standard (S307); FCI (S304): dark brown, darker preferred; blue, marbled or flecked blue eyes disqualify (tool summary)."
+      },
+      "nose": {
+        "value": "rounded skull, pronounced stop, broad deep muzzle; black nose in blacks, black and tans, black and whites",
+        "unit": "—",
+        "source_id": "S307",
+        "quote": "The muzzle is broad and deep, with square even jaws.",
+        "confidence": "high",
+        "notes": "AKC standard (S307): skull 'Rounded but not exaggerated with no tendency toward flatness.'; nose 'black in color in the blacks, black and tans, and black and whites' (others brown / liver / black, darker preferred, FCI S304). Not a short-faced breed."
+      },
+      "tail": {
+        "value": "natural (undocked) tail in the game portrait; the standards describe a docked tail carried on the line of the back",
+        "unit": "—",
+        "source_id": "S307",
+        "quote": "The docked tail is set on and carried on a line with the topline of the back, or slightly higher.",
+        "confidence": "high",
+        "notes": "AKC (S307) and FCI (S304) describe a docked tail. The portrait shows a natural undocked tail (German Shorthaired Pointer precedent — docking of pet dogs is banned in Slovenia and the UK); docking is never shown or promoted. Claude's proposal, open for David."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page key facts (S305, older page S306), AKC (S308), PetMD (S309), VCA (S310). No PDSA American Cocker Spaniel page; Woodgreen / Dogs Trust breed pages not attempted. The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S305",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S305",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "Basis of 120 min. No exercise chip — AKC (S308) / PetMD (S309) conflict (open for David)."
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S305",
+        "quote": "Size of home: Small house",
+        "confidence": "high",
+        "notes": "Not apartment, not large_home."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S305",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S305",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "Runbook dog-grooming rule: 'Every day' → 7 brushing sessions a week. Basis of frequent_grooming (with VCA S310)."
+      },
+      "rkc_coat_length": {
+        "value": "Long",
+        "unit": "—",
+        "source_id": "S305",
+        "quote": "Coat length: Long",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S305",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PetMD (S309): brushing prevents 'excess shedding' — agrees. Basis of the sheds tag."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S305",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "Not shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S305",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S305",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 2",
+        "unit": "—",
+        "source_id": "S306",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC breed pages (S305, S306): 'Category 2' — 'Particular points of concern for individual breeds may include features not specifically highlighted in the breed standard' (as returned); the older page (S306) lists no specific point → no welfare chip (Shetland Sheepdog precedent, open for David); in marketing."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page (S305) has no 'Good with children' field."
+      },
+      "vca_grooming": {
+        "value": "brushing and combing two to three times a week",
+        "unit": "—",
+        "source_id": "S310",
+        "quote": "The coat needs brushing and combing two to three times a week to prevent mats.",
+        "confidence": "medium",
+        "notes": "VCA (S310) — alternative to the RKC 'Every day' (the rule takes the RKC wording 'Every day' → 7). Supports frequent_grooming."
+      },
+      "petmd_grooming": {
+        "value": "frequent brushing, at least once a week",
+        "unit": "—",
+        "source_id": "S309",
+        "quote": "Frequent brushing (at least once a week) is important to prevent infections as well as excess shedding.",
+        "confidence": "medium",
+        "notes": "PetMD (S309) — a minimum, compatible with the RKC 'Every day'."
+      },
+      "akc_grooming": {
+        "value": "regular brushing, combing, bathing and coat maintenance",
+        "unit": "—",
+        "source_id": "S308",
+        "quote": "Cocker Spaniels require regular brushing, combing, bathing, and coat maintenance.",
+        "confidence": "medium",
+        "notes": "AKC (S308), no frequency; 'Cockers require more dutiful attention when it comes to grooming, especially if kept in their full coat.'"
+      },
+      "vca_professional_grooming": {
+        "value": "professional grooming and clipping once a month",
+        "unit": "—",
+        "source_id": "S310",
+        "quote": "Professional grooming and clipping is required once a month.",
+        "confidence": "medium",
+        "notes": "VCA (S310); PetMD (S309): 'Cocker Spaniels also benefit from regular professional grooming.'; AKC (S308): a professional groomer for owners unsure about coat care. Groomer = sourced need without a mechanic → ROADMAP M5-R18 (needs-david)."
+      },
+      "vca_ears": {
+        "value": "ears checked weekly",
+        "unit": "—",
+        "source_id": "S310",
+        "quote": "The ears must be checked weekly for problems.",
+        "confidence": "medium",
+        "notes": "VCA (S310); PetMD (S309) routine cleaning with an ear cleanser, also after swimming or bathing. Ear care = sourced need without a mechanic → ROADMAP M5-R20 (needs-david)."
+      },
+      "petmd_family": {
+        "value": "great family dogs",
+        "unit": "—",
+        "source_id": "S309",
+        "quote": "At home, these sweet-tempered pups love being close to their people and make great family dogs.",
+        "confidence": "medium",
+        "notes": "PetMD (S309). Basis of family_pet."
+      },
+      "vca_children": {
+        "value": "usually very good with children",
+        "unit": "—",
+        "source_id": "S310",
+        "quote": "Usually very good with children.",
+        "confidence": "medium",
+        "notes": "VCA (S310). Basis of the children tag (explicit statement); AKC (S308) agrees."
+      },
+      "akc_children": {
+        "value": "enjoy spending time with children",
+        "unit": "—",
+        "source_id": "S308",
+        "quote": "They generally enjoy spending time with children and participating in family activities.",
+        "confidence": "medium",
+        "notes": "AKC (S308). Supports the children tag."
+      },
+      "vca_other_pets": {
+        "value": "gets along well with other pets and dogs",
+        "unit": "—",
+        "source_id": "S310",
+        "quote": "Gets along well with other pets and dogs.",
+        "confidence": "medium",
+        "notes": "VCA (S310). Basis of other_pets (with PetMD S309)."
+      },
+      "petmd_other_animals": {
+        "value": "friendly with people and other animals",
+        "unit": "—",
+        "source_id": "S309",
+        "quote": "Cocker Spaniels offer a friendly personality, both with people and with other animals.",
+        "confidence": "medium",
+        "notes": "PetMD (S309). Supports other_pets."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -26152,6 +26749,294 @@
         "confidence": "high",
         "notes": "RKC (S299) colours: orange/white, liver/white, black/white, tricolour, roan of these; FCI (S297) the same, no solid colour; AKC (S300) orange or liver and white only ('Black is a disqualification') → orange and white is the portrait default. FCI eliminating fault: 'Tache blanche sur les oreilles ou œil dans le blanc.' (tool summary). Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — orange and white (default), liver and white, orange roan, liver roan, black and white, tricolour; never a solid colour"
+      }
+    },
+    "american_cocker_spaniel": {
+      "_note": "Unattended run M5-R10-37 (2026-10-14): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: brushing every day (RKC S305 'Every day' → 7×, M5-R13); socialisation of puppies (PetMD S309) → M5-R17. Sourced needs without a game mechanic: professional grooming and clipping once a month (VCA S310) → ROADMAP M5-R18; ears checked weekly / cleaned (VCA S310, PetMD S309) → ROADMAP M5-R20 (needs-david). Senior 90 provisional (RKC lower bound — McMillan 2024 not reachable). Breed Watch Category 2 without a named point → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S305",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'More than 2 hours per day' (S305). Rule: one number N ('more than N') → N = 120; sources conflict → RKC value, others in alternatives.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S308",
+            "notes": "AKC 'They don’t require a lot of exercise to blow off energy.' (no number)"
+          },
+          {
+            "value": null,
+            "source_id": "S309",
+            "notes": "PetMD 'they don’t require high levels of exercise' (no number)"
+          },
+          {
+            "value": null,
+            "source_id": "S310",
+            "notes": "VCA 'Requires daily exercise in the form of a long walk, jog, or energetic games.' (no number)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S305 'More than 2 hours per day'; AKC / PetMD conflict → RKC preferred)"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S305",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) = 90 (S11 + RKC lower bound 'Over 10 years', S305; PetMD lower bound 10 y, S309, agrees). No McMillan 2024 / VetCompass value reachable. Alternatives: 120 (McMillan 2024 13.3 y via Wikipedia S311, tier C), 108 (VCA lower bound 12 y, S310), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S305"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 120,
+          "senior_vca_lower_bound": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S305)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 20 (S35; S311 agrees), tier Excellent (ranks 11–26) → 1.5 (= Brittany, rank 19). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 20, Excellent tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources (PetMD S309: two meals a day for adults — the general rule).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S305",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "american_cocker_spaniel.suitability.rkc_grooming. RKC (S305, S306) 'Every day' → 7 (runbook dog-grooming rule). VCA (S310) 'two to three times a week' and PetMD (S309) 'at least once a week' in alternatives (listed for David). Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 3,
+            "source_id": "S310",
+            "notes": "VCA two to three times a week"
+          },
+          {
+            "value": 1,
+            "source_id": "S309",
+            "notes": "PetMD at least once a week"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (RKC »Grooming: Every day« → 7× na teden); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S309",
+        "quote": "Start socialization and training classes early so your Cocker Spaniel puppy learns good manners.",
+        "confidence": "medium",
+        "notes": "american_cocker_spaniel.behaviour.socialisation (PetMD S309); AKC (S308) agrees. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S309)"
+      },
+      "professional_grooming": {
+        "value": "professional grooming and clipping once a month",
+        "unit": "visits (sourced need)",
+        "source_id": "S310",
+        "quote": "Professional grooming and clipping is required once a month.",
+        "confidence": "medium",
+        "notes": "VCA (S310), american_cocker_spaniel.suitability.vca_professional_grooming; PetMD (S309) 'regular professional grooming'. The game has no groomer / clipping mechanic → ROADMAP M5-R18 (Pomeranian / English Springer Spaniel precedent, needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): pasji frizer in striženje enkrat na mesec; mehanike ni → ROADMAP M5-R18 (needs-david)"
+      },
+      "ear_care_bathing": {
+        "value": "ears checked weekly; routine cleaning with an ear cleanser, also after swimming or bathing",
+        "unit": "ear cleaning / bathing (sourced need)",
+        "source_id": "S310",
+        "quote": "The ears must be checked weekly for problems.",
+        "confidence": "medium",
+        "notes": "VCA (S310), american_cocker_spaniel.suitability.vca_ears; PetMD (S309) routine ear cleaning, ear infections. The game has no ear-cleaning mechanic → ROADMAP M5-R20 (Chihuahua / Brittany precedent, needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): pregled ušes enkrat na teden in čiščenje; mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-37); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S309"
+            ],
+            "refs": [
+              "american_cocker_spaniel.suitability.petmd_family",
+              "american_cocker_spaniel.behaviour.family"
+            ],
+            "quote": "S309 'make great family dogs'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S310",
+              "S308"
+            ],
+            "refs": [
+              "american_cocker_spaniel.suitability.vca_children",
+              "american_cocker_spaniel.suitability.akc_children"
+            ],
+            "quote": "S310 'Usually very good with children.'; S308 'They generally enjoy spending time with children'"
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S310",
+              "S309"
+            ],
+            "refs": [
+              "american_cocker_spaniel.suitability.vca_other_pets",
+              "american_cocker_spaniel.suitability.petmd_other_animals"
+            ],
+            "quote": "S310 'Gets along well with other pets and dogs.'; S309 'both with people and with other animals.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S305",
+              "S310"
+            ],
+            "refs": [
+              "american_cocker_spaniel.suitability.rkc_grooming",
+              "american_cocker_spaniel.suitability.vca_grooming"
+            ],
+            "quote": "S305 'Grooming: Every day'; S310 'brushing and combing two to three times a week'"
+          },
+          {
+            "tag": "food_motivated_weight",
+            "source_ids": [
+              "S310",
+              "S309"
+            ],
+            "refs": [
+              "american_cocker_spaniel.behaviour.obesity_tendency",
+              "american_cocker_spaniel.behaviour.food_motivation"
+            ],
+            "quote": "S310 'Cockers have a tendency to become overweight.'; S309 'often easily motivated by rewards of food'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S305"
+            ],
+            "refs": [
+              "american_cocker_spaniel.suitability.rkc_shedding"
+            ],
+            "quote": "S305 'Sheds: Yes'"
+          }
+        ],
+        "not_proposed": {
+          "active_family": "RKC 'More than 2 hours per day' (S305) vs AKC (S308) / PetMD (S309) 'don't require a lot / high levels of exercise' — conflicting (open for David).",
+          "long_daily_exercise": "Same conflict as active_family (open for David); the game still asks 120 min by the minutes rule.",
+          "small_children": "No rating for small children.",
+          "apartment": "RKC 'Small house' (S305) — not 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S305).",
+          "needs_company": "No time-alone statement (PetMD S309: close to their people — not a time-alone rule).",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No source.",
+          "chases_small_pets": "No prey-drive statement; sources say good with other pets.",
+          "low_shedding": "RKC 'Sheds: Yes' (S305).",
+          "shorter_lifespan": "RKC 'Over 10 years' (S305).",
+          "sensitive_skin": "Skin infections (PetMD S309) and sensitive skin (AKC S308) are not a Breed Watch point → no welfare chip (open for David).",
+          "welfare": "RKC Breed Watch Category 2 without a named point (S306) → no welfare chip (Shetland Sheepdog precedent)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children, other_pets; consider frequent_grooming, food_motivated_weight, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a flat-faced breed)",
+        "unit": "—",
+        "source_id": "S306",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 2 without a named point (S306); no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health, never shows a docked tail as a goal, never as a low-maintenance dog (RKC 'Grooming: Every day').",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a flat-faced breed; Breed Watch Category 2 without a named point)"
+      },
+      "ai_appearance": {
+        "value": "adult American Cocker Spaniel, buff (default); the smallest sporting dog, compact and sturdy; rounded skull, pronounced stop, broad deep muzzle; round full dark-brown eyes; long lobular well-feathered ears set low; silky flat or slightly wavy coat, moderately feathered on ears, chest, belly and legs (pet length, not a floor-length show skirt); natural undocked tail; never merle, never blue eyes",
+        "unit": "—",
+        "source_id": "S307",
+        "quote": "Any solid color other than black, ranging from lightest cream to darkest red, including brown and brown with tan points.",
+        "confidence": "high",
+        "notes": "AKC (S307) and FCI (S304) varieties: black (incl. black and tan), ASCOB (cream / buff to red, brown), parti-colour (with white, incl. roan, tricolour); white only on chest / throat in solid colours. Buff is the portrait default. Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — buff (default), black, black and tan, red, chocolate, black and white, red and white, tricolour; never merle, never blue eyes; natural tail in the portrait (Claude's proposal)"
       }
     }
   }

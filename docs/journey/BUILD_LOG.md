@@ -9,6 +9,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-14 — Ameriški koker španjel: devetnajsta pasma po dvajsetih (M5-R10-37)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **ameriškega koker španjela** (32. mesto; v ZDA mu rečejo kar »Cocker Spaniel«, angleški koker španjel je na 36. mestu). Triintrideseta plačljiva pasma psa; v izbirniku je za bretonskim ptičarjem z namigom »česanje vsak dan«.
+
+**Zakaj je pomembno:** Ameriški koker je prijazen družinski pes, dober z otroki in drugimi živalmi (PetMD, VCA, American Kennel Club), a njegova dolga svilnata dlaka zahteva veliko dela: The Royal Kennel Club piše, da ga je treba česati vsak dan, VCA pa, da potrebuje frizerja enkrat na mesec in tedenski pregled ušes. Viri se ne razhajajo le pri negi, temveč tudi pri gibanju: The Royal Kennel Club piše »več kot 2 uri na dan«, American Kennel Club in PetMD pa, da ne potrebuje veliko gibanja. Igra po pravilu vzame številko The Royal Kennel Club, oznake za gibanje pa ne pokaže; odločitev je na seznamu za Davida.
+
+**Številke:** 9 novih virov (S303–S311), 1 migracija, brez nove oznake in brez novega ključa zdravja, 4 testi za vzreditelja (The Royal Kennel Club: genetska raznolikost, oči, DNK prcd-PRA, kolki), 3 + 3 oznake v izbirniku, 2 zgrajeni potrebi z virom (česanje vsak dan, socializacija) in 2 v načrtu (frizer enkrat na mesec, tedenski pregled ušes), dnevni cilj 12.000 korakov (starejši 9.000), meja starejšega psa 90 mesecev (začasno), učenje 1,5×.
+
+**Kako povedati:**
+- 👩 Starši: »Ameriški koker španjel je prijazen z otroki in drugimi živalmi, a njegovo dlako je treba česati vsak dan. V PetPrepu boste videli, ali vaš otrok res vsak dan zmore počesati psa in z njim prehoditi 12.000 korakov, preden se odločite za pravega.«
+- 🧒 Otroci: »Ameriški koker španjel ima dolga, mehka ušesa in svilnato dlako. Vsak dan ga počeši, pelji na sprehod — in pazi, da ne poje preveč priboljškov!«
+- 💼 Investitorji: »Devetnajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC; ko si viri nasprotujejo (gibanje, pogostost česanja), aplikacija uporabi pravilo in nasprotje zapiše kot odprto vprašanje, namesto da bi ugibala.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »Pri ameriškem kokerju PetPrep navaja teste staršev, ki jih priporoča The Royal Kennel Club (pregled oči, test DNK za PRA, kolki, genetska raznolikost); vnetja ušes, kože, displazijo kolkov in von Willebrandovo bolezen omenjamo le kot ozadje, brez statistik in obljub o zdravju.«
+- 📣 Omrežja: ameriškega kokerja **lahko objavljamo** (ni pes s sploščenim obrazom), plav (buff) z naravnim repom; nikoli kot »pes brez dela z nego« in nikoli zamenjan z angleškim kokerjem.
+- 🛠 Tehnično: »Brez novega ključa oznak ali zdravja; česanje (7× na teden) in socializacija sta samo novi vrstici v `breed_stage_params`; meja starejšega 90 iz spodnje meje The Royal Kennel Club je začasna (na seznamu za Davida); izvoz registra brez novih ključev — besedila na spletni strani so že pripravljena.«
+
+---
+
 ## 2026-10-14 — Proračun za AI se zdaj nastavi z enim klikom (M4-07b)
 
 **Kaj se je zgodilo:** Nov kuža (angleški buldog) je dobil sliko, videov pa ne. Razlog ni bila napaka, temveč varovalka: dnevni proračun za AI (5 $) je bil porabljen — en kupljen pes s polnim naborom videov stane okoli 4,63 $ (slika ~0,15 $ + 8 videov po ~0,56 $). Doslej je bilo za dvig limita treba na strežnik in ponovno zagnati aplikacijo. Zdaj ima administracija stran **»Proračun za AI«**: dnevni in mesečni limit, poraba danes in ta mesec, zgodovina sprememb in gumb, ki zavrnjene medije takoj pošlje znova.

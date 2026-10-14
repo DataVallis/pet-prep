@@ -40,6 +40,7 @@ return [
     'english_springer_spaniel' => 'Angleški springer španjel',
     'shetland_sheepdog' => 'Šetlandski ovčar',
     'brittany' => 'Bretonski ptičar',
+    'american_cocker_spaniel' => 'Ameriški koker španjel',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

@@ -40,6 +40,7 @@ return [
     'english_springer_spaniel' => 'English Springer Spaniel',
     'shetland_sheepdog' => 'Shetland Sheepdog',
     'brittany' => 'Brittany',
+    'american_cocker_spaniel' => 'American Cocker Spaniel',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

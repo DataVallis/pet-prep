@@ -148,6 +148,7 @@ describe('readBreedCatalogue', () => {
       'english_springer_spaniel',
       'shetland_sheepdog',
       'brittany',
+      'american_cocker_spaniel',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -409,6 +410,14 @@ describe('readBreedCatalogue', () => {
       suits: ['active_family', 'family_pet', 'children'],
       consider: ['long_daily_exercise', 'needs_mental_stimulation', 'needs_company', 'sheds', 'chases_small_pets'],
     });
+    const acs = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'american_cocker_spaniel');
+    expect(acs).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 330 }));
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-37, runbook rules; no new tag).
+    expect(acs?.search_keywords).toEqual(['american cocker spaniel', 'ameriški koker španjel', 'ameriski koker spanjel', 'american cocker', 'ameriški koker', 'ameriski koker']);
+    expect(acs?.suitability).toEqual({
+      suits: ['family_pet', 'children', 'other_pets'],
+      consider: ['frequent_grooming', 'food_motivated_weight', 'sheds'],
+    });
     const corgi = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'pembroke_welsh_corgi');
     expect(corgi).toEqual(
       expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 200 }),
@@ -455,6 +464,7 @@ describe('readBreedCatalogue', () => {
       'english_springer_spaniel',
       'shetland_sheepdog',
       'brittany',
+      'american_cocker_spaniel',
     ]);
   });
 });
@@ -638,6 +648,17 @@ describe('breed search', () => {
     expect(find('Bretonski ptičar')).toEqual(['brittany']);
     expect(find('bretonski pticar')).toEqual(['brittany']);
     expect(find('epagneul breton')).toEqual(['brittany']);
+  });
+
+  it('M5-R10-37: finds the American Cocker Spaniel by its EN / SL names, with and without the carons, and as "american cocker" / "ameriški koker"', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('american cocker spaniel')).toEqual(['american_cocker_spaniel']);
+    expect(find('Ameriški koker španjel')).toEqual(['american_cocker_spaniel']);
+    expect(find('ameriski koker spanjel')).toEqual(['american_cocker_spaniel']);
+    expect(find('american cocker')).toEqual(['american_cocker_spaniel']);
+    expect(find('ameriski koker')).toEqual(['american_cocker_spaniel']);
+    // Never a bare "cocker" / "koker" keyword: in Slovenia and the UK that usually means the English Cocker (QA M5-R10-37).
+    expect(FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'american_cocker_spaniel')?.search_keywords).not.toContain('koker');
   });
 
   it('M5-R10-35: finds the Shetland Sheepdog by its EN / SL names, with and without the carons, and as "sheltie"', () => {
