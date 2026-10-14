@@ -407,6 +407,7 @@ const SPECIES = [
       { id: 'english_springer_spaniel', synonyms: { en: ['Springer Spaniel', 'Springer', 'ESS'], sl: ['springer španjel', 'angleski springer spanjel', 'springer'] } },
       { id: 'shetland_sheepdog', synonyms: { en: ['Sheltie', 'Shetland Collie'], sl: ['sheltie', 'šeltie', 'setlandski ovcar'] } },
       { id: 'brittany', synonyms: { en: ['Brittany Spaniel', 'Epagneul Breton'], sl: ['epagneul breton', 'bretonski španjel', 'bretonski pticar'] } },
+      { id: 'american_cocker_spaniel', synonyms: { en: ['Cocker Spaniel', 'Cocker', 'Merry Cocker'], sl: ['koker španjel', 'ameriški koker', 'ameriski koker spanjel'] } },
     ],
   },
   {
@@ -1102,6 +1103,28 @@ const DOG_FACTS = {
       ['cataracts', 'health.cataracts'],
     ],
   },
+  // M5-R10-37. Not exported: height.fci (French PDF, quote null — the AKC ideal heights are quoted),
+  // adult_weight.vca (inside the AKC range), adult_weight.salt_category (our assignment), lifespan.petmd /
+  // lifespan.vca (not in the runbook's lifespan order), lifespan.mcmillan_2024 (Wikipedia, tier C),
+  // lifespan.senior_from (derived), suitability.vca_grooming / petmd_grooming / akc_grooming (free text; the
+  // RKC "Every day" is shown), health.skin_infections (no register key; background), suitability.rkc_breed_watch
+  // (Category 2 without a named point). Lifespan = the RKC band "Over 10 years" (S305). No new health key.
+  american_cocker_spaniel: {
+    height: ['height.akc'],
+    weight: [['adult_weight.akc', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: 'behaviour.food_motivation',
+    health: [
+      ['ear_infections_long_ears', 'health.ear_infections'],
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+      ['pra_eye_disease', 'health.prcd_pra'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1367,6 +1390,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.brittany.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.brittany.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.brittany.exercise_minutes_senior',
+  },
+  american_cocker_spaniel: {
+    adult_minutes: ['proposed_game_parameters.american_cocker_spaniel.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.american_cocker_spaniel.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.american_cocker_spaniel.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.american_cocker_spaniel.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.american_cocker_spaniel.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.american_cocker_spaniel.exercise_minutes_senior',
   },
 };
 

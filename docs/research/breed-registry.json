@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "b0f5f0d2ddf1a22af4c39261d0eb96e7c70ce774e1a86a5b873fe3edddcc302f"
+      "sha256": "710b3ca7de039ddeed8c71842a107f82063137f51278a12ec758eaa6ea9f7e43"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "76635d98b41b18af89454c88cc3cf70ea83a26bf980abb75759f1c1d94a62881"
+      "sha256": "46569ffefa2dcac9b292679d1fb41dd8e3c6e92993403d9b39bd58461634f085"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,27 +25,27 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "6a22636c6ccc6971b0f39055cdd0e2d5c105095a36ed9a5e79bedeb2144d72b7"
+      "sha256": "3115ac3da8a811941edc2717e5dfc332236acbd6c56c8a5f67e4dc077c52593a"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "fb9445b53ed525235acd9c21fa640542281791a837b7fbdab42184b5b1dacbbe"
+      "sha256": "db006e21449b6e917eba92020d9ce237add1c091079823af75a5ebd96ae75346"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "2b714f02b4978d7d9e47d58a541adedd1c09e9ba38804c732f1f9fbee41617bf"
+      "sha256": "6d57850503e1645fcaed914587fc308136431c369546784139e9657a81f2e1ba"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "62d35b0b722d646e7e06687267753a842ee33a700decc1681f03f785200e38d4"
+      "sha256": "4a13bdea0dc6c7e9d9fbdd7b867ad4fe1abf2fb6a295b2b1a3bb07fe593f847e"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "6a3ecea34ac7623be0f3c108d56d033c3ef01f1260231a9043e70d874514c50c"
+      "sha256": "4ea47592ce116d0c73df3913210e547d53eaf277c36dafd62e4e75c362b27c67"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "772839134c2c154bfd6dbdaa1a7fce243abc209b17d3221bccadfc2fd36ed022"
+      "sha256": "c3cc5353efe8d8a6e83921fb0a59d2fbb74406c66a121fabfd1dd98b3ea4e33b"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -196,7 +196,7 @@
         }
       },
       "status": "available",
-      "breed_count": 32,
+      "breed_count": 33,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -19430,6 +19430,578 @@
       ]
     },
     {
+      "id": "american_cocker_spaniel",
+      "species": "dog",
+      "order": 32,
+      "availability": "coming_soon",
+      "name": {
+        "en": "American Cocker Spaniel",
+        "sl": "Ameriški koker španjel"
+      },
+      "slug": {
+        "en": "american-cocker-spaniel",
+        "sl": "ameriski-koker-spanjel"
+      },
+      "synonyms": {
+        "en": [
+          "Cocker Spaniel",
+          "Cocker",
+          "Merry Cocker"
+        ],
+        "sl": [
+          "koker španjel",
+          "ameriški koker",
+          "ameriski koker spanjel"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "over_2h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S305"
+          ],
+          "ref": "american_cocker_spaniel.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              38.1,
+              39.4
+            ],
+            "female": [
+              35.6,
+              36.8
+            ]
+          },
+          "source_ids": [
+            "S307"
+          ],
+          "ref": "american_cocker_spaniel.height.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              9.1,
+              13.6
+            ],
+            "female": [
+              9.1,
+              13.6
+            ]
+          },
+          "source_ids": [
+            "S308"
+          ],
+          "ref": "american_cocker_spaniel.adult_weight.akc",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "american_cocker_spaniel.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S305"
+          ],
+          "ref": "american_cocker_spaniel.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S305"
+          ],
+          "ref": "american_cocker_spaniel.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "long"
+          ],
+          "source_ids": [
+            "S305"
+          ],
+          "ref": "american_cocker_spaniel.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S305"
+          ],
+          "ref": "american_cocker_spaniel.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S305"
+          ],
+          "ref": "american_cocker_spaniel.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "feeding",
+          "field": "food_motivated",
+          "kind": "statement",
+          "value": true,
+          "source_ids": [
+            "S309"
+          ],
+          "ref": "american_cocker_spaniel.behaviour.food_motivation",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 20,
+          "source_ids": [
+            "S311"
+          ],
+          "ref": "american_cocker_spaniel.trainability.coren_rank",
+          "confidence": "low"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 167,
+            "group": 8,
+            "section": 2,
+            "origin": "US"
+          },
+          "source_ids": [
+            "S303"
+          ],
+          "ref": "american_cocker_spaniel.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "ear_infections_long_ears",
+          "source_ids": [
+            "S309"
+          ],
+          "ref": "american_cocker_spaniel.health.ear_infections",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_dysplasia_arthritis",
+          "source_ids": [
+            "S309"
+          ],
+          "ref": "american_cocker_spaniel.health.hip_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "bleeding_disorder_vwd",
+          "source_ids": [
+            "S309"
+          ],
+          "ref": "american_cocker_spaniel.health.von_willebrand",
+          "confidence": "medium"
+        },
+        {
+          "key": "pra_eye_disease",
+          "source_ids": [
+            "S305"
+          ],
+          "ref": "american_cocker_spaniel.health.prcd_pra",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S309"
+            ],
+            "refs": [
+              "american_cocker_spaniel.suitability.petmd_family",
+              "american_cocker_spaniel.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S308",
+              "S310"
+            ],
+            "refs": [
+              "american_cocker_spaniel.suitability.vca_children",
+              "american_cocker_spaniel.suitability.akc_children"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S309",
+              "S310"
+            ],
+            "refs": [
+              "american_cocker_spaniel.suitability.vca_other_pets",
+              "american_cocker_spaniel.suitability.petmd_other_animals"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S305",
+              "S310"
+            ],
+            "refs": [
+              "american_cocker_spaniel.suitability.rkc_grooming",
+              "american_cocker_spaniel.suitability.vca_grooming"
+            ]
+          },
+          {
+            "tag": "food_motivated_weight",
+            "source_ids": [
+              "S309",
+              "S310"
+            ],
+            "refs": [
+              "american_cocker_spaniel.behaviour.obesity_tendency",
+              "american_cocker_spaniel.behaviour.food_motivation"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S305"
+            ],
+            "refs": [
+              "american_cocker_spaniel.suitability.rkc_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.american_cocker_spaniel.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S305"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S305 'More than 2 hours per day'; AKC / PetMD conflict → RKC preferred)"
+          },
+          {
+            "ref": "proposed_game_parameters.american_cocker_spaniel.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.american_cocker_spaniel.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S305"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S305)"
+          },
+          {
+            "ref": "proposed_game_parameters.american_cocker_spaniel.learning_multiplier",
+            "basis_source_ids": [
+              "S311"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 20, Excellent tier, S311 / S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.american_cocker_spaniel.grooming",
+            "basis_source_ids": [
+              "S305"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (RKC »Grooming: Every day« → 7× na teden); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S45",
+          "S305",
+          "S311"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S305"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S305"
+            ]
+          },
+          {
+            "key": "dna_prcd_pra",
+            "level": "best_practice",
+            "source_ids": [
+              "S305"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S305"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S305"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S45",
+        "S303",
+        "S305",
+        "S307",
+        "S308",
+        "S309",
+        "S310",
+        "S311",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -23075,6 +23647,55 @@
       "publisher": "PetMD",
       "title": "Brittany (Brittany Spaniel) — dog breed health and care",
       "url": "https://www.petmd.com/dog/breeds/brittany-spaniel"
+    },
+    {
+      "id": "S303",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — AMERICAN COCKER SPANIEL (167)",
+      "url": "https://www.fci.be/en/nomenclature/COCKER-AMERICAIN-167.html"
+    },
+    {
+      "id": "S305",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Spaniel (American Cocker) — breed information page (Breeds A to Z)",
+      "url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/gundog/spaniel-american-cocker"
+    },
+    {
+      "id": "S307",
+      "tier": "A",
+      "publisher": "American Kennel Club",
+      "title": "Official Standard of the Cocker Spaniel (PDF, approved 2018-01-09)",
+      "url": "https://images.akc.org/pdf/breeds/standards/Cocker_Spaniel.pdf"
+    },
+    {
+      "id": "S308",
+      "tier": "B",
+      "publisher": "American Kennel Club",
+      "title": "Is the Cocker Spaniel a Good Fit for Your Lifestyle?",
+      "url": "https://www.akc.org/expert-advice/dog-breeds/cocker-spaniel-right-for-you/"
+    },
+    {
+      "id": "S309",
+      "tier": "B",
+      "publisher": "PetMD",
+      "title": "Cocker Spaniel (American) — dog breed health and care",
+      "url": "https://www.petmd.com/dog/breeds/c_dg_am_cocker_spaniel"
+    },
+    {
+      "id": "S310",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals",
+      "title": "American Cocker Spaniel — dog breed page",
+      "url": "https://vcahospitals.com/know-your-pet/dog-breeds/american-cocker-spaniel"
+    },
+    {
+      "id": "S311",
+      "tier": "C",
+      "publisher": "Wikipedia",
+      "title": "American Cocker Spaniel",
+      "url": "https://en.wikipedia.org/wiki/American_Cocker_Spaniel"
     },
     {
       "id": "C1",
