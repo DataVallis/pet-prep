@@ -271,6 +271,7 @@ describe('PetPickerStep', () => {
       'breed-option-boston_terrier',
       'breed-option-miniature_american_shepherd',
       'breed-option-chihuahua',
+      'breed-option-english_springer_spaniel',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -766,6 +767,56 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/\d|%/);
       expect(consider).not.toHaveTextContent(/\d|%/);
       expect(screen.getByTestId('breed-option-miniature_american_shepherd')).toHaveTextContent(/Miniature American Shepherd/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-34: the English Springer Spaniel (fallback) shows its chips, is found as "angleški springer španjel" and "springer", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const ess = screen.getByTestId('breed-option-english_springer_spaniel');
+    expect(ess).toHaveTextContent(/Angleški springer španjel/);
+    expect(ess).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-english_springer_spaniel-suits');
+    expect(suits).toHaveTextContent(/aktivno družino/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    expect(suits).toHaveTextContent(/dom z drugimi ljubljenčki/);
+    const consider = screen.getByTestId('breed-suitability-english_springer_spaniel-consider');
+    expect(consider).toHaveTextContent(/vsak dan potrebuje veliko gibanja/);
+    expect(consider).toHaveTextContent(/rad ima družbo — naj bo nekdo večino dneva doma/);
+    expect(consider).toHaveTextContent(/potrebuje česanje večkrat na teden/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'angleški springer španjel');
+    expect(screen.getByTestId('breed-option-english_springer_spaniel')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'springer');
+    expect(screen.getByTestId('breed-option-english_springer_spaniel')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-english_springer_spaniel'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'english_springer_spaniel', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'english_springer_spaniel' }),
+    );
+  });
+
+  it('M5-R10-34: the English Springer Spaniel chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-english_springer_spaniel-suits');
+      const consider = screen.getByTestId('breed-suitability-english_springer_spaniel-consider');
+      expect(suits).toHaveTextContent(/an active family/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(consider).toHaveTextContent(/needs lots of exercise every day/);
+      expect(consider).toHaveTextContent(/needs brushing several times a week/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-english_springer_spaniel')).toHaveTextContent(/English Springer Spaniel/);
     } finally {
       await i18n.changeLanguage('sl');
     }
