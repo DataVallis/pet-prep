@@ -223,6 +223,11 @@ return [
         ['key' => 'red-white', 'value' => 'red and white parti-colour', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
         ['key' => 'tricolour', 'value' => 'tricolour (black and white with tan points)', 'en' => 'Tricolour', 'sl' => 'Trobarven'],
     ],
+    // M5-R10-38: FCI S313 "Only fawn with black overlay and with black mask."; AKC S315 "rich fawn to mahogany".
+    'belgian_malinois' => [
+        ['key' => 'fawn', 'value' => 'fawn with black overlay (black-tipped hairs) and a pronounced black mask', 'en' => 'Fawn with black mask', 'sl' => 'Plav s črno masko'],
+        ['key' => 'mahogany', 'value' => 'mahogany with black overlay (black-tipped hairs) and a pronounced black mask', 'en' => 'Mahogany with black mask', 'sl' => 'Mahagonij s črno masko'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

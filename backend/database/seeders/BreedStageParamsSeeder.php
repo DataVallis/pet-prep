@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -470,6 +470,17 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_AMERICAN_COCKER_SPANIEL = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-37)';
 
     /**
+     * M5-R10-38 Belgian Malinois (unattended run 2026-10-14, data.json
+     * proposed_game_parameters.belgian_malinois.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 120 min
+     * (RKC S314 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 90 (0.75 × RKC lower bound 10 y, S314 — provisional until McMillan 2024
+     * is checked), arrival 2 / 9 / 36 / 90, learning multiplier 1.5 (Coren rank 22, Excellent); care rates
+     * the Border Collie's.
+     */
+    public const CONFIRMED_R10_BELGIAN_MALINOIS = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-38)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -565,6 +576,13 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_DAVID_2026_10_12 = 'potrdil David 2026-10-12';
 
     /**
+     * M5-R10-38 Belgian Malinois: RKC "More than once a week" (S314) without a number and AKC / PetMD
+     * "occasional" brushing → Claude's proposal 2 per week, verified=false (a new breed still asks David,
+     * runbook §3 "Dog grooming").
+     */
+    public const PROPOSED_R13_BELGIAN_MALINOIS = 'predlog Claude 2026-10-14 (RKC »More than once a week« brez števila → 2, M5-R13, M5-R10-38) — čaka Davida';
+
+    /**
      * M5-R13: dog breed → [sessions per week, source id, verbatim quote (data.json), confidence,
      * Claude's proposal?, David's own decision (null = the runbook rule)]. The mutt and the
      * Border Collie have no grooming statement → no row.
@@ -604,6 +622,7 @@ class BreedStageParamsSeeder extends Seeder
         'shetland_sheepdog' => [7, 'S291', 'Grooming: Every day', 'high', false],
         'brittany' => [1, 'S301', 'Weekly brushing with a soft brush or hound glove will keep a Brittany looking their best.', 'medium', false],
         'american_cocker_spaniel' => [7, 'S305', 'Grooming: Every day', 'high', false],
+        'belgian_malinois' => [2, 'S314', 'Grooming: More than once a week', 'low', true, self::PROPOSED_R13_BELGIAN_MALINOIS],
     ];
 
     /**
@@ -678,13 +697,14 @@ class BreedStageParamsSeeder extends Seeder
         'shetland_sheepdog' => ['S293', 'Training, along with socialisation, is very important at a young age'],
         'brittany' => ['S302', 'Early socialization in Brittany puppies is a must'],
         'american_cocker_spaniel' => ['S309', 'Start socialization and training classes early so your Cocker Spaniel puppy learns good manners.'],
+        'belgian_malinois' => ['S316', 'Early, extensive socialization will help limit aggressive tendencies towards new people.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1282,6 +1302,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-37 (docs/research/dog-data/data.json american_cocker_spaniel,
             // S303–S311; runbook rules in proposed_game_parameters.american_cocker_spaniel).
             BreedType::AmericanCockerSpaniel => self::americanCockerSpanielProfile(),
+            // M5-R10-38 (docs/research/dog-data/data.json belgian_malinois,
+            // S312–S318; runbook rules in proposed_game_parameters.belgian_malinois).
+            BreedType::BelgianMalinois => self::belgianMalinoisProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -3685,6 +3708,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'american_cocker_spaniel.lifespan.rkc',
                 'quote' => 'Lifespan: Over 10 years',
                 'notes' => 'RKC breed page lower bound (S305); PetMD "10–14 years" (S309) agrees. McMillan 2024 13.3 y only via Wikipedia (S311, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Belgian Malinois (M5-R10-38). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_BELGIAN_MALINOIS);
+     * weight, growth, Coren rank and lifespan are sourced. The senior boundary uses the RKC lower
+     * bound (no McMillan 2024 / VetCompass median reachable) — provisional, like the Brittany.
+     *
+     * @return array<string, mixed>
+     */
+    private static function belgianMalinoisProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BELGIAN_MALINOIS;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S314', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.belgian_malinois.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S314) = 7.5 y = 90 months (PetMD lower bound 10 y, S317, agrees). No McMillan 2024 / VetCompass median was reachable (McMillan 2024 12 y only via Wikipedia, S318, tier C → 108, alternative only). Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_malinois.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S314', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_malinois.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S314) → 120 min = 12,000 steps (runbook rule: "more than N" → N). AKC (S316) "significant exercise on a daily basis" agrees without a number; PetMD (S317) "more than 40 minutes" is a minimum.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_malinois.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[20.0, 30.0], [
+                'unit' => 'kg', 'source_id' => 'S313', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'belgian_malinois.adult_weight.fci',
+                'quote' => 'Males about 25-30 kg.',
+                'notes' => 'FCI standard (S313): males about 25–30 kg, females about 20–25 kg → 20–30 kg for the game. AKC (S316) 40–80 lb and PetMD (S317) heavier ranges are alternatives only.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'belgian_malinois.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (FCI 20–30 kg ≈ 44–66 lb, mostly the Medium class of S10; RKC size "Medium-Large", S314 — Siberian Husky precedent).',
+            ]],
+            'coren_rank' => [22, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'belgian_malinois.trainability.coren_rank',
+                'quote' => '| 22 | Belgian Malinois |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 22 "Belgian Malinois", tier "Excellent Working Dogs" (ranks 11–26). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_malinois.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 22 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S314', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'belgian_malinois.lifespan.rkc',
+                'quote' => 'Lifespan: Over 10 years',
+                'notes' => 'RKC breed page lower bound (S314); PetMD "10–14 years" (S317) agrees. McMillan 2024 12 y only via Wikipedia (S318, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

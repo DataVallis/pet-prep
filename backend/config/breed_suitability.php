@@ -995,6 +995,38 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S305'], 'refs' => ['american_cocker_spaniel.suitability.rkc_shedding']],
             ],
         ],
+        // M5-R10-38: belgian_malinois.* (S312–S318), runbook rules (data.json
+        // proposed_game_parameters.belgian_malinois.suitability_tags). RKC (S314) + AKC (S316) + PetMD
+        // (S317). No family_pet / children / other_pets: AKC "older, responsible kids", PetMD herds
+        // toddlers and has a high prey drive. RKC "More than once a week" vs AKC / PetMD "occasional"
+        // brushing → no frequent_grooming. Breed Watch Category 1 → no welfare chip.
+        'belgian_malinois' => [
+            'suits' => [
+                // S314 "Exercise: More than 2 hours per day"; S316 "Mals require significant exercise on a daily basis".
+                ['tag' => 'active_family', 'source_ids' => ['S314', 'S316'], 'refs' => ['belgian_malinois.exercise.adult', 'belgian_malinois.suitability.akc_exercise']],
+                // S314 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S314'], 'refs' => ['belgian_malinois.suitability.rkc_size_of_home', 'belgian_malinois.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S314 "More than 2 hours per day"; S316 "significant exercise on a daily basis".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S314', 'S316'], 'refs' => ['belgian_malinois.exercise.adult', 'belgian_malinois.suitability.akc_exercise']],
+                // S316 "don't make them a good choice for first-time dog owners"; S317 "need a dedicated and experienced pet parent".
+                ['tag' => 'experienced_owner', 'source_ids' => ['S316', 'S317'], 'refs' => ['belgian_malinois.behaviour.experienced_owner', 'belgian_malinois.suitability.akc_experienced_owner', 'belgian_malinois.suitability.petmd_experienced_owner']],
+                // S316 "Mals would fare best in families with older, responsible kids." + "supervision around children is a must"
+                // (the older_children chip reads "small dog" — not this breed).
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S316'], 'refs' => ['belgian_malinois.suitability.akc_children', 'belgian_malinois.behaviour.family']],
+                // S317 "They may also try to use their herding skills to round up toddlers and children."
+                ['tag' => 'may_herd_children', 'source_ids' => ['S317'], 'refs' => ['belgian_malinois.suitability.petmd_herding_children']],
+                // S316 "happiest with plenty of mental and physical activity".
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S316'], 'refs' => ['belgian_malinois.exercise.energy', 'belgian_malinois.suitability.akc_mental_stimulation']],
+                // S316 "they should not be left alone for extended periods of time."
+                ['tag' => 'needs_company', 'source_ids' => ['S316'], 'refs' => ['belgian_malinois.behaviour.time_alone', 'belgian_malinois.suitability.akc_time_alone']],
+                // S314 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S314'], 'refs' => ['belgian_malinois.suitability.rkc_shedding']],
+                // S317 "Belgian Malinois also have a high prey drive, making them extremely interested in moving objects."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S317'], 'refs' => ['belgian_malinois.behaviour.other_pets', 'belgian_malinois.suitability.petmd_prey_drive']],
+            ],
+        ],
 
     ],
 ];

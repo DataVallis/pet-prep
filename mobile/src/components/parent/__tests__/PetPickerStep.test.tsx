@@ -275,6 +275,7 @@ describe('PetPickerStep', () => {
       'breed-option-shetland_sheepdog',
       'breed-option-brittany',
       'breed-option-american_cocker_spaniel',
+      'breed-option-belgian_malinois',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -909,6 +910,64 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/\d|%/);
       expect(consider).not.toHaveTextContent(/\d|%/);
       expect(screen.getByTestId('breed-option-american_cocker_spaniel')).toHaveTextContent(/American Cocker Spaniel/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-38: the Belgian Malinois (fallback) shows its chips, is found as "belgijski ovčar" and "malinois", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const mal = screen.getByTestId('breed-option-belgian_malinois');
+    expect(mal).toHaveTextContent(/Belgijski ovčar malinois/);
+    expect(mal).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(mal).toHaveTextContent(/česanje 2× na teden/);
+    const suits = screen.getByTestId('breed-suitability-belgian_malinois-suits');
+    expect(suits).toHaveTextContent(/aktivno družino/);
+    expect(suits).toHaveTextContent(/veliko hišo z vrtom/);
+    const consider = screen.getByTestId('breed-suitability-belgian_malinois-consider');
+    expect(consider).toHaveTextContent(/vsak dan potrebuje veliko gibanja/);
+    expect(consider).toHaveTextContent(/potrebuje izkušenega lastnika/);
+    expect(consider).toHaveTextContent(/ni za dom z majhnimi otroki/);
+    expect(consider).toHaveTextContent(/»pase« otroke/);
+    expect(consider).toHaveTextContent(/potrebuje miselne izzive/);
+    expect(consider).toHaveTextContent(/rad ima družbo/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+    expect(consider).toHaveTextContent(/lahko lovi manjše živali/);
+    expect(suits).not.toHaveTextContent(/družinsko življenje/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'belgijski ovčar');
+    expect(screen.getByTestId('breed-option-belgian_malinois')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'malinois');
+    expect(screen.getByTestId('breed-option-belgian_malinois')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-belgian_malinois'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'belgian_malinois', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'belgian_malinois' }),
+    );
+  });
+
+  it('M5-R10-38: the Belgian Malinois chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-belgian_malinois-suits');
+      const consider = screen.getByTestId('breed-suitability-belgian_malinois-consider');
+      expect(suits).toHaveTextContent(/an active family/);
+      expect(suits).toHaveTextContent(/a large house and garden/);
+      expect(consider).toHaveTextContent(/needs lots of exercise every day/);
+      expect(consider).toHaveTextContent(/needs an experienced owner/);
+      expect(consider).toHaveTextContent(/not for homes with small children/);
+      expect(consider).toHaveTextContent(/may chase small pets/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-belgian_malinois')).toHaveTextContent(/Belgian Malinois/);
     } finally {
       await i18n.changeLanguage('sl');
     }

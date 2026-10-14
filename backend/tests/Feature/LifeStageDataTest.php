@@ -162,12 +162,16 @@ describe('import provenance', function () {
         // (no runbook rule produced a value) — open for David.
         // M5-R13: the brushing routine of the five breeds whose sources say "more than once a
         // week" without a number — 2 per week, confirmed by David 2026-10-12 (no longer open).
+        // M5-R10-38: the Belgian Malinois' brushing (RKC "More than once a week", AKC / PetMD
+        // "occasional" — no number) is Claude's proposal 2 per week, open for David.
         $dogOpen = BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false);
-        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua'])->pluck('key')->unique()->values()->all())
+        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'belgian-malinois'])->pluck('key')->unique()->values()->all())
             ->toEqualCanonicalizing([
                 StageParamKey::ChewingChancePerDay->value,
             ]);
-        expect((clone $dogOpen)->where('key', StageParamKey::GroomingSessionsPerWeek->value)->count())->toBe(0)
+        expect((clone $dogOpen)->where('key', StageParamKey::GroomingSessionsPerWeek->value)->pluck('breed_slug')->all())->toBe(['belgian-malinois'])
+            ->and((clone $dogOpen)->where('breed_slug', 'belgian-malinois')->whereNotIn('key', [StageParamKey::ChewingChancePerDay->value])->get()->map(fn ($r) => "{$r->stage}.{$r->key}")->all())
+            ->toBe(['all.'.StageParamKey::GroomingSessionsPerWeek->value])
             ->and((clone $dogOpen)->where('key', StageParamKey::SocialisationTasksPerWeek->value)->count())->toBe(0);
         foreach (['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua'] as $slug) {
             expect((clone $dogOpen)->where('breed_slug', $slug)->whereNotIn('key', [StageParamKey::ChewingChancePerDay->value])->get()->map(fn ($r) => "{$r->stage}.{$r->key}")->sort()->values()->all())

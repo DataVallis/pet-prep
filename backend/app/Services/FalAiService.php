@@ -335,6 +335,14 @@ class FalAiService
                 .'rounded skull with a pronounced stop and a broad deep muzzle, natural undocked tail carried level with the back, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-38: FCI 15 Malinois variety (S313) / AKC standard (S315) — fawn with black overlay and a black
+            // mask as the anchor (also mahogany, AKC); never black, brindle, merle or white patches; natural ears and tail.
+            BreedType::BelgianMalinois => 'A medium-large, square, elegant and powerful Belgian Malinois dog (Belgian Shepherd, short-haired variety) '
+                .'with a short fawn coat with black overlay and a pronounced black mask, short straight hard coat fuller at the neck and tail, '
+                .'rather small high-set triangular erect ears, medium almond-shaped dark brown eyes, '
+                .'proud head carriage, natural full tail reaching the hock carried low, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -817,6 +825,17 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'silky, flat or slightly wavy coat with moderate feathering',
                 'markings' => 'solid colour, white only on the chest or throat for solid colours',
+            ],
+            // M5-R10-38: FCI / AKC standard colours (S313, S315) — fawn to mahogany with black overlay and mask.
+            BreedType::BelgianMalinois => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'fawn with black overlay',
+                    1 => 'rich fawn with black overlay',
+                    2 => 'mahogany with black overlay',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, straight, hard coat with a dense undercoat',
+                'markings' => 'pronounced black mask over the muzzle, lips and eyelids, black-tipped hairs',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

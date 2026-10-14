@@ -116,6 +116,7 @@
       "shetland_sheepdog": "Part of the 12-week challenge · brushing every day",
       "brittany": "Part of the 12-week challenge · brushing 1× a week",
       "american_cocker_spaniel": "Part of the 12-week challenge · brushing every day",
+      "belgian_malinois": "Part of the 12-week challenge · brushing 2× a week",
       "domestic_cat": "Short coat · free",
       "maine_coon": "Long coat · brushing 3× a week",
       "british_shorthair": "Short, dense coat · brushing 1× a week",
@@ -239,6 +240,12 @@
         "senior": "2 meals a day; shorter walks — 9,000 steps a day."
       },
       "american_cocker_spaniel": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
+        "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
+        "adult": "2 meals a day; walks of 12,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 9,000 steps a day."
+      },
+      "belgian_malinois": {
         "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
         "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
         "adult": "2 meals a day; walks of 12,000 steps a day.",

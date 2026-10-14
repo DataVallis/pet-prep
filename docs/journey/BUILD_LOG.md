@@ -9,6 +9,22 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-14 — Belgijski ovčar malinois: dvajseta pasma po dvajsetih (M5-R10-38)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **belgijskega ovčarja malinois** (33. mesto). FCI pozna eno pasmo, belgijskega ovčarja, s štirimi sortami; v igri je samo kratkodlaki malinois. Štiriintrideseta plačljiva pasma psa; v izbirniku je za ameriškim koker španjelom z namigom »česanje 2× na teden«.
+
+**Zakaj je pomembno:** Malinois je zahteven pes: The Royal Kennel Club piše, da potrebuje več kot 2 uri gibanja na dan, American Kennel Club pa, da ni dobra izbira za prvega psa in da se najbolje znajde v družini s starejšimi, odgovornimi otroki; PetMD dodaja, da lahko »pase« malčke in ima močan lovski nagon. Prav za takšno pasmo je PetPrep najbolj koristen — družina pred nakupom vidi, koliko dela je res. Pri negi viri ne navedejo števila (The Royal Kennel Club »več kot enkrat na teden«, American Kennel Club in PetMD »občasno«), zato igra predlaga česanje 2× na teden in odločitev zapiše na seznam za Davida.
+
+**Številke:** 7 novih virov (S312–S318), 1 migracija, brez nove oznake, 1 nov ključ zdravja (PRA) in nov izvor FCI (Belgija), 2 + 8 oznak v izbirniku, 2 zgrajeni potrebi z virom (česanje 2× na teden — predlog, socializacija) in 3 v načrtu (redno striženje krempljev, čiščenje ušes enkrat na mesec, vsakodnevna nega zob), dnevni cilj 12.000 korakov (starejši 9.000), meja starejšega psa 90 mesecev (začasno), učenje 1,5×.
+
+**Kako povedati:**
+- 👩 Starši: »Belgijski ovčar malinois ni pes za začetnike in ne za dom z majhnimi otroki — potrebuje več kot dve uri gibanja na dan in veliko miselnega dela. V PetPrepu boste videli, ali vaš otrok res vsak dan zmore 12.000 korakov in redno šolanje, preden se odločite za pravega.«
+- 🧒 Otroci: »Malinois je pameten pes, poln energije, s pokončnimi ušesi in črno masko. Vsak dan ga pelji na dolg sprehod, z njim vadi v šoli in ga dvakrat na teden počeši!«
+- 💼 Investitorji: »Dvajseta pasma, ki jo je sistem sam izbral po javni lestvici AKC; ko vir ne da številke, aplikacija predlaga vrednost, jo označi kot nepreverjeno in vprašanje zapiše za ustanovitelja, namesto da bi ugibala.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »Pri malinoisu PetPrep displazijo kolkov in komolcev, sivo mreno in dedno bolezen mrežnice (PRA) omenja le kot ozadje, brez statistik in obljub o zdravju; imenovanega testa za vzreditelja na strani The Royal Kennel Club nismo našli, zato ga ne navajamo.«
+- 📣 Omrežja: malinoisa **lahko objavljamo** (ni pes s sploščenim obrazom), plav (fawn) s črno masko, z naravnimi pokončnimi ušesi in celim repom; nikoli kot pes za začetnike, nikoli z majhnimi otroki, nikoli kot pes čuvaj ali zaščitni pes.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje (2× na teden, `verified=false`) in socializacija sta samo novi vrstici v `breed_stage_params`; meja starejšega 90 iz spodnje meje The Royal Kennel Club je začasna (na seznamu za Davida); izvoz registra dobi nov izvor FCI (Belgija / BE) in nov ključ zdravja `pra_inherited_blindness` — besedila na spletni strani pridejo s PR spletne strani.«
+
 ## 2026-10-14 — Barva psa in skupni AI mediji za plačljive pasme (M5-R21)
 
 **Kaj se je zgodilo:** Starš pri plačljivi pasmi zdaj izbere tudi **barvo dlake** — samo barve, ki jih dovoljuje standard pasme (39 plačljivih pasem — 33 psov in 6 mačk — skupaj 178 barv; pri 3 pasmah je barva ena sama, zato izbire ni). Hkrati se je spremenilo, kako nastajajo slike in videi: dokler je v administraciji stikalo »Unikatni AI mediji za vsakega ljubljenčka« izklopljeno (privzeto), si vsi novi ljubljenčki iste pasme in barve **delijo en videz** — slike in videi se ustvarijo enkrat, ob prvem ljubljenčku, vsak naslednji (tudi v drugi družini) jih dobi takoj in brez novega klica AI. Ko je stikalo vklopljeno, ima vsak ljubljenček svoj unikaten videz kot doslej. Mešanček in domača mačka ostaneta na skupnem naboru 20 videzov (M4-10). Administrator lahko skupni videz ustvari znova; na novo nastanejo samo obdobja, v katerih so aktivni ljubljenčki, ostala obdržijo svoje slike.

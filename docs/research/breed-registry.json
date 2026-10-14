@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "72bd3164c9918aeadaef939c9684a0d9ff0a70292b6413dda82351434713ccd4"
+      "sha256": "f46a38e8ec4df491e084e479bbe3b4a1badd22b1debf0063f15e6ca6c3b9020e"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "db4d1321983cfb4a73b41e532af4ba224aeccb8fb8e8883196e1d5ddf3847e4f"
+      "sha256": "46953ba95ffcc14f4c6a3d11d199354f70a5fa57a6ce9ab9a7dd08b822fedf63"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,27 +25,27 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "3115ac3da8a811941edc2717e5dfc332236acbd6c56c8a5f67e4dc077c52593a"
+      "sha256": "de5c2d24e6d9e77829a6f904bcc34b77843e1de6c6e71135ea1dbff3c7f49a2e"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "8149c5456d6adc9a8a6632ae83d22d818a1651fb4e6ca8cba05b2e2f037dd5c3"
+      "sha256": "9a82956698f7a3763f98204ae6591c70f382791e4f2ed08485e6fdfac6377823"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "b1e40f6f81c890d3a590723aa79b3786b826ec7e09b092d8cbf82fd02cb20354"
+      "sha256": "f2841558e74eb5874cbb1a2121f2a35958ee89e8063fb6d45dbf1e2110c179e8"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "4a13bdea0dc6c7e9d9fbdd7b867ad4fe1abf2fb6a295b2b1a3bb07fe593f847e"
+      "sha256": "1d0c1d3608567cdfec7deda4bf8ae36c8a6b5d25121d7312fe9b6a4c3cda7799"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "4ea47592ce116d0c73df3913210e547d53eaf277c36dafd62e4e75c362b27c67"
+      "sha256": "82260caf342ced0ffd49efc565325e95b3e1c418ab79ce7b5aa3ad913d0280d5"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "c3cc5353efe8d8a6e83921fb0a59d2fbb74406c66a121fabfd1dd98b3ea4e33b"
+      "sha256": "f2353786003444cb7e8f2c076ce03ed04be1da27fc7889314d1ff631cd50ab30"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -196,7 +196,7 @@
         }
       },
       "status": "available",
-      "breed_count": 33,
+      "breed_count": 34,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -20005,6 +20005,574 @@
       ]
     },
     {
+      "id": "belgian_malinois",
+      "species": "dog",
+      "order": 33,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Belgian Malinois",
+        "sl": "Belgijski ovčar malinois"
+      },
+      "slug": {
+        "en": "belgian-malinois",
+        "sl": "belgijski-ovcar-malinois"
+      },
+      "synonyms": {
+        "en": [
+          "Malinois",
+          "Belgian Shepherd Dog (Malinois)",
+          "Mal"
+        ],
+        "sl": [
+          "malinois",
+          "belgijski ovcar malinois"
+        ]
+      },
+      "facets": {
+        "size": "medium_large",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium_large",
+          "source_ids": [
+            "S314"
+          ],
+          "ref": "belgian_malinois.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              60,
+              66
+            ],
+            "female": [
+              56,
+              62
+            ]
+          },
+          "source_ids": [
+            "S313"
+          ],
+          "ref": "belgian_malinois.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              61,
+              66
+            ],
+            "female": [
+              56,
+              61
+            ]
+          },
+          "source_ids": [
+            "S315"
+          ],
+          "ref": "belgian_malinois.height.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              25,
+              30
+            ],
+            "female": [
+              20,
+              25
+            ]
+          },
+          "source_ids": [
+            "S313"
+          ],
+          "ref": "belgian_malinois.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "belgian_malinois.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S314"
+          ],
+          "ref": "belgian_malinois.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S314"
+          ],
+          "ref": "belgian_malinois.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S314"
+          ],
+          "ref": "belgian_malinois.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S314"
+          ],
+          "ref": "belgian_malinois.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 22,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "belgian_malinois.trainability.coren_rank",
+          "confidence": "low"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 15,
+            "group": 1,
+            "section": 1,
+            "origin": "BE"
+          },
+          "source_ids": [
+            "S312"
+          ],
+          "ref": "belgian_malinois.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 3,
+        "exercise": 6,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 5
+      },
+      "health": [
+        {
+          "key": "hip_elbow_joint_disease",
+          "source_ids": [
+            "S317"
+          ],
+          "ref": "belgian_malinois.health.hip_elbow_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S317"
+          ],
+          "ref": "belgian_malinois.health.cataracts",
+          "confidence": "medium"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S317"
+          ],
+          "ref": "belgian_malinois.health.pra",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S314",
+              "S316"
+            ],
+            "refs": [
+              "belgian_malinois.exercise.adult",
+              "belgian_malinois.suitability.akc_exercise"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S314"
+            ],
+            "refs": [
+              "belgian_malinois.suitability.rkc_size_of_home",
+              "belgian_malinois.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S314",
+              "S316"
+            ],
+            "refs": [
+              "belgian_malinois.exercise.adult",
+              "belgian_malinois.suitability.akc_exercise"
+            ]
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S316",
+              "S317"
+            ],
+            "refs": [
+              "belgian_malinois.behaviour.experienced_owner",
+              "belgian_malinois.suitability.akc_experienced_owner",
+              "belgian_malinois.suitability.petmd_experienced_owner"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S316"
+            ],
+            "refs": [
+              "belgian_malinois.suitability.akc_children",
+              "belgian_malinois.behaviour.family"
+            ]
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S317"
+            ],
+            "refs": [
+              "belgian_malinois.suitability.petmd_herding_children"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S316"
+            ],
+            "refs": [
+              "belgian_malinois.exercise.energy",
+              "belgian_malinois.suitability.akc_mental_stimulation"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S316"
+            ],
+            "refs": [
+              "belgian_malinois.behaviour.time_alone",
+              "belgian_malinois.suitability.akc_time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S314"
+            ],
+            "refs": [
+              "belgian_malinois.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S317"
+            ],
+            "refs": [
+              "belgian_malinois.behaviour.other_pets",
+              "belgian_malinois.suitability.petmd_prey_drive"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_malinois.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S314"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S314 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_malinois.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_malinois.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S314"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S314)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_malinois.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 22, Excellent tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_malinois.grooming",
+            "basis_source_ids": [
+              "S314"
+            ],
+            "decision": "predlog Claude 2026-10-14: česanje 2× na teden (RKC »More than once a week« brez števila, AKC / PetMD »occasional«) — čaka Davida (mehanika česanja psa zgrajena v ROADMAP M5-R13)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S314"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_found",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S312",
+        "S313",
+        "S314",
+        "S315",
+        "S316",
+        "S317",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -23692,6 +24260,48 @@
       "publisher": "VCA Animal Hospitals",
       "title": "American Cocker Spaniel — dog breed page",
       "url": "https://vcahospitals.com/know-your-pet/dog-breeds/american-cocker-spaniel"
+    },
+    {
+      "id": "S312",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "Chien de Berger Belge (15) — FCI breeds nomenclature page",
+      "url": "https://www.fci.be/en/nomenclature/BELGIAN-SHEPHERD-DOG-15.html"
+    },
+    {
+      "id": "S313",
+      "tier": "A",
+      "publisher": "Fédération Cynologique Internationale",
+      "title": "FCI-Standard No. 15 — Belgian Shepherd Dog (English PDF)",
+      "url": "https://www.fci.be/nomenclature/standards/015g01-en.pdf"
+    },
+    {
+      "id": "S314",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Belgian Shepherd Dog (Malinois) — breed page (older address)",
+      "url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=5112"
+    },
+    {
+      "id": "S315",
+      "tier": "A",
+      "publisher": "American Kennel Club",
+      "title": "Official Standard of the Belgian Malinois (PDF)",
+      "url": "https://images.akc.org/pdf/breeds/standards/BelgianMalinois.pdf"
+    },
+    {
+      "id": "S316",
+      "tier": "B",
+      "publisher": "American Kennel Club",
+      "title": "Is the Belgian Malinois the Right Dog Breed for You?",
+      "url": "https://www.akc.org/expert-advice/dog-breeds/belgian-malinois-right-for-you/"
+    },
+    {
+      "id": "S317",
+      "tier": "B",
+      "publisher": "PetMD — B. Grenus, DVM (reviewed by M. Price, DVM), 2025-01-15",
+      "title": "Belgian Malinois Dog Breed Health and Care",
+      "url": "https://www.petmd.com/dog/breeds/belgian-malinois"
     },
     {
       "id": "C1",
