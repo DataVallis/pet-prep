@@ -1387,6 +1387,75 @@
         }
       ],
       "notes": "RKC breed page (Smooth Coat, dog-data S275, 2026-10-13): no minimum list; under 'Best Practice schemes and tests': the KC/BVA CM/SM screening scheme and the BVA/KC/ISDS eye scheme; 'To support the breed’s health, responsible breeders should ensure they complete all tests in best practice.' PDSA (dog-data S277) names three more parent checks for the breed — the BVA/KC hip x-ray scheme, heart scans for heart valve problems and a vet's kneecap check — recorded as other_scheme (Cane Corso / Miniature American Shepherd precedent). Existing keys only."
+    },
+    "english_springer_spaniel": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S284",
+        "level_quotes": {
+          "minimum": "Good Practice schemes and tests",
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "elbow_scheme",
+          "level": "minimum",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S284",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S284",
+          "quote": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S284",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        },
+        {
+          "key": "dna_ams",
+          "level": "best_practice",
+          "name": "DNA test for Acral mutilation syndrome (AMS)",
+          "source_id": "S284",
+          "quote": "DNA test for Acral mutilation syndrome (AMS) - Find a list of tested dogs here"
+        },
+        {
+          "key": "dna_dams",
+          "level": "best_practice",
+          "name": "DNA test for Dyserythropoietic anemia and myopathy syndrome (DAMS)",
+          "source_id": "S284",
+          "quote": "DNA test for Dyserythropoietic anemia and myopathy syndrome (DAMS) - Find a list of tested dogs here"
+        },
+        {
+          "key": "dna_fuco",
+          "level": "best_practice",
+          "name": "DNA test for Fucosidosis (fuco)",
+          "source_id": "S284",
+          "quote": "DNA test for Fucosidosis (fuco) - Find a list of tested dogs here"
+        },
+        {
+          "key": "dna_pfk",
+          "level": "best_practice",
+          "name": "DNA test for Phosphofructokinase deficiency (PFK)",
+          "source_id": "S284",
+          "quote": "DNA test for Phosphofructokinase deficiency (PFK) - Find a list of tested dogs here"
+        },
+        {
+          "key": "dna_pra_cord1",
+          "level": "best_practice",
+          "name": "DNA test for Progressive retinal atrophy (PRA(cord1))",
+          "source_id": "S284",
+          "quote": "DNA test for Progressive retinal atrophy (PRA(cord1)) - Find a list of tested dogs here"
+        }
+      ],
+      "notes": "RKC breed page (older address display.aspx?id=2053, dog-data S284, 2026-10-14): 'Pre-breeding health screening' with 'Good Practice schemes and tests' (= minimum; the page also says 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding'): elbow, eye (with gonioscopy for PLA) and hip schemes; and 'Best Practice schemes and tests': DNA tests for AMS, DAMS, fucosidosis, PFK and PRA (cord1). The Good Practice line 'Prioritising genetic diversity' is advice, not a test — not added (inbreeding_coi is the Bulldog's calculator line). PDSA (S285) recommends checking that the parents were screened under the BVA/KC Canine Health Schemes. New test keys dna_ams, dna_dams, dna_fuco, dna_pfk, dna_pra_cord1 need website words."
     }
   }
 }
