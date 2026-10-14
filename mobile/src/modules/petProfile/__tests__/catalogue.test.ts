@@ -149,6 +149,7 @@ describe('readBreedCatalogue', () => {
       'shetland_sheepdog',
       'brittany',
       'american_cocker_spaniel',
+      'belgian_malinois',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -410,6 +411,14 @@ describe('readBreedCatalogue', () => {
       suits: ['active_family', 'family_pet', 'children'],
       consider: ['long_daily_exercise', 'needs_mental_stimulation', 'needs_company', 'sheds', 'chases_small_pets'],
     });
+    const mal = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'belgian_malinois');
+    expect(mal).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 340 }));
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-38, runbook rules; no new tag).
+    expect(mal?.search_keywords).toEqual(['belgian malinois', 'belgijski ovčar malinois', 'belgijski ovcar malinois', 'malinois', 'belgian shepherd malinois', 'belgian shepherd dog malinois']);
+    expect(mal?.suitability).toEqual({
+      suits: ['active_family', 'large_home'],
+      consider: ['long_daily_exercise', 'experienced_owner', 'not_for_small_children', 'may_herd_children', 'needs_mental_stimulation', 'needs_company', 'sheds', 'chases_small_pets'],
+    });
     const acs = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'american_cocker_spaniel');
     expect(acs).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 330 }));
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-37, runbook rules; no new tag).
@@ -465,6 +474,7 @@ describe('readBreedCatalogue', () => {
       'shetland_sheepdog',
       'brittany',
       'american_cocker_spaniel',
+      'belgian_malinois',
     ]);
   });
 });
@@ -648,6 +658,14 @@ describe('breed search', () => {
     expect(find('Bretonski ptičar')).toEqual(['brittany']);
     expect(find('bretonski pticar')).toEqual(['brittany']);
     expect(find('epagneul breton')).toEqual(['brittany']);
+  });
+
+  it('M5-R10-38: finds the Belgian Malinois by its EN / SL names, with and without the carons, and as "malinois"', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('belgian malinois')).toEqual(['belgian_malinois']);
+    expect(find('Belgijski ovčar malinois')).toEqual(['belgian_malinois']);
+    expect(find('belgijski ovcar malinois')).toEqual(['belgian_malinois']);
+    expect(find('malinois')).toEqual(['belgian_malinois']);
   });
 
   it('M5-R10-37: finds the American Cocker Spaniel by its EN / SL names, with and without the carons, and as "american cocker" / "ameriški koker"', () => {

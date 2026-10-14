@@ -27,8 +27,8 @@ import { BREED_SPECIES, breedName, foldForSearch, isKnownBreed, isSpecies } from
  * Puppy / young: 10 min × age in months up to the adult goal (mutt 60 min, Border Collie
  * 120 min, Labrador 90 min — reached at 9 months, Golden Retriever 120 min — reached at
  * 12 months, French Bulldog, Miniature Schnauzer, Shih Tzu, Boston Terrier, Miniature American Shepherd and Shetland Sheepdog 60 min — reached at 6 months, German Shepherd 120 min — reached at
- * 12 months, Cavalier King Charles Spaniel, Beagle, Standard Poodle and Dachshund 60 min — reached at 6 months, Australian Shepherd 120 min — reached at 12 months, Havanese, Yorkshire Terrier, Pomeranian and Chihuahua 30 min — reached at 3 months, West Highland White Terrier and Bernese Mountain Dog 60 min — reached at 6 months, Siberian Husky and Rottweiler 120 min — reached at 12 months, Bulldog 60 min — reached at 6 months, German Shorthaired Pointer, Cane Corso, Dobermann, Boxer, Great Dane, English Springer Spaniel, Brittany and American Cocker Spaniel 120 min — reached at 12 months, Pembroke Welsh Corgi 60 min — reached at 6 months); senior 75 % of adult (Labrador 68 min, whole minutes on the server; Golden 90 min;
- * French Bulldog 45 min; German Shepherd 90 min; Cavalier 45 min; Beagle 45 min; Standard Poodle 45 min; Dachshund 45 min; Australian Shepherd 90 min; Havanese 23 min; West Highland White Terrier 45 min; Bernese Mountain Dog 45 min; Siberian Husky 90 min; Rottweiler 90 min; Bulldog 45 min; German Shorthaired Pointer 90 min; Yorkshire Terrier 23 min; Cane Corso 90 min; Pembroke Welsh Corgi 45 min; Dobermann 90 min; Boxer 90 min; Miniature Schnauzer 45 min; Shih Tzu 45 min; Great Dane 90 min; Pomeranian 23 min; Boston Terrier 45 min; Miniature American Shepherd 45 min; Chihuahua 23 min; English Springer Spaniel 90 min; Shetland Sheepdog 45 min; Brittany 90 min; American Cocker Spaniel 90 min). Arrival age: puppy 2, young 9 months (§4). Cat texts
+ * 12 months, Cavalier King Charles Spaniel, Beagle, Standard Poodle and Dachshund 60 min — reached at 6 months, Australian Shepherd 120 min — reached at 12 months, Havanese, Yorkshire Terrier, Pomeranian and Chihuahua 30 min — reached at 3 months, West Highland White Terrier and Bernese Mountain Dog 60 min — reached at 6 months, Siberian Husky and Rottweiler 120 min — reached at 12 months, Bulldog 60 min — reached at 6 months, German Shorthaired Pointer, Cane Corso, Dobermann, Boxer, Great Dane, English Springer Spaniel, Brittany and American Cocker Spaniel 120 min — reached at 12 months, Belgian Malinois 120 min — reached at 12 months, Pembroke Welsh Corgi 60 min — reached at 6 months); senior 75 % of adult (Labrador 68 min, whole minutes on the server; Golden 90 min;
+ * French Bulldog 45 min; German Shepherd 90 min; Cavalier 45 min; Beagle 45 min; Standard Poodle 45 min; Dachshund 45 min; Australian Shepherd 90 min; Havanese 23 min; West Highland White Terrier 45 min; Bernese Mountain Dog 45 min; Siberian Husky 90 min; Rottweiler 90 min; Bulldog 45 min; German Shorthaired Pointer 90 min; Yorkshire Terrier 23 min; Cane Corso 90 min; Pembroke Welsh Corgi 45 min; Dobermann 90 min; Boxer 90 min; Miniature Schnauzer 45 min; Shih Tzu 45 min; Great Dane 90 min; Pomeranian 23 min; Boston Terrier 45 min; Miniature American Shepherd 45 min; Chihuahua 23 min; English Springer Spaniel 90 min; Shetland Sheepdog 45 min; Brittany 90 min; American Cocker Spaniel 90 min; Belgian Malinois 90 min). Arrival age: puppy 2, young 9 months (§4). Cat texts
  * that differ by species live under `pet:picker.cat` (M5-R06_PLAN T8) — read them through
  * {@link pickerText}.
  */
@@ -641,6 +641,19 @@ export const FALLBACK_CATALOGUE: BreedCatalogue = {
       suitability: {
         suits: ['family_pet', 'children', 'other_pets'],
         consider: ['frequent_grooming', 'food_motivated_weight', 'sheds'],
+      },
+    },
+    {
+      breed: 'belgian_malinois',
+      species: 'dog',
+      premium: true,
+      free_plan_allowed: false,
+      challenge_allowed: true,
+      search_keywords: ['belgian malinois', 'belgijski ovčar malinois', 'belgijski ovcar malinois', 'malinois', 'belgian shepherd malinois', 'belgian shepherd dog malinois'],
+      sort_order: 340,
+      suitability: {
+        suits: ['active_family', 'large_home'],
+        consider: ['long_daily_exercise', 'experienced_owner', 'not_for_small_children', 'may_herd_children', 'needs_mental_stimulation', 'needs_company', 'sheds', 'chases_small_pets'],
       },
     },
   ],

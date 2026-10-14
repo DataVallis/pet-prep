@@ -144,6 +144,19 @@ describe('readBreed / readSpecies', () => {
     }
   });
 
+  it('M5-R10-38: the Belgian Malinois is a paid, brushed dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('belgian_malinois'))).toBe('dog');
+    expect(isDefaultFreeBreed('belgian_malinois')).toBe(false);
+    expect(hasGroomingRoutine('belgian_malinois')).toBe(true);
+    expect(breedName('belgian_malinois')).toBe('Belgijski ovčar malinois');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('belgian_malinois')).toBe('Belgian Malinois');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
   it('M5-R10-37: the American Cocker Spaniel is a paid, brushed dog with its own name', async () => {
     expect(readSpecies(undefined, readBreed('american_cocker_spaniel'))).toBe('dog');
     expect(isDefaultFreeBreed('american_cocker_spaniel')).toBe(false);
