@@ -320,6 +320,13 @@ class FalAiService
                 .'small ears carried semi-erect with the tips folding forward, dark brown almond-shaped eyes with a gentle expression, '
                 .'head shaped like a long blunt wedge, natural low-set tail with abundant hair, '
                 .'photorealistic, studio quality, natural lighting',
+            // M5-R10-36: RKC standard (S299) / FCI 95 (S297) — orange and white as the anchor (also liver and white,
+            // roans, black and white, tricolour; never a solid colour); naturally short (bob) tail (S298 / S297).
+            BreedType::Brittany => 'A medium-sized, compact, short-backed and athletic Brittany dog with an orange and white coat, '
+                .'dense, fairly fine, flat or slightly wavy medium-length coat, '
+                .'high-set triangular ears slightly rounded at the tip lying flat against the cheeks, expressive brown eyes, '
+                .'slightly rounded skull with a tapered muzzle, naturally short bob tail, leggy and agile pointing-dog build, '
+                .'photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -781,6 +788,17 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'long, harsh, straight double coat with an abundant mane and frill',
                 'markings' => 'white collar, frill, chest, legs and tail tip',
+            ],
+            // M5-R10-36: RKC / FCI standard colours (S299, S297) — orange, liver or black and white, clear or roan.
+            BreedType::Brittany => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'orange and white',
+                    1 => 'liver and white',
+                    2 => 'orange roan',
+                },
+                'eye_color' => 'brown',
+                'fur_texture' => 'dense, fairly fine, flat or slightly wavy medium-length coat',
+                'markings' => 'white with orange or liver patches, light ticking on the muzzle and legs',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

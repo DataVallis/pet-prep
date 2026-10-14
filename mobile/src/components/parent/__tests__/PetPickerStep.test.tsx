@@ -273,6 +273,7 @@ describe('PetPickerStep', () => {
       'breed-option-chihuahua',
       'breed-option-english_springer_spaniel',
       'breed-option-shetland_sheepdog',
+      'breed-option-brittany',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -803,6 +804,59 @@ describe('PetPickerStep', () => {
       { species: 'dog', breed: 'shetland_sheepdog', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
       expect.objectContaining({ breed: 'shetland_sheepdog' }),
     );
+  });
+
+  it('M5-R10-36: the Brittany (fallback) shows its chips, is found as "bretonski ptičar" and "epagneul breton", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const br = screen.getByTestId('breed-option-brittany');
+    expect(br).toHaveTextContent(/Bretonski ptičar/);
+    expect(br).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-brittany-suits');
+    expect(suits).toHaveTextContent(/aktivno družino/);
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    const consider = screen.getByTestId('breed-suitability-brittany-consider');
+    expect(consider).toHaveTextContent(/vsak dan potrebuje veliko gibanja/);
+    expect(consider).toHaveTextContent(/potrebuje miselne izzive/);
+    expect(consider).toHaveTextContent(/rad ima družbo/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+    expect(consider).toHaveTextContent(/močan lovski nagon/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'bretonski ptičar');
+    expect(screen.getByTestId('breed-option-brittany')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'epagneul breton');
+    expect(screen.getByTestId('breed-option-brittany')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-brittany'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'brittany', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'brittany' }),
+    );
+  });
+
+  it('M5-R10-36: the Brittany chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-brittany-suits');
+      const consider = screen.getByTestId('breed-suitability-brittany-consider');
+      expect(suits).toHaveTextContent(/an active family/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(consider).toHaveTextContent(/needs lots of exercise every day/);
+      expect(consider).toHaveTextContent(/loves company/);
+      expect(consider).toHaveTextContent(/strong prey drive/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-brittany')).toHaveTextContent(/Brittany/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
   });
 
   it('M5-R10-35: the Shetland Sheepdog chips in English, without numbers', async () => {

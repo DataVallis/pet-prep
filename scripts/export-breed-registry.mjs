@@ -406,6 +406,7 @@ const SPECIES = [
       { id: 'chihuahua', synonyms: { en: ['Chi', 'Chihuahueño', 'Smooth Coat Chihuahua'], sl: ['civava', 'chihuahua', 'čihuahua'] } },
       { id: 'english_springer_spaniel', synonyms: { en: ['Springer Spaniel', 'Springer', 'ESS'], sl: ['springer španjel', 'angleski springer spanjel', 'springer'] } },
       { id: 'shetland_sheepdog', synonyms: { en: ['Sheltie', 'Shetland Collie'], sl: ['sheltie', 'šeltie', 'setlandski ovcar'] } },
+      { id: 'brittany', synonyms: { en: ['Brittany Spaniel', 'Epagneul Breton'], sl: ['epagneul breton', 'bretonski španjel', 'bretonski pticar'] } },
     ],
   },
   {
@@ -1080,6 +1081,27 @@ const DOG_FACTS = {
       ['drug_sensitivity_mdr1', 'health.mdr1'],
     ],
   },
+  // M5-R10-36. Not exported: height.fci (French PDF, quote null — the RKC heights are the same and quoted),
+  // height.akc (one range), adult_weight.salt_category (our assignment), lifespan.petmd (not in the runbook's
+  // lifespan order), lifespan.mcmillan_2024 (null), lifespan.senior_from (derived), suitability.akc_grooming /
+  // petmd_grooming (free text; the RKC "More than once a week" is shown), health.ears (care need, M5-R20),
+  // behaviour.barking (no category). Lifespan = the RKC band "Over 10 years" (S298). Own health key: cataracts.
+  brittany: {
+    height: ['height.rkc'],
+    weight: [['adult_weight.akc', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['epilepsy', 'health.epilepsy'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+      ['cataracts', 'health.cataracts'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1337,6 +1359,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.shetland_sheepdog.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.shetland_sheepdog.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.shetland_sheepdog.exercise_minutes_senior',
+  },
+  brittany: {
+    adult_minutes: ['proposed_game_parameters.brittany.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.brittany.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.brittany.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.brittany.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.brittany.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.brittany.exercise_minutes_senior',
   },
 };
 

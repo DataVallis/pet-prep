@@ -328,6 +328,15 @@
 | the body, never a mostly white double merle. Colour weights are unsourced → `verified => false`;
 | sable and white weighted highest (the register portrait).
 |
+| Brittany (M5-R10-36, docs/research/dog-data brittany.appearance): workmanlike, substance without
+| heaviness, moderately boned, compact and short-backed — the smallest of the pointing dogs (RKC
+| standard S299, FCI S297); skull slightly rounded, muzzle tapered but not snipy; expressive brown to
+| dark eyes; triangular high-set ears, slightly rounded at the tip, lying flat; dense, fairly fine,
+| flat or slightly wavy coat; naturally tailless or short tail (often born bob-tailed, S298). Colours
+| (RKC / FCI): orange, liver or black and white, clear or roan, tricolour — never a solid colour, never
+| white spots on the ears (FCI). AKC (S300) allows only orange or liver and white. Colour weights are
+| unsourced → `verified => false`; orange and white weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1610,6 +1619,43 @@ return [
             'eye_color' => ['dark brown, medium-sized, almond-shaped and obliquely set, with a gentle expression'],
             'tail' => ['natural tail set low with abundant hair, carried low with a slight upward sweep'],
             'muzzle' => ['refined head shaped like a long, blunt wedge tapering from the ears to the nose, with a moderate stop'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-36 (docs/research/dog-data/data.json brittany.appearance; runbook rules
+    // 2026-10-10: standard colours only — never a solid colour).
+    'brittany' => [
+        'display_name' => 'Brittany',
+        // Colour frequencies are in no source (brittany.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'RKC standard (S299), FCI standard (S297), RKC breed page (S298), AKC standard (S300) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S298 "Size: Medium"; S299 height dogs 48–51 cm, bitches 47–50 cm',
+            'build' => 'S299 "Workmanlike. Substance without heaviness. Moderately well boned."; S297 the smallest of the pointing dogs',
+            'coat_length' => 'S299 "Body coat dense but fairly fine. Rather flat or slightly wavy."; S298 "Coat length: Medium"',
+            'coat_color' => 'S299 orange/white, liver/white, black/white, tricolour, or roan of these; "Any other colour or combination of colours unacceptable." (weights unsourced)',
+            'ear_carriage' => 'S299 "Triangular in shape, slightly rounded at tip." set high, lying flat',
+            'eye_color' => 'S299 "Expressive, brown to dark, in harmony with coat colour."',
+            'tail' => 'S299 "Naturally tailless, short or previously customarily docked."; S298 often naturally bob-tailed',
+            'muzzle' => 'S299 "Skull slightly rounded as seen from front, side or above."; muzzle tapered but not snipy',
+        ],
+        'traits' => [
+            'size' => ['medium'],
+            'build' => [['value' => 'compact, short-backed, leggy and athletic, moderately boned', 'weight' => 3], 'workmanlike pointing-dog build with substance without heaviness'],
+            'coat_length' => ['dense, fairly fine, flat or slightly wavy medium-length coat with light feathering'],
+            // RKC / FCI colours only (S299, S297); orange and white highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'orange and white (clear white with bright orange patches)', 'weight' => 4],
+                ['value' => 'liver and white (clear white with liver-brown patches)', 'weight' => 3],
+                ['value' => 'orange roan (white finely ticked with orange)', 'weight' => 2],
+                'liver roan',
+                'black and white',
+                'tricolour (black and white with orange markings over the eyes, on the muzzle, legs and chest)',
+            ],
+            'ear_carriage' => ['high-set triangular ears, slightly rounded at the tip, lying flat against the cheeks'],
+            'eye_color' => ['expressive brown to dark eyes in harmony with the coat colour'],
+            'tail' => ['naturally short bob tail set high, carried horizontally'],
+            'muzzle' => ['slightly rounded skull with a tapered muzzle that is not snipy and a moderate stop'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],

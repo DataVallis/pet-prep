@@ -943,6 +943,34 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S291'], 'refs' => ['shetland_sheepdog.suitability.rkc_shedding']],
             ],
         ],
+        // M5-R10-36: brittany.* (S296–S302), runbook rules (data.json
+        // proposed_game_parameters.brittany.suitability_tags). RKC (S298) + AKC (S301) + PetMD (S302).
+        // RKC "More than 2 hours per day" → active_family + long_daily_exercise. RKC "Small house" →
+        // neither apartment nor large_home. PetMD "hardwired with a high prey drive" → chases_small_pets
+        // (its "other pets" line conflicts → no other_pets). RKC "More than once a week" vs AKC / PetMD
+        // weekly → no frequent_grooming. Breed Watch Category 1 → no welfare chip.
+        'brittany' => [
+            'suits' => [
+                // S298 "Exercise: More than 2 hours per day"; S301 "they require plenty of exercise."
+                ['tag' => 'active_family', 'source_ids' => ['S298', 'S301'], 'refs' => ['brittany.exercise.adult', 'brittany.exercise.energy']],
+                // S302 "the perfect, medium-size sporting dog for an active family with children and other pets"
+                ['tag' => 'family_pet', 'source_ids' => ['S302'], 'refs' => ['brittany.suitability.petmd_family', 'brittany.behaviour.family']],
+                // S302 "sweet and well-behaved with children of all ages"; S301 "tend to be patient with children."
+                ['tag' => 'children', 'source_ids' => ['S302', 'S301'], 'refs' => ['brittany.suitability.petmd_children', 'brittany.suitability.akc_children']],
+            ],
+            'consider' => [
+                // S298 "Exercise: More than 2 hours per day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S298'], 'refs' => ['brittany.exercise.adult', 'brittany.suitability.rkc_exercise']],
+                // S301 "It’s essential that Brittanys get plenty of exercise and mental stimulation to keep them from acting out."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S301'], 'refs' => ['brittany.behaviour.mental_stimulation', 'brittany.suitability.akc_mental_exercise']],
+                // S302 "don’t do well when left alone for long periods"
+                ['tag' => 'needs_company', 'source_ids' => ['S302'], 'refs' => ['brittany.behaviour.time_alone', 'brittany.suitability.petmd_time_alone']],
+                // S298 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S298'], 'refs' => ['brittany.suitability.rkc_shedding']],
+                // S302 "The Brittany was bred to hunt birds, so they are hardwired with a high prey drive." (David 2026-10-12: last).
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S302'], 'refs' => ['brittany.behaviour.other_pets']],
+            ],
+        ],
 
     ],
 ];
