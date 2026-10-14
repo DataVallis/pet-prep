@@ -274,6 +274,7 @@ describe('PetPickerStep', () => {
       'breed-option-english_springer_spaniel',
       'breed-option-shetland_sheepdog',
       'breed-option-brittany',
+      'breed-option-american_cocker_spaniel',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -854,6 +855,60 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/\d|%/);
       expect(consider).not.toHaveTextContent(/\d|%/);
       expect(screen.getByTestId('breed-option-brittany')).toHaveTextContent(/Brittany/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-37: the American Cocker Spaniel (fallback) shows its chips, is found as "ameriški koker" and "cocker", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const acs = screen.getByTestId('breed-option-american_cocker_spaniel');
+    expect(acs).toHaveTextContent(/Ameriški koker španjel/);
+    expect(acs).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(acs).toHaveTextContent(/česanje vsak dan/);
+    const suits = screen.getByTestId('breed-suitability-american_cocker_spaniel-suits');
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    expect(suits).toHaveTextContent(/dom z drugimi ljubljenčki/);
+    const consider = screen.getByTestId('breed-suitability-american_cocker_spaniel-consider');
+    expect(consider).toHaveTextContent(/potrebuje česanje večkrat na teden/);
+    expect(consider).toHaveTextContent(/pazite na težo/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+    expect(consider).not.toHaveTextContent(/vsak dan potrebuje veliko gibanja/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'ameriški koker');
+    expect(screen.getByTestId('breed-option-american_cocker_spaniel')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'cocker');
+    expect(screen.getByTestId('breed-option-american_cocker_spaniel')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-american_cocker_spaniel'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'american_cocker_spaniel', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'american_cocker_spaniel' }),
+    );
+  });
+
+  it('M5-R10-37: the American Cocker Spaniel chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-american_cocker_spaniel-suits');
+      const consider = screen.getByTestId('breed-suitability-american_cocker_spaniel-consider');
+      expect(suits).toHaveTextContent(/family life/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(suits).toHaveTextContent(/homes with other pets/);
+      expect(consider).toHaveTextContent(/needs brushing several times a week/);
+      expect(consider).toHaveTextContent(/watch the weight/);
+      expect(consider).toHaveTextContent(/sheds/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-american_cocker_spaniel')).toHaveTextContent(/American Cocker Spaniel/);
     } finally {
       await i18n.changeLanguage('sl');
     }
