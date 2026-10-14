@@ -9,6 +9,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-14 — Angleški springer španjel: šestnajsta pasma po dvajsetih (M5-R10-34)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **angleškega springer španjela** (28. mesto). Trideseta plačljiva pasma psa; v izbirniku je zdaj 31 psov (z mešančkom). Srednje velik lovski pes iz Velike Britanije (18–23 kg, približno 51 cm): več kot 2 uri gibanja na dan (12.000 korakov za odraslega psa, 9.000 za starejšega), česanje 2× na teden in tedenska »Nova izkušnja« za mladička.
+
+**Zakaj je pomembno:** Springer je prijazen družinski pes, a z veliko energije: The Royal Kennel Club in PDSA pišeta »več kot 2 uri gibanja na dan«, American Kennel Club pa, da ga ne puščajte dolgo samega. Zato v izbirniku dobi oznake »aktivna družina«, »družinsko življenje«, »z otroki« in »z drugimi ljubljenčki«, a tudi »vsak dan potrebuje veliko gibanja« in »rad ima družbo«. Mejo starejšega psa (10 let in 2 meseca) je sistem izračunal iz velike britanske raziskave življenjske dobe (McMillan 2024, mediana 13,5 leta) po potrjenem pravilu — tokrat brez predloga za Davida. The Royal Kennel Club pasmi ne pripisuje posebnih skrbi za dobrobit (Breed Watch kategorija 1), zato **sme biti v marketingu** — brez obljub o zdravju in nikoli brez omembe 2 ur gibanja na dan. Striženja pri frizerju (vsake 3 mesece, PDSA) in striženja krempljev (American Kennel Club) igra še ne vodi — *načrt* (M5-R18, M5-R19).
+
+**Številke:** 8 novih virov (S281–S288), 1 migracija, brez nove oznake, 1 nov ključ zdravja v registru (brez statistik), 5 novih ključev testov DNK za vzreditelja, 4 + 4 oznake v izbirniku, 2 zgrajeni potrebi z virom (česanje, socializacija) in 2 v načrtu (frizer; kremplji), dnevni cilj 12.000 korakov, učenje 1,5×, meja starejšega 122 mesecev, 31 psov v izbirniku (30 plačljivih + mešanček); testi: nov `EnglishSpringerSpanielBreedTest`, izvoz registra 58 / 58, 509 ciljanih testov Jest v mobilni aplikaciji zelenih. Portret in stran v registru sledita po objavi (do naslednje izdaje aplikacije stran kaže »Kmalu«). Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Springer je čudovit družinski pes, a potrebuje več kot dve uri gibanja na dan in družbo. V PetPrepu boste videli, ali vaš otrok res vsak dan zmore 12.000 korakov s psom, preden se odločite za pravega.«
+- 🧒 Otroci: »Springer obožuje sprehode in igro — in tebe! Vsak dan ga pelji daleč na sprehod in ga dvakrat na teden počeši.«
+- 💼 Investitorji: »Šestnajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC; vse vrednosti po potrjenih pravilih in z viri, brez odprtega vprašanja za ustanovitelja.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri springerju pokaže teste staršev po The Royal Kennel Club — kolke, komolce, oči z gonioskopijo ter teste DNK (AMS, DAMS, fukozidoza, PFK, PRA) — brez obljub o zdravju.«
+- 📣 Omrežja: springerja **lahko objavljamo** (ni pasma s skrbjo za dobrobit), jetrno-bel z naravnim repom; nikoli ne skrivamo, da potrebuje več kot 2 uri gibanja na dan.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje in socializacija sta samo novi vrstici v `breed_stage_params`; meja starejšega 122 iz McMillan 2024 je potrjena (`verified=true`); izvoz registra dobi en nov ključ zdravja in pet novih ključev testov za vzreditelja.«
+
+---
+
 ## 2026-10-13 — Čivava: petnajsta pasma po dvajsetih (M5-R10-33)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **čivavo** (27. mesto; havanski bišon in sibirski haski z 25. in 26. mesta sta že v aplikaciji). Devetindvajseta plačljiva pasma psa; v izbirniku je zdaj 30 psov (z mešančkom). Igra gradi kratkodlako čivavo (1,8–2,7 kg): pol ure gibanja na dan (3.000 korakov za odraslega psa, 2.300 za starejšega), česanje 1× na teden, opozorilo »počakaj s sprehodom« eno uro po obroku in tedenska »Nova izkušnja« za mladička.
