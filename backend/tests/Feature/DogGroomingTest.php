@@ -184,7 +184,7 @@ describe('values per breed (runbook grooming rule, data.json)', function () {
             'cavalier_king_charles_spaniel' => 4, 'beagle' => 1, 'standard_poodle' => 7, 'dachshund' => 1,
             'australian_shepherd' => 2, 'havanese' => 7, 'west_highland_white_terrier' => 2, 'bernese_mountain_dog' => 2,
             'siberian_husky' => 2, 'rottweiler' => 1, 'bulldog' => 1, 'german_shorthaired_pointer' => 2,
-            'yorkshire_terrier' => 7, 'cane_corso' => 1, 'pembroke_welsh_corgi' => 3, 'dobermann' => 1, 'boxer' => 1, 'miniature_schnauzer' => 3, 'shih_tzu' => 7, 'great_dane' => 1, 'pomeranian' => 3, 'boston_terrier' => 1, 'miniature_american_shepherd' => 2, 'chihuahua' => 1, 'english_springer_spaniel' => 2, 'shetland_sheepdog' => 7, 'brittany' => 1, 'american_cocker_spaniel' => 7,
+            'yorkshire_terrier' => 7, 'cane_corso' => 1, 'pembroke_welsh_corgi' => 3, 'dobermann' => 1, 'boxer' => 1, 'miniature_schnauzer' => 3, 'shih_tzu' => 7, 'great_dane' => 1, 'pomeranian' => 3, 'boston_terrier' => 1, 'miniature_american_shepherd' => 2, 'chihuahua' => 1, 'english_springer_spaniel' => 2, 'shetland_sheepdog' => 7, 'brittany' => 1, 'american_cocker_spaniel' => 7, 'belgian_malinois' => 2,
         ];
         // David 2026-10-12: his own decisions (no longer Claude's proposals — every row verified).
         $twice = ['german_shepherd', 'australian_shepherd', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky'];
@@ -193,6 +193,8 @@ describe('values per breed (runbook grooming rule, data.json)', function () {
             'german_shorthaired_pointer' => BreedStageParamsSeeder::CONFIRMED_DAVID_2026_10_12,
         ];
         $rows = collect(BreedStageParamsSeeder::rows())->where('key', StageParamKey::GroomingSessionsPerWeek->value);
+        // Open proposals for David (runbook §3: "more than once a week" without any number in a new breed → 2, verified=false).
+        $proposals = ['belgian_malinois' => BreedStageParamsSeeder::PROPOSED_R13_BELGIAN_MALINOIS];
 
         expect($rows->pluck('value', 'breed_slug')->all())
             ->toBe(collect($expected)->mapWithKeys(fn (int $n, string $breed) => [BreedType::from($breed)->slug() => $n])->all());
@@ -205,11 +207,19 @@ describe('values per breed (runbook grooming rule, data.json)', function () {
                 ->and($entry['value'])->toBe($value)
                 ->and($row['source_id'])->toBe($entry['source_id'])
                 ->and($row['quote'])->toBe($entry['quote'])
-                ->and($row['verified'])->toBeTrue()
+                ->and((string) $entry['decision'])->toContain('M5-R13');
+            if (array_key_exists($breed, $proposals)) {
+                expect($row['verified'])->toBeFalse()
+                    ->and($row['decision'])->toBe($proposals[$breed])
+                    ->and($value)->toBe(2)
+                    ->and((string) $entry['decision'])->toStartWith('predlog Claude')->toContain('čaka Davida');
+
+                continue;
+            }
+            expect($row['verified'])->toBeTrue()
                 ->and($row['decision'])->toBe($decision ?? BreedStageParamsSeeder::CONFIRMED_R13_DOG_GROOMING)
                 // The breed runs of 2026-10-11 recorded David's value already; M5-R13 adds the rest.
                 ->and((string) $entry['decision'])->toMatch($decision !== null ? '/^potrdil David 2026-10-12/' : '/^potrdil David 2026-10-1[12] /')
-                ->and((string) $entry['decision'])->toContain('M5-R13')
                 ->and((string) $entry['decision'])->not->toContain('čaka Davida');
             if (in_array($breed, $twice, true)) {
                 expect($entry['decision'])->toStartWith('potrdil David 2026-10-12: 2× na teden')->and($value)->toBe(2);

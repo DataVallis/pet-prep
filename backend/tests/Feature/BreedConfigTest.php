@@ -67,7 +67,7 @@ describe('BreedConfigsSeeder', function () {
         (new BreedConfigsSeeder)->run();
 
         // 33 paid dogs + the mutt (M5-R10 Labrador, M5-R10-02 Golden, M5-R10-03 French Bulldog, M5-R10-04 German Shepherd, M5-R10-05 Cavalier, M5-R10-06 Beagle, M5-R10-07 Standard Poodle, M5-R10-08 Dachshund, M5-R10-09 Australian Shepherd, M5-R10-10 Havanese, M5-R10-11 West Highland White Terrier, M5-R10-12 Bernese Mountain Dog, M5-R10-13 Siberian Husky, M5-R10-19 Rottweiler, M5-R10-20 Bulldog, M5-R10-21 German Shorthaired Pointer, M5-R10-22 Yorkshire Terrier, M5-R10-23 Cane Corso, M5-R10-24 Pembroke Welsh Corgi, M5-R10-25 Dobermann, M5-R10-26 Boxer, M5-R10-27 Miniature Schnauzer, M5-R10-28 Shih Tzu, M5-R10-29 Great Dane, M5-R10-30 Pomeranian, M5-R10-31 Boston Terrier, M5-R10-32 Miniature American Shepherd, M5-R10-33 Chihuahua, M5-R10-34 English Springer Spaniel, M5-R10-35 Shetland Sheepdog, M5-R10-36 Brittany, M5-R10-37 American Cocker Spaniel) + 7 cats (M5-R06-01; M5-R10-14 British Shorthair, M5-R10-15 Ragdoll, M5-R10-16 Siberian, M5-R10-17 Norwegian Forest Cat, M5-R10-18 Bengal).
-        expect(BreedConfig::count())->toBe(41);
+        expect(BreedConfig::count())->toBe(42);
         $mutt = BreedConfig::where('breed_slug', 'mutt')->firstOrFail();
         expect($mutt->thirst_decay_rate)->toBe(99.0);
         expect(BreedConfig::where('breed_slug', 'border-collie')->firstOrFail()->thirst_decay_rate)->toBe(15.0);

@@ -347,6 +347,16 @@
 | docked tail; the game shows a natural undocked tail (Claude's proposal, open for David). Colour weights
 | are unsourced → `verified => false`; buff weighted highest (the register portrait).
 |
+| Belgian Malinois (M5-R10-38, docs/research/dog-data belgian_malinois.appearance): the short-haired
+| variety of the Belgian Shepherd Dog (FCI 15, S313); square, well balanced, elegant and powerful with a
+| proud carriage of head and neck (AKC standard S315); rather small, high-set, triangular erect ears
+| (hanging or semi-prick ears disqualify, AKC); medium, brown, preferably dark eyes; short, straight,
+| hard coat with a dense undercoat, fuller at the neck and tail. Colour (FCI): "Only fawn with black
+| overlay and with black mask." — AKC "rich fawn to mahogany, with black tips"; a pronounced black mask
+| is required. Never black, brindle, merle, grey or white patches. Natural erect ears and a full tail
+| reaching the hock (cropped / stumped tails disqualify, AKC). Colour weights are unsourced →
+| `verified => false`; fawn weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1705,6 +1715,39 @@ return [
             'eye_color' => ['round, full, dark brown eyes looking directly forward'],
             'tail' => ['natural undocked tail carried level with the back'],
             'muzzle' => ['rounded skull with a pronounced stop and a broad, deep muzzle with square jaws'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-38 (docs/research/dog-data/data.json belgian_malinois.appearance; runbook rules
+    // 2026-10-10: standard colours only — never black, brindle, merle or white patches).
+    'belgian_malinois' => [
+        'display_name' => 'Belgian Malinois',
+        // Colour frequencies are in no source (belgian_malinois.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI standard No. 15 (S313), AKC standard (S315), RKC breed page (S314) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S314 "Size: Medium-Large"; S313 ideal height 62 cm (males) / 58 cm (females)',
+            'build' => 'S315 "The Belgian Malinois is a well-balanced square dog, elegant in appearance"; S313 "combining elegance and power"',
+            'coat_length' => 'S315 "The coat should be comparatively short, straight, hard enough to be weather resistant, with dense undercoat."',
+            'coat_color' => 'S313 "Malinois: Only fawn with black overlay and with black mask."; S315 "rich fawn to mahogany, with black tips" (weights unsourced)',
+            'ear_carriage' => 'S313 "Rather small, set high, distinctly triangular appearance."; S315 stiff, upright and vertical when alert',
+            'eye_color' => 'S315 "They are brown, preferably dark brown, with black rimmed upper and lower eyelids."',
+            'tail' => 'S313 "at rest carried down, with tip curved backwards at level of hock."; S315 a cropped or stumped tail is a disqualification',
+            'muzzle' => 'S315 "The mask must be pronounced and tends to encompass the top and bottom lip,"',
+        ],
+        'traits' => [
+            'size' => ['medium-large'],
+            'build' => [['value' => 'square, well-balanced, elegant and powerful herding-dog build with a proud carriage of head and neck', 'weight' => 3], 'lean, athletic, square shepherd build'],
+            'coat_length' => ['short, straight, hard coat with a dense undercoat, very short on the head and legs, fuller at the neck and tail'],
+            // FCI / AKC colours only (S313, S315); fawn highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'fawn with black overlay (black-tipped hairs) and a pronounced black mask', 'weight' => 4],
+                'mahogany with black overlay (black-tipped hairs) and a pronounced black mask',
+            ],
+            'ear_carriage' => ['rather small, high-set, distinctly triangular ears carried stiffly erect'],
+            'eye_color' => ['medium, almond-shaped, dark brown eyes with black-rimmed eyelids'],
+            'tail' => ['natural full tail reaching the hock, carried low at rest with the tip curved slightly back'],
+            'muzzle' => ['black mask covering the muzzle, lips and eyelids; moderately long, tapering muzzle'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
