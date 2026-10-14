@@ -17538,7 +17538,7 @@
   "american_cocker_spaniel": {
     "_note": "Added 2026-10-14 (M5-R10-37, unattended run — appended after the Brittany: AKC 2024 No. 32 'Cocker Spaniel', S174 full-list table '31 Brittany', '32 Cocker Spaniel', '36 English Cocker Spaniel'; the AKC 'Cocker Spaniel' is the American Cocker Spaniel of the FCI / RKC, not the English Cocker Spaniel). Quotes as returned by the web-fetch tool on 2026-10-14 (the tool limits quotes to ~125 characters; apostrophes as returned); spot-check before import (sources.md S303–S311, reused S8, S10, S11, S14, S24, S45, S92, S174). The FCI standard (S304) was read in French (the English PDF was refused by the fetch tool) — tool summary, French quotes only where returned. No PDSA American Cocker Spaniel page exists (the PDSA 'Cocker Spaniel' page is the English Cocker). Lifespan: McMillan 2024 / Dogs Trust table (S123) not reachable (no fetchable URL) — Wikipedia (S311, tier C) quotes McMillan 2024 at 13.3 years, background only → RKC lower bound 'Over 10 years' → senior 90 months, provisional. RKC Breed Watch Category 2 without a named point (S306) → no welfare chip; not flat-faced → in marketing. Exercise sources conflict (RKC 'More than 2 hours per day' vs AKC / PetMD 'don't require a lot / high levels of exercise') → minutes from the RKC by the rule, no exercise chip.",
     "identity": {
-      "value": "FCI No. 167, Group 8 Section 2 (Flushing Dogs), United States of America",
+      "value": "FCI No. 167, Group 8 Section 2 (Flushing Dogs), USA",
       "unit": "—",
       "source_id": "S303",
       "quote": "AMERICAN COCKER SPANIEL",
@@ -17803,25 +17803,25 @@
         "value": "ear infections — long, feathered ears",
         "unit": "—",
         "source_id": "S309",
-        "quote": null,
+        "quote": "Ear Infections",
         "confidence": "medium",
-        "notes": "PetMD (S309) health heading 'Ear Infections'; 'routine cleaning with a veterinary-approved ear cleanser is vital in maintaining healthy ear canals' (as returned, partial sentence). → ear care, ROADMAP M5-R20 (needs-david)."
+        "notes": "PetMD (S309) health section heading (quote = the heading) 'Ear Infections'; 'routine cleaning with a veterinary-approved ear cleanser is vital in maintaining healthy ear canals' (as returned, partial sentence). → ear care, ROADMAP M5-R20 (needs-david)."
       },
       "skin_infections": {
         "value": "skin infections (pyoderma)",
         "unit": "—",
         "source_id": "S309",
-        "quote": null,
+        "quote": "Skin Infections",
         "confidence": "medium",
-        "notes": "PetMD (S309) health heading 'Skin Infections'. AKC (S308) warns about irritation of their sensitive skin when bathing (paraphrase). Background only; no sensitive_skin chip (not a Breed Watch point)."
+        "notes": "PetMD (S309) health section heading (quote = the heading) 'Skin Infections'. AKC (S308) warns about irritation of their sensitive skin when bathing (paraphrase). Background only; no sensitive_skin chip (not a Breed Watch point)."
       },
       "hip_dysplasia": {
         "value": "hip dysplasia",
         "unit": "—",
         "source_id": "S309",
-        "quote": null,
+        "quote": "Hip Dysplasia",
         "confidence": "medium",
-        "notes": "PetMD (S309) heading 'Hip Dysplasia'. RKC best-practice hip scheme (S305). Background only."
+        "notes": "PetMD (S309) health section heading (quote = the heading) 'Hip Dysplasia'. RKC best-practice hip scheme (S305). Background only."
       },
       "von_willebrand": {
         "value": "von Willebrand disease (a bleeding disorder)",
