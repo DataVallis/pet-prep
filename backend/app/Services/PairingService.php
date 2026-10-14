@@ -15,8 +15,10 @@ use App\Models\Family;
 use App\Models\FamilyMember;
 use App\Models\Pet;
 use App\Models\User;
+use App\Services\Media\BreedColourCatalogue;
 use App\Services\Media\PetDnaService;
 use App\Services\Media\PetLookPoolService;
+use App\Services\Media\SharedBreedLookService;
 use App\Services\Results\PetProfileChoice;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -39,6 +41,7 @@ class PairingService
         private readonly LifeStageService $lifeStages,
         private readonly TrainingService $training,
         private readonly PetLookPoolService $lookPool,
+        private readonly SharedBreedLookService $sharedLooks,
     ) {}
 
     /**
@@ -262,6 +265,19 @@ class PairingService
     }
 
     /**
+     * M5-R21: a chosen colour must be one of the breed's colours
+     * (config/breed_colours.php — the standard's colours only).
+     *
+     * @throws FamilyException colour_invalid (422)
+     */
+    public function assertColourAllowed(PetProfileChoice $profile): void
+    {
+        if ($profile->colour !== null && app(BreedColourCatalogue::class)->find($profile->breed, $profile->colour) === null) {
+            throw new FamilyException('colour_invalid', 'This colour is not available for this breed.');
+        }
+    }
+
+    /**
      * Every origin / age stage is free (David 2026-10-05).
      *
      * @throws FamilyException breed_locked (422)
@@ -380,13 +396,27 @@ class PairingService
         ]);
 
         if ($petDna === null && $hasAppearance) {
+            // M5-R21: the parent's colour, only for the breed it was chosen for
+            // (a breed the plan refused fell back to the free breed above).
+            $colour = app(BreedColourCatalogue::class)->find($breed, $profile?->colour)['key'] ?? null;
+
             // M4-10 (David 2026-10-09): a profiled pet of a free breed takes its
             // look from the breed's shared pool (media reused, no new AI cost
-            // once the look has it); paid breeds keep a unique DNA v2.
+            // once the look has it). M5-R21 (David 2026-10-14): a profiled pet of a
+            // paid breed shares the look of its breed + colour while the admin
+            // switch "unique AI media per pet" is off (default); on → unique DNA v2.
             if ($this->lookPool->appliesTo($breed, $arrivalAge)) {
                 $this->lookPool->assignTo($pet);
+            } elseif ($this->sharedLooks->appliesTo($breed, $arrivalAge)) {
+                $this->sharedLooks->assignTo($pet, $colour);
             } else {
-                $pet->forceFill(['pet_dna' => $this->petDna->forNewPet($pet)])->saveQuietly();
+                $catalogue = app(BreedColourCatalogue::class);
+                $fixed = $colour !== null ? ['coat_color' => $catalogue->find($breed, $colour)['value']] : [];
+                $dna = $this->petDna->forNewPet($pet, null, $fixed);
+                $pet->forceFill([
+                    'pet_dna' => $dna,
+                    'coat_colour' => $catalogue->keyForValue($breed, $dna['traits']['coat_color'] ?? null),
+                ])->saveQuietly();
             }
         }
 

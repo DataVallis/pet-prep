@@ -360,7 +360,9 @@ class AiLab extends Page implements HasForms
 
             $state = $pool->enabled() ? 'on' : 'OFF (new free pets get a unique look)';
 
-            return "Pool {$state}. A free pet whose look already has its stage's media costs ~\$0. ".implode(' | ', $lines);
+            $shared = sprintf('Paid breeds: %d shared looks (breed + colour, not counted above).', $pool->sharedCount());
+
+            return "Pool {$state}. A free pet whose look already has its stage's media costs ~\$0. ".implode(' | ', $lines).' '.$shared;
         } catch (InvalidArgumentException) {
             return '—';
         }

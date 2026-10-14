@@ -35,7 +35,10 @@ class PetDnaService
      *
      * @return array<string, mixed>
      */
-    public function forNewPet(Pet $pet, ?int $salt = null): array
+    /**
+     * @param  array<string, string>  $fixed  trait => value the pet must have (M5-R21: the parent's coat colour)
+     */
+    public function forNewPet(Pet $pet, ?int $salt = null, array $fixed = []): array
     {
         $breed = $pet->breed_type instanceof BreedType ? $pet->breed_type : BreedType::from((string) $pet->breed_type);
         $salt ??= random_int(1, PHP_INT_MAX);
@@ -52,7 +55,7 @@ class PetDnaService
             ->values()
             ->all();
 
-        $sample = $this->sample($breed->value, $seed, [], $taken);
+        $sample = $this->sample($breed->value, $seed, $fixed, $taken);
 
         return $this->dnaFrom($breed->value, $seed, $sample) + ['salt' => $salt];
     }

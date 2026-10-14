@@ -41,6 +41,13 @@ class AppSettingsService
 
     public const AI_BUDGET_MAX_MONTHLY_USD = 5000.0;
 
+    /**
+     * M5-R21 (David 2026-10-14): `{enabled: bool}` — every new pet of a paid
+     * breed gets its own AI media (true) or shares the media of its breed +
+     * colour (false, the default: no row → false).
+     */
+    public const UNIQUE_MEDIA_KEY = 'unique_pet_media';
+
     public const CACHE_TTL_SECONDS = 60;
 
     /**
@@ -167,13 +174,14 @@ class AppSettingsService
      * is forgotten after the commit so the next read in any container sees it.
      *
      * @param  array<string, mixed>  $new
+     * @param  array<string, mixed>|null  $default  the value "no row" stands for (saving it over no row is no change)
      */
-    private function store(User $actor, string $key, array $new): void
+    private function store(User $actor, string $key, array $new, ?array $default = null): void
     {
-        DB::transaction(function () use ($actor, $key, $new): void {
+        DB::transaction(function () use ($actor, $key, $new, $default): void {
             $row = AppSetting::whereKey($key)->lockForUpdate()->first();
             $old = $row?->value;
-            if ($old === $new) {
+            if ($old === $new || ($old === null && $default !== null && $new === $default)) {
                 return;
             }
 
@@ -189,6 +197,29 @@ class AppSettingsService
         });
 
         Cache::forget(self::cacheKey($key));
+    }
+
+    /**
+     * M5-R21: unique AI media per pet (true) or shared per breed + colour
+     * (false, default — SharedBreedLookService).
+     */
+    public function uniquePetMedia(): bool
+    {
+        /** @var array{enabled?: bool} $value */
+        $value = Cache::remember(self::cacheKey(self::UNIQUE_MEDIA_KEY), self::CACHE_TTL_SECONDS,
+            fn (): array => AppSetting::find(self::UNIQUE_MEDIA_KEY)?->value ?? []);
+
+        return (bool) ($value['enabled'] ?? false);
+    }
+
+    /**
+     * Save the "unique AI media per pet" switch (superadmin), audit it and bust
+     * the cache. Only NEW pets follow the switch; existing pets keep their media.
+     */
+    public function updateUniquePetMedia(User $actor, bool $enabled): void
+    {
+        // No row already means "off", so saving "off" over no row is not a change.
+        $this->store($actor, self::UNIQUE_MEDIA_KEY, ['enabled' => $enabled], ['enabled' => false]);
     }
 
     public static function cacheKey(string $key): string

@@ -40,6 +40,8 @@ export type PinErrorKind =
   | 'breed_species_mismatch'
   /** M5-R06-01: the species isn't offered (cats hidden on the server, or this build lacks `species_cat`). */
   | 'species_unavailable'
+  /** M5-R21: the chosen coat colour isn't (any more) a colour of that breed. */
+  | 'colour_invalid'
   /** M5-R04: the server rejected the profile choice (422 validation without a reason). */
   | 'invalid_profile'
   | 'offline'
@@ -55,7 +57,7 @@ export function reasonOf(error: ApiError): string | null {
   return null;
 }
 
-const PROFILE_FIELDS = ['breed', 'origin', 'age_stage', 'species'] as const;
+const PROFILE_FIELDS = ['breed', 'origin', 'age_stage', 'species', 'colour'] as const;
 
 /** 422 reasons the screen explains one by one. */
 const KNOWN_422_REASONS = [
@@ -65,6 +67,7 @@ const KNOWN_422_REASONS = [
   'challenge_requires_paid_breed',
   'breed_species_mismatch',
   'species_unavailable',
+  'colour_invalid',
 ] as const satisfies readonly PinErrorKind[];
 
 function known422Reason(reason: string | null): (typeof KNOWN_422_REASONS)[number] | null {
@@ -119,7 +122,7 @@ export function classifyPinError(error: unknown): PinError {
  */
 export function pinRequestKey(
   petId: number | null,
-  profile: { species?: string; breed: string; origin: string; age_stage: string; plan?: string } | null,
+  profile: { species?: string; breed: string; origin: string; age_stage: string; plan?: string; colour?: string } | null,
 ): string {
   // M3-09: the plan is part of the choice — a PIN issued for a free pet is never reused for a challenge.
   // M5-R06-02: so is the species.
@@ -130,5 +133,7 @@ export function pinRequestKey(
     profile?.age_stage ?? null,
     profile?.plan ?? null,
     profile?.species ?? null,
+    // M5-R21: another colour is another pet (look) — never reuse a PIN across colours.
+    profile?.colour ?? null,
   ]);
 }
