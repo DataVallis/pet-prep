@@ -66,6 +66,9 @@
     "petsLoading": "Loading the family's dogs …",
     "pinLabel": "Sign-in code",
     "pinFor": "For: {{name}}",
+    "copyCode": "Copy code",
+    "copied": "Copied",
+    "copyFailed": "Couldn't copy the code.",
     "instructions": "Your child opens PetPrep on their phone, chooses \"I'm a kid\" and types in this code.",
     "stepLines": {
       "new_pet": {

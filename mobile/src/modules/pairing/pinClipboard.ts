@@ -46,7 +46,7 @@ export type ClipboardPinResult =
   /** No clipboard module in this binary. */
   | { kind: 'unavailable' };
 
-type ClipboardApi = Pick<typeof ClipboardModule, 'getStringAsync' | 'hasStringAsync'>;
+type ClipboardApi = Pick<typeof ClipboardModule, 'getStringAsync' | 'hasStringAsync' | 'setStringAsync'>;
 type NativeProbe = () => boolean;
 
 const defaultProbe: NativeProbe = () => requireOptionalNativeModule('ExpoClipboard') != null;
@@ -80,6 +80,25 @@ export async function readPinFromClipboard(): Promise<ClipboardPinResult> {
     return pin ? { kind: 'pin', pin } : { kind: 'no_pin' };
   } catch {
     return { kind: 'no_pin' };
+  }
+}
+
+export type CopyPinResult = 'copied' | 'unavailable' | 'failed';
+
+/**
+ * Parent side (David 2026-10-14): put the child's code on the clipboard — exactly the six
+ * digits, no space or other formatting, so pasting it on the child's PIN screen (or in a
+ * message) just works. Never throws; never logs the code.
+ */
+export async function copyPinToClipboard(pin: string): Promise<CopyPinResult> {
+  const digits = pin.replace(/[^0-9]/g, '');
+  if (digits.length !== PIN_LENGTH) return 'failed';
+  const clipboard = loadClipboard();
+  if (!clipboard) return 'unavailable';
+  try {
+    return (await clipboard.setStringAsync(digits)) === false ? 'failed' : 'copied';
+  } catch {
+    return 'failed';
   }
 }
 

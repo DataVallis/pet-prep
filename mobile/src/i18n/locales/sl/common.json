@@ -10,5 +10,16 @@
   "format": {
     "thousands": ".",
     "percent": "{{value}} %"
+  },
+  "parentalGate": {
+    "link": "Starš?",
+    "linkA11y": "Za starše: odjava otroka",
+    "title": "Za starše",
+    "prompt": "Za nadaljevanje odgovorite na vprašanje:",
+    "question": "Koliko je {{a}} × {{b}}?",
+    "answerLabel": "Odgovor",
+    "submit": "Potrdi",
+    "cancel": "Prekliči",
+    "wrong": "Odgovor ni pravilen. Poskusite znova."
   }
 }

@@ -4,6 +4,7 @@ import {
   extractPin,
   isPinClipboardAvailable,
   readPinFromClipboard,
+  copyPinToClipboard,
   setClipboardProbeForTests,
 } from '@/modules/pairing/pinClipboard';
 
@@ -78,3 +79,26 @@ describe('readPinFromClipboard', () => {
     expect(isPinClipboardAvailable()).toBe(false);
   });
 });
+
+describe('copyPinToClipboard (parent side, David 2026-10-14)', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    setClipboardProbeForTests(() => true);
+  });
+  afterAll(() => setClipboardProbeForTests(null));
+
+  it('copies exactly the six digits, without the display space', async () => {
+    await expect(copyPinToClipboard('734 912')).resolves.toBe('copied');
+    expect(Clipboard.setStringAsync).toHaveBeenCalledWith('734912');
+  });
+
+  it('not a 6-digit code → nothing copied; no module → unavailable; native failure → failed', async () => {
+    await expect(copyPinToClipboard('12345')).resolves.toBe('failed');
+    expect(Clipboard.setStringAsync).not.toHaveBeenCalled();
+    (Clipboard.setStringAsync as jest.Mock).mockRejectedValueOnce(new Error('x'));
+    await expect(copyPinToClipboard('734912')).resolves.toBe('failed');
+    setClipboardProbeForTests(() => false);
+    await expect(copyPinToClipboard('734912')).resolves.toBe('unavailable');
+  });
+});
+

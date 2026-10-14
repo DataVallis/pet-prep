@@ -142,6 +142,24 @@ describe('ChildHudScreen', () => {
     }
   });
 
+  it('David 2026-10-14: the logout icon goes through the parental gate (no accidental logout)', async () => {
+    await renderHud();
+    fireEvent.press(screen.getByTestId('hud-logout'));
+    expect(screen.getByTestId('parental-gate')).toBeTruthy();
+
+    fireEvent.changeText(screen.getByTestId('parental-gate-input'), '1');
+    fireEvent.press(screen.getByTestId('parental-gate-submit'));
+    expect(api.logout).not.toHaveBeenCalled();
+    expect(useAppStore.getState().user).not.toBeNull();
+
+    const [a, b] = (String(screen.getByTestId('parental-gate-question').props.children).match(/\d+/g) ?? []).map(Number);
+    fireEvent.changeText(screen.getByTestId('parental-gate-input'), String(a * b));
+    await act(async () => {
+      fireEvent.press(screen.getByTestId('parental-gate-submit'));
+    });
+    await waitFor(() => expect(useAppStore.getState().user).toBeNull());
+  });
+
   it('outside the feed window: feed disabled with "ob 17:00" (Ljubljana), water enabled', async () => {
     await renderHud();
     expect(isDisabled('action-feed')).toBe(true);

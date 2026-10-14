@@ -18,7 +18,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { ActivityIndicator, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { Text, TextInput } from '@/components/ui/Text';
-import { Cat, CheckCircle, ChevronLeft, ChevronRight, Dog, KeyRound, Lock, PawPrint, RefreshCw, Smartphone } from 'lucide-react-native';
+import { Cat, Check, CheckCircle, ChevronLeft, ChevronRight, Copy, Dog, KeyRound, Lock, PawPrint, RefreshCw, Smartphone } from 'lucide-react-native';
 
 import type { ChildPinResponse, NewPetProfile, PetBreed, PinLoginMode } from '@/api/client';
 import { useQueryClient } from '@tanstack/react-query';
@@ -46,6 +46,7 @@ import {
   type FamilyChild,
 } from '@/modules/family/family';
 import { classifyPinError, formatCountdown, formatPin, pinRequestKey, secondsUntil, type PinErrorKind } from '@/modules/pairing/pin';
+import { copyPinToClipboard, isPinClipboardAvailable } from '@/modules/pairing/pinClipboard';
 import { maybeAskForPush } from '@/modules/push/pushPrompt';
 import { refreshSessionPet } from '@/modules/session/logout';
 import { fonts, palette, tightTracking } from '@/theme';
@@ -454,6 +455,14 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
   const remaining = useCountdown(pin?.expires_at ?? null);
   const cooldown = useCountdown(cooldownUntil);
   const isExpired = pin !== null && remaining <= 0;
+  // David 2026-10-14: "Kopiraj kodo" — the six digits only; the child's PIN screen can paste them.
+  const [copied, setCopied] = useState<{ pin: string; result: 'copied' | 'failed' } | null>(null);
+  const copyResult = copied !== null && pin !== null && copied.pin === pin.pin ? copied.result : null;
+  const copyPin = async () => {
+    if (pin === null) return;
+    const result = await copyPinToClipboard(pin.pin);
+    setCopied({ pin: pin.pin, result: result === 'copied' ? 'copied' : 'failed' });
+  };
   const baseline: ChildBaseline = { devices: target.devices, pet_id: target.pet_id };
 
   const connectedIn = (data: Parameters<typeof familyFromDashboard>[0]) =>
@@ -568,6 +577,28 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
             >
               {formatPin(pin.pin)}
             </Text>
+            {!isExpired && isPinClipboardAvailable() && (
+              <Pressable
+                style={({ pressed }) => [styles.copyButton, pressed && styles.pressed]}
+                onPress={() => void copyPin()}
+                accessibilityRole="button"
+                accessibilityLabel={S.copyCode}
+                testID="pin-copy"
+              >
+                {copyResult === 'copied' ? <Check color={palette.mintDeep} size={16} /> : <Copy color={palette.mintDeep} size={16} />}
+                <Text style={styles.copyButtonText}>{copyResult === 'copied' ? S.copied : S.copyCode}</Text>
+              </Pressable>
+            )}
+            {copyResult === 'failed' && (
+              <Text style={styles.muted} testID="pin-copy-failed" accessibilityLiveRegion="polite">
+                {S.copyFailed}
+              </Text>
+            )}
+            {copyResult === 'copied' && (
+              <Text style={styles.srOnly} accessibilityLiveRegion="polite" testID="pin-copied">
+                {S.copied}
+              </Text>
+            )}
             {isExpired ? (
               <Text style={styles.expired}>{S.expired}</Text>
             ) : (
@@ -770,6 +801,20 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   secondaryButtonText: { fontSize: 15, fontWeight: '700', color: palette.mintDeep },
+  copyButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    minHeight: 44,
+    paddingHorizontal: 14,
+    borderRadius: 999,
+    borderWidth: 1,
+    borderColor: palette.mintBorder,
+    backgroundColor: palette.mintSoft,
+  },
+  copyButtonText: { fontSize: 14, fontWeight: '700', color: palette.mintDeep },
+  /** Announced to screen readers ("Kopirano"), invisible on screen — the button already shows it. */
+  srOnly: { position: 'absolute', width: 1, height: 1, opacity: 0 },
   buttonDisabled: { opacity: 0.5 },
   waitingRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 4 },
   muted: { fontSize: 13, color: palette.n600 },

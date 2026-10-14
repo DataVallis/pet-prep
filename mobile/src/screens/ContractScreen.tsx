@@ -20,6 +20,8 @@ import { hasSignature } from '@/modules/contract/signaturePath';
 import { submitSignature } from '@/modules/contract/signContract';
 import { maybeAskForPush } from '@/modules/push/pushPrompt';
 import { logout } from '@/modules/session/logout';
+import ParentalGate from '@/components/ParentalGate';
+import { useParentalGate } from '@/modules/parentalGate/useParentalGate';
 import { lockStateFromPet, useAppStore } from '@/store/appStore';
 import { contractBody } from '@/modules/contract/contractText';
 import { alpha, palette, radius } from '@/theme';
@@ -47,6 +49,7 @@ export default function ContractScreen() {
   const [signature, setSignature] = useState('');
   const [isSigning, setIsSigning] = useState(false);
   const [contractError, setContractError] = useState<ContractError | null>(null);
+  const logoutGate = useParentalGate({ onPass: () => void logout() });
 
   const sessionUser = useAppStore((s) => s.user);
   const sessionPet = useAppStore((s) => s.pet);
@@ -176,15 +179,12 @@ export default function ContractScreen() {
               </Pressable>
             )}
 
-            <Pressable
-              style={styles.backButton}
-              onPress={() => {
-                void logout();
-              }}
-              disabled={isSigning}
-            >
+            {/* David 2026-10-14: signing out goes through the parental gate (a child mustn't
+                lose the session by accident; a parent on the same phone gets out). */}
+            <Pressable style={styles.backButton} onPress={logoutGate.open} disabled={isSigning} testID="contract-logout">
               <Text style={styles.backButtonText}>{CONTRACT_STRINGS.logout}</Text>
             </Pressable>
+            <ParentalGate {...logoutGate.props} />
           </View>
         </View>
       </Modal>
