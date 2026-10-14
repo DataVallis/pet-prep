@@ -15,7 +15,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Zakaj je pomembno:** Med beto (~20 družin) bo vsak nakup izziva porabil skoraj ves dnevni limit. Limit lahko zdaj dvignemo v minuti, brez dostopa do strežnika — in ga z 0 tudi v trenutku ustavimo. Ljubljenček brez medijev medtem vedno deluje naprej (varovalka zapre samo AI, ne igre).
 
-**Številke:** 5 $ / dan in 50 $ / mesec privzeto; ena slika ≈ 0,15 $, en 5-sekundni video ≈ 0,56 $; meje obrazca 500 $ / dan in 5000 $ / mesec (zaščita pred tipkarsko napako); 14 novih testov Pest.
+**Številke:** 5 $ / dan in 50 $ / mesec privzeto; ena slika ≈ 0,15 $, en 5-sekundni video ≈ 0,56 $; meje obrazca 500 $ / dan in 5000 $ / mesec (zaščita pred tipkarsko napako); 19 novih testov Pest.
 
 **Kako povedati:**
 - 💼 Investitorji: »Stroške AI nadzorujemo pri vsakem klicu: ocena pred klicem, dnevni in mesečni limit, ki ga lastnik spremeni v minuti, in samodejni ponovni poskus naslednjo noč. Brez presenečenj na računu.«

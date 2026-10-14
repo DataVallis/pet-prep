@@ -154,9 +154,11 @@ class AppSettingsService
             }
         }
 
+        // Decimal strings: jsonb turns 20.0 into 20, so a float would never compare
+        // equal to the stored value and an unchanged save would add an audit row.
         $this->store($actor, self::AI_BUDGET_KEY, [
-            'daily_usd' => $dailyUsd === null ? null : round($dailyUsd, 2),
-            'monthly_usd' => $monthlyUsd === null ? null : round($monthlyUsd, 2),
+            'daily_usd' => $dailyUsd === null ? null : sprintf('%.2f', $dailyUsd),
+            'monthly_usd' => $monthlyUsd === null ? null : sprintf('%.2f', $monthlyUsd),
         ]);
     }
 
@@ -178,7 +180,7 @@ class AppSettingsService
             AppSetting::updateOrCreate(['key' => $key], ['value' => $new, 'updated_by' => $actor->id]);
             AppSettingChange::create(['key' => $key, 'user_id' => $actor->id, 'old' => $old, 'new' => $new]);
 
-            Log::info('Admin changed a product switch', [
+            Log::info('Admin changed an app setting', [
                 'key' => $key,
                 'user_id' => $actor->id,
                 'old' => $old,

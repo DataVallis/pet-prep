@@ -5,9 +5,11 @@ namespace App\Filament\Pages;
 use App\Models\AppSettingChange;
 use App\Models\User;
 use App\Services\AppSettingsService;
+use App\Services\FalAiService;
 use App\Services\Media\AiSpendGuard;
 use App\Services\Media\FalGateway;
 use App\Services\Media\ReferenceImageRetryService;
+use Filament\Actions\Action;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
@@ -141,15 +143,54 @@ class AiBudget extends Page implements HasForms
             ->body(__('admin.ai_budget.saved_body', ['daily' => sprintf('%.2f', $guard->dailyCapUsd()), 'monthly' => sprintf('%.2f', $guard->monthlyCapUsd())]))
             ->success()
             ->send();
+
+        // QA m5: a daily cap above the monthly one never takes effect past the month's cap.
+        if ($guard->dailyCapUsd() > $guard->monthlyCapUsd()) {
+            Notification::make()
+                ->title(__('admin.ai_budget.daily_above_monthly'))
+                ->body(__('admin.ai_budget.daily_above_monthly_body', ['monthly' => sprintf('%.2f', $guard->monthlyCapUsd()), 'month' => sprintf('%.2f', $guard->spentThisMonthUsd())]))
+                ->warning()
+                ->persistent()
+                ->send();
+        }
+    }
+
+    /**
+     * "Retry blocked media now" — spends money, so it asks first (QA m4) and
+     * shows how much of today's budget is left.
+     */
+    public function retryBlockedAction(): Action
+    {
+        return Action::make('retryBlocked')
+            ->label(__('admin.ai_budget.retry'))
+            ->icon('heroicon-o-arrow-path')
+            ->color('gray')
+            ->visible(fn (): bool => static::canAccess())
+            ->requiresConfirmation()
+            ->modalHeading(__('admin.ai_budget.retry'))
+            ->modalDescription(function (): string {
+                $guard = app(AiSpendGuard::class);
+
+                return __('admin.ai_budget.retry_confirm', [
+                    'left' => sprintf('%.2f', max(0.0, min($guard->dailyCapUsd() - $guard->spentTodayUsd(), $guard->monthlyCapUsd() - $guard->spentThisMonthUsd()))),
+                ]);
+            })
+            ->action(fn () => $this->runRetry(app(ReferenceImageRetryService::class), app(FalAiService::class)));
     }
 
     /**
      * Re-queue images / stage images / videos refused by the budget or the fal
      * balance now (instead of waiting for the nightly media:retry).
      */
-    public function retryBlocked(ReferenceImageRetryService $retries): void
+    protected function runRetry(ReferenceImageRetryService $retries, FalAiService $fal): void
     {
         $this->authorizeAccess();
+
+        if (! $fal->isEnabled()) {
+            Notification::make()->title(__('admin.ai_budget.retry_disabled'))->warning()->send();
+
+            return;
+        }
 
         if (FalGateway::balanceExhaustedAt() !== null) {
             Notification::make()->title(__('admin.ai_budget.retry_balance'))->warning()->send();
@@ -163,7 +204,7 @@ class AiBudget extends Page implements HasForms
         Notification::make()
             ->title($total > 0 ? __('admin.ai_budget.retry_done') : __('admin.ai_budget.retry_none'))
             ->body(__('admin.ai_budget.retry_body', $queued))
-            ->color($total > 0 ? 'success' : 'warning')
+            ->status($total > 0 ? 'success' : 'warning')
             ->send();
     }
 

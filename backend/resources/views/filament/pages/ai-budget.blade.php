@@ -3,7 +3,7 @@
         {{ $this->form }}
         <div class="flex flex-wrap gap-3">
             <x-filament::button type="submit" icon="heroicon-o-check">{{ __('admin.ai_budget.save') }}</x-filament::button>
-            <x-filament::button type="button" color="gray" icon="heroicon-o-arrow-path" wire:click="retryBlocked">{{ __('admin.ai_budget.retry') }}</x-filament::button>
+            {{ $this->retryBlockedAction }}
         </div>
         <p class="text-sm text-gray-500">{{ __('admin.ai_budget.retry_help') }}</p>
     </form>

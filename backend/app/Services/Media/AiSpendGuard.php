@@ -122,6 +122,10 @@ class AiSpendGuard
     {
         $cost = $profile->estimatedCostUsd();
 
+        // M4-07b: warm the admin budget before the advisory lock, so the read
+        // inside it is a cache hit (no cache write / slow store while locked).
+        $this->settings->storedAiBudget();
+
         return DB::transaction(function () use ($profile, $purpose, $petId, $labResultId, $petMediaId, $cost) {
             if (DB::getDriverName() === 'pgsql') {
                 DB::select('SELECT pg_advisory_xact_lock(?)', [self::ADVISORY_LOCK_KEY]);

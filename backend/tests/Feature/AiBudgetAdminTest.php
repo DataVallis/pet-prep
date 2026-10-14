@@ -92,8 +92,8 @@ describe('settings + guard', function () {
         expect(app(AiSpendGuard::class))->dailyCapUsd()->toBe(5.0)->monthlyCapUsd()->toBe(300.0)
             ->and(AppSettingChange::where('key', AppSettingsService::AI_BUDGET_KEY)->count())->toBe(2)
             ->and(AppSettingChange::latest('id')->first())
-            ->old->toBe(['daily_usd' => 20.0, 'monthly_usd' => null])
-            ->new->toBe(['daily_usd' => null, 'monthly_usd' => 300.0]);
+            ->old->toBe(['daily_usd' => '20.00', 'monthly_usd' => null])
+            ->new->toBe(['daily_usd' => null, 'monthly_usd' => '300.00']);
     });
 
     it('records no change when the same budget is saved again', function () {
@@ -193,11 +193,11 @@ describe('admin page', function () {
         $this->actingAs(abAdmin());
 
         // Still at the env cap: nothing fits today.
-        Livewire::test(AiBudget::class)->call('retryBlocked')->assertNotified();
+        Livewire::test(AiBudget::class)->callAction('retryBlocked')->assertNotified();
         Queue::assertNothingPushed();
 
         Livewire::test(AiBudget::class)->fillForm(['daily_usd' => '20'])->call('save');
-        Livewire::test(AiBudget::class)->call('retryBlocked')->assertNotified();
+        Livewire::test(AiBudget::class)->callAction('retryBlocked')->assertNotified();
 
         Queue::assertPushed(SubmitPetStateVideo::class, fn ($job) => $job->petMediaId === $slot->id);
         expect($slot->fresh())->status->toBe('pending')->error_reason->toBeNull();
@@ -209,7 +209,7 @@ describe('admin page', function () {
         Cache::put(FalGateway::BALANCE_FLAG_KEY, now()->toIso8601String());
         $this->actingAs(abAdmin());
 
-        Livewire::test(AiBudget::class)->call('retryBlocked')->assertNotified();
+        Livewire::test(AiBudget::class)->callAction('retryBlocked')->assertNotified();
 
         Queue::assertNothingPushed();
     });
@@ -219,5 +219,45 @@ describe('admin page', function () {
 
         Livewire::test(AiBudget::class)->assertForbidden();
         expect(AppSetting::count())->toBe(0);
+    });
+
+    it('re-checks superadmin on every Livewire action, not only on mount (QA m6)', function () {
+        Queue::fake([SubmitPetStateVideo::class]);
+        abBlockedVideo();
+        $admin = abAdmin();
+        $this->actingAs($admin);
+        $page = Livewire::test(AiBudget::class)->fillForm(['daily_usd' => '20']);
+
+        $admin->update(['is_superadmin' => false]);
+
+        $page->call('save')->assertForbidden();
+        expect(AppSetting::count())->toBe(0);
+
+        $admin->update(['is_superadmin' => true]);
+        $page = Livewire::test(AiBudget::class)->assertActionVisible('retryBlocked');
+        $admin->update(['is_superadmin' => false]);
+        $page->assertActionHidden('retryBlocked');
+
+        Queue::assertNothingPushed();
+    });
+
+    it('warns when the daily budget is above the monthly one', function () {
+        $this->actingAs(abAdmin());
+
+        Livewire::test(AiBudget::class)
+            ->fillForm(['daily_usd' => '80'])
+            ->call('save')
+            ->assertNotified(__('admin.ai_budget.daily_above_monthly'));
+    });
+
+    it('says why nothing is queued while fal is disabled', function () {
+        config(['services.fal_ai.key' => null]);
+        Queue::fake([SubmitPetStateVideo::class]);
+        abBlockedVideo();
+        $this->actingAs(abAdmin());
+
+        Livewire::test(AiBudget::class)->callAction('retryBlocked')->assertNotified(__('admin.ai_budget.retry_disabled'));
+
+        Queue::assertNothingPushed();
     });
 });
