@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -427,6 +427,16 @@ class BreedStageParamsSeeder extends Seeder
     public const PROPOSED_R10_CHIHUAHUA_SENIOR = 'predlog Claude 2026-10-13 (spodnja meja RKC / PDSA namesto pristranske mediane VetCompass, M5-R10-33) — čaka Davida';
 
     /**
+     * M5-R10-34 English Springer Spaniel (unattended run 2026-10-14, data.json
+     * proposed_game_parameters.english_springer_spaniel.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 120 min
+     * (RKC S284 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 122 (0.75 × McMillan 2024 median 13.5 y, S123), arrival 2 / 9 / 36 / 122,
+     * learning multiplier 1.5 (Coren rank 13, Excellent); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_ENGLISH_SPRINGER_SPANIEL = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-34)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -557,6 +567,7 @@ class BreedStageParamsSeeder extends Seeder
         'boston_terrier' => [1, 'S255', 'Grooming: Once a week', 'high', false],
         'miniature_american_shepherd' => [2, 'S269', 'The Miniature American Shepherd needs to be brushed a couple times a week to control shedding and minimize matting.', 'medium', false],
         'chihuahua' => [1, 'S275', 'Grooming: Once a week', 'high', false],
+        'english_springer_spaniel' => [2, 'S285', 'They need grooming once or twice a week, plus clipping every 3 months.', 'medium', false],
     ];
 
     /**
@@ -627,13 +638,14 @@ class BreedStageParamsSeeder extends Seeder
         'boston_terrier' => ['S260', 'Like all breeds, early socialization and puppy training courses are strongly recommended for Boston Terriers.'],
         'miniature_american_shepherd' => ['S267', "They can be weary of new faces, but early, consistent socialization will build up a Mini American's confidence in new situations."],
         'chihuahua' => ['S277', "This is why it's really important to socialise your Chihuahua from a young age"],
+        'english_springer_spaniel' => ['S286', 'Like with any breed, early socialization and puppy training courses are key'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1219,6 +1231,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-33 (docs/research/dog-data/data.json chihuahua,
             // S272–S280; runbook rules in proposed_game_parameters.chihuahua).
             BreedType::Chihuahua => self::chihuahuaProfile(),
+            // M5-R10-34 (docs/research/dog-data/data.json english_springer_spaniel,
+            // S281–S288; runbook rules in proposed_game_parameters.english_springer_spaniel).
+            BreedType::EnglishSpringerSpaniel => self::englishSpringerSpanielProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -3323,6 +3338,80 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'chihuahua.lifespan.rkc',
                 'quote' => 'Lifespan: Over 12 years',
                 'notes' => 'RKC breed page lower bound (S275); PDSA "Over 12 years" (S277) the same. The VetCompass median of a young population (S279) is not used. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * English Springer Spaniel (M5-R10-34). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_ENGLISH_SPRINGER_SPANIEL);
+     * weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function englishSpringerSpanielProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_ENGLISH_SPRINGER_SPANIEL;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S123', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.english_springer_spaniel.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [122, $boundary('Derived game boundary: last 25 % of lifespan (S11) × McMillan 2024 median 13.5 y (Dogs Trust breed table, S123) = 10.125 y = 121.5 → 122 months (half up). Not chosen: 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 122],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_springer_spaniel.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S284', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_springer_spaniel.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S284) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA "over 2 hours of exercise per day" (S285) agrees.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_springer_spaniel.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[18, 23], [
+                'unit' => 'kg', 'source_id' => 'S285', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'english_springer_spaniel.adult_weight.pdsa',
+                'quote' => 'Average weight | 18-23 kg',
+                'notes' => 'PDSA key facts (S285), both sexes. AKC standard (S283): a 20-inch dog about 50 lb (≈ 22.7 kg), a 19-inch bitch about 40 lb (≈ 18.1 kg) — inside the range. The KC standard (S282) gives no weight.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'english_springer_spaniel.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (18–23 kg ≈ 40–51 lb, the Medium class of S10; RKC / PDSA size "Medium").',
+            ]],
+            'coren_rank' => [13, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'english_springer_spaniel.trainability.coren_rank',
+                'quote' => '| 13 | English Springer Spaniel |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 13, tier "Excellent Working Dogs" (ranks 11–26). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_springer_spaniel.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 13 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [13.5, [
+                'unit' => 'years', 'source_id' => 'S123', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'english_springer_spaniel.lifespan.median_uk',
+                'quote' => 'English Springer Spaniel | 13.5 | 13.4 - 13.6 | 17905 | 6221',
+                'notes' => 'McMillan et al. 2024 data as tabled by Dogs Trust (S123). RKC "Lifespan: Over 10 years" (S284) and PDSA "Over 10 years" (S285) agree. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

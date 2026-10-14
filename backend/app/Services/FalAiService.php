@@ -306,6 +306,13 @@ class FalAiService
                 .'large round dark eyes that are not protruding, large flaring erect ears, '
                 .'medium-length sickle tail carried up over the back, tiny dainty compact body, '
                 .'photorealistic, studio quality, natural lighting',
+            // M5-R10-34: KC standard (S282) — liver and white as the anchor (also black and white, either
+            // with tan markings; never roan / lemon / red / orange); natural tail (KC "Previously customarily docked.").
+            BreedType::EnglishSpringerSpaniel => 'A medium-sized, compact and athletic English Springer Spaniel dog with a liver and white coat, '
+                .'close straight medium-length coat with moderate feathering on the ears, legs and chest, '
+                .'long lobular well-feathered ears hanging close to the head, medium almond-shaped dark hazel eyes with a kind expression, '
+                .'natural undocked feathered tail carried low, '
+                .'photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -745,6 +752,17 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'short, soft, close and glossy',
                 'markings' => 'none or small white chest marking',
+            ],
+            // M5-R10-34: KC standard colours (S282) — liver and white, black and white, either with tan markings.
+            BreedType::EnglishSpringerSpaniel => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'liver and white',
+                    1 => 'black and white',
+                    2 => 'liver and white with tan markings',
+                },
+                'eye_color' => 'dark hazel',
+                'fur_texture' => 'close, straight, medium-length with moderate feathering',
+                'markings' => 'white blaze, collar, chest and legs',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

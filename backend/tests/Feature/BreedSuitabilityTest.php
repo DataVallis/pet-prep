@@ -527,9 +527,9 @@ it('gives the Boxer the new needs_company and short_muzzle_breathing tags and th
         ->not->toContain('hips_hind_legs')->not->toContain('heart_and_spine')->not->toContain('frequent_grooming');
 
     // Only the Boxer, the Boston Terrier (AKC S260, M5-R10-31), the Miniature American Shepherd (PetMD S269, M5-R10-32)
-    // and the Chihuahua (PDSA S277, M5-R10-33) carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
+    // the Chihuahua (PDSA S277, M5-R10-33) and the English Springer Spaniel (AKC S286, M5-R10-34) carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua], true)) {
+        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('needs_company');
         }
         if (! in_array($breed, [BreedType::Boxer, BreedType::ShihTzu], true)) {
@@ -729,4 +729,22 @@ it('gives the Chihuahua apartment, other_pets and the older-children / company /
         ->and(bsEntry('chihuahua.behaviour.time_alone')['quote'])->toBe('As companion dogs Chihuahuas love company and need someone around the home all the time.')
         ->and(bsEntry('chihuahua.suitability.akc_children')['quote'])->toContain('aren’t recommended for homes with children')
         ->and(bsEntry('chihuahua.suitability.rkc_grooming')['quote'])->toBe('Grooming: Once a week');
+});
+
+it('gives the English Springer Spaniel active_family / family_pet / children / other_pets and the exercise, company, shedding and grooming chips — no welfare chip (runbook 2026-10-14)', function () {
+    $ess = app(BreedSuitability::class)->for(BreedType::EnglishSpringerSpaniel);
+    expect($ess['suits'])->toBe(['active_family', 'family_pet', 'children', 'other_pets'])
+        // PDSA names children in general, no rating for small children; RKC "Small house" → neither apartment nor large_home.
+        ->and($ess['suits'])->not->toContain('small_children')->not->toContain('apartment')->not->toContain('large_home')
+        // AKC: should not be left alone for long periods (S286) → never often_alone.
+        ->and($ess['suits'])->not->toContain('often_alone')->not->toContain('first_time_owner')
+        ->and($ess['consider'])->toBe(['long_daily_exercise', 'needs_company', 'sheds', 'frequent_grooming'])
+        // Breed Watch Category 1 without points of concern → no welfare chip; no prey-drive quote; RKC "Over 10 years".
+        ->and($ess['consider'])->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
+        ->not->toContain('chases_small_pets')->not->toContain('shorter_lifespan')->not->toContain('needs_mental_stimulation');
+
+    expect(bsEntry('english_springer_spaniel.suitability.pdsa_children')['quote'])->toBe('get along well with children and other household pets.')
+        ->and(bsEntry('english_springer_spaniel.behaviour.time_alone')['quote'])->toStartWith('Springers should not be left alone for long periods of time')
+        ->and(bsEntry('english_springer_spaniel.suitability.rkc_grooming')['quote'])->toBe('Grooming: More than once a week')
+        ->and(bsEntry('english_springer_spaniel.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Small house');
 });

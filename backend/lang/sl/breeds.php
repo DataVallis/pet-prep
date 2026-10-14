@@ -37,6 +37,7 @@ return [
     'boston_terrier' => 'Bostonski terier',
     'miniature_american_shepherd' => 'Mali ameriški ovčar',
     'chihuahua' => 'Čivava',
+    'english_springer_spaniel' => 'Angleški springer španjel',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
