@@ -401,6 +401,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "belgian_malinois",
+            "species": "dog",
+            "file": "dog/belgian-malinois.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:c5749736d0005602dda7a9bd25ea72e86f854af144c8e1680f8eabfab29f3607",
+            "generated_at": "2026-10-14T20:37:27+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
