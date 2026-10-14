@@ -57,7 +57,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "4f03be2f92799ba62f1b06e3554954d59ffd6d8611009739d18102da7d6dacc3"
+      "sha256": "909d00c4222cf8c08cdbb4a2abf5a2b16b9a7d9feb6e3e7d2c3e116aea1532bf"
     }
   },
   "suitability_vocabulary": {
@@ -18772,7 +18772,12 @@
           "S291"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "shetland-sheepdog.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
