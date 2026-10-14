@@ -106,3 +106,15 @@ export async function refreshSessionPet(): Promise<void> {
   store.setPet(pet);
   store.setPairingStatus(pet ? 'paired' : 'unpaired');
 }
+
+/** Re-read the parent's sign-in methods from `GET /api/user` (kept when the answer lacks them). Never throws. */
+export async function refreshAuthMethods(): Promise<void> {
+  try {
+    const user = await api.getUser();
+    const methods = readAuthMethods(user);
+    const store = useAppStore.getState();
+    if (methods && store.user?.role === 'parent' && store.user.id === user.id) store.setAuthMethods(methods);
+  } catch {
+    // Offline: decide with what the session knows.
+  }
+}

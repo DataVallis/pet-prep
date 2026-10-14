@@ -180,6 +180,17 @@ export function canOfferProvider(provider: SocialProvider, platform: string = Pl
   return platform === 'ios' && loadApple() !== null && loadCrypto() !== null;
 }
 
+/**
+ * Deletion re-auth (bug 2026-10-14): which LINKED provider may this phone offer? Apple on
+ * every iOS device whenever the server says it is linked (Sign in with Apple is part of iOS;
+ * if the module were somehow missing, the attempt shows "couldn't confirm" instead of
+ * hiding the only way to confirm). Google as for the sign-in button (configured + module).
+ */
+export function canOfferForDeletion(provider: SocialProvider, platform: string = Platform.OS): boolean {
+  if (provider === 'apple') return platform === 'ios';
+  return isGoogleSignInAvailable(platform);
+}
+
 /** Show the Apple button? iOS only, module present, and the OS supports it. Never throws. */
 export async function isAppleSignInAvailable(platform: string = Platform.OS): Promise<boolean> {
   if (platform !== 'ios') return false;

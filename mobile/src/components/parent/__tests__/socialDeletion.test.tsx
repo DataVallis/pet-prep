@@ -30,6 +30,7 @@ jest.mock('@/modules/auth/socialSdk', () => ({
   obtainProviderCredential: jest.fn(),
   // This "device" can run both providers; the per-platform rule is tested in authMethods.test.ts.
   canOfferProvider: jest.fn(() => true),
+  canOfferForDeletion: jest.fn(() => true),
 }));
 
 const deleteAccount = api.deleteAccount as jest.Mock;

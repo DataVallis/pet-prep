@@ -13,7 +13,7 @@
  * (FamilyChildrenCard). Light parent theme (ADR-007).
  */
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
 import { Text, TextInput } from '@/components/ui/Text';
 import { Check } from 'lucide-react-native';
@@ -21,8 +21,9 @@ import { Check } from 'lucide-react-native';
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import type { DeletionProof, ProviderReauth } from '@/api/client';
 import { canSubmitDeletion, deleteConfirmWord, isConfirmWord, obtainDeletionProof } from '@/modules/account/account';
-import { canOfferProvider, type SocialProvider } from '@/modules/auth/socialSdk';
+import { canOfferForDeletion, type SocialProvider } from '@/modules/auth/socialSdk';
 import { deletionIdentity, type AuthMethods } from '@/modules/session/authMethods';
+import { refreshAuthMethods } from '@/modules/session/logout';
 import type { SignInMethod } from '@/modules/session/signInMethod';
 import { useAppStore } from '@/store/appStore';
 import { t, tPets, type PetGroup } from '@/i18n';
@@ -57,7 +58,7 @@ interface DeletionConfirmFormProps {
   authMethods?: AuthMethods | null;
   /** Fallback when `authMethods` is unknown: how the parent signed in (default: the session's). */
   signInMethod?: SignInMethod;
-  /** Can this device run the provider's sign-in (default `canOfferProvider`)? */
+  /** Can this device offer the linked provider for re-auth (default `canOfferForDeletion`)? */
   canOffer?: (provider: SocialProvider) => boolean;
   /** Tests: the provider re-sign-in (default `obtainDeletionProof`). */
   obtainProof?: (provider: SocialProvider) => Promise<ProviderReauth | null>;
@@ -83,13 +84,32 @@ export default function DeletionConfirmForm({
   paidPetGroup = 'dog',
   authMethods,
   signInMethod,
-  canOffer = canOfferProvider,
+  canOffer = canOfferForDeletion,
   obtainProof = obtainDeletionProof,
   testID,
 }: DeletionConfirmFormProps) {
   const sessionMethods = useAppStore((s) => s.authMethods);
   const sessionMethod = useAppStore((s) => s.signInMethod);
-  const identity = deletionIdentity(authMethods === undefined ? sessionMethods : authMethods, signInMethod ?? sessionMethod, canOffer);
+  const methods = authMethods === undefined ? sessionMethods : authMethods;
+  // Bug 2026-10-14 hardening: sign-in methods are re-read from `GET /api/user` once when the
+  // session doesn't know them (older payload — in the background, the fallback decides
+  // meanwhile) or when they say "no password" without any linked provider (contradictory —
+  // the form waits for the answer before offering anything).
+  const contradictory = authMethods === undefined && methods !== null && !methods.hasPassword && methods.linkedProviders.length === 0;
+  const unknown = authMethods === undefined && methods === null;
+  const [checking, setChecking] = useState(contradictory);
+  useEffect(() => {
+    if (!contradictory && !unknown) return;
+    let active = true;
+    void refreshAuthMethods().finally(() => {
+      if (active) setChecking(false);
+    });
+    return () => {
+      active = false;
+    };
+    // Once per opened form; the refresh updates the store (and so this form).
+  }, []);
+  const identity = deletionIdentity(methods, signInMethod ?? sessionMethod, canOffer);
   const providers: SocialProvider[] = identity.kind === 'providers' ? identity.providers : [];
   const single: SocialProvider | null = providers.length === 1 ? providers[0] : null;
   const [password, setPassword] = useState('');
@@ -97,7 +117,7 @@ export default function DeletionConfirmForm({
   const [paidAck, setPaidAck] = useState(false);
   const [reauthing, setReauthing] = useState<SocialProvider | null>(null);
   const [reauthFailed, setReauthFailed] = useState(false);
-  const busy = pending || reauthing !== null;
+  const busy = pending || reauthing !== null || checking;
   const identityReady =
     identity.kind === 'password' ? canSubmitDeletion(password, confirmText) : identity.kind === 'providers' && isConfirmWord(confirmText);
   const enabled = identityReady && (!paidChallenge || paidAck) && !busy;

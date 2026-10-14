@@ -241,6 +241,22 @@ describe('ChallengeScreen', () => {
     expect(screen.getByTestId('challenge-store-state')).toBeTruthy();
   });
 
+  it('bug 2026-10-14: only the store price is shown, exactly as the store formats it; without it no number at all', async () => {
+    getBilling.mockResolvedValue({ credits_available: 0, pets: [billingPet('payment_required')] });
+    mockPackage = { product: { identifier: 'petprep_challenge_12w', priceString: '49,99 €' } };
+    const first = renderWithQuery(<ChallengeScreen family={family({ type: 'challenge', status: 'payment_required' })} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.getByText(/^Enkratni nakup 49,99 € za enega psa\./)).toBeTruthy();
+    first.unmount();
+
+    // No offering (store unreachable / still loading): no guessed price or currency.
+    mockPackage = null;
+    renderWithQuery(<ChallengeScreen family={family({ type: 'challenge', status: 'payment_required' })} onBack={jest.fn()} />);
+    await flush();
+    const honest = screen.getByText(/^Enkratni nakup za enega psa\./);
+    expect(String(honest.props.children)).not.toMatch(/\d|€|\$/);
+  });
+
   it('an unused credit is used without buying; 409 no_credit is explained', async () => {
     getBilling.mockResolvedValue({ credits_available: 1, pets: [billingPet('payment_required')] });
     activateChallenge.mockRejectedValueOnce(new ApiError('no credit', 409, { reason: 'no_credit' }));

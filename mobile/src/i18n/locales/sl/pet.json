@@ -72,6 +72,8 @@
       },
       "challenge": {
         "title": "12-tedenski izziv — {{price}}",
+        "titleLoading": "12-tedenski izziv — …",
+        "titleNoPrice": "12-tedenski izziv",
         "hint": "Program, ki pokaže, ali je otrok pripravljen na psa, s plačljivo pasmo po izbiri, certifikatom in celotno zgodovino. Izziv se začne z nakupom: pes čaka, dokler izziva za tega psa ne kupite (lahko tudi pred podpisom pogodbe). Enkratno plačilo, brez naročnine. Bi najprej poskusili? Izberite brezplačnega mešančka."
       }
     },

@@ -1834,3 +1834,26 @@ describe('PetPickerStep', () => {
     });
   });
 });
+
+describe('bug 2026-10-14: the challenge price is only the store\'s own', () => {
+  const pick = (props: { challengePrice?: string | null; challengePriceLoading?: boolean }) =>
+    render(<PetPickerStep childName="Maja" catalogue={FALLBACK_CATALOGUE} initial={INITIAL_PICKER_CHOICE} onConfirm={jest.fn()} {...props} />);
+
+  it('shows the store\'s localized priceString verbatim', () => {
+    pick({ challengePrice: '49,99 €' });
+    expect(screen.getByText('12-tedenski izziv — 49,99 €')).toBeTruthy();
+  });
+
+  it('loading → a neutral "…", never a guessed price', () => {
+    pick({ challengePrice: null, challengePriceLoading: true });
+    expect(screen.getByText('12-tedenski izziv — …')).toBeTruthy();
+    expect(screen.queryByText(/49,99|\$/)).toBeNull();
+  });
+
+  it('no store price → the title without a number', () => {
+    pick({ challengePrice: null });
+    expect(screen.getByText('12-tedenski izziv')).toBeTruthy();
+    expect(screen.queryByText(/€|\$|\d+,\d\d/)).toBeNull();
+  });
+});
+
