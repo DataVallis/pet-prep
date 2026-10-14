@@ -70,6 +70,9 @@
     "petsLoading": "Nalagam pse v družini …",
     "pinLabel": "Koda za prijavo",
     "pinFor": "Za: {{name}}",
+    "copyCode": "Kopiraj kodo",
+    "copied": "Kopirano",
+    "copyFailed": "Kode ni bilo mogoče kopirati.",
     "instructions": "Otrok naj na svojem telefonu odpre PetPrep, izbere »Sem otrok« in vtipka to kodo.",
     "stepLines": {
       "new_pet": {

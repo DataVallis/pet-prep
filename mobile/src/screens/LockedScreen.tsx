@@ -2,6 +2,7 @@ import { StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { Lock } from 'lucide-react-native';
 
+import ParentExitLink from '@/components/ParentExitLink';
 import { deviceTimeZone, lockClockWithFallback } from '@/modules/childPet/familyTime';
 import { useAppStore, type LockDetails, type LockState } from '@/store/appStore';
 import type { VideoState } from '@/modules/petMedia/petMedia';
@@ -110,6 +111,11 @@ export default function LockedScreen() {
           </Text>
         )}
       </View>
+      {/* David 2026-10-14: no dead end on a shared phone — a parent can sign the child out
+          (behind the parental gate) and get back to the parent login. */}
+      <View style={styles.exit}>
+        <ParentExitLink testID="locked-parent-exit" />
+      </View>
     </View>
   );
 }
@@ -129,6 +135,7 @@ const styles = StyleSheet.create({
     backgroundColor: alpha(palette.dangerDark, 0.08),
   },
   content: { alignItems: 'center' },
+  exit: { position: 'absolute', bottom: 32, left: 0, right: 0, alignItems: 'center' },
   card: {
     alignItems: 'center',
     paddingHorizontal: 24,

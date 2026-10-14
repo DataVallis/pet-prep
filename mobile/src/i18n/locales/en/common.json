@@ -10,5 +10,16 @@
   "format": {
     "thousands": ",",
     "percent": "{{value}}%"
+  },
+  "parentalGate": {
+    "link": "Parent?",
+    "linkA11y": "For parents: sign the child out",
+    "title": "For parents",
+    "prompt": "To continue, please answer:",
+    "question": "What is {{a}} × {{b}}?",
+    "answerLabel": "Answer",
+    "submit": "Confirm",
+    "cancel": "Cancel",
+    "wrong": "That's not right. Please try again."
   }
 }
