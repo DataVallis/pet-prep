@@ -9,6 +9,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-14 — Proračun za AI se zdaj nastavi z enim klikom (M4-07b)
+
+**Kaj se je zgodilo:** Nov kuža (angleški buldog) je dobil sliko, videov pa ne. Razlog ni bila napaka, temveč varovalka: dnevni proračun za AI (5 $) je bil porabljen — en kupljen pes s polnim naborom videov stane okoli 4,63 $ (slika ~0,15 $ + 8 videov po ~0,56 $). Doslej je bilo za dvig limita treba na strežnik in ponovno zagnati aplikacijo. Zdaj ima administracija stran **»Proračun za AI«**: dnevni in mesečni limit, poraba danes in ta mesec, zgodovina sprememb in gumb, ki zavrnjene medije takoj pošlje znova.
+
+**Zakaj je pomembno:** Med beto (~20 družin) bo vsak nakup izziva porabil skoraj ves dnevni limit. Limit lahko zdaj dvignemo v minuti, brez dostopa do strežnika — in ga z 0 tudi v trenutku ustavimo. Ljubljenček brez medijev medtem vedno deluje naprej (varovalka zapre samo AI, ne igre).
+
+**Številke:** 5 $ / dan in 50 $ / mesec privzeto; ena slika ≈ 0,15 $, en 5-sekundni video ≈ 0,56 $; meje obrazca 500 $ / dan in 5000 $ / mesec (zaščita pred tipkarsko napako); 14 novih testov Pest.
+
+**Kako povedati:**
+- 💼 Investitorji: »Stroške AI nadzorujemo pri vsakem klicu: ocena pred klicem, dnevni in mesečni limit, ki ga lastnik spremeni v minuti, in samodejni ponovni poskus naslednjo noč. Brez presenečenj na računu.«
+- 🛠 Tehnično: »Limit je v `app_settings` (predpomnilnik 60 s, revizija sprememb), `AiSpendGuard` ga bere pred vsako rezervacijo; `.env` ostane privzeta vrednost.«
+- 👩 Starši: (ni za starše — notranja administracija.)
+
+---
+
 ## 2026-10-14 — Bretonski ptičar: osemnajsta pasma po dvajsetih (M5-R10-36)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **bretonskega ptičarja** (»Brittany«, v Franciji »epagneul breton«; 31. mesto). Dvaintrideseta plačljiva pasma psa; v izbirniku je zdaj 33 psov (z mešančkom). Srednje velik francoski ptičar, najmanjši med ptičarji (po standardu RKC 48–51 cm za psa in 47–50 cm za psico, 13,6–18,1 kg po standardu American Kennel Club): več kot dve uri gibanja na dan (12.000 korakov za odraslega psa, 9.000 za starejšega), česanje 1× na teden in tedenska »Nova izkušnja« za mladička.

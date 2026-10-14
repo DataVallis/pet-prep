@@ -162,6 +162,33 @@ return [
         ],
     ],
 
+    // M4-07b: proračun za AI (superadmin, David 2026-10-14).
+    'ai_budget' => [
+        'navigation' => 'Proračun za AI',
+        'title' => 'Proračun za AI',
+        'section' => 'Slike in videi ljubljenčkov (fal.ai)',
+        'description' => 'Omejitev OCENJENE porabe fal.ai za slike in videe ljubljenčkov. Klic, ki bi omejitev presegel, je zavrnjen (ljubljenček deluje naprej brez medijev) in se samodejno ponovi po novem proračunskem dnevu. AI Lab ima svoj proračun v strežniškem .env.',
+        'spent' => 'Porabljeno',
+        'spent_value' => 'Danes $:today od $:daily · ta mesec $:month od $:monthly (proračunski dan v :tz)',
+        'daily' => 'Dnevni proračun (USD)',
+        'monthly' => 'Mesečni proračun (USD)',
+        'env_default' => 'Prazno = privzeto na strežniku $:value (:env). 0 = brez klicev AI.',
+        'help' => 'Okvirno: ena slika ≈ 0,15 $, en 5-sekundni video ≈ 0,56 $; kupljen pes s polnim naborom videov ≈ 4,60 $. Sprememba na strežniku velja v 1 minuti.',
+        'save' => 'Shrani',
+        'saved' => 'Shranjeno',
+        'saved_body' => 'Dnevno $:daily · mesečno $:monthly',
+        'not_saved' => 'Ni shranjeno',
+        'retry' => 'Ponovno pošlji zavrnjene medije zdaj',
+        'retry_help' => 'Ponovno pošlje vse slike in videe, ki jih je zavrnil proračun ali stanje fal, kolikor dopušča današnji proračun (sicer se to zgodi samodejno vsako noč ob 00:23 UTC).',
+        'retry_done' => 'Mediji so znova v vrsti',
+        'retry_none' => 'Nič ni bilo poslano',
+        'retry_body' => 'Slike: :images · slike obdobij: :stages · videi: :videos',
+        'retry_balance' => 'Stanje fal.ai je še označeno kot porabljeno — najprej ga napolni.',
+        'history' => 'Zgodovina sprememb',
+        'history_desc' => 'Zadnjih 20 sprememb proračuna (kdo, kdaj, prej → potem).',
+        'history_empty' => 'Še ni sprememb (veljajo vrednosti iz strežniškega .env).',
+    ],
+
     'features' => [
         'navigation' => 'Funkcije',
         'title' => 'Funkcije (stikala)',
