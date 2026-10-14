@@ -66,6 +66,41 @@ export async function readTodaySteps(sources: TodaySources, dayStart: Date, at: 
   return mergeReadings(readings);
 }
 
+/**
+ * M2-11 shared phone: the same merge, but each history source is read only over the child's
+ * ACTIVE windows of today (`activeWindows.ts`) and summed — steps taken while another
+ * profile was active are never credited. The Android live counter already counts only
+ * while this child's HUD runs, so it is used as is. No window today → 0.
+ */
+export async function readStepsInRanges(
+  sources: TodaySources,
+  ranges: ReadonlyArray<readonly [Date, Date]>,
+): Promise<StepReading | null> {
+  const sum = async (read: (start: Date, end: Date) => Promise<number>): Promise<number> => {
+    let total = 0;
+    for (const [start, end] of ranges) total += Math.max(0, await read(start, end));
+    return total;
+  };
+  const { health, pedometerHistory, liveTotal } = sources;
+  const readings: StepReading[] = [];
+  if (health) {
+    try {
+      readings.push({ steps: await sum((s, e) => health.readSteps(s, e)), source: health.source });
+    } catch {
+      // No health reading this time.
+    }
+  }
+  if (pedometerHistory) {
+    try {
+      readings.push({ steps: await sum(pedometerHistory), source: 'pedometer' });
+    } catch {
+      // No sensor reading this time.
+    }
+  }
+  if (liveTotal) readings.push({ steps: liveTotal(), source: 'pedometer' });
+  return mergeReadings(readings);
+}
+
 /** Minimum gap between AUTOMATIC syncs (foreground flapping, permission sheets); manual ones skip it. */
 export const MIN_AUTO_SYNC_GAP_MS = 60_000;
 

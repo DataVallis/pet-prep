@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-14 — En telefon za starša in otroka (M2-11)
+
+**Kaj:** starš na nadzorni plošči tapne »Igraj kot Maja« in izroči telefon — brez kode, brez drugega telefona. Nazaj pride s svojo prijavo (geslo ali Google / Apple), zato otrok do starševske plošče ne more. Na skupnem telefonu se koraki štejejo samo, dokler je izbran otrokov profil, otroku prihajajo njegovi opomniki, staršu pa njegova obvestila le, ko je prijavljen. Enako velja za odrasle, ki preizkušajo pasmo sami.
+**Zakaj:** David pri testiranju na enem telefonu ni mogel nazaj k staršu; veliko družin (in vsi, ki preizkušajo pasmo zase) ima en telefon.
+**Kako povedati:** 👩 »En telefon je dovolj — preklopite na otroka z enim dotikom.« · 💼 nižji prag za začetek (ni treba drugega telefona) · 🛠 deljena seja na otroka, časovna okna korakov, preklic žetona starša.
+
+---
+
 ## 2026-10-13 — Čivava: petnajsta pasma po dvajsetih (M5-R10-33)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **čivavo** (27. mesto; havanski bišon in sibirski haski z 25. in 26. mesta sta že v aplikaciji). Devetindvajseta plačljiva pasma psa; v izbirniku je zdaj 30 psov (z mešančkom). Igra gradi kratkodlako čivavo (1,8–2,7 kg): pol ure gibanja na dan (3.000 korakov za odraslega psa, 2.300 za starejšega), česanje 1× na teden, opozorilo »počakaj s sprehodom« eno uro po obroku in tedenska »Nova izkušnja« za mladička.

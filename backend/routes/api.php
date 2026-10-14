@@ -113,6 +113,10 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
         Route::post('children', [ChildProfileController::class, 'store'])
             ->middleware('throttle:pairing');
         Route::delete('children/{child}/tokens', [ChildProfileController::class, 'revokeTokens']);
+        // M2-11: profile switching on one phone — the parent opens the child's
+        // profile here (child token, no PIN). Own limiter (20 / min per parent).
+        Route::post('children/{child}/device-session', [ChildAuthController::class, 'deviceSession'])
+            ->middleware('throttle:child-device-session');
         // M2-08: delete a child profile (password + confirm), irreversible.
         // Wrong passwords are limited in AccountDeletionService (5 / 15 min per
         // user and scope; only failures count).

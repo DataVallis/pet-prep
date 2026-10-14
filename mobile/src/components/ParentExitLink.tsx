@@ -1,39 +1,43 @@
 /**
  * "Starš?" / "Parent?" (David 2026-10-14): a small, quiet link on every child screen that
- * could be a dead end (lock overlay, contract, HUD load error / crash card). It opens the
- * parental gate; only a correct answer signs the child out (`logout()` → StartScreen), so
- * a parent testing on one phone can get back to the parent login. Dark child theme.
+ * could be a dead end (lock overlay, contract, HUD load error / crash card). On the child's
+ * own phone it opens the parental gate and a correct answer signs the child out; in a
+ * shared child session (M2-11, »Igraj kot« on the parent's phone) it opens the parent login
+ * — the parent's real sign-in. `useChildExit` decides. Dark child theme.
  */
 
 import { Pressable, StyleSheet } from 'react-native';
 
 import ParentalGate, { PARENTAL_GATE_STRINGS as S } from '@/components/ParentalGate';
 import { Text } from '@/components/ui/Text';
+import { useChildExit } from '@/modules/session/useChildExit';
 import { useParentalGate } from '@/modules/parentalGate/useParentalGate';
-import { logout } from '@/modules/session/logout';
 import { palette } from '@/theme';
 
 interface ParentExitLinkProps {
-  /** What a passed gate does (default: sign the child out). */
+  /** Tests / reuse: a custom action behind the parental gate (always the gate, never the login). */
   onPass?: () => void;
   testID?: string;
 }
 
 export default function ParentExitLink({ onPass, testID = 'parent-exit-link' }: ParentExitLinkProps) {
-  const gate = useParentalGate({ onPass: onPass ?? (() => void logout()) });
+  const exit = useChildExit();
+  const custom = useParentalGate({ onPass: onPass ?? (() => undefined) });
+  const open = onPass ? custom.open : exit.open;
+  const shared = !onPass && exit.shared;
   return (
     <>
       <Pressable
-        onPress={gate.open}
+        onPress={open}
         hitSlop={12}
         style={({ pressed }) => [styles.link, pressed && styles.pressed]}
         accessibilityRole="button"
-        accessibilityLabel={S.linkA11y}
+        accessibilityLabel={shared ? S.linkA11ySwitch : S.linkA11y}
         testID={testID}
       >
         <Text style={styles.text}>{S.link}</Text>
       </Pressable>
-      <ParentalGate {...gate.props} />
+      <ParentalGate {...(onPass ? custom.props : exit.gateProps)} />
     </>
   );
 }
