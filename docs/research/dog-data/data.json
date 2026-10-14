@@ -18132,6 +18132,622 @@
       }
     }
   },
+  "belgian_malinois": {
+    "_note": "Added 2026-10-14 (M5-R10-38, unattended run — appended after the American Cocker Spaniel: AKC 2024 No. 33 'Belgian Malinois', S174 full-list table '32 Cocker Spaniel', '33 Belgian Malinois'). The FCI recognises one breed, the Belgian Shepherd Dog (FCI No. 15), with four varieties (Groenendael, Laekenois, Malinois, Tervueren); the game breed is the short-haired Malinois variety only. Quotes as returned by the web-fetch tool on 2026-10-14 (the tool limits quotes to ~125 characters; apostrophes as returned); spot-check before import (sources.md S312–S318, reused S10, S11, S14, S24, S35, S45, S92, S174). No PDSA Belgian Malinois page exists (search 2026-10-14); VCA page returned no text; the new RKC address (royalkennelclub.com) returned a fetch error — the older RKC address (S314) gave the key facts verbatim. Lifespan: McMillan 2024 / Dogs Trust table (S123) not reachable — Wikipedia (S318, tier C) quotes a 2024 UK study at 12 years for the Malinois, background only → RKC lower bound 'Over 10 years' → senior 90 months, provisional. RKC Breed Watch Category 1 (S314) → no welfare chip; not flat-faced → in marketing. Grooming: RKC 'More than once a week' has no number and AKC / PetMD say 'occasional' → 2× a week, verified=false (Claude's proposal, open for David).",
+    "identity": {
+      "value": "FCI No. 15, Group 1 Section 1 (Sheepdogs), Belgium",
+      "unit": "—",
+      "source_id": "S312",
+      "quote": "CHIEN DE BERGER BELGE (15)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S312): group 'n°1 - Sheepdogs and Cattledogs (except Swiss Cattledogs)', section 'Sheepdogs', country 'BELGIUM'; varieties 'a) Groenendael, b) Laekenois, c) Malinois, d) Tervueren' (all CACIB); definitive acceptance 1/1/1956; valid standard 3/13/2001 (English 4/19/2002); 'Subject to a working trial according to the FCI Breeds Nomenclature'. The AKC (S315, S316) registers the Malinois as its own breed 'Belgian Malinois'; the RKC (S314) as 'Belgian Shepherd Dog (Malinois)'. Other names: 'Mal', 'Malinois', 'Belgian Shepherd Malinois' (S316 'Mals')."
+    },
+    "size_class": {
+      "value": "medium-large",
+      "unit": "—",
+      "source_id": "S314",
+      "quote": "Size: Medium-Large",
+      "confidence": "high",
+      "notes": "RKC breed page key facts (S314). FCI 20–30 kg (S313) = 44–66 lb → mostly the 'Medium (24–59 pounds)' class of S10 (the top of the male range touches 'Large'); treated like the Siberian Husky (RKC 'Medium-Large'). RKC group: Pastoral."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            60,
+            66
+          ],
+          "female": [
+            56,
+            62
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S313",
+        "quote": "The ideal height at withers is on average - 62 cm for males",
+        "confidence": "high",
+        "notes": "FCI standard (S313): ideal 62 cm (males), '- 58 cm for females.'; 'Limits: 2 cm less, 4 cm more' (paraphrase as returned) → 60–66 / 56–62 cm."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            61,
+            66
+          ],
+          "female": [
+            56,
+            61
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S315",
+        "quote": "Males are 24 to 26 inches in height; females are 22 to 24 inches; measurement to be taken at the withers.",
+        "confidence": "high",
+        "notes": "AKC standard (S315); inches × 2.54 by us (rounded). Disqualification: 'Males under 23 inches or over 27 inches and females under 21 inches or over 25 inches are to be disqualified.'"
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            25,
+            30
+          ],
+          "female": [
+            20,
+            25
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S313",
+        "quote": "Males about 25-30 kg.",
+        "confidence": "high",
+        "notes": "FCI standard (S313) size and weight: 'Males about 25-30 kg.' and 'Females about 20-25 kg.' The game range (adult_weight_kg). The AKC standard (S315) gives no weight."
+      },
+      "akc_article": {
+        "value": {
+          "male": [
+            18.1,
+            36.3
+          ],
+          "female": [
+            18.1,
+            36.3
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S316",
+        "quote": "They stand between 22 and 26 inches tall, and weigh 40 to 80 pounds.",
+        "confidence": "medium",
+        "notes": "AKC article (S316), one range for both sexes; pounds × 0.4536 by us. Alternative only (wider than the FCI standard)."
+      },
+      "petmd": {
+        "value": {
+          "male": [
+            27.2,
+            36.3
+          ],
+          "female": [
+            18.1,
+            27.2
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S317",
+        "quote": "When fully grown, male Belgian Malinois are typically 24–26 inches tall and 60–80 pounds",
+        "confidence": "medium",
+        "notes": "PetMD (S317, tier B); females 'about 22–24 inches tall and weigh 40–60 pounds' (as returned). Pounds × 0.4536 by us. Alternative only (heavier than the FCI standard)."
+      },
+      "salt_category": {
+        "value": "II",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): about 20–30 kg. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 20–30 kg (S313) = 44–66 lb → mostly 'Medium (24–59 pounds)'; the male maximum touches 'Large (59–99 pounds): 15–18 months' (Siberian Husky precedent). The game is unaffected (the puppy cap of 120 min is reached at 12 months either way)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Belgian Malinois growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S314",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S314). The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "10–14",
+        "unit": "years",
+        "source_id": "S317",
+        "quote": "The Belgian Malinois lifespan is typically 10–14 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S317, tier B). Lower bound 10 y agrees with the RKC → same senior boundary (90)."
+      },
+      "mcmillan_2024": {
+        "value": 12,
+        "unit": "years",
+        "source_id": "S318",
+        "quote": "A 2024 UK study found a life expectancy of 12 years for the Malinois and 13.8 years for the Tervueren",
+        "confidence": "low",
+        "notes": "McMillan et al. 2024 as quoted by Wikipedia (S318, tier C — never alone). The Dogs Trust breed table (S123) and the paper (S54) were not reachable on 2026-10-14 → not used as the basis; with it the senior boundary would be round(0.75 × 12 × 12) = 108 months. Verify in S123 before replacing the RKC lower bound."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 10 y (RKC lower bound 'Over 10 years', S314) → 0.75 × 10 = 7.5 y = 90 months. With McMillan 2024 12 y (via S318): 108 months; Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S314"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S314",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S314). AKC (S316): 'Mals require significant exercise on a daily basis—much more beyond just one daily walk or play session.' — agrees. PetMD (S317): 'Belgian Malinois should get more than 40 minutes of exercise per day—with you by their side.' and 'Daily walks are simply not enough for this breed.' — a minimum, in alternatives. Rule: RKC value preferred → 120."
+      },
+      "energy": {
+        "value": "watchful and active, bursting with energy; happiest with plenty of mental and physical activity",
+        "unit": "—",
+        "source_id": "S316",
+        "quote": "happiest with plenty of mental and physical activity",
+        "confidence": "medium",
+        "notes": "AKC (S316), clause as returned. FCI (S313): 'The Belgian Shepherd is a watchful and active dog, bursting with energy, and always ready to leap into action.' PetMD (S317): 'Belgian Malinois require constant daily training to help minimize any behavioral issues and keep their mind engaged.' Basis of needs_mental_stimulation; daily training is the game's existing school (M5-R03)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "alert, intelligent, inquisitive and confident; neither fear nor aggression",
+        "unit": "—",
+        "source_id": "S315",
+        "quote": "He is alert, intelligent, inquisitive and confident, showing neither fear nor aggression.",
+        "confidence": "high",
+        "notes": "AKC standard (S315); FCI (S313): watchful, active, lively and confident, a devoted protector (paraphrase as returned)."
+      },
+      "family": {
+        "value": "best in families with older, responsible kids; supervision around children is a must",
+        "unit": "—",
+        "source_id": "S316",
+        "quote": "Mals would fare best in families with older, responsible kids.",
+        "confidence": "medium",
+        "notes": "AKC (S316); also 'supervision around children is a must'. PetMD (S317): 'They may also try to use their herding skills to round up toddlers and children.' → older_children + may_herd_children; never family_pet / children / small_children."
+      },
+      "experienced_owner": {
+        "value": "not for first-time owners; needs a dedicated, experienced owner",
+        "unit": "—",
+        "source_id": "S316",
+        "quote": "don't make them a good choice for first-time dog owners",
+        "confidence": "medium",
+        "notes": "AKC (S316), clause as returned; 'an experienced dog owner with plenty of time to devote to a smart, hard-working breed'. PetMD (S317): 'Belgian Malinois dogs need a dedicated and experienced pet parent'. → experienced_owner."
+      },
+      "socialisation": {
+        "value": "early, extensive socialisation",
+        "unit": "—",
+        "source_id": "S316",
+        "quote": "Early, extensive socialization will help limit aggressive tendencies towards new people.",
+        "confidence": "medium",
+        "notes": "AKC (S316). PetMD (S317): 'Consistent training and socialization should start as early as possible and continue throughout their life.' → proposed_game_parameters.belgian_malinois.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "time_alone": {
+        "value": "should not be left alone for extended periods",
+        "unit": "—",
+        "source_id": "S316",
+        "quote": "they should not be left alone for extended periods of time.",
+        "confidence": "medium",
+        "notes": "AKC (S316). PetMD (S317): 'They are not the type of dog that can just be left in the backyard to entertain themselves.' → needs_company (Boxer precedent)."
+      },
+      "other_pets": {
+        "value": "high prey drive; may chase other animals",
+        "unit": "—",
+        "source_id": "S317",
+        "quote": "Belgian Malinois also have a high prey drive, making them extremely interested in moving objects.",
+        "confidence": "medium",
+        "notes": "PetMD (S317). AKC (S316): 'inclined to chase children, cars, or other animals' and 'tend to get territorial towards other animals' (clauses as returned). → chases_small_pets (prey-drive quote); no other_pets."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation or weight-gain statement found → no food_motivated_weight tag. PetMD (S317): 'Belgian Malinois should be fed twice daily' — the general rule."
+      },
+      "training_notes": {
+        "value": "frequent, consistent, positive-reinforcement training",
+        "unit": "—",
+        "source_id": "S316",
+        "quote": "Frequent, consistent training sessions rooted in positive reinforcement are the best fit for a Mal.",
+        "confidence": "medium",
+        "notes": "AKC (S316)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 1 (S314) → no welfare chip.",
+      "hip_elbow_dysplasia": {
+        "value": "elbow and hip dysplasia",
+        "unit": "—",
+        "source_id": "S317",
+        "quote": "Elbow and Hip Dysplasia",
+        "confidence": "medium",
+        "notes": "PetMD (S317) health section heading (quote = the heading). Wikipedia (S318, tier C): the Société Royale Saint-Hubert recommends hip and elbow testing for all four varieties (background). Background only."
+      },
+      "cataracts": {
+        "value": "cataracts",
+        "unit": "—",
+        "source_id": "S317",
+        "quote": "Cataracts",
+        "confidence": "medium",
+        "notes": "PetMD (S317) heading. Background only."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy (an inherited eye disease)",
+        "unit": "—",
+        "source_id": "S317",
+        "quote": "Progressive Retinal Atrophy (PRA)",
+        "confidence": "medium",
+        "notes": "PetMD (S317) heading. Background only."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 22,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 22 | Belgian Malinois |",
+        "confidence": "low",
+        "notes": "Wikipedia table (S35, tier C, read 2026-10-14): rank 22 'Belgian Malinois' under 'Excellent Working Dogs' (ranks 11–26); 'Belgian Shepherd Dog (Tervuren)' 14 and 'Belgian Sheepdog' 15 are other varieties. Coren's own article (S34) lists only the top and bottom 10 — runbook: rank from S35. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "excellent: 5 to 15 repetitions, obeys first command ≥85%",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 5 to 15 repetitions.; Obey first command: 85% of the time or better.;",
+        "confidence": "low",
+        "notes": "Tier 'Excellent Working Dogs' = ranks 11–26 (S35). Tier definitions from Wikipedia; verify in book."
+      },
+      "training_notes": {
+        "value": "one of the smartest breeds; needs constant daily training",
+        "unit": "—",
+        "source_id": "S317",
+        "quote": "Belgian Malinois require constant daily training to help minimize any behavioral issues and keep their mind engaged.",
+        "confidence": "medium",
+        "notes": "PetMD (S317): 'Belgian Malinois are one of the smartest dog breeds' (as returned)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.belgian_malinois.learning_multiplier (1.5, runbook rule: Excellent tier, rank 22).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "square, well balanced, elegant and powerful; proud carriage of head and neck",
+        "unit": "—",
+        "source_id": "S315",
+        "quote": "The Belgian Malinois is a well-balanced square dog, elegant in appearance",
+        "confidence": "high",
+        "notes": "AKC standard (S315): 'with an exceedingly proud carriage of head and neck.' FCI (S313): 'The Belgian Shepherd is a mediolineal dog, harmoniously proportioned, combining elegance and power.'"
+      },
+      "colours": {
+        "value": [
+          "fawn with black overlay and black mask",
+          "mahogany with black overlay and black mask"
+        ],
+        "unit": "list",
+        "source_id": "S313",
+        "quote": "Malinois: Only fawn with black overlay and with black mask.",
+        "confidence": "high",
+        "notes": "FCI (S313): black overlay as flamed tips, not patches or brindle (paraphrase as returned); disqualifying 'lack of mask, including a muzzle of lighter colour than the rest of the coat in Tervueren and Malinois.' AKC (S315): 'The ideal coloring is a rich fawn to mahogany, with black tips on the hairs giving an overlay appearance.'; white only on toe tips and a small spot on the breastbone. Never black, brindle, merle, grey or white patches."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Fawn with black overlay and mask first with the highest weight (portrait default — the only FCI colour), then mahogany (AKC 'fawn to mahogany')."
+      },
+      "coat": {
+        "value": "short, straight, hard, weather-resistant, dense undercoat; very short on head, ears and lower legs",
+        "unit": "—",
+        "source_id": "S315",
+        "quote": "The coat should be comparatively short, straight, hard enough to be weather resistant, with dense undercoat.",
+        "confidence": "high",
+        "notes": "AKC standard (S315). FCI (S313): 'The hair is very short on the head, the outer sides of the ears and the lower part of the legs.'; fuller at the tail and neck. RKC breed page (S314): 'Coat length: Medium' (as returned — the RKC key fact is shared wording; the standards describe a short coat). The portrait shows the short Malinois coat."
+      },
+      "mask": {
+        "value": "pronounced black mask encompassing lips and eyelids",
+        "unit": "—",
+        "source_id": "S315",
+        "quote": "The mask must be pronounced and tends to encompass the top and bottom lip,",
+        "confidence": "high",
+        "notes": "AKC (S315): 'the corners of the lips and the eyelids in one single black zone.' FCI (S313): the mask 'must be very pronounced and tend to encompass the top and bottom lip.' A muzzle lighter than the coat disqualifies (FCI)."
+      },
+      "ears": {
+        "value": "rather small, set high, distinctly triangular, stiff and erect",
+        "unit": "—",
+        "source_id": "S313",
+        "quote": "Rather small, set high, distinctly triangular appearance.",
+        "confidence": "high",
+        "notes": "FCI (S313): carried 'upright and vertical when dog is alert.' AKC (S315): 'They should be stiff and carried upright and vertical when the dog is alert.'; hanging or semi-prick ears disqualify. Natural erect ears in the portrait (never cropped)."
+      },
+      "eyes": {
+        "value": "medium size, almond-shaped, brown, preferably dark",
+        "unit": "—",
+        "source_id": "S315",
+        "quote": "They are brown, preferably dark brown, with black rimmed upper and lower eyelids.",
+        "confidence": "high",
+        "notes": "AKC (S315): 'Light eyes are a fault.' FCI (S313): 'Medium size, neither protruding nor sunken.'; brownish, preferably dark."
+      },
+      "tail": {
+        "value": "strong at the base, reaching at least the hock, carried down at rest with the tip curved back",
+        "unit": "—",
+        "source_id": "S313",
+        "quote": "at rest carried down, with tip curved backwards at level of hock.",
+        "confidence": "high",
+        "notes": "FCI (S313). AKC (S315): 'The tail is strong at the base, reaching to the hock, and carried down at rest.'; 'A cropped or stumped tail is a disqualification.' Natural full tail in the portrait."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page key facts (S314, older address — the new royalkennelclub.com page returned a fetch error), AKC (S316), PetMD (S317). No PDSA Belgian Malinois page; VCA returned no text. The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Medium-Large",
+        "unit": "—",
+        "source_id": "S314",
+        "quote": "Size: Medium-Large",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S314",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "Basis of 120 min, active_family and long_daily_exercise (AKC S316 agrees)."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S314",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "Basis of large_home (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S314",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "Basis of large_home (with the home)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S314",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "Runbook dog-grooming rule: 'More than once a week' without a number → the most specific number of another A/B source; AKC (S316) 'occasional brushing' and PetMD (S317) 'occasionally' give none → 2, verified=false (open for David). No frequent_grooming chip (RKC vs AKC / PetMD 'occasional' — conflicting)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S314",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "The standards (S313, S315) describe a short coat; background only."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S314",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "Basis of the sheds tag (with AKC S316 / PetMD S317 seasonal shedding)."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S314",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "See lifespan.rkc."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S314",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S314",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S314",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S314) 'Category 1' → no welfare chip; in marketing."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page (S314) has no 'Good with children' field."
+      },
+      "akc_exercise": {
+        "value": "significant daily exercise, much more than one walk",
+        "unit": "—",
+        "source_id": "S316",
+        "quote": "Mals require significant exercise on a daily basis—much more beyond just one daily walk or play session.",
+        "confidence": "medium",
+        "notes": "AKC (S316). Supports active_family / long_daily_exercise."
+      },
+      "akc_children": {
+        "value": "best with older, responsible kids",
+        "unit": "—",
+        "source_id": "S316",
+        "quote": "Mals would fare best in families with older, responsible kids.",
+        "confidence": "medium",
+        "notes": "AKC (S316). Basis of older_children (Pomeranian precedent, AKC S251)."
+      },
+      "petmd_herding_children": {
+        "value": "may try to round up toddlers and children",
+        "unit": "—",
+        "source_id": "S317",
+        "quote": "They may also try to use their herding skills to round up toddlers and children.",
+        "confidence": "medium",
+        "notes": "PetMD (S317). Basis of may_herd_children."
+      },
+      "akc_experienced_owner": {
+        "value": "not a good choice for first-time owners",
+        "unit": "—",
+        "source_id": "S316",
+        "quote": "don't make them a good choice for first-time dog owners",
+        "confidence": "medium",
+        "notes": "AKC (S316). Basis of experienced_owner (with PetMD S317)."
+      },
+      "petmd_experienced_owner": {
+        "value": "needs a dedicated and experienced pet parent",
+        "unit": "—",
+        "source_id": "S317",
+        "quote": "Belgian Malinois dogs need a dedicated and experienced pet parent",
+        "confidence": "medium",
+        "notes": "PetMD (S317), clause as returned. Supports experienced_owner."
+      },
+      "akc_mental_stimulation": {
+        "value": "happiest with plenty of mental and physical activity",
+        "unit": "—",
+        "source_id": "S316",
+        "quote": "happiest with plenty of mental and physical activity",
+        "confidence": "medium",
+        "notes": "AKC (S316). Basis of needs_mental_stimulation (with PetMD S317 'constant daily training')."
+      },
+      "akc_time_alone": {
+        "value": "should not be left alone for extended periods",
+        "unit": "—",
+        "source_id": "S316",
+        "quote": "they should not be left alone for extended periods of time.",
+        "confidence": "medium",
+        "notes": "AKC (S316). Basis of needs_company."
+      },
+      "petmd_prey_drive": {
+        "value": "high prey drive",
+        "unit": "—",
+        "source_id": "S317",
+        "quote": "Belgian Malinois also have a high prey drive, making them extremely interested in moving objects.",
+        "confidence": "medium",
+        "notes": "PetMD (S317). Basis of chases_small_pets."
+      },
+      "akc_shedding": {
+        "value": "heavier shedding twice a year; daily brushing during shedding seasons",
+        "unit": "—",
+        "source_id": "S316",
+        "quote": "During shedding seasons, daily brushing will limit the build up of hair around your home.",
+        "confidence": "medium",
+        "notes": "AKC (S316): 'heavier periods of shedding twice a year' (as returned). Seasonal — moult is not modelled; supports sheds."
+      },
+      "akc_grooming": {
+        "value": "occasional brushing",
+        "unit": "—",
+        "source_id": "S316",
+        "quote": "Mals only require occasional brushing to keep their coats looking healthy.",
+        "confidence": "medium",
+        "notes": "AKC (S316), no number → no grooming number (open for David)."
+      },
+      "petmd_grooming": {
+        "value": "occasional brushing",
+        "unit": "—",
+        "source_id": "S317",
+        "quote": "Simply brushing their coat occasionally with the right dog brushes",
+        "confidence": "medium",
+        "notes": "PetMD (S317), clause as returned; no number. PetMD: 'They do shed seasonally twice a year, so don’t be surprised if you see more hair on the floor in the fall and spring.'"
+      },
+      "akc_nails": {
+        "value": "regular nail trimming",
+        "unit": "—",
+        "source_id": "S316",
+        "quote": "regular nail trimming is a must.",
+        "confidence": "medium",
+        "notes": "AKC (S316), clause as returned; PetMD (S317): 'As with all dogs, a Belgian Malinois’ nails should be trimmed regularly.' Nail care = sourced need without a mechanic → ROADMAP M5-R19 (needs-david)."
+      },
+      "petmd_ears": {
+        "value": "clean ears once a month",
+        "unit": "—",
+        "source_id": "S317",
+        "quote": "For an otherwise healthy Belgian Malinois, clean their ears once a month with a vet-recommended ear cleaner or ear flush.",
+        "confidence": "medium",
+        "notes": "PetMD (S317). Ear care = sourced need without a mechanic → ROADMAP M5-R20 (needs-david)."
+      },
+      "petmd_teeth": {
+        "value": "daily dental care",
+        "unit": "—",
+        "source_id": "S317",
+        "quote": "Like all dogs, the Belgian Malinois needs daily dental care",
+        "confidence": "medium",
+        "notes": "PetMD (S317), clause as returned. Tooth care = sourced need without a mechanic → ROADMAP M5-R15 (needs-david)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -27037,6 +27653,339 @@
         "confidence": "high",
         "notes": "AKC (S307) and FCI (S304) varieties: black (incl. black and tan), ASCOB (cream / buff to red, brown), parti-colour (with white, incl. roan, tricolour); white only on chest / throat in solid colours. Buff is the portrait default. Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — buff (default), black, black and tan, red, chocolate, black and white, red and white, tricolour; never merle, never blue eyes; natural tail in the portrait (Claude's proposal)"
+      }
+    },
+    "belgian_malinois": {
+      "_note": "Unattended run M5-R10-38 (2026-10-14): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: brushing (RKC S314 'More than once a week', no number → 2×, verified=false, open for David, M5-R13); socialisation of puppies (AKC S316) → M5-R17; daily training = the existing school (M5-R03). Sourced needs without a game mechanic: regular nail trimming (AKC S316, PetMD S317) → ROADMAP M5-R19; ear cleaning once a month (PetMD S317) → ROADMAP M5-R20; daily dental care (PetMD S317) → ROADMAP M5-R15 (needs-david). Senior 90 provisional (RKC lower bound — McMillan 2024 not reachable). Breed Watch Category 1 → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S314",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'More than 2 hours per day' (S314). Rule: one number N ('more than N') → N = 120; AKC (S316) agrees without a number.",
+        "alternatives": [
+          {
+            "value": 40,
+            "source_id": "S317",
+            "notes": "PetMD 'more than 40 minutes of exercise per day' (a minimum; 'Daily walks are simply not enough')"
+          },
+          {
+            "value": null,
+            "source_id": "S316",
+            "notes": "AKC 'significant exercise on a daily basis' (no number)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S314 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S314",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) = 90 (S11 + RKC lower bound 'Over 10 years', S314; PetMD lower bound 10 y, S317, agrees). No McMillan 2024 / VetCompass value reachable. Alternatives: 108 (McMillan 2024 12 y via Wikipedia S318, tier C), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S314"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S314)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 22 (S35), tier Excellent (ranks 11–26) → 1.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 22, Excellent tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources (PetMD S317: fed twice daily — the general rule).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S314",
+        "quote": "Grooming: More than once a week",
+        "confidence": "medium",
+        "notes": "belgian_malinois.suitability.rkc_grooming. RKC (S314) 'More than once a week' has no number; AKC (S316) 'only require occasional brushing' and PetMD (S317) 'brushing their coat occasionally' give none → runbook dog-grooming rule: 2, seeded verified=false (Claude's proposal, open for David). Seasonal daily brushing while shedding (AKC S316) is not modelled. Built in M5-R13; matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S316",
+            "notes": "AKC occasional brushing; daily during the two shedding seasons"
+          },
+          {
+            "value": null,
+            "source_id": "S317",
+            "notes": "PetMD occasionally"
+          }
+        ],
+        "decision": "predlog Claude 2026-10-14: česanje 2× na teden (RKC »More than once a week« brez števila, AKC / PetMD »occasional«) — čaka Davida (mehanika česanja psa zgrajena v ROADMAP M5-R13)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S316",
+        "quote": "Early, extensive socialization will help limit aggressive tendencies towards new people.",
+        "confidence": "medium",
+        "notes": "belgian_malinois.behaviour.socialisation (AKC S316); PetMD (S317) agrees. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat AKC S316)"
+      },
+      "nail_care": {
+        "value": "regular nail trimming",
+        "unit": "nail trimming (sourced need)",
+        "source_id": "S316",
+        "quote": "regular nail trimming is a must.",
+        "confidence": "medium",
+        "notes": "AKC (S316), belgian_malinois.suitability.akc_nails; PetMD (S317) agrees. The game has no nail-trimming mechanic → ROADMAP M5-R19 (Boston Terrier / Brittany precedent, needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno striženje krempljev; mehanike ni → ROADMAP M5-R19 (needs-david)"
+      },
+      "ear_care": {
+        "value": "clean ears once a month",
+        "unit": "ear cleaning (sourced need)",
+        "source_id": "S317",
+        "quote": "For an otherwise healthy Belgian Malinois, clean their ears once a month with a vet-recommended ear cleaner or ear flush.",
+        "confidence": "medium",
+        "notes": "PetMD (S317), belgian_malinois.suitability.petmd_ears. The game has no ear-cleaning mechanic → ROADMAP M5-R20 (Chihuahua / Brittany precedent, needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): čiščenje ušes enkrat na mesec; mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "dental_care": {
+        "value": "daily dental care",
+        "unit": "tooth care (sourced need)",
+        "source_id": "S317",
+        "quote": "Like all dogs, the Belgian Malinois needs daily dental care",
+        "confidence": "medium",
+        "notes": "PetMD (S317), belgian_malinois.suitability.petmd_teeth. The game has no tooth-care mechanic → ROADMAP M5-R15 (Yorkshire Terrier precedent, needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsakodnevna nega zob; mehanike ni → ROADMAP M5-R15 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-38); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S314",
+              "S316"
+            ],
+            "refs": [
+              "belgian_malinois.exercise.adult",
+              "belgian_malinois.suitability.akc_exercise"
+            ],
+            "quote": "S314 'Exercise: More than 2 hours per day'; S316 'Mals require significant exercise on a daily basis'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S314"
+            ],
+            "refs": [
+              "belgian_malinois.suitability.rkc_size_of_home",
+              "belgian_malinois.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S314 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S314",
+              "S316"
+            ],
+            "refs": [
+              "belgian_malinois.exercise.adult",
+              "belgian_malinois.suitability.akc_exercise"
+            ],
+            "quote": "S314 'More than 2 hours per day'; S316 'significant exercise on a daily basis'"
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S316",
+              "S317"
+            ],
+            "refs": [
+              "belgian_malinois.behaviour.experienced_owner",
+              "belgian_malinois.suitability.akc_experienced_owner",
+              "belgian_malinois.suitability.petmd_experienced_owner"
+            ],
+            "quote": "S316 'don't make them a good choice for first-time dog owners'; S317 'need a dedicated and experienced pet parent'"
+          },
+          {
+            "tag": "older_children",
+            "source_ids": [
+              "S316"
+            ],
+            "refs": [
+              "belgian_malinois.suitability.akc_children",
+              "belgian_malinois.behaviour.family"
+            ],
+            "quote": "S316 'Mals would fare best in families with older, responsible kids.'"
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S317"
+            ],
+            "refs": [
+              "belgian_malinois.suitability.petmd_herding_children"
+            ],
+            "quote": "S317 'use their herding skills to round up toddlers and children'"
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S316"
+            ],
+            "refs": [
+              "belgian_malinois.exercise.energy",
+              "belgian_malinois.suitability.akc_mental_stimulation"
+            ],
+            "quote": "S316 'happiest with plenty of mental and physical activity'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S316"
+            ],
+            "refs": [
+              "belgian_malinois.behaviour.time_alone",
+              "belgian_malinois.suitability.akc_time_alone"
+            ],
+            "quote": "S316 'they should not be left alone for extended periods of time.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S314"
+            ],
+            "refs": [
+              "belgian_malinois.suitability.rkc_shedding"
+            ],
+            "quote": "S314 'Sheds: Yes'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S317"
+            ],
+            "refs": [
+              "belgian_malinois.behaviour.other_pets",
+              "belgian_malinois.suitability.petmd_prey_drive"
+            ],
+            "quote": "S317 'Belgian Malinois also have a high prey drive'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No family-pet statement; AKC (S316) older, responsible kids only.",
+          "children": "AKC (S316): older kids only, supervision a must; PetMD (S317) herds toddlers.",
+          "small_children": "No rating; sources advise against.",
+          "not_for_small_children": "AKC 'older, responsible kids' is a positive advice → older_children (Pomeranian precedent), not the PDSA-style advice against.",
+          "apartment": "RKC 'Large house' (S314).",
+          "other_pets": "High prey drive (S317); territorial towards other animals (S316).",
+          "first_time_owner": "Sources say the opposite (experienced_owner).",
+          "frequent_grooming": "RKC 'More than once a week' vs AKC / PetMD 'occasional' — conflicting (open for David).",
+          "low_shedding": "RKC 'Sheds: Yes'.",
+          "shorter_lifespan": "RKC 'Over 10 years'.",
+          "hips_hind_legs": "Hip / elbow dysplasia only as a PetMD heading; Breed Watch Category 1 → no welfare chip.",
+          "welfare": "RKC Breed Watch Category 1 (S314)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, large_home; consider long_daily_exercise, experienced_owner, older_children, may_herd_children, needs_mental_stimulation, needs_company, sheds, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a flat-faced breed)",
+        "unit": "—",
+        "source_id": "S314",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S314); no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health, never shows the breed as a beginner's dog or with small children, never as a guard / protection dog, never cropped ears or tail (Claude's proposal).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a flat-faced breed; Breed Watch Category 1)"
+      },
+      "ai_appearance": {
+        "value": "adult Belgian Malinois (Belgian Shepherd Dog, Malinois variety), fawn with black overlay (default) and a pronounced black mask; square, elegant and powerful, proud head carriage; rather small, high-set, triangular erect ears; medium almond-shaped dark-brown eyes; short straight hard coat, fuller at the neck and tail; natural full tail reaching the hock, carried low; never black, brindle, merle or white patches",
+        "unit": "—",
+        "source_id": "S313",
+        "quote": "Malinois: Only fawn with black overlay and with black mask.",
+        "confidence": "high",
+        "notes": "FCI (S313) and AKC (S315): fawn to mahogany with black overlay and black mask; white only on toe tips / small breastbone spot. Fawn is the portrait default. Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — fawn with black overlay and mask (default), mahogany with black overlay and mask; never black, brindle, merle or white patches; natural erect ears and full tail"
       }
     }
   }

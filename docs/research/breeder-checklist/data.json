@@ -1578,6 +1578,11 @@
         }
       ],
       "notes": "RKC breed page (dog-data S305, 2026-10-14): 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding' — Good Practice schemes and tests (= minimum): genetic diversity (inbreeding_coi, Shetland Sheepdog precedent) and the eye scheme with gonioscopy for PLA; Best Practice: DNA prcd-PRA and the hip scheme. The older page (S306) also names a PFK DNA test under 'Other available' — not added (not a recommended tier). No new test key."
+    },
+    "belgian_malinois": {
+      "status": "not_found",
+      "tests": [],
+      "notes": "RKC breed page (dog-data S314, 2026-10-14) shows the headings 'Priority health schemes and tests' and 'Important health schemes and tests' but returned no named test (tool: 'NO NAMED TESTS'); the new royalkennelclub.com address returned a fetch error. No PDSA Belgian Malinois page. PetMD (dog-data S317) names elbow / hip dysplasia, cataracts and PRA but no test; the SRSH hip / elbow recommendation is only on Wikipedia (dog-data S318, tier C — never alone) → nothing guessed. Show the general dog checklist only."
     }
   }
 }
