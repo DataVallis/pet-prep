@@ -9,6 +9,17 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-14 — Tudi proračun AI laboratorija v administraciji (M4-07c)
+
+**Kaj se je zgodilo:** Na strani »Proračun za AI« je drugi razdelek za AI laboratorij (primerjave modelov in fotografije pasem za register na spletu): dnevni in mesečni proračun ter omejitev na en zagon, s prikazom porabe. Prej je bil samo v strežniški nastavitvi.
+
+**Zakaj je pomembno:** Testiranje in samodejno dodajanje pasem imata svoj, od ljubljenčkov ločen proračun, ki ga zdaj spremenimo v minuti — denar za ljubljenčke ostane nedotaknjen.
+
+**Kako povedati:**
+- 🛠 Tehnično: »Oba proračuna v `app_settings`, primerjava neodvisna od vrstnega reda ključev v jsonb, shranjevanje obeh v eni transakciji.«
+
+---
+
 ## 2026-10-14 — Varnostne kopije baze in medijev izven strežnika — pripravljene (D5)
 
 **Kaj se je zgodilo:** Zgradili smo nočno varnostno kopijo, ki bazo ter vse AI slike in videe ljubljenčkov šifrirano pošlje v ločeno shrambo v drugem podatkovnem centru (restic na Hetzner Storage Box). Kopija baze je »vse ali nič« — nepopolna kopija se zavrže. Kopije hranimo **približno 35 dni** (vsi posnetki zadnjih 35 dni), zato podatki izbrisane družine iz kopij izginejo najkasneje v 35 dneh. *Začne teči, ko David nastavi shrambo (enkratna nastavitev); prvi preizkus obnove sledi takrat.*

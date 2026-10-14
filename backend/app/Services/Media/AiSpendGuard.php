@@ -57,14 +57,37 @@ class AiSpendGuard
         return max(0.0, (float) config('media.budget.monthly_usd', 50));
     }
 
+    /** AI Lab daily cap: the /admin value (M4-07c), else AI_LAB_DAILY_USD. */
     public function labDailyCapUsd(): float
+    {
+        return $this->settings->storedAiLabBudget()['daily_usd'] ?? $this->envLabDailyCapUsd();
+    }
+
+    /** AI Lab monthly cap: the /admin value (M4-07c), else AI_LAB_MONTHLY_USD. */
+    public function labMonthlyCapUsd(): float
+    {
+        return $this->settings->storedAiLabBudget()['monthly_usd'] ?? $this->envLabMonthlyCapUsd();
+    }
+
+    /** Most one AI Lab run may cost: the /admin value (M4-07c), else AI_LAB_MAX_RUN_USD. */
+    public function labMaxRunUsd(): float
+    {
+        return $this->settings->storedAiLabBudget()['max_run_usd'] ?? $this->envLabMaxRunUsd();
+    }
+
+    public function envLabDailyCapUsd(): float
     {
         return max(0.0, (float) config('media.lab.daily_usd', 3));
     }
 
-    public function labMonthlyCapUsd(): float
+    public function envLabMonthlyCapUsd(): float
     {
         return max(0.0, (float) config('media.lab.monthly_usd', 30));
+    }
+
+    public function envLabMaxRunUsd(): float
+    {
+        return max(0.0, (float) config('media.lab.max_run_usd', 3));
     }
 
     public function timezone(): string
@@ -125,6 +148,7 @@ class AiSpendGuard
         // M4-07b: warm the admin budget before the advisory lock, so the read
         // inside it is a cache hit (no cache write / slow store while locked).
         $this->settings->storedAiBudget();
+        $this->settings->storedAiLabBudget();
 
         return DB::transaction(function () use ($profile, $purpose, $petId, $labResultId, $petMediaId, $cost) {
             if (DB::getDriverName() === 'pgsql') {
