@@ -3395,7 +3395,7 @@ class BreedStageParamsSeeder extends Seeder
                 'notes' => 'Size-class value, not breed-specific (18–23 kg ≈ 40–51 lb, the Medium class of S10; RKC / PDSA size "Medium").',
             ]],
             'coren_rank' => [13, [
-                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
                 'ref' => 'english_springer_spaniel.trainability.coren_rank',
                 'quote' => '| 13 | English Springer Spaniel |',
                 'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 13, tier "Excellent Working Dogs" (ranks 11–26). Coren\'s own article (S34) lists only the top and bottom 10.',
