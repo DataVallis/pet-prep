@@ -29,6 +29,8 @@ import AddChildCard from '@/components/AddChildCard';
 import ChildOverviewCard from '@/components/parent/ChildOverviewCard';
 import JoinFamilyCard, { joinNoticeText, type JoinNotice } from '@/components/parent/JoinFamilyCard';
 import ParentLiveChannels from '@/components/ParentLiveChannels';
+import ServerUpdatingBanner from '@/components/ServerUpdatingBanner';
+import { useServerOutage } from '@/store/serverStatusStore';
 import { ErrorBanner, LoadingBlock, NoticeBanner, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import ControlsScreen from '@/screens/parent/ControlsScreen';
 import ChallengeScreen from '@/screens/parent/ChallengeScreen';
@@ -93,6 +95,8 @@ export default function ParentDashboardScreen() {
   // A code, not text: translated at render so it follows a language switch (M1-18 review).
   const [notice, setNotice] = useState<JoinNotice | null>(null);
   const dashboard = useParentDashboard();
+  // M5-F13: during a deploy the calm banner replaces error banners; the last data stays.
+  const serverUpdating = useServerOutage();
   const noChild = isNoChildPaired(dashboard.data);
   const family = familyFromDashboard(dashboard.data);
   const children = family?.children ?? [];
@@ -134,6 +138,8 @@ export default function ParentDashboardScreen() {
     <View style={styles.root}>
       <ParentLiveChannels petIds={livePetIds} />
       {renderContent()}
+      {/* Over every parent screen (tabs and overlays), above the tab bar; never takes touches. */}
+      {serverUpdating && <ServerUpdatingBanner tone="light" style={styles.updatingSlot} testID="parent-server-updating" />}
     </View>
   );
 
@@ -222,7 +228,7 @@ export default function ParentDashboardScreen() {
         <ScrollView style={styles.flex} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
           <ChallengeBanner family={family} onOpen={() => openChallenge()} />
           {notice && <NoticeBanner text={joinNoticeText(notice)} closeLabel={DASHBOARD_STRINGS.closeNotice} onClose={() => setNotice(null)} />}
-          {dashboard.isError && (
+          {dashboard.isError && !serverUpdating && (
             <ErrorBanner
               text={
                 dashboard.data
@@ -238,7 +244,7 @@ export default function ParentDashboardScreen() {
             />
           )}
 
-          {dashboard.isPending ? (
+          {dashboard.isPending || (serverUpdating && !dashboard.data) ? (
             <LoadingBlock text={DASHBOARD_STRINGS.loading} testID="dashboard-loading" />
           ) : !dashboard.data ? null : children.length === 0 ? (
             <>
@@ -268,6 +274,7 @@ export default function ParentDashboardScreen() {
 
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: C.bg },
+  updatingSlot: { position: 'absolute', left: 0, right: 0, bottom: Platform.OS === 'ios' ? 100 : 80, zIndex: 50 },
   flex: { flex: 1 },
   header: {
     paddingTop: Platform.OS === 'ios' ? 56 : 40,

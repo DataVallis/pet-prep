@@ -11,6 +11,11 @@
     "thousands": ",",
     "percent": "{{value}}%"
   },
+  "serverUpdating": {
+    "title": "Updating PetPrep — back in a moment.",
+    "a11y": "Updating PetPrep. We'll be right back, everything is saved.",
+    "actionLater": "PetPrep is updating right now. Try again in a moment."
+  },
   "parentalGate": {
     "link": "Parent?",
     "linkA11y": "For parents: sign the child out",

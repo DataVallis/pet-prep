@@ -13,6 +13,7 @@
  * Pure functions, no React — unit-tested in `__tests__/echoConfig.test.ts`.
  */
 
+import { isServerOutageError, outageRetryDelayMs } from '@/modules/connectivity/serverOutage';
 import type {
   ChannelAuthorizationCallback,
   ChannelAuthorizationHandler,
@@ -131,6 +132,68 @@ export function buildPusherOptions(env: RealtimeEnv, authorize: ChannelAuthorize
     disableStats: true,
     channelAuthorization: {
       customHandler: createChannelAuthorizer(authorize),
+    },
+  };
+}
+
+// ── Deploys (M5-F13) ────────────────────────────────────────────
+
+/**
+ * Channel-auth attempts during a deploy before the subscription reports an error: 1 + 19
+ * retries with the maintenance `Retry-After` (15 s) / outage backoff (2 s … 30 s) ≈ 5–8 min.
+ * pusher-js itself never retries a failed subscription until the next socket reconnect,
+ * and the socket may already be back (Reverb restarts faster than the API leaves
+ * maintenance) — without this the channel would stay unsubscribed.
+ */
+export const CHANNEL_AUTH_OUTAGE_ATTEMPTS = 20;
+
+/** Waits `ms` (a test passes an instant one). */
+export type Delay = (ms: number) => Promise<void>;
+
+const realDelay: Delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+/**
+ * Wrap a channel authorizer so a deploy answer (maintenance 503, 502 / 504, network
+ * failure) is retried with backoff. Any other error (401, 403, odd body) fails at once,
+ * as before. `isActive` stops retrying once the hook was torn down.
+ */
+export function withOutageRetry(
+  authorize: ChannelAuthorize,
+  options: { attempts?: number; delay?: Delay; isActive?: () => boolean } = {},
+): ChannelAuthorize {
+  const attempts = options.attempts ?? CHANNEL_AUTH_OUTAGE_ATTEMPTS;
+  const delay = options.delay ?? realDelay;
+  const isActive = options.isActive ?? (() => true);
+  return async (socketId, channelName) => {
+    for (let attempt = 0; ; attempt += 1) {
+      try {
+        return await authorize(socketId, channelName);
+      } catch (error) {
+        if (!isServerOutageError(error) || attempt + 1 >= attempts || !isActive()) throw error;
+        await delay(outageRetryDelayMs(attempt, error));
+        if (!isActive()) throw error;
+      }
+    }
+  };
+}
+
+/**
+ * Tells a channel's FIRST subscription from a RE-subscription (pusher-js subscribes again
+ * after every socket reconnect). Broadcasts sent while the socket was down are lost, so
+ * a re-subscription means: refetch the pet state.
+ */
+export interface SubscriptionTracker {
+  /** The channel subscribed; returns true when it had been subscribed before (a reconnect). */
+  subscribed(): boolean;
+}
+
+export function createSubscriptionTracker(): SubscriptionTracker {
+  let seen = false;
+  return {
+    subscribed() {
+      const again = seen;
+      seen = true;
+      return again;
     },
   };
 }
