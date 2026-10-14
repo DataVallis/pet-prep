@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -437,6 +437,17 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_ENGLISH_SPRINGER_SPANIEL = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-34)';
 
     /**
+     * M5-R10-35 Shetland Sheepdog (unattended run 2026-10-14, data.json
+     * proposed_game_parameters.shetland_sheepdog.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 60 min
+     * (RKC S291 "Up to 1 hour per day"), senior 45 min, puppy 10 min × age capped at 60, stages
+     * young 9 / adult 36 / senior 90 (0.75 × RKC lower bound 10 y, S291 — provisional until McMillan
+     * 2024 is checked), arrival 2 / 9 / 36 / 90, learning multiplier 1.8 (Coren rank 6, Brightest);
+     * care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_SHETLAND_SHEEPDOG = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-35)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -568,6 +579,7 @@ class BreedStageParamsSeeder extends Seeder
         'miniature_american_shepherd' => [2, 'S269', 'The Miniature American Shepherd needs to be brushed a couple times a week to control shedding and minimize matting.', 'medium', false],
         'chihuahua' => [1, 'S275', 'Grooming: Once a week', 'high', false],
         'english_springer_spaniel' => [2, 'S285', 'They need grooming once or twice a week, plus clipping every 3 months.', 'medium', false],
+        'shetland_sheepdog' => [7, 'S291', 'Grooming: Every day', 'high', false],
     ];
 
     /**
@@ -639,13 +651,14 @@ class BreedStageParamsSeeder extends Seeder
         'miniature_american_shepherd' => ['S267', "They can be weary of new faces, but early, consistent socialization will build up a Mini American's confidence in new situations."],
         'chihuahua' => ['S277', "This is why it's really important to socialise your Chihuahua from a young age"],
         'english_springer_spaniel' => ['S286', 'Like with any breed, early socialization and puppy training courses are key'],
+        'shetland_sheepdog' => ['S293', 'Training, along with socialisation, is very important at a young age'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1234,6 +1247,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-34 (docs/research/dog-data/data.json english_springer_spaniel,
             // S281–S288; runbook rules in proposed_game_parameters.english_springer_spaniel).
             BreedType::EnglishSpringerSpaniel => self::englishSpringerSpanielProfile(),
+            // M5-R10-35 (docs/research/dog-data/data.json shetland_sheepdog,
+            // S289–S295; runbook rules in proposed_game_parameters.shetland_sheepdog).
+            BreedType::ShetlandSheepdog => self::shetlandSheepdogProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -3412,6 +3428,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'english_springer_spaniel.lifespan.median_uk',
                 'quote' => 'English Springer Spaniel | 13.5 | 13.4 - 13.6 | 17905 | 6221',
                 'notes' => 'McMillan et al. 2024 data as tabled by Dogs Trust (S123). RKC "Lifespan: Over 10 years" (S284) and PDSA "Over 10 years" (S285) agree. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Shetland Sheepdog (M5-R10-35). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_SHETLAND_SHEEPDOG);
+     * weight, growth, Coren rank and lifespan are sourced. The senior boundary uses the RKC lower
+     * bound (no McMillan 2024 / VetCompass median reachable) — provisional, like the Boston Terrier.
+     *
+     * @return array<string, mixed>
+     */
+    private static function shetlandSheepdogProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_SHETLAND_SHEEPDOG;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S291', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.shetland_sheepdog.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog finishes growing at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S291; PDSA S293 the same) = 7.5 y = 90 months. No McMillan 2024 / VetCompass median was reachable (the McMillan figure quoted by Wikipedia S295 is tier C → 121, not used alone). Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shetland_sheepdog.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S291', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shetland_sheepdog.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S291) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA "around an hour of exercise daily" (S293) agrees.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shetland_sheepdog.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[6.8, 11.3], [
+                'unit' => 'kg', 'source_id' => 'S294', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'shetland_sheepdog.adult_weight.akc',
+                'quote' => 'averaging between 13 and 16 inches tall and weighing 15 to 25 pounds.',
+                'notes' => 'AKC (S294), 15–25 lb ≈ 6.8–11.3 kg, both sexes. PDSA average 9 kg (S293) — inside the range. The FCI standard (S290) gives no weight.',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'shetland_sheepdog.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA 9 kg ≈ 20 lb → the Small class of S10; RKC size "Small", S291).',
+            ]],
+            'coren_rank' => [6, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'shetland_sheepdog.trainability.coren_rank',
+                'quote' => '| 6 | Shetland Sheepdog |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 6, tier "Brightest Dogs" (ranks 1–10); Coren\'s own article (S34) lists the Shetland Sheepdog sixth among the ten brightest — agrees.',
+            ]],
+            'learning_multiplier' => [1.8, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shetland_sheepdog.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 6 (S35) in the "Brightest" tier → max(1.8, round(2.0 − 5 / 30, 1)) = 1.8 (= Labrador, rank 7). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S291', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'shetland_sheepdog.lifespan.rkc',
+                'quote' => 'Lifespan: Over 10 years',
+                'notes' => 'RKC breed page lower bound (S291); PDSA "Over 10 years" (S293) the same. No McMillan 2024 / VetCompass median reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

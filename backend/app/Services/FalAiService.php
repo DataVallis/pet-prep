@@ -313,6 +313,13 @@ class FalAiService
                 .'long lobular well-feathered ears hanging close to the head, medium almond-shaped dark hazel eyes with a kind expression, '
                 .'natural undocked feathered tail carried low, '
                 .'photorealistic, studio quality, natural lighting',
+            // M5-R10-35: FCI standard (S290) — sable and white as the anchor (also tricolour, blue merle,
+            // black and white, black and tan; never brindle, white body patches or a double merle).
+            BreedType::ShetlandSheepdog => 'A small, lithe and graceful Shetland Sheepdog dog with a sable and white coat, '
+                .'long harsh straight double coat with an abundant mane and frill, '
+                .'small ears carried semi-erect with the tips folding forward, dark brown almond-shaped eyes with a gentle expression, '
+                .'head shaped like a long blunt wedge, natural low-set tail with abundant hair, '
+                .'photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -763,6 +770,17 @@ class FalAiService
                 'eye_color' => 'dark hazel',
                 'fur_texture' => 'close, straight, medium-length with moderate feathering',
                 'markings' => 'white blaze, collar, chest and legs',
+            ],
+            // M5-R10-35: FCI standard colours (S290) — sable, tricolour, blue merle (white collar, frill, legs, tail tip).
+            BreedType::ShetlandSheepdog => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'sable and white',
+                    1 => 'tricolour (black, tan and white)',
+                    2 => 'blue merle and white',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'long, harsh, straight double coat with an abundant mane and frill',
+                'markings' => 'white collar, frill, chest, legs and tail tip',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

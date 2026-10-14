@@ -38,6 +38,7 @@ return [
     'miniature_american_shepherd' => 'Miniature American Shepherd',
     'chihuahua' => 'Chihuahua',
     'english_springer_spaniel' => 'English Springer Spaniel',
+    'shetland_sheepdog' => 'Shetland Sheepdog',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',
