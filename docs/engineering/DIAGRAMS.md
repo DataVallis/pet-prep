@@ -969,7 +969,7 @@ erDiagram
     bigint id
     bigint family_id
     bigint user_id "deprecated"
-    string breed_type "mutt border_collie labrador_retriever golden_retriever french_bulldog german_shepherd cavalier_king_charles_spaniel beagle standard_poodle dachshund australian_shepherd havanese west_highland_white_terrier bernese_mountain_dog siberian_husky rottweiler bulldog german_shorthaired_pointer yorkshire_terrier cane_corso pembroke_welsh_corgi dobermann boxer miniature_schnauzer shih_tzu great_dane pomeranian boston_terrier miniature_american_shepherd chihuahua english_springer_spaniel shetland_sheepdog domestic_cat maine_coon british_shorthair ragdoll siberian_cat norwegian_forest_cat bengal"
+    string breed_type "mutt border_collie labrador_retriever golden_retriever french_bulldog german_shepherd cavalier_king_charles_spaniel beagle standard_poodle dachshund australian_shepherd havanese west_highland_white_terrier bernese_mountain_dog siberian_husky rottweiler bulldog german_shorthaired_pointer yorkshire_terrier cane_corso pembroke_welsh_corgi dobermann boxer miniature_schnauzer shih_tzu great_dane pomeranian boston_terrier miniature_american_shepherd chihuahua english_springer_spaniel shetland_sheepdog brittany domestic_cat maine_coon british_shorthair ragdoll siberian_cat norwegian_forest_cat bengal"
     string species "dog or cat, follows breed (M5-R06-01)"
     string name "optional label set by a parent, null = none (M5-R08)"
     double hunger_level
