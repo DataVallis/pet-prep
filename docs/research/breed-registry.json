@@ -57,7 +57,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "0e045a15f9ec7a091fcae4e471080a0c7d37945acc4c9dede8f03c8665fd7f87"
+      "sha256": "48fe8148b04ff5899d33ddbd6495a5ceb393b3217d308dc9175dc52c812bbae2"
     }
   },
   "suitability_vocabulary": {
@@ -20537,7 +20537,12 @@
           "S314"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "belgian-malinois.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_found",
         "tests": [],
