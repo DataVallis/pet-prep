@@ -4,7 +4,7 @@ import { useSessionBootstrap } from '@/modules/session/useSessionBootstrap';
 import { restoreSession, type RestoreResult } from '@/modules/session/restoreSession';
 import { useAppStore } from '@/store/appStore';
 
-jest.mock('@/modules/session/restoreSession', () => ({ restoreSession: jest.fn() }));
+jest.mock('@/modules/session/restoreSession', () => ({ restoreSession: jest.fn(), migrateLegacyProfiles: jest.fn(async () => undefined) }));
 jest.mock('@/modules/session/logout', () => ({ logout: jest.fn(() => Promise.resolve()) }));
 
 const restore = restoreSession as jest.Mock;

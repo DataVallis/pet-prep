@@ -37,7 +37,8 @@ import {
   liveStepsKey,
   type KeyValueStore,
 } from '@/modules/steps/stepCounter';
-import { autoSyncDue, readTodaySteps } from '@/modules/steps/todaySteps';
+import { autoSyncDue, readStepsInRanges, readTodaySteps, type TodaySources } from '@/modules/steps/todaySteps';
+import { loadStepWindows, pruneStepWindows, windowsInRange } from '@/modules/steps/activeWindows';
 import { useAppStore } from '@/store/appStore';
 
 export const STEP_SYNC_INTERVAL_MS = 5 * 60_000;
@@ -64,6 +65,8 @@ export interface StepSyncDeps {
   health: HealthStepsAdapter | null;
   /** Best-effort background sync registration (iOS). */
   registerBackground: () => Promise<boolean>;
+  /** M2-11: the shared-phone step windows (`activeWindows.ts`). */
+  stepWindows: () => ReturnType<typeof loadStepWindows>;
 }
 
 const defaultDeps = (): StepSyncDeps => ({
@@ -73,6 +76,7 @@ const defaultDeps = (): StepSyncDeps => ({
   now: () => new Date(),
   health: getHealthAdapter(),
   registerBackground: registerStepSyncTask,
+  stepWindows: () => loadStepWindows(),
 });
 
 interface Options {
@@ -214,7 +218,7 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
   permissionRef.current = permission;
 
   const readToday = useCallback(async (at: Date) => {
-    const { platform, pedometer, health } = depsRef.current;
+    const { platform, pedometer, health, stepWindows } = depsRef.current;
     const cal = calendarRef.current;
     const sensorGranted = permissionRef.current === 'granted';
     const counter = counterRef.current;
@@ -222,18 +226,24 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
       const server = serverRef.current;
       if (server.day !== null) counter.raiseTo(server.steps, server.day, at);
     }
-    return readTodaySteps(
-      {
-        health: healthConnectedRef.current ? health : null,
-        pedometerHistory:
-          platform === 'ios' && sensorGranted
-            ? async (start, end) => (await pedometer.getStepCountAsync(start, end)).steps
-            : null,
-        liveTotal: platform === 'android' && sensorGranted && counter ? () => counter.value(at) : null,
-      },
-      new Date(cal.startOfDay(at.getTime())),
-      at,
-    );
+    const sources: TodaySources = {
+      health: healthConnectedRef.current ? health : null,
+      pedometerHistory:
+        platform === 'ios' && sensorGranted
+          ? async (start, end) => (await pedometer.getStepCountAsync(start, end)).steps
+          : null,
+      liveTotal: platform === 'android' && sensorGranted && counter ? () => counter.value(at) : null,
+    };
+    const dayStart = new Date(cal.startOfDay(at.getTime()));
+    // M2-11: a shared child session counts only the child's active windows of today.
+    const shared = useAppStore.getState();
+    if (shared.sharedSession && shared.user?.role === 'child') {
+      // Only the current and the previous family day are kept (QA n2).
+      await pruneStepWindows(cal.startOfDay(dayStart.getTime() - 1)).catch(() => undefined);
+      const windows = (await stepWindows())[String(shared.user.id)] ?? [];
+      return readStepsInRanges(sources, windowsInRange(windows, dayStart, at));
+    }
+    return readTodaySteps(sources, dayStart, at);
   }, []);
 
   const runSync = useCallback(

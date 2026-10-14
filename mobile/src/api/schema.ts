@@ -534,6 +534,41 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/parent/children/{child}/device-session": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Profile switching on one phone (M2-11, David 2026-10-14): the signed-in
+         *     parent opens this child's profile on the same device — no PIN (the
+         *     parent is already authenticated; the app asks for a parental gate on the
+         *     way back). The answer is exactly the `POST /api/child/pin-login` body of
+         *     a re-login (`mode: relogin`, token with the `child` ability). The parent's
+         *     own token is untouched; each token logs out on its own
+         * @description One shared-phone session per parent and child: calling it again replaces
+         *     the previous one (switching back and forth never signs the child's own
+         *     phones out). It counts as one of the child's 3 devices.
+         *
+         *     Optional `device_name` (phone model) and `features` as at PIN login.
+         *     404 `child_not_found` (not a child of the parent's family), 403 for a
+         *     non-parent, 409 `no_pet` (the child has no pet yet — pair with a PIN
+         *     first), 422 `app_update_required` (a cat without `species_cat`), 429
+         *     when throttled (20 / min per parent).
+         *
+         *     POST /api/parent/children/{child}/device-session
+         */
+        post: operations["childAuth.deviceSession"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/child/contract": {
         parameters: {
             query?: never;
@@ -1650,6 +1685,24 @@ export interface components {
          * @enum {string}
          */
         ChallengePaidSource: "purchase" | "grandfathered" | "admin";
+        /**
+         * ChildDeviceSessionRequest
+         * @description POST /api/parent/children/{child}/device-session (M2-11) — the parent opens
+         *     the child's profile on this phone. Same optional fields as a PIN login.
+         */
+        ChildDeviceSessionRequest: {
+            /**
+             * @description Phone model only (never the user-given name); stored through
+             *     ChildProfileService::deviceLabel() like at PIN login.
+             */
+            device_name?: string | null;
+            /**
+             * @description What this app build can show (as at PIN login), e.g. ["behaviour_events",
+             *     "training", "species_cat"]; ≤ 10 strings, unknown values ignored. A cat
+             *     needs `species_cat` (else 422 app_update_required).
+             */
+            features?: string[] | null;
+        };
         /**
          * ConfirmDeletionRequest
          * @description Body of every irreversible deletion (M2-08):
@@ -3312,13 +3365,83 @@ export interface operations {
                             name: string;
                             role: string;
                         };
-                        /** @enum {string} */
-                        mode: "join_pet" | "new_pet" | "relogin";
-                        joined_existing: string;
-                        family_id: string;
+                        mode: string;
+                        joined_existing: boolean;
+                        family_id: number;
                         pet: components["schemas"]["PairedPetResource"];
                         awaiting_contract: boolean;
                     } | string;
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "childAuth.deviceSession": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                child: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["ChildDeviceSessionRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        token: string;
+                        abilities: [
+                            string
+                        ];
+                        /** @description Only the nickname — the profile has no e-mail. */
+                        user: {
+                            id: number;
+                            name: string;
+                            role: string;
+                        };
+                        mode: string;
+                        joined_existing: boolean;
+                        family_id: number;
+                        pet: components["schemas"]["PairedPetResource"];
+                        awaiting_contract: boolean;
+                    } | string;
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            /** @description An error */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /**
+                         * @description Error overview.
+                         * @example
+                         */
+                        message: string;
+                    };
+                };
+            };
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "No such child in your family.";
+                        /** @constant */
+                        reason: "child_not_found";
+                    };
                 };
             };
             422: components["responses"]["ValidationException"];

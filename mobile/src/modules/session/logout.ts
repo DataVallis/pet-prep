@@ -2,11 +2,16 @@
  * The one logout path for both roles: unregister this install from pushes and revoke
  * the token on the server (best effort), delete it from SecureStore, drop cached
  * queries, reset the store.
+ *
+ * M2-11 (shared phone, `profileSwitch.ts`): a shared CHILD session (opened by a parent
+ * here) is forgotten with it and its step window closes; the other stored child sessions
+ * stay for their parent. Any other logout (parent, or before the user is known) revokes
+ * and forgets every child session stored on this phone.
  */
 
 import * as SecureStore from 'expo-secure-store';
 
-import { api, clearAuthToken } from '@/api/client';
+import { api, clearAuthToken, getAuthToken } from '@/api/client';
 import { clearLiveSteps } from '@/modules/steps/stepCounter';
 import { unregisterStepSyncTask } from '@/modules/steps/backgroundSteps';
 import { unregisterFromPush } from '@/modules/push/pushRegistration';
@@ -17,6 +22,8 @@ import { channelAuthGate, childPetFetchGate } from '@/modules/childPet/refetchGo
 import { forgetFamilyTimezone } from './familyTimezone';
 import { forgetSignInMethod } from './signInMethod';
 import { readAuthMethods } from './authMethods';
+import { forgetChildToken, isStoredChildToken, revokeStoredToken, takeChildSessions } from './profiles';
+import { closeStepWindows } from '@/modules/steps/activeWindows';
 
 /** The server revoke is best effort: give up after this long so "Odjava" never hangs offline. */
 export const REVOKE_TIMEOUT_MS = 5_000;
@@ -29,8 +36,25 @@ interface LogoutOptions {
   revoke?: boolean;
 }
 
+/** M2-11: revoke + forget every child session stored on this phone (parent logout). */
+export async function revokeStoredChildSessions(activeToken: string | null): Promise<void> {
+  const tokens = (await takeChildSessions()).filter((t) => t !== activeToken);
+  await Promise.all(tokens.map((t) => revokeStoredToken(t)));
+}
+
 export async function logout({ revoke = true }: LogoutOptions = {}): Promise<void> {
-  const userId = useAppStore.getState().user?.id ?? null;
+  const user = useAppStore.getState().user;
+  const userId = user?.id ?? null;
+  const active = await getAuthToken().catch(() => null);
+  if (user?.role === 'child') {
+    // M2-11: a shared child session ends here — forget it; other children's stay.
+    if (active && (await isStoredChildToken(active))) await forgetChildToken(active);
+  } else {
+    // A parent logout ends the child sessions opened on this phone too.
+    await revokeStoredChildSessions(active);
+  }
+  // No step window stays open without an active child profile.
+  await closeStepWindows();
   if (revoke) {
     // M3-02: no more pushes to this phone (needs the token, so before the revoke);
     // at most 2 s, never eats into the revoke's 5 s. Never throws.

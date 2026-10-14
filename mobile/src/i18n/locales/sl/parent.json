@@ -191,7 +191,18 @@
     "createPin": "Ustvari kodo",
     "awaitingContract": "Kuža čaka, da {{name}} podpiše pogodbo o odgovornosti.",
     "details": "Podrobnosti",
-    "detailsA11y": "Podrobnosti: {{name}}"
+    "detailsA11y": "Podrobnosti: {{name}}",
+    "playAs": "Igraj kot {{name}}",
+    "playAsHint": "Na tem telefonu odpre igro otroka {{name}} in vas odjavi. Nazaj se prijavite znova.",
+    "playAsSteps": "Koraki se štejejo, dokler je izbran profil {{name}}. Pred sprehodom izberite ta profil.",
+    "playAsErrors": {
+      "no_pet": "Najprej ustvarite kodo za prijavo in jo vnesite v otrokov profil.",
+      "not_found": "Tega otroka ni več v vaši družini.",
+      "update_required": "Za igro s tem ljubljenčkom posodobite aplikacijo.",
+      "throttled": "Preveč preklopov. Poskusite znova čez minuto.",
+      "offline": "Ni povezave s strežnikom. Preverite internet in poskusite znova.",
+      "failed": "Preklop ni uspel. Poskusite znova."
+    }
   },
   "petControls": {
     "caretakers": "Skrbi: {{names}}",

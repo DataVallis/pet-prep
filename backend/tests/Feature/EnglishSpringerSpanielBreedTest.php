@@ -140,7 +140,7 @@ describe('breed, config and database', function () {
         expect($refused(['species' => 'cat']))->toThrow(QueryException::class)
             ->and($refused(['breed_type' => 'welsh_springer_spaniel']))->toThrow(QueryException::class);
 
-        $migration = require database_path('migrations/2026_12_11_120000_add_english_springer_spaniel_breed.php');
+        $migration = require database_path('migrations/2026_12_12_120000_add_english_springer_spaniel_breed.php');
         // down() refuses while an English Springer Spaniel exists (no silent data loss).
         expect(fn () => DB::transaction(fn () => $migration->down()))->toThrow(QueryException::class);
         DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'border_collie']);

@@ -205,6 +205,28 @@ sequenceDiagram
 
 Token abilities (M2-03): `/api/parent/*` → `ability:parent`, `/api/child/*` → `ability:child`, then the policies (role + family). Tokens issued before M2-02 carry `*` and pass the ability check; the policies still keep the roles apart.
 
+## 2c′. Profile switching on one phone (M2-11, David 2026-10-14)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Parent
+  participant App as Mobile app (one phone)
+  participant API as Laravel API
+  participant DB as PostgreSQL
+  Parent->>App: Pregled → »Igraj kot {ime}« (child with a pet)
+  App->>API: POST /api/parent/children/{child}/device-session {device_name, features}<br/>(parent token, throttle 20/min per parent)
+  API->>DB: lock parent → child → family; child of this family? has a pet?<br/>(404 child_not_found / 409 no_pet)
+  API->>DB: delete this parent's previous shared token of the child<br/>create child token "shared:p{parent}:{model}" (ability child), prune to 3 devices
+  API-->>App: 200 = PIN re-login body {token, abilities [child], user, mode relogin, pet, awaiting_contract}
+  App->>App: store the child session (SecureStore), make its token active<br/>(a failed write aborts here — the parent stays signed in)
+  App->>API: POST /api/logout (parent token) — the parent token is revoked on the switch<br/>(failed → queued, retried at app start / foreground)
+  Note over API,DB: the parent's push row goes with its token (FK cascade)
+  App->>API: POST /api/devices (child token, same Expo token)
+  App->>App: child HUD (only the child token on the phone)
+  Note over App,API: back to the parent = a real parent re-login (password or Google / Apple);<br/>parent pushes only while the parent is signed in; steps count only for the active profile (app-side windows)
+```
+
 ## 2d. Parent self-registration (M2-10a, 2026-10-05)
 
 ```mermaid

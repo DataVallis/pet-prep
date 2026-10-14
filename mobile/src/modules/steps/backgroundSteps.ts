@@ -29,7 +29,9 @@ import { normalizeChildState } from '@/modules/childPet/childPetView';
 import { getHealthAdapter } from './health/healthAdapter';
 import type { HealthStepsAdapter } from './health/types';
 import { isoWithOffset } from './stepCounter';
-import { readTodaySteps } from './todaySteps';
+import { readStepsInRanges, readTodaySteps, type TodaySources } from './todaySteps';
+import { loadStepWindows, windowsInRange } from './activeWindows';
+import { loadChildSessions } from '@/modules/session/profiles';
 
 export const STEP_SYNC_TASK = 'petprep-background-step-sync';
 
@@ -87,6 +89,17 @@ export interface BackgroundSyncDeps {
   getChildPet: () => Promise<ChildPetState>;
   syncSteps: (body: SyncStepsRequest) => Promise<unknown>;
   now: () => Date;
+  /**
+   * M2-11: the active windows of today when the stored token is a shared child session
+   * (opened by a parent on this phone), else null (the child's own phone: midnight → now).
+   */
+  sharedRanges: (token: string, dayStart: Date, at: Date) => Promise<Array<[Date, Date]> | null>;
+}
+
+async function defaultSharedRanges(token: string, dayStart: Date, at: Date): Promise<Array<[Date, Date]> | null> {
+  const childId = Object.entries(await loadChildSessions()).find(([, s]) => s.token === token)?.[0];
+  if (childId === undefined) return null;
+  return windowsInRange((await loadStepWindows())[childId] ?? [], dayStart, at);
 }
 
 const defaultDeps = (): BackgroundSyncDeps => ({
@@ -97,6 +110,7 @@ const defaultDeps = (): BackgroundSyncDeps => ({
   getChildPet: () => api.getChildPet(),
   syncSteps: (body) => api.syncSteps(body),
   now: () => new Date(),
+  sharedRanges: defaultSharedRanges,
 });
 
 /** One background run. Never throws. */
@@ -104,7 +118,8 @@ export async function runBackgroundStepSync(overrides: Partial<BackgroundSyncDep
   const deps = { ...defaultDeps(), ...overrides };
   try {
     if (deps.platform !== 'ios' || deps.health === null) return 'skipped';
-    if (!(await deps.getToken())) return 'skipped';
+    const token = await deps.getToken();
+    if (!token) return 'skipped';
     if ((await deps.health.availability()) !== 'available') return 'skipped';
     if ((await deps.health.access()) !== 'connected') return 'skipped';
 
@@ -124,17 +139,15 @@ export async function runBackgroundStepSync(overrides: Partial<BackgroundSyncDep
       pedometerGranted = false;
     }
     const pedometer = deps.pedometer;
-    const reading = await readTodaySteps(
-      {
-        health: deps.health,
-        pedometerHistory: pedometerGranted
-          ? async (start, end) => (await pedometer.getStepCountAsync(start, end)).steps
-          : null,
-        liveTotal: null,
-      },
-      new Date(calendar.startOfDay(at.getTime())),
-      at,
-    );
+    const sources: TodaySources = {
+      health: deps.health,
+      pedometerHistory: pedometerGranted ? async (start, end) => (await pedometer.getStepCountAsync(start, end)).steps : null,
+      liveTotal: null,
+    };
+    const dayStart = new Date(calendar.startOfDay(at.getTime()));
+    // M2-11: a shared child session is credited only its active windows (background too).
+    const ranges = await deps.sharedRanges(token, dayStart, at);
+    const reading = ranges === null ? await readTodaySteps(sources, dayStart, at) : await readStepsInRanges(sources, ranges);
     if (reading === null) return 'failed';
     if (reading.steps <= serverSteps) return 'up_to_date';
 

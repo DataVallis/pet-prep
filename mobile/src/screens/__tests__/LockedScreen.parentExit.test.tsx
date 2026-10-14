@@ -2,7 +2,7 @@
  * David 2026-10-14: the lock overlay is no dead end — every lock reason offers "Starš?",
  * which signs the child out only after the parental gate is answered correctly.
  */
-import { fireEvent, render, screen } from '@testing-library/react-native';
+import { act, fireEvent, render, screen } from '@testing-library/react-native';
 
 import { PARENTAL_GATE_STRINGS as GATE } from '@/components/ParentalGate';
 import { logout } from '@/modules/session/logout';
@@ -36,7 +36,7 @@ describe('LockedScreen — way back to the parent', () => {
     expect(screen.getByText(GATE.link)).toBeTruthy();
   });
 
-  it('logs out only after a correct answer; wrong answers and cancel do nothing', () => {
+  it('logs out only after a correct answer (no parent parked on this phone); wrong answers and cancel do nothing', async () => {
     useAppStore.getState().setLockState('payment_required');
     render(<LockedScreen />);
 
@@ -48,6 +48,10 @@ describe('LockedScreen — way back to the parent', () => {
 
     fireEvent.press(screen.getByTestId('locked-parent-exit'));
     answer(String(product()));
+    // M2-11: `leaveChildProfile` first looks for a parked parent (none here) → logout.
+    await act(async () => {
+      await new Promise((resolve) => setTimeout(resolve, 0));
+    });
     expect(logoutMock).toHaveBeenCalledTimes(1);
   });
 

@@ -42,6 +42,7 @@ import {
   type DayRow,
 } from '@/modules/family/scoring';
 import PetThumbnail from '@/components/parent/PetThumbnail';
+import PlayAsChildButton from '@/components/parent/PlayAsChildButton';
 import PlanBadge from '@/components/parent/PlanBadge';
 import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
 import CertificateCard from '@/components/parent/CertificateCard';
@@ -130,6 +131,9 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
         </View>
         <TrafficLightBadge color={child.traffic_light.color} testID={`child-light-${id}-${child.traffic_light.color}`} />
       </View>
+
+      {/* M2-11: open this child's game on this phone (the parent is signed out; back = parent login). */}
+      {pet !== null && <PlayAsChildButton child={child} />}
 
       {/* M5-F01: the badge alone was overlooked on a device — a clear entry until the challenge is paid. */}
       {onOpenChallenge && canBuyChallenge(pet) && (
