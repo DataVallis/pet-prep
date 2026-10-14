@@ -45,7 +45,9 @@ export function deletionIdentity(
   if (methods) {
     if (methods.hasPassword) return { kind: 'password' };
     if (methods.linkedProviders.length > 0) {
-      const providers = methods.linkedProviders.filter(canOffer);
+      // Never `filter(canOffer)`: Array.filter passes (value, index, array), which landed in
+      // canOfferProvider's optional `platform` / `env` parameters (iPhone bug 2026-10-14).
+      const providers = methods.linkedProviders.filter((provider) => canOffer(provider));
       return providers.length > 0 ? { kind: 'providers', providers } : { kind: 'unavailable' };
     }
     // Neither a password nor a provider (should not exist): use what this device knows.

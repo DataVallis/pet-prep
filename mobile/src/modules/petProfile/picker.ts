@@ -37,8 +37,16 @@ export const PICKER_STRINGS = strings('pet', 'picker', {
   speciesTitle: (name: string) => t('pet:picker.speciesTitle', { name }),
   plans: {
     challenge: {
-      /** "12-tedenski izziv — 49,99 €" — price from the store when known. */
-      title: (price: string) => t('pet:picker.plans.challenge.title', { price }),
+      /**
+       * "12-tedenski izziv — 49,99 €" with the STORE's localized price (`priceString`);
+       * null → "… — …" while loading, else without a number (bug 2026-10-14).
+       */
+      title: (price: string | null, loading = false) =>
+        price !== null
+          ? t('pet:picker.plans.challenge.title', { price })
+          : loading
+            ? t('pet:picker.plans.challenge.titleLoading')
+            : t('pet:picker.plans.challenge.titleNoPrice'),
     },
   },
   lockedA11y: (breed: string) => t('pet:picker.lockedA11y', { breed }),
@@ -55,8 +63,8 @@ export const PICKER_ORIGINS: readonly PetOrigin[] = ['bought', 'adopted'];
 export const PICKER_AGES: readonly LifeStage[] = ['puppy', 'young', 'adult', 'senior'];
 export const PICKER_PLANS: readonly PetPlanType[] = ['free', 'challenge'];
 
-/** Shown in the plan choice until the store price is loaded (PAYMENTS_SPEC P1). */
-export const CHALLENGE_LIST_PRICE = '49,99 €';
+// No list price any more (bug 2026-10-14): the plan choice shows only the store's own
+// localized price; while it loads "…", without one no number (never a currency guess).
 
 type Suitability = components['schemas']['BreedCatalogResource']['suitability'];
 /** "Za koga je primerna" tag keys (M5-R10, backend `config/breed_suitability.php`). */

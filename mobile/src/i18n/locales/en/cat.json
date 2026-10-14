@@ -504,6 +504,7 @@
           "media": "A personalised AI cat with a video for every state"
         },
         "honest": "One-time purchase of {{price}} for one cat. No subscription and no automatic charge: the challenge starts once you buy it. Want to try first? The free domestic cat is free forever.",
+        "honestNoPrice": "One-time purchase for one cat. No subscription and no automatic charge: the challenge starts once you buy it. Want to try first? The free domestic cat is free forever.",
         "petsTitle": "Cats waiting for the challenge",
         "unborn": "Not born yet. Buy the challenge now and the cat starts as soon as the contract is signed.",
         "paused": "The game is paused. The cat is safe and progress is kept.",
@@ -534,6 +535,7 @@
           "media": "A personalised AI pet with a video for every state"
         },
         "honest": "One-time purchase of {{price}} for one pet. No subscription and no automatic charge: the challenge starts once you buy it. Want to try first? The free breeds (mixed breed and domestic cat) are free forever.",
+        "honestNoPrice": "One-time purchase for one pet. No subscription and no automatic charge: the challenge starts once you buy it. Want to try first? The free breeds (mixed breed and domestic cat) are free forever.",
         "petsTitle": "Pets waiting for the challenge",
         "allPaid": "No pet is waiting for a purchase. All challenges are unlocked."
       },

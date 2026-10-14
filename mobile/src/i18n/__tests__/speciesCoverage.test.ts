@@ -350,6 +350,8 @@ describe('payments for a cat (M5-R06-09: paywall, purchase entry, deletion ack)'
     'paywall:challenge.intro',
     'paywall:challenge.includes.media',
     'paywall:challenge.honest',
+    // Bug 2026-10-14: without a store price the honest text has no number.
+    'paywall:challenge.honestNoPrice',
     'paywall:challenge.petsTitle',
     'paywall:challenge.allPaid',
     'paywall:result.restoredNoCredit',

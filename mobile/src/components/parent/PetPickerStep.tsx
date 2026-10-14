@@ -18,7 +18,7 @@
  * Premium breeds need the challenge (server 422 `breed_locked` otherwise); the challenge
  * needs a paid breed (422 `challenge_requires_paid_breed`). Plan, origin and age have no
  * default, and neither has the breed while no plan is chosen — tapping the free breed picks the
- * free plan, so a breed is never ticked without its plan. Price shown honestly: from the store when loaded, else the list price; no
+ * free plan, so a breed is never ticked without its plan. Price shown honestly: only the store's localized price ("…" while loading, no number without it); no
  * automatic charge. Light parent theme (ADR-007). Test IDs keep the M5-R04 names
  * (`dog-picker*`) so existing flows stay stable.
  */
@@ -36,7 +36,6 @@ import {
   breedHint,
   breedLockReason,
   breedsOf,
-  CHALLENGE_LIST_PRICE,
   choiceWithBreed,
   choiceWithPlan,
   choiceWithSpecies,
@@ -77,8 +76,10 @@ interface PetPickerStepProps {
   initial: PickerChoice;
   /** Breeds the server refused for this choice (422 `breed_locked`), on top of the plan rules. */
   serverLockedBreeds?: readonly PetBreed[];
-  /** Store price of the challenge ("49,99 €"), null while unknown → list price. */
+  /** Store price of the challenge, localized by the store ("49,99 €"); null = unknown → no number. */
   challengePrice?: string | null;
+  /** The store price is still loading (→ "…" instead of a number). */
+  challengePriceLoading?: boolean;
   /** A message to show on top (e.g. the server refused the last choice). */
   notice?: string | null;
   onConfirm: (profile: NewPetProfile, choice: PickerChoice) => void;
@@ -132,6 +133,7 @@ function PickerBody({
   initial,
   serverLockedBreeds = [],
   challengePrice = null,
+  challengePriceLoading = false,
   notice = null,
   onConfirm,
   onBack,
@@ -180,7 +182,7 @@ function PickerBody({
   // way out is the free plan — say so instead of "choose a breed" (M5-F03).
   const noOpenBreed = breeds.every((b) => isBreedLocked(b.breed, lockedBreeds));
   const profile = completeChoice(choice, serverLockedBreeds, breeds);
-  const price = challengePrice ?? CHALLENGE_LIST_PRICE;
+  const challengeTitle = S.plans.challenge.title(challengePrice, challengePriceLoading);
   const shown = searchBreeds(breeds, query);
   const listed = visibleBreeds(shown, query, allBreeds, choice.breed);
   // The toggle only without a search (a search always lists every match).
@@ -221,7 +223,7 @@ function PickerBody({
       {PICKER_PLANS.map((plan) => (
         <Option
           key={plan}
-          title={plan === 'challenge' ? S.plans.challenge.title(price) : T.freePlanTitle}
+          title={plan === 'challenge' ? challengeTitle : T.freePlanTitle}
           hint={plan === 'challenge' ? T.challengePlanHint : T.freePlanHint}
           selected={choice.plan === plan}
           onPress={() => {

@@ -41,6 +41,7 @@
       "media": "A personalised AI dog with a video for every state"
     },
     "honest": "One-time purchase of {{price}} for one dog. No subscription and no automatic charge: the challenge starts once you buy it. Want to try first? The free mixed breed is free forever.",
+    "honestNoPrice": "One-time purchase for one dog. No subscription and no automatic charge: the challenge starts once you buy it. Want to try first? The free mixed breed is free forever.",
     "priceEstimate": "The store shows the final price before you pay.",
     "petsTitle": "Dogs waiting for the challenge",
     "petLine": "{{breed}} · {{names}}",

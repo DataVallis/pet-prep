@@ -45,6 +45,7 @@
       "media": "Personaliziran AI pes z videom za vsa stanja"
     },
     "honest": "Enkratni nakup {{price}} za enega psa. Brez naročnine in brez samodejnega plačila: izziv se začne, ko ga kupite. Bi najprej poskusili? Brezplačni mešanček je brezplačen za vedno.",
+    "honestNoPrice": "Enkratni nakup za enega psa. Brez naročnine in brez samodejnega plačila: izziv se začne, ko ga kupite. Bi najprej poskusili? Brezplačni mešanček je brezplačen za vedno.",
     "priceEstimate": "Končno ceno pokaže trgovina pred plačilom.",
     "petsTitle": "Psi, ki čakajo na izziv",
     "petLine": "{{breed}} · {{names}}",

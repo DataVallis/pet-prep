@@ -127,7 +127,10 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
   /** Breeds the server refused for the current choice (422 `breed_locked`); plan rules live in the picker. */
   const [lockedBreeds, setLockedBreeds] = useState<readonly PetBreed[]>([]);
   const offerings = useOfferings();
+  // Only the store's localized price (RevenueCat `priceString`, the user's storefront) — never a
+  // hardcoded or server price (bug 2026-10-14).
   const challengePrice = challengePackage(offerings.data)?.product.priceString ?? null;
+  const challengePriceLoading = challengePrice === null && offerings.isLoading;
   const [pickerNotice, setPickerNotice] = useState<string | null>(null);
   // Lives here, not in PinStep: "Spremeni kužka" / "Nazaj" unmount the PIN step, but the server's
   // PIN stays valid until a new one succeeds — so it is shown again (or reused for the same choice).
@@ -174,6 +177,7 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
           initial={pickerChoice}
           serverLockedBreeds={lockedBreeds}
           challengePrice={challengePrice}
+          challengePriceLoading={challengePriceLoading}
           notice={pickerNotice}
           onBack={(choice) => {
             setPickerChoice(choice);
