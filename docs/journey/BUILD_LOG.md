@@ -238,6 +238,11 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-13 — Curio, maskota PetPrepa, na TikToku
+
+- **Kaj:** znak »Radovednež« iz logotipa je postal 3D lik Curio (DNA, referenčni list, profilna slika). Trije reeli: »Meet Curio«, »Feeding time« in zgodba »The Promise« (Day 1 vs Day 14). Prva dva sta dobila ~350–600 ogledov in skoraj nič sledilcev.
+- **Zakaj je pomembno:** brez zgodbe in brez enotne vloge lika ljudje gledajo, a ne sledijo. Odločitev: Curio je vedno ljubljenček, format je serija z obljubo nadaljevanja.
+- **Za koga:** starši (prepoznavna obljuba otroka), investitorji (organski kanal z nizkimi stroški: slike brezplačno, video ~9 kreditov Higgsfield na posnetek).
 ## 2026-10-13 — Čivava: petnajsta pasma po dvajsetih (M5-R10-33)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **čivavo** (27. mesto; havanski bišon in sibirski haski z 25. in 26. mesta sta že v aplikaciji). Devetindvajseta plačljiva pasma psa; v izbirniku je zdaj 30 psov (z mešančkom). Igra gradi kratkodlako čivavo (1,8–2,7 kg): pol ure gibanja na dan (3.000 korakov za odraslega psa, 2.300 za starejšega), česanje 1× na teden, opozorilo »počakaj s sprehodom« eno uro po obroku in tedenska »Nova izkušnja« za mladička.
