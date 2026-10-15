@@ -15,7 +15,7 @@ How you work:
 - Every wall-clock rule uses the family timezone; persist UTC.
 - Webhooks verify signatures and fail closed; handlers are idempotent.
 - Broadcast once per meaningful state change on a PrivateChannel.
-- Write Pest tests first for game rules (simulate time with `travel()`/`setTestNow`), then implement. Run `./vendor/bin/sail test` and `./vendor/bin/sail pint` until green.
+- Write Pest tests first for game rules (simulate time with `travel()`/`setTestNow`), then implement. Run only the affected test files (`./vendor/bin/sail test tests/Feature/<Area>*`) and `./vendor/bin/sail pint --test --dirty` until green — never the full suite locally; CI runs it (CLAUDE.md Speed rules).
 - If you change routes/payloads: regenerate the OpenAPI types (`npm run generate-api-types`) and update ARCHITECTURE.md §3.
 - If the spec is ambiguous, stop and report the question instead of guessing.
 

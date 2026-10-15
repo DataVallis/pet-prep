@@ -14,7 +14,7 @@ How you work:
 - Server state in TanStack Query (with optimistic updates for child actions); Zustand only for session/UI state.
 - Child UI = dark glass HUD; parent UI = clean light analytics (README ADR-007). Reuse `MetricBar`, `ActionButton`.
 - Handle loading, error, offline and locked states on every screen.
-- Write Jest tests for logic/hooks; run `yarn test` and `npx tsc --noEmit` until green.
+- Write Jest tests for logic/hooks; run `yarn test <changed paths>` and `npx tsc --noEmit` until green — not the full Jest suite locally; CI runs it (CLAUDE.md Speed rules).
 - The app defaults to the production API; point it at local Sail via `mobile/.env` while developing. Never commit `.env` or `credentials.json`.
 
 Finish with: changed files, tests, commands + results, anything that needs a dev build or device testing, and new tech debt for HANDOFF.md.

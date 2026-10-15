@@ -54,7 +54,7 @@ Dev accounts come from `TestUsersSeeder` (`parent@test.com` / `child@test.com`, 
 - Branch from `main`: `feat/M1-07-child-actions`, `fix/M1-01-decay-rounding`, `chore/…`, `docs/…`.
 - Conventional Commits (`feat(backend): add child feed endpoint [M1-07]`). One task per PR.
 - Never commit `.env`, keys, `node_modules/`, `vendor/`, IDE files. Never force-push `main`.
-- **Pre-production autonomy (David, 2026-10-03):** Claude opens a PR per task, waits for green CI (+ independent `qa-reviewer` review for non-trivial code), then **merges it to `main` itself**.
+- **Pre-production autonomy (David, 2026-10-03):** Claude opens a PR per task, waits for green CI (+ one `qa-reviewer` round only for risky areas — see Speed rules), then **merges it to `main` itself**.
 - **Manual production deploys (David, 2026-10-14, DEPLOYMENT.md D18):** a merge to `main` runs CI only and **deploys nothing**. **Production `api.petprep.si` is deployed only when David — or Claude on David's explicit request — runs Actions → CI & Deploy → Run workflow on `main` with target `production`** (`gh workflow run deploy-production.yml --ref main -f target=production`). Never dispatch a production deploy on your own (unattended breed runs included). A merged change reaches users only with the next production deploy (OTA follows it).
 - CI's single gate is the **`CI OK`** check (no branch protection on this plan — the merge helper waits for it). Bring the PR branch up to date with `main` before CI so `main` can skip re-testing the identical tree; "Run workflow" on `main` = full test run (+ production deploy with target `production`) (DEPLOYMENT.md D16, D18).
 - Never merge red CI, never force-push `main`, never merge with unresolved review blockers. Delete nothing in production data without David.
@@ -76,6 +76,14 @@ Keep the claude.ai Project copies (`petprep/*.md`) in sync after merges. No chil
 
 ## Scope guard (MVP)
 Do NOT build: AR, GPS maps, weather API, LLM/vision vet, B2B QR coupons. (Cats are IN scope since 2026-10-07 — species → breed picker, ROADMAP M5-R06 — but need a care spec first; don't build cat rules before David approves it. Multiple parents/children/pets per family is IN scope since 2026-10-04 — see `docs/decisions/ADR-012-family-model.md`.) Post-MVP ideas go to the backlog in `ROADMAP.md`.
+
+## Speed rules (David, 2026-10-15 — "6 h for a small feature is unacceptable")
+- **Tests:** agents run only the tests of the area they touched (the changed test files + their neighbours, e.g. `pest tests/Feature/BreedColour*`, `yarn test src/modules/petProfile`), plus `tsc` / `pint --test --dirty`. **The full Pest / Jest suite runs once, in CI** — never locally "just to be sure" (it takes ~35 min here and CI repeats it anyway). CI green is the gate.
+- **QA review only where risk is real:** auth / sign-in, payments, deletion or export of data, child data / privacy, security, migrations on existing data, money / AI-cost logic. Everything else (UI, copy, small features, docs, breed runs) ships on tests + green CI. Where QA runs: **one round** — fix the blockers/majors, no second full review unless a blocker touched security.
+- **Parallel, not serial:** agree the API contract first, then backend and mobile agents work at the same time.
+- **Small PRs, merge as soon as CI is green;** bring the branch up to date with `main` right before CI, not after.
+- **Docs:** update only the docs whose content really changed (FEATURES for user-visible changes, DECISIONS for decisions, HANDOFF one short line). No doc churn for its own sake.
+- Targets: small task (one screen / one fix) ≤ 45 min from request to merge; medium feature (backend + app) ≤ 2 h.
 
 ## Orchestration
 **Long sessions (David, 2026-10-06):** when a session gets very long (older context already compacted into summaries) or after a larger finished block of work, run `/handoff` so `HANDOFF.md` is complete, then recommend David to start a new session; the new agent starts by reading `HANDOFF.md`.
