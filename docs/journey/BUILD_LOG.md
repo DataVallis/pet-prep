@@ -9,6 +9,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-15 — Baset: enaindvajseta pasma po dvajsetih (M5-R10-39)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **baseta** (34. mesto). Petintrideseta plačljiva pasma psa; v izbirniku je za belgijskim ovčarjem malinois z namigom »česanje 1× na teden«.
+
+**Zakaj je pomembno:** Baset je miren, potrpežljiv družinski pes (PDSA: z otroki se zelo dobro razume), a je hkrati pasma, pri kateri The Royal Kennel Club sodnike na razstavah prosi za posebno pozornost (Breed Watch kategorija 3: veke, predolga ušesa, vnetje kožnih gub, odvečna koža, prekomerna teža). Zato v PetPrepu nosi dve mirni oznaki o dobrobiti, AI pa ga vedno pokaže z zmernimi potezami — brez pretirano dolgih ušes, povešenih vek in globokih gub. Družina pred nakupom vidi tudi nego, ki je vsak dan resnična: kratek sprehod (do ene ure), premor po obroku zaradi nevarnosti zasuka želodca in tedensko česanje.
+
+**Številke:** 7 novih virov (S319–S325) in 1 nov vir za seznam testov vzreditelja (K23), 1 migracija, brez nove oznake, 3 novi ključi zdravja v registru (zavihane veke, glavkom, vnetje kožnih gub), 2 + 6 oznak v izbirniku, 3 zgrajene potrebe z virom (česanje 1× na teden, opozorilo po obroku, socializacija) in 3 v načrtu (pregled kožnih gub, striženje krempljev, pregled ušes in kopanje), dnevni cilj 6.000 korakov (starejši 4.500), meja starejšega psa 90 mesecev (začasno), učenje 0,5×.
+
+**Kako povedati:**
+- 👩 Starši: »Baset je potrpežljiv in rad ima otroke, a rad je in se hitro zredi, potrebuje družbo in vsak dan pregled kožnih gub. V PetPrepu boste videli, ali otrok vsak dan zmore sprehod, počaka po obroku in ga redno počeše, preden se odločite za pravega.«
+- 🧒 Otroci: »Baset ima dolga mehka ušesa in odličen nos. Vsak dan ga pelji na sprehod, po obroku malo počakaj, enkrat na teden ga počeši — in ne pozabi: pri učenju potrebuje več potrpežljivosti!«
+- 💼 Investitorji: »Enaindvajseta pasma, ki jo je sistem sam izbral po javni lestvici AKC; pasme s skrbmi za dobrobit dobijo mirne oznake in AI z zmernimi potezami — brez ugibanja in brez obljub o zdravju.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »Pri basetu PetPrep omenja zavihane veke, glavkom, vnetje kožnih gub, zasuk želodca, bolezen medvretenčnih ploščic, vnetja ušes in prekomerno težo — brez statistik; staršem svetuje, naj vzreditelja vprašajo za uradni DNA-test The Royal Kennel Club za glavkom (POAG).«
+- 📣 Omrežja: baseta **lahko objavljamo** (ni pes s sploščenim obrazom), trobarvnega ali limonasto-belega, z zmernimi ušesi in tesnimi vekami; nikoli s pretirano dolgimi ušesi, povešenimi vekami ali gubami kot »luštno«.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje, opozorilo po obroku in socializacija so samo nove vrstice v `breed_stage_params`; AI videz dobi novo lastnost psa `skin` za zmerne gube; meja starejšega 90 iz spodnje meje The Royal Kennel Club je začasna (na seznamu za Davida).«
+
+---
+
 ## 2026-10-14 — Belgijski ovčar malinois: dvajseta pasma po dvajsetih (M5-R10-38)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **belgijskega ovčarja malinois** (33. mesto). FCI pozna eno pasmo, belgijskega ovčarja, s štirimi sortami; v igri je samo kratkodlaki malinois. Štiriintrideseta plačljiva pasma psa; v izbirniku je za ameriškim koker španjelom z namigom »česanje 2× na teden«.
