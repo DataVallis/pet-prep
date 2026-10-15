@@ -1583,6 +1583,23 @@
       "status": "not_found",
       "tests": [],
       "notes": "RKC breed page (dog-data S314, 2026-10-14) shows the headings 'Priority health schemes and tests' and 'Important health schemes and tests' but returned no named test (tool: 'NO NAMED TESTS'); the new royalkennelclub.com address returned a fetch error. No PDSA Belgian Malinois page. PetMD (dog-data S317) names elbow / hip dysplasia, cataracts and PRA but no test; the SRSH hip / elbow recommendation is only on Wikipedia (dog-data S318, tier C — never alone) → nothing guessed. Show the general dog checklist only."
+    },
+    "basset_hound": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K23",
+        "quote": "The Kennel Club has approved a new official DNA testing scheme for primary open angle glaucoma (POAG) in the Basset Hound"
+      },
+      "tests": [
+        {
+          "key": "dna_poag",
+          "level": "other_scheme",
+          "name": "DNA test for primary open angle glaucoma (POAG) — official Kennel Club DNA testing scheme",
+          "source_id": "K23",
+          "quote": "The Kennel Club has approved a new official DNA testing scheme for primary open angle glaucoma (POAG) in the Basset Hound"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S321, 2026-10-15) shows the headings 'Good Practice schemes and tests' and 'Best Practice schemes and tests' but returned no named test → no minimum / best_practice level. The RKC news item (K23) on the official POAG DNA testing scheme for the breed → other_scheme; PDSA (dog-data S323) names Primary Open Angle Glaucoma among the breed's eye problems. Elbow dysplasia (PDSA) has no breed-specific scheme statement → not listed (nothing guessed)."
     }
   }
 }
