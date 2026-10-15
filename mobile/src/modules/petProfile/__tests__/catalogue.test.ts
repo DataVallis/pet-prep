@@ -150,6 +150,7 @@ describe('readBreedCatalogue', () => {
       'brittany',
       'american_cocker_spaniel',
       'belgian_malinois',
+      'basset_hound',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -419,6 +420,14 @@ describe('readBreedCatalogue', () => {
       suits: ['active_family', 'large_home'],
       consider: ['long_daily_exercise', 'experienced_owner', 'not_for_small_children', 'may_herd_children', 'needs_mental_stimulation', 'needs_company', 'sheds', 'chases_small_pets'],
     });
+    const bh = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'basset_hound');
+    expect(bh).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 350 }));
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-39, runbook rules; no new tag).
+    expect(bh?.search_keywords).toEqual(['basset hound', 'baset', 'basset', 'baset hound', 'baset haund', 'bassett']);
+    expect(bh?.suitability).toEqual({
+      suits: ['family_pet', 'children'],
+      consider: ['eyelid_problems', 'sensitive_skin', 'food_motivated_weight', 'needs_company', 'sheds', 'drools'],
+    });
     const acs = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'american_cocker_spaniel');
     expect(acs).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 330 }));
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-37, runbook rules; no new tag).
@@ -475,6 +484,7 @@ describe('readBreedCatalogue', () => {
       'brittany',
       'american_cocker_spaniel',
       'belgian_malinois',
+      'basset_hound',
     ]);
   });
 });
@@ -658,6 +668,13 @@ describe('breed search', () => {
     expect(find('Bretonski ptičar')).toEqual(['brittany']);
     expect(find('bretonski pticar')).toEqual(['brittany']);
     expect(find('epagneul breton')).toEqual(['brittany']);
+  });
+
+  it('M5-R10-39: finds the Basset Hound by its EN / SL names and as "basset" / "baset"', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('basset hound')).toEqual(['basset_hound']);
+    expect(find('Baset')).toEqual(['basset_hound']);
+    expect(find('basset')).toEqual(['basset_hound']);
   });
 
   it('M5-R10-38: finds the Belgian Malinois by its EN / SL names, with and without the carons, and as "malinois"', () => {

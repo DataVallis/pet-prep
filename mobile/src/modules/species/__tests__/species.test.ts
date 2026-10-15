@@ -144,6 +144,19 @@ describe('readBreed / readSpecies', () => {
     }
   });
 
+  it('M5-R10-39: the Basset Hound is a paid, brushed dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('basset_hound'))).toBe('dog');
+    expect(isDefaultFreeBreed('basset_hound')).toBe(false);
+    expect(hasGroomingRoutine('basset_hound')).toBe(true);
+    expect(breedName('basset_hound')).toBe('Baset');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('basset_hound')).toBe('Basset Hound');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
   it('M5-R10-38: the Belgian Malinois is a paid, brushed dog with its own name', async () => {
     expect(readSpecies(undefined, readBreed('belgian_malinois'))).toBe('dog');
     expect(isDefaultFreeBreed('belgian_malinois')).toBe(false);

@@ -276,6 +276,7 @@ describe('PetPickerStep', () => {
       'breed-option-brittany',
       'breed-option-american_cocker_spaniel',
       'breed-option-belgian_malinois',
+      'breed-option-basset_hound',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -910,6 +911,62 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/\d|%/);
       expect(consider).not.toHaveTextContent(/\d|%/);
       expect(screen.getByTestId('breed-option-american_cocker_spaniel')).toHaveTextContent(/American Cocker Spaniel/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-39: the Basset Hound (fallback) shows its chips, is found as "baset" and "basset", and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const bh = screen.getByTestId('breed-option-basset_hound');
+    expect(bh).toHaveTextContent(/Baset/);
+    expect(bh).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(bh).toHaveTextContent(/česanje 1× na teden/);
+    const suits = screen.getByTestId('breed-suitability-basset_hound-suits');
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    const consider = screen.getByTestId('breed-suitability-basset_hound-consider');
+    expect(consider).toHaveTextContent(/veke in oči/);
+    expect(consider).toHaveTextContent(/občutljiva koža/);
+    expect(consider).toHaveTextContent(/pazite na težo/);
+    expect(consider).toHaveTextContent(/rad ima družbo/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+    expect(consider).toHaveTextContent(/se slini/);
+    expect(suits).not.toHaveTextContent(/veliko hišo z vrtom/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'baset');
+    expect(screen.getByTestId('breed-option-basset_hound')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'basset');
+    expect(screen.getByTestId('breed-option-basset_hound')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-basset_hound'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'basset_hound', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'basset_hound' }),
+    );
+  });
+
+  it('M5-R10-39: the Basset Hound chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-basset_hound-suits');
+      const consider = screen.getByTestId('breed-suitability-basset_hound-consider');
+      expect(suits).toHaveTextContent(/family life/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(consider).toHaveTextContent(/eyelids and eyes/);
+      expect(consider).toHaveTextContent(/sensitive skin/);
+      expect(consider).toHaveTextContent(/watch the weight/);
+      expect(consider).toHaveTextContent(/drools/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-basset_hound')).toHaveTextContent(/Basset Hound/);
     } finally {
       await i18n.changeLanguage('sl');
     }
