@@ -63,6 +63,8 @@ import { useQueryClient } from '@tanstack/react-query';
 import { useAppStore, type WebSocketStatus } from '@/store/appStore';
 import { rememberFamilyTimezone } from '@/modules/session/familyTimezone';
 import { usePetWebSocket } from '@/hooks/usePetWebSocket';
+import ServerUpdatingBanner, { SERVER_UPDATING_STRINGS } from '@/components/ServerUpdatingBanner';
+import { useLongOutage, useServerOutage } from '@/store/serverStatusStore';
 import { applyBroadcastToCache, childPetKey, isRecoverableError, useChildPet } from '@/hooks/queries/useChildPet';
 import { useClean, useFeed, useResolveChewing, useTakeOut, useWater } from '@/hooks/queries/useChildActions';
 import CatCareOverlay from '@/modules/catCare/CatCareOverlay';
@@ -318,7 +320,15 @@ export default function ChildHudScreen() {
     },
     [queryClient],
   );
-  usePetWebSocket(view?.pet.id ?? sessionPet?.id ?? null, onBroadcast);
+  // M5-F13: after a socket reconnect (deploy, network) broadcasts of the gap are lost → refetch.
+  // `cancelRefetch: false`: a fetch already running (recovery refetch) is reused, not restarted.
+  const onResubscribed = useCallback(() => {
+    void queryClient.invalidateQueries({ queryKey: childPetKey }, { cancelRefetch: false });
+  }, [queryClient]);
+  usePetWebSocket(view?.pet.id ?? sessionPet?.id ?? null, onBroadcast, onResubscribed);
+  // M5-F13: the server is updating (deploy) — a calm banner instead of error states.
+  const serverUpdating = useServerOutage();
+  const longOutage = useLongOutage();
 
   const feed = useFeed();
   const water = useWater();
@@ -530,7 +540,31 @@ export default function ChildHudScreen() {
   if (!view) {
     return (
       <View style={[styles.container, styles.centered]}>
-        {petQuery.isError ? (
+        {serverUpdating ? (
+          // M5-F13: no state yet and the server is updating — wait calmly, it loads by itself.
+          <View style={styles.centeredBox} testID="hud-updating">
+            <ActivityIndicator color={palette.mint} />
+            <Text style={styles.centeredText}>{SERVER_UPDATING_STRINGS.title}</Text>
+            {longOutage && (
+              // QA m4: a deploy that doesn't end (or lost internet) is never a dead end.
+              <View style={styles.centeredBox} testID="hud-updating-exit">
+                <Pressable
+                  accessibilityRole="button"
+                  style={({ pressed }) => [styles.retryButton, pressed && styles.pressed]}
+                  onPress={() => {
+                    void petQuery.refetch();
+                  }}
+                >
+                  <Text style={styles.retryText}>{HUD_STRINGS.retry}</Text>
+                </Pressable>
+                <Pressable accessibilityRole="button" onPress={handleLogout} style={styles.linkButton} testID="hud-updating-logout">
+                  <Text style={styles.linkText}>{HUD_STRINGS.logout}</Text>
+                </Pressable>
+                <ParentalGate {...childExit.gateProps} />
+              </View>
+            )}
+          </View>
+        ) : petQuery.isError ? (
           <View style={styles.centeredBox} testID="hud-load-error">
             <WifiOff color={palette.n400} size={32} />
             <Text style={styles.centeredText}>{HUD_STRINGS.loadFailed}</Text>
@@ -601,7 +635,8 @@ export default function ChildHudScreen() {
   const feedDue = !takeOutDue && !cleanDue && !scoopDue && !locked && view.feeding.can_feed;
   const dockIcon = (due: boolean) => (due ? palette.graphite : palette.white);
   const iconSize = compactDock ? 20 : 24;
-  const stale = petQuery.isError;
+  // The deploy banner replaces the amber "no connection" one (never both).
+  const stale = petQuery.isError && !serverUpdating;
   const albumAvailable = hasAlbum(pet.media);
   const mediaPending = isMediaPending(pet.media);
   const showAlbum = isAlbumVisible && !locked && albumAvailable;
@@ -800,6 +835,9 @@ export default function ChildHudScreen() {
           </View>
         </View>
 
+        {serverUpdating && (
+          <ServerUpdatingBanner tone="dark" style={[styles.bannerSlot, { top: layout.bannerTop }]} testID="hud-server-updating" />
+        )}
         {stale && (
           // Left of the metric column (PR #30 review): never covers the bars.
           <View pointerEvents="none" style={[styles.bannerSlot, { top: layout.bannerTop }]} testID="hud-stale-slot">

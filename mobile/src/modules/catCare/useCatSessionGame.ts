@@ -45,7 +45,7 @@ import {
   type CatStartResponse,
   type RefusalContext,
 } from '@/modules/catCare/catCare';
-import { classifyActionError, CHILD_ACTION_STRINGS, lockMessage } from '@/modules/childPet/actionMessages';
+import { classifyActionError, CHILD_ACTION_STRINGS, lockMessage, serverUpdatingActionText } from '@/modules/childPet/actionMessages';
 import type { LockReason } from '@/modules/childPet/childPetView';
 import { familyClock } from '@/modules/childPet/familyTime';
 import { canStillFinish, DEFAULT_CLOCK_SOURCES, SessionClock, TouchTimeMapper, type ClockSources } from '@/modules/training/game';
@@ -157,6 +157,8 @@ export function catFailureText(error: unknown, ctx: RefusalContext): string {
         : catLockMessage(failure.reason, failure.lockedUntil, ctx.timezone);
     case 'offline':
       return CHILD_ACTION_STRINGS.offline;
+    case 'updating':
+      return serverUpdatingActionText();
     case 'throttled':
       return CHILD_ACTION_STRINGS.tooFast;
     case 'failed':

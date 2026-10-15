@@ -127,6 +127,22 @@ describe('usePetChannels', () => {
     expect(status()).toBe('disconnected');
   });
 
+  it('M5-F13: after a reconnect each re-subscribed pet channel reports onResubscribed (dashboard refetch)', () => {
+    const fake = installFakeEcho();
+    const onResubscribed = jest.fn();
+    renderHook(() => usePetChannels([7, 8], jest.fn(), onResubscribed));
+
+    act(() => fake.channels['pet.7'].subscribed?.());
+    act(() => fake.channels['pet.8'].subscribed?.());
+    expect(onResubscribed).not.toHaveBeenCalled();
+
+    act(() => fake.connection.disconnected?.());
+    act(() => fake.channels['pet.7'].subscribed?.());
+    act(() => fake.channels['pet.8'].subscribed?.());
+    expect(onResubscribed.mock.calls).toEqual([[7], [8]]);
+    expect(status()).toBe('connected');
+  });
+
   it('no pets → no connection', () => {
     const fake = installFakeEcho();
     renderHook(() => usePetChannels([], jest.fn()));

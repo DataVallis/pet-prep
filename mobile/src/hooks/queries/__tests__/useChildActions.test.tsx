@@ -10,6 +10,7 @@ import { ApiError, api } from '@/api/client';
 import { useClean, useFeed, useSyncSteps, useWater } from '@/hooks/queries/useChildActions';
 import { applyBroadcastToCache, childPetKey, writeChildState } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
+import { classifyActionError } from '@/modules/childPet/actionMessages';
 import { useAppStore } from '@/store/appStore';
 import { makeBroadcast, makeLiveChildState, makePet } from '@/test-utils/fixtures';
 
@@ -273,5 +274,31 @@ describe('useSyncSteps', () => {
     act(() => result.current.mutate({ stepsToday: 10, recordedAt: '2026-10-04T12:05:00+02:00' }));
     await waitFor(() => expect(result.current.isError).toBe(true));
     expect(cached()?.lock.reason).toBe('hard_stopped');
+  });
+});
+
+describe('M5-F13: child actions during a deploy', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    useAppStore.setState(useAppStore.getInitialState(), true);
+    signInChild();
+  });
+
+  it('a feed answered with a maintenance 503 is sent ONCE (never auto-retried), undone, and the state refetched', async () => {
+    feedPet.mockRejectedValue(new ApiError('Service Unavailable', 503, { message: 'Service Unavailable' }, 15));
+    // The app's real defaults (mutations: no retry option set → TanStack default 0).
+    const client = new QueryClient({ defaultOptions: { queries: { retry: false, gcTime: Infinity }, mutations: { gcTime: Infinity } } });
+    writeChildState(client, makeLiveChildState({ feeding: { can_feed: true } }));
+    const wrapper = ({ children }: { children: ReactNode }) => <QueryClientProvider client={client}>{children}</QueryClientProvider>;
+    const before = client.getQueryData<ChildPetView>(childPetKey)?.pet.hunger_level;
+
+    const { result } = renderHook(() => useFeed(), { wrapper });
+    act(() => result.current.mutate());
+    await waitFor(() => expect(result.current.isError).toBe(true));
+
+    expect(feedPet).toHaveBeenCalledTimes(1);
+    expect(client.getQueryData<ChildPetView>(childPetKey)?.pet.hunger_level).toBe(before);
+    expect(client.getQueryState(childPetKey)?.isInvalidated).toBe(true);
+    expect(classifyActionError(result.current.error)).toEqual({ kind: 'updating' });
   });
 });

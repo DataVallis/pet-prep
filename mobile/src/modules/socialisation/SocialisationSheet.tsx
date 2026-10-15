@@ -14,7 +14,7 @@ import { Dog, MapPin, Sparkles, UserRound, Volume2, X } from 'lucide-react-nativ
 
 import { Text } from '@/components/ui/Text';
 import { useSocialise } from '@/hooks/queries/useSocialise';
-import { classifyActionError } from '@/modules/childPet/actionMessages';
+import { classifyActionError, serverUpdatingActionText } from '@/modules/childPet/actionMessages';
 import {
   SOCIALISATION_STRINGS as S,
   experienceHint,
@@ -97,7 +97,9 @@ export default function SocialisationSheet({
             ? socialisationRefusalText(failure.reason, failure.nextAllowedAt, nowIso, timezone)
             : failure.kind === 'offline'
               ? t('socialisation:errors.offline')
-              : t('socialisation:errors.other');
+              : failure.kind === 'updating'
+                ? serverUpdatingActionText()
+                : t('socialisation:errors.other');
         setOutcome({ kind: 'error', text });
       },
     });

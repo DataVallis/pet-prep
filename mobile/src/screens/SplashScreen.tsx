@@ -7,23 +7,31 @@
 
 import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
-import { WifiOff } from 'lucide-react-native';
+import { RefreshCw, WifiOff } from 'lucide-react-native';
 
 import { BrandLogo } from '@/components/brand/BrandLogo';
 import { fonts, light, radius, tightTracking } from '@/theme';
 import { strings } from '@/i18n/strings';
+import { SERVER_UPDATING_STRINGS } from '@/components/ServerUpdatingBanner';
+import { useLongOutage } from '@/store/serverStatusStore';
 
 /** User-visible strings (`auth:splash`, M1-18). */
 export const SPLASH_STRINGS = strings('auth', 'splash');
 
 interface SplashScreenProps {
   mode: 'restoring' | 'offline';
+  /**
+   * M5-F13: the server answered "updating" (deploy): a calm line instead of "no connection",
+   * the restore retries by itself when the server is back (AppNavigator).
+   */
+  updating?: boolean;
   onRetry?: () => void;
   onLogout?: () => void;
 }
 
-export default function SplashScreen({ mode, onRetry, onLogout }: SplashScreenProps) {
+export default function SplashScreen({ mode, updating = false, onRetry, onLogout }: SplashScreenProps) {
   const S = SPLASH_STRINGS;
+  const longOutage = useLongOutage();
   return (
     <View style={styles.container} testID={`splash-${mode}`}>
       <BrandLogo layout="stacked" width={150} tone="light" testID="splash-logo" />
@@ -33,6 +41,29 @@ export default function SplashScreen({ mode, onRetry, onLogout }: SplashScreenPr
           <ActivityIndicator color={light.ink} style={styles.spinner} />
           <Text style={styles.subtitle}>{S.restoring}</Text>
         </>
+      ) : updating ? (
+        <View style={styles.updatingBox} testID="splash-updating" accessibilityLiveRegion="polite">
+          <View style={styles.offlineRow}>
+            <RefreshCw color={light.mintText} size={20} />
+            <Text style={styles.updatingTitle}>{SERVER_UPDATING_STRINGS.title}</Text>
+          </View>
+          <ActivityIndicator color={light.ink} style={styles.spinner} />
+          {longOutage && (
+            // QA m4: a deploy that doesn't end (or lost internet) is never a dead end.
+            <View style={styles.updatingBox} testID="splash-updating-exit">
+              <Pressable
+                style={({ pressed }) => [styles.primaryButton, pressed && styles.pressed]}
+                onPress={onRetry}
+                accessibilityRole="button"
+              >
+                <Text style={styles.primaryButtonText}>{S.retry}</Text>
+              </Pressable>
+              <Pressable onPress={onLogout} style={styles.linkButton} accessibilityRole="button">
+                <Text style={styles.linkText}>{S.logout}</Text>
+              </Pressable>
+            </View>
+          )}
+        </View>
       ) : (
         <>
           <View style={styles.offlineRow}>
@@ -66,6 +97,8 @@ const styles = StyleSheet.create({
   },
   spinner: { marginTop: 28 },
   subtitle: { marginTop: 10, maxWidth: 320, fontSize: 14, lineHeight: 20, color: light.inkMuted, textAlign: 'center' },
+  updatingBox: { alignItems: 'center', paddingHorizontal: 24 },
+  updatingTitle: { flexShrink: 1, fontSize: 16, fontWeight: '600', color: light.ink, textAlign: 'center' },
   offlineRow: { marginTop: 28, flexDirection: 'row', alignItems: 'center', gap: 8 },
   offlineTitle: { fontFamily: fonts.displayBold, fontSize: 20, letterSpacing: tightTracking(20), color: light.ink },
   primaryButton: {

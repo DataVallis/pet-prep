@@ -9,6 +9,8 @@ import { currentLanguageTag } from '@/i18n';
 import type { components, operations } from '@/api/schema';
 import type { Pet, QuietHours } from '@/types';
 import { CAT_UI_READY } from '@/config/features';
+import { isNetworkFailure, outageCauseForResponse, outageRetryAfterMs } from '@/modules/connectivity/serverOutage';
+import { useServerStatusStore } from '@/store/serverStatusStore';
 
 /**
  * Authenticated user as returned (flat, no `data` wrapper) by `GET /api/user`
@@ -595,7 +597,7 @@ function messageFrom(data: unknown): string | null {
   return null;
 }
 
-/** `Retry-After` header (seconds) — sent by Laravel's throttle middleware with 429. */
+/** `Retry-After` header (seconds) — Laravel's throttle (429) and maintenance mode (`down --retry`, 503). */
 function retryAfterFrom(response: Response): number | null {
   const raw = response.headers?.get?.('Retry-After');
   if (!raw) return null;
@@ -656,14 +658,22 @@ async function apiRequest<T>(
     headers['Authorization'] = `Bearer ${token}`;
   }
 
-  const response = await fetch(`${ENV.API_BASE_URL}${path}`, {
-    method: options.method ?? 'GET',
-    headers,
-    body: options.body ? JSON.stringify(options.body) : undefined,
-    signal: options.signal,
-  });
+  let response: Response;
+  try {
+    response = await fetch(`${ENV.API_BASE_URL}${path}`, {
+      method: options.method ?? 'GET',
+      headers,
+      body: options.body ? JSON.stringify(options.body) : undefined,
+      signal: options.signal,
+    });
+  } catch (error) {
+    // M5-F13: connection refused / reset while the server restarts (or no network).
+    if (isNetworkFailure(error)) useServerStatusStore.getState().noteOutageFailure('network', null);
+    throw error;
+  }
 
   const data = await readJson(response);
+  reportServerAnswer(response, data);
 
   if (!response.ok) {
     if (response.status === 401 && token && unauthorizedHandler) {
@@ -683,13 +693,44 @@ async function apiRequest<T>(
   return data as T;
 }
 
+/**
+ * M5-F13: tell the "Updating PetPrep" banner what the server said. A maintenance 503 /
+ * gateway 502 / 504 counts as an outage; any other answer (also a 401 / 422 / 500) means
+ * the server is up again.
+ */
+function reportServerAnswer(response: Response, data: unknown): void {
+  const store = useServerStatusStore.getState();
+  const cause = outageCauseForResponse(response.status, data);
+  if (cause === null) {
+    store.noteServerAnswered();
+    return;
+  }
+  const seconds = retryAfterFrom(response);
+  store.noteOutageFailure(cause, outageRetryAfterMs({ retryAfterSeconds: seconds }));
+}
+
+/**
+ * M5-F13: is the API answering again? `GET /up` (Laravel's health route: no auth, no
+ * throttle, 503 while in maintenance). Reports to the banner like every request; never throws.
+ */
+export async function probeServer(signal?: AbortSignal): Promise<boolean> {
+  try {
+    const response = await fetch(`${ENV.API_BASE_URL}/up`, { method: 'GET', headers: { Accept: 'application/json' }, signal });
+    reportServerAnswer(response, null);
+    return outageCauseForResponse(response.status, null) === null;
+  } catch (error) {
+    if (isNetworkFailure(error)) useServerStatusStore.getState().noteOutageFailure('network', null);
+    return false;
+  }
+}
+
 /** API error with status code and response body. */
 export class ApiError extends Error {
   constructor(
     message: string,
     public readonly status: number,
     public readonly data?: unknown,
-    /** Seconds until a throttled request may be retried (429 only). */
+    /** Seconds until the request may be retried (`Retry-After`: 429 throttle, 503 maintenance). */
     public readonly retryAfterSeconds: number | null = null,
   ) {
     super(message);
