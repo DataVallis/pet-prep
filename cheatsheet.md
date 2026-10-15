@@ -125,18 +125,30 @@ Nastavitev in obnova: `docs/PRODUCTION_DEPLOYMENT.md` §6b in §7.
 /opt/petprep/scripts/restore-production-db.sh /opt/petprep/backups/<ime_fajla>.sql.gz
 ```
 
-### Ročni zagon deploymenta:
+### Ročni zagon deploymenta (na strežniku, v sili):
 ```bash
 /opt/petprep/scripts/deploy-production.sh [COMMIT_SHA]
+# zadnji CI upload znova, s preverbo strežnika (D18):
+/opt/petprep/incoming/scripts/deploy-production.sh --from /opt/petprep/incoming --expect-domain api.petprep.si <COMMIT_SHA>
+# D19: brez čakajočih migracij ni načina vzdrževanja; vsiliš ga z
+DEPLOY_FORCE_MAINTENANCE=1 /opt/petprep/scripts/deploy-production.sh --expect-domain api.petprep.si
+# Reverb / Caddy se ne zaženeta znova, če se njuni vhodi niso spremenili; ponovni zagon vsiliš z
+DEPLOY_RECREATE_REVERB=1 /opt/petprep/scripts/deploy-production.sh --expect-domain api.petprep.si
+DEPLOY_RECREATE_CADDY=1 /opt/petprep/scripts/deploy-production.sh --expect-domain api.petprep.si
 ```
 
 ---
 
-## 🚀 6. GitHub Actions CI/CD (Samodejni deployment)
+## 🚀 6. GitHub Actions CI/CD (ročni produkcijski deploy, D18)
 
-Ob vsakem `git push origin main` GitHub Actions samodejno:
-1. Požene Pest teste backend aplikacije.
-2. Če testi uspejo, se preko SSH poveže na Hetzner strežnik.
-3. Naloži posodobljeno kodo in požene `deploy-production.sh`.
-4. Izvede migracije, optimizira predpomnilnike in ponovno zažene servise.
-5. Preveri delovanje preko `/up` zdravstvene točke.
+Ob vsakem merge na `main` GitHub Actions samo požene teste (tiste, ki jih sprememba zadeva) — **ne deploya ničesar** in ne pošlje OTA.
+
+**Produkcija (`api.petprep.si`) samo ročno:** GitHub → Actions → **CI & Deploy** → **Run workflow** → veja `main`, target **production** → Run. Ali v terminalu:
+```bash
+gh workflow run deploy-production.yml --ref main -f target=production
+gh run list --workflow deploy-production.yml --limit 3      # stanje
+curl -fsS https://api.petprep.si/up
+```
+Po produkcijskem deployu »Mobile OTA update« sam pošlje OTA na kanal `production` (če se je `mobile/` spremenil od zadnje izdaje). Ročno: Actions → Mobile OTA update → Run workflow → channel `production`.
+
+Podrobno: `docs/PRODUCTION_DEPLOYMENT.md` §4a.

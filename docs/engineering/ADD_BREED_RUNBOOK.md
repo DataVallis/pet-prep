@@ -13,7 +13,8 @@ PetPrep unattended breed run. Repos: DataVallis/pet-prep (and DataVallis/pet-pre
 2. Lock: if any OPEN pet-prep PR has a head branch starting with "feat/M5-R10-", stop and do nothing.
    Otherwise take the lock at once: branch + queue row in-progress + DRAFT PR before any research.
 3. Take the FIRST row with status "todo" in docs/research/BREED_QUEUE.md (one breed per run).
-4. Research, build, test, review, PR, merge on green CI, deploy, portrait, website — per the runbook.
+4. Research, build, test, review, PR, merge on green CI (deploys nothing), portrait (only once the breed is on
+   production — §8), website — per the runbook. Never dispatch a production deploy.
 5. Apply only the runbook's standing decision rules; never ask questions. On a stop condition mark the
    queue row (blocked / needs-david) with the reason and stop.
 6. Never force-push, never merge red CI, never touch production data, app.json identity or CLAUDE.md.
@@ -187,13 +188,21 @@ gh api repos/DataVallis/pet-prep/pulls -f title="feat: <Breed> breed [M5-R10-NN]
 gh api "repos/DataVallis/pet-prep/commits/<sha>/check-runs?per_page=100" --jq '.check_runs[] | select(.name=="CI OK") | "\(.status) \(.conclusion)"'
 # only if conclusion == success:
 gh api -X PUT repos/DataVallis/pet-prep/pulls/<n>/merge -f merge_method=merge --jq '.sha'
-# the merge deploys automatically; wait for the main run of the merge SHA
+# the merge runs CI only (D18) — wait for the main run of the merge SHA to be green
 gh api "repos/DataVallis/pet-prep/actions/runs?branch=main&head_sha=<merge_sha>" --jq '.workflow_runs[] | "\(.id) \(.name) \(.status) \(.conclusion)"'
-gh api repos/DataVallis/pet-prep/actions/runs/<run_id>/jobs --jq '.jobs[] | "\(.name) \(.conclusion)"'   # "Deploy to Hetzner Production" success
 ```
+**Merge ≠ production (D18, David 2026-10-14).** A merge to `main` deploys nothing. A merged breed reaches users only with the **next manual production deploy** (Actions → CI & Deploy → Run workflow → target `production` — David, or Claude only on David's explicit request; an unattended run never dispatches it) and the production OTA that follows it. Until then the website keeps the breed "Kmalu / Coming soon" (§9b, David 2026-10-13) — never claim it is in the app earlier.
 PR body: summary, decisions applied (rule per value), touch points, test counts, review result, the footer lines from the session's attribution reminder. Commit trailers on every commit (Co-Authored-By + Claude-Session from the session's attribution reminder). A failing check: read annotations (`gh api repos/DataVallis/pet-prep/check-runs/<id>/annotations`), fix, push, wait again.
 
-## 8. Portrait (after the deploy succeeded)
+## 8. Portrait (after the breed is on PRODUCTION)
+
+`breed-portraits.yml` runs on the **production** server (its AI Lab budget), so the breed must be in production's code: the breed's merge SHA is an ancestor of the last successful production deploy —
+```bash
+prod=$(gh api "repos/DataVallis/pet-prep/actions/workflows/deploy-production.yml/runs?branch=main&status=success&per_page=30" --jq '.workflow_runs[] | "\(.id) \(.head_sha)"' \
+  | while read -r id sha; do [ "$(gh api repos/DataVallis/pet-prep/actions/runs/$id/jobs --jq '[.jobs[] | select(.name=="Deploy to Hetzner Production" and .conclusion=="success")] | length')" -gt 0 ] && { echo "$sha"; break; }; done)
+git fetch origin && git merge-base --is-ancestor <merge_sha> "$prod" && echo "on production"
+```
+Not yet on production → **skip §8** (do not dispatch a production deploy), set the queue row to `done` with "portrait pending production deploy", and the first unattended run after the next production deploy does the portrait of every such row before its own breed. On production →
 
 ```bash
 gh api -X POST repos/DataVallis/pet-prep/actions/workflows/breed-portraits.yml/dispatches -f ref=main -f 'inputs[breeds]=<key>'
@@ -233,7 +242,7 @@ The website must say "in the app" only for what users really have. `docs/researc
 - **OTA:** `mobile-ota.yml` records it itself after an update reached iOS **and** Android (bot commit `chore(release): record OTA …` on `main`).
 - **Store build:** when David says which commit his EAS production build came from: `node scripts/record-app-release.mjs --kind store --commit <sha>` → re-export → PR.
 - **Every unattended run, before §1:** if `inputs.app_release.sha256` in the website's `src/content/registry/registry.json` differs from the export's, sync the website first: branch `chore/register-app-release-<date>`, re-export into the website (§9 command), build, PR, merge on green.
-- A breed merged in a run stays "Kmalu / Coming soon" on the site until the next release — that is correct, not a bug.
+- A breed merged in a run stays "Kmalu / Coming soon" on the site until the next release — that is correct, not a bug. Since D18 a production OTA is published only after a manual production deploy (or a manual OTA run with channel `production`); merges publish no OTA.
 
 ## 10. Queue and report
 

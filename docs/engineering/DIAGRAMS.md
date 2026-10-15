@@ -1060,28 +1060,33 @@ flowchart LR
   PR --> CI4["Production image (M4-05b)<br/>hadolint · build app + web · caddy validate · smoke"]
   REV --> M[Merge to main]
   CI3 & CI4 --> M
-  M --> DEP["Deploy job<br/>rsync → incoming/ → deploy-production.sh"]
+  M --> CIM["CI on main only<br/>(no deploy, no OTA — D18)"]
+  RW["David: Actions → CI & Deploy → Run workflow<br/>main · target production"] --> DEP["Deploy to Hetzner Production<br/>rsync → incoming/ → deploy-production.sh<br/>--expect-domain api.petprep.si"]
   DEP --> PROD[(api.petprep.si)]
+  DEP -.-> OTA["Mobile OTA channel production<br/>(mobile/ changed since the last release)"]
 ```
 
 ### 7a. deploy-production.sh (M2-01 / PR #24 / M4-05b)
 
 ```mermaid
 flowchart TD
-  A["1 env preflight<br/>(no git / docker before)"] --> B["2 record previous release<br/>.deployed-sha + releases/previous"]
+  A["1 env preflight<br/>(no git / docker before)<br/>server identity from APP_URL: API domain + Caddy sites<br/>--expect-domain mismatch → exit, nothing changed (D18)"] --> B["2 record previous release<br/>.deployed-sha + releases/previous"]
   B --> C["3 buildx preflight · build petprep-app:next + petprep-web:next<br/>from the NEW tree (incoming/ or git archive)"]
   C --> D["smoke: run --rm app php artisan optimize<br/>(new image, production env)"]
   D --> ST["storage: chown -R 1000:1000 as root (new image)<br/>verify writable as uid 1000"]
   C -- fails --> X0["exit ≠ 0 · nothing changed<br/>old release keeps serving"]
   D -- fails --> X0
   ST -- fails --> X0
-  ST --> E["4 artisan down (old code, exec --user 1000)"] --> F["5 pg_dump backup"] --> G["6 code switch repo/<br/>promote :production→:previous, :next→:production"]
+  ST --> PM{"3b migrate:status --pending=3<br/>(new image, live DB) — D19"}
+  PM -- "3 pending / error" --> E["4 artisan down (old code, exec --user 1000)"] --> F["5 pg_dump backup"]
+  PM -- "0 none: no maintenance" --> F
+  F --> G["6 code switch repo/<br/>promote :production→:previous, :next→:production"]
   G --> H{"Caddyfile changed?"}
   H -- yes --> HV["caddy validate (new image)"]
   H -- no --> I
   HV --> I["7 postgres/redis · migrate --force"]
-  I --> J["8 up -d app reverb queue queue-broadcasts scheduler caddy<br/>(entrypoint: per-container caches)<br/>+ force-recreate caddy if Caddyfile changed"]
-  J --> K["re-chown storage (warn-only) · wait: php-fpm-ping"] --> L["queue:restart"] --> M2["9 artisan up (3×)"] --> N["health /up through Caddy (5×)<br/>--resolve api.petprep.si:443 → IP site fallback"]
+  I --> J["8 up -d app reverb queue queue-broadcasts scheduler caddy<br/>(entrypoint: per-container caches)<br/>no maintenance: queue + queue-broadcasts + scheduler first (D19)<br/>reverb / caddy not restarted (--no-deps) when releases/{reverb,caddy}.fingerprint matches<br/>caddy lb_try_duration 10s holds requests during the app swap<br/>+ force-recreate caddy if Caddyfile changed"]
+  J --> K["re-chown storage (warn-only) · wait: php-fpm-ping"] --> L["queue:restart"] --> M2["9 artisan up (3×; one idempotent up without maintenance)"] --> N["health /up through Caddy (5×)<br/>--resolve API domain:443 → IP site fallback (production only)"]
   N --> O["image prune (dangling) · builder prune (> 7 days, keep 5 GB)"]
   G & HV & I -- "fails (pre-migration)" --> R1["revert code + images (:previous→:production)<br/>restart workers · artisan up"]
   J & K & N -- "fails (post-migration)" --> R2["keep new release (schema is new)<br/>up -d · restart workers · artisan up · loud error"]

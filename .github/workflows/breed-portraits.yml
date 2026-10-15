@@ -4,6 +4,9 @@
 # AI Lab budget. Nothing is published: after a run, download the artifact, review
 # the images, commit them to docs/research/breed-portraits/ and run
 # scripts/export-breed-registry.mjs --copy-portraits <website>/public (HANDOFF.md, M5-R11-04).
+# Needs the breed in production's code: since D18 (David 2026-10-14) a merge to main deploys
+# nothing, so the breed must have gone out with a manual production deploy
+# (CI & Deploy → Run workflow → target production) first (ADD_BREED_RUNBOOK §7–8).
 name: Breed portraits (AI, production server)
 
 on:
@@ -32,6 +35,9 @@ permissions:
 jobs:
   portraits:
     runs-on: ubuntu-latest
+    # Production SSH key: from the `production` environment once David moves the secrets
+    # there (DEPLOYMENT.md D20); repository secrets keep working until then.
+    environment: production
     timeout-minutes: 30
     steps:
       - name: Generate on the production server
