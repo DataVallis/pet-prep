@@ -413,6 +413,30 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "basset_hound",
+            "species": "dog",
+            "file": "dog/basset-hound.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:a189921cee18b747a1db6ac919c203f3b65e7cb89a73cd4cf4eb8b32341f28f0",
+            "generated_at": "2026-10-15T07:30:43+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "hungarian_vizsla",
+            "species": "dog",
+            "file": "dog/hungarian-vizsla.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:e3522f95b5345b0902f15d14802c007476e75cdd98daae48237be4576ed37906",
+            "generated_at": "2026-10-15T07:31:02+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",

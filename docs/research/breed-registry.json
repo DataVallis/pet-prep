@@ -57,7 +57,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "48fe8148b04ff5899d33ddbd6495a5ceb393b3217d308dc9175dc52c812bbae2"
+      "sha256": "7fef2fd9f8e1d501d6f175bd05d4976328dcb3403a65dfe4cab3ce5afaed26f8"
     }
   },
   "suitability_vocabulary": {
@@ -21135,7 +21135,12 @@
           "S321"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "basset-hound.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
@@ -21761,7 +21766,12 @@
           "S328"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "hungarian-vizsla.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
