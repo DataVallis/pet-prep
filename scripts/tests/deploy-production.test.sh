@@ -177,7 +177,7 @@ check "storage verified as uid 1000 in the NEW image" called 'PETPREP_IMAGE_TAG=
 check "chown after the smoke test" before 'artisan optimize' 'entrypoint chown'
 check "chown + verify before maintenance" before 'entrypoint sh app -c' 'artisan down'
 check "re-chown after up -d (old containers gone)" after_last 'entrypoint chown app' 'up -d --remove-orphans app'
-check "build cache pruned with a keep limit" called 'builder prune -f --filter until=168h --keep-storage 5GB'
+check "build cache pruned with a keep limit" called 'builder prune -af --keep-storage 2GB'
 check "images built from the NEW tree as :next" called 'PETPREP_IMAGE_TAG=next .*incoming/backend/compose.production.yaml --env-file .* build app caddy'
 check "smoke test (artisan optimize) on the :next image" called 'PETPREP_IMAGE_TAG=next .*incoming/backend/compose.production.yaml .*run --rm --no-deps -T app php artisan optimize'
 check "build BEFORE maintenance mode" before 'build app caddy' 'artisan down'
