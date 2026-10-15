@@ -10,8 +10,8 @@
 
 import { useEffect, useRef } from 'react';
 
-import { createBroadcastGate, createEcho, type BroadcastHandler } from '@/hooks/usePetWebSocket';
-import { petChannelName, PET_UPDATED_EVENT } from '@/modules/realtime/echoConfig';
+import { createBroadcastGate, createEcho, type BroadcastHandler, type ResubscribeHandler } from '@/hooks/usePetWebSocket';
+import { createSubscriptionTracker, petChannelName, PET_UPDATED_EVENT } from '@/modules/realtime/echoConfig';
 import { useAppStore, type WebSocketStatus } from '@/store/appStore';
 import type { PetUpdatedBroadcast } from '@/types';
 
@@ -29,9 +29,11 @@ function idsKey(petIds: number[]): string {
   return [...new Set(petIds)].sort((a, b) => a - b).join(',');
 }
 
-export function usePetChannels(petIds: number[], onBroadcast: BroadcastHandler): void {
+export function usePetChannels(petIds: number[], onBroadcast: BroadcastHandler, onResubscribed?: ResubscribeHandler): void {
   const handlerRef = useRef<BroadcastHandler>(onBroadcast);
   handlerRef.current = onBroadcast;
+  const resubscribedRef = useRef<ResubscribeHandler | undefined>(onResubscribed);
+  resubscribedRef.current = onResubscribed;
   const setWsStatus = useAppStore((s) => s.setWsStatus);
   const key = idsKey(petIds);
 
@@ -51,10 +53,12 @@ export function usePetChannels(petIds: number[], onBroadcast: BroadcastHandler):
     publish();
 
     let echo: ReturnType<typeof createEcho> | null = null;
+    let active = true;
     try {
-      echo = createEcho();
+      echo = createEcho({ isActive: () => active });
       for (const id of ids) {
         const passes = createBroadcastGate();
+        const tracker = createSubscriptionTracker();
         const channel = echo.private(petChannelName(id));
         channel.listen(PET_UPDATED_EVENT, (event: PetUpdatedBroadcast) => {
           if (passes(event)) handlerRef.current(event);
@@ -63,6 +67,8 @@ export function usePetChannels(petIds: number[], onBroadcast: BroadcastHandler):
         channel.subscribed(() => {
           statuses.set(id, 'connected');
           publish();
+          // M5-F13: a re-subscription after a reconnect — events of the gap are lost.
+          if (tracker.subscribed()) resubscribedRef.current?.(id);
         });
         channel.error(() => {
           statuses.set(id, 'reconnecting');
@@ -78,6 +84,7 @@ export function usePetChannels(petIds: number[], onBroadcast: BroadcastHandler):
     }
 
     return () => {
+      active = false;
       try {
         if (echo) {
           for (const id of ids) echo.leave(petChannelName(id));

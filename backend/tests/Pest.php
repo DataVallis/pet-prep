@@ -1,15 +1,18 @@
 <?php
 
+use App\Models\AppSetting;
 use App\Models\FamilyMember;
 use App\Models\Pet;
 use App\Models\QuietHours;
 use App\Models\User;
+use App\Services\AppSettingsService;
 use App\Services\BehaviourEventService;
 use App\Services\HygieneEventService;
 use Database\Seeders\BreedConfigsSeeder;
 use Database\Seeders\BreedStageParamsSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Routing\Middleware\ThrottleRequests;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Tests\TestCase;
 
@@ -280,4 +283,17 @@ function fakeFalImageRun(string $endpoint = 'fal-ai/nano-banana-pro', ?string $b
     ]);
 
     return $url;
+}
+
+/**
+ * M5-R21: the admin switch "unique AI media per pet" (default off = paid
+ * breeds share the media of their breed + colour).
+ */
+function useUniquePetMedia(bool $on): void
+{
+    AppSetting::updateOrCreate(
+        ['key' => AppSettingsService::UNIQUE_MEDIA_KEY],
+        ['value' => ['enabled' => $on]],
+    );
+    Cache::forget(AppSettingsService::cacheKey(AppSettingsService::UNIQUE_MEDIA_KEY));
 }

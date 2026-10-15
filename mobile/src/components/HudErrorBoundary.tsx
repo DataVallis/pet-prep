@@ -12,6 +12,7 @@
  * callback outside React is still fatal; keep those callbacks free of throws.
  */
 
+import ParentExitLink from '@/components/ParentExitLink';
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
@@ -69,6 +70,8 @@ export default class HudErrorBoundary extends Component<Props, State> {
             >
               <Text style={styles.buttonText}>{HUD_ERROR_STRINGS.retry}</Text>
             </Pressable>
+            {/* David 2026-10-14: a parent can still sign the child out (parental gate). */}
+            <ParentExitLink testID="hud-error-parent-exit" />
           </View>
         </View>
       );

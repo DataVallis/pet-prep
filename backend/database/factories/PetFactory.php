@@ -419,6 +419,96 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a Miniature American Shepherd (paid breed, M5-R10-32).
+     */
+    public function miniatureAmericanShepherd(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::MiniatureAmericanShepherd->value,
+        ]);
+    }
+
+    /**
+     * Indicate the pet is a Chihuahua (paid breed, M5-R10-33).
+     */
+    public function chihuahua(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::Chihuahua->value,
+        ]);
+    }
+
+    /**
+     * Indicate the pet is an English Springer Spaniel (paid breed, M5-R10-34).
+     */
+    public function englishSpringerSpaniel(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::EnglishSpringerSpaniel->value,
+        ]);
+    }
+
+    /**
+     * Indicate the pet is a Shetland Sheepdog (paid breed, M5-R10-35).
+     */
+    public function shetlandSheepdog(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::ShetlandSheepdog->value,
+        ]);
+    }
+
+    /**
+     * Indicate the pet is a Brittany (paid breed, M5-R10-36).
+     */
+    public function brittany(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::Brittany->value,
+        ]);
+    }
+
+    /**
+     * Indicate the pet is an American Cocker Spaniel (paid breed, M5-R10-37).
+     */
+    public function americanCockerSpaniel(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::AmericanCockerSpaniel->value,
+        ]);
+    }
+
+    /**
+     * Indicate the pet is a Belgian Malinois (paid breed, M5-R10-38).
+     */
+    public function belgianMalinois(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::BelgianMalinois->value,
+        ]);
+    }
+
+    /**
+     * Indicate the pet is a Basset Hound (paid breed, M5-R10-39).
+     */
+    public function bassetHound(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::BassetHound->value,
+        ]);
+    }
+
+    /**
+     * Indicate the pet is a Hungarian Vizsla (paid breed, M5-R10-40).
+     */
+    public function hungarianVizsla(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::HungarianVizsla->value,
+        ]);
+    }
+
+    /**
      * Indicate the pet is a British Shorthair (paid cat breed, M5-R10-14; species follows the breed).
      */
     public function britishShorthair(): static

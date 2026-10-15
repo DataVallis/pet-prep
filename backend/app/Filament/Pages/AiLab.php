@@ -11,6 +11,7 @@ use App\Models\MediaLabResult;
 use App\Models\MediaLabRun;
 use App\Models\User;
 use App\Services\Media\AiCallException;
+use App\Services\Media\AiSpendGuard;
 use App\Services\Media\MediaEntitlementService;
 use App\Services\Media\MediaLabService;
 use App\Services\Media\MediaProfiles;
@@ -302,7 +303,7 @@ class AiLab extends Page implements HasForms
             return '—';
         }
 
-        return sprintf('~$%.3f (lab limit per run $%.2f)', $usd, (float) config('media.lab.max_run_usd', 3));
+        return sprintf('~$%.3f (lab limit per run $%.2f)', $usd, app(AiSpendGuard::class)->labMaxRunUsd());
     }
 
     /**
@@ -360,7 +361,9 @@ class AiLab extends Page implements HasForms
 
             $state = $pool->enabled() ? 'on' : 'OFF (new free pets get a unique look)';
 
-            return "Pool {$state}. A free pet whose look already has its stage's media costs ~\$0. ".implode(' | ', $lines);
+            $shared = sprintf('Paid breeds: %d shared looks (breed + colour, not counted above).', $pool->sharedCount());
+
+            return "Pool {$state}. A free pet whose look already has its stage's media costs ~\$0. ".implode(' | ', $lines).' '.$shared;
         } catch (InvalidArgumentException) {
             return '—';
         }

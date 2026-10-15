@@ -3,12 +3,15 @@
 namespace App\Services;
 
 use App\Enums\FamilyRole;
+use App\Enums\SocialProvider;
 use App\Enums\Species;
 use App\Enums\UserRole;
 use App\Events\PetUpdated;
 use App\Exceptions\AccountDeletionException;
+use App\Exceptions\SocialAuthException;
 use App\Jobs\DeleteCertificateFiles;
 use App\Jobs\DeletePetMediaFiles;
+use App\Jobs\RevokeAppleTokenJob;
 use App\Models\AiSpendLedger;
 use App\Models\ChildLoginPin;
 use App\Models\Family;
@@ -19,6 +22,9 @@ use App\Models\PetCaretaker;
 use App\Models\PetContract;
 use App\Models\QuietHours;
 use App\Models\User;
+use App\Models\UserSocialAccount;
+use App\Services\Auth\SocialIdentity;
+use App\Services\Auth\SocialTokenVerifier;
 use App\Services\Push\PushDeviceService;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Collection;
@@ -63,6 +69,9 @@ use Laravel\Sanctum\PersonalAccessToken;
  *
  * Password confirmation is throttled per scope (account / child) and counts
  * only FAILED attempts: PASSWORD_ATTEMPTS per PASSWORD_DECAY_SECONDS per user.
+ * A parent without a password (social sign-in, M2-10c) confirms instead with
+ * a fresh ID token of a linked provider (confirmIdentity); failures count in
+ * the same limiter.
  *
  * Late work for deleted pets is harmless by design: queued media jobs find no
  * pet / slot and return; a late fal webhook matches the ledger row (slot gone)
@@ -90,6 +99,88 @@ class AccountDeletionService
 
     public const SCOPE_CHILD = 'child';
 
+    /** M2-10c: a re-authentication token must be at most this old (`iat`). */
+    public const REAUTH_MAX_AGE_SECONDS = 600;
+
+    /**
+     * Confirm an irreversible deletion (M2-08 / M2-10c).
+     *
+     * - The parent has a password → the password decides, exactly as before
+     *   (provider fields are ignored).
+     * - No password (signed up with Google / Apple) and an `id_token` sent →
+     *   the token must verify, belong to a provider identity LINKED to this
+     *   parent and be fresh (`iat` ≤ 10 min old); otherwise 422
+     *   `reauth_required` (the app re-runs the provider sign-in). Counted in the
+     *   same 5 / 15 min limiter as wrong passwords. Provider down / disabled →
+     *   503 `provider_unavailable` / `provider_disabled` (not counted).
+     * - No password and no token → the password path → `invalid_password`.
+     *
+     * Makes external HTTP (provider keys) — call it before any transaction.
+     *
+     * @return SocialIdentity|null the verified provider identity (social path), null for the password path
+     *
+     * @throws AccountDeletionException
+     */
+    public function confirmIdentity(
+        User $user,
+        ?string $password,
+        ?SocialProvider $provider,
+        ?string $idToken,
+        ?string $nonce,
+        string $scope,
+    ): ?SocialIdentity {
+        if ($user->hasPassword() || $provider === null || $idToken === null || $idToken === '') {
+            $this->confirmPassword($user, (string) $password, $scope);
+
+            return null;
+        }
+
+        $key = "deletion-password:{$scope}:{$user->id}";
+        $this->assertNotLockedOut($key);
+
+        try {
+            $identity = app(SocialTokenVerifier::class)->verify($provider, $idToken, $nonce);
+        } catch (SocialAuthException $e) {
+            if (in_array($e->reason, [SocialAuthException::PROVIDER_DISABLED, SocialAuthException::PROVIDER_UNAVAILABLE], true)) {
+                throw new AccountDeletionException($e->reason, $e->getMessage(), $e->status);
+            }
+            $this->failReauth($key);
+        }
+
+        $linked = UserSocialAccount::where('user_id', $user->id)
+            ->where('provider', $identity->provider->value)
+            ->where('subject', $identity->subject)
+            ->exists();
+        $fresh = $identity->issuedAt->getTimestamp() >= now()->getTimestamp() - self::REAUTH_MAX_AGE_SECONDS;
+
+        if (! $linked || ! $fresh) {
+            $this->failReauth($key);
+        }
+
+        RateLimiter::clear($key);
+
+        return $identity;
+    }
+
+    private function assertNotLockedOut(string $key): void
+    {
+        if (RateLimiter::tooManyAttempts($key, self::PASSWORD_ATTEMPTS)) {
+            throw new AccountDeletionException(
+                'too_many_attempts',
+                'Too many wrong passwords. Please try again later.',
+                429,
+                RateLimiter::availableIn($key),
+            );
+        }
+    }
+
+    private function failReauth(string $key): never
+    {
+        RateLimiter::hit($key, self::PASSWORD_DECAY_SECONDS);
+
+        throw new AccountDeletionException('reauth_required', 'Please sign in again with your provider to confirm.', 422);
+    }
+
     /**
      * Check the parent's password before an irreversible deletion. Only wrong
      * passwords count against the limit (a success clears it).
@@ -99,17 +190,10 @@ class AccountDeletionService
     public function confirmPassword(User $user, string $password, string $scope): void
     {
         $key = "deletion-password:{$scope}:{$user->id}";
+        $this->assertNotLockedOut($key);
 
-        if (RateLimiter::tooManyAttempts($key, self::PASSWORD_ATTEMPTS)) {
-            throw new AccountDeletionException(
-                'too_many_attempts',
-                'Too many wrong passwords. Please try again later.',
-                429,
-                RateLimiter::availableIn($key),
-            );
-        }
-
-        // A parent without a password (admin-created / legacy) cannot confirm —
+        // A parent without a password (social sign-in / admin-created / legacy)
+        // cannot confirm with one —
         // same answer as a wrong password.
         if ($user->password === null || ! Hash::check($password, $user->password)) {
             RateLimiter::hit($key, self::PASSWORD_DECAY_SECONDS);
@@ -128,16 +212,58 @@ class AccountDeletionService
      * `$acknowledgePaidChallenge` (M3-11 P5): required when a deleted pet has
      * a paid, unfinished challenge (the purchase stays used).
      *
+     * `$appleAuthorizationCode` (M2-10c, App Store 5.1.1(v)): when the parent
+     * had a linked Apple identity and the app sent the sign-in's code, a
+     * RevokeAppleTokenJob is queued (queue `auth`) after the deletion commits
+     * (it no-ops without a configured Apple key). `$appleClientId` = the `aud`
+     * of the Apple token verified for this deletion (the client id the code
+     * was issued to); the job also gets the linked Apple subject to compare
+     * with Apple's answer. Apple-linked without a code (older app) → only a
+     * neutral log line. Admin / Filament deletions have no code → no revocation.
+     *
      * @throws AccountDeletionException not_a_parent (403), superadmin_protected (403),
      *                                  paid_challenge_ack_required (422)
      */
-    public function deleteParentAccount(User $parent, bool $acknowledgePaidChallenge = false): array
-    {
+    public function deleteParentAccount(
+        User $parent,
+        bool $acknowledgePaidChallenge = false,
+        ?string $appleAuthorizationCode = null,
+        ?string $appleClientId = null,
+    ): array {
         if (! $parent->isParent()) {
             throw new AccountDeletionException('not_a_parent', 'Only a parent account can be deleted here.', 403);
         }
         $this->assertNotSuperadmin($parent);
 
+        // Read before the rows cascade away with the user.
+        $appleSubject = UserSocialAccount::where('user_id', $parent->id)
+            ->where('provider', SocialProvider::Apple->value)
+            ->orderBy('id')
+            ->value('subject');
+        $appleLinked = is_string($appleSubject) && $appleSubject !== '';
+
+        $summary = $this->deleteParentAccountRows($parent, $acknowledgePaidChallenge);
+
+        if ($appleLinked && $summary['parents_deleted'] > 0) {
+            if ($appleAuthorizationCode !== null && $appleAuthorizationCode !== '') {
+                // After commit (the transaction above is closed; afterCommit also
+                // holds when a caller wraps this in its own transaction).
+                RevokeAppleTokenJob::dispatch($appleAuthorizationCode, $appleClientId, $appleSubject)
+                    ->onQueue(RevokeAppleTokenJob::QUEUE)
+                    ->afterCommit();
+            } else {
+                Log::info('Apple token revocation skipped: no authorization code sent with the deletion.');
+            }
+        }
+
+        return $summary;
+    }
+
+    /**
+     * @return array{scope: 'family'|'parent', family_deleted: bool, parents_deleted: int, children_deleted: int, pets_deleted: int}
+     */
+    private function deleteParentAccountRows(User $parent, bool $acknowledgePaidChallenge): array
+    {
         return DB::transaction(function () use ($parent, $acknowledgePaidChallenge): array {
             $familyId = FamilyMember::where('user_id', $parent->id)->value('family_id');
 
@@ -562,6 +688,9 @@ class AccountDeletionService
         // of a deleted account, even from a send job already queued.
         app(PushDeviceService::class)->removeForUsers($userIds);
         PersonalAccessToken::where('tokenable_type', User::class)->whereIn('tokenable_id', $userIds)->delete();
+        // M2-11: child sessions these users opened on a shared phone die with
+        // them (a parent leaving a family keeps no way into its children).
+        $this->deleteSharedChildSessions($userIds);
         DB::table('sessions')->whereIn('user_id', $userIds)->delete();
 
         $emails = User::whereIn('id', $userIds)->whereNotNull('email')->pluck('email')->all();
@@ -570,6 +699,22 @@ class AccountDeletionService
         }
 
         User::whereIn('id', $userIds)->delete();
+    }
+
+    /**
+     * Delete the shared-phone child sessions (M2-11) opened by these parents:
+     * child tokens named `shared:p{parentId}:…` (ChildPinLoginService).
+     *
+     * @param  list<int>  $parentIds
+     */
+    private function deleteSharedChildSessions(array $parentIds): void
+    {
+        foreach ($parentIds as $parentId) {
+            $prefix = addcslashes(ChildPinLoginService::SHARED_TOKEN_PREFIX.$parentId.':', '\\%_');
+            PersonalAccessToken::where('tokenable_type', User::class)
+                ->where('name', 'like', $prefix.'%')
+                ->delete();
+        }
     }
 
     private function assertNotSuperadmin(User $user): void

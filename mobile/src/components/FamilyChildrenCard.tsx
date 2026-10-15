@@ -1,7 +1,8 @@
 /**
  * The family's children for the parent (M2-01a slice, M2-02): nickname, pet,
  * signed-in devices, and per child "Nova koda za prijavo" / "Odjavi vse naprave" /
- * "Izbriši profil" (M2-08: consequences, password + the confirmation word). Signing out and
+ * "Izbriši profil" (M2-08: consequences, password — or a Google / Apple re-sign-in for a
+ * parent without one, M2-10c — + the confirmation word). Signing out and
  * deleting ask for confirmation inline (no native alert). "Dodaj otroka" is
  * always offered (several children per family; backend limit 10).
  * Light parent theme (ADR-007).
@@ -12,6 +13,7 @@ import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { KeyRound, LogOut, Smartphone, Trash2, UserPlus, Users } from 'lucide-react-native';
 
+import type { DeletionProof } from '@/api/client';
 import DeletionConfirmForm from '@/components/parent/DeletionConfirmForm';
 import { useDeleteChild, useRevokeChildDevices } from '@/hooks/queries/useFamilyMutations';
 import {
@@ -79,10 +81,10 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
     setDeletingId(child.id);
   };
 
-  const confirmDelete = (child: FamilyChild, password: string, acknowledgePaidChallenge: boolean) => {
+  const confirmDelete = (child: FamilyChild, proof: DeletionProof, acknowledgePaidChallenge: boolean) => {
     setDeleteError(null);
     removeChild.mutate(
-      { childId: child.id, password, acknowledgePaidChallenge },
+      { childId: child.id, proof, acknowledgePaidChallenge },
       {
         onSuccess: () => {
           setDeletingId(null);
@@ -172,7 +174,7 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
                 }}
                 paidChallenge={paidRequired === child.id || deletionLosesPurchase(petsDeletedWithChild(child, family), billing.data)}
                 paidPetGroup={paidDeletionGroup(petsDeletedWithChild(child, family), family, billing.data)}
-                onSubmit={(password, ack) => confirmDelete(child, password, ack)}
+                onSubmit={(proof, ack) => confirmDelete(child, proof, ack)}
                 testID={`child-delete-form-${child.id}`}
               />
             ) : isConfirming ? (

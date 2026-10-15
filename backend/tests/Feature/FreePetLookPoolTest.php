@@ -247,8 +247,9 @@ describe('pool fill', function () {
             ->and($a->pet_dna['trait_fingerprint'])->not->toBe($b->pet_dna['trait_fingerprint']);
     });
 
-    it('keeps the unique DNA for a paid breed, a legacy-profile pet and with the pool switched off', function () {
+    it('keeps the unique DNA for a paid breed (unique media switched on, M5-R21), a legacy-profile pet and with the pool switched off', function () {
         config(['services.fal_ai.key' => null]);
+        useUniquePetMedia(true); // M5-R21: off (default) → a paid breed shares the look of its breed + colour
 
         $collie = lpPet(null, 'border_collie', 'young');
         expect($collie->pet_look_id)->toBeNull()

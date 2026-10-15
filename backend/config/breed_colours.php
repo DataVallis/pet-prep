@@ -1,0 +1,294 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Breed colours for the parent's colour picker (M5-R21, David 2026-10-14)
+|--------------------------------------------------------------------------
+|
+| Per PAID breed (keyed by App\Enums\BreedType value) the coat colours a parent
+| may pick for a new pet: `key` (stable id sent by the app, unique per breed),
+| `value` (the exact `coat_color` option of config/breed_appearance.php — the
+| DNA trait the AI media are generated from) and the picker labels `en` / `sl`.
+|
+| The list is EXACTLY the breed's `coat_color` options in breed_appearance.php
+| (only colours the breed standard allows — never a colour the standard
+| excludes); BreedColourSharedMediaTest keeps the two files in sync. Order = the
+| appearance order (the most common colour first). Labels are short picker
+| names, not breed facts. Free breeds (mutt, domestic cat) have no picker: they
+| keep the shared look pool (M4-10).
+|
+*/
+
+return [
+    'border_collie' => [
+        ['key' => 'black-white', 'value' => 'black and white', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'tricolour', 'value' => 'black, white and tan tricolour', 'en' => 'Tricolour (black, white, tan)', 'sl' => 'Trobarven (črn, bel, rjavkast)'],
+        ['key' => 'red-white', 'value' => 'red and white', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
+        ['key' => 'blue-white', 'value' => 'blue and white', 'en' => 'Blue and white', 'sl' => 'Modro-bel'],
+        ['key' => 'blue-merle-white', 'value' => 'blue merle and white', 'en' => 'Blue merle and white', 'sl' => 'Modri merle z belo'],
+        ['key' => 'red-merle-white', 'value' => 'red merle and white', 'en' => 'Red merle and white', 'sl' => 'Rdeči merle z belo'],
+        ['key' => 'sable-white', 'value' => 'sable and white', 'en' => 'Sable and white', 'sl' => 'Sobolji z belo'],
+    ],
+    'labrador_retriever' => [
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'yellow', 'value' => 'yellow', 'en' => 'Yellow', 'sl' => 'Rumen'],
+        ['key' => 'light-cream', 'value' => 'light cream yellow', 'en' => 'Light cream', 'sl' => 'Svetlo kremast'],
+        ['key' => 'fox-red', 'value' => 'fox red yellow', 'en' => 'Fox red', 'sl' => 'Lisičje rdeč'],
+        ['key' => 'chocolate', 'value' => 'chocolate brown', 'en' => 'Chocolate', 'sl' => 'Čokoladno rjav'],
+        ['key' => 'light-liver', 'value' => 'light liver brown', 'en' => 'Light liver', 'sl' => 'Svetlo jetrno rjav'],
+    ],
+    'golden_retriever' => [
+        ['key' => 'rich-gold', 'value' => 'rich gold', 'en' => 'Rich gold', 'sl' => 'Temno zlat'],
+        ['key' => 'light-gold', 'value' => 'light gold', 'en' => 'Light gold', 'sl' => 'Svetlo zlat'],
+        ['key' => 'deep-gold', 'value' => 'deep gold', 'en' => 'Deep gold', 'sl' => 'Globoko zlat'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'pale-cream', 'value' => 'pale cream', 'en' => 'Pale cream', 'sl' => 'Bledo kremast'],
+    ],
+    'french_bulldog' => [
+        ['key' => 'fawn', 'value' => 'fawn', 'en' => 'Fawn', 'sl' => 'Plavo rjav'],
+        ['key' => 'brindle', 'value' => 'brindle', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+        ['key' => 'light-fawn', 'value' => 'light fawn', 'en' => 'Light fawn', 'sl' => 'Svetlo plavo rjav'],
+    ],
+    'german_shepherd' => [
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
+        ['key' => 'black-gold', 'value' => 'black and gold', 'en' => 'Black and gold', 'sl' => 'Črn z zlatimi oznakami'],
+        ['key' => 'sable', 'value' => 'sable', 'en' => 'Sable', 'sl' => 'Sobolji'],
+        ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
+    ],
+    'cavalier_king_charles_spaniel' => [
+        ['key' => 'blenheim', 'value' => 'Blenheim (rich chestnut and pearly white)', 'en' => 'Blenheim (chestnut and white)', 'sl' => 'Blenheim (kostanjev z belo)'],
+        ['key' => 'tricolour', 'value' => 'tricolour (black, white and tan)', 'en' => 'Tricolour (black, white, tan)', 'sl' => 'Trobarven (črn, bel, rjavkast)'],
+        ['key' => 'ruby', 'value' => 'ruby (whole rich red)', 'en' => 'Ruby (rich red)', 'sl' => 'Rubin (temno rdeč)'],
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
+    ],
+    'beagle' => [
+        ['key' => 'tricolour', 'value' => 'tricolour (black, tan and white)', 'en' => 'Tricolour (black, tan, white)', 'sl' => 'Trobarven (črn, rjavkast, bel)'],
+        ['key' => 'tan-white', 'value' => 'tan and white', 'en' => 'Tan and white', 'sl' => 'Rjavkasto-bel'],
+        ['key' => 'lemon-white', 'value' => 'lemon and white', 'en' => 'Lemon and white', 'sl' => 'Limonasto-bel'],
+        ['key' => 'red-white', 'value' => 'red and white', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
+    ],
+    'standard_poodle' => [
+        ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'white', 'value' => 'solid white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'brown', 'value' => 'solid brown', 'en' => 'Brown', 'sl' => 'Rjav'],
+        ['key' => 'grey', 'value' => 'solid grey', 'en' => 'Grey', 'sl' => 'Siv'],
+        ['key' => 'fawn', 'value' => 'solid fawn', 'en' => 'Fawn (apricot)', 'sl' => 'Plavo rjav (marelični)'],
+    ],
+    'dachshund' => [
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
+        ['key' => 'chocolate-tan', 'value' => 'chocolate and tan', 'en' => 'Chocolate and tan', 'sl' => 'Čokoladen z rjavimi oznakami'],
+    ],
+    'australian_shepherd' => [
+        ['key' => 'blue-merle', 'value' => 'blue merle', 'en' => 'Blue merle', 'sl' => 'Modri merle'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'red-merle', 'value' => 'red merle', 'en' => 'Red merle', 'sl' => 'Rdeči merle'],
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+    ],
+    'havanese' => [
+        ['key' => 'fawn', 'value' => 'fawn', 'en' => 'Fawn', 'sl' => 'Plavo rjav'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'havana-brown', 'value' => 'havana brown', 'en' => 'Havana brown', 'sl' => 'Havansko rjav'],
+        ['key' => 'tobacco', 'value' => 'tobacco', 'en' => 'Tobacco', 'sl' => 'Tobačno rjav'],
+        ['key' => 'reddish-brown', 'value' => 'reddish brown', 'en' => 'Reddish brown', 'sl' => 'Rdečkasto rjav'],
+        ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+    ],
+    'west_highland_white_terrier' => [
+        ['key' => 'white', 'value' => 'pure white', 'en' => 'White', 'sl' => 'Bel'],
+    ],
+    'bernese_mountain_dog' => [
+        ['key' => 'tricolour', 'value' => 'tricolour: jet black with rich tan on the cheeks, above the eyes, on the legs and chest, a symmetrical white blaze, white muzzle band and white chest', 'en' => 'Tricolour (black, rust, white)', 'sl' => 'Trobarven (črn, rjav, bel)'],
+    ],
+    'siberian_husky' => [
+        ['key' => 'grey-white', 'value' => 'grey and white with a white face mask', 'en' => 'Grey and white', 'sl' => 'Sivo-bel'],
+        ['key' => 'black-white', 'value' => 'black and white with a white face mask', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'red-white', 'value' => 'red and white with a white face mask', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
+        ['key' => 'agouti', 'value' => 'agouti', 'en' => 'Agouti (wild grey)', 'sl' => 'Agouti (divje siv)'],
+        ['key' => 'sable-white', 'value' => 'sable and white', 'en' => 'Sable and white', 'sl' => 'Sobolji z belo'],
+        ['key' => 'white', 'value' => 'pure white', 'en' => 'White', 'sl' => 'Bel'],
+    ],
+    'rottweiler' => [
+        ['key' => 'black-tan', 'value' => 'black with clearly defined rich tan markings on the cheeks, muzzle, throat, chest, legs and above the eyes', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
+        ['key' => 'black-mahogany', 'value' => 'black with clearly defined mahogany markings on the cheeks, muzzle, throat, chest, legs and above the eyes', 'en' => 'Black and mahogany', 'sl' => 'Črn z mahagonijevimi oznakami'],
+    ],
+    'bulldog' => [
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'fawn', 'value' => 'fawn', 'en' => 'Fawn', 'sl' => 'Plavo rjav'],
+        ['key' => 'fawn-brindle', 'value' => 'fawn brindle', 'en' => 'Fawn brindle', 'sl' => 'Plavo rjav tigrast'],
+    ],
+    'german_shorthaired_pointer' => [
+        ['key' => 'liver-roan', 'value' => 'liver roan (liver and white ticked) with a solid liver head and liver patches', 'en' => 'Liver roan', 'sl' => 'Jetrno rjav pikčast'],
+        ['key' => 'liver', 'value' => 'solid liver', 'en' => 'Liver', 'sl' => 'Jetrno rjav'],
+        ['key' => 'liver-white-ticked', 'value' => 'liver and white ticked', 'en' => 'Liver and white ticked', 'sl' => 'Jetrno-bel pikčast'],
+        ['key' => 'black-roan', 'value' => 'black roan with a solid black head', 'en' => 'Black roan', 'sl' => 'Črn pikčast'],
+        ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
+    ],
+    'yorkshire_terrier' => [
+        ['key' => 'blue-tan', 'value' => 'dark steel blue body with rich bright tan head, chest and legs', 'en' => 'Steel blue and tan', 'sl' => 'Jekleno moder z rjavo'],
+    ],
+    'cane_corso' => [
+        ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'grey', 'value' => 'solid grey (blue)', 'en' => 'Grey (blue)', 'sl' => 'Siv (moder)'],
+        ['key' => 'black-brindle', 'value' => 'black brindle', 'en' => 'Black brindle', 'sl' => 'Črn tigrast'],
+        ['key' => 'grey-brindle', 'value' => 'grey (blue) brindle', 'en' => 'Grey brindle', 'sl' => 'Siv tigrast'],
+        ['key' => 'fawn', 'value' => 'fawn with a black mask not beyond the eyes', 'en' => 'Fawn', 'sl' => 'Plavo rjav'],
+        ['key' => 'stag-red', 'value' => 'stag red with a dark mask', 'en' => 'Stag red', 'sl' => 'Jelenje rdeč'],
+        ['key' => 'dark-wheat', 'value' => 'dark wheat', 'en' => 'Dark wheat', 'sl' => 'Temno pšeničen'],
+    ],
+    'pembroke_welsh_corgi' => [
+        ['key' => 'red-white', 'value' => 'red with white markings on legs, chest and neck', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
+        ['key' => 'sable-white', 'value' => 'sable with white markings', 'en' => 'Sable and white', 'sl' => 'Sobolji z belo'],
+        ['key' => 'fawn-white', 'value' => 'fawn with white markings', 'en' => 'Fawn and white', 'sl' => 'Plavo rjav z belo'],
+        ['key' => 'tricolour', 'value' => 'black and tan with white markings', 'en' => 'Tricolour (black, tan, white)', 'sl' => 'Trobarven (črn, rjavkast, bel)'],
+    ],
+    'dobermann' => [
+        ['key' => 'black-rust', 'value' => 'black with clearly defined rust red tan markings', 'en' => 'Black and rust', 'sl' => 'Črn z rjastimi oznakami'],
+        ['key' => 'brown-rust', 'value' => 'brown with clearly defined rust red tan markings', 'en' => 'Brown and rust', 'sl' => 'Rjav z rjastimi oznakami'],
+    ],
+    'boxer' => [
+        ['key' => 'fawn', 'value' => 'golden to deer-red fawn with a black mask', 'en' => 'Fawn', 'sl' => 'Plavo rjav'],
+        ['key' => 'brindle', 'value' => 'brindle (black stripes on fawn) with a black mask', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+    ],
+    'miniature_schnauzer' => [
+        ['key' => 'pepper-salt', 'value' => 'pepper and salt (banded grey) with a dark facial mask', 'en' => 'Pepper and salt', 'sl' => 'Poper in sol'],
+        ['key' => 'black-silver', 'value' => 'black and silver', 'en' => 'Black and silver', 'sl' => 'Črno-srebrn'],
+        ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
+    ],
+    'shih_tzu' => [
+        ['key' => 'gold-white', 'value' => 'gold and white', 'en' => 'Gold and white', 'sl' => 'Zlato-bel'],
+        ['key' => 'black-white', 'value' => 'black and white', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'liver-white', 'value' => 'liver and white', 'en' => 'Liver and white', 'sl' => 'Jetrno-bel'],
+    ],
+    'great_dane' => [
+        ['key' => 'fawn', 'value' => 'fawn with a black mask', 'en' => 'Fawn', 'sl' => 'Plavo rjav'],
+        ['key' => 'brindle', 'value' => 'brindle with a black mask', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+        ['key' => 'harlequin', 'value' => 'harlequin (white with torn black patches)', 'en' => 'Harlequin', 'sl' => 'Harlekin'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'blue', 'value' => 'steel blue', 'en' => 'Steel blue', 'sl' => 'Jekleno moder'],
+    ],
+    'pomeranian' => [
+        ['key' => 'orange', 'value' => 'bright self-coloured orange', 'en' => 'Orange', 'sl' => 'Oranžen'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
+    ],
+    'boston_terrier' => [
+        ['key' => 'brindle-white', 'value' => 'brindle and white', 'en' => 'Brindle and white', 'sl' => 'Tigrasto-bel'],
+        ['key' => 'black-white', 'value' => 'black and white', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'seal-white', 'value' => 'seal and white', 'en' => 'Seal and white', 'sl' => 'Tjulnje rjav z belo'],
+    ],
+    'miniature_american_shepherd' => [
+        ['key' => 'blue-merle', 'value' => 'blue merle', 'en' => 'Blue merle', 'sl' => 'Modri merle'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'red-merle', 'value' => 'red merle', 'en' => 'Red merle', 'sl' => 'Rdeči merle'],
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+    ],
+    'chihuahua' => [
+        ['key' => 'fawn', 'value' => 'fawn', 'en' => 'Fawn', 'sl' => 'Plavo rjav'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
+        ['key' => 'chocolate', 'value' => 'chocolate', 'en' => 'Chocolate', 'sl' => 'Čokoladen'],
+        ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'fawn-white', 'value' => 'fawn and white', 'en' => 'Fawn and white', 'sl' => 'Plavo rjav z belo'],
+    ],
+    'english_springer_spaniel' => [
+        ['key' => 'liver-white', 'value' => 'liver and white', 'en' => 'Liver and white', 'sl' => 'Jetrno-bel'],
+        ['key' => 'black-white', 'value' => 'black and white', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'liver-white-tan', 'value' => 'liver and white with tan markings', 'en' => 'Liver, white and tan', 'sl' => 'Jetrno-bel z rjavimi oznakami'],
+        ['key' => 'black-white-tan', 'value' => 'black and white with tan markings', 'en' => 'Black, white and tan', 'sl' => 'Črno-bel z rjavimi oznakami'],
+    ],
+    'shetland_sheepdog' => [
+        ['key' => 'sable-white', 'value' => 'sable and white (golden sable with a white collar, frill, chest, legs and tail tip)', 'en' => 'Sable and white', 'sl' => 'Sobolji z belo'],
+        ['key' => 'tricolour', 'value' => 'tricolour (black with tan markings and a white collar, frill, chest, legs and tail tip)', 'en' => 'Tricolour', 'sl' => 'Trobarven'],
+        ['key' => 'blue-merle', 'value' => 'blue merle (silvery blue marbled with black, with white and tan markings)', 'en' => 'Blue merle', 'sl' => 'Modri merle'],
+        ['key' => 'black-white', 'value' => 'black and white', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
+    ],
+    'brittany' => [
+        ['key' => 'orange-white', 'value' => 'orange and white (clear white with bright orange patches)', 'en' => 'Orange and white', 'sl' => 'Oranžno-bel'],
+        ['key' => 'liver-white', 'value' => 'liver and white (clear white with liver-brown patches)', 'en' => 'Liver and white', 'sl' => 'Jetrno-bel'],
+        ['key' => 'orange-roan', 'value' => 'orange roan (white finely ticked with orange)', 'en' => 'Orange roan', 'sl' => 'Oranžni roan'],
+        ['key' => 'liver-roan', 'value' => 'liver roan', 'en' => 'Liver roan', 'sl' => 'Jetrni roan'],
+        ['key' => 'black-white', 'value' => 'black and white', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'tricolour', 'value' => 'tricolour (black and white with orange markings over the eyes, on the muzzle, legs and chest)', 'en' => 'Tricolour', 'sl' => 'Trobarven'],
+    ],
+    'american_cocker_spaniel' => [
+        ['key' => 'buff', 'value' => 'buff (solid light golden cream)', 'en' => 'Buff', 'sl' => 'Svetlo zlato kremast'],
+        ['key' => 'black', 'value' => 'black (solid black)', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'black-tan', 'value' => 'black and tan (black with small tan points over the eyes, on the muzzle, chest and legs)', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
+        ['key' => 'red', 'value' => 'red (solid deep red)', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'chocolate', 'value' => 'chocolate (solid brown)', 'en' => 'Chocolate', 'sl' => 'Čokoladno rjav'],
+        ['key' => 'black-white', 'value' => 'black and white parti-colour', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'red-white', 'value' => 'red and white parti-colour', 'en' => 'Red and white', 'sl' => 'Rdeče-bel'],
+        ['key' => 'tricolour', 'value' => 'tricolour (black and white with tan points)', 'en' => 'Tricolour', 'sl' => 'Trobarven'],
+    ],
+    // M5-R10-38: FCI S313 "Only fawn with black overlay and with black mask."; AKC S315 "rich fawn to mahogany".
+    'belgian_malinois' => [
+        ['key' => 'fawn', 'value' => 'fawn with black overlay (black-tipped hairs) and a pronounced black mask', 'en' => 'Fawn with black mask', 'sl' => 'Plav s črno masko'],
+        ['key' => 'mahogany', 'value' => 'mahogany with black overlay (black-tipped hairs) and a pronounced black mask', 'en' => 'Mahogany with black mask', 'sl' => 'Mahagonij s črno masko'],
+    ],
+    // M5-R10-39: FCI S320 "Generally black, white and tan (tri-colour); lemon and white (bi-colour)".
+    'basset_hound' => [
+        ['key' => 'tricolour', 'value' => 'black, white and tan tricolour', 'en' => 'Tricolour', 'sl' => 'Trobarven'],
+        ['key' => 'lemon-white', 'value' => 'lemon and white bicolour', 'en' => 'Lemon and white', 'sl' => 'Limonasto-bel'],
+    ],
+    // M5-R10-40: FCI S327 "Various shades of russet gold and dark sandy gold (semmelgelb)."
+    'hungarian_vizsla' => [
+        ['key' => 'russet-gold', 'value' => 'russet gold', 'en' => 'Russet gold', 'sl' => 'Rdečkasto zlat'],
+        ['key' => 'dark-sandy-gold', 'value' => 'dark sandy gold', 'en' => 'Dark sandy gold', 'sl' => 'Temno peščeno zlat'],
+    ],
+    'maine_coon' => [
+        ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'silver', 'value' => 'silver', 'en' => 'Silver', 'sl' => 'Srebrn'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'blue-grey', 'value' => 'blue-grey', 'en' => 'Blue-grey', 'sl' => 'Modro siv'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'tortoiseshell', 'value' => 'tortoiseshell black and red', 'en' => 'Tortoiseshell', 'sl' => 'Želvovinast'],
+    ],
+    'british_shorthair' => [
+        ['key' => 'blue-grey', 'value' => 'blue-grey', 'en' => 'Blue-grey', 'sl' => 'Modro siv'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'lilac', 'value' => 'lilac', 'en' => 'Lilac', 'sl' => 'Lila'],
+        ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'silver', 'value' => 'silver', 'en' => 'Silver', 'sl' => 'Srebrn'],
+        ['key' => 'tortoiseshell', 'value' => 'tortoiseshell black and red', 'en' => 'Tortoiseshell', 'sl' => 'Želvovinast'],
+    ],
+    'ragdoll' => [
+        ['key' => 'seal-point', 'value' => 'seal point (a pale cream body with dark seal-brown face mask, ears, legs and tail)', 'en' => 'Seal point', 'sl' => 'Seal point (temne točke)'],
+        ['key' => 'blue-point', 'value' => 'blue point (a pale bluish-white body with grey-blue face mask, ears, legs and tail)', 'en' => 'Blue point', 'sl' => 'Blue point (modre točke)'],
+        ['key' => 'chocolate-point', 'value' => 'chocolate point (an ivory body with milk-chocolate face mask, ears, legs and tail)', 'en' => 'Chocolate point', 'sl' => 'Chocolate point (čokoladne točke)'],
+        ['key' => 'lilac-point', 'value' => 'lilac point (a white body with pinkish-grey face mask, ears, legs and tail)', 'en' => 'Lilac point', 'sl' => 'Lilac point (lila točke)'],
+        ['key' => 'red-point', 'value' => 'red point (a creamy white body with reddish-orange face mask, ears, legs and tail)', 'en' => 'Red point', 'sl' => 'Red point (rdeče točke)'],
+        ['key' => 'cream-point', 'value' => 'cream point (a white body with soft cream face mask, ears, legs and tail)', 'en' => 'Cream point', 'sl' => 'Cream point (kremaste točke)'],
+    ],
+    'siberian_cat' => [
+        ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
+        ['key' => 'silver', 'value' => 'silver', 'en' => 'Silver', 'sl' => 'Srebrn'],
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'blue-grey', 'value' => 'blue-grey', 'en' => 'Blue-grey', 'sl' => 'Modro siv'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'tortoiseshell', 'value' => 'tortoiseshell black and red', 'en' => 'Tortoiseshell', 'sl' => 'Želvovinast'],
+    ],
+    'norwegian_forest_cat' => [
+        ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
+        ['key' => 'silver', 'value' => 'silver', 'en' => 'Silver', 'sl' => 'Srebrn'],
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'blue-grey', 'value' => 'blue-grey', 'en' => 'Blue-grey', 'sl' => 'Modro siv'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'white', 'value' => 'white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'tortoiseshell', 'value' => 'tortoiseshell black and red', 'en' => 'Tortoiseshell', 'sl' => 'Želvovinast'],
+    ],
+    'bengal' => [
+        ['key' => 'brown-spotted', 'value' => 'golden-brown with black markings', 'en' => 'Brown spotted', 'sl' => 'Rjavo lisast'],
+        ['key' => 'silver-spotted', 'value' => 'silver with black markings', 'en' => 'Silver spotted', 'sl' => 'Srebrno lisast'],
+        ['key' => 'snow', 'value' => 'pale ivory snow with seal-brown markings', 'en' => 'Snow', 'sl' => 'Snežni'],
+    ],
+];

@@ -70,6 +70,9 @@
     "petsLoading": "Nalagam pse v družini …",
     "pinLabel": "Koda za prijavo",
     "pinFor": "Za: {{name}}",
+    "copyCode": "Kopiraj kodo",
+    "copied": "Kopirano",
+    "copyFailed": "Kode ni bilo mogoče kopirati.",
     "instructions": "Otrok naj na svojem telefonu odpre PetPrep, izbere »Sem otrok« in vtipka to kodo.",
     "stepLines": {
       "new_pet": {
@@ -115,7 +118,8 @@
       "offline": "Ni povezave s strežnikom. Preverite internet in poskusite znova.",
       "server": "Kode trenutno ni bilo mogoče ustvariti. Poskusite znova.",
       "breed_species_mismatch": "Pasma ne spada k izbrani vrsti. Izberite znova.",
-      "species_unavailable": "Ta vrsta še ni na voljo. Izberite drugo vrsto."
+      "species_unavailable": "Ta vrsta še ni na voljo. Izberite drugo vrsto.",
+      "colour_invalid": "Te barve pri tej pasmi ni več. Izberite barvo znova."
     },
     "changeDog": "Izberi drugega kužka",
     "editDog": "Spremeni kužka",
@@ -188,7 +192,18 @@
     "createPin": "Ustvari kodo",
     "awaitingContract": "Kuža čaka, da {{name}} podpiše pogodbo o odgovornosti.",
     "details": "Podrobnosti",
-    "detailsA11y": "Podrobnosti: {{name}}"
+    "detailsA11y": "Podrobnosti: {{name}}",
+    "playAs": "Igraj kot {{name}}",
+    "playAsHint": "Na tem telefonu odpre igro otroka {{name}} in vas odjavi. Nazaj se prijavite znova.",
+    "playAsSteps": "Koraki se štejejo, dokler je izbran profil {{name}}. Pred sprehodom izberite ta profil.",
+    "playAsErrors": {
+      "no_pet": "Najprej ustvarite kodo za prijavo in jo vnesite v otrokov profil.",
+      "not_found": "Tega otroka ni več v vaši družini.",
+      "update_required": "Za igro s tem ljubljenčkom posodobite aplikacijo.",
+      "throttled": "Preveč preklopov. Poskusite znova čez minuto.",
+      "offline": "Ni povezave s strežnikom. Preverite internet in poskusite znova.",
+      "failed": "Preklop ni uspel. Poskusite znova."
+    }
   },
   "petControls": {
     "caretakers": "Skrbi: {{names}}",

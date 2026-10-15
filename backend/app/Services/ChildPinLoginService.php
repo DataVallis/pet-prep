@@ -15,6 +15,7 @@ use App\Models\FamilyMember;
 use App\Models\Pet;
 use App\Models\PetCaretaker;
 use App\Models\User;
+use App\Services\Results\ChildSession;
 use App\Services\Results\PetProfileChoice;
 use App\Support\ClientIp;
 use Illuminate\Database\UniqueConstraintViolationException;
@@ -120,6 +121,7 @@ class ChildPinLoginService
                 // M5-R06-01: breed ↔ species, cats only when available (switch for this family + `species_cat`).
                 $this->pairing->assertSpeciesAllowed($profile, $family);
                 $this->pairing->assertProfileAllowed($profile, $plan);
+                $this->pairing->assertColourAllowed($profile);
             }
             // M5-F03: an explicitly chosen challenge needs a paid breed (no profile → mutt).
             if ($mode === self::MODE_NEW_PET && $planChosen) {
@@ -162,11 +164,10 @@ class ChildPinLoginService
      *
      * @param  list<string>  $clientFeatures  ClientFeature values this child device supports (M5-R02):
      *                                        a new pet gets only features the parent's PIN AND this device declared.
-     * @return array{token: string, child: User, pet: Pet, mode: string, joined_existing: bool}
      *
      * @throws ChildLoginException
      */
-    public function login(string $pin, string $deviceName, string $ip, array $clientFeatures = []): array
+    public function login(string $pin, string $deviceName, string $ip, array $clientFeatures = []): ChildSession
     {
         // IPv6 is keyed on its /64 (a client usually owns the whole prefix).
         $ipKey = 'child-pin-login:failures:ip:'.ClientIp::rateLimitKey($ip);
@@ -188,7 +189,7 @@ class ChildPinLoginService
         app(AppSettingsService::class)->storedCats();
 
         try {
-            return DB::transaction(function () use ($candidate, $deviceName, $clientFeatures): array {
+            return DB::transaction(function () use ($candidate, $deviceName, $clientFeatures): ChildSession {
                 // Lock order (backend/CLAUDE.md): parent → child → family, then
                 // the PIN row; re-validated under the locks.
                 if ($candidate->created_by !== null) {
@@ -238,16 +239,9 @@ class ChildPinLoginService
 
                 $locked->forceFill(['consumed_at' => now()])->save();
 
-                $token = $child->createToken(ChildProfileService::deviceLabel($deviceName), TokenAbility::abilitiesFor($child))->plainTextToken;
-                $this->profiles->pruneDevices($child);
+                $token = $this->issueChildToken($child, ChildProfileService::deviceLabel($deviceName));
 
-                return [
-                    'token' => $token,
-                    'child' => $child,
-                    'pet' => $pet,
-                    'mode' => $mode,
-                    'joined_existing' => $joined,
-                ];
+                return new ChildSession($token, $child, $pet, $mode, $joined);
             });
         } catch (PairingException|FamilyException $e) {
             // The PIN matched but can no longer do what it was issued for
@@ -258,6 +252,78 @@ class ChildPinLoginService
 
             throw new ChildLoginException('pin_not_usable', 'This code can no longer be used. Ask your parent for a new code.');
         }
+    }
+
+    /**
+     * M2-11 profile switching (David 2026-10-14): the signed-in parent opens a
+     * session for one of their family's children ON THIS PHONE — no PIN (the
+     * parent is already authenticated). The way back to the parent is a real
+     * parent re-login (password or Google / Apple — David 2026-10-14); the app
+     * revokes the parent token when it switches to the child. Same result as a PIN re-login (`mode: relogin`): a `child`
+     * token through issueChildToken() (MAX_DEVICES rule included).
+     *
+     * One shared-phone session per (parent, child): the token name starts with
+     * sharedTokenPrefix($parent); a new device session replaces the previous
+     * one, so switching back and forth never pushes the child's own phones out
+     * of the device limit. Only a child that already cares for a pet (409
+     * `no_pet` otherwise — the first pairing still goes through a PIN, which
+     * carries the pet profile). Lock order parent → child → family.
+     *
+     * @param  list<string>  $clientFeatures
+     *
+     * @throws ChildLoginException child_not_found (404), no_pet (409), app_update_required (422)
+     */
+    public function deviceSession(User $parent, User $child, string $deviceName, array $clientFeatures = []): ChildSession
+    {
+        return DB::transaction(function () use ($parent, $child, $deviceName, $clientFeatures): ChildSession {
+            User::whereKey($parent->id)->lockForUpdate()->first();
+            $lockedChild = User::whereKey($child->id)->lockForUpdate()->first();
+            $familyId = FamilyMember::where('user_id', $child->id)->where('role', FamilyRole::Child->value)->value('family_id');
+            $family = $familyId !== null ? Family::whereKey($familyId)->lockForUpdate()->first() : null;
+
+            if ($lockedChild === null || ! $lockedChild->isChild() || $family === null
+                || ! FamilyMember::where('family_id', $family->id)->where('user_id', $parent->id)
+                    ->where('role', FamilyRole::Parent->value)->exists()) {
+                throw new ChildLoginException('child_not_found', 'No such child in your family.', 404);
+            }
+
+            $pet = $lockedChild->currentPet();
+            if ($pet === null) {
+                throw new ChildLoginException('no_pet', 'This child has no pet yet. Pair the child with a PIN first.', 409);
+            }
+
+            $species = $pet->species instanceof Species ? $pet->species : (Species::tryFrom((string) $pet->species) ?? Species::Dog);
+            if (! SpeciesAvailability::appSupports($species, $clientFeatures)) {
+                throw new ChildLoginException('app_update_required', 'Update the app to look after this pet.');
+            }
+
+            $prefix = self::sharedTokenPrefix($parent);
+            $lockedChild->tokens()->where('name', 'like', addcslashes($prefix, '\\%_').'%')->delete();
+            $token = $this->issueChildToken($lockedChild, $prefix.ChildProfileService::deviceLabel($deviceName));
+
+            return new ChildSession($token, $lockedChild, $pet, self::MODE_RELOGIN, false);
+        });
+    }
+
+    /** Token-name prefix of the shared-phone session a parent opened for a child (M2-11). */
+    public static function sharedTokenPrefix(User $parent): string
+    {
+        return self::SHARED_TOKEN_PREFIX.$parent->id.':';
+    }
+
+    /** Child tokens named `shared:p{parentId}:{label}` = a parent's shared-phone session (M2-11). */
+    public const SHARED_TOKEN_PREFIX = 'shared:p';
+
+    /**
+     * A child token (ability `child`) + the MAX_DEVICES rule — the one path
+     * for PIN login and the parent's device session.
+     */
+    private function issueChildToken(User $child, string $name): string
+    {
+        $token = $child->createToken($name, TokenAbility::abilitiesFor($child))->plainTextToken;
+        $this->profiles->pruneDevices($child);
+
+        return $token;
     }
 
     /**

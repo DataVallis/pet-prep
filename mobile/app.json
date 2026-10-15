@@ -2,7 +2,7 @@
   "expo": {
     "name": "PetPrep",
     "slug": "petprep",
-    "version": "3.1.3",
+    "version": "3.1.4",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -101,7 +101,8 @@
           }
         }
       ],
-      "expo-background-task"
+      "expo-background-task",
+      "expo-apple-authentication"
     ],
     "extra": {
       "eas": {

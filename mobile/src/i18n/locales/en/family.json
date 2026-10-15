@@ -136,6 +136,15 @@
     "great_dane": "Great Dane",
     "pomeranian": "Pomeranian",
     "boston_terrier": "Boston Terrier",
+    "miniature_american_shepherd": "Miniature American Shepherd",
+    "chihuahua": "Chihuahua",
+    "english_springer_spaniel": "English Springer Spaniel",
+    "shetland_sheepdog": "Shetland Sheepdog",
+    "brittany": "Brittany",
+    "american_cocker_spaniel": "American Cocker Spaniel",
+    "belgian_malinois": "Belgian Malinois",
+    "basset_hound": "Basset Hound",
+    "hungarian_vizsla": "Hungarian Vizsla",
     "domestic_cat": "Domestic cat",
     "maine_coon": "Maine Coon",
     "british_shorthair": "British Shorthair",
@@ -194,7 +203,9 @@
       "invalid": "Enter your password and confirm the deletion.",
       "unknown": "We don't know whether the deletion went through — please check the list of children.",
       "server": "Deleting didn't work. Nothing was deleted — please try again.",
-      "paid_challenge": "This deletion removes a dog whose 12-week challenge was purchased. Tick the box to confirm that the purchase is used up."
+      "paid_challenge": "This deletion removes a dog whose 12-week challenge was purchased. Tick the box to confirm that the purchase is used up.",
+      "reauth_required": "The sign-in confirmation expired or doesn't match this account. Nothing was deleted — confirm again.",
+      "provider_unavailable": "The sign-in service can't be reached right now. Nothing was deleted — try again in a moment."
     }
   },
   "parents": {

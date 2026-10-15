@@ -64,6 +64,8 @@
       },
       "challenge": {
         "title": "12-week challenge — {{price}}",
+        "titleLoading": "12-week challenge — …",
+        "titleNoPrice": "12-week challenge",
         "hint": "The programme that shows whether your child is ready for a dog, with a paid breed of your choice, a certificate and the full history. The challenge starts with a purchase: the dog waits until you buy it for this dog (also possible before the contract is signed). One-time payment, no subscription. Want to try first? Choose the free mixed breed."
       }
     },
@@ -108,6 +110,15 @@
       "great_dane": "Part of the 12-week challenge · brushing 1× a week",
       "pomeranian": "Part of the 12-week challenge · brushing 3× a week",
       "boston_terrier": "Part of the 12-week challenge · brushing 1× a week",
+      "miniature_american_shepherd": "Part of the 12-week challenge · brushing 2× a week",
+      "chihuahua": "Part of the 12-week challenge · brushing 1× a week",
+      "english_springer_spaniel": "Part of the 12-week challenge · brushing 2× a week",
+      "shetland_sheepdog": "Part of the 12-week challenge · brushing every day",
+      "brittany": "Part of the 12-week challenge · brushing 1× a week",
+      "american_cocker_spaniel": "Part of the 12-week challenge · brushing every day",
+      "belgian_malinois": "Part of the 12-week challenge · brushing 2× a week",
+      "basset_hound": "Part of the 12-week challenge · brushing 1× a week",
+      "hungarian_vizsla": "Part of the 12-week challenge · brushing 1× a week",
       "domestic_cat": "Short coat · free",
       "maine_coon": "Long coat · brushing 3× a week",
       "british_shorthair": "Short, dense coat · brushing 1× a week",
@@ -117,6 +128,10 @@
       "bengal": "Short, soft, spotted or marbled coat · brushing 1× a week"
     },
     "breedLockedNote": "This breed can't be chosen right now. Choose a mixed breed or try again later.",
+    "colourTitle": "Colour",
+    "colourHint": "Only colours the breed standard allows.",
+    "colourOnly": "This breed comes in one colour: {{colour}}",
+    "colourA11y": "Colour: {{colour}}",
     "lockedA11y": "{{breed}}, locked — part of the paid challenge",
     "lockedFreeOnlyA11y": "{{breed}}, not available — only on the free plan",
     "originTitle": "Where it comes from",
@@ -207,6 +222,48 @@
         "young": "2 meals a day; walks of 3,000 steps a day (like an adult dog).",
         "adult": "2 meals a day; walks of 3,000 steps a day.",
         "senior": "2 meals a day; shorter walks — 2,300 steps a day."
+      },
+      "english_springer_spaniel": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
+        "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
+        "adult": "2 meals a day; walks of 12,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 9,000 steps a day."
+      },
+      "shetland_sheepdog": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000 at 6 months.",
+        "young": "2 meals a day; walks of 6,000 steps a day (like an adult dog).",
+        "adult": "2 meals a day; walks of 6,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 4,500 steps a day."
+      },
+      "brittany": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
+        "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
+        "adult": "2 meals a day; walks of 12,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 9,000 steps a day."
+      },
+      "american_cocker_spaniel": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
+        "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
+        "adult": "2 meals a day; walks of 12,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 9,000 steps a day."
+      },
+      "belgian_malinois": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
+        "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
+        "adult": "2 meals a day; walks of 12,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 9,000 steps a day."
+      },
+      "basset_hound": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000 at 6 months.",
+        "young": "2 meals a day; walks of 6,000 steps a day (like an adult dog).",
+        "adult": "2 meals a day; walks of 6,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 4,500 steps a day."
+      },
+      "hungarian_vizsla": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
+        "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
+        "adult": "2 meals a day; walks of 12,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 9,000 steps a day."
       },
       "west_highland_white_terrier": {
         "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000 at 6 months.",
@@ -304,6 +361,18 @@
         "adult": "2 meals a day; walks of 6,000 steps a day.",
         "senior": "2 meals a day; shorter walks — 4,500 steps a day."
       },
+      "miniature_american_shepherd": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000 at 6 months.",
+        "young": "2 meals a day; walks of 6,000 steps a day (like an adult dog).",
+        "adult": "2 meals a day; walks of 6,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 4,500 steps a day."
+      },
+      "chihuahua": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 3,000 at 3 months.",
+        "young": "2 meals a day; walks of 3,000 steps a day (like an adult dog).",
+        "adult": "2 meals a day; walks of 3,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 2,300 steps a day."
+      },
       "domestic_cat": {
         "puppy": "Arrives as a 2-month-old kitten.",
         "young": "Arrives as a young cat, 1 year old.",
@@ -360,6 +429,7 @@
       "breed": "Breed",
       "origin": "Origin",
       "age": "Age at arrival",
+      "colour": "Colour",
       "plan": "Plan"
     },
     "planNames": {

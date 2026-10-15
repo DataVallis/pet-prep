@@ -1,17 +1,31 @@
 /**
  * Irreversible-deletion confirmation (M2-08): what will be deleted, the parent's
  * password and the typed confirmation word ("IZBRIŠI" / "DELETE", in the app language). The red button unlocks only with both.
+ * M2-10c: a parent without a password (Google / Apple account) — the password field is
+ * replaced by a hint, and the red button "Potrdi z Googlom / Apple" re-runs that
+ * provider's sign-in (fresh ID token; Apple with a new nonce + its authorization code) and
+ * then submits. Which one(s) comes from the server (`has_password`, `linked_providers` →
+ * `appStore.authMethods`): only linked providers this device can run, Apple only on iOS;
+ * several → one button each. The device's remembered sign-in method is only the fallback
+ * for a session without those fields. None runnable here (e.g. Apple-only on Android) →
+ * an explanation and no submit.
  * Used for the parent's own account (AccountCard) and a child profile
  * (FamilyChildrenCard). Light parent theme (ADR-007).
  */
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
 import { Text, TextInput } from '@/components/ui/Text';
 import { Check } from 'lucide-react-native';
 
 import { PARENT_COLORS as C } from '@/components/parent/ParentUi';
-import { canSubmitDeletion, deleteConfirmWord } from '@/modules/account/account';
+import type { DeletionProof, ProviderReauth } from '@/api/client';
+import { canSubmitDeletion, deleteConfirmWord, isConfirmWord, obtainDeletionProof } from '@/modules/account/account';
+import { canOfferForDeletion, type SocialProvider } from '@/modules/auth/socialSdk';
+import { deletionIdentity, type AuthMethods } from '@/modules/session/authMethods';
+import { refreshAuthMethods } from '@/modules/session/logout';
+import type { SignInMethod } from '@/modules/session/signInMethod';
+import { useAppStore } from '@/store/appStore';
 import { t, tPets, type PetGroup } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { palette } from '@/theme';
@@ -35,8 +49,19 @@ interface DeletionConfirmFormProps {
   /** Error text from the last attempt (null = none). */
   error: string | null;
   onCancel: () => void;
-  /** `acknowledgedPaidChallenge` — the parent ticked the paid-challenge warning (M3-11 P5). */
-  onSubmit: (password: string, acknowledgedPaidChallenge: boolean) => void;
+  /**
+   * `proof` — the password, or a fresh provider sign-in for a parent without one (M2-10c);
+   * `acknowledgedPaidChallenge` — the parent ticked the paid-challenge warning (M3-11 P5).
+   */
+  onSubmit: (proof: DeletionProof, acknowledgedPaidChallenge: boolean) => void;
+  /** The server's sign-in methods of the account (default: the session's `authMethods`). */
+  authMethods?: AuthMethods | null;
+  /** Fallback when `authMethods` is unknown: how the parent signed in (default: the session's). */
+  signInMethod?: SignInMethod;
+  /** Can this device offer the linked provider for re-auth (default `canOfferForDeletion`)? */
+  canOffer?: (provider: SocialProvider) => boolean;
+  /** Tests: the provider re-sign-in (default `obtainDeletionProof`). */
+  obtainProof?: (provider: SocialProvider) => Promise<ProviderReauth | null>;
   /**
    * M3-11 P5: the deletion removes a dog with a purchased, unfinished challenge. Shows the
    * warning and an extra checkbox the red button needs (accidental deletion made harder).
@@ -57,12 +82,76 @@ export default function DeletionConfirmForm({
   onSubmit,
   paidChallenge = false,
   paidPetGroup = 'dog',
+  authMethods,
+  signInMethod,
+  canOffer = canOfferForDeletion,
+  obtainProof = obtainDeletionProof,
   testID,
 }: DeletionConfirmFormProps) {
+  const sessionMethods = useAppStore((s) => s.authMethods);
+  const sessionMethod = useAppStore((s) => s.signInMethod);
+  const methods = authMethods === undefined ? sessionMethods : authMethods;
+  // Bug 2026-10-14 hardening: sign-in methods are re-read from `GET /api/user` once when the
+  // session doesn't know them (older payload — in the background, the fallback decides
+  // meanwhile) or when they say "no password" without any linked provider (contradictory —
+  // the form waits for the answer before offering anything).
+  const contradictory = authMethods === undefined && methods !== null && !methods.hasPassword && methods.linkedProviders.length === 0;
+  const unknown = authMethods === undefined && methods === null;
+  const [checking, setChecking] = useState(contradictory);
+  useEffect(() => {
+    if (!contradictory && !unknown) return;
+    let active = true;
+    void refreshAuthMethods().finally(() => {
+      if (active) setChecking(false);
+    });
+    return () => {
+      active = false;
+    };
+    // Once per opened form; the refresh updates the store (and so this form).
+  }, []);
+  const identity = deletionIdentity(methods, signInMethod ?? sessionMethod, canOffer);
+  const providers: SocialProvider[] = identity.kind === 'providers' ? identity.providers : [];
+  const single: SocialProvider | null = providers.length === 1 ? providers[0] : null;
   const [password, setPassword] = useState('');
   const [confirmText, setConfirmText] = useState('');
   const [paidAck, setPaidAck] = useState(false);
-  const enabled = canSubmitDeletion(password, confirmText) && (!paidChallenge || paidAck) && !pending;
+  const [reauthing, setReauthing] = useState<SocialProvider | null>(null);
+  const [reauthFailed, setReauthFailed] = useState(false);
+  const busy = pending || reauthing !== null || checking;
+  const identityReady =
+    identity.kind === 'password' ? canSubmitDeletion(password, confirmText) : identity.kind === 'providers' && isConfirmWord(confirmText);
+  const enabled = identityReady && (!paidChallenge || paidAck) && !busy;
+
+  const submit = async (provider: SocialProvider | null) => {
+    const ack = paidChallenge && paidAck;
+    if (identity.kind === 'password') {
+      onSubmit(password, ack);
+      return;
+    }
+    if (!provider) return;
+    setReauthFailed(false);
+    setReauthing(provider);
+    try {
+      const proof = await obtainProof(provider);
+      // Closed the Google / Apple sheet: nothing happens.
+      if (proof) onSubmit(proof, ack);
+    } catch {
+      setReauthFailed(true);
+    } finally {
+      setReauthing(null);
+    }
+  };
+
+  const shownError = reauthFailed ? S.reauth.failed : error;
+  const providerLabel = (provider: SocialProvider): string => (provider === 'google' ? S.reauth.google : S.reauth.apple);
+  const hint =
+    identity.kind === 'unavailable'
+      ? S.reauth.unavailable
+      : single
+        ? single === 'google'
+          ? S.reauth.googleHint
+          : S.reauth.appleHint
+        : S.reauth.anyHint;
 
   return (
     <View style={styles.box} testID={testID}>
@@ -80,7 +169,7 @@ export default function DeletionConfirmForm({
           <Pressable
             style={styles.ackRow}
             onPress={() => setPaidAck((v) => !v)}
-            disabled={pending}
+            disabled={busy}
             accessibilityRole="checkbox"
             accessibilityState={{ checked: paidAck }}
             testID={`${testID}-paid-ack`}
@@ -91,21 +180,29 @@ export default function DeletionConfirmForm({
         </>
       )}
 
-      <Text style={styles.label}>{S.passwordLabel}</Text>
-      <TextInput
-        style={styles.input}
-        value={password}
-        onChangeText={setPassword}
-        placeholder={S.passwordPlaceholder}
-        placeholderTextColor={C.faint}
-        secureTextEntry
-        autoCapitalize="none"
-        autoCorrect={false}
-        textContentType="password"
-        editable={!pending}
-        accessibilityLabel={S.passwordLabel}
-        testID={`${testID}-password`}
-      />
+      {identity.kind !== 'password' ? (
+        <Text style={styles.reauthHint} testID={`${testID}-reauth-hint`}>
+          {hint}
+        </Text>
+      ) : (
+        <>
+          <Text style={styles.label}>{S.passwordLabel}</Text>
+          <TextInput
+            style={styles.input}
+            value={password}
+            onChangeText={setPassword}
+            placeholder={S.passwordPlaceholder}
+            placeholderTextColor={C.faint}
+            secureTextEntry
+            autoCapitalize="none"
+            autoCorrect={false}
+            textContentType="password"
+            editable={!busy}
+            accessibilityLabel={S.passwordLabel}
+            testID={`${testID}-password`}
+          />
+        </>
+      )}
 
       <Text style={styles.label}>{S.confirmLabel}</Text>
       <TextInput
@@ -116,37 +213,64 @@ export default function DeletionConfirmForm({
         placeholderTextColor={C.faint}
         autoCapitalize="characters"
         autoCorrect={false}
-        editable={!pending}
+        editable={!busy}
         accessibilityLabel={S.confirmLabel}
         testID={`${testID}-confirm`}
       />
 
-      {error && (
+      {shownError && (
         <Text style={styles.error} testID={`${testID}-error`} accessibilityLiveRegion="polite">
-          {error}
+          {shownError}
         </Text>
       )}
+
+      {providers.length > 1 &&
+        providers.map((provider) => (
+          <Pressable
+            key={provider}
+            style={({ pressed }) => [styles.button, styles.danger, !enabled && styles.disabled, pressed && styles.pressed]}
+            onPress={() => void submit(provider)}
+            disabled={!enabled}
+            accessibilityRole="button"
+            accessibilityState={{ disabled: !enabled }}
+            accessibilityLabel={`${submitLabel}: ${providerLabel(provider)}`}
+            testID={`${testID}-submit-${provider}`}
+          >
+            {reauthing === provider || (pending && reauthing === null) ? (
+              <ActivityIndicator color={palette.white} />
+            ) : (
+              <Text style={styles.dangerText}>{providerLabel(provider)}</Text>
+            )}
+          </Pressable>
+        ))}
 
       <View style={styles.row}>
         <Pressable
           style={({ pressed }) => [styles.button, pressed && styles.pressed]}
           onPress={onCancel}
-          disabled={pending}
+          disabled={busy}
           accessibilityRole="button"
           testID={`${testID}-cancel`}
         >
           <Text style={styles.cancelText}>{S.cancel}</Text>
         </Pressable>
-        <Pressable
-          style={({ pressed }) => [styles.button, styles.danger, !enabled && styles.disabled, pressed && styles.pressed]}
-          onPress={() => onSubmit(password, paidChallenge && paidAck)}
-          disabled={!enabled}
-          accessibilityRole="button"
-          accessibilityState={{ disabled: !enabled }}
-          testID={`${testID}-submit`}
-        >
-          {pending ? <ActivityIndicator color={palette.white} /> : <Text style={styles.dangerText}>{submitLabel}</Text>}
-        </Pressable>
+        {providers.length <= 1 && (
+          <Pressable
+            style={({ pressed }) => [styles.button, styles.danger, !enabled && styles.disabled, pressed && styles.pressed]}
+            onPress={() => void submit(single)}
+            disabled={!enabled}
+            accessibilityRole="button"
+            accessibilityState={{ disabled: !enabled }}
+            accessibilityLabel={single ? `${submitLabel}: ${providerLabel(single)}` : submitLabel}
+            testID={`${testID}-submit`}
+          >
+            {busy ? (
+              <ActivityIndicator color={palette.white} />
+            ) : (
+              <Text style={styles.dangerText}>{single ? providerLabel(single) : submitLabel}</Text>
+            )}
+          </Pressable>
+        )}
       </View>
     </View>
   );
@@ -169,6 +293,7 @@ const styles = StyleSheet.create({
   checkboxOn: { backgroundColor: palette.danger },
   ackText: { flex: 1, fontSize: 13, lineHeight: 18, color: C.text },
   label: { fontSize: 12, fontWeight: '700', color: C.muted, marginTop: 4 },
+  reauthHint: { fontSize: 13, lineHeight: 18, color: C.text, marginTop: 4 },
   input: {
     height: 44,
     borderRadius: 12,

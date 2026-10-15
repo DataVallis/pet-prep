@@ -294,9 +294,10 @@ it('gives the West Highland White Terrier the new sensitive_skin tag (welfare ru
         ->and($westie['consider'])->toBe(['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored', 'chases_small_pets'])
         ->and($westie['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('long_daily_exercise');
 
-    // Only the Westie and the Bulldog (Breed Watch skin-fold dermatitis, M5-R10-20) carry the chip so far.
+    // Only the Westie, the Bulldog (Breed Watch skin-fold dermatitis, M5-R10-20) and the Basset Hound (Breed Watch
+    // skin-fold dermatitis, M5-R10-39) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::WestHighlandWhiteTerrier, BreedType::Bulldog], true)) {
+        if (! in_array($breed, [BreedType::WestHighlandWhiteTerrier, BreedType::Bulldog, BreedType::BassetHound], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('sensitive_skin');
         }
     }
@@ -364,9 +365,9 @@ it('gives the Rottweiler the new experienced_owner tag, hips_hind_legs, shorter_
         // Weekly brushing only (RKC "Once a week"); not flat-faced; no breed-specific chewing.
         ->and($rottweiler['consider'])->not->toContain('frequent_grooming')->not->toContain('brachycephalic_breathing')->not->toContain('chews_when_bored');
 
-    // Only the Rottweiler, the Cane Corso (PDSA S199, M5-R10-23), the Dobermann (PDSA S211, M5-R10-25) and the Boxer (PDSA S219, M5-R10-26) carry the chip so far.
+    // Only the Rottweiler, the Cane Corso (PDSA S199, M5-R10-23), the Dobermann (PDSA S211, M5-R10-25), the Boxer (PDSA S219, M5-R10-26), the Belgian Malinois (AKC S316 / PetMD S317, M5-R10-38) and the Hungarian Vizsla (PDSA S329, M5-R10-40) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Rottweiler, BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer], true)) {
+        if (! in_array($breed, [BreedType::Rottweiler, BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::BelgianMalinois, BreedType::HungarianVizsla], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('experienced_owner');
         }
     }
@@ -464,13 +465,13 @@ it('gives the Cane Corso the new not_for_small_children and drools tags, active_
         ->and($corso['consider'])->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')
         ->not->toContain('sensitive_skin')->not->toContain('frequent_grooming')->not->toContain('fragile_older_children');
 
-    // `drools` also the Great Dane (PDSA S243, M5-R10-29); `not_for_small_children` also the Dobermann (PDSA S211,
-    // M5-R10-25), the Boxer (PDSA S219, M5-R10-26) and the Great Dane (PDSA S243, M5-R10-29).
+    // `drools` also the Great Dane (PDSA S243, M5-R10-29) and the Basset Hound (AKC S324, M5-R10-39); `not_for_small_children` also the Dobermann (PDSA S211,
+    // M5-R10-25), the Boxer (PDSA S219, M5-R10-26), the Great Dane (PDSA S243, M5-R10-29), the Belgian Malinois (AKC S316, M5-R10-38) and the Hungarian Vizsla (PDSA S329, M5-R10-40).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::CaneCorso, BreedType::GreatDane], true)) {
+        if (! in_array($breed, [BreedType::CaneCorso, BreedType::GreatDane, BreedType::BassetHound], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('drools');
         }
-        if (! in_array($breed, [BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::GreatDane], true)) {
+        if (! in_array($breed, [BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::GreatDane, BreedType::BelgianMalinois, BreedType::HungarianVizsla], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('not_for_small_children');
         }
     }
@@ -526,9 +527,10 @@ it('gives the Boxer the new needs_company and short_muzzle_breathing tags and th
         ->and($boxer['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('sensitive_skin')->not->toContain('shorter_lifespan')
         ->not->toContain('hips_hind_legs')->not->toContain('heart_and_spine')->not->toContain('frequent_grooming');
 
-    // Only the Boxer and the Boston Terrier (AKC S260, M5-R10-31) carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
+    // Only the Boxer, the Boston Terrier (AKC S260, M5-R10-31), the Miniature American Shepherd (PetMD S269, M5-R10-32)
+    // the Chihuahua (PDSA S277, M5-R10-33), the English Springer Spaniel (AKC S286, M5-R10-34), the Brittany (PetMD S302, M5-R10-36), the Belgian Malinois (AKC S316, M5-R10-38), the Basset Hound (PDSA S323, M5-R10-39) and the Hungarian Vizsla (PDSA S329, M5-R10-40) carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier], true)) {
+        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::Brittany, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('needs_company');
         }
         if (! in_array($breed, [BreedType::Boxer, BreedType::ShihTzu], true)) {
@@ -561,7 +563,7 @@ it('gives the Miniature Schnauzer apartment, children, low_shedding and frequent
         ->and(bsEntry('miniature_schnauzer.suitability.pdsa_grooming')['quote'])->toBe('Grooming is needed 2-3 times a week');
 });
 
-it('gives chases_small_pets only to the seven breeds whose own entry quotes a high prey drive (David 2026-10-12)', function () {
+it('gives chases_small_pets only to the ten breeds whose own entry quotes a high prey drive (David 2026-10-12)', function () {
     expect(BreedSuitability::vocabulary())->toMatchArray(['chases_small_pets' => BreedSuitability::CONSIDER]);
 
     $expected = [
@@ -573,6 +575,12 @@ it('gives chases_small_pets only to the seven breeds whose own entry quotes a hi
         BreedType::Boxer->value => 'boxer.behaviour.other_pets',
         // M5-R10-29: PDSA S243 "a fairly strong prey drive" (strong = high, runbook §3).
         BreedType::GreatDane->value => 'great_dane.behaviour.other_pets',
+        // M5-R10-36: PetMD S302 "hardwired with a high prey drive".
+        BreedType::Brittany->value => 'brittany.behaviour.other_pets',
+        // M5-R10-38: PetMD S317 "Belgian Malinois also have a high prey drive".
+        BreedType::BelgianMalinois->value => 'belgian_malinois.behaviour.other_pets',
+        // M5-R10-40: PDSA S329 "Hungarian Vizslas do have a high prey drive".
+        BreedType::HungarianVizsla->value => 'hungarian_vizsla.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {
@@ -632,9 +640,9 @@ it('gives the Great Dane the new eyelid_problems tag and hips_hind_legs (welfare
         ->and($dane['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
         ->not->toContain('frequent_grooming')->not->toContain('needs_company')->not->toContain('experienced_owner');
 
-    // Only the Great Dane carries eyelid_problems so far.
+    // Only the Great Dane and the Basset Hound (Breed Watch S322, M5-R10-39) carry eyelid_problems so far.
     foreach (BreedType::cases() as $breed) {
-        if ($breed !== BreedType::GreatDane) {
+        if (! in_array($breed, [BreedType::GreatDane, BreedType::BassetHound], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('eyelid_problems');
         }
     }
@@ -660,9 +668,9 @@ it('gives the Pomeranian the new older_children tag (AKC), apartment, family_pet
         ->and($pom['consider'])->not->toContain('fragile_older_children')->not->toContain('not_for_small_children')
         ->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')->not->toContain('hips_hind_legs');
 
-    // Only the Pomeranian carries older_children so far.
+    // Only the Pomeranian and the Chihuahua (PDSA S277, M5-R10-33) carry older_children.
     foreach (BreedType::cases() as $breed) {
-        if ($breed !== BreedType::Pomeranian) {
+        if (! in_array($breed, [BreedType::Pomeranian, BreedType::Chihuahua], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('older_children');
         }
     }
@@ -691,4 +699,170 @@ it('gives the Boston Terrier apartment, family_pet, children and the flat-face a
         ->and(bsEntry('boston_terrier.suitability.akc_time_alone')['quote'])->toBe('This breed doesn’t fare well when left alone for extended periods of time.')
         ->and(bsEntry('boston_terrier.suitability.rkc_shedding')['notes'])->toContain('shed minimally')
         ->and(bsEntry('boston_terrier.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Flat/ Apartment');
+});
+
+it('gives the Miniature American Shepherd family_pet, children, other_pets and the herding / company / shedding chips — never small_children, no new tag (runbook 2026-10-13)', function () {
+    $mas = app(BreedSuitability::class)->for(BreedType::MiniatureAmericanShepherd);
+    expect($mas['suits'])->toBe(['family_pet', 'children', 'other_pets'])
+        // Caveats (AKC: may herd children; PetMD: supervise at first) → never small_children; RKC page not reachable → no apartment / large_home.
+        ->and($mas['suits'])->not->toContain('small_children')->not->toContain('apartment')->not->toContain('large_home')->not->toContain('often_alone')
+        // At least 1 h a day (PetMD) → not the ~2 h active_family / long_daily_exercise pair.
+        ->and($mas['suits'])->not->toContain('active_family')
+        ->and($mas['consider'])->toBe(['needs_mental_stimulation', 'may_herd_children', 'needs_company', 'sheds'])
+        ->and($mas['consider'])->not->toContain('long_daily_exercise')->not->toContain('chases_small_pets')
+        // PetMD "a couple times a week" vs AKC weekly most of the year → conflicting sources, no frequent_grooming chip.
+        ->and($mas['consider'])->not->toContain('frequent_grooming');
+
+    expect(bsEntry('miniature_american_shepherd.suitability.akc_children')['quote'])->toBe('They tend to be good with children, but may try to herd them.')
+        ->and(bsEntry('miniature_american_shepherd.behaviour.time_alone')['quote'])->toBe("Their devotion to family can lead to separation anxiety when they're left alone.")
+        ->and(bsEntry('miniature_american_shepherd.suitability.petmd_grooming')['quote'])->toContain('a couple times a week')
+        ->and(bsEntry('miniature_american_shepherd.suitability.petmd_children_pets')['quote'])->toContain('supervised initially');
+});
+
+it('gives the Chihuahua apartment, other_pets and the older-children / company / shedding chips — never family_pet or children, no welfare chip (runbook 2026-10-13)', function () {
+    $chi = app(BreedSuitability::class)->for(BreedType::Chihuahua);
+    expect($chi['suits'])->toBe(['apartment', 'other_pets'])
+        // AKC "aren’t recommended for homes with children" (S278) → no family_pet / children / small_children.
+        ->and($chi['suits'])->not->toContain('family_pet')->not->toContain('children')->not->toContain('small_children')
+        // PDSA: does not cope well with even very short periods alone (S277) → never often_alone.
+        ->and($chi['suits'])->not->toContain('often_alone')->not->toContain('active_family')->not->toContain('large_home')
+        ->and($chi['consider'])->toBe(['older_children', 'needs_company', 'sheds'])
+        // Weekly brushing (RKC "Once a week") → no frequent_grooming; not flat-faced and no returned Breed Watch point → no welfare chip;
+        // chasing unfamiliar pets is not a "high prey drive" quote → no chases_small_pets; the large-dog chip does not fit a toy dog.
+        ->and($chi['consider'])->not->toContain('frequent_grooming')->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
+        ->not->toContain('chases_small_pets')->not->toContain('not_for_small_children')->not->toContain('fragile_older_children')->not->toContain('shorter_lifespan');
+
+    expect(bsEntry('chihuahua.suitability.pdsa_children')['quote'])->toBe("Because of this, they're better suited to families with slightly older children")
+        ->and(bsEntry('chihuahua.behaviour.time_alone')['quote'])->toBe('As companion dogs Chihuahuas love company and need someone around the home all the time.')
+        ->and(bsEntry('chihuahua.suitability.akc_children')['quote'])->toContain('aren’t recommended for homes with children')
+        ->and(bsEntry('chihuahua.suitability.rkc_grooming')['quote'])->toBe('Grooming: Once a week');
+});
+
+it('gives the English Springer Spaniel active_family / family_pet / children / other_pets and the exercise, company, shedding and grooming chips — no welfare chip (runbook 2026-10-14)', function () {
+    $ess = app(BreedSuitability::class)->for(BreedType::EnglishSpringerSpaniel);
+    expect($ess['suits'])->toBe(['active_family', 'family_pet', 'children', 'other_pets'])
+        // PDSA names children in general, no rating for small children; RKC "Small house" → neither apartment nor large_home.
+        ->and($ess['suits'])->not->toContain('small_children')->not->toContain('apartment')->not->toContain('large_home')
+        // AKC: should not be left alone for long periods (S286) → never often_alone.
+        ->and($ess['suits'])->not->toContain('often_alone')->not->toContain('first_time_owner')
+        ->and($ess['consider'])->toBe(['long_daily_exercise', 'needs_company', 'sheds', 'frequent_grooming'])
+        // Breed Watch Category 1 without points of concern → no welfare chip; no prey-drive quote; RKC "Over 10 years".
+        ->and($ess['consider'])->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
+        ->not->toContain('chases_small_pets')->not->toContain('shorter_lifespan')->not->toContain('needs_mental_stimulation');
+
+    expect(bsEntry('english_springer_spaniel.suitability.pdsa_children')['quote'])->toBe('get along well with children and other household pets.')
+        ->and(bsEntry('english_springer_spaniel.behaviour.time_alone')['quote'])->toStartWith('Springers should not be left alone for long periods of time')
+        ->and(bsEntry('english_springer_spaniel.suitability.rkc_grooming')['quote'])->toBe('Grooming: More than once a week')
+        ->and(bsEntry('english_springer_spaniel.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Small house');
+});
+
+it('gives the Shetland Sheepdog family_pet / children and the mental-exercise, herding, grooming and shedding chips — no welfare chip (runbook 2026-10-14)', function () {
+    $sheltie = app(BreedSuitability::class)->for(BreedType::ShetlandSheepdog);
+    expect($sheltie['suits'])->toBe(['family_pet', 'children'])
+        // PDSA names children in general, AKC prefers older children (herding) → may_herd_children, never small_children.
+        ->and($sheltie['suits'])->not->toContain('small_children')->not->toContain('apartment')->not->toContain('large_home')
+        // No explicit other-pets statement; RKC "Up to 1 hour per day" → no active_family.
+        ->and($sheltie['suits'])->not->toContain('other_pets')->not->toContain('active_family')->not->toContain('often_alone')
+        ->and($sheltie['consider'])->toBe(['needs_mental_stimulation', 'may_herd_children', 'frequent_grooming', 'sheds'])
+        // Breed Watch Category 2 without a named point → no welfare chip; AKC "will chase" is no named prey drive; RKC "Over 10 years".
+        ->and($sheltie['consider'])->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
+        ->not->toContain('chases_small_pets')->not->toContain('shorter_lifespan')->not->toContain('long_daily_exercise')->not->toContain('older_children');
+
+    expect(bsEntry('shetland_sheepdog.suitability.pdsa_family')['quote'])->toBe('Shelties often fit well into family life and get along happily with children.')
+        ->and(bsEntry('shetland_sheepdog.behaviour.herding_children')['quote'])->toContain('due to their herding instincts')
+        ->and(bsEntry('shetland_sheepdog.suitability.rkc_grooming')['quote'])->toBe('Grooming: Every day')
+        ->and(bsEntry('shetland_sheepdog.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Small house');
+});
+
+it('gives the Brittany active_family / family_pet / children and the exercise, mental-stimulation, company, shedding and prey-drive chips — no welfare chip (runbook 2026-10-14)', function () {
+    $brittany = app(BreedSuitability::class)->for(BreedType::Brittany);
+    expect($brittany['suits'])->toBe(['active_family', 'family_pet', 'children'])
+        // PetMD "children of all ages" is no rating → never small_children; RKC "Small house" → neither apartment nor large_home.
+        ->and($brittany['suits'])->not->toContain('small_children')->not->toContain('apartment')->not->toContain('large_home')
+        // PetMD "other pets" conflicts with its own "high prey drive" → no other_pets; not to be left alone for long → never often_alone.
+        ->and($brittany['suits'])->not->toContain('other_pets')->not->toContain('often_alone')->not->toContain('first_time_owner')
+        ->and($brittany['consider'])->toBe(['long_daily_exercise', 'needs_mental_stimulation', 'needs_company', 'sheds', 'chases_small_pets'])
+        // Breed Watch Category 1 → no welfare chip; RKC "More than once a week" vs AKC / PetMD weekly → no frequent_grooming; RKC "Over 10 years".
+        ->and($brittany['consider'])->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
+        ->not->toContain('frequent_grooming')->not->toContain('shorter_lifespan')->not->toContain('experienced_owner');
+
+    expect(bsEntry('brittany.behaviour.other_pets')['quote'])->toBe('The Brittany was bred to hunt birds, so they are hardwired with a high prey drive.')
+        ->and(bsEntry('brittany.suitability.petmd_children')['quote'])->toBe('sweet and well-behaved with children of all ages')
+        ->and(bsEntry('brittany.suitability.rkc_exercise')['quote'])->toBe('Exercise: More than 2 hours per day')
+        ->and(bsEntry('brittany.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Small house');
+});
+
+it('gives the American Cocker Spaniel family_pet / children / other_pets and the grooming, weight and shedding chips — no exercise or welfare chip (runbook 2026-10-14)', function () {
+    $cocker = app(BreedSuitability::class)->for(BreedType::AmericanCockerSpaniel);
+    expect($cocker['suits'])->toBe(['family_pet', 'children', 'other_pets'])
+        // No rating for small children → never small_children; RKC "Small house" → neither apartment nor large_home.
+        ->and($cocker['suits'])->not->toContain('small_children')->not->toContain('apartment')->not->toContain('large_home')
+        // RKC "More than 2 hours per day" vs AKC / PetMD "don't require a lot / high levels of exercise" → no exercise chip.
+        ->and($cocker['suits'])->not->toContain('active_family')->not->toContain('often_alone')->not->toContain('first_time_owner')
+        ->and($cocker['consider'])->toBe(['frequent_grooming', 'food_motivated_weight', 'sheds'])
+        // Breed Watch Category 2 without a named point → no welfare chip; no prey-drive statement; RKC "Over 10 years".
+        ->and($cocker['consider'])->not->toContain('long_daily_exercise')->not->toContain('sensitive_skin')->not->toContain('eyelid_problems')
+        ->not->toContain('chases_small_pets')->not->toContain('shorter_lifespan')->not->toContain('needs_company');
+
+    expect(bsEntry('american_cocker_spaniel.suitability.rkc_grooming')['quote'])->toBe('Grooming: Every day')
+        ->and(bsEntry('american_cocker_spaniel.suitability.vca_children')['quote'])->toBe('Usually very good with children.')
+        ->and(bsEntry('american_cocker_spaniel.suitability.vca_other_pets')['quote'])->toBe('Gets along well with other pets and dogs.')
+        ->and(bsEntry('american_cocker_spaniel.behaviour.obesity_tendency')['quote'])->toBe('Cockers have a tendency to become overweight.')
+        ->and(bsEntry('american_cocker_spaniel.exercise.adult')['notes'])->toContain('no exercise chip')
+        ->and(bsEntry('american_cocker_spaniel.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Small house');
+});
+
+it('gives the Belgian Malinois active_family / large_home and the exercise, owner, small-children, company and prey-drive chips — no family or welfare chip (runbook 2026-10-14)', function () {
+    $mal = app(BreedSuitability::class)->for(BreedType::BelgianMalinois);
+    expect($mal['suits'])->toBe(['active_family', 'large_home'])
+        // AKC "older, responsible kids", PetMD herds toddlers, high prey drive → never family_pet / children / other_pets.
+        ->and($mal['suits'])->not->toContain('family_pet')->not->toContain('children')->not->toContain('small_children')
+        ->not->toContain('other_pets')->not->toContain('first_time_owner')->not->toContain('apartment')->not->toContain('often_alone')
+        ->and($mal['consider'])->toBe(['long_daily_exercise', 'experienced_owner', 'not_for_small_children', 'may_herd_children', 'needs_mental_stimulation', 'needs_company', 'sheds', 'chases_small_pets'])
+        // RKC "More than once a week" vs AKC / PetMD "occasional" → no frequent_grooming; Breed Watch Category 1 → no welfare chip.
+        ->and($mal['consider'])->not->toContain('frequent_grooming')->not->toContain('hips_hind_legs')->not->toContain('shorter_lifespan')
+        ->not->toContain('older_children')->not->toContain('fragile_older_children');
+
+    expect(bsEntry('belgian_malinois.suitability.rkc_exercise')['quote'])->toBe('Exercise: More than 2 hours per day')
+        ->and(bsEntry('belgian_malinois.suitability.akc_children')['quote'])->toBe('Mals would fare best in families with older, responsible kids.')
+        ->and(bsEntry('belgian_malinois.suitability.akc_time_alone')['quote'])->toBe('they should not be left alone for extended periods of time.')
+        ->and(bsEntry('belgian_malinois.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Large house')
+        ->and(bsEntry('belgian_malinois.suitability.rkc_breed_watch')['value'])->toBe('Category 1');
+});
+
+it('gives the Basset Hound family_pet / children / large_home and the welfare chips eyelid_problems / sensitive_skin (Breed Watch Category 3) — no fence or back chip (runbook 2026-10-15)', function () {
+    $bh = app(BreedSuitability::class)->for(BreedType::BassetHound);
+    expect($bh['suits'])->toBe(['family_pet', 'children', 'large_home'])
+        // large_home by the rule (RKC "Large house"; garden "Small/ medium" — open for David); PDSA: never unattended with another pet → no other_pets.
+        ->and($bh['suits'])->not->toContain('apartment')->not->toContain('other_pets')
+        ->not->toContain('small_children')->not->toContain('first_time_owner')->not->toContain('active_family')
+        ->and($bh['consider'])->toBe(['eyelid_problems', 'sensitive_skin', 'food_motivated_weight', 'needs_company', 'sheds', 'drools'])
+        // Not flat-faced; IVDD is not a Breed Watch point (open for David); the fence chip says "high"; RKC "Up to 1 hour".
+        ->and($bh['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('back_spine')->not->toContain('secure_fencing')
+        ->not->toContain('long_daily_exercise')->not->toContain('chases_small_pets')->not->toContain('shorter_lifespan')
+        ->not->toContain('frequent_grooming');
+
+    expect(bsEntry('basset_hound.health.breed_watch')['quote'])->toBe('Eyelids not in normal contact with the eyeball, they are turned inwards or outwards')
+        ->and(bsEntry('basset_hound.health.skin_folds')['quote'])->toBe('Signs of dermatitis irritation in skin folds, and/or hair loss or scarring from previous dermatitis')
+        ->and(bsEntry('basset_hound.suitability.pdsa_children')['quote'])->toBe('Basset Hounds are generally very tolerant and so should get along with children very well.')
+        ->and(bsEntry('basset_hound.suitability.rkc_size_of_garden')['quote'])->toBe('Size of garden: Small/ medium garden')
+        ->and(bsEntry('basset_hound.suitability.rkc_breed_watch')['value'])->toBe('Category 3');
+});
+
+it('gives the Hungarian Vizsla active_family / family_pet / large_home and no welfare chip (Breed Watch Category 1) — older children only, high prey drive (runbook 2026-10-15)', function () {
+    $hv = app(BreedSuitability::class)->for(BreedType::HungarianVizsla);
+    expect($hv['suits'])->toBe(['active_family', 'family_pet', 'large_home'])
+        // PDSA: older children only (not with very young children) → not_for_small_children instead of children;
+        // PDSA high prey drive vs PetMD fine with cats → no other_pets.
+        ->and($hv['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('other_pets')
+        ->not->toContain('apartment')->not->toContain('first_time_owner')->not->toContain('low_shedding')
+        ->and($hv['consider'])->toBe(['long_daily_exercise', 'experienced_owner', 'not_for_small_children', 'needs_company', 'sheds', 'chases_small_pets'])
+        // Breed Watch Category 1 → no welfare chip; RKC "Over 12 years"; RKC grooming "Once a week".
+        ->and($hv['consider'])->not->toContain('hips_hind_legs')->not->toContain('eyelid_problems')->not->toContain('older_children')
+        ->not->toContain('shorter_lifespan')->not->toContain('frequent_grooming')->not->toContain('needs_mental_stimulation');
+
+    expect(bsEntry('hungarian_vizsla.suitability.pdsa_prey_drive')['quote'])->toBe("Hungarian Vizslas do have a high prey drive, so we wouldn't advise keeping them with smaller pets.")
+        ->and(bsEntry('hungarian_vizsla.suitability.pdsa_children')['quote'])->toBe("We wouldn't recommend a Vizsla if you have very young children")
+        ->and(bsEntry('hungarian_vizsla.suitability.rkc_size_of_garden')['quote'])->toBe('Size of garden: Large garden')
+        ->and(bsEntry('hungarian_vizsla.suitability.rkc_breed_watch')['value'])->toBe('Category 1');
 });

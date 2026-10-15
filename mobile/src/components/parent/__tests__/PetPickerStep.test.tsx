@@ -269,6 +269,15 @@ describe('PetPickerStep', () => {
       'breed-option-great_dane',
       'breed-option-pomeranian',
       'breed-option-boston_terrier',
+      'breed-option-miniature_american_shepherd',
+      'breed-option-chihuahua',
+      'breed-option-english_springer_spaniel',
+      'breed-option-shetland_sheepdog',
+      'breed-option-brittany',
+      'breed-option-american_cocker_spaniel',
+      'breed-option-belgian_malinois',
+      'breed-option-basset_hound',
+      'breed-option-hungarian_vizsla',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -708,6 +717,490 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/\d|%/);
       expect(consider).not.toHaveTextContent(/\d|%/);
       expect(screen.getByTestId('breed-option-boston_terrier')).toHaveTextContent(/Boston Terrier/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-32: the Miniature American Shepherd (fallback) shows its chips, is found as "ameriški" and "mini aussie", and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const mas = screen.getByTestId('breed-option-miniature_american_shepherd');
+    expect(mas).toHaveTextContent(/Mali ameriški ovčar/);
+    expect(mas).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-miniature_american_shepherd-suits');
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    expect(suits).toHaveTextContent(/dom z drugimi ljubljenčki/);
+    const consider = screen.getByTestId('breed-suitability-miniature_american_shepherd-consider');
+    expect(consider).toHaveTextContent(/potrebuje miselne izzive/);
+    expect(consider).toHaveTextContent(/pri igri lahko »pase« otroke/);
+    expect(consider).toHaveTextContent(/rad ima družbo — naj bo nekdo večino dneva doma/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+    expect(consider).not.toHaveTextContent(/potrebuje česanje večkrat na teden/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'ameriški');
+    expect(screen.getByTestId('breed-option-miniature_american_shepherd')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-australian_shepherd')).toBeNull();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'mini aussie');
+    expect(screen.getByTestId('breed-option-miniature_american_shepherd')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-miniature_american_shepherd'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'miniature_american_shepherd', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'miniature_american_shepherd' }),
+    );
+  });
+
+  it('M5-R10-32: the Miniature American Shepherd chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-miniature_american_shepherd-suits');
+      const consider = screen.getByTestId('breed-suitability-miniature_american_shepherd-consider');
+      expect(suits).toHaveTextContent(/family life/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(suits).toHaveTextContent(/homes with other pets/);
+      expect(consider).toHaveTextContent(/needs mental challenges/);
+      expect(consider).toHaveTextContent(/may “herd” children at play/);
+      expect(consider).toHaveTextContent(/loves company — best with someone home most of the day/);
+      expect(consider).not.toHaveTextContent(/needs brushing several times a week/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-miniature_american_shepherd')).toHaveTextContent(/Miniature American Shepherd/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-35: the Shetland Sheepdog (fallback) shows its chips, is found as "šetlandski ovčar" and "sheltie", and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const shs = screen.getByTestId('breed-option-shetland_sheepdog');
+    expect(shs).toHaveTextContent(/Šetlandski ovčar/);
+    expect(shs).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-shetland_sheepdog-suits');
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    const consider = screen.getByTestId('breed-suitability-shetland_sheepdog-consider');
+    expect(consider).toHaveTextContent(/potrebuje miselne izzive/);
+    expect(consider).toHaveTextContent(/pri igri lahko »pase« otroke/);
+    expect(consider).toHaveTextContent(/potrebuje česanje večkrat na teden/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'šetlandski ovčar');
+    expect(screen.getByTestId('breed-option-shetland_sheepdog')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'sheltie');
+    expect(screen.getByTestId('breed-option-shetland_sheepdog')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-shetland_sheepdog'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'shetland_sheepdog', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'shetland_sheepdog' }),
+    );
+  });
+
+  it('M5-R10-36: the Brittany (fallback) shows its chips, is found as "bretonski ptičar" and "epagneul breton", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const br = screen.getByTestId('breed-option-brittany');
+    expect(br).toHaveTextContent(/Bretonski ptičar/);
+    expect(br).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-brittany-suits');
+    expect(suits).toHaveTextContent(/aktivno družino/);
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    const consider = screen.getByTestId('breed-suitability-brittany-consider');
+    expect(consider).toHaveTextContent(/vsak dan potrebuje veliko gibanja/);
+    expect(consider).toHaveTextContent(/potrebuje miselne izzive/);
+    expect(consider).toHaveTextContent(/rad ima družbo/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+    expect(consider).toHaveTextContent(/močan lovski nagon/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'bretonski ptičar');
+    expect(screen.getByTestId('breed-option-brittany')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'epagneul breton');
+    expect(screen.getByTestId('breed-option-brittany')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-brittany'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'brittany', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'brittany' }),
+    );
+  });
+
+  it('M5-R10-36: the Brittany chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-brittany-suits');
+      const consider = screen.getByTestId('breed-suitability-brittany-consider');
+      expect(suits).toHaveTextContent(/an active family/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(consider).toHaveTextContent(/needs lots of exercise every day/);
+      expect(consider).toHaveTextContent(/loves company/);
+      expect(consider).toHaveTextContent(/strong prey drive/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-brittany')).toHaveTextContent(/Brittany/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-37: the American Cocker Spaniel (fallback) shows its chips, is found as "ameriški koker" and "american cocker", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const acs = screen.getByTestId('breed-option-american_cocker_spaniel');
+    expect(acs).toHaveTextContent(/Ameriški koker španjel/);
+    expect(acs).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(acs).toHaveTextContent(/česanje vsak dan/);
+    const suits = screen.getByTestId('breed-suitability-american_cocker_spaniel-suits');
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    expect(suits).toHaveTextContent(/dom z drugimi ljubljenčki/);
+    const consider = screen.getByTestId('breed-suitability-american_cocker_spaniel-consider');
+    expect(consider).toHaveTextContent(/potrebuje česanje večkrat na teden/);
+    expect(consider).toHaveTextContent(/pazite na težo/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+    expect(consider).not.toHaveTextContent(/vsak dan potrebuje veliko gibanja/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'ameriški koker');
+    expect(screen.getByTestId('breed-option-american_cocker_spaniel')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'american cocker');
+    expect(screen.getByTestId('breed-option-american_cocker_spaniel')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-american_cocker_spaniel'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'american_cocker_spaniel', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'american_cocker_spaniel' }),
+    );
+  });
+
+  it('M5-R10-37: the American Cocker Spaniel chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-american_cocker_spaniel-suits');
+      const consider = screen.getByTestId('breed-suitability-american_cocker_spaniel-consider');
+      expect(suits).toHaveTextContent(/family life/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(suits).toHaveTextContent(/homes with other pets/);
+      expect(consider).toHaveTextContent(/needs brushing several times a week/);
+      expect(consider).toHaveTextContent(/watch the weight/);
+      expect(consider).toHaveTextContent(/sheds/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-american_cocker_spaniel')).toHaveTextContent(/American Cocker Spaniel/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-40: the Hungarian Vizsla (fallback) shows its chips, is found as "vižla" and "vizsla", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const hv = screen.getByTestId('breed-option-hungarian_vizsla');
+    expect(hv).toHaveTextContent(/Madžarski kratkodlaki ptičar/);
+    expect(hv).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(hv).toHaveTextContent(/česanje 1× na teden/);
+    const suits = screen.getByTestId('breed-suitability-hungarian_vizsla-suits');
+    expect(suits).toHaveTextContent(/aktivno družino/);
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/veliko hišo z vrtom/);
+    expect(suits).not.toHaveTextContent(/družino z otroki/);
+    const consider = screen.getByTestId('breed-suitability-hungarian_vizsla-consider');
+    expect(consider).toHaveTextContent(/veliko gibanja/);
+    expect(consider).toHaveTextContent(/izkušenega lastnika/);
+    expect(consider).toHaveTextContent(/ni za dom z majhnimi otroki/);
+    expect(consider).toHaveTextContent(/rad ima družbo/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+    expect(consider).toHaveTextContent(/lovski nagon/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'vižla');
+    expect(screen.getByTestId('breed-option-hungarian_vizsla')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'vizsla');
+    expect(screen.getByTestId('breed-option-hungarian_vizsla')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-hungarian_vizsla'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'hungarian_vizsla', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'hungarian_vizsla' }),
+    );
+  });
+
+  it('M5-R10-40: the Hungarian Vizsla chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-hungarian_vizsla-suits');
+      const consider = screen.getByTestId('breed-suitability-hungarian_vizsla-consider');
+      expect(suits).toHaveTextContent(/an active family/);
+      expect(suits).toHaveTextContent(/family life/);
+      expect(suits).toHaveTextContent(/a large house and garden/);
+      expect(consider).toHaveTextContent(/needs an experienced owner/);
+      expect(consider).toHaveTextContent(/not for homes with small children/);
+      expect(consider).toHaveTextContent(/may chase small pets/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-hungarian_vizsla')).toHaveTextContent(/Hungarian Vizsla/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-39: the Basset Hound (fallback) shows its chips, is found as "baset" and "basset", and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const bh = screen.getByTestId('breed-option-basset_hound');
+    expect(bh).toHaveTextContent(/Baset/);
+    expect(bh).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(bh).toHaveTextContent(/česanje 1× na teden/);
+    const suits = screen.getByTestId('breed-suitability-basset_hound-suits');
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    const consider = screen.getByTestId('breed-suitability-basset_hound-consider');
+    expect(consider).toHaveTextContent(/veke in oči/);
+    expect(consider).toHaveTextContent(/občutljiva koža/);
+    expect(consider).toHaveTextContent(/pazite na težo/);
+    expect(consider).toHaveTextContent(/rad ima družbo/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+    expect(consider).toHaveTextContent(/se slini/);
+    expect(suits).toHaveTextContent(/veliko hišo z vrtom/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'baset');
+    expect(screen.getByTestId('breed-option-basset_hound')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'basset');
+    expect(screen.getByTestId('breed-option-basset_hound')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-basset_hound'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'basset_hound', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'basset_hound' }),
+    );
+  });
+
+  it('M5-R10-39: the Basset Hound chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-basset_hound-suits');
+      const consider = screen.getByTestId('breed-suitability-basset_hound-consider');
+      expect(suits).toHaveTextContent(/family life/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(suits).toHaveTextContent(/a large house and garden/);
+      expect(consider).toHaveTextContent(/eyelids and eyes/);
+      expect(consider).toHaveTextContent(/sensitive skin/);
+      expect(consider).toHaveTextContent(/watch the weight/);
+      expect(consider).toHaveTextContent(/drools/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-basset_hound')).toHaveTextContent(/Basset Hound/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-38: the Belgian Malinois (fallback) shows its chips, is found as "belgijski ovčar" and "malinois", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const mal = screen.getByTestId('breed-option-belgian_malinois');
+    expect(mal).toHaveTextContent(/Belgijski ovčar malinois/);
+    expect(mal).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(mal).toHaveTextContent(/česanje 2× na teden/);
+    const suits = screen.getByTestId('breed-suitability-belgian_malinois-suits');
+    expect(suits).toHaveTextContent(/aktivno družino/);
+    expect(suits).toHaveTextContent(/veliko hišo z vrtom/);
+    const consider = screen.getByTestId('breed-suitability-belgian_malinois-consider');
+    expect(consider).toHaveTextContent(/vsak dan potrebuje veliko gibanja/);
+    expect(consider).toHaveTextContent(/potrebuje izkušenega lastnika/);
+    expect(consider).toHaveTextContent(/ni za dom z majhnimi otroki/);
+    expect(consider).toHaveTextContent(/»pase« otroke/);
+    expect(consider).toHaveTextContent(/potrebuje miselne izzive/);
+    expect(consider).toHaveTextContent(/rad ima družbo/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+    expect(consider).toHaveTextContent(/lahko lovi manjše živali/);
+    expect(suits).not.toHaveTextContent(/družinsko življenje/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'belgijski ovčar');
+    expect(screen.getByTestId('breed-option-belgian_malinois')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'malinois');
+    expect(screen.getByTestId('breed-option-belgian_malinois')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-belgian_malinois'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'belgian_malinois', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'belgian_malinois' }),
+    );
+  });
+
+  it('M5-R10-38: the Belgian Malinois chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-belgian_malinois-suits');
+      const consider = screen.getByTestId('breed-suitability-belgian_malinois-consider');
+      expect(suits).toHaveTextContent(/an active family/);
+      expect(suits).toHaveTextContent(/a large house and garden/);
+      expect(consider).toHaveTextContent(/needs lots of exercise every day/);
+      expect(consider).toHaveTextContent(/needs an experienced owner/);
+      expect(consider).toHaveTextContent(/not for homes with small children/);
+      expect(consider).toHaveTextContent(/may chase small pets/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-belgian_malinois')).toHaveTextContent(/Belgian Malinois/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-35: the Shetland Sheepdog chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-shetland_sheepdog-suits');
+      const consider = screen.getByTestId('breed-suitability-shetland_sheepdog-consider');
+      expect(suits).toHaveTextContent(/family life/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(consider).toHaveTextContent(/needs mental challenges/);
+      expect(consider).toHaveTextContent(/may “herd” children at play/);
+      expect(consider).toHaveTextContent(/needs brushing several times a week/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-shetland_sheepdog')).toHaveTextContent(/Shetland Sheepdog/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-34: the English Springer Spaniel (fallback) shows its chips, is found as "angleški springer španjel" and "springer", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const ess = screen.getByTestId('breed-option-english_springer_spaniel');
+    expect(ess).toHaveTextContent(/Angleški springer španjel/);
+    expect(ess).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-english_springer_spaniel-suits');
+    expect(suits).toHaveTextContent(/aktivno družino/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    expect(suits).toHaveTextContent(/dom z drugimi ljubljenčki/);
+    const consider = screen.getByTestId('breed-suitability-english_springer_spaniel-consider');
+    expect(consider).toHaveTextContent(/vsak dan potrebuje veliko gibanja/);
+    expect(consider).toHaveTextContent(/rad ima družbo — naj bo nekdo večino dneva doma/);
+    expect(consider).toHaveTextContent(/potrebuje česanje večkrat na teden/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'angleški springer španjel');
+    expect(screen.getByTestId('breed-option-english_springer_spaniel')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'springer');
+    expect(screen.getByTestId('breed-option-english_springer_spaniel')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-english_springer_spaniel'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'english_springer_spaniel', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'english_springer_spaniel' }),
+    );
+  });
+
+  it('M5-R10-34: the English Springer Spaniel chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-english_springer_spaniel-suits');
+      const consider = screen.getByTestId('breed-suitability-english_springer_spaniel-consider');
+      expect(suits).toHaveTextContent(/an active family/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(consider).toHaveTextContent(/needs lots of exercise every day/);
+      expect(consider).toHaveTextContent(/needs brushing several times a week/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-english_springer_spaniel')).toHaveTextContent(/English Springer Spaniel/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-33: the Chihuahua (fallback) shows its chips, is found as "čivava" and "civava", and quotes 3.000 / 2.300 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const chi = screen.getByTestId('breed-option-chihuahua');
+    expect(chi).toHaveTextContent(/Čivava/);
+    expect(chi).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    const suits = screen.getByTestId('breed-suitability-chihuahua-suits');
+    expect(suits).toHaveTextContent(/dom z drugimi ljubljenčki/);
+    const consider = screen.getByTestId('breed-suitability-chihuahua-consider');
+    expect(consider).toHaveTextContent(/majhen pes — bolje za starejše otroke/);
+    expect(consider).toHaveTextContent(/rad ima družbo — naj bo nekdo večino dneva doma/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+    expect(suits).not.toHaveTextContent(/družino z otroki/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'čivava');
+    expect(screen.getByTestId('breed-option-chihuahua')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'civava');
+    expect(screen.getByTestId('breed-option-chihuahua')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-chihuahua'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 3\.000 pri 3 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/3\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/2\.300 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'chihuahua', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'chihuahua' }),
+    );
+  });
+
+  it('M5-R10-33: the Chihuahua chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-chihuahua-suits');
+      const consider = screen.getByTestId('breed-suitability-chihuahua-consider');
+      expect(suits).toHaveTextContent(/homes with other pets/);
+      expect(consider).toHaveTextContent(/small dog — better with older children/);
+      expect(consider).toHaveTextContent(/loves company — best with someone home most of the day/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-chihuahua')).toHaveTextContent(/Chihuahua/);
     } finally {
       await i18n.changeLanguage('sl');
     }
@@ -1516,3 +2009,26 @@ describe('PetPickerStep', () => {
     });
   });
 });
+
+describe('bug 2026-10-14: the challenge price is only the store\'s own', () => {
+  const pick = (props: { challengePrice?: string | null; challengePriceLoading?: boolean }) =>
+    render(<PetPickerStep childName="Maja" catalogue={FALLBACK_CATALOGUE} initial={INITIAL_PICKER_CHOICE} onConfirm={jest.fn()} {...props} />);
+
+  it('shows the store\'s localized priceString verbatim', () => {
+    pick({ challengePrice: '49,99 €' });
+    expect(screen.getByText('12-tedenski izziv — 49,99 €')).toBeTruthy();
+  });
+
+  it('loading → a neutral "…", never a guessed price', () => {
+    pick({ challengePrice: null, challengePriceLoading: true });
+    expect(screen.getByText('12-tedenski izziv — …')).toBeTruthy();
+    expect(screen.queryByText(/49,99|\$/)).toBeNull();
+  });
+
+  it('no store price → the title without a number', () => {
+    pick({ challengePrice: null });
+    expect(screen.getByText('12-tedenski izziv')).toBeTruthy();
+    expect(screen.queryByText(/€|\$|\d+,\d\d/)).toBeNull();
+  });
+});
+

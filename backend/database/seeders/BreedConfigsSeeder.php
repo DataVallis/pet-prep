@@ -662,6 +662,195 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.boston_terrier',
                 'search_keywords' => ['boston terrier', 'bostonski terier', 'boston', 'american gentleman'],
             ],
+            // M5-R10-32 Miniature American Shepherd (docs/research/dog-data/data.json miniature_american_shepherd,
+            // sources S264–S271; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal (proposed_game_parameters.miniature_american_shepherd
+            // .step_goal_adult: 60 min × 100 steps/min — PetMD S269 "at least one hour") — only the
+            // legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::MiniatureAmericanShepherd->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 280,
+                'label_key' => 'breeds.miniature_american_shepherd',
+                'search_keywords' => ['miniature american shepherd', 'mali ameriški ovčar', 'mali ameriski ovcar', 'mini american', 'mini aussie', 'miniature australian shepherd'],
+            ],
+            // M5-R10-33 Chihuahua (Smooth Coat; docs/research/dog-data/data.json chihuahua, sources
+            // S272–S280; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal (proposed_game_parameters.chihuahua
+            // .step_goal_adult: 30 min × 100 steps/min — RKC S275 "Up to 30 minutes per day") — only the
+            // legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::Chihuahua->slug(),
+                'daily_steps_required' => 3000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 290,
+                'label_key' => 'breeds.chihuahua',
+                'search_keywords' => ['chihuahua', 'čivava', 'civava', 'chi'],
+            ],
+            // M5-R10-34 English Springer Spaniel (docs/research/dog-data/data.json english_springer_spaniel,
+            // sources S281–S288; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal (proposed_game_parameters.english_springer_spaniel
+            // .step_goal_adult: 120 min × 100 steps/min — RKC S284 "More than 2 hours per day") — only the
+            // legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::EnglishSpringerSpaniel->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 300,
+                'label_key' => 'breeds.english_springer_spaniel',
+                'search_keywords' => ['english springer spaniel', 'angleški springer španjel', 'angleski springer spanjel', 'springer spaniel', 'springer španjel', 'springer'],
+            ],
+            // M5-R10-35 Shetland Sheepdog (docs/research/dog-data/data.json shetland_sheepdog,
+            // sources S289–S295; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal (proposed_game_parameters.shetland_sheepdog
+            // .step_goal_adult: 60 min × 100 steps/min — RKC S291 "Up to 1 hour per day") — only the
+            // legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::ShetlandSheepdog->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 310,
+                'label_key' => 'breeds.shetland_sheepdog',
+                'search_keywords' => ['shetland sheepdog', 'šetlandski ovčar', 'setlandski ovcar', 'sheltie', 'šeltie', 'shetland'],
+            ],
+            // M5-R10-36 Brittany (docs/research/dog-data/data.json brittany,
+            // sources S296–S302; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal (proposed_game_parameters.brittany
+            // .step_goal_adult: 120 min × 100 steps/min — RKC S298 "More than 2 hours per day") — only the
+            // legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::Brittany->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 320,
+                'label_key' => 'breeds.brittany',
+                'search_keywords' => ['brittany', 'bretonski ptičar', 'bretonski pticar', 'epagneul breton', 'bretonski španjel', 'brittany spaniel'],
+            ],
+            // M5-R10-37 American Cocker Spaniel (docs/research/dog-data/data.json american_cocker_spaniel,
+            // sources S303–S311; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal (proposed_game_parameters.american_cocker_spaniel
+            // .step_goal_adult: 120 min × 100 steps/min — RKC S305 "More than 2 hours per day") — only the
+            // legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::AmericanCockerSpaniel->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 330,
+                'label_key' => 'breeds.american_cocker_spaniel',
+                'search_keywords' => ['american cocker spaniel', 'ameriški koker španjel', 'ameriski koker spanjel', 'american cocker', 'ameriški koker', 'ameriski koker'],
+            ],
+            // M5-R10-38 Belgian Malinois (docs/research/dog-data/data.json belgian_malinois,
+            // sources S312–S318; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal (proposed_game_parameters.belgian_malinois
+            // .step_goal_adult: 120 min × 100 steps/min — RKC S314 "More than 2 hours per day") — only the
+            // legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::BelgianMalinois->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 340,
+                'label_key' => 'breeds.belgian_malinois',
+                'search_keywords' => ['belgian malinois', 'belgijski ovčar malinois', 'belgijski ovcar malinois', 'malinois', 'belgian shepherd malinois', 'belgian shepherd dog malinois'],
+            ],
+            // M5-R10-39 Basset Hound (docs/research/dog-data/data.json basset_hound,
+            // sources S319–S325; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal (proposed_game_parameters.basset_hound
+            // .step_goal_adult: 60 min × 100 steps/min — RKC S321 "Up to 1 hour per day") — only the
+            // legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::BassetHound->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 350,
+                'label_key' => 'breeds.basset_hound',
+                'search_keywords' => ['basset hound', 'baset', 'basset', 'baset hound', 'baset haund', 'bassett'],
+            ],
+            // M5-R10-40 Hungarian Vizsla (docs/research/dog-data/data.json hungarian_vizsla,
+            // sources S326–S334; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal (proposed_game_parameters.hungarian_vizsla
+            // .step_goal_adult: 120 min × 100 steps/min — RKC S328 "More than 2 hours per day") — only the
+            // legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::HungarianVizsla->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 360,
+                'label_key' => 'breeds.hungarian_vizsla',
+                'search_keywords' => ['hungarian vizsla', 'vizsla', 'madžarski kratkodlaki ptičar', 'madzarski kratkodlaki pticar', 'vižla', 'vizla', 'madžarska vižla', 'madzarska vizla', 'magyar vizsla', 'hungarian pointer'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and
@@ -814,14 +1003,16 @@ class BreedConfigsSeeder extends Seeder
     {
         $now = now();
 
+        $rows = [];
         foreach (self::configs() as $config) {
             $config['feed_windows'] = json_encode($config['feed_windows']);
             $config['search_keywords'] = json_encode($config['search_keywords'], JSON_UNESCAPED_UNICODE);
-
-            DB::table('breed_configs')->insertOrIgnore(
-                array_merge($config, ['created_at' => $now, 'updated_at' => $now])
-            );
+            $rows[] = array_merge($config, ['created_at' => $now, 'updated_at' => $now]);
         }
+
+        // One multi-row INSERT … ON CONFLICT DO NOTHING (every config has the same
+        // columns) instead of one query per breed — same insert-only semantics.
+        DB::table('breed_configs')->insertOrIgnore($rows);
 
         // Raw inserts fire no model events (M5-R06-01 free / paid catalogue cache).
         BreedCatalogService::forget();

@@ -26,6 +26,7 @@ import { Text } from '@/components/ui/Text';
 import { Check, ChevronLeft, Heart, Sparkles, X } from 'lucide-react-native';
 
 import { ApiError } from '@/api/client';
+import { useServerOutage } from '@/store/serverStatusStore';
 import { useChildReport, usePetActivities } from '@/hooks/queries/useParentQueries';
 import {
   Card,
@@ -123,12 +124,14 @@ export function dayPlayText(day: Pick<DayRow, 'play_sessions' | 'play_goal'>): s
 function Timeline({ petId, family, species }: { petId: number; family: FamilyOverview; species: string | null }) {
   const activities = usePetActivities(petId);
   const items = (activities.data?.pages ?? []).flatMap((page) => readTimeline(page.data));
+  // M5-F13: during a deploy wait (spinner) instead of an error; it loads once the server is back.
+  const waitingForServer = useServerOutage() && activities.isError && items.length === 0;
   const today = localParts(new Date().toISOString(), family.timezone)?.date ?? null;
 
   return (
     <Card testID="timeline">
       <SectionTitle>{S.timeline}</SectionTitle>
-      {activities.isPending ? (
+      {activities.isPending || waitingForServer ? (
         <ActivityIndicator color={C.accent} />
       ) : activities.isError && items.length === 0 ? (
         <ErrorBanner text={S.timelineError} retryLabel={S.retry} onRetry={() => void activities.refetch()} testID="timeline-error" />
@@ -183,6 +186,8 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
   const tz = data?.timezone ?? family.timezone;
   const petId = data?.pet_id ?? child.pet_id;
   const offline = report.isError && !(report.error instanceof ApiError);
+  // M5-F13: the deploy banner (on the dashboard root) explains it; the last report stays.
+  const serverUpdating = useServerOutage();
   const pet = petOfChild(child, family);
   const queryClient = useQueryClient();
   const [albumOpen, setAlbumOpen] = useState(false);
@@ -324,7 +329,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
             testIDPrefix="period"
           />
 
-          {report.isError && (
+          {report.isError && !serverUpdating && (
             <ErrorBanner
               text={data ? S.offline : S.loadError}
               retryLabel={S.retry}
@@ -335,7 +340,8 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
           )}
 
           {!data ? (
-            report.isPending ? <LoadingBlock text={S.loading} testID="report-loading" /> : null
+            // M5-F13: no report yet and the server is updating → wait (it loads on recovery), never blank.
+            report.isPending || serverUpdating ? <LoadingBlock text={S.loading} testID="report-loading" /> : null
           ) : data.pet_id === null ? (
             <Card>
               <Text style={styles.muted} testID="report-no-pet">

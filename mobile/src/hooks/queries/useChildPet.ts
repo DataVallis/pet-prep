@@ -38,7 +38,9 @@ import {
   viewSignature,
   type BoundaryBackoff,
 } from '@/modules/childPet/refetchGovernor';
+import { OUTAGE_QUERY_RETRIES } from '@/modules/connectivity/serverOutage';
 import { useAppStore } from '@/store/appStore';
+import { isDeployError } from '@/store/serverStatusStore';
 import type { PetUpdatedBroadcast } from '@/types';
 
 export const childPetKey = ['child', 'pet'] as const;
@@ -67,6 +69,8 @@ async function fetchChildPet({ signal }: QueryFunctionContext): Promise<ChildPet
 export function shouldRetryChildPet(failureCount: number, error: unknown): boolean {
   const status = errorStatus(error);
   if (status !== null && status >= 400 && status < 500 && status !== 429) return false;
+  // M5-F13: a deploy is retried longer (the view stays on screen, the banner explains).
+  if (isDeployError(error)) return failureCount < OUTAGE_QUERY_RETRIES;
   return failureCount < CHILD_PET_RETRIES;
 }
 

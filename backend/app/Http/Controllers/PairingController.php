@@ -36,7 +36,8 @@ class PairingController extends Controller
      * `breed_locked` | `challenge_requires_paid_breed` (M5-F03: explicit
      * `plan: challenge` for a new pet with a free breed — the mutt / domestic
      * cat; also when no breed / no profile is sent, the mutt being the default)
-     * | `breed_species_mismatch` | `species_unavailable` (M5-R06-01).
+     * | `breed_species_mismatch` | `species_unavailable` (M5-R06-01)
+     * | `colour_invalid` (M5-R21).
      *
      * Optional `species` (M5-R06-01): `dog` (default — old app builds) | `cat`.
      * The breed must belong to it; without `breed` the species' free breed
@@ -55,6 +56,11 @@ class PairingController extends Controller
      * this profile (life-stage rules) when the child uses the PIN. **None
      * of the fields** (old app builds) → `pet_profile: null` and a
      * legacy-profile pet that keeps the pre-M5 rules.
+     *
+     * Optional `colour` (M5-R21, David 2026-10-14): a `key` from the breed's
+     * `colours` in GET /api/breeds (paid breeds; needs `breed`) → returned as
+     * `pet_profile.colour`; 422 `colour_invalid` for a colour the breed does
+     * not have. Omitted → `null`, the colour is sampled by the breed's weights.
      *
      * Optional `features` (M5-R02, PR #42): the UI features of this app
      * build (`behaviour_events`, `training`; ≤ 10 strings, unknown values
@@ -95,7 +101,7 @@ class PairingController extends Controller
                      * `features` (M5-R02 / M5-R03): the app features stored for the new pet (behaviour_events, training, species_cat).
                      * `species` (M5-R06-01): dog | cat.
                      *
-                     * @var array{breed: 'mutt'|'border_collie'|'labrador_retriever'|'golden_retriever'|'french_bulldog'|'german_shepherd'|'cavalier_king_charles_spaniel'|'beagle'|'standard_poodle'|'dachshund'|'australian_shepherd'|'havanese'|'west_highland_white_terrier'|'bernese_mountain_dog'|'siberian_husky'|'rottweiler'|'bulldog'|'german_shorthaired_pointer'|'yorkshire_terrier'|'cane_corso'|'pembroke_welsh_corgi'|'dobermann'|'boxer'|'miniature_schnauzer'|'shih_tzu'|'great_dane'|'pomeranian'|'boston_terrier'|'domestic_cat'|'maine_coon'|'british_shorthair'|'ragdoll'|'siberian_cat'|'norwegian_forest_cat'|'bengal', origin: 'bought'|'adopted', age_stage: 'puppy'|'young'|'adult'|'senior', features: list<'behaviour_events'|'training'|'species_cat'>, species: 'dog'|'cat'}|null
+                     * @var array{breed: 'mutt'|'border_collie'|'labrador_retriever'|'golden_retriever'|'french_bulldog'|'german_shepherd'|'cavalier_king_charles_spaniel'|'beagle'|'standard_poodle'|'dachshund'|'australian_shepherd'|'havanese'|'west_highland_white_terrier'|'bernese_mountain_dog'|'siberian_husky'|'rottweiler'|'bulldog'|'german_shorthaired_pointer'|'yorkshire_terrier'|'cane_corso'|'pembroke_welsh_corgi'|'dobermann'|'boxer'|'miniature_schnauzer'|'shih_tzu'|'great_dane'|'pomeranian'|'boston_terrier'|'miniature_american_shepherd'|'chihuahua'|'english_springer_spaniel'|'shetland_sheepdog'|'brittany'|'american_cocker_spaniel'|'belgian_malinois'|'basset_hound'|'hungarian_vizsla'|'domestic_cat'|'maine_coon'|'british_shorthair'|'ragdoll'|'siberian_cat'|'norwegian_forest_cat'|'bengal', origin: 'bought'|'adopted', age_stage: 'puppy'|'young'|'adult'|'senior', features: list<'behaviour_events'|'training'|'species_cat'>, species: 'dog'|'cat', colour: string|null}|null
                      */
                     'pet_profile' => $result['pet_profile'],
                     /**

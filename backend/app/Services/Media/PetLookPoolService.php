@@ -116,13 +116,16 @@ class PetLookPoolService
     }
 
     /**
-     * Number of looks per breed (Filament, AI Lab cost line).
+     * Number of FREE-POOL looks per breed (Filament, AI Lab cost line). The
+     * shared looks of paid breed + colour (M5-R21, `colour_key` set) are not
+     * pool looks and are counted by {@see sharedCount()}.
      *
      * @return array<string, int> breed value => looks
      */
     public function counts(): array
     {
         return PetLook::query()
+            ->whereNull('colour_key')
             ->selectRaw('breed_type, count(*) as n')
             ->groupBy('breed_type')
             ->pluck('n', 'breed_type')
@@ -130,12 +133,20 @@ class PetLookPoolService
             ->all();
     }
 
+    /** Shared looks of paid breed + colour (M5-R21) — AI Lab. */
+    public function sharedCount(): int
+    {
+        return PetLook::query()->whereNotNull('colour_key')->count();
+    }
+
     /**
+     * The breed's pool looks (never a paid breed + colour look, M5-R21).
+     *
      * @return Collection<int, PetLook>
      */
     private function looksOf(BreedType $breed): Collection
     {
-        return PetLook::query()->where('breed_type', $breed->value)->orderBy('pool_index')->get();
+        return PetLook::query()->where('breed_type', $breed->value)->whereNull('colour_key')->orderBy('pool_index')->get();
     }
 
     /**

@@ -144,6 +144,15 @@
     "great_dane": "Nemška doga",
     "pomeranian": "Pomeranec",
     "boston_terrier": "Bostonski terier",
+    "miniature_american_shepherd": "Mali ameriški ovčar",
+    "chihuahua": "Čivava",
+    "english_springer_spaniel": "Angleški springer španjel",
+    "shetland_sheepdog": "Šetlandski ovčar",
+    "brittany": "Bretonski ptičar",
+    "american_cocker_spaniel": "Ameriški koker španjel",
+    "belgian_malinois": "Belgijski ovčar malinois",
+    "basset_hound": "Baset",
+    "hungarian_vizsla": "Madžarski kratkodlaki ptičar",
     "domestic_cat": "Domača mačka",
     "maine_coon": "Maine Coon",
     "british_shorthair": "Britanska kratkodlaka mačka",
@@ -208,7 +217,9 @@
       "invalid": "Vpišite geslo in potrdite brisanje.",
       "unknown": "Ni znano, ali je bil izbris izveden — preverite seznam otrok.",
       "server": "Brisanje ni uspelo. Nič ni bilo izbrisano — poskusite znova.",
-      "paid_challenge": "Ta izbris odstrani psa, za katerega je bil kupljen 12-tedenski izziv. Odkljukajte potrditev, da je nakup porabljen."
+      "paid_challenge": "Ta izbris odstrani psa, za katerega je bil kupljen 12-tedenski izziv. Odkljukajte potrditev, da je nakup porabljen.",
+      "reauth_required": "Potrditev prijave je potekla ali ne ustreza temu računu. Nič ni bilo izbrisano — potrdite znova.",
+      "provider_unavailable": "Storitev za prijavo trenutno ni dosegljiva. Nič ni bilo izbrisano — poskusite znova čez trenutek."
     }
   },
   "parents": {

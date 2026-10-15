@@ -290,6 +290,77 @@ class FalAiService
                 .'compact well-balanced body, short natural straight tail carried low, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-32: FCI 367 (S265) / AKC standard (S266) — colours "with no order of preference",
+            // blue merle as the anchor (merle is standard for this breed, as the Australian Shepherd);
+            // triangular high-set folding ears, natural undocked tail (the game never draws docking).
+            BreedType::MiniatureAmericanShepherd => 'An alert, athletic Miniature American Shepherd dog with a blue merle coat with white and copper markings, '
+                .'medium-length straight to wavy weather-resistant coat, triangular high-set ears folding forward, '
+                .'almond-shaped eyes fully surrounded by colour, moderate muzzle, natural undocked tail, '
+                .'small, agile body slightly longer than tall, photorealistic, studio quality, natural lighting',
+
+            // M5-R10-33: KC standard (S274) / FCI 218 (S273) — every colour except merle; fawn as the anchor;
+            // smooth coat (the RKC Smooth Coat breed, S275); welfare: a moderate apple-dome head and muzzle,
+            // eyes not protruding (S274 "not protruding"); natural sickle tail.
+            BreedType::Chihuahua => 'A small, alert, smooth-coated Chihuahua dog with a fawn coat, '
+                .'short soft close and glossy coat, moderately rounded apple-dome head with a moderately short, slightly pointed muzzle, '
+                .'large round dark eyes that are not protruding, large flaring erect ears, '
+                .'medium-length sickle tail carried up over the back, tiny dainty compact body, '
+                .'photorealistic, studio quality, natural lighting',
+            // M5-R10-34: KC standard (S282) — liver and white as the anchor (also black and white, either
+            // with tan markings; never roan / lemon / red / orange); natural tail (KC "Previously customarily docked.").
+            BreedType::EnglishSpringerSpaniel => 'A medium-sized, compact and athletic English Springer Spaniel dog with a liver and white coat, '
+                .'close straight medium-length coat with moderate feathering on the ears, legs and chest, '
+                .'long lobular well-feathered ears hanging close to the head, medium almond-shaped dark hazel eyes with a kind expression, '
+                .'natural undocked feathered tail carried low, '
+                .'photorealistic, studio quality, natural lighting',
+            // M5-R10-35: FCI standard (S290) — sable and white as the anchor (also tricolour, blue merle,
+            // black and white, black and tan; never brindle, white body patches or a double merle).
+            BreedType::ShetlandSheepdog => 'A small, lithe and graceful Shetland Sheepdog dog with a sable and white coat, '
+                .'long harsh straight double coat with an abundant mane and frill, '
+                .'small ears carried semi-erect with the tips folding forward, dark brown almond-shaped eyes with a gentle expression, '
+                .'head shaped like a long blunt wedge, natural low-set tail with abundant hair, '
+                .'photorealistic, studio quality, natural lighting',
+            // M5-R10-36: RKC standard (S299) / FCI 95 (S297) — orange and white as the anchor (also liver and white,
+            // roans, black and white, tricolour; never a solid colour); naturally short (bob) tail (S298 / S297).
+            BreedType::Brittany => 'A medium-sized, compact, short-backed and athletic Brittany dog with an orange and white coat, '
+                .'dense, fairly fine, flat or slightly wavy medium-length coat, '
+                .'high-set triangular ears slightly rounded at the tip lying flat against the cheeks, expressive brown eyes, '
+                .'slightly rounded skull with a tapered muzzle, naturally short bob tail, leggy and agile pointing-dog build, '
+                .'photorealistic, studio quality, natural lighting',
+            // M5-R10-37: AKC standard (S307) / FCI 167 (S304) — buff as the anchor (also black, black and tan, red,
+            // chocolate, parti-colours with white; never merle, never blue eyes); natural undocked tail in the game.
+            BreedType::AmericanCockerSpaniel => 'A small, compact and sturdy American Cocker Spaniel dog with a buff coat, '
+                .'silky, flat or slightly wavy coat with moderate feathering on the ears, chest, belly and legs, '
+                .'long lobular well-feathered ears set low, round full dark brown eyes, '
+                .'rounded skull with a pronounced stop and a broad deep muzzle, natural undocked tail carried level with the back, '
+                .'photorealistic, studio quality, natural lighting',
+
+            // M5-R10-38: FCI 15 Malinois variety (S313) / AKC standard (S315) — fawn with black overlay and a black
+            // mask as the anchor (also mahogany, AKC); never black, brindle, merle or white patches; natural ears and tail.
+            BreedType::BelgianMalinois => 'A medium-large, square, elegant and powerful Belgian Malinois dog (Belgian Shepherd, short-haired variety) '
+                .'with a short fawn coat with black overlay and a pronounced black mask, short straight hard coat fuller at the neck and tail, '
+                .'rather small high-set triangular erect ears, medium almond-shaped dark brown eyes, '
+                .'proud head carriage, natural full tail reaching the hock carried low, '
+                .'photorealistic, studio quality, natural lighting',
+
+            // M5-R10-39: FCI 163 (S320) — black, white and tan tricolour as the anchor (also lemon and white);
+            // welfare (RKC Breed Watch Category 3, S322): moderate ears, tight eyelids, little loose skin,
+            // adequate ground clearance. Never merle.
+            BreedType::BassetHound => 'A short-legged, sturdy, well-balanced Basset Hound dog '
+                .'with a smooth short black, white and tan tricolour coat, long low-set velvety ears of moderate length, '
+                .'dark lozenge-shaped eyes with tight eyelids, supple skin with only a little wrinkle at the brow, '
+                .'adequate ground clearance, rather long tapering tail, '
+                .'photorealistic, studio quality, natural lighting',
+
+            // M5-R10-40: FCI 57 (S327) — russet gold as the anchor (also dark sandy gold); self-coloured
+            // nose (AKC S331), natural tail (FCI where docking is prohibited). Never brown, pale yellow or
+            // parti-coloured.
+            BreedType::HungarianVizsla => 'A medium-sized, elegant, lean and muscular Hungarian Vizsla dog '
+                .'with a short, dense, smooth russet gold coat, a self-coloured reddish-brown nose, '
+                .'slightly oval brown eyes, medium-set ears hanging close to the cheeks, '
+                .'natural undocked tail reaching the hock, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -702,6 +773,109 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'short, smooth, bright and fine',
                 'markings' => 'white muzzle band, white blaze between the eyes and white forechest',
+            ],
+            // M5-R10-32: black, blue merle, red (liver), red merle, with or without white and tan
+            // markings (FCI S265 / AKC S266); never white body splashes.
+            BreedType::MiniatureAmericanShepherd => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'blue merle',
+                    1 => 'black',
+                    2 => 'red merle',
+                },
+                'eye_color' => match ($variantIndex) {
+                    0 => 'blue',
+                    1, 2 => 'brown',
+                },
+                'fur_texture' => 'medium-length, straight to wavy, weather resistant',
+                'markings' => 'white collar, chest and legs with copper points',
+            ],
+            // M5-R10-33: any colour or mixture of colours except merle (KC S274 / FCI S273).
+            BreedType::Chihuahua => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'fawn',
+                    1 => 'cream',
+                    2 => 'black and tan',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'short, soft, close and glossy',
+                'markings' => 'none or small white chest marking',
+            ],
+            // M5-R10-34: KC standard colours (S282) — liver and white, black and white, either with tan markings.
+            BreedType::EnglishSpringerSpaniel => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'liver and white',
+                    1 => 'black and white',
+                    2 => 'liver and white with tan markings',
+                },
+                'eye_color' => 'dark hazel',
+                'fur_texture' => 'close, straight, medium-length with moderate feathering',
+                'markings' => 'white blaze, collar, chest and legs',
+            ],
+            // M5-R10-35: FCI standard colours (S290) — sable, tricolour, blue merle (white collar, frill, legs, tail tip).
+            BreedType::ShetlandSheepdog => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'sable and white',
+                    1 => 'tricolour (black, tan and white)',
+                    2 => 'blue merle and white',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'long, harsh, straight double coat with an abundant mane and frill',
+                'markings' => 'white collar, frill, chest, legs and tail tip',
+            ],
+            // M5-R10-36: RKC / FCI standard colours (S299, S297) — orange, liver or black and white, clear or roan.
+            BreedType::Brittany => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'orange and white',
+                    1 => 'liver and white',
+                    2 => 'orange roan',
+                },
+                'eye_color' => 'brown',
+                'fur_texture' => 'dense, fairly fine, flat or slightly wavy medium-length coat',
+                'markings' => 'white with orange or liver patches, light ticking on the muzzle and legs',
+            ],
+            // M5-R10-37: AKC / FCI standard varieties (S307, S304) — ASCOB, black, parti-colour.
+            BreedType::AmericanCockerSpaniel => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'buff',
+                    1 => 'black',
+                    2 => 'red and white parti-colour',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'silky, flat or slightly wavy coat with moderate feathering',
+                'markings' => 'solid colour, white only on the chest or throat for solid colours',
+            ],
+            // M5-R10-38: FCI / AKC standard colours (S313, S315) — fawn to mahogany with black overlay and mask.
+            BreedType::BelgianMalinois => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'fawn with black overlay',
+                    1 => 'rich fawn with black overlay',
+                    2 => 'mahogany with black overlay',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, straight, hard coat with a dense undercoat',
+                'markings' => 'pronounced black mask over the muzzle, lips and eyelids, black-tipped hairs',
+            ],
+            // M5-R10-39: FCI standard colours (S320) — tricolour, lemon and white.
+            BreedType::BassetHound => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'black, white and tan tricolour',
+                    1 => 'black, white and tan tri-colour',
+                    2 => 'lemon and white',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'smooth, short, close coat',
+                'markings' => 'white chest, legs and tail tip; long low-set ears',
+            ],
+            // M5-R10-40: FCI S327 / AKC S331 colours — russet gold, golden rust (AKC wording), dark sandy gold; uniform colour.
+            BreedType::HungarianVizsla => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'russet gold',
+                    1 => 'golden rust',
+                    2 => 'dark sandy gold',
+                },
+                'eye_color' => 'brown, in harmony with the coat',
+                'fur_texture' => 'short, dense, smooth coat without undercoat',
+                'markings' => 'uniform colour, self-coloured reddish-brown nose, ears a little darker',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

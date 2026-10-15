@@ -46,9 +46,12 @@ describe('performSignup', () => {
       user: session.user,
       pet: null,
       awaitingContract: null,
+      signInMethod: 'password',
     });
     expect(register).toHaveBeenCalledTimes(1);
     expect(setItem).toHaveBeenCalledWith('petprep_auth_token', 'tok');
+    // M2-10c: an e-mail account confirms deletions with its password (no stored provider).
+    expect(SecureStore.deleteItemAsync).toHaveBeenCalledWith('petprep_sign_in_method');
   });
 
   it('retries once without the timezone when the server rejects it', async () => {

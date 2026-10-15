@@ -2,9 +2,10 @@
 # PetPrep production deployment script.
 #
 # Usage:
-#   deploy-production.sh --from /opt/petprep/incoming <COMMIT_SHA>   # CI (GitHub Actions)
+#   deploy-production.sh --from /opt/petprep/incoming [--expect-domain HOST] <COMMIT_SHA>   # CI
 #   deploy-production.sh <COMMIT_SHA>                                # manual, git checkout in repo/
 #   deploy-production.sh                                             # manual, re-deploy tree in place
+#   --expect-domain HOST: refuse (before any change) unless this server's API domain is HOST.
 #
 # RUNTIME (M4-05b, DEPLOYMENT.md D14)
 #   The PHP containers (app = php-fpm, reverb, queue, queue-broadcasts, scheduler)
@@ -22,7 +23,8 @@
 #
 # STEPS
 #   1. Env preflight (QUEUE_CONNECTION=redis, BROADCAST_CONNECTION=reverb, REDIS_QUEUE
-#      unset|default). Runs before ANY git/docker command; prints only these keys.
+#      unset|default) and the server identity (SERVER below). Runs before ANY git/docker
+#      command; prints only these keys and the public API domain.
 #   2. Record the previous release: PREV_SHA (repo/.deployed-sha, or git HEAD in git
 #      mode) and, for --from deploys, a copy of the current tree in
 #      /opt/petprep/releases/previous.
@@ -33,6 +35,8 @@
 #      the production env. Then normalise the storage volume for the non-root
 #      runtime (STORAGE below). Still BEFORE maintenance mode: a failure here
 #      aborts the deploy while the old release keeps serving (nothing changed).
+#   3b. Pending migrations? (MAINTENANCE below) — none → steps 4 and `artisan up` of
+#      step 9 are skipped.
 #   4. `artisan down --retry=15` on the OLD code (`exec --user 1000:1000` in the
 #      running app container, so the down file belongs to uid 1000; fallback
 #      `run --rm`, which runs as uid 1000 in both the Sail and the FPM image; if both
@@ -62,6 +66,62 @@
 #   does not exist while an app container runs, the project name is wrong → abort.
 #   After `up -d` (old containers gone) the chown runs once more (warn-only) for files
 #   an old root process may have created in between.
+#
+# MAINTENANCE (D19, David 2026-10-14: shorter downtime)
+#   Maintenance mode exists for the schema change: new code must never run on the old
+#   schema and a failed migration must be revertable. After the smoke test (step 3) the
+#   NEW image asks the live database `php artisan migrate:status --pending=3` (Laravel 11:
+#   exit 3 = something pending, 0 = nothing pending):
+#     pending  → the full flow below (down → backup → switch → migrate → up -d → up).
+#     none     → NO `artisan down` / `artisan up`: backup, code switch, image promote,
+#                Caddyfile validation, `migrate --force` (a no-op, kept as a guard), seeder,
+#                then queue + queue-broadcasts + scheduler are recreated FIRST and the
+#                app / caddy after them (no old worker gets a job of the new code),
+#                php-fpm-ping, queue:restart, health check. The old release serves until
+#                its container is replaced; php-fpm stops with SIGQUIT (graceful), so the
+#                gap is the new container's start (~seconds) instead of the whole window.
+#                The revert / failure semantics below are unchanged (MAINTENANCE_ON=0, so
+#                there is nothing to leave). A final idempotent `artisan up` lifts a flag
+#                an earlier failed run may have left.
+#     unknown  → any other exit (no migrations table, database down, first deploy):
+#                maintenance, as before.
+#   DEPLOY_FORCE_MAINTENANCE=1 forces the maintenance flow.
+#
+# REVERB + CADDY (D19)
+#   Every deploy used to recreate reverb and caddy (new images), which drops every open
+#   WebSocket (clients connect through caddy to reverb). Both are KEPT when nothing they
+#   run on changed since a deploy last (re)created them — a sha256 (service_fingerprint)
+#   over the service's inputs in the new tree + /opt/petprep/.env (+ derived Caddy
+#   identity) + the base image id of the new build:
+#     reverb  backend/composer.{json,lock}, compose.production.yaml, config/**,
+#             bootstrap/** (minus caches), app/Providers/**, app/Listeners/**, routes/**,
+#             docker/production/**; base = the Dockerfile's `base` stage (php:8.3-fpm +
+#             extensions — a refreshed upstream image changes it). Reverb does channel auth
+#             via HTTP to `app` and gets events over HTTP from queue-broadcasts.
+#     caddy   deployment/Caddyfile, backend/public/**, composer.{json,lock} (Filament
+#             assets), compose file, the Dockerfile; base = caddy:2.8-alpine image id.
+#             A changed Caddyfile always recreates caddy (CADDY below).
+#   Stored in releases/{reverb,caddy}.fingerprint after a successful deploy that recreated
+#   the service. Kept → `up -d --no-deps` of the other services (caddy depends on app +
+#   reverb). No fingerprint yet, a difference, unknown base id, service not running,
+#   DEPLOY_RECREATE_REVERB=1 / DEPLOY_RECREATE_CADDY=1 → recreated as before. A kept
+#   service keeps its old image (never pruned while in use). Whether open connections
+#   really survive is to be verified on the first real deploy.
+#
+# SERVER (D18, 2026-10-14)
+#   The server's identity comes from /opt/petprep/.env, not from this script (production =
+#   api.petprep.si; a second API-only server such as the postponed dev server works with
+#   the same script and Caddyfile):
+#     PETPREP_API_DOMAIN   default = host of APP_URL (fallback api.petprep.si)
+#     PETPREP_CADDY_SITES  default = `production` when the domain is api.petprep.si,
+#                          else `api-only` (no petprep.si / www / raw-IP sites, no
+#                          certificates for them). Anything else → preflight error.
+#   Both are exported (compose passes them into caddy's environment, the Caddyfile
+#   uses them) and appended to repo/backend/.env when missing there, so a manual
+#   `docker compose -f repo/backend/compose.production.yaml up -d caddy` gets the same
+#   values. Health check: https://<PETPREP_API_DOMAIN>/up (DEPLOY_HEALTH_HOST
+#   overrides); the plain-HTTP raw-IP fallback exists only with `production`
+#   (DEPLOY_HEALTH_IP_HOST overrides, empty = no fallback).
 #
 # CADDY
 #   caddy bind-mounts the single file deployment/Caddyfile. A sync/checkout replaces a
@@ -131,10 +191,14 @@ CADDYFILE="${REPO_DIR}/deployment/Caddyfile"
 CADDY_RUNNING_COPY="${PETPREP_ROOT}/releases/Caddyfile.running"
 RETRY_SLEEP="${DEPLOY_RETRY_SLEEP:-3}"
 APP_WAIT_TRIES="${DEPLOY_APP_WAIT_TRIES:-40}"
-HEALTH_HOST="${DEPLOY_HEALTH_HOST:-api.petprep.si}"
-HEALTH_IP_HOST="${DEPLOY_HEALTH_IP_HOST:-138.199.172.97}"
+PROD_API_DOMAIN="api.petprep.si"
+PROD_IP_HOST="138.199.172.97"
+HEALTH_HOST=""          # set by the env preflight (SERVER above)
+HEALTH_IP_HOST=""
 APP_SERVICES=(app reverb queue queue-broadcasts scheduler caddy)
 WORKER_SERVICES=(reverb queue queue-broadcasts scheduler)
+BASE_APP_ID=""          # base stage of the new app image (step 3; D19 fingerprints)
+BASE_WEB_ID=""          # caddy base image of the new web image
 IMAGES=(petprep-app petprep-web)
 # Compose project = network + volume prefix. Default "backend" = the directory of
 # the compose file (what production has always used); explicit so the build tree
@@ -164,9 +228,10 @@ RSYNC_EXCLUDES=(
     --exclude=/mobile/node_modules
 )
 
-usage() { sed -n '4,7p' "$0" | sed 's/^# \{0,1\}//'; }
+usage() { sed -n '4,8p' "$0" | sed 's/^# \{0,1\}//'; }
 
 SOURCE_DIR=""
+EXPECT_DOMAIN=""
 while [ $# -gt 0 ]; do
     case "$1" in
         --from)
@@ -174,6 +239,11 @@ while [ $# -gt 0 ]; do
             [ -n "$SOURCE_DIR" ] || { echo "ERROR: --from needs a directory" >&2; exit 2; }
             shift 2 ;;
         --from=*) SOURCE_DIR="${1#--from=}"; shift ;;
+        --expect-domain)
+            EXPECT_DOMAIN="${2:-}"
+            [ -n "$EXPECT_DOMAIN" ] || { echo "ERROR: --expect-domain needs a host name" >&2; exit 2; }
+            shift 2 ;;
+        --expect-domain=*) EXPECT_DOMAIN="${1#--expect-domain=}"; shift ;;
         -h|--help) usage; exit 0 ;;
         --) shift; break ;;
         -*) echo "ERROR: unknown option $1" >&2; usage >&2; exit 2 ;;
@@ -205,6 +275,9 @@ PREV_IMAGES=()          # images whose old :production was saved as :previous
 MIGRATED=0              # 1 after `migrate --force` succeeded
 CONTAINERS_RECREATED=0  # 1 once `up -d` of the app services was attempted
 CADDY_CHANGED=0         # 1 if the new Caddyfile differs from the running container's
+MIGRATIONS="unknown"    # none | pending | unknown (step 3b, D19)
+KEEP_REVERB=0           # 1 when reverb keeps its container (D19)
+KEEP_CADDY=0            # 1 when caddy keeps its container (D19)
 FAILED_AT=""
 
 trap 'FAILED_AT="line ${LINENO}: ${BASH_COMMAND}"' ERR
@@ -292,6 +365,44 @@ restore_images() {
     return "$rc"
 }
 
+# Inputs per kept-able service (REVERB / CADDY above), relative to the tree root.
+REVERB_INPUTS=(backend/composer.json backend/composer.lock backend/compose.production.yaml
+    backend/config backend/bootstrap backend/app/Providers backend/app/Listeners backend/routes
+    backend/docker/production)
+CADDY_INPUTS=(deployment/Caddyfile backend/public backend/composer.json backend/composer.lock
+    backend/compose.production.yaml backend/docker/production/Dockerfile)
+
+# service_fingerprint SERVICE TREE: sha256 over the service's input files in TREE, the
+# server env (+ the derived Caddy identity) and the base image id of the new build
+# (BASE_IDS, step 3). Returns 1 and prints nothing when the base id is unknown — the
+# caller then recreates the service.
+service_fingerprint() {
+    local svc=$1 tree=$2 base inputs=()
+    case "$svc" in
+        reverb) inputs=("${REVERB_INPUTS[@]}"); base="${BASE_APP_ID}" ;;
+        caddy)  inputs=("${CADDY_INPUTS[@]}");  base="${BASE_WEB_ID}" ;;
+        *) return 1 ;;
+    esac
+    [ -n "$base" ] || return 1
+    {
+        # find exits 1 for a missing path (e.g. no composer.lock in a test tree): ignored,
+        # the listed files are what exists.
+        (cd "$tree" || exit 0
+         find "${inputs[@]}" -type f ! -path 'backend/bootstrap/cache/*' 2>/dev/null
+         exit 0) | LC_ALL=C sort \
+            | while IFS= read -r f; do printf '%s %s\n' "$f" "$(sha256sum < "${tree}/${f}" | cut -d' ' -f1)"; done
+        echo "env $(sha256sum < "$ENV_FILE" | cut -d' ' -f1) ${PETPREP_API_DOMAIN:-} ${PETPREP_CADDY_SITES:-}"
+        echo "base ${base}"
+    } | sha256sum | cut -d' ' -f1
+}
+
+# keep_service SERVICE FP: 1 when SERVICE may keep its running container.
+keep_service() {
+    local svc=$1 fp=$2 file="${PETPREP_ROOT}/releases/${1}.fingerprint"
+    [ -n "$fp" ] && [ -f "$file" ] && [ "$(cat "$file")" = "$fp" ] \
+        && [ -n "$(dc ps -q --status running "$svc" 2>/dev/null || true)" ]
+}
+
 # PHP-FPM answers its ping (caches built by the entrypoint, pool up).
 wait_for_app() {
     local i
@@ -306,12 +417,13 @@ wait_for_app() {
     return 1
 }
 
-# End-to-end through Caddy: real TLS name first, then the plain-HTTP IP site.
+# End-to-end through Caddy: real TLS name first, then the plain-HTTP IP site — only
+# where that site exists (`production` site set).
 health_status() {
     local s
     s=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 \
         --resolve "${HEALTH_HOST}:443:127.0.0.1" "https://${HEALTH_HOST}/up" || true)
-    if [ "$s" != "200" ]; then
+    if [ "$s" != "200" ] && [ -n "$HEALTH_IP_HOST" ]; then
         s=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 \
             -H "Host: ${HEALTH_IP_HOST}" "http://127.0.0.1/up" || true)
     fi
@@ -357,7 +469,11 @@ on_exit() {
             fi
             # Containers of the Sail runtime bind-mount the code and may have loaded
             # new classes while the new tree was on disk: restart them on the old code.
-            dc restart "${WORKER_SERVICES[@]}" || warn "could not restart workers."
+            # The FPM image bakes the code in: untouched containers still run the old
+            # release, so without maintenance (D19) nothing needs a restart.
+            if [ "$CONTAINERS_RECREATED" = "1" ] || [ "${MIGRATIONS:-unknown}" != "none" ]; then
+                dc restart "${WORKER_SERVICES[@]}" || warn "could not restart workers."
+            fi
             log "Code reverted to ${PREV_SHA:-previous release}."
         fi
     else
@@ -384,7 +500,7 @@ exec 9>"$OPS_LOCK"
 if ! flock -n 9; then
     log "Another ops run holds ${OPS_LOCK} (a game-data reset or a deploy) — waiting up to ${LOCK_WAIT} s..."
     if ! flock -w "$LOCK_WAIT" 9; then
-        echo "ERROR: ${OPS_LOCK} is still held after ${LOCK_WAIT} s (reset-game-data.sh or another deploy running) — nothing was changed. Re-run the deploy when it has finished." >&2
+        echo "ERROR: ${OPS_LOCK} is still held after ${LOCK_WAIT} s (reset-game-data.sh, another deploy or the off-site backup's DB dump running) — nothing was changed. Re-run the deploy when it has finished." >&2
         exit 1
     fi
 fi
@@ -424,7 +540,40 @@ for pair in "AI_REFERENCE_IMAGE_PROFILE=nano_banana_pro" "AI_STATE_VIDEO_PROFILE
         echo "WARNING: ${key}='${have}' in ${ENV_FILE} overrides the production default '${want}' — remove the line unless intended." >&2
     fi
 done
-log "Env preflight OK."
+# Server identity (SERVER above): API domain + Caddy site set.
+app_url=$(env_value APP_URL)
+app_host="${app_url#*://}"; app_host="${app_host%%/*}"; app_host="${app_host%%:*}"
+PETPREP_API_DOMAIN=$(env_value PETPREP_API_DOMAIN)
+PETPREP_API_DOMAIN="${PETPREP_API_DOMAIN:-${app_host:-$PROD_API_DOMAIN}}"
+if ! [[ "$PETPREP_API_DOMAIN" =~ ^[a-z0-9]([a-z0-9.-]*[a-z0-9])?$ ]]; then
+    echo "ERROR: API domain '${PETPREP_API_DOMAIN}' (PETPREP_API_DOMAIN or the APP_URL host in ${ENV_FILE}) is not a plain lower-case host name." >&2
+    exit 1
+fi
+PETPREP_CADDY_SITES=$(env_value PETPREP_CADDY_SITES)
+if [ -z "$PETPREP_CADDY_SITES" ]; then
+    if [ "$PETPREP_API_DOMAIN" = "$PROD_API_DOMAIN" ]; then PETPREP_CADDY_SITES=production; else PETPREP_CADDY_SITES=api-only; fi
+fi
+case "$PETPREP_CADDY_SITES" in
+    production|api-only) ;;
+    *) echo "ERROR: PETPREP_CADDY_SITES must be 'production' or 'api-only' in ${ENV_FILE} (found '${PETPREP_CADDY_SITES}')." >&2; exit 1 ;;
+esac
+# CI names the server it means (production job → api.petprep.si): a wrong host secret
+# stops here, unchanged.
+if [ -n "$EXPECT_DOMAIN" ] && [ "$EXPECT_DOMAIN" != "$PETPREP_API_DOMAIN" ]; then
+    echo "ERROR: this server's API domain is '${PETPREP_API_DOMAIN}' (${ENV_FILE}), but the deploy expects '${EXPECT_DOMAIN}' — wrong server? Nothing was changed." >&2
+    exit 1
+fi
+if [ -n "$app_host" ] && [ "$app_host" != "$PETPREP_API_DOMAIN" ]; then
+    echo "WARNING: APP_URL host '${app_host}' differs from PETPREP_API_DOMAIN '${PETPREP_API_DOMAIN}' — signed media URLs and fal.ai webhooks use APP_URL." >&2
+fi
+export PETPREP_API_DOMAIN PETPREP_CADDY_SITES
+HEALTH_HOST="${DEPLOY_HEALTH_HOST:-$PETPREP_API_DOMAIN}"
+if [ "$PETPREP_CADDY_SITES" = production ]; then
+    HEALTH_IP_HOST="${DEPLOY_HEALTH_IP_HOST-$PROD_IP_HOST}"
+else
+    HEALTH_IP_HOST="${DEPLOY_HEALTH_IP_HOST:-}"
+fi
+log "Env preflight OK (API domain ${PETPREP_API_DOMAIN}, Caddy sites ${PETPREP_CADDY_SITES})."
 
 # ---- 2. Record the previous release ----------------------------------------------
 cd "$REPO_DIR"
@@ -470,6 +619,12 @@ if ! dcn run --rm --no-deps -T app php artisan optimize; then
     echo "ERROR: the new image cannot build its caches with the production env — nothing was changed." >&2
     exit 1
 fi
+# Base image ids for the reverb / caddy fingerprints (D19): the PHP base stage (php:8.3-fpm +
+# extensions — a refreshed upstream image changes it; cache hit after the build above) and
+# the Caddy base image. Unknown → the service is recreated (fail safe), never an error.
+BASE_APP_ID="$(docker buildx build -q --load --target base -f "${BUILD_DIR}/backend/docker/production/Dockerfile" "${BUILD_DIR}/backend" 2>/dev/null | tail -n1)" || BASE_APP_ID=""
+BASE_WEB_ID="$(docker image inspect --format '{{.Id}}' caddy:2.8-alpine 2>/dev/null)" || BASE_WEB_ID=""
+[ -n "$BASE_APP_ID" ] || warn "could not resolve the PHP base image id — reverb will be recreated."
 
 # Storage volume ownership for the non-root runtime (see STORAGE above).
 if docker volume inspect "$STORAGE_VOLUME" > /dev/null 2>&1; then
@@ -498,8 +653,30 @@ if ! dc exec -T caddy cat /etc/caddy/Caddyfile > "$CADDY_RUNNING_COPY" 2>/dev/nu
     warn "could not read the running Caddyfile (caddy not running?) — treating it as changed."
 fi
 
-# ---- 4. Maintenance mode BEFORE touching the code --------------------------------
-enter_maintenance
+# ---- 3b. Pending migrations? (D19, see MAINTENANCE above) -------------------------
+# Asked with the NEW image against the live database, still before anything changed.
+# Laravel 11 `migrate:status --pending=N` exits N when a migration is pending, 0 when
+# none is; any other code (no migrations table, database down) → unknown → maintenance.
+if [ "${DEPLOY_FORCE_MAINTENANCE:-0}" = "1" ]; then
+    log "DEPLOY_FORCE_MAINTENANCE=1 — maintenance mode whatever the migrations."
+else
+    log "Checking for pending migrations (new image, live database)..."
+    pending_rc=0
+    dcn run --rm --no-deps -T app php artisan migrate:status --pending=3 || pending_rc=$?
+    case "$pending_rc" in
+        0) MIGRATIONS="none" ;;
+        3) MIGRATIONS="pending" ;;
+        *) warn "could not tell whether migrations are pending (exit ${pending_rc}; database not running / first deploy?) — using maintenance mode." ;;
+    esac
+fi
+
+# ---- 4. Maintenance mode BEFORE touching the code (only when the schema changes) ---
+if [ "$MIGRATIONS" = "none" ]; then
+    log "No pending migrations — deploying WITHOUT maintenance mode (the old release serves until its containers are replaced)."
+else
+    [ "$MIGRATIONS" = "pending" ] && log "Pending migrations — maintenance mode for the schema change."
+    enter_maintenance
+fi
 
 # ---- 5. Pre-migration database backup --------------------------------------------
 # The backup script of the release being deployed wins over the installed copy
@@ -551,6 +728,12 @@ log "Deploying commit: ${DEPLOYED_SHA}"
 rm -f "${REPO_DIR}/backend/.env"
 cp "$ENV_FILE" "${REPO_DIR}/backend/.env"
 chmod 600 "${REPO_DIR}/backend/.env"
+# Derived server identity for compose interpolation in manual runs (SERVER above).
+for key in PETPREP_API_DOMAIN PETPREP_CADDY_SITES; do
+    if ! grep -qE "^${key}=" "${REPO_DIR}/backend/.env"; then
+        printf '\n%s=%s\n' "$key" "${!key}" >> "${REPO_DIR}/backend/.env"
+    fi
+done
 log "Installed production .env into ${REPO_DIR}/backend/.env"
 
 log "Promoting images: :next -> :production (old :production kept as :previous)..."
@@ -571,7 +754,7 @@ fi
 
 # Install ops scripts (copy + rename: never overwrite a running script in place).
 mkdir -p "$SCRIPTS_DIR"
-for s in backup-production-db.sh restore-production-db.sh deploy-production.sh; do
+for s in backup-production-db.sh backup-offsite.sh restore-production-db.sh deploy-production.sh; do
     if [ -f "${REPO_DIR}/scripts/${s}" ]; then
         cp "${REPO_DIR}/scripts/${s}" "${SCRIPTS_DIR}/.${s}.tmp"
         chmod +x "${SCRIPTS_DIR}/.${s}.tmp"
@@ -597,9 +780,32 @@ dc run --rm app php artisan db:seed --class='Database\Seeders\BreedConfigsSeeder
     || warn "BreedConfigsSeeder failed."
 
 # ---- 8. Containers (caches are built per container on start), workers -------------
-log "Starting all application services on the new images..."
+# Reverb and caddy keep their containers when nothing they run on changed since a deploy
+# last (re)created them (REVERB / CADDY above) — the services clients hold connections to.
+REVERB_FP_NEW="$(service_fingerprint reverb "$REPO_DIR")" || REVERB_FP_NEW=""
+CADDY_FP_NEW="$(service_fingerprint caddy "$REPO_DIR")" || CADDY_FP_NEW=""
+if [ "${DEPLOY_RECREATE_REVERB:-0}" != "1" ] && keep_service reverb "$REVERB_FP_NEW"; then KEEP_REVERB=1; fi
+if [ "${DEPLOY_RECREATE_CADDY:-0}" != "1" ] && [ "$CADDY_CHANGED" = "0" ] && keep_service caddy "$CADDY_FP_NEW"; then KEEP_CADDY=1; fi
 CONTAINERS_RECREATED=1
-dc up -d --remove-orphans "${APP_SERVICES[@]}"
+if [ "$MIGRATIONS" = "none" ]; then
+    # No maintenance: workers first, so no OLD worker ever takes a job the NEW app
+    # dispatched (new workers handling jobs of the old app was already normal: jobs
+    # queued before a maintenance window ran on the new workers too).
+    log "Recreating queue workers + scheduler on the new image first..."
+    dc up -d --no-deps queue queue-broadcasts scheduler
+fi
+if [ "$KEEP_REVERB" = "1" ] || [ "$KEEP_CADDY" = "1" ]; then
+    up_services=(app queue queue-broadcasts scheduler)
+    kept=()
+    if [ "$KEEP_REVERB" = "1" ]; then kept+=(reverb); else up_services+=(reverb); fi
+    if [ "$KEEP_CADDY" = "1" ]; then kept+=(caddy); else up_services+=(caddy); fi
+    log "Starting the application services on the new images (unchanged, not restarted: ${kept[*]})..."
+    # --no-deps: caddy depends on app + reverb, compose would otherwise recreate them too.
+    dc up -d --remove-orphans --no-deps "${up_services[@]}"
+else
+    log "Starting all application services on the new images..."
+    dc up -d --remove-orphans "${APP_SERVICES[@]}"
+fi
 if [ "$CADDY_CHANGED" = "1" ]; then
     # Single-file bind mount: only a new container sees the new Caddyfile.
     log "Recreating caddy for the new Caddyfile..."
@@ -618,6 +824,11 @@ dc exec -T queue php artisan queue:restart || warn "queue:restart failed."
 
 # ---- 9. Leave maintenance, health check ------------------------------------------
 leave_maintenance || exit 1
+if [ "$MIGRATIONS" = "none" ]; then
+    # Never went down in this deploy; lift a maintenance flag left by an earlier failed
+    # run (a deploy always ended with `artisan up` before D19). Idempotent.
+    artisan up || warn "artisan up (no-op check) failed — check maintenance mode by hand."
+fi
 
 log "Verifying service health (through Caddy)..."
 dc ps
@@ -634,11 +845,27 @@ if [ "$HTTP_STATUS" != "200" ]; then
     exit 1
 fi
 
-# Untagged images of older releases (keeps :production, :previous and the Sail image).
+# A recreated reverb / caddy now runs on this release's inputs — remember them.
+if [ "$KEEP_REVERB" = "0" ] && [ -n "$REVERB_FP_NEW" ]; then
+    echo "$REVERB_FP_NEW" > "${PETPREP_ROOT}/releases/reverb.fingerprint" || warn "could not record the reverb fingerprint (next deploy recreates reverb)."
+fi
+if [ "$KEEP_CADDY" = "0" ] && [ -n "$CADDY_FP_NEW" ]; then
+    echo "$CADDY_FP_NEW" > "${PETPREP_ROOT}/releases/caddy.fingerprint" || warn "could not record the caddy fingerprint (next deploy recreates caddy)."
+fi
+
+# Untagged images of older releases (keeps :production, :previous and the Sail image;
+# an image a container still runs — e.g. a kept reverb — is never pruned).
 docker image prune -f > /dev/null || warn "docker image prune failed."
-# Build cache: drop entries older than 7 days, but always keep up to 5 GB (layers of
-# the PHP extension build — the expensive part of a rebuild).
-docker builder prune -f --filter until=168h --keep-storage 5GB > /dev/null || warn "docker builder prune failed."
+# Build cache: always capped at 2 GB, most recently used kept (the PHP extension layers
+# stay warm). The old "older than 7 days" filter never matched with several builds a
+# day and let the cache reach ~23 GB (disk hygiene, David 2026-10-15).
+docker builder prune -af --keep-storage 2GB > /dev/null || warn "docker builder prune failed."
+
+# Disk guard: loud warning when the root disk is over 70 % (nothing is deleted here).
+disk_used_pct="$(df -P / 2>/dev/null | awk 'NR==2 {gsub("%","",$5); print $5}')"
+if [ -n "$disk_used_pct" ] && [ "$disk_used_pct" -ge 70 ] 2>/dev/null; then
+    warn "root disk is ${disk_used_pct}% full — check: docker system df; journalctl --disk-usage (docs/PRODUCTION_DEPLOYMENT.md, disk hygiene)."
+fi
 
 echo "=================================================="
 echo " DEPLOYMENT SUCCESSFUL!"

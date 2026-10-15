@@ -30,7 +30,13 @@ export interface paths {
          *     the app signs out afterwards
          * @description 200 `{status: deleted, scope: family|parent, family_deleted, parents_deleted,
          *     children_deleted, pets_deleted}`; 422 `invalid_password` (or validation:
-         *     `password` required, `confirm` must be true); 403 `superadmin_protected`;
+         *     `password` required, `confirm` must be true); a parent without a password
+         *     (Google / Apple sign-up, M2-10c) sends `provider` + `id_token` (+ `nonce`
+         *     for Apple) of a linked provider, issued ≤ 10 min ago, instead of
+         *     `password` (Apple: + `authorization_code` of that sign-in → after the
+         *     deletion commits, the Apple tokens are revoked by a queued job — App
+         *     Store 5.1.1(v)) → else 422 `reauth_required` (503 `provider_unavailable` /
+         *     `provider_disabled` when the provider cannot be checked); 403 `superadmin_protected`;
          *     429 `too_many_attempts` + `Retry-After` after 5 wrong passwords in 15 min
          *     (only failed attempts count; separate from the child deletion).
          *
@@ -129,6 +135,47 @@ export interface paths {
          *     POST /api/register
          */
         post: operations["auth.register"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/auth/social": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Parent sign-in / sign-up with Google or Apple (M2-10c). The app sends
+         *     the ID token from the native SDK; the API verifies it (signature via
+         *     the provider's JWKS, `iss`, `aud` = our client IDs, `exp`; Apple: `nonce`
+         *     = sha256 of the raw `nonce` sent here) and then:
+         * @description - identity already linked → signs that parent in (`created: false`);
+         *     - unknown identity, no account with its e-mail → creates the parent +
+         *       their own family (like `POST /api/register`) when `terms_accepted` is
+         *       true (`created: true`), else 422 `terms_required` (nothing created —
+         *       the app shows the terms and retries with the same token);
+         *     - unknown identity, the e-mail belongs to an account without a password
+         *       (made with the other provider) and the provider verified the e-mail →
+         *       links it and signs in;
+         *     - the e-mail belongs to an account WITH a password → 409 `email_in_use`
+         *       (sign in with e-mail + password; never linked automatically).
+         *
+         *     200 = the `POST /api/login` body + `created`. Errors `{message, code}`:
+         *     401 `invalid_token`, 403 `not_a_parent` / `superadmin_protected`,
+         *     409 `email_in_use`, 422 `terms_required`, 503 `provider_disabled`
+         *     (no client ID configured) / `provider_unavailable` (provider keys
+         *     unreachable). Validation errors are the usual 422 `errors`. Children
+         *     never use this (PIN only). Throttled: 10 / min and 30 / hour per IP.
+         *
+         *     POST /api/auth/social
+         */
+        post: operations["auth.social"];
         delete?: never;
         options?: never;
         head?: never;
@@ -481,6 +528,42 @@ export interface paths {
          *     POST /api/child/pin-login
          */
         post: operations["childAuth.pinLogin"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/parent/children/{child}/device-session": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Profile switching on one phone (M2-11, David 2026-10-14): the signed-in
+         *     parent opens this child's profile on the same device — no PIN (the
+         *     parent is already authenticated). Back to the parent = a real parent
+         *     re-login (password or Google / Apple); the app revokes the parent token
+         *     when it switches (David 2026-10-14). The answer is exactly the `POST /api/child/pin-login` body of
+         *     a re-login (`mode: relogin`, token with the `child` ability). The parent's
+         *     own token is untouched; each token logs out on its own
+         * @description One shared-phone session per parent and child: calling it again replaces
+         *     the previous one (switching back and forth never signs the child's own
+         *     phones out). It counts as one of the child's 3 devices.
+         *
+         *     Optional `device_name` (phone model) and `features` as at PIN login.
+         *     404 `child_not_found` (not a child of the parent's family), 403 for a
+         *     non-parent, 409 `no_pet` (the child has no pet yet — pair with a PIN
+         *     first), 422 `app_update_required` (a cat without `species_cat`), 429
+         *     when throttled (20 / min per parent).
+         *
+         *     POST /api/parent/children/{child}/device-session
+         */
+        post: operations["childAuth.deviceSession"];
         delete?: never;
         options?: never;
         head?: never;
@@ -1055,7 +1138,10 @@ export interface paths {
          *     for the pet, without a name
          * @description 200 `{status: deleted, child_id, pets_deleted, pets_kept}`; 404
          *     `child_not_found` (another family / missing / not a child); 422
-         *     `invalid_password`; 429 `too_many_attempts` + `Retry-After` after 5 wrong
+         *     `invalid_password` (or `reauth_required` for a parent without a password
+         *     who confirmed with `provider` + `id_token` (+ `nonce` for Apple) — a
+         *     linked provider, token ≤ 10 min old, M2-10c; 503 `provider_unavailable` /
+         *     `provider_disabled`); 429 `too_many_attempts` + `Retry-After` after 5 wrong
          *     passwords in 15 min (only failed attempts count; separate from the
          *     account deletion).
          *
@@ -1222,7 +1308,8 @@ export interface paths {
          *     `breed_locked` | `challenge_requires_paid_breed` (M5-F03: explicit
          *     `plan: challenge` for a new pet with a free breed — the mutt / domestic
          *     cat; also when no breed / no profile is sent, the mutt being the default)
-         *     | `breed_species_mismatch` | `species_unavailable` (M5-R06-01).
+         *     | `breed_species_mismatch` | `species_unavailable` (M5-R06-01)
+         *     | `colour_invalid` (M5-R21).
          *
          *     Optional `species` (M5-R06-01): `dog` (default — old app builds) | `cat`.
          *     The breed must belong to it; without `breed` the species' free breed
@@ -1241,6 +1328,11 @@ export interface paths {
          *     this profile (life-stage rules) when the child uses the PIN. **None
          *     of the fields** (old app builds) → `pet_profile: null` and a
          *     legacy-profile pet that keeps the pre-M5 rules.
+         *
+         *     Optional `colour` (M5-R21, David 2026-10-14): a `key` from the breed's
+         *     `colours` in GET /api/breeds (paid breeds; needs `breed`) → returned as
+         *     `pet_profile.colour`; 422 `colour_invalid` for a colour the breed does
+         *     not have. Omitted → `null`, the colour is sampled by the breed's weights.
          *
          *     Optional `features` (M5-R02, PR #42): the UI features of this app
          *     build (`behaviour_events`, `training`; ≤ 10 strings, unknown values
@@ -1554,7 +1646,7 @@ export interface components {
              * @description Enum value sent as `breed` to POST /api/parent/generate-pin.
              * @enum {string}
              */
-            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
             /** @description breed_configs slug (admin / analytics key). */
             slug: string;
             /** @enum {string} */
@@ -1582,13 +1674,24 @@ export interface components {
                 suits: ("active_family" | "family_pet" | "children" | "small_children" | "first_time_owner" | "apartment" | "large_home" | "other_pets" | "older_owners" | "often_alone" | "low_shedding")[];
                 consider: ("long_daily_exercise" | "needs_mental_stimulation" | "may_herd_children" | "chews_when_bored" | "sheds" | "food_motivated_weight" | "frequent_grooming" | "brachycephalic_breathing" | "hips_hind_legs" | "heart_and_spine" | "back_spine" | "sensitive_skin" | "shorter_lifespan" | "secure_fencing" | "experienced_owner" | "fragile_older_children" | "not_for_small_children" | "drools" | "chases_small_pets" | "needs_company" | "short_muzzle_breathing" | "eyelid_problems" | "older_children")[];
             };
+            /**
+             * @description M5-R21 (David 2026-10-14): coat colours the parent may pick for a
+             *     paid breed — only colours the breed standard allows. Send `key` as
+             *     `colour` to POST /api/parent/generate-pin; `label` is in the
+             *     request language (en | sl). One entry = nothing to choose (show it,
+             *     no picker); [] = free breed (no colour choice).
+             */
+            colours: {
+                key: string;
+                label: string;
+            }[];
         };
         /**
          * BreedType
          * @description Breeds (M5-R06_PLAN T1, T9): the enum stays (it is used in payments and ~20 files), the free / paid rule is data — `breed_configs.premium_unlock` is the single source of truth (read through BreedCatalogService, cached). Every new case needs: slug(), species(), defaultPremium(), the `pets_breed_type_check` / `pets_species_breed_check` constraints and a BreedConfigsSeeder row.
          * @enum {string}
          */
-        BreedType: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+        BreedType: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
         /**
          * ChallengePaidSource
          * @description Why a challenge pet counts as paid (pets.challenge_paid_source, M3-11). Mirrored by the pets_challenge_paid_check constraint.
@@ -1601,11 +1704,36 @@ export interface components {
          */
         ChallengePaidSource: "purchase" | "grandfathered" | "admin";
         /**
+         * ChildDeviceSessionRequest
+         * @description POST /api/parent/children/{child}/device-session (M2-11) — the parent opens
+         *     the child's profile on this phone. Same optional fields as a PIN login.
+         */
+        ChildDeviceSessionRequest: {
+            /**
+             * @description Phone model only (never the user-given name); stored through
+             *     ChildProfileService::deviceLabel() like at PIN login.
+             */
+            device_name?: string | null;
+            /**
+             * @description What this app build can show (as at PIN login), e.g. ["behaviour_events",
+             *     "training", "species_cat"]; ≤ 10 strings, unknown values ignored. A cat
+             *     needs `species_cat` (else 422 app_update_required).
+             */
+            features?: string[] | null;
+        };
+        /**
          * ConfirmDeletionRequest
          * @description Body of every irreversible deletion (M2-08):
          *     `POST /api/parent/account/delete` and `DELETE /api/parent/children/{child}`.
          *
          *     `{password: the parent's current password, confirm: true, confirm_word?}`.
+         *     A parent WITHOUT a password (signed up with Google / Apple, M2-10c) sends
+         *     `{provider, id_token, nonce?, authorization_code?}` instead of `password`
+         *     (`authorization_code`: Apple only — account deletion revokes the Apple tokens with it): a fresh ID token (≤ 10
+         *     min) of a provider linked to the account; wrong / stale / unlinked → 422
+         *     `reauth_required` (AccountDeletionService::confirmIdentity). For a parent
+         *     WITH a password the password stays required and the provider fields are
+         *     ignored.
          *     The app makes the parent type the confirmation word of its language
          *     ("IZBRIŠI" in Slovenian, "DELETE" in English — lang/<locale>/account.php)
          *     before it sends the request. `confirm_word` is optional (app builds before
@@ -1617,7 +1745,24 @@ export interface components {
          *     request language (M1-18).
          */
         ConfirmDeletionRequest: {
-            password: string;
+            /** @description Required for a parent who has a password (checked in after()). */
+            password?: string | null;
+            /**
+             * @description M2-10c — parents without a password: re-authenticate with a linked provider.
+             * @enum {string|null}
+             */
+            provider?: "google" | "apple" | null;
+            /** @description Fresh ID token (issued ≤ 10 minutes ago) from the provider's native SDK. */
+            id_token?: string | null;
+            /** @description Apple: the RAW nonce of that sign-in. */
+            nonce?: string | null;
+            /**
+             * @description Apple only: the authorization code of that Apple sign-in. Account
+             *     deletion uses it to revoke the Apple tokens (queued
+             *     RevokeAppleTokenJob, encrypted payload); child deletion ignores it.
+             *     Never logged, never stored in the database.
+             */
+            authorization_code?: string | null;
             /** @enum {unknown} */
             confirm: "yes" | "on" | "1" | 1 | "true" | true;
             /**
@@ -1758,6 +1903,12 @@ export interface components {
             pet_id?: number | null;
             species?: components["schemas"]["Species"] | null;
             breed?: components["schemas"]["BreedType"] | null;
+            /**
+             * @description M5-R21 (David 2026-10-14): coat colour key of a paid breed, from
+             *     `colours` of GET /api/breeds. Needs `breed`; a key the breed does not
+             *     have → 422 `colour_invalid`. Omitted (old builds) → sampled by weight.
+             */
+            colour?: string | null;
             origin?: components["schemas"]["PetOrigin"] | null;
             age_stage?: components["schemas"]["LifeStage"] | null;
             /**
@@ -2002,6 +2153,7 @@ export interface components {
             name: string | null;
             grooming_enabled: boolean;
             socialisation_enabled: boolean;
+            coat_colour: string | null;
         };
         /**
          * PetOrigin
@@ -2152,6 +2304,39 @@ export interface components {
             /** @enum {string} */
             signature_format: "svg_path" | "png";
             signature: string;
+        };
+        /**
+         * SocialSignInRequest
+         * @description POST /api/auth/social (M2-10c) — parent sign-in / sign-up with a Google or
+         *     Apple ID token from the native SDK. Public; throttled per IP
+         *     (`throttle:social`).
+         */
+        SocialSignInRequest: {
+            /**
+             * @example google
+             * @enum {string}
+             */
+            provider: "google" | "apple";
+            /** @description The provider's ID token (JWT) from the native sign-in SDK. */
+            id_token: string;
+            /** @description Apple: the RAW nonce (the app passed its SHA-256 to Apple). Ignored for Google. */
+            nonce?: string | null;
+            /**
+             * @description Apple sends the name only on the first authorization (client side);
+             *     Google's name comes from the token and wins.
+             */
+            name?: string | null;
+            /** @description IANA identifier of the device (e.g. "Europe/Ljubljana"). */
+            timezone: string;
+            /** @description Must be true to create a new account (terms of use + privacy policy). */
+            terms_accepted?: boolean | null;
+            /**
+             * @description Language of the app; accepted for forward compatibility, texts
+             *     follow Accept-Language.
+             * @enum {string|null}
+             */
+            locale?: "en" | "sl" | null;
+            device_name?: string | null;
         };
         /**
          * SocialisationExperience
@@ -2442,6 +2627,9 @@ export interface operations {
                             name: string;
                             email: string | null;
                             role: string;
+                            /** @description M2-10c: how this account signs in (parents; a child: false / []). */
+                            has_password: boolean;
+                            linked_providers: string[];
                         };
                         pet: components["schemas"]["Pet"] | null;
                         /** @description Per child (M2-02): this child must sign before acting. null for a parent. */
@@ -2491,10 +2679,56 @@ export interface operations {
                             name: string;
                             email: string | null;
                             role: string;
+                            /** @description M2-10c: how this account signs in (parents; a child: false / []). */
+                            has_password: boolean;
+                            linked_providers: string[];
                         };
                         /** @description A new family has no pet yet; the parent adds a child next. */
                         pet: null;
                         awaiting_contract: null;
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "auth.social": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["SocialSignInRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        token: string;
+                        abilities: [
+                            string
+                        ];
+                        user: {
+                            id: number;
+                            name: string;
+                            email: string | null;
+                            role: string;
+                            /** @description M2-10c: how this account signs in (parents; a child: false / []). */
+                            has_password: boolean;
+                            linked_providers: string[];
+                        };
+                        pet: components["schemas"]["Pet"] | null;
+                        /** @description Parents never sign a contract. */
+                        awaiting_contract: null;
+                        /** @description true = a new account (and family) was created just now. */
+                        created: boolean;
                     };
                 };
             };
@@ -2520,6 +2754,9 @@ export interface operations {
                         name: string;
                         email: string | null;
                         role: string;
+                        /** @description M2-10c: how this account signs in (parents; a child: false / []). */
+                        has_password: boolean;
+                        linked_providers: string[];
                         pet: components["schemas"]["Pet"] | null;
                         awaiting_contract: boolean | null;
                     };
@@ -3153,13 +3390,83 @@ export interface operations {
                             name: string;
                             role: string;
                         };
-                        /** @enum {string} */
-                        mode: "join_pet" | "new_pet" | "relogin";
-                        joined_existing: string;
-                        family_id: string;
+                        mode: string;
+                        joined_existing: boolean;
+                        family_id: number;
                         pet: components["schemas"]["PairedPetResource"];
                         awaiting_contract: boolean;
                     } | string;
+                };
+            };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "childAuth.deviceSession": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                child: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["ChildDeviceSessionRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        token: string;
+                        abilities: [
+                            string
+                        ];
+                        /** @description Only the nickname — the profile has no e-mail. */
+                        user: {
+                            id: number;
+                            name: string;
+                            role: string;
+                        };
+                        mode: string;
+                        joined_existing: boolean;
+                        family_id: number;
+                        pet: components["schemas"]["PairedPetResource"];
+                        awaiting_contract: boolean;
+                    } | string;
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            /** @description An error */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /**
+                         * @description Error overview.
+                         * @example
+                         */
+                        message: string;
+                    };
+                };
+            };
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "No such child in your family.";
+                        /** @constant */
+                        reason: "child_not_found";
+                    };
                 };
             };
             422: components["responses"]["ValidationException"];
@@ -14796,7 +15103,21 @@ export interface operations {
     "childProfile.destroy": {
         parameters: {
             query: {
-                password: string;
+                /** @description Required for a parent who has a password (checked in after()). */
+                password?: string | null;
+                /** @description M2-10c — parents without a password: re-authenticate with a linked provider. */
+                provider?: "google" | "apple" | null;
+                /** @description Fresh ID token (issued ≤ 10 minutes ago) from the provider's native SDK. */
+                id_token?: string | null;
+                /** @description Apple: the RAW nonce of that sign-in. */
+                nonce?: string | null;
+                /**
+                 * @description Apple only: the authorization code of that Apple sign-in. Account
+                 *     deletion uses it to revoke the Apple tokens (queued
+                 *     RevokeAppleTokenJob, encrypted payload); child deletion ignores it.
+                 *     Never logged, never stored in the database.
+                 */
+                authorization_code?: string | null;
                 confirm: "yes" | "on" | "1" | 1 | "true" | true;
                 /**
                  * @description M3-11 P5: the parent saw that a paid, unfinished 12-week challenge
@@ -15131,7 +15452,7 @@ export interface operations {
                          */
                         pet_profile: {
                             /** @enum {string} */
-                            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
+                            breed: "mutt" | "border_collie" | "labrador_retriever" | "golden_retriever" | "french_bulldog" | "german_shepherd" | "cavalier_king_charles_spaniel" | "beagle" | "standard_poodle" | "dachshund" | "australian_shepherd" | "havanese" | "west_highland_white_terrier" | "bernese_mountain_dog" | "siberian_husky" | "rottweiler" | "bulldog" | "german_shorthaired_pointer" | "yorkshire_terrier" | "cane_corso" | "pembroke_welsh_corgi" | "dobermann" | "boxer" | "miniature_schnauzer" | "shih_tzu" | "great_dane" | "pomeranian" | "boston_terrier" | "miniature_american_shepherd" | "chihuahua" | "english_springer_spaniel" | "shetland_sheepdog" | "brittany" | "american_cocker_spaniel" | "belgian_malinois" | "basset_hound" | "hungarian_vizsla" | "domestic_cat" | "maine_coon" | "british_shorthair" | "ragdoll" | "siberian_cat" | "norwegian_forest_cat" | "bengal";
                             /** @enum {string} */
                             origin: "bought" | "adopted";
                             /** @enum {string} */
@@ -15139,6 +15460,7 @@ export interface operations {
                             features: ("behaviour_events" | "training" | "species_cat")[];
                             /** @enum {string} */
                             species: "dog" | "cat";
+                            colour: string | null;
                         } | null;
                         /**
                          * @description M3-11: the new pet's plan (mode new_pet; null for join / re-login).

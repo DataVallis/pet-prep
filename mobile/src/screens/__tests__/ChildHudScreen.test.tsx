@@ -4,6 +4,7 @@
  * (hard stop) and the contract route.
  */
 import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
+import { PARENTAL_GATE_STRINGS } from '@/components/ParentalGate';
 import { Dimensions, StyleSheet, type ViewStyle } from 'react-native';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 
@@ -140,6 +141,36 @@ describe('ChildHudScreen', () => {
     } finally {
       jest.useRealTimers();
     }
+  });
+
+  it('M2-11: in a shared session the same button (»Nazaj k staršu«) opens the parent login — no gate, no logout', async () => {
+    useAppStore.setState({ sharedSession: true });
+    await renderHud();
+    expect(screen.getByTestId('hud-logout').props.accessibilityLabel).toBe(PARENTAL_GATE_STRINGS.backToParent);
+
+    fireEvent.press(screen.getByTestId('hud-logout'));
+    expect(screen.queryByTestId('parental-gate')).toBeNull();
+    expect(useAppStore.getState().parentLoginOpen).toBe(true);
+    expect(useAppStore.getState().user?.role).toBe('child');
+    expect(api.logout).not.toHaveBeenCalled();
+  });
+
+  it('David 2026-10-14: the logout icon goes through the parental gate (no accidental logout)', async () => {
+    await renderHud();
+    fireEvent.press(screen.getByTestId('hud-logout'));
+    expect(screen.getByTestId('parental-gate')).toBeTruthy();
+
+    fireEvent.changeText(screen.getByTestId('parental-gate-input'), '1');
+    fireEvent.press(screen.getByTestId('parental-gate-submit'));
+    expect(api.logout).not.toHaveBeenCalled();
+    expect(useAppStore.getState().user).not.toBeNull();
+
+    const [a, b] = (String(screen.getByTestId('parental-gate-question').props.children).match(/\d+/g) ?? []).map(Number);
+    fireEvent.changeText(screen.getByTestId('parental-gate-input'), String(a * b));
+    await act(async () => {
+      fireEvent.press(screen.getByTestId('parental-gate-submit'));
+    });
+    await waitFor(() => expect(useAppStore.getState().user).toBeNull());
   });
 
   it('outside the feed window: feed disabled with "ob 17:00" (Ljubljana), water enabled', async () => {

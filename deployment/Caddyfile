@@ -6,6 +6,15 @@
 # caddy:2.8-alpine + the app's public/ at /var/www/html/public — the same path as
 # in the FPM container, so php_fastcgi's SCRIPT_FILENAME matches there.
 # The app_storage volume is mounted read-only at /srv/storage (pet media).
+#
+# One file for every server (DEPLOYMENT.md D18, dev server 2026-10-14). Two env
+# placeholders, set by compose (`environment:` of caddy) from /opt/petprep/.env or
+# derived by scripts/deploy-production.sh from APP_URL:
+#   PETPREP_API_DOMAIN  the API site (default api.petprep.si; dev: api-dev.petprep.si)
+#   PETPREP_CADDY_SITES which extra sites to serve: `production` (default — the
+#                       marketing website petprep.si / www and the raw-IP site) or
+#                       `api-only` (dev server: no certificates for petprep.si, no
+#                       website container). Any other value fails `caddy validate`.
 
 {
     # Global options
@@ -53,6 +62,11 @@
         header -X-Accel-Redirect
 
         php_fastcgi app:9000 {
+            # Deploy without maintenance (D19): while the app container is swapped, hold
+            # requests and retry the upstream for up to 10 s instead of answering 502.
+            lb_try_duration 10s
+            lb_try_interval 250ms
+
             # Pet media (GET /api/media/{id}, PET_MEDIA_SERVE_VIA=caddy): Laravel
             # checks the signature + authz and answers with an empty body and
             # `X-Accel-Redirect: /{pet_id}/{file}` (validated server side, built
@@ -109,8 +123,8 @@
     }
 }
 
-# Production HTTPS domain — API, Reverb, Filament
-api.petprep.si {
+# API HTTPS domain — API, Reverb, Filament (production: api.petprep.si)
+{$PETPREP_API_DOMAIN:api.petprep.si} {
     log {
         output stdout
         # Signed media URLs (GET /api/media/{id}?expires&v&signature, M4-05) are
@@ -131,32 +145,41 @@ api.petprep.si {
     import laravel
 }
 
-# Marketing website (repo DataVallis/pet-prep-website). The `petprep-website`
-# container joins this stack's network (backend_petprep-network) with the alias
-# `website`; it is deployed by that repo's own workflow. Until it runs, petprep.si
-# answers 502 — the API above is not affected.
-petprep.si {
-    log {
-        output stdout
+# Sites only the production server serves (PETPREP_CADDY_SITES=production).
+(sites-production) {
+    # Marketing website (repo DataVallis/pet-prep-website). The `petprep-website`
+    # container joins this stack's network (backend_petprep-network) with the alias
+    # `website`; it is deployed by that repo's own workflow. Until it runs, petprep.si
+    # answers 502 — the API above is not affected.
+    petprep.si {
+        log {
+            output stdout
+        }
+        encode zstd gzip
+
+        # Next.js build assets carry a content hash.
+        @next_static path /_next/static/*
+        header @next_static Cache-Control "public, max-age=31536000, immutable"
+
+        reverse_proxy website:3000 {
+            # Internal marker of the site's locale proxy; never accepted from clients.
+            header_up -X-Petprep-Locale-Rewrite
+        }
     }
-    encode zstd gzip
 
-    # Next.js build assets carry a content hash.
-    @next_static path /_next/static/*
-    header @next_static Cache-Control "public, max-age=31536000, immutable"
+    www.petprep.si {
+        redir https://petprep.si{uri} permanent
+    }
 
-    reverse_proxy website:3000 {
-        # Internal marker of the site's locale proxy; never accepted from clients.
-        header_up -X-Petprep-Locale-Rewrite
+    # Fallback direct IP access over HTTP (DEPLOYMENT.md D8)
+    http://138.199.172.97 {
+        import reverb
+        import laravel
     }
 }
 
-www.petprep.si {
-    redir https://petprep.si{uri} permanent
+# Dev server (PETPREP_CADDY_SITES=api-only): the API site above only.
+(sites-api-only) {
 }
 
-# Fallback direct IP access over HTTP (DEPLOYMENT.md D8)
-http://138.199.172.97 {
-    import reverb
-    import laravel
-}
+import sites-{$PETPREP_CADDY_SITES:production}

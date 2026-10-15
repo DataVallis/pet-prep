@@ -9,6 +9,8 @@ import { currentLanguageTag } from '@/i18n';
 import type { components, operations } from '@/api/schema';
 import type { Pet, QuietHours } from '@/types';
 import { CAT_UI_READY } from '@/config/features';
+import { isNetworkFailure, outageCauseForResponse, outageRetryAfterMs } from '@/modules/connectivity/serverOutage';
+import { useServerStatusStore } from '@/store/serverStatusStore';
 
 /**
  * Authenticated user as returned (flat, no `data` wrapper) by `GET /api/user`
@@ -23,6 +25,14 @@ export interface SessionUser {
   /** null for a PIN-only child profile (M2-02). */
   email: string | null;
   role: UserRole;
+  /**
+   * M2-10c: the account has a password (e-mail sign-up). Sent by `/api/login`,
+   * `/api/register`, `/api/auth/social` and `GET /api/user`; missing from older servers —
+   * read through `readAuthMethods`.
+   */
+  has_password?: boolean;
+  /** M2-10c: Google / Apple identities linked to the account (`google` | `apple`). */
+  linked_providers?: string[];
 }
 
 /** `GET /api/user` response. */
@@ -54,6 +64,36 @@ export type RegisterParentRequest = components['schemas']['RegisterParentRequest
  * policy, terms), 429 with `Retry-After`.
  */
 export type RegisterResponse = LoginResponse;
+
+/** `POST /api/auth/social` body (M2-10c): parent sign-in / sign-up with a Google or Apple ID token. */
+export type SocialSignInRequest = components['schemas']['SocialSignInRequest'];
+
+/**
+ * `POST /api/auth/social` 200 body — the `POST /api/login` shape + `created` (a new account
+ * and family were made just now). Hand-typed like `LoginResponse` (Scramble types `role`
+ * as a plain string).
+ */
+export interface SocialSignInResponse extends LoginResponse {
+  created: boolean;
+}
+
+/**
+ * Machine-readable `code` of a refused social sign-in (`{message, code}`): 401
+ * `invalid_token`, 403 `not_a_parent` / `superadmin_protected`, 409 `email_in_use` /
+ * `email_link_unavailable`, 422
+ * `terms_required` (no account yet — retry with `terms_accepted: true`), 503
+ * `provider_disabled` / `provider_unavailable`.
+ */
+export type SocialSignInErrorCode =
+  | 'invalid_token'
+  | 'not_a_parent'
+  | 'superadmin_protected'
+  | 'email_in_use'
+  /** 409: the e-mail belongs to a password-less account that signs in with another provider identity. */
+  | 'email_link_unavailable'
+  | 'terms_required'
+  | 'provider_disabled'
+  | 'provider_unavailable';
 
 /**
  * `POST /api/devices` body (M3-02): this install's Expo push token, plus the push language
@@ -198,6 +238,9 @@ export interface PinLoginErrorBody {
   retry_after?: number;
 }
 
+/** `POST /api/parent/children/{child}/device-session` body (M2-11). */
+export type ChildDeviceSessionRequest = components['schemas']['ChildDeviceSessionRequest'];
+
 /** `POST /api/parent/children` body / 201 response (M2-02). */
 export type CreateChildRequest = components['schemas']['CreateChildRequest'];
 export type CreateChildResponse =
@@ -226,6 +269,11 @@ export interface NewPetProfile {
    * species' free breed (the server refuses a paid one). Sent with the profile only.
    */
   plan: PetPlanType;
+  /**
+   * M5-R21: coat colour key of a paid breed (`colours[].key` of `GET /api/breeds`); omitted when
+   * the breed offers none (free breed, older server) → the server samples it by weight.
+   */
+  colour?: string;
 }
 
 /** `POST /api/parent/generate-pin` body — always with `child_id` (the legacy call is deprecated). */
@@ -274,8 +322,18 @@ export function generatePinBody(
 ): Record<string, number | string | ClientFeature[]> {
   if (body.pet_id != null) return { child_id: body.child_id, pet_id: body.pet_id };
   if (body.profile) {
-    const { species, breed, origin, age_stage, plan } = body.profile;
-    return { child_id: body.child_id, species, breed, origin, age_stage, plan, features: [...features] };
+    const { species, breed, origin, age_stage, plan, colour } = body.profile;
+    // M5-R21: `colour` only when chosen (an older server never offered one, so never gets one).
+    return {
+      child_id: body.child_id,
+      species,
+      breed,
+      origin,
+      age_stage,
+      plan,
+      ...(colour !== undefined ? { colour } : {}),
+      features: [...features],
+    };
   }
   return { child_id: body.child_id };
 }
@@ -347,12 +405,34 @@ export interface DeleteChildResponse {
   pets_kept: number;
 }
 
-/** Machine-readable `reason` of a refused deletion / export (M2-08). */
+/**
+ * M2-10c: a parent WITHOUT a password confirms a deletion with a fresh ID token (≤ 10 min)
+ * of a provider linked to the account instead of the password (`ConfirmDeletionRequest`).
+ */
+export interface ProviderReauth {
+  provider: 'google' | 'apple';
+  id_token: string;
+  /** Apple: the RAW nonce of that sign-in. */
+  nonce?: string;
+  /**
+   * Apple: the one-time authorization code of that sign-in (reserved on the server for
+   * revoking Apple tokens on account deletion). Secret-ish — never log it.
+   */
+  authorization_code?: string;
+}
+
+/** What proves the parent's identity for a deletion: the password, or a provider re-sign-in. */
+export type DeletionProof = string | ProviderReauth;
+
+/** Machine-readable `reason` of a refused deletion / export (M2-08, M2-10c). */
 export type AccountDeletionReason =
   | 'invalid_password'
   | 'superadmin_protected'
   | 'child_not_found'
-  | 'export_too_large';
+  | 'export_too_large'
+  | 'reauth_required'
+  | 'provider_disabled'
+  | 'provider_unavailable';
 
 /**
  * `GET /api/parent/account/export` 200 body (M2-08, GDPR art. 15 / 20) — the family's
@@ -517,7 +597,7 @@ function messageFrom(data: unknown): string | null {
   return null;
 }
 
-/** `Retry-After` header (seconds) — sent by Laravel's throttle middleware with 429. */
+/** `Retry-After` header (seconds) — Laravel's throttle (429) and maintenance mode (`down --retry`, 503). */
 function retryAfterFrom(response: Response): number | null {
   const raw = response.headers?.get?.('Retry-After');
   if (!raw) return null;
@@ -530,10 +610,20 @@ function retryAfterFrom(response: Response): number | null {
  * confirmation word of the app language ("IZBRIŠI" / "DELETE"), sent once the parent's
  * input matched it; the server accepts the word of any supported language.
  */
-function confirmBody(password: string, confirmWord?: string, acknowledgePaidChallenge = false): Record<string, unknown> {
+function confirmBody(proof: DeletionProof, confirmWord?: string, acknowledgePaidChallenge = false): Record<string, unknown> {
+  // M2-10c: a parent without a password sends `{provider, id_token, nonce?}` instead.
+  const identity: ConfirmDeletionRequest =
+    typeof proof === 'string'
+      ? { password: proof, confirm: true }
+      : {
+          provider: proof.provider,
+          id_token: proof.id_token,
+          ...(proof.nonce ? { nonce: proof.nonce } : {}),
+          ...(proof.provider === 'apple' && proof.authorization_code ? { authorization_code: proof.authorization_code } : {}),
+          confirm: true,
+        };
   return {
-    password,
-    confirm: true,
+    ...identity,
     ...(confirmWord ? { confirm_word: confirmWord } : {}),
     // M3-11 P5: the parent confirmed that a purchased, unfinished challenge is lost.
     ...(acknowledgePaidChallenge ? { acknowledge_paid_challenge: true } : {}),
@@ -549,9 +639,14 @@ async function apiRequest<T>(
     signal?: AbortSignal;
     /** Send no Bearer token (public endpoints such as the child PIN login). */
     anonymous?: boolean;
+    /**
+     * M2-11: send THIS token instead of the stored one (a token that is not the active
+     * session). A 401 for it never triggers the unauthorized handler.
+     */
+    token?: string;
   } = {},
 ): Promise<T> {
-  const token = options.anonymous ? null : await getAuthToken();
+  const token = options.anonymous ? null : options.token !== undefined ? options.token : await getAuthToken();
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
     Accept: 'application/json',
@@ -563,14 +658,22 @@ async function apiRequest<T>(
     headers['Authorization'] = `Bearer ${token}`;
   }
 
-  const response = await fetch(`${ENV.API_BASE_URL}${path}`, {
-    method: options.method ?? 'GET',
-    headers,
-    body: options.body ? JSON.stringify(options.body) : undefined,
-    signal: options.signal,
-  });
+  let response: Response;
+  try {
+    response = await fetch(`${ENV.API_BASE_URL}${path}`, {
+      method: options.method ?? 'GET',
+      headers,
+      body: options.body ? JSON.stringify(options.body) : undefined,
+      signal: options.signal,
+    });
+  } catch (error) {
+    // M5-F13: connection refused / reset while the server restarts (or no network).
+    if (isNetworkFailure(error)) useServerStatusStore.getState().noteOutageFailure('network', null);
+    throw error;
+  }
 
   const data = await readJson(response);
+  reportServerAnswer(response, data);
 
   if (!response.ok) {
     if (response.status === 401 && token && unauthorizedHandler) {
@@ -590,13 +693,44 @@ async function apiRequest<T>(
   return data as T;
 }
 
+/**
+ * M5-F13: tell the "Updating PetPrep" banner what the server said. A maintenance 503 /
+ * gateway 502 / 504 counts as an outage; any other answer (also a 401 / 422 / 500) means
+ * the server is up again.
+ */
+function reportServerAnswer(response: Response, data: unknown): void {
+  const store = useServerStatusStore.getState();
+  const cause = outageCauseForResponse(response.status, data);
+  if (cause === null) {
+    store.noteServerAnswered();
+    return;
+  }
+  const seconds = retryAfterFrom(response);
+  store.noteOutageFailure(cause, outageRetryAfterMs({ retryAfterSeconds: seconds }));
+}
+
+/**
+ * M5-F13: is the API answering again? `GET /up` (Laravel's health route: no auth, no
+ * throttle, 503 while in maintenance). Reports to the banner like every request; never throws.
+ */
+export async function probeServer(signal?: AbortSignal): Promise<boolean> {
+  try {
+    const response = await fetch(`${ENV.API_BASE_URL}/up`, { method: 'GET', headers: { Accept: 'application/json' }, signal });
+    reportServerAnswer(response, null);
+    return outageCauseForResponse(response.status, null) === null;
+  } catch (error) {
+    if (isNetworkFailure(error)) useServerStatusStore.getState().noteOutageFailure('network', null);
+    return false;
+  }
+}
+
 /** API error with status code and response body. */
 export class ApiError extends Error {
   constructor(
     message: string,
     public readonly status: number,
     public readonly data?: unknown,
-    /** Seconds until a throttled request may be retried (429 only). */
+    /** Seconds until the request may be retried (`Retry-After`: 429 throttle, 503 maintenance). */
     public readonly retryAfterSeconds: number | null = null,
   ) {
     super(message);
@@ -614,6 +748,9 @@ export const api = {
     apiRequest<LoginResponse>('/api/login', {
       method: 'POST',
       body: { email, password, device_name: deviceName },
+      // Public endpoint: never send the active session's token. M2-11 QA B1: over a shared
+      // child session a wrong password (401) must not look like a rejected session token.
+      anonymous: true,
     }),
 
   /**
@@ -622,6 +759,18 @@ export const api = {
    */
   register: (body: RegisterParentRequest) =>
     apiRequest<RegisterResponse>('/api/register', {
+      method: 'POST',
+      body: { ...body },
+      anonymous: true,
+    }),
+
+  /**
+   * POST /api/auth/social (M2-10c, public) — parent sign-in / sign-up with the ID token of
+   * the native Google / Apple SDK. Errors `{message, code}` (`SocialSignInErrorCode`);
+   * 422 `terms_required` = no account yet: retry with the same token + `terms_accepted`.
+   */
+  socialSignIn: (body: SocialSignInRequest) =>
+    apiRequest<SocialSignInResponse>('/api/auth/social', {
       method: 'POST',
       body: { ...body },
       anonymous: true,
@@ -652,6 +801,28 @@ export const api = {
       body: { expo_push_token: expoPushToken } satisfies components['schemas']['UnregisterDeviceRequest'],
       signal,
     }),
+
+  /**
+   * M2-11: revoke a token that is NOT the active session (the parent's when »Igraj kot«
+   * starts, a stored shared child session). A 401 never triggers the unauthorized handler.
+   */
+  logoutToken: (token: string, signal?: AbortSignal) =>
+    apiRequest<{ message: string }>('/api/logout', { method: 'POST', signal, token }),
+
+  /**
+   * POST /api/parent/children/{child}/device-session (M2-11, parent token) — open this
+   * child's profile on the parent's phone without a PIN. 200 = the pin-login body
+   * (`mode: relogin`); one shared session per parent and child (a new call replaces the
+   * previous token). 404 `child_not_found`, 409 `no_pet`, 422 `app_update_required`, 429.
+   */
+  childDeviceSession: (childId: number, deviceName: string) =>
+    apiRequest<PinLoginResponse>(`/api/parent/children/${childId}/device-session`, {
+      method: 'POST',
+      body: { device_name: deviceName, features: [...CLIENT_FEATURES] } satisfies ChildDeviceSessionRequest,
+    }),
+
+  /** M2-11: `GET /api/user` for a stored shared child session's token (checked before reuse). */
+  getUserWithToken: (token: string) => apiRequest<UserResponse>('/api/user', { token }),
 
   /** POST /api/logout — Revoke the current token. Pass a signal to abort (offline logout). */
   logout: (signal?: AbortSignal) =>
@@ -727,23 +898,25 @@ export const api = {
   /**
    * DELETE /api/parent/children/{child} (M2-08) — delete a child profile, irreversibly.
    * A pet only this child cared for goes with it; a shared pet stays. 404
-   * `child_not_found`, 422 `invalid_password`, 429 (5 per 15 min).
+   * `child_not_found`, 422 `invalid_password` / `reauth_required` (M2-10c), 429 (5 per 15 min).
+   * `proof` = the password, or a fresh provider sign-in for a parent without one.
    */
-  deleteChild: (childId: number, password: string, confirmWord?: string, acknowledgePaidChallenge = false) =>
+  deleteChild: (childId: number, proof: DeletionProof, confirmWord?: string, acknowledgePaidChallenge = false) =>
     apiRequest<DeleteChildResponse>(`/api/parent/children/${childId}`, {
       method: 'DELETE',
-      body: confirmBody(password, confirmWord, acknowledgePaidChallenge),
+      body: confirmBody(proof, confirmWord, acknowledgePaidChallenge),
     }),
 
   /**
    * POST /api/parent/account/delete (M2-08) — delete the parent's own account; the last
    * parent deletes the whole family. Every token is revoked → the app must log out
-   * locally afterwards. 422 `invalid_password`, 403 `superadmin_protected`, 429.
+   * locally afterwards. 422 `invalid_password` / `reauth_required` (M2-10c), 403
+   * `superadmin_protected`, 429. `proof` as in `deleteChild`.
    */
-  deleteAccount: (password: string, confirmWord?: string, acknowledgePaidChallenge = false) =>
+  deleteAccount: (proof: DeletionProof, confirmWord?: string, acknowledgePaidChallenge = false) =>
     apiRequest<DeleteAccountResponse>('/api/parent/account/delete', {
       method: 'POST',
-      body: confirmBody(password, confirmWord, acknowledgePaidChallenge),
+      body: confirmBody(proof, confirmWord, acknowledgePaidChallenge),
     }),
 
   /** GET /api/parent/account/export (M2-08) — the family's data as JSON. 413 too large, 429 (3/h). */

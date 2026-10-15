@@ -1,5 +1,6 @@
 /**
- * ParentLoginScreen — "Sem starš": e-mail + password (`POST /api/login`).
+ * ParentLoginScreen — "Sem starš": Google / Apple (M2-10c, `SocialSignInSection`) or
+ * e-mail + password (`POST /api/login`).
  * Children never log in here any more (M2-02): a child account is signed out
  * again right away and pointed to the PIN path.
  */
@@ -11,6 +12,8 @@ import { ChevronLeft, LogIn, ShieldCheck } from 'lucide-react-native';
 
 import { ApiError, api, saveAuthToken } from '@/api/client';
 import { logout } from '@/modules/session/logout';
+import { saveSignInMethod } from '@/modules/session/signInMethod';
+import SocialSignInSection from '@/components/auth/SocialSignInSection';
 import { useAppStore } from '@/store/appStore';
 import { light, palette, radius } from '@/theme';
 import { AUTH_STYLES } from '@/components/auth/authStyles';
@@ -38,12 +41,14 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // M2-10c: a Google / Apple flow is running — the e-mail form waits.
+  const [socialBusy, setSocialBusy] = useState(false);
   const signIn = useAppStore((s) => s.signIn);
 
   const handleLogin = async (loginEmail?: string, loginPassword?: string) => {
     const targetEmail = (loginEmail ?? email).trim();
     const targetPassword = loginPassword ?? password;
-    if (!targetEmail || !targetPassword || isLoading) return;
+    if (!targetEmail || !targetPassword || isLoading || socialBusy) return;
 
     setIsLoading(true);
     setError(null);
@@ -56,8 +61,11 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
         setError(S.childAccount);
         return;
       }
+      // M2-10c: a password account confirms deletions with its password.
+      await saveSignInMethod('password');
       // Same store update as the launch-time session restore (M1-12); AppNavigator routes by role.
       signIn({
+        signInMethod: 'password',
         token: response.token,
         user: response.user,
         pet: response.pet,
@@ -96,6 +104,8 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
           </View>
 
           <View style={styles.formCard}>
+            <SocialSignInSection disabled={isLoading} onBusyChange={setSocialBusy} testID="parent-login-social" />
+
             {/* Quick 1-tap demo login — development builds only (M0-10). __DEV__ is false in
                 EAS preview/production builds, so seeded test credentials never ship. */}
             {showDevLogins() && (
@@ -108,7 +118,7 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
                     setPassword('password');
                     void handleLogin('parent@test.com', 'password');
                   }}
-                  disabled={isLoading}
+                  disabled={isLoading || socialBusy}
                 >
                   <ShieldCheck color={light.ink} size={16} />
                   <Text style={styles.quickButtonText}>{S.devParent}</Text>
@@ -132,7 +142,7 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
                 autoComplete="email"
                 value={email}
                 onChangeText={setEmail}
-                editable={!isLoading}
+                editable={!isLoading && !socialBusy}
               />
               <TextInput
                 style={styles.input}
@@ -142,7 +152,7 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
                 autoComplete="password"
                 value={password}
                 onChangeText={setPassword}
-                editable={!isLoading}
+                editable={!isLoading && !socialBusy}
                 onSubmitEditing={() => void handleLogin()}
               />
             </View>
@@ -154,9 +164,9 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
             )}
 
             <Pressable
-              style={({ pressed }) => [styles.primaryButton, (!ready || isLoading) && styles.buttonDisabled, pressed && styles.pressed]}
+              style={({ pressed }) => [styles.primaryButton, (!ready || isLoading || socialBusy) && styles.buttonDisabled, pressed && styles.pressed]}
               onPress={() => void handleLogin()}
-              disabled={isLoading || !ready}
+              disabled={isLoading || socialBusy || !ready}
               accessibilityRole="button"
             >
               {isLoading ? (
@@ -175,7 +185,7 @@ export default function ParentLoginScreen({ onBack, onSignup }: ParentLoginScree
                 hitSlop={8}
                 style={styles.switchRow}
                 accessibilityRole="button"
-                disabled={isLoading}
+                disabled={isLoading || socialBusy}
                 testID="parent-login-signup"
               >
                 <Text style={styles.switchText}>{S.noAccount}</Text>

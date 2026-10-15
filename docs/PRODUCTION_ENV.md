@@ -71,8 +71,8 @@ This document describes all environment variables used by the PetPrep production
 | `FAL_AI_API_KEY` | Optional | **Yes** | fal.ai API key for Kling 3.0 / Flux | `fal_key_...` |
 | `FAL_AI_JWKS_URL` | Optional | No | fal.ai public keys for ED25519 webhook verification (no shared secret needed) | `https://rest.fal.ai/.well-known/jwks.json` |
 | `FAL_AI_MEDIA_HOSTS` | Optional | No | Allowed hosts for generated media | `fal.media` |
-| `AI_DAILY_BUDGET_USD` | Optional | No | Cap on **estimated** fal.ai spend per day (M4-07); calls over it are refused (fail closed), pets work without media. `0` = no AI calls | `5` |
-| `AI_MONTHLY_BUDGET_USD` | Optional | No | Cap on estimated fal.ai spend per month | `50` |
+| `AI_DAILY_BUDGET_USD` | Optional | No | Cap on **estimated** fal.ai spend per day (M4-07); calls over it are refused (fail closed), pets work without media. `0` = no AI calls. **Default only** — since M4-07b the superadmin sets the budget in `/admin → AI budget` (no restart); an empty admin field falls back to this value | `5` |
+| `AI_MONTHLY_BUDGET_USD` | Optional | No | Cap on estimated fal.ai spend per month — default only, overridden in `/admin → AI budget` (M4-07b) | `50` |
 | `AI_BUDGET_TIMEZONE` | Optional | No | Day / month boundary for the caps (operations clock) | `UTC` |
 | `AI_REFERENCE_IMAGE_PROFILE` | Optional | No | Image profile from `config/media.php` for new pets' reference image (David 2026-10-05: Nano Banana Pro). **Remove the line** from an old `/opt/petprep/.env` that still says `flux_schnell` — an unknown key falls back to the default with an error log; the deploy preflight warns about non-default values | `nano_banana_pro` |
 | `AI_STATE_VIDEO_PROFILE` | Optional | No | Video profile for the pet state videos (M4-03; David 2026-10-05: Kling 3.0 Pro, 5 s, no audio). `kling_v16_legacy` no longer exists (falls back to the default + error log) | `kling_v3_pro` |
@@ -84,9 +84,9 @@ This document describes all environment variables used by the PetPrep production
 | `PET_MEDIA_SERVE_VIA` | Optional | No | Who sends the bytes of `GET /api/media/{id}` (M4-05b): `caddy` = PHP checks signature + authz, Caddy serves the file (`X-Accel-Redirect`, read-only `app_storage`); `php` = stream from PHP (the app default for local dev / tests). **Production default `caddy` comes from `compose.production.yaml`** — leave the line out of `/opt/petprep/.env`; set `php` only as an emergency fallback (PRODUCTION_DEPLOYMENT.md §7), then `docker compose … up -d app` | `caddy` |
 | `AI_PET_DNA_VERSION` | Optional | No | DNA for new pets: `2` unique traits (M4-08), `1` pre-M4 anchors | `2` |
 | `AI_LAB_ENABLED` | Optional | No | Show the Filament AI Lab (superadmin only) | `true` |
-| `AI_LAB_MAX_RUN_USD` | Optional | No | Max estimated cost of one AI Lab run | `3` |
-| `AI_LAB_DAILY_USD` | Optional | No | Separate AI Lab budget per day (lab spend never counts against the pets' caps) | `3` |
-| `AI_LAB_MONTHLY_USD` | Optional | No | Separate AI Lab budget per month | `30` |
+| `AI_LAB_MAX_RUN_USD` | Optional | No | Max estimated cost of one AI Lab run — default only, overridden in `/admin → AI budget` (M4-07c) | `3` |
+| `AI_LAB_DAILY_USD` | Optional | No | Separate AI Lab budget per day (lab spend never counts against the pets' caps) — default only, overridden in `/admin → AI budget` (M4-07c) | `3` |
+| `AI_LAB_MONTHLY_USD` | Optional | No | Separate AI Lab budget per month — default only, overridden in `/admin → AI budget` (M4-07c) | `30` |
 | `FAL_MODEL_*` | Optional | No | Override a profile's fal endpoint id (`FAL_MODEL_FLUX_SCHNELL`, `FAL_MODEL_FLUX2_PRO`, `FAL_MODEL_NANO_BANANA_PRO`, `FAL_MODEL_SEEDREAM`, `FAL_MODEL_KLING_V3_PRO`, `FAL_MODEL_KLING_V26_PRO`, `FAL_MODEL_VEO31_FAST`, `FAL_MODEL_VEO31_LITE`) — only `owner/model/...` ids are accepted. **The price stays the profile's** (`config/media.php`): overriding the endpoint does not change the cost estimate | `fal-ai/flux-2-pro` |
 | `PUSH_ENABLED` | Optional | No | Escalation pushes via Expo (M3-02). **Production default `true` comes from `compose.production.yaml`** — leave the line out of `/opt/petprep/.env`; set `false` there only to silence all pushes (then `docker compose … up -d`). Tests / local default `false` | `true` |
 | `EXPO_ACCESS_TOKEN` | **Required before the closed beta** (PR #35 review) | **Yes** | expo.dev access token (robot user, scope: push) sent as `Authorization: Bearer` to the Expo Push API. **Turn on "Enhanced security for push notifications"** for the `petprep` project on expo.dev at the same time — without it anyone who learns a device's Expo token can push to it. Empty = unauthenticated sends (works today, not acceptable with real families) | `expo_...` |
@@ -97,11 +97,18 @@ This document describes all environment variables used by the PetPrep production
 | `REVENUECAT_CHALLENGE_PRODUCTS` | Optional | No | Comma-separated store product id(s) of the consumable 12-week challenge (M3-11, PAYMENTS_SPEC P1); each purchase = one challenge credit. Replaces `REVENUECAT_ENTITLEMENTS` (never deployed, no longer read) | `petprep_challenge_12w` (default) |
 | `REVENUECAT_ACCEPT_SANDBOX` | Optional | No | Whether SANDBOX purchases create / revoke challenge credits (they are always stored). Default `false` when `APP_ENV=production`, `true` elsewhere — set `true` in production only for a store review / TestFlight phase | `false` |
 | `REVENUECAT_PUBLIC_KEY` | Optional | No | RevenueCat public SDK key | `test_...` or `appl_...` |
+| `GOOGLE_CLIENT_IDS` | Optional (M2-10c) | No (public ids) | Comma-separated Google OAuth client IDs (web, iOS, Android) accepted as the `aud` of a Google ID token at `POST /api/auth/social`. **Default = PetPrep's own web / iOS / Android ids (in `config/services.php`) — no server change needed**; set only to override. An explicitly empty value (`GOOGLE_CLIENT_IDS=`) disables Google sign-in (503 `provider_disabled`) | `<web-id>.apps.googleusercontent.com,<ios-id>.apps.googleusercontent.com` |
+| `APPLE_AUDIENCES` | Optional | No (public ids) | Comma-separated `aud` values accepted for Sign in with Apple (M2-10c): the iOS bundle id, later a Services ID for Android / web. Unset → `com.datavallis.petprep` (Apple works without any env); an empty value disables Apple sign-in | `com.datavallis.petprep` |
+| `APPLE_SIGN_IN_PRIVATE_KEY` | **Required for Apple token revocation** (M2-10c, App Store guideline 5.1.1(v)) | **Yes** | The Sign in with Apple private key (`AuthKey_Z8WR3WL68G.p8`) as **base64 of the whole file on one line**: `base64 -i AuthKey_Z8WR3WL68G.p8 \| tr -d '\n'` (raw PEM with `\n` escapes is accepted too). Used only by the queued `RevokeAppleTokenJob` after a parent with a linked Apple identity deletes the account. **Empty → revocation is skipped** (one neutral warning in the log; the deletion still succeeds). Read by every PHP container through `env_file: /opt/petprep/.env`; the job runs on the `queue` container (`--queue=auth,default`) | base64 string |
+| `APPLE_TEAM_ID` | Optional | No (public id) | Apple Developer Team ID for the revocation `client_secret` (`iss`). Default `4345XU4MU8` — no server change needed | `4345XU4MU8` |
+| `APPLE_KEY_ID` | Optional | No (public id) | Key ID of the Sign in with Apple key (`kid`). Default `Z8WR3WL68G` | `Z8WR3WL68G` |
+| `APPLE_CLIENT_ID` | Optional | No (public id) | **Override only:** `client_id` of Apple's `/auth/token` and `/auth/revoke`. Unset → the `aud` of the Apple token the parent re-authenticated with for the deletion (the id the code was issued to), else `com.datavallis.petprep` | (unset) |
 | `MAIL_MAILER` | Optional | No | Mail driver (`log`, `smtp`, `resend`, `ses`) | `log` |
 
 ---
 
 ## 6. Runtime / deploy knobs (M4-05b — not secrets, normally NOT in `/opt/petprep/.env`)
+
 
 Set by the image, `compose.production.yaml` or `deploy-production.sh`; listed so nobody adds them to the `.env` by accident.
 
@@ -111,10 +118,15 @@ Set by the image, `compose.production.yaml` or `deploy-production.sh`; listed so
 | `PETPREP_OPTIMIZE` | container env | What `docker/production/entrypoint.sh` caches on start: `full` (`php artisan optimize`), `config` (config + events), `none`. Auto: `full` for php-fpm, `config` for everything else | auto |
 | `VIEW_COMPILED_PATH` | image (`Dockerfile`) | Compiled Blade views inside the container (`bootstrap/cache/views`), not on the shared volume | `/var/www/html/bootstrap/cache/views` |
 | `APP_ENV` / `APP_DEBUG` | compose `environment` | Forced to `production` / `false` for every PHP container, whatever the `.env` says | `production` / `false` |
-| `DEPLOY_HEALTH_HOST` | deploy script env | Name checked with `curl --resolve <host>:443:127.0.0.1 https://<host>/up` | `api.petprep.si` |
-| `DEPLOY_HEALTH_IP_HOST` | deploy script env | Fallback health check: `Host:` header for `http://127.0.0.1/up` (the IP site, D8) | `138.199.172.97` |
+| `PETPREP_API_DOMAIN` | `/opt/petprep/.env` (optional) → compose → caddy | API site of the Caddyfile and the deploy health check (D18). Unset = the host of `APP_URL` (deploy script) | `api.petprep.si` |
+| `PETPREP_CADDY_SITES` | `/opt/petprep/.env` (optional) → compose → caddy | `production` = API + `petprep.si` / `www` + raw-IP site; `api-only` = the API site only (a second server, e.g. the postponed dev server — no certificates for petprep.si). Unset = `production` when the API domain is `api.petprep.si`, else `api-only`. Other values fail the deploy preflight | derived |
+| `DEPLOY_HEALTH_HOST` | deploy script env | Name checked with `curl --resolve <host>:443:127.0.0.1 https://<host>/up` | `PETPREP_API_DOMAIN` |
+| `DEPLOY_HEALTH_IP_HOST` | deploy script env | Fallback health check: `Host:` header for `http://127.0.0.1/up` (the IP site, D8). Only with `PETPREP_CADDY_SITES=production`; empty = no fallback | `138.199.172.97` (production) / none |
 | `DEPLOY_APP_WAIT_TRIES` | deploy script env | `php-fpm-ping` attempts (3 s apart) after `up -d` | `40` |
 | `DEPLOY_RETRY_SLEEP` | deploy script env | Seconds between `artisan up` / health check attempts | `3` |
 | `DEPLOY_ALLOW_NO_BACKUP` | deploy script env | `1` = continue when the pre-deploy backup fails (emergency only) | `0` |
+| `DEPLOY_FORCE_MAINTENANCE` | deploy script env | `1` = maintenance mode even when no migration is pending (D19) | `0` |
+| `DEPLOY_RECREATE_REVERB` | deploy script env | `1` = recreate reverb even when its inputs are unchanged (D19; drops open WebSockets) | `0` |
+| `DEPLOY_RECREATE_CADDY` | deploy script env | `1` = recreate caddy even when its inputs are unchanged (D19) | `0` |
 | `DEPLOY_COMPOSE_PROJECT` | deploy script env | Compose project (network + volume prefix, e.g. `backend_app_storage`). Only if production ever runs under another project name — the deploy aborts when the volume is missing while the app runs | `backend` |
 | `DEPLOY_APP_UID` | deploy script env | uid the FPM image runs as; storage is chowned to it before every deploy | `1000` |

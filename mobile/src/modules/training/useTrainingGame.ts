@@ -25,7 +25,7 @@ import { useQueryClient } from '@tanstack/react-query';
 
 import { childPetKey } from '@/hooks/queries/useChildPet';
 import { TrainingResponseError, useFinishTraining, useStartTraining } from '@/hooks/queries/useTraining';
-import { classifyActionError, CHILD_ACTION_STRINGS, lockMessage } from '@/modules/childPet/actionMessages';
+import { classifyActionError, CHILD_ACTION_STRINGS, lockMessage, serverUpdatingActionText } from '@/modules/childPet/actionMessages';
 import {
   addTap,
   canStillFinish,
@@ -110,6 +110,8 @@ export function failureText(error: unknown, timezone: string | null): string {
       return lockMessage(failure.reason, failure.lockedUntil, timezone) ?? CHILD_ACTION_STRINGS.failed;
     case 'offline':
       return CHILD_ACTION_STRINGS.offline;
+    case 'updating':
+      return serverUpdatingActionText();
     case 'throttled':
       return CHILD_ACTION_STRINGS.tooFast;
     case 'failed':

@@ -18,13 +18,13 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { ActivityIndicator, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { Text, TextInput } from '@/components/ui/Text';
-import { Cat, CheckCircle, ChevronLeft, ChevronRight, Dog, KeyRound, Lock, PawPrint, RefreshCw, Smartphone } from 'lucide-react-native';
+import { Cat, Check, CheckCircle, ChevronLeft, ChevronRight, Copy, Dog, KeyRound, Lock, PawPrint, RefreshCw, Smartphone } from 'lucide-react-native';
 
 import type { ChildPinResponse, NewPetProfile, PetBreed, PinLoginMode } from '@/api/client';
 import { useQueryClient } from '@tanstack/react-query';
 
 import PetPickerStep from '@/components/parent/PetPickerStep';
-import { breedCatalogueKey, useBreedCatalogue } from '@/hooks/queries/useBreedCatalogue';
+import { breedCatalogueRoot, useBreedCatalogue } from '@/hooks/queries/useBreedCatalogue';
 import { INITIAL_PICKER_CHOICE, type PickerChoice } from '@/modules/petProfile/picker';
 import { challengePackage, useOfferings } from '@/modules/purchases';
 import { useCreateChild } from '@/hooks/queries/useFamilyMutations';
@@ -46,6 +46,7 @@ import {
   type FamilyChild,
 } from '@/modules/family/family';
 import { classifyPinError, formatCountdown, formatPin, pinRequestKey, secondsUntil, type PinErrorKind } from '@/modules/pairing/pin';
+import { copyPinToClipboard, isPinClipboardAvailable } from '@/modules/pairing/pinClipboard';
 import { maybeAskForPush } from '@/modules/push/pushPrompt';
 import { refreshSessionPet } from '@/modules/session/logout';
 import { fonts, palette, tightTracking } from '@/theme';
@@ -126,7 +127,10 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
   /** Breeds the server refused for the current choice (422 `breed_locked`); plan rules live in the picker. */
   const [lockedBreeds, setLockedBreeds] = useState<readonly PetBreed[]>([]);
   const offerings = useOfferings();
+  // Only the store's localized price (RevenueCat `priceString`, the user's storefront) — never a
+  // hardcoded or server price (bug 2026-10-14).
   const challengePrice = challengePackage(offerings.data)?.product.priceString ?? null;
+  const challengePriceLoading = challengePrice === null && offerings.isLoading;
   const [pickerNotice, setPickerNotice] = useState<string | null>(null);
   // Lives here, not in PinStep: "Spremeni kužka" / "Nazaj" unmount the PIN step, but the server's
   // PIN stays valid until a new one succeeds — so it is shown again (or reused for the same choice).
@@ -173,6 +177,7 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
           initial={pickerChoice}
           serverLockedBreeds={lockedBreeds}
           challengePrice={challengePrice}
+          challengePriceLoading={challengePriceLoading}
           notice={pickerNotice}
           onBack={(choice) => {
             setPickerChoice(choice);
@@ -210,8 +215,14 @@ export default function AddChildScreen({ onBack, child }: AddChildScreenProps) {
               // M5-R06-01: the species was switched off meanwhile — reload what is offered and choose
               // again. Reset (not invalidate): the stale catalogue with that species must never show
               // again while the new one loads (QA PR #94 m4).
-              void queryClient.resetQueries({ queryKey: breedCatalogueKey() });
-              setPickerChoice((c) => ({ ...c, species: null, breed: null }));
+              void queryClient.resetQueries({ queryKey: breedCatalogueRoot });
+              setPickerChoice((c) => ({ ...c, species: null, breed: null, colour: null }));
+            }
+            if (kind === 'colour_invalid') {
+              // M5-R21: the breed's colours changed meanwhile — reload them (reset, so the stale
+              // list never shows) and let the parent choose the colour again (the first is preselected).
+              void queryClient.resetQueries({ queryKey: breedCatalogueRoot });
+              setPickerChoice((c) => ({ ...c, colour: null }));
             }
             setPickerNotice(tSpecies(`parent:addChild.errors.${kind}`, newPetProfile?.species));
             setStep('dog');
@@ -410,7 +421,8 @@ type ProfileRejection =
   | 'invalid_profile'
   | 'challenge_requires_paid_breed'
   | 'breed_species_mismatch'
-  | 'species_unavailable';
+  | 'species_unavailable'
+  | 'colour_invalid';
 
 const PROFILE_REJECTIONS: readonly ProfileRejection[] = [
   'breed_locked',
@@ -418,6 +430,7 @@ const PROFILE_REJECTIONS: readonly ProfileRejection[] = [
   'challenge_requires_paid_breed',
   'breed_species_mismatch',
   'species_unavailable',
+  'colour_invalid',
 ];
 
 function profileRejectionOf(kind: string | undefined): ProfileRejection | null {
@@ -454,6 +467,14 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
   const remaining = useCountdown(pin?.expires_at ?? null);
   const cooldown = useCountdown(cooldownUntil);
   const isExpired = pin !== null && remaining <= 0;
+  // David 2026-10-14: "Kopiraj kodo" — the six digits only; the child's PIN screen can paste them.
+  const [copied, setCopied] = useState<{ pin: string; result: 'copied' | 'failed' } | null>(null);
+  const copyResult = copied !== null && pin !== null && copied.pin === pin.pin ? copied.result : null;
+  const copyPin = async () => {
+    if (pin === null) return;
+    const result = await copyPinToClipboard(pin.pin);
+    setCopied({ pin: pin.pin, result: result === 'copied' ? 'copied' : 'failed' });
+  };
   const baseline: ChildBaseline = { devices: target.devices, pet_id: target.pet_id };
 
   const connectedIn = (data: Parameters<typeof familyFromDashboard>[0]) =>
@@ -568,6 +589,28 @@ function PinStep({ target, joinPetId, profile, issued, onIssued, onProfileReject
             >
               {formatPin(pin.pin)}
             </Text>
+            {!isExpired && isPinClipboardAvailable() && (
+              <Pressable
+                style={({ pressed }) => [styles.copyButton, pressed && styles.pressed]}
+                onPress={() => void copyPin()}
+                accessibilityRole="button"
+                accessibilityLabel={S.copyCode}
+                testID="pin-copy"
+              >
+                {copyResult === 'copied' ? <Check color={palette.mintDeep} size={16} /> : <Copy color={palette.mintDeep} size={16} />}
+                <Text style={styles.copyButtonText}>{copyResult === 'copied' ? S.copied : S.copyCode}</Text>
+              </Pressable>
+            )}
+            {copyResult === 'failed' && (
+              <Text style={styles.muted} testID="pin-copy-failed" accessibilityLiveRegion="polite">
+                {S.copyFailed}
+              </Text>
+            )}
+            {copyResult === 'copied' && (
+              <Text style={styles.srOnly} accessibilityLiveRegion="polite" testID="pin-copied">
+                {S.copied}
+              </Text>
+            )}
             {isExpired ? (
               <Text style={styles.expired}>{S.expired}</Text>
             ) : (
@@ -770,6 +813,20 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   secondaryButtonText: { fontSize: 15, fontWeight: '700', color: palette.mintDeep },
+  copyButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    minHeight: 44,
+    paddingHorizontal: 14,
+    borderRadius: 999,
+    borderWidth: 1,
+    borderColor: palette.mintBorder,
+    backgroundColor: palette.mintSoft,
+  },
+  copyButtonText: { fontSize: 14, fontWeight: '700', color: palette.mintDeep },
+  /** Announced to screen readers ("Kopirano"), invisible on screen — the button already shows it. */
+  srOnly: { position: 'absolute', width: 1, height: 1, opacity: 0 },
   buttonDisabled: { opacity: 0.5 },
   waitingRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 4 },
   muted: { fontSize: 13, color: palette.n600 },

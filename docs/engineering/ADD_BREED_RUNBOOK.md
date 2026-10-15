@@ -13,7 +13,8 @@ PetPrep unattended breed run. Repos: DataVallis/pet-prep (and DataVallis/pet-pre
 2. Lock: if any OPEN pet-prep PR has a head branch starting with "feat/M5-R10-", stop and do nothing.
    Otherwise take the lock at once: branch + queue row in-progress + DRAFT PR before any research.
 3. Take the FIRST row with status "todo" in docs/research/BREED_QUEUE.md (one breed per run).
-4. Research, build, test, review, PR, merge on green CI, deploy, portrait, website — per the runbook.
+4. Research, build, test, review, PR, merge on green CI (deploys nothing), portrait (only once the breed is on
+   production — §8), website — per the runbook. Never dispatch a production deploy.
 5. Apply only the runbook's standing decision rules; never ask questions. On a stop condition mark the
    queue row (blocked / needs-david) with the reason and stop.
 6. Never force-push, never merge red CI, never touch production data, app.json identity or CLAUDE.md.
@@ -111,6 +112,7 @@ Record each as `"decision": "potrdil David 2026-10-10 (pravilo runbooka): …"` 
 | `backend/database/seeders/BreedConfigsSeeder.php` | row: slug, `daily_steps_required` = adult steps, Border Collie care rates, `premium_unlock` true, species, `sort_order`, `label_key` `breeds.<key>`, `search_keywords` |
 | `backend/database/seeders/BreedStageParamsSeeder.php` | `CONFIRMED_*` constant (decision text), `DOG_BREEDS`, `dogProfile()` arm, `<key>Profile()` (starts_at, arrival, arrival_meta, young_per_age_notes, adult_minutes, senior_minutes, adult_weight, growth_end, coren_rank, learning_multiplier, individual_variation null, lifespan), and (M5-R13) the breed's `DOG_GROOMING` row when the sources give a grooming frequency (§3 "Dog grooming"), and (M5-R16) a `MEAL_EXERCISE_GAP` entry when a source quotes the gap after eating (§3 "Meal / exercise gap"). A row with `derived_from` in data.json must have `source_id` = exactly those ids (LifeStageDataTest). |
 | `backend/config/breed_appearance.php` | header note + breed block (`display_name`, `verified` false, `source`, `sources`, `traits`, `prompt_order`) |
+| `backend/config/breed_colours.php` | (M5-R21, paid breeds) the colour picker: one entry per `coat_color` option of the new appearance block, **same order, `value` byte-identical** to the appearance option; `key` = short kebab-case id unique within the breed (reuse an existing key for the same colour, e.g. `black`, `black-tan`, `tricolour`), `en` / `sl` = short picker labels (SL adjective, masculine: »Črn«, »Rdeče-bel«). Forgetting it does not break media (the breed still shares looks with a colour sampled from its appearance, `BreedColourCatalogue::lookColours`), but the parent gets no colour picker and `BreedColourSharedMediaTest` (»lists exactly the standard coat colours…«) fails — expected: that test green with the new breed's list. |
 | `backend/app/Services/FalAiService.php` | DNA v1 `buildPromptAnchor` + `buildVisualTraits` arms |
 | `backend/config/breed_suitability.php` | breed entry; new vocabulary key if any |
 | `backend/app/Http/Resources/BreedCatalogResource.php` | `@var` breed union; suits / consider union for a new tag |
@@ -118,7 +120,7 @@ Record each as `"decision": "potrdil David 2026-10-10 (pravilo runbooka): …"` 
 | `backend/app/Filament/Resources/BreedConfigResource.php` | slug examples in two helper texts |
 | `backend/database/factories/PetFactory.php` | `<camelKey>()` state |
 | `backend/lang/{en,sl}/breeds.php` | breed name for the responsibility certificate (EN name / SL name; `ChallengeCertificateTest` checks every `BreedType`) — added after the Boxer run (M5-R10-26) |
-| Tests | new `tests/Feature/<Breed>BreedTest.php` (copy `FrenchBulldogBreedTest.php`: config, migration reversibility, insert-only seed, rows vs data.json, stage rules dataset, senior month, learning, generate-pin paid rule, `/api/breeds` entry, appearance / portrait traits, no statistics); update counts / lists in `BreedConfigTest`, `SpeciesFoundationTest`, `LabradorBreedTest`, `GoldenRetrieverBreedTest`, `FrenchBulldogBreedTest` (breed lists), `BreedSuitabilityTest` (per-breed tags + a test for a new tag), `BreedPortraitTest` (breed lists, counts "Generated N", "$X", `Stopped: N more`, ledger count / sum, manifest indexes) |
+| Tests | new `tests/Feature/<Breed>BreedTest.php` (copy `FrenchBulldogBreedTest.php`: config, migration reversibility, insert-only seed, rows vs data.json, stage rules dataset, senior month, learning, generate-pin paid rule, `/api/breeds` entry, appearance / portrait traits, no statistics); the new breed test's `/api/breeds` entry assertion uses `collect(...)->except('colours')` like the other breed tests (colours are covered by `BreedColourSharedMediaTest`); update counts / lists in `BreedConfigTest`, `SpeciesFoundationTest`, `LabradorBreedTest`, `GoldenRetrieverBreedTest`, `FrenchBulldogBreedTest` (breed lists), `BreedSuitabilityTest` (per-breed tags + a test for a new tag), `BreedPortraitTest` (breed lists, counts "Generated N", "$X", `Stopped: N more`, ledger count / sum, manifest indexes) |
 
 ### Mobile commit — `feat(mobile): <Breed> in the picker [M5-R10]`
 | File | Change |
@@ -127,7 +129,7 @@ Record each as `"decision": "potrdil David 2026-10-10 (pravilo runbooka): …"` 
 | `mobile/src/modules/species/species.ts` | `BREED_SPECIES`; `GROOMING_DOG_BREEDS` when the breed brushes (M5-R13) |
 | `mobile/src/i18n/locales/{en,sl}/family.json` | `breeds.<key>` |
 | `mobile/src/i18n/locales/{en,sl}/pet.json` | `picker.breedHints.<key>` ("Part of the 12-week challenge." / "Del 12-tedenskega izziva."; a brushed dog: "Part of the 12-week challenge · brushing N× a week" / "Del 12-tedenskega izziva · česanje N× na teden", M5-R13), `picker.ageHints.<key>` (puppy / young / adult / senior with the real numbers, same sentence shapes as the other breeds), `breedSuitability.*` label for a new tag |
-| `mobile/src/modules/petProfile/picker.ts` | `CONSIDER_TAGS` / `SUITS_TAGS` for a new tag, `FALLBACK_CATALOGUE` entry (= seeder + suitability), doc comment numbers |
+| `mobile/src/modules/petProfile/picker.ts` | `CONSIDER_TAGS` / `SUITS_TAGS` for a new tag, `FALLBACK_BREEDS` entry (= seeder + suitability; no colours offline — `FALLBACK_CATALOGUE` adds `colours: []`, M5-R21), doc comment numbers |
 | `mobile/src/i18n/__tests__/speciesCoverage.test.ts` | `DOG_ONLY` reason if a hint names a dog ("kot odrasel pes") |
 | Tests | `petProfile/__tests__/catalogue.test.ts`, `petProfile.test.ts`, `picker.test.ts` (`DogBreed`, `DOG_BREEDS`, `ADULT_MINUTES`, exact hints EN + SL), `species/__tests__/species.test.ts`, `components/parent/__tests__/PetPickerStep.test.tsx` (order, chips SL + EN, search, age hints, confirm) |
 
@@ -186,13 +188,21 @@ gh api repos/DataVallis/pet-prep/pulls -f title="feat: <Breed> breed [M5-R10-NN]
 gh api "repos/DataVallis/pet-prep/commits/<sha>/check-runs?per_page=100" --jq '.check_runs[] | select(.name=="CI OK") | "\(.status) \(.conclusion)"'
 # only if conclusion == success:
 gh api -X PUT repos/DataVallis/pet-prep/pulls/<n>/merge -f merge_method=merge --jq '.sha'
-# the merge deploys automatically; wait for the main run of the merge SHA
+# the merge runs CI only (D18) — wait for the main run of the merge SHA to be green
 gh api "repos/DataVallis/pet-prep/actions/runs?branch=main&head_sha=<merge_sha>" --jq '.workflow_runs[] | "\(.id) \(.name) \(.status) \(.conclusion)"'
-gh api repos/DataVallis/pet-prep/actions/runs/<run_id>/jobs --jq '.jobs[] | "\(.name) \(.conclusion)"'   # "Deploy to Hetzner Production" success
 ```
+**Merge ≠ production (D18, David 2026-10-14).** A merge to `main` deploys nothing. A merged breed reaches users only with the **next manual production deploy** (Actions → CI & Deploy → Run workflow → target `production` — David, or Claude only on David's explicit request; an unattended run never dispatches it) and the production OTA that follows it. Until then the website keeps the breed "Kmalu / Coming soon" (§9b, David 2026-10-13) — never claim it is in the app earlier.
 PR body: summary, decisions applied (rule per value), touch points, test counts, review result, the footer lines from the session's attribution reminder. Commit trailers on every commit (Co-Authored-By + Claude-Session from the session's attribution reminder). A failing check: read annotations (`gh api repos/DataVallis/pet-prep/check-runs/<id>/annotations`), fix, push, wait again.
 
-## 8. Portrait (after the deploy succeeded)
+## 8. Portrait (after the breed is on PRODUCTION)
+
+`breed-portraits.yml` runs on the **production** server (its AI Lab budget), so the breed must be in production's code: the breed's merge SHA is an ancestor of the last successful production deploy —
+```bash
+prod=$(gh api "repos/DataVallis/pet-prep/actions/workflows/deploy-production.yml/runs?branch=main&status=success&per_page=30" --jq '.workflow_runs[] | "\(.id) \(.head_sha)"' \
+  | while read -r id sha; do [ "$(gh api repos/DataVallis/pet-prep/actions/runs/$id/jobs --jq '[.jobs[] | select(.name=="Deploy to Hetzner Production" and .conclusion=="success")] | length')" -gt 0 ] && { echo "$sha"; break; }; done)
+git fetch origin && git merge-base --is-ancestor <merge_sha> "$prod" && echo "on production"
+```
+Not yet on production → **skip §8** (do not dispatch a production deploy), set the queue row to `done` with "portrait pending production deploy", and the first unattended run after the next production deploy does the portrait of every such row before its own breed. On production →
 
 ```bash
 gh api -X POST repos/DataVallis/pet-prep/actions/workflows/breed-portraits.yml/dispatches -f ref=main -f 'inputs[breeds]=<key>'
@@ -232,7 +242,7 @@ The website must say "in the app" only for what users really have. `docs/researc
 - **OTA:** `mobile-ota.yml` records it itself after an update reached iOS **and** Android (bot commit `chore(release): record OTA …` on `main`).
 - **Store build:** when David says which commit his EAS production build came from: `node scripts/record-app-release.mjs --kind store --commit <sha>` → re-export → PR.
 - **Every unattended run, before §1:** if `inputs.app_release.sha256` in the website's `src/content/registry/registry.json` differs from the export's, sync the website first: branch `chore/register-app-release-<date>`, re-export into the website (§9 command), build, PR, merge on green.
-- A breed merged in a run stays "Kmalu / Coming soon" on the site until the next release — that is correct, not a bug.
+- A breed merged in a run stays "Kmalu / Coming soon" on the site until the next release — that is correct, not a bug. Since D18 a production OTA is published only after a manual production deploy (or a manual OTA run with channel `production`); merges publish no OTA.
 
 ## 10. Queue and report
 

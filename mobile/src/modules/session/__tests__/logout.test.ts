@@ -51,6 +51,8 @@ describe('logout', () => {
     await done;
     expect(signal?.aborted).toBe(true);
     expect(deleteItem).toHaveBeenCalledWith('petprep_auth_token');
+    // M2-10c: the next parent on this phone states their own sign-in method.
+    expect(deleteItem).toHaveBeenCalledWith('petprep_sign_in_method');
     expect(useAppStore.getState().authToken).toBeNull();
   });
 

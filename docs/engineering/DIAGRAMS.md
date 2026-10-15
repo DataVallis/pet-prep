@@ -205,6 +205,59 @@ sequenceDiagram
 
 Token abilities (M2-03): `/api/parent/*` → `ability:parent`, `/api/child/*` → `ability:child`, then the policies (role + family). Tokens issued before M2-02 carry `*` and pass the ability check; the policies still keep the roles apart.
 
+## 2c′. Profile switching on one phone (M2-11, David 2026-10-14)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Parent
+  participant App as Mobile app (one phone)
+  participant API as Laravel API
+  participant DB as PostgreSQL
+  Parent->>App: Pregled → »Igraj kot {ime}« (child with a pet)
+  App->>API: POST /api/parent/children/{child}/device-session {device_name, features}<br/>(parent token, throttle 20/min per parent)
+  API->>DB: lock parent → child → family; child of this family? has a pet?<br/>(404 child_not_found / 409 no_pet)
+  API->>DB: delete this parent's previous shared token of the child<br/>create child token "shared:p{parent}:{model}" (ability child), prune to 3 devices
+  API-->>App: 200 = PIN re-login body {token, abilities [child], user, mode relogin, pet, awaiting_contract}
+  App->>App: store the child session (SecureStore), make its token active<br/>(a failed write aborts here — the parent stays signed in)
+  App->>API: POST /api/logout (parent token) — the parent token is revoked on the switch<br/>(failed → queued, retried at app start / foreground)
+  Note over API,DB: the parent's push row goes with its token (FK cascade)
+  App->>API: POST /api/devices (child token, same Expo token)
+  App->>App: child HUD (only the child token on the phone)
+  Note over App,API: back to the parent = a real parent re-login (password or Google / Apple);<br/>parent pushes only while the parent is signed in; steps count only for the active profile (app-side windows)
+```
+
+## 2c″. The app during a backend deploy (M5-F13, 2026-10-14)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant App as Mobile app (child HUD / parent)
+  participant Store as serverStatusStore
+  participant API as Laravel API (Caddy → PHP-FPM)
+  participant WS as Reverb
+  Note over API: deploy: artisan down --retry=15
+  App->>API: GET /api/child/pet (or any request)
+  API-->>App: 503 {message} + Retry-After: 15
+  App->>Store: noteOutageFailure(maintenance, 15 s) → banner »Posodabljamo PetPrep — takoj smo nazaj.«
+  Note over App: last data stays on screen · query retries after Retry-After (≤ 6×)<br/>care actions: one request, »Poskusi čez trenutek«, never re-sent by the app
+  WS--xApp: socket closed (Reverb restarts)
+  Note over App,WS: pusher-js reconnects by itself, re-subscribes on connected
+  App->>API: POST /api/broadcasting/auth
+  API-->>App: 503 / 502 / network error → withOutageRetry (Retry-After / 2–30 s, ≤ 20×)
+  loop every 3–30 s while the banner shows (foreground)
+    App->>API: GET /up
+    API-->>App: 503 (still updating)
+  end
+  Note over API: artisan up
+  App->>API: GET /up
+  API-->>App: 200
+  App->>Store: noteServerAnswered → banner hides
+  App->>API: invalidateQueries (active) → fresh state
+  App->>API: POST /api/broadcasting/auth → 200 → subscribed again
+  App->>API: onResubscribed → refetch pet state / dashboard (broadcasts of the gap)
+```
+
 ## 2d. Parent self-registration (M2-10a, 2026-10-05)
 
 ```mermaid
@@ -232,7 +285,85 @@ sequenceDiagram
   end
 ```
 
-Not yet (M2-10b): e-mail verification and password reset need a mail provider; `email_verified_at` stays null. Apple / Google sign-in is M2-10c.
+Not yet (M2-10b): e-mail verification and password reset need a mail provider; `email_verified_at` stays null. Apple / Google sign-in: §2d′.
+
+## 2d′. Parent sign-in with Google / Apple (M2-10c, 2026-10-13)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Parent
+  participant App as Mobile app
+  participant P as Google / Apple SDK
+  participant API as Laravel API
+  participant K as Provider JWKS
+  participant DB as PostgreSQL
+  Parent->>App: "Nadaljuj z Googlom" / "Nadaljuj z Apple"
+  App->>P: sign in (Apple: nonce = sha256(raw nonce))
+  P-->>App: id_token (JWT, RS256) [+ Apple: name, first time only]
+  App->>API: POST /api/auth/social {provider, id_token, nonce (raw, Apple),<br/>name?, timezone, terms_accepted?} (throttle 10/min + 30/h per IP)
+  alt no client id configured
+    API-->>App: 503 provider_disabled
+  else
+    API->>K: GET keys (cached by max-age; unknown kid → one re-fetch / min; 5 s timeout)
+    K-->>API: JWKS (or failure → 503 provider_unavailable)
+    API->>API: RS256 signature, iss, aud ∈ our client ids, exp/iat (60 s leeway),<br/>Apple nonce == sha256(raw) — else 401 invalid_token
+    API->>DB: transaction: find (provider, sub) in user_social_accounts
+    alt linked
+      API->>DB: token (ability parent)
+      API-->>App: 200 {token, user, …, created: false}
+    else e-mail belongs to an account WITH a password
+      API-->>App: 409 email_in_use → "Prijavite se z e-pošto in geslom"
+    else password-less parent, but e-mail not authoritative (Google non-Gmail without hd, unverified)<br/>or the account already has another identity of this provider
+      API-->>App: 409 email_link_unavailable → "uporabite drug način prijave"
+    else e-mail belongs to a password-less parent and the provider is authoritative for it
+      API->>DB: link (provider, sub) + token
+      API-->>App: 200 {…, created: false}
+    else no account and terms_accepted ≠ true
+      API-->>App: 422 terms_required (nothing written) → terms checkbox → retry same id_token
+    else no account
+      API->>DB: users (parent, password null, authoritative e-mail or null, terms_accepted_at)<br/>+ families + family_user + user_social_accounts + token
+      API-->>App: 200 {token, abilities ["parent"], user {…, has_password, linked_providers}, pet: null, created: true}
+    end
+  end
+```
+
+### Apple token revocation on account deletion (M2-10c, App Store 5.1.1(v))
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Parent
+  participant App as Mobile app
+  participant API as Laravel API
+  participant DB as PostgreSQL
+  participant Q as Queue worker
+  participant A as appleid.apple.com
+  Parent->>App: "Izbriši račun" → Sign in with Apple again
+  App->>API: POST /api/parent/account/delete {confirm, provider: apple,<br/>id_token, nonce, authorization_code}
+  API->>A: JWKS (cached) — verify fresh linked Apple token
+  API->>DB: transaction: delete account (+ family if last parent)
+  API->>Q: RevokeAppleTokenJob(code, aud of the verified Apple token, Apple sub)<br/>queue auth, after commit, encrypted payload
+  API-->>App: 200 {status: deleted}
+  alt no APPLE_SIGN_IN_PRIVATE_KEY
+    Q->>Q: log warning, no HTTP
+  else key configured
+    Q->>Q: client_secret = ES256 JWT (team id, key id, bundle id)
+    Q->>A: POST /auth/token {client_id, client_secret, code, grant_type}
+    alt invalid_grant (code > 5 min / used)
+      A-->>Q: 400 → info log, stop (other refusals → error log)
+    else ok
+      A-->>Q: id_token + refresh_token (or access_token)
+      Q->>Q: id_token sub == deleted parent's Apple sub? else error log, stop
+      Q->>A: POST /auth/revoke {client_id, client_secret, token, token_type_hint} (3× in place)
+      opt still unavailable
+        Q->>Q: RevokeAppleRefreshTokenJob(token) — 5 tries, 1 / 5 / 15 / 60 min
+      end
+    end
+  end
+```
+
+Children never use this path (403 `not_a_parent` for a child's e-mail). A password-less parent confirms deletions (§2e) with `{provider, id_token, nonce?}` of a linked provider issued ≤ 10 min ago instead of a password (else 422 `reauth_required`).
 
 ## 2e. Account deletion and data export (M2-08, 2026-10-05)
 
@@ -786,6 +917,7 @@ erDiagram
   PETS ||--o{ PET_DAILY_ROUTINES : "closed days' routines (M2-06)"
   USERS ||--o{ PET_DAILY_ROUTINES : "actor (child)"
   USERS ||--o{ CHILD_LOGIN_PINS : "one-time PIN for a child (M2-02)"
+  USERS ||--o{ USER_SOCIAL_ACCOUNTS : "Google / Apple identity of a parent (M2-10c)"
   FAMILIES ||--o{ CHILD_LOGIN_PINS : "issued in"
   BREED_CONFIGS ||--o{ PETS : "tunables by breed_slug"
   FAMILIES {
@@ -809,6 +941,12 @@ erDiagram
     string environment "SANDBOX or PRODUCTION"
     jsonb payload "without subscriber_attributes"
     string outcome
+  }
+  USER_SOCIAL_ACCOUNTS {
+    bigint user_id "cascade"
+    string provider "google or apple"
+    string subject "provider sub, unique with provider"
+    string email "as reported at link time, nullable"
   }
   CHILD_LOGIN_PINS {
     bigint child_user_id
@@ -862,7 +1000,7 @@ erDiagram
     bigint id
     bigint family_id
     bigint user_id "deprecated"
-    string breed_type "mutt border_collie labrador_retriever golden_retriever french_bulldog german_shepherd cavalier_king_charles_spaniel beagle standard_poodle dachshund australian_shepherd havanese west_highland_white_terrier bernese_mountain_dog siberian_husky rottweiler bulldog german_shorthaired_pointer yorkshire_terrier cane_corso pembroke_welsh_corgi dobermann boxer miniature_schnauzer shih_tzu great_dane pomeranian boston_terrier domestic_cat maine_coon british_shorthair ragdoll siberian_cat norwegian_forest_cat bengal"
+    string breed_type "mutt border_collie labrador_retriever golden_retriever french_bulldog german_shepherd cavalier_king_charles_spaniel beagle standard_poodle dachshund australian_shepherd havanese west_highland_white_terrier bernese_mountain_dog siberian_husky rottweiler bulldog german_shorthaired_pointer yorkshire_terrier cane_corso pembroke_welsh_corgi dobermann boxer miniature_schnauzer shih_tzu great_dane pomeranian boston_terrier miniature_american_shepherd chihuahua english_springer_spaniel shetland_sheepdog brittany american_cocker_spaniel belgian_malinois basset_hound hungarian_vizsla domestic_cat maine_coon british_shorthair ragdoll siberian_cat norwegian_forest_cat bengal"
     string species "dog or cat, follows breed (M5-R06-01)"
     string name "optional label set by a parent, null = none (M5-R08)"
     double hunger_level
@@ -953,28 +1091,33 @@ flowchart LR
   PR --> CI4["Production image (M4-05b)<br/>hadolint · build app + web · caddy validate · smoke"]
   REV --> M[Merge to main]
   CI3 & CI4 --> M
-  M --> DEP["Deploy job<br/>rsync → incoming/ → deploy-production.sh"]
+  M --> CIM["CI on main only<br/>(no deploy, no OTA — D18)"]
+  RW["David: Actions → CI & Deploy → Run workflow<br/>main · target production"] --> DEP["Deploy to Hetzner Production<br/>rsync → incoming/ → deploy-production.sh<br/>--expect-domain api.petprep.si"]
   DEP --> PROD[(api.petprep.si)]
+  DEP -.-> OTA["Mobile OTA channel production<br/>(mobile/ changed since the last release)"]
 ```
 
 ### 7a. deploy-production.sh (M2-01 / PR #24 / M4-05b)
 
 ```mermaid
 flowchart TD
-  A["1 env preflight<br/>(no git / docker before)"] --> B["2 record previous release<br/>.deployed-sha + releases/previous"]
+  A["1 env preflight<br/>(no git / docker before)<br/>server identity from APP_URL: API domain + Caddy sites<br/>--expect-domain mismatch → exit, nothing changed (D18)"] --> B["2 record previous release<br/>.deployed-sha + releases/previous"]
   B --> C["3 buildx preflight · build petprep-app:next + petprep-web:next<br/>from the NEW tree (incoming/ or git archive)"]
   C --> D["smoke: run --rm app php artisan optimize<br/>(new image, production env)"]
   D --> ST["storage: chown -R 1000:1000 as root (new image)<br/>verify writable as uid 1000"]
   C -- fails --> X0["exit ≠ 0 · nothing changed<br/>old release keeps serving"]
   D -- fails --> X0
   ST -- fails --> X0
-  ST --> E["4 artisan down (old code, exec --user 1000)"] --> F["5 pg_dump backup"] --> G["6 code switch repo/<br/>promote :production→:previous, :next→:production"]
+  ST --> PM{"3b migrate:status --pending=3<br/>(new image, live DB) — D19"}
+  PM -- "3 pending / error" --> E["4 artisan down (old code, exec --user 1000)"] --> F["5 pg_dump backup"]
+  PM -- "0 none: no maintenance" --> F
+  F --> G["6 code switch repo/<br/>promote :production→:previous, :next→:production"]
   G --> H{"Caddyfile changed?"}
   H -- yes --> HV["caddy validate (new image)"]
   H -- no --> I
   HV --> I["7 postgres/redis · migrate --force"]
-  I --> J["8 up -d app reverb queue queue-broadcasts scheduler caddy<br/>(entrypoint: per-container caches)<br/>+ force-recreate caddy if Caddyfile changed"]
-  J --> K["re-chown storage (warn-only) · wait: php-fpm-ping"] --> L["queue:restart"] --> M2["9 artisan up (3×)"] --> N["health /up through Caddy (5×)<br/>--resolve api.petprep.si:443 → IP site fallback"]
+  I --> J["8 up -d app reverb queue queue-broadcasts scheduler caddy<br/>(entrypoint: per-container caches)<br/>no maintenance: queue + queue-broadcasts + scheduler first (D19)<br/>reverb / caddy not restarted (--no-deps) when releases/{reverb,caddy}.fingerprint matches<br/>caddy lb_try_duration 10s holds requests during the app swap<br/>+ force-recreate caddy if Caddyfile changed"]
+  J --> K["re-chown storage (warn-only) · wait: php-fpm-ping"] --> L["queue:restart"] --> M2["9 artisan up (3×; one idempotent up without maintenance)"] --> N["health /up through Caddy (5×)<br/>--resolve API domain:443 → IP site fallback (production only)"]
   N --> O["image prune (dangling) · builder prune (> 7 days, keep 5 GB)"]
   G & HV & I -- "fails (pre-migration)" --> R1["revert code + images (:previous→:production)<br/>restart workers · artisan up"]
   J & K & N -- "fails (post-migration)" --> R2["keep new release (schema is new)<br/>up -d · restart workers · artisan up · loud error"]
@@ -1138,14 +1281,14 @@ flowchart TD
 
   J --> G
   LJ --> G
-  G["FalGateway (only fal HTTP client)<br/>LogicException inside a DB transaction<br/>profile from config/media.php"] --> R{"AiSpendGuard::reserve<br/>advisory lock, own short transaction<br/>pets budget or separate lab budget<br/>today + month (reserved + committed)"}
+  G["FalGateway (only fal HTTP client)<br/>LogicException inside a DB transaction<br/>profile from config/media.php"] --> R{"AiSpendGuard::reserve<br/>advisory lock, own short transaction<br/>pets budget (/admin → AI budget, else env) or separate lab budget (/admin → AI budget → AI Lab, else env)<br/>today + month (reserved + committed)"}
   R -- over cap --> X1["AiCallException budget_daily / budget_monthly<br/>no HTTP; pet: media_status failed + media_error"]
   R -- "ok: ledger row reserved" --> H["HTTP outside any transaction<br/>sync: fal.run/endpoint (images)<br/>queue: queue.fal.run/endpoint + fal_webhook (videos)"]
   H -- 2xx --> C[ledger committed]
   H -- "402 / 403 exhausted balance" --> B["ledger void, fal_balance<br/>Log::critical once per hour<br/>Filament flag 24 h"]
   H -- "4xx/5xx answer or not sent (DNS / connect / TLS)" --> E["ledger void, http_error<br/>reference image: queue retry"]
   H -- "timeout / reset after sending" --> T["ledger committed + http_error (cost kept)<br/>lab video: status unknown"]
-  X1 -.-> RT["daily media:retry<br/>(budget / balance: images, then videos) + Filament Retry image"]
+  X1 -.-> RT["daily media:retry<br/>(budget / balance: images, then videos) + Filament Retry image<br/>+ /admin → AI budget → Retry blocked media now"]
   S2 -.-> SW["hourly media:sweep-lab: running > 1 h → timed_out"]
   C --> S1["image url (*.fal.media) → pet_media image slot → StorePetMedia / lab result"]
   C --> S2["request_id → pet_media / media_lab_results"]
@@ -1197,7 +1340,7 @@ sequenceDiagram
 
 ```mermaid
 flowchart LR
-  F{"failure"} --> B["budget / fal balance / disabled"] --> BF["slot failed + reason<br/>pet playable without media"] --> RT["daily media:retry (00:23 UTC)<br/>within budget: images, then videos"]
+  F{"failure"} --> B["budget / fal balance / disabled"] --> BF["slot failed + reason<br/>pet playable without media"] --> RT["daily media:retry (00:23 UTC)<br/>or /admin → AI budget → Retry blocked media now<br/>within budget: images, then videos"]
   F --> N["fal 5xx / network before acceptance"] --> QR["queue retry 30 s · 2 min · 10 min"] --> GF["failed http_error"]
   F --> T["submit timed out after sending"] --> TK["failed http_error, cost kept"]
   F --> E["webhook ERROR / non-fal URL"] --> EF["failed generation_failed / invalid_response"]
@@ -1316,6 +1459,38 @@ sequenceDiagram
   end
   Note over L: failure → fan-out failure (reason copied);<br/>daily retry re-runs the pets, which re-claims the row
 ```
+
+
+### 10d′. Paid breeds: colour + shared media per breed + colour (M5-R21, David 2026-10-14)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Parent
+  participant App
+  participant API as Laravel API
+  participant DB as PostgreSQL
+  participant Q as Queue
+  participant Fal as fal.ai
+  App->>API: GET /api/breeds → colours [{key, label}] per paid breed
+  Parent->>App: breed + colour (e.g. Labrador, chocolate)
+  App->>API: POST /api/parent/generate-pin {breed, colour, origin, age_stage, plan}
+  API-->>App: pin + pet_profile.colour (422 colour_invalid)
+  Note over API,DB: child pin-login → PairingService::createPet (pairing transaction)
+  alt unique_pet_media OFF (default)
+    API->>DB: pet_looks (breed, colour_key) — insertOrIgnore, one per pair<br/>pet.pet_look_id, pet.coat_colour, pet_dna = look DNA
+    Q->>DB: look row of the stage stored? → link the file (0 $)
+    opt first pet of this breed + colour + stage
+      Q->>Fal: one image (+ videos after birth), claimed per look row
+      Fal-->>Q: result → StorePetMedia → fan-out to every waiting pet
+    end
+  else ON
+    API->>DB: unique DNA v2 (coat_color fixed to the chosen colour)
+    Q->>Fal: own image + videos per pet
+  end
+```
+
+Admin: Feature switches → "Unique AI media per pet" (default off); AI media → Shared looks → Regenerate (one new generation per look row of the stages its active pets are at, for all those pets; other stages stay READY; outcome queued / busy / no active pets / AI off). A paid breed without a colour list still shares (colour from its appearance weights). Free breeds keep §10d.
 
 ## 11. Push notifications (M3-02, 2026-10-05)
 

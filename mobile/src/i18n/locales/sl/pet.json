@@ -72,6 +72,8 @@
       },
       "challenge": {
         "title": "12-tedenski izziv — {{price}}",
+        "titleLoading": "12-tedenski izziv — …",
+        "titleNoPrice": "12-tedenski izziv",
         "hint": "Program, ki pokaže, ali je otrok pripravljen na psa, s plačljivo pasmo po izbiri, certifikatom in celotno zgodovino. Izziv se začne z nakupom: pes čaka, dokler izziva za tega psa ne kupite (lahko tudi pred podpisom pogodbe). Enkratno plačilo, brez naročnine. Bi najprej poskusili? Izberite brezplačnega mešančka."
       }
     },
@@ -116,6 +118,15 @@
       "great_dane": "Del 12-tedenskega izziva · česanje 1× na teden",
       "pomeranian": "Del 12-tedenskega izziva · česanje 3× na teden",
       "boston_terrier": "Del 12-tedenskega izziva · česanje 1× na teden",
+      "miniature_american_shepherd": "Del 12-tedenskega izziva · česanje 2× na teden",
+      "chihuahua": "Del 12-tedenskega izziva · česanje 1× na teden",
+      "english_springer_spaniel": "Del 12-tedenskega izziva · česanje 2× na teden",
+      "shetland_sheepdog": "Del 12-tedenskega izziva · česanje vsak dan",
+      "brittany": "Del 12-tedenskega izziva · česanje 1× na teden",
+      "american_cocker_spaniel": "Del 12-tedenskega izziva · česanje vsak dan",
+      "belgian_malinois": "Del 12-tedenskega izziva · česanje 2× na teden",
+      "basset_hound": "Del 12-tedenskega izziva · česanje 1× na teden",
+      "hungarian_vizsla": "Del 12-tedenskega izziva · česanje 1× na teden",
       "domestic_cat": "Kratka dlaka · brezplačna",
       "maine_coon": "Dolga dlaka · česanje 3× na teden",
       "british_shorthair": "Kratka, gosta dlaka · česanje 1× na teden",
@@ -125,6 +136,10 @@
       "bengal": "Kratka, mehka, pegasta ali marmorirana dlaka · česanje 1× na teden"
     },
     "breedLockedNote": "Te pasme zdaj ni mogoče izbrati. Izberite mešančka ali poskusite pozneje.",
+    "colourTitle": "Barva",
+    "colourHint": "Samo barve, ki jih dovoljuje standard pasme.",
+    "colourOnly": "Ta pasma je samo ene barve: {{colour}}",
+    "colourA11y": "Barva: {{colour}}",
     "lockedA11y": "{{breed}}, zaklenjeno — del plačljivega izziva",
     "lockedFreeOnlyA11y": "{{breed}}, ni na voljo — samo v brezplačnem načrtu",
     "originTitle": "Od kod pride",
@@ -215,6 +230,48 @@
         "young": "2 obroka na dan; sprehod 3.000 korakov na dan (kot odrasel pes).",
         "adult": "2 obroka na dan; sprehod 3.000 korakov na dan.",
         "senior": "2 obroka na dan; krajši sprehod — 2.300 korakov na dan."
+      },
+      "english_springer_spaniel": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "young": "2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
+      },
+      "shetland_sheepdog": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000 pri 6 mesecih.",
+        "young": "2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).",
+        "adult": "2 obroka na dan; sprehod 6.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 4.500 korakov na dan."
+      },
+      "brittany": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "young": "2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
+      },
+      "american_cocker_spaniel": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "young": "2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
+      },
+      "belgian_malinois": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "young": "2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
+      },
+      "basset_hound": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000 pri 6 mesecih.",
+        "young": "2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).",
+        "adult": "2 obroka na dan; sprehod 6.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 4.500 korakov na dan."
+      },
+      "hungarian_vizsla": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "young": "2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
+        "adult": "2 obroka na dan; sprehod 12.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 9.000 korakov na dan."
       },
       "west_highland_white_terrier": {
         "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000 pri 6 mesecih.",
@@ -312,6 +369,18 @@
         "adult": "2 obroka na dan; sprehod 6.000 korakov na dan.",
         "senior": "2 obroka na dan; krajši sprehod — 4.500 korakov na dan."
       },
+      "miniature_american_shepherd": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000 pri 6 mesecih.",
+        "young": "2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).",
+        "adult": "2 obroka na dan; sprehod 6.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 4.500 korakov na dan."
+      },
+      "chihuahua": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 3.000 pri 3 mesecih.",
+        "young": "2 obroka na dan; sprehod 3.000 korakov na dan (kot odrasel pes).",
+        "adult": "2 obroka na dan; sprehod 3.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 2.300 korakov na dan."
+      },
       "domestic_cat": {
         "puppy": "Pride kot mucek, star 2 meseca.",
         "young": "Pride kot mlada mačka, stara 1 leto.",
@@ -368,6 +437,7 @@
       "breed": "Pasma",
       "origin": "Izvor",
       "age": "Starost ob prihodu",
+      "colour": "Barva",
       "plan": "Načrt"
     },
     "planNames": {

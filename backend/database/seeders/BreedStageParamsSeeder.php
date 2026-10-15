@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -388,6 +388,121 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_BOSTON_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-31)';
 
     /**
+     * M5-R10-32 Miniature American Shepherd (unattended run 2026-10-13, data.json
+     * proposed_game_parameters.miniature_american_shepherd.*.decision): every value follows a standing
+     * rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise
+     * 60 min (PetMD S269 "at least one hour"; RKC page not reachable), senior 45 min, puppy 10 min × age
+     * capped at 60, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 1.0 (not ranked by
+     * Coren); care rates the Border Collie's. The senior boundary uses the closest rule row (PetMD lower
+     * bound 12 y, S269) and is NOT covered by the confirmation: see PROPOSED_R10_MINIATURE_AMERICAN_SHEPHERD_SENIOR.
+     */
+    public const CONFIRMED_R10_MINIATURE_AMERICAN_SHEPHERD = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-32)';
+
+    /**
+     * M5-R10-32 Miniature American Shepherd senior boundary / senior arrival (108 months): Claude's
+     * suggestion from the closest rule row (0.75 × PetMD lower bound 12 y, S269) — no runbook rule
+     * produced a value (no McMillan 2024 row, no VetCompass paper, RKC page not reachable), so the rows
+     * are verified=false until David decides (data.json
+     * proposed_game_parameters.miniature_american_shepherd.senior_boundary_months).
+     */
+    public const PROPOSED_R10_MINIATURE_AMERICAN_SHEPHERD_SENIOR = 'predlog Claude 2026-10-13 (najbližja vrstica pravila runbooka, M5-R10-32) — čaka Davida';
+
+    /**
+     * M5-R10-33 Chihuahua (Smooth Coat; unattended run 2026-10-13, data.json
+     * proposed_game_parameters.chihuahua.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 30 min
+     * (RKC S275 "Up to 30 minutes per day"), senior 23 min, puppy 10 min × age capped at 30, stages
+     * young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 0.7 (Coren rank 67, Fair); care rates
+     * the Border Collie's. The senior boundary is NOT covered by the confirmation: see
+     * PROPOSED_R10_CHIHUAHUA_SENIOR.
+     */
+    public const CONFIRMED_R10_CHIHUAHUA = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-33)';
+
+    /**
+     * M5-R10-33 Chihuahua senior boundary / senior arrival (108 months): Claude's suggestion — the RKC /
+     * PDSA lower bound "Over 12 years" (S275 / S277) instead of the rule's next row, the VetCompass median
+     * (S279, → 74), which its authors say is biased downwards by a young population. verified=false
+     * until David decides (data.json proposed_game_parameters.chihuahua.senior_boundary_months).
+     */
+    public const PROPOSED_R10_CHIHUAHUA_SENIOR = 'predlog Claude 2026-10-13 (spodnja meja RKC / PDSA namesto pristranske mediane VetCompass, M5-R10-33) — čaka Davida';
+
+    /**
+     * M5-R10-34 English Springer Spaniel (unattended run 2026-10-14, data.json
+     * proposed_game_parameters.english_springer_spaniel.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 120 min
+     * (RKC S284 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 122 (0.75 × McMillan 2024 median 13.5 y, S123), arrival 2 / 9 / 36 / 122,
+     * learning multiplier 1.5 (Coren rank 13, Excellent); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_ENGLISH_SPRINGER_SPANIEL = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-34)';
+
+    /**
+     * M5-R10-35 Shetland Sheepdog (unattended run 2026-10-14, data.json
+     * proposed_game_parameters.shetland_sheepdog.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 60 min
+     * (RKC S291 "Up to 1 hour per day"), senior 45 min, puppy 10 min × age capped at 60, stages
+     * young 9 / adult 36 / senior 90 (0.75 × RKC lower bound 10 y, S291 — provisional until McMillan
+     * 2024 is checked), arrival 2 / 9 / 36 / 90, learning multiplier 1.8 (Coren rank 6, Brightest);
+     * care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_SHETLAND_SHEEPDOG = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-35)';
+
+    /**
+     * M5-R10-36 Brittany (unattended run 2026-10-14, data.json
+     * proposed_game_parameters.brittany.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 120 min
+     * (RKC S298 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 90 (0.75 × RKC lower bound 10 y, S298 — provisional until McMillan
+     * 2024 is checked), arrival 2 / 9 / 36 / 90, learning multiplier 1.5 (Coren rank 19, Excellent);
+     * care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_BRITTANY = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-36)';
+
+    /**
+     * M5-R10-37 American Cocker Spaniel (unattended run 2026-10-14, data.json
+     * proposed_game_parameters.american_cocker_spaniel.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 120 min
+     * (RKC S305 "More than 2 hours per day"; AKC / PetMD conflict, RKC preferred), senior 90 min, puppy
+     * 10 min × age capped at 120, stages young 9 / adult 36 / senior 90 (0.75 × RKC lower bound 10 y, S305 —
+     * provisional until McMillan 2024 is checked), arrival 2 / 9 / 36 / 90, learning multiplier 1.5 (Coren
+     * rank 20, Excellent); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_AMERICAN_COCKER_SPANIEL = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-37)';
+
+    /**
+     * M5-R10-38 Belgian Malinois (unattended run 2026-10-14, data.json
+     * proposed_game_parameters.belgian_malinois.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 120 min
+     * (RKC S314 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 90 (0.75 × RKC lower bound 10 y, S314 — provisional until McMillan 2024
+     * is checked), arrival 2 / 9 / 36 / 90, learning multiplier 1.5 (Coren rank 22, Excellent); care rates
+     * the Border Collie's.
+     */
+    public const CONFIRMED_R10_BELGIAN_MALINOIS = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-38)';
+
+    /**
+     * M5-R10-39 Basset Hound (unattended run 2026-10-15, data.json
+     * proposed_game_parameters.basset_hound.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 60 min
+     * (RKC S321 "Up to 1 hour per day"), senior 45 min, puppy 10 min × age capped at 60, stages
+     * young 9 / adult 36 / senior 90 (0.75 × RKC lower bound 10 y, S321 — provisional until McMillan 2024
+     * is checked), arrival 2 / 9 / 36 / 90, learning multiplier 0.5 (Coren rank 71, Lowest); care rates
+     * the Border Collie's.
+     */
+    public const CONFIRMED_R10_BASSET_HOUND = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-39)';
+
+    /**
+     * M5-R10-40 Hungarian Vizsla (unattended run 2026-10-15, data.json
+     * proposed_game_parameters.hungarian_vizsla.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 120 min
+     * (RKC S328 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 108 (0.75 × RKC lower bound 12 y, S328 — provisional until McMillan 2024
+     * is checked), arrival 2 / 9 / 36 / 108, learning multiplier 1.5 (Coren rank 25, Excellent); care rates
+     * the Border Collie's.
+     */
+    public const CONFIRMED_R10_HUNGARIAN_VIZSLA = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-40)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -483,6 +598,13 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_DAVID_2026_10_12 = 'potrdil David 2026-10-12';
 
     /**
+     * M5-R10-38 Belgian Malinois: RKC "More than once a week" (S314) without a number and AKC / PetMD
+     * "occasional" brushing → Claude's proposal 2 per week, verified=false (a new breed still asks David,
+     * runbook §3 "Dog grooming").
+     */
+    public const PROPOSED_R13_BELGIAN_MALINOIS = 'predlog Claude 2026-10-14 (RKC »More than once a week« brez števila → 2, M5-R13, M5-R10-38) — čaka Davida';
+
+    /**
      * M5-R13: dog breed → [sessions per week, source id, verbatim quote (data.json), confidence,
      * Claude's proposal?, David's own decision (null = the runbook rule)]. The mutt and the
      * Border Collie have no grooming statement → no row.
@@ -516,6 +638,15 @@ class BreedStageParamsSeeder extends Seeder
         'great_dane' => [1, 'S241', 'Grooming: Once a week', 'high', false],
         'pomeranian' => [3, 'S250', 'They have a double coat that needs brushing two-three times per week, and more often when shedding.', 'high', false],
         'boston_terrier' => [1, 'S255', 'Grooming: Once a week', 'high', false],
+        'miniature_american_shepherd' => [2, 'S269', 'The Miniature American Shepherd needs to be brushed a couple times a week to control shedding and minimize matting.', 'medium', false],
+        'chihuahua' => [1, 'S275', 'Grooming: Once a week', 'high', false],
+        'english_springer_spaniel' => [2, 'S285', 'They need grooming once or twice a week, plus clipping every 3 months.', 'medium', false],
+        'shetland_sheepdog' => [7, 'S291', 'Grooming: Every day', 'high', false],
+        'brittany' => [1, 'S301', 'Weekly brushing with a soft brush or hound glove will keep a Brittany looking their best.', 'medium', false],
+        'american_cocker_spaniel' => [7, 'S305', 'Grooming: Every day', 'high', false],
+        'belgian_malinois' => [2, 'S314', 'Grooming: More than once a week', 'low', true, self::PROPOSED_R13_BELGIAN_MALINOIS],
+        'basset_hound' => [1, 'S321', 'Grooming: Once a week', 'high', false],
+        'hungarian_vizsla' => [1, 'S328', 'Grooming: Once a week', 'high', false],
     ];
 
     /**
@@ -541,6 +672,9 @@ class BreedStageParamsSeeder extends Seeder
         'boxer' => ['S219', 'Remember to leave a gap between eating and exercising.'],
         'shih_tzu' => ['S233', 'Remember to leave a gap after eating and before exercising.'],
         'great_dane' => ['S243', "Remember to leave at a gap after eating and before exercising to help prevent GDV (Gastric dilatation volvulus or 'bloat')."],
+        'chihuahua' => ['S277', 'Remember to leave a gap after eating and before exercising.'],
+        'basset_hound' => ['S323', 'Remember to leave a gap after eating and before exercising.'],
+        'hungarian_vizsla' => ['S329', 'Remember to leave a gap between eating and exercising.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -583,13 +717,22 @@ class BreedStageParamsSeeder extends Seeder
         'great_dane' => ['S243', "This is why it's really important to socialise your Great Dane with different experiences, people and dogs from a young age."],
         'pomeranian' => ['S251', 'Like with any breed, early socialization and puppy training classes are highly recommended.'],
         'boston_terrier' => ['S260', 'Like all breeds, early socialization and puppy training courses are strongly recommended for Boston Terriers.'],
+        'miniature_american_shepherd' => ['S267', "They can be weary of new faces, but early, consistent socialization will build up a Mini American's confidence in new situations."],
+        'chihuahua' => ['S277', "This is why it's really important to socialise your Chihuahua from a young age"],
+        'english_springer_spaniel' => ['S286', 'Like with any breed, early socialization and puppy training courses are key'],
+        'shetland_sheepdog' => ['S293', 'Training, along with socialisation, is very important at a young age'],
+        'brittany' => ['S302', 'Early socialization in Brittany puppies is a must'],
+        'american_cocker_spaniel' => ['S309', 'Start socialization and training classes early so your Cocker Spaniel puppy learns good manners.'],
+        'belgian_malinois' => ['S316', 'Early, extensive socialization will help limit aggressive tendencies towards new people.'],
+        'basset_hound' => ['S323', 'Be sure to socialise your Basset Hound from a young age with other people and dogs once they are fully vaccinated.'],
+        'hungarian_vizsla' => ['S329', 'as long as you socialise your Vizsla from a young age with lots of people, dogs and experiences'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1169,6 +1312,33 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-31 (docs/research/dog-data/data.json boston_terrier,
             // S253–S263; runbook rules in proposed_game_parameters.boston_terrier).
             BreedType::BostonTerrier => self::bostonTerrierProfile(),
+            // M5-R10-32 (docs/research/dog-data/data.json miniature_american_shepherd,
+            // S264–S271; runbook rules in proposed_game_parameters.miniature_american_shepherd).
+            BreedType::MiniatureAmericanShepherd => self::miniatureAmericanShepherdProfile(),
+            // M5-R10-33 (docs/research/dog-data/data.json chihuahua,
+            // S272–S280; runbook rules in proposed_game_parameters.chihuahua).
+            BreedType::Chihuahua => self::chihuahuaProfile(),
+            // M5-R10-34 (docs/research/dog-data/data.json english_springer_spaniel,
+            // S281–S288; runbook rules in proposed_game_parameters.english_springer_spaniel).
+            BreedType::EnglishSpringerSpaniel => self::englishSpringerSpanielProfile(),
+            // M5-R10-35 (docs/research/dog-data/data.json shetland_sheepdog,
+            // S289–S295; runbook rules in proposed_game_parameters.shetland_sheepdog).
+            BreedType::ShetlandSheepdog => self::shetlandSheepdogProfile(),
+            // M5-R10-36 (docs/research/dog-data/data.json brittany,
+            // S296–S302; runbook rules in proposed_game_parameters.brittany).
+            BreedType::Brittany => self::brittanyProfile(),
+            // M5-R10-37 (docs/research/dog-data/data.json american_cocker_spaniel,
+            // S303–S311; runbook rules in proposed_game_parameters.american_cocker_spaniel).
+            BreedType::AmericanCockerSpaniel => self::americanCockerSpanielProfile(),
+            // M5-R10-38 (docs/research/dog-data/data.json belgian_malinois,
+            // S312–S318; runbook rules in proposed_game_parameters.belgian_malinois).
+            BreedType::BelgianMalinois => self::belgianMalinoisProfile(),
+            // M5-R10-39 (docs/research/dog-data/data.json basset_hound,
+            // S319–S325; runbook rules in proposed_game_parameters.basset_hound).
+            BreedType::BassetHound => self::bassetHoundProfile(),
+            // M5-R10-40 (docs/research/dog-data/data.json hungarian_vizsla,
+            // S326–S334; runbook rules in proposed_game_parameters.hungarian_vizsla).
+            BreedType::HungarianVizsla => self::hungarianVizslaProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -3110,6 +3280,698 @@ class BreedStageParamsSeeder extends Seeder
     }
 
     /**
+     * M5-R10-32 Miniature American Shepherd — docs/research/dog-data/data.json miniature_american_shepherd +
+     * proposed_game_parameters.miniature_american_shepherd. The senior boundary is Claude's suggestion
+     * (PROPOSED_R10_MINIATURE_AMERICAN_SHEPHERD_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function miniatureAmericanShepherdProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_MINIATURE_AMERICAN_SHEPHERD;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S269', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.miniature_american_shepherd.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, [
+                    'unit' => 'months', 'source_id' => 'S11,S269', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.miniature_american_shepherd.senior_boundary_months', 'decision' => self::PROPOSED_R10_MINIATURE_AMERICAN_SHEPHERD_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × PetMD lower bound 12 y ("12–13 years", S269) = 9 y = 108 months. No McMillan 2024 row (Dogs Trust table S123), no VetCompass paper, and the RKC breed page could not be fetched. Alternatives: Wikipedia 13–15 y (tier C, S271) → 117; Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.miniature_american_shepherd.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.miniature_american_shepherd.senior_boundary_months', 'decision' => self::PROPOSED_R10_MINIATURE_AMERICAN_SHEPHERD_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 108 months (0.75 × 12 y, S269).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S269', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.miniature_american_shepherd.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'This breed has a lot of energy and needs at least one hour (ideally two) of exercise every day.',
+                'notes' => 'PetMD (S269) "at least one hour" → 60 min = 6,000 steps (runbook rule: "at least N" → N; "ideally two" hours is an alternative). The RKC breed page could not be fetched; the breed has no PDSA page.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.miniature_american_shepherd.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[9.1, 18.1], [
+                'unit' => 'kg', 'source_id' => 'S268', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'miniature_american_shepherd.adult_weight.akc',
+                'quote' => 'Miniature American Shepherd | 20-40 pounds | 20-40 pounds',
+                'notes' => 'AKC breed weight chart (S268): 20–40 lb for males and females = 9.07–18.14 kg → 9.1–18.1 kg. AKC (S267) and PetMD (S269) give the same 20–40 lb; neither standard gives a weight.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'miniature_american_shepherd.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (20–40 lb → mostly the Medium class of S10).',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'miniature_american_shepherd.trainability.coren_rank',
+                'notes' => 'Not ranked: the Miniature American Shepherd is not in the Wikipedia table of Coren\'s ranking (S35, checked 2026-10-13); the ranking predates the breed\'s AKC recognition (2015).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.miniature_american_shepherd.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): not ranked by Coren (S35) → 1.0, the mixed breed\'s speed (PetMD S269: intelligent and eager to please). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S269', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'miniature_american_shepherd.lifespan.petmd',
+                'quote' => 'The average Miniature American Shepherd lifespan is 12–13 years, and they\'re considered a generally healthy breed.',
+                'notes' => 'PetMD (S269) "12–13 years", lower bound. No McMillan 2024 row (S123), no VetCompass paper, RKC page not reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * M5-R10-33 Chihuahua (Smooth Coat) — docs/research/dog-data/data.json chihuahua +
+     * proposed_game_parameters.chihuahua. The senior boundary is Claude's suggestion
+     * (PROPOSED_R10_CHIHUAHUA_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function chihuahuaProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_CHIHUAHUA;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S275', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.chihuahua.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a toy dog finishes growing at 8–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, [
+                    'unit' => 'months', 'source_id' => 'S11,S275', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.chihuahua.senior_boundary_months', 'decision' => self::PROPOSED_R10_CHIHUAHUA_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S275; PDSA S277 the same) = 9 y = 108 months. The rule\'s VetCompass row (O\'Neill et al. 2020, S279 → 74 months) is biased downwards by a young population (its authors) and contradicts both UK bands; no McMillan 2024 value was reachable. Alternatives: 74 (S279), 84 (Dogs Trust > 7 y, S14).',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chihuahua.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.chihuahua.senior_boundary_months', 'decision' => self::PROPOSED_R10_CHIHUAHUA_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 108 months (0.75 × 12 y, S275).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (8–12 months for a toy dog, S10); capped at the adult 30 minutes, which 10 × age reaches at 3 months.',
+            'adult_minutes' => [30, [
+                'unit' => 'minutes/day', 'source_id' => 'S275', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chihuahua.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 30 minutes per day',
+                'notes' => 'RKC "Up to 30 minutes per day" (S275) → 30 min = 3,000 steps (runbook rule: "up to N" → N). PDSA "a minimum of half an hour exercise" every day (S277) agrees.',
+            ]],
+            'senior_minutes' => [23, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chihuahua.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 30 minutes = 22.5 → 23 min (half up) = 2,300 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[1.8, 2.7], [
+                'unit' => 'kg', 'source_id' => 'S274', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'chihuahua.adult_weight.rkc',
+                'quote' => 'Up to 2.7kg, with 1.8kg – 2.7kg preferred.',
+                'notes' => 'KC breed standard (S274): preferred 1.8–2.7 kg (both sexes); PDSA "Average weight | 1.8-2.7 kg" (S277) agrees. FCI (S273): ideal 1.5–2.5 kg, accepted 1–3 kg.',
+            ]],
+            'growth_end' => [[8, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'chihuahua.growth.adult_weight_reached',
+                'quote' => 'Toy (5–12 pounds): 8–12 months',
+                'notes' => 'Size-class value, not breed-specific (1.8–2.7 kg ≈ 4–6 lb, at the lower edge of the Toy class of S10 — the smallest class it gives; RKC / PDSA size "Small").',
+            ]],
+            'coren_rank' => [67, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'chihuahua.trainability.coren_rank',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 67, tier "Fair Working/Obedience Intelligence" (ranks 55–69). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [0.7, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chihuahua.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 67 (S35) in the "Fair" tier (ranks 55–69) → 0.7. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S275', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'chihuahua.lifespan.rkc',
+                'quote' => 'Lifespan: Over 12 years',
+                'notes' => 'RKC breed page lower bound (S275); PDSA "Over 12 years" (S277) the same. The VetCompass median of a young population (S279) is not used. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * English Springer Spaniel (M5-R10-34). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_ENGLISH_SPRINGER_SPANIEL);
+     * weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function englishSpringerSpanielProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_ENGLISH_SPRINGER_SPANIEL;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S123', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.english_springer_spaniel.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [122, $boundary('Derived game boundary: last 25 % of lifespan (S11) × McMillan 2024 median 13.5 y (Dogs Trust breed table, S123) = 10.125 y = 121.5 → 122 months (half up). Not chosen: 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 122],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_springer_spaniel.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S284', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_springer_spaniel.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S284) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA "over 2 hours of exercise per day" (S285) agrees.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_springer_spaniel.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[18, 23], [
+                'unit' => 'kg', 'source_id' => 'S285', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'english_springer_spaniel.adult_weight.pdsa',
+                'quote' => 'Average weight | 18-23 kg',
+                'notes' => 'PDSA key facts (S285), both sexes. AKC standard (S283): a 20-inch dog about 50 lb (≈ 22.7 kg), a 19-inch bitch about 40 lb (≈ 18.1 kg) — inside the range. The KC standard (S282) gives no weight.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'english_springer_spaniel.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (18–23 kg ≈ 40–51 lb, the Medium class of S10; RKC / PDSA size "Medium").',
+            ]],
+            'coren_rank' => [13, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'english_springer_spaniel.trainability.coren_rank',
+                'quote' => '| 13 | English Springer Spaniel |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 13, tier "Excellent Working Dogs" (ranks 11–26). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_springer_spaniel.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 13 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [13.5, [
+                'unit' => 'years', 'source_id' => 'S123', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'english_springer_spaniel.lifespan.median_uk',
+                'quote' => 'English Springer Spaniel | 13.5 | 13.4 - 13.6 | 17905 | 6221',
+                'notes' => 'McMillan et al. 2024 data as tabled by Dogs Trust (S123). RKC "Lifespan: Over 10 years" (S284) and PDSA "Over 10 years" (S285) agree. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Shetland Sheepdog (M5-R10-35). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_SHETLAND_SHEEPDOG);
+     * weight, growth, Coren rank and lifespan are sourced. The senior boundary uses the RKC lower
+     * bound (no McMillan 2024 / VetCompass median reachable) — provisional, like the Boston Terrier.
+     *
+     * @return array<string, mixed>
+     */
+    private static function shetlandSheepdogProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_SHETLAND_SHEEPDOG;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S291', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.shetland_sheepdog.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog finishes growing at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S291; PDSA S293 the same) = 7.5 y = 90 months. No McMillan 2024 / VetCompass median was reachable (the McMillan figure quoted by Wikipedia S295 is tier C → 121, not used alone). Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shetland_sheepdog.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S291', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shetland_sheepdog.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S291) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA "around an hour of exercise daily" (S293) agrees.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shetland_sheepdog.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[6.8, 11.3], [
+                'unit' => 'kg', 'source_id' => 'S294', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'shetland_sheepdog.adult_weight.akc',
+                'quote' => 'averaging between 13 and 16 inches tall and weighing 15 to 25 pounds.',
+                'notes' => 'AKC (S294), 15–25 lb ≈ 6.8–11.3 kg, both sexes. PDSA average 9 kg (S293) — inside the range. The FCI standard (S290) gives no weight.',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'shetland_sheepdog.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA 9 kg ≈ 20 lb → the Small class of S10; RKC size "Small", S291).',
+            ]],
+            'coren_rank' => [6, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'shetland_sheepdog.trainability.coren_rank',
+                'quote' => '| 6 | Shetland Sheepdog |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 6, tier "Brightest Dogs" (ranks 1–10); Coren\'s own article (S34) lists the Shetland Sheepdog sixth among the ten brightest — agrees.',
+            ]],
+            'learning_multiplier' => [1.8, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shetland_sheepdog.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 6 (S35) in the "Brightest" tier → max(1.8, round(2.0 − 5 / 30, 1)) = 1.8 (= Labrador, rank 7). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S291', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'shetland_sheepdog.lifespan.rkc',
+                'quote' => 'Lifespan: Over 10 years',
+                'notes' => 'RKC breed page lower bound (S291); PDSA "Over 10 years" (S293) the same. No McMillan 2024 / VetCompass median reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Brittany (M5-R10-36). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_BRITTANY);
+     * weight, growth, Coren rank and lifespan are sourced. The senior boundary uses the RKC lower
+     * bound (no McMillan 2024 / VetCompass median reachable) — provisional, like the Shetland Sheepdog.
+     *
+     * @return array<string, mixed>
+     */
+    private static function brittanyProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BRITTANY;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S298', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.brittany.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S298) = 7.5 y = 90 months. No McMillan 2024 / VetCompass median was reachable (PetMD 12–14 y, S302, is not in the runbook\'s lifespan order → 108, alternative only). Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.brittany.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S298', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.brittany.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S298) → 120 min = 12,000 steps (runbook rule: "more than N" → N). AKC (S301) "they require plenty of exercise" gives no number.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.brittany.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[13.6, 18.1], [
+                'unit' => 'kg', 'source_id' => 'S300', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'brittany.adult_weight.akc',
+                'quote' => 'Weight - Should weigh between 30 and 40 pounds.',
+                'notes' => 'AKC standard (S300), 30–40 lb ≈ 13.6–18.1 kg, both sexes; AKC article (S301) and PetMD (S302) agree. The FCI (S297) and RKC (S299) standards give no weight.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'brittany.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (30–40 lb → the Medium class of S10; RKC size "Medium", S298).',
+            ]],
+            'coren_rank' => [19, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'brittany.trainability.coren_rank',
+                'quote' => '| 19 | Brittany |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 19, tier "Excellent Working Dogs" (ranks 11–26). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.brittany.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 19 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S298', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'brittany.lifespan.rkc',
+                'quote' => 'Lifespan: Over 10 years',
+                'notes' => 'RKC breed page lower bound (S298). PetMD "12–14 years" (S302) not used (not in the runbook\'s lifespan order). No McMillan 2024 / VetCompass median reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * American Cocker Spaniel (M5-R10-37). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_AMERICAN_COCKER_SPANIEL);
+     * weight, growth, Coren rank and lifespan are sourced. The senior boundary uses the RKC lower
+     * bound (no McMillan 2024 / VetCompass median reachable) — provisional, like the Brittany.
+     *
+     * @return array<string, mixed>
+     */
+    private static function americanCockerSpanielProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_AMERICAN_COCKER_SPANIEL;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S305', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.american_cocker_spaniel.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog finishes growing at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S305) = 7.5 y = 90 months (PetMD lower bound 10 y, S309, agrees). No McMillan 2024 / VetCompass median was reachable (McMillan 2024 13.3 y only via Wikipedia, S311, tier C → 120, alternative only; VCA 12 y, S310 → 108). Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.american_cocker_spaniel.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S305', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.american_cocker_spaniel.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S305) → 120 min = 12,000 steps (runbook rule: "more than N" → N; RKC preferred when sources conflict). AKC (S308) "They don’t require a lot of exercise", PetMD (S309) "don’t require high levels of exercise" and VCA (S310) "daily exercise in the form of a long walk" give no number.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.american_cocker_spaniel.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[9.1, 13.6], [
+                'unit' => 'kg', 'source_id' => 'S308', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'american_cocker_spaniel.adult_weight.akc',
+                'quote' => 'standing between 13.5 and 15.5 inches tall, and weighing about 20 to 30 pounds.',
+                'notes' => 'AKC breed article (S308), 20–30 lb ≈ 9.1–13.6 kg, both sexes; PetMD (S309) agrees, VCA (S310) 24–28 lb inside it. The FCI (S304) and AKC (S307) standards give no weight.',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'american_cocker_spaniel.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (20–30 lb straddles the Small and Medium classes of S10; RKC size "Small", S305, decides).',
+            ]],
+            'coren_rank' => [20, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'american_cocker_spaniel.trainability.coren_rank',
+                'quote' => '| 20 | Cocker Spaniel |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 20 "Cocker Spaniel" (the American breed; the English Cocker Spaniel is listed at 18), tier "Excellent Working Dogs" (ranks 11–26). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.american_cocker_spaniel.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 20 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S305', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'american_cocker_spaniel.lifespan.rkc',
+                'quote' => 'Lifespan: Over 10 years',
+                'notes' => 'RKC breed page lower bound (S305); PetMD "10–14 years" (S309) agrees. McMillan 2024 13.3 y only via Wikipedia (S311, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Belgian Malinois (M5-R10-38). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_BELGIAN_MALINOIS);
+     * weight, growth, Coren rank and lifespan are sourced. The senior boundary uses the RKC lower
+     * bound (no McMillan 2024 / VetCompass median reachable) — provisional, like the Brittany.
+     *
+     * @return array<string, mixed>
+     */
+    private static function belgianMalinoisProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BELGIAN_MALINOIS;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S314', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.belgian_malinois.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S314) = 7.5 y = 90 months (PetMD lower bound 10 y, S317, agrees). No McMillan 2024 / VetCompass median was reachable (McMillan 2024 12 y only via Wikipedia, S318, tier C → 108, alternative only). Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_malinois.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S314', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_malinois.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S314) → 120 min = 12,000 steps (runbook rule: "more than N" → N). AKC (S316) "significant exercise on a daily basis" agrees without a number; PetMD (S317) "more than 40 minutes" is a minimum.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_malinois.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[20.0, 30.0], [
+                'unit' => 'kg', 'source_id' => 'S313', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'belgian_malinois.adult_weight.fci',
+                'quote' => 'Males about 25-30 kg.',
+                'notes' => 'FCI standard (S313): males about 25–30 kg, females about 20–25 kg → 20–30 kg for the game. AKC (S316) 40–80 lb and PetMD (S317) heavier ranges are alternatives only.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'belgian_malinois.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (FCI 20–30 kg ≈ 44–66 lb, mostly the Medium class of S10; RKC size "Medium-Large", S314 — Siberian Husky precedent).',
+            ]],
+            'coren_rank' => [22, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'belgian_malinois.trainability.coren_rank',
+                'quote' => '| 22 | Belgian Malinois |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 22 "Belgian Malinois", tier "Excellent Working Dogs" (ranks 11–26). Coren\'s own article (S34) lists only the top and bottom 10.',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.belgian_malinois.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 22 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S314', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'belgian_malinois.lifespan.rkc',
+                'quote' => 'Lifespan: Over 10 years',
+                'notes' => 'RKC breed page lower bound (S314); PetMD "10–14 years" (S317) agrees. McMillan 2024 12 y only via Wikipedia (S318, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Basset Hound (M5-R10-39). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_BASSET_HOUND);
+     * weight, growth, Coren rank and lifespan are sourced. The senior boundary uses the RKC lower
+     * bound (no McMillan 2024 / VetCompass median reachable) — provisional, like the Belgian Malinois.
+     *
+     * @return array<string, mixed>
+     */
+    private static function bassetHoundProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BASSET_HOUND;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S321', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.basset_hound.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S321) = 7.5 y = 90 months (PDSA "Over 10 years", S323, agrees). No McMillan 2024 / VetCompass median was reachable (McMillan 2024 12.5 y only via Wikipedia, S325, tier C → 113, alternative only). Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.basset_hound.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S321', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.basset_hound.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S321) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA (S323) "a minimum of an hour of exercise a day" gives the same number; AKC (S324) "regular physical activity" agrees without a number.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.basset_hound.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[18.0, 27.0], [
+                'unit' => 'kg', 'source_id' => 'S323', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'basset_hound.adult_weight.pdsa',
+                'quote' => '18kg-27kg',
+                'notes' => 'PDSA key fact "Average weight" (S323), one range for both sexes. The FCI standard (S320) gives no weight; AKC (S324) 40–65 lb is an alternative only.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'basset_hound.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA 18–27 kg ≈ 40–60 lb, the Medium class of S10; RKC size "Medium-Large", S321).',
+            ]],
+            'coren_rank' => [71, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'basset_hound.trainability.coren_rank',
+                'quote' => '| 71 | Basset Hound |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 71 "Basset Hound", tier "Lowest Degree of Working/Obedience Intelligence" (ranks 70–79). Coren\'s own article (S34) not re-read.',
+            ]],
+            'learning_multiplier' => [0.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.basset_hound.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 71 (S35) in the "Lowest" tier (ranks 70–79) → 0.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S321', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'basset_hound.lifespan.rkc',
+                'quote' => 'Lifespan: Over 10 years',
+                'notes' => 'RKC breed page lower bound (S321); PDSA "Over 10 years" (S323) agrees. McMillan 2024 12.5 y only via Wikipedia (S325, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Hungarian Vizsla (M5-R10-40). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_HUNGARIAN_VIZSLA);
+     * weight, growth, Coren rank and lifespan are sourced. The senior boundary uses the RKC lower
+     * bound (no McMillan 2024 / VetCompass median reachable) — provisional, like the Basset Hound.
+     *
+     * @return array<string, mixed>
+     */
+    private static function hungarianVizslaProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_HUNGARIAN_VIZSLA;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S328', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.hungarian_vizsla.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S328) = 9 y = 108 months (PDSA "Over 12 years", S329, agrees). No McMillan 2024 / VetCompass median was reachable (McMillan 2024 13.5 y only via Wikipedia, S334, tier C → 122, alternative only). Not chosen: 90 (PetMD lower bound 10 y, S330), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.hungarian_vizsla.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S328', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.hungarian_vizsla.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S328) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA (S329) "a minimum of two hours exercise every day" gives the same number; PetMD (S330) "at least one hour of exercise per day" is an alternative only.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.hungarian_vizsla.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[20.0, 30.0], [
+                'unit' => 'kg', 'source_id' => 'S329', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'hungarian_vizsla.adult_weight.pdsa',
+                'quote' => '20kg-30kg',
+                'notes' => 'PDSA key fact "Average weight" (S329), one range for both sexes. The FCI (S327) and AKC (S331) standards give no weight; PetMD (S330) 40–65 lb is an alternative only.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'hungarian_vizsla.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA 20–30 kg ≈ 44–66 lb, mostly the Medium class of S10; RKC size "Large", S328).',
+            ]],
+            'coren_rank' => [25, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'hungarian_vizsla.trainability.coren_rank',
+                'quote' => '| 25 | Vizsla |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 25 "Vizsla", tier "Excellent Working Dogs" (ranks 11–26). Not in Coren\'s own top / bottom-10 article (S34).',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.hungarian_vizsla.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 25 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S328', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'hungarian_vizsla.lifespan.rkc',
+                'quote' => 'Lifespan: Over 12 years',
+                'notes' => 'RKC breed page lower bound (S328); PDSA "Over 12 years" (S329) agrees. McMillan 2024 13.5 y only via Wikipedia (S334, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
      * Dog rows (rows()) followed by the cat rows (catRows()) — what run() seeds.
      *
      * @return list<array<string, mixed>>
@@ -3435,6 +4297,7 @@ class BreedStageParamsSeeder extends Seeder
         $breeds = DB::table('breed_configs')->pluck('breed_slug')->all();
         $touched = self::touchedTuples();
 
+        $insert = [];
         foreach (self::allRows() as $row) {
             if (! in_array($row['breed_slug'], $breeds, true)) {
                 continue;
@@ -3448,7 +4311,7 @@ class BreedStageParamsSeeder extends Seeder
                 throw new InvalidArgumentException("BreedStageParamsSeeder: {$row['breed_slug']}.{$row['stage']}.{$row['key']}: {$error}");
             }
 
-            DB::table('breed_stage_params')->insertOrIgnore(array_merge([
+            $insert[] = array_merge([
                 'breed_slug' => $row['breed_slug'],
                 'stage' => $row['stage'],
                 'age_from_months' => $row['age_from_months'],
@@ -3456,7 +4319,14 @@ class BreedStageParamsSeeder extends Seeder
             ], self::columns($row), [
                 'created_at' => $now,
                 'updated_at' => $now,
-            ]));
+            ]);
+        }
+
+        // One multi-row INSERT … ON CONFLICT DO NOTHING per chunk instead of one
+        // query per row (~2,000 rows): same insert-only semantics, ~40× faster —
+        // the test suite seeds this before >1,600 tests (perf 2026-10-15).
+        foreach (array_chunk($insert, 500) as $chunk) {
+            DB::table('breed_stage_params')->insertOrIgnore($chunk);
         }
 
         // QA m2: raw inserts bypass the model hooks that forget the rules

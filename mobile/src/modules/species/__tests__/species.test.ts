@@ -14,7 +14,7 @@ import {
 
 describe('readBreed / readSpecies', () => {
   it('keeps every known breed, dogs and cats', () => {
-    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal'] as const) {
+    for (const breed of ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal'] as const) {
       expect(readBreed(breed)).toBe(breed);
     }
   });
@@ -113,6 +113,123 @@ describe('readBreed / readSpecies', () => {
     await i18n.changeLanguage('en');
     try {
       expect(breedName('boston_terrier')).toBe('Boston Terrier');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-32: the Miniature American Shepherd is a paid, brushed dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('miniature_american_shepherd'))).toBe('dog');
+    expect(isDefaultFreeBreed('miniature_american_shepherd')).toBe(false);
+    expect(hasGroomingRoutine('miniature_american_shepherd')).toBe(true);
+    expect(breedName('miniature_american_shepherd')).toBe('Mali ameriški ovčar');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('miniature_american_shepherd')).toBe('Miniature American Shepherd');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-36: the Brittany is a paid, brushed dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('brittany'))).toBe('dog');
+    expect(isDefaultFreeBreed('brittany')).toBe(false);
+    expect(hasGroomingRoutine('brittany')).toBe(true);
+    expect(breedName('brittany')).toBe('Bretonski ptičar');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('brittany')).toBe('Brittany');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-40: the Hungarian Vizsla is a paid, brushed dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('hungarian_vizsla'))).toBe('dog');
+    expect(isDefaultFreeBreed('hungarian_vizsla')).toBe(false);
+    expect(hasGroomingRoutine('hungarian_vizsla')).toBe(true);
+    expect(breedName('hungarian_vizsla')).toBe('Madžarski kratkodlaki ptičar');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('hungarian_vizsla')).toBe('Hungarian Vizsla');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-39: the Basset Hound is a paid, brushed dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('basset_hound'))).toBe('dog');
+    expect(isDefaultFreeBreed('basset_hound')).toBe(false);
+    expect(hasGroomingRoutine('basset_hound')).toBe(true);
+    expect(breedName('basset_hound')).toBe('Baset');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('basset_hound')).toBe('Basset Hound');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-38: the Belgian Malinois is a paid, brushed dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('belgian_malinois'))).toBe('dog');
+    expect(isDefaultFreeBreed('belgian_malinois')).toBe(false);
+    expect(hasGroomingRoutine('belgian_malinois')).toBe(true);
+    expect(breedName('belgian_malinois')).toBe('Belgijski ovčar malinois');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('belgian_malinois')).toBe('Belgian Malinois');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-37: the American Cocker Spaniel is a paid, brushed dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('american_cocker_spaniel'))).toBe('dog');
+    expect(isDefaultFreeBreed('american_cocker_spaniel')).toBe(false);
+    expect(hasGroomingRoutine('american_cocker_spaniel')).toBe(true);
+    expect(breedName('american_cocker_spaniel')).toBe('Ameriški koker španjel');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('american_cocker_spaniel')).toBe('American Cocker Spaniel');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-35: the Shetland Sheepdog is a paid, brushed dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('shetland_sheepdog'))).toBe('dog');
+    expect(isDefaultFreeBreed('shetland_sheepdog')).toBe(false);
+    expect(hasGroomingRoutine('shetland_sheepdog')).toBe(true);
+    expect(breedName('shetland_sheepdog')).toBe('Šetlandski ovčar');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('shetland_sheepdog')).toBe('Shetland Sheepdog');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-34: the English Springer Spaniel is a paid, brushed dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('english_springer_spaniel'))).toBe('dog');
+    expect(isDefaultFreeBreed('english_springer_spaniel')).toBe(false);
+    expect(hasGroomingRoutine('english_springer_spaniel')).toBe(true);
+    expect(breedName('english_springer_spaniel')).toBe('Angleški springer španjel');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('english_springer_spaniel')).toBe('English Springer Spaniel');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-33: the Chihuahua is a paid, brushed dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('chihuahua'))).toBe('dog');
+    expect(isDefaultFreeBreed('chihuahua')).toBe(false);
+    expect(hasGroomingRoutine('chihuahua')).toBe(true);
+    expect(breedName('chihuahua')).toBe('Čivava');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('chihuahua')).toBe('Chihuahua');
     } finally {
       await i18n.changeLanguage('sl');
     }

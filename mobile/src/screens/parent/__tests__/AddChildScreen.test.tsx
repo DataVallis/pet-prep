@@ -13,6 +13,8 @@ import { useAppStore } from '@/store/appStore';
 import { makeFamilyChild, makeFamilyDashboard, makeFamilyPet, makePet } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import { maybeAskForPush } from '@/modules/push/pushPrompt';
+import { setClipboardProbeForTests } from '@/modules/pairing/pinClipboard';
+import * as Clipboard from 'expo-clipboard';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
@@ -302,6 +304,47 @@ describe('AddChildScreen', () => {
       expect(screen.getByText('004 501')).toBeTruthy();
       expect(screen.getByTestId('pin-countdown')).toHaveTextContent(S.validFor('15:00'));
       expect(generatePin).toHaveBeenNthCalledWith(2, { child_id: 2, pet_id: null });
+    });
+
+    it('David 2026-10-14: "Kopiraj kodo" copies exactly the six digits and confirms it', async () => {
+      setClipboardProbeForTests(() => true);
+      try {
+        generatePin.mockResolvedValueOnce(pinResponse('734912'));
+        renderRelogin();
+        await flush();
+
+        expect(screen.getByText('734 912')).toBeTruthy();
+        fireEvent.press(screen.getByTestId('pin-copy'));
+        await flush();
+
+        expect(Clipboard.setStringAsync).toHaveBeenCalledWith('734912');
+        expect(screen.getByTestId('pin-copy')).toHaveTextContent(S.copied);
+
+        // A new code shows "Kopiraj kodo" again (the confirmation belonged to the old one).
+        generatePin.mockResolvedValueOnce(pinResponse('111222'));
+        fireEvent.press(screen.getByText(S.newCode));
+        await flush();
+        expect(screen.getByTestId('pin-copy')).toHaveTextContent(S.copyCode);
+
+        (Clipboard.setStringAsync as jest.Mock).mockRejectedValueOnce(new Error('denied'));
+        fireEvent.press(screen.getByTestId('pin-copy'));
+        await flush();
+        expect(screen.getByTestId('pin-copy-failed')).toHaveTextContent(S.copyFailed);
+      } finally {
+        setClipboardProbeForTests(null);
+      }
+    });
+
+    it('no clipboard module in this binary → no copy button', async () => {
+      setClipboardProbeForTests(() => false);
+      try {
+        generatePin.mockResolvedValueOnce(pinResponse('734912'));
+        renderRelogin();
+        await flush();
+        expect(screen.queryByTestId('pin-copy')).toBeNull();
+      } finally {
+        setClipboardProbeForTests(null);
+      }
     });
 
     it('429 keeps the still-valid PIN, explains the wait and blocks "Nova koda" until Retry-After', async () => {

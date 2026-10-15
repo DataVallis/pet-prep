@@ -12,7 +12,8 @@
  * challenge" row in Nadzor open the same paywall (it lists every dog that can be bought).
  */
 
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { BrandMark } from '@/components/brand/BrandLogo';
@@ -29,6 +30,8 @@ import AddChildCard from '@/components/AddChildCard';
 import ChildOverviewCard from '@/components/parent/ChildOverviewCard';
 import JoinFamilyCard, { joinNoticeText, type JoinNotice } from '@/components/parent/JoinFamilyCard';
 import ParentLiveChannels from '@/components/ParentLiveChannels';
+import ServerUpdatingBanner from '@/components/ServerUpdatingBanner';
+import { useServerOutage } from '@/store/serverStatusStore';
 import { ErrorBanner, LoadingBlock, NoticeBanner, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import ControlsScreen from '@/screens/parent/ControlsScreen';
 import ChallengeScreen from '@/screens/parent/ChallengeScreen';
@@ -60,13 +63,27 @@ type Overlay =
   /** `backToChildId`: opened from a child's detail → "Back" returns there (M5-F01). */
   | { kind: 'challenge'; backToChildId?: number };
 
-function BottomNavBar({ activeTab, onSelect }: { activeTab: Tab; onSelect: (tab: Tab) => void }) {
+/** QA n3: where the "updating" pill sits — above the measured tab bar (0 when none) and the safe area. */
+export function updatingBannerBottom(tabBarHeight: number, safeBottom: number): number {
+  return Math.max(tabBarHeight, safeBottom) + 12;
+}
+
+function BottomNavBar({
+  activeTab,
+  onSelect,
+  onHeight,
+}: {
+  activeTab: Tab;
+  onSelect: (tab: Tab) => void;
+  onHeight?: (height: number) => void;
+}) {
+  useEffect(() => () => onHeight?.(0), [onHeight]);
   const tabs: { id: Tab; label: string; Icon: typeof LayoutDashboard }[] = [
     { id: 'dashboard', label: DASHBOARD_STRINGS.tabs.dashboard, Icon: LayoutDashboard },
     { id: 'controls', label: DASHBOARD_STRINGS.tabs.controls, Icon: Settings },
   ];
   return (
-    <View style={styles.navBar}>
+    <View style={styles.navBar} onLayout={(e) => onHeight?.(e.nativeEvent.layout.height)} testID="parent-tab-bar">
       {tabs.map(({ id, label, Icon }) => {
         const active = activeTab === id;
         return (
@@ -93,6 +110,11 @@ export default function ParentDashboardScreen() {
   // A code, not text: translated at render so it follows a language switch (M1-18 review).
   const [notice, setNotice] = useState<JoinNotice | null>(null);
   const dashboard = useParentDashboard();
+  // M5-F13: during a deploy the calm banner replaces error banners; the last data stays.
+  const serverUpdating = useServerOutage();
+  // QA n3: the pill sits above the real tab bar (measured; overlays have none) and the safe area.
+  const [tabBarHeight, setTabBarHeight] = useState(0);
+  const safeBottom = useContext(SafeAreaInsetsContext)?.bottom ?? 0;
   const noChild = isNoChildPaired(dashboard.data);
   const family = familyFromDashboard(dashboard.data);
   const children = family?.children ?? [];
@@ -134,6 +156,14 @@ export default function ParentDashboardScreen() {
     <View style={styles.root}>
       <ParentLiveChannels petIds={livePetIds} />
       {renderContent()}
+      {/* Over every parent screen (tabs and overlays), above the tab bar; never takes touches. */}
+      {serverUpdating && (
+        <ServerUpdatingBanner
+          tone="light"
+          style={[styles.updatingSlot, { bottom: updatingBannerBottom(tabBarHeight, safeBottom) }]}
+          testID="parent-server-updating"
+        />
+      )}
     </View>
   );
 
@@ -188,7 +218,7 @@ export default function ParentDashboardScreen() {
             notice={notice}
             onNotice={setNotice}
           />
-          <BottomNavBar activeTab={activeTab} onSelect={setActiveTab} />
+          <BottomNavBar activeTab={activeTab} onSelect={setActiveTab} onHeight={setTabBarHeight} />
         </>
       );
     }
@@ -222,7 +252,7 @@ export default function ParentDashboardScreen() {
         <ScrollView style={styles.flex} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
           <ChallengeBanner family={family} onOpen={() => openChallenge()} />
           {notice && <NoticeBanner text={joinNoticeText(notice)} closeLabel={DASHBOARD_STRINGS.closeNotice} onClose={() => setNotice(null)} />}
-          {dashboard.isError && (
+          {dashboard.isError && !serverUpdating && (
             <ErrorBanner
               text={
                 dashboard.data
@@ -238,7 +268,7 @@ export default function ParentDashboardScreen() {
             />
           )}
 
-          {dashboard.isPending ? (
+          {dashboard.isPending || (serverUpdating && !dashboard.data) ? (
             <LoadingBlock text={DASHBOARD_STRINGS.loading} testID="dashboard-loading" />
           ) : !dashboard.data ? null : children.length === 0 ? (
             <>
@@ -260,7 +290,7 @@ export default function ParentDashboardScreen() {
           )}
         </ScrollView>
 
-        <BottomNavBar activeTab={activeTab} onSelect={setActiveTab} />
+        <BottomNavBar activeTab={activeTab} onSelect={setActiveTab} onHeight={setTabBarHeight} />
       </>
     );
   }
@@ -268,6 +298,7 @@ export default function ParentDashboardScreen() {
 
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: C.bg },
+  updatingSlot: { position: 'absolute', left: 0, right: 0, zIndex: 50 },
   flex: { flex: 1 },
   header: {
     paddingTop: Platform.OS === 'ios' ? 56 : 40,

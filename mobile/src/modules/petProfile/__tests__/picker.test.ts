@@ -32,10 +32,17 @@ import { i18n } from '@/i18n';
  * Great Dane 120 min (M5-R10-29, S241 / S243), senior 90 (greatDaneProfile);
  * Pomeranian 30 min (M5-R10-30, S247 / S250), senior 23 (pomeranianProfile);
  * Boston Terrier 60 min (M5-R10-31, S255 / S259), senior 45 (bostonTerrierProfile);
+ * Miniature American Shepherd 60 min (M5-R10-32, PetMD S269), senior 45 (miniatureAmericanShepherdProfile);
+ * Chihuahua 30 min (M5-R10-33, RKC S275 / PDSA S277), senior 23 (chihuahuaProfile);
+ * English Springer Spaniel 120 min (M5-R10-34, RKC S284 / PDSA S285), senior 90 (englishSpringerSpanielProfile);
+ * Shetland Sheepdog 60 min (M5-R10-35, RKC S291 / PDSA S293), senior 45 (shetlandSheepdogProfile);
+ * Brittany 120 min (M5-R10-36, RKC S298), senior 90 (brittanyProfile);
+ * American Cocker Spaniel 120 min (M5-R10-37, RKC S305), senior 90 (americanCockerSpanielProfile);
+ * Hungarian Vizsla 120 min (M5-R10-40, RKC S328 / PDSA S329), senior 90 (hungarianVizslaProfile);
  * arrival puppy 2, young 9 months.
  */
-type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel' | 'beagle' | 'standard_poodle' | 'dachshund' | 'australian_shepherd' | 'havanese' | 'west_highland_white_terrier' | 'bernese_mountain_dog' | 'siberian_husky' | 'rottweiler' | 'bulldog' | 'german_shorthaired_pointer' | 'yorkshire_terrier' | 'cane_corso' | 'pembroke_welsh_corgi' | 'dobermann' | 'boxer' | 'miniature_schnauzer' | 'shih_tzu' | 'great_dane' | 'pomeranian' | 'boston_terrier'>;
-const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier'];
+type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel' | 'beagle' | 'standard_poodle' | 'dachshund' | 'australian_shepherd' | 'havanese' | 'west_highland_white_terrier' | 'bernese_mountain_dog' | 'siberian_husky' | 'rottweiler' | 'bulldog' | 'german_shorthaired_pointer' | 'yorkshire_terrier' | 'cane_corso' | 'pembroke_welsh_corgi' | 'dobermann' | 'boxer' | 'miniature_schnauzer' | 'shih_tzu' | 'great_dane' | 'pomeranian' | 'boston_terrier' | 'miniature_american_shepherd' | 'chihuahua' | 'english_springer_spaniel' | 'shetland_sheepdog' | 'brittany' | 'american_cocker_spaniel' | 'belgian_malinois' | 'basset_hound' | 'hungarian_vizsla'>;
+const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla'];
 const ADULT_MINUTES: Record<DogBreed, number> = {
   mutt: 60,
   border_collie: 120,
@@ -65,6 +72,15 @@ const ADULT_MINUTES: Record<DogBreed, number> = {
   great_dane: 120,
   pomeranian: 30,
   boston_terrier: 60,
+  miniature_american_shepherd: 60,
+  chihuahua: 30,
+  english_springer_spaniel: 120,
+  shetland_sheepdog: 60,
+  brittany: 120,
+  american_cocker_spaniel: 120,
+  belgian_malinois: 120,
+  basset_hound: 60,
+  hungarian_vizsla: 120,
 };
 const ARRIVAL_MONTHS: Partial<Record<LifeStage, number>> = { puppy: 2, young: 9 };
 
@@ -322,6 +338,186 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(E.adult).toBe('2 meals a day; walks of 6,000 steps a day.');
       expect(E.senior).toBe('2 meals a day; shorter walks — 4,500 steps a day.');
       expect(PICKER_STRINGS.breedHints.boston_terrier).toBe('Part of the 12-week challenge · brushing 1× a week');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-32 Miniature American Shepherd: 2.000 → 6.000 (reached at 6 months), young 6.000, adult 6.000, senior 4.500, brushing 2× a week — SL and EN', async () => {
+    const B = PICKER_STRINGS.ageHints.miniature_american_shepherd;
+    expect(B.puppy).toBe('Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000 pri 6 mesecih.');
+    expect(B.young).toBe('2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).');
+    expect(B.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
+    expect(B.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.miniature_american_shepherd).toBe('Del 12-tedenskega izziva · česanje 2× na teden');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.miniature_american_shepherd;
+      expect(E.puppy).toBe('Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000 at 6 months.');
+      expect(E.young).toBe('2 meals a day; walks of 6,000 steps a day (like an adult dog).');
+      expect(E.adult).toBe('2 meals a day; walks of 6,000 steps a day.');
+      expect(E.senior).toBe('2 meals a day; shorter walks — 4,500 steps a day.');
+      expect(PICKER_STRINGS.breedHints.miniature_american_shepherd).toBe('Part of the 12-week challenge · brushing 2× a week');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-36 Brittany: 2.000 → 12.000 (reached at 12 months), young 9.000 → 12.000, adult 12.000, senior 9.000, brushing 1× a week — SL and EN', async () => {
+    const B = PICKER_STRINGS.ageHints.brittany;
+    expect(B.puppy).toBe('Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
+    expect(B.young).toBe('2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
+    expect(B.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
+    expect(B.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.brittany).toBe('Del 12-tedenskega izziva · česanje 1× na teden');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.brittany;
+      expect(E.puppy).toBe('Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.');
+      expect(E.young).toBe('2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.');
+      expect(E.adult).toBe('2 meals a day; walks of 12,000 steps a day.');
+      expect(E.senior).toBe('2 meals a day; shorter walks — 9,000 steps a day.');
+      expect(PICKER_STRINGS.breedHints.brittany).toBe('Part of the 12-week challenge · brushing 1× a week');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-40 Hungarian Vizsla: 2.000 → 12.000 (reached at 12 months), young 9.000 → 12.000, adult 12.000, senior 9.000, brushing 1× a week — SL and EN', async () => {
+    const V = PICKER_STRINGS.ageHints.hungarian_vizsla;
+    expect(V.puppy).toBe('Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
+    expect(V.young).toBe('2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
+    expect(V.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
+    expect(V.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.hungarian_vizsla).toBe('Del 12-tedenskega izziva · česanje 1× na teden');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.hungarian_vizsla;
+      expect(E.puppy).toBe('Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.');
+      expect(E.young).toBe('2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.');
+      expect(E.adult).toBe('2 meals a day; walks of 12,000 steps a day.');
+      expect(E.senior).toBe('2 meals a day; shorter walks — 9,000 steps a day.');
+      expect(PICKER_STRINGS.breedHints.hungarian_vizsla).toBe('Part of the 12-week challenge · brushing 1× a week');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-39 Basset Hound: 2.000 → 6.000 (reached at 6 months), young / adult 6.000, senior 4.500, brushing 1× a week — SL and EN', async () => {
+    const B = PICKER_STRINGS.ageHints.basset_hound;
+    expect(B.puppy).toBe('Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000 pri 6 mesecih.');
+    expect(B.young).toBe('2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).');
+    expect(B.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
+    expect(B.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.basset_hound).toBe('Del 12-tedenskega izziva · česanje 1× na teden');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.basset_hound;
+      expect(E.puppy).toBe('Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000 at 6 months.');
+      expect(E.young).toBe('2 meals a day; walks of 6,000 steps a day (like an adult dog).');
+      expect(E.adult).toBe('2 meals a day; walks of 6,000 steps a day.');
+      expect(E.senior).toBe('2 meals a day; shorter walks — 4,500 steps a day.');
+      expect(PICKER_STRINGS.breedHints.basset_hound).toBe('Part of the 12-week challenge · brushing 1× a week');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-38 Belgian Malinois: 2.000 → 12.000 (reached at 12 months), young 9.000 → 12.000, adult 12.000, senior 9.000, brushing 2× a week — SL and EN', async () => {
+    const B = PICKER_STRINGS.ageHints.belgian_malinois;
+    expect(B.puppy).toBe('Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
+    expect(B.young).toBe('2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
+    expect(B.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
+    expect(B.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.belgian_malinois).toBe('Del 12-tedenskega izziva · česanje 2× na teden');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.belgian_malinois;
+      expect(E.puppy).toBe('Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.');
+      expect(E.young).toBe('2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.');
+      expect(E.adult).toBe('2 meals a day; walks of 12,000 steps a day.');
+      expect(E.senior).toBe('2 meals a day; shorter walks — 9,000 steps a day.');
+      expect(PICKER_STRINGS.breedHints.belgian_malinois).toBe('Part of the 12-week challenge · brushing 2× a week');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-37 American Cocker Spaniel: 2.000 → 12.000 (reached at 12 months), young 9.000 → 12.000, adult 12.000, senior 9.000, brushing every day — SL and EN', async () => {
+    const B = PICKER_STRINGS.ageHints.american_cocker_spaniel;
+    expect(B.puppy).toBe('Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
+    expect(B.young).toBe('2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
+    expect(B.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
+    expect(B.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.american_cocker_spaniel).toBe('Del 12-tedenskega izziva · česanje vsak dan');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.american_cocker_spaniel;
+      expect(E.puppy).toBe('Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.');
+      expect(E.young).toBe('2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.');
+      expect(E.adult).toBe('2 meals a day; walks of 12,000 steps a day.');
+      expect(E.senior).toBe('2 meals a day; shorter walks — 9,000 steps a day.');
+      expect(PICKER_STRINGS.breedHints.american_cocker_spaniel).toBe('Part of the 12-week challenge · brushing every day');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-35 Shetland Sheepdog: 2.000 → 6.000 (reached at 6 months), young 6.000, adult 6.000, senior 4.500, brushing every day — SL and EN', async () => {
+    const B = PICKER_STRINGS.ageHints.shetland_sheepdog;
+    expect(B.puppy).toBe('Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000 pri 6 mesecih.');
+    expect(B.young).toBe('2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).');
+    expect(B.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
+    expect(B.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.shetland_sheepdog).toBe('Del 12-tedenskega izziva · česanje vsak dan');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.shetland_sheepdog;
+      expect(E.puppy).toBe('Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000 at 6 months.');
+      expect(E.young).toBe('2 meals a day; walks of 6,000 steps a day (like an adult dog).');
+      expect(E.adult).toBe('2 meals a day; walks of 6,000 steps a day.');
+      expect(E.senior).toBe('2 meals a day; shorter walks — 4,500 steps a day.');
+      expect(PICKER_STRINGS.breedHints.shetland_sheepdog).toBe('Part of the 12-week challenge · brushing every day');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-34 English Springer Spaniel: 2.000 → 12.000 (reached at 12 months), young 9.000, adult 12.000, senior 9.000, brushing 2× a week — SL and EN', async () => {
+    const B = PICKER_STRINGS.ageHints.english_springer_spaniel;
+    expect(B.puppy).toBe('Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
+    expect(B.young).toBe('2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.');
+    expect(B.adult).toBe('2 obroka na dan; sprehod 12.000 korakov na dan.');
+    expect(B.senior).toBe('2 obroka na dan; krajši sprehod — 9.000 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.english_springer_spaniel).toBe('Del 12-tedenskega izziva · česanje 2× na teden');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.english_springer_spaniel;
+      expect(E.puppy).toBe('Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.');
+      expect(E.young).toBe('2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.');
+      expect(E.adult).toBe('2 meals a day; walks of 12,000 steps a day.');
+      expect(E.senior).toBe('2 meals a day; shorter walks — 9,000 steps a day.');
+      expect(PICKER_STRINGS.breedHints.english_springer_spaniel).toBe('Part of the 12-week challenge · brushing 2× a week');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-33 Chihuahua: 2.000 → 3.000 (reached at 3 months), young 3.000, adult 3.000, senior 2.300, brushing 1× a week — SL and EN', async () => {
+    const B = PICKER_STRINGS.ageHints.chihuahua;
+    expect(B.puppy).toBe('Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 3.000 pri 3 mesecih.');
+    expect(B.young).toBe('2 obroka na dan; sprehod 3.000 korakov na dan (kot odrasel pes).');
+    expect(B.adult).toBe('2 obroka na dan; sprehod 3.000 korakov na dan.');
+    expect(B.senior).toBe('2 obroka na dan; krajši sprehod — 2.300 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.chihuahua).toBe('Del 12-tedenskega izziva · česanje 1× na teden');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.chihuahua;
+      expect(E.puppy).toBe('Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 3,000 at 3 months.');
+      expect(E.young).toBe('2 meals a day; walks of 3,000 steps a day (like an adult dog).');
+      expect(E.adult).toBe('2 meals a day; walks of 3,000 steps a day.');
+      expect(E.senior).toBe('2 meals a day; shorter walks — 2,300 steps a day.');
+      expect(PICKER_STRINGS.breedHints.chihuahua).toBe('Part of the 12-week challenge · brushing 1× a week');
     } finally {
       await i18n.changeLanguage('sl');
     }

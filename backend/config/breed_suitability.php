@@ -845,5 +845,248 @@ return [
             ],
         ],
 
+        // M5-R10-32: miniature_american_shepherd.* (S264–S271), runbook rules (data.json
+        // proposed_game_parameters.miniature_american_shepherd.suitability_tags). AKC (S267) + PetMD (S269);
+        // the RKC breed page could not be fetched → no apartment / large_home. `children` and `other_pets`
+        // with the caveats (may herd children, supervise at first) — never `small_children`. Not
+        // `active_family` / `long_daily_exercise` (at least 1 h a day). Not `frequent_grooming`: PetMD "a couple
+        // times a week" vs AKC "Weekly brushing is sufficient during most of the year" → conflicting sources, no chip
+        // (the game still brushes 2× a week). Not a welfare breed → no welfare chip.
+        'miniature_american_shepherd' => [
+            'suits' => [
+                // S267 "Mini Americans can make for great family dogs, …"; S269 "… make great family dogs …".
+                ['tag' => 'family_pet', 'source_ids' => ['S267', 'S269'], 'refs' => ['miniature_american_shepherd.suitability.akc_family', 'miniature_american_shepherd.suitability.petmd_family']],
+                // S267 "They tend to be good with children, but may try to herd them."; S269 "They are good with children and other pets …".
+                ['tag' => 'children', 'source_ids' => ['S267', 'S269'], 'refs' => ['miniature_american_shepherd.suitability.akc_children', 'miniature_american_shepherd.suitability.petmd_children_pets']],
+                // S267 "They’re extremely affectionate and friendly with their families and other pets."; S269 the same sentence as above.
+                ['tag' => 'other_pets', 'source_ids' => ['S267', 'S269'], 'refs' => ['miniature_american_shepherd.suitability.akc_other_pets', 'miniature_american_shepherd.suitability.petmd_children_pets']],
+            ],
+            'consider' => [
+                // S269 "Miniature American Shepherds need to be given jobs to stay active and prevent boredom."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S269'], 'refs' => ['miniature_american_shepherd.behaviour.mental_stimulation']],
+                // S267 "… but may try to herd them."
+                ['tag' => 'may_herd_children', 'source_ids' => ['S267'], 'refs' => ['miniature_american_shepherd.behaviour.herding_children', 'miniature_american_shepherd.suitability.akc_children']],
+                // S269 "Their devotion to family can lead to separation anxiety when they're left alone."
+                ['tag' => 'needs_company', 'source_ids' => ['S269'], 'refs' => ['miniature_american_shepherd.behaviour.time_alone']],
+                // S267 "The breed sheds a fair amount, …"; S269 "This breed sheds year-round, …".
+                ['tag' => 'sheds', 'source_ids' => ['S267', 'S269'], 'refs' => ['miniature_american_shepherd.suitability.akc_shedding', 'miniature_american_shepherd.suitability.petmd_shedding']],
+            ],
+        ],
+
+        // M5-R10-33: chihuahua.* (S272–S280), runbook rules (data.json proposed_game_parameters.chihuahua
+        // .suitability_tags). RKC Smooth Coat (S275) + PDSA (S277); AKC (S278) advises against homes with
+        // children → never family_pet / children / small_children, the PDSA's older_children instead.
+        // other_pets with the PDSA caveat (pets it grew up with). Not flat-faced; Breed Watch Category 2
+        // without returned points → no welfare chip (open for David).
+        'chihuahua' => [
+            'suits' => [
+                // S275 "Size of home: Flat/ Apartment" / "Size of garden: Small/ medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S275'], 'refs' => ['chihuahua.suitability.rkc_size_of_home', 'chihuahua.suitability.rkc_size_of_garden']],
+                // S277 "Generally speaking, your Chihuahua will live happily with another pet they have grown up with."
+                ['tag' => 'other_pets', 'source_ids' => ['S277'], 'refs' => ['chihuahua.behaviour.other_pets']],
+            ],
+            'consider' => [
+                // S277 "Because of this, they're better suited to families with slightly older children".
+                ['tag' => 'older_children', 'source_ids' => ['S277'], 'refs' => ['chihuahua.behaviour.family', 'chihuahua.suitability.pdsa_children']],
+                // S277 "As companion dogs Chihuahuas love company and need someone around the home all the time."
+                ['tag' => 'needs_company', 'source_ids' => ['S277'], 'refs' => ['chihuahua.behaviour.time_alone', 'chihuahua.suitability.pdsa_time_alone']],
+                // S275 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S275'], 'refs' => ['chihuahua.suitability.rkc_shedding']],
+            ],
+        ],
+        // M5-R10-34: english_springer_spaniel.* (S281–S288), runbook rules (data.json
+        // proposed_game_parameters.english_springer_spaniel.suitability_tags). RKC (S284) + PDSA (S285) + AKC (S286).
+        // PDSA "get along well with children and other household pets" → children + other_pets (no rating for
+        // small children). RKC "Small house" → neither apartment nor large_home. Breed Watch Category 1 with
+        // no points of concern → no welfare chip.
+        'english_springer_spaniel' => [
+            'suits' => [
+                // S284 "Exercise: More than 2 hours per day"; S285 "over 2 hours of exercise per day"; S286 "A more active household would be the best fit".
+                ['tag' => 'active_family', 'source_ids' => ['S284', 'S285', 'S286'], 'refs' => ['english_springer_spaniel.exercise.adult', 'english_springer_spaniel.suitability.pdsa_exercise', 'english_springer_spaniel.suitability.akc_active_household']],
+                // S285 "They make good family dogs; they’re well behaved, love to be kept involved in family activities".
+                ['tag' => 'family_pet', 'source_ids' => ['S285'], 'refs' => ['english_springer_spaniel.suitability.pdsa_family', 'english_springer_spaniel.behaviour.family']],
+                // S285 "get along well with children and other household pets."
+                ['tag' => 'children', 'source_ids' => ['S285'], 'refs' => ['english_springer_spaniel.suitability.pdsa_children']],
+                ['tag' => 'other_pets', 'source_ids' => ['S285'], 'refs' => ['english_springer_spaniel.behaviour.other_pets', 'english_springer_spaniel.suitability.pdsa_children']],
+            ],
+            'consider' => [
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S284', 'S285'], 'refs' => ['english_springer_spaniel.exercise.adult', 'english_springer_spaniel.suitability.pdsa_exercise']],
+                // S286 "Springers should not be left alone for long periods of time, …"
+                ['tag' => 'needs_company', 'source_ids' => ['S286'], 'refs' => ['english_springer_spaniel.behaviour.time_alone', 'english_springer_spaniel.suitability.akc_time_alone']],
+                // S284 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S284'], 'refs' => ['english_springer_spaniel.suitability.rkc_shedding']],
+                // S284 "Grooming: More than once a week"; S285 "once or twice a week, plus clipping every 3 months".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S284', 'S285'], 'refs' => ['english_springer_spaniel.suitability.rkc_grooming', 'english_springer_spaniel.suitability.pdsa_grooming']],
+            ],
+        ],
+        // M5-R10-35: shetland_sheepdog.* (S289–S295), runbook rules (data.json
+        // proposed_game_parameters.shetland_sheepdog.suitability_tags). RKC (S291) + PDSA (S293) + AKC (S294).
+        // PDSA "get along happily with children" → children (no rating for small children); AKC "would fare
+        // best in a home with older children due to their herding instincts" → may_herd_children. RKC
+        // "Small house" → neither apartment nor large_home. Breed Watch Category 2 without a named point
+        // (S292) → no welfare chip (open for David). AKC "will chase just about anything" is not a named
+        // high prey drive → no chases_small_pets.
+        'shetland_sheepdog' => [
+            'suits' => [
+                // S293 "Shelties often fit well into family life and get along happily with children."
+                ['tag' => 'family_pet', 'source_ids' => ['S293'], 'refs' => ['shetland_sheepdog.suitability.pdsa_family', 'shetland_sheepdog.behaviour.family']],
+                ['tag' => 'children', 'source_ids' => ['S293'], 'refs' => ['shetland_sheepdog.suitability.pdsa_family']],
+            ],
+            'consider' => [
+                // S294 "Shelties are quite athletic, and require regular mental and physical exercise to keep them from acting out."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S294'], 'refs' => ['shetland_sheepdog.behaviour.mental_stimulation', 'shetland_sheepdog.suitability.akc_mental_exercise']],
+                // S294 "They can do well with kids, but would fare best in a home with older children due to their herding instincts."
+                ['tag' => 'may_herd_children', 'source_ids' => ['S294'], 'refs' => ['shetland_sheepdog.behaviour.herding_children', 'shetland_sheepdog.suitability.akc_children']],
+                // S291 "Grooming: Every day"; S293 "They need daily grooming to keep their thick coat in tip-top condition."
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S291', 'S293'], 'refs' => ['shetland_sheepdog.suitability.rkc_grooming', 'shetland_sheepdog.suitability.pdsa_grooming']],
+                // S291 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S291'], 'refs' => ['shetland_sheepdog.suitability.rkc_shedding']],
+            ],
+        ],
+        // M5-R10-36: brittany.* (S296–S302), runbook rules (data.json
+        // proposed_game_parameters.brittany.suitability_tags). RKC (S298) + AKC (S301) + PetMD (S302).
+        // RKC "More than 2 hours per day" → active_family + long_daily_exercise. RKC "Small house" →
+        // neither apartment nor large_home. PetMD "hardwired with a high prey drive" → chases_small_pets
+        // (its "other pets" line conflicts → no other_pets). RKC "More than once a week" vs AKC / PetMD
+        // weekly → no frequent_grooming. Breed Watch Category 1 → no welfare chip.
+        'brittany' => [
+            'suits' => [
+                // S298 "Exercise: More than 2 hours per day"; S301 "they require plenty of exercise."
+                ['tag' => 'active_family', 'source_ids' => ['S298', 'S301'], 'refs' => ['brittany.exercise.adult', 'brittany.exercise.energy']],
+                // S302 "the perfect, medium-size sporting dog for an active family with children and other pets"
+                ['tag' => 'family_pet', 'source_ids' => ['S302'], 'refs' => ['brittany.suitability.petmd_family', 'brittany.behaviour.family']],
+                // S302 "sweet and well-behaved with children of all ages"; S301 "tend to be patient with children."
+                ['tag' => 'children', 'source_ids' => ['S302', 'S301'], 'refs' => ['brittany.suitability.petmd_children', 'brittany.suitability.akc_children']],
+            ],
+            'consider' => [
+                // S298 "Exercise: More than 2 hours per day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S298'], 'refs' => ['brittany.exercise.adult', 'brittany.suitability.rkc_exercise']],
+                // S301 "It’s essential that Brittanys get plenty of exercise and mental stimulation to keep them from acting out."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S301'], 'refs' => ['brittany.behaviour.mental_stimulation', 'brittany.suitability.akc_mental_exercise']],
+                // S302 "don’t do well when left alone for long periods"
+                ['tag' => 'needs_company', 'source_ids' => ['S302'], 'refs' => ['brittany.behaviour.time_alone', 'brittany.suitability.petmd_time_alone']],
+                // S298 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S298'], 'refs' => ['brittany.suitability.rkc_shedding']],
+                // S302 "The Brittany was bred to hunt birds, so they are hardwired with a high prey drive." (David 2026-10-12: last).
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S302'], 'refs' => ['brittany.behaviour.other_pets']],
+            ],
+        ],
+        // M5-R10-37: american_cocker_spaniel.* (S303–S311), runbook rules (data.json
+        // proposed_game_parameters.american_cocker_spaniel.suitability_tags). RKC (S305) + AKC (S308) +
+        // PetMD (S309) + VCA (S310). RKC "More than 2 hours per day" conflicts with AKC / PetMD "don't
+        // require a lot / high levels of exercise" → no active_family / long_daily_exercise. RKC "Small
+        // house" → neither apartment nor large_home. Breed Watch Category 2 without a named point → no
+        // welfare chip.
+        'american_cocker_spaniel' => [
+            'suits' => [
+                // S309 "At home, these sweet-tempered pups love being close to their people and make great family dogs."
+                ['tag' => 'family_pet', 'source_ids' => ['S309'], 'refs' => ['american_cocker_spaniel.suitability.petmd_family', 'american_cocker_spaniel.behaviour.family']],
+                // S310 "Usually very good with children."; S308 "They generally enjoy spending time with children …"
+                ['tag' => 'children', 'source_ids' => ['S310', 'S308'], 'refs' => ['american_cocker_spaniel.suitability.vca_children', 'american_cocker_spaniel.suitability.akc_children']],
+                // S310 "Gets along well with other pets and dogs."; S309 "… both with people and with other animals."
+                ['tag' => 'other_pets', 'source_ids' => ['S310', 'S309'], 'refs' => ['american_cocker_spaniel.suitability.vca_other_pets', 'american_cocker_spaniel.suitability.petmd_other_animals']],
+            ],
+            'consider' => [
+                // S305 "Grooming: Every day"; S310 "brushing and combing two to three times a week".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S305', 'S310'], 'refs' => ['american_cocker_spaniel.suitability.rkc_grooming', 'american_cocker_spaniel.suitability.vca_grooming']],
+                // S310 "Cockers have a tendency to become overweight."; S309 "often easily motivated by rewards of food".
+                ['tag' => 'food_motivated_weight', 'source_ids' => ['S310', 'S309'], 'refs' => ['american_cocker_spaniel.behaviour.obesity_tendency', 'american_cocker_spaniel.behaviour.food_motivation']],
+                // S305 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S305'], 'refs' => ['american_cocker_spaniel.suitability.rkc_shedding']],
+            ],
+        ],
+        // M5-R10-38: belgian_malinois.* (S312–S318), runbook rules (data.json
+        // proposed_game_parameters.belgian_malinois.suitability_tags). RKC (S314) + AKC (S316) + PetMD
+        // (S317). No family_pet / children / other_pets: AKC "older, responsible kids", PetMD herds
+        // toddlers and has a high prey drive. RKC "More than once a week" vs AKC / PetMD "occasional"
+        // brushing → no frequent_grooming. Breed Watch Category 1 → no welfare chip.
+        'belgian_malinois' => [
+            'suits' => [
+                // S314 "Exercise: More than 2 hours per day"; S316 "Mals require significant exercise on a daily basis".
+                ['tag' => 'active_family', 'source_ids' => ['S314', 'S316'], 'refs' => ['belgian_malinois.exercise.adult', 'belgian_malinois.suitability.akc_exercise']],
+                // S314 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S314'], 'refs' => ['belgian_malinois.suitability.rkc_size_of_home', 'belgian_malinois.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S314 "More than 2 hours per day"; S316 "significant exercise on a daily basis".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S314', 'S316'], 'refs' => ['belgian_malinois.exercise.adult', 'belgian_malinois.suitability.akc_exercise']],
+                // S316 "don't make them a good choice for first-time dog owners"; S317 "need a dedicated and experienced pet parent".
+                ['tag' => 'experienced_owner', 'source_ids' => ['S316', 'S317'], 'refs' => ['belgian_malinois.behaviour.experienced_owner', 'belgian_malinois.suitability.akc_experienced_owner', 'belgian_malinois.suitability.petmd_experienced_owner']],
+                // S316 "Mals would fare best in families with older, responsible kids." + "supervision around children is a must"
+                // (the older_children chip reads "small dog" — not this breed).
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S316'], 'refs' => ['belgian_malinois.suitability.akc_children', 'belgian_malinois.behaviour.family']],
+                // S317 "They may also try to use their herding skills to round up toddlers and children."
+                ['tag' => 'may_herd_children', 'source_ids' => ['S317'], 'refs' => ['belgian_malinois.suitability.petmd_herding_children']],
+                // S316 "happiest with plenty of mental and physical activity".
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S316'], 'refs' => ['belgian_malinois.exercise.energy', 'belgian_malinois.suitability.akc_mental_stimulation']],
+                // S316 "they should not be left alone for extended periods of time."
+                ['tag' => 'needs_company', 'source_ids' => ['S316'], 'refs' => ['belgian_malinois.behaviour.time_alone', 'belgian_malinois.suitability.akc_time_alone']],
+                // S314 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S314'], 'refs' => ['belgian_malinois.suitability.rkc_shedding']],
+                // S317 "Belgian Malinois also have a high prey drive, making them extremely interested in moving objects."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S317'], 'refs' => ['belgian_malinois.behaviour.other_pets', 'belgian_malinois.suitability.petmd_prey_drive']],
+            ],
+        ],
+        // M5-R10-39: basset_hound.* (S319–S325), runbook rules (data.json
+        // proposed_game_parameters.basset_hound.suitability_tags). RKC (S321) + Breed Watch (S322) +
+        // PDSA (S323) + AKC (S324). Welfare breed (Breed Watch Category 3) → eyelid_problems +
+        // sensitive_skin. large_home by the rule (RKC "Large house"; the garden is "Small/ medium" — open for
+        // David), no other_pets (PDSA: never
+        // unattended with another pet), no secure_fencing (the chip says "high fence" — not sourced)
+        // and no back_spine (IVDD is not a Breed Watch point) — open for David.
+        'basset_hound' => [
+            'suits' => [
+                // S323 "They do well in family environments thanks to their sweet nature …".
+                ['tag' => 'family_pet', 'source_ids' => ['S323'], 'refs' => ['basset_hound.suitability.pdsa_family', 'basset_hound.behaviour.family']],
+                // S323 "should get along with children very well"; S324 "often makes them good companions for children".
+                ['tag' => 'children', 'source_ids' => ['S323', 'S324'], 'refs' => ['basset_hound.suitability.pdsa_children', 'basset_hound.suitability.akc_children']],
+                // S321 "Size of home: Large house" (runbook: large_home from RKC "Large house").
+                ['tag' => 'large_home', 'source_ids' => ['S321'], 'refs' => ['basset_hound.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                // S322 "Eyelids not in normal contact with the eyeball, they are turned inwards or outwards"; S323 POAG.
+                ['tag' => 'eyelid_problems', 'source_ids' => ['S322', 'S323'], 'refs' => ['basset_hound.health.breed_watch', 'basset_hound.health.eyes']],
+                // S322 "Signs of dermatitis irritation in skin folds …"; S323 "check the folds in their skin every day".
+                ['tag' => 'sensitive_skin', 'source_ids' => ['S322', 'S323'], 'refs' => ['basset_hound.health.skin_folds', 'basset_hound.suitability.pdsa_skin_folds']],
+                // S323 "Basset Hounds can have very healthy appetites and so need plenty of exercise so they don't gain weight."
+                ['tag' => 'food_motivated_weight', 'source_ids' => ['S323'], 'refs' => ['basset_hound.behaviour.food_motivation', 'basset_hound.suitability.pdsa_appetite']],
+                // S323 "they love company"; "They best suit a family home where there is always someone around".
+                ['tag' => 'needs_company', 'source_ids' => ['S323'], 'refs' => ['basset_hound.behaviour.time_alone', 'basset_hound.suitability.pdsa_company']],
+                // S321 "Sheds: Yes"; S324 "But they shed more than you might expect."
+                ['tag' => 'sheds', 'source_ids' => ['S321', 'S324'], 'refs' => ['basset_hound.suitability.rkc_shedding', 'basset_hound.suitability.akc_shedding']],
+                // S324 "Their long jowls create excess saliva, which is a normal trait of the breed."
+                ['tag' => 'drools', 'source_ids' => ['S324'], 'refs' => ['basset_hound.behaviour.drooling', 'basset_hound.suitability.akc_drooling']],
+            ],
+        ],
+        // M5-R10-40: hungarian_vizsla.* (S326–S334), runbook rules (data.json
+        // proposed_game_parameters.hungarian_vizsla.suitability_tags). RKC (S328) + PDSA (S329) + PetMD (S330)
+        // + Dogs Trust Ireland (S333). Breed Watch Category 1 → no welfare chip. No children (older children
+        // only — not_for_small_children instead, Belgian Malinois precedent), no other_pets (PDSA prey drive vs
+        // PetMD fine with cats — conflicting), no needs_mental_stimulation (no explicit statement) — open for David.
+        'hungarian_vizsla' => [
+            'suits' => [
+                // S328 "Exercise: More than 2 hours per day"; S329 "a minimum of two hours exercise every day".
+                ['tag' => 'active_family', 'source_ids' => ['S328', 'S329'], 'refs' => ['hungarian_vizsla.exercise.adult', 'hungarian_vizsla.suitability.pdsa_exercise']],
+                // S330 "… making them ideal family pets for households with children."
+                ['tag' => 'family_pet', 'source_ids' => ['S330'], 'refs' => ['hungarian_vizsla.suitability.petmd_family', 'hungarian_vizsla.behaviour.family']],
+                // S328 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S328'], 'refs' => ['hungarian_vizsla.suitability.rkc_size_of_home', 'hungarian_vizsla.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S328 "More than 2 hours per day"; S329 "a minimum of two hours exercise every day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S328', 'S329'], 'refs' => ['hungarian_vizsla.exercise.adult', 'hungarian_vizsla.suitability.pdsa_exercise']],
+                // S329 "Their energy levels and strong personality means they are not suitable for first time dog owners."
+                ['tag' => 'experienced_owner', 'source_ids' => ['S329'], 'refs' => ['hungarian_vizsla.behaviour.experienced_owner', 'hungarian_vizsla.suitability.pdsa_experienced_owner']],
+                // S329 "We wouldn't recommend a Vizsla if you have very young children"; S330 "for small children under the age of 6 …".
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S329', 'S330'], 'refs' => ['hungarian_vizsla.suitability.pdsa_children', 'hungarian_vizsla.suitability.petmd_small_children']],
+                // S329 "… often suffer with separation anxiety if left alone."; "someone around all day".
+                ['tag' => 'needs_company', 'source_ids' => ['S329'], 'refs' => ['hungarian_vizsla.behaviour.time_alone', 'hungarian_vizsla.suitability.pdsa_company']],
+                // S328 "Sheds: Yes"; S333 "Hungarian Vizslas shed moderately."
+                ['tag' => 'sheds', 'source_ids' => ['S328', 'S333'], 'refs' => ['hungarian_vizsla.suitability.rkc_shedding', 'hungarian_vizsla.suitability.dt_shedding']],
+                // S329 "Hungarian Vizslas do have a high prey drive, so we wouldn't advise keeping them with smaller pets."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S329'], 'refs' => ['hungarian_vizsla.behaviour.other_pets', 'hungarian_vizsla.suitability.pdsa_prey_drive']],
+            ],
+        ],
+
     ],
 ];

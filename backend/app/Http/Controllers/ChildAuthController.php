@@ -4,9 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Enums\TokenAbility;
 use App\Exceptions\ChildLoginException;
+use App\Http\Requests\ChildDeviceSessionRequest;
 use App\Http\Requests\PinLoginRequest;
 use App\Http\Resources\PairedPetResource;
+use App\Models\User;
 use App\Services\ChildPinLoginService;
+use App\Services\ChildProfileService;
+use App\Services\Results\ChildSession;
 use Illuminate\Http\JsonResponse;
 
 /**
@@ -45,21 +49,66 @@ class ChildAuthController extends Controller
         try {
             $result = $this->logins->login($request->pin(), $request->deviceName(), (string) $request->ip(), $request->features());
         } catch (ChildLoginException $e) {
-            $body = ['message' => $e->getMessage(), 'reason' => $e->reason];
-            $headers = [];
-            if ($e->retryAfter !== null) {
-                $body['retry_after'] = $e->retryAfter;
-                $headers['Retry-After'] = (string) $e->retryAfter;
-            }
-
-            return response()->json($body, $e->status, $headers);
+            return $this->refusal($e);
         }
 
-        $child = $result['child'];
-        $pet = $result['pet']->refresh();
+        return $this->session($result);
+    }
+
+    /**
+     * Profile switching on one phone (M2-11, David 2026-10-14): the signed-in
+     * parent opens this child's profile on the same device — no PIN (the
+     * parent is already authenticated). Back to the parent = a real parent
+     * re-login (password or Google / Apple); the app revokes the parent token
+     * when it switches (David 2026-10-14). The answer is exactly the `POST /api/child/pin-login` body of
+     * a re-login (`mode: relogin`, token with the `child` ability). The parent's
+     * own token is untouched; each token logs out on its own.
+     *
+     * One shared-phone session per parent and child: calling it again replaces
+     * the previous one (switching back and forth never signs the child's own
+     * phones out). It counts as one of the child's 3 devices.
+     *
+     * Optional `device_name` (phone model) and `features` as at PIN login.
+     * 404 `child_not_found` (not a child of the parent's family), 403 for a
+     * non-parent, 409 `no_pet` (the child has no pet yet — pair with a PIN
+     * first), 422 `app_update_required` (a cat without `species_cat`), 429
+     * when throttled (20 / min per parent).
+     *
+     * POST /api/parent/children/{child}/device-session
+     */
+    public function deviceSession(ChildDeviceSessionRequest $request, ChildProfileService $profiles, string $child): JsonResponse
+    {
+        /** @var User $parent */
+        $parent = $request->user();
+        if (! $parent->can('manageFamily', User::class)) {
+            abort(403);
+        }
+
+        $profile = $profiles->childOfParentFamily($parent, $child);
+        if ($profile === null || ! $parent->can('manageChild', $profile)) {
+            return response()->json(['message' => 'No such child in your family.', 'reason' => 'child_not_found'], 404);
+        }
+
+        try {
+            $result = $this->logins->deviceSession($parent, $profile, $request->deviceName(), $request->features());
+        } catch (ChildLoginException $e) {
+            return $this->refusal($e);
+        }
+
+        return $this->session($result);
+    }
+
+    /**
+     * The child session body (PIN login and device session). Typed parameters
+     * keep the OpenAPI schema precise.
+     */
+    private function session(ChildSession $session): JsonResponse
+    {
+        $child = $session->child;
+        $pet = $session->pet->refresh();
 
         return response()->json([
-            'token' => $result['token'],
+            'token' => $session->token,
             'abilities' => [TokenAbility::Child->value],
             // Only the nickname — the profile has no e-mail.
             'user' => [
@@ -67,11 +116,23 @@ class ChildAuthController extends Controller
                 'name' => $child->name,
                 'role' => $child->role->value,
             ],
-            'mode' => $result['mode'],
-            'joined_existing' => $result['joined_existing'],
+            'mode' => $session->mode,
+            'joined_existing' => $session->joinedExisting,
             'family_id' => $pet->family_id,
             'pet' => new PairedPetResource($pet, $child),
             'awaiting_contract' => (bool) ($pet->isUnborn() || $pet->caretakerNeedsContract($child)),
         ], 200);
+    }
+
+    private function refusal(ChildLoginException $e): JsonResponse
+    {
+        $body = ['message' => $e->getMessage(), 'reason' => $e->reason];
+        $headers = [];
+        if ($e->retryAfter !== null) {
+            $body['retry_after'] = $e->retryAfter;
+            $headers['Retry-After'] = (string) $e->retryAfter;
+        }
+
+        return response()->json($body, $e->status, $headers);
     }
 }

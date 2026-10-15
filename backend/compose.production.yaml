@@ -12,11 +12,20 @@
 #
 # Variables interpolated here come from backend/.env (copy of /opt/petprep/.env
 # written by the deploy script) or the shell: PETPREP_IMAGE_TAG (default
-# production), PET_MEDIA_SERVE_VIA (default caddy), PUSH_ENABLED (default true), DB_*.
+# production), PET_MEDIA_SERVE_VIA (default caddy), PUSH_ENABLED (default true), DB_*,
+# PETPREP_API_DOMAIN / PETPREP_CADDY_SITES (caddy, D18 — production defaults).
+
+# Bounded container logs for every service (disk hygiene, David 2026-10-15): 3 × 10 MB.
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: 10m
+    max-file: '3'
 
 x-php: &php
   image: petprep-app:${PETPREP_IMAGE_TAG:-production}
   restart: unless-stopped
+  logging: *logging
   env_file:
     - /opt/petprep/.env
   environment:
@@ -42,11 +51,19 @@ services:
       target: web
     image: petprep-web:${PETPREP_IMAGE_TAG:-production}
     restart: unless-stopped
+    logging: *logging
     ports:
       - "80:80"
       - "443:443"
     env_file:
       - /opt/petprep/.env
+    environment:
+      # Server identity (D18): the Caddyfile serves {$PETPREP_API_DOMAIN} and imports the
+      # site set {$PETPREP_CADDY_SITES} (production = + petprep.si / www / raw IP;
+      # api-only = dev server). deploy-production.sh derives both from APP_URL and
+      # exports them; the defaults are production's.
+      PETPREP_API_DOMAIN: ${PETPREP_API_DOMAIN:-api.petprep.si}
+      PETPREP_CADDY_SITES: ${PETPREP_CADDY_SITES:-production}
     volumes:
       - ../deployment/Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data
@@ -91,7 +108,9 @@ services:
 
   queue:
     <<: *php
-    command: ["php", "artisan", "queue:work", "redis", "--queue=default", "--tries=3", "--timeout=90", "--sleep=3"]
+    # `auth` first (M2-10c): Apple token revocation must run within the 5-minute
+    # life of the authorization code, ahead of slow media jobs.
+    command: ["php", "artisan", "queue:work", "redis", "--queue=auth,default", "--tries=3", "--timeout=90", "--sleep=3"]
     # > --timeout=90: a running fal.ai / media download job finishes on SIGTERM
     # instead of being killed after Docker's default 10 s.
     stop_grace_period: 100s
@@ -133,6 +152,7 @@ services:
   postgres:
     image: 'postgres:18-alpine'
     restart: unless-stopped
+    logging: *logging
     env_file:
       - /opt/petprep/.env
     environment:
@@ -152,6 +172,7 @@ services:
   redis:
     image: 'redis:alpine'
     restart: unless-stopped
+    logging: *logging
     command: ["redis-server", "--appendonly", "yes"]
     volumes:
       - redis_data:/data

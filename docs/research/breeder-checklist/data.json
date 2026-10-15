@@ -1302,6 +1302,328 @@
       "status": "not_found",
       "tests": [],
       "notes": "RKC breed page (current address, dog-data S255, 2026-10-13) shows the 'Good Practice schemes and tests' and 'Best Practice schemes and tests' headings but returned no individual test; the older address (S256) the same, plus 'There are not currently any additional breed specific restrictions in place for this breed.' The RKC Health Standard (dog-data S263, thekennelclub.org.uk/BreedSpecificRequirements) lists the Boston Terrier with no test in either column and no breed club scheme (no verbatim sentence returned, so not recorded as none_recommended — German Shorthaired Pointer precedent). The University of Cambridge / Kennel Club Respiratory Function Grading scheme is only planned for the breed (S261, paraphrase) → not listed as boas_grading. PDSA (dog-data S259): check that the parents were screened under the Canine Health Schemes (no named test). Show the general dog checklist only."
+    },
+    "miniature_american_shepherd": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S269",
+        "quote": "All Miniature American Shepherds should be tested for this genetic mutation."
+      },
+      "tests": [
+        {
+          "key": "dna_mdr1",
+          "level": "other_scheme",
+          "name": "Genetic test for the MDR1 mutation",
+          "source_id": "S269",
+          "quote": "All Miniature American Shepherds should be tested for this genetic mutation."
+        },
+        {
+          "key": "eye_scheme",
+          "level": "other_scheme",
+          "name": "Eye examination and / or genetic test for collie eye anomaly",
+          "source_id": "S269",
+          "quote": "Reputable breeders will have their dogs’ eyes examined and/or be genetically tested for this condition."
+        },
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip dysplasia screening",
+          "source_id": "S269",
+          "quote": "Reputable Miniature American Shepherd breeders make sure their dogs are screened for this genetic condition."
+        },
+        {
+          "key": "patella_scheme",
+          "level": "other_scheme",
+          "name": "Evaluation for patellar luxation before breeding",
+          "source_id": "S269",
+          "quote": "Miniature American Shepherds should be evaluated for patellar luxation before breeding or if they have rear leg lameness."
+        }
+      ],
+      "notes": "The RKC breed page (imported register since April 2026) could not be fetched (error, 2026-10-13) and the RKC Health Standard (breed-specific requirements page) has no row for the breed ('Any breed that does not appear on the list currently has no breed-specific health screening requirements', as returned in part). PetMD (dog-data S269, DVM-written and reviewed) names the parents' tests → other_scheme (no RKC list to rank them as minimum; Cane Corso precedent). PetMD also advises asking about eye screening for cataracts (covered by the eye examination). The FCI breed club rules in Slovenia (KZS, K7) may set other tests."
+    },
+    "chihuahua": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S275",
+        "level_quotes": {
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "cm_sm_mri",
+          "level": "best_practice",
+          "name": "CM/SM screening using the KC/ BVA Chiari-like malformation/ syringomyelia (CM/SM) screening scheme",
+          "source_id": "S275",
+          "quote": "CM/SM screening using the KC/ BVA Chiari-like malformation/ syringomyelia (CM/SM) screening scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S275",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip x-ray screening through the BVA/Kennel Club Hip Dysplasia Scheme",
+          "source_id": "S277",
+          "quote": "Before breeding, dogs should be screened by x-rays through the BVA/Kennel Club Hip Dysplasia Scheme."
+        },
+        {
+          "key": "heart_scheme",
+          "level": "other_scheme",
+          "name": "Heart scans of the parents for heart valve problems",
+          "source_id": "S277",
+          "quote": "Heart disease – heart scans can screen parents for heart valve problems."
+        },
+        {
+          "key": "patella_scheme",
+          "level": "other_scheme",
+          "name": "Kneecap (patella) check by a vet before breeding",
+          "source_id": "S277",
+          "quote": "Before breeding parents can be checked by a vet for this."
+        }
+      ],
+      "notes": "RKC breed page (Smooth Coat, dog-data S275, 2026-10-13): no minimum list; under 'Best Practice schemes and tests': the KC/BVA CM/SM screening scheme and the BVA/KC/ISDS eye scheme; 'To support the breed’s health, responsible breeders should ensure they complete all tests in best practice.' PDSA (dog-data S277) names three more parent checks for the breed — the BVA/KC hip x-ray scheme, heart scans for heart valve problems and a vet's kneecap check — recorded as other_scheme (Cane Corso / Miniature American Shepherd precedent). Existing keys only."
+    },
+    "english_springer_spaniel": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S284",
+        "level_quotes": {
+          "minimum": "Good Practice schemes and tests",
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "elbow_scheme",
+          "level": "minimum",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S284",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S284",
+          "quote": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S284",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        },
+        {
+          "key": "dna_ams",
+          "level": "best_practice",
+          "name": "DNA test for Acral mutilation syndrome (AMS)",
+          "source_id": "S284",
+          "quote": "DNA test for Acral mutilation syndrome (AMS) - Find a list of tested dogs here"
+        },
+        {
+          "key": "dna_dams",
+          "level": "best_practice",
+          "name": "DNA test for Dyserythropoietic anemia and myopathy syndrome (DAMS)",
+          "source_id": "S284",
+          "quote": "DNA test for Dyserythropoietic anemia and myopathy syndrome (DAMS) - Find a list of tested dogs here"
+        },
+        {
+          "key": "dna_fuco",
+          "level": "best_practice",
+          "name": "DNA test for Fucosidosis (fuco)",
+          "source_id": "S284",
+          "quote": "DNA test for Fucosidosis (fuco) - Find a list of tested dogs here"
+        },
+        {
+          "key": "dna_pfk",
+          "level": "best_practice",
+          "name": "DNA test for Phosphofructokinase deficiency (PFK)",
+          "source_id": "S284",
+          "quote": "DNA test for Phosphofructokinase deficiency (PFK) - Find a list of tested dogs here"
+        },
+        {
+          "key": "dna_pra_cord1",
+          "level": "best_practice",
+          "name": "DNA test for Progressive retinal atrophy (PRA(cord1))",
+          "source_id": "S284",
+          "quote": "DNA test for Progressive retinal atrophy (PRA(cord1)) - Find a list of tested dogs here"
+        }
+      ],
+      "notes": "RKC breed page (older address display.aspx?id=2053, dog-data S284, 2026-10-14): 'Pre-breeding health screening' with 'Good Practice schemes and tests' (= minimum; the page also says 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding'): elbow, eye (with gonioscopy for PLA) and hip schemes; and 'Best Practice schemes and tests': DNA tests for AMS, DAMS, fucosidosis, PFK and PRA (cord1). The Good Practice line 'Prioritising genetic diversity' is advice, not a test — not added (inbreeding_coi is the Bulldog's calculator line). PDSA (S285) recommends checking that the parents were screened under the BVA/KC Canine Health Schemes. New test keys dna_ams, dna_dams, dna_fuco, dna_pfk, dna_pra_cord1 need website words."
+    },
+    "shetland_sheepdog": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S291",
+        "level_quotes": {
+          "minimum": "Good Practice schemes and tests",
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S291",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme (including litter screening)",
+          "source_id": "S291",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme (including litter screening)"
+        },
+        {
+          "key": "dna_cea",
+          "level": "best_practice",
+          "name": "DNA test for Collie eye anomaly/ choroidal hypoplasia (CEA/CH)",
+          "source_id": "S291",
+          "quote": "DNA test for Collie eye anomaly/ choroidal hypoplasia (CEA/CH)"
+        },
+        {
+          "key": "dna_mdr1",
+          "level": "best_practice",
+          "name": "DNA test for Multi-drug resistance (MDR1)",
+          "source_id": "S291",
+          "quote": "DNA test for Multi-drug resistance (MDR1))"
+        },
+        {
+          "key": "dna_bbs2_pra",
+          "level": "best_practice",
+          "name": "DNA test for Progressive retinal atrophy (BBS2-PRA)",
+          "source_id": "S291",
+          "quote": "DNA test for Progressive retinal atrophy (BBS2-PRA)"
+        },
+        {
+          "key": "dna_cnga1_pra",
+          "level": "best_practice",
+          "name": "DNA test for Progressive retinal atrophy (CNGA1-PRA)",
+          "source_id": "S291",
+          "quote": "DNA test for Progressive retinal atrophy (CNGA1-PRA)"
+        },
+        {
+          "key": "dna_vwd3",
+          "level": "best_practice",
+          "name": "DNA test for von Willebrand disease (vWD3-2)",
+          "source_id": "S291",
+          "quote": "DNA test for von Willebrand disease (vWD3-2)"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S291",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S291",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/ KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S291, 2026-10-14): 'Pre-breeding Health Screening' with 'Good Practice schemes and tests' (= minimum; 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding'): genetic diversity (inbreeding_coi, Dachshund / Siberian Husky precedent) and the eye scheme with litter screening; 'Best Practice schemes and tests': DNA tests for CEA/CH, MDR1, BBS2-PRA, CNGA1-PRA and vWD3-2, elbow and hip schemes. The page prints the MDR1 line with a double bracket ('(MDR1))') — the name is written without it. PDSA (dog-data S293) recommends checking that the parents were screened under the BVA/KC Canine Health Schemes. New test keys dna_bbs2_pra, dna_cnga1_pra, dna_vwd3 need website words."
+    },
+    "brittany": {
+      "status": "not_found",
+      "tests": [],
+      "notes": "RKC breed page (dog-data S298, 2026-10-14) describes the Good Practice and Best Practice tiers but returned no individual test for the Brittany ('The page does not list the specific tests in either tier', tool summary) and 'no breed-specific DNA testing package'. The RKC Health Standard (dog-data S263, thekennelclub.org.uk/BreedSpecificRequirements, read 2026-10-14) lists the Brittany with empty Good Practice and Best Practice columns (no verbatim sentence returned, so not recorded as none_recommended — Boston Terrier / German Shorthaired Pointer precedent). No PDSA Brittany page. PetMD (dog-data S302) names hip dysplasia, epilepsy, hypothyroidism and cataracts but no test → nothing guessed. Show the general dog checklist only."
+    },
+    "american_cocker_spaniel": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S305",
+        "level_quotes": {
+          "minimum": "Good Practice schemes and tests",
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S305",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S305",
+          "quote": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "dna_prcd_pra",
+          "level": "best_practice",
+          "name": "DNA test for progressive retinal atrophy (prcd-PRA)",
+          "source_id": "S305",
+          "quote": "DNA test for progressive retinal atrophy (prcd-PRA)"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S305",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S305, 2026-10-14): 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding' — Good Practice schemes and tests (= minimum): genetic diversity (inbreeding_coi, Shetland Sheepdog precedent) and the eye scheme with gonioscopy for PLA; Best Practice: DNA prcd-PRA and the hip scheme. The older page (S306) also names a PFK DNA test under 'Other available' — not added (not a recommended tier). No new test key."
+    },
+    "belgian_malinois": {
+      "status": "not_found",
+      "tests": [],
+      "notes": "RKC breed page (dog-data S314, 2026-10-14) shows the headings 'Priority health schemes and tests' and 'Important health schemes and tests' but returned no named test (tool: 'NO NAMED TESTS'); the new royalkennelclub.com address returned a fetch error. No PDSA Belgian Malinois page. PetMD (dog-data S317) names elbow / hip dysplasia, cataracts and PRA but no test; the SRSH hip / elbow recommendation is only on Wikipedia (dog-data S318, tier C — never alone) → nothing guessed. Show the general dog checklist only."
+    },
+    "basset_hound": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K23",
+        "quote": "The Kennel Club has approved a new official DNA testing scheme for primary open angle glaucoma (POAG) in the Basset Hound"
+      },
+      "tests": [
+        {
+          "key": "dna_poag",
+          "level": "other_scheme",
+          "name": "DNA test for primary open angle glaucoma (POAG) — official Kennel Club DNA testing scheme",
+          "source_id": "K23",
+          "quote": "The Kennel Club has approved a new official DNA testing scheme for primary open angle glaucoma (POAG) in the Basset Hound"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S321, 2026-10-15) shows the headings 'Good Practice schemes and tests' and 'Best Practice schemes and tests' but returned no named test → no minimum / best_practice level. The RKC news item (K23) on the official POAG DNA testing scheme for the breed → other_scheme; PDSA (dog-data S323) names Primary Open Angle Glaucoma among the breed's eye problems. Elbow dysplasia (PDSA) has no breed-specific scheme statement → not listed (nothing guessed)."
+    },
+    "hungarian_vizsla": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S328",
+        "quote": "the breed have hip and elbow screening as requirements under the Assured Breeders Scheme"
+      },
+      "tests": [
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip screening (hip dysplasia) — a requirement for the breed under the Kennel Club Assured Breeders Scheme",
+          "source_id": "S328",
+          "quote": "the breed have hip and elbow screening as requirements under the Assured Breeders Scheme"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "other_scheme",
+          "name": "Elbow screening (elbow dysplasia) — a requirement for the breed under the Kennel Club Assured Breeders Scheme",
+          "source_id": "S328",
+          "quote": "the breed have hip and elbow screening as requirements under the Assured Breeders Scheme"
+        }
+      ],
+      "notes": "RKC breed page (older address display.aspx?id=2038, dog-data S328, 2026-10-15) shows 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding' but returned no named test (the current Breeds A–Z address likewise) → no minimum / best_practice level. The same page says the breed has hip and elbow screening as Assured Breeders Scheme requirements and hip EBVs → other_scheme. PDSA (dog-data S329) and PetMD (S330) name hip dysplasia; PetMD names PRA without a test statement → not listed (nothing guessed)."
     }
   }
 }

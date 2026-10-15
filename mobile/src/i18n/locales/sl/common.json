@@ -10,5 +10,23 @@
   "format": {
     "thousands": ".",
     "percent": "{{value}} %"
+  },
+  "serverUpdating": {
+    "title": "Posodabljamo PetPrep — takoj smo nazaj.",
+    "a11y": "Posodabljamo PetPrep. Takoj smo nazaj, vse je shranjeno.",
+    "actionLater": "PetPrep se ravno posodablja. Poskusi čez trenutek."
+  },
+  "parentalGate": {
+    "link": "Starš?",
+    "linkA11y": "Za starše: odjava otroka",
+    "linkA11ySwitch": "Za starše: prijava starša",
+    "backToParent": "Nazaj k staršu",
+    "title": "Za starše",
+    "prompt": "Za nadaljevanje odgovorite na vprašanje:",
+    "question": "Koliko je {{a}} × {{b}}?",
+    "answerLabel": "Odgovor",
+    "submit": "Potrdi",
+    "cancel": "Prekliči",
+    "wrong": "Odgovor ni pravilen. Poskusite znova."
   }
 }

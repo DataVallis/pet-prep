@@ -9,11 +9,291 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-15 — Madžarski kratkodlaki ptičar (vižla): dvaindvajseta pasma po dvajsetih (M5-R10-40)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **madžarskega kratkodlakega ptičarja (vižlo)** (35. mesto). Šestintrideseta plačljiva pasma psa; v izbirniku je za basetom. Odrasla vižla v igri potrebuje **12.000 korakov na dan** (The Royal Kennel Club: več kot 2 uri gibanja; PDSA: najmanj dve uri), starejša od 9 let 9.000; uči se hitreje kot mešanček (Coren: 25. mesto). Česanje enkrat na teden, opozorilo »počakaj s sprehodom« po obroku in socializacija mladička so del izziva od prvega dne.
+
+**Zakaj je pomembno:** Vižla je čudovit, ljubeč pes, ki pa zahteva veliko: dve uri gibanja na dan, družbo skoraj ves dan (PDSA: rada ima ljudi in težko ostaja sama) in izkušenega lastnika. PDSA je ne priporoča za dom z zelo majhnimi otroki in opozarja na močan lovski nagon. Prav takšno pasmo je vredno najprej »preizkusiti« — 12.000 korakov vsak dan 12 tednov pove več kot fotografija.
+
+**Številke:** 9 novih virov (S326–S334), 1 migracija, brez nove oznake, nov izvor FCI (Madžarska), 3 novi ključi zdravja v registru (entropij, avtoimunske bolezni, nagnjenost k vnetju ušes), 3 + 6 oznak v izbirniku, 3 zgrajene potrebe z virom (česanje 1×/teden, premor po obroku, socializacija) in 3 zapisane za kasneje (kremplji, ušesa, zobje — *načrt*). Meja starejšega 108 mesecev je začasna (spodnja meja RKC »več kot 12 let«).
+
+**Kako povedati:**
+- 👩 Starši: »Vižla potrebuje vsak dan okoli dve uri gibanja in skoraj ves dan družbo. V PetPrepu boste videli, ali otrok zmore 12.000 korakov na dan 12 tednov zapored, preden se odločite za pravega psa.«
+- 🧒 Otroci: »Vižla je zlato-rdeč, hiter in pameten pes. Vsak dan gresta na dolg sprehod, po obroku malo počakaš, enkrat na teden ga počešeš — in hitro se uči!«
+- 💼 Investitorji: »Dvaindvajseta pasma, ki jo je sistem sam izbral po javni lestvici AKC — z viri, testi in pregledom, brez ročnega dela.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »Pri vižli PetPrep omenja displazijo kolkov, entropij, epilepsijo, avtoimunske bolezni, nekatere vrste raka, ščitnico, zasuk želodca in vnetja ušes — brez statistik; staršem svetuje, naj vzreditelja vprašajo za slikanje kolkov in komolcev staršev.«
+- 📣 Omrežja: vižlo **lahko objavljamo** (RKC Breed Watch kategorija 1, brez točk o dobrobiti), rdečkasto zlato, z naravnim repom; nikoli kot psa za majhne otroke ali začetnike.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje, opozorilo po obroku in socializacija so samo nove vrstice v `breed_stage_params`; AI videz dobi novo lastnost psa `nose` (nos iste barve kot dlaka); izvoz registra dobi nov izvor FCI `HU`.«
+
+---
+
+## 2026-10-15 — Baset: enaindvajseta pasma po dvajsetih (M5-R10-39)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **baseta** (34. mesto). Petintrideseta plačljiva pasma psa; v izbirniku je za belgijskim ovčarjem malinois z namigom »česanje 1× na teden«.
+
+**Zakaj je pomembno:** Baset je miren, potrpežljiv družinski pes (PDSA: z otroki se zelo dobro razume), a je hkrati pasma, pri kateri The Royal Kennel Club sodnike na razstavah prosi za posebno pozornost (Breed Watch kategorija 3: veke, predolga ušesa, vnetje kožnih gub, odvečna koža, prekomerna teža). Zato v PetPrepu nosi dve mirni oznaki o dobrobiti, AI pa ga vedno pokaže z zmernimi potezami — brez pretirano dolgih ušes, povešenih vek in globokih gub. Družina pred nakupom vidi tudi nego, ki je vsak dan resnična: kratek sprehod (do ene ure), premor po obroku zaradi nevarnosti zasuka želodca in tedensko česanje.
+
+**Številke:** 7 novih virov (S319–S325) in 1 nov vir za seznam testov vzreditelja (K23), 1 migracija, brez nove oznake, 3 novi ključi zdravja v registru (zavihane veke, glavkom, vnetje kožnih gub), 3 + 6 oznak v izbirniku, 3 zgrajene potrebe z virom (česanje 1× na teden, opozorilo po obroku, socializacija) in 3 v načrtu (pregled kožnih gub, striženje krempljev, pregled ušes in kopanje), dnevni cilj 6.000 korakov (starejši 4.500), meja starejšega psa 90 mesecev (začasno), učenje 0,5×.
+
+**Kako povedati:**
+- 👩 Starši: »Baset je potrpežljiv in rad ima otroke, a rad je in se hitro zredi, potrebuje družbo in vsak dan pregled kožnih gub. V PetPrepu boste videli, ali otrok vsak dan zmore sprehod, počaka po obroku in ga redno počeše, preden se odločite za pravega.«
+- 🧒 Otroci: »Baset ima dolga mehka ušesa in odličen nos. Vsak dan ga pelji na sprehod, po obroku malo počakaj, enkrat na teden ga počeši — in ne pozabi: pri učenju potrebuje več potrpežljivosti!«
+- 💼 Investitorji: »Enaindvajseta pasma, ki jo je sistem sam izbral po javni lestvici AKC; pasme s skrbmi za dobrobit dobijo mirne oznake in AI z zmernimi potezami — brez ugibanja in brez obljub o zdravju.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »Pri basetu PetPrep omenja zavihane veke, glavkom, vnetje kožnih gub, zasuk želodca, bolezen medvretenčnih ploščic, vnetja ušes in prekomerno težo — brez statistik; staršem svetuje, naj vzreditelja vprašajo za uradni DNA-test The Royal Kennel Club za glavkom (POAG).«
+- 📣 Omrežja: baseta **lahko objavljamo** (ni pes s sploščenim obrazom), trobarvnega ali limonasto-belega, z zmernimi ušesi in tesnimi vekami; nikoli s pretirano dolgimi ušesi, povešenimi vekami ali gubami kot »luštno«.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje, opozorilo po obroku in socializacija so samo nove vrstice v `breed_stage_params`; AI videz dobi novo lastnost psa `skin` za zmerne gube; meja starejšega 90 iz spodnje meje The Royal Kennel Club je začasna (na seznamu za Davida).«
+
+---
+
+## 2026-10-14 — Ko posodobimo strežnik, aplikacija ostane mirna (M5-F13)
+
+**Kaj se je zgodilo:** Ob vsaki posodobitvi strežnika (nekaj minut) je aplikacija prej »izgubila povezavo« in izgledala pokvarjeno. Zdaj ostanejo zadnji podatki na zaslonu, pokaže se majhna mirna pasica »Posodabljamo PetPrep — takoj smo nazaj.«, aplikacija sama počaka (kolikor strežnik reče, običajno 15 s) in se ob vrnitvi sama osveži — tudi živa povezava s kužkom. Dejanje, ki ga otrok tapne med posodobitvijo, se ne pošlje dvakrat; otrok dobi prijazno »Poskusi čez trenutek«.
+
+**Zakaj je pomembno:** Strežnik posodabljamo pogosto (vsaka sprememba gre samodejno v produkcijo). Otrok ali starš tega ne sme občutiti kot napako — brez odjave, brez rdečih opozoril, brez slepih ulic.
+
+**Kako povedati:**
+- 👩 Starši: »Ko PetPrep posodabljamo, aplikacija za trenutek pokaže 'Posodabljamo PetPrep' in nadaljuje sama — nič se ne izgubi.«
+- 🧒 Otroci: »Če piše 'Posodabljamo PetPrep', kuža samo malo počaka. Takoj smo nazaj!«
+- 🛠 Tehnično: »503 iz Laravelovega vzdrževalnega načina = stanje 'posodabljamo' (ne napaka); TanStack Query ponavlja po `Retry-After`, `GET /up` sonda, ob vrnitvi `invalidateQueries`; Reverb: ponovna avtorizacija kanala z backoffom in osvežitev po ponovni naročnini. Mutacije se ne ponavljajo samodejno. Samo JS — posodobitev OTA, prstni odtis nespremenjen.«
+
+---
+
+## 2026-10-14 — Posodobitev brez »smo v vzdrževanju« (D19)
+
+**Kaj se je zgodilo:** Deploy zdaj najprej vpraša bazo, ali nova različica prinaša spremembe sheme. Če ne, strežnik ne gre v način vzdrževanja: zamenja delavce, nato aplikacijo, spletni strežnik (Caddy) pa med tem do 10 sekund počaka nanjo, namesto da bi vrnil napako. Strežnika za sprotne posodobitve (Reverb) in Caddy pusti pri miru, kadar se njune nastavitve niso spremenile.
+
+**Zakaj je pomembno:** Prej je vsak deploy za minuto ali več vračal »503« in prekinil povezavo vseh telefonov. Zdaj sprememba brez migracije pomeni le nekaj sekund preklopa. Ali odprte povezave telefonov res ostanejo, bomo preverili ob prvem pravem deployu (načrt).
+
+**Kako povedati:**
+- 👩 Starši: »Ko izboljšamo aplikacijo, je ne ugasnemo več za minuto — večina posodobitev gre mimo skoraj neopazno.«
+- 🛠 Tehnično: »`migrate:status --pending=3` z novo sliko pred vzdrževanjem; Reverb in Caddy se ne zaženeta znova, ko se prstni odtis njunih vhodov (config, composer.lock, public/, Caddyfile, .env, osnovna slika) ne spremeni; Caddy `lb_try_duration 10s`; 333 preverjanj v testni skripti.«
+
+---
+
+## 2026-10-14 — Produkcija se spreminja samo, ko se tako odločimo (D18)
+
+**Kaj se je zgodilo:** Združena koda na `main` zdaj sproži samo teste. Produkcijski strežnik, na katerem so družine, posodobimo ročno z enim klikom v GitHubu (Run workflow → `production`); posodobitev aplikacije (OTA) gre ven šele za tem. Razvojni strežnik smo zaenkrat preložili.
+
+**Zakaj je pomembno:** Do zdaj je šla vsaka združena sprememba takoj v produkcijo — tudi več kot desetkrat na dan, tudi samodejno dodane pasme — in vsakič je aplikacija na telefonu za trenutek izgubila povezavo. Zdaj družine dobijo posodobitev v miru in v enem kosu.
+
+**Kako povedati:**
+- 👩 Starši: »Vaša aplikacija se posodobi samo, ko je posodobitev preverjena in jo izdamo — ne vsakič, ko programer kaj spremeni.«
+- 💼 Investitorji: »Ročna odobritev vsake produkcijske izdaje — standardna praksa pred javnim zagonom.«
+- 🛠 Tehnično: »Push na `main` = samo CI; deploy samo `workflow_dispatch` s `target=production`, deploy skripta zavrne napačen strežnik (`--expect-domain`); 236 + 285 avtomatskih preverjanj.«
+
+---
+
+## 2026-10-14 — Belgijski ovčar malinois: dvajseta pasma po dvajsetih (M5-R10-38)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **belgijskega ovčarja malinois** (33. mesto). FCI pozna eno pasmo, belgijskega ovčarja, s štirimi sortami; v igri je samo kratkodlaki malinois. Štiriintrideseta plačljiva pasma psa; v izbirniku je za ameriškim koker španjelom z namigom »česanje 2× na teden«.
+
+**Zakaj je pomembno:** Malinois je zahteven pes: The Royal Kennel Club piše, da potrebuje več kot 2 uri gibanja na dan, American Kennel Club pa, da ni dobra izbira za prvega psa in da se najbolje znajde v družini s starejšimi, odgovornimi otroki; PetMD dodaja, da lahko »pase« malčke in ima močan lovski nagon. Prav za takšno pasmo je PetPrep najbolj koristen — družina pred nakupom vidi, koliko dela je res. Pri negi viri ne navedejo števila (The Royal Kennel Club »več kot enkrat na teden«, American Kennel Club in PetMD »občasno«), zato igra predlaga česanje 2× na teden in odločitev zapiše na seznam za Davida.
+
+**Številke:** 7 novih virov (S312–S318), 1 migracija, brez nove oznake, 1 nov ključ zdravja (PRA) in nov izvor FCI (Belgija), 2 + 8 oznak v izbirniku, 2 zgrajeni potrebi z virom (česanje 2× na teden — predlog, socializacija) in 3 v načrtu (redno striženje krempljev, čiščenje ušes enkrat na mesec, vsakodnevna nega zob), dnevni cilj 12.000 korakov (starejši 9.000), meja starejšega psa 90 mesecev (začasno), učenje 1,5×.
+
+**Kako povedati:**
+- 👩 Starši: »Belgijski ovčar malinois ni pes za začetnike in ne za dom z majhnimi otroki — potrebuje več kot dve uri gibanja na dan in veliko miselnega dela. V PetPrepu boste videli, ali vaš otrok res vsak dan zmore 12.000 korakov in redno šolanje, preden se odločite za pravega.«
+- 🧒 Otroci: »Malinois je pameten pes, poln energije, s pokončnimi ušesi in črno masko. Vsak dan ga pelji na dolg sprehod, z njim vadi v šoli in ga dvakrat na teden počeši!«
+- 💼 Investitorji: »Dvajseta pasma, ki jo je sistem sam izbral po javni lestvici AKC; ko vir ne da številke, aplikacija predlaga vrednost, jo označi kot nepreverjeno in vprašanje zapiše za ustanovitelja, namesto da bi ugibala.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »Pri malinoisu PetPrep displazijo kolkov in komolcev, sivo mreno in dedno bolezen mrežnice (PRA) omenja le kot ozadje, brez statistik in obljub o zdravju; imenovanega testa za vzreditelja na strani The Royal Kennel Club nismo našli, zato ga ne navajamo.«
+- 📣 Omrežja: malinoisa **lahko objavljamo** (ni pes s sploščenim obrazom), plav (fawn) s črno masko, z naravnimi pokončnimi ušesi in celim repom; nikoli kot pes za začetnike, nikoli z majhnimi otroki, nikoli kot pes čuvaj ali zaščitni pes.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje (2× na teden, `verified=false`) in socializacija sta samo novi vrstici v `breed_stage_params`; meja starejšega 90 iz spodnje meje The Royal Kennel Club je začasna (na seznamu za Davida); izvoz registra dobi nov izvor FCI (Belgija / BE) in nov ključ zdravja `pra_inherited_blindness` — besedila na spletni strani pridejo s PR spletne strani.«
+
+## 2026-10-14 — Barva psa in skupni AI mediji za plačljive pasme (M5-R21)
+
+**Kaj se je zgodilo:** Starš pri plačljivi pasmi zdaj izbere tudi **barvo dlake** — samo barve, ki jih dovoljuje standard pasme (39 plačljivih pasem — 33 psov in 6 mačk — skupaj 178 barv; pri 3 pasmah je barva ena sama, zato izbire ni). Hkrati se je spremenilo, kako nastajajo slike in videi: dokler je v administraciji stikalo »Unikatni AI mediji za vsakega ljubljenčka« izklopljeno (privzeto), si vsi novi ljubljenčki iste pasme in barve **delijo en videz** — slike in videi se ustvarijo enkrat, ob prvem ljubljenčku, vsak naslednji (tudi v drugi družini) jih dobi takoj in brez novega klica AI. Ko je stikalo vklopljeno, ima vsak ljubljenček svoj unikaten videz kot doslej. Mešanček in domača mačka ostaneta na skupnem naboru 20 videzov (M4-10). Administrator lahko skupni videz ustvari znova; na novo nastanejo samo obdobja, v katerih so aktivni ljubljenčki, ostala obdržijo svoje slike.
+
+**Zakaj je pomembno:** Unikaten nabor medijev stane ≈ 4,63 $ na kupljenega mladička plačljive pasme (slika 0,15 $ + 8 videov po 0,56 $) in podobno ob vsakem prehodu obdobja. S skupnimi mediji je to enkraten strošek na pasmo + barvo + obdobje, vsak nadaljnji nakup iste kombinacije pa ≈ 0 $ — za zagon to pomeni, da strošek AI ne raste z vsakim novim uporabnikom. Starš pa dobi psa take barve, kot si ga družina res želi.
+
+**Številke:** 39 plačljivih pasem s seznamom barv (178 barv), 1 migracija (`pets.coat_colour`, `pet_looks.colour_key` z edinstvenim indeksom pasma + barva), 1 novo stikalo v administraciji (privzeto izklopljeno), 0 $ za drugo in vsako nadaljnjo žival iste pasme + barve, ko so mediji obdobja shranjeni. Dve družini, ki hkrati kupita isto pasmo in barvo, sprožita **eno** generiranje.
+
+**Kako povedati:**
+- 👩 Starši: »Izberete lahko barvo psa — samo barve, ki jih priznava standard pasme, zato je pes videti kot pravi predstavnik svoje pasme. Če imate dva psa iste pasme in barve, sta videti enaka.«
+- 🧒 Otroci: »Izberi, ali bo tvoj labradorec črn, rumen ali čokoladen!«
+- 💼 Investitorji: »Strošek AI medijev pri plačljivih pasmah ni več strošek na uporabnika, ampak enkraten strošek na kombinacijo pasma + barva + obdobje; unikatne medije lahko kadar koli vklopimo z enim stikalom.«
+- 🤝 Partnerji (vzreditelji): »Izbirnik barv sledi standardu pasme — barv, ki jih standard izključuje, ni mogoče izbrati.«
+- 📣 Omrežja: »Kakšne barve bo vaš kuža?« — prikaz izbirnika barv pri izbiri pasme (na telefonu še ni preverjeno).
+- 🛠 Tehnično: »Skupni videz se ustvari z insert-or-ignore na delnem edinstvenem indeksu (pasma, barva), generiranje si prisvoji ena vrstica, ostali ljubljenčki počakajo in se povežejo, ko je datoteka shranjena; pasma brez seznama barv varno ostane pri skupnem videzu (barva iz uteži videza), nikoli nenamerno unikatna.«
+
+---
+
+## 2026-10-14 — Tudi proračun AI laboratorija v administraciji (M4-07c)
+
+**Kaj se je zgodilo:** Na strani »Proračun za AI« je drugi razdelek za AI laboratorij (primerjave modelov in fotografije pasem za register na spletu): dnevni in mesečni proračun ter omejitev na en zagon, s prikazom porabe. Prej je bil samo v strežniški nastavitvi.
+
+**Zakaj je pomembno:** Testiranje in samodejno dodajanje pasem imata svoj, od ljubljenčkov ločen proračun, ki ga zdaj spremenimo v minuti — denar za ljubljenčke ostane nedotaknjen.
+
+**Kako povedati:**
+- 🛠 Tehnično: »Oba proračuna v `app_settings`, primerjava neodvisna od vrstnega reda ključev v jsonb, shranjevanje obeh v eni transakciji.«
+
+---
+
+## 2026-10-14 — Varnostne kopije baze in medijev izven strežnika — pripravljene (D5)
+
+**Kaj se je zgodilo:** Zgradili smo nočno varnostno kopijo, ki bazo ter vse AI slike in videe ljubljenčkov šifrirano pošlje v ločeno shrambo v drugem podatkovnem centru (restic na Hetzner Storage Box). Kopija baze je »vse ali nič« — nepopolna kopija se zavrže. Kopije hranimo **približno 35 dni** (vsi posnetki zadnjih 35 dni), zato podatki izbrisane družine iz kopij izginejo najkasneje v 35 dneh. *Začne teči, ko David nastavi shrambo (enkratna nastavitev); prvi preizkus obnove sledi takrat.*
+
+**Zakaj je pomembno:** Doslej so bile kopije baze na istem disku kot baza, slike in videi pa sploh niso imeli kopije. Če bi disk odpovedal, bi družine izgubile zgodovino svojega ljubljenčka, mi pa bi morali vse AI medije plačati še enkrat.
+
+**Številke:** 1 skripta, 41 avtomatskih preverjanj; hramba ≈ 35 dni; posodablja se samo novo (inkrementalno).
+
+**Kako povedati** *(šele ko teče in je obnova preizkušena)*:
+- 👩 Starši: »Slike in videi vašega ljubljenčka ter napredek otroka so vsako noč shranjeni tudi na drugem mestu. Ko račun izbrišete, iz varnostnih kopij izginejo najkasneje v 35 dneh.«
+- 💼 Investitorji: »Šifrirane nočne kopije v drugem podatkovnem centru z dokumentiranim postopkom obnove.«
+- 🛠 Tehnično: »restic v Dockerju, pg_dump prek stdin z oznako db-pending → db, media volumen samo za branje, ops ključavnica samo za dump, časovne omejitve, healthcheck ping.«
+
+---
+
+## 2026-10-14 — Ameriški koker španjel: devetnajsta pasma po dvajsetih (M5-R10-37)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **ameriškega koker španjela** (32. mesto; v ZDA mu rečejo kar »Cocker Spaniel«, angleški koker španjel je na 36. mestu). Triintrideseta plačljiva pasma psa; v izbirniku je za bretonskim ptičarjem z namigom »česanje vsak dan«.
+
+**Zakaj je pomembno:** Ameriški koker je prijazen družinski pes, dober z otroki in drugimi živalmi (PetMD, VCA, American Kennel Club), a njegova dolga svilnata dlaka zahteva veliko dela: The Royal Kennel Club piše, da ga je treba česati vsak dan, VCA pa, da potrebuje frizerja enkrat na mesec in tedenski pregled ušes. Viri se ne razhajajo le pri negi, temveč tudi pri gibanju: The Royal Kennel Club piše »več kot 2 uri na dan«, American Kennel Club in PetMD pa, da ne potrebuje veliko gibanja. Igra po pravilu vzame številko The Royal Kennel Club, oznake za gibanje pa ne pokaže; odločitev je na seznamu za Davida.
+
+**Številke:** 9 novih virov (S303–S311), 1 migracija, brez nove oznake in brez novega ključa zdravja, 4 testi za vzreditelja (The Royal Kennel Club: genetska raznolikost, oči, DNK prcd-PRA, kolki), 3 + 3 oznake v izbirniku, 2 zgrajeni potrebi z virom (česanje vsak dan, socializacija) in 2 v načrtu (frizer enkrat na mesec, tedenski pregled ušes), dnevni cilj 12.000 korakov (starejši 9.000), meja starejšega psa 90 mesecev (začasno), učenje 1,5×.
+
+**Kako povedati:**
+- 👩 Starši: »Ameriški koker španjel je prijazen z otroki in drugimi živalmi, a njegovo dlako je treba česati vsak dan. V PetPrepu boste videli, ali vaš otrok res vsak dan zmore počesati psa in z njim prehoditi 12.000 korakov, preden se odločite za pravega.«
+- 🧒 Otroci: »Ameriški koker španjel ima dolga, mehka ušesa in svilnato dlako. Vsak dan ga počeši, pelji na sprehod — in pazi, da ne poje preveč priboljškov!«
+- 💼 Investitorji: »Devetnajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC; ko si viri nasprotujejo (gibanje, pogostost česanja), aplikacija uporabi pravilo in nasprotje zapiše kot odprto vprašanje, namesto da bi ugibala.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »Pri ameriškem kokerju PetPrep navaja teste staršev, ki jih priporoča The Royal Kennel Club (pregled oči, test DNK za PRA, kolki, genetska raznolikost); vnetja ušes, kože, displazijo kolkov in von Willebrandovo bolezen omenjamo le kot ozadje, brez statistik in obljub o zdravju.«
+- 📣 Omrežja: ameriškega kokerja **lahko objavljamo** (ni pes s sploščenim obrazom), plav (buff) z naravnim repom; nikoli kot »pes brez dela z nego« in nikoli zamenjan z angleškim kokerjem.
+- 🛠 Tehnično: »Brez novega ključa oznak ali zdravja; česanje (7× na teden) in socializacija sta samo novi vrstici v `breed_stage_params`; meja starejšega 90 iz spodnje meje The Royal Kennel Club je začasna (na seznamu za Davida); izvoz registra brez novih ključev — besedila na spletni strani so že pripravljena.«
+
+---
+
+## 2026-10-14 — Proračun za AI se zdaj nastavi z enim klikom (M4-07b)
+
+**Kaj se je zgodilo:** Nov kuža (angleški buldog) je dobil sliko, videov pa ne. Razlog ni bila napaka, temveč varovalka: dnevni proračun za AI (5 $) je bil porabljen — en kupljen pes s polnim naborom videov stane okoli 4,63 $ (slika ~0,15 $ + 8 videov po ~0,56 $). Doslej je bilo za dvig limita treba na strežnik in ponovno zagnati aplikacijo. Zdaj ima administracija stran **»Proračun za AI«**: dnevni in mesečni limit, poraba danes in ta mesec, zgodovina sprememb in gumb, ki zavrnjene medije takoj pošlje znova.
+
+**Zakaj je pomembno:** Med beto (~20 družin) bo vsak nakup izziva porabil skoraj ves dnevni limit. Limit lahko zdaj dvignemo v minuti, brez dostopa do strežnika — in ga z 0 tudi v trenutku ustavimo. Ljubljenček brez medijev medtem vedno deluje naprej (varovalka zapre samo AI, ne igre).
+
+**Številke:** 5 $ / dan in 50 $ / mesec privzeto; ena slika ≈ 0,15 $, en 5-sekundni video ≈ 0,56 $; meje obrazca 500 $ / dan in 5000 $ / mesec (zaščita pred tipkarsko napako); 19 novih testov Pest.
+
+**Kako povedati:**
+- 💼 Investitorji: »Stroške AI nadzorujemo pri vsakem klicu: ocena pred klicem, dnevni in mesečni limit, ki ga lastnik spremeni v minuti, in samodejni ponovni poskus naslednjo noč. Brez presenečenj na računu.«
+- 🛠 Tehnično: »Limit je v `app_settings` (predpomnilnik 60 s, revizija sprememb), `AiSpendGuard` ga bere pred vsako rezervacijo; `.env` ostane privzeta vrednost.«
+- 👩 Starši: (ni za starše — notranja administracija.)
+
+---
+
+## 2026-10-14 — Bretonski ptičar: osemnajsta pasma po dvajsetih (M5-R10-36)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **bretonskega ptičarja** (»Brittany«, v Franciji »epagneul breton«; 31. mesto). Dvaintrideseta plačljiva pasma psa; v izbirniku je zdaj 33 psov (z mešančkom). Srednje velik francoski ptičar, najmanjši med ptičarji (po standardu RKC 48–51 cm za psa in 47–50 cm za psico, 13,6–18,1 kg po standardu American Kennel Club): več kot dve uri gibanja na dan (12.000 korakov za odraslega psa, 9.000 za starejšega), česanje 1× na teden in tedenska »Nova izkušnja« za mladička.
+
+**Zakaj je pomembno:** Bretonski ptičar je nežen in potrpežljiv z otroki, a je lovski pes z veliko energije: The Royal Kennel Club piše, da potrebuje več kot dve uri gibanja na dan, American Kennel Club, da potrebuje veliko gibanja in miselne zaposlitve, PetMD pa, da ne mara biti dolgo sam in da ima močan lovski nagon. Zato v izbirniku dobi oznake »aktivno družino«, »družinsko življenje« in »družino z otroki«, a tudi »vsak dan potrebuje veliko gibanja«, »potrebuje miselne izzive«, »rad ima družbo«, »izpada mu dlaka« in »močan lovski nagon — lahko lovi manjše živali« — s 12.000 koraki na dan je med najzahtevnejšimi psi v 12-tedenskem izzivu. Mejo starejšega psa (7 let in 6 mesecev) je sistem vzel iz spodnje meje »več kot 10 let« (The Royal Kennel Club), ker velike britanske raziskave življenjske dobe (McMillan 2024) v tem zagonu ni mogel prebrati — meja je **začasna** in čaka Davida. Pasma **sme biti v marketingu** (ni pes s sploščenim obrazom, Breed Watch kategorija 1), a nikoli kot miren hišni pes in nikoli s kupiranim repom kot ciljem. Striženja krempljev (enkrat na mesec po potrebi) in čiščenja ušes (American Kennel Club, PetMD) igra še ne vodi — *načrt* (M5-R19, M5-R20).
+
+**Številke:** 7 novih virov (S296–S302), 1 migracija, brez nove oznake, 1 nov ključ zdravja v registru (siva mrena, brez statistik), brez testov za vzreditelja (The Royal Kennel Club jih za pasmo ne navaja), 3 + 5 oznak v izbirniku, 2 zgrajeni potrebi z virom (česanje 1× na teden, socializacija — zdaj 22 pasem s citatom vira o socializaciji) in 2 v načrtu (kremplji, ušesa), dnevni cilj 12.000 korakov, učenje 1,5×, meja starejšega 90 mesecev (začasno), 33 psov v izbirniku (32 plačljivih + mešanček); testi: nov `BrittanyBreedTest`, izvoz registra 60 testov, 3.107 testov Pest in 2.539 testov Jest zelenih. Portret in stran v registru sledita po objavi (do naslednje izdaje aplikacije stran kaže »Kmalu«). Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Bretonski ptičar je nežen z otroki, a potrebuje več kot dve uri gibanja na dan in ne mara biti dolgo sam. V PetPrepu boste videli, ali vaš otrok res vsak dan zmore z njim prehoditi 12.000 korakov, preden se odločite za pravega.«
+- 🧒 Otroci: »Bretonski ptičar je oranžno-bel lovski pes, pogosto z naravno kratkim repom. Rad teče, rad se uči in ne mara biti sam — greš z njim na dolg sprehod?«
+- 💼 Investitorji: »Osemnajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC; vse vrednosti po potrjenih pravilih in z viri; odprta vprašanja (začasna meja starejšega psa, česanje 1× proti RKC »več kot enkrat na teden«, oznaki za druge ljubljenčke in pogosto česanje) so zapisana za ustanovitelja.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri bretonskem ptičarju ne ugiba: ker The Royal Kennel Club za pasmo ne navaja testov staršev, jih ne navajamo niti mi; displazijo kolkov, epilepsijo, hipotiroidizem in sivo mreno (PetMD) omenjamo samo kot ozadje, brez obljub o zdravju.«
+- 📣 Omrežja: bretonskega ptičarja **lahko objavljamo** (ni pes s sploščenim obrazom), oranžno-bel z naravno kratkim repom; nikoli kot »miren hišni pes« in nikoli s kupiranim repom kot ciljem.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje (1× na teden) in socializacija sta samo novi vrstici v `breed_stage_params`; meja starejšega 90 iz spodnje meje RKC je začasna (na seznamu za Davida); izvoz registra dobi en nov ključ zdravja (`cataracts`), seznam testov za vzreditelja je pošteno `not_found`.«
+
+---
+
+## 2026-10-14 — Šetlandski ovčar: sedemnajsta pasma po dvajsetih (M5-R10-35)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **šetlandskega ovčarja** ali »sheltieja« (29. mesto; 30. mesto, border collie, je v aplikaciji že od začetka). Enaintrideseta plačljiva pasma psa; v izbirniku je zdaj 32 psov (z mešančkom). Majhen ovčarski pes iz Velike Britanije (po standardu FCI idealno 37 cm za psa in 35,5 cm za psico, 6,8–11,3 kg po American Kennel Club): približno ena ura gibanja na dan (RKC: do ene ure; 6.000 korakov za odraslega psa, 4.500 za starejšega), česanje vsak dan in tedenska »Nova izkušnja« za mladička.
+
+**Zakaj je pomembno:** Sheltie je nežen družinski pes, a z dvojno dlako in pastirskim nagonom: The Royal Kennel Club in PDSA pišeta, da ga je treba česati vsak dan, American Kennel Club pa, da potrebuje redno telesno in miselno zaposlitev in da se zaradi pastirskega nagona najbolje znajde s starejšimi otroki. Zato v izbirniku dobi oznaki »družinsko življenje« in »družino z otroki«, a tudi »potrebuje miselne izzive«, »pri igri lahko »pase« otroke«, »potrebuje česanje večkrat na teden« in »izpada mu dlaka« — česanje vsak dan je tako ena najpogostejših rutin v 12-tedenskem izzivu. Mejo starejšega psa (7 let in 6 mesecev) je sistem tokrat vzel iz spodnje meje »več kot 10 let« (The Royal Kennel Club, PDSA), ker velike britanske raziskave življenjske dobe (McMillan 2024) v tem zagonu ni mogel prebrati — meja je **začasna** in čaka Davida. Pasma **sme biti v marketingu** (ni pes s sploščenim obrazom), a nikoli kot pretežno bel dvojni merle in nikoli kot tih pes (American Kennel Club: »very vocal«). Striženja krempljev in dlake med blazinicami tačk (American Kennel Club) igra še ne vodi — *načrt* (M5-R19).
+
+**Številke:** 7 novih virov (S289–S295), 1 migracija, brez nove oznake, 1 nov ključ zdravja v registru (brez statistik), 3 novi ključi testov DNK za vzreditelja, 2 + 4 oznake v izbirniku, 2 zgrajeni potrebi z virom (česanje vsak dan, socializacija) in 1 v načrtu (kremplji), dnevni cilj 6.000 korakov, učenje 1,8×, meja starejšega 90 mesecev (začasno), 32 psov v izbirniku (31 plačljivih + mešanček); testi: nov `ShetlandSheepdogBreedTest`, izvoz registra 59 testov, 3.080 testov Pest in 2.530 testov Jest zelenih. Portret in stran v registru sledita po objavi (do naslednje izdaje aplikacije stran kaže »Kmalu«). Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Sheltie je nežen družinski pes, a njegova dolga dlaka potrebuje česanje vsak dan, sam pa potrebuje tudi miselne izzive. V PetPrepu boste videli, ali vaš otrok res vsak dan zmore počesati psa in z njim prehoditi 6.000 korakov, preden se odločite za pravega.«
+- 🧒 Otroci: »Sheltie je majhen, pameten ovčar s puhasto grivo. Vsak dan ga počeši, pelji na sprehod in ga nauči kaj novega!«
+- 💼 Investitorji: »Sedemnajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC; vse vrednosti po potrjenih pravilih in z viri; odprta vprašanja (začasna meja starejšega psa, Breed Watch brez imenovane točke) so zapisana za ustanovitelja.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri sheltieju pokaže teste staršev po The Royal Kennel Club — genetsko raznolikost in pregled oči z leglom kot minimum ter teste DNK (CEA/CH, MDR1, dve obliki PRA, von Willebrandova bolezen) in pregled komolcev in kolkov kot najboljšo prakso — brez obljub o zdravju.«
+- 📣 Omrežja: sheltieja **lahko objavljamo** (ni pes s sploščenim obrazom), sable z belim ovratnikom; nikoli pretežno bel dvojni merle in nikoli kot »tih pes«.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje (7× na teden) in socializacija sta samo novi vrstici v `breed_stage_params`; meja starejšega 90 iz spodnje meje RKC je začasna (na seznamu za Davida); izvoz registra dobi en nov ključ zdravja (`collie_eye_pra`) in tri nove ključe testov za vzreditelja.«
+
+---
+
+## 2026-10-14 — Angleški springer španjel: šestnajsta pasma po dvajsetih (M5-R10-34)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **angleškega springer španjela** (28. mesto). Trideseta plačljiva pasma psa; v izbirniku je zdaj 31 psov (z mešančkom). Srednje velik lovski pes iz Velike Britanije (18–23 kg, približno 51 cm): več kot 2 uri gibanja na dan (12.000 korakov za odraslega psa, 9.000 za starejšega), česanje 2× na teden in tedenska »Nova izkušnja« za mladička.
+
+**Zakaj je pomembno:** Springer je prijazen družinski pes, a z veliko energije: The Royal Kennel Club in PDSA pišeta »več kot 2 uri gibanja na dan«, American Kennel Club pa, da ga ne smete dolgo puščati samega. Zato v izbirniku dobi oznake »aktivna družina«, »družinsko življenje«, »z otroki« in »z drugimi ljubljenčki«, a tudi »vsak dan potrebuje veliko gibanja« in »rad ima družbo«. Mejo starejšega psa (10 let in 2 meseca) je sistem izračunal iz velike britanske raziskave življenjske dobe (McMillan 2024, mediana 13,5 leta) po potrjenem pravilu — tokrat brez predloga za Davida. The Royal Kennel Club pasmi ne pripisuje posebnih skrbi za dobrobit (Breed Watch kategorija 1), zato **sme biti v marketingu** — brez obljub o zdravju in nikoli brez omembe 2 ur gibanja na dan. Striženja pri frizerju (vsake 3 mesece, PDSA) in striženja krempljev (American Kennel Club) igra še ne vodi — *načrt* (M5-R18, M5-R19).
+
+**Številke:** 8 novih virov (S281–S288), 1 migracija, brez nove oznake, 1 nov ključ zdravja v registru (brez statistik), 5 novih ključev testov DNK za vzreditelja, 4 + 4 oznake v izbirniku, 2 zgrajeni potrebi z virom (česanje, socializacija) in 2 v načrtu (frizer; kremplji), dnevni cilj 12.000 korakov, učenje 1,5×, meja starejšega 122 mesecev, 31 psov v izbirniku (30 plačljivih + mešanček); testi: nov `EnglishSpringerSpanielBreedTest`, izvoz registra 58 / 58, 3.036 testov Pest in 2.487 testov Jest zelenih. Portret in stran v registru sledita po objavi (do naslednje izdaje aplikacije stran kaže »Kmalu«). Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Springer je čudovit družinski pes, a potrebuje več kot dve uri gibanja na dan in družbo. V PetPrepu boste videli, ali vaš otrok res vsak dan zmore 12.000 korakov s psom, preden se odločite za pravega.«
+- 🧒 Otroci: »Springer obožuje sprehode in igro — in tebe! Vsak dan ga pelji daleč na sprehod in ga dvakrat na teden počeši.«
+- 💼 Investitorji: »Šestnajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC; vse vrednosti po potrjenih pravilih in z viri, brez novega odprtega vprašanja za ustanovitelja.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri springerju pokaže teste staršev po The Royal Kennel Club — kolke, komolce, oči z gonioskopijo ter teste DNK (AMS, DAMS, fukozidoza, PFK, PRA) — brez obljub o zdravju.«
+- 📣 Omrežja: springerja **lahko objavljamo** (ni pasma s skrbjo za dobrobit), jetrno-bel z naravnim repom; nikoli ne skrivamo, da potrebuje več kot 2 uri gibanja na dan.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje in socializacija sta samo novi vrstici v `breed_stage_params`; meja starejšega 122 iz McMillan 2024 je potrjena (`verified=true`); izvoz registra dobi en nov ključ zdravja in pet novih ključev testov za vzreditelja.«
+
+---
+
+## 2026-10-14 — En telefon za starša in otroka (M2-11)
+
+**Kaj:** starš na nadzorni plošči tapne »Igraj kot Maja« in izroči telefon — brez kode, brez drugega telefona. Nazaj pride s svojo prijavo (geslo ali Google / Apple), zato otrok do starševske plošče ne more. Na skupnem telefonu se koraki štejejo samo, dokler je izbran otrokov profil, otroku prihajajo njegovi opomniki, staršu pa njegova obvestila le, ko je prijavljen. Enako velja za odrasle, ki preizkušajo pasmo sami.
+**Zakaj:** David pri testiranju na enem telefonu ni mogel nazaj k staršu; veliko družin (in vsi, ki preizkušajo pasmo zase) ima en telefon.
+**Kako povedati:** 👩 »En telefon je dovolj — preklopite na otroka z enim dotikom.« · 💼 nižji prag za začetek (ni treba drugega telefona) · 🛠 deljena seja na otroka, časovna okna korakov, preklic žetona starša.
+
+---
+
 ## 2026-10-13 — Curio, maskota PetPrepa, na TikToku
 
 - **Kaj:** znak »Radovednež« iz logotipa je postal 3D lik Curio (DNA, referenčni list, profilna slika). Trije reeli: »Meet Curio«, »Feeding time« in zgodba »The Promise« (Day 1 vs Day 14). Prva dva sta dobila ~350–600 ogledov in skoraj nič sledilcev.
 - **Zakaj je pomembno:** brez zgodbe in brez enotne vloge lika ljudje gledajo, a ne sledijo. Odločitev: Curio je vedno ljubljenček, format je serija z obljubo nadaljevanja.
 - **Za koga:** starši (prepoznavna obljuba otroka), investitorji (organski kanal z nizkimi stroški: slike brezplačno, video ~9 kreditov Higgsfield na posnetek).
+## 2026-10-13 — Čivava: petnajsta pasma po dvajsetih (M5-R10-33)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **čivavo** (27. mesto; havanski bišon in sibirski haski z 25. in 26. mesta sta že v aplikaciji). Devetindvajseta plačljiva pasma psa; v izbirniku je zdaj 30 psov (z mešančkom). Igra gradi kratkodlako čivavo (1,8–2,7 kg): pol ure gibanja na dan (3.000 korakov za odraslega psa, 2.300 za starejšega), česanje 1× na teden, opozorilo »počakaj s sprehodom« eno uro po obroku in tedenska »Nova izkušnja« za mladička.
+
+**Zakaj je pomembno:** Čivava je drobna, a zahtevna: viri (PDSA, American Kennel Club) pravijo, da ni za družine z majhnimi otroki in da težko ostane sama — zato v izbirniku dobi oznaki »majhen pes — bolje za starejše otroke« in »rad ima družbo«, ne pa »družinsko življenje«. Edina velika britanska raziskava o čivavah (VetCompass) zajema predvsem mlade pse in sama opozarja, da je njena srednja (mediana) starost ob smrti zato prenizka; sistem te številke ni slepo uporabil, ampak je mejo starejšega psa (9 let) predlagal iz »več kot 12 let« (The Royal Kennel Club, PDSA) in jo označil kot **predlog za Davida**. Ni pes s sploščenim obrazom, zato **sme biti v marketingu** — nikoli z otroki ali kot modni dodatek (Royal Veterinary College odsvetuje nakup »na hitro ali kot dodatek«). Nege zob ter čiščenja ušes in kopanja igra še ne vodi — *načrt* (M5-R15, nova M5-R20).
+
+**Številke:** 9 novih virov (S272–S280), 1 migracija, brez nove oznake, 5 novih ključev zdravja v registru (brez statistik), 2 + 3 oznake v izbirniku, 3 zgrajene potrebe z virom (česanje, premor po obroku, socializacija) in 2 v načrtu (zobje; ušesa in kopanje), dnevni cilj 3.000 korakov, učenje 0,7×, meja starejšega 108 mesecev (predlog Claude — odprto za Davida), 30 psov v izbirniku (29 plačljivih + mešanček); testi: Pest 2.922 testov, Jest 157 skupin / 2.381 testov, izvoz registra 57 / 57. Portret in stran v registru sledita v ločenih PR. Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Čivava je majhna, a ni igračka: potrebuje nekoga doma skoraj ves čas, nežne otroke in vsak dan pol ure gibanja. V PetPrepu boste videli, ali vaš otrok zmore skrb tudi za takega malčka, preden se odločite za pravega.«
+- 🧒 Otroci: »Čivava je drobcena, zato je ne dvigaj kar tako — rada ima mir in družbo. Vsak dan jo pelji na sprehod in jo enkrat na teden počeši!«
+- 💼 Investitorji: »Petnajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC — in sam opazil, da edina raziskava o življenjski dobi zaradi mlade populacije daje prenizko številko, zato je mejo predlagal ustanovitelju, namesto da bi jo slepo uporabil.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri čivavi pokaže teste staršev — presejanje CM/SM, pregled oči, kolkov, srca in pogačice — in opozori, da so bolezni zob pri čivavah pogoste, brez obljub o zdravju.«
+- 📣 Omrežja: čivavo **lahko objavljamo** (ni pes s sploščenim obrazom, nikoli merle), nikoli z otroki ali kot modni dodatek.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje, premor po obroku in socializacija so samo nove vrstice v `breed_stage_params`; meja starejšega in prihod starejšega sta `verified=false`; izvoz registra dobi izvor FCI Mehika in pet novih ključev zdravja.«
+
+---
+
+## 2026-10-13 — Izbris računa prekliče tudi prijavo z Apple (M2-10c)
+
+**Kaj:** ko starš, ki se prijavlja z Apple, izbriše račun, strežnik v ozadju pri Applu prekliče žetone (Apple REST `/auth/token` + `/auth/revoke`, lasten podpis ES256 brez dodatne knjižnice, ločena čakalna vrsta `auth`, ker koda velja le 5 minut). Testi: 28 novih, vsi zeleni.
+**Zakaj:** App Store (smernica 5.1.1(v)) to zahteva za vsako aplikacijo s prijavo z Apple — brez tega bi bila oddaja zavrnjena.
+**Kako povedati:** 👩 »Ko izbrišete račun, izbrišemo vse — tudi povezavo z vašim Apple ID-jem.« · 🛠 ES256 client secret z openssl, DER→R‖S.
+
+---
+
+## 2026-10-13 — Prijava z Googlom in Apple za starše (M2-10c)
+
+**Kaj:** starš se lahko registrira in prijavi z enim dotikom — »Nadaljuj z Googlom« (iPhone in Android) ali »Nadaljuj z Apple« (iPhone). Strežnik sam preveri podpis žetona pri Googlu / Apple (brez dodatne knjižnice), račun z geslom se zaradi varnosti nikoli ne poveže samodejno, izbris računa pa starš brez gesla potrdi s ponovno prijavo. Otrok ostane na PIN-u. Testi: 2.927 strežniških (Pest) in 2.440 aplikacijskih (Jest), vsi zeleni.
+**Zakaj:** registracija z e-pošto in geslom je največji upad pri prvem zagonu; prijava z enim dotikom je standard, ki ga starši pričakujejo. Apple prijava je na iPhonu obvezna, če ponudimo Google.
+**Kako povedati:** 👩 »Brez novega gesla — prijavite se z Googlom ali Apple, otrok pa še vedno samo s PIN-om.« · 💼 nižje trenje pri registraciji (aktivacija) · 🛠 lastno preverjanje RS256 JWT nad JWKS, zaščita pred prevzemom računa s predregistracijo.
+
+---
+
+## 2026-10-13 — Mali ameriški ovčar: štirinajsta pasma po dvajsetih (M5-R10-32)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **malega ameriškega ovčarja** (24. mesto). Osemindvajseta plačljiva pasma psa; v izbirniku je zdaj 29 psov (z mešančkom). Mali ameriški ovčar je energičen pastirski pes, po standardu FCI majhen (9,1–18,1 kg): vsaj ena ura gibanja na dan (6.000 korakov za odraslega psa, 4.500 za starejšega), česanje 2× na teden in tedenska »Nova izkušnja« za mladička (AKC priporoča zgodnjo, dosledno socializacijo).
+
+**Zakaj je pomembno:** Za to pasmo The Royal Kennel Club (pasmo je priznal aprila 2026; strani ni bilo mogoče odpreti) in PDSA nista dala podatkov — sistem je pravila zgradil iz standardov FCI in AKC, tabele tež AKC in strani PetMD, ki jo je napisala in pregledala veterinarka. Ker raziskave o življenjski dobi za pasmo ni, je meja starejšega psa (108 mesecev = 9 let, iz spodnje meje PetMD »12–13 let«) **predlog, ki ga mora David še potrditi**. Česanje 2× na teden je vrednost po pravilu (PetMD »a couple times a week«); oznake »potrebuje česanje večkrat na teden« pa pes nima, ker se viri ne ujemata (AKC: večji del leta zadošča enkrat na teden). Pes nima težav zaradi telesne zgradbe, zato **sme biti v marketingu** — nikoli kot pes za majhne otroke, ker jih lahko »pase«. Redno striženje krempljev (AKC) igra še ne vodi — *načrt* (M5-R19).
+
+**Številke:** 8 novih virov (S264–S271), 1 migracija, brez nove oznake, 1 nov ključ testa staršev (pregled pogačice), 4 ključi zdravja v registru (brez statistik), 3 + 4 oznake v izbirniku, 2 zgrajeni potrebi z virom (česanje 2× na teden, socializacija) in 1 v načrtu (kremplji), dnevni cilj 6.000 korakov, meja starejšega 108 mesecev (predlog Claude — odprto za Davida), 29 psov v izbirniku (28 plačljivih + mešanček); testi: Pest 2.895 testov, Jest 157 skupin / 2.372 testov, izvoz registra 56 / 56. Portret in stran v registru sledita v ločenih PR. Na telefonu še ni preverjeno.
+
+**Kako povedati:**
+- 👩 Starši: »Mali ameriški ovčar je pameten, ljubeč družinski pes, ki potrebuje vsaj uro gibanja na dan, »službo« za glavo in družbo — sam doma ne zdrži dobro. V PetPrepu boste videli, ali vaš otrok zmore vsakodnevne sprehode in česanje dvakrat na teden, preden se odločite za pravega kužka.«
+- 🧒 Otroci: »Mali ameriški ovčar je pisan pastirski kuža — rad bi te »pasel«, zato ga vsak dan pelji na dolg sprehod in mu daj kakšno nalogo!«
+- 💼 Investitorji: »Štirinajsta pasma, ki jo je sistem sam izbral po javni lestvici AKC — tudi brez britanskih virov so vse številke iz virov ali stalnih pravil, kjer pravilo ne da vrednosti, pa sistem številko označi kot predlog za ustanovitelja, namesto da bi jo izmislil.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »PetPrep pri malem ameriškem ovčarju pokaže teste staršev, ki jih navaja PetMD — test DNK MDR1, pregled oči, kolkov in pogačice — brez obljub o zdravju.«
+- 📣 Omrežja: malega ameriškega ovčarja **lahko objavljamo** (barva merle je v standardu, rep vedno naraven), nikoli kot psa za majhne otroke.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje in socializacija sta samo novi vrstici v `breed_stage_params`; meja starejšega in prihod starejšega sta `verified=false`; izvoz registra dobi razpon življenjske dobe in nov ključ testa staršev `patella_scheme`.«
+
+---
 
 ## 2026-10-13 — Bostonski terier: trinajsta pasma po dvajsetih (M5-R10-31)
 

@@ -402,6 +402,15 @@ const SPECIES = [
       { id: 'great_dane', synonyms: { en: ['Deutsche Dogge'], sl: ['doga', 'deutsche dogge'] } },
       { id: 'pomeranian', synonyms: { en: ['Pom', 'German Toy Spitz', 'Zwergspitz'], sl: ['pom', 'nemški špic', 'nemski spic', 'zwergspitz'] } },
       { id: 'boston_terrier', synonyms: { en: ['Boston', 'American Gentleman'], sl: ['boston', 'boston terier'] } },
+      { id: 'miniature_american_shepherd', synonyms: { en: ['Mini American', 'MAS', 'Miniature Australian Shepherd', 'Mini Aussie'], sl: ['mali ameriski ovcar', 'mini aussie'] } },
+      { id: 'chihuahua', synonyms: { en: ['Chi', 'Chihuahueño', 'Smooth Coat Chihuahua'], sl: ['civava', 'chihuahua', 'čihuahua'] } },
+      { id: 'english_springer_spaniel', synonyms: { en: ['Springer Spaniel', 'Springer', 'ESS'], sl: ['springer španjel', 'angleski springer spanjel', 'springer'] } },
+      { id: 'shetland_sheepdog', synonyms: { en: ['Sheltie', 'Shetland Collie'], sl: ['sheltie', 'šeltie', 'setlandski ovcar'] } },
+      { id: 'brittany', synonyms: { en: ['Brittany Spaniel', 'Epagneul Breton'], sl: ['epagneul breton', 'bretonski španjel', 'bretonski pticar'] } },
+      { id: 'american_cocker_spaniel', synonyms: { en: ['American Cocker', 'Cocker Spaniel (USA)'], sl: ['ameriški koker', 'ameriski koker spanjel'] } },
+      { id: 'belgian_malinois', synonyms: { en: ['Malinois', 'Belgian Shepherd Dog (Malinois)', 'Mal'], sl: ['malinois', 'belgijski ovcar malinois'] } },
+      { id: 'basset_hound', synonyms: { en: ['Basset', 'Basset Hound dog'], sl: ['basset hound', 'baset hound', 'basset'] } },
+      { id: 'hungarian_vizsla', synonyms: { en: ['Vizsla', 'Magyar Vizsla', 'Hungarian Pointer', 'Hungarian Short-haired Pointer'], sl: ['vižla', 'madžarska vižla', 'madžarski ptičar'] } },
     ],
   },
   {
@@ -426,7 +435,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -979,6 +988,220 @@ const DOG_FACTS = {
       ['prominent_eyes_injury_dry_eye', 'health.eyes'],
     ],
   },
+  // M5-R10-32. The RKC breed page could not be fetched and the breed has no PDSA page, so the register
+  // shows the FCI height, the AKC weight chart (S268) and the PetMD lifespan range (S269, 'span') and
+  // exercise minimum (the game value, 'at_least' — Labrador precedent). Not exported: lifespan.rkc /
+  // mcmillan_2024 (null), lifespan.senior_from (derived), suitability.petmd_grooming / akc_grooming
+  // (free text, no category word — the game's brushing rule is shown instead), akc_shedding /
+  // petmd_shedding (free text; the app's `sheds` chip carries it), health.merle (background).
+  // Coren: not ranked (S35) → coren_rank: false.
+  miniature_american_shepherd: {
+    height: ['height.fci'],
+    weight: [['adult_weight.akc', null]],
+    lifespan: [['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.miniature_american_shepherd.exercise_minutes_adult', 'at_least']],
+    coat: [],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    coren_rank: false,
+    health: [
+      ['drug_sensitivity_mdr1', 'health.mdr1'],
+      ['inherited_eye_disease', 'health.eyes'],
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['kneecap_luxation', 'health.luxating_patella'],
+    ],
+  },
+  // M5-R10-33 (Smooth Coat). Not exported: adult_weight.fci (the KC / PDSA range is shown; FCI ideal
+  // 1.5–2.5 kg stays in research), adult_weight.salt_category (our assignment), lifespan.vetcompass
+  // (8.2 y — the median age at death of a young population, biased downwards by its own authors' account;
+  // never shown), lifespan.mcmillan_2024 (null), lifespan.senior_from (derived), health.dental (the RVC
+  // sentence health.dental_weight is shown), health.merle / other_pdsa (background), suitability.rkc_breed_watch
+  // (Category 2 without returned points — no chip, open for David). Height: no standard gives one → the PDSA
+  // average range (Bulldog / Boston Terrier precedent). Own health keys: legg_perthes, hydrocephalus,
+  // eye_problems_dry_eye_entropion_lens_luxation, heart_valve_screening and dental_weight_problems (no shared
+  // sentence matches this breed's sources).
+  chihuahua: {
+    height: ['height.pdsa_average'],
+    weight: [['adult_weight.rkc', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.luxating_patella'],
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['legg_perthes', 'health.legg_perthes'],
+      ['hydrocephalus', 'health.hydrocephalus'],
+      ['eye_problems_dry_eye_entropion_lens_luxation', 'health.eyes'],
+      ['heart_valve_screening', 'health.heart'],
+      ['windpipe_collapse_breathing', 'health.tracheal_collapse'],
+      ['cm_sm_screening', 'health.syringomyelia'],
+      ['dental_weight_problems', 'health.dental_weight'],
+    ],
+  },
+  // M5-R10-34. Not exported: adult_weight.akc (approximate single figures — the PDSA range is shown),
+  // adult_weight.salt_category (our assignment), height.akc (inches; the KC / PDSA 51 cm is shown),
+  // lifespan.vetcompass_life_table (Teng 2022 mean life expectancy, alternative only), lifespan.senior_from
+  // (derived), health.dna_tests (breeder checklist), suitability.rkc_breed_watch (Category 1, no points).
+  // Lifespan = McMillan 2024 via the Dogs Trust table (S123) and the RKC band "Over 10 years". Own health key:
+  // ear_infections_long_ears (no shared sentence names the long ears).
+  english_springer_spaniel: {
+    height: ['height.rkc'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['pra_eye_disease', 'health.pra'],
+      ['ear_infections_long_ears', 'health.ear_infections'],
+    ],
+  },
+  // M5-R10-35. Not exported: height.pdsa / height.akc (the FCI ideal heights are shown), adult_weight.pdsa
+  // (one average, inside the AKC range shown), adult_weight.salt_category (our assignment),
+  // lifespan.mcmillan_2024 (null — the Wikipedia figure is tier C), lifespan.senior_from (derived),
+  // suitability.akc_grooming (free text; the RKC "Every day" is shown), suitability.rkc_breed_watch
+  // (Category 2 without a named point), behaviour.barking (no category). Lifespan = the RKC band
+  // "Over 10 years" (S291). Own health key: collie_eye_pra (CEA and PRA together).
+  shetland_sheepdog: {
+    height: ['height.fci'],
+    weight: [['adult_weight.akc', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['collie_eye_pra', 'health.eye_conditions'],
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+      ['drug_sensitivity_mdr1', 'health.mdr1'],
+    ],
+  },
+  // M5-R10-36. Not exported: height.fci (French PDF, quote null — the RKC heights are the same and quoted),
+  // height.akc (one range), adult_weight.salt_category (our assignment), lifespan.petmd (not in the runbook's
+  // lifespan order), lifespan.mcmillan_2024 (null), lifespan.senior_from (derived), suitability.akc_grooming /
+  // petmd_grooming (free text; the RKC "More than once a week" is shown), health.ears (care need, M5-R20),
+  // behaviour.barking (no category). Lifespan = the RKC band "Over 10 years" (S298). Own health key: cataracts.
+  brittany: {
+    height: ['height.rkc'],
+    weight: [['adult_weight.akc', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['epilepsy', 'health.epilepsy'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+      ['cataracts', 'health.cataracts'],
+    ],
+  },
+  // M5-R10-37. Not exported: height.fci (French PDF, quote null — the AKC ideal heights are quoted),
+  // adult_weight.vca (inside the AKC range), adult_weight.salt_category (our assignment), lifespan.petmd /
+  // lifespan.vca (not in the runbook's lifespan order), lifespan.mcmillan_2024 (Wikipedia, tier C),
+  // lifespan.senior_from (derived), suitability.vca_grooming / petmd_grooming / akc_grooming (free text; the
+  // RKC "Every day" is shown), health.skin_infections (no register key; background), suitability.rkc_breed_watch
+  // (Category 2 without a named point). Lifespan = the RKC band "Over 10 years" (S305). No new health key.
+  american_cocker_spaniel: {
+    height: ['height.akc'],
+    weight: [['adult_weight.akc', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: 'behaviour.food_motivation',
+    health: [
+      ['ear_infections_long_ears', 'health.ear_infections'],
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+      ['pra_eye_disease', 'health.prcd_pra'],
+    ],
+  },
+  // M5-R10-38. Not exported: adult_weight.akc_article / adult_weight.petmd (wider / heavier than the FCI
+  // standard), adult_weight.salt_category (our assignment), lifespan.petmd (not in the runbook's lifespan
+  // order), lifespan.mcmillan_2024 (Wikipedia, tier C), lifespan.senior_from (derived), suitability.rkc_coat_length
+  // (RKC "Medium" vs the standards' short coat), suitability.akc_grooming / petmd_grooming (free text "occasional";
+  // the RKC "More than once a week" is shown), suitability.rkc_breed_watch (Category 1). Food motivation: no source.
+  // Lifespan = the RKC band "Over 10 years" (S314). New health key pra_inherited_blindness (no test claim).
+  belgian_malinois: {
+    height: ['height.fci', 'height.akc'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: [],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_joint_disease', 'health.hip_elbow_dysplasia'],
+      ['cataracts', 'health.cataracts'],
+      ['pra_inherited_blindness', 'health.pra'],
+    ],
+  },
+  // M5-R10-39. Not exported: height.akc_article (an upper bound only), adult_weight.akc_article (AKC article,
+  // alternative), adult_weight.salt_category (our assignment), lifespan.pdsa (same band as the RKC),
+  // lifespan.mcmillan_2024 (Wikipedia, tier C), lifespan.senior_from (derived), health.elbow_dysplasia (a PDSA
+  // list item only), suitability.rkc_breed_watch (Category 3 — shown as the eyelid / skin-fold health keys).
+  // Weight = PDSA (S323, one range for both sexes; the FCI standard gives no weight); height = FCI 163 (S320,
+  // both sexes); lifespan = the RKC band "Over 10 years" (S321). Own health keys: eyelids_turned (no cherry
+  // eye — eyelid_problems names it), glaucoma_poag, skin_fold_dermatitis (body folds, not only the face).
+  basset_hound: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: 'behaviour.food_motivation',
+    health: [
+      ['eyelids_turned', 'health.breed_watch'],
+      ['glaucoma_poag', 'health.eyes'],
+      ['skin_fold_dermatitis', 'health.skin_folds'],
+      ['bloat_gdv', 'health.gdv'],
+      ['back_disc_disease', 'health.ivdd'],
+      ['ear_infections_long_ears', 'health.ears'],
+      ['weight_gain', 'health.weight'],
+    ],
+  },
+  // M5-R10-40. Not exported: height.pdsa (one band, alternative), adult_weight.petmd (alternative),
+  // adult_weight.salt_category (our assignment), lifespan.pdsa (same band as the RKC), lifespan.petmd (alternative),
+  // lifespan.mcmillan_2024 (Wikipedia, tier C), lifespan.senior_from (derived), health.pra (a PetMD heading only),
+  // suitability.rkc_breed_watch (Category 1 — nothing to show). Weight = PDSA (S329, one range for both sexes; the
+  // FCI and AKC standards give no weight); height = FCI 57 (S327) and the AKC standard (S331); lifespan = the RKC
+  // band "Over 12 years" (S328). New health keys: entropion (inward only — eyelids_turned also names outward),
+  // autoimmune_conditions, ear_infections_prone (PetMD gives no cause — not the long-ears key).
+  hungarian_vizsla: {
+    height: ['height.fci', 'height.akc'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['entropion', 'health.entropion'],
+      ['epilepsy', 'health.epilepsy'],
+      ['autoimmune_conditions', 'health.autoimmune'],
+      ['certain_cancers', 'health.cancers'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+      ['bloat_gdv', 'health.bloat'],
+      ['ear_infections_prone', 'health.ears'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1205,6 +1428,78 @@ const DOG_GAME = {
     step_goal_check: 'proposed_game_parameters.boston_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.boston_terrier.exercise_minutes_senior',
   },
+  miniature_american_shepherd: {
+    adult_minutes: ['proposed_game_parameters.miniature_american_shepherd.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.miniature_american_shepherd.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.miniature_american_shepherd.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.miniature_american_shepherd.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.miniature_american_shepherd.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.miniature_american_shepherd.exercise_minutes_senior',
+  },
+  chihuahua: {
+    adult_minutes: ['proposed_game_parameters.chihuahua.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.chihuahua.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.chihuahua.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.chihuahua.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.chihuahua.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.chihuahua.exercise_minutes_senior',
+  },
+  english_springer_spaniel: {
+    adult_minutes: ['proposed_game_parameters.english_springer_spaniel.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.english_springer_spaniel.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.english_springer_spaniel.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.english_springer_spaniel.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.english_springer_spaniel.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.english_springer_spaniel.exercise_minutes_senior',
+  },
+  shetland_sheepdog: {
+    adult_minutes: ['proposed_game_parameters.shetland_sheepdog.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.shetland_sheepdog.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.shetland_sheepdog.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.shetland_sheepdog.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.shetland_sheepdog.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.shetland_sheepdog.exercise_minutes_senior',
+  },
+  brittany: {
+    adult_minutes: ['proposed_game_parameters.brittany.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.brittany.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.brittany.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.brittany.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.brittany.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.brittany.exercise_minutes_senior',
+  },
+  american_cocker_spaniel: {
+    adult_minutes: ['proposed_game_parameters.american_cocker_spaniel.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.american_cocker_spaniel.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.american_cocker_spaniel.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.american_cocker_spaniel.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.american_cocker_spaniel.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.american_cocker_spaniel.exercise_minutes_senior',
+  },
+  belgian_malinois: {
+    adult_minutes: ['proposed_game_parameters.belgian_malinois.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.belgian_malinois.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.belgian_malinois.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.belgian_malinois.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.belgian_malinois.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.belgian_malinois.exercise_minutes_senior',
+  },
+  basset_hound: {
+    adult_minutes: ['proposed_game_parameters.basset_hound.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.basset_hound.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.basset_hound.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.basset_hound.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.basset_hound.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.basset_hound.exercise_minutes_senior',
+  },
+  hungarian_vizsla: {
+    adult_minutes: ['proposed_game_parameters.hungarian_vizsla.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.hungarian_vizsla.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.hungarian_vizsla.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.hungarian_vizsla.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.hungarian_vizsla.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.hungarian_vizsla.exercise_minutes_senior',
+  },
 };
 
 function dogBreedFacts(R, id) {
@@ -1220,7 +1515,7 @@ function dogBreedFacts(R, id) {
   }
   facts.push(R.fact(p('growth.adult_weight_reached'), { group: 'stages', field: 'growth_end', kind: 'quantity', unit: 'months', qualifier: 'about', note: 'size_class_guidance' }, parseRange));
   for (const [rel, q] of spec.lifespan) {
-    facts.push(R.fact(p(rel), { group: 'lifespan', field: 'lifespan', kind: 'quantity', unit: 'years', qualifier: q }, (v, ref) => (q === 'more_than' ? parseMoreThan(v, ref) : q === 'less_than' ? parseLessThan(v, ref) : Number(v))));
+    facts.push(R.fact(p(rel), { group: 'lifespan', field: 'lifespan', kind: 'quantity', unit: 'years', qualifier: q }, (v, ref) => (q === 'more_than' ? parseMoreThan(v, ref) : q === 'less_than' ? parseLessThan(v, ref) : q === 'span' ? parseRange(v, ref) : Number(v))));
   }
   for (const [rel, q] of spec.exercise) {
     facts.push(R.fact(p(rel), { group: 'exercise', field: 'exercise', kind: 'quantity', unit: 'min_per_day', qualifier: q }, (v, ref) => (q === 'more_than' ? parseMoreThan(v, ref) : q === 'up_to' ? parseUpTo(v, ref) : Number(v))));

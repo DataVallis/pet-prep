@@ -3,8 +3,8 @@
 #
 # Refuses (exit 1 — the deploy job turns red, it is NOT skipped) to deploy a commit
 # that is no longer the head of main on origin:
-#   push              always: a newer merge exists → its own run deploys it; deploying
-#                     this older commit afterwards would silently roll production back.
+#   push              always (since D18 a push never reaches the deploy job — kept as a
+#                     second lock): deploying an older commit would roll production back.
 #   any re-run        (attempt > 1) same — "Re-run" of an old run is NOT a rollback tool;
 #                     re-running the run of the current main head still redeploys it.
 #   workflow_dispatch (attempt 1) not checked: "Run workflow" on main starts from the

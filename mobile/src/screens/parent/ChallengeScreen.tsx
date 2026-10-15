@@ -56,7 +56,6 @@ export const CHALLENGE_STRINGS = strings('paywall', 'challenge', {
 });
 const RESULT = strings('paywall', 'result');
 
-const LIST_PRICE = '49,99 €';
 
 type Message =
   | { kind: 'purchase'; outcome: PurchaseOutcome }
@@ -218,7 +217,7 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
               <Text style={styles.body}>{key === 'media' ? tPets('paywall:challenge.includes.media', group) : S.includes[key]}</Text>
             </View>
           ))}
-          <Text style={styles.honest}>{tPets('paywall:challenge.honest', group, { price: price ?? LIST_PRICE })}</Text>
+          <Text style={styles.honest}>{price ? tPets('paywall:challenge.honest', group, { price }) : tPets('paywall:challenge.honestNoPrice', group)}</Text>
           <Text style={styles.muted}>{S.priceEstimate}</Text>
         </Card>
 

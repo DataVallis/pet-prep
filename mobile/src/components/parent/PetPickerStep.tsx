@@ -11,6 +11,8 @@
  *    of breeds are coming); the open list has "Pokaži manj pasem" at its top and bottom. Free breed first with a "Brezplačno" badge, paid
  *    breeds with "Izziv"; a breed the plan doesn't take is greyed and explained on tap (M5-F03).
  *    Each breed with sourced tags shows "Primerno za:" / "Upoštevajte:" chips (M5-R10).
+ *    A paid breed with colours (M5-R21) shows "Barva": chips when there are several (the first
+ *    preselected, so it never blocks), a plain line when there is only one; none for a free breed.
  * 4. **Origin** and **age at arrival**, as before (texts per species, T8). A non-pedigree
  *    breed (mutt, domestic cat) is adoption only — never "from a breeder" (David 2026-10-12).
  * 5. **Summary** (species, breed, origin, age, plan) above "Ustvari kodo".
@@ -18,7 +20,7 @@
  * Premium breeds need the challenge (server 422 `breed_locked` otherwise); the challenge
  * needs a paid breed (422 `challenge_requires_paid_breed`). Plan, origin and age have no
  * default, and neither has the breed while no plan is chosen — tapping the free breed picks the
- * free plan, so a breed is never ticked without its plan. Price shown honestly: from the store when loaded, else the list price; no
+ * free plan, so a breed is never ticked without its plan. Price shown honestly: only the store's localized price ("…" while loading, no number without it); no
  * automatic charge. Light parent theme (ADR-007). Test IDs keep the M5-R04 names
  * (`dog-picker*`) so existing flows stay stable.
  */
@@ -36,10 +38,11 @@ import {
   breedHint,
   breedLockReason,
   breedsOf,
-  CHALLENGE_LIST_PRICE,
   choiceWithBreed,
   choiceWithPlan,
   choiceWithSpecies,
+  colourLabel,
+  coloursFor,
   completeChoice,
   considerLabel,
   freeBreedOf,
@@ -57,6 +60,7 @@ import {
   suitabilityA11y,
   suitsLabel,
   type BreedCatalogue,
+  type BreedColour,
   type BreedLockReason,
   type BreedSuitability,
   type CatalogueBreed,
@@ -64,6 +68,7 @@ import {
   type PickerText,
   visibleBreeds,
   withConsistentPlan,
+  withValidColour,
   withValidOrigin,
 } from '@/modules/petProfile/picker';
 import { breedName, foldForSearch, speciesName } from '@/modules/species/species';
@@ -77,8 +82,10 @@ interface PetPickerStepProps {
   initial: PickerChoice;
   /** Breeds the server refused for this choice (422 `breed_locked`), on top of the plan rules. */
   serverLockedBreeds?: readonly PetBreed[];
-  /** Store price of the challenge ("49,99 €"), null while unknown → list price. */
+  /** Store price of the challenge, localized by the store ("49,99 €"); null = unknown → no number. */
   challengePrice?: string | null;
+  /** The store price is still loading (→ "…" instead of a number). */
+  challengePriceLoading?: boolean;
   /** A message to show on top (e.g. the server refused the last choice). */
   notice?: string | null;
   onConfirm: (profile: NewPetProfile, choice: PickerChoice) => void;
@@ -132,19 +139,19 @@ function PickerBody({
   initial,
   serverLockedBreeds = [],
   challengePrice = null,
+  challengePriceLoading = false,
   notice = null,
   onConfirm,
   onBack,
 }: PetPickerStepProps & { catalogue: BreedCatalogue }) {
-  const [choice, setChoice] = useState<PickerChoice>(() =>
-    withValidOrigin(withConsistentPlan(startChoice(initial, catalogue, serverLockedBreeds)), catalogue.breeds),
-  );
   /**
-   * Every change goes through the plan ↔ breed rule (never a breed without its plan) and the
-   * origin rule (a mutt can't stay "bought from a breeder").
+   * Every choice goes through the plan ↔ breed rule (never a breed without its plan), the
+   * origin rule (a mutt can't stay "bought from a breeder") and the colour rule (M5-R21: only a
+   * colour of the chosen paid breed, the first one preselected).
    */
-  const update = (change: (c: PickerChoice) => PickerChoice) =>
-    setChoice((c) => withValidOrigin(withConsistentPlan(change(c)), catalogue.breeds));
+  const normalize = (c: PickerChoice) => withValidColour(withValidOrigin(withConsistentPlan(c), catalogue.breeds), catalogue.breeds);
+  const [choice, setChoice] = useState<PickerChoice>(() => normalize(startChoice(initial, catalogue, serverLockedBreeds)));
+  const update = (change: (c: PickerChoice) => PickerChoice) => setChoice((c) => normalize(change(c)));
   const [stage, setStage] = useState<'species' | 'details'>(() => (choice.species === null ? 'species' : 'details'));
   /** The locked breed the parent tapped last (explains why), null when none. */
   const [lockedTapped, setLockedTapped] = useState<PetBreed | null>(null);
@@ -180,7 +187,7 @@ function PickerBody({
   // way out is the free plan — say so instead of "choose a breed" (M5-F03).
   const noOpenBreed = breeds.every((b) => isBreedLocked(b.breed, lockedBreeds));
   const profile = completeChoice(choice, serverLockedBreeds, breeds);
-  const price = challengePrice ?? CHALLENGE_LIST_PRICE;
+  const challengeTitle = S.plans.challenge.title(challengePrice, challengePriceLoading);
   const shown = searchBreeds(breeds, query);
   const listed = visibleBreeds(shown, query, allBreeds, choice.breed);
   // The toggle only without a search (a search always lists every match).
@@ -188,6 +195,7 @@ function PickerBody({
   const origins = originsFor(choice, breeds);
   const adoptionOnlyBreed = origins.length === 1 ? originBreed(choice, breeds) : null;
   const ageBreed = choice.breed ?? freeBreedOf(breeds);
+  const colours = coloursFor(choice, breeds);
 
   return (
     <ScrollView contentContainerStyle={styles.content} testID="dog-picker" keyboardShouldPersistTaps="handled">
@@ -221,7 +229,7 @@ function PickerBody({
       {PICKER_PLANS.map((plan) => (
         <Option
           key={plan}
-          title={plan === 'challenge' ? S.plans.challenge.title(price) : T.freePlanTitle}
+          title={plan === 'challenge' ? challengeTitle : T.freePlanTitle}
           hint={plan === 'challenge' ? T.challengePlanHint : T.freePlanHint}
           selected={choice.plan === plan}
           onPress={() => {
@@ -307,6 +315,10 @@ function PickerBody({
         </Text>
       )}
 
+      {colours.length > 0 && (
+        <ColourChoice colours={colours} selected={choice.colour ?? null} onPick={(colour) => update((c) => ({ ...c, colour }))} />
+      )}
+
       <Text style={styles.sectionTitle} accessibilityRole="header">
         {S.originTitle}
       </Text>
@@ -342,7 +354,7 @@ function PickerBody({
       <Text style={styles.note}>{S.quietHoursNote}</Text>
 
       {profile !== null ? (
-        <Summary profile={profile} text={T} />
+        <Summary profile={profile} text={T} colour={colourLabel(profile, breeds)} />
       ) : (
         <Text style={styles.missing}>
           {choice.plan === null
@@ -521,11 +533,67 @@ function SuitabilityTags({ breed, suitability }: { breed: PetBreed; suitability:
   );
 }
 
+// ── Coat colour of a paid breed (M5-R21) ──────────────────────────
+/**
+ * Several colours → a radio group of chips (brand light theme, 44 pt touch targets); a single
+ * colour → one line, nothing to choose. Labels come from the server in the app language.
+ */
+function ColourChoice({
+  colours,
+  selected,
+  onPick,
+}: {
+  colours: readonly BreedColour[];
+  selected: string | null;
+  onPick: (colour: string) => void;
+}) {
+  if (colours.length === 1) {
+    return (
+      <View style={styles.colourSection}>
+        <Text style={styles.sectionTitle} accessibilityRole="header">
+          {S.colourTitle}
+        </Text>
+        <Text style={styles.optionHint} testID="colour-only">
+          {S.colourOnly(colours[0].label)}
+        </Text>
+      </View>
+    );
+  }
+  return (
+    <View style={styles.colourSection}>
+      <Text style={styles.sectionTitle} accessibilityRole="header">
+        {S.colourTitle}
+      </Text>
+      <Text style={styles.note}>{S.colourHint}</Text>
+      <View style={styles.colourChips} accessibilityRole="radiogroup" accessibilityLabel={S.colourTitle} testID="colour-choice">
+        {colours.map((colour) => {
+          const checked = colour.key === selected;
+          return (
+            <Pressable
+              key={colour.key}
+              onPress={() => onPick(colour.key)}
+              style={({ pressed }) => [styles.colourChip, checked && styles.colourChipSelected, pressed && styles.pressed]}
+              accessibilityRole="radio"
+              accessibilityState={{ checked }}
+              accessibilityLabel={S.colourA11y(colour.label)}
+              testID={`colour-option-${colour.key}`}
+            >
+              {checked && <Check color={palette.white} size={14} />}
+              <Text style={[styles.colourChipText, checked && styles.colourChipTextSelected]}>{colour.label}</Text>
+            </Pressable>
+          );
+        })}
+      </View>
+    </View>
+  );
+}
+
 // ── Summary before the PIN ────────────────────────────────────────
-function Summary({ profile, text }: { profile: NewPetProfile; text: PickerText }) {
+function Summary({ profile, text, colour }: { profile: NewPetProfile; text: PickerText; colour: string | null }) {
   const rows: Array<[string, string]> = [
     [S.summary.species, speciesName(profile.species)],
     [S.summary.breed, breedName(profile.breed, profile.species)],
+    ...(colour !== null ? ([[S.summary.colour, colour]] as Array<[string, string]>) : []),
     [S.summary.origin, text.origins[profile.origin]],
     [S.summary.age, text.ages[profile.age_stage]],
     [S.summary.plan, S.planNames[profile.plan]],
@@ -657,6 +725,22 @@ const styles = StyleSheet.create({
   chipConsider: { borderColor: C.border },
   chipText: { fontSize: 12, lineHeight: 16, fontWeight: '600', color: C.text },
   chipConsiderText: { color: C.muted },
+  colourSection: { gap: 8 },
+  colourChips: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
+  colourChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    minHeight: 44,
+    paddingHorizontal: 14,
+    borderRadius: 999,
+    borderWidth: 1,
+    borderColor: C.border,
+    backgroundColor: C.card,
+  },
+  colourChipSelected: { borderColor: C.accent, backgroundColor: C.accent },
+  colourChipText: { fontSize: 14, fontWeight: '600', color: C.text },
+  colourChipTextSelected: { color: palette.white },
   searchBox: {
     flexDirection: 'row',
     alignItems: 'center',

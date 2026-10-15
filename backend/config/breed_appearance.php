@@ -290,6 +290,92 @@
 | "Pinched nostrils.", RKC "Nostrils open."). Colour weights are unsourced → `verified => false`;
 | brindle and white weighted highest (the colour both standards prefer — the register portrait).
 |
+| Miniature American Shepherd (M5-R10-32, docs/research/dog-data miniature_american_shepherd.appearance):
+| a small, athletic herding dog, slightly longer than tall (FCI 367 S265, AKC standard S266); medium
+| texture, straight-to-wavy, weather-resistant, medium-length coat; triangular, moderate, high-set ears
+| that fold (prick ears a severe fault); eyes brown, blue, hazel, amber or any combination, fully
+| surrounded by colour; natural undocked tail (the standards prefer docked / natural bobtail — the game
+| never draws docking). Colours: black, blue merle, red (liver), red (liver) merle, with or without white
+| and tan markings, "with no order of preference" — merle is standard here (as the Australian Shepherd);
+| never white body splashes or a predominantly white head. Colour weights are unsourced →
+| `verified => false`; blue merle weighted highest (the register portrait).
+|
+| Chihuahua (M5-R10-33, docs/research/dog-data chihuahua.appearance): the Smooth Coat variety (RKC S275) —
+| small, dainty, compact (KC standard S274, FCI 218 S273); well-rounded 'apple dome' skull, definite stop,
+| muzzle moderately short and slightly pointed; large round eyes, not protruding; large flaring ears at
+| about 45°; medium-length sickle tail over the back; smooth, soft, close, glossy coat. Colours: any
+| colour or mixture of colours, never merle (KC "Never merle (dapple).", FCI disqualifying). Welfare:
+| the dog trait `muzzle` asks for a moderate dome and muzzle with eyes that are not protruding (no
+| exaggerated tiny-dog features). Colour weights are unsourced → `verified => false`; fawn weighted
+| highest (the register portrait).
+|
+| English Springer Spaniel (M5-R10-34, docs/research/dog-data english_springer_spaniel.appearance):
+| symmetrically built, compact, strong, merry, active, the highest on leg of the British land spaniels
+| (KC standard S282); skull of medium length, fairly broad, slightly rounded, foreface of proportionate
+| length; medium, almond-shaped, dark hazel eyes; lobular, long, well-feathered ears set in line with
+| the eye; close, straight, weather-resisting coat with moderate feathering; tail set low, never above
+| the back — natural (KC "Previously customarily docked."). Colours (KC): liver and white, black and
+| white, either with tan markings — never roan, lemon, red or orange in the game. Colour weights are
+| unsourced → `verified => false`; liver and white weighted highest (the register portrait).
+|
+| Shetland Sheepdog (M5-R10-35, docs/research/dog-data shetland_sheepdog.appearance):
+| small, long-haired working dog of great beauty, lithe and graceful (FCI standard S290); head a
+| long, blunt wedge tapering from ear to nose; medium, oblique, almond-shaped dark brown eyes (blue
+| allowed in merles); small ears carried semi-erect with the tips falling forward; double coat with a
+| long, harsh, straight outer coat and abundant mane and frill; tail set low with abundant hair, never
+| over the back. Colours (FCI): sable, tricolour, blue merle, black and white, black and tan — white
+| only on the blaze, collar, chest, frill, legs and tail tip; never brindle, never white patches on
+| the body, never a mostly white double merle. Colour weights are unsourced → `verified => false`;
+| sable and white weighted highest (the register portrait).
+|
+| Brittany (M5-R10-36, docs/research/dog-data brittany.appearance): workmanlike, substance without
+| heaviness, moderately boned, compact and short-backed — the smallest of the pointing dogs (RKC
+| standard S299, FCI S297); skull slightly rounded, muzzle tapered but not snipy; expressive brown to
+| dark eyes; triangular high-set ears, slightly rounded at the tip, lying flat; dense, fairly fine,
+| flat or slightly wavy coat; naturally tailless or short tail (often born bob-tailed, S298). Colours
+| (RKC / FCI): orange, liver or black and white, clear or roan, tricolour — never a solid colour, never
+| white spots on the ears (FCI). AKC (S300) allows only orange or liver and white. Colour weights are
+| unsourced → `verified => false`; orange and white weighted highest (the register portrait).
+|
+| American Cocker Spaniel (M5-R10-37, docs/research/dog-data american_cocker_spaniel.appearance): the
+| smallest of the sporting dogs, compact and sturdy (AKC standard S307, FCI S304); rounded skull,
+| pronounced stop, broad and deep muzzle; round, full, dark brown eyes (blue eyes disqualify, FCI);
+| long lobular well-feathered ears set no higher than the lower part of the eye; silky, flat or
+| slightly wavy coat with moderate feathering (pet length in the game, not a floor-length show skirt).
+| Varieties (AKC / FCI): black (incl. black and tan), any solid colour other than black (cream / buff to
+| red, brown), parti-colours with white (incl. roan, tricolour) — never merle. The standards describe a
+| docked tail; the game shows a natural undocked tail (Claude's proposal, open for David). Colour weights
+| are unsourced → `verified => false`; buff weighted highest (the register portrait).
+|
+| Belgian Malinois (M5-R10-38, docs/research/dog-data belgian_malinois.appearance): the short-haired
+| variety of the Belgian Shepherd Dog (FCI 15, S313); square, well balanced, elegant and powerful with a
+| proud carriage of head and neck (AKC standard S315); rather small, high-set, triangular erect ears
+| (hanging or semi-prick ears disqualify, AKC); medium, brown, preferably dark eyes; short, straight,
+| hard coat with a dense undercoat, fuller at the neck and tail. Colour (FCI): "Only fawn with black
+| overlay and with black mask." — AKC "rich fawn to mahogany, with black tips"; a pronounced black mask
+| is required. Never black, brindle, merle, grey or white patches. Natural erect ears and a full tail
+| reaching the hock (cropped / stumped tails disqualify, AKC). Colour weights are unsourced →
+| `verified => false`; fawn weighted highest (the register portrait).
+|
+| Basset Hound (M5-R10-39, docs/research/dog-data basset_hound.appearance): "Short-legged hound of
+| considerable substance, well balanced, full of quality." (FCI 163, S320); smooth, short, close coat;
+| low-set, narrow, inward-curling velvety ears; lozenge-shaped dark eyes; supple skin "without any
+| exaggeration", a little wrinkle at the brow and beside the eyes; rather long tapering tail. Colours
+| (FCI): "Generally black, white and tan (tri-colour); lemon and white (bi-colour)" — never merle.
+| Welfare breed (RKC Breed Watch Category 3, S322: eyelids turned in or out, ears far beyond the muzzle,
+| skin-fold dermatitis, inadequate ground clearance / excessive skin, too fat) → moderate ears, tight
+| eyelids, little loose skin (dog trait `skin`) and adequate ground clearance. Colour weights are
+| unsourced → `verified => false`; tricolour weighted highest (the register portrait).
+|
+| Hungarian Vizsla (M5-R10-40, docs/research/dog-data hungarian_vizsla.appearance): "Medium sized,
+| elegant gun dog of noble appearance with short russet gold coat." (FCI 57, S327); short, dense, hard
+| coat without undercoat; broad nose, self-coloured (AKC S331 — never black); slightly oval brown eyes;
+| ears set at medium height hanging close to the cheeks; tail to the hock where docking is prohibited
+| (the game shows the natural tail). Colours (FCI): "Various shades of russet gold and dark sandy gold
+| (semmelgelb)." — never dark brown, pale yellow, parti-colour or white feet. Not a welfare breed (RKC
+| Breed Watch Category 1). New dog trait `nose` (the self-coloured nose sets the breed apart). Colour
+| weights are unsourced → `verified => false`; russet gold weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1429,6 +1515,329 @@ return [
             'muzzle' => ['moderate short square muzzle free from wrinkles, with a black wide nose and clearly open nostrils'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-32 (docs/research/dog-data/data.json miniature_american_shepherd.appearance; runbook rules
+    // 2026-10-10: standard colours only — merle is standard for this breed; natural undocked tail).
+    'miniature_american_shepherd' => [
+        'display_name' => 'Miniature American Shepherd',
+        // Colour frequencies are in no source (miniature_american_shepherd.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 367 (S265), AKC standard (S266), PetMD (S269) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S265 "The Miniature American Shepherd is a small size herding dog that originated in the United States."; males 35.5–46 cm, females 33–43.5 cm',
+            'build' => 'S265 slightly longer than tall, moderate bone, athletic (paraphrase as returned); PetMD S269 "They are athletic and have a lot of energy"',
+            'coat_length' => 'S265 "Hair is of medium texture, straight to wavy, weather resistant, and of medium length."',
+            'coat_color' => 'S265 "With no order of preference, the recognized colors are black, blue merle, red, liver and red or liver merle." (weights unsourced)',
+            'coat_pattern' => 'S265 "The hairline of a white collar does not exceed the withers at the skin."; "White on the head does not predominate, and the eyes are fully surrounded by color and pigment."; disqualifying white body splashes',
+            'ear_carriage' => 'S265 "Are triangular, of moderate size, set high on the head."; "Severe Fault - Prick ears and ears that hang with no lift."',
+            'eye_color' => 'S265 "Acceptable in all coat colors, one or both eyes may be brown, blue, hazel, amber or any color combination thereof"',
+            'tail' => 'S265 "The undocked tail when at rest may hang in a slight curve." (the game draws a natural undocked tail — no docking)',
+        ],
+        'traits' => [
+            'size' => ['small to medium-sized'],
+            'build' => [['value' => 'athletic, slightly longer than tall, moderate bone', 'weight' => 3], 'compact, agile herding build'],
+            'coat_length' => ['medium-length, straight to wavy, weather-resistant coat'],
+            // Standard colours only (S265, S266); blue merle highest → the register portrait is blue merle.
+            'coat_color' => [
+                ['value' => 'blue merle', 'weight' => 35],
+                ['value' => 'black', 'weight' => 25],
+                ['value' => 'red merle', 'weight' => 20],
+                ['value' => 'red', 'weight' => 20],
+            ],
+            'coat_pattern' => [
+                ['value' => 'white collar, chest and legs with copper points, eyes fully surrounded by colour', 'weight' => 3],
+                'small white blaze, white chest and feet with copper points, eyes fully surrounded by colour',
+            ],
+            'ear_carriage' => ['triangular, set high, folding forward'],
+            'eye_color' => [['value' => 'brown', 'weight' => 3], 'blue', 'amber', 'hazel'],
+            'tail' => ['natural undocked tail hanging in a slight curve'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'coat_pattern', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-33 (docs/research/dog-data/data.json chihuahua.appearance; runbook rules 2026-10-10:
+    // standard colours only — never merle; Smooth Coat; moderate, non-exaggerated head).
+    'chihuahua' => [
+        'display_name' => 'Chihuahua',
+        // Colour frequencies are in no source (chihuahua.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'KC breed standard (S274, hosted by KUSA), FCI-Standard N° 218 (S273, Italian text hosted by ENCI), RKC breed page Smooth Coat (S275) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S275 "Size: Small"; S274 "Up to 2.7kg, with 1.8kg – 2.7kg preferred."',
+            'build' => 'S274 "Small, dainty, compact."',
+            'coat_length' => 'S274 "Smooth Coat: smooth, of soft texture, close and glossy, with undercoat and ruff permissible."',
+            'coat_color' => 'S274 "Any colour or mixture of colours." "Never merle (dapple)."; S273 all colours except merle (weights unsourced)',
+            'ear_carriage' => 'S274 "Large, flaring, set on at an angle of approximately 45, giving breadth between ears."',
+            'eye_color' => 'S274 "Large, round, but not protruding; set well apart; …" "dark or ruby. Light eyes in light colours permissible."',
+            'tail' => 'S274 "Medium length, set high, carried up and over back (sickle tail)."',
+            'muzzle' => 'S274 "Well-rounded \'apple dome\' skull, cheeks and jaws lean, muzzle moderately short, slightly pointed. Definite stop." (the game draws a moderate dome, eyes not protruding)',
+        ],
+        'traits' => [
+            'size' => ['tiny toy-sized'],
+            'build' => [['value' => 'small, dainty and compact', 'weight' => 3], 'small, compact and alert'],
+            'coat_length' => ['short, smooth, soft, close and glossy coat'],
+            // Every colour but merle (S274 / S273); fawn highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'fawn', 'weight' => 4],
+                ['value' => 'cream', 'weight' => 2],
+                ['value' => 'black and tan', 'weight' => 2],
+                'chocolate',
+                'white',
+                'fawn and white',
+            ],
+            'ear_carriage' => ['large, flaring, erect ears set at about 45 degrees'],
+            'eye_color' => [['value' => 'dark, large and round, not protruding', 'weight' => 3], 'ruby, large and round, not protruding'],
+            'tail' => ['medium-length sickle tail carried up over the back'],
+            // Welfare: moderate head, never an exaggerated dome or bulging eyes.
+            'muzzle' => ['moderately rounded apple-dome head with a moderately short, slightly pointed muzzle'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-34 (docs/research/dog-data/data.json english_springer_spaniel.appearance; runbook rules
+    // 2026-10-10: KC standard colours only — never roan / lemon / red / orange; natural tail).
+    'english_springer_spaniel' => [
+        'display_name' => 'English Springer Spaniel',
+        // Colour frequencies are in no source (english_springer_spaniel.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'KC breed standard (S282, hosted by KUSA), AKC standard (S283), RKC breed page (S284), PDSA (S285) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S284 "Size: Medium"; S282 "Approximate height: 51cm (approx. 20")."',
+            'build' => 'S282 general appearance (symmetrically built, compact, strong, merry, active; highest on leg of the British land spaniels)',
+            'coat_length' => 'S282 "Close, straight, and weather resisting, never coarse. Moderate feathering on ears, forelegs, body, and hindquarters."',
+            'coat_color' => 'S282 "Liver and white" "Black and white" "Either of these colours with tan markings." "Any other colour or combination of colours unacceptable." (weights unsourced)',
+            'ear_carriage' => 'S282 "Lobular, good length and width, fairly close to head, set in line with eye. Nicely feathered."',
+            'eye_color' => 'S282 "Medium size, almond-shaped, not prominent nor sunken, well set in (not showing haw), alert, kind expression." "Dark hazel."',
+            'tail' => 'S282 "Previously customarily docked." "Set low, never carried above level of back. Well-feathered with lively action." (the game draws the natural tail)',
+        ],
+        'traits' => [
+            'size' => ['medium-sized'],
+            'build' => [['value' => 'compact, strong and athletic, fairly high on the leg', 'weight' => 3], 'symmetrical, merry and active'],
+            'coat_length' => ['close, straight, medium-length coat with moderate feathering on the ears, legs, chest and belly'],
+            // KC colours only (S282); liver and white highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'liver and white', 'weight' => 4],
+                ['value' => 'black and white', 'weight' => 3],
+                'liver and white with tan markings',
+                'black and white with tan markings',
+            ],
+            'ear_carriage' => ['long, lobular, well-feathered ears hanging close to the head'],
+            'eye_color' => ['dark hazel, medium-sized and almond-shaped, with a kind, alert expression'],
+            'tail' => ['natural, undocked, feathered tail carried low, never above the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-35 (docs/research/dog-data/data.json shetland_sheepdog.appearance; runbook rules
+    // 2026-10-10: FCI standard colours only — never brindle, white body patches or a double merle).
+    'shetland_sheepdog' => [
+        'display_name' => 'Shetland Sheepdog',
+        // Colour frequencies are in no source (shetland_sheepdog.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI standard (S290), RKC breed page (S291), PDSA (S293), AKC (S294) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S291 "Size: Small"; S290 ideal height males 37 cm, females 35.5 cm',
+            'build' => 'S290 "Small, long-haired working dog of great beauty, free from cloddiness and coarseness, action lithe and graceful."',
+            'coat_length' => 'S290 "Double; outer coat of long hair, harsh-textured and straight." "Undercoat soft, short and close."',
+            'coat_color' => 'S290 sable, tricolour, blue merle, black and white, black and tan; "Patches of white on body highly undesirable." "Any other colour or combination of colours unacceptable." (weights unsourced)',
+            'ear_carriage' => 'S290 "Small, moderately wide at base, placed fairly close together on top of skull." carried semi-erect with tips falling forward when alert',
+            'eye_color' => 'S290 "Medium size obliquely set, almond-shape with black rims." dark brown (blue allowed in merles)',
+            'tail' => 'S290 "Set low; tapering bone reaches to at least hock; with abundant hair and slight upward sweep."',
+            'muzzle' => 'S290 the head "a long, blunt wedge, tapering from ear to nose"; skull "Flat, moderately wide between ears"',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'small, lithe and graceful, well balanced', 'weight' => 3], 'small, elegant working build'],
+            'coat_length' => ['long, harsh, straight double coat with an abundant mane and frill and a soft undercoat'],
+            // FCI colours only (S290); sable and white highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'sable and white (golden sable with a white collar, frill, chest, legs and tail tip)', 'weight' => 4],
+                ['value' => 'tricolour (black with tan markings and a white collar, frill, chest, legs and tail tip)', 'weight' => 3],
+                ['value' => 'blue merle (silvery blue marbled with black, with white and tan markings)', 'weight' => 2],
+                'black and white',
+                'black and tan',
+            ],
+            'ear_carriage' => ['small ears carried semi-erect with the tips folding forward'],
+            'eye_color' => ['dark brown, medium-sized, almond-shaped and obliquely set, with a gentle expression'],
+            'tail' => ['natural tail set low with abundant hair, carried low with a slight upward sweep'],
+            'muzzle' => ['refined head shaped like a long, blunt wedge tapering from the ears to the nose, with a moderate stop'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-36 (docs/research/dog-data/data.json brittany.appearance; runbook rules
+    // 2026-10-10: standard colours only — never a solid colour).
+    'brittany' => [
+        'display_name' => 'Brittany',
+        // Colour frequencies are in no source (brittany.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'RKC standard (S299), FCI standard (S297), RKC breed page (S298), AKC standard (S300) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S298 "Size: Medium"; S299 height dogs 48–51 cm, bitches 47–50 cm',
+            'build' => 'S299 "Workmanlike. Substance without heaviness. Moderately well boned."; S297 the smallest of the pointing dogs',
+            'coat_length' => 'S299 "Body coat dense but fairly fine. Rather flat or slightly wavy."; S298 "Coat length: Medium"',
+            'coat_color' => 'S299 orange/white, liver/white, black/white, tricolour, or roan of these; "Any other colour or combination of colours unacceptable." (weights unsourced)',
+            'ear_carriage' => 'S299 "Triangular in shape, slightly rounded at tip." set high, lying flat',
+            'eye_color' => 'S299 "Expressive, brown to dark, in harmony with coat colour."',
+            'tail' => 'S299 "Naturally tailless, short or previously customarily docked."; S298 often naturally bob-tailed',
+            'muzzle' => 'S299 "Skull slightly rounded as seen from front, side or above."; muzzle tapered but not snipy',
+        ],
+        'traits' => [
+            'size' => ['medium'],
+            'build' => [['value' => 'compact, short-backed, leggy and athletic, moderately boned', 'weight' => 3], 'workmanlike pointing-dog build with substance without heaviness'],
+            'coat_length' => ['dense, fairly fine, flat or slightly wavy medium-length coat with light feathering'],
+            // RKC / FCI colours only (S299, S297); orange and white highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'orange and white (clear white with bright orange patches)', 'weight' => 4],
+                ['value' => 'liver and white (clear white with liver-brown patches)', 'weight' => 3],
+                ['value' => 'orange roan (white finely ticked with orange)', 'weight' => 2],
+                'liver roan',
+                'black and white',
+                'tricolour (black and white with orange markings over the eyes, on the muzzle, legs and chest)',
+            ],
+            'ear_carriage' => ['high-set triangular ears, slightly rounded at the tip, lying flat against the cheeks'],
+            'eye_color' => ['expressive brown to dark eyes in harmony with the coat colour'],
+            'tail' => ['naturally short bob tail set high, carried horizontally'],
+            'muzzle' => ['slightly rounded skull with a tapered muzzle that is not snipy and a moderate stop'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-37 (docs/research/dog-data/data.json american_cocker_spaniel.appearance; runbook rules
+    // 2026-10-10: standard colours only — never merle, never blue eyes).
+    'american_cocker_spaniel' => [
+        'display_name' => 'American Cocker Spaniel',
+        // Colour frequencies are in no source (american_cocker_spaniel.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'AKC standard (S307), FCI standard (S304), RKC breed page (S305) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S305 "Size: Small"; S307 ideal height 15 in (dogs) / 14 in (bitches)',
+            'build' => 'S307 "The Cocker Spaniel is the smallest member of the Sporting Group."; S304 compact and sturdy',
+            'coat_length' => 'S307 "The coat is silky, flat or slightly wavy and of a texture which permits easy care."; S305 "Coat length: Long"',
+            'coat_color' => 'S307 black, ASCOB "Any solid color other than black, ranging from lightest cream to darkest red, including brown and brown with tan points.", parti-color (weights unsourced)',
+            'ear_carriage' => 'S307 "Lobular, long, of fine leather, well feathered, and placed no higher than a line to the lower part of the eye."',
+            'eye_color' => 'S307 "Eyeballs are round and full and look directly forward."; S304 dark brown, blue eyes disqualify',
+            'tail' => 'S307 "The docked tail is set on and carried on a line with the topline of the back, or slightly higher." — the game shows a natural undocked tail',
+            'muzzle' => 'S307 "The muzzle is broad and deep, with square even jaws."; skull "Rounded but not exaggerated with no tendency toward flatness."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'compact, sturdy and well balanced, the smallest sporting spaniel', 'weight' => 3], 'small, compact spaniel build with a sloping topline'],
+            'coat_length' => ['silky, flat or slightly wavy coat with moderate feathering on the ears, chest, belly and legs (pet length, not a floor-length show coat)'],
+            // AKC / FCI varieties only (S307, S304); buff highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'buff (solid light golden cream)', 'weight' => 4],
+                ['value' => 'black (solid black)', 'weight' => 3],
+                ['value' => 'black and tan (black with small tan points over the eyes, on the muzzle, chest and legs)', 'weight' => 2],
+                'red (solid deep red)',
+                'chocolate (solid brown)',
+                'black and white parti-colour',
+                'red and white parti-colour',
+                'tricolour (black and white with tan points)',
+            ],
+            'ear_carriage' => ['long lobular ears set low, well feathered with silky hair'],
+            'eye_color' => ['round, full, dark brown eyes looking directly forward'],
+            'tail' => ['natural undocked tail carried level with the back'],
+            'muzzle' => ['rounded skull with a pronounced stop and a broad, deep muzzle with square jaws'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-38 (docs/research/dog-data/data.json belgian_malinois.appearance; runbook rules
+    // 2026-10-10: standard colours only — never black, brindle, merle or white patches).
+    'belgian_malinois' => [
+        'display_name' => 'Belgian Malinois',
+        // Colour frequencies are in no source (belgian_malinois.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI standard No. 15 (S313), AKC standard (S315), RKC breed page (S314) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S314 "Size: Medium-Large"; S313 ideal height 62 cm (males) / 58 cm (females)',
+            'build' => 'S315 "The Belgian Malinois is a well-balanced square dog, elegant in appearance"; S313 "combining elegance and power"',
+            'coat_length' => 'S315 "The coat should be comparatively short, straight, hard enough to be weather resistant, with dense undercoat."',
+            'coat_color' => 'S313 "Malinois: Only fawn with black overlay and with black mask."; S315 "rich fawn to mahogany, with black tips" (weights unsourced)',
+            'ear_carriage' => 'S313 "Rather small, set high, distinctly triangular appearance."; S315 stiff, upright and vertical when alert',
+            'eye_color' => 'S315 "They are brown, preferably dark brown, with black rimmed upper and lower eyelids."',
+            'tail' => 'S313 "at rest carried down, with tip curved backwards at level of hock."; S315 a cropped or stumped tail is a disqualification',
+            'muzzle' => 'S315 "The mask must be pronounced and tends to encompass the top and bottom lip,"',
+        ],
+        'traits' => [
+            'size' => ['medium-large'],
+            'build' => [['value' => 'square, well-balanced, elegant and powerful herding-dog build with a proud carriage of head and neck', 'weight' => 3], 'lean, athletic, square shepherd build'],
+            'coat_length' => ['short, straight, hard coat with a dense undercoat, very short on the head and legs, fuller at the neck and tail'],
+            // FCI / AKC colours only (S313, S315); fawn highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'fawn with black overlay (black-tipped hairs) and a pronounced black mask', 'weight' => 4],
+                'mahogany with black overlay (black-tipped hairs) and a pronounced black mask',
+            ],
+            'ear_carriage' => ['rather small, high-set, distinctly triangular ears carried stiffly erect'],
+            'eye_color' => ['medium, almond-shaped, dark brown eyes with black-rimmed eyelids'],
+            'tail' => ['natural full tail reaching the hock, carried low at rest with the tip curved slightly back'],
+            'muzzle' => ['black mask covering the muzzle, lips and eyelids; moderately long, tapering muzzle'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+
+    // M5-R10-39 (docs/research/dog-data/data.json basset_hound.appearance; runbook rules
+    // 2026-10-10: standard colours only — never merle; welfare breed → moderate, non-exaggerated features).
+    'basset_hound' => [
+        'display_name' => 'Basset Hound',
+        // Colour frequencies are in no source (basset_hound.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 163 (S320, https://WWW.FCI.BE/Nomenclature/Standards/163g06-en.pdf), RKC breed page (S321), RKC Breed Watch (S322) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S321 "Size: Medium-Large"; S320 "Height at the withers: 33 - 38 cm."',
+            'build' => 'S320 "Short-legged hound of considerable substance, well balanced, full of quality."; S322 "Inadequate ground clearance - overly deep body and/ or presence of excessive skin" (welfare: adequate ground clearance)',
+            'coat_length' => 'S320 "Smooth, short and close without being too fine."',
+            'coat_color' => 'S320 "Generally black, white and tan (tri-colour); lemon and white (bi-colour); but any recognized hound colour acceptable." (weights unsourced)',
+            'ear_carriage' => 'S320 "Narrow throughout their length and curling well inwards; very supple, fine and velvety in texture."; S322 "Ears that extend more than slightly beyond end of muzzle" (welfare: moderate length)',
+            'eye_color' => 'S320 "Lozenge-shaped, neither prominent nor deep-set, dark but may shade to mid-brown in light-coloured hounds."; S322 "Eyelids not in normal contact with the eyeball, they are turned inwards or outwards" (welfare: tight eyelids)',
+            'tail' => 'S320 "Well set-on, rather long, strong at base, tapering, with moderate amount of coarse hair underneath."',
+            'skin' => 'S320 "Supple and elastic without any exaggeration."; S322 "Excessive skin on the head, body and/or legs" (welfare: little loose skin)',
+        ],
+        'traits' => [
+            'size' => ['short-legged, medium-sized'],
+            'build' => [['value' => 'long, sturdy, well-balanced short-legged hound build with adequate ground clearance', 'weight' => 3], 'sturdy, well-boned low hound build, sound and balanced'],
+            'coat_length' => ['smooth, short, close coat'],
+            // FCI colours only (S320); tricolour highest → the register portrait. Never merle.
+            'coat_color' => [
+                ['value' => 'black, white and tan tricolour', 'weight' => 3],
+                'lemon and white bicolour',
+            ],
+            'ear_carriage' => ['long, low-set, velvety ears curling inwards, of moderate length (not far beyond the muzzle)'],
+            // Welfare rule (Breed Watch S322): tight eyelids, never droopy or turned.
+            'eye_color' => ['dark, lozenge-shaped eyes with tight eyelids'],
+            'tail' => ['rather long, tapering tail carried with a gentle curve'],
+            'skin' => ['supple skin with only a little wrinkle at the brow and beside the eyes, no heavy folds'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'skin'],
+    ],
+
+    // M5-R10-40 (docs/research/dog-data/data.json hungarian_vizsla.appearance; runbook rules
+    // 2026-10-10: standard colours only — never brown, pale yellow or parti-coloured; natural tail).
+    'hungarian_vizsla' => [
+        'display_name' => 'Hungarian Vizsla',
+        // Colour frequencies are in no source (hungarian_vizsla.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 57 (S327, https://fci.be/Nomenclature/Standards/057g07-en.pdf), AKC standard (S331), RKC breed page (S328) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S328 "Size: Large"; S327 "Dogs: 58 - 64 cm" (medium-sized per the FCI)',
+            'build' => 'S327 "Medium sized, elegant gun dog of noble appearance with short russet gold coat."',
+            'coat_length' => 'S327 "Short and dense, should be coarse and hard at the touch."',
+            'coat_color' => 'S327 "Various shades of russet gold and dark sandy gold (semmelgelb)." (weights unsourced; never dark brown, pale yellow or parti-coloured)',
+            'ear_carriage' => 'S327 "Leathers set on at medium height, a little backwards."',
+            'eye_color' => 'S327 "Slightly oval, of medium size."',
+            'tail' => 'S327 "Set on slightly low, strong at the base, then tapering." — the game shows the natural tail reaching the hock (FCI where docking is prohibited)',
+            'nose' => 'S327 "Well developed and broad with nostrils as wide as possible."; S331 "Nose self-colored. Any other color is faulty."',
+        ],
+        'traits' => [
+            'size' => ['medium-large'],
+            'build' => [['value' => 'elegant, lean and muscular gundog of noble bearing, light and dry build', 'weight' => 3], 'athletic, moderately boned, standing alert'],
+            'coat_length' => ['short, dense, smooth, close-lying coat without undercoat'],
+            // FCI colours only (S327); russet gold highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'russet gold', 'weight' => 3],
+                'dark sandy gold',
+            ],
+            'ear_carriage' => ['thin ears of medium length set at medium height, hanging close to the cheeks with rounded tips'],
+            'eye_color' => ['slightly oval brown eyes in harmony with the coat colour'],
+            'tail' => ['natural, undocked tapering tail reaching the hock'],
+            'nose' => ['broad, self-coloured reddish-brown nose (never black)'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

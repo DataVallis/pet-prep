@@ -11,7 +11,7 @@ Si želiš pravega psa? Najprej pokaži, da zmoreš! V PetPrep dobiš svojega ku
 3. S prstom se **podpišeš** pod obljubo, da boš skrbel zanj.
 4. Tvoj kuža se rodi! 🎉 Dokler se ne podpišeš, kuža še čaka — nič se mu ne zgodi.
 
-Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova prijavljati.
+Ko naslednjič odpreš aplikacijo, te kuža že čaka — ni se ti treba znova prijavljati. **Igraš na telefonu staršev?** Starš tapne »Igraj kot« s tvojim imenom in ti poda telefon *(od 14. 10. 2026)*. Ko gresta na sprehod, naj bo izbran tvoj profil — samo takrat se koraki štejejo tvojemu kužku. Odjava je samo za starše: starš tapne »Starš?« in odgovori na vprašanje *(od 14. 10. 2026)*.
 
 **Ne rabiš e-pošte ne gesla** — samo kodo od staršev. Če dobiš nov telefon ali tablico, te starši prijavijo z novo kodo in tvoj kuža te počaka tam. Če koda ne deluje, prosi starše za novo — vsaka velja samo 15 minut in samo enkrat. Če poskusiš preveč napačnih kod, aplikacija pokaže, koliko časa moraš počakati.
 

@@ -10,7 +10,9 @@ use RuntimeException;
  * machine-readable code returned to the app: `invalid_password` (422),
  * `superadmin_protected` (403), `child_not_found` (404), `not_a_parent` (403),
  * `export_too_large` (413), `too_many_attempts` (429, wrong passwords), `conflict` (409),
- * `paid_challenge_ack_required` (422 + `pets: [{pet_id, breed_type}]`, M3-11 P5).
+ * `paid_challenge_ack_required` (422 + `pets: [{pet_id, breed_type}]`, M3-11 P5),
+ * `reauth_required` (422, M2-10c: a parent without a password must sign in
+ * with a linked provider again), `provider_disabled` / `provider_unavailable` (503).
  */
 class AccountDeletionException extends RuntimeException
 {
