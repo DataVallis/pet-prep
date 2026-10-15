@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "f46a38e8ec4df491e084e479bbe3b4a1badd22b1debf0063f15e6ca6c3b9020e"
+      "sha256": "20edc951457b91cf8d89cea9d73509cbda41fe5dce100aa538e29bff3ff202d9"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "46953ba95ffcc14f4c6a3d11d199354f70a5fa57a6ce9ab9a7dd08b822fedf63"
+      "sha256": "2908fced1c96563031375c4cc55550b156624842e215a8a869654acd86f7166d"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,31 +25,31 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "de5c2d24e6d9e77829a6f904bcc34b77843e1de6c6e71135ea1dbff3c7f49a2e"
+      "sha256": "2cd2ce7c530310d8880df891d58dffe317caaba087ab11710a024ab9ae80d2ca"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "9a82956698f7a3763f98204ae6591c70f382791e4f2ed08485e6fdfac6377823"
+      "sha256": "27db46fa97cc0894db28cdb7c4e7f143e3c61cdba84cd37fde19bfc7318ea4bd"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "f2841558e74eb5874cbb1a2121f2a35958ee89e8063fb6d45dbf1e2110c179e8"
+      "sha256": "66ece505322456e8d9388bca1ec5ba31c995e9938de605c3b557502c21dd3479"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "1d0c1d3608567cdfec7deda4bf8ae36c8a6b5d25121d7312fe9b6a4c3cda7799"
+      "sha256": "b07cc001d350408e006d1ddf8bf8e63691053f7a564892750b26e439fecd74a0"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "82260caf342ced0ffd49efc565325e95b3e1c418ab79ce7b5aa3ad913d0280d5"
+      "sha256": "93111c5b1ddee4511a312e88aae74718480b8dc1f9d094168d7cbd7bd4187b68"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "f2353786003444cb7e8f2c076ce03ed04be1da27fc7889314d1ff631cd50ab30"
+      "sha256": "82cb0700d2875e7bba87a918e4e1dd1d6dbbf729190c09364bfc3f8f4f15f791"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "3b412c2683a4a5e70aab67bb829fd6ee8467d451213a5798da6af938943684bd"
+      "sha256": "0b29d81572cf7ce6f0b8c63ae22368a1b5069ea204f60ab7b6458460dd640618"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -196,7 +196,7 @@
         }
       },
       "status": "available",
-      "breed_count": 34,
+      "breed_count": 35,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -20578,6 +20578,610 @@
       ]
     },
     {
+      "id": "basset_hound",
+      "species": "dog",
+      "order": 34,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Basset Hound",
+        "sl": "Baset"
+      },
+      "slug": {
+        "en": "basset-hound",
+        "sl": "baset"
+      },
+      "synonyms": {
+        "en": [
+          "Basset",
+          "Basset Hound dog"
+        ],
+        "sl": [
+          "basset hound",
+          "baset hound",
+          "basset"
+        ]
+      },
+      "facets": {
+        "size": "medium_large",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium_large",
+          "source_ids": [
+            "S321"
+          ],
+          "ref": "basset_hound.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              33,
+              38
+            ],
+            "female": [
+              33,
+              38
+            ]
+          },
+          "source_ids": [
+            "S320"
+          ],
+          "ref": "basset_hound.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              18,
+              27
+            ],
+            "female": [
+              18,
+              27
+            ]
+          },
+          "source_ids": [
+            "S323"
+          ],
+          "ref": "basset_hound.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "basset_hound.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S321"
+          ],
+          "ref": "basset_hound.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S321"
+          ],
+          "ref": "basset_hound.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S321"
+          ],
+          "ref": "basset_hound.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S321"
+          ],
+          "ref": "basset_hound.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S321"
+          ],
+          "ref": "basset_hound.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "feeding",
+          "field": "food_motivated",
+          "kind": "statement",
+          "value": true,
+          "source_ids": [
+            "S323"
+          ],
+          "ref": "basset_hound.behaviour.food_motivation",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 71,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "basset_hound.trainability.coren_rank",
+          "confidence": "low"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 163,
+            "group": 6,
+            "section": 1,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S319"
+          ],
+          "ref": "basset_hound.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "eyelids_turned",
+          "source_ids": [
+            "S322"
+          ],
+          "ref": "basset_hound.health.breed_watch",
+          "confidence": "high"
+        },
+        {
+          "key": "glaucoma_poag",
+          "source_ids": [
+            "S323"
+          ],
+          "ref": "basset_hound.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "skin_fold_dermatitis",
+          "source_ids": [
+            "S322"
+          ],
+          "ref": "basset_hound.health.skin_folds",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S323"
+          ],
+          "ref": "basset_hound.health.gdv",
+          "confidence": "medium"
+        },
+        {
+          "key": "back_disc_disease",
+          "source_ids": [
+            "S323"
+          ],
+          "ref": "basset_hound.health.ivdd",
+          "confidence": "medium"
+        },
+        {
+          "key": "ear_infections_long_ears",
+          "source_ids": [
+            "S323"
+          ],
+          "ref": "basset_hound.health.ears",
+          "confidence": "medium"
+        },
+        {
+          "key": "weight_gain",
+          "source_ids": [
+            "S323"
+          ],
+          "ref": "basset_hound.health.weight",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S323"
+            ],
+            "refs": [
+              "basset_hound.suitability.pdsa_family",
+              "basset_hound.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S323",
+              "S324"
+            ],
+            "refs": [
+              "basset_hound.suitability.pdsa_children",
+              "basset_hound.suitability.akc_children"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S321"
+            ],
+            "refs": [
+              "basset_hound.suitability.rkc_size_of_home"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S322",
+              "S323"
+            ],
+            "refs": [
+              "basset_hound.health.breed_watch",
+              "basset_hound.health.eyes"
+            ]
+          },
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S322",
+              "S323"
+            ],
+            "refs": [
+              "basset_hound.health.skin_folds",
+              "basset_hound.suitability.pdsa_skin_folds"
+            ]
+          },
+          {
+            "tag": "food_motivated_weight",
+            "source_ids": [
+              "S323"
+            ],
+            "refs": [
+              "basset_hound.behaviour.food_motivation",
+              "basset_hound.suitability.pdsa_appetite"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S323"
+            ],
+            "refs": [
+              "basset_hound.behaviour.time_alone",
+              "basset_hound.suitability.pdsa_company"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S321",
+              "S324"
+            ],
+            "refs": [
+              "basset_hound.suitability.rkc_shedding",
+              "basset_hound.suitability.akc_shedding"
+            ]
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S324"
+            ],
+            "refs": [
+              "basset_hound.behaviour.drooling",
+              "basset_hound.suitability.akc_drooling"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.basset_hound.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S321"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S321 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.basset_hound.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.basset_hound.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S321"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S321)"
+          },
+          {
+            "ref": "proposed_game_parameters.basset_hound.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 71, Lowest tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.basset_hound.grooming",
+            "basis_source_ids": [
+              "S321"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week« → 1; PDSA in AKC enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S321"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_poag",
+            "level": "other_scheme",
+            "source_ids": [
+              "K23"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K23"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S319",
+        "S320",
+        "S321",
+        "S322",
+        "S323",
+        "S324",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K23"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -24309,6 +24913,48 @@
       "url": "https://www.petmd.com/dog/breeds/belgian-malinois"
     },
     {
+      "id": "S319",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Basset Hound (163) — FCI breeds nomenclature",
+      "url": "https://www.fci.be/en/nomenclature/BASSETHOUND-163.html"
+    },
+    {
+      "id": "S320",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 163 — Basset Hound (English PDF)",
+      "url": "https://WWW.FCI.BE/Nomenclature/Standards/163g06-en.pdf"
+    },
+    {
+      "id": "S321",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Basset Hound — breed page (older address)",
+      "url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=1003"
+    },
+    {
+      "id": "S322",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breed Watch — Basset Hound (Category 3)",
+      "url": "https://thekennelclub.org.uk/events-and-activities/dog-showing/judging-dog-shows/breed-watch/basset-hound-category-3"
+    },
+    {
+      "id": "S323",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Basset Hound breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/basset-hound"
+    },
+    {
+      "id": "S324",
+      "tier": "B",
+      "publisher": "American Kennel Club",
+      "title": "Is the Basset Hound the Right Dog Breed for You?",
+      "url": "https://www.akc.org/expert-advice/dog-breeds/basset-hound-right-for-you/"
+    },
+    {
       "id": "C1",
       "tier": "A (via B summary)",
       "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
@@ -24643,6 +25289,13 @@
       "publisher": "World Cat Congress",
       "title": "Bengal — a comparison among the member organisations",
       "url": "https://worldcatcongress.org/wp/cat_breed_comp_ben.php"
+    },
+    {
+      "id": "K23",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "New DNA testing scheme for Basset Hounds (media centre, June 2018)",
+      "url": "https://www.thekennelclub.org.uk/media-centre/2018/june/new-dna-testing-scheme-for-basset-hounds"
     }
   ]
 }

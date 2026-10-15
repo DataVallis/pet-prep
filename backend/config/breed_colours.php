@@ -228,6 +228,11 @@ return [
         ['key' => 'fawn', 'value' => 'fawn with black overlay (black-tipped hairs) and a pronounced black mask', 'en' => 'Fawn with black mask', 'sl' => 'Plav s črno masko'],
         ['key' => 'mahogany', 'value' => 'mahogany with black overlay (black-tipped hairs) and a pronounced black mask', 'en' => 'Mahogany with black mask', 'sl' => 'Mahagonij s črno masko'],
     ],
+    // M5-R10-39: FCI S320 "Generally black, white and tan (tri-colour); lemon and white (bi-colour)".
+    'basset_hound' => [
+        ['key' => 'tricolour', 'value' => 'black, white and tan tricolour', 'en' => 'Tricolour', 'sl' => 'Trobarven'],
+        ['key' => 'lemon-white', 'value' => 'lemon and white bicolour', 'en' => 'Lemon and white', 'sl' => 'Limonasto-bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

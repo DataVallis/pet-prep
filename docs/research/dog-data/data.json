@@ -18748,6 +18748,661 @@
       }
     }
   },
+  "basset_hound": {
+    "_note": "Added 2026-10-15 (M5-R10-39, unattended run — appended after the Belgian Malinois: AKC 2024 No. 34 'Basset Hound', S174 full-list table '33 Belgian Malinois', '34 Basset Hound', '35 Vizsla'). Quotes as returned by the web-fetch tool on 2026-10-15 (the tool limits quotes to ~125 characters; apostrophes as returned); spot-check before import (sources.md S319–S325, reused S8, S10, S11, S14, S24, S35, S45, S92, S129, S174). The FCI standard (S320) gives no weight → PDSA (S323) weight. Lifespan: McMillan 2024 / Dogs Trust table (S123) not reachable (URL refused by the fetch tool; the 'shortest and longest' PDF returned a fetch error) — Wikipedia (S325, tier C) quotes a 2024 UK study at 12.5 years, background only → RKC lower bound 'Over 10 years' (PDSA agrees) → senior 90 months, provisional. VetCompass 2013 (S212) has no Basset Hound row. RKC Breed Watch Category 3 (S322: eyelids, ears, skin-fold dermatitis, ground clearance / excessive skin, bite, too fat) → welfare chips eyelid_problems + sensitive_skin; not flat-faced → in marketing.",
+    "identity": {
+      "value": "FCI No. 163, Group 6 Section 1.3 (Small-sized hounds), Great Britain",
+      "unit": "—",
+      "source_id": "S319",
+      "quote": "BASSET HOUND (163)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S319): group 'n°6 - Scent hounds and related breeds', section 'Scent hounds' (subsection 'Small-sized Hounds'), country 'GREAT BRITAIN'; definitive acceptance 4/28/1955; valid standard published 9/8/2026 (English 10/6/2026, as returned); 'Subject to a working trial according to the FCI Breeds Nomenclature'. FCI standard (S320): 'Group 6 Scent hounds and related breeds' / 'Section 1.3 Small-sized hounds'. RKC (S321) and AKC (S324): 'Basset Hound'. Not the Basset Fauve de Bretagne, Basset Artésien Normand or Basset Griffon Vendéen (other FCI breeds)."
+    },
+    "size_class": {
+      "value": "medium-large",
+      "unit": "—",
+      "source_id": "S321",
+      "quote": "Size: Medium-Large",
+      "confidence": "high",
+      "notes": "RKC breed page key facts (S321). PDSA (S323): 'Medium'. PDSA 18–27 kg = 40–60 lb → the 'Medium (24–59 pounds)' class of S10 (the top touches 'Large'). A short-legged, heavy dog: FCI 'Short-legged hound of considerable substance' (S320). RKC group: Hound."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            33,
+            38
+          ],
+          "female": [
+            33,
+            38
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S320",
+        "quote": "Height at the withers: 33 - 38 cm.",
+        "confidence": "high",
+        "notes": "FCI standard (S320), one range for both sexes."
+      },
+      "akc_article": {
+        "value": {
+          "male": [
+            null,
+            38
+          ],
+          "female": [
+            null,
+            38
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S324",
+        "quote": "Basset Hounds are low-slung dogs that stand no taller than 15 inches, and weigh between 40 and 65 pounds.",
+        "confidence": "medium",
+        "notes": "AKC article (S324): an upper bound only; 15 in × 2.54 = 38.1 cm by us. Alternative only."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            18,
+            27
+          ],
+          "female": [
+            18,
+            27
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S323",
+        "quote": "18kg-27kg",
+        "confidence": "medium",
+        "notes": "PDSA breed page (S323) key fact 'Average weight', one range for both sexes. The game range (adult_weight_kg). The FCI standard (S320) gives no weight (tool: 'The document does not specify a weight.')."
+      },
+      "akc_article": {
+        "value": {
+          "male": [
+            18.1,
+            29.5
+          ],
+          "female": [
+            18.1,
+            29.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S324",
+        "quote": "Basset Hounds are low-slung dogs that stand no taller than 15 inches, and weigh between 40 and 65 pounds.",
+        "confidence": "medium",
+        "notes": "AKC article (S324), one range for both sexes; pounds × 0.4536 by us. Alternative only."
+      },
+      "salt_category": {
+        "value": "II",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): about 18–27 kg. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 18–27 kg (S323) = 40–60 lb → 'Medium (24–59 pounds)'. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Basset Hound growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S321",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S321). PDSA (S323) 'Average lifespan' 'Over 10 years' agrees. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S323",
+        "quote": "Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average lifespan' (S323). Same lower bound as the RKC → same senior boundary (90)."
+      },
+      "mcmillan_2024": {
+        "value": 12.5,
+        "unit": "years",
+        "source_id": "S325",
+        "quote": "A 2024 study in the UK found a life expectancy of 12.5 years compared to an average of 12.7 for purebreeds",
+        "confidence": "low",
+        "notes": "McMillan et al. 2024 as quoted by Wikipedia (S325, tier C — never alone). The Dogs Trust breed table (S123) was refused by the fetch tool on 2026-10-15 → not used as the basis; with it the senior boundary would be round(0.75 × 12.5 × 12) = round(112.5) = 113 months. Wikipedia also: 'A 2015 French study found a life expectancy of 10.3 years.' (background). Verify in S123 before replacing the RKC lower bound."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 10 y (RKC lower bound 'Over 10 years', S321) → 0.75 × 10 = 7.5 y = 90 months. With McMillan 2024 12.5 y (via S325): 113 months; Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S321"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S321",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S321). PDSA (S323): 'Your Basset Hound will need a minimum of an hour of exercise a day.' — the same number (60). AKC (S324): 'Although they aren't high-energy dogs, Basset Hounds still need regular physical activity to stay healthy.' Rule: RKC value preferred → 60."
+      },
+      "after_meals": {
+        "value": "leave a gap after eating before exercise (bloat / GDV)",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "medium",
+        "notes": "PDSA (S323), with the GDV health point 'where a dog's tummy bloats and twists around on itself, which can be fatal.' No length in the source → meal_exercise_gap 60 (David's M5-R16 decision)."
+      },
+      "scent": {
+        "value": "scent hound — keep on a firm lead; secure garden; scent games",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "A secure garden is a must and be careful there's no way for them to escape in case they catch the scent of something.",
+        "confidence": "medium",
+        "notes": "PDSA (S323): 'Remember that Basset Hounds are scent dogs, so when walking them have a firm grip on their lead…' and 'Play lots of scent games with then on top of their daily exercise' (sic, as returned). AKC (S324): 'Because their noses can easily lead them astray, secure leashes and fenced areas are important when exercising the breed.' Not secure_fencing — that chip says 'needs a secure, high fence' (Siberian Husky: digging, climbing); no source says the Basset needs a high fence (Claude's reading, open for David). Walks on the lead = the game's existing walk."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "placid, never aggressive or timid; affectionate",
+        "unit": "—",
+        "source_id": "S320",
+        "quote": "Placid, never aggressive or timid.",
+        "confidence": "high",
+        "notes": "FCI standard (S320): 'Affectionate.'; 'Tenacious hound of ancient lineage which hunts by scent, possesses a pack instinct and a deep melodious voice.' PDSA (S323): 'Basset Hounds are gentle, placid dogs who tend to get along with everyone and every situation if they’re well-socialised.'"
+      },
+      "family": {
+        "value": "does well in family environments; gets along very well with children",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "They do well in family environments thanks to their sweet nature and ability to get along so well with children.",
+        "confidence": "medium",
+        "notes": "PDSA (S323). Also 'They best suit a family home where there is always someone around and lots of opportunities to be with people.' → family_pet."
+      },
+      "children": {
+        "value": "generally very tolerant; should get along with children very well",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "Basset Hounds are generally very tolerant and so should get along with children very well.",
+        "confidence": "medium",
+        "notes": "PDSA (S323). AKC (S324): 'Their patient, friendly nature often makes them good companions for children' → children (an explicit statement; no rating for small children → no small_children)."
+      },
+      "time_alone": {
+        "value": "generally well-behaved when left alone, but loves company; best where someone is always around",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "Although Basset Hounds are generally well-behaved when left alone, they love company.",
+        "confidence": "medium",
+        "notes": "PDSA (S323); 'They best suit a family home where there is always someone around and lots of opportunities to be with people.' → needs_company (Boxer precedent: 'best to have a Boxer if someone is going to be around the house with them all day')."
+      },
+      "socialisation": {
+        "value": "socialise from a young age with people and dogs",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "Be sure to socialise your Basset Hound from a young age with other people and dogs once they are fully vaccinated.",
+        "confidence": "medium",
+        "notes": "PDSA (S323). AKC (S324): 'Early socialization is important for helping puppies develop confidence and good manners.' → proposed_game_parameters.basset_hound.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "other_pets": {
+        "value": "usually fine with other dogs when well-socialised; never unattended with another pet",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "Well-socialised Basset Hounds will usually be fine around other dogs.",
+        "confidence": "medium",
+        "notes": "PDSA (S323); also 'Never leave them unattended with another pet, even if they know them well.' AKC (S324): 'The breed was developed to work alongside other dogs during hunts, so many enjoy canine company.' Conditional + supervision caveat → no other_pets; no prey-drive statement (PDSA has no 'chase' or 'prey') → no chases_small_pets."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": "very healthy appetite — needs plenty of exercise not to gain weight",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "Beware that Basset Hounds can have very healthy appetites and so need plenty of exercise so they don't gain weight.",
+        "confidence": "medium",
+        "notes": "PDSA (S323); also 'Being overweight can make many of the health problems Basset Hounds are prone to worse'. RKC Breed Watch (S322) point 'Too fat'. → food_motivated_weight."
+      },
+      "drooling": {
+        "value": "long jowls — excess saliva is normal for the breed",
+        "unit": "—",
+        "source_id": "S324",
+        "quote": "Their long jowls create excess saliva, which is a normal trait of the breed.",
+        "confidence": "medium",
+        "notes": "AKC (S324). → drools."
+      },
+      "voice": {
+        "value": "loud, ringing voice",
+        "unit": "—",
+        "source_id": "S320",
+        "quote": "Tenacious hound of ancient lineage which hunts by scent, possesses a pack instinct and a deep melodious voice.",
+        "confidence": "high",
+        "notes": "FCI (S320). AKC (S324): the breed uses 'their loud, ringing voices on the hunt or just to show their excitement or frustration.' Background only (no vocabulary key; the game has no barking mechanic)."
+      },
+      "training_notes": {
+        "value": "independent, can be stubborn when on a scent",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "Be aware that Basset Hounds can be very independent, especially when it comes to training.",
+        "confidence": "medium",
+        "notes": "PDSA (S323). AKC (S324): 'Though laid-back by nature, Basset Hounds can become stubborn when they catch a scent.' and 'They may be tempted to follow an interesting scent, rather than respond immediately when called.' Fits the slow learning multiplier (Coren rank 71)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere (Wikipedia S325 glaucoma prevalence is never used). Conformation welfare topic: RKC Breed Watch Category 3 (S322) — eyelids turned inwards or outwards, very long ears, dermatitis in skin folds, inadequate ground clearance / excessive skin, incorrect bite, too fat, excessive skin → eyelid_problems (Great Dane precedent) and sensitive_skin (Westie precedent). No back_spine: PDSA names IVDD (S323, S129) but Breed Watch does not (Pembroke Welsh Corgi precedent, open for David). Not flat-faced → no brachycephalic chip, and no veterinary advice against advertising the breed type. PDSA (S323): 'Basset Hounds are prone to certain health problems, many caused by being bred for their appearance over health.'",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 3 — eyelids turned in or out; ears far beyond the muzzle; skin-fold dermatitis; inadequate ground clearance / excessive skin; incorrect bite; too fat; excessive skin",
+        "unit": "—",
+        "source_id": "S322",
+        "quote": "Eyelids not in normal contact with the eyeball, they are turned inwards or outwards",
+        "confidence": "high",
+        "notes": "RKC Breed Watch page 'Basset Hound - Category 3' (S322); further points 'Ears that extend more than slightly beyond end of muzzle', 'Signs of dermatitis irritation in skin folds, and/or hair loss or scarring from previous dermatitis', 'Inadequate ground clearance - overly deep body and/ or presence of excessive skin', 'Incorrect bite', 'Too fat', 'Excessive skin on the head, body and/or legs'. RKC breed page (S321): 'Category 3' and 'This breed can be affected by conformational concerns, more information can be found here.' Basis of eyelid_problems."
+      },
+      "skin_folds": {
+        "value": "skin-fold dermatitis — check the folds every day, keep them clean and dry",
+        "unit": "—",
+        "source_id": "S322",
+        "quote": "Signs of dermatitis irritation in skin folds, and/or hair loss or scarring from previous dermatitis",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S322). PDSA (S323) health list: 'skin fold dermatitis', 'Skin infections'; care: 'However, because they have lots of excess skin, you’ll need to check the folds in their skin every day,' — 'keeping them clean and dry so they don’t get moist, sore and infected.' (one sentence, split by the tool). Basis of sensitive_skin; the daily fold check = sourced need without a mechanic → ROADMAP M5-R14."
+      },
+      "eyes": {
+        "value": "eyelids turned in or out; primary open-angle glaucoma (painful, can cause blindness) — DNA-tested parents",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "Eye problems including Primary Open Angle Glaucoma",
+        "confidence": "medium",
+        "notes": "PDSA (S323): glaucoma is 'where fluid builds up inside the eye, causing pain and potentially blindness.' The RKC approved an official DNA testing scheme for POAG in the breed (K23). Breed Watch (S322) eyelids point."
+      },
+      "gdv": {
+        "value": "gastric dilatation volvulus ('bloat') — an emergency",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "Gastric Dilatation Volvulus (GDV)",
+        "confidence": "medium",
+        "notes": "PDSA (S323): 'where a dog's tummy bloats and twists around on itself, which can be fatal.' and 'Remember to leave a gap after eating and before exercising.' → meal_exercise_gap (M5-R16)."
+      },
+      "ivdd": {
+        "value": "intervertebral disc disease (slipped disc)",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "Intervertebral degenerative disc disease (IVDD) – also known as a slipped disc, which can lead to back pain and paralysis.",
+        "confidence": "medium",
+        "notes": "PDSA (S323); the PDSA IVDD page (S129) lists the Basset Hound among prone breeds (background). Not a Breed Watch point → no back_spine chip (Pembroke Welsh Corgi precedent; open for David)."
+      },
+      "elbow_dysplasia": {
+        "value": "elbow dysplasia",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "Elbow dysplasia",
+        "confidence": "medium",
+        "notes": "PDSA (S323) health list. Background only."
+      },
+      "ears": {
+        "value": "long ears — keep an eye on them so they don't get dirty and infected",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "You'll also need to keep an eye on your Basset Hound's ears to make sure they don't get dirty and infected.",
+        "confidence": "medium",
+        "notes": "PDSA (S323); 'Remember that cleaning too often, or too forcefully, can also lead to problems.' No frequency. RKC Breed Watch (S322): 'Ears that extend more than slightly beyond end of muzzle'. Ear care = sourced need without a mechanic → ROADMAP M5-R20 (needs-david)."
+      },
+      "weight": {
+        "value": "becoming overweight makes many problems worse",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "Being overweight can make many of the health problems Basset Hounds are prone to worse",
+        "confidence": "medium",
+        "notes": "PDSA (S323); RKC Breed Watch (S322) 'Too fat'. Basis of food_motivated_weight (with behaviour.food_motivation)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 71,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 71 | Basset Hound |",
+        "confidence": "low",
+        "notes": "Wikipedia table (S35, tier C, read 2026-10-15): rank 71 'Basset Hound' under 'Lowest Degree of Working/Obedience Intelligence' (ranks 70–79). Coren's own article (S34) not re-read this run — runbook: rank from S35. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "lowest: 80 to 100 repetitions or more, obeys first command 25% or worse",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 80 to 100 repetitions or more.; Obey first command: 25% of the time or worse.;",
+        "confidence": "low",
+        "notes": "Tier 'Lowest Degree of Working/Obedience Intelligence' = ranks 70–79 (S35). Tier definitions from Wikipedia; verify in book."
+      },
+      "training_notes": {
+        "value": "very independent in training; stubborn on a scent",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "Be aware that Basset Hounds can be very independent, especially when it comes to training.",
+        "confidence": "medium",
+        "notes": "PDSA (S323); AKC (S324) agrees (stubborn when they catch a scent)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.basset_hound.learning_multiplier (0.5, runbook rule: Lowest tier, rank 71).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "short-legged hound of considerable substance, well balanced",
+        "unit": "—",
+        "source_id": "S320",
+        "quote": "Short-legged hound of considerable substance, well balanced, full of quality.",
+        "confidence": "high",
+        "notes": "FCI standard (S320). AKC (S324): 'Bassets are most well known for their domed heads, long ears, and somber eyes.' Welfare (RKC Breed Watch S322): adequate ground clearance, no excessive skin, ears not far beyond the muzzle, eyelids in normal contact — the portrait shows a moderate, healthy type."
+      },
+      "colours": {
+        "value": [
+          "black, white and tan (tricolour)",
+          "lemon and white (bicolour)"
+        ],
+        "unit": "list",
+        "source_id": "S320",
+        "quote": "Generally black, white and tan (tri-colour); lemon and white (bi-colour); but any recognized hound colour acceptable.",
+        "confidence": "high",
+        "notes": "FCI standard (S320). 'Any recognized hound colour acceptable' — the game lists only the two named colours (runbook: colours listed by the breed standard; never merle or a non-hound colour)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Tricolour first with the highest weight (portrait default — 'Generally black, white and tan'), then lemon and white."
+      },
+      "coat": {
+        "value": "smooth, short and close",
+        "unit": "—",
+        "source_id": "S320",
+        "quote": "Smooth, short and close without being too fine.",
+        "confidence": "high",
+        "notes": "FCI standard (S320). RKC (S321): 'Coat length: Short'."
+      },
+      "skin": {
+        "value": "supple and elastic without exaggeration; a small amount of wrinkle at brow and beside the eyes",
+        "unit": "—",
+        "source_id": "S320",
+        "quote": "Supple and elastic without any exaggeration.",
+        "confidence": "high",
+        "notes": "FCI (S320) skin; head: 'There may be a small amount of wrinkle at brow and beside eyes.' Breed Watch (S322) 'Excessive skin on the head, body and/or legs' is a point of concern → the portrait shows moderate skin (dog trait `skin`)."
+      },
+      "ears": {
+        "value": "set low, just below the eye line; long, narrow, curling inwards, supple and velvety",
+        "unit": "—",
+        "source_id": "S320",
+        "quote": "Narrow throughout their length and curling well inwards; very supple, fine and velvety in texture.",
+        "confidence": "high",
+        "notes": "FCI (S320): 'Set-on low, just below line of eye.' Breed Watch (S322): ears that extend more than slightly beyond the end of the muzzle are a concern → moderate ear length in the portrait."
+      },
+      "eyes": {
+        "value": "lozenge-shaped, neither prominent nor deep-set, dark",
+        "unit": "—",
+        "source_id": "S320",
+        "quote": "Lozenge-shaped, neither prominent nor deep-set, dark but may shade to mid-brown in light-coloured hounds.",
+        "confidence": "high",
+        "notes": "FCI (S320). Breed Watch (S322): eyelids turned in or out are a concern → eyelids in normal contact in the portrait (no drooping haw)."
+      },
+      "tail": {
+        "value": "well set-on, rather long, strong at the base, tapering",
+        "unit": "—",
+        "source_id": "S320",
+        "quote": "Well set-on, rather long, strong at base, tapering, with moderate amount of coarse hair underneath.",
+        "confidence": "high",
+        "notes": "FCI (S320)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page key facts (S321, older address), PDSA (S323), AKC (S324). The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Medium-Large",
+        "unit": "—",
+        "source_id": "S321",
+        "quote": "Size: Medium-Large",
+        "confidence": "high",
+        "notes": "PDSA (S323): 'Medium'."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S321",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "Basis of 60 min (PDSA S323 'a minimum of an hour' agrees). No exercise chip (not long_daily_exercise)."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S321",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "Basis of large_home (runbook §3: `large_home` from RKC 'Large house'; German Shorthaired Pointer precedent without garden data). The RKC garden is 'Small/ medium garden' — the chip reads 'a large house and garden' (open for David whether the garden half matters). Not apartment."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S321",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "Background only; does not block large_home (rule: RKC 'Large house'), noted for David."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S321",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "Runbook dog-grooming rule: 'Once a week' → 1 (PDSA S323 'A weekly brush', AKC S324 'Weekly brushing' agree). No frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S321",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S321",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "Basis of the sheds tag (with AKC S324 'But they shed more than you might expect.'). PDSA (S323): 'Although Basset Hounds shed, it's not as much as some dogs and their coats are fairly low maintenance.' — sheds, less than some breeds (not 'minimal' → no conflict; never low_shedding)."
+      },
+      "akc_shedding": {
+        "value": "sheds more than you might expect",
+        "unit": "—",
+        "source_id": "S324",
+        "quote": "But they shed more than you might expect.",
+        "confidence": "medium",
+        "notes": "AKC (S324). Supports sheds (with RKC S321 'Sheds: Yes')."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S321",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "See lifespan.rkc."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S321",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S321",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 3",
+        "unit": "—",
+        "source_id": "S321",
+        "quote": "This breed can be affected by conformational concerns, more information can be found here.",
+        "confidence": "high",
+        "notes": "RKC breed page (S321) 'Category 3'; points on the Breed Watch page (S322) → eyelid_problems, sensitive_skin; in marketing (not flat-faced)."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page (S321) has no 'Good with children' field."
+      },
+      "pdsa_family": {
+        "value": "does well in family environments",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "They do well in family environments thanks to their sweet nature and ability to get along so well with children.",
+        "confidence": "medium",
+        "notes": "PDSA (S323). Basis of family_pet."
+      },
+      "pdsa_children": {
+        "value": "should get along with children very well",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "Basset Hounds are generally very tolerant and so should get along with children very well.",
+        "confidence": "medium",
+        "notes": "PDSA (S323). Basis of children (AKC S324 agrees)."
+      },
+      "akc_children": {
+        "value": "often good companions for children",
+        "unit": "—",
+        "source_id": "S324",
+        "quote": "Their patient, friendly nature often makes them good companions for children",
+        "confidence": "medium",
+        "notes": "AKC (S324). Supports children."
+      },
+      "pdsa_company": {
+        "value": "best in a family home where someone is always around",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "They best suit a family home where there is always someone around and lots of opportunities to be with people.",
+        "confidence": "medium",
+        "notes": "PDSA (S323). Basis of needs_company (with behaviour.time_alone)."
+      },
+      "pdsa_appetite": {
+        "value": "very healthy appetite — needs exercise not to gain weight",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "Beware that Basset Hounds can have very healthy appetites and so need plenty of exercise so they don't gain weight.",
+        "confidence": "medium",
+        "notes": "PDSA (S323). Basis of food_motivated_weight."
+      },
+      "akc_drooling": {
+        "value": "excess saliva is normal",
+        "unit": "—",
+        "source_id": "S324",
+        "quote": "Their long jowls create excess saliva, which is a normal trait of the breed.",
+        "confidence": "medium",
+        "notes": "AKC (S324). Basis of drools."
+      },
+      "pdsa_grooming": {
+        "value": "a weekly brush",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "A weekly brush should be enough to help you keep on top of dead hairs.",
+        "confidence": "medium",
+        "notes": "PDSA (S323). Agrees with the RKC 'Once a week' → 1."
+      },
+      "akc_grooming": {
+        "value": "weekly brushing; regular nail trimming; occasional baths",
+        "unit": "—",
+        "source_id": "S324",
+        "quote": "Weekly brushing to remove loose hair and reduce excessive shedding",
+        "confidence": "medium",
+        "notes": "AKC (S324) grooming list: 'Regular nail trimming to maintain paw comfort and health', 'Occasional baths to support overall coat and skin health'."
+      },
+      "akc_nails": {
+        "value": "regular nail trimming",
+        "unit": "—",
+        "source_id": "S324",
+        "quote": "Regular nail trimming to maintain paw comfort and health",
+        "confidence": "medium",
+        "notes": "AKC (S324). Nail care = sourced need without a mechanic → ROADMAP M5-R19 (needs-david)."
+      },
+      "pdsa_skin_folds": {
+        "value": "check the skin folds every day, keep them clean and dry",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "However, because they have lots of excess skin, you’ll need to check the folds in their skin every day,",
+        "confidence": "medium",
+        "notes": "PDSA (S323), sentence continues 'keeping them clean and dry so they don’t get moist, sore and infected.' Skin-fold care = sourced need without a mechanic → ROADMAP M5-R14 (needs-david)."
+      },
+      "pdsa_ears": {
+        "value": "keep an eye on the ears (dirt, infection); do not over-clean",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "You'll also need to keep an eye on your Basset Hound's ears to make sure they don't get dirty and infected.",
+        "confidence": "medium",
+        "notes": "PDSA (S323), no frequency. Ear care = sourced need without a mechanic → ROADMAP M5-R20 (needs-david)."
+      },
+      "pdsa_secure_garden": {
+        "value": "a secure garden is a must (scent dog)",
+        "unit": "—",
+        "source_id": "S323",
+        "quote": "A secure garden is a must and be careful there's no way for them to escape in case they catch the scent of something.",
+        "confidence": "medium",
+        "notes": "PDSA (S323); AKC (S324) 'secure leashes and fenced areas are important'. No secure_fencing chip (it says 'high fence' — not sourced for the Basset; Claude's reading, open for David)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -27986,6 +28641,338 @@
         "confidence": "high",
         "notes": "FCI (S313) and AKC (S315): fawn to mahogany with black overlay and black mask; white only on toe tips / small breastbone spot. Fawn is the portrait default. Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — fawn with black overlay and mask (default), mahogany with black overlay and mask; never black, brindle, merle or white patches; natural erect ears and full tail"
+      }
+    },
+    "basset_hound": {
+      "_note": "Unattended run M5-R10-39 (2026-10-15): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: brushing once a week (RKC S321 'Once a week', M5-R13); the 'wait with the walk' warning after meals (PDSA S323, M5-R16); puppy socialisation (PDSA S323, M5-R17). Sourced needs without a game mechanic: daily skin-fold check (PDSA S323) → ROADMAP M5-R14; regular nail trimming (AKC S324) → ROADMAP M5-R19; ear checks (PDSA S323) and occasional baths (AKC S324) → ROADMAP M5-R20 (needs-david). Senior 90 provisional (RKC lower bound — McMillan 2024 not reachable). Breed Watch Category 3 → eyelid_problems + sensitive_skin; not flat-faced → in marketing.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S321",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S321). Rule: one number N ('up to N') → N = 60; PDSA (S323) 'a minimum of an hour' agrees.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S323",
+            "notes": "PDSA 'a minimum of an hour of exercise a day'"
+          },
+          {
+            "value": null,
+            "source_id": "S324",
+            "notes": "AKC 'regular physical activity' (no number)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S321 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S321",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) = 90 (S11 + RKC lower bound 'Over 10 years', S321; PDSA 'Over 10 years', S323, agrees). No McMillan 2024 / VetCompass value reachable. Alternatives: 113 (McMillan 2024 12.5 y via Wikipedia S325, tier C), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S321"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 113,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S321)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 0.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 71 (S35), tier Lowest (ranks 70–79) → 0.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 71, Lowest tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources (PDSA S323: a healthy appetite — watch the weight; no feeding number).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S321",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "basset_hound.suitability.rkc_grooming. RKC (S321) 'Once a week' → 1 (runbook dog-grooming rule); PDSA (S323) 'A weekly brush' and AKC (S324) 'Weekly brushing' agree. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S323",
+            "notes": "PDSA a weekly brush"
+          },
+          {
+            "value": 1,
+            "source_id": "S324",
+            "notes": "AKC weekly brushing"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week« → 1; PDSA in AKC enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S323",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "medium",
+        "notes": "PDSA (S323), basset_hound.exercise.after_meals (GDV in the PDSA health list). No length in the source. Built in M5-R16 (David 2026-10-12): 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S323",
+        "quote": "Be sure to socialise your Basset Hound from a young age with other people and dogs once they are fully vaccinated.",
+        "confidence": "medium",
+        "notes": "basset_hound.behaviour.socialisation (PDSA S323); AKC (S324) agrees. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S323)"
+      },
+      "skin_fold_care": {
+        "value": "check the skin folds every day, keep them clean and dry",
+        "unit": "skin-fold care (sourced need)",
+        "source_id": "S323",
+        "quote": "However, because they have lots of excess skin, you’ll need to check the folds in their skin every day,",
+        "confidence": "medium",
+        "notes": "PDSA (S323), basset_hound.suitability.pdsa_skin_folds. The game has no fold-care mechanic → ROADMAP M5-R14 (Bulldog / Boxer precedent, needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsakodnevni pregled kožnih gub; mehanike ni → ROADMAP M5-R14 (needs-david)"
+      },
+      "nail_care": {
+        "value": "regular nail trimming",
+        "unit": "nail trimming (sourced need)",
+        "source_id": "S324",
+        "quote": "Regular nail trimming to maintain paw comfort and health",
+        "confidence": "medium",
+        "notes": "AKC (S324), basset_hound.suitability.akc_nails. The game has no nail-trimming mechanic → ROADMAP M5-R19 (Boston Terrier / Brittany precedent, needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno striženje krempljev; mehanike ni → ROADMAP M5-R19 (needs-david)"
+      },
+      "ear_care": {
+        "value": "keep an eye on the ears (dirt, infection); no frequency",
+        "unit": "ear checks (sourced need)",
+        "source_id": "S323",
+        "quote": "You'll also need to keep an eye on your Basset Hound's ears to make sure they don't get dirty and infected.",
+        "confidence": "medium",
+        "notes": "PDSA (S323), basset_hound.suitability.pdsa_ears; AKC (S324) 'Occasional baths' (no frequency) also belongs to M5-R20. The game has no ear-care mechanic → ROADMAP M5-R20 (Chihuahua / Brittany precedent, needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): pregledovanje ušes (in občasno kopanje); mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-39); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S323"
+            ],
+            "refs": [
+              "basset_hound.suitability.pdsa_family",
+              "basset_hound.behaviour.family"
+            ],
+            "quote": "S323 'They do well in family environments'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S323",
+              "S324"
+            ],
+            "refs": [
+              "basset_hound.suitability.pdsa_children",
+              "basset_hound.suitability.akc_children"
+            ],
+            "quote": "S323 'should get along with children very well'; S324 'often makes them good companions for children'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S321"
+            ],
+            "refs": [
+              "basset_hound.suitability.rkc_size_of_home"
+            ],
+            "quote": "S321 'Size of home: Large house'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S322",
+              "S323"
+            ],
+            "refs": [
+              "basset_hound.health.breed_watch",
+              "basset_hound.health.eyes"
+            ],
+            "quote": "S322 'Eyelids not in normal contact with the eyeball, they are turned inwards or outwards'; S323 'Eye problems including Primary Open Angle Glaucoma'"
+          },
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S322",
+              "S323"
+            ],
+            "refs": [
+              "basset_hound.health.skin_folds",
+              "basset_hound.suitability.pdsa_skin_folds"
+            ],
+            "quote": "S322 'Signs of dermatitis irritation in skin folds'; S323 'check the folds in their skin every day'"
+          },
+          {
+            "tag": "food_motivated_weight",
+            "source_ids": [
+              "S323"
+            ],
+            "refs": [
+              "basset_hound.behaviour.food_motivation",
+              "basset_hound.suitability.pdsa_appetite"
+            ],
+            "quote": "S323 'Basset Hounds can have very healthy appetites'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S323"
+            ],
+            "refs": [
+              "basset_hound.behaviour.time_alone",
+              "basset_hound.suitability.pdsa_company"
+            ],
+            "quote": "S323 'they love company'; 'always someone around'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S321",
+              "S324"
+            ],
+            "refs": [
+              "basset_hound.suitability.rkc_shedding",
+              "basset_hound.suitability.akc_shedding"
+            ],
+            "quote": "S321 'Sheds: Yes'; S324 'they shed more than you might expect'"
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S324"
+            ],
+            "refs": [
+              "basset_hound.behaviour.drooling",
+              "basset_hound.suitability.akc_drooling"
+            ],
+            "quote": "S324 'Their long jowls create excess saliva'"
+          }
+        ],
+        "not_proposed": {
+          "apartment": "RKC 'Large house' (S321).",
+          "small_children": "No rating.",
+          "other_pets": "PDSA (S323): fine with other dogs only when well-socialised; never unattended with another pet.",
+          "first_time_owner": "No source.",
+          "long_daily_exercise": "RKC 'Up to 1 hour per day' (S321).",
+          "chases_small_pets": "No prey-drive quote (scent hound — PDSA S323 'catch the scent of something' is about escaping, not a prey drive).",
+          "secure_fencing": "PDSA 'A secure garden is a must' (S323), but the chip reads 'needs a secure, high fence' — no source says high (Claude's reading, open for David).",
+          "back_spine": "PDSA names IVDD (S323) but RKC Breed Watch (S322) does not → no chip (Pembroke Welsh Corgi precedent; open for David).",
+          "frequent_grooming": "RKC 'Once a week' (S321).",
+          "low_shedding": "RKC 'Sheds: Yes'.",
+          "shorter_lifespan": "RKC 'Over 10 years'.",
+          "needs_mental_stimulation": "No explicit statement (PDSA 'scent games' is play advice)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children, large_home; consider eyelid_problems, sensitive_skin, food_motivated_weight, needs_company, sheds, drools (brez secure_fencing in back_spine = branje Claude, odprto za Davida; large_home po pravilu iz RKC »Large house«, čeprav je vrt »Small/ medium« — odprto za Davida)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a flat-faced breed)",
+        "unit": "—",
+        "source_id": "S322",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 3 (S322) — conformation points (eyelids, ears, skin folds, excessive skin), but no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92) → welfare chips in the app, in marketing. Marketing never promises health and never shows exaggerated features (very long ears, drooping eyelids, heavy wrinkles) as cute (Claude's proposal).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a flat-faced breed; welfare chips eyelid_problems + sensitive_skin)"
+      },
+      "ai_appearance": {
+        "value": "adult Basset Hound, black, white and tan tricolour (default) or lemon and white; short-legged hound of considerable substance, well balanced, with adequate ground clearance; long, low-set, velvety ears of moderate length (not far beyond the muzzle); dark lozenge-shaped eyes with eyelids in normal contact (no drooping haw); supple skin with only a little wrinkle at brow and beside the eyes; smooth short close coat; rather long tapering tail; never merle",
+        "unit": "—",
+        "source_id": "S320",
+        "quote": "Generally black, white and tan (tri-colour); lemon and white (bi-colour); but any recognized hound colour acceptable.",
+        "confidence": "high",
+        "notes": "FCI (S320) colours and points; RKC Breed Watch (S322) concerns → moderate ears, eyelids and skin (welfare rule: moderate, non-exaggerated features; dog trait `skin`). Tricolour is the portrait default. Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — tricolour (default), lemon and white; moderate, non-exaggerated ears, eyelids and skin (welfare breed)"
       }
     }
   }

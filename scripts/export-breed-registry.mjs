@@ -409,6 +409,7 @@ const SPECIES = [
       { id: 'brittany', synonyms: { en: ['Brittany Spaniel', 'Epagneul Breton'], sl: ['epagneul breton', 'bretonski španjel', 'bretonski pticar'] } },
       { id: 'american_cocker_spaniel', synonyms: { en: ['American Cocker', 'Cocker Spaniel (USA)'], sl: ['ameriški koker', 'ameriski koker spanjel'] } },
       { id: 'belgian_malinois', synonyms: { en: ['Malinois', 'Belgian Shepherd Dog (Malinois)', 'Mal'], sl: ['malinois', 'belgijski ovcar malinois'] } },
+      { id: 'basset_hound', synonyms: { en: ['Basset', 'Basset Hound dog'], sl: ['basset hound', 'baset hound', 'basset'] } },
     ],
   },
   {
@@ -1147,6 +1148,32 @@ const DOG_FACTS = {
       ['pra_inherited_blindness', 'health.pra'],
     ],
   },
+  // M5-R10-39. Not exported: height.akc_article (an upper bound only), adult_weight.akc_article (AKC article,
+  // alternative), adult_weight.salt_category (our assignment), lifespan.pdsa (same band as the RKC),
+  // lifespan.mcmillan_2024 (Wikipedia, tier C), lifespan.senior_from (derived), health.elbow_dysplasia (a PDSA
+  // list item only), suitability.rkc_breed_watch (Category 3 — shown as the eyelid / skin-fold health keys).
+  // Weight = PDSA (S323, one range for both sexes; the FCI standard gives no weight); height = FCI 163 (S320,
+  // both sexes); lifespan = the RKC band "Over 10 years" (S321). Own health keys: eyelids_turned (no cherry
+  // eye — eyelid_problems names it), glaucoma_poag, skin_fold_dermatitis (body folds, not only the face).
+  basset_hound: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: 'behaviour.food_motivation',
+    health: [
+      ['eyelids_turned', 'health.breed_watch'],
+      ['glaucoma_poag', 'health.eyes'],
+      ['skin_fold_dermatitis', 'health.skin_folds'],
+      ['bloat_gdv', 'health.gdv'],
+      ['back_disc_disease', 'health.ivdd'],
+      ['ear_infections_long_ears', 'health.ears'],
+      ['weight_gain', 'health.weight'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1428,6 +1455,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.belgian_malinois.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.belgian_malinois.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.belgian_malinois.exercise_minutes_senior',
+  },
+  basset_hound: {
+    adult_minutes: ['proposed_game_parameters.basset_hound.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.basset_hound.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.basset_hound.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.basset_hound.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.basset_hound.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.basset_hound.exercise_minutes_senior',
   },
 };
 

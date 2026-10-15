@@ -42,6 +42,7 @@ return [
     'brittany' => 'Brittany',
     'american_cocker_spaniel' => 'American Cocker Spaniel',
     'belgian_malinois' => 'Belgian Malinois',
+    'basset_hound' => 'Basset Hound',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

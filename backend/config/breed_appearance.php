@@ -357,6 +357,16 @@
 | reaching the hock (cropped / stumped tails disqualify, AKC). Colour weights are unsourced →
 | `verified => false`; fawn weighted highest (the register portrait).
 |
+| Basset Hound (M5-R10-39, docs/research/dog-data basset_hound.appearance): "Short-legged hound of
+| considerable substance, well balanced, full of quality." (FCI 163, S320); smooth, short, close coat;
+| low-set, narrow, inward-curling velvety ears; lozenge-shaped dark eyes; supple skin "without any
+| exaggeration", a little wrinkle at the brow and beside the eyes; rather long tapering tail. Colours
+| (FCI): "Generally black, white and tan (tri-colour); lemon and white (bi-colour)" — never merle.
+| Welfare breed (RKC Breed Watch Category 3, S322: eyelids turned in or out, ears far beyond the muzzle,
+| skin-fold dermatitis, inadequate ground clearance / excessive skin, too fat) → moderate ears, tight
+| eyelids, little loose skin (dog trait `skin`) and adequate ground clearance. Colour weights are
+| unsourced → `verified => false`; tricolour weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1750,6 +1760,41 @@ return [
             'muzzle' => ['black mask covering the muzzle, lips and eyelids; moderately long, tapering muzzle'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+
+    // M5-R10-39 (docs/research/dog-data/data.json basset_hound.appearance; runbook rules
+    // 2026-10-10: standard colours only — never merle; welfare breed → moderate, non-exaggerated features).
+    'basset_hound' => [
+        'display_name' => 'Basset Hound',
+        // Colour frequencies are in no source (basset_hound.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 163 (S320, https://WWW.FCI.BE/Nomenclature/Standards/163g06-en.pdf), RKC breed page (S321), RKC Breed Watch (S322) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S321 "Size: Medium-Large"; S320 "Height at the withers: 33 - 38 cm."',
+            'build' => 'S320 "Short-legged hound of considerable substance, well balanced, full of quality."; S322 "Inadequate ground clearance - overly deep body and/ or presence of excessive skin" (welfare: adequate ground clearance)',
+            'coat_length' => 'S320 "Smooth, short and close without being too fine."',
+            'coat_color' => 'S320 "Generally black, white and tan (tri-colour); lemon and white (bi-colour); but any recognized hound colour acceptable." (weights unsourced)',
+            'ear_carriage' => 'S320 "Narrow throughout their length and curling well inwards; very supple, fine and velvety in texture."; S322 "Ears that extend more than slightly beyond end of muzzle" (welfare: moderate length)',
+            'eye_color' => 'S320 "Lozenge-shaped, neither prominent nor deep-set, dark but may shade to mid-brown in light-coloured hounds."; S322 "Eyelids not in normal contact with the eyeball, they are turned inwards or outwards" (welfare: tight eyelids)',
+            'tail' => 'S320 "Well set-on, rather long, strong at base, tapering, with moderate amount of coarse hair underneath."',
+            'skin' => 'S320 "Supple and elastic without any exaggeration."; S322 "Excessive skin on the head, body and/or legs" (welfare: little loose skin)',
+        ],
+        'traits' => [
+            'size' => ['short-legged, medium-sized'],
+            'build' => [['value' => 'long, sturdy, well-balanced short-legged hound build with adequate ground clearance', 'weight' => 3], 'sturdy, well-boned low hound build, sound and balanced'],
+            'coat_length' => ['smooth, short, close coat'],
+            // FCI colours only (S320); tricolour highest → the register portrait. Never merle.
+            'coat_color' => [
+                ['value' => 'black, white and tan tricolour', 'weight' => 3],
+                'lemon and white bicolour',
+            ],
+            'ear_carriage' => ['long, low-set, velvety ears curling inwards, of moderate length (not far beyond the muzzle)'],
+            // Welfare rule (Breed Watch S322): tight eyelids, never droopy or turned.
+            'eye_color' => ['dark, lozenge-shaped eyes with tight eyelids'],
+            'tail' => ['rather long, tapering tail carried with a gentle curve'],
+            'skin' => ['supple skin with only a little wrinkle at the brow and beside the eyes, no heavy folds'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'skin'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',
