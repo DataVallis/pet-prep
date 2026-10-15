@@ -15,9 +15,17 @@
 # production), PET_MEDIA_SERVE_VIA (default caddy), PUSH_ENABLED (default true), DB_*,
 # PETPREP_API_DOMAIN / PETPREP_CADDY_SITES (caddy, D18 — production defaults).
 
+# Bounded container logs for every service (disk hygiene, David 2026-10-15): 3 × 10 MB.
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: 10m
+    max-file: '3'
+
 x-php: &php
   image: petprep-app:${PETPREP_IMAGE_TAG:-production}
   restart: unless-stopped
+  logging: *logging
   env_file:
     - /opt/petprep/.env
   environment:
@@ -43,6 +51,7 @@ services:
       target: web
     image: petprep-web:${PETPREP_IMAGE_TAG:-production}
     restart: unless-stopped
+    logging: *logging
     ports:
       - "80:80"
       - "443:443"
@@ -143,6 +152,7 @@ services:
   postgres:
     image: 'postgres:18-alpine'
     restart: unless-stopped
+    logging: *logging
     env_file:
       - /opt/petprep/.env
     environment:
@@ -162,6 +172,7 @@ services:
   redis:
     image: 'redis:alpine'
     restart: unless-stopped
+    logging: *logging
     command: ["redis-server", "--appendonly", "yes"]
     volumes:
       - redis_data:/data

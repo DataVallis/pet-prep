@@ -856,9 +856,16 @@ fi
 # Untagged images of older releases (keeps :production, :previous and the Sail image;
 # an image a container still runs — e.g. a kept reverb — is never pruned).
 docker image prune -f > /dev/null || warn "docker image prune failed."
-# Build cache: drop entries older than 7 days, but always keep up to 5 GB (layers of
-# the PHP extension build — the expensive part of a rebuild).
-docker builder prune -f --filter until=168h --keep-storage 5GB > /dev/null || warn "docker builder prune failed."
+# Build cache: always capped at 2 GB, most recently used kept (the PHP extension layers
+# stay warm). The old "older than 7 days" filter never matched with several builds a
+# day and let the cache reach ~23 GB (disk hygiene, David 2026-10-15).
+docker builder prune -af --keep-storage 2GB > /dev/null || warn "docker builder prune failed."
+
+# Disk guard: loud warning when the root disk is over 70 % (nothing is deleted here).
+disk_used_pct="$(df -P / 2>/dev/null | awk 'NR==2 {gsub("%","",$5); print $5}')"
+if [ -n "$disk_used_pct" ] && [ "$disk_used_pct" -ge 70 ] 2>/dev/null; then
+    warn "root disk is ${disk_used_pct}% full — check: docker system df; journalctl --disk-usage (docs/PRODUCTION_DEPLOYMENT.md, disk hygiene)."
+fi
 
 echo "=================================================="
 echo " DEPLOYMENT SUCCESSFUL!"

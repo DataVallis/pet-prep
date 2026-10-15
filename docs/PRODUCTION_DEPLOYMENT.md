@@ -457,3 +457,25 @@ The public website is a separate repository, `DataVallis/pet-prep-website`, depl
 - **Logs / restart:** `docker logs -f petprep-website`; `docker compose -f /opt/petprep/website/incoming/deploy/compose.yaml up -d --force-recreate`.
 - **Rollback:** `docker tag petprep-website:previous petprep-website:production` and the restart command above.
 
+## Disk hygiene (David 2026-10-15)
+
+Measured 2026-10-15: 30 GB used on the 38 GB disk — **23.4 GB Docker build cache**, 5.4 GB images (incl. an unused 3 GB `petprep-backend:production` from the Sail era), 0.6 GB journald; the app itself (DB + pet media + backups) < 1 GB.
+
+Automatic since then:
+- `scripts/deploy-production.sh`: `docker builder prune -af --keep-storage 2GB` (was "older than 7 days", which never matched with several builds a day), `docker image prune -f`, and a warning when `/` is ≥ 70 % full.
+- Website `deploy/deploy.sh`: same cache cap (1 GB).
+- `compose.production.yaml` (all services) and the website compose: container logs `json-file` 3 × 10 MB.
+
+One-time on the server (root) — journald cap:
+```bash
+sed -i 's/^#\?SystemMaxUse=.*/SystemMaxUse=200M/' /etc/systemd/journald.conf && systemctl restart systemd-journald
+```
+
+Manual cleanup if ever needed (safe while the app runs):
+```bash
+docker system df
+docker builder prune -af          # build cache
+docker image prune -f             # untagged images
+journalctl --vacuum-size=200M
+```
+
