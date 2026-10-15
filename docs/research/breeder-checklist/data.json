@@ -1600,6 +1600,30 @@
         }
       ],
       "notes": "RKC breed page (dog-data S321, 2026-10-15) shows the headings 'Good Practice schemes and tests' and 'Best Practice schemes and tests' but returned no named test → no minimum / best_practice level. The RKC news item (K23) on the official POAG DNA testing scheme for the breed → other_scheme; PDSA (dog-data S323) names Primary Open Angle Glaucoma among the breed's eye problems. Elbow dysplasia (PDSA) has no breed-specific scheme statement → not listed (nothing guessed)."
+    },
+    "hungarian_vizsla": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S328",
+        "quote": "the breed have hip and elbow screening as requirements under the Assured Breeders Scheme"
+      },
+      "tests": [
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip screening (hip dysplasia) — a requirement for the breed under the Kennel Club Assured Breeders Scheme",
+          "source_id": "S328",
+          "quote": "the breed have hip and elbow screening as requirements under the Assured Breeders Scheme"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "other_scheme",
+          "name": "Elbow screening (elbow dysplasia) — a requirement for the breed under the Kennel Club Assured Breeders Scheme",
+          "source_id": "S328",
+          "quote": "the breed have hip and elbow screening as requirements under the Assured Breeders Scheme"
+        }
+      ],
+      "notes": "RKC breed page (older address display.aspx?id=2038, dog-data S328, 2026-10-15) shows 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding' but returned no named test (the current Breeds A–Z address likewise) → no minimum / best_practice level. The same page says the breed has hip and elbow screening as Assured Breeders Scheme requirements and hip EBVs → other_scheme. PDSA (dog-data S329) and PetMD (S330) name hip dysplasia; PetMD names PRA without a test statement → not listed (nothing guessed)."
     }
   }
 }

@@ -19403,6 +19403,686 @@
       }
     }
   },
+  "hungarian_vizsla": {
+    "_note": "Added 2026-10-15 (M5-R10-40, unattended run — appended after the Basset Hound: AKC 2024 No. 35 'Vizsla', S174 full-list table '34 Basset Hound', '35 Vizsla', '36 English Cocker Spaniel'). Quotes as returned by the web-fetch tool on 2026-10-15 (the tool limits quotes to ~125 characters; '…' marks where the tool shortened a sentence); spot-check before import (sources.md S326–S334, reused S8, S10, S11, S14, S24, S35, S45, S174). Smooth-coated Hungarian Vizsla only (FCI 57) — not the Hungarian Wirehaired Vizsla (FCI 239). The FCI (S327) and AKC (S331) standards give no weight → PDSA (S329) weight. Lifespan: McMillan 2024 / Dogs Trust table (S123) refused by the fetch tool (provenance) — Wikipedia (S334, tier C) quotes a 2024 UK study at 13.5 years, background only → RKC lower bound 'Over 12 years' (PDSA agrees) → senior 108 months, provisional. RKC Breed Watch Category 1 → no welfare chip; in marketing.",
+    "identity": {
+      "value": "FCI No. 57, Group 7 Section 1.1 (Continental Pointing Dogs, Braque type), Hungary",
+      "unit": "—",
+      "source_id": "S326",
+      "quote": "RÖVIDSZÖRÜ MAGYAR VIZSLA (57)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S326): group 'n°7 - Pointing Dogs', section 'Continental Pointing Dogs', subsection '«Braque» Type', country 'Hungary'; definitive acceptance 8/12/1954; valid standard 4/6/2000; 'Subject to a working trial'. FCI standard (S327): 'FCI-CLASSIFICATION: Group 7 Pointing Dogs.' (Section 1, Continental Pointing Dogs; Field and Water Trial). Names: RKC (S328) 'Hungarian Vizsla'; AKC (S331) 'Vizsla'; Wikipedia (S334) 'also known as Hungarian Vizsla, Magyar Vizsla or Hungarian Pointer'. Not the Hungarian Wirehaired Vizsla (FCI 239, a separate breed)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S328",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "RKC breed page key facts (S328); PDSA (S329) 'Large'. Dogs Trust Ireland (S333) 'Medium'; the FCI standard (S327) asks for a medium size. PDSA 20–30 kg = 44–66 lb → mostly the 'Medium (24–59 pounds)' class of S10 (the top touches 'Large'); the growth class follows the weight (Belgian Malinois / German Shorthaired Pointer precedent). RKC group: Gundog."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            58,
+            64
+          ],
+          "female": [
+            54,
+            60
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S327",
+        "quote": "Dogs: 58 - 64 cm",
+        "confidence": "high",
+        "notes": "FCI standard (S327): 'Bitches: 54 - 60 cm'; 'It is ineffective to increase the height at the withers.' A deviation of more than 2 cm is disqualifying (paraphrase)."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            55.9,
+            61
+          ],
+          "female": [
+            53.3,
+            58.4
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S331",
+        "quote": "The ideal male is 22 to 24 inches at the highest point over the shoulder blades.",
+        "confidence": "high",
+        "notes": "AKC standard (S331): 'The ideal female is 21 to 23 inches.' Inches × 2.54 by us. Alternative only."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            53,
+            64
+          ],
+          "female": [
+            53,
+            64
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S329",
+        "quote": "53-64cm",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average height' (S329), one range for both sexes. Alternative only."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            20,
+            30
+          ],
+          "female": [
+            20,
+            30
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S329",
+        "quote": "20kg-30kg",
+        "confidence": "medium",
+        "notes": "PDSA breed page (S329) key fact 'Average weight', one range for both sexes. The game range (adult_weight_kg). The FCI (S327) and AKC (S331) standards give no weight."
+      },
+      "petmd": {
+        "value": {
+          "male": [
+            18.1,
+            29.5
+          ],
+          "female": [
+            18.1,
+            29.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S330",
+        "quote": "Vizslas should reach adulthood weighing between 40-65 pounds,",
+        "confidence": "medium",
+        "notes": "PetMD (S330), one range ('females are typically smaller than males'); pounds × 0.4536 by us. Alternative only."
+      },
+      "salt_category": {
+        "value": "IV",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 20–30 kg → IV (15–<30; the top touches V). Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 20–30 kg (S329) = 44–66 lb → mostly 'Medium (24–59 pounds)'; the top touches 'Large (59–99 pounds): 15–18 months' (Belgian Malinois precedent). The game is unaffected (the puppy cap of 120 min is reached at 12 months either way)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Hungarian Vizsla growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S328",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S328). PDSA (S329) 'Over 12 years' agrees. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "pdsa": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S329",
+        "quote": "Over 12 years",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average lifespan' (S329). Same lower bound as the RKC → same senior boundary (108)."
+      },
+      "petmd": {
+        "value": "10–14",
+        "unit": "years",
+        "source_id": "S330",
+        "quote": "The average lifespan of a Vizsla is 10-14 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S330, tier B). Alternative only (lower bound 10 y → 90 months). Dogs Trust Ireland (S333): 'typically 11+ years'."
+      },
+      "mcmillan_2024": {
+        "value": 13.5,
+        "unit": "years",
+        "source_id": "S334",
+        "quote": "A 2024 UK study found a life expectancy of 13.5 years for the breed",
+        "confidence": "low",
+        "notes": "McMillan et al. 2024 as quoted by Wikipedia (S334, tier C — never alone). The Dogs Trust breed table (S123) was refused by the fetch tool on 2026-10-15 (provenance) → not used as the basis; with it the senior boundary would be round(0.75 × 13.5 × 12) = round(121.5) = 122 months. Verify in S123 before replacing the RKC lower bound."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12 y (RKC lower bound 'Over 12 years', S328) → 0.75 × 12 = 9 y = 108 months. With McMillan 2024 13.5 y (via S334): 122 months; Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S328"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S328",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S328). PDSA (S329): 'Your Hungarian Vizsla will need a minimum of two hours exercise every day.' — the same number (120); 'This needs to be split into several walks with lots of time to run around off-lead in a secure area.' PetMD (S330): 'Those who bring a Vizsla home should be prepared to provide them with at least one hour of exercise per day.' (60, alternative). Rule: RKC value preferred → 120."
+      },
+      "energy": {
+        "value": "high-energy; needs lots of exercise to stay physically and mentally healthy",
+        "unit": "—",
+        "source_id": "S333",
+        "quote": "Hungarian Vizslas are typically high-energy dogs who need lots of exercise to keep them physically and mentally healthy.",
+        "confidence": "medium",
+        "notes": "Dogs Trust Ireland (S333). PetMD (S330): 'They love problem-solving, and if they're not given ample amount of attention, the pups are prone to boredom' (shortened by the tool). Not needs_mental_stimulation — no explicit mental-stimulation need (German Shorthaired Pointer precedent; Claude's reading, open for David)."
+      },
+      "after_meals": {
+        "value": "leave a gap between eating and exercising (bloat)",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "Remember to leave a gap between eating and exercising.",
+        "confidence": "medium",
+        "notes": "PDSA (S329). PetMD (S330): 'One thing to keep in mind when feeding a Vizsla is that they're susceptible to bloat due to their deep-chested body.' and 'Also, avoid exercise immediately prior to and after mealtime.' No length in the sources → meal_exercise_gap 60 (David's M5-R16 decision)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "lively, friendly, evenly tempered, easy to train; neither aggressive nor shy",
+        "unit": "—",
+        "source_id": "S327",
+        "quote": "Lively, friendly, evenly tempered, to be trained easily.",
+        "confidence": "high",
+        "notes": "FCI standard (S327); 'His outstanding willingness to keep contact with his master while working is one of his essential qualities.' AKC standard (S331): 'A natural hunter endowed with a good nose and above-average ability to take training.'"
+      },
+      "family": {
+        "value": "ideal family pets for households with children (supervise; too excitable for children under 6)",
+        "unit": "—",
+        "source_id": "S330",
+        "quote": "These tall, long-eared beauties are extremely loyal and friendly, making them ideal family pets for households with children.",
+        "confidence": "medium",
+        "notes": "PetMD (S330); 'But for small children under the age of 6, [a Vizsla's] excitement can be too much.' PDSA (S329): 'Hungarian Vizslas are very people orientated dogs who love company.' → family_pet (with the small-children chip)."
+      },
+      "children": {
+        "value": "gets along really well with older children; not recommended with very young children",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "Because of their playful nature, they get along really well with older children they can play with.",
+        "confidence": "medium",
+        "notes": "PDSA (S329): 'We wouldn't recommend a Vizsla if you have very young children' and 'Always supervise your dog with children and vulnerable adults.' PetMD (S330): under 6 'excitement can be too much'. Older children only → no children / small_children; not_for_small_children (Belgian Malinois precedent — older_children's chip says 'small dog')."
+      },
+      "experienced_owner": {
+        "value": "not suitable for first-time dog owners",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "Their energy levels and strong personality means they are not suitable for first time dog owners.",
+        "confidence": "medium",
+        "notes": "PDSA (S329). → experienced_owner."
+      },
+      "socialisation": {
+        "value": "socialise from a young age with lots of people, dogs and experiences",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "as long as you socialise your Vizsla from a young age with lots of people, dogs and experiences",
+        "confidence": "medium",
+        "notes": "PDSA (S329) (fragment as returned; continues 'they will grow into happy and confident adults.'). PetMD (S330): '...though proper (and early) socialization is essential.' → proposed_game_parameters.hungarian_vizsla.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "time_alone": {
+        "value": "strong bonds, loves human company — often separation anxiety if left alone; ideally someone around all day",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "Vizslas form strong bonds with their owners and love human company so often suffer with separation anxiety if left alone.",
+        "confidence": "medium",
+        "notes": "PDSA (S329); 'Ideally, your Vizsla will need someone around all day to keep them company.' and 'If left alone they can develop negative behaviour due to stress.' → needs_company."
+      },
+      "other_pets": {
+        "value": "high prey drive — not advised with smaller pets; may be OK with a cat it grew up with",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "Hungarian Vizslas do have a high prey drive, so we wouldn't advise keeping them with smaller pets.",
+        "confidence": "medium",
+        "notes": "PDSA (S329); 'They may get along OK with a cat they have grown up with'. PetMD (S330): 'They can be gentle and affectionate with children and live contentedly with other dogs and even cats,...' — conflicting → no other_pets; the high prey drive → chases_small_pets (runbook rule, David 2026-10-12)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No appetite statement. PDSA (S329): 'We usually recommend splitting their daily allowance into two meals.' (the game's meals are the general rule) → no food_motivated_weight."
+      },
+      "training_notes": {
+        "value": "responds well to positive, reward-based training from an early age",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "Hungarian Vizslas respond really well to positive, reward-based training from an early age",
+        "confidence": "medium",
+        "notes": "PDSA (S329). PetMD (S330): 'Positive reinforcement is the best training approach.'; lead training needs extra attention (paraphrase). Fits the Excellent learning tier (Coren rank 25)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 1 (S328: 'Currently no points of concern specific to this breed have been identified for special attention by judges,') → no welfare chip (no hips_hind_legs / eyelid_problems — hip dysplasia and entropion are PDSA list items, not Breed Watch points; Belgian Malinois precedent, open for David). RKC breed health priorities (S328): 'Unregulated over breeding', 'Autoimmune illnesses', 'Epilepsy', 'Cancers'. HUU in the PDSA list concerns the wire-haired Vizsla only (PDSA wording) — not recorded for this breed.",
+      "hip_dysplasia": {
+        "value": "hip dysplasia — hip and elbow screening of the parents",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "Hip dysplasia",
+        "confidence": "medium",
+        "notes": "PDSA (S329): 'where the hip joint doesn't fit together perfectly, which will eventually lead to arthritis.' RKC (S328): 'the breed have hip and elbow screening as requirements under the Assured Breeders Scheme' and 'Estimated Breeding Values (EBVs) in place for hips.' PetMD (S330) lists hip dysplasia. Background only."
+      },
+      "entropion": {
+        "value": "entropion (eyelids turning inwards)",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "Entropion",
+        "confidence": "medium",
+        "notes": "PDSA (S329): 'where the eyelids turn inwards and cause irritation and pain.' Not a Breed Watch point → no eyelid_problems chip (open for David). Background only."
+      },
+      "epilepsy": {
+        "value": "epilepsy",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "Epilepsy",
+        "confidence": "medium",
+        "notes": "PDSA (S329): 'a brain disorder causing seizures.' RKC breed health priority (S328). PetMD (S330) lists epilepsy."
+      },
+      "autoimmune": {
+        "value": "autoimmune conditions",
+        "unit": "—",
+        "source_id": "S328",
+        "quote": "Autoimmune illnesses",
+        "confidence": "medium",
+        "notes": "RKC breed health priority (S328); PDSA (S329) 'Autoimmune conditions' ('a condition where the body reacts against itself.')."
+      },
+      "cancers": {
+        "value": "certain cancers",
+        "unit": "—",
+        "source_id": "S328",
+        "quote": "Cancers",
+        "confidence": "medium",
+        "notes": "RKC breed health priority (S328); PDSA (S329) 'Certain cancers'."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy",
+        "unit": "—",
+        "source_id": "S330",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S330) health list (heading, no sentence returned) — background only; not in the register."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S330",
+        "quote": "If left untreated, hypothyroidism can shorten your Vizsla's lifespan.",
+        "confidence": "medium",
+        "notes": "PetMD (S330). Background only."
+      },
+      "bloat": {
+        "value": "bloat (deep chest) — no exercise right before or after meals",
+        "unit": "—",
+        "source_id": "S330",
+        "quote": "One thing to keep in mind when feeding a Vizsla is that they're susceptible to bloat due to their deep-chested body.",
+        "confidence": "medium",
+        "notes": "PetMD (S330); PDSA (S329) gap after eating → meal_exercise_gap (M5-R16)."
+      },
+      "ears": {
+        "value": "prone to ear infections — clean the ears regularly",
+        "unit": "—",
+        "source_id": "S330",
+        "quote": "Vizslas are prone to ear infections, so it's important to keep a close eye on your pet's ear hygiene...",
+        "confidence": "medium",
+        "notes": "PetMD (S330), shortened by the tool; no frequency. Ear care = sourced need without a mechanic → ROADMAP M5-R20 (needs-david)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 25,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 25 | Vizsla |",
+        "confidence": "low",
+        "notes": "Wikipedia table (S35, tier C, read 2026-10-15): rank 25 'Vizsla' under 'Excellent Working Dogs' (ranks 11–26). Not in Coren's own top / bottom-10 article (S34) — runbook: rank from S35. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "excellent: 5 to 15 repetitions, obeys first command 85% or better",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 5 to 15 repetitions.; Obey first command: 85% of the time or better.;",
+        "confidence": "low",
+        "notes": "Tier 'Excellent Working Dogs' = ranks 11–26 (S35). Tier definitions from Wikipedia; verify in book."
+      },
+      "training_notes": {
+        "value": "responds well to positive, reward-based training",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "Hungarian Vizslas respond really well to positive, reward-based training from an early age",
+        "confidence": "medium",
+        "notes": "PDSA (S329); FCI (S327) 'to be trained easily'."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.hungarian_vizsla.learning_multiplier (1.5, runbook rule: Excellent tier, rank 25).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium-sized, elegant gundog of noble appearance with a short russet gold coat; light, lean build",
+        "unit": "—",
+        "source_id": "S327",
+        "quote": "Medium sized, elegant gun dog of noble appearance with short russet gold coat.",
+        "confidence": "high",
+        "notes": "FCI standard (S327). RKC (S328): 'Elegant and moderately boned, the Vizsla has a nobility in its head and carriage.'"
+      },
+      "colours": {
+        "value": [
+          "russet gold",
+          "dark sandy gold"
+        ],
+        "unit": "list",
+        "source_id": "S327",
+        "quote": "Various shades of russet gold and dark sandy gold (semmelgelb).",
+        "confidence": "high",
+        "notes": "FCI standard (S327): 'The leathers may be a little darker, otherwise uniform in colour.'; 'Red, brownish or lightened colour is undesirable.'; disqualifying 'Dark brown or pale yellow colour.' and parti-colour; a white chest patch up to 5 cm and white toes are allowed (paraphrase). AKC standard (S331): 'Golden rust in varying shades.' Never brown, pale yellow, white patches or parti-colour in the game."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Russet gold first with the highest weight (portrait default — named first by the FCI, the RKC 'russet gold gundog'), then dark sandy gold."
+      },
+      "coat": {
+        "value": "short, dense, coarse and hard to the touch; no undercoat",
+        "unit": "—",
+        "source_id": "S327",
+        "quote": "Short and dense, should be coarse and hard at the touch.",
+        "confidence": "high",
+        "notes": "FCI (S327); thinner and silkier on head and ears, no undercoat (paraphrase). RKC (S328): 'Coat length: Short'."
+      },
+      "nose": {
+        "value": "broad, well-developed nose, dark in harmony with the coat (self-coloured)",
+        "unit": "—",
+        "source_id": "S327",
+        "quote": "Well developed and broad with nostrils as wide as possible.",
+        "confidence": "high",
+        "notes": "FCI (S327): nose colour dark, in harmony with the coat (paraphrase). AKC (S331): 'Nose self-colored. Any other color is faulty.' — never a black nose."
+      },
+      "ears": {
+        "value": "medium-set, hanging close to the cheeks, rounded V tip",
+        "unit": "—",
+        "source_id": "S327",
+        "quote": "Leathers set on at medium height, a little backwards.",
+        "confidence": "high",
+        "notes": "FCI (S327): hang close to the cheeks, rounded V shape, about three quarters of the head length (paraphrase)."
+      },
+      "eyes": {
+        "value": "slightly oval, medium size, brown in harmony with the coat (darker preferred)",
+        "unit": "—",
+        "source_id": "S327",
+        "quote": "Slightly oval, of medium size.",
+        "confidence": "high",
+        "notes": "FCI (S327) (paraphrase for the colour). AKC (S331): yellow eyes are faulty."
+      },
+      "tail": {
+        "value": "set slightly low, strong at the base, tapering; natural tail reaches the hock",
+        "unit": "—",
+        "source_id": "S327",
+        "quote": "Set on slightly low, strong at the base, then tapering.",
+        "confidence": "high",
+        "notes": "FCI (S327): where docking is prohibited the tail reaches the hock and is carried straight or slightly sabre-like (paraphrase); the AKC standard (S331) describes docking — the game shows the natural tail (German Shorthaired Pointer / Brittany precedent)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page key facts (S328, older address), PDSA (S329), PetMD (S330), AKC article (S332), Dogs Trust Ireland (S333). The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S328",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "PDSA (S329): 'Large'."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S328",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "Basis of 120 min (PDSA S329 'a minimum of two hours' agrees) and of active_family / long_daily_exercise."
+      },
+      "pdsa_exercise": {
+        "value": "a minimum of two hours every day",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "Your Hungarian Vizsla will need a minimum of two hours exercise every day.",
+        "confidence": "medium",
+        "notes": "PDSA (S329). Supports active_family / long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S328",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "Basis of large_home (with the garden). Not apartment."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S328",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "Basis of large_home."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S328",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "Runbook dog-grooming rule: 'Once a week' → 1 (PDSA S329 'a weekly brush', PetMD S330 'at least once a week' agree). No frequent_grooming."
+      },
+      "pdsa_grooming": {
+        "value": "a weekly brush",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "Thanks to their short fur, a weekly brush should be enough to keep their coat looking nice and shiny.",
+        "confidence": "medium",
+        "notes": "PDSA (S329); 'Vizslas are really low maintenance when it comes to grooming.' Agrees with the RKC → 1."
+      },
+      "petmd_grooming": {
+        "value": "brushing at least once a week",
+        "unit": "—",
+        "source_id": "S330",
+        "quote": "A slicker brush and a pin brush are both good choices for brushing a Vizsla and should be used at least once a week.",
+        "confidence": "medium",
+        "notes": "PetMD (S330). Agrees → 1."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S328",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S328",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "Basis of the sheds tag (with Dogs Trust Ireland S333 'Hungarian Vizslas shed moderately.'). Never low_shedding."
+      },
+      "dt_shedding": {
+        "value": "sheds moderately",
+        "unit": "—",
+        "source_id": "S333",
+        "quote": "Hungarian Vizslas shed moderately.",
+        "confidence": "medium",
+        "notes": "Dogs Trust Ireland (S333). Supports sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S328",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "See lifespan.rkc."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S328",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S328",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S328",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges,",
+        "confidence": "high",
+        "notes": "RKC breed page (S328) 'Category 1' → no welfare chip; in marketing."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page (S328) has no 'Good with children' field."
+      },
+      "petmd_family": {
+        "value": "ideal family pets for households with children",
+        "unit": "—",
+        "source_id": "S330",
+        "quote": "These tall, long-eared beauties are extremely loyal and friendly, making them ideal family pets for households with children.",
+        "confidence": "medium",
+        "notes": "PetMD (S330). Basis of family_pet."
+      },
+      "pdsa_children": {
+        "value": "not recommended with very young children; great with older children",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "We wouldn't recommend a Vizsla if you have very young children",
+        "confidence": "medium",
+        "notes": "PDSA (S329); 'Because of their playful nature, they get along really well with older children they can play with.' Basis of not_for_small_children (with PetMD)."
+      },
+      "petmd_small_children": {
+        "value": "too excitable for children under 6",
+        "unit": "—",
+        "source_id": "S330",
+        "quote": "But for small children under the age of 6, [a Vizsla's] excitement can be too much.",
+        "confidence": "medium",
+        "notes": "PetMD (S330). Supports not_for_small_children."
+      },
+      "pdsa_experienced_owner": {
+        "value": "not for first-time dog owners",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "Their energy levels and strong personality means they are not suitable for first time dog owners.",
+        "confidence": "medium",
+        "notes": "PDSA (S329). Basis of experienced_owner."
+      },
+      "pdsa_company": {
+        "value": "needs someone around all day",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "Ideally, your Vizsla will need someone around all day to keep them company.",
+        "confidence": "medium",
+        "notes": "PDSA (S329). Basis of needs_company (with behaviour.time_alone)."
+      },
+      "pdsa_prey_drive": {
+        "value": "high prey drive — not with smaller pets",
+        "unit": "—",
+        "source_id": "S329",
+        "quote": "Hungarian Vizslas do have a high prey drive, so we wouldn't advise keeping them with smaller pets.",
+        "confidence": "medium",
+        "notes": "PDSA (S329). Basis of chases_small_pets."
+      },
+      "akc_nails": {
+        "value": "fast-growing nails need regular trimming",
+        "unit": "—",
+        "source_id": "S332",
+        "quote": "However, their fast-growing nails need to be trimmed regularly.",
+        "confidence": "medium",
+        "notes": "AKC article (S332); 'When it comes to grooming, an occasional bath will keep their short coat looking great.' Nail care = sourced need without a mechanic → ROADMAP M5-R19 (needs-david)."
+      },
+      "petmd_ears": {
+        "value": "prone to ear infections — keep a close eye on ear hygiene",
+        "unit": "—",
+        "source_id": "S330",
+        "quote": "Vizslas are prone to ear infections, so it's important to keep a close eye on your pet's ear hygiene...",
+        "confidence": "medium",
+        "notes": "PetMD (S330), no frequency. Ear care = sourced need without a mechanic → ROADMAP M5-R20 (needs-david)."
+      },
+      "petmd_teeth": {
+        "value": "brush the teeth regularly",
+        "unit": "—",
+        "source_id": "S330",
+        "quote": "To minimize the risk of periodontal disease, brush your dog's teeth regularly using a dog-specific toothbrush and toothpaste.",
+        "confidence": "medium",
+        "notes": "PetMD (S330), no frequency. Dental care = sourced need without a mechanic → ROADMAP M5-R15 (needs-david)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -28973,6 +29653,342 @@
         "confidence": "high",
         "notes": "FCI (S320) colours and points; RKC Breed Watch (S322) concerns → moderate ears, eyelids and skin (welfare rule: moderate, non-exaggerated features; dog trait `skin`). Tricolour is the portrait default. Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — tricolour (default), lemon and white; moderate, non-exaggerated ears, eyelids and skin (welfare breed)"
+      }
+    },
+    "hungarian_vizsla": {
+      "_note": "Unattended run M5-R10-40 (2026-10-15): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: brushing once a week (RKC S328 'Once a week', M5-R13); the 'wait with the walk' warning after meals (PDSA S329, M5-R16); puppy socialisation (PDSA S329, M5-R17). Sourced needs without a game mechanic: regular nail trimming (AKC S332) → ROADMAP M5-R19; ear hygiene (PetMD S330) → ROADMAP M5-R20; regular tooth brushing (PetMD S330) → ROADMAP M5-R15 (needs-david). Senior 108 provisional (RKC lower bound — McMillan 2024 not reachable). Breed Watch Category 1 → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S328",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'More than 2 hours per day' (S328). Rule: one number N ('more than N') → N = 120; PDSA (S329) 'a minimum of two hours' agrees.",
+        "alternatives": [
+          {
+            "value": 120,
+            "source_id": "S329",
+            "notes": "PDSA 'a minimum of two hours exercise every day'"
+          },
+          {
+            "value": 60,
+            "source_id": "S330",
+            "notes": "PetMD 'at least one hour of exercise per day'"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S328 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S328",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) = 108 (S11 + RKC lower bound 'Over 12 years', S328; PDSA 'Over 12 years', S329, agrees). No McMillan 2024 / VetCompass value reachable. Alternatives: 122 (McMillan 2024 13.5 y via Wikipedia S334, tier C), 90 (PetMD lower bound 10 y, S330), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S328"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 122,
+          "senior_petmd_10_y": 90,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S328)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 25 (S35), tier Excellent (ranks 11–26) → 1.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 25, Excellent tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources (PDSA S329: two meals a day — the general rule; no feeding number).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S328",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "hungarian_vizsla.suitability.rkc_grooming. RKC (S328) 'Once a week' → 1 (runbook dog-grooming rule); PDSA (S329) 'a weekly brush' and PetMD (S330) 'at least once a week' agree. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S329",
+            "notes": "PDSA a weekly brush"
+          },
+          {
+            "value": 1,
+            "source_id": "S330",
+            "notes": "PetMD at least once a week"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week« → 1; PDSA in PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S329",
+        "quote": "Remember to leave a gap between eating and exercising.",
+        "confidence": "medium",
+        "notes": "PDSA (S329), hungarian_vizsla.exercise.after_meals; PetMD (S330) bloat + 'avoid exercise immediately prior to and after mealtime'. No length in the source. Built in M5-R16 (David 2026-10-12): 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S329",
+        "quote": "as long as you socialise your Vizsla from a young age with lots of people, dogs and experiences",
+        "confidence": "medium",
+        "notes": "hungarian_vizsla.behaviour.socialisation (PDSA S329); PetMD (S330) agrees. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S329)"
+      },
+      "nail_care": {
+        "value": "regular nail trimming (fast-growing nails)",
+        "unit": "nail trimming (sourced need)",
+        "source_id": "S332",
+        "quote": "However, their fast-growing nails need to be trimmed regularly.",
+        "confidence": "medium",
+        "notes": "AKC (S332), hungarian_vizsla.suitability.akc_nails. The game has no nail-trimming mechanic → ROADMAP M5-R19 (Boston Terrier / Brittany precedent, needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno striženje krempljev; mehanike ni → ROADMAP M5-R19 (needs-david)"
+      },
+      "ear_care": {
+        "value": "keep a close eye on ear hygiene (prone to ear infections); no frequency",
+        "unit": "ear checks (sourced need)",
+        "source_id": "S330",
+        "quote": "Vizslas are prone to ear infections, so it's important to keep a close eye on your pet's ear hygiene...",
+        "confidence": "medium",
+        "notes": "PetMD (S330), hungarian_vizsla.suitability.petmd_ears. The game has no ear-care mechanic → ROADMAP M5-R20 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): skrb za ušesa; mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "dental_care": {
+        "value": "brush the teeth regularly; no frequency",
+        "unit": "tooth brushing (sourced need)",
+        "source_id": "S330",
+        "quote": "To minimize the risk of periodontal disease, brush your dog's teeth regularly using a dog-specific toothbrush and toothpaste.",
+        "confidence": "medium",
+        "notes": "PetMD (S330), hungarian_vizsla.suitability.petmd_teeth. The game has no tooth-care mechanic → ROADMAP M5-R15 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno ščetkanje zob; mehanike ni → ROADMAP M5-R15 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-40); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S328",
+              "S329"
+            ],
+            "refs": [
+              "hungarian_vizsla.exercise.adult",
+              "hungarian_vizsla.suitability.pdsa_exercise"
+            ],
+            "quote": "S328 'More than 2 hours per day'; S329 'a minimum of two hours exercise every day'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S330"
+            ],
+            "refs": [
+              "hungarian_vizsla.suitability.petmd_family",
+              "hungarian_vizsla.behaviour.family"
+            ],
+            "quote": "S330 'ideal family pets for households with children'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S328"
+            ],
+            "refs": [
+              "hungarian_vizsla.suitability.rkc_size_of_home",
+              "hungarian_vizsla.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S328 'Size of home: Large house'; 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S328",
+              "S329"
+            ],
+            "refs": [
+              "hungarian_vizsla.exercise.adult",
+              "hungarian_vizsla.suitability.pdsa_exercise"
+            ],
+            "quote": "S328 'More than 2 hours per day'; S329 'a minimum of two hours exercise every day'"
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S329"
+            ],
+            "refs": [
+              "hungarian_vizsla.behaviour.experienced_owner",
+              "hungarian_vizsla.suitability.pdsa_experienced_owner"
+            ],
+            "quote": "S329 'not suitable for first time dog owners'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S329",
+              "S330"
+            ],
+            "refs": [
+              "hungarian_vizsla.suitability.pdsa_children",
+              "hungarian_vizsla.suitability.petmd_small_children"
+            ],
+            "quote": "S329 'We wouldn't recommend a Vizsla if you have very young children'; S330 'for small children under the age of 6, [a Vizsla's] excitement can be too much'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S329"
+            ],
+            "refs": [
+              "hungarian_vizsla.behaviour.time_alone",
+              "hungarian_vizsla.suitability.pdsa_company"
+            ],
+            "quote": "S329 'often suffer with separation anxiety if left alone'; 'someone around all day'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S328",
+              "S333"
+            ],
+            "refs": [
+              "hungarian_vizsla.suitability.rkc_shedding",
+              "hungarian_vizsla.suitability.dt_shedding"
+            ],
+            "quote": "S328 'Sheds: Yes'; S333 'Hungarian Vizslas shed moderately.'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S329"
+            ],
+            "refs": [
+              "hungarian_vizsla.behaviour.other_pets",
+              "hungarian_vizsla.suitability.pdsa_prey_drive"
+            ],
+            "quote": "S329 'Hungarian Vizslas do have a high prey drive'"
+          }
+        ],
+        "not_proposed": {
+          "children": "PDSA (S329): older children only, not with very young children; PetMD (S330): supervision, too excitable under 6 → not_for_small_children instead (Belgian Malinois precedent).",
+          "small_children": "Sources advise against.",
+          "older_children": "Its chip reads 'small dog — better with older children' — wrong for a large dog → not_for_small_children (Belgian Malinois precedent).",
+          "apartment": "RKC 'Large house' (S328).",
+          "other_pets": "PDSA (S329) high prey drive, not with smaller pets vs PetMD (S330) fine with other dogs and cats — conflicting.",
+          "first_time_owner": "Sources say the opposite (experienced_owner).",
+          "needs_mental_stimulation": "No explicit statement (Dogs Trust Ireland S333 'physically and mentally healthy' is about exercise; PetMD S330 'prone to boredom' without attention) — Claude's reading, open for David (German Shorthaired Pointer precedent).",
+          "frequent_grooming": "RKC 'Once a week' (S328).",
+          "low_shedding": "RKC 'Sheds: Yes'.",
+          "shorter_lifespan": "RKC 'Over 12 years'.",
+          "food_motivated_weight": "No source.",
+          "hips_hind_legs": "Hip dysplasia only in the PDSA / PetMD lists; Breed Watch Category 1 → no welfare chip.",
+          "eyelid_problems": "Entropion only in the PDSA list; Breed Watch Category 1 → no chip (open for David).",
+          "welfare": "RKC Breed Watch Category 1 (S328)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, large_home; consider long_daily_exercise, experienced_owner, not_for_small_children, needs_company, sheds, chases_small_pets (brez children / other_pets — viri si nasprotujejo ali svetujejo le starejše otroke; brez needs_mental_stimulation = branje Claude, odprto za Davida)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S328",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S328) — no conformation concern, no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92) → in marketing. Marketing never shows it as a dog for small children or first-time owners, never with a docked tail as a goal (Claude's proposal).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (Breed Watch Category 1)"
+      },
+      "ai_appearance": {
+        "value": "adult Hungarian Vizsla, russet gold (default) or dark sandy gold, uniform colour; medium-sized, elegant, lean gundog of noble appearance; short dense close coat without undercoat; broad self-coloured (reddish-brown) nose, never black; slightly oval brown eyes in harmony with the coat; medium-set ears hanging close to the cheeks with rounded tips; natural undocked tail reaching the hock; at most a small white spot on the chest; never brown, pale yellow, parti-coloured or with white feet",
+        "unit": "—",
+        "source_id": "S327",
+        "quote": "Various shades of russet gold and dark sandy gold (semmelgelb).",
+        "confidence": "high",
+        "notes": "FCI (S327) colours and points; AKC (S331) nose 'self-colored'. Russet gold is the portrait default. Natural tail (FCI where docking is prohibited). Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — russet gold (default), dark sandy gold; natural tail; self-coloured nose"
       }
     }
   }
