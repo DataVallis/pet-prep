@@ -131,9 +131,10 @@ Nastavitev in obnova: `docs/PRODUCTION_DEPLOYMENT.md` §6b in §7.
 # zadnji CI upload znova, s preverbo strežnika (D18):
 /opt/petprep/incoming/scripts/deploy-production.sh --from /opt/petprep/incoming --expect-domain api.petprep.si <COMMIT_SHA>
 # D19: brez čakajočih migracij ni načina vzdrževanja; vsiliš ga z
-DEPLOY_FORCE_MAINTENANCE=1 /opt/petprep/scripts/deploy-production.sh
-# Reverb ostane prižgan, če se njegovi vhodi niso spremenili; ponovni zagon vsiliš z
-DEPLOY_RECREATE_REVERB=1 /opt/petprep/scripts/deploy-production.sh
+DEPLOY_FORCE_MAINTENANCE=1 /opt/petprep/scripts/deploy-production.sh --expect-domain api.petprep.si
+# Reverb / Caddy se ne zaženeta znova, če se njuni vhodi niso spremenili; ponovni zagon vsiliš z
+DEPLOY_RECREATE_REVERB=1 /opt/petprep/scripts/deploy-production.sh --expect-domain api.petprep.si
+DEPLOY_RECREATE_CADDY=1 /opt/petprep/scripts/deploy-production.sh --expect-domain api.petprep.si
 ```
 
 ---

@@ -11,13 +11,13 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ## 2026-10-14 — Posodobitev brez »smo v vzdrževanju« (D19)
 
-**Kaj se je zgodilo:** Deploy zdaj najprej vpraša bazo, ali nova različica prinaša spremembe sheme. Če ne, strežnik ne gre v način vzdrževanja: zamenja delavce, nato aplikacijo, strežnik za sprotne posodobitve (Reverb) pa pusti pri miru, kadar se njegove nastavitve niso spremenile.
+**Kaj se je zgodilo:** Deploy zdaj najprej vpraša bazo, ali nova različica prinaša spremembe sheme. Če ne, strežnik ne gre v način vzdrževanja: zamenja delavce, nato aplikacijo, spletni strežnik (Caddy) pa med tem do 10 sekund počaka nanjo, namesto da bi vrnil napako. Strežnika za sprotne posodobitve (Reverb) in Caddy pusti pri miru, kadar se njune nastavitve niso spremenile.
 
-**Zakaj je pomembno:** Prej je vsak deploy za minuto ali več vračal »503« in prekinil povezavo vseh telefonov. Zdaj sprememba brez migracije pomeni le nekaj sekund preklopa, odprte povezave pa ostanejo.
+**Zakaj je pomembno:** Prej je vsak deploy za minuto ali več vračal »503« in prekinil povezavo vseh telefonov. Zdaj sprememba brez migracije pomeni le nekaj sekund preklopa. Ali odprte povezave telefonov res ostanejo, bomo preverili ob prvem pravem deployu (načrt).
 
 **Kako povedati:**
-- 👩 Starši: »Ko izboljšamo aplikacijo, vaš pes ne izgine niti za minuto.«
-- 🛠 Tehnično: »`migrate:status --pending=3` z novo sliko pred vzdrževanjem; Reverb ostane, ko se prstni odtis njegovih vhodov (config, composer.lock, .env …) ne spremeni; 307 preverjanj v testni skripti.«
+- 👩 Starši: »Ko izboljšamo aplikacijo, je ne ugasnemo več za minuto — večina posodobitev gre mimo skoraj neopazno.«
+- 🛠 Tehnično: »`migrate:status --pending=3` z novo sliko pred vzdrževanjem; Reverb in Caddy se ne zaženeta znova, ko se prstni odtis njunih vhodov (config, composer.lock, public/, Caddyfile, .env, osnovna slika) ne spremeni; Caddy `lb_try_duration 10s`; 333 preverjanj v testni skripti.«
 
 ---
 

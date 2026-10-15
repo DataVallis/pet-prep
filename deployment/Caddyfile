@@ -62,6 +62,11 @@
         header -X-Accel-Redirect
 
         php_fastcgi app:9000 {
+            # Deploy without maintenance (D19): while the app container is swapped, hold
+            # requests and retry the upstream for up to 10 s instead of answering 502.
+            lb_try_duration 10s
+            lb_try_interval 250ms
+
             # Pet media (GET /api/media/{id}, PET_MEDIA_SERVE_VIA=caddy): Laravel
             # checks the signature + authz and answers with an empty body and
             # `X-Accel-Redirect: /{pet_id}/{file}` (validated server side, built

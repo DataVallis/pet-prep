@@ -127,5 +127,6 @@ Set by the image, `compose.production.yaml` or `deploy-production.sh`; listed so
 | `DEPLOY_ALLOW_NO_BACKUP` | deploy script env | `1` = continue when the pre-deploy backup fails (emergency only) | `0` |
 | `DEPLOY_FORCE_MAINTENANCE` | deploy script env | `1` = maintenance mode even when no migration is pending (D19) | `0` |
 | `DEPLOY_RECREATE_REVERB` | deploy script env | `1` = recreate reverb even when its inputs are unchanged (D19; drops open WebSockets) | `0` |
+| `DEPLOY_RECREATE_CADDY` | deploy script env | `1` = recreate caddy even when its inputs are unchanged (D19) | `0` |
 | `DEPLOY_COMPOSE_PROJECT` | deploy script env | Compose project (network + volume prefix, e.g. `backend_app_storage`). Only if production ever runs under another project name — the deploy aborts when the volume is missing while the app runs | `backend` |
 | `DEPLOY_APP_UID` | deploy script env | uid the FPM image runs as; storage is chowned to it before every deploy | `1000` |

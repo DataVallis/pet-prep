@@ -11,7 +11,8 @@
 #           NO_VOLUME=1 (`volume inspect` fails), APP_RUNNING=0 (`ps -q app` empty),
 #           STORAGE_BAD=1 (the uid-1000 storage check in the new image fails),
 #           PENDING_RC (exit of `migrate:status --pending=3`: 3 = pending — default,
-#           0 = none → no maintenance, other = unknown), REVERB_RUNNING=0.
+#           0 = none → no maintenance, other = unknown), REVERB_RUNNING=0, CADDY_RUNNING=0,
+#           PHP_BASE_ID / CADDY_BASE_ID (base image ids), BASE_BUILD_FAIL=1.
 #           PETPREP_IMAGE_TAG (compose against the new tree) is logged in front.
 #   git     logs the call, then runs the real git (git-mode cases use a real temp repo).
 #   curl    prints CURL_STATUS (default 200).
@@ -54,12 +55,18 @@ if [[ "$args" == *"artisan down"* ]]; then
 fi
 if [ -n "${FAIL_MATCH:-}" ] && [[ "$args" =~ $FAIL_MATCH ]]; then exit 1; fi
 case "$args" in
+    # D19 base ids: the caddy base image and the PHP `base` build stage.
+    "image inspect --format {{.Id}} caddy:2.8-alpine"*) echo "${CADDY_BASE_ID:-sha256:caddybase1}" ;;
+    "buildx build -q --load --target base "*)
+        [ "${BASE_BUILD_FAIL:-0}" = "1" ] && exit 1
+        echo "${PHP_BASE_ID:-sha256:phpbase1}" ;;
     "image inspect "*) [ "${NO_PREV_IMAGES:-0}" = "1" ] && exit 1 ;;
     "volume inspect "*) [ "${NO_VOLUME:-0}" = "1" ] && exit 1 ;;
     *" ps -q app"*) [ "${APP_RUNNING:-1}" = "1" ] && echo "c0ffee" ;;
     *"--entrypoint sh app -c "*) [ "${STORAGE_BAD:-0}" = "1" ] && exit 1 ;;
     *"ps -q --status running postgres"*) echo "c0ffee" ;;
     *"ps -q --status running reverb"*) [ "${REVERB_RUNNING:-1}" = "1" ] && echo "c0ffee" ;;
+    *"ps -q --status running caddy"*) [ "${CADDY_RUNNING:-1}" = "1" ] && echo "c0ffee" ;;
     # D19: exit 3 = migrations pending (default: the classic maintenance flow), 0 = none.
     *"migrate:status --pending=3"*) exit "${PENDING_RC:-3}" ;;
     *"exec -T caddy cat /etc/caddy/Caddyfile"*)
@@ -670,74 +677,149 @@ check "never artisan down" not_called 'artisan down'
 check "new code on disk" eq "$(code_on_disk)" v2
 finish
 
-start reverb_first "first D19 deploy (no reverb fingerprint) → reverb recreated, fingerprint recorded"
+start reverb_first "first D19 deploy (no fingerprints) → reverb + caddy recreated, fingerprints recorded"
 new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
 check "exit 0" rc_is 0
-check "reverb in the up -d" called 'up -d --remove-orphans app reverb queue'
-check "fingerprint written" test -s "$ROOT/releases/reverb.fingerprint"
+check "all services in the up -d" called 'up -d --remove-orphans app reverb queue queue-broadcasts scheduler caddy'
+check "reverb fingerprint written" test -s "$ROOT/releases/reverb.fingerprint"
+check "caddy fingerprint written" test -s "$ROOT/releases/caddy.fingerprint"
+check "PHP base stage id resolved from the NEW tree" called 'buildx build -q --load --target base -f .*incoming/backend/docker/production/Dockerfile'
+check "caddy base image id read" called 'image inspect --format \{\{.Id\}\} caddy:2.8-alpine'
 finish
 
-start reverb_kept "second deploy, reverb inputs unchanged → reverb kept (WebSockets stay open)"
+start reverb_kept "second deploy, only app code changed → reverb AND caddy kept"
 new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
-fp1="$(cat "$ROOT/releases/reverb.fingerprint")"
+fp1="$(cat "$ROOT/releases/reverb.fingerprint")"; cfp1="$(cat "$ROOT/releases/caddy.fingerprint")"
 echo "v3" > "$ROOT/incoming/backend/app.txt"; mkdir -p "$ROOT/incoming/backend/app/Http"; echo "x" > "$ROOT/incoming/backend/app/Http/C.php"
 : > "$CALL_LOG"; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v3
 check "exit 0" rc_is 0
-check "says reverb kept" out_has "reverb unchanged — kept"
-check "up -d without reverb, --no-deps" called 'up -d --remove-orphans --no-deps app queue queue-broadcasts scheduler caddy \[code=v3\]'
+check "says what is kept" out_has "unchanged, not restarted: reverb caddy"
+check "up -d of app + workers only, --no-deps" called 'up -d --remove-orphans --no-deps app queue queue-broadcasts scheduler \[code=v3\]'
 check "reverb not in any up -d" not_called 'up -d .*reverb'
-check "fingerprint unchanged" eq "$(cat "$ROOT/releases/reverb.fingerprint")" "$fp1"
+check "caddy not in any up -d" not_called 'up -d .*caddy'
+check "fingerprints unchanged" eq "$(cat "$ROOT/releases/reverb.fingerprint") $(cat "$ROOT/releases/caddy.fingerprint")" "$fp1 $cfp1"
 finish
 
-start reverb_config "reverb inputs changed (backend/config) → reverb recreated, new fingerprint"
+start reverb_config "reverb inputs changed (backend/config) → reverb recreated, caddy kept"
 new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
 fp1="$(cat "$ROOT/releases/reverb.fingerprint")"
 mkdir -p "$ROOT/incoming/backend/config"; echo "<?php return ['x' => 2];" > "$ROOT/incoming/backend/config/reverb.php"
 : > "$CALL_LOG"; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v3
 check "exit 0" rc_is 0
-check "reverb recreated" called 'up -d --remove-orphans app reverb queue'
+check "reverb recreated, caddy kept" called 'up -d --remove-orphans --no-deps app queue queue-broadcasts scheduler reverb \[code=v2\]'
 check "fingerprint changed" test "$(cat "$ROOT/releases/reverb.fingerprint")" != "$fp1"
 finish
 
-start reverb_env "server .env changed → reverb recreated"
+start reverb_listeners "app/Listeners or routes/ changed → reverb recreated"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+mkdir -p "$ROOT/incoming/backend/app/Listeners" "$ROOT/incoming/backend/routes"
+echo "l" > "$ROOT/incoming/backend/app/Listeners/L.php"
+: > "$CALL_LOG"; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v3
+check "listener → reverb recreated" called 'up -d .*scheduler reverb'
+echo "r" > "$ROOT/incoming/backend/routes/channels.php"
+: > "$CALL_LOG"; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v4
+check "routes → reverb recreated" called 'up -d .*scheduler reverb'
+finish
+
+start reverb_base "PHP base image changed (same Dockerfile) → reverb recreated"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+: > "$CALL_LOG"; run_deploy PENDING_RC=0 PHP_BASE_ID=sha256:phpbase2 -- --from "$ROOT/incoming" sha-v2
+check "reverb recreated" called 'up -d .*scheduler reverb'
+check "caddy kept" not_called 'up -d .*caddy'
+finish
+
+start reverb_base_unknown "PHP base id cannot be resolved → reverb recreated (fail safe), deploy succeeds"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+: > "$CALL_LOG"; run_deploy PENDING_RC=0 BASE_BUILD_FAIL=1 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "warns" out_has "could not resolve the PHP base image id"
+check "reverb recreated" called 'up -d .*reverb'
+finish
+
+start reverb_env "server .env changed → reverb and caddy recreated"
 new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
 echo "REVERB_APP_SECRET=${SECRET}-rotated" >> "$ROOT/.env"
 : > "$CALL_LOG"; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
 check "exit 0" rc_is 0
-check "reverb recreated" called 'up -d --remove-orphans app reverb queue'
+check "all recreated" called 'up -d --remove-orphans app reverb queue queue-broadcasts scheduler caddy'
 check "no env secret in output" no_secret
 finish
 
-start reverb_composer "composer.lock changed → reverb recreated"
+start reverb_composer "composer.lock changed → reverb and caddy recreated"
 new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
 echo '{"packages":[1]}' > "$ROOT/incoming/backend/composer.lock"
 : > "$CALL_LOG"; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v3
-check "reverb recreated" called 'up -d --remove-orphans app reverb queue'
+check "all recreated" called 'up -d --remove-orphans app reverb queue queue-broadcasts scheduler caddy'
+finish
+
+start caddy_public "public/ changed → caddy recreated, reverb kept"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+mkdir -p "$ROOT/incoming/backend/public/css"; echo "a{}" > "$ROOT/incoming/backend/public/css/app.css"
+: > "$CALL_LOG"; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v3
+check "caddy recreated, reverb kept" called 'up -d --remove-orphans --no-deps app queue queue-broadcasts scheduler caddy \[code=v2\]'
+check "reverb not in any up -d" not_called 'up -d .*reverb'
+finish
+
+start caddy_file_changed "Caddyfile changed → caddy recreated (force) even with matching other inputs"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+echo "caddy-config-NEW" > "$ROOT/incoming/deployment/Caddyfile"
+: > "$CALL_LOG"; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v3
+check "validated" called 'caddy validate'
+check "caddy in the up -d" called 'up -d .*caddy \[code=v2\]'
+check "and force-recreated" called 'up -d --force-recreate --no-deps caddy'
+finish
+
+start caddy_down "caddy not running → recreated"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+: > "$CALL_LOG"; run_deploy PENDING_RC=0 CADDY_RUNNING=0 -- --from "$ROOT/incoming" sha-v2
+check "caddy recreated" called 'up -d .*caddy'
+finish
+
+start caddy_forced "DEPLOY_RECREATE_CADDY=1 → recreated"
+new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
+: > "$CALL_LOG"; run_deploy PENDING_RC=0 DEPLOY_RECREATE_CADDY=1 -- --from "$ROOT/incoming" sha-v2
+check "caddy recreated" called 'up -d .*caddy'
+check "reverb kept" not_called 'up -d .*reverb'
 finish
 
 start reverb_down "reverb not running → recreated even with the same fingerprint"
 new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
 : > "$CALL_LOG"; run_deploy PENDING_RC=0 REVERB_RUNNING=0 -- --from "$ROOT/incoming" sha-v2
-check "reverb recreated" called 'up -d --remove-orphans app reverb queue'
+check "reverb recreated" called 'up -d .*reverb'
 finish
 
 start reverb_forced "DEPLOY_RECREATE_REVERB=1 → recreated"
 new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
 : > "$CALL_LOG"; run_deploy PENDING_RC=0 DEPLOY_RECREATE_REVERB=1 -- --from "$ROOT/incoming" sha-v2
-check "reverb recreated" called 'up -d --remove-orphans app reverb queue'
+check "reverb recreated" called 'up -d .*reverb'
 finish
 
 start reverb_failed_deploy "a failed deploy never records a fingerprint"
 new_root dir; run_deploy PENDING_RC=0 CURL_STATUS=502 -- --from "$ROOT/incoming" sha-v2
 check "exit != 0" rc_nonzero
-check "no fingerprint" test ! -e "$ROOT/releases/reverb.fingerprint"
+check "no reverb fingerprint" test ! -e "$ROOT/releases/reverb.fingerprint"
+check "no caddy fingerprint" test ! -e "$ROOT/releases/caddy.fingerprint"
 finish
 
-start reverb_kept_post_fail "reverb kept, post-migration failure → trap restarts app services incl. reverb definition"
+start reverb_kept_post_fail "services kept, post-migration failure → trap brings every service up"
 new_root dir; run_deploy PENDING_RC=0 -- --from "$ROOT/incoming" sha-v2
 : > "$CALL_LOG"; run_deploy PENDING_RC=0 FAIL_MATCH='php-fpm-ping' DEPLOY_APP_WAIT_TRIES=1 -- --from "$ROOT/incoming" sha-v3
 check "exit != 0" rc_nonzero
 check "trap brings every service up" called 'up -d --remove-orphans app reverb queue queue-broadcasts scheduler caddy'
+finish
+
+start nomaint_premig_revert "no maintenance, failure before containers changed (migrate) → revert without worker restart"
+new_root dir; run_deploy PENDING_RC=0 FAIL_MATCH='migrate --force' -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "old code back" eq "$(code_on_disk)" v1
+check "no worker restart (FPM containers untouched, still the old release)" not_called 'restart reverb queue'
+check "no up -d of app services" not_called 'up -d --remove-orphans'
+finish
+
+start maint_premig_revert "with maintenance, migrate fails → workers still restarted (unchanged behaviour)"
+new_root dir; run_deploy PENDING_RC=3 FAIL_MATCH='migrate --force' -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "workers restarted" called 'restart reverb queue queue-broadcasts scheduler \[code=v1\]'
 finish
 
 start ops-lock "a running game-data reset holds the ops lock (D17)"

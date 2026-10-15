@@ -87,19 +87,26 @@
 #                maintenance, as before.
 #   DEPLOY_FORCE_MAINTENANCE=1 forces the maintenance flow.
 #
-# REVERB (D19)
-#   Every deploy used to recreate reverb (new image) and drop every open WebSocket. Reverb
-#   runs only the framework + config (channel auth is an HTTP call to `app`, events are
-#   pushed by queue-broadcasts), so it is KEPT when nothing it runs on changed since it was
-#   last (re)created by a deploy: a sha256 over backend/composer.{json,lock},
-#   backend/compose.production.yaml, backend/config/**, backend/bootstrap/** (minus caches),
-#   backend/app/Providers/**, backend/docker/production/** of the new tree and
-#   /opt/petprep/.env, stored in releases/reverb.fingerprint after a successful deploy that
-#   recreated it. Kept → `up -d --no-deps` of the other services (caddy depends on reverb).
-#   No fingerprint yet, a difference, reverb not running or DEPLOY_RECREATE_REVERB=1 →
-#   recreated as before. A kept reverb keeps its old image (never pruned while in use).
-#   Not covered: a refreshed upstream php:8.3-fpm base image (same Dockerfile) — deploy
-#   once with DEPLOY_RECREATE_REVERB=1 after a base-image security update.
+# REVERB + CADDY (D19)
+#   Every deploy used to recreate reverb and caddy (new images), which drops every open
+#   WebSocket (clients connect through caddy to reverb). Both are KEPT when nothing they
+#   run on changed since a deploy last (re)created them — a sha256 (service_fingerprint)
+#   over the service's inputs in the new tree + /opt/petprep/.env (+ derived Caddy
+#   identity) + the base image id of the new build:
+#     reverb  backend/composer.{json,lock}, compose.production.yaml, config/**,
+#             bootstrap/** (minus caches), app/Providers/**, app/Listeners/**, routes/**,
+#             docker/production/**; base = the Dockerfile's `base` stage (php:8.3-fpm +
+#             extensions — a refreshed upstream image changes it). Reverb does channel auth
+#             via HTTP to `app` and gets events over HTTP from queue-broadcasts.
+#     caddy   deployment/Caddyfile, backend/public/**, composer.{json,lock} (Filament
+#             assets), compose file, the Dockerfile; base = caddy:2.8-alpine image id.
+#             A changed Caddyfile always recreates caddy (CADDY below).
+#   Stored in releases/{reverb,caddy}.fingerprint after a successful deploy that recreated
+#   the service. Kept → `up -d --no-deps` of the other services (caddy depends on app +
+#   reverb). No fingerprint yet, a difference, unknown base id, service not running,
+#   DEPLOY_RECREATE_REVERB=1 / DEPLOY_RECREATE_CADDY=1 → recreated as before. A kept
+#   service keeps its old image (never pruned while in use). Whether open connections
+#   really survive is to be verified on the first real deploy.
 #
 # SERVER (D18, 2026-10-14)
 #   The server's identity comes from /opt/petprep/.env, not from this script (production =
@@ -189,9 +196,9 @@ PROD_IP_HOST="138.199.172.97"
 HEALTH_HOST=""          # set by the env preflight (SERVER above)
 HEALTH_IP_HOST=""
 APP_SERVICES=(app reverb queue queue-broadcasts scheduler caddy)
-APP_SERVICES_NO_REVERB=(app queue queue-broadcasts scheduler caddy)
 WORKER_SERVICES=(reverb queue queue-broadcasts scheduler)
-REVERB_FP_FILE="${PETPREP_ROOT}/releases/reverb.fingerprint"
+BASE_APP_ID=""          # base stage of the new app image (step 3; D19 fingerprints)
+BASE_WEB_ID=""          # caddy base image of the new web image
 IMAGES=(petprep-app petprep-web)
 # Compose project = network + volume prefix. Default "backend" = the directory of
 # the compose file (what production has always used); explicit so the build tree
@@ -268,6 +275,9 @@ PREV_IMAGES=()          # images whose old :production was saved as :previous
 MIGRATED=0              # 1 after `migrate --force` succeeded
 CONTAINERS_RECREATED=0  # 1 once `up -d` of the app services was attempted
 CADDY_CHANGED=0         # 1 if the new Caddyfile differs from the running container's
+MIGRATIONS="unknown"    # none | pending | unknown (step 3b, D19)
+KEEP_REVERB=0           # 1 when reverb keeps its container (D19)
+KEEP_CADDY=0            # 1 when caddy keeps its container (D19)
 FAILED_AT=""
 
 trap 'FAILED_AT="line ${LINENO}: ${BASH_COMMAND}"' ERR
@@ -355,21 +365,42 @@ restore_images() {
     return "$rc"
 }
 
-# Hash of everything the reverb process runs on (REVERB above) in TREE + the server env.
-# Prints nothing on any error (→ reverb is recreated).
-reverb_fingerprint() {
-    local tree=$1
+# Inputs per kept-able service (REVERB / CADDY above), relative to the tree root.
+REVERB_INPUTS=(backend/composer.json backend/composer.lock backend/compose.production.yaml
+    backend/config backend/bootstrap backend/app/Providers backend/app/Listeners backend/routes
+    backend/docker/production)
+CADDY_INPUTS=(deployment/Caddyfile backend/public backend/composer.json backend/composer.lock
+    backend/compose.production.yaml backend/docker/production/Dockerfile)
+
+# service_fingerprint SERVICE TREE: sha256 over the service's input files in TREE, the
+# server env (+ the derived Caddy identity) and the base image id of the new build
+# (BASE_IDS, step 3). Returns 1 and prints nothing when the base id is unknown — the
+# caller then recreates the service.
+service_fingerprint() {
+    local svc=$1 tree=$2 base inputs=()
+    case "$svc" in
+        reverb) inputs=("${REVERB_INPUTS[@]}"); base="${BASE_APP_ID}" ;;
+        caddy)  inputs=("${CADDY_INPUTS[@]}");  base="${BASE_WEB_ID}" ;;
+        *) return 1 ;;
+    esac
+    [ -n "$base" ] || return 1
     {
         # find exits 1 for a missing path (e.g. no composer.lock in a test tree): ignored,
         # the listed files are what exists.
         (cd "$tree" || exit 0
-         find backend/composer.json backend/composer.lock backend/compose.production.yaml \
-            backend/config backend/bootstrap backend/app/Providers backend/docker/production \
-            -type f ! -path 'backend/bootstrap/cache/*' 2>/dev/null
+         find "${inputs[@]}" -type f ! -path 'backend/bootstrap/cache/*' 2>/dev/null
          exit 0) | LC_ALL=C sort \
             | while IFS= read -r f; do printf '%s %s\n' "$f" "$(sha256sum < "${tree}/${f}" | cut -d' ' -f1)"; done
-        echo "env $(sha256sum < "$ENV_FILE" | cut -d' ' -f1)"
+        echo "env $(sha256sum < "$ENV_FILE" | cut -d' ' -f1) ${PETPREP_API_DOMAIN:-} ${PETPREP_CADDY_SITES:-}"
+        echo "base ${base}"
     } | sha256sum | cut -d' ' -f1
+}
+
+# keep_service SERVICE FP: 1 when SERVICE may keep its running container.
+keep_service() {
+    local svc=$1 fp=$2 file="${PETPREP_ROOT}/releases/${1}.fingerprint"
+    [ -n "$fp" ] && [ -f "$file" ] && [ "$(cat "$file")" = "$fp" ] \
+        && [ -n "$(dc ps -q --status running "$svc" 2>/dev/null || true)" ]
 }
 
 # PHP-FPM answers its ping (caches built by the entrypoint, pool up).
@@ -438,7 +469,11 @@ on_exit() {
             fi
             # Containers of the Sail runtime bind-mount the code and may have loaded
             # new classes while the new tree was on disk: restart them on the old code.
-            dc restart "${WORKER_SERVICES[@]}" || warn "could not restart workers."
+            # The FPM image bakes the code in: untouched containers still run the old
+            # release, so without maintenance (D19) nothing needs a restart.
+            if [ "$CONTAINERS_RECREATED" = "1" ] || [ "${MIGRATIONS:-unknown}" != "none" ]; then
+                dc restart "${WORKER_SERVICES[@]}" || warn "could not restart workers."
+            fi
             log "Code reverted to ${PREV_SHA:-previous release}."
         fi
     else
@@ -584,6 +619,12 @@ if ! dcn run --rm --no-deps -T app php artisan optimize; then
     echo "ERROR: the new image cannot build its caches with the production env — nothing was changed." >&2
     exit 1
 fi
+# Base image ids for the reverb / caddy fingerprints (D19): the PHP base stage (php:8.3-fpm +
+# extensions — a refreshed upstream image changes it; cache hit after the build above) and
+# the Caddy base image. Unknown → the service is recreated (fail safe), never an error.
+BASE_APP_ID="$(docker buildx build -q --load --target base -f "${BUILD_DIR}/backend/docker/production/Dockerfile" "${BUILD_DIR}/backend" 2>/dev/null | tail -n1)" || BASE_APP_ID=""
+BASE_WEB_ID="$(docker image inspect --format '{{.Id}}' caddy:2.8-alpine 2>/dev/null)" || BASE_WEB_ID=""
+[ -n "$BASE_APP_ID" ] || warn "could not resolve the PHP base image id — reverb will be recreated."
 
 # Storage volume ownership for the non-root runtime (see STORAGE above).
 if docker volume inspect "$STORAGE_VOLUME" > /dev/null 2>&1; then
@@ -616,7 +657,6 @@ fi
 # Asked with the NEW image against the live database, still before anything changed.
 # Laravel 11 `migrate:status --pending=N` exits N when a migration is pending, 0 when
 # none is; any other code (no migrations table, database down) → unknown → maintenance.
-MIGRATIONS="unknown"
 if [ "${DEPLOY_FORCE_MAINTENANCE:-0}" = "1" ]; then
     log "DEPLOY_FORCE_MAINTENANCE=1 — maintenance mode whatever the migrations."
 else
@@ -740,15 +780,12 @@ dc run --rm app php artisan db:seed --class='Database\Seeders\BreedConfigsSeeder
     || warn "BreedConfigsSeeder failed."
 
 # ---- 8. Containers (caches are built per container on start), workers -------------
-# Reverb keeps its container (open WebSockets survive the deploy) when nothing it runs on
-# changed since it was last started by a deploy (REVERB above).
-KEEP_REVERB=0
-REVERB_FP_NEW="$(reverb_fingerprint "$REPO_DIR")" || REVERB_FP_NEW=""
-if [ "${DEPLOY_RECREATE_REVERB:-0}" != "1" ] && [ -n "$REVERB_FP_NEW" ] && [ -f "$REVERB_FP_FILE" ] \
-    && [ "$(cat "$REVERB_FP_FILE")" = "$REVERB_FP_NEW" ] \
-    && [ -n "$(dc ps -q --status running reverb 2>/dev/null || true)" ]; then
-    KEEP_REVERB=1
-fi
+# Reverb and caddy keep their containers when nothing they run on changed since a deploy
+# last (re)created them (REVERB / CADDY above) — the services clients hold connections to.
+REVERB_FP_NEW="$(service_fingerprint reverb "$REPO_DIR")" || REVERB_FP_NEW=""
+CADDY_FP_NEW="$(service_fingerprint caddy "$REPO_DIR")" || CADDY_FP_NEW=""
+if [ "${DEPLOY_RECREATE_REVERB:-0}" != "1" ] && keep_service reverb "$REVERB_FP_NEW"; then KEEP_REVERB=1; fi
+if [ "${DEPLOY_RECREATE_CADDY:-0}" != "1" ] && [ "$CADDY_CHANGED" = "0" ] && keep_service caddy "$CADDY_FP_NEW"; then KEEP_CADDY=1; fi
 CONTAINERS_RECREATED=1
 if [ "$MIGRATIONS" = "none" ]; then
     # No maintenance: workers first, so no OLD worker ever takes a job the NEW app
@@ -757,9 +794,14 @@ if [ "$MIGRATIONS" = "none" ]; then
     log "Recreating queue workers + scheduler on the new image first..."
     dc up -d --no-deps queue queue-broadcasts scheduler
 fi
-if [ "$KEEP_REVERB" = "1" ]; then
-    log "Starting the application services on the new images (reverb unchanged — kept, WebSockets stay open)..."
-    dc up -d --remove-orphans --no-deps "${APP_SERVICES_NO_REVERB[@]}"
+if [ "$KEEP_REVERB" = "1" ] || [ "$KEEP_CADDY" = "1" ]; then
+    up_services=(app queue queue-broadcasts scheduler)
+    kept=()
+    if [ "$KEEP_REVERB" = "1" ]; then kept+=(reverb); else up_services+=(reverb); fi
+    if [ "$KEEP_CADDY" = "1" ]; then kept+=(caddy); else up_services+=(caddy); fi
+    log "Starting the application services on the new images (unchanged, not restarted: ${kept[*]})..."
+    # --no-deps: caddy depends on app + reverb, compose would otherwise recreate them too.
+    dc up -d --remove-orphans --no-deps "${up_services[@]}"
 else
     log "Starting all application services on the new images..."
     dc up -d --remove-orphans "${APP_SERVICES[@]}"
@@ -803,9 +845,12 @@ if [ "$HTTP_STATUS" != "200" ]; then
     exit 1
 fi
 
-# Reverb now runs on this release's inputs (it was recreated) — remember them.
+# A recreated reverb / caddy now runs on this release's inputs — remember them.
 if [ "$KEEP_REVERB" = "0" ] && [ -n "$REVERB_FP_NEW" ]; then
-    echo "$REVERB_FP_NEW" > "$REVERB_FP_FILE" || warn "could not record the reverb fingerprint (next deploy recreates reverb)."
+    echo "$REVERB_FP_NEW" > "${PETPREP_ROOT}/releases/reverb.fingerprint" || warn "could not record the reverb fingerprint (next deploy recreates reverb)."
+fi
+if [ "$KEEP_CADDY" = "0" ] && [ -n "$CADDY_FP_NEW" ]; then
+    echo "$CADDY_FP_NEW" > "${PETPREP_ROOT}/releases/caddy.fingerprint" || warn "could not record the caddy fingerprint (next deploy recreates caddy)."
 fi
 
 # Untagged images of older releases (keeps :production, :previous and the Sail image;

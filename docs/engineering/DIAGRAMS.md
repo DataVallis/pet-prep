@@ -1085,7 +1085,7 @@ flowchart TD
   H -- yes --> HV["caddy validate (new image)"]
   H -- no --> I
   HV --> I["7 postgres/redis · migrate --force"]
-  I --> J["8 up -d app reverb queue queue-broadcasts scheduler caddy<br/>(entrypoint: per-container caches)<br/>no maintenance: queue + queue-broadcasts + scheduler first (D19)<br/>reverb kept (--no-deps) when releases/reverb.fingerprint matches<br/>+ force-recreate caddy if Caddyfile changed"]
+  I --> J["8 up -d app reverb queue queue-broadcasts scheduler caddy<br/>(entrypoint: per-container caches)<br/>no maintenance: queue + queue-broadcasts + scheduler first (D19)<br/>reverb / caddy not restarted (--no-deps) when releases/{reverb,caddy}.fingerprint matches<br/>caddy lb_try_duration 10s holds requests during the app swap<br/>+ force-recreate caddy if Caddyfile changed"]
   J --> K["re-chown storage (warn-only) · wait: php-fpm-ping"] --> L["queue:restart"] --> M2["9 artisan up (3×; one idempotent up without maintenance)"] --> N["health /up through Caddy (5×)<br/>--resolve API domain:443 → IP site fallback (production only)"]
   N --> O["image prune (dangling) · builder prune (> 7 days, keep 5 GB)"]
   G & HV & I -- "fails (pre-migration)" --> R1["revert code + images (:previous→:production)<br/>restart workers · artisan up"]
