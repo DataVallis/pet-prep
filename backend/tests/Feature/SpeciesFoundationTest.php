@@ -467,80 +467,13 @@ describe('GET /api/breeds', function () {
             ->assertJsonPath('breeds.1.breed', 'border_collie')
             ->assertJsonPath('breeds.1.premium', true)
             ->assertJsonPath('breeds.1.challenge_allowed', true)
-            // M5-R10: the Labrador Retriever (paid, sort_order 20).
-            ->assertJsonPath('breeds.2.breed', 'labrador_retriever')
-            // M5-R10-02: the Golden Retriever (paid, sort_order 30).
-            ->assertJsonPath('breeds.3.breed', 'golden_retriever')
-            // M5-R10-03: the French Bulldog (paid, sort_order 40).
-            ->assertJsonPath('breeds.4.breed', 'french_bulldog')
-            // M5-R10-04: the German Shepherd Dog (paid, sort_order 50).
-            ->assertJsonPath('breeds.5.breed', 'german_shepherd')
-            // M5-R10-05: the Cavalier King Charles Spaniel (paid, sort_order 60).
-            ->assertJsonPath('breeds.6.breed', 'cavalier_king_charles_spaniel')
-            // M5-R10-06: the Beagle (paid, sort_order 70).
-            ->assertJsonPath('breeds.7.breed', 'beagle')
-            // M5-R10-07: the Standard Poodle (paid, sort_order 80).
-            ->assertJsonPath('breeds.8.breed', 'standard_poodle')
-            // M5-R10-08: the Dachshund (paid, sort_order 90).
-            ->assertJsonPath('breeds.9.breed', 'dachshund')
-            // M5-R10-09: the Australian Shepherd (paid, sort_order 100).
-            ->assertJsonPath('breeds.10.breed', 'australian_shepherd')
-            // M5-R10-10: the Havanese (paid, sort_order 110).
-            ->assertJsonPath('breeds.11.breed', 'havanese')
-            // M5-R10-11: the West Highland White Terrier (paid, sort_order 120).
-            ->assertJsonPath('breeds.12.breed', 'west_highland_white_terrier')
-            // M5-R10-12: the Bernese Mountain Dog (paid, sort_order 130).
-            ->assertJsonPath('breeds.13.breed', 'bernese_mountain_dog')
-            // M5-R10-13: the Siberian Husky (paid, sort_order 140).
-            ->assertJsonPath('breeds.14.breed', 'siberian_husky')
-            // M5-R10-19: the Rottweiler (paid, sort_order 150).
-            ->assertJsonPath('breeds.15.breed', 'rottweiler')
-            // M5-R10-20: the Bulldog (paid, sort_order 160).
-            ->assertJsonPath('breeds.16.breed', 'bulldog')
-            // M5-R10-21: the German Shorthaired Pointer (paid, sort_order 170).
-            ->assertJsonPath('breeds.17.breed', 'german_shorthaired_pointer')
-            // M5-R10-22: the Yorkshire Terrier (paid, sort_order 180).
-            ->assertJsonPath('breeds.18.breed', 'yorkshire_terrier')
-            // M5-R10-23: the Cane Corso (paid, sort_order 190).
-            ->assertJsonPath('breeds.19.breed', 'cane_corso')
-            // M5-R10-24: the Pembroke Welsh Corgi (paid, sort_order 200).
-            ->assertJsonPath('breeds.20.breed', 'pembroke_welsh_corgi')
-            // M5-R10-25: the Dobermann (paid, sort_order 210).
-            ->assertJsonPath('breeds.21.breed', 'dobermann')
-            // M5-R10-26: the Boxer (paid, sort_order 220).
-            ->assertJsonPath('breeds.22.breed', 'boxer')
-            // M5-R10-27: the Miniature Schnauzer (paid, sort_order 230).
-            ->assertJsonPath('breeds.23.breed', 'miniature_schnauzer')
-            // M5-R10-28: the Shih Tzu (paid, sort_order 240).
-            ->assertJsonPath('breeds.24.breed', 'shih_tzu')
-            // M5-R10-29: the Great Dane (paid, sort_order 250).
-            ->assertJsonPath('breeds.25.breed', 'great_dane')
-            // M5-R10-30: the Pomeranian (paid, sort_order 260).
-            ->assertJsonPath('breeds.26.breed', 'pomeranian')
-            // M5-R10-31: the Boston Terrier (paid, sort_order 270).
-            ->assertJsonPath('breeds.27.breed', 'boston_terrier')
-            // M5-R10-32: the Miniature American Shepherd (paid, sort_order 280).
-            ->assertJsonPath('breeds.28.breed', 'miniature_american_shepherd')
-            // M5-R10-33: the Chihuahua (paid, sort_order 290).
-            ->assertJsonPath('breeds.29.breed', 'chihuahua')
-            // M5-R10-34: the English Springer Spaniel (paid, sort_order 300).
-            ->assertJsonPath('breeds.30.breed', 'english_springer_spaniel')
-            // M5-R10-35: the Shetland Sheepdog (paid, sort_order 310).
-            ->assertJsonPath('breeds.31.breed', 'shetland_sheepdog')
-            // M5-R10-36: the Brittany (paid, sort_order 320).
-            ->assertJsonPath('breeds.32.breed', 'brittany')
-            // M5-R10-37: the American Cocker Spaniel (paid, sort_order 330).
-            ->assertJsonPath('breeds.33.breed', 'american_cocker_spaniel')
-            // M5-R10-38: the Belgian Malinois (paid, sort_order 340).
-            ->assertJsonPath('breeds.34.breed', 'belgian_malinois')
-            // M5-R10-39: the Basset Hound (paid, sort_order 350).
-            ->assertJsonPath('breeds.35.breed', 'basset_hound')
-            // M5-R10-40: the Hungarian Vizsla (paid, sort_order 360).
-            ->assertJsonPath('breeds.36.breed', 'hungarian_vizsla')
-            ->assertJsonCount(37, 'breeds');
+            // Every seeded dog breed, in sort_order (read from BreedConfigsSeeder —
+            // each breed's own test checks its position and payload).
+            ->assertJsonPath('breeds.*.breed', seededCatalogueOrder([Species::Dog]))
+            ->assertJsonCount(count(BreedType::forSpecies(Species::Dog)), 'breeds');
 
         // Flag off: the cat feature alone changes nothing.
-        spCatalogue($parent, ['features' => ['species_cat']])->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(37, 'breeds');
+        spCatalogue($parent, ['features' => ['species_cat']])->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(count(BreedType::forSpecies(Species::Dog)), 'breeds');
         spCatalogue($parent, ['species' => 'cat', 'features' => ['species_cat']])->assertOk()->assertJsonCount(0, 'breeds');
     });
 
@@ -548,14 +481,14 @@ describe('GET /api/breeds', function () {
         spCatsOn();
         $parent = User::factory()->parent()->create();
 
-        spCatalogue($parent)->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(37, 'breeds');
+        spCatalogue($parent)->assertOk()->assertJsonPath('species', ['dog'])->assertJsonCount(count(BreedType::forSpecies(Species::Dog)), 'breeds');
 
         $all = spCatalogue($parent, ['features' => ['species_cat', 'unknown_future']])->assertOk()
             ->assertJsonPath('species', ['dog', 'cat']);
-        expect(array_column($all->json('breeds'), 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla', 'domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal']);
+        expect(array_column($all->json('breeds'), 'breed'))->toBe(seededCatalogueOrder([Species::Dog, Species::Cat]));
 
         $cats = spCatalogue($parent, ['species' => 'cat', 'features' => ['species_cat']])->assertOk();
-        expect(array_column($cats->json('breeds'), 'breed'))->toBe(['domestic_cat', 'maine_coon', 'british_shorthair', 'ragdoll', 'siberian_cat', 'norwegian_forest_cat', 'bengal'])
+        expect(array_column($cats->json('breeds'), 'breed'))->toBe(seededCatalogueOrder([Species::Cat]))
             ->and($cats->json('breeds.1'))->toMatchArray(['premium' => true, 'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.maine_coon', 'search_keywords' => ['maine coon', 'mejnkun', 'mainska']]);
     });
 
@@ -568,7 +501,7 @@ describe('GET /api/breeds', function () {
 
         $breeds = spCatalogue($parent, ['species' => 'dog'])->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla'])
+        expect(array_column($breeds, 'breed'))->toBe(seededCatalogueOrder([Species::Dog]))
             ->and($breeds[0]['sort_order'])->toBe(50)
             ->and($breeds[1]['label_key'])->toBe('breeds.collie')
             ->and($breeds[1]['search_keywords'])->toBe(['bc']);

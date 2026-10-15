@@ -170,7 +170,7 @@ describe('breed, config and database', function () {
         $others = collect(BreedStageParamsSeeder::rows())->where('breed_slug', '!=', 'english-springer-spaniel');
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'english-springer-spaniel');
 
-        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese', 'west-highland-white-terrier', 'bernese-mountain-dog', 'siberian-husky', 'rottweiler', 'bulldog', 'german-shorthaired-pointer', 'yorkshire-terrier', 'cane-corso', 'pembroke-welsh-corgi', 'dobermann', 'boxer', 'miniature-schnauzer', 'shih-tzu', 'great-dane', 'pomeranian', 'boston-terrier', 'miniature-american-shepherd', 'chihuahua', 'shetland-sheepdog', 'brittany', 'american-cocker-spaniel', 'belgian-malinois', 'basset-hound', 'hungarian-vizsla'])
+        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(breedSlugsOf(Species::Dog, 'english-springer-spaniel'))
             ->and($others->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_ENGLISH_SPRINGER_SPANIEL)->all())->toBe([]);
         // Every other R10 decision constant, found by reflection, is absent from the English Springer Spaniel's rows.
         $constants = collect((new ReflectionClass(BreedStageParamsSeeder::class))->getConstants())
@@ -400,16 +400,17 @@ describe('GET /api/breeds', function () {
 
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla'])
-            ->and(collect($breeds[30])->except('colours')->all())->toBe([
-                'breed' => 'english_springer_spaniel', 'slug' => 'english-springer-spaniel', 'species' => 'dog', 'premium' => true,
-                'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.english_springer_spaniel',
-                'search_keywords' => BreedConfigsSeeder::configs()[30]['search_keywords'], 'sort_order' => 300,
-                'suitability' => [
-                    'suits' => ['active_family', 'family_pet', 'children', 'other_pets'],
-                    'consider' => ['long_daily_exercise', 'needs_company', 'sheds', 'frequent_grooming'],
-                ],
-            ]);
+        $i = expectListedAfter($breeds, 'english_springer_spaniel', 'chihuahua');
+
+        expect(collect($breeds[$i])->except('colours')->all())->toBe([
+            'breed' => 'english_springer_spaniel', 'slug' => 'english-springer-spaniel', 'species' => 'dog', 'premium' => true,
+            'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.english_springer_spaniel',
+            'search_keywords' => seededBreedConfig('english_springer_spaniel')['search_keywords'], 'sort_order' => 300,
+            'suitability' => [
+                'suits' => ['active_family', 'family_pet', 'children', 'other_pets'],
+                'consider' => ['long_daily_exercise', 'needs_company', 'sheds', 'frequent_grooming'],
+            ],
+        ]);
     });
 });
 

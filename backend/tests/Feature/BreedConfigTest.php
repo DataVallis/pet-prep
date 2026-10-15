@@ -1,5 +1,7 @@
 <?php
 
+use App\Enums\BreedType;
+use App\Enums\Species;
 use App\Filament\Resources\BreedConfigResource\Pages\CreateBreedConfig;
 use App\Filament\Resources\BreedConfigResource\Pages\EditBreedConfig;
 use App\Filament\Resources\BreedConfigResource\Pages\ListBreedConfigs;
@@ -55,6 +57,27 @@ describe('BreedConfigsSeeder', function () {
             $collie->daily_steps_required, $collie->hunger_decay_rate, $collie->thirst_decay_rate, $collie->poops_per_day,
             $collie->feed_windows, $collie->water_times_per_day, $collie->water_min_gap_minutes, $collie->premium_unlock,
         ])->toBe([10000, 12.0, 15.0, 2, [['06:00', '10:00'], ['17:00', '21:00']], 3, 180, true]);
+    });
+
+    it('has exactly one row per enum breed, one free breed per species and a unique sort_order per species (every breed, read from code)', function () {
+        $configs = collect(BreedConfigsSeeder::configs());
+
+        // Every breed the app knows is seeded, nothing else: a new breed run is covered automatically.
+        expect($configs->pluck('breed_slug')->sort()->values()->all())
+            ->toBe(collect(BreedType::cases())->map(fn (BreedType $b) => $b->slug())->sort()->values()->all());
+
+        foreach (Species::cases() as $species) {
+            $rows = $configs->filter(fn (array $c) => BreedType::fromSlug($c['breed_slug'])?->species() === $species);
+            $sorts = $rows->pluck('sort_order')->all();
+
+            expect($rows->where('premium_unlock', false)->count())->toBe(1, "{$species->value}: exactly one free breed")
+                ->and(array_unique($sorts))->toBe($sorts, "{$species->value}: sort_order is unique")
+                // The catalogue order is the enum order (new breeds append with a higher sort_order).
+                ->and(seededCatalogueOrder([$species]))->toBe(array_map(fn (BreedType $b) => $b->value, BreedType::forSpecies($species)));
+            foreach ($rows as $row) {
+                expect(BreedType::fromSlug($row['breed_slug'])->defaultPremium())->toBe((bool) $row['premium_unlock'], $row['breed_slug']);
+            }
+        }
     });
 
     it('is insert-only: never overwrites an existing breed, only adds missing ones', function () {

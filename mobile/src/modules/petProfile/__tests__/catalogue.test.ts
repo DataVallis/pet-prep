@@ -24,6 +24,10 @@ import {
   SUITS_TAGS,
   type BreedCatalogue,
 } from '@/modules/petProfile/picker';
+import { BREED_SPECIES, KNOWN_BREEDS } from '@/modules/species/species';
+
+/** Every dog breed of this build in catalogue order (from BREED_SPECIES — never typed out, David 2026-10-15). */
+const ALL_DOGS = KNOWN_BREEDS.filter((b) => BREED_SPECIES[b] === 'dog');
 
 function entry(breed: string, species: string, premium: boolean, sort_order = 0, keywords: string[] = []) {
   return {
@@ -114,45 +118,7 @@ describe('readBreedCatalogue', () => {
 
   it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90; M5-R10-09: + Australian Shepherd, sort 100; M5-R10-10: + Havanese, sort 110; M5-R10-11: + West Highland White Terrier, sort 120; M5-R10-12: + Bernese Mountain Dog, sort 130; M5-R10-13: + Siberian Husky, sort 140; M5-R10-19: + Rottweiler, sort 150; M5-R10-20: + Bulldog, sort 160; M5-R10-21: + German Shorthaired Pointer, sort 170; M5-R10-22: + Yorkshire Terrier, sort 180; M5-R10-23: + Cane Corso, sort 190; M5-R10-24: + Pembroke Welsh Corgi, sort 200; M5-R10-25: + Dobermann, sort 210; M5-R10-26: + Boxer, sort 220; M5-R10-27: + Miniature Schnauzer, sort 230; M5-R10-28: + Shih Tzu, sort 240), never a cat', () => {
     expect(FALLBACK_CATALOGUE.species).toEqual(['dog']);
-    expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual([
-      'mutt',
-      'border_collie',
-      'labrador_retriever',
-      'golden_retriever',
-      'french_bulldog',
-      'german_shepherd',
-      'cavalier_king_charles_spaniel',
-      'beagle',
-      'standard_poodle',
-      'dachshund',
-      'australian_shepherd',
-      'havanese',
-      'west_highland_white_terrier',
-      'bernese_mountain_dog',
-      'siberian_husky',
-      'rottweiler',
-      'bulldog',
-      'german_shorthaired_pointer',
-      'yorkshire_terrier',
-      'cane_corso',
-      'pembroke_welsh_corgi',
-      'dobermann',
-      'boxer',
-      'miniature_schnauzer',
-      'shih_tzu',
-      'great_dane',
-      'pomeranian',
-      'boston_terrier',
-      'miniature_american_shepherd',
-      'chihuahua',
-      'english_springer_spaniel',
-      'shetland_sheepdog',
-      'brittany',
-      'american_cocker_spaniel',
-      'belgian_malinois',
-      'basset_hound',
-      'hungarian_vizsla',
-    ]);
+    expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual(ALL_DOGS);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
     expect(lab).toEqual(
@@ -457,45 +423,7 @@ describe('readBreedCatalogue', () => {
     });
     expect(FALLBACK_CATALOGUE.breeds[0].suitability).toEqual({ suits: [], consider: [] });
     // The fallback is already in picker order.
-    expect(readBreedCatalogue(FALLBACK_CATALOGUE)?.breeds.map((b) => b.breed)).toEqual([
-      'mutt',
-      'border_collie',
-      'labrador_retriever',
-      'golden_retriever',
-      'french_bulldog',
-      'german_shepherd',
-      'cavalier_king_charles_spaniel',
-      'beagle',
-      'standard_poodle',
-      'dachshund',
-      'australian_shepherd',
-      'havanese',
-      'west_highland_white_terrier',
-      'bernese_mountain_dog',
-      'siberian_husky',
-      'rottweiler',
-      'bulldog',
-      'german_shorthaired_pointer',
-      'yorkshire_terrier',
-      'cane_corso',
-      'pembroke_welsh_corgi',
-      'dobermann',
-      'boxer',
-      'miniature_schnauzer',
-      'shih_tzu',
-      'great_dane',
-      'pomeranian',
-      'boston_terrier',
-      'miniature_american_shepherd',
-      'chihuahua',
-      'english_springer_spaniel',
-      'shetland_sheepdog',
-      'brittany',
-      'american_cocker_spaniel',
-      'belgian_malinois',
-      'basset_hound',
-      'hungarian_vizsla',
-    ]);
+    expect(readBreedCatalogue(FALLBACK_CATALOGUE)?.breeds.map((b) => b.breed)).toEqual(ALL_DOGS);
   });
 });
 

@@ -67,6 +67,7 @@ Documentation is written **while** building, not afterwards. From it we will lat
 4. `docs/journey/BUILD_LOG.md` — dated story entry for every notable change (what · why it matters · how to tell it per audience), with real numbers.
 5. `docs/product/FEATURES.md` — **feature catalogue (David, 2026-10-07): what the product can do today**, per area, with status (✅ in the app · 📱 verified on a phone · 🛠 backend only · 🗓 planned · ⏸ post-MVP), free/paid, roadmap ID and date. It is the source for the website, store listings and audience material, so it must never lag behind: every PR that adds, changes or removes something a parent, child or admin can see updates its row; when David confirms a feature on a device, change it to 📱 with date and build. Facts only — nothing planned may read as available.
 6. `HANDOFF.md` + `ROADMAP.md` as before.
+Exception: unattended breed runs document only in `docs/breeds/<slug>.md` (ADD_BREED_RUNBOOK.md) and never edit the shared docs above (David 2026-10-15).
 Keep the claude.ai Project copies (`petprep/*.md`) in sync after merges. No child personal data in any doc.
 
 ## Engineering rules

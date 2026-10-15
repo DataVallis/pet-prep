@@ -285,6 +285,9 @@ Older queue (still valid where not done):
 
 ## 6. Session log
 
+### 2026-10-15 — breed runs in their own files (`chore/breed-runs-own-files`)
+- Breed runs (night only) now write only their code/data/tests, `docs/breeds/<en-slug>.md`, the queue row and generated files; shared tests read breed lists from code; registry i18n hashes cover only used strings; runbook rewritten. Debt: per-breed blocks still appended in shared mobile tests and `BreedSuitabilityTest` (runbook says: own file from now on); no per-breed docs written for the existing 42 breeds (history stays in the shared docs).
+
 ### 2026-10-15 (cloud, unattended scheduled run) — M5-R10-40 Hungarian Vizsla (branch `feat/M5-R10-40-hungarian-vizsla`, PR #255)
 - Lock clear; no `todo` row → appended row 40 Hungarian Vizsla (AKC 2024 No. 35 "Vizsla", S174 as recorded on 2026-10-15) as `in-progress` with draft PR #255 before research. App release in the website registry matched the export (no §9b sync). Basset Hound portrait still pending (last production deploy `f50ef12` predates its merge `2daae2f`).
 - Research S326–S334 (FCI nomenclature + standard 57, RKC breed page (older address, Breed Watch Category 1), PDSA, PetMD, AKC standard, AKC article, Dogs Trust Ireland, Wikipedia tier C); McMillan 2024 / Dogs Trust table refused by the fetch tool (provenance) → senior 108 from the RKC lower bound. Breeder checklist: hip / elbow screening (RKC, Assured Breeders requirement) as `other_scheme`.
