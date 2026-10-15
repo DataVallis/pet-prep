@@ -277,6 +277,7 @@ describe('PetPickerStep', () => {
       'breed-option-american_cocker_spaniel',
       'breed-option-belgian_malinois',
       'breed-option-basset_hound',
+      'breed-option-hungarian_vizsla',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -911,6 +912,63 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/\d|%/);
       expect(consider).not.toHaveTextContent(/\d|%/);
       expect(screen.getByTestId('breed-option-american_cocker_spaniel')).toHaveTextContent(/American Cocker Spaniel/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-40: the Hungarian Vizsla (fallback) shows its chips, is found as "vižla" and "vizsla", and quotes 12.000 / 9.000 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const hv = screen.getByTestId('breed-option-hungarian_vizsla');
+    expect(hv).toHaveTextContent(/Madžarski kratkodlaki ptičar/);
+    expect(hv).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(hv).toHaveTextContent(/česanje 1× na teden/);
+    const suits = screen.getByTestId('breed-suitability-hungarian_vizsla-suits');
+    expect(suits).toHaveTextContent(/aktivno družino/);
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/veliko hišo z vrtom/);
+    expect(suits).not.toHaveTextContent(/družino z otroki/);
+    const consider = screen.getByTestId('breed-suitability-hungarian_vizsla-consider');
+    expect(consider).toHaveTextContent(/veliko gibanja/);
+    expect(consider).toHaveTextContent(/izkušenega lastnika/);
+    expect(consider).toHaveTextContent(/ni za dom z majhnimi otroki/);
+    expect(consider).toHaveTextContent(/rad ima družbo/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+    expect(consider).toHaveTextContent(/lovski nagon/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'vižla');
+    expect(screen.getByTestId('breed-option-hungarian_vizsla')).toBeTruthy();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'vizsla');
+    expect(screen.getByTestId('breed-option-hungarian_vizsla')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-hungarian_vizsla'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 12\.000 pri 12 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/12\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/9\.000 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'hungarian_vizsla', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'hungarian_vizsla' }),
+    );
+  });
+
+  it('M5-R10-40: the Hungarian Vizsla chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-hungarian_vizsla-suits');
+      const consider = screen.getByTestId('breed-suitability-hungarian_vizsla-consider');
+      expect(suits).toHaveTextContent(/an active family/);
+      expect(suits).toHaveTextContent(/family life/);
+      expect(suits).toHaveTextContent(/a large house and garden/);
+      expect(consider).toHaveTextContent(/needs an experienced owner/);
+      expect(consider).toHaveTextContent(/not for homes with small children/);
+      expect(consider).toHaveTextContent(/may chase small pets/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-hungarian_vizsla')).toHaveTextContent(/Hungarian Vizsla/);
     } finally {
       await i18n.changeLanguage('sl');
     }

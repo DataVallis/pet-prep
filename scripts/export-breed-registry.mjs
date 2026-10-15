@@ -410,6 +410,7 @@ const SPECIES = [
       { id: 'american_cocker_spaniel', synonyms: { en: ['American Cocker', 'Cocker Spaniel (USA)'], sl: ['ameriški koker', 'ameriski koker spanjel'] } },
       { id: 'belgian_malinois', synonyms: { en: ['Malinois', 'Belgian Shepherd Dog (Malinois)', 'Mal'], sl: ['malinois', 'belgijski ovcar malinois'] } },
       { id: 'basset_hound', synonyms: { en: ['Basset', 'Basset Hound dog'], sl: ['basset hound', 'baset hound', 'basset'] } },
+      { id: 'hungarian_vizsla', synonyms: { en: ['Vizsla', 'Magyar Vizsla', 'Hungarian Pointer', 'Hungarian Short-haired Pointer'], sl: ['vižla', 'madžarska vižla', 'madžarski ptičar'] } },
     ],
   },
   {
@@ -434,7 +435,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -1174,6 +1175,33 @@ const DOG_FACTS = {
       ['weight_gain', 'health.weight'],
     ],
   },
+  // M5-R10-40. Not exported: height.pdsa (one band, alternative), adult_weight.petmd (alternative),
+  // adult_weight.salt_category (our assignment), lifespan.pdsa (same band as the RKC), lifespan.petmd (alternative),
+  // lifespan.mcmillan_2024 (Wikipedia, tier C), lifespan.senior_from (derived), health.pra (a PetMD heading only),
+  // suitability.rkc_breed_watch (Category 1 — nothing to show). Weight = PDSA (S329, one range for both sexes; the
+  // FCI and AKC standards give no weight); height = FCI 57 (S327) and the AKC standard (S331); lifespan = the RKC
+  // band "Over 12 years" (S328). New health keys: entropion (inward only — eyelids_turned also names outward),
+  // autoimmune_conditions, ear_infections_prone (PetMD gives no cause — not the long-ears key).
+  hungarian_vizsla: {
+    height: ['height.fci', 'height.akc'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['entropion', 'health.entropion'],
+      ['epilepsy', 'health.epilepsy'],
+      ['autoimmune_conditions', 'health.autoimmune'],
+      ['certain_cancers', 'health.cancers'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+      ['bloat_gdv', 'health.bloat'],
+      ['ear_infections_prone', 'health.ears'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1463,6 +1491,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.basset_hound.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.basset_hound.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.basset_hound.exercise_minutes_senior',
+  },
+  hungarian_vizsla: {
+    adult_minutes: ['proposed_game_parameters.hungarian_vizsla.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.hungarian_vizsla.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.hungarian_vizsla.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.hungarian_vizsla.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.hungarian_vizsla.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.hungarian_vizsla.exercise_minutes_senior',
   },
 };
 

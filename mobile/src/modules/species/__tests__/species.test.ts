@@ -144,6 +144,19 @@ describe('readBreed / readSpecies', () => {
     }
   });
 
+  it('M5-R10-40: the Hungarian Vizsla is a paid, brushed dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('hungarian_vizsla'))).toBe('dog');
+    expect(isDefaultFreeBreed('hungarian_vizsla')).toBe(false);
+    expect(hasGroomingRoutine('hungarian_vizsla')).toBe(true);
+    expect(breedName('hungarian_vizsla')).toBe('Madžarski kratkodlaki ptičar');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('hungarian_vizsla')).toBe('Hungarian Vizsla');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
   it('M5-R10-39: the Basset Hound is a paid, brushed dog with its own name', async () => {
     expect(readSpecies(undefined, readBreed('basset_hound'))).toBe('dog');
     expect(isDefaultFreeBreed('basset_hound')).toBe(false);

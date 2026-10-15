@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "20edc951457b91cf8d89cea9d73509cbda41fe5dce100aa538e29bff3ff202d9"
+      "sha256": "e21facb7ea01735ad0e930c114815027ff199acf11ac226a0f4deb2e506c1ea0"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "2908fced1c96563031375c4cc55550b156624842e215a8a869654acd86f7166d"
+      "sha256": "73ed6fcb5b26c74a49b846bde07f068fbb122bcdf2db4703f9fefe4974217d6f"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,27 +25,27 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "2cd2ce7c530310d8880df891d58dffe317caaba087ab11710a024ab9ae80d2ca"
+      "sha256": "8d794ce7cb6730920658f49c7a7801e18464e18b4263c4fdd2b6b6d3d0c1db47"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "27db46fa97cc0894db28cdb7c4e7f143e3c61cdba84cd37fde19bfc7318ea4bd"
+      "sha256": "105f9b62a8da17ca4e9190481165e52c1e271e5fd30d00cf81e36860ea572b2a"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "66ece505322456e8d9388bca1ec5ba31c995e9938de605c3b557502c21dd3479"
+      "sha256": "7e72bcfe41d8b56752dc9c8dc4d9f6c22ce6664020f4cc5aebc2f02081af9b35"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "b07cc001d350408e006d1ddf8bf8e63691053f7a564892750b26e439fecd74a0"
+      "sha256": "0bcf74ef30d792e7fc49ad4c15d049e13054d6422a883ab2af0e2bc1924795f9"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "93111c5b1ddee4511a312e88aae74718480b8dc1f9d094168d7cbd7bd4187b68"
+      "sha256": "eba188ccf0dca9cf7a2003552ce598689b745cebd6ad49ffa7177b62582a3d28"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "82cb0700d2875e7bba87a918e4e1dd1d6dbbf729190c09364bfc3f8f4f15f791"
+      "sha256": "7340208419f72eeeef9d0a8deb8d7e5bcdc399fcd87812c89af8608899809782"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -196,7 +196,7 @@
         }
       },
       "status": "available",
-      "breed_count": 35,
+      "breed_count": 36,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -21182,6 +21182,639 @@
       ]
     },
     {
+      "id": "hungarian_vizsla",
+      "species": "dog",
+      "order": 35,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Hungarian Vizsla",
+        "sl": "Madžarski kratkodlaki ptičar"
+      },
+      "slug": {
+        "en": "hungarian-vizsla",
+        "sl": "madzarski-kratkodlaki-pticar"
+      },
+      "synonyms": {
+        "en": [
+          "Vizsla",
+          "Magyar Vizsla",
+          "Hungarian Pointer",
+          "Hungarian Short-haired Pointer"
+        ],
+        "sl": [
+          "vižla",
+          "madžarska vižla",
+          "madžarski ptičar"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S328"
+          ],
+          "ref": "hungarian_vizsla.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              58,
+              64
+            ],
+            "female": [
+              54,
+              60
+            ]
+          },
+          "source_ids": [
+            "S327"
+          ],
+          "ref": "hungarian_vizsla.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              55.9,
+              61
+            ],
+            "female": [
+              53.3,
+              58.4
+            ]
+          },
+          "source_ids": [
+            "S331"
+          ],
+          "ref": "hungarian_vizsla.height.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              20,
+              30
+            ],
+            "female": [
+              20,
+              30
+            ]
+          },
+          "source_ids": [
+            "S329"
+          ],
+          "ref": "hungarian_vizsla.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "hungarian_vizsla.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S328"
+          ],
+          "ref": "hungarian_vizsla.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S328"
+          ],
+          "ref": "hungarian_vizsla.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S328"
+          ],
+          "ref": "hungarian_vizsla.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S328"
+          ],
+          "ref": "hungarian_vizsla.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S328"
+          ],
+          "ref": "hungarian_vizsla.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 25,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "hungarian_vizsla.trainability.coren_rank",
+          "confidence": "low"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 57,
+            "group": 7,
+            "section": 1,
+            "origin": "HU"
+          },
+          "source_ids": [
+            "S326"
+          ],
+          "ref": "hungarian_vizsla.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 3,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 5
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia_arthritis",
+          "source_ids": [
+            "S329"
+          ],
+          "ref": "hungarian_vizsla.health.hip_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "entropion",
+          "source_ids": [
+            "S329"
+          ],
+          "ref": "hungarian_vizsla.health.entropion",
+          "confidence": "medium"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S329"
+          ],
+          "ref": "hungarian_vizsla.health.epilepsy",
+          "confidence": "medium"
+        },
+        {
+          "key": "autoimmune_conditions",
+          "source_ids": [
+            "S328"
+          ],
+          "ref": "hungarian_vizsla.health.autoimmune",
+          "confidence": "medium"
+        },
+        {
+          "key": "certain_cancers",
+          "source_ids": [
+            "S328"
+          ],
+          "ref": "hungarian_vizsla.health.cancers",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S330"
+          ],
+          "ref": "hungarian_vizsla.health.hypothyroidism",
+          "confidence": "medium"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S330"
+          ],
+          "ref": "hungarian_vizsla.health.bloat",
+          "confidence": "medium"
+        },
+        {
+          "key": "ear_infections_prone",
+          "source_ids": [
+            "S330"
+          ],
+          "ref": "hungarian_vizsla.health.ears",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S328",
+              "S329"
+            ],
+            "refs": [
+              "hungarian_vizsla.exercise.adult",
+              "hungarian_vizsla.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S330"
+            ],
+            "refs": [
+              "hungarian_vizsla.suitability.petmd_family",
+              "hungarian_vizsla.behaviour.family"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S328"
+            ],
+            "refs": [
+              "hungarian_vizsla.suitability.rkc_size_of_home",
+              "hungarian_vizsla.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S328",
+              "S329"
+            ],
+            "refs": [
+              "hungarian_vizsla.exercise.adult",
+              "hungarian_vizsla.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S329"
+            ],
+            "refs": [
+              "hungarian_vizsla.behaviour.experienced_owner",
+              "hungarian_vizsla.suitability.pdsa_experienced_owner"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S329",
+              "S330"
+            ],
+            "refs": [
+              "hungarian_vizsla.suitability.pdsa_children",
+              "hungarian_vizsla.suitability.petmd_small_children"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S329"
+            ],
+            "refs": [
+              "hungarian_vizsla.behaviour.time_alone",
+              "hungarian_vizsla.suitability.pdsa_company"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S328",
+              "S333"
+            ],
+            "refs": [
+              "hungarian_vizsla.suitability.rkc_shedding",
+              "hungarian_vizsla.suitability.dt_shedding"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S329"
+            ],
+            "refs": [
+              "hungarian_vizsla.behaviour.other_pets",
+              "hungarian_vizsla.suitability.pdsa_prey_drive"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.hungarian_vizsla.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S328"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S328 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.hungarian_vizsla.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.hungarian_vizsla.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S328"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S328)"
+          },
+          {
+            "ref": "proposed_game_parameters.hungarian_vizsla.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 25, Excellent tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.hungarian_vizsla.grooming",
+            "basis_source_ids": [
+              "S328"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week« → 1; PDSA in PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S328"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "hip_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "S328"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "S328"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S328"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S326",
+        "S327",
+        "S328",
+        "S329",
+        "S330",
+        "S331",
+        "S333",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -24953,6 +25586,55 @@
       "publisher": "American Kennel Club",
       "title": "Is the Basset Hound the Right Dog Breed for You?",
       "url": "https://www.akc.org/expert-advice/dog-breeds/basset-hound-right-for-you/"
+    },
+    {
+      "id": "S326",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Rövidszörü Magyar Vizsla (57) — FCI breeds nomenclature",
+      "url": "https://www.fci.be/en/nomenclature/HUNGARIAN-POINTING-DOG-57.html"
+    },
+    {
+      "id": "S327",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 57 — Hungarian Short-haired Pointer (Vizsla) (English PDF)",
+      "url": "https://fci.be/Nomenclature/Standards/057g07-en.pdf"
+    },
+    {
+      "id": "S328",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Hungarian Vizsla — breed page (older address)",
+      "url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=2038"
+    },
+    {
+      "id": "S329",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Hungarian Vizsla breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/hungarian-vizsla"
+    },
+    {
+      "id": "S330",
+      "tier": "B",
+      "publisher": "PetMD",
+      "title": "Vizsla Dog Breed Health and Care",
+      "url": "https://www.petmd.com/dog/breeds/vizsla"
+    },
+    {
+      "id": "S331",
+      "tier": "A",
+      "publisher": "American Kennel Club",
+      "title": "Official Standard for the Vizsla (PDF, approved 2009-01-13)",
+      "url": "https://images.akc.org/pdf/breeds/standards/Vizsla.pdf"
+    },
+    {
+      "id": "S333",
+      "tier": "B",
+      "publisher": "Dogs Trust (Ireland)",
+      "title": "Hungarian Vizsla — breed guide",
+      "url": "https://dogstrust.ie/dog-advice/getting-dog/breeds/hungarian-vizsla"
     },
     {
       "id": "C1",

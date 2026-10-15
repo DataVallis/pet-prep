@@ -367,6 +367,15 @@
 | eyelids, little loose skin (dog trait `skin`) and adequate ground clearance. Colour weights are
 | unsourced → `verified => false`; tricolour weighted highest (the register portrait).
 |
+| Hungarian Vizsla (M5-R10-40, docs/research/dog-data hungarian_vizsla.appearance): "Medium sized,
+| elegant gun dog of noble appearance with short russet gold coat." (FCI 57, S327); short, dense, hard
+| coat without undercoat; broad nose, self-coloured (AKC S331 — never black); slightly oval brown eyes;
+| ears set at medium height hanging close to the cheeks; tail to the hock where docking is prohibited
+| (the game shows the natural tail). Colours (FCI): "Various shades of russet gold and dark sandy gold
+| (semmelgelb)." — never dark brown, pale yellow, parti-colour or white feet. Not a welfare breed (RKC
+| Breed Watch Category 1). New dog trait `nose` (the self-coloured nose sets the breed apart). Colour
+| weights are unsourced → `verified => false`; russet gold weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1795,6 +1804,40 @@ return [
             'skin' => ['supple skin with only a little wrinkle at the brow and beside the eyes, no heavy folds'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'skin'],
+    ],
+
+    // M5-R10-40 (docs/research/dog-data/data.json hungarian_vizsla.appearance; runbook rules
+    // 2026-10-10: standard colours only — never brown, pale yellow or parti-coloured; natural tail).
+    'hungarian_vizsla' => [
+        'display_name' => 'Hungarian Vizsla',
+        // Colour frequencies are in no source (hungarian_vizsla.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 57 (S327, https://fci.be/Nomenclature/Standards/057g07-en.pdf), AKC standard (S331), RKC breed page (S328) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S328 "Size: Large"; S327 "Dogs: 58 - 64 cm" (medium-sized per the FCI)',
+            'build' => 'S327 "Medium sized, elegant gun dog of noble appearance with short russet gold coat."',
+            'coat_length' => 'S327 "Short and dense, should be coarse and hard at the touch."',
+            'coat_color' => 'S327 "Various shades of russet gold and dark sandy gold (semmelgelb)." (weights unsourced; never dark brown, pale yellow or parti-coloured)',
+            'ear_carriage' => 'S327 "Leathers set on at medium height, a little backwards."',
+            'eye_color' => 'S327 "Slightly oval, of medium size."',
+            'tail' => 'S327 "Set on slightly low, strong at the base, then tapering." — the game shows the natural tail reaching the hock (FCI where docking is prohibited)',
+            'nose' => 'S327 "Well developed and broad with nostrils as wide as possible."; S331 "Nose self-colored. Any other color is faulty."',
+        ],
+        'traits' => [
+            'size' => ['medium-large'],
+            'build' => [['value' => 'elegant, lean and muscular gundog of noble bearing, light and dry build', 'weight' => 3], 'athletic, moderately boned, standing alert'],
+            'coat_length' => ['short, dense, smooth, close-lying coat without undercoat'],
+            // FCI colours only (S327); russet gold highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'russet gold', 'weight' => 3],
+                'dark sandy gold',
+            ],
+            'ear_carriage' => ['thin ears of medium length set at medium height, hanging close to the cheeks with rounded tips'],
+            'eye_color' => ['slightly oval brown eyes in harmony with the coat colour'],
+            'tail' => ['natural, undocked tapering tail reaching the hock'],
+            'nose' => ['broad, self-coloured reddish-brown nose (never black)'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

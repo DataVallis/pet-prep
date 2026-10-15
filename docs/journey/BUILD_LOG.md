@@ -9,6 +9,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-15 — Madžarski kratkodlaki ptičar (vižla): dvaindvajseta pasma po dvajsetih (M5-R10-40)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **madžarskega kratkodlakega ptičarja (vižlo)** (35. mesto). Šestintrideseta plačljiva pasma psa; v izbirniku je za basetom. Odrasla vižla v igri potrebuje **12.000 korakov na dan** (The Royal Kennel Club: več kot 2 uri gibanja; PDSA: najmanj dve uri), starejša od 9 let 9.000; uči se hitreje kot mešanček (Coren: 25. mesto). Česanje enkrat na teden, opozorilo »počakaj s sprehodom« po obroku in socializacija mladička so del izziva od prvega dne.
+
+**Zakaj je pomembno:** Vižla je čudovit, ljubeč pes, ki pa zahteva veliko: dve uri gibanja na dan, družbo skoraj ves dan (PDSA: rada ima ljudi in težko ostaja sama) in izkušenega lastnika. PDSA je ne priporoča za dom z zelo majhnimi otroki in opozarja na močan lovski nagon. Prav takšno pasmo je vredno najprej »preizkusiti« — 12.000 korakov vsak dan 12 tednov pove več kot fotografija.
+
+**Številke:** 9 novih virov (S326–S334), 1 migracija, brez nove oznake, nov izvor FCI (Madžarska), 3 novi ključi zdravja v registru (entropij, avtoimunske bolezni, nagnjenost k vnetju ušes), 3 + 6 oznak v izbirniku, 3 zgrajene potrebe z virom (česanje 1×/teden, premor po obroku, socializacija) in 3 zapisane za kasneje (kremplji, ušesa, zobje — *načrt*). Meja starejšega 108 mesecev je začasna (spodnja meja RKC »več kot 12 let«).
+
+**Kako povedati:**
+- 👩 Starši: »Vižla potrebuje vsak dan okoli dve uri gibanja in skoraj ves dan družbo. V PetPrepu boste videli, ali otrok zmore 12.000 korakov na dan 12 tednov zapored, preden se odločite za pravega psa.«
+- 🧒 Otroci: »Vižla je zlato-rdeč, hiter in pameten pes. Vsak dan gresta na dolg sprehod, po obroku malo počakaš, enkrat na teden ga počešeš — in hitro se uči!«
+- 💼 Investitorji: »Dvaindvajseta pasma, ki jo je sistem sam izbral po javni lestvici AKC — z viri, testi in pregledom, brez ročnega dela.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »Pri vižli PetPrep omenja displazijo kolkov, entropij, epilepsijo, avtoimunske bolezni, nekatere vrste raka, ščitnico, zasuk želodca in vnetja ušes — brez statistik; staršem svetuje, naj vzreditelja vprašajo za slikanje kolkov in komolcev staršev.«
+- 📣 Omrežja: vižlo **lahko objavljamo** (RKC Breed Watch kategorija 1, brez točk o dobrobiti), rdečkasto zlato, z naravnim repom; nikoli kot psa za majhne otroke ali začetnike.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje, opozorilo po obroku in socializacija so samo nove vrstice v `breed_stage_params`; AI videz dobi novo lastnost psa `nose` (nos iste barve kot dlaka); izvoz registra dobi nov izvor FCI `HU`.«
+
+---
+
 ## 2026-10-15 — Baset: enaindvajseta pasma po dvajsetih (M5-R10-39)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **baseta** (34. mesto). Petintrideseta plačljiva pasma psa; v izbirniku je za belgijskim ovčarjem malinois z namigom »česanje 1× na teden«.

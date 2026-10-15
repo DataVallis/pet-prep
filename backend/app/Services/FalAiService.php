@@ -352,6 +352,15 @@ class FalAiService
                 .'adequate ground clearance, rather long tapering tail, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-40: FCI 57 (S327) — russet gold as the anchor (also dark sandy gold); self-coloured
+            // nose (AKC S331), natural tail (FCI where docking is prohibited). Never brown, pale yellow or
+            // parti-coloured.
+            BreedType::HungarianVizsla => 'A medium-sized, elegant, lean and muscular Hungarian Vizsla dog '
+                .'with a short, dense, smooth russet gold coat, a self-coloured reddish-brown nose, '
+                .'slightly oval brown eyes, medium-set ears hanging close to the cheeks, '
+                .'natural undocked tail reaching the hock, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -856,6 +865,17 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'smooth, short, close coat',
                 'markings' => 'white chest, legs and tail tip; long low-set ears',
+            ],
+            // M5-R10-40: FCI S327 / AKC S331 colours — russet gold, golden rust (AKC wording), dark sandy gold; uniform colour.
+            BreedType::HungarianVizsla => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'russet gold',
+                    1 => 'golden rust',
+                    2 => 'dark sandy gold',
+                },
+                'eye_color' => 'brown, in harmony with the coat',
+                'fur_texture' => 'short, dense, smooth coat without undercoat',
+                'markings' => 'uniform colour, self-coloured reddish-brown nose, ears a little darker',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

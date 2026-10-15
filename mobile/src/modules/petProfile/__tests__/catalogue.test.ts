@@ -151,6 +151,7 @@ describe('readBreedCatalogue', () => {
       'american_cocker_spaniel',
       'belgian_malinois',
       'basset_hound',
+      'hungarian_vizsla',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -428,6 +429,14 @@ describe('readBreedCatalogue', () => {
       suits: ['family_pet', 'children', 'large_home'],
       consider: ['eyelid_problems', 'sensitive_skin', 'food_motivated_weight', 'needs_company', 'sheds', 'drools'],
     });
+    const hv = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'hungarian_vizsla');
+    expect(hv).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 360 }));
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-40, runbook rules; no new tag).
+    expect(hv?.search_keywords).toEqual(['hungarian vizsla', 'vizsla', 'madžarski kratkodlaki ptičar', 'madzarski kratkodlaki pticar', 'vižla', 'vizla', 'madžarska vižla', 'madzarska vizla', 'magyar vizsla', 'hungarian pointer']);
+    expect(hv?.suitability).toEqual({
+      suits: ['active_family', 'family_pet', 'large_home'],
+      consider: ['long_daily_exercise', 'experienced_owner', 'not_for_small_children', 'needs_company', 'sheds', 'chases_small_pets'],
+    });
     const acs = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'american_cocker_spaniel');
     expect(acs).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 330 }));
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-37, runbook rules; no new tag).
@@ -485,6 +494,7 @@ describe('readBreedCatalogue', () => {
       'american_cocker_spaniel',
       'belgian_malinois',
       'basset_hound',
+      'hungarian_vizsla',
     ]);
   });
 });
@@ -670,6 +680,16 @@ describe('breed search', () => {
     expect(find('epagneul breton')).toEqual(['brittany']);
   });
 
+  it('M5-R10-40: finds the Hungarian Vizsla by its EN / SL names, with and without the carons, and as "vizsla" / "vižla"', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('Hungarian Vizsla')).toEqual(['hungarian_vizsla']);
+    expect(find('vizsla')).toEqual(['hungarian_vizsla']);
+    expect(find('vižla')).toEqual(['hungarian_vizsla']);
+    expect(find('Madžarski kratkodlaki ptičar')).toEqual(['hungarian_vizsla']);
+    expect(find('madzarski kratkodlaki pticar')).toEqual(['hungarian_vizsla']);
+    expect(find('magyar')).toEqual(['hungarian_vizsla']);
+  });
+
   it('M5-R10-39: finds the Basset Hound by its EN / SL names and as "basset" / "baset"', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('basset hound')).toEqual(['basset_hound']);
@@ -775,9 +795,10 @@ describe('breed search', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('nemški kratkodlaki ptičar')).toEqual(['german_shorthaired_pointer']);
     // M5-R10-36: the Brittany (»bretonski ptičar«) is a pointer too — never the German Shepherd.
-    expect(find('pticar')).toEqual(['german_shorthaired_pointer', 'brittany']);
+    // M5-R10-40: … and the Hungarian Vizsla (»madžarski kratkodlaki ptičar«, »Hungarian Pointer«).
+    expect(find('pticar')).toEqual(['german_shorthaired_pointer', 'brittany', 'hungarian_vizsla']);
     expect(find('kurzhaar')).toEqual(['german_shorthaired_pointer']);
-    expect(find('pointer')).toEqual(['german_shorthaired_pointer']);
+    expect(find('pointer')).toEqual(['german_shorthaired_pointer', 'hungarian_vizsla']);
     expect(find('gsp')).toEqual(['german_shorthaired_pointer']);
   });
 
