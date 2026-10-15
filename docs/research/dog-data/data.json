@@ -19223,7 +19223,7 @@
         "source_id": "S321",
         "quote": "Size of home: Large house",
         "confidence": "high",
-        "notes": "Not large_home: that chip reads 'a large house and garden' and the RKC garden is 'Small/ medium garden' — only the house half is sourced. Not apartment."
+        "notes": "Basis of large_home (runbook §3: `large_home` from RKC 'Large house'; German Shorthaired Pointer precedent without garden data). The RKC garden is 'Small/ medium garden' — the chip reads 'a large house and garden' (open for David whether the garden half matters). Not apartment."
       },
       "rkc_size_of_garden": {
         "value": "Small/ medium garden",
@@ -19231,7 +19231,7 @@
         "source_id": "S321",
         "quote": "Size of garden: Small/ medium garden",
         "confidence": "high",
-        "notes": "Background only (see rkc_size_of_home)."
+        "notes": "Background only; does not block large_home (rule: RKC 'Large house'), noted for David."
       },
       "rkc_grooming": {
         "value": "Once a week",
@@ -19256,6 +19256,14 @@
         "quote": "Sheds: Yes",
         "confidence": "high",
         "notes": "Basis of the sheds tag (with AKC S324 'But they shed more than you might expect.'). PDSA (S323): 'Although Basset Hounds shed, it's not as much as some dogs and their coats are fairly low maintenance.' — sheds, less than some breeds (not 'minimal' → no conflict; never low_shedding)."
+      },
+      "akc_shedding": {
+        "value": "sheds more than you might expect",
+        "unit": "—",
+        "source_id": "S324",
+        "quote": "But they shed more than you might expect.",
+        "confidence": "medium",
+        "notes": "AKC (S324). Supports sheds (with RKC S321 'Sheds: Yes')."
       },
       "rkc_lifespan": {
         "value": "Over 10 years",
@@ -28849,6 +28857,16 @@
               "basset_hound.suitability.akc_children"
             ],
             "quote": "S323 'should get along with children very well'; S324 'often makes them good companions for children'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S321"
+            ],
+            "refs": [
+              "basset_hound.suitability.rkc_size_of_home"
+            ],
+            "quote": "S321 'Size of home: Large house'"
           }
         ],
         "consider": [
@@ -28905,7 +28923,8 @@
               "S324"
             ],
             "refs": [
-              "basset_hound.suitability.rkc_shedding"
+              "basset_hound.suitability.rkc_shedding",
+              "basset_hound.suitability.akc_shedding"
             ],
             "quote": "S321 'Sheds: Yes'; S324 'they shed more than you might expect'"
           },
@@ -28922,7 +28941,6 @@
           }
         ],
         "not_proposed": {
-          "large_home": "RKC 'Large house' but 'Small/ medium garden' (S321) — the chip reads 'a large house and garden'.",
           "apartment": "RKC 'Large house' (S321).",
           "small_children": "No rating.",
           "other_pets": "PDSA (S323): fine with other dogs only when well-socialised; never unattended with another pet.",
@@ -28936,7 +28954,7 @@
           "shorter_lifespan": "RKC 'Over 10 years'.",
           "needs_mental_stimulation": "No explicit statement (PDSA 'scent games' is play advice)."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children; consider eyelid_problems, sensitive_skin, food_motivated_weight, needs_company, sheds, drools (brez secure_fencing in back_spine = branje Claude, odprto za Davida)"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children, large_home; consider eyelid_problems, sensitive_skin, food_motivated_weight, needs_company, sheds, drools (brez secure_fencing in back_spine = branje Claude, odprto za Davida; large_home po pravilu iz RKC »Large house«, čeprav je vrt »Small/ medium« — odprto za Davida)"
       },
       "marketing": {
         "value": "in the app: yes; in marketing: yes (not a flat-faced breed)",

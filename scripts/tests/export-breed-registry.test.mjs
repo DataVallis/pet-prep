@@ -1398,7 +1398,7 @@ test('Basset Hound (M5-R10-39): up to 1 hour (RKC), PDSA weight, FCI height, FCI
   assert.equal(d.facts.find((f) => f.field === 'food_motivated').value, true);
   assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
   assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 90 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
-  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['family_pet', 'children']);
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['family_pet', 'children', 'large_home']);
   assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['eyelid_problems', 'sensitive_skin', 'food_motivated_weight', 'needs_company', 'sheds', 'drools']);
   assert.deepEqual(d.health.map((h) => h.key), ['eyelids_turned', 'glaucoma_poag', 'skin_fold_dermatitis', 'bloat_gdv', 'back_disc_disease', 'ear_infections_long_ears', 'weight_gain']);
   // RKC POAG DNA testing scheme (K23) → other_scheme.

@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "dcc5441d708273e1ffd25748abd8b4f47ced173ae2dd38fea50fcb8b52d6bcf0"
+      "sha256": "20edc951457b91cf8d89cea9d73509cbda41fe5dce100aa538e29bff3ff202d9"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "48cfae55454ed643a3ccd382e2dc8831cf3ecdfbab057915b3145bfe67d7fbc4"
+      "sha256": "2cd2ce7c530310d8880df891d58dffe317caaba087ab11710a024ab9ae80d2ca"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -20865,6 +20865,15 @@
               "basset_hound.suitability.pdsa_children",
               "basset_hound.suitability.akc_children"
             ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S321"
+            ],
+            "refs": [
+              "basset_hound.suitability.rkc_size_of_home"
+            ]
           }
         ],
         "consider": [
@@ -20917,7 +20926,8 @@
               "S324"
             ],
             "refs": [
-              "basset_hound.suitability.rkc_shedding"
+              "basset_hound.suitability.rkc_shedding",
+              "basset_hound.suitability.akc_shedding"
             ]
           },
           {

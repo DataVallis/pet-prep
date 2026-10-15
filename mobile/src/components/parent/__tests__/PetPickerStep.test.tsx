@@ -932,7 +932,7 @@ describe('PetPickerStep', () => {
     expect(consider).toHaveTextContent(/rad ima družbo/);
     expect(consider).toHaveTextContent(/izpada mu dlaka/);
     expect(consider).toHaveTextContent(/se slini/);
-    expect(suits).not.toHaveTextContent(/veliko hišo z vrtom/);
+    expect(suits).toHaveTextContent(/veliko hišo z vrtom/);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'baset');
     expect(screen.getByTestId('breed-option-basset_hound')).toBeTruthy();
@@ -960,6 +960,7 @@ describe('PetPickerStep', () => {
       const consider = screen.getByTestId('breed-suitability-basset_hound-consider');
       expect(suits).toHaveTextContent(/family life/);
       expect(suits).toHaveTextContent(/families with children/);
+      expect(suits).toHaveTextContent(/a large house and garden/);
       expect(consider).toHaveTextContent(/eyelids and eyes/);
       expect(consider).toHaveTextContent(/sensitive skin/);
       expect(consider).toHaveTextContent(/watch the weight/);

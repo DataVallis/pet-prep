@@ -700,7 +700,7 @@ const FALLBACK_BREEDS: ReadonlyArray<Omit<CatalogueBreed, 'colours'>> = [
     search_keywords: ['basset hound', 'baset', 'basset', 'baset hound', 'baset haund', 'bassett'],
     sort_order: 350,
     suitability: {
-      suits: ['family_pet', 'children'],
+      suits: ['family_pet', 'children', 'large_home'],
       consider: ['eyelid_problems', 'sensitive_skin', 'food_motivated_weight', 'needs_company', 'sheds', 'drools'],
     },
   },

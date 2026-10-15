@@ -850,7 +850,7 @@ class FalAiService
             BreedType::BassetHound => [
                 'color_scheme' => match ($variantIndex) {
                     0 => 'black, white and tan tricolour',
-                    1 => 'tricolour with a tan head',
+                    1 => 'black, white and tan tri-colour',
                     2 => 'lemon and white',
                 },
                 'eye_color' => 'dark brown',

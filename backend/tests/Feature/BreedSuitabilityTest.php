@@ -828,11 +828,11 @@ it('gives the Belgian Malinois active_family / large_home and the exercise, owne
         ->and(bsEntry('belgian_malinois.suitability.rkc_breed_watch')['value'])->toBe('Category 1');
 });
 
-it('gives the Basset Hound family_pet / children and the welfare chips eyelid_problems / sensitive_skin (Breed Watch Category 3) — no large home, fence or back chip (runbook 2026-10-15)', function () {
+it('gives the Basset Hound family_pet / children / large_home and the welfare chips eyelid_problems / sensitive_skin (Breed Watch Category 3) — no fence or back chip (runbook 2026-10-15)', function () {
     $bh = app(BreedSuitability::class)->for(BreedType::BassetHound);
-    expect($bh['suits'])->toBe(['family_pet', 'children'])
-        // RKC "Large house" but "Small/ medium garden" → no large_home; PDSA: never unattended with another pet → no other_pets.
-        ->and($bh['suits'])->not->toContain('large_home')->not->toContain('apartment')->not->toContain('other_pets')
+    expect($bh['suits'])->toBe(['family_pet', 'children', 'large_home'])
+        // large_home by the rule (RKC "Large house"; garden "Small/ medium" — open for David); PDSA: never unattended with another pet → no other_pets.
+        ->and($bh['suits'])->not->toContain('apartment')->not->toContain('other_pets')
         ->not->toContain('small_children')->not->toContain('first_time_owner')->not->toContain('active_family')
         ->and($bh['consider'])->toBe(['eyelid_problems', 'sensitive_skin', 'food_motivated_weight', 'needs_company', 'sheds', 'drools'])
         // Not flat-faced; IVDD is not a Breed Watch point (open for David); the fence chip says "high"; RKC "Up to 1 hour".

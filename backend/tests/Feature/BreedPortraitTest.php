@@ -243,7 +243,7 @@ describe('breeds:portraits command', function () {
             ->and($manifest['portraits'][30])->toMatchArray(['breed' => 'shetland_sheepdog', 'species' => 'dog', 'file' => 'dog/shetland-sheepdog.webp'])
             ->and($manifest['portraits'][31])->toMatchArray(['breed' => 'brittany', 'species' => 'dog', 'file' => 'dog/brittany.webp'])
             ->and($manifest['portraits'][32])->toMatchArray(['breed' => 'american_cocker_spaniel', 'species' => 'dog', 'file' => 'dog/american-cocker-spaniel.webp'])
-            ->and($manifest['portraits'][33])->toMatchArray(['breed' => 'belgian_malinois', 'basset_hound', 'species' => 'dog', 'file' => 'dog/belgian-malinois.webp', 'dog/basset-hound.webp'])
+            ->and($manifest['portraits'][33])->toMatchArray(['breed' => 'belgian_malinois', 'species' => 'dog', 'file' => 'dog/belgian-malinois.webp'])
             ->and($manifest['portraits'][34])->toMatchArray(['breed' => 'basset_hound', 'species' => 'dog', 'file' => 'dog/basset-hound.webp'])
             ->and($manifest['portraits'][35]['species'])->toBe('cat')
             ->and($manifest['portraits'][36])->toMatchArray(['breed' => 'british_shorthair', 'species' => 'cat', 'file' => 'cat/british-shorthair.webp'])

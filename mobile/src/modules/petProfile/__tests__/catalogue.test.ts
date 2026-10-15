@@ -425,7 +425,7 @@ describe('readBreedCatalogue', () => {
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-39, runbook rules; no new tag).
     expect(bh?.search_keywords).toEqual(['basset hound', 'baset', 'basset', 'baset hound', 'baset haund', 'bassett']);
     expect(bh?.suitability).toEqual({
-      suits: ['family_pet', 'children'],
+      suits: ['family_pet', 'children', 'large_home'],
       consider: ['eyelid_problems', 'sensitive_skin', 'food_motivated_weight', 'needs_company', 'sheds', 'drools'],
     });
     const acs = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'american_cocker_spaniel');

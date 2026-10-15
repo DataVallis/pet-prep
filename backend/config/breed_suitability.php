@@ -1030,7 +1030,8 @@ return [
         // M5-R10-39: basset_hound.* (S319–S325), runbook rules (data.json
         // proposed_game_parameters.basset_hound.suitability_tags). RKC (S321) + Breed Watch (S322) +
         // PDSA (S323) + AKC (S324). Welfare breed (Breed Watch Category 3) → eyelid_problems +
-        // sensitive_skin. No large_home (RKC "Small/ medium garden"), no other_pets (PDSA: never
+        // sensitive_skin. large_home by the rule (RKC "Large house"; the garden is "Small/ medium" — open for
+        // David), no other_pets (PDSA: never
         // unattended with another pet), no secure_fencing (the chip says "high fence" — not sourced)
         // and no back_spine (IVDD is not a Breed Watch point) — open for David.
         'basset_hound' => [
@@ -1039,6 +1040,8 @@ return [
                 ['tag' => 'family_pet', 'source_ids' => ['S323'], 'refs' => ['basset_hound.suitability.pdsa_family', 'basset_hound.behaviour.family']],
                 // S323 "should get along with children very well"; S324 "often makes them good companions for children".
                 ['tag' => 'children', 'source_ids' => ['S323', 'S324'], 'refs' => ['basset_hound.suitability.pdsa_children', 'basset_hound.suitability.akc_children']],
+                // S321 "Size of home: Large house" (runbook: large_home from RKC "Large house").
+                ['tag' => 'large_home', 'source_ids' => ['S321'], 'refs' => ['basset_hound.suitability.rkc_size_of_home']],
             ],
             'consider' => [
                 // S322 "Eyelids not in normal contact with the eyeball, they are turned inwards or outwards"; S323 POAG.
@@ -1050,7 +1053,7 @@ return [
                 // S323 "they love company"; "They best suit a family home where there is always someone around".
                 ['tag' => 'needs_company', 'source_ids' => ['S323'], 'refs' => ['basset_hound.behaviour.time_alone', 'basset_hound.suitability.pdsa_company']],
                 // S321 "Sheds: Yes"; S324 "But they shed more than you might expect."
-                ['tag' => 'sheds', 'source_ids' => ['S321', 'S324'], 'refs' => ['basset_hound.suitability.rkc_shedding']],
+                ['tag' => 'sheds', 'source_ids' => ['S321', 'S324'], 'refs' => ['basset_hound.suitability.rkc_shedding', 'basset_hound.suitability.akc_shedding']],
                 // S324 "Their long jowls create excess saliva, which is a normal trait of the breed."
                 ['tag' => 'drools', 'source_ids' => ['S324'], 'refs' => ['basset_hound.behaviour.drooling', 'basset_hound.suitability.akc_drooling']],
             ],

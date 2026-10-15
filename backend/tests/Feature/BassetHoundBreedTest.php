@@ -419,7 +419,7 @@ describe('GET /api/breeds', function () {
                 'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.basset_hound',
                 'search_keywords' => BreedConfigsSeeder::configs()[35]['search_keywords'], 'sort_order' => 350,
                 'suitability' => [
-                    'suits' => ['family_pet', 'children'],
+                    'suits' => ['family_pet', 'children', 'large_home'],
                     'consider' => ['eyelid_problems', 'sensitive_skin', 'food_motivated_weight', 'needs_company', 'sheds', 'drools'],
                 ],
             ]);
@@ -469,7 +469,7 @@ describe('AI appearance (runbook rule: standard colours only; welfare breed → 
         $v1 = app(FalAiService::class)->generateInitialPetDna(BreedType::BassetHound);
         expect($v1['prompt_anchor'])->toContain('Basset Hound')->toContain('tricolour')->toContain('tight eyelids')->toContain('moderate length')
             ->not->toContain('merle')
-            ->and($v1['visual_traits']['color_scheme'])->toBeIn(['black, white and tan tricolour', 'tricolour with a tan head', 'lemon and white'])
+            ->and($v1['visual_traits']['color_scheme'])->toBeIn(['black, white and tan tricolour', 'black, white and tan tri-colour', 'lemon and white'])
             ->and($v1['visual_traits']['eye_color'])->toBe('dark brown');
 
         $pet = bhPet(90, ['origin' => PetOrigin::Adopted]);
