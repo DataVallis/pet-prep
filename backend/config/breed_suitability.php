@@ -1058,6 +1058,35 @@ return [
                 ['tag' => 'drools', 'source_ids' => ['S324'], 'refs' => ['basset_hound.behaviour.drooling', 'basset_hound.suitability.akc_drooling']],
             ],
         ],
+        // M5-R10-40: hungarian_vizsla.* (S326–S334), runbook rules (data.json
+        // proposed_game_parameters.hungarian_vizsla.suitability_tags). RKC (S328) + PDSA (S329) + PetMD (S330)
+        // + Dogs Trust Ireland (S333). Breed Watch Category 1 → no welfare chip. No children (older children
+        // only — not_for_small_children instead, Belgian Malinois precedent), no other_pets (PDSA prey drive vs
+        // PetMD fine with cats — conflicting), no needs_mental_stimulation (no explicit statement) — open for David.
+        'hungarian_vizsla' => [
+            'suits' => [
+                // S328 "Exercise: More than 2 hours per day"; S329 "a minimum of two hours exercise every day".
+                ['tag' => 'active_family', 'source_ids' => ['S328', 'S329'], 'refs' => ['hungarian_vizsla.exercise.adult', 'hungarian_vizsla.suitability.pdsa_exercise']],
+                // S330 "… making them ideal family pets for households with children."
+                ['tag' => 'family_pet', 'source_ids' => ['S330'], 'refs' => ['hungarian_vizsla.suitability.petmd_family', 'hungarian_vizsla.behaviour.family']],
+                // S328 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S328'], 'refs' => ['hungarian_vizsla.suitability.rkc_size_of_home', 'hungarian_vizsla.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S328 "More than 2 hours per day"; S329 "a minimum of two hours exercise every day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S328', 'S329'], 'refs' => ['hungarian_vizsla.exercise.adult', 'hungarian_vizsla.suitability.pdsa_exercise']],
+                // S329 "Their energy levels and strong personality means they are not suitable for first time dog owners."
+                ['tag' => 'experienced_owner', 'source_ids' => ['S329'], 'refs' => ['hungarian_vizsla.behaviour.experienced_owner', 'hungarian_vizsla.suitability.pdsa_experienced_owner']],
+                // S329 "We wouldn't recommend a Vizsla if you have very young children"; S330 "for small children under the age of 6 …".
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S329', 'S330'], 'refs' => ['hungarian_vizsla.suitability.pdsa_children', 'hungarian_vizsla.suitability.petmd_small_children']],
+                // S329 "… often suffer with separation anxiety if left alone."; "someone around all day".
+                ['tag' => 'needs_company', 'source_ids' => ['S329'], 'refs' => ['hungarian_vizsla.behaviour.time_alone', 'hungarian_vizsla.suitability.pdsa_company']],
+                // S328 "Sheds: Yes"; S333 "Hungarian Vizslas shed moderately."
+                ['tag' => 'sheds', 'source_ids' => ['S328', 'S333'], 'refs' => ['hungarian_vizsla.suitability.rkc_shedding', 'hungarian_vizsla.suitability.dt_shedding']],
+                // S329 "Hungarian Vizslas do have a high prey drive, so we wouldn't advise keeping them with smaller pets."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S329'], 'refs' => ['hungarian_vizsla.behaviour.other_pets', 'hungarian_vizsla.suitability.pdsa_prey_drive']],
+            ],
+        ],
 
     ],
 ];

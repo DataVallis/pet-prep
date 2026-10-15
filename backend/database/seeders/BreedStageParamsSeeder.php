@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -492,6 +492,17 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_BASSET_HOUND = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-39)';
 
     /**
+     * M5-R10-40 Hungarian Vizsla (unattended run 2026-10-15, data.json
+     * proposed_game_parameters.hungarian_vizsla.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 120 min
+     * (RKC S328 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 108 (0.75 × RKC lower bound 12 y, S328 — provisional until McMillan 2024
+     * is checked), arrival 2 / 9 / 36 / 108, learning multiplier 1.5 (Coren rank 25, Excellent); care rates
+     * the Border Collie's.
+     */
+    public const CONFIRMED_R10_HUNGARIAN_VIZSLA = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-40)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -635,6 +646,7 @@ class BreedStageParamsSeeder extends Seeder
         'american_cocker_spaniel' => [7, 'S305', 'Grooming: Every day', 'high', false],
         'belgian_malinois' => [2, 'S314', 'Grooming: More than once a week', 'low', true, self::PROPOSED_R13_BELGIAN_MALINOIS],
         'basset_hound' => [1, 'S321', 'Grooming: Once a week', 'high', false],
+        'hungarian_vizsla' => [1, 'S328', 'Grooming: Once a week', 'high', false],
     ];
 
     /**
@@ -662,6 +674,7 @@ class BreedStageParamsSeeder extends Seeder
         'great_dane' => ['S243', "Remember to leave at a gap after eating and before exercising to help prevent GDV (Gastric dilatation volvulus or 'bloat')."],
         'chihuahua' => ['S277', 'Remember to leave a gap after eating and before exercising.'],
         'basset_hound' => ['S323', 'Remember to leave a gap after eating and before exercising.'],
+        'hungarian_vizsla' => ['S329', 'Remember to leave a gap between eating and exercising.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -712,13 +725,14 @@ class BreedStageParamsSeeder extends Seeder
         'american_cocker_spaniel' => ['S309', 'Start socialization and training classes early so your Cocker Spaniel puppy learns good manners.'],
         'belgian_malinois' => ['S316', 'Early, extensive socialization will help limit aggressive tendencies towards new people.'],
         'basset_hound' => ['S323', 'Be sure to socialise your Basset Hound from a young age with other people and dogs once they are fully vaccinated.'],
+        'hungarian_vizsla' => ['S329', 'as long as you socialise your Vizsla from a young age with lots of people, dogs and experiences'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1322,6 +1336,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-39 (docs/research/dog-data/data.json basset_hound,
             // S319–S325; runbook rules in proposed_game_parameters.basset_hound).
             BreedType::BassetHound => self::bassetHoundProfile(),
+            // M5-R10-40 (docs/research/dog-data/data.json hungarian_vizsla,
+            // S326–S334; runbook rules in proposed_game_parameters.hungarian_vizsla).
+            BreedType::HungarianVizsla => self::hungarianVizslaProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -3875,6 +3892,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'basset_hound.lifespan.rkc',
                 'quote' => 'Lifespan: Over 10 years',
                 'notes' => 'RKC breed page lower bound (S321); PDSA "Over 10 years" (S323) agrees. McMillan 2024 12.5 y only via Wikipedia (S325, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Hungarian Vizsla (M5-R10-40). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_HUNGARIAN_VIZSLA);
+     * weight, growth, Coren rank and lifespan are sourced. The senior boundary uses the RKC lower
+     * bound (no McMillan 2024 / VetCompass median reachable) — provisional, like the Basset Hound.
+     *
+     * @return array<string, mixed>
+     */
+    private static function hungarianVizslaProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_HUNGARIAN_VIZSLA;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S328', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.hungarian_vizsla.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S328) = 9 y = 108 months (PDSA "Over 12 years", S329, agrees). No McMillan 2024 / VetCompass median was reachable (McMillan 2024 13.5 y only via Wikipedia, S334, tier C → 122, alternative only). Not chosen: 90 (PetMD lower bound 10 y, S330), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.hungarian_vizsla.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S328', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.hungarian_vizsla.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S328) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA (S329) "a minimum of two hours exercise every day" gives the same number; PetMD (S330) "at least one hour of exercise per day" is an alternative only.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.hungarian_vizsla.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[20.0, 30.0], [
+                'unit' => 'kg', 'source_id' => 'S329', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'hungarian_vizsla.adult_weight.pdsa',
+                'quote' => '20kg-30kg',
+                'notes' => 'PDSA key fact "Average weight" (S329), one range for both sexes. The FCI (S327) and AKC (S331) standards give no weight; PetMD (S330) 40–65 lb is an alternative only.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'hungarian_vizsla.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA 20–30 kg ≈ 44–66 lb, mostly the Medium class of S10; RKC size "Large", S328).',
+            ]],
+            'coren_rank' => [25, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'hungarian_vizsla.trainability.coren_rank',
+                'quote' => '| 25 | Vizsla |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 25 "Vizsla", tier "Excellent Working Dogs" (ranks 11–26). Not in Coren\'s own top / bottom-10 article (S34).',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.hungarian_vizsla.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 25 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S328', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'hungarian_vizsla.lifespan.rkc',
+                'quote' => 'Lifespan: Over 12 years',
+                'notes' => 'RKC breed page lower bound (S328); PDSA "Over 12 years" (S329) agrees. McMillan 2024 13.5 y only via Wikipedia (S334, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

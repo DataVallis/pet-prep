@@ -233,6 +233,11 @@ return [
         ['key' => 'tricolour', 'value' => 'black, white and tan tricolour', 'en' => 'Tricolour', 'sl' => 'Trobarven'],
         ['key' => 'lemon-white', 'value' => 'lemon and white bicolour', 'en' => 'Lemon and white', 'sl' => 'Limonasto-bel'],
     ],
+    // M5-R10-40: FCI S327 "Various shades of russet gold and dark sandy gold (semmelgelb)."
+    'hungarian_vizsla' => [
+        ['key' => 'russet-gold', 'value' => 'russet gold', 'en' => 'Russet gold', 'sl' => 'Rdečkasto zlat'],
+        ['key' => 'dark-sandy-gold', 'value' => 'dark sandy gold', 'en' => 'Dark sandy gold', 'sl' => 'Temno peščeno zlat'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -846,3 +846,21 @@ it('gives the Basset Hound family_pet / children / large_home and the welfare ch
         ->and(bsEntry('basset_hound.suitability.rkc_size_of_garden')['quote'])->toBe('Size of garden: Small/ medium garden')
         ->and(bsEntry('basset_hound.suitability.rkc_breed_watch')['value'])->toBe('Category 3');
 });
+
+it('gives the Hungarian Vizsla active_family / family_pet / large_home and no welfare chip (Breed Watch Category 1) — older children only, high prey drive (runbook 2026-10-15)', function () {
+    $hv = app(BreedSuitability::class)->for(BreedType::HungarianVizsla);
+    expect($hv['suits'])->toBe(['active_family', 'family_pet', 'large_home'])
+        // PDSA: older children only (not with very young children) → not_for_small_children instead of children;
+        // PDSA high prey drive vs PetMD fine with cats → no other_pets.
+        ->and($hv['suits'])->not->toContain('children')->not->toContain('small_children')->not->toContain('other_pets')
+        ->not->toContain('apartment')->not->toContain('first_time_owner')->not->toContain('low_shedding')
+        ->and($hv['consider'])->toBe(['long_daily_exercise', 'experienced_owner', 'not_for_small_children', 'needs_company', 'sheds', 'chases_small_pets'])
+        // Breed Watch Category 1 → no welfare chip; RKC "Over 12 years"; RKC grooming "Once a week".
+        ->and($hv['consider'])->not->toContain('hips_hind_legs')->not->toContain('eyelid_problems')->not->toContain('older_children')
+        ->not->toContain('shorter_lifespan')->not->toContain('frequent_grooming')->not->toContain('needs_mental_stimulation');
+
+    expect(bsEntry('hungarian_vizsla.suitability.pdsa_prey_drive')['quote'])->toBe("Hungarian Vizslas do have a high prey drive, so we wouldn't advise keeping them with smaller pets.")
+        ->and(bsEntry('hungarian_vizsla.suitability.pdsa_children')['quote'])->toBe("We wouldn't recommend a Vizsla if you have very young children")
+        ->and(bsEntry('hungarian_vizsla.suitability.rkc_size_of_garden')['quote'])->toBe('Size of garden: Large garden')
+        ->and(bsEntry('hungarian_vizsla.suitability.rkc_breed_watch')['value'])->toBe('Category 1');
+});
