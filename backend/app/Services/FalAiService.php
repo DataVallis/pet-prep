@@ -866,7 +866,7 @@ class FalAiService
                 'fur_texture' => 'smooth, short, close coat',
                 'markings' => 'white chest, legs and tail tip; long low-set ears',
             ],
-            // M5-R10-40: FCI standard colours (S327) — russet gold, dark sandy gold; uniform colour.
+            // M5-R10-40: FCI S327 / AKC S331 colours — russet gold, golden rust (AKC wording), dark sandy gold; uniform colour.
             BreedType::HungarianVizsla => [
                 'color_scheme' => match ($variantIndex) {
                     0 => 'russet gold',
