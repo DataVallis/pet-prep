@@ -437,6 +437,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "english_cocker_spaniel",
+            "species": "dog",
+            "file": "dog/english-cocker-spaniel.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:b0b70b90f6316241a66758488e954e2e54ae486ed8ffff69a029f8a3646569dc",
+            "generated_at": "2026-10-15T11:50:03+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",
