@@ -13,6 +13,7 @@ import { BrandLogo } from '@/components/brand/BrandLogo';
 import { fonts, light, radius, tightTracking } from '@/theme';
 import { strings } from '@/i18n/strings';
 import { SERVER_UPDATING_STRINGS } from '@/components/ServerUpdatingBanner';
+import { useLongOutage } from '@/store/serverStatusStore';
 
 /** User-visible strings (`auth:splash`, M1-18). */
 export const SPLASH_STRINGS = strings('auth', 'splash');
@@ -30,6 +31,7 @@ interface SplashScreenProps {
 
 export default function SplashScreen({ mode, updating = false, onRetry, onLogout }: SplashScreenProps) {
   const S = SPLASH_STRINGS;
+  const longOutage = useLongOutage();
   return (
     <View style={styles.container} testID={`splash-${mode}`}>
       <BrandLogo layout="stacked" width={150} tone="light" testID="splash-logo" />
@@ -46,6 +48,21 @@ export default function SplashScreen({ mode, updating = false, onRetry, onLogout
             <Text style={styles.updatingTitle}>{SERVER_UPDATING_STRINGS.title}</Text>
           </View>
           <ActivityIndicator color={light.ink} style={styles.spinner} />
+          {longOutage && (
+            // QA m4: a deploy that doesn't end (or lost internet) is never a dead end.
+            <View style={styles.updatingBox} testID="splash-updating-exit">
+              <Pressable
+                style={({ pressed }) => [styles.primaryButton, pressed && styles.pressed]}
+                onPress={onRetry}
+                accessibilityRole="button"
+              >
+                <Text style={styles.primaryButtonText}>{S.retry}</Text>
+              </Pressable>
+              <Pressable onPress={onLogout} style={styles.linkButton} accessibilityRole="button">
+                <Text style={styles.linkText}>{S.logout}</Text>
+              </Pressable>
+            </View>
+          )}
         </View>
       ) : (
         <>

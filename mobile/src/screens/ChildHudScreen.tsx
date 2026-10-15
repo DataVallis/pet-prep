@@ -64,7 +64,7 @@ import { useAppStore, type WebSocketStatus } from '@/store/appStore';
 import { rememberFamilyTimezone } from '@/modules/session/familyTimezone';
 import { usePetWebSocket } from '@/hooks/usePetWebSocket';
 import ServerUpdatingBanner, { SERVER_UPDATING_STRINGS } from '@/components/ServerUpdatingBanner';
-import { useServerOutage } from '@/store/serverStatusStore';
+import { useLongOutage, useServerOutage } from '@/store/serverStatusStore';
 import { applyBroadcastToCache, childPetKey, isRecoverableError, useChildPet } from '@/hooks/queries/useChildPet';
 import { useClean, useFeed, useResolveChewing, useTakeOut, useWater } from '@/hooks/queries/useChildActions';
 import CatCareOverlay from '@/modules/catCare/CatCareOverlay';
@@ -321,12 +321,14 @@ export default function ChildHudScreen() {
     [queryClient],
   );
   // M5-F13: after a socket reconnect (deploy, network) broadcasts of the gap are lost → refetch.
+  // `cancelRefetch: false`: a fetch already running (recovery refetch) is reused, not restarted.
   const onResubscribed = useCallback(() => {
-    void queryClient.invalidateQueries({ queryKey: childPetKey });
+    void queryClient.invalidateQueries({ queryKey: childPetKey }, { cancelRefetch: false });
   }, [queryClient]);
   usePetWebSocket(view?.pet.id ?? sessionPet?.id ?? null, onBroadcast, onResubscribed);
   // M5-F13: the server is updating (deploy) — a calm banner instead of error states.
   const serverUpdating = useServerOutage();
+  const longOutage = useLongOutage();
 
   const feed = useFeed();
   const water = useWater();
@@ -543,6 +545,24 @@ export default function ChildHudScreen() {
           <View style={styles.centeredBox} testID="hud-updating">
             <ActivityIndicator color={palette.mint} />
             <Text style={styles.centeredText}>{SERVER_UPDATING_STRINGS.title}</Text>
+            {longOutage && (
+              // QA m4: a deploy that doesn't end (or lost internet) is never a dead end.
+              <View style={styles.centeredBox} testID="hud-updating-exit">
+                <Pressable
+                  accessibilityRole="button"
+                  style={({ pressed }) => [styles.retryButton, pressed && styles.pressed]}
+                  onPress={() => {
+                    void petQuery.refetch();
+                  }}
+                >
+                  <Text style={styles.retryText}>{HUD_STRINGS.retry}</Text>
+                </Pressable>
+                <Pressable accessibilityRole="button" onPress={handleLogout} style={styles.linkButton} testID="hud-updating-logout">
+                  <Text style={styles.linkText}>{HUD_STRINGS.logout}</Text>
+                </Pressable>
+                <ParentalGate {...childExit.gateProps} />
+              </View>
+            )}
           </View>
         ) : petQuery.isError ? (
           <View style={styles.centeredBox} testID="hud-load-error">

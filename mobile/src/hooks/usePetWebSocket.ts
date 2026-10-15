@@ -41,25 +41,32 @@ export type ResubscribeHandler = (petId: number) => void;
  * Bearer token. pusher-js reconnects the socket by itself (connecting → unavailable →
  * retry; a closed connection retries after 1 s) and re-subscribes every channel on
  * `connected`. M5-F13: during a deploy the auth call may get 503 / 502 / network
- * failures — it is retried with backoff (`withOutageRetry`) while `isActive()`.
+ * failures — it is retried with backoff (`withOutageRetry`) while `isActive()` and while
+ * the socket that asked is still the connected one.
  */
 export function createEcho(options: { isActive?: () => boolean } = {}): Echo<'reverb'> {
   // Resolved per call (not at import): on device the import is `{ Pusher }` (RN build).
   const PusherClient = resolvePusherConstructor<Pusher>(Pusher);
-  return new Echo<'reverb'>({
-    broadcaster: 'reverb',
-    // Gated: reconnect storms must not drain the per-user API limit (hotfix 2026-10-06).
-    client: new PusherClient(
-      ENV.REVERB_APP_KEY,
-      buildPusherOptions(
-        ENV,
-        withOutageRetry(
-          (socketId, channelName) => gatedCall(channelAuthGate, () => api.authorizeChannel(socketId, channelName)),
-          { isActive: options.isActive },
-        ),
+  let client: Pusher | null = null;
+  client = new PusherClient(
+    ENV.REVERB_APP_KEY,
+    buildPusherOptions(
+      ENV,
+      // Gated: reconnect storms must not drain the per-user API limit (hotfix 2026-10-06).
+      withOutageRetry(
+        (socketId, channelName) => gatedCall(channelAuthGate, () => api.authorizeChannel(socketId, channelName)),
+        {
+          isActive: options.isActive,
+          currentSocketId: () => {
+            const connection = client?.connection;
+            if (!connection) return undefined;
+            return connection.state === 'connected' ? connection.socket_id : null;
+          },
+        },
       ),
     ),
-  });
+  );
+  return new Echo<'reverb'>({ broadcaster: 'reverb', client });
 }
 
 /**

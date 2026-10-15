@@ -16,7 +16,15 @@ import {
   OUTAGE_RETRY_MAX_MS,
   probeDelayMs,
 } from '@/modules/connectivity/serverOutage';
-import { isDeployError, useServerStatusStore } from '@/store/serverStatusStore';
+import { act, renderHook } from '@testing-library/react-native';
+
+import {
+  isDeployError,
+  OUTAGE_EXIT_AFTER_MS,
+  outageLasted,
+  useLongOutage,
+  useServerStatusStore,
+} from '@/store/serverStatusStore';
 
 const maintenance = (retryAfter: number | null = 15) => new ApiError('Service Unavailable', 503, { message: 'Service Unavailable' }, retryAfter);
 
@@ -122,6 +130,53 @@ describe('banner state (pure)', () => {
     const shown = afterOutageFailure(HEALTHY, 'maintenance', 15_000, 1_000);
     expect(afterServerAnswered(shown)).toEqual(HEALTHY);
     expect(afterServerAnswered(HEALTHY)).toBe(HEALTHY);
+  });
+});
+
+describe('long outage (QA m4)', () => {
+  it('outageLasted: only after OUTAGE_EXIT_AFTER_MS of an ongoing outage', () => {
+    expect(outageLasted(null, 1_000_000)).toBe(false);
+    expect(outageLasted(0, OUTAGE_EXIT_AFTER_MS - 1)).toBe(false);
+    expect(outageLasted(0, OUTAGE_EXIT_AFTER_MS)).toBe(true);
+  });
+
+  it('useLongOutage flips after the threshold and resets when the server is back', async () => {
+    jest.useFakeTimers();
+    try {
+      const { result } = renderHook(() => useLongOutage());
+      expect(result.current).toBe(false);
+      act(() => useServerStatusStore.getState().noteOutageFailure('maintenance', 15_000, Date.now()));
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(OUTAGE_EXIT_AFTER_MS - 1);
+      });
+      expect(result.current).toBe(false);
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(1);
+      });
+      expect(result.current).toBe(true);
+      act(() => useServerStatusStore.getState().noteServerAnswered());
+      expect(result.current).toBe(false);
+    } finally {
+      jest.useRealTimers();
+    }
+  });
+});
+
+describe('D19 (PR #251): the few-seconds Caddy 502 during the app container swap', () => {
+  it('a 502 starts the banner; connection refused during it keeps it; the next answer ends it', () => {
+    const store = useServerStatusStore.getState();
+    store.noteOutageFailure(outageCauseForResponse(502, null) ?? 'network', null);
+    expect(useServerStatusStore.getState().outage).toBe(true);
+    // Connection refused while the container is gone.
+    store.noteOutageFailure(outageCauseOfError(new TypeError('Network request failed')) ?? 'gateway', null);
+    expect(useServerStatusStore.getState()).toMatchObject({ outage: true, cause: 'network', failures: 2 });
+    store.noteServerAnswered();
+    expect(useServerStatusStore.getState().outage).toBe(false);
+  });
+
+  it('connection refused alone (no 502 / 503 first) never starts the banner', () => {
+    for (let i = 0; i < 5; i += 1) useServerStatusStore.getState().noteOutageFailure('network', null);
+    expect(useServerStatusStore.getState().outage).toBe(false);
   });
 });
 

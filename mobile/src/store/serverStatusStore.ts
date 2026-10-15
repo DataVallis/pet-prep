@@ -5,6 +5,7 @@
  * API client can import it without pulling in the session store.
  */
 
+import { useEffect, useState } from 'react';
 import { create } from 'zustand';
 
 import {
@@ -60,4 +61,37 @@ export function isDeployError(error: unknown): boolean {
   const cause = outageCauseOfError(error);
   if (cause === 'maintenance' || cause === 'gateway') return true;
   return cause === 'network' && isServerOutage();
+}
+
+/**
+ * QA m4: after this long in the updating state, waiting screens also show the usual exit
+ * ("Starš?" / "Odjava" / "Poskusi znova") — a maintenance that never ends, or the phone
+ * losing internet meanwhile, must never be a dead end.
+ */
+export const OUTAGE_EXIT_AFTER_MS = 150_000;
+
+/** Whether the outage has lasted at least `afterMs` (pure; `since` from the store). */
+export function outageLasted(since: number | null, nowMs: number, afterMs: number = OUTAGE_EXIT_AFTER_MS): boolean {
+  return since !== null && nowMs - since >= afterMs;
+}
+
+/** `true` once the current outage has lasted {@link OUTAGE_EXIT_AFTER_MS} (re-renders by itself). */
+export function useLongOutage(afterMs: number = OUTAGE_EXIT_AFTER_MS): boolean {
+  const since = useServerStatusStore((s) => (s.outage ? s.since : null));
+  const [long, setLong] = useState(() => outageLasted(since, Date.now(), afterMs));
+  useEffect(() => {
+    if (since === null) {
+      setLong(false);
+      return;
+    }
+    const remaining = since + afterMs - Date.now();
+    if (remaining <= 0) {
+      setLong(true);
+      return;
+    }
+    setLong(false);
+    const timer = setTimeout(() => setLong(true), remaining);
+    return () => clearTimeout(timer);
+  }, [since, afterMs]);
+  return long;
 }

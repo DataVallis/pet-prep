@@ -3,7 +3,7 @@
  * when the server answers again, never takes touches, is translated and respects Reduce Motion.
  */
 import { act, render, screen } from '@testing-library/react-native';
-import { AccessibilityInfo } from 'react-native';
+import { AccessibilityInfo, Platform } from 'react-native';
 
 import ServerUpdatingBanner, { BANNER_FADE_MS } from '@/components/ServerUpdatingBanner';
 import { i18n } from '@/i18n';
@@ -49,6 +49,23 @@ describe('ServerUpdatingBanner', () => {
     act(() => useServerStatusStore.getState().noteOutageFailure('gateway', null));
     render(<ServerUpdatingBanner tone="dark" />);
     expect(screen.getByTestId('server-updating-banner-slot').props.pointerEvents).toBe('none');
+  });
+
+  it('QA n2: iOS — announced once to VoiceOver when it appears', () => {
+    const announce = jest.spyOn(AccessibilityInfo, 'announceForAccessibility').mockImplementation(() => undefined);
+    const os = Platform.OS;
+    Object.defineProperty(Platform, 'OS', { value: 'ios', configurable: true });
+    try {
+      render(<ServerUpdatingBanner tone="dark" />);
+      expect(screen.queryByTestId('server-updating-banner')).toBeNull();
+      announce.mockClear();
+      act(() => useServerStatusStore.getState().noteOutageFailure('maintenance', 15_000));
+      act(() => useServerStatusStore.getState().noteOutageFailure('network', null));
+      expect(announce).toHaveBeenCalledTimes(1);
+      expect(announce).toHaveBeenCalledWith('Posodabljamo PetPrep. Takoj smo nazaj, vse je shranjeno.');
+    } finally {
+      Object.defineProperty(Platform, 'OS', { value: os, configurable: true });
+    }
   });
 
   it('Reduce Motion: appears and disappears without animating', async () => {

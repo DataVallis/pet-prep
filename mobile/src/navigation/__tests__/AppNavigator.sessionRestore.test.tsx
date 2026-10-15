@@ -7,7 +7,7 @@ import * as SecureStore from 'expo-secure-store';
 import { ApiError, api } from '@/api/client';
 import AppNavigator from '@/navigation/AppNavigator';
 import { useAppStore } from '@/store/appStore';
-import { useServerStatusStore } from '@/store/serverStatusStore';
+import { OUTAGE_EXIT_AFTER_MS, useServerStatusStore } from '@/store/serverStatusStore';
 import { makeChildState, makePet } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import { CONTRACT_STRINGS } from '@/screens/ContractScreen';
@@ -230,6 +230,31 @@ describe('AppNavigator session restore', () => {
     act(() => useServerStatusStore.getState().noteServerAnswered());
     expect(await screen.findByText('PARENT_DASHBOARD')).toBeTruthy();
     expect(getUser).toHaveBeenCalledTimes(2);
+  });
+
+  it('QA m4: a launch stuck in the updating state > 2.5 min offers "Poskusi znova" and "Odjava"', async () => {
+    jest.useFakeTimers({ doNotFake: ['nextTick', 'setImmediate'] });
+    try {
+      getItem.mockResolvedValue('parent-token');
+      getUser.mockImplementation(async () => {
+        useServerStatusStore.getState().noteOutageFailure('maintenance', 15_000);
+        throw new ApiError('Service Unavailable', 503, { message: 'Service Unavailable' }, 15);
+      });
+      renderWithQuery(<AppNavigator />);
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(screen.getByTestId('splash-updating')).toBeTruthy();
+      expect(screen.queryByTestId('splash-updating-exit')).toBeNull();
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(OUTAGE_EXIT_AFTER_MS);
+      });
+      expect(screen.getByTestId('splash-updating-exit')).toBeTruthy();
+      expect(screen.getByText('Poskusi znova')).toBeTruthy();
+      expect(screen.getByText('Odjava')).toBeTruthy();
+    } finally {
+      jest.useRealTimers();
+    }
   });
 
   it('offline → "Odjava" revokes, clears the token and shows login', async () => {

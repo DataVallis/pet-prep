@@ -95,6 +95,45 @@ describe('startServerRecovery', () => {
     expect(onRecovered).not.toHaveBeenCalled();
   });
 
+  it('QA n1: back in the foreground during an outage → probes at once', async () => {
+    let foregroundListener: (() => void) | null = null;
+    const remove = jest.fn();
+    const probe = jest.fn(async () => false);
+    const stop = startServerRecovery({
+      probe,
+      onRecovered: jest.fn(),
+      onForeground: (listener) => {
+        foregroundListener = listener;
+        return remove;
+      },
+    });
+    store().noteOutageFailure('maintenance', 15_000);
+    await jest.advanceTimersByTimeAsync(1_000);
+    expect(probe).not.toHaveBeenCalled();
+    await (async () => (foregroundListener as (() => void) | null)?.())();
+    await jest.advanceTimersByTimeAsync(0);
+    expect(probe).toHaveBeenCalledTimes(1);
+    stop();
+    expect(remove).toHaveBeenCalled();
+  });
+
+  it('QA n1: a foreground event while healthy does nothing', async () => {
+    let foregroundListener: (() => void) | null = null;
+    const probe = jest.fn(async () => true);
+    const stop = startServerRecovery({
+      probe,
+      onRecovered: jest.fn(),
+      onForeground: (listener) => {
+        foregroundListener = listener;
+        return () => undefined;
+      },
+    });
+    (foregroundListener as (() => void) | null)?.();
+    await jest.advanceTimersByTimeAsync(0);
+    expect(probe).not.toHaveBeenCalled();
+    stop();
+  });
+
   it('starts probing at once when mounted during an outage', async () => {
     store().noteOutageFailure('maintenance', 15_000);
     const probe = jest.fn(async () => false);

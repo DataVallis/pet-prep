@@ -47,8 +47,6 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
----
-
 ## 2026-10-14 — Belgijski ovčar malinois: dvajseta pasma po dvajsetih (M5-R10-38)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **belgijskega ovčarja malinois** (33. mesto). FCI pozna eno pasmo, belgijskega ovčarja, s štirimi sortami; v igri je samo kratkodlaki malinois. Štiriintrideseta plačljiva pasma psa; v izbirniku je za ameriškim koker španjelom z namigom »česanje 2× na teden«.

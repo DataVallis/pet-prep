@@ -23,13 +23,23 @@ export interface RecoveryDeps {
   onRecovered: () => void;
   /** Whether the app is in the foreground (no probes in the background). */
   isForeground?: () => boolean;
+  /**
+   * Calls the listener when the app comes to the foreground (QA n1: probe at once — the
+   * deploy may have ended while the app was in the background). Returns the unsubscribe.
+   */
+  onForeground?: (listener: () => void) => () => void;
 }
 
 /**
  * Watch `serverStatusStore`: probe while `outage`, call `onRecovered` once per outage when
  * it ends (by a probe or by any other request that succeeded). Returns the stop function.
  */
-export function startServerRecovery({ probe, onRecovered, isForeground = () => true }: RecoveryDeps): () => void {
+export function startServerRecovery({
+  probe,
+  onRecovered,
+  isForeground = () => true,
+  onForeground,
+}: RecoveryDeps): () => void {
   let timer: ReturnType<typeof setTimeout> | null = null;
   let attempt = 0;
   let probing = false;
@@ -79,6 +89,13 @@ export function startServerRecovery({ probe, onRecovered, isForeground = () => t
     }
   });
 
+  // Back in the foreground during an outage → probe now instead of waiting for the timer.
+  const removeForeground = onForeground?.(() => {
+    if (stopped || probing || !useServerStatusStore.getState().outage) return;
+    clear();
+    void runProbe();
+  });
+
   // Mounted during an outage (e.g. a remount) → start probing now.
   if (useServerStatusStore.getState().outage) schedule();
 
@@ -86,6 +103,7 @@ export function startServerRecovery({ probe, onRecovered, isForeground = () => t
     stopped = true;
     clear();
     unsubscribe();
+    removeForeground?.();
   };
 }
 
@@ -105,6 +123,12 @@ export function useServerRecovery(): void {
           if (client) refetchAfterOutage(client);
         },
         isForeground: () => AppState.currentState === 'active',
+        onForeground: (listener) => {
+          const subscription = AppState.addEventListener('change', (state) => {
+            if (state === 'active') listener();
+          });
+          return () => subscription.remove();
+        },
       }),
     [client],
   );

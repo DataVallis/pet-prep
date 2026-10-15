@@ -16,8 +16,10 @@ import { createParentBroadcastHandler, parentDashboardKey } from '@/modules/fami
 export default function ParentLiveChannels({ petIds }: { petIds: number[] }) {
   const queryClient = useQueryClient();
   const onBroadcast = useMemo(() => createParentBroadcastHandler(queryClient), [queryClient]);
+  // `cancelRefetch: false`: several pets re-subscribing (and the recovery refetch) share one
+  // running dashboard fetch instead of cancelling and restarting it.
   const onResubscribed = useCallback(() => {
-    void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
+    void queryClient.invalidateQueries({ queryKey: parentDashboardKey }, { cancelRefetch: false });
   }, [queryClient]);
   usePetChannels(petIds, onBroadcast, onResubscribed);
   return null;

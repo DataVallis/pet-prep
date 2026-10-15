@@ -73,6 +73,17 @@ describe('api client ↔ server outage (M5-F13)', () => {
     expect(outage()).toBe(true);
   });
 
+  it('D19: Caddy 502 (container swap, no maintenance) → banner; connection refused keeps it; 200 ends it', async () => {
+    mockFetch(respond(502, undefined), new TypeError('Network request failed'), respond(200, { id: 1, name: 'P', email: null, role: 'parent', pet: null }));
+    await api.getUser().catch(() => undefined);
+    expect(useServerStatusStore.getState().cause).toBe('gateway');
+    expect(outage()).toBe(true);
+    await api.getUser().catch(() => undefined);
+    expect(outage()).toBe(true);
+    await api.getUser();
+    expect(outage()).toBe(false);
+  });
+
   it('a 503 with a reason (social sign-in) is not a deploy', async () => {
     mockFetch(respond(503, { message: 'x', code: 'provider_unavailable' }));
     await api.getUser().catch(() => undefined);

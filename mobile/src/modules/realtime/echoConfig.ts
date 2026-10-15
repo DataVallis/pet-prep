@@ -155,23 +155,33 @@ const realDelay: Delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms
 /**
  * Wrap a channel authorizer so a deploy answer (maintenance 503, 502 / 504, network
  * failure) is retried with backoff. Any other error (401, 403, odd body) fails at once,
- * as before. `isActive` stops retrying once the hook was torn down.
+ * as before. Retrying stops once the hook was torn down (`isActive`) or once the socket
+ * that asked is gone (`currentSocketId` differs: disconnected or reconnected — a new socket
+ * re-subscribes with its own id, so an old signature would be useless).
  */
 export function withOutageRetry(
   authorize: ChannelAuthorize,
-  options: { attempts?: number; delay?: Delay; isActive?: () => boolean } = {},
+  options: {
+    attempts?: number;
+    delay?: Delay;
+    isActive?: () => boolean;
+    /** pusher-js `connection.socket_id` right now (null / undefined while disconnected). */
+    currentSocketId?: () => string | null | undefined;
+  } = {},
 ): ChannelAuthorize {
   const attempts = options.attempts ?? CHANNEL_AUTH_OUTAGE_ATTEMPTS;
   const delay = options.delay ?? realDelay;
   const isActive = options.isActive ?? (() => true);
+  const currentSocketId = options.currentSocketId;
   return async (socketId, channelName) => {
+    const sameSocket = () => currentSocketId === undefined || currentSocketId() === socketId;
     for (let attempt = 0; ; attempt += 1) {
       try {
         return await authorize(socketId, channelName);
       } catch (error) {
-        if (!isServerOutageError(error) || attempt + 1 >= attempts || !isActive()) throw error;
+        if (!isServerOutageError(error) || attempt + 1 >= attempts || !isActive() || !sameSocket()) throw error;
         await delay(outageRetryDelayMs(attempt, error));
-        if (!isActive()) throw error;
+        if (!isActive() || !sameSocket()) throw error;
       }
     }
   };

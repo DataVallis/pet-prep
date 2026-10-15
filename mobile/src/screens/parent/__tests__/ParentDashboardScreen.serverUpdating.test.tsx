@@ -2,14 +2,15 @@
  * M5-F13: during a deploy the parent dashboard keeps the last data with the calm banner
  * (no red error banner, no logout); a re-subscribed pet channel refetches the dashboard.
  */
-import { act, screen } from '@testing-library/react-native';
+import { act, fireEvent, screen } from '@testing-library/react-native';
 import { useQueryClient } from '@tanstack/react-query';
 
 import { ApiError, api } from '@/api/client';
 import { usePetChannels } from '@/hooks/usePetChannels';
 import { parentDashboardKey } from '@/modules/family/live';
 import { logout } from '@/modules/session/logout';
-import ParentDashboardScreen from '@/screens/parent/ParentDashboardScreen';
+import ParentDashboardScreen, { updatingBannerBottom } from '@/screens/parent/ParentDashboardScreen';
+import { StyleSheet } from 'react-native';
 import { useAppStore } from '@/store/appStore';
 import { useServerStatusStore } from '@/store/serverStatusStore';
 import { makeFamilyPet, makeScoredChild, makeScoredDashboard } from '@/test-utils/fixtures';
@@ -80,6 +81,51 @@ describe('ParentDashboardScreen during a backend deploy (M5-F13)', () => {
       await jest.advanceTimersByTimeAsync(1_000);
     });
     expect(screen.queryByText(SL_BANNER)).toBeNull();
+  });
+
+  it('QA n3: the pill sits above the measured tab bar and the safe area', () => {
+    expect(updatingBannerBottom(0, 34)).toBe(46); // overlay without a tab bar, iPhone home indicator
+    expect(updatingBannerBottom(78, 34)).toBe(90); // tab bar (incl. its own bottom padding)
+    expect(updatingBannerBottom(0, 0)).toBe(12);
+  });
+
+  it('QA n3: the banner bottom follows the tab bar height measured on layout', async () => {
+    getParentDashboard.mockResolvedValue(makeScoredDashboard([makeScoredChild()], [PET7]));
+    useServerStatusStore.getState().noteOutageFailure('maintenance', 15_000);
+    renderWithQuery(<ParentDashboardScreen />);
+    await flush();
+    await act(async () => {
+      fireEvent(screen.getByTestId('parent-tab-bar'), 'layout', { nativeEvent: { layout: { x: 0, y: 0, width: 390, height: 70 } } });
+      await jest.advanceTimersByTimeAsync(0);
+    });
+    const slot = screen.getByTestId('parent-server-updating-slot');
+    expect(StyleSheet.flatten(slot.props.style).bottom).toBe(82);
+  });
+
+  it('QA m3: several pets re-subscribing share one running dashboard fetch (no cancel / restart)', async () => {
+    getParentDashboard.mockResolvedValue(makeScoredDashboard([makeScoredChild()], [PET7]));
+    renderWithQuery(<ParentDashboardScreen />);
+    await flush();
+    const calls = getParentDashboard.mock.calls.length;
+    let release: () => void = () => undefined;
+    getParentDashboard.mockImplementation(
+      () =>
+        new Promise((resolve) => {
+          release = () => resolve(makeScoredDashboard([makeScoredChild()], [PET7]));
+        }),
+    );
+    const onResubscribed = channelsHook.mock.calls.at(-1)?.[2] as (petId: number) => void;
+    await act(async () => {
+      onResubscribed(7);
+      onResubscribed(8);
+      onResubscribed(9);
+      await jest.advanceTimersByTimeAsync(0);
+    });
+    expect(getParentDashboard.mock.calls.length).toBe(calls + 1);
+    await act(async () => {
+      release();
+      await jest.advanceTimersByTimeAsync(0);
+    });
   });
 
   it('passes an onResubscribed handler that refetches the dashboard', async () => {

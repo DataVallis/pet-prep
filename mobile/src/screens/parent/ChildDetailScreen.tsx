@@ -340,7 +340,8 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
           )}
 
           {!data ? (
-            report.isPending ? <LoadingBlock text={S.loading} testID="report-loading" /> : null
+            // M5-F13: no report yet and the server is updating → wait (it loads on recovery), never blank.
+            report.isPending || serverUpdating ? <LoadingBlock text={S.loading} testID="report-loading" /> : null
           ) : data.pet_id === null ? (
             <Card>
               <Text style={styles.muted} testID="report-no-pet">

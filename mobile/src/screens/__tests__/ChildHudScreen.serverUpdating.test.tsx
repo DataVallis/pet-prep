@@ -12,7 +12,7 @@ import { ApiError, api } from '@/api/client';
 import { childPetKey } from '@/hooks/queries/useChildPet';
 import ChildHudScreen, { HUD_STRINGS } from '@/screens/ChildHudScreen';
 import { useAppStore } from '@/store/appStore';
-import { useServerStatusStore } from '@/store/serverStatusStore';
+import { OUTAGE_EXIT_AFTER_MS, useServerStatusStore } from '@/store/serverStatusStore';
 import { makeLiveChildState, makePet } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
@@ -110,6 +110,20 @@ describe('ChildHudScreen during a backend deploy (M5-F13)', () => {
     getChildPet.mockImplementation(healthyAnswer());
     await flush(30_000);
     expect(screen.getByTestId('action-feed')).toBeTruthy();
+  });
+
+  it('QA m4: no state and the outage lasts > 2.5 min → retry + logout exit under the calm text', async () => {
+    getChildPet.mockImplementation(maintenanceAnswer());
+    renderWithQuery(<ChildHudScreen />);
+    await flush(0);
+    expect(screen.getByTestId('hud-updating')).toBeTruthy();
+    expect(screen.queryByTestId('hud-updating-exit')).toBeNull();
+
+    await flush(OUTAGE_EXIT_AFTER_MS);
+    expect(screen.getByTestId('hud-updating-exit')).toBeTruthy();
+    expect(screen.getByTestId('hud-updating-logout')).toBeTruthy();
+    expect(screen.getByText(HUD_STRINGS.retry)).toBeTruthy();
+    expect(screen.getByText(SL_BANNER)).toBeTruthy();
   });
 
   it('a plain network failure (phone offline) keeps the old behaviour: amber stale banner, no updating banner', async () => {

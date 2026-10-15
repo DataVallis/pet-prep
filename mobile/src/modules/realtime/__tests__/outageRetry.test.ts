@@ -60,6 +60,28 @@ describe('withOutageRetry', () => {
     expect(authorize).toHaveBeenCalledTimes(1);
   });
 
+  it('QA m2: stops retrying when the socket that asked disconnected or reconnected (new socket id)', async () => {
+    for (const nowSocket of [null, '9.9']) {
+      let current: string | null = '1.2';
+      const authorize = jest.fn().mockRejectedValue(maintenance());
+      const wrapped = withOutageRetry(authorize, {
+        delay: async () => {
+          current = nowSocket;
+        },
+        currentSocketId: () => current,
+      });
+      await expect(wrapped('1.2', 'private-pet.7')).rejects.toMatchObject({ status: 503 });
+      expect(authorize).toHaveBeenCalledTimes(1);
+    }
+  });
+
+  it('QA m2: keeps retrying while the same socket is connected', async () => {
+    const authorize = jest.fn().mockRejectedValueOnce(maintenance()).mockRejectedValueOnce(maintenance()).mockResolvedValueOnce(SIGNED);
+    const wrapped = withOutageRetry(authorize, { delay: async () => undefined, currentSocketId: () => '1.2' });
+    await expect(wrapped('1.2', 'private-pet.7')).resolves.toEqual(SIGNED);
+    expect(authorize).toHaveBeenCalledTimes(3);
+  });
+
   it('through the pusher-js authorizer: a deploy blip still ends in a signature', async () => {
     const authorize = jest.fn().mockRejectedValueOnce(maintenance()).mockResolvedValueOnce(SIGNED);
     const handler = createChannelAuthorizer(withOutageRetry(authorize, { delay: async () => undefined }));

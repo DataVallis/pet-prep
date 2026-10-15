@@ -7,7 +7,7 @@
  */
 
 import { useEffect, useRef, useState } from 'react';
-import { Animated, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
+import { AccessibilityInfo, Animated, Platform, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 import { RefreshCw } from 'lucide-react-native';
 import { useTranslation } from 'react-i18next';
 
@@ -38,6 +38,12 @@ export default function ServerUpdatingBanner({ tone, style, testID = 'server-upd
   const opacity = useRef(new Animated.Value(outage ? 1 : 0)).current;
   // Stay mounted while fading out.
   const [mounted, setMounted] = useState(outage);
+
+  // QA n2: iOS VoiceOver doesn't read a live region — announce the banner once when it appears
+  // (Android reads `accessibilityLiveRegion`).
+  useEffect(() => {
+    if (outage && Platform.OS === 'ios') AccessibilityInfo.announceForAccessibility?.(SERVER_UPDATING_STRINGS.a11y);
+  }, [outage]);
 
   useEffect(() => {
     if (outage) setMounted(true);
