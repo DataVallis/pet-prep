@@ -29,19 +29,23 @@
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
-      "sha256": "dcb62586106142523a60480fd249a759241feb4ebdd08e0e4209ff9ec9009942"
+      "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
+      "sha256": "608eefb2de429c6fefdb532cf8a8d3cef7b199a35d0bf0e8f24b5aa60dcccbe5"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
-      "sha256": "8300b3f294278b05c880cb838a701ccf713c147ea50dece09aae0983b9bcacd8"
+      "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
+      "sha256": "295307742ea6ebc50157ae832f5bf90bd25d61b79f0703e66414ad9bd82739ec"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
-      "sha256": "49b7850e0f4c196aac26d01fbf1b4bad010d63bb8fd1c15cc1286b299e07aa10"
+      "covers": "breeds.<id> of every register breed",
+      "sha256": "170dd1631a0b778c246115050410db356129d5c9295987d003febec387907e79"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
-      "sha256": "06c017cfba6f722ce7fa0c30ec9c31a5c2e32f784755d2bc889faa33c39d44c5"
+      "covers": "breeds.<id> of every register breed",
+      "sha256": "27bd7189086323d813cd0444bd6b31f213e851fc5782eb16ccda5699017bea39"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",

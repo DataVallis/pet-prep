@@ -171,7 +171,7 @@ describe('breed, config and database', function () {
         $others = collect(BreedStageParamsSeeder::rows())->where('breed_slug', '!=', 'english-cocker-spaniel');
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'english-cocker-spaniel');
 
-        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese', 'west-highland-white-terrier', 'bernese-mountain-dog', 'siberian-husky', 'rottweiler', 'bulldog', 'german-shorthaired-pointer', 'yorkshire-terrier', 'cane-corso', 'pembroke-welsh-corgi', 'dobermann', 'boxer', 'miniature-schnauzer', 'shih-tzu', 'great-dane', 'pomeranian', 'boston-terrier', 'miniature-american-shepherd', 'chihuahua', 'english-springer-spaniel', 'shetland-sheepdog', 'brittany', 'american-cocker-spaniel', 'belgian-malinois', 'basset-hound', 'hungarian-vizsla'])
+        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(breedSlugsOf(Species::Dog, 'english-cocker-spaniel'))
             ->and($others->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_ENGLISH_COCKER_SPANIEL)->all())->toBe([]);
         // Every other R10 decision constant, found by reflection, is absent from the English Cocker Spaniel's rows.
         $constants = collect((new ReflectionClass(BreedStageParamsSeeder::class))->getConstants())
@@ -415,16 +415,17 @@ describe('GET /api/breeds', function () {
 
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla', 'english_cocker_spaniel'])
-            ->and(collect($breeds[37])->except('colours')->all())->toBe([
-                'breed' => 'english_cocker_spaniel', 'slug' => 'english-cocker-spaniel', 'species' => 'dog', 'premium' => true,
-                'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.english_cocker_spaniel',
-                'search_keywords' => BreedConfigsSeeder::configs()[37]['search_keywords'], 'sort_order' => 370,
-                'suitability' => [
-                    'suits' => ['family_pet', 'children', 'other_pets'],
-                    'consider' => ['frequent_grooming', 'food_motivated_weight', 'chews_when_bored', 'needs_company', 'sheds'],
-                ],
-            ]);
+        $i = expectListedAfter($breeds, 'english_cocker_spaniel', 'hungarian_vizsla');
+
+        expect(collect($breeds[$i])->except('colours')->all())->toBe([
+            'breed' => 'english_cocker_spaniel', 'slug' => 'english-cocker-spaniel', 'species' => 'dog', 'premium' => true,
+            'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.english_cocker_spaniel',
+            'search_keywords' => seededBreedConfig('english_cocker_spaniel')['search_keywords'], 'sort_order' => 370,
+            'suitability' => [
+                'suits' => ['family_pet', 'children', 'other_pets'],
+                'consider' => ['frequent_grooming', 'food_motivated_weight', 'chews_when_bored', 'needs_company', 'sheds'],
+            ],
+        ]);
     });
 });
 
@@ -499,5 +500,24 @@ describe('no health statistics in the app; no welfare chip (Breed Watch Category
             ->and(ecsData('proposed_game_parameters.english_cocker_spaniel.marketing.value'))->toContain('in marketing: yes')
             // The RKC / VCA lower bounds (senior 90 / 108) are alternatives only — never a seeded value.
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'english-cocker-spaniel')->where('key', StageParamKey::StartsAtMonths->value)->pluck('value')->all())->not->toContain(90)->not->toContain(108);
+    });
+});
+
+describe('suitability tags (own file, runbook "Own files only")', function () {
+    it('gives the English Cocker Spaniel family_pet / children / other_pets and no welfare chip (Breed Watch Category 1) — daily brushing, food-motivated, chews when bored (runbook 2026-10-15)', function () {
+        $ecs = app(BreedSuitability::class)->for(BreedType::EnglishCockerSpaniel);
+        expect($ecs['suits'])->toBe(['family_pet', 'children', 'other_pets'])
+            // RKC "Small house" (not "Flat/ Apartment"), RKC "Up to 1 hour per day"; supervision caveat → no small_children.
+            ->and($ecs['suits'])->not->toContain('small_children')->not->toContain('apartment')->not->toContain('large_home')
+            ->not->toContain('active_family')->not->toContain('first_time_owner')->not->toContain('low_shedding')
+            ->and($ecs['consider'])->toBe(['frequent_grooming', 'food_motivated_weight', 'chews_when_bored', 'needs_company', 'sheds'])
+            // Breed Watch Category 1 → no welfare chip; PDSA "don't have a high prey drive"; 60 min a day.
+            ->and($ecs['consider'])->not->toContain('chases_small_pets')->not->toContain('long_daily_exercise')
+            ->not->toContain('sensitive_skin')->not->toContain('shorter_lifespan')->not->toContain('hips_hind_legs');
+
+        expect(ecsData('english_cocker_spaniel.suitability.rkc_grooming.quote'))->toBe('Grooming: Every day')
+            ->and(ecsData('english_cocker_spaniel.behaviour.chewing.quote'))->toBe('Without the right amount of stimulation and company, your Cocker Spaniel will likely try to entertain themselves –')
+            ->and(ecsData('english_cocker_spaniel.suitability.rkc_size_of_home.quote'))->toBe('Size of home: Small house')
+            ->and(ecsData('english_cocker_spaniel.suitability.rkc_breed_watch.value'))->toBe('Category 1');
     });
 });

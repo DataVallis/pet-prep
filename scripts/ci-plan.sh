@@ -151,6 +151,7 @@ classify() {
       deployment/*) need_backend=true need_deploy=true need_scripts=true ;;
       scripts/generate-api-types.mjs) need_mobile=true ;;
       scripts/export-breed-registry.mjs|scripts/tests/export-breed-registry.test.mjs) need_scripts=true ;; # website export, nothing ships
+      scripts/breeds-index.mjs|scripts/tests/breeds-index.test.mjs|docs/breeds/*) need_scripts=true ;; # docs/breeds index (one doc per breed), nothing ships
       scripts/*) need_backend=true need_deploy=true need_scripts=true ;;
       mobile/src/i18n/locales/*/pet.json|mobile/src/i18n/locales/*/family.json) need_mobile=true need_scripts=true ;; # + breed registry labels / names
       mobile/*) need_mobile=true ;;

@@ -13,6 +13,7 @@
  */
 import { NAMESPACES, resources } from '@/i18n/resources';
 import i18n, { tPets, tSpecies } from '@/i18n';
+import { BREED_SPECIES, isKnownBreed } from '@/modules/species/species';
 
 type Tree = { [key: string]: string | Tree };
 type Lang = 'en' | 'sl';
@@ -74,7 +75,6 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'pet:picker.ageHints.miniature_schnauzer': 'the Miniature Schnauzer is a dog breed (M5-R10-27)',
   'pet:picker.ageHints.shih_tzu': 'the Shih Tzu is a dog breed (M5-R10-28)',
   'pet:picker.ageHints.basset_hound': 'the Basset Hound is a dog breed (M5-R10-39)',
-  'pet:picker.ageHints.english_cocker_spaniel': 'the English Cocker Spaniel is a dog breed (M5-R10-41)',
   'pet:breedSuitability.consider.experienced_owner': 'chip of a dog breed only (Rottweiler, PDSA "powerful dog", M5-R10-19)',
   'pet:breedSuitability.consider.not_for_small_children': 'chip of a dog breed only (Cane Corso, PDSA "large dog", M5-R10-23)',
   'pet:breedSuitability.consider.older_children': 'chip of a dog breed only (Pomeranian, AKC "small dog", M5-R10-30)',
@@ -138,9 +138,17 @@ function hasCatVariant(lang: Lang, key: string): boolean {
   return false;
 }
 
+/**
+ * A dog breed's own texts (its picker hints, its name) are dog-only by rule — read from
+ * BREED_SPECIES, so a new breed run never edits DOG_ONLY (David 2026-10-15).
+ */
+const DOG_BREED_KEY = /^(pet:picker\.ageHints|pet:picker\.breedHints|family:breeds)\.([a-z_]+)(\.|$)/;
+
 function dogOnlyReason(key: string): string | undefined {
   const entry = Object.keys(DOG_ONLY).find((prefix) => key === prefix || key.startsWith(`${prefix}.`) || key.startsWith(`${prefix}:`));
-  return entry === undefined ? undefined : DOG_ONLY[entry];
+  if (entry !== undefined) return DOG_ONLY[entry];
+  const breed = DOG_BREED_KEY.exec(key)?.[2];
+  return breed !== undefined && isKnownBreed(breed) && BREED_SPECIES[breed] === 'dog' ? 'a dog breed\'s own text (picker hint / breed name)' : undefined;
 }
 
 /** Every `<ns>:<baseKey>` of the checked namespaces whose text (any language, any plural form) names a dog. */

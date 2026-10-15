@@ -171,7 +171,7 @@ describe('breed, config and database', function () {
         $others = collect(BreedStageParamsSeeder::rows())->where('breed_slug', '!=', 'belgian-malinois');
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'belgian-malinois');
 
-        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese', 'west-highland-white-terrier', 'bernese-mountain-dog', 'siberian-husky', 'rottweiler', 'bulldog', 'german-shorthaired-pointer', 'yorkshire-terrier', 'cane-corso', 'pembroke-welsh-corgi', 'dobermann', 'boxer', 'miniature-schnauzer', 'shih-tzu', 'great-dane', 'pomeranian', 'boston-terrier', 'miniature-american-shepherd', 'chihuahua', 'english-springer-spaniel', 'shetland-sheepdog', 'brittany', 'american-cocker-spaniel', 'basset-hound', 'hungarian-vizsla', 'english-cocker-spaniel'])
+        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(breedSlugsOf(Species::Dog, 'belgian-malinois'))
             ->and($others->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_BELGIAN_MALINOIS)->all())->toBe([]);
         // Every other R10 decision constant, found by reflection, is absent from the Belgian Malinois's rows.
         $constants = collect((new ReflectionClass(BreedStageParamsSeeder::class))->getConstants())
@@ -408,16 +408,17 @@ describe('GET /api/breeds', function () {
 
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla', 'english_cocker_spaniel'])
-            ->and(collect($breeds[34])->except('colours')->all())->toBe([
-                'breed' => 'belgian_malinois', 'slug' => 'belgian-malinois', 'species' => 'dog', 'premium' => true,
-                'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.belgian_malinois',
-                'search_keywords' => BreedConfigsSeeder::configs()[34]['search_keywords'], 'sort_order' => 340,
-                'suitability' => [
-                    'suits' => ['active_family', 'large_home'],
-                    'consider' => ['long_daily_exercise', 'experienced_owner', 'not_for_small_children', 'may_herd_children', 'needs_mental_stimulation', 'needs_company', 'sheds', 'chases_small_pets'],
-                ],
-            ]);
+        $i = expectListedAfter($breeds, 'belgian_malinois', 'american_cocker_spaniel');
+
+        expect(collect($breeds[$i])->except('colours')->all())->toBe([
+            'breed' => 'belgian_malinois', 'slug' => 'belgian-malinois', 'species' => 'dog', 'premium' => true,
+            'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.belgian_malinois',
+            'search_keywords' => seededBreedConfig('belgian_malinois')['search_keywords'], 'sort_order' => 340,
+            'suitability' => [
+                'suits' => ['active_family', 'large_home'],
+                'consider' => ['long_daily_exercise', 'experienced_owner', 'not_for_small_children', 'may_herd_children', 'needs_mental_stimulation', 'needs_company', 'sheds', 'chases_small_pets'],
+            ],
+        ]);
     });
 });
 

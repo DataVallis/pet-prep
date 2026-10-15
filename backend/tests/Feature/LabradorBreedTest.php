@@ -327,25 +327,26 @@ describe('GET /api/breeds', function () {
 
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla', 'english_cocker_spaniel'])
-            ->and($breeds[2])->toBe([
-                'breed' => 'labrador_retriever', 'slug' => 'labrador-retriever', 'species' => 'dog', 'premium' => true,
-                'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.labrador_retriever',
-                'search_keywords' => BreedConfigsSeeder::configs()[2]['search_keywords'], 'sort_order' => 20,
-                'suitability' => [
-                    'suits' => ['active_family', 'family_pet', 'large_home', 'other_pets'],
-                    'consider' => ['sheds', 'long_daily_exercise', 'food_motivated_weight'],
-                ],
-                // M5-R21: the colour picker (standard colours, labels in the request language).
-                'colours' => [
-                    ['key' => 'black', 'label' => 'Black'],
-                    ['key' => 'yellow', 'label' => 'Yellow'],
-                    ['key' => 'light-cream', 'label' => 'Light cream'],
-                    ['key' => 'fox-red', 'label' => 'Fox red'],
-                    ['key' => 'chocolate', 'label' => 'Chocolate'],
-                    ['key' => 'light-liver', 'label' => 'Light liver'],
-                ],
-            ])
+        $i = expectListedAfter($breeds, 'labrador_retriever', 'border_collie');
+
+        expect($breeds[$i])->toBe([
+            'breed' => 'labrador_retriever', 'slug' => 'labrador-retriever', 'species' => 'dog', 'premium' => true,
+            'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.labrador_retriever',
+            'search_keywords' => seededBreedConfig('labrador_retriever')['search_keywords'], 'sort_order' => 20,
+            'suitability' => [
+                'suits' => ['active_family', 'family_pet', 'large_home', 'other_pets'],
+                'consider' => ['sheds', 'long_daily_exercise', 'food_motivated_weight'],
+            ],
+            // M5-R21: the colour picker (standard colours, labels in the request language).
+            'colours' => [
+                ['key' => 'black', 'label' => 'Black'],
+                ['key' => 'yellow', 'label' => 'Yellow'],
+                ['key' => 'light-cream', 'label' => 'Light cream'],
+                ['key' => 'fox-red', 'label' => 'Fox red'],
+                ['key' => 'chocolate', 'label' => 'Chocolate'],
+                ['key' => 'light-liver', 'label' => 'Light liver'],
+            ],
+        ])
             ->and($breeds[0]['suitability'])->toBe(['suits' => [], 'consider' => []]);
     });
 });

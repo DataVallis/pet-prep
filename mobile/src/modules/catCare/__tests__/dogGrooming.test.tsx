@@ -15,7 +15,7 @@ import { isDogGrooming } from '@/modules/catCare/dogGrooming';
 import { normalizeChildState, type ChildPetView } from '@/modules/childPet/childPetView';
 import { contractBody } from '@/modules/contract/contractText';
 import { activityText, reportRoutineTypes, type RoutineType, type TypeTotals } from '@/modules/family/scoring';
-import { GROOMING_DOG_BREEDS, hasGroomingRoutine } from '@/modules/species/species';
+import { BREED_SPECIES, GROOMING_DOG_BREEDS, hasGroomingRoutine, KNOWN_BREEDS } from '@/modules/species/species';
 import { i18n, t } from '@/i18n';
 import { useAppStore } from '@/store/appStore';
 import { makeChoreSession, makeGroomingState, makeLiveChildState, makePet } from '@/test-utils/fixtures';
@@ -190,7 +190,8 @@ describe('texts per species', () => {
 
 describe('breeds and build features', () => {
   it('every brushed dog breed has a routine; the mutt and the Border Collie have none', () => {
-    expect(GROOMING_DOG_BREEDS).toHaveLength(36);
+    // Every dog of this build except the mutt and the Border Collie (read from BREED_SPECIES — a new breed run needs no edit here).
+    expect(GROOMING_DOG_BREEDS).toHaveLength(KNOWN_BREEDS.filter((b) => BREED_SPECIES[b] === 'dog').length - 2);
     for (const breed of GROOMING_DOG_BREEDS) expect(hasGroomingRoutine(breed)).toBe(true);
     expect(hasGroomingRoutine('mutt')).toBe(false);
     expect(hasGroomingRoutine('border_collie')).toBe(false);

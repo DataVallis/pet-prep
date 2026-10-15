@@ -57,6 +57,41 @@ test('export is deterministic and the committed file is up to date', () => {
   assert.equal(readFileSync(resolve(ROOT, DEFAULT_OUT), 'utf8'), a, `${DEFAULT_OUT} is stale — run: node scripts/export-breed-registry.mjs`);
 });
 
+test('i18n inputs: only the strings the export reads are hashed (an unrelated app string never makes the register stale)', () => {
+  const texts = readInputs();
+  const base = JSON.stringify(buildRegistry(texts));
+  const edit = (key, fn) => {
+    const json = JSON.parse(texts[key]);
+    fn(json);
+    return { ...texts, [key]: JSON.stringify(json, null, 4) };
+  };
+
+  // Unrelated keys and reformatting / key order change nothing.
+  for (const key of ['labels_en', 'labels_sl', 'family_en', 'family_sl']) {
+    assert.equal(JSON.stringify(buildRegistry(edit(key, (j) => (j.__unrelated_test_key = 'any new app text')))), base, key);
+    assert.equal(registry.inputs[key].path, INPUTS[key]);
+    assert.match(registry.inputs[key].covers, /\S/);
+    assert.match(registry.inputs[key].sha256, /^[0-9a-f]{64}$/);
+  }
+  // A breed name of another app screen (not in the register) changes nothing either.
+  assert.equal(JSON.stringify(buildRegistry(edit('family_en', (j) => (j.breeds.__not_a_breed = 'X')))), base);
+
+  // A string the export reads changes the hash (and the exported value).
+  const tag = registry.suitability_vocabulary ? Object.keys(registry.suitability_labels.en.tags)[0] : null;
+  assert.ok(tag);
+  const relabelled = buildRegistry(
+    edit('labels_en', (j) => {
+      for (const kind of Object.values(j.breedSuitability)) if (kind && typeof kind === 'object' && tag in kind) kind[tag] = 'Changed label';
+    }),
+  );
+  assert.notEqual(relabelled.inputs.labels_en.sha256, registry.inputs.labels_en.sha256);
+  assert.equal(relabelled.suitability_labels.en.tags[tag], 'Changed label');
+  const renamed = buildRegistry(edit('family_sl', (j) => (j.breeds.beagle = 'Bigl (test)')));
+  assert.notEqual(renamed.inputs.family_sl.sha256, registry.inputs.family_sl.sha256);
+  // Data inputs keep the whole-file hash.
+  assert.equal(registry.inputs.dog_data.covers, undefined);
+});
+
 test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(registry.species.map((s) => s.id), ['dog', 'cat']);
   for (const sp of registry.species) {

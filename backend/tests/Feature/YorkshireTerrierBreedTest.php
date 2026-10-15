@@ -169,7 +169,7 @@ describe('breed, config and database', function () {
         $others = collect(BreedStageParamsSeeder::rows())->where('breed_slug', '!=', 'yorkshire-terrier');
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'yorkshire-terrier');
 
-        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese', 'west-highland-white-terrier', 'bernese-mountain-dog', 'siberian-husky', 'rottweiler', 'bulldog', 'german-shorthaired-pointer', 'cane-corso', 'pembroke-welsh-corgi', 'dobermann', 'boxer', 'miniature-schnauzer', 'shih-tzu', 'great-dane', 'pomeranian', 'boston-terrier', 'miniature-american-shepherd', 'chihuahua', 'english-springer-spaniel', 'shetland-sheepdog', 'brittany', 'american-cocker-spaniel', 'belgian-malinois', 'basset-hound', 'hungarian-vizsla', 'english-cocker-spaniel'])
+        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(breedSlugsOf(Species::Dog, 'yorkshire-terrier'))
             ->and($others->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_YORKSHIRE_TERRIER)->all())->toBe([]);
         // Every other R10 decision constant, found by reflection, is absent from the Yorkshire Terrier's rows.
         $constants = collect((new ReflectionClass(BreedStageParamsSeeder::class))->getConstants())
@@ -377,16 +377,17 @@ describe('GET /api/breeds', function () {
 
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla', 'english_cocker_spaniel'])
-            ->and(collect($breeds[18])->except('colours')->all())->toBe([
-                'breed' => 'yorkshire_terrier', 'slug' => 'yorkshire-terrier', 'species' => 'dog', 'premium' => true,
-                'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.yorkshire_terrier',
-                'search_keywords' => BreedConfigsSeeder::configs()[18]['search_keywords'], 'sort_order' => 180,
-                'suitability' => [
-                    'suits' => ['apartment', 'low_shedding'],
-                    'consider' => ['fragile_older_children', 'frequent_grooming'],
-                ],
-            ]);
+        $i = expectListedAfter($breeds, 'yorkshire_terrier', 'german_shorthaired_pointer');
+
+        expect(collect($breeds[$i])->except('colours')->all())->toBe([
+            'breed' => 'yorkshire_terrier', 'slug' => 'yorkshire-terrier', 'species' => 'dog', 'premium' => true,
+            'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.yorkshire_terrier',
+            'search_keywords' => seededBreedConfig('yorkshire_terrier')['search_keywords'], 'sort_order' => 180,
+            'suitability' => [
+                'suits' => ['apartment', 'low_shedding'],
+                'consider' => ['fragile_older_children', 'frequent_grooming'],
+            ],
+        ]);
     });
 });
 

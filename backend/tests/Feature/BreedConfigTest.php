@@ -1,5 +1,7 @@
 <?php
 
+use App\Enums\BreedType;
+use App\Enums\Species;
 use App\Filament\Resources\BreedConfigResource\Pages\CreateBreedConfig;
 use App\Filament\Resources\BreedConfigResource\Pages\EditBreedConfig;
 use App\Filament\Resources\BreedConfigResource\Pages\ListBreedConfigs;
@@ -57,6 +59,27 @@ describe('BreedConfigsSeeder', function () {
         ])->toBe([10000, 12.0, 15.0, 2, [['06:00', '10:00'], ['17:00', '21:00']], 3, 180, true]);
     });
 
+    it('has exactly one row per enum breed, one free breed per species and a unique sort_order per species (every breed, read from code)', function () {
+        $configs = collect(BreedConfigsSeeder::configs());
+
+        // Every breed the app knows is seeded, nothing else: a new breed run is covered automatically.
+        expect($configs->pluck('breed_slug')->sort()->values()->all())
+            ->toBe(collect(BreedType::cases())->map(fn (BreedType $b) => $b->slug())->sort()->values()->all());
+
+        foreach (Species::cases() as $species) {
+            $rows = $configs->filter(fn (array $c) => BreedType::fromSlug($c['breed_slug'])?->species() === $species);
+            $sorts = $rows->pluck('sort_order')->all();
+
+            expect($rows->where('premium_unlock', false)->count())->toBe(1, "{$species->value}: exactly one free breed")
+                ->and(array_unique($sorts))->toBe($sorts, "{$species->value}: sort_order is unique")
+                // The catalogue order is the enum order (new breeds append with a higher sort_order).
+                ->and(seededCatalogueOrder([$species]))->toBe(array_map(fn (BreedType $b) => $b->value, BreedType::forSpecies($species)));
+            foreach ($rows as $row) {
+                expect(BreedType::fromSlug($row['breed_slug'])->defaultPremium())->toBe((bool) $row['premium_unlock'], $row['breed_slug']);
+            }
+        }
+    });
+
     it('is insert-only: never overwrites an existing breed, only adds missing ones', function () {
         seedBreedConfigs();
         $createdAt = BreedConfig::where('breed_slug', 'mutt')->firstOrFail()->getRawOriginal('created_at');
@@ -66,8 +89,8 @@ describe('BreedConfigsSeeder', function () {
         Carbon::setTestNow('2026-10-06 07:00:00');
         (new BreedConfigsSeeder)->run();
 
-        // 37 paid dogs + the mutt (M5-R10 Labrador, M5-R10-02 Golden, M5-R10-03 French Bulldog, M5-R10-04 German Shepherd, M5-R10-05 Cavalier, M5-R10-06 Beagle, M5-R10-07 Standard Poodle, M5-R10-08 Dachshund, M5-R10-09 Australian Shepherd, M5-R10-10 Havanese, M5-R10-11 West Highland White Terrier, M5-R10-12 Bernese Mountain Dog, M5-R10-13 Siberian Husky, M5-R10-19 Rottweiler, M5-R10-20 Bulldog, M5-R10-21 German Shorthaired Pointer, M5-R10-22 Yorkshire Terrier, M5-R10-23 Cane Corso, M5-R10-24 Pembroke Welsh Corgi, M5-R10-25 Dobermann, M5-R10-26 Boxer, M5-R10-27 Miniature Schnauzer, M5-R10-28 Shih Tzu, M5-R10-29 Great Dane, M5-R10-30 Pomeranian, M5-R10-31 Boston Terrier, M5-R10-32 Miniature American Shepherd, M5-R10-33 Chihuahua, M5-R10-34 English Springer Spaniel, M5-R10-35 Shetland Sheepdog, M5-R10-36 Brittany, M5-R10-37 American Cocker Spaniel, M5-R10-38 Belgian Malinois, M5-R10-39 Basset Hound, M5-R10-40 Hungarian Vizsla, M5-R10-41 English Cocker Spaniel) + 7 cats (M5-R06-01; M5-R10-14 British Shorthair, M5-R10-15 Ragdoll, M5-R10-16 Siberian, M5-R10-17 Norwegian Forest Cat, M5-R10-18 Bengal).
-        expect(BreedConfig::count())->toBe(45);
+        // One row per BreedType (read from code — a new breed run needs no edit here, David 2026-10-15).
+        expect(BreedConfig::count())->toBe(count(BreedType::cases()));
         $mutt = BreedConfig::where('breed_slug', 'mutt')->firstOrFail();
         expect($mutt->thirst_decay_rate)->toBe(99.0);
         expect(BreedConfig::where('breed_slug', 'border-collie')->firstOrFail()->thirst_decay_rate)->toBe(15.0);

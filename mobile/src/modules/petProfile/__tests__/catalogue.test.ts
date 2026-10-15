@@ -24,6 +24,10 @@ import {
   SUITS_TAGS,
   type BreedCatalogue,
 } from '@/modules/petProfile/picker';
+import { BREED_SPECIES, KNOWN_BREEDS } from '@/modules/species/species';
+
+/** Every dog breed of this build in catalogue order (from BREED_SPECIES — never typed out, David 2026-10-15). */
+const ALL_DOGS = KNOWN_BREEDS.filter((b) => BREED_SPECIES[b] === 'dog');
 
 function entry(breed: string, species: string, premium: boolean, sort_order = 0, keywords: string[] = []) {
   return {
@@ -114,46 +118,7 @@ describe('readBreedCatalogue', () => {
 
   it('the fallback is today’s seeded dogs (M5-R10: + Labrador, sort 20; M5-R10-02: + Golden, sort 30; M5-R10-03: + French Bulldog, sort 40; M5-R10-04: + German Shepherd, sort 50; M5-R10-05: + Cavalier, sort 60; M5-R10-06: + Beagle, sort 70; M5-R10-07: + Standard Poodle, sort 80; M5-R10-08: + Dachshund, sort 90; M5-R10-09: + Australian Shepherd, sort 100; M5-R10-10: + Havanese, sort 110; M5-R10-11: + West Highland White Terrier, sort 120; M5-R10-12: + Bernese Mountain Dog, sort 130; M5-R10-13: + Siberian Husky, sort 140; M5-R10-19: + Rottweiler, sort 150; M5-R10-20: + Bulldog, sort 160; M5-R10-21: + German Shorthaired Pointer, sort 170; M5-R10-22: + Yorkshire Terrier, sort 180; M5-R10-23: + Cane Corso, sort 190; M5-R10-24: + Pembroke Welsh Corgi, sort 200; M5-R10-25: + Dobermann, sort 210; M5-R10-26: + Boxer, sort 220; M5-R10-27: + Miniature Schnauzer, sort 230; M5-R10-28: + Shih Tzu, sort 240), never a cat', () => {
     expect(FALLBACK_CATALOGUE.species).toEqual(['dog']);
-    expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual([
-      'mutt',
-      'border_collie',
-      'labrador_retriever',
-      'golden_retriever',
-      'french_bulldog',
-      'german_shepherd',
-      'cavalier_king_charles_spaniel',
-      'beagle',
-      'standard_poodle',
-      'dachshund',
-      'australian_shepherd',
-      'havanese',
-      'west_highland_white_terrier',
-      'bernese_mountain_dog',
-      'siberian_husky',
-      'rottweiler',
-      'bulldog',
-      'german_shorthaired_pointer',
-      'yorkshire_terrier',
-      'cane_corso',
-      'pembroke_welsh_corgi',
-      'dobermann',
-      'boxer',
-      'miniature_schnauzer',
-      'shih_tzu',
-      'great_dane',
-      'pomeranian',
-      'boston_terrier',
-      'miniature_american_shepherd',
-      'chihuahua',
-      'english_springer_spaniel',
-      'shetland_sheepdog',
-      'brittany',
-      'american_cocker_spaniel',
-      'belgian_malinois',
-      'basset_hound',
-      'hungarian_vizsla',
-      'english_cocker_spaniel',
-    ]);
+    expect(FALLBACK_CATALOGUE.breeds.map((b) => b.breed)).toEqual(ALL_DOGS);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
     expect(lab).toEqual(
@@ -430,14 +395,6 @@ describe('readBreedCatalogue', () => {
       suits: ['family_pet', 'children', 'large_home'],
       consider: ['eyelid_problems', 'sensitive_skin', 'food_motivated_weight', 'needs_company', 'sheds', 'drools'],
     });
-    const ecs = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'english_cocker_spaniel');
-    expect(ecs).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 370 }));
-    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-41, runbook rules; no new tag).
-    expect(ecs?.search_keywords).toEqual(['english cocker spaniel', 'angleški koker španjel', 'angleski koker spanjel', 'english cocker', 'angleški koker', 'angleski koker', 'cocker spaniel', 'koker španjel', 'koker spanjel', 'merry cocker']);
-    expect(ecs?.suitability).toEqual({
-      suits: ['family_pet', 'children', 'other_pets'],
-      consider: ['frequent_grooming', 'food_motivated_weight', 'chews_when_bored', 'needs_company', 'sheds'],
-    });
     const hv = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'hungarian_vizsla');
     expect(hv).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 360 }));
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-40, runbook rules; no new tag).
@@ -466,46 +423,7 @@ describe('readBreedCatalogue', () => {
     });
     expect(FALLBACK_CATALOGUE.breeds[0].suitability).toEqual({ suits: [], consider: [] });
     // The fallback is already in picker order.
-    expect(readBreedCatalogue(FALLBACK_CATALOGUE)?.breeds.map((b) => b.breed)).toEqual([
-      'mutt',
-      'border_collie',
-      'labrador_retriever',
-      'golden_retriever',
-      'french_bulldog',
-      'german_shepherd',
-      'cavalier_king_charles_spaniel',
-      'beagle',
-      'standard_poodle',
-      'dachshund',
-      'australian_shepherd',
-      'havanese',
-      'west_highland_white_terrier',
-      'bernese_mountain_dog',
-      'siberian_husky',
-      'rottweiler',
-      'bulldog',
-      'german_shorthaired_pointer',
-      'yorkshire_terrier',
-      'cane_corso',
-      'pembroke_welsh_corgi',
-      'dobermann',
-      'boxer',
-      'miniature_schnauzer',
-      'shih_tzu',
-      'great_dane',
-      'pomeranian',
-      'boston_terrier',
-      'miniature_american_shepherd',
-      'chihuahua',
-      'english_springer_spaniel',
-      'shetland_sheepdog',
-      'brittany',
-      'american_cocker_spaniel',
-      'belgian_malinois',
-      'basset_hound',
-      'hungarian_vizsla',
-      'english_cocker_spaniel',
-    ]);
+    expect(readBreedCatalogue(FALLBACK_CATALOGUE)?.breeds.map((b) => b.breed)).toEqual(ALL_DOGS);
   });
 });
 
@@ -688,17 +606,6 @@ describe('breed search', () => {
     expect(find('Bretonski ptičar')).toEqual(['brittany']);
     expect(find('bretonski pticar')).toEqual(['brittany']);
     expect(find('epagneul breton')).toEqual(['brittany']);
-  });
-
-  it('M5-R10-41: finds the English Cocker Spaniel by its EN / SL names, with and without the carons — never mixed up with the American Cocker', () => {
-    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
-    expect(find('English Cocker Spaniel')).toEqual(['english_cocker_spaniel']);
-    expect(find('Angleški koker španjel')).toEqual(['english_cocker_spaniel']);
-    expect(find('angleski koker spanjel')).toEqual(['english_cocker_spaniel']);
-    expect(find('english cocker')).toEqual(['english_cocker_spaniel']);
-    expect(find('merry cocker')).toEqual(['english_cocker_spaniel']);
-    // "american cocker" stays the American breed only.
-    expect(find('american cocker')).toEqual(['american_cocker_spaniel']);
   });
 
   it('M5-R10-40: finds the Hungarian Vizsla by its EN / SL names, with and without the carons, and as "vizsla" / "vižla"', () => {

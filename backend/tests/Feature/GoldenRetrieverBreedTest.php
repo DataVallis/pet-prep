@@ -334,16 +334,17 @@ describe('GET /api/breeds', function () {
 
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla', 'english_cocker_spaniel'])
-            ->and(collect($breeds[3])->except('colours')->all())->toBe([
-                'breed' => 'golden_retriever', 'slug' => 'golden-retriever', 'species' => 'dog', 'premium' => true,
-                'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.golden_retriever',
-                'search_keywords' => BreedConfigsSeeder::configs()[3]['search_keywords'], 'sort_order' => 30,
-                'suitability' => [
-                    'suits' => ['active_family', 'family_pet', 'children', 'first_time_owner', 'large_home', 'other_pets'],
-                    'consider' => ['long_daily_exercise', 'sheds', 'food_motivated_weight', 'frequent_grooming'],
-                ],
-            ])
+        $i = expectListedAfter($breeds, 'golden_retriever', 'labrador_retriever');
+
+        expect(collect($breeds[$i])->except('colours')->all())->toBe([
+            'breed' => 'golden_retriever', 'slug' => 'golden-retriever', 'species' => 'dog', 'premium' => true,
+            'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.golden_retriever',
+            'search_keywords' => seededBreedConfig('golden_retriever')['search_keywords'], 'sort_order' => 30,
+            'suitability' => [
+                'suits' => ['active_family', 'family_pet', 'children', 'first_time_owner', 'large_home', 'other_pets'],
+                'consider' => ['long_daily_exercise', 'sheds', 'food_motivated_weight', 'frequent_grooming'],
+            ],
+        ])
             ->and($breeds[0]['suitability'])->toBe(['suits' => [], 'consider' => []]);
     });
 });

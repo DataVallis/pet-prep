@@ -163,7 +163,7 @@ describe('breed, config and database', function () {
     it('leaves every other breed\'s seeded rows untouched', function () {
         $others = collect(BreedStageParamsSeeder::rows())->where('breed_slug', '!=', 'french-bulldog');
 
-        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'poodle-standard', 'dachshund', 'australian-shepherd', 'havanese', 'west-highland-white-terrier', 'bernese-mountain-dog', 'siberian-husky', 'rottweiler', 'bulldog', 'german-shorthaired-pointer', 'yorkshire-terrier', 'cane-corso', 'pembroke-welsh-corgi', 'dobermann', 'boxer', 'miniature-schnauzer', 'shih-tzu', 'great-dane', 'pomeranian', 'boston-terrier', 'miniature-american-shepherd', 'chihuahua', 'english-springer-spaniel', 'shetland-sheepdog', 'brittany', 'american-cocker-spaniel', 'belgian-malinois', 'basset-hound', 'hungarian-vizsla', 'english-cocker-spaniel'])
+        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(breedSlugsOf(Species::Dog, 'french-bulldog'))
             ->and($others->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_FRENCH_BULLDOG)->all())->toBe([])
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'french-bulldog')->where('decision', BreedStageParamsSeeder::CONFIRMED_R10)->all())->toBe([]);
     });
@@ -355,16 +355,17 @@ describe('GET /api/breeds', function () {
 
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla', 'english_cocker_spaniel'])
-            ->and(collect($breeds[4])->except('colours')->all())->toBe([
-                'breed' => 'french_bulldog', 'slug' => 'french-bulldog', 'species' => 'dog', 'premium' => true,
-                'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.french_bulldog',
-                'search_keywords' => BreedConfigsSeeder::configs()[4]['search_keywords'], 'sort_order' => 40,
-                'suitability' => [
-                    'suits' => ['apartment', 'family_pet', 'children'],
-                    'consider' => ['brachycephalic_breathing', 'chases_small_pets'],
-                ],
-            ]);
+        $i = expectListedAfter($breeds, 'french_bulldog', 'golden_retriever');
+
+        expect(collect($breeds[$i])->except('colours')->all())->toBe([
+            'breed' => 'french_bulldog', 'slug' => 'french-bulldog', 'species' => 'dog', 'premium' => true,
+            'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.french_bulldog',
+            'search_keywords' => seededBreedConfig('french_bulldog')['search_keywords'], 'sort_order' => 40,
+            'suitability' => [
+                'suits' => ['apartment', 'family_pet', 'children'],
+                'consider' => ['brachycephalic_breathing', 'chases_small_pets'],
+            ],
+        ]);
     });
 });
 

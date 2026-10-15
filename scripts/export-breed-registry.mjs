@@ -39,7 +39,9 @@
  *  - GAME values come from a recorded David decision (`decision`) or a sourced value; dog step
  *    goals are minutes × steps per minute and checked against data.json; the test compares
  *    every game number with BreedStageParamsSeeder::rows() / catRows() when PHP is available;
- *  - deterministic output: fixed order, no timestamps; `inputs` holds SHA-256 of every input.
+ *  - deterministic output: fixed order, no timestamps; `inputs` holds SHA-256 of every input —
+ *    for the app's i18n files (pet.json / family.json) only of the part the export reads (`covers`),
+ *    so an unrelated app string never makes the committed register stale (David 2026-10-15).
  *
  * Where each game number comes from (data.json paths):
  *  dogs  steps per minute ......... dog general_by_size.exercise.steps_conversion (S45)
@@ -1957,6 +1959,18 @@ function readInput(root, rel) {
   return readFileSync(resolve(root, rel), 'utf8');
 }
 
+/** JSON with object keys sorted (stable hash of the data the export reads, whatever the file's key order). */
+export function stableJson(value) {
+  if (Array.isArray(value)) return `[${value.map(stableJson).join(',')}]`;
+  if (value && typeof value === 'object') {
+    return `{${Object.keys(value)
+      .sort()
+      .map((k) => `${JSON.stringify(k)}:${stableJson(value[k])}`)
+      .join(',')}}`;
+  }
+  return JSON.stringify(value);
+}
+
 function sha256(text) {
   return createHash('sha256').update(text).digest('hex');
 }
@@ -2198,8 +2212,25 @@ export function buildRegistry(texts) {
     return sources[id];
   });
 
+  // i18n inputs: hash only the part the export reads (David 2026-10-15) — an unrelated app
+  // string change must not make the committed register stale.
+  const labels = {
+    en: exportLabels(JSON.parse(texts.labels_en), 'en', suitability.vocabulary),
+    sl: exportLabels(JSON.parse(texts.labels_sl), 'sl', suitability.vocabulary),
+  };
+  const usedNames = (locale) => Object.fromEntries(allBreedIds.map((id) => [id, nameOf(id)[locale]]));
+  const scoped = {
+    labels_en: { covers: 'breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag', data: labels.en },
+    labels_sl: { covers: 'breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag', data: labels.sl },
+    family_en: { covers: 'breeds.<id> of every register breed', data: usedNames('en') },
+    family_sl: { covers: 'breeds.<id> of every register breed', data: usedNames('sl') },
+  };
   const inputs = {};
-  for (const [k, rel] of Object.entries(INPUTS)) inputs[k] = { path: rel, sha256: sha256(texts[k]) };
+  for (const [k, rel] of Object.entries(INPUTS)) {
+    inputs[k] = scoped[k]
+      ? { path: rel, covers: scoped[k].covers, sha256: sha256(stableJson(scoped[k].data)) }
+      : { path: rel, sha256: sha256(texts[k]) };
+  }
   inputs.portraits = { path: PORTRAIT_MANIFEST, sha256: texts.portraits == null ? null : sha256(texts.portraits) };
 
   return {
@@ -2209,10 +2240,7 @@ export function buildRegistry(texts) {
     data_compiled: { dog: dogData.meta.compiled, cat: catData.meta.compiled },
     inputs,
     suitability_vocabulary: suitability.vocabulary,
-    suitability_labels: {
-      en: exportLabels(JSON.parse(texts.labels_en), 'en', suitability.vocabulary),
-      sl: exportLabels(JSON.parse(texts.labels_sl), 'sl', suitability.vocabulary),
-    },
+    suitability_labels: labels,
     species,
     breeds,
     sources: sourceList,
