@@ -20339,6 +20339,14 @@
         "confidence": "medium",
         "notes": "PDSA (S339), shortened by the tool; 'Always supervise your Cocker Spaniel with children and vulnerable adults to avoid any accidents.' VCA (S341): 'Generally good with children'. → children (supervision caveat kept here); no small_children (no explicit rating without a supervision caveat)."
       },
+      "aggression_vetcompass": {
+        "value": "VetCompass lists aggression among the most commonly recorded disorders of UK English Cocker Spaniels ('potentially moody')",
+        "unit": "—",
+        "source_id": "S344",
+        "quote": "English Cocker Spaniels: a fairly typical, but potentially moody, dog?",
+        "confidence": "medium",
+        "notes": "RVC VetCompass news headline (S344), summarising Engdahl et al. 2023 (S342); aggression is named among the most recorded disorders (figure not copied — no statistics in the app). No vocabulary key covers it and the standards describe the breed as 'merry and affectionate' (S343) → no chip; the `children` chip (PDSA S339 / VCA S341) keeps the PDSA supervision caveat. Claude's reading, open for David (German Shepherd precedent: a VetCompass behaviour finding recorded, not a chip)."
+      },
       "socialisation": {
         "value": "socialise from a young age with a variety of people, dogs and experiences",
         "unit": "—",
@@ -31008,7 +31016,9 @@
           "chases_small_pets": "PDSA (S339): 'They don’t have a high prey drive'.",
           "low_shedding": "RKC 'Sheds: Yes'.",
           "shorter_lifespan": "RKC 'Over 10 years'; VetCompass median 11.44 y.",
-          "welfare": "RKC Breed Watch Category 1 (S337) → no welfare chip (atopy / ear problems are PDSA list items, not Breed Watch points)."
+          "welfare": "RKC Breed Watch Category 1 (S337) → no welfare chip (atopy / ear problems are PDSA list items, not Breed Watch points).",
+          "aggression": "VetCompass (S344 / S342) names aggression among the most recorded disorders ('potentially moody') — no vocabulary key and no breed-page advice against children; the children chip keeps the PDSA supervision caveat. Open for David (a calm chip would need a new key).",
+          "dental_care": "VetCompass (S344) names periodontal disease as the most recorded disorder, but no A/B breed page gives tooth-care advice → no dental_care need (ROADMAP M5-R15 not linked). Open for David."
         },
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children, other_pets; consider frequent_grooming, food_motivated_weight, chews_when_bored, needs_company, sheds"
       },
