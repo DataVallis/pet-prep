@@ -152,6 +152,7 @@ describe('readBreedCatalogue', () => {
       'belgian_malinois',
       'basset_hound',
       'hungarian_vizsla',
+      'english_cocker_spaniel',
     ]);
     expect(freeBreedOf(FALLBACK_CATALOGUE.breeds)).toBe('mutt');
     const lab = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'labrador_retriever');
@@ -429,6 +430,14 @@ describe('readBreedCatalogue', () => {
       suits: ['family_pet', 'children', 'large_home'],
       consider: ['eyelid_problems', 'sensitive_skin', 'food_motivated_weight', 'needs_company', 'sheds', 'drools'],
     });
+    const ecs = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'english_cocker_spaniel');
+    expect(ecs).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 370 }));
+    // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-41, runbook rules; no new tag).
+    expect(ecs?.search_keywords).toEqual(['english cocker spaniel', 'angleški koker španjel', 'angleski koker spanjel', 'english cocker', 'angleški koker', 'angleski koker', 'cocker spaniel', 'koker španjel', 'koker spanjel', 'merry cocker']);
+    expect(ecs?.suitability).toEqual({
+      suits: ['family_pet', 'children', 'other_pets'],
+      consider: ['frequent_grooming', 'food_motivated_weight', 'chews_when_bored', 'needs_company', 'sheds'],
+    });
     const hv = FALLBACK_CATALOGUE.breeds.find((b) => b.breed === 'hungarian_vizsla');
     expect(hv).toEqual(expect.objectContaining({ species: 'dog', premium: true, free_plan_allowed: false, challenge_allowed: true, sort_order: 360 }));
     // Mirrors BreedConfigsSeeder and config/breed_suitability.php (M5-R10-40, runbook rules; no new tag).
@@ -495,6 +504,7 @@ describe('readBreedCatalogue', () => {
       'belgian_malinois',
       'basset_hound',
       'hungarian_vizsla',
+      'english_cocker_spaniel',
     ]);
   });
 });
@@ -680,6 +690,17 @@ describe('breed search', () => {
     expect(find('epagneul breton')).toEqual(['brittany']);
   });
 
+  it('M5-R10-41: finds the English Cocker Spaniel by its EN / SL names, with and without the carons — never mixed up with the American Cocker', () => {
+    const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
+    expect(find('English Cocker Spaniel')).toEqual(['english_cocker_spaniel']);
+    expect(find('Angleški koker španjel')).toEqual(['english_cocker_spaniel']);
+    expect(find('angleski koker spanjel')).toEqual(['english_cocker_spaniel']);
+    expect(find('english cocker')).toEqual(['english_cocker_spaniel']);
+    expect(find('merry cocker')).toEqual(['english_cocker_spaniel']);
+    // "american cocker" stays the American breed only.
+    expect(find('american cocker')).toEqual(['american_cocker_spaniel']);
+  });
+
   it('M5-R10-40: finds the Hungarian Vizsla by its EN / SL names, with and without the carons, and as "vizsla" / "vižla"', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('Hungarian Vizsla')).toEqual(['hungarian_vizsla']);
@@ -806,7 +827,8 @@ describe('breed search', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('angleški buldog')).toEqual(['bulldog']);
     // M5-R10-34: »angleški« is also the start of the English Springer Spaniel's SL name — still never the French Bulldog.
-    expect(find('angleski')).toEqual(['bulldog', 'english_springer_spaniel']);
+    // M5-R10-41: … and the English Cocker Spaniel (»angleški koker španjel«).
+    expect(find('angleski')).toEqual(['bulldog', 'english_springer_spaniel', 'english_cocker_spaniel']);
     expect(find('english bulldog')).toEqual(['bulldog']);
     expect(find('british')).toEqual(['bulldog']);
   });

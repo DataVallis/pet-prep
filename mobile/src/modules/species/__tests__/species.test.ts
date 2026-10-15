@@ -144,6 +144,19 @@ describe('readBreed / readSpecies', () => {
     }
   });
 
+  it('M5-R10-41: the English Cocker Spaniel is a paid, brushed dog with its own name', async () => {
+    expect(readSpecies(undefined, readBreed('english_cocker_spaniel'))).toBe('dog');
+    expect(isDefaultFreeBreed('english_cocker_spaniel')).toBe(false);
+    expect(hasGroomingRoutine('english_cocker_spaniel')).toBe(true);
+    expect(breedName('english_cocker_spaniel')).toBe('Angleški koker španjel');
+    await i18n.changeLanguage('en');
+    try {
+      expect(breedName('english_cocker_spaniel')).toBe('English Cocker Spaniel');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
   it('M5-R10-40: the Hungarian Vizsla is a paid, brushed dog with its own name', async () => {
     expect(readSpecies(undefined, readBreed('hungarian_vizsla'))).toBe('dog');
     expect(isDefaultFreeBreed('hungarian_vizsla')).toBe(false);

@@ -74,6 +74,7 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'pet:picker.ageHints.miniature_schnauzer': 'the Miniature Schnauzer is a dog breed (M5-R10-27)',
   'pet:picker.ageHints.shih_tzu': 'the Shih Tzu is a dog breed (M5-R10-28)',
   'pet:picker.ageHints.basset_hound': 'the Basset Hound is a dog breed (M5-R10-39)',
+  'pet:picker.ageHints.english_cocker_spaniel': 'the English Cocker Spaniel is a dog breed (M5-R10-41)',
   'pet:breedSuitability.consider.experienced_owner': 'chip of a dog breed only (Rottweiler, PDSA "powerful dog", M5-R10-19)',
   'pet:breedSuitability.consider.not_for_small_children': 'chip of a dog breed only (Cane Corso, PDSA "large dog", M5-R10-23)',
   'pet:breedSuitability.consider.older_children': 'chip of a dog breed only (Pomeranian, AKC "small dog", M5-R10-30)',

@@ -39,10 +39,11 @@ import { i18n } from '@/i18n';
  * Brittany 120 min (M5-R10-36, RKC S298), senior 90 (brittanyProfile);
  * American Cocker Spaniel 120 min (M5-R10-37, RKC S305), senior 90 (americanCockerSpanielProfile);
  * Hungarian Vizsla 120 min (M5-R10-40, RKC S328 / PDSA S329), senior 90 (hungarianVizslaProfile);
+ * English Cocker Spaniel 60 min (M5-R10-41, RKC S337 / PDSA S339), senior 45 (englishCockerSpanielProfile);
  * arrival puppy 2, young 9 months.
  */
-type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel' | 'beagle' | 'standard_poodle' | 'dachshund' | 'australian_shepherd' | 'havanese' | 'west_highland_white_terrier' | 'bernese_mountain_dog' | 'siberian_husky' | 'rottweiler' | 'bulldog' | 'german_shorthaired_pointer' | 'yorkshire_terrier' | 'cane_corso' | 'pembroke_welsh_corgi' | 'dobermann' | 'boxer' | 'miniature_schnauzer' | 'shih_tzu' | 'great_dane' | 'pomeranian' | 'boston_terrier' | 'miniature_american_shepherd' | 'chihuahua' | 'english_springer_spaniel' | 'shetland_sheepdog' | 'brittany' | 'american_cocker_spaniel' | 'belgian_malinois' | 'basset_hound' | 'hungarian_vizsla'>;
-const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla'];
+type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel' | 'beagle' | 'standard_poodle' | 'dachshund' | 'australian_shepherd' | 'havanese' | 'west_highland_white_terrier' | 'bernese_mountain_dog' | 'siberian_husky' | 'rottweiler' | 'bulldog' | 'german_shorthaired_pointer' | 'yorkshire_terrier' | 'cane_corso' | 'pembroke_welsh_corgi' | 'dobermann' | 'boxer' | 'miniature_schnauzer' | 'shih_tzu' | 'great_dane' | 'pomeranian' | 'boston_terrier' | 'miniature_american_shepherd' | 'chihuahua' | 'english_springer_spaniel' | 'shetland_sheepdog' | 'brittany' | 'american_cocker_spaniel' | 'belgian_malinois' | 'basset_hound' | 'hungarian_vizsla' | 'english_cocker_spaniel'>;
+const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla', 'english_cocker_spaniel'];
 const ADULT_MINUTES: Record<DogBreed, number> = {
   mutt: 60,
   border_collie: 120,
@@ -81,6 +82,7 @@ const ADULT_MINUTES: Record<DogBreed, number> = {
   belgian_malinois: 120,
   basset_hound: 60,
   hungarian_vizsla: 120,
+  english_cocker_spaniel: 60,
 };
 const ARRIVAL_MONTHS: Partial<Record<LifeStage, number>> = { puppy: 2, young: 9 };
 
@@ -378,6 +380,26 @@ describe('PICKER_STRINGS.ageHints', () => {
       expect(E.adult).toBe('2 meals a day; walks of 12,000 steps a day.');
       expect(E.senior).toBe('2 meals a day; shorter walks — 9,000 steps a day.');
       expect(PICKER_STRINGS.breedHints.brittany).toBe('Part of the 12-week challenge · brushing 1× a week');
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-41 English Cocker Spaniel: 2.000 → 6.000 (reached at 6 months), young / adult 6.000, senior 4.500, brushing every day — SL and EN', async () => {
+    const C = PICKER_STRINGS.ageHints.english_cocker_spaniel;
+    expect(C.puppy).toBe('Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000 pri 6 mesecih.');
+    expect(C.young).toBe('2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).');
+    expect(C.adult).toBe('2 obroka na dan; sprehod 6.000 korakov na dan.');
+    expect(C.senior).toBe('2 obroka na dan; krajši sprehod — 4.500 korakov na dan.');
+    expect(PICKER_STRINGS.breedHints.english_cocker_spaniel).toBe('Del 12-tedenskega izziva · česanje vsak dan');
+    await i18n.changeLanguage('en');
+    try {
+      const E = PICKER_STRINGS.ageHints.english_cocker_spaniel;
+      expect(E.puppy).toBe('Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000 at 6 months.');
+      expect(E.young).toBe('2 meals a day; walks of 6,000 steps a day (like an adult dog).');
+      expect(E.adult).toBe('2 meals a day; walks of 6,000 steps a day.');
+      expect(E.senior).toBe('2 meals a day; shorter walks — 4,500 steps a day.');
+      expect(PICKER_STRINGS.breedHints.english_cocker_spaniel).toBe('Part of the 12-week challenge · brushing every day');
     } finally {
       await i18n.changeLanguage('sl');
     }

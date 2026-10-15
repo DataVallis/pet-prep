@@ -278,6 +278,7 @@ describe('PetPickerStep', () => {
       'breed-option-belgian_malinois',
       'breed-option-basset_hound',
       'breed-option-hungarian_vizsla',
+      'breed-option-english_cocker_spaniel',
     ]);
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
@@ -912,6 +913,64 @@ describe('PetPickerStep', () => {
       expect(suits).not.toHaveTextContent(/\d|%/);
       expect(consider).not.toHaveTextContent(/\d|%/);
       expect(screen.getByTestId('breed-option-american_cocker_spaniel')).toHaveTextContent(/American Cocker Spaniel/);
+    } finally {
+      await i18n.changeLanguage('sl');
+    }
+  });
+
+  it('M5-R10-41: the English Cocker Spaniel (fallback) shows its chips, is found as "angleški koker" and "english cocker", and quotes 6.000 / 4.500 steps', () => {
+    const { onConfirm } = renderPicker(FALLBACK_CATALOGUE);
+    const ecs = screen.getByTestId('breed-option-english_cocker_spaniel');
+    expect(ecs).toHaveTextContent(/Angleški koker španjel/);
+    expect(ecs).toHaveTextContent(new RegExp(PICKER.badgeChallenge));
+    expect(ecs).toHaveTextContent(/česanje vsak dan/);
+    const suits = screen.getByTestId('breed-suitability-english_cocker_spaniel-suits');
+    expect(suits).toHaveTextContent(/družinsko življenje/);
+    expect(suits).toHaveTextContent(/družino z otroki/);
+    expect(suits).toHaveTextContent(/dom z drugimi ljubljenčki/);
+    expect(suits).not.toHaveTextContent(/aktivno družino/);
+    const consider = screen.getByTestId('breed-suitability-english_cocker_spaniel-consider');
+    expect(consider).toHaveTextContent(/česanje večkrat na teden/);
+    expect(consider).toHaveTextContent(/pazite na težo/);
+    expect(consider).toHaveTextContent(/grize stvari/);
+    expect(consider).toHaveTextContent(/rad ima družbo/);
+    expect(consider).toHaveTextContent(/izpada mu dlaka/);
+    expect(consider).not.toHaveTextContent(/lovski nagon/);
+
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'angleški koker');
+    expect(screen.getByTestId('breed-option-english_cocker_spaniel')).toBeTruthy();
+    expect(screen.queryByTestId('breed-option-american_cocker_spaniel')).toBeNull();
+    fireEvent.changeText(screen.getByTestId('breed-search'), 'english cocker');
+    expect(screen.getByTestId('breed-option-english_cocker_spaniel')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('plan-option-challenge'));
+    fireEvent.press(screen.getByTestId('breed-option-english_cocker_spaniel'));
+    fireEvent.press(screen.getByTestId('origin-option-bought'));
+    expect(screen.getByTestId('age-option-puppy')).toHaveTextContent(/do 6\.000 pri 6 mesecih/);
+    expect(screen.getByTestId('age-option-adult')).toHaveTextContent(/6\.000 korakov/);
+    expect(screen.getByTestId('age-option-senior')).toHaveTextContent(/4\.500 korakov/);
+    fireEvent.press(screen.getByTestId('age-option-puppy'));
+    fireEvent.press(screen.getByTestId('dog-picker-confirm'));
+    expect(onConfirm).toHaveBeenCalledWith(
+      { species: 'dog', breed: 'english_cocker_spaniel', origin: 'bought', age_stage: 'puppy', plan: 'challenge' },
+      expect.objectContaining({ breed: 'english_cocker_spaniel' }),
+    );
+  });
+
+  it('M5-R10-41: the English Cocker Spaniel chips in English, without numbers', async () => {
+    await i18n.changeLanguage('en');
+    try {
+      renderPicker(FALLBACK_CATALOGUE);
+      const suits = screen.getByTestId('breed-suitability-english_cocker_spaniel-suits');
+      const consider = screen.getByTestId('breed-suitability-english_cocker_spaniel-consider');
+      expect(suits).toHaveTextContent(/family life/);
+      expect(suits).toHaveTextContent(/families with children/);
+      expect(suits).toHaveTextContent(/homes with other pets/);
+      expect(consider).toHaveTextContent(/needs brushing several times a week/);
+      expect(consider).toHaveTextContent(/loves food — watch the weight/);
+      expect(consider).toHaveTextContent(/chews things when bored/);
+      expect(suits).not.toHaveTextContent(/\d|%/);
+      expect(consider).not.toHaveTextContent(/\d|%/);
+      expect(screen.getByTestId('breed-option-english_cocker_spaniel')).toHaveTextContent(/English Cocker Spaniel/);
     } finally {
       await i18n.changeLanguage('sl');
     }
