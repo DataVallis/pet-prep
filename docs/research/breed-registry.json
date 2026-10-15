@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "7fef2fd9f8e1d501d6f175bd05d4976328dcb3403a65dfe4cab3ce5afaed26f8"
+      "sha256": "beff3355eedeca4d02ddbdcb67ad32ec83e5387f223030931a2e3b9713a12721"
     }
   },
   "suitability_vocabulary": {
@@ -22406,7 +22406,12 @@
           "S342"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "english-cocker-spaniel.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
