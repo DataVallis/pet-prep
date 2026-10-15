@@ -1,24 +1,28 @@
 #!/usr/bin/env bash
 # CI plan for .github/workflows/deploy-production.yml (job "plan").
 #
-# Decides which suites run and whether main deploys. Every doubt resolves towards
+# Decides which suites run and whether the run may deploy (the deploy job additionally
+# needs "Run workflow" with target production — scripts/ci-deploy-target.sh, D18). Every doubt resolves towards
 # MORE testing: an unknown base, an API error or a missing marker means "run it".
 #
 #   1. Changed files (path filter)
 #        pull_request       HEAD^1..HEAD of the PR merge commit = exactly what the PR
 #                           changes against the current main.
-#        push to main       base = head of the last successful run of this workflow on
-#                           main (push / workflow_dispatch) whose job "Deploy to Hetzner
-#                           Production" SUCCEEDED = what production runs. Not
+#        push to main       base = head of the last successful "Run workflow" run of this
+#                           workflow on main whose job "Deploy to Hetzner Production"
+#                           SUCCEEDED = what production runs (since D18 only dispatch runs
+#                           deploy, so only they are looked up). Not
 #                           event.before and not merely the last green run: a queued run
 #                           that GitHub cancels (concurrency), a failed deploy or a green
 #                           run whose deploy was skipped (by design or by a bug — the
 #                           2026-10-06 incident) never drops changes from the next diff.
 #                           Base not found / not an ancestor (force push) / API error /
 #                           diff error / empty diff between different trees → full run.
-#        workflow_dispatch  full run (+ deploy on main).
-#        re-run (attempt>1) full run (+ deploy on main) — "Re-run all jobs" repeats a deploy
-#                           (only of the current main head: scripts/ci-deploy-guard.sh).
+#        workflow_dispatch  full run (deploy=true on main; the job deploys only with
+#                           target production).
+#        re-run (attempt>1) full run — "Re-run all jobs" of a production dispatch run repeats
+#                           its deploy (only of the current main head: ci-deploy-guard.sh);
+#                           a re-run of a push run deploys nothing.
 #   2. Suites per path (see classify()):
 #        backend + image    backend/**, deployment/**, scripts/** (except
 #        + deploy (main)    generate-api-types.mjs), the workflow; backend/README.md and
@@ -45,7 +49,7 @@
 #      in between (then the trees differ and everything needed runs again). Applies to
 #      push runs in full mode too (a marker proves the exact tree, whatever the base).
 #      pull_request and workflow_dispatch runs never skip on markers (dispatch = the
-#      manual "test everything + deploy" button).
+#      manual "test everything (+ deploy with target production)" button).
 #
 # Env: EVENT_NAME, GIT_REF, RUN_ATTEMPT, REPO (owner/name), WORKFLOW_FILE (basename),
 # DEPLOY_JOB_NAME (default "Deploy to Hetzner Production"), GH_TOKEN (for gh),
@@ -67,13 +71,14 @@ DEPLOY_JOB_NAME="${DEPLOY_JOB_NAME:-Deploy to Hetzner Production}"
 
 log() { echo "ci-plan: $*" >&2; }
 
-# last_deployed_sha: head sha of the newest successful main run (push / dispatch, this
-# repository) in which the deploy job succeeded. Prints nothing when none of the last 50
-# green runs deployed; returns 1 on any API error.
+# last_deployed_sha: head sha of the newest successful "Run workflow" run on main (this
+# repository) in which the deploy job succeeded — since D18 push runs never deploy, so
+# only dispatch runs are listed (event filter in the API query + the jq select). Prints
+# nothing when none of the last 50 green dispatch runs deployed; returns 1 on any API error.
 last_deployed_sha() {
   local runs id sha deployed
-  runs="$("$GH" api "repos/${REPO}/actions/workflows/${WORKFLOW_FILE}/runs?branch=main&status=success&per_page=50" \
-        --jq '.workflow_runs[] | select(.event == "push" or .event == "workflow_dispatch") | select(.head_repository.full_name == "'"${REPO}"'") | "\(.id) \(.head_sha)"' \
+  runs="$("$GH" api "repos/${REPO}/actions/workflows/${WORKFLOW_FILE}/runs?branch=main&event=workflow_dispatch&status=success&per_page=50" \
+        --jq '.workflow_runs[] | select(.event == "workflow_dispatch") | select(.head_repository.full_name == "'"${REPO}"'") | "\(.id) \(.head_sha)"' \
         2>/dev/null)" || return 1
   while read -r id sha; do
     [ -n "$id" ] || continue
@@ -111,7 +116,7 @@ case "$EVENT_NAME" in
         base=""
         reason="GitHub API error while looking up the last deployed main run"
       elif [ -z "$base" ]; then
-        reason="no successful deploy among the last 50 green main runs"
+        reason="no successful production deploy among the last 50 green Run workflow runs on main"
       elif git merge-base --is-ancestor "$base" HEAD 2>/dev/null; then
         mode="diff"
       else

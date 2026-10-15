@@ -12,9 +12,12 @@
 # A `git` shim passes through to the real git, except `git diff` when GIT_DIFF_FAIL=1
 # (exit 128) or GIT_DIFF_EMPTY=1 (prints nothing, exit 0).
 #
-# Also covers scripts/ci-deploy-guard.sh against a local bare "origin".
+# Also covers scripts/ci-deploy-guard.sh against a local bare "origin", and (D18) the
+# manual production routing: scripts/ci-deploy-target.sh, the deploy job's `if:` in the
+# workflow, scripts/mobile-ota-plan.sh (same gh shim + local origin) and the remote
+# deploy step scripts/ci-remote-deploy.sh (ssh / rsync / ssh-keyscan shims).
 #
-# Run: bash scripts/tests/ci-plan.test.sh   (needs bash, git, jq)
+# Run: bash scripts/tests/ci-plan.test.sh   (needs bash, git, jq, node)
 set -Eeuo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -103,8 +106,8 @@ pr_merge() {
   git -C "$W" checkout -q --detach main
   git -C "$W" merge -q --no-ff --no-edit feature
 }
-green_runs() { # green_runs SHA [EVENT] [REPO_FULL]: one successful main run that deployed
-  jq -n --arg s "$1" --arg e "${2:-push}" --arg r "${3:-$REPO_NAME}" \
+green_runs() { # green_runs SHA [EVENT] [REPO_FULL]: one successful main run that deployed (D18: dispatch)
+  jq -n --arg s "$1" --arg e "${2:-workflow_dispatch}" --arg r "${3:-$REPO_NAME}" \
     '{workflow_runs:[{id:1,event:$e,head_sha:$s,head_repository:{full_name:$r}}]}' > "$FIX/runs.json"
   jobs_json 1 success
 }
@@ -112,9 +115,9 @@ jobs_json() { # jobs_json RUN_ID DEPLOY_CONCLUSION (success / skipped / failure)
   jq -n --arg c "$2" '{jobs:[{name:"Plan (changed paths, tested tree)",conclusion:"success"},
     {name:"CI OK",conclusion:"success"},{name:"Deploy to Hetzner Production",conclusion:$c}]}' > "$FIX/jobs-$1.json"
 }
-runs_list() { # runs_list "ID SHA" ...: successful main push runs, newest first
+runs_list() { # runs_list "ID SHA" ...: successful main Run workflow runs, newest first (D18)
   local r
-  for r in "$@"; do echo "$r"; done | jq -R 'split(" ") | {id:(.[0]|tonumber),event:"push",head_sha:.[1],head_repository:{full_name:"'"$REPO_NAME"'"}}' \
+  for r in "$@"; do echo "$r"; done | jq -R 'split(" ") | {id:(.[0]|tonumber),event:"workflow_dispatch",head_sha:.[1],head_repository:{full_name:"'"$REPO_NAME"'"}}' \
     | jq -s '{workflow_runs:.}' > "$FIX/runs.json"
 }
 marker() { # marker SUITE TREE RUN_ID [HEAD_REPO_ID] [EXPIRED]
@@ -279,11 +282,178 @@ echo "== workflow: deploy must not inherit skipped suites =="
 # skipped suites behind ci-ok, `needs: [plan, ci-ok]` without a status function skips
 # deploy even when ci-ok succeeded. The deploy condition must therefore be explicit.
 WFFILE="${HERE}/../../${WF}"
-deploy_if="$(awk '/^  deploy:/{d=1} d&&/^    if:/{f=1} f{print} f&&/^    [a-z-]+:/&&!/^    if:/{exit}' "$WFFILE" | tr -s ' \n' ' ')"
-for want in "!cancelled()" "needs.plan.result == 'success'" "needs.ci-ok.result == 'success'" "needs.plan.outputs.deploy == 'true'"; do
+job_if() { # job_if JOB: the job's `if:` block, one line
+  awk -v job="^  $1:" '$0 ~ job {d=1; next} d&&/^  [a-z-]+:/{exit} d&&/^    if:/{f=1} f&&/^    [a-z-]+:/&&!/^    if:/{exit} f{print}' "$WFFILE" | tr -s ' \n' ' '
+}
+deploy_if="$(job_if deploy)"
+for want in "!cancelled()" "needs.plan.result == 'success'" "needs.ci-ok.result == 'success'" "needs.plan.outputs.deploy == 'true'" \
+            "needs.plan.outputs.target == 'production'" "github.event_name == 'workflow_dispatch'"; do
   case "$deploy_if" in *"$want"*) r=0 ;; *) r=1 ;; esac
   check "deploy if: has $want" 0 "$r"
 done
+case "$deploy_if" in *"'push'"*) r=1 ;; *) r=0 ;; esac
+check "deploy if: a push can never deploy (D18)" 0 "$r"
+r=1; grep -q '^    name: Deploy to Hetzner Production$' "$WFFILE" && r=0
+check "production job keeps its name (ci-plan.sh base lookup)" 0 "$r"
+r=0; grep -qE '^  deploy-dev:|vars\.DEV_HOST' "$WFFILE" && r=1
+check "no dev deploy path left in the workflow" 0 "$r"
+r=1; grep -q 'EXPECT_DOMAIN: api.petprep.si' "$WFFILE" && r=0
+check "production job names the expected server domain" 0 "$r"
+
+echo "== deploy target (scripts/ci-deploy-target.sh, D18) =="
+TARGET_SH="${HERE}/../ci-deploy-target.sh"
+target() { # target EVENT REF INPUT → "target|rc"
+  local out="$TMP/target.out" rc=0
+  : > "$out"
+  EVENT_NAME="$1" GIT_REF="$2" INPUT_TARGET="$3" GITHUB_OUTPUT="$out" \
+    bash "$TARGET_SH" > "$TMP/target.stdout" 2>&1 || rc=$?
+  echo "$(sed -n 's/^target=//p' "$out")|$rc"
+}
+check "push to main → none (CI only)" "none|0" "$(target push refs/heads/main "")"
+check "push to main ignores an input → none" "none|0" "$(target push refs/heads/main production)"
+check "Run workflow (default) → none" "none|0" "$(target workflow_dispatch refs/heads/main "")"
+check "Run workflow target none → none" "none|0" "$(target workflow_dispatch refs/heads/main none)"
+check "Run workflow target production → production" "production|0" "$(target workflow_dispatch refs/heads/main production)"
+check "Run workflow on another branch → none" "none|0" "$(target workflow_dispatch refs/heads/feature production)"
+check "pull_request → none" "none|0" "$(target pull_request refs/pull/1/merge "")"
+check "unknown input target → error" "|1" "$(target workflow_dispatch refs/heads/main dev)"
+target push refs/heads/main "" > /dev/null
+r=1; grep -q '^::notice title=deploy target::none — push to main: CI only' "$TMP/target.stdout" && r=0
+check "target printed as a notice" 0 "$r"
+
+echo "== mobile OTA plan (scripts/mobile-ota-plan.sh, D18) =="
+OTA_PLAN="${HERE}/../mobile-ota-plan.sh"
+# ota_repo: repo with an origin; main = HEAD. Sets $W, $FIX, $OTA_ORIGIN.
+ota_repo() {
+  new_repo
+  mkdir -p "$W/docs/research"; echo '{"commit":""}' > "$W/docs/research/app-release.json"
+  git -C "$W" add -A; git -C "$W" commit -qm release-file
+  OTA_ORIGIN="$TMP/ota-origin$n.git"
+  git init -q --bare "$OTA_ORIGIN"
+}
+ota_push() { git -C "$W" -c push.negotiate=false push -q -f "$OTA_ORIGIN" HEAD:refs/heads/main; }
+release_at() { # release_at SHA: app-release.json says the last production release was SHA
+  echo "{\"commit\":\"$1\"}" > "$W/docs/research/app-release.json"
+  git -C "$W" add -A; git -C "$W" commit -qm "record release"
+}
+ota() { # ota EVENT WR_EVENT WR_CONCLUSION [INPUT_CHANNEL] [DRY_RUN] → "mobile channel rc"
+  local out="$FIX/ota.out" rc=0
+  : > "$out"
+  ( cd "$W" && PATH="$TMP/bin:$PATH" FIX="$FIX" EVENT_NAME="$1" WR_EVENT="$2" WR_CONCLUSION="$3" WR_RUN_ID=9 \
+      INPUT_CHANNEL="${4:-}" DRY_RUN="${5:-false}" REPO="$REPO_NAME" OTA_PLAN_REMOTE="$OTA_ORIGIN" \
+      GITHUB_OUTPUT="$out" bash "$OTA_PLAN" > "$FIX/ota.stdout" 2>&1 ) || rc=$?
+  echo "$(sed -n 's/^mobile=//p' "$out") $(sed -n 's/^channel=//p' "$out") $rc"
+}
+prod_jobs() { # prod_jobs CONCLUSION: CI run 9's production deploy job
+  jq -n --arg c "$1" '{jobs:[{name:"CI OK",conclusion:"success"},{name:"Deploy to Hetzner Production",conclusion:$c}]}' > "$FIX/jobs-9.json"
+}
+ota_repo; commit mobile/src/a.ts; ota_push
+check "push with mobile/ change → nothing (a merge publishes nothing)" "false  0" "$(ota workflow_run push success)"
+check "red CI run → nothing" "false  0" "$(ota workflow_run push failure)"
+# Production after a production deploy (Run workflow, target production).
+ota_repo; rel="$(sha)"; commit mobile/src/a.ts; release_at "$rel"; commit backend/app/A.php; ota_push
+prod_jobs success
+check "production deploy, mobile/ changed since the release → production" "true production 0" "$(ota workflow_run workflow_dispatch success)"
+commit backend/app/A.php; ota_push; git -C "$W" checkout -q HEAD~1
+check "… publishes the deployed commit even when main moved on" "true production 0" "$(ota workflow_run workflow_dispatch success)"
+ota_repo; commit mobile/src/a.ts; release_at "$(sha)"; commit backend/app/A.php; ota_push; prod_jobs success
+check "production deploy, mobile/ unchanged since the release → nothing" "false production 0" "$(ota workflow_run workflow_dispatch success)"
+ota_repo; commit mobile/src/a.ts; ota_push; prod_jobs success
+check "production deploy, release commit unknown → check" "true production 0" "$(ota workflow_run workflow_dispatch success)"
+prod_jobs skipped
+check "Run workflow with target none (deploy skipped) → nothing" "false  0" "$(ota workflow_run workflow_dispatch success)"
+prod_jobs failure
+check "failed production deploy → nothing" "false  0" "$(ota workflow_run workflow_dispatch success)"
+rm -f "$FIX/jobs-9.json"
+check "jobs API error → fail (never guess production)" "  1" "$(ota workflow_run workflow_dispatch success)"
+# Manual OTA runs.
+ota_repo; ota_push; green_runs "$(sha)"   # the last production deploy ran this commit
+check "manual production of the deployed commit → production" "true production 0" "$(ota workflow_dispatch "" "" production)"
+check "manual preview → preview" "true preview 0" "$(ota workflow_dispatch "" "" preview)"
+check "manual without channel → error" "  1" "$(ota workflow_dispatch "" "" "")"
+check "manual unknown channel → error" "  1" "$(ota workflow_dispatch "" "" staging)"
+commit mobile/src/a.ts; ota_push
+check "manual production of a commit production does NOT run → refused" "  1" "$(ota workflow_dispatch "" "" production)"
+r=1; grep -q 'is not the commit production runs' "$FIX/ota.stdout" && r=0
+check "… and says why" 0 "$r"
+check "… preview of that commit is fine" "true preview 0" "$(ota workflow_dispatch "" "" preview)"
+check "… dry run is not refused" "true production 0" "$(ota workflow_dispatch "" "" production true)"
+echo '{"workflow_runs":[]}' > "$FIX/runs.json"
+check "manual production, no production deploy at all → refused" "  1" "$(ota workflow_dispatch "" "" production)"
+green_runs "$(sha)"
+check "manual production, jobs API error → refused" "  1" "$(GH_FAIL_MATCH='/jobs' ota workflow_dispatch "" "" production)"
+commit docs/X.md; ota_push; git -C "$W" checkout -q HEAD~1
+check "manual preview off the head of main → nothing" "false preview 0" "$(ota workflow_dispatch "" "" preview)"
+r=1; grep -q 'is not the head of main' "$FIX/ota.stdout" && r=0
+check "… and says why" 0 "$r"
+
+echo "== mobile-ota.sh: channel profile from eas.json (stubbed npx / eas) =="
+OTA_SH="${HERE}/../mobile-ota.sh"
+mkdir -p "$TMP/obin"
+# npx expo-updates runtimeversion:resolve → fixed runtime; eas build:list → one build; eas update → log.
+cat > "$TMP/obin/npx" <<'SHIM'
+#!/usr/bin/env bash
+echo '{"runtimeVersion":"rt-1"}'
+SHIM
+cat > "$TMP/obin/eas" <<'SHIM'
+#!/usr/bin/env bash
+echo "eas $* | API=${EXPO_PUBLIC_API_URL:-unset}" >> "$OTA_LOG"
+case "$1" in build:list) echo '[{"id":"b1"}]' ;; esac
+SHIM
+chmod +x "$TMP/obin"/*
+ota_sh() { # ota_sh EAS_JSON ARGS... → rc; log $TMP/ota-sh.log, output $TMP/ota-sh.out
+  local d="$TMP/otash$RANDOM" rc=0
+  mkdir -p "$d/mobile"; printf '%s' "$1" > "$d/mobile/eas.json"; shift
+  : > "$TMP/ota-sh.log"
+  ( cd "$d" && PATH="$TMP/obin:$PATH" OTA_LOG="$TMP/ota-sh.log" GITHUB_OUTPUT="$TMP/ota-sh.gho" \
+      bash "$OTA_SH" "msg" "$@" > "$TMP/ota-sh.out" 2>&1 ) || rc=$?
+  echo "$rc"
+}
+EAS_OK='{"build":{"production":{"channel":"production","env":{"EXPO_PUBLIC_API_URL":"https://api.petprep.si"}},"preview":{"channel":"preview","env":{}}}}'
+: > "$TMP/ota-sh.gho"
+check "production channel publishes with the profile env" 0 "$(ota_sh "$EAS_OK" --channel production)"
+r=1; grep -q 'eas update --channel production --environment production --platform ios .*API=https://api.petprep.si' "$TMP/ota-sh.log" && r=0
+check "… EXPO_PUBLIC_* of the profile exported" 0 "$r"
+r=1; grep -q '^released=true$' "$TMP/ota-sh.gho" && r=0
+check "… both platforms → released=true" 0 "$r"
+check "missing profile → exit 1" 1 "$(ota_sh '{"build":{"production":{"channel":"production"}}}' --channel preview)"
+r=0; [ -s "$TMP/ota-sh.log" ] && r=1
+check "… nothing published (no eas call)" 0 "$r"
+r=1; grep -q "has no build profile 'preview'" "$TMP/ota-sh.out" && r=0
+check "… says why" 0 "$r"
+check "profile with another channel → exit 1" 1 "$(ota_sh '{"build":{"preview":{"channel":"production"}}}' --channel preview)"
+: > "$TMP/ota-sh.gho"
+check "preview publishes, never a release" 0 "$(ota_sh "$EAS_OK" --channel preview)"
+r=0; grep -q 'released' "$TMP/ota-sh.gho" && r=1
+check "… no released=true" 0 "$r"
+
+echo "== remote deploy step (scripts/ci-remote-deploy.sh) =="
+REMOTE_SH="${HERE}/../ci-remote-deploy.sh"
+mkdir -p "$TMP/rbin"
+for tool in ssh rsync ssh-keyscan; do
+  # shellcheck disable=SC2016  # $* / $REMOTE_LOG expand inside the shim
+  printf '#!/usr/bin/env bash\necho "%s $*" >> "$REMOTE_LOG"\n' "$tool" > "$TMP/rbin/$tool"
+done
+chmod +x "$TMP/rbin"/*
+remote() { # remote KEY HOST [SHA] → rc; log in $TMP/remote.log
+  local rc=0
+  : > "$TMP/remote.log"
+  ( cd "$TMP" && PATH="$TMP/rbin:$PATH" REMOTE_LOG="$TMP/remote.log" CI_REMOTE_SSH_DIR="$TMP/sshdir" \
+      SSH_PRIVATE_KEY="$1" SSH_HOST="$2" SSH_USER=deploy COMMIT_SHA="${3:-abc1234}" EXPECT_DOMAIN=api.petprep.si \
+      TARGET=production KEY_SECRET=PRODUCTION_SSH_PRIVATE_KEY bash "$REMOTE_SH" > "$TMP/remote.out" 2>&1 ) || rc=$?
+  echo "$rc"
+}
+check "uploads + deploys" 0 "$(remote "fake-key" 203.0.113.9)"
+r=1; grep -q 'rsync -az --delete .*--exclude backend/storage .* deploy@203.0.113.9:/opt/petprep/incoming/' "$TMP/remote.log" && r=0
+check "rsync to incoming/, storage excluded" 0 "$r"
+r=1; grep -q 'ssh .*deploy@203.0.113.9 /opt/petprep/incoming/scripts/deploy-production.sh --from /opt/petprep/incoming --expect-domain api.petprep.si abc1234' "$TMP/remote.log" && r=0
+check "deploy script called with --expect-domain" 0 "$r"
+check "key file mode 600" 600 "$(stat -c %a "$TMP/sshdir/deploy_key")"
+check "missing key → fail" 1 "$(remote "" 203.0.113.9)"
+r=1; grep -q 'PRODUCTION_SSH_PRIVATE_KEY secret is not set' "$TMP/remote.out" && r=0
+check "… names the secret" 0 "$r"
+check "missing host → fail, nothing uploaded" "1 0" "$(remote "fake-key" "") $(wc -l < "$TMP/remote.log" | tr -d ' ')"
+check "SHA with shell characters → fail, nothing uploaded" "1 0" "$(remote "fake-key" 203.0.113.9 'abc1234;id') $(wc -l < "$TMP/remote.log" | tr -d ' ')"
 
 echo "== push to main: a failed / cancelled run in between is not lost =="
 new_repo; base="$(sha)"; commit backend/app/A.php; commit docs/X.md; green_runs "$base"
@@ -294,6 +464,11 @@ echo "== push to main: green run filter (event / repo) =="
 new_repo; base="$(sha)"; commit backend/app/A.php; green_runs "$base" workflow_dispatch
 plan push refs/heads/main
 check "workflow_dispatch run counts as green base" diff "$o_mode"
+new_repo; base="$(sha)"; commit docs/X.md; green_runs "$base" push
+plan push refs/heads/main
+check "push run is not a deploy base since D18 → full" full "$o_mode"
+r=1; grep -q 'runs?branch=main&event=workflow_dispatch&status=success' "$FIX/gh.log" && r=0
+check "API query lists only Run workflow runs" 0 "$r"
 new_repo; base="$(sha)"; commit docs/X.md; green_runs "$base" pull_request
 plan push refs/heads/main
 check "pull_request run is not a main base → full" full "$o_mode"; check "→ deploy" true "$o_deploy"

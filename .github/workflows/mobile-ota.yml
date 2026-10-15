@@ -1,9 +1,16 @@
 name: Mobile OTA update
 
 # M5-F10 (David 2026-10-12): after a green "CI & Deploy" run on main that changed mobile/,
-# publish an over-the-air update when the native fingerprint matches an existing store
-# build; otherwise say that a new store build is needed (scripts/mobile-ota.sh).
+# publish an over-the-air update when the native fingerprint matches an existing build of
+# the channel; otherwise say that a new build is needed (scripts/mobile-ota.sh).
 # Store builds stay manual (David owns app identity and versions).
+#
+# Manual production releases (D18, David 2026-10-14) — scripts/mobile-ota-plan.sh:
+#   a push / merge to main publishes NOTHING; the `production` channel is published only
+#   after "CI & Deploy" → Run workflow → target production whose production deploy
+#   succeeded (exactly the deployed commit, if mobile/ changed since the last release in
+#   docs/research/app-release.json), or by this workflow's own Run workflow with an
+#   explicit channel.
 
 on:
   workflow_run:
@@ -12,6 +19,14 @@ on:
     branches: [main]
   workflow_dispatch:
     inputs:
+      channel:
+        description: 'EAS channel to publish to: production (store builds — only the commit production runs) or preview (internal builds of the eas.json preview profile)'
+        type: choice
+        required: true
+        options:
+          - preview
+          - production
+        default: preview
       dry_run:
         description: 'Only report OTA vs store build, publish nothing'
         type: boolean
@@ -23,40 +38,44 @@ concurrency:
 
 permissions:
   contents: write   # only to record a published OTA in docs/research/app-release.json (see the last step)
+  actions: read     # plan: did the CI run's production deploy job succeed? (D18)
 
 jobs:
   ota:
     name: OTA update or store build?
-    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push')
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       (github.event.workflow_run.event == 'push' || github.event.workflow_run.event == 'workflow_dispatch'))
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
       EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
     steps:
+      # Full history without blobs: the production plan diffs mobile/ against the commit of
+      # the last production release (docs/research/app-release.json).
       - name: Checkout the tested commit
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.workflow_run.head_sha || github.sha }}
-          fetch-depth: 2
+          fetch-depth: 0
+          filter: blob:none
 
-      # Publishes only the current head of main: a re-run of an old CI run or a dispatch
-      # from another branch never overwrites a newer production update (dry runs excepted).
-      # Change detection diffs against the first parent — main moves by PR merges; a direct
-      # push of several commits is covered only for its last commit (use Run workflow).
-      - name: Did mobile/ change on the head of main?
+      # Channel + "did mobile/ change?" (scripts/mobile-ota-plan.sh). After a production
+      # deploy: exactly the deployed commit, if mobile/ changed since the last release.
+      # Manual runs publish only the current head of main (dry runs excepted).
+      - name: Plan (channel, did mobile/ change?)
         id: changed
         env:
+          EVENT_NAME: ${{ github.event_name }}
+          WR_EVENT: ${{ github.event.workflow_run.event }}
+          WR_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          WR_RUN_ID: ${{ github.event.workflow_run.id }}
+          INPUT_CHANNEL: ${{ inputs.channel }}
           DRY_RUN: ${{ inputs.dry_run }}
-        run: |
-          git fetch -q --depth=1 origin main
-          if [ "$DRY_RUN" != "true" ] && [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
-            echo "::notice title=Mobile OTA skipped::$(git rev-parse --short HEAD) is not the head of main."
-            echo "mobile=false" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] || ! git diff --quiet HEAD^1 HEAD -- mobile/; then
-            echo "mobile=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "mobile=false" >> "$GITHUB_OUTPUT"
-          fi
+          REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/mobile-ota-plan.sh
 
       - name: No EXPO_TOKEN yet
         if: steps.changed.outputs.mobile == 'true' && env.EXPO_TOKEN == ''
@@ -83,16 +102,21 @@ jobs:
       - name: OTA update or store build
         id: ota
         if: steps.changed.outputs.mobile == 'true' && env.EXPO_TOKEN != ''
+        env:
+          CHANNEL: ${{ steps.changed.outputs.channel }}
+          DRY_RUN: ${{ inputs.dry_run }}
         run: |
           msg="$(git log -1 --pretty=%s)"
-          if [ "${{ inputs.dry_run }}" = "true" ]; then
-            scripts/mobile-ota.sh "$msg" --dry-run
+          if [ "$DRY_RUN" = "true" ]; then
+            scripts/mobile-ota.sh "$msg" --channel "$CHANNEL" --dry-run
           else
-            scripts/mobile-ota.sh "$msg"
+            scripts/mobile-ota.sh "$msg" --channel "$CHANNEL"
           fi
 
-      # David 2026-10-13: the website must show only what users really have. After an OTA reached
-      # iOS AND Android, record the published commit's breeds; the next register export marks them
+      # David 2026-10-13: the website must show only what users really have. After a PRODUCTION
+      # OTA reached iOS AND Android (mobile-ota.sh sets `released` only for the production
+      # channel — a preview update is never a release), record the
+      # published commit's breeds; the next register export marks them
       # in_app (until then they are coming_soon). Docs-only commit by GITHUB_TOKEN → triggers no
       # workflow (no CI / deploy / OTA loop). The website follows with its next registry sync PR.
       - name: Record the release for the website register

@@ -109,6 +109,7 @@ This document describes all environment variables used by the PetPrep production
 
 ## 6. Runtime / deploy knobs (M4-05b — not secrets, normally NOT in `/opt/petprep/.env`)
 
+
 Set by the image, `compose.production.yaml` or `deploy-production.sh`; listed so nobody adds them to the `.env` by accident.
 
 | Variable | Where | Purpose | Default |
@@ -117,8 +118,10 @@ Set by the image, `compose.production.yaml` or `deploy-production.sh`; listed so
 | `PETPREP_OPTIMIZE` | container env | What `docker/production/entrypoint.sh` caches on start: `full` (`php artisan optimize`), `config` (config + events), `none`. Auto: `full` for php-fpm, `config` for everything else | auto |
 | `VIEW_COMPILED_PATH` | image (`Dockerfile`) | Compiled Blade views inside the container (`bootstrap/cache/views`), not on the shared volume | `/var/www/html/bootstrap/cache/views` |
 | `APP_ENV` / `APP_DEBUG` | compose `environment` | Forced to `production` / `false` for every PHP container, whatever the `.env` says | `production` / `false` |
-| `DEPLOY_HEALTH_HOST` | deploy script env | Name checked with `curl --resolve <host>:443:127.0.0.1 https://<host>/up` | `api.petprep.si` |
-| `DEPLOY_HEALTH_IP_HOST` | deploy script env | Fallback health check: `Host:` header for `http://127.0.0.1/up` (the IP site, D8) | `138.199.172.97` |
+| `PETPREP_API_DOMAIN` | `/opt/petprep/.env` (optional) → compose → caddy | API site of the Caddyfile and the deploy health check (D18). Unset = the host of `APP_URL` (deploy script) | `api.petprep.si` |
+| `PETPREP_CADDY_SITES` | `/opt/petprep/.env` (optional) → compose → caddy | `production` = API + `petprep.si` / `www` + raw-IP site; `api-only` = the API site only (a second server, e.g. the postponed dev server — no certificates for petprep.si). Unset = `production` when the API domain is `api.petprep.si`, else `api-only`. Other values fail the deploy preflight | derived |
+| `DEPLOY_HEALTH_HOST` | deploy script env | Name checked with `curl --resolve <host>:443:127.0.0.1 https://<host>/up` | `PETPREP_API_DOMAIN` |
+| `DEPLOY_HEALTH_IP_HOST` | deploy script env | Fallback health check: `Host:` header for `http://127.0.0.1/up` (the IP site, D8). Only with `PETPREP_CADDY_SITES=production`; empty = no fallback | `138.199.172.97` (production) / none |
 | `DEPLOY_APP_WAIT_TRIES` | deploy script env | `php-fpm-ping` attempts (3 s apart) after `up -d` | `40` |
 | `DEPLOY_RETRY_SLEEP` | deploy script env | Seconds between `artisan up` / health check attempts | `3` |
 | `DEPLOY_ALLOW_NO_BACKUP` | deploy script env | `1` = continue when the pre-deploy backup fails (emergency only) | `0` |

@@ -137,18 +137,17 @@ Docker images on the server (M4-05b):
 
 ## 4. Automated CI/CD (GitHub Actions)
 
-Every pull request and push to `main` runs `.github/workflows/deploy-production.yml` ("CI & Deploy"). **Pre-production phase (David, 2026-10-03): every push/merge to `main` that changes `backend/`, `deployment/`, `scripts/` or the workflow deploys automatically** once `CI OK` is green; "Run workflow" on `main` always tests everything and deploys; restore manual-only deploys before real users (DEPLOYMENT.md D2). Since 2026-10-06 the pipeline does not repeat work (DEPLOYMENT.md D16):
+Every pull request and push to `main` runs `.github/workflows/deploy-production.yml` ("CI & Deploy"). **Manual production deploys (David, 2026-10-14, DEPLOYMENT.md D18): a push / merge to `main` runs CI only and deploys nothing. Production `api.petprep.si` is deployed only by "Run workflow" on `main` with target `production`** (§4a) — by David, or by Claude on David's explicit request. "Run workflow" with target `none` (default) tests everything without deploying. Since 2026-10-06 the pipeline does not repeat work (DEPLOYMENT.md D16):
 
 1. **`plan`** (`scripts/ci-plan.sh`): computes the changed paths (PR: against the current `main`; push to `main`: against the last `main` run whose deploy job succeeded — unknown, API error or a broken diff → full run) and decides which suites run and whether `main` deploys. On a push to `main` it skips every suite that already passed in a successful PR run of this workflow on the **identical git tree** (marker artifacts `ci-green-<suite>-<tree>`). Docs-only changes finish in under a minute and don't deploy; mobile-only changes run only the mobile checks and don't deploy.
 2. **Suites** (each only when planned): `backend-tests` (Pest `--parallel` on PostgreSQL 18, PHP 8.3, one database per process), `mobile-checks` (tsc + Jest), `deploy-script-tests` (shellcheck + `scripts/tests/deploy-production.test.sh` with stubbed docker/git/curl + `scripts/tests/ci-plan.test.sh` with stubbed gh), `production-image` (M4-05b: hadolint, builds the `app` and `web` targets with buildx — GHA layer cache, no push —, `caddy validate` of the real Caddyfile inside the web image, smoke test: uid 1000, `php-fpm -t`, extensions, no dev packages / `.env` / tests in the image, entrypoint `optimize`).
 3. **`CI OK`**: always reported; green only when `plan` succeeded and every suite passed or was skipped by the plan. **This is the one check the merge helper gates on** (free private plan: no GitHub branch protection).
-4. **Deploy Job:**
-   - Targets the `production` GitHub Environment.
-   - Prevents concurrent deployments via `concurrency: production`.
-   - Needs `plan` + `CI OK` (never runs after a failed or cancelled job) and the plan's deploy flag.
+4. **Deploy job** "Deploy to Hetzner Production" (environment `production`, concurrency `production`, steps in `scripts/ci-remote-deploy.sh`):
+   - Runs only on "Run workflow" on `main` with target `production` (`scripts/ci-deploy-target.sh`); needs `plan` + `CI OK` (never after a failed or cancelled job).
+   - Calls the deploy script with `--expect-domain api.petprep.si`: a server whose `/opt/petprep/.env` names another domain refuses before any change (wrong host secret).
    - First step `scripts/ci-deploy-guard.sh`: push runs and every re-run fail (red) unless the run's commit is still the head of `main` on origin — an older commit never overwrites a newer deploy. "Run workflow" (attempt 1) is not checked.
    - Uses `rsync` over SSH to upload the exact commit tree to the staging dir `/opt/petprep/incoming` — **never directly into `repo/`**, because every PHP container bind-mounts `repo/backend` and would run the new code immediately.
-   - Executes `/opt/petprep/incoming/scripts/deploy-production.sh --from /opt/petprep/incoming <COMMIT_SHA>` on the server, which: checks the env (before any git/docker call) → records the previous release → checks `docker buildx` → **builds `petprep-app:next` + `petprep-web:next` from `incoming/` and smoke-tests them (`php artisan optimize` with the production env) while the old release keeps serving** → chowns the `app_storage` volume to uid 1000 and verifies it is writable as uid 1000 (abort otherwise — the FPM image is non-root) → `artisan down` on the old code (as uid 1000) → DB backup → syncs `incoming/` into `repo/` → promotes the images (`:production` → `:previous`, `:next` → `:production`) → validates a changed Caddyfile with the new caddy image (caddy is recreated after the migrations, because its single-file bind mount never sees a replaced file) → migrate → recreates all containers on the new images → waits for PHP-FPM (`php-fpm-ping`) → `queue:restart` → `artisan up` (3 attempts) → verifies `/up` through Caddy (`--resolve api.petprep.si:443:127.0.0.1`, fallback the IP site; 5 attempts) → prunes dangling images and build cache older than 7 days beyond 5 GB.
+   - Executes `/opt/petprep/incoming/scripts/deploy-production.sh --from /opt/petprep/incoming <COMMIT_SHA>` on the server, which: checks the env (before any git/docker call) → records the previous release → checks `docker buildx` → **builds `petprep-app:next` + `petprep-web:next` from `incoming/` and smoke-tests them (`php artisan optimize` with the production env) while the old release keeps serving** → chowns the `app_storage` volume to uid 1000 and verifies it is writable as uid 1000 (abort otherwise — the FPM image is non-root) → `artisan down` on the old code (as uid 1000) → DB backup → syncs `incoming/` into `repo/` → promotes the images (`:production` → `:previous`, `:next` → `:production`) → validates a changed Caddyfile with the new caddy image (caddy is recreated after the migrations, because its single-file bind mount never sees a replaced file) → migrate → recreates all containers on the new images → waits for PHP-FPM (`php-fpm-ping`) → `queue:restart` → `artisan up` (3 attempts) → verifies `/up` through Caddy (`--resolve <API domain>:443:127.0.0.1` — the API domain comes from the server's `APP_URL`; fallback the raw-IP site on production only; 5 attempts) → prunes dangling images and build cache older than 7 days beyond 5 GB.
    - The first build on the server compiles the PHP extensions (~5–10 min, *estimate*); later builds reuse the cached layers (code change ≈ 1 min, composer.lock change ≈ 2–3 min). All of it happens **before** maintenance mode.
    - A failing build or smoke test changes nothing (exit ≠ 0, no maintenance). On failure **before** migrations succeeded the script reverts `repo/` to the previous release (from `releases/previous`) **and the images** (`:previous` → `:production`) and leaves maintenance; on failure **after** migrations it keeps the new release (schema is new), restarts containers, leaves maintenance and fails loudly. Details: comment block in the script, DEPLOYMENT.md D10 / D14.
 
@@ -161,6 +160,18 @@ Configure in **Settings > Environments > production** (or Repository Secrets):
 | `PRODUCTION_HOST` | `138.199.172.97` |
 | `PRODUCTION_USER` | `deploy` |
 | `PRODUCTION_SSH_PRIVATE_KEY` | Contents of `~/.ssh/petprep_deploy_key` (ed25519 private key) |
+
+### 4a. Deploying production (manual since D18, David 2026-10-14)
+
+**Why:** every merge to `main` (10+ a day, also the unattended breed PRs) used to deploy production, and each deploy's maintenance mode + Reverb restart dropped the phone app's connection. Now merges only run CI; production changes when David decides.
+
+**One-time check before the first dispatch (David):** on the server, `grep -E '^(APP_URL|PETPREP_API_DOMAIN|PETPREP_CADDY_SITES)=' /opt/petprep/.env` must show `APP_URL=https://api.petprep.si` (or pin `PETPREP_API_DOMAIN=api.petprep.si` and `PETPREP_CADDY_SITES=production` there). Otherwise the deploy refuses with "this server's API domain is … but the deploy expects 'api.petprep.si'" before changing anything — and a wrong value would make Caddy serve another domain. Manual runs on the server: `/opt/petprep/scripts/deploy-production.sh --expect-domain api.petprep.si <SHA>`.
+
+**Deploy production:** Actions → **CI & Deploy** → **Run workflow** → branch `main`, target **production**, or `gh workflow run deploy-production.yml --ref main -f target=production`. The run tests everything on the current `main` head, then "Deploy to Hetzner Production" (guard, upload, `deploy-production.sh --expect-domain api.petprep.si`). Check: `curl -fsS https://api.petprep.si/up`, `gh run list --workflow deploy-production.yml --limit 3`. Afterwards "Mobile OTA update" publishes the production OTA when `mobile/` changed since the last release (needs a production store build with the same fingerprint). Claude runs the deploy only when David explicitly asks.
+
+**Rollback:** revert commit on `main` (PR + merge), then Run workflow → target `production` (§7). "Re-run" of an old production run is refused by the deploy guard.
+
+**Dev server: postponed** (David 2026-10-14). The Caddyfile and the deploy script already read the server identity from `/opt/petprep/.env` (`APP_URL` → `PETPREP_API_DOMAIN`, `PETPREP_CADDY_SITES=api-only` for a non-production domain), so a second API-only server needs only a CI job and its secrets later.
 
 ---
 
@@ -314,7 +325,7 @@ bash /opt/petprep/repo/scripts/reset-game-data.sh
 ## 7. Rollback Procedure
 
 ### Code Rollback
-A failed deploy reverts the code by itself when the failure happens before migrations succeed. For a deliberate rollback to an older commit, merge a **revert commit** (normal PR + merge → tested and deployed like any change), or move `main` where it should be and use **"Run workflow"** on `main`. **Re-running an old run fails by design** (deploy guard, DEPLOYMENT.md D16: its commit is no longer the head of `main`); "Re-run all jobs" of the run of the *current* `main` head still redeploys it. Only roll code back past a migration if that migration is backward compatible — otherwise restore the database too (below). `cat /opt/petprep/repo/.deployed-sha` shows what is live.
+A failed deploy reverts the code by itself when the failure happens before migrations succeed. For a deliberate rollback to an older commit, merge a **revert commit** (normal PR + merge — since D18 a merge deploys nothing), then **Run workflow** on `main` → target `production`. **Re-running an old run fails by design** (deploy guard, DEPLOYMENT.md D16: its commit is no longer the head of `main`); "Re-run all jobs" redeploys only a **production dispatch run of the current `main` head** — re-running a push run deploys nothing. Only roll code back past a migration if that migration is backward compatible — otherwise restore the database too (below). `cat /opt/petprep/repo/.deployed-sha` shows what is live.
 
 ### Rollback of the runtime (M4-05b: PHP-FPM image → Sail image)
 
@@ -422,13 +433,17 @@ When assigning a domain name (e.g. `api.petprep.io`):
 1. **DNS A Record:** Point `api.petprep.io` -> `138.199.172.97`.
 2. **Update `.env` on server:**
    ```bash
-   DOMAIN=api.petprep.io
    APP_URL=https://api.petprep.io
    REVERB_HOST=api.petprep.io
    REVERB_PORT=443
    REVERB_SCHEME=https
+   # optional (D18): derived from APP_URL by deploy-production.sh when unset
+   # PETPREP_API_DOMAIN=api.petprep.io
+   # PETPREP_CADDY_SITES=api-only      # production = + petprep.si / www / raw-IP site
    ```
-3. **Restart Caddy:** Caddy will automatically provision Let's Encrypt SSL/TLS certificates.
+3. **Redeploy** (the Caddyfile serves `{$PETPREP_API_DOMAIN}`; Caddy provisions the Let's Encrypt certificate). The production job passes `--expect-domain api.petprep.si` — a new production domain also needs that value changed in the workflow.
+
+Current name: `api.petprep.si` → `138.199.172.97` (production). (A dev server `api-dev.petprep.si` is postponed, D18.)
 
 ## 10. Marketing website (petprep.si)
 
