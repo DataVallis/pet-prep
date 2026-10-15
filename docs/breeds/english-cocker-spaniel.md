@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `english_cocker_spaniel` (viri S335–S344; ponovno S8, S10, S11, S14, S24, S35, S45, S174) |
 | Izvor | FCI št. 5, skupina 8, sekcija 2 (psi za vzganjanje divjadi), Velika Britanija (S335) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 36. mesto »English Cocker Spaniel« (S174) |
-| PR-ji | pet-prep #260 (pasma) · portret: čaka na naslednjo ročno namestitev produkcije (D18) · spletna stran #68 |
+| PR-ji | pet-prep #260 (pasma) · portret #265 (2026-10-15) · spletna stran #68 |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -37,7 +37,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov, odrasel 6.000, starejši 4.500 od 103 mesecev; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-41 | 2026-10-15 |
 | Česanje vsak dan (rutina »Počeši«), opozorilo po obroku, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R16 / M5-R17 | 2026-10-15 |
 | Barve (izbirnik barve, 8 barv standarda) | 🛠 | 💶 izziv | M5-R21 | 2026-10-15 |
-| AI portret v registru (zlat, naraven rep) | 🗓 po naslednji ročni namestitvi produkcije (D18) | — | M5-R11-04 | — |
+| AI portret v registru (zlat, naraven rep; sprejet v prvem poskusu) | ✅ | — | M5-R11-04 | 2026-10-15 |
 | Stran na petprep.si (`/animals/dogs/english-cocker-spaniel`, `/sl/zivali/psi/angleski-koker-spanjel`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
