@@ -4297,6 +4297,7 @@ class BreedStageParamsSeeder extends Seeder
         $breeds = DB::table('breed_configs')->pluck('breed_slug')->all();
         $touched = self::touchedTuples();
 
+        $insert = [];
         foreach (self::allRows() as $row) {
             if (! in_array($row['breed_slug'], $breeds, true)) {
                 continue;
@@ -4310,7 +4311,7 @@ class BreedStageParamsSeeder extends Seeder
                 throw new InvalidArgumentException("BreedStageParamsSeeder: {$row['breed_slug']}.{$row['stage']}.{$row['key']}: {$error}");
             }
 
-            DB::table('breed_stage_params')->insertOrIgnore(array_merge([
+            $insert[] = array_merge([
                 'breed_slug' => $row['breed_slug'],
                 'stage' => $row['stage'],
                 'age_from_months' => $row['age_from_months'],
@@ -4318,7 +4319,14 @@ class BreedStageParamsSeeder extends Seeder
             ], self::columns($row), [
                 'created_at' => $now,
                 'updated_at' => $now,
-            ]));
+            ]);
+        }
+
+        // One multi-row INSERT … ON CONFLICT DO NOTHING per chunk instead of one
+        // query per row (~2,000 rows): same insert-only semantics, ~40× faster —
+        // the test suite seeds this before >1,600 tests (perf 2026-10-15).
+        foreach (array_chunk($insert, 500) as $chunk) {
+            DB::table('breed_stage_params')->insertOrIgnore($chunk);
         }
 
         // QA m2: raw inserts bypass the model hooks that forget the rules

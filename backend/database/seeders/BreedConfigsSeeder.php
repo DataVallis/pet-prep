@@ -1003,14 +1003,16 @@ class BreedConfigsSeeder extends Seeder
     {
         $now = now();
 
+        $rows = [];
         foreach (self::configs() as $config) {
             $config['feed_windows'] = json_encode($config['feed_windows']);
             $config['search_keywords'] = json_encode($config['search_keywords'], JSON_UNESCAPED_UNICODE);
-
-            DB::table('breed_configs')->insertOrIgnore(
-                array_merge($config, ['created_at' => $now, 'updated_at' => $now])
-            );
+            $rows[] = array_merge($config, ['created_at' => $now, 'updated_at' => $now]);
         }
+
+        // One multi-row INSERT … ON CONFLICT DO NOTHING (every config has the same
+        // columns) instead of one query per breed — same insert-only semantics.
+        DB::table('breed_configs')->insertOrIgnore($rows);
 
         // Raw inserts fire no model events (M5-R06-01 free / paid catalogue cache).
         BreedCatalogService::forget();
