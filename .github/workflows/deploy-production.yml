@@ -1,6 +1,6 @@
 name: CI & Deploy
 
-# Pipeline (2026-10-06, DEPLOYMENT.md D16; manual production deploys D18, 2026-10-14):
+# Pipeline (2026-10-06, DEPLOYMENT.md D16; manual production deploys D18, 2026-10-14; daily deploy D21):
 #   plan ─┬─ backend-tests ───────┐
 #         ├─ mobile-checks ───────┤
 #         ├─ deploy-script-tests ─┼─ ci-ok (the one required status) ─ deploy (Run workflow, target production)
@@ -11,8 +11,10 @@ name: CI & Deploy
 # `ci-ok` fails unless every suite either passed or was skipped because plan said so.
 # A push / merge to main runs CI only and deploys NOTHING (David 2026-10-14). Production is
 # deployed only by "Run workflow" on main with target = production (scripts/ci-deploy-target.sh),
-# which tests everything; the deploy job runs only when plan and ci-ok succeeded (explicit
-# result checks — see the job) and its first step refuses a re-run of an older commit.
+# which tests everything: daily at 06:00 Europe/Ljubljana by .github/workflows/daily-deploy.yml
+# when main has new commits and their push CI is green (D21, David 2026-10-15), or manually by
+# David — agents never dispatch it. The deploy job runs only when plan and ci-ok succeeded
+# (explicit result checks — see the job) and its first step refuses a re-run of an older commit.
 
 on:
   push:
@@ -221,7 +223,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Shellcheck
-        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh scripts/restore-production-db.sh scripts/backup-production-db.sh scripts/tests/backup-production-db.test.sh scripts/backup-offsite.sh scripts/tests/backup-offsite.test.sh scripts/ci-deploy-target.sh scripts/ci-remote-deploy.sh scripts/mobile-ota-plan.sh scripts/mobile-ota.sh
+        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh scripts/restore-production-db.sh scripts/backup-production-db.sh scripts/tests/backup-production-db.test.sh scripts/backup-offsite.sh scripts/tests/backup-offsite.test.sh scripts/ci-deploy-target.sh scripts/ci-remote-deploy.sh scripts/mobile-ota-plan.sh scripts/mobile-ota.sh scripts/daily-deploy.sh scripts/tests/daily-deploy.test.sh
 
       # Stubbed docker/git/curl in a temp dir; needs only bash, git and rsync.
       - name: Harness (deploy-production.sh)
@@ -231,6 +233,10 @@ jobs:
       # the dev / production target (D18), the mobile OTA channel plan and the remote deploy step.
       - name: Harness (ci-plan.sh + ci-deploy-guard.sh + D18 routing)
         run: bash scripts/tests/ci-plan.test.sh
+
+      # Stubbed gh over JSON fixtures (real jq filters) + date; D21 daily 06:00 deploy trigger.
+      - name: Harness (daily-deploy.sh)
+        run: bash scripts/tests/daily-deploy.test.sh
 
       # Stubbed docker + backup script (D17 production reset wrapper).
       - name: Harness (reset-game-data.sh)

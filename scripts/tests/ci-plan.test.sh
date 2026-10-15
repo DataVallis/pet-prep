@@ -167,6 +167,7 @@ pr_case "other .md under backend counts" "$S_BACKEND" backend/resources/views/ma
 pr_case "dog research data: backend + scripts tests only" "$S_BTSCRIPTS" docs/research/dog-data/data.json
 pr_case "dog research sources: backend + scripts tests only" "$S_BTSCRIPTS" docs/research/dog-data/sources.md
 pr_case "breed registry export: scripts tests only" "$S_SCRIPTS" scripts/export-breed-registry.mjs scripts/tests/export-breed-registry.test.mjs
+pr_case "daily deploy trigger: scripts tests only" "$S_SCRIPTS" scripts/daily-deploy.sh scripts/tests/daily-deploy.test.sh .github/workflows/daily-deploy.yml
 pr_case "breed docs index: scripts tests only" "$S_SCRIPTS" scripts/breeds-index.mjs scripts/tests/breeds-index.test.mjs docs/breeds/hungarian-vizsla.md
 pr_case "breed registry output: backend + scripts tests only" "$S_BTSCRIPTS" docs/research/breed-registry.json
 pr_case "breeder checklist: scripts tests only" "$S_SCRIPTS" docs/research/breeder-checklist/data.json docs/research/breeder-checklist/sources.md

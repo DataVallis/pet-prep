@@ -285,6 +285,9 @@ Older queue (still valid where not done):
 
 ## 6. Session log
 
+### 2026-10-15 (cloud, devops) — D21 daily production deploy (`chore/daily-production-deploy`)
+- New `.github/workflows/daily-deploy.yml` + `scripts/daily-deploy.sh` (harness `scripts/tests/daily-deploy.test.sh`): 06:00 Europe/Ljubljana, dispatches CI & Deploy → Run workflow (target production) only when `main` is newer than production and its push CI is green. Manual deploys unchanged; agents still never dispatch. Next: watch the first 06:00 run (and that the Mobile OTA workflow_run still follows a bot-dispatched run).
+
 ### 2026-10-15 — breed runs in their own files (`chore/breed-runs-own-files`)
 - Breed runs (night only) now write only their code/data/tests, `docs/breeds/<en-slug>.md`, the queue row and generated files; shared tests read breed lists from code; registry i18n hashes cover only used strings; runbook rewritten. Debt: per-breed blocks still appended in shared mobile tests and `BreedSuitabilityTest` (runbook says: own file from now on); no per-breed docs written for the existing 42 breeds (history stays in the shared docs).
 
