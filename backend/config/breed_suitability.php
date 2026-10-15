@@ -1027,6 +1027,34 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S317'], 'refs' => ['belgian_malinois.behaviour.other_pets', 'belgian_malinois.suitability.petmd_prey_drive']],
             ],
         ],
+        // M5-R10-39: basset_hound.* (S319–S325), runbook rules (data.json
+        // proposed_game_parameters.basset_hound.suitability_tags). RKC (S321) + Breed Watch (S322) +
+        // PDSA (S323) + AKC (S324). Welfare breed (Breed Watch Category 3) → eyelid_problems +
+        // sensitive_skin. No large_home (RKC "Small/ medium garden"), no other_pets (PDSA: never
+        // unattended with another pet), no secure_fencing (the chip says "high fence" — not sourced)
+        // and no back_spine (IVDD is not a Breed Watch point) — open for David.
+        'basset_hound' => [
+            'suits' => [
+                // S323 "They do well in family environments thanks to their sweet nature …".
+                ['tag' => 'family_pet', 'source_ids' => ['S323'], 'refs' => ['basset_hound.suitability.pdsa_family', 'basset_hound.behaviour.family']],
+                // S323 "should get along with children very well"; S324 "often makes them good companions for children".
+                ['tag' => 'children', 'source_ids' => ['S323', 'S324'], 'refs' => ['basset_hound.suitability.pdsa_children', 'basset_hound.suitability.akc_children']],
+            ],
+            'consider' => [
+                // S322 "Eyelids not in normal contact with the eyeball, they are turned inwards or outwards"; S323 POAG.
+                ['tag' => 'eyelid_problems', 'source_ids' => ['S322', 'S323'], 'refs' => ['basset_hound.health.breed_watch', 'basset_hound.health.eyes']],
+                // S322 "Signs of dermatitis irritation in skin folds …"; S323 "check the folds in their skin every day".
+                ['tag' => 'sensitive_skin', 'source_ids' => ['S322', 'S323'], 'refs' => ['basset_hound.health.skin_folds', 'basset_hound.suitability.pdsa_skin_folds']],
+                // S323 "Basset Hounds can have very healthy appetites and so need plenty of exercise so they don't gain weight."
+                ['tag' => 'food_motivated_weight', 'source_ids' => ['S323'], 'refs' => ['basset_hound.behaviour.food_motivation', 'basset_hound.suitability.pdsa_appetite']],
+                // S323 "they love company"; "They best suit a family home where there is always someone around".
+                ['tag' => 'needs_company', 'source_ids' => ['S323'], 'refs' => ['basset_hound.behaviour.time_alone', 'basset_hound.suitability.pdsa_company']],
+                // S321 "Sheds: Yes"; S324 "But they shed more than you might expect."
+                ['tag' => 'sheds', 'source_ids' => ['S321', 'S324'], 'refs' => ['basset_hound.suitability.rkc_shedding']],
+                // S324 "Their long jowls create excess saliva, which is a normal trait of the breed."
+                ['tag' => 'drools', 'source_ids' => ['S324'], 'refs' => ['basset_hound.behaviour.drooling', 'basset_hound.suitability.akc_drooling']],
+            ],
+        ],
 
     ],
 ];

@@ -343,6 +343,15 @@ class FalAiService
                 .'proud head carriage, natural full tail reaching the hock carried low, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-39: FCI 163 (S320) — black, white and tan tricolour as the anchor (also lemon and white);
+            // welfare (RKC Breed Watch Category 3, S322): moderate ears, tight eyelids, little loose skin,
+            // adequate ground clearance. Never merle.
+            BreedType::BassetHound => 'A short-legged, sturdy, well-balanced Basset Hound dog '
+                .'with a smooth short black, white and tan tricolour coat, long low-set velvety ears of moderate length, '
+                .'dark lozenge-shaped eyes with tight eyelids, supple skin with only a little wrinkle at the brow, '
+                .'adequate ground clearance, rather long tapering tail, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -836,6 +845,17 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'short, straight, hard coat with a dense undercoat',
                 'markings' => 'pronounced black mask over the muzzle, lips and eyelids, black-tipped hairs',
+            ],
+            // M5-R10-39: FCI standard colours (S320) — tricolour, lemon and white.
+            BreedType::BassetHound => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'black, white and tan tricolour',
+                    1 => 'tricolour with a tan head',
+                    2 => 'lemon and white',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'smooth, short, close coat',
+                'markings' => 'white chest, legs and tail tip; long low-set ears',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

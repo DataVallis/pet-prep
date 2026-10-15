@@ -294,9 +294,10 @@ it('gives the West Highland White Terrier the new sensitive_skin tag (welfare ru
         ->and($westie['consider'])->toBe(['sensitive_skin', 'sheds', 'frequent_grooming', 'chews_when_bored', 'chases_small_pets'])
         ->and($westie['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('long_daily_exercise');
 
-    // Only the Westie and the Bulldog (Breed Watch skin-fold dermatitis, M5-R10-20) carry the chip so far.
+    // Only the Westie, the Bulldog (Breed Watch skin-fold dermatitis, M5-R10-20) and the Basset Hound (Breed Watch
+    // skin-fold dermatitis, M5-R10-39) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::WestHighlandWhiteTerrier, BreedType::Bulldog], true)) {
+        if (! in_array($breed, [BreedType::WestHighlandWhiteTerrier, BreedType::Bulldog, BreedType::BassetHound], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('sensitive_skin');
         }
     }
@@ -464,10 +465,10 @@ it('gives the Cane Corso the new not_for_small_children and drools tags, active_
         ->and($corso['consider'])->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')
         ->not->toContain('sensitive_skin')->not->toContain('frequent_grooming')->not->toContain('fragile_older_children');
 
-    // `drools` also the Great Dane (PDSA S243, M5-R10-29); `not_for_small_children` also the Dobermann (PDSA S211,
+    // `drools` also the Great Dane (PDSA S243, M5-R10-29) and the Basset Hound (AKC S324, M5-R10-39); `not_for_small_children` also the Dobermann (PDSA S211,
     // M5-R10-25), the Boxer (PDSA S219, M5-R10-26), the Great Dane (PDSA S243, M5-R10-29) and the Belgian Malinois (AKC S316, M5-R10-38).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::CaneCorso, BreedType::GreatDane], true)) {
+        if (! in_array($breed, [BreedType::CaneCorso, BreedType::GreatDane, BreedType::BassetHound], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('drools');
         }
         if (! in_array($breed, [BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::GreatDane, BreedType::BelgianMalinois], true)) {
@@ -527,9 +528,9 @@ it('gives the Boxer the new needs_company and short_muzzle_breathing tags and th
         ->not->toContain('hips_hind_legs')->not->toContain('heart_and_spine')->not->toContain('frequent_grooming');
 
     // Only the Boxer, the Boston Terrier (AKC S260, M5-R10-31), the Miniature American Shepherd (PetMD S269, M5-R10-32)
-    // the Chihuahua (PDSA S277, M5-R10-33), the English Springer Spaniel (AKC S286, M5-R10-34), the Brittany (PetMD S302, M5-R10-36) and the Belgian Malinois (AKC S316, M5-R10-38) carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
+    // the Chihuahua (PDSA S277, M5-R10-33), the English Springer Spaniel (AKC S286, M5-R10-34), the Brittany (PetMD S302, M5-R10-36), the Belgian Malinois (AKC S316, M5-R10-38) and the Basset Hound (PDSA S323, M5-R10-39) carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::Brittany, BreedType::BelgianMalinois], true)) {
+        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::Brittany, BreedType::BelgianMalinois, BreedType::BassetHound], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('needs_company');
         }
         if (! in_array($breed, [BreedType::Boxer, BreedType::ShihTzu], true)) {
@@ -637,9 +638,9 @@ it('gives the Great Dane the new eyelid_problems tag and hips_hind_legs (welfare
         ->and($dane['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
         ->not->toContain('frequent_grooming')->not->toContain('needs_company')->not->toContain('experienced_owner');
 
-    // Only the Great Dane carries eyelid_problems so far.
+    // Only the Great Dane and the Basset Hound (Breed Watch S322, M5-R10-39) carry eyelid_problems so far.
     foreach (BreedType::cases() as $breed) {
-        if ($breed !== BreedType::GreatDane) {
+        if (! in_array($breed, [BreedType::GreatDane, BreedType::BassetHound], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('eyelid_problems');
         }
     }
@@ -825,4 +826,23 @@ it('gives the Belgian Malinois active_family / large_home and the exercise, owne
         ->and(bsEntry('belgian_malinois.suitability.akc_time_alone')['quote'])->toBe('they should not be left alone for extended periods of time.')
         ->and(bsEntry('belgian_malinois.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Large house')
         ->and(bsEntry('belgian_malinois.suitability.rkc_breed_watch')['value'])->toBe('Category 1');
+});
+
+it('gives the Basset Hound family_pet / children and the welfare chips eyelid_problems / sensitive_skin (Breed Watch Category 3) — no large home, fence or back chip (runbook 2026-10-15)', function () {
+    $bh = app(BreedSuitability::class)->for(BreedType::BassetHound);
+    expect($bh['suits'])->toBe(['family_pet', 'children'])
+        // RKC "Large house" but "Small/ medium garden" → no large_home; PDSA: never unattended with another pet → no other_pets.
+        ->and($bh['suits'])->not->toContain('large_home')->not->toContain('apartment')->not->toContain('other_pets')
+        ->not->toContain('small_children')->not->toContain('first_time_owner')->not->toContain('active_family')
+        ->and($bh['consider'])->toBe(['eyelid_problems', 'sensitive_skin', 'food_motivated_weight', 'needs_company', 'sheds', 'drools'])
+        // Not flat-faced; IVDD is not a Breed Watch point (open for David); the fence chip says "high"; RKC "Up to 1 hour".
+        ->and($bh['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('back_spine')->not->toContain('secure_fencing')
+        ->not->toContain('long_daily_exercise')->not->toContain('chases_small_pets')->not->toContain('shorter_lifespan')
+        ->not->toContain('frequent_grooming');
+
+    expect(bsEntry('basset_hound.health.breed_watch')['quote'])->toBe('Eyelids not in normal contact with the eyeball, they are turned inwards or outwards')
+        ->and(bsEntry('basset_hound.health.skin_folds')['quote'])->toBe('Signs of dermatitis irritation in skin folds, and/or hair loss or scarring from previous dermatitis')
+        ->and(bsEntry('basset_hound.suitability.pdsa_children')['quote'])->toBe('Basset Hounds are generally very tolerant and so should get along with children very well.')
+        ->and(bsEntry('basset_hound.suitability.rkc_size_of_garden')['quote'])->toBe('Size of garden: Small/ medium garden')
+        ->and(bsEntry('basset_hound.suitability.rkc_breed_watch')['value'])->toBe('Category 3');
 });
