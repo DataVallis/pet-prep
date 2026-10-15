@@ -9,6 +9,24 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-15 — Angleški koker španjel: triindvajseta pasma po dvajsetih (M5-R10-41)
+
+**Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **angleškega koker španjela** (36. mesto). Sedemintrideseta plačljiva pasma psa; v izbirniku je za madžarskim kratkodlakim ptičarjem. Odrasel koker v igri potrebuje **6.000 korakov na dan** (The Royal Kennel Club: do 1 ure gibanja; PDSA: vsaj eno uro), starejši od 8,6 leta 4.500; uči se hitreje kot mešanček (Coren: 18. mesto). Prvič po biglu meja starejšega psa izhaja iz prave britanske raziskave življenjske dobe pasme (VetCompass, Engdahl in sod. 2023: srednja starost ob smrti 11,44 leta), ne iz splošnega razpona. Česanje vsak dan, opozorilo »počakaj s sprehodom« po obroku in socializacija mladička so del izziva od prvega dne.
+
+**Zakaj je pomembno:** Koker velja za »veselega« družinskega psa, a ima dlako, ki jo je treba česati vsak dan, rad je (in se zredi) in težko ostaja sam — PDSA svetuje, naj nikoli ne bo sam več kot štiri ure. Prav to so stvari, ki jih otrok na fotografiji ne vidi, v 12 tednih PetPrepa pa jih začuti.
+
+**Številke:** 10 novih virov (S335–S344), 1 migracija, brez nove oznake, 1 nov ključ zdravja v registru (družinska nefropatija), 2 nova ključa testov za vzreditelja (AON, FN), 3 + 5 oznak v izbirniku, 8 barv standarda, 3 zgrajene potrebe z virom (česanje vsak dan, premor po obroku, socializacija) in 3 zapisane za kasneje (frizer, kremplji, ušesa — *načrt*).
+
+**Kako povedati:**
+- 👩 Starši: »Koker je prijazen in potrpežljiv z otroki, a ga je treba česati vsak dan in ne sme biti sam po cel dan. V PetPrepu boste videli, ali otrok zmore vsakodnevno nego 12 tednov zapored, preden se odločite za pravega psa.«
+- 🧒 Otroci: »Koker je zlat (ali črn, ali pikast!), z dolgimi mehkimi ušesi. Vsak dan ga počešeš, po obroku malo počakaš s sprehodom — in pazi, da ne dobi preveč priboljškov!«
+- 💼 Investitorji: »Triindvajseta pasma, ki jo je sistem sam izbral po javni lestvici AKC — z viri, testi in pregledom, brez ročnega dela; meja starosti iz recenzirane raziskave VetCompass.«
+- 🤝 Partnerji (veterinarji, vzreditelji): »Pri kokerju PetPrep omenja displazijo kolkov, kožne alergije, vnetja ušes, atrofijo mrežnice, dedno bolezen ledvic in avtoimunske bolezni — brez statistik; staršem svetuje, naj vzreditelja vprašajo za DNK teste (prcd-PRA, AMS, AON, FN), slikanje kolkov in pregled oči staršev.«
+- 📣 Omrežja: kokerja **lahko objavljamo** (RKC Breed Watch kategorija 1, brez točk o dobrobiti), zlatega, z naravnim repom; nikoli kot psa brez nege in nikoli zamenjanega z ameriškim kokerjem.
+- 🛠 Tehnično: »Brez novega ključa oznak; česanje, opozorilo po obroku in socializacija so samo nove vrstice v `breed_stage_params`; meja starejšega 103 iz mediane VetCompass; izvoz registra dobi nov ključ zdravja `familial_nephropathy` in testa `dna_aon` / `dna_fn`.«
+
+---
+
 ## 2026-10-15 — Madžarski kratkodlaki ptičar (vižla): dvaindvajseta pasma po dvajsetih (M5-R10-40)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **madžarskega kratkodlakega ptičarja (vižlo)** (35. mesto). Šestintrideseta plačljiva pasma psa; v izbirniku je za basetom. Odrasla vižla v igri potrebuje **12.000 korakov na dan** (The Royal Kennel Club: več kot 2 uri gibanja; PDSA: najmanj dve uri), starejša od 9 let 9.000; uči se hitreje kot mešanček (Coren: 25. mesto). Česanje enkrat na teden, opozorilo »počakaj s sprehodom« po obroku in socializacija mladička so del izziva od prvega dne.
