@@ -35,6 +35,8 @@
 #      the production env. Then normalise the storage volume for the non-root
 #      runtime (STORAGE below). Still BEFORE maintenance mode: a failure here
 #      aborts the deploy while the old release keeps serving (nothing changed).
+#   3b. Pending migrations? (MAINTENANCE below) — none → steps 4 and `artisan up` of
+#      step 9 are skipped.
 #   4. `artisan down --retry=15` on the OLD code (`exec --user 1000:1000` in the
 #      running app container, so the down file belongs to uid 1000; fallback
 #      `run --rm`, which runs as uid 1000 in both the Sail and the FPM image; if both
@@ -64,6 +66,47 @@
 #   does not exist while an app container runs, the project name is wrong → abort.
 #   After `up -d` (old containers gone) the chown runs once more (warn-only) for files
 #   an old root process may have created in between.
+#
+# MAINTENANCE (D19, David 2026-10-14: shorter downtime)
+#   Maintenance mode exists for the schema change: new code must never run on the old
+#   schema and a failed migration must be revertable. After the smoke test (step 3) the
+#   NEW image asks the live database `php artisan migrate:status --pending=3` (Laravel 11:
+#   exit 3 = something pending, 0 = nothing pending):
+#     pending  → the full flow below (down → backup → switch → migrate → up -d → up).
+#     none     → NO `artisan down` / `artisan up`: backup, code switch, image promote,
+#                Caddyfile validation, `migrate --force` (a no-op, kept as a guard), seeder,
+#                then queue + queue-broadcasts + scheduler are recreated FIRST and the
+#                app / caddy after them (no old worker gets a job of the new code),
+#                php-fpm-ping, queue:restart, health check. The old release serves until
+#                its container is replaced; php-fpm stops with SIGQUIT (graceful), so the
+#                gap is the new container's start (~seconds) instead of the whole window.
+#                The revert / failure semantics below are unchanged (MAINTENANCE_ON=0, so
+#                there is nothing to leave). A final idempotent `artisan up` lifts a flag
+#                an earlier failed run may have left.
+#     unknown  → any other exit (no migrations table, database down, first deploy):
+#                maintenance, as before.
+#   DEPLOY_FORCE_MAINTENANCE=1 forces the maintenance flow.
+#
+# REVERB + CADDY (D19)
+#   Every deploy used to recreate reverb and caddy (new images), which drops every open
+#   WebSocket (clients connect through caddy to reverb). Both are KEPT when nothing they
+#   run on changed since a deploy last (re)created them — a sha256 (service_fingerprint)
+#   over the service's inputs in the new tree + /opt/petprep/.env (+ derived Caddy
+#   identity) + the base image id of the new build:
+#     reverb  backend/composer.{json,lock}, compose.production.yaml, config/**,
+#             bootstrap/** (minus caches), app/Providers/**, app/Listeners/**, routes/**,
+#             docker/production/**; base = the Dockerfile's `base` stage (php:8.3-fpm +
+#             extensions — a refreshed upstream image changes it). Reverb does channel auth
+#             via HTTP to `app` and gets events over HTTP from queue-broadcasts.
+#     caddy   deployment/Caddyfile, backend/public/**, composer.{json,lock} (Filament
+#             assets), compose file, the Dockerfile; base = caddy:2.8-alpine image id.
+#             A changed Caddyfile always recreates caddy (CADDY below).
+#   Stored in releases/{reverb,caddy}.fingerprint after a successful deploy that recreated
+#   the service. Kept → `up -d --no-deps` of the other services (caddy depends on app +
+#   reverb). No fingerprint yet, a difference, unknown base id, service not running,
+#   DEPLOY_RECREATE_REVERB=1 / DEPLOY_RECREATE_CADDY=1 → recreated as before. A kept
+#   service keeps its old image (never pruned while in use). Whether open connections
+#   really survive is to be verified on the first real deploy.
 #
 # SERVER (D18, 2026-10-14)
 #   The server's identity comes from /opt/petprep/.env, not from this script (production =
@@ -154,6 +197,8 @@ HEALTH_HOST=""          # set by the env preflight (SERVER above)
 HEALTH_IP_HOST=""
 APP_SERVICES=(app reverb queue queue-broadcasts scheduler caddy)
 WORKER_SERVICES=(reverb queue queue-broadcasts scheduler)
+BASE_APP_ID=""          # base stage of the new app image (step 3; D19 fingerprints)
+BASE_WEB_ID=""          # caddy base image of the new web image
 IMAGES=(petprep-app petprep-web)
 # Compose project = network + volume prefix. Default "backend" = the directory of
 # the compose file (what production has always used); explicit so the build tree
@@ -230,6 +275,9 @@ PREV_IMAGES=()          # images whose old :production was saved as :previous
 MIGRATED=0              # 1 after `migrate --force` succeeded
 CONTAINERS_RECREATED=0  # 1 once `up -d` of the app services was attempted
 CADDY_CHANGED=0         # 1 if the new Caddyfile differs from the running container's
+MIGRATIONS="unknown"    # none | pending | unknown (step 3b, D19)
+KEEP_REVERB=0           # 1 when reverb keeps its container (D19)
+KEEP_CADDY=0            # 1 when caddy keeps its container (D19)
 FAILED_AT=""
 
 trap 'FAILED_AT="line ${LINENO}: ${BASH_COMMAND}"' ERR
@@ -317,6 +365,44 @@ restore_images() {
     return "$rc"
 }
 
+# Inputs per kept-able service (REVERB / CADDY above), relative to the tree root.
+REVERB_INPUTS=(backend/composer.json backend/composer.lock backend/compose.production.yaml
+    backend/config backend/bootstrap backend/app/Providers backend/app/Listeners backend/routes
+    backend/docker/production)
+CADDY_INPUTS=(deployment/Caddyfile backend/public backend/composer.json backend/composer.lock
+    backend/compose.production.yaml backend/docker/production/Dockerfile)
+
+# service_fingerprint SERVICE TREE: sha256 over the service's input files in TREE, the
+# server env (+ the derived Caddy identity) and the base image id of the new build
+# (BASE_IDS, step 3). Returns 1 and prints nothing when the base id is unknown — the
+# caller then recreates the service.
+service_fingerprint() {
+    local svc=$1 tree=$2 base inputs=()
+    case "$svc" in
+        reverb) inputs=("${REVERB_INPUTS[@]}"); base="${BASE_APP_ID}" ;;
+        caddy)  inputs=("${CADDY_INPUTS[@]}");  base="${BASE_WEB_ID}" ;;
+        *) return 1 ;;
+    esac
+    [ -n "$base" ] || return 1
+    {
+        # find exits 1 for a missing path (e.g. no composer.lock in a test tree): ignored,
+        # the listed files are what exists.
+        (cd "$tree" || exit 0
+         find "${inputs[@]}" -type f ! -path 'backend/bootstrap/cache/*' 2>/dev/null
+         exit 0) | LC_ALL=C sort \
+            | while IFS= read -r f; do printf '%s %s\n' "$f" "$(sha256sum < "${tree}/${f}" | cut -d' ' -f1)"; done
+        echo "env $(sha256sum < "$ENV_FILE" | cut -d' ' -f1) ${PETPREP_API_DOMAIN:-} ${PETPREP_CADDY_SITES:-}"
+        echo "base ${base}"
+    } | sha256sum | cut -d' ' -f1
+}
+
+# keep_service SERVICE FP: 1 when SERVICE may keep its running container.
+keep_service() {
+    local svc=$1 fp=$2 file="${PETPREP_ROOT}/releases/${1}.fingerprint"
+    [ -n "$fp" ] && [ -f "$file" ] && [ "$(cat "$file")" = "$fp" ] \
+        && [ -n "$(dc ps -q --status running "$svc" 2>/dev/null || true)" ]
+}
+
 # PHP-FPM answers its ping (caches built by the entrypoint, pool up).
 wait_for_app() {
     local i
@@ -383,7 +469,11 @@ on_exit() {
             fi
             # Containers of the Sail runtime bind-mount the code and may have loaded
             # new classes while the new tree was on disk: restart them on the old code.
-            dc restart "${WORKER_SERVICES[@]}" || warn "could not restart workers."
+            # The FPM image bakes the code in: untouched containers still run the old
+            # release, so without maintenance (D19) nothing needs a restart.
+            if [ "$CONTAINERS_RECREATED" = "1" ] || [ "${MIGRATIONS:-unknown}" != "none" ]; then
+                dc restart "${WORKER_SERVICES[@]}" || warn "could not restart workers."
+            fi
             log "Code reverted to ${PREV_SHA:-previous release}."
         fi
     else
@@ -529,6 +619,12 @@ if ! dcn run --rm --no-deps -T app php artisan optimize; then
     echo "ERROR: the new image cannot build its caches with the production env — nothing was changed." >&2
     exit 1
 fi
+# Base image ids for the reverb / caddy fingerprints (D19): the PHP base stage (php:8.3-fpm +
+# extensions — a refreshed upstream image changes it; cache hit after the build above) and
+# the Caddy base image. Unknown → the service is recreated (fail safe), never an error.
+BASE_APP_ID="$(docker buildx build -q --load --target base -f "${BUILD_DIR}/backend/docker/production/Dockerfile" "${BUILD_DIR}/backend" 2>/dev/null | tail -n1)" || BASE_APP_ID=""
+BASE_WEB_ID="$(docker image inspect --format '{{.Id}}' caddy:2.8-alpine 2>/dev/null)" || BASE_WEB_ID=""
+[ -n "$BASE_APP_ID" ] || warn "could not resolve the PHP base image id — reverb will be recreated."
 
 # Storage volume ownership for the non-root runtime (see STORAGE above).
 if docker volume inspect "$STORAGE_VOLUME" > /dev/null 2>&1; then
@@ -557,8 +653,30 @@ if ! dc exec -T caddy cat /etc/caddy/Caddyfile > "$CADDY_RUNNING_COPY" 2>/dev/nu
     warn "could not read the running Caddyfile (caddy not running?) — treating it as changed."
 fi
 
-# ---- 4. Maintenance mode BEFORE touching the code --------------------------------
-enter_maintenance
+# ---- 3b. Pending migrations? (D19, see MAINTENANCE above) -------------------------
+# Asked with the NEW image against the live database, still before anything changed.
+# Laravel 11 `migrate:status --pending=N` exits N when a migration is pending, 0 when
+# none is; any other code (no migrations table, database down) → unknown → maintenance.
+if [ "${DEPLOY_FORCE_MAINTENANCE:-0}" = "1" ]; then
+    log "DEPLOY_FORCE_MAINTENANCE=1 — maintenance mode whatever the migrations."
+else
+    log "Checking for pending migrations (new image, live database)..."
+    pending_rc=0
+    dcn run --rm --no-deps -T app php artisan migrate:status --pending=3 || pending_rc=$?
+    case "$pending_rc" in
+        0) MIGRATIONS="none" ;;
+        3) MIGRATIONS="pending" ;;
+        *) warn "could not tell whether migrations are pending (exit ${pending_rc}; database not running / first deploy?) — using maintenance mode." ;;
+    esac
+fi
+
+# ---- 4. Maintenance mode BEFORE touching the code (only when the schema changes) ---
+if [ "$MIGRATIONS" = "none" ]; then
+    log "No pending migrations — deploying WITHOUT maintenance mode (the old release serves until its containers are replaced)."
+else
+    [ "$MIGRATIONS" = "pending" ] && log "Pending migrations — maintenance mode for the schema change."
+    enter_maintenance
+fi
 
 # ---- 5. Pre-migration database backup --------------------------------------------
 # The backup script of the release being deployed wins over the installed copy
@@ -662,9 +780,32 @@ dc run --rm app php artisan db:seed --class='Database\Seeders\BreedConfigsSeeder
     || warn "BreedConfigsSeeder failed."
 
 # ---- 8. Containers (caches are built per container on start), workers -------------
-log "Starting all application services on the new images..."
+# Reverb and caddy keep their containers when nothing they run on changed since a deploy
+# last (re)created them (REVERB / CADDY above) — the services clients hold connections to.
+REVERB_FP_NEW="$(service_fingerprint reverb "$REPO_DIR")" || REVERB_FP_NEW=""
+CADDY_FP_NEW="$(service_fingerprint caddy "$REPO_DIR")" || CADDY_FP_NEW=""
+if [ "${DEPLOY_RECREATE_REVERB:-0}" != "1" ] && keep_service reverb "$REVERB_FP_NEW"; then KEEP_REVERB=1; fi
+if [ "${DEPLOY_RECREATE_CADDY:-0}" != "1" ] && [ "$CADDY_CHANGED" = "0" ] && keep_service caddy "$CADDY_FP_NEW"; then KEEP_CADDY=1; fi
 CONTAINERS_RECREATED=1
-dc up -d --remove-orphans "${APP_SERVICES[@]}"
+if [ "$MIGRATIONS" = "none" ]; then
+    # No maintenance: workers first, so no OLD worker ever takes a job the NEW app
+    # dispatched (new workers handling jobs of the old app was already normal: jobs
+    # queued before a maintenance window ran on the new workers too).
+    log "Recreating queue workers + scheduler on the new image first..."
+    dc up -d --no-deps queue queue-broadcasts scheduler
+fi
+if [ "$KEEP_REVERB" = "1" ] || [ "$KEEP_CADDY" = "1" ]; then
+    up_services=(app queue queue-broadcasts scheduler)
+    kept=()
+    if [ "$KEEP_REVERB" = "1" ]; then kept+=(reverb); else up_services+=(reverb); fi
+    if [ "$KEEP_CADDY" = "1" ]; then kept+=(caddy); else up_services+=(caddy); fi
+    log "Starting the application services on the new images (unchanged, not restarted: ${kept[*]})..."
+    # --no-deps: caddy depends on app + reverb, compose would otherwise recreate them too.
+    dc up -d --remove-orphans --no-deps "${up_services[@]}"
+else
+    log "Starting all application services on the new images..."
+    dc up -d --remove-orphans "${APP_SERVICES[@]}"
+fi
 if [ "$CADDY_CHANGED" = "1" ]; then
     # Single-file bind mount: only a new container sees the new Caddyfile.
     log "Recreating caddy for the new Caddyfile..."
@@ -683,6 +824,11 @@ dc exec -T queue php artisan queue:restart || warn "queue:restart failed."
 
 # ---- 9. Leave maintenance, health check ------------------------------------------
 leave_maintenance || exit 1
+if [ "$MIGRATIONS" = "none" ]; then
+    # Never went down in this deploy; lift a maintenance flag left by an earlier failed
+    # run (a deploy always ended with `artisan up` before D19). Idempotent.
+    artisan up || warn "artisan up (no-op check) failed — check maintenance mode by hand."
+fi
 
 log "Verifying service health (through Caddy)..."
 dc ps
@@ -699,7 +845,16 @@ if [ "$HTTP_STATUS" != "200" ]; then
     exit 1
 fi
 
-# Untagged images of older releases (keeps :production, :previous and the Sail image).
+# A recreated reverb / caddy now runs on this release's inputs — remember them.
+if [ "$KEEP_REVERB" = "0" ] && [ -n "$REVERB_FP_NEW" ]; then
+    echo "$REVERB_FP_NEW" > "${PETPREP_ROOT}/releases/reverb.fingerprint" || warn "could not record the reverb fingerprint (next deploy recreates reverb)."
+fi
+if [ "$KEEP_CADDY" = "0" ] && [ -n "$CADDY_FP_NEW" ]; then
+    echo "$CADDY_FP_NEW" > "${PETPREP_ROOT}/releases/caddy.fingerprint" || warn "could not record the caddy fingerprint (next deploy recreates caddy)."
+fi
+
+# Untagged images of older releases (keeps :production, :previous and the Sail image;
+# an image a container still runs — e.g. a kept reverb — is never pruned).
 docker image prune -f > /dev/null || warn "docker image prune failed."
 # Build cache: drop entries older than 7 days, but always keep up to 5 GB (layers of
 # the PHP extension build — the expensive part of a rebuild).

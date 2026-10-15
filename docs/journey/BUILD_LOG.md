@@ -9,6 +9,18 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-14 — Posodobitev brez »smo v vzdrževanju« (D19)
+
+**Kaj se je zgodilo:** Deploy zdaj najprej vpraša bazo, ali nova različica prinaša spremembe sheme. Če ne, strežnik ne gre v način vzdrževanja: zamenja delavce, nato aplikacijo, spletni strežnik (Caddy) pa med tem do 10 sekund počaka nanjo, namesto da bi vrnil napako. Strežnika za sprotne posodobitve (Reverb) in Caddy pusti pri miru, kadar se njune nastavitve niso spremenile.
+
+**Zakaj je pomembno:** Prej je vsak deploy za minuto ali več vračal »503« in prekinil povezavo vseh telefonov. Zdaj sprememba brez migracije pomeni le nekaj sekund preklopa. Ali odprte povezave telefonov res ostanejo, bomo preverili ob prvem pravem deployu (načrt).
+
+**Kako povedati:**
+- 👩 Starši: »Ko izboljšamo aplikacijo, je ne ugasnemo več za minuto — večina posodobitev gre mimo skoraj neopazno.«
+- 🛠 Tehnično: »`migrate:status --pending=3` z novo sliko pred vzdrževanjem; Reverb in Caddy se ne zaženeta znova, ko se prstni odtis njunih vhodov (config, composer.lock, public/, Caddyfile, .env, osnovna slika) ne spremeni; Caddy `lb_try_duration 10s`; 333 preverjanj v testni skripti.«
+
+---
+
 ## 2026-10-14 — Produkcija se spreminja samo, ko se tako odločimo (D18)
 
 **Kaj se je zgodilo:** Združena koda na `main` zdaj sproži samo teste. Produkcijski strežnik, na katerem so družine, posodobimo ročno z enim klikom v GitHubu (Run workflow → `production`); posodobitev aplikacije (OTA) gre ven šele za tem. Razvojni strežnik smo zaenkrat preložili.

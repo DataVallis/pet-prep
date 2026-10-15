@@ -333,6 +333,8 @@ jobs:
           echo "production hosts: $(hosts prod.json)"; echo "dev hosts: $(hosts dev.json)"
           test "$(hosts prod.json)" = '["138.199.172.97","api.petprep.si","petprep.si","www.petprep.si"]'
           test "$(hosts dev.json)" = '["api-dev.petprep.si"]'
+          # D19: every FastCGI upstream to app:9000 retries during the app swap (2 sites).
+          test "$(jq '[.. | objects | select(.load_balancing? .try_duration == 10000000000)] | length' prod.json)" = 2
 
       - name: Smoke test the app image
         run: |

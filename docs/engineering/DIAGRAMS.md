@@ -1077,13 +1077,16 @@ flowchart TD
   C -- fails --> X0["exit ≠ 0 · nothing changed<br/>old release keeps serving"]
   D -- fails --> X0
   ST -- fails --> X0
-  ST --> E["4 artisan down (old code, exec --user 1000)"] --> F["5 pg_dump backup"] --> G["6 code switch repo/<br/>promote :production→:previous, :next→:production"]
+  ST --> PM{"3b migrate:status --pending=3<br/>(new image, live DB) — D19"}
+  PM -- "3 pending / error" --> E["4 artisan down (old code, exec --user 1000)"] --> F["5 pg_dump backup"]
+  PM -- "0 none: no maintenance" --> F
+  F --> G["6 code switch repo/<br/>promote :production→:previous, :next→:production"]
   G --> H{"Caddyfile changed?"}
   H -- yes --> HV["caddy validate (new image)"]
   H -- no --> I
   HV --> I["7 postgres/redis · migrate --force"]
-  I --> J["8 up -d app reverb queue queue-broadcasts scheduler caddy<br/>(entrypoint: per-container caches)<br/>+ force-recreate caddy if Caddyfile changed"]
-  J --> K["re-chown storage (warn-only) · wait: php-fpm-ping"] --> L["queue:restart"] --> M2["9 artisan up (3×)"] --> N["health /up through Caddy (5×)<br/>--resolve API domain:443 → IP site fallback (production only)"]
+  I --> J["8 up -d app reverb queue queue-broadcasts scheduler caddy<br/>(entrypoint: per-container caches)<br/>no maintenance: queue + queue-broadcasts + scheduler first (D19)<br/>reverb / caddy not restarted (--no-deps) when releases/{reverb,caddy}.fingerprint matches<br/>caddy lb_try_duration 10s holds requests during the app swap<br/>+ force-recreate caddy if Caddyfile changed"]
+  J --> K["re-chown storage (warn-only) · wait: php-fpm-ping"] --> L["queue:restart"] --> M2["9 artisan up (3×; one idempotent up without maintenance)"] --> N["health /up through Caddy (5×)<br/>--resolve API domain:443 → IP site fallback (production only)"]
   N --> O["image prune (dangling) · builder prune (> 7 days, keep 5 GB)"]
   G & HV & I -- "fails (pre-migration)" --> R1["revert code + images (:previous→:production)<br/>restart workers · artisan up"]
   J & K & N -- "fails (post-migration)" --> R2["keep new release (schema is new)<br/>up -d · restart workers · artisan up · loud error"]
