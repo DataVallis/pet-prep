@@ -1087,6 +1087,33 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S329'], 'refs' => ['hungarian_vizsla.behaviour.other_pets', 'hungarian_vizsla.suitability.pdsa_prey_drive']],
             ],
         ],
+        // M5-R10-41: english_cocker_spaniel.* (S335–S344), runbook rules (data.json
+        // proposed_game_parameters.english_cocker_spaniel.suitability_tags). RKC (S337) + PDSA (S339) + PetMD
+        // (S340) + VCA (S341). RKC "Up to 1 hour per day" → no active_family / long_daily_exercise. RKC "Small
+        // house" → neither apartment nor large_home. PDSA "don't have a high prey drive" → no chases_small_pets.
+        // Breed Watch Category 1 → no welfare chip.
+        'english_cocker_spaniel' => [
+            'suits' => [
+                // S337 "It remains hugely popular as a family pet."; S340 "a wonderful family dog …".
+                ['tag' => 'family_pet', 'source_ids' => ['S337', 'S340'], 'refs' => ['english_cocker_spaniel.behaviour.family', 'english_cocker_spaniel.suitability.petmd_family']],
+                // S339 "Cocker Spaniels tend to get along well with children" (supervise); S341 "Generally good with children".
+                ['tag' => 'children', 'source_ids' => ['S339', 'S341'], 'refs' => ['english_cocker_spaniel.suitability.pdsa_children', 'english_cocker_spaniel.suitability.vca_children']],
+                // S340 "… friendly attitude with people and other animals."; S341 "Typically social with proper introduction".
+                ['tag' => 'other_pets', 'source_ids' => ['S340', 'S341'], 'refs' => ['english_cocker_spaniel.suitability.petmd_other_animals', 'english_cocker_spaniel.suitability.vca_other_pets']],
+            ],
+            'consider' => [
+                // S337 "Grooming: Every day"; S339 "They need a daily brush …".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S337', 'S339'], 'refs' => ['english_cocker_spaniel.suitability.rkc_grooming', 'english_cocker_spaniel.suitability.pdsa_grooming']],
+                // S340 "often easily motivated by rewards of food"; "… often overweight."
+                ['tag' => 'food_motivated_weight', 'source_ids' => ['S340'], 'refs' => ['english_cocker_spaniel.behaviour.food_motivation', 'english_cocker_spaniel.behaviour.obesity_tendency']],
+                // S339 "Without the right amount of stimulation and company, … nibbling and chewing."
+                ['tag' => 'chews_when_bored', 'source_ids' => ['S339'], 'refs' => ['english_cocker_spaniel.behaviour.chewing']],
+                // S339 "known for suffering with separation anxiety"; "never left alone for more than four hours".
+                ['tag' => 'needs_company', 'source_ids' => ['S339'], 'refs' => ['english_cocker_spaniel.behaviour.time_alone', 'english_cocker_spaniel.suitability.pdsa_company']],
+                // S337 "Sheds: Yes"; S340 "shedding, which occurs year-round".
+                ['tag' => 'sheds', 'source_ids' => ['S337', 'S340'], 'refs' => ['english_cocker_spaniel.suitability.rkc_shedding', 'english_cocker_spaniel.suitability.petmd_shedding']],
+            ],
+        ],
 
     ],
 ];

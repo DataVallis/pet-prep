@@ -528,9 +528,9 @@ it('gives the Boxer the new needs_company and short_muzzle_breathing tags and th
         ->not->toContain('hips_hind_legs')->not->toContain('heart_and_spine')->not->toContain('frequent_grooming');
 
     // Only the Boxer, the Boston Terrier (AKC S260, M5-R10-31), the Miniature American Shepherd (PetMD S269, M5-R10-32)
-    // the Chihuahua (PDSA S277, M5-R10-33), the English Springer Spaniel (AKC S286, M5-R10-34), the Brittany (PetMD S302, M5-R10-36), the Belgian Malinois (AKC S316, M5-R10-38), the Basset Hound (PDSA S323, M5-R10-39) and the Hungarian Vizsla (PDSA S329, M5-R10-40) carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
+    // the Chihuahua (PDSA S277, M5-R10-33), the English Springer Spaniel (AKC S286, M5-R10-34), the Brittany (PetMD S302, M5-R10-36), the Belgian Malinois (AKC S316, M5-R10-38), the Basset Hound (PDSA S323, M5-R10-39), the Hungarian Vizsla (PDSA S329, M5-R10-40) and the English Cocker Spaniel (PDSA S339, M5-R10-41) carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::Brittany, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla], true)) {
+        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::Brittany, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('needs_company');
         }
         if (! in_array($breed, [BreedType::Boxer, BreedType::ShihTzu], true)) {
@@ -865,4 +865,21 @@ it('gives the Hungarian Vizsla active_family / family_pet / large_home and no we
         ->and(bsEntry('hungarian_vizsla.suitability.pdsa_children')['quote'])->toBe("We wouldn't recommend a Vizsla if you have very young children")
         ->and(bsEntry('hungarian_vizsla.suitability.rkc_size_of_garden')['quote'])->toBe('Size of garden: Large garden')
         ->and(bsEntry('hungarian_vizsla.suitability.rkc_breed_watch')['value'])->toBe('Category 1');
+});
+
+it('gives the English Cocker Spaniel family_pet / children / other_pets and no welfare chip (Breed Watch Category 1) — daily brushing, food-motivated, chews when bored (runbook 2026-10-15)', function () {
+    $ecs = app(BreedSuitability::class)->for(BreedType::EnglishCockerSpaniel);
+    expect($ecs['suits'])->toBe(['family_pet', 'children', 'other_pets'])
+        // RKC "Small house" (not "Flat/ Apartment"), RKC "Up to 1 hour per day"; supervision caveat → no small_children.
+        ->and($ecs['suits'])->not->toContain('small_children')->not->toContain('apartment')->not->toContain('large_home')
+        ->not->toContain('active_family')->not->toContain('first_time_owner')->not->toContain('low_shedding')
+        ->and($ecs['consider'])->toBe(['frequent_grooming', 'food_motivated_weight', 'chews_when_bored', 'needs_company', 'sheds'])
+        // Breed Watch Category 1 → no welfare chip; PDSA "don't have a high prey drive"; 60 min a day.
+        ->and($ecs['consider'])->not->toContain('chases_small_pets')->not->toContain('long_daily_exercise')
+        ->not->toContain('sensitive_skin')->not->toContain('shorter_lifespan')->not->toContain('hips_hind_legs');
+
+    expect(bsEntry('english_cocker_spaniel.suitability.rkc_grooming')['quote'])->toBe('Grooming: Every day')
+        ->and(bsEntry('english_cocker_spaniel.behaviour.chewing')['quote'])->toBe('Without the right amount of stimulation and company, your Cocker Spaniel will likely try to entertain themselves –')
+        ->and(bsEntry('english_cocker_spaniel.suitability.rkc_size_of_home')['quote'])->toBe('Size of home: Small house')
+        ->and(bsEntry('english_cocker_spaniel.suitability.rkc_breed_watch')['value'])->toBe('Category 1');
 });

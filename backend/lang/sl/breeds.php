@@ -44,6 +44,7 @@ return [
     'belgian_malinois' => 'Belgijski ovčar malinois',
     'basset_hound' => 'Baset',
     'hungarian_vizsla' => 'Madžarski kratkodlaki ptičar',
+    'english_cocker_spaniel' => 'Angleški koker španjel',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

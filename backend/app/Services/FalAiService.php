@@ -361,6 +361,14 @@ class FalAiService
                 .'natural undocked tail reaching the hock, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-41: FCI 5 (S336) / AKC standard (S343) — golden as the anchor (also black, liver, roans,
+            // parti-colours, tricolour); natural undocked tail (the AKC standard says docked). Never merle.
+            BreedType::EnglishCockerSpaniel => 'A merry, sturdy, compact English Cocker Spaniel dog with a golden coat, '
+                .'flat silky coat of medium length with moderate feathering on the ears, chest and legs, '
+                .'long lobular ears set low with silky feathering, brown eyes, '
+                .'square muzzle with a distinct stop, natural undocked tail carried level, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -876,6 +884,17 @@ class FalAiService
                 'eye_color' => 'brown, in harmony with the coat',
                 'fur_texture' => 'short, dense, smooth coat without undercoat',
                 'markings' => 'uniform colour, self-coloured reddish-brown nose, ears a little darker',
+            ],
+            // M5-R10-41: AKC / FCI standard colours (S343, S336) — solid colours, roans, parti-colours.
+            BreedType::EnglishCockerSpaniel => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'golden',
+                    1 => 'blue roan',
+                    2 => 'black',
+                },
+                'eye_color' => 'brown',
+                'fur_texture' => 'flat, silky coat with moderate feathering',
+                'markings' => 'solid colours with at most a small white spot on the chest; roans and parti-colours with white',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
