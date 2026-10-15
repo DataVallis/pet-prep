@@ -1624,6 +1624,68 @@
         }
       ],
       "notes": "RKC breed page (older address display.aspx?id=2038, dog-data S328, 2026-10-15) shows 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding' but returned no named test (the current Breeds A–Z address likewise) → no minimum / best_practice level. The same page says the breed has hip and elbow screening as Assured Breeders Scheme requirements and hip EBVs → other_scheme. PDSA (dog-data S329) and PetMD (S330) name hip dysplasia; PetMD names PRA without a test statement → not listed (nothing guessed)."
+    },
+    "english_cocker_spaniel": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S337",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding,",
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S337",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "dna_ams",
+          "level": "minimum",
+          "name": "DNA test for acral mutilation syndrome (AMS)",
+          "source_id": "S337",
+          "quote": "DNA test for Acral mutilation syndrome (AMS)"
+        },
+        {
+          "key": "dna_prcd_pra",
+          "level": "minimum",
+          "name": "DNA test for progressive retinal atrophy (prcd-PRA)",
+          "source_id": "S337",
+          "quote": "DNA test for Progressive retinal atrophy (prcd-PRA)"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S337",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        },
+        {
+          "key": "dna_aon",
+          "level": "best_practice",
+          "name": "DNA test for adult-onset neuropathy (AON)",
+          "source_id": "S337",
+          "quote": "DNA test for Adult-onset neuropathy (AON)"
+        },
+        {
+          "key": "dna_fn",
+          "level": "best_practice",
+          "name": "DNA test for familial nephropathy (FN)",
+          "source_id": "S337",
+          "quote": "DNA test for Familial nephropathy (FN)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S337",
+          "quote": "Eye testing (and gonioscopy for PLA) using the BVA/KC/ISDS Eye Scheme"
+        }
+      ],
+      "notes": "RKC breed page (older address display.aspx?id=2052, dog-data S337, 2026-10-15): Good Practice (= minimum, 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding') — genetic diversity, DNA AMS, DNA prcd-PRA, BVA/KC hip scheme; Best Practice — DNA AON, DNA FN, BVA/KC/ISDS eye scheme with gonioscopy. The current Breeds A–Z page (S338) shows the headings without named tests. PDSA (S339) names CombiBreed testing for FN / AON / AMS (paraphrase). New test keys dna_aon and dna_fn (website words added)."
     }
   }
 }

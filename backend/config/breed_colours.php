@@ -238,6 +238,18 @@ return [
         ['key' => 'russet-gold', 'value' => 'russet gold', 'en' => 'Russet gold', 'sl' => 'Rdečkasto zlat'],
         ['key' => 'dark-sandy-gold', 'value' => 'dark sandy gold', 'en' => 'Dark sandy gold', 'sl' => 'Temno peščeno zlat'],
     ],
+    // M5-R10-41: AKC S343 "Solid colors are black, liver or shades of red." + parti-colours / roans with white
+    // (AKC S343, FCI S336). Never merle.
+    'english_cocker_spaniel' => [
+        ['key' => 'golden', 'value' => 'golden (solid golden red)', 'en' => 'Golden', 'sl' => 'Zlat'],
+        ['key' => 'black', 'value' => 'black (solid black)', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'liver', 'value' => 'liver (solid chocolate brown)', 'en' => 'Liver', 'sl' => 'Čokoladno rjav'],
+        ['key' => 'black-tan', 'value' => 'black and tan (black with tan markings over the eyes, on the muzzle, chest and legs)', 'en' => 'Black and tan', 'sl' => 'Črn z rjavimi oznakami'],
+        ['key' => 'blue-roan', 'value' => 'blue roan (black and white roaned)', 'en' => 'Blue roan', 'sl' => 'Modro mešan'],
+        ['key' => 'orange-roan', 'value' => 'orange roan (orange and white roaned)', 'en' => 'Orange roan', 'sl' => 'Oranžno mešan'],
+        ['key' => 'black-white', 'value' => 'black and white parti-colour', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'tricolour', 'value' => 'tricolour (black and white with tan markings)', 'en' => 'Tricolour', 'sl' => 'Trobarven'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

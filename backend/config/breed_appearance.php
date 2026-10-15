@@ -376,6 +376,16 @@
 | Breed Watch Category 1). New dog trait `nose` (the self-coloured nose sets the breed apart). Colour
 | weights are unsourced → `verified => false`; russet gold weighted highest (the register portrait).
 |
+| English Cocker Spaniel (M5-R10-41, docs/research/dog-data english_cocker_spaniel.appearance): "Chien
+| de chasse gai et vigoureux, harmonieux et compact." (FCI 5, S336); flat, silky coat, never wiry, wavy
+| or curly; lobular ears set low at eye level with long silky feathering; brown or dark-brown eyes, never
+| light; square muzzle with a distinct stop (not short-faced); tail carried level, never cocked up (the
+| game shows the natural undocked tail — the AKC standard S343 says "Docked."). Colours (AKC S343):
+| "Solid colors are black, liver or shades of red." plus parti-colours and roans with white and tan
+| markings — never merle. Not a welfare breed (RKC Breed Watch Category 1). Dog trait `muzzle` (as the
+| American Cocker Spaniel, so the two spaniels stay apart). Colour weights are unsourced →
+| `verified => false`; golden weighted highest (the register portrait).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1838,6 +1848,46 @@ return [
             'nose' => ['broad, self-coloured reddish-brown nose (never black)'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
+    ],
+
+    // M5-R10-41 (docs/research/dog-data/data.json english_cocker_spaniel.appearance; runbook rules
+    // 2026-10-10: standard colours only — never merle; natural tail).
+    'english_cocker_spaniel' => [
+        'display_name' => 'English Cocker Spaniel',
+        // Colour frequencies are in no source (english_cocker_spaniel.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 5 (S336, https://WWW.FCI.BE/Nomenclature/Standards/005g08-fr.pdf), AKC standard (S343), RKC breed page (S337) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S337 "Size: Small"; S343 "Height at withers: males 16 to 17 inches; females 15 to 16 inches."',
+            'build' => 'S336 "Chien de chasse gai et vigoureux, harmonieux et compact."',
+            'coat_length' => 'S336 "Plat. Texture soyeuse, jamais « fil de fer » ni ondulé, pas trop abondant et jamais bouclé."; S337 "Coat length: Medium"',
+            'coat_color' => 'S343 "Solid colors are black, liver or shades of red."; parti-colours "clearly marked, ticked or roaned" with white (weights unsourced; never merle)',
+            'ear_carriage' => 'S336 "Les oreilles sont en forme de lobe, attachées bas, au niveau des yeux."',
+            'eye_color' => 'S336 "Ils sont bruns ou brun foncé. Ils ne sont jamais clairs."',
+            'tail' => 'S336 "Elle doit frétiller en action. Elle est portée horizontalement et jamais relevée." — the game shows the natural undocked tail',
+            'muzzle' => 'S336 "Suffisamment large pour permettre la finesse du flair." (nose); square muzzle with a distinct stop, not short-faced',
+        ],
+        'traits' => [
+            'size' => ['small to medium-sized'],
+            'build' => [['value' => 'merry, sturdy, compact and well-balanced sporting spaniel', 'weight' => 3], 'compact, athletic spaniel build with a level topline and good bone'],
+            'coat_length' => ['flat, silky coat of medium length with moderate feathering on the ears, chest, legs and belly (pet length, never curly or wiry)'],
+            // AKC / FCI colours only (S343, S336); golden highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'golden (solid golden red)', 'weight' => 4],
+                ['value' => 'black (solid black)', 'weight' => 3],
+                ['value' => 'liver (solid chocolate brown)', 'weight' => 2],
+                'black and tan (black with tan markings over the eyes, on the muzzle, chest and legs)',
+                ['value' => 'blue roan (black and white roaned)', 'weight' => 2],
+                'orange roan (orange and white roaned)',
+                'black and white parti-colour',
+                'tricolour (black and white with tan markings)',
+            ],
+            'ear_carriage' => ['long lobular ears set low, level with the eyes, with long silky feathering'],
+            'eye_color' => ['brown or dark brown eyes (never light), gentle merry expression'],
+            'tail' => ['natural undocked tail of moderate length carried level, never cocked up'],
+            'muzzle' => ['square muzzle with a distinct stop and a broad nose, moderate head, not short-faced'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

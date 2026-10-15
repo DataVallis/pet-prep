@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -503,6 +503,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_HUNGARIAN_VIZSLA = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-40)';
 
     /**
+     * M5-R10-41 English Cocker Spaniel (unattended run 2026-10-15, data.json
+     * proposed_game_parameters.english_cocker_spaniel.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 60 min
+     * (RKC S337 "Up to 1 hour per day"), senior 45 min, puppy 10 min × age capped at 60, stages
+     * young 9 / adult 36 / senior 103 (0.75 × VetCompass median 11.44 y, S342), arrival 2 / 9 / 36 / 103,
+     * learning multiplier 1.5 (Coren rank 18, Excellent); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_ENGLISH_COCKER_SPANIEL = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-41)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -647,6 +657,7 @@ class BreedStageParamsSeeder extends Seeder
         'belgian_malinois' => [2, 'S314', 'Grooming: More than once a week', 'low', true, self::PROPOSED_R13_BELGIAN_MALINOIS],
         'basset_hound' => [1, 'S321', 'Grooming: Once a week', 'high', false],
         'hungarian_vizsla' => [1, 'S328', 'Grooming: Once a week', 'high', false],
+        'english_cocker_spaniel' => [7, 'S337', 'Grooming: Every day', 'high', false],
     ];
 
     /**
@@ -675,6 +686,7 @@ class BreedStageParamsSeeder extends Seeder
         'chihuahua' => ['S277', 'Remember to leave a gap after eating and before exercising.'],
         'basset_hound' => ['S323', 'Remember to leave a gap after eating and before exercising.'],
         'hungarian_vizsla' => ['S329', 'Remember to leave a gap between eating and exercising.'],
+        'english_cocker_spaniel' => ['S339', 'Remember to leave at a gap after eating and before exercising.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -726,13 +738,14 @@ class BreedStageParamsSeeder extends Seeder
         'belgian_malinois' => ['S316', 'Early, extensive socialization will help limit aggressive tendencies towards new people.'],
         'basset_hound' => ['S323', 'Be sure to socialise your Basset Hound from a young age with other people and dogs once they are fully vaccinated.'],
         'hungarian_vizsla' => ['S329', 'as long as you socialise your Vizsla from a young age with lots of people, dogs and experiences'],
+        'english_cocker_spaniel' => ['S339', 'Socialising your Cocker Spaniel from a young age with a variety of people, dogs and experiences will help them develop'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1339,6 +1352,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-40 (docs/research/dog-data/data.json hungarian_vizsla,
             // S326–S334; runbook rules in proposed_game_parameters.hungarian_vizsla).
             BreedType::HungarianVizsla => self::hungarianVizslaProfile(),
+            // M5-R10-41 (docs/research/dog-data/data.json english_cocker_spaniel,
+            // S335–S344; runbook rules in proposed_game_parameters.english_cocker_spaniel).
+            BreedType::EnglishCockerSpaniel => self::englishCockerSpanielProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -3967,6 +3983,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'hungarian_vizsla.lifespan.rkc',
                 'quote' => 'Lifespan: Over 12 years',
                 'notes' => 'RKC breed page lower bound (S328); PDSA "Over 12 years" (S329) agrees. McMillan 2024 13.5 y only via Wikipedia (S334, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * English Cocker Spaniel (M5-R10-41). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_ENGLISH_COCKER_SPANIEL);
+     * weight, growth, Coren rank and lifespan are sourced. The senior boundary uses the VetCompass
+     * breed median (Engdahl et al. 2023, S342 — McMillan 2024 not reachable), like the Beagle.
+     *
+     * @return array<string, mixed>
+     */
+    private static function englishCockerSpanielProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_ENGLISH_COCKER_SPANIEL;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S342', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.english_cocker_spaniel.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog finishes growing at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [103, $boundary('Derived game boundary: last 25 % of lifespan (S11) × VetCompass median age at death 11.44 y (Engdahl et al. 2023, S342) = 8.58 y = 102.96 → 103 months. McMillan 2024 (S54) gives no reachable English Cocker Spaniel value. Not chosen: 90 (RKC lower bound "Over 10 years", S337), 108 (VCA lower bound 12 y, S341), 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 103],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_cocker_spaniel.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 60 minutes, which 10 × age already reaches at 6 months, so the whole young stage walks the adult minutes.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S337', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_cocker_spaniel.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S337) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA (S339) "a minimum of an hour exercise every day" gives the same number; dogs from working lines may need more (PDSA, background only).',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_cocker_spaniel.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[13.0, 14.5], [
+                'unit' => 'kg', 'source_id' => 'S339', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'english_cocker_spaniel.adult_weight.pdsa',
+                'quote' => '13-14.5 kg',
+                'notes' => 'PDSA key fact "Average weight" (S339), one range for both sexes; the FCI standard (S336) gives about 13–14.5 kg too. AKC (S343) males 28–34 lb, females 26–32 lb is an alternative only.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'english_cocker_spaniel.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA 13–14.5 kg ≈ 29–32 lb, the Medium class of S10; RKC size "Small", S337).',
+            ]],
+            'coren_rank' => [18, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'english_cocker_spaniel.trainability.coren_rank',
+                'quote' => 'English Cocker Spaniel',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 18 shared with the Flat-Coated Retriever and the Standard Schnauzer, tier "Excellent Working Dogs" (ranks 11–26); rank 20 "Cocker Spaniel" is the American breed. Not in Coren\'s own top / bottom-10 article (S34).',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_cocker_spaniel.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 18 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [11.44, [
+                'unit' => 'years', 'source_id' => 'S342', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'english_cocker_spaniel.lifespan.median_uk',
+                'quote' => 'The median age at death was 11.44 years (IQR 9.46–13.47)',
+                'notes' => 'Engdahl et al. 2023 (S342), VetCompass UK. McMillan 2024 (S54) gives no reachable English Cocker Spaniel value. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

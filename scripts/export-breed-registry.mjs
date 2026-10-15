@@ -413,6 +413,7 @@ const SPECIES = [
       { id: 'belgian_malinois', synonyms: { en: ['Malinois', 'Belgian Shepherd Dog (Malinois)', 'Mal'], sl: ['malinois', 'belgijski ovcar malinois'] } },
       { id: 'basset_hound', synonyms: { en: ['Basset', 'Basset Hound dog'], sl: ['basset hound', 'baset hound', 'basset'] } },
       { id: 'hungarian_vizsla', synonyms: { en: ['Vizsla', 'Magyar Vizsla', 'Hungarian Pointer', 'Hungarian Short-haired Pointer'], sl: ['vižla', 'madžarska vižla', 'madžarski ptičar'] } },
+      { id: 'english_cocker_spaniel', synonyms: { en: ['Cocker Spaniel', 'English Cocker', 'Cocker', 'Merry Cocker'], sl: ['koker španjel', 'angleški koker', 'koker'] } },
     ],
   },
   {
@@ -1204,6 +1205,30 @@ const DOG_FACTS = {
       ['ear_infections_prone', 'health.ears'],
     ],
   },
+  // M5-R10-41. Not exported: height.pdsa (one band, alternative), adult_weight.akc (alternative),
+  // adult_weight.vetcompass (measured pet medians, research only), adult_weight.salt_category (our assignment),
+  // lifespan.vca (alternative), lifespan.senior_from (derived), health.acral_mutilation / adult_onset_neuropathy /
+  // pancreatitis / thyroid / periodontal (background only), suitability.rkc_breed_watch (Category 1). Weight = PDSA
+  // (S339, one range for both sexes); height = FCI 5 (S336, summary) and the AKC standard (S343); lifespan = the
+  // VetCompass median 11.44 y (S342) and the RKC band "Over 10 years" (S337). New health key familial_nephropathy.
+  english_cocker_spaniel: {
+    height: ['height.fci', 'height.akc'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: 'behaviour.food_motivation',
+    health: [
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['itchy_skin_allergy', 'health.atopy_skin'],
+      ['ear_infections_prone', 'health.ear_infections'],
+      ['pra_eye_disease', 'health.prcd_pra'],
+      ['familial_nephropathy', 'health.familial_nephropathy'],
+      ['autoimmune_conditions', 'health.imha'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1501,6 +1526,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.hungarian_vizsla.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.hungarian_vizsla.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.hungarian_vizsla.exercise_minutes_senior',
+  },
+  english_cocker_spaniel: {
+    adult_minutes: ['proposed_game_parameters.english_cocker_spaniel.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.english_cocker_spaniel.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.english_cocker_spaniel.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.english_cocker_spaniel.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.english_cocker_spaniel.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.english_cocker_spaniel.exercise_minutes_senior',
   },
 };
 

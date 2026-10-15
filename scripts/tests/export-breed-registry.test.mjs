@@ -145,6 +145,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.belgian_malinois.slug, { en: 'belgian-malinois', sl: 'belgijski-ovcar-malinois' });
   assert.deepEqual(byId.basset_hound.slug, { en: 'basset-hound', sl: 'baset' });
   assert.deepEqual(byId.hungarian_vizsla.slug, { en: 'hungarian-vizsla', sl: 'madzarski-kratkodlaki-pticar' });
+  assert.deepEqual(byId.english_cocker_spaniel.slug, { en: 'english-cocker-spaniel', sl: 'angleski-koker-spanjel' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -277,6 +278,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     belgian_malinois: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1.5 },
     basset_hound: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 0.5 },
     hungarian_vizsla: { adult: 12000, senior: 9000, seniorFrom: 108, learning: 1.5 },
+    english_cocker_spaniel: { adult: 6000, senior: 4500, seniorFrom: 103, learning: 1.5 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -503,7 +505,7 @@ test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming row
   assert.deepEqual([...cats, ...dogs].sort(), seeded);
   assert.deepEqual(cats, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
   // M5-R13: every dog breed of the app except the mutt and the Border Collie (no grooming statement).
-  assert.equal(dogs.length, 35);
+  assert.equal(dogs.length, 36);
   assert.ok(!dogs.includes('mutt') && !dogs.includes('border_collie'));
 });
 
@@ -1469,4 +1471,28 @@ test('Hungarian Vizsla (M5-R10-40): more than 2 hours (RKC), PDSA weight, FCI + 
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a percentage; the McMillan figure via Wikipedia (13.5 y, tier C) stays in research.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|life expectancy of 13/i);
+});
+
+test('English Cocker Spaniel (M5-R10-41): up to 1 hour (RKC), PDSA weight, FCI + AKC height, FCI group 8 Great Britain, VetCompass median, Coren 18, no welfare chip, RKC tests', () => {
+  const d = registry.breeds.find((b) => b.id === 'english_cocker_spaniel');
+  assert.deepEqual(d.name, { en: 'English Cocker Spaniel', sl: 'Angleški koker španjel' });
+  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.facets.size, 'small');
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S337']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 5, group: 8, section: 2, origin: 'GB' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [13, 14.5], female: [13, 14.5] }, ['S339']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => f.source_ids[0]), ['S336', 'S343']);
+  // VetCompass breed median (Engdahl 2023, S342) first, then the RKC band.
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['median', 11.44, ['S342']], ['more_than', 10, ['S337']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 18);
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 103 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['family_pet', 'children', 'other_pets']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['frequent_grooming', 'food_motivated_weight', 'chews_when_bored', 'needs_company', 'sheds']);
+  assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia_arthritis', 'itchy_skin_allergy', 'ear_infections_prone', 'pra_eye_disease', 'familial_nephropathy', 'autoimmune_conditions']);
+  // RKC Good Practice (minimum) and Best Practice tests; new keys dna_aon and dna_fn.
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['inbreeding_coi', 'minimum'], ['dna_ams', 'minimum'], ['dna_prcd_pra', 'minimum'], ['hip_scheme', 'minimum'], ['dna_aon', 'best_practice'], ['dna_fn', 'best_practice'], ['eye_scheme', 'best_practice']]);
+  const json = JSON.stringify(d);
+  // Never "hypoallergenic", never a percentage; the VetCompass prevalence figures stay in research.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|20\.97|9\.88/i);
 });

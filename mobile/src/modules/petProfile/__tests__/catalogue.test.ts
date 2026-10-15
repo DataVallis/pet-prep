@@ -734,7 +734,8 @@ describe('breed search', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('angleški buldog')).toEqual(['bulldog']);
     // M5-R10-34: »angleški« is also the start of the English Springer Spaniel's SL name — still never the French Bulldog.
-    expect(find('angleski')).toEqual(['bulldog', 'english_springer_spaniel']);
+    // M5-R10-41: … and the English Cocker Spaniel (»angleški koker španjel«).
+    expect(find('angleski')).toEqual(['bulldog', 'english_springer_spaniel', 'english_cocker_spaniel']);
     expect(find('english bulldog')).toEqual(['bulldog']);
     expect(find('british')).toEqual(['bulldog']);
   });
