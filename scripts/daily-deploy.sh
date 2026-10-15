@@ -129,7 +129,7 @@ push_ci() {
 # --- b + c: something new, and its push CI green --------------------------------------
 waited=0
 while :; do
-  head="$(main_head)" && [ -n "$head" ] || api_fail "the head of main"
+  if ! head="$(main_head)" || [ -z "$head" ]; then api_fail "the head of main"; fi
   deployed="$(last_deployed_sha)" || api_fail "the last production deploy"
   if [ "$head" = "$deployed" ]; then
     done_ok "nothing new — production already runs the main head ${head:0:7}."
@@ -145,7 +145,7 @@ while :; do
     [ "$ci_conclusion" = success ] || \
       refuse "push CI of main head ${head:0:7} concluded '${ci_conclusion}' — run ${ci_url}"
     # Green. Re-read the head: a merge during the wait means a new head with its own CI.
-    now_head="$(main_head)" && [ -n "$now_head" ] || api_fail "the head of main"
+    if ! now_head="$(main_head)" || [ -z "$now_head" ]; then api_fail "the head of main"; fi
     if [ "$now_head" = "$head" ]; then
       break
     fi
