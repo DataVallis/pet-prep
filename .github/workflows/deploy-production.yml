@@ -249,6 +249,10 @@ jobs:
       - name: Breed registry export (node --test)
         run: node --test scripts/tests/export-breed-registry.test.mjs
 
+      # docs/breeds/README.md index current (one doc per breed, David 2026-10-15).
+      - name: Breed docs index (node --test)
+        run: node --test scripts/tests/breeds-index.test.mjs
+
       - name: Record green tree
         id: green
         if: github.event_name == 'pull_request'

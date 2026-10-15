@@ -2,6 +2,7 @@
 
 > Ena resnica za produkt. Združuje 13 izvornih dokumentov (`docs/source/`) v en dokument; kjer si nasprotujejo, je tukaj zapisana veljavna različica, odprta vprašanja pa so označena z **(D)**.
 > Spremembe pravil igre se vpišejo **najprej sem**, nato v kodo (`breed_configs`, servisi) in teste.
+> **Pasme (David 15. 10. 2026):** splošna pravila za vse pasme so tukaj; pravila in odločitve **posamezne pasme** so v `docs/breeds/<pasma>.md` in v virih (`docs/research/dog-data/data.json`, `docs/research/cat-data/data.json`). Vse pasme in njihova pravila: `docs/breeds/` (seznam se ustvari samodejno iz registra). Nenadzorovani zagoni pasem tega dokumenta ne urejajo; pravila po pasmi, ki so spodaj našteta po imenu, so zgodovina pasem do vključno M5-R10-40 in ostanejo veljavna.
 
 ## 1. Kaj je PetPrep
 
@@ -14,7 +15,7 @@
 
 ## 2. Obseg MVP
 
-**Monetizacija (odločeno 2. 10. 2026):** mešanček je **vedno brezplačen**; **12-tedenski PetPrep izziv** (49,99 €) odklene program s certifikatom, plačljive pasme (Border Collie; od M5-R10 tudi Labradorec, zlati prinašalec, francoski buldog, nemški ovčar, kavalir King Charles španjel, bigl, veliki koder, jazbečar, avstralski ovčar, havanski bišon, zahodnoškotski beli terier, bernski planšarski pes, sibirski haski, rotvajler, angleški buldog, nemški kratkodlaki ptičar, yorkshirski terier, cane corso, welsh corgi pembroke, doberman, boksar, pritlikavi šnavcer, shih tzu, nemška doga, pomeranec, bostonski terier, mali ameriški ovčar, čivava, angleški springer španjel, šetlandski ovčar, bretonski ptičar, ameriški koker španjel, belgijski ovčar malinois, baset in madžarski kratkodlaki ptičar) in AI psa. Razmejitev: `docs/business/BUSINESS_MODEL.md` §7. **Brez brezplačnega preizkusa izziva (David 8. 10. 2026, 10:28 — M3-13):** brezplačni mešanček je brezplačni preizkus aplikacije, izziv se začne z nakupom.
+**Monetizacija (odločeno 2. 10. 2026):** mešanček je **vedno brezplačen**; **12-tedenski PetPrep izziv** (49,99 €) odklene program s certifikatom, plačljive pasme (Border Collie in vse pasme, dodane od M5-R10 naprej — vse pasme in njihova pravila: `docs/breeds/`, seznam se ustvari samodejno) in AI psa. Razmejitev: `docs/business/BUSINESS_MODEL.md` §7. **Brez brezplačnega preizkusa izziva (David 8. 10. 2026, 10:28 — M3-13):** brezplačni mešanček je brezplačni preizkus aplikacije, izziv se začne z nakupom.
 
 **Plani in plačilo (David, 7. 10. 2026 — kanonsko v [`PAYMENTS_SPEC.md`](PAYMENTS_SPEC.md); strežnik M3-11):**
 - Vsak pes ima ob nastanku **plan**, ki se ne spremeni (edini izjemi: enkratna migracija M5-F02 neplačanih mešančkov na izzivu v brezplačni načrt in vračilo kupnine za mešančka — oboje izziv → brezplačno, nikoli obratno): **brezplačni mešanček** (`free`, »peskovnik« za vedno) ali **12-tedenski izziv** (`challenge`). Starš ga izbere pri izbiri kužka; starejša aplikacija brez izbire = izziv za plačljivo pasmo, brezplačni načrt za mešančka. **Izziv je samo s plačljivo pasmo** (David 7. 10. 2026, M5-F03) — mešanček je pes brezplačnega plana. Mešanček se staršu nikoli ne prikaže kot »Plačano«, ampak »Brezplačno« (tudi star mešanček testerjev, ki ostane v programu, M5-F02).
@@ -30,7 +31,7 @@
 
 **Jezik:** angleščina (privzeto) + slovenščina; vsi teksti prek i18n od prvega dne.
 
-**Vključeno:** dvojni profil starš–otrok, PIN pairing, samo pes (mešanček brezplačno + plačljive pasme Border Collie, Labradorec, zlati prinašalec, francoski buldog, nemški ovčar, kavalir King Charles španjel, bigl, veliki koder, jazbečar, avstralski ovčar, havanski bišon, zahodnoškotski beli terier, bernski planšarski pes, sibirski haski, rotvajler, angleški buldog, nemški kratkodlaki ptičar, yorkshirski terier, cane corso, welsh corgi pembroke, doberman, boksar, pritlikavi šnavcer, shih tzu, nemška doga, pomeranec, bostonski terier, mali ameriški ovčar, čivava, angleški springer španjel, šetlandski ovčar, bretonski ptičar, ameriški koker španjel, belgijski ovčar malinois, baset in madžarski kratkodlaki ptičar), 4 metrike, koraki iz zdravstvenih API-jev, push obvestila in eskalacija, starševska nadzorna plošča s semaforjem, tihe ure, hard stop, bolezen in game over, AI video psa, IAP prek RevenueCat.
+**Vključeno:** dvojni profil starš–otrok, PIN pairing, samo pes (mešanček brezplačno + plačljive pasme — vse pasme in njihova pravila: `docs/breeds/`, seznam se ustvari samodejno), 4 metrike, koraki iz zdravstvenih API-jev, push obvestila in eskalacija, starševska nadzorna plošča s semaforjem, tihe ure, hard stop, bolezen in game over, AI video psa, IAP prek RevenueCat.
 
 **Izključeno (ne gradimo v MVP):** AR, GPS sledenje in zemljevidi, vremenski API, LLM / vision veterinar, B2B QR kuponi, naročnina Pro skrbnik. *(Mačke: David 2026-10-07 — v obseg skupaj s psi, izbira vrste → pasme (ROADMAP M5-R06); pravila skrbi za mačko potrdil David 2026-10-08 13:47 — §13, *načrt*, še ni zgrajeno.)*
 

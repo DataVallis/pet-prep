@@ -15,6 +15,7 @@ import {
   readBreedCatalogue,
   type BreedCatalogue,
 } from '@/modules/petProfile/picker';
+import { BREED_SPECIES, KNOWN_BREEDS } from '@/modules/species/species';
 
 function entry(breed: string, species: string, premium: boolean, sort_order: number, keywords: string[]) {
   return {
@@ -239,46 +240,10 @@ describe('PetPickerStep', () => {
     expect(screen.getByTestId('breed-suitability-golden_retriever-consider')).toHaveTextContent(
       'Upoštevajte:vsak dan potrebuje veliko gibanjaizpada mu dlakarad je — pazite na težopotrebuje česanje večkrat na teden',
     );
-    // Order: free first, then paid by sort_order (collie 10, Labrador 20, Golden 30, French Bulldog 40, German Shepherd 50, Cavalier 60, Beagle 70, Standard Poodle 80, Dachshund 90, Australian Shepherd 100, Havanese 110, West Highland White Terrier 120, Bernese Mountain Dog 130).
-    expect(screen.getAllByTestId(/^breed-option-/).map((n) => n.props.testID)).toEqual([
-      'breed-option-mutt',
-      'breed-option-border_collie',
-      'breed-option-labrador_retriever',
-      'breed-option-golden_retriever',
-      'breed-option-french_bulldog',
-      'breed-option-german_shepherd',
-      'breed-option-cavalier_king_charles_spaniel',
-      'breed-option-beagle',
-      'breed-option-standard_poodle',
-      'breed-option-dachshund',
-      'breed-option-australian_shepherd',
-      'breed-option-havanese',
-      'breed-option-west_highland_white_terrier',
-      'breed-option-bernese_mountain_dog',
-      'breed-option-siberian_husky',
-      'breed-option-rottweiler',
-      'breed-option-bulldog',
-      'breed-option-german_shorthaired_pointer',
-      'breed-option-yorkshire_terrier',
-      'breed-option-cane_corso',
-      'breed-option-pembroke_welsh_corgi',
-      'breed-option-dobermann',
-      'breed-option-boxer',
-      'breed-option-miniature_schnauzer',
-      'breed-option-shih_tzu',
-      'breed-option-great_dane',
-      'breed-option-pomeranian',
-      'breed-option-boston_terrier',
-      'breed-option-miniature_american_shepherd',
-      'breed-option-chihuahua',
-      'breed-option-english_springer_spaniel',
-      'breed-option-shetland_sheepdog',
-      'breed-option-brittany',
-      'breed-option-american_cocker_spaniel',
-      'breed-option-belgian_malinois',
-      'breed-option-basset_hound',
-      'breed-option-hungarian_vizsla',
-    ]);
+    // Order: free first, then paid by sort_order — every dog breed of this build (read from BREED_SPECIES, never typed out).
+    expect(screen.getAllByTestId(/^breed-option-/).map((n) => n.props.testID)).toEqual(
+      KNOWN_BREEDS.filter((b) => BREED_SPECIES[b] === 'dog').map((b) => `breed-option-${b}`),
+    );
 
     fireEvent.changeText(screen.getByTestId('breed-search'), 'zlati');
     expect(screen.queryByTestId('breed-option-labrador_retriever')).toBeNull();

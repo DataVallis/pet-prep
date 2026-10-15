@@ -2,6 +2,7 @@
 
 use App\Enums\BreedType;
 use App\Enums\RoutineType;
+use App\Enums\Species;
 use App\Enums\StageParamKey;
 use App\Models\ActivityLog;
 use App\Models\Pet;
@@ -179,13 +180,21 @@ function dgCreateViaPin(array $body, ?array $childFeatures): Pet
 
 describe('values per breed (runbook grooming rule, data.json)', function () {
     it('seeds one sourced row per brushed dog breed, traced to data.json; mutt and Border Collie have none', function () {
-        $expected = [
+        // Values recorded when M5-R13 and the breed runs of 2026-10-11…15 landed (a lock on them;
+        // later breeds are covered by data.json alone — no edit here, David 2026-10-15).
+        $known = [
             'labrador_retriever' => 1, 'golden_retriever' => 3, 'french_bulldog' => 1, 'german_shepherd' => 2,
             'cavalier_king_charles_spaniel' => 4, 'beagle' => 1, 'standard_poodle' => 7, 'dachshund' => 1,
             'australian_shepherd' => 2, 'havanese' => 7, 'west_highland_white_terrier' => 2, 'bernese_mountain_dog' => 2,
             'siberian_husky' => 2, 'rottweiler' => 1, 'bulldog' => 1, 'german_shorthaired_pointer' => 2,
             'yorkshire_terrier' => 7, 'cane_corso' => 1, 'pembroke_welsh_corgi' => 3, 'dobermann' => 1, 'boxer' => 1, 'miniature_schnauzer' => 3, 'shih_tzu' => 7, 'great_dane' => 1, 'pomeranian' => 3, 'boston_terrier' => 1, 'miniature_american_shepherd' => 2, 'chihuahua' => 1, 'english_springer_spaniel' => 2, 'shetland_sheepdog' => 7, 'brittany' => 1, 'american_cocker_spaniel' => 7, 'belgian_malinois' => 2, 'basset_hound' => 1, 'hungarian_vizsla' => 1,
         ];
+        // Every dog breed with a sourced grooming value in data.json (read from data).
+        $expected = collect(BreedType::forSpecies(Species::Dog))
+            ->mapWithKeys(fn (BreedType $b) => [$b->value => dgData("proposed_game_parameters.{$b->value}.grooming.value")])
+            ->filter(fn ($value) => $value !== null)
+            ->all();
+        expect($expected)->toMatchArray($known);
         // David 2026-10-12: his own decisions (no longer Claude's proposals — every row verified).
         $twice = ['german_shepherd', 'australian_shepherd', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky'];
         $david = array_fill_keys($twice, BreedStageParamsSeeder::CONFIRMED_DAVID_2026_10_12_TWICE) + [
@@ -196,8 +205,8 @@ describe('values per breed (runbook grooming rule, data.json)', function () {
         // Open proposals for David (runbook §3: "more than once a week" without any number in a new breed → 2, verified=false).
         $proposals = ['belgian_malinois' => BreedStageParamsSeeder::PROPOSED_R13_BELGIAN_MALINOIS];
 
-        expect($rows->pluck('value', 'breed_slug')->all())
-            ->toBe(collect($expected)->mapWithKeys(fn (int $n, string $breed) => [BreedType::from($breed)->slug() => $n])->all());
+        expect($rows->pluck('value', 'breed_slug')->sortKeys()->all())
+            ->toBe(collect($expected)->mapWithKeys(fn (int $n, string $breed) => [BreedType::from($breed)->slug() => $n])->sortKeys()->all());
 
         foreach ($expected as $breed => $value) {
             $row = $rows->firstWhere('breed_slug', BreedType::from($breed)->slug());

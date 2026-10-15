@@ -138,8 +138,16 @@ function soCreateViaPin(array $body, ?array $childFeatures): Pet
 
 describe('breeds (verbatim A/B socialisation quote in data.json)', function () {
     it('seeds one puppy-stage row (1 per week, David\'s decision) per sourced breed, traced to data.json', function () {
-        $breeds = ['labrador_retriever', 'german_shepherd', 'beagle', 'standard_poodle', 'australian_shepherd', 'havanese',
-            'siberian_husky', 'rottweiler', 'bulldog', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla'];
+        // Every breed with a socialisation quote (read from the seeder and checked both ways against
+        // data.json, so a new breed run is covered without editing this file — David 2026-10-15).
+        $breeds = array_keys(BreedStageParamsSeeder::DOG_SOCIALISATION);
+        $inData = collect(soData('proposed_game_parameters'))
+            ->filter(fn ($p, $key) => BreedType::tryFrom((string) $key) !== null && is_array($p) && isset($p['socialisation']))
+            ->keys()->sort()->values()->all();
+        expect($inData)->toBe(collect($breeds)->sort()->values()->all())
+            // The 26 breeds sourced when M5-R17 and the runs up to M5-R10-40 landed stay sourced.
+            ->and($breeds)->toContain('labrador_retriever', 'german_shepherd', 'beagle', 'standard_poodle', 'australian_shepherd', 'havanese',
+                'siberian_husky', 'rottweiler', 'bulldog', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla');
         // The sourced rows (every other dog breed: David's decision, next test).
         $rows = collect(BreedStageParamsSeeder::rows())->where('key', StageParamKey::SocialisationTasksPerWeek->value)->whereNotNull('source_id');
 
@@ -194,6 +202,11 @@ describe('breeds (verbatim A/B socialisation quote in data.json)', function () {
         ];
         foreach ($paths as $breed => $path) {
             expect((string) soData($path))->toContain(BreedStageParamsSeeder::DOG_SOCIALISATION[$breed][1]);
+        }
+        // A later breed (not in the map above): its quote stands verbatim somewhere in its own entry.
+        foreach (array_diff(array_keys(BreedStageParamsSeeder::DOG_SOCIALISATION), array_keys($paths)) as $breed) {
+            expect((string) json_encode(soData($breed), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES))
+                ->toContain(trim((string) json_encode(BreedStageParamsSeeder::DOG_SOCIALISATION[$breed][1], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), '"'));
         }
     });
 

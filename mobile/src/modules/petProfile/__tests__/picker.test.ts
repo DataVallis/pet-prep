@@ -1,4 +1,8 @@
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
 import { PICKER_AGES, PICKER_STRINGS } from '@/modules/petProfile/picker';
+import { BREED_SPECIES, KNOWN_BREEDS } from '@/modules/species/species';
 import type { LifeStage, PetBreed } from '@/api/client';
 import { i18n } from '@/i18n';
 
@@ -41,9 +45,24 @@ import { i18n } from '@/i18n';
  * Hungarian Vizsla 120 min (M5-R10-40, RKC S328 / PDSA S329), senior 90 (hungarianVizslaProfile);
  * arrival puppy 2, young 9 months.
  */
-type DogBreed = Extract<PetBreed, 'mutt' | 'border_collie' | 'labrador_retriever' | 'golden_retriever' | 'french_bulldog' | 'german_shepherd' | 'cavalier_king_charles_spaniel' | 'beagle' | 'standard_poodle' | 'dachshund' | 'australian_shepherd' | 'havanese' | 'west_highland_white_terrier' | 'bernese_mountain_dog' | 'siberian_husky' | 'rottweiler' | 'bulldog' | 'german_shorthaired_pointer' | 'yorkshire_terrier' | 'cane_corso' | 'pembroke_welsh_corgi' | 'dobermann' | 'boxer' | 'miniature_schnauzer' | 'shih_tzu' | 'great_dane' | 'pomeranian' | 'boston_terrier' | 'miniature_american_shepherd' | 'chihuahua' | 'english_springer_spaniel' | 'shetland_sheepdog' | 'brittany' | 'american_cocker_spaniel' | 'belgian_malinois' | 'basset_hound' | 'hungarian_vizsla'>;
-const DOG_BREEDS: readonly DogBreed[] = ['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla'];
-const ADULT_MINUTES: Record<DogBreed, number> = {
+type DogBreed = PetBreed;
+/** Every dog breed of this build (from BREED_SPECIES — a new breed is covered automatically, David 2026-10-15). */
+const DOG_BREEDS: readonly DogBreed[] = KNOWN_BREEDS.filter((b) => BREED_SPECIES[b] === 'dog');
+
+/** The sourced adult step goal (minutes × 100) of a breed in docs/research/dog-data/data.json. */
+type DogData = { proposed_game_parameters: Record<string, { step_goal_adult?: { value?: number } } | unknown> };
+const DOG_DATA = JSON.parse(readFileSync(join(__dirname, '../../../../../docs/research/dog-data/data.json'), 'utf8')) as DogData;
+function sourcedAdultMinutes(breed: DogBreed): number | undefined {
+  const entry = DOG_DATA.proposed_game_parameters[breed] as { step_goal_adult?: { value?: number } } | undefined;
+  const steps = entry?.step_goal_adult?.value;
+  return typeof steps === 'number' ? steps / 100 : undefined;
+}
+
+/**
+ * Minutes recorded by hand up to M5-R10-40 (a lock on those breeds; they must equal data.json).
+ * A later breed is read from data.json only — no edit here.
+ */
+const ADULT_MINUTES: Partial<Record<DogBreed, number>> = {
   mutt: 60,
   border_collie: 120,
   labrador_retriever: 90,
@@ -86,15 +105,30 @@ const ARRIVAL_MONTHS: Partial<Record<LifeStage, number>> = { puppy: 2, young: 9 
 
 const fmt = (n: number) => n.toLocaleString('de-DE'); // 6000 → "6.000" (Slovenian thousands separator)
 
+function adultMinutes(breed: DogBreed): number {
+  const minutes = ADULT_MINUTES[breed] ?? sourcedAdultMinutes(breed);
+  if (minutes === undefined) throw new Error(`${breed}: no adult step goal in data.json`);
+  return minutes;
+}
+
 function expectedSteps(breed: DogBreed, stage: LifeStage): { start: number; adult: number } {
-  const adult = ADULT_MINUTES[breed] * 100;
+  const adult = adultMinutes(breed) * 100;
   if (stage === 'adult') return { start: adult, adult };
-  if (stage === 'senior') return { start: Math.round(ADULT_MINUTES[breed] * 0.75) * 100, adult };
+  if (stage === 'senior') return { start: Math.round(adultMinutes(breed) * 0.75) * 100, adult };
   const months = ARRIVAL_MONTHS[stage] ?? 0;
   return { start: Math.min(10 * months * 100, adult), adult };
 }
 
 describe('PICKER_STRINGS.ageHints', () => {
+  it('the hand-recorded minutes equal the sourced data.json goals (mutt and Border Collie: PRODUCT_SPEC)', () => {
+    for (const breed of DOG_BREEDS) {
+      const sourced = sourcedAdultMinutes(breed);
+      if (sourced !== undefined && ADULT_MINUTES[breed] !== undefined) expect([breed, ADULT_MINUTES[breed]]).toEqual([breed, sourced]);
+    }
+    expect(ADULT_MINUTES.mutt).toBe(60);
+    expect(ADULT_MINUTES.border_collie).toBe(120);
+  });
+
   it.each(DOG_BREEDS.flatMap((breed) => PICKER_AGES.map((age) => [breed, age] as const)))(
     '%s / %s quotes the confirmed step goal',
     (breed, age) => {

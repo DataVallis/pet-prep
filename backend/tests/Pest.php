@@ -1,5 +1,7 @@
 <?php
 
+use App\Enums\BreedType;
+use App\Enums\Species;
 use App\Models\AppSetting;
 use App\Models\FamilyMember;
 use App\Models\Pet;
@@ -98,6 +100,78 @@ function seedStageParams(): void
 function seedLifeStageData(): void
 {
     (new BreedConfigsSeeder)->run();
+}
+
+// ─────────────────────────────────────────────────────────────────────────
+// Breed lists read from code (David 2026-10-15): a test never spells out the
+// full list of breeds — a new breed run must not have to edit other breeds'
+// test files. The enum (BreedType, its case order) and BreedConfigsSeeder
+// (sort_order) are the sources of truth.
+// ─────────────────────────────────────────────────────────────────────────
+
+/**
+ * The breed_configs slugs of every breed of $species in enum order, without $except.
+ *
+ * @return list<string>
+ */
+function breedSlugsOf(Species $species, string ...$except): array
+{
+    return array_values(array_diff(
+        array_map(fn (BreedType $b) => $b->slug(), BreedType::forSpecies($species)),
+        $except,
+    ));
+}
+
+/** The BreedConfigsSeeder row of a breed (by slug or enum value). */
+function seededBreedConfig(string $breed): array
+{
+    $slug = BreedType::tryFrom($breed)?->slug() ?? $breed;
+    $row = collect(BreedConfigsSeeder::configs())->firstWhere('breed_slug', $slug);
+    expect($row)->not->toBeNull("no BreedConfigsSeeder row for {$breed}");
+
+    return $row;
+}
+
+/**
+ * The `breed` order GET /api/breeds must return for the seeded catalogue:
+ * species in Species order, the free breed first, then sort_order (the rule of
+ * BreedCatalogService::load, read from the seeder — never typed out).
+ *
+ * @param  list<Species>  $species
+ * @return list<string>
+ */
+function seededCatalogueOrder(array $species = [Species::Dog]): array
+{
+    $speciesOrder = array_flip(Species::values());
+
+    return collect(BreedConfigsSeeder::configs())
+        ->map(fn (array $c) => ['breed' => BreedType::fromSlug($c['breed_slug']), 'premium' => (bool) $c['premium_unlock'], 'sort' => (int) $c['sort_order'], 'slug' => $c['breed_slug']])
+        ->filter(fn (array $r) => $r['breed'] !== null && in_array($r['breed']->species(), $species, true))
+        ->sort(fn (array $a, array $b) => [$speciesOrder[$a['breed']->species()->value], $a['premium'], $a['sort'], $a['slug']]
+            <=> [$speciesOrder[$b['breed']->species()->value], $b['premium'], $b['sort'], $b['slug']])
+        ->map(fn (array $r) => $r['breed']->value)
+        ->values()
+        ->all();
+}
+
+/**
+ * A /api/breeds list is the whole seeded catalogue in order (every breed, so
+ * a new breed is covered automatically) and $breed comes right after
+ * $previous. Returns $breed's index for the breed's own payload checks.
+ *
+ * @param  list<array<string, mixed>>  $breeds
+ * @param  list<Species>  $species
+ */
+function expectListedAfter(array $breeds, string $breed, string $previous, array $species = [Species::Dog]): int
+{
+    $order = array_column($breeds, 'breed');
+    expect($order)->toBe(seededCatalogueOrder($species));
+
+    $index = array_search($breed, $order, true);
+    expect($index)->toBeInt("{$breed} is not listed")
+        ->and($order[$index - 1] ?? null)->toBe($previous);
+
+    return $index;
 }
 
 /**

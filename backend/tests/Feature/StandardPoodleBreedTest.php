@@ -154,7 +154,7 @@ describe('breed, config and database', function () {
         $migration = require database_path('migrations/2026_11_08_120000_standard_poodle_koder_keywords.php');
         $old = ['poodle (standard)', 'standard poodle', 'poodle', 'veliki pudelj', 'pudelj', 'standardni pudelj'];
         $keywords = fn () => BreedConfig::where('breed_slug', 'poodle-standard')->sole()->fresh()->search_keywords;
-        $new = BreedConfigsSeeder::configs()[8]['search_keywords'];
+        $new = seededBreedConfig('standard_poodle')['search_keywords'];
 
         // The row as the first deploy (insert-only seeder) left it.
         BreedConfig::where('breed_slug', 'poodle-standard')->update(['search_keywords' => json_encode($old)]);
@@ -184,7 +184,7 @@ describe('breed, config and database', function () {
     it('leaves every other breed\'s seeded rows untouched', function () {
         $others = collect(BreedStageParamsSeeder::rows())->where('breed_slug', '!=', 'poodle-standard');
 
-        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(['mutt', 'border-collie', 'labrador-retriever', 'golden-retriever', 'french-bulldog', 'german-shepherd-dog', 'cavalier-king-charles-spaniel', 'beagle', 'dachshund', 'australian-shepherd', 'havanese', 'west-highland-white-terrier', 'bernese-mountain-dog', 'siberian-husky', 'rottweiler', 'bulldog', 'german-shorthaired-pointer', 'yorkshire-terrier', 'cane-corso', 'pembroke-welsh-corgi', 'dobermann', 'boxer', 'miniature-schnauzer', 'shih-tzu', 'great-dane', 'pomeranian', 'boston-terrier', 'miniature-american-shepherd', 'chihuahua', 'english-springer-spaniel', 'shetland-sheepdog', 'brittany', 'american-cocker-spaniel', 'belgian-malinois', 'basset-hound', 'hungarian-vizsla'])
+        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(breedSlugsOf(Species::Dog, 'poodle-standard'))
             ->and($others->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_STANDARD_POODLE)->all())->toBe([])
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'poodle-standard')->where('decision', BreedStageParamsSeeder::CONFIRMED_R10)->all())->toBe([])
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'poodle-standard')->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_CAVALIER)->all())->toBe([])
@@ -387,16 +387,17 @@ describe('GET /api/breeds', function () {
 
         $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
 
-        expect(array_column($breeds, 'breed'))->toBe(['mutt', 'border_collie', 'labrador_retriever', 'golden_retriever', 'french_bulldog', 'german_shepherd', 'cavalier_king_charles_spaniel', 'beagle', 'standard_poodle', 'dachshund', 'australian_shepherd', 'havanese', 'west_highland_white_terrier', 'bernese_mountain_dog', 'siberian_husky', 'rottweiler', 'bulldog', 'german_shorthaired_pointer', 'yorkshire_terrier', 'cane_corso', 'pembroke_welsh_corgi', 'dobermann', 'boxer', 'miniature_schnauzer', 'shih_tzu', 'great_dane', 'pomeranian', 'boston_terrier', 'miniature_american_shepherd', 'chihuahua', 'english_springer_spaniel', 'shetland_sheepdog', 'brittany', 'american_cocker_spaniel', 'belgian_malinois', 'basset_hound', 'hungarian_vizsla'])
-            ->and(collect($breeds[8])->except('colours')->all())->toBe([
-                'breed' => 'standard_poodle', 'slug' => 'poodle-standard', 'species' => 'dog', 'premium' => true,
-                'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.standard_poodle',
-                'search_keywords' => BreedConfigsSeeder::configs()[8]['search_keywords'], 'sort_order' => 80,
-                'suitability' => [
-                    'suits' => ['children', 'large_home', 'other_pets', 'low_shedding'],
-                    'consider' => ['frequent_grooming'],
-                ],
-            ]);
+        $i = expectListedAfter($breeds, 'standard_poodle', 'beagle');
+
+        expect(collect($breeds[$i])->except('colours')->all())->toBe([
+            'breed' => 'standard_poodle', 'slug' => 'poodle-standard', 'species' => 'dog', 'premium' => true,
+            'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.standard_poodle',
+            'search_keywords' => seededBreedConfig('standard_poodle')['search_keywords'], 'sort_order' => 80,
+            'suitability' => [
+                'suits' => ['children', 'large_home', 'other_pets', 'low_shedding'],
+                'consider' => ['frequent_grooming'],
+            ],
+        ]);
     });
 });
 
