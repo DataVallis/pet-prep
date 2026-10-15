@@ -222,7 +222,7 @@ prod=$(gh api "repos/DataVallis/pet-prep/actions/workflows/deploy-production.yml
   | while read -r id sha; do [ "$(gh api repos/DataVallis/pet-prep/actions/runs/$id/jobs --jq '[.jobs[] | select(.name=="Deploy to Hetzner Production" and .conclusion=="success")] | length')" -gt 0 ] && { echo "$sha"; break; }; done)
 git fetch origin && git merge-base --is-ancestor <merge_sha> "$prod" && echo "on production"
 ```
-Not yet on production → **skip §8** (do not dispatch a production deploy), set the queue row to `done` with "portrait pending production deploy", and the first unattended run after the next production deploy does the portrait of every such row before its own breed. On production →
+Not yet on production → **skip §8** (do not dispatch a production deploy), set the queue row to `done` with "portrait pending production deploy", and the first unattended run after the next production deploy does the portrait of every such row before its own breed. **Catch-up (David 2026-10-15):** every run starts with this catch-up — one `breed-portraits.yml` run for all pending breeds already on production (plus any register breed missing from `manifest.json`), then §8 + §9 for them; take only those breeds' `.webp` files and manifest entries from the review branch (it can carry stale files of other breeds from the server folder); the final report ends with "Čaka na deploy: …". Never wait for or dispatch a deploy. On production →
 
 ```bash
 gh api -X POST repos/DataVallis/pet-prep/actions/workflows/breed-portraits.yml/dispatches -f ref=main -f 'inputs[breeds]=<key>'
