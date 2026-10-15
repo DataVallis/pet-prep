@@ -1,10 +1,12 @@
-import { Component, useEffect, type ErrorInfo, type ReactNode } from 'react';
+import { Component, useEffect, useRef, type ErrorInfo, type ReactNode } from 'react';
 import { BackHandler, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 
 import { isAwaitingContract, useAppStore, type LockState } from '@/store/appStore';
 import { logout } from '@/modules/session/logout';
 import { useSessionBootstrap } from '@/modules/session/useSessionBootstrap';
+import { useServerRecovery } from '@/modules/connectivity/serverRecovery';
+import { useServerOutage } from '@/store/serverStatusStore';
 import { usePushNotifications } from '@/modules/push/usePushNotifications';
 import { usePurchasesSession } from '@/modules/purchases/usePurchases';
 import SplashScreen from '@/screens/SplashScreen';
@@ -103,6 +105,17 @@ export default function AppNavigator() {
   // M3-07: identify a parent session with RevenueCat (never a child; no-op without keys).
   usePurchasesSession();
   useParentSignInHousekeeping();
+  // M5-F13: while the server is updating (deploy), probe it and refetch everything once it is back.
+  useServerRecovery();
+  const serverUpdating = useServerOutage();
+  // M5-F13: a launch during a deploy (restore got 503) retries the restore by itself once
+  // the server is back — the user never has to tap "Poskusi znova".
+  const wasUpdating = useRef(serverUpdating);
+  useEffect(() => {
+    const ended = wasUpdating.current && !serverUpdating;
+    wasUpdating.current = serverUpdating;
+    if (ended && bootStatus === 'offline') retry();
+  }, [serverUpdating, bootStatus, retry]);
   // M2-11: Android back on the parent login over a shared child session → back to the child.
   useEffect(() => {
     if (!parentLoginOpen) return;
@@ -117,6 +130,7 @@ export default function AppNavigator() {
     return (
       <SplashScreen
         mode={bootStatus}
+        updating={serverUpdating}
         onRetry={retry}
         onLogout={() => {
           void logout();

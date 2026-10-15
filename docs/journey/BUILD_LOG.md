@@ -27,6 +27,19 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-14 — Ko posodobimo strežnik, aplikacija ostane mirna (M5-F13)
+
+**Kaj se je zgodilo:** Ob vsaki posodobitvi strežnika (nekaj minut) je aplikacija prej »izgubila povezavo« in izgledala pokvarjeno. Zdaj ostanejo zadnji podatki na zaslonu, pokaže se majhna mirna pasica »Posodabljamo PetPrep — takoj smo nazaj.«, aplikacija sama počaka (kolikor strežnik reče, običajno 15 s) in se ob vrnitvi sama osveži — tudi živa povezava s kužkom. Dejanje, ki ga otrok tapne med posodobitvijo, se ne pošlje dvakrat; otrok dobi prijazno »Poskusi čez trenutek«.
+
+**Zakaj je pomembno:** Strežnik posodabljamo pogosto (vsaka sprememba gre samodejno v produkcijo). Otrok ali starš tega ne sme občutiti kot napako — brez odjave, brez rdečih opozoril, brez slepih ulic.
+
+**Kako povedati:**
+- 👩 Starši: »Ko PetPrep posodabljamo, aplikacija za trenutek pokaže 'Posodabljamo PetPrep' in nadaljuje sama — nič se ne izgubi.«
+- 🧒 Otroci: »Če piše 'Posodabljamo PetPrep', kuža samo malo počaka. Takoj smo nazaj!«
+- 🛠 Tehnično: »503 iz Laravelovega vzdrževalnega načina = stanje 'posodabljamo' (ne napaka); TanStack Query ponavlja po `Retry-After`, `GET /up` sonda, ob vrnitvi `invalidateQueries`; Reverb: ponovna avtorizacija kanala z backoffom in osvežitev po ponovni naročnini. Mutacije se ne ponavljajo samodejno. Samo JS — posodobitev OTA, prstni odtis nespremenjen.«
+
+---
+
 ## 2026-10-14 — Posodobitev brez »smo v vzdrževanju« (D19)
 
 **Kaj se je zgodilo:** Deploy zdaj najprej vpraša bazo, ali nova različica prinaša spremembe sheme. Če ne, strežnik ne gre v način vzdrževanja: zamenja delavce, nato aplikacijo, spletni strežnik (Caddy) pa med tem do 10 sekund počaka nanjo, namesto da bi vrnil napako. Strežnika za sprotne posodobitve (Reverb) in Caddy pusti pri miru, kadar se njune nastavitve niso spremenile.
@@ -49,8 +62,6 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 👩 Starši: »Vaša aplikacija se posodobi samo, ko je posodobitev preverjena in jo izdamo — ne vsakič, ko programer kaj spremeni.«
 - 💼 Investitorji: »Ročna odobritev vsake produkcijske izdaje — standardna praksa pred javnim zagonom.«
 - 🛠 Tehnično: »Push na `main` = samo CI; deploy samo `workflow_dispatch` s `target=production`, deploy skripta zavrne napačen strežnik (`--expect-domain`); 236 + 285 avtomatskih preverjanj.«
-
----
 
 ---
 

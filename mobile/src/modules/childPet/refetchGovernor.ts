@@ -19,8 +19,10 @@
  *    GET honour `Retry-After` and back off exponentially.
  */
 
-// No runtime imports on purpose: the Jest setup resets the shared gate before every test.
+// No app-state runtime imports on purpose: the Jest setup resets the shared gate before
+// every test (`serverOutage` is pure).
 import type { ChildPetView } from '@/modules/childPet/childPetView';
+import { isServerOutageError, outageRetryAfterMs, outageRetryDelayMs } from '@/modules/connectivity/serverOutage';
 
 /** Calls allowed back to back (a broadcast + a boundary + a tap within a second). */
 export const FETCH_BURST = 3;
@@ -224,10 +226,14 @@ export function noteBoundaryFire(backoff: BoundaryBackoff, signature: string, no
 
 // ── Retries after a failed GET ──────────────────────────────────
 
-/** Automatic retries of a failed GET: `Retry-After` for a 429, else 2 s, 4 s, 8 s … */
+/**
+ * Automatic retries of a failed GET: `Retry-After` for a 429; for a deploy (M5-F13) the
+ * maintenance `Retry-After` (1 … 30 s) or the outage backoff; else 2 s, 4 s, 8 s … 30 s.
+ */
 export function retryDelayFor(failureCount: number, error: unknown): number {
   const after = retryAfterMs(error);
   if (after !== null) return after;
+  if (isServerOutageError(error)) return outageRetryDelayMs(failureCount, error);
   return Math.min(2_000 * 2 ** Math.max(0, failureCount), 30_000);
 }
 
@@ -241,6 +247,10 @@ export const ERROR_RETRY_MAX_MS = 2 * 60_000;
  * 15 s, 30 s, 60 s, 120 s.
  */
 export function errorRetryDelay(errorCount: number, error: unknown): number {
+  // M5-F13: maintenance mode sends `Retry-After` — wait that long (≥ 15 s here), not the
+  // ever longer backoff; the outage probe refetches the moment the server is back anyway.
+  const maintenanceAfter = isServerOutageError(error) ? outageRetryAfterMs(error) : null;
+  if (maintenanceAfter !== null) return Math.max(maintenanceAfter, ERROR_RETRY_BASE_MS);
   const backoff = Math.min(ERROR_RETRY_BASE_MS * 2 ** Math.max(0, errorCount - 1), ERROR_RETRY_MAX_MS);
   const after = retryAfterMs(error);
   return after !== null ? Math.max(after, ERROR_RETRY_BASE_MS) : backoff;

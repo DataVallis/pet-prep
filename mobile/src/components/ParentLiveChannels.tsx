@@ -3,18 +3,24 @@
  * Reverb channel per family pet (`usePetChannels`, status per pet). Events patch /
  * refetch the cached dashboard (`createParentBroadcastHandler`, decay ticks
  * throttled), never the session store. Unless every channel is subscribed,
- * `wsStatus` makes the dashboard poll every 30 s.
+ * `wsStatus` makes the dashboard poll every 30 s. M5-F13: after a reconnect (deploy,
+ * network) a re-subscribed channel refetches the dashboard — events of the gap are lost.
  */
 
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 
 import { usePetChannels } from '@/hooks/usePetChannels';
-import { createParentBroadcastHandler } from '@/modules/family/live';
+import { createParentBroadcastHandler, parentDashboardKey } from '@/modules/family/live';
 
 export default function ParentLiveChannels({ petIds }: { petIds: number[] }) {
   const queryClient = useQueryClient();
   const onBroadcast = useMemo(() => createParentBroadcastHandler(queryClient), [queryClient]);
-  usePetChannels(petIds, onBroadcast);
+  // `cancelRefetch: false`: several pets re-subscribing (and the recovery refetch) share one
+  // running dashboard fetch instead of cancelling and restarting it.
+  const onResubscribed = useCallback(() => {
+    void queryClient.invalidateQueries({ queryKey: parentDashboardKey }, { cancelRefetch: false });
+  }, [queryClient]);
+  usePetChannels(petIds, onBroadcast, onResubscribed);
   return null;
 }

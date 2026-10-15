@@ -227,6 +227,37 @@ sequenceDiagram
   Note over App,API: back to the parent = a real parent re-login (password or Google / Apple);<br/>parent pushes only while the parent is signed in; steps count only for the active profile (app-side windows)
 ```
 
+## 2c″. The app during a backend deploy (M5-F13, 2026-10-14)
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant App as Mobile app (child HUD / parent)
+  participant Store as serverStatusStore
+  participant API as Laravel API (Caddy → PHP-FPM)
+  participant WS as Reverb
+  Note over API: deploy: artisan down --retry=15
+  App->>API: GET /api/child/pet (or any request)
+  API-->>App: 503 {message} + Retry-After: 15
+  App->>Store: noteOutageFailure(maintenance, 15 s) → banner »Posodabljamo PetPrep — takoj smo nazaj.«
+  Note over App: last data stays on screen · query retries after Retry-After (≤ 6×)<br/>care actions: one request, »Poskusi čez trenutek«, never re-sent by the app
+  WS--xApp: socket closed (Reverb restarts)
+  Note over App,WS: pusher-js reconnects by itself, re-subscribes on connected
+  App->>API: POST /api/broadcasting/auth
+  API-->>App: 503 / 502 / network error → withOutageRetry (Retry-After / 2–30 s, ≤ 20×)
+  loop every 3–30 s while the banner shows (foreground)
+    App->>API: GET /up
+    API-->>App: 503 (still updating)
+  end
+  Note over API: artisan up
+  App->>API: GET /up
+  API-->>App: 200
+  App->>Store: noteServerAnswered → banner hides
+  App->>API: invalidateQueries (active) → fresh state
+  App->>API: POST /api/broadcasting/auth → 200 → subscribed again
+  App->>API: onResubscribed → refetch pet state / dashboard (broadcasts of the gap)
+```
+
 ## 2d. Parent self-registration (M2-10a, 2026-10-05)
 
 ```mermaid

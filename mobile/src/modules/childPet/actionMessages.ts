@@ -14,6 +14,8 @@ import { BEHAVIOUR_STRINGS, onlyChewingOpen, onlyScratchingEventsOpen } from '@/
 import { onlyScratchingOpen } from '@/modules/catCare/catCare';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
+import { outageCauseOfError } from '@/modules/connectivity/serverOutage';
+import { isServerOutage } from '@/store/serverStatusStore';
 
 /** All child texts of care actions (`child:actions`); behaviour texts come from `behaviour:child`. */
 export const CHILD_ACTION_STRINGS = strings('child', 'actions', {
@@ -63,6 +65,8 @@ export type ActionFailure =
   | { kind: 'refused'; reason: string | null; nextAllowedAt: string | null; state: ChildPetState | null }
   | { kind: 'locked'; reason: LockReason | null; lockedUntil: string | null; state: ChildPetState | null }
   | { kind: 'offline' }
+  /** M5-F13: the server is updating (deploy: 503 / 502 / 504, or no connection while the banner shows). */
+  | { kind: 'updating' }
   | { kind: 'throttled' }
   | { kind: 'failed'; status: number };
 
@@ -76,9 +80,15 @@ function str(value: unknown): string | null {
 
 const LOCK_REASONS: readonly LockReason[] = ['game_over', 'inactive', 'hard_stopped', 'contract_required', 'ill'];
 
-/** Classify a thrown error of a child action. Anything not from the API = no connection. */
+/**
+ * Classify a thrown error of a child action. Anything not from the API = no connection —
+ * or, while the "Updating PetPrep" banner shows, the deploy (M5-F13). A maintenance 503
+ * (no `reason`) / 502 / 504 = updating. Never retried automatically: the child taps again.
+ */
 export function classifyActionError(error: unknown): ActionFailure {
-  if (!(error instanceof ApiError)) return { kind: 'offline' };
+  const outage = outageCauseOfError(error);
+  if (outage === 'maintenance' || outage === 'gateway') return { kind: 'updating' };
+  if (!(error instanceof ApiError)) return isServerOutage() ? { kind: 'updating' } : { kind: 'offline' };
   const body = isRecord(error.data) ? error.data : {};
   const state = stateFromErrorBody(error.data);
   switch (error.status) {
@@ -201,11 +211,18 @@ export function failureMessage(failure: ActionFailure, view: ChildPetView | null
       return lockMessage(failure.reason, failure.lockedUntil, view?.timezone ?? null);
     case 'offline':
       return CHILD_ACTION_STRINGS.offline;
+    case 'updating':
+      return serverUpdatingActionText();
     case 'throttled':
       return CHILD_ACTION_STRINGS.tooFast;
     case 'failed':
       return CHILD_ACTION_STRINGS.failed;
   }
+}
+
+/** M5-F13: "PetPrep is updating right now. Try again in a moment." (any child / parent action). */
+export function serverUpdatingActionText(): string {
+  return t('common:serverUpdating.actionLater');
 }
 
 /** Message after a 200 (`accepted` or `unchanged`). */

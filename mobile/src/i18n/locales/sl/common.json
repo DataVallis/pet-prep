@@ -11,6 +11,11 @@
     "thousands": ".",
     "percent": "{{value}} %"
   },
+  "serverUpdating": {
+    "title": "Posodabljamo PetPrep — takoj smo nazaj.",
+    "a11y": "Posodabljamo PetPrep. Takoj smo nazaj, vse je shranjeno.",
+    "actionLater": "PetPrep se ravno posodablja. Poskusi čez trenutek."
+  },
   "parentalGate": {
     "link": "Starš?",
     "linkA11y": "Za starše: odjava otroka",

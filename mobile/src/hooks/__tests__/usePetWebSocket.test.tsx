@@ -5,6 +5,9 @@
 import { act, renderHook } from '@testing-library/react-native';
 import Echo from 'laravel-echo';
 
+import { QueryClient } from '@tanstack/react-query';
+
+import { childPetKey } from '@/hooks/queries/useChildPet';
 import { createBroadcastGate, usePetWebSocket } from '@/hooks/usePetWebSocket';
 import { useAppStore } from '@/store/appStore';
 import { makeBroadcast, makePet } from '@/test-utils/fixtures';
@@ -117,5 +120,45 @@ describe('usePetWebSocket', () => {
     renderHook(() => usePetWebSocket(null));
     expect(Echo).not.toHaveBeenCalled();
     expect(useAppStore.getState().wsStatus).toBe('disconnected');
+  });
+
+  it('M5-F13: a re-subscription after a reconnect calls onResubscribed (refetch); the first one does not', () => {
+    const { channel, connectionHandlers } = installFakeEcho();
+    const onResubscribed = jest.fn();
+    renderHook(() => usePetWebSocket(7, jest.fn(), onResubscribed));
+
+    act(() => channel.subscribedCb?.());
+    expect(onResubscribed).not.toHaveBeenCalled();
+
+    // Deploy: Reverb restarts → socket drops → pusher-js reconnects and re-subscribes.
+    act(() => connectionHandlers.disconnected?.());
+    expect(useAppStore.getState().wsStatus).toBe('disconnected');
+    act(() => channel.subscribedCb?.());
+    expect(useAppStore.getState().wsStatus).toBe('connected');
+    expect(onResubscribed).toHaveBeenCalledWith(7);
+    expect(onResubscribed).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('usePetWebSocket → child state refetch (M5-F13)', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    useAppStore.setState(useAppStore.getInitialState(), true);
+  });
+
+  it('a reconnect invalidates ["child","pet"] so missed broadcasts are not lost', async () => {
+    const { channel } = installFakeEcho();
+    const client = new QueryClient({ defaultOptions: { queries: { gcTime: Infinity, retry: false } } });
+    client.setQueryData(childPetKey, { stale: false });
+    renderHook(() =>
+      usePetWebSocket(7, jest.fn(), () => {
+        void client.invalidateQueries({ queryKey: childPetKey });
+      }),
+    );
+    act(() => channel.subscribedCb?.());
+    expect(client.getQueryState(childPetKey)?.isInvalidated).toBe(false);
+    act(() => channel.subscribedCb?.());
+    expect(client.getQueryState(childPetKey)?.isInvalidated).toBe(true);
+    client.clear();
   });
 });

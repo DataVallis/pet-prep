@@ -5,7 +5,8 @@
 import { act, fireEvent, screen } from '@testing-library/react-native';
 import { BackHandler } from 'react-native';
 
-import { api } from '@/api/client';
+import { ApiError, api } from '@/api/client';
+import { useServerStatusStore } from '@/store/serverStatusStore';
 import { familyFromDashboard, type FamilyOverview } from '@/modules/family/family';
 import ChildDetailScreen, { CHILD_DETAIL_STRINGS, formatSteps } from '@/screens/parent/ChildDetailScreen';
 import {
@@ -438,5 +439,20 @@ describe('ChildDetailScreen', () => {
     expect(formatSteps(12500)).toBe('12.500');
     expect(formatSteps(999)).toBe('999');
     expect(formatSteps(-3)).toBe('0');
+  });
+});
+
+describe('ChildDetailScreen during a backend deploy (M5-F13)', () => {
+  beforeEach(() => jest.clearAllMocks());
+
+  it('no cached report + outage → loading (not blank, no error banner)', async () => {
+    useServerStatusStore.getState().noteOutageFailure('maintenance', 15_000);
+    getChildReport.mockRejectedValue(new ApiError('Service Unavailable', 503, { message: 'x' }, 15));
+    getPetActivities.mockRejectedValue(new ApiError('Service Unavailable', 503, { message: 'x' }, 15));
+    renderWithQuery(<ChildDetailScreen child={LUKA} family={FAMILY} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.getByTestId('report-loading')).toBeTruthy();
+    expect(screen.queryByTestId('report-error')).toBeNull();
+    expect(screen.queryByTestId('timeline-error')).toBeNull();
   });
 });

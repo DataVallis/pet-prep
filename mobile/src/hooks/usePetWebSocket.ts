@@ -23,28 +23,50 @@ import { api } from '@/api/client';
 import { channelAuthGate, gatedCall } from '@/modules/childPet/refetchGovernor';
 import {
   buildPusherOptions,
+  createSubscriptionTracker,
   petChannelName,
   PET_UPDATED_EVENT,
   resolvePusherConstructor,
+  withOutageRetry,
 } from '@/modules/realtime/echoConfig';
 import type { PetUpdatedBroadcast } from '@/types';
 
 export type BroadcastHandler = (event: PetUpdatedBroadcast) => void;
 
-/** One Echo (= one websocket) for the app's Reverb, authorizing private channels with the Bearer token. */
-export function createEcho(): Echo<'reverb'> {
+/** Called when a channel subscribed AGAIN after a socket reconnect (broadcasts may have been missed). */
+export type ResubscribeHandler = (petId: number) => void;
+
+/**
+ * One Echo (= one websocket) for the app's Reverb, authorizing private channels with the
+ * Bearer token. pusher-js reconnects the socket by itself (connecting → unavailable →
+ * retry; a closed connection retries after 1 s) and re-subscribes every channel on
+ * `connected`. M5-F13: during a deploy the auth call may get 503 / 502 / network
+ * failures — it is retried with backoff (`withOutageRetry`) while `isActive()` and while
+ * the socket that asked is still the connected one.
+ */
+export function createEcho(options: { isActive?: () => boolean } = {}): Echo<'reverb'> {
   // Resolved per call (not at import): on device the import is `{ Pusher }` (RN build).
   const PusherClient = resolvePusherConstructor<Pusher>(Pusher);
-  return new Echo<'reverb'>({
-    broadcaster: 'reverb',
-    // Gated: reconnect storms must not drain the per-user API limit (hotfix 2026-10-06).
-    client: new PusherClient(
-      ENV.REVERB_APP_KEY,
-      buildPusherOptions(ENV, (socketId, channelName) =>
-        gatedCall(channelAuthGate, () => api.authorizeChannel(socketId, channelName)),
+  let client: Pusher | null = null;
+  client = new PusherClient(
+    ENV.REVERB_APP_KEY,
+    buildPusherOptions(
+      ENV,
+      // Gated: reconnect storms must not drain the per-user API limit (hotfix 2026-10-06).
+      withOutageRetry(
+        (socketId, channelName) => gatedCall(channelAuthGate, () => api.authorizeChannel(socketId, channelName)),
+        {
+          isActive: options.isActive,
+          currentSocketId: () => {
+            const connection = client?.connection;
+            if (!connection) return undefined;
+            return connection.state === 'connected' ? connection.socket_id : null;
+          },
+        },
       ),
     ),
-  });
+  );
+  return new Echo<'reverb'>({ broadcaster: 'reverb', client });
 }
 
 /**
@@ -65,10 +87,16 @@ export function createBroadcastGate(): (event: PetUpdatedBroadcast) => boolean {
  * @param onBroadcast where events go — the child HUD writes them into the TanStack
  *   cache; default (parent dashboard) maps them onto the session pet in the store.
  */
-export function usePetWebSocket(petId: number | null, onBroadcast?: BroadcastHandler): void {
+export function usePetWebSocket(
+  petId: number | null,
+  onBroadcast?: BroadcastHandler,
+  onResubscribed?: ResubscribeHandler,
+): void {
   const echoRef = useRef<Echo<'reverb'> | null>(null);
   const handlerRef = useRef<BroadcastHandler | undefined>(onBroadcast);
   handlerRef.current = onBroadcast;
+  const resubscribedRef = useRef<ResubscribeHandler | undefined>(onResubscribed);
+  resubscribedRef.current = onResubscribed;
 
   const setWsStatus = useAppStore((s) => s.setWsStatus);
 
@@ -78,9 +106,11 @@ export function usePetWebSocket(petId: number | null, onBroadcast?: BroadcastHan
     setWsStatus('connecting');
     const channelName = petChannelName(petId);
     const passes = createBroadcastGate();
+    const tracker = createSubscriptionTracker();
+    let active = true;
 
     try {
-      const echo = createEcho();
+      const echo = createEcho({ isActive: () => active });
 
       echoRef.current = echo;
 
@@ -97,6 +127,8 @@ export function usePetWebSocket(petId: number | null, onBroadcast?: BroadcastHan
       // Live only once the private channel is authorized (also after a reconnect).
       channel.subscribed(() => {
         setWsStatus('connected');
+        // M5-F13: broadcasts sent while the socket was down are lost — refetch the state.
+        if (tracker.subscribed()) resubscribedRef.current?.(petId);
       });
 
       // 403 (not this user's pet) / auth error → polling keeps the state fresh.
@@ -113,6 +145,7 @@ export function usePetWebSocket(petId: number | null, onBroadcast?: BroadcastHan
     }
 
     return () => {
+      active = false;
       try {
         if (echoRef.current) {
           echoRef.current.leave(channelName);

@@ -11,6 +11,7 @@ import {
   waterHint,
 } from '@/modules/childPet/actionMessages';
 import { normalizeChildState } from '@/modules/childPet/childPetView';
+import { useServerStatusStore } from '@/store/serverStatusStore';
 import { makeLiveChildState } from '@/test-utils/fixtures';
 
 const lj = normalizeChildState(makeLiveChildState());
@@ -45,6 +46,24 @@ describe('classifyActionError', () => {
     expect(classifyActionError(new TypeError('Network request failed'))).toEqual({ kind: 'offline' });
     expect(classifyActionError(new ApiError('x', 429))).toEqual({ kind: 'throttled' });
     expect(classifyActionError(new ApiError('x', 500))).toEqual({ kind: 'failed', status: 500 });
+  });
+
+  it('M5-F13: maintenance 503 / 502 / 504 → updating, with a calm "try again in a moment" text', () => {
+    expect(classifyActionError(new ApiError('Service Unavailable', 503, { message: 'x' }, 15))).toEqual({ kind: 'updating' });
+    expect(classifyActionError(new ApiError('x', 502))).toEqual({ kind: 'updating' });
+    expect(classifyActionError(new ApiError('x', 504))).toEqual({ kind: 'updating' });
+    expect(failureMessage({ kind: 'updating' }, null)).toBe('PetPrep se ravno posodablja. Poskusi čez trenutek.');
+  });
+
+  it('M5-F13: a network error while the banner shows is the deploy too', () => {
+    useServerStatusStore.getState().noteOutageFailure('maintenance', 15_000);
+    expect(classifyActionError(new TypeError('Network request failed'))).toEqual({ kind: 'updating' });
+  });
+
+  it('M5-F13: 422 / 423 answers are classified exactly as before, also during a deploy', () => {
+    useServerStatusStore.getState().noteOutageFailure('maintenance', 15_000);
+    expect(classifyActionError(new ApiError('x', 422, { reason: 'water_too_soon' }))).toMatchObject({ kind: 'refused', reason: 'water_too_soon' });
+    expect(classifyActionError(new ApiError('x', 423, { reason: 'ill' }))).toMatchObject({ kind: 'locked', reason: 'ill' });
   });
 });
 
