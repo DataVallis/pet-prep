@@ -25,7 +25,7 @@
             "kind": "ai_photo",
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:b775a1b48d7073964cd089ace027151fbcf996769dba5b2294ffea224e9f9329",
-            "generated_at": "2026-10-10T05:47:20+00:00",
+            "generated_at": "2026-10-10T05:49:32+00:00",
             "cost_usd": 0.15
         },
         {
@@ -241,7 +241,7 @@
             "kind": "ai_photo",
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:af22b68d3e35cf939053cf9239b179237a49ca147683a99cb93c917c87706f28",
-            "generated_at": "2026-10-12T07:53:39+00:00",
+            "generated_at": "2026-10-12T07:54:57+00:00",
             "cost_usd": 0.15
         },
         {
@@ -434,6 +434,18 @@
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:e3522f95b5345b0902f15d14802c007476e75cdd98daae48237be4576ed37906",
             "generated_at": "2026-10-15T07:31:02+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "english_cocker_spaniel",
+            "species": "dog",
+            "file": "dog/english-cocker-spaniel.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:b0b70b90f6316241a66758488e954e2e54ae486ed8ffff69a029f8a3646569dc",
+            "generated_at": "2026-10-15T11:50:03+00:00",
             "cost_usd": 0.15
         },
         {
