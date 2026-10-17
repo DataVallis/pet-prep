@@ -27,9 +27,11 @@ describe('restoreSession', () => {
     expect(getUser).not.toHaveBeenCalled();
   });
 
-  it('is anonymous when SecureStore itself fails', async () => {
+  it('is locked — never signed out — when the Keychain is unreadable (phone locked)', async () => {
     getItem.mockRejectedValueOnce(new Error('keychain locked'));
-    await expect(restoreSession()).resolves.toEqual({ status: 'anonymous' });
+    await expect(restoreSession()).resolves.toEqual({ status: 'locked' });
+    expect(getUser).not.toHaveBeenCalled();
+    expect(deleteItem).not.toHaveBeenCalled();
   });
 
   it('returns the flat /api/user payload as a sign-in session', async () => {
@@ -71,6 +73,14 @@ describe('restoreSession', () => {
     expect(garbage.status === 'authenticated' && garbage.session.familyTimezone).toBeNull();
     getItem.mockImplementation(() => Promise.resolve(null));
     getItem.mockResolvedValue(null);
+  });
+
+  it('migrates the Keychain only after a successful restore, never on 401', async () => {
+    const set = SecureStore.setItemAsync as jest.Mock;
+    getItem.mockResolvedValueOnce('revoked');
+    getUser.mockRejectedValueOnce(new ApiError('Unauthenticated.', 401));
+    await restoreSession();
+    expect(set).not.toHaveBeenCalledWith('petprep_keychain_after_first_unlock', '1', expect.anything());
   });
 
   it('clears the token on 401', async () => {

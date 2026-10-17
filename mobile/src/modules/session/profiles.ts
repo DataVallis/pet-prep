@@ -19,7 +19,7 @@
 
 import * as SecureStore from 'expo-secure-store';
 
-import { api } from '@/api/client';
+import { SESSION_SECURE_STORE_OPTIONS, api } from '@/api/client';
 
 export const CHILD_SESSIONS_KEY = 'petprep_child_sessions';
 /** First M2-11 draft only (never in a store build): a parked parent session. */
@@ -70,7 +70,7 @@ export async function loadChildSessions(store: Store = SecureStore): Promise<Chi
 export async function writeChildSessions(sessions: ChildSessions, store: Store = SecureStore): Promise<boolean> {
   try {
     if (Object.keys(sessions).length === 0) await store.deleteItemAsync(CHILD_SESSIONS_KEY);
-    else await store.setItemAsync(CHILD_SESSIONS_KEY, JSON.stringify(sessions));
+    else await store.setItemAsync(CHILD_SESSIONS_KEY, JSON.stringify(sessions), SESSION_SECURE_STORE_OPTIONS);
     return true;
   } catch {
     return false;

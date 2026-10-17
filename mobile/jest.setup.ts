@@ -8,6 +8,8 @@ jest.mock('expo-secure-store', () => ({
   setItemAsync: jest.fn(),
   getItemAsync: jest.fn(() => Promise.resolve(null)),
   deleteItemAsync: jest.fn(),
+  AFTER_FIRST_UNLOCK: 0,
+  WHEN_UNLOCKED: 5,
 }));
 
 // expo-localization (M1-18): the test device prefers Slovenian, so existing tests keep

@@ -130,7 +130,7 @@ describe('Start screen + child PIN login', () => {
     await flush();
 
     expect(pinLogin).toHaveBeenCalledWith('734912', 'samsung SM-A515F');
-    expect(setItem).toHaveBeenCalledWith('petprep_auth_token', 'child-token');
+    expect(setItem).toHaveBeenCalledWith('petprep_auth_token', 'child-token', { keychainAccessible: SecureStore.AFTER_FIRST_UNLOCK });
     expect(screen.getByText(CONTRACT_STRINGS.padHint)).toBeTruthy();
     const { user, authToken, pet } = useAppStore.getState();
     expect(authToken).toBe('child-token');

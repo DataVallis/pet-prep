@@ -1,6 +1,7 @@
 import { act, renderHook } from '@testing-library/react-native';
+import { AppState, type AppStateStatus } from 'react-native';
 
-import { useSessionBootstrap } from '@/modules/session/useSessionBootstrap';
+import { MAX_FOREGROUND_LOCKED, LOCKED_RETRY_MS, useSessionBootstrap } from '@/modules/session/useSessionBootstrap';
 import { restoreSession, type RestoreResult } from '@/modules/session/restoreSession';
 import { useAppStore } from '@/store/appStore';
 
@@ -80,5 +81,93 @@ describe('useSessionBootstrap', () => {
       await first.promise;
     });
     expect(useAppStore.getState().authToken).toBeNull();
+  });
+
+  describe('fix 2026-10-17: a locked-phone launch never signs the child out', () => {
+    let listeners: Array<(state: AppStateStatus) => void>;
+
+    function setAppState(state: AppStateStatus) {
+      Object.defineProperty(AppState, 'currentState', { value: state, configurable: true, writable: true });
+    }
+
+    beforeEach(() => {
+      listeners = [];
+      jest.spyOn(AppState, 'addEventListener').mockImplementation((_type, handler) => {
+        listeners.push(handler as (state: AppStateStatus) => void);
+        return { remove: jest.fn() } as unknown as ReturnType<typeof AppState.addEventListener>;
+      });
+    });
+
+    afterEach(() => {
+      jest.restoreAllMocks();
+      setAppState('active');
+    });
+
+    it('background launch does not restore at all; the foreground restores the session', async () => {
+      setAppState('background');
+      restore.mockResolvedValueOnce(CHILD);
+
+      renderHook(() => useSessionBootstrap());
+      await act(async () => undefined);
+      expect(useAppStore.getState().bootStatus).toBe('restoring');
+      expect(useAppStore.getState().user).toBeNull();
+      expect(restore).not.toHaveBeenCalled();
+
+      setAppState('active');
+      await act(async () => {
+        listeners.forEach((l) => l('active'));
+      });
+      expect(restore).toHaveBeenCalledTimes(1);
+      expect(useAppStore.getState().user?.role).toBe('child');
+      expect(useAppStore.getState().authToken).toBe('old');
+    });
+
+    it('a locked Keychain in the foreground (inactive launch) waits for the next active', async () => {
+      setAppState('inactive');
+      restore.mockResolvedValueOnce({ status: 'locked' }).mockResolvedValueOnce(CHILD);
+      renderHook(() => useSessionBootstrap());
+      await act(async () => undefined);
+      expect(useAppStore.getState().bootStatus).toBe('restoring');
+      setAppState('active');
+      await act(async () => {
+        listeners.forEach((l) => l('active'));
+      });
+      expect(restore).toHaveBeenCalledTimes(2);
+      expect(useAppStore.getState().user?.role).toBe('child');
+    });
+
+    it('a foreground return after a normal restore does not re-run the restore', async () => {
+      setAppState('active');
+      restore.mockResolvedValueOnce(CHILD);
+      renderHook(() => useSessionBootstrap());
+      await act(async () => undefined);
+      await act(async () => {
+        listeners.forEach((l) => l('active'));
+      });
+      expect(restore).toHaveBeenCalledTimes(1);
+    });
+
+    it('in the foreground retries shortly and shows the offline screen (never login) after repeated locks', async () => {
+      jest.useFakeTimers();
+      try {
+        setAppState('active');
+        restore.mockResolvedValue({ status: 'locked' });
+        renderHook(() => useSessionBootstrap());
+        for (let i = 1; i < MAX_FOREGROUND_LOCKED; i += 1) {
+          await act(async () => undefined);
+          expect(useAppStore.getState().bootStatus).toBe('restoring');
+          await act(async () => {
+            await jest.advanceTimersByTimeAsync(LOCKED_RETRY_MS);
+          });
+        }
+        await act(async () => undefined);
+        expect(restore).toHaveBeenCalledTimes(MAX_FOREGROUND_LOCKED);
+        expect(useAppStore.getState().bootStatus).toBe('offline');
+        expect(useAppStore.getState().user).toBeNull();
+      } finally {
+        restore.mockReset();
+        jest.useRealTimers();
+      }
+    });
   });
 });

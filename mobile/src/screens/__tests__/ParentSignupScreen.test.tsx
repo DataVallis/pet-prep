@@ -109,7 +109,7 @@ describe('ParentSignupScreen', () => {
       device_name: expect.any(String),
       timezone: 'UTC', // Jest's device zone
     });
-    expect(setItem).toHaveBeenCalledWith('petprep_auth_token', 'new-parent-token');
+    expect(setItem).toHaveBeenCalledWith('petprep_auth_token', 'new-parent-token', { keychainAccessible: SecureStore.AFTER_FIRST_UNLOCK });
     expect(useAppStore.getState().user?.role).toBe('parent');
     expect(useAppStore.getState().pet).toBeNull();
   });

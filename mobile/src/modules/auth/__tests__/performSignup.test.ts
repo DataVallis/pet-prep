@@ -49,7 +49,7 @@ describe('performSignup', () => {
       signInMethod: 'password',
     });
     expect(register).toHaveBeenCalledTimes(1);
-    expect(setItem).toHaveBeenCalledWith('petprep_auth_token', 'tok');
+    expect(setItem).toHaveBeenCalledWith('petprep_auth_token', 'tok', { keychainAccessible: SecureStore.AFTER_FIRST_UNLOCK });
     // M2-10c: an e-mail account confirms deletions with its password (no stored provider).
     expect(SecureStore.deleteItemAsync).toHaveBeenCalledWith('petprep_sign_in_method');
   });

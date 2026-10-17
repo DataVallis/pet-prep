@@ -65,7 +65,7 @@ describe('performPinLogin', () => {
     const session = await performPinLogin('123456', 'iPhone');
 
     expect(apiLogout).not.toHaveBeenCalled();
-    expect(setItem).toHaveBeenCalledWith('petprep_auth_token', 'new-child-token');
+    expect(setItem).toHaveBeenCalledWith('petprep_auth_token', 'new-child-token', { keychainAccessible: SecureStore.AFTER_FIRST_UNLOCK });
     expect(session.token).toBe('new-child-token');
   });
 

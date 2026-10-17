@@ -9,6 +9,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-17 — Otrok ostane prijavljen
+
+**Kaj:** otroka je aplikacija na vsake dva dni vrgla na zaslon »Kdo se prijavlja?«. Vzrok ni bil strežnik (žetoni ne potečejo), ampak iPhone: ko je telefon zaklenjen, iOS aplikacijo občasno zažene v ozadju (štetje korakov, obvestila), takrat pa zaklenjeni Keychain ne izda žetona — aplikacija je to razumela kot »ni prijave«. Zdaj zaklenjen telefon nikoli ne pomeni odjave; žeton je berljiv po prvem odklepu telefona, obstoječi se ob naslednjem zagonu samodejno premaknejo.
+**Zakaj šteje:** otrok skrbi za ljubljenčka vsak dan — vsaka nepotrebna odjava pomeni, da mora starš znova ustvariti kodo.
+**Za starše:** »Ko se otrok enkrat prijavi, ostane prijavljen, dokler se sam ne odjavi.« **Za vlagatelje:** napako smo našli v 15 minutah iz enega posnetka zaslona; popravek gre uporabnikom brez nove verzije v trgovini (OTA).
+
 ## 2026-10-15 — Madžarski kratkodlaki ptičar (vižla): dvaindvajseta pasma po dvajsetih (M5-R10-40)
 
 **Kaj se je zgodilo:** Samodejni zagon je po pravilu runbooka dodal naslednjo najbolj priljubljeno pasmo po registracijah AKC 2024, ki je še ni bilo v aplikaciji — **madžarskega kratkodlakega ptičarja (vižlo)** (35. mesto). Šestintrideseta plačljiva pasma psa; v izbirniku je za basetom. Odrasla vižla v igri potrebuje **12.000 korakov na dan** (The Royal Kennel Club: več kot 2 uri gibanja; PDSA: najmanj dve uri), starejša od 9 let 9.000; uči se hitreje kot mešanček (Coren: 25. mesto). Česanje enkrat na teden, opozorilo »počakaj s sprehodom« po obroku in socializacija mladička so del izziva od prvega dne.
