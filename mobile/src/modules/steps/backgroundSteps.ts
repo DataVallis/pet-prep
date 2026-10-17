@@ -118,7 +118,8 @@ export async function runBackgroundStepSync(overrides: Partial<BackgroundSyncDep
   const deps = { ...defaultDeps(), ...overrides };
   try {
     if (deps.platform !== 'ios' || deps.health === null) return 'skipped';
-    const token = await deps.getToken();
+    // A locked Keychain is not a failure (that would make iOS schedule the task less often).
+    const token = await deps.getToken().catch(() => null);
     if (!token) return 'skipped';
     if ((await deps.health.availability()) !== 'available') return 'skipped';
     if ((await deps.health.access()) !== 'connected') return 'skipped';

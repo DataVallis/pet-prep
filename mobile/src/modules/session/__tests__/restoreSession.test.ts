@@ -75,6 +75,14 @@ describe('restoreSession', () => {
     getItem.mockResolvedValue(null);
   });
 
+  it('migrates the Keychain only after a successful restore, never on 401', async () => {
+    const set = SecureStore.setItemAsync as jest.Mock;
+    getItem.mockResolvedValueOnce('revoked');
+    getUser.mockRejectedValueOnce(new ApiError('Unauthenticated.', 401));
+    await restoreSession();
+    expect(set).not.toHaveBeenCalledWith('petprep_keychain_after_first_unlock', '1', expect.anything());
+  });
+
   it('clears the token on 401', async () => {
     getItem.mockResolvedValueOnce('revoked');
     getUser.mockRejectedValueOnce(new ApiError('Unauthenticated.', 401));

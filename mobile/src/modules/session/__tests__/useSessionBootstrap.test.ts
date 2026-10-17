@@ -103,23 +103,37 @@ describe('useSessionBootstrap', () => {
       setAppState('active');
     });
 
-    it('background launch with a locked Keychain stays restoring, then restores on the foreground', async () => {
+    it('background launch does not restore at all; the foreground restores the session', async () => {
       setAppState('background');
-      restore.mockResolvedValueOnce({ status: 'locked' }).mockResolvedValueOnce(CHILD);
+      restore.mockResolvedValueOnce(CHILD);
 
       renderHook(() => useSessionBootstrap());
       await act(async () => undefined);
       expect(useAppStore.getState().bootStatus).toBe('restoring');
       expect(useAppStore.getState().user).toBeNull();
-      expect(restore).toHaveBeenCalledTimes(1);
+      expect(restore).not.toHaveBeenCalled();
 
+      setAppState('active');
+      await act(async () => {
+        listeners.forEach((l) => l('active'));
+      });
+      expect(restore).toHaveBeenCalledTimes(1);
+      expect(useAppStore.getState().user?.role).toBe('child');
+      expect(useAppStore.getState().authToken).toBe('old');
+    });
+
+    it('a locked Keychain in the foreground (inactive launch) waits for the next active', async () => {
+      setAppState('inactive');
+      restore.mockResolvedValueOnce({ status: 'locked' }).mockResolvedValueOnce(CHILD);
+      renderHook(() => useSessionBootstrap());
+      await act(async () => undefined);
+      expect(useAppStore.getState().bootStatus).toBe('restoring');
       setAppState('active');
       await act(async () => {
         listeners.forEach((l) => l('active'));
       });
       expect(restore).toHaveBeenCalledTimes(2);
       expect(useAppStore.getState().user?.role).toBe('child');
-      expect(useAppStore.getState().authToken).toBe('old');
     });
 
     it('a foreground return after a normal restore does not re-run the restore', async () => {
@@ -133,7 +147,7 @@ describe('useSessionBootstrap', () => {
       expect(restore).toHaveBeenCalledTimes(1);
     });
 
-    it('in the foreground retries shortly and gives up to the login screen after repeated locks', async () => {
+    it('in the foreground retries shortly and shows the offline screen (never login) after repeated locks', async () => {
       jest.useFakeTimers();
       try {
         setAppState('active');
@@ -148,7 +162,7 @@ describe('useSessionBootstrap', () => {
         }
         await act(async () => undefined);
         expect(restore).toHaveBeenCalledTimes(MAX_FOREGROUND_LOCKED);
-        expect(useAppStore.getState().bootStatus).toBe('ready');
+        expect(useAppStore.getState().bootStatus).toBe('offline');
         expect(useAppStore.getState().user).toBeNull();
       } finally {
         restore.mockReset();

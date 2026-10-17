@@ -19,7 +19,7 @@ import { retryPendingRevokes } from './profiles';
 
 /** Delay of the foreground retry after a `locked` restore. */
 export const LOCKED_RETRY_MS = 1000;
-/** Foreground `locked` results in a row before the boot gives up (login screen, as before). */
+/** Foreground `locked` results in a row before the boot shows the offline screen (retry button). */
 export const MAX_FOREGROUND_LOCKED = 3;
 
 export function useSessionBootstrap(): { retry: () => void } {
@@ -34,7 +34,11 @@ export function useSessionBootstrap(): { retry: () => void } {
     const runId = ++runIdRef.current;
     const store = useAppStore.getState();
     store.setBootStatus('restoring');
-    const result = await restoreSession();
+    // iOS launched the app in the background (step sync, a push): restore only once the
+    // app is opened. The Keychain may be locked and the other session keys (sign-in
+    // method, family zone, child sessions) would load as defaults for the whole run.
+    const result: Awaited<ReturnType<typeof restoreSession>> =
+      AppState.currentState === 'background' ? { status: 'locked' } : await restoreSession();
     // M2-11: revoke + delete what the first profile-switch draft left (dev builds only).
     if (runId === 1) {
       void migrateLegacyProfiles().catch(() => undefined);
@@ -49,11 +53,11 @@ export function useSessionBootstrap(): { retry: () => void } {
       if (AppState.currentState === 'active') {
         foregroundLockedRef.current += 1;
         if (foregroundLockedRef.current >= MAX_FOREGROUND_LOCKED) {
-          // The Keychain stays unreadable with the phone in use: show the login screen
-          // rather than a splash forever. The stored token is untouched.
+          // The Keychain stays unreadable with the phone in use: the offline screen
+          // ("Poskusi znova") rather than a splash forever — never the login screen.
           retryOnForegroundRef.current = false;
           foregroundLockedRef.current = 0;
-          useAppStore.getState().reset();
+          useAppStore.getState().setBootStatus('offline');
           return;
         }
         setTimeout(() => {
