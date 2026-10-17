@@ -20,7 +20,8 @@ use App\Services\Push\PushCopy;
 |
 | Re-recorded once on purpose (M5-R06-06b, David 2026-10-09): the Slovenian
 | parent alarm is formal ("Vaš otrok …") and the new tidy-first / *_first_wait
-| variants were added. Every other value is unchanged from the first recording.
+| variants were added. Re-recorded for `walk_reminder` (David 2026-10-17: steps,
+| not "going out"). Every other value is unchanged from the first recording.
 */
 
 const DPT_FIXTURE = __DIR__.'/../Fixtures/dog_push_texts_snapshot.json';

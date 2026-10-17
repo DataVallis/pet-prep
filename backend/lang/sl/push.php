@@ -74,7 +74,8 @@ return [
         'critical' => 'Počisti nered, pospravi pregrizeno in kužku daj igračo čim prej, sicer bo zbolel.',
     ],
 
-    'walk_reminder' => 'Tvoj kuža danes še ni bil na sprehodu in te čaka s povodcem. Gremo ven?',
+    // David 17. 10. 2026: o korakih, ne »ven« — »Pelji ven« (lulanje mladička) sprehoda ne šteje.
+    'walk_reminder' => 'Tvoj kuža si želi na pravi sprehod – danes ima še premalo korakov. Gremo na sprehod?',
 
     // David 9. 10. 2026: staršem vikamo (brand/README, glas) — pri obeh vrstah.
     'parent_alarm' => 'Vaš otrok danes ni poskrbel za psa.',
