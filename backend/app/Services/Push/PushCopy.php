@@ -121,9 +121,15 @@ final class PushCopy
         return RequestLocale::isSupported($locale) ? (string) $locale : RequestLocale::default();
     }
 
-    public static function title(?string $locale = null): string
+    /**
+     * The push title: the pet's name when a parent set one (David 2026-10-17 — a label
+     * only, never inside a sentence: no Slovenian declension), otherwise "PetPrep".
+     */
+    public static function title(?string $locale = null, ?string $petName = null): string
     {
-        return self::line('title', self::locale($locale));
+        $name = $petName === null ? '' : trim($petName);
+
+        return $name !== '' ? $name : self::line('title', self::locale($locale));
     }
 
     /**

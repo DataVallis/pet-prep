@@ -875,7 +875,8 @@ class NotificationService
         return [
             'to' => $device->expo_push_token,
             // M1-18: in this install's language (null → default).
-            'title' => PushCopy::title($device->locale),
+            // David 2026-10-17: the pet's name as the title when set (else PetPrep).
+            'title' => PushCopy::title($device->locale, $notification->pet?->name),
             'body' => PushCopy::body($type, $copy['metric'] ?? $notification->metric, $audience, $device->locale, $copy['variant'], $copy['replace'], $copy['species']),
             'data' => [
                 'type' => $type->value,
