@@ -5,6 +5,10 @@
  * - no token            → anonymous (login screen)
  * - 401 (revoked/expired) → token deleted, anonymous
  * - network / 5xx       → offline: the token is KEPT so a retry can succeed
+ * - Keychain unreadable → locked: never a sign-out (fix 2026-10-17). iOS launches the app
+ *   in the background while the phone is locked (step sync, pushes); treating that as
+ *   "no session" sent the child to the login screen every few days. The bootstrap
+ *   retries when the app comes to the foreground.
  */
 
 import * as SecureStore from 'expo-secure-store';
@@ -16,6 +20,7 @@ import { unregisterStepSyncTask } from '@/modules/steps/backgroundSteps';
 import { clearLiveSteps } from '@/modules/steps/stepCounter';
 import { loadFamilyTimezone } from './familyTimezone';
 import { loadSignInMethod } from './signInMethod';
+import { migrateSessionKeychain } from './keychainMigration';
 import { forgetChildToken, loadChildSessions, revokeStoredToken, takeLegacyTokens } from './profiles';
 
 /** Once per app start (bootstrap): tokens of the first M2-11 draft (a parked parent) are revoked and deleted. */
@@ -27,7 +32,8 @@ export async function migrateLegacyProfiles(): Promise<void> {
 export type RestoreResult =
   | { status: 'anonymous' }
   | { status: 'authenticated'; session: SignInPayload }
-  | { status: 'offline'; error: unknown };
+  | { status: 'offline'; error: unknown }
+  | { status: 'locked' };
 
 /**
  * M2-11 (shared phone): the ACTIVE profile is restored; `sharedSession` when it is a child
@@ -39,8 +45,8 @@ export async function restoreSession(): Promise<RestoreResult> {
   try {
     token = await getAuthToken();
   } catch {
-    // Keychain unavailable (e.g. device locked before first unlock) → treat as signed out.
-    return { status: 'anonymous' };
+    // Keychain unavailable (phone locked) — the session is still there, try again later.
+    return { status: 'locked' };
   }
   if (!token) return { status: 'anonymous' };
 
@@ -54,6 +60,8 @@ export async function restoreSession(): Promise<RestoreResult> {
     // M2-10c: password vs. Google / Apple decides how a parent confirms a deletion.
     const signInMethod = user.role === 'parent' ? await loadSignInMethod() : 'password';
     const sharedSession = user.role === 'child' && sharedChildId !== null;
+    // Older builds stored the session with WHEN_UNLOCKED; move it before any request runs.
+    await migrateSessionKeychain();
     return {
       status: 'authenticated',
       session: { token, user, pet, awaitingContract, familyTimezone, signInMethod, ...(sharedSession ? { sharedSession } : {}) },

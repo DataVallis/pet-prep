@@ -27,9 +27,11 @@ describe('restoreSession', () => {
     expect(getUser).not.toHaveBeenCalled();
   });
 
-  it('is anonymous when SecureStore itself fails', async () => {
+  it('is locked — never signed out — when the Keychain is unreadable (phone locked)', async () => {
     getItem.mockRejectedValueOnce(new Error('keychain locked'));
-    await expect(restoreSession()).resolves.toEqual({ status: 'anonymous' });
+    await expect(restoreSession()).resolves.toEqual({ status: 'locked' });
+    expect(getUser).not.toHaveBeenCalled();
+    expect(deleteItem).not.toHaveBeenCalled();
   });
 
   it('returns the flat /api/user payload as a sign-in session', async () => {

@@ -94,7 +94,7 @@ describe('startSocialSignIn — real storage path', () => {
       created: true,
       session: { token: 'tok-social', user: RESPONSE.user, pet: null, awaitingContract: null, signInMethod: 'apple' },
     });
-    expect(setItem).toHaveBeenCalledWith('petprep_auth_token', 'tok-social');
+    expect(setItem).toHaveBeenCalledWith('petprep_auth_token', 'tok-social', { keychainAccessible: SecureStore.AFTER_FIRST_UNLOCK });
     expect(setItem).toHaveBeenCalledWith('petprep_sign_in_method', 'apple');
     expect(socialSignIn).toHaveBeenCalledWith(expect.objectContaining({ provider: 'apple', id_token: 'apple.jwt', nonce: 'raw-nonce-hex' }));
   });

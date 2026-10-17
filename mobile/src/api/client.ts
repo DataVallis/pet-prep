@@ -545,14 +545,29 @@ export interface BroadcastAuthResponse {
 /** Exact backend message when the parent has no child profile yet. */
 export const NO_CHILD_PAIRED_MESSAGE = 'No child profile paired yet.';
 
-const TOKEN_KEY = 'petprep_auth_token';
+export const TOKEN_KEY = 'petprep_auth_token';
 
-/** Save the Sanctum auth token to secure storage. */
+/**
+ * Keychain access for session secrets (the auth token, stored child sessions): readable
+ * after the first unlock since boot, also while the phone is locked. iOS launches the app
+ * in the background (step sync, pushes) while the phone is locked; with the default
+ * `WHEN_UNLOCKED` the token read failed there and the boot treated it as signed out — the
+ * child landed on the login screen every few days (fix 2026-10-17).
+ */
+export const SESSION_SECURE_STORE_OPTIONS: SecureStore.SecureStoreOptions = {
+  keychainAccessible: SecureStore.AFTER_FIRST_UNLOCK,
+};
+
+/**
+ * Save the Sanctum auth token to secure storage. A new item gets {@link SESSION_SECURE_STORE_OPTIONS};
+ * iOS keeps the access class of an existing item (only the value changes) — items from
+ * older builds are moved once by `migrateSessionKeychain` at the next app start.
+ */
 export async function saveAuthToken(token: string): Promise<void> {
-  await SecureStore.setItemAsync(TOKEN_KEY, token);
+  await SecureStore.setItemAsync(TOKEN_KEY, token, SESSION_SECURE_STORE_OPTIONS);
 }
 
-/** Retrieve the saved auth token. Returns null if not set. */
+/** Retrieve the saved auth token. Returns null if not set; throws when the Keychain is unavailable. */
 export async function getAuthToken(): Promise<string | null> {
   return await SecureStore.getItemAsync(TOKEN_KEY);
 }
