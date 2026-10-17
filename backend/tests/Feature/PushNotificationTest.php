@@ -331,6 +331,24 @@ describe('Escalation pushes — recipients and copy', function () {
             ->and(PushTicket::where('push_notification_id', $row->id)->value('status'))->toBe('ok');
     });
 
+    it('David 2026-10-17: the pet\'s name is the title when set; the body never carries it', function () {
+        [, $child, $pet] = pnFamily(['hunger_level' => 30, 'name' => 'Rex']);
+        pnDevice($child);
+        $sent = pnFakeExpo();
+
+        pnEscalate($pet);
+
+        expect($sent[0]['title'])->toBe('Rex')
+            ->and($sent[0]['body'])->toBe('Tvoj kuža te milo gleda in kaže na posodo s hrano.')
+            ->and($sent[0]['data'])->toBe(['type' => 'soft_warning', 'pet_id' => $pet->id]);
+    });
+
+    it('a blank pet name falls back to PetPrep', function () {
+        expect(PushCopy::title('sl', '  '))->toBe('PetPrep')
+            ->and(PushCopy::title('en', null))->toBe('PetPrep')
+            ->and(PushCopy::title('en', 'Luna'))->toBe('Luna');
+    });
+
     it('sends phase 2 with high priority, sound and the alarm channel', function () {
         [, $child, $pet] = pnFamily(['thirst_level' => 8]);
         pnDevice($child);

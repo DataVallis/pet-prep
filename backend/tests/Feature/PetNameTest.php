@@ -373,7 +373,7 @@ describe('the name never reaches push texts or AI prompts', function () {
         }
     })->with([BreedType::Mutt, BreedType::DomesticCat]);
 
-    it('sends the same push text, title and data for a named pet', function (Species $species) {
+    it('puts the name only in the push title (David 2026-10-17), never in the body or data', function (Species $species) {
         config(['push.enabled' => true]);
         $breed = $species === Species::Cat ? BreedType::DomesticCat : BreedType::Mutt;
         // Two identical families; only the second pet has a name.
@@ -427,8 +427,13 @@ describe('the name never reaches push texts or AI prompts', function () {
         $unnamedPush = $deliver($plain);
         $namedPush = $deliver($named);
 
-        expect($namedPush)->toBe($unnamedPush)
+        // David 2026-10-17: the name is the push title; body and data never carry it.
+        expect($unnamedPush['title'])->toBe('PetPrep')
+            ->and($namedPush['title'])->toBe('Zvezdica')
+            ->and($namedPush['body'])->toBe($unnamedPush['body'])
+            ->and($namedPush['data'])->toBe($unnamedPush['data'])
             ->and($namedPush['body'])->not->toBe('')
-            ->and(json_encode($namedPush, JSON_UNESCAPED_UNICODE))->not->toContain('Zvezdica');
+            ->and($namedPush['body'])->not->toContain('Zvezdica')
+            ->and(json_encode($namedPush['data'], JSON_UNESCAPED_UNICODE))->not->toContain('Zvezdica');
     })->with([Species::Dog, Species::Cat]);
 });
