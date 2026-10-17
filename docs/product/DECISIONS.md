@@ -708,3 +708,4 @@
 | 2026-10-03 | Tihe ure ob prestopu ure: 22:00–06:00 traja 9 h (oktober) oz. 7 h (marec) — po stenski uri. OK? | Da, po stenski uri (kot jo doživi družina). |
 | 2026-10-02 | Razmejitev brezplačno / plačljivo (BUSINESS_MODEL §7) in B7: enkratni nakup vs. naročnina. | Enkratni nakup 49,99 € + strežniški 7-dnevni preizkus. |
 | 2026-10-02 | B2 spletni checkout, B4 prvi trg, B5 garancija, B6 Mr. Pet. | Glej BUSINESS_MODEL §7. |
+| 2026-10-17 | David | **Besedilo opomnika za sprehod:** »Tvoj kuža si želi na pravi sprehod – danes ima še premalo korakov. Gremo na sprehod?« (EN »Your dog wants a proper walk – not enough steps yet today. Time for a walk?«). Prej »… še ni bil na sprehodu … Gremo ven?« je zmedlo po pritisku »Pelji ven« (lulanje mladička, ki sprehoda ne šteje). Logika ostane: energija ≤ 30 %, enkrat na dan. | fix/walk-reminder-copy |

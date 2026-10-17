@@ -1280,7 +1280,7 @@ describe('PushCopy languages (M1-18)', function () {
         [PushType::CriticalAlert, 'hunger', 'child', 'Če ga ne nahraniš v 30 minutah, bo zbolel.'],
         [PushType::CriticalAlert, 'thirst', 'child', 'Če mu ne daš vode v 30 minutah, bo zbolel.'],
         [PushType::CriticalAlert, 'hygiene', 'child', 'Kuža je naredil nered! Počisti ga čim prej, sicer bo zbolel.'],
-        [PushType::WalkReminder, 'energy', 'child', 'Tvoj kuža danes še ni bil na sprehodu in te čaka s povodcem. Gremo ven?'],
+        [PushType::WalkReminder, 'energy', 'child', 'Tvoj kuža si želi na pravi sprehod – danes ima še premalo korakov. Gremo na sprehod?'],
         [PushType::ParentAlarm, 'hunger', 'parent', 'Vaš otrok danes ni poskrbel za psa. Kuža je že več kot uro brez hrane.'],
         [PushType::ParentAlarm, 'thirst', 'parent', 'Vaš otrok danes ni poskrbel za psa. Kuža je že več kot uro brez vode.'],
         [PushType::ParentAlarm, 'hygiene', 'parent', 'Vaš otrok danes ni poskrbel za psa. Nered že več kot uro ni počiščen.'],

@@ -74,7 +74,7 @@ return [
         'critical' => 'Clean up the mess, tidy away what it chewed and give your dog a toy as soon as you can, or it will get sick.',
     ],
 
-    'walk_reminder' => 'Your dog hasn’t been for a walk today and is waiting for you with the lead. Shall we go out?',
+    'walk_reminder' => 'Your dog wants a proper walk – not enough steps yet today. Time for a walk?',
 
     'parent_alarm' => 'Your child hasn’t looked after the dog today.',
 
