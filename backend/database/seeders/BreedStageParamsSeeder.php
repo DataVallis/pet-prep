@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -513,6 +513,15 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_ENGLISH_COCKER_SPANIEL = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-41)';
 
     /**
+     * M5-R10-42 Maltese (unattended run 2026-10-18, data.json proposed_game_parameters.maltese.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed
+     * on 2026-10-10 — exercise 30 min (RKC S347 "Up to 30 minutes per day"), senior 23 min, puppy 10 min × age
+     * capped at 30, stages young 9 / adult 36 / senior 108 (0.75 × RKC lower bound 12 y, S347), arrival
+     * 2 / 9 / 36 / 108, learning multiplier 0.7 (Coren rank 59, Fair); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_MALTESE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-42)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -658,6 +667,7 @@ class BreedStageParamsSeeder extends Seeder
         'basset_hound' => [1, 'S321', 'Grooming: Once a week', 'high', false],
         'hungarian_vizsla' => [1, 'S328', 'Grooming: Once a week', 'high', false],
         'english_cocker_spaniel' => [7, 'S337', 'Grooming: Every day', 'high', false],
+        'maltese' => [7, 'S347', 'Grooming: Every day', 'high', false],
     ];
 
     /**
@@ -739,13 +749,14 @@ class BreedStageParamsSeeder extends Seeder
         'basset_hound' => ['S323', 'Be sure to socialise your Basset Hound from a young age with other people and dogs once they are fully vaccinated.'],
         'hungarian_vizsla' => ['S329', 'as long as you socialise your Vizsla from a young age with lots of people, dogs and experiences'],
         'english_cocker_spaniel' => ['S339', 'Socialising your Cocker Spaniel from a young age with a variety of people, dogs and experiences will help them develop'],
+        'maltese' => ['S348', 'Known to be sweet-natured, they can be reserved with strangers but given the right socialisation when young,'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1355,6 +1366,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-41 (docs/research/dog-data/data.json english_cocker_spaniel,
             // S335–S344; runbook rules in proposed_game_parameters.english_cocker_spaniel).
             BreedType::EnglishCockerSpaniel => self::englishCockerSpanielProfile(),
+            // M5-R10-42 (docs/research/dog-data/data.json maltese,
+            // S345–S352; runbook rules in proposed_game_parameters.maltese).
+            BreedType::Maltese => self::malteseProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -4058,6 +4072,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'english_cocker_spaniel.lifespan.median_uk',
                 'quote' => 'The median age at death was 11.44 years (IQR 9.46–13.47)',
                 'notes' => 'Engdahl et al. 2023 (S342), VetCompass UK. McMillan 2024 (S54) gives no reachable English Cocker Spaniel value. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Maltese (M5-R10-42). Stage boundaries, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_MALTESE); weight, growth, Coren rank and lifespan
+     * are sourced. The senior boundary uses the RKC lower bound "Over 12 years" (S347) — McMillan 2024
+     * 13.1 y only via Wikipedia (S352), like the Hungarian Vizsla.
+     *
+     * @return array<string, mixed>
+     */
+    private static function malteseProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_MALTESE;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S347', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.maltese.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a toy dog finishes growing at 8–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S347) = 9 y = 108 months (PDSA "Over 12 years", S348, and PetMD 12–15 y, S351, agree). No McMillan 2024 / VetCompass median was reachable (McMillan 2024 13.1 y only via Wikipedia, S352, tier C → 118, alternative only). Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.maltese.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (8–12 months for a toy dog, S10); capped at the adult 30 minutes, which 10 × age already reaches at 3 months, so the whole young stage walks the adult minutes.',
+            'adult_minutes' => [30, [
+                'unit' => 'minutes/day', 'source_id' => 'S347', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.maltese.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 30 minutes per day',
+                'notes' => 'RKC "Up to 30 minutes per day" (S347) → 30 min = 3,000 steps (runbook rule: "up to N" → N). PDSA (S348) "up to half an hour a day usually sufficient" gives the same number.',
+            ]],
+            'senior_minutes' => [23, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.maltese.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 30 minutes = 22.5 → 23 min (half up) = 2,300 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[3.0, 4.0], [
+                'unit' => 'kg', 'source_id' => 'S346', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'maltese.adult_weight.fci',
+                'quote' => 'Weight: 3–4 kg.',
+                'notes' => 'FCI standard (S346), one range for both sexes; PDSA (S348) "3kg-4kg" agrees. AKC (S349) "under 7 pounds, with from 4 to 6 pounds preferred" (1.8–2.7 kg) is an alternative only.',
+            ]],
+            'growth_end' => [[8, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'maltese.growth.adult_weight_reached',
+                'quote' => 'Toy (5–12 pounds): 8–12 months',
+                'notes' => 'Size-class value, not breed-specific (FCI / PDSA 3–4 kg ≈ 6.6–8.8 lb, the Toy class of S10; RKC size "Small", S347).',
+            ]],
+            'coren_rank' => [59, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'maltese.trainability.coren_rank',
+                'quote' => 'Maltese',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 59 shared with the Griffon Bruxellois, tier "Fair Working/Obedience Intelligence" (ranks 55–69); Wikipedia "Maltese dog" (S352) agrees. Not in Coren\'s own top / bottom-10 article (S34).',
+            ]],
+            'learning_multiplier' => [0.7, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.maltese.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 59 (S35) in the "Fair" tier (ranks 55–69) → 0.7. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S347', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'maltese.lifespan.rkc',
+                'quote' => 'Lifespan: Over 12 years',
+                'notes' => 'RKC Breeds A–Z lower bound (S347); PDSA "Over 12 years" (S348) agrees. McMillan 2024 13.1 y only via Wikipedia (S352, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

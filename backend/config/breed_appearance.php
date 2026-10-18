@@ -386,6 +386,14 @@
 | American Cocker Spaniel, so the two spaniels stay apart). Colour weights are unsourced →
 | `verified => false`; golden weighted highest (the register portrait).
 |
+| Maltese (M5-R10-42, docs/research/dog-data maltese.appearance): "Of small size, longish body." (FCI 65,
+| S346); "The Maltese is a toy dog covered from head to foot with a mantle of long, silky, white hair."
+| (AKC S349); single coat without undercoat, long, straight and silky, never curly or woolly; very dark
+| round eyes with black rims; black nose; drop ears heavily feathered; plumed tail carried over the back.
+| Colour: "Colour: Pure white, a pale ivory tinge is permitted." (S346) — the only option. Not a welfare
+| breed (RKC Breed Watch Category 1). The game draws a natural pet-length coat (no show wrap, no bows).
+| One colour, the trait list is an unchecked draft → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1888,6 +1896,40 @@ return [
             'muzzle' => ['square muzzle with a distinct stop and a broad nose, moderate head, not short-faced'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+
+    // M5-R10-42 (docs/research/dog-data/data.json maltese.appearance; runbook rules 2026-10-10:
+    // standard colour only — pure white).
+    'maltese' => [
+        'display_name' => 'Maltese',
+        // One standard colour; the trait list itself is an unchecked draft → false.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 65 (S346, https://WWW.FCI.BE/medias/065g09-en-20160101-2139.pdf), AKC standard (S349), RKC Breeds A–Z (S347) — for the traits listed in `sources`.',
+        'sources' => [
+            'size' => 'S347 "Size: Small"; S346 "Weight: 3–4 kg."',
+            'build' => 'S346 "Of small size, longish body."',
+            'coat_length' => 'S346 "Hair: Dense, shiny, glossy - falling heavily and of a silky texture, very long on the whole of the body"; S349 "The coat is single, that is, without undercoat."',
+            'coat_color' => 'S346 "Colour: Pure white, a pale ivory tinge is permitted."; S349 "Color, pure white."',
+            'ear_carriage' => 'S349 "The drop ears are rather low set and heavily feathered with long hair that hangs close to the head."',
+            'eye_color' => 'S349 "Eyes are set not too far apart; they are very dark and round, their black rims enhancing the gentle yet alert expression."',
+            'tail' => 'S349 "A long-haired plume carried gracefully over the back, its tip lying to the side over the quarter."',
+            'nose' => 'S349 "The nose is black."; "The muzzle is of medium length, fine and tapered but not snipy."',
+        ],
+        'traits' => [
+            'size' => ['tiny toy-sized'],
+            'build' => [['value' => 'small, slightly longer than tall, proud head carriage', 'weight' => 3], 'small and dainty with a longish body'],
+            'coat_length' => [
+                ['value' => 'long, straight, silky single coat falling like a mantle (natural pet length, never curly or woolly)', 'weight' => 3],
+                'silky coat kept at a medium pet length, straight and without curls',
+            ],
+            // Pure white is the only standard colour (S346, S349).
+            'coat_color' => ['pure white'],
+            'ear_carriage' => ['drop ears heavily feathered with long hair hanging close to the head'],
+            'eye_color' => ['very dark, round eyes with black rims'],
+            'tail' => ['long-haired plume carried over the back, tip lying to the side'],
+            'nose' => ['black nose, fine tapered muzzle of medium length (not short-faced)'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

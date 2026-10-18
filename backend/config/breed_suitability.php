@@ -1114,6 +1114,25 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S337', 'S340'], 'refs' => ['english_cocker_spaniel.suitability.rkc_shedding', 'english_cocker_spaniel.suitability.petmd_shedding']],
             ],
         ],
+        // M5-R10-42: maltese.* (S345–S352), runbook rules (data.json
+        // proposed_game_parameters.maltese.suitability_tags). RKC (S347) + PDSA (S348) + PetMD (S351).
+        // RKC "Up to 30 minutes per day" → no active_family / long_daily_exercise. Only supervision advice
+        // about young children (AKC S350, PetMD S351) → no children chip. No family-pet, other-pets or
+        // prey-drive statement. Breed Watch Category 1 → no welfare chip. Never "hypoallergenic".
+        'maltese' => [
+            'suits' => [
+                // S347 "Size of home: Flat/ Apartment"; "Size of garden: Small/ medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S347'], 'refs' => ['maltese.suitability.rkc_size_of_home', 'maltese.suitability.rkc_size_of_garden']],
+                // S347 "Sheds: No".
+                ['tag' => 'low_shedding', 'source_ids' => ['S347'], 'refs' => ['maltese.suitability.rkc_shedding']],
+            ],
+            'consider' => [
+                // S347 "Grooming: Every day"; S348 "Their coats require daily grooming …".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S347', 'S348'], 'refs' => ['maltese.suitability.rkc_grooming', 'maltese.suitability.pdsa_grooming']],
+                // S351 "This breed can develop separation anxiety when left alone for too long."
+                ['tag' => 'needs_company', 'source_ids' => ['S351'], 'refs' => ['maltese.behaviour.time_alone', 'maltese.suitability.petmd_company']],
+            ],
+        ],
 
     ],
 ];

@@ -369,6 +369,14 @@ class FalAiService
                 .'square muzzle with a distinct stop, natural undocked tail carried level, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-42: FCI 65 (S346) / AKC standard (S349) — pure white is the only standard colour;
+            // long, straight, silky single coat, very dark round eyes with black rims, black nose,
+            // plumed tail over the back.
+            BreedType::Maltese => 'A gentle, lively little Maltese dog with a pure white coat, '
+                .'long, straight, silky single coat falling like a mantle without curls, '
+                .'drop ears heavily feathered with long hair, very dark round eyes with black rims, black nose, '
+                .'plumed tail carried over the back, small longish body, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -895,6 +903,18 @@ class FalAiService
                 'eye_color' => 'brown',
                 'fur_texture' => 'flat, silky coat with moderate feathering',
                 'markings' => 'solid colours with at most a small white spot on the chest; roans and parti-colours with white',
+            ],
+            // M5-R10-42: FCI / AKC (S346, S349) — pure white only ("Colour: Pure white, a pale ivory
+            // tinge is permitted."); the variants differ in coat length / texture only.
+            BreedType::Maltese => [
+                'color_scheme' => 'pure white',
+                'eye_color' => 'very dark brown',
+                'fur_texture' => match ($variantIndex) {
+                    0 => 'long, straight, silky single coat without undercoat',
+                    1 => 'long, straight, silky coat with the head hair in a small topknot',
+                    2 => 'silky white coat kept at a medium pet length',
+                },
+                'markings' => 'none',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

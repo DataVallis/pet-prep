@@ -45,6 +45,7 @@ return [
     'basset_hound' => 'Basset Hound',
     'hungarian_vizsla' => 'Hungarian Vizsla',
     'english_cocker_spaniel' => 'English Cocker Spaniel',
+    'maltese' => 'Maltese',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',
