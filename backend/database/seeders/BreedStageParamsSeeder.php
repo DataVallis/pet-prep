@@ -4298,7 +4298,7 @@ class BreedStageParamsSeeder extends Seeder
             'adult_weight' => [[22.7, 34.0], [
                 'unit' => 'kg', 'source_id' => 'S367', 'confidence' => 'high', 'verified' => true,
                 'ref' => 'rough_collie.adult_weight.akc',
-                'quote' => 'Dogs are from 24 to 26 inches at the shoulder and weigh from 60 to 75 pounds.',
+                'quote' => 'Dogs are from 24 to 26 inches at the shoulder and weigh from 60 to 75 pounds. Bitches are from 22 to 24 inches at the shoulder, weighing from 50 to 65 pounds.',
                 'notes' => 'AKC standard (S367): dogs 60–75 lb (27.2–34.0 kg), bitches 50–65 lb (22.7–29.5 kg); the game range spans both sexes. PetMD (S368) 50–75 lb agrees. The FCI (S364) and RKC (S366) standards give no weight.',
             ]],
             'growth_end' => [[15, 18], [

@@ -22264,9 +22264,9 @@
         },
         "unit": "kg",
         "source_id": "S367",
-        "quote": "Dogs are from 24 to 26 inches at the shoulder and weigh from 60 to 75 pounds.",
+        "quote": "Dogs are from 24 to 26 inches at the shoulder and weigh from 60 to 75 pounds. Bitches are from 22 to 24 inches at the shoulder, weighing from 50 to 65 pounds.",
         "confidence": "high",
-        "notes": "AKC standard (S367): dogs 60–75 lb, bitches 'weighing from 50 to 65 pounds.' Pounds converted to kg (× 0.4536) by us: 60 lb ≈ 27.2 kg, 75 lb ≈ 34.0 kg, 50 lb ≈ 22.7 kg, 65 lb ≈ 29.5 kg. The game range (adult_weight_kg). The FCI standard (S364) and the RKC standard (S366) give no weight (tool summaries: 'The document does not specify weights'; 'The page gives no weight measurements.')."
+        "notes": "AKC standard (S367): the two consecutive sentences of the standard (returned separately by the tool, joined here): dogs 60–75 lb, bitches 50–65 lb. Pounds converted to kg (× 0.4536) by us: 60 lb ≈ 27.2 kg, 75 lb ≈ 34.0 kg, 50 lb ≈ 22.7 kg, 65 lb ≈ 29.5 kg. The game range (adult_weight_kg). The FCI standard (S364) and the RKC standard (S366) give no weight (tool summaries: 'The document does not specify weights'; 'The page gives no weight measurements.')."
       },
       "petmd": {
         "value": {
@@ -22723,12 +22723,12 @@
         "notes": "PetMD (S368), fragment as returned."
       },
       "petmd_grooming": {
-        "value": "at least weekly brushing, daily recommended; monthly bathing",
+        "value": "at least weekly brushing; monthly bathing",
         "unit": "—",
         "source_id": "S368",
         "quote": "Collies require at least weekly brushing and monthly bathing.",
         "confidence": "medium",
-        "notes": "PetMD (S368): 'Daily brushing is recommended to keep it healthy and clean.' — agrees with RKC 'Every day'; weekly = alternative 1."
+        "notes": "PetMD (S368). The same page also says, verbatim as returned: 'Daily brushing is recommended to keep it healthy and clean.' — agrees with RKC 'Every day'; weekly = alternative 1."
       },
       "petmd_children": {
         "value": "affectionate, especially with children",

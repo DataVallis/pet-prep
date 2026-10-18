@@ -265,7 +265,7 @@ return [
     'rough_collie' => [
         ['key' => 'sable-white', 'value' => 'sable and white', 'en' => 'Sable and white', 'sl' => 'Sobolji z belo'],
         ['key' => 'tricolour', 'value' => 'tricolour (black with tan markings and white)', 'en' => 'Tricolour', 'sl' => 'Trobarven'],
-        ['key' => 'blue-merle', 'value' => 'blue merle and white', 'en' => 'Blue merle', 'sl' => 'Modri merle'],
+        ['key' => 'blue-merle-white', 'value' => 'blue merle and white', 'en' => 'Blue merle and white', 'sl' => 'Modri merle z belo'],
     ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
