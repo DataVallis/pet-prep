@@ -415,6 +415,7 @@ const SPECIES = [
       { id: 'hungarian_vizsla', synonyms: { en: ['Vizsla', 'Magyar Vizsla', 'Hungarian Pointer', 'Hungarian Short-haired Pointer'], sl: ['vižla', 'madžarska vižla', 'madžarski ptičar'] } },
       { id: 'english_cocker_spaniel', synonyms: { en: ['Cocker Spaniel', 'English Cocker', 'Cocker', 'Merry Cocker'], sl: ['koker španjel', 'angleški koker', 'koker'] } },
       { id: 'maltese', synonyms: { en: ['Maltese dog', 'Bichon Maltais', 'Maltese Terrier'], sl: ['malteški bišon', 'malteški psiček'] } },
+      { id: 'pug', synonyms: { en: ['Pug dog', 'Carlin'], sl: ['mopsek', 'pug'] } },
     ],
   },
   {
@@ -1255,6 +1256,33 @@ const DOG_FACTS = {
       ['periodontal_daily_brushing', 'health.dental'],
     ],
   },
+  // M5-R10-43. Not exported: height.petmd (agrees, alternative), adult_weight.pdsa / akc (agreeing value /
+  // alternative), adult_weight.salt_category (our assignment), lifespan.pdsa / petmd (same band / US alternative),
+  // lifespan.vetcompass_2016 (a young population, no longevity — research only), lifespan.senior_from (derived),
+  // health.breed_watch (the basis of the welfare chips), health.pde / hemivertebrae (PDSA paraphrases without a
+  // quote; hemivertebrae is in the breeder checklist), health.dental (care advice without a breed-specific
+  // disease statement, ROADMAP M5-R15). Height: the FCI / AKC standards give none → the PDSA average range
+  // (Bulldog precedent). Weight = FCI 253 (S354, ideal range for both sexes); lifespan = McMillan 2024 (S54) and
+  // the RKC band "Over 10 years" (S355). Own eye key: the shared eye sentences name cherry eye or promise eye
+  // testing, which no source does for the Pug.
+  pug: {
+    height: ['height.pdsa'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['flat_face_breathing', 'health.brachycephaly_boas'],
+      ['heat_stroke_risk', 'exercise.heat_and_walk_timing'],
+      ['skin_fold_infections', 'health.skin_folds'],
+      ['eye_problems_shallow_sockets', 'health.eyes'],
+      ['kneecap_luxation', 'health.patella'],
+      ['weight_gain', 'behaviour.obesity_tendency'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1568,6 +1596,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.maltese.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.maltese.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.maltese.exercise_minutes_senior',
+  },
+  pug: {
+    adult_minutes: ['proposed_game_parameters.pug.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.pug.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.pug.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.pug.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.pug.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.pug.exercise_minutes_senior',
   },
 };
 

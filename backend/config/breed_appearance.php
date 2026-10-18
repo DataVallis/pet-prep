@@ -394,6 +394,16 @@
 | breed (RKC Breed Watch Category 1). The game draws a natural pet-length coat (no show wrap, no bows).
 | One colour, the trait list is an unchecked draft → `verified => false`.
 |
+| Pug (M5-R10-43, docs/research/dog-data pug.appearance): "Decidedly square and cobby, it is "multum in
+| parvo" shown in compactness of form, well-knit proportions and hardness of muscle." (FCI 253, S354);
+| "Fine, smooth, soft, short and glossy, neither harsh, off standing nor woolly."; nose "Black with fairly
+| large well opened nostrils."; muzzle "Relatively short, blunt, square, not upfaced."; tail "High-set,
+| tightly curled over hip." Colours: "Silver, apricot, fawn or black." (S354) — fawn weighted highest (the
+| register portrait). Welfare breed (flat-faced, RKC Breed Watch Category 3, S356: pinched nostrils,
+| protruding eyes, excessive skin, too fat) → a moderate face with clearly open nostrils, light wrinkles,
+| eyes that do not bulge, a fit body (dog trait `muzzle`, French Bulldog precedent). Never merle (the RKC
+| does not register merle Pugs, S355). Colour weights are unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1930,6 +1940,43 @@ return [
             'nose' => ['black nose, fine tapered muzzle of medium length (not short-faced)'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
+    ],
+
+    // M5-R10-43 (docs/research/dog-data/data.json pug.appearance; runbook rules 2026-10-10:
+    // standard colours only, welfare breed → moderate face, `muzzle` trait).
+    'pug' => [
+        'display_name' => 'Pug',
+        // Colour frequencies are in no source (pug.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 253 (S354, https://www.fci.be/Nomenclature/Standards/253g09-en.pdf), AKC standard (S358), RKC Breeds A–Z (S355), RKC Breed Watch (S356) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S355 "Size: Small"; S354 "Ideal weight 6,3 – 8,1 kg."',
+            'build' => 'S354 "Decidedly square and cobby, it is "multum in parvo" shown in compactness of form, well-knit proportions and hardness of muscle."; Breed Watch S356 "Too fat"',
+            'coat_length' => 'S354 "Fine, smooth, soft, short and glossy, neither harsh, off standing nor woolly."',
+            'coat_color' => 'S354 "Silver, apricot, fawn or black." (weights unsourced; never merle — RKC S355)',
+            'ear_carriage' => 'S354 "Thin, small, soft like black velvet." (rose or button, button preferred)',
+            'eye_color' => 'S354 "Dark, relatively large, round in shape, soft and solicitous in expression, very lustrous, and when excited, full of fire."; Breed Watch S356 "Protruding eyes"',
+            'tail' => 'S354 "High-set, tightly curled over hip. Double curl highly desirable."',
+            'muzzle' => 'S354 "Black with fairly large well opened nostrils."; "Relatively short, blunt, square, not upfaced."; "Pinched nostrils and heavy over nose wrinkle is unacceptable."; Breed Watch S356 "Pinched nostrils", "Excessive skin on the head or body"; welfare rule (BVA S92): drawn moderate with open nostrils',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'square, cobby and compact with firm muscle, fit and not overweight', 'weight' => 3], 'small, sturdy and square'],
+            'coat_length' => ['fine, smooth, short and glossy'],
+            // Standard colours only (S354); fawn highest → the register portrait. Never merle, brindle, white or pied.
+            'coat_color' => [
+                ['value' => 'fawn with a black mask and black ears', 'weight' => 60],
+                ['value' => 'black', 'weight' => 25],
+                ['value' => 'apricot with a black mask and black ears', 'weight' => 10],
+                ['value' => 'silver with a black mask and black ears', 'weight' => 5],
+            ],
+            'ear_carriage' => ['small, thin, soft rose or button ears'],
+            'eye_color' => ['dark, round and lustrous, not bulging'],
+            'tail' => ['tail tightly curled over the hip'],
+            // Welfare rule: moderate, never an extreme flat face.
+            'muzzle' => ['moderate short, blunt, square muzzle with a black nose, clearly open nostrils and light forehead wrinkles, no heavy over-nose wrinkle'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

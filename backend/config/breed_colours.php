@@ -254,6 +254,13 @@ return [
     'maltese' => [
         ['key' => 'white', 'value' => 'pure white', 'en' => 'White', 'sl' => 'Bel'],
     ],
+    // M5-R10-43: FCI S354 "Silver, apricot, fawn or black." (fawn / apricot / silver with the black mask).
+    'pug' => [
+        ['key' => 'fawn', 'value' => 'fawn with a black mask and black ears', 'en' => 'Fawn', 'sl' => 'Plav'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'apricot', 'value' => 'apricot with a black mask and black ears', 'en' => 'Apricot', 'sl' => 'Marelični'],
+        ['key' => 'silver', 'value' => 'silver with a black mask and black ears', 'en' => 'Silver', 'sl' => 'Srebrn'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

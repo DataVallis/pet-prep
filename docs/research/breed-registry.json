@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "27f0f7334ab151d202ac4934660283712e485308298a4c178fb729f2d5ca0844"
+      "sha256": "43071e2bc4caa46477d914e224b6893235c10558dffd388c2898935f79508b49"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "d900c4f8c5e0263391517e6a682ef5b3b2bdbe9475445418ab73b34f17201147"
+      "sha256": "39885ad52df139b6b8fd456dc901b83786e9b27486d04de455cbdc7c79ae0663"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "7888a3736c90586d944c2c47fc0fe7c6d3fbef74d10c3aad8759fcffdf18a495"
+      "sha256": "2802037c691b0572b03ec068a32ee25ed48e3d21926ee2bf92e0007e1693f144"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "ee8c1db35886f6d2886bdacca7aeba06267c26d6cf21eeb83ebb31c3af8c5ce3"
+      "sha256": "43db75128b05173df1f83902c6dfb7117d0ec77c445757b0babb7f448b18099e"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "9081923395af74394da70bb8eaecaa62915aa961ba6d474ab714aa6040b8fda6"
+      "sha256": "ddb3a62f575b143fd542efcd29a64de0a3f7b63a6db0588e485e81b21a34d12b"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "74e429f32f7fb3ed1c20aac0db0d7b3c14fd7820538d097c734013193853e1dd"
+      "sha256": "9e0e5edd3b1af793ee6b8268b812e85670b2bc63a757ab52147b62cff38daa0b"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "0b29d81572cf7ce6f0b8c63ae22368a1b5069ea204f60ab7b6458460dd640618"
+      "sha256": "f4611573a0ac9fbcb1e733f6d3df109dca8dd2b6a5833c7b01bf570cc48ef939"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -200,7 +200,7 @@
         }
       },
       "status": "available",
-      "breed_count": 38,
+      "breed_count": 39,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -23039,6 +23039,632 @@
       ]
     },
     {
+      "id": "pug",
+      "species": "dog",
+      "order": 38,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Pug",
+        "sl": "Mops"
+      },
+      "slug": {
+        "en": "pug",
+        "sl": "mops"
+      },
+      "synonyms": {
+        "en": [
+          "Pug dog",
+          "Carlin"
+        ],
+        "sl": [
+          "mopsek",
+          "pug"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S355"
+          ],
+          "ref": "pug.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              25,
+              33
+            ],
+            "female": [
+              25,
+              33
+            ]
+          },
+          "source_ids": [
+            "S357"
+          ],
+          "ref": "pug.height.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              6.3,
+              8.1
+            ],
+            "female": [
+              6.3,
+              8.1
+            ]
+          },
+          "source_ids": [
+            "S354"
+          ],
+          "ref": "pug.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "pug.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 11.6,
+          "source_ids": [
+            "S54"
+          ],
+          "ref": "pug.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S355"
+          ],
+          "ref": "pug.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S355"
+          ],
+          "ref": "pug.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S355"
+          ],
+          "ref": "pug.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S355"
+          ],
+          "ref": "pug.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S355"
+          ],
+          "ref": "pug.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 57,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "pug.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 253,
+            "group": 9,
+            "section": 11,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S353"
+          ],
+          "ref": "pug.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "flat_face_breathing",
+          "source_ids": [
+            "S357"
+          ],
+          "ref": "pug.health.brachycephaly_boas",
+          "confidence": "high"
+        },
+        {
+          "key": "heat_stroke_risk",
+          "source_ids": [
+            "S357"
+          ],
+          "ref": "pug.exercise.heat_and_walk_timing",
+          "confidence": "high"
+        },
+        {
+          "key": "skin_fold_infections",
+          "source_ids": [
+            "S359"
+          ],
+          "ref": "pug.health.skin_folds",
+          "confidence": "high"
+        },
+        {
+          "key": "eye_problems_shallow_sockets",
+          "source_ids": [
+            "S357"
+          ],
+          "ref": "pug.health.eyes",
+          "confidence": "high"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S357"
+          ],
+          "ref": "pug.health.patella",
+          "confidence": "medium"
+        },
+        {
+          "key": "weight_gain",
+          "source_ids": [
+            "S357"
+          ],
+          "ref": "pug.behaviour.obesity_tendency",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S355"
+            ],
+            "refs": [
+              "pug.suitability.rkc_size_of_home",
+              "pug.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S357",
+              "S359"
+            ],
+            "refs": [
+              "pug.suitability.pdsa_children",
+              "pug.suitability.petmd_children",
+              "pug.behaviour.children"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S357",
+              "S359"
+            ],
+            "refs": [
+              "pug.suitability.pdsa_other_pets",
+              "pug.suitability.petmd_other_pets",
+              "pug.behaviour.other_pets"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "brachycephalic_breathing",
+            "source_ids": [
+              "S93",
+              "S355",
+              "S356",
+              "S357"
+            ],
+            "refs": [
+              "pug.health.brachycephaly_boas",
+              "pug.health.breed_watch",
+              "pug.exercise.heat_and_walk_timing"
+            ]
+          },
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S356",
+              "S359"
+            ],
+            "refs": [
+              "pug.health.breed_watch",
+              "pug.health.skin_folds"
+            ]
+          },
+          {
+            "tag": "food_motivated_weight",
+            "source_ids": [
+              "S357",
+              "S359"
+            ],
+            "refs": [
+              "pug.behaviour.food_motivation",
+              "pug.behaviour.obesity_tendency"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S357"
+            ],
+            "refs": [
+              "pug.behaviour.time_alone",
+              "pug.suitability.pdsa_company"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S355",
+              "S359"
+            ],
+            "refs": [
+              "pug.suitability.rkc_shedding",
+              "pug.suitability.petmd_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 104
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.7
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 104
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.pug.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S355"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S355 'Up to 1 hour per day'; PDSA S357 the same)"
+          },
+          {
+            "ref": "proposed_game_parameters.pug.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.pug.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S54"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 104 (0.75 × 11.6 y, McMillan 2024 S54)"
+          },
+          {
+            "ref": "proposed_game_parameters.pug.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 57, Fair tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.pug.grooming",
+            "basis_source_ids": [
+              "S355"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Grooming: Once a week«; PDSA in PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S54",
+          "S355"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S355"
+            ]
+          },
+          {
+            "key": "patella_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S355"
+            ]
+          },
+          {
+            "key": "breed_health_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S355"
+            ]
+          },
+          {
+            "key": "hemivertebrae_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S355"
+            ]
+          },
+          {
+            "key": "boas_grading",
+            "level": "other_scheme",
+            "source_ids": [
+              "K24"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S355"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S54",
+        "S93",
+        "S353",
+        "S354",
+        "S355",
+        "S356",
+        "S357",
+        "S359",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K24"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -26952,6 +27578,48 @@
       "url": "https://www.petmd.com/dog/breeds/maltese"
     },
     {
+      "id": "S353",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — PUG (253)",
+      "url": "https://www.fci.be/EN/nomenclature/CARLIN-253.html"
+    },
+    {
+      "id": "S354",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 253 Pug (PDF, English; official valid standard 08.09.2026)",
+      "url": "https://www.fci.be/Nomenclature/Standards/253g09-en.pdf"
+    },
+    {
+      "id": "S355",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Pug — breed information page (Breeds A to Z)",
+      "url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/pug"
+    },
+    {
+      "id": "S356",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Pug - Category 3 — Breed Watch",
+      "url": "https://thekennelclub.org.uk/events-and-activities/dog-showing/judging-dog-shows/breed-watch/pug-category-3"
+    },
+    {
+      "id": "S357",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Pug breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/pug"
+    },
+    {
+      "id": "S359",
+      "tier": "B",
+      "publisher": "PetMD",
+      "title": "Pug (dog breed health and care; updated Oct. 16, 2025)",
+      "url": "https://www.petmd.com/dog/breeds/c_dg_pug"
+    },
+    {
       "id": "C1",
       "tier": "A (via B summary)",
       "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
@@ -27293,6 +27961,13 @@
       "publisher": "The Royal Kennel Club",
       "title": "New DNA testing scheme for Basset Hounds (media centre, June 2018)",
       "url": "https://www.thekennelclub.org.uk/media-centre/2018/june/new-dna-testing-scheme-for-basset-hounds"
+    },
+    {
+      "id": "K24",
+      "tier": "B",
+      "publisher": "University of Cambridge (research news)",
+      "title": "Scheme launched to improve health of French Bulldogs, Pugs and Bulldogs (04 Feb 2019)",
+      "url": "https://www.cam.ac.uk/research/news/scheme-launched-to-improve-health-of-french-bulldogs-pugs-and-bulldogs"
     }
   ]
 }

@@ -46,6 +46,7 @@ return [
     'hungarian_vizsla' => 'Madžarski kratkodlaki ptičar',
     'english_cocker_spaniel' => 'Angleški koker španjel',
     'maltese' => 'Maltežan',
+    'pug' => 'Mops',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

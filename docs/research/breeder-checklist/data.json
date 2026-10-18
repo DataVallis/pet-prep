@@ -1705,6 +1705,54 @@
         }
       ],
       "notes": "RKC Breeds A–Z (dog-data S347, 2026-10-18): heading 'Best Practice schemes and tests', no minimum list; the only test is the eye scheme. The page notes no breed-specific DNA package. PDSA (S348) lists patella, liver shunt, heart, CM/SM and eye problems without tests — no test is guessed."
+    },
+    "pug": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S355",
+        "level_quotes": {
+          "minimum": "The Kennel Club's Assured Breeders must use the following (or equivalent) schemes, tests and advice.",
+          "minimum_all_breeders": "We strongly recommend that all breeders, both assured breeders (ABs) and non ABs,"
+        }
+      },
+      "notes": "RKC Breeds A–Z (dog-data S355, 2026-10-18): the 'Priority' list (Assured Breeders) is empty for the Pug; the 'Important' list is recommended to all breeders → level minimum (Bulldog precedent). 'Other tests available' (DNA-based PDE risk test) is not a recommended tier → not added (Shetland Sheepdog precedent). The Respiratory Function Grading Scheme is available for the Pug (University of Cambridge, K24) → other_scheme (BOAS, as the Bulldog). New keys breed_health_scheme and hemivertebrae_scheme.",
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Check inbreeding calculators",
+          "source_id": "S355",
+          "quote": "Check inbreeding calculators"
+        },
+        {
+          "key": "patella_scheme",
+          "level": "minimum",
+          "name": "Breed club – patella testing (find out about patella luxation)",
+          "source_id": "S355",
+          "quote": "Breed club – patella testing (find out about patella luxation)"
+        },
+        {
+          "key": "breed_health_scheme",
+          "level": "minimum",
+          "name": "Breed club – National Pug Health Scheme",
+          "source_id": "S355",
+          "quote": "Breed club – National Pug Health Scheme"
+        },
+        {
+          "key": "hemivertebrae_scheme",
+          "level": "minimum",
+          "name": "Breed club – Hemivertebrae (HV) checking of parents by x-ray after 12 months of age",
+          "source_id": "S355",
+          "quote": "Breed club – Hemivertebrae (HV) checking of parents by x-ray after 12 months of age"
+        },
+        {
+          "key": "boas_grading",
+          "level": "other_scheme",
+          "name": "Respiratory Function Grading Scheme (breathing test for BOAS)",
+          "source_id": "K24",
+          "quote": "currently available for the Pug, French Bulldog and Bulldog."
+        }
+      ]
     }
   }
 }
