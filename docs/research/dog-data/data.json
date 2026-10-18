@@ -21474,6 +21474,728 @@
       }
     }
   },
+  "pug": {
+    "_note": "Added 2026-10-18 (M5-R10-43, unattended run — appended after the Maltese: AKC 2024 No. 38 'Pug', S174 full-list table '37. Maltese', '38. Pug', '39. Collie'). Quotes as returned by the web-fetch tool on 2026-10-18 (fragments marked as such); paraphrase only in notes. Sources S353–S362 (+ S54 McMillan 2024 re-read). No health percentages anywhere. A severely flat-faced (brachycephalic) breed, RKC Breed Watch Category 3.",
+    "identity": {
+      "value": "FCI No. 253, Group 9 Section 11 (Small Molossian type dogs), Great Britain",
+      "unit": "—",
+      "source_id": "S353",
+      "quote": "PUG (253)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S353): group 'n°9 - Chiens d'agrément et de compagnie', section 'Molossoïdes de petit format', country of origin 'CHINE', country of patronage 'GRANDE-BRETAGNE' (the register shows the patronage country, Great Britain); no working trial; definitive acceptance '04/11/1966'. FCI standard (S354): 'ORIGIN: China' / 'PATRONAGE: Great Britain.'; 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 08.09.2026.'"
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S355",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "RKC Breeds A–Z key facts (S355) 'Size' / 'Small' (label and value as returned); PDSA (S357) 'Small'; RKC Toy group. FCI ideal weight 6.3–8.1 kg (S354) ≈ 13.9–17.9 lb → the 'Small (12–24 pounds)' class of S10 for growth."
+    },
+    "height": {
+      "pdsa": {
+        "value": {
+          "male": [
+            25,
+            33
+          ],
+          "female": [
+            25,
+            33
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S357",
+        "quote": "25-33 cm",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average height' (S357), one range for both sexes. The FCI standard (S354) and the AKC standard (S358) give no height. The game range."
+      },
+      "petmd": {
+        "value": {
+          "male": [
+            25,
+            33
+          ],
+          "female": [
+            25,
+            33
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S359",
+        "quote": "Pug dogs are typically 10–13 inches tall and weigh 14–18 pounds.",
+        "confidence": "medium",
+        "notes": "PetMD (S359): 10–13 in = 25.4–33.0 cm (inches × 2.54 by us, rounded). Agrees with the PDSA. Alternative only."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            6.3,
+            8.1
+          ],
+          "female": [
+            6.3,
+            8.1
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S354",
+        "quote": "Ideal weight 6,3 – 8,1 kg.",
+        "confidence": "high",
+        "notes": "FCI standard (S354), one ideal range for both sexes (stored per sex). The game range (adult_weight_kg)."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            6,
+            8
+          ],
+          "female": [
+            6,
+            8
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S357",
+        "quote": "6-8 kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average weight' (S357). Agrees with the FCI."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            6.4,
+            8.2
+          ],
+          "female": [
+            6.4,
+            8.2
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S358",
+        "quote": null,
+        "confidence": "high",
+        "notes": "AKC standard (S358, Pug Dog Club of America copy, approved April 8, 2008, effective June 3, 2008): weight 14 to 18 pounds for dogs or bitches (paraphrase — the tool summarised this section) = 6.4–8.2 kg (pounds × 0.4536 by us). PetMD (S359) 'weigh 14–18 pounds' agrees. Alternative only."
+      },
+      "salt_category": {
+        "value": "II",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 6.3–8.1 kg. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 6.3–8.1 kg ≈ 13.9–17.9 lb → 'Small (12–24 pounds)'. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Pug growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 11.6,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": "Pug (brown, x̃=11.6)",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 corrected Fig. 3 legend (S54, re-read 2026-10-18; the document does not define x̃ — conventionally the median, as read for the French Bulldog and the Bulldog). Wikipedia (S362, tier C) agrees: 'Another UK study found a life expectancy of 11.6 years for the breed compared to an average of 12.7 for purebreeds.' The basis of the senior boundary (runbook: McMillan 2024 first)."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S355",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key facts (S355) 'Lifespan' / 'Over 10 years'. PDSA (S357) 'Over 10 years' agrees. Not shorter_lifespan."
+      },
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S357",
+        "quote": "Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average lifespan' (S357)."
+      },
+      "petmd": {
+        "value": "13–15",
+        "unit": "years",
+        "source_id": "S359",
+        "quote": "The average Pug lifespan is 13–15 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S359, tier B, US). Alternative only — longer than the UK data (S54)."
+      },
+      "vetcompass_2016": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S361",
+        "quote": "The median age of the Pugs under veterinary care during 2013 was 3.0 years (IQR: 1.3–5.2 range: 0.0–16.8) years (Fig. 5).",
+        "confidence": "medium",
+        "notes": "O'Neill et al. 2016 (S361), VetCompass England 2013: a young population (median age 3.0 y); the paper's discussion notes the 'relative excess of younger individuals' (fragment). No median longevity was returned by the tool. Wikipedia (S362) quotes a UK veterinary-records life expectancy of 7.65 years (tier C, a young population) — never used, never exported."
+      },
+      "senior_from": {
+        "value": 8.7,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 11.6 y (McMillan 2024, S54) → 0.75 × 11.6 = 8.7 y = 104.4 → 104 months. Not chosen: 90 (0.75 × RKC lower bound 'Over 10 years', S355), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S54"
+        ],
+        "months": 104,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S355",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key facts (S355) 'Exercise' / 'Up to 1 hour per day'. PDSA (S357): 'Your Pug will need up to an hour of exercise a day.' (key facts: minimum exercise 'Less than 1 hour'). PetMD (S359): 'Several short walks (about 15–20 minutes each) is a good exercise routine for most Pugs.' — sources agree on up to 1 h."
+      },
+      "pdsa": {
+        "value": "up to an hour a day, in several shorter walks",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "Your Pug will need up to an hour of exercise a day.",
+        "confidence": "medium",
+        "notes": "PDSA (S357): 'Several shorter walks throughout the day can help to stop them from becoming too tired or overheated' (fragment as returned)."
+      },
+      "heat_and_walk_timing": {
+        "value": "avoid exercise in the heat; walk early in the morning or later in the evening",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "You will also need to avoid exercising them in the heat as this can cause even more problems",
+        "confidence": "high",
+        "notes": "PDSA (S357) fragment as returned; also 'opt to walk them early in the morning or later in the evening when it’s cooler' (fragment). PetMD (S359): 'Avoid strenuous exercise during hot weather.'; 'Pugs do not do very well in overly hot climates or with extreme exercise.' A sourced need without a game mechanic → ROADMAP M5-R14 (Bulldog / Boston Terrier precedent)."
+      },
+      "energy": {
+        "value": "even-tempered, happy and lively; not suited to high-energy activity",
+        "unit": "—",
+        "source_id": "S354",
+        "quote": "Even-tempered, happy and lively disposition.",
+        "confidence": "medium",
+        "notes": "FCI (S354). PetMD (S359): not suited to high-energy activity like running (paraphrase). RKC Toy group text (S355): 'do not need a large amount of exercise' (fragment)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B source found on a gap between meals and exercise for this breed → no meal_exercise_gap row. PetMD (S359): 'Pugs do best when fed two or three small meals a day.' (background)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "great charm, dignity and intelligence; even-tempered, happy and lively",
+        "unit": "—",
+        "source_id": "S354",
+        "quote": "Great charm, dignity and intelligence. Even-tempered, happy and lively disposition.",
+        "confidence": "high",
+        "notes": "FCI standard (S354). AKC (S358): even-tempered, stable, playful, charming, dignified, loving and outgoing (paraphrase). PetMD (S359): 'Pugs are friendly and easygoing dogs, and they make excellent dogs for kids.'"
+      },
+      "family": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No explicit family-pet statement in an A/B source (PetMD S359 'excellent dogs for kids' is a children statement). No family_pet chip."
+      },
+      "children": {
+        "value": "often get on well with children; supervise so neither gets too boisterous",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "They often get on well with children, especially if the Pug loves to play.",
+        "confidence": "medium",
+        "notes": "PDSA (S357); PDSA advises supervision so that 'neither your Pug or children get too boisterous' (fragment). PetMD (S359): 'Pugs are friendly and easygoing dogs, and they make excellent dogs for kids.' An explicit statement — basis of the children chip (supervision caveat kept here; no small-children rating → never small_children)."
+      },
+      "other_pets": {
+        "value": "known for getting along well with other pets and dogs (if well socialised)",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "Pugs are known for getting along well with other pets and dogs.",
+        "confidence": "medium",
+        "notes": "PDSA (S357); they 'will often live happily with pets of all species' if well socialised (fragment). PetMD (S359): 'The same easygoing traits mean Pugs can live well with other four-legged family members.' No prey-drive statement. Basis of the other_pets chip."
+      },
+      "socialisation": {
+        "value": "puppies need socialising in their first months",
+        "unit": "—",
+        "source_id": "S359",
+        "quote": "Pug puppies, like all dogs, need to be socialized during their first months of life.",
+        "confidence": "medium",
+        "notes": "PetMD (S359). PDSA (S357): 'If your Pug is properly socialised there’s no reason they won’t get along with other dogs' (fragment). Basis of the puppy socialisation row (M5-R17)."
+      },
+      "time_alone": {
+        "value": "adore company and don’t do well if left alone — never longer than four hours",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "Pugs adore company and don’t do well if left alone.",
+        "confidence": "medium",
+        "notes": "PDSA (S357); 'it should never be for longer than four hours' (fragment). PetMD (S359): they 'thrive on attention from their pet parents' (fragment). Basis of needs_company."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found."
+      },
+      "food_motivation": {
+        "value": "typically food-motivated; obesity is common for the breed",
+        "unit": "—",
+        "source_id": "S359",
+        "quote": "Pugs are typically food-motivated, which makes them relatively easy to train.",
+        "confidence": "medium",
+        "notes": "PetMD (S359); 'Diet is an important part of maintaining a Pug's health, especially because obesity is common for the breed.' PDSA (S357): 'Pugs can be prone to gaining weight that can make breathing problems worse' (fragment); 'Treats shouldn’t make up more than 10% of their daily calorie intake' (general advice, background). RKC Breed Watch (S356) 'Too fat'. Basis of food_motivated_weight."
+      },
+      "obesity_tendency": {
+        "value": "prone to gaining weight, which makes breathing problems worse",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "Pugs can be prone to gaining weight that can make breathing problems worse",
+        "confidence": "medium",
+        "notes": "PDSA (S357) fragment as returned. PetMD (S359): 'Diet is an important part of maintaining a Pug's health, especially because obesity is common for the breed.'"
+      },
+      "training_notes": {
+        "value": "ongoing, firm but fair training; can be very strong willed; food-motivated",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "Training needs to be ongoing and firm but fair.",
+        "confidence": "medium",
+        "notes": "PDSA (S357); they 'can also be very strong willed' (fragment). PetMD (S359): food-motivated, 'relatively easy to train' (fragment)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. Severely flat-faced (brachycephalic) breed; RKC Breed Watch Category 3 (S356). PDSA (S357) lists BOAS, eye problems (dry eye, eye infections, corneal ulcers, eye trauma), entropion / ectropion, skin-fold infections, luxating patellas, Pug Dog Encephalitis (PDE), hemivertebrae, elbow and hip dysplasia, Legg-Perthes disease and hypothyroidism (list items, paraphrase); PDSA: 'Our vets would strongly recommend opting for a breed with a normal snout or even a Pug cross-breed instead' and 'we always recommend thinking carefully before you buy or rescue a Pug' (fragments).",
+      "brachycephaly_boas": {
+        "value": "severely flat-faced (brachycephalic) breed; at risk of brachycephalic obstructive airway syndrome (BOAS) — noisy, laboured breathing, overheating",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "they are also a severely brachycephalic (flat-faced) breed",
+        "confidence": "high",
+        "notes": "PDSA (S357) fragment as returned; 'they can easily become out of breath, made worse by their flat faces, causing breathing difficulties' (fragment). RKC breed page (S355): excess soft tissue 'making it difficult for them to breathe normally (causing heavy panting or noisy breathing)' (fragment). PetMD (S359): 'Pugs' skull shape means they breathe with more effort than dogs with a normal-size muzzle.' University of Cambridge (S360): the Respiratory Function Grading Scheme 'assesses dogs for the presence and severity of a breathing problem known as BOAS.' (fragment), 'currently available for the Pug, French Bulldog and Bulldog.' BVA (S236) Figure 1 legend names the Pug among brachycephalic breeds; UK BWG (S93): 'Stop and think before buying a flat-faced dog.'"
+      },
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 3 — points of concern: respiratory difficulty, excessive skin, protruding eyes, skin-fold dermatitis, pinched nostrils, too fat, eye irritation, unsound movement",
+        "unit": "—",
+        "source_id": "S356",
+        "quote": "Signs of respiratory difficulty or distress (laboured or rapid breathing, excessive respiratory effort, respiratory noise)",
+        "confidence": "high",
+        "notes": "RKC Breed Watch page 'Pug - Category 3' (S356); further points as returned: 'Excessive skin on the head or body', 'Protruding eyes', 'Signs of dermatitis irritation in skin folds, and/or hair loss or scarring from previous dermatitis', 'Pinched nostrils', 'Too fat', 'Signs of visible eye irritation or discomfort (including redness, discharge and tear staining)', 'Unsound movement'. RKC breed page (S355) 'Category' / '3'."
+      },
+      "skin_folds": {
+        "value": "skin-fold infections — clean and dry the facial folds daily",
+        "unit": "—",
+        "source_id": "S359",
+        "quote": "It's important to clean and dry the skin folds around your Pug's face daily.",
+        "confidence": "high",
+        "notes": "PetMD (S359). PDSA (S357): 'Pay close attention to the folds in their skin, as these are the perfect breeding ground' (fragment), keep folds dry (paraphrase). RKC breed page (S355): folds 'can make a warm, moist environment which is perfect for bacteria and yeast to grow.' (fragment). Breed Watch (S356) skin-fold dermatitis. A sourced daily need without a game mechanic → ROADMAP M5-R14 (Bulldog precedent)."
+      },
+      "eyes": {
+        "value": "eye problems incl. dry eye, corneal ulcers and eye trauma due to shallow eye sockets; protruding eyes a Breed Watch point",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "eye trauma due to shallow eye sockets",
+        "confidence": "high",
+        "notes": "PDSA (S357) fragments: 'A range of eye problems including dry eye', 'eye trauma due to shallow eye sockets'; entropion / ectropion in the list (paraphrase). Breed Watch (S356) 'Protruding eyes' and eye irritation. PetMD (S359): 'For day-to-day eye buildup, use a warm, damp washcloth to wipe the area around the eye clean.' No eyelid Breed Watch point → no eyelid_problems chip (Bulldog / French Bulldog precedent; an eye chip is open for David)."
+      },
+      "patella": {
+        "value": "luxating patellas (kneecaps that slip)",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S357) health list (paraphrase). Parents: breed club patella testing (RKC S355, breeder checklist). Background only."
+      },
+      "pde": {
+        "value": "Pug Dog Encephalitis (PDE)",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S357) health list (paraphrase). RKC (S355) lists a DNA risk test under 'Other tests available' (not a recommended tier → not in the breeder checklist). Background only."
+      },
+      "hemivertebrae": {
+        "value": "hemivertebrae (malformed spinal bones)",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S357) health list (paraphrase). Parents: breed club x-ray checking after 12 months of age (RKC S355, breeder checklist). Paraphrase only → no back_spine chip (Boston Terrier precedent). Background only."
+      },
+      "dental": {
+        "value": "daily tooth brushing",
+        "unit": "—",
+        "source_id": "S359",
+        "quote": "Brush your Pug's teeth every day with a dog-safe toothpaste and brush.",
+        "confidence": "medium",
+        "notes": "PetMD (S359). Tooth care = sourced need without a mechanic → ROADMAP M5-R15."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 57,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 57 | Pug |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-10-18): rank 57, not shared (table row as returned), tier 'Fair Working/Obedience Intelligence' (ranks 55–69). Coren's own top / bottom-10 article (S34) does not list the breed; Wikipedia 'Pug' (S362) gives no rank. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Fair",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 40 to 80 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier definition as returned: 'Obey first command: 30% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "food-motivated, relatively easy to train; firm but fair; can be strong willed",
+        "unit": "—",
+        "source_id": "S359",
+        "quote": "Pugs are typically food-motivated, which makes them relatively easy to train.",
+        "confidence": "medium",
+        "notes": "PetMD (S359); PDSA (S357) 'Training needs to be ongoing and firm but fair.'"
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.pug.learning_multiplier (0.7, runbook rule: Fair tier, rank 57).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "decidedly square and cobby, compact, well-knit, hard muscle — 'multum in parvo'",
+        "unit": "—",
+        "source_id": "S354",
+        "quote": "Decidedly square and cobby, it is \"multum in parvo\" shown in compactness of form, well-knit proportions and hardness of muscle.",
+        "confidence": "high",
+        "notes": "FCI (S354). AKC (S358): compact, well-knit, firm in muscle, square (paraphrase)."
+      },
+      "colours": {
+        "value": [
+          "fawn",
+          "black",
+          "apricot",
+          "silver"
+        ],
+        "unit": "list",
+        "source_id": "S354",
+        "quote": "Silver, apricot, fawn or black.",
+        "confidence": "high",
+        "notes": "FCI (S354). AKC (S358): fawn or black, any other colour a disqualification; mask, ears, cheek moles, forehead marking and back trace as black as possible (paraphrase). The RKC (S355) will not register merle Pugs — the merle gene 'carries an increased risk of impaired hearing and sight problems.' (fragment). The game uses the four FCI colours only (fawn default); never merle, brindle, white or pied."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): fawn 0.6 (the most typical, AKC and FCI), black 0.25 (AKC and FCI), apricot 0.1, silver 0.05 (FCI only). Fawn is the portrait default."
+      },
+      "coat": {
+        "value": "fine, smooth, soft, short and glossy",
+        "unit": "—",
+        "source_id": "S354",
+        "quote": "Fine, smooth, soft, short and glossy, neither harsh, off standing nor woolly.",
+        "confidence": "high",
+        "notes": "FCI (S354). AKC (S358) 'fine, smooth, soft, short and glossy, neither hard nor woolly.'"
+      },
+      "nose": {
+        "value": "black nose with fairly large, well opened nostrils; pinched nostrils unacceptable",
+        "unit": "—",
+        "source_id": "S354",
+        "quote": "Black with fairly large well opened nostrils.",
+        "confidence": "high",
+        "notes": "FCI (S354): 'Pinched nostrils and heavy over nose wrinkle is unacceptable.' Breed Watch (S356) 'Pinched nostrils'. Welfare trait for the AI portrait (clearly open nostrils)."
+      },
+      "muzzle": {
+        "value": "relatively short, blunt, square, not upfaced; forehead wrinkles clearly defined without exaggeration",
+        "unit": "—",
+        "source_id": "S354",
+        "quote": "Relatively short, blunt, square, not upfaced.",
+        "confidence": "high",
+        "notes": "FCI (S354): 'Wrinkles on forehead clearly defined without exaggeration.' Breed Watch (S356) 'Excessive skin on the head or body'. Welfare trait: the game draws a moderate (not extreme) face — dog trait `muzzle` (French Bulldog precedent)."
+      },
+      "ears": {
+        "value": "thin, small, soft like black velvet — rose or button (button preferred)",
+        "unit": "—",
+        "source_id": "S354",
+        "quote": "Thin, small, soft like black velvet.",
+        "confidence": "high",
+        "notes": "FCI (S354) two types, 'Preference given to latter' (button) (fragment); AKC (S358) the same (paraphrase)."
+      },
+      "eyes": {
+        "value": "dark, relatively large, round, very lustrous — never protruding",
+        "unit": "—",
+        "source_id": "S354",
+        "quote": "Dark, relatively large, round in shape, soft and solicitous in expression, very lustrous, and when excited, full of fire.",
+        "confidence": "high",
+        "notes": "FCI (S354). Breed Watch (S356) 'Protruding eyes' a point of concern → the game draws eyes that are not bulging."
+      },
+      "tail": {
+        "value": "high-set, tightly curled over the hip; double curl highly desirable",
+        "unit": "—",
+        "source_id": "S354",
+        "quote": "High-set, tightly curled over hip. Double curl highly desirable.",
+        "confidence": "high",
+        "notes": "FCI (S354); AKC (S358) the same (paraphrase)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC Breeds A–Z (S355; key facts returned as label / value pairs — quoted here as 'Label: value'), RKC Breed Watch (S356), PDSA (S357), PetMD (S359). The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S355",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "PDSA (S357) the same."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S355",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "Basis of 60 min (PDSA S357 'up to an hour of exercise a day' agrees). Not long_daily_exercise / active_family."
+      },
+      "pdsa_exercise": {
+        "value": "up to an hour a day",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "Your Pug will need up to an hour of exercise a day.",
+        "confidence": "medium",
+        "notes": "PDSA (S357). Agrees with 60."
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S355",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "Basis of the apartment chip (runbook: only from RKC 'Flat/ Apartment')."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S355",
+        "quote": "Size of garden: Small/medium garden",
+        "confidence": "high",
+        "notes": "Supports apartment."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S355",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "Runbook dog-grooming rule: 'Once a week' → 1 (PDSA S357 'at least once a week' and PetMD S359 'at least once a week' agree). Not frequent_grooming."
+      },
+      "pdsa_grooming": {
+        "value": "brush at least once a week",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "You’ll need to brush your Pug’s coat at least once a week to keep it in good condition.",
+        "confidence": "medium",
+        "notes": "PDSA (S357). Agrees with the RKC."
+      },
+      "petmd_grooming": {
+        "value": "brush at least once a week to manage shedding",
+        "unit": "—",
+        "source_id": "S359",
+        "quote": "Brush their coat at least once a week to help manage and control the amount of shedding.",
+        "confidence": "medium",
+        "notes": "PetMD (S359). Agrees with the RKC."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S355",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S355",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "Basis of sheds. PetMD (S359): 'The Pug's short fur sheds moderately year-round, with heavier shedding periods in the spring and fall.' — no conflicting A/B source."
+      },
+      "petmd_shedding": {
+        "value": "sheds moderately year-round",
+        "unit": "—",
+        "source_id": "S359",
+        "quote": "The Pug's short fur sheds moderately year-round, with heavier shedding periods in the spring and fall.",
+        "confidence": "medium",
+        "notes": "PetMD (S359). Agrees with the RKC."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S355",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "See lifespan.rkc."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S355",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S355",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 3",
+        "unit": "—",
+        "source_id": "S356",
+        "quote": "Pug - Category 3",
+        "confidence": "high",
+        "notes": "RKC Breed Watch page title (S356) → welfare chips brachycephalic_breathing and sensitive_skin (Bulldog precedent); not in marketing (flat-faced, BVA S92)."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC page (S355) has no 'Good with children' field."
+      },
+      "pdsa_children": {
+        "value": "often get on well with children; supervise play",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "They often get on well with children, especially if the Pug loves to play.",
+        "confidence": "medium",
+        "notes": "PDSA (S357). Basis of the children chip (with PetMD S359)."
+      },
+      "petmd_children": {
+        "value": "excellent dogs for kids",
+        "unit": "—",
+        "source_id": "S359",
+        "quote": "Pugs are friendly and easygoing dogs, and they make excellent dogs for kids.",
+        "confidence": "medium",
+        "notes": "PetMD (S359). Basis of the children chip (with PDSA S357)."
+      },
+      "pdsa_other_pets": {
+        "value": "get along well with other pets and dogs",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "Pugs are known for getting along well with other pets and dogs.",
+        "confidence": "medium",
+        "notes": "PDSA (S357). Basis of other_pets."
+      },
+      "petmd_other_pets": {
+        "value": "can live well with other pets",
+        "unit": "—",
+        "source_id": "S359",
+        "quote": "The same easygoing traits mean Pugs can live well with other four-legged family members.",
+        "confidence": "medium",
+        "notes": "PetMD (S359). Agrees with the PDSA."
+      },
+      "pdsa_company": {
+        "value": "don’t do well if left alone; never longer than four hours",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "Pugs adore company and don’t do well if left alone.",
+        "confidence": "medium",
+        "notes": "PDSA (S357). Basis of needs_company; never often_alone."
+      },
+      "pdsa_heat": {
+        "value": "avoid exercising in the heat",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "You will also need to avoid exercising them in the heat as this can cause even more problems",
+        "confidence": "high",
+        "notes": "PDSA (S357) fragment. See exercise.heat_and_walk_timing (ROADMAP M5-R14)."
+      },
+      "pdsa_breed_choice": {
+        "value": "vets recommend a breed with a normal snout or a Pug cross-breed instead",
+        "unit": "—",
+        "source_id": "S357",
+        "quote": "Our vets would strongly recommend opting for a breed with a normal snout or even a Pug cross-breed instead",
+        "confidence": "high",
+        "notes": "PDSA (S357) fragment as returned; 'we always recommend thinking carefully before you buy or rescue a Pug' (fragment). Shown to parents only as the calm welfare chip (no statistics); register: sourced health facts."
+      },
+      "petmd_face_folds": {
+        "value": "clean and dry the facial skin folds daily",
+        "unit": "—",
+        "source_id": "S359",
+        "quote": "It's important to clean and dry the skin folds around your Pug's face daily.",
+        "confidence": "high",
+        "notes": "PetMD (S359). Face-fold cleaning = sourced daily need without a mechanic → ROADMAP M5-R14 (needs-david)."
+      },
+      "petmd_eyes": {
+        "value": "wipe day-to-day eye buildup with a warm, damp washcloth",
+        "unit": "—",
+        "source_id": "S359",
+        "quote": "For day-to-day eye buildup, use a warm, damp washcloth to wipe the area around the eye clean.",
+        "confidence": "medium",
+        "notes": "PetMD (S359). Face / eye care = sourced need without a mechanic → ROADMAP M5-R14 (needs-david)."
+      },
+      "petmd_teeth": {
+        "value": "brush the teeth every day",
+        "unit": "—",
+        "source_id": "S359",
+        "quote": "Brush your Pug's teeth every day with a dog-safe toothpaste and brush.",
+        "confidence": "medium",
+        "notes": "PetMD (S359). Tooth brushing = sourced need without a mechanic → ROADMAP M5-R15 (needs-david)."
+      },
+      "petmd_ears": {
+        "value": "ear cleaning — ask the vet how often",
+        "unit": "—",
+        "source_id": "S359",
+        "quote": "Also ask your veterinarian about the frequency of ear cleaning.",
+        "confidence": "medium",
+        "notes": "PetMD (S359). Ear care = sourced need (no frequency) without a mechanic → ROADMAP M5-R20 (needs-david)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -31956,6 +32678,338 @@
         "confidence": "high",
         "notes": "FCI (S346) and AKC (S349): pure white only (pale ivory tinge permitted; orange / lemon traces undesirable). Weight 1 unsourced.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colour only — pure white (default, the only option); never any other colour or patches"
+      }
+    },
+    "pug": {
+      "_note": "Unattended run M5-R10-43 (2026-10-18): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: weekly brushing (RKC S355 'Once a week', M5-R13); puppy socialisation (PetMD S359 quote, M5-R17). No meal / exercise gap source → no M5-R16 row. Sourced needs without a game mechanic: daily face-fold cleaning and eye wiping (PetMD S359) and no exercise in the heat (PDSA S357) → ROADMAP M5-R14; daily tooth brushing (PetMD S359) → ROADMAP M5-R15; ear cleaning (PetMD S359, no frequency) → ROADMAP M5-R20 (needs-david). Senior 104 from McMillan 2024 (S54, 11.6 y). Flat-faced breed, RKC Breed Watch Category 3 → brachycephalic_breathing and sensitive_skin chips, not in marketing (BVA S92).",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S355",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S355). Rule: one number N ('up to N') → N = 60; PDSA (S357) 'up to an hour of exercise a day' agrees.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S357",
+            "notes": "PDSA up to an hour a day (key facts: minimum exercise less than 1 hour)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S355 'Up to 1 hour per day'; PDSA S357 the same)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000 (= French Bulldog, Bulldog, Boston Terrier).",
+        "derived_from": [
+          "S355",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 104
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 104 = round(0.75 × 11.6 y × 12) = round(104.4) (S11 + McMillan 2024 median 11.6 y, S54). Alternatives: 90 (RKC lower bound 'Over 10 years', S355), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S54"
+        ],
+        "alternatives": {
+          "senior_rkc_lower_bound": 90,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 104 (0.75 × 11.6 y, McMillan 2024 S54)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 104
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 104)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 57 (S35), tier 'Fair' (55–69) → 0.7. PetMD 'relatively easy to train' (food-motivated, S359) — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 57, Fair tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S355",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "pug.suitability.rkc_grooming. RKC (S355) 'Once a week' → 1 (runbook dog-grooming rule); PDSA (S357) and PetMD (S359) 'at least once a week' agree. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S357",
+            "notes": "PDSA at least once a week"
+          },
+          {
+            "value": 1,
+            "source_id": "S359",
+            "notes": "PetMD at least once a week"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Grooming: Once a week«; PDSA in PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S359",
+        "quote": "Pug puppies, like all dogs, need to be socialized during their first months of life.",
+        "confidence": "medium",
+        "notes": "pug.behaviour.socialisation (PetMD S359); PDSA (S357) agrees. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S359)"
+      },
+      "face_fold_cleaning": {
+        "value": "daily",
+        "unit": "face-fold cleaning (sourced need)",
+        "source_id": "S359",
+        "quote": "It's important to clean and dry the skin folds around your Pug's face daily.",
+        "confidence": "high",
+        "notes": "PetMD (S359), pug.health.skin_folds / pug.suitability.petmd_face_folds; PetMD also: wipe day-to-day eye buildup (pug.suitability.petmd_eyes). The game has no face-fold cleaning mechanic → ROADMAP M5-R14 (Bulldog precedent); this value is its input.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan; mehanika čiščenja gub še ni zgrajena → ROADMAP M5-R14 (needs-david)"
+      },
+      "no_exercise_in_heat": {
+        "value": "not in the heat; early morning or later evening",
+        "unit": "walk timing (sourced need)",
+        "source_id": "S357",
+        "quote": "You will also need to avoid exercising them in the heat as this can cause even more problems",
+        "confidence": "high",
+        "notes": "PDSA (S357), pug.exercise.heat_and_walk_timing; PetMD (S359) 'Avoid strenuous exercise during hot weather.' The game has no walk-time / heat rule and may not use weather data (CLAUDE.md scope guard) → ROADMAP M5-R14 (as the Bulldog and the Boston Terrier).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ne v vročini; mehanika še ni zgrajena → ROADMAP M5-R14 (needs-david)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S359",
+        "quote": "Brush your Pug's teeth every day with a dog-safe toothpaste and brush.",
+        "confidence": "medium",
+        "notes": "PetMD (S359), pug.suitability.petmd_teeth. The game has no tooth-brushing mechanic → ROADMAP M5-R15; this value is its input.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ščetkanje zob vsak dan (7× na teden); mehanike ni → ROADMAP M5-R15 (needs-david)"
+      },
+      "ear_care": {
+        "value": "ear cleaning — frequency from the vet",
+        "unit": "ear checks (sourced need)",
+        "source_id": "S359",
+        "quote": "Also ask your veterinarian about the frequency of ear cleaning.",
+        "confidence": "medium",
+        "notes": "PetMD (S359), pug.suitability.petmd_ears. The game has no ear-care mechanic → ROADMAP M5-R20 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): čiščenje ušes (pogostost po nasvetu veterinarja); mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-43); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S355"
+            ],
+            "refs": [
+              "pug.suitability.rkc_size_of_home",
+              "pug.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S355 'Size of home: Flat/ Apartment'; 'Size of garden: Small/medium garden'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S357",
+              "S359"
+            ],
+            "refs": [
+              "pug.suitability.pdsa_children",
+              "pug.suitability.petmd_children",
+              "pug.behaviour.children"
+            ],
+            "quote": "S357 'They often get on well with children, especially if the Pug loves to play.'; S359 'they make excellent dogs for kids.'",
+            "note": "Caveat kept in notes: PDSA advises supervision so neither gets too boisterous. No small-children rating → never small_children."
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S357",
+              "S359"
+            ],
+            "refs": [
+              "pug.suitability.pdsa_other_pets",
+              "pug.suitability.petmd_other_pets",
+              "pug.behaviour.other_pets"
+            ],
+            "quote": "S357 'Pugs are known for getting along well with other pets and dogs.'; S359 'Pugs can live well with other four-legged family members.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "brachycephalic_breathing",
+            "source_ids": [
+              "S357",
+              "S355",
+              "S356",
+              "S93"
+            ],
+            "refs": [
+              "pug.health.brachycephaly_boas",
+              "pug.health.breed_watch",
+              "pug.exercise.heat_and_walk_timing"
+            ],
+            "quote": "S357 'they are also a severely brachycephalic (flat-faced) breed'; S355 excess soft tissue 'making it difficult for them to breathe normally (causing heavy panting or noisy breathing)'; S356 'Signs of respiratory difficulty or distress …'; S93 'Stop and think before buying a flat-faced dog.'; S357 heat 'You will also need to avoid exercising them in the heat …'",
+            "note": "Welfare rule §3: flat-faced breed with a sourced heat warning (French Bulldog, Bulldog, Boston Terrier). No statistics in the app."
+          },
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S356",
+              "S359"
+            ],
+            "refs": [
+              "pug.health.breed_watch",
+              "pug.health.skin_folds"
+            ],
+            "quote": "S356 'Signs of dermatitis irritation in skin folds, and/or hair loss or scarring from previous dermatitis'; S359 'It's important to clean and dry the skin folds around your Pug's face daily.'",
+            "note": "Welfare rule §3: skin-fold dermatitis is an RKC Breed Watch point (Bulldog precedent)."
+          },
+          {
+            "tag": "food_motivated_weight",
+            "source_ids": [
+              "S359",
+              "S357"
+            ],
+            "refs": [
+              "pug.behaviour.food_motivation",
+              "pug.behaviour.obesity_tendency"
+            ],
+            "quote": "S359 'Pugs are typically food-motivated'; 'obesity is common for the breed.'; S357 'Pugs can be prone to gaining weight that can make breathing problems worse'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S357"
+            ],
+            "refs": [
+              "pug.behaviour.time_alone",
+              "pug.suitability.pdsa_company"
+            ],
+            "quote": "S357 'Pugs adore company and don’t do well if left alone.'",
+            "note": "Breed-specific statement (Boxer precedent); never often_alone."
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S355",
+              "S359"
+            ],
+            "refs": [
+              "pug.suitability.rkc_shedding",
+              "pug.suitability.petmd_shedding"
+            ],
+            "quote": "S355 'Sheds: Yes'; S359 'The Pug's short fur sheds moderately year-round'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No explicit family-pet statement in an A/B source (PetMD 'excellent dogs for kids' → children).",
+          "small_children": "No small-children rating; PDSA supervision caveat.",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No source (PDSA: 'can also be very strong willed' — a training note).",
+          "large_home": "RKC 'Flat/ Apartment' (S355).",
+          "active_family": "RKC 'Up to 1 hour per day' (S355) — moderate.",
+          "long_daily_exercise": "≤ 1 h/day (S355, S357).",
+          "often_alone": "PDSA: don’t do well if left alone (S357) → needs_company.",
+          "chases_small_pets": "No prey-drive statement; PDSA / PetMD say they live well with other pets.",
+          "low_shedding": "RKC 'Sheds: Yes'.",
+          "frequent_grooming": "Once a week (S355, S357, S359) — the criterion is more than once a week; the daily face-fold cleaning is a separate need (M5-R14).",
+          "shorter_lifespan": "RKC 'Over 10 years' (S355).",
+          "eyelid_problems": "No Breed Watch eyelid point (S356: 'Protruding eyes' and eye irritation); entropion / ectropion only as a PDSA list item (paraphrase). An eye chip is open for David (Bulldog / French Bulldog precedent: none).",
+          "back_spine": "Hemivertebrae only as a PDSA list item (paraphrase) and a breeder test → recorded under health (Boston Terrier precedent).",
+          "short_muzzle_breathing": "Flat-faced with a heat warning → brachycephalic_breathing instead.",
+          "hypoallergenic": "Never (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, children, other_pets; consider brachycephalic_breathing, sensitive_skin, food_motivated_weight, needs_company, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing / store screenshots / social: no",
+        "unit": "—",
+        "source_id": "S92",
+        "quote": "avoiding imagery of brachycephalic dogs in advertising, marketing materials and social media campaigns",
+        "confidence": "high",
+        "notes": "BVA position, executive summary (S92). The BVA full position (S236) names the Pug among brachycephalic breeds (Figure 1 legend 'Boxer Bulldog French Bulldog Pug Shih-tzu'); PDSA (S357) 'they are also a severely brachycephalic (flat-faced) breed' → the same exclusion as the French Bulldog, Bulldog, Shih Tzu and Boston Terrier. A normal breed in the app (picker, register on the website with sourced health facts), never in PetPrep advertising, store screenshots, social posts or decks.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): v aplikaciji da, v marketingu / posnetkih zaslona ne (BVA S92; brahicefalna pasma po BVA S236 in PDSA S357)"
+      },
+      "ai_appearance": {
+        "value": "adult Pug, fawn with a black mask and black velvet ears (default); square, cobby, compact, not overweight; moderate (not extreme) short, blunt, square muzzle with a black nose and clearly open nostrils; light forehead wrinkles without exaggeration (no heavy over-nose wrinkle); dark, round, lustrous eyes that do not bulge; small rose or button ears; fine, smooth, short, glossy coat; tail tightly curled over the hip; standard colours only (fawn, black, apricot, silver); never merle, brindle, white or pied",
+        "unit": "—",
+        "source_id": "S354",
+        "quote": "Black with fairly large well opened nostrils.",
+        "confidence": "high",
+        "notes": "FCI (S354): 'Pinched nostrils and heavy over nose wrinkle is unacceptable.'; wrinkles 'clearly defined without exaggeration'; colours 'Silver, apricot, fawn or black.'. Breed Watch (S356): pinched nostrils, protruding eyes, excessive skin, too fat. RKC (S355): no merle registration. Welfare trait: muzzle (moderate face, open nostrils) — add `muzzle` to media.breed_portraits.traits / prompt_order / sources (French Bulldog precedent). Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn (FCI / AKC) is the portrait default; moderate face with open nostrils and light wrinkles, eyes not bulging, natural curled tail, standard colours only (never merle, brindle, white or pied)"
       }
     }
   }
