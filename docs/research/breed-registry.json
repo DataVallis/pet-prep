@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "4b08b2cdea771ea00c915379224bab0db543f3d72a2292301af2394aef4c5587"
+      "sha256": "27f0f7334ab151d202ac4934660283712e485308298a4c178fb729f2d5ca0844"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -22741,7 +22741,7 @@
         {
           "key": "cataracts_entropion",
           "source_ids": [
-            "S347"
+            "S348"
           ],
           "ref": "maltese.health.eyes",
           "confidence": "medium"

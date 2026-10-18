@@ -21111,7 +21111,7 @@
         "source_id": "S347",
         "quote": "They do not need a large amount of exercise and some can be finicky eaters.",
         "confidence": "low",
-        "notes": "RKC Toy group text (S347), not breed-specific. No food_motivated_weight chip."
+        "notes": "RKC Toy GROUP text (S347), not a statement about the Maltese — never promote it to a breed fact or chip. No food_motivated_weight chip; not exported."
       },
       "training_notes": {
         "value": "smart; picks up cues quickly with positive reinforcement",
@@ -21167,10 +21167,10 @@
       "eyes": {
         "value": "cataracts and entropion — eye testing of the parents (BVA/KC/ISDS Eye Scheme)",
         "unit": "—",
-        "source_id": "S347",
-        "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+        "source_id": "S348",
+        "quote": null,
         "confidence": "medium",
-        "notes": "RKC best-practice test (S347); PDSA (S348) lists cataracts and entropion (paraphrase). Not a Breed Watch point → no eyelid chip."
+        "notes": "PDSA (S348) health list: cataracts and entropion (paraphrase). Parents' eye testing: RKC best-practice 'Eye testing using the BVA/KC/ISDS Eye Scheme' (S347, breeder checklist). Not a Breed Watch point → no eyelid chip."
       },
       "dental": {
         "value": "heightened risk of periodontal disease — daily tooth brushing",
