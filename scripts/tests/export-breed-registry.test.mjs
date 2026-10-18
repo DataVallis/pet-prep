@@ -148,6 +148,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.english_cocker_spaniel.slug, { en: 'english-cocker-spaniel', sl: 'angleski-koker-spanjel' });
   assert.deepEqual(byId.maltese.slug, { en: 'maltese', sl: 'maltezan' });
   assert.deepEqual(byId.pug.slug, { en: 'pug', sl: 'mops' });
+  assert.deepEqual(byId.rough_collie.slug, { en: 'rough-collie', sl: 'dolgodlaki-skotski-ovcar' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -283,6 +284,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     english_cocker_spaniel: { adult: 6000, senior: 4500, seniorFrom: 103, learning: 1.5 },
     maltese: { adult: 3000, senior: 2300, seniorFrom: 108, learning: 0.7 },
     pug: { adult: 6000, senior: 4500, seniorFrom: 104, learning: 0.7 },
+    rough_collie: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1.5 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -509,7 +511,7 @@ test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming row
   assert.deepEqual([...cats, ...dogs].sort(), seeded);
   assert.deepEqual(cats, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
   // M5-R13: every dog breed of the app except the mutt and the Border Collie (no grooming statement).
-  assert.equal(dogs.length, 38);
+  assert.equal(dogs.length, 39);
   assert.ok(!dogs.includes('mutt') && !dogs.includes('border_collie'));
 });
 
@@ -1549,4 +1551,28 @@ test('Pug (M5-R10-43): up to 1 hour (RKC), FCI weight, PDSA height, FCI group 9 
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a percentage; the young-population figure (7.65 y via Wikipedia) stays out.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|7\.65/i);
+});
+
+test('Rough Collie (M5-R10-44): up to 1 hour (RKC), AKC weight, FCI height, FCI group 1 Great Britain, RKC "over 12 years", Coren 16, herding / brushing / company chips, RKC eye + hip schemes and four DNA tests', () => {
+  const d = registry.breeds.find((b) => b.id === 'rough_collie');
+  assert.deepEqual(d.name, { en: 'Rough Collie', sl: 'Dolgodlaki škotski ovčar' });
+  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.facets.size, 'large');
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S365']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 156, group: 1, section: 1, origin: 'GB' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [27.2, 34.0], female: [22.7, 29.5] }, ['S367']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [56, 61], female: [51, 56] }, ['S364']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['more_than', 12, ['S365']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 16);
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 108 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['children', 'other_pets']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['may_herd_children', 'frequent_grooming', 'needs_company', 'sheds']);
+  assert.deepEqual(d.health.map((h) => h.key), ['collie_eye_pra', 'drug_sensitivity_mdr1', 'degenerative_myelopathy', 'hip_dysplasia_arthritis']);
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [
+    ['eye_scheme', 'minimum'], ['hip_scheme', 'minimum'], ['dna_cea', 'best_practice'], ['dna_dm', 'best_practice'], ['dna_mdr1', 'best_practice'], ['dna_pra_rcd2', 'best_practice'],
+  ]);
+  const json = JSON.stringify(d);
+  // Never "hypoallergenic", never a percentage; the AKC-only white colour never appears as a fact.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)/i);
 });
