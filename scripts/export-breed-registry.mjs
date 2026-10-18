@@ -414,6 +414,7 @@ const SPECIES = [
       { id: 'basset_hound', synonyms: { en: ['Basset', 'Basset Hound dog'], sl: ['basset hound', 'baset hound', 'basset'] } },
       { id: 'hungarian_vizsla', synonyms: { en: ['Vizsla', 'Magyar Vizsla', 'Hungarian Pointer', 'Hungarian Short-haired Pointer'], sl: ['vižla', 'madžarska vižla', 'madžarski ptičar'] } },
       { id: 'english_cocker_spaniel', synonyms: { en: ['Cocker Spaniel', 'English Cocker', 'Cocker', 'Merry Cocker'], sl: ['koker španjel', 'angleški koker', 'koker'] } },
+      { id: 'maltese', synonyms: { en: ['Maltese dog', 'Bichon Maltais', 'Maltese Terrier'], sl: ['malteški bišon', 'malteški psiček'] } },
     ],
   },
   {
@@ -1229,6 +1230,31 @@ const DOG_FACTS = {
       ['autoimmune_conditions', 'health.imha'],
     ],
   },
+  // M5-R10-42. Not exported: height.pdsa (one value, alternative), height.akc (no height in the AKC standard),
+  // adult_weight.pdsa / akc (agreeing value / alternative), adult_weight.salt_category (our assignment), lifespan.pdsa /
+  // petmd (agree / alternative), lifespan.mcmillan_2024 (via Wikipedia, tier C — research only), lifespan.senior_from
+  // (derived), health.tear_staining (a care need, ROADMAP M5-R14), suitability.rkc_breed_watch (Category 1). Weight = FCI
+  // 65 (S346, one range for both sexes); height = FCI (S346); lifespan = the RKC band "Over 12 years" (S347). New health
+  // keys heart_disease_pda, chiari_malformation, cataracts_entropion, periodontal_daily_brushing.
+  maltese: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.patella'],
+      ['liver_shunt', 'health.liver_shunt'],
+      ['heart_disease_pda', 'health.heart'],
+      ['chiari_malformation', 'health.cm_sm'],
+      ['hydrocephalus', 'health.hydrocephalus'],
+      ['cataracts_entropion', 'health.eyes'],
+      ['periodontal_daily_brushing', 'health.dental'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1534,6 +1560,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.english_cocker_spaniel.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.english_cocker_spaniel.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.english_cocker_spaniel.exercise_minutes_senior',
+  },
+  maltese: {
+    adult_minutes: ['proposed_game_parameters.maltese.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.maltese.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.maltese.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.maltese.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.maltese.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.maltese.exercise_minutes_senior',
   },
 };
 
