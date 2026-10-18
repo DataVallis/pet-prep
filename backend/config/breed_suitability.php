@@ -1133,6 +1133,34 @@ return [
                 ['tag' => 'needs_company', 'source_ids' => ['S351'], 'refs' => ['maltese.behaviour.time_alone', 'maltese.suitability.petmd_company']],
             ],
         ],
+        // M5-R10-43: pug.* (S353–S362), runbook rules (data.json proposed_game_parameters.pug.suitability_tags).
+        // RKC (S355) + Breed Watch (S356) + PDSA (S357) + PetMD (S359). Welfare rule: severely flat-faced breed
+        // with a heat warning → brachycephalic_breathing; Breed Watch Category 3 skin-fold dermatitis →
+        // sensitive_skin (Bulldog precedent). No family_pet (only a children statement), no small_children,
+        // no eyelid_problems (no eyelid Breed Watch point), no back_spine (hemivertebrae only a PDSA list item).
+        'pug' => [
+            'suits' => [
+                // S355 "Size of home: Flat/ Apartment"; "Size of garden: Small/medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S355'], 'refs' => ['pug.suitability.rkc_size_of_home', 'pug.suitability.rkc_size_of_garden']],
+                // S357 "They often get on well with children, especially if the Pug loves to play."; S359 "they make excellent dogs for kids."
+                ['tag' => 'children', 'source_ids' => ['S357', 'S359'], 'refs' => ['pug.suitability.pdsa_children', 'pug.suitability.petmd_children', 'pug.behaviour.children']],
+                // S357 "Pugs are known for getting along well with other pets and dogs."; S359 the same.
+                ['tag' => 'other_pets', 'source_ids' => ['S357', 'S359'], 'refs' => ['pug.suitability.pdsa_other_pets', 'pug.suitability.petmd_other_pets', 'pug.behaviour.other_pets']],
+            ],
+            'consider' => [
+                // Welfare rule: S357 "they are also a severely brachycephalic (flat-faced) breed"; S355 airway soft tissue;
+                // S356 "Signs of respiratory difficulty or distress …"; S93 "Stop and think before buying a flat-faced dog."
+                ['tag' => 'brachycephalic_breathing', 'source_ids' => ['S357', 'S355', 'S356', 'S93'], 'refs' => ['pug.health.brachycephaly_boas', 'pug.health.breed_watch', 'pug.exercise.heat_and_walk_timing']],
+                // Welfare rule: S356 "Signs of dermatitis irritation in skin folds …"; S359 "clean and dry the skin folds … daily."
+                ['tag' => 'sensitive_skin', 'source_ids' => ['S356', 'S359'], 'refs' => ['pug.health.breed_watch', 'pug.health.skin_folds']],
+                // S359 "Pugs are typically food-motivated"; "obesity is common for the breed."; S357 prone to gaining weight.
+                ['tag' => 'food_motivated_weight', 'source_ids' => ['S359', 'S357'], 'refs' => ['pug.behaviour.food_motivation', 'pug.behaviour.obesity_tendency']],
+                // S357 "Pugs adore company and don’t do well if left alone."
+                ['tag' => 'needs_company', 'source_ids' => ['S357'], 'refs' => ['pug.behaviour.time_alone', 'pug.suitability.pdsa_company']],
+                // S355 "Sheds: Yes"; S359 "sheds moderately year-round".
+                ['tag' => 'sheds', 'source_ids' => ['S355', 'S359'], 'refs' => ['pug.suitability.rkc_shedding', 'pug.suitability.petmd_shedding']],
+            ],
+        ],
 
     ],
 ];

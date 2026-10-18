@@ -377,6 +377,15 @@ class FalAiService
                 .'drop ears heavily feathered with long hair, very dark round eyes with black rims, black nose, '
                 .'plumed tail carried over the back, small longish body, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-43: FCI 253 (S354) — fawn as the anchor (fawn / black / apricot / silver); welfare breed
+            // (flat-faced, Breed Watch Category 3, S356): a moderate face with clearly open nostrils, light
+            // wrinkles, eyes that do not bulge, a fit body; tail curled over the hip.
+            BreedType::Pug => 'A charming, even-tempered Pug dog with a fawn coat, black mask and black velvet ears, '
+                .'fine smooth short glossy coat, moderate short blunt square muzzle with a black nose and clearly open nostrils, '
+                .'light forehead wrinkles without a heavy over-nose wrinkle, dark round lustrous eyes that are not bulging, '
+                .'small rose or button ears, square compact fit body, tail tightly curled over the hip, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -915,6 +924,18 @@ class FalAiService
                     2 => 'silky white coat kept at a medium pet length',
                 },
                 'markings' => 'none',
+            ],
+            // M5-R10-43: FCI S354 "Silver, apricot, fawn or black." — the variants use the three most
+            // typical; fawn / apricot always with the black mask and ears.
+            BreedType::Pug => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'fawn with a black mask',
+                    1 => 'black',
+                    2 => 'apricot with a black mask',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'fine, smooth, short and glossy',
+                'markings' => 'black mask, black velvet ears, light forehead wrinkles',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
