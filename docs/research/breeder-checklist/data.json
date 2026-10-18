@@ -1686,6 +1686,25 @@
         }
       ],
       "notes": "RKC breed page (older address display.aspx?id=2052, dog-data S337, 2026-10-15): Good Practice (= minimum, 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding') — genetic diversity, DNA AMS, DNA prcd-PRA, BVA/KC hip scheme; Best Practice — DNA AON, DNA FN, BVA/KC/ISDS eye scheme with gonioscopy. The current Breeds A–Z page (S338) shows the headings without named tests. PDSA (S339) names CombiBreed testing for FN / AON / AMS (paraphrase). New test keys dna_aon and dna_fn (website words added)."
+    },
+    "maltese": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S347",
+        "level_quotes": {
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in best practice."
+        }
+      },
+      "tests": [
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S347",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ],
+      "notes": "RKC Breeds A–Z (dog-data S347, 2026-10-18): heading 'Best Practice schemes and tests', no minimum list; the only test is the eye scheme. The page notes no breed-specific DNA package. PDSA (S348) lists patella, liver shunt, heart, CM/SM and eye problems without tests — no test is guessed."
     }
   }
 }

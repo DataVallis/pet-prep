@@ -250,6 +250,10 @@ return [
         ['key' => 'black-white', 'value' => 'black and white parti-colour', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
         ['key' => 'tricolour', 'value' => 'tricolour (black and white with tan markings)', 'en' => 'Tricolour', 'sl' => 'Trobarven'],
     ],
+    // M5-R10-42: FCI S346 "Colour: Pure white, a pale ivory tinge is permitted."; AKC S349 "Color, pure white."
+    'maltese' => [
+        ['key' => 'white', 'value' => 'pure white', 'en' => 'White', 'sl' => 'Bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

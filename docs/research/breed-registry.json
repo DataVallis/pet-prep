@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "ef824edfab6b06a2bfa566f0bf8512f74bc1200dbd5f3f167c502cbb0ca570d3"
+      "sha256": "27f0f7334ab151d202ac4934660283712e485308298a4c178fb729f2d5ca0844"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "3fd99042904219b8a376dcdcf4f7fcaaf24d63327e5cbe5a610a7603c4b691bf"
+      "sha256": "d900c4f8c5e0263391517e6a682ef5b3b2bdbe9475445418ab73b34f17201147"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "e7ea3610e513f3d74077559d68983ddf4c6fa27adb16774bf79f8e6c1e1017e3"
+      "sha256": "7888a3736c90586d944c2c47fc0fe7c6d3fbef74d10c3aad8759fcffdf18a495"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "170dd1631a0b778c246115050410db356129d5c9295987d003febec387907e79"
+      "sha256": "ee8c1db35886f6d2886bdacca7aeba06267c26d6cf21eeb83ebb31c3af8c5ce3"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "27bd7189086323d813cd0444bd6b31f213e851fc5782eb16ccda5699017bea39"
+      "sha256": "9081923395af74394da70bb8eaecaa62915aa961ba6d474ab714aa6040b8fda6"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "b767f0fa4a5e2d81a55f5b232e0b96cd51a393bf0a33c779fe02f4ccda1fc3c9"
+      "sha256": "74e429f32f7fb3ed1c20aac0db0d7b3c14fd7820538d097c734013193853e1dd"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -200,7 +200,7 @@
         }
       },
       "status": "available",
-      "breed_count": 37,
+      "breed_count": 38,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -22501,6 +22501,544 @@
       ]
     },
     {
+      "id": "maltese",
+      "species": "dog",
+      "order": 37,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Maltese",
+        "sl": "Maltežan"
+      },
+      "slug": {
+        "en": "maltese",
+        "sl": "maltezan"
+      },
+      "synonyms": {
+        "en": [
+          "Maltese dog",
+          "Bichon Maltais",
+          "Maltese Terrier"
+        ],
+        "sl": [
+          "malteški bišon",
+          "malteški psiček"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S347"
+          ],
+          "ref": "maltese.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              21,
+              25
+            ],
+            "female": [
+              20,
+              23
+            ]
+          },
+          "source_ids": [
+            "S346"
+          ],
+          "ref": "maltese.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              3,
+              4
+            ],
+            "female": [
+              3,
+              4
+            ]
+          },
+          "source_ids": [
+            "S346"
+          ],
+          "ref": "maltese.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            8,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "maltese.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S347"
+          ],
+          "ref": "maltese.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 30,
+          "source_ids": [
+            "S347"
+          ],
+          "ref": "maltese.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "long"
+          ],
+          "source_ids": [
+            "S347"
+          ],
+          "ref": "maltese.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S347"
+          ],
+          "ref": "maltese.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S347"
+          ],
+          "ref": "maltese.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 59,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "maltese.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 65,
+            "group": 9,
+            "section": 1,
+            "origin": "IT"
+          },
+          "source_ids": [
+            "S345"
+          ],
+          "ref": "maltese.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S348"
+          ],
+          "ref": "maltese.health.patella",
+          "confidence": "medium"
+        },
+        {
+          "key": "liver_shunt",
+          "source_ids": [
+            "S348"
+          ],
+          "ref": "maltese.health.liver_shunt",
+          "confidence": "medium"
+        },
+        {
+          "key": "heart_disease_pda",
+          "source_ids": [
+            "S348"
+          ],
+          "ref": "maltese.health.heart",
+          "confidence": "medium"
+        },
+        {
+          "key": "chiari_malformation",
+          "source_ids": [
+            "S348"
+          ],
+          "ref": "maltese.health.cm_sm",
+          "confidence": "medium"
+        },
+        {
+          "key": "hydrocephalus",
+          "source_ids": [
+            "S348"
+          ],
+          "ref": "maltese.health.hydrocephalus",
+          "confidence": "medium"
+        },
+        {
+          "key": "cataracts_entropion",
+          "source_ids": [
+            "S348"
+          ],
+          "ref": "maltese.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "periodontal_daily_brushing",
+          "source_ids": [
+            "S351"
+          ],
+          "ref": "maltese.health.dental",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S347"
+            ],
+            "refs": [
+              "maltese.suitability.rkc_size_of_home",
+              "maltese.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S347"
+            ],
+            "refs": [
+              "maltese.suitability.rkc_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S347",
+              "S348"
+            ],
+            "refs": [
+              "maltese.suitability.rkc_grooming",
+              "maltese.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S351"
+            ],
+            "refs": [
+              "maltese.behaviour.time_alone",
+              "maltese.suitability.petmd_company"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 3000,
+              "cap_month": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2300
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 3000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 30,
+              "steps": 3000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.7
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.maltese.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S347"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S347 'Up to 30 minutes per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.maltese.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+          },
+          {
+            "ref": "proposed_game_parameters.maltese.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S347"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S347)"
+          },
+          {
+            "ref": "proposed_game_parameters.maltese.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 59, Fair tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.maltese.grooming",
+            "basis_source_ids": [
+              "S347"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (RKC »Grooming: Every day« → 7× na teden; PDSA in PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S347"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S347"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S347"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S345",
+        "S346",
+        "S347",
+        "S348",
+        "S351",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -26377,6 +26915,41 @@
       "publisher": "American Kennel Club",
       "title": "English Cocker Spaniel Study Guide (official standard text) (PDF)",
       "url": "https://www.akc.org/wp-content/uploads/2020/01/English_Cocker_Spaniel_Study_Guide.pdf"
+    },
+    {
+      "id": "S345",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — MALTESE (65)",
+      "url": "https://fci.be/EN/nomenclature/BICHON-MALTAIS-65.html"
+    },
+    {
+      "id": "S346",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 65 Maltese (PDF, English, 13.11.2015)",
+      "url": "https://WWW.FCI.BE/medias/065g09-en-20160101-2139.pdf"
+    },
+    {
+      "id": "S347",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Maltese — breed information page (Breeds A to Z)",
+      "url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/maltese"
+    },
+    {
+      "id": "S348",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Maltese breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/maltese"
+    },
+    {
+      "id": "S351",
+      "tier": "B",
+      "publisher": "PetMD",
+      "title": "Maltese Dog Breed Health and Care (updated Oct. 2, 2024)",
+      "url": "https://www.petmd.com/dog/breeds/maltese"
     },
     {
       "id": "C1",
