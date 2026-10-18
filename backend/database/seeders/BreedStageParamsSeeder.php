@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -531,6 +531,15 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_PUG = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-43)';
 
     /**
+     * M5-R10-44 Rough Collie (unattended run 2026-10-18/19, data.json proposed_game_parameters.rough_collie.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed
+     * on 2026-10-10 — exercise 60 min (RKC S365 "Up to 1 hour per day"), senior 45 min, puppy 10 min × age
+     * capped at 60, stages young 9 / adult 36 / senior 108 (0.75 × RKC lower bound 12 y, S365), arrival
+     * 2 / 9 / 36 / 108, learning multiplier 1.5 (Coren rank 16, Excellent); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_ROUGH_COLLIE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-44)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -678,6 +687,7 @@ class BreedStageParamsSeeder extends Seeder
         'english_cocker_spaniel' => [7, 'S337', 'Grooming: Every day', 'high', false],
         'maltese' => [7, 'S347', 'Grooming: Every day', 'high', false],
         'pug' => [1, 'S355', 'Grooming: Once a week', 'high', false],
+        'rough_collie' => [7, 'S365', 'Grooming: Every day', 'high', false],
     ];
 
     /**
@@ -761,13 +771,14 @@ class BreedStageParamsSeeder extends Seeder
         'english_cocker_spaniel' => ['S339', 'Socialising your Cocker Spaniel from a young age with a variety of people, dogs and experiences will help them develop'],
         'maltese' => ['S348', 'Known to be sweet-natured, they can be reserved with strangers but given the right socialisation when young,'],
         'pug' => ['S359', 'Pug puppies, like all dogs, need to be socialized during their first months of life.'],
+        'rough_collie' => ['S368', 'Puppy socialization is crucial for proper emotional development and intelligence.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1383,6 +1394,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-43 (docs/research/dog-data/data.json pug,
             // S353–S362; runbook rules in proposed_game_parameters.pug).
             BreedType::Pug => self::pugProfile(),
+            // M5-R10-44 (docs/research/dog-data/data.json rough_collie,
+            // S363–S369; runbook rules in proposed_game_parameters.rough_collie).
+            BreedType::RoughCollie => self::roughCollieProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -4236,6 +4250,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'pug.lifespan.median_uk',
                 'quote' => 'Pug (brown, x̃=11.6)',
                 'notes' => 'McMillan et al. 2024, corrected Fig. 3 legend (S54); RKC / PDSA "Over 10 years" (S355, S357) are consistent. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Rough Collie (M5-R10-44). Stage boundaries, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_ROUGH_COLLIE); weight, growth, Coren rank and
+     * lifespan are sourced. The senior boundary uses the RKC lower bound "Over 12 years" (S365) — no
+     * McMillan 2024 / VetCompass median reachable, like the Maltese.
+     *
+     * @return array<string, mixed>
+     */
+    private static function roughCollieProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_ROUGH_COLLIE;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S365', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.rough_collie.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog finishes growing at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S365) = 9 y = 108 months. No McMillan 2024 / VetCompass median was reachable (the corrected McMillan figure S54 names only the Border Collie). Not chosen: 90 (PetMD lower bound 10 y, S368), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rough_collie.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 60 minutes, which 10 × age already reaches at 6 months, so the whole young stage walks the adult minutes.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S365', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rough_collie.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Up to 1 hour per day" (S365) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PetMD (S368) "at least an hour of outdoor exercise daily" gives the same number.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rough_collie.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[22.7, 34.0], [
+                'unit' => 'kg', 'source_id' => 'S367', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'rough_collie.adult_weight.akc',
+                'quote' => 'Dogs are from 24 to 26 inches at the shoulder and weigh from 60 to 75 pounds.',
+                'notes' => 'AKC standard (S367): dogs 60–75 lb (27.2–34.0 kg), bitches 50–65 lb (22.7–29.5 kg); the game range spans both sexes. PetMD (S368) 50–75 lb agrees. The FCI (S364) and RKC (S366) standards give no weight.',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'rough_collie.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (AKC dogs 60–75 lb, the Large class of S10; bitches straddle Medium and Large; RKC size "Large", S365).',
+            ]],
+            'coren_rank' => [16, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'rough_collie.trainability.coren_rank',
+                'quote' => '| 16 | Collie |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 16 "Collie", tier "Excellent Working Dogs" (ranks 11–26). Not in Coren\'s own top / bottom-10 article (S34).',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rough_collie.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 16 (S35) in the "Excellent" tier (ranks 11–26) → 1.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S365', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'rough_collie.lifespan.rkc',
+                'quote' => 'Lifespan: Over 12 years',
+                'notes' => 'RKC Breeds A–Z lower bound (S365); PetMD 10–14 y (S368) is consistent. No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

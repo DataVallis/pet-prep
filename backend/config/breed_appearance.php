@@ -404,6 +404,16 @@
 | eyes that do not bulge, a fit body (dog trait `muzzle`, French Bulldog precedent). Never merle (the RKC
 | does not register merle Pugs, S355). Colour weights are unsourced → `verified => false`.
 |
+| Rough Collie (M5-R10-44, docs/research/dog-data rough_collie.appearance): "Appears as a dog of great
+| beauty, standing with impassive dignity, with no part out of proportion to whole." (FCI 156, S364); coat
+| "Fits outline of body, very dense. Outer coat straight and harsh to touch," with a very abundant mane and
+| frill and a smooth face (RKC standard S366); nose "Always black."; muzzle "End of smooth, well rounded muzzle
+| blunt, never square."; ears semi-erect when alert; tail long, carried low with a slight upward swirl.
+| Colours: sable, tricolour, blue merle ("Any other colour or combination of colours unacceptable.", S364),
+| all with "typical white Collie markings" (S366) — sable and white weighted highest (the register portrait).
+| Never white (AKC only), cream or a double merle. Not a welfare breed (Breed Watch Category 2 without a
+| named point, S365). Colour weights are unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -1977,6 +1987,41 @@ return [
             'muzzle' => ['moderate short, blunt, square muzzle with a black nose, clearly open nostrils and light forehead wrinkles, no heavy over-nose wrinkle'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+
+    // M5-R10-44 (docs/research/dog-data/data.json rough_collie.appearance; runbook rules 2026-10-10:
+    // standard colours only — sable and white, tricolour, blue merle).
+    'rough_collie' => [
+        'display_name' => 'Rough Collie',
+        // Colour frequencies are in no source (rough_collie.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 156 (S364, https://fci.be/Nomenclature/Standards/156g01-en.pdf), RKC breed standard (S366), RKC breed page (S365) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S365 "Size: Large"; S364 height males "56 – 61 cm"',
+            'build' => 'S364 "Appears as a dog of great beauty, standing with impassive dignity, with no part out of proportion to whole."',
+            'coat_length' => 'S364 "Fits outline of body, very dense. Outer coat straight and harsh to touch,"; S366 "mane and frill very abundant, mask and face smooth,"',
+            'coat_color' => 'S364 "Any other colour or combination of colours unacceptable." (sable, tricolour, blue merle); S366 "All should carry typical white Collie markings to a greater or lesser degree." (weights unsourced; never a double merle — RKC S365)',
+            'ear_carriage' => 'S364 "In repose carried thrown back, but on alert brought forward and carried semi-erect,"',
+            'eye_color' => 'S364 "Medium size (never very small) set somewhat obliquely, of almond-shape and dark brown colour,"',
+            'tail' => 'S364 "Long with bone reaching at least to hock joint. Carried low when quiet but with slight upward swirl at tip."',
+            'nose' => 'S364 "Always black."; "End of smooth, well rounded muzzle blunt, never square."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'balanced, dignified and elegant, no part out of proportion', 'weight' => 3], 'lithe and athletic with a deep chest'],
+            'coat_length' => ['very dense, long, straight and harsh outer coat with a soft undercoat, very abundant mane and frill, smooth face'],
+            // Standard colours only (S364, S366); sable and white highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'sable and white', 'weight' => 60],
+                ['value' => 'tricolour (black with tan markings and white)', 'weight' => 25],
+                ['value' => 'blue merle and white', 'weight' => 15],
+            ],
+            'ear_carriage' => ['semi-erect ears with the tips tipping forward'],
+            'eye_color' => ['medium, almond-shaped, dark brown eyes set somewhat obliquely'],
+            'tail' => ['long tail carried low with a slight upward swirl at the tip, profusely haired'],
+            'nose' => ['black nose, long, smooth, well-rounded blunt muzzle (never square, not short-faced)'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',
