@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `maltese` (viri S345–S352; ponovno S8, S10, S11, S14, S24, S35, S45, S174) |
 | Izvor | FCI št. 65, skupina 9, sekcija 1 (bišoni in sorodne pasme), osrednje Sredozemlje, pokroviteljska država Italija (S345) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 37. mesto »Maltese« (S174) |
-| PR-ji | pet-prep #269 (pasma) · portret: čaka na namestitev produkcije · spletna stran #… |
+| PR-ji | pet-prep #269 (pasma) · portret: čaka na namestitev produkcije · spletna stran #71 |
 
 ## Odločitve (z viri in kdo je odločil)
 
