@@ -59,6 +59,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   hungarian_vizsla: 'dog',
   english_cocker_spaniel: 'dog',
   maltese: 'dog',
+  pug: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -122,6 +123,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'hungarian_vizsla',
   'english_cocker_spaniel',
   'maltese',
+  'pug',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
