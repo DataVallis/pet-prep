@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `pug` (viri S353–S362; ponovno S8, S10, S11, S14, S24, S35, S45, S54, S92, S93, S174, S236) |
 | Izvor | FCI št. 253, skupina 9, sekcija 11 (mali molosi), izvor Kitajska, pokroviteljska država Velika Britanija (S353) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 38. mesto »Pug« (S174) |
-| PR-ji | pet-prep #270 (pasma) · portret: čaka na namestitev produkcije · spletna stran: glej vrstico v `BREED_QUEUE.md` |
+| PR-ji | pet-prep #270 (pasma) · portret: čaka na namestitev produkcije · spletna stran #72 |
 
 ## Odločitve (z viri in kdo je odločil)
 
