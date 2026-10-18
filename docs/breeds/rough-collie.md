@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `rough_collie` (viri S363–S369; ponovno S8, S10, S11, S14, S24, S35, S45, S54, S92, S174) |
 | Izvor | FCI št. 156, skupina 1, sekcija 1 (ovčarski psi), Velika Britanija (S363) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 39. mesto »Collie« (S174). AKC vodi dolgodlakega in kratkodlakega škotskega ovčarja kot eno pasmo; FCI in RKC ju ločita — zgradili smo dolgodlakega (pogostejšega) |
-| PR-ji | pet-prep #271 (pasma) · portret: čaka na namestitev produkcije · spletna stran: (v teku) |
+| PR-ji | pet-prep #271 (pasma) · portret: čaka na namestitev produkcije · spletna stran #73 |
 
 ## Odločitve (z viri in kdo je odločil)
 
