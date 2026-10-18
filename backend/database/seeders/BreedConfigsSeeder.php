@@ -933,7 +933,7 @@ class BreedConfigsSeeder extends Seeder
                 'species' => 'dog',
                 'sort_order' => 400,
                 'label_key' => 'breeds.rough_collie',
-                'search_keywords' => ['rough collie', 'collie', 'dolgodlaki škotski ovčar', 'dolgodlaki skotski ovcar', 'škotski ovčar', 'skotski ovcar', 'koli', 'long-haired collie', 'collie rough'],
+                'search_keywords' => ['rough collie', 'collie', 'dolgodlaki škotski ovčar', 'dolgodlaki skotski ovcar', 'škotski ovčar', 'skotski ovcar', 'long-haired collie', 'collie rough'],
             ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.

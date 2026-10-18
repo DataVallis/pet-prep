@@ -115,7 +115,7 @@ describe('breed, config and database', function () {
             ->and($breed->isPremium())->toBeTrue()
             ->and([$config->species, $config->premium_unlock, $config->sort_order, $config->label_key])
             ->toBe([Species::Dog, true, 400, 'breeds.rough_collie'])
-            ->and($config->search_keywords)->toBe(['rough collie', 'collie', 'dolgodlaki škotski ovčar', 'dolgodlaki skotski ovcar', 'škotski ovčar', 'skotski ovcar', 'koli', 'long-haired collie', 'collie rough'])
+            ->and($config->search_keywords)->toBe(['rough collie', 'collie', 'dolgodlaki škotski ovčar', 'dolgodlaki skotski ovcar', 'škotski ovčar', 'skotski ovcar', 'long-haired collie', 'collie rough'])
             // Legacy fallback = the adult step goal (60 min × 100 steps).
             ->and($config->daily_steps_required)->toBe((int) rcData('proposed_game_parameters.rough_collie.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(6000);
