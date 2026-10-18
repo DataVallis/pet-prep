@@ -20819,6 +20819,661 @@
       }
     }
   },
+  "maltese": {
+    "_note": "Added 2026-10-18 (M5-R10-42, unattended run — appended after the English Cocker Spaniel: AKC 2024 No. 37 'Maltese', S174 full-list table '36 English Cocker Spaniel', '37 Maltese', '38 Pug'). Quotes as returned by the web-fetch tool on 2026-10-18 (fragments marked as such); paraphrase only in notes. Sources S345–S352. No health percentages anywhere.",
+    "identity": {
+      "value": "FCI No. 65, Group 9 Section 1 (Bichons and related breeds), Italy",
+      "unit": "—",
+      "source_id": "S345",
+      "quote": "MALTESE (65)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S345): group 'n°9 - Chiens d'agrément et de compagnie', section 'Bichons et apparentés', country of origin 'BASSIN MEDITERRANEEN CENTRAL', country of patronage 'ITALIE' (the register shows the patronage country, Italy); no working trial; definitive acceptance '13/04/1955'. FCI standard (S346) dated 13.11.2015, valid from 01/01/2016."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S347",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "RKC Breeds A–Z key facts (S347) 'Size: Small'; PDSA (S348) 'Small'; RKC Toy group. 3–4 kg (FCI S346, PDSA S348) = 6.6–8.8 lb → the 'Toy (5–12 pounds)' class of S10 for growth."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            21,
+            25
+          ],
+          "female": [
+            20,
+            23
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S346",
+        "quote": "Height at the withers: Males from 21–25 cm.",
+        "confidence": "high",
+        "notes": "FCI standard (S346): 'Females from 20–23 cm.'"
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            25,
+            25
+          ],
+          "female": [
+            25,
+            25
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S348",
+        "quote": "25 cm",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average height' (S348), one value for both sexes. Alternative only."
+      },
+      "akc": {
+        "value": null,
+        "unit": "cm",
+        "source_id": "S349",
+        "quote": null,
+        "confidence": "low",
+        "notes": "AKC standard (S349) gives no height, only weight ('Weight under 7 pounds, with from 4 to 6 pounds preferred.'). PetMD (S351): 'Maltese dogs weigh under 7 pounds and stand 7–9 inches tall.' (background)."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            3,
+            4
+          ],
+          "female": [
+            3,
+            4
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S346",
+        "quote": "Weight: 3–4 kg.",
+        "confidence": "high",
+        "notes": "FCI standard (S346), one range for both sexes (stored per sex). PDSA (S348) 'Average weight' '3kg-4kg' agrees. The game range (adult_weight_kg)."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            3,
+            4
+          ],
+          "female": [
+            3,
+            4
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S348",
+        "quote": "3kg-4kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average weight' (S348). Agrees with the FCI."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            1.8,
+            2.7
+          ],
+          "female": [
+            1.8,
+            2.7
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S349",
+        "quote": "Weight under 7 pounds, with from 4 to 6 pounds preferred.",
+        "confidence": "high",
+        "notes": "AKC standard (S349): 4–6 lb preferred = 1.8–2.7 kg (pounds × 0.4536 by us); under 7 lb = 3.2 kg. Lighter than the FCI / PDSA range; alternative only."
+      },
+      "salt_category": {
+        "value": "I",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 3–4 kg = the smallest band. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "8–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Toy (5–12 pounds): 8–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. 3–4 kg = 6.6–8.8 lb → 'Toy (5–12 pounds)'. The game is unaffected (the puppy cap of 30 min is reached at 3 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Maltese growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S347",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key facts (S347). PDSA (S348) 'Over 12 years' agrees. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "pdsa": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S348",
+        "quote": "Over 12 years",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average lifespan' (S348). Same lower bound as the RKC → same senior boundary (108)."
+      },
+      "petmd": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S351",
+        "quote": "The typical Maltese lifespan is 12–15 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S351, tier B). Alternative only (lower bound 12 y → 108 months, the same)."
+      },
+      "mcmillan_2024": {
+        "value": 13.1,
+        "unit": "years",
+        "source_id": "S352",
+        "quote": "A 2024 UK study found a life expectancy of 13.1 years for the breed",
+        "confidence": "low",
+        "notes": "McMillan et al. 2024 as quoted by Wikipedia (S352, tier C — never alone). The Dogs Trust breed table (S123) and the paper were not reachable on 2026-10-18 (fetch tool provenance refusal) → not used as the basis; with it the senior boundary would be round(0.75 × 13.1 × 12) = round(117.9) = 118 months. Verify in S123 before replacing the RKC lower bound. Wikipedia also quotes an Italian 2024 study (Roccaro et al.) at 11 years — background only."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12 y (RKC lower bound 'Over 12 years', S347) → 0.75 × 12 = 9 y = 108 months. With McMillan 2024 13.1 y (via S352): 118 months; Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S347"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 30",
+        "unit": "minutes/day",
+        "source_id": "S347",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key facts (S347). PDSA (S348): 'Maltese don’t require much in the way of exercise, with up to half an hour a day usually sufficient.' (key facts: minimum exercise per day '30 minutes') — sources agree on 30."
+      },
+      "energy": {
+        "value": "needs daily activity but no vigorous exercise",
+        "unit": "—",
+        "source_id": "S351",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S351) fragment as returned: 'they don’t require vigorous exercise' (paraphrase: daily activity needed). RKC Toy group text (S347): 'They do not need a large amount of exercise and some can be finicky eaters.'"
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B source found on a gap between meals and exercise for this breed → no meal_exercise_gap row."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "lively, affectionate, very calm and very intelligent",
+        "unit": "—",
+        "source_id": "S346",
+        "quote": "BEHAVIOUR/TEMPERAMENT: Lively, affectionate, very calm and very intelligent.",
+        "confidence": "high",
+        "notes": "FCI standard (S346). AKC (S349): 'He is among the gentlest mannered of all little dogs, yet he is lively and playful as well as vigorous.' PDSA (S348): 'Maltese are very bright, friendly and affectionate.'"
+      },
+      "strangers": {
+        "value": "sweet-natured, can be reserved with strangers",
+        "unit": "—",
+        "source_id": "S348",
+        "quote": "Known to be sweet-natured, they can be reserved with strangers but given the right socialisation when young,",
+        "confidence": "medium",
+        "notes": "PDSA (S348) fragment as returned (the sentence continues: they can learn to be confident and sociable — paraphrase)."
+      },
+      "family": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No explicit family-pet statement in an A/B source (RKC S347 Toy group: friendly personalities, love attention — general). No family_pet chip."
+      },
+      "children": {
+        "value": "supervise interactions with young children; rambunctious children may accidentally hurt this tiny dog",
+        "unit": "—",
+        "source_id": "S351",
+        "quote": "Interactions between them and young children must be supervised.",
+        "confidence": "medium",
+        "notes": "PetMD (S351); AKC (S350): 'it's important to supervise any interactions between a Maltese and young children' (fragment). PetMD: rambunctious children 'may accidentally hurt this tiny dog' (fragment). A supervision advice — no children chip, no new chip (open for David)."
+      },
+      "socialisation": {
+        "value": "given the right socialisation when young, can learn to be confident and sociable",
+        "unit": "—",
+        "source_id": "S348",
+        "quote": "Known to be sweet-natured, they can be reserved with strangers but given the right socialisation when young,",
+        "confidence": "medium",
+        "notes": "PDSA (S348) fragment as returned. PetMD (S351): 'Socializing and training are also commitments pet parents must make when bringing home a Maltese puppy.' Basis of the puppy socialisation row (M5-R17)."
+      },
+      "time_alone": {
+        "value": "can develop separation anxiety when left alone for too long",
+        "unit": "—",
+        "source_id": "S351",
+        "quote": "This breed can develop separation anxiety when left alone for too long.",
+        "confidence": "medium",
+        "notes": "PetMD (S351). PDSA (S348) does not cover time alone. Basis of needs_company."
+      },
+      "other_pets": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not covered by the RKC (S347), PDSA (S348) or PetMD (S351). No other_pets / chases_small_pets chip."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found."
+      },
+      "food_motivation": {
+        "value": "some toy dogs can be finicky eaters",
+        "unit": "—",
+        "source_id": "S347",
+        "quote": "They do not need a large amount of exercise and some can be finicky eaters.",
+        "confidence": "low",
+        "notes": "RKC Toy group text (S347), not breed-specific. No food_motivated_weight chip."
+      },
+      "training_notes": {
+        "value": "smart; picks up cues quickly with positive reinforcement",
+        "unit": "—",
+        "source_id": "S351",
+        "quote": "Maltese are smart dogs that can pick up training cues quickly when positive reinforcement is used.",
+        "confidence": "medium",
+        "notes": "PetMD (S351); PDSA (S348) recommends reward-based techniques (paraphrase)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 1 (S347: 'Currently no points of concern specific to this breed have been identified for special attention by judges') → no welfare chip. PDSA (S348) lists luxating patellas, hydrocephalus, portosystemic shunt, dental problems, heart disease, Chiari malformation with syringomyelia, cataracts and entropion (list items, paraphrase); PetMD (S351) luxating patellas, patent ductus arteriosus, liver shunts and periodontal disease.",
+      "patella": {
+        "value": "luxating patellas (kneecaps that slip)",
+        "unit": "—",
+        "source_id": "S348",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S348) health list; PetMD (S351) the same (paraphrase). Background only."
+      },
+      "liver_shunt": {
+        "value": "portosystemic (liver) shunt",
+        "unit": "—",
+        "source_id": "S348",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S348) 'portosystemic shunt'; PetMD (S351) 'liver shunts' (paraphrase). Background only."
+      },
+      "heart": {
+        "value": "heart disease, incl. patent ductus arteriosus",
+        "unit": "—",
+        "source_id": "S348",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S348) heart disease; PetMD (S351) patent ductus arteriosus (paraphrase). Background only."
+      },
+      "cm_sm": {
+        "value": "Chiari malformation with syringomyelia",
+        "unit": "—",
+        "source_id": "S348",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S348) health list (paraphrase). The RKC (S347) lists no CM/SM scheme for the breed. Background only."
+      },
+      "hydrocephalus": {
+        "value": "hydrocephalus",
+        "unit": "—",
+        "source_id": "S348",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S348) health list (paraphrase). Background only."
+      },
+      "eyes": {
+        "value": "cataracts and entropion — eye testing of the parents (BVA/KC/ISDS Eye Scheme)",
+        "unit": "—",
+        "source_id": "S347",
+        "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+        "confidence": "medium",
+        "notes": "RKC best-practice test (S347); PDSA (S348) lists cataracts and entropion (paraphrase). Not a Breed Watch point → no eyelid chip."
+      },
+      "dental": {
+        "value": "heightened risk of periodontal disease — daily tooth brushing",
+        "unit": "—",
+        "source_id": "S351",
+        "quote": "Maltese dogs are at a heightened risk of periodontal disease.",
+        "confidence": "medium",
+        "notes": "PetMD (S351); PDSA (S348) lists dental problems. Tooth care advice: see suitability.petmd_teeth (ROADMAP M5-R15)."
+      },
+      "tear_staining": {
+        "value": "white coat predisposed to tear staining — routine cleaning",
+        "unit": "—",
+        "source_id": "S351",
+        "quote": "Their white coat can predispose the Maltese to tear staining.",
+        "confidence": "medium",
+        "notes": "PetMD (S351): routine cleaning with a tear stain remover 'will help keep this to a minimum' (fragment). Face / eye care need without a mechanic → ROADMAP M5-R14."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 59,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "59 | Griffon Bruxellois\nMaltese",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-10-18): rank 59 'Griffon Bruxellois', 'Maltese' (table cell as returned), tier 'Fair Working/Obedience Intelligence' (ranks 55–69). Coren's own top / bottom-10 article (S34) does not list the breed. Wikipedia 'Maltese dog' (S352) agrees: 'It is ranked 59th of 79 breeds assessed for intelligence by Stanley Coren.' Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Fair",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 40 to 80 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier definition as returned: 'Obey first command: 30% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "smart; positive reinforcement",
+        "unit": "—",
+        "source_id": "S351",
+        "quote": "Maltese are smart dogs that can pick up training cues quickly when positive reinforcement is used.",
+        "confidence": "medium",
+        "notes": "PetMD (S351)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.maltese.learning_multiplier (0.7, runbook rule: Fair tier, rank 59).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "small, longish body, covered from head to foot with a mantle of very long, silky, pure white hair; proud head carriage",
+        "unit": "—",
+        "source_id": "S346",
+        "quote": "Of small size, longish body.",
+        "confidence": "high",
+        "notes": "FCI (S346); AKC (S349): 'The Maltese is a toy dog covered from head to foot with a mantle of long, silky, white hair.'"
+      },
+      "colours": {
+        "value": [
+          "white"
+        ],
+        "unit": "list",
+        "source_id": "S346",
+        "quote": "Colour: Pure white, a pale ivory tinge is permitted.",
+        "confidence": "high",
+        "notes": "FCI (S346): 'Traces of pale orange shades are tolerated but not desirable and constitute an imperfection.'; any colour other than white (except pale ivory) and patches of colour are disqualifying (paraphrase). AKC (S349): 'Color, pure white.' 'Light tan or lemon on the ears is permissible, but not desirable.' The game uses pure white only."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). One colour (pure white) → weight 1; it is the portrait default."
+      },
+      "coat": {
+        "value": "single coat without undercoat: dense, shiny, silky, very long and straight, never curly or woolly",
+        "unit": "—",
+        "source_id": "S346",
+        "quote": "Hair: Dense, shiny, glossy - falling heavily and of a silky texture, very long on the whole of the body",
+        "confidence": "high",
+        "notes": "FCI (S346) fragment as returned; 'There is no undercoat.' AKC (S349): 'The coat is single, that is, without undercoat.' 'Any suggestion of kinkiness, curliness, or woolly texture is objectionable.' The game draws a natural long coat (pet length allowed; no show wrap, no bows)."
+      },
+      "nose": {
+        "value": "absolutely black nose; muzzle slightly less than half the head (not short-faced)",
+        "unit": "—",
+        "source_id": "S349",
+        "quote": "The nose is black.",
+        "confidence": "high",
+        "notes": "AKC (S349): 'The muzzle is of medium length, fine and tapered but not snipy.' FCI (S346): nose 'absolutely black' (fragment). Not a short-faced breed."
+      },
+      "ears": {
+        "value": "almost triangular drop ears, set high, hanging close to the head, heavily feathered",
+        "unit": "—",
+        "source_id": "S346",
+        "quote": "Almost triangular in shape, the width is about 1/3 of the length.",
+        "confidence": "high",
+        "notes": "AKC (S349): 'The drop ears are rather low set and heavily feathered with long hair that hangs close to the head.'"
+      },
+      "eyes": {
+        "value": "very dark, round, black eye rims",
+        "unit": "—",
+        "source_id": "S349",
+        "quote": "Eyes are set not too far apart; they are very dark and round, their black rims enhancing the gentle yet alert expression.",
+        "confidence": "high",
+        "notes": "FCI (S346): 'Lively and attentive expression, larger in size than would be expected, the shape tends to be rounded.'"
+      },
+      "tail": {
+        "value": "long-haired plume carried over the back, tip to the side",
+        "unit": "—",
+        "source_id": "S349",
+        "quote": "A long-haired plume carried gracefully over the back, its tip lying to the side over the quarter.",
+        "confidence": "high",
+        "notes": "FCI (S346): a single big curve, the tip between the haunches (fragment 'Forms a single big curve'); a shortened tail is disqualifying (paraphrase)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC Breeds A–Z (S347), PDSA (S348), PetMD (S351), AKC (S350). The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S347",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "PDSA (S348) the same."
+      },
+      "rkc_exercise": {
+        "value": "Up to 30 minutes per day",
+        "unit": "—",
+        "source_id": "S347",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "Basis of 30 min (PDSA S348 'up to half an hour a day' agrees). Not long_daily_exercise / active_family."
+      },
+      "pdsa_exercise": {
+        "value": "up to half an hour a day",
+        "unit": "—",
+        "source_id": "S348",
+        "quote": "Maltese don’t require much in the way of exercise, with up to half an hour a day usually sufficient.",
+        "confidence": "medium",
+        "notes": "PDSA (S348). Agrees with 30."
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S347",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "Basis of the apartment chip (runbook: only from RKC 'Flat/ Apartment')."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S347",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "Supports apartment."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S347",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "Runbook dog-grooming rule: 'Every day' → 7 (PDSA S348 daily grooming, PetMD S351 daily brushing agree). Basis of frequent_grooming (with PDSA)."
+      },
+      "pdsa_grooming": {
+        "value": "daily grooming",
+        "unit": "—",
+        "source_id": "S348",
+        "quote": "Their coats require daily grooming to keep them in good condition.",
+        "confidence": "medium",
+        "notes": "PDSA (S348). Agrees with the RKC."
+      },
+      "petmd_grooming": {
+        "value": "daily brushing to prevent matting or tangling",
+        "unit": "—",
+        "source_id": "S351",
+        "quote": "Daily brushing is required to prevent their fur from matting or tangling.",
+        "confidence": "medium",
+        "notes": "PetMD (S351). Agrees with the RKC."
+      },
+      "petmd_professional_grooming": {
+        "value": "a short trim needs consistent groomer appointments (only if the coat is kept short; no frequency)",
+        "unit": "—",
+        "source_id": "S351",
+        "quote": "If you keep your dog’s coat trimmed short, you need to have the budget for consistent groomer appointments.",
+        "confidence": "medium",
+        "notes": "PetMD (S351). Conditional on choosing a short trim and without a frequency → recorded, not a game need (open for David; ROADMAP M5-R18 would be the place)."
+      },
+      "rkc_coat_length": {
+        "value": "Long",
+        "unit": "—",
+        "source_id": "S347",
+        "quote": "Coat length: Long",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S347",
+        "quote": "Sheds: No",
+        "confidence": "high",
+        "notes": "Basis of low_shedding (never 'hypoallergenic'). PDSA (S348) does not cover shedding; no conflicting A/B source."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S347",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "See lifespan.rkc."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S347",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S347",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S347",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z (S347) 'Category 1' → no welfare chip; in marketing."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC page (S347) has no 'Good with children' field."
+      },
+      "akc_children": {
+        "value": "supervise interactions with young children",
+        "unit": "—",
+        "source_id": "S350",
+        "quote": "it's important to supervise any interactions between a Maltese and young children",
+        "confidence": "medium",
+        "notes": "AKC (S350) fragment as returned. Supervision advice only — no chip."
+      },
+      "petmd_children": {
+        "value": "supervise with young children; rambunctious children may hurt this tiny dog",
+        "unit": "—",
+        "source_id": "S351",
+        "quote": "Interactions between them and young children must be supervised.",
+        "confidence": "medium",
+        "notes": "PetMD (S351). No chip (supervision advice; no 'older children' or fragile-bones statement) — open for David."
+      },
+      "petmd_company": {
+        "value": "can develop separation anxiety when left alone for too long",
+        "unit": "—",
+        "source_id": "S351",
+        "quote": "This breed can develop separation anxiety when left alone for too long.",
+        "confidence": "medium",
+        "notes": "PetMD (S351). Basis of needs_company."
+      },
+      "petmd_teeth": {
+        "value": "brush the teeth every day with a dog-safe toothpaste and toothbrush",
+        "unit": "—",
+        "source_id": "S351",
+        "quote": "Brushing their teeth every day using a dog-safe toothpaste and toothbrush is the best way to keep their teeth clean and healthy.",
+        "confidence": "medium",
+        "notes": "PetMD (S351). Tooth brushing = sourced need without a mechanic → ROADMAP M5-R15 (needs-david)."
+      },
+      "petmd_ears": {
+        "value": "routine ear cleaning with a vet-approved cleaner",
+        "unit": "—",
+        "source_id": "S351",
+        "quote": "Routine ear cleaning with a veterinary-approved ear cleaner is important for maintaining healthy ear canals.",
+        "confidence": "medium",
+        "notes": "PetMD (S351), also after water exposure (paraphrase). Ear care = sourced need without a mechanic → ROADMAP M5-R20 (needs-david)."
+      },
+      "petmd_tear_staining": {
+        "value": "routine cleaning of tear staining",
+        "unit": "—",
+        "source_id": "S351",
+        "quote": "Their white coat can predispose the Maltese to tear staining.",
+        "confidence": "medium",
+        "notes": "PetMD (S351): routine cleaning with a tear stain remover 'will help keep this to a minimum' (fragment). Face / eye care = sourced need without a mechanic → ROADMAP M5-R14 (needs-david)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -31039,6 +31694,268 @@
         "confidence": "high",
         "notes": "AKC (S343) and FCI (S336) colours and points: self colours (black, liver, red / golden, with or without tan), parti-colours with white (clearly marked, ticked or roaned), tricolours. Golden is the portrait default. Natural tail (FCI undocked description). Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — golden (default), black, liver, black and tan, blue roan, orange roan, black and white, tricolour; never merle; natural tail in the portrait (Claude's proposal)"
+      }
+    },
+    "maltese": {
+      "_note": "Unattended run M5-R10-42 (2026-10-18): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: brushing every day (RKC S347 'Every day', M5-R13); puppy socialisation (PDSA S348 quote, M5-R17). No meal / exercise gap source → no M5-R16 row. Sourced needs without a game mechanic: daily tooth brushing (PetMD S351) → ROADMAP M5-R15; tear-stain / face cleaning (PetMD S351) → ROADMAP M5-R14; routine ear cleaning (PetMD S351) → ROADMAP M5-R20 (needs-david). Senior 108 provisional (RKC lower bound 'Over 12 years', S347 — McMillan 2024 13.1 y only via Wikipedia S352 → 118). Breed Watch Category 1 → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": "S347",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Up to 30 minutes per day' (S347). Rule: one number N ('up to N') → N = 30; PDSA (S348) 'up to half an hour a day' agrees.",
+        "alternatives": [
+          {
+            "value": 30,
+            "source_id": "S348",
+            "notes": "PDSA up to half an hour a day (key facts: minimum 30 minutes)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S347 'Up to 30 minutes per day')"
+      },
+      "step_goal_adult": {
+        "value": 3000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 30 min × 100 steps/min (S45) = 3,000.",
+        "derived_from": [
+          "S347",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min × 100 steps/min → 3,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 23,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 30 = 22.5) = 23 min (half up) → 2,300 steps.",
+        "steps": 2300,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 30 reached at 3 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 30 min (reached at 3 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) = 108 (S11 + RKC lower bound 'Over 12 years', S347; PDSA 'Over 12 years', S348, and PetMD 12–15 y, S351, agree). No McMillan 2024 / VetCompass value reachable. Alternatives: 118 (McMillan 2024 13.1 y via Wikipedia S352, tier C), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S347"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 118,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S347)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 59 (S35), tier 'Fair' (55–69) → 0.7. PetMD 'smart dogs that can pick up training cues quickly' (S351) — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 59, Fair tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S347",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "maltese.suitability.rkc_grooming. RKC (S347) 'Every day' → 7 (runbook dog-grooming rule); PDSA (S348) daily grooming and PetMD (S351) daily brushing agree. Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 7,
+            "source_id": "S348",
+            "notes": "PDSA daily grooming"
+          },
+          {
+            "value": 7,
+            "source_id": "S351",
+            "notes": "PetMD daily brushing"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (RKC »Grooming: Every day« → 7× na teden; PDSA in PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S348",
+        "quote": "Known to be sweet-natured, they can be reserved with strangers but given the right socialisation when young,",
+        "confidence": "medium",
+        "notes": "maltese.behaviour.socialisation (PDSA S348, fragment as returned); PetMD (S351) agrees. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S348)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S351",
+        "quote": "Brushing their teeth every day using a dog-safe toothpaste and toothbrush is the best way to keep their teeth clean and healthy.",
+        "confidence": "medium",
+        "notes": "PetMD (S351), maltese.suitability.petmd_teeth; 'Maltese dogs are at a heightened risk of periodontal disease.' (maltese.health.dental). The game has no tooth-brushing mechanic → ROADMAP M5-R15; this value is its input.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ščetkanje zob vsak dan (7× na teden); mehanike ni → ROADMAP M5-R15 (needs-david)"
+      },
+      "face_care": {
+        "value": null,
+        "unit": "face care — tear staining cleaned around the eyes (sourced need, not built)",
+        "source_id": "S351",
+        "quote": "Their white coat can predispose the Maltese to tear staining.",
+        "confidence": "medium",
+        "notes": "PetMD (S351), maltese.suitability.petmd_tear_staining: routine cleaning with a tear stain remover keeps it to a minimum (paraphrase). No frequency in the source. The game has no face-care mechanic → ROADMAP M5-R14 (Shih Tzu precedent; needs David).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): potreba z virom; mehanika ni zgrajena → ROADMAP M5-R14 (needs-david); vir ne navaja pogostosti"
+      },
+      "ear_care": {
+        "value": "routine ear cleaning with a vet-approved cleaner (also after water); no frequency",
+        "unit": "ear checks (sourced need)",
+        "source_id": "S351",
+        "quote": "Routine ear cleaning with a veterinary-approved ear cleaner is important for maintaining healthy ear canals.",
+        "confidence": "medium",
+        "notes": "PetMD (S351), maltese.suitability.petmd_ears. The game has no ear-care mechanic → ROADMAP M5-R20 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno čiščenje ušes; mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-42); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S347"
+            ],
+            "refs": [
+              "maltese.suitability.rkc_size_of_home",
+              "maltese.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S347 'Size of home: Flat/ Apartment'; 'Size of garden: Small/ medium garden'"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S347"
+            ],
+            "refs": [
+              "maltese.suitability.rkc_shedding"
+            ],
+            "quote": "S347 'Sheds: No'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S347",
+              "S348"
+            ],
+            "refs": [
+              "maltese.suitability.rkc_grooming",
+              "maltese.suitability.pdsa_grooming"
+            ],
+            "quote": "S347 'Grooming: Every day'; S348 'Their coats require daily grooming'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S351"
+            ],
+            "refs": [
+              "maltese.behaviour.time_alone",
+              "maltese.suitability.petmd_company"
+            ],
+            "quote": "S351 'This breed can develop separation anxiety when left alone for too long.'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No explicit family-pet statement in an A/B source.",
+          "children": "Only supervision advice (AKC S350, PetMD S351 'Interactions between them and young children must be supervised.').",
+          "small_children": "No rating; supervision advice only.",
+          "older_children": "PetMD (S351) says rambunctious children may accidentally hurt this tiny dog (fragment) — but no A/B source says the breed is a better fit for older children (Pomeranian AKC wording) or names fragile bones (Yorkshire PDSA wording). Open for David.",
+          "other_pets": "Not covered by any A/B source.",
+          "chases_small_pets": "No prey-drive statement.",
+          "first_time_owner": "No explicit statement.",
+          "active_family": "RKC 'Up to 30 minutes per day' (S347).",
+          "long_daily_exercise": "30 min.",
+          "sheds": "RKC 'Sheds: No'.",
+          "food_motivated_weight": "Only the RKC Toy group note 'some can be finicky eaters' (S347).",
+          "shorter_lifespan": "RKC 'Over 12 years'.",
+          "welfare": "RKC Breed Watch Category 1 (S347) → no welfare chip (patella / liver shunt / heart / CM-SM / eyes are PDSA list items, not Breed Watch points).",
+          "hypoallergenic": "Never (runbook); low_shedding is the honest wording."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, low_shedding; consider frequent_grooming, needs_company"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S347",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S347) — no conformation concern, no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92) → in marketing. Marketing never shows it as hypoallergenic, never as a toy or accessory, never with small children unsupervised (Claude's proposal).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (Breed Watch Category 1)"
+      },
+      "ai_appearance": {
+        "value": "adult Maltese, pure white (the only standard colour); small, longish body; very long, straight, silky single coat falling like a mantle (natural pet length, no show wrap, no bows); very dark round eyes with black rims; black nose; drop ears heavily feathered; plumed tail carried over the back; never any other colour or patches",
+        "unit": "—",
+        "source_id": "S346",
+        "quote": "Colour: Pure white, a pale ivory tinge is permitted.",
+        "confidence": "high",
+        "notes": "FCI (S346) and AKC (S349): pure white only (pale ivory tinge permitted; orange / lemon traces undesirable). Weight 1 unsourced.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colour only — pure white (default, the only option); never any other colour or patches"
       }
     }
   }
