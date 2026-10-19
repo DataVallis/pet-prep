@@ -55,6 +55,10 @@ services:
     ports:
       - "80:80"
       - "443:443"
+      # HTTP/3 (QUIC). Caddy advertises `Alt-Svc: h3=":443"` by default; without the UDP
+      # port iPhones tried h3 into a black hole and a launch request stalled for minutes
+      # (incident 2026-10-19). Needs UFW `443/udp` too (PRODUCTION_DEPLOYMENT.md).
+      - "443:443/udp"
     env_file:
       - /opt/petprep/.env
     environment:
