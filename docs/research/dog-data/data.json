@@ -22196,6 +22196,590 @@
       }
     }
   },
+  "rough_collie": {
+    "_note": "Added 2026-10-18/19 (M5-R10-44, unattended run — appended after the Pug: AKC 2024 No. 39 'Collie', S174 full-list table '37. Maltese', '38. Pug', '39. Collie'). The AKC 'Collie' covers the Rough and the Smooth variety (AKC standard S367 'Official Standard of the Collie Rough'); FCI (156 Rough / 296 Smooth) and RKC treat them as two breeds — this entry is the Rough Collie, the common variety. Quotes as returned by the web-fetch tool on 2026-10-18 (fragments marked as such); paraphrase only in notes. Sources S363–S369 (+ S10, S11, S14, S24, S34, S35, S45, S92, S174). No PDSA breed page found for the Rough Collie (searched pdsa.org.uk) → RKC (S365, S366) + PetMD (S368, tier B) for exercise, grooming, family and care needs. Lifespan: RKC lower bound 'Over 12 years' (S365) → senior 108 months, provisional (McMillan 2024 corrected figure S54 names only the Border Collie; the Dogs Trust table S123 was refused by the fetch tool; no VetCompass median found). RKC Breed Watch Category 2 with only the general line 'can be affected by conformational concerns' (S365) and no named point → no welfare chip (Shetland Sheepdog precedent, open for David); not flat-faced → in marketing.",
+    "identity": {
+      "value": "FCI No. 156, Group 1 Section 1 (Sheepdogs), Great Britain",
+      "unit": "—",
+      "source_id": "S363",
+      "quote": "COLLIE ROUGH (156)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S363): Group 'n°1 - Sheepdogs and Cattledogs (except Swiss Cattledogs)', section 'Sheepdogs', country of origin 'GREAT BRITAIN'; definitive acceptance 4/13/1955; valid standard published 9/8/2026 (FCI standard S364: 08.09.2026); 'Not subject to a working trial according to the FCI breeds nomenclature'. The Smooth Collie is FCI 296 (not this breed)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S365",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "RKC breed page key facts (S365). FCI height 56–61 cm dogs / 51–56 cm bitches (S364); AKC 50–75 lb (S367) → the Large class of S10 for males, bitches straddle Medium and Large. RKC group: Pastoral."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            56,
+            61
+          ],
+          "female": [
+            51,
+            56
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S364",
+        "quote": "56 – 61 cm",
+        "confidence": "high",
+        "notes": "FCI standard (S364) 'Size and weight': height at the withers males '56 – 61 cm', females '51 – 56 cm' (quote = the males' value as returned). RKC standard (S366): 'dogs: 56-61 cms (22-24 ins) at shoulder; bitches: 51-56 cms (20-22 ins).' — agrees."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            61,
+            66
+          ],
+          "female": [
+            55.9,
+            61
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S367",
+        "quote": "Dogs are from 24 to 26 inches at the shoulder and weigh from 60 to 75 pounds.",
+        "confidence": "high",
+        "notes": "AKC standard (S367), inches converted to cm (× 2.54) by us: dogs 24–26 in ≈ 61–66 cm; bitches 22–24 in ≈ 55.9–61 cm ('Bitches are from 22 to 24 inches at the shoulder, weighing from 50 to 65 pounds.'). The American type is taller; the game draws the FCI size."
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": [
+            27.2,
+            34.0
+          ],
+          "female": [
+            22.7,
+            29.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S367",
+        "quote": "Dogs are from 24 to 26 inches at the shoulder and weigh from 60 to 75 pounds. Bitches are from 22 to 24 inches at the shoulder, weighing from 50 to 65 pounds.",
+        "confidence": "high",
+        "notes": "AKC standard (S367): the two consecutive sentences of the standard (returned separately by the tool, joined here): dogs 60–75 lb, bitches 50–65 lb. Pounds converted to kg (× 0.4536) by us: 60 lb ≈ 27.2 kg, 75 lb ≈ 34.0 kg, 50 lb ≈ 22.7 kg, 65 lb ≈ 29.5 kg. The game range (adult_weight_kg). The FCI standard (S364) and the RKC standard (S366) give no weight (tool summaries: 'The document does not specify weights'; 'The page gives no weight measurements.')."
+      },
+      "petmd": {
+        "value": {
+          "male": [
+            22.7,
+            34.0
+          ],
+          "female": [
+            22.7,
+            34.0
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S368",
+        "quote": "The Collie is a medium to large breed dog, weighing 50-75 pounds and standing about 2 feet high at the shoulder.",
+        "confidence": "medium",
+        "notes": "PetMD (S368), one range for both sexes (stored per sex); 50–75 lb ≈ 22.7–34.0 kg — agrees with the AKC standard."
+      },
+      "salt_category": {
+        "value": "IV",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): about 23–34 kg. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. AKC dogs 60–75 lb are 'Large'; bitches 50–65 lb straddle 'Medium (24–59 pounds): 12–15 months' and Large (Golden Retriever precedent). The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Rough Collie growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S365",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S365). The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "10–14",
+        "unit": "years",
+        "source_id": "S368",
+        "quote": "They typically live 10-14 years with appropriate care.",
+        "confidence": "medium",
+        "notes": "PetMD (S368). Lower bound 10 y → 90 months (alternative only; the rule prefers the RKC value)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024: the corrected Fig. 3 legend (S54, re-read 2026-10-18) names only the 'Border Collie (dark blue, x̃=13.1)' among collies; the Dogs Trust breed table (S123) was refused by the fetch tool on 2026-10-18 (provenance). Wikipedia (S369) gives no life expectancy. UNSOURCED — verify in S123 before replacing the RKC lower bound."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12 y (RKC lower bound 'Over 12 years', S365) → 0.75 × 12 = 9 y = 108 months. With PetMD's lower bound 10 y (S368): 90 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S365"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S365",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S365). PetMD (S368): Collies need 'at least an hour of outdoor exercise daily' (fragment as returned) — the same number."
+      },
+      "petmd": {
+        "value": "≥ 60",
+        "unit": "minutes/day",
+        "source_id": "S368",
+        "quote": "at least an hour of outdoor exercise daily",
+        "confidence": "medium",
+        "notes": "PetMD (S368), fragment as returned."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "friendly disposition with no trace of nervousness or aggressiveness; a great companion dog, friendly, happy and active",
+        "unit": "—",
+        "source_id": "S364",
+        "quote": "Friendly disposition with no trace of nervousness or aggressiveness.",
+        "confidence": "high",
+        "notes": "FCI standard (S364) 'Behaviour/Temperament'; the RKC standard (S366) has the same sentence and adds 'A great companion dog, friendly, happy and active, good with children and other dogs.'"
+      },
+      "family": {
+        "value": "a great companion dog, good with children and other dogs; affectionate, especially with children",
+        "unit": "—",
+        "source_id": "S366",
+        "quote": "A great companion dog, friendly, happy and active, good with children and other dogs.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S366, tier A). PetMD (S368): 'Collies are affectionate with humans, especially children.' Basis of children (explicit statement, no supervision caveat in the source). No 'family life' statement → no family_pet (open for David); no rating for small children → no small_children."
+      },
+      "herding_children": {
+        "value": "may nip at ankles and heels when excited (herding behaviour)",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": "they may nip at ankles and heels when excited",
+        "confidence": "medium",
+        "notes": "PetMD (S368), fragment as returned; the page links it to the Collie's herding background (tool summary: 'herding-related nipping'). → may_herd_children (Border Collie / Shetland Sheepdog precedent)."
+      },
+      "socialisation": {
+        "value": "puppy socialisation is crucial",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": "Puppy socialization is crucial for proper emotional development and intelligence.",
+        "confidence": "medium",
+        "notes": "PetMD (S368) → proposed_game_parameters.rough_collie.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "time_alone": {
+        "value": "does not do well alone for long periods",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": "do not do well by themselves for long periods of time.",
+        "confidence": "medium",
+        "notes": "PetMD (S368), fragment as returned; also 'Households that would have to leave a Collie alone for 8 or more hours a day may not provide an ideal environment.' → needs_company."
+      },
+      "other_pets": {
+        "value": "good with other dogs and other animals",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": "are good with other animals.",
+        "confidence": "medium",
+        "notes": "PetMD (S368), fragment as returned ('Collies … are good with other animals'); RKC standard (S366) 'good with children and other dogs.' → other_pets. No prey-drive statement → no chases_small_pets."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found (RKC S365, PetMD S368 checked) → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S368) advises a slow-feed bowl for fast eaters (paraphrase) — not a weight statement → no food_motivated_weight tag."
+      },
+      "training_notes": {
+        "value": "easy to train but can quickly become bored",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": "Collies are notoriously easy to train but can quickly become bored.",
+        "confidence": "medium",
+        "notes": "PetMD (S368). Not a first-time-owner statement; 'become bored' is not a stated need for mental challenges → no needs_mental_stimulation (open for David)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 2 (S365): the breed 'can be affected by conformational concerns' — no named point → no welfare chip (open for David). The RKC does not register puppies from merle-to-merle matings born on or after 1 January 2013 (S365, tool summary) — the game never shows a double merle. PetMD (S368) main concerns: Collie eye anomaly, MDR1 mutation, progressive retinal atrophy and dermatomyositis.",
+      "eye_conditions": {
+        "value": "Collie eye anomaly and progressive retinal atrophy; eye-tested and DNA-tested parents",
+        "unit": "—",
+        "source_id": "S365",
+        "quote": "DNA test for Collie eye anomaly/ choroidal hypoplasia (CEA/CH)",
+        "confidence": "medium",
+        "notes": "RKC breed page (S365): Good Practice 'Eye testing using the BVA/KC/ISDS Eye Scheme (including litter screening)'; Best Practice DNA tests for CEA/CH and PRA-rcd2 (→ breeder checklist). PetMD (S368) names Collie eye anomaly and progressive retinal atrophy among the main concerns (paraphrase)."
+      },
+      "mdr1": {
+        "value": "multi-drug resistance (MDR1) — affects how some medicines are processed; DNA test",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": "MDR1 (Multi-Drug Resistance) Mutation is a genetic condition that affects the way Collies process certain drugs.",
+        "confidence": "medium",
+        "notes": "PetMD (S368); RKC (S365) Best Practice 'DNA test for Multi-drug resistance (MDR1)'. Important for parents: tell the vet the dog is a Collie."
+      },
+      "degenerative_myelopathy": {
+        "value": "degenerative myelopathy — DNA test",
+        "unit": "—",
+        "source_id": "S365",
+        "quote": "DNA test for Degenerative myelopathy (DM)",
+        "confidence": "medium",
+        "notes": "RKC (S365) Best Practice; PetMD (S368) lists it among other risks (paraphrase)."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia — hip-scored parents",
+        "unit": "—",
+        "source_id": "S365",
+        "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+        "confidence": "medium",
+        "notes": "RKC (S365) Good Practice. Not a Breed Watch point → no hips_hind_legs chip."
+      },
+      "dermatomyositis": {
+        "value": "dermatomyositis (skin and muscle inflammation)",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S368) main concerns, tool summary (paraphrase). Not a Breed Watch point → no sensitive_skin chip."
+      },
+      "other": {
+        "value": "skin disorders, patent ductus arteriosus, deafness, epilepsy, blood disorders, other eye disorders",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S368) list of other risks, tool summary (paraphrase). Background only."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 16,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 16 | Collie |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-10-18): rank 16 'Collie', tier 'Excellent Working Dogs' (ranks 11–26) — the table row as returned by the tool. Not in Coren's own top / bottom-10 article (S34)."
+      },
+      "coren_tier": {
+        "value": "Excellent",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 5 to 15 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier definition as returned: 'Obey first command: 85% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "notoriously easy to train but can quickly become bored",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": "Collies are notoriously easy to train but can quickly become bored.",
+        "confidence": "medium",
+        "notes": "PetMD (S368)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.rough_collie.learning_multiplier (1.5, runbook rule: Excellent tier, rank 16).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "a dog of great beauty, standing with impassive dignity, no part out of proportion to the whole",
+        "unit": "—",
+        "source_id": "S364",
+        "quote": "Appears as a dog of great beauty, standing with impassive dignity, with no part out of proportion to whole.",
+        "confidence": "high",
+        "notes": ""
+      },
+      "colours": {
+        "value": [
+          "sable and white",
+          "tricolour",
+          "blue merle"
+        ],
+        "unit": "list",
+        "source_id": "S364",
+        "quote": "Any other colour or combination of colours unacceptable.",
+        "confidence": "high",
+        "notes": "FCI standard (S364): sable 'any shade of light gold to rich mahogany or shaded sable.'; tricolour 'predominantly black with rich tan markings about legs and head.'; blue merle 'predominantly clear, silvery blue, splashed and marbled with black.' RKC standard (S366): 'Sable and white, Tricolour and Blue Merle.'; 'All should carry typical white Collie markings to a greater or lesser degree.'; 'Light straw or cream coloured highly undesirable.' The AKC (S367) also lists 'White' — not an FCI / RKC colour, never drawn. Merle is standard (the RKC registers no merle-to-merle puppies, S365 — the game never draws a mostly white double merle)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Sable and white first with the highest weight (portrait default), then tricolour, blue merle."
+      },
+      "coat": {
+        "value": "very dense, fits the outline; outer coat straight and harsh, undercoat soft, furry and very close; mane and frill very abundant; face smooth",
+        "unit": "—",
+        "source_id": "S364",
+        "quote": "Fits outline of body, very dense. Outer coat straight and harsh to touch,",
+        "confidence": "high",
+        "notes": "FCI (S364); RKC standard (S366): 'undercoat soft, furry and very close almost hiding the skin;' 'mane and frill very abundant, mask and face smooth, ears smooth at tips, but carrying more hair towards base,' 'Hair on tail very profuse.'"
+      },
+      "ears": {
+        "value": "thrown back in repose; brought forward and semi-erect when alert",
+        "unit": "—",
+        "source_id": "S364",
+        "quote": "In repose carried thrown back, but on alert brought forward and carried semi-erect,",
+        "confidence": "high",
+        "notes": "FCI (S364)."
+      },
+      "eyes": {
+        "value": "medium, set somewhat obliquely, almond-shaped, dark brown (blue or blue-flecked allowed in blue merles)",
+        "unit": "—",
+        "source_id": "S364",
+        "quote": "Medium size (never very small) set somewhat obliquely, of almond-shape and dark brown colour,",
+        "confidence": "high",
+        "notes": "FCI (S364): 'except in the case of blue merles when eyes are frequently (one or both, or part of one or both) blue or blue-flecked.'"
+      },
+      "nose": {
+        "value": "flat skull; smooth, well-rounded, blunt muzzle, never square; nose always black",
+        "unit": "—",
+        "source_id": "S364",
+        "quote": "Always black.",
+        "confidence": "high",
+        "notes": "FCI (S364): skull 'Flat.'; muzzle 'End of smooth, well rounded muzzle blunt, never square.' A long-headed breed, not short-faced."
+      },
+      "tail": {
+        "value": "long, bone reaching at least to the hock; carried low with a slight upward swirl at the tip; hair very profuse",
+        "unit": "—",
+        "source_id": "S364",
+        "quote": "Long with bone reaching at least to hock joint. Carried low when quiet but with slight upward swirl at tip.",
+        "confidence": "high",
+        "notes": "FCI (S364); RKC (S366) 'Hair on tail very profuse.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page key facts (S365, older address — the Breeds A–Z address was not returned by search) and the RKC breed standard (S366); PetMD (S368) for exercise, grooming, family, time alone and care needs. No PDSA, Woodgreen or Dogs Trust breed page found for the Rough Collie. The RKC page shows no 'Good with children' field (as returned 2026-10-18).",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S365",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S365",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S365",
+        "quote": "Size of home: Small house",
+        "confidence": "high",
+        "notes": "Not apartment, not large_home (runbook: apartment only from 'Flat/ Apartment', large_home from 'Large house')."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S365",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "Background only (large_home needs RKC 'Large house')."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S365",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "Basis of the daily brushing (7×, runbook dog-grooming rule) and frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S365",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S365",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PetMD (S368): 'They are a mid-level shedding breed and will blow their undercoat twice a year.' — agrees. Basis of the sheds tag."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S365",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "Not shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S365",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S365",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 2",
+        "unit": "—",
+        "source_id": "S365",
+        "quote": "This breed can be affected by conformational concerns.",
+        "confidence": "medium",
+        "notes": "RKC breed page (S365): Breed Watch Category 2 with no named point of concern → no welfare chip (Shetland Sheepdog precedent, open for David)."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page (S365) has no 'Good with children' field; the RKC breed standard (S366) says 'good with children and other dogs'."
+      },
+      "rkc_standard_temperament": {
+        "value": "a great companion dog, good with children and other dogs",
+        "unit": "—",
+        "source_id": "S366",
+        "quote": "A great companion dog, friendly, happy and active, good with children and other dogs.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S366). Basis of children and other_pets."
+      },
+      "petmd_exercise": {
+        "value": "at least an hour of outdoor exercise daily",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": "at least an hour of outdoor exercise daily",
+        "confidence": "medium",
+        "notes": "PetMD (S368), fragment as returned."
+      },
+      "petmd_grooming": {
+        "value": "at least weekly brushing; monthly bathing",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": "Collies require at least weekly brushing and monthly bathing.",
+        "confidence": "medium",
+        "notes": "PetMD (S368). The same page also says, verbatim as returned: 'Daily brushing is recommended to keep it healthy and clean.' — agrees with RKC 'Every day'; weekly = alternative 1."
+      },
+      "petmd_children": {
+        "value": "affectionate, especially with children",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": "Collies are affectionate with humans, especially children.",
+        "confidence": "medium",
+        "notes": "PetMD (S368)."
+      },
+      "petmd_other_pets": {
+        "value": "good with other animals",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": "are good with other animals.",
+        "confidence": "medium",
+        "notes": "PetMD (S368), fragment as returned."
+      },
+      "petmd_company": {
+        "value": "not well alone for long periods; 8 or more hours alone may not suit",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": "do not do well by themselves for long periods of time.",
+        "confidence": "medium",
+        "notes": "PetMD (S368): 'Households that would have to leave a Collie alone for 8 or more hours a day may not provide an ideal environment.' Basis of needs_company."
+      },
+      "petmd_herding": {
+        "value": "may nip at ankles and heels when excited",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": "they may nip at ankles and heels when excited",
+        "confidence": "medium",
+        "notes": "PetMD (S368). Basis of may_herd_children."
+      },
+      "petmd_nails": {
+        "value": "nail trimming about every other week",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": "They also need nail trimming about every other week, depending on wear.",
+        "confidence": "medium",
+        "notes": "PetMD (S368). Nail trimming = sourced need without a mechanic → ROADMAP M5-R19 (needs-david)."
+      },
+      "petmd_ears_bathing": {
+        "value": "routine ear cleaning at bath time; monthly bathing",
+        "unit": "—",
+        "source_id": "S368",
+        "quote": "Collies' ears require routine cleaning, usually at the same time as baths.",
+        "confidence": "medium",
+        "notes": "PetMD (S368); bathing 'monthly' (petmd_grooming). Ear cleaning + bathing = sourced need without a mechanic → ROADMAP M5-R20 (needs-david). A professional groomer is 'often needed' to bathe and strip the coat while shedding (tool summary, paraphrase) → ROADMAP M5-R18 (needs-david)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -33010,6 +33594,292 @@
         "confidence": "high",
         "notes": "FCI (S354): 'Pinched nostrils and heavy over nose wrinkle is unacceptable.'; wrinkles 'clearly defined without exaggeration'; colours 'Silver, apricot, fawn or black.'. Breed Watch (S356): pinched nostrils, protruding eyes, excessive skin, too fat. RKC (S355): no merle registration. Welfare trait: muzzle (moderate face, open nostrils) — add `muzzle` to media.breed_portraits.traits / prompt_order / sources (French Bulldog precedent). Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn (FCI / AKC) is the portrait default; moderate face with open nostrils and light wrinkles, eyes not bulging, natural curled tail, standard colours only (never merle, brindle, white or pied)"
+      }
+    },
+    "rough_collie": {
+      "_note": "Unattended run M5-R10-44 (2026-10-18/19): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: brushing every day (RKC S365 'Grooming: Every day', PetMD S368 'Daily brushing is recommended' → 7×, M5-R13); puppy socialisation (PetMD S368) → M5-R17. No meal / exercise gap (no source). Sourced needs without a game mechanic: nail trimming every other week (PetMD S368) → ROADMAP M5-R19; ear cleaning + monthly baths (PetMD S368) → ROADMAP M5-R20; groomer while shedding (PetMD S368, paraphrase) → ROADMAP M5-R18 (needs-david). Senior 108 provisional (RKC lower bound — McMillan 2024 not reachable). Breed Watch Category 2 without a named point → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S365",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S365); PetMD 'at least an hour of outdoor exercise daily' (S368) — the same number. Rule: one number N ('up to N') → N = 60.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S368",
+            "notes": "PetMD (at least an hour)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S365 'Up to 1 hour per day'; PetMD S368 'at least an hour')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S365",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) = 108 (S11 + RKC lower bound 'Over 12 years', S365). No McMillan 2024 / VetCompass value reachable. Alternatives: 90 (PetMD lower bound 10 y, S368), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S365"
+        ],
+        "alternatives": {
+          "senior_petmd_lower_bound": 90,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S365)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 16 (S35), tier 'Excellent' (11–26) → 1.5. PetMD 'notoriously easy to train' (S368) — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 16, Excellent tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S365",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "rough_collie.suitability.rkc_grooming. RKC (S365) 'Every day' → 7 (runbook dog-grooming rule, Shetland Sheepdog precedent); PetMD (S368) 'Daily brushing is recommended to keep it healthy and clean.' agrees; its 'at least weekly brushing' = alternative 1. Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S368",
+            "notes": "PetMD at least weekly brushing"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 7× na teden (RKC »Every day«, PetMD »Daily brushing is recommended«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S368",
+        "quote": "Puppy socialization is crucial for proper emotional development and intelligence.",
+        "confidence": "medium",
+        "notes": "rough_collie.behaviour.socialisation (PetMD S368). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S368)"
+      },
+      "nail_care": {
+        "value": "nail trimming about every other week, depending on wear",
+        "unit": "nail trimming (sourced need)",
+        "source_id": "S368",
+        "quote": "They also need nail trimming about every other week, depending on wear.",
+        "confidence": "medium",
+        "notes": "PetMD (S368), rough_collie.suitability.petmd_nails. The game has no nail-trimming mechanic → ROADMAP M5-R19 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): striženje krempljev približno vsak drugi teden; mehanike ni → ROADMAP M5-R19 (needs-david)"
+      },
+      "ear_care_bathing": {
+        "value": "routine ear cleaning at bath time; monthly bathing",
+        "unit": "ear cleaning / bathing (sourced need)",
+        "source_id": "S368",
+        "quote": "Collies' ears require routine cleaning, usually at the same time as baths.",
+        "confidence": "medium",
+        "notes": "PetMD (S368), rough_collie.suitability.petmd_ears_bathing; 'Collies require at least weekly brushing and monthly bathing.' The game has no ear-cleaning or bathing mechanic → ROADMAP M5-R20 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno čiščenje ušes ob kopanju, kopanje enkrat na mesec; mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "professional_grooming": {
+        "value": "a professional groomer is often needed to bathe the dog and remove the shed undercoat while moulting (no frequency given)",
+        "unit": "visits (sourced need)",
+        "source_id": "S368",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S368), tool summary (paraphrase — no verbatim quote returned). The game has no groomer mechanic → ROADMAP M5-R18 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): pasji frizer med linjenjem (brez pogostosti); mehanike ni → ROADMAP M5-R18 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-44); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S366",
+              "S368"
+            ],
+            "refs": [
+              "rough_collie.behaviour.family",
+              "rough_collie.suitability.petmd_children"
+            ],
+            "quote": "S366 'good with children and other dogs.'; S368 'Collies are affectionate with humans, especially children.'"
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S366",
+              "S368"
+            ],
+            "refs": [
+              "rough_collie.suitability.rkc_standard_temperament",
+              "rough_collie.behaviour.other_pets"
+            ],
+            "quote": "S366 'good with children and other dogs.'; S368 'are good with other animals.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S368"
+            ],
+            "refs": [
+              "rough_collie.behaviour.herding_children",
+              "rough_collie.suitability.petmd_herding"
+            ],
+            "quote": "S368 'they may nip at ankles and heels when excited'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S365",
+              "S368"
+            ],
+            "refs": [
+              "rough_collie.suitability.rkc_grooming",
+              "rough_collie.suitability.petmd_grooming"
+            ],
+            "quote": "S365 'Grooming: Every day'; S368 'Collies require at least weekly brushing'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S368"
+            ],
+            "refs": [
+              "rough_collie.behaviour.time_alone",
+              "rough_collie.suitability.petmd_company"
+            ],
+            "quote": "S368 'do not do well by themselves for long periods of time.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S365"
+            ],
+            "refs": [
+              "rough_collie.suitability.rkc_shedding"
+            ],
+            "quote": "S365 'Sheds: Yes'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No 'family life' statement — RKC standard 'a great companion dog' (S366) and PetMD 'affectionate … especially children' (S368) are shown as children (open for David).",
+          "small_children": "No rating for small children.",
+          "older_children": "No source.",
+          "chases_small_pets": "No prey-drive statement.",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No source.",
+          "apartment": "RKC 'Small house' (S365) — not 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S365) — 'Large garden' alone is not enough.",
+          "active_family": "RKC 'Up to 1 hour per day' (S365) — moderate exercise.",
+          "long_daily_exercise": "RKC 'Up to 1 hour per day' (S365).",
+          "needs_mental_stimulation": "PetMD 'can quickly become bored' (S368) — not a stated need (open for David).",
+          "often_alone": "PetMD advises against long days alone (S368).",
+          "older_owners": "No source.",
+          "low_shedding": "RKC 'Sheds: Yes' (S365).",
+          "food_motivated_weight": "No source.",
+          "chews_when_bored": "No source.",
+          "secure_fencing": "No source.",
+          "shorter_lifespan": "RKC 'Over 12 years' (S365).",
+          "welfare": "RKC Breed Watch Category 2 with no named point (S365) → no welfare chip (open for David)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits children, other_pets; consider may_herd_children, frequent_grooming, needs_company, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a flat-faced breed)",
+        "unit": "—",
+        "source_id": "S365",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 2 without a named point (S365); no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never promises health, never shows a double merle or a mostly white dog.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not a flat-faced breed; Breed Watch Category 2 without a named point — open for David)"
+      },
+      "ai_appearance": {
+        "value": "adult Rough Collie, sable and white (default) with the typical white collar, frill, legs and tail tip; very dense, long, straight, harsh outer coat with a very abundant mane and frill; smooth face; long, blunt, well-rounded muzzle with a black nose; medium almond-shaped dark brown eyes; semi-erect ears with tips tipping forward; long, low-carried tail with a slight upward swirl; natural, dignified build; never predominantly white, never a double merle, never cream",
+        "unit": "—",
+        "source_id": "S364",
+        "quote": "Any other colour or combination of colours unacceptable.",
+        "confidence": "high",
+        "notes": "FCI (S364) colours: sable, tricolour, blue merle (RKC S366 'Sable and white, Tricolour and Blue Merle.' with 'typical white Collie markings') — sable and white is the portrait default. AKC white (S367) is not an FCI / RKC colour. Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — sable and white (default), tricolour, blue merle; never white, cream or double merle"
       }
     }
   }

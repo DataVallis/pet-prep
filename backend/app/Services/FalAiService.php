@@ -386,6 +386,15 @@ class FalAiService
                 .'small rose or button ears, square compact fit body, tail tightly curled over the hip, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-44: FCI 156 (S364) / RKC standard (S366) — sable and white as the anchor (sable / tricolour /
+            // blue merle, always with the typical white Collie markings); very dense coat with an abundant
+            // mane and frill, smooth face, long blunt muzzle, semi-erect ears, natural low tail.
+            BreedType::RoughCollie => 'A dignified, friendly Rough Collie dog with a sable and white coat and the typical white collar, '
+                .'very dense long straight harsh outer coat with a very abundant mane and frill, smooth face, '
+                .'long blunt well-rounded muzzle with a black nose, medium almond-shaped dark brown eyes, '
+                .'semi-erect ears with the tips tipping forward, long tail carried low with a slight upward swirl, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -936,6 +945,18 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'fine, smooth, short and glossy',
                 'markings' => 'black mask, black velvet ears, light forehead wrinkles',
+            ],
+            // M5-R10-44: FCI S364 sable / tricolour / blue merle; RKC S366 "All should carry typical white
+            // Collie markings to a greater or lesser degree."
+            BreedType::RoughCollie => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'sable and white',
+                    1 => 'tricolour (black with tan markings and white)',
+                    2 => 'blue merle and white',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'very dense, long, straight and harsh outer coat with a soft undercoat, abundant mane and frill',
+                'markings' => 'typical white Collie markings: collar, frill, legs and tail tip',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

@@ -1753,6 +1753,61 @@
           "quote": "currently available for the Pug, French Bulldog and Bulldog."
         }
       ]
+    },
+    "rough_collie": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S365",
+        "level_quotes": {
+          "minimum": "Good Practice",
+          "best_practice": "Best Practice"
+        }
+      },
+      "tests": [
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme (including litter screening)",
+          "source_id": "S365",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme (including litter screening)"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S365",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        },
+        {
+          "key": "dna_cea",
+          "level": "best_practice",
+          "name": "DNA test for Collie eye anomaly/ choroidal hypoplasia (CEA/CH)",
+          "source_id": "S365",
+          "quote": "DNA test for Collie eye anomaly/ choroidal hypoplasia (CEA/CH)"
+        },
+        {
+          "key": "dna_dm",
+          "level": "best_practice",
+          "name": "DNA test for Degenerative myelopathy (DM)",
+          "source_id": "S365",
+          "quote": "DNA test for Degenerative myelopathy (DM)"
+        },
+        {
+          "key": "dna_mdr1",
+          "level": "best_practice",
+          "name": "DNA test for Multi-drug resistance (MDR1)",
+          "source_id": "S365",
+          "quote": "DNA test for Multi-drug resistance (MDR1)"
+        },
+        {
+          "key": "dna_pra_rcd2",
+          "level": "best_practice",
+          "name": "DNA test for Progressive retinal atrophy (PRA-rcd2)",
+          "source_id": "S365",
+          "quote": "DNA test for Progressive retinal atrophy (PRA-rcd2)"
+        }
+      ],
+      "notes": "RKC breed page (older address, dog-data S365, 2026-10-18): Good Practice (= minimum; 'strongly recommend that breeders, at a minimum, conduct these tests before breeding'): eye scheme with litter screening and the hip scheme; Best Practice ('responsible breeders should ensure they complete all tests in both categories'): DNA tests for CEA/CH, DM, MDR1 and PRA-rcd2. The page names no genetic-diversity item for this breed. No merle-to-merle registrations from 1 January 2013 (S365). New test key dna_pra_rcd2 needs website words."
     }
   }
 }

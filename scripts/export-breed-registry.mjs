@@ -416,6 +416,7 @@ const SPECIES = [
       { id: 'english_cocker_spaniel', synonyms: { en: ['Cocker Spaniel', 'English Cocker', 'Cocker', 'Merry Cocker'], sl: ['koker španjel', 'angleški koker', 'koker'] } },
       { id: 'maltese', synonyms: { en: ['Maltese dog', 'Bichon Maltais', 'Maltese Terrier'], sl: ['malteški bišon', 'malteški psiček'] } },
       { id: 'pug', synonyms: { en: ['Pug dog', 'Carlin'], sl: ['mopsek', 'pug'] } },
+      { id: 'rough_collie', synonyms: { en: ['Collie', 'Collie (Rough)', 'Long-haired Collie'], sl: ['škotski ovčar', 'collie'] } },
     ],
   },
   {
@@ -1283,6 +1284,27 @@ const DOG_FACTS = {
       ['weight_gain', 'behaviour.obesity_tendency'],
     ],
   },
+  // M5-R10-44. Not exported: height.akc (the taller American type, alternative), adult_weight.petmd (agreeing
+  // range), adult_weight.salt_category (our assignment), lifespan.petmd (US alternative), lifespan.mcmillan_2024
+  // (null), lifespan.senior_from (derived), exercise.petmd (same number), health.dermatomyositis / other (PetMD
+  // paraphrases without a quote), suitability.petmd_* care needs (M5-R18 / R19 / R20). Weight = AKC standard
+  // (S367 — FCI / RKC give none); lifespan = the RKC band "Over 12 years" (S365).
+  rough_collie: {
+    height: ['height.fci'],
+    weight: [['adult_weight.akc', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['collie_eye_pra', 'health.eye_conditions'],
+      ['drug_sensitivity_mdr1', 'health.mdr1'],
+      ['degenerative_myelopathy', 'health.degenerative_myelopathy'],
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1604,6 +1626,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.pug.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.pug.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.pug.exercise_minutes_senior',
+  },
+  rough_collie: {
+    adult_minutes: ['proposed_game_parameters.rough_collie.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.rough_collie.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.rough_collie.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.rough_collie.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.rough_collie.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.rough_collie.exercise_minutes_senior',
   },
 };
 

@@ -1161,6 +1161,29 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S355', 'S359'], 'refs' => ['pug.suitability.rkc_shedding', 'pug.suitability.petmd_shedding']],
             ],
         ],
+        // M5-R10-44: rough_collie.* (S363–S369), runbook rules (data.json
+        // proposed_game_parameters.rough_collie.suitability_tags). RKC breed page (S365) + RKC standard (S366)
+        // + PetMD (S368). RKC "Up to 1 hour per day" and "Small house" → no active_family / large_home.
+        // No family-life statement → no family_pet (open for David). Breed Watch Category 2 without a
+        // named point → no welfare chip.
+        'rough_collie' => [
+            'suits' => [
+                // S366 "A great companion dog, friendly, happy and active, good with children and other dogs."; S368 "Collies are affectionate with humans, especially children."
+                ['tag' => 'children', 'source_ids' => ['S366', 'S368'], 'refs' => ['rough_collie.behaviour.family', 'rough_collie.suitability.petmd_children']],
+                // S366 "… good with children and other dogs."; S368 "… are good with other animals."
+                ['tag' => 'other_pets', 'source_ids' => ['S366', 'S368'], 'refs' => ['rough_collie.suitability.rkc_standard_temperament', 'rough_collie.behaviour.other_pets']],
+            ],
+            'consider' => [
+                // S368 "they may nip at ankles and heels when excited" (herding behaviour).
+                ['tag' => 'may_herd_children', 'source_ids' => ['S368'], 'refs' => ['rough_collie.behaviour.herding_children', 'rough_collie.suitability.petmd_herding']],
+                // S365 "Grooming: Every day"; S368 "Collies require at least weekly brushing and monthly bathing."
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S365', 'S368'], 'refs' => ['rough_collie.suitability.rkc_grooming', 'rough_collie.suitability.petmd_grooming']],
+                // S368 "do not do well by themselves for long periods of time."
+                ['tag' => 'needs_company', 'source_ids' => ['S368'], 'refs' => ['rough_collie.behaviour.time_alone', 'rough_collie.suitability.petmd_company']],
+                // S365 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S365'], 'refs' => ['rough_collie.suitability.rkc_shedding']],
+            ],
+        ],
 
     ],
 ];

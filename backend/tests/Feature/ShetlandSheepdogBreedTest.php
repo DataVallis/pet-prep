@@ -138,7 +138,7 @@ describe('breed, config and database', function () {
 
         $refused = fn (array $values) => fn () => DB::transaction(fn () => DB::table('pets')->where('id', $pet->id)->update($values));
         expect($refused(['species' => 'cat']))->toThrow(QueryException::class)
-            ->and($refused(['breed_type' => 'rough_collie']))->toThrow(QueryException::class);
+            ->and($refused(['breed_type' => 'smooth_collie']))->toThrow(QueryException::class);
 
         $migration = require database_path('migrations/2026_12_13_120000_add_shetland_sheepdog_breed.php');
         // down() refuses while an Shetland Sheepdog exists (no silent data loss).

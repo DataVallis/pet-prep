@@ -261,6 +261,12 @@ return [
         ['key' => 'apricot', 'value' => 'apricot with a black mask and black ears', 'en' => 'Apricot', 'sl' => 'Marelični'],
         ['key' => 'silver', 'value' => 'silver with a black mask and black ears', 'en' => 'Silver', 'sl' => 'Srebrn'],
     ],
+    // M5-R10-44: FCI S364 sable / tricolour / blue merle; RKC S366 "Sable and white, Tricolour and Blue Merle."
+    'rough_collie' => [
+        ['key' => 'sable-white', 'value' => 'sable and white', 'en' => 'Sable and white', 'sl' => 'Sobolji z belo'],
+        ['key' => 'tricolour', 'value' => 'tricolour (black with tan markings and white)', 'en' => 'Tricolour', 'sl' => 'Trobarven'],
+        ['key' => 'blue-merle-white', 'value' => 'blue merle and white', 'en' => 'Blue merle and white', 'sl' => 'Modri merle z belo'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
