@@ -4,7 +4,7 @@
  */
 import * as SecureStore from 'expo-secure-store';
 
-import { api } from '@/api/client';
+import { ApiError, api, setUnauthorizedHandler } from '@/api/client';
 import { TimeoutError } from '@/utils/withTimeout';
 
 const getItem = SecureStore.getItemAsync as jest.Mock;
@@ -56,5 +56,29 @@ describe('api client request timeout', () => {
     })) as unknown as typeof fetch;
     await expect(api.getUser()).resolves.toMatchObject({ id: 1 });
     expect(jest.getTimerCount()).toBe(0);
+  });
+
+  it('QA m2: a 401 that arrives after the timeout aborted the request never calls the logout handler', async () => {
+    const handler = jest.fn();
+    setUnauthorizedHandler(handler);
+    let respond: (value: unknown) => void = () => undefined;
+    globalThis.fetch = jest.fn(() => new Promise((resolve) => (respond = resolve))) as unknown as typeof fetch;
+    const caught = api.getUser({ timeoutMs: 1_000 }).catch((error: unknown) => error);
+    await jest.advanceTimersByTimeAsync(1_000);
+    expect(await caught).toBeInstanceOf(TimeoutError);
+    // The native fetch ignored the abort and the server answers 401 late.
+    respond({ ok: false, status: 401, headers: { get: () => null }, json: async () => ({ message: 'Unauthenticated.' }) });
+    await jest.advanceTimersByTimeAsync(0);
+    expect(handler).not.toHaveBeenCalled();
+    setUnauthorizedHandler(null);
+  });
+
+  it('a 401 within the timeout still calls the logout handler', async () => {
+    const handler = jest.fn();
+    setUnauthorizedHandler(handler);
+    globalThis.fetch = jest.fn(async () => ({ ok: false, status: 401, headers: { get: () => null }, json: async () => ({}) })) as unknown as typeof fetch;
+    await expect(api.getUser({ timeoutMs: 1_000 })).rejects.toBeInstanceOf(ApiError);
+    expect(handler).toHaveBeenCalledTimes(1);
+    setUnauthorizedHandler(null);
   });
 });

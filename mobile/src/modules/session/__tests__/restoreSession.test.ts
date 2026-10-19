@@ -5,8 +5,10 @@ import {
   KEYCHAIN_READ_TIMEOUT_MS,
   OPTIONAL_READ_TIMEOUT_MS,
   USER_REQUEST_TIMEOUT_MS,
+  resetRestoreForTests,
   restoreSession,
 } from '@/modules/session/restoreSession';
+import { KEYCHAIN_MIGRATION_KEY, resetKeychainMigrationForTests } from '@/modules/session/keychainMigration';
 import { TimeoutError } from '@/utils/withTimeout';
 import { unregisterStepSyncTask } from '@/modules/steps/backgroundSteps';
 import { makePet } from '@/test-utils/fixtures';
@@ -25,6 +27,8 @@ jest.mock('@/modules/steps/backgroundSteps', () => ({ unregisterStepSyncTask: je
 describe('restoreSession', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    resetRestoreForTests();
+    resetKeychainMigrationForTests();
   });
 
   it('is anonymous without a saved token and never calls the API', async () => {
@@ -171,18 +175,94 @@ describe('restoreSession', () => {
       expect(getUser).not.toHaveBeenCalled();
     });
 
-    it('a hanging family-zone read / Keychain migration do not block the restore', async () => {
+    it('a hanging family-zone read does not block the restore', async () => {
       getItem.mockImplementation((key: string) => {
         if (key === 'petprep_auth_token') return Promise.resolve('tok-c');
         if (key === 'petprep_child_sessions') return Promise.resolve(null);
-        return never(); // family zone + migration marker hang
+        if (key === KEYCHAIN_MIGRATION_KEY) return Promise.resolve('1');
+        return never(); // family zone hangs
       });
       getUser.mockResolvedValueOnce({ id: 4, name: 'Ana', email: null, role: 'child', pet: makePet() });
       const result = restoreSession();
-      await jest.advanceTimersByTimeAsync(OPTIONAL_READ_TIMEOUT_MS + KEYCHAIN_READ_TIMEOUT_MS);
+      await jest.advanceTimersByTimeAsync(OPTIONAL_READ_TIMEOUT_MS);
       const settled = await result;
       expect(settled.status).toBe('authenticated');
       expect(settled.status === 'authenticated' && settled.session.familyTimezone).toBeNull();
+    });
+
+    describe('QA M1: never a session (or the login screen) while the migration may have deleted the token', () => {
+      /** Keychain whose migration stalls between delete and re-add of the token. */
+      function stallingVault() {
+        const vault = new Map<string, string>([['petprep_auth_token', 'tok-c']]);
+        let releaseSet: () => void = () => undefined;
+        getItem.mockImplementation(async (key: string) => vault.get(key) ?? null);
+        deleteItem.mockImplementation(async (key: string) => {
+          vault.delete(key);
+        });
+        (SecureStore.setItemAsync as jest.Mock).mockImplementation(
+          (key: string, value: string) =>
+            new Promise<void>((resolve) => {
+              releaseSet = () => {
+                vault.set(key, value);
+                resolve();
+              };
+            }),
+        );
+        return { vault, release: () => releaseSet() };
+      }
+
+      afterEach(() => {
+        deleteItem.mockReset();
+        (SecureStore.setItemAsync as jest.Mock).mockReset();
+      });
+
+      it('a migration slower than its budget → locked (not authenticated); the next restore waits for it', async () => {
+        const keychain = stallingVault();
+        getUser.mockResolvedValue({ id: 4, name: 'Ana', email: null, role: 'parent', pet: null });
+
+        const first = restoreSession();
+        await jest.advanceTimersByTimeAsync(KEYCHAIN_READ_TIMEOUT_MS);
+        await expect(first).resolves.toEqual({ status: 'locked' });
+        expect(keychain.vault.has('petprep_auth_token')).toBe(false); // mid delete + re-add
+
+        // "Poskusi znova" now: must not read the missing token as "signed out".
+        const second = restoreSession();
+        await jest.advanceTimersByTimeAsync(100);
+        keychain.release(); // token re-added
+        await jest.advanceTimersByTimeAsync(0);
+        keychain.release(); // child sessions key (absent → nothing) / marker
+        await jest.advanceTimersByTimeAsync(0);
+        const result = await second;
+        expect(result).toMatchObject({ status: 'authenticated', session: { token: 'tok-c' } });
+        expect(deleteItem).not.toHaveBeenCalledWith('petprep_child_sessions');
+      });
+
+      it('a migration that never finishes → locked on every retry, never anonymous', async () => {
+        stallingVault();
+        getUser.mockResolvedValue({ id: 4, name: 'Ana', email: null, role: 'parent', pet: null });
+        const first = restoreSession();
+        await jest.advanceTimersByTimeAsync(KEYCHAIN_READ_TIMEOUT_MS);
+        await expect(first).resolves.toEqual({ status: 'locked' });
+        const retry = restoreSession();
+        await jest.advanceTimersByTimeAsync(KEYCHAIN_READ_TIMEOUT_MS);
+        await expect(retry).resolves.toEqual({ status: 'locked' });
+      });
+    });
+
+    it('single-flight: "Poskusi znova" mid-/api/user joins the running restore (one request, one Keychain read)', async () => {
+      getItem.mockImplementation(async (key: string) => (key === 'petprep_auth_token' ? 'tok-c' : key === KEYCHAIN_MIGRATION_KEY ? '1' : null));
+      let answer: (value: unknown) => void = () => undefined;
+      getUser.mockReturnValueOnce(new Promise((resolve) => (answer = resolve)));
+      const first = restoreSession();
+      await jest.advanceTimersByTimeAsync(10);
+      const second = restoreSession();
+      expect(second).toBe(first);
+      answer({ id: 1, name: 'Mama', email: 'm@x.si', role: 'parent', pet: null });
+      await expect(second).resolves.toMatchObject({ status: 'authenticated' });
+      expect(getUser).toHaveBeenCalledTimes(1);
+      // Finished → the next call starts a new restore.
+      getUser.mockResolvedValueOnce({ id: 1, name: 'Mama', email: 'm@x.si', role: 'parent', pet: null });
+      expect(restoreSession()).not.toBe(first);
     });
   });
 });

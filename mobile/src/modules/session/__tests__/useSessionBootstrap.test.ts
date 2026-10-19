@@ -7,10 +7,14 @@ import {
   MAX_FOREGROUND_LOCKED,
   useSessionBootstrap,
 } from '@/modules/session/useSessionBootstrap';
-import { restoreSession, type RestoreResult } from '@/modules/session/restoreSession';
+import { RESTORE_BUDGET_MS, restoreSession, type RestoreResult } from '@/modules/session/restoreSession';
 import { useAppStore } from '@/store/appStore';
 
-jest.mock('@/modules/session/restoreSession', () => ({ restoreSession: jest.fn(), migrateLegacyProfiles: jest.fn(async () => undefined) }));
+jest.mock('@/modules/session/restoreSession', () => ({
+  ...jest.requireActual<typeof import('@/modules/session/restoreSession')>('@/modules/session/restoreSession'),
+  restoreSession: jest.fn(),
+  migrateLegacyProfiles: jest.fn(async () => undefined),
+}));
 jest.mock('@/modules/session/logout', () => ({ logout: jest.fn(() => Promise.resolve()) }));
 
 const restore = restoreSession as jest.Mock;
@@ -323,6 +327,25 @@ describe('useSessionBootstrap', () => {
         await jest.advanceTimersByTimeAsync(1);
       });
       expect(useAppStore.getState().bootStatus).toBe('offline');
+    });
+
+    it('QA m1: the watchdog only fires above a single restore\'s own worst case', () => {
+      expect(BOOT_WATCHDOG_MS).toBeGreaterThan(RESTORE_BUDGET_MS);
+    });
+
+    it('QA m3: inactive ↔ active flips during the locked backoff never reset the watchdog or the lock count', async () => {
+      restore.mockResolvedValue({ status: 'locked' });
+      renderHook(() => useSessionBootstrap());
+      // Flip every 300 ms (Control Centre, a system sheet) — the active event re-runs the restore.
+      for (let t = 0; t < BOOT_WATCHDOG_MS; t += 300) {
+        await act(async () => {
+          listeners.forEach((l) => l('active'));
+          await jest.advanceTimersByTimeAsync(300);
+        });
+        if (useAppStore.getState().bootStatus === 'offline') break;
+      }
+      expect(useAppStore.getState().bootStatus).toBe('offline');
+      expect(useAppStore.getState().authToken).toBeNull();
     });
 
     it('a restore that throws (bug) shows the offline screen at once', async () => {

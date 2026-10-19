@@ -717,11 +717,13 @@ async function sendRequest<T>(path: string, options: RequestOptions): Promise<T>
   reportServerAnswer(response, data);
 
   if (!response.ok) {
-    if (response.status === 401 && token && unauthorizedHandler) {
+    // QA m2 (2026-10-19): a 401 that arrives after this request was aborted (its timeout ran
+    // out, the caller gave up) is never acted on — the caller already moved on.
+    if (response.status === 401 && token && unauthorizedHandler && !options.signal?.aborted) {
       // Only if the rejected token is still the session's token: a late 401 for an
       // old token (e.g. after logout + a new login) must not log the new user out.
       const current = await getAuthToken().catch(() => null);
-      if (current === token) unauthorizedHandler();
+      if (current === token && !options.signal?.aborted) unauthorizedHandler();
     }
     throw new ApiError(
       messageFrom(data) ?? 'An error occurred',

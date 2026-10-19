@@ -35,7 +35,28 @@ async function rewrite(key: string, store: Store): Promise<void> {
   }
 }
 
-export async function migrateSessionKeychain(store: Store = SecureStore): Promise<boolean> {
+let running: Promise<boolean> | null = null;
+
+/**
+ * The migration still running from an earlier call, or null (boot-hang QA M1, 2026-10-19).
+ * While it runs a session key may be deleted and not yet re-added — a restore must wait for
+ * it before it reads the token, or it would see "no token" and show the login screen.
+ */
+export function pendingKeychainMigration(): Promise<boolean> | null {
+  return running;
+}
+
+/** Single-flight: a second call while one runs joins it (never two delete + re-add at once). */
+export function migrateSessionKeychain(store: Store = SecureStore): Promise<boolean> {
+  if (running) return running;
+  const current = migrateOnce(store).finally(() => {
+    if (running === current) running = null;
+  });
+  running = current;
+  return current;
+}
+
+async function migrateOnce(store: Store): Promise<boolean> {
   try {
     if ((await store.getItemAsync(KEYCHAIN_MIGRATION_KEY)) === '1') return false;
     for (const key of SESSION_SECRET_KEYS) await rewrite(key, store);
@@ -44,4 +65,9 @@ export async function migrateSessionKeychain(store: Store = SecureStore): Promis
   } catch {
     return false;
   }
+}
+
+/** Test hook. */
+export function resetKeychainMigrationForTests(): void {
+  running = null;
 }

@@ -28,8 +28,12 @@ import { retryPendingRevokes } from './profiles';
 export const LOCKED_RETRY_DELAYS_MS = [500, 1_000, 2_000, 4_000] as const;
 /** `locked` results in a row on screen before the boot shows the offline screen (retry button). */
 export const MAX_FOREGROUND_LOCKED = LOCKED_RETRY_DELAYS_MS.length + 1;
-/** The splash never waits longer than this (app on screen) before offering Try again / Sign out. */
-export const BOOT_WATCHDOG_MS = 20_000;
+/**
+ * The splash never waits longer than this (app on screen) before offering Try again / Sign
+ * out. Above a single restore's own worst case (`RESTORE_BUDGET_MS` in restoreSession.ts), so the
+ * watchdog only fires for something that truly hangs.
+ */
+export const BOOT_WATCHDOG_MS = 26_000;
 
 /** iOS reports `background` for a background launch; anything else may be on screen. */
 function maybeOnScreen(): boolean {
@@ -151,8 +155,11 @@ export function useSessionBootstrap(): { retry: () => void } {
       if (state !== 'active') return;
       if (retryOnForegroundRef.current) {
         retryOnForegroundRef.current = false;
-        foregroundLockedRef.current = 0;
-        clearTimer(watchdogRef); // a fresh budget from the moment the app is opened
+        // Back from the background (no watchdog was running): a fresh budget. An
+        // inactive → active flip during the on-screen backoff keeps the running watchdog
+        // and the lock count — it must never extend the wait (QA m3).
+        if (watchdogRef.current === null) foregroundLockedRef.current = 0;
+        clearTimer(retryTimerRef);
         void run();
       }
       void retryPendingRevokes();
