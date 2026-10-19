@@ -1,7 +1,13 @@
 import * as SecureStore from 'expo-secure-store';
 
 import { ApiError, api } from '@/api/client';
-import { restoreSession } from '@/modules/session/restoreSession';
+import {
+  KEYCHAIN_READ_TIMEOUT_MS,
+  OPTIONAL_READ_TIMEOUT_MS,
+  USER_REQUEST_TIMEOUT_MS,
+  restoreSession,
+} from '@/modules/session/restoreSession';
+import { TimeoutError } from '@/utils/withTimeout';
 import { unregisterStepSyncTask } from '@/modules/steps/backgroundSteps';
 import { makePet } from '@/test-utils/fixtures';
 
@@ -122,5 +128,61 @@ describe('restoreSession', () => {
     const unknown = await restoreSession();
     expect(unknown.status === 'authenticated' && unknown.session.signInMethod).toBe('password');
     getItem.mockImplementation(() => Promise.resolve(null));
+  });
+
+  it('passes a request timeout to /api/user (a launch never waits forever)', async () => {
+    getItem.mockResolvedValueOnce('tok-1');
+    getUser.mockResolvedValueOnce({ id: 1, name: 'Mama', email: 'm@x.si', role: 'parent', pet: null });
+    await restoreSession();
+    expect(getUser).toHaveBeenCalledWith({ timeoutMs: USER_REQUEST_TIMEOUT_MS });
+  });
+
+  it('a timed-out /api/user is offline — the token is kept', async () => {
+    getItem.mockResolvedValueOnce('tok-1');
+    getUser.mockRejectedValueOnce(new TimeoutError());
+    expect((await restoreSession()).status).toBe('offline');
+    expect(deleteItem).not.toHaveBeenCalled();
+  });
+
+  describe('boot-hang fix 2026-10-19: a native call that never settles', () => {
+    const never = () => new Promise<never>(() => undefined);
+
+    beforeEach(() => jest.useFakeTimers());
+    afterEach(() => {
+      jest.useRealTimers();
+      getItem.mockReset();
+      getItem.mockResolvedValue(null);
+    });
+
+    it('a Keychain token read that hangs → locked (retried, never a sign-out)', async () => {
+      getItem.mockImplementationOnce(never);
+      const result = restoreSession();
+      await jest.advanceTimersByTimeAsync(KEYCHAIN_READ_TIMEOUT_MS);
+      await expect(result).resolves.toEqual({ status: 'locked' });
+      expect(getUser).not.toHaveBeenCalled();
+      expect(deleteItem).not.toHaveBeenCalled();
+    });
+
+    it('a hanging child-sessions read (M2-11 shared phone) → locked', async () => {
+      getItem.mockResolvedValueOnce('tok-child').mockImplementationOnce(never);
+      const result = restoreSession();
+      await jest.advanceTimersByTimeAsync(KEYCHAIN_READ_TIMEOUT_MS);
+      await expect(result).resolves.toEqual({ status: 'locked' });
+      expect(getUser).not.toHaveBeenCalled();
+    });
+
+    it('a hanging family-zone read / Keychain migration do not block the restore', async () => {
+      getItem.mockImplementation((key: string) => {
+        if (key === 'petprep_auth_token') return Promise.resolve('tok-c');
+        if (key === 'petprep_child_sessions') return Promise.resolve(null);
+        return never(); // family zone + migration marker hang
+      });
+      getUser.mockResolvedValueOnce({ id: 4, name: 'Ana', email: null, role: 'child', pet: makePet() });
+      const result = restoreSession();
+      await jest.advanceTimersByTimeAsync(OPTIONAL_READ_TIMEOUT_MS + KEYCHAIN_READ_TIMEOUT_MS);
+      const settled = await result;
+      expect(settled.status).toBe('authenticated');
+      expect(settled.status === 'authenticated' && settled.session.familyTimezone).toBeNull();
+    });
   });
 });

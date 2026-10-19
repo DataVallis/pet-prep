@@ -1,7 +1,12 @@
 import { act, renderHook } from '@testing-library/react-native';
 import { AppState, type AppStateStatus } from 'react-native';
 
-import { MAX_FOREGROUND_LOCKED, LOCKED_RETRY_MS, useSessionBootstrap } from '@/modules/session/useSessionBootstrap';
+import {
+  BOOT_WATCHDOG_MS,
+  LOCKED_RETRY_DELAYS_MS,
+  MAX_FOREGROUND_LOCKED,
+  useSessionBootstrap,
+} from '@/modules/session/useSessionBootstrap';
 import { restoreSession, type RestoreResult } from '@/modules/session/restoreSession';
 import { useAppStore } from '@/store/appStore';
 
@@ -122,7 +127,7 @@ describe('useSessionBootstrap', () => {
       expect(useAppStore.getState().authToken).toBe('old');
     });
 
-    it('a locked Keychain in the foreground (inactive launch) waits for the next active', async () => {
+    it('a locked Keychain in an inactive launch also restores on the next active', async () => {
       setAppState('inactive');
       restore.mockResolvedValueOnce({ status: 'locked' }).mockResolvedValueOnce(CHILD);
       renderHook(() => useSessionBootstrap());
@@ -157,7 +162,7 @@ describe('useSessionBootstrap', () => {
           await act(async () => undefined);
           expect(useAppStore.getState().bootStatus).toBe('restoring');
           await act(async () => {
-            await jest.advanceTimersByTimeAsync(LOCKED_RETRY_MS);
+            await jest.advanceTimersByTimeAsync(LOCKED_RETRY_DELAYS_MS[i - 1]);
           });
         }
         await act(async () => undefined);
@@ -168,6 +173,175 @@ describe('useSessionBootstrap', () => {
         restore.mockReset();
         jest.useRealTimers();
       }
+    });
+  });
+
+  describe('boot-hang fix 2026-10-19: the splash never spins forever', () => {
+    function setAppState(state: AppStateStatus) {
+      Object.defineProperty(AppState, 'currentState', { value: state, configurable: true, writable: true });
+    }
+    let listeners: Array<(state: AppStateStatus) => void>;
+
+    beforeEach(() => {
+      jest.useFakeTimers();
+      listeners = [];
+      jest.spyOn(AppState, 'addEventListener').mockImplementation((_type, handler) => {
+        listeners.push(handler as (state: AppStateStatus) => void);
+        return { remove: jest.fn() } as unknown as ReturnType<typeof AppState.addEventListener>;
+      });
+      setAppState('active');
+    });
+
+    afterEach(() => {
+      restore.mockReset();
+      jest.useRealTimers();
+      jest.restoreAllMocks();
+      setAppState('active');
+    });
+
+    it('a restore that never settles shows the offline screen after the watchdog — token untouched, no logout', async () => {
+      const { logout } = jest.requireMock<{ logout: jest.Mock }>('@/modules/session/logout');
+      const stuck = deferred();
+      restore.mockReturnValueOnce(stuck.promise);
+      renderHook(() => useSessionBootstrap());
+
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(BOOT_WATCHDOG_MS - 1);
+      });
+      expect(useAppStore.getState().bootStatus).toBe('restoring');
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(1);
+      });
+      expect(useAppStore.getState().bootStatus).toBe('offline');
+      expect(logout).not.toHaveBeenCalled();
+
+      // The abandoned run finishing late must not flip the screen.
+      await act(async () => {
+        stuck.resolve(CHILD);
+        await stuck.promise;
+      });
+      expect(useAppStore.getState().bootStatus).toBe('offline');
+      expect(useAppStore.getState().user).toBeNull();
+    });
+
+    it('"Poskusi znova" after the watchdog restores normally', async () => {
+      restore.mockReturnValueOnce(deferred().promise).mockResolvedValueOnce(CHILD);
+      const { result } = renderHook(() => useSessionBootstrap());
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(BOOT_WATCHDOG_MS);
+      });
+      expect(useAppStore.getState().bootStatus).toBe('offline');
+      await act(async () => {
+        result.current.retry();
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(useAppStore.getState().bootStatus).toBe('ready');
+      expect(useAppStore.getState().user?.role).toBe('child');
+    });
+
+    it('a retry gets a fresh watchdog budget (does not inherit the old one)', async () => {
+      restore.mockReturnValueOnce(deferred().promise).mockReturnValueOnce(deferred().promise);
+      const { result } = renderHook(() => useSessionBootstrap());
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(BOOT_WATCHDOG_MS - 1_000);
+        result.current.retry();
+        await jest.advanceTimersByTimeAsync(2_000);
+      });
+      expect(useAppStore.getState().bootStatus).toBe('restoring');
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(BOOT_WATCHDOG_MS);
+      });
+      expect(useAppStore.getState().bootStatus).toBe('offline');
+    });
+
+    it('a locked Keychain with the app ACTIVE retries by itself with backoff — no foreground event needed', async () => {
+      restore.mockResolvedValueOnce({ status: 'locked' }).mockResolvedValueOnce({ status: 'locked' }).mockResolvedValueOnce(CHILD);
+      renderHook(() => useSessionBootstrap());
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(restore).toHaveBeenCalledTimes(1);
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(LOCKED_RETRY_DELAYS_MS[0]);
+      });
+      expect(restore).toHaveBeenCalledTimes(2);
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(LOCKED_RETRY_DELAYS_MS[1]);
+      });
+      expect(restore).toHaveBeenCalledTimes(3);
+      expect(useAppStore.getState().bootStatus).toBe('ready');
+      expect(useAppStore.getState().user?.role).toBe('child');
+    });
+
+    it('a locked Keychain in an inactive launch retries by itself too (the active event may never come)', async () => {
+      setAppState('inactive');
+      restore.mockResolvedValueOnce({ status: 'locked' }).mockResolvedValueOnce(CHILD);
+      renderHook(() => useSessionBootstrap());
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(LOCKED_RETRY_DELAYS_MS[0]);
+      });
+      expect(restore).toHaveBeenCalledTimes(2);
+      expect(useAppStore.getState().user?.role).toBe('child');
+    });
+
+    it('a locked Keychain that never opens ends on the offline screen well within the watchdog, never on login', async () => {
+      restore.mockResolvedValue({ status: 'locked' });
+      renderHook(() => useSessionBootstrap());
+      const total = LOCKED_RETRY_DELAYS_MS.reduce((a, b) => a + b, 0);
+      expect(total).toBeLessThan(BOOT_WATCHDOG_MS);
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(total);
+      });
+      expect(restore).toHaveBeenCalledTimes(MAX_FOREGROUND_LOCKED);
+      expect(useAppStore.getState().bootStatus).toBe('offline');
+      expect(useAppStore.getState().authToken).toBeNull();
+      // No stray retry afterwards.
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(60_000);
+      });
+      expect(restore).toHaveBeenCalledTimes(MAX_FOREGROUND_LOCKED);
+    });
+
+    it('a background launch runs no watchdog; the foreground starts a fresh run with a full budget', async () => {
+      setAppState('background');
+      renderHook(() => useSessionBootstrap());
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(BOOT_WATCHDOG_MS * 3);
+      });
+      expect(useAppStore.getState().bootStatus).toBe('restoring');
+      expect(restore).not.toHaveBeenCalled();
+
+      setAppState('active');
+      restore.mockReturnValueOnce(deferred().promise);
+      await act(async () => {
+        listeners.forEach((l) => l('active'));
+        await jest.advanceTimersByTimeAsync(BOOT_WATCHDOG_MS - 1);
+      });
+      expect(restore).toHaveBeenCalledTimes(1);
+      expect(useAppStore.getState().bootStatus).toBe('restoring');
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(1);
+      });
+      expect(useAppStore.getState().bootStatus).toBe('offline');
+    });
+
+    it('a restore that throws (bug) shows the offline screen at once', async () => {
+      restore.mockRejectedValueOnce(new Error('boom'));
+      renderHook(() => useSessionBootstrap());
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(useAppStore.getState().bootStatus).toBe('offline');
+    });
+
+    it('a normal restore leaves no timer behind', async () => {
+      restore.mockResolvedValueOnce(PARENT);
+      renderHook(() => useSessionBootstrap());
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(useAppStore.getState().bootStatus).toBe('ready');
+      expect(jest.getTimerCount()).toBe(0);
     });
   });
 });

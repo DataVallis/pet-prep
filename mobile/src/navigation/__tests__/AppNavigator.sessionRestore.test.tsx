@@ -10,6 +10,7 @@ import { useAppStore } from '@/store/appStore';
 import { OUTAGE_EXIT_AFTER_MS, useServerStatusStore } from '@/store/serverStatusStore';
 import { makeChildState, makePet } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
+import { BOOT_WATCHDOG_MS } from '@/modules/session/useSessionBootstrap';
 import { CONTRACT_STRINGS } from '@/screens/ContractScreen';
 import { CHILD_PIN_STRINGS } from '@/screens/ChildPinLoginScreen';
 import { START_STRINGS } from '@/screens/StartScreen';
@@ -252,6 +253,39 @@ describe('AppNavigator session restore', () => {
       expect(screen.getByTestId('splash-updating-exit')).toBeTruthy();
       expect(screen.getByText('Poskusi znova')).toBeTruthy();
       expect(screen.getByText('Odjava')).toBeTruthy();
+    } finally {
+      jest.useRealTimers();
+    }
+  });
+
+  it('boot-hang fix 2026-10-19: a restore that never settles → "Poskusi znova" / "Odjava" within 20 s, token kept', async () => {
+    jest.useFakeTimers({ doNotFake: ['nextTick', 'setImmediate'] });
+    try {
+      getItem.mockResolvedValue('child-token');
+      getUser.mockReturnValueOnce(new Promise(() => undefined)).mockResolvedValueOnce({
+        id: 2,
+        name: 'Otrok',
+        email: null,
+        role: 'child',
+        pet: makePet(),
+      });
+      renderWithQuery(<AppNavigator />);
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(BOOT_WATCHDOG_MS - 1);
+      });
+      expect(screen.getByTestId('splash-restoring')).toBeTruthy();
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(1);
+      });
+      expect(screen.getByTestId('splash-offline')).toBeTruthy();
+      expect(screen.getByText('Odjava')).toBeTruthy();
+      expect(deleteItem).not.toHaveBeenCalled();
+
+      fireEvent.press(screen.getByText('Poskusi znova'));
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(screen.getByText('CHILD_HUD')).toBeTruthy();
     } finally {
       jest.useRealTimers();
     }
