@@ -23878,6 +23878,729 @@
       }
     }
   },
+  "rhodesian_ridgeback": {
+    "_note": "Added 2026-10-19 (M5-R10-47, unattended run — appended after the Shiba Inu: AKC 2024 No. 43, S174 table row '43 | Rhodesian Ridgeback'; ranks up to 42 are already in the app). Quotes as returned by the web-fetch tool on 2026-10-19 (125-character limit — long sentences only in part); spot-check before import (sources.md S384–S394, reused S8, S10, S11, S14, S35, S45, S174, S263, S376). Names: FCI 'RHODESIAN RIDGEBACK' (S384), RKC and AKC 'Rhodesian Ridgeback' (S386, S389); Slovenian »rodezijski ridgeback« (not checked against KZS — open for David). FCI standard valid 15.05.2025 (S385); RKC standard last updated 1 April 2025 (S388); AKC standard approved April 8, 2025 (S389). Lifespan: no McMillan 2024 median (S376: the name appears only as a tip label in Fig. 5, no x̃) and no VetCompass median found → RKC lower bound 'Over 10 years' (S387) — provisional. No Dogs Trust or Blue Cross page found by search → RKC (S386, S387, S388), PDSA (S390), PetMD (S391), Woodgreen (S392), AKC (S389, S393). Breed Watch Category 1 (S386, S387) → not a welfare breed.",
+    "identity": {
+      "value": "FCI No. 146, Group 6 Section 3 (Related breeds), South Africa",
+      "unit": "—",
+      "source_id": "S385",
+      "quote": "Group 6 Scenthounds and related Breeds.",
+      "confidence": "high",
+      "notes": "FCI standard N° 146 (S385): 'Section 3 Related breeds.' / 'Without working trial.'; 'ORIGIN: Southern Africa'; 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 15.05.2025.'; utilization 'The Rhodesian Ridgeback is still used to hunt game in many parts of the world,' 'but is especially prized as watch-dog and family pet.' FCI nomenclature (S384): country of origin 'SOUTH AFRICA', group 'n°6 - Scent hounds and related breeds', definitive acceptance 2/21/1955. The identity country follows the nomenclature (S384) — 'South Africa' must be in FCI_ORIGINS of the export. RKC (S386) group: Hound; 'Lion hunter from Southern Africa, athletic and courageous'. AKC name: Rhodesian Ridgeback (S174, S389)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S387",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "RKC breed page key facts (older address, S387), label and value as returned. PDSA (S390) 'Size' | 'Large'; Woodgreen (S392) 'Large'. The Breeds A–Z address (S386) showed no Size value."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            63,
+            69
+          ],
+          "female": [
+            61,
+            66
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S385",
+        "quote": "Height at the withers: Males: 63 cm to 69 cm",
+        "confidence": "high",
+        "notes": "FCI standard (S385): 'Height at the withers: Males: 63 cm to 69 cm' / 'Females: 61cm to 66 cm'. RKC standard (S388): 'Dogs: 63 cms (25 ins) desirable minimum height at withers; 69 cms (27 ins) desirable maximum height at withers;' / 'bitches: 61 cms (24 ins) desirable minimum height at withers, 66 cms (26 ins) desirable maximum height at withers.' — the same. AKC (S389): 'Dogs – 25 to 27 inches in height; Bitches – 24 to 26 inches in height.' (63.5–68.6 / 61.0–66.0 cm) — agrees, alternative only. PDSA (S390) 'Average height' | '61-69 cm'."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": 36.5,
+          "female": 32.0
+        },
+        "unit": "kg",
+        "source_id": "S385",
+        "quote": "Weight: Males: 36,5 kg",
+        "confidence": "high",
+        "notes": "FCI standard (S385): 'Weight: Males: 36,5 kg' / 'Females: 32 kg' — one value per sex, not a range (register qualifier 'about'). Game range (adult_weight_kg): 32–36.5 kg (female → male). The RKC standard (S388) gives no weight."
+      },
+      "akc": {
+        "value": {
+          "male": 38.6,
+          "female": 31.8
+        },
+        "unit": "kg",
+        "source_id": "S389",
+        "quote": "Desirable weight – Dogs – 85 pounds; Bitches – 70 pounds.",
+        "confidence": "high",
+        "notes": "AKC standard (S389). Pounds converted to kg (× 0.4536) by us: 85 lb ≈ 38.6 kg, 70 lb ≈ 31.8 kg. Alternative only. PetMD (S391): 'The Rhodesian Ridgeback size reaches 70–85 pounds and stand 24–27 inches high at the shoulder.' — the same numbers as a range."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            31,
+            38
+          ],
+          "female": [
+            31,
+            38
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S390",
+        "quote": "Average weight | 31-38 kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S390), row label and value as returned ('Average weight' | '31-38 kg'); one range for both sexes (stored per sex). Agrees with the FCI values. Woodgreen (S392): '36-45 kg' (alternative only)."
+      },
+      "salt_category": {
+        "value": "V (30–<40 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 32–36.5 kg (FCI). Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: FCI 32–36.5 kg (S385) ≈ 70.5–80.5 lb; AKC 70–85 lb (S389) → 'Large (59–99 pounds)'. The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Rhodesian Ridgeback growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S387",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S387; the Breeds A–Z address S386 shows the same value). The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S390",
+        "quote": "Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average lifespan' (S390). Same lower bound as the RKC → same senior boundary (90)."
+      },
+      "petmd": {
+        "value": "10–12",
+        "unit": "years",
+        "source_id": "S391",
+        "quote": "In general, the Rhodesian Ridgeback lifespan is 10–12 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S391), US alternative only (lower bound 10 y → 90 months, the same)."
+      },
+      "woodgreen": {
+        "value": "10–13",
+        "unit": "years",
+        "source_id": "S392",
+        "quote": "10-13 years",
+        "confidence": "medium",
+        "notes": "Woodgreen pet explorer 'Life expectancy' (S392), alternative only."
+      },
+      "mcmillan_2024": {
+        "value": 12,
+        "unit": "years",
+        "source_id": "S394",
+        "quote": "A UK study found the average life expectancy to be 12 years.",
+        "confidence": "low",
+        "notes": "McMillan et al. 2024 (Supplementary Table 3) as quoted by Wikipedia (S394, tier C — never alone). The published paper (S376, re-read 2026-10-19) gives no median for the breed (name only as a tip label in Fig. 5); the Author Correction (S54) does not mention it. Not the basis; with 12 y the senior boundary would be round(0.75 × 12 × 12) = 108 months. Verify in the Supplementary Table / Dogs Trust breed table (S123) before replacing the RKC lower bound."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 10 y (RKC lower bound 'Over 10 years', S387) → 0.75 × 10 = 7.5 y = 90 months. With McMillan 2024 12 y (via S394, tier C): 108 months; Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S387"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S387",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S387; the Breeds A–Z address S386 returned 'More than 2 hours per day'). PDSA (S390): 'Your Ridgeback will need a minimum of two hours exercise every day.' Woodgreen (S392): '90-120 mins'. PetMD (S391): 'They require regular exercise—at least 45 minutes a day.' AKC article (S393): 'They're strong and athletic, requiring a moderate amount of exercise.'"
+      },
+      "pdsa": {
+        "value": "≥ 120",
+        "unit": "minutes/day",
+        "source_id": "S390",
+        "quote": "Your Ridgeback will need a minimum of two hours exercise every day.",
+        "confidence": "medium",
+        "notes": "PDSA (S390); key fact 'Minimum exercise (per day)' | '2 hours'. 'This needs to be several long walks with plenty of off-lead exercise in a secure place.'"
+      },
+      "woodgreen": {
+        "value": "90–120",
+        "unit": "minutes/day",
+        "source_id": "S392",
+        "quote": "90-120 mins",
+        "confidence": "medium",
+        "notes": "Woodgreen pet explorer 'Exercise needs' (S392), alternative only."
+      },
+      "petmd": {
+        "value": "≥ 45",
+        "unit": "minutes/day",
+        "source_id": "S391",
+        "quote": "They require regular exercise—at least 45 minutes a day.",
+        "confidence": "medium",
+        "notes": "PetMD (S391), alternative only."
+      },
+      "energy": {
+        "value": "very high energy, well into adult years; needs a lot of hard exercise",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "Rhodesian Ridgebacks are very high energy dogs which lasts well into their adult years",
+        "confidence": "medium",
+        "notes": "PDSA (S390); 'They suit active families who are prepared to spend lots of time outdoors with them, rain or shine.' Basis of active_family / long_daily_exercise."
+      },
+      "off_lead": {
+        "value": "off lead only in a secure / safely enclosed area (high prey drive)",
+        "unit": "—",
+        "source_id": "S393",
+        "quote": "always in a safely enclosed area when off leash",
+        "confidence": "medium",
+        "notes": "AKC article (S393), fragment as returned ('Because of their high prey drive' they need a secure area off leash). PDSA (S390): 'This needs to be several long walks with plenty of off-lead exercise in a secure place.' A sourced need without a game mechanic (the game has no off-lead walks) → open for David (needs a new ROADMAP task, Shiba Inu precedent). Not secure_fencing: no source says the breed escapes from a garden."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "dignified, intelligent, aloof with strangers, no aggression or shyness; loyal and loving towards the family",
+        "unit": "—",
+        "source_id": "S385",
+        "quote": "Dignified, intelligent, aloof with strangers, but showing no aggression or shyness.",
+        "confidence": "high",
+        "notes": "FCI (S385); RKC standard (S388) 'Dignified, intelligent, aloof with strangers but showing no aggression or shyness.'; AKC (S389) 'Dignified and even tempered. Reserved with strangers.'; PDSA (S390) 'Rhodesian Ridgebacks are playful and powerful dogs who are extremely loyal and loving towards their family.'"
+      },
+      "family": {
+        "value": "family pet (FCI); best with couples or families with older children — risks knocking over smaller children",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "They best suit couples or families with older children who understand how to behave around dogs.",
+        "confidence": "medium",
+        "notes": "PDSA (S390): 'Their large size and boisterous nature when they are younger also means they risk knocking over smaller children.'; 'Always supervise your dog with children and vulnerable adults.' FCI (S385): 'but is especially prized as watch-dog and family pet.' Woodgreen (S392): 'Ridgebacks do best with older children who understand how to interact respectfully with dogs.' AKC article (S393): 'Ridgebacks can be good with children with proper socialization, but they should always be supervised around them.' → family_pet + not_for_small_children; never children or small_children."
+      },
+      "experienced_owner": {
+        "value": "powerful, intelligent, wilful dog — not for a first-time owner",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "so it’s for this reason we wouldn’t recommend them if you are a first time owner.",
+        "confidence": "medium",
+        "notes": "PDSA (S390): 'Rhodesian Ridgebacks are playful and powerful dogs who are extremely loyal and loving towards their family.'; 'They are perfect for experienced owners who are used to training such intelligent dogs'; 'They can be wilful at times and are known to get bored easily if they're not challenged enough'. AKC article (S393): 'Ridgebacks do best in active households with experienced dog owners with plenty of time and attention to offer.'; 'They can be strong willed and prone to independent streaks.' Basis of experienced_owner (the chip's 'powerful dog' = PDSA 'powerful dogs'; Rottweiler / Vizsla precedent)."
+      },
+      "socialisation": {
+        "value": "socialise from a young age with different people, dogs and experiences",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "It’s important to socialise them from a young age with different people, dogs and experiences",
+        "confidence": "medium",
+        "notes": "PDSA (S390); 'It's really important that Rhodesian Ridgeback puppies from a breeder get the right early socialisation'. Woodgreen (S392): 'Early socialisation and habituation are crucial for Ridegbacks.' (sic). AKC article (S393): 'Early socialization and puppy training classes are also recommended.' → proposed_game_parameters.rhodesian_ridgeback.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "time_alone": {
+        "value": "never alone for more than four hours; separation anxiety if left too long too soon",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "We would never recommend leaving your Rhodesian Ridgeback alone for more than four hours.",
+        "confidence": "medium",
+        "notes": "PDSA (S390), breed-specific sentence: 'you'll need to gradually train them that it is OK to be alone.'; 'If left for too long too soon, your Ridgeback is likely to develop separation anxiety'. Woodgreen (S392): 'They don't cope well with being left alone for long hours.' → needs_company."
+      },
+      "other_pets": {
+        "value": "very high prey drive — not recommended with smaller pets; may get along with a cat it grew up with",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "Ridgebacks have a very high prey drive, so we wouldn’t recommend keeping them with smaller pets",
+        "confidence": "medium",
+        "notes": "PDSA (S390); 'They may get along with a cat they have grown up with, but you should always supervise your dog with other pets.' Woodgreen (S392): 'Their hunting heritage means they have a strong prey drive and they may chase cats, small dogs, rabbits,' (fragment). PetMD (S391): 'hunting history and prey drive' — 'might not be the best choice for families with smaller pets like cats' (fragments). → chases_small_pets (runbook: 'high prey drive' quote); never other_pets."
+      },
+      "mental_stimulation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No explicit 'needs mental stimulation' sentence returned verbatim: PDSA (S390) 'known to get bored easily if they're not challenged enough' is about training; Woodgreen (S392) mentions training, scent work and puzzle toys (tool summary, paraphrase). → no needs_mental_stimulation tag (Vizsla precedent; open for David)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement; Woodgreen (S392, paraphrase): may become destructive without enough exercise and stimulation → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag. PDSA (S390): 'We usually recommend splitting their daily allowance into two meals.'; PetMD (S391): 'Most veterinarians recommend feeding adult dogs, including Rhodesian Ridgebacks, twice a day.' — the game's two adult meals."
+      },
+      "after_meals": {
+        "value": "leave a gap between eating and exercising (GDV)",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.",
+        "confidence": "medium",
+        "notes": "PDSA (S390), feeding section. Basis of meal_exercise_gap (M5-R16). PetMD (S391): 'Eating too fast can cause gastrointestinal upset as well as other serious medical issues such as bloat.'"
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S386, S387) → no welfare chip. RKC Health Standard (S263): no Good Practice or Best Practice tests; breed club health scheme 'Dermoid sinus testing'. Breeder checklist: dermoid sinus (S263, PDSA S390), hip and elbow schemes (PDSA S390), DNA JME (PDSA S390), DNA DM (RKC K25).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S387",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges,",
+        "confidence": "high",
+        "notes": "RKC breed page (S387); continues 'other than those covered routinely by The Kennel Club's breed standard.' Breeds A–Z address (S386): Category 1 as well."
+      },
+      "dermoid_sinus": {
+        "value": "dermoid sinus — a painful congenital condition where the skin on the back links to the spinal cord; puppies checked by a vet before sale",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "Dermoid sinus – a painful condition where the skin on the back links to the spinal cord.",
+        "confidence": "high",
+        "notes": "PDSA (S390): 'Puppies should be assessed by a vet prior to sale for this condition.' Woodgreen (S392): 'Dermoid sinus: a tube-like opening in the skin that can become infected and requires surgery to remove.' PetMD (S391): 'Surgical removal is the treatment of choice.' RKC Health Standard (S263): breed club health scheme 'Dermoid sinus testing'. Wikipedia (S394, tier C): prevalence estimates — research only, never shown. Register health key; breeder checklist (puppy check)."
+      },
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia — x-ray screening of the parents (BVA/KC schemes)",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "Before breeding, dogs should be screened by x-rays through the BVA/Kennel Club Hip Dysplasia Scheme.",
+        "confidence": "high",
+        "notes": "PDSA (S390): 'Hip dysplasia – where the hip joint doesn’t fit together perfectly, which will eventually lead to arthritis.'; 'Before breeding, dogs should be screened by x-rays through the BVA/Kennel Club Elbow Dysplasia Scheme.' PetMD (S391): 'Both are thought to be inherited conditions and can cause pain and arthritis in dogs.' Not a Breed Watch point → no hips_hind_legs chip."
+      },
+      "gdv": {
+        "value": "gastric dilatation volvulus (bloat)",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "where a dog’s stomach bloats and twists around on itself, which can be fatal.",
+        "confidence": "medium",
+        "notes": "PDSA (S390) health list (after 'Gastric Dilatation Volvulus (GDV)'); Woodgreen (S392): 'Bloat: a life-threatening condition where the stomach fills with gas and twists.' → meal_exercise_gap (behaviour.after_meals)."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism (underactive thyroid)",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "an underactive thyroid, causing problems with weight, skin and energy levels.",
+        "confidence": "medium",
+        "notes": "PDSA (S390). PetMD (S391): 'Autoimmune thyroiditis is a disease of the thyroid gland resulting in low thyroid values.'"
+      },
+      "juvenile_myoclonic_epilepsy": {
+        "value": "juvenile myoclonic epilepsy — DNA test of the parents",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "Parents should be DNA tested prior to mating.",
+        "confidence": "high",
+        "notes": "PDSA (S390): 'Juvenile Myoclonic Epilepsy – a form of epilepsy.'; 'There is testing available for this.' Breeder checklist (dna_jme)."
+      },
+      "degenerative_myelopathy": {
+        "value": "degenerative myelopathy — official RKC DNA testing scheme",
+        "unit": "—",
+        "source_id": "K25",
+        "quote": "The Kennel Club has approved a new official DNA testing scheme for degenerative myelopathy (DM) in the Rhodesian Ridgeback.",
+        "confidence": "high",
+        "notes": "RKC media centre (breeder-checklist K25, December 2024 by its address): 'Degenerative myelopathy is a progressive neurological disease.' Breeder checklist only."
+      },
+      "deafness_eyes": {
+        "value": "progressive deafness; eye problems (cataracts, entropion, distichiasis, persistent pupillary membranes)",
+        "unit": "—",
+        "source_id": "S391",
+        "quote": "progressive deafness is not uncommon in the breed.",
+        "confidence": "medium",
+        "notes": "PetMD (S391); the eye conditions are a tool summary (paraphrase). Research only."
+      },
+      "cancer": {
+        "value": "certain cancers",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA (S390) lists 'Certain cancers' without a sentence (paraphrase). Research only."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 52,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-19): rank 52 'Rhodesian Ridgeback' (table row; neighbours rank 51 and 53 shared by three breeds each)."
+      },
+      "coren_tier": {
+        "value": "Average Working/Obedience Intelligence",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Average Working/Obedience Intelligence",
+        "confidence": "medium",
+        "notes": "Tier heading as returned (ranks 40–54, S35)."
+      },
+      "training_notes": {
+        "value": "positive, reward-based training from an early age; can be wilful / independent; patience and consistency",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "Ridgebacks are very intelligent dogs so respond well to positive, reward-based training from an early age.",
+        "confidence": "medium",
+        "notes": "PDSA (S390): 'You'll need to be very patient and take things slowly at first'; 'consistency is key!'. PetMD (S391): 'Rhodesian Ridgeback dogs can have an independent streak, so obedience training throughout their entire life is critical.' AKC article (S393): 'must be trained with a firm but patient hand from early puppyhood.' The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.rhodesian_ridgeback.learning_multiplier (1.0, runbook rule: Average tier).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "well balanced, strong, muscular, agile and active hound; elegant, never massive; the ridge on the back",
+        "unit": "—",
+        "source_id": "S385",
+        "quote": "should represent a well balanced, strong, muscular, agile and active dog,",
+        "confidence": "high",
+        "notes": "FCI (S385): 'The emphasis is on agility, elegance and soundness' 'with no tendency towards massiveness.' RKC standard (S388): 'Handsome, strong, muscular and active dog, symmetrical in outline, capable of great endurance with fair amount of speed.'"
+      },
+      "ridge": {
+        "value": "ridge of hair growing in the opposite direction along the spine — clearly defined, symmetrical, two identical opposite crowns; ridgeless = disqualification",
+        "unit": "—",
+        "source_id": "S388",
+        "quote": "A distinctive feature is the ridge on the back formed by hair growing in opposite direction to the remainder of coat.",
+        "confidence": "high",
+        "notes": "RKC standard (S388): 'Ridge clearly defined, tapering and symmetrical, starting immediately behind shoulders and continuing to haunch,'; 'and containing two identical crowns only, opposite each other,'; 'Up to 5 cm (2 ins) is a good average for width of ridge.' FCI (S385): 'The ridge is the escutcheon of the breed.'; disqualifying 'Dogs without ridge.' AKC (S389) disqualification 'Ridgelessness.' The defining trait of the portrait (dog trait `ridge`)."
+      },
+      "colours": {
+        "value": [
+          "light wheaten",
+          "red wheaten"
+        ],
+        "unit": "list",
+        "source_id": "S385",
+        "quote": "Light wheaten to red wheaten.",
+        "confidence": "high",
+        "notes": "FCI (S385), RKC standard (S388) 'Light wheaten to red wheaten. Head, body, legs and tail of uniform colour.' and AKC (S389) 'Light wheaten to red wheaten.' — one colour range (the game uses its two named ends; shades in between are the same colour). RKC (S388): 'Little white on chest and toes permissible, but excessive white hairs here, on belly or above paws undesirable.'; 'Dark muzzle and ears permissible.'; 'Any other colour or combination of colours unacceptable.' FCI: 'Excessive black hairs throughout the coat are highly undesirable.' AKC disqualifications: 'Solid black.' and 'Black and tan, or brown and tan in brown/liver nosed dogs.' Never black, black and tan, brindle or a ridgeless dog."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Red wheaten first with the highest weight (portrait default — the warm wheaten most associated with the breed; Claude's choice, no source gives frequencies), then light wheaten."
+      },
+      "coat": {
+        "value": "short and dense, sleek and glossy, neither woolly nor silky",
+        "unit": "—",
+        "source_id": "S385",
+        "quote": "Should be short and dense, sleek and glossy in appearance, but neither woolly nor silky.",
+        "confidence": "high",
+        "notes": "RKC standard (S388) 'Short and dense, sleek and glossy in appearance, but neither woolly nor silky.'; RKC key facts (S387) 'Coat length: Short'."
+      },
+      "ears": {
+        "value": "set rather high, medium size, wide at the base, tapering to a rounded point, carried close to the head",
+        "unit": "—",
+        "source_id": "S385",
+        "quote": "Should be set rather high, of medium size, rather wide at base, and gradually tapering to a rounded point.",
+        "confidence": "high",
+        "notes": "FCI (S385): 'They should be carried close to the head.' RKC standard (S388) the same."
+      },
+      "eyes": {
+        "value": "moderately well apart, round, bright and sparkling; colour harmonising with the coat (dark with a black nose, amber with a brown nose)",
+        "unit": "—",
+        "source_id": "S385",
+        "quote": "Should be moderately well apart, round, bright and sparkling, with intelligent expression,",
+        "confidence": "high",
+        "notes": "FCI (S385): 'their colour harmonising with the colour of the coat.'"
+      },
+      "nose": {
+        "value": "black or brown (liver); black nose with dark eyes, brown nose with amber eyes",
+        "unit": "—",
+        "source_id": "S385",
+        "quote": "The nose should be black or brown.",
+        "confidence": "high",
+        "notes": "FCI (S385): 'A black nose should be accompanied by dark eyes, a brown nose by amber eyes.' RKC standard (S388): 'Nose black or brown in keeping with colour of dog.' AKC (S389): 'Should be black, or brown, also known as liver, in keeping with the color of the dog.' Portrait: black nose with dark eyes (Claude's choice of the first-named option)."
+      },
+      "tail": {
+        "value": "strong at the root, tapering, moderate length, carried with a slight upward curve, never curled",
+        "unit": "—",
+        "source_id": "S385",
+        "quote": "should be carried with a slight curve upwards, never curled.",
+        "confidence": "high",
+        "notes": "FCI (S385): 'Should be strong at the root and gradually tapering towards the end, free from coarseness.'; 'It should be of moderate length.' RKC standard (S388): 'Carried with a slight curve upwards, never curled.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page key facts (older address S387; the Breeds A–Z address S386 returned Exercise, Size of home, Size of garden, Grooming, Lifespan only), PDSA (S390), PetMD (S391), Woodgreen (S392), AKC article (S393). No Dogs Trust or Blue Cross Rhodesian Ridgeback page found by search. The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S387",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "RKC key facts (S387)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S387",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "Also on the Breeds A–Z address (S386)."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S387",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "Basis of large_home (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S387",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "Basis of large_home (with the home). PDSA (S390): 'a large garden is an absolute must'."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S387",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "Basis of the weekly brushing (1×, runbook dog-grooming rule)."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S387",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S387",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "PDSA (S390): 'Ridgebacks shed all year round and more so in spring and autumn when you may want to brush them a little more.'; PetMD (S391): 'these dogs shed frequently'; Woodgreen (S392) 'Moderate' — all say it sheds. Basis of the sheds tag."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S387",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "Not shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S387",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S387",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S387",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges,",
+        "confidence": "high",
+        "notes": "No welfare chip."
+      },
+      "pdsa_exercise": {
+        "value": "a minimum of two hours a day; active families",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "Your Ridgeback will need a minimum of two hours exercise every day.",
+        "confidence": "medium",
+        "notes": "PDSA (S390): 'They suit active families who are prepared to spend lots of time outdoors with them, rain or shine.' Basis of active_family / long_daily_exercise (with the RKC)."
+      },
+      "pdsa_active_family": {
+        "value": "suits active families",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "They suit active families who are prepared to spend lots of time outdoors with them, rain or shine.",
+        "confidence": "medium",
+        "notes": "Basis of active_family."
+      },
+      "fci_family_pet": {
+        "value": "especially prized as watch-dog and family pet",
+        "unit": "—",
+        "source_id": "S385",
+        "quote": "but is especially prized as watch-dog and family pet.",
+        "confidence": "high",
+        "notes": "FCI standard utilization (S385). Basis of family_pet (with PDSA 'extremely loyal and loving towards their family')."
+      },
+      "pdsa_family": {
+        "value": "extremely loyal and loving towards their family",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "Rhodesian Ridgebacks are playful and powerful dogs who are extremely loyal and loving towards their family.",
+        "confidence": "medium",
+        "notes": "PDSA (S390), health section introduction. Basis of family_pet (with FCI) and the 'powerful dog' of experienced_owner."
+      },
+      "pdsa_children": {
+        "value": "best with older children; risks knocking over smaller children",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "Their large size and boisterous nature when they are younger also means they risk knocking over smaller children.",
+        "confidence": "medium",
+        "notes": "PDSA (S390): 'They best suit couples or families with older children who understand how to behave around dogs.' Basis of not_for_small_children."
+      },
+      "woodgreen_children": {
+        "value": "does best with older children",
+        "unit": "—",
+        "source_id": "S392",
+        "quote": "Ridgebacks do best with older children who understand how to interact respectfully with dogs.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S392). Agrees with PDSA."
+      },
+      "pdsa_experienced_owner": {
+        "value": "not for a first-time owner",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "so it’s for this reason we wouldn’t recommend them if you are a first time owner.",
+        "confidence": "medium",
+        "notes": "PDSA (S390). Basis of experienced_owner."
+      },
+      "akc_experienced_owner": {
+        "value": "best with experienced dog owners in active households",
+        "unit": "—",
+        "source_id": "S393",
+        "quote": "Ridgebacks do best in active households with experienced dog owners with plenty of time and attention to offer.",
+        "confidence": "medium",
+        "notes": "AKC article (S393)."
+      },
+      "pdsa_company": {
+        "value": "never alone for more than four hours",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "We would never recommend leaving your Rhodesian Ridgeback alone for more than four hours.",
+        "confidence": "medium",
+        "notes": "PDSA (S390), breed-specific; 'If left for too long too soon, your Ridgeback is likely to develop separation anxiety'. Basis of needs_company."
+      },
+      "woodgreen_time_alone": {
+        "value": "does not cope well alone for long hours",
+        "unit": "—",
+        "source_id": "S392",
+        "quote": "They don't cope well with being left alone for long hours.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S392). Agrees with PDSA."
+      },
+      "pdsa_prey_drive": {
+        "value": "very high prey drive — not with smaller pets",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "Ridgebacks have a very high prey drive, so we wouldn’t recommend keeping them with smaller pets",
+        "confidence": "medium",
+        "notes": "PDSA (S390). Basis of chases_small_pets."
+      },
+      "pdsa_grooming": {
+        "value": "a weekly brush; more in spring and autumn",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "A weekly brush should be more than enough to keep on top of dead hairs.",
+        "confidence": "medium",
+        "notes": "PDSA (S390). Agrees with the RKC 'Once a week'. The heavier spring / autumn moult is not modelled."
+      },
+      "woodgreen_grooming": {
+        "value": "weekly brush; check and clean the ears weekly; brush teeth regularly or dental chews",
+        "unit": "—",
+        "source_id": "S392",
+        "quote": "A weekly brush with a rubber curry brush or hound glove will remove loose hair and keep their coat looking healthy and shiny.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S392); 'Grooming needs' 'Moderate'. Nails (tool summary, paraphrase): usually kept short by exercise — no need recorded."
+      },
+      "woodgreen_ears_teeth": {
+        "value": "check and clean the ears weekly; brush the teeth regularly or give dental chews",
+        "unit": "—",
+        "source_id": "S392",
+        "quote": "Check and clean their ears weekly to prevent infections, and brush their teeth regularly or provide them with dental chews.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S392). → ear care ROADMAP M5-R20, tooth care ROADMAP M5-R15 (needs-david)."
+      },
+      "petmd_grooming": {
+        "value": "weekly brushing; a bath at least once a month",
+        "unit": "—",
+        "source_id": "S391",
+        "quote": "Because these dogs shed frequently, weekly brushing can help keep the coat free of excess hair.",
+        "confidence": "medium",
+        "notes": "PetMD (S391): 'Baths, at least once a month, will keep the hair glossy and healthy.' → bathing ROADMAP M5-R20 (needs-david)."
+      },
+      "petmd_ears": {
+        "value": "floppy ears — prone to ear infections; clean routinely",
+        "unit": "—",
+        "source_id": "S391",
+        "quote": "Their ears need to be cleaned routinely.",
+        "confidence": "medium",
+        "notes": "PetMD (S391): 'Rhodesian Ridgebacks have floppy ears, making them more susceptible to ear infections.' → ROADMAP M5-R20."
+      },
+      "akc_grooming": {
+        "value": "weekly brushings",
+        "unit": "—",
+        "source_id": "S393",
+        "quote": "Weekly brushings are fine to remove loose hair.",
+        "confidence": "medium",
+        "notes": "AKC article (S393): 'The Rhodesian Ridgeback doesn't require any specific kind of grooming.' Agrees with weekly brushing."
+      },
+      "pdsa_home": {
+        "value": "a large garden is a must; space and open areas",
+        "unit": "—",
+        "source_id": "S390",
+        "quote": "a large garden is an absolute must",
+        "confidence": "medium",
+        "notes": "PDSA (S390), fragment as returned; better suited to 'an environment where they'll get lots of access to open spaces'. → no apartment tag."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -35558,6 +36281,341 @@
         "confidence": "high",
         "notes": "Colours shared by the FCI (S377) and AKC (S380) standards — red, black and tan, sesame — always with urajiro. Never cream, white or pinto (AKC serious fault). Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): red with urajiro is the portrait default (FCI + AKC colour); natural ears and tail"
+      }
+    },
+    "rhodesian_ridgeback": {
+      "_note": "Unattended run M5-R10-47 (2026-10-19): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: weekly brushing (RKC S387 'Once a week', M5-R13); a gap between meals and exercise (PDSA S390, M5-R16); puppy socialisation (PDSA S390 quote, M5-R17). Sourced needs without a game mechanic: weekly ear cleaning and monthly baths (Woodgreen S392, PetMD S391) → ROADMAP M5-R20; regular tooth brushing (Woodgreen S392) → ROADMAP M5-R15; off lead only in a secure, enclosed area (AKC S393, PDSA S390) → needs a new ROADMAP task (needs-david). Senior 90 from the RKC lower bound 'Over 10 years' (S387) — provisional, no McMillan 2024 / VetCompass median reachable (McMillan 12 y via Wikipedia S394 → 108 as alternative). Breed Watch Category 1 → not a welfare breed, in marketing.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S387",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Exercise: More than 2 hours per day' (S387; S386 the same). Rule: one number N ('more than N') → N = 120; PDSA (S390) 'a minimum of two hours' agrees.",
+        "alternatives": [
+          {
+            "value": 120,
+            "source_id": "S390",
+            "notes": "PDSA 'a minimum of two hours exercise every day'"
+          },
+          {
+            "value": 90,
+            "source_id": "S392",
+            "notes": "Woodgreen '90-120 mins' (lower bound)"
+          },
+          {
+            "value": 45,
+            "source_id": "S391",
+            "notes": "PetMD 'at least 45 minutes a day'"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S387 'Exercise: More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S387",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) = 90 (S11 + RKC lower bound 'Over 10 years', S387; PDSA 'Over 10 years', S390, and the PetMD / Woodgreen lower bound 10 y agree). No McMillan 2024 / VetCompass median reachable (S376: no x̃ for the breed). Alternatives: 108 (McMillan 2024 12 y via Wikipedia S394, tier C), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 Supplementary Table 3 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S387"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S387)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 52 (S35), tier 'Average Working/Obedience Intelligence' (40–54) → 1.0. PDSA (S390) 'wilful at times' / PetMD (S391) 'independent streak' — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 52, Average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PDSA (S390): 'We usually recommend splitting their daily allowance into two meals.' — the game's two adult meals.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S387",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "rhodesian_ridgeback.suitability.rkc_grooming. RKC (S387; S386 the same) 'Once a week' → 1 (runbook dog-grooming rule 'Once a week' → 1). PDSA (S390) 'A weekly brush', Woodgreen (S392) 'A weekly brush', PetMD (S391) 'weekly brushing', AKC (S393) 'Weekly brushings' agree. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed. The heavier spring / autumn moult (PDSA) is not modelled.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Grooming: Once a week«; PDSA, Woodgreen, PetMD, AKC enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S390",
+        "quote": "Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.",
+        "confidence": "medium",
+        "notes": "PDSA (S390), feeding section; rhodesian_ridgeback.behaviour.after_meals; GDV in the PDSA health list (health.gdv). Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S390",
+        "quote": "It’s important to socialise them from a young age with different people, dogs and experiences",
+        "confidence": "medium",
+        "notes": "rhodesian_ridgeback.behaviour.socialisation (PDSA S390); Woodgreen (S392) and AKC (S393) agree. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S390)"
+      },
+      "ear_care": {
+        "value": "check and clean the ears weekly; a bath at least once a month",
+        "unit": "ear care / bathing (sourced need)",
+        "source_id": "S392",
+        "quote": "Check and clean their ears weekly to prevent infections, and brush their teeth regularly or provide them with dental chews.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S392), rhodesian_ridgeback.suitability.woodgreen_ears_teeth; PetMD (S391) 'Their ears need to be cleaned routinely.' and 'Baths, at least once a month, will keep the hair glossy and healthy.' (suitability.petmd_ears, petmd_grooming). The game has no ear-care or bathing mechanic → ROADMAP M5-R20 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): pregled in čiščenje ušes enkrat na teden, kopanje vsaj enkrat na mesec; mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "dental_care": {
+        "value": "brush the teeth regularly or give dental chews; no frequency",
+        "unit": "tooth brushing (sourced need)",
+        "source_id": "S392",
+        "quote": "Check and clean their ears weekly to prevent infections, and brush their teeth regularly or provide them with dental chews.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S392), rhodesian_ridgeback.suitability.woodgreen_ears_teeth. The game has no tooth-care mechanic → ROADMAP M5-R15 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno ščetkanje zob ali žvečilke za zobe; mehanike ni → ROADMAP M5-R15 (needs-david)"
+      },
+      "off_lead": {
+        "value": "off lead only in a secure, safely enclosed area",
+        "unit": "walks (sourced need)",
+        "source_id": "S393",
+        "quote": "always in a safely enclosed area when off leash",
+        "confidence": "medium",
+        "notes": "AKC article (S393), rhodesian_ridgeback.exercise.off_lead; PDSA (S390) 'plenty of off-lead exercise in a secure place'. The game counts steps and has no off-lead walks → no mechanic and no ROADMAP task yet (needs-david: a new task, as for the Shiba Inu).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): brez povodca samo v varnem, ograjenem prostoru; mehanike ni in naloge v ROADMAP še ni → potrebna nova naloga (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-47); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S387",
+              "S390"
+            ],
+            "refs": [
+              "rhodesian_ridgeback.exercise.adult",
+              "rhodesian_ridgeback.suitability.pdsa_active_family"
+            ],
+            "quote": "S387 'Exercise: More than 2 hours per day'; S390 'They suit active families who are prepared to spend lots of time outdoors with them'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S385",
+              "S390"
+            ],
+            "refs": [
+              "rhodesian_ridgeback.suitability.fci_family_pet",
+              "rhodesian_ridgeback.suitability.pdsa_family"
+            ],
+            "quote": "S385 'especially prized as watch-dog and family pet'; S390 'extremely loyal and loving towards their family'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S387"
+            ],
+            "refs": [
+              "rhodesian_ridgeback.suitability.rkc_size_of_home",
+              "rhodesian_ridgeback.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S387 'Size of home: Large house'; 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S387",
+              "S390"
+            ],
+            "refs": [
+              "rhodesian_ridgeback.exercise.adult",
+              "rhodesian_ridgeback.suitability.pdsa_exercise"
+            ],
+            "quote": "S387 'Exercise: More than 2 hours per day'; S390 'a minimum of two hours exercise every day'"
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S390"
+            ],
+            "refs": [
+              "rhodesian_ridgeback.behaviour.experienced_owner",
+              "rhodesian_ridgeback.suitability.pdsa_experienced_owner"
+            ],
+            "quote": "S390 'we wouldn’t recommend them if you are a first time owner'; 'playful and powerful dogs'",
+            "note": "The chip's 'powerful dog' matches PDSA 'powerful dogs' (S390); not independent_experienced_owner (Rottweiler / Vizsla precedent)."
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S390",
+              "S392"
+            ],
+            "refs": [
+              "rhodesian_ridgeback.suitability.pdsa_children",
+              "rhodesian_ridgeback.suitability.woodgreen_children"
+            ],
+            "quote": "S390 'Their large size and boisterous nature when they are younger also means they risk knocking over smaller children.'; S392 'Ridgebacks do best with older children'",
+            "note": "Large dog → not older_children (its chip names a small dog); Vizsla / Belgian Malinois precedent."
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S390",
+              "S392"
+            ],
+            "refs": [
+              "rhodesian_ridgeback.behaviour.time_alone",
+              "rhodesian_ridgeback.suitability.pdsa_company"
+            ],
+            "quote": "S390 'We would never recommend leaving your Rhodesian Ridgeback alone for more than four hours.'; 'likely to develop separation anxiety'; S392 'They don't cope well with being left alone for long hours.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S387",
+              "S390"
+            ],
+            "refs": [
+              "rhodesian_ridgeback.suitability.rkc_shedding"
+            ],
+            "quote": "S387 'Sheds: Yes'; S390 'Ridgebacks shed all year round'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S390"
+            ],
+            "refs": [
+              "rhodesian_ridgeback.behaviour.other_pets",
+              "rhodesian_ridgeback.suitability.pdsa_prey_drive"
+            ],
+            "quote": "S390 'Ridgebacks have a very high prey drive'"
+          }
+        ],
+        "not_proposed": {
+          "children": "PDSA (S390) / Woodgreen (S392): older children; risk of knocking over smaller children → not_for_small_children instead.",
+          "small_children": "Sources advise against.",
+          "older_children": "Its chip reads 'small dog — better with older children' — wrong for a large dog → not_for_small_children.",
+          "independent_experienced_owner": "experienced_owner fits better: PDSA names a powerful dog and advises against first-time owners (S390).",
+          "other_pets": "PDSA (S390): not with smaller pets; Woodgreen (S392) 'Sociable with pets' Low (summary).",
+          "apartment": "RKC 'Large house' (S387).",
+          "first_time_owner": "Sources say the opposite (experienced_owner).",
+          "often_alone": "Sources say the opposite (needs_company).",
+          "needs_mental_stimulation": "No explicit verbatim statement (PDSA 'get bored easily if they're not challenged enough' is about training; Woodgreen only as a tool summary) — Claude's reading, open for David (Vizsla precedent).",
+          "secure_fencing": "No source says it escapes from a garden; the off-lead advice (S393, S390) is a separate open need.",
+          "frequent_grooming": "Once a week (S387).",
+          "low_shedding": "Sheds (S387, S390).",
+          "shorter_lifespan": "RKC 'Over 10 years' (S387).",
+          "food_motivated_weight": "No source.",
+          "chews_when_bored": "No verbatim source.",
+          "hips_hind_legs": "Hip / elbow dysplasia only in the PDSA / PetMD lists; Breed Watch Category 1 → no welfare chip (breeder checklist instead).",
+          "welfare": "RKC Breed Watch Category 1 (S387) → no welfare chip; dermoid sinus, JME, DM, hypothyroidism, GDV are research / register health keys and breeder-checklist items only."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, large_home; consider long_daily_exercise, experienced_owner, not_for_small_children, needs_company, sheds, chases_small_pets (brez children / older_children — velik pes, viri svetujejo starejše otroke; brez needs_mental_stimulation = branje Claude, odprto za Davida)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S387",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges,",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S387, S386) → no welfare chip, no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never shows it as a dog for small children or first-time owners, never off lead in the open (S393), never with small pets (S390).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (Breed Watch Category 1)"
+      },
+      "ai_appearance": {
+        "value": "adult Rhodesian Ridgeback, red wheaten (default) or light wheaten, uniform colour, a dark muzzle and ears allowed, at most a little white on chest and toes; well balanced, strong, muscular, agile and athletic hound, elegant, never massive; the clearly defined ridge of reversed hair along the spine from behind the shoulders to the haunch with two identical crowns; short dense sleek glossy coat; ears set rather high, medium size, rounded tips, carried close to the head; round bright eyes; black nose with dark eyes (or brown nose with amber eyes); tail of moderate length with a slight upward curve, never curled",
+        "unit": "—",
+        "source_id": "S385",
+        "quote": "Light wheaten to red wheaten.",
+        "confidence": "high",
+        "notes": "FCI (S385), RKC (S388), AKC (S389) — one colour range. Never black, black and tan, brindle or ridgeless (AKC / FCI disqualifications). Weights unsourced in prompts. The ridge is the breed's defining trait → dog trait `ridge` in media.breed_portraits.traits (+ prompt_order + sources).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): red wheaten is the portrait default (standard colour range light → red wheaten); the ridge always visible; natural ears and tail"
       }
     }
   }
