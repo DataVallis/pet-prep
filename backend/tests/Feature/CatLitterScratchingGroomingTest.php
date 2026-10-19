@@ -937,3 +937,20 @@ describe('QA round 1 (M5-R06-05)', function () {
             ->and(ActivityLog::where('pet_id', $cat->id)->where('activity_type', 'resolved_scratching')->count())->toBe(0);
     });
 });
+
+describe('routine ledger persists cat routines (hotfix 2026-10-19)', function () {
+    it('closes a cat day with litter routines into pet_daily_routines instead of failing on varchar(8)', function () {
+        [, , $cat] = ccFamily();
+        ccUse($cat, '2026-10-21 10:00');
+        ccTickAround('2026-10-21 10:00'); // the tick applies the use (scoop deadline fixed)
+
+        // Close every finished day up to and including the first weekly litter change (birth + 7 days).
+        ccAt('2026-10-28 12:00');
+        $closed = app(RoutineLedgerService::class)->closePet($cat->id);
+
+        expect($closed)->toBeGreaterThan(0)
+            ->and($cat->fresh()->routines_closed_through)->not->toBeNull()
+            ->and(DB::table('pet_daily_routines')->where('pet_id', $cat->id)->where('routine_type', 'litter_scoop')->where('local_date', '2026-10-21')->count())->toBe(1)
+            ->and(DB::table('pet_daily_routines')->where('pet_id', $cat->id)->where('routine_type', 'litter_change')->count())->toBe(1);
+    });
+});
