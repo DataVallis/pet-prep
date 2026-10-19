@@ -151,6 +151,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.rough_collie.slug, { en: 'rough-collie', sl: 'dolgodlaki-skotski-ovcar' });
   assert.deepEqual(byId.mastiff.slug, { en: 'mastiff', sl: 'angleski-mastif' });
   assert.deepEqual(byId.shiba_inu.slug, { en: 'shiba-inu', sl: 'siba-inu' });
+  assert.deepEqual(byId.rhodesian_ridgeback.slug, { en: 'rhodesian-ridgeback', sl: 'rodezijski-ridgeback' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -289,6 +290,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     rough_collie: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1.5 },
     mastiff: { adult: 6000, senior: 4500, seniorFrom: 81, learning: 0.5 },
     shiba_inu: { adult: 6000, senior: 4500, seniorFrom: 131, learning: 1 },
+    rhodesian_ridgeback: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -515,7 +517,7 @@ test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming row
   assert.deepEqual([...cats, ...dogs].sort(), seeded);
   assert.deepEqual(cats, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
   // M5-R13: every dog breed of the app except the mutt and the Border Collie (no grooming statement).
-  assert.equal(dogs.length, 41);
+  assert.equal(dogs.length, 42);
   assert.ok(!dogs.includes('mutt') && !dogs.includes('border_collie'));
 });
 
@@ -1623,4 +1625,28 @@ test('Shiba Inu (M5-R10-46): up to 1 hour (RKC), AKC average weight, FCI height,
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a percentage or a hazard ratio.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|HR 0\.5/i);
+});
+
+test('Rhodesian Ridgeback (M5-R10-47): more than 2 hours (RKC), FCI weight + height, FCI group 6 South Africa, RKC "over 10 years", Coren 52, no welfare chip, dermoid sinus + hip / elbow + DNA JME / DM breeder checks', () => {
+  const d = registry.breeds.find((b) => b.id === 'rhodesian_ridgeback');
+  assert.deepEqual(d.name, { en: 'Rhodesian Ridgeback', sl: 'Rodezijski ridgeback' });
+  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.facets.size, 'large');
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[120, 'more_than', ['S387']]]);
+  // New FCI origin South Africa (ZA, FCI nomenclature S384 / standard S385).
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 146, group: 6, section: 3, origin: 'ZA' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.qualifier, f.source_ids]), [[{ male: [36.5, 36.5], female: [32, 32] }, 'about', ['S385']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [63, 69], female: [61, 66] }, ['S385']]]);
+  // No McMillan 2024 / VetCompass median reachable → only the RKC band (the Wikipedia 12 y is never exported).
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['more_than', 10, ['S387']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'coren_rank').map((f) => [f.value, f.source_ids]), [[52, ['S35']]]);
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 12000, cap_month: 12 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 90 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 9000 } });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'family_pet', 'large_home']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'experienced_owner', 'not_for_small_children', 'needs_company', 'sheds', 'chases_small_pets']);
+  assert.deepEqual(d.health.map((h) => h.key), ['dermoid_sinus', 'hip_elbow_dysplasia', 'bloat_gdv', 'hypothyroidism']);
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => t.key), ['dermoid_sinus_scheme', 'hip_scheme', 'elbow_scheme', 'dna_jme', 'dna_dm']);
+  const json = JSON.stringify(d);
+  // Never "hypoallergenic", never a percentage, a prevalence or a hazard ratio; never the tier-C Wikipedia lifespan.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|prevalence|\d %\)|mcmillan_2024/i);
 });
