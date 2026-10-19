@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "bc9c3203177db6fab02df0edc8c2cdde0eb2c78289bae6d425eb7303128d0a05"
+      "sha256": "e525ac9a0a7a9b119da5d19add453260ee6b61aece0d029039b9424653edad9f"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "1cc41a792b69229e9d3900cf408d2f2c61a6df5fe91448ed0104f7f5344d2453"
+      "sha256": "58a4c2e5439e426e56c87092e929553a8aa4c8d1b103e3cfbd3f68355bb6ffdd"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "cbd05b5e2421da4cf33af4c23decbabdbc6068c307d7841178bc32b9dcb68859"
+      "sha256": "6c5768ce010bcafefa6f63232c570f8b17aea73a3f7da1032aeeb3089d7eafb7"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "e035ea978ac1cfc32cb302ab8bfd0990bdace518173610593917294a968520ac"
+      "sha256": "a0c18af65f9815cae8f6347e4b8c9d45882ad1fd240c3ba145bd3469e44d5612"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "06c203527a517c0740ce782416fb757ca6253dc775f04458ba8270087541e2c2"
+      "sha256": "29e0bb715ef0666a5aea455ef3286e1fca11c0a66484276c49ab394f75d6f3a0"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "1480a33b675d63cdc14c72ca7271a39232b38a04e6bf07d7abf603e501763f27"
+      "sha256": "ebfeee8379c44395b010486ab99c2f827092c1548ba0c50f88ca8df4a18c7fb9"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -200,7 +200,7 @@
         }
       },
       "status": "available",
-      "breed_count": 40,
+      "breed_count": 41,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -24237,6 +24237,562 @@
       ]
     },
     {
+      "id": "mastiff",
+      "species": "dog",
+      "order": 40,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Mastiff",
+        "sl": "Angleški mastif"
+      },
+      "slug": {
+        "en": "mastiff",
+        "sl": "angleski-mastif"
+      },
+      "synonyms": {
+        "en": [
+          "English Mastiff",
+          "Old English Mastiff"
+        ],
+        "sl": [
+          "mastif",
+          "mastiff"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "h1_2"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S370"
+          ],
+          "ref": "mastiff.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              71,
+              78
+            ],
+            "female": [
+              71,
+              78
+            ]
+          },
+          "source_ids": [
+            "S370"
+          ],
+          "ref": "mastiff.height.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              80,
+              85
+            ],
+            "female": [
+              80,
+              85
+            ]
+          },
+          "source_ids": [
+            "S370"
+          ],
+          "ref": "mastiff.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            18,
+            24
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "mastiff.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 9,
+          "source_ids": [
+            "S54"
+          ],
+          "ref": "mastiff.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "less_than",
+          "value": 10,
+          "source_ids": [
+            "S370"
+          ],
+          "ref": "mastiff.lifespan.pdsa",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 60,
+          "source_ids": [
+            "S370"
+          ],
+          "ref": "proposed_game_parameters.mastiff.exercise_minutes_adult",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 72,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "mastiff.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 264,
+            "group": 2,
+            "section": 2,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S371"
+          ],
+          "ref": "mastiff.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S370"
+          ],
+          "ref": "mastiff.health.gdv",
+          "confidence": "medium"
+        },
+        {
+          "key": "eyelid_problems",
+          "source_ids": [
+            "S370"
+          ],
+          "ref": "mastiff.health.eyelids",
+          "confidence": "high"
+        },
+        {
+          "key": "skin_allergy_face_folds",
+          "source_ids": [
+            "S370"
+          ],
+          "ref": "mastiff.health.skin",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S370"
+          ],
+          "ref": "mastiff.health.hip_elbow_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "heart_muscle_disease",
+          "source_ids": [
+            "S370"
+          ],
+          "ref": "mastiff.health.heart_dcm",
+          "confidence": "medium"
+        },
+        {
+          "key": "wobbler_syndrome",
+          "source_ids": [
+            "S370"
+          ],
+          "ref": "mastiff.health.wobbler",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S374"
+            ],
+            "refs": [
+              "mastiff.suitability.petmd_family",
+              "mastiff.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S374"
+            ],
+            "refs": [
+              "mastiff.suitability.petmd_family",
+              "mastiff.behaviour.family"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S374"
+            ],
+            "refs": [
+              "mastiff.behaviour.other_pets",
+              "mastiff.suitability.petmd_other_pets"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S374"
+            ],
+            "refs": [
+              "mastiff.suitability.petmd_children"
+            ]
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S370"
+            ],
+            "refs": [
+              "mastiff.health.shorter_lifespan",
+              "mastiff.lifespan.pdsa"
+            ]
+          },
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S370",
+              "S375"
+            ],
+            "refs": [
+              "mastiff.health.eyelids",
+              "mastiff.health.breed_watch"
+            ]
+          },
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S370",
+              "S375"
+            ],
+            "refs": [
+              "mastiff.health.skin",
+              "mastiff.health.breed_watch"
+            ]
+          },
+          {
+            "tag": "hips_hind_legs",
+            "source_ids": [
+              "S370",
+              "S375"
+            ],
+            "refs": [
+              "mastiff.health.hip_elbow_dysplasia",
+              "mastiff.health.breed_watch"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S374"
+            ],
+            "refs": [
+              "mastiff.suitability.petmd_shedding"
+            ]
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S374"
+            ],
+            "refs": [
+              "mastiff.behaviour.drooling",
+              "mastiff.suitability.petmd_drooling"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 81
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 81
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.mastiff.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S370"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S370 'Minimum exercise (per day) | 1 hour'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.mastiff.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.mastiff.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S54"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 81 (0.75 × 9.0 y, McMillan 2024 S54)"
+          },
+          {
+            "ref": "proposed_game_parameters.mastiff.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 72, Lowest tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.mastiff.grooming",
+            "basis_source_ids": [
+              "S370"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PDSA »grooming just once a week«; PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S54",
+          "S370"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_found",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S54",
+        "S370",
+        "S371",
+        "S374",
+        "S375",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -28232,6 +28788,34 @@
       "publisher": "PetMD",
       "title": "Collie Dog Breed Health and Care (published Sep. 26, 2022)",
       "url": "https://www.petmd.com/dog/breeds/collie"
+    },
+    {
+      "id": "S370",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Mastiff — breed guide",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/mastiff"
+    },
+    {
+      "id": "S371",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 264 — Mastiff (EN PDF; date of publication of the official valid standard 13.10.2010)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/264g02-en.pdf"
+    },
+    {
+      "id": "S374",
+      "tier": "B",
+      "publisher": "PetMD — T. Kho-Pelfrey, DVM, reviewed by T. Manucy, DVM (updated Jul. 1, 2025)",
+      "title": "Mastiff (English Mastiff) Dog Breed Health and Care",
+      "url": "https://www.petmd.com/dog/breeds/mastiff"
+    },
+    {
+      "id": "S375",
+      "tier": "C",
+      "publisher": "The Mastiff Association (UK breed club)",
+      "title": "Breed Watch (reproduces the Kennel Club Breed Watch entry 'Mastiff - Category 3')",
+      "url": "https://www.mastiffassociation.uk/breed-watch"
     },
     {
       "id": "C1",

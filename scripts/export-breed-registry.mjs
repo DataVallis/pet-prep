@@ -417,6 +417,7 @@ const SPECIES = [
       { id: 'maltese', synonyms: { en: ['Maltese dog', 'Bichon Maltais', 'Maltese Terrier'], sl: ['malteški bišon', 'malteški psiček'] } },
       { id: 'pug', synonyms: { en: ['Pug dog', 'Carlin'], sl: ['mopsek', 'pug'] } },
       { id: 'rough_collie', synonyms: { en: ['Collie', 'Collie (Rough)', 'Long-haired Collie'], sl: ['škotski ovčar', 'collie'] } },
+      { id: 'mastiff', synonyms: { en: ['English Mastiff', 'Old English Mastiff'], sl: ['mastif', 'mastiff'] } },
     ],
   },
   {
@@ -1305,6 +1306,31 @@ const DOG_FACTS = {
       ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
     ],
   },
+  // M5-R10-45. The RKC breed page could not be fetched (2026-10-19), so the register shows the PDSA height and
+  // weight (S370 — FCI / AKC give no weight), the McMillan 2024 median (S54) and the PDSA band "Under 10 years",
+  // and the exercise minimum (the game value, 'at_least' — Miniature American Shepherd precedent). Not exported:
+  // height.akc_minimum (minimums only), adult_weight.salt_category (our assignment), lifespan.senior_from
+  // (derived), coat / grooming / shedding (no RKC category word — the game's weekly brushing and the `sheds` chip
+  // carry it), health.breed_watch (via the chips), back / other_conditions (research only),
+  // suitability.petmd_* care needs (M5-R14 / M5-R20). New health key: skin_allergy_face_folds (PDSA S370).
+  mastiff: {
+    height: ['height.pdsa'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.pdsa', 'less_than']],
+    exercise: [['@proposed_game_parameters.mastiff.exercise_minutes_adult', 'at_least']],
+    coat: [],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['bloat_gdv', 'health.gdv'],
+      ['eyelid_problems', 'health.eyelids'],
+      ['skin_allergy_face_folds', 'health.skin'],
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['heart_muscle_disease', 'health.heart_dcm'],
+      ['wobbler_syndrome', 'health.wobbler'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1634,6 +1660,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.rough_collie.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.rough_collie.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.rough_collie.exercise_minutes_senior',
+  },
+  mastiff: {
+    adult_minutes: ['proposed_game_parameters.mastiff.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.mastiff.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.mastiff.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.mastiff.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.mastiff.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.mastiff.exercise_minutes_senior',
   },
 };
 
