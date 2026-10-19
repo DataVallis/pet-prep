@@ -414,6 +414,14 @@
 | Never white (AKC only), cream or a double merle. Not a welfare breed (Breed Watch Category 2 without a
 | named point, S365). Colour weights are unsourced → `verified => false`.
 |
+| Mastiff (M5-R10-45, docs/research/dog-data mastiff.appearance): "The Mastiff is a large, massive,
+| symmetrical dog with a well-knit frame." (AKC S373); head square in outline, body broad, deep and powerful
+| (FCI 264, S371); coat "Short and close-lying, but coarse over neck and shoulders."; colours "Apricot, fawn
+| or brindle." (S371, S373) with a dark muzzle, ears and nose (S373) — fawn weighted highest (the register
+| portrait). Welfare (Kennel Club Category 3, PDSA S370; Breed Watch points via S375): moderate skin with
+| only a lightly wrinkled forehead (the `skin` trait), eyelids in normal contact, short broad muzzle with
+| open nostrils. Never excessive white. Colour weights are unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2022,6 +2030,44 @@ return [
             'nose' => ['black nose, long, smooth, well-rounded blunt muzzle (never square, not short-faced)'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
+    ],
+
+    // M5-R10-45 (docs/research/dog-data/data.json mastiff.appearance; runbook rules 2026-10-10:
+    // standard colours only — fawn, apricot, brindle, always with the dark mask; welfare: moderate skin).
+    'mastiff' => [
+        'display_name' => 'Mastiff',
+        // Colour frequencies are in no source (mastiff.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 264 (S371, https://dev.fci.be/Nomenclature/Standards/264g02-en.pdf), AKC standard (S373), PDSA (S370), Breed Watch points via the breed club (S375) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S370 "Size | Large"; S373 "Dogs, minimum, 30 inches at the shoulder."',
+            'build' => 'S373 "The Mastiff is a large, massive, symmetrical dog with a well-knit frame."; S371 "Body broad, deep, long, powerfully built, on legs wide apart and set."',
+            'coat_length' => 'S371 "Short and close-lying, but coarse over neck and shoulders."',
+            'coat_color' => 'S371 "Apricot, fawn or brindle."; S373 "Muzzle, ears, and nose must be dark in color, the blacker the better," (weights unsourced; never excessive white)',
+            'ear_carriage' => 'S371 "Small, thin to touch, wide apart, set on at highest points of sides of skull,"',
+            'eye_color' => 'S371 "Moderate size, wide apart. Colour hazel brown, darker the better, showing no haw."; S375 "Excessive amounts of loose facial skin with conformational defects of the upper and/or lower eyelids" (welfare: tight eyelids)',
+            'tail' => 'S371 "Set on high, and reaching to hocks, or a little below them, wide at its root and tapering to end,"',
+            'skin' => 'S371 "Skull broad between ears, forehead flat, but wrinkled when attention is excited."; S375 "Excessive wrinkle" (welfare: moderate skin)',
+            'muzzle' => 'S371 "Short, broad under eyes, and keeping nearly parallel in width to end of nose;"; "Broad, with widely spreading nostrils when viewed from front," (welfare: open nostrils)',
+        ],
+        'traits' => [
+            'size' => ['very large, massive'],
+            'build' => [['value' => 'large, massive and symmetrical with a broad, deep, powerful body, sound and well balanced', 'weight' => 3], 'powerful, broad-chested and dignified, standing square on wide-set legs'],
+            'coat_length' => ['short, dense, close-lying coat, slightly coarser over the neck and shoulders'],
+            // Standard colours only (S371, S373); fawn highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'fawn with a dark mask, dark ears and a black nose', 'weight' => 50],
+                ['value' => 'apricot with a dark mask, dark ears and a black nose', 'weight' => 30],
+                ['value' => 'brindle with a dark mask, dark ears and a black nose', 'weight' => 20],
+            ],
+            'ear_carriage' => ['small, thin, dark ears set wide apart, lying flat and close to the cheeks'],
+            // Welfare (Breed Watch points via S375): eyelids in normal contact, no haw, no drooping.
+            'eye_color' => ['moderate, wide-set hazel brown eyes with tight eyelids, no haw'],
+            'tail' => ['natural tail set high, wide at the root and tapering, reaching the hocks'],
+            'skin' => ['moderate skin with only a lightly wrinkled forehead, no heavy wrinkles or loose jowls'],
+            'muzzle' => ['short, broad muzzle with a black nose and clearly open nostrils'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'skin', 'muzzle'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',
