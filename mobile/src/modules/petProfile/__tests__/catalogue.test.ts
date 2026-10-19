@@ -471,7 +471,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(23);
+    expect(CONSIDER_TAGS).toHaveLength(24);
+    // M5-R10-46 (runbook new-tag rule): independent and stubborn — best with an experienced owner (the Shiba Inu, AKC S383); no numbers.
+    expect(CONSIDER_TAGS).toContain('independent_experienced_owner');
     // M5-R10-30 (runbook new-tag rule): small dog — better with older children (the Pomeranian, AKC S251); no numbers.
     expect(CONSIDER_TAGS).toContain('older_children');
     // M5-R10-29 (runbook welfare rule, new key): eyelids and eyes — check eye tests (the Great Dane, RKC Breed Watch).

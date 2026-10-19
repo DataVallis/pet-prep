@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -550,6 +550,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_MASTIFF = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-45)';
 
     /**
+     * M5-R10-46 Shiba Inu (unattended run 2026-10-19, data.json proposed_game_parameters.shiba_inu.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed
+     * on 2026-10-10 — exercise 60 min (RKC S378 "Exercise: Up to 1 hour per day"), senior 45 min, puppy
+     * 10 min × age capped at 60, stages young 9 / adult 36 / senior 131 (0.75 × McMillan 2024 median 14.6 y,
+     * S376), arrival 2 / 9 / 36 / 131, learning multiplier 1.0 (not ranked by Coren, S35); care rates the
+     * Border Collie's.
+     */
+    public const CONFIRMED_R10_SHIBA_INU = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-46)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -699,6 +709,7 @@ class BreedStageParamsSeeder extends Seeder
         'pug' => [1, 'S355', 'Grooming: Once a week', 'high', false],
         'rough_collie' => [7, 'S365', 'Grooming: Every day', 'high', false],
         'mastiff' => [1, 'S370', 'They need grooming just once a week, but their facial wrinkles will need daily cleaning.', 'high', false],
+        'shiba_inu' => [1, 'S378', 'Grooming: Once a week', 'high', false],
     ];
 
     /**
@@ -785,13 +796,14 @@ class BreedStageParamsSeeder extends Seeder
         'pug' => ['S359', 'Pug puppies, like all dogs, need to be socialized during their first months of life.'],
         'rough_collie' => ['S368', 'Puppy socialization is crucial for proper emotional development and intelligence.'],
         'mastiff' => ['S370', 'As with all breeds, early socialisation is important to ensure they grow up into confident, sociable dogs.'],
+        'shiba_inu' => ['S381', 'Shiba Inu can thrive with proper socialization and desensitization when they are puppies.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1413,6 +1425,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-45 (docs/research/dog-data/data.json mastiff,
             // S370–S376; runbook rules in proposed_game_parameters.mastiff).
             BreedType::Mastiff => self::mastiffProfile(),
+            // M5-R10-46 (docs/research/dog-data/data.json shiba_inu,
+            // S377–S383; runbook rules in proposed_game_parameters.shiba_inu).
+            BreedType::ShibaInu => self::shibaInuProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -4415,6 +4430,79 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'mastiff.lifespan.median_uk',
                 'quote' => 'Mastiff (purple, x̃=9.0)',
                 'notes' => 'McMillan et al. 2024, corrected Fig. 3 legend (S54); results text (S376). PDSA "Under 10 years" (S370) and PetMD 6–10 y (S374) are consistent. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Shiba Inu (M5-R10-46). Stage boundaries, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_SHIBA_INU); weight, growth and lifespan are sourced;
+     * not ranked by Coren. The senior boundary uses the McMillan 2024 median 14.6 y (S376) — not provisional.
+     *
+     * @return array<string, mixed>
+     */
+    private static function shibaInuProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_SHIBA_INU;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S376', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.shiba_inu.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog finishes growing at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [131, $boundary('Derived game boundary: last 25 % of lifespan (S11) × McMillan 2024 median 14.6 y (S376, Results "Shiba Inu (x̃= 14.6") = 10.95 y = 131.4 → 131 months. Not chosen: 90 (RKC lower bound "Over 10 years", S378), 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 131],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shiba_inu.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age already reaches at 6 months, so the whole young stage walks the adult minutes.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S378', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shiba_inu.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC "Exercise: Up to 1 hour per day" (S378) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PetMD (S381) and Dogs Trust (S382) give no minutes.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shiba_inu.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[7.7, 10.4], [
+                'unit' => 'kg', 'source_id' => 'S381', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'shiba_inu.adult_weight.petmd',
+                'quote' => 'Shibas are small and compact dogs, typically weighing 17–23 pounds.',
+                'notes' => 'PetMD (S381), 17–23 lb ≈ 7.7–10.4 kg (our conversion), one range for both sexes. The AKC standard (S380) gives the same numbers as averages: "approximately 23 pounds for males, 17 pounds for females"; the FCI standard (S377) gives no weight.',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'shiba_inu.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (17–23 lb, S380 / S381 = the Small class of S10).',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'shiba_inu.trainability.coren_rank',
+                'notes' => 'Not ranked: the Shiba Inu is not in the Wikipedia table of Coren\'s ranking (S35, 79 ranks, checked 2026-10-19).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.shiba_inu.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): not ranked by Coren (S35) → 1.0, the mixed breed\'s speed (Havanese precedent). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [14.6, [
+                'unit' => 'years', 'source_id' => 'S376', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'shiba_inu.lifespan.median_uk',
+                'quote' => 'Shiba Inu (x̃= 14.6',
+                'notes' => 'McMillan et al. 2024, published version (S376), Results. RKC "Over 10 years" (S378), PetMD 13–16 y (S381) and Dogs Trust 12+ y (S382) are consistent. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

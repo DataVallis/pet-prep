@@ -422,6 +422,15 @@
 | only a lightly wrinkled forehead (the `skin` trait), eyelids in normal contact, short broad muzzle with
 | open nostrils. Never excessive white. Colour weights are unsourced → `verified => false`.
 |
+| Shiba Inu (M5-R10-46, docs/research/dog-data shiba_inu.appearance): "Small-sized dog, well balanced, well
+| boned with well developed muscles." (FCI 257, S377); "Outer coat harsh and straight, undercoat soft and
+| dense; hair on tail slightly long and standing off."; ears "Relatively small, triangular, slightly inclining
+| forward and firmly pricked."; eyes "Triangular, not too small, and dark brown in colour."; tail "Set on high,
+| thick, carried vigorously curled or curved as a sickle". Colours shared by FCI (S377) and AKC (S380): red,
+| black and tan, sesame — always with urajiro (cream-white underside, cheeks and muzzle sides); red weighted
+| highest (the register portrait). Never cream, white or pinto (AKC serious fault). Breed Watch Category 1
+| (S378) — not a welfare breed. Colour weights are unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2068,6 +2077,39 @@ return [
             'muzzle' => ['short, broad muzzle with a black nose and clearly open nostrils'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'skin', 'muzzle'],
+    ],
+
+    // M5-R10-46 (docs/research/dog-data/data.json shiba_inu.appearance; runbook rules 2026-10-10:
+    // standard colours only — red, black and tan, sesame, always with urajiro).
+    'shiba_inu' => [
+        'display_name' => 'Shiba Inu',
+        // Colour frequencies are in no source (shiba_inu.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 257 (S377, https://dev.fci.be/Nomenclature/Standards/257g05-en.pdf), AKC standard (S380), RKC breed page (S378) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S378 "Small-Medium"; S377 "Height at withers: Males 39.5 cm."',
+            'build' => 'S377 "Small-sized dog, well balanced, well boned with well developed muscles."',
+            'coat_length' => 'S377 "Outer coat harsh and straight, undercoat soft and dense; hair on tail slightly long and standing off."',
+            'coat_color' => 'S377 "Colour: Red, black and tan, sesame, black sesame, red sesame."; S380 "Bright orange-red with urajiro" (weights unsourced; never cream, white or pinto)',
+            'ear_carriage' => 'S377 "Relatively small, triangular, slightly inclining forward and firmly pricked."',
+            'eye_color' => 'S377 "Triangular, not too small, and dark brown in colour."',
+            'tail' => 'S377 "Set on high, thick, carried vigorously curled or curved as a sickle, the tip nearly reaching hocks when let down."',
+        ],
+        'traits' => [
+            'size' => ['small to medium-sized, compact'],
+            'build' => [['value' => 'small, well balanced and well boned spitz with well developed muscles', 'weight' => 3], 'compact, agile spitz with a slightly longer-than-tall body'],
+            'coat_length' => ['short double coat with a harsh, straight outer coat and a soft, dense undercoat, slightly longer hair on the tail'],
+            // Standard colours only (S377, S380); red highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'red with cream-white urajiro on the muzzle sides, cheeks, throat, chest, belly and inner legs', 'weight' => 60],
+                ['value' => 'black and tan with cream-white urajiro on the muzzle sides, cheeks, throat, chest, belly and inner legs', 'weight' => 25],
+                ['value' => 'sesame (black-tipped hairs on a red background) with cream-white urajiro on the muzzle sides, cheeks, throat, chest, belly and inner legs', 'weight' => 15],
+            ],
+            'ear_carriage' => ['small, triangular, firmly pricked ears slightly inclined forward'],
+            'eye_color' => ['triangular, dark brown eyes with slightly upturned outer corners'],
+            'tail' => ['thick tail set high and carried curled over the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

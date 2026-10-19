@@ -23309,6 +23309,575 @@
       }
     }
   },
+  "shiba_inu": {
+    "_note": "Added 2026-10-19 (M5-R10-46, unattended run — appended after the Mastiff: AKC 2024 No. 42, S174 table row '42 | Shiba Inu'; No. 41 West Highland White Terrier is already in the app). Quotes as returned by the web-fetch tool on 2026-10-19 (125-character limit — long sentences only in part); spot-check before import (sources.md S377–S383, reused S10, S11, S14, S35, S45, S174, S376). Names: FCI 'SHIBA' (S377), RKC 'Japanese Shiba Inu' (S378), AKC 'Shiba Inu' (S174, S380); Slovenian »šiba inu« (not checked against KZS — open for David). FCI standard valid 30.10.2016 (S377); AKC standard approved 7 February 1997 (S380). Lifespan: McMillan 2024 median 14.6 y (S376 results) — not provisional. No PDSA or Woodgreen Shiba Inu page found by search → RKC (S378, S379), PetMD (S381), Dogs Trust (S382), AKC (S383). Breed Watch Category 1 (S378) → not a welfare breed.",
+    "identity": {
+      "value": "FCI No. 257, Group 5 Section 5 (Asian Spitz and related breeds), Japan",
+      "unit": "—",
+      "source_id": "S377",
+      "quote": "Group 5 Spitz and primitive type.",
+      "confidence": "high",
+      "notes": "FCI standard N° 257 (S377): section 5 'Asian Spitz and related breeds', without working trial (tool summary); 'ORIGIN: Japan.'; 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 30.10.2016.'; utilization 'Hunting dog for birds and small animals.' (and companion dog). RKC (S378) group: Utility; 'The name Shiba Inu translates as 'small dog' and the breed was developed to hunt small game birds.' AKC name: Shiba Inu (S174, S380)."
+    },
+    "size_class": {
+      "value": "small-medium",
+      "unit": "—",
+      "source_id": "S378",
+      "quote": "Small-Medium",
+      "confidence": "high",
+      "notes": "RKC breed page key facts (S378): the 'Size' field reads 'Small-Medium' (as returned, no colon). Dogs Trust (S382): 'Small'. FCI (S377): 'Small-sized dog, well balanced, well boned with well developed muscles.' By weight (17–23 lb, S380 / S381) the PetMD size class is 'Small (12–24 pounds)' (S10, growth only)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            38,
+            41
+          ],
+          "female": [
+            35,
+            38
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S377",
+        "quote": "Height at withers: Males 39.5 cm.",
+        "confidence": "high",
+        "notes": "FCI standard (S377): 'Height at withers: Males 39.5 cm.' / 'Females 36.5 cm.' / 'There is a tolerance of 1,5 cm smaller or taller.' → males 38–41 cm, females 35–38 cm (our arithmetic: ideal ± 1.5 cm). AKC (S380): 'Males 14½ to 16½ inches at withers.' (36.8–41.9 cm) / 'Females 13½ to 15½ inches.' (34.3–39.4 cm) — agrees, alternative only."
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": 10.4,
+          "female": 7.7
+        },
+        "unit": "kg",
+        "source_id": "S380",
+        "quote": "Average weight at preferred size is approximately 23 pounds for males, 17 pounds for females.",
+        "confidence": "high",
+        "notes": "AKC standard (S380). Pounds converted to kg (× 0.4536) by us: 23 lb ≈ 10.4 kg, 17 lb ≈ 7.7 kg — an approximate average, not a range (register qualifier 'about'). The FCI standard (S377) gives no weight. PetMD (S381): 'Shibas are small and compact dogs, typically weighing 17–23 pounds.' — the same numbers as a range (alternative). Game range (adult_weight_kg): 7.7–10.4 kg (female → male average)."
+      },
+      "petmd": {
+        "value": {
+          "male": [
+            7.7,
+            10.4
+          ],
+          "female": [
+            7.7,
+            10.4
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S381",
+        "quote": "Shibas are small and compact dogs, typically weighing 17–23 pounds.",
+        "confidence": "medium",
+        "notes": "PetMD (S381), one range for both sexes (stored per sex); 17–23 lb ≈ 7.7–10.4 kg (our conversion). The game range."
+      },
+      "salt_category": {
+        "value": "II (6.5–9 kg) / III (9–15 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): females ~7.7 kg, males ~10.4 kg straddle two bands. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: 17–23 lb (S380, S381) = the Small class. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Shiba Inu growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 14.6,
+        "unit": "years",
+        "source_id": "S376",
+        "quote": "Shiba Inu (x̃= 14.6",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024, published version (S376), Results — the full list item as returned: 'Shiba Inu (x̃= 14.6, HR 0.5, 0.4–0.6)', among the breeds least at risk from early death ('Those least at risk from early death included'; neighbours Tibetan Spaniel 15.2 and Papillon 14.5). Hazard ratio research only — never shown as a number or risk in the app. Runbook rule: McMillan 2024 first → not provisional."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S378",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S378). Consistent with the McMillan median. Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "13–16",
+        "unit": "years",
+        "source_id": "S381",
+        "quote": "Shiba Inus are, overall, a very healthy breed with an average lifespan of 13–16 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S381), US alternative only."
+      },
+      "dogs_trust": {
+        "value": "12+",
+        "unit": "years",
+        "source_id": "S382",
+        "quote": "typically 12+ years",
+        "confidence": "medium",
+        "notes": "Dogs Trust breed page key facts (S382), alternative only."
+      },
+      "senior_from": {
+        "value": 10.95,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 14.6 y (McMillan 2024, S376) → 0.75 × 14.6 = 10.95 y = 131.4 → 131 months. With the RKC lower bound 10 y (S378): 90 months. Dogs Trust rule of thumb > 7 y = 84 months (S14).",
+        "derived_from": [
+          "S11",
+          "S376"
+        ],
+        "months": 131,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S378",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S378). PetMD (S381): 'Shibas are high-energy and very intelligent, so they require lots of mental stimulation and exercise.' — no minutes. Dogs Trust (S382): 'They need daily walks, plus plenty of time and opportunity to explore, burn energy, and play.' — no minutes."
+      },
+      "off_lead": {
+        "value": "never off lead unless in a fenced or enclosed area",
+        "unit": "—",
+        "source_id": "S383",
+        "quote": "even the most well-trained Shibas should never be allowed off lead unless they are in a fenced or enclosed area",
+        "confidence": "medium",
+        "notes": "AKC article (S383). A sourced need without a game mechanic (the game has no off-lead walks) → open for David (needs a new ROADMAP task). Not secure_fencing: no source says the breed escapes from a garden."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "faithful, keen and highly alert; spirited boldness and good nature; independent and opinionated",
+        "unit": "—",
+        "source_id": "S377",
+        "quote": "The temperament is faithful, with keenness in sense and high alertness.",
+        "confidence": "high",
+        "notes": "FCI (S377). AKC standard (S380): 'A spirited boldness, a good nature, and an unaffected forthrightness, which together yield dignity and natural beauty.' PetMD (S381): 'The Shiba Inu can be a very friendly dog, but they can also be independent and opinionated.' AKC article (S383): 'Confident and independent, Shiba Inus have big personalities.'"
+      },
+      "family": {
+        "value": "best with older children who know how to behave with pets; may not suit families with very young children (anxiety)",
+        "unit": "—",
+        "source_id": "S383",
+        "quote": "Overall, a Shiba would be happiest in a home with experienced, attentive dog owners and older children.",
+        "confidence": "medium",
+        "notes": "AKC article (S383). PetMD (S381): 'Because of their anxiety, Shiba Inu might not be a good fit for families with very young children.' / 'But older kids who know how to interact with pets can be OK.' → older_children (the chip names a small dog — FCI 'Small-sized dog', S377); never small_children or children."
+      },
+      "experienced_owner": {
+        "value": "a better pick for an experienced dog owner (stubborn, independent)",
+        "unit": "—",
+        "source_id": "S383",
+        "quote": "Due to their stubborn nature, a Shiba Inu is a better pick for an experienced dog owner.",
+        "confidence": "medium",
+        "notes": "AKC article (S383). PetMD (S381): 'they might do best with experienced pet parents who have the patience and consistency' (as returned). Basis of the new consider tag independent_experienced_owner (the existing experienced_owner chip names a powerful dog, which no source says)."
+      },
+      "mental_stimulation": {
+        "value": "needs lots of mental stimulation and exercise",
+        "unit": "—",
+        "source_id": "S381",
+        "quote": "Shibas are high-energy and very intelligent, so they require lots of mental stimulation and exercise.",
+        "confidence": "medium",
+        "notes": "PetMD (S381). AKC article (S383): 'The Shiba’s energetic personality also requires a lot of physical and mental stimulation.' Basis of needs_mental_stimulation."
+      },
+      "anxiety": {
+        "value": "can have anxiety, especially if not socialised as a puppy",
+        "unit": "—",
+        "source_id": "S381",
+        "quote": "Shiba Inu dogs can have anxiety.",
+        "confidence": "medium",
+        "notes": "PetMD (S381): 'especially if they weren't properly socialized as a puppy.' Research / context for older_children; no separate chip."
+      },
+      "socialisation": {
+        "value": "socialisation and desensitisation as a puppy",
+        "unit": "—",
+        "source_id": "S381",
+        "quote": "Shiba Inu can thrive with proper socialization and desensitization when they are puppies.",
+        "confidence": "medium",
+        "notes": "PetMD (S381). AKC article (S383): 'With the right training and early socialization, a Shiba can be adaptable to most environments.' Dogs Trust (S382): 'some might enjoy new experiences like meeting other dogs. Others might need to take it a bit slower.' → proposed_game_parameters.shiba_inu.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No statement found on the RKC (S378), PetMD (S381), Dogs Trust (S382) or AKC (S383) pages → no needs_company / often_alone tag."
+      },
+      "other_pets": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No statement on living with other pets (PetMD S381, AKC S383, Dogs Trust S382). Hunting heritage only: FCI 'Hunting dog for birds and small animals.' (S377); PetMD 'Bred to hunt birds, small game, and sometimes even wild boar.' — not a 'high prey drive' statement → no chases_small_pets (runbook) and no other_pets."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag. PetMD (S381): 'Ideally, adults should be fed twice daily.' / puppies 'three or four times each day' — the game's meals are unchanged."
+      },
+      "vocal": {
+        "value": "can 'scream' — may not suit homes with shared walls",
+        "unit": "—",
+        "source_id": "S381",
+        "quote": "Shibas might not be the best fit for apartments or homes with shared walls, as their screaming can annoy neighbors.",
+        "confidence": "medium",
+        "notes": "PetMD (S381). → no apartment tag (also RKC 'Size of home: Small house', S378)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S378): 'Currently no points of concern specific to this breed have been identified for special attention by judges,' → no welfare chip. RKC best-practice tests (S379): hip scheme, DNA GM1 and GM2 gangliosidosis (breeder checklist).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S378",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges,",
+        "confidence": "high",
+        "notes": "RKC breed page (S378); continues 'other than those covered routinely by The Kennel Club breed standard.' Older RKC page (S379): Category 1 as well."
+      },
+      "allergies": {
+        "value": "environmental allergies with recurring skin and / or ear infections",
+        "unit": "—",
+        "source_id": "S381",
+        "quote": "They can be predisposed to environmental allergies, which can result in recurring skin and/or ear infections.",
+        "confidence": "medium",
+        "notes": "PetMD (S381); 'If your Shiba Inu struggles with allergies, weekly ear cleanings can help prevent inflammation.' (→ ear care, ROADMAP M5-R20). Not a Breed Watch point → no sensitive_skin chip (research / register health key only)."
+      },
+      "patella": {
+        "value": "luxating patella (kneecap), arthritis",
+        "unit": "—",
+        "source_id": "S381",
+        "quote": "Shiba Inu dogs are predisposed to developing patella luxation.",
+        "confidence": "medium",
+        "notes": "PetMD (S381): 'Shiba Inus are susceptible to arthritis, especially if they have patella luxation.' Register health key kneecap_luxation."
+      },
+      "dental": {
+        "value": "gingivitis and periodontal (gum) disease; brush teeth every day",
+        "unit": "—",
+        "source_id": "S381",
+        "quote": "the Shiba Inu is predisposed to developing gingivitis and periodontal disease, or gum disease.",
+        "confidence": "medium",
+        "notes": "PetMD (S381): 'To prevent dental disease, it's important to brush your dog's teeth every day.' / 'have their teeth assessed by your veterinarian once a year.' → daily tooth brushing, ROADMAP M5-R15 (needs-david)."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia — RKC best-practice hip scheme",
+        "unit": "—",
+        "source_id": "S379",
+        "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+        "confidence": "high",
+        "notes": "RKC breed page (older address, S379), Best Practice list. Not a Breed Watch point → no hips_hind_legs chip."
+      },
+      "gangliosidosis": {
+        "value": "GM1 and GM2 gangliosidosis — DNA tests recognised by the RKC in February 2025",
+        "unit": "—",
+        "source_id": "S379",
+        "quote": "NEW test recognised Feb 2025 – gangliosidosis (GM1_2). This test will be applied",
+        "confidence": "high",
+        "notes": "RKC (S379), Best Practice: also 'NEW test recognised Feb 2025 – gangliosidosis Type II (GM2_2). This test will be applied' (from December 2025, tool summary). Breeder checklist only."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35) does not list the Shiba Inu (checked 2026-10-19). Runbook rule: unranked → 1.0."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked (S35)."
+      },
+      "training_notes": {
+        "value": "positive learning; recall, loose-lead walking and settling; patience and consistency",
+        "unit": "—",
+        "source_id": "S382",
+        "quote": "The key is positive learning.",
+        "confidence": "medium",
+        "notes": "Dogs Trust (S382): work on 'recall, loose lead walking and settling.' PetMD (S381): 'Shiba Inu can be independent-minded and opinionated.' AKC (S383): 'Due to their stubborn nature, a Shiba Inu is a better pick for an experienced dog owner.' The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.shiba_inu.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "small, well balanced and well boned spitz with well developed muscles; quick, light movement; urajiro markings",
+        "unit": "—",
+        "source_id": "S377",
+        "quote": "Small-sized dog, well balanced, well boned with well developed muscles.",
+        "confidence": "high",
+        "notes": "RKC (S378): 'This is another spitz and is characterised by its urajiro markings and its quick, light movement.' AKC (S380): 'The Shiba is the smallest of the Japanese native breeds of dog.'"
+      },
+      "colours": {
+        "value": [
+          "red",
+          "black and tan",
+          "sesame"
+        ],
+        "unit": "list",
+        "source_id": "S377",
+        "quote": "Colour: Red, black and tan, sesame, black sesame, red sesame.",
+        "confidence": "high",
+        "notes": "FCI (S377) colours as returned; every colour with urajiro ('« Urajiro » : Whitish coat on the sides of the muzzle and on the' cheeks, underside, chest, belly, inner legs — tool summary). AKC (S380): 'Bright orange-red with urajiro', 'Black with tan points and urajiro', 'Sesame (black-tipped hairs on a rich red background) with urajiro'; 'Cream, white, pinto, or any other color or marking not specified is a very serious fault and must be penalized.' The game uses the three colours shared by both standards (red, black and tan, sesame); never cream, white or pinto."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Red first with the highest weight (portrait default), then black and tan, sesame."
+      },
+      "coat": {
+        "value": "double coat — harsh, straight outer coat, soft dense undercoat; tail hair slightly longer",
+        "unit": "—",
+        "source_id": "S377",
+        "quote": "Outer coat harsh and straight, undercoat soft and dense; hair on tail slightly long and standing off.",
+        "confidence": "high",
+        "notes": "AKC (S380): 'Double coated with the outer coat being stiff and straight and the undercoat soft and thick.' RKC (S378): 'Coat length: Short'."
+      },
+      "ears": {
+        "value": "relatively small, triangular, slightly inclined forward, firmly pricked",
+        "unit": "—",
+        "source_id": "S377",
+        "quote": "Relatively small, triangular, slightly inclining forward and firmly pricked.",
+        "confidence": "high",
+        "notes": "AKC (S380): 'Ears are triangular in shape, firmly pricked and small, but in proportion to head and body size.'"
+      },
+      "eyes": {
+        "value": "triangular, not too small, dark brown, outer corners slightly upturned",
+        "unit": "—",
+        "source_id": "S377",
+        "quote": "Triangular, not too small, and dark brown in colour.",
+        "confidence": "high",
+        "notes": "AKC (S380): 'Eyes are somewhat triangular in shape, deep set, and upward slanting toward the outside base of the ear.'"
+      },
+      "nose": {
+        "value": "black; straight nasal bridge",
+        "unit": "—",
+        "source_id": "S377",
+        "quote": "Black.",
+        "confidence": "high",
+        "notes": "FCI (S377) nose (tool summary: the nasal bridge is straight)."
+      },
+      "tail": {
+        "value": "set high, thick, carried curled or curved like a sickle over the back",
+        "unit": "—",
+        "source_id": "S377",
+        "quote": "Set on high, thick, carried vigorously curled or curved as a sickle, the tip nearly reaching hocks when let down.",
+        "confidence": "high",
+        "notes": "AKC (S380): 'Tail is thick and powerful and is carried over the back in a sickle or curled position.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page key facts (S378), PetMD (S381), Dogs Trust (S382), AKC article (S383). No PDSA or Woodgreen Shiba Inu page found by search. The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Small-Medium",
+        "unit": "—",
+        "source_id": "S378",
+        "quote": "Small-Medium",
+        "confidence": "high",
+        "notes": "RKC key facts (S378), 'Size' as returned."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S378",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S378",
+        "quote": "Size of home: Small house",
+        "confidence": "high",
+        "notes": "Not apartment, not large_home (runbook: apartment only from 'Flat/ Apartment', large_home from 'Large house')."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S378",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S378",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "Basis of the weekly brushing (1×, runbook dog-grooming rule)."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S378",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": ""
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S378",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "Dogs Trust (S382): 'Japanese Shiba Inus shed heavily.'; AKC (S383): 'Shibas shed a lot.'; PetMD (S381): a moderate amount, with a heavy moult once or twice a year — all say it sheds. Basis of the sheds tag."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S378",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "Not shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S378",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S378",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S378",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges,",
+        "confidence": "high",
+        "notes": "No welfare chip."
+      },
+      "akc_children": {
+        "value": "happiest with experienced, attentive owners and older children",
+        "unit": "—",
+        "source_id": "S383",
+        "quote": "Overall, a Shiba would be happiest in a home with experienced, attentive dog owners and older children.",
+        "confidence": "medium",
+        "notes": "Basis of older_children."
+      },
+      "petmd_children": {
+        "value": "might not be a good fit for families with very young children; older kids can be OK",
+        "unit": "—",
+        "source_id": "S381",
+        "quote": "Because of their anxiety, Shiba Inu might not be a good fit for families with very young children.",
+        "confidence": "medium",
+        "notes": "PetMD (S381): 'But older kids who know how to interact with pets can be OK.' Basis of older_children with S383."
+      },
+      "akc_experienced_owner": {
+        "value": "a better pick for an experienced dog owner",
+        "unit": "—",
+        "source_id": "S383",
+        "quote": "Due to their stubborn nature, a Shiba Inu is a better pick for an experienced dog owner.",
+        "confidence": "medium",
+        "notes": "Basis of independent_experienced_owner."
+      },
+      "petmd_apartment": {
+        "value": "might not be the best fit for apartments or homes with shared walls",
+        "unit": "—",
+        "source_id": "S381",
+        "quote": "Shibas might not be the best fit for apartments or homes with shared walls, as their screaming can annoy neighbors.",
+        "confidence": "medium",
+        "notes": "→ no apartment tag."
+      },
+      "petmd_grooming": {
+        "value": "regular grooming, baths and brushing; heavy moult once or twice a year",
+        "unit": "—",
+        "source_id": "S381",
+        "quote": "The Shiba Inu has fairly standard and common grooming requirements, such as regular baths and brushing.",
+        "confidence": "medium",
+        "notes": "PetMD (S381): 'once or twice a year your Shiba Inu will go through a molting period, where they shed a large amount of their coat.' No number → the RKC 'Once a week' decides the brushing. Regular baths without a number → ROADMAP M5-R20 (needs-david)."
+      },
+      "petmd_teeth": {
+        "value": "brush the teeth every day; yearly dental check",
+        "unit": "—",
+        "source_id": "S381",
+        "quote": "To prevent dental disease, it's important to brush your dog's teeth every day.",
+        "confidence": "medium",
+        "notes": "→ ROADMAP M5-R15 (needs-david)."
+      },
+      "petmd_ears": {
+        "value": "weekly ear cleaning for a dog with allergies",
+        "unit": "—",
+        "source_id": "S381",
+        "quote": "If your Shiba Inu struggles with allergies, weekly ear cleanings can help prevent inflammation.",
+        "confidence": "medium",
+        "notes": "Conditional need → ROADMAP M5-R20 (needs-david)."
+      },
+      "akc_grooming": {
+        "value": "sheds a lot; short coat needs no frequent brushing against matting",
+        "unit": "—",
+        "source_id": "S383",
+        "quote": "Their short coats do not require frequent brushing to prevent matting",
+        "confidence": "medium",
+        "notes": "Agrees with the RKC weekly grooming (no number)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -34735,6 +35304,260 @@
         "confidence": "high",
         "notes": "Colours shared by the FCI (S371) and AKC (S373) standards — fawn, apricot, brindle; dark mask (AKC). Welfare (Category 3, PDSA S370; Breed Watch points S375): moderate skin, eyelids in normal contact, open nostrils. Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn with a dark mask is the portrait default (FCI + AKC colour); moderate skin and eyelids (Breed Watch); natural ears and tail"
+      }
+    },
+    "shiba_inu": {
+      "_note": "Unattended run M5-R10-46 (2026-10-19): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. One new vocabulary key: independent_experienced_owner (consider, runbook 'new tag' rule — the existing experienced_owner chip names a powerful dog). Sourced needs built from day one: weekly brushing (RKC S378 'Once a week', M5-R13); puppy socialisation (PetMD S381 quote, M5-R17). Sourced needs without a game mechanic: daily tooth brushing (PetMD S381) → ROADMAP M5-R15; weekly ear cleaning for a dog with allergies and regular baths (PetMD S381) → ROADMAP M5-R20; never off lead outside a fenced area (AKC S383) → needs a new ROADMAP task (needs-david). Senior 131 from McMillan 2024 (S376, 14.6 y). Breed Watch Category 1 → not a welfare breed, in marketing.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S378",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Exercise: Up to 1 hour per day' (S378). Rule: one number N ('up to N') → N = 60. PetMD (S381) / Dogs Trust (S382) give no minutes.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S378 'Exercise: Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S378",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 131
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 131 = round(0.75 × 14.6 y × 12) = round(131.4) = 131 (S11 + McMillan 2024 median 14.6 y, S376). Alternatives: 90 (RKC lower bound 'Over 10 years', S378), 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S376"
+        ],
+        "alternatives": {
+          "senior_rkc_lower_bound_10_y": 90,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 131 (0.75 × 14.6 y, McMillan 2024 S376)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 131
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 131)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not in Coren's ranking (S35) → unranked → 1.0 (Havanese precedent). AKC (S383) 'stubborn nature' / PetMD (S381) 'independent-minded' — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PetMD (S381): 'Ideally, adults should be fed twice daily.' — the game's two adult meals.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S378",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "shiba_inu.suitability.rkc_grooming. RKC (S378) 'Once a week' → 1 (runbook dog-grooming rule 'Once a week' → 1). PetMD (S381) 'regular baths and brushing' and AKC (S383) 'do not require frequent brushing to prevent matting' — no number. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed. The moult once or twice a year (PetMD) is not modelled.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Grooming: Once a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S381",
+        "quote": "Shiba Inu can thrive with proper socialization and desensitization when they are puppies.",
+        "confidence": "medium",
+        "notes": "shiba_inu.behaviour.socialisation (PetMD S381); AKC (S383) 'early socialization' agrees. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S381)"
+      },
+      "tooth_brushing": {
+        "value": "daily",
+        "unit": "tooth brushing (sourced need)",
+        "source_id": "S381",
+        "quote": "To prevent dental disease, it's important to brush your dog's teeth every day.",
+        "confidence": "medium",
+        "notes": "PetMD (S381), shiba_inu.suitability.petmd_teeth; health.dental. The game has no tooth-brushing mechanic → ROADMAP M5-R15 (Maltese / Pug precedent); this value is its input.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan; mehanika ščetkanja zob še ni zgrajena → ROADMAP M5-R15 (needs-david)"
+      },
+      "ear_care": {
+        "value": "weekly ear cleaning for a dog with allergies; regular baths (no number)",
+        "unit": "ear care / bathing (sourced need)",
+        "source_id": "S381",
+        "quote": "If your Shiba Inu struggles with allergies, weekly ear cleanings can help prevent inflammation.",
+        "confidence": "medium",
+        "notes": "PetMD (S381), shiba_inu.suitability.petmd_ears and petmd_grooming. The game has no ear-care or bathing mechanic → ROADMAP M5-R20 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): čiščenje ušes enkrat na teden pri psu z alergijami, redno kopanje; mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "off_lead": {
+        "value": "never off lead outside a fenced or enclosed area",
+        "unit": "walks (sourced need)",
+        "source_id": "S383",
+        "quote": "even the most well-trained Shibas should never be allowed off lead unless they are in a fenced or enclosed area",
+        "confidence": "medium",
+        "notes": "AKC article (S383), shiba_inu.exercise.off_lead. The game counts steps and has no off-lead walks → no mechanic and no ROADMAP task yet (needs-david: a new task).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): sprehod samo na povodcu zunaj ograjenega prostora; mehanike ni in naloge v ROADMAP še ni → potrebna nova naloga (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-46); refs = JSON paths in this file. New vocabulary key: independent_experienced_owner (consider). No percentages in the app.",
+        "suits": [],
+        "consider": [
+          {
+            "tag": "independent_experienced_owner",
+            "source_ids": [
+              "S383",
+              "S381"
+            ],
+            "refs": [
+              "shiba_inu.behaviour.experienced_owner",
+              "shiba_inu.suitability.akc_experienced_owner"
+            ],
+            "quote": "S383 'Due to their stubborn nature, a Shiba Inu is a better pick for an experienced dog owner.'; S381 'they might do best with experienced pet parents who have the patience and consistency'",
+            "note": "New key (runbook 'new tag' rule): experienced_owner exists but its chip says 'powerful dog' — no source says that of the Shiba; the sourced reason is an independent, stubborn nature."
+          },
+          {
+            "tag": "older_children",
+            "source_ids": [
+              "S383",
+              "S381"
+            ],
+            "refs": [
+              "shiba_inu.behaviour.family",
+              "shiba_inu.suitability.akc_children",
+              "shiba_inu.suitability.petmd_children"
+            ],
+            "quote": "S383 'happiest in a home with experienced, attentive dog owners and older children'; S381 'might not be a good fit for families with very young children'",
+            "note": "Pomeranian precedent (AKC 'better fit for families with older children'); the chip's 'small dog' matches FCI 'Small-sized dog' (S377)."
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S381",
+              "S383"
+            ],
+            "refs": [
+              "shiba_inu.behaviour.mental_stimulation"
+            ],
+            "quote": "S381 'they require lots of mental stimulation and exercise'; S383 'requires a lot of physical and mental stimulation'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S378",
+              "S382"
+            ],
+            "refs": [
+              "shiba_inu.suitability.rkc_shedding"
+            ],
+            "quote": "S378 'Sheds: Yes'; S382 'Japanese Shiba Inus shed heavily.'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No family-pet statement (AKC / PetMD speak of older children only).",
+          "children": "Only older children (S383, S381) → older_children instead.",
+          "small_children": "PetMD: might not suit very young children (S381).",
+          "other_pets": "No source.",
+          "apartment": "RKC 'Small house' (S378); PetMD: not the best fit for apartments (S381).",
+          "large_home": "RKC 'Small house' (S378).",
+          "active_family": "Up to one hour a day (S378).",
+          "long_daily_exercise": "Up to one hour a day (S378) — the criterion is two hours.",
+          "first_time_owner": "AKC: better for an experienced owner (S383).",
+          "experienced_owner": "The chip names a powerful dog — no source; independent_experienced_owner instead.",
+          "often_alone": "No source.",
+          "needs_company": "No source.",
+          "chases_small_pets": "No 'high prey drive' statement — hunting heritage only (S377, S381).",
+          "secure_fencing": "No source says it escapes from a garden; AKC's off-lead advice (S383) is a separate open need.",
+          "frequent_grooming": "Once a week (S378).",
+          "low_shedding": "Sheds (S378, S382, S383).",
+          "food_motivated_weight": "No source.",
+          "chews_when_bored": "No source.",
+          "welfare": "RKC Breed Watch Category 1 (S378) → no welfare chip; allergies, kneecaps and gum disease (PetMD S381) and hip dysplasia (RKC test S379) are research / register health keys only."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): consider independent_experienced_owner (nova oznaka po pravilu runbooka), older_children, needs_mental_stimulation, sheds; suits nič"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S378",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges,",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S378) → no welfare chip, no veterinary advice against advertising the breed type. Marketing never as a dog for small children or first-time owners (S383, S381), never off lead in the open (S383).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (Breed Watch Category 1)"
+      },
+      "ai_appearance": {
+        "value": "adult Shiba Inu, red (default) with cream-white urajiro on the muzzle sides, cheeks, throat, chest, belly and inner legs; small, well balanced, well boned, muscular spitz; harsh straight outer coat with a dense undercoat; small triangular firmly pricked ears inclined forward; triangular dark brown eyes; black nose; thick tail curled over the back",
+        "unit": "—",
+        "source_id": "S377",
+        "quote": "Colour: Red, black and tan, sesame, black sesame, red sesame.",
+        "confidence": "high",
+        "notes": "Colours shared by the FCI (S377) and AKC (S380) standards — red, black and tan, sesame — always with urajiro. Never cream, white or pinto (AKC serious fault). Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): red with urajiro is the portrait default (FCI + AKC colour); natural ears and tail"
       }
     }
   }

@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "e525ac9a0a7a9b119da5d19add453260ee6b61aece0d029039b9424653edad9f"
+      "sha256": "018f411ca0e355f96e64e0752bbcdde4a05c10a026266fa2c2b9c20913101503"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "58a4c2e5439e426e56c87092e929553a8aa4c8d1b103e3cfbd3f68355bb6ffdd"
+      "sha256": "2040956387ac4fc8c2961b8b26d67078a8b83a5ad64f0e2e160ac345c4240649"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,31 +25,31 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "6c5768ce010bcafefa6f63232c570f8b17aea73a3f7da1032aeeb3089d7eafb7"
+      "sha256": "6edcaa84303a3a7be38101a0c10406857b43b94539cf8392fe20b8ccea70d87f"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "608eefb2de429c6fefdb532cf8a8d3cef7b199a35d0bf0e8f24b5aa60dcccbe5"
+      "sha256": "c2097bf9b458bb67c85e8d9fffd1d3cdd6c53ccc6a12a5f60c8dad104b48dfdf"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "295307742ea6ebc50157ae832f5bf90bd25d61b79f0703e66414ad9bd82739ec"
+      "sha256": "ab2eef1146b57b9329229a89c2ef47645d418a8ef397db6e0638f89bc091b36f"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "a0c18af65f9815cae8f6347e4b8c9d45882ad1fd240c3ba145bd3469e44d5612"
+      "sha256": "84d33cd4ad248930cff8f8b99aed9e9f3c76297654ed41e1a8fbe0064affcb8c"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "29e0bb715ef0666a5aea455ef3286e1fca11c0a66484276c49ab394f75d6f3a0"
+      "sha256": "86f1c319860f4045c522ffd5dbbf85f6859c3605aaf2d0fe3bb87acc9fb50ebf"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "ebfeee8379c44395b010486ab99c2f827092c1548ba0c50f88ca8df4a18c7fb9"
+      "sha256": "7eae232ca4a495b9c2b5673921146375693db23d599bd14366c7c70fff209da2"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -82,6 +82,7 @@
     "frequent_grooming": "consider",
     "heart_and_spine": "consider",
     "hips_hind_legs": "consider",
+    "independent_experienced_owner": "consider",
     "large_home": "suits",
     "long_daily_exercise": "consider",
     "low_shedding": "suits",
@@ -122,6 +123,7 @@
         "frequent_grooming": "needs brushing several times a week",
         "heart_and_spine": "heart and spine — check health tests",
         "hips_hind_legs": "hips and hind legs — check joint health",
+        "independent_experienced_owner": "independent and stubborn — best with an experienced owner",
         "large_home": "a large house and garden",
         "long_daily_exercise": "needs lots of exercise every day",
         "low_shedding": "homes that prefer less shedding",
@@ -162,6 +164,7 @@
         "frequent_grooming": "potrebuje česanje večkrat na teden",
         "heart_and_spine": "srce in hrbtenjača — preverite zdravstvene teste",
         "hips_hind_legs": "kolki in zadnje noge — preverite zdravje sklepov",
+        "independent_experienced_owner": "samostojen in trmast — najbolje z izkušenim lastnikom",
         "large_home": "veliko hišo z vrtom",
         "long_daily_exercise": "vsak dan potrebuje veliko gibanja",
         "low_shedding": "dom, kjer želite manj dlak",
@@ -200,7 +203,7 @@
         }
       },
       "status": "available",
-      "breed_count": 41,
+      "breed_count": 42,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -24793,6 +24796,544 @@
       ]
     },
     {
+      "id": "shiba_inu",
+      "species": "dog",
+      "order": 41,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Shiba Inu",
+        "sl": "Šiba inu"
+      },
+      "slug": {
+        "en": "shiba-inu",
+        "sl": "siba-inu"
+      },
+      "synonyms": {
+        "en": [
+          "Japanese Shiba Inu",
+          "Shiba",
+          "Shiba Ken"
+        ],
+        "sl": [
+          "shiba inu",
+          "japonski šiba inu",
+          "šiba"
+        ]
+      },
+      "facets": {
+        "size": "small_medium",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small_medium",
+          "source_ids": [
+            "S378"
+          ],
+          "ref": "shiba_inu.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              38,
+              41
+            ],
+            "female": [
+              35,
+              38
+            ]
+          },
+          "source_ids": [
+            "S377"
+          ],
+          "ref": "shiba_inu.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "qualifier": "about",
+          "value": {
+            "male": [
+              10.4,
+              10.4
+            ],
+            "female": [
+              7.7,
+              7.7
+            ]
+          },
+          "source_ids": [
+            "S380"
+          ],
+          "ref": "shiba_inu.adult_weight.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "shiba_inu.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 14.6,
+          "source_ids": [
+            "S376"
+          ],
+          "ref": "shiba_inu.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S378"
+          ],
+          "ref": "shiba_inu.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S378"
+          ],
+          "ref": "shiba_inu.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S378"
+          ],
+          "ref": "shiba_inu.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S378"
+          ],
+          "ref": "shiba_inu.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S378"
+          ],
+          "ref": "shiba_inu.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 257,
+            "group": 5,
+            "section": 5,
+            "origin": "JP"
+          },
+          "source_ids": [
+            "S377"
+          ],
+          "ref": "shiba_inu.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "skin_ear_allergies",
+          "source_ids": [
+            "S381"
+          ],
+          "ref": "shiba_inu.health.allergies",
+          "confidence": "medium"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S381"
+          ],
+          "ref": "shiba_inu.health.patella",
+          "confidence": "medium"
+        },
+        {
+          "key": "gum_disease_daily_brushing",
+          "source_ids": [
+            "S381"
+          ],
+          "ref": "shiba_inu.health.dental",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S379"
+          ],
+          "ref": "shiba_inu.health.hip_dysplasia",
+          "confidence": "high"
+        }
+      ],
+      "suitability": {
+        "suits": [],
+        "consider": [
+          {
+            "tag": "independent_experienced_owner",
+            "source_ids": [
+              "S381",
+              "S383"
+            ],
+            "refs": [
+              "shiba_inu.behaviour.experienced_owner",
+              "shiba_inu.suitability.akc_experienced_owner"
+            ]
+          },
+          {
+            "tag": "older_children",
+            "source_ids": [
+              "S381",
+              "S383"
+            ],
+            "refs": [
+              "shiba_inu.behaviour.family",
+              "shiba_inu.suitability.akc_children",
+              "shiba_inu.suitability.petmd_children"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S381",
+              "S383"
+            ],
+            "refs": [
+              "shiba_inu.behaviour.mental_stimulation"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S378",
+              "S382"
+            ],
+            "refs": [
+              "shiba_inu.suitability.rkc_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 131
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 131
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.shiba_inu.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S378"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S378 'Exercise: Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.shiba_inu.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.shiba_inu.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S376"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 131 (0.75 × 14.6 y, McMillan 2024 S376)"
+          },
+          {
+            "ref": "proposed_game_parameters.shiba_inu.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+          },
+          {
+            "ref": "proposed_game_parameters.shiba_inu.grooming",
+            "basis_source_ids": [
+              "S378"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Grooming: Once a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S376",
+          "S378"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S379"
+            ]
+          },
+          {
+            "key": "dna_gm1",
+            "level": "best_practice",
+            "source_ids": [
+              "S379"
+            ]
+          },
+          {
+            "key": "dna_gm2",
+            "level": "best_practice",
+            "source_ids": [
+              "S379"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S379"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S376",
+        "S377",
+        "S378",
+        "S379",
+        "S380",
+        "S381",
+        "S382",
+        "S383",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -28816,6 +29357,62 @@
       "publisher": "The Mastiff Association (UK breed club)",
       "title": "Breed Watch (reproduces the Kennel Club Breed Watch entry 'Mastiff - Category 3')",
       "url": "https://www.mastiffassociation.uk/breed-watch"
+    },
+    {
+      "id": "S376",
+      "tier": "A",
+      "publisher": "Scientific Reports (LJMU repository copy)",
+      "title": "McMillan K. M. et al. (2024) Longevity of companion dog breeds: those at risk from early death — published version (PDF)",
+      "url": "https://researchonline.ljmu.ac.uk/id/eprint/22506/1/2024_McMillan_Scientific_Reports.pdf"
+    },
+    {
+      "id": "S377",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 257 — Shiba (EN PDF; date of publication of the official valid standard 30.10.2016)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/257g05-en.pdf"
+    },
+    {
+      "id": "S378",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A–Z: Japanese Shiba Inu (key facts, Breed Watch)",
+      "url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/utility/japanese-shiba-inu"
+    },
+    {
+      "id": "S379",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Japanese Shiba Inu — breed page (older address; health tests, Breed Watch)",
+      "url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4110"
+    },
+    {
+      "id": "S380",
+      "tier": "A",
+      "publisher": "American Kennel Club",
+      "title": "Official Standard of the Shiba Inu (approved February 7, 1997, effective March 31, 1997) (PDF)",
+      "url": "https://images.akc.org/pdf/breeds/standards/ShibaInu.pdf"
+    },
+    {
+      "id": "S381",
+      "tier": "B",
+      "publisher": "PetMD",
+      "title": "Shiba Inu Dog Breed Health and Care",
+      "url": "https://www.petmd.com/dog/breeds/shiba-inu"
+    },
+    {
+      "id": "S382",
+      "tier": "B",
+      "publisher": "Dogs Trust (UK)",
+      "title": "Japanese Shiba Inu — breed page",
+      "url": "https://www.dogstrust.org.uk/dog-advice/getting-dog/breeds/japanese-shiba-inu"
+    },
+    {
+      "id": "S383",
+      "tier": "B",
+      "publisher": "American Kennel Club — M. Erickson, 2025-04-14",
+      "title": "Is the Shiba Inu the Right Breed for Your Lifestyle?",
+      "url": "https://www.akc.org/expert-advice/dog-breeds/shiba-inu-right-for-you/"
     },
     {
       "id": "C1",
