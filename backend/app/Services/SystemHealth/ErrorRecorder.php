@@ -67,10 +67,25 @@ class ErrorRecorder
 
     private ?string $currentCommand = null;
 
+    /**
+     * Dependencies are resolved lazily (inside the guarded code): building
+     * the recorder must never touch the cache or the DB, so a broken / mocked
+     * cache store cannot make the error path itself fail.
+     */
     public function __construct(
-        private readonly DatabaseManager $db,
-        private readonly CacheRepository $cache,
+        private ?DatabaseManager $db = null,
+        private ?CacheRepository $cache = null,
     ) {}
+
+    private function cache(): CacheRepository
+    {
+        return $this->cache ??= app(CacheRepository::class);
+    }
+
+    private function db(): DatabaseManager
+    {
+        return $this->db ??= app(DatabaseManager::class);
+    }
 
     public function jobStarted(string $name): void
     {
@@ -157,7 +172,7 @@ class ErrorRecorder
     public function forgetWindow(string $fingerprint): void
     {
         try {
-            $this->cache->forget(self::WINDOW_KEY.$fingerprint);
+            $this->cache()->forget(self::WINDOW_KEY.$fingerprint);
             unset($this->localWindow[$fingerprint]);
         } catch (Throwable) {
             // best effort
@@ -252,15 +267,15 @@ class ErrorRecorder
         }
 
         try {
-            if ($this->cache->add(self::WINDOW_KEY.$fingerprint, 1, $window)) {
-                $pending = (int) $this->cache->pull(self::PENDING_KEY.$fingerprint, 0);
+            if ($this->cache()->add(self::WINDOW_KEY.$fingerprint, 1, $window)) {
+                $pending = (int) $this->cache()->pull(self::PENDING_KEY.$fingerprint, 0);
 
                 return 1 + $pending;
             }
 
-            if ($this->cache->increment(self::PENDING_KEY.$fingerprint) === 1) {
+            if ($this->cache()->increment(self::PENDING_KEY.$fingerprint) === 1) {
                 // A fresh counter: give it an expiry so a fingerprint that never repeats does not linger.
-                $this->cache->put(self::PENDING_KEY.$fingerprint, 1, 86400);
+                $this->cache()->put(self::PENDING_KEY.$fingerprint, 1, 86400);
             }
 
             return null;
@@ -287,14 +302,14 @@ class ErrorRecorder
     private function connection(): ConnectionInterface
     {
         if (! config('system_health.isolated_connection', true)) {
-            return $this->db->connection();
+            return $this->db()->connection();
         }
 
         if (config('database.connections.'.self::CONNECTION) === null) {
             config(['database.connections.'.self::CONNECTION => config('database.connections.'.config('database.default'))]);
         }
 
-        $connection = $this->db->connection(self::CONNECTION);
+        $connection = $this->db()->connection(self::CONNECTION);
         if (! $this->connectionPrepared) {
             // Never wait long on a lock or a slow DB inside the error path.
             if ($connection->getDriverName() === 'pgsql') {

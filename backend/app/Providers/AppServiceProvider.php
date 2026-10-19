@@ -207,6 +207,11 @@ class AppServiceProvider extends ServiceProvider
     private function registerErrorCapture(): void
     {
         Event::listen(MessageLogged::class, function (MessageLogged $event): void {
+            // Cheap filter first: debug / info / warning lines never reach the recorder.
+            if (! config('system_health.capture_enabled', true)
+                || ! in_array($event->level, (array) config('system_health.capture_log_levels', []), true)) {
+                return;
+            }
             app(ErrorRecorder::class)->recordLog((string) $event->level, (string) $event->message, $event->context);
         });
         Event::listen(JobProcessing::class, function (JobProcessing $event): void {
