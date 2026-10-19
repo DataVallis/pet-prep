@@ -60,3 +60,4 @@ Status: `done` · `in-progress` · `blocked` (research could not source a requir
 
 **After the 20:** the next most popular breed by **AKC 2024 registrations** (dogs) or **FIFe / GCCF registrations** (cats),
 appended here by the run that finishes the list — one row at a time, with the source URL in Notes.
+| 46 | Shiba Inu / Šiba inu | `shiba_inu` | dog | in-progress | M5-R10-46 (unattended run 2026-10-19); appended after the Mastiff — next most popular dog by AKC 2024 registrations not yet in the app (No. 42 "Shiba Inu" in the AKC 2024 full-list table; No. 41 West Highland White Terrier is already in the app, https://www.akc.org/expert-advice/news/most-popular-dog-breeds-2024/, S174) |
