@@ -7,6 +7,7 @@ use App\Services\ChallengeService;
 use App\Services\EscalationService;
 use App\Services\PetDecayService;
 use App\Services\RoutineLedgerService;
+use App\Services\SystemHealth\SystemHealthService;
 use Illuminate\Console\Command;
 
 class ProcessPetDecayCommand extends Command
@@ -24,7 +25,7 @@ class ProcessPetDecayCommand extends Command
     /**
      * Execute the console command.
      */
-    public function handle(PetDecayService $decayService, EscalationService $escalationService, RoutineLedgerService $ledger, ChallengeService $challenges, ChallengeCertificateService $certificates): int
+    public function handle(PetDecayService $decayService, EscalationService $escalationService, RoutineLedgerService $ledger, ChallengeService $challenges, ChallengeCertificateService $certificates, SystemHealthService $health): int
     {
         // M3-11 / M3-13: payment locks first, so a pet that has to wait for a
         // purchase is frozen before this tick's decay / escalation.
@@ -51,6 +52,10 @@ class ProcessPetDecayCommand extends Command
         // Last, so this tick's game over and closed days are already in.
         $certificateResult = $certificates->processCompletions();
         $this->info("Certificates: checked {$certificateResult['pets']} pets, recorded {$certificateResult['created']} challenge ends.");
+
+        // System health (David 2026-10-19): the scheduler heartbeat shown on
+        // /admin/system-health (red when older than 5 min).
+        $health->beat();
 
         return self::SUCCESS;
     }

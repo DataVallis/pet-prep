@@ -3,9 +3,16 @@
 namespace App\Providers;
 
 use App\Services\BreedCatalogService;
+use App\Services\SystemHealth\ErrorRecorder;
 use App\Support\ClientIp;
 use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Console\Events\CommandStarting;
 use Illuminate\Http\Request;
+use Illuminate\Log\Events\MessageLogged;
+use Illuminate\Queue\Events\JobProcessed;
+use Illuminate\Queue\Events\JobProcessing;
+use Illuminate\Queue\Events\Looping;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
@@ -49,6 +56,10 @@ class AppServiceProvider extends ServiceProvider
     {
         // M5-R06-01: one breed catalogue (memo) per request / queued job.
         $this->app->scoped(BreedCatalogService::class);
+
+        // System health (David 2026-10-19): one recorder per process (its
+        // re-entry guard and failure pause must outlive a single job).
+        $this->app->singleton(ErrorRecorder::class);
     }
 
     /**
@@ -59,6 +70,8 @@ class AppServiceProvider extends ServiceProvider
         // No broadcasting model observers (M1-08): every PetUpdated is
         // emitted explicitly by the service that made the change, via
         // PetUpdated::afterCommit() — exactly one per state change.
+
+        $this->registerErrorCapture();
 
         // Parent passwords (M2-10a): ≥ 10 characters, upper + lower case and
         // a digit. Deliberately no ->uncompromised(): it calls the external
@@ -182,6 +195,27 @@ class AppServiceProvider extends ServiceProvider
             }
 
             return Limit::perHour(10)->by($request->user()?->id ?: $request->ip());
+        });
+    }
+
+    /**
+     * System health (David 2026-10-19): error-level log lines go to
+     * `system_errors` as well (reported exceptions come through the handler,
+     * bootstrap/app.php), and the recorder learns which job / command is
+     * running so a row says where it happened.
+     */
+    private function registerErrorCapture(): void
+    {
+        Event::listen(MessageLogged::class, function (MessageLogged $event): void {
+            app(ErrorRecorder::class)->recordLog((string) $event->level, (string) $event->message, $event->context);
+        });
+        Event::listen(JobProcessing::class, function (JobProcessing $event): void {
+            app(ErrorRecorder::class)->jobStarted($event->job->resolveName());
+        });
+        Event::listen(JobProcessed::class, fn () => app(ErrorRecorder::class)->jobEnded());
+        Event::listen(Looping::class, fn () => app(ErrorRecorder::class)->jobEnded());
+        Event::listen(CommandStarting::class, function (CommandStarting $event): void {
+            app(ErrorRecorder::class)->commandStarted($event->command);
         });
     }
 }
