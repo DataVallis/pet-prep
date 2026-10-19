@@ -418,6 +418,7 @@ const SPECIES = [
       { id: 'pug', synonyms: { en: ['Pug dog', 'Carlin'], sl: ['mopsek', 'pug'] } },
       { id: 'rough_collie', synonyms: { en: ['Collie', 'Collie (Rough)', 'Long-haired Collie'], sl: ['škotski ovčar', 'collie'] } },
       { id: 'mastiff', synonyms: { en: ['English Mastiff', 'Old English Mastiff'], sl: ['mastif', 'mastiff'] } },
+      { id: 'shiba_inu', synonyms: { en: ['Japanese Shiba Inu', 'Shiba', 'Shiba Ken'], sl: ['shiba inu', 'japonski šiba inu', 'šiba'] } },
     ],
   },
   {
@@ -442,7 +443,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -1331,6 +1332,30 @@ const DOG_FACTS = {
       ['wobbler_syndrome', 'health.wobbler'],
     ],
   },
+  // M5-R10-46. Height = FCI ideal ± tolerance (S377), weight = the AKC averages ('about', S380 — FCI gives none),
+  // lifespan = the McMillan 2024 median (S376) and the RKC band "Over 10 years" (S378), exercise = RKC "Up to 1
+  // hour" (S378). Not exported: adult_weight.petmd (same numbers as a range), adult_weight.salt_category (our
+  // assignment), lifespan.petmd / dogs_trust (alternatives), lifespan.senior_from (derived), exercise.off_lead and
+  // suitability.petmd_* care needs (open for David: M5-R15 / M5-R20 / new task), health.breed_watch (Category 1,
+  // no chip), health.gangliosidosis (breeder checklist). New health keys: skin_ear_allergies, gum_disease_daily_brushing.
+  shiba_inu: {
+    height: ['height.fci'],
+    weight: [['adult_weight.akc', 'about']],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    // Not ranked by Coren (S35) → no coren_rank fact.
+    coren_rank: false,
+    health: [
+      ['skin_ear_allergies', 'health.allergies'],
+      ['kneecap_luxation', 'health.patella'],
+      ['gum_disease_daily_brushing', 'health.dental'],
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1668,6 +1693,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.mastiff.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.mastiff.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.mastiff.exercise_minutes_senior',
+  },
+  shiba_inu: {
+    adult_minutes: ['proposed_game_parameters.shiba_inu.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.shiba_inu.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.shiba_inu.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.shiba_inu.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.shiba_inu.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.shiba_inu.exercise_minutes_senior',
   },
 };
 
