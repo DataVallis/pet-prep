@@ -92,6 +92,7 @@
           "background": false
         }
       ],
+      "./plugins/withHealthConnectPrivacyRationale.js",
       "react-native-health-connect",
       [
         "expo-build-properties",
