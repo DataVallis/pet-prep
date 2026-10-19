@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `shiba_inu` (viri S377–S383; ponovno S8, S10, S11, S14, S24, S35, S45, S174, S376) |
 | Izvor | FCI št. 257, skupina 5, sekcija 5 (azijski špici in sorodne pasme), Japonska (S377) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 42. mesto »Shiba Inu« (41. mesto, zahodnoškotski beli terier, je že v aplikaciji; S174) |
-| PR-ji | pet-prep #273 (pasma) · portret: čaka na namestitev produkcije · spletna stran: glej vrstico v `BREED_QUEUE.md` |
+| PR-ji | pet-prep #273 (pasma, `1b383d4`) · portret: čaka na namestitev produkcije · spletna stran #75 |
 
 ## Odločitve (z viri in kdo je odločil)
 
