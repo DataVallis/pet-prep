@@ -22,8 +22,8 @@ PetPrep unattended breed run. Repos: DataVallis/pet-prep (and DataVallis/pet-pre
 2. Lock: if any OPEN pet-prep PR has a head branch starting with "feat/M5-R10-", stop and do nothing.
    Otherwise take the lock at once: branch + queue row in-progress + DRAFT PR before any research.
 3. Take the FIRST row with status "todo" in docs/research/BREED_QUEUE.md (one breed per run).
-4. Research, build, test, review, PR, merge on green CI (deploys nothing), portrait (only once the breed is on
-   production — §8), website — per the runbook. Never dispatch a production deploy.
+4. Research, build, test, review, PR, merge on green CI (deploys nothing), portrait right after the merge
+   (§8, no deploy needed), website only with the portrait — per the runbook. Never dispatch a production deploy.
    Write only the breed's own files (runbook header "Own files only"): document in docs/breeds/<en-slug>.md,
    never in DECISIONS / FEATURES / HANDOFF / BUILD_LOG / PRODUCT_SPEC / audiences / ROADMAP / ARCHITECTURE / DIAGRAMS.
 5. Apply only the runbook's standing decision rules; never ask questions. On a stop condition mark the
@@ -214,18 +214,21 @@ gh api "repos/DataVallis/pet-prep/actions/runs?branch=main&head_sha=<merge_sha>"
 **Merge ≠ production (D18, David 2026-10-14).** A merge to `main` deploys nothing. A merged breed reaches users only with the **next manual production deploy** (Actions → CI & Deploy → Run workflow → target `production` — David, or Claude only on David's explicit request; an unattended run never dispatches it) and the production OTA that follows it. Until then the website keeps the breed "Kmalu / Coming soon" (§9b, David 2026-10-13) — never claim it is in the app earlier.
 PR body: summary, decisions applied (rule per value), touch points, test counts, review result, the footer lines from the session's attribution reminder. Commit trailers on every commit (Co-Authored-By + Claude-Session from the session's attribution reminder). A failing check: read annotations (`gh api repos/DataVallis/pet-prep/check-runs/<id>/annotations`), fix, push, wait again.
 
-## 8. Portrait (after the breed is on PRODUCTION)
+## 8. Portrait (right after the merge — no production deploy needed)
 
-`breed-portraits.yml` runs on the **production** server (its AI Lab budget), so the breed must be in production's code: the breed's merge SHA is an ancestor of the last successful production deploy —
-```bash
-prod=$(gh api "repos/DataVallis/pet-prep/actions/workflows/deploy-production.yml/runs?branch=main&status=success&per_page=30" --jq '.workflow_runs[] | "\(.id) \(.head_sha)"' \
-  | while read -r id sha; do [ "$(gh api repos/DataVallis/pet-prep/actions/runs/$id/jobs --jq '[.jobs[] | select(.name=="Deploy to Hetzner Production" and .conclusion=="success")] | length')" -gt 0 ] && { echo "$sha"; break; }; done)
-git fetch origin && git merge-base --is-ancestor <merge_sha> "$prod" && echo "on production"
-```
-Not yet on production → **skip §8** (do not dispatch a production deploy), set the queue row to `done` with "portrait pending production deploy", and the first unattended run after the next production deploy does the portrait of every such row before its own breed. **Catch-up (David 2026-10-15):** every run starts with this catch-up — one `breed-portraits.yml` run for all pending breeds already on production (plus any register breed missing from `manifest.json`), then §8 + §9 for them; take only those breeds' `.webp` files and manifest entries from the review branch (it can carry stale files of other breeds from the server folder); the final report ends with "Čaka na deploy: …". Never wait for or dispatch a deploy. On production →
+**David 2026-10-19:** a breed that appears on the website must already have its portrait. `breed-portraits.yml`
+runs the command on the production server (FAL key, AI Lab budget) in a **one-off container** with the code of
+the `ref` input (default `main`) mounted over the image — the live app keeps running production's code, nothing
+is deployed. So the portrait is made right after the merge on green CI, **before the website PR (§9)**; never
+open the website PR of a breed without its portrait. The workflow refuses when `ref` changes `composer.lock`
+(new PHP dependencies need a real deploy) — then `needs-david`, website PR waits.
+**Catch-up:** every run starts with one `breed-portraits.yml` run for every register breed missing from
+`manifest.json` (e.g. old rows "portrait pending production deploy"), then §8 + §9 for them; take only those
+breeds' `.webp` files and manifest entries from the review branch (it can carry stale files of other breeds from
+the server folder). Pass `inputs[ref]=<merge_sha>`:
 
 ```bash
-gh api -X POST repos/DataVallis/pet-prep/actions/workflows/breed-portraits.yml/dispatches -f ref=main -f 'inputs[breeds]=<key>'
+gh api -X POST repos/DataVallis/pet-prep/actions/workflows/breed-portraits.yml/dispatches -f ref=main -f 'inputs[breeds]=<key>' -f 'inputs[ref]=<merge_sha>'
 gh api "repos/DataVallis/pet-prep/actions/workflows/breed-portraits.yml/runs?per_page=1" --jq '.workflow_runs[0].id'
 # when completed: annotations name the review branch ("portraits branch: portraits/run-<id>") and the cost
 gh api repos/DataVallis/pet-prep/check-runs/$(gh api repos/DataVallis/pet-prep/actions/runs/<run>/jobs --jq '.jobs[0].id')/annotations --jq '.[] | "\(.title): \(.message)"'
