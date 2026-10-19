@@ -34,6 +34,7 @@
         "EXPO_PUBLIC_REVERB_PORT": "443",
         "EXPO_PUBLIC_REVERB_SCHEME": "https",
         "EXPO_PUBLIC_REVENUECAT_IOS_KEY": "appl_zRZeXTGFukezyzuLRqOgJTbzoMA",
+        "EXPO_PUBLIC_REVENUECAT_ANDROID_KEY": "goog_kCfJLgHbDChBbxpAeraiCpzxNmz",
         "PETPREP_APNS_MODE": "production",
         "EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID": "1029107925972-jcets5rq4a03c00okr54e55jvluj2giv.apps.googleusercontent.com",
         "EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID": "1029107925972-fm90sk3l07phkqbkfcnjli2jddp4bqfu.apps.googleusercontent.com",
