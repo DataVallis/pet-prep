@@ -25,7 +25,7 @@
             "kind": "ai_photo",
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:b775a1b48d7073964cd089ace027151fbcf996769dba5b2294ffea224e9f9329",
-            "generated_at": "2026-10-10T05:47:20+00:00",
+            "generated_at": "2026-10-10T05:49:32+00:00",
             "cost_usd": 0.15
         },
         {
@@ -241,7 +241,7 @@
             "kind": "ai_photo",
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:af22b68d3e35cf939053cf9239b179237a49ca147683a99cb93c917c87706f28",
-            "generated_at": "2026-10-12T07:53:39+00:00",
+            "generated_at": "2026-10-12T07:54:57+00:00",
             "cost_usd": 0.15
         },
         {
@@ -446,6 +446,66 @@
             "profile": "nano_banana_pro",
             "prompt_hash": "sha256:b0b70b90f6316241a66758488e954e2e54ae486ed8ffff69a029f8a3646569dc",
             "generated_at": "2026-10-15T11:50:03+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "maltese",
+            "species": "dog",
+            "file": "dog/maltese.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:c6c4aa10f46a6499d62ef9bf5948d8ac2b0940dd19f0023ec5fa3bec4dc3e354",
+            "generated_at": "2026-10-19T07:25:16+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "pug",
+            "species": "dog",
+            "file": "dog/pug.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:4c38488a77a1d096043b03a4749fbfeac94be00657930b8bcca24b508c615caa",
+            "generated_at": "2026-10-19T07:25:38+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "rough_collie",
+            "species": "dog",
+            "file": "dog/rough-collie.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:37805ce1659773d94c751154ec193e55aa9da65b5fd09210eb38ba37bb0056a9",
+            "generated_at": "2026-10-19T07:26:01+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "mastiff",
+            "species": "dog",
+            "file": "dog/mastiff.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:a08f5fa191712e68e6ca1f0701185414434187723cfbcc5c8deddec039cc34dd",
+            "generated_at": "2026-10-19T07:26:26+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "shiba_inu",
+            "species": "dog",
+            "file": "dog/shiba-inu.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:4deb08652843f0f43fe759ec341639dff5b039c2d2f21aff1f1288bc456054b6",
+            "generated_at": "2026-10-19T07:26:46+00:00",
             "cost_usd": 0.15
         },
         {
