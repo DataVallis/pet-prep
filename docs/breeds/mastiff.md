@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `mastiff` (viri S370–S376; ponovno S8, S10, S11, S14, S24, S35, S45, S54, S92, S174) |
 | Izvor | FCI št. 264, skupina 2, sekcija 2.1 (molosi, tip doge), Velika Britanija (S371, S372) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 40. mesto »Mastiff« (S174) |
-| PR-ji | pet-prep #272 (pasma) · portret: čaka na namestitev produkcije · spletna stran: glej spodaj |
+| PR-ji | pet-prep #272 (pasma) · portret: čaka na namestitev produkcije · spletna stran #74 |
 
 ## Odločitve (z viri in kdo je odločil)
 
