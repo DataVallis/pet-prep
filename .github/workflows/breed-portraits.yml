@@ -4,9 +4,12 @@
 # AI Lab budget. Nothing is published: after a run, download the artifact, review
 # the images, commit them to docs/research/breed-portraits/ and run
 # scripts/export-breed-registry.mjs --copy-portraits <website>/public (HANDOFF.md, M5-R11-04).
-# Needs the breed in production's code: since D18 (David 2026-10-14) a merge to main deploys
-# nothing, so the breed must have gone out with a manual production deploy
-# (CI & Deploy → Run workflow → target production) first (ADD_BREED_RUNBOOK §7–8).
+# No production deploy needed (David 2026-10-19: "takoj ko se doda pasma na stran mora biti
+# slika"): the command runs in a ONE-OFF container of the production image with app/, config/,
+# lang/ and routes/ of `ref` (default: main) mounted read-only over the baked-in code. The live
+# app / queue / scheduler containers keep running production's code untouched. The one-off
+# container builds its own config cache from the mounted config (entrypoint.sh). Refused when
+# `ref` changes composer.lock (new PHP dependencies need a real deploy first).
 name: Breed portraits (AI, production server)
 
 on:
@@ -24,6 +27,10 @@ on:
         description: "Only print prompts and cost (--dry-run)"
         type: boolean
         default: false
+      ref:
+        description: "Commit / branch whose breed code is used (empty = main). Need not be deployed."
+        required: false
+        default: ""
 
 concurrency:
   group: breed-portraits
@@ -40,7 +47,13 @@ jobs:
     environment: production
     timeout-minutes: 30
     steps:
-      - name: Generate on the production server
+      - name: Checkout the breed code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || 'main' }}
+          path: code
+
+      - name: Generate on the production server (one-off container, code of `ref`)
         env:
           SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
           SSH_HOST: ${{ secrets.PRODUCTION_HOST || '138.199.172.97' }}
@@ -60,20 +73,40 @@ jobs:
           done
           if [ "$FORCE" = "true" ]; then ARGS="$ARGS --force"; fi
           if [ "$DRY_RUN" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if ! [[ "$RUN_ID" =~ ^[0-9]+$ ]]; then echo "invalid run id"; exit 1; fi
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
           OPTS=(-i "$HOME/.ssh/deploy_key" -o StrictHostKeyChecking=accept-new)
           DC='docker compose -p backend -f /opt/petprep/repo/backend/compose.production.yaml'
+          IMG_PHP='docker run --rm --entrypoint sha256sum petprep-app:production'
+          REMOTE="/tmp/petprep-portraits-${RUN_ID}"
+          echo "::notice title=portraits code::$(git -C code rev-parse HEAD)"
+          # New PHP dependencies are not in the production image → that needs a real deploy.
+          want=$(sha256sum code/backend/composer.lock | cut -d' ' -f1)
+          have=$(ssh "${OPTS[@]}" "${SSH_USER}@${SSH_HOST}" "$IMG_PHP /var/www/html/composer.lock" | cut -d' ' -f1)
+          if [ "$want" != "$have" ]; then
+            echo "::error title=portraits::composer.lock of ref differs from production — deploy first"; exit 1
+          fi
+          # Ship the code of `ref` (only the PHP sources the command loads).
+          tar -C code/backend -czf - app config lang routes \
+            | ssh "${OPTS[@]}" "${SSH_USER}@${SSH_HOST}" "rm -rf '$REMOTE' && mkdir -p '$REMOTE' && tar -C '$REMOTE' -xzf - && chmod -R a+rX '$REMOTE'"
+          MOUNTS=""
+          for d in app config lang routes; do MOUNTS="$MOUNTS -v $REMOTE/$d:/var/www/html/$d:ro"; done
           mkdir -p out
           # Action logs and artifacts can't be read from every client, so the output also
           # goes into one annotation per line and the images into a review branch.
           # shellcheck disable=SC2086
+          set +e
           ssh "${OPTS[@]}" "${SSH_USER}@${SSH_HOST}" \
-            "$DC exec -T --user 1000:1000 app php artisan breeds:portraits --out=storage/app/breed-portraits $ARGS" \
+            "$DC run --rm --no-deps -T $MOUNTS app php artisan breeds:portraits --out=storage/app/breed-portraits $ARGS" \
             2>&1 | tee out/run.log
+          status=${PIPESTATUS[0]}
+          set -e
+          ssh "${OPTS[@]}" "${SSH_USER}@${SSH_HOST}" "rm -rf '$REMOTE'" || true
           tail -n 40 out/run.log | while IFS= read -r line; do echo "::notice title=portraits::${line}"; done
+          if [ "$status" -ne 0 ]; then echo "::error title=portraits::breeds:portraits exited $status"; exit "$status"; fi
           # Stream the folder straight out of the container's storage volume.
           mkdir -p out/images
           ssh "${OPTS[@]}" "${SSH_USER}@${SSH_HOST}" \
