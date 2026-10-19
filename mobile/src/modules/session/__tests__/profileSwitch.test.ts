@@ -281,6 +281,30 @@ describe('logout', () => {
     expect(useAppStore.getState().user).toBeNull();
   });
 
+  it('QA M2: logout before the session is known (launch splash) with a shared child token keeps the other children', async () => {
+    vault.set(AUTH_KEY, 'child-2-a');
+    storedSessions({ '2': { token: 'child-2-a', parentUserId: 1 }, '5': { token: 'child-5-b', parentUserId: 1 } });
+    useAppStore.setState(useAppStore.getInitialState(), true); // user unknown
+
+    await logout();
+
+    expect(logoutToken).not.toHaveBeenCalled();
+    expect(await loadChildSessions()).toEqual({ '5': { token: 'child-5-b', parentUserId: 1 } });
+    expect(apiLogout).toHaveBeenCalledTimes(1); // the shared child token itself
+    expect(vault.has(AUTH_KEY)).toBe(false);
+  });
+
+  it('QA M2: logout before the session is known with a parent token still ends the stored child sessions', async () => {
+    vault.set(AUTH_KEY, 'parent-token');
+    storedSessions({ '5': { token: 'child-5-b', parentUserId: 1 } });
+    useAppStore.setState(useAppStore.getInitialState(), true);
+
+    await logout();
+
+    expect(logoutToken).toHaveBeenCalledWith('child-5-b', expect.anything());
+    expect(vault.has(CHILD_SESSIONS_KEY)).toBe(false);
+  });
+
   it("the child's own phone (PIN login): logout unchanged, no stored sessions touched", async () => {
     vault.set(AUTH_KEY, 'own-child-token');
     useAppStore.getState().signIn({ token: 'own-child-token', user: { id: 2, name: 'Maja', email: null, role: 'child' }, pet: PET });

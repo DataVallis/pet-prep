@@ -9,6 +9,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-19 — Aplikacija se ob zagonu ne more več zatakniti
+
+**Kaj:** po preklopu »Igraj kot …« je Davidov iPhone 14 minut stal na zaslonu »Nalagam …«, nato se je aplikacija naložila sama. Dnevnik strežnika je pokazal, da v tem času z aplikacije ni prišla niti ena zahteva — težava je bila v telefonu, ne na strežniku. Vzrok: prva zahteva ob zagonu (»kdo je prijavljen?«) ni imela roka, zagonski zaslon pa ni imel izhoda. Zdaj ima vsak korak zagona rok; najpozneje po 26 sekundah aplikacija ponudi »Poskusi znova« ali »Odjava« (za starševskimi vrati), prijava pa ostane.
+**Zakaj šteje:** neskončen vrtavček je za otroka enak pokvarjeni aplikaciji. Napaka v omrežju ne sme nikoli pomeniti zaklenjenega telefona ali odjave.
+**Za starše:** »Če je povezava slaba, PetPrep v nekaj sekundah pove, da ni povezave, in ponudi ponovni poskus — vaš otrok ostane prijavljen.« **Za vlagatelje / 🛠:** vzrok najden iz kode in dnevnika strežnika v eni seji; popravek je samo JavaScript (OTA, brez nove različice v trgovini), s testi za vsako pot zatikanja.
+
 ## 2026-10-17 — Otrok ostane prijavljen
 
 **Kaj:** otroka je aplikacija na vsake dva dni vrgla na zaslon »Kdo se prijavlja?«. Vzrok ni bil strežnik (žetoni ne potečejo), ampak iPhone: ko je telefon zaklenjen, iOS aplikacijo občasno zažene v ozadju (štetje korakov, obvestila), takrat pa zaklenjeni Keychain ne izda žetona — aplikacija je to razumela kot »ni prijave«. Zdaj zaklenjen telefon nikoli ne pomeni odjave; žeton je berljiv po prvem odklepu telefona, obstoječi se ob naslednjem zagonu samodejno premaknejo.

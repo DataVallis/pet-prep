@@ -11,6 +11,7 @@ import type { Pet, QuietHours } from '@/types';
 import { CAT_UI_READY } from '@/config/features';
 import { isNetworkFailure, outageCauseForResponse, outageRetryAfterMs } from '@/modules/connectivity/serverOutage';
 import { useServerStatusStore } from '@/store/serverStatusStore';
+import { withTimeout } from '@/utils/withTimeout';
 
 /**
  * Authenticated user as returned (flat, no `data` wrapper) by `GET /api/user`
@@ -645,22 +646,47 @@ function confirmBody(proof: DeletionProof, confirmWord?: string, acknowledgePaid
   };
 }
 
+interface RequestOptions {
+  method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+  body?: Record<string, unknown>;
+  signal?: AbortSignal;
+  /** Send no Bearer token (public endpoints such as the child PIN login). */
+  anonymous?: boolean;
+  /**
+   * M2-11: send THIS token instead of the stored one (a token that is not the active
+   * session). A 401 for it never triggers the unauthorized handler.
+   */
+  token?: string;
+  /**
+   * Boot-hang fix 2026-10-19: give up after this long (token read + fetch + body) with a
+   * `TimeoutError`, aborting the fetch. expo/fetch sets no request timeout on iOS, so a
+   * request whose connection never opens otherwise waits indefinitely.
+   */
+  timeoutMs?: number;
+}
+
 /** Type-safe wrapper around fetch with auth header and JSON handling. */
-async function apiRequest<T>(
-  path: string,
-  options: {
-    method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-    body?: Record<string, unknown>;
-    signal?: AbortSignal;
-    /** Send no Bearer token (public endpoints such as the child PIN login). */
-    anonymous?: boolean;
-    /**
-     * M2-11: send THIS token instead of the stored one (a token that is not the active
-     * session). A 401 for it never triggers the unauthorized handler.
-     */
-    token?: string;
-  } = {},
-): Promise<T> {
+async function apiRequest<T>(path: string, options: RequestOptions = {}): Promise<T> {
+  const { timeoutMs } = options;
+  if (timeoutMs === undefined) return sendRequest<T>(path, options);
+  const controller = new AbortController();
+  const outer = options.signal;
+  const forward = () => controller.abort();
+  if (outer?.aborted) controller.abort();
+  else outer?.addEventListener('abort', forward);
+  try {
+    return await withTimeout(
+      sendRequest<T>(path, { ...options, signal: controller.signal }),
+      timeoutMs,
+      () => controller.abort(),
+      `${options.method ?? 'GET'} ${path}`,
+    );
+  } finally {
+    outer?.removeEventListener('abort', forward);
+  }
+}
+
+async function sendRequest<T>(path: string, options: RequestOptions): Promise<T> {
   const token = options.anonymous ? null : options.token !== undefined ? options.token : await getAuthToken();
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
@@ -691,11 +717,13 @@ async function apiRequest<T>(
   reportServerAnswer(response, data);
 
   if (!response.ok) {
-    if (response.status === 401 && token && unauthorizedHandler) {
+    // QA m2 (2026-10-19): a 401 that arrives after this request was aborted (its timeout ran
+    // out, the caller gave up) is never acted on — the caller already moved on.
+    if (response.status === 401 && token && unauthorizedHandler && !options.signal?.aborted) {
       // Only if the rejected token is still the session's token: a late 401 for an
       // old token (e.g. after logout + a new login) must not log the new user out.
       const current = await getAuthToken().catch(() => null);
-      if (current === token) unauthorizedHandler();
+      if (current === token && !options.signal?.aborted) unauthorizedHandler();
     }
     throw new ApiError(
       messageFrom(data) ?? 'An error occurred',
@@ -948,8 +976,11 @@ export const api = {
       body: { socket_id: socketId, channel_name: channelName },
     }),
 
-  /** GET /api/user — the authenticated user (flat object) with the active pet. */
-  getUser: () => apiRequest<UserResponse>('/api/user'),
+  /**
+   * GET /api/user — the authenticated user (flat object) with the active pet. The launch
+   * restore passes `timeoutMs` (it must never wait forever, fix 2026-10-19).
+   */
+  getUser: (options: { timeoutMs?: number } = {}) => apiRequest<UserResponse>('/api/user', options),
 
   /** GET /api/child/pet — the child's full pet state (read-only, also while locked / unborn). */
   getChildPet: () => apiRequest<ChildPetState>('/api/child/pet'),

@@ -10,13 +10,15 @@ import { useAppStore } from '@/store/appStore';
 import { OUTAGE_EXIT_AFTER_MS, useServerStatusStore } from '@/store/serverStatusStore';
 import { makeChildState, makePet } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
+import { BOOT_WATCHDOG_MS } from '@/modules/session/useSessionBootstrap';
+import { resetRestoreForTests } from '@/modules/session/restoreSession';
 import { CONTRACT_STRINGS } from '@/screens/ContractScreen';
 import { CHILD_PIN_STRINGS } from '@/screens/ChildPinLoginScreen';
 import { START_STRINGS } from '@/screens/StartScreen';
 
 jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
-  return { ...actual, api: { ...actual.api, getUser: jest.fn(), logout: jest.fn(), signContract: jest.fn() } };
+  return { ...actual, api: { ...actual.api, getUser: jest.fn(), logout: jest.fn(), logoutToken: jest.fn(), signContract: jest.fn() } };
 });
 
 // Role screens are covered elsewhere; here we only care which one is routed to.
@@ -38,10 +40,20 @@ const deleteItem = SecureStore.deleteItemAsync as jest.Mock;
 const getUser = api.getUser as jest.Mock;
 const apiLogout = api.logout as jest.Mock;
 const signContract = api.signContract as jest.Mock;
+const logoutToken = api.logoutToken as jest.Mock;
+
+/** Answer the parental gate (M5-F12) correctly. */
+function passGate() {
+  const [a, b] = (String(screen.getByTestId('parental-gate-question').props.children).match(/\d+/g) ?? []).map(Number);
+  fireEvent.changeText(screen.getByTestId('parental-gate-input'), String(a * b));
+  fireEvent.press(screen.getByTestId('parental-gate-submit'));
+}
 
 describe('AppNavigator session restore', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    getUser.mockReset();
+    resetRestoreForTests();
     useAppStore.setState(useAppStore.getInitialState(), true);
   });
 
@@ -257,6 +269,43 @@ describe('AppNavigator session restore', () => {
     }
   });
 
+  it('boot-hang fix 2026-10-19: a restore stuck past the watchdog → "Poskusi znova" / "Odjava", token kept; a late timeout then retry restores', async () => {
+    jest.useFakeTimers({ doNotFake: ['nextTick', 'setImmediate'] });
+    try {
+      getItem.mockImplementation(async (key: string) => (key === 'petprep_auth_token' ? 'child-token' : key === 'petprep_keychain_after_first_unlock' ? '1' : null));
+      let fail: (error: Error) => void = () => undefined;
+      getUser
+        .mockReturnValueOnce(new Promise((_, reject) => (fail = reject)))
+        .mockResolvedValueOnce({ id: 2, name: 'Otrok', email: null, role: 'child', pet: makePet() });
+      renderWithQuery(<AppNavigator />);
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(BOOT_WATCHDOG_MS - 1);
+      });
+      expect(screen.getByTestId('splash-restoring')).toBeTruthy();
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(1);
+      });
+      expect(screen.getByTestId('splash-offline')).toBeTruthy();
+      expect(screen.getByText('Odjava')).toBeTruthy();
+      expect(deleteItem).not.toHaveBeenCalled();
+
+      // The stuck request finally gives up (its own timeout); "Poskusi znova" restores.
+      await act(async () => {
+        fail(new TypeError('Network request failed'));
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      fireEvent.press(screen.getByText('Poskusi znova'));
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(screen.getByText('CHILD_HUD')).toBeTruthy();
+    } finally {
+      getItem.mockReset();
+      getItem.mockResolvedValue(null);
+      jest.useRealTimers();
+    }
+  });
+
   it('offline → "Odjava" revokes, clears the token and shows login', async () => {
     getItem.mockResolvedValue('parent-token');
     getUser.mockRejectedValueOnce(new TypeError('Network request failed'));
@@ -264,8 +313,82 @@ describe('AppNavigator session restore', () => {
     renderWithQuery(<AppNavigator />);
 
     fireEvent.press(await screen.findByText('Odjava'));
+    // QA M2: the role isn't known on the splash — a child may hold the phone.
+    expect(screen.getByTestId('parental-gate')).toBeTruthy();
+    expect(apiLogout).not.toHaveBeenCalled();
+    passGate();
     await waitFor(() => expect(screen.getByText(START_STRINGS.subtitle)).toBeTruthy());
     expect(apiLogout).toHaveBeenCalled();
     expect(deleteItem).toHaveBeenCalledWith('petprep_auth_token');
+  });
+
+  it('QA M2: splash "Odjava" cancelled at the gate does nothing', async () => {
+    getItem.mockResolvedValue('parent-token');
+    getUser.mockRejectedValueOnce(new TypeError('Network request failed'));
+    renderWithQuery(<AppNavigator />);
+    fireEvent.press(await screen.findByText('Odjava'));
+    fireEvent.press(screen.getByTestId('parental-gate-cancel'));
+    expect(apiLogout).not.toHaveBeenCalled();
+    expect(deleteItem).not.toHaveBeenCalled();
+    expect(screen.getByTestId('splash-offline')).toBeTruthy();
+  });
+
+  it('QA M2: splash "Odjava" with a shared child token ends only that child — the other children keep their sessions', async () => {
+    const vault = new Map<string, string>([
+      ['petprep_auth_token', 'child-2-a'],
+      ['petprep_child_sessions', JSON.stringify({ '2': { token: 'child-2-a', parentUserId: 1 }, '5': { token: 'child-5-b', parentUserId: 1 } })],
+    ]);
+    getItem.mockImplementation(async (key: string) => vault.get(key) ?? null);
+    deleteItem.mockImplementation(async (key: string) => {
+      vault.delete(key);
+    });
+    const setItem = SecureStore.setItemAsync as jest.Mock;
+    setItem.mockImplementation(async (key: string, value: string) => {
+      vault.set(key, value);
+    });
+    try {
+      getUser.mockRejectedValueOnce(new TypeError('Network request failed'));
+      apiLogout.mockResolvedValueOnce(undefined);
+      renderWithQuery(<AppNavigator />);
+      fireEvent.press(await screen.findByText('Odjava'));
+      passGate();
+      await waitFor(() => expect(screen.getByText(START_STRINGS.subtitle)).toBeTruthy());
+
+      expect(logoutToken).not.toHaveBeenCalled(); // child 5's session is not revoked
+      expect(JSON.parse(vault.get('petprep_child_sessions') ?? '{}')).toEqual({ '5': { token: 'child-5-b', parentUserId: 1 } });
+      expect(vault.has('petprep_auth_token')).toBe(false);
+    } finally {
+      getItem.mockReset();
+      getItem.mockResolvedValue(null);
+      deleteItem.mockReset();
+      setItem.mockReset();
+    }
+  });
+
+  it('QA M1: "Poskusi znova" while /api/user is still in flight joins it — one request, the session restores', async () => {
+    jest.useFakeTimers({ doNotFake: ['nextTick', 'setImmediate'] });
+    try {
+      getItem.mockImplementation(async (key: string) => (key === 'petprep_auth_token' ? 'parent-token' : key === 'petprep_keychain_after_first_unlock' ? '1' : null));
+      let answer: (value: unknown) => void = () => undefined;
+      getUser.mockReturnValueOnce(new Promise((resolve) => (answer = resolve)));
+      renderWithQuery(<AppNavigator />);
+      await act(async () => {
+        await jest.advanceTimersByTimeAsync(BOOT_WATCHDOG_MS);
+      });
+      expect(screen.getByTestId('splash-offline')).toBeTruthy();
+
+      fireEvent.press(screen.getByText('Poskusi znova'));
+      await act(async () => {
+        answer({ id: 1, name: 'Starš', email: 'p@x.si', role: 'parent', pet: null });
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      expect(screen.getByText('PARENT_DASHBOARD')).toBeTruthy();
+      expect(getUser).toHaveBeenCalledTimes(1);
+      expect(deleteItem).not.toHaveBeenCalled();
+    } finally {
+      getItem.mockReset();
+      getItem.mockResolvedValue(null);
+      jest.useRealTimers();
+    }
   });
 });

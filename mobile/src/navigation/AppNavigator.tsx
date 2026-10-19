@@ -13,6 +13,8 @@ import SplashScreen from '@/screens/SplashScreen';
 import StartScreen from '@/screens/StartScreen';
 import ParentLoginScreen from '@/screens/ParentLoginScreen';
 import { afterParentSignIn } from '@/modules/session/profileSwitch';
+import { useParentalGate } from '@/modules/parentalGate/useParentalGate';
+import ParentalGate from '@/components/ParentalGate';
 import ContractScreen from '@/screens/ContractScreen';
 import LockedScreen from '@/screens/LockedScreen';
 import ChildHudScreen from '@/screens/ChildHudScreen';
@@ -100,6 +102,12 @@ export default function AppNavigator() {
   // strings at render time through `strings()` / `t()`).
   useTranslation();
   const { retry } = useSessionBootstrap();
+  // Launch splash "Odjava" (offline / long outage): always behind the parental gate.
+  const splashSignOut = useParentalGate({
+    onPass: () => {
+      void logout();
+    },
+  });
   // M3-02: register this install for pushes on sign-in, route tapped pushes.
   usePushNotifications();
   // M3-07: identify a parent session with RevenueCat (never a child; no-op without keys).
@@ -128,14 +136,11 @@ export default function AppNavigator() {
 
   if (bootStatus !== 'ready') {
     return (
-      <SplashScreen
-        mode={bootStatus}
-        updating={serverUpdating}
-        onRetry={retry}
-        onLogout={() => {
-          void logout();
-        }}
-      />
+      <>
+        <SplashScreen mode={bootStatus} updating={serverUpdating} onRetry={retry} onLogout={splashSignOut.open} />
+        {/* M5-F12: the role isn't known yet — a child may be holding the phone (QA M2 2026-10-19). */}
+        <ParentalGate {...splashSignOut.props} />
+      </>
     );
   }
 

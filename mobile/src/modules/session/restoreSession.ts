@@ -8,7 +8,13 @@
  * - Keychain unreadable → locked: never a sign-out (fix 2026-10-17). iOS launches the app
  *   in the background while the phone is locked (step sync, pushes); treating that as
  *   "no session" sent the child to the login screen every few days. The bootstrap
- *   retries when the app comes to the foreground.
+ *   retries (with backoff in the foreground, else on the next foreground).
+ *
+ * Boot-hang fix 2026-10-19: every await here is bounded. A Keychain read that doesn't
+ * settle counts as `locked`, `/api/user` gives up after {@link USER_REQUEST_TIMEOUT_MS}
+ * (`offline`, token kept), the optional reads fall back to their defaults. Before, the
+ * splash could spin forever on a request that never settled (expo/fetch sets no request
+ * timeout on iOS).
  */
 
 import * as SecureStore from 'expo-secure-store';
@@ -20,8 +26,29 @@ import { unregisterStepSyncTask } from '@/modules/steps/backgroundSteps';
 import { clearLiveSteps } from '@/modules/steps/stepCounter';
 import { loadFamilyTimezone } from './familyTimezone';
 import { loadSignInMethod } from './signInMethod';
-import { migrateSessionKeychain } from './keychainMigration';
+import { migrateSessionKeychain, pendingKeychainMigration } from './keychainMigration';
 import { forgetChildToken, loadChildSessions, revokeStoredToken, takeLegacyTokens } from './profiles';
+import { withTimeout, withTimeoutOr } from '@/utils/withTimeout';
+
+/**
+ * A Keychain step slower than this is treated like a locked Keychain (retried, never a
+ * sign-out): the token / child-sessions reads, waiting for an unfinished migration, the migration.
+ */
+export const KEYCHAIN_READ_TIMEOUT_MS = 3_000;
+/** `GET /api/user` at launch: give up after this long → the offline screen (token kept). */
+export const USER_REQUEST_TIMEOUT_MS = 8_000;
+/** Optional session extras (family zone or sign-in method — one of them per role). */
+export const OPTIONAL_READ_TIMEOUT_MS = 2_000;
+/**
+ * Longest a single restore can take: pending migration + token + child sessions + migration
+ * (4 Keychain steps) + `/api/user` + one optional read. The boot watchdog must be above it.
+ */
+export const RESTORE_BUDGET_MS = 4 * KEYCHAIN_READ_TIMEOUT_MS + USER_REQUEST_TIMEOUT_MS + OPTIONAL_READ_TIMEOUT_MS;
+
+/** Test hook: forget a restore left in flight by a test. */
+export function resetRestoreForTests(): void {
+  inFlight = null;
+}
 
 /** Once per app start (bootstrap): tokens of the first M2-11 draft (a parked parent) are revoked and deleted. */
 export async function migrateLegacyProfiles(): Promise<void> {
@@ -40,28 +67,57 @@ export type RestoreResult =
  * session a parent opened here (»Igraj kot«). A rejected shared child token is forgotten,
  * its step window closed and its live step total cleared (QA m4).
  */
-export async function restoreSession(): Promise<RestoreResult> {
+let inFlight: Promise<RestoreResult> | null = null;
+
+/**
+ * Single-flight (boot-hang QA M1, 2026-10-19): a second call while a restore runs — "Poskusi
+ * znova" after the watchdog, the auto-retry after a deploy — joins the running one instead of
+ * reading the Keychain in parallel with it.
+ */
+export function restoreSession(): Promise<RestoreResult> {
+  if (inFlight) return inFlight;
+  const current = restoreOnce().finally(() => {
+    if (inFlight === current) inFlight = null;
+  });
+  inFlight = current;
+  return current;
+}
+
+async function restoreOnce(): Promise<RestoreResult> {
   let token: string | null;
+  let sharedChildId: string | null;
   try {
-    token = await getAuthToken();
+    // An earlier migration still between delete and re-add: the token may be missing right
+    // now. Wait for it (bounded) — "no token" here would send the user to the login screen.
+    const pending = pendingKeychainMigration();
+    if (pending) await withTimeout(pending, KEYCHAIN_READ_TIMEOUT_MS);
+    token = await withTimeout(getAuthToken(), KEYCHAIN_READ_TIMEOUT_MS);
+    if (!token) return { status: 'anonymous' };
+    const sessions = await withTimeout(loadChildSessions(), KEYCHAIN_READ_TIMEOUT_MS);
+    sharedChildId = Object.entries(sessions).find(([, s]) => s.token === token)?.[0] ?? null;
   } catch {
-    // Keychain unavailable (phone locked) — the session is still there, try again later.
+    // Keychain unavailable (phone locked) or not answering — the session is still there, try again later.
     return { status: 'locked' };
   }
-  if (!token) return { status: 'anonymous' };
-
-  const sharedChildId = Object.entries(await loadChildSessions()).find(([, s]) => s.token === token)?.[0] ?? null;
 
   try {
     // `awaiting_contract` is per child (M2-02): it must not end up on the user.
-    const { pet, awaiting_contract: awaitingContract, ...user } = await api.getUser();
+    const { pet, awaiting_contract: awaitingContract, ...user } = await api.getUser({ timeoutMs: USER_REQUEST_TIMEOUT_MS });
     // Hotfix 2026-10-06: the lock overlay needs the family zone before the child state loads.
-    const familyTimezone = user.role === 'child' ? await loadFamilyTimezone() : null;
+    const familyTimezone = user.role === 'child' ? await withTimeoutOr(loadFamilyTimezone(), OPTIONAL_READ_TIMEOUT_MS, null) : null;
     // M2-10c: password vs. Google / Apple decides how a parent confirms a deletion.
-    const signInMethod = user.role === 'parent' ? await loadSignInMethod() : 'password';
+    const signInMethod =
+      user.role === 'parent' ? await withTimeoutOr(loadSignInMethod(), OPTIONAL_READ_TIMEOUT_MS, 'password' as const) : 'password';
     const sharedSession = user.role === 'child' && sharedChildId !== null;
     // Older builds stored the session with WHEN_UNLOCKED; move it before any request runs.
-    await migrateSessionKeychain();
+    // Never throws. A slow one is NOT left behind with the session applied: it may be
+    // between delete and re-add of the token, so the restore reports `locked` and the
+    // retry waits for it first (QA M1).
+    try {
+      await withTimeout(migrateSessionKeychain(), KEYCHAIN_READ_TIMEOUT_MS);
+    } catch {
+      return { status: 'locked' };
+    }
     return {
       status: 'authenticated',
       session: { token, user, pet, awaitingContract, familyTimezone, signInMethod, ...(sharedSession ? { sharedSession } : {}) },

@@ -46,9 +46,14 @@ export async function logout({ revoke = true }: LogoutOptions = {}): Promise<voi
   const user = useAppStore.getState().user;
   const userId = user?.id ?? null;
   const active = await getAuthToken().catch(() => null);
-  if (user?.role === 'child') {
+  // Before the session is known (launch splash "Odjava", QA M2 2026-10-19) the role is
+  // unknown: a stored child token is that child's shared session, never a parent's.
+  const sharedChildToken = active !== null && user?.role !== 'parent' && (await isStoredChildToken(active));
+  if (sharedChildToken) {
     // M2-11: a shared child session ends here — forget it; other children's stay.
-    if (active && (await isStoredChildToken(active))) await forgetChildToken(active);
+    await forgetChildToken(active);
+  } else if (user?.role === 'child') {
+    // The child's own phone (PIN login): no stored sessions to touch.
   } else {
     // A parent logout ends the child sessions opened on this phone too.
     await revokeStoredChildSessions(active);
