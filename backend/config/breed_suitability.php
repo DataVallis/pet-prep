@@ -1242,5 +1242,35 @@ return [
             ],
         ],
 
+        // M5-R10-47: rhodesian_ridgeback.* (S384–S394), runbook rules (data.json
+        // proposed_game_parameters.rhodesian_ridgeback.suitability_tags). RKC (S387) + FCI (S385) + PDSA (S390)
+        // + Woodgreen (S392). RKC Breed Watch Category 1 (S387) → no welfare chip. A large dog: not
+        // older_children (that chip names a small dog) → not_for_small_children (Vizsla / Malinois precedent).
+        // No needs_mental_stimulation: no verbatim source (Claude's reading, open for David).
+        'rhodesian_ridgeback' => [
+            'suits' => [
+                // S387 "Exercise: More than 2 hours per day"; S390 "They suit active families who are prepared to spend lots of time outdoors with them".
+                ['tag' => 'active_family', 'source_ids' => ['S387', 'S390'], 'refs' => ['rhodesian_ridgeback.exercise.adult', 'rhodesian_ridgeback.suitability.pdsa_active_family']],
+                // S385 "especially prized as watch-dog and family pet"; S390 "extremely loyal and loving towards their family".
+                ['tag' => 'family_pet', 'source_ids' => ['S385', 'S390'], 'refs' => ['rhodesian_ridgeback.suitability.fci_family_pet', 'rhodesian_ridgeback.suitability.pdsa_family']],
+                // S387 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S387'], 'refs' => ['rhodesian_ridgeback.suitability.rkc_size_of_home', 'rhodesian_ridgeback.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S387 "More than 2 hours per day"; S390 "a minimum of two hours exercise every day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S387', 'S390'], 'refs' => ['rhodesian_ridgeback.exercise.adult', 'rhodesian_ridgeback.suitability.pdsa_exercise']],
+                // S390 "we wouldn't recommend them if you are a first time owner"; "playful and powerful dogs".
+                ['tag' => 'experienced_owner', 'source_ids' => ['S390'], 'refs' => ['rhodesian_ridgeback.behaviour.experienced_owner', 'rhodesian_ridgeback.suitability.pdsa_experienced_owner']],
+                // S390 "they risk knocking over smaller children."; S392 "Ridgebacks do best with older children".
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S390', 'S392'], 'refs' => ['rhodesian_ridgeback.suitability.pdsa_children', 'rhodesian_ridgeback.suitability.woodgreen_children']],
+                // S390 "We would never recommend leaving your Rhodesian Ridgeback alone for more than four hours."; S392 "They don't cope well with being left alone for long hours."
+                ['tag' => 'needs_company', 'source_ids' => ['S390', 'S392'], 'refs' => ['rhodesian_ridgeback.behaviour.time_alone', 'rhodesian_ridgeback.suitability.pdsa_company']],
+                // S387 "Sheds: Yes"; S390 "Ridgebacks shed all year round".
+                ['tag' => 'sheds', 'source_ids' => ['S387', 'S390'], 'refs' => ['rhodesian_ridgeback.suitability.rkc_shedding']],
+                // S390 "Ridgebacks have a very high prey drive, so we wouldn't recommend keeping them with smaller pets".
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S390'], 'refs' => ['rhodesian_ridgeback.behaviour.other_pets', 'rhodesian_ridgeback.suitability.pdsa_prey_drive']],
+            ],
+        ],
+
     ],
 ];

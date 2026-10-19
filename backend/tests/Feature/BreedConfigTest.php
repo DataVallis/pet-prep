@@ -184,8 +184,8 @@ describe('Filament BreedConfigResource', function () {
     it('lists the new tunables', function () {
         Livewire::test(ListBreedConfigs::class)
             // 11 breeds since M5-R10-07 — more than the default page of 10; 26 since M5-R10-22, 27 since M5-R10-23, 28 since M5-R10-24, 29 since M5-R10-25 —
-            // more than a page of 25.
-            ->set('tableRecordsPerPage', 50)
+            // more than a page of 25; 51 since M5-R10-47 (Rhodesian Ridgeback) — more than a page of 50, so all records.
+            ->set('tableRecordsPerPage', 'all')
             ->assertCanSeeTableRecords(BreedConfig::all())
             ->assertSee('06:00–10:00, 17:00–21:00');
     });

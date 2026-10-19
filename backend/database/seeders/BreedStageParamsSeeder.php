@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -560,6 +560,17 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_SHIBA_INU = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-46)';
 
     /**
+     * M5-R10-47 Rhodesian Ridgeback (unattended run 2026-10-19, data.json
+     * proposed_game_parameters.rhodesian_ridgeback.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 120 min
+     * (RKC S387 "Exercise: More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120,
+     * stages young 9 / adult 36 / senior 90 (0.75 × RKC lower bound 10 y, S387 — provisional until
+     * McMillan 2024 is checked), arrival 2 / 9 / 36 / 90, learning multiplier 1.0 (Coren rank 52, Average);
+     * care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_RHODESIAN_RIDGEBACK = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-47)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -710,6 +721,7 @@ class BreedStageParamsSeeder extends Seeder
         'rough_collie' => [7, 'S365', 'Grooming: Every day', 'high', false],
         'mastiff' => [1, 'S370', 'They need grooming just once a week, but their facial wrinkles will need daily cleaning.', 'high', false],
         'shiba_inu' => [1, 'S378', 'Grooming: Once a week', 'high', false],
+        'rhodesian_ridgeback' => [1, 'S387', 'Grooming: Once a week', 'high', false],
     ];
 
     /**
@@ -740,6 +752,7 @@ class BreedStageParamsSeeder extends Seeder
         'hungarian_vizsla' => ['S329', 'Remember to leave a gap between eating and exercising.'],
         'english_cocker_spaniel' => ['S339', 'Remember to leave at a gap after eating and before exercising.'],
         'mastiff' => ['S374', 'Restrict exercise for an hour before and after mealtimes'],
+        'rhodesian_ridgeback' => ['S390', 'Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -797,13 +810,14 @@ class BreedStageParamsSeeder extends Seeder
         'rough_collie' => ['S368', 'Puppy socialization is crucial for proper emotional development and intelligence.'],
         'mastiff' => ['S370', 'As with all breeds, early socialisation is important to ensure they grow up into confident, sociable dogs.'],
         'shiba_inu' => ['S381', 'Shiba Inu can thrive with proper socialization and desensitization when they are puppies.'],
+        'rhodesian_ridgeback' => ['S390', 'It’s important to socialise them from a young age with different people, dogs and experiences'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1428,6 +1442,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-46 (docs/research/dog-data/data.json shiba_inu,
             // S377–S383; runbook rules in proposed_game_parameters.shiba_inu).
             BreedType::ShibaInu => self::shibaInuProfile(),
+            // M5-R10-47 (docs/research/dog-data/data.json rhodesian_ridgeback,
+            // S384–S394; runbook rules in proposed_game_parameters.rhodesian_ridgeback).
+            BreedType::RhodesianRidgeback => self::rhodesianRidgebackProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -4503,6 +4520,80 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'shiba_inu.lifespan.median_uk',
                 'quote' => 'Shiba Inu (x̃= 14.6',
                 'notes' => 'McMillan et al. 2024, published version (S376), Results. RKC "Over 10 years" (S378), PetMD 13–16 y (S381) and Dogs Trust 12+ y (S382) are consistent. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Rhodesian Ridgeback (M5-R10-47). Stage boundaries, arrival ages, exercise minutes and the
+     * learning multiplier follow the runbook's standing rules (CONFIRMED_R10_RHODESIAN_RIDGEBACK);
+     * weight, growth, Coren rank and lifespan are sourced. The senior boundary uses the RKC lower
+     * bound (no McMillan 2024 / VetCompass median reachable) — provisional, like the Belgian Malinois.
+     *
+     * @return array<string, mixed>
+     */
+    private static function rhodesianRidgebackProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_RHODESIAN_RIDGEBACK;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S387', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.rhodesian_ridgeback.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog finishes growing at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S387) = 7.5 y = 90 months (PDSA "Over 10 years", S390, and the PetMD / Woodgreen lower bound 10 y agree). No McMillan 2024 / VetCompass median was reachable (McMillan 2024 12 y only via Wikipedia, S394, tier C → 108, alternative only). Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rhodesian_ridgeback.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S387', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rhodesian_ridgeback.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "More than 2 hours per day" (S387) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA (S390) "a minimum of two hours" agrees; Woodgreen (S392) 90–120 min and PetMD (S391) "at least 45 minutes" are alternatives only.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rhodesian_ridgeback.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[32.0, 36.5], [
+                'unit' => 'kg', 'source_id' => 'S385', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'rhodesian_ridgeback.adult_weight.fci',
+                'quote' => 'Weight: Males: 36,5 kg',
+                'notes' => 'FCI standard (S385): males 36.5 kg, females 32 kg → 32–36.5 kg for the game. AKC (S389) 85 / 70 lb ≈ 38.6 / 31.8 kg, PDSA (S390) 31–38 kg and Woodgreen (S392) 36–45 kg are alternatives only.',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'rhodesian_ridgeback.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (FCI 32–36.5 kg ≈ 70.5–80.5 lb, AKC 70–85 lb = the Large class of S10).',
+            ]],
+            'coren_rank' => [52, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'rhodesian_ridgeback.trainability.coren_rank',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 52 "Rhodesian Ridgeback", tier "Average Working/Obedience Intelligence" (ranks 40–54).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.rhodesian_ridgeback.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 52 (S35) in the "Average" tier (ranks 40–54) → 1.0. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S387', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'rhodesian_ridgeback.lifespan.rkc',
+                'quote' => 'Lifespan: Over 10 years',
+                'notes' => 'RKC breed page lower bound (S387); PDSA "Over 10 years" (S390), PetMD 10–12 y (S391) and Woodgreen 10–13 y (S392) agree. McMillan 2024 12 y only via Wikipedia (S394, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
