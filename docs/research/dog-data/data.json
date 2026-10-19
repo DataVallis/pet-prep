@@ -22780,6 +22780,535 @@
       }
     }
   },
+  "mastiff": {
+    "_note": "Added 2026-10-19 (M5-R10-45, unattended run — appended after the Rough Collie: AKC 2024 No. 40, S174 table row '40 | Mastiff'). Quotes as returned by the web-fetch tool on 2026-10-19 (the PDSA and PetMD pages only in short quotes, 125-character limit); spot-check before import (sources.md S370–S376, reused S10, S11, S14, S35, S45, S54, S174). Names: FCI 'MASTIFF' (S372), the AKC 'Mastiff' (S174, S373), PetMD 'Mastiff (English Mastiff)' (S374); Slovenian »angleški mastif« (not checked against KZS — open for David). FCI standard valid 13.10.2010 (S371); AKC standard 1991 (S373). The RKC (Breeds A–Z page, breed standard, Breed Watch) returned a fetch error on every address → no RKC key facts or health tests; exercise from PDSA (S370, runbook fallback RKC → PDSA). Lifespan: McMillan 2024 median 9.0 y (S54 corrected Fig. 3 legend; S376 results) — not provisional. Welfare: PDSA (S370) 'classed as ‘Category Three’ by The Kennel Club' (visible conformational issues); the Breed Watch points come from the breed club's copy (S375, tier C) next to PDSA. Not named flat-faced by an A/B source.",
+    "identity": {
+      "value": "FCI No. 264, Group 2 Section 2.1 (Molossoid breeds, Mastiff type), Great Britain",
+      "unit": "—",
+      "source_id": "S371",
+      "quote": "Section 2.1 Molossoid breeds, Mastiff Type. Without working trial.",
+      "confidence": "high",
+      "notes": "FCI standard N° 264 (S371): 'FCI-CLASSIFICATION: Group 2 Pinscher and Schnauzer – Molossoid breeds - Swiss Mountain and Cattle Dogs.'; utilization 'Watch and security dog.'; 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 13.10.2010.' FCI nomenclature (S372): 'MASTIFF', '264', country of origin 'GREAT BRITAIN', 'Not subject to a working trial according to the FCI breeds nomenclature', definitive acceptance '11/5/1964'. AKC name: Mastiff (S174, S373); RKC group: Working (address of the unreachable breed page)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S370",
+      "quote": "Size | Large",
+      "confidence": "medium",
+      "notes": "PDSA key facts (S370), as returned. The RKC 'Size:' field (the preferred source) was not reachable on 2026-10-19 — the Great Dane's RKC value is 'Extra large'; by weight (80–85 kg, S370) the PetMD size class is 'Giant (over 100 pounds)' (S10, growth only). Kept at the source's 'Large' (open for David: 'giant' would need the RKC page)."
+    },
+    "height": {
+      "pdsa": {
+        "value": {
+          "male": [
+            71,
+            78
+          ],
+          "female": [
+            71,
+            78
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S370",
+        "quote": "Average height | 71-78 cm",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S370), one range for both sexes (stored per sex). AKC standard (S373) gives minimums only (height.akc_minimum). FCI (S371) gives no figures: 'Size is desirable, but only if combined with quality and if absolute soundness is maintained.'"
+      },
+      "akc_minimum": {
+        "value": {
+          "male": 76,
+          "female": 70
+        },
+        "unit": "cm (minimum)",
+        "source_id": "S373",
+        "quote": "Dogs, minimum, 30 inches at the shoulder.",
+        "confidence": "high",
+        "notes": "AKC standard (S373): 'Bitches, minimum, 27½ inches at the shoulder.' 30 in = 76.2 cm → 76; 27.5 in = 69.85 cm → 70 (our conversion). A minimum, not a range."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            80,
+            85
+          ],
+          "female": [
+            80,
+            85
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S370",
+        "quote": "Average weight | 80kg-85kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S370), one range for both sexes (stored per sex) — the game range. FCI (S371) and AKC (S373) give no weight. PetMD (S374): 'A Mastiff's weight is anywhere between 120 and 230 pounds' (54–104 kg), 'Female Mastiffs typically weigh 120–170 pounds' — alternatives only."
+      },
+      "salt_category": {
+        "value": "VI (>40 kg, no curve)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 80–85 kg = the band '>40 (no curve)'. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 80–85 kg (S370) = 176–187 lb → 'Giant'. Same 18–24 months as the Great Dane and the Bernese Mountain Dog. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Mastiff growth curve found."
+      },
+      "puppy_exercise": {
+        "value": "not over-exercised as puppies while bones and joints develop",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "but shouldn’t be over-exercised as puppies when their bones and joints are still developing.",
+        "confidence": "medium",
+        "notes": "PDSA (S370), the end of the sentence that starts 'As adult dogs, Mastiffs need around an hour of exercise daily'. The game's puppy rule (10 min × age in months, capped) already limits puppy walks — no new mechanic."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 9.0,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": "Mastiff (purple, x̃=9.0)",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024, corrected Fig. 3 legend (S54, LJMU Author Correction — the correction changed only the Miniature Dachshund). Published version (S376), results: 'Mastiff (x̃=9.0, HR 2.3, 2.2–2.4)' among the breeds most at risk from early death (research only — never shown as a number or risk in the app). Runbook rule: McMillan 2024 first → not provisional."
+      },
+      "pdsa": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S370",
+        "quote": "Average lifespan | Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA key facts (S370). PetMD (S374): 'the average Mastiff lifespan is just 6–10 years.' Basis of shorter_lifespan (an A/B upper bound of 10 years or less)."
+      },
+      "senior_from": {
+        "value": 6.75,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 9.0 y (McMillan 2024, S54) → 0.75 × 9.0 = 6.75 y = 81 months. Dogs Trust rule of thumb > 7 y = 84 months (S14).",
+        "derived_from": [
+          "S11",
+          "S54"
+        ],
+        "months": 81,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 60",
+        "unit": "minutes/day",
+        "source_id": "S370",
+        "quote": "Minimum exercise (per day) | 1 hour",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S370); PDSA text: 'As adult dogs, Mastiffs need around an hour of exercise daily'. RKC breed page (preferred) not reachable on 2026-10-19 → PDSA (runbook rule). PetMD (S374): 'When at home, most Mastiffs enjoy a couch potato lifestyle and tend to not have high energy needs.' — no minutes."
+      },
+      "after_meals": {
+        "value": "restrict exercise for an hour before and after meals (GDV / bloat)",
+        "unit": "—",
+        "source_id": "S374",
+        "quote": "Restrict exercise for an hour before and after mealtimes",
+        "confidence": "medium",
+        "notes": "PetMD (S374), GDV prevention list ('Mastiffs are deep-chested dogs, which means care must be taken to prevent gastric dilatation and volvulus (GDV) or bloat.'); also 'Feed their Mastiff two to three meals per day, instead of one big meal', slow-feeder bowls, no elevated bowls. PDSA (S370): GDV 'most commonly occurs after they have eaten'. → proposed_game_parameters.mastiff.meal_exercise_gap (built, M5-R16 — the game warns after a meal; the hour before a meal is not modelled)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "gentle giants — calm and good-natured; affectionate to owners but capable of guarding; indifferent with strangers",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Mastiffs are gentle giants – calm, good-natured dogs that tend to get on well with everyone.",
+        "confidence": "medium",
+        "notes": "FCI (S371): 'A combination of grandeur and courage. Calm, affectionate to owners, but capable of guarding.' / 'Usually indifferent with strangers; timidity is unacceptable.' AKC (S373): 'A combination of grandeur and good nature, courage and docility.' PetMD (S374): protective by heritage, 'loyal to and watchful over their families' (as returned)."
+      },
+      "family": {
+        "value": "great family dogs for homes with children who know how to interact with pets; best without toddlers or babies (size)",
+        "unit": "—",
+        "source_id": "S374",
+        "quote": "Yes, Mastiffs are great family dogs, and their calm nature is suitable for homes with children",
+        "confidence": "medium",
+        "notes": "PetMD (S374), sentence continues 'who understand how to appropriately interact with pets.' and 'However, they may be best suited in homes without toddlers or babies, as their massive size can be dangerous.' → family_pet, children (with that caveat) and not_for_small_children; never small_children."
+      },
+      "socialisation": {
+        "value": "early socialisation so they grow up confident and sociable",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "As with all breeds, early socialisation is important to ensure they grow up into confident, sociable dogs.",
+        "confidence": "medium",
+        "notes": "PDSA (S370). PetMD (S374): 'early training and socialization is essential to have a well-mannered Mastiff.' → proposed_game_parameters.mastiff.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No statement found on the PDSA (S370) or PetMD (S374) pages → no needs_company / often_alone tag."
+      },
+      "other_pets": {
+        "value": "tend to do well with other pets, especially when introduced as a puppy",
+        "unit": "—",
+        "source_id": "S374",
+        "quote": "But overall, Mastiffs are gentle giants and tend to do well with other pets, especially when introduced during puppyhood.",
+        "confidence": "medium",
+        "notes": "PetMD (S374). No prey-drive statement. → other_pets (with the puppyhood caveat, Pomeranian precedent)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no chews_when_bored tag."
+      },
+      "drooling": {
+        "value": "excessive droolers",
+        "unit": "—",
+        "source_id": "S374",
+        "quote": "But Mastiffs are known to be excessive droolers, and pet parents need to keep a small towel handy for quick cleanups.",
+        "confidence": "medium",
+        "notes": "PetMD (S374). Basis of drools (as the Cane Corso and the Great Dane)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag. Breed Watch (S375, tier C) 'Significantly overweight' is a judging point, not food motivation. PetMD (S374): two to three meals a day (the game's adult meals are two — no change)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. Conformation welfare topic: PDSA (S370) 'Mastiffs are amongst a group of breeds classed as ‘Category Three’ by The Kennel Club.' — 'visible conditions or conformational issues that can cause pain, discomfort or health issues due to exaggerations'. Breed Watch points (S375, breed club copy, tier C): excessive loose facial skin with eyelid defects, excessive skin / wrinkle, dermatitis in skin folds, significantly overweight, unsound movement, weak hindquarters → eyelid_problems, sensitive_skin, hips_hind_legs (each with a PDSA quote). Not named flat-faced by an A/B source → no brachycephalic chip, and no veterinary advice against advertising the breed type.",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 3 — visible conformational issues (loose facial skin and eyelids, excessive skin and wrinkle, skin-fold dermatitis, weight, movement, hindquarters)",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Mastiffs are amongst a group of breeds classed as ‘Category Three’ by The Kennel Club.",
+        "confidence": "high",
+        "notes": "PDSA (S370): 'These are breeds of dog that have been highlighted as having visible conditions or conformational issues' / 'that can cause pain, discomfort or health issues due to exaggerations.' Points (S375, tier C): 'Excessive amounts of loose facial skin with conformational defects of the upper and/or lower eyelids', 'Excessive skin on head or body', 'Excessive wrinkle', 'Hair loss or scarring from previous dermatitis', 'Significantly overweight', 'Signs of dermatitis in skin folds', 'Unsound movement', 'Weak hindquarters'. The RKC's own page returned a fetch error."
+      },
+      "eyelids": {
+        "value": "eyelids turned in or out (entropion / ectropion) because of excessive skin over the face and eyes; cherry eye",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Eyelid problems – such as entropion and ectropion – occur in Mastiffs due to excessive skin over the face and eyes.",
+        "confidence": "high",
+        "notes": "PDSA (S370): 'This skin causes the eyelids to droop either downwards, or in towards the eye,' / 'where the skin rubs and irritates the eye, causing problems.'; also cherry eye. Breed Watch (S375, tier C): 'Excessive amounts of loose facial skin with conformational defects of the upper and/or lower eyelids'. PetMD (S374): ectropion, entropion, cataracts, PRA. Basis of eyelid_problems."
+      },
+      "skin": {
+        "value": "atopy (itching, skin trauma) and dermatitis in the facial skin folds — folds wiped daily",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Atopy – hypersensitivity to certain allergens, causing itching and skin trauma.",
+        "confidence": "medium",
+        "notes": "PDSA (S370); grooming: 'their facial wrinkles will need daily cleaning.' Breed Watch (S375, tier C): 'Signs of dermatitis in skin folds', 'Hair loss or scarring from previous dermatitis'. PetMD (S374): seasonal allergies; wipe facial folds daily. Basis of sensitive_skin (as the Westie and the Pug)."
+      },
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia — joints that don't develop correctly; screening schemes",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Joint disorders – such as elbow dysplasia and hip dysplasia - occur when joints don’t develop correctly",
+        "confidence": "medium",
+        "notes": "PDSA (S370): 'and cause degenerative joint disease.' / 'Bone and joint problems can be managed but there are schemes to screen your dog'. Breed Watch (S375, tier C): 'Weak hindquarters', 'Unsound movement'. PetMD (S374): hip dysplasia. Basis of hips_hind_legs."
+      },
+      "gdv": {
+        "value": "gastric dilatation volvulus ('bloat') — deep-chested; urgent vet care",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Gastric torsion or Gastric Dilation Volvulus (GDV) – occurs in large, deep chested breeds such as Mastiffs.",
+        "confidence": "medium",
+        "notes": "PDSA (S370): 'This most commonly occurs after they have eaten.' PetMD (S374): restrict exercise for an hour before and after meals (exercise.after_meals) → meal_exercise_gap (M5-R16)."
+      },
+      "heart_dcm": {
+        "value": "dilated cardiomyopathy (heart muscle disease)",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Dilated cardiomyopathy – is a degeneration of the muscles of the heart meaning the heart wall becomes thinner",
+        "confidence": "medium",
+        "notes": "PDSA (S370), truncated by the tool. Not a Breed Watch point → no heart chip (research only, Great Dane precedent)."
+      },
+      "wobbler": {
+        "value": "wobbler syndrome (neck vertebrae)",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Wobbler Syndrome – cervical spondylomyopathy is a deformity or instability of the bones in the neck",
+        "confidence": "medium",
+        "notes": "PDSA health list (S370), truncated by the tool."
+      },
+      "back": {
+        "value": "back problems such as degenerative disc disease",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Back Problems – Mastiffs can suffer from back problems such as degenerative disc disease",
+        "confidence": "medium",
+        "notes": "PDSA health list (S370), truncated by the tool. Not the Dachshund's long-back conformation point → no back_spine chip."
+      },
+      "other_conditions": {
+        "value": "hypothyroidism, progressive retinal atrophy (health screen), epilepsy, cancers incl. bone tumours, panosteitis",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Cancer – Mastiffs can be more prone to some forms of cancer including bone tumours (Osteosarcoma).",
+        "confidence": "medium",
+        "notes": "PDSA health list (S370): 'Hypothyroidism – is generally caused by an auto immune thyroiditis causing low circulating levels of thyroid hormone.'; 'Eye disease – there is a health screen for progressive retinal atrophy'; 'Epilepsy – Mastiffs can be more prone to seizures due to epilepsy'; 'Panosteitis – a painful, inflammatory bone disease.' PetMD (S374) also degenerative myelopathy. Research only."
+      },
+      "shorter_lifespan": {
+        "value": "a shorter life than most breeds — usually under ten years",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Average lifespan | Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA (S370); PetMD (S374) 'the average Mastiff lifespan is just 6–10 years.'; McMillan 2024 median 9.0 y (S54) — research only. Basis of the consider tag shorter_lifespan — a calm chip, no number."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 72,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 72 | Mastiff |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35): rank 72 shared by the Mastiff and the Beagle (as returned '| 72 | Mastiff | Beagle'), tier 'Lowest Degree of Working/Obedience Intelligence' (ranks 70–79). Coren's own article (S34) not re-read. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Lowest",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 80 to 100 repetitions or more.",
+        "confidence": "medium",
+        "notes": "S35 tier 'Lowest Degree of Working/Obedience Intelligence': 'Obey first command: 25% of the time or worse.'"
+      },
+      "training_notes": {
+        "value": "eager to please and quick to learn with positive reinforcement; short sessions; patience",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Training will require patience, but can be achieved using reward-based techniques.",
+        "confidence": "medium",
+        "notes": "PetMD (S374): 'Mastiffs are eager to please, learn quickly, and respond well to positive reinforcement methods' / 'However, training sessions are best kept short to keep their attention and focus.' The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.mastiff.learning_multiplier (0.5, runbook rule: Lowest tier, rank 72, as the Beagle).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "large, massive, symmetrical; broad, deep, powerfully built body; square-looking head; grandeur and dignity",
+        "unit": "—",
+        "source_id": "S373",
+        "quote": "The Mastiff is a large, massive, symmetrical dog with a well-knit frame.",
+        "confidence": "high",
+        "notes": "AKC (S373): 'The impression is one of grandeur and dignity.' FCI (S371): 'Head, in general outline, giving a square appearance when viewed from any point.' / 'Body broad, deep, long, powerfully built, on legs wide apart and set.'"
+      },
+      "colours": {
+        "value": [
+          "fawn",
+          "apricot",
+          "brindle"
+        ],
+        "unit": "list",
+        "source_id": "S371",
+        "quote": "Apricot, fawn or brindle.",
+        "confidence": "high",
+        "notes": "FCI (S371) colour as returned; 'Excessive white on body, chest or feet is unacceptable.' AKC (S373): 'Fawn, apricot, or brindle.'; 'Muzzle, ears, and nose must be dark in color, the blacker the better,' / 'with similar color tone around the eye orbits and extending upward between them.'; 'A small patch of white on the chest is permitted.' Both standards list the same three colours. Never excessive white."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Fawn first with the highest weight (portrait default), then apricot, brindle."
+      },
+      "coat": {
+        "value": "short and close-lying, coarser over neck and shoulders; dense undercoat",
+        "unit": "—",
+        "source_id": "S371",
+        "quote": "Short and close-lying, but coarse over neck and shoulders.",
+        "confidence": "high",
+        "notes": "AKC (S373): 'Outer coat straight, coarse, and of moderately short length.' / 'Undercoat dense, short, and close lying.' PDSA (S370): 'Coat length | Short'."
+      },
+      "ears": {
+        "value": "small, thin, set wide apart and high, lying flat and close to the cheeks; dark",
+        "unit": "—",
+        "source_id": "S371",
+        "quote": "Small, thin to touch, wide apart, set on at highest points of sides of skull,",
+        "confidence": "high",
+        "notes": "FCI (S371): 'lying flat and close to cheeks when in repose.' AKC (S373): 'Ears small in proportion to the skull, V-shaped, rounded at the tips.' / 'Ears dark in color, the blacker the better,'."
+      },
+      "eyes": {
+        "value": "moderate size, wide apart, hazel brown (the darker the better), showing no haw",
+        "unit": "—",
+        "source_id": "S371",
+        "quote": "Moderate size, wide apart. Colour hazel brown, darker the better, showing no haw.",
+        "confidence": "high",
+        "notes": "AKC (S373): 'Eyes set wide apart, medium in size, never too prominent.' Breed Watch (S375, tier C): loose facial skin with eyelid defects → eyelids in normal contact in the portrait (welfare)."
+      },
+      "nose": {
+        "value": "black, broad with widely spreading nostrils; short, broad muzzle; dark mask",
+        "unit": "—",
+        "source_id": "S371",
+        "quote": "Black. Broad, with widely spreading nostrils when viewed from front, flat (not pointed or turned up) in profile.",
+        "confidence": "high",
+        "notes": "FCI (S371) muzzle: 'Short, broad under eyes, and keeping nearly parallel in width to end of nose;'. AKC (S373): 'Muzzle short, broad under the eyes and running nearly equal in width to the end of the nose.' Moderate muzzle with open nostrils in the portrait."
+      },
+      "skin": {
+        "value": "forehead wrinkled when alert; no excessive loose skin or wrinkle (welfare)",
+        "unit": "—",
+        "source_id": "S371",
+        "quote": "Skull broad between ears, forehead flat, but wrinkled when attention is excited.",
+        "confidence": "high",
+        "notes": "Breed Watch (S375, tier C): 'Excessive skin on head or body', 'Excessive wrinkle' → moderate skin in the portrait (new dog trait `skin`, Basset Hound precedent)."
+      },
+      "tail": {
+        "value": "set on high, reaching to the hocks, wide at the root and tapering",
+        "unit": "—",
+        "source_id": "S371",
+        "quote": "Set on high, and reaching to hocks, or a little below them, wide at its root and tapering to end,",
+        "confidence": "high",
+        "notes": "AKC (S373): 'Tail set on moderately high and reaching to the hocks or a little below.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S370) and PetMD (S374). The RKC breed page (preferred: size of home / garden, grooming, sheds, lifespan band, town or country) returned a fetch error on 2026-10-19 → no rkc_* fields; large_home and apartment need the RKC page (runbook) → neither. Woodgreen and AKC trait ratings not attempted.",
+      "pdsa_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Size | Large",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S370)."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour per day (minimum)",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Minimum exercise (per day) | 1 hour",
+        "confidence": "medium",
+        "notes": "PDSA text: 'As adult dogs, Mastiffs need around an hour of exercise daily'."
+      },
+      "pdsa_grooming": {
+        "value": "once a week; facial wrinkles cleaned daily",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "They need grooming just once a week, but their facial wrinkles will need daily cleaning.",
+        "confidence": "high",
+        "notes": "PDSA (S370) → grooming 1× a week (M5-R13, built); daily face-wrinkle cleaning → ROADMAP M5-R14 (needs-david)."
+      },
+      "pdsa_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Average lifespan | Under 10 years",
+        "confidence": "high",
+        "notes": "Basis of shorter_lifespan (runbook criterion: an A/B upper bound ≤ 10 years)."
+      },
+      "petmd_family": {
+        "value": "great family dogs",
+        "unit": "—",
+        "source_id": "S374",
+        "quote": "Yes, Mastiffs are great family dogs, and their calm nature is suitable for homes with children",
+        "confidence": "medium",
+        "notes": "Basis of family_pet and children (caveat: 'who understand how to appropriately interact with pets.')."
+      },
+      "petmd_children": {
+        "value": "homes with children who understand how to interact with pets; best without toddlers or babies",
+        "unit": "—",
+        "source_id": "S374",
+        "quote": "However, they may be best suited in homes without toddlers or babies, as their massive size can be dangerous.",
+        "confidence": "medium",
+        "notes": "Basis of not_for_small_children (Great Dane / Cane Corso precedent); children only with the caveat kept in notes; never small_children."
+      },
+      "petmd_other_pets": {
+        "value": "tend to do well with other pets, especially when introduced during puppyhood",
+        "unit": "—",
+        "source_id": "S374",
+        "quote": "But overall, Mastiffs are gentle giants and tend to do well with other pets, especially when introduced during puppyhood.",
+        "confidence": "medium",
+        "notes": "Basis of other_pets (caveat in notes)."
+      },
+      "petmd_space": {
+        "value": "needs lots of room; not a small-apartment dog",
+        "unit": "—",
+        "source_id": "S374",
+        "quote": "Mastiffs need lots of room to exist comfortably;",
+        "confidence": "medium",
+        "notes": "PetMD (S374): 'you probably don't want to be navigating around one in a 500-square-foot apartment.' → no apartment tag; large_home needs the RKC 'Large house' field (not reachable)."
+      },
+      "petmd_shedding": {
+        "value": "moderately shedding coat; heavy shedding once or twice a year",
+        "unit": "—",
+        "source_id": "S374",
+        "quote": "Their short, dense, moderately shedding coats don't require a lot of grooming.",
+        "confidence": "medium",
+        "notes": "PetMD (S374): 'Mastiffs may experience periods of heavy shedding once or twice a year.' Basis of sheds (no conflicting source)."
+      },
+      "petmd_grooming": {
+        "value": "weekly brushing; baths every few months",
+        "unit": "—",
+        "source_id": "S374",
+        "quote": "Weekly brushing with a grooming mitt or bristle brush reduces shedding",
+        "confidence": "medium",
+        "notes": "PetMD (S374): '… bathing your dog is only really necessary every few months.' Agrees with PDSA once a week."
+      },
+      "petmd_face_folds": {
+        "value": "wipe the facial folds daily",
+        "unit": "—",
+        "source_id": "S374",
+        "quote": "Pet parents need to wipe their Mastiff's facial folds daily with a pet-safe facial wipe",
+        "confidence": "high",
+        "notes": "PetMD (S374): 'or damp paper towel to prevent buildup of moisture and debris.' → ROADMAP M5-R14 (needs-david)."
+      },
+      "petmd_ears_eyes": {
+        "value": "clean the ears after water; clean the eyes routinely",
+        "unit": "—",
+        "source_id": "S374",
+        "quote": "Their ears must be cleaned after they're in water, such as after a bath or after swimming.",
+        "confidence": "medium",
+        "notes": "PetMD (S374): 'Along with regular monitoring, a Mastiff's eyes need to be cleaned routinely to help prevent tear stains and infections.'; 'Routine ear cleaning with a veterinary-approved ear cleanser is important' (as returned) → ear care ROADMAP M5-R20, eye wiping M5-R14 (needs-david)."
+      },
+      "petmd_drooling": {
+        "value": "excessive droolers",
+        "unit": "—",
+        "source_id": "S374",
+        "quote": "But Mastiffs are known to be excessive droolers, and pet parents need to keep a small towel handy for quick cleanups.",
+        "confidence": "medium",
+        "notes": "Basis of drools."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -33880,6 +34409,332 @@
         "confidence": "high",
         "notes": "FCI (S364) colours: sable, tricolour, blue merle (RKC S366 'Sable and white, Tricolour and Blue Merle.' with 'typical white Collie markings') — sable and white is the portrait default. AKC white (S367) is not an FCI / RKC colour. Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — sable and white (default), tricolour, blue merle; never white, cream or double merle"
+      }
+    },
+    "mastiff": {
+      "_note": "Unattended run M5-R10-45 (2026-10-19): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: weekly brushing (PDSA S370 'once a week', M5-R13); a gap between meals and exercise (PetMD S374 'an hour', M5-R16); puppy socialisation (PDSA S370 quote, M5-R17). Sourced needs without a game mechanic: daily face-wrinkle cleaning and routine eye cleaning (PDSA S370, PetMD S374) → ROADMAP M5-R14; ear cleaning after water and baths every few months (PetMD S374) → ROADMAP M5-R20 (needs-david). Senior 81 from McMillan 2024 (S54, 9.0 y). Welfare breed (Kennel Club Category 3, PDSA S370) → eyelid_problems, sensitive_skin, hips_hind_legs; in marketing (no veterinary advice against advertising the breed type).",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S370",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA 'Minimum exercise (per day) | 1 hour' (S370); 'As adult dogs, Mastiffs need around an hour of exercise daily'. RKC breed page not reachable → PDSA (runbook: RKC preferred, else PDSA). Rule: one number N ('minimum N') → N = 60.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S370 'Minimum exercise (per day) | 1 hour'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S370",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months. PDSA (S370): 'shouldn’t be over-exercised as puppies when their bones and joints are still developing' — the cap already limits puppy walks.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 81
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 81 = round(0.75 × 9.0 y × 12) = 81 (S11 + McMillan 2024 median 9.0 y, S54). Alternative: 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S54"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 81 (0.75 × 9.0 y, McMillan 2024 S54)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 81
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 81)"
+      },
+      "learning_multiplier": {
+        "value": 0.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 72 (S35), tier 'Lowest' (70–79) → 0.5 (as the Beagle, rank 72). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 72, Lowest tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PetMD (S374): 'Feed their Mastiff two to three meals per day, instead of one big meal' — the game's two adult meals stay.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S370",
+        "quote": "They need grooming just once a week, but their facial wrinkles will need daily cleaning.",
+        "confidence": "high",
+        "notes": "mastiff.suitability.pdsa_grooming. PDSA (S370) 'just once a week' → 1 (runbook dog-grooming rule 'Once a week' → 1); PetMD (S374) 'Weekly brushing' agrees. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed. The daily face-wrinkle cleaning in the same sentence → face_fold_cleaning (M5-R14).",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S374",
+            "notes": "PetMD weekly brushing"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PDSA »grooming just once a week«; PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source says an hour; 60 = David's decision)",
+        "source_id": "S374",
+        "quote": "Restrict exercise for an hour before and after mealtimes",
+        "confidence": "medium",
+        "notes": "PetMD (S374), GDV prevention list; mastiff.exercise.after_meals; PDSA (S370) lists GDV (health.gdv). Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score. The hour before a meal is not modelled.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S370",
+        "quote": "As with all breeds, early socialisation is important to ensure they grow up into confident, sociable dogs.",
+        "confidence": "medium",
+        "notes": "mastiff.behaviour.socialisation (PDSA S370); PetMD (S374) agrees. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S370)"
+      },
+      "face_fold_cleaning": {
+        "value": "daily",
+        "unit": "face-wrinkle cleaning (sourced need)",
+        "source_id": "S370",
+        "quote": "They need grooming just once a week, but their facial wrinkles will need daily cleaning.",
+        "confidence": "high",
+        "notes": "PDSA (S370), mastiff.suitability.pdsa_grooming; PetMD (S374) 'wipe their Mastiff's facial folds daily' and eyes 'cleaned routinely' (mastiff.suitability.petmd_face_folds, petmd_ears_eyes). The game has no face-fold cleaning mechanic → ROADMAP M5-R14 (Bulldog / Pug precedent); this value is its input.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan; mehanika čiščenja gub še ni zgrajena → ROADMAP M5-R14 (needs-david)"
+      },
+      "ear_care": {
+        "value": "ear cleaning after water (bath, swimming); baths every few months",
+        "unit": "ear care / bathing (sourced need)",
+        "source_id": "S374",
+        "quote": "Their ears must be cleaned after they're in water, such as after a bath or after swimming.",
+        "confidence": "medium",
+        "notes": "PetMD (S374), mastiff.suitability.petmd_ears_eyes; baths 'only really necessary every few months' (petmd_grooming). The game has no ear-care or bathing mechanic → ROADMAP M5-R20 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): čiščenje ušes po vodi, kopanje na nekaj mesecev; mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-45); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S374"
+            ],
+            "refs": [
+              "mastiff.suitability.petmd_family",
+              "mastiff.behaviour.family"
+            ],
+            "quote": "S374 'Yes, Mastiffs are great family dogs'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S374"
+            ],
+            "refs": [
+              "mastiff.suitability.petmd_family",
+              "mastiff.behaviour.family"
+            ],
+            "quote": "S374 'their calm nature is suitable for homes with children'",
+            "note": "Caveat kept: 'who understand how to appropriately interact with pets.' and best without toddlers or babies (S374) → not_for_small_children as well; never small_children (Boston Terrier precedent for a caveated children chip)."
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S374"
+            ],
+            "refs": [
+              "mastiff.behaviour.other_pets",
+              "mastiff.suitability.petmd_other_pets"
+            ],
+            "quote": "S374 'tend to do well with other pets, especially when introduced during puppyhood'",
+            "note": "Caveat kept (introduced during puppyhood), Pomeranian precedent."
+          }
+        ],
+        "consider": [
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S374"
+            ],
+            "refs": [
+              "mastiff.suitability.petmd_children"
+            ],
+            "quote": "S374 'they may be best suited in homes without toddlers or babies, as their massive size can be dangerous'"
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S370"
+            ],
+            "refs": [
+              "mastiff.health.shorter_lifespan",
+              "mastiff.lifespan.pdsa"
+            ],
+            "quote": "S370 'Average lifespan | Under 10 years'"
+          },
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S370",
+              "S375"
+            ],
+            "refs": [
+              "mastiff.health.eyelids",
+              "mastiff.health.breed_watch"
+            ],
+            "quote": "S370 'Eyelid problems – such as entropion and ectropion – occur in Mastiffs due to excessive skin over the face and eyes.'; S375 'Excessive amounts of loose facial skin with conformational defects of the upper and/or lower eyelids'",
+            "note": "Welfare rule §3 (Kennel Club Category 3, PDSA S370), as the Great Dane."
+          },
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S370",
+              "S375"
+            ],
+            "refs": [
+              "mastiff.health.skin",
+              "mastiff.health.breed_watch"
+            ],
+            "quote": "S370 'Atopy – hypersensitivity to certain allergens, causing itching and skin trauma.'; S375 'Signs of dermatitis in skin folds'",
+            "note": "Welfare rule §3, as the Westie and the Pug."
+          },
+          {
+            "tag": "hips_hind_legs",
+            "source_ids": [
+              "S370",
+              "S375"
+            ],
+            "refs": [
+              "mastiff.health.hip_elbow_dysplasia",
+              "mastiff.health.breed_watch"
+            ],
+            "quote": "S370 'Joint disorders – such as elbow dysplasia and hip dysplasia - occur when joints don’t develop correctly'; S375 'Weak hindquarters'",
+            "note": "Welfare rule §3, as the German Shepherd Dog, the Rottweiler and the Great Dane."
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S374"
+            ],
+            "refs": [
+              "mastiff.suitability.petmd_shedding"
+            ],
+            "quote": "S374 'Their short, dense, moderately shedding coats don't require a lot of grooming.'"
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S374"
+            ],
+            "refs": [
+              "mastiff.behaviour.drooling",
+              "mastiff.suitability.petmd_drooling"
+            ],
+            "quote": "S374 'But Mastiffs are known to be excessive droolers'"
+          }
+        ],
+        "not_proposed": {
+          "active_family": "One hour a day (S370); PetMD 'tend to not have high energy needs' (S374).",
+          "long_daily_exercise": "One hour a day (S370) — the criterion is two hours.",
+          "small_children": "PetMD: best without toddlers or babies (S374) → not_for_small_children instead.",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No source says it needs an experienced owner.",
+          "apartment": "PetMD: needs lots of room, not a small apartment (S374); the RKC home field was not reachable.",
+          "large_home": "Criterion is the RKC 'Size of home: Large house' field — the RKC page was not reachable (open for David).",
+          "often_alone": "No source.",
+          "needs_company": "No source.",
+          "needs_mental_stimulation": "No source.",
+          "older_owners": "No source.",
+          "low_shedding": "Moderately shedding (S374).",
+          "food_motivated_weight": "No breed-specific statement; Breed Watch 'Significantly overweight' (S375) is a judging point.",
+          "frequent_grooming": "Once a week (S370, S374) — criterion is more than once a week (the daily face-wrinkle cleaning is a separate need, M5-R14).",
+          "chews_when_bored": "No source.",
+          "chases_small_pets": "No prey-drive statement.",
+          "secure_fencing": "No source.",
+          "welfare": "Kennel Club Category 3 (S370) → eyelid_problems, sensitive_skin, hips_hind_legs. Not named flat-faced by an A/B source (a Science News article — tier C, not recorded — calls 'mastiffs' flat-nosed; McMillan 2024's skull-shape table S5 was not returned) → no brachycephalic_breathing / short_muzzle_breathing (open for David). PDSA lists GDV, DCM, wobbler syndrome, back problems, PRA, epilepsy and cancers (S370) — research only (GDV → digestion warning, built)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children (with caveat), other_pets; consider not_for_small_children, shorter_lifespan, eyelid_problems, sensitive_skin, hips_hind_legs (dobrobit), sheds, drools"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (no veterinary advice against advertising the breed type)",
+        "unit": "—",
+        "source_id": "S370",
+        "quote": "Mastiffs are amongst a group of breeds classed as ‘Category Three’ by The Kennel Club.",
+        "confidence": "high",
+        "notes": "Kennel Club Category 3 (PDSA S370) → welfare chips in the app (eyelid_problems, sensitive_skin, hips_hind_legs); the only veterinary advice against advertising a breed type is for flat-faced breeds (BVA S92) — no A/B source names the Mastiff flat-faced. Marketing never promises health; never with toddlers or babies (PetMD S374), never with exaggerated wrinkles or drooping eyelids. Open for David: a Category 3 breed in marketing.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (welfare chips, no veterinary advice against advertising)"
+      },
+      "ai_appearance": {
+        "value": "adult Mastiff, fawn (default) with a dark mask, ears and nose; short, close-lying coat; massive, symmetrical, square-headed but moderate build; moderate skin with a lightly wrinkled forehead, never heavy wrinkles or loose jowls; eyes moderate, wide apart, hazel brown, eyelids in normal contact (no haw, no drooping); short broad muzzle with open nostrils; small thin ears lying close to the cheeks; natural tail reaching to the hocks; no excessive white",
+        "unit": "—",
+        "source_id": "S371",
+        "quote": "Apricot, fawn or brindle.",
+        "confidence": "high",
+        "notes": "Colours shared by the FCI (S371) and AKC (S373) standards — fawn, apricot, brindle; dark mask (AKC). Welfare (Category 3, PDSA S370; Breed Watch points S375): moderate skin, eyelids in normal contact, open nostrils. Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn with a dark mask is the portrait default (FCI + AKC colour); moderate skin and eyelids (Breed Watch); natural ears and tail"
       }
     }
   }
