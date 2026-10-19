@@ -671,9 +671,9 @@ it('gives the Pomeranian the new older_children tag (AKC), apartment, family_pet
         ->and($pom['consider'])->not->toContain('fragile_older_children')->not->toContain('not_for_small_children')
         ->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')->not->toContain('hips_hind_legs');
 
-    // Only the Pomeranian and the Chihuahua (PDSA S277, M5-R10-33) carry older_children.
+    // Only the Pomeranian, the Chihuahua (PDSA S277, M5-R10-33) and the Shiba Inu (AKC S383, M5-R10-46) carry older_children.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Pomeranian, BreedType::Chihuahua], true)) {
+        if (! in_array($breed, [BreedType::Pomeranian, BreedType::Chihuahua, BreedType::ShibaInu], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('older_children');
         }
     }

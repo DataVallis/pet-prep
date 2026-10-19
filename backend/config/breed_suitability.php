@@ -149,6 +149,12 @@ return [
         // difference between a small dog and a toy."). Not `fragile_older_children` — that chip names
         // fragile bones, which no A/B source says for this breed. A calm chip, never a number.
         'older_children' => 'consider',
+        // M5-R10-46 (runbook "new tag" rule, 2026-10-19): an independent, stubborn dog that is a better pick
+        // for an experienced owner (Shiba Inu: AKC S383 "Due to their stubborn nature, a Shiba Inu is a better
+        // pick for an experienced dog owner."; PetMD S381 "they might do best with experienced pet parents who
+        // have the patience and consistency"). Not `experienced_owner` — that chip names a powerful dog, which no
+        // source says of this breed. A calm chip, never a number.
+        'independent_experienced_owner' => 'consider',
     ],
 
     'breeds' => [
@@ -1215,6 +1221,24 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S374'], 'refs' => ['mastiff.suitability.petmd_shedding']],
                 // S374 "But Mastiffs are known to be excessive droolers".
                 ['tag' => 'drools', 'source_ids' => ['S374'], 'refs' => ['mastiff.behaviour.drooling', 'mastiff.suitability.petmd_drooling']],
+            ],
+        ],
+
+        // M5-R10-46: shiba_inu.* (S377–S383), runbook rules (data.json
+        // proposed_game_parameters.shiba_inu.suitability_tags). No PDSA / Woodgreen page; RKC Breed Watch
+        // Category 1 (S378) → no welfare chip. No suits tag: the sources speak of older children and an
+        // experienced owner only; RKC "Small house" (no apartment), no other-pets statement.
+        'shiba_inu' => [
+            'suits' => [],
+            'consider' => [
+                // New key: S383 "Due to their stubborn nature, a Shiba Inu is a better pick for an experienced dog owner."; S381 experienced pet parents.
+                ['tag' => 'independent_experienced_owner', 'source_ids' => ['S383', 'S381'], 'refs' => ['shiba_inu.behaviour.experienced_owner', 'shiba_inu.suitability.akc_experienced_owner']],
+                // S383 "happiest in a home with experienced, attentive dog owners and older children"; S381 "might not be a good fit for families with very young children".
+                ['tag' => 'older_children', 'source_ids' => ['S383', 'S381'], 'refs' => ['shiba_inu.behaviour.family', 'shiba_inu.suitability.akc_children', 'shiba_inu.suitability.petmd_children']],
+                // S381 "they require lots of mental stimulation and exercise"; S383 "requires a lot of physical and mental stimulation".
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S381', 'S383'], 'refs' => ['shiba_inu.behaviour.mental_stimulation']],
+                // S378 "Sheds: Yes"; S382 "Japanese Shiba Inus shed heavily."
+                ['tag' => 'sheds', 'source_ids' => ['S378', 'S382'], 'refs' => ['shiba_inu.suitability.rkc_shedding']],
             ],
         ],
 

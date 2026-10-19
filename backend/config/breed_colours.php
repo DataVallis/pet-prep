@@ -273,6 +273,12 @@ return [
         ['key' => 'apricot', 'value' => 'apricot with a dark mask, dark ears and a black nose', 'en' => 'Apricot', 'sl' => 'Marelični'],
         ['key' => 'brindle', 'value' => 'brindle with a dark mask, dark ears and a black nose', 'en' => 'Brindle', 'sl' => 'Tigrast'],
     ],
+    // M5-R10-46: FCI S377 "Colour: Red, black and tan, sesame, black sesame, red sesame."; AKC S380 (always with urajiro).
+    'shiba_inu' => [
+        ['key' => 'red', 'value' => 'red with cream-white urajiro on the muzzle sides, cheeks, throat, chest, belly and inner legs', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'black-tan', 'value' => 'black and tan with cream-white urajiro on the muzzle sides, cheeks, throat, chest, belly and inner legs', 'en' => 'Black and tan', 'sl' => 'Črn s porjavelimi oznakami'],
+        ['key' => 'sesame', 'value' => 'sesame (black-tipped hairs on a red background) with cream-white urajiro on the muzzle sides, cheeks, throat, chest, belly and inner legs', 'en' => 'Sesame', 'sl' => 'Sezamov'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -49,6 +49,7 @@ return [
     'pug' => 'Pug',
     'rough_collie' => 'Rough Collie',
     'mastiff' => 'Mastiff',
+    'shiba_inu' => 'Shiba Inu',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

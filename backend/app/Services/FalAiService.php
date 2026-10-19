@@ -404,6 +404,14 @@ class FalAiService
                 .'short broad muzzle with open nostrils, small thin ears lying close to the cheeks, natural tail reaching the hocks, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-46: FCI 257 (S377) / AKC standard (S380) — red with urajiro as the anchor (red / black and
+            // tan / sesame); small, well-balanced spitz, pricked triangular ears, triangular dark eyes, curled tail.
+            BreedType::ShibaInu => 'An alert, confident Shiba Inu dog with a red coat and cream-white urajiro on the muzzle sides, cheeks, throat and chest, '
+                .'short harsh double coat, small well-balanced muscular spitz body, '
+                .'small triangular firmly pricked ears, triangular dark brown eyes, black nose, '
+                .'thick tail curled over the back, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -977,6 +985,17 @@ class FalAiService
                 'eye_color' => 'hazel brown',
                 'fur_texture' => 'short, dense, close-lying coat, coarser over neck and shoulders',
                 'markings' => 'dark mask, dark ears, lightly wrinkled forehead',
+            ],
+            // M5-R10-46: FCI S377 "Colour: Red, black and tan, sesame, black sesame, red sesame."; urajiro (S377, S380).
+            BreedType::ShibaInu => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'red with cream-white urajiro',
+                    1 => 'black and tan with cream-white urajiro',
+                    2 => 'sesame with cream-white urajiro',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short double coat, harsh straight outer coat over a soft dense undercoat',
+                'markings' => 'cream-white urajiro on the muzzle sides, cheeks, throat, chest, belly and inner legs',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
