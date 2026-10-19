@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `mastiff` (viri S370–S376; ponovno S8, S10, S11, S14, S24, S35, S45, S54, S92, S174) |
 | Izvor | FCI št. 264, skupina 2, sekcija 2.1 (molosi, tip doge), Velika Britanija (S371, S372) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 40. mesto »Mastiff« (S174) |
-| PR-ji | pet-prep #272 (pasma) · portret: čaka na namestitev produkcije · spletna stran #74 |
+| PR-ji | pet-prep #272 (pasma) · portret #276 (2026-10-19) · spletna stran #74 |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -38,7 +38,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov, odrasel 6.000, starejši 4.500 od 81 mesecev; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-45 | 2026-10-19 |
 | Česanje 1× na teden (rutina »Počeši«), opozorilo »počakaj s sprehodom« po obroku, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R16 / M5-R17 | 2026-10-19 |
 | Barva (izbirnik barve: plava, marelična, tigrasta) | 🛠 | 💶 izziv | M5-R21 | 2026-10-19 |
-| AI portret v registru | 🗓 čaka na naslednjo ročno namestitev produkcije (D18) | — | M5-R11-04 | — |
+| AI portret v registru (sprejet v prvem poskusu) | ✅ | — | M5-R11-04 | 2026-10-19 |
 | Stran na petprep.si (`/animals/dogs/mastiff`, `/sl/zivali/psi/angleski-mastif`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -55,4 +55,4 @@
 - **Kratek gobec:** standard pravi »Muzzle short«; poljudni članek (Science News, stopnja C) mastife omenja med psi s »sploščenim nosom«. Noben vir A/B mastifa ne imenuje brahicefalnega (razred lobanje v McMillan 2024, tabela S5, ni bil dosegljiv) → brez oznake za dihanje. Preveriti.
 - **Ime:** »angleški mastif« ni preverjeno pri KZS.
 - **Spletna stran:** nov ključ zdravja `skin_allergy_face_folds` (besede Claude).
-- **Portret:** naredi ga prvi samodejni zagon po naslednji ročni namestitvi produkcije (D18).
+- **Portret:** narejen 2026-10-19 (PR #276) brez namestitve produkcije — workflow portretov zdaj uporabi kodo merganega commita (PR #275).

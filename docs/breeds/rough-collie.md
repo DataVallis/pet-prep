@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `rough_collie` (viri S363–S369; ponovno S8, S10, S11, S14, S24, S35, S45, S54, S92, S174) |
 | Izvor | FCI št. 156, skupina 1, sekcija 1 (ovčarski psi), Velika Britanija (S363) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 39. mesto »Collie« (S174). AKC vodi dolgodlakega in kratkodlakega škotskega ovčarja kot eno pasmo; FCI in RKC ju ločita — zgradili smo dolgodlakega (pogostejšega) |
-| PR-ji | pet-prep #271 (pasma) · portret: čaka na namestitev produkcije · spletna stran #73 |
+| PR-ji | pet-prep #271 (pasma) · portret #276 (2026-10-19) · spletna stran #73 |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -38,7 +38,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov, odrasel 6.000, starejši 4.500 od 108 mesecev; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-44 | 2026-10-19 |
 | Česanje vsak dan (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-19 |
 | Barva (izbirnik barve: sobolja z belo, trobarvna, modri merle) | 🛠 | 💶 izziv | M5-R21 | 2026-10-19 |
-| AI portret v registru | 🗓 čaka na naslednjo ročno namestitev produkcije (D18) | — | M5-R11-04 | — |
+| AI portret v registru (sprejet v prvem poskusu) | ✅ | — | M5-R11-04 | 2026-10-19 |
 | Stran na petprep.si (`/animals/dogs/rough-collie`, `/sl/zivali/psi/dolgodlaki-skotski-ovcar`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -56,4 +56,4 @@
 - **Vrsta AKC »Collie«** zajema obe različici dlake; zgrajen je samo dolgodlaki (FCI 156). Kratkodlaki (FCI 296) bi bil ločena pasma.
 - **Ime:** »dolgodlaki škotski ovčar« ni preverjeno pri KZS.
 - **Spletna stran:** nov ključ testa `dna_pra_rcd2` (besede Claude).
-- **Portret:** naredi ga prvi samodejni zagon po naslednji ročni namestitvi produkcije (D18).
+- **Portret:** narejen 2026-10-19 (PR #276) brez namestitve produkcije — workflow portretov zdaj uporabi kodo merganega commita (PR #275).

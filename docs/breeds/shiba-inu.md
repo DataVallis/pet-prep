@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `shiba_inu` (viri S377–S383; ponovno S8, S10, S11, S14, S24, S35, S45, S174, S376) |
 | Izvor | FCI št. 257, skupina 5, sekcija 5 (azijski špici in sorodne pasme), Japonska (S377) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 42. mesto »Shiba Inu« (41. mesto, zahodnoškotski beli terier, je že v aplikaciji; S174) |
-| PR-ji | pet-prep #273 (pasma, `1b383d4`) · portret: čaka na namestitev produkcije · spletna stran #75 |
+| PR-ji | pet-prep #273 (pasma, `1b383d4`) · portret #276 (2026-10-19) · spletna stran #75 |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -39,7 +39,7 @@
 | Česanje 1× na teden (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-19 |
 | Nova oznaka »samostojen in trmast — najbolje z izkušenim lastnikom« | 🛠 | 💶 izziv | M5-R10-46 | 2026-10-19 |
 | Barva (izbirnik barve: rdeča, črna s porjavelimi oznakami, sezamova) | 🛠 | 💶 izziv | M5-R21 | 2026-10-19 |
-| AI portret v registru | 🗓 čaka na naslednjo ročno namestitev produkcije (D18) | — | M5-R11-04 | — |
+| AI portret v registru (sprejet v prvem poskusu) | ✅ | — | M5-R11-04 | 2026-10-19 |
 | Stran na petprep.si (`/animals/dogs/shiba-inu`, `/sl/zivali/psi/siba-inu`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -57,4 +57,4 @@
 - **Velikost:** RKC »Small-Medium« → nova kategorija `small_medium` v registru (besede na spletni strani Claude); Dogs Trust »Small«.
 - **Ime:** »šiba inu« ni preverjeno pri KZS.
 - **Spletna stran:** nova ključa zdravja `skin_ear_allergies`, `gum_disease_daily_brushing` in testa `dna_gm1`, `dna_gm2` (besede Claude); izvor Japonska.
-- **Portret:** naredi ga prvi samodejni zagon po naslednji ročni namestitvi produkcije (D18).
+- **Portret:** narejen 2026-10-19 (PR #276) brez namestitve produkcije — workflow portretov zdaj uporabi kodo merganega commita (PR #275).
