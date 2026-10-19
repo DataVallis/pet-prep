@@ -395,6 +395,15 @@ class FalAiService
                 .'semi-erect ears with the tips tipping forward, long tail carried low with a slight upward swirl, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-45: FCI 264 (S371) / AKC standard (S373) — fawn with a dark mask as the anchor (apricot /
+            // fawn / brindle); massive but moderate build, moderate skin and eyelids (Breed Watch points,
+            // S375), short broad muzzle with open nostrils, small ears close to the cheeks, natural tail.
+            BreedType::Mastiff => 'A calm, dignified Mastiff dog with a fawn coat and a dark mask, dark ears and a black nose, '
+                .'short close-lying coat, large massive symmetrical body with a broad square-looking head, '
+                .'moderate skin with only a lightly wrinkled forehead, hazel brown eyes with tight eyelids, '
+                .'short broad muzzle with open nostrils, small thin ears lying close to the cheeks, natural tail reaching the hocks, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -957,6 +966,17 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'very dense, long, straight and harsh outer coat with a soft undercoat, abundant mane and frill',
                 'markings' => 'typical white Collie markings: collar, frill, legs and tail tip',
+            ],
+            // M5-R10-45: FCI S371 "Apricot, fawn or brindle."; AKC S373 dark muzzle, ears and nose.
+            BreedType::Mastiff => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'fawn with a dark mask',
+                    1 => 'apricot with a dark mask',
+                    2 => 'brindle with a dark mask',
+                },
+                'eye_color' => 'hazel brown',
+                'fur_texture' => 'short, dense, close-lying coat, coarser over neck and shoulders',
+                'markings' => 'dark mask, dark ears, lightly wrinkled forehead',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

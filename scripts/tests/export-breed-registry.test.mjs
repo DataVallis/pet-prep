@@ -149,6 +149,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.maltese.slug, { en: 'maltese', sl: 'maltezan' });
   assert.deepEqual(byId.pug.slug, { en: 'pug', sl: 'mops' });
   assert.deepEqual(byId.rough_collie.slug, { en: 'rough-collie', sl: 'dolgodlaki-skotski-ovcar' });
+  assert.deepEqual(byId.mastiff.slug, { en: 'mastiff', sl: 'angleski-mastif' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -285,6 +286,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     maltese: { adult: 3000, senior: 2300, seniorFrom: 108, learning: 0.7 },
     pug: { adult: 6000, senior: 4500, seniorFrom: 104, learning: 0.7 },
     rough_collie: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 1.5 },
+    mastiff: { adult: 6000, senior: 4500, seniorFrom: 81, learning: 0.5 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -442,7 +444,7 @@ test('JS parse of breed_suitability.php equals PHP itself', { skip: !hasPhp && '
 
 test('game numbers equal the seeded breed_stage_params rows', { skip: !(hasPhp && hasVendor) && 'php or backend/vendor missing' }, () => {
   const code = `require $argv[1]; echo json_encode(Database\\Seeders\\BreedStageParamsSeeder::allRows());`;
-  const rows = JSON.parse(execFileSync('php', ['-r', code, resolve(ROOT, 'backend/vendor/autoload.php')], { encoding: 'utf8', cwd: resolve(ROOT, 'backend') }));
+  const rows = JSON.parse(execFileSync('php', ['-r', code, resolve(ROOT, 'backend/vendor/autoload.php')], { encoding: 'utf8', cwd: resolve(ROOT, 'backend'), maxBuffer: 64 * 1024 * 1024 }));
   const row = (id, stage, key, from = 0) => {
     // breed_configs slug = the register's EN slug (german_shepherd → german-shepherd-dog, M5-R10-04).
     const slug = registry.breeds.find((b) => b.id === id)?.slug.en ?? id.replaceAll('_', '-');
@@ -496,7 +498,7 @@ test('game numbers equal the seeded breed_stage_params rows', { skip: !(hasPhp &
 
 test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming rows (David 2026-10-11 / 12: nothing forgotten)', { skip: !(hasPhp && hasVendor) && 'php or backend/vendor missing' }, () => {
   const code = `require $argv[1]; echo json_encode(Database\\Seeders\\BreedStageParamsSeeder::allRows());`;
-  const rows = JSON.parse(execFileSync('php', ['-r', code, resolve(ROOT, 'backend/vendor/autoload.php')], { encoding: 'utf8', cwd: resolve(ROOT, 'backend') }));
+  const rows = JSON.parse(execFileSync('php', ['-r', code, resolve(ROOT, 'backend/vendor/autoload.php')], { encoding: 'utf8', cwd: resolve(ROOT, 'backend'), maxBuffer: 64 * 1024 * 1024 }));
   // Seeded slugs → BreedType values (the German Shepherd's slug is german-shepherd-dog, the Poodle's poodle-standard).
   const slugToBreed = { 'german-shepherd-dog': 'german_shepherd', 'poodle-standard': 'standard_poodle' };
   const seeded = [...new Set(rows.filter((x) => x.key === 'grooming_sessions_per_week').map((x) => slugToBreed[x.breed_slug] ?? x.breed_slug.replaceAll('-', '_')))].sort();
@@ -511,7 +513,7 @@ test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming row
   assert.deepEqual([...cats, ...dogs].sort(), seeded);
   assert.deepEqual(cats, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
   // M5-R13: every dog breed of the app except the mutt and the Border Collie (no grooming statement).
-  assert.equal(dogs.length, 39);
+  assert.equal(dogs.length, 40);
   assert.ok(!dogs.includes('mutt') && !dogs.includes('border_collie'));
 });
 
@@ -1575,4 +1577,26 @@ test('Rough Collie (M5-R10-44): up to 1 hour (RKC), AKC weight, FCI height, FCI 
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a percentage; the AKC-only white colour never appears as a fact.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)/i);
+});
+
+test('Mastiff (M5-R10-45): at least 1 hour (PDSA, RKC page not reachable), PDSA weight and height, FCI group 2 Great Britain, McMillan median + PDSA "under 10 years", Coren 72, Category 3 welfare chips, no RKC tests found', () => {
+  const d = registry.breeds.find((b) => b.id === 'mastiff');
+  assert.deepEqual(d.name, { en: 'Mastiff', sl: 'Angleški mastif' });
+  assert.equal(d.availability, 'coming_soon');
+  assert.equal(d.facets.size, 'large');
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'at_least', ['S370']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 264, group: 2, section: 2, origin: 'GB' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [80, 85], female: [80, 85] }, ['S370']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [71, 78], female: [71, 78] }, ['S370']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['median', 9, ['S54']], ['less_than', 10, ['S370']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 72);
+  assert.deepEqual(d.game.stages[0].activity, { kind: 'steps_growing', per_month: 1000, first: 2000, cap: 6000, cap_month: 6 });
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 81 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['family_pet', 'children', 'other_pets']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['not_for_small_children', 'shorter_lifespan', 'eyelid_problems', 'sensitive_skin', 'hips_hind_legs', 'sheds', 'drools']);
+  assert.deepEqual(d.health.map((h) => h.key), ['bloat_gdv', 'eyelid_problems', 'skin_allergy_face_folds', 'hip_elbow_dysplasia', 'heart_muscle_disease', 'wobbler_syndrome']);
+  assert.equal(d.breeder_checklist.status, 'not_found');
+  const json = JSON.stringify(d);
+  // Never "hypoallergenic", never a percentage or a hazard ratio.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|HR 2\.3/i);
 });

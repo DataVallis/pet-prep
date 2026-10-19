@@ -1184,6 +1184,39 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S365'], 'refs' => ['rough_collie.suitability.rkc_shedding']],
             ],
         ],
+        // M5-R10-45: mastiff.* (S370–S376), runbook rules (data.json
+        // proposed_game_parameters.mastiff.suitability_tags). PDSA (S370) + PetMD (S374); the RKC breed page was
+        // not reachable → no large_home (open for David). `children` with the PetMD caveat (children who know how
+        // to interact with pets) and `not_for_small_children` (best without toddlers or babies) — never
+        // `small_children`. Welfare breed (Kennel Club Category 3, PDSA S370; Breed Watch points via the breed
+        // club S375, tier C, next to PDSA) → eyelid_problems, sensitive_skin, hips_hind_legs. Not flat-faced in
+        // an A/B source → no breathing chip.
+        'mastiff' => [
+            'suits' => [
+                // S374 "Yes, Mastiffs are great family dogs".
+                ['tag' => 'family_pet', 'source_ids' => ['S374'], 'refs' => ['mastiff.suitability.petmd_family', 'mastiff.behaviour.family']],
+                // S374 "their calm nature is suitable for homes with children" (… "who understand how to appropriately interact with pets.").
+                ['tag' => 'children', 'source_ids' => ['S374'], 'refs' => ['mastiff.suitability.petmd_family', 'mastiff.behaviour.family']],
+                // S374 "tend to do well with other pets, especially when introduced during puppyhood".
+                ['tag' => 'other_pets', 'source_ids' => ['S374'], 'refs' => ['mastiff.behaviour.other_pets', 'mastiff.suitability.petmd_other_pets']],
+            ],
+            'consider' => [
+                // S374 "they may be best suited in homes without toddlers or babies, as their massive size can be dangerous".
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S374'], 'refs' => ['mastiff.suitability.petmd_children']],
+                // S370 "Average lifespan | Under 10 years".
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S370'], 'refs' => ['mastiff.health.shorter_lifespan', 'mastiff.lifespan.pdsa']],
+                // Welfare rule: S370 eyelid problems "due to excessive skin over the face and eyes"; S375 Breed Watch eyelid point.
+                ['tag' => 'eyelid_problems', 'source_ids' => ['S370', 'S375'], 'refs' => ['mastiff.health.eyelids', 'mastiff.health.breed_watch']],
+                // Welfare rule: S370 "Atopy – hypersensitivity to certain allergens, causing itching and skin trauma."; S375 "Signs of dermatitis in skin folds".
+                ['tag' => 'sensitive_skin', 'source_ids' => ['S370', 'S375'], 'refs' => ['mastiff.health.skin', 'mastiff.health.breed_watch']],
+                // Welfare rule: S370 hip / elbow dysplasia; S375 "Weak hindquarters".
+                ['tag' => 'hips_hind_legs', 'source_ids' => ['S370', 'S375'], 'refs' => ['mastiff.health.hip_elbow_dysplasia', 'mastiff.health.breed_watch']],
+                // S374 "Their short, dense, moderately shedding coats don't require a lot of grooming."
+                ['tag' => 'sheds', 'source_ids' => ['S374'], 'refs' => ['mastiff.suitability.petmd_shedding']],
+                // S374 "But Mastiffs are known to be excessive droolers".
+                ['tag' => 'drools', 'source_ids' => ['S374'], 'refs' => ['mastiff.behaviour.drooling', 'mastiff.suitability.petmd_drooling']],
+            ],
+        ],
 
     ],
 ];

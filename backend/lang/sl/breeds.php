@@ -48,6 +48,7 @@ return [
     'maltese' => 'Maltežan',
     'pug' => 'Mops',
     'rough_collie' => 'Dolgodlaki škotski ovčar',
+    'mastiff' => 'Angleški mastif',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

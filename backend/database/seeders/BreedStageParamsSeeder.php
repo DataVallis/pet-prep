@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -540,6 +540,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_ROUGH_COLLIE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-44)';
 
     /**
+     * M5-R10-45 Mastiff (unattended run 2026-10-19, data.json proposed_game_parameters.mastiff.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed
+     * on 2026-10-10 — exercise 60 min (PDSA S370 "Minimum exercise (per day) | 1 hour"; RKC page not
+     * reachable), senior 45 min, puppy 10 min × age capped at 60, stages young 9 / adult 36 / senior 81
+     * (0.75 × McMillan 2024 median 9.0 y, S54), arrival 2 / 9 / 36 / 81, learning multiplier 0.5 (Coren
+     * rank 72, Lowest); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_MASTIFF = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-45)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -688,6 +698,7 @@ class BreedStageParamsSeeder extends Seeder
         'maltese' => [7, 'S347', 'Grooming: Every day', 'high', false],
         'pug' => [1, 'S355', 'Grooming: Once a week', 'high', false],
         'rough_collie' => [7, 'S365', 'Grooming: Every day', 'high', false],
+        'mastiff' => [1, 'S370', 'They need grooming just once a week, but their facial wrinkles will need daily cleaning.', 'high', false],
     ];
 
     /**
@@ -717,6 +728,7 @@ class BreedStageParamsSeeder extends Seeder
         'basset_hound' => ['S323', 'Remember to leave a gap after eating and before exercising.'],
         'hungarian_vizsla' => ['S329', 'Remember to leave a gap between eating and exercising.'],
         'english_cocker_spaniel' => ['S339', 'Remember to leave at a gap after eating and before exercising.'],
+        'mastiff' => ['S374', 'Restrict exercise for an hour before and after mealtimes'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -772,13 +784,14 @@ class BreedStageParamsSeeder extends Seeder
         'maltese' => ['S348', 'Known to be sweet-natured, they can be reserved with strangers but given the right socialisation when young,'],
         'pug' => ['S359', 'Pug puppies, like all dogs, need to be socialized during their first months of life.'],
         'rough_collie' => ['S368', 'Puppy socialization is crucial for proper emotional development and intelligence.'],
+        'mastiff' => ['S370', 'As with all breeds, early socialisation is important to ensure they grow up into confident, sociable dogs.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1397,6 +1410,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-44 (docs/research/dog-data/data.json rough_collie,
             // S363–S369; runbook rules in proposed_game_parameters.rough_collie).
             BreedType::RoughCollie => self::roughCollieProfile(),
+            // M5-R10-45 (docs/research/dog-data/data.json mastiff,
+            // S370–S376; runbook rules in proposed_game_parameters.mastiff).
+            BreedType::Mastiff => self::mastiffProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -4325,6 +4341,80 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'rough_collie.lifespan.rkc',
                 'quote' => 'Lifespan: Over 12 years',
                 'notes' => 'RKC Breeds A–Z lower bound (S365); PetMD 10–14 y (S368) is consistent. No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Mastiff (M5-R10-45). Stage boundaries, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_MASTIFF); weight, growth, Coren rank and
+     * lifespan are sourced. The senior boundary uses the McMillan 2024 median 9.0 y (S54) — not provisional.
+     *
+     * @return array<string, mixed>
+     */
+    private static function mastiffProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_MASTIFF;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S54', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.mastiff.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a giant dog finishes growing at 18–24 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [81, $boundary('Derived game boundary: last 25 % of lifespan (S11) × McMillan 2024 median 9.0 y (S54, corrected Fig. 3 legend "Mastiff (purple, x̃=9.0)") = 6.75 y = 81 months. Not chosen: 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 81],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.mastiff.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (18–24 months for a giant dog, S10); capped at the adult 60 minutes, which 10 × age already reaches at 6 months, so the whole young stage walks the adult minutes. PDSA (S370): no over-exercise while bones and joints develop.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S370', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.mastiff.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Minimum exercise (per day) | 1 hour',
+                'notes' => 'PDSA "Minimum exercise (per day) | 1 hour" (S370) → 60 min = 6,000 steps (runbook rule: "minimum N" → N; the RKC page, preferred, was not reachable). PDSA text: "As adult dogs, Mastiffs need around an hour of exercise daily".',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.mastiff.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[80.0, 85.0], [
+                'unit' => 'kg', 'source_id' => 'S370', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'mastiff.adult_weight.pdsa',
+                'quote' => 'Average weight | 80kg-85kg',
+                'notes' => 'PDSA key facts (S370), one range for both sexes. The FCI (S371) and AKC (S373) standards give no weight; PetMD (S374) 120–230 lb is a wider alternative.',
+            ]],
+            'growth_end' => [[18, 24], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'mastiff.growth.adult_weight_reached',
+                'quote' => 'Giant (over 100 pounds) | 18–24 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA 80–85 kg = 176–187 lb, the Giant class of S10).',
+            ]],
+            'coren_rank' => [72, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'mastiff.trainability.coren_rank',
+                'quote' => '| 72 | Mastiff |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 72 shared by the Mastiff and the Beagle, tier "Lowest Degree of Working/Obedience Intelligence" (ranks 70–79).',
+            ]],
+            'learning_multiplier' => [0.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.mastiff.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 72 (S35) in the "Lowest" tier (ranks 70–79) → 0.5, as the Beagle. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [9.0, [
+                'unit' => 'years', 'source_id' => 'S54', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'mastiff.lifespan.median_uk',
+                'quote' => 'Mastiff (purple, x̃=9.0)',
+                'notes' => 'McMillan et al. 2024, corrected Fig. 3 legend (S54); results text (S376). PDSA "Under 10 years" (S370) and PetMD 6–10 y (S374) are consistent. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

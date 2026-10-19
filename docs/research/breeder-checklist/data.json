@@ -1808,6 +1808,11 @@
         }
       ],
       "notes": "RKC breed page (older address, dog-data S365, 2026-10-18): Good Practice (= minimum; 'strongly recommend that breeders, at a minimum, conduct these tests before breeding'): eye scheme with litter screening and the hip scheme; Best Practice ('responsible breeders should ensure they complete all tests in both categories'): DNA tests for CEA/CH, DM, MDR1 and PRA-rcd2. The page names no genetic-diversity item for this breed. No merle-to-merle registrations from 1 January 2013 (S365). New test key dna_pra_rcd2 needs website words."
+    },
+    "mastiff": {
+      "status": "not_found",
+      "tests": [],
+      "notes": "RKC Breeds A–Z page (royalkennelclub.com and thekennelclub.org.uk addresses), the Assured Breeder page and the Find a Rescue page all returned a fetch error on 2026-10-19 → the RKC health-testing section could not be read. PDSA (dog-data S370) only advises in general to 'check the parents of any puppy you’re looking to rehome have been screened under these schemes' (the Canine Health Schemes) and mentions 'a health screen for progressive retinal atrophy' without naming a scheme or test → nothing guessed. Show the general dog checklist only (open for David: re-read the RKC page)."
     }
   }
 }

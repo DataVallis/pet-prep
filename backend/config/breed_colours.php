@@ -267,6 +267,12 @@ return [
         ['key' => 'tricolour', 'value' => 'tricolour (black with tan markings and white)', 'en' => 'Tricolour', 'sl' => 'Trobarven'],
         ['key' => 'blue-merle-white', 'value' => 'blue merle and white', 'en' => 'Blue merle and white', 'sl' => 'Modri merle z belo'],
     ],
+    // M5-R10-45: FCI S371 "Apricot, fawn or brindle."; AKC S373 dark mask.
+    'mastiff' => [
+        ['key' => 'fawn', 'value' => 'fawn with a dark mask, dark ears and a black nose', 'en' => 'Fawn', 'sl' => 'Plavo rjav'],
+        ['key' => 'apricot', 'value' => 'apricot with a dark mask, dark ears and a black nose', 'en' => 'Apricot', 'sl' => 'Marelični'],
+        ['key' => 'brindle', 'value' => 'brindle with a dark mask, dark ears and a black nose', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
