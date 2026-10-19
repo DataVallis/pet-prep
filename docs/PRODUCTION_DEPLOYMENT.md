@@ -12,7 +12,7 @@ This document covers the complete DevOps architecture, configuration, deployment
 - **OS:** Ubuntu 26.04.1 LTS
 - **Administrative SSH:** `root@138.199.172.97` (Key authentication)
 - **Deployment SSH:** `deploy@138.199.172.97` (Dedicated deployment key, member of `docker` group)
-- **Firewall (UFW):** Strict policy (Inbound: 22/tcp, 80/tcp, 443/tcp only)
+- **Firewall (UFW):** Strict policy (Inbound: 22/tcp, 80/tcp, 443/tcp, 443/udp only). 443/udp = HTTP/3 (QUIC): Caddy advertises `Alt-Svc: h3` for 30 days, so the UDP port must stay open or clients try h3 into a black hole (incident 2026-10-19, `ufw allow 443/udp`).
 
 ---
 
