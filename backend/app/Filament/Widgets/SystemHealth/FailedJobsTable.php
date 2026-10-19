@@ -30,6 +30,12 @@ class FailedJobsTable extends TableWidget
         return $user instanceof User && $user->isSuperadmin();
     }
 
+    /** Livewire requests reach a widget directly: check again, not only when the page lists it. */
+    public function boot(): void
+    {
+        abort_unless(static::canView(), 403);
+    }
+
     public function table(Table $table): Table
     {
         return $table

@@ -16,6 +16,7 @@ use App\Services\SystemHealth\SystemHealthService;
 use Illuminate\Contracts\Cache\Repository as CacheRepository;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Database\QueryException;
+use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Cache;
@@ -151,6 +152,37 @@ describe('capture', function () {
             ->and($error->message)->not->toContain('Failing row')
             ->and($error->message)->not->toContain('secret-child-value')
             ->and($error->message)->not->toContain('chewing_resolved_long_value');
+    });
+
+    it('keeps bindings out of a QueryException wrapped by another exception', function () {
+        $query = new QueryException('pgsql', 'insert into "pets" ("name") values (?)', ['Secret Kid Pet'],
+            new PDOException("SQLSTATE[23505]: Unique violation: 7 ERROR:  duplicate key\nDETAIL:  Key (name)=(Secret Kid Pet) already exists."));
+        // Like PairingService: new PairingException($e->getMessage()) with the query as previous.
+        report(new RuntimeException($query->getMessage(), 0, $query));
+
+        $message = SystemError::sole()->message;
+        expect($message)->not->toContain('Secret Kid Pet')
+            ->and($message)->toContain('RuntimeException ← SQLSTATE[23505]')
+            ->and($message)->toContain('values (?)');
+    });
+
+    it('strips the SQL tail and quoted values when there is no QueryException link', function () {
+        // A wrapper that copied the message but dropped the previous exception.
+        report(new RuntimeException('SQLSTATE[22P02]: invalid input syntax for type integer: "Rex" (Connection: pgsql, SQL: select * from "pets" where "id" = Rex)'));
+
+        $message = SystemError::sole()->message;
+        expect($message)->not->toContain('Rex')
+            ->and($message)->toContain('invalid input syntax for type integer: {s} (SQL omitted)');
+    });
+
+    it('replaces quoted values in the driver line of a QueryException', function () {
+        report(new QueryException('pgsql', 'select * from "pets" where "id" = ?', ['Rex'],
+            new PDOException('SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for type bigint: "Rex"')));
+
+        $message = SystemError::sole()->message;
+        expect($message)->not->toContain('Rex')
+            ->and($message)->toContain('bigint: {s}')
+            ->and($message)->toContain('(SQL: select * from "pets" where "id" = ?)');
     });
 
     it('scrubs e-mails, tokens and secrets and truncates long messages', function () {
@@ -318,6 +350,9 @@ describe('Filament page', function () {
         $this->actingAs(User::factory()->parent()->create());
 
         Livewire::test(SystemHealth::class)->assertForbidden();
+        Livewire::test(SystemHealthStats::class)->assertForbidden();
+        Livewire::test(ErrorsPerHourChart::class)->assertForbidden();
+        Livewire::test(FailedJobsTable::class)->assertForbidden();
         expect(SystemHealthStats::canView())->toBeFalse()
             ->and(FailedJobsTable::canView())->toBeFalse()
             ->and(ErrorsPerHourChart::canView())->toBeFalse();
@@ -329,6 +364,9 @@ describe('Filament page', function () {
             ->and(SystemHealth::getNavigationBadgeColor())->toBe('success');
 
         report(shBoom());
+        // The badge is counted once per request (badge + colour share it).
+        expect(SystemHealth::getNavigationBadge())->toBe('0');
+        app()->instance('request', Request::create('/admin'));
         expect(SystemHealth::getNavigationBadge())->toBe('1')
             ->and(SystemHealth::getNavigationBadgeColor())->toBe('danger');
     });
@@ -395,8 +433,61 @@ describe('Filament page', function () {
             ->callTableAction('forget', $forget);
 
         expect(FailedJob::count())->toBe(0);
+        // A second retry of the same (already claimed) row pushes nothing.
+        expect(app(SystemHealthService::class)->retryFailedJob($retry))->toBeFalse();
         $pushed = DB::table('jobs')->sole();
         expect($pushed->queue)->toBe('default')
             ->and(json_decode($pushed->payload, true)['attempts'])->toBe(0);
+    });
+});
+
+describe('isolated connection', function () {
+    // The real production path: the recorder writes over its own connection,
+    // so it commits independently of the test's RefreshDatabase transaction.
+    // Rows written here are committed — clean them up by hand.
+    beforeEach(function () {
+        config(['system_health.isolated_connection' => true]);
+        app()->forgetInstance(ErrorRecorder::class);
+    });
+
+    afterEach(function () {
+        DB::connection(ErrorRecorder::CONNECTION)->table('system_errors')->delete();
+        DB::purge(ErrorRecorder::CONNECTION);
+    });
+
+    it('keeps the row when the caller rolls its transaction back after a failed statement', function () {
+        try {
+            DB::transaction(function () {
+                try {
+                    DB::statement('SELECT 1/0');
+                } catch (QueryException $e) {
+                    // The caller's transaction is now aborted (Postgres): a write on it would fail.
+                    report($e);
+                    throw $e;
+                }
+            });
+        } catch (QueryException) {
+            // rolled back
+        }
+
+        $rows = DB::connection(ErrorRecorder::CONNECTION)->table('system_errors')->get();
+        expect($rows)->toHaveCount(1)
+            ->and($rows[0]->message)->toContain('division by zero');
+    });
+
+    it('is not blocked by row locks the caller holds', function () {
+        $parent = User::factory()->parent()->create();
+        $child = User::factory()->child()->create(['parent_id' => $parent->id]);
+        $pet = Pet::factory()->create(['user_id' => $child->id]);
+
+        DB::transaction(function () use ($pet) {
+            Pet::whereKey($pet->id)->lockForUpdate()->first();
+            $started = microtime(true);
+            report(shBoom('while holding a pet lock'));
+
+            expect(microtime(true) - $started)->toBeLessThan(2.0);
+        });
+
+        expect(DB::connection(ErrorRecorder::CONNECTION)->table('system_errors')->count())->toBe(1);
     });
 });

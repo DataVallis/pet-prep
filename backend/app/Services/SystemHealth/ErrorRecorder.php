@@ -35,6 +35,8 @@ use Throwable;
  *  - writes through its own connection (a clone of the default one), so a
  *    rolled-back or aborted transaction of the caller cannot lose or poison
  *    the row;
+ *  - exceptions with their own report() method that returns non-false
+ *    (Laravel then skips every report callback) are not captured;
  *  - no personal data: no request bodies, headers, query strings, names or
  *    e-mails — at most the user id + role. Messages are scrubbed
  *    (ErrorText::scrub); a QueryException keeps its SQL with placeholders,
@@ -58,6 +60,10 @@ class ErrorRecorder
     private array $localWindow = [];
 
     private ?string $currentJob = null;
+
+    private bool $connectionPrepared = false;
+
+    private ?int $cacheDownUntil = null;
 
     private ?string $currentCommand = null;
 
@@ -222,6 +228,7 @@ class ErrorRecorder
                     json_encode($context, JSON_UNESCAPED_SLASHES | JSON_INVALID_UTF8_SUBSTITUTE),
                     $count, $now, $now, $now, $now,
                 ],
+                false,
             );
 
             $connection->statement(
@@ -240,6 +247,9 @@ class ErrorRecorder
     private function takeWriteSlot(string $fingerprint): ?int
     {
         $window = max(1, (int) config('system_health.write_window_seconds', 60));
+        if ($this->cacheDownUntil !== null && time() < $this->cacheDownUntil) {
+            return $this->localSlot($fingerprint, $window);
+        }
 
         try {
             if ($this->cache->add(self::WINDOW_KEY.$fingerprint, 1, $window)) {
@@ -255,15 +265,23 @@ class ErrorRecorder
 
             return null;
         } catch (Throwable) {
-            // Cache down: per-process window only.
-            $last = $this->localWindow[$fingerprint] ?? 0;
-            if (time() - $last < $window) {
-                return null;
-            }
-            $this->localWindow[$fingerprint] = time();
+            // Cache (Redis) down: stop asking it for a while (each call could
+            // wait for its timeout) and use a per-process window only.
+            $this->cacheDownUntil = time() + 30;
 
-            return 1;
+            return $this->localSlot($fingerprint, $window);
         }
+    }
+
+    private function localSlot(string $fingerprint, int $window): ?int
+    {
+        $last = $this->localWindow[$fingerprint] ?? 0;
+        if (time() - $last < $window) {
+            return null;
+        }
+        $this->localWindow[$fingerprint] = time();
+
+        return 1;
     }
 
     private function connection(): ConnectionInterface
@@ -276,7 +294,17 @@ class ErrorRecorder
             config(['database.connections.'.self::CONNECTION => config('database.connections.'.config('database.default'))]);
         }
 
-        return $this->db->connection(self::CONNECTION);
+        $connection = $this->db->connection(self::CONNECTION);
+        if (! $this->connectionPrepared) {
+            // Never wait long on a lock or a slow DB inside the error path.
+            if ($connection->getDriverName() === 'pgsql') {
+                $connection->statement("SET lock_timeout = '2s'");
+                $connection->statement("SET statement_timeout = '3s'");
+            }
+            $this->connectionPrepared = true;
+        }
+
+        return $connection;
     }
 
     private function isDatabaseUnavailable(Throwable $e): bool
@@ -300,15 +328,26 @@ class ErrorRecorder
         return false;
     }
 
-    /** The message without values that may carry personal data. */
+    /**
+     * The message without values that may carry personal data. Laravel's
+     * QueryException message contains the SQL with the bindings substituted,
+     * and wrappers (`new XException($e->getMessage(), previous: $e)`,
+     * ViewException …) copy it — so any QueryException in the chain wins:
+     * its driver message (without DETAIL) + the SQL with `?` placeholders.
+     * ErrorText::scrub() then cuts any remaining "(Connection: …, SQL: …)"
+     * tail and quoted values.
+     */
     private function rawMessage(Throwable $e): string
     {
-        if ($e instanceof QueryException) {
-            $previous = $e->getPrevious()?->getMessage() ?? $e->getMessage();
-            // Postgres appends "DETAIL: Failing row contains (…)" / "Key (col)=(value)": row data.
-            $previous = (string) preg_replace('/\s*DETAIL:.*$/s', '', $previous);
+        for ($cur = $e; $cur !== null; $cur = $cur->getPrevious()) {
+            if ($cur instanceof QueryException) {
+                $driver = $cur->getPrevious()?->getMessage() ?? $cur->getMessage();
+                // Postgres appends "DETAIL: Failing row contains (…)" / "Key (col)=(value)": row data.
+                $driver = (string) preg_replace('/\s*DETAIL:.*$/s', '', $driver);
+                $prefix = $cur === $e ? '' : class_basename($e).' ← ';
 
-            return $previous.' (SQL: '.$e->getSql().')';
+                return $prefix.$driver.' (SQL: '.$cur->getSql().')';
+            }
         }
 
         return $e->getMessage() !== '' ? $e->getMessage() : '(no message)';

@@ -7,7 +7,9 @@ use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\SystemError;
 use App\Models\User;
+use DateTimeInterface;
 use Illuminate\Contracts\Cache\Repository as CacheRepository;
+use Illuminate\Contracts\Encryption\Encrypter;
 use Illuminate\Queue\Failed\FailedJobProviderInterface;
 use Illuminate\Queue\QueueManager;
 use Illuminate\Support\Carbon;
@@ -148,23 +150,79 @@ class SystemHealthService
         return $query->count();
     }
 
-    /** Push the failed job back onto its queue (= `queue:retry {uuid}`). */
-    public function retryFailedJob(FailedJob $job): void
+    /**
+     * Push the failed job back onto its queue (= `queue:retry {uuid}`).
+     * The row is claimed first (forget() deletes it and says whether it
+     * existed), so a double click or two admins never push it twice (a
+     * second fal.ai job = a second AI cost). Returns false when nothing
+     * was pushed.
+     */
+    public function retryFailedJob(FailedJob $job): bool
     {
         /** @var FailedJobProviderInterface $failer */
         $failer = app('queue.failer');
         $record = $failer->find($job->uuid);
         if ($record === null) {
-            return;
+            return false;
         }
 
-        $payload = json_decode($record->payload, true);
-        if (is_array($payload) && isset($payload['attempts'])) {
+        $payload = json_decode((string) $record->payload, true);
+        if (! is_array($payload)) {
+            return false;
+        }
+
+        if (! $failer->forget($job->uuid)) {
+            return false; // somebody else claimed it
+        }
+
+        if (isset($payload['attempts'])) {
             $payload['attempts'] = 0;
         }
+        $payload = $this->refreshRetryUntil($payload);
 
-        app(QueueManager::class)->connection($record->connection)->pushRaw(json_encode($payload), $record->queue);
-        $failer->forget($job->uuid);
+        try {
+            app(QueueManager::class)->connection($record->connection)->pushRaw((string) json_encode($payload), $record->queue);
+        } catch (Throwable $e) {
+            // Put it back so it is not lost, then surface the error.
+            try {
+                // @phpstan-ignore argument.type (the database providers store the exception as text)
+                $failer->log($record->connection, $record->queue, (string) $record->payload, (string) $record->exception);
+            } catch (Throwable) {
+                // best effort
+            }
+            throw $e;
+        }
+
+        return true;
+    }
+
+    /**
+     * Like `queue:retry`: a job with retryUntil() gets a fresh deadline.
+     *
+     * @param  array<string, mixed>  $payload
+     * @return array<string, mixed>
+     */
+    private function refreshRetryUntil(array $payload): array
+    {
+        $command = $payload['data']['command'] ?? null;
+        if (! is_string($command)) {
+            return $payload;
+        }
+
+        try {
+            $instance = str_starts_with($command, 'O:')
+                ? unserialize($command)
+                : unserialize(app(Encrypter::class)->decrypt($command));
+        } catch (Throwable) {
+            return $payload;
+        }
+
+        if (is_object($instance) && ! $instance instanceof \__PHP_Incomplete_Class && method_exists($instance, 'retryUntil')) {
+            $until = $instance->retryUntil();
+            $payload['retryUntil'] = $until instanceof DateTimeInterface ? $until->getTimestamp() : $until;
+        }
+
+        return $payload;
     }
 
     public function forgetFailedJob(FailedJob $job): void

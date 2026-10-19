@@ -63,13 +63,24 @@ class SystemHealth extends Page implements HasTable
         return $user instanceof User && $user->isSuperadmin();
     }
 
+    /** One COUNT per request for the badge and its colour. */
+    private static ?string $badge = null;
+
+    private static ?int $badgeRequest = null;
+
     public static function getNavigationBadge(): ?string
     {
-        try {
-            return (string) app(SystemHealthService::class)->openErrorCount(24);
-        } catch (Throwable) {
-            return null;
+        $request = spl_object_id(request());
+        if (self::$badgeRequest !== $request) {
+            self::$badgeRequest = $request;
+            try {
+                self::$badge = (string) app(SystemHealthService::class)->openErrorCount(24);
+            } catch (Throwable) {
+                self::$badge = null;
+            }
         }
+
+        return self::$badge;
     }
 
     public static function getNavigationBadgeColor(): string

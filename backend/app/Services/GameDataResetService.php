@@ -57,6 +57,13 @@ class GameDataResetService
         // M5-R09b breed facts: PetPrep content (imported from git, approved in the
         // admin); approved_by → users is SET NULL.
         'breed_facts',
+        // System health (David 2026-10-19): the production error log is not game
+        // data. KEEP, not DELETE: ErrorRecorder writes it over its own DB
+        // connection, so deleting it inside the reset transaction (row locks)
+        // could deadlock against an error reported during the reset.
+        // resolved_by → users is SET NULL.
+        'system_errors',
+        'system_error_hours',
     ];
 
     /** Tables where only some rows go (see keptQuery()). */

@@ -16,6 +16,11 @@ final class ErrorText
      * @var array<string, string>
      */
     private const SCRUB = [
+        // Laravel's QueryException tail: the SQL with substituted bindings
+        // (also copied into wrapper exceptions / failed-job descriptions).
+        '/\s*\(Connection: [^,]*, SQL: .*\)\s*$/s' => ' (SQL omitted)',
+        // Postgres row data.
+        '/\s*DETAIL:\s.*$/s' => '',
         // key=value / "key": "value" pairs whose value is a credential.
         '/((?:password|passwd|secret|token|api[_-]?key|authorization|signature|code|pin|nonce|cookie|session)["\']?\s*[:=]\s*["\']?)[^\s"\'&,;)}\]]+/i' => '$1[redacted]',
         // Bearer / Basic credentials.
@@ -32,10 +37,23 @@ final class ErrorText
         '/\b[A-Za-z0-9+\/_\-]{40,}={0,2}/' => '[secret]',
     ];
 
+    /**
+     * Quoted values ('…' / "…") — input values in driver messages
+     * (`invalid input syntax for type integer: "Rex"`). Everything quoted is
+     * replaced, except in the trailing "(SQL: …)" that ErrorRecorder appends
+     * itself (placeholders only, quoted identifiers stay readable).
+     */
+    private const QUOTED = '/\'[^\']*\'|"[^"]*"/';
+
     /** Scrub and truncate a message for storage. */
     public static function scrub(string $text, int $maxChars): string
     {
         $text = (string) preg_replace(array_keys(self::SCRUB), array_values(self::SCRUB), $text);
+        $sql = '';
+        if (preg_match('/^(.*?)( \(SQL: [^()]*(?:\([^()]*\)[^()]*)*\))$/s', $text, $m) === 1) {
+            [$text, $sql] = [$m[1], $m[2]];
+        }
+        $text = (string) preg_replace(self::QUOTED, '{s}', $text).$sql;
         $text = trim((string) preg_replace('/\s+/', ' ', $text));
 
         return mb_strlen($text) > $maxChars ? mb_substr($text, 0, $maxChars - 1).'…' : $text;
