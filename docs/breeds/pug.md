@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `pug` (viri S353–S362; ponovno S8, S10, S11, S14, S24, S35, S45, S54, S92, S93, S174, S236) |
 | Izvor | FCI št. 253, skupina 9, sekcija 11 (mali molosi), izvor Kitajska, pokroviteljska država Velika Britanija (S353) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 38. mesto »Pug« (S174) |
-| PR-ji | pet-prep #270 (pasma) · portret: čaka na namestitev produkcije · spletna stran #72 |
+| PR-ji | pet-prep #270 (pasma) · portret #276 (2026-10-19) · spletna stran #72 |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -38,7 +38,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov, odrasel 6.000, starejši 4.500 od 104 mesecev; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-43 | 2026-10-18 |
 | Česanje 1× na teden (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-18 |
 | Barva (izbirnik barve: plava, črna, marelična, srebrna) | 🛠 | 💶 izziv | M5-R21 | 2026-10-18 |
-| AI portret v registru | 🗓 čaka na naslednjo ročno namestitev produkcije (D18) | — | M5-R11-04 | — |
+| AI portret v registru (sprejet v prvem poskusu) | ✅ | — | M5-R11-04 | 2026-10-19 |
 | Stran na petprep.si (`/animals/dogs/pug`, `/sl/zivali/psi/mops`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -54,4 +54,4 @@
 - **Nasvet PDSA** »Our vets would strongly recommend opting for a breed with a normal snout or even a Pug cross-breed instead« je zabeležen v podatkih; v aplikaciji ga nosi le mirna oznaka o dihanju. Ali naj ga izbirnik pokaže izrecno?
 - **Ime:** »mops« ni preverjeno pri KZS.
 - **Spletna stran:** novi ključ zdravja `eye_problems_shallow_sockets` in nova ključa testov `breed_health_scheme`, `hemivertebrae_scheme` (besede Claude).
-- **Portret:** naredi ga prvi samodejni zagon po naslednji ročni namestitvi produkcije (D18).
+- **Portret:** narejen 2026-10-19 (PR #276) brez namestitve produkcije — workflow portretov zdaj uporabi kodo merganega commita (PR #275).
