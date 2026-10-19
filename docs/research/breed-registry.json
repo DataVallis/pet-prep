@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "beff3355eedeca4d02ddbdcb67ad32ec83e5387f223030931a2e3b9713a12721"
+      "sha256": "c339494805c414563566482b1b215e5ea8c0c9c4fa0b0c32b0d81b05a35a8299"
     }
   },
   "suitability_vocabulary": {
@@ -22997,7 +22997,12 @@
           "S347"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "maltese.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
@@ -23591,7 +23596,12 @@
           "S355"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "pug.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
@@ -24159,7 +24169,12 @@
           "S365"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "rough-collie.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
@@ -24761,7 +24776,12 @@
           "S370"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "mastiff.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_found",
         "tests": [],
@@ -25272,7 +25292,12 @@
           "S378"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "shiba-inu.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
