@@ -514,7 +514,8 @@ class EscalationService
         PetUpdated::afterCommit($pet, 'game_over_virtual_shelter');
         $this->notifications()->escalation($pet, PushType::GameOver);
 
-        Log::critical('EscalationService: VIRTUAL SHELTER PROTOCOL triggered — Game Over', [
+        // A game event, not a system error (info: not captured by System health).
+        Log::info('EscalationService: VIRTUAL SHELTER PROTOCOL triggered — Game Over', [
             'pet_id' => $pet->id,
             'parent_recipient_ids' => $this->families()->parentRecipients($pet)->pluck('id')->all(),
         ]);

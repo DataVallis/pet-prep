@@ -2,6 +2,7 @@
 
 use App\Http\Middleware\SetRequestLocale;
 use App\Http\Middleware\TrustProxies;
+use App\Services\SystemHealth\ErrorRecorder;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -57,6 +58,14 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withExceptions(function (Exceptions $exceptions) {
         // M2-10c: provider tokens / codes are credentials — never flashed to a session.
         $exceptions->dontFlash(['id_token', 'nonce', 'authorization_code']);
+
+        // System health (David 2026-10-19): every reported exception (uncaught
+        // HTTP / command / job errors and every report($e)) is also stored in
+        // `system_errors` for /admin/system-health. Never throws; logging
+        // continues as before (the callback returns nothing).
+        $exceptions->report(function (Throwable $e): void {
+            app(ErrorRecorder::class)->recordException($e);
+        });
 
         // API clients (pusher-js' channel authorizer among them) don't always
         // send `Accept: application/json`; a guest must still get a JSON 401,

@@ -37,6 +37,7 @@
 |---|---|
 | Pred javno beto | **Varnostne kopije izven strežnika** — ✅ zgrajeno 14. 10. 2026 (`scripts/backup-offsite.sh`, restic → Hetzner Storage Box: baza + mediji ljubljenčkov vsako noč, šifrirano, hramba ≈ 35 dni, `verify` za preizkus obnove; čaka Davidovo enkratno nastavitev, PRODUCTION_DEPLOYMENT §6b). Še odprto: WAL arhiv za obnovo na točko v času (PITR). |
 | Mediji > 100 GB | Mediji ljubljenčkov iz Docker volumna v objektno shrambo (S3 / Hetzner Object Storage) s CDN; varnostna kopija potem z verzioniranjem vedra. |
+| Povezave PostgreSQL blizu `max_connections` | Vsak PHP proces (FPM, delavci, scheduler) ima lahko poleg glavne še 1 povezavo `system_health` (odpre se šele ob zabeleženi napaki; System health, 19. 10. 2026). Pred PgBouncerjem / več FPM delavci to upoštevaj ali nastavi `SYSTEM_HEALTH_ISOLATED_CONNECTION=false`. |
 | DB > 50 % RAM-a ali počasne poizvedbe | Postgres na svoj strežnik (ali upravljana baza), `pg_stat_statements`, indeksi. |
 | Veliko branja (dashboard, poročila) | Bralna replika za poročila; agregati (tedenski / 12-tedenski) materializirani. |
 | `activities_log` > 10 M vrstic | Particioniranje po mesecih, arhiviranje starih podatkov po poteku izziva (tudi zaradi GDPR minimizacije). |

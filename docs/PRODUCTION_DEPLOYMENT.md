@@ -403,6 +403,10 @@ docker compose -f /opt/petprep/repo/backend/compose.production.yaml logs -f sche
 docker compose -f /opt/petprep/repo/backend/compose.production.yaml logs -f caddy
 docker compose -f /opt/petprep/repo/backend/compose.production.yaml logs -f postgres
 
+# Laravel's own log file (Log::*, report($e)) — inside the app_storage volume,
+# NOT in /opt/petprep/repo/backend/storage/logs (that directory is not mounted)
+docker exec backend-app-1 tail -n 200 storage/logs/laravel.log
+
 # Check disk & memory usage
 df -h
 free -h
@@ -416,6 +420,8 @@ docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app 
 # Release images (current, previous, last build, old Sail image)
 docker image ls 'petprep-*'
 ```
+
+**Errors without SSH (System health, David 2026-10-19).** Every reported exception and every error-level log line is also stored in the `system_errors` table and shown on **`/admin/system-health`** (superadmin): open errors, failed jobs (retry / forget), queue backlog, stuck routine ledgers, AI media failures, scheduler heartbeat (red after 5 min without a `pets:process-decay` tick) and disk usage. Check it first; the log file above is the fallback (full context). Kill switch: `SYSTEM_HEALTH_CAPTURE=false`.
 
 **Breed catalogue cache (M5-R06-01).** Free / paid and the picker catalogue are read from `breed_configs` through a cache (`breed-catalog:v1`, 5 min). Filament edits and the deploy seeder clear it automatically. After a **manual SQL edit** of `breed_configs` clear it yourself, otherwise the old values apply for up to 5 minutes:
 

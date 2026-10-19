@@ -157,6 +157,9 @@ return [
             'password' => env('REDIS_PASSWORD'),
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_DB', '0'),
+            // Fail fast instead of hanging a request / the error path when Redis is down (System health QA).
+            'timeout' => env('REDIS_TIMEOUT', 2.0),
+            'read_timeout' => env('REDIS_READ_TIMEOUT', 2.0),
         ],
 
         'cache' => [
@@ -166,6 +169,9 @@ return [
             'password' => env('REDIS_PASSWORD'),
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_CACHE_DB', '1'),
+            // Fail fast instead of hanging a request / the error path when Redis is down (System health QA).
+            'timeout' => env('REDIS_TIMEOUT', 2.0),
+            'read_timeout' => env('REDIS_READ_TIMEOUT', 2.0),
         ],
 
     ],

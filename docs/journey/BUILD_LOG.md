@@ -9,6 +9,13 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-19 — Zdravje sistema: napake vidimo brez strežnika
+
+**Kaj:** v administraciji je nova stran **»Zdravje sistema«**. Vsaka napaka strežnika se zapiše v bazo (združeno: ista napaka = ena vrstica s številom ponovitev), stran pokaže odprte napake, neuspela opravila v ozadju, ali igralna zanka teče (utrip vsako minuto), zataknjene dnevne rutine ljubljenčkov in zasedenost diska. Rdeča značka v meniju pove, da je kaj narobe.
+**Zakaj šteje:** istega dne smo odkrili, da se je zapiranje dnevnih rutin za muce več dni ustavljalo vsakih 30 minut — napaka je bila zapisana samo v dnevnik na strežniku, ki ga brez SSH nihče ne vidi. Zdaj bi jo David videl prvo jutro.
+**Zasebnost:** brez zunanje storitve (David je izbral to namesto Sentryja); napake ne vsebujejo podatkov otrok (ne vsebine zahtev, imen, e-pošte, vrednosti iz baze).
+**Za vlagatelje / 🛠:** »Nadzor napak v produkciji smo zgradili v enem dnevu, brez stroškov in brez pošiljanja podatkov tretjim.«
+
 ## 2026-10-19 — Aplikacija se ob zagonu ne more več zatakniti
 
 **Kaj:** po preklopu »Igraj kot …« je Davidov iPhone 14 minut stal na zaslonu »Nalagam …«, nato se je aplikacija naložila sama. Dnevnik strežnika je pokazal, da v tem času z aplikacije ni prišla niti ena zahteva — težava je bila v telefonu, ne na strežniku. Vzrok: prva zahteva ob zagonu (»kdo je prijavljen?«) ni imela roka, zagonski zaslon pa ni imel izhoda. Zdaj ima vsak korak zagona rok; najpozneje po 26 sekundah aplikacija ponudi »Poskusi znova« ali »Odjava« (za starševskimi vrati), prijava pa ostane.

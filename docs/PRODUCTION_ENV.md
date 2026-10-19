@@ -44,6 +44,9 @@ This document describes all environment variables used by the PetPrep production
 | `REDIS_PASSWORD` | Optional | **Yes** | Redis authentication password | `null` or `password` |
 | `CACHE_STORE` | Required | No | Cache driver (`redis` or `database`) | `redis` |
 | `QUEUE_CONNECTION` | Required | No | Queue connection (`redis`) | `redis` |
+| `REDIS_TIMEOUT` / `REDIS_READ_TIMEOUT` | Optional | No | Redis connect / read timeout in seconds (fail fast when Redis is down) | `2.0` |
+| `SYSTEM_HEALTH_CAPTURE` | Optional | No | Store reported exceptions + error log lines in `system_errors` for `/admin/system-health` (`false` = kill switch) | `true` |
+| `SYSTEM_HEALTH_ISOLATED_CONNECTION` | Optional | No | Write captured errors over a second PostgreSQL connection (`system_health`, opened only when an error is recorded; `lock_timeout` 2 s, `statement_timeout` 3 s) so a rolled-back transaction keeps the row. Each PHP process may hold 1 extra PG connection. | `true` |
 | `SESSION_DRIVER` | Required | No | Session storage driver | `database` or `redis` |
 
 ---

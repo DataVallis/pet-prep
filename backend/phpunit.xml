@@ -30,6 +30,9 @@
         <env name="PUSH_ENABLED" value="false"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>
+        <!-- System health: capture off for the suite (its own tests switch it on), same connection so RefreshDatabase rolls it back. -->
+        <env name="SYSTEM_HEALTH_CAPTURE" value="false"/>
+        <env name="SYSTEM_HEALTH_ISOLATED_CONNECTION" value="false"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
     </php>
 </phpunit>
