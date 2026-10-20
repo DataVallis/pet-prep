@@ -130,11 +130,19 @@ describe('label, hint and toast', () => {
   it('the toast after an emergency meal is honest about the score and names the next meal', () => {
     const after = view({ pet: { hunger_level: 100 } });
     expect(feedSuccessMessage('accepted', 'emergency', after)).toBe(
-      'Njam! Kuža je sit. Obrok je bil zamujen, zato ne šteje kot pravočasen — naslednji obrok je ob 17:00.',
+      'Njam! Kuža je sit. Ta obrok je bil pozen, zato ne šteje kot pravočasen. Naslednji obrok je ob 17:00.',
     );
     expect(feedSuccessMessage('accepted', 'emergency', view({ feeding: { next_feed_window: null } }))).toBe(
-      'Njam! Kuža je sit. Obrok je bil zamujen, zato ne šteje kot pravočasen.',
+      'Njam! Kuža je sit. Ta obrok je bil pozen, zato ne šteje kot pravočasen.',
     );
+    // David 2026-10-20: an emergency meal close to the next window also counts for it.
+    expect(feedSuccessMessage('accepted', 'emergency', after, { start: '19:00', end: '21:00' })).toBe(
+      'Njam! Kuža je sit. Zamujeni obrok ostane zamujen, ta pa velja tudi kot obrok 19–21. Naslednji obrok je ob 17:00.',
+    );
+    expect(
+      feedSuccessMessage('accepted', 'emergency', view({ feeding: { next_feed_window: null } }), { start: '19:30', end: '21:00' }),
+    ).toBe('Njam! Kuža je sit. Zamujeni obrok ostane zamujen, ta pa velja tudi kot obrok 19:30–21.');
+    expect(feedSuccessMessage('accepted', 'window', after, { start: '19:00', end: '21:00' })).toBe('Njam! Kuža je sit.');
     expect(feedSuccessMessage('accepted', 'window', after)).toBe('Njam! Kuža je sit.');
     expect(feedSuccessMessage('accepted', undefined, after)).toBe('Njam! Kuža je sit.');
   });
@@ -144,7 +152,10 @@ describe('label, hint and toast', () => {
     const emergency = view({ pet: { hunger_level: 0 }, feeding: { can_feed: true, feed_mode: 'emergency' } });
     expect(feedLabel(emergency)).toBe('Emergency meal');
     expect(feedSuccessMessage('accepted', 'emergency', view())).toBe(
-      "Yum! Your pup is full. The meal was missed, so it doesn't count as on time — the next meal is at 17:00.",
+      "Yum! Your pup is full. This meal came late, so it doesn't count as on time. The next meal is at 17:00.",
+    );
+    expect(feedSuccessMessage('accepted', 'emergency', view(), { start: '19:00', end: '21:00' })).toBe(
+      'Yum! Your pup is full. The missed meal still counts as late, but this one also counts as the 19–21 meal. The next meal is at 17:00.',
     );
   });
 });

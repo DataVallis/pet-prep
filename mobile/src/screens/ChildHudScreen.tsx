@@ -470,7 +470,7 @@ export default function ChildHudScreen() {
       onSuccess: (response) => {
         const message =
           action === 'feed'
-            ? feedSuccessMessage(response.status, response.feed_mode, normalizeChildState(response.state))
+            ? feedSuccessMessage(response.status, response.feed_mode, normalizeChildState(response.state), response.covers_window)
             : successMessage(action, response.status);
         showToast({ tone: 'ok', message });
       },

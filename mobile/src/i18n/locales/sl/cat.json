@@ -289,8 +289,10 @@
           "feed": "Muca je že sita.",
           "water": "Muca ima že polno posodo."
         },
-        "emergencyFeed": "Njam! Muca je sita. Obrok je bil zamujen, zato ne šteje kot pravočasen — naslednji obrok je {{when}}.",
-        "emergencyFeedNoTime": "Njam! Muca je sita. Obrok je bil zamujen, zato ne šteje kot pravočasen.",
+        "emergencyFeed": "Njam! Muca je sita. Ta obrok je bil pozen, zato ne šteje kot pravočasen. Naslednji obrok je {{when}}.",
+        "emergencyFeedNoTime": "Njam! Muca je sita. Ta obrok je bil pozen, zato ne šteje kot pravočasen.",
+        "emergencyFeedCovers": "Njam! Muca je sita. Zamujeni obrok ostane zamujen, ta pa velja tudi kot obrok {{window}}. Naslednji obrok je {{when}}.",
+        "emergencyFeedCoversNoTime": "Njam! Muca je sita. Zamujeni obrok ostane zamujen, ta pa velja tudi kot obrok {{window}}.",
         "refused": {
           "alreadyFed": "Muca je že jedla. Spet jo nahraniš {{when}}.",
           "alreadyFedNoTime": "Muca je že jedla.",

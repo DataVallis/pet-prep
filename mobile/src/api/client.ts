@@ -176,6 +176,11 @@ export interface ChildActionResponse {
   status: 'accepted' | 'unchanged';
   /** Feed only (M3-12): `emergency` = an emergency meal outside a window (not scored as on time). */
   feed_mode?: 'window' | 'emergency' | null;
+  /**
+   * Feed only (David 2026-10-20): the window ("HH:MM", family-local) an emergency meal also
+   * counts for because it was given shortly before it; null / absent otherwise.
+   */
+  covers_window?: { start: string; end: string } | null;
   state: ChildPetState;
 }
 

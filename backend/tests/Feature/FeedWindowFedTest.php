@@ -126,7 +126,7 @@ describe('profile.today.feed_windows[].fed', function () {
         BreedConfig::where('breed_slug', 'mutt')->update(['feed_windows' => json_encode([['01:00', '04:00'], ['07:00', '09:00']])]);
         [, $child, $pet] = fwFamily(['arrival_age_months' => null]);
         fwLog($pet, ActivityType::FedPet, '2026-10-25 02:30:00', $child); // 03:30 CET (after the jump back)
-        fwLog($pet, ActivityType::FedPet, '2026-10-25 05:30:00', $child); // 06:30 CET — before the 07:00 window
+        fwLog($pet, ActivityType::FedPet, '2026-10-25 03:30:00', $child); // 04:30 CET — more than 2 h before the 07:00 window (David 2026-10-20: a meal ≤ 2 h before counts for it)
         Carbon::setTestNow(Carbon::parse('2026-10-25 12:00:00', 'UTC'));
 
         expect(fwWindows(PetProfilePayload::for($pet->fresh())->toArray()))->toBe([
