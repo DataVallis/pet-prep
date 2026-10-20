@@ -23,10 +23,12 @@ use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
 use Filament\Forms\Get;
+use Filament\Forms\Set;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Illuminate\Auth\Access\AuthorizationException;
@@ -176,11 +178,37 @@ class AiLab extends Page implements HasForms
                             ->label('Video models')
                             ->options($this->profileOptions(ModelProfile::KIND_VIDEO))
                             ->required()
+                            ->live()
+                            ->afterStateUpdated(function (Get $get, Set $set) {
+                                // Drop a length the new model set does not share.
+                                if (filled($get('duration')) && ! in_array((int) $get('duration'), $this->durationsFor($get), true)) {
+                                    $set('duration', null);
+                                }
+                            }),
+                        Select::make('motion_preset')
+                            ->label('Motion preset (fills the custom prompt)')
+                            ->placeholder('none')
+                            ->options(fn () => $this->motionPresetOptions())
+                            ->live()
+                            ->dehydrated(false)
+                            ->afterStateUpdated(fn (?string $state, Set $set) => $state !== null ? $set('motion_prompt', $this->motionPresetText($state)) : null),
+                        Select::make('duration')
+                            ->label('Duration (seconds)')
+                            ->placeholder('model default')
+                            ->helperText('Only lengths every selected model accepts (fal duration enum).')
+                            ->options(fn (Get $get) => collect($this->durationsFor($get))->mapWithKeys(fn (int $s) => [$s => "{$s} s"])->all())
                             ->live(),
+                        Textarea::make('motion_prompt')
+                            ->label('Custom motion prompt (optional)')
+                            ->helperText('Replaces the state motion for this run, e.g. "sits on command, then holds the sit looking up at the camera". The lab still adds the breed look from the image, a static camera and "no people, no hands, no text"; same negative prompt. Never put child data here.')
+                            ->maxLength((int) config('media.lab.motion_prompt_max_chars', 500))
+                            ->rows(3)
+                            ->columnSpanFull(),
                         Placeholder::make('estimate')
                             ->label('Estimated cost')
                             ->content(fn (Get $get) => $this->estimateLabel(fn (MediaLabService $lab) => $lab->estimateVideoRunUsd(
                                 array_values((array) $get('profiles')),
+                                filled($get('duration')) ? (int) $get('duration') : null,
                             ))),
                     ])->columns(2),
             ])
@@ -210,6 +238,8 @@ class AiLab extends Page implements HasForms
             (int) $data['source_result_id'],
             array_values((array) $data['profiles']),
             PetStateEnum::from((string) $data['state']),
+            filled($data['motion_prompt'] ?? null) ? (string) $data['motion_prompt'] : null,
+            filled($data['duration'] ?? null) ? (int) $data['duration'] : null,
         ), 'Video run queued');
     }
 
@@ -289,10 +319,51 @@ class AiLab extends Page implements HasForms
 
         foreach (app(MediaProfiles::class)->forLab($kind) as $key => $profile) {
             $unit = $kind === ModelProfile::KIND_VIDEO ? sprintf('%ds video', $profile->durationSeconds) : 'image';
-            $options[$key] = sprintf('%s — ~$%.3f / %s%s', $profile->label, $profile->estimatedCostUsd(), $unit, $profile->verified ? '' : ' (unverified)');
+            $lengths = $kind === ModelProfile::KIND_VIDEO ? $this->durationRangeLabel($profile) : '';
+            $options[$key] = sprintf('%s — ~$%.3f / %s%s%s', $profile->label, $profile->estimatedCostUsd(), $unit, $lengths, $profile->verified ? '' : ' (unverified)');
         }
 
         return $options;
+    }
+
+    /** " · $0.084/s, 3–15 s" / " · $0.10/s, 4/6/8 s" */
+    private function durationRangeLabel(ModelProfile $profile): string
+    {
+        $d = $profile->supportedDurations();
+        $contiguous = count($d) > 2 && end($d) - $d[0] === count($d) - 1;
+
+        return sprintf(' · $%s/s, %s s', rtrim(rtrim(number_format($profile->pricing['usd'], 3), '0'), '.'), $contiguous ? $d[0].'–'.end($d) : implode('/', $d));
+    }
+
+    /**
+     * @return list<int>
+     */
+    private function durationsFor(Get $get): array
+    {
+        return app(MediaLabService::class)->commonDurations(array_values((array) $get('profiles')));
+    }
+
+    /**
+     * @return array<string, array<string, string>>
+     */
+    private function motionPresetOptions(): array
+    {
+        $options = [];
+
+        foreach (MediaLabService::motionPresets() as $species => $presets) {
+            foreach ($presets as $key => $motion) {
+                $options[ucfirst($species)]["{$species}.{$key}"] = $motion;
+            }
+        }
+
+        return $options;
+    }
+
+    private function motionPresetText(string $key): ?string
+    {
+        [$species, $preset] = array_pad(explode('.', $key, 2), 2, '');
+
+        return MediaLabService::motionPresets()[$species][$preset] ?? null;
     }
 
     private function estimateLabel(callable $estimate): string

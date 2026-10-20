@@ -43,8 +43,15 @@ class SubmitMediaLabVideo implements ShouldQueue
         $result = MediaLabResult::findOrFail($this->resultId);
 
         try {
+            $profile = $profiles->video($result->profile);
+
+            // Lab duration override: the ledger reserves the clip length that is sent.
+            if ($result->duration_seconds !== null && $result->duration_seconds !== $profile->durationSeconds) {
+                $profile = $profile->withDuration($result->duration_seconds);
+            }
+
             $submitted = $gateway->submit(
-                $profiles->video($result->profile),
+                $profile,
                 (array) $result->params,
                 AiSpendPurpose::Lab,
                 $fal->webhookUrl(),

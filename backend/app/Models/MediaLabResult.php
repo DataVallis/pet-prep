@@ -47,6 +47,7 @@ class MediaLabResult extends Model
         'result_url',
         'latency_ms',
         'estimated_cost_usd',
+        'duration_seconds',
         'started_at',
         'completed_at',
     ];
@@ -61,6 +62,7 @@ class MediaLabResult extends Model
             'params' => 'array',
             'seed' => 'integer',
             'latency_ms' => 'integer',
+            'duration_seconds' => 'integer',
             'estimated_cost_usd' => 'float',
             'started_at' => 'datetime',
             'completed_at' => 'datetime',

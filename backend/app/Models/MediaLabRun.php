@@ -29,6 +29,8 @@ class MediaLabRun extends Model
         'pet_state',
         'source_result_id',
         'estimated_cost_usd',
+        'motion_prompt',
+        'duration_seconds',
     ];
 
     /**
@@ -40,6 +42,7 @@ class MediaLabRun extends Model
             'fixed_traits' => 'array',
             'profiles' => 'array',
             'estimated_cost_usd' => 'float',
+            'duration_seconds' => 'integer',
         ];
     }
 

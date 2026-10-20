@@ -138,7 +138,7 @@ describe('model profiles', function () {
         }
 
         expect(array_keys($profiles->all('image')))->toBe(['flux_schnell', 'flux2_pro', 'nano_banana_pro', 'nano_banana_pro_edit', 'seedream_v5_lite'])
-            ->and(array_keys($profiles->all('video')))->toBe(['kling_v3_pro', 'kling_v26_pro', 'veo31_fast', 'veo31_lite']);
+            ->and(array_keys($profiles->all('video')))->toBe(['kling_v3_pro', 'kling_v3_standard', 'kling_v26_pro', 'veo31_fast', 'veo31_lite']);
     });
 
     it('uses Nano Banana Pro and Kling 3.0 Pro as production defaults (David 2026-10-05)', function () {
@@ -184,7 +184,7 @@ describe('model profiles', function () {
     });
 
     it('puts every enabled video profile in the lab (the broken Kling 1.6 legacy profile is gone)', function () {
-        expect(array_keys(app(MediaProfiles::class)->forLab('video')))->toBe(['kling_v3_pro', 'kling_v26_pro', 'veo31_fast', 'veo31_lite'])
+        expect(array_keys(app(MediaProfiles::class)->forLab('video')))->toBe(['kling_v3_pro', 'kling_v3_standard', 'kling_v26_pro', 'veo31_fast', 'veo31_lite'])
             ->and(fn () => app(MediaProfiles::class)->video('kling_v16_legacy'))->toThrow(InvalidArgumentException::class)
             ->and(array_keys(app(MediaProfiles::class)->forLab('image')))->toContain('flux_schnell', 'flux2_pro', 'nano_banana_pro', 'seedream_v5_lite');
     });
@@ -961,5 +961,151 @@ describe('Filament AI Lab', function () {
             ->assertSee('$0.50 / $3.00')
             ->assertSee('$0.50 / $30.00')
             ->assertSee('EXHAUSTED');
+    });
+});
+
+/* ───────────── AI Lab clip comparison: custom motion + duration (2026-10-20) ───────────── */
+
+describe('AI lab clip comparison', function () {
+    it('lists each video profile\'s fal duration enum and adds Kling 3.0 Standard to the lab only', function () {
+        $profiles = app(MediaProfiles::class);
+        $config = require config_path('media.php');
+
+        expect($profiles->video('kling_v3_pro')->supportedDurations())->toBe(range(3, 15))
+            ->and($profiles->video('kling_v3_standard')->supportedDurations())->toBe(range(3, 15))
+            ->and($profiles->video('kling_v26_pro')->supportedDurations())->toBe([5, 10])
+            ->and($profiles->video('veo31_fast')->supportedDurations())->toBe([4, 6, 8])
+            ->and($profiles->video('veo31_lite')->supportedDurations())->toBe([4, 6, 8]);
+
+        $standard = $profiles->video('kling_v3_standard');
+        expect($standard->endpoint)->toBe('fal-ai/kling-video/v3/standard/image-to-video')
+            ->and($standard->estimatedCostUsd())->toEqualWithDelta(0.42, 1e-9) // 5 s × $0.084
+            ->and($standard->params)->toMatchArray(['duration' => '5', 'generate_audio' => false])
+            ->and($standard->imageParam)->toBe('start_image_url')
+            ->and($config['state_video_profile'])->toBe('kling_v3_pro'); // production unchanged
+
+        // The duration keeps each model's format.
+        expect($profiles->video('veo31_lite')->withDuration(8)->params['duration'])->toBe('8s')
+            ->and($profiles->video('kling_v3_pro')->withDuration(12)->params['duration'])->toBe('12');
+    });
+
+    it('replaces the state motion with a custom motion prompt and keeps the negative prompt', function () {
+        Queue::fake();
+        Http::fake(['queue.fal.run/*' => Http::response(['request_id' => 'clip-1'])]);
+        $image = aiCompletedLabImage();
+
+        $run = app(MediaLabService::class)->startVideoRun(
+            aiSuperadmin(), $image->id, ['kling_v3_pro'], PetStateEnum::Idle,
+            '  sits on command, then holds the sit looking up at the camera ',
+        );
+        $video = $run->results->first();
+
+        expect($run)->motion_prompt->toBe('sits on command, then holds the sit looking up at the camera')->duration_seconds->toBeNull()
+            ->and($video->prompt)->toContain('as in the image sits on command, then holds the sit looking up at the camera.')
+            ->toContain('black and white') // the lab image's traits
+            ->toContain('No people, no hands')
+            ->not->toContain(PetStateEnum::Idle->promptModifier())
+            ->and($video->negative_prompt)->toBe(app(PetAppearancePrompt::class)->videoNegativePrompt())
+            ->and($video->duration_seconds)->toBe(5);
+
+        (new SubmitMediaLabVideo($video->id))->handle(app(FalGateway::class), app(MediaProfiles::class), app(FalAiService::class));
+
+        Http::assertSent(fn (Request $r) => str_contains($r['prompt'], 'sits on command, then holds the sit')
+            && $r['negative_prompt'] === app(PetAppearancePrompt::class)->videoNegativePrompt()
+            && $r['duration'] === '5'
+            && $r['generate_audio'] === false);
+    });
+
+    it('sends the duration override, estimates and books its cost', function () {
+        Queue::fake();
+        Http::fake(['queue.fal.run/*' => Http::response(['request_id' => 'clip-2'])]);
+        $lab = app(MediaLabService::class);
+
+        expect($lab->estimateVideoRunUsd(['kling_v3_standard', 'veo31_lite'], 8))->toEqualWithDelta(8 * 0.084 + 8 * 0.03, 1e-9);
+
+        $run = $lab->startVideoRun(aiSuperadmin(), aiCompletedLabImage()->id, ['kling_v3_standard', 'veo31_lite'], PetStateEnum::Playing, null, 8);
+        expect($run)->duration_seconds->toBe(8)->motion_prompt->toBeNull()
+            ->and($run->estimated_cost_usd)->toEqualWithDelta(0.912, 1e-9);
+
+        [$kling, $veo] = [$run->results->firstWhere('profile', 'kling_v3_standard'), $run->results->firstWhere('profile', 'veo31_lite')];
+        expect($kling->params['duration'])->toBe('8')->and($veo->params['duration'])->toBe('8s')
+            ->and($kling->duration_seconds)->toBe(8)->and($veo->duration_seconds)->toBe(8);
+
+        (new SubmitMediaLabVideo($kling->id))->handle(app(FalGateway::class), app(MediaProfiles::class), app(FalAiService::class));
+
+        Http::assertSent(fn (Request $r) => str_contains($r->url(), 'kling-video/v3/standard/image-to-video') && $r['duration'] === '8');
+        expect(AiSpendLedger::sole())->units->toEqualWithDelta(8, 1e-9)->cost_usd->toEqualWithDelta(0.672, 1e-9)
+            ->and($kling->fresh()->estimated_cost_usd)->toEqualWithDelta(0.672, 1e-9);
+    });
+
+    it('refuses a run over the per-run limit with the overridden duration', function () {
+        Queue::fake();
+        config(['media.lab.max_run_usd' => 1.0]);
+        $lab = app(MediaLabService::class);
+        $image = aiCompletedLabImage();
+
+        // 5 s Kling 3.0 Pro = $0.56 passes; 15 s = $1.68 is refused.
+        expect(fn () => $lab->startVideoRun(aiSuperadmin(), $image->id, ['kling_v3_pro'], PetStateEnum::Idle, null, 15))
+            ->toThrow(fn (AiCallException $e) => expect($e->reason)->toBe(AiCallFailure::BudgetRun));
+        expect(MediaLabRun::where('kind', 'video')->count())->toBe(0);
+
+        $lab->startVideoRun(aiSuperadmin(), $image->id, ['kling_v3_pro'], PetStateEnum::Idle);
+        expect(MediaLabRun::where('kind', 'video')->count())->toBe(1);
+    });
+
+    it('rejects a duration a selected model does not support and an over-long prompt', function () {
+        Queue::fake();
+        $lab = app(MediaLabService::class);
+        $image = aiCompletedLabImage();
+
+        expect(fn () => $lab->startVideoRun(aiSuperadmin(), $image->id, ['kling_v3_pro', 'veo31_fast'], PetStateEnum::Idle, null, 5))
+            ->toThrow(InvalidArgumentException::class, 'does not support 5 s')
+            ->and(fn () => $lab->startVideoRun(aiSuperadmin(), $image->id, ['kling_v26_pro'], PetStateEnum::Idle, null, 7))
+            ->toThrow(InvalidArgumentException::class)
+            ->and(fn () => $lab->startVideoRun(aiSuperadmin(), $image->id, ['kling_v3_pro'], PetStateEnum::Idle, null, 16))
+            ->toThrow(InvalidArgumentException::class)
+            ->and(fn () => $lab->startVideoRun(aiSuperadmin(), $image->id, ['kling_v3_pro'], PetStateEnum::Idle, str_repeat('a', 501)))
+            ->toThrow(InvalidArgumentException::class, 'at most 500');
+
+        expect($lab->commonDurations(['kling_v3_pro', 'veo31_fast']))->toBe([4, 6, 8])
+            ->and($lab->commonDurations(['kling_v26_pro', 'veo31_lite']))->toBe([])
+            ->and(MediaLabRun::where('kind', 'video')->count())->toBe(0);
+        Queue::assertNothingPushed();
+    });
+
+    it('fills the prompt from a preset, runs from the page and shows prompt and duration in the gallery', function () {
+        Queue::fake();
+        $this->actingAs(aiSuperadmin());
+        $image = aiCompletedLabImage();
+
+        expect(MediaLabService::motionPresets())->toBe([
+            'dog' => [
+                'sit_hold' => 'sits on command, then holds the sit looking up at the camera',
+                'recall' => 'comes running toward the camera and stops',
+                'mat_down' => 'walks to a mat and lies down on it',
+                'ball_chase' => 'waits alert, then sprints after a thrown ball off-frame',
+                'ball_return' => 'trots back holding a ball in its mouth',
+            ],
+            'cat' => ['wand_pounce' => 'crouches, wiggles and pounces at a feather wand'],
+        ]);
+
+        Livewire::test(AiLab::class)
+            ->set('videoData.source_result_id', $image->id)
+            ->set('videoData.profiles', ['kling_v3_standard'])
+            ->set('videoData.state', 'idle')
+            ->set('videoData.motion_preset', 'dog.recall')
+            ->assertSet('videoData.motion_prompt', 'comes running toward the camera and stops')
+            ->set('videoData.duration', '10')
+            ->call('animate')
+            ->assertHasNoErrors()
+            ->assertNotified('Video run queued')
+            ->assertSee('10 s (override)')
+            ->assertSee('custom — comes running toward the camera and stops')
+            ->assertSee('10 s clip');
+
+        expect(MediaLabRun::where('kind', 'video')->sole())
+            ->motion_prompt->toBe('comes running toward the camera and stops')
+            ->duration_seconds->toBe(10)
+            ->estimated_cost_usd->toEqualWithDelta(0.84, 1e-9);
     });
 });

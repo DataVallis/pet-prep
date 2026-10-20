@@ -131,6 +131,24 @@ return [
         // Separate lab budget (estimated USD), counted only over purpose = lab.
         'daily_usd' => (float) env('AI_LAB_DAILY_USD', 3),
         'monthly_usd' => (float) env('AI_LAB_MONTHLY_USD', 30),
+        // Video run "Custom motion prompt" (David 2026-10-20: compare models for the
+        // upcoming training ("school") and game clips). Max length of the free text.
+        'motion_prompt_max_chars' => 500,
+        // Presets that fill the custom motion prompt. Species-specific; the lab
+        // prefixes "The same <breed + traits> as in the image," and appends the
+        // species' video style (static camera, no people, …). No child data.
+        'motion_presets' => [
+            'dog' => [
+                'sit_hold' => 'sits on command, then holds the sit looking up at the camera',
+                'recall' => 'comes running toward the camera and stops',
+                'mat_down' => 'walks to a mat and lies down on it',
+                'ball_chase' => 'waits alert, then sprints after a thrown ball off-frame',
+                'ball_return' => 'trots back holding a ball in its mouth',
+            ],
+            'cat' => [
+                'wand_pounce' => 'crouches, wiggles and pounces at a feather wand',
+            ],
+        ],
     ],
 
     /*
@@ -282,6 +300,32 @@ return [
                 'source' => 'https://fal.ai/models/fal-ai/kling-video/v3/pro/image-to-video (2026-10-04: $0.112/s audio off, $0.168/s audio on)',
                 'pricing' => ['unit' => 'second', 'usd' => 0.112],
                 'duration_seconds' => 5,
+                // fal `duration` enum "3" … "15" (checked 2026-10-20 on the /api page). AI Lab override only.
+                'durations' => range(3, 15),
+                'image_param' => 'start_image_url',
+                'supports_negative_prompt' => true,
+                'params' => [
+                    'duration' => '5',
+                    'generate_audio' => false,
+                    'cfg_scale' => 0.5,
+                ],
+            ],
+
+            // AI Lab comparison candidate (2026-10-20), NOT a production profile.
+            // Endpoint, schema and price checked on
+            // https://fal.ai/models/fal-ai/kling-video/v3/standard/image-to-video (+ /api) on 2026-10-20:
+            // start_image_url (required), prompt, duration "3"–"15" (default "5"), generate_audio
+            // (default true → we send false), negative_prompt, cfg_scale (default 0.5); no aspect_ratio
+            // (the clip follows the start image). $0.084/s audio off, $0.126/s audio on ($0.154/s voice control).
+            'kling_v3_standard' => [
+                'label' => 'Kling 3.0 Standard image-to-video (audio off)',
+                'endpoint' => env('FAL_MODEL_KLING_V3_STANDARD', 'fal-ai/kling-video/v3/standard/image-to-video'),
+                'enabled' => true,
+                'verified' => true,
+                'source' => 'https://fal.ai/models/fal-ai/kling-video/v3/standard/image-to-video (2026-10-20: $0.084/s audio off, $0.126/s audio on)',
+                'pricing' => ['unit' => 'second', 'usd' => 0.084],
+                'duration_seconds' => 5,
+                'durations' => range(3, 15),
                 'image_param' => 'start_image_url',
                 'supports_negative_prompt' => true,
                 'params' => [
@@ -299,6 +343,8 @@ return [
                 'source' => 'https://fal.ai/models/fal-ai/kling-video/v2.6/pro/image-to-video (2026-10-04: $0.07/s audio off, $0.14/s audio on)',
                 'pricing' => ['unit' => 'second', 'usd' => 0.07],
                 'duration_seconds' => 5,
+                // fal `duration` enum "5" | "10" (checked 2026-10-20 on the /api page).
+                'durations' => [5, 10],
                 'image_param' => 'start_image_url',
                 'supports_negative_prompt' => true,
                 'params' => [
@@ -315,6 +361,8 @@ return [
                 'source' => 'https://fal.ai/models/fal-ai/veo3.1/fast/image-to-video (2026-10-04: $0.10/s without audio at 720p/1080p)',
                 'pricing' => ['unit' => 'second', 'usd' => 0.10],
                 'duration_seconds' => 4,
+                // fal `duration` enum "4s" | "6s" | "8s" (checked 2026-10-20 on the /api page).
+                'durations' => [4, 6, 8],
                 'image_param' => 'image_url',
                 'supports_negative_prompt' => true,
                 'params' => [
@@ -334,6 +382,8 @@ return [
                 'source' => 'https://fal.ai/models/fal-ai/veo3.1/lite/image-to-video (2026-10-04: $0.03/s 720p without audio, $0.05/s 1080p without audio)',
                 'pricing' => ['unit' => 'second', 'usd' => 0.03],
                 'duration_seconds' => 4,
+                // fal `duration` enum "4s" | "6s" | "8s" (checked 2026-10-20 on the /api page).
+                'durations' => [4, 6, 8],
                 'image_param' => 'image_url',
                 'supports_negative_prompt' => true,
                 'params' => [
