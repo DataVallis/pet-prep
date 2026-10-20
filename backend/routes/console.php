@@ -58,6 +58,15 @@ Schedule::command('media:sweep')
     ->name('sweep-pet-media')
     ->description('Recover pet media slots stuck after a lost job or webhook');
 
+// Hourly safety net (2026-10-20): stored videos with the MP4 index at the end are
+// rewritten moov-first (the app's player cannot open them otherwise). Reads only
+// box headers of files that are already fine. Also fixes files stored before the fix.
+Schedule::command('media:faststart')
+    ->hourlyAt(17)
+    ->withoutOverlapping()
+    ->name('faststart-pet-media')
+    ->description('Move the MP4 index to the front of stored pet videos');
+
 // Every minute (M3-02, PR #35 review): queue held pushes that are due (illness /
 // game over after quiet hours, the daily walk reminder at its earliest time).
 Schedule::command('push:dispatch-scheduled')
