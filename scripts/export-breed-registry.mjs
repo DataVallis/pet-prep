@@ -421,6 +421,7 @@ const SPECIES = [
       { id: 'shiba_inu', synonyms: { en: ['Japanese Shiba Inu', 'Shiba', 'Shiba Ken'], sl: ['shiba inu', 'japonski šiba inu', 'šiba'] } },
       { id: 'rhodesian_ridgeback', synonyms: { en: ['Ridgeback', 'African Lion Dog'], sl: ['rodezijski', 'ridgeback'] } },
       { id: 'papillon', synonyms: { en: ['Continental Toy Spaniel', 'Phalène', 'Butterfly Dog'], sl: ['kontinentalni pritlikavi španjel', 'papillon', 'falen'] } },
+      { id: 'portuguese_water_dog', synonyms: { en: ['Cão de Água Português', 'Portie', 'PWD', 'Algarvian Water Dog'], sl: ['portugalski vodni pes', 'vodni pes', 'portie'] } },
     ],
   },
   {
@@ -445,7 +446,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', Portugal: 'PT' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -1408,6 +1409,35 @@ const DOG_FACTS = {
       ['periodontal_daily_brushing', 'health.dental'],
     ],
   },
+  // M5-R10-49. Height + weight = the RKC breed standard (S403; the FCI 37 PDF was not reachable), lifespan = the RKC
+  // band "Over 10 years" (S404; no McMillan 2024 / VetCompass median found), exercise = RKC "Up to 1 hour per day"
+  // (S404). New FCI origin Portugal (PT, S402). Not exported: height.pdsa and adult_weight.pdsa / vca (alternatives),
+  // adult_weight.salt_category (our assignment), lifespan.pdsa / vca (same band / alternative), lifespan.mcmillan_2024
+  // (none found), lifespan.senior_from (derived), the care needs suitability.petmd_teeth / petmd_ears_baths / vca_nails /
+  // professional_grooming (open for David: M5-R15 / M5-R20 / M5-R19 / M5-R18). New health keys: gm1_gangliosidosis,
+  // addisons_disease.
+  portuguese_water_dog: {
+    height: ['height.rkc_standard'],
+    weight: [['adult_weight.rkc_standard', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    // Not ranked by Coren (S35) → no coren_rank fact.
+    coren_rank: false,
+    health: [
+      ['hip_dysplasia_arthritis', 'health.hip_dysplasia'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['gm1_gangliosidosis', 'health.gm1'],
+      ['bloat_gdv', 'health.bloat'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+      ['addisons_disease', 'health.addisons'],
+      ['cataracts', 'health.cataracts'],
+      ['periodontal_daily_brushing', 'health.dental'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1769,6 +1799,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.papillon.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.papillon.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.papillon.exercise_minutes_senior',
+  },
+  portuguese_water_dog: {
+    adult_minutes: ['proposed_game_parameters.portuguese_water_dog.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.portuguese_water_dog.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.portuguese_water_dog.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.portuguese_water_dog.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.portuguese_water_dog.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.portuguese_water_dog.exercise_minutes_senior',
   },
 };
 
