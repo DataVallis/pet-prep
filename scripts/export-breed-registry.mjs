@@ -1484,7 +1484,8 @@ const DOG_FACTS = {
     food_motivation: null,
     health: [
       ['bloat_gdv', 'health.gdv'],
-      ['eyelid_problems', 'health.eyelids'],
+      // Loose eyelids (Breed Watch S425) — the turned-eyelid sentence, never the cherry-eye one (no source).
+      ['eyelids_turned', 'health.eyelids'],
       ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
       ['heart_muscle_disease', 'health.heart'],
     ],

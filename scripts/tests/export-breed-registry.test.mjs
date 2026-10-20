@@ -1749,7 +1749,7 @@ test('Newfoundland (M5-R10-51): at least 60 minutes (PDSA), PDSA height + weight
   assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 99 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['family_pet', 'children', 'other_pets']);
   assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['shorter_lifespan', 'eyelid_problems', 'needs_company', 'sheds', 'frequent_grooming', 'drools']);
-  assert.deepEqual(d.health.map((h) => h.key), ['bloat_gdv', 'eyelid_problems', 'hip_elbow_dysplasia', 'heart_muscle_disease']);
+  assert.deepEqual(d.health.map((h) => h.key), ['bloat_gdv', 'eyelids_turned', 'hip_elbow_dysplasia', 'heart_muscle_disease']);
   assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['dna_cu', 'minimum'], ['hip_scheme', 'minimum'], ['elbow_scheme', 'minimum'], ['heart_echo_scheme', 'other_scheme']]);
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a percentage, a prevalence or a ratio; never gray (AKC only).
