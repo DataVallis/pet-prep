@@ -67,6 +67,7 @@ class PetMediaService
         private readonly MediaProfiles $profiles,
         private readonly MediaDownloader $downloader,
         private readonly PetAppearancePrompt $prompts,
+        private readonly Mp4FastStart $fastStart,
     ) {}
 
     public function disk(): Filesystem
@@ -473,6 +474,12 @@ class PetMediaService
             $this->failStore($slot, $e->getMessage());
 
             return true;
+        }
+
+        // 2026-10-20: fal's Kling MP4s now carry the index (moov) at the end — the app's
+        // player can't open them. Store every video with moov first (Mp4FastStart).
+        if (! $image && $this->fastStart->process($file['path']) === Mp4FastStart::RESULT_SKIPPED) {
+            Log::warning('PetMediaService: MP4 not converted to faststart', ['pet_media_id' => $slot->id]);
         }
 
         $path = $slot->isLookMedia()
