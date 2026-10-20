@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `bichon_frise` (viri S409–S418; ponovno S8, S10, S11, S14, S24, S35, S45, S174); preverjanje vzreditelja iz strani RKC (S411) in AKC (K28) |
 | Izvor | FCI št. 215 (Bichon à poil frisé), skupina 9 (psi za družbo), sekcija bišonov, Belgija / Francija (S409) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 46. mesto »Bichon Frise« (S174) |
-| PR-ji | pet-prep #294 (pasma) |
+| PR-ji | pet-prep #294 (pasma, združen `6d0b5bd`) · portret #295 (2026-10-20) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -38,7 +38,7 @@
 | Pravila po starosti (2.000 → 3.000 korakov, odrasel 3.000, starejši 2.300 od 108 mesecev; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-50 | 2026-10-20 |
 | Česanje vsak dan (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-20 |
 | Barva (izbirnik barve, ena barva standarda — bela) | 🛠 | 💶 izziv | M5-R21 | 2026-10-20 |
-| AI portret v registru | 🗓 po združitvi (§8) | — | M5-R11-04 | — |
+| AI portret v registru (sprejet v prvem poskusu, zagon 39453232137; čisto bel, ohlapni kodri, povešena ušesa, rep čez hrbet) | ✅ | — | M5-R11-04 | 2026-10-20 |
 | Stran na petprep.si (`/animals/dogs/bichon-frise`, `/sl/zivali/psi/kodrasti-bison`) | 🗓 šele s portretom | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
