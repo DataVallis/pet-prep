@@ -579,6 +579,18 @@
             "prompt_hash": "sha256:4deb08652843f0f43fe759ec341639dff5b039c2d2f21aff1f1288bc456054b6",
             "generated_at": "2026-10-19T07:26:46+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "rhodesian_ridgeback",
+            "species": "dog",
+            "file": "dog/rhodesian-ridgeback.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:67235a06c42c206ed21eca61f3895db6662cf00f158553de70178adbe9869845",
+            "generated_at": "2026-10-20T00:08:41+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
