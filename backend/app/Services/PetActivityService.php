@@ -884,7 +884,9 @@ class PetActivityService
      * (family-local), one feed per window, hunger → 100 %. Emergency meal
      * (M3-12): also outside a window while hunger shows ≤ 20 % — the same
      * `fed_pet` row, which lies outside every window, so the ledger keeps
-     * the window missed and the next window stays feedable. Refused while the
+     * the window missed; the next window stays feedable unless it starts within
+     * CareScheduleService::EMERGENCY_COVERS_NEXT_MINUTES — then the meal counts
+     * as that window's meal (David 2026-10-20). Refused while the
      * mess isn't cleaned (hygiene shows 0 %, PRODUCT_SPEC §8). Rules:
      * CareScheduleService::feedCheck(). Activity value = hunger shown before
      * feeding.
@@ -917,7 +919,18 @@ class PetActivityService
             $this->logActivity($locked, ActivityType::FedPet, $before, $actor?->id ?? $locked->user_id);
 
             // M3-12: the app words an emergency meal honestly ("doesn't count as on time").
-            return $this->result(ActionResult::ACCEPTED, $locked, extra: ['feed_mode' => $check->mode]);
+            // David 2026-10-20: an emergency meal close to the next window also counts
+            // as that window's meal — `covers_window` tells the app which one.
+            $covered = $check->isEmergency()
+                ? $this->schedule->windowCoveredAt($locked, $this->breedConfigOf($locked), $now)
+                : null;
+
+            return $this->result(ActionResult::ACCEPTED, $locked, extra: [
+                'feed_mode' => $check->mode,
+                'covers_window' => $covered !== null
+                    ? ['start' => $covered[0]->format('H:i'), 'end' => $covered[1]->format('H:i')]
+                    : null,
+            ]);
         });
     }
 

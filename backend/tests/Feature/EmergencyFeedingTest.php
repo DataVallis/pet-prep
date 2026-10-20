@@ -39,7 +39,9 @@ use Illuminate\Support\Str;
 | and the push said "feed it within 30 minutes or it gets sick". Agreed the
 | same day: (1) at displayed hunger ≤ 20 % the child may feed outside a meal
 | window — it never makes the missed window "on time" and does not use up
-| the next window; (2) pushes never ask for an action the app refuses.
+| the next window (David 2026-10-20: unless the next window starts within
+| 2 h — then it counts as that window's meal); (2) pushes never ask for an
+| action the app refuses.
 */
 
 const EF_DAVID_NOW = '2026-10-07 10:11:00'; // Wednesday 12:11 in Ljubljana
@@ -358,7 +360,7 @@ describe('emergency meal (feed outside a window at ≤ 20 %)', function () {
     it('rule A: on the autumn DST day windows follow the wall clock', function () {
         // 2026-10-25: CET from 01:00 UTC → 06:00 local = 05:00 UTC.
         [, $pet] = efChild('2026-10-25 11:00:00', ['hunger_level' => 10]); // 12:00 CET
-        efFed($pet, Carbon::parse('2026-10-25 04:30:00', 'UTC')); // 05:30 CET — before the window (06:00 CEST would be 04:00 UTC)
+        efFed($pet, Carbon::parse('2026-10-25 02:30:00', 'UTC')); // 03:30 CET — more than 2 h before the 06:00 CET window (it would be covered if 06:00 were CEST, 04:00 UTC)
         $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'emergency');
 
         [, $fedPet] = efChild('2026-10-25 11:00:00', ['hunger_level' => 10]);
@@ -458,13 +460,79 @@ describe('emergency meal and the routine ledger', function () {
         expect(efFeedRows($pet))->toHaveCount(2);
     });
 
-    it('an emergency meal right before a window does not make that window done', function () {
-        [, $pet] = efChild('2026-10-07 14:50:00', ['hunger_level' => 10]); // 16:50
-        $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'emergency');
+    it('David 2026-10-20: an emergency meal ≤ 2 h before a window counts as that window\'s meal', function () {
+        [$child, $pet] = efChild('2026-10-07 14:50:00', ['hunger_level' => 10]); // 16:50, 06–10 missed
+        $this->postJson('/api/child/pet/feed')->assertOk()
+            ->assertJsonPath('feed_mode', 'emergency')
+            ->assertJsonPath('covers_window', ['start' => '17:00', 'end' => '21:00'])
+            // The next meal is tomorrow morning — the evening one is already covered.
+            ->assertJsonPath('state.feeding.next_feed_window.start', '2026-10-08T06:00:00+02:00');
 
-        efAt('2026-10-07 19:05:00'); // 21:05, evening window over without a meal in it
-        [, $evening] = efFeedRoutines($pet, '2026-10-07');
-        expect($evening->isMissed())->toBeTrue();
+        // 17:30: the evening window is covered — no second meal 40 minutes later.
+        efAt('2026-10-07 15:30:00');
+        $this->getJson('/api/child/pet')
+            ->assertJsonPath('feeding.fed_in_current_window', true)
+            ->assertJsonPath('feeding.can_feed', false);
+        $this->postJson('/api/child/pet/feed')->assertStatus(422)->assertJsonPath('reason', 'already_fed_this_window');
+
+        // 21:30 at low hunger: the evening window was not missed → no new emergency meal.
+        efAt('2026-10-07 19:30:00');
+        efSet($pet, ['hunger_level' => 15]);
+        $this->getJson('/api/child/pet')->assertJsonPath('feeding.emergency_threshold', null);
+
+        efAt('2026-10-08 06:00:00');
+        [$morning, $evening] = efFeedRoutines($pet, '2026-10-07');
+        expect($morning->isMissed())->toBeTrue()
+            ->and($evening->isDone())->toBeTrue()
+            ->and($evening->actorUserId)->toBe($child->id)
+            ->and($evening->doneAt?->toIso8601String())->toBe('2026-10-07T14:50:00+00:00');
+        expect(efFeedRows($pet))->toHaveCount(1);
+    });
+
+    it('David 2026-10-20: the HUD ticks the covered window', function () {
+        [, $pet] = efChild('2026-10-07 14:50:00', ['hunger_level' => 10]); // 16:50
+        $this->postJson('/api/child/pet/feed')->assertOk();
+
+        $windows = app(CareScheduleService::class)->feedWindowsStartingOn($pet->fresh(), $pet->breedConfig(), '2026-10-07');
+        expect(app(CareScheduleService::class)->fedInWindows($pet->fresh(), $windows))->toBe([false, true]);
+    });
+
+    it('David 2026-10-20: exactly 2 h before the window still covers it, 2 h 1 min does not', function () {
+        [, $pet] = efChild('2026-10-07 13:00:00', ['hunger_level' => 10]); // 15:00
+        $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('covers_window.start', '17:00');
+
+        [, $other] = efChild('2026-10-07 12:59:00', ['hunger_level' => 10]); // 14:59
+        $this->postJson('/api/child/pet/feed')->assertOk()
+            ->assertJsonPath('feed_mode', 'emergency')
+            ->assertJsonPath('covers_window', null)
+            ->assertJsonPath('state.feeding.next_feed_window.start', '2026-10-07T17:00:00+02:00');
+
+        // 17:30: the evening window is still feedable for the second dog and counts normally.
+        efAt('2026-10-07 15:30:00');
+        $this->postJson('/api/child/pet/feed')->assertOk()->assertJsonPath('feed_mode', 'window');
+        efAt('2026-10-08 06:00:00');
+        [, $evening] = efFeedRoutines($other, '2026-10-07');
+        expect($evening->isDone())->toBeTrue()
+            ->and($evening->doneAt?->toIso8601String())->toBe('2026-10-07T15:30:00+00:00');
+    });
+
+    it('a window meal never reaches into the next window (reach stops at the previous window\'s end)', function () {
+        $schedule = app(CareScheduleService::class);
+        $tz = 'Europe/Ljubljana';
+        // Puppy windows 07–09, 11–13: the 11–13 window counts meals only from 09:00.
+        $from = $schedule->mealCountsFrom(Carbon::parse('2026-10-07 11:00', $tz), Carbon::parse('2026-10-07 09:00', $tz));
+        expect($from->setTimezone($tz)->format('H:i'))->toBe('09:00');
+        // Adult windows 06–10, 17–21: the evening window counts meals from 15:00.
+        $from = $schedule->mealCountsFrom(Carbon::parse('2026-10-07 17:00', $tz), Carbon::parse('2026-10-07 10:00', $tz));
+        expect($from->setTimezone($tz)->format('H:i'))->toBe('15:00');
+        expect($schedule->mealCountsFrom(Carbon::parse('2026-10-07 06:00', $tz), null)->setTimezone($tz)->format('H:i'))->toBe('04:00');
+    });
+
+    it('a window meal response has no covers_window', function () {
+        [, $pet] = efChild('2026-10-07 15:30:00', ['hunger_level' => 50]); // 17:30, in the evening window
+        $this->postJson('/api/child/pet/feed')->assertOk()
+            ->assertJsonPath('feed_mode', 'window')
+            ->assertJsonPath('covers_window', null);
     });
 
     it('a stored closed day keeps the window missed', function () {

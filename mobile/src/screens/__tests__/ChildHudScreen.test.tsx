@@ -284,7 +284,7 @@ describe('ChildHudScreen', () => {
     fireEvent.press(screen.getByTestId('action-feed'));
     await waitFor(() => expect(feedPet).toHaveBeenCalledTimes(1));
     expect(
-      await screen.findByText('Njam! Kuža je sit. Obrok je bil zamujen, zato ne šteje kot pravočasen — naslednji obrok je ob 17:00.'),
+      await screen.findByText('Njam! Kuža je sit. Ta obrok je bil pozen, zato ne šteje kot pravočasen. Naslednji obrok je ob 17:00.'),
     ).toBeTruthy();
     expect(screen.getByText('Hrani')).toBeTruthy();
     expect(isDisabled('action-feed')).toBe(true);

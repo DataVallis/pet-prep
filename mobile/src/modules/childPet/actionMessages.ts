@@ -9,6 +9,7 @@ import { stateFromErrorBody } from '@/modules/contract/signContract';
 import type { ChildPetState } from '@/api/client';
 import type { CareAction, ChildPetView, LockReason } from '@/modules/childPet/childPetView';
 import { familyClock, isLaterDay, whenText } from '@/modules/childPet/familyTime';
+import { shortClock } from '@/modules/childPet/mealWindows';
 import { dockText, dockWhen, type DockHint } from '@/modules/childPet/dockHint';
 import { BEHAVIOUR_STRINGS, onlyChewingOpen, onlyScratchingEventsOpen } from '@/modules/behaviour/behaviour';
 import { onlyScratchingOpen } from '@/modules/catCare/catCare';
@@ -36,6 +37,8 @@ export const CHILD_ACTION_STRINGS = strings('child', 'actions', {
     },
   },
   emergencyFeed: (when: string) => t('child:actions.emergencyFeed', { when }),
+  emergencyFeedCovers: (window: string, when: string) => t('child:actions.emergencyFeedCovers', { window, when }),
+  emergencyFeedCoversNoTime: (window: string) => t('child:actions.emergencyFeedCoversNoTime', { window }),
   refused: {
     outsideFeedWindow: (when: string) => t('child:actions.refused.outsideFeedWindow', { when }),
     alreadyFed: (when: string) => t('child:actions.refused.alreadyFed', { when }),
@@ -233,14 +236,22 @@ export function successMessage(action: CareAction, status: 'accepted' | 'unchang
 /**
  * Toast after an accepted feed (M3-12): an emergency meal is honest — it doesn't count as
  * on time, and the next regular meal (`view` = the state after the feed) still comes.
+ * David 2026-10-20: an emergency meal close to the next window also counts as that window's
+ * meal (`coversWindow` from the server, family-local "HH:MM") — the toast names it, and the
+ * next meal in `view` is already the one after it.
  */
 export function feedSuccessMessage(
   status: 'accepted' | 'unchanged',
   feedMode: 'window' | 'emergency' | null | undefined,
   view: ChildPetView | null,
+  coversWindow?: { start: string; end: string } | null,
 ): string {
   if (status !== 'accepted' || feedMode !== 'emergency') return successMessage('feed', status);
   const when = view ? whenText(view.feeding.next_feed_window?.start ?? null, view.server_time, view.timezone) : null;
+  if (coversWindow) {
+    const label = `${shortClock(coversWindow.start)}–${shortClock(coversWindow.end)}`;
+    return when ? CHILD_ACTION_STRINGS.emergencyFeedCovers(label, when) : CHILD_ACTION_STRINGS.emergencyFeedCoversNoTime(label);
+  }
   return when ? CHILD_ACTION_STRINGS.emergencyFeed(when) : CHILD_ACTION_STRINGS.emergencyFeedNoTime;
 }
 

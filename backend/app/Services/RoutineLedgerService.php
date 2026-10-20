@@ -414,7 +414,10 @@ class RoutineLedgerService
 
         // Feed: one routine per window that starts today (the windows of the
         // pet's life stage that day, M5-R01).
-        foreach ($this->schedule->feedWindowsStartingOn($pet, $config, $date) as $slot => [$start, $end]) {
+        $feedWindows = $this->schedule->feedWindowsStartingOn($pet, $config, $date);
+        // David 2026-10-20: an emergency meal just before a window counts as its meal.
+        $countsFrom = $this->schedule->countsFromOf($feedWindows);
+        foreach ($feedWindows as $slot => [$start, $end]) {
             $start = $start->utc();
             $end = $end->utc();
             if ($start->lessThan($born)) {
@@ -426,7 +429,7 @@ class RoutineLedgerService
                 // the child, never counts for or against them (M5-R01).
                 continue;
             }
-            $fed = $this->firstActivity($in['activities'], ActivityType::FedPet, $start, $end);
+            $fed = $this->firstActivity($in['activities'], ActivityType::FedPet, $countsFrom[$slot], $end);
             $routines[] = $this->resolve($pet, $date, RoutineType::Feed, $slot, $start, $end, $fed, $blocks, $now);
         }
 
@@ -814,7 +817,9 @@ class RoutineLedgerService
 
         $activities = ActivityLog::whereIn('pet_id', $ids)
             ->whereIn('activity_type', array_map(fn (ActivityType $t) => $t->value, self::ACTIVITY_TYPES))
-            ->where('created_at', '>=', $lookbackUtc)
+            // An emergency meal up to EMERGENCY_COVERS_NEXT_MINUTES before the day's
+            // first window counts for it (David 2026-10-20).
+            ->where('created_at', '>=', $lookbackUtc->subMinutes(CareScheduleService::EMERGENCY_COVERS_NEXT_MINUTES))
             ->where('created_at', '<', $toUtc)
             ->orderBy('created_at')
             ->orderBy('id')

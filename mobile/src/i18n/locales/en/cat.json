@@ -287,8 +287,10 @@
           "feed": "Your kitty is already full.",
           "water": "The water bowl is already full."
         },
-        "emergencyFeed": "Yum! Your kitty is full. The meal was missed, so it doesn't count as on time — the next meal is {{when}}.",
-        "emergencyFeedNoTime": "Yum! Your kitty is full. The meal was missed, so it doesn't count as on time.",
+        "emergencyFeed": "Yum! Your kitty is full. This meal came late, so it doesn't count as on time. The next meal is {{when}}.",
+        "emergencyFeedNoTime": "Yum! Your kitty is full. This meal came late, so it doesn't count as on time.",
+        "emergencyFeedCovers": "Yum! Your kitty is full. The missed meal still counts as late, but this one also counts as the {{window}} meal. The next meal is {{when}}.",
+        "emergencyFeedCoversNoTime": "Yum! Your kitty is full. The missed meal still counts as late, but this one also counts as the {{window}} meal.",
         "refused": {
           "alreadyFed": "Your kitty has already eaten. You can feed it again {{when}}.",
           "alreadyFedNoTime": "Your kitty has already eaten.",

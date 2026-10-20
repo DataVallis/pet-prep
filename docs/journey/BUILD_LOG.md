@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-20 — Sit kuža ne je spet čez pol ure
+
+**Kaj:** Pri testiranju na telefonu je otrok zamudil kosilo (13–15) in kužka nahranil z nujnim obrokom ob 18:09 — po starem pravilu bi ga lahko spet nahranil že ob 19:00. Zdaj nujni obrok, ki je največ 2 uri pred naslednjim oknom, velja kot obrok tega okna: okno dobi kljukico, naslednji obrok je šele naslednje okno, zamujeni obrok pa ostane zamujen. Popravljeno je tudi sporočilo po nujnem obroku (»Ta obrok je bil pozen …« namesto »Obrok je bil zamujen«, ki je zvenelo, kot da obroka sploh ni bilo).
+**Zakaj je pomembno:** simulacija mora biti realistična — pravi pes, ki je pravkar jedel, ne je čez 50 minut znova. Otrok se nauči, da zamujenega obroka ne nadoknadi z dvojnim hranjenjem.
+- 👩 Starši: aplikacija otroka ne nagradi za zamudo in ga ne spodbuja k prenajedanju psa.
+- 🧒 Otroci: »Kuža je pravkar jedel — naslednji obrok je zvečer.«
+- 🛠 Tehnično: eno pravilo (`mealCountsFrom`: 2 h pred oknom, nikoli pred koncem prejšnjega okna) uporabljajo gumb, HUD, obvestila in ocena.
+
 ## 2026-10-20 — AI laboratorij: primerjava posnetkov za šolo in igre
 
 **Kaj:** v AI laboratoriju lahko David za video zdaj napiše lasten opis gibanja (ali izbere predlogo: pes »sede na ukaz in obsedi«, »priteče h kameri«, »gre na podlogo in se uleže«, »šprinta za žogico«, »prinese žogico«; mačka »preži, migne in skoči na palico s peresom«) in izbere dolžino posnetka (Kling 3–15 s, Veo 4, 6 ali 8 s). Ocena cene in omejitev na zagon upoštevata izbrano dolžino. Dodan je model Kling 3.0 Standard (0,084 $/s brez zvoka, Pro 0,112 $/s) — samo za primerjavo.

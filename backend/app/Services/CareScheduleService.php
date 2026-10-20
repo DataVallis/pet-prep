@@ -69,6 +69,16 @@ class CareScheduleService
      */
     public const EMERGENCY_FEED_THRESHOLD = 20;
 
+    /**
+     * Emergency meal close to the next window (David 2026-10-20): a meal given
+     * at most this many minutes before a window starts counts as that window's
+     * meal (the dog just ate — no second meal 50 minutes later). Only an
+     * emergency meal can lie there: the reach never goes back past the previous
+     * window's end (mealCountsFrom), and outside a window the child can feed only
+     * an emergency meal. The missed window before it stays missed.
+     */
+    public const EMERGENCY_COVERS_NEXT_MINUTES = 120;
+
     public function __construct(private readonly LifeStageService $lifeStages) {}
 
     /**
@@ -85,17 +95,33 @@ class CareScheduleService
 
         // Legacy pets have no parent-covered windows: no quiet-hours query.
         $quiet = $pet->isLegacyProfile() ? null : $pet->quietHours();
+        $lastFed = ActivityLog::where('pet_id', $pet->id)
+            ->whereIn('activity_type', array_map(fn (ActivityType $t) => $t->value, self::FED_TYPES))
+            ->orderByDesc('created_at')
+            ->orderByDesc('id')
+            ->value('created_at');
+        $lastFedAt = $this->instant($lastFed, $tz);
+
+        // Each window as [start, end, countsFrom]: countsFrom = from when a meal
+        // counts for it (EMERGENCY_COVERS_NEXT_MINUTES before the start, never
+        // before the previous window's end — David 2026-10-20).
         $current = null;
         $upcoming = null;
         $lastEnded = null;
+        $previousEnd = null;
         foreach ($this->windowInstances($pet, $config, $now, $tz) as [$start, $end]) {
+            $from = $this->mealCountsFrom($start, $previousEnd);
+            $previousEnd = $previousEnd === null || $end->greaterThan($previousEnd) ? $end : $previousEnd;
             if ($current === null && $start->lessThanOrEqualTo($now) && $now->lessThan($end)) {
-                $current = [$start, $end];
+                $current = [$start, $end, $from];
             } elseif ($upcoming === null && $start->greaterThan($now)
                 // M3-12: the next meal the CHILD can give — a window the parent
                 // feeds in quiet hours is skipped (HUD time, refusal, push copy).
-                && ! $this->isParentCoveredFor($pet, $quiet, $start, $end)) {
-                $upcoming = [$start, $end];
+                && ! $this->isParentCoveredFor($pet, $quiet, $start, $end)
+                // David 2026-10-20: a window an emergency meal already covered is not
+                // the next meal either.
+                && ! ($lastFedAt !== null && $lastFedAt->greaterThanOrEqualTo($from))) {
+                $upcoming = [$start, $end, $from];
             }
             // Rule A looks at the last ended CHILD window: a parent-covered one is
             // skipped (if the parent tick skipped it — hard stop / vet — it must
@@ -104,20 +130,13 @@ class CareScheduleService
             if ($end->lessThanOrEqualTo($now)
                 && ($lastEnded === null || $end->greaterThan($lastEnded[1]))
                 && ! $this->isParentCoveredFor($pet, $quiet, $start, $end)) {
-                $lastEnded = [$start, $end];
+                $lastEnded = [$start, $end, $from];
             }
         }
 
-        $lastFed = ActivityLog::where('pet_id', $pet->id)
-            ->whereIn('activity_type', array_map(fn (ActivityType $t) => $t->value, self::FED_TYPES))
-            ->orderByDesc('created_at')
-            ->orderByDesc('id')
-            ->value('created_at');
-        $lastFedAt = $this->instant($lastFed, $tz);
-
         $fedInCurrent = $current !== null
             && $lastFedAt !== null
-            && $lastFedAt->greaterThanOrEqualTo($current[0]);
+            && $lastFedAt->greaterThanOrEqualTo($current[2]);
 
         // The next window in which feeding is possible: the current one while
         // it is unused, otherwise the next child window that starts later.
@@ -128,10 +147,12 @@ class CareScheduleService
         // parent meal) was fed since its start. A child window that ended during
         // a hard stop / vet / payment lock counts as missed (kind to the dog —
         // Claude, čaka Davida).
+        // A window covered by an emergency meal just before it (David 2026-10-20)
+        // is not missed: "since its start" reaches back to its countsFrom.
         $missedMeal = $lastEnded !== null
             && $pet->born_at !== null
             && $lastEnded[0]->greaterThanOrEqualTo(CarbonImmutable::instance($pet->born_at))
-            && ($lastFedAt === null || $lastFedAt->lessThan($lastEnded[0]));
+            && ($lastFedAt === null || $lastFedAt->lessThan($lastEnded[2]));
 
         return new FeedingStatus(
             windows: $windows,
@@ -383,7 +404,8 @@ class CareScheduleService
             return array_fill(0, count($windows), false);
         }
 
-        $from = min(array_map(fn (array $w) => CarbonImmutable::instance($w[0])->utc(), $windows));
+        $countsFrom = $this->countsFromOf($windows);
+        $from = min($countsFrom);
         $to = max(array_map(fn (array $w) => CarbonImmutable::instance($w[1])->utc(), $windows));
 
         $fedAt = ActivityLog::where('pet_id', $pet->id)
@@ -394,8 +416,7 @@ class CareScheduleService
             ->map(fn ($v) => $this->instant($v, 'UTC'))
             ->all();
 
-        return array_map(function (array $w) use ($fedAt): bool {
-            $start = CarbonImmutable::instance($w[0])->utc();
+        return array_map(function (array $w, CarbonImmutable $start) use ($fedAt): bool {
             $end = CarbonImmutable::instance($w[1])->utc();
             foreach ($fedAt as $at) {
                 if ($at !== null && $at->greaterThanOrEqualTo($start) && $at->lessThan($end)) {
@@ -404,7 +425,66 @@ class CareScheduleService
             }
 
             return false;
-        }, $windows);
+        }, $windows, $countsFrom);
+    }
+
+    /**
+     * From when a meal counts for a window starting at $start (David 2026-10-20):
+     * EMERGENCY_COVERS_NEXT_MINUTES earlier, but never before the previous
+     * window's end — so a meal inside one window never counts for the next, and
+     * only an emergency meal (the only feed outside a window) can cover a window.
+     */
+    public function mealCountsFrom(CarbonInterface $start, ?CarbonInterface $previousEnd): CarbonImmutable
+    {
+        $from = CarbonImmutable::instance($start)->subMinutes(self::EMERGENCY_COVERS_NEXT_MINUTES);
+        if ($previousEnd !== null && $from->lessThan($previousEnd)) {
+            $from = CarbonImmutable::instance($previousEnd)->setTimezone($from->getTimezone());
+        }
+
+        return $from;
+    }
+
+    /**
+     * mealCountsFrom() (UTC) for each window of a list sorted by start; the first
+     * one has no previous window in the list.
+     *
+     * @param  list<array{0: CarbonInterface, 1: CarbonInterface}>  $windows
+     * @return list<CarbonImmutable>
+     */
+    public function countsFromOf(array $windows): array
+    {
+        $out = [];
+        $previousEnd = null;
+        foreach ($windows as [$start, $end]) {
+            $out[] = $this->mealCountsFrom($start, $previousEnd)->utc();
+            $end = CarbonImmutable::instance($end);
+            $previousEnd = $previousEnd === null || $end->greaterThan($previousEnd) ? $end : $previousEnd;
+        }
+
+        return $out;
+    }
+
+    /**
+     * The window an emergency meal given at $now also counts for (David
+     * 2026-10-20): the first window that starts after $now and whose
+     * mealCountsFrom() is at or before $now. Null when none is that close.
+     *
+     * @return array{0: CarbonImmutable, 1: CarbonImmutable}|null
+     */
+    public function windowCoveredAt(Pet $pet, BreedConfig $config, CarbonInterface $now): ?array
+    {
+        $tz = $pet->familyTimezone();
+        $now = CarbonImmutable::instance($now)->setTimezone($tz);
+        $previousEnd = null;
+        foreach ($this->windowInstances($pet, $config, $now, $tz) as [$start, $end]) {
+            $from = $this->mealCountsFrom($start, $previousEnd);
+            $previousEnd = $previousEnd === null || $end->greaterThan($previousEnd) ? $end : $previousEnd;
+            if ($start->greaterThan($now)) {
+                return $from->lessThanOrEqualTo($now) ? [$start, $end] : null;
+            }
+        }
+
+        return null;
     }
 
     /**
@@ -462,7 +542,9 @@ class CareScheduleService
 
         $due = [];
         for ($date = $firstDate; $date <= $lastDate; $date = CarbonImmutable::parse($date, 'UTC')->addDay()->toDateString()) {
-            foreach ($this->feedWindowsStartingOn($pet, $config, $date) as [$start, $end]) {
+            $dayWindows = $this->feedWindowsStartingOn($pet, $config, $date);
+            $countsFrom = $this->countsFromOf($dayWindows);
+            foreach ($dayWindows as $i => [$start, $end]) {
                 $startUtc = $start->utc();
                 if ($startUtc->lessThanOrEqualTo($fromUtc) || $startUtc->greaterThan($toUtc) || $startUtc->lessThan($born)) {
                     continue;
@@ -472,7 +554,8 @@ class CareScheduleService
                 }
                 $fed = ActivityLog::where('pet_id', $pet->id)
                     ->whereIn('activity_type', array_map(fn (ActivityType $t) => $t->value, self::FED_TYPES))
-                    ->where('created_at', '>=', $startUtc)
+                    // An emergency meal just before the window covers it (David 2026-10-20).
+                    ->where('created_at', '>=', $countsFrom[$i])
                     ->where('created_at', '<', $end->utc())
                     ->exists();
                 if (! $fed) {
