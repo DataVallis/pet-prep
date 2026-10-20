@@ -275,6 +275,23 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [x] M5-F07 **Preveri:** na Pregledu je pri »Test Child« hkrati »Nujno«, »brez hrane / vode več kot uro«, »zbolel je, pri veterinarju« **in** »pes čaka, da otrok podpiše pogodbo«. Pes pred podpisom pogodbe ne bi smel upadati ne sprožati alarmov — ugotovi, ali gre za stare testne podatke (legacy pes) ali za napako v stanju / prikazu.
   - ✅ 2026-10-07 (Claude): **napaka prikaza**. Stanje je bilo pravilno — legacy pes je rojen, otrok je »grandfathered« skrbnik (`requires_contract` = false) in ni zaklenjen, zato pes upada in alarmira. Nadzorna plošča pa je `contract_signed` računala kot »obstaja vrstica pogodbe«, ki je takšen otrok nima → »čaka na podpis«. Strežnik zdaj vrne `contract_signed` = pes rojen in (podpisal ali grandfathered) za `children[]` in `pets[].caretakers[]`; aplikacija brez sprememb. Test `DashboardContractSignedTest`.
 
+## M5-T — Dodelava po testiranju s testerji (David, 20. 10. 2026; spec `docs/product/APP_REFINEMENT_SPEC.md`)
+
+- [ ] M5-T01 Pelji ven: ura kot rok, barve, potrditveni zaslon po dejanju (spec §2, §4)
+- [ ] M5-T02 Tabela dovoljenih dejanj po stanjih; spanje onemogoči igro in šolo, gumb pokaže razlog (§8)
+- [ ] M5-T03 Vrsta sporočil z minimalnim časom prikaza (§12)
+- [ ] M5-T04 Igra onemogočena, dokler niso pripravljeni vsi njeni klipi (§10)
+- [ ] M5-T05 Mini navodila iz parametrov simulacije (§5)
+- [ ] M5-T06 Priprava ljubljenčka »Pripravljamo [ime]« + vrstni red generiranja (§13)
+- [ ] M5-T07 AI Lab: primerjava modelov za klipe šole in iger (§14) — pred T08
+- [ ] M5-T08 Mediji po stanjih: ključne slike, zanke, prehodi (§7)
+- [ ] M5-T09 Šola: klip za vsak ukaz in fazo (§3)
+- [ ] M5-T10 Igre po fazah (§10)
+- [ ] M5-T11 Preklop slika / video (§1)
+- [ ] M5-T12 Prilagojen način: potiski vozička (§6)
+- [ ] M5-T13 Rojstni dan pri 1 letu (§9)
+- [ ] M5-T14 Krtača in kretnje (§11)
+
 ## Po MVP (backlog)
 
 - **Nadgradnja brezplačne živali v 12-tedenski izziv** (David 9. 10. 2026: *ne zdaj, kasneje*): danes izziv samo s plačljivo pasmo (M5-F03). Strežnik je pripravljen (M4-10): ob nakupu žival ohrani videz iz skupnega nabora, manjkajoči videi polnega nabora se shranijo na videz in so za naslednji nakup istega videza brezplačni (`FreePetLookPoolTest`). Manjka: pravilo izdelka (cena, program, certifikat za mešančka), API za nadgradnjo, aplikacija.
