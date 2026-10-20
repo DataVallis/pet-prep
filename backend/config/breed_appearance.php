@@ -458,6 +458,12 @@
 | highest (the register portrait). Breed Watch Category 1 (S404) — not a welfare breed. Colour weights are
 | unsourced → `verified => false`.
 |
+| Bichon Frise (M5-R10-50, docs/research/dog-data bichon_frise.appearance): "A cheerful little dog, with a
+| lively gait and very loose, white corkscrew-curled hair." (FCI 215, S410); colour "Pure white." (S410) — RKC
+| standard (S412) "White, but cream or apricot markings acceptable up to 18 months." → the adult game dog is pure
+| white only (the register portrait). Drooping ears, very dark round eyes with black rims, round black nose, plume
+| over the back. Breed Watch Category 1 (S411) — not a welfare breed. Colour weight unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2247,6 +2253,40 @@ return [
             'tail' => ['medium set, thick at the base and tapering, carried in a ring when alert, with a plume at the tip'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'clip', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-50 (docs/research/dog-data/data.json bichon_frise.appearance; runbook rules 2026-10-10:
+    // standard colour only — pure white on an adult).
+    'bichon_frise' => [
+        'display_name' => 'Bichon Frise',
+        // One standard colour; the trait list itself is an unchecked draft → false.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 215 (S410), RKC breed standard (S412), RKC breed page (S411) — for the traits listed in `sources`. Colour weight unsourced.',
+        'sources' => [
+            'size' => 'S411 "Size: Small"; S410 "Height at the withers: 25 to 29 cm."',
+            'build' => 'S412 "Well-balanced dog of smart appearance, closely coated with handsome plume carried over the back."',
+            'coat_length' => 'S412 "Fine, silky with soft corkscrew curls, neither flat nor corded and measuring 7-10 cms (3-4 ins) in length."; S410 "The hair of the outer coat forms loose spiral curls"',
+            'coat_color' => 'S410 "Pure white."; S412 "White, but cream or apricot markings acceptable up to 18 months." (adult → white only)',
+            'ear_carriage' => 'S410 "The ears are drooping and are well-furnished with profuse hair."',
+            'eye_color' => 'S410 "Very dark, medium-sized, rather round in shape, neither almond-shaped nor protruding."; S412 "Dark, round with black eye rims, surrounded by dark haloes, consisting of well-pigmented skin."',
+            'tail' => 'S412 "Normally carried raised and curved gracefully over the back but not tightly curled."',
+            'nose' => 'S410 "Rounded, black, finely grained and glossy."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'small, well-balanced and sturdy, slightly longer than tall', 'weight' => 3], 'small and compact with a lively, proud carriage'],
+            'coat_length' => [
+                ['value' => 'loose, soft corkscrew-curled coat in a natural rounded trim', 'weight' => 3],
+                'loose, soft corkscrew-curled coat, slightly fuller around the head',
+            ],
+            // Pure white is the only adult colour (S410, S412).
+            'coat_color' => ['pure white'],
+            'ear_carriage' => ['drooping ears well covered with curly hair'],
+            'eye_color' => ['very dark, round, with black rims and dark haloes'],
+            'tail' => ['plumed tail carried gracefully curved over the back, not tightly curled'],
+            'nose' => ['round black glossy nose (not short-faced)'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

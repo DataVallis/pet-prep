@@ -53,6 +53,7 @@ return [
     'rhodesian_ridgeback' => 'Rodezijski ridgeback',
     'papillon' => 'Papijon',
     'portuguese_water_dog' => 'Portugalski vodni pes',
+    'bichon_frise' => 'Kodrasti bišon',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

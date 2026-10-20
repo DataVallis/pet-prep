@@ -1322,5 +1322,30 @@ return [
             ],
         ],
 
+        // M5-R10-50: bichon_frise.* (S409–S418), runbook rules (data.json
+        // proposed_game_parameters.bichon_frise.suitability_tags). RKC (S411) + PDSA (S413) + VCA (S414) + PetMD (S416).
+        // RKC Breed Watch Category 1 (S411) → no welfare chip. No small_children: no rating (PetMD's "highly suitable for
+        // families with younger children" is open for David). Never "hypoallergenic" — low_shedding from RKC "Sheds: No".
+        'bichon_frise' => [
+            'suits' => [
+                // S411 "Size of home: Flat/ Apartment".
+                ['tag' => 'apartment', 'source_ids' => ['S411'], 'refs' => ['bichon_frise.suitability.rkc_size_of_home']],
+                // S416 "The Bichon Frise dog breed is a great family pet and highly suitable for families with younger children."
+                ['tag' => 'family_pet', 'source_ids' => ['S416'], 'refs' => ['bichon_frise.behaviour.family', 'bichon_frise.suitability.petmd_family']],
+                // S413 "Bichons are very affectionate, loving dogs that are excellent with children and other pets alike."
+                ['tag' => 'children', 'source_ids' => ['S413'], 'refs' => ['bichon_frise.behaviour.children', 'bichon_frise.suitability.pdsa_children']],
+                // S413 the same sentence (other pets).
+                ['tag' => 'other_pets', 'source_ids' => ['S413'], 'refs' => ['bichon_frise.behaviour.other_pets', 'bichon_frise.suitability.pdsa_other_pets']],
+                // S411 "Sheds: No".
+                ['tag' => 'low_shedding', 'source_ids' => ['S411'], 'refs' => ['bichon_frise.suitability.rkc_shedding']],
+            ],
+            'consider' => [
+                // S411 "Grooming: Every day"; S413 "They need daily grooming and coat trimming is required every couple of months".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S411', 'S413'], 'refs' => ['bichon_frise.suitability.rkc_grooming', 'bichon_frise.suitability.pdsa_grooming']],
+                // S414 "Time Alone: Limited tolerance; prefers companionship".
+                ['tag' => 'needs_company', 'source_ids' => ['S414'], 'refs' => ['bichon_frise.behaviour.time_alone', 'bichon_frise.suitability.vca_time_alone']],
+            ],
+        ],
+
     ],
 ];

@@ -1980,6 +1980,39 @@
         }
       ],
       "notes": "RKC breed page (older address display.aspx?id=5135, dog-data S404, 2026-10-20): Good Practice (= minimum, 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding') — genetic diversity, DNA prcd-PRA; 'Best Practice schemes and tests' — BVA/KC elbow and hip schemes, DNA GM1 gangliosidosis, DNA EOPRA. PDSA (dog-data S405) advises checking that the parents were screened under the BVA/KC Canine Health Schemes (paraphrase). New test key dna_eopra (website words added); dna_gm1 reused (same condition as the Shiba Inu's GM1 test)."
+    },
+    "bichon_frise": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S411",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding"
+        }
+      },
+      "tests": [
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S411",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "patella_scheme",
+          "level": "other_scheme",
+          "name": "Patella evaluation (US breed club recommendation)",
+          "source_id": "K28",
+          "quote": "Patella Evaluation"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip evaluation (US breed club recommendation)",
+          "source_id": "K28",
+          "quote": "Hip Evaluation"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (dog-data S411, 2026-10-20): under the heading 'Good Practice schemes and tests' the sentence 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding, …' lists one test — the BVA/KC/ISDS eye scheme (level minimum); no Best Practice list and no breed-specific DNA package. AKC Non-Sporting Group health testing page (K28): the US national breed club recommends 'Patella Evaluation', 'Hip Evaluation' and 'Ophthalmologist Evaluation' (recommended, not required) → patella and hip as other_scheme (the eye check is already covered by the RKC eye scheme). PDSA (dog-data S413) lists luxating patellas and cataracts. No new test key."
     }
   }
 }

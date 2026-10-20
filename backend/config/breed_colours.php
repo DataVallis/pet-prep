@@ -300,6 +300,10 @@ return [
         ['key' => 'brown-white', 'value' => 'brown with white on the chin, chest and feet, liver nose', 'en' => 'Brown and white', 'sl' => 'Rjavo-bel'],
         ['key' => 'white', 'value' => 'white with a black nose', 'en' => 'White', 'sl' => 'Bel'],
     ],
+    // M5-R10-50: FCI S410 "Pure white." (adult).
+    'bichon_frise' => [
+        ['key' => 'white', 'value' => 'pure white', 'en' => 'White', 'sl' => 'Bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
