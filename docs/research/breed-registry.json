@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "d0ac65fe9b7561c4bc8534734a91e42819d4cce67a9d89c0360bb7ee918cec03"
+      "sha256": "7e7838b0e2cb33f05abf49fc290074d43097214a562bfa73c58addd210d0fb93"
     }
   },
   "suitability_vocabulary": {
@@ -27075,7 +27075,12 @@
           "S404"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "portuguese-water-dog.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
