@@ -33,6 +33,12 @@
                             <x-filament::button size="xs" color="gray" wire:click="checkPending({{ $run->id }})">Check pending</x-filament::button>
                         @endif
                     </div>
+                    @if ($run->kind === 'video')
+                        <div class="mb-2 text-xs text-gray-500">
+                            Duration: {{ $run->duration_seconds ? $run->duration_seconds.' s (override)' : 'model default' }}
+                            · Motion: {{ $run->motion_prompt ? 'custom — '.$run->motion_prompt : 'state '.$run->pet_state }}
+                        </div>
+                    @endif
                     @if ($run->fixed_traits)
                         <div class="mb-2 text-xs text-gray-500">Fixed: {{ collect($run->fixed_traits)->map(fn ($v, $k) => "$k = $v")->implode(', ') }}</div>
                     @endif
@@ -62,6 +68,7 @@
                                     {{ $result->latency_ms !== null ? number_format($result->latency_ms / 1000, 1).' s' : '—' }}
                                     · ~${{ number_format($result->estimated_cost_usd, 3) }}
                                     @if ($result->seed) · seed {{ $result->seed }} @endif
+                                    @if ($result->duration_seconds) · {{ $result->duration_seconds }} s clip @endif
                                 </div>
                                 <details class="mt-1">
                                     <summary class="cursor-pointer">prompt & traits</summary>

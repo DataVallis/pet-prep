@@ -58,13 +58,49 @@ class MediaLabService
 
     /**
      * @param  list<string>  $profileKeys
+     * @param  int|null  $durationSeconds  clip-length override; null = each profile's default
+     *
+     * @throws InvalidArgumentException when a profile does not accept that length
      */
-    public function estimateVideoRunUsd(array $profileKeys): float
+    public function estimateVideoRunUsd(array $profileKeys, ?int $durationSeconds = null): float
     {
         return round(array_sum(array_map(
-            fn (string $key) => $this->profiles->video($key)->estimatedCostUsd(),
+            fn (string $key) => $this->videoProfile($this->profiles->video($key), $durationSeconds)->estimatedCostUsd(),
             $profileKeys,
         )), 4);
+    }
+
+    /**
+     * Clip lengths every one of the given video profiles accepts (for the
+     * lab's duration select). Unknown keys are ignored.
+     *
+     * @param  list<string>  $profileKeys
+     * @return list<int>
+     */
+    public function commonDurations(array $profileKeys): array
+    {
+        $available = $this->profiles->forLab(ModelProfile::KIND_VIDEO);
+        $common = null;
+
+        foreach (array_unique($profileKeys) as $key) {
+            if (! isset($available[$key])) {
+                continue;
+            }
+            $durations = $available[$key]->supportedDurations();
+            $common = $common === null ? $durations : array_values(array_intersect($common, $durations));
+        }
+
+        return $common ?? [];
+    }
+
+    /**
+     * Motion presets for the custom motion prompt (config media.lab.motion_presets).
+     *
+     * @return array<string, array<string, string>> species => [key => motion]
+     */
+    public static function motionPresets(): array
+    {
+        return array_map(fn ($list) => array_map('strval', (array) $list), (array) config('media.lab.motion_presets', []));
     }
 
     /**
@@ -149,9 +185,11 @@ class MediaLabService
      *
      * @throws AiCallException
      */
-    public function startVideoRun(User $admin, int $sourceResultId, array $profileKeys, PetStateEnum $state): MediaLabRun
+    public function startVideoRun(User $admin, int $sourceResultId, array $profileKeys, PetStateEnum $state, ?string $motionPrompt = null, ?int $durationSeconds = null): MediaLabRun
     {
         $this->assertAdmin($admin);
+
+        $motionPrompt = $this->normaliseMotionPrompt($motionPrompt);
 
         $source = MediaLabResult::query()
             ->whereKey($sourceResultId)
@@ -164,8 +202,13 @@ class MediaLabService
             throw new InvalidArgumentException('Pick a completed lab image.');
         }
 
-        $profiles = $this->labProfiles(ModelProfile::KIND_VIDEO, $profileKeys);
-        $estimate = $this->estimateVideoRunUsd(array_keys($profiles));
+        // Duration override: every picked model must accept the length (fal enum) — checked
+        // before the estimate, so cost, max-run check and ledger all use the same clip length.
+        $profiles = array_map(
+            fn (ModelProfile $p) => $this->videoProfile($p, $durationSeconds),
+            $this->labProfiles(ModelProfile::KIND_VIDEO, $profileKeys),
+        );
+        $estimate = round(array_sum(array_map(fn (ModelProfile $p) => $p->estimatedCostUsd(), $profiles)), 4);
         $this->assertAffordable($estimate);
 
         $breedKey = (string) $source->run->breed;
@@ -176,10 +219,15 @@ class MediaLabService
             throw new InvalidArgumentException("A {$species->value} has no '{$state->value}' video — pick another state.");
         }
 
-        $prompt = $this->prompts->videoPrompt($breedKey, $state, is_array($source->traits) ? $source->traits : []);
+        $traits = is_array($source->traits) ? $source->traits : [];
+        // Custom motion (training / game clips): replaces the state's motion, still on the
+        // lab image with the species' look lock, style rules and negative prompt.
+        $prompt = $motionPrompt !== null
+            ? $this->prompts->customMotionVideoPrompt($breedKey, $motionPrompt, $traits)
+            : $this->prompts->videoPrompt($breedKey, $state, $traits);
         $negative = $this->prompts->videoNegativePrompt($species);
 
-        return DB::transaction(function () use ($admin, $source, $profiles, $estimate, $state, $prompt, $breedKey, $negative) {
+        return DB::transaction(function () use ($admin, $source, $profiles, $estimate, $state, $prompt, $breedKey, $negative, $motionPrompt, $durationSeconds) {
             $run = MediaLabRun::create([
                 'user_id' => $admin->id,
                 'kind' => MediaLabRun::KIND_VIDEO,
@@ -189,6 +237,8 @@ class MediaLabService
                 'pet_state' => $state->value,
                 'source_result_id' => $source->id,
                 'estimated_cost_usd' => $estimate,
+                'motion_prompt' => $motionPrompt,
+                'duration_seconds' => $durationSeconds,
             ]);
 
             foreach ($profiles as $profile) {
@@ -202,6 +252,7 @@ class MediaLabService
                     'negative_prompt' => $profile->supportsNegativePrompt ? $negative : null,
                     'params' => $profile->videoInput((string) $source->result_url, $prompt, $negative),
                     'source_image_url' => $source->result_url,
+                    'duration_seconds' => $profile->durationSeconds,
                     'status' => MediaLabResult::STATUS_QUEUED,
                 ]);
 
@@ -350,6 +401,33 @@ class MediaLabService
         }
 
         return $picked;
+    }
+
+    /**
+     * The profile at the requested clip length (null = its default length).
+     *
+     * @throws InvalidArgumentException
+     */
+    private function videoProfile(ModelProfile $profile, ?int $durationSeconds): ModelProfile
+    {
+        return $durationSeconds === null ? $profile : $profile->withDuration($durationSeconds);
+    }
+
+    private function normaliseMotionPrompt(?string $motion): ?string
+    {
+        $motion = trim(preg_replace('/\s+/u', ' ', (string) $motion) ?? '');
+
+        if ($motion === '') {
+            return null;
+        }
+
+        $max = (int) config('media.lab.motion_prompt_max_chars', 500);
+
+        if (mb_strlen($motion) > $max) {
+            throw new InvalidArgumentException("The custom motion prompt may be at most {$max} characters.");
+        }
+
+        return $motion;
     }
 
     /**

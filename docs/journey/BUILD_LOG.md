@@ -9,6 +9,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-20 — AI laboratorij: primerjava posnetkov za šolo in igre
+
+**Kaj:** v AI laboratoriju lahko David za video zdaj napiše lasten opis gibanja (ali izbere predlogo: pes »sede na ukaz in obsedi«, »priteče h kameri«, »gre na podlogo in se uleže«, »šprinta za žogico«, »prinese žogico«; mačka »preži, migne in skoči na palico s peresom«) in izbere dolžino posnetka (Kling 3–15 s, Veo 4, 6 ali 8 s). Ocena cene in omejitev na zagon upoštevata izbrano dolžino. Dodan je model Kling 3.0 Standard (0,084 $/s brez zvoka, Pro 0,112 $/s) — samo za primerjavo.
+**Zakaj šteje:** preden izberemo cenejše modele za posnetke »šole« (ukazi) in iger, mora David na lastne oči videti, ali ostanejo zelo realistični. Produkcijski model se ni spremenil.
+**Za vlagatelje / 🛠:** »Stroške AI videa optimiziramo z merjenjem: isti pes, isti ukaz, več modelov drug ob drugem, s ceno vsakega posnetka.«
+
 ## 2026-10-19 — Zdravje sistema: napake vidimo brez strežnika
 
 **Kaj:** v administraciji je nova stran **»Zdravje sistema«**. Vsaka napaka strežnika se zapiše v bazo (združeno: ista napaka = ena vrstica s številom ponovitev), stran pokaže odprte napake, neuspela opravila v ozadju, ali igralna zanka teče (utrip vsako minuto), zataknjene dnevne rutine ljubljenčkov in zasedenost diska. Rdeča značka v meniju pove, da je kaj narobe.

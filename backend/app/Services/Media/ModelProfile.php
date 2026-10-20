@@ -34,6 +34,8 @@ final class ModelProfile
         public readonly int $height,
         public readonly int $durationSeconds,
         public readonly string $imageParam,
+        /** Video: clip lengths (s) the fal schema accepts; [] = only $durationSeconds. */
+        public readonly array $allowedDurations = [],
     ) {}
 
     /**
@@ -84,6 +86,71 @@ final class ModelProfile
             height: (int) ($config['height'] ?? 1024),
             durationSeconds: (int) ($config['duration_seconds'] ?? 0),
             imageParam: (string) ($config['image_param'] ?? 'image_url'),
+            allowedDurations: array_values(array_map('intval', (array) ($config['durations'] ?? []))),
+        );
+    }
+
+    /**
+     * Clip lengths (seconds) this video profile may be asked for — the values
+     * of the model's fal `duration` enum (config `durations`), or just the
+     * profile default when the list is not configured.
+     *
+     * @return list<int>
+     */
+    public function supportedDurations(): array
+    {
+        $durations = $this->allowedDurations !== [] ? $this->allowedDurations : [$this->durationSeconds];
+        $durations = array_values(array_unique(array_filter($durations, fn (int $s) => $s > 0)));
+        sort($durations);
+
+        return $durations;
+    }
+
+    public function supportsDuration(int $seconds): bool
+    {
+        return in_array($seconds, $this->supportedDurations(), true);
+    }
+
+    /**
+     * A copy of this video profile with another clip length (AI Lab override):
+     * the `duration` param keeps the model's format ("5" for Kling, "4s" for
+     * Veo) and the cost estimate / ledger units follow the new length.
+     *
+     * @throws InvalidArgumentException when the model does not accept that length
+     */
+    public function withDuration(int $seconds): self
+    {
+        if ($this->kind !== self::KIND_VIDEO || ! $this->supportsDuration($seconds)) {
+            throw new InvalidArgumentException(sprintf(
+                '%s does not support %d s clips (allowed: %s s).',
+                $this->label,
+                $seconds,
+                implode(', ', $this->supportedDurations()),
+            ));
+        }
+
+        $params = $this->params;
+        $current = (string) ($params['duration'] ?? '');
+        $params['duration'] = str_ends_with($current, 's') ? $seconds.'s' : (string) $seconds;
+
+        return new self(
+            key: $this->key,
+            kind: $this->kind,
+            label: $this->label,
+            endpoint: $this->endpoint,
+            enabled: $this->enabled,
+            lab: $this->lab,
+            verified: $this->verified,
+            source: $this->source,
+            pricing: $this->pricing,
+            params: $params,
+            supportsNegativePrompt: $this->supportsNegativePrompt,
+            supportsSeed: $this->supportsSeed,
+            width: $this->width,
+            height: $this->height,
+            durationSeconds: $seconds,
+            imageParam: $this->imageParam,
+            allowedDurations: $this->allowedDurations,
         );
     }
 

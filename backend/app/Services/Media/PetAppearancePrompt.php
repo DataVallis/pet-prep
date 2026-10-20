@@ -63,6 +63,19 @@ class PetAppearancePrompt
     public const CAT_EDIT_KEEP = 'Keep it clearly the same individual cat: identical coat colours, coat pattern and markings, '
         .'identical eye colour and ear shape, same breed type. Change only what ageing changes.';
 
+    /**
+     * AI Lab custom motion (training / game clips, 2026-10-20): same look lock,
+     * camera and safety rules as VIDEO_STYLE, but full natural motion instead
+     * of a subtle loop — a recall or a ball chase is not a slow idle loop.
+     */
+    public const CUSTOM_MOTION_STYLE = 'Keep the dog\'s exact appearance, size, coat colours and markings from the image; the same single dog throughout. '
+        .'Static locked-off camera, no zoom, no pan, no cuts, same room and natural light. '
+        .'Realistic, natural dog movement with correct anatomy and weight. No people, no hands, no other animals, no text.';
+
+    public const CAT_CUSTOM_MOTION_STYLE = 'Keep the cat\'s exact appearance, size, coat colours and markings from the image; the same single cat throughout. '
+        .'Static locked-off camera, no zoom, no pan, no cuts, same room and natural light. '
+        .'Realistic, natural cat movement with correct anatomy and weight. No people, no hands, no other animals, no text.';
+
     public const CAT_VIDEO_STYLE = 'Keep the cat\'s exact appearance, size, coat colours and markings from the image; the same single cat throughout. '
         .'Static locked-off camera, no zoom, no pan, no cuts, same room and natural light. '
         .'Subtle, slow, realistic cat motion that could loop seamlessly. No people, no hands, no other animals, no text.';
@@ -389,5 +402,30 @@ class PetAppearancePrompt
             : (string) config("breed_appearance.{$breedKey}.display_name", 'dog');
 
         return 'The same '.$subject.' as in the image, '.$state->promptModifier().'. '.self::VIDEO_STYLE;
+    }
+
+    /**
+     * AI Lab only (clip comparison, 2026-10-20): the state video prompt with
+     * the state's motion replaced by an admin-written motion ("sits on
+     * command, then holds the sit …"). Subject, look lock, static camera and
+     * the "no people, no hands, no other animals, no text" rules stay as in
+     * videoPrompt(); only "subtle, slow, loopable" is dropped (CUSTOM_MOTION_STYLE).
+     *
+     * @param  array<string, string>  $traits
+     */
+    public function customMotionVideoPrompt(string $breedKey, string $motion, array $traits = []): string
+    {
+        $species = self::speciesOf($breedKey);
+        $motion = rtrim(trim($motion), " \t.");
+
+        if ($species === Species::Cat) {
+            $subject = $traits !== [] ? $this->describe($breedKey, $traits) : (string) config("breed_appearance.{$breedKey}.display_name", 'cat');
+
+            return 'The same '.$subject.' as in the image '.$motion.'. '.self::CAT_CUSTOM_MOTION_STYLE;
+        }
+
+        $subject = $traits !== [] ? $this->describe($breedKey, $traits) : (string) config("breed_appearance.{$breedKey}.display_name", 'dog');
+
+        return 'The same '.$subject.' as in the image '.$motion.'. '.self::CUSTOM_MOTION_STYLE;
     }
 }
