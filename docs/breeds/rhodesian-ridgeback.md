@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `rhodesian_ridgeback` (viri S384–S394, K25; ponovno S10, S11, S14, S24, S35, S45, S174, S263, S376) |
 | Izvor | FCI št. 146, skupina 6, sekcija 3 (sorodne pasme), Južna Afrika (S384, S385) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 43. mesto »Rhodesian Ridgeback« (mesta do 42 so že v aplikaciji; S174) |
-| PR-ji | pet-prep #285 (pasma) · portret — · spletna stran — |
+| PR-ji | pet-prep #285 (pasma, `081587e`) · portret #286 (2026-10-20) · spletna stran (glej vrstico v BREED_QUEUE) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -38,7 +38,7 @@
 | Pravila po starosti (2.000 → 12.000 korakov, odrasel 12.000, starejši 9.000 od 90 mesecev; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-47 | 2026-10-19 |
 | Česanje 1× na teden (rutina »Počeši«), opozorilo po obroku, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R16 / M5-R17 | 2026-10-19 |
 | Barva (izbirnik barve: rdeče pšenična, svetlo pšenična) | 🛠 | 💶 izziv | M5-R21 | 2026-10-19 |
-| AI portret v registru | 🗓 po združitvi PR #285 | — | M5-R11-04 | — |
+| AI portret v registru (sprejet v prvem poskusu; rdeče pšenična barva, črn nos, stranski pogled — greben se ne vidi) | ✅ | — | M5-R11-04 | 2026-10-20 |
 | Stran na petprep.si (`/animals/dogs/rhodesian-ridgeback`, `/sl/zivali/psi/rodezijski-ridgeback`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -52,7 +52,7 @@
 - **Potrebe brez mehanike (needs-david):** redno čiščenje zob ali žvečilke za zobe (Woodgreen S392) → **M5-R15**; tedenski pregled in čiščenje ušes (Woodgreen S392) in kopanje vsaj enkrat na mesec (PetMD S391) → **M5-R20**; **sprehod brez povodca samo v varno ograjenem prostoru** (AKC S393, PDSA S390) → za to še ni naloge v ROADMAP — **potrebna nova naloga (David)** (enako kot pri šiba inuju).
 - **Začetek starosti 90 mesecev je začasen** (spodnja meja RKC); McMillan 2024 prek Wikipedije navaja 12 let (→ 108). Preveriti dopolnilno tabelo McMillan 2024.
 - **`needs_mental_stimulation`:** ni dobesednega citata o potrebi → oznake ni; David lahko odloči drugače.
-- **Barva portreta:** rdeče pšenična kot najbolj tipična (brez vira za težo barv).
+- **Barva portreta:** rdeče pšenična kot najbolj tipična (brez vira za težo barv). Portret (PR #286, 2026-10-20) je narejen brez namestitve produkcije; greben v stranskem pogledu ni viden.
 - **Ime:** »rodezijski ridgeback« ni preverjeno pri KZS.
 - **Spletna stran:** nov izvor Južna Afrika (`ZA`), nov ključ zdravja `dermoid_sinus` in nova testa `dermoid_sinus_scheme`, `dna_jme` (besede Claude).
 - **Deljena testa:** `BreedSuitabilityTest` (seznami izjem za `experienced_owner`, `not_for_small_children`, `needs_company`, `chases_small_pets` — kot pri prejšnjih pasmah) in `BreedConfigTest` (seznam Filament zdaj pokaže vse zapise — 51. pasma je padla na 2. stran; popravek velja za vse prihodnje pasme).

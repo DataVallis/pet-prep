@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "c339494805c414563566482b1b215e5ea8c0c9c4fa0b0c32b0d81b05a35a8299"
+      "sha256": "d8e28543e0df4656a5c0ba37e70011b0312b503a05b741027b63d06a33c34f76"
     }
   },
   "suitability_vocabulary": {
@@ -25884,7 +25884,12 @@
           "S387"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "rhodesian-ridgeback.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
