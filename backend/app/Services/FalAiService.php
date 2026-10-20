@@ -437,6 +437,13 @@ class FalAiService
                 .'heart-shaped thin drop ears, dark round eyes, tail carried in a ring with a plume at the tip, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-50: FCI 215 (S410) / RKC breed standard (S412) — pure white is the only adult colour.
+            BreedType::BichonFrise => 'A cheerful, lively little Bichon Frise dog, pure white, '
+                .'loose, soft corkscrew-curled coat in a natural rounded trim, well-balanced small body, '
+                .'very dark round eyes with black rims and dark haloes, round black nose, drooping ears covered with hair, '
+                .'plumed tail carried gracefully curved over the back, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1056,6 +1063,18 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'profuse curly single coat without undercoat',
                 'markings' => 'traditional lion clip: muzzle and hindquarters clipped, plume at the tail tip, heart-shaped drop ears',
+            ],
+            // M5-R10-50: FCI S410 "Pure white." / RKC S412 "White, but cream or apricot markings acceptable up to 18 months."
+            // — an adult is always pure white.
+            BreedType::BichonFrise => [
+                'color_scheme' => 'pure white',
+                'eye_color' => 'very dark',
+                'fur_texture' => match ($variantIndex) {
+                    0 => 'loose, soft corkscrew curls in a natural rounded trim',
+                    1 => 'loose, soft corkscrew curls, slightly fuller on the head',
+                    2 => 'loose, soft corkscrew curls, neatly scissored',
+                },
+                'markings' => 'black eye rims with dark haloes, plumed tail over the back',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
