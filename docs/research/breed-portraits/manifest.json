@@ -603,6 +603,18 @@
             "prompt_hash": "sha256:9cc26692640fb6aeb3115a30ae50f6514df608786786a8eac4dabb6577617a5f",
             "generated_at": "2026-10-20T01:47:15+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "portuguese_water_dog",
+            "species": "dog",
+            "file": "dog/portuguese-water-dog.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:b665974e692169deace109b4d0f749f321976744883745083fa6309b97ca8ccc",
+            "generated_at": "2026-10-20T03:52:20+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
