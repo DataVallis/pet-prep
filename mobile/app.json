@@ -39,6 +39,9 @@
         "android.permission.ACTIVITY_RECOGNITION",
         "android.permission.health.READ_STEPS"
       ],
+      "blockedPermissions": [
+        "com.google.android.gms.permission.AD_ID"
+      ],
       "usesCleartextTraffic": true,
       "package": "com.datavallis.petprep"
     },
