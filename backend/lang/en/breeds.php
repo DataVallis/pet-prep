@@ -54,6 +54,7 @@ return [
     'papillon' => 'Papillon',
     'portuguese_water_dog' => 'Portuguese Water Dog',
     'bichon_frise' => 'Bichon Frise',
+    'newfoundland' => 'Newfoundland',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

@@ -1347,5 +1347,34 @@ return [
             ],
         ],
 
+        // M5-R10-51: newfoundland.* (S419–S426), runbook rules (data.json
+        // proposed_game_parameters.newfoundland.suitability_tags). RKC breed page not reachable → no
+        // apartment / large_home. Kennel Club Category 2 (PDSA S423) with the Breed Watch point loose
+        // eyelids (S425) → eyelid_problems (welfare rule). No new vocabulary key.
+        'newfoundland' => [
+            'suits' => [
+                // S424 "A Newfoundland dog's personality makes the breed an outstanding family pet."
+                ['tag' => 'family_pet', 'source_ids' => ['S424'], 'refs' => ['newfoundland.suitability.petmd_family', 'newfoundland.behaviour.family']],
+                // S424 "Newfies get along well with children" (… "supervise all interactions between small kids and Newfoundlands").
+                ['tag' => 'children', 'source_ids' => ['S424'], 'refs' => ['newfoundland.suitability.petmd_children', 'newfoundland.behaviour.family']],
+                // S424 "good roommates to other dogs and cats".
+                ['tag' => 'other_pets', 'source_ids' => ['S424'], 'refs' => ['newfoundland.behaviour.other_pets', 'newfoundland.suitability.petmd_other_pets']],
+            ],
+            'consider' => [
+                // S423 "Average lifespan: Under 10 years".
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S423'], 'refs' => ['newfoundland.health.shorter_lifespan', 'newfoundland.lifespan.pdsa']],
+                // Welfare rule: S425 Breed Watch point "Conformational defects of the upper and lower eyelids (loose eyelids)".
+                ['tag' => 'eyelid_problems', 'source_ids' => ['S425'], 'refs' => ['newfoundland.health.eyelids', 'newfoundland.health.breed_watch']],
+                // S424 "some may develop separation anxiety when left alone".
+                ['tag' => 'needs_company', 'source_ids' => ['S424'], 'refs' => ['newfoundland.behaviour.time_alone', 'newfoundland.suitability.petmd_time_alone']],
+                // S424 "Newfies shed year-round".
+                ['tag' => 'sheds', 'source_ids' => ['S424'], 'refs' => ['newfoundland.suitability.petmd_shedding']],
+                // S423 "Grooming is a daily task, particularly when shedding."
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S423'], 'refs' => ['newfoundland.suitability.pdsa_grooming']],
+                // S423 "Newfies also tend to drool"; S424 "regularly wipe their Newfie's drool".
+                ['tag' => 'drools', 'source_ids' => ['S423', 'S424'], 'refs' => ['newfoundland.behaviour.drooling', 'newfoundland.suitability.petmd_drooling']],
+            ],
+        ],
+
     ],
 ];

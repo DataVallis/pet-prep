@@ -464,6 +464,14 @@
 | white only (the register portrait). Drooping ears, very dark round eyes with black rims, round black nose, plume
 | over the back. Breed Watch Category 1 (S411) — not a welfare breed. Colour weight unsourced → `verified => false`.
 |
+| Newfoundland (M5-R10-51, docs/research/dog-data newfoundland.appearance): "The Newfoundland is a
+| sweet-dispositioned dog that acts neither dull nor ill-tempered." (AKC S421); large, deep-bodied, muscular;
+| flat, water-resistant double coat; colours black, white and black (Landseer), brown (FCI 50, S420 "Color: Negro,
+| blanco y negro y castaño."; AKC S421 also gray — never in the game, not FCI) — black weighted highest ("the
+| traditional colour", S420; the register portrait). Welfare (Kennel Club Category 2, PDSA S423; Breed Watch point
+| "loose eyelids", S425): small, deep-set eyes with closely fitting eyelids (`eye_color`) and a moderate, deep muzzle
+| (dog trait `muzzle`). Colour weights are unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2287,6 +2295,42 @@ return [
             'nose' => ['round black glossy nose (not short-faced)'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
+    ],
+    // M5-R10-51 (docs/research/dog-data/data.json newfoundland.appearance; runbook rules 2026-10-10:
+    // standard colours shared by FCI and AKC only — black, white and black (Landseer), brown; never gray;
+    // welfare: closely fitting eyelids).
+    'newfoundland' => [
+        'display_name' => 'Newfoundland',
+        // Colour frequencies are in no source (newfoundland.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 50 (S420, Spanish version — the English PDF redirects to itself), AKC standard (S421), PDSA (S423), Kennel Club Breed Health and Conservation Plan (S425) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S423 "Size: Large"; S421 "Average height for adult dogs is 28 inches, for adult bitches 26 inches."',
+            'build' => 'S421 "The Newfoundland is a sweet-dispositioned dog that acts neither dull nor ill-tempered."; S422 large, deep-bodied and muscular (paraphrase)',
+            'coat_length' => 'S421 "The adult Newfoundland has a flat, water-resistant, double coat that tends to fall back into place"',
+            'coat_color' => 'S420 "Color: Negro, blanco y negro y castaño."; S421 "Recognized Newfoundland colors are black, brown, gray, and white and black." (gray AKC only — not used; weights unsourced)',
+            'ear_carriage' => 'S421 "Ears are relatively small and triangular with rounded tips."',
+            'eye_color' => 'S421 "They are relatively small, deep-set, and spaced wide apart."; S425 "Conformational defects of the upper and lower eyelids (loose eyelids)" (welfare: closely fitting eyelids)',
+            'tail' => 'S421 "The tail is broad at the base and strong."; "It has no kinks, and the distal bone reaches to the hock."',
+            'muzzle' => 'S421 "The muzzle is clean-cut, broad throughout its length, and deep."',
+        ],
+        'traits' => [
+            'size' => ['very large, heavy-boned'],
+            'build' => [['value' => 'large, deep-bodied and muscular, heavily boned yet well balanced, with a dignified, gentle bearing', 'weight' => 3], 'massive but balanced, slightly longer than tall, standing calmly'],
+            'coat_length' => ['flat, water-resistant double coat, moderately long and straight with a dense soft undercoat'],
+            // Colours shared by FCI (S420) and AKC (S421); black highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'solid black', 'weight' => 70],
+                ['value' => 'white and black (Landseer): white body with a black head and white blaze, black saddle and black rump', 'weight' => 20],
+                ['value' => 'solid brown (chocolate to bronze)', 'weight' => 10],
+            ],
+            'ear_carriage' => ['relatively small triangular ears with rounded tips, lying close to the head'],
+            // Welfare (Breed Watch point via S425): eyelids in normal contact, no drooping, no haw.
+            'eye_color' => ['dark brown, relatively small, deep-set eyes, wide apart, with closely fitting eyelids (no drooping, no haw)'],
+            'tail' => ['natural tail, broad and strong at the base, hanging straight to the hock'],
+            'muzzle' => ['broad, deep, clean-cut muzzle of moderate length with a black nose and open nostrils, no loose jowls'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

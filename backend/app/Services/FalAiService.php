@@ -444,6 +444,15 @@ class FalAiService
                 .'plumed tail carried gracefully curved over the back, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-51: FCI 50 (S420) / AKC standard (S421) — solid black as the anchor (black, Landseer,
+            // brown); large, deep-bodied but balanced, water-resistant double coat, small deep-set eyes with
+            // closely fitting eyelids (Breed Watch point, S425), broad deep muzzle, natural tail.
+            BreedType::Newfoundland => 'A gentle, dignified Newfoundland dog with a solid black coat, '
+                .'flat, water-resistant, moderately long double coat, large deep-bodied muscular body, heavily boned but balanced, '
+                .'dark brown small deep-set eyes with closely fitting eyelids, broad deep muzzle with a black nose, '
+                .'small triangular ears lying close to the head, natural tail hanging to the hock, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1075,6 +1084,17 @@ class FalAiService
                     2 => 'loose, soft corkscrew curls, neatly scissored',
                 },
                 'markings' => 'black eye rims with dark haloes, plumed tail over the back',
+            ],
+            // M5-R10-51: FCI S420 "Color: Negro, blanco y negro y castaño."; AKC S421 gray — never (not FCI).
+            BreedType::Newfoundland => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'solid black',
+                    1 => 'white and black (Landseer)',
+                    2 => 'solid brown',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'flat, water-resistant, moderately long double coat with a dense undercoat',
+                'markings' => 'closely fitting eyelids, broad deep muzzle',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

@@ -304,6 +304,12 @@ return [
     'bichon_frise' => [
         ['key' => 'white', 'value' => 'pure white', 'en' => 'White', 'sl' => 'Bel'],
     ],
+    // M5-R10-51: FCI S420 "Color: Negro, blanco y negro y castaño." (AKC S421 gray not used).
+    'newfoundland' => [
+        ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'landseer', 'value' => 'white and black (Landseer): white body with a black head and white blaze, black saddle and black rump', 'en' => 'Landseer (white and black)', 'sl' => 'Landseer (belo-črn)'],
+        ['key' => 'brown', 'value' => 'solid brown (chocolate to bronze)', 'en' => 'Brown', 'sl' => 'Rjav'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
