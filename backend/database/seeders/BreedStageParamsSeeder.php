@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -571,6 +571,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_RHODESIAN_RIDGEBACK = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-47)';
 
     /**
+     * M5-R10-48 Papillon (unattended run 2026-10-20, data.json proposed_game_parameters.papillon.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed
+     * on 2026-10-10 — exercise 30 min (RKC S397 "Exercise: Up to 30 minutes per day"), senior 23 min, puppy
+     * 10 min × age capped at 30, stages young 9 / adult 36 / senior 108 (0.75 × RKC lower bound 12 y, S397 —
+     * provisional until McMillan 2024 is checked), arrival 2 / 9 / 36 / 108, learning multiplier 1.8 (Coren
+     * rank 8, Brightest); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_PAPILLON = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-48)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -722,6 +732,7 @@ class BreedStageParamsSeeder extends Seeder
         'mastiff' => [1, 'S370', 'They need grooming just once a week, but their facial wrinkles will need daily cleaning.', 'high', false],
         'shiba_inu' => [1, 'S378', 'Grooming: Once a week', 'high', false],
         'rhodesian_ridgeback' => [1, 'S387', 'Grooming: Once a week', 'high', false],
+        'papillon' => [3, 'S398', 'Grooming is fairly easy and two-three times per week is usually enough to keep the coat in tip-top condition.', 'medium', false],
     ];
 
     /**
@@ -811,13 +822,14 @@ class BreedStageParamsSeeder extends Seeder
         'mastiff' => ['S370', 'As with all breeds, early socialisation is important to ensure they grow up into confident, sociable dogs.'],
         'shiba_inu' => ['S381', 'Shiba Inu can thrive with proper socialization and desensitization when they are puppies.'],
         'rhodesian_ridgeback' => ['S390', 'It’s important to socialise them from a young age with different people, dogs and experiences'],
+        'papillon' => ['S398', 'Training, along with socialisation, is very important at a young age'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1445,6 +1457,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-47 (docs/research/dog-data/data.json rhodesian_ridgeback,
             // S384–S394; runbook rules in proposed_game_parameters.rhodesian_ridgeback).
             BreedType::RhodesianRidgeback => self::rhodesianRidgebackProfile(),
+            // M5-R10-48 (docs/research/dog-data/data.json papillon,
+            // S395–S401; runbook rules in proposed_game_parameters.papillon).
+            BreedType::Papillon => self::papillonProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -4594,6 +4609,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'rhodesian_ridgeback.lifespan.rkc',
                 'quote' => 'Lifespan: Over 10 years',
                 'notes' => 'RKC breed page lower bound (S387); PDSA "Over 10 years" (S390), PetMD 10–12 y (S391) and Woodgreen 10–13 y (S392) agree. McMillan 2024 12 y only via Wikipedia (S394, tier C) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Papillon (M5-R10-48). Stage boundaries, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_PAPILLON); weight, growth, Coren rank and lifespan
+     * are sourced. The senior boundary uses the RKC lower bound (no McMillan 2024 / VetCompass median
+     * reachable) — provisional, like the Maltese.
+     *
+     * @return array<string, mixed>
+     */
+    private static function papillonProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_PAPILLON;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S397', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.papillon.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a toy dog finishes growing at 8–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S397) = 9 y = 108 months (PDSA "Over 12 years", S398, agrees). No McMillan 2024 / VetCompass median was reachable (McMillan 2024 14.5 y only via Wikipedia, S401, tier C → 131; PetMD 14–16 y, S400 → 126; alternatives only). Not chosen: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.papillon.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (8–12 months for a toy dog, S10); capped at the adult 30 minutes, which 10 × age already reaches at 3 months, so the whole young stage walks the adult minutes.',
+            'adult_minutes' => [30, [
+                'unit' => 'minutes/day', 'source_id' => 'S397', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.papillon.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 30 minutes per day',
+                'notes' => 'RKC "Up to 30 minutes per day" (S397) → 30 min = 3,000 steps (runbook rule: "up to N" → N). PDSA (S398) "Around 30 minutes exercise daily is usually sufficient" gives the same number.',
+            ]],
+            'senior_minutes' => [23, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.papillon.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 30 minutes = 22.5 → 23 min (half up) = 2,300 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[1.5, 5.0], [
+                'unit' => 'kg', 'source_id' => 'S396', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'papillon.adult_weight.fci',
+                'quote' => 'From 2,5 kg to 4,5 kg for dogs,',
+                'notes' => 'FCI standard (S396), two weight categories: under 2.5 kg (minimum 1.5 kg) and 2.5–4.5 kg for dogs / 2.5–5 kg for bitches → 1.5–5 kg for the game. PDSA (S398) "2-4 kg" and PetMD (S400) 5–10 lb are alternatives only.',
+            ]],
+            'growth_end' => [[8, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'papillon.growth.adult_weight_reached',
+                'quote' => 'Toy (5–12 pounds): 8–12 months',
+                'notes' => 'Size-class value, not breed-specific (FCI 1.5–5 kg ≈ 3.3–11 lb, the Toy class of S10; RKC size "Small", S397).',
+            ]],
+            'coren_rank' => [8, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'papillon.trainability.coren_rank',
+                'quote' => 'Papillon',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 8 "Papillon" (not shared), tier "Brightest Dogs" (ranks 1–10); Wikipedia "Papillon dog" (S401) agrees.',
+            ]],
+            'learning_multiplier' => [1.8, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.papillon.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 8 (S35) in the "Brightest" tier (ranks 1–10) → max(1.8, round(2.0 − 7 / 30, 1)) = 1.8. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S397', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'papillon.lifespan.rkc',
+                'quote' => 'Lifespan: Over 12 years',
+                'notes' => 'RKC breed page lower bound (S397); PDSA "Over 12 years" (S398) agrees. McMillan 2024 14.5 y only via Wikipedia (S401, tier C) and PetMD 14–16 y (S400) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

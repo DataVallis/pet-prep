@@ -284,6 +284,14 @@ return [
         ['key' => 'red-wheaten', 'value' => 'red wheaten, uniform colour, at most a little white on the chest and toes', 'en' => 'Red wheaten', 'sl' => 'Rdeče pšenični'],
         ['key' => 'light-wheaten', 'value' => 'light wheaten, uniform colour, at most a little white on the chest and toes', 'en' => 'Light wheaten', 'sl' => 'Svetlo pšenični'],
     ],
+    // M5-R10-48: FCI S396 "All colours are admitted on a coat with a white background." / AKC-approved S399 "white with patches of any color(s)" (red = portrait).
+    'papillon' => [
+        ['key' => 'red-white', 'value' => 'white with red patches, colour covering both ears and over both eyes, white blaze', 'en' => 'White and red', 'sl' => 'Belo-rdeč'],
+        ['key' => 'sable-white', 'value' => 'white with sable patches, colour covering both ears and over both eyes, white blaze', 'en' => 'White and sable', 'sl' => 'Belo-sobolj'],
+        ['key' => 'tricolour', 'value' => 'tricolour: white with black patches and tan markings, colour covering both ears and over both eyes, white blaze', 'en' => 'Tricolour', 'sl' => 'Tribarven'],
+        ['key' => 'black-white', 'value' => 'white with black patches, colour covering both ears and over both eyes, white blaze', 'en' => 'White and black', 'sl' => 'Belo-črn'],
+        ['key' => 'lemon-white', 'value' => 'white with lemon patches, colour covering both ears and over both eyes, white blaze', 'en' => 'White and lemon', 'sl' => 'Belo-limonast'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -51,6 +51,7 @@ return [
     'mastiff' => 'Mastiff',
     'shiba_inu' => 'Shiba Inu',
     'rhodesian_ridgeback' => 'Rhodesian Ridgeback',
+    'papillon' => 'Papillon',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',
