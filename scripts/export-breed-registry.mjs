@@ -420,6 +420,7 @@ const SPECIES = [
       { id: 'mastiff', synonyms: { en: ['English Mastiff', 'Old English Mastiff'], sl: ['mastif', 'mastiff'] } },
       { id: 'shiba_inu', synonyms: { en: ['Japanese Shiba Inu', 'Shiba', 'Shiba Ken'], sl: ['shiba inu', 'japonski šiba inu', 'šiba'] } },
       { id: 'rhodesian_ridgeback', synonyms: { en: ['Ridgeback', 'African Lion Dog'], sl: ['rodezijski', 'ridgeback'] } },
+      { id: 'papillon', synonyms: { en: ['Continental Toy Spaniel', 'Phalène', 'Butterfly Dog'], sl: ['kontinentalni pritlikavi španjel', 'papillon', 'falen'] } },
     ],
   },
   {
@@ -444,7 +445,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -1381,6 +1382,32 @@ const DOG_FACTS = {
       ['hypothyroidism', 'health.hypothyroidism'],
     ],
   },
+  // M5-R10-48. Height = FCI 77 (S396, 'about 28 cm'), weight = the FCI span of both weight categories (S396),
+  // lifespan = the RKC band "Over 12 years" (S397; no McMillan 2024 / VetCompass median reachable), exercise =
+  // RKC "Up to 30 minutes per day" (S397). New FCI origin 'Belgium / France' (BE-FR — the nomenclature names both,
+  // S395). Not exported: height.akc / pdsa and adult_weight.pdsa / akc (alternatives), adult_weight.salt_category
+  // (our assignment), lifespan.pdsa / petmd (same band / US alternative), lifespan.mcmillan_2024 (Wikipedia, tier C),
+  // lifespan.senior_from (derived), suitability.petmd_teeth / petmd_ears / petmd_nails care needs (open for David:
+  // M5-R15 / M5-R20 / M5-R19). New health keys: open_fontanelle, collapsing_trachea.
+  papillon: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.patella'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['bleeding_disorder_vwd', 'health.vwd'],
+      ['cataracts', 'health.cataracts'],
+      ['open_fontanelle', 'health.open_fontanelle'],
+      ['collapsing_trachea', 'health.trachea'],
+      ['periodontal_daily_brushing', 'health.dental'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1734,6 +1761,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.rhodesian_ridgeback.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.rhodesian_ridgeback.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.rhodesian_ridgeback.exercise_minutes_senior',
+  },
+  papillon: {
+    adult_minutes: ['proposed_game_parameters.papillon.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.papillon.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.papillon.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.papillon.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.papillon.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.papillon.exercise_minutes_senior',
   },
 };
 
