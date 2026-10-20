@@ -12,6 +12,7 @@
 | Sprožilec | Ukrep |
 |---|---|
 | ✅ Pred zaprto beto (M4-05b) | **Caddy streže medije neposredno** z lokalnega diska (X-Accel-Redirect, Range / ETag), statične datoteke z dolgim predpomnjenjem — prenos videa ne zasede PHP. *Narejeno v kodi 2026-10-05.* |
+| ✅ 2026-10-20 (David) | **Telefon hrani kopijo medijev:** aplikacija vsak video / sliko prenese enkrat in ga predvaja s telefona (ime po datoteki, ne po podpisanem URL-ju), zato ponovni podpisi (~30 min) ne pomenijo novega prenosa; največ 300 MB na telefonu, ob odjavi se pobriše. Manj prometa na strežniku in kasneje na CDN-ju. |
 | Disk > 60 % ali > 1.000 psov | **Hetzner Object Storage** (S3, ~5 €/mes za 1 TB) za `pet_media`; podpisani URL-ji iz shrambe namesto prek API-ja (`PetMediaController` že zna preklopiti na PHP za ne-lokalni disk; za S3 se doda preusmeritev na podpisan URL). |
 | Uporabniki izven srednje Evrope ali > 5.000 družin | **CDN** pred shrambo (Bunny CDN ali Cloudflare), dolgi cache headerji (datoteke se ne spreminjajo), podpisani CDN URL-ji. |
 | Napadi / sumljiv promet | Cloudflare (DDoS, WAF) pred `api.petprep.si`; rate limit na robu. Tudi **omejitev hkratnih povezav na IP** za medije (zdaj je le `throttle:media` 240/min v Laravelu). |

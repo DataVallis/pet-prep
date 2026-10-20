@@ -29,7 +29,8 @@ import { PawPrint } from 'lucide-react-native';
 import { useVideoPlayer, VideoView, type StatusChangeEventPayload, type VideoPlayerStatus } from 'expo-video';
 
 import type { LockReason } from '@/modules/childPet/childPetView';
-import { useAppActive, useStableUrl } from '@/modules/petMedia/hooks';
+import { useAppActive, useLocalMediaUri, useStableUrl } from '@/modules/petMedia/hooks';
+import { forgetLocalMedia, isLocalMediaUri, localMediaUri } from '@/modules/petMedia/mediaFileCache';
 import {
   NO_VIDEO_ERRORS,
   canPlayUrl,
@@ -146,7 +147,13 @@ interface VideoLayerProps {
 
 /** One player + view. The source is fixed for the layer's life (no restart on re-sign). */
 const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, onReady, onError, testID }: VideoLayerProps) {
-  const [source] = useState(() => ({ uri: url, useCaching: true }));
+  // David 2026-10-20: the phone's copy of the file when there is one (survives re-signed
+  // URLs); otherwise the remote URL with expo-video's cache, and a copy is made for next time.
+  const [source] = useState(() => {
+    const uri = localMediaUri(url, 'video') ?? url;
+    return isLocalMediaUri(uri) ? { uri } : { uri, useCaching: true };
+  });
+  const localSource = isLocalMediaUri(source.uri);
   const player = useVideoPlayer(source, (p) => {
     p.loop = true;
     p.muted = true;
@@ -162,7 +169,11 @@ const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, onReady
   useEffect(() => {
     let fallback: ReturnType<typeof setTimeout> | null = null;
     const handle = (status: VideoPlayerStatus) => {
-      if (status === 'error') onError(id);
+      if (status === 'error') {
+        // A broken local copy is deleted; the normal retry then plays the remote URL.
+        if (localSource) forgetLocalMedia(url, 'video');
+        onError(id);
+      }
       else if (status === 'readyToPlay' && fallback === null) {
         fallback = setTimeout(() => onReady(id), READY_FALLBACK_MS);
       }
@@ -174,7 +185,7 @@ const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, onReady
       sub.remove();
       if (fallback !== null) clearTimeout(fallback);
     };
-  }, [player, id, onReady, onError]);
+  }, [player, id, onReady, onError, localSource, url]);
 
   const onFirstFrameRender = useCallback(() => onReady(id), [onReady, id]);
 
@@ -259,6 +270,10 @@ export default function PetMediaView({
     });
   }, [media, wanted, errors, clock, petState]);
   const image = useStableUrl(media.referenceImageUrl);
+  const localImage = useLocalMediaUri(image.uri, 'image');
+  const onImageError = useCallback(() => {
+    if (!localImage.onLocalError()) image.onError();
+  }, [localImage, image]);
 
   const targetVideoState = target.kind === 'video' ? target.state : null;
   const videoStateRef = useRef(onVideoStateChange);
@@ -408,9 +423,9 @@ export default function PetMediaView({
     >
       {showImage ? (
         <Image
-          source={{ uri: image.uri ?? undefined }}
+          source={{ uri: localImage.uri ?? undefined }}
           resizeMode="cover"
-          onError={image.onError}
+          onError={onImageError}
           style={StyleSheet.absoluteFill}
           testID={`${testID}-image`}
         />

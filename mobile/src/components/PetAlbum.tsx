@@ -63,7 +63,8 @@ import {
   type AlbumItem,
   type PlayableAlbumItem,
 } from '@/modules/petMedia/album';
-import { useAppActive, useStableUrl } from '@/modules/petMedia/hooks';
+import { useAppActive, useLocalMediaUri, useStableUrl } from '@/modules/petMedia/hooks';
+import { isLocalMediaUri } from '@/modules/petMedia/mediaFileCache';
 import { GROWTH_STRINGS, growthViewerItems, hasGrowthSection, type GrowthAlbum, type GrowthViewerItem } from '@/modules/petMedia/growth';
 import { mediaKey, type PetMediaInfo } from '@/modules/petMedia/petMedia';
 import { alpha, fonts, palette, tightTracking } from '@/theme';
@@ -150,12 +151,14 @@ function AlbumImage({
   onRetry?: () => void;
 }) {
   const image = useStableUrl(url);
+  const local = useLocalMediaUri(image.uri, 'image');
   const onError = () => {
+    if (local.onLocalError()) return; // broken phone copy → the remote URL
     image.onError();
     onExpired(url);
   };
-  if (image.uri === null) return <Unavailable testID={`${testID}-unavailable`} onRetry={onRetry} />;
-  return <Image source={{ uri: image.uri }} resizeMode={fit} onError={onError} style={StyleSheet.absoluteFill} testID={testID} />;
+  if (local.uri === null) return <Unavailable testID={`${testID}-unavailable`} onRetry={onRetry} />;
+  return <Image source={{ uri: local.uri }} resizeMode={fit} onError={onError} style={StyleSheet.absoluteFill} testID={testID} />;
 }
 
 /** The one video player of the album. Keyed by media by the caller → a new item = a new player. */
@@ -175,7 +178,12 @@ function AlbumVideo({
 }) {
   const appActive = useAppActive();
   const stable = useStableUrl(url);
-  const source = useMemo(() => (stable.uri ? { uri: stable.uri, useCaching: true } : null), [stable.uri]);
+  // David 2026-10-20: the phone's copy when there is one (survives re-signed URLs).
+  const local = useLocalMediaUri(stable.uri, 'video');
+  const source = useMemo(
+    () => (local.uri === null ? null : isLocalMediaUri(local.uri) ? { uri: local.uri } : { uri: local.uri, useCaching: true }),
+    [local.uri],
+  );
   const player = useVideoPlayer(source, (p) => {
     p.loop = true;
     p.muted = true;
@@ -203,18 +211,20 @@ function AlbumVideo({
   }, [sourceUri]);
 
   const onStableError = stable.onError;
+  const onLocalError = local.onLocalError;
   useEffect(() => {
     if (source === null) return;
     const handle = (status: StatusChangeEventPayload['status']) => {
       if (status === 'readyToPlay') setReady(true);
       if (status !== 'error') return;
+      if (onLocalError()) return; // broken phone copy → the remote URL
       onStableError();
       onExpired(source.uri);
     };
     const sub = player.addListener('statusChange', (payload: StatusChangeEventPayload) => handle(payload.status));
     handle(player.status);
     return () => sub.remove();
-  }, [player, source, onStableError, onExpired]);
+  }, [player, source, onStableError, onLocalError, onExpired]);
 
   if (source === null) return <Unavailable testID="album-video-unavailable" onRetry={onRetry} />;
   return (
@@ -257,7 +267,9 @@ export function TileBackdrop({
   onExpired?: (url: string) => void;
   testID: string;
 }) {
-  const image = useStableUrl(url);
+  const stable = useStableUrl(url);
+  const local = useLocalMediaUri(stable.uri, 'image');
+  const image = { uri: local.uri };
   const [loadedUri, setLoadedUri] = useState<string | null>(null);
   const loaded = image.uri !== null && loadedUri === image.uri;
   const Icon = kind === 'video' ? VideoIcon : ImageIcon;
@@ -276,7 +288,8 @@ export function TileBackdrop({
           resizeMode={fit}
           onLoad={() => setLoadedUri(image.uri)}
           onError={() => {
-            image.onError();
+            if (local.onLocalError()) return; // broken phone copy → the remote URL
+            stable.onError();
             if (url !== null) onExpired?.(url);
           }}
           style={StyleSheet.absoluteFill}

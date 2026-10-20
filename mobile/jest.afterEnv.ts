@@ -5,10 +5,13 @@
  */
 import { channelAuthGate, childPetFetchGate } from '@/modules/childPet/refetchGovernor';
 import { useServerStatusStore } from '@/store/serverStatusStore';
+import { setMediaFileStoreForTests } from '@/modules/petMedia/mediaFileCache';
 
 beforeEach(() => {
   childPetFetchGate.reset();
   channelAuthGate.reset();
   // M5-F13: the "server is updating" banner state is a module singleton too.
   useServerStatusStore.getState().reset();
+  // Local media copies (2026-10-20): off by default (remote URLs); tests opt in with a fake store.
+  setMediaFileStoreForTests(null);
 });
