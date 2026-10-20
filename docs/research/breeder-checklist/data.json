@@ -1894,6 +1894,37 @@
         }
       ],
       "notes": "RKC Health Standard (dog-data S263, re-read 2026-10-19): the Rhodesian Ridgeback row lists no Good Practice (= minimum) and no Best Practice test; the breed club health schemes table lists 'Dermoid sinus testing'. The RKC breed pages (S386, S387) show the Good / Best Practice headings without tests (S387 mentions a breed club health scheme and a breed-specific DNA testing package — tool summary). PDSA (S390): hip and elbow x-ray screening before breeding, DNA test of the parents for juvenile myoclonic epilepsy, and 'Puppies should be assessed by a vet prior to sale for this condition.' (dermoid sinus). RKC media centre (K25): official DNA testing scheme for degenerative myelopathy. All five are 'other_scheme' (none is in the RKC Good / Best Practice lists). New test keys dermoid_sinus_scheme and dna_jme need website words."
+    },
+    "papillon": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K26",
+        "quote": "DNA test - Pap-PRA1 (Progressive retinal atrophy - Papillons)"
+      },
+      "tests": [
+        {
+          "key": "dna_pap_pra1",
+          "level": "other_scheme",
+          "name": "DNA test for progressive retinal atrophy in Papillons (Pap-PRA1)",
+          "source_id": "K26",
+          "quote": "DNA test - Pap-PRA1 (Progressive retinal atrophy - Papillons)"
+        },
+        {
+          "key": "dna_vwd1",
+          "level": "other_scheme",
+          "name": "DNA test for von Willebrand disease type 1 (vWD1)",
+          "source_id": "K27",
+          "quote": "vWD 1 (von Willebrand disease type 1)"
+        },
+        {
+          "key": "dna_nad",
+          "level": "other_scheme",
+          "name": "DNA test for neuroaxonal dystrophy (NAD)",
+          "source_id": "K27",
+          "quote": "NAD (Neuroaxonal dystrophy)"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S397, 2026-10-20) shows the Good Practice / Best Practice headings without listing tests and links to a breed-specific DNA testing package. The RKC Health Standard (S263) was refused by the fetch tool (provenance). RKC DNA test page (K26): Pap-PRA1, a form of PRA described as unique to the breed (PDSA S398 and PetMD S400 list PRA). RKC breed-specific DNA testing package for the Papillon (K27): NAD, Pap-PRA1, vWD 1 (+ DNA profile). All three are 'other_scheme' (none is in an RKC Good / Best Practice list). New test keys dna_pap_pra1 and dna_nad need website words."
     }
   }
 }
