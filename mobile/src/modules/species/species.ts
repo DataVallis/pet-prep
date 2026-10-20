@@ -67,6 +67,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   papillon: 'dog',
   portuguese_water_dog: 'dog',
   bichon_frise: 'dog',
+  newfoundland: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -138,6 +139,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'papillon',
   'portuguese_water_dog',
   'bichon_frise',
+  'newfoundland',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
