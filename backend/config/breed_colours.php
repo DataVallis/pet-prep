@@ -292,6 +292,14 @@ return [
         ['key' => 'black-white', 'value' => 'white with black patches, colour covering both ears and over both eyes, white blaze', 'en' => 'White and black', 'sl' => 'Belo-črn'],
         ['key' => 'lemon-white', 'value' => 'white with lemon patches, colour covering both ears and over both eyes, white blaze', 'en' => 'White and lemon', 'sl' => 'Belo-limonast'],
     ],
+    // M5-R10-49: RKC standard S403 "Black, white, various shades of brown, black and white, brown and white." (black = portrait).
+    'portuguese_water_dog' => [
+        ['key' => 'black', 'value' => 'solid black with a black nose', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'black-white', 'value' => 'black with white on the chin, chest and feet, black nose', 'en' => 'Black and white', 'sl' => 'Črno-bel'],
+        ['key' => 'brown', 'value' => 'brown with a liver nose', 'en' => 'Brown', 'sl' => 'Rjav'],
+        ['key' => 'brown-white', 'value' => 'brown with white on the chin, chest and feet, liver nose', 'en' => 'Brown and white', 'sl' => 'Rjavo-bel'],
+        ['key' => 'white', 'value' => 'white with a black nose', 'en' => 'White', 'sl' => 'Bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -450,6 +450,14 @@
 | (the register portrait). Never all white or without white (AKC disqualification). Breed Watch Category 1
 | (S397) — not a welfare breed. Colour weights are unsourced → `verified => false`.
 |
+| Portuguese Water Dog (M5-R10-49, docs/research/dog-data portuguese_water_dog.appearance): "Robust, well balanced,
+| of almost square shape, very strongly muscled on shoulders." (RKC breed standard, S403 — the FCI 37 PDF was not
+| reachable); profuse single coat without undercoat, curly or loosely waved, in the standard's clip (muzzle and
+| hindquarters clipped — the lion clip; dog trait `clip`). Colours "Black, white, various shades of brown, black and
+| white, brown and white." / "Any other colour or combination of colours unacceptable." (S403); black weighted
+| highest (the register portrait). Breed Watch Category 1 (S404) — not a welfare breed. Colour weights are
+| unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2202,6 +2210,43 @@ return [
             'nose' => ['small black rounded nose (not short-faced)'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
+    ],
+
+    // M5-R10-49 (docs/research/dog-data/data.json portuguese_water_dog.appearance; runbook rules 2026-10-10:
+    // standard colours only — black, white, brown, black and white, brown and white).
+    'portuguese_water_dog' => [
+        'display_name' => 'Portuguese Water Dog',
+        // Colour frequencies are in no source (portuguese_water_dog.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'RKC breed standard (S403), RKC breed page (S404) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S404 "Size: Medium"; S403 "Height: dogs: 50-57 cms (19½-22½ ins)" "bitches: 43-52 cms (17-20½ ins)"',
+            'build' => 'S403 "Robust, well balanced, of almost square shape, very strongly muscled on shoulders."',
+            'coat_length' => 'S403 "Profuse, covering whole body except under forelegs and thigh." (two coat types without undercoat — paraphrase)',
+            'clip' => 'S403 coat section: muzzle and hindquarters from the last rib clipped, two-thirds of the tail clipped (paraphrase); S404 the traditional lion trim (paraphrase)',
+            'coat_color' => 'S403 "Black, white, various shades of brown, black and white, brown and white." "Any other colour or combination of colours unacceptable." (weights unsourced; nose black or liver with the coat colour — paraphrase)',
+            'ear_carriage' => 'S403 "Heart shaped, dropped, thin, set well above eye level, held close to head, except at back."',
+            'eye_color' => 'S403 "Medium, round, set well apart. Black or dark brown with dark eye rims."',
+            'tail' => 'S403 "The tail is a distinct feature of the breed and should be medium set, thick at base and tapering." (carried in a ring when alert — paraphrase)',
+        ],
+        'traits' => [
+            'size' => ['medium-sized'],
+            'build' => [['value' => 'robust, well-balanced, almost square, strongly muscled shoulders', 'weight' => 3], 'sturdy and athletic working water dog, almost square'],
+            'coat_length' => [['value' => 'profuse single coat of compact curls without undercoat', 'weight' => 3], 'profuse single coat, fairly long and loosely waved with a slight sheen, without undercoat'],
+            'clip' => ['traditional lion clip: full coat over the front half of the body, muzzle and hindquarters clipped short, plume left at the tip of the tail'],
+            // Standard: black, white, various shades of brown, black and white, brown and white (S403); black highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'solid black with a black nose', 'weight' => 35],
+                ['value' => 'black with white on the chin, chest and feet, black nose', 'weight' => 25],
+                ['value' => 'brown with a liver nose', 'weight' => 20],
+                ['value' => 'brown with white on the chin, chest and feet, liver nose', 'weight' => 12],
+                ['value' => 'white with a black nose', 'weight' => 8],
+            ],
+            'ear_carriage' => ['heart-shaped, thin drop ears set well above eye level, held close to the head'],
+            'eye_color' => ['dark brown, round, set well apart, with dark eye rims'],
+            'tail' => ['medium set, thick at the base and tapering, carried in a ring when alert, with a plume at the tip'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'clip', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

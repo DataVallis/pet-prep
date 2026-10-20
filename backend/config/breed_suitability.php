@@ -1300,5 +1300,27 @@ return [
             ],
         ],
 
+        // M5-R10-49: portuguese_water_dog.* (S402–S408), runbook rules (data.json
+        // proposed_game_parameters.portuguese_water_dog.suitability_tags). RKC (S404) + PDSA (S405) + PetMD (S407).
+        // RKC Breed Watch Category 1 (S404) → no welfare chip. low_shedding from RKC "Sheds: No" — never hypoallergenic.
+        'portuguese_water_dog' => [
+            'suits' => [
+                // S405 "Portuguese Water Dogs are very friendly, loving dogs that get on well with other pets and make excellent family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S405'], 'refs' => ['portuguese_water_dog.behaviour.family', 'portuguese_water_dog.suitability.pdsa_family']],
+                // S407 "A Portuguese Water Dog can make a great family pet that can be around children and other animals." (caveat: VCA S406 older kids).
+                ['tag' => 'children', 'source_ids' => ['S407'], 'refs' => ['portuguese_water_dog.behaviour.children', 'portuguese_water_dog.suitability.petmd_children']],
+                // S404 "Size of home: Large house".
+                ['tag' => 'large_home', 'source_ids' => ['S404'], 'refs' => ['portuguese_water_dog.suitability.rkc_size_of_home']],
+                // S405 the same sentence ("get on well with other pets").
+                ['tag' => 'other_pets', 'source_ids' => ['S405'], 'refs' => ['portuguese_water_dog.behaviour.other_pets', 'portuguese_water_dog.suitability.pdsa_other_pets']],
+                // S404 "Sheds: No".
+                ['tag' => 'low_shedding', 'source_ids' => ['S404'], 'refs' => ['portuguese_water_dog.suitability.rkc_shedding']],
+            ],
+            'consider' => [
+                // S404 "Grooming: Every day"; S405 "Grooming is a daily requirement …".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S404', 'S405'], 'refs' => ['portuguese_water_dog.suitability.rkc_grooming', 'portuguese_water_dog.suitability.pdsa_grooming']],
+            ],
+        ],
+
     ],
 ];
