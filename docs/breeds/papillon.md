@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `papillon` (viri S395–S401; ponovno S8, S10, S11, S14, S24, S35, S45, S174); preverjanje vzreditelja K26, K27 |
 | Izvor | FCI št. 77 (kontinentalni pritlikavi španjel, različici papijon — pokončna ušesa — in falen — povešena ušesa), skupina 9, sekcija 9, Belgija / Francija (S395, S396); igra gradi papijona s pokončnimi ušesi |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 44. mesto »Papillon« (S174) |
-| PR-ji | pet-prep #288 (pasma, združen `75652ff`) · portret #289 (2026-10-20) · spletna stran (sledi) |
+| PR-ji | pet-prep #288 (pasma, združen `75652ff`) · portret #289 (2026-10-20) · spletna stran #78 (2026-10-20) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -39,7 +39,7 @@
 | Česanje 3× na teden (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-20 |
 | Barva (izbirnik barve, pet barv standarda — vse bele z lisami) | 🛠 | 💶 izziv | M5-R21 | 2026-10-20 |
 | AI portret v registru (sprejet v prvem poskusu; bela z rdečimi lisami, pokončna metuljeva ušesa, bela lisa po sredini glave) | ✅ | — | M5-R11-04 | 2026-10-20 |
-| Stran na petprep.si (`/animals/dogs/papillon`, `/sl/zivali/psi/papijon`) | 🗓 šele s portretom; nato »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| Stran na petprep.si (`/animals/dogs/papillon`, `/sl/zivali/psi/papijon`) s portretom | ✅ objavljena kot »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | 2026-10-20 |
 
 ## Zgodba (v slogu BUILD_LOG)
 
