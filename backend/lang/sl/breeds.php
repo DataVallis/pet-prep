@@ -50,6 +50,7 @@ return [
     'rough_collie' => 'Dolgodlaki škotski ovčar',
     'mastiff' => 'Angleški mastif',
     'shiba_inu' => 'Šiba inu',
+    'rhodesian_ridgeback' => 'Rodezijski ridgeback',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

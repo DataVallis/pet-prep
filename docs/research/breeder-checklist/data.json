@@ -1847,6 +1847,53 @@
         }
       ],
       "notes": "RKC breed page (older address, dog-data S379, 2026-10-19): Good Practice (= minimum) lists no test for this breed; Best Practice: the BVA/KC hip scheme and two DNA tests recognised in February 2025 — GM1 and GM2 gangliosidosis — applied under the Best Practice guidelines from December 2025 (tool summary). The Breeds A–Z address (S378) showed the 'Priority' / 'Important' headings without items. New test keys dna_gm1 and dna_gm2 need website words."
+    },
+    "rhodesian_ridgeback": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S263",
+        "level_quotes": {
+          "minimum": "Breeders should, at a minimum, conduct these tests before breeding,"
+        }
+      },
+      "tests": [
+        {
+          "key": "dermoid_sinus_scheme",
+          "level": "other_scheme",
+          "name": "Dermoid sinus testing (breed club health scheme); puppies assessed by a vet before sale",
+          "source_id": "S263",
+          "quote": "Dermoid sinus testing"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip x-ray screening through the BVA/Kennel Club Hip Dysplasia Scheme",
+          "source_id": "S390",
+          "quote": "Before breeding, dogs should be screened by x-rays through the BVA/Kennel Club Hip Dysplasia Scheme."
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "other_scheme",
+          "name": "Elbow x-ray screening through the BVA/Kennel Club Elbow Dysplasia Scheme",
+          "source_id": "S390",
+          "quote": "Before breeding, dogs should be screened by x-rays through the BVA/Kennel Club Elbow Dysplasia Scheme."
+        },
+        {
+          "key": "dna_jme",
+          "level": "other_scheme",
+          "name": "DNA test of the parents for juvenile myoclonic epilepsy (JME)",
+          "source_id": "S390",
+          "quote": "Parents should be DNA tested prior to mating."
+        },
+        {
+          "key": "dna_dm",
+          "level": "other_scheme",
+          "name": "DNA test for degenerative myelopathy (DM) — official Kennel Club DNA testing scheme",
+          "source_id": "K25",
+          "quote": "The Kennel Club has approved a new official DNA testing scheme for degenerative myelopathy (DM) in the Rhodesian Ridgeback."
+        }
+      ],
+      "notes": "RKC Health Standard (dog-data S263, re-read 2026-10-19): the Rhodesian Ridgeback row lists no Good Practice (= minimum) and no Best Practice test; the breed club health schemes table lists 'Dermoid sinus testing'. The RKC breed pages (S386, S387) show the Good / Best Practice headings without tests (S387 mentions a breed club health scheme and a breed-specific DNA testing package — tool summary). PDSA (S390): hip and elbow x-ray screening before breeding, DNA test of the parents for juvenile myoclonic epilepsy, and 'Puppies should be assessed by a vet prior to sale for this condition.' (dermoid sinus). RKC media centre (K25): official DNA testing scheme for degenerative myelopathy. All five are 'other_scheme' (none is in the RKC Good / Best Practice lists). New test keys dermoid_sinus_scheme and dna_jme need website words."
     }
   }
 }

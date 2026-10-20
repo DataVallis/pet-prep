@@ -431,6 +431,16 @@
 | highest (the register portrait). Never cream, white or pinto (AKC serious fault). Breed Watch Category 1
 | (S378) — not a welfare breed. Colour weights are unsourced → `verified => false`.
 |
+| Rhodesian Ridgeback (M5-R10-47, docs/research/dog-data rhodesian_ridgeback.appearance): "should represent a
+| well balanced, strong, muscular, agile and active dog," (FCI 146, S385); "A distinctive feature is the ridge on
+| the back formed by hair growing in opposite direction to the remainder of coat." (RKC standard, S388) — the
+| ridge (with two identical crowns) is the dog trait `ridge`, always visible (ridgeless = disqualification).
+| Coat "short and dense, sleek and glossy"; colours "Light wheaten to red wheaten." (FCI S385, RKC S388, AKC
+| S389) — red wheaten weighted highest (the register portrait), then light wheaten. Never black, black and
+| tan, brindle or ridgeless. Nose black with dark eyes (the portrait) — the standards also allow a brown nose
+| with amber eyes. Breed Watch Category 1 (S387) — not a welfare breed. Colour weights are unsourced →
+| `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2110,6 +2120,42 @@ return [
             'tail' => ['thick tail set high and carried curled over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+
+    // M5-R10-47 (docs/research/dog-data/data.json rhodesian_ridgeback.appearance; runbook rules 2026-10-10:
+    // standard colours only — light wheaten to red wheaten; the ridge always visible; natural ears and tail).
+    'rhodesian_ridgeback' => [
+        'display_name' => 'Rhodesian Ridgeback',
+        // Colour frequencies are in no source (rhodesian_ridgeback.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 146 (S385), RKC standard (S388), AKC standard (S389), RKC breed page (S387) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S387 "Size: Large"; S385 "Height at the withers: Males: 63 cm to 69 cm"',
+            'build' => 'S385 "should represent a well balanced, strong, muscular, agile and active dog," "with no tendency towards massiveness."',
+            'coat_length' => 'S385 "Should be short and dense, sleek and glossy in appearance, but neither woolly nor silky."',
+            'coat_color' => 'S385 "Light wheaten to red wheaten."; S388 "Head, body, legs and tail of uniform colour." "Little white on chest and toes permissible" (weights unsourced; never black, black and tan or brindle)',
+            'ear_carriage' => 'S385 "Should be set rather high, of medium size, rather wide at base, and gradually tapering to a rounded point." "They should be carried close to the head."',
+            'eye_color' => 'S385 "Should be moderately well apart, round, bright and sparkling, with intelligent expression," "A black nose should be accompanied by dark eyes"',
+            'tail' => 'S385 "should be carried with a slight curve upwards, never curled." "It should be of moderate length."',
+            'nose' => 'S385 "The nose should be black or brown." "A black nose should be accompanied by dark eyes, a brown nose by amber eyes." (portrait: black nose, the first-named option)',
+            'ridge' => 'S388 "A distinctive feature is the ridge on the back formed by hair growing in opposite direction to the remainder of coat."; "Ridge clearly defined, tapering and symmetrical, starting immediately behind shoulders and continuing to haunch,"; "and containing two identical crowns only, opposite each other,"; S385 "Dogs without ridge." (disqualifying)',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'well balanced, strong, muscular, agile and athletic hound, elegant and never massive', 'weight' => 3], 'lean, athletic hound with a deep chest, standing alert'],
+            'coat_length' => ['short, dense, sleek and glossy'],
+            // Standard colours only (S385, S388, S389); red wheaten highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'red wheaten, uniform colour, at most a little white on the chest and toes', 'weight' => 60],
+                ['value' => 'light wheaten, uniform colour, at most a little white on the chest and toes', 'weight' => 40],
+            ],
+            'ear_carriage' => ['medium-sized, set rather high, wide at the base and tapering to a rounded point, carried close to the head'],
+            'eye_color' => ['round, bright, dark'],
+            'tail' => ['strong, tapering, moderate-length, carried with a slight upward curve and never curled'],
+            'nose' => ['black nose'],
+            'ridge' => ['clearly defined ridge of hair growing in the opposite direction along the spine, from just behind the shoulders to the haunch, with two identical crowns opposite each other'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose', 'ridge'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

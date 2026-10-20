@@ -279,6 +279,11 @@ return [
         ['key' => 'black-tan', 'value' => 'black and tan with cream-white urajiro on the muzzle sides, cheeks, throat, chest, belly and inner legs', 'en' => 'Black and tan', 'sl' => 'Črn s porjavelimi oznakami'],
         ['key' => 'sesame', 'value' => 'sesame (black-tipped hairs on a red background) with cream-white urajiro on the muzzle sides, cheeks, throat, chest, belly and inner legs', 'en' => 'Sesame', 'sl' => 'Sezamov'],
     ],
+    // M5-R10-47: FCI S385 / RKC S388 / AKC S389 "Light wheaten to red wheaten." (uniform colour; red wheaten = portrait).
+    'rhodesian_ridgeback' => [
+        ['key' => 'red-wheaten', 'value' => 'red wheaten, uniform colour, at most a little white on the chest and toes', 'en' => 'Red wheaten', 'sl' => 'Rdeče pšenični'],
+        ['key' => 'light-wheaten', 'value' => 'light wheaten, uniform colour, at most a little white on the chest and toes', 'en' => 'Light wheaten', 'sl' => 'Svetlo pšenični'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

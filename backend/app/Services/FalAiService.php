@@ -412,6 +412,15 @@ class FalAiService
                 .'thick tail curled over the back, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-47: FCI 146 (S385) / RKC standard (S388) — red wheaten as the anchor (light to red wheaten);
+            // well balanced, muscular, agile hound; the ridge with two crowns; black nose, dark eyes.
+            BreedType::RhodesianRidgeback => 'An athletic, dignified Rhodesian Ridgeback dog with a short, dense, sleek red wheaten coat of uniform colour, '
+                .'well balanced, strong, muscular and agile hound body, never massive, '
+                .'a clearly defined ridge of reversed hair along the spine from behind the shoulders to the haunch with two identical crowns, '
+                .'medium-sized ears set rather high and carried close to the head, round bright dark eyes, black nose, '
+                .'tapering tail of moderate length carried with a slight upward curve, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -996,6 +1005,17 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'short double coat, harsh straight outer coat over a soft dense undercoat',
                 'markings' => 'cream-white urajiro on the muzzle sides, cheeks, throat, chest, belly and inner legs',
+            ],
+            // M5-R10-47: FCI S385 / RKC S388 "Light wheaten to red wheaten."; the ridge (S388).
+            BreedType::RhodesianRidgeback => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'red wheaten',
+                    1 => 'light wheaten',
+                    2 => 'wheaten with a dark muzzle and ears',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'short, dense, sleek and glossy coat',
+                'markings' => 'clearly defined ridge of reversed hair along the spine with two identical crowns',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

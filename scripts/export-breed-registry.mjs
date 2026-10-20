@@ -419,6 +419,7 @@ const SPECIES = [
       { id: 'rough_collie', synonyms: { en: ['Collie', 'Collie (Rough)', 'Long-haired Collie'], sl: ['škotski ovčar', 'collie'] } },
       { id: 'mastiff', synonyms: { en: ['English Mastiff', 'Old English Mastiff'], sl: ['mastif', 'mastiff'] } },
       { id: 'shiba_inu', synonyms: { en: ['Japanese Shiba Inu', 'Shiba', 'Shiba Ken'], sl: ['shiba inu', 'japonski šiba inu', 'šiba'] } },
+      { id: 'rhodesian_ridgeback', synonyms: { en: ['Ridgeback', 'African Lion Dog'], sl: ['rodezijski', 'ridgeback'] } },
     ],
   },
   {
@@ -443,7 +444,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -1356,6 +1357,30 @@ const DOG_FACTS = {
       ['hip_dysplasia', 'health.hip_dysplasia'],
     ],
   },
+  // M5-R10-47. Height = FCI 146 (S385), weight = the FCI values per sex ('about', S385), lifespan = the RKC band
+  // "Over 10 years" (S387; no McMillan 2024 / VetCompass median reachable), exercise = RKC "More than 2 hours"
+  // (S387). Not exported: adult_weight.akc / pdsa (alternatives), adult_weight.salt_category (our assignment),
+  // lifespan.pdsa / petmd / woodgreen (alternatives), lifespan.mcmillan_2024 (Wikipedia, tier C),
+  // lifespan.senior_from (derived), exercise.off_lead and suitability.woodgreen_ears_teeth / petmd_* care needs
+  // (open for David: M5-R15 / M5-R20 / new task), health.breed_watch (Category 1, no chip),
+  // health.juvenile_myoclonic_epilepsy / degenerative_myelopathy (breeder checklist), health.deafness_eyes
+  // (partly a paraphrase), health.cancer (no quote). New health key: dermoid_sinus.
+  rhodesian_ridgeback: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', 'about']],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['dermoid_sinus', 'health.dermoid_sinus'],
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['bloat_gdv', 'health.gdv'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+    ],
+  },
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1701,6 +1726,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.shiba_inu.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.shiba_inu.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.shiba_inu.exercise_minutes_senior',
+  },
+  rhodesian_ridgeback: {
+    adult_minutes: ['proposed_game_parameters.rhodesian_ridgeback.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.rhodesian_ridgeback.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.rhodesian_ridgeback.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.rhodesian_ridgeback.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.rhodesian_ridgeback.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.rhodesian_ridgeback.exercise_minutes_senior',
   },
 };
 
