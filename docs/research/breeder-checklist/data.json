@@ -1925,6 +1925,61 @@
         }
       ],
       "notes": "RKC breed page (dog-data S397, 2026-10-20) shows the Good Practice / Best Practice headings without listing tests and links to a breed-specific DNA testing package. The RKC Health Standard (S263) was refused by the fetch tool (provenance). RKC DNA test page (K26): Pap-PRA1, a form of PRA described as unique to the breed (PDSA S398 and PetMD S400 list PRA). RKC breed-specific DNA testing package for the Papillon (K27): NAD, Pap-PRA1, vWD 1 (+ DNA profile). All three are 'other_scheme' (none is in an RKC Good / Best Practice list). New test keys dna_pap_pra1 and dna_nad need website words."
+    },
+    "portuguese_water_dog": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S404",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "Best Practice schemes and tests"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S404",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "dna_prcd_pra",
+          "level": "minimum",
+          "name": "DNA test for progressive retinal atrophy (prcd-PRA)",
+          "source_id": "S404",
+          "quote": "DNA test for progressive retinal atrophy (prcd-PRA) - Find a list of tested dogs here"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S404",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S404",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        },
+        {
+          "key": "dna_gm1",
+          "level": "best_practice",
+          "name": "DNA test for gangliosidosis (GM1)",
+          "source_id": "S404",
+          "quote": "DNA test for Gangliosidosis (GM1) - Find a list of tested dogs here"
+        },
+        {
+          "key": "dna_eopra",
+          "level": "best_practice",
+          "name": "DNA test for early-onset progressive retinal atrophy (EOPRA)",
+          "source_id": "S404",
+          "quote": "DNA test for Progressive - retinal atrophy (EOPRA) - Find a list of tested dogs here"
+        }
+      ],
+      "notes": "RKC breed page (older address display.aspx?id=5135, dog-data S404, 2026-10-20): Good Practice (= minimum, 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding') — genetic diversity, DNA prcd-PRA; 'Best Practice schemes and tests' — BVA/KC elbow and hip schemes, DNA GM1 gangliosidosis, DNA EOPRA. PDSA (dog-data S405) advises checking that the parents were screened under the BVA/KC Canine Health Schemes (paraphrase). New test key dna_eopra (website words added); dna_gm1 reused (same condition as the Shiba Inu's GM1 test)."
     }
   }
 }

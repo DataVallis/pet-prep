@@ -25268,6 +25268,665 @@
       }
     }
   },
+  "portuguese_water_dog": {
+    "_note": "Added 2026-10-20 (M5-R10-49, unattended run — appended after the Papillon: AKC 2024 No. 45 'Portuguese Water Dog', S174 full-list table '44 Papillon', '45 Portuguese Water Dog'). Quotes as returned by the web-fetch tool on 2026-10-20 (the tool limits quotes to about 125 characters; fragments marked as such); paraphrase only in notes. Sources S402–S408. No health percentages anywhere. The FCI standard PDF (fci.be 037g08-en.pdf) was refused by the fetch tool (provenance) → appearance, height and weight from the RKC breed standard (S403, last updated 1 April 2025), which follows the FCI standard. Never 'hypoallergenic' (Wikipedia S408 itself says there is no scientific evidence for hypoallergenic breeds).",
+    "identity": {
+      "value": "FCI No. 37, Group 8 Section 3 (Water Dogs), Portugal",
+      "unit": "—",
+      "source_id": "S402",
+      "quote": "CÃO DE ÁGUA PORTUGUÊS (37)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S402): English name 'PORTUGUESE WATER DOG', group 'n°8 - Retrievers - Flushing Dogs - Water Dogs', section 'Water Dogs', country of origin 'PORTUGAL', 'Not subject to a working trial according to the FCI breeds nomenclature', definitive acceptance '2/1/1955'; valid standard dated 11/4/2008. RKC (S403 / S404) group: Working. AKC name: Portuguese Water Dog (S174). Section number 3 = the FCI group 8 section of the Water Dogs (the nomenclature page names the section without its number — our reading)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S404",
+      "quote": "Size: Medium",
+      "confidence": "high",
+      "notes": "RKC breed page key facts (S404) 'Size: Medium' (value as returned). PDSA (S405) files the breed under 'Large' — the runbook prefers the RKC field. RKC standard 16–25 kg (S403) ≈ 35–55 lb → the 'Medium (24–59 pounds)' class of S10 for growth."
+    },
+    "height": {
+      "rkc_standard": {
+        "value": {
+          "male": [
+            50,
+            57
+          ],
+          "female": [
+            43,
+            52
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S403",
+        "quote": "Height: dogs: 50-57 cms (19½-22½ ins)",
+        "confidence": "high",
+        "notes": "RKC breed standard (S403); bitches 'bitches: 43-52 cms (17-20½ ins)'. The standard notes it is a guide to the ideal (paraphrase)."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            43,
+            57
+          ],
+          "female": [
+            43,
+            57
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S405",
+        "quote": "43-57 cm",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average height' (S405), one range for both sexes (value as returned). Agrees with the RKC span."
+      }
+    },
+    "adult_weight": {
+      "rkc_standard": {
+        "value": {
+          "male": [
+            19,
+            25
+          ],
+          "female": [
+            16,
+            22
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S403",
+        "quote": "Weight: dogs: 19-25 kgs (42-55 lbs)",
+        "confidence": "high",
+        "notes": "RKC breed standard (S403); bitches 'bitches: 16-22 kgs (35-48 lbs)'. The game range (adult_weight_kg 16–25). Wikipedia (S408) gives the same FCI numbers (tier C, background)."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            16,
+            25
+          ],
+          "female": [
+            16,
+            25
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S405",
+        "quote": "16-25 kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average weight' (S405), one range for both sexes (value as returned). Same span as the RKC standard."
+      },
+      "vca": {
+        "value": {
+          "male": [
+            19,
+            27
+          ],
+          "female": [
+            16,
+            23
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S406",
+        "quote": "The male weighs between 42 and 60 pounds and the female between 35 and 50 pounds.",
+        "confidence": "medium",
+        "notes": "VCA (S406): 42–60 lb ≈ 19–27 kg, 35–50 lb ≈ 16–23 kg (our conversion, rounded). Alternative only. PetMD (S407) 35–60 lb."
+      },
+      "salt_category": {
+        "value": "IV",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 16–25 kg → IV (15–<30). Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. RKC standard 16–25 kg (S403) ≈ 35–55 lb → the 'Medium (24–59 pounds)' class. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Portuguese Water Dog growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S404",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S404) 'Lifespan: Over 10 years' (value as returned). PDSA (S405) 'Over 10 years' agrees. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan ('Over', not 'Under')."
+      },
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S405",
+        "quote": "Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average lifespan' (S405). Same lower bound as the RKC → same senior boundary (90)."
+      },
+      "vca": {
+        "value": "10–14",
+        "unit": "years",
+        "source_id": "S406",
+        "quote": "10 to 14 years",
+        "confidence": "medium",
+        "notes": "VCA quick facts (S406), value as returned. Lower bound 10 = the RKC's; alternative only."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no McMillan 2024 median found for this breed: Wikipedia 'Portuguese Water Dog' (S408) gives no lifespan figure; Science News' summary of the study does not name the breed; the Dogs Trust breed table (S123) was refused by the fetch tool (provenance) on 2026-10-20."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 10 y (RKC lower bound 'Over 10 years', S404) → 0.75 × 10 = 7.5 y = 90 months. VCA 10–14 y (S406) has the same lower bound. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S404"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S404",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S404) 'Exercise: Up to 1 hour per day' (value as returned). PDSA (S405): 'Around an hour of exercise is needed daily.' (key facts: minimum exercise '1 hour per day'); VCA (S406): 'it is best to exercise her for at least an hour a day.' — sources agree on 60."
+      },
+      "energy": {
+        "value": "tremendously energetic working water dog; vigorous daily workouts",
+        "unit": "—",
+        "source_id": "S403",
+        "quote": "Very intelligent and tremendously energetic 'fisherman's dog' with great swimming and diving traits.",
+        "confidence": "high",
+        "notes": "RKC standard 'Characteristics' (S403). VCA quick facts (S406): 'Very high - this breed loves to run and needs vigorous daily workouts.' PetMD (S407): 'at least 30-60 minutes per day' (fragment)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "VCA (S406) lists bloat among health problems but gives no advice on a gap between meals and exercise; PDSA (S405) and PetMD (S407) say nothing → no meal_exercise_gap row (never invent a quote)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "pleasant disposition, self-willed but very obedient to the owner; brave and tireless",
+        "unit": "—",
+        "source_id": "S403",
+        "quote": "Pleasant disposition, self-willed but very obedient to owner. Brave and tireless.",
+        "confidence": "high",
+        "notes": "RKC standard 'Temperament' (S403). VCA (S406): 'This dog is quite assertive and demands a lot of attention.'; 'not aggressive but she is not retiring either' (fragment)."
+      },
+      "family": {
+        "value": "very friendly, loving; excellent family pets",
+        "unit": "—",
+        "source_id": "S405",
+        "quote": "Portuguese Water Dogs are very friendly, loving dogs that get on well with other pets and make excellent family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S405). RKC (S404): revived as a family companion (paraphrase). Basis of family_pet."
+      },
+      "children": {
+        "value": "can be around children; takes good care of the children in the family (VCA: fine with older kids)",
+        "unit": "—",
+        "source_id": "S407",
+        "quote": "A Portuguese Water Dog can make a great family pet that can be around children and other animals.",
+        "confidence": "medium",
+        "notes": "PetMD (S407). VCA (S406): 'takes good care of the children in her family' (fragment); quick facts 'Fine with older kids' — kept as a caveat (runbook: children chip with an explicit statement, caveat in notes). No small_children chip; the RKC page has no 'Good with children' field."
+      },
+      "socialisation": {
+        "value": "training and socialisation very important at a young age",
+        "unit": "—",
+        "source_id": "S405",
+        "quote": "Training, along with socialisation, is very important at a young age in order for Portuguese Water Dogs to grow up into confident, sociable dogs.",
+        "confidence": "medium",
+        "notes": "PDSA (S405); the tool returned the sentence in two consecutive pieces ('… in order for Portuguese Water Dogs' / 'to grow up into confident, sociable dogs.'), joined here. VCA (S406): socialising a puppy to other people and other dogs is recommended (paraphrase); PetMD (S407): 'lovable, friendly dogs when well trained and socialized from an early age' (fragment). Basis of the puppy socialisation row (M5-R17)."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on time alone (PDSA S405 says nothing; VCA S406 only 'demands a lot of attention'). No needs_company chip."
+      },
+      "other_pets": {
+        "value": "gets on well with other pets",
+        "unit": "—",
+        "source_id": "S405",
+        "quote": "Portuguese Water Dogs are very friendly, loving dogs that get on well with other pets and make excellent family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S405); PetMD (S407) 'can be around children and other animals'. No prey-drive statement → no chases_small_pets. Basis of other_pets."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation statement found. No food_motivated_weight chip."
+      },
+      "training_notes": {
+        "value": "very obedient, responds well to training",
+        "unit": "—",
+        "source_id": "S405",
+        "quote": "They are very obedient and respond well to training.",
+        "confidence": "medium",
+        "notes": "PDSA (S405). PetMD (S407): positive reinforcement 'should be started as early in your dog's life as possible' (fragment)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 1 (S404: 'Currently no points of concern specific to this breed have been identified for special attention by judges') → no welfare chip. PDSA (S405) lists hip dysplasia and progressive retinal atrophy; VCA (S406) hip dysplasia, bloat, PRA and spinal-cord problems; PetMD (S407) hypothyroidism, hip dysplasia, Addison's disease, PRA and cataracts.",
+      "hip_dysplasia": {
+        "value": "hip dysplasia — hip X-ray scheme for the parents",
+        "unit": "—",
+        "source_id": "S405",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S405) health list (paraphrase); VCA (S406): 'Portuguese Water Dogs can be susceptible to hip dysplasia, as are all dogs that are large and fast-growing.'; RKC Best Practice BVA/KC hip scheme (breeder checklist). Background only."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy (gradual loss of sight) — DNA tests prcd-PRA and EOPRA for the parents",
+        "unit": "—",
+        "source_id": "S405",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S405) health list (paraphrase); VCA (S406), PetMD (S407) PRA; RKC DNA tests prcd-PRA (Good Practice) and EOPRA (Best Practice) (S404, breeder checklist). Background only."
+      },
+      "gm1": {
+        "value": "GM1 gangliosidosis — DNA test for the parents",
+        "unit": "—",
+        "source_id": "S404",
+        "quote": "DNA test for Gangliosidosis (GM1) - Find a list of tested dogs here",
+        "confidence": "high",
+        "notes": "RKC breed page Best Practice (S404). Background only."
+      },
+      "bloat": {
+        "value": "bloat",
+        "unit": "—",
+        "source_id": "S406",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "VCA (S406) health list (paraphrase). No advice on a meal / exercise gap → no M5-R16 row. Background only."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S407",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S407) list item (paraphrase). Background only."
+      },
+      "addisons": {
+        "value": "Addison's disease",
+        "unit": "—",
+        "source_id": "S407",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S407) list item (paraphrase). Background only."
+      },
+      "cataracts": {
+        "value": "cataracts",
+        "unit": "—",
+        "source_id": "S407",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S407) list item (paraphrase). Background only."
+      },
+      "dental": {
+        "value": "daily tooth brushing",
+        "unit": "—",
+        "source_id": "S407",
+        "quote": "brush their Portuguese Water Dog's teeth daily",
+        "confidence": "medium",
+        "notes": "PetMD (S407) fragment as returned (advice of a vet quoted in the article). Tooth care advice: see suitability.petmd_teeth (ROADMAP M5-R15)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35) does not list the Portuguese Water Dog (checked 2026-10-20). Runbook rule: unranked → 1.0."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked (S35)."
+      },
+      "training_notes": {
+        "value": "very obedient; very intelligent",
+        "unit": "—",
+        "source_id": "S405",
+        "quote": "They are very obedient and respond well to training.",
+        "confidence": "medium",
+        "notes": "PDSA (S405); RKC standard (S403) 'Very intelligent'. The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.portuguese_water_dog.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "robust, well-balanced, almost square, strongly muscled working water dog with a profuse single coat",
+        "unit": "—",
+        "source_id": "S403",
+        "quote": "Robust, well balanced, of almost square shape, very strongly muscled on shoulders.",
+        "confidence": "high",
+        "notes": "RKC standard 'General appearance' (S403); the expression is hard, penetrating and attentive (paraphrase)."
+      },
+      "colours": {
+        "value": [
+          "black",
+          "black and white",
+          "brown (various shades)",
+          "brown and white",
+          "white"
+        ],
+        "unit": "list",
+        "source_id": "S403",
+        "quote": "Black, white, various shades of brown, black and white, brown and white.",
+        "confidence": "high",
+        "notes": "RKC standard 'Colour' (S403): 'Any other colour or combination of colours unacceptable.' Nose: black on black, black-and-white and white dogs, liver on brown and brown-and-white dogs (S403, paraphrase); skin bluish under black / white (paraphrase). Never another colour (no silver, cream, merle or parti patterns beyond black / brown and white)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Black first and highest (the portrait default); Wikipedia (S408, tier C) calls black with white on the chin and chest the most common pattern and white the least common (background only)."
+      },
+      "coat": {
+        "value": "profuse single coat without undercoat, two types: long and loosely waved with a slight sheen, or shorter, harsh and dense with compact curls; muzzle and hindquarters clipped (lion clip)",
+        "unit": "—",
+        "source_id": "S403",
+        "quote": "Profuse, covering whole body except under forelegs and thigh.",
+        "confidence": "high",
+        "notes": "RKC standard 'Coat' (S403): two types, neither with an undercoat; the muzzle and the hindquarters from the last rib are clipped, two-thirds of the tail clipped from its base (paraphrase). RKC (S404): the traditional lion trim is thought to help him swim (paraphrase)."
+      },
+      "ears": {
+        "value": "heart-shaped, dropped, thin, set well above eye level, held close to the head",
+        "unit": "—",
+        "source_id": "S403",
+        "quote": "Heart shaped, dropped, thin, set well above eye level, held close to head, except at back.",
+        "confidence": "high",
+        "notes": "RKC standard (S403); the tips should not fall below the neckline (paraphrase)."
+      },
+      "eyes": {
+        "value": "medium, round, set well apart; black or dark brown with dark eye rims",
+        "unit": "—",
+        "source_id": "S403",
+        "quote": "Medium, round, set well apart. Black or dark brown with dark eye rims.",
+        "confidence": "high",
+        "notes": "RKC standard (S403)."
+      },
+      "tail": {
+        "value": "medium set, thick at the base and tapering; carried in a ring when alert, clipped for two-thirds with a plume at the tip",
+        "unit": "—",
+        "source_id": "S403",
+        "quote": "The tail is a distinct feature of the breed and should be medium set, thick at base and tapering.",
+        "confidence": "high",
+        "notes": "RKC standard (S403): not reaching below the hock; carried in a ring not past the middle of the loin when alert (paraphrase)."
+      },
+      "nose": {
+        "value": "wide, with open nostrils; black or liver according to the coat colour; not short-faced",
+        "unit": "—",
+        "source_id": "S403",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC standard 'Head and skull' (S403): the skull slightly longer than the muzzle (fragment 'slightly longer than muzzle, well-defined occiput.'), well-defined stop, muzzle tapering slightly, nose wide with open nostrils (paraphrase)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S404, older address), PDSA (S405), VCA (S406), PetMD (S407). The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S404",
+        "quote": "Size: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size' (value as returned). PDSA (S405) 'Large'."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S404",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Exercise' (value as returned). Basis of 60 min (PDSA S405 and VCA S406 agree). Not long_daily_exercise / active_family."
+      },
+      "pdsa_exercise": {
+        "value": "around an hour daily",
+        "unit": "—",
+        "source_id": "S405",
+        "quote": "Around an hour of exercise is needed daily.",
+        "confidence": "medium",
+        "notes": "PDSA (S405). Agrees with 60."
+      },
+      "vca_exercise": {
+        "value": "at least an hour a day",
+        "unit": "—",
+        "source_id": "S406",
+        "quote": "it is best to exercise her for at least an hour a day.",
+        "confidence": "medium",
+        "notes": "VCA (S406) fragment as returned. Agrees with 60."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S404",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (value as returned). Basis of the large_home chip (runbook: from RKC 'Large house')."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S404",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (value as returned). Background only."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S404",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (value as returned). Runbook dog-grooming rule: 'Every day' → 7. Basis of frequent_grooming (with PDSA)."
+      },
+      "pdsa_grooming": {
+        "value": "daily grooming plus periodic professional clipping",
+        "unit": "—",
+        "source_id": "S405",
+        "quote": "Grooming is a daily requirement along with clipping and shaping by a professional groomer periodically throughout the year.",
+        "confidence": "medium",
+        "notes": "PDSA (S405). Agrees with daily brushing; the professional clipping is a separate need (ROADMAP M5-R18)."
+      },
+      "vca_grooming": {
+        "value": "brushed and combed at least twice a week (preferably more); trimmed from time to time",
+        "unit": "—",
+        "source_id": "S406",
+        "quote": "it must be brushed and combed at least twice a week (preferably more) to keep it free of tangles and mats.",
+        "confidence": "medium",
+        "notes": "VCA (S406) fragment as returned; 'She must be trimmed from time to time, depending on how fast her coat grows.' Alternative only (2)."
+      },
+      "petmd_grooming": {
+        "value": "brushing a few times a week; groomer every 4–6 weeks",
+        "unit": "—",
+        "source_id": "S407",
+        "quote": "Pet parents will also need to brush their dog a few times a week.",
+        "confidence": "medium",
+        "notes": "PetMD (S407); 'a visit to the groomer every 4-6 weeks' (fragment, advice of a groomer quoted in the article). No number for brushing — alternative only."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S404",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (value as returned). PDSA (S405) 'Medium'. Background only."
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S404",
+        "quote": "Sheds: No",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (value as returned). RKC standard (S403): no undercoat (paraphrase). No A/B source says it sheds → basis of the low_shedding tag — never 'hypoallergenic' (Standard Poodle precedent)."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S404",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "See lifespan.rkc."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S404",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country' (value as returned). Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S404",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (value as returned). Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S404",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S404) Breed Watch → no welfare chip; in marketing."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC page (S404) has no 'Good with children' field."
+      },
+      "pdsa_family": {
+        "value": "excellent family pets",
+        "unit": "—",
+        "source_id": "S405",
+        "quote": "Portuguese Water Dogs are very friendly, loving dogs that get on well with other pets and make excellent family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S405). Basis of family_pet."
+      },
+      "pdsa_other_pets": {
+        "value": "gets on well with other pets",
+        "unit": "—",
+        "source_id": "S405",
+        "quote": "Portuguese Water Dogs are very friendly, loving dogs that get on well with other pets and make excellent family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S405). Basis of other_pets."
+      },
+      "petmd_children": {
+        "value": "can be around children and other animals",
+        "unit": "—",
+        "source_id": "S407",
+        "quote": "A Portuguese Water Dog can make a great family pet that can be around children and other animals.",
+        "confidence": "medium",
+        "notes": "PetMD (S407). Basis of children (caveat: VCA S406 'Fine with older kids'). No small_children chip."
+      },
+      "petmd_teeth": {
+        "value": "brush the teeth daily",
+        "unit": "—",
+        "source_id": "S407",
+        "quote": "brush their Portuguese Water Dog's teeth daily",
+        "confidence": "medium",
+        "notes": "PetMD (S407) fragment as returned. Tooth brushing = sourced need without a mechanic → ROADMAP M5-R15 (needs-david)."
+      },
+      "petmd_ears_baths": {
+        "value": "ear cleanings help; a bath after getting wet or dirty, no regular bathing routine",
+        "unit": "—",
+        "source_id": "S407",
+        "quote": "Portuguese Water Dogs are not prone to ear infections, but they can benefit from ear cleanings.",
+        "confidence": "medium",
+        "notes": "PetMD (S407); 'Portuguese Water Dogs don't require a regular bathing routine,' (fragment) — a bath after they get wet or dirty (paraphrase). Ear cleaning / baths = sourced need without a mechanic → ROADMAP M5-R20 (needs-david)."
+      },
+      "vca_nails": {
+        "value": "nail trimming, taking care of the webbing between the toes (no frequency)",
+        "unit": "—",
+        "source_id": "S406",
+        "quote": "When trimming her nails, pay attention to the webbing between her toes and take care not to injure that delicate skin.",
+        "confidence": "medium",
+        "notes": "VCA (S406). Nail care = sourced need without a mechanic → ROADMAP M5-R19 (needs-david)."
+      },
+      "professional_grooming": {
+        "value": "professional clipping and shaping periodically through the year; groomer every 4–6 weeks",
+        "unit": "—",
+        "source_id": "S405",
+        "quote": "Grooming is a daily requirement along with clipping and shaping by a professional groomer periodically throughout the year.",
+        "confidence": "medium",
+        "notes": "PDSA (S405); PetMD (S407) 'a visit to the groomer every 4-6 weeks' (fragment); VCA (S406) trimmed from time to time. Groomer = sourced need without a mechanic → ROADMAP M5-R18 (needs-david)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -37587,6 +38246,305 @@
         "confidence": "high",
         "notes": "AKC-approved standard (S399) and FCI (S396 'All colours are admitted on a coat with a white background.'). Weights unsourced.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — white with patches (red default, sable, black, tricolour, lemon); never all white or without white"
+      }
+    },
+    "portuguese_water_dog": {
+      "_note": "Unattended run M5-R10-49 (2026-10-20): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: brushing every day (RKC S404 'Grooming: Every day', M5-R13); puppy socialisation (PDSA S405 quote, M5-R17). No meal / exercise gap advice (VCA S406 only lists bloat) → no M5-R16 row. Sourced needs without a game mechanic: professional clipping (PDSA S405, PetMD S407 every 4–6 weeks) → ROADMAP M5-R18; daily tooth brushing (PetMD S407) → ROADMAP M5-R15; ear cleaning + baths after getting wet (PetMD S407) → ROADMAP M5-R20; nail trimming (VCA S406) → ROADMAP M5-R19 (needs-david). Senior 90 provisional (RKC lower bound 'Over 10 years', S404 — no McMillan 2024 value found). Not ranked by Coren → learning 1.0. Breed Watch Category 1 → no welfare chip; in marketing (never as hypoallergenic).",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S404",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S404). Rule: one number N ('up to N') → N = 60; PDSA (S405) 'Around an hour' and VCA (S406) 'at least an hour' agree.",
+        "alternatives": [
+          {
+            "value": 60,
+            "source_id": "S405",
+            "notes": "PDSA around an hour daily"
+          },
+          {
+            "value": 60,
+            "source_id": "S406",
+            "notes": "VCA at least an hour a day"
+          },
+          {
+            "value": 30,
+            "source_id": "S407",
+            "notes": "PetMD at least 30–60 minutes (lower bound)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S404 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S404",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) = 90 (S11 + RKC lower bound 'Over 10 years', S404; PDSA 'Over 10 years', S405, and VCA 10–14 y, S406, agree). No McMillan 2024 / VetCompass value found. Alternative: 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S404"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S404)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not in Coren's ranking (S35) → unranked → 1.0 (Havanese / Shiba Inu precedent). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S404",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "portuguese_water_dog.suitability.rkc_grooming. RKC (S404) 'Every day' → 7 (runbook dog-grooming rule); PDSA (S405) 'a daily requirement' agrees. Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 2,
+            "source_id": "S406",
+            "notes": "VCA at least twice a week (preferably more)"
+          },
+          {
+            "value": null,
+            "source_id": "S407",
+            "notes": "PetMD 'a few times a week' (no number)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden, RKC »Every day«; PDSA »a daily requirement«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S405",
+        "quote": "Training, along with socialisation, is very important at a young age in order for Portuguese Water Dogs to grow up into confident, sociable dogs.",
+        "confidence": "medium",
+        "notes": "portuguese_water_dog.behaviour.socialisation (PDSA S405); VCA (S406) and PetMD (S407) agree. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S405)"
+      },
+      "professional_grooming": {
+        "value": "clipping and shaping by a professional groomer periodically through the year (PetMD: every 4–6 weeks)",
+        "unit": "groomer visits (sourced need)",
+        "source_id": "S405",
+        "quote": "Grooming is a daily requirement along with clipping and shaping by a professional groomer periodically throughout the year.",
+        "confidence": "medium",
+        "notes": "portuguese_water_dog.suitability.professional_grooming. The game has no groomer mechanic → ROADMAP M5-R18 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): striženje in oblikovanje pri pasjem frizerju večkrat na leto (PetMD na 4–6 tednov); mehanike ni → ROADMAP M5-R18 (needs-david)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S407",
+        "quote": "brush their Portuguese Water Dog's teeth daily",
+        "confidence": "medium",
+        "notes": "PetMD (S407), portuguese_water_dog.suitability.petmd_teeth. The game has no tooth-brushing mechanic → ROADMAP M5-R15; this value is its input.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ščetkanje zob vsak dan (7× na teden); mehanike ni → ROADMAP M5-R15 (needs-david)"
+      },
+      "ear_care_bathing": {
+        "value": "ear cleanings; a bath after getting wet or dirty (no regular bathing routine)",
+        "unit": "ear cleaning / baths (sourced need)",
+        "source_id": "S407",
+        "quote": "Portuguese Water Dogs are not prone to ear infections, but they can benefit from ear cleanings.",
+        "confidence": "medium",
+        "notes": "PetMD (S407), portuguese_water_dog.suitability.petmd_ears_baths. The game has no ear-care / bath mechanic → ROADMAP M5-R20 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): čiščenje ušes in kopanje, ko se zmoči ali umaže; mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "nail_care": {
+        "value": "nail trimming with care for the webbing between the toes (no frequency)",
+        "unit": "nail trimming (sourced need)",
+        "source_id": "S406",
+        "quote": "When trimming her nails, pay attention to the webbing between her toes and take care not to injure that delicate skin.",
+        "confidence": "medium",
+        "notes": "VCA (S406), portuguese_water_dog.suitability.vca_nails. The game has no nail-trimming mechanic → ROADMAP M5-R19 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): striženje krempljev (brez pogostosti); mehanike ni → ROADMAP M5-R19 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-49); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S405"
+            ],
+            "refs": [
+              "portuguese_water_dog.behaviour.family",
+              "portuguese_water_dog.suitability.pdsa_family"
+            ],
+            "quote": "S405 'Portuguese Water Dogs are very friendly, loving dogs that get on well with other pets and make excellent family pets.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S407"
+            ],
+            "refs": [
+              "portuguese_water_dog.behaviour.children",
+              "portuguese_water_dog.suitability.petmd_children"
+            ],
+            "quote": "S407 'A Portuguese Water Dog can make a great family pet that can be around children and other animals.' (caveat: VCA S406 'Fine with older kids')"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S404"
+            ],
+            "refs": [
+              "portuguese_water_dog.suitability.rkc_size_of_home"
+            ],
+            "quote": "S404 'Size of home: Large house'"
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S405"
+            ],
+            "refs": [
+              "portuguese_water_dog.behaviour.other_pets",
+              "portuguese_water_dog.suitability.pdsa_other_pets"
+            ],
+            "quote": "S405 'get on well with other pets'"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S404"
+            ],
+            "refs": [
+              "portuguese_water_dog.suitability.rkc_shedding"
+            ],
+            "quote": "S404 'Sheds: No'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S404",
+              "S405"
+            ],
+            "refs": [
+              "portuguese_water_dog.suitability.rkc_grooming",
+              "portuguese_water_dog.suitability.pdsa_grooming"
+            ],
+            "quote": "S404 'Grooming: Every day'; S405 'Grooming is a daily requirement'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No rating; VCA (S406) quick facts 'Fine with older kids'.",
+          "older_children": "The older_children chip is worded for a small dog (Pomeranian AKC wording); VCA 'Fine with older kids' is kept as a caveat of the children chip (Claude's reading, open for David).",
+          "chases_small_pets": "No prey-drive statement.",
+          "needs_company": "No A/B statement on time alone.",
+          "needs_mental_stimulation": "No quote (RKC 'Very intelligent' is not a stimulation need).",
+          "active_family": "RKC 'Up to 1 hour per day' (S404).",
+          "long_daily_exercise": "60 min.",
+          "sheds": "RKC 'Sheds: No'.",
+          "first_time_owner": "No explicit statement.",
+          "shorter_lifespan": "RKC 'Over 10 years'.",
+          "welfare": "RKC Breed Watch Category 1 (S404) → no welfare chip (hips / PRA / GM1 / bloat / hypothyroidism / Addison's / cataracts are PDSA / VCA / PetMD list items, not Breed Watch points).",
+          "hypoallergenic": "Never (runbook; Wikipedia S408: no scientific evidence that hypoallergenic breeds exist)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children, large_home, other_pets, low_shedding; consider frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S404",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S404) — no conformation concern, no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92) → in marketing. Marketing never calls it hypoallergenic or allergy-friendly, never shows it as a low-care dog (daily grooming + groomer) — Claude's proposal.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (Breed Watch Category 1)"
+      },
+      "ai_appearance": {
+        "value": "adult Portuguese Water Dog, solid black (the portrait default) with a black nose; robust, almost square, strongly muscled build; profuse curly single coat in the traditional lion clip (muzzle and hindquarters clipped, plume at the tail tip); heart-shaped drop ears; dark round eyes; tail carried in a ring; never a colour outside black / white / brown and their bicolours",
+        "unit": "—",
+        "source_id": "S403",
+        "quote": "Black, white, various shades of brown, black and white, brown and white.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S403). Weights unsourced.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — black (default), black and white, brown, brown and white, white; never another colour"
       }
     }
   }
