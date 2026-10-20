@@ -24,6 +24,7 @@ import { forgetSignInMethod } from './signInMethod';
 import { readAuthMethods } from './authMethods';
 import { forgetChildToken, isStoredChildToken, revokeStoredToken, takeChildSessions } from './profiles';
 import { closeStepWindows } from '@/modules/steps/activeWindows';
+import { clearMediaCache } from '@/modules/petMedia/mediaFileCache';
 
 /** The server revoke is best effort: give up after this long so "Odjava" never hangs offline. */
 export const REVOKE_TIMEOUT_MS = 5_000;
@@ -96,6 +97,8 @@ export async function logout({ revoke = true }: LogoutOptions = {}): Promise<voi
   // The next user starts with a fresh fetch budget (the server limit is per user).
   childPetFetchGate.reset();
   channelAuthGate.reset();
+  // The pet videos / photos copied to this phone go with the session (sync, never throws).
+  clearMediaCache();
   queryClient.clear();
   useAppStore.getState().reset();
 }

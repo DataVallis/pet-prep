@@ -9,6 +9,7 @@ import { Animated, AppState, type AppStateStatus } from 'react-native';
 
 import PetMediaView, { CROSSFADE_MS, PET_MEDIA_STRINGS, READY_FALLBACK_MS } from '@/components/PetMediaView';
 import { EMPTY_PET_MEDIA, FAILED_RETRY_MS, type PetMediaInfo } from '@/modules/petMedia/petMedia';
+import { setMediaFileStoreForTests, type MediaFileStore } from '@/modules/petMedia/mediaFileCache';
 import { liveVideoPlayers, mockVideoPlayers, playerUris, resetMockVideoPlayers, sourceUri } from '@/test-utils/videoPlayers';
 import type { PetState } from '@/types';
 
@@ -305,6 +306,56 @@ describe('state change crossfade', () => {
       jest.advanceTimersByTime(CROSSFADE_MS + 50);
     });
     expect(liveVideoPlayers()).toHaveLength(0);
+  });
+});
+
+describe('local copies on the phone (2026-10-20)', () => {
+  function storeWith(names: string[]): MediaFileStore & { removed: string[]; downloads: string[] } {
+    const files = new Set(names);
+    const removed: string[] = [];
+    const downloads: string[] = [];
+    return {
+      removed,
+      downloads,
+      exists: (name) => files.has(name),
+      uri: (name) => `file:///cache/pet-media/${name}`,
+      download: (u, name) => {
+        downloads.push(name);
+        return new Promise<number>(() => undefined);
+      },
+      remove: (name) => {
+        files.delete(name);
+        removed.push(name);
+      },
+      list: () => [],
+      clear: () => files.clear(),
+    };
+  }
+
+  it('plays the local copy (no expo-video cache) and shows the local image', () => {
+    setMediaFileStoreForTests(storeWith(['media_2_idle.mp4', 'media_1_img.jpg']));
+    renderMedia();
+    expect(liveVideoPlayers().map((p) => p.source)).toEqual([{ uri: 'file:///cache/pet-media/media_2_idle.mp4' }]);
+    expect(screen.getByTestId('pet-media-image').props.source).toEqual({ uri: 'file:///cache/pet-media/media_1_img.jpg' });
+  });
+
+  it('without a copy it plays the remote URL with the player cache and downloads one for next time', () => {
+    const store = storeWith([]);
+    setMediaFileStoreForTests(store);
+    renderMedia();
+    expect(liveVideoPlayers().map((p) => p.source)).toEqual([{ uri: IDLE, useCaching: true }]);
+    expect(store.downloads).toEqual(expect.arrayContaining(['media_2_idle.mp4', 'media_1_img.jpg']));
+  });
+
+  it('a local copy that fails to play is deleted', async () => {
+    const store = storeWith(['media_2_idle.mp4']);
+    setMediaFileStoreForTests(store);
+    renderMedia();
+    const [player] = liveVideoPlayers();
+    await act(async () => {
+      player.emit('statusChange', { status: 'error' });
+    });
+    expect(store.removed).toContain('media_2_idle.mp4');
   });
 });
 
