@@ -25927,6 +25927,653 @@
       }
     }
   },
+  "bichon_frise": {
+    "_note": "Added 2026-10-20 (M5-R10-50, unattended run — appended after the Portuguese Water Dog: AKC 2024 No. 46 'Bichon Frise', S174 full-list table '45 Portuguese Water Dog', '46 Bichon Frise'). Quotes as returned by the web-fetch tool on 2026-10-20 (fragments marked as such); paraphrase only in notes. Sources S409–S418 (reused S8, S10, S11, S14, S24, S35, S45). No health percentages anywhere. Appearance from the FCI standard (S410, 04.04.2016) and the RKC breed standard (S412, January 2025). The FCI standard gives one approximate weight ('Approximately 5 kg') → the game weight range from PDSA (S413, '4-7 kg', which brackets it). Lifespan: no McMillan 2024 / VetCompass value reachable (Dogs Trust table S123 and nature.com refused by the fetch tool; McMillan 2024 12.5 y only via Wikipedia S417, tier C) → runbook rule: RKC lower bound 'Over 12 years' (S411; PDSA S413 the same). Never 'hypoallergenic' (PetMD and VCA use the word; VCA itself says no breed is non-allergenic) — low_shedding only (RKC 'Sheds: No').",
+    "identity": {
+      "value": "FCI No. 215, Group 9 Section 1 (Bichons and related breeds), Belgium / France",
+      "unit": "—",
+      "source_id": "S409",
+      "quote": "BICHON A POIL FRISE (215)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S409): group 'n°9 - Companion and Toy Dogs', section 'Bichons and related breeds', country of origin 'BELGIUM, FRANCE', 'Not subject to a working trial according to the FCI breeds nomenclature', definitive acceptance '10/28/1959', valid standard 4/4/2016; English name 'BICHON FRISE'. FCI standard N° 215 (S410): 'ORIGIN: Franco-Belgian.' / 'PATRONAGE: France and Belgium.' / 'F.C.I. CLASSIFICATION: Group 9 Companion and toy dogs.' Section number 1 = the FCI group 9 section of the Bichons (the nomenclature page names the section without its number — our reading). The identity country follows the nomenclature order (Belgium / France, as the Papillon). RKC group: Toy (S411). AKC name: Bichon Frise (S174). Wikipedia (S417, tier C) names the Canary Islands as the older origin — background only."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S411",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "RKC breed page key facts (S411) 'Size: Small' (value as returned); PDSA (S413) 'Small'. FCI (S410) approximately 5 kg ≈ 11 lb → the 'Toy (5–12 pounds)' class of S10 for growth."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            25,
+            30
+          ],
+          "female": [
+            23,
+            29
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S410",
+        "quote": "Height at the withers: 25 to 29 cm.",
+        "confidence": "high",
+        "notes": "FCI standard (S410): 'A tolerance of 1 cm taller is accepted for males,' / 'A tolerance of 2 cm lower is accepted for females,' → males 25–30 cm, females 23–29 cm (the tolerances applied by us; Wikipedia S417 gives the same per-sex ranges)."
+      },
+      "rkc_standard": {
+        "value": {
+          "male": [
+            23,
+            28
+          ],
+          "female": [
+            23,
+            28
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S412",
+        "quote": "Ideal height 23-28 cms (9-11 ins) at withers.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S412), one range for both sexes. Alternative only."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            23,
+            28
+          ],
+          "female": [
+            23,
+            28
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S413",
+        "quote": "23-28 cm",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average height' (S413), one range for both sexes. Agrees with the RKC standard."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            5,
+            5
+          ],
+          "female": [
+            5,
+            5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S410",
+        "quote": "Weight: Approximately 5 kg, in proportion with the size.",
+        "confidence": "high",
+        "notes": "FCI standard (S410): one approximate value for both sexes (stored per sex). Inside the PDSA range used by the game."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            4,
+            7
+          ],
+          "female": [
+            4,
+            7
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S413",
+        "quote": "4-7 kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average weight' (S413), one range for both sexes (value as returned). The game range (adult_weight_kg 4–7): the FCI gives one approximate number only, and 5 kg lies inside this range. The RKC standard (S412) gives no weight. VCA (S414) 'Weight: 12 to 18 pounds' ≈ 5.4–8.2 kg; VCA older page (S415) '10 - 16 pounds' ≈ 4.5–7.3 kg; PetMD (S416) 12–18 lb — alternatives only (our conversions)."
+      },
+      "salt_category": {
+        "value": "I",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): FCI approximately 5 kg = the smallest band. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "8–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Toy (5–12 pounds): 8–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI approximately 5 kg (S410) ≈ 11 lb → 'Toy (5–12 pounds)'; the PDSA upper end 7 kg (≈ 15 lb) would fall in 'Small (12–24 pounds): 9–12 months' — the game is unaffected (the puppy cap of 30 min is reached at 3 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Bichon Frise growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S411",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S411) 'Lifespan: Over 12 years' (value as returned). PDSA (S413) 'Over 12 years' agrees. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "pdsa": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S413",
+        "quote": "Over 12 years",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average lifespan' (S413). Same lower bound as the RKC → same senior boundary (108)."
+      },
+      "vca": {
+        "value": "14–15",
+        "unit": "years",
+        "source_id": "S414",
+        "quote": "Lifespan: 14 to 15 years",
+        "confidence": "medium",
+        "notes": "VCA breed overview (S414). The older VCA page (S415) gives '12 - 15 years'; PetMD (S416): 'The average Bichon Frise lifespan is 14–15 years.' Alternatives only."
+      },
+      "mcmillan_2024": {
+        "value": 12.5,
+        "unit": "years",
+        "source_id": "S417",
+        "quote": "A 2024 UK study found a life expectancy of 12.5 years for the breed",
+        "confidence": "low",
+        "notes": "McMillan et al. 2024 as quoted by Wikipedia (S417, tier C — never alone). The main article (LJMU copy) names the breed only in a Fig. 5 label; the per-breed table (Supplementary Table 3) and the Dogs Trust breed table (S123) were not reachable on 2026-10-20 → not used as the basis; with it the senior boundary would be round(0.75 × 12.5 × 12) = round(112.5) = 113 months. Verify in S123 before replacing the RKC lower bound."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12 y (RKC lower bound 'Over 12 years', S411) → 0.75 × 12 = 9 y = 108 months. With McMillan 2024 12.5 y (via S417): 113 months; VCA / PetMD 14 y lower bound: 126; Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S411"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 30",
+        "unit": "minutes/day",
+        "source_id": "S411",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S411) 'Exercise: Up to 30 minutes per day' (value as returned). PDSA (S413): 'They need around 30 minutes exercise per day.' (key facts: minimum exercise per day '30 minutes') — sources agree on 30."
+      },
+      "energy": {
+        "value": "moderate daily activity; content to lounge once the energy needs are met",
+        "unit": "—",
+        "source_id": "S414",
+        "quote": "Bichon Frises need moderate daily activity to stay healthy and engaged.",
+        "confidence": "medium",
+        "notes": "VCA (S414). Older VCA page (S415): 'A walk around the block once or twice daily, plus a vigorous game' (fragment). PetMD (S416): 'Once their energy needs are met, Bichons are content to lounge with their family on the couch.'"
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B source found on a gap between meals and exercise for this breed → no meal_exercise_gap row."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "cheerful, happy, lively; friendly and outgoing; neither nervous nor a frequent barker",
+        "unit": "—",
+        "source_id": "S412",
+        "quote": "Friendly and outgoing.",
+        "confidence": "high",
+        "notes": "RKC standard 'Temperament' (S412); 'Gay, happy, lively little dog.' FCI (S410): 'It is a true companion dog which can be taken anywhere without trouble.' / 'It is neither nervous nor does it often bark.' PDSA (S413): 'Bichons have a happy, playful nature, but will just as quickly jump at the chance of a cuddle and fuss as they will play.'"
+      },
+      "family": {
+        "value": "a great family pet",
+        "unit": "—",
+        "source_id": "S416",
+        "quote": "The Bichon Frise dog breed is a great family pet and highly suitable for families with younger children.",
+        "confidence": "medium",
+        "notes": "PetMD (S416). Basis of family_pet."
+      },
+      "children": {
+        "value": "excellent with children; PetMD: highly suitable for families with younger children",
+        "unit": "—",
+        "source_id": "S413",
+        "quote": "Bichons are very affectionate, loving dogs that are excellent with children and other pets alike.",
+        "confidence": "high",
+        "notes": "PDSA (S413). PetMD (S416): 'The Bichon Frise dog breed is a great family pet and highly suitable for families with younger children.' VCA (S414): 'Children: Generally good with children'; older VCA (S415): 'Playful, gentle and very good with children.' Basis of children. No small_children chip: no rating (the runbook requires an explicit rating) — open for David."
+      },
+      "socialisation": {
+        "value": "friendly with new people and animals when trained and socialised from puppyhood",
+        "unit": "—",
+        "source_id": "S416",
+        "quote": "With proper training and socialization from puppyhood, Bichons are friendly dogs that are comfortable meeting new people and animals.",
+        "confidence": "medium",
+        "notes": "PetMD (S416). VCA (S414): 'They respond well to early socialization and learn readily with positive reinforcement training.' Basis of the puppy socialisation row (M5-R17)."
+      },
+      "time_alone": {
+        "value": "limited tolerance of being alone; prefers companionship",
+        "unit": "—",
+        "source_id": "S414",
+        "quote": "Time Alone: Limited tolerance; prefers companionship",
+        "confidence": "medium",
+        "notes": "VCA (S414); 'They may develop attention-seeking behaviors if left alone too often.' PetMD (S416): 'If they're bored or lonely, Bichons may turn to undesirable behaviors like excessive barking.' Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "excellent with other pets",
+        "unit": "—",
+        "source_id": "S413",
+        "quote": "Bichons are very affectionate, loving dogs that are excellent with children and other pets alike.",
+        "confidence": "high",
+        "notes": "PDSA (S413). PetMD (S416): 'They are good with kids and other animals, and they're very playful.' VCA (S414): 'Other Pets: Typically social and adaptable'. No prey-drive statement → no chases_small_pets. Basis of other_pets."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation statement found. Older VCA (S415): 'Does best with reward-based training involving food or games.' — training advice, not food motivation. No food_motivated_weight chip."
+      },
+      "training_notes": {
+        "value": "highly trainable, learns quickly; relatively easy to train",
+        "unit": "—",
+        "source_id": "S416",
+        "quote": "The Bichon Frise is highly trainable, smart, and learns quickly.",
+        "confidence": "medium",
+        "notes": "PetMD (S416). VCA (S414): 'This breed is social and responsive, making them relatively easy to train.' PDSA (S413) rating label 'Easy to train' (no text)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere (Wikipedia S417 gives study ratios — never exported). RKC Breed Watch Category 1 (S411: 'Currently no points of concern specific to this breed have been identified') → no welfare chip. PDSA (S413) lists luxating patellas, allergies, cataracts, bladder stones, portosystemic shunt and diabetes mellitus; VCA (S414) patellar luxation, congenital deafness, allergic dermatitis, dental disease, bladder stones, degenerative joint disease, cataracts, diabetes mellitus; PetMD (S416) diabetes, corneal dystrophy, cataracts, bladder stones and dental disease.",
+      "patella": {
+        "value": "luxating patellas (kneecaps that slip)",
+        "unit": "—",
+        "source_id": "S413",
+        "quote": "Luxating patellas – the kneecaps slipping temporarily out of place.",
+        "confidence": "high",
+        "notes": "PDSA (S413) health list; VCA (S414) 'Patellar luxation'. AKC parent club recommends a patella evaluation (breeder checklist K28). Background only."
+      },
+      "allergies": {
+        "value": "skin allergies (allergic dermatitis)",
+        "unit": "—",
+        "source_id": "S414",
+        "quote": "Skin allergies are a common issue in Bichon Frises and may require ongoing management.",
+        "confidence": "medium",
+        "notes": "VCA (S414); PDSA (S413) 'Allergies'. Background only — not a Breed Watch point → no sensitive_skin chip."
+      },
+      "cataracts": {
+        "value": "cataracts",
+        "unit": "—",
+        "source_id": "S413",
+        "quote": "Cataracts – opacity of the lens of the eye – giving a 'cloudy' appearance.",
+        "confidence": "high",
+        "notes": "PDSA (S413); VCA (S414), PetMD (S416) agree. RKC minimum: BVA/KC/ISDS eye scheme (breeder checklist). Background only."
+      },
+      "bladder_stones": {
+        "value": "bladder stones",
+        "unit": "—",
+        "source_id": "S413",
+        "quote": "Bladder stones – a collection of minerals that form in the bladder.",
+        "confidence": "high",
+        "notes": "PDSA (S413); VCA (S414), PetMD (S416) agree. Background only."
+      },
+      "liver_shunt": {
+        "value": "portosystemic (liver) shunt",
+        "unit": "—",
+        "source_id": "S413",
+        "quote": "Portosystemic shunt – abnormal blood circulation, with the blood effectively bypassing the liver",
+        "confidence": "high",
+        "notes": "PDSA (S413) fragment as returned. Background only."
+      },
+      "diabetes": {
+        "value": "diabetes mellitus",
+        "unit": "—",
+        "source_id": "S413",
+        "quote": "Diabetes Mellitus – a complex disorder of carbohydrate, fat and protein metabolism",
+        "confidence": "high",
+        "notes": "PDSA (S413) fragment as returned; VCA (S414) senior list; PetMD (S416): 'Diabetes in dogs is a disease of the pancreas that results in a failure to regulate blood sugar.' Background only."
+      },
+      "dental": {
+        "value": "dental disease — tooth brushing at home",
+        "unit": "—",
+        "source_id": "S416",
+        "quote": "As with all small dogs, the Bichon Frise is highly susceptible to dental disease.",
+        "confidence": "medium",
+        "notes": "PetMD (S416): 'Brushing your dog's teeth at home with a dog-friendly toothbrush and toothpaste will help, too.' VCA (S414): 'Dental disease' (adult list). Tooth care advice: see suitability.petmd_teeth (ROADMAP M5-R15)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 45,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Bichon Frise",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-20): rank 45, shared with the Siberian Husky and the King Charles Spaniel ('| 45 | Siberian Husky |' / 'Bichon Frise' / 'King Charles Spaniel' as returned), tier 'Average Working/Obedience Intelligence' (ranks 40–54). Coren's own top / bottom-10 article (S34) does not list the breed. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 25 to 40 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier definition as returned: 'Obey first command: 50% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "highly trainable, learns quickly",
+        "unit": "—",
+        "source_id": "S416",
+        "quote": "The Bichon Frise is highly trainable, smart, and learns quickly.",
+        "confidence": "medium",
+        "notes": "PetMD (S416); VCA (S414) 'relatively easy to train'. The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.bichon_frise.learning_multiplier (1.0, runbook rule: Average tier, rank 45).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "small, cheerful white dog with very loose corkscrew-curled hair; well balanced, plumed tail carried over the back",
+        "unit": "—",
+        "source_id": "S410",
+        "quote": "A cheerful little dog, with a lively gait and very loose, white corkscrew-curled hair.",
+        "confidence": "high",
+        "notes": "FCI (S410). RKC standard (S412): 'Well-balanced dog of smart appearance, closely coated with handsome plume carried over the back.'"
+      },
+      "colours": {
+        "value": [
+          "white"
+        ],
+        "unit": "list",
+        "source_id": "S410",
+        "quote": "Pure white.",
+        "confidence": "high",
+        "notes": "FCI (S410) 'Pure white.'; puppies may show a slightly beige (champagne) tendency (fragment 'the coat can have the tendency to be slightly beige (champagne)'). RKC standard (S412): 'White, but cream or apricot markings acceptable up to 18 months.' The game draws an adult → white only; never cream, apricot or any other colour on an adult."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — one colour only (white = the portrait default); verified=false in breed_appearance.php like every colour weight."
+      },
+      "coat": {
+        "value": "loose spiral corkscrew curls, fine and silky, neither flat nor corded, 7–10 cm long; usually trimmed",
+        "unit": "—",
+        "source_id": "S412",
+        "quote": "Fine, silky with soft corkscrew curls, neither flat nor corded and measuring 7-10 cms (3-4 ins) in length.",
+        "confidence": "high",
+        "notes": "RKC standard (S412). FCI (S410): 'The hair of the outer coat forms loose spiral curls' / 'The coat is neither flat nor corded, neither woolly, nor matted.'"
+      },
+      "nose": {
+        "value": "rounded, black, glossy; not short-faced",
+        "unit": "—",
+        "source_id": "S410",
+        "quote": "Rounded, black, finely grained and glossy.",
+        "confidence": "high",
+        "notes": "FCI (S410). RKC standard (S412): 'Nose large, round, black, soft and shiny.'"
+      },
+      "ears": {
+        "value": "drooping, well covered with profuse hair",
+        "unit": "—",
+        "source_id": "S410",
+        "quote": "The ears are drooping and are well-furnished with profuse hair.",
+        "confidence": "high",
+        "notes": "FCI (S410). RKC standard (S412): 'Hanging close to head, well covered with flowing hair longer than leathers' (fragment)."
+      },
+      "eyes": {
+        "value": "very dark, round, medium-sized, not protruding; black eye rims and dark haloes",
+        "unit": "—",
+        "source_id": "S410",
+        "quote": "Very dark, medium-sized, rather round in shape, neither almond-shaped nor protruding.",
+        "confidence": "high",
+        "notes": "FCI (S410). RKC standard (S412): 'Dark, round with black eye rims, surrounded by dark haloes, consisting of well-pigmented skin.'"
+      },
+      "tail": {
+        "value": "carried raised and gracefully curved over the back, not tightly curled; natural",
+        "unit": "—",
+        "source_id": "S412",
+        "quote": "Normally carried raised and curved gracefully over the back but not tightly curled.",
+        "confidence": "high",
+        "notes": "RKC standard (S412). FCI (S410): 'it is carried raised and gracefully curved in line with the spine' (fragment)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S411), PDSA (S413), VCA (S414, S415), PetMD (S416). The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S411",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size' (value as returned). PDSA (S413) the same."
+      },
+      "rkc_exercise": {
+        "value": "Up to 30 minutes per day",
+        "unit": "—",
+        "source_id": "S411",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Exercise' (value as returned). Basis of 30 min (PDSA S413 'around 30 minutes' agrees). Not long_daily_exercise / active_family."
+      },
+      "pdsa_exercise": {
+        "value": "around 30 minutes daily",
+        "unit": "—",
+        "source_id": "S413",
+        "quote": "They need around 30 minutes exercise per day.",
+        "confidence": "medium",
+        "notes": "PDSA (S413). Agrees with 30."
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S411",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (value as returned; written 'Flat/Apartment' by the tool this run, the RKC field value as on the other breeds' pages). Basis of the apartment chip (runbook: only from RKC 'Flat/ Apartment')."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S411",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (value as returned). Background only."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S411",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (value as returned). Runbook dog-grooming rule: 'Every day' → 7 brushing sessions per week (M5-R13). Basis of frequent_grooming."
+      },
+      "pdsa_grooming": {
+        "value": "daily grooming; coat trimming every couple of months, often by a professional groomer",
+        "unit": "—",
+        "source_id": "S413",
+        "quote": "They need daily grooming and coat trimming is required every couple of months",
+        "confidence": "medium",
+        "notes": "PDSA (S413) fragment as returned; 'this is often done by a professional groomer' (fragment). Agrees with daily brushing; the trimming is a groomer need → ROADMAP M5-R18."
+      },
+      "vca_grooming": {
+        "value": "brushed daily; regular professional grooming",
+        "unit": "—",
+        "source_id": "S414",
+        "quote": "Their coat should be brushed daily to prevent matting.",
+        "confidence": "medium",
+        "notes": "VCA (S414): 'Regular professional grooming is often needed to maintain coat shape.' Older VCA page (S415): 'Brushing and combing every other day is necessary to prevent matting.' / 'Most people have their dogs professionally clipped every month.' PetMD (S416): 'Brush your Bichon Frise's white coat every day to prevent matting.'"
+      },
+      "professional_grooming": {
+        "value": "coat trimming every couple of months (PDSA); monthly groomer visits (PetMD)",
+        "unit": "—",
+        "source_id": "S413",
+        "quote": "They need daily grooming and coat trimming is required every couple of months",
+        "confidence": "medium",
+        "notes": "PDSA (S413); PetMD (S416): 'monthly trips to a professional groomer to keep their fur neat and trimmed.' (fragment). Groomer = sourced need without a mechanic → ROADMAP M5-R18 (needs-david)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S411",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (value as returned). PDSA (S413) 'Medium'. Background only."
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S411",
+        "quote": "Sheds: No",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (value as returned). Basis of low_shedding (never 'hypoallergenic'). Older VCA (S415): 'Shedding is below average.' — agrees; no conflicting A/B source."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S411",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "See lifespan.rkc."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S411",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country' (value as returned). Background only."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S411",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (value as returned). Background only."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S411",
+        "quote": "Currently no points of concern specific to this breed have been identified",
+        "confidence": "high",
+        "notes": "RKC breed page (S411) Breed Watch Category 1 (fragment as returned) → no welfare chip; in marketing."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC page (S411) has no 'Good with children' field."
+      },
+      "petmd_family": {
+        "value": "great family pet",
+        "unit": "—",
+        "source_id": "S416",
+        "quote": "The Bichon Frise dog breed is a great family pet and highly suitable for families with younger children.",
+        "confidence": "medium",
+        "notes": "PetMD (S416). Basis of family_pet."
+      },
+      "pdsa_children": {
+        "value": "excellent with children",
+        "unit": "—",
+        "source_id": "S413",
+        "quote": "Bichons are very affectionate, loving dogs that are excellent with children and other pets alike.",
+        "confidence": "high",
+        "notes": "PDSA (S413). Basis of children. No small_children chip (no rating) — PetMD's 'highly suitable for families with younger children' is open for David."
+      },
+      "pdsa_other_pets": {
+        "value": "excellent with other pets",
+        "unit": "—",
+        "source_id": "S413",
+        "quote": "Bichons are very affectionate, loving dogs that are excellent with children and other pets alike.",
+        "confidence": "high",
+        "notes": "PDSA (S413). Basis of other_pets."
+      },
+      "vca_time_alone": {
+        "value": "limited tolerance of time alone; prefers companionship",
+        "unit": "—",
+        "source_id": "S414",
+        "quote": "Time Alone: Limited tolerance; prefers companionship",
+        "confidence": "medium",
+        "notes": "VCA (S414). Basis of needs_company."
+      },
+      "petmd_teeth": {
+        "value": "brush the teeth at home; highly susceptible to dental disease",
+        "unit": "—",
+        "source_id": "S416",
+        "quote": "Brushing your dog's teeth at home with a dog-friendly toothbrush and toothpaste will help, too.",
+        "confidence": "medium",
+        "notes": "PetMD (S416); VCA (S414): 'Routine ear cleaning, tooth brushing, and nail trimming are important for overall care.' No frequency. Tooth brushing = sourced need without a mechanic → ROADMAP M5-R15 (needs-david)."
+      },
+      "petmd_ears": {
+        "value": "clean the ears once a month",
+        "unit": "—",
+        "source_id": "S416",
+        "quote": "Clean a Bichon Frise's ears once a month or as directed by your vet.",
+        "confidence": "medium",
+        "notes": "PetMD (S416); VCA (S414) routine ear cleaning. PetMD also: 'Bathe your Bichon at least monthly.' Ear care + baths = sourced need without a mechanic → ROADMAP M5-R20 (needs-david)."
+      },
+      "vca_nails": {
+        "value": "routine nail trimming",
+        "unit": "—",
+        "source_id": "S414",
+        "quote": "Routine ear cleaning, tooth brushing, and nail trimming are important for overall care.",
+        "confidence": "medium",
+        "notes": "VCA (S414). No frequency. Nail care = sourced need without a mechanic → ROADMAP M5-R19 (needs-david)."
+      },
+      "vca_tear_staining": {
+        "value": "tear staining cleaned routinely",
+        "unit": "—",
+        "source_id": "S414",
+        "quote": "Tear staining around the eyes should be cleaned routinely.",
+        "confidence": "medium",
+        "notes": "VCA (S414); PetMD (S416): 'These white dogs may also develop normal tear staining, which can be cleaned with dog-safe stain removers and eye wipes.' No frequency. Face care = sourced need without a mechanic → ROADMAP M5-R14 (Maltese precedent; needs-david)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -38545,6 +39192,322 @@
         "confidence": "high",
         "notes": "RKC breed standard (S403). Weights unsourced.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colours only — black (default), black and white, brown, brown and white, white; never another colour"
+      }
+    },
+    "bichon_frise": {
+      "_note": "Unattended run M5-R10-50 (2026-10-20): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: brushing every day (RKC S411 'Grooming: Every day', M5-R13); puppy socialisation (PetMD S416 quote, M5-R17). No meal / exercise gap source → no M5-R16 row. Sourced needs without a game mechanic: groomer trimming every couple of months (PDSA S413) → ROADMAP M5-R18; tooth brushing (PetMD S416, VCA S414) → ROADMAP M5-R15; monthly ear cleaning + baths (PetMD S416) → ROADMAP M5-R20; nail trimming (VCA S414) → ROADMAP M5-R19; tear-stain cleaning (VCA S414) → ROADMAP M5-R14 (needs-david). Senior 108 provisional (RKC lower bound 'Over 12 years', S411 — McMillan 2024 12.5 y only via Wikipedia S417 → 113). Breed Watch Category 1 → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": "S411",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Up to 30 minutes per day' (S411). Rule: one number N ('up to N') → N = 30; PDSA (S413) 'around 30 minutes' agrees.",
+        "alternatives": [
+          {
+            "value": 30,
+            "source_id": "S413",
+            "notes": "PDSA around 30 minutes per day (key facts: minimum 30 minutes)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S411 'Up to 30 minutes per day')"
+      },
+      "step_goal_adult": {
+        "value": 3000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 30 min × 100 steps/min (S45) = 3,000.",
+        "derived_from": [
+          "S411",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min × 100 steps/min → 3,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 23,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 30 = 22.5) = 23 min (half up) → 2,300 steps.",
+        "steps": 2300,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 30 reached at 3 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 30 min (reached at 3 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) = 108 (S11 + RKC lower bound 'Over 12 years', S411; PDSA 'Over 12 years', S413, agrees). No McMillan 2024 / VetCompass value reachable. Alternatives: 113 (McMillan 2024 12.5 y via Wikipedia S417, tier C), 126 (VCA / PetMD 14–15 y lower bound, S414 / S416), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S411"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 113,
+          "senior_vca_petmd_lower_bound": 126,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S411)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 45 (S35), tier 'Average' (40–54) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 45, Average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources (PetMD S416 'at least two meals per day' = the general rule).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S411",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "bichon_frise.suitability.rkc_grooming. RKC (S411) 'Every day' → 7 (runbook dog-grooming rule). PDSA (S413) 'daily grooming', VCA (S414) 'brushed daily', PetMD (S416) 'every day' agree; older VCA (S415) 'every other day' is an alternative. Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 7,
+            "source_id": "S413",
+            "notes": "PDSA daily grooming"
+          },
+          {
+            "value": 7,
+            "source_id": "S414",
+            "notes": "VCA brushed daily"
+          },
+          {
+            "value": null,
+            "source_id": "S415",
+            "notes": "older VCA page: every other day (≈ 3–4× a week)"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden, RKC »Every day«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S416",
+        "quote": "With proper training and socialization from puppyhood, Bichons are friendly dogs that are comfortable meeting new people and animals.",
+        "confidence": "medium",
+        "notes": "bichon_frise.behaviour.socialisation (PetMD S416); VCA (S414) agrees. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S416)"
+      },
+      "professional_grooming": {
+        "value": "coat trimming every couple of months, often by a professional groomer (PetMD: monthly)",
+        "unit": "groomer visits (sourced need)",
+        "source_id": "S413",
+        "quote": "They need daily grooming and coat trimming is required every couple of months",
+        "confidence": "medium",
+        "notes": "bichon_frise.suitability.professional_grooming. The game has no groomer mechanic → ROADMAP M5-R18 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): striženje dlake na vsakih nekaj mesecev, pogosto pri pasjem frizerju (PetMD mesečno); mehanike ni → ROADMAP M5-R18 (needs-david)"
+      },
+      "tooth_brushing": {
+        "value": null,
+        "unit": "tooth-brushing sessions per week (sourced need; no frequency in the source)",
+        "source_id": "S416",
+        "quote": "Brushing your dog's teeth at home with a dog-friendly toothbrush and toothpaste will help, too.",
+        "confidence": "medium",
+        "notes": "PetMD (S416), bichon_frise.suitability.petmd_teeth; VCA (S414) 'tooth brushing'. No frequency. The game has no tooth-brushing mechanic → ROADMAP M5-R15.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): potreba z virom; mehanika ni zgrajena → ROADMAP M5-R15 (needs-david); vir ne navaja pogostosti"
+      },
+      "ear_care": {
+        "value": "clean the ears once a month; bath at least monthly",
+        "unit": "ear cleanings per month (sourced need)",
+        "source_id": "S416",
+        "quote": "Clean a Bichon Frise's ears once a month or as directed by your vet.",
+        "confidence": "medium",
+        "notes": "PetMD (S416), bichon_frise.suitability.petmd_ears; 'Bathe your Bichon at least monthly.' The game has no ear-care / bath mechanic → ROADMAP M5-R20 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): čiščenje ušes enkrat na mesec in kopanje vsaj enkrat na mesec; mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "nail_trimming": {
+        "value": null,
+        "unit": "nail trimming (sourced need; no frequency in the source)",
+        "source_id": "S414",
+        "quote": "Routine ear cleaning, tooth brushing, and nail trimming are important for overall care.",
+        "confidence": "medium",
+        "notes": "VCA (S414), bichon_frise.suitability.vca_nails. The game has no nail-trimming mechanic → ROADMAP M5-R19 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno striženje krempljev; mehanike ni → ROADMAP M5-R19 (needs-david); vir ne navaja pogostosti"
+      },
+      "face_care": {
+        "value": null,
+        "unit": "face care — tear staining cleaned around the eyes (sourced need, not built)",
+        "source_id": "S414",
+        "quote": "Tear staining around the eyes should be cleaned routinely.",
+        "confidence": "medium",
+        "notes": "VCA (S414), bichon_frise.suitability.vca_tear_staining; PetMD (S416) stain removers and eye wipes. No frequency. The game has no face-care mechanic → ROADMAP M5-R14 (Maltese precedent; needs David).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): potreba z virom; mehanika ni zgrajena → ROADMAP M5-R14 (needs-david); vir ne navaja pogostosti"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-50); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S411"
+            ],
+            "refs": [
+              "bichon_frise.suitability.rkc_size_of_home"
+            ],
+            "quote": "S411 'Size of home: Flat/ Apartment'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S416"
+            ],
+            "refs": [
+              "bichon_frise.behaviour.family",
+              "bichon_frise.suitability.petmd_family"
+            ],
+            "quote": "S416 'The Bichon Frise dog breed is a great family pet and highly suitable for families with younger children.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S413"
+            ],
+            "refs": [
+              "bichon_frise.behaviour.children",
+              "bichon_frise.suitability.pdsa_children"
+            ],
+            "quote": "S413 'Bichons are very affectionate, loving dogs that are excellent with children and other pets alike.'"
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S413"
+            ],
+            "refs": [
+              "bichon_frise.behaviour.other_pets",
+              "bichon_frise.suitability.pdsa_other_pets"
+            ],
+            "quote": "S413 'Bichons are very affectionate, loving dogs that are excellent with children and other pets alike.'"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S411"
+            ],
+            "refs": [
+              "bichon_frise.suitability.rkc_shedding"
+            ],
+            "quote": "S411 'Sheds: No'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S411",
+              "S413"
+            ],
+            "refs": [
+              "bichon_frise.suitability.rkc_grooming",
+              "bichon_frise.suitability.pdsa_grooming"
+            ],
+            "quote": "S411 'Grooming: Every day'; S413 'They need daily grooming and coat trimming is required every couple of months'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S414"
+            ],
+            "refs": [
+              "bichon_frise.behaviour.time_alone",
+              "bichon_frise.suitability.vca_time_alone"
+            ],
+            "quote": "S414 'Time Alone: Limited tolerance; prefers companionship'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No rating; PetMD (S416) 'highly suitable for families with younger children' is a statement, not the rating the runbook asks for — open for David.",
+          "older_children": "No A/B source says the breed is a better fit for older children.",
+          "chases_small_pets": "No prey-drive statement.",
+          "first_time_owner": "No explicit statement (PDSA 'Easy to train' is a rating label without text).",
+          "needs_mental_stimulation": "No quote (VCA 'engaged' only).",
+          "active_family": "RKC 'Up to 30 minutes per day' (S411).",
+          "long_daily_exercise": "30 min.",
+          "sheds": "RKC 'Sheds: No'.",
+          "food_motivated_weight": "No statement.",
+          "shorter_lifespan": "RKC 'Over 12 years'.",
+          "welfare": "RKC Breed Watch Category 1 (S411) → no welfare chip (patella / allergies / cataracts / bladder stones / shunt / diabetes are PDSA / VCA / PetMD list items, not Breed Watch points).",
+          "hypoallergenic": "Never (runbook) — although PetMD (S416) and VCA use the word."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, family_pet, children, other_pets, low_shedding; consider frequent_grooming, needs_company"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S411",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S411) — no conformation concern, no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92) → in marketing. Marketing never calls it hypoallergenic, never shows it as a toy or an accessory (Claude's proposal).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (Breed Watch Category 1)"
+      },
+      "ai_appearance": {
+        "value": "adult Bichon Frise, pure white; small well-balanced body; loose, soft corkscrew-curled coat in a natural rounded trim; very dark round eyes with black rims and dark haloes; round black nose (not short-faced); drooping ears covered with hair; plumed tail carried gracefully over the back; never cream, apricot or any other colour on an adult",
+        "unit": "—",
+        "source_id": "S410",
+        "quote": "Pure white.",
+        "confidence": "high",
+        "notes": "FCI (S410) and RKC standard (S412 'White, but cream or apricot markings acceptable up to 18 months.' — the portrait is an adult). One colour; weight unsourced.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colour only — pure white (adult); never cream / apricot markings on an adult, never another colour"
       }
     }
   }
