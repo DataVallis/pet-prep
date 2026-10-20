@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `rhodesian_ridgeback` (viri S384–S394, K25; ponovno S10, S11, S14, S24, S35, S45, S174, S263, S376) |
 | Izvor | FCI št. 146, skupina 6, sekcija 3 (sorodne pasme), Južna Afrika (S384, S385) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 43. mesto »Rhodesian Ridgeback« (mesta do 42 so že v aplikaciji; S174) |
-| PR-ji | pet-prep #285 (pasma, `081587e`) · portret #286 (2026-10-20) · spletna stran (glej vrstico v BREED_QUEUE) |
+| PR-ji | pet-prep #285 (pasma, `081587e`) · portret #286 (2026-10-20) · spletna stran #77 (`6333299`) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -39,7 +39,7 @@
 | Česanje 1× na teden (rutina »Počeši«), opozorilo po obroku, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R16 / M5-R17 | 2026-10-19 |
 | Barva (izbirnik barve: rdeče pšenična, svetlo pšenična) | 🛠 | 💶 izziv | M5-R21 | 2026-10-19 |
 | AI portret v registru (sprejet v prvem poskusu; rdeče pšenična barva, črn nos, stranski pogled — greben se ne vidi) | ✅ | — | M5-R11-04 | 2026-10-20 |
-| Stran na petprep.si (`/animals/dogs/rhodesian-ridgeback`, `/sl/zivali/psi/rodezijski-ridgeback`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| Stran na petprep.si (`/animals/dogs/rhodesian-ridgeback`, `/sl/zivali/psi/rodezijski-ridgeback`) s portretom | ✅ objavljena kot »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | 2026-10-20 |
 
 ## Zgodba (v slogu BUILD_LOG)
 
