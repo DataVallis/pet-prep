@@ -1019,6 +1019,27 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.papillon',
                 'search_keywords' => ['papillon', 'phalene', 'phalène', 'butterfly dog', 'papijon', 'falen'],
             ],
+            // M5-R10-49 Portuguese Water Dog (docs/research/dog-data/data.json portuguese_water_dog, sources
+            // S402–S408; runbook rules confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal (proposed_game_parameters.portuguese_water_dog
+            // .step_goal_adult: 60 min × 100 steps/min — RKC S404 "Exercise: Up to 1 hour per day") — only
+            // the legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::PortugueseWaterDog->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 450,
+                'label_key' => 'breeds.portuguese_water_dog',
+                'search_keywords' => ['portuguese water dog', 'portie', 'pwd', 'cao de agua', 'cão de água português', 'portugalski vodni pes', 'vodni pes', 'portugalski'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

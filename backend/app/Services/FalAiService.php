@@ -429,6 +429,14 @@ class FalAiService
                 .'dark round eyes with black rims, small black nose, long plumed tail arched over the back, small elegant body, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-49: RKC breed standard (S403) — solid black as the anchor ("Black, white, various shades of brown, black
+            // and white, brown and white."); the traditional lion clip described by the standard (muzzle and hindquarters clipped).
+            BreedType::PortugueseWaterDog => 'A happy, alert Portuguese Water Dog, solid black with a black nose, '
+                .'robust, well-balanced, almost square and strongly muscled medium-sized body, '
+                .'profuse curly single coat in the traditional lion clip: full coat over the front half, muzzle and hindquarters clipped short, '
+                .'heart-shaped thin drop ears, dark round eyes, tail carried in a ring with a plume at the tip, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1036,6 +1044,18 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'long, fine, silky, straight single coat with a chest frill',
                 'markings' => 'colour covering both ears and over both eyes, white blaze, large erect fringed butterfly ears',
+            ],
+            // M5-R10-49: RKC standard S403 "Black, white, various shades of brown, black and white, brown and white."
+            // — "Any other colour or combination of colours unacceptable."
+            BreedType::PortugueseWaterDog => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'solid black',
+                    1 => 'black with white on the chin and chest',
+                    2 => 'brown',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'profuse curly single coat without undercoat',
+                'markings' => 'traditional lion clip: muzzle and hindquarters clipped, plume at the tail tip, heart-shaped drop ears',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

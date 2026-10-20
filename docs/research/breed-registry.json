@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "b9d2cc81a74f86645d2f85426725a5fa3322710daffe67bdfda4a4f6e2b5776f"
+      "sha256": "84cd1e5ac74f06481b5352d692c88371ad448b9b796b177e3e325a4901a37ed1"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "0358de6b6d3fa752f7482dcbd3a466991c5891135884e8fd578ff520b899558a"
+      "sha256": "f2f5cb23014fdc0bf9d7109da535374e3967f615a18ead3e471030ff49d61cd9"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "c4e74051b4029a2ab31fe995ad317ce2f99216dd0c1ea29e9262f295c131ff7f"
+      "sha256": "b4eae9a25ecb9cfc6f7953ccf82b4f62c1b0215842d35304d8057a8b114527a3"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "af1add46353655ead93167e4c8750851b1ae3081204d40e72ece42d3f55c218e"
+      "sha256": "e46bc7b65abf44c7e16cbe8724e19d91a26b2d757db04ad0cae7159bbba8603f"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "86cd496863223a924f1201d3c3b23ec980f6b59f0ed51412c158d9b722aee60b"
+      "sha256": "0c14f752e0e1190354dd4290b87e3a147ece59c3839b0fd741a1bf6c7fd5bb42"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "fe0d9a60dc101f82906241f9f490f78974e2fc452e0b5fa660d03e9ea7fcf20c"
+      "sha256": "2eaecbdda34bbc3eb670dc09838fcfe7ccb8e40def4ca40fb35911f8defe92f6"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -203,7 +203,7 @@
         }
       },
       "status": "available",
-      "breed_count": 44,
+      "breed_count": 45,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -26564,6 +26564,598 @@
       ]
     },
     {
+      "id": "portuguese_water_dog",
+      "species": "dog",
+      "order": 44,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Portuguese Water Dog",
+        "sl": "Portugalski vodni pes"
+      },
+      "slug": {
+        "en": "portuguese-water-dog",
+        "sl": "portugalski-vodni-pes"
+      },
+      "synonyms": {
+        "en": [
+          "Cão de Água Português",
+          "Portie",
+          "PWD",
+          "Algarvian Water Dog"
+        ],
+        "sl": [
+          "portugalski vodni pes",
+          "vodni pes",
+          "portie"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "under_1h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S404"
+          ],
+          "ref": "portuguese_water_dog.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              50,
+              57
+            ],
+            "female": [
+              43,
+              52
+            ]
+          },
+          "source_ids": [
+            "S403"
+          ],
+          "ref": "portuguese_water_dog.height.rkc_standard",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              19,
+              25
+            ],
+            "female": [
+              16,
+              22
+            ]
+          },
+          "source_ids": [
+            "S403"
+          ],
+          "ref": "portuguese_water_dog.adult_weight.rkc_standard",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "portuguese_water_dog.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S404"
+          ],
+          "ref": "portuguese_water_dog.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S404"
+          ],
+          "ref": "portuguese_water_dog.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S404"
+          ],
+          "ref": "portuguese_water_dog.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S404"
+          ],
+          "ref": "portuguese_water_dog.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S404"
+          ],
+          "ref": "portuguese_water_dog.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 37,
+            "group": 8,
+            "section": 3,
+            "origin": "PT"
+          },
+          "source_ids": [
+            "S402"
+          ],
+          "ref": "portuguese_water_dog.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia_arthritis",
+          "source_ids": [
+            "S405"
+          ],
+          "ref": "portuguese_water_dog.health.hip_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S405"
+          ],
+          "ref": "portuguese_water_dog.health.pra",
+          "confidence": "medium"
+        },
+        {
+          "key": "gm1_gangliosidosis",
+          "source_ids": [
+            "S404"
+          ],
+          "ref": "portuguese_water_dog.health.gm1",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S406"
+          ],
+          "ref": "portuguese_water_dog.health.bloat",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S407"
+          ],
+          "ref": "portuguese_water_dog.health.hypothyroidism",
+          "confidence": "medium"
+        },
+        {
+          "key": "addisons_disease",
+          "source_ids": [
+            "S407"
+          ],
+          "ref": "portuguese_water_dog.health.addisons",
+          "confidence": "medium"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S407"
+          ],
+          "ref": "portuguese_water_dog.health.cataracts",
+          "confidence": "medium"
+        },
+        {
+          "key": "periodontal_daily_brushing",
+          "source_ids": [
+            "S407"
+          ],
+          "ref": "portuguese_water_dog.health.dental",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S405"
+            ],
+            "refs": [
+              "portuguese_water_dog.behaviour.family",
+              "portuguese_water_dog.suitability.pdsa_family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S407"
+            ],
+            "refs": [
+              "portuguese_water_dog.behaviour.children",
+              "portuguese_water_dog.suitability.petmd_children"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S404"
+            ],
+            "refs": [
+              "portuguese_water_dog.suitability.rkc_size_of_home"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S405"
+            ],
+            "refs": [
+              "portuguese_water_dog.behaviour.other_pets",
+              "portuguese_water_dog.suitability.pdsa_other_pets"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S404"
+            ],
+            "refs": [
+              "portuguese_water_dog.suitability.rkc_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S404",
+              "S405"
+            ],
+            "refs": [
+              "portuguese_water_dog.suitability.rkc_grooming",
+              "portuguese_water_dog.suitability.pdsa_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.portuguese_water_dog.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S404"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S404 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.portuguese_water_dog.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.portuguese_water_dog.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S404"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S404)"
+          },
+          {
+            "ref": "proposed_game_parameters.portuguese_water_dog.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+          },
+          {
+            "ref": "proposed_game_parameters.portuguese_water_dog.grooming",
+            "basis_source_ids": [
+              "S404"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden, RKC »Every day«; PDSA »a daily requirement«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S404"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S404"
+            ]
+          },
+          {
+            "key": "dna_prcd_pra",
+            "level": "minimum",
+            "source_ids": [
+              "S404"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S404"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S404"
+            ]
+          },
+          {
+            "key": "dna_gm1",
+            "level": "best_practice",
+            "source_ids": [
+              "S404"
+            ]
+          },
+          {
+            "key": "dna_eopra",
+            "level": "best_practice",
+            "source_ids": [
+              "S404"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S404"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S402",
+        "S403",
+        "S404",
+        "S405",
+        "S406",
+        "S407",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -30713,6 +31305,48 @@
       "publisher": "PetMD (updated Feb. 25, 2025)",
       "title": "Papillon",
       "url": "https://www.petmd.com/dog/breeds/papillon"
+    },
+    {
+      "id": "S402",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — CÃO DE ÁGUA PORTUGUÊS / PORTUGUESE WATER DOG (37)",
+      "url": "https://www.fci.be/en/nomenclature/PORTUGUESE-WATER-DOG-37.html"
+    },
+    {
+      "id": "S403",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club",
+      "title": "Portuguese Water Dog — breed standard (last updated 1 April 2025)",
+      "url": "https://www.thekennelclub.org.uk/breed-standards/working/portuguese-water-dog"
+    },
+    {
+      "id": "S404",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Portuguese Water Dog — breed page (older address; key facts, Breed Watch, health testing)",
+      "url": "https://www.thekennelclub.org.uk/services/public/breed/display.aspx?id=5135"
+    },
+    {
+      "id": "S405",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Portuguese Water Dog breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/portuguese-water-dog"
+    },
+    {
+      "id": "S406",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals",
+      "title": "Portuguese Water Dog",
+      "url": "https://vcahospitals.com/know-your-pet/portuguese-water-dog"
+    },
+    {
+      "id": "S407",
+      "tier": "B",
+      "publisher": "PetMD (updated Feb. 3, 2023)",
+      "title": "Portuguese Water Dog",
+      "url": "https://www.petmd.com/dog/breeds/c_dg_portuguese_water_dog"
     },
     {
       "id": "C1",
