@@ -421,6 +421,14 @@ class FalAiService
                 .'tapering tail of moderate length carried with a slight upward curve, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-48: FCI 77 (S396) / AKC-approved standard (S399) — white with red patches as the anchor (white with
+            // patches of any colour); the erect-eared Papillon variety (ears like butterfly wings), not the Phalène.
+            BreedType::Papillon => 'A happy, alert little Papillon dog, white with red patches, colour covering both ears and over both eyes with a white blaze, '
+                .'long, fine, silky, straight single coat with a frill on the chest and feathering on the legs, '
+                .'large erect fringed ears with rounded tips carried obliquely like the spread wings of a butterfly, '
+                .'dark round eyes with black rims, small black nose, long plumed tail arched over the back, small elegant body, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1016,6 +1024,18 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'short, dense, sleek and glossy coat',
                 'markings' => 'clearly defined ridge of reversed hair along the spine with two identical crowns',
+            ],
+            // M5-R10-48: FCI S396 "All colours are admitted on a coat with a white background."; AKC-approved S399
+            // "Always parti-color or white with patches of any color(s)." — never all white, never without white.
+            BreedType::Papillon => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'white with red patches',
+                    1 => 'white with sable patches',
+                    2 => 'tricolour: white with black patches and tan markings',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'long, fine, silky, straight single coat with a chest frill',
+                'markings' => 'colour covering both ears and over both eyes, white blaze, large erect fringed butterfly ears',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

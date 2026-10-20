@@ -441,6 +441,15 @@
 | with amber eyes. Breed Watch Category 1 (S387) — not a welfare breed. Colour weights are unsourced →
 | `verified => false`.
 |
+| Papillon (M5-R10-48, docs/research/dog-data papillon.appearance): "Small de luxe Toy spaniel, of a normal and
+| harmonious build, with long hair," (FCI 77, S396); the erect-eared variety — "Ears of the erect type are carried
+| obliquely and move like the spread wings of a butterfly." (AKC-approved standard, S399) — the dog trait
+| `ear_carriage`; the drop-eared Phalène is the other FCI variety and is not drawn. Colours "All colours are
+| admitted on a coat with a white background." (S396) / "Always parti-color or white with patches of any
+| color(s)." (S399), colour over both ears and eyes with a white blaze; white with red patches weighted highest
+| (the register portrait). Never all white or without white (AKC disqualification). Breed Watch Category 1
+| (S397) — not a welfare breed. Colour weights are unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2156,6 +2165,43 @@ return [
             'ridge' => ['clearly defined ridge of hair growing in the opposite direction along the spine, from just behind the shoulders to the haunch, with two identical crowns opposite each other'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose', 'ridge'],
+    ],
+
+    // M5-R10-48 (docs/research/dog-data/data.json papillon.appearance; runbook rules 2026-10-10:
+    // standard colours only — white with patches of any colour; the erect-eared Papillon variety).
+    'papillon' => [
+        'display_name' => 'Papillon',
+        // Colour frequencies are in no source (papillon.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 77 (S396), AKC-approved standard (S399), RKC breed page (S397) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S397 "Size: Small"; S396 "Height at the withers: About 28 cm."',
+            'build' => 'S396 "Small de luxe Toy spaniel, of a normal and harmonious build, with long hair,"',
+            'coat_length' => 'S399 "Abundant, long, fine, silky, flowing, straight with resilient quality, flat on back and sides of body." "A profuse frill on chest. There is no undercoat."',
+            'coat_color' => 'S396 "All colours are admitted on a coat with a white background."; S399 "Always parti-color or white with patches of any color(s)." "On the head, color(s) other than white must cover both ears, back and front," (weights unsourced; never all white or without white)',
+            'ear_carriage' => 'S399 "Ears of the erect type are carried obliquely and move like the spread wings of a butterfly." "The ears of either the erect or drop type should be large with rounded tips,"',
+            'eye_color' => 'S399 "dark, round, not bulging, of medium size and alert in expression." "Eye rims black."',
+            'tail' => 'S399 "Tail long, set high and carried well arched over the body." "The tail is covered with a long, flowing plume."',
+            'nose' => 'S399 "Nose black, small, rounded and slightly flat on top."',
+        ],
+        'traits' => [
+            'size' => ['tiny toy-sized'],
+            'build' => [['value' => 'small, dainty and elegant, slightly longer than tall, fine-boned', 'weight' => 3], 'small and graceful with a proud carriage'],
+            'coat_length' => ['long, fine, silky, straight single coat with a profuse chest frill, feathered legs and short hair on the face'],
+            // Standard: white with patches of any colour (S396, S399); white with red patches highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'white with red patches, colour covering both ears and over both eyes, white blaze', 'weight' => 35],
+                ['value' => 'white with sable patches, colour covering both ears and over both eyes, white blaze', 'weight' => 25],
+                ['value' => 'tricolour: white with black patches and tan markings, colour covering both ears and over both eyes, white blaze', 'weight' => 20],
+                ['value' => 'white with black patches, colour covering both ears and over both eyes, white blaze', 'weight' => 15],
+                ['value' => 'white with lemon patches, colour covering both ears and over both eyes, white blaze', 'weight' => 5],
+            ],
+            'ear_carriage' => ['large erect ears with rounded tips, well fringed, carried obliquely at about 45 degrees like the spread wings of a butterfly'],
+            'eye_color' => ['dark, round, not bulging, with black rims'],
+            'tail' => ['long, set high, carried arched over the back with a long flowing plume'],
+            'nose' => ['small black rounded nose (not short-faced)'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

@@ -1272,5 +1272,33 @@ return [
             ],
         ],
 
+        // M5-R10-48: papillon.* (S395–S401), runbook rules (data.json
+        // proposed_game_parameters.papillon.suitability_tags). RKC (S397) + PDSA (S398) + PetMD (S400).
+        // RKC Breed Watch Category 1 (S397) → no welfare chip. No older_children: no A/B source says the breed is a
+        // better fit for older children (PetMD only warns that very young children can injure small dogs — kept as a
+        // caveat of the children chip).
+        'papillon' => [
+            'suits' => [
+                // S397 "Size of home: Flat/ Apartment" / "Size of garden: No garden".
+                ['tag' => 'apartment', 'source_ids' => ['S397'], 'refs' => ['papillon.suitability.rkc_size_of_home', 'papillon.suitability.rkc_size_of_garden']],
+                // S400 "Papillons are great family dogs because they are affectionate".
+                ['tag' => 'family_pet', 'source_ids' => ['S400'], 'refs' => ['papillon.behaviour.family', 'papillon.suitability.petmd_family']],
+                // S400 "Papillons live well with other dogs, cats, kids, adults, and seniors alike." (caveat: supervise very young children).
+                ['tag' => 'children', 'source_ids' => ['S400'], 'refs' => ['papillon.behaviour.children', 'papillon.suitability.petmd_children']],
+                // S400 the same sentence (other dogs, cats).
+                ['tag' => 'other_pets', 'source_ids' => ['S400'], 'refs' => ['papillon.behaviour.other_pets', 'papillon.suitability.petmd_other_pets']],
+            ],
+            'consider' => [
+                // S397 "Grooming: More than once a week"; S398 "two-three times per week".
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S397', 'S398'], 'refs' => ['papillon.suitability.rkc_grooming', 'papillon.suitability.pdsa_grooming']],
+                // S400 "They are active, playful, and need daily exercise and mental stimulation."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S400'], 'refs' => ['papillon.behaviour.mental_stimulation', 'papillon.suitability.petmd_mental_stimulation']],
+                // S400 "However, some Papillons may develop separation anxiety."
+                ['tag' => 'needs_company', 'source_ids' => ['S400'], 'refs' => ['papillon.behaviour.time_alone', 'papillon.suitability.petmd_company']],
+                // S397 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S397'], 'refs' => ['papillon.suitability.rkc_shedding']],
+            ],
+        ],
+
     ],
 ];
