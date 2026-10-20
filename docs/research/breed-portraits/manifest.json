@@ -449,6 +449,18 @@
             "cost_usd": 0.15
         },
         {
+            "breed": "bichon_frise",
+            "species": "dog",
+            "file": "dog/bichon-frise.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:66da27c74df89e793b1b3660a7188d3bda06200c9be9e918b67bc4e5e131b706",
+            "generated_at": "2026-10-20T15:58:47+00:00",
+            "cost_usd": 0.15
+        },
+        {
             "breed": "maine_coon",
             "species": "cat",
             "file": "cat/maine-coon.webp",

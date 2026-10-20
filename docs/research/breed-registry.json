@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "7e7838b0e2cb33f05abf49fc290074d43097214a562bfa73c58addd210d0fb93"
+      "sha256": "49d9cf8e2fd9234a33f4bc8b65b1f8c55ee2a7b9efc6bc0f385fa8de81f3777a"
     }
   },
   "suitability_vocabulary": {
@@ -27684,7 +27684,12 @@
           "S411"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "bichon-frise.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
