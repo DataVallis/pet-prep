@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `portuguese_water_dog` (viri S402–S408; ponovno S8, S10, S11, S14, S24, S35, S45, S174); preverjanje vzreditelja iz strani RKC (S404) |
 | Izvor | FCI št. 37 (Cão de Água Português), skupina 8 (prinašalci, šarivci, vodni psi), sekcija vodnih psov, Portugalska (S402) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 45. mesto »Portuguese Water Dog« (S174) |
-| PR-ji | pet-prep #291 (pasma) · portret (sledi) · spletna stran (sledi) |
+| PR-ji | pet-prep #291 (pasma, združen `17afff8`) · portret #292 (2026-10-20) · spletna stran (sledi) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -38,7 +38,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov, odrasel 6.000, starejši 4.500 od 90 mesecev; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-49 | 2026-10-20 |
 | Česanje vsak dan (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-20 |
 | Barva (izbirnik barve, pet barv standarda) | 🛠 | 💶 izziv | M5-R21 | 2026-10-20 |
-| AI portret v registru | 🗓 sledi takoj po združitvi | — | M5-R11-04 | — |
+| AI portret v registru (sprejet v prvem poskusu; črn, levje striženje s čopom na repu, povešena ušesa) | ✅ | — | M5-R11-04 | 2026-10-20 |
 | Stran na petprep.si | 🗓 šele s portretom (»Kmalu«, dokler pasma ni v izdaji aplikacije) | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
