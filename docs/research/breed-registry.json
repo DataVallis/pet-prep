@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "84cd1e5ac74f06481b5352d692c88371ad448b9b796b177e3e325a4901a37ed1"
+      "sha256": "12d951de2139b688f60b6084dcde6649314bf1495406db21d360fee07bb0be2a"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "f2f5cb23014fdc0bf9d7109da535374e3967f615a18ead3e471030ff49d61cd9"
+      "sha256": "ac9774335dee281064f59daabbe5d676f263c96dd22ac186cd19a24452c45f26"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "b4eae9a25ecb9cfc6f7953ccf82b4f62c1b0215842d35304d8057a8b114527a3"
+      "sha256": "7c7b209157f70fbe2a31d054aaee0bf24ca59d2bf89d7d00192c1c48c67598d8"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "e46bc7b65abf44c7e16cbe8724e19d91a26b2d757db04ad0cae7159bbba8603f"
+      "sha256": "458cec3e85414930d42defac8ec8d50f5470f4b9e37eae849f06e6b18b07874e"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "0c14f752e0e1190354dd4290b87e3a147ece59c3839b0fd741a1bf6c7fd5bb42"
+      "sha256": "896bb52cd3ddecb4bd1d7bd5db925d06fb893b484b89cbcca78cc9ae1c14738d"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "2eaecbdda34bbc3eb670dc09838fcfe7ccb8e40def4ca40fb35911f8defe92f6"
+      "sha256": "da8f1976bfa1f0fb590e6be8b7ea224a7a6e63dbabc3d539d15b8635c3653357"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "a5899ddf25c7e8bb31641aa1c44977e60392a2d3dd2b219d73a8dff60fa96d05"
+      "sha256": "57f80622462adc6335ce2a77d254f4db2f50443a7130a076532535f459f0ede7"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -203,7 +203,7 @@
         }
       },
       "status": "available",
-      "breed_count": 45,
+      "breed_count": 46,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -27161,6 +27161,590 @@
       ]
     },
     {
+      "id": "bichon_frise",
+      "species": "dog",
+      "order": 45,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Bichon Frise",
+        "sl": "Kodrasti bišon"
+      },
+      "slug": {
+        "en": "bichon-frise",
+        "sl": "kodrasti-bison"
+      },
+      "synonyms": {
+        "en": [
+          "Bichon à poil frisé",
+          "Bichon Frisé",
+          "Bichon Tenerife"
+        ],
+        "sl": [
+          "kodrasti bišon",
+          "bišon frize",
+          "bichon frise"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S411"
+          ],
+          "ref": "bichon_frise.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              25,
+              30
+            ],
+            "female": [
+              23,
+              29
+            ]
+          },
+          "source_ids": [
+            "S410"
+          ],
+          "ref": "bichon_frise.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              4,
+              7
+            ],
+            "female": [
+              4,
+              7
+            ]
+          },
+          "source_ids": [
+            "S413"
+          ],
+          "ref": "bichon_frise.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            8,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "bichon_frise.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S411"
+          ],
+          "ref": "bichon_frise.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 30,
+          "source_ids": [
+            "S411"
+          ],
+          "ref": "bichon_frise.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S411"
+          ],
+          "ref": "bichon_frise.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S411"
+          ],
+          "ref": "bichon_frise.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S411"
+          ],
+          "ref": "bichon_frise.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 45,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "bichon_frise.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 215,
+            "group": 9,
+            "section": 1,
+            "origin": "BE-FR"
+          },
+          "source_ids": [
+            "S409"
+          ],
+          "ref": "bichon_frise.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S413"
+          ],
+          "ref": "bichon_frise.health.patella",
+          "confidence": "high"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S414"
+          ],
+          "ref": "bichon_frise.health.allergies",
+          "confidence": "medium"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S413"
+          ],
+          "ref": "bichon_frise.health.cataracts",
+          "confidence": "high"
+        },
+        {
+          "key": "bladder_stones",
+          "source_ids": [
+            "S413"
+          ],
+          "ref": "bichon_frise.health.bladder_stones",
+          "confidence": "high"
+        },
+        {
+          "key": "liver_shunt",
+          "source_ids": [
+            "S413"
+          ],
+          "ref": "bichon_frise.health.liver_shunt",
+          "confidence": "high"
+        },
+        {
+          "key": "diabetes_mellitus",
+          "source_ids": [
+            "S413"
+          ],
+          "ref": "bichon_frise.health.diabetes",
+          "confidence": "high"
+        },
+        {
+          "key": "dental_disease_home_brushing",
+          "source_ids": [
+            "S416"
+          ],
+          "ref": "bichon_frise.health.dental",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S411"
+            ],
+            "refs": [
+              "bichon_frise.suitability.rkc_size_of_home"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S416"
+            ],
+            "refs": [
+              "bichon_frise.behaviour.family",
+              "bichon_frise.suitability.petmd_family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S413"
+            ],
+            "refs": [
+              "bichon_frise.behaviour.children",
+              "bichon_frise.suitability.pdsa_children"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S413"
+            ],
+            "refs": [
+              "bichon_frise.behaviour.other_pets",
+              "bichon_frise.suitability.pdsa_other_pets"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S411"
+            ],
+            "refs": [
+              "bichon_frise.suitability.rkc_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S411",
+              "S413"
+            ],
+            "refs": [
+              "bichon_frise.suitability.rkc_grooming",
+              "bichon_frise.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S414"
+            ],
+            "refs": [
+              "bichon_frise.behaviour.time_alone",
+              "bichon_frise.suitability.vca_time_alone"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 3000,
+              "cap_month": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2300
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 3000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 30,
+              "steps": 3000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.bichon_frise.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S411"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S411 'Up to 30 minutes per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.bichon_frise.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+          },
+          {
+            "ref": "proposed_game_parameters.bichon_frise.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S411"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S411)"
+          },
+          {
+            "ref": "proposed_game_parameters.bichon_frise.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 45, Average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.bichon_frise.grooming",
+            "basis_source_ids": [
+              "S411"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden, RKC »Every day«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S411"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "eye_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S411"
+            ]
+          },
+          {
+            "key": "patella_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K28"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K28"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S411"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S409",
+        "S410",
+        "S411",
+        "S413",
+        "S414",
+        "S416",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K28"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -31354,6 +31938,48 @@
       "url": "https://www.petmd.com/dog/breeds/c_dg_portuguese_water_dog"
     },
     {
+      "id": "S409",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — BICHON A POIL FRISE (215)",
+      "url": "https://www.fci.be/en/nomenclature/BICHON-FRISE-215.html"
+    },
+    {
+      "id": "S410",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 215 — Bichon à poil frisé (EN PDF, date of publication of the valid standard 04.04.2016)",
+      "url": "https://fci.be/Nomenclature/Standards/215g09-en.pdf"
+    },
+    {
+      "id": "S411",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Bichon Frise — Breeds A to Z (Toy)",
+      "url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/bichon-frise"
+    },
+    {
+      "id": "S413",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Bichon Frise breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/bichon-frise"
+    },
+    {
+      "id": "S414",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals",
+      "title": "Bichon Frise (breed overview)",
+      "url": "https://vcahospitals.com/know-your-pet/bichon-frise"
+    },
+    {
+      "id": "S416",
+      "tier": "B",
+      "publisher": "PetMD",
+      "title": "Bichon Frise",
+      "url": "https://www.petmd.com/dog/breeds/c_dg_bichon_frise"
+    },
+    {
       "id": "C1",
       "tier": "A (via B summary)",
       "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
@@ -31723,6 +32349,13 @@
       "publisher": "The Royal Kennel Club",
       "title": "Papillon Breed-specific package (with DNA profile included) — Kennel Club DNA testing services, Toy group",
       "url": "https://thekennelclub.org.uk/shop/dna-testing/the-kennel-club-dna-testing-services-toy-group/papillon/"
+    },
+    {
+      "id": "K28",
+      "tier": "B",
+      "publisher": "American Kennel Club",
+      "title": "Non-Sporting Group Health Testing Requirements (breeder programs)",
+      "url": "https://www.akc.org/breeder-programs/breed-health-testing-requirements/non-sporting-group-health-testing-requirements/"
     }
   ]
 }

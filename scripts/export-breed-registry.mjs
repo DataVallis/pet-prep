@@ -422,6 +422,7 @@ const SPECIES = [
       { id: 'rhodesian_ridgeback', synonyms: { en: ['Ridgeback', 'African Lion Dog'], sl: ['rodezijski', 'ridgeback'] } },
       { id: 'papillon', synonyms: { en: ['Continental Toy Spaniel', 'Phalène', 'Butterfly Dog'], sl: ['kontinentalni pritlikavi španjel', 'papillon', 'falen'] } },
       { id: 'portuguese_water_dog', synonyms: { en: ['Cão de Água Português', 'Portie', 'PWD', 'Algarvian Water Dog'], sl: ['portugalski vodni pes', 'vodni pes', 'portie'] } },
+      { id: 'bichon_frise', synonyms: { en: ['Bichon à poil frisé', 'Bichon Frisé', 'Bichon Tenerife'], sl: ['kodrasti bišon', 'bišon frize', 'bichon frise'] } },
     ],
   },
   {
@@ -1437,7 +1438,34 @@ const DOG_FACTS = {
       ['cataracts', 'health.cataracts'],
       ['periodontal_daily_brushing', 'health.dental'],
     ],
+  },  // M5-R10-50. Height = FCI 215 (S410, 25–29 cm with the +1 / −2 cm tolerances), weight = PDSA 4–7 kg (S413; the FCI
+  // gives only "Approximately 5 kg", the RKC standard none), lifespan = the RKC band "Over 12 years" (S411; no
+  // McMillan 2024 / VetCompass median reachable), exercise = RKC "Up to 30 minutes per day" (S411). FCI origin
+  // 'Belgium / France' (BE-FR, as the Papillon). Not exported: height.rkc_standard / pdsa and adult_weight.fci
+  // (alternatives / one approximate number), adult_weight.salt_category (our assignment), lifespan.pdsa / vca
+  // (same band / US alternative), lifespan.mcmillan_2024 (Wikipedia, tier C), lifespan.senior_from (derived), the care
+  // needs suitability.professional_grooming / petmd_teeth / petmd_ears / vca_nails / vca_tear_staining (open for David:
+  // M5-R18 / M5-R15 / M5-R20 / M5-R19 / M5-R14). New health keys: diabetes_mellitus, dental_disease_home_brushing.
+  bichon_frise: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['kneecap_luxation', 'health.patella'],
+      ['itchy_skin_allergy', 'health.allergies'],
+      ['cataracts', 'health.cataracts'],
+      ['bladder_stones', 'health.bladder_stones'],
+      ['liver_shunt', 'health.liver_shunt'],
+      ['diabetes_mellitus', 'health.diabetes'],
+      ['dental_disease_home_brushing', 'health.dental'],
+    ],
   },
+
 };
 
 /** Per-breed game refs (dog data.json). */
@@ -1807,7 +1835,15 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.portuguese_water_dog.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.portuguese_water_dog.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.portuguese_water_dog.exercise_minutes_senior',
+  },  bichon_frise: {
+    adult_minutes: ['proposed_game_parameters.bichon_frise.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.bichon_frise.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.bichon_frise.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.bichon_frise.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.bichon_frise.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.bichon_frise.exercise_minutes_senior',
   },
+
 };
 
 function dogBreedFacts(R, id) {
