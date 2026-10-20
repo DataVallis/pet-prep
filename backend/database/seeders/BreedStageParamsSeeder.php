@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -602,6 +602,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_BICHON_FRISE = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-50)';
 
     /**
+     * M5-R10-51 Newfoundland (unattended run 2026-10-20, data.json proposed_game_parameters.newfoundland.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on
+     * 2026-10-10 — exercise 60 min (PDSA S423 "Minimum exercise (per day): 1 hour"; RKC page not reachable), senior
+     * 45 min, puppy 10 min × age capped at 60, stages young 9 / adult 36 / senior 99 (0.75 × McMillan 2024 median
+     * 11.0 y via Dogs Trust S123), arrival 2 / 9 / 36 / 99, learning multiplier 1.2 (Coren rank 34, Above average);
+     * care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_NEWFOUNDLAND = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-51)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -756,6 +766,7 @@ class BreedStageParamsSeeder extends Seeder
         'papillon' => [3, 'S398', 'Grooming is fairly easy and two-three times per week is usually enough to keep the coat in tip-top condition.', 'medium', false],
         'portuguese_water_dog' => [7, 'S404', 'Grooming: Every day', 'high', false],
         'bichon_frise' => [7, 'S411', 'Grooming: Every day', 'high', false],
+        'newfoundland' => [7, 'S423', 'Grooming is a daily task, particularly when shedding.', 'high', false],
     ];
 
     /**
@@ -787,6 +798,7 @@ class BreedStageParamsSeeder extends Seeder
         'english_cocker_spaniel' => ['S339', 'Remember to leave at a gap after eating and before exercising.'],
         'mastiff' => ['S374', 'Restrict exercise for an hour before and after mealtimes'],
         'rhodesian_ridgeback' => ['S390', 'Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.'],
+        'newfoundland' => ['S424', 'Avoiding exercising their dog an hour before or after a meal'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -848,13 +860,14 @@ class BreedStageParamsSeeder extends Seeder
         'papillon' => ['S398', 'Training, along with socialisation, is very important at a young age'],
         'portuguese_water_dog' => ['S405', 'Training, along with socialisation, is very important at a young age in order for Portuguese Water Dogs to grow up into confident, sociable dogs.'],
         'bichon_frise' => ['S416', 'With proper training and socialization from puppyhood, Bichons are friendly dogs that are comfortable meeting new people and animals.'],
+        'newfoundland' => ['S424', 'All dogs, even the friendly Newfoundland, need consistent socialization as puppies'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1491,6 +1504,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-50 (docs/research/dog-data/data.json bichon_frise,
             // S409–S418; runbook rules in proposed_game_parameters.bichon_frise).
             BreedType::BichonFrise => self::bichonFriseProfile(),
+            // M5-R10-51 (docs/research/dog-data/data.json newfoundland,
+            // S419–S426; runbook rules in proposed_game_parameters.newfoundland).
+            BreedType::Newfoundland => self::newfoundlandProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -4864,6 +4880,80 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'bichon_frise.lifespan.rkc',
                 'quote' => 'Lifespan: Over 12 years',
                 'notes' => 'RKC breed page lower bound (S411); PDSA "Over 12 years" (S413) agrees. McMillan 2024 12.5 y only via Wikipedia (S417, tier C) and VCA / PetMD 14–15 y (S414 / S416) — not used. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Newfoundland (M5-R10-51). Stage boundaries, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_NEWFOUNDLAND); weight, growth, Coren rank and lifespan
+     * are sourced. The senior boundary uses the McMillan 2024 median (via Dogs Trust S123) — not provisional.
+     *
+     * @return array<string, mixed>
+     */
+    private static function newfoundlandProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_NEWFOUNDLAND;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S123', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.newfoundland.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a giant dog keeps filling out until 18–24 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [99, $boundary('Derived game boundary: last 25 % of lifespan (S11) × McMillan 2024 median 11.0 y (Dogs Trust table S123) = 8.25 y = 99 months. Not chosen: 84 (Dogs Trust > 7 y, S14); 81 (0.75 × 9 y, PetMD S424 lower bound).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 99],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.newfoundland.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (18–24 months for a giant dog, S10); capped at the adult 60 minutes, which 10 × age already reaches at 6 months, so the whole young stage walks the adult minutes. PDSA (S423): not over-exercised as puppies while bones and joints develop.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S423', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'proposed_game_parameters.newfoundland.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Minimum exercise (per day): 1 hour',
+                'notes' => 'PDSA "Minimum exercise (per day): 1 hour" (S423) → 60 min = 6,000 steps (runbook rule: "minimum N" → N; the RKC breed page was not reachable). PDSA text: "As adult dogs, Newfoundlands need around an hour of exercise daily".',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.newfoundland.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[50.0, 69.0], [
+                'unit' => 'kg', 'source_id' => 'S423', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'newfoundland.adult_weight.pdsa',
+                'quote' => 'Average weight: 50-69 kg',
+                'notes' => 'PDSA key fact (S423), one range for both sexes → 50–69 kg for the game. FCI (S420) averages approximately 68 kg (males) and 54 kg (females) and the AKC (S421) 130–150 lb / 100–120 lb lie inside or at the edge of this range — alternatives only.',
+            ]],
+            'growth_end' => [[18, 24], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'newfoundland.growth.adult_weight_reached',
+                'quote' => 'Giant (over 100 pounds) | 18–24 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA 50–69 kg ≈ 110–152 lb, the Giant class of S10).',
+            ]],
+            'coren_rank' => [34, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'newfoundland.trainability.coren_rank',
+                'quote' => '| 34 | Field Spaniel |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 34 shared with the Field Spaniel, Australian Terrier, American Staffordshire Terrier, Gordon Setter and Bearded Collie, tier "Above Average Working Dogs" (ranks 27–39).',
+            ]],
+            'learning_multiplier' => [1.2, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.newfoundland.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 34 (S35) in the "Above average" tier (ranks 27–39) → 1.2. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [11.0, [
+                'unit' => 'years', 'source_id' => 'S123', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'newfoundland.lifespan.median_uk',
+                'quote' => 'Newfoundland 11.0 10.9 - 11.6 1529 633',
+                'notes' => 'McMillan et al. 2024 median as tabled by Dogs Trust (S123). PDSA "Under 10 years" (S423) and PetMD 9–10 years (S424) are the basis of the shorter_lifespan chip only. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

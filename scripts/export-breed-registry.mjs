@@ -423,6 +423,7 @@ const SPECIES = [
       { id: 'papillon', synonyms: { en: ['Continental Toy Spaniel', 'Phalène', 'Butterfly Dog'], sl: ['kontinentalni pritlikavi španjel', 'papillon', 'falen'] } },
       { id: 'portuguese_water_dog', synonyms: { en: ['Cão de Água Português', 'Portie', 'PWD', 'Algarvian Water Dog'], sl: ['portugalski vodni pes', 'vodni pes', 'portie'] } },
       { id: 'bichon_frise', synonyms: { en: ['Bichon à poil frisé', 'Bichon Frisé', 'Bichon Tenerife'], sl: ['kodrasti bišon', 'bišon frize', 'bichon frise'] } },
+      { id: 'newfoundland', synonyms: { en: ['Newfie', 'Newf', 'Terra Nova'], sl: ['novofundlandski pes', 'njufi', 'newfoundland'] } },
     ],
   },
   {
@@ -447,7 +448,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', Portugal: 'PT' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', Portugal: 'PT', Canada: 'CA' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -1465,6 +1466,29 @@ const DOG_FACTS = {
       ['dental_disease_home_brushing', 'health.dental'],
     ],
   },
+  // M5-R10-51. Height = PDSA 66–71 cm (S423; FCI / AKC give averages only), weight = PDSA 50–69 kg (S423), lifespan =
+  // the McMillan 2024 median 11.0 y (Dogs Trust table S123) and the PDSA band "Under 10 years" (S423), exercise = PDSA
+  // "Minimum exercise (per day): 1 hour" (S423; the RKC page was not reachable). FCI origin Canada (CA, new). Not
+  // exported: height.fci_average / adult_weight.akc / fci_average (averages / alternatives), adult_weight.salt_category
+  // (our assignment), lifespan.senior_from (derived), exercise.swimming (background), health.breed_watch /
+  // health.shorter_lifespan (the chips), health.other_conditions (a bundle), the care needs suitability.petmd_bathing /
+  // petmd_ears / petmd_drooling (open for David: M5-R20 / new task). No new health key.
+  newfoundland: {
+    height: ['height.pdsa'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.pdsa', 'less_than']],
+    exercise: [['@proposed_game_parameters.newfoundland.exercise_minutes_adult', 'at_least']],
+    coat: [],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['bloat_gdv', 'health.gdv'],
+      ['eyelid_problems', 'health.eyelids'],
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['heart_muscle_disease', 'health.heart'],
+    ],
+  },
 
 };
 
@@ -1842,6 +1866,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.bichon_frise.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.bichon_frise.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.bichon_frise.exercise_minutes_senior',
+  },
+  newfoundland: {
+    adult_minutes: ['proposed_game_parameters.newfoundland.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.newfoundland.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.newfoundland.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.newfoundland.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.newfoundland.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.newfoundland.exercise_minutes_senior',
   },
 
 };

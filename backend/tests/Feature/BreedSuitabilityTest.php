@@ -321,9 +321,9 @@ it('gives the Bernese Mountain Dog the new shorter_lifespan tag, family_pet, lar
 
     // Only the Bernese, the Rottweiler (RKC "Under 10 years", M5-R10-19), the Bulldog (M5-R10-20), the
     // Cane Corso (PDSA "Under 10 years", M5-R10-23), the Great Dane (RKC "Under 10 years", M5-R10-29) and the Mastiff
-    // (PDSA "Under 10 years", M5-R10-45) carry the chip so far.
+    // (PDSA "Under 10 years", M5-R10-45) and the Newfoundland (PDSA "Under 10 years", M5-R10-51) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::BerneseMountainDog, BreedType::Rottweiler, BreedType::Bulldog, BreedType::CaneCorso, BreedType::GreatDane, BreedType::Mastiff], true)) {
+        if (! in_array($breed, [BreedType::BerneseMountainDog, BreedType::Rottweiler, BreedType::Bulldog, BreedType::CaneCorso, BreedType::GreatDane, BreedType::Mastiff, BreedType::Newfoundland], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('shorter_lifespan');
         }
     }
@@ -467,10 +467,10 @@ it('gives the Cane Corso the new not_for_small_children and drools tags, active_
         ->and($corso['consider'])->not->toContain('hips_hind_legs')->not->toContain('brachycephalic_breathing')
         ->not->toContain('sensitive_skin')->not->toContain('frequent_grooming')->not->toContain('fragile_older_children');
 
-    // `drools` also the Great Dane (PDSA S243, M5-R10-29), the Basset Hound (AKC S324, M5-R10-39) and the Mastiff (PetMD S374, M5-R10-45); `not_for_small_children` also the Dobermann (PDSA S211,
+    // `drools` also the Great Dane (PDSA S243, M5-R10-29), the Basset Hound (AKC S324, M5-R10-39) and the Mastiff (PetMD S374, M5-R10-45) and the Newfoundland (PDSA S423 / PetMD S424, M5-R10-51); `not_for_small_children` also the Dobermann (PDSA S211,
     // M5-R10-25), the Boxer (PDSA S219, M5-R10-26), the Great Dane (PDSA S243, M5-R10-29), the Belgian Malinois (AKC S316, M5-R10-38), the Hungarian Vizsla (PDSA S329, M5-R10-40), the Mastiff (PetMD S374, M5-R10-45) and the Rhodesian Ridgeback (PDSA S390 / Woodgreen S392, M5-R10-47).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::CaneCorso, BreedType::GreatDane, BreedType::BassetHound, BreedType::Mastiff], true)) {
+        if (! in_array($breed, [BreedType::CaneCorso, BreedType::GreatDane, BreedType::BassetHound, BreedType::Mastiff, BreedType::Newfoundland], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('drools');
         }
         if (! in_array($breed, [BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::GreatDane, BreedType::BelgianMalinois, BreedType::HungarianVizsla, BreedType::Mastiff, BreedType::RhodesianRidgeback], true)) {
@@ -530,9 +530,9 @@ it('gives the Boxer the new needs_company and short_muzzle_breathing tags and th
         ->not->toContain('hips_hind_legs')->not->toContain('heart_and_spine')->not->toContain('frequent_grooming');
 
     // Only the Boxer, the Boston Terrier (AKC S260, M5-R10-31), the Miniature American Shepherd (PetMD S269, M5-R10-32)
-    // the Chihuahua (PDSA S277, M5-R10-33), the English Springer Spaniel (AKC S286, M5-R10-34), the Brittany (PetMD S302, M5-R10-36), the Belgian Malinois (AKC S316, M5-R10-38), the Basset Hound (PDSA S323, M5-R10-39), the Hungarian Vizsla (PDSA S329, M5-R10-40), the English Cocker Spaniel (PDSA S339, M5-R10-41) the Maltese (PetMD S351, M5-R10-42), the Pug (PDSA S357, M5-R10-43), the Rough Collie (PetMD S368, M5-R10-44), the Rhodesian Ridgeback (PDSA S390, M5-R10-47), the Papillon (PetMD S400, M5-R10-48) and the Bichon Frise (VCA S414, M5-R10-50) carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
+    // the Chihuahua (PDSA S277, M5-R10-33), the English Springer Spaniel (AKC S286, M5-R10-34), the Brittany (PetMD S302, M5-R10-36), the Belgian Malinois (AKC S316, M5-R10-38), the Basset Hound (PDSA S323, M5-R10-39), the Hungarian Vizsla (PDSA S329, M5-R10-40), the English Cocker Spaniel (PDSA S339, M5-R10-41) the Maltese (PetMD S351, M5-R10-42), the Pug (PDSA S357, M5-R10-43), the Rough Collie (PetMD S368, M5-R10-44), the Rhodesian Ridgeback (PDSA S390, M5-R10-47), the Papillon (PetMD S400, M5-R10-48), the Bichon Frise (VCA S414, M5-R10-50) and the Newfoundland (PetMD S424, M5-R10-51) carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::Brittany, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::BichonFrise], true)) {
+        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::Brittany, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::BichonFrise, BreedType::Newfoundland], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('needs_company');
         }
         if (! in_array($breed, [BreedType::Boxer, BreedType::ShihTzu], true)) {
@@ -644,10 +644,10 @@ it('gives the Great Dane the new eyelid_problems tag and hips_hind_legs (welfare
         ->and($dane['consider'])->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')
         ->not->toContain('frequent_grooming')->not->toContain('needs_company')->not->toContain('experienced_owner');
 
-    // Only the Great Dane, the Basset Hound (Breed Watch S322, M5-R10-39) and the Mastiff (PDSA S370, Breed Watch S375, M5-R10-45)
-    // carry eyelid_problems so far.
+    // Only the Great Dane, the Basset Hound (Breed Watch S322, M5-R10-39) the Mastiff (PDSA S370, Breed Watch S375, M5-R10-45) and the
+    // Newfoundland (Breed Watch point via the Kennel Club BHCP S425, M5-R10-51) carry eyelid_problems so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::GreatDane, BreedType::BassetHound, BreedType::Mastiff], true)) {
+        if (! in_array($breed, [BreedType::GreatDane, BreedType::BassetHound, BreedType::Mastiff, BreedType::Newfoundland], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('eyelid_problems');
         }
     }

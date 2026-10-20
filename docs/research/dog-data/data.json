@@ -26574,6 +26574,539 @@
       }
     }
   },
+  "newfoundland": {
+    "_note": "Added 2026-10-20 (M5-R10-51, unattended run — appended after the Bichon Frise: AKC 2024 No. 47 'Newfoundland', S174 full-list table '46 Bichon Frise', '47 Newfoundland'). Quotes as returned by the web-fetch tool on 2026-10-20 (PDSA and PetMD only in short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S419–S426 (reused S8, S10, S11, S14, S24, S35, S45, S123, S174). No health percentages anywhere. The RKC (Breeds A–Z page on royalkennelclub.com, Breed Watch page and DNA testing page) returned a fetch error on 2026-10-20 → no RKC key facts; exercise from PDSA (S423, runbook fallback RKC → PDSA). The English FCI PDF redirects to itself → the Spanish FCI standard (S420, 29.10.1996) and the FCI nomenclature (S419). Lifespan: McMillan 2024 median 11.0 y via the Dogs Trust table (S123) — not provisional. Welfare: PDSA (S423) 'Category Two'; the Breed Watch point (loose eyelids) from the Kennel Club Breed Health and Conservation Plan 2018 (S425). Names: FCI 'NEWFOUNDLAND' (S419), AKC 'Newfoundland' (S174, S421); Slovenian »novofundlandec« (not checked against KZS — open for David).",
+    "identity": {
+      "value": "FCI No. 50, Group 2 Section 2.2 (Molossoid breeds, Mountain type), Canada",
+      "unit": "—",
+      "source_id": "S419",
+      "quote": "Section 2.2. Molosoides, tipo montaña.",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S419): Newfoundland No. 50, Group 2, section 2 Molossian type, subsection 2.2 Mountain type, country Canada, colour varieties 'a) Black, b) White and black, c) Brown' (paraphrase of the page as returned), date 10/29/1996. FCI standard N° 50 (S420, Spanish original, the only language version the tool could read): 'CLASIFICACIÓN FCI: Grupo 2 Perros tipo Pinscher y Schnauzer, Molosoides Perros tipo montaña y boyeros suizos.'; 'ORIGEN: Canadá.'; 'FECHA DE PUBLICACIÓN DEL ESTÁNDAR OFICIAL VÁLIDO: 29.10.1996.'; 'UTILIZACIÓN: Perro de trineo para cargas pesadas, perro de agua.' AKC name: Newfoundland (S174, S421); RKC group: Working (address of the unreachable breed page). Other names 'Newf', 'Newfie' (S426, tier C)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S423",
+      "quote": "Size: Large",
+      "confidence": "medium",
+      "notes": "PDSA key facts (S423), as returned ('Size: \"Large\"'). The RKC 'Size:' field (preferred) was not reachable on 2026-10-20. By weight (50–69 kg, S423) the PetMD size class is 'Giant (over 100 pounds)' (S10, growth only). Kept at the source's 'Large' (Mastiff precedent; open for David)."
+    },
+    "height": {
+      "pdsa": {
+        "value": {
+          "male": [
+            66,
+            71
+          ],
+          "female": [
+            66,
+            71
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S423",
+        "quote": "Average height: 66-71 cm",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S423), one range for both sexes (stored per sex)."
+      },
+      "fci_average": {
+        "value": {
+          "male": 71,
+          "female": 66
+        },
+        "unit": "cm (average)",
+        "source_id": "S420",
+        "quote": "La altura a la cruz promedio en los machos adultos es de 71 cm y de 66 cm en las hembras adultas.",
+        "confidence": "high",
+        "notes": "FCI standard (S420, Spanish): average height at the withers 71 cm for adult males, 66 cm for adult females. AKC (S421): 'Average height for adult dogs is 28 inches, for adult bitches 26 inches.' CKC (S422): dogs about 71 cm, bitches about 66 cm (paraphrase). Averages, not ranges."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            50,
+            69
+          ],
+          "female": [
+            50,
+            69
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S423",
+        "quote": "Average weight: 50-69 kg",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S423), one range for both sexes (stored per sex) — the game range. FCI (S420): 'El peso promedio es aproximadamente de 68 kg en los machos y de 54 kg en las hembras.' (averages); AKC (S421) adult_weight.akc; PetMD (S424) 'At 100–150 pounds' (45–68 kg) — alternatives."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            59,
+            68
+          ],
+          "female": [
+            45,
+            54
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S421",
+        "quote": "Approximate weight of adult dogs range from 130 to 150 pounds, adult bitches from 100 to 120 pounds.",
+        "confidence": "high",
+        "notes": "AKC standard (S421). 130–150 lb = 59.0–68.0 kg; 100–120 lb = 45.4–54.4 kg → 45–54 (our conversion, rounded). Background for the PDSA game range."
+      },
+      "fci_average": {
+        "value": {
+          "male": 68,
+          "female": 54
+        },
+        "unit": "kg (average)",
+        "source_id": "S420",
+        "quote": "El peso promedio es aproximadamente de 68 kg en los machos y de 54 kg en las hembras.",
+        "confidence": "high",
+        "notes": "FCI standard (S420, Spanish): average weight approximately 68 kg (males), 54 kg (females). 'Se valoriza un animal de tamaño grande, pero esto no debe ser más importante que el estado general de salud,' — size never before health."
+      },
+      "salt_category": {
+        "value": "VI (>40 kg, no curve)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 50–69 kg = the band '>40 (no curve)'. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 50–69 kg (S423) = 110–152 lb → 'Giant'. Same 18–24 months as the Mastiff, the Great Dane and the Bernese Mountain Dog. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Newfoundland growth curve found. PetMD (S424): 'Newfoundland puppies grow quickly, to the point where they can overpower their human parents' (fragment)."
+      },
+      "puppy_exercise": {
+        "value": "not over-exercised as puppies while bones and joints develop",
+        "unit": "—",
+        "source_id": "S423",
+        "quote": "shouldn't be over-exercised as puppies when their bones and joints are still developing.",
+        "confidence": "medium",
+        "notes": "PDSA (S423), the end of the sentence that starts 'As adult dogs, Newfoundlands need around an hour of exercise daily'. The game's puppy rule (10 min × age in months, capped) already limits puppy walks — no new mechanic."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 11.0,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Newfoundland 11.0 10.9 - 11.6 1529 633",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123, columns Breed | Median Life Expectancy (Years) | Lower and Upper 95% CI | Total Number Individuals (Alive and Deceased) | Number Deceased Individuals). Runbook first choice (McMillan 2024) → not provisional. The breed is not in the Fig. 3 legend of the Author Correction (S54, checked 2026-10-20). Wikipedia (S426, tier C): 'A 2024 UK study found a life expectancy of 11 years for the breed' — agrees."
+      },
+      "pdsa": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S423",
+        "quote": "Average lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA key facts (S423). PetMD (S424): 'The average Newfoundland dog lifespan is 9–10 years.' Basis of shorter_lifespan (runbook: an A/B source gives an upper bound ≤ 10 years) although the McMillan median is 11.0 y — noted for David."
+      },
+      "senior_from": {
+        "value": 8.25,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 11.0 y (McMillan 2024 via S123) → 0.75 × 11.0 = 8.25 y = 99 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Not chosen: 0.75 × 9 y (PetMD lower bound, S424) = 81.",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 99,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 60",
+        "unit": "minutes/day",
+        "source_id": "S423",
+        "quote": "Minimum exercise (per day): 1 hour",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S423); PDSA text: 'As adult dogs, Newfoundlands need around an hour of exercise daily' (opening clause), they particularly love to swim and pull. RKC breed page (preferred) not reachable on 2026-10-20 → PDSA (runbook rule). PetMD (S424): 'Newfoundlands are calm dogs that don't need an excessive amount of exercise—but this doesn't mean no exercise.' — no minutes."
+      },
+      "after_meals": {
+        "value": "avoid exercise an hour before or after a meal (GDV / bloat)",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "Avoiding exercising their dog an hour before or after a meal",
+        "confidence": "medium",
+        "notes": "PetMD (S424), bloat / GDV prevention list; also 'Feeding their dog at least twice a day instead of one big meal' and 'Adult Newfies do best if fed about every 12 hours.' PDSA (S423) lists GDV: 'often known as ‘bloat’, this is a condition where the stomach twists, trapping the contents and gases.' (fragment). → proposed_game_parameters.newfoundland.meal_exercise_gap (built, M5-R16 — the game warns after a meal; the hour before a meal is not modelled)."
+      },
+      "swimming": {
+        "value": "natural swimmers; love to swim and pull",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "Because of this history, Newfoundlands are natural swimmers",
+        "confidence": "medium",
+        "notes": "PetMD (S424); PDSA (S423): 'they particularly love to swim and pull' (fragment). Background only — the game counts steps."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "gentle giants — calm, good-natured; sweetness of temperament is the hallmark",
+        "unit": "—",
+        "source_id": "S421",
+        "quote": "Sweetness of temperament is the hallmark of the Newfoundland;",
+        "confidence": "high",
+        "notes": "AKC (S421): 'this is the most important single characteristic of the breed.' PDSA (S423): 'Newfoundlands, or ‘Newfies’ as they’re more affectionately known, are gentle giants.' (the rest: calm, good-natured dogs that tend to get on well with everyone — paraphrase). CKC (S422): gentle, intelligent, dignified yet playful (paraphrase)."
+      },
+      "family": {
+        "value": "an outstanding family pet; gets along well with children; supervise small kids",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "A Newfoundland dog's personality makes the breed an outstanding family pet.",
+        "confidence": "medium",
+        "notes": "PetMD (S424): 'They have a sweet disposition and gentle nature, so Newfies get along well with children, small pets, and other dogs.' and 'But just like with all dogs, supervise all interactions between small kids and Newfoundlands.' → family_pet, children (supervision caveat kept); never small_children."
+      },
+      "socialisation": {
+        "value": "consistent socialisation as puppies",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "All dogs, even the friendly Newfoundland, need consistent socialization as puppies",
+        "confidence": "medium",
+        "notes": "PetMD (S424); 'Early and consistent obedience training is a must.' → proposed_game_parameters.newfoundland.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "time_alone": {
+        "value": "loving; some may develop separation anxiety when left alone",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "Because Newfoundland dogs are so loving, some may develop separation anxiety when left alone.",
+        "confidence": "medium",
+        "notes": "PetMD (S424). Basis of needs_company (Boxer precedent: a separation-anxiety statement)."
+      },
+      "other_pets": {
+        "value": "gets along with small pets, other dogs and cats",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "good roommates to other dogs and cats",
+        "confidence": "medium",
+        "notes": "PetMD (S424), fragment; also 'Newfies get along well with children, small pets, and other dogs.' No prey-drive statement. → other_pets."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no chews_when_bored tag."
+      },
+      "drooling": {
+        "value": "tend to drool; messy drinkers",
+        "unit": "—",
+        "source_id": "S423",
+        "quote": "Newfies also tend to drool and can be quite messy drinkers.",
+        "confidence": "medium",
+        "notes": "PDSA (S423). PetMD (S424): 'Pet parents will also need to regularly wipe their Newfie's drool, which can get caught in their fur.' Basis of drools (as the Mastiff, Great Dane, Cane Corso)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag. PetMD (S424): walks 'to provide mental stimulation and prevent obesity' (general) and two meals a day (the game's two adult meals — no change)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. Conformation welfare topic: PDSA (S423) 'Newfoundlands are amongst a group of breeds classed as ‘Category Two’ by The Kennel Club.'; the Kennel Club's Breed Health and Conservation Plan (S425, 2018) names the one Breed Watch point: loose eyelids → eyelid_problems. PDSA's 'Eyelid problems' entry reads 'occur in Bulldogs due to excessive skin over the face and eyes' (copied from another breed page) — not used as a quote. Not named flat-faced by any source → no brachycephalic chip, in marketing.",
+      "breed_watch": {
+        "value": "Kennel Club Breed Watch Category 2 — one point of concern: loose eyelids",
+        "unit": "—",
+        "source_id": "S425",
+        "quote": "Conformational defects of the upper and lower eyelids (loose eyelids)",
+        "confidence": "high",
+        "notes": "Kennel Club Newfoundland Breed Health and Conservation Plan, version 1, August 2018 (S425): 'The Newfoundland is currently a category two breed which indicates that it has one or more Breed Watch points of concern.' PDSA (S423): 'Newfoundlands are amongst a group of breeds classed as ‘Category Two’ by The Kennel Club.' and 'These are breeds of dog that have been highlighted as having ‘points of concern’.' (fragment). The RKC Breed Watch page itself returned a fetch error on 2026-10-20."
+      },
+      "eyelids": {
+        "value": "loose eyelids (Breed Watch point of concern)",
+        "unit": "—",
+        "source_id": "S425",
+        "quote": "Conformational defects of the upper and lower eyelids (loose eyelids)",
+        "confidence": "medium",
+        "notes": "S425 (Breed Watch point). Basis of eyelid_problems (welfare rule §3, as the Great Dane and the Mastiff). PDSA's own eyelid sentence names Bulldogs (copy error on the page) — not quoted."
+      },
+      "gdv": {
+        "value": "gastric dilatation volvulus ('bloat') — urgent vet care",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "Take your Newfoundland to the nearest emergency vet immediately if you notice any symptoms of bloat and GDV.",
+        "confidence": "medium",
+        "notes": "PetMD (S424); PDSA (S423) GDV; BHCP (S425) priority. → meal_exercise_gap (M5-R16)."
+      },
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia — joint laxity leading to arthritis; BVA/KC schemes",
+        "unit": "—",
+        "source_id": "S423",
+        "quote": "hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
+        "confidence": "medium",
+        "notes": "PDSA (S423) hip dysplasia; elbow dysplasia: 'elbow joint laxity as a result of poor development, which will eventually lead to arthritis.' BHCP (S425): elbow dysplasia and cruciate ligament disease among the priorities; hip and elbow scoring required of Assured Breeders (breeder checklist). Not a Breed Watch point → no hips_hind_legs chip."
+      },
+      "heart": {
+        "value": "heart conditions, especially dilated cardiomyopathy (DCM) and subaortic stenosis (SAS)",
+        "unit": "—",
+        "source_id": "S425",
+        "quote": "Heart conditions, especially DCM and SAS",
+        "confidence": "medium",
+        "notes": "BHCP (S425) priority list as returned; PDSA (S423) lists heart problems; PetMD (S424) DCM. Research only (no heart chip — not a Breed Watch point)."
+      },
+      "other_conditions": {
+        "value": "osteosarcoma (bone cancer), atopy, hypothyroidism, panosteitis, cystinuria (DNA test), cruciate ligament disease",
+        "unit": "—",
+        "source_id": "S423",
+        "quote": "malignant bone cancer.",
+        "confidence": "medium",
+        "notes": "PDSA (S423) health list: osteosarcoma 'malignant bone cancer.'; atopy 'hypersensitivity to certain allergens, causing itching and skin trauma.'; hypothyroidism 'a condition in which there's a decrease in thyroid hormone production.'; panosteitis 'a painful, inflammatory bone disease.' BHCP (S425): osteosarcoma, cruciate ligament disease; cystinuria DNA test required of Assured Breeders. Research only."
+      },
+      "shorter_lifespan": {
+        "value": "a shorter life than many breeds — usually around ten years",
+        "unit": "—",
+        "source_id": "S423",
+        "quote": "Average lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA (S423); PetMD (S424) 'The average Newfoundland dog lifespan is 9–10 years.'; McMillan 2024 median 11.0 y (S123) — research only. Basis of the consider tag shorter_lifespan — a calm chip, no number."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 34,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 34 | Field Spaniel |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35): rank 34 shared by the Field Spaniel, Newfoundland, Australian Terrier, American Staffordshire Terrier, Gordon Setter and Bearded Collie (row as returned), tier 'Above Average Working Dogs' (ranks 27–39). Coren's own article (S34) not re-read. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Above average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 15 to 25 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier 'Above Average Working Dogs': 'Obey first command: 70% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "early, consistent obedience training; reward-based, patient",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "Early and consistent obedience training is a must.",
+        "confidence": "medium",
+        "notes": "PetMD (S424); PDSA (S423): 'Training will require patience, but can be achieved using reward-based techniques.' The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.newfoundland.learning_multiplier (1.2, runbook rule: Above average tier, rank 34).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "large, deep-bodied, heavily boned, muscular; sweet-dispositioned; dignified",
+        "unit": "—",
+        "source_id": "S421",
+        "quote": "The Newfoundland is a sweet-dispositioned dog that acts neither dull nor ill-tempered.",
+        "confidence": "high",
+        "notes": "AKC (S421). CKC (S422): large, deep-bodied and muscular with a dignified bearing; 'Large size is desirable but never at the expense of gait, symmetry and balance.'"
+      },
+      "colours": {
+        "value": [
+          "black",
+          "brown",
+          "white and black (Landseer)"
+        ],
+        "unit": "list",
+        "source_id": "S420",
+        "quote": "Color: Negro, blanco y negro y castaño.",
+        "confidence": "high",
+        "notes": "FCI (S420, Spanish): black ('Este es el color tradicional.'; a slight bronze tinge and white markings on chest, toes and tail tip permitted), white and black (Landseer — 'Esta variedad tiene un significado histórico para la raza.'; black head preferably with a white blaze, black saddle, black rump and upper tail), brown ('Este color va desde el chocolate hasta el bronce.'). FCI nomenclature (S419): Black, White and black, Brown. AKC (S421): 'Recognized Newfoundland colors are black, brown, gray, and white and black.' — gray is AKC only (S426); CKC (S422): black and Landseer only. The game lists the colours shared by the FCI and AKC: black, brown, white and black. Never gray (not FCI), never markings of another colour."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Black first with the highest weight ('the traditional colour', S420; the portrait default), then white and black (Landseer), brown."
+      },
+      "coat": {
+        "value": "water-resistant double coat; moderately long, straight outer coat; soft dense undercoat",
+        "unit": "—",
+        "source_id": "S421",
+        "quote": "The adult Newfoundland has a flat, water-resistant, double coat that tends to fall back into place",
+        "confidence": "high",
+        "notes": "AKC (S421), fragment. CKC (S422): outer coat moderately long and straight, a slight wave permitted, no curl; undercoat soft and dense (paraphrase). PDSA (S423): 'Coat length: Medium'."
+      },
+      "ears": {
+        "value": "relatively small, triangular with rounded tips, lying close to the head",
+        "unit": "—",
+        "source_id": "S421",
+        "quote": "Ears are relatively small and triangular with rounded tips.",
+        "confidence": "high",
+        "notes": "AKC (S421): 'They are set on the skull level with, or slightly above, the brow and lie close to the head.'"
+      },
+      "eyes": {
+        "value": "dark brown, relatively small, deep-set, wide apart; eyelids fitting closely (welfare)",
+        "unit": "—",
+        "source_id": "S421",
+        "quote": "They are relatively small, deep-set, and spaced wide apart.",
+        "confidence": "high",
+        "notes": "AKC (S421): 'Eyes are dark brown.' Breed Watch (S425): loose eyelids → eyelids in normal contact in the portrait (welfare)."
+      },
+      "nose": {
+        "value": "clean-cut, broad, deep muzzle; moderately short; well-developed nostrils",
+        "unit": "—",
+        "source_id": "S421",
+        "quote": "The muzzle is clean-cut, broad throughout its length, and deep.",
+        "confidence": "high",
+        "notes": "AKC (S421): 'The top of the muzzle is rounded, and the bridge, in profile, is straight or only slightly arched.' CKC (S422): moderately short, nostrils well developed (paraphrase). Moderate muzzle in the portrait."
+      },
+      "tail": {
+        "value": "broad at the base and strong, reaching the hock, hanging straight or with a slight curve",
+        "unit": "—",
+        "source_id": "S421",
+        "quote": "The tail is broad at the base and strong.",
+        "confidence": "high",
+        "notes": "AKC (S421): 'It has no kinks, and the distal bone reaches to the hock.'; 'When the dog is standing relaxed, its tail hangs straight or with a slight curve at the end.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S423) and PetMD (S424). The RKC breed page (preferred: size of home / garden, grooming, sheds, lifespan band, town or country) returned a fetch error on 2026-10-20 → no rkc_* fields; large_home and apartment need the RKC page (runbook) → neither. Woodgreen and VCA not attempted.",
+      "pdsa_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S423",
+        "quote": "Size: Large",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S423)."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour per day (minimum)",
+        "unit": "—",
+        "source_id": "S423",
+        "quote": "Minimum exercise (per day): 1 hour",
+        "confidence": "medium",
+        "notes": "PDSA text: 'As adult dogs, Newfoundlands need around an hour of exercise daily'."
+      },
+      "pdsa_grooming": {
+        "value": "daily, particularly when shedding",
+        "unit": "—",
+        "source_id": "S423",
+        "quote": "Grooming is a daily task, particularly when shedding.",
+        "confidence": "high",
+        "notes": "PDSA (S423) → grooming 7× a week (M5-R13 rule 'daily' → 7, built); frequent_grooming. PetMD (S424) 'at least once a week' — a lower minimum, alternative."
+      },
+      "petmd_grooming": {
+        "value": "thorough brushing at least once a week; coat blown twice a year",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "The Newfie's long, coarse coat requires thorough brushing at least once a week to prevent matting and remove dead hair.",
+        "confidence": "medium",
+        "notes": "PetMD (S424); 'Newfies shed year-round but usually \"blow their coat\" twice a year' (as returned)."
+      },
+      "pdsa_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S423",
+        "quote": "Average lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "Basis of shorter_lifespan (runbook criterion: an A/B upper bound ≤ 10 years)."
+      },
+      "petmd_family": {
+        "value": "an outstanding family pet",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "A Newfoundland dog's personality makes the breed an outstanding family pet.",
+        "confidence": "medium",
+        "notes": "Basis of family_pet."
+      },
+      "petmd_children": {
+        "value": "gets along well with children; supervise interactions with small kids",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "They have a sweet disposition and gentle nature, so Newfies get along well with children, small pets, and other dogs.",
+        "confidence": "medium",
+        "notes": "Basis of children and other_pets; caveat 'But just like with all dogs, supervise all interactions between small kids and Newfoundlands.' → never small_children."
+      },
+      "petmd_other_pets": {
+        "value": "good roommates to other dogs and cats",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "good roommates to other dogs and cats",
+        "confidence": "medium",
+        "notes": "Basis of other_pets (with petmd_children)."
+      },
+      "petmd_time_alone": {
+        "value": "some may develop separation anxiety when left alone",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "Because Newfoundland dogs are so loving, some may develop separation anxiety when left alone.",
+        "confidence": "medium",
+        "notes": "Basis of needs_company."
+      },
+      "petmd_shedding": {
+        "value": "sheds year-round, blows the coat twice a year",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "Newfies shed year-round but usually \"blow their coat\" twice a year",
+        "confidence": "medium",
+        "notes": "PetMD (S424), as returned; PDSA (S423) 'particularly when shedding' agrees. Basis of sheds (no conflicting source)."
+      },
+      "petmd_bathing": {
+        "value": "bath roughly once a month, never more than once every two weeks",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "Newfoundland dogs do best if bathed roughly once a month, but never more than once every two weeks.",
+        "confidence": "medium",
+        "notes": "PetMD (S424) → bathing ROADMAP M5-R20 (needs-david)."
+      },
+      "petmd_ears": {
+        "value": "floppy ears trap debris and moisture; clean at the vet's recommendation",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "The Newfoundland's floppy ears can easily trap debris and moisture, leading to ear infections.",
+        "confidence": "medium",
+        "notes": "PetMD (S424): 'To prevent infections, clean your dog's ears at your vet's recommendation with a pet-specific ear cleaner.' → ear care ROADMAP M5-R20 (needs-david)."
+      },
+      "petmd_drooling": {
+        "value": "regularly wipe the drool",
+        "unit": "—",
+        "source_id": "S424",
+        "quote": "Pet parents will also need to regularly wipe their Newfie's drool, which can get caught in their fur.",
+        "confidence": "medium",
+        "notes": "Basis of drools (with PDSA S423); the wiping itself has no game mechanic (needs a new ROADMAP task — David)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -39508,6 +40041,317 @@
         "confidence": "high",
         "notes": "FCI (S410) and RKC standard (S412 'White, but cream or apricot markings acceptable up to 18 months.' — the portrait is an adult). One colour; weight unsourced.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): standard colour only — pure white (adult); never cream / apricot markings on an adult, never another colour"
+      }
+    },
+    "newfoundland": {
+      "_note": "Unattended run M5-R10-51 (2026-10-20): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: daily brushing (PDSA S423 'Grooming is a daily task', M5-R13); a gap between meals and exercise (PetMD S424 'an hour', M5-R16); puppy socialisation (PetMD S424 quote, M5-R17). Sourced needs without a game mechanic: monthly bath and ear cleaning (PetMD S424) → ROADMAP M5-R20; wiping the drool (PetMD S424) → needs a new ROADMAP task (needs-david). Senior 99 from McMillan 2024 (S123, 11.0 y). Welfare: Kennel Club Category 2 (PDSA S423, BHCP S425 loose eyelids) → eyelid_problems; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S423",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA 'Minimum exercise (per day): 1 hour' (S423); 'As adult dogs, Newfoundlands need around an hour of exercise daily'. RKC breed page not reachable → PDSA (runbook: RKC preferred, else PDSA). Rule: one number N ('minimum N') → N = 60.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S423 'Minimum exercise (per day): 1 hour'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S423",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months. PDSA (S423): 'shouldn't be over-exercised as puppies when their bones and joints are still developing.' — the cap already limits puppy walks.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 99
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 99 = round(0.75 × 11.0 y × 12) = 99 (S11 + McMillan 2024 median 11.0 y via Dogs Trust S123). Alternative: 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 99 (0.75 × 11.0 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 99
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 99)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 34 (S35), tier 'Above average' (27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 34, Above average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PetMD (S424): 'Feeding their dog at least twice a day instead of one big meal' — the game's two adult meals stay.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S423",
+        "quote": "Grooming is a daily task, particularly when shedding.",
+        "confidence": "high",
+        "notes": "newfoundland.suitability.pdsa_grooming. PDSA (S423) 'a daily task' → 7 (runbook dog-grooming rule 'daily' → 7). PetMD (S424) 'at least once a week' is a lower minimum → alternatives (listed for David: the two sources differ). Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S424",
+            "notes": "PetMD thorough brushing at least once a week"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden, PDSA »Grooming is a daily task«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source says an hour; 60 = David's decision)",
+        "source_id": "S424",
+        "quote": "Avoiding exercising their dog an hour before or after a meal",
+        "confidence": "medium",
+        "notes": "PetMD (S424), GDV prevention list; newfoundland.exercise.after_meals; PDSA (S423) lists GDV. Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score. The hour before a meal is not modelled.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S424",
+        "quote": "All dogs, even the friendly Newfoundland, need consistent socialization as puppies",
+        "confidence": "medium",
+        "notes": "newfoundland.behaviour.socialisation (PetMD S424). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S424)"
+      },
+      "ear_care": {
+        "value": "bath roughly once a month (never more than every two weeks); ear cleaning at the vet's recommendation",
+        "unit": "ear care / bathing (sourced need)",
+        "source_id": "S424",
+        "quote": "Newfoundland dogs do best if bathed roughly once a month, but never more than once every two weeks.",
+        "confidence": "medium",
+        "notes": "PetMD (S424), newfoundland.suitability.petmd_bathing, petmd_ears. The game has no ear-care or bathing mechanic → ROADMAP M5-R20 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): kopanje približno enkrat na mesec, čiščenje ušes po nasvetu veterinarja; mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "drool_wiping": {
+        "value": "regularly",
+        "unit": "wiping the drool (sourced need)",
+        "source_id": "S424",
+        "quote": "Pet parents will also need to regularly wipe their Newfie's drool, which can get caught in their fur.",
+        "confidence": "medium",
+        "notes": "PetMD (S424), newfoundland.suitability.petmd_drooling. The game has no drool-wiping mechanic and no ROADMAP task names one → needs a new ROADMAP task (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno brisanje sline; mehanike ni in ni naloge → potrebna nova naloga v ROADMAP (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-51); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S424"
+            ],
+            "refs": [
+              "newfoundland.suitability.petmd_family",
+              "newfoundland.behaviour.family"
+            ],
+            "quote": "S424 'makes the breed an outstanding family pet'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S424"
+            ],
+            "refs": [
+              "newfoundland.suitability.petmd_children",
+              "newfoundland.behaviour.family"
+            ],
+            "quote": "S424 'Newfies get along well with children'",
+            "note": "Caveat kept: 'supervise all interactions between small kids and Newfoundlands' (S424) → never small_children."
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S424"
+            ],
+            "refs": [
+              "newfoundland.behaviour.other_pets",
+              "newfoundland.suitability.petmd_other_pets"
+            ],
+            "quote": "S424 'good roommates to other dogs and cats'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S423"
+            ],
+            "refs": [
+              "newfoundland.health.shorter_lifespan",
+              "newfoundland.lifespan.pdsa"
+            ],
+            "quote": "S423 'Average lifespan: Under 10 years'",
+            "note": "Runbook criterion (A/B upper bound ≤ 10 years); McMillan 2024 median 11.0 y (S123) — open for David."
+          },
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S425"
+            ],
+            "refs": [
+              "newfoundland.health.eyelids",
+              "newfoundland.health.breed_watch"
+            ],
+            "quote": "S425 'Conformational defects of the upper and lower eyelids (loose eyelids)'",
+            "note": "Welfare rule §3 (Kennel Club Category 2, PDSA S423; Breed Watch point S425), as the Great Dane and the Mastiff."
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S424"
+            ],
+            "refs": [
+              "newfoundland.behaviour.time_alone",
+              "newfoundland.suitability.petmd_time_alone"
+            ],
+            "quote": "S424 'some may develop separation anxiety when left alone'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S424"
+            ],
+            "refs": [
+              "newfoundland.suitability.petmd_shedding"
+            ],
+            "quote": "S424 'Newfies shed year-round'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S423"
+            ],
+            "refs": [
+              "newfoundland.suitability.pdsa_grooming"
+            ],
+            "quote": "S423 'Grooming is a daily task, particularly when shedding.'"
+          },
+          {
+            "tag": "drools",
+            "source_ids": [
+              "S423",
+              "S424"
+            ],
+            "refs": [
+              "newfoundland.behaviour.drooling",
+              "newfoundland.suitability.petmd_drooling"
+            ],
+            "quote": "S423 'Newfies also tend to drool'; S424 'regularly wipe their Newfie's drool'"
+          }
+        ],
+        "not_proposed": {
+          "active_family": "One hour a day (S423); PetMD 'calm dogs that don't need an excessive amount of exercise' (S424).",
+          "long_daily_exercise": "One hour a day (S423) — the criterion is two hours.",
+          "small_children": "PetMD: supervise all interactions with small kids (S424) — no rating without a caveat.",
+          "not_for_small_children": "No source advises against small children.",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No source.",
+          "apartment": "The RKC home field was not reachable; a giant dog — no source.",
+          "large_home": "Criterion is the RKC 'Size of home: Large house' field — the RKC page was not reachable (open for David).",
+          "often_alone": "Separation anxiety (S424) → needs_company instead.",
+          "needs_mental_stimulation": "PetMD walks 'to provide mental stimulation' is general advice, not a breed need.",
+          "older_owners": "No source.",
+          "low_shedding": "Sheds year-round (S424).",
+          "food_motivated_weight": "No breed-specific statement.",
+          "chews_when_bored": "No source.",
+          "chases_small_pets": "No prey-drive statement; gets along with small pets (S424).",
+          "secure_fencing": "No source.",
+          "hips_hind_legs": "Hip / elbow dysplasia listed (S423) and scored by Assured Breeders (S425), but not a Breed Watch point → no chip (Labrador precedent).",
+          "welfare": "Kennel Club Category 2 (S423) → eyelid_problems only (the single Breed Watch point, S425). Not flat-faced → no brachycephalic chip; in marketing."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children (with caveat), other_pets; consider shorter_lifespan, eyelid_problems (dobrobit), needs_company, sheds, frequent_grooming, drools"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (no veterinary advice against advertising the breed type)",
+        "unit": "—",
+        "source_id": "S423",
+        "quote": "Newfoundlands are amongst a group of breeds classed as ‘Category Two’ by The Kennel Club.",
+        "confidence": "high",
+        "notes": "Kennel Club Category 2 (PDSA S423; Breed Watch point loose eyelids, S425) → eyelid_problems in the app; the only veterinary advice against advertising a breed type is for flat-faced breeds (BVA S92). Marketing never promises health; never with drooping eyelids.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (welfare chip, no veterinary advice against advertising)"
+      },
+      "ai_appearance": {
+        "value": "adult Newfoundland, solid black (default); large, deep-bodied, heavily boned but balanced; water-resistant double coat, moderately long and straight; broad, deep, moderately short muzzle with open nostrils; dark brown, small, deep-set eyes with closely fitting eyelids (no drooping, no haw); relatively small triangular ears with rounded tips lying close to the head; natural tail hanging to the hock; no excessive loose skin; no gray",
+        "unit": "—",
+        "source_id": "S420",
+        "quote": "Color: Negro, blanco y negro y castaño.",
+        "confidence": "high",
+        "notes": "Colours shared by the FCI (S420) and AKC (S421) standards — black, white and black (Landseer), brown; gray only in the AKC (never in the game). Welfare (Category 2, S423; loose eyelids S425): eyelids in normal contact. Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black is the portrait default (FCI 'the traditional colour'); eyelids fitting closely (Breed Watch); natural ears and tail"
       }
     }
   }

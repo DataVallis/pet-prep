@@ -2013,6 +2013,46 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (dog-data S411, 2026-10-20): under the heading 'Good Practice schemes and tests' the sentence 'We strongly recommend that breeders, at a minimum, conduct these tests before breeding, …' lists one test — the BVA/KC/ISDS eye scheme (level minimum); no Best Practice list and no breed-specific DNA package. AKC Non-Sporting Group health testing page (K28): the US national breed club recommends 'Patella Evaluation', 'Hip Evaluation' and 'Ophthalmologist Evaluation' (recommended, not required) → patella and hip as other_scheme (the eye check is already covered by the RKC eye scheme). PDSA (dog-data S413) lists luxating patellas and cataracts. No new test key."
+    },
+    "newfoundland": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K29",
+        "level_quotes": {
+          "minimum": "Under the Kennel Club’s Assured Breeder Scheme (ABS), the DNA test for cystinuria (CU) is a requirement."
+        }
+      },
+      "tests": [
+        {
+          "key": "dna_cu",
+          "level": "minimum",
+          "name": "DNA test for cystinuria (CU)",
+          "source_id": "K29",
+          "quote": "Under the Kennel Club’s Assured Breeder Scheme (ABS), the DNA test for cystinuria (CU) is a requirement."
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip scoring under the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "K29",
+          "quote": "under the British Veterinary Association (BVA)/KC Hip Dysplasia Scheme"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "minimum",
+          "name": "Elbow grading under the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "K29",
+          "quote": "and elbow grading under the BVA/KC Elbow Dysplasia Scheme prior to breeding."
+        },
+        {
+          "key": "heart_echo_scheme",
+          "level": "other_scheme",
+          "name": "Breed club heart testing (Colour Flow Echo Doppler)",
+          "source_id": "K29",
+          "quote": "All breeding stock to be heart tested by Colour Flow Echo Doppler, by a Veterinary Cardiovascular Society member,"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (royalkennelclub.com) returned a fetch error on 2026-10-20 → basis = the Kennel Club Newfoundland Breed Health and Conservation Plan (K29, August 2018; dog-data S425): Assured Breeder Scheme requirements — cystinuria DNA test, hip scoring (BVA/KC) and elbow grading (BVA/KC) before breeding (level minimum = a breeding-register requirement); 'The breed club recommendations listed on the Kennel Club website are: breed club heart testing,' and breed club members test breeding stock by Colour Flow Echo Doppler → other_scheme. The plan is from 2018 — re-read the RKC page when it is reachable (open for David). New test keys dna_cu and heart_echo_scheme. PDSA (dog-data S423) advises checking that the parents 'have been screened under these schemes'."
     }
   }
 }
