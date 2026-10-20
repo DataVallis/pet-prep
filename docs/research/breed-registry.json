@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "d8e28543e0df4656a5c0ba37e70011b0312b503a05b741027b63d06a33c34f76"
+      "sha256": "d0ac65fe9b7561c4bc8534734a91e42819d4cce67a9d89c0360bb7ee918cec03"
     }
   },
   "suitability_vocabulary": {
@@ -26498,7 +26498,12 @@
           "S398"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "papillon.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
