@@ -13,6 +13,7 @@ use App\Models\Pet;
 use App\Models\PetCareSession;
 use App\Models\QuietHours;
 use App\Models\User;
+use App\Services\Media\GameMediaReadiness;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder;
@@ -62,6 +63,7 @@ class WandPlayService
     public function __construct(
         private readonly LifeStageService $lifeStages,
         private readonly RoutineLedgerService $ledger,
+        private readonly GameMediaReadiness $media,
     ) {}
 
     // ──────────────────────────────────────────────────────────────
@@ -207,6 +209,11 @@ class WandPlayService
         if (($quietEnd = $this->quietBlocksUntil($pet, $now)) !== null) {
             return $refuse(CareRefusal::WandQuietHours, $quietEnd);
         }
+        // M5-T04 (David 2026-10-20, APP_REFINEMENT_SPEC §10): a clip of the game is
+        // not stored yet — no start (»Igra se še pripravlja«), never half working.
+        if (! $this->mediaReady($pet)) {
+            return $refuse(CareRefusal::MediaNotReady);
+        }
         // QA M5-R06-05 m1: one game with the cat at a time (grooming, litter change, scratching).
         if (($other = CatChoreService::otherLiveRefusal($pet, CareSessionKind::WandPlay, $child, $now)) !== null) {
             return $other;
@@ -220,6 +227,12 @@ class WandPlayService
         }
 
         return null;
+    }
+
+    /** M5-T04: every clip the wand game shows (`media.game_clips.wand`) is stored for the cat. */
+    public function mediaReady(Pet $pet): bool
+    {
+        return $this->media->ready($pet, GameMediaReadiness::WAND);
     }
 
     /**

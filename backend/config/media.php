@@ -62,6 +62,21 @@ return [
     ],
 
     /*
+    | M5-T04 (David 2026-10-20, APP_REFINEMENT_SPEC §10): the clips each mini-game
+    | shows (PetStateEnum values). A game starts only when every clip of this list
+    | that the pet is entitled to (video_states above) is stored for it — its own
+    | file or its shared look's (GameMediaReadiness). `idle` is listed because it
+    | is the stage's fallback when the pet's tier has no `playing` clip.
+    | play = the play endpoint (the dog's ball game and cuddles, dog + cat — one
+    | stage), wand = the cat's feather wand. Long term (§10) every phase gets its
+    | own clip — add it here.
+    */
+    'game_clips' => [
+        'play' => ['playing', 'idle'],
+        'wand' => ['idle', 'playing'],
+    ],
+
+    /*
     | Our copy of every generated file (M4-05). fal.media URLs are never given
     | to the apps: a queued job downloads the result to a private disk and the
     | apps get signed, expiring URLs to GET /api/media/{media}.

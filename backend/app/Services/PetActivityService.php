@@ -409,6 +409,10 @@ class PetActivityService
             if (! $this->play->canPlayNow($locked, $now)) {
                 return $this->refused($locked, CareRefusal::PlayNotAvailable, $this->play->nextPlayAt($locked, $now));
             }
+            // M5-T04 (David 2026-10-20): no clip = no start — never a half-working game.
+            if (! $this->play->mediaReady($locked)) {
+                return $this->refused($locked, CareRefusal::MediaNotReady);
+            }
 
             $event = $this->play->complete($locked, $child, $kind, $now);
             if ($event === null) {

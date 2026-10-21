@@ -13,6 +13,7 @@ use App\Models\Pet;
 use App\Models\PetPlayEvent;
 use App\Models\QuietHours;
 use App\Models\User;
+use App\Services\Media\GameMediaReadiness;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Carbon;
@@ -61,6 +62,7 @@ class PlayService
         private readonly LifeStageService $lifeStages,
         private readonly WandPlayService $wand,
         private readonly PetSleepService $sleep,
+        private readonly GameMediaReadiness $media,
         private ?string $seedSalt = null,
     ) {
         $this->seedSalt ??= (string) config('app.key');
@@ -114,6 +116,17 @@ class PlayService
             && ! $pet->isFrozen()
             && $pet->displayMetric('hygiene_level') > 0
             && ! $this->sleepsNow($pet, $now, $quiet);
+    }
+
+    /**
+     * M5-T04 (David 2026-10-20, APP_REFINEMENT_SPEC §10): every clip the play
+     * stage shows (ball game and cuddles, `media.game_clips.play`) is stored
+     * for the pet — else no game starts (422 `media_not_ready`, »Igra se še
+     * pripravlja«). A pet without AI media (drawn stage) is always ready.
+     */
+    public function mediaReady(Pet $pet): bool
+    {
+        return $this->media->ready($pet, GameMediaReadiness::PLAY);
     }
 
     /**
