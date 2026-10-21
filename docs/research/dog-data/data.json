@@ -28439,7 +28439,7 @@
         "source_id": "S444",
         "quote": "Whippets are a popular choice for families as they are so calm and gentle around children.",
         "confidence": "high",
-        "notes": "PDSA (S444): 'we'd recommend a home with slightly older children' (fragment — the full sentence is longer than the quote limit) who can recognise when the dog needs space; always supervise dogs with children (paraphrase). PetMD (S445): 'A home with loud, rambunctious little kids might be too much for these sensitive pups.' → family_pet, children (explicit statement, supervision caveat kept here), older_children; never small_children."
+        "notes": "PDSA (S444): 'we'd recommend a home with slightly older children' (fragment — the full sentence is longer than the quote limit) who can recognise when the dog needs space; always supervise dogs with children (paraphrase). PetMD (S445): 'A home with loud, rambunctious little kids might be too much for these sensitive pups.' → family_pet, children (explicit statement, supervision caveat kept here), sensitive_older_children (new chip); never small_children."
       },
       "time_alone": {
         "value": "dislikes being left alone; can suffer separation anxiety",
@@ -28592,9 +28592,9 @@
           "fawn",
           "brindle",
           "black",
-          "blue",
-          "fawn and white (particolour)",
-          "white with brindle or black patches"
+          "blue (grey)",
+          "fawn and white parti-colour",
+          "white with brindle patches"
         ],
         "unit": "list",
         "source_id": "S443",
@@ -28707,7 +28707,7 @@
         "source_id": "S444",
         "quote": "we'd recommend a home with slightly older children",
         "confidence": "high",
-        "notes": "PDSA (S444), fragment (the full sentence is longer than the quote limit; it continues: children who can recognise when the dog needs space — paraphrase). Basis of older_children."
+        "notes": "PDSA (S444), fragment (the full sentence is longer than the quote limit; it continues: children who can recognise when the dog needs space — paraphrase). Basis of sensitive_older_children (new chip)."
       },
       "pdsa_company": {
         "value": "can get very stressed when left alone",
@@ -28731,7 +28731,7 @@
         "source_id": "S445",
         "quote": "A home with loud, rambunctious little kids might be too much for these sensitive pups.",
         "confidence": "medium",
-        "notes": "PetMD (S445); good with kids when 'the child and dog are introduced slowly' (fragment). Supports older_children."
+        "notes": "PetMD (S445); good with kids when 'the child and dog are introduced slowly' (fragment). Supports sensitive_older_children."
       },
       "petmd_grooming": {
         "value": "weekly grooming check; won't need to be brushed often",
@@ -42543,7 +42543,7 @@
       }
     },
     "whippet": {
-      "_note": "Unattended run M5-R10-54 (2026-10-21): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. One new register health key (mitral_valve_disease), no new vocabulary key. Sourced needs built from day one: weekly brushing (PDSA S444 'a weekly brush', M5-R13); puppy socialisation (PDSA S444 quote, M5-R17); the digestion warning after a meal (PDSA S444 'Remember to leave a gap between eating and exercising.', M5-R16). Sourced needs without a game mechanic: a coat in winter and thick soft bedding (PDSA S444) and off-lead running in a secure area (PDSA S444) → open for David (needs a new ROADMAP task). Exercise from PDSA (RKC page unreachable). Senior 121 from McMillan 2024 (S123, 13.4 y). No Breed Watch category fetched → no welfare chip; in marketing.",
+      "_note": "Unattended run M5-R10-54 (2026-10-21): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. One new register health key (mitral_valve_disease) and one new vocabulary key (sensitive_older_children). Sourced needs built from day one: weekly brushing (PDSA S444 'a weekly brush', M5-R13); puppy socialisation (PDSA S444 quote, M5-R17); the digestion warning after a meal (PDSA S444 'Remember to leave a gap between eating and exercising.', M5-R16). Sourced needs without a game mechanic: a coat in winter and thick soft bedding (PDSA S444) and off-lead running in a secure area (PDSA S444) → open for David (needs a new ROADMAP task). Exercise from PDSA (RKC page unreachable). Senior 121 from McMillan 2024 (S123, 13.4 y). No Breed Watch category fetched → no welfare chip; in marketing.",
       "exercise_minutes_adult": {
         "value": 60,
         "unit": "minutes/day",
@@ -42700,7 +42700,7 @@
         "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): tek brez povodca na varovanem prostoru; mehanike ni → potrebna nova naloga v ROADMAP (David)"
       },
       "suitability_tags": {
-        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-54); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-54); refs = JSON paths in this file. One new vocabulary key: sensitive_older_children (a sensitive, medium-sized dog — `older_children` names a small dog, `fragile_older_children` fragile bones, `not_for_small_children` a large dog). No percentages in the app.",
         "suits": [
           {
             "tag": "family_pet",
@@ -42727,7 +42727,7 @@
         ],
         "consider": [
           {
-            "tag": "older_children",
+            "tag": "sensitive_older_children",
             "source_ids": [
               "S444",
               "S445"
@@ -42774,9 +42774,10 @@
           "low_shedding": "Only from RKC 'Sheds: No' (precedent); the PDSA says the dog sheds.",
           "frequent_grooming": "A weekly brush (S444).",
           "shorter_lifespan": "PDSA 'Over 12 years' (S444); McMillan 13.4 y.",
-          "welfare": "No Breed Watch category fetched (RKC page unreachable), no welfare statement → no welfare chip; PRA, mitral valve disease, immune-mediated problems, GDV, von Willebrand disease and deafness are register health keys and breeder-checklist items only."
+          "welfare": "No Breed Watch category fetched (RKC page unreachable), no welfare statement → no welfare chip; PRA, mitral valve disease, immune-mediated problems, GDV, von Willebrand disease and deafness are register health keys and breeder-checklist items only.",
+          "older_children": "The chip names a small dog; the Whippet is medium-sized (S444) → the new sensitive_older_children."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children; consider older_children, needs_company, chases_small_pets"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children; consider sensitive_older_children (nova oznaka po pravilu runbooka), needs_company, chases_small_pets"
       },
       "marketing": {
         "value": "in the app: yes; in marketing: yes (not a welfare breed)",
