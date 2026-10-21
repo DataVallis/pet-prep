@@ -87,6 +87,11 @@ export function makeMedia(overrides: Partial<PetMedia> = {}): PetMedia {
     current_video_url: null,
     states: ['idle', 'sleeping'],
     expires_at: null,
+    // M5-T08 (additive): no key images / transitions, older rules.
+    keyframes: {},
+    transitions: {},
+    loops: [],
+    state_media: false,
     ...overrides,
   };
 }

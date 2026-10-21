@@ -3,6 +3,7 @@
 namespace App\Services\Media;
 
 use App\Enums\PetStateEnum;
+use App\Enums\PetTransition;
 use App\Events\PetUpdated;
 use App\Models\Pet;
 use App\Models\PetMedia;
@@ -124,7 +125,13 @@ class PetPreparationService
      */
     public function expectedKeys(Pet $pet): array
     {
-        return [self::IMAGE, ...array_map(fn (PetStateEnum $s) => $s->value, self::order($this->entitlements->videoStatesFor($pet)))];
+        return [
+            self::IMAGE,
+            ...array_map(fn (PetStateEnum $s) => $s->value, self::order($this->entitlements->videoStatesFor($pet))),
+            // M5-T08: transition clips come after every state video (key images are not
+            // items of their own — a loop waits for its key image).
+            ...array_map(fn (PetTransition $t) => $t->value, $this->entitlements->transitionsFor($pet)),
+        ];
     }
 
     /**
@@ -146,16 +153,28 @@ class PetPreparationService
         $pending = [];
         $inProgress = [];
         foreach ($this->expectedKeys($pet) as $key) {
-            $slot = $key === self::IMAGE
-                ? $image
-                : $slots->first(fn (PetMedia $m) => $m->isVideo() && $m->state === $key);
+            $transition = PetTransition::tryFrom($key);
+            $slot = match (true) {
+                $key === self::IMAGE => $image,
+                $transition !== null => $slots->first(fn (PetMedia $m) => $m->isTransition() && $m->state === $key),
+                default => $slots->first(fn (PetMedia $m) => $m->isVideo() && $m->state === $key),
+            };
 
             if ($slot?->isServable()) {
                 continue;
             }
             $pending[] = $key;
 
+            // M5-T08: a loop / transition whose key image failed waits for the daily retry too.
+            $poses = match (true) {
+                $transition !== null => [$transition->fromState()->value, $transition->toState()->value],
+                $key === self::IMAGE => [],
+                default => [$key],
+            };
+            $keyFailed = $slots->contains(fn (PetMedia $m) => $m->isKeyframe() && in_array($m->state, $poses, true) && $m->status === PetMedia::STATUS_FAILED);
+
             $failed = $slot?->status === PetMedia::STATUS_FAILED
+                || $keyFailed
                 || ($key === self::IMAGE && $slot === null && $pet->media_status === 'failed');
             if (! $nothingComing && ! $failed) {
                 $inProgress[] = $key;

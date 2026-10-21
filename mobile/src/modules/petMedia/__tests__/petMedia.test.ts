@@ -73,6 +73,10 @@ describe('normalizePetMedia', () => {
       currentVideoUrl: signed(2, 'i'),
       states: ['idle', 'sleeping'],
       expiresAt: '2026-10-05T12:00:00+00:00',
+      keyframes: {},
+      transitions: {},
+      loops: [],
+      stateMedia: false,
     });
   });
 

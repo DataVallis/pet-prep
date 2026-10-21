@@ -19,6 +19,8 @@ use Illuminate\Support\Number;
  * Pet media panel (M4-03 / M4-05) on the pet edit page: reference image and
  * state videos with status, cost (estimated), size, error, preview links
  * (signed, expiring) and — superadmin only — Regenerate / Generate missing.
+ * M5-T08: also the state key images (kind keyframe), how each video was made
+ * (loop / from key image / from reference image) and the transition clips.
  */
 class MediaRelationManager extends RelationManager
 {
@@ -72,17 +74,36 @@ class MediaRelationManager extends RelationManager
     {
         return $table
             ->defaultSort('id')
+            // M5-T08: a full set is 1 image + 5 key images + 6 loops + 2 transitions (+ behaviour) — one page.
+            ->paginated([25, 50])
+            ->defaultPaginationPageOption(25)
             // M5-T06: how long the media took (measured, no external call).
             ->description(fn (): string => self::timingLine($this->getOwnerRecord()))
             ->columns([
                 Tables\Columns\ImageColumn::make('preview')
                     ->label('Preview')
-                    ->getStateUsing(fn (PetMedia $record): ?string => $record->isImage() && $record->isServable()
+                    ->getStateUsing(fn (PetMedia $record): ?string => $record->isStill() && $record->isServable()
                         ? app(PetMediaService::class)->signedUrl($record)
                         : null)
                     ->height(64),
-                Tables\Columns\TextColumn::make('kind')->badge(),
+                // M5-T08: image (reference) · keyframe (state key image) · video (state loop) · transition.
+                Tables\Columns\TextColumn::make('kind')->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        PetMedia::KIND_KEYFRAME => 'info',
+                        PetMedia::KIND_TRANSITION => 'warning',
+                        default => 'gray',
+                    }),
                 Tables\Columns\TextColumn::make('state')->placeholder('—'),
+                Tables\Columns\TextColumn::make('recipe')->label('Made as')
+                    ->getStateUsing(fn (PetMedia $record): ?string => match (true) {
+                        $record->isVideo() && $record->recipe === PetMedia::RECIPE_LOOP => 'loop (key image → key image)',
+                        $record->isVideo() && $record->recipe === PetMedia::RECIPE_POSE => 'from key image',
+                        $record->isVideo() => 'from reference image',
+                        $record->isTransition() => 'pose → pose',
+                        $record->isKeyframe() => 'edit of reference',
+                        default => null,
+                    })
+                    ->placeholder('—'),
                 Tables\Columns\TextColumn::make('status')
                     ->badge()
                     ->color(fn (string $state): string => match ($state) {
@@ -118,9 +139,12 @@ class MediaRelationManager extends RelationManager
                         $plan = app(PetMediaService::class)->planMissing($pet);
 
                         return sprintf(
-                            'Image: %s. Videos: %s. Estimated cost $%.2f (counts against the AI budget).',
+                            'Image: %s. Videos: %s. Key images: %s. Transitions: %s.%s Estimated cost $%.2f (counts against the AI budget).',
                             $plan['image'],
                             implode(', ', $plan['videos']) ?: 'none',
+                            implode(', ', $plan['keyframes']) ?: 'none',
+                            implode(', ', $plan['transitions']) ?: 'none',
+                            $plan['upgrade'] ? ' This pet is from before state key images: it gets them now (videos are remade as loops).' : '',
                             $plan['cost_usd'],
                         );
                     })
@@ -131,7 +155,7 @@ class MediaRelationManager extends RelationManager
                         $done = app(PetMediaService::class)->generateMissing($pet);
 
                         Notification::make()
-                            ->title($done['image'] ? 'Reference image queued (videos follow)' : "{$done['videos']} video(s) queued")
+                            ->title($done['image'] ? 'Reference image queued (videos follow)' : "{$done['videos']} item(s) queued (key images first, their loops and transitions follow)")
                             ->status($done['image'] || $done['videos'] > 0 ? 'success' : 'warning')
                             ->send();
                     }),
@@ -144,11 +168,14 @@ class MediaRelationManager extends RelationManager
                     ->modalDescription(function (PetMedia $record): string {
                         $profiles = app(MediaProfiles::class);
 
-                        return $record->isImage()
-                            ? sprintf('New reference image (~$%.2f), then the videos are regenerated from it (~$%.2f each). The current files stay visible until the new ones are stored.',
-                                $profiles->referenceImage()->estimatedCostUsd(), $profiles->stateVideo()->estimatedCostUsd())
-                            : sprintf('New %s video (~$%.2f). The current video stays visible until the new one is stored.',
-                                $record->state, $profiles->stateVideo()->estimatedCostUsd());
+                        return match (true) {
+                            $record->isImage() => sprintf('New reference image (~$%.2f), then the key images and videos are regenerated from it (~$%.2f per key image, ~$%.2f per video). The current files stay visible until the new ones are stored.',
+                                $profiles->referenceImage()->estimatedCostUsd(), app(PetMediaService::class)->keyframeCostUsd(), $profiles->stateVideo()->estimatedCostUsd()),
+                            $record->isKeyframe() => sprintf('New %s key image (~$%.2f), then its loop and transitions are remade from it (~$%.2f each). The current files stay visible until the new ones are stored.',
+                                $record->state, app(PetMediaService::class)->keyframeCostUsd(), $profiles->stateVideo()->estimatedCostUsd()),
+                            default => sprintf('New %s clip (~$%.2f). The current clip stays visible until the new one is stored.',
+                                $record->state, $profiles->stateVideo()->estimatedCostUsd()),
+                        };
                     })
                     ->visible(fn (PetMedia $record): bool => self::isSuperadmin() && ! $record->isInFlight())
                     ->action(function (PetMedia $record): void {

@@ -6,6 +6,7 @@ use App\Enums\BreedType;
 use App\Enums\LifeStage;
 use App\Enums\PetOrigin;
 use App\Enums\PetStateEnum;
+use App\Enums\PetTransition;
 use App\Enums\Species;
 use App\Models\Pet;
 use InvalidArgumentException;
@@ -402,6 +403,92 @@ class PetAppearancePrompt
             : (string) config("breed_appearance.{$breedKey}.display_name", 'dog');
 
         return 'The same '.$subject.' as in the image, '.$state->promptModifier().'. '.self::VIDEO_STYLE;
+    }
+
+    // ── M5-T08 state media (APP_REFINEMENT_SPEC §7): key images, loops, transitions ──
+
+    /** Key image edit: everything but the pose stays as in the reference image. */
+    public const KEYFRAME_KEEP = 'Keep it clearly the same individual animal: identical coat colours, coat pattern and markings, '
+        .'identical eye colour, ears, size and age. Keep the same room, floor, background, natural light, camera position and framing; '
+        .'the whole body stays in frame. Change only the pose.';
+
+    public const KEYFRAME_STYLE = 'Realistic 35mm photograph, sharp focus, true-to-life fur texture and colours. '
+        .'Only the animal: no people, no children, no hands, no text, no watermark, no logo.';
+
+    /** Loop clip: start and end frame are the same key image (Kling end_image_url). */
+    public const LOOP_NOTE = 'The clip starts and ends in exactly the pose of the image, so it can loop seamlessly.';
+
+    /**
+     * M5-T08: the edit prompt of a state's KEY IMAGE — the animal of the
+     * stage's reference image in the state's pose (PetStateEnum::keyPose).
+     * Breed + traits + stage only, never personal data.
+     *
+     * @param  array<string, string>  $traits  DNA v2 traits; empty for a v1 dog
+     */
+    public function keyframePrompt(string $breedKey, PetStateEnum $state, array $traits = [], ?LifeStage $stage = null): string
+    {
+        $species = self::speciesOf($breedKey);
+        $this->refuseCatWithoutTraits($species, $traits);
+        $noun = $species === Species::Cat ? 'cat' : 'dog';
+        $subject = $traits !== [] ? $this->describe($breedKey, $traits, $stage) : $this->displayName($breedKey);
+
+        return 'The same '.$noun.' as in the reference image ('.$subject.'), now '.$state->keyPose($species).'. '
+            .self::KEYFRAME_KEEP.' '.self::KEYFRAME_STYLE;
+    }
+
+    /**
+     * M5-T08: a state's loop video — subtle motion that stays in the key pose
+     * (start = end = the key image). Same look lock and camera rules as videoPrompt().
+     *
+     * @param  array<string, string>  $traits
+     */
+    public function loopVideoPrompt(string $breedKey, PetStateEnum $state, array $traits = [], ?LifeStage $stage = null): string
+    {
+        $species = self::speciesOf($breedKey);
+        $subject = $this->clipSubject($breedKey, $species, $traits, $stage);
+        $style = $species === Species::Cat ? self::CAT_VIDEO_STYLE : self::VIDEO_STYLE;
+
+        return 'The same '.$subject.' as in the image, '.$state->loopMotion($species).'. '.self::LOOP_NOTE.' '.$style;
+    }
+
+    /**
+     * M5-T08: a transition clip from the start pose to the end pose (played
+     * once). Natural motion — not a subtle loop — with the same camera and
+     * safety rules as the AI Lab custom motion.
+     *
+     * @param  array<string, string>  $traits
+     */
+    public function transitionVideoPrompt(string $breedKey, PetTransition $transition, array $traits = [], ?LifeStage $stage = null): string
+    {
+        $species = self::speciesOf($breedKey);
+        $subject = $this->clipSubject($breedKey, $species, $traits, $stage);
+        $style = $species === Species::Cat ? self::CAT_CUSTOM_MOTION_STYLE : self::CUSTOM_MOTION_STYLE;
+
+        return 'The same '.$subject.' as in the start image '.$transition->motion($species)
+            .', ending exactly in the pose of the end image. '.$style;
+    }
+
+    /** @param  array<string, string>  $traits */
+    private function clipSubject(string $breedKey, Species $species, array $traits, ?LifeStage $stage): string
+    {
+        $fallback = (string) config("breed_appearance.{$breedKey}.display_name", $species === Species::Cat ? 'cat' : 'dog');
+
+        if ($traits === []) {
+            return $fallback;
+        }
+
+        // Cats describe their stage (kitten tail, …) like videoPrompt(); dogs stay stage-free.
+        return $species === Species::Cat ? $this->describe($breedKey, $traits, $stage) : $this->describe($breedKey, $traits);
+    }
+
+    /**
+     * Breed key + DNA v2 traits of a pet (empty traits for a v1 dog).
+     *
+     * @return array{0: string, 1: array<string, string>}
+     */
+    public function subjectOf(Pet $pet): array
+    {
+        return $this->dnaOf($pet);
     }
 
     /**

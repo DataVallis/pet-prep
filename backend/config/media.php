@@ -88,6 +88,30 @@ return [
     'preparation_order' => ['idle', 'sleeping', 'hungry', 'playing', 'low_energy', 'sick', 'accident', 'chewing', 'scratching'],
 
     /*
+    | M5-T08 (APP_REFINEMENT_SPEC §7, David 2026-10-20 / 21): media per state.
+    |  - KEY IMAGE per entitled state except `idle` (the reference image is the
+    |    idle pose): an EDIT of the stage's reference image (`keyframe_profile`,
+    |    Nano Banana Pro Edit — the same animal, room, light and framing).
+    |  - State videos start from their key image and END on it (Kling 3.0 Pro
+    |    `end_image_url`, see the profile) — a seamless loop (`recipe = loop`).
+    |    A video profile without an end frame → `recipe = pose` (start frame
+    |    only; the prompt asks to end in the pose).
+    |  - TRANSITIONS: PetTransition values (start = key image A, end = key image
+    |    B), played once by the app on a state change.
+    | Who gets it: MediaEntitlementService::usesStateMedia() — a pet with the
+    | full (purchased) set and `pets.state_media_version = 2` (new profiled
+    | pets, a new purchase, admin "Generate missing"). The free basic set is
+    | unchanged (open question for David: + sleeping key image 0.15 $ per look
+    | stage). Extension points (M5-T09 / M5-T10 / M5-T11): ARCHITECTURE §7.
+    */
+    'state_media' => [
+        'enabled' => filter_var(env('AI_STATE_MEDIA_ENABLED', true), FILTER_VALIDATE_BOOL),
+        'keyframe_profile' => env('AI_KEYFRAME_PROFILE', 'nano_banana_pro_edit'),
+        // Order = queue order, after every first-minutes clip (preparation_essentials).
+        'transitions' => ['idle_to_sleeping', 'sleeping_to_idle'],
+    ],
+
+    /*
     | M5-T06: while the image or one of these clips is still on its way the
     | apps show »Pripravljamo [ime] … to lahko traja nekaj minut«; after that
     | only the features still waiting say »… se še pripravlja«.
@@ -325,6 +349,10 @@ return [
             // start_image_url, prompt, duration (3–15), generate_audio, negative_prompt, cfg_scale.
             // There is NO resolution / aspect_ratio input: the clip follows the start image
             // (9:16 from Nano Banana Pro) at Kling Pro's native resolution — "720p" cannot be requested.
+            // M5-T08: END FRAME `end_image_url` (string, optional, "URL of the image to be used for
+            // the end of the video"; there is no `tail_image_url`) — checked on
+            // https://fal.ai/docs/model-api-reference/video-generation-api/kling-video-v3-pro on 2026-10-21.
+            // Used for seamless state loops (end = start key image) and transitions (end = target pose).
             'kling_v3_pro' => [
                 'label' => 'Kling 3.0 Pro image-to-video (audio off)',
                 'endpoint' => env('FAL_MODEL_KLING_V3_PRO', 'fal-ai/kling-video/v3/pro/image-to-video'),
@@ -336,6 +364,7 @@ return [
                 // fal `duration` enum "3" … "15" (checked 2026-10-20 on the /api page). AI Lab override only.
                 'durations' => range(3, 15),
                 'image_param' => 'start_image_url',
+                'end_image_param' => 'end_image_url',
                 'supports_negative_prompt' => true,
                 'params' => [
                     'duration' => '5',

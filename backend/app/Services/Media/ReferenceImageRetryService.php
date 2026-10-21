@@ -4,6 +4,7 @@ namespace App\Services\Media;
 
 use App\Enums\AiCallFailure;
 use App\Enums\AiSpendPurpose;
+use App\Jobs\GeneratePetKeyframe;
 use App\Jobs\GeneratePetReferenceImage;
 use App\Jobs\RegeneratePetStageMedia;
 use App\Jobs\SubmitPetStateVideo;
@@ -91,8 +92,9 @@ class ReferenceImageRetryService
      */
     public function videoRetryCandidates(): Builder
     {
+        // M5-T08: transitions and key images are retried like state videos.
         return PetMedia::query()
-            ->videos()
+            ->whereIn('kind', [PetMedia::KIND_VIDEO, PetMedia::KIND_TRANSITION, PetMedia::KIND_KEYFRAME])
             ->where('status', PetMedia::STATUS_FAILED)
             ->whereIn('error_reason', self::reasons())
             ->whereHas('pet', fn (Builder $q) => $q->where('is_active', true))
@@ -164,14 +166,15 @@ class ReferenceImageRetryService
         }
 
         foreach ($this->videoRetryCandidates()->limit(max(0, $limit - $images - $stages))->get() as $slot) {
-            $cost = $this->sharedLookCovered($slot->look_media_id, $seenLookRows) ? 0.0 : $videoCost;
+            $keyframe = $slot->isKeyframe();
+            $cost = $this->sharedLookCovered($slot->look_media_id, $seenLookRows) ? 0.0 : ($keyframe ? $this->media->keyframeCostUsd() : $videoCost);
 
-            if ($cost > 0 && $this->guard->refusalFor($planned + $cost, AiSpendPurpose::StateVideo) !== null) {
+            if ($cost > 0 && $this->guard->refusalFor($planned + $cost, $keyframe ? AiSpendPurpose::ReferenceImage : AiSpendPurpose::StateVideo) !== null) {
                 break;
             }
 
             $slot->update(['status' => PetMedia::STATUS_PENDING, 'request_id' => null, 'error_reason' => null, 'error' => null]);
-            SubmitPetStateVideo::dispatch($slot->id);
+            $keyframe ? GeneratePetKeyframe::dispatch($slot->id) : SubmitPetStateVideo::dispatch($slot->id);
             $planned += $cost;
             $videos++;
         }
