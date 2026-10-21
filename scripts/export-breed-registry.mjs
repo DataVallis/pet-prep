@@ -425,6 +425,7 @@ const SPECIES = [
       { id: 'bichon_frise', synonyms: { en: ['Bichon à poil frisé', 'Bichon Frisé', 'Bichon Tenerife'], sl: ['kodrasti bišon', 'bišon frize', 'bichon frise'] } },
       { id: 'newfoundland', synonyms: { en: ['Newfie', 'Newf', 'Terra Nova'], sl: ['novofundlandski pes', 'njufi', 'newfoundland'] } },
       { id: 'dalmatian', synonyms: { en: ['Carriage Dog', 'Spotted Coach Dog', 'Firehouse Dog', 'Dalmatinski pas'], sl: ['dalmatinski pas', 'dalmatinka', 'dalmatin'] } },
+      { id: 'australian_cattle_dog', synonyms: { en: ['Blue Heeler', 'Red Heeler', 'Queensland Heeler', 'Cattle Dog', 'ACD'], sl: ['avstralski govedarski pes', 'blue heeler', 'heeler'] } },
     ],
   },
   {
@@ -449,7 +450,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', Portugal: 'PT', Canada: 'CA', Croatia: 'HR' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -1515,6 +1516,31 @@ const DOG_FACTS = {
       ['hip_dysplasia', 'health.hip_dysplasia'],
     ],
   },
+  // M5-R10-53. Height = Kennel Club standard (S436), weight = PDSA 16–20 kg (S438; the standards give none), lifespan =
+  // the McMillan 2024 median 14.0 y (Dogs Trust table S123) and the RKC band "Over 10 years" (S437), exercise = RKC
+  // "More than 2 hours per day" (S437). FCI origin Australia (AU, new). Not exported: height.pdsa and the PetMD weight
+  // (alternatives), adult_weight.salt_category (our assignment), lifespan.senior_from (derived), health.breed_watch
+  // (Category 1, no chip), the care needs suitability.petmd_ears_nails (open for David: M5-R20 / M5-R19). No new
+  // health key.
+  australian_cattle_dog: {
+    height: ['height.kc_standard'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['deafness', 'health.deafness'],
+      ['pra_eye_disease', 'health.pra'],
+      ['hip_elbow_dysplasia', 'health.hip_elbow_dysplasia'],
+      ['itchy_skin_allergy', 'health.eczema'],
+      ['liver_shunt', 'health.portosystemic_shunt'],
+      ['kneecap_luxation', 'health.patella'],
+      ['bladder_stones', 'health.urinary_stones'],
+    ],
+  },
 
 };
 
@@ -1908,6 +1934,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.dalmatian.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.dalmatian.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.dalmatian.exercise_minutes_senior',
+  },
+  australian_cattle_dog: {
+    adult_minutes: ['proposed_game_parameters.australian_cattle_dog.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.australian_cattle_dog.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.australian_cattle_dog.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.australian_cattle_dog.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.australian_cattle_dog.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.australian_cattle_dog.exercise_minutes_senior',
   },
 
 };

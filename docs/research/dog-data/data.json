@@ -27946,23 +27946,15 @@
         "source_id": "S439",
         "quote": null,
         "confidence": "medium",
-        "notes": "PetMD (S439): progressive retinal atrophy (PRA), an inherited eye disease that leads to blindness (paraphrase as returned). RKC (S437) 'DNA test - prcd-PRA' (priority). Register health key pra."
+        "notes": "PetMD (S439): progressive retinal atrophy (PRA), an inherited eye disease that leads to blindness (paraphrase as returned). RKC (S437) 'DNA test - prcd-PRA' (priority). Register health key pra_eye_disease."
       },
-      "hip_dysplasia": {
-        "value": "hip dysplasia",
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia",
         "unit": "—",
         "source_id": "S438",
         "quote": null,
         "confidence": "medium",
-        "notes": "PDSA (S438) health list: 'Hip dysplasia – hip joint laxity …' (name only kept). RKC (S437) BVA/KC hip scheme. Not a Breed Watch point → no hips_hind_legs chip. Register health key hip_dysplasia."
-      },
-      "elbow_dysplasia": {
-        "value": "elbow dysplasia",
-        "unit": "—",
-        "source_id": "S438",
-        "quote": null,
-        "confidence": "medium",
-        "notes": "PDSA (S438) health list. RKC (S437) BVA/KC elbow scheme. Register health key elbow_dysplasia."
+        "notes": "PDSA (S438) health list: 'Hip dysplasia – hip joint laxity …' and 'Elbow dysplasia - elbow joint laxity …' (names only kept); PetMD (S439) hip dysplasia occurs infrequently (paraphrase). RKC (S437) BVA/KC hip and elbow schemes (important tests). Not a Breed Watch point → no hips_hind_legs chip. Register health key hip_elbow_dysplasia."
       },
       "eczema": {
         "value": "eczema — inflamed, itchy skin",
@@ -27978,7 +27970,7 @@
         "source_id": "S438",
         "quote": null,
         "confidence": "medium",
-        "notes": "PDSA (S438) health list. Register health key liver_shunt if it exists, else background only."
+        "notes": "PDSA (S438) health list. Register health key liver_shunt."
       },
       "patella": {
         "value": "luxating patellas",
@@ -27986,7 +27978,7 @@
         "source_id": "S438",
         "quote": null,
         "confidence": "medium",
-        "notes": "PDSA (S438) health list: 'Luxating patellas – the kneecaps slipping temporarily out of place.' Register health key luxating_patella."
+        "notes": "PDSA (S438) health list: 'Luxating patellas – the kneecaps slipping temporarily out of place.' Register health key kneecap_luxation."
       },
       "urinary_stones": {
         "value": "urolithiasis (urinary stones)",
