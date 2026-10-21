@@ -4046,6 +4046,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -4599,6 +4680,87 @@ export interface operations {
                             /** @description POST /api/child/pet/socialisation would be accepted now. */
                             can_record: boolean;
                         } | null;
+                        /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                        care_guide: {
+                            /** @enum {string} */
+                            species: "dog" | "cat";
+                            /** @enum {string|null} */
+                            life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                            /**
+                             * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                             *     parent's) and the family-local windows "HH:MM" [start, end).
+                             */
+                            meals: {
+                                per_day: number;
+                                by_child: number;
+                                by_parent: number;
+                                windows: {
+                                    start: string;
+                                    end: string;
+                                    parent_covered: boolean;
+                                }[];
+                            };
+                            /**
+                             * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                             *     exercise minutes; null for a cat.
+                             */
+                            steps: {
+                                goal: number;
+                                exercise_minutes: number | null;
+                            } | null;
+                            /**
+                             * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                             *     out; steps never reset it); null otherwise.
+                             */
+                            take_out: {
+                                hold_hours: number;
+                            } | null;
+                            /**
+                             * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                             *     `refill_below` %, at least `min_gap_minutes` apart.
+                             */
+                            water: {
+                                refill_below: number;
+                                min_gap_minutes: number;
+                            } | null;
+                            /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                            grooming: {
+                                per_week: number;
+                            } | null;
+                            /**
+                             * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                             *     window is null when not set or quiet hours are off.
+                             */
+                            sleep: {
+                                night: {
+                                    start: string;
+                                    end: string;
+                                } | null;
+                                school: {
+                                    start: string;
+                                    end: string;
+                                } | null;
+                            };
+                            /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                            play: {
+                                sessions_per_day: number;
+                                min_gap_minutes: number;
+                            } | null;
+                            /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                            litter: {
+                                scoop_within_hours: number;
+                                change_every_days: number;
+                            } | null;
+                            /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                            scratching: boolean;
+                            /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                            clean_within_hours: number;
+                            /**
+                             * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                             *     before the walk; null otherwise.
+                             */
+                            digestion_gap_minutes: number | null;
+                        };
                     };
                 };
             };
@@ -5172,6 +5334,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -5743,6 +5986,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -6314,6 +6638,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -6885,6 +7290,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -7456,6 +7942,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -8031,6 +8598,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -8606,6 +9254,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -9181,6 +9910,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -9752,6 +10562,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -10327,6 +11218,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -10898,6 +11870,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -11469,6 +12522,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -12044,6 +13178,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -12615,6 +13830,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -13190,6 +14486,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -13761,6 +15138,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -14336,6 +15794,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -14911,6 +16450,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };
@@ -15486,6 +17106,87 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                            };
                         };
                     };
                 };

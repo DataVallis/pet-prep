@@ -226,6 +226,9 @@ export function makeChildState(
     certificate: null,
     // M5-R17 the puppy's weekly "new experience": null = no task this week.
     socialisation: null,
+    // M5-T05: absent by default (like an older server) so HUD tests don't get the first-launch card;
+    // pass `care_guide: makeCareGuide()` to `makeLiveChildState` to show it.
+    care_guide: null as unknown as ChildPetState['care_guide'],
   };
 }
 
@@ -273,8 +276,41 @@ export interface LiveStateOverrides {
   socialisation?: unknown;
   /** M5-T02 `sleep` (raw); default awake, `'absent'` drops the key (older server). */
   sleep?: unknown;
+  /** M5-T05 `care_guide` (raw); omitted = null (older server, no »?« button). */
+  care_guide?: unknown;
   timezone?: string;
   server_time?: string;
+}
+
+/**
+ * M5-T05: the server's `care_guide` of an adult mutt (raw, as the backend sends it): 2 meals,
+ * 4.000 steps, water at ≤ 60 % / 180 min, night 21:00–07:00. `overrides` replace top-level keys.
+ */
+export function makeCareGuide(overrides: Record<string, unknown> = {}): Record<string, unknown> {
+  return {
+    species: 'dog',
+    life_stage: 'adult',
+    meals: {
+      per_day: 2,
+      by_child: 2,
+      by_parent: 0,
+      windows: [
+        { start: '07:00', end: '09:00', parent_covered: false },
+        { start: '17:00', end: '19:00', parent_covered: false },
+      ],
+    },
+    steps: { goal: 4000, exercise_minutes: 40 },
+    take_out: null,
+    water: { refill_below: 60, min_gap_minutes: 180 },
+    grooming: null,
+    sleep: { night: { start: '21:00', end: '07:00' }, school: null },
+    play: null,
+    litter: null,
+    scratching: false,
+    clean_within_hours: 2,
+    digestion_gap_minutes: null,
+    ...overrides,
+  };
 }
 
 /** M5-R17: the server's `socialisation` block of an open puppy week (raw, as the backend sends it). */
@@ -342,6 +378,7 @@ export function makeLiveChildState(o: LiveStateOverrides = {}): ChildPetState {
     ...(o.scratching !== undefined ? { scratching: o.scratching } : {}),
     ...(o.socialisation !== undefined ? { socialisation: o.socialisation } : {}),
     sleep: o.sleep === 'absent' ? undefined : o.sleep === undefined ? base.sleep : o.sleep,
+    ...(o.care_guide !== undefined ? { care_guide: o.care_guide } : {}),
   };
   return raw as unknown as ChildPetState;
 }

@@ -52,6 +52,7 @@ import {
   ChevronDown,
   Images,
   LogOut,
+  CircleQuestionMark,
   PawPrint,
   RefreshCw,
   Sparkles,
@@ -128,6 +129,8 @@ import { usePushPromptOnFirstView } from '@/modules/push/usePushPromptOnFirstVie
 import { nextStageLine, originLine, stageLine } from '@/modules/petProfile/petProfile';
 import { profileHeaderA11y, profileSheetRows } from '@/modules/petProfile/profileSheet';
 import PetProfileSheet from '@/components/PetProfileSheet';
+import CareGuideSheet from '@/modules/careGuide/CareGuideSheet';
+import { useCareGuide } from '@/modules/careGuide/careGuideSeen';
 import ChildLanguageSheet from '@/components/ChildLanguageSheet';
 import ChildCertificateSheet from '@/components/ChildCertificateSheet';
 import { CERTIFICATE_CHILD_STRINGS, childCertificateEntry } from '@/modules/certificate/certificate';
@@ -434,6 +437,9 @@ export default function ChildHudScreen() {
   const [isCertificateVisible, setCertificateVisible] = useState(false);
   // M5-R17: the puppy's weekly "Nova izkušnja" card (UI-only state, like the language sheet).
   const [isSocialisationVisible, setSocialisationVisible] = useState(false);
+  // M5-T05: the care guide »Kako skrbim za …« — opens by itself once per pet on this device,
+  // then from the »?« button (never over a lock).
+  const careGuide = useCareGuide(view?.pet.id ?? null, view?.care_guide != null && !view.lock.is_locked);
 
   // Breathing animation for avatar fallback
   const bounceAnim = useRef(new Animated.Value(0)).current;
@@ -532,7 +538,7 @@ export default function ChildHudScreen() {
   const facts = useFactMoment({
     view,
     // M5-T03: the card also waits until the message queue is empty (care confirmation first).
-    overlayOpen: dockLayerOpen || isProfileVisible || isLanguageVisible || isCertificateVisible || isSocialisationVisible || toast !== null,
+    overlayOpen: dockLayerOpen || isProfileVisible || isLanguageVisible || isCertificateVisible || isSocialisationVisible || careGuide.visible || toast !== null,
     dockCovered: dockLayerOpen,
   });
 
@@ -786,6 +792,19 @@ export default function ChildHudScreen() {
           </Pressable>
 
           <View style={styles.topBarRight}>
+            {view.care_guide !== null && (
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={t('careGuide:open')}
+                accessibilityHint={t('careGuide:openHint')}
+                testID="hud-care-guide-open"
+                hitSlop={5}
+                style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
+                onPress={careGuide.open}
+              >
+                <CircleQuestionMark color={palette.mint} size={18} />
+              </Pressable>
+            )}
             {facts.showBook && (
               <Pressable
                 accessibilityRole="button"
@@ -1215,6 +1234,14 @@ export default function ChildHudScreen() {
         onClose={() => setSocialisationVisible(false)}
       />
       <PetProfileSheet visible={isProfileVisible && profileRows.length > 0} rows={profileRows} onClose={() => setProfileVisible(false)} />
+      {view.care_guide !== null && (
+        <CareGuideSheet
+          visible={careGuide.visible && !locked && !coveredByOverlay && !showGuide}
+          guide={view.care_guide}
+          petName={pet.name}
+          onClose={careGuide.close}
+        />
+      )}
       {showGuide && (
         <BreedGuideScreen
           breedLabel={breedLabel}

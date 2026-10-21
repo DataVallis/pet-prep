@@ -12,6 +12,7 @@
  * keeps a newer broadcast over an older poll.
  */
 
+import { readCareGuide, type CareGuide } from '@/modules/careGuide/careGuide';
 import { isPaymentRequired, readPetPlan, type PetPlan } from '@/modules/plan/plan';
 import type { ChildPetState } from '@/api/client';
 import { readBreed, readSpecies } from '@/modules/species/species';
@@ -194,6 +195,11 @@ export interface ChildPetView {
    * (not a puppy week, a breed / pet without it, a cat) and from an older server.
    */
   socialisation: ChildSocialisation | null;
+  /**
+   * M5-T05 care guide (»Kako skrbim za …»): the numbers of the simulation's own rules for
+   * this pet (`modules/careGuide`); null from an older server (no »?« button).
+   */
+  care_guide: CareGuide | null;
   /** ms of `server_time` (whole seconds). */
   snapshotAtMs: number;
   /** ms of the newest applied broadcast `emitted_at`; 0 if none. */
@@ -379,6 +385,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
     certificate: readChildCertificate((raw as { certificate?: unknown }).certificate),
     // M5-R17: older servers send no `socialisation` → null (no card).
     socialisation: readChildSocialisation((raw as { socialisation?: unknown }).socialisation),
+    // M5-T05: older servers send no `care_guide` → null.
+    care_guide: readCareGuide((raw as { care_guide?: unknown }).care_guide),
     snapshotAtMs: msOf(raw.server_time),
     lastEmittedMs,
     clockSkewMs: msOf(raw.server_time) > 0 ? msOf(raw.server_time) - receivedAtMs : 0,
