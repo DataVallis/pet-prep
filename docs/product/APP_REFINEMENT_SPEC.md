@@ -2,7 +2,7 @@
 
 > **Status:** spec, 20. 10. 2026. Vir: Davidovi zapiski s testiranja z beta testerji (otroci in starši).
 > **David 20. 10. 2026:** »strinjam se z vsem« — vsi predlogi iz pogovora so potrjeni, razen kjer je spodaj navedena drugačna Davidova odločitev.
-> **Pravilo kakovosti (David 20. 10. 2026):** aplikacija mora biti **premium, zelo realistična**. Slabih videov ne bo. Optimizacija stroškov AI je dovoljena samo, če primerjava v AI Labu pokaže, da je kakovost enaka (§13).
+> **Pravilo kakovosti (David 20. 10. 2026):** aplikacija mora biti **premium, zelo realistična**. Slabih videov ne bo. Optimizacija stroškov AI je dovoljena samo, če primerjava v AI Labu pokaže, da je kakovost enaka (§13). *(21. 10. 2026: primerjava opuščena — en model za vse, krajši klipi šole in iger; §14.)*
 > Razvoj se začne šele, ko je ta spec razdelan do potankosti. Kar je označeno **(D)**, je Claudov predlog, ki čaka Davidovo potrditev podrobnosti.
 
 ## 0. Temeljni pravili
@@ -134,6 +134,8 @@
 - Vsi uporabniki vidijo enako; pri pasmi/barvi z že narejenimi mediji priprava traja nekaj sekund.
 - Za razvoj izmeriti: koliko traja priprava celotnega paketa (fal izvaja videe vzporedno).
 
+**Status (M5-T06, 21. 10. 2026):** zgrajeno — strežnik + aplikacija (JS, OTA). Strežnik v stanju otroka, pregledu staršev in vsakem `PetUpdated` pošlje `preparation {ready, pending, preparing, running, ready_at}` (`PetPreparationService`); videi stanj se postavijo v vrsto v vrstnem redu prvih minut (slika → stoji `idle`, spi `sleeping`, je `hungry` → igra `playing` → ostalo; `config/media.php` `preparation_order`) — isti nabor, isto število, brez novega stroška. Priprava se začne ob rojstvu (podpis pogodbe), če takrat ni vse shranjeno (ali ob nakupu, če je žival čakala za plačilnim zaklepom); zaslon s Curiom »Pripravljamo: Luna … To lahko traja nekaj minut.« (ime za dvopičjem, nikoli sklanjano; brez imena »Pripravljamo tvojega kužka / tvojo muco«) se pokaže, dokler manjka slika ali klip prvih minut, največ 15 min, nikoli čez zaklep. V šoli se do klipov pokaže poza z »Šola se še pripravlja«, igra ostane »Igra se še pripravlja« (M5-T04). Ko je vse shranjeno: enkrat na ljubljenčka `PetUpdated pet_ready`, eno potisno obvestilo otrokom (naslov = ime, besedilo »Tvoj kuža je pripravljen! Pridi ga pogledat.«, podatki `{type, pet_id}`) in sporočilo v aplikaciji »Luna je pripravljen!« (vrsta sporočil M5-T03). Merjenje: superadmin → ljubljenček → »AI media«: *Preparation* = `preparation_ready_at − preparation_started_at`, *Media pipeline* = zadnji `completed_at` − prvi `created_at` shranjenih medijev.
+
 ## 14. Strošek AI medijev in modeli
 
 **Danes:** Kling 3.0 Pro image-to-video, 5 s, brez zvoka, 9:16 po referenčni sliki, izvorna ločljivost (Kling 3.0 Pro na fal **nima parametra za ločljivost** — 720p ni mogoče izbrati; cena je na sekundo, ne glede na ločljivost). Slika: Nano Banana Pro 0,15 $.
@@ -152,11 +154,23 @@
 
 12-tedenski izziv z mladičem ima 2 obdobji → ≈ 32 $ ≈ 28 €. Od 49,99 € ostane po DDV (22 %) in proviziji trgovine (15 %) ≈ 34,80 €; **prvi kupec ≈ 7 € v plusu, vsak naslednji iste pasme in barve ≈ 34,80 €** (ocena po ceniku; resnica je račun fal).
 
-**Optimizacija (David 20. 10.: strinja se, a najprej primerjava v AI Labu):**
-1. Krajši klipi za šolo in igre (3 s namesto 5 s, −40 % pri istem modelu).
-2. Stanja (ki jih otrok gleda največ) ostanejo na Kling 3.0 Pro; šola in igre na cenejšem modelu **samo, če je kakovost enaka**.
-3. Kandidati za primerjavo: Kling 3.0 Pro, Kling 3.0 Standard (če ga fal ponuja), Kling 2.6 Pro, Veo 3.1 Fast / Lite (720p).
-4. Primerjava: isti pes, ista vaja iz šole, vsi kandidati v AI Labu; David oceni realističnost. Šele nato odločitev v `config/media.php`.
+**Odločitev (David 21. 10. 2026) — brez primerjave modelov:**
+1. Vsi videi: **Kling 3.0 Pro** (image-to-video); vse slike: **Nano Banana Pro**, ključne slike stanj in življenjskih obdobij **Nano Banana Pro Edit**. Primerjava v AI Labu (M5-T07) je **opuščena**.
+2. Novi klipi **šole in iger** (M5-T09 / M5-T10) so dolgi **3 s** namesto 5 s (−40 % pri istem modelu). Klipi stanj (ki jih otrok gleda največ) ostanejo **5 s**.
+
+**Ocena paketa z odločitvijo (cenik fal, Kling 3.0 Pro 0,112 $/s):**
+
+| Kaj | Količina | Strošek |
+|---|---|---|
+| Sedanji paket (slika + 8 stanj, 5 s) | — | 4,63 $ |
+| Ključne slike stanj | 6 × 0,15 $ | 0,90 $ |
+| Prehodi (5 s) | 2 × 0,56 $ | 1,12 $ |
+| Šola (4 ukazi × 3 faze, 3 s) | 12 × 3 s × 0,112 $ = 12 × 0,336 $ | 4,03 $ |
+| Igra z žogo + crkljanje (3 s) | 4 × 3 s × 0,112 $ = 4 × 0,336 $ | 1,34 $ |
+| Rojstni dan (5 s) | 1 × 0,56 $ | 0,56 $ |
+| **Skupaj** | | **≈ 12,59 $** (prej ≈ 16,20 $) |
+
+12-tedenski izziv z mladičem ima 2 obdobji → ≈ 25,17 $ ≈ 22 €. Od 49,99 € ostane po DDV (22 %) in proviziji trgovine (15 %) ≈ 34,80 €; **prvi kupec ≈ 13 € v plusu, vsak naslednji iste pasme in barve ≈ 34,80 €** (ocena po ceniku; resnica je račun fal). `config/media.php` še nima dolžine klipa po namenu (dolžina je lastnost profila modela, `duration_seconds`); 3 s za šolo in igre se nastavi z M5-T09 / M5-T10, ko ti klipi nastanejo.
 
 ## 15. Prioritete
 
