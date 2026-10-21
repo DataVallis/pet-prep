@@ -627,6 +627,18 @@
             "prompt_hash": "sha256:b665974e692169deace109b4d0f749f321976744883745083fa6309b97ca8ccc",
             "generated_at": "2026-10-20T03:52:20+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "newfoundland",
+            "species": "dog",
+            "file": "dog/newfoundland.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:ce281c6c50e0116a0332df096160d8cfc57dd3ad15351756126a95216c15724a",
+            "generated_at": "2026-10-20T23:54:25+00:00",
+            "cost_usd": 0.15
         }
     ]
 }

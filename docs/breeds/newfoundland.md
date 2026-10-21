@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `newfoundland` (viri S419–S426; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174) |
 | Izvor | FCI št. 50, skupina 2, sekcija 2.2 (molosi, gorski tip), Kanada (S419, S420) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 47. mesto »Newfoundland« (S174) |
-| PR-ji | pet-prep #302 (pasma) · portret (sledi) · spletna stran (sledi) |
+| PR-ji | pet-prep #302 (pasma, združen `72f637d`) · portret #303 · spletna stran (sledi) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -38,7 +38,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov, odrasel 6.000, starejši 4.500 od 99 mesecev; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-51 | 2026-10-20 |
 | Česanje vsak dan (rutina »Počeši«), opozorilo »počakaj s sprehodom« po obroku, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R16 / M5-R17 | 2026-10-20 |
 | Barva (izbirnik barve: črn, landseer, rjav) | 🛠 | 💶 izziv | M5-R21 | 2026-10-20 |
-| AI portret v registru | 🗓 sledi po združitvi | — | M5-R11-04 | — |
+| AI portret v registru (črn, sprejet v prvem poskusu, zagon 39517934021) | ✅ | — | M5-R11-04 | 2026-10-20 |
 | Stran na petprep.si (`/animals/dogs/newfoundland`, `/sl/zivali/psi/novofundlandec`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)

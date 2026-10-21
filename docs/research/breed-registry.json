@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "49d9cf8e2fd9234a33f4bc8b65b1f8c55ee2a7b9efc6bc0f385fa8de81f3777a"
+      "sha256": "4644f60ae2f8e3eda7e2dc2427982974eb9d556634e71c9170e260f5df6570ae"
     }
   },
   "suitability_vocabulary": {
@@ -27932,7 +27932,7 @@
           "confidence": "medium"
         },
         {
-          "key": "eyelid_problems",
+          "key": "eyelids_turned",
           "source_ids": [
             "S425"
           ],
@@ -28245,7 +28245,12 @@
           "S423"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "newfoundland.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
