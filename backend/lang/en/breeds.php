@@ -57,6 +57,7 @@ return [
     'newfoundland' => 'Newfoundland',
     'dalmatian' => 'Dalmatian',
     'australian_cattle_dog' => 'Australian Cattle Dog',
+    'whippet' => 'Whippet',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

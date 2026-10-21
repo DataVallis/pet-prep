@@ -320,6 +320,15 @@ return [
         ['key' => 'blue-speckled', 'value' => 'blue speckled with black and tan markings on the head', 'en' => 'Blue speckled', 'sl' => 'Modro pegast'],
         ['key' => 'red-speckle', 'value' => 'even red speckle with darker red markings on the head', 'en' => 'Red speckle', 'sl' => 'Rdeče pegast'],
     ],
+    // M5-R10-54: KC standard S443 "Any colour or mixture of colours, except merle." — common standard colours.
+    'whippet' => [
+        ['key' => 'fawn', 'value' => 'fawn', 'en' => 'Fawn', 'sl' => 'Plavo rjav'],
+        ['key' => 'brindle', 'value' => 'brindle', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'blue', 'value' => 'blue (grey)', 'en' => 'Blue', 'sl' => 'Moder (siv)'],
+        ['key' => 'fawn-white', 'value' => 'fawn and white parti-colour', 'en' => 'Fawn and white', 'sl' => 'Plavo rjav z belo'],
+        ['key' => 'brindle-white', 'value' => 'white with brindle patches', 'en' => 'Brindle and white', 'sl' => 'Tigrasto-bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
