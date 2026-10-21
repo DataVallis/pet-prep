@@ -100,11 +100,13 @@ return [
     |    B), played once by the app on a state change.
     | Who gets it: MediaEntitlementService::usesStateMedia() — a pet with the
     | full (purchased) set and `pets.state_media_version = 2` (new profiled
-    | pets, a new purchase, admin "Generate missing"). The free basic set is
-    | unchanged (open question for David: + sleeping key image 0.15 $ per look
-    | stage). Extension points (M5-T09 / M5-T10 / M5-T11): ARCHITECTURE §7.
+    | pets, a new purchase, admin "Upgrade to state media"). The free basic set
+    | is unchanged (David 2026-10-21: no sleeping key image for free pets for
+    | now). Extension points (M5-T09 / M5-T10 / M5-T11): ARCHITECTURE §7.
     */
     'state_media' => [
+        // M5-T08b: only the default while /admin → Feature switches has no `state_media`
+        // row (AppSettingsService::stateMedia()) — switch it in the panel, not here.
         'enabled' => filter_var(env('AI_STATE_MEDIA_ENABLED', true), FILTER_VALIDATE_BOOL),
         'keyframe_profile' => env('AI_KEYFRAME_PROFILE', 'nano_banana_pro_edit'),
         // Order = queue order, after every first-minutes clip (preparation_essentials).

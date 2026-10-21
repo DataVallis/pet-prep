@@ -29,6 +29,7 @@ use InvalidArgumentException;
  * e-mail) / everyone. Stored in app_settings via AppSettingsService
  * (cached ≤ 60 s, busted on save, every change audited in
  * app_setting_changes + the log). Existing cats keep working in every mode.
+ * Also: unique vs shared AI media (M5-R21) and state media on / off (M5-T08b).
  *
  * @property Form $form
  */
@@ -75,6 +76,7 @@ class FeatureSwitches extends Page implements HasForms
             'cats_mode' => $stored['mode']->value,
             'cats_test_parent_ids' => array_map('strval', $stored['test_parent_ids']),
             'unique_pet_media' => $settings->uniquePetMedia(),
+            'state_media' => $settings->stateMedia(),
         ]);
     }
 
@@ -118,6 +120,14 @@ class FeatureSwitches extends Page implements HasForms
                             ->label(__('admin.features.unique_media'))
                             ->default(false),
                     ]),
+                // M5-T08b (David 2026-10-21): state key images, loops and transitions.
+                Section::make(__('admin.features.state_media_section'))
+                    ->description(__('admin.features.state_media_description'))
+                    ->schema([
+                        Toggle::make('state_media')
+                            ->label(__('admin.features.state_media'))
+                            ->default(true),
+                    ]),
             ]);
     }
 
@@ -134,6 +144,7 @@ class FeatureSwitches extends Page implements HasForms
         $newIds = array_values(array_unique(array_map('intval', $ids)));
         sort($newIds);
         $unique = (bool) ($data['unique_pet_media'] ?? false);
+        $stateMedia = (bool) ($data['state_media'] ?? AppSettingsService::stateMediaDefault());
 
         try {
             // Each switch is written only when its own fields changed, so saving
@@ -144,6 +155,9 @@ class FeatureSwitches extends Page implements HasForms
             if ($unique !== $settings->uniquePetMedia()) {
                 $settings->updateUniquePetMedia($this->admin(), $unique);
             }
+            if ($stateMedia !== $settings->stateMedia()) {
+                $settings->updateStateMedia($this->admin(), $stateMedia);
+            }
         } catch (InvalidArgumentException $e) {
             Notification::make()->title(__('admin.features.not_saved'))->body($e->getMessage())->danger()->send();
 
@@ -151,7 +165,8 @@ class FeatureSwitches extends Page implements HasForms
         }
 
         $media = $settings->uniquePetMedia() ? __('admin.features.unique_media_on') : __('admin.features.unique_media_off');
-        Notification::make()->title(__('admin.features.saved'))->body(__('admin.features.saved_body_media', ['mode' => $mode->label(), 'media' => $media]))->success()->send();
+        $states = $settings->stateMedia() ? __('admin.features.state_media_on') : __('admin.features.state_media_off');
+        Notification::make()->title(__('admin.features.saved'))->body(__('admin.features.saved_body_media', ['mode' => $mode->label(), 'media' => $media]).' · '.__('admin.features.saved_body_state_media', ['state' => $states]))->success()->send();
     }
 
     /**
@@ -160,7 +175,7 @@ class FeatureSwitches extends Page implements HasForms
     public function getChanges(): Collection
     {
         return AppSettingChange::with('user:id,name,email')
-            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY])
+            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY, AppSettingsService::STATE_MEDIA_KEY])
             ->latest('id')->limit(20)->get();
     }
 

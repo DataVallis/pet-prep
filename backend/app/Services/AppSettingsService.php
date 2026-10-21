@@ -33,6 +33,11 @@ use InvalidArgumentException;
  * `ai_lab_budget` (M4-07c, David 2026-10-14) = {daily_usd, monthly_usd,
  * max_run_usd}: the separate AI Lab budget (AI_LAB_DAILY_USD /
  * AI_LAB_MONTHLY_USD / AI_LAB_MAX_RUN_USD), same rules.
+ *
+ * `state_media` (M5-T08b, David 2026-10-21: product switches belong in the
+ * superadmin panel; on from the start) = {enabled: bool}: state key images,
+ * seamless loops and transitions (MediaEntitlementService::usesStateMedia).
+ * No row → env AI_STATE_MEDIA_ENABLED (default true).
  */
 class AppSettingsService
 {
@@ -53,6 +58,9 @@ class AppSettingsService
     public const UNIQUE_MEDIA_KEY = 'unique_pet_media';
 
     public const AI_LAB_BUDGET_KEY = 'ai_lab_budget';
+
+    /** M5-T08b: `{enabled: bool}` — state media on / off (no row → env default, on). */
+    public const STATE_MEDIA_KEY = 'state_media';
 
     public const AI_LAB_MAX_DAILY_USD = 200.0;
 
@@ -283,6 +291,37 @@ class AppSettingsService
     {
         // No row already means "off", so saving "off" over no row is not a change.
         $this->store($actor, self::UNIQUE_MEDIA_KEY, ['enabled' => $enabled], ['enabled' => false]);
+    }
+
+    /**
+     * M5-T08b: state key images, loops and transitions on (default) or off.
+     * Off also stops what is already queued (PetMediaService, retry, sweep).
+     * No row → env AI_STATE_MEDIA_ENABLED (`media.state_media.enabled`, default true).
+     */
+    public function stateMedia(): bool
+    {
+        /** @var array{enabled?: bool} $value */
+        $value = Cache::remember(self::cacheKey(self::STATE_MEDIA_KEY), self::CACHE_TTL_SECONDS,
+            fn (): array => AppSetting::find(self::STATE_MEDIA_KEY)?->value ?? []);
+
+        return array_key_exists('enabled', $value)
+            ? (bool) $value['enabled']
+            : self::stateMediaDefault();
+    }
+
+    /**
+     * Save the state media switch (superadmin), audit it and bust the cache.
+     */
+    public function updateStateMedia(User $actor, bool $enabled): void
+    {
+        // No row already means the env default, so saving that over no row is not a change.
+        $this->store($actor, self::STATE_MEDIA_KEY, ['enabled' => $enabled], ['enabled' => self::stateMediaDefault()]);
+    }
+
+    /** The value "no row" stands for (env AI_STATE_MEDIA_ENABLED, default on). */
+    public static function stateMediaDefault(): bool
+    {
+        return (bool) config('media.state_media.enabled', true);
     }
 
     /** Equal settings values, ignoring the key order of (nested) arrays. */
