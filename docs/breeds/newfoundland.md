@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `newfoundland` (viri S419–S426; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174) |
 | Izvor | FCI št. 50, skupina 2, sekcija 2.2 (molosi, gorski tip), Kanada (S419, S420) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 47. mesto »Newfoundland« (S174) |
-| PR-ji | pet-prep #302 (pasma, združen `72f637d`) · portret #303 · spletna stran (sledi) |
+| PR-ji | pet-prep #302 (pasma, združen `72f637d`) · portret #303 (združen `b95e26a`) · spletna stran #82 (združen `0f729ac`) |
 
 ## Odločitve (z viri in kdo je odločil)
 
