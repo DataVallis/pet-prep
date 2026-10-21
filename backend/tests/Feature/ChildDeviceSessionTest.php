@@ -140,23 +140,37 @@ describe('POST /api/parent/children/{child}/device-session', function () {
         expect($child->tokens()->count())->toBe(0);
     });
 
-    it('is not one of the 3 own devices, and switching again replaces the shared session', function () {
+    it('is not one of the 3 own devices', function () {
         [$parent, $child] = dsFamily(); // 1 own phone (PIN login)
         $child->createToken('iPad', ['child']);
         $child->createToken('Galaxy', ['child']); // 3 own devices now
         $ownIds = $child->tokens()->orderBy('id')->pluck('id')->all();
-        $token = dsParentToken($parent);
 
-        $first = dsSession($token, $child->id)->assertOk()->json('token');
+        dsSession(dsParentToken($parent), $child->id)->assertOk();
         // The shared session comes on top of the own phones — none of them is pushed out.
         expect($child->tokens()->count())->toBe(ChildProfileService::MAX_DEVICES + 1)
             ->and($child->tokens()->pluck('id')->all())->toContain(...$ownIds);
+    });
 
-        $second = dsSession($token, $child->id)->assertOk()->json('token');
-        expect($child->tokens()->count())->toBe(ChildProfileService::MAX_DEVICES + 1)
-            ->and(PersonalAccessToken::findToken($first))->toBeNull()
-            ->and(PersonalAccessToken::findToken($second))->not->toBeNull()
-            ->and($child->tokens()->pluck('id')->all())->toContain(...$ownIds);
+    it('the same parent on another phone does not sign the first phone out (fix 2026-10-21, App Store review on the demo account)', function () {
+        [$parent, $child] = dsFamily();
+        $mine = dsSession(dsParentToken($parent), $child->id)->assertOk()->json('token');
+        $reviewer = dsSession(dsParentToken($parent), $child->id)->assertOk()->json('token');
+
+        expect(PersonalAccessToken::findToken($mine))->not->toBeNull()
+            ->and(PersonalAccessToken::findToken($reviewer))->not->toBeNull();
+        dsAs($mine);
+        getJson('/api/user')->assertOk()->assertJsonPath('id', $child->id);
+    });
+
+    it('keeps at most MAX_SHARED_SESSIONS per parent and child, the oldest dropped first', function () {
+        [$parent, $child] = dsFamily();
+        $token = dsParentToken($parent);
+        $sessions = array_map(fn () => dsSession($token, $child->id)->assertOk()->json('token'), range(1, ChildPinLoginService::MAX_SHARED_SESSIONS + 1));
+
+        expect($child->tokens()->where('name', 'like', 'shared:p%')->count())->toBe(ChildPinLoginService::MAX_SHARED_SESSIONS)
+            ->and(PersonalAccessToken::findToken($sessions[0]))->toBeNull()
+            ->and(PersonalAccessToken::findToken(end($sessions)))->not->toBeNull();
     });
 
     it('survives new own-phone logins of the child (fix 2026-10-21: the parent phone was signed out every 1–2 days)', function () {
