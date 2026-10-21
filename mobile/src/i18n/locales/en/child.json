@@ -229,6 +229,7 @@
   "rules": {
     "sleeping": "💤 Your pup is asleep",
     "sleepingUntil": "💤 Your pup is asleep until {{clock}}",
-    "contract": "Sign the contract first"
+    "contract": "Sign the contract first",
+    "preparing": "The game is still getting ready"
   }
 }

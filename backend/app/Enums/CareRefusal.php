@@ -225,4 +225,13 @@ enum CareRefusal: string
 
     /** The puppy sleeps in quiet hours (next_allowed_at = their end). */
     case SocialisationQuietHours = 'socialisation_quiet_hours';
+
+    /**
+     * M5-T04 (David 2026-10-20, APP_REFINEMENT_SPEC §10): a clip the game
+     * shows is not stored for the pet yet (Media\GameMediaReadiness) — the
+     * game does not start (»Igra se še pripravlja«), never half working.
+     * No next_allowed_at (the app learns readiness from PetUpdated).
+     * Play endpoint (ball game, cuddles) and the cat's wand start.
+     */
+    case MediaNotReady = 'media_not_ready';
 }

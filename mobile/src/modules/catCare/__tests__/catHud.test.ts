@@ -93,6 +93,11 @@ describe('"Igra" (feather wand)', () => {
     expect(wandDock(catView())).toMatchObject({ disabled: false, hint: { text: '0/2' } });
   });
 
+  it('M5-T04: clips not ready → disabled, "Pripravlja se"', () => {
+    const v = catView({ wand: makeWandState({ can_start: false, blocked_reason: 'media_not_ready', next_allowed_at: null }) });
+    expect(wandDock(v)).toMatchObject({ disabled: true, due: false, hint: { text: 'Pripravlja se' } });
+  });
+
   it('goal reached: "Opravljeno ✓"', () => {
     expect(wandDock(catView({ wand: makeWandState({ sessions_today: 2 }) })).hint?.text).toBe('Opravljeno ✓');
   });

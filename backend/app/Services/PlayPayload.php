@@ -16,6 +16,10 @@ use Carbon\CarbonInterface;
  *
  * - `can_play`: POST /api/child/pet/play would be accepted now (for the
  *   viewing child: also their own contract; pet level in the broadcast).
+ * - `media_ready`: every clip of the play stage is stored (M5-T04, David
+ *   2026-10-20); false → `can_play` is false and the app shows »Igra se še
+ *   pripravlja« (the start is refused with 422 `media_not_ready`). Turns
+ *   true with the `video_ready` PetUpdated of the last missing clip.
  * - `invitation`: the dog's invitation shown now (§12.3), else null.
  * - `mood.happy_until`: end of the 30-minute happy scene after a play
  *   (null when not happy now); `mood.scene` = `playing` while happy and
@@ -32,6 +36,7 @@ final class PlayPayload
      */
     public function __construct(
         public readonly bool $canPlay,
+        public readonly bool $mediaReady,
         public readonly ?array $invitation,
         public readonly ?string $happyUntil,
         public readonly ?string $scene,
@@ -49,7 +54,8 @@ final class PlayPayload
         $iso = fn (CarbonInterface $at): string => CarbonImmutable::instance($at)->setTimezone($tz)->toIso8601String();
 
         $locked = $pet->actionLockReasonFor($viewer) !== null;
-        $canPlay = ! $locked && $service->canPlayNow($pet, $now);
+        $mediaReady = $service->mediaReady($pet);
+        $canPlay = ! $locked && $mediaReady && $service->canPlayNow($pet, $now);
         $offered = $canPlay ? $service->offeredInvitation($pet, $now) : null;
 
         $happy = $pet->happy_until !== null && $pet->happy_until->greaterThan($now);
@@ -61,6 +67,7 @@ final class PlayPayload
 
         return new self(
             $canPlay,
+            $mediaReady,
             $offered === null ? null : [
                 'id' => $offered->id,
                 'kind' => $offered->kind->value,
@@ -72,13 +79,15 @@ final class PlayPayload
     }
 
     /**
-     * @return array{can_play: bool, invitation: array{id: int, kind: 'play'|'cuddle', expires_at: string}|null, mood: array{happy_until: string|null, scene: 'playing'|null}}
+     * @return array{can_play: bool, media_ready: bool, invitation: array{id: int, kind: 'play'|'cuddle', expires_at: string}|null, mood: array{happy_until: string|null, scene: 'playing'|null}}
      */
     public function toArray(): array
     {
         return [
             // POST /api/child/pet/play would be accepted now.
             'can_play' => $this->canPlay,
+            // M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«.
+            'media_ready' => $this->mediaReady,
             /**
              * The dog's invitation shown now (kind: play | cuddle), else null.
              *

@@ -686,6 +686,8 @@ export const CAT_REFUSALS = [
   'care_session_expired',
   'care_session_interrupted',
   'care_session_invalid_input',
+  // M5-T04: a clip of the game is not ready yet (»Igra se še pripravlja«).
+  'media_not_ready',
 ] as const;
 export type CatRefusal = (typeof CAT_REFUSALS)[number];
 

@@ -193,3 +193,56 @@ describe('texts (EN + SL)', () => {
     expect(trainingRefusalMessage('training_pet_sleeping', WAKE, 'Europe/Ljubljana')).toBe('Your pup is asleep until 7:00. School then!');
   });
 });
+
+describe('M5-T04 — a game waits for all its clips (David 2026-10-20, spec §10 / §13)', () => {
+  const preparingSl = 'Igra se še pripravlja';
+
+  it('play / cuddle: media_ready false → off with »Igra se še pripravlja« (no time, no word about media)', async () => {
+    const v = view({ play: makePlayState({ can_play: false, media_ready: false }) });
+    for (const action of ['play', 'cuddle'] as const) {
+      expect(actionRule(v, action)).toEqual({ enabled: false, reason: 'preparing', until: null, text: preparingSl });
+    }
+    expect(disabledText(actionRule(v, 'play'), 'ob 17:00')).toBe(preparingSl);
+    await i18n.changeLanguage('en');
+    expect(actionRule(v, 'play').text).toBe('The game is still getting ready');
+    expect(actionRule(v, 'play').text).not.toMatch(/video|image|picture|AI/i);
+  });
+
+  it('sleep, a lock and a mess explain the block first (server order)', () => {
+    const notReady = makePlayState({ can_play: false, media_ready: false });
+    expect(actionRule(view({ sleep: ASLEEP, play: notReady }), 'play').reason).toBe('sleeping');
+    expect(actionRule(view({ pet: { hygiene_level: 0, needs_cleaning: true }, play: notReady }), 'play').reason).toBe('server');
+    const ill = view({ lock: { is_locked: true, reason: 'ill', until: '2026-10-04T18:30:00+02:00' }, play: notReady });
+    expect(actionRule(ill, 'play').reason).toBe('locked');
+  });
+
+  it('an older server without media_ready keeps the game ready', () => {
+    const raw = makePlayState();
+    const { media_ready: _dropped, ...older } = raw;
+    void _dropped;
+    expect(view({ play: older }).play?.media_ready).toBe(true);
+    expect(actionRule(view({ play: older }), 'play')).toEqual({ enabled: true });
+  });
+
+  it('the wand (cat): blocked_reason media_not_ready → preparing', () => {
+    const cat = view({
+      pet: { breed_type: 'domestic_cat', species: 'cat' },
+      wand: makeWandState({ can_start: false, blocked_reason: 'media_not_ready', next_allowed_at: null }),
+    });
+    expect(actionRule(cat, 'wand')).toEqual({ enabled: false, reason: 'preparing', until: null, text: preparingSl });
+  });
+
+  it('turns on live: the PetUpdated of the last clip carries media_ready true / the wand unblocked', () => {
+    const dog = view({ play: makePlayState({ can_play: false, media_ready: false }) });
+    const out = applyBroadcast(dog, makeBroadcast({ pet_id: dog.pet.id, play: makePlayState(), emitted_at: '2026-10-04T19:00:01.000+00:00' }));
+    expect(out?.view.play?.media_ready).toBe(true);
+    expect(actionRule(out!.view, 'play')).toEqual({ enabled: true });
+
+    const cat = view({
+      pet: { breed_type: 'domestic_cat', species: 'cat' },
+      wand: makeWandState({ can_start: false, blocked_reason: 'media_not_ready', next_allowed_at: null }),
+    });
+    const ready = applyBroadcast(cat, makeBroadcast({ pet_id: cat.pet.id, wand: makeWandState(), emitted_at: '2026-10-04T19:00:01.000+00:00' }));
+    expect(actionRule(ready!.view, 'wand')).toEqual({ enabled: true });
+  });
+});

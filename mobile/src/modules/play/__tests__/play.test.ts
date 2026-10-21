@@ -64,6 +64,7 @@ describe('readChildPlay', () => {
   it('reads the full payload', () => {
     expect(readChildPlay(makePlayState({ invitation: INVITE, mood: HAPPY }))).toEqual({
       can_play: true,
+      media_ready: true,
       invitation: INVITE,
       mood: HAPPY,
     });
@@ -75,7 +76,7 @@ describe('readChildPlay', () => {
       invitation: { id: 'x', kind: 'fetch', expires_at: 'soon' },
       mood: { happy_until: null, scene: 'playing' },
     });
-    expect(play).toEqual({ can_play: false, invitation: null, mood: { happy_until: null, scene: null } });
+    expect(play).toEqual({ can_play: false, media_ready: true, invitation: null, mood: { happy_until: null, scene: null } });
     expect(readChildPlay({ can_play: true, invitation: { id: '5', kind: 'cuddle', expires_at: INVITE.expires_at } })?.invitation).toEqual({
       id: 5,
       kind: 'cuddle',
@@ -109,6 +110,17 @@ describe('eligibility display (playEntry / playBlock)', () => {
     expect(playEntry(viewWith(blocked, { pet_state: 'sleeping' }), NOW)).toEqual({ kind: 'button', block: 'sleeping' });
     expect(playBlock(viewWith(makePlayState()))).toBeNull();
     expect(playBlock(viewWith(null))).toBeNull();
+  });
+
+  it('M5-T04: clips not ready → »Igra se še pripravlja« (after sleep and a mess); an older server = ready', () => {
+    const notReady = makePlayState({ can_play: false, media_ready: false });
+    expect(playBlock(viewWith(notReady))).toBe('preparing');
+    expect(playBlock(viewWith(notReady, { pet_state: 'sleeping' }))).toBe('sleeping');
+    expect(playBlock(viewWith(notReady, { hygiene_level: 0, needs_cleaning: true }))).toBe('dirty');
+    expect(playEntry(viewWith(notReady), NOW)).toEqual({ kind: 'button', block: 'preparing' });
+    expect(playBlockText('preparing', null, 'Europe/Ljubljana', NOW)).toBe('Igra se še pripravlja.');
+    expect(readChildPlay({ can_play: true, invitation: null, mood: {} })?.media_ready).toBe(true);
+    expect(readChildPlay({ can_play: false, media_ready: false, invitation: null, mood: {} })?.media_ready).toBe(false);
   });
 });
 
@@ -263,6 +275,7 @@ describe('broadcasts (live updates)', () => {
     expect(broadcastPlay(current, makePlayState({ invitation: INVITE }), false)?.invitation).toEqual(INVITE);
     expect(broadcastPlay(current, makePlayState({ invitation: INVITE }), true)).toEqual({
       can_play: false,
+      media_ready: true,
       invitation: null,
       mood: { happy_until: null, scene: null },
     });
