@@ -14,5 +14,6 @@ Check, in order:
 3. **Security & privacy** — authz on every route (parent vs child vs other family), private channels, webhook signature + fail-closed, no secrets or child PII in logs, mass assignment.
 4. **Tests** — do new tests actually fail without the change? Missing cases? Run only the tests of the changed area (`sail test tests/Feature/<Area>*`, `yarn test <paths>`, `npx tsc --noEmit`); the full suites run in CI. Report results verbatim. One review round: report everything you find at once, ranked; don't hold findings for a later round.
 5. **Definition of done** — ROADMAP ticked, HANDOFF updated, ARCHITECTURE updated for API/schema changes, OpenAPI types regenerated.
+6. **Technical docs gate (BLOCKER, David 2026-10-21)** — grep `docs/`, `HANDOFF.md`, every `CLAUDE.md` and `.claude/agents/` for each changed behaviour, limit, constant, endpoint or name. Any doc that still describes the old behaviour, or a PR description without a `Docs updated:` list, is a **blocker**, also for bug fixes.
 
 Output: a ranked list (blocker / major / minor / nit), each with file:line, the problem, a concrete failure scenario, and a suggested fix. End with an explicit verdict: APPROVE or CHANGES REQUESTED.

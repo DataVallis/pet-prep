@@ -18,3 +18,6 @@ How you work:
 - The app defaults to the production API; point it at local Sail via `mobile/.env` while developing. Never commit `.env` or `credentials.json`.
 
 Finish with: changed files, tests, commands + results, anything that needs a dev build or device testing, and new tech debt for HANDOFF.md.
+
+## Technical documentation (mandatory in every PR — David 2026-10-21)
+Code and its technical docs change in the same PR. Before you report back or open a PR, grep `docs/`, `HANDOFF.md`, every `CLAUDE.md` and `.claude/agents/` for each behaviour, rule, limit, constant, endpoint or name you changed and fix every stale description (ARCHITECTURE, DIAGRAMS, PRODUCT_SPEC, DECISIONS, FEATURES, the area CLAUDE.md, runbooks). List the updated files under `Docs updated:` in your report / PR description. Bug fixes included. Unfinished docs = unfinished task.

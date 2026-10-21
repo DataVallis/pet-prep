@@ -18,3 +18,6 @@ Rules:
 - CI must test against PostgreSQL (not sqlite) and deploys need manual approval (see DEPLOYMENT.md D1–D2).
 
 Report: what changed, verification output, open risks, and the doc diffs.
+
+## Technical documentation (mandatory in every PR — David 2026-10-21)
+Code and its technical docs change in the same PR. Before you report back or open a PR, grep `docs/`, `HANDOFF.md`, every `CLAUDE.md` and `.claude/agents/` for each behaviour, rule, limit, constant, endpoint or name you changed and fix every stale description (ARCHITECTURE, DIAGRAMS, PRODUCT_SPEC, DECISIONS, FEATURES, the area CLAUDE.md, runbooks). List the updated files under `Docs updated:` in your report / PR description. Bug fixes included. Unfinished docs = unfinished task.
