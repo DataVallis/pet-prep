@@ -239,7 +239,8 @@ describe('phase clips (enum + entitlement)', function () {
         expect($e->phaseClipsFor($pet))->toBe([])
             ->and($e->posesFor($pet))->toBe([])
             // The set itself (payload / readiness) does not depend on the switch.
-            ->and($e->phaseClipsOfSet($pet))->toHaveCount(15);
+            ->and($e->phaseClipsOfSet($pet))->toHaveCount(15)
+            ->and(app(PetMediaService::class)->payloadFor($pet)['phase_groups'])->toBe(['school', 'ball']);
     });
 
     it('school and game clips are 3 s (0.336 $), state clips stay 5 s (0.56 $) — a per-purpose length', function () {
@@ -320,6 +321,7 @@ describe('pipeline for a dog with its own media', function () {
         expect(array_keys((array) $media['poses']))->toEqualCanonicalizing(['sit', 'come', 'place', 'door', 'empty'])
             ->and(array_keys((array) $media['phases']))->toHaveCount(15)
             ->and(collect((array) $media['phases'])->first())->toStartWith('https://api.petprep.si/api/media/')
+            ->and($media['phase_groups'])->toBe(['school', 'ball'])
             ->and(json_encode($media))->not->toContain('fal.media');
 
         // The broadcast of the full dog set fits Reverb's HTTP publish limit with room for headers.

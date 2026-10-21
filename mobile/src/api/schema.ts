@@ -2225,6 +2225,30 @@ export interface components {
                  *     false = the older set (substitute clips sick → sleeping → idle).
                  */
                 state_media: boolean;
+                /**
+                 * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                 *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                 *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                 *     phase clip is missing and in picture mode. Always an object.
+                 */
+                poses: {
+                    [key: string]: string;
+                };
+                /**
+                 * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                 *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                 *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                 *     Always an object.
+                 */
+                phases: {
+                    [key: string]: string;
+                };
+                /**
+                 * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                 *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                 *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                 */
+                phase_groups: ("school" | "ball" | "wand")[];
             };
             /**
              * @description M5-R13: the weekly brushing routine can apply to this pet (every profiled
@@ -3869,6 +3893,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -3882,9 +3930,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -4610,6 +4659,30 @@ export interface operations {
                                  *     false = the older set (substitute clips sick → sleeping → idle).
                                  */
                                 state_media: boolean;
+                                /**
+                                 * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                 *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                 *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                 *     phase clip is missing and in picture mode. Always an object.
+                                 */
+                                poses: {
+                                    [key: string]: string;
+                                };
+                                /**
+                                 * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                 *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                 *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                 *     Always an object.
+                                 */
+                                phases: {
+                                    [key: string]: string;
+                                };
+                                /**
+                                 * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                 *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                 *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                 */
+                                phase_groups: ("school" | "ball" | "wand")[];
                             };
                             /**
                              * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -4623,9 +4696,10 @@ export interface operations {
                                 ready: boolean;
                                 /**
                                  * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                 *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                 *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                 *     and game phase clips. Empty when ready.
                                  */
-                                pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                 /**
                                  * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                  *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -5371,6 +5445,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -5384,9 +5482,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -6130,6 +6229,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -6143,9 +6266,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -6889,6 +7013,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -6902,9 +7050,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -7648,6 +7797,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -7661,9 +7834,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -8407,6 +8581,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -8420,9 +8618,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -9170,6 +9369,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -9183,9 +9406,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -9933,6 +10157,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -9946,9 +10194,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -10696,6 +10945,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -10709,9 +10982,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -11455,6 +11729,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -11468,9 +11766,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -12218,6 +12517,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -12231,9 +12554,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -12977,6 +13301,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -12990,9 +13338,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -13736,6 +14085,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -13749,9 +14122,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -14499,6 +14873,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -14512,9 +14910,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -15258,6 +15657,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -15271,9 +15694,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -16021,6 +16445,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -16034,9 +16482,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -16780,6 +17229,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -16793,9 +17266,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -17543,6 +18017,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -17556,9 +18054,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -18306,6 +18805,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -18319,9 +18842,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -19069,6 +19593,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -19082,9 +19630,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -20463,6 +21012,30 @@ export interface operations {
                                  *     false = the older set (substitute clips sick → sleeping → idle).
                                  */
                                 state_media: boolean;
+                                /**
+                                 * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                 *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                 *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                 *     phase clip is missing and in picture mode. Always an object.
+                                 */
+                                poses: {
+                                    [key: string]: string;
+                                };
+                                /**
+                                 * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                 *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                 *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                 *     Always an object.
+                                 */
+                                phases: {
+                                    [key: string]: string;
+                                };
+                                /**
+                                 * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                 *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                 *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                 */
+                                phase_groups: ("school" | "ball" | "wand")[];
                             };
                         };
                         child: {
@@ -20717,6 +21290,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T05b: the care guide »Kako skrbim za …« — the very block the child state
@@ -20811,9 +21408,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -21137,6 +21735,30 @@ export interface operations {
                                      *     false = the older set (substitute clips sick → sleeping → idle).
                                      */
                                     state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
                                 };
                                 /**
                                  * @description M5-T05b: the care guide »Kako skrbim za …« — the very block the child state
@@ -21231,9 +21853,10 @@ export interface operations {
                                     ready: boolean;
                                     /**
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
-                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     *     states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
+                                     *     and game phase clips. Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle" | "school_sit_attention" | "school_sit_performing" | "school_sit_success" | "school_come_attention" | "school_come_performing" | "school_come_success" | "school_place_attention" | "school_place_performing" | "school_place_success" | "school_potty_attention" | "school_potty_performing" | "school_potty_success" | "ball_waiting" | "ball_running" | "ball_fetching" | "wand_stalking" | "wand_pouncing" | "wand_catching")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,

@@ -1448,6 +1448,7 @@ class PetMediaService
             loops: array_values(array_intersect(array_keys($videos), $loops)),
             poses: $poses,
             phases: $phases,
+            phaseGroups: array_values(array_unique(array_map(fn (PetPhaseClip $c) => $c->group(), $this->entitlements->phaseClipsOfSet($pet)))),
             // M5-T08b (QA m3): the pet's set, not the switch — off never downgrades stored media.
             stateMedia: $this->entitlements->hasStateMediaSet($pet),
         );

@@ -6,6 +6,7 @@
  */
 
 import { mediaModeOf } from '@/modules/display/display';
+import type { PhasePlayback } from '@/modules/petMedia/phasePlayer';
 import { useEffect, useMemo, useRef, type ReactNode } from 'react';
 import { AccessibilityInfo, ActivityIndicator, Animated, Platform, Pressable, StyleSheet, View } from 'react-native';
 import { X } from 'lucide-react-native';
@@ -98,12 +99,15 @@ export interface CatStageProps {
   onMediaExpired?: () => void;
   children?: ReactNode;
   accessibilityLabel?: string;
+  /** M5-T10: the wand game's phase item (its clip once, else its pose) for a cat with wand phase clips. */
+  phase?: PhasePlayback | null;
   testID?: string;
 }
 
 /** The stage: the cat's own video (premium) or the illustration, with game layers on top. */
-export function CatStage({ view, petState, scene = null, illustration, onMediaExpired, children, accessibilityLabel, testID = 'cat-stage' }: CatStageProps) {
-  const hasVideo = useHasVideo(view, scene ?? petState, scene !== null);
+export function CatStage({ view, petState, scene = null, illustration, onMediaExpired, children, accessibilityLabel, phase = null, testID = 'cat-stage' }: CatStageProps) {
+  const ownVideo = useHasVideo(view, scene ?? petState, scene !== null);
+  const hasVideo = phase !== null || ownVideo;
   return (
     <View style={styles.stage} testID={testID} accessible={accessibilityLabel !== undefined} accessibilityLabel={accessibilityLabel}>
       {hasVideo ? (
@@ -113,6 +117,7 @@ export function CatStage({ view, petState, scene = null, illustration, onMediaEx
           scene={scene}
           // M5-T11 »Prikaz: Slika«: the pose image; the app-animated wand / layers stay on top.
           mode={mediaModeOf(view)}
+          phase={phase}
           breed={view.pet.breed_type}
           species={view.pet.species}
           onMediaExpired={onMediaExpired}

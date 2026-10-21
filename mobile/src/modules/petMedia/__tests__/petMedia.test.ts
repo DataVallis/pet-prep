@@ -77,6 +77,10 @@ describe('normalizePetMedia', () => {
       transitions: {},
       loops: [],
       stateMedia: false,
+      // M5-T09 / T10: an M4-05 payload has no phase clips.
+      poses: {},
+      phases: {},
+      phaseGroups: [],
     });
   });
 

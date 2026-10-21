@@ -66,6 +66,7 @@ import {
   type PlayItem,
   type TransitionState,
 } from '@/modules/petMedia/statePlayer';
+import type { PhasePlayback } from '@/modules/petMedia/phasePlayer';
 import type { BehaviourScene } from '@/modules/behaviour/behaviour';
 import type { PetState, ShownBreed, Species } from '@/types';
 import { breedName } from '@/modules/species/species';
@@ -163,6 +164,12 @@ export interface PetMediaViewProps {
    * fixed `bottom` put it under the "Meals today" row and behind the dock buttons).
    */
   pendingNotice?: 'overlay' | 'none';
+  /**
+   * M5-T09 / T10: a school / game PHASE item (`modules/petMedia/phasePlayer.ts`) — when set it
+   * replaces the state media: its clip plays once and holds its last frame, else its pose
+   * image (picture mode: always the pose). No transitions while it is set.
+   */
+  phase?: PhasePlayback | null;
   style?: StyleProp<ViewStyle>;
   testID?: string;
 }
@@ -293,6 +300,7 @@ export default function PetMediaView({
   mode = 'video',
   placeholder,
   pendingNotice = 'overlay',
+  phase = null,
   style,
   testID = 'pet-media',
 }: PetMediaViewProps) {
@@ -319,7 +327,7 @@ export default function PetMediaView({
   const [transition, setTransition] = useState<TransitionState>(NO_TRANSITION);
   const canPlayNow = useCallback((url: string) => canPlayUrl(errors, url, Math.max(clock, Date.now())), [errors, clock]);
   // M5-T08b: a transition is marked pending only when it can play NOW into the target's own loop.
-  const wantedTransition = onWantedChange(transition, mode === 'picture' ? null : wanted, (from, to) =>
+  const wantedTransition = onWantedChange(transition, mode === 'picture' || phase !== null ? null : wanted, (from, to) =>
     canStartTransition({ media, wanted: to, petState, mode, canPlayVideo: canPlayNow }, from),
   );
 
@@ -331,8 +339,8 @@ export default function PetMediaView({
   // …and a pending one the player no longer picks (clip failed / loop gone) is settled, never played later.
   const nextTransition = settleTransition(wantedTransition, playback);
   if (nextTransition !== transition) setTransition(nextTransition);
-  const target: PlayItem = playback.current;
-  const preloadTarget: PlayItem | null = playback.preload;
+  const target: PlayItem = phase?.current ?? playback.current;
+  const preloadTarget: PlayItem | null = phase !== null ? null : playback.preload;
 
   const endTransition = useCallback(() => setTransition((t) => onTransitionEnd(t)), []);
   // Safety net: a transition that never reports its end is given up (the loop takes over).
@@ -347,7 +355,9 @@ export default function PetMediaView({
   // M5-T08b (QA minor 4, §0 rule 1): under a loading clip of a state-media pet the still is the
   // wanted state's own pose (its key image), never the standing reference image.
   const stillUrl =
-    target.kind === 'image'
+    phase !== null
+      ? phase.still
+      : target.kind === 'image'
       ? target.url
       : media.stateMedia
         ? (poseImageUrl(media, target.kind === 'clip' ? target.state : wanted) ?? media.referenceImageUrl)

@@ -30,9 +30,19 @@ export type PreparationItem =
   | 'playing'
   | 'accident'
   | 'chewing'
-  | 'scratching';
+  | 'scratching'
+  | 'idle_to_sleeping'
+  | 'sleeping_to_idle'
+  | PhaseItem;
 
-const ITEMS: readonly PreparationItem[] = ['image', 'idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing', 'accident', 'chewing', 'scratching'];
+/** M5-T09 / T10: a school / game phase clip still on its way (`school_sit_attention`, `ball_running`, …). */
+export type PhaseItem =
+  | `school_${'sit' | 'come' | 'place' | 'potty'}_${'attention' | 'performing' | 'success'}`
+  | `ball_${'waiting' | 'running' | 'fetching'}`
+  | `wand_${'stalking' | 'pouncing' | 'catching'}`;
+
+const ITEMS: readonly PreparationItem[] = ['image', 'idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing', 'accident', 'chewing', 'scratching', 'idle_to_sleeping', 'sleeping_to_idle'];
+const PHASE_ITEM = /^(school_(sit|come|place|potty)_(attention|performing|success)|ball_(waiting|running|fetching)|wand_(stalking|pouncing|catching))$/;
 
 export interface PetPreparation {
   /** Everything the pet shows is there (or nothing will come). */
@@ -52,7 +62,7 @@ export interface PetPreparation {
 export const NO_PREPARATION: PetPreparation = { ready: true, pending: [], preparing: false, running: false, readyAt: null, announce: false };
 
 function isItem(value: unknown): value is PreparationItem {
-  return typeof value === 'string' && (ITEMS as readonly string[]).includes(value);
+  return typeof value === 'string' && ((ITEMS as readonly string[]).includes(value) || PHASE_ITEM.test(value));
 }
 
 /** `preparation` from any payload; missing / malformed → `NO_PREPARATION` (older server). */
@@ -156,9 +166,12 @@ export function schoolPreparingText(): string {
 
 /**
  * School stage while its clips are on their way (QA m2): only during the pet's running
- * preparation and only while `idle` / `playing` are really still coming (not failed or never
- * made for an older pet — that pet keeps its usual stage).
+ * preparation and only while they are really still coming (not failed or never made for an
+ * older pet — that pet keeps its usual stage). M5-T09: a pet with school phase clips waits for
+ * those (every `school_*` clip); others for `idle` / `playing` as before.
  */
-export function schoolClipsPending(preparation: PetPreparation): boolean {
-  return preparation.running && (preparation.pending.includes('idle') || preparation.pending.includes('playing'));
+export function schoolClipsPending(preparation: PetPreparation, phaseClips = false): boolean {
+  if (!preparation.running) return false;
+  if (phaseClips) return preparation.pending.some((item) => item.startsWith('school_'));
+  return preparation.pending.includes('idle') || preparation.pending.includes('playing');
 }

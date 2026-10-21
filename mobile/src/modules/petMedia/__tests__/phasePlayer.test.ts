@@ -1,0 +1,144 @@
+import { normalizePetMedia } from '@/modules/petMedia/petMedia';
+import {
+  BALL_CLIP_FETCH_MS,
+  PHASE_CLIP_MS,
+  WAND_CATCH_LEAD_MS,
+  ballMomentAt,
+  phasePlayback,
+  schoolMomentAt,
+  usesPhaseClips,
+  wandMomentAt,
+} from '@/modules/petMedia/phasePlayer';
+import { CATCH_LEAD_MS } from '@/modules/catCare/catGames';
+import type { TrainingSession } from '@/modules/training/training';
+import { makeMedia } from '@/test-utils/fixtures';
+
+const url = (name: string) => `https://api.petprep.si/api/media/${name}?v=${name}&expires=1&signature=s`;
+
+const PHASES = [
+  'school_sit_attention',
+  'school_sit_performing',
+  'school_sit_success',
+  'ball_waiting',
+  'ball_running',
+  'ball_fetching',
+  'wand_stalking',
+  'wand_pouncing',
+  'wand_catching',
+];
+
+function media(overrides: Parameters<typeof makeMedia>[0] = {}) {
+  return normalizePetMedia(
+    makeMedia({
+      status: 'ready',
+      reference_image_url: url('ref'),
+      videos: { idle: url('idle'), playing: url('playing') },
+      state_media: true,
+      poses: { sit: url('pose-sit'), empty: url('pose-empty'), crouch: url('pose-crouch'), catch: url('pose-catch') },
+      phases: Object.fromEntries(PHASES.map((p) => [p, url(p)])),
+      phase_groups: ['school', 'ball', 'wand'],
+      ...overrides,
+    }),
+  );
+}
+
+/** Lead-in 2 s, cue every 6 s; trial 0 obeys after 1 s, trial 1 ignores. */
+const session: Pick<TrainingSession, 'command' | 'trials' | 'duration_ms'> = {
+  command: 'sit',
+  duration_ms: 50_000,
+  trials: [
+    { index: 0, cue_at_ms: 2_000, obeys: true, obey_at_ms: 3_000, window_end_ms: 4_500 },
+    { index: 1, cue_at_ms: 8_000, obeys: false, obey_at_ms: null, window_end_ms: null },
+    { index: 2, cue_at_ms: 14_000, obeys: true, obey_at_ms: 15_500, window_end_ms: 17_000 },
+  ],
+};
+
+describe('normalizePetMedia (M5-T09 / T10 keys)', () => {
+  it('reads poses, phases and groups; drops unknown keys; an older server → none (state clips stay)', () => {
+    const m = normalizePetMedia(makeMedia({ poses: { sit: url('a'), jump: url('b') }, phases: { ball_running: url('c'), school_jump_attention: url('d') }, phase_groups: ['ball', 'dance'] } as never));
+    expect(m.poses).toEqual({ sit: url('a') });
+    expect(m.phases).toEqual({ ball_running: url('c') });
+    expect(m.phaseGroups).toEqual(['ball']);
+
+    const older = normalizePetMedia({ status: 'ready', reference_image_url: url('ref'), videos: {} });
+    expect(older.phases).toEqual({});
+    expect(usesPhaseClips(older, 'school')).toBe(false);
+  });
+});
+
+describe('school: command phase → clip (server schedule)', () => {
+  it('lead-in and cue → attention; obeys → performing for 3 s, then success (held pose) until the next cue', () => {
+    expect(schoolMomentAt(session, 500)).toMatchObject({ phase: 'attention', clip: 'school_sit_attention', pose: null });
+    expect(schoolMomentAt(session, 2_400)).toMatchObject({ phase: 'attention', clip: 'school_sit_attention' });
+    expect(schoolMomentAt(session, 3_000)).toMatchObject({ phase: 'performing', clip: 'school_sit_performing', pose: 'sit' });
+    expect(schoolMomentAt(session, 3_000 + PHASE_CLIP_MS - 1).phase).toBe('performing');
+    expect(schoolMomentAt(session, 3_000 + PHASE_CLIP_MS)).toMatchObject({ phase: 'success', clip: 'school_sit_success', pose: 'sit' });
+    expect(schoolMomentAt(session, 7_999).phase).toBe('success');
+  });
+
+  it('a cue the dog ignores → the standing pose only (no clip that would show it attending)', () => {
+    expect(schoolMomentAt(session, 9_000)).toMatchObject({ phase: null, clip: null, pose: null });
+    expect(phasePlayback(media(), schoolMomentAt(session, 9_000)).current).toMatchObject({ kind: 'image', url: url('ref') });
+  });
+
+  it('each trial is its own instance: the same clip replays from the start for the next obey', () => {
+    expect(schoolMomentAt(session, 3_100).instance).not.toBe(schoolMomentAt(session, 15_600).instance);
+    const a = phasePlayback(media(), schoolMomentAt(session, 3_100)).current;
+    const b = phasePlayback(media(), schoolMomentAt(session, 15_600)).current;
+    expect(a.kind === 'clip' && b.kind === 'clip' && a.key !== b.key).toBe(true);
+  });
+
+  it('a phase clip plays once (loop false) with its pose under it; never a state clip', () => {
+    const p = phasePlayback(media(), schoolMomentAt(session, 3_100));
+    expect(p.current).toMatchObject({ kind: 'clip', url: url('school_sit_performing'), loop: false, transition: null, state: null });
+    expect(p.still).toBe(url('pose-sit'));
+  });
+
+  it('a missing clip → its pose image (sitting), never the idle / playing state clip (§0 rule 1)', () => {
+    const m = media({ phases: {} });
+    expect(phasePlayback(m, schoolMomentAt(session, 4_000)).current).toEqual({ kind: 'image', url: url('pose-sit'), key: expect.any(String), state: null });
+    // A missing pose too → the reference image (standing), still no clip.
+    expect(phasePlayback(media({ phases: {}, poses: {} }), schoolMomentAt(session, 4_000)).current).toMatchObject({ kind: 'image', url: url('ref') });
+  });
+
+  it('picture mode: pose images only — no clip is mounted (nothing downloaded)', () => {
+    expect(phasePlayback(media(), schoolMomentAt(session, 3_100), 'picture').current).toMatchObject({ kind: 'image', url: url('pose-sit') });
+    expect(phasePlayback(media(), schoolMomentAt(session, 500), 'picture').current).toMatchObject({ kind: 'image', url: url('ref') });
+  });
+
+  it('a clip the player failed on → the pose', () => {
+    expect(phasePlayback(media(), schoolMomentAt(session, 3_100), 'video', () => false).current.kind).toBe('image');
+  });
+});
+
+describe('ball game: waiting → running → fetching (app draws the ball)', () => {
+  it('follows the throw clock; the ball is out for both clips', () => {
+    expect(ballMomentAt(0, null)).toMatchObject({ phase: 'waiting', clip: 'ball_waiting', pose: null });
+    expect(ballMomentAt(1, 0)).toMatchObject({ phase: 'running', clip: 'ball_running', pose: 'empty' });
+    expect(ballMomentAt(1, PHASE_CLIP_MS)).toMatchObject({ phase: 'fetching', clip: 'ball_fetching', pose: null });
+    expect(BALL_CLIP_FETCH_MS).toBe(2 * PHASE_CLIP_MS);
+    expect(ballMomentAt(1, 0).instance).not.toBe(ballMomentAt(2, 0).instance);
+  });
+
+  it('missing running clip → the empty room pose (the dog is away), never the playing clip', () => {
+    expect(phasePlayback(media({ phases: {} }), ballMomentAt(1, 0)).current).toMatchObject({ kind: 'image', url: url('pose-empty') });
+  });
+});
+
+describe('wand game: stalking → pouncing → catching (app draws the feather)', () => {
+  const wand = { pounces_ms: [10_000, 20_000], duration_ms: 60_000 };
+
+  it('stalks into the crouch, pounces per pounce, waits crouched between, catches at the end', () => {
+    expect(wandMomentAt(wand, 1_000)).toMatchObject({ phase: 'stalking', clip: 'wand_stalking', pose: 'crouch' });
+    expect(wandMomentAt(wand, 10_000)).toMatchObject({ phase: 'pouncing', clip: 'wand_pouncing', instance: 'pounce:0' });
+    expect(wandMomentAt(wand, 10_000 + PHASE_CLIP_MS)).toMatchObject({ phase: 'stalking', clip: null, pose: 'crouch' });
+    expect(wandMomentAt(wand, 20_500).instance).toBe('pounce:1');
+    expect(wandMomentAt(wand, 60_000 - WAND_CATCH_LEAD_MS)).toMatchObject({ phase: 'catching', clip: 'wand_catching', pose: 'catch' });
+    // Same lead as the drawn game (catGames.CATCH_LEAD_MS) — text and picture agree.
+    expect(WAND_CATCH_LEAD_MS).toBe(CATCH_LEAD_MS);
+  });
+
+  it('between pounces the crouch pose (still), not a replay of stalking', () => {
+    expect(phasePlayback(media(), wandMomentAt(wand, 15_000)).current).toMatchObject({ kind: 'image', url: url('pose-crouch') });
+  });
+});

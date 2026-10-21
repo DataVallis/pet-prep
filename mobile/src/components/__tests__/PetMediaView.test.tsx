@@ -9,6 +9,7 @@ import { Animated, AppState, type AppStateStatus } from 'react-native';
 
 import PetMediaView, { CROSSFADE_MS, PET_MEDIA_STRINGS, READY_FALLBACK_MS } from '@/components/PetMediaView';
 import { EMPTY_PET_MEDIA, FAILED_RETRY_MS, type PetMediaInfo } from '@/modules/petMedia/petMedia';
+import { phasePlayback } from '@/modules/petMedia/phasePlayer';
 import { setMediaFileStoreForTests, type MediaFileStore } from '@/modules/petMedia/mediaFileCache';
 import { liveVideoPlayers, mockVideoPlayers, playerUris, resetMockVideoPlayers, sourceUri } from '@/test-utils/videoPlayers';
 import type { PetState } from '@/types';
@@ -699,5 +700,34 @@ describe('M5-T08 state media: seamless loops, transitions, key image fallback', 
     expect(screen.getByTestId('pet-media-image').props.source).toEqual({ uri: IMAGE });
     // A substitute picture is not the state's own media (the vet veil darkens as for a substitute).
     expect(onVideoStateChange).toHaveBeenLastCalledWith(null);
+  });
+});
+
+describe('M5-T09 / T10 phase clips (phase prop)', () => {
+  const SIT_DOWN = url(20, 'sitdown');
+  const SIT_HOLD = url(21, 'sithold');
+  const POSE_SIT = url(22, 'posesit');
+  const phaseMedia = () => media({ stateMedia: true, phases: { school_sit_performing: SIT_DOWN, school_sit_success: SIT_HOLD }, poses: { sit: POSE_SIT }, phaseGroups: ['school'] });
+
+  it('plays the phase clip once (loop off) over its pose — not the state loop — and a new instance replays it', () => {
+    const m = phaseMedia();
+    const { update } = renderMedia({ media: m, petState: 'idle', variant: 'card', phase: phasePlayback(m, { clip: 'school_sit_performing', pose: 'sit', instance: '0:performing' }) });
+
+    expect(playerUris()).toEqual([SIT_DOWN]);
+    expect(mockVideoPlayers[0].loop).toBe(false);
+    expect(screen.getByTestId('pet-media-image').props.source).toEqual({ uri: POSE_SIT });
+
+    // Success → its own clip; the next trial's performing → a new player of the same file.
+    update({ phase: phasePlayback(m, { clip: 'school_sit_success', pose: 'sit', instance: '0:success' }) });
+    update({ phase: phasePlayback(m, { clip: 'school_sit_performing', pose: 'sit', instance: '2:performing' }) });
+    expect(playerUris()).toEqual([SIT_DOWN, SIT_HOLD, SIT_DOWN]);
+    expect(playerUris()).not.toContain(IDLE);
+  });
+
+  it('picture mode / a missing clip: only the pose image — no player at all', () => {
+    const m = phaseMedia();
+    renderMedia({ media: m, petState: 'idle', mode: 'picture', phase: phasePlayback(m, { clip: 'school_sit_performing', pose: 'sit', instance: 'x' }, 'picture') });
+    expect(mockVideoPlayers).toHaveLength(0);
+    expect(screen.getByTestId('pet-media-image').props.source).toEqual({ uri: POSE_SIT });
   });
 });

@@ -18,6 +18,7 @@
  */
 
 import { mediaModeOf } from '@/modules/display/display';
+import { BALL_CLIP_FETCH_MS, PHASE_CLIP_MS, ballMomentAt, phasePlayback, usesPhaseClips, type PhasePlayback } from '@/modules/petMedia/phasePlayer';
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import {
   AccessibilityInfo,
@@ -90,9 +91,13 @@ function useAnnounce(text: string) {
   }, [text]);
 }
 
-/** Stage: the pet's own video (`playing`, else `idle`) when stored, else a calm illustration. */
-function Stage({ view, children, onMediaExpired }: { view: ChildPetView; children?: ReactNode; onMediaExpired?: () => void }) {
-  const hasVideo = useMemo(() => selectMediaSource(view.pet.media, 'playing').kind === 'video', [view.pet.media]);
+/**
+ * Stage: the pet's own video (`playing`, else `idle`) when stored, else a calm illustration.
+ * M5-T10: `phase` = the ball game's phase item (its clip once, else its pose) for a pet with
+ * ball phase clips.
+ */
+function Stage({ view, children, onMediaExpired, phase = null }: { view: ChildPetView; children?: ReactNode; onMediaExpired?: () => void; phase?: PhasePlayback | null }) {
+  const hasVideo = useMemo(() => phase !== null || selectMediaSource(view.pet.media, 'playing').kind === 'video', [view.pet.media, phase]);
   return (
     <View style={styles.stage}>
       {hasVideo ? (
@@ -101,6 +106,7 @@ function Stage({ view, children, onMediaExpired }: { view: ChildPetView; childre
           petState="playing"
           // M5-T11 »Prikaz: Slika«: the playing key image; the ball / hearts stay app-animated.
           mode={mediaModeOf(view)}
+          phase={phase}
           breed={view.pet.breed_type}
           species={view.pet.species}
           onMediaExpired={onMediaExpired}
@@ -139,11 +145,16 @@ function BallGame({ view, reduceMotion, onDone, onMediaExpired }: GameProps) {
   const drag = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current;
   const flight = useRef(new Animated.Value(0)).current;
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const hasVideo = useMemo(() => selectMediaSource(view.pet.media, 'playing').kind === 'video', [view.pet.media]);
+  // M5-T10: a pet with ball phase clips: waiting → running (out of frame) → fetching (back).
+  const phaseClips = usesPhaseClips(view.pet.media, 'ball');
+  const hasVideo = useMemo(() => phaseClips || selectMediaSource(view.pet.media, 'playing').kind === 'video', [view.pet.media, phaseClips]);
+  const [throwPhase, setThrowPhase] = useState<'running' | 'fetching' | null>(null);
+  const phaseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(
     () => () => {
       if (timer.current) clearTimeout(timer.current);
+      if (phaseTimer.current) clearTimeout(phaseTimer.current);
     },
     [],
   );
@@ -153,7 +164,14 @@ function BallGame({ view, reduceMotion, onDone, onMediaExpired }: GameProps) {
     if (next === ballRef.current) return;
     ballRef.current = next;
     setBall(next);
-    const fetchMs = reduceMotion ? FETCH_MS_REDUCED : FETCH_MS;
+    // M5-T10: with phase clips the ball is out as long as the run + fetch clips (the text
+    // »… teče po žogo« matches what is seen); else the drawn timing.
+    const fetchMs = phaseClips ? BALL_CLIP_FETCH_MS : reduceMotion ? FETCH_MS_REDUCED : FETCH_MS;
+    if (phaseClips) {
+      setThrowPhase('running');
+      if (phaseTimer.current) clearTimeout(phaseTimer.current);
+      phaseTimer.current = setTimeout(() => setThrowPhase('fetching'), PHASE_CLIP_MS);
+    }
     drag.setValue({ x: 0, y: 0 });
     flight.setValue(0);
     // Out and back: the ball flies up (or just fades with reduce motion) and the dog brings it.
@@ -167,8 +185,9 @@ function BallGame({ view, reduceMotion, onDone, onMediaExpired }: GameProps) {
       const fetched = ballFetched(ballRef.current);
       ballRef.current = fetched;
       setBall(fetched);
+      setThrowPhase(null);
     }, fetchMs);
-  }, [drag, flight, reduceMotion]);
+  }, [drag, flight, reduceMotion, phaseClips]);
 
   const doThrowRef = useRef(doThrow);
   doThrowRef.current = doThrow;
@@ -213,9 +232,17 @@ function BallGame({ view, reduceMotion, onDone, onMediaExpired }: GameProps) {
   const status = ball.fetching ? PLAY_STRINGS.fetching : ball.throws === 0 ? PLAY_STRINGS.hint : PLAY_STRINGS.progress(ball.throws);
   useAnnounce(status);
 
+  // M5-T10: the phase item (its 3 s clip once, else / in picture mode its pose).
+  const mode = mediaModeOf(view);
+  const phase = useMemo(() => {
+    if (!phaseClips) return null;
+    const since = throwPhase === null ? null : throwPhase === 'running' ? 0 : PHASE_CLIP_MS;
+    return phasePlayback(view.pet.media, ballMomentAt(ball.throws, since), mode);
+  }, [phaseClips, throwPhase, ball.throws, view.pet.media, mode]);
+
   return (
     <View style={styles.game} testID="play-ball">
-      <Stage view={view} onMediaExpired={onMediaExpired}>{!hasVideo && <DogEmoji offset={dogRun} />}</Stage>
+      <Stage view={view} onMediaExpired={onMediaExpired} phase={phase}>{!hasVideo && <DogEmoji offset={dogRun} />}</Stage>
       <Text style={styles.status} testID="play-ball-status" accessibilityLiveRegion="polite">
         {status}
       </Text>

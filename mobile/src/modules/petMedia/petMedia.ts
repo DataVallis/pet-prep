@@ -47,6 +47,29 @@ export interface PetMediaInfo {
   loops: VideoState[];
   /** M5-T08: the pet follows the state rules (missing clip → key image, never another state's clip). */
   stateMedia: boolean;
+  /** M5-T09 / T10: stored POSE images of the school / game phase clips (`sit`, `empty`, `crouch`, …). */
+  poses: Record<string, string>;
+  /** M5-T09 / T10: stored 3 s PHASE clips (`school_sit_attention`, `ball_running`, `wand_pouncing`, …), played once. */
+  phases: Record<string, string>;
+  /** M5-T09 / T10: phase clip groups of the pet's set (`school`, `ball`, `wand`) — then never a state clip there. */
+  phaseGroups: PhaseGroup[];
+}
+
+/** M5-T09 / T10 phase clip groups. */
+export type PhaseGroup = 'school' | 'ball' | 'wand';
+
+const PHASE_GROUPS: readonly PhaseGroup[] = ['school', 'ball', 'wand'];
+const POSE_KEY = /^(sit|come|place|door|empty|crouch|catch)$/;
+const PHASE_KEY = /^(school_(sit|come|place|potty)_(attention|performing|success)|ball_(waiting|running|fetching)|wand_(stalking|pouncing|catching))$/;
+
+function urlMap(raw: unknown, key: RegExp): Record<string, string> {
+  const out: Record<string, string> = {};
+  if (typeof raw !== 'object' || raw === null || Array.isArray(raw)) return out;
+  for (const [k, url] of Object.entries(raw as Record<string, unknown>)) {
+    const u = urlOrNull(url);
+    if (key.test(k) && u !== null) out[k] = u;
+  }
+  return out;
 }
 
 export const PET_STATES: readonly PetState[] = ['idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing'];
@@ -63,6 +86,9 @@ export const EMPTY_PET_MEDIA: PetMediaInfo = {
   transitions: {},
   loops: [],
   stateMedia: false,
+  poses: {},
+  phases: {},
+  phaseGroups: [],
 };
 
 function isPetState(value: unknown): value is PetState {
@@ -140,6 +166,10 @@ export function normalizePetMedia(raw: PetMedia | null | undefined | unknown, le
     loops: Array.isArray(m.loops) ? m.loops.filter(isVideoState) : [],
     // Older servers send no flag → the older rules (substitute chain).
     stateMedia: m.state_media === true,
+    // M5-T09 / T10: older servers send none → the school / games keep the state clips.
+    poses: urlMap(m.poses, POSE_KEY),
+    phases: urlMap(m.phases, PHASE_KEY),
+    phaseGroups: Array.isArray(m.phase_groups) ? PHASE_GROUPS.filter((g) => (m.phase_groups as unknown[]).includes(g)) : [],
   };
 }
 

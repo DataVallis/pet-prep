@@ -53,6 +53,8 @@ import {
 import { useWandGame } from '@/modules/catCare/useCatGames';
 import type { CatFinishStatus } from '@/modules/catCare/catCare';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
+import { mediaModeOf } from '@/modules/display/display';
+import { phasePlayback, usesPhaseClips, wandMomentAt } from '@/modules/petMedia/phasePlayer';
 import type { ClockSources } from '@/modules/training/game';
 import { palette } from '@/theme';
 
@@ -300,6 +302,16 @@ function WandRunning({
   const leapY = leap.interpolate({ inputRange: [0, 1], outputRange: [0, -36] });
 
   const premiumState = frame.cat === 'pouncing' || frame.cat === 'caught' ? 'playing' : 'idle';
+  // M5-T10: a cat with wand phase clips: stalking → pouncing (per pounce) → catching; the
+  // feather stays app-drawn on top so the text always matches what is seen.
+  const phaseClips = usesPhaseClips(view.pet.media, 'wand');
+  const moment = phaseClips ? wandMomentAt(session, elapsedMs) : null;
+  const mode = mediaModeOf(view);
+  const momentKey = moment === null ? null : `${moment.instance}|${moment.clip ?? ''}`;
+  const phase = useMemo(
+    () => (moment === null ? null : phasePlayback(view.pet.media, moment, mode)),
+    [view.pet.media, momentKey, mode], // eslint-disable-line react-hooks/exhaustive-deps
+  );
 
   return (
     <View style={styles.running} testID={`${testID}-running`}>
@@ -320,6 +332,7 @@ function WandRunning({
         <CatStage
           view={view}
           petState={premiumState}
+          phase={phase}
           onMediaExpired={onMediaExpired}
           accessibilityLabel={W.stageA11y}
           testID={`${testID}-stage`}

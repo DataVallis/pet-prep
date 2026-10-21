@@ -21,7 +21,9 @@ import PlayOverlay from '@/modules/play/PlayOverlay';
 import { normalizeChildState } from '@/modules/childPet/childPetView';
 import { DONE_AUTO_CLOSE_MS, FETCH_MS, FETCH_MS_REDUCED, HOLD_MS } from '@/modules/play/play';
 import type { PlayOverlayMode } from '@/store/appStore';
-import { makeLiveChildState, makePlayState } from '@/test-utils/fixtures';
+import { makeLiveChildState, makeMedia, makePlayState } from '@/test-utils/fixtures';
+import { BALL_CLIP_FETCH_MS, PHASE_CLIP_MS } from '@/modules/petMedia/phasePlayer';
+import { mockVideoPlayers, playerUris, resetMockVideoPlayers } from '@/test-utils/videoPlayers';
 
 const view = normalizeChildState(makeLiveChildState({ play: makePlayState() }), 0, Date.parse('2026-10-04T12:00:00+02:00'));
 
@@ -258,5 +260,62 @@ describe('PlayOverlay', () => {
     }
     expect(announce).toHaveBeenLastCalledWith('Hvala za igro! Kuža je ves vesel.');
     jest.restoreAllMocks();
+  });
+});
+
+describe('PlayOverlay ball game with phase clips (M5-T10)', () => {
+  const u = (n: string) => `https://api.petprep.si/api/media/${n}?v=${n}&expires=1&signature=s`;
+  const phaseView = (displayPicture = false) =>
+    normalizeChildState(
+      {
+        ...makeLiveChildState({ play: makePlayState(), pet: {
+          media: makeMedia({
+            status: 'ready',
+            reference_image_url: u('ref'),
+            videos: { idle: u('idle'), playing: u('playing') },
+            state_media: true,
+            poses: { empty: u('pose-empty') },
+            phases: { ball_waiting: u('ball_waiting'), ball_running: u('ball_running'), ball_fetching: u('ball_fetching') },
+            phase_groups: ['ball'],
+          }),
+        } }),
+        ...(displayPicture ? { settings: { media_display: 'picture' } } : {}),
+      } as Parameters<typeof normalizeChildState>[0],
+      0,
+      Date.parse('2026-10-04T12:00:00+02:00'),
+    );
+
+  beforeEach(() => {
+    jest.useFakeTimers({ doNotFake: ['nextTick', 'setImmediate'] });
+    resetMockVideoPlayers();
+  });
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  it('waiting → running (3 s) → fetching (3 s) clips in sync with the throw; the text says the dog fetches the whole time', async () => {
+    render(<PlayOverlay view={phaseView()} mode="play" reduceMotion={false} onPick={jest.fn()} onFinished={jest.fn()} onClose={jest.fn()} />);
+    expect(playerUris()).toEqual([u('ball_waiting')]);
+
+    fireEvent.press(screen.getByTestId('play-throw'));
+    expect(playerUris()).toContain(u('ball_running'));
+    expect(screen.getByText('Kuža teče po žogo …')).toBeTruthy();
+    await advance(PHASE_CLIP_MS);
+    expect(playerUris()).toContain(u('ball_fetching'));
+    expect(screen.getByText('Kuža teče po žogo …')).toBeTruthy();
+    await advance(BALL_CLIP_FETCH_MS - PHASE_CLIP_MS);
+    expect(screen.getByText('Met 1 od 3')).toBeTruthy();
+    // Back to waiting for the next throw — never the playing state loop.
+    expect(playerUris().filter((x) => x === u('ball_waiting')).length).toBeGreaterThanOrEqual(2);
+    expect(playerUris()).not.toContain(u('playing'));
+  });
+
+  it('picture mode: the poses only (the empty room while the dog is away) — no clip is mounted', async () => {
+    render(<PlayOverlay view={phaseView(true)} mode="play" reduceMotion={false} onPick={jest.fn()} onFinished={jest.fn()} onClose={jest.fn()} />);
+    fireEvent.press(screen.getByTestId('play-throw'));
+    expect(mockVideoPlayers).toHaveLength(0);
+    expect(screen.getByTestId('play-dog-video-image').props.source).toEqual({ uri: u('pose-empty') });
+    await advance(BALL_CLIP_FETCH_MS);
+    expect(screen.getByTestId('play-dog-video-image').props.source).toEqual({ uri: u('ref') });
   });
 });

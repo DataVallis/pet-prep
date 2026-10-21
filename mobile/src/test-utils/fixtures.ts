@@ -92,6 +92,10 @@ export function makeMedia(overrides: Partial<PetMedia> = {}): PetMedia {
     transitions: {},
     loops: [],
     state_media: false,
+    // M5-T09 / T10 (additive): no school / game phase clips.
+    poses: {},
+    phases: {},
+    phase_groups: [],
     ...overrides,
   };
 }
