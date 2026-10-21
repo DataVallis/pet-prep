@@ -56,6 +56,7 @@
 - Vir: Apple Health (način invalidskega vozička, potiski) in Health Connect (`WheelchairPushes`). Potiski se preračunajo v »korake« z enako težo **(D: razmerje 1 potisk = 1 korak; preveriti z viri)**.
 - Cilji, točke in Care Score ostanejo enaki.
 - Neodvisno od tega **(D)**: vse kretnje s potegom (krtača, list) dobijo alternativo s pritiskom in držanjem; podpora VoiceOver/TalkBack.
+  - **Zgrajeno za česanje (M5-T14, 21. 10. 2026, predlog Claude):** držanje prsta na ljubljenčku (po 0,45 s) ali gumba »Počeši enkrat« češe samo z nepravilnim ritmom (0,61–0,86 s, strežnik ga šteje); kratek pritisk = ena poteza; VoiceOver/TalkBack: dejanje »Počeši« na ljubljenčku (= ena poteza), vrstica napredka je dostopna z vrednostjo. Ostale kretnje s potegom (palica s peresom, menjava peska, igra) še nimajo držanja.
 
 ## 7. Mediji po stanjih (ključne slike, zanke, prehodi)
 
@@ -116,6 +117,8 @@
 
 - Krtača sledi prstu, iz dlake se kažejo delčki/iskrice, »umazane« lise izginjajo (kot strgalna srečka), vrstica napredka se polni.
 - Enako kot list pri muci, za česanje obeh vrst.
+
+**Zgrajeno (M5-T14, 21. 10. 2026, mobilna aplikacija JS → OTA, predlog Claude):** česanje psa in muce (`ChoreOverlay` `grooming`, `BrushArea` + `brushing.ts`): krtača sledi prstu, iskrice (omejene: največ 8, vsakih ≥ 70 ms in ≥ 14 pt), 6 lis (2 na korak) zbledi s potezami, ki jih strežnik šteje, vrstica »Počesano: N %«. Vse lise čiste → igra se konča do 2 s prej (znotraj strežnikove tolerance 3 s), sicer ob koncu časa kot prej; strežnik, potezo in točkovanje so isti. »Zmanjšaj gibanje«: brez iskric, lise brez prelivanja. Ločenega »lista« pri muci ni — muca in pes češeta s krtačo; menjava peska ostane brez lis. Brez novih nativnih knjižnic (PanResponder + Animated; nameščena sta tudi reanimated in svg, a nista bila potrebna).
 
 ## 12. Hitrost besedil
 

@@ -19,6 +19,7 @@ export const DOG_GROOMING_STRINGS = strings('child', 'grooming', {
   matted: (seconds: number) => t('child:grooming.matted', { seconds }),
   week: (done: number, goal: number) => t('child:grooming.week', { done, goal }),
   chipA11y: (done: number, goal: number) => t('child:grooming.chipA11y', { done, goal }),
+  brush: { bar: (percent: number) => t('child:grooming.brush.bar', { percent }) },
 });
 
 /** The pet is a dog (not a cat) with the server's grooming block — it brushes (M5-R13). */
