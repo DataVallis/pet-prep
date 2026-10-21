@@ -218,10 +218,15 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, adapt
       setHealthStatus('unavailable');
     }
   }, [currentHealth]);
+  // M5-T12: a mode switch is another data type with its own permission → forget the old
+  // status (never sync pushes on the steps answer); re-enabling alone keeps it (no extra sync).
+  const checkedModeRef = useRef(adaptedMode);
   useEffect(() => {
     if (!enabled) return;
-    // M5-T12: a mode switch is another data type with its own permission → re-check.
-    setHealthStatus('checking');
+    if (checkedModeRef.current !== adaptedMode) {
+      checkedModeRef.current = adaptedMode;
+      setHealthStatus('checking');
+    }
     void refreshHealth();
   }, [enabled, adaptedMode, refreshHealth]);
 
