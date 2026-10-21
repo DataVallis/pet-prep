@@ -478,6 +478,12 @@
 | black-spotted weighted highest (the register portrait); never patches, tricolour, lemon / blue spots or blue eyes
 | (disqualifying, S428). Breed Watch Category 1 (S429) — not a welfare breed. Colour weights unsourced → `verified => false`.
 |
+| Australian Cattle Dog (M5-R10-53, docs/research/dog-data australian_cattle_dog.appearance): "Strong, compact,
+| symmetrical, with substance, power and balance." (Kennel Club standard, S436); smooth, hard, weather-resistant double
+| coat; blue (blue-mottled / blue speckled, black, blue or tan head markings) or red speckle (S436) — blue weighted
+| highest (the register portrait); never cream, white or merle. Breed Watch Category 1 (S437) — not a welfare breed.
+| Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2370,6 +2376,37 @@ return [
             'nose' => ['large nose with open nostrils, fully pigmented to match the spots'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
+    ],
+    // M5-R10-53 (docs/research/dog-data/data.json australian_cattle_dog.appearance; runbook rules 2026-10-10:
+    // standard colours only — blue, red speckle; never cream, white or merle).
+    'australian_cattle_dog' => [
+        'display_name' => 'Australian Cattle Dog',
+        // Colour frequencies are in no source (australian_cattle_dog.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'Kennel Club breed standard (S436), RKC breed page (S437), PDSA (S438) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S437 "Medium"; S436 "Males: 46cm – 51cm" (females 43–48 cm)',
+            'build' => 'S436 "Strong, compact, symmetrical, with substance, power and balance."',
+            'coat_length' => 'S436 "Smooth, double with short dense undercoat. Close top coat, hard, straight and weather resistant."',
+            'coat_color' => 'S436 "Blue, blue-mottled or blue speckled with or without other markings."; red speckle "Good even red speckle all over, including undercoat, (neither white nor cream)," (weights unsourced)',
+            'ear_carriage' => 'S436 "Moderate, small rather than large. Broad at base, muscular, pricked and moderately pointed."',
+            'eye_color' => 'S436 "Medium, oval, alert and intelligent, dark brown. Neither prominent nor sunken."',
+            'tail' => 'S436 "Set on low, following slope of croup/rump. Reaching to hock, hanging in slight curve at rear."',
+        ],
+        'traits' => [
+            'size' => ['medium-sized, compact'],
+            'build' => [['value' => 'strong, compact and symmetrical, muscular working dog', 'weight' => 3], 'agile, sturdy and balanced, standing alert'],
+            'coat_length' => ['smooth, short, hard and weather-resistant double coat'],
+            // KC standard (S436) colours; blue highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'blue speckled with black and tan markings on the head', 'weight' => 70],
+                ['value' => 'even red speckle with darker red markings on the head', 'weight' => 30],
+            ],
+            'ear_carriage' => ['moderate pricked ears, broad at the base, moderately pointed, set wide apart'],
+            'eye_color' => ['medium oval dark brown eyes, alert and intelligent'],
+            'tail' => ['low-set natural tail reaching the hock, hanging in a slight curve, with a good brush'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

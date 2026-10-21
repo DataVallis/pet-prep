@@ -1400,5 +1400,29 @@ return [
             ],
         ],
 
+        // M5-R10-53: australian_cattle_dog.* (S435–S441), runbook rules (data.json
+        // proposed_game_parameters.australian_cattle_dog.suitability_tags). RKC (S437) + PDSA (S438) + PetMD (S439).
+        // RKC Breed Watch Category 1 (S437) → no welfare chip. Not children (PetMD: supervise around young children;
+        // PDSA heel-nipping → may_herd_children, Australian Shepherd precedent), not large_home / apartment (RKC
+        // "Small house"), no chases_small_pets (no "high prey drive" quote), no needs_company (no full quote).
+        'australian_cattle_dog' => [
+            'suits' => [
+                // S437 "More than 2 hours per day"; S438 "Australian Cattle Dogs have high energy levels and will need over 2 hours exercise per day."
+                ['tag' => 'active_family', 'source_ids' => ['S437', 'S438'], 'refs' => ['australian_cattle_dog.exercise.adult', 'australian_cattle_dog.exercise.energy']],
+                // S439 "Australian Cattle Dogs can be good family dogs, and can be raised with children."
+                ['tag' => 'family_pet', 'source_ids' => ['S439'], 'refs' => ['australian_cattle_dog.suitability.petmd_family', 'australian_cattle_dog.behaviour.family']],
+            ],
+            'consider' => [
+                // S437 "More than 2 hours per day"; S438 "will need over 2 hours exercise per day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S437', 'S438'], 'refs' => ['australian_cattle_dog.exercise.adult', 'australian_cattle_dog.suitability.pdsa_exercise']],
+                // S438 "They are highly intelligent, needing a lot of physical and mental activity".
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S438'], 'refs' => ['australian_cattle_dog.behaviour.mental_stimulation']],
+                // S438 "Due to their strong herding instinct, they may nip at the heels of running children".
+                ['tag' => 'may_herd_children', 'source_ids' => ['S438'], 'refs' => ['australian_cattle_dog.behaviour.herding_children', 'australian_cattle_dog.suitability.pdsa_children']],
+                // S437 "Sheds: Yes".
+                ['tag' => 'sheds', 'source_ids' => ['S437'], 'refs' => ['australian_cattle_dog.suitability.rkc_shedding']],
+            ],
+        ],
+
     ],
 ];

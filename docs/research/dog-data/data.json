@@ -27675,6 +27675,566 @@
       }
     }
   },
+  "australian_cattle_dog": {
+    "_note": "Added 2026-10-21 (M5-R10-53, unattended run — appended after the Dalmatian: AKC 2024 No. 49 'Australian Cattle Dog', S174 full-list table '48 Dalmatian', '49 Australian Cattle Dog'). Quotes as returned by the web-fetch tool on 2026-10-21 (short quotes, 125-character limit; paraphrase only in notes). Sources S435–S441 (reused S8, S10, S11, S14, S24, S35, S45, S123, S174). No health percentages anywhere. FCI English standard PDF not in provenance → identity from the FCI nomenclature (S435); appearance and heights from the Kennel Club breed standard as reprinted by KUSA (S436). RKC breed page (older address, S437): exercise 'More than 2 hours per day', grooming 'Once a week', Breed Watch Category 1, health tests. Lifespan: McMillan 2024 median 14.0 y via the Dogs Trust table (S123) — not provisional (small sample: 117 dogs, 50 deceased). Names: FCI / AKC 'Australian Cattle Dog' (S435, S174); Slovenian »avstralski govedar« (Siol.net S441, tier C — not checked against KZS, open for David).",
+    "identity": {
+      "value": "FCI No. 287, Group 1 Section 2 (Cattledogs (except Swiss Cattledogs)), Australia",
+      "unit": "—",
+      "source_id": "S435",
+      "quote": "AUSTRALIAN CATTLE DOG",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S435, French page as returned): English name 'AUSTRALIAN CATTLE DOG', French 'BOUVIER AUSTRALIEN', group 'n°1 - Chiens de berger et de bouvier (sauf chiens de bouvier suisses)', section 'Chiens de bouvier (sauf chiens de bouvier suisses)', country of origin 'AUSTRALIE', not subject to a working trial, definitive acceptance 20/03/1972, valid standard 08/10/2012. 'Australia' must be in FCI_ORIGINS of the export (new origin AU). AKC name: Australian Cattle Dog (S174). Other names 'ACD, Cattle Dog, Blue/Red Heeler, Queensland Heeler' (S440, tier C)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S437",
+      "quote": "Medium",
+      "confidence": "high",
+      "notes": "RKC breed page key facts (older address, S437), Size 'Medium' as returned. PDSA (S438) 'Size: Medium' agrees (its page sits under 'medium-dogs')."
+    },
+    "height": {
+      "kc_standard": {
+        "value": {
+          "male": [
+            46,
+            51
+          ],
+          "female": [
+            43,
+            48
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S436",
+        "quote": "Males: 46cm – 51cm",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard as reprinted by KUSA (S436): 'Height at withers: Males 46cm – 51cm (approx. 18\" – 20\")', females 43–48 cm (as returned). The FCI standard has the same heights (Italian ENCI copy, read only as a check — not a source). PDSA (S438) 'Average height: 43-51 cm' (one range); PetMD (S439) '17-20 inches tall' (43–51 cm) — alternatives."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            43,
+            51
+          ],
+          "female": [
+            43,
+            51
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S438",
+        "quote": "43-51 cm",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S438), one range for both sexes (stored per sex). Alternative to the KC ranges."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            16,
+            20
+          ],
+          "female": [
+            16,
+            20
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S438",
+        "quote": "16kg-20kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average weight' (S438), one range for both sexes (stored per sex) — the game range. The KC / FCI standards (S436) give no weight. PetMD (S439) 'weighing in at 35-50 pounds' (16–23 kg) — alternatives.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                16,
+                23
+              ],
+              "female": [
+                16,
+                23
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S439",
+            "quote": "Australian Cattle Dogs are medium-sized dogs weighing in at 35-50 pounds and 17-20 inches tall.",
+            "notes": "PetMD (S439); 35–50 lb = 15.9–22.7 kg (our conversion, rounded)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "IV (15–25 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 16–20 kg lies in the 15–25 band. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 16–20 kg (S438) = 35–44 lb → 'Medium (24–59 pounds)'. The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Australian Cattle Dog growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 14.0,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Australian Cattle Dog 14.0 13.2 - 15.1 117 50",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123, columns Breed | Median Life Expectancy (Years) | Lower and Upper 95% CI | Total Number Individuals (Alive and Deceased) | Number Deceased Individuals), read 2026-10-21. Runbook first choice (McMillan 2024) → not provisional; small sample (117 dogs, 50 deceased) noted. Wikipedia (S440, tier C): 'In a 2024 UK study of 50 dogs the breed had an average life expectancy of 14 years' — agrees."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S437",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S437), Lifespan 'Over 10 years' as returned. PDSA (S438) 'Average lifespan: Over 10 years' — the same. Not shorter_lifespan."
+      },
+      "senior_from": {
+        "value": 10.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 14.0 y (McMillan 2024 via S123) → 0.75 × 14.0 = 10.5 y = 126 months. Dogs Trust rule of thumb > 7 y = 84 months (S14). Not chosen: 0.75 × 10 y (RKC lower bound, S437) = 90.",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 126,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S437",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S437), Exercise. PDSA (S438): 'Minimum exercise: 2 hours per day' (key fact) and 'Australian Cattle Dogs have high energy levels and will need over 2 hours exercise per day.' — agrees. PetMD (S439): 'Running/jogging daily for at least 45 minutes' among suggested activities — not a daily total (alternative only)."
+      },
+      "energy": {
+        "value": "high energy; needs a lot of physical and mental activity",
+        "unit": "—",
+        "source_id": "S438",
+        "quote": "Australian Cattle Dogs have high energy levels and will need over 2 hours exercise per day.",
+        "confidence": "high",
+        "notes": "PDSA (S438). Basis of active_family (with the RKC exercise)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "alert, intelligent, watchful, courageous, trustworthy, devoted to its work; loyal, protective, naturally suspicious of strangers",
+        "unit": "—",
+        "source_id": "S436",
+        "quote": "Alert, intelligent, watchful, courageous, trustworthy, devoted to its work.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S436): 'Loyal, protective. Guardian of stockmen, herd, and property.'; 'Naturally suspicious of strangers, but amenable to handling. Biddable.' RKC breed page (S437): wary of strangers and protective of his herd and property (paraphrase)."
+      },
+      "family": {
+        "value": "can be good family dogs and can be raised with children; supervise around young children",
+        "unit": "—",
+        "source_id": "S439",
+        "quote": "Australian Cattle Dogs can be good family dogs, and can be raised with children.",
+        "confidence": "medium",
+        "notes": "PetMD (S439): '… should be supervised when around young children' (fragment); 'They will try to herd small children, and some adults, so supervision is needed.' PDSA (S438): 'Due to their strong herding instinct, they may nip at the heels of running children' → may_herd_children; family_pet from PetMD; never small_children; not children (herding caveat — Australian Shepherd precedent)."
+      },
+      "herding_children": {
+        "value": "strong herding instinct; may nip at the heels of running children; may try to herd small children",
+        "unit": "—",
+        "source_id": "S438",
+        "quote": "Due to their strong herding instinct, they may nip at the heels of running children",
+        "confidence": "high",
+        "notes": "PDSA (S438); PetMD (S439) 'They will try to herd small children, and some adults, so supervision is needed.' Basis of may_herd_children."
+      },
+      "mental_stimulation": {
+        "value": "highly intelligent; needs a lot of physical and mental activity",
+        "unit": "—",
+        "source_id": "S438",
+        "quote": "They are highly intelligent, needing a lot of physical and mental activity",
+        "confidence": "high",
+        "notes": "PDSA (S438). PetMD (S439): 'When not properly stimulated mentally or physically, Australian Cattle Dogs can act out with destructive behaviors.' Basis of needs_mental_stimulation."
+      },
+      "socialisation": {
+        "value": "socialisation with children and training at a young age",
+        "unit": "—",
+        "source_id": "S438",
+        "quote": "socialisation with children and training at a young age can help to overcome these possible problems",
+        "confidence": "medium",
+        "notes": "PDSA (S438), after the heel-nipping sentence. PetMD (S439): 'They will benefit from socialization to help curb some nipping tendencies.' → proposed_game_parameters.australian_cattle_dog.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "time_alone": {
+        "value": "objects to being separated from the owners",
+        "unit": "—",
+        "source_id": "S439",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S439): they 'will object to being separated from them' (fragment, as returned) — not a verbatim full statement → no needs_company tag."
+      },
+      "other_pets": {
+        "value": "will take on bigger animals (cattle, sheep, other dogs); prey drive not discussed",
+        "unit": "—",
+        "source_id": "S439",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S439): 'fearlessly take on animals (cattle, sheep, and even other dogs) that are bigger than them' (fragment). No 'high prey drive' statement → no chases_small_pets; no other_pets."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S439) 'destructive behaviors' when under-stimulated — not chewing → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S437) → no welfare chip. Breeder checklist: DNA prcd-PRA, BVA/KC/ISDS eye scheme, BVA/KC hip and elbow schemes, BAER, inbreeding calculators (RKC S437).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S437",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S437). No welfare chip."
+      },
+      "deafness": {
+        "value": "inherited deafness; BAER hearing test",
+        "unit": "—",
+        "source_id": "S438",
+        "quote": "Deafness",
+        "confidence": "high",
+        "notes": "PDSA (S438) health list; PetMD (S439) 'Deafness, which is inherited.' (as returned); RKC (S437) 'BAER testing (deafness)' among the important tests. Register health key deafness + breeder checklist hearing_baer."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy (inherited eye disease)",
+        "unit": "—",
+        "source_id": "S439",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S439): progressive retinal atrophy (PRA), an inherited eye disease that leads to blindness (paraphrase as returned). RKC (S437) 'DNA test - prcd-PRA' (priority). Register health key pra_eye_disease."
+      },
+      "hip_elbow_dysplasia": {
+        "value": "hip and elbow dysplasia",
+        "unit": "—",
+        "source_id": "S438",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S438) health list: 'Hip dysplasia – hip joint laxity …' and 'Elbow dysplasia - elbow joint laxity …' (names only kept); PetMD (S439) hip dysplasia occurs infrequently (paraphrase). RKC (S437) BVA/KC hip and elbow schemes (important tests). Not a Breed Watch point → no hips_hind_legs chip. Register health key hip_elbow_dysplasia."
+      },
+      "eczema": {
+        "value": "eczema — inflamed, itchy skin",
+        "unit": "—",
+        "source_id": "S438",
+        "quote": "Eczema – a skin condition resulting in inflamed, itchy skin",
+        "confidence": "medium",
+        "notes": "PDSA (S438). Not a Breed Watch point → no sensitive_skin chip. Register health key itchy_skin_allergy."
+      },
+      "portosystemic_shunt": {
+        "value": "portosystemic shunt (liver blood vessel problem)",
+        "unit": "—",
+        "source_id": "S438",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S438) health list. Register health key liver_shunt."
+      },
+      "patella": {
+        "value": "luxating patellas",
+        "unit": "—",
+        "source_id": "S438",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S438) health list: 'Luxating patellas – the kneecaps slipping temporarily out of place.' Register health key kneecap_luxation."
+      },
+      "urinary_stones": {
+        "value": "urolithiasis (urinary stones)",
+        "unit": "—",
+        "source_id": "S438",
+        "quote": "Urolithiasis – stone formation in urine.",
+        "confidence": "medium",
+        "notes": "PDSA (S438). Register health key bladder_stones."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 10,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Australian Cattle Dog",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-21): rank 10 'Australian Cattle Dog' (the only breed at that rank), tier 'Brightest Dogs' (ranks 1–10). Coren's own article (S34) not re-read. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Brightest",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: fewer than 5 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier 'Brightest Dogs': 'Obey first command: 95% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "positive reinforcement; can be stubborn; firm but gentle hand",
+        "unit": "—",
+        "source_id": "S439",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S439): respond best to positive reinforcement techniques; can be stubborn and require a firm but gentle hand (paraphrase as returned). Kennel Club standard (S436) 'Biddable.' The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.australian_cattle_dog.learning_multiplier (1.8, runbook rule: Brightest tier, rank 10).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "strong, compact, symmetrical working dog with substance, power and balance; hard muscular condition",
+        "unit": "—",
+        "source_id": "S436",
+        "quote": "Strong, compact, symmetrical, with substance, power and balance.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S436): 'Hard muscular condition conveys agility, strength, and endurance.'; 'Grossness or weediness undesirable.'"
+      },
+      "colours": {
+        "value": [
+          "blue, blue-mottled or blue speckled (black, blue or tan head markings permissible)",
+          "red speckle (even red speckle all over, darker red head markings permissible)"
+        ],
+        "unit": "list",
+        "source_id": "S436",
+        "quote": "Blue, blue-mottled or blue speckled with or without other markings.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S436): Blue — 'Permissible markings are black, blue or tan markings on head, evenly distributed for preference.'; 'Black markings on body undesirable.' Red Speckle — 'Good even red speckle all over, including undercoat, (neither white nor cream),' 'with or without darker red markings on head.'; 'Red markings on body permissible but undesirable.' No other colour in the standard → never cream, white or merle in the game."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Blue first with the highest weight (the portrait default; the standard's first colour), then red speckle."
+      },
+      "coat": {
+        "value": "smooth double coat: short dense undercoat, close, hard, straight, weather-resistant top coat (2.5–4 cm)",
+        "unit": "—",
+        "source_id": "S436",
+        "quote": "Smooth, double with short dense undercoat. Close top coat, hard, straight and weather resistant.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S436): 'Average hair length 2.5cm – 4cm (1\" – 1½\")'. RKC (S437) 'Coat length: Short'."
+      },
+      "ears": {
+        "value": "moderate, pricked, moderately pointed, broad at the base, set wide apart",
+        "unit": "—",
+        "source_id": "S436",
+        "quote": "Moderate, small rather than large. Broad at base, muscular, pricked and moderately pointed.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S436): 'Set wide apart inclining outwards.'; 'Oval or bateared undesirable.'"
+      },
+      "eyes": {
+        "value": "medium, oval, dark brown; alert and intelligent",
+        "unit": "—",
+        "source_id": "S436",
+        "quote": "Medium, oval, alert and intelligent, dark brown. Neither prominent nor sunken.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S436): 'Warning suspicious glint is characteristic.'"
+      },
+      "nose": {
+        "value": "black",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "UNSOURCED — the black nose is from the FCI standard (Italian ENCI copy, read only as a check, not a source); prompt trait kept as in the standard."
+      },
+      "tail": {
+        "value": "set low, reaching the hock, hanging in a slight curve; good brush",
+        "unit": "—",
+        "source_id": "S436",
+        "quote": "Set on low, following slope of croup/rump. Reaching to hock, hanging in slight curve at rear.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S436): 'When working or excited, may be raised but never carried past a vertical line drawn through the root.'; 'Good brush.' A full natural tail (never docked or stumpy — the Stumpy Tail Cattle Dog is a separate breed)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (older address, S437), PDSA (S438), PetMD (S439). Woodgreen and VCA not attempted.",
+      "rkc_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S437",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "RKC key facts (S437)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S437",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "Basis of the adult minutes (120), active_family and long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S437",
+        "quote": "Small house",
+        "confidence": "high",
+        "notes": "Not 'Flat/ Apartment' → no apartment; not 'Large house' → no large_home."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S437",
+        "quote": "Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key facts (S437)."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S437",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "Basis of the weekly brushing (1×, runbook dog-grooming rule)."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S437",
+        "quote": "Short",
+        "confidence": "high",
+        "notes": "RKC key facts (S437)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S437",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "Basis of sheds (PetMD S439 'Australian Cattle Dogs shed a moderate to high amount' agrees)."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S437",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key facts (S437). Not shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S437",
+        "quote": "Country",
+        "confidence": "high",
+        "notes": "RKC key facts (S437). No tag (the vocabulary has no country-living key)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S437",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "RKC key facts (S437)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S437",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "No welfare chip."
+      },
+      "pdsa_exercise": {
+        "value": "over 2 hours a day",
+        "unit": "—",
+        "source_id": "S438",
+        "quote": "Australian Cattle Dogs have high energy levels and will need over 2 hours exercise per day.",
+        "confidence": "high",
+        "notes": "PDSA (S438); agrees with the RKC (S437)."
+      },
+      "pdsa_grooming": {
+        "value": "brushing once weekly",
+        "unit": "—",
+        "source_id": "S438",
+        "quote": "Their coats need brushing just once weekly to remove dead hairs.",
+        "confidence": "high",
+        "notes": "PDSA (S438) agrees with the RKC 'Once a week'."
+      },
+      "pdsa_children": {
+        "value": "may nip at the heels of running children; socialisation and training help",
+        "unit": "—",
+        "source_id": "S438",
+        "quote": "Due to their strong herding instinct, they may nip at the heels of running children",
+        "confidence": "high",
+        "notes": "PDSA (S438). Basis of may_herd_children (with behaviour.herding_children)."
+      },
+      "petmd_family": {
+        "value": "can be good family dogs",
+        "unit": "—",
+        "source_id": "S439",
+        "quote": "Australian Cattle Dogs can be good family dogs, and can be raised with children.",
+        "confidence": "medium",
+        "notes": "PetMD (S439). Basis of family_pet (Australian Shepherd precedent: 'can make really good family pets in the right household')."
+      },
+      "petmd_grooming": {
+        "value": "daily brushing (moderate to high shedding)",
+        "unit": "—",
+        "source_id": "S439",
+        "quote": "Australian Cattle Dogs shed a moderate to high amount and will benefit from daily brushing.",
+        "confidence": "medium",
+        "notes": "PetMD (S439) — 'will benefit from' daily brushing; the RKC (S437) and PDSA (S438) give 'Once a week' → the game takes 1 (RKC preferred), PetMD daily listed for David."
+      },
+      "petmd_ears_nails": {
+        "value": "regular ear cleaning (especially at bath time); nail trims; occasional baths",
+        "unit": "—",
+        "source_id": "S439",
+        "quote": "Regular ear cleanings should be performed, especially at bath time.",
+        "confidence": "medium",
+        "notes": "PetMD (S439): 'As with all breeds, nail trims should be performed to keep the nails neat and short.'; 'They require only occasional baths, unless they have been playing in the mud.' Ears / baths → ROADMAP M5-R20, nails → ROADMAP M5-R19 (needs-david)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -41202,6 +41762,276 @@
         "confidence": "high",
         "notes": "Colours of the FCI standard (S428) — white with black spots, white with liver (brown) spots; never patches, monocle, tricolour, brindle, lemon / orange or blue spots, blue eyes (disqualifying, S428). Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black-spotted is the portrait default (FCI first variety); standard colours only"
+      }
+    },
+    "australian_cattle_dog": {
+      "_note": "Unattended run M5-R10-53 (2026-10-21): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: weekly brushing (RKC S437 'Once a week', M5-R13); puppy socialisation (PDSA S438 quote, M5-R17). No meal / walk gap quote → no M5-R16 row. Sourced needs without a game mechanic: regular ear cleaning and occasional baths (PetMD S439) → ROADMAP M5-R20; nail trims (PetMD S439) → M5-R19 (needs-david). Senior 126 from McMillan 2024 (S123, 14.0 y). RKC Breed Watch Category 1 → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S437",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Exercise: More than 2 hours per day' (S437); PDSA 'over 2 hours exercise per day' (S438) agrees. Rule: one number N ('more than N') → N = 120.",
+        "alternatives": [
+          {
+            "value": 45,
+            "source_id": "S439",
+            "notes": "PetMD 'Running/jogging daily for at least 45 minutes' — one suggested activity, not a daily total."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S437 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S437",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 126
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 126 = round(0.75 × 14.0 y × 12) = 126 (S11 + McMillan 2024 median 14.0 y via Dogs Trust S123). Alternative: 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 126 (0.75 × 14.0 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 126
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 126)"
+      },
+      "learning_multiplier": {
+        "value": 1.8,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 10 (S35), tier 'Brightest' (1–10) → max(1.8, round(2.0 − 9 / 30, 1)) = max(1.8, 1.7) = 1.8. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.8 (Coren rank 10, Brightest tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S437",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "australian_cattle_dog.suitability.rkc_grooming. RKC (S437) 'Once a week' → 1 (runbook dog-grooming rule 'Once a week' → 1); PDSA (S438) 'just once weekly' agrees. PetMD (S439) 'will benefit from daily brushing' → 7 in alternatives, listed for David. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 7,
+            "source_id": "S439",
+            "quote": "Australian Cattle Dogs shed a moderate to high amount and will benefit from daily brushing.",
+            "notes": "PetMD — 'benefit from', the UK sources say once a week."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Grooming: Once a week«; PDSA enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S438",
+        "quote": "socialisation with children and training at a young age can help to overcome these possible problems",
+        "confidence": "medium",
+        "notes": "australian_cattle_dog.behaviour.socialisation (PDSA S438); PetMD (S439) agrees. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S438)"
+      },
+      "ear_care": {
+        "value": "regular ear cleaning, especially at bath time; occasional baths",
+        "unit": "ear care / bathing (sourced need)",
+        "source_id": "S439",
+        "quote": "Regular ear cleanings should be performed, especially at bath time.",
+        "confidence": "medium",
+        "notes": "PetMD (S439), australian_cattle_dog.suitability.petmd_ears_nails. The game has no ear-care or bathing mechanic → ROADMAP M5-R20 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno čiščenje ušes, občasno kopanje; mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "nail_care": {
+        "value": "nail trims to keep the nails neat and short",
+        "unit": "nail care (sourced need)",
+        "source_id": "S439",
+        "quote": "As with all breeds, nail trims should be performed to keep the nails neat and short.",
+        "confidence": "medium",
+        "notes": "PetMD (S439). The game has no nail-care mechanic → ROADMAP M5-R19 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno striženje krempljev; mehanike ni → ROADMAP M5-R19 (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-53); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S437",
+              "S438"
+            ],
+            "refs": [
+              "australian_cattle_dog.exercise.adult",
+              "australian_cattle_dog.exercise.energy"
+            ],
+            "quote": "S437 'More than 2 hours per day'; S438 'Australian Cattle Dogs have high energy levels and will need over 2 hours exercise per day.'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S439"
+            ],
+            "refs": [
+              "australian_cattle_dog.suitability.petmd_family",
+              "australian_cattle_dog.behaviour.family"
+            ],
+            "quote": "S439 'Australian Cattle Dogs can be good family dogs, and can be raised with children.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S437",
+              "S438"
+            ],
+            "refs": [
+              "australian_cattle_dog.exercise.adult",
+              "australian_cattle_dog.suitability.pdsa_exercise"
+            ],
+            "quote": "S437 'More than 2 hours per day'; S438 'will need over 2 hours exercise per day'"
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S438"
+            ],
+            "refs": [
+              "australian_cattle_dog.behaviour.mental_stimulation"
+            ],
+            "quote": "S438 'They are highly intelligent, needing a lot of physical and mental activity'"
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S438"
+            ],
+            "refs": [
+              "australian_cattle_dog.behaviour.herding_children",
+              "australian_cattle_dog.suitability.pdsa_children"
+            ],
+            "quote": "S438 'Due to their strong herding instinct, they may nip at the heels of running children'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S437"
+            ],
+            "refs": [
+              "australian_cattle_dog.suitability.rkc_shedding"
+            ],
+            "quote": "S437 'Sheds: Yes'"
+          }
+        ],
+        "not_proposed": {
+          "children": "PetMD 'can be raised with children' but supervise around young children, and PDSA heel-nipping of running children → may_herd_children instead (Australian Shepherd precedent).",
+          "small_children": "Sources advise supervision with young children.",
+          "not_for_small_children": "No source advises against young children verbatim — the herding chip says it.",
+          "large_home": "RKC 'Small house' / 'Small/ medium garden' (S437).",
+          "apartment": "RKC 'Small house', not 'Flat/ Apartment' (S437).",
+          "other_pets": "No positive statement (PetMD: takes on bigger animals).",
+          "chases_small_pets": "No 'high prey drive' statement.",
+          "needs_company": "PetMD 'will object to being separated' only as a fragment — no full verbatim statement.",
+          "chews_when_bored": "PetMD names destructive behaviour, not chewing.",
+          "experienced_owner": "No source advises against first-time owners verbatim (PetMD 'firm but gentle hand' is a paraphrase).",
+          "frequent_grooming": "Once a week (S437, S438).",
+          "low_shedding": "Sheds (S437, S439).",
+          "shorter_lifespan": "RKC 'Over 10 years' (S437); McMillan 14.0 y.",
+          "welfare": "RKC Breed Watch Category 1 (S437) → no welfare chip; deafness, PRA, hip / elbow dysplasia, eczema, liver shunt, luxating patella and urinary stones are register health keys and breeder-checklist items only."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet; consider long_daily_exercise, needs_mental_stimulation, may_herd_children, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S437",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S437) → no welfare chip, no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never shows it as an easy dog for small children or a low-exercise dog (S438).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (Breed Watch Category 1)"
+      },
+      "ai_appearance": {
+        "value": "adult Australian Cattle Dog, blue speckled coat with black or tan head markings (default); strong, compact, symmetrical, muscular working dog; smooth short weather-resistant double coat; pricked, moderately pointed ears; oval dark brown eyes; black nose; low-set full tail reaching the hock with a good brush; never cream, white or merle",
+        "unit": "—",
+        "source_id": "S436",
+        "quote": "Blue, blue-mottled or blue speckled with or without other markings.",
+        "confidence": "high",
+        "notes": "Colours of the Kennel Club standard (S436) — blue (mottled / speckled, black, blue or tan head markings) and red speckle. Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): blue is the portrait default (the standard's first colour); standard colours only"
       }
     }
   }

@@ -461,6 +461,14 @@ class FalAiService
                 .'tail reaching the hock carried in a slight sabre curve, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-53: Kennel Club standard (S436) — blue speckled as the anchor (blue, red speckle);
+            // strong, compact, symmetrical working dog, smooth weather-resistant double coat, pricked ears, low-set brush tail.
+            BreedType::AustralianCattleDog => 'An alert, intelligent Australian Cattle Dog with a blue speckled coat and black and tan markings on the head, '
+                .'smooth, short, hard and weather-resistant double coat, strong, compact, symmetrical and muscular body, '
+                .'medium oval dark brown eyes, black nose, moderate pricked and moderately pointed ears, '
+                .'low-set tail reaching the hock with a slight curve and a good brush, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1113,6 +1121,16 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'short, shiny, hard and dense coat',
                 'markings' => 'clearly defined round spots, spotted ears and tail, no patches',
+            ],
+            // M5-R10-53: KC standard S436 "Blue, blue-mottled or blue speckled with or without other markings." / red speckle.
+            BreedType::AustralianCattleDog => [
+                'color_scheme' => match ($variantIndex) {
+                    0, 2 => 'blue speckled with black and tan head markings',
+                    1 => 'even red speckle with darker red head markings',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'smooth, short, hard and weather-resistant double coat',
+                'markings' => 'evenly distributed head markings, full low-set tail with a good brush',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

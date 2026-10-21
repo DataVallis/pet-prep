@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "8e0bc6dc0ec0cfb2586705f11c18343d7e7ee041a178863e7eba8b12d042547f"
+      "sha256": "c26522bd53afda7e7b5e7ec859fb8ab156aa00c7c8a3b5f557808d6ef132c41b"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "c894a8a456e56639634ef5ecdd5af0300660d2f945d55bc893c66a474d11f724"
+      "sha256": "c5af00699f9fe5fa498c591d9cdce29546683b4eda2b9a6f0b6ead15b55f7ca2"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "2a0b8e12ae3cf82e4a07c554ed1c12951124b3708d6174e6e3f026fdddb78414"
+      "sha256": "e64fe53698f091fc28f6c76c4def864cdba604255c1861112ec9c8f6c570e9b3"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "1d433f772ddcf426a34a263751768647218a29c0cb47efa2e2fc8bc27ff3f942"
+      "sha256": "abbedc272b0bf7b0844991b23cffcec040e3bbb630f1eed91399e9af3c9dd98e"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "08f8a945ccb86936eb631f78e1ed3bff8bb00b0c6ebb79aa6b5aab4a741a26c3"
+      "sha256": "7dbc210f9213836f13303be13f921049d6ef83a8f8fd89bae9c00fbebc543082"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "c0680a388aea76bea6233c431d5527a6b87189705986267ca4b90130ef84b39a"
+      "sha256": "a2b3208293d5cb7015670a2bca9697d607ea8c97e15ab177d828a48e010f55f5"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "0ba7921644d4a0a6146f66ce3478b79af1faef94d4750badd2f2668e2c6d68ca"
+      "sha256": "b35515d92dbca6959ac974e2078bf36e3081ff53ad36a1eb32c22f648c2481d4"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -203,7 +203,7 @@
         }
       },
       "status": "available",
-      "breed_count": 48,
+      "breed_count": 49,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -28891,6 +28891,618 @@
       ]
     },
     {
+      "id": "australian_cattle_dog",
+      "species": "dog",
+      "order": 48,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Australian Cattle Dog",
+        "sl": "Avstralski govedar"
+      },
+      "slug": {
+        "en": "australian-cattle-dog",
+        "sl": "avstralski-govedar"
+      },
+      "synonyms": {
+        "en": [
+          "Blue Heeler",
+          "Red Heeler",
+          "Queensland Heeler",
+          "Cattle Dog",
+          "ACD"
+        ],
+        "sl": [
+          "avstralski govedarski pes",
+          "blue heeler",
+          "heeler"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "over_2h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S437"
+          ],
+          "ref": "australian_cattle_dog.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              46,
+              51
+            ],
+            "female": [
+              43,
+              48
+            ]
+          },
+          "source_ids": [
+            "S436"
+          ],
+          "ref": "australian_cattle_dog.height.kc_standard",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              16,
+              20
+            ],
+            "female": [
+              16,
+              20
+            ]
+          },
+          "source_ids": [
+            "S438"
+          ],
+          "ref": "australian_cattle_dog.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "australian_cattle_dog.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 14,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "australian_cattle_dog.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S437"
+          ],
+          "ref": "australian_cattle_dog.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S437"
+          ],
+          "ref": "australian_cattle_dog.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S437"
+          ],
+          "ref": "australian_cattle_dog.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S437"
+          ],
+          "ref": "australian_cattle_dog.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S437"
+          ],
+          "ref": "australian_cattle_dog.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 10,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "australian_cattle_dog.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 287,
+            "group": 1,
+            "section": 2,
+            "origin": "AU"
+          },
+          "source_ids": [
+            "S435"
+          ],
+          "ref": "australian_cattle_dog.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "deafness",
+          "source_ids": [
+            "S438"
+          ],
+          "ref": "australian_cattle_dog.health.deafness",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_eye_disease",
+          "source_ids": [
+            "S439"
+          ],
+          "ref": "australian_cattle_dog.health.pra",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S438"
+          ],
+          "ref": "australian_cattle_dog.health.hip_elbow_dysplasia",
+          "confidence": "medium"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S438"
+          ],
+          "ref": "australian_cattle_dog.health.eczema",
+          "confidence": "medium"
+        },
+        {
+          "key": "liver_shunt",
+          "source_ids": [
+            "S438"
+          ],
+          "ref": "australian_cattle_dog.health.portosystemic_shunt",
+          "confidence": "medium"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S438"
+          ],
+          "ref": "australian_cattle_dog.health.patella",
+          "confidence": "medium"
+        },
+        {
+          "key": "bladder_stones",
+          "source_ids": [
+            "S438"
+          ],
+          "ref": "australian_cattle_dog.health.urinary_stones",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S437",
+              "S438"
+            ],
+            "refs": [
+              "australian_cattle_dog.exercise.adult",
+              "australian_cattle_dog.exercise.energy"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S439"
+            ],
+            "refs": [
+              "australian_cattle_dog.suitability.petmd_family",
+              "australian_cattle_dog.behaviour.family"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S437",
+              "S438"
+            ],
+            "refs": [
+              "australian_cattle_dog.exercise.adult",
+              "australian_cattle_dog.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S438"
+            ],
+            "refs": [
+              "australian_cattle_dog.behaviour.mental_stimulation"
+            ]
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S438"
+            ],
+            "refs": [
+              "australian_cattle_dog.behaviour.herding_children",
+              "australian_cattle_dog.suitability.pdsa_children"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S437"
+            ],
+            "refs": [
+              "australian_cattle_dog.suitability.rkc_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 126
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.8
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 126
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_cattle_dog.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S437"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S437 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_cattle_dog.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_cattle_dog.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 126 (0.75 × 14.0 y, McMillan 2024 via S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_cattle_dog.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.8 (Coren rank 10, Brightest tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.australian_cattle_dog.grooming",
+            "basis_source_ids": [
+              "S437"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Grooming: Once a week«; PDSA enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S437"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_prcd_pra",
+            "level": "minimum",
+            "source_ids": [
+              "S437"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S437"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S437"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S437"
+            ]
+          },
+          {
+            "key": "hearing_baer",
+            "level": "minimum",
+            "source_ids": [
+              "S437"
+            ]
+          },
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S437"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S437"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S435",
+        "S436",
+        "S437",
+        "S438",
+        "S439",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -33173,6 +33785,41 @@
       "publisher": "PDSA",
       "title": "Dalmatian breed information",
       "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/dalmatian"
+    },
+    {
+      "id": "S435",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — AUSTRALIAN CATTLE DOG / BOUVIER AUSTRALIEN (287)",
+      "url": "https://www.fci.be/EN/nomenclature/BOUVIER-AUSTRALIEN-287.html"
+    },
+    {
+      "id": "S436",
+      "tier": "A",
+      "publisher": "The Kennel Club (UK) breed standard, reprinted by the Kennel Union of Southern Africa",
+      "title": "Australian Cattle Dog — breed standard (KC 09/2007, changes effective 01/02/2021, PDF)",
+      "url": "https://www.kusa.co.za/images/Breed%20Standards%202024/Australian%20Cattle%20Dog%20-%20KC%20%5B02-2017%5D.pdf"
+    },
+    {
+      "id": "S437",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Australian Cattle Dog — breed page (older address; key facts, Breed Watch, health testing)",
+      "url": "https://www.thekennelclub.org.uk/services/public/breed/display.aspx?id=5144"
+    },
+    {
+      "id": "S438",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Australian Cattle Dog breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/australian-cattle-dog"
+    },
+    {
+      "id": "S439",
+      "tier": "B",
+      "publisher": "PetMD",
+      "title": "Australian Cattle Dog",
+      "url": "https://www.petmd.com/dog/breeds/australian-cattle-dog"
     },
     {
       "id": "C1",

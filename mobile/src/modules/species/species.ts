@@ -69,6 +69,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   bichon_frise: 'dog',
   newfoundland: 'dog',
   dalmatian: 'dog',
+  australian_cattle_dog: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -142,6 +143,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'bichon_frise',
   'newfoundland',
   'dalmatian',
+  'australian_cattle_dog',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
