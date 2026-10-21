@@ -56,6 +56,7 @@ return [
     'bichon_frise' => 'Kodrasti bišon',
     'newfoundland' => 'Novofundlandec',
     'dalmatian' => 'Dalmatinec',
+    'australian_cattle_dog' => 'Avstralski govedar',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

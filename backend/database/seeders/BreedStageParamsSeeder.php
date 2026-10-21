@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -622,6 +622,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_DALMATIAN = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-52)';
 
     /**
+     * M5-R10-53 Australian Cattle Dog (unattended run 2026-10-21, data.json
+     * proposed_game_parameters.australian_cattle_dog.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 120 min (RKC S437
+     * "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages young 9 / adult 36 /
+     * senior 126 (0.75 × McMillan 2024 median 14.0 y via Dogs Trust S123), arrival 2 / 9 / 36 / 126, learning
+     * multiplier 1.8 (Coren rank 10, Brightest); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_AUSTRALIAN_CATTLE_DOG = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-53)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -778,6 +788,7 @@ class BreedStageParamsSeeder extends Seeder
         'bichon_frise' => [7, 'S411', 'Grooming: Every day', 'high', false],
         'newfoundland' => [7, 'S423', 'Grooming is a daily task, particularly when shedding.', 'high', false],
         'dalmatian' => [1, 'S429', 'Grooming: Once a week', 'high', false],
+        'australian_cattle_dog' => [1, 'S437', 'Once a week', 'high', false],
     ];
 
     /**
@@ -873,13 +884,14 @@ class BreedStageParamsSeeder extends Seeder
         'bichon_frise' => ['S416', 'With proper training and socialization from puppyhood, Bichons are friendly dogs that are comfortable meeting new people and animals.'],
         'newfoundland' => ['S424', 'All dogs, even the friendly Newfoundland, need consistent socialization as puppies'],
         'dalmatian' => ['S431', 'This is why socializing Dalmatian puppies early in life is so important.'],
+        'australian_cattle_dog' => ['S438', 'socialisation with children and training at a young age can help to overcome these possible problems'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1522,6 +1534,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-52 (docs/research/dog-data/data.json dalmatian,
             // S427–S434; runbook rules in proposed_game_parameters.dalmatian).
             BreedType::Dalmatian => self::dalmatianProfile(),
+            // M5-R10-53 (docs/research/dog-data/data.json australian_cattle_dog,
+            // S435–S441; runbook rules in proposed_game_parameters.australian_cattle_dog).
+            BreedType::AustralianCattleDog => self::australianCattleDogProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -5043,6 +5058,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'dalmatian.lifespan.median_uk',
                 'quote' => 'Dalmatian 13.2 13.0 - 13.3 3126 1443',
                 'notes' => 'McMillan et al. 2024 median as tabled by Dogs Trust (S123). RKC / PDSA "Over 12 years" (S429, S430) agree. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Australian Cattle Dog (M5-R10-53). Stage boundaries, arrival ages, exercise minutes and the learning
+     * multiplier follow the runbook's standing rules (CONFIRMED_R10_AUSTRALIAN_CATTLE_DOG); weight, growth, Coren
+     * rank and lifespan are sourced. The senior boundary uses the McMillan 2024 median (via Dogs Trust S123) — not
+     * provisional.
+     *
+     * @return array<string, mixed>
+     */
+    private static function australianCattleDogProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_AUSTRALIAN_CATTLE_DOG;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S123', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.australian_cattle_dog.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog reaches adult weight at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [126, $boundary('Derived game boundary: last 25 % of lifespan (S11) × McMillan 2024 median 14.0 y (Dogs Trust table S123) = 10.5 y = 126 months. Not chosen: 84 (Dogs Trust > 7 y, S14); 90 (0.75 × 10 y, RKC lower bound S437).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 126],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_cattle_dog.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S437', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_cattle_dog.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'More than 2 hours per day',
+                'notes' => 'RKC "Exercise: More than 2 hours per day" (S437) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA (S438): "will need over 2 hours exercise per day".',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_cattle_dog.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[16.0, 20.0], [
+                'unit' => 'kg', 'source_id' => 'S438', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'australian_cattle_dog.adult_weight.pdsa',
+                'quote' => '16kg-20kg',
+                'notes' => 'PDSA key fact "Average weight" (S438), one range for both sexes → 16–20 kg for the game. The Kennel Club standard (S436) gives no weight; PetMD (S439) 35–50 lb — alternative only.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'australian_cattle_dog.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA 16–20 kg ≈ 35–44 lb, the Medium class of S10).',
+            ]],
+            'coren_rank' => [10, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'australian_cattle_dog.trainability.coren_rank',
+                'quote' => 'Australian Cattle Dog',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 10 (the only breed at that rank), tier "Brightest Dogs" (ranks 1–10).',
+            ]],
+            'learning_multiplier' => [1.8, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.australian_cattle_dog.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 10 (S35) in the "Brightest" tier (ranks 1–10) → max(1.8, round(2.0 − 9 / 30, 1)) = 1.8. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [14.0, [
+                'unit' => 'years', 'source_id' => 'S123', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'australian_cattle_dog.lifespan.median_uk',
+                'quote' => 'Australian Cattle Dog 14.0 13.2 - 15.1 117 50',
+                'notes' => 'McMillan et al. 2024 median as tabled by Dogs Trust (S123; small sample, 117 dogs). RKC / PDSA "Over 10 years" (S437, S438) agree. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

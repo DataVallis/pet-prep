@@ -315,6 +315,11 @@ return [
         ['key' => 'black-spotted', 'value' => 'pure white with round, clearly defined black spots', 'en' => 'Black-spotted', 'sl' => 'Črno pikast'],
         ['key' => 'liver-spotted', 'value' => 'pure white with round, clearly defined liver (brown) spots', 'en' => 'Liver-spotted', 'sl' => 'Rjavo pikast'],
     ],
+    // M5-R10-53: KC standard S436 — Blue (speckled / mottled, head markings) and Red Speckle.
+    'australian_cattle_dog' => [
+        ['key' => 'blue-speckled', 'value' => 'blue speckled with black and tan markings on the head', 'en' => 'Blue speckled', 'sl' => 'Modro pegast'],
+        ['key' => 'red-speckle', 'value' => 'even red speckle with darker red markings on the head', 'en' => 'Red speckle', 'sl' => 'Rdeče pegast'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
