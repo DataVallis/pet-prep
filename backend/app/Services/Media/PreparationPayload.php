@@ -49,8 +49,8 @@ final class PreparationPayload
              */
             'pending' => $this->pending,
             // Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
-            // and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
-            // (never for a failed item).
+            // (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
+            // hungry) is still on its way (never for a failed item).
             'preparing' => $this->preparing,
             // The pet's preparation runs (started at birth / purchase, not finished). Goes
             // true → false exactly once, with `ready` true: »[ime] je pripravljen!«

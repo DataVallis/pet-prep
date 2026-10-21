@@ -208,6 +208,21 @@ describe('readiness summary', function () {
         expect($service->summary($pet->fresh())->ready)->toBeTrue();
     });
 
+    it('closes the set-up screen after 15 minutes even if a first clip still hangs (the preparation keeps running)', function () {
+        Queue::fake([SubmitPetStateVideo::class]);
+        [, $child, $pet] = ppFamily();
+        ppStored($pet);
+        ppSign($child);
+        expect(app(PetPreparationService::class)->summary($pet->fresh())->preparing)->toBeTrue();
+
+        $this->travel(PetPreparationService::SCREEN_MAX_MINUTES + 1)->minutes();
+        $late = app(PetPreparationService::class)->summary($pet->fresh());
+
+        expect($late->preparing)->toBeFalse()
+            ->and($late->running)->toBeTrue()
+            ->and($late->ready)->toBeFalse();
+    });
+
     it('treats a failed item as not on its way (no endless set-up screen), but not as ready', function () {
         Queue::fake([SubmitPetStateVideo::class]);
         [, $child, $pet] = ppFamily();

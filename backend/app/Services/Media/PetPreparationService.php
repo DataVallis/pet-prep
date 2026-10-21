@@ -57,6 +57,14 @@ class PetPreparationService
     /** PetUpdated event type / push type of the single "ready" news. */
     public const EVENT_READY = 'pet_ready';
 
+    /**
+     * The set-up screen (`preparing`) shows at most this long after the preparation
+     * started: a clip that hangs (lost webhook — the sweep gives up after 2 h) never
+     * keeps the child from the pet. The preparation itself keeps running and is
+     * still announced when everything is stored.
+     */
+    public const SCREEN_MAX_MINUTES = 15;
+
     public function __construct(
         private readonly MediaEntitlementService $entitlements,
         private readonly FalAiService $fal,
@@ -135,11 +143,12 @@ class PetPreparationService
 
         $essentials = array_map('strval', (array) config('media.preparation_essentials', []));
         $active = $pet->preparation_started_at !== null && $pet->preparation_ready_at === null;
+        $screenOpen = $active && $pet->preparation_started_at->greaterThan(now()->subMinutes(self::SCREEN_MAX_MINUTES));
 
         return new PreparationPayload(
             ready: $pending === [],
             pending: $pending,
-            preparing: $active && array_intersect($inProgress, [self::IMAGE, ...$essentials]) !== [],
+            preparing: $screenOpen && array_intersect($inProgress, [self::IMAGE, ...$essentials]) !== [],
             running: $active,
             readyAt: $pet->preparation_ready_at?->copy()->utc()->toIso8601String(),
         );
