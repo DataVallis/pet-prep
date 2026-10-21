@@ -1884,3 +1884,31 @@ sequenceDiagram
   end
   App->>App: is_today → party hat over the pet all day; card once per pet<br/>(safe cake, sourced tip); parent line in child detail
 ```
+
+## 17. Adapted mode: parent-logged walks and consent withdrawal (M5-T12, David 2026-10-21)
+
+```mermaid
+sequenceDiagram
+  participant P as Parent app
+  participant C as ChildProfileController
+  participant W as PetActivityService::logParentWalk
+  participant S as ChildProfileService::setAdaptedMode
+  participant DB as users / pets / pet_daily_steps / parent_walk_entries
+  P->>C: POST /parent/children/{child}/walks {minutes 1–240, local_date, entry_id}
+  C->>W: family + adapted mode checked, active pet found (else 404 / 422)
+  W->>DB: lock child row → lock pet row (same order as the switch)
+  alt entry_id exists
+    W-->>C: same pet + day + minutes → 200 unchanged (original entry), else 409 entry_id_conflict
+  else switch off / pet locked / cat / not today or yesterday
+    W-->>C: 422 adapted_mode_off · 423 reason · 422 steps_not_applicable · 422 date_not_allowed
+  else sum of the day's minutes + minutes > 240
+    W-->>C: 422 daily_limit_reached {remaining_minutes}
+  else
+    W->>DB: steps = minutes × 100 → child's day row (steps, manual_steps, manual_minutes) + entry + parent_logged_walk
+    W->>DB: today: daily_step_count / energy / walked_pet · yesterday: closed walk row, not-yet-started walk illness called off
+    W-->>C: 201 accepted {entry, steps_today} (+ PetUpdated parent_logged_walk)
+  end
+  P->>S: PATCH /parent/children/{child}/settings {adapted_mode: false}
+  S->>DB: lock child row → flag false → lock pets of its push rows (id order) → pet_daily_steps unit pushes → steps
+  S-->>P: 200 (one PetUpdated caretaker_settings_changed); counts, points and Care Score unchanged, logged walks kept
+```
