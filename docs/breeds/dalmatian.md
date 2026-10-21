@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `dalmatian` (viri S427–S434; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174) |
 | Izvor | FCI št. 153, skupina 6, sekcija 3 (sorodne pasme), Hrvaška (S427, S428) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 48. mesto »Dalmatian« (S174) |
-| PR-ji | pet-prep #305 (pasma, združen `f8142b3`) · portret #306 · spletna stran — |
+| PR-ji | pet-prep #305 (pasma, združen `f8142b3`) · portret #306 (združen `a99b047`) · spletna stran #83 (združen `8e2d902`) |
 
 ## Odločitve (z viri in kdo je odločil)
 
