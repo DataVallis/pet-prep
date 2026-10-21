@@ -182,6 +182,8 @@ export function makeChildState(
     lock: { is_locked: false, reason: null, until: null },
     timezone: 'Europe/Ljubljana',
     server_time: '2026-10-04T09:00:00+00:00',
+    // M5-T02 (additive): awake.
+    sleep: { asleep: false, until: null },
     feeding: {
       windows: [],
       current_window: null,
@@ -241,6 +243,9 @@ export function makeTrainingState(overrides: Partial<ChildPetState['training']> 
     my_share_seconds: 0,
     my_seconds_left: 0,
     can_start: false,
+    // M5-T02 (additive): why a start is refused and until when.
+    blocked_reason: null,
+    next_allowed_at: null,
     ...overrides,
   };
 }
@@ -266,6 +271,8 @@ export interface LiveStateOverrides {
   scratching?: unknown;
   /** M5-R17 the puppy's weekly "new experience" (raw); omitted = absent (no task / older server). */
   socialisation?: unknown;
+  /** M5-T02 `sleep` (raw); default awake, `'absent'` drops the key (older server). */
+  sleep?: unknown;
   timezone?: string;
   server_time?: string;
 }
@@ -334,6 +341,7 @@ export function makeLiveChildState(o: LiveStateOverrides = {}): ChildPetState {
     ...(o.grooming !== undefined ? { grooming: o.grooming } : {}),
     ...(o.scratching !== undefined ? { scratching: o.scratching } : {}),
     ...(o.socialisation !== undefined ? { socialisation: o.socialisation } : {}),
+    sleep: o.sleep === 'absent' ? undefined : o.sleep === undefined ? base.sleep : o.sleep,
   };
   return raw as unknown as ChildPetState;
 }
