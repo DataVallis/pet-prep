@@ -205,7 +205,8 @@
     "care_session_expired": "Čas se je iztekel, preden smo shranili, zato ni štelo. Začni znova.",
     "care_session_interrupted": "Igra je bila ustavljena, zato ni štela. Začni znova malo kasneje.",
     "care_session_invalid_input": "Pri štetju je šlo nekaj narobe. Začni znova.",
-    "unknown": "Tega zdaj ni mogoče narediti. Poskusi kasneje."
+    "unknown": "Tega zdaj ni mogoče narediti. Poskusi kasneje.",
+    "media_not_ready": "Igra se še pripravlja. Poskusi malo kasneje."
   },
   "locked": {
     "ill": "Muca je pri veterinarju do {{until}}.",
@@ -222,7 +223,8 @@
       "wandCount": "{{done}}/{{goal}}",
       "wandDone": "Opravljeno ✓",
       "scratcherFirst": "Najprej praskalnik",
-      "asleep": "Spi"
+      "asleep": "Spi",
+      "preparing": "Pripravlja se"
     },
     "scratcher": "Na praskalnik",
     "scratcherA11y": "Odnesi muco na praskalnik in jo pohvali",

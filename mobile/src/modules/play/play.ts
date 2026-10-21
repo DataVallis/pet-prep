@@ -43,6 +43,11 @@ export interface PlayInvitation {
 export interface ChildPlay {
   /** `POST /api/child/pet/play` would be accepted now. */
   can_play: boolean;
+  /**
+   * M5-T04: every clip of the game is ready (server `media_ready`); false = »Igra se še
+   * pripravlja« and `can_play` is false. An older server sends nothing → true.
+   */
+  media_ready: boolean;
   /** The dog's invitation shown now (server-offered), else null. */
   invitation: PlayInvitation | null;
   mood: {
@@ -171,6 +176,7 @@ export function readChildPlay(raw: unknown): ChildPlay | null {
   const happyUntil = iso(mood.happy_until);
   return {
     can_play: raw.can_play === true,
+    media_ready: raw.media_ready !== false,
     invitation: readInvitation(raw.invitation),
     mood: {
       happy_until: happyUntil,
@@ -254,8 +260,12 @@ export function visibleInvitation(
   return Number.isFinite(expires) && expires > serverNowMs ? invitation : null;
 }
 
-/** Why "Igra" is disabled (null = it isn't). An explanation only — the server decided. */
-export type PlayBlock = 'sleeping' | 'dirty' | 'other';
+/**
+ * Why "Igra" is disabled (null = it isn't). An explanation only — the server decided.
+ * `preparing` (M5-T04, David 2026-10-20): a clip of the game isn't ready yet — »Igra se še
+ * pripravlja«, never a half-working game.
+ */
+export type PlayBlock = 'sleeping' | 'dirty' | 'preparing' | 'other';
 
 export function playBlock(view: ChildPetView): PlayBlock | null {
   if (view.play === null || view.play.can_play) return null;
@@ -263,6 +273,8 @@ export function playBlock(view: ChildPetView): PlayBlock | null {
   // the sleep wins over a mess, as on the server (`play_pet_sleeping` first).
   if (view.sleep.asleep || view.pet.pet_state === 'sleeping') return 'sleeping';
   if (view.pet.needs_cleaning || view.pet.hygiene_level <= 0) return 'dirty';
+  // Same order as the server's refusals: sleep › mess › clips not ready (`media_not_ready`).
+  if (!view.play.media_ready) return 'preparing';
   return 'other';
 }
 

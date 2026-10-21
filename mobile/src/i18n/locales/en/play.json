@@ -36,7 +36,8 @@
     "sleeping": "Your pup is asleep. Play when it wakes up.",
     "dirty": "Clean up first, then play.",
     "other": "You can't play right now.",
-    "sleepingUntil": "Your pup is asleep until {{clock}}. Play then!"
+    "sleepingUntil": "Your pup is asleep until {{clock}}. Play then!",
+    "preparing": "The game is still getting ready."
   },
   "parent": {
     "timeline": {

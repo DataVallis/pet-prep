@@ -229,6 +229,7 @@
   "rules": {
     "sleeping": "💤 Kuža spi",
     "sleepingUntil": "💤 Kuža spi do {{clock}}",
-    "contract": "Najprej podpiši pogodbo"
+    "contract": "Najprej podpiši pogodbo",
+    "preparing": "Igra se še pripravlja"
   }
 }

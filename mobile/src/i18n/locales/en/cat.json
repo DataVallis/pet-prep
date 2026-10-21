@@ -203,7 +203,8 @@
     "care_session_expired": "The time ran out before we could save it, so it didn't count. Start again.",
     "care_session_interrupted": "The game was paused, so it didn't count. Start again later.",
     "care_session_invalid_input": "Something went wrong while counting. Start again.",
-    "unknown": "That's not possible right now. Try again later."
+    "unknown": "That's not possible right now. Try again later.",
+    "media_not_ready": "The game is still getting ready. Try again a little later."
   },
   "locked": {
     "ill": "Your kitty is at the vet until {{until}}.",
@@ -220,7 +221,8 @@
       "wandCount": "{{done}}/{{goal}}",
       "wandDone": "Done ✓",
       "scratcherFirst": "Scratcher first",
-      "asleep": "Asleep"
+      "asleep": "Asleep",
+      "preparing": "Getting ready"
     },
     "scratcher": "To the scratching post",
     "scratcherA11y": "Carry your kitty to the scratching post and praise it",

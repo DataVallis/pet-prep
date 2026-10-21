@@ -88,8 +88,11 @@ export const TIMED_WAND_REASONS: readonly string[] = ['wand_too_soon', 'wand_qui
 export function wandDock(view: ChildPetView): CatDockState {
   const wand = view.cat.wand;
   if (wand === null || view.lock.is_locked) return { disabled: true, due: false, hint: null };
-  const disabled = wand.goal <= 0 || wand.blocked_reason === 'wand_not_available';
+  // M5-T04 (David 2026-10-20): the game waits for all its clips — visible, but off.
+  const preparing = wand.blocked_reason === 'media_not_ready' && !wand.can_start && wand.session === null;
+  const disabled = wand.goal <= 0 || wand.blocked_reason === 'wand_not_available' || preparing;
   const hints = CAT_HUD_STRINGS.hints;
+  if (preparing) return { disabled, due: false, hint: dockText(hints.preparing) };
   if (wand.goal > 0 && wand.sessions_today >= wand.goal) return { disabled, due: false, hint: dockText(hints.wandDone) };
   if (!wand.can_start && wand.session === null && wand.blocked_reason !== null) {
     // Only a timed reason names a time (QA 08b m2) — e.g. never for `needs_cleaning`.

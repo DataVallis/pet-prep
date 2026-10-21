@@ -3861,6 +3861,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -4495,6 +4497,8 @@ export interface operations {
                         play: {
                             /** @description POST /api/child/pet/play would be accepted now. */
                             can_play: boolean;
+                            /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                            media_ready: boolean;
                             /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                             invitation: {
                                 id: number;
@@ -5149,6 +5153,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -5801,6 +5807,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -6453,6 +6461,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -7105,6 +7115,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -7757,6 +7769,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -8413,6 +8427,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -9069,6 +9085,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -9725,6 +9743,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -10377,6 +10397,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -11033,6 +11055,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -11685,6 +11709,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -12337,6 +12363,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -12993,6 +13021,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -13645,6 +13675,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -14301,6 +14333,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -14953,6 +14987,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -15609,6 +15645,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -16265,6 +16303,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;
@@ -16921,6 +16961,8 @@ export interface operations {
                             play: {
                                 /** @description POST /api/child/pet/play would be accepted now. */
                                 can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
                                 /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
                                 invitation: {
                                     id: number;

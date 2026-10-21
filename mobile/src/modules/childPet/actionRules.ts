@@ -16,12 +16,14 @@
  * | clean         | hygiene / messes                 | lock · nothing to clean ("Čisto") · only a chewed slipper / sofa |
  * | take_out      | `behaviour.can_take_out`         | lock (puppy only — no button otherwise)                          |
  * | walk          | not locked                       | lock (steps count any time, also while the pet sleeps)           |
- * | play / cuddle | `play.can_play`                  | lock · SLEEPING (until wake, `play_pet_sleeping`) · mess · other |
+ * | play / cuddle | `play.can_play`                  | lock · SLEEPING (until wake, `play_pet_sleeping`) · mess ·       |
+ * |               | + `play.media_ready`             | PREPARING (`media_not_ready`, »Igra se še pripravlja«) · other   |
  * | training      | `training.can_start`             | lock · SLEEPING (until wake) · session running · budget / share  |
  * |               | + `blocked_reason`               | used · day ending                                                |
  * | grooming      | `grooming.can_start`             | lock · SLEEPING (`grooming_quiet_hours`, until wake; dog + cat)  |
  * |               |                                  | · done today / week · another game                               |
  * | wand (cat)    | `wand.can_start`                 | lock · SLEEPING (`wand_quiet_hours`) · 2 h gap · another game    |
+ * |               |                                  | · PREPARING (`media_not_ready`)                                  |
  * | scoop (cat)   | `litter.can_scoop`               | lock · tray clean                                                |
  * | socialisation | `socialisation.can_record`       | lock · SLEEPING (`socialisation_quiet_hours`) · week done        |
  *
@@ -31,6 +33,12 @@
  * the walk tracker is open and covers the HUD (nothing else can be pressed); **payment
  * lock** = `lock.reason = payment_required` (translucent lock screen). Every lock is shown
  * by the lock screen itself; the table still returns it (`reason: 'locked'`).
+ *
+ * **Preparing** (M5-T04, David 2026-10-20, APP_REFINEMENT_SPEC §10 / §13): when ANY clip a
+ * game shows is not ready for the pet, the game stays visible but off with the neutral
+ * »Igra se še pripravlja« — never half working, never a word about pictures or videos. The
+ * server decides (`play.media_ready`, wand `blocked_reason = media_not_ready`) and turns it
+ * on with the `PetUpdated` of the last clip (no restart).
  */
 
 import { t } from '@/i18n';
@@ -67,8 +75,12 @@ export const HUD_ACTIONS: readonly HudAction[] = [
   'socialisation',
 ];
 
-/** Why an action is off: a lock, the pet sleeps, or another server rule (its own hint explains it). */
-export type ActionBlockReason = 'locked' | 'sleeping' | 'server';
+/**
+ * Why an action is off: a lock, the pet sleeps, the game's clips are not ready yet
+ * (`preparing`, M5-T04 — »Igra se še pripravlja«), or another server rule (its own hint
+ * explains it).
+ */
+export type ActionBlockReason = 'locked' | 'sleeping' | 'preparing' | 'server';
 
 export interface ActionRule {
   /** The server would accept it now (its flag); `false` also when the pet has no such action. */
@@ -90,6 +102,9 @@ export interface ActionRule {
 export const RULE_STRINGS = strings('child', 'rules', {
   sleepingUntil: (clock: string) => t('child:rules.sleepingUntil', { clock }),
 });
+
+/** Server reason: a clip of the game is not ready yet (M5-T04). */
+export const MEDIA_NOT_READY = 'media_not_ready';
 
 const OFF: ActionRule = { enabled: false };
 const ON: ActionRule = { enabled: true };
@@ -129,6 +144,9 @@ function sleeping(view: ChildPetView, until: string | null = view.sleep.until): 
 
 const server = (until: string | null = null): ActionRule => ({ enabled: false, reason: 'server', until });
 
+/** »Igra se še pripravlja« — no time: the server's PetUpdated turns the game on. */
+const preparing = (): ActionRule => ({ enabled: false, reason: 'preparing', until: null, text: RULE_STRINGS.preparing });
+
 /** Server reasons that mean "the pet sleeps" (quiet hours) for the cat games and socialisation. */
 const SLEEP_REASONS: ReadonlySet<string> = new Set([
   'training_pet_sleeping',
@@ -140,6 +158,7 @@ const SLEEP_REASONS: ReadonlySet<string> = new Set([
 /** A server block: the sleeping reason (with its time, else the wake time) or the server's own. */
 function fromServer(view: ChildPetView, blockedReason: string | null, nextAllowedAt: string | null): ActionRule {
   if (blockedReason !== null && SLEEP_REASONS.has(blockedReason)) return sleeping(view, nextAllowedAt ?? view.sleep.until);
+  if (blockedReason === MEDIA_NOT_READY) return preparing();
   return server(nextAllowedAt);
 }
 
@@ -171,7 +190,10 @@ export function actionRule(view: ChildPetView, action: HudAction): ActionRule {
       if (view.play === null) return OFF;
       if (lock) return lock;
       if (view.play.can_play) return ON;
-      return view.sleep.asleep ? sleeping(view) : server();
+      if (view.sleep.asleep) return sleeping(view);
+      // A mess explains itself (»Najprej počisti …«); then the clips (M5-T04).
+      if (view.pet.needs_cleaning || view.pet.hygiene_level <= 0) return server();
+      return view.play.media_ready ? server() : preparing();
     }
     case 'training': {
       const tr = view.training;

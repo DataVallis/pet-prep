@@ -390,12 +390,14 @@ export function makeLiveChildState(o: LiveStateOverrides = {}): ChildPetState {
 export function makePlayState(
   overrides: {
     can_play?: boolean;
+    media_ready?: boolean;
     invitation?: { id: number; kind: 'play' | 'cuddle'; expires_at: string } | null;
     mood?: { happy_until: string | null; scene: 'playing' | null };
   } = {},
 ) {
   return {
     can_play: true,
+    media_ready: true,
     invitation: null,
     mood: { happy_until: null, scene: null },
     ...overrides,
