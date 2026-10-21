@@ -113,6 +113,29 @@
 - Klobuček, varna »torta«, izobraževalni namig (npr. čokolada je za pse strupena); obvestilo otroku in staršu.
 - Za razvoj preveriti: pri kateri pasmi in starosti ob prihodu se 1 leto zgodi znotraj 12 tednov; če pri nobeni, ga v praksi dobi le brezplačni ljubljenček, ki ostane — sporočiti Davidu.
 
+**Status (M5-T13, 21. 10. 2026): izvedeno** (backend + mobile JS; še ni v trgovini, še ni preverjeno na telefonu).
+
+**Pravilo (izvedba):** starost = starost ob prihodu + 1 mesec na dopolnjen programski teden (`LifeStageService::ageMonthsAt`; čas zaklepa zaradi plačila ne šteje — `Pet::programBirthAt`). Rojstni dan je **trenutek, ko starost doseže 12 mesecev** = obletnica rojstva po (12 − starost ob prihodu) programskih tednih; **datum** je družinski lokalni dan tega trenutka. Velja od 00:00 po času družine in ves ta dan (`birthday.is_today`). **Enkrat na ljubljenčka.** Ljubljenček, ki pride star 12 mesecev ali več, prvega rojstnega dne v simulaciji nima (`birthday: null`); prav tako star (legacy) profil brez starosti.
+
+**Rezultat analize (vse pasme, parametri `breed_stage_params` iz `data.json`, 21. 10. 2026):**
+
+| Vrsta / pasme | Prihod: mladiček | Prihod: mlad | Prihod: odrasel | Prihod: senior |
+|---|---|---|---|---|
+| Vseh 50 pasem psov (tudi mešanček; vse imajo mladička 2 m, mladega 9 m, odraslega 36 m, seniorja 54–131 m) | 2 m → **1 leto v 10. tednu (dan 70)** ✅ v izzivu | 9 m → **1 leto v 3. tednu (dan 21)** ✅ v izzivu | 36 m → ni (že starejši od 1 leta) | ni |
+| Domača mačka (mešanka) | 2 m → **10. teden (dan 70)** ✅ | 12 m → ni (pride stara točno 1 leto) | 84 m → ni | 120 m → ni |
+| Maine coon, britanska kratkodlaka, ragdoll, sibirska, norveška gozdna, bengalska (pasemski mucki, 12–13 tednov) | 3 m → **9. teden (dan 63)** ✅ | 12 m → ni | 84 m → ni | 120 m → ni |
+
+**Odgovor Davidu:** rojstni dan **ni le** za brezplačnega ljubljenčka, ki ostane — **dobi ga vsak mladiček / mucek in vsak mlad pes** v 12-tedenskem izzivu (pes ob prihodu pri 9 mesecih že v 3. tednu). Brez njega so odrasli in starejši psi, mlade / odrasle / starejše mačke (mlada mačka pride pri 12 mesecih) — tudi pri brezplačnem ljubljenčku, ki ostane, ker gre samo za *prvi* rojstni dan. Zaklep zaradi plačila datum zamakne za čas zaklepa.
+
+**Izvedba (Claudov predlog, M5-T13):**
+- Strežnik: `PetBirthdayService` (datum, `processDue()` v `pets:process-decay`), `pets.birthday_celebrated_at` (enkrat, atomsko pod zaklepom vrstice) + `birthday_next_check_at` (tik ne računa vsako minuto), `birthday {date, is_today, celebrated}` v stanju otroka, pregledu staršev in `PetUpdated` (dodatno), dogodek `pet_birthday`.
+- Obvestilo `pet_birthday` otrokom in staršem: naslov = ime ljubljenčka (če ga ima), besedilo brez imena, podatki `{type, pet_id}`, običajna prioriteta; **čez tihe ure se zadrži** (ne zavrže) — dan se začne ob polnoči, ki je skoraj vedno v nočnem oknu. Med zaklepom (trdi stop, bolezen) se rojstni dan počaka; če je zaklenjen ves dan, ga ni. Med čakanjem na plačilo `is_today` = false.
+- Otrok: **klobuček** nad ljubljenčkom ves dan (narisan v aplikaciji, brez novih AI medijev; ne čez zaklep), **kartica** »Vse najboljše, Luna!« se odpre sama enkrat na ljubljenčka, nato s pritiskom na klobuček: starost (»Luna ima danes 1 leto.« — z imenom spolno nevtralno kot pri pripravi, David 21. 10.; brez imena »Tvoj kuža je danes star 1 leto.« / »Tvoja muca je danes stara 1 leto.«), **varna torta** (pes: »pasja poslastica brez čokolade in brez sladkarij«; muca: »mačja poslastica brez čokolade in brez mleka«) in **namig z virom**. Ime nikoli sklanjano (nagovor / osebek v imenovalniku). Starš: vrstica »Luna danes praznuje prvi rojstni dan.« v podrobnostih otroka.
+- **Namigi in viri** (splošno znana varnostna dejstva — brez opombe »ni preverjeno pri veterinarju«):
+  - Pes — »Čokolada je za pse strupena. Vsebuje teobromin – in temnejša kot je čokolada, bolj je nevarna.« Vir: U.S. FDA, *Leave Chocolate Out of Rover's Celebrations* (https://www.fda.gov/animal-veterinary/animal-health-literacy/leave-chocolate-out-rovers-celebrations): »Chocolate is made from cocoa, which naturally contains two compounds that are toxic to dogs, theobromine and caffeine.« / »the darker the chocolate, the higher the cocoa content, and therefore, the more theobromine«.
+  - Muca — »Mleko ni poslastica za odraslo muco: odrasle muce ga ne prebavijo dobro in jih lahko boli trebušček. Tudi čokolada je za muce strupena.« Vira: Agriculture Victoria, *Human foods to avoid for cats* (https://agriculture.vic.gov.au/livestock-and-animals/animal-welfare-victoria/cats/health/human-foods-to-avoid-for-cats): »Adult cats do not possess significant amounts of lactase … milk and other dairy based products can cause diarrhoea or other digestive upset.« / »Chocolate contains theobromine … and caffeine which are toxic to cats.«; ASPCA, *People Foods to Avoid Feeding Your Pets* (https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets).
+- **Prihodnje delo:** rojstnodnevni klip ljubljenčka (AI video s klobučkom) — M5-T08+; zdaj klobuček riše aplikacija čez obstoječe medije.
+
 ## 10. Igre
 
 - Kratkoročno: če manjka katerikoli klip igre, je igra **onemogočena** (»Igra se še pripravlja«), nikoli napol delujoča.

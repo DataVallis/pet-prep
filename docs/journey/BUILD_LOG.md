@@ -19,6 +19,15 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 🤝 Partnerji (šole, društva): PetPrep lahko uporabljajo tudi otroci na vozičku.
 - 🛠 Tehnično: HealthKit `PushCount` / Health Connect `WheelchairPushes` (vsak s svojim dovoljenjem samo za branje), strežnik dobi `unit: pushes`, protigoljufija in idempotentnost na otroka nespremenjeni; razmerje 1 : 1, ker avtoritativnega vira ni (55 potiskov / min za zmerno intenzivnost — Rice 2021 — je mera intenzivnosti, ne dnevnega cilja). *Branje potiskov pride z naslednjim native buildom.*
 
+## 2026-10-21 — Rojstni dan: ljubljenček dopolni 1 leto
+
+**Kaj:** ko ljubljenček po starosti simulacije dopolni 1 leto, ima ves dan na glavi rojstnodnevni klobuček, otrok pa dobi kartico »Vse najboljše, Luna!« z varno »torto« (pasja ali mačja poslastica brez čokolade) in namigom z virom — »Čokolada je za pse strupena« (FDA), pri muci »Mleko ni poslastica za odraslo muco« (Agriculture Victoria, ASPCA). Enkrat na ljubljenčka dobita obvestilo otrok in starš.
+**Zakaj je pomembno:** praznik, ki ga otrok doživi zaradi svoje skrbi, in hkrati ena resnična, uporabna lekcija o varnosti hrane — ravno takrat, ko bi doma kdo psu ponudil kos torte.
+- 👩 Starši: obvestilo »Kuža danes praznuje prvi rojstni dan.« (zadržano čez tihe ure) in vrstica v podrobnostih otroka.
+- 🧒 Otroci: klobuček, »Vse najboljše, Luna!«, torta brez čokolade in »Ali si vedel?«.
+- 💼 Investitorji: ura simulacije je dovolj natančna, da praznik pride na pravi dan: vsak mladiček psa (dan 70) ali pasemski mucek (dan 63) in vsak mlad pes (dan 21) praznuje v 12-tedenskem izzivu — 50 pasem psov in 7 mačk preverjenih iz istih podatkov, po katerih teče igra.
+- 🛠 Tehnično: datum iz iste formule starosti kot življenjska obdobja (čas čakanja na plačilo ne šteje), praznovanje atomsko enkrat na ljubljenčka, brez novih AI stroškov (klobuček riše aplikacija; posnetek pride z M5-T08+).
+
 ## 2026-10-21 — Česanje kot strgalna srečka
 
 **Kaj:** ko otrok češe kužka ali muco, krtača zdaj sledi prstu, iz dlake se pokažejo iskrice, »umazane« lise (šest, dve na vsak korak: glava in vrat, hrbet, boki in rep) z vsako potezo zbledijo, vrstica »Počesano« pa se polni do 100 %. Kdor ne more potegniti s prstom, pridrži prst na ljubljenčku ali gumb »Počeši enkrat« — česanje teče samo. VoiceOver in TalkBack imata dejanje »Počeši«.

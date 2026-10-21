@@ -171,6 +171,8 @@ export interface PetUpdatedBroadcast {
   socialisation?: unknown;
   /** M5-T06 `{ready, pending, preparing, running, ready_at}`; missing from older servers. Read via `readPreparation`. */
   preparation?: unknown;
+  /** M5-T13 `{date, is_today, celebrated}` or null; missing from older servers. Read via `readBirthday`. */
+  birthday?: unknown;
   event_type: string | null;
   updated_at: string | null;
   /** When the server emitted this snapshot (ms precision); newer wins. */

@@ -135,6 +135,10 @@ import { profileHeaderA11y, profileSheetRows } from '@/modules/petProfile/profil
 import PetProfileSheet from '@/components/PetProfileSheet';
 import CareGuideSheet from '@/modules/careGuide/CareGuideSheet';
 import { useCareGuide } from '@/modules/careGuide/careGuideSeen';
+import BirthdayCard from '@/modules/birthday/BirthdayCard';
+import BirthdayHat from '@/modules/birthday/BirthdayHat';
+import { showBirthdayHat } from '@/modules/birthday/birthday';
+import { useBirthdayCard } from '@/modules/birthday/birthdaySeen';
 import ChildLanguageSheet from '@/components/ChildLanguageSheet';
 import ChildCertificateSheet from '@/components/ChildCertificateSheet';
 import { CERTIFICATE_CHILD_STRINGS, childCertificateEntry } from '@/modules/certificate/certificate';
@@ -448,6 +452,9 @@ export default function ChildHudScreen() {
   // M5-T06: the set-up screen covers the HUD (capped: a clip that hangs never blocks the pet).
   const preparingNow = usePreparationScreen(view?.pet.id ?? null, view ? showPreparationScreen(view.pet.preparation, view.lock.is_locked) : false);
   const careGuide = useCareGuide(view?.pet.id ?? null, view?.care_guide != null && !view.lock.is_locked && !preparingNow);
+  // M5-T13 (spec §9): the first birthday — party hat all day, the card opens by itself once per pet.
+  const birthdayToday = view ? showBirthdayHat(view.pet.birthday, view.lock.is_locked) && !preparingNow : false;
+  const birthdayCard = useBirthdayCard(view?.pet.id ?? null, birthdayToday && !careGuide.visible);
   // M5-T06 (spec §13): »Vse je pripravljeno: [ime]« once per pet when the shown preparation ends
   // (the server also sends one push). Through the message queue like every HUD message.
   const skewMs = view?.clockSkewMs ?? 0;
@@ -555,7 +562,7 @@ export default function ChildHudScreen() {
   const facts = useFactMoment({
     view,
     // M5-T03: the card also waits until the message queue is empty (care confirmation first).
-    overlayOpen: dockLayerOpen || isProfileVisible || isLanguageVisible || isCertificateVisible || isSocialisationVisible || careGuide.visible || toast !== null || preparingNow,
+    overlayOpen: dockLayerOpen || isProfileVisible || isLanguageVisible || isCertificateVisible || isSocialisationVisible || careGuide.visible || birthdayCard.visible || toast !== null || preparingNow,
     dockCovered: dockLayerOpen,
   });
 
@@ -763,6 +770,12 @@ export default function ChildHudScreen() {
         />
 
         {showHearts && <HeartsLayer reduceMotion={reduceMotion} />}
+        {/* M5-T13: the party hat over the pet on its first birthday (drawn, no AI media). */}
+        {birthdayToday && !coveredByOverlay && (
+          <View pointerEvents="box-none" style={[styles.birthdayHatSlot, { top: layout.metricsTop }]}>
+            <BirthdayHat onPress={birthdayCard.open} reduceMotion={reduceMotion} />
+          </View>
+        )}
 
         {/* Glassmorphism top status bar */}
         <View style={[styles.topBar, { top: layout.headerTop }]} onLayout={onHeaderLayout} testID="hud-header">
@@ -1253,6 +1266,12 @@ export default function ChildHudScreen() {
         timezone={view.timezone}
         onClose={() => setSocialisationVisible(false)}
       />
+      <BirthdayCard
+        visible={birthdayCard.visible && birthdayToday && !coveredByOverlay && !showGuide}
+        petName={pet.name}
+        species={pet.species}
+        onClose={birthdayCard.close}
+      />
       <PetProfileSheet visible={isProfileVisible && profileRows.length > 0} rows={profileRows} onClose={() => setProfileVisible(false)} />
       {view.care_guide !== null && (
         <CareGuideSheet
@@ -1495,6 +1514,11 @@ const styles = StyleSheet.create({
   },
   toastSlot: {
     zIndex: 30,
+  },
+  birthdayHatSlot: {
+    position: 'absolute',
+    left: 20,
+    zIndex: 21,
   },
   feedbackToast: {
     maxWidth: '100%',

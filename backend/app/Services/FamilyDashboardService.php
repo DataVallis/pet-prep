@@ -260,6 +260,8 @@ class FamilyDashboardService
                     'care_guide' => CareGuidePayload::for($pet, null, $profile)->toArray(),
                     // M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too) — same rows.
                     'preparation' => PreparationPayload::for($pet, $slots)->toArray(),
+                    // M5-T13: the pet's first birthday (the parent card shows it on the day).
+                    'birthday' => BirthdayPayload::for($pet)?->toArray(),
                 ], $this->scores->petSummary($board, $pet));
             })->values()->all(),
         ];

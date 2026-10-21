@@ -215,6 +215,8 @@ describe('PetUpdated event shape', function () {
             'play',
             // M5-T06: readiness summary.
             'preparation',
+            // M5-T13: first birthday (null when none).
+            'birthday',
             // M5-R06-04 cat wand play (additive; null for a dog)
             'wand',
             // M5-R06-05 cat litter / grooming / scratching (additive; null for a dog)

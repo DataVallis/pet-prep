@@ -218,11 +218,24 @@ return [
             'parent' => 'Muca je odšla v zavetišče, ker 24 ur ni dobila nujne skrbi. V aplikaciji izberite, kako naprej.',
         ],
 
+        // M5-T13: prvi rojstni dan (naslov je ime, besedilo brez imena).
+        'pet_birthday' => [
+            'child' => 'Vse najboljše! Tvoja muca je danes stara 1 leto. Pridi praznovat!',
+            'parent' => 'Muca danes praznuje prvi rojstni dan. Praznovanje si oglejte v aplikaciji.',
+        ],
+
         'payment_required' => [
             'child' => 'Igra počaka na starša. Tvoja muca je na varnem in počiva.',
             'parent' => 'Brezplačni preizkus je končan. Muca varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva.',
             'parent_no_trial' => 'Muca varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva.',
         ],
+    ],
+
+    // M5-T13 (APP_REFINEMENT_SPEC §9, David 20. 10. 2026): ljubljenček je po formuli starosti
+    // simulacije dopolnil 1 leto. Naslov je ime (če ga ima), besedilo nikoli. Staršem »vi«.
+    'pet_birthday' => [
+        'child' => 'Vse najboljše! Tvoj kuža je danes star 1 leto. Pridi praznovat!',
+        'parent' => 'Kuža danes praznuje prvi rojstni dan. Praznovanje si oglejte v aplikaciji.',
     ],
 
     // M5-T06 (APP_REFINEMENT_SPEC §13, David 20. 10. 2026): priprava je končana. Naslov je ime

@@ -3752,6 +3752,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -4431,6 +4450,25 @@ export interface operations {
                                  */
                                 announce: boolean;
                             };
+                            /**
+                             * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                             *     null when it has none in the simulation. `is_today` = party hat all day.
+                             */
+                            birthday: {
+                                /**
+                                 * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                 *     (arrival age + one month per program week; payment-lock time does not count, so
+                                 *     the date moves later while the pet waits for payment).
+                                 */
+                                date: string;
+                                /**
+                                 * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                 *     tip the whole day. False while the pet waits for payment.
+                                 */
+                                is_today: boolean;
+                                /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                celebrated: boolean;
+                            } | null;
                         };
                         lock: {
                             is_locked: boolean;
@@ -5130,6 +5168,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -5827,6 +5884,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -6524,6 +6600,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -7221,6 +7316,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -7918,6 +8032,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -8619,6 +8752,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -9320,6 +9472,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -10021,6 +10192,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -10718,6 +10908,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -11419,6 +11628,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -12116,6 +12344,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -12813,6 +13060,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -13514,6 +13780,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -14211,6 +14496,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -14912,6 +15216,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -15609,6 +15932,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -16310,6 +16652,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -17011,6 +17372,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -17712,6 +18092,25 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                             };
                             lock: {
                                 is_locked: boolean;
@@ -19245,6 +19644,22 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /** @description M5-T13: the pet's first birthday (the parent card shows it on the day). */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                                 traffic_light: {
                                     /** @constant */
                                     color: "yellow";
@@ -19622,6 +20037,22 @@ export interface operations {
                                      */
                                     announce: boolean;
                                 };
+                                /** @description M5-T13: the pet's first birthday (the parent card shows it on the day). */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
                                 traffic_light: {
                                     /** @constant */
                                     color: "yellow";

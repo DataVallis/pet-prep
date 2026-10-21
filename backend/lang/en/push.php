@@ -216,11 +216,24 @@ return [
             'parent' => 'The cat has gone to a shelter because it went 24 hours without essential care. Choose how to continue in the app.',
         ],
 
+        // M5-T13: the first birthday (title = name, body without it).
+        'pet_birthday' => [
+            'child' => 'Happy birthday! Your kitty is 1 year old today. Come and celebrate!',
+            'parent' => 'The kitty turns 1 today. See the celebration in the app.',
+        ],
+
         'payment_required' => [
             'child' => 'The game is waiting for your parent. Your cat is safe and resting.',
             'parent' => 'The free trial has ended. The cat is waiting safely until you unlock the 12-week challenge in the app.',
             'parent_no_trial' => 'The cat is waiting safely until you unlock the 12-week challenge in the app.',
         ],
+    ],
+
+    // M5-T13 (APP_REFINEMENT_SPEC §9, David 2026-10-20): the pet turned 1 by the simulation's
+    // age formula. Title = the pet's name (when set); the body never names it.
+    'pet_birthday' => [
+        'child' => 'Happy birthday! Your pup is 1 year old today. Come and celebrate!',
+        'parent' => 'The pup turns 1 today. See the celebration in the app.',
     ],
 
     // M5-T06 (APP_REFINEMENT_SPEC §13, David 2026-10-20): the preparation ended. The title is the

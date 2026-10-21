@@ -45,6 +45,7 @@ import { normalizePetMedia, toBreedType } from '@/modules/petMedia/petMedia';
 import { isSpecies } from '@/modules/species/species';
 import { reportSocialisationLine } from '@/modules/socialisation/socialisation';
 import { parentPreparationTitle, preparationBody, readPreparation } from '@/modules/preparation/preparation';
+import { parentBirthdayLine, readBirthday } from '@/modules/birthday/birthday';
 import PetMediaView from '@/components/PetMediaView';
 import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
 import CertificateCard from '@/components/parent/CertificateCard';
@@ -207,6 +208,8 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
   const media = useMemo(() => (hasPet ? normalizePetMedia(petMediaRaw) : null), [hasPet, petMediaRaw]);
   const albumAvailable = media !== null && hasAlbum(media);
   const preparation = readPreparation((pet as { preparation?: unknown } | null)?.preparation);
+  // M5-T13: the pet's first birthday — one line on the day.
+  const birthday = readBirthday((pet as { birthday?: unknown } | null)?.birthday);
   const petProfileRaw: unknown = pet?.profile;
   const profile = useMemo(() => readPetProfile(petProfileRaw), [petProfileRaw]);
   const showAlbum = albumOpen && albumAvailable;
@@ -279,6 +282,11 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
             <View style={styles.preparing} testID="detail-pet-preparing" accessible accessibilityRole="text">
               <Text style={styles.strong}>{parentPreparationTitle(pet.name, pet.species)}</Text>
               <Text style={styles.muted}>{preparationBody()}</Text>
+            </View>
+          )}
+          {pet !== null && birthday?.isToday === true && (
+            <View style={styles.preparing} testID="detail-pet-birthday" accessible accessibilityRole="text">
+              <Text style={styles.strong}>{parentBirthdayLine(pet.name, pet.species)}</Text>
             </View>
           )}
           {albumAvailable && (
