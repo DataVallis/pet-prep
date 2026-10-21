@@ -1,7 +1,8 @@
 /**
  * "Kaj je dovoljeno kdaj" — ONE rules table for every action of the child HUD (M5-T02,
  * APP_REFINEMENT_SPEC §8, David 2026-10-20: when the pet sleeps, play AND school are off;
- * a disabled button always shows its reason, e.g. »💤 Kuža spi do 07:00«).
+ * 2026-10-21 (M5-T02b, »spečo žival ne motimo«): also cuddling and brushing; a disabled
+ * button always shows its reason, e.g. »💤 Kuža spi do 7:00«).
  *
  * The SERVER decides; this table only reads its flags and names the reason. It never
  * re-derives a game rule (feed windows, water gap, budgets …). What it adds: the sleeping
@@ -15,10 +16,11 @@
  * | clean         | hygiene / messes                 | lock · nothing to clean ("Čisto") · only a chewed slipper / sofa |
  * | take_out      | `behaviour.can_take_out`         | lock (puppy only — no button otherwise)                          |
  * | walk          | not locked                       | lock (steps count any time, also while the pet sleeps)           |
- * | play / cuddle | `play.can_play`                  | lock · SLEEPING (until wake) · mess · other                      |
+ * | play / cuddle | `play.can_play`                  | lock · SLEEPING (until wake, `play_pet_sleeping`) · mess · other |
  * | training      | `training.can_start`             | lock · SLEEPING (until wake) · session running · budget / share  |
  * |               | + `blocked_reason`               | used · day ending                                                |
- * | grooming      | `grooming.can_start`             | lock · SLEEPING (`grooming_quiet_hours`) · done today / week     |
+ * | grooming      | `grooming.can_start`             | lock · SLEEPING (`grooming_quiet_hours`, until wake; dog + cat)  |
+ * |               |                                  | · done today / week · another game                               |
  * | wand (cat)    | `wand.can_start`                 | lock · SLEEPING (`wand_quiet_hours`) · 2 h gap · another game    |
  * | scoop (cat)   | `litter.can_scoop`               | lock · tray clean                                                |
  * | socialisation | `socialisation.can_record`       | lock · SLEEPING (`socialisation_quiet_hours`) · week done        |
@@ -78,7 +80,7 @@ export interface ActionRule {
   /** The lock behind `reason: 'locked'`. */
   lock?: LockReason;
   /**
-   * Short text for a disabled button ("💤 Kuža spi do 07:00", "Najprej podpiši pogodbo");
+   * Short text for a disabled button ("💤 Kuža spi do 7:00", "Najprej podpiši pogodbo");
    * absent for `server` — that action's own hint ("ob 17:00", "Najprej pospravi") explains it.
    */
   text?: string;
@@ -92,16 +94,10 @@ export const RULE_STRINGS = strings('child', 'rules', {
 const OFF: ActionRule = { enabled: false };
 const ON: ActionRule = { enabled: true };
 
-/** "07:00" → "7:00" (David's example »💤 Kuža spi do 7:00«). */
-function wakeClock(hhmm: string): string {
-  const [h, m] = hhmm.split(':');
-  return `${Number(h)}:${m}`;
-}
-
 /** "💤 Kuža spi do 7:00" (family clock), or "💤 Kuža spi" without a wake time. */
 export function sleepingText(until: string | null, timezone: string | null): string {
   const clock = familyClock(until, timezone);
-  return clock ? RULE_STRINGS.sleepingUntil(wakeClock(clock)) : RULE_STRINGS.sleeping;
+  return clock ? RULE_STRINGS.sleepingUntil(clock) : RULE_STRINGS.sleeping;
 }
 
 /** The lock's title ("Igra počaka na starša", "Kuža je pri veterinarju" …). */
@@ -149,7 +145,7 @@ function fromServer(view: ChildPetView, blockedReason: string | null, nextAllowe
 
 /**
  * The rule for one HUD action now. Server flags are the truth; a lock wins, then sleep for
- * play / school, then the server's own reason.
+ * play / cuddle / school / brushing, then the server's own reason.
  */
 export function actionRule(view: ChildPetView, action: HudAction): ActionRule {
   const lock = locked(view);
@@ -187,9 +183,15 @@ export function actionRule(view: ChildPetView, action: HudAction): ActionRule {
       return fromServer(view, tr.blocked_reason, tr.next_allowed_at);
     }
     case 'grooming': {
+      // M5-T02b (David 2026-10-21, »spečo žival ne motimo«): no brushing (dog or cat)
+      // while the pet sleeps — the server refuses it first (`grooming_quiet_hours`, wake time).
       const g = view.cat.grooming;
       if (g === null) return OFF;
-      return lock ?? (g.can_start || g.session !== null ? ON : fromServer(view, g.blocked_reason, g.next_allowed_at));
+      if (lock) return lock;
+      if (g.can_start || g.session !== null) return ON;
+      // An older server may name another block first (done today …): the sleep explains it.
+      if (view.sleep.asleep) return sleeping(view, g.blocked_reason === 'grooming_quiet_hours' ? (g.next_allowed_at ?? view.sleep.until) : view.sleep.until);
+      return fromServer(view, g.blocked_reason, g.next_allowed_at);
     }
     case 'wand': {
       const w = view.cat.wand;

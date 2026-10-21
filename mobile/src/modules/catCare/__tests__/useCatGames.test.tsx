@@ -373,7 +373,7 @@ describe('useChoreGame', () => {
     const { result } = renderHook(() => useChoreGame('litter_change', viewOf(client), { clock }), { wrapper: wrapperFor(client) });
     act(() => result.current.start());
     await flush();
-    expect(result.current.phase).toMatchObject({ kind: 'failed', message: 'Pesek je ta teden že zamenjan. Naslednja menjava je v četrtek ob 09:30.' });
+    expect(result.current.phase).toMatchObject({ kind: 'failed', message: 'Pesek je ta teden že zamenjan. Naslednja menjava je v četrtek ob 9:30.' });
   });
 });
 

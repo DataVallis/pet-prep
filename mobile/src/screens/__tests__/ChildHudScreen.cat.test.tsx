@@ -222,6 +222,24 @@ describe('ChildHudScreen — cat (M5-R06-08b)', () => {
     expect(useAppStore.getState().playOverlay).toBe('cuddle');
   });
 
+  it('M5-T02b: while the cat sleeps "Počeši" and "Crkljanje" are off with »💤 Muca spi do 7:00«', async () => {
+    await renderHud(
+      catState({
+        pet: { breed_type: 'maine_coon', pet_state: 'sleeping' },
+        sleep: { asleep: true, until: '2026-10-05T07:00:00+02:00' },
+        grooming: makeGroomingState({ can_start: false, blocked_reason: 'grooming_quiet_hours', next_allowed_at: '2026-10-05T07:00:00+02:00' }),
+        play: makePlayState({ can_play: false }),
+      }),
+    );
+    expect(isDisabled('hud-cat-chip-grooming')).toBe(true);
+    expect(screen.queryByTestId('hud-cat-chip-grooming-badge')).toBeNull();
+    expect(screen.getByTestId('hud-cat-chip-grooming').props.accessibilityHint).toBe('💤 Muca spi do 7:00');
+    expect(screen.getByTestId('hud-sleep-note').props.children).toBe('💤 Muca spi do 7:00');
+    fireEvent.press(screen.getByTestId('hud-cat-chip-grooming'));
+    expect(useAppStore.getState().catOverlay).toBeNull();
+    expect(isDisabled('hud-play-open')).toBe(true);
+  });
+
   it('resumes the child\'s own running wand game once (app restarted mid-game)', async () => {
     await renderHud(catState({ wand: makeWandState({ session: makeWandSession(), session_running: true }) }));
     expect(useAppStore.getState().catOverlay).toBe('wand');

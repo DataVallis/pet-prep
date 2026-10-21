@@ -99,7 +99,8 @@ export function formatTrialEnd(iso: string, timeZone: string): string {
       weekday: 'short',
       day: 'numeric',
       month: 'short',
-      hour: '2-digit',
+      // David 2026-10-21: "7:00" style everywhere (no leading zero on the hour).
+      hour: 'numeric',
       minute: '2-digit',
       timeZone,
     }).format(date);

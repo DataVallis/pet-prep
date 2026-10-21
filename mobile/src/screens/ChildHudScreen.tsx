@@ -385,7 +385,7 @@ export default function ChildHudScreen() {
   useEffect(() => {
     if (otherLayerOpen) setPlayOverlay(null);
   }, [otherLayerOpen, setPlayOverlay]);
-  // End of quiet hours as a 422 named it (the child state doesn't carry it) → "Kuža spi do 07:00.".
+  // End of quiet hours as a 422 named it (the child state doesn't carry it) → "Kuža spi do 7:00.".
   const [playSleepsUntil, setPlaySleepsUntil] = useState<string | null>(null);
   // M5-R03 / PR #53: the child's own session is still running (e.g. the app was restarted
   // mid-game) → open "Šola" so the game resumes / is saved. Once per session: closing the
@@ -647,9 +647,17 @@ export default function ChildHudScreen() {
   const hasTraining = !cat && showTrainingEntry(view.training);
   // M5-T02 (David 2026-10-20): while the pet sleeps "Šola" and "Igra" stay visible but off,
   // with one note »💤 Kuža spi do 7:00« (other blocks: the school overlay explains them).
+  // M5-T02b (David 2026-10-21): the same for cuddling ("Crkljanje") and brushing ("Počeši").
   const trainingSleeps = hasTraining && rules.training.reason === 'sleeping';
   const playSleeps = rules.play.reason === 'sleeping';
-  const sleepNote = trainingSleeps ? rules.training.text : playSleeps ? rules.play.text : undefined;
+  const groomingSleeps = rules.grooming.reason === 'sleeping';
+  const sleepNote = trainingSleeps
+    ? rules.training.text
+    : playSleeps
+      ? rules.play.text
+      : groomingSleeps
+        ? rules.grooming.text
+        : undefined;
   // M5-R04: today's feed windows ("nahrani starš" for quiet hours) near the feed button.
   // Profiled pets only (a legacy pet keeps the pre-M5 HUD).
   const mealWindows = pet.profile ? buildMealWindows(view) : [];
@@ -1116,7 +1124,13 @@ export default function ChildHudScreen() {
                           onPress={() => setTrainingVisible(true)} />
                       )}
                       {chips.map((chip) => (
-                        <CatHudChip key={chip.kind} chip={chip} onPress={() => openCat(chip.kind)} />
+                        <CatHudChip
+                          key={chip.kind}
+                          chip={chip}
+                          disabled={chip.kind === 'grooming' && groomingSleeps}
+                          disabledReason={chip.kind === 'grooming' && groomingSleeps ? rules.grooming.text : undefined}
+                          onPress={() => openCat(chip.kind)}
+                        />
                       ))}
                       {socialisationChip && view.socialisation !== null && (
                         <SocialisationChip pending={view.socialisation.can_record} onPress={() => setSocialisationVisible(true)} />

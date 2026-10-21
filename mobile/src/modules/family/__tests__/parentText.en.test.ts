@@ -61,7 +61,7 @@ describe('parent texts in English', () => {
   it('dates and times', () => {
     expect(dayLabel('2026-10-04')).toBe('Sun 4 Oct');
     expect(missedWhenText(makeMissed('clean', '2026-10-03T05:00:00Z', '2026-10-03T05:50:00Z', '2026-10-03'), TZ, '2026-10-04')).toBe(
-      'Sat 3 Oct · due 07:50',
+      'Sat 3 Oct · due 7:50',
     );
     expect(activityWhenText('2026-10-03T18:00:00+02:00', TZ, '2026-10-04')).toBe('yesterday 18:00');
     expect(activityWhenText('2026-10-01T18:00:00+02:00', TZ, '2026-10-04')).toBe('1 Oct 18:00');

@@ -127,10 +127,10 @@ describe('LockedScreen (M1-16)', () => {
     it('without a remembered zone: the device zone', () => {
       const details = { until: UTC_END, timezone: null };
       expect(lockedCopy('illness', details, 'Europe/Ljubljana').body).toBe(LOCKED_STRINGS.illness.body('10:41'));
-      expect(lockedCopy('illness', details, 'America/New_York').body).toBe(LOCKED_STRINGS.illness.body('04:41'));
+      expect(lockedCopy('illness', details, 'America/New_York').body).toBe(LOCKED_STRINGS.illness.body('4:41'));
       // Unknown device zone → the device's local clock (UTC in Jest), still not the string's own clock.
       expect(lockedCopy('illness', { until: '2026-10-06T10:41:01+02:00', timezone: null }, null).body).toBe(
-        LOCKED_STRINGS.illness.body('08:41'),
+        LOCKED_STRINGS.illness.body('8:41'),
       );
     });
   });

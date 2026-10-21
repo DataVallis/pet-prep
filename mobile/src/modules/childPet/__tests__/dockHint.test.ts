@@ -34,20 +34,20 @@ describe('dockWhen', () => {
   });
 
   it('tomorrow: a day line above the bare time; the screen reader gets the full phrase', async () => {
-    expect(dockWhen('2026-10-05T06:00:00+02:00', NOW, TZ)).toEqual({ day: 'jutri', text: '06:00', a11y: 'jutri ob 06:00' });
+    expect(dockWhen('2026-10-05T06:00:00+02:00', NOW, TZ)).toEqual({ day: 'jutri', text: '6:00', a11y: 'jutri ob 6:00' });
     await i18n.changeLanguage('en');
-    expect(dockWhen('2026-10-05T06:00:00+02:00', NOW, TZ)).toEqual({ day: 'tomorrow', text: '06:00', a11y: 'tomorrow at 06:00' });
+    expect(dockWhen('2026-10-05T06:00:00+02:00', NOW, TZ)).toEqual({ day: 'tomorrow', text: '6:00', a11y: 'tomorrow at 6:00' });
   });
 
   it('uses the family zone, not the device zone (New York family, UTC instant)', () => {
-    expect(dockWhen('2026-10-05T10:00:00Z', '2026-10-04T21:30:00-04:00', 'America/New_York')).toMatchObject({ day: 'jutri', text: '06:00' });
+    expect(dockWhen('2026-10-05T10:00:00Z', '2026-10-04T21:30:00-04:00', 'America/New_York')).toMatchObject({ day: 'jutri', text: '6:00' });
   });
 
   it('the time line is short in every language (never needs an ellipsis)', async () => {
     for (const lng of ['sl', 'en']) {
       await i18n.changeLanguage(lng);
       const hint = dockWhen('2026-10-05T06:00:00+02:00', NOW, TZ);
-      expect(hint?.text).toBe('06:00');
+      expect(hint?.text).toBe('6:00');
       expect((hint?.day ?? '').length).toBeLessThanOrEqual(8);
     }
   });
@@ -74,10 +74,10 @@ describe('feed dock hint', () => {
   });
 
   it('tomorrow (sl / en): "jutri" + "06:00", feedHint keeps the full phrase', async () => {
-    expect(feedDockHint(tomorrowFeed())).toEqual({ day: 'jutri', text: '06:00', a11y: 'jutri ob 06:00' });
-    expect(feedHint(tomorrowFeed())).toBe('jutri ob 06:00');
+    expect(feedDockHint(tomorrowFeed())).toEqual({ day: 'jutri', text: '6:00', a11y: 'jutri ob 6:00' });
+    expect(feedHint(tomorrowFeed())).toBe('jutri ob 6:00');
     await i18n.changeLanguage('en');
-    expect(feedDockHint(tomorrowFeed())).toEqual({ day: 'tomorrow', text: '06:00', a11y: 'tomorrow at 06:00' });
+    expect(feedDockHint(tomorrowFeed())).toEqual({ day: 'tomorrow', text: '6:00', a11y: 'tomorrow at 6:00' });
   });
 
   it('emergency meal possible (M3-12): button enabled, label "Nujni obrok" / "Emergency meal", no hint', async () => {
@@ -96,8 +96,8 @@ describe('feed dock hint', () => {
     expect(feedDockHint(tomorrowFeed({ lock: { is_locked: true, reason: 'hard_stopped' } }))).toBeNull();
   });
 
-  it('the refusal toast keeps the full sentence with "jutri ob 06:00"', () => {
-    expect(refusalMessage('outside_feed_window', null, tomorrowFeed())).toContain('jutri ob 06:00');
+  it('the refusal toast keeps the full sentence with "jutri ob 6:00"', () => {
+    expect(refusalMessage('outside_feed_window', null, tomorrowFeed())).toContain('jutri ob 6:00');
   });
 });
 
@@ -117,10 +117,10 @@ describe('puppy "take out" dock hint', () => {
   it('a later family day is two lines; today stays a plain string', async () => {
     const at = (iso: string) => Date.parse(iso);
     const tomorrow = takeOutCountdown(makeTakeOut({ next_due_at: '2026-10-05T07:10:00+02:00' }), at('2026-10-04T21:00:00+02:00'), TZ);
-    expect(tomorrow?.hint).toEqual({ day: 'jutri', text: '07:10', a11y: 'jutri ob 07:10' });
-    expect(tomorrow?.line).toBe('Kuža mora ven najkasneje jutri ob 07:10.');
+    expect(tomorrow?.hint).toEqual({ day: 'jutri', text: '7:10', a11y: 'jutri ob 7:10' });
+    expect(tomorrow?.line).toBe('Kuža mora ven najkasneje jutri ob 7:10.');
     await i18n.changeLanguage('en');
     const en = takeOutCountdown(makeTakeOut({ next_due_at: '2026-10-05T07:10:00+02:00' }), at('2026-10-04T21:00:00+02:00'), TZ);
-    expect(en?.hint).toEqual({ day: 'tomorrow', text: '07:10', a11y: 'tomorrow at 07:10' });
+    expect(en?.hint).toEqual({ day: 'tomorrow', text: '7:10', a11y: 'tomorrow at 7:10' });
   });
 });

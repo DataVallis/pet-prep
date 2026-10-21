@@ -115,9 +115,9 @@ describe('ParentDashboardScreen — family overview (M2-05)', () => {
     expect(screen.getByTestId('child-today-2')).toHaveTextContent(/Opravljeno 2 \(Luka: 1\)/);
     expect(screen.getByTestId('child-today-2')).toHaveTextContent(/Zamujeno 3/);
     expect(screen.getByTestId('child-missed-2-0')).toHaveTextContent(/Hrana/);
-    expect(screen.getByTestId('child-missed-2-0')).toHaveTextContent(/okno 07:00–09:00/);
+    expect(screen.getByTestId('child-missed-2-0')).toHaveTextContent(/okno 7:00–9:00/);
     expect(screen.getByTestId('child-missed-2-1')).toHaveTextContent(/rok 14:30/);
-    expect(screen.getByTestId('child-missed-2-2')).toHaveTextContent(/sob 3\. 10\. · rok 07:50/);
+    expect(screen.getByTestId('child-missed-2-2')).toHaveTextContent(/sob 3\. 10\. · rok 7:50/);
   });
 
   it('red child: game over + fell ill today, illnesses in the score', async () => {

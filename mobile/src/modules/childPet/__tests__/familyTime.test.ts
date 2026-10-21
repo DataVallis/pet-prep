@@ -1,5 +1,6 @@
 import {
   familyCalendar,
+  clockText,
   familyClock,
   isLaterDay,
   isoOffsetMinutes,
@@ -11,7 +12,7 @@ import {
 describe('familyCalendar (device on UTC)', () => {
   it('Ljubljana: day and midnight differ from the device day', () => {
     const lj = familyCalendar('Europe/Ljubljana');
-    const lateUtc = Date.parse('2026-10-04T22:30:00Z'); // 00:30 on 5 Oct in Ljubljana
+    const lateUtc = Date.parse('2026-10-04T22:30:00Z'); // 0:30 on 5 Oct in Ljubljana
     expect(new Date(lateUtc).getUTCDate()).toBe(4);
     expect(lj.dateOf(lateUtc)).toBe('2026-10-05');
     expect(new Date(lj.startOfDay(lateUtc)).toISOString()).toBe('2026-10-04T22:00:00.000Z');
@@ -77,8 +78,8 @@ describe('familyTime', () => {
   });
 
   it('follows DST: 25 Oct 2026 after the fall-back is UTC+1 in Ljubljana', () => {
-    expect(familyClock('2026-10-25T05:00:00Z', 'Europe/Ljubljana')).toBe('06:00');
-    expect(familyClock('2026-10-24T04:00:00Z', 'Europe/Ljubljana')).toBe('06:00');
+    expect(familyClock('2026-10-25T05:00:00Z', 'Europe/Ljubljana')).toBe('6:00');
+    expect(familyClock('2026-10-24T04:00:00Z', 'Europe/Ljubljana')).toBe('6:00');
   });
 
   it('falls back to the wall clock in the string for an unknown zone', () => {
@@ -89,7 +90,7 @@ describe('familyTime', () => {
 
   it('says "jutri" for the next family-local day', () => {
     const now = '2026-10-04T22:00:00+02:00';
-    expect(whenText('2026-10-05T06:00:00+02:00', now, 'Europe/Ljubljana')).toBe('jutri ob 06:00');
+    expect(whenText('2026-10-05T06:00:00+02:00', now, 'Europe/Ljubljana')).toBe('jutri ob 6:00');
     expect(whenText('2026-10-04T23:30:00+02:00', now, 'Europe/Ljubljana')).toBe('ob 23:30');
     expect(isLaterDay('2026-10-05T00:00:00+02:00', now, 'Europe/Ljubljana')).toBe(true);
     expect(isLaterDay('2026-10-04T23:00:00+02:00', now, 'Europe/Ljubljana')).toBe(false);
@@ -97,6 +98,23 @@ describe('familyTime', () => {
 
   it('uses the family day, not the UTC day (New York evening is already tomorrow in UTC)', () => {
     const now = '2026-10-04T19:00:00-04:00'; // 23:00Z
-    expect(whenText('2026-10-04T21:00:00-04:00', now, 'America/New_York')).toBe('ob 21:00'); // 01:00Z next day
+    expect(whenText('2026-10-04T21:00:00-04:00', now, 'America/New_York')).toBe('ob 21:00'); // 1:00Z next day
+  });
+});
+
+describe('clockText — "7:00" everywhere (David 2026-10-21)', () => {
+  it('drops the leading zero of the hour, keeps two-digit minutes, leaves anything else alone', () => {
+    expect(clockText('07:00')).toBe('7:00');
+    expect(clockText('09:30')).toBe('9:30');
+    expect(clockText('00:05')).toBe('0:05');
+    expect(clockText('17:00')).toBe('17:00');
+    expect(clockText('7:00')).toBe('7:00');
+    expect(clockText('later')).toBe('later');
+  });
+
+  it('family clock, lock clock and the device fallback all use it (incl. midnight)', () => {
+    expect(familyClock('2026-10-04T22:00:00Z', 'Europe/Ljubljana')).toBe('0:00');
+    expect(familyClock('2026-10-05T05:00:00Z', 'Europe/Ljubljana')).toBe('7:00');
+    expect(lockClock('2026-10-05T07:00:00+02:00', 'Europe/Ljubljana')).toBe('7:00');
   });
 });

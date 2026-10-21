@@ -4,7 +4,7 @@
  * is always a line of its own, so it can never be cut:
  *
  * - today:      "ob 17:00" / "at 17:00"            (one line)
- * - tomorrow:   "jutri" / "tomorrow" above "06:00"  (two lines: `day` + `text`)
+ * - tomorrow:   "jutri" / "tomorrow" above "6:00"  (two lines: `day` + `text`)
  * - other text: "Najprej pospravi", "Čisto", "4.857/4.000" (one or two lines)
  *
  * `a11y` keeps the full phrase for screen readers ("jutri ob 06:00"); toasts and refusal
@@ -12,14 +12,14 @@
  */
 
 import { t } from '@/i18n';
-import { localParts } from '@/modules/childPet/familyTime';
+import { clockText, localParts } from '@/modules/childPet/familyTime';
 
 export interface DockHint {
   /** Small day line above the main line ("jutri" / "tomorrow"); null = today / no day. */
   day: string | null;
-  /** Main line: a time ("06:00", "ob 17:00") or a short text. */
+  /** Main line: a time ("6:00", "ob 17:00" — `clockText`) or a short text. */
   text: string;
-  /** Full phrase for the screen reader ("jutri ob 06:00"). */
+  /** Full phrase for the screen reader ("jutri ob 6:00"). */
   a11y: string;
 }
 
@@ -36,7 +36,7 @@ export function toDockHint(hint: string | DockHint | null | undefined): DockHint
 }
 
 /**
- * Dock hint for an instant in the family zone: "ob 17:00" today, "jutri" + "06:00" on a
+ * Dock hint for an instant in the family zone: "ob 17:00" today, "jutri" + "6:00" on a
  * later family day (the child only needs the hour — same rule as `whenText`). Null for a
  * missing / broken instant.
  */
@@ -48,10 +48,10 @@ export function dockWhen(iso: string | null, nowIso: string | null, timeZone: st
   if (now && target.date > now.date) {
     return {
       day: t('child:hints.tomorrow'),
-      text: target.time,
-      a11y: t('child:time.tomorrowAt', { time: target.time }),
+      text: clockText(target.time),
+      a11y: t('child:time.tomorrowAt', { time: clockText(target.time) }),
     };
   }
-  const at = t('child:time.at', { time: target.time });
+  const at = t('child:time.at', { time: clockText(target.time) });
   return { day: null, text: at, a11y: at };
 }

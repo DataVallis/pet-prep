@@ -8,7 +8,7 @@
  * No game rule is re-implemented here.
  */
 
-import { familyClock, localParts } from '@/modules/childPet/familyTime';
+import { clockText, familyClock, localParts } from '@/modules/childPet/familyTime';
 import { BEHAVIOUR_KINDS, PARENT_BEHAVIOUR_STRINGS, type BehaviourKind } from '@/modules/behaviour/behaviour';
 import { playTimelineText } from '@/modules/play/play';
 import { hasGroomingRoutine } from '@/modules/species/species';
@@ -484,7 +484,7 @@ export function weekdayShort(date: string): string {
 
 /**
  * When a missed routine was due, in the family's wall clock:
- * feed → "okno 07:00–09:00", clean → "rok 14:30", water / walk → "do konca dneva".
+ * feed → "okno 7:00–9:00", clean → "rok 14:30", water / walk → "do konca dneva".
  * A routine from another day than `today` gets its date in front.
  */
 export function missedWhenText(item: MissedRoutine, timezone: string | null, today: string | null = null): string {
@@ -543,21 +543,21 @@ export function activityText(
   return entry.actor_nickname ? `${entry.actor_nickname} ${label}` : label.charAt(0).toUpperCase() + label.slice(1);
 }
 
-/** "07:15" today, "včeraj 07:15", else "3. 10. 07:15" — family wall clock. */
+/** "7:15" today, "včeraj 7:15", else "3. 10. 7:15" — family wall clock (`clockText`). */
 export function activityWhenText(createdAt: string | null, timezone: string | null, today: string | null): string {
   if (!createdAt) return '';
   const parts = localParts(createdAt, timezone);
   if (!parts) return '';
-  if (today && parts.date === today) return parts.time;
+  if (today && parts.date === today) return clockText(parts.time);
   if (today) {
     const todayMs = Date.parse(`${today}T00:00:00Z`);
     const dayMs = Date.parse(`${parts.date}T00:00:00Z`);
     if (!Number.isNaN(todayMs) && !Number.isNaN(dayMs) && todayMs - dayMs === 86_400_000) {
-      return t('family:date.yesterday', { time: parts.time });
+      return t('family:date.yesterday', { time: clockText(parts.time) });
     }
   }
   const [, m, d] = parts.date.split('-');
-  return t('family:date.dateTime', { date: shortDate(Number(d), Number(m)), time: parts.time });
+  return t('family:date.dateTime', { date: shortDate(Number(d), Number(m)), time: clockText(parts.time) });
 }
 
 /** The family-local date of an instant (`YYYY-MM-DD`), e.g. "today" from a timestamp. */

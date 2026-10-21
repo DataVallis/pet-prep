@@ -101,7 +101,7 @@ describe('"Igra" (feather wand)', () => {
     const gap = catView({ wand: makeWandState({ sessions_today: 1, can_start: false, blocked_reason: 'wand_too_soon', next_allowed_at: '2026-10-04T14:00:00+02:00' }) });
     expect(wandDock(gap)).toMatchObject({ disabled: false, hint: { text: 'ob 14:00' } });
     const night = catView({ wand: makeWandState({ can_start: false, blocked_reason: 'wand_quiet_hours', next_allowed_at: '2026-10-05T07:00:00+02:00' }) });
-    expect(wandDock(night).hint).toEqual({ day: 'jutri', text: '07:00', a11y: 'jutri ob 07:00' });
+    expect(wandDock(night).hint).toEqual({ day: 'jutri', text: '7:00', a11y: 'jutri ob 7:00' });
   });
 
   it('only a timed reason names a time (QA m2): needs_cleaning with a stray next_allowed_at → the count', () => {

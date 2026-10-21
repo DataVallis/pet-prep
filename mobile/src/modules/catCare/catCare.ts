@@ -24,7 +24,7 @@
  */
 
 import type { ChildPetState } from '@/api/client';
-import { localParts } from '@/modules/childPet/familyTime';
+import { clockText, localParts } from '@/modules/childPet/familyTime';
 import { DOG_GROOMING_REFUSALS } from '@/modules/catCare/dogGrooming';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
@@ -639,8 +639,8 @@ function addDays(date: string, days: number): string {
 
 /**
  * When something is allowed again, in the family timezone: "at 17:00" (today),
- * "tomorrow at 06:00", "on Tuesday at 14:05" (within the next week — the weekly litter
- * change / grooming) — Slovenian "ob 17:00", "jutri ob 06:00", "v torek ob 14:05".
+ * "tomorrow at 6:00", "on Tuesday at 14:05" (within the next week — the weekly litter
+ * change / grooming) — Slovenian "ob 17:00", "jutri ob 6:00", "v torek ob 14:05".
  * null for a missing / broken instant.
  */
 export function catWhen(isoAt: string | null, nowIso: string | null, timeZone: string | null): string | null {
@@ -648,10 +648,11 @@ export function catWhen(isoAt: string | null, nowIso: string | null, timeZone: s
   const at = localParts(isoAt, timeZone);
   if (at === null) return null;
   const now = nowIso !== null ? localParts(nowIso, timeZone) : null;
-  if (now === null || at.date <= now.date) return t('cat:time.at', { time: at.time });
-  if (at.date === addDays(now.date, 1)) return t('cat:time.tomorrowAt', { time: at.time });
+  const time = clockText(at.time);
+  if (now === null || at.date <= now.date) return t('cat:time.at', { time });
+  if (at.date === addDays(now.date, 1)) return t('cat:time.tomorrowAt', { time });
   const weekday = WEEKDAYS[new Date(`${at.date}T00:00:00Z`).getUTCDay()];
-  return t('cat:time.weekdayAt', { weekday: t(`cat:time.weekdays.${weekday}`), time: at.time });
+  return t('cat:time.weekdayAt', { weekday: t(`cat:time.weekdays.${weekday}`), time });
 }
 
 // ── Refusals (422) → child text ───────────────────────────────

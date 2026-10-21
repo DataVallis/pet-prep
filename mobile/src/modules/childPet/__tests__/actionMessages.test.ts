@@ -93,10 +93,10 @@ describe('refusalMessage (family timezone)', () => {
     expect(refusalMessage('outside_feed_window', null, ny)).toBe('Naslednji obrok je ob 17:00.');
   });
 
-  it('after the evening window → "jutri ob 06:00"', () => {
+  it('after the evening window → "jutri ob 6:00"', () => {
     const late = normalizeChildState(makeLiveChildState({ server_time: '2026-10-04T21:30:00+02:00' }));
     expect(refusalMessage('already_fed_this_window', '2026-10-05T06:00:00+02:00', late)).toBe(
-      'Kuža je že jedel. Spet ga nahraniš jutri ob 06:00.',
+      'Kuža je že jedel. Spet ga nahraniš jutri ob 6:00.',
     );
   });
 

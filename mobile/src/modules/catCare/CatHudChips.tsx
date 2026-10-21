@@ -17,18 +17,25 @@ import { MIN_TOUCH, alpha, palette } from '@/theme';
 export interface CatHudChipProps {
   chip: CatChip;
   onPress: () => void;
+  /** M5-T02b: "Počeši" is off while the pet sleeps (David 2026-10-21). */
+  disabled?: boolean;
+  /** Why it is off (»💤 Muca spi do 7:00«) — read out with the button. */
+  disabledReason?: string;
 }
 
-export function CatHudChip({ chip, onPress }: CatHudChipProps) {
+export function CatHudChip({ chip, onPress, disabled = false, disabledReason }: CatHudChipProps) {
   const Icon = chip.kind === 'grooming' ? Brush : Recycle;
   return (
     <Pressable
       testID={`hud-cat-chip-${chip.kind}`}
       accessibilityRole="button"
       accessibilityLabel={chip.a11y}
+      accessibilityHint={disabled ? disabledReason : undefined}
+      accessibilityState={{ disabled }}
+      disabled={disabled}
       onPress={onPress}
       hitSlop={6}
-      style={({ pressed }) => [styles.chip, pressed && styles.pressed]}
+      style={({ pressed }) => [styles.chip, pressed && styles.pressed, disabled && styles.disabled]}
     >
       <Icon color={palette.mint} size={16} />
       <Text style={styles.text}>{chip.label}</Text>
@@ -100,5 +107,6 @@ const styles = StyleSheet.create({
   },
   firstAidText: { flexShrink: 1, color: palette.n200, fontSize: 12, lineHeight: 17 },
   firstAidTitle: { color: palette.mint, fontWeight: '800' },
+  disabled: { opacity: 0.5 },
   pressed: { opacity: 0.75 },
 });

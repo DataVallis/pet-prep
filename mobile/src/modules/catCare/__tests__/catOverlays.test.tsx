@@ -253,14 +253,14 @@ describe('ChoreOverlay', () => {
   it('weekly litter change: overdue note; done this week → blocked with the next week in words', () => {
     const overdue = viewOf(catState({ litter: makeLitterState({}, { overdue: true }) }));
     const { unmount } = renderWithQuery(<ChoreOverlay kind="litter_change" view={overdue} onClose={jest.fn()} reduceMotion />);
-    expect(screen.getByText('Pesek zamenjaj najkasneje v četrtek ob 09:30.')).toBeTruthy();
+    expect(screen.getByText('Pesek zamenjaj najkasneje v četrtek ob 9:30.')).toBeTruthy();
     expect(screen.getByText(/zato pesek smrdi/)).toBeTruthy();
     unmount();
 
     const done = viewOf(catState({ litter: makeLitterState({}, { done: true, can_start: false, blocked_reason: 'litter_change_done' }) }));
     renderWithQuery(<ChoreOverlay kind="litter_change" view={done} onClose={jest.fn()} reduceMotion />);
     expect(screen.getByText('Menjava peska ta teden je opravljena ✓')).toBeTruthy();
-    expect(screen.getByTestId('cat-litter_change-blocked').props.children).toBe('Pesek je ta teden že zamenjan. Naslednja menjava je v četrtek ob 09:30.');
+    expect(screen.getByTestId('cat-litter_change-blocked').props.children).toBe('Pesek je ta teden že zamenjan. Naslednja menjava je v četrtek ob 9:30.');
     expect(screen.getByTestId('cat-litter_change-start').props.accessibilityState?.disabled).toBe(true);
   });
 

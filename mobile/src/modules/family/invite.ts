@@ -6,7 +6,7 @@
 
 import { ApiError } from '@/api/client';
 import { reasonOf } from '@/modules/pairing/pin';
-import { localParts } from '@/modules/childPet/familyTime';
+import { clockText, localParts } from '@/modules/childPet/familyTime';
 import { shortDate } from '@/modules/family/scoring';
 import { t } from '@/i18n';
 
@@ -32,7 +32,7 @@ export function expiryText(expiresAt: string, timezone: string | null): string |
   const parts = localParts(expiresAt, timezone);
   if (!parts) return null;
   const [, m, d] = parts.date.split('-');
-  return t('family:date.at', { date: shortDate(Number(d), Number(m)), time: parts.time });
+  return t('family:date.at', { date: shortDate(Number(d), Number(m)), time: clockText(parts.time) });
 }
 
 /** Text for the system share sheet (no child data — just the code and where to type it). */
