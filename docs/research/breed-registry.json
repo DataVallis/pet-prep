@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "8e8b36f16f31ffb04990cd2f74f946f31f3c9afbdfba325950280c8490e80f72"
+      "sha256": "8e0bc6dc0ec0cfb2586705f11c18343d7e7ee041a178863e7eba8b12d042547f"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "2deb011ee02ebad3788996eaa6c6739763238d7f772b4cd3f68f2f525f3ea449"
+      "sha256": "c894a8a456e56639634ef5ecdd5af0300660d2f945d55bc893c66a474d11f724"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "16e87f11bbb3568ecb54f4eef200731c561a14afb6ee29fb171c2674c0198c57"
+      "sha256": "2a0b8e12ae3cf82e4a07c554ed1c12951124b3708d6174e6e3f026fdddb78414"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "628bb3b0b65385b66638cdada95b689e93d49b6b7082875e387c088694586624"
+      "sha256": "1d433f772ddcf426a34a263751768647218a29c0cb47efa2e2fc8bc27ff3f942"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "b972ab39562758b3bda2c380e6f73f865c89f64fe28da39c5dc5a785f4832395"
+      "sha256": "08f8a945ccb86936eb631f78e1ed3bff8bb00b0c6ebb79aa6b5aab4a741a26c3"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "8eea69f409fd0e20c4b8967ce8928d1b3f7b4f33c2638423589d54b097156fde"
+      "sha256": "c0680a388aea76bea6233c431d5527a6b87189705986267ca4b90130ef84b39a"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "479985e854ed4abd7d696a72d3d7d5de7fcec2f5377888e5c8cbb6661ea96b7a"
+      "sha256": "0ba7921644d4a0a6146f66ce3478b79af1faef94d4750badd2f2668e2c6d68ca"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -203,7 +203,7 @@
         }
       },
       "status": "available",
-      "breed_count": 47,
+      "breed_count": 48,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -28317,6 +28317,575 @@
       ]
     },
     {
+      "id": "dalmatian",
+      "species": "dog",
+      "order": 47,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Dalmatian",
+        "sl": "Dalmatinec"
+      },
+      "slug": {
+        "en": "dalmatian",
+        "sl": "dalmatinec"
+      },
+      "synonyms": {
+        "en": [
+          "Carriage Dog",
+          "Spotted Coach Dog",
+          "Firehouse Dog",
+          "Dalmatinski pas"
+        ],
+        "sl": [
+          "dalmatinski pas",
+          "dalmatinka",
+          "dalmatin"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S429"
+          ],
+          "ref": "dalmatian.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              56,
+              62
+            ],
+            "female": [
+              54,
+              60
+            ]
+          },
+          "source_ids": [
+            "S428"
+          ],
+          "ref": "dalmatian.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              18,
+              27
+            ],
+            "female": [
+              18,
+              27
+            ]
+          },
+          "source_ids": [
+            "S430"
+          ],
+          "ref": "dalmatian.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "dalmatian.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 13.2,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "dalmatian.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S429"
+          ],
+          "ref": "dalmatian.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S429"
+          ],
+          "ref": "dalmatian.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S429"
+          ],
+          "ref": "dalmatian.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S429"
+          ],
+          "ref": "dalmatian.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S429"
+          ],
+          "ref": "dalmatian.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 39,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "dalmatian.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 153,
+            "group": 6,
+            "section": 3,
+            "origin": "HR"
+          },
+          "source_ids": [
+            "S428"
+          ],
+          "ref": "dalmatian.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "deafness",
+          "source_ids": [
+            "S430"
+          ],
+          "ref": "dalmatian.health.deafness",
+          "confidence": "high"
+        },
+        {
+          "key": "bladder_stones",
+          "source_ids": [
+            "S430"
+          ],
+          "ref": "dalmatian.health.urinary_stones",
+          "confidence": "medium"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S430"
+          ],
+          "ref": "dalmatian.health.atopy",
+          "confidence": "medium"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S430"
+          ],
+          "ref": "dalmatian.health.epilepsy",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S430"
+          ],
+          "ref": "dalmatian.health.hip_dysplasia",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S429",
+              "S430"
+            ],
+            "refs": [
+              "dalmatian.exercise.adult",
+              "dalmatian.suitability.pdsa_active_family"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S429"
+            ],
+            "refs": [
+              "dalmatian.suitability.rkc_size_of_home",
+              "dalmatian.suitability.rkc_size_of_garden"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S429",
+              "S430"
+            ],
+            "refs": [
+              "dalmatian.exercise.adult",
+              "dalmatian.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S430"
+            ],
+            "refs": [
+              "dalmatian.suitability.pdsa_children",
+              "dalmatian.behaviour.family"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S430"
+            ],
+            "refs": [
+              "dalmatian.behaviour.time_alone",
+              "dalmatian.suitability.pdsa_company"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S429",
+              "S430"
+            ],
+            "refs": [
+              "dalmatian.suitability.rkc_shedding",
+              "dalmatian.suitability.pdsa_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 119
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 119
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.dalmatian.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S429"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S429 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.dalmatian.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.dalmatian.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 119 (0.75 × 13.2 y, McMillan 2024 via S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.dalmatian.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 39, Above average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.dalmatian.grooming",
+            "basis_source_ids": [
+              "S429"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Grooming: Once a week«; PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S429"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "hearing_baer",
+            "level": "other_scheme",
+            "source_ids": [
+              "K28"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K28"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K28"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S428",
+        "S429",
+        "S430",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K28"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -32578,6 +33147,27 @@
       "publisher": "The Kennel Club (hosted by The Newfoundland Club)",
       "title": "Newfoundland Breed Health and Conservation Plan (BHCP, version 1, August 2018) (PDF)",
       "url": "https://www.thenewfoundlandclub.co.uk/files/health/Newfoundland_BHCP.pdf"
+    },
+    {
+      "id": "S428",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 153 — Dalmatian (EN PDF, date of publication of the valid standard 13.10.2010)",
+      "url": "https://fci.be/Nomenclature/Standards/153g06-en.pdf"
+    },
+    {
+      "id": "S429",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Dalmatian — breed page (older address; key facts, Breed Watch, health testing)",
+      "url": "https://thekennelclub.org.uk/services/public/breed/display.aspx?id=4087"
+    },
+    {
+      "id": "S430",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Dalmatian breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/dalmatian"
     },
     {
       "id": "C1",
