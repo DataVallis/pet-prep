@@ -140,7 +140,7 @@ describe('POST /api/parent/children/{child}/device-session', function () {
         expect($child->tokens()->count())->toBe(0);
     });
 
-    it('counts as one of the 3 devices, and switching again replaces the shared session instead of pushing out own phones', function () {
+    it('is not one of the 3 own devices, and switching again replaces the shared session', function () {
         [$parent, $child] = dsFamily(); // 1 own phone (PIN login)
         $child->createToken('iPad', ['child']);
         $child->createToken('Galaxy', ['child']); // 3 own devices now
@@ -148,15 +148,31 @@ describe('POST /api/parent/children/{child}/device-session', function () {
         $token = dsParentToken($parent);
 
         $first = dsSession($token, $child->id)->assertOk()->json('token');
-        // MAX_DEVICES = 3: the oldest own phone made room for the shared session.
-        expect($child->tokens()->count())->toBe(ChildProfileService::MAX_DEVICES)
-            ->and($child->tokens()->pluck('id')->all())->not->toContain($ownIds[0]);
+        // The shared session comes on top of the own phones — none of them is pushed out.
+        expect($child->tokens()->count())->toBe(ChildProfileService::MAX_DEVICES + 1)
+            ->and($child->tokens()->pluck('id')->all())->toContain(...$ownIds);
 
         $second = dsSession($token, $child->id)->assertOk()->json('token');
-        expect($child->tokens()->count())->toBe(ChildProfileService::MAX_DEVICES)
+        expect($child->tokens()->count())->toBe(ChildProfileService::MAX_DEVICES + 1)
             ->and(PersonalAccessToken::findToken($first))->toBeNull()
             ->and(PersonalAccessToken::findToken($second))->not->toBeNull()
-            ->and($child->tokens()->pluck('id')->all())->toContain($ownIds[1], $ownIds[2]);
+            ->and($child->tokens()->pluck('id')->all())->toContain(...$ownIds);
+    });
+
+    it('survives new own-phone logins of the child (fix 2026-10-21: the parent phone was signed out every 1–2 days)', function () {
+        [$parent, $child] = dsFamily();
+        $shared = dsSession(dsParentToken($parent), $child->id)->assertOk()->json('token');
+
+        // The child signs in on its own phones again and again (new PIN logins, reinstalls).
+        foreach (range(1, 5) as $i) {
+            $child->createToken("Phone {$i}", ['child']);
+            app(ChildProfileService::class)->pruneDevices($child);
+        }
+
+        expect(PersonalAccessToken::findToken($shared))->not->toBeNull()
+            ->and($child->tokens()->where('name', 'not like', 'shared:p%')->count())->toBe(ChildProfileService::MAX_DEVICES);
+        dsAs($shared);
+        getJson('/api/user')->assertOk()->assertJsonPath('id', $child->id);
     });
 
     it('child logout leaves the parent signed in, and the other way round', function () {
