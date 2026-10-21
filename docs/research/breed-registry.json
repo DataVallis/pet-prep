@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "3fc180aa5a468cddd8e487f945ccbfd024903a0a1562770b7a9b6d36d1ebe218"
+      "sha256": "0cc6b84440e802cc8859162b80fdab0fb5d9911c909169414bed91f68e26848f"
     }
   },
   "suitability_vocabulary": {
@@ -29981,7 +29981,12 @@
           "S444"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "whippet.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
