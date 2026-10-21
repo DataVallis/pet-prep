@@ -226,4 +226,16 @@ describe('runBackgroundStepSync — M5-T12 adapted mode (wheelchair pushes)', ()
     expect(d.syncSteps).toHaveBeenCalledWith({ steps_today: 6400, source: 'healthkit', recorded_at: '2026-10-04T10:00:00+00:00' });
     expect(pushesHealth.readSteps).not.toHaveBeenCalled();
   });
+
+  it('M5-T12 QA M1: compares with my_device_steps_today, not the total incl. parent-logged minutes', async () => {
+    const pushesHealth = makeFakeHealth({ steps: 900, measure: 'pushes' });
+    const d = deps({
+      pushesHealth,
+      getChildPet: jest.fn(async () =>
+        childState({ steps: { my_steps_today: 3500, my_device_steps_today: 500, adapted_mode: true } }),
+      ),
+    });
+    expect(await runBackgroundStepSync(d)).toBe('synced');
+    expect(d.syncSteps).toHaveBeenCalledWith(expect.objectContaining({ steps_today: 900, unit: 'pushes' }));
+  });
 });

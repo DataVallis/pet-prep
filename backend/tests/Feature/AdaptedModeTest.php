@@ -413,17 +413,22 @@ describe('POST /api/parent/children/{child}/walks — the parent logs walk minut
         expect(PetDailyStep::sole()->steps)->toBe(1950)->and($pet->refresh()->daily_step_count)->toBe(1950);
     });
 
-    it('yesterday updates the closed walk row; other days, off-mode, bad input and other families are refused', function () {
+    it('today only: yesterday and older days are refused and never written; off-mode, bad input and other families are refused', function () {
         [$parent, $child, $pet] = amFamily(['arrival_age_months' => 36]);
         test()->actingAs($parent, 'sanctum');
         amWalk($child, 10, '2026-10-14', 'walk-off-00001')->assertStatus(422)->assertJsonPath('reason', 'adapted_mode_off');
 
         $child->forceFill(['adapted_mode' => true])->save();
         PetDailyWalk::create(['pet_id' => $pet->id, 'local_date' => '2026-10-13', 'steps' => 0, 'goal' => 6000, 'achieved' => false, 'birth_day' => false]);
-        amWalk($child, 60, '2026-10-13', 'walk-yday-0001')->assertCreated();
+        // David 2026-10-21: no past days — yesterday is refused and the closed day stays as it was.
+        amWalk($child, 60, '2026-10-13', 'walk-yday-0001')->assertStatus(422)->assertJsonPath('reason', 'date_not_allowed');
         $walk = PetDailyWalk::where('pet_id', $pet->id)->where('local_date', '2026-10-13')->sole();
-        expect($walk->steps)->toBe(6000)->and($walk->achieved)->toBeTrue()
+        expect($walk->steps)->toBe(0)->and($walk->achieved)->toBeFalse()
+            ->and(PetDailyStep::where('local_date', '2026-10-13')->count())->toBe(0)
+            ->and(ParentWalkEntry::count())->toBe(0)
             ->and($pet->refresh()->daily_step_count)->toBe(0);
+        // A future day too.
+        amWalk($child, 10, '2026-10-15', 'walk-tmrw-0001')->assertStatus(422)->assertJsonPath('reason', 'date_not_allowed');
 
         amWalk($child, 10, '2026-10-12', 'walk-old-00001')->assertStatus(422)->assertJsonPath('reason', 'date_not_allowed');
         amWalk($child, 0, '2026-10-14', 'walk-zero-0001')->assertStatus(422)->assertJsonValidationErrors('minutes');
@@ -444,7 +449,6 @@ describe('parent walks — QA round 2 and David\'s rules (2026-10-21)', function
     it('caps the SUM of logged minutes per child and family-local day at 240 (422 daily_limit_reached + remaining); a replay still returns the original', function () {
         [$parent, $child, $pet] = amFamily(['arrival_age_months' => 36]);
         $child->forceFill(['adapted_mode' => true])->save();
-        PetDailyWalk::create(['pet_id' => $pet->id, 'local_date' => '2026-10-13', 'steps' => 0, 'goal' => 6000, 'achieved' => false, 'birth_day' => false]);
         test()->actingAs($parent, 'sanctum');
 
         amWalk($child, 200, '2026-10-14', 'cap-0000-0001')->assertCreated();
@@ -456,11 +460,13 @@ describe('parent walks — QA round 2 and David\'s rules (2026-10-21)', function
         // Idempotent replay of an existing entry after the cap is reached → the original result.
         amWalk($child, 200, '2026-10-14', 'cap-0000-0001')->assertOk()
             ->assertJsonPath('status', 'unchanged')->assertJsonPath('entry.minutes', 200);
-        // The cap is per day: yesterday is untouched.
-        amWalk($child, 240, '2026-10-13', 'cap-0000-0005')->assertCreated();
+        // The next family day has its own 240 minutes.
+        Carbon::setTestNow(Carbon::parse('2026-10-15 10:00:00', 'UTC'));
+        amWalk($child, 240, '2026-10-15', 'cap-0000-0005')->assertCreated();
+        Carbon::setTestNow(Carbon::parse('2026-10-14 10:00:00', 'UTC'));
 
         expect((int) ParentWalkEntry::where('local_date', '2026-10-14')->sum('minutes'))->toBe(240)
-            ->and($pet->refresh()->daily_step_count)->toBe(24000);
+            ->and((int) ParentWalkEntry::where('local_date', '2026-10-15')->sum('minutes'))->toBe(240);
     });
 
     it('423 while the pet is ill or hard-stopped; nothing is written', function (array $state, string $reason) {
@@ -500,22 +506,61 @@ describe('parent walks — QA round 2 and David\'s rules (2026-10-21)', function
             ->assertStatus(404)->assertJsonPath('reason', 'no_pet');
     });
 
-    it('a yesterday entry calls off the walk illness planned for that day', function () {
-        [$parent, $child, $pet] = amFamily(['arrival_age_months' => 36]);
+    it('crossing the goal today: energy 100 %, one walked_pet row with the CHILD as actor', function () {
+        [$parent, $child, $pet] = amFamily(['arrival_age_months' => 36]); // adult mutt: goal 6,000
         $child->forceFill(['adapted_mode' => true])->save();
-        $due = Carbon::parse('2026-10-15 05:00:00', 'UTC'); // end of tonight's quiet hours — not started yet
-        PetDailyWalk::create(['pet_id' => $pet->id, 'local_date' => '2026-10-13', 'steps' => 0, 'goal' => 6000, 'achieved' => false, 'birth_day' => false, 'illness_due_at' => $due]);
-        // The day 13 → 14 is already closed (the tick ran at midnight).
-        $pet->forceFill(['walk_illness_due_at' => $due, 'last_step_reset_at' => now()])->saveQuietly();
         test()->actingAs($parent, 'sanctum');
+        amWalk($child, 30, '2026-10-14', 'goal-000-0001')->assertCreated();
+        expect(ActivityLog::where('activity_type', 'walked_pet')->count())->toBe(0);
+        amWalk($child, 30, '2026-10-14', 'goal-000-0002')->assertCreated();
 
-        amWalk($child, 15, '2026-10-13', 'ill-0000-0001')->assertCreated();
+        $walked = ActivityLog::where('activity_type', 'walked_pet')->sole();
+        expect($walked->actor_user_id)->toBe($child->id)
+            ->and($pet->refresh()->displayMetric('energy_level'))->toBe(100)
+            ->and(ActivityLog::where('activity_type', 'parent_logged_walk')->pluck('actor_user_id')->unique()->all())->toBe([$parent->id]);
+    });
 
-        $walk = PetDailyWalk::where('pet_id', $pet->id)->where('local_date', '2026-10-13')->sole();
-        expect($walk->illness_due_at)->toBeNull()
-            ->and($walk->steps)->toBe(1500)
-            ->and($pet->refresh()->walk_illness_due_at)->toBeNull()
-            ->and($pet->illness_until)->toBeNull();
+    it('shared pet: the logged steps are the child\'s own share (fair share of the walk unchanged for the sibling)', function () {
+        [$parent, $child, $pet] = amFamily(['arrival_age_months' => 36]);
+        $sibling = User::factory()->child()->create(['parent_id' => $parent->id]);
+        app(FamilyService::class)->addCaretaker($pet, $sibling, false);
+        $child->forceFill(['adapted_mode' => true])->save();
+        test()->actingAs($parent, 'sanctum');
+        amWalk($child, 30, '2026-10-14', 'share-00-0001')->assertCreated();
+
+        expect(PetDailyStep::where('user_id', $child->id)->sole()->steps)->toBe(3000)
+            ->and(PetDailyStep::where('user_id', $sibling->id)->count())->toBe(0)
+            ->and($pet->refresh()->daily_step_count)->toBe(3000);
+        // Fair share: 2 caretakers × goal 6,000 → each needs 3,000; the child has it, the sibling does not.
+        $report = fn (User $c) => collect(test()->getJson("/api/parent/children/{$c->id}/report?days=7")->assertOk()->json('daily'))->firstWhere('date', '2026-10-14');
+        expect($report($child)['walk_steps'])->toBe(3000)->and($report($child)['walk_logged_minutes'])->toBe(30)
+            ->and($report($sibling)['walk_steps'])->toBe(0);
+    });
+
+    it('child state: my_device_steps_today excludes parent-logged steps; my_steps_today includes them', function () {
+        [$parent, $child] = amFamily();
+        $child->forceFill(['adapted_mode' => true])->save();
+        amSync($child, 700, 'pushes')->assertOk();
+        app('auth')->forgetGuards();
+        test()->actingAs($parent, 'sanctum');
+        amWalk($child, 20, '2026-10-14', 'dev-0000-0001')->assertCreated();
+        app('auth')->forgetGuards();
+        test()->actingAs($child->refresh(), 'sanctum');
+        test()->getJson('/api/child/pet')->assertOk()
+            ->assertJsonPath('steps.my_steps_today', 2700)
+            ->assertJsonPath('steps.my_device_steps_today', 700);
+    });
+
+    it('the parent timeline names the parent who logged the walk', function () {
+        [$parent, $child, $pet] = amFamily();
+        $parent->forceFill(['name' => 'Mama Ana'])->save();
+        $child->forceFill(['adapted_mode' => true])->save();
+        test()->actingAs($parent, 'sanctum');
+        amWalk($child, 15, '2026-10-14', 'name-000-0001')->assertCreated();
+
+        $pets = test()->getJson('/api/parent/dashboard')->assertOk()->json('family.pets');
+        $row = collect(collect($pets)->firstWhere('id', $pet->id)['timeline'])->firstWhere('activity_type', 'parent_logged_walk');
+        expect($row['actor_user_id'])->toBe($parent->id)->and($row['actor_nickname'])->toBe('Mama Ana')->and($row['value'])->toBe(15);
     });
 
     it('the same entry_id for one child on two pets never 500s: 409 entry_id_conflict, nothing counted twice', function () {

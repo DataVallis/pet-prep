@@ -80,7 +80,6 @@
     "watered_pet": "refilled the water",
     "cleaned_poop": "cleaned up",
     "walked_pet": "reached the walk goal",
-    "parent_logged_walk": "logged a walk",
     "signed_contract": "signed the contract",
     "took_out_pet": "took the dog out",
     "resolved_chewing": "tidied up the slipper and gave a toy",
@@ -201,8 +200,6 @@
     "logWalk": {
       "title": "Log a walk",
       "hint": "Did you go for a walk together? Enter the minutes — each minute counts like 100 steps, at most 240 minutes a day. Your child doesn't need to do anything.",
-      "today": "Today",
-      "yesterday": "Yesterday",
       "placeholder": "30",
       "minutesLabel": "Walk minutes",
       "unit": "min",
@@ -210,13 +207,13 @@
       "invalid": "Enter 1 to 240 minutes.",
       "saved_one": "Saved: {{count}} minute of walking.",
       "saved_other": "Saved: {{count}} minutes of walking.",
-      "dailyLimit_one": "You can log {{count}} more minute for this day (at most 240 minutes a day).",
-      "dailyLimit_other": "You can log {{count}} more minutes for this day (at most 240 minutes a day).",
+      "dailyLimit_one": "You can log {{count}} more minute today (at most 240 minutes a day).",
+      "dailyLimit_other": "You can log {{count}} more minutes today (at most 240 minutes a day).",
       "errors": {
         "adapted_mode_off": "Turn on adapted mode first.",
-        "date_not_allowed": "Only today or yesterday can be logged.",
+        "date_not_allowed": "Only today's walk can be logged — it's a new day now. Please enter it again.",
         "locked": "The pet is resting right now (vet, pause or game over) — the walk can't be saved.",
-        "daily_limit_reached": "240 walk minutes are already logged for this day (the daily maximum).",
+        "daily_limit_reached": "240 walk minutes are already logged today (the daily maximum).",
         "entry_id_conflict": "The entry couldn't be saved. Please log the walk again.",
         "other": "The walk wasn't saved. Please try again."
       }
@@ -291,5 +288,7 @@
       "server": "Joining didn't work. Please try again."
     }
   },
-  "activityFallback": "activity"
+  "activityFallback": "activity",
+  "parentLoggedWalk": "{{name}} logged a walk",
+  "parentFallback": "Parent"
 }

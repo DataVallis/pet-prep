@@ -88,7 +88,6 @@
     "watered_pet": "nalil(a) vodo",
     "cleaned_poop": "počistil(a)",
     "walked_pet": "dosegel(a) cilj sprehoda",
-    "parent_logged_walk": "vpisal(a) sprehod",
     "signed_contract": "podpisal(a) pogodbo",
     "took_out_pet": "peljal(a) kužka ven",
     "resolved_chewing": "pospravil(a) copat in dal(a) igračo",
@@ -211,8 +210,6 @@
     "logWalk": {
       "title": "Vpiši sprehod",
       "hint": "Ste bili skupaj na sprehodu? Vpišite minute — vsaka minuta šteje kot 100 korakov, največ 240 minut na dan. Otroku ni treba storiti ničesar.",
-      "today": "Danes",
-      "yesterday": "Včeraj",
       "placeholder": "30",
       "minutesLabel": "Minute sprehoda",
       "unit": "min",
@@ -222,15 +219,15 @@
       "saved_two": "Shranjeno: {{count}} minuti sprehoda.",
       "saved_few": "Shranjeno: {{count}} minute sprehoda.",
       "saved_other": "Shranjeno: {{count}} minut sprehoda.",
-      "dailyLimit_one": "Za ta dan lahko vpišete še {{count}} minuto (največ 240 minut na dan).",
-      "dailyLimit_two": "Za ta dan lahko vpišete še {{count}} minuti (največ 240 minut na dan).",
-      "dailyLimit_few": "Za ta dan lahko vpišete še {{count}} minute (največ 240 minut na dan).",
-      "dailyLimit_other": "Za ta dan lahko vpišete še {{count}} minut (največ 240 minut na dan).",
+      "dailyLimit_one": "Danes lahko vpišete še {{count}} minuto (največ 240 minut na dan).",
+      "dailyLimit_two": "Danes lahko vpišete še {{count}} minuti (največ 240 minut na dan).",
+      "dailyLimit_few": "Danes lahko vpišete še {{count}} minute (največ 240 minut na dan).",
+      "dailyLimit_other": "Danes lahko vpišete še {{count}} minut (največ 240 minut na dan).",
       "errors": {
         "adapted_mode_off": "Najprej vklopite prilagojen način.",
-        "date_not_allowed": "Vpišete lahko samo današnji ali včerajšnji sprehod.",
+        "date_not_allowed": "Vpišete lahko samo današnji sprehod — medtem se je začel nov dan. Vpišite ga znova.",
         "locked": "Kuža zdaj počiva (veterinar, premor ali konec igre) — sprehoda ni mogoče shraniti.",
-        "daily_limit_reached": "Za ta dan je vpisanih že 240 minut sprehoda (največ na dan).",
+        "daily_limit_reached": "Danes je vpisanih že 240 minut sprehoda (največ na dan).",
         "entry_id_conflict": "Vpisa ni bilo mogoče shraniti. Vpišite sprehod znova.",
         "other": "Sprehod ni shranjen. Poskusite znova."
       }
@@ -311,5 +308,7 @@
       "server": "Pridružitev ni uspela. Poskusite znova."
     }
   },
-  "activityFallback": "dejavnost"
+  "activityFallback": "dejavnost",
+  "parentLoggedWalk": "{{name}} je vpisal(a) sprehod",
+  "parentFallback": "Starš"
 }

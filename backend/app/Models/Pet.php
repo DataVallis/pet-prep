@@ -490,6 +490,22 @@ class Pet extends Model
      * pet counts that no child row explains (from before M2-01) belong to
      * the primary caretaker.
      */
+    /**
+     * M5-T12: the child's own steps today that came from a DEVICE (health store /
+     * sensor) — `stepsTodayOf()` minus the walk minutes a parent logged
+     * (`pet_daily_steps.manual_steps`). The app compares its device reading with this
+     * number, never with the total (a logged walk would hide new watch pushes).
+     */
+    public function deviceStepsTodayOf(User $child, ?CarbonInterface $now = null): int
+    {
+        $manual = (int) PetDailyStep::where('pet_id', $this->id)
+            ->where('user_id', $child->id)
+            ->where('local_date', $this->localDate($now ?? now()))
+            ->value('manual_steps');
+
+        return max(0, $this->stepsTodayOf($child, $now) - $manual);
+    }
+
     public function stepsTodayOf(User $child, ?CarbonInterface $now = null): int
     {
         $rows = PetDailyStep::where('pet_id', $this->id)

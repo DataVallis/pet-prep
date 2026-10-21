@@ -1,11 +1,11 @@
 /**
  * M5-T12 »Vpiši sprehod« / "Log a walk" (David 2026-10-21): in adapted mode the PARENT can
  * enter walk minutes for the child — on iPhone pushes are recorded automatically only by an
- * Apple Watch, so the child needs to do nothing. Today or yesterday (family time zone, default
- * Europe/Ljubljana), 1–240 minutes, at most 240 logged minutes per child and day in total; the
- * server counts minutes × 100 steps (the step-goal rule) on top of any pushes from the phone.
- * A retry of the identical entry (same minutes and day) reuses its entry id, so it never counts
- * twice; changed minutes or day are a new entry with a new id.
+ * Apple Watch, so the child needs to do nothing. TODAY only (family time zone, default
+ * Europe/Ljubljana — David 2026-10-21: no past days), 1–240 minutes, at most 240 logged minutes
+ * per child and day in total; the server counts minutes × 100 steps (the step-goal rule) on top
+ * of any pushes from the phone. A retry of the identical entry (same minutes, same day) reuses
+ * its entry id, so it never counts twice; changed minutes (or a new day) are a new entry.
  */
 
 import { useState } from 'react';
@@ -14,7 +14,7 @@ import { Footprints } from 'lucide-react-native';
 
 import { ApiError } from '@/api/client';
 import { Text, TextInput } from '@/components/ui/Text';
-import { Card, PARENT_COLORS as C, SectionTitle, Segmented } from '@/components/parent/ParentUi';
+import { Card, PARENT_COLORS as C, SectionTitle } from '@/components/parent/ParentUi';
 import { newWalkEntryId, useLogParentWalk } from '@/hooks/queries/useFamilyMutations';
 import { familyCalendar } from '@/modules/childPet/familyTime';
 import { palette } from '@/theme';
@@ -41,13 +41,11 @@ export function parseWalkMinutes(text: string): number | null {
 export const FAMILY_DEFAULT_TIMEZONE = 'Europe/Ljubljana';
 
 /**
- * Family-local today and yesterday ("Y-m-d"). A null family zone falls back to the family
- * default (Europe/Ljubljana, as on the server) — never the device zone.
+ * The family-local today ("Y-m-d"). A null family zone falls back to the family default
+ * (Europe/Ljubljana, as on the server) — never the device zone.
  */
-export function walkDates(timezone: string | null, nowMs: number = Date.now()): { today: string; yesterday: string } {
-  const cal = familyCalendar(timezone ?? FAMILY_DEFAULT_TIMEZONE, null);
-  const today = cal.dateOf(nowMs);
-  return { today, yesterday: cal.dateOf(cal.startOfDay(nowMs) - 1) };
+export function walkToday(timezone: string | null, nowMs: number = Date.now()): string {
+  return familyCalendar(timezone ?? FAMILY_DEFAULT_TIMEZONE, null).dateOf(nowMs);
 }
 
 type ErrorKind = 'adapted_mode_off' | 'date_not_allowed' | 'daily_limit_reached' | 'entry_id_conflict' | 'locked' | 'other';
@@ -75,14 +73,15 @@ function walkError(error: unknown): WalkError {
 interface SentEntry {
   entryId: string;
   minutes: number;
-  day: 'today' | 'yesterday';
+  /** Family-local date the entry was sent for (a retry after midnight is a new entry). */
+  day: string;
 }
 
 /**
  * The entry id for this submit: the failed request's id when minutes and day are the same
  * (a retry of the same walk — the server counts it once), otherwise a new one.
  */
-export function entryIdFor(failed: SentEntry | null, minutes: number, day: 'today' | 'yesterday', makeId: () => string = newWalkEntryId): string {
+export function entryIdFor(failed: SentEntry | null, minutes: number, day: string, makeId: () => string = newWalkEntryId): string {
   return failed !== null && failed.minutes === minutes && failed.day === day ? failed.entryId : makeId();
 }
 
@@ -96,7 +95,6 @@ export default function LogWalkCard({ childId, timezone, testID = 'log-walk' }: 
   const S = LOG_WALK_STRINGS.logWalk;
   const mutation = useLogParentWalk();
   const [minutes, setMinutes] = useState('');
-  const [day, setDay] = useState<'today' | 'yesterday'>('today');
   // The last request that failed: re-sending the SAME minutes and day reuses its entry id
   // (never counted twice); any change is a new entry with a new id.
   const [failed, setFailed] = useState<SentEntry | null>(null);
@@ -106,12 +104,12 @@ export default function LogWalkCard({ childId, timezone, testID = 'log-walk' }: 
 
   const submit = () => {
     if (parsed === null || mutation.isPending) return;
-    const dates = walkDates(timezone);
-    const sent: SentEntry = { entryId: entryIdFor(failed, parsed, day), minutes: parsed, day };
+    const today = walkToday(timezone);
+    const sent: SentEntry = { entryId: entryIdFor(failed, parsed, today), minutes: parsed, day: today };
     setError(null);
     setSaved(null);
     mutation.mutate(
-      { childId, minutes: parsed, localDate: day === 'today' ? dates.today : dates.yesterday, entryId: sent.entryId },
+      { childId, minutes: parsed, localDate: today, entryId: sent.entryId },
       {
         onSuccess: (res) => {
           setSaved(res.entry.minutes);
@@ -133,16 +131,6 @@ export default function LogWalkCard({ childId, timezone, testID = 'log-walk' }: 
     <Card testID={testID}>
       <SectionTitle>{S.title}</SectionTitle>
       <Text style={styles.hint}>{S.hint}</Text>
-      <Segmented<'today' | 'yesterday'>
-        options={[
-          { value: 'today', label: S.today },
-          { value: 'yesterday', label: S.yesterday },
-        ]}
-        value={day}
-        onChange={setDay}
-        label={(v) => (v === 'today' ? S.today : S.yesterday)}
-        testIDPrefix={`${testID}-day`}
-      />
       <View style={styles.row}>
         <TextInput
           value={minutes}

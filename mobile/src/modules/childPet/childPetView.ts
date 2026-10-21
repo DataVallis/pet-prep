@@ -169,7 +169,12 @@ export interface ChildPetView {
     next_allowed_at: string | null;
   };
   /** `adapted_mode` (M5-T12): this child counts wheelchair pushes instead of steps (1 : 1). */
-  steps: { steps_today: number; my_steps_today: number; goal: number; energy_level: number; adapted_mode: boolean };
+  /**
+   * `adapted_mode` (M5-T12): this child counts wheelchair pushes instead of steps (1 : 1).
+   * `my_device_steps_today` (M5-T12): `my_steps_today` without walk minutes a parent logged —
+   * what the phone's own reading is compared with (display uses `my_steps_today`).
+   */
+  steps: { steps_today: number; my_steps_today: number; my_device_steps_today: number; goal: number; energy_level: number; adapted_mode: boolean };
   contract: { signed: boolean; signed_at: string | null };
   /**
    * M5-R02 behaviour events: puppy bladder clock, open messes, behaviour scene and what
@@ -302,6 +307,12 @@ function msOf(iso: string | null): number {
  * Normalise the server's child state (GET or action `state`). `receivedAtMs` = device
  * clock when it arrived (for the clock skew).
  */
+/** `steps.my_device_steps_today`, else `my_steps_today` (older server). */
+function deviceSteps(steps: { my_steps_today?: unknown; my_device_steps_today?: unknown }): number {
+  const device = (steps as { my_device_steps_today?: unknown }).my_device_steps_today;
+  return typeof device === 'number' && Number.isFinite(device) ? device : num(steps.my_steps_today);
+}
+
 export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, receivedAtMs = Date.now()): ChildPetView {
   const p = raw.pet;
   const windows = Array.isArray(raw.feeding.windows)
@@ -378,6 +389,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
     steps: {
       steps_today: num(raw.steps.steps_today),
       my_steps_today: num(raw.steps.my_steps_today),
+      // M5-T12: older servers send nothing (no parent-logged walks) → the same as my_steps_today.
+      my_device_steps_today: deviceSteps(raw.steps),
       goal: num(raw.steps.goal),
       energy_level: num(raw.steps.energy_level),
       // M5-T12: older servers send nothing → steps.

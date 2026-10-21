@@ -91,7 +91,12 @@ const defaultDeps = (): StepSyncDeps => ({
 interface Options {
   /** False while there is no pet state yet or the pet is locked. */
   enabled: boolean;
-  /** This child's steps according to the server (`state.steps.my_steps_today`). */
+  /**
+   * This child's DEVICE steps according to the server (`state.steps.my_device_steps_today`,
+   * M5-T12: without walk minutes a parent logged). The phone's reading is compared with it
+   * and the Android counter is raised to it — never to the total, or a logged walk would hide
+   * new watch pushes / count twice after the mode is switched off.
+   */
   myStepsToday: number;
   /** `state.server_time` — the family day `myStepsToday` belongs to. */
   serverTime: string | null;

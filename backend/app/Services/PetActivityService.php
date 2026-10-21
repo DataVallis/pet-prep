@@ -19,7 +19,6 @@ use App\Models\Pet;
 use App\Models\PetCareSession;
 use App\Models\PetContract;
 use App\Models\PetDailyStep;
-use App\Models\PetDailyWalk;
 use App\Models\PetTrainingSession;
 use App\Models\User;
 use App\Services\Media\PetMediaService;
@@ -247,16 +246,13 @@ class PetActivityService
      *   more → refused `daily_limit_reached` with `remaining_minutes`.
      * - Adapted mode is re-checked on the locked child row (lock order child → pet,
      *   like the switch) → `adapted_mode_off`.
-     * - Today: energy, the daily walk and `walked_pet` (actor = the child, as for
-     *   steps) exactly like a step sync; no anti-cheat cap (the parent is the source).
-     * - Yesterday (the day is already closed at midnight): the child's step row and
-     *   the closed `pet_daily_walks` row get the steps (report), and a walk illness
-     *   still planned for that day is called off once the day has any steps. Closed
-     *   routine rows are never rewritten (PRODUCT_SPEC §11), so the Care Score of a
-     *   closed day does not change.
+     * - TODAY only (family time zone, David 2026-10-21) — any other date → stale
+     *   (`date_not_allowed`); past `pet_daily_steps` / `pet_daily_walks` are never written.
+     * - Energy, the daily walk and `walked_pet` (actor = the child, as for steps) exactly
+     *   like a step sync; no anti-cheat cap (the parent is the source).
      * - One `parent_logged_walk` activity row (actor = the parent, value = minutes).
      *
-     * @param  string  $localDate  family-local Y-m-d, today or yesterday (validated by the caller)
+     * @param  string  $localDate  family-local Y-m-d; must be today
      */
     public function logParentWalk(Pet $pet, User $child, User $parent, string $localDate, int $minutes, string $entryId): ActionResult
     {
@@ -296,9 +292,9 @@ class PetActivityService
         }
 
         $this->dailyWalks->closeDayIfNeeded($locked, $now, allowIllness: true);
+        // David 2026-10-21: today only (family time zone) — past days are never written.
         $today = $locked->localDate($now);
-        $yesterday = Carbon::parse($today, 'UTC')->subDay()->toDateString();
-        if ($localDate !== $today && $localDate !== $yesterday) {
+        if ($localDate !== $today) {
             return $this->unchanged(ActionResult::STALE, $locked);
         }
 
@@ -313,10 +309,7 @@ class PetActivityService
         $perMinute = $this->lifeStages->stageValueOn($locked, $localDate, StageParamKey::StepsPerExerciseMinute)['value'] ?? null;
         $steps = $minutes * (is_int($perMinute) && $perMinute > 0 ? $perMinute : self::STEPS_PER_WALK_MINUTE);
 
-        $row = $localDate === $today
-            ? $this->childStepRow($locked, $child->id, $today)
-            : (PetDailyStep::where('pet_id', $locked->id)->where('user_id', $child->id)->where('local_date', $localDate)->first()
-                ?? new PetDailyStep(['pet_id' => $locked->id, 'user_id' => $child->id, 'local_date' => $localDate, 'steps' => 0]));
+        $row = $this->childStepRow($locked, $child->id, $today);
         $row->forceFill([
             'steps' => (int) $row->steps + $steps,
             'manual_steps' => (int) $row->manual_steps + $steps,
@@ -334,40 +327,17 @@ class PetActivityService
         ]);
         $this->logActivity($locked, ActivityType::ParentLoggedWalk, $minutes, $parent->id);
 
-        if ($localDate === $today) {
-            $goal = $this->lifeStages->rulesOn($locked, $today, $this->breedConfigOf($locked))->stepGoal;
-            $petCount = (int) $locked->daily_step_count;
-            $newCount = $petCount + $steps;
-            $locked->forceFill([
-                'daily_step_count' => $newCount,
-                'energy_level' => max((float) $locked->energy_level, self::energyForSteps($newCount, $goal)),
-                'energy_zero_since' => null,
-            ]);
-            $locked->saveQuietly();
-            if ($goal > 0 && $petCount < $goal && $newCount >= $goal) {
-                $this->logActivity($locked, ActivityType::WalkedPet, $newCount, $child->id);
-            }
-        } else {
-            $walk = PetDailyWalk::where('pet_id', $locked->id)->where('local_date', $localDate)->first();
-            if ($walk !== null) {
-                $walkSteps = (int) $walk->steps + $steps;
-                $plannedIllness = $walk->illness_due_at;
-                $walk->forceFill([
-                    'steps' => $walkSteps,
-                    'achieved' => (int) $walk->goal > 0 && $walkSteps >= (int) $walk->goal,
-                ]);
-                // A walk illness planned for this day that has not started yet is called off.
-                if ($plannedIllness !== null && $walk->illness_started_at === null && $plannedIllness->greaterThan($now)) {
-                    $walk->illness_due_at = null;
-                    if ($locked->walk_illness_due_at !== null && $locked->walk_illness_due_at->equalTo($plannedIllness)) {
-                        $locked->walk_illness_due_at = null;
-                    }
-                }
-                $walk->save();
-            }
-            if ($locked->isDirty()) {
-                $locked->saveQuietly();
-            }
+        $goal = $this->lifeStages->rulesOn($locked, $today, $this->breedConfigOf($locked))->stepGoal;
+        $petCount = (int) $locked->daily_step_count;
+        $newCount = $petCount + $steps;
+        $locked->forceFill([
+            'daily_step_count' => $newCount,
+            'energy_level' => max((float) $locked->energy_level, self::energyForSteps($newCount, $goal)),
+            'energy_zero_since' => null,
+        ]);
+        $locked->saveQuietly();
+        if ($goal > 0 && $petCount < $goal && $newCount >= $goal) {
+            $this->logActivity($locked, ActivityType::WalkedPet, $newCount, $child->id);
         }
 
         return $this->result(ActionResult::ACCEPTED, $locked, $steps, extra: ['entry' => $entry->toPayload()]);

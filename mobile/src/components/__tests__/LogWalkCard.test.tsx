@@ -1,11 +1,11 @@
 /**
  * M5-T12 »Vpiši sprehod«: the parent logs walk minutes for a child in adapted mode —
- * today / yesterday (family zone), 1–240 min, one entry id per entry (kept on retry).
+ * today only (family zone, David 2026-10-21), 1–240 min, one entry id per entry (kept on retry).
  */
 import { act, fireEvent, screen } from '@testing-library/react-native';
 
 import { ApiError, api } from '@/api/client';
-import LogWalkCard, { entryIdFor, parseWalkMinutes, walkDates } from '@/components/parent/LogWalkCard';
+import LogWalkCard, { entryIdFor, parseWalkMinutes, walkToday } from '@/components/parent/LogWalkCard';
 import { newWalkEntryId } from '@/hooks/queries/useFamilyMutations';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
@@ -32,23 +32,24 @@ describe('LogWalkCard helpers', () => {
     expect(parseWalkMinutes('')).toBeNull();
   });
 
-  it('today / yesterday are family-local (Ljubljana just after midnight is already the next day)', () => {
+  it('today is family-local (Ljubljana just after midnight is already the next day)', () => {
     const ms = Date.parse('2026-10-14T22:30:00Z'); // 00:30 on the 15th in Ljubljana
-    expect(walkDates('Europe/Ljubljana', ms)).toEqual({ today: '2026-10-15', yesterday: '2026-10-14' });
+    expect(walkToday('Europe/Ljubljana', ms)).toBe('2026-10-15');
   });
 
-  it('without a family zone today / yesterday follow Europe/Ljubljana (family default), not the device zone', () => {
+  it('without a family zone today follows Europe/Ljubljana (family default), not the device zone', () => {
     const ms = Date.parse('2026-10-14T22:30:00Z');
-    expect(walkDates(null, ms)).toEqual({ today: '2026-10-15', yesterday: '2026-10-14' });
+    expect(walkToday(null, ms)).toBe('2026-10-15');
   });
 
   it('a retry reuses the failed entry id only for the identical entry (same minutes and day)', () => {
-    const failed = { entryId: 'w-old-0001', minutes: 30, day: 'today' as const };
+    const failed = { entryId: 'w-old-0001', minutes: 30, day: '2026-10-14' };
     const fresh = () => 'w-new-0001';
-    expect(entryIdFor(failed, 30, 'today', fresh)).toBe('w-old-0001');
-    expect(entryIdFor(failed, 31, 'today', fresh)).toBe('w-new-0001');
-    expect(entryIdFor(failed, 30, 'yesterday', fresh)).toBe('w-new-0001');
-    expect(entryIdFor(null, 30, 'today', fresh)).toBe('w-new-0001');
+    expect(entryIdFor(failed, 30, '2026-10-14', fresh)).toBe('w-old-0001');
+    expect(entryIdFor(failed, 31, '2026-10-14', fresh)).toBe('w-new-0001');
+    // A retry after the family midnight is a new entry (new day).
+    expect(entryIdFor(failed, 30, '2026-10-15', fresh)).toBe('w-new-0001');
+    expect(entryIdFor(null, 30, '2026-10-14', fresh)).toBe('w-new-0001');
   });
 
   it('entry ids are unique and valid for the server (8–64 of [A-Za-z0-9_-])', () => {
@@ -114,7 +115,7 @@ describe('LogWalkCard', () => {
     fireEvent.changeText(screen.getByTestId('log-walk-minutes'), '60');
     fireEvent.press(screen.getByTestId('log-walk-submit'));
     await flush();
-    expect(screen.getByTestId('log-walk-error').props.children).toBe('Za ta dan lahko vpišete še 40 minut (največ 240 minut na dan).');
+    expect(screen.getByTestId('log-walk-error').props.children).toBe('Danes lahko vpišete še 40 minut (največ 240 minut na dan).');
   });
 
   it('invalid minutes disable the button', () => {

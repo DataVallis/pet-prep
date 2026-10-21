@@ -279,6 +279,16 @@ class ChildPetStateResource extends JsonResource
                 'my_steps_today' => $actor !== null
                     ? $pet->stepsTodayOf($actor, $now)
                     : (int) $pet->daily_step_count,
+                /**
+                 * M5-T12: the child's own steps today from a device only (`my_steps_today`
+                 * minus walk minutes a parent logged). The app compares its health / sensor
+                 * reading with this number; `my_steps_today` is for display.
+                 *
+                 * @var int
+                 */
+                'my_device_steps_today' => $actor !== null
+                    ? $pet->deviceStepsTodayOf($actor, $now)
+                    : (int) $pet->daily_step_count,
                 // Today's step goal of the dog's life stage (M5-R01).
                 'goal' => $profile->stepGoal,
                 'energy_level' => $pet->displayMetric('energy_level'),

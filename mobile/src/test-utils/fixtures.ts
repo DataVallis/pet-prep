@@ -230,7 +230,7 @@ export function makeChildState(
       can_water: 'false',
       next_allowed_at: '',
     },
-    steps: { steps_today: 0, my_steps_today: 0, goal: 5000, energy_level: 100, adapted_mode: false },
+    steps: { steps_today: 0, my_steps_today: 0, my_device_steps_today: 0, goal: 5000, energy_level: 100, adapted_mode: false },
     contract: { signed: true, signed_at: '2026-10-04T09:00:00+00:00' },
     // M5-R02 behaviour events: no bladder clock, nothing open (a legacy-like pet).
     behaviour: { take_out: null, active_events: [], scene: null, can_take_out: false, can_resolve_chewing: false },
@@ -390,7 +390,15 @@ export function makeLiveChildState(o: LiveStateOverrides = {}): ChildPetState {
       next_allowed_at: null,
       ...o.water,
     },
-    steps: { steps_today: 1250, my_steps_today: 1250, goal: 4000, energy_level: 30, ...o.steps },
+    // M5-T12: the device part follows my_steps_today unless a test sets it (no parent-logged walk).
+    steps: {
+      steps_today: 1250,
+      my_steps_today: 1250,
+      goal: 4000,
+      energy_level: 30,
+      ...o.steps,
+      my_device_steps_today: o.steps?.my_device_steps_today ?? o.steps?.my_steps_today ?? 1250,
+    },
     behaviour: o.behaviour === null ? undefined : { ...base.behaviour, ...o.behaviour },
     training: o.training === null ? undefined : { ...base.training, ...o.training },
     play: o.play === 'absent' ? undefined : o.play === undefined ? base.play : o.play,

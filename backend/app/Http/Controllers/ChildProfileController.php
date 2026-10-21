@@ -23,7 +23,11 @@ use Illuminate\Http\Request;
  */
 class ChildProfileController extends Controller
 {
-    public function __construct(private readonly ChildProfileService $profiles) {}
+    public function __construct(
+        private readonly ChildProfileService $profiles,
+        private readonly FamilyService $families,
+        private readonly PetActivityService $activities,
+    ) {}
 
     /**
      * Create a child profile in the parent's family: nickname (≤ 30
@@ -91,14 +95,14 @@ class ChildProfileController extends Controller
 
     /**
      * M5-T12 (David 2026-10-21): log a walk for a child in adapted mode — the parent
-     * enters minutes (1–240) for today or yesterday (family time zone); they count as
+     * enters minutes (1–240) for TODAY only (family time zone, David 2026-10-21); they count as
      * minutes × 100 steps (the step-goal rule) on the child's day of their active pet,
      * on top of any wheelchair pushes from the phone. Idempotent per `entry_id`.
      * At most 240 logged minutes per child and family-local day in total (David
      * 2026-10-21). 201 `{status: accepted, entry, steps_today}`; the same `entry_id`
      * again (same pet, day, minutes) → 200 `{status: unchanged, entry, steps_today}`
      * with the original entry. 422 `adapted_mode_off` (switch first), `date_not_allowed`
-     * (not today / yesterday), `daily_limit_reached` + `remaining_minutes`,
+     * (`local_date` is not the family's today), `daily_limit_reached` + `remaining_minutes`,
      * `steps_not_applicable` (a cat); 409 `entry_id_conflict` (the id was used for a
      * different walk); 423 `{reason}` while the pet is locked; 404 `child_not_found` /
      * `no_pet`.
@@ -117,12 +121,12 @@ class ChildProfileController extends Controller
         if (! (bool) $profile->adapted_mode) {
             return response()->json(['message' => 'Adapted mode is off for this child.', 'reason' => 'adapted_mode_off'], 422);
         }
-        $pet = app(FamilyService::class)->activePetOf($profile);
+        $pet = $this->families->activePetOf($profile);
         if ($pet === null) {
             return response()->json(['message' => 'This child has no pet yet.', 'reason' => 'no_pet'], 404);
         }
 
-        $result = app(PetActivityService::class)->logParentWalk($pet, $profile, $parent, $request->localDate(), $request->minutes(), $request->entryId());
+        $result = $this->activities->logParentWalk($pet, $profile, $parent, $request->localDate(), $request->minutes(), $request->entryId());
 
         if ($result->status === ActionResult::LOCKED) {
             return response()->json(['message' => 'The pet is locked right now.', 'reason' => $result->lockReason?->value], 423);
@@ -146,7 +150,7 @@ class ChildProfileController extends Controller
             return response()->json(['message' => 'Steps do not apply to this pet.', 'reason' => $result->refusal?->value], 422);
         }
         if ($result->status === ActionResult::STALE) {
-            return response()->json(['message' => 'Only today or yesterday can be logged.', 'reason' => 'date_not_allowed'], 422);
+            return response()->json(['message' => 'Only today can be logged.', 'reason' => 'date_not_allowed'], 422);
         }
 
         $pet->refresh();
