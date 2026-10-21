@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `australian_cattle_dog` (viri S435–S441; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174) |
 | Izvor | FCI št. 287, skupina 1, sekcija 2 (goniči goveda), Avstralija (S435) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 49. mesto »Australian Cattle Dog« (S174) |
-| PR-ji | pet-prep #308 (pasma) · portret — · spletna stran — |
+| PR-ji | pet-prep #308 (pasma, združen `3360ca8`) · portret #309 · spletna stran — |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -29,6 +29,7 @@
 | 2026-10-21 | pravilo runbooka (§3) | marketing: **v aplikaciji da, v marketingu da** — nikoli kot lahek pes za majhne otroke ali pes z malo gibanja | veterinarsko odsvetovanje oglaševanja velja le za pse s sploščenim obrazom (BVA S92) | #308 |
 | 2026-10-21 | pravilo runbooka (§3) | barve za AI in izbirnik: **modro pegast** z oznakami na glavi (portret), **rdeče pegast**; nikoli krem, bel ali merle; naraven rep do skočnega sklepa | standard Kennel Club S436 »Blue, blue-mottled or blue speckled …« / »Good even red speckle all over …« | #308 |
 | 2026-10-21 | predlog Claude, David lahko spremeni | ime SL »avstralski govedar« (slug `avstralski-govedar`); iskalni ključi tudi »avstralski govedarski pes«, »blue heeler«, »red heeler«, »queensland heeler«, »acd« | Siol.net S441 (tier C); KZS ni preverjen | #308 |
+| 2026-10-21 | pravilo runbooka (§8) | AI portret: realistična fotografija odraslega psa, modro pegast s rjavimi oznakami na glavi in nogah, siva studijska podlaga, naraven rep; sprejet v prvem poskusu (zagon 39540701347, koda `3360ca8`, brez produkcijske namestitve) | barva portreta = najtežja barva iz `breed_appearance.php` | #309 |
 | 2026-10-21 | pravilo runbooka (§2.3) | seznam za vzreditelja: DNA prcd-PRA, pregled oči (BVA/KC/ISDS), kolki in komolci (BVA/KC), test sluha BAER, kalkulator sorodstva — vse »minimum« (stari format strani RKC, precedens labradorec). DNA PLL (»Other«) ni dodan. Brez novega ključa | RKC S437 | #308 |
 
 ## Kaj je v aplikaciji (v slogu FEATURES)
@@ -39,7 +40,7 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 126 mesecev; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-53 | 2026-10-21 |
 | Česanje 1× na teden (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-21 |
 | Barva (izbirnik barve: modro pegast, rdeče pegast) | 🛠 | 💶 izziv | M5-R21 | 2026-10-21 |
-| AI portret v registru | 🗓 po združitvi | — | M5-R11-04 | — |
+| AI portret v registru (modro pegast, sprejet v prvem poskusu, zagon 39540701347) | ✅ | — | M5-R11-04 | 2026-10-21 |
 | Stran na petprep.si (`/animals/dogs/australian-cattle-dog`, `/sl/zivali/psi/avstralski-govedar`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
