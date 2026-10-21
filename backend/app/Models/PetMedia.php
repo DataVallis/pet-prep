@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Enums\PetStateEnum;
+use App\Enums\PetTransition;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -28,6 +29,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * shows (`look_media_id`) and carries a copy of its `storage_path` — the file
  * exists once, under `looks/{look_id}/`, and is never deleted with a pet.
  *
+ * M5-T08 kinds: `keyframe` (the key image of a state — an edit of the
+ * reference image of the same stage, the start / end frame of that state's
+ * loop) and `transition` (a clip from one pose to another, state = PetTransition).
+ * isImage() / isVideo() keep meaning the reference image / a state video.
+ *
  * @property int $id
  * @property int|null $pet_id
  * @property int|null $pet_look_id
@@ -39,6 +45,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property string $status
  * @property int $generation
  * @property int|null $source_generation
+ * @property string|null $recipe
  * @property int $attempts
  * @property string|null $request_id
  * @property string|null $source_url
@@ -55,6 +62,18 @@ class PetMedia extends Model
     public const KIND_IMAGE = 'image';
 
     public const KIND_VIDEO = 'video';
+
+    /** M5-T08: the KEY IMAGE of a state (an edit of the reference image; state = PetStateEnum, never idle). */
+    public const KIND_KEYFRAME = 'keyframe';
+
+    /** M5-T08: a TRANSITION clip between two poses (state = PetTransition value). */
+    public const KIND_TRANSITION = 'transition';
+
+    /** M5-T08 `recipe`: a state video made from its key image only (no end frame). */
+    public const RECIPE_POSE = 'pose';
+
+    /** M5-T08 `recipe`: a seamless loop — start AND end frame = the state's key image. */
+    public const RECIPE_LOOP = 'loop';
 
     public const STATUS_PENDING = 'pending';
 
@@ -80,6 +99,8 @@ class PetMedia extends Model
         'status',
         'generation',
         'source_generation',
+        // M5-T08: how a state video was made (null = from the reference image, before M5-T08).
+        'recipe',
         'attempts',
         'request_id',
         'source_url',
@@ -143,9 +164,37 @@ class PetMedia extends Model
         return $this->kind === self::KIND_VIDEO;
     }
 
+    public function isKeyframe(): bool
+    {
+        return $this->kind === self::KIND_KEYFRAME;
+    }
+
+    public function isTransition(): bool
+    {
+        return $this->kind === self::KIND_TRANSITION;
+    }
+
+    /** A picture (reference image or a key image): sync image call, image mimes. */
+    public function isStill(): bool
+    {
+        return $this->isImage() || $this->isKeyframe();
+    }
+
+    /** A clip (state video or transition): fal queue + webhook, video mimes. */
+    public function isClip(): bool
+    {
+        return $this->isVideo() || $this->isTransition();
+    }
+
+    /** The state of a video / key image slot (null for the reference image and transitions). */
     public function petState(): ?PetStateEnum
     {
-        return $this->state !== null ? PetStateEnum::tryFrom($this->state) : null;
+        return $this->state !== null && ! $this->isTransition() ? PetStateEnum::tryFrom($this->state) : null;
+    }
+
+    public function transition(): ?PetTransition
+    {
+        return $this->isTransition() && $this->state !== null ? PetTransition::tryFrom($this->state) : null;
     }
 
     /** A stored file exists (possibly of an older generation while a new one is pending). */
@@ -162,7 +211,12 @@ class PetMedia extends Model
 
     public function label(): string
     {
-        return $this->isImage() ? 'reference image' : "{$this->state} video";
+        return match ($this->kind) {
+            self::KIND_IMAGE => 'reference image',
+            self::KIND_KEYFRAME => "{$this->state} key image",
+            self::KIND_TRANSITION => "{$this->state} transition",
+            default => "{$this->state} video",
+        };
     }
 
     /**
@@ -181,5 +235,25 @@ class PetMedia extends Model
     public function scopeVideos(Builder $query): Builder
     {
         return $query->where('kind', self::KIND_VIDEO);
+    }
+
+    /**
+     * M5-T08: state videos and transitions (everything that goes through the fal queue + webhook).
+     *
+     * @param  Builder<PetMedia>  $query
+     * @return Builder<PetMedia>
+     */
+    public function scopeClips(Builder $query): Builder
+    {
+        return $query->whereIn('kind', [self::KIND_VIDEO, self::KIND_TRANSITION]);
+    }
+
+    /**
+     * @param  Builder<PetMedia>  $query
+     * @return Builder<PetMedia>
+     */
+    public function scopeKeyframes(Builder $query): Builder
+    {
+        return $query->where('kind', self::KIND_KEYFRAME);
     }
 }

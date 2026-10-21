@@ -45,7 +45,7 @@ final class PreparationPayload
              * What is not stored yet, in the order it is made: `image` (the pose), then video
              * states (idle, sleeping, hungry, playing, …). Empty when ready.
              *
-             * @var list<'image'|'idle'|'sleeping'|'low_energy'|'hungry'|'sick'|'playing'|'accident'|'chewing'|'scratching'>
+             * @var list<'image'|'idle'|'sleeping'|'low_energy'|'hungry'|'sick'|'playing'|'accident'|'chewing'|'scratching'|'idle_to_sleeping'|'sleeping_to_idle'>
              */
             'pending' => $this->pending,
             // Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs

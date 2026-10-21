@@ -371,3 +371,13 @@ function useUniquePetMedia(bool $on): void
     );
     Cache::forget(AppSettingsService::cacheKey(AppSettingsService::UNIQUE_MEDIA_KEY));
 }
+
+/**
+ * M5-T08: turn the state media (key images, seamless loops, transitions) on
+ * for a test. phpunit.xml sets AI_STATE_MEDIA_ENABLED=false so the tests of
+ * the pre-M5-T08 pipeline keep their numbers; production default is on.
+ */
+function useStateMedia(bool $on = true): void
+{
+    config(['media.state_media.enabled' => $on]);
+}

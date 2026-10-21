@@ -226,7 +226,7 @@ describe('PetUpdated event shape', function () {
         ]);
         expect(array_keys($payload['behaviour']))->toBe(['take_out', 'active_events', 'scene'])
             ->and(array_keys($payload['training']))->toBe(['enabled', 'commands', 'today_done', 'session_active']);
-        expect(array_keys($payload['media']))->toBe(['status', 'reference_image_url', 'videos', 'current_video_url', 'states', 'expires_at']);
+        expect(array_keys($payload['media']))->toBe(['status', 'reference_image_url', 'videos', 'current_video_url', 'states', 'expires_at', 'keyframes', 'transitions', 'loops', 'state_media']);
         expect($payload['hunger_level'])->toBe(34);
         expect($payload['event_type'])->toBe('fed_pet');
 

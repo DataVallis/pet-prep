@@ -81,6 +81,26 @@ class MediaProfiles
         return $profile->enabled ? $profile : null;
     }
 
+    /**
+     * M5-T08: image-to-image profile for the state KEY IMAGES (Nano Banana Pro
+     * Edit, David 2026-10-21), or null when disabled / unknown — then no key
+     * images, loops or transitions are made (the pre-M5-T08 media set).
+     */
+    public function keyframe(): ?ModelProfile
+    {
+        $key = (string) config('media.state_media.keyframe_profile', 'nano_banana_pro_edit');
+
+        if (! is_array(config("media.profiles.image.{$key}"))) {
+            Log::error('MediaProfiles: unknown key image profile configured, no key images', ['profile' => $key]);
+
+            return null;
+        }
+
+        $profile = $this->image($key);
+
+        return $profile->enabled ? $profile : null;
+    }
+
     public function stateVideo(): ModelProfile
     {
         return $this->video($this->configured(ModelProfile::KIND_VIDEO, 'media.state_video_profile', self::DEFAULT_STATE_VIDEO));
