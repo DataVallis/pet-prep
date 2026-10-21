@@ -27107,6 +27107,574 @@
       }
     }
   },
+  "dalmatian": {
+    "_note": "Added 2026-10-21 (M5-R10-52, unattended run — appended after the Newfoundland: AKC 2024 No. 48 'Dalmatian', S174 full-list table '47 Newfoundland', '48 Dalmatian'). Quotes as returned by the web-fetch tool on 2026-10-21 (PDSA and PetMD only in short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S427–S434 (reused S8, S10, S11, S14, S24, S35, S45, S123, S174). No health percentages anywhere. RKC breed page reachable at the older address (S429): exercise 'More than 2 hours per day', grooming 'Once a week', Breed Watch Category 1. Lifespan: McMillan 2024 median 13.2 y via the Dogs Trust table (S123) — not provisional. Names: FCI 'DALMATIAN' (S427), AKC 'Dalmatian' (S174); Slovenian »dalmatinec« (Siol.net S434, tier C — not checked against KZS, open for David).",
+    "identity": {
+      "value": "FCI No. 153, Group 6 Section 3 (Related breeds), Croatia",
+      "unit": "—",
+      "source_id": "S428",
+      "quote": "Section 3 Related breeds.",
+      "confidence": "high",
+      "notes": "FCI standard N° 153 (S428): 'Group 6 Scenthounds and related breeds.'; 'ORIGIN : Croatia.'; 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 13.10.2010.'; 'Hunting dog. Companion dog, family dog, suitable to be trained for various purposes.' FCI nomenclature (S427): 'DALMATINSKI PAS (153)', English name 'DALMATIAN', country of origin 'CROATIE', not subject to a working trial, definitive acceptance 01/01/1955, valid standard 13/10/2010. 'Croatia' must be in FCI_ORIGINS of the export (new origin HR). AKC name: Dalmatian (S174). Other names 'Carriage Dog; Spotted Coach Dog; Leopard Carriage Dog; Firehouse Dog; Plum Pudding Dog; Leopard-Spotted Dog' (S433, tier C)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S429",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "RKC breed page key facts (older address, S429), as returned ('Size: \"Large\"'). PDSA (S430) 'Size: Large' agrees."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            56,
+            62
+          ],
+          "female": [
+            54,
+            60
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S428",
+        "quote": "Height at the withers: Males 56 – 62 cms. Females 54 – 60 cms.",
+        "confidence": "high",
+        "notes": "FCI standard (S428). PDSA (S430) 'Average height: 56-61 cm' (one range); PetMD (S431) 'stand 19-24 inches tall' (48–61 cm); Wikipedia (S433, tier C) males 58–61 / females 56–58 cm — alternatives."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            56,
+            61
+          ],
+          "female": [
+            56,
+            61
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S430",
+        "quote": "Average height: 56-61 cm",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S430), one range for both sexes (stored per sex). Alternative to the FCI ranges."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            18,
+            27
+          ],
+          "female": [
+            18,
+            27
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S430",
+        "quote": "18kg-27kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average weight' (S430), one range for both sexes (stored per sex) — the game range. The FCI standard (S428) gives no weight. PetMD (S431) 'weigh 45-70 pounds' (20–32 kg) — alternatives.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                20,
+                32
+              ],
+              "female": [
+                20,
+                32
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S431",
+            "quote": "stand 19-24 inches tall and weigh 45-70 pounds.",
+            "notes": "PetMD (S431); 45–70 lb = 20.4–31.8 kg (our conversion, rounded)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "V (25–40 kg) / IV (15–25 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 18–27 kg spans the bands 15–25 and 25–40. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 18–27 kg (S430) = 40–60 lb → 'Medium (24–59 pounds)'; the top touches 'Large (59–99 pounds): 15–18 months' (Hungarian Vizsla precedent). The game is unaffected (the puppy cap of 120 min is reached at 12 months either way)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Dalmatian growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 13.2,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Dalmatian 13.2 13.0 - 13.3 3126 1443",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123, columns Breed | Median Life Expectancy (Years) | Lower and Upper 95% CI | Total Number Individuals (Alive and Deceased) | Number Deceased Individuals), re-read 2026-10-21. Runbook first choice (McMillan 2024) → not provisional. Not in the Fig. 3 legend of the Author Correction (S54, checked 2026-10-21). Wikipedia (S433, tier C): 'A 2024 UK study found a life expectancy of 13.2 years for the Dalmatian.' — agrees."
+      },
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S429",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S429), as returned ('Lifespan: \"Over 12 years\"'). PDSA (S430) 'Average lifespan: Over 12 years' — the same. Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "11–13",
+        "unit": "years",
+        "source_id": "S431",
+        "quote": "Dalmatian dogs generally live 11–13 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S431), US alternative only."
+      },
+      "senior_from": {
+        "value": 9.9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 13.2 y (McMillan 2024 via S123) → 0.75 × 13.2 = 9.9 y = 118.8 → 119 months (half up). Dogs Trust rule of thumb > 7 y = 84 months (S14). Not chosen: 0.75 × 12 y (RKC lower bound, S429) = 108.",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 119,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S429",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key facts (S429). PDSA (S430): 'Minimum exercise per day: 2 hours' (key fact) and 'Dalmatians are so high energy they need a minimum of two hours of exercise every day.' — agrees. PetMD (S431): 'a lot of daily exercise' — no minutes."
+      },
+      "walks": {
+        "value": "at least two walks a day, ideally with a chance to run in a secure area",
+        "unit": "—",
+        "source_id": "S430",
+        "quote": "This needs to be done in at least two walks, ideally with a chance to run in a secure area.",
+        "confidence": "medium",
+        "notes": "PDSA (S430). The game counts the daily step total, not the number of walks, and has no off-lead runs → proposed_game_parameters.dalmatian.walk_pattern (needs-david: no mechanic, needs a new ROADMAP task — as the Shiba Inu / Rhodesian Ridgeback off-lead need)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "pleasant, friendly, not shy, free from nervousness and aggression; high energy",
+        "unit": "—",
+        "source_id": "S428",
+        "quote": "Pleasant temperament, friendly, not shy or hesitant, free from nervousness and aggression.",
+        "confidence": "high",
+        "notes": "FCI standard (S428). PDSA (S430): 'Dalmatians are so high energy …'; 'Dalmatians can be strong willed'; can be excitable when young (paraphrase)."
+      },
+      "family": {
+        "value": "great pets for active households; better suited to households with older children; always supervise with children",
+        "unit": "—",
+        "source_id": "S430",
+        "quote": "They tend to be better suited to households with older children",
+        "confidence": "medium",
+        "notes": "PDSA (S430): 'Dalmatians can be great pets for active households'; 'shouldn't be left unsupervised with children, vulnerable adults or older people'; 'It's important to always supervise your Dalmatian with children and vulnerable adults.' PetMD (S431): 'These playful pups can be good with kids and other pets, but small children must be taught how to treat dogs nicely.' → not_for_small_children (Vizsla / Ridgeback precedent); never children / small_children."
+      },
+      "socialisation": {
+        "value": "socialise puppies early with other dogs, people and experiences",
+        "unit": "—",
+        "source_id": "S431",
+        "quote": "This is why socializing Dalmatian puppies early in life is so important.",
+        "confidence": "medium",
+        "notes": "PetMD (S431; adults can be aloof with new people and dogs — paraphrase). PDSA (S430): 'Socialising your Dalmatian as a puppy with lots of other dogs, different people and types of experiences' (fragment). → proposed_game_parameters.dalmatian.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "time_alone": {
+        "value": "needs company; never alone for more than four hours; can develop separation anxiety",
+        "unit": "—",
+        "source_id": "S430",
+        "quote": "Dalmatians need company so we would recommend a household where there is always someone at home with them",
+        "confidence": "medium",
+        "notes": "PDSA (S430): 'you should never leave your dog alone for more than four hours' (fragment); separation anxiety (paraphrase). PetMD (S431): 'Dalmatians shouldn’t be left alone for long periods of time—not only because they crave activity, but also because they can' (fragment). Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "may get the urge to chase; supervise with smaller pets",
+        "unit": "—",
+        "source_id": "S430",
+        "quote": "always supervise your Dalmatian with smaller pets and introductions should be done very carefully",
+        "confidence": "medium",
+        "notes": "PDSA (S430): 'As Dalmatians were not bred for hunting or herding' … 'even the most placid Dalmatian may get the urge to chase!' (fragments). Not a 'high prey drive' statement → no chases_small_pets (runbook: supervision advice alone is not enough). PetMD (S431) 'can be good with kids and other pets' — conflicting with PDSA → no other_pets."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag. PDSA (S430): two meals a day, treats under 10 % of the daily calories (general advice; the game's two adult meals stay)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere (PetMD's deafness figures from UFAW stay out). RKC Breed Watch Category 1 (S429) → no welfare chip. Breeder checklist: BAER hearing test and hip evaluation (AKC national breed club recommendation, K28; PDSA S430 'There is BAER testing for this.'; Kennel Club news S432).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1 — no points of concern",
+        "unit": "—",
+        "source_id": "S429",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S429). No welfare chip."
+      },
+      "deafness": {
+        "value": "deafness (one or both ears) occurs; puppies can be hearing-tested (BAER)",
+        "unit": "—",
+        "source_id": "S430",
+        "quote": "There is BAER testing for this.",
+        "confidence": "high",
+        "notes": "PDSA (S430) lists 'Deafness.' and 'There is BAER testing for this.' Kennel Club (S432): 'dogs can have their hearing checked using a BAER (Brainstem Auditory Evoked Response) test' (fragment) and 'Breeders can use the results of these tests to help them select unaffected breeding dogs' (fragment). FCI (S428) lists 'Deafness' as a disqualifying fault. PetMD (S431): deaf dogs may need hand signals (paraphrase). Register health key deafness (new) + breeder checklist hearing_baer."
+      },
+      "urinary_stones": {
+        "value": "urinary conditions including bladder stones",
+        "unit": "—",
+        "source_id": "S430",
+        "quote": "Urinary conditions, including urolithisis (bladder stones)",
+        "confidence": "medium",
+        "notes": "PDSA (S430), as returned (spelling 'urolithisis' as on the page). PetMD (S431): 'Speak with your veterinarian before putting your Dalmatian on a low-purine diet.' — background (a vet's decision, no game mechanic). Wikipedia (S433, tier C): hyperuricemia with kidney and bladder stones. Register health key bladder_stones."
+      },
+      "atopy": {
+        "value": "skin allergies (atopic dermatitis)",
+        "unit": "—",
+        "source_id": "S430",
+        "quote": "Dalmatians are known to suffer from skin allergies",
+        "confidence": "medium",
+        "notes": "PDSA (S430): atopy listed; check with a vet before using a dog shampoo (paraphrase). Not a Breed Watch point → no sensitive_skin chip (that chip follows the welfare rule). Register health key itchy_skin_allergy."
+      },
+      "epilepsy": {
+        "value": "epilepsy",
+        "unit": "—",
+        "source_id": "S430",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S430) health list: Epilepsy (name only as returned). Register health key epilepsy."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S430",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S430) health list: Hip dysplasia (name only). AKC national breed club recommends 'Hip Evaluation' (K28). Not a Breed Watch point → no hips_hind_legs chip (breeder checklist instead). Register health key hip_dysplasia."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 39,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 39 | Dalmatian |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-21): rank 39 'Dalmatian' (the only breed at that rank), tier 'Above Average Working Dogs' (ranks 27–39). Coren's own article (S34) not re-read. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Above average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 15 to 25 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier 'Above Average Working Dogs': 'Obey first command: 70% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "strong willed; positive, reward-based training; patience",
+        "unit": "—",
+        "source_id": "S430",
+        "quote": "Dalmatians can be strong willed",
+        "confidence": "medium",
+        "notes": "PDSA (S430): 'positive, reward-based training' (fragment); an accredited trainer for first-time owners (paraphrase). PetMD (S431): smart but independent and headstrong (paraphrase). The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.dalmatian.learning_multiplier (1.2, runbook rule: Above average tier, rank 39).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "mesocephalic; rectangular, strong, muscled and distinctively spotted body; elegant movement",
+        "unit": "—",
+        "source_id": "S428",
+        "quote": "The body is rectangular, strong, muscled and distinctively spotted.",
+        "confidence": "high",
+        "notes": "FCI (S428): 'Mesocephalic. Head prismatic form with hanging ears.'; 'The movement must be elegant.'"
+      },
+      "colours": {
+        "value": [
+          "white with black spots",
+          "white with liver (brown) spots"
+        ],
+        "unit": "list",
+        "source_id": "S428",
+        "quote": "Black spotted variety with black spots, liver spotted variety with brown spots.",
+        "confidence": "high",
+        "notes": "FCI (S428): 'The ground colour is pure white.'; spots symmetrical, clearly defined, 2–3 cm (liver around 2 cm), smaller on head and legs, preferably on the ears and tail; 'Patches and coloured areas are not desirable.' Disqualifying (S428): monocle / patching, tricolour, brindle, lemon, orange or blue spots, pure white without spots, blue eyes. Wikipedia (S433, tier C) names blue, brindle, mosaic, lemon / orange and tricolour as occasional non-standard colours — never in the game."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Black-spotted first with the highest weight (the portrait default), then liver-spotted."
+      },
+      "coat": {
+        "value": "short, shiny, hard and dense",
+        "unit": "—",
+        "source_id": "S428",
+        "quote": "Short, shiny, hard and dense all over the body.",
+        "confidence": "high",
+        "notes": "FCI (S428). RKC (S429) 'Coat length: Short'; disqualifying: 'Wirehaired or longhaired' (S428)."
+      },
+      "ears": {
+        "value": "hanging ears, spotted (never solid black or brown)",
+        "unit": "—",
+        "source_id": "S428",
+        "quote": "It is very important that the ears are spotted",
+        "confidence": "high",
+        "notes": "FCI (S428): 'the ears must not be completely black or brown but black or brown spotted etc.' (fragment)."
+      },
+      "eyes": {
+        "value": "oval; colour in accordance with the spotting; eyelids close to the eyeball; fully pigmented eye rims",
+        "unit": "—",
+        "source_id": "S428",
+        "quote": "Eyelids are close to the eyeball and not loose.",
+        "confidence": "high",
+        "notes": "FCI (S428): 'Oval, in a sub-frontal position placed at an angle of 10-15˚.'; 'The eye colour is in accordance with the spotting.'; never blue or odd eyes (disqualifying)."
+      },
+      "nose": {
+        "value": "large, wide open nostrils, fully pigmented (black or brown with the spotting)",
+        "unit": "—",
+        "source_id": "S428",
+        "quote": "Large with wide open nostrils, it must be completely pigmented.",
+        "confidence": "high",
+        "notes": "FCI (S428): 'The colour must be in accordance to the colour of the spotting.'"
+      },
+      "tail": {
+        "value": "reaching about to the hock, carried sabre-shaped, preferably spotted",
+        "unit": "—",
+        "source_id": "S428",
+        "quote": "Carried sabre-shaped.",
+        "confidence": "high",
+        "notes": "FCI (S428): 'Set on at the extension of the croup.'; 'Reaching approximately to the hock or slightly longer.'; 'Preferably spotted.'; 'Curled tail.' is disqualifying."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (older address, S429), PDSA (S430), PetMD (S431). Woodgreen and VCA not attempted.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S429",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "RKC key facts (S429)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S429",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "Basis of the adult minutes (120), active_family and long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S429",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "Basis of large_home (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S429",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "Basis of large_home (with the home)."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S429",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "Basis of the weekly brushing (1×, runbook dog-grooming rule)."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S429",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "RKC key facts (S429)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S429",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "Basis of sheds (PDSA S430 'Unfortunately, they are really big shedders!'; PetMD S431 'they are heavy shedders' agree)."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S429",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key facts (S429). Not shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S429",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key facts (S429)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S429",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key facts (S429)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S429",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "No welfare chip."
+      },
+      "pdsa_exercise": {
+        "value": "a minimum of two hours a day, in at least two walks",
+        "unit": "—",
+        "source_id": "S430",
+        "quote": "Dalmatians are so high energy they need a minimum of two hours of exercise every day.",
+        "confidence": "high",
+        "notes": "PDSA (S430); agrees with the RKC (S429)."
+      },
+      "pdsa_active_family": {
+        "value": "great pets for active households",
+        "unit": "—",
+        "source_id": "S430",
+        "quote": "Dalmatians can be great pets for active households",
+        "confidence": "medium",
+        "notes": "Basis of active_family (with the RKC exercise)."
+      },
+      "pdsa_children": {
+        "value": "better suited to households with older children; always supervise",
+        "unit": "—",
+        "source_id": "S430",
+        "quote": "They tend to be better suited to households with older children",
+        "confidence": "medium",
+        "notes": "PDSA (S430): 'shouldn't be left unsupervised with children, vulnerable adults or older people'. Basis of not_for_small_children (Vizsla / Ridgeback precedent)."
+      },
+      "petmd_children": {
+        "value": "can be good with kids; small children must be taught to treat dogs nicely",
+        "unit": "—",
+        "source_id": "S431",
+        "quote": "These playful pups can be good with kids and other pets, but small children must be taught how to treat dogs nicely.",
+        "confidence": "medium",
+        "notes": "PetMD (S431) — a caveat, not a rating → never small_children; with PDSA's older-children advice → not children."
+      },
+      "pdsa_company": {
+        "value": "needs company; never alone for more than four hours",
+        "unit": "—",
+        "source_id": "S430",
+        "quote": "you should never leave your dog alone for more than four hours",
+        "confidence": "medium",
+        "notes": "Basis of needs_company (with behaviour.time_alone)."
+      },
+      "pdsa_shedding": {
+        "value": "really big shedders, heavily in spring and autumn",
+        "unit": "—",
+        "source_id": "S430",
+        "quote": "Unfortunately, they are really big shedders!",
+        "confidence": "medium",
+        "notes": "PDSA (S430); the spring / autumn moult is not modelled."
+      },
+      "petmd_grooming": {
+        "value": "weekly brushing and occasional baths",
+        "unit": "—",
+        "source_id": "S431",
+        "quote": "A Dalmatian’s spotted coat doesn’t require a lot of upkeep, but she will need weekly brushing and occasional baths.",
+        "confidence": "medium",
+        "notes": "PetMD (S431) agrees with the RKC 'Once a week'. 'occasional baths' — no frequency (not modelled; bathing would be ROADMAP M5-R20)."
+      },
+      "petmd_ears": {
+        "value": "check the floppy ears regularly for infection; keep them clean and dry",
+        "unit": "—",
+        "source_id": "S431",
+        "quote": "As with all floppy-eared dogs, a Dalmatian’s ears should be checked regularly for signs of infection, including:",
+        "confidence": "medium",
+        "notes": "PetMD (S431); 'keep your Dalmatian's ears clean and dry.' → ear care ROADMAP M5-R20 (needs-david)."
+      },
+      "petmd_nails_teeth": {
+        "value": "nails trimmed monthly; teeth brushed regularly (the frequency is cut off in the quote)",
+        "unit": "—",
+        "source_id": "S431",
+        "quote": "As part of their regular care routine, Dalmatians need their nails trimmed monthly, and their teeth should be brushed at",
+        "confidence": "medium",
+        "notes": "PetMD (S431), fragment (the sentence continues — 'at least weekly', paraphrase as returned). Nails → ROADMAP M5-R19, teeth → ROADMAP M5-R15 (needs-david)."
+      },
+      "petmd_low_purine": {
+        "value": "ask the vet before a low-purine diet",
+        "unit": "—",
+        "source_id": "S431",
+        "quote": "Speak with your veterinarian before putting your Dalmatian on a low-purine diet.",
+        "confidence": "medium",
+        "notes": "PetMD (S431). A vet's decision, not a fixed breed need; the game has no diet choice → background, listed for David (no task)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -40352,6 +40920,288 @@
         "confidence": "high",
         "notes": "Colours shared by the FCI (S420) and AKC (S421) standards — black, white and black (Landseer), brown; gray only in the AKC (never in the game). Welfare (Category 2, S423; loose eyelids S425): eyelids in normal contact. Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black is the portrait default (FCI 'the traditional colour'); eyelids fitting closely (Breed Watch); natural ears and tail"
+      }
+    },
+    "dalmatian": {
+      "_note": "Unattended run M5-R10-52 (2026-10-21): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key. Sourced needs built from day one: weekly brushing (RKC S429 'Once a week', M5-R13); puppy socialisation (PetMD S431 quote, M5-R17). No meal / walk gap quote → no M5-R16 row. Sourced needs without a game mechanic: ear checks (PetMD S431) → ROADMAP M5-R20; monthly nail trim → M5-R19; tooth brushing → M5-R15; at least two walks a day with a run in a secure area (PDSA S430) → needs a new ROADMAP task (needs-david). Senior 119 from McMillan 2024 (S123, 13.2 y). RKC Breed Watch Category 1 → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S429",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Exercise: More than 2 hours per day' (S429); PDSA 'a minimum of two hours' (S430) agrees. Rule: one number N ('more than N') → N = 120.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S429 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S429",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 119
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 119 = round(0.75 × 13.2 y × 12) = round(118.8) = 119 (S11 + McMillan 2024 median 13.2 y via Dogs Trust S123). Alternative: 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 119 (0.75 × 13.2 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 119
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 119)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 39 (S35), tier 'Above average' (27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 39, Above average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PDSA (S430): 'split their daily allowance into two meals' (fragment) — the game's two adult meals stay.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S429",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "dalmatian.suitability.rkc_grooming. RKC (S429) 'Once a week' → 1 (runbook dog-grooming rule 'Once a week' → 1). PetMD (S431) 'weekly brushing' agrees. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed. The heavy spring / autumn moult (PDSA S430) is not modelled.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Grooming: Once a week«; PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S431",
+        "quote": "This is why socializing Dalmatian puppies early in life is so important.",
+        "confidence": "medium",
+        "notes": "dalmatian.behaviour.socialisation (PetMD S431); PDSA (S430) agrees (fragment). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S431)"
+      },
+      "ear_care": {
+        "value": "check the ears regularly for infection; keep them clean and dry",
+        "unit": "ear care (sourced need)",
+        "source_id": "S431",
+        "quote": "As with all floppy-eared dogs, a Dalmatian’s ears should be checked regularly for signs of infection, including:",
+        "confidence": "medium",
+        "notes": "PetMD (S431), dalmatian.suitability.petmd_ears. The game has no ear-care mechanic → ROADMAP M5-R20 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redni pregled ušes, ušesa čista in suha; mehanike ni → ROADMAP M5-R20 (needs-david)"
+      },
+      "nail_care": {
+        "value": "nails trimmed monthly",
+        "unit": "nail care (sourced need)",
+        "source_id": "S431",
+        "quote": "As part of their regular care routine, Dalmatians need their nails trimmed monthly, and their teeth should be brushed at",
+        "confidence": "medium",
+        "notes": "PetMD (S431), dalmatian.suitability.petmd_nails_teeth. The game has no nail-care mechanic → ROADMAP M5-R19 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): striženje krempljev enkrat na mesec; mehanike ni → ROADMAP M5-R19 (needs-david)"
+      },
+      "dental_care": {
+        "value": "teeth brushed regularly (frequency cut off in the quote)",
+        "unit": "tooth brushing (sourced need)",
+        "source_id": "S431",
+        "quote": "As part of their regular care routine, Dalmatians need their nails trimmed monthly, and their teeth should be brushed at",
+        "confidence": "medium",
+        "notes": "PetMD (S431), dalmatian.suitability.petmd_nails_teeth (fragment). The game has no tooth-care mechanic → ROADMAP M5-R15 (needs-david).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): redno ščetkanje zob; mehanike ni → ROADMAP M5-R15 (needs-david)"
+      },
+      "walk_pattern": {
+        "value": "at least two walks a day, ideally with a run in a secure area",
+        "unit": "walks (sourced need)",
+        "source_id": "S430",
+        "quote": "This needs to be done in at least two walks, ideally with a chance to run in a secure area.",
+        "confidence": "medium",
+        "notes": "PDSA (S430), dalmatian.exercise.walks. The game counts the daily step total, not the number of walks, and has no off-lead runs → no mechanic and no ROADMAP task yet (needs-david: a new task, as the Shiba Inu / Rhodesian Ridgeback off-lead need).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsaj dva sprehoda na dan, po možnosti tek v varnem prostoru; mehanike ni in naloge v ROADMAP še ni → potrebna nova naloga (needs-david)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-52); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S429",
+              "S430"
+            ],
+            "refs": [
+              "dalmatian.exercise.adult",
+              "dalmatian.suitability.pdsa_active_family"
+            ],
+            "quote": "S429 'Exercise: More than 2 hours per day'; S430 'Dalmatians can be great pets for active households'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S429"
+            ],
+            "refs": [
+              "dalmatian.suitability.rkc_size_of_home",
+              "dalmatian.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S429 'Size of home: Large house' / 'Size of garden: Large garden'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S429",
+              "S430"
+            ],
+            "refs": [
+              "dalmatian.exercise.adult",
+              "dalmatian.suitability.pdsa_exercise"
+            ],
+            "quote": "S429 'More than 2 hours per day'; S430 'a minimum of two hours of exercise every day'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S430"
+            ],
+            "refs": [
+              "dalmatian.suitability.pdsa_children",
+              "dalmatian.behaviour.family"
+            ],
+            "quote": "S430 'They tend to be better suited to households with older children'",
+            "note": "A large dog: not older_children (that chip names a small dog) → not_for_small_children (Vizsla / Ridgeback precedent)."
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S430"
+            ],
+            "refs": [
+              "dalmatian.behaviour.time_alone",
+              "dalmatian.suitability.pdsa_company"
+            ],
+            "quote": "S430 'Dalmatians need company'; 'you should never leave your dog alone for more than four hours'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S429",
+              "S430"
+            ],
+            "refs": [
+              "dalmatian.suitability.rkc_shedding",
+              "dalmatian.suitability.pdsa_shedding"
+            ],
+            "quote": "S429 'Sheds: Yes'; S430 'Unfortunately, they are really big shedders!'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "PDSA says 'great pets for active households' (→ active_family), no family-pet statement.",
+          "children": "PDSA (S430): better suited to households with older children, always supervise → not_for_small_children instead.",
+          "small_children": "Sources advise older children / supervision.",
+          "older_children": "Its chip reads 'small dog — better with older children' — wrong for a large dog → not_for_small_children.",
+          "other_pets": "PDSA (S430): supervise with smaller pets, may chase; PetMD (S431) good with other pets — conflicting.",
+          "chases_small_pets": "No 'high prey drive' statement (PDSA: 'may get the urge to chase') — runbook: supervision advice alone is not enough.",
+          "apartment": "RKC 'Large house' (S429).",
+          "first_time_owner": "PDSA suggests an accredited trainer for first-time owners (paraphrase) — no rating.",
+          "experienced_owner": "No source names a powerful dog or advises against first-time owners verbatim.",
+          "often_alone": "Sources say the opposite (needs_company).",
+          "needs_mental_stimulation": "PDSA training to keep their minds busy (paraphrase) — no verbatim statement (Vizsla precedent).",
+          "frequent_grooming": "Once a week (S429).",
+          "low_shedding": "Sheds (S429, S430).",
+          "shorter_lifespan": "RKC 'Over 12 years' (S429); McMillan 13.2 y.",
+          "sensitive_skin": "Skin allergies (PDSA S430) are not a Breed Watch point → register health key only (the chip follows the welfare rule).",
+          "hips_hind_legs": "Hip dysplasia only in the PDSA list; Breed Watch Category 1 → breeder checklist instead.",
+          "welfare": "RKC Breed Watch Category 1 (S429) → no welfare chip; deafness, bladder stones, atopy, epilepsy and hip dysplasia are register health keys and breeder-checklist items only."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, large_home; consider long_daily_exercise, not_for_small_children, needs_company, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S429",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC Breed Watch Category 1 (S429) → no welfare chip, no veterinary advice against advertising the breed type (the only one is for flat-faced breeds, S92). Marketing never shows it as a dog for small children, left alone or with small pets (S430).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (Breed Watch Category 1)"
+      },
+      "ai_appearance": {
+        "value": "adult Dalmatian, pure white with round, clearly defined black spots (default); mesocephalic, rectangular, strong and muscled body; short, shiny, hard dense coat; hanging spotted ears; oval dark eyes with fitting eyelids and pigmented rims; black nose; tail to the hock, sabre-shaped, spotted; no patches, no tricolour, no blue eyes",
+        "unit": "—",
+        "source_id": "S428",
+        "quote": "Black spotted variety with black spots, liver spotted variety with brown spots.",
+        "confidence": "high",
+        "notes": "Colours of the FCI standard (S428) — white with black spots, white with liver (brown) spots; never patches, monocle, tricolour, brindle, lemon / orange or blue spots, blue eyes (disqualifying, S428). Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black-spotted is the portrait default (FCI first variety); standard colours only"
       }
     }
   }

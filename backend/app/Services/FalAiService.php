@@ -453,6 +453,14 @@ class FalAiService
                 .'small triangular ears lying close to the head, natural tail hanging to the hock, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-52: FCI 153 (S428) — pure white with black spots as the anchor (black-spotted, liver-spotted);
+            // rectangular, strong, muscled body, short shiny coat, spotted hanging ears, fitting eyelids, sabre tail.
+            BreedType::Dalmatian => 'A friendly, elegant Dalmatian dog with a pure white coat covered in round, clearly defined black spots, '
+                .'short, shiny, hard and dense coat, rectangular, strong and muscular body, '
+                .'oval dark eyes with closely fitting eyelids, black nose, hanging spotted ears, '
+                .'tail reaching the hock carried in a slight sabre curve, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1095,6 +1103,16 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'flat, water-resistant, moderately long double coat with a dense undercoat',
                 'markings' => 'closely fitting eyelids, broad deep muzzle',
+            ],
+            // M5-R10-52: FCI S428 "Black spotted variety with black spots, liver spotted variety with brown spots."
+            BreedType::Dalmatian => [
+                'color_scheme' => match ($variantIndex) {
+                    0, 2 => 'pure white with round black spots',
+                    1 => 'pure white with round liver (brown) spots',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, shiny, hard and dense coat',
+                'markings' => 'clearly defined round spots, spotted ears and tail, no patches',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

@@ -424,6 +424,7 @@ const SPECIES = [
       { id: 'portuguese_water_dog', synonyms: { en: ['Cão de Água Português', 'Portie', 'PWD', 'Algarvian Water Dog'], sl: ['portugalski vodni pes', 'vodni pes', 'portie'] } },
       { id: 'bichon_frise', synonyms: { en: ['Bichon à poil frisé', 'Bichon Frisé', 'Bichon Tenerife'], sl: ['kodrasti bišon', 'bišon frize', 'bichon frise'] } },
       { id: 'newfoundland', synonyms: { en: ['Newfie', 'Newf', 'Terra Nova'], sl: ['novofundlandski pes', 'njufi', 'newfoundland'] } },
+      { id: 'dalmatian', synonyms: { en: ['Carriage Dog', 'Spotted Coach Dog', 'Firehouse Dog', 'Dalmatinski pas'], sl: ['dalmatinski pas', 'dalmatinka', 'dalmatin'] } },
     ],
   },
   {
@@ -448,7 +449,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', Portugal: 'PT', Canada: 'CA' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', Portugal: 'PT', Canada: 'CA', Croatia: 'HR' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -1490,6 +1491,30 @@ const DOG_FACTS = {
       ['heart_muscle_disease', 'health.heart'],
     ],
   },
+  // M5-R10-52. Height = FCI 153 (S428), weight = PDSA 18–27 kg (S430; the FCI standard gives none), lifespan = the
+  // McMillan 2024 median 13.2 y (Dogs Trust table S123) and the RKC band "Over 12 years" (S429), exercise = RKC "More
+  // than 2 hours per day" (S429). FCI origin Croatia (HR, new). Not exported: height.pdsa and the PetMD weight
+  // (alternatives), adult_weight.salt_category (our assignment), lifespan.petmd (US alternative), lifespan.senior_from
+  // (derived), exercise.walks (open for David: a new task), health.breed_watch (Category 1, no chip), the care needs
+  // suitability.petmd_ears / petmd_nails_teeth / petmd_low_purine (open for David: M5-R20 / M5-R19 / M5-R15 / no task).
+  // New health key: deafness.
+  dalmatian: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['deafness', 'health.deafness'],
+      ['bladder_stones', 'health.urinary_stones'],
+      ['itchy_skin_allergy', 'health.atopy'],
+      ['epilepsy', 'health.epilepsy'],
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+    ],
+  },
 
 };
 
@@ -1875,6 +1900,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.newfoundland.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.newfoundland.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.newfoundland.exercise_minutes_senior',
+  },
+  dalmatian: {
+    adult_minutes: ['proposed_game_parameters.dalmatian.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.dalmatian.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.dalmatian.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.dalmatian.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.dalmatian.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.dalmatian.exercise_minutes_senior',
   },
 
 };

@@ -2053,6 +2053,30 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (royalkennelclub.com) returned a fetch error on 2026-10-20 → basis = the Kennel Club Newfoundland Breed Health and Conservation Plan (K29, August 2018; dog-data S425): Assured Breeder Scheme requirements — cystinuria DNA test, hip scoring (BVA/KC) and elbow grading (BVA/KC) before breeding (level minimum = a breeding-register requirement); 'The breed club recommendations listed on the Kennel Club website are: breed club heart testing,' and breed club members test breeding stock by Colour Flow Echo Doppler → other_scheme. The plan is from 2018 — re-read the RKC page when it is reachable (open for David). New test keys dna_cu and heart_echo_scheme. PDSA (dog-data S423) advises checking that the parents 'have been screened under these schemes'."
+    },
+    "dalmatian": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K28",
+        "quote": "Recommended Health Tests from the National Breed Club:"
+      },
+      "tests": [
+        {
+          "key": "hearing_baer",
+          "level": "other_scheme",
+          "name": "BAER hearing test (US breed club recommendation)",
+          "source_id": "K28",
+          "quote": "BAER Testing"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip evaluation (US breed club recommendation)",
+          "source_id": "K28",
+          "quote": "Hip Evaluation"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S429, 2026-10-21) shows the heading 'Best Practice schemes and tests' with the sentence 'To support the breed's health, responsible breeders should ensure they complete all tests in both categories.' but returned no named test → no minimum / best_practice level. AKC Non-Sporting Group health testing page (K28, re-read 2026-10-21): Dalmatian — 'Recommended Health Tests from the National Breed Club:' 'Hip Evaluation', 'BAER Testing' → other_scheme. PDSA (dog-data S430) 'There is BAER testing for this.' (deafness); the Kennel Club (dog-data S432) describes the BAER test and breeders selecting unaffected dogs. No urate (HUU) DNA test listed by an A/B source fetched in this run → not added (nothing guessed). No new test key."
     }
   }
 }
