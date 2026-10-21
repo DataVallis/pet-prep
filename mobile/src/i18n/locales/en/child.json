@@ -224,5 +224,10 @@
       "care_session_active": "Someone else is doing something with your pup right now. Try again {{when}}.",
       "care_session_active_no_time": "Someone else is doing something with your pup right now. Try again in a minute."
     }
+  },
+  "rules": {
+    "sleeping": "💤 Your pup is asleep",
+    "sleepingUntil": "💤 Your pup is asleep until {{clock}}",
+    "contract": "Sign the contract first"
   }
 }

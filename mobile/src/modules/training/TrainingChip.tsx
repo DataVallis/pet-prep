@@ -19,14 +19,17 @@ export interface TrainingChipProps {
   pending: boolean;
   onPress: () => void;
   disabled?: boolean;
+  /** M5-T02: why it is off (»💤 Kuža spi do 7:00«) — read out with the button. */
+  disabledReason?: string;
 }
 
-export default function TrainingChip({ todayDone, pending, onPress, disabled = false }: TrainingChipProps) {
+export default function TrainingChip({ todayDone, pending, onPress, disabled = false, disabledReason }: TrainingChipProps) {
   return (
     <Pressable
       testID="hud-training-open"
       accessibilityRole="button"
       accessibilityLabel={TRAINING_STRINGS.entryA11y(todayDone)}
+      accessibilityHint={disabled ? disabledReason : undefined}
       accessibilityState={{ disabled }}
       disabled={disabled}
       onPress={onPress}

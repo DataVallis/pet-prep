@@ -24,7 +24,8 @@
       "budget_used": "Your pup has practised enough for today. More tomorrow!",
       "share_used": "Your dog school time for today is used up. Your brother or sister can still practise with your pup — you can play again tomorrow!",
       "day_ending": "The day is almost over — your pup is going to sleep. New practice tomorrow!",
-      "unavailable": "It's not practice time right now."
+      "unavailable": "It's not practice time right now.",
+      "sleeping": "Your pup is asleep. School when it wakes up."
     },
     "starting": "Your pup is getting ready …",
     "getReady": "Get ready …",
@@ -81,7 +82,9 @@
       "training_day_ending": "The day is almost over — your pup is going to sleep. New practice tomorrow!",
       "training_session_interrupted": "The practice was interrupted, so it doesn't count this time. You still have your practice time — try again when your pup is free.",
       "expiredWhileAway": "The practice ran out because the app was closed, so it didn't count this time. Start a new practice.",
-      "badResponse": "Something went wrong. Try again."
+      "badResponse": "Something went wrong. Try again.",
+      "training_pet_sleeping": "Your pup is asleep. School when it wakes up.",
+      "training_pet_sleeping_until": "Your pup is asleep until {{clock}}. School then!"
     },
     "retry": "Try again",
     "commands": {

@@ -69,6 +69,13 @@ export interface ChildTraining {
   /** M5-R03b: my share minus my sessions today, capped by `daily_budget_left_seconds`. */
   my_seconds_left: number;
   can_start: boolean;
+  /**
+   * M5-T02: why a start is refused now (server `TrainingService::startRefusal`, e.g.
+   * `training_pet_sleeping`); null = it may start, training is off, or an older server.
+   */
+  blocked_reason: string | null;
+  /** M5-T02: when `blocked_reason` ends (wake time, session expiry, midnight); null without a time. */
+  next_allowed_at: string | null;
 }
 
 /** `training` of the parent dashboard / `pet.updated`. */
@@ -91,6 +98,8 @@ export const EMPTY_TRAINING: ChildTraining = {
   my_share_seconds: 0,
   my_seconds_left: 0,
   can_start: false,
+  blocked_reason: null,
+  next_allowed_at: null,
 };
 
 export const EMPTY_TRAINING_SUMMARY: PetTrainingSummary = {
@@ -257,6 +266,8 @@ export function readChildTraining(raw: unknown): ChildTraining {
     my_share_seconds: Math.max(0, num(raw.my_share_seconds, budget)),
     my_seconds_left: Math.min(myLeft, budgetLeft),
     can_start: raw.can_start === true,
+    blocked_reason: raw.can_start === true || typeof raw.blocked_reason !== 'string' ? null : raw.blocked_reason,
+    next_allowed_at: raw.can_start === true ? null : iso(raw.next_allowed_at),
   };
 }
 
@@ -460,6 +471,7 @@ export function showTrainingDot(training: ChildTraining): boolean {
 }
 
 export type StartBlock =
+  | 'sleeping'
   | 'sibling_training'
   | 'own_session_closing'
   | 'budget_used'
@@ -481,6 +493,8 @@ export function isDayEnding(training: ChildTraining, serverNowMs: number, nextMi
  */
 export function startBlock(training: ChildTraining, dayEnding = false): StartBlock {
   if (training.can_start) return null;
+  // M5-T02: the server says the pet sleeps (no school until it wakes).
+  if (training.blocked_reason === 'training_pet_sleeping') return 'sleeping';
   if (training.session !== null) return training.session.mine ? 'own_session_closing' : 'sibling_training';
   // Same order as the server: the dog's whole budget first, then my share of it.
   if (training.enabled && petSessionsLeftToday(training) === 0) return 'budget_used';
@@ -513,6 +527,7 @@ export const TRAINING_STRINGS = strings('training', 'child', {
   },
   errors: {
     training_session_active_until: (clock: string) => t('training:child.errors.training_session_active_until', { clock }),
+    training_pet_sleeping_until: (clock: string) => t('training:child.errors.training_pet_sleeping_until', { clock }),
   },
 });
 
@@ -526,7 +541,7 @@ const _trainingTexts: {
 void _trainingTexts;
 
 /** Refusal reasons of the two training endpoints (backend `CareRefusal`). */
-export type TrainingRefusal = Exclude<keyof typeof TRAINING_STRINGS.errors, 'training_session_active_until' | 'expiredWhileAway' | 'badResponse'>;
+export type TrainingRefusal = Exclude<keyof typeof TRAINING_STRINGS.errors, 'training_session_active_until' | 'training_pet_sleeping_until' | 'expiredWhileAway' | 'badResponse'>;
 
 const REFUSALS: readonly TrainingRefusal[] = [
   'training_not_available',
@@ -539,6 +554,7 @@ const REFUSALS: readonly TrainingRefusal[] = [
   'training_invalid_taps',
   'training_day_ending',
   'training_session_interrupted',
+  'training_pet_sleeping',
 ];
 
 export function isTrainingRefusal(value: unknown): value is TrainingRefusal {
@@ -550,6 +566,11 @@ export function trainingRefusalMessage(reason: string | null, nextAllowedAt: str
   if (reason === 'training_session_active') {
     const clock = familyClock(nextAllowedAt, timezone);
     return clock ? TRAINING_STRINGS.errors.training_session_active_until(clock) : TRAINING_STRINGS.errors.training_session_active;
+  }
+  if (reason === 'training_pet_sleeping') {
+    // M5-T02: "Kuža spi do 07:00. Takrat spet v šolo!" (the wake time is the server's next_allowed_at).
+    const clock = familyClock(nextAllowedAt, timezone);
+    return clock ? TRAINING_STRINGS.errors.training_pet_sleeping_until(clock) : TRAINING_STRINGS.errors.training_pet_sleeping;
   }
   return isTrainingRefusal(reason) ? TRAINING_STRINGS.errors[reason] : TRAINING_STRINGS.errors.badResponse;
 }

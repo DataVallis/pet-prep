@@ -224,5 +224,10 @@
       "care_session_active": "Nekdo drug zdaj nekaj počne s kužkom. Poskusi znova {{when}}.",
       "care_session_active_no_time": "Nekdo drug zdaj nekaj počne s kužkom. Poskusi čez minuto."
     }
+  },
+  "rules": {
+    "sleeping": "💤 Kuža spi",
+    "sleepingUntil": "💤 Kuža spi do {{clock}}",
+    "contract": "Najprej podpiši pogodbo"
   }
 }

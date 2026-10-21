@@ -17,6 +17,7 @@ import {
   makeLegacyPetProfile,
   makeLiveChildState,
   makeMedia,
+  makePlayState,
   makePet,
   makeRunningSession,
   makeTrainingResult,
@@ -118,6 +119,27 @@ describe('ChildHudScreen — training (M5-R03)', () => {
     await renderHud(withTraining(makeEnabledTraining({ today_done: true })));
     expect(screen.queryByTestId('hud-training-badge')).toBeNull();
     expect(screen.getByTestId('hud-training-done')).toBeTruthy();
+  });
+
+  it('M5-T02: while the pet sleeps "Šola" and "Igra" stay visible but off, with »💤 Kuža spi do 7:00«', async () => {
+    const wake = '2026-10-05T07:00:00+02:00';
+    await renderHud(
+      makeLiveChildState({
+        sleep: { asleep: true, until: wake },
+        pet: { pet_state: 'sleeping' },
+        play: makePlayState({ can_play: false }),
+        training: makeEnabledTraining({ can_start: false, blocked_reason: 'training_pet_sleeping', next_allowed_at: wake }),
+      }),
+    );
+    expect(isDisabled('hud-training-open')).toBe(true);
+    expect(isDisabled('hud-play-open')).toBe(true);
+    expect(screen.getByTestId('hud-training-open').props.accessibilityHint).toBe('💤 Kuža spi do 7:00');
+    // One note for both (never the play note twice), no "today's practice" dot.
+    expect(screen.getByTestId('hud-sleep-note').props.children).toBe('💤 Kuža spi do 7:00');
+    expect(screen.queryByTestId('hud-play-blocked')).toBeNull();
+    expect(screen.queryByTestId('hud-training-badge')).toBeNull();
+    fireEvent.press(screen.getByTestId('hud-training-open'));
+    expect(screen.queryByTestId('training-overlay')).toBeNull();
   });
 
   it('opens the command list: progress, "naučeno", today, sessions left; closes', async () => {
