@@ -167,6 +167,26 @@ export function onWantedChange(state: TransitionState, wanted: VideoState | null
   return hasTransition(state.shown, wanted) ? { shown: state.shown, pending: { from: state.shown, to: wanted } } : { shown: wanted, pending: null };
 }
 
+/**
+ * M5-T08b (QA minor 5): would `nextPlayback` really play the `from → wanted` transition now —
+ * a stored, playable clip AND the target's own loop to continue with? Only then may the reducer
+ * mark a transition pending (else a clip arriving minutes later would still play it).
+ */
+export function canStartTransition(input: PlaybackInput, from: VideoState): boolean {
+  const { current } = nextPlayback(input, from);
+  return current.kind === 'clip' && current.transition !== null;
+}
+
+/**
+ * M5-T08b: a pending transition that the player did not choose (its clip failed, the target loop
+ * went missing) is settled on the target straight away — it never plays later.
+ */
+export function settleTransition(state: TransitionState, playback: Playback): TransitionState {
+  if (state.pending === null) return state;
+  const { current } = playback;
+  return current.kind === 'clip' && current.transition !== null ? state : { shown: state.pending.to, pending: null };
+}
+
 /** The transition clip played to its end (or failed): continue with the target loop. */
 export function onTransitionEnd(state: TransitionState): TransitionState {
   return state.pending === null ? state : { shown: state.pending.to, pending: null };

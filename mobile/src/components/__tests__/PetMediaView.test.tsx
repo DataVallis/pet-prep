@@ -650,6 +650,28 @@ describe('M5-T08 state media: seamless loops, transitions, key image fallback', 
     expect(screen.getByTestId('pet-media-image').props.source).toEqual({ uri: KEY_HUNGRY });
   });
 
+  it('M5-T08b: under a loading state loop the still is that state\'s key image, never the standing reference image', () => {
+    renderMedia({ media: stateMedia(), petState: 'sleeping' });
+    expect(sourceUri(mockVideoPlayers[0])).toBe(SLEEPING);
+    expect(screen.getByTestId('pet-media-image').props.source).toEqual({ uri: KEY_SLEEPING });
+  });
+
+  it('M5-T08b: a state change while the target loop is missing plays no transition when the loop arrives later', async () => {
+    const noSleepLoop = stateMedia({ videos: { idle: IDLE } });
+    const { update } = renderMedia({ media: noSleepLoop });
+    await showFirstFrame();
+    update({ media: noSleepLoop, petState: 'sleeping' });
+    await act(async () => {
+      jest.advanceTimersByTime(CROSSFADE_MS + 50);
+    });
+    expect(screen.getByTestId('pet-media-image').props.source).toEqual({ uri: KEY_SLEEPING });
+
+    // Minutes later the sleeping loop is stored: straight to the loop, no idle_to_sleeping.
+    update({ media: stateMedia(), petState: 'sleeping' });
+    expect(playerUris()).not.toContain(IDLE_TO_SLEEPING);
+    expect(playerUris()).toContain(SLEEPING);
+  });
+
   it('picture mode shows the key image of the state, no player', () => {
     renderMedia({ media: stateMedia(), petState: 'sleeping', mode: 'picture' });
     expect(mockVideoPlayers).toHaveLength(0);
