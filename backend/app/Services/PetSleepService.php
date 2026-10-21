@@ -18,11 +18,13 @@ use Carbon\CarbonInterface;
  * quiet stretch (adjoining school + night windows are hopped over; DST-safe
  * through QuietHours::nextBoundaryAfter).
  *
- * While it sleeps: no free play / cuddle (PlayService, unless
- * `play.free_play_in_quiet_hours`), no training session (TrainingService →
- * 422 `training_pet_sleeping`). The cat's wand, grooming and the puppy's
- * socialisation keep their own quiet-hours refusals (they also refuse a game
- * that would run INTO quiet hours).
+ * While it sleeps: no ball game and no cuddle (PlayService → 422
+ * `play_pet_sleeping`, M5-T02b), no training session (TrainingService →
+ * 422 `training_pet_sleeping`), no brushing for a dog or a cat
+ * (CatChoreService → 422 `grooming_quiet_hours`, checked first, M5-T02b —
+ * David 2026-10-21 »spečo žival ne motimo«). The cat's wand and the puppy's
+ * socialisation keep their own quiet-hours refusals (they, like grooming,
+ * also refuse a game that would run INTO quiet hours).
  */
 class PetSleepService
 {

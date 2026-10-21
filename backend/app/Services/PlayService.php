@@ -117,6 +117,21 @@ class PlayService
     }
 
     /**
+     * M5-T02b (David 2026-10-21): play exists for the pet now (eligible, not
+     * frozen) but it sleeps → when it wakes (422 `play_pet_sleeping`, ball
+     * game and cuddle); null otherwise. Sleep wins over a mess (the pet is
+     * not disturbed either way; the mess is told once it is awake).
+     */
+    public function sleepRefusalUntil(Pet $pet, CarbonInterface $now): ?CarbonInterface
+    {
+        if (! $this->eligible($pet, $now) || $pet->isFrozen()) {
+            return null;
+        }
+
+        return $this->sleep->wakesAt($pet, $now);
+    }
+
+    /**
      * When a refused play becomes possible (422 next_allowed_at): the end of
      * the current quiet stretch, else null (a mess / no play has no time).
      */
@@ -129,10 +144,14 @@ class PlayService
         return $this->sleep->wakesAt($pet, $now);
     }
 
-    /** The pet sleeps (PetSleepService, M5-T02) and free play waits for it (D, `play.free_play_in_quiet_hours`). */
-    private function sleepsNow(Pet $pet, CarbonInterface $now, ?QuietHours $quiet = null): bool
+    /**
+     * The pet sleeps (PetSleepService, M5-T02): no ball game and no cuddle —
+     * David 2026-10-20 (play) + 2026-10-21 (cuddle, »spečo žival ne motimo«);
+     * the former (D) switch `play.free_play_in_quiet_hours` is gone.
+     */
+    public function sleepsNow(Pet $pet, CarbonInterface $now, ?QuietHours $quiet = null): bool
     {
-        return ! config('play.free_play_in_quiet_hours', false) && $this->sleep->asleepAt($pet, $now, $quiet);
+        return $this->sleep->asleepAt($pet, $now, $quiet);
     }
 
     /**

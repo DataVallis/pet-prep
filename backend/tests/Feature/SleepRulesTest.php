@@ -227,7 +227,7 @@ describe('play while the pet sleeps', function () {
         app('auth')->forgetGuards();
         actingAsRole($child);
         postJson('/api/child/pet/play', ['kind' => 'cuddle'])->assertStatus(422)
-            ->assertJsonPath('reason', 'play_not_available')
+            ->assertJsonPath('reason', 'play_pet_sleeping')
             ->assertJsonPath('next_allowed_at', '2026-10-09T07:00:00+02:00');
     });
 });

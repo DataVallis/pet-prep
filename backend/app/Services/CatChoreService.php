@@ -77,6 +77,7 @@ class CatChoreService
         private readonly LifeStageService $lifeStages,
         private readonly LitterService $litter,
         private readonly RoutineLedgerService $ledger,
+        private readonly PetSleepService $sleep,
     ) {}
 
     // ──────────────────────────────────────────────────────────────
@@ -232,6 +233,12 @@ class CatChoreService
         if ($period === null) {
             return $refuse(CareRefusal::GroomingNotAvailable);
         }
+        // M5-T02b (David 2026-10-21, »spečo žival ne motimo«): while the pet sleeps
+        // (PetSleepService — the one sleep rule) the sleep is the reason, before any
+        // other block; next_allowed_at = when it wakes.
+        if (($wakes = $this->sleep->wakesAt($pet, $now)) !== null) {
+            return $refuse(CareRefusal::GroomingQuietHours, $wakes);
+        }
         if ($pet->displayMetric('hygiene_level') <= 0) {
             return $refuse(CareRefusal::NeedsCleaning);
         }
@@ -259,6 +266,37 @@ class CatChoreService
         }
 
         return null;
+    }
+
+    /**
+     * M5-T02b (David 2026-10-21: a grooming is never missed only because the
+     * pet slept): how many family-local days of [$from, $to) leave room for
+     * one grooming — an awake stretch of at least $seconds (session + finish
+     * grace) outside quiet hours. At most one grooming per day, so this caps
+     * the week's expected slots (RoutineLedgerService); with the default
+     * quiet hours every day has room. Up to $cap.
+     */
+    public static function feasibleGroomingDays(?QuietHours $quiet, CarbonInterface $from, CarbonInterface $to, string $timezone, int $seconds, int $cap = 7): int
+    {
+        $from = CarbonImmutable::instance($from)->utc();
+        $to = CarbonImmutable::instance($to)->utc();
+        $count = 0;
+        $day = $from->setTimezone($timezone)->startOfDay();
+        for ($i = 0; $i < 10 && $count < $cap && $day->utc()->lessThan($to); $i++) {
+            $next = $day->addDay()->startOfDay();
+            $a = $day->utc()->greaterThan($from) ? $day->utc() : $from;
+            $b = $next->utc()->lessThan($to) ? $next->utc() : $to;
+            $segments = $quiet === null || ! $quiet->is_active ? [[$a, $b, false]] : QuietHours::segmentsBetween($quiet, $a, $b);
+            foreach ($segments as [$segStart, $segEnd, $isQuiet]) {
+                if (! $isQuiet && CarbonImmutable::instance($segStart)->addSeconds($seconds)->lessThanOrEqualTo(CarbonImmutable::instance($segEnd))) {
+                    $count++;
+                    break;
+                }
+            }
+            $day = $next;
+        }
+
+        return $count;
     }
 
     /**

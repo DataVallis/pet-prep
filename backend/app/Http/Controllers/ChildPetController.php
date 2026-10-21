@@ -152,10 +152,12 @@ class ChildPetController extends Controller
      * only: the dog is happy for 30 minutes (`state.play.mood`); no score,
      * routine or metric changes. The response carries `play` {kind, source:
      * invitation | free}. A repeat by the same child and kind within 10 s →
-     * `unchanged`. 422 play_not_available (no play for this pet — free mutt,
-     * legacy pet, the ball game for a cat — M5-R06-04 —, quiet hours:
-     * next_allowed_at = their end, or a mess to clean first); 423 while
-     * locked (incl. contract_required, payment_required).
+     * `unchanged`. 422 play_pet_sleeping (the pet sleeps — family quiet
+     * hours, PetSleepService; ball game and cuddle, M5-T02b David
+     * 2026-10-21; next_allowed_at = when it wakes); 422 play_not_available
+     * (no play for this pet — free mutt, legacy pet, the ball game for a
+     * cat — M5-R06-04 —, or a mess to clean first); 423 while locked (incl.
+     * contract_required, payment_required).
      *
      * POST /api/child/pet/play
      */
@@ -282,7 +284,9 @@ class ChildPetController extends Controller
      * (~30 s; ~60 s while the coat is matted — `session.matted`). 422
      * grooming_not_available | needs_cleaning | grooming_week_done |
      * grooming_done_today | grooming_session_active | grooming_quiet_hours
-     * (next_allowed_at where the refusal ends); 423 while locked.
+     * (next_allowed_at where the refusal ends; grooming_quiet_hours = the pet
+     * sleeps — checked first, M5-T02b — or the session would run into quiet
+     * hours, next_allowed_at = when it wakes); 423 while locked.
      *
      * POST /api/child/pet/grooming/start
      */
