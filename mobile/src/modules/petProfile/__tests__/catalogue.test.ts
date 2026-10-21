@@ -471,7 +471,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(24);
+    expect(CONSIDER_TAGS).toHaveLength(25);
+    // M5-R10-54 (runbook new-tag rule): sensitive dog — better with older children (the Whippet, PDSA S444 / PetMD S445); no numbers.
+    expect(CONSIDER_TAGS).toContain('sensitive_older_children');
     // M5-R10-46 (runbook new-tag rule): independent and stubborn — best with an experienced owner (the Shiba Inu, AKC S383); no numbers.
     expect(CONSIDER_TAGS).toContain('independent_experienced_owner');
     // M5-R10-30 (runbook new-tag rule): small dog — better with older children (the Pomeranian, AKC S251); no numbers.
@@ -736,8 +738,9 @@ describe('breed search', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('angleški buldog')).toEqual(['bulldog']);
     // M5-R10-34: »angleški« is also the start of the English Springer Spaniel's SL name — still never the French Bulldog.
-    // M5-R10-41: … and the English Cocker Spaniel (»angleški koker španjel«); M5-R10-45: … and the Mastiff (»angleški mastif«).
-    expect(find('angleski')).toEqual(['bulldog', 'english_springer_spaniel', 'english_cocker_spaniel', 'mastiff']);
+    // M5-R10-41: … and the English Cocker Spaniel (»angleški koker španjel«); M5-R10-45: … and the Mastiff (»angleški mastif«);
+    // M5-R10-54: … and the Whippet (»mali angleški hrt«).
+    expect(find('angleski')).toEqual(['bulldog', 'english_springer_spaniel', 'english_cocker_spaniel', 'mastiff', 'whippet']);
     expect(find('english bulldog')).toEqual(['bulldog']);
     expect(find('british')).toEqual(['bulldog']);
   });
