@@ -65,6 +65,14 @@ class PetPreparationService
      */
     public const SCREEN_MAX_MINUTES = 15;
 
+    /**
+     * The push »… je pripravljen!« only when the preparation ended within this
+     * long of its start: a clip that failed (budget, fal error) and was stored by
+     * the next day's retry must not send day-old news. The `pet_ready` event and
+     * `preparation_ready_at` are still written (the apps cap the in-app message too).
+     */
+    public const PUSH_MAX_HOURS = 2;
+
     public function __construct(
         private readonly MediaEntitlementService $entitlements,
         private readonly FalAiService $fal,
@@ -220,7 +228,9 @@ class PetPreparationService
             ]);
 
             PetUpdated::afterCommit($locked, self::EVENT_READY);
-            app(NotificationService::class)->petReady($locked);
+            if ($locked->preparation_started_at->greaterThanOrEqualTo(now()->subHours(self::PUSH_MAX_HOURS))) {
+                app(NotificationService::class)->petReady($locked);
+            }
 
             return true;
         });

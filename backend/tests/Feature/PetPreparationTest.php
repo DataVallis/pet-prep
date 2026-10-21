@@ -340,6 +340,22 @@ describe('the single "ready" news', function () {
             ->and($sent[0]['data']['type'])->toBe('pet_ready');
     });
 
+    it('sends no push for a preparation that ended long after it started (a failed clip retried the next day)', function () {
+        Queue::fake([SubmitPetStateVideo::class, SendPushNotification::class]);
+        [, $child, $pet] = ppFamily();
+        ppStored($pet);
+        ppSign($child);
+        ppStored($pet, 'idle');
+        ppStored($pet, 'sleeping');
+        $this->travel(PetPreparationService::PUSH_MAX_HOURS + 1)->hours();
+
+        Event::fake([PetUpdated::class]);
+        expect(app(PetPreparationService::class)->settle($pet->id))->toBeTrue();
+
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'pet_ready');
+        expect(PushNotification::where('pet_id', $pet->id)->where('type', PushType::PetReady->value)->exists())->toBeFalse();
+    });
+
     it('has neutral texts in every language (no AI, no generation) and a cat text for a cat', function () {
         foreach (['en', 'sl'] as $locale) {
             foreach ([Species::Dog, Species::Cat] as $species) {
