@@ -1,7 +1,7 @@
 /**
  * M5-T06 — pet preparation on the child HUD: »Pripravljamo: Luna … to lahko traja nekaj
  * minut« with Curio while the server says `preparing`; never over a lock; and
- * »Luna je pripravljen!« once per pet when the shown preparation ends.
+ * »Vse je pripravljeno: Luna« once per pet when the server says the end is news.
  */
 import { act, screen, waitFor } from '@testing-library/react-native';
 
@@ -89,12 +89,12 @@ it('never covers a lock, nor shows when the server says ready', async () => {
   expect(screen.queryByTestId('pet-preparation')).toBeNull();
 });
 
-it('says »Luna je pripravljen!« once per pet when the shown preparation ended', async () => {
+it('says »Vse je pripravljeno: Luna« once per pet when the shown preparation ended', async () => {
   const readyAt = '2026-10-04T09:58:00+00:00'; // 2 min before the state's server_time
-  const state = makeLiveChildState({ pet: { name: 'Luna', preparation: makePreparation({ ready_at: readyAt }) } });
+  const state = makeLiveChildState({ pet: { name: 'Luna', preparation: makePreparation({ ready_at: readyAt, announce: true }) } });
   const first = await renderHud(state);
 
-  await waitFor(() => expect(screen.getByText(`${FSI}Luna${PDI} je pripravljen!`)).toBeTruthy());
+  await waitFor(() => expect(screen.getByText(`Vse je pripravljeno: ${FSI}Luna${PDI}`)).toBeTruthy());
   expect(JSON.parse(data.get('petprep.pet_ready_announced') ?? '[]')).toEqual([7]);
   first.unmount();
 
@@ -102,7 +102,16 @@ it('says »Luna je pripravljen!« once per pet when the shown preparation ended'
   await act(async () => {
     await Promise.resolve();
   });
-  expect(screen.queryByText(`${FSI}Luna${PDI} je pripravljen!`)).toBeNull();
+  expect(screen.queryByText(`Vse je pripravljeno: ${FSI}Luna${PDI}`)).toBeNull();
+});
+
+it('says nothing when the server says the end is no news', async () => {
+  await renderHud(makeLiveChildState({ pet: { name: 'Luna', preparation: makePreparation({ ready_at: '2026-10-04T09:58:00+00:00', announce: false }) } }));
+  await act(async () => {
+    await Promise.resolve();
+  });
+  expect(screen.queryByText(`Vse je pripravljeno: ${FSI}Luna${PDI}`)).toBeNull();
+  expect(data.size).toBe(0);
 });
 
 it('says nothing for a pet that never showed the preparation', async () => {
@@ -110,6 +119,6 @@ it('says nothing for a pet that never showed the preparation', async () => {
   await act(async () => {
     await Promise.resolve();
   });
-  expect(screen.queryByText(`${FSI}Luna${PDI} je pripravljen!`)).toBeNull();
+  expect(screen.queryByText(`Vse je pripravljeno: ${FSI}Luna${PDI}`)).toBeNull();
   expect(data.size).toBe(0);
 });

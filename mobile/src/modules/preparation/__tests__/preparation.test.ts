@@ -34,6 +34,7 @@ describe('readPreparation', () => {
       preparing: true,
       running: true,
       readyAt: null,
+      announce: false,
     });
   });
 
@@ -52,7 +53,7 @@ describe('readPreparation', () => {
   });
 
   it('round-trips to the wire shape', () => {
-    const raw = { ready: false, pending: ['image' as const], preparing: true, running: true, ready_at: null };
+    const raw = { ready: false, pending: ['image' as const], preparing: true, running: true, ready_at: null, announce: false };
     expect(preparationPayload(readPreparation(raw))).toEqual(raw);
   });
 });
@@ -69,15 +70,17 @@ describe('showPreparationScreen', () => {
 describe('wording', () => {
   it('SL: the name stands after a colon / as the subject (never declined)', () => {
     expect(preparationTitle('Luna', 'dog')).toBe(`Pripravljamo: ${FSI}Luna${PDI}`);
-    expect(readyMessage('Luna', 'dog')).toBe(`${FSI}Luna${PDI} je pripravljen!`);
-    expect(readyMessage('Luna', 'cat')).toBe(`${FSI}Luna${PDI} je pripravljena!`);
+    // David 2026-10-21: gender-neutral, the name after a colon.
+    expect(readyMessage('Luna', 'dog')).toBe(`Vse je pripravljeno: ${FSI}Luna${PDI}`);
+    expect(readyMessage('Luna', 'cat')).toBe(`Vse je pripravljeno: ${FSI}Luna${PDI}`);
     expect(preparationBody()).toBe('To lahko traja nekaj minut.');
   });
 
   it('SL: without a name the species noun', () => {
     expect(preparationTitle(null, 'dog')).toBe('Pripravljamo tvojega kužka');
     expect(preparationTitle(null, 'cat')).toBe('Pripravljamo tvojo muco');
-    expect(readyMessage(null, 'dog')).toBe('Tvoj kuža je pripravljen!');
+    expect(readyMessage(null, 'dog')).toBe('Vse je pripravljeno za tvojega kužka!');
+    expect(readyMessage(null, 'cat')).toBe('Vse je pripravljeno za tvojo muco!');
     expect(parentPreparationTitle(null, 'cat')).toBe('Pripravljamo muco');
     expect(schoolPreparingText()).toBe('Šola se še pripravlja');
   });
@@ -93,13 +96,15 @@ describe('wording', () => {
   it('never mentions AI, generating, images or videos (David 2026-10-20)', () => {
     const texts = [JSON.stringify(resources.en.preparation), JSON.stringify(resources.sl.preparation)].join(' ').toLowerCase();
     expect(texts).not.toMatch(/\bai\b|generat|ustvarj|video|slik|image|first to|prvi /);
+    // Gender-neutral ready texts (no »pripravljen« / »pripravljena«).
+    expect(texts).not.toMatch(/pripravljena?[!\s"]/);
   });
 });
 
 describe('shouldAnnounceReady', () => {
   const at = '2026-10-21T10:00:00+00:00';
   const readyAt = Date.parse(at);
-  const ended = readPreparation({ ready: true, pending: [], preparing: false, running: false, ready_at: at });
+  const ended = readPreparation({ ready: true, pending: [], preparing: false, running: false, ready_at: at, announce: true });
 
   it('once, when the shown preparation ended recently and the HUD is not locked', () => {
     expect(shouldAnnounceReady(ended, false, false, readyAt + 60_000)).toBe(true);
@@ -107,7 +112,8 @@ describe('shouldAnnounceReady', () => {
     expect(shouldAnnounceReady(ended, false, true, readyAt + 60_000)).toBe(false);
   });
 
-  it('not for a pet that never showed the preparation, nor days later', () => {
+  it('not when the server says the end is no news (seconds-long / > 2 h), never showed, or days later', () => {
+    expect(shouldAnnounceReady({ ...ended, announce: false }, false, false, readyAt + 60_000)).toBe(false);
     expect(shouldAnnounceReady(NO_PREPARATION, false, false, readyAt)).toBe(false);
     expect(shouldAnnounceReady(ended, false, false, readyAt + READY_NEWS_MAX_AGE_MS + 1)).toBe(false);
   });
@@ -118,5 +124,7 @@ describe('schoolClipsPending', () => {
     expect(schoolClipsPending(readPreparation({ ready: false, pending: ['playing'], preparing: false, running: true, ready_at: null }))).toBe(true);
     expect(schoolClipsPending(readPreparation({ ready: false, pending: ['sick'], preparing: false, running: true, ready_at: null }))).toBe(false);
     expect(schoolClipsPending(NO_PREPARATION)).toBe(false);
+    // QA m2: an older pet with a missing / failed clip (no running preparation) keeps its stage.
+    expect(schoolClipsPending(readPreparation({ ready: false, pending: ['playing'], preparing: false, running: false, ready_at: null }))).toBe(false);
   });
 });

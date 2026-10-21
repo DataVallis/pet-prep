@@ -446,7 +446,7 @@ export default function ChildHudScreen() {
   // M5-T06: the set-up screen covers the HUD (capped: a clip that hangs never blocks the pet).
   const preparingNow = usePreparationScreen(view?.pet.id ?? null, view ? showPreparationScreen(view.pet.preparation, view.lock.is_locked) : false);
   const careGuide = useCareGuide(view?.pet.id ?? null, view?.care_guide != null && !view.lock.is_locked && !preparingNow);
-  // M5-T06 (spec §13): »[ime] je pripravljen!« once per pet when the shown preparation ends
+  // M5-T06 (spec §13): »Vse je pripravljeno: [ime]« once per pet when the shown preparation ends
   // (the server also sends one push). Through the message queue like every HUD message.
   const skewMs = view?.clockSkewMs ?? 0;
   const readyNow = useCallback(() => Date.now() + skewMs, [skewMs]);

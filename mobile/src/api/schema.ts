@@ -3687,15 +3687,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -4356,15 +4359,18 @@ export interface operations {
                                 preparing: boolean;
                                 /**
                                  * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                 *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                 *     true → false exactly once, with `ready` true (news: see `announce`)
                                  *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                  */
                                 running: boolean;
-                                /**
-                                 * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                 *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                 */
+                                /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                 ready_at: string | null;
+                                /**
+                                 * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                 *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                 *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                 */
+                                announce: boolean;
                             };
                         };
                         lock: {
@@ -5045,15 +5051,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -5732,15 +5741,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -6419,15 +6431,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -7106,15 +7121,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -7793,15 +7811,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -8484,15 +8505,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -9175,15 +9199,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -9866,15 +9893,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -10553,15 +10583,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -11244,15 +11277,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -11931,15 +11967,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -12618,15 +12657,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -13309,15 +13351,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -13996,15 +14041,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -14687,15 +14735,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -15374,15 +15425,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -16065,15 +16119,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -16756,15 +16813,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -17447,15 +17507,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -18819,7 +18882,7 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
-                                /** @description M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too). */
+                                /** @description M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too) — same rows. */
                                 preparation: {
                                     /**
                                      * @description Everything the pet shows is stored (or nothing will come). Turns true with the
@@ -18839,15 +18902,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                                 traffic_light: {
                                     /** @constant */
@@ -19109,7 +19175,7 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
-                                /** @description M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too). */
+                                /** @description M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too) — same rows. */
                                 preparation: {
                                     /**
                                      * @description Everything the pet shows is stored (or nothing will come). Turns true with the
@@ -19129,15 +19195,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                                 traffic_light: {
                                     /** @constant */

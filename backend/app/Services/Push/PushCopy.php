@@ -187,7 +187,7 @@ final class PushCopy
             // M2-01d: parents only; species-neutral, no names (`report` = no certificate this time).
             PushType::ChallengeCompleted => $line('challenge_completed.'.($metric === 'report' ? 'report' : 'certificate')),
             // M5-T06: the preparation ended. The title carries the name (when set); the body never does.
-            PushType::PetReady => $line('pet_ready'),
+            PushType::PetReady => $line('pet_ready.'.$audience),
         };
     }
 
