@@ -2077,6 +2077,61 @@
         }
       ],
       "notes": "RKC breed page (dog-data S429, 2026-10-21) shows the heading 'Best Practice schemes and tests' with the sentence 'To support the breed's health, responsible breeders should ensure they complete all tests in both categories.' but returned no named test → no minimum / best_practice level. AKC Non-Sporting Group health testing page (K28, re-read 2026-10-21): Dalmatian — 'Recommended Health Tests from the National Breed Club:' 'Hip Evaluation', 'BAER Testing' → other_scheme. PDSA (dog-data S430) 'There is BAER testing for this.' (deafness); the Kennel Club (dog-data S432) describes the BAER test and breeders selecting unaffected dogs. No urate (HUU) DNA test listed by an A/B source fetched in this run → not added (nothing guessed). No new test key."
+    },
+    "australian_cattle_dog": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S437",
+        "level_quotes": {
+          "minimum": "The Kennel Club's Assured breeders must use the following (or equivalent) schemes, tests and advice.",
+          "minimum_all_breeders": "We strongly recommend that all breeders, both assured breeders (ABs) and non ABs,"
+        }
+      },
+      "tests": [
+        {
+          "key": "dna_prcd_pra",
+          "level": "minimum",
+          "name": "DNA test - prcd-PRA",
+          "source_id": "S437",
+          "quote": "DNA test - prcd-PRA"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye screening scheme (BVA/KC/ISDS)",
+          "source_id": "S437",
+          "quote": "Eye screening scheme (BVA/KC/ISDS)"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip dysplasia screening scheme (BVA/KC)",
+          "source_id": "S437",
+          "quote": "Hip dysplasia screening scheme (BVA/KC)"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "minimum",
+          "name": "Elbow dysplasia screening scheme (BVA/KC)",
+          "source_id": "S437",
+          "quote": "Elbow dysplasia screening scheme (BVA/KC)"
+        },
+        {
+          "key": "hearing_baer",
+          "level": "minimum",
+          "name": "BAER testing (deafness)",
+          "source_id": "S437",
+          "quote": "BAER testing (deafness)"
+        },
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Check inbreeding calculators",
+          "source_id": "S437",
+          "quote": "Check inbreeding calculators"
+        }
+      ],
+      "notes": "Older RKC page format (dog-data S437, 2026-10-21, as the Labrador's K16): the 'Priority' list (Assured Breeders: DNA prcd-PRA, BVA/KC/ISDS eye scheme) and the 'Important' list recommended to all breeders (BVA/KC hip and elbow schemes, BAER, inbreeding calculators) are both shown as 'minimum'. 'Other health schemes and tests available' (DNA test - PLL) is not a recommended tier → not added (Shetland Sheepdog / Pug precedent). No new test key."
     }
   }
 }
