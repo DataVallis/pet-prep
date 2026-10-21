@@ -8,20 +8,20 @@
 import { Platform } from 'react-native';
 import Constants, { ExecutionEnvironment } from 'expo-constants';
 
-import type { HealthStepsAdapter } from './types';
+import type { HealthMeasure, HealthStepsAdapter } from './types';
 
-let cached: HealthStepsAdapter | null | undefined;
+const cached: Partial<Record<HealthMeasure, HealthStepsAdapter | null>> = {};
 
-function create(): HealthStepsAdapter | null {
+function create(measure: HealthMeasure): HealthStepsAdapter | null {
   if (Constants.executionEnvironment === ExecutionEnvironment.StoreClient) return null;
   try {
     if (Platform.OS === 'ios') {
       const { createHealthKitAdapter } = require('./healthKitAdapter') as typeof import('./healthKitAdapter');
-      return createHealthKitAdapter();
+      return createHealthKitAdapter(measure);
     }
     if (Platform.OS === 'android') {
       const { createHealthConnectAdapter } = require('./healthConnectAdapter') as typeof import('./healthConnectAdapter');
-      return createHealthConnectAdapter();
+      return createHealthConnectAdapter(undefined, measure);
     }
   } catch {
     // Native module missing in this binary → keep the motion-sensor path.
@@ -29,7 +29,8 @@ function create(): HealthStepsAdapter | null {
   return null;
 }
 
-export function getHealthAdapter(): HealthStepsAdapter | null {
-  if (cached === undefined) cached = create();
-  return cached;
+/** M5-T12: `pushes` = the wheelchair-push source of the same health store (adapted mode). */
+export function getHealthAdapter(measure: HealthMeasure = 'steps'): HealthStepsAdapter | null {
+  if (!(measure in cached)) cached[measure] = create(measure);
+  return cached[measure] ?? null;
 }

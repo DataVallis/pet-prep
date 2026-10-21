@@ -104,6 +104,8 @@ export interface StepSyncVariables {
   recordedAt: string;
   /** Which source gave the (max-merged) total; validated by the server, not stored. Default `pedometer`. */
   source?: SyncStepsRequest['source'];
+  /** M5-T12: `pushes` when the health store counted wheelchair pushes (adapted mode). */
+  unit?: SyncStepsRequest['unit'];
 }
 
 /**
@@ -117,8 +119,8 @@ export function useSyncSteps() {
     mutationKey: ['child', 'pet', 'steps'],
     networkMode: 'always',
     onMutate: () => ({ userId: currentUserId() }),
-    mutationFn: ({ stepsToday, recordedAt, source = 'pedometer' }) =>
-      api.syncSteps({ steps_today: stepsToday, source, recorded_at: recordedAt }),
+    mutationFn: ({ stepsToday, recordedAt, source = 'pedometer', unit }) =>
+      api.syncSteps({ steps_today: stepsToday, source, recorded_at: recordedAt, ...(unit ? { unit } : {}) }),
     onSuccess: (response, _variables, context) => {
       if (sameSession(context)) writeChildState(client, response.state);
     },

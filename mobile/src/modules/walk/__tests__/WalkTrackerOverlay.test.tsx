@@ -10,10 +10,15 @@ import type { HealthStatus, StepHealth, StepPermission, StepSync } from '@/modul
 import WalkTrackerOverlay, { WALK_STRINGS } from '@/modules/walk/WalkTrackerOverlay';
 import { makeLiveChildState } from '@/test-utils/fixtures';
 
-function makeHealth(status: HealthStatus = 'unavailable', source: StepHealth['source'] = 'healthkit'): StepHealth {
+function makeHealth(
+  status: HealthStatus = 'unavailable',
+  source: StepHealth['source'] = 'healthkit',
+  measure: StepHealth['measure'] = 'steps',
+): StepHealth {
   return {
     status,
     source,
+    measure,
     connect: jest.fn(() => Promise.resolve()),
     openSettings: jest.fn(() => Promise.resolve()),
     openStore: jest.fn(() => Promise.resolve()),
@@ -28,6 +33,7 @@ function makeStepSync(permission: StepPermission, overrides: Partial<StepSync> =
     syncNow: jest.fn(() => Promise.resolve()),
     isSyncing: false,
     canSync: permission === 'granted' || health.status === 'connected',
+    adaptedMode: false,
     ...overrides,
     health,
   };

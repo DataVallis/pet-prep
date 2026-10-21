@@ -165,7 +165,8 @@ export interface ChildPetView {
     can_water: boolean;
     next_allowed_at: string | null;
   };
-  steps: { steps_today: number; my_steps_today: number; goal: number; energy_level: number };
+  /** `adapted_mode` (M5-T12): this child counts wheelchair pushes instead of steps (1 : 1). */
+  steps: { steps_today: number; my_steps_today: number; goal: number; energy_level: number; adapted_mode: boolean };
   contract: { signed: boolean; signed_at: string | null };
   /**
    * M5-R02 behaviour events: puppy bladder clock, open messes, behaviour scene and what
@@ -375,6 +376,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
       my_steps_today: num(raw.steps.my_steps_today),
       goal: num(raw.steps.goal),
       energy_level: num(raw.steps.energy_level),
+      // M5-T12: older servers send nothing → steps.
+      adapted_mode: (raw.steps as { adapted_mode?: unknown }).adapted_mode === true,
     },
     contract: { signed: bool(raw.contract.signed), signed_at: isoOrNull(raw.contract.signed_at) },
     // Older servers send no `behaviour` (typed as required by the current schema).

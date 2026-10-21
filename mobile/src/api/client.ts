@@ -186,6 +186,8 @@ export interface ChildActionResponse {
 
 /** `POST /api/child/pet/steps` body (M1-04 / M1-07). */
 export type SyncStepsRequest = components['schemas']['SyncStepsRequest'];
+export type UpdateChildSettingsRequest = components['schemas']['UpdateChildSettingsRequest'];
+export type UpdateChildSettingsResponse = { child_id: number; adapted_mode: boolean };
 
 /** What the server did with a step sync — every one of them is a 200. */
 export type StepSyncStatus = 'accepted' | 'capped' | 'rejected' | 'unchanged' | 'stale';
@@ -939,6 +941,13 @@ export const api = {
    */
   recordFactShown: () => apiRequest<FactShownResponse>('/api/child/fact-of-the-day/shown', { method: 'POST' }),
 
+  /**
+   * PATCH /api/parent/children/{child}/settings (M5-T12) — »Prilagojen način«: the child's walk
+   * counts wheelchair pushes instead of steps. Only the boolean is sent — never a reason.
+   */
+  updateChildSettings: (childId: number, body: UpdateChildSettingsRequest) =>
+    apiRequest<UpdateChildSettingsResponse>(`/api/parent/children/${childId}/settings`, { method: 'PATCH', body }),
+
   /** DELETE /api/parent/children/{child}/tokens — sign the child out on every device. */
   revokeChildTokens: (childId: number) =>
     apiRequest<RevokeChildTokensResponse>(`/api/parent/children/${childId}/tokens`, { method: 'DELETE' }),
@@ -1119,7 +1128,8 @@ export const api = {
   syncSteps: (body: SyncStepsRequest) =>
     apiRequest<SyncStepsResponse>('/api/child/pet/steps', {
       method: 'POST',
-      body: { steps_today: body.steps_today, source: body.source, recorded_at: body.recorded_at },
+      // M5-T12: `unit: pushes` only in adapted mode (older servers ignore an absent key).
+      body: { steps_today: body.steps_today, source: body.source, recorded_at: body.recorded_at, ...(body.unit ? { unit: body.unit } : {}) },
     }),
 
   /**

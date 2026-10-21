@@ -188,6 +188,14 @@
     "awaitingContract": "waiting for the contract to be signed",
     "gameOver": "game over",
     "legacyEmail": "old e-mail account",
+    "adapted": {
+      "label": "Adapted mode",
+      "hint": "Wheelchair pushes count instead of steps (1 push = 1 step). Goals and the Care Score stay the same. We don't ask or store why.",
+      "on": "Adapted mode is on: the walk counts wheelchair pushes.",
+      "off": "Adapted mode is off: the walk counts steps.",
+      "native": "Pushes need the newest PetPrep version on the child's phone (Apple Health with Wheelchair on and an Apple Watch, or Health Connect).",
+      "error": "The setting wasn't saved. Please try again."
+    },
     "newLoginPin": "New sign-in code",
     "firstPin": "Create a code",
     "revokeAll": "Sign out all devices",

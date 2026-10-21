@@ -84,6 +84,8 @@ export type BackgroundSyncOutcome = 'synced' | 'up_to_date' | 'skipped' | 'faile
 export interface BackgroundSyncDeps {
   platform: 'ios' | 'android' | 'other';
   health: HealthStepsAdapter | null;
+  /** M5-T12: the wheelchair-push adapter of the same store (child in adapted mode). */
+  pushesHealth: HealthStepsAdapter | null;
   pedometer: Pick<typeof Pedometer, 'getPermissionsAsync' | 'getStepCountAsync'>;
   getToken: () => Promise<string | null>;
   getChildPet: () => Promise<ChildPetState>;
@@ -105,6 +107,7 @@ async function defaultSharedRanges(token: string, dayStart: Date, at: Date): Pro
 const defaultDeps = (): BackgroundSyncDeps => ({
   platform: Platform.OS === 'ios' ? 'ios' : Platform.OS === 'android' ? 'android' : 'other',
   health: getHealthAdapter(),
+  pushesHealth: getHealthAdapter('pushes'),
   pedometer: Pedometer,
   getToken: getAuthToken,
   getChildPet: () => api.getChildPet(),
@@ -122,10 +125,17 @@ export async function runBackgroundStepSync(overrides: Partial<BackgroundSyncDep
     const token = await deps.getToken().catch(() => null);
     if (!token) return 'skipped';
     if ((await deps.health.availability()) !== 'available') return 'skipped';
-    if ((await deps.health.access()) !== 'connected') return 'skipped';
+    // M5-T12: the child's adapted mode decides the data type (pushes only, no sensor).
+    // The pet state is read only when one of the two accesses is connected.
+    const stepsConnected = (await deps.health.access()) === 'connected';
+    const pushesConnected = deps.pushesHealth !== null && (await deps.pushesHealth.access()) === 'connected';
+    if (!stepsConnected && !pushesConnected) return 'skipped';
 
     const view = normalizeChildState(await deps.getChildPet());
     if (view.lock.is_locked) return 'skipped';
+    const adapted = view.steps.adapted_mode;
+    const health = adapted ? deps.pushesHealth : deps.health;
+    if (health === null || !(adapted ? pushesConnected : stepsConnected)) return 'skipped';
 
     const at = deps.now();
     const calendar = familyCalendar(view.timezone, view.server_time);
@@ -135,13 +145,14 @@ export async function runBackgroundStepSync(overrides: Partial<BackgroundSyncDep
 
     let pedometerGranted = false;
     try {
-      pedometerGranted = (await deps.pedometer.getPermissionsAsync()).granted;
+      // Adapted mode: the motion sensor counts steps, never pushes — not a source.
+      pedometerGranted = !adapted && (await deps.pedometer.getPermissionsAsync()).granted;
     } catch {
       pedometerGranted = false;
     }
     const pedometer = deps.pedometer;
     const sources: TodaySources = {
-      health: deps.health,
+      health,
       pedometerHistory: pedometerGranted ? async (start, end) => (await pedometer.getStepCountAsync(start, end)).steps : null,
       liveTotal: null,
     };
@@ -152,7 +163,12 @@ export async function runBackgroundStepSync(overrides: Partial<BackgroundSyncDep
     if (reading === null) return 'failed';
     if (reading.steps <= serverSteps) return 'up_to_date';
 
-    await deps.syncSteps({ steps_today: reading.steps, source: reading.source, recorded_at: isoWithOffset(at) });
+    await deps.syncSteps({
+      steps_today: reading.steps,
+      source: reading.source,
+      recorded_at: isoWithOffset(at),
+      ...(adapted && reading.source !== 'pedometer' ? { unit: 'pushes' as const } : {}),
+    });
     return 'synced';
   } catch {
     return 'failed';
