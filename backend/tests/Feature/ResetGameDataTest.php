@@ -191,6 +191,11 @@ function rgSeed(): array
         'title_en' => 'Fact', 'title_sl' => 'Zanimivost', 'source_id' => 'S5', 'source_name' => 'RKC', 'source_url' => 'https://example.org',
         'quote' => 'Quote.', 'sort' => 1, 'status' => 'approved', 'approved_by' => $admin->id, 'approved_at' => $now, 'content_hash' => str_repeat('a', 64),
     ]);
+    // M5-T12: a walk a parent logged (adapted mode).
+    rgInsert('parent_walk_entries', [
+        'pet_id' => $pet->id, 'child_user_id' => $child->id, 'parent_user_id' => $parent->id, 'local_date' => $today,
+        'minutes' => 20, 'steps' => 2000, 'entry_id' => 'walk-reset-0001',
+    ]);
     rgInsert('breed_fact_reads', ['user_id' => $child->id, 'breed_fact_id' => $factId, 'read_at' => $now]);
     rgInsert('breed_fact_shows', ['user_id' => $child->id, 'pet_id' => $pet->id, 'breed_fact_id' => $factId, 'program_week' => 1, 'local_date' => $today, 'shown_at' => $now]);
 
