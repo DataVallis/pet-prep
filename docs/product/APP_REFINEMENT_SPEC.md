@@ -44,7 +44,9 @@
 - Kartica **»Kako skrbim za [ime]«** za vsako pasmo in starost: kolikokrat ven, koliko korakov, kdaj hrana in koliko, voda, česanje, spanje, razlika *pelji ven / sprehod*.
 - **Besedila se generirajo iz istih nastavitev, ki jih uporablja simulacija** (stage params, pasemski podatki) — navodila se nikoli ne razidejo s pravili igre.
 - Prikaz ob prvem zagonu, nato vedno dostopno z gumbom »?« na glavnem zaslonu.
-- Gumb za branje na glas **(D)**.
+- Gumb za branje na glas — **kasneje — David 21. 10. 2026** (ko testerji preverijo kartico).
+
+**Zgrajeno (M5-T05, 21. 10. 2026).** Strežnik pošlje v stanju otroka blok `care_guide` (samo številke in ključi, brez besedil), sestavljen iz istih storitev, ki jih uporablja simulacija: današnja okna hranjenja TEGA ljubljenčka (tudi obroki, ki jih v tihih urah da starš), cilj korakov današnje faze, ure, ki jih mladiček zdrži (»Pelji ven«), pravilo vode (dolij pri ≤ prag %, najmanj N min narazen), česanja na teden, tihe ure družine (= spanje), pri muci igra s palico, pesek in praskanje, rok za čiščenje nereda (2 h) in pri pasmah z GDV čakanje po obroku. Aplikacija iz tega sestavi otroku prijazne stavke (SL + EN; muca »muca« / »kitty« + »it«); naslov »Kako skrbim za: [ime]« oz. »Kako skrbim za kužka / muco«. Razlika »Pelji ven« / sprehod (David 20. 10.: koraki nikoli ne rešijo lulanja) je poudarjen razdelek pri mladičku. Kartica se odpre sama ob prvem prikazu ljubljenčka na napravi (zapomni si jo po ljubljenčku), nato z gumbom »?« v zgornji vrstici HUD. Starševski prikaz v podrobnostih ljubljenčka še ni narejen (*načrt*).
 
 ## 6. Dostopnost (otrok ali skrbnik, ki ne more hoditi)
 

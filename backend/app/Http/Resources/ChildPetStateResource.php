@@ -6,6 +6,7 @@ use App\Enums\PetLockReason;
 use App\Models\Pet;
 use App\Models\User;
 use App\Services\BehaviourPayload;
+use App\Services\CareGuidePayload;
 use App\Services\CareScheduleService;
 use App\Services\ChallengeCertificateService;
 use App\Services\ChildCertificatePayload;
@@ -87,6 +88,11 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * (the child just sees "challenge finished"); for a certificate the names,
  * score, number and — once a parent generated it — the signed PDF URL
  * ({@see ChildCertificatePayload}).
+ *
+ * `care_guide` (M5-T05): the numbers of the card "Kako skrbim za …" — meals,
+ * steps, take-out hold hours, water rule, grooming per week, sleep (quiet
+ * hours), cat play / litter / scratching — read from the same services the
+ * simulation uses ({@see CareGuidePayload}); the app renders the sentences.
  *
  * `pet.media` (M4-05): status + signed URLs of the stored reference image and
  * state videos ({@see PetMediaService::mediaFor()}); `current_video_url` is
@@ -336,6 +342,8 @@ class ChildPetStateResource extends JsonResource
             'certificate' => $actor !== null ? app(ChallengeCertificateService::class)->childPayload($pet, $actor, $tz)?->toArray() : null,
             // M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task.
             'socialisation' => SocialisationPayload::for($pet, $actor, $now)?->toArray(),
+            // M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose.
+            'care_guide' => CareGuidePayload::for($pet, $now, $profile)->toArray(),
         ];
     }
 }

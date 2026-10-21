@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-21 — »Kako skrbim za …«: navodila, ki se ne morejo zlagati
+
+**Kaj:** otrok ima zdaj kartico »Kako skrbim za kužka / muco« (ali »… za: Luna«, če ima ime): koliko obrokov in kdaj, koliko korakov danes, kdaj doliti vodo, kolikokrat na teden česati, kdaj spi, pri mladičku koliko ur zdrži in zakaj »Pelji ven« ni isto kot sprehod, pri muci igra s palico, pesek in praskalnik. Odpre se sama prvič, nato z gumbom »?«.
+**Zakaj je pomembno:** vsaka številka pride iz istih nastavitev, po katerih teče igra (faza starosti, pasma, okna hranjenja družine, tihe ure) — ko se pravilo spremeni, se spremenijo tudi navodila. Otrok ne bere splošnih nasvetov, ampak pravila svojega ljubljenčka.
+- 👩 Starši: tihe ure, ki jih nastavite, otrok vidi kot »Spi od 21:00 do 7:00«; obroke v tihih urah kot »jih da starš«.
+- 🧒 Otroci: »Mladiček zdrži približno 2 h. Prej ga pelji ven s tipko »Pelji ven«.«
+- 🛠 Tehnično: strežnik pošlje samo številke (`care_guide`), aplikacija sestavi stavke v SL in EN; testi preverijo, da sprememba parametra faze spremeni navodila. Branje na glas pride kasneje (David).
+
 ## 2026-10-21 — Spečega ljubljenčka ne motimo
 
 **Kaj:** ko kuža ali muca spi (tihe ure družine — noč in šolsko okno), otrok zdaj ne more niti crkljati niti česati; gumba sta vidna, a siva, pod njima piše »💤 Kuža spi do 7:00«. Strežnik ta dejanja med spanjem zavrne z uro bujenja. Česanje, ki ga spanje onemogoči, se nikoli ne šteje kot zamujeno. Vse ure v aplikaciji so zdaj zapisane kot »7:00« namesto »07:00«.

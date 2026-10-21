@@ -48,6 +48,7 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'behaviour:parent.takeOut': 'potty training (take out) — dogs only',
   'play:play': 'ball play — dogs only (no ball for a cat, David 2026-10-08)',
   training: 'dog school — a cat gets `training_not_available` (M5-R06-04)',
+  'careGuide:dog': 'care guide (M5-T05) — split by species inside the namespace: a cat reads `careGuide:cat.*`',
   socialisation: 'puppy socialisation (M5-R17) — dogs only: a cat never gets the weekly "new experience"',
   'family:activities.took_out_pet': 'potty training (take out) — dogs only',
   'family:systemActivities.pet_accident': 'puppy puddle — dogs only',
