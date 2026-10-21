@@ -1556,6 +1556,37 @@ stateDiagram-v2
   Still --> Loop: clip stored (video_ready)
 ```
 
+### 10f. School and game phase clips (M5-T09 / M5-T10, 2026-10-21)
+
+```mermaid
+flowchart LR
+  R[Reference image = stands] --> P{{Pose images<br/>Nano Banana Pro Edit<br/>sit · come · place · door · empty / crouch · catch}}
+  R --> SA[school_X_attention<br/>stands → stands]
+  R --> SP[school_X_performing<br/>stands → pose of X]
+  P --> SP
+  P --> SS[school_X_success<br/>pose → same pose]
+  R --> BW[ball_waiting] --> BR[ball_running<br/>stands → empty room] --> BF[ball_fetching<br/>empty room → stands]
+  R --> WS[wand_stalking<br/>stands → crouch] --> WP[wand_pouncing<br/>crouch → crouch, per pounce] --> WC[wand_catching<br/>crouch → catch]
+  subgraph Gate [phaseClipsFor = usesStateMedia + group]
+    G[school: training on · ball: dog · wand: cat · 3 s Kling 3.0 Pro, 0.336 $ each]
+  end
+```
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant S as queueStateVideos
+  participant K as GeneratePetKeyframe (key + pose images)
+  participant V as SubmitPetStateVideo
+  participant App as phasePlayer.ts (app)
+  Note over S: after loops + transitions (§13): school, then games
+  S->>K: missing poses of the next clip (claim, 0.15 $)
+  K-->>S: stored → queueStateVideos again
+  S->>V: phase clip (start / end = its poses, duration "3")
+  V-->>App: phases[clip] in PetUpdated / child state
+  App->>App: schedule moment → clip once (new instance replays) · missing / picture → pose image
+```
+
 ## 11. Push notifications (M3-02, 2026-10-05)
 
 ### 11a. Escalation → push

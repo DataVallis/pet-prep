@@ -470,6 +470,9 @@ describe('shared look of breed + colour', function () {
             ->and(phcCalls()->map(fn (Request $r) => (string) ($r['prompt'] ?? ''))->implode(' '))->not->toContain(' dog ')
             ->and(app(GameMediaReadiness::class)->requiredClips($cat->fresh(), GameMediaReadiness::WAND))->toBe(['wand_stalking', 'wand_pouncing', 'wand_catching'])
             ->and(app(GameMediaReadiness::class)->ready($cat->fresh(), GameMediaReadiness::WAND))->toBeTrue()
+            // Cost of the cat set (scratching is in every profiled cat's full set): 1 + 6 key images
+            // + 2 poses (0.15 $) · 7 loops + 2 transitions (0.56 $) · 3 wand clips (0.336 $) = 7.40 $.
+            ->and(round((float) AiSpendLedger::query()->counted()->sum('cost_usd'), 2))->toBe(round(9 * 0.15 + 9 * 0.56 + 3 * 0.336, 2))
             // A cat's play is cuddles only: no ball clips, the M5-T04 list.
             ->and(app(GameMediaReadiness::class)->requiredClips($cat->fresh(), GameMediaReadiness::PLAY))->toEqualCanonicalizing(['playing', 'idle']);
     });

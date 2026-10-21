@@ -64,6 +64,7 @@ This document describes all environment variables used by the PetPrep production
 | `REVERB_SCHEME` | Required | No | Public scheme (`https` / `wss`) | `https` |
 | `REVERB_SERVER_HOST` | Required | No | Internal binding host | `0.0.0.0` |
 | `REVERB_SERVER_PORT` | Required | No | Internal listening port | `8080` |
+| `REVERB_MAX_REQUEST_SIZE` | Optional | No | Max HTTP request Reverb accepts (the server's event publish). Default 65 536 since M5-T09 / T10 — a `PetUpdated` with every school / game clip URL is ≈ 9 kB (the old default 10 000 was too tight) | `65536` |
 
 ---
 
