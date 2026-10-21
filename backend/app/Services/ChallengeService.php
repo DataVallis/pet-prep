@@ -191,6 +191,10 @@ class ChallengeService
             return false;
         }
 
+        // M5-T06 (QA M1): only a pet that waited behind the payment lock starts its
+        // preparation with the purchase — read BEFORE the lock is lifted below.
+        $waited = $pet->payment_locked_at !== null || $pet->awaitsPayment();
+
         $pet->forceFill([
             'challenge_paid_at' => $now,
             'challenge_paid_source' => $source,
@@ -202,14 +206,17 @@ class ChallengeService
         // P6: a purchase entitles the pet to the full video set — queue what is
         // missing (born pets only; queueStateVideos skips stored / running slots).
         // M5-T06: a pet that waited behind the payment lock starts its preparation
-        // now (any source — the lock is gone), before the videos are queued.
+        // now (any source — the lock is gone), before the videos are queued; a pet
+        // that was already playing never sees the set-up screen (QA M1).
         $petId = $pet->id;
         $purchase = $source === ChallengePaidSource::Purchase;
-        DB::afterCommit(function () use ($petId, $purchase): void {
+        DB::afterCommit(function () use ($petId, $purchase, $waited): void {
             try {
                 $paid = Pet::find($petId);
                 if ($paid !== null) {
-                    app(PetPreparationService::class)->begin($paid);
+                    if ($waited) {
+                        app(PetPreparationService::class)->begin($paid, PetPreparationService::BEGIN_PURCHASE);
+                    }
                     if ($purchase) {
                         app(PetMediaService::class)->queueStateVideos($paid);
                     }

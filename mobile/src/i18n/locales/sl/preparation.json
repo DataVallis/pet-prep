@@ -3,16 +3,15 @@
   "body": "To lahko traja nekaj minut.",
   "a11y": "Pripravljamo aplikacijo. To lahko traja nekaj minut.",
   "school": "Šola se še pripravlja",
+  "readyNamed": "Vse je pripravljeno: {{name}}",
   "dog": {
     "title": "Pripravljamo tvojega kužka",
-    "ready": "Tvoj kuža je pripravljen!",
-    "readyNamed": "{{name}} je pripravljen!",
+    "ready": "Vse je pripravljeno za tvojega kužka!",
     "parentTitle": "Pripravljamo kužka"
   },
   "cat": {
     "title": "Pripravljamo tvojo muco",
-    "ready": "Tvoja muca je pripravljena!",
-    "readyNamed": "{{name}} je pripravljena!",
+    "ready": "Vse je pripravljeno za tvojo muco!",
     "parentTitle": "Pripravljamo muco"
   }
 }

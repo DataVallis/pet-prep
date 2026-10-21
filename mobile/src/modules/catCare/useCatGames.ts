@@ -20,6 +20,7 @@ import {
   type WandResult,
   type WandSession,
 } from '@/modules/catCare/catCare';
+import { brushFinishAt } from '@/modules/catCare/brushing';
 import { canChoreStillCount, canScratchingStillCount, canWandStillCount, scratchingFinishAt, type WandMove } from '@/modules/catCare/catGames';
 import { useCatSessionGame, type CatSessionGame } from '@/modules/catCare/useCatSessionGame';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
@@ -88,7 +89,8 @@ export function useChoreGame(kind: ChoreKind, view: ChildPetView, { clock }: Cat
     resume: ownSession(view.cat, kind),
     ...useAbandoned(),
     emptyInput: NO_STROKES,
-    finishAtMs: (session) => session.duration_ms,
+    // M5-T14: a brushed-clean coat finishes up to 2 s early (inside the server's tolerance).
+    finishAtMs: kind === 'grooming' ? brushFinishAt : (session) => session.duration_ms,
     canStillCount: canChoreStillCount,
     startMutate,
     finishMutate,

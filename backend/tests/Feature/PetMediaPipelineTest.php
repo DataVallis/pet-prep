@@ -184,10 +184,10 @@ describe('pipeline at birth', function () {
         expect(PetMedia::where('pet_id', $pet->id)->videos()->pluck('status')->unique()->all())->toBe(['ready']);
         expect((float) AiSpendLedger::where('pet_id', $pet->id)->counted()->sum('cost_usd'))->toEqualWithDelta(0.15 + 2 * 0.56, 1e-9);
 
-        // One broadcast per stored file (image + 2 videos) + the birth + M5-T06: the pet was
-        // not ready at birth → its preparation ends once with `pet_ready`.
-        Event::assertDispatchedTimes(PetUpdated::class, 5);
-        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'pet_ready');
+        // One broadcast per stored file (image + 2 videos) + the birth. M5-T06: the preparation
+        // ended within seconds (nobody saw a screen) → no `pet_ready` news (PetPreparationTest).
+        Event::assertDispatchedTimes(PetUpdated::class, 4);
+        Event::assertNotDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'pet_ready');
         Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'video_ready' && $e->payload['media']['status'] === 'ready');
 
         // The child's state carries only our signed URLs.
