@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `dalmatian` (viri S427–S434; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174) |
 | Izvor | FCI št. 153, skupina 6, sekcija 3 (sorodne pasme), Hrvaška (S427, S428) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 48. mesto »Dalmatian« (S174) |
-| PR-ji | pet-prep #305 (pasma) · portret — · spletna stran — |
+| PR-ji | pet-prep #305 (pasma, združen `f8142b3`) · portret #306 · spletna stran — |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -29,6 +29,7 @@
 | 2026-10-21 | pravilo runbooka (§3) | marketing: **v aplikaciji da, v marketingu da** — nikoli kot pes za majhne otroke, za dom, kjer je sam, ali ob malih živalih | veterinarsko odsvetovanje oglaševanja velja le za pse s sploščenim obrazom (BVA S92) | #305 |
 | 2026-10-21 | pravilo runbooka (§3) | barve za AI in izbirnik: **bel s črnimi pikami** (portret), **bel z rjavimi pikami**; nikoli lise, tribarvni, tigrasti, limonasti / modri madeži ali modre oči | FCI S428 »Black spotted variety with black spots, liver spotted variety with brown spots.«; izločilne napake S428 | #305 |
 | 2026-10-21 | predlog Claude, David lahko spremeni | ime SL »dalmatinec« (slug `dalmatinec`); iskalni ključi tudi »dalmatinski pas«, »dalmatinka«, »carriage dog«, »firehouse dog« | Siol.net S434 (tier C); KZS ni preverjen | #305 |
+| 2026-10-21 | pravilo runbooka (§8) | AI portret: realistična fotografija odraslega psa, bel s črnimi pikami, siva studijska podlaga; sprejet v prvem poskusu (zagon 39530281044, koda `f8142b3`, brez produkcijske namestitve) | barva portreta = najtežja barva iz `breed_appearance.php` | #306 |
 | 2026-10-21 | pravilo runbooka (§2.3) | seznam za vzreditelja: test sluha BAER in ocena kolkov — druga shema (priporočilo ameriškega pasemskega kluba). Brez novega ključa | AKC K28 »Hip Evaluation«, »BAER Testing«; stran RKC ima naslov »Best Practice« brez testov; PDSA S430 »There is BAER testing for this.« | #305 |
 
 ## Kaj je v aplikaciji (v slogu FEATURES)
@@ -39,7 +40,7 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 119 mesecev; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-52 | 2026-10-21 |
 | Česanje 1× na teden (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-21 |
 | Barva (izbirnik barve: črno pikast, rjavo pikast) | 🛠 | 💶 izziv | M5-R21 | 2026-10-21 |
-| AI portret v registru | 🗓 | — | M5-R11-04 | — |
+| AI portret v registru (bel s črnimi pikami, sprejet v prvem poskusu, zagon 39530281044) | ✅ | — | M5-R11-04 | 2026-10-21 |
 | Stran na petprep.si (`/animals/dogs/dalmatian`, `/sl/zivali/psi/dalmatinec`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
