@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Enums\MediaDisplay;
 use App\Enums\PetLockReason;
 use App\Models\Pet;
 use App\Models\User;
@@ -301,6 +302,19 @@ class ChildPetStateResource extends JsonResource
                  * @var bool
                  */
                 'adapted_mode' => (bool) ($actor?->adapted_mode ?? false),
+            ],
+            /**
+             * M5-T11 settings of the requesting child (set by the child or a parent of the family).
+             */
+            'settings' => [
+                /**
+                 * »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                 * shows the key image of the current state and downloads no video. Always
+                 * `video` for a parent's view.
+                 *
+                 * @var 'video'|'picture'
+                 */
+                'media_display' => ($actor?->media_display ?? MediaDisplay::Video)->value,
             ],
             'contract' => [
                 'signed' => $contract !== null,

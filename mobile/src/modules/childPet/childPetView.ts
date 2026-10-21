@@ -12,6 +12,7 @@
  * keeps a newer broadcast over an older poll.
  */
 
+import { readMediaDisplay, type MediaDisplay } from '@/modules/display/display';
 import { readCareGuide, type CareGuide } from '@/modules/careGuide/careGuide';
 import { isPaymentRequired, readPetPlan, type PetPlan } from '@/modules/plan/plan';
 import type { ChildPetState } from '@/api/client';
@@ -176,6 +177,11 @@ export interface ChildPetView {
    */
   steps: { steps_today: number; my_steps_today: number; my_device_steps_today: number; goal: number; energy_level: number; adapted_mode: boolean };
   contract: { signed: boolean; signed_at: string | null };
+  /**
+   * M5-T11 settings of this child: `media_display` »Prikaz: Video / Slika« (`readMediaDisplay`;
+   * an older server sends nothing → `video`).
+   */
+  settings: { media_display: MediaDisplay };
   /**
    * M5-R02 behaviour events: puppy bladder clock, open messes, behaviour scene and what
    * the child may do. `EMPTY_BEHAVIOUR` for a legacy pet / an older server.
@@ -397,6 +403,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
       adapted_mode: (raw.steps as { adapted_mode?: unknown }).adapted_mode === true,
     },
     contract: { signed: bool(raw.contract.signed), signed_at: isoOrNull(raw.contract.signed_at) },
+    // M5-T11: older servers send no `settings` → video.
+    settings: { media_display: readMediaDisplay((raw as { settings?: { media_display?: unknown } }).settings?.media_display) },
     // Older servers send no `behaviour` (typed as required by the current schema).
     behaviour: readChildBehaviour((raw as { behaviour?: unknown }).behaviour),
     // Older servers send no `training` (typed as required by the current schema).

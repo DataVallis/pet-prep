@@ -2,7 +2,7 @@
  * Puppy socialisation (M5-R17, David 2026-10-12): the "Nova izkušnja" chip above the HUD dock
  * and its short card — the child picks what the puppy experienced this week (a new person,
  * another dog, a new sound, a new place) and one tap marks it done. No mini-game, no timer,
- * never scored. Same dark glass bottom sheet as `ChildLanguageSheet` (RN `Modal`: Android
+ * never scored. Same dark glass bottom sheet as `ChildSettingsSheet` (RN `Modal`: Android
  * back button, accessibility-modal container). A refusal (already done, the puppy sleeps)
  * is explained with its time; nothing here re-implements a server rule.
  */

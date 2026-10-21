@@ -3,6 +3,7 @@
  * for the parent's children list and "Dodaj otroka" flow.
  */
 
+import { readMediaDisplay, type MediaDisplay } from '@/modules/display/display';
 import { readPetPlan, type PetPlan } from '@/modules/plan/plan';
 import { ApiError, type ParentDashboardResponse } from '@/api/client';
 import { reasonOf } from '@/modules/pairing/pin';
@@ -80,6 +81,8 @@ export interface FamilyChild {
   devices: number;
   /** M5-T12 »Prilagojen način«: the walk counts wheelchair pushes (1 : 1); false from older servers. */
   adapted_mode: boolean;
+  /** M5-T11 »Prikaz: Video / Slika« of the child app; `video` from older servers. */
+  media_display: MediaDisplay;
   pet_id: number | null;
   contract_signed: boolean;
   stats: FamilyChildStats;
@@ -156,6 +159,7 @@ function normalizeChild(raw: FamilyChild): FamilyChild {
   return {
     ...raw,
     adapted_mode: c.adapted_mode === true,
+    media_display: readMediaDisplay(c.media_display),
     stats: readStats(c.stats),
     traffic_light: readTrafficLight(c.traffic_light),
     care_score: readCareScore(c.care_score),

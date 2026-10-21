@@ -11,6 +11,7 @@ use App\Http\Controllers\ChildContractController;
 use App\Http\Controllers\ChildPetController;
 use App\Http\Controllers\ChildProfileController;
 use App\Http\Controllers\ChildReportController;
+use App\Http\Controllers\ChildSettingsController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\FalAiWebhookController;
 use App\Http\Controllers\FamilyController;
@@ -113,7 +114,8 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
         Route::post('children', [ChildProfileController::class, 'store'])
             ->middleware('throttle:pairing');
         Route::delete('children/{child}/tokens', [ChildProfileController::class, 'revokeTokens']);
-        // M5-T12: parent-only child settings — adapted mode (wheelchair pushes instead of steps).
+        // M5-T12 / M5-T11: child settings set by a parent — adapted mode (wheelchair pushes
+        // instead of steps) and »Prikaz: Video / Slika«.
         Route::patch('children/{child}/settings', [ChildProfileController::class, 'updateSettings']);
         // M5-T12 (David 2026-10-21): the parent logs walk minutes for a child in adapted mode.
         Route::post('children/{child}/walks', [ChildProfileController::class, 'logWalk']);
@@ -220,6 +222,8 @@ Route::middleware(['auth:sanctum', 'ability:child', 'throttle:api'])
         // M5-R09b »Ali si vedel?«: next unread breed fact + the automatic-sheet cap.
         Route::get('fact-of-the-day', [BreedFactController::class, 'factOfTheDay']);
         Route::post('fact-of-the-day/shown', [BreedFactController::class, 'shown']);
+        // M5-T11 »Prikaz: Video / Slika« — the child's own display preference.
+        Route::patch('settings', [ChildSettingsController::class, 'update']);
 
         Route::middleware('throttle:child-actions')->group(function () {
             Route::post('pet/feed', [ChildPetController::class, 'feed']);

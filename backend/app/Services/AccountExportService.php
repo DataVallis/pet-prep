@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Enums\FamilyRole;
+use App\Enums\MediaDisplay;
 use App\Enums\Species;
 use App\Exceptions\AccountDeletionException;
 use App\Models\ChallengeCertificate;
@@ -124,6 +125,8 @@ class AccountExportService
                 'birth_year' => $u->birth_year,
                 // M5-T12: the parent's accessibility switch (no reason is ever stored).
                 'adapted_mode' => (bool) $u->adapted_mode,
+                // M5-T11: »Prikaz: Video / Slika« (display preference).
+                'media_display' => ($u->media_display ?? MediaDisplay::Video)->value,
                 // PIN-only profile (M2-02) vs. a legacy child account with e-mail.
                 'login' => $u->password === null ? 'pin' : 'email',
                 'email' => $u->email,

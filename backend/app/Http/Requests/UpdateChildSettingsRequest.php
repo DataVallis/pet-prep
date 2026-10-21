@@ -2,16 +2,20 @@
 
 namespace App\Http\Requests;
 
+use App\Enums\MediaDisplay;
 use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 /**
- * PATCH /api/parent/children/{child}/settings (M5-T12, David 2026-10-20). Body
- * `{"adapted_mode": true|false}` — »Prilagojen način«: the child's walk counts
- * wheelchair pushes instead of steps. Parents only (UserPolicy::manageFamily →
- * 403 for a child; the route group also needs the `parent` token ability);
- * whether the child belongs to the parent's family is checked in the
- * controller (another family's child looks exactly like a missing one, 404).
+ * PATCH /api/parent/children/{child}/settings (M5-T12, David 2026-10-20; M5-T11
+ * 2026-10-21). Body: at least one of
+ *  - `adapted_mode` (bool) — »Prilagojen način«: the child's walk counts wheelchair
+ *    pushes instead of steps;
+ *  - `media_display` (`video` | `picture`) — »Prikaz: Video / Slika« in the child app.
+ * Parents only (UserPolicy::manageFamily → 403 for a child; the route group also needs
+ * the `parent` token ability); whether the child belongs to the parent's family is
+ * checked in the controller (another family's child looks exactly like a missing one, 404).
  *
  * Accessibility, not a diagnosis: only the switch is accepted and stored —
  * there is no field for a reason or a condition (minimum data about a minor).
@@ -29,12 +33,20 @@ class UpdateChildSettingsRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'adapted_mode' => ['required', 'boolean'],
+            'adapted_mode' => ['required_without:media_display', 'boolean'],
+            'media_display' => ['required_without:adapted_mode', 'string', Rule::enum(MediaDisplay::class)],
         ];
     }
 
-    public function adaptedMode(): bool
+    /** null = not sent (leave unchanged). */
+    public function adaptedMode(): ?bool
     {
-        return (bool) $this->validated('adapted_mode');
+        return $this->has('adapted_mode') ? (bool) $this->validated('adapted_mode') : null;
+    }
+
+    /** null = not sent (leave unchanged). */
+    public function mediaDisplay(): ?MediaDisplay
+    {
+        return $this->has('media_display') ? MediaDisplay::from((string) $this->validated('media_display')) : null;
     }
 }

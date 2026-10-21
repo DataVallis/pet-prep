@@ -17,6 +17,7 @@
  * once (`onFinished`); the HUD sends it and shows the happy dog.
  */
 
+import { mediaModeOf } from '@/modules/display/display';
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import {
   AccessibilityInfo,
@@ -98,6 +99,8 @@ function Stage({ view, children, onMediaExpired }: { view: ChildPetView; childre
         <PetMediaView
           media={view.pet.media}
           petState="playing"
+          // M5-T11 »Prikaz: Slika«: the playing key image; the ball / hearts stay app-animated.
+          mode={mediaModeOf(view)}
           breed={view.pet.breed_type}
           species={view.pet.species}
           onMediaExpired={onMediaExpired}

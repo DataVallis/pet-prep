@@ -1140,12 +1140,16 @@ export interface paths {
         options?: never;
         head?: never;
         /**
-         * Parent-only settings of a child profile (M5-T12): `{"adapted_mode": bool}` —
-         *     »Prilagojen način«, the child's walk counts wheelchair pushes instead of steps
-         *     (1 : 1; goals, points and the Care Score stay the same). Accessibility, not a
-         *     diagnosis: no reason is asked for or stored. A change broadcasts
-         *     `caretaker_settings_changed` on the child's active pet. 200 `{child_id, adapted_mode}`;
-         *     404 `child_not_found` for a child outside the family; child token → 403
+         * Settings of a child profile, set by a parent of the family. Body: at least one of
+         *     - `adapted_mode` (bool, M5-T12) — »Prilagojen način«, the child's walk counts wheelchair
+         *       pushes instead of steps (1 : 1; goals, points and the Care Score stay the same).
+         *       Accessibility, not a diagnosis: no reason is asked for or stored.
+         *     - `media_display` (`video` | `picture`, M5-T11) — »Prikaz: Video / Slika« in the child
+         *       app: `picture` shows the key image of the pet's current state and downloads no video.
+         *       The child can change it too (`PATCH /api/child/settings`).
+         *     A change broadcasts `caretaker_settings_changed` on the child's active pet.
+         *     200 `{child_id, adapted_mode, media_display}`; 404 `child_not_found` for a child outside
+         *     the family; child token → 403
          * @description PATCH /api/parent/children/{child}/settings
          */
         patch: operations["childProfile.updateSettings"];
@@ -1231,6 +1235,31 @@ export interface paths {
         options?: never;
         head?: never;
         patch?: never;
+        trace?: never;
+    };
+    "/child/settings": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        /**
+         * The child changes »Prikaz: Video / Slika« (APP_REFINEMENT_SPEC §1): `video` (default)
+         *     plays the state videos, `picture` shows the key image of the pet's current state and
+         *     downloads no video. A parent of the family can set the same value
+         *     (`PATCH /api/parent/children/{child}/settings`). A change broadcasts
+         *     `caretaker_settings_changed` on the child's active pet. 200 `{media_display}`;
+         *     parent token → 403
+         * @description PATCH /api/child/settings
+         */
+        patch: operations["childSettings.update"];
         trace?: never;
     };
     "/devices": {
@@ -2030,6 +2059,16 @@ export interface components {
             password: string;
             device_name?: string | null;
         };
+        /**
+         * MediaDisplay
+         * @description How the child app shows the pet (M5-T11, APP_REFINEMENT_SPEC §1 »Prikaz: Video / Slika«). Stored per child profile (`users.media_display`), mirrored by the users_media_display_check constraint. A display preference, not personal data: the parent or the child may change it.
+         *     | |
+         *     |---|
+         *     | `video` <br/> Default: the state loops and transitions play. |
+         *     | `picture` <br/> The key image of the current state only — no video is downloaded (saves data). |
+         * @enum {string}
+         */
+        MediaDisplay: "video" | "picture";
         /** PairChildRequest */
         PairChildRequest: {
             pin: string;
@@ -2536,19 +2575,32 @@ export interface components {
             expo_push_token: string;
         };
         /**
+         * UpdateChildDisplayRequest
+         * @description PATCH /api/child/settings (M5-T11, APP_REFINEMENT_SPEC §1). Body
+         *     `{"media_display": "video"|"picture"}` — the child's own »Prikaz: Video / Slika«.
+         *     Children only (route group `ability:child` + UserPolicy::updateOwnDisplay).
+         *     The display is the only setting a child may change here (adapted mode is the parent's).
+         */
+        UpdateChildDisplayRequest: {
+            media_display: components["schemas"]["MediaDisplay"];
+        };
+        /**
          * UpdateChildSettingsRequest
-         * @description PATCH /api/parent/children/{child}/settings (M5-T12, David 2026-10-20). Body
-         *     `{"adapted_mode": true|false}` — »Prilagojen način«: the child's walk counts
-         *     wheelchair pushes instead of steps. Parents only (UserPolicy::manageFamily →
-         *     403 for a child; the route group also needs the `parent` token ability);
-         *     whether the child belongs to the parent's family is checked in the
-         *     controller (another family's child looks exactly like a missing one, 404).
+         * @description PATCH /api/parent/children/{child}/settings (M5-T12, David 2026-10-20; M5-T11
+         *     2026-10-21). Body: at least one of
+         *      - `adapted_mode` (bool) — »Prilagojen način«: the child's walk counts wheelchair
+         *        pushes instead of steps;
+         *      - `media_display` (`video` | `picture`) — »Prikaz: Video / Slika« in the child app.
+         *     Parents only (UserPolicy::manageFamily → 403 for a child; the route group also needs
+         *     the `parent` token ability); whether the child belongs to the parent's family is
+         *     checked in the controller (another family's child looks exactly like a missing one, 404).
          *
          *     Accessibility, not a diagnosis: only the switch is accepted and stored —
          *     there is no field for a reason or a condition (minimum data about a minor).
          */
         UpdateChildSettingsRequest: {
-            adapted_mode: boolean;
+            adapted_mode?: boolean;
+            media_display?: components["schemas"]["MediaDisplay"];
         };
         /** UpdateParentSettingsRequest */
         UpdateParentSettingsRequest: {
@@ -3975,6 +4027,16 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
+                            };
                             contract: {
                                 signed: boolean;
                                 signed_at: string;
@@ -4705,6 +4767,16 @@ export interface operations {
                              *     Always false for a parent's view.
                              */
                             adapted_mode: boolean;
+                        };
+                        /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                        settings: {
+                            /**
+                             * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                             *     shows the key image of the current state and downloads no video. Always
+                             *     `video` for a parent's view.
+                             * @enum {string}
+                             */
+                            media_display: "video" | "picture";
                         };
                         contract: {
                             signed: boolean;
@@ -5457,6 +5529,16 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
+                            };
                             contract: {
                                 signed: boolean;
                                 signed_at: string;
@@ -6205,6 +6287,16 @@ export interface operations {
                                  *     Always false for a parent's view.
                                  */
                                 adapted_mode: boolean;
+                            };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
                             };
                             contract: {
                                 signed: boolean;
@@ -6955,6 +7047,16 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
+                            };
                             contract: {
                                 signed: boolean;
                                 signed_at: string;
@@ -7704,6 +7806,16 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
+                            };
                             contract: {
                                 signed: boolean;
                                 signed_at: string;
@@ -8452,6 +8564,16 @@ export interface operations {
                                  *     Always false for a parent's view.
                                  */
                                 adapted_mode: boolean;
+                            };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
                             };
                             contract: {
                                 signed: boolean;
@@ -9206,6 +9328,16 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
+                            };
                             contract: {
                                 signed: boolean;
                                 signed_at: string;
@@ -9958,6 +10090,16 @@ export interface operations {
                                  *     Always false for a parent's view.
                                  */
                                 adapted_mode: boolean;
+                            };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
                             };
                             contract: {
                                 signed: boolean;
@@ -10712,6 +10854,16 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
+                            };
                             contract: {
                                 signed: boolean;
                                 signed_at: string;
@@ -11460,6 +11612,16 @@ export interface operations {
                                  *     Always false for a parent's view.
                                  */
                                 adapted_mode: boolean;
+                            };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
                             };
                             contract: {
                                 signed: boolean;
@@ -12214,6 +12376,16 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
+                            };
                             contract: {
                                 signed: boolean;
                                 signed_at: string;
@@ -12963,6 +13135,16 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
+                            };
                             contract: {
                                 signed: boolean;
                                 signed_at: string;
@@ -13711,6 +13893,16 @@ export interface operations {
                                  *     Always false for a parent's view.
                                  */
                                 adapted_mode: boolean;
+                            };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
                             };
                             contract: {
                                 signed: boolean;
@@ -14465,6 +14657,16 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
+                            };
                             contract: {
                                 signed: boolean;
                                 signed_at: string;
@@ -15213,6 +15415,16 @@ export interface operations {
                                  *     Always false for a parent's view.
                                  */
                                 adapted_mode: boolean;
+                            };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
                             };
                             contract: {
                                 signed: boolean;
@@ -15967,6 +16179,16 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
+                            };
                             contract: {
                                 signed: boolean;
                                 signed_at: string;
@@ -16715,6 +16937,16 @@ export interface operations {
                                  *     Always false for a parent's view.
                                  */
                                 adapted_mode: boolean;
+                            };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
                             };
                             contract: {
                                 signed: boolean;
@@ -17469,6 +17701,16 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
+                            };
                             contract: {
                                 signed: boolean;
                                 signed_at: string;
@@ -18221,6 +18463,16 @@ export interface operations {
                                  *     Always false for a parent's view.
                                  */
                                 adapted_mode: boolean;
+                            };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
                             };
                             contract: {
                                 signed: boolean;
@@ -18975,6 +19227,16 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
+                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
+                            };
                             contract: {
                                 signed: boolean;
                                 signed_at: string;
@@ -19393,6 +19655,8 @@ export interface operations {
                             devices: number;
                             /** @description M5-T12: a new profile starts without adapted mode. */
                             adapted_mode: boolean;
+                            /** @description M5-T11: a new profile shows video. */
+                            media_display: string;
                         };
                     };
                 };
@@ -19464,7 +19728,7 @@ export interface operations {
             };
             cookie?: never;
         };
-        requestBody: {
+        requestBody?: {
             content: {
                 "application/json": components["schemas"]["UpdateChildSettingsRequest"];
             };
@@ -19479,6 +19743,11 @@ export interface operations {
                         child_id: number;
                         /** @description M5-T12: true = the walk counts wheelchair pushes (1 push = 1 step). */
                         adapted_mode: boolean;
+                        /**
+                         * @description M5-T11 »Prikaz«: `video` (default) or `picture` (key image of the current state).
+                         * @enum {string}
+                         */
+                        media_display: "video" | "picture";
                     };
                 };
             };
@@ -19687,6 +19956,35 @@ export interface operations {
                     };
                 };
             };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "childSettings.update": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["UpdateChildDisplayRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @enum {string} */
+                        media_display: "video" | "picture";
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
             422: components["responses"]["ValidationException"];
         };
     };

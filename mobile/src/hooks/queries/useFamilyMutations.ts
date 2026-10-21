@@ -17,6 +17,7 @@ import {
 } from '@/api/client';
 import { parentDashboardKey } from '@/hooks/queries/useParentDashboard';
 import { deleteConfirmWord } from '@/modules/account/account';
+import type { MediaDisplay } from '@/modules/display/display';
 
 export function useCreateChild() {
   const queryClient = useQueryClient();
@@ -60,6 +61,19 @@ export function useSetAdaptedMode() {
   const queryClient = useQueryClient();
   return useMutation<UpdateChildSettingsResponse, unknown, { childId: number; adaptedMode: boolean }>({
     mutationFn: ({ childId, adaptedMode }) => api.updateChildSettings(childId, { adapted_mode: adaptedMode }),
+    retry: false,
+    onSettled: () => queryClient.invalidateQueries({ queryKey: parentDashboardKey }),
+  });
+}
+
+/**
+ * M5-T11: a parent sets »Prikaz: Video / Slika« for a child. Refreshes the family afterwards
+ * (also after a failure: the value may have been stored without an answer).
+ */
+export function useSetChildMediaDisplay() {
+  const queryClient = useQueryClient();
+  return useMutation<UpdateChildSettingsResponse, unknown, { childId: number; mediaDisplay: MediaDisplay }>({
+    mutationFn: ({ childId, mediaDisplay }) => api.updateChildSettings(childId, { media_display: mediaDisplay }),
     retry: false,
     onSettled: () => queryClient.invalidateQueries({ queryKey: parentDashboardKey }),
   });

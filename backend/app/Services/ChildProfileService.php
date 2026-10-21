@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Enums\FamilyRole;
+use App\Enums\MediaDisplay;
 use App\Enums\StepUnit;
 use App\Enums\UserRole;
 use App\Events\PetUpdated;
@@ -160,6 +161,34 @@ class ChildProfileService
             if (! $on) {
                 $this->forgetPushes($locked);
             }
+
+            $pet = $this->families->activePetOf($locked);
+            if ($pet !== null) {
+                PetUpdated::afterCommit($pet, self::SETTINGS_EVENT);
+            }
+
+            return true;
+        });
+
+        return $changed ? $child->refresh() : $child;
+    }
+
+    /**
+     * M5-T11 »Prikaz: Video / Slika«: how the child app shows the pet (`video` default,
+     * `picture` = the key image of the current state, no video download). Set by a parent
+     * of the family or by the child. A change broadcasts one `PetUpdated`
+     * (`caretaker_settings_changed`, no child data in the payload) on the child's active pet
+     * after commit, so a running child app refetches its state and switches at once; the
+     * same value again changes nothing. The parent's dashboard reads the stored value.
+     */
+    public function setMediaDisplay(User $child, MediaDisplay $display): User
+    {
+        $changed = DB::transaction(function () use ($child, $display): bool {
+            $locked = User::whereKey($child->id)->lockForUpdate()->firstOrFail();
+            if ($locked->media_display === $display) {
+                return false;
+            }
+            $locked->forceFill(['media_display' => $display])->save();
 
             $pet = $this->families->activePetOf($locked);
             if ($pet !== null) {

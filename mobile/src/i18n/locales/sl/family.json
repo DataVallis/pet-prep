@@ -207,6 +207,13 @@
       "error": "Nastavitev ni shranjena. Poskusite znova.",
       "consent": "Z vklopom privolite, da hranimo samo to, da je prilagojen način vklopljen, in pri posameznem dnevu, da so šteli potiski. Ko ga izklopite, iz zgodovine odstranimo vse oznake potiskov (ti dnevi štejejo kot koraki); točke, ocena skrbi in vpisani sprehodi ostanejo enaki."
     },
+    "display": {
+      "label": "Prikaz",
+      "video": "Video",
+      "picture": "Slika",
+      "hint": "Slika pokaže ključno sliko tega, kar ljubljenček ravno počne, namesto videa — aplikacija ne prenaša videov, zato porabi manj mobilnih podatkov. Otrok lahko nastavitev spremeni tudi sam.",
+      "error": "Nastavitev ni shranjena. Poskusite znova."
+    },
     "logWalk": {
       "title": "Vpiši sprehod",
       "hint": "Ste bili skupaj na sprehodu? Vpišite minute — vsaka minuta šteje kot 100 korakov, največ 240 minut na dan. Otroku ni treba storiti ničesar.",
