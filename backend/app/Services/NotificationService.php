@@ -237,8 +237,9 @@ class NotificationService
 
     /**
      * M5-T06 (APP_REFINEMENT_SPEC §13): the pet's preparation ended — one push
-     * to the caretaker children (title = the pet's name when set, body without
-     * it; payload {type, pet_id}). Called by PetPreparationService::settle()
+     * to the caretaker children and the family's parents (David 2026-10-21;
+     * title = the pet's name when set, body without it, gender-neutral; payload
+     * {type, pet_id}; held devices follow the usual shared-phone registration). Called by PetPreparationService::settle()
      * inside the transaction that marks the pet ready (queued after commit), so
      * it is decided once per pet (no type dedupe needed).
      */
@@ -575,8 +576,8 @@ class NotificationService
             PushType::TrialEnding => $parents(),
             // M2-01d: the parent generates the certificate / reads the report.
             PushType::ChallengeCompleted => $parents(),
-            // M5-T06: the child waits for the pet (the parent sees it in the app).
-            PushType::PetReady => $children(),
+            // M5-T06 (David 2026-10-21): the children and the family's parents (parent copy formal).
+            PushType::PetReady => $children()->concat($parents()),
         };
 
         return $list->unique('user_id')->values()->all();

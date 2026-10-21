@@ -282,8 +282,8 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
   - [x] M5-T02b (David 21. 10.) med spanjem tudi crkljanje in česanje (pes + muca): 422 `play_pet_sleeping` / `grooming_quiet_hours` (najprej), česanje nikoli zamujeno zaradi spanja (`feasibleGroomingDays`); ure »7:00« povsod (`clockText` / `ClockText`); šolsko okno ostane spanje
 - [x] M5-T03 Vrsta sporočil z minimalnim časom prikaza (§12) — 2026-10-21, `messageQueue.ts` (2,5 s + 60 ms/znak, FIFO, pritisk zapre)
 - [x] M5-T04 Igra onemogočena, dokler niso pripravljeni vsi njeni klipi (§10) — 2026-10-21, backend + mobile JS; `play.media_ready`, wand `blocked_reason` / 422 `media_not_ready` (`GameMediaReadiness`, `config/media.php` `game_clips`), »Igra se še pripravlja«
-- [x] M5-T05 Mini navodila iz parametrov simulacije (§5) — 2026-10-21, `care_guide` v stanju otroka (`CareGuidePayload`) + kartica »Kako skrbim za …« (`modules/careGuide`), gumb »?«; branje na glas kasneje (David 21. 10.), starševski prikaz *načrt*
-- [ ] M5-T05b Kartica »Kako skrbim za [ime]« tudi za starša (podrobnosti živali) — David 21. 10. 2026: da, po sklopu M5-T
+- [x] M5-T05 Mini navodila iz parametrov simulacije (§5) — 2026-10-21, `care_guide` v stanju otroka (`CareGuidePayload`) + kartica »Kako skrbim za …« (`modules/careGuide`), gumb »?«; branje na glas kasneje (David 21. 10.), starševski prikaz → M5-T05b
+- [x] M5-T05b Kartica »Kako skrbim za [ime]« tudi za starša (podrobnosti živali) — David 21. 10. 2026: da, po sklopu M5-T — 2026-10-21, `care_guide` v `family.pets[]` pregleda staršev (isti `CareGuidePayload`) + gumb »Kako skrbim za: [ime]« v podrobnostih otroka (besedila za starša, `careGuide:parent.*`)
 - [x] M5-T06 Priprava ljubljenčka »Pripravljamo [ime]« + vrstni red generiranja (§13) — 2026-10-21, backend + mobile JS; `preparation` v stanju / pregledu / `PetUpdated` (`PetPreparationService`), vrstni red `config/media.php` `preparation_order`, zaslon s Curiom (`modules/preparation`), en `pet_ready` (dogodek + potisno obvestilo + sporočilo), merjenje v »AI media«
 - [x] ~~M5-T07 AI Lab: primerjava modelov za klipe šole in iger (§14)~~ — **opuščeno** (David 21. 10. 2026): brez primerjave — Kling 3.0 Pro za vse videe, Nano Banana Pro (+ Edit) za vse slike; klipi šole in iger 3 s. M5-T08–T10 niso več blokirani.
 - [ ] M5-T08 Mediji po stanjih: ključne slike, zanke, prehodi (§7)
@@ -292,7 +292,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [ ] M5-T11 Preklop slika / video (§1)
 - [ ] M5-T12 Prilagojen način: potiski vozička (§6)
 - [ ] M5-T13 Rojstni dan pri 1 letu (§9)
-- [ ] M5-T14 Krtača in kretnje (§11)
+- [x] M5-T14 Krtača in kretnje (§11) — 2026-10-21, `feat/M5-T14-brush-gestures` (mobile JS, OTA): lise kot strgalna srečka, iskrice, vrstica napredka, držanje namesto potega, VoiceOver/TalkBack dejanje
 
 ## Po MVP (backlog)
 

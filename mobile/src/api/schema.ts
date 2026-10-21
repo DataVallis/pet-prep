@@ -1069,9 +1069,7 @@ export interface paths {
         /**
          * Step sync: today's cumulative count from HealthKit / Health Connect.
          *     status: accepted | capped (anti-cheat kept part) | rejected | unchanged | stale.
-         *     422 steps_not_applicable for a cat (M5-R06-04: steps are dog-only).
-         *     Optional `unit` = steps | pushes (M5-T12 adapted mode: wheelchair pushes count
-         *     1 : 1 as steps; only the parent report wording changes)
+         *     422 steps_not_applicable for a cat (M5-R06-04: steps are dog-only)
          * @description POST /api/child/pet/steps
          */
         post: operations["childPet.steps"];
@@ -1124,31 +1122,6 @@ export interface paths {
         options?: never;
         head?: never;
         patch?: never;
-        trace?: never;
-    };
-    "/parent/children/{child}/settings": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path?: never;
-            cookie?: never;
-        };
-        get?: never;
-        put?: never;
-        post?: never;
-        delete?: never;
-        options?: never;
-        head?: never;
-        /**
-         * Parent-only settings of a child profile (M5-T12): `{"adapted_mode": bool}` —
-         *     »Prilagojen način«, the child's walk counts wheelchair pushes instead of steps
-         *     (1 : 1; goals, points and the Care Score stay the same). Accessibility, not a
-         *     diagnosis: no reason is asked for or stored. A change broadcasts
-         *     `adapted_mode_changed` on the child's active pet. 200 `{child_id, adapted_mode}`;
-         *     404 `child_not_found` for a child outside the family; child token → 403
-         * @description PATCH /api/parent/children/{child}/settings
-         */
-        patch: operations["childProfile.updateSettings"];
         trace?: never;
     };
     "/parent/children/{child}": {
@@ -2415,21 +2388,11 @@ export interface components {
          * @description POST /api/child/pet/steps (M1-04 / M1-07): today's cumulative step count
          *     from the phone. The service handles idempotency (max wins), anti-cheat and
          *     stale days; `source` is validated but not stored (data minimisation).
-         *
-         *     `unit` (M5-T12, optional, default `steps`): `pushes` when the phone counted
-         *     wheelchair pushes (the child's adapted mode, 1 push = 1 step). The number is
-         *     treated exactly like steps (goal, anti-cheat, energy); the unit only names
-         *     the day in the parent report (`pet_daily_steps.unit`).
          */
         SyncStepsRequest: {
             steps_today: number;
             /** @enum {string} */
             source: "healthkit" | "health_connect" | "pedometer";
-            /**
-             * @description M5-T12: what was counted (older apps send nothing → steps).
-             * @enum {string}
-             */
-            unit?: "steps" | "pushes";
             /**
              * Format: date-time
              * @description Strict ISO 8601 with an explicit offset: the server must not guess
@@ -2459,21 +2422,6 @@ export interface components {
          */
         UnregisterDeviceRequest: {
             expo_push_token: string;
-        };
-        /**
-         * UpdateChildSettingsRequest
-         * @description PATCH /api/parent/children/{child}/settings (M5-T12, David 2026-10-20). Body
-         *     `{"adapted_mode": true|false}` — »Prilagojen način«: the child's walk counts
-         *     wheelchair pushes instead of steps. Parents only (UserPolicy::manageFamily →
-         *     403 for a child; the route group also needs the `parent` token ability);
-         *     whether the child belongs to the parent's family is checked in the
-         *     controller (another family's child looks exactly like a missing one, 404).
-         *
-         *     Accessibility, not a diagnosis: only the switch is accepted and stored —
-         *     there is no field for a reason or a condition (minimum data about a minor).
-         */
-        UpdateChildSettingsRequest: {
-            adapted_mode: boolean;
         };
         /** UpdateParentSettingsRequest */
         UpdateParentSettingsRequest: {
@@ -3739,15 +3687,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -3837,13 +3788,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -4415,15 +4359,18 @@ export interface operations {
                                 preparing: boolean;
                                 /**
                                  * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                 *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                 *     true → false exactly once, with `ready` true (news: see `announce`)
                                  *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                  */
                                 running: boolean;
-                                /**
-                                 * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                 *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                 */
+                                /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                 ready_at: string | null;
+                                /**
+                                 * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                 *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                 *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                 */
+                                announce: boolean;
                             };
                         };
                         lock: {
@@ -4513,13 +4460,6 @@ export interface operations {
                             /** @description Today's step goal of the dog's life stage (M5-R01). */
                             goal: number;
                             energy_level: number;
-                            /**
-                             * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                             *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                             *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                             *     Always false for a parent's view.
-                             */
-                            adapted_mode: boolean;
                         };
                         contract: {
                             signed: boolean;
@@ -5111,15 +5051,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -5209,13 +5152,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -5805,15 +5741,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -5903,13 +5842,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -6499,15 +6431,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -6597,13 +6532,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -7193,15 +7121,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -7291,13 +7222,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -7887,15 +7811,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -7985,13 +7912,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -8585,15 +8505,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -8683,13 +8606,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -9283,15 +9199,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -9381,13 +9300,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -9981,15 +9893,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -10079,13 +9994,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -10675,15 +10583,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -10773,13 +10684,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -11373,15 +11277,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -11471,13 +11378,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -12067,15 +11967,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -12165,13 +12068,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -12761,15 +12657,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -12859,13 +12758,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -13459,15 +13351,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -13557,13 +13452,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -14153,15 +14041,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -14251,13 +14142,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -14851,15 +14735,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -14949,13 +14836,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -15545,15 +15425,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -15643,13 +15526,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -16243,15 +16119,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -16341,13 +16220,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -16941,15 +16813,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -17039,13 +16914,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -17639,15 +17507,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                             };
                             lock: {
@@ -17737,13 +17608,6 @@ export interface operations {
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
-                                /**
-                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
-                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
-                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
-                                 *     Always false for a parent's view.
-                                 */
-                                adapted_mode: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -18161,8 +18025,6 @@ export interface operations {
                             family_id: number;
                             pet_id: null;
                             devices: number;
-                            /** @description M5-T12: a new profile starts without adapted mode. */
-                            adapted_mode: boolean;
                         };
                     };
                 };
@@ -18223,51 +18085,6 @@ export interface operations {
                     };
                 };
             };
-        };
-    };
-    "childProfile.updateSettings": {
-        parameters: {
-            query?: never;
-            header?: never;
-            path: {
-                child: string;
-            };
-            cookie?: never;
-        };
-        requestBody: {
-            content: {
-                "application/json": components["schemas"]["UpdateChildSettingsRequest"];
-            };
-        };
-        responses: {
-            200: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "application/json": {
-                        child_id: number;
-                        /** @description M5-T12: true = the walk counts wheelchair pushes (1 push = 1 step). */
-                        adapted_mode: boolean;
-                    };
-                };
-            };
-            401: components["responses"]["AuthenticationException"];
-            403: components["responses"]["AuthorizationException"];
-            404: {
-                headers: {
-                    [name: string]: unknown;
-                };
-                content: {
-                    "application/json": {
-                        /** @constant */
-                        message: "No such child in your family.";
-                        /** @constant */
-                        reason: "child_not_found";
-                    };
-                };
-            };
-            422: components["responses"]["ValidationException"];
         };
     };
     "childProfile.destroy": {
@@ -19065,6 +18882,90 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
+                                /**
+                                 * @description M5-T05b: the care guide »Kako skrbim za …« — the very block the child state
+                                 *     carries (same CareGuidePayload, same profile), worded for the parent by the app.
+                                 */
+                                care_guide: {
+                                    /** @enum {string} */
+                                    species: "dog" | "cat";
+                                    /** @enum {string|null} */
+                                    life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                    /**
+                                     * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                     *     parent's) and the family-local windows "HH:MM" [start, end).
+                                     */
+                                    meals: {
+                                        per_day: number;
+                                        by_child: number;
+                                        by_parent: number;
+                                        windows: {
+                                            start: string;
+                                            end: string;
+                                            parent_covered: boolean;
+                                        }[];
+                                    };
+                                    /**
+                                     * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                     *     exercise minutes; null for a cat.
+                                     */
+                                    steps: {
+                                        goal: number;
+                                        exercise_minutes: number | null;
+                                    } | null;
+                                    /**
+                                     * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                     *     out; steps never reset it); null otherwise.
+                                     */
+                                    take_out: {
+                                        hold_hours: number;
+                                    } | null;
+                                    /**
+                                     * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                     *     `refill_below` %, at least `min_gap_minutes` apart.
+                                     */
+                                    water: {
+                                        refill_below: number;
+                                        min_gap_minutes: number;
+                                    } | null;
+                                    /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                    grooming: {
+                                        per_week: number;
+                                    } | null;
+                                    /**
+                                     * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                     *     window is null when not set or quiet hours are off.
+                                     */
+                                    sleep: {
+                                        night: {
+                                            start: string;
+                                            end: string;
+                                        } | null;
+                                        school: {
+                                            start: string;
+                                            end: string;
+                                        } | null;
+                                    };
+                                    /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                    play: {
+                                        sessions_per_day: number;
+                                        min_gap_minutes: number;
+                                    } | null;
+                                    /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                    litter: {
+                                        scoop_within_hours: number;
+                                        change_every_days: number;
+                                    } | null;
+                                    /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                    scratching: boolean;
+                                    /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                    clean_within_hours: number;
+                                    /**
+                                     * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                     *     before the walk; null otherwise.
+                                     */
+                                    digestion_gap_minutes: number | null;
+                                };
                                 /** @description M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too) — same rows. */
                                 preparation: {
                                     /**
@@ -19085,15 +18986,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                                 traffic_light: {
                                     /** @constant */
@@ -19355,6 +19259,90 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
+                                /**
+                                 * @description M5-T05b: the care guide »Kako skrbim za …« — the very block the child state
+                                 *     carries (same CareGuidePayload, same profile), worded for the parent by the app.
+                                 */
+                                care_guide: {
+                                    /** @enum {string} */
+                                    species: "dog" | "cat";
+                                    /** @enum {string|null} */
+                                    life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                    /**
+                                     * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                     *     parent's) and the family-local windows "HH:MM" [start, end).
+                                     */
+                                    meals: {
+                                        per_day: number;
+                                        by_child: number;
+                                        by_parent: number;
+                                        windows: {
+                                            start: string;
+                                            end: string;
+                                            parent_covered: boolean;
+                                        }[];
+                                    };
+                                    /**
+                                     * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                     *     exercise minutes; null for a cat.
+                                     */
+                                    steps: {
+                                        goal: number;
+                                        exercise_minutes: number | null;
+                                    } | null;
+                                    /**
+                                     * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                     *     out; steps never reset it); null otherwise.
+                                     */
+                                    take_out: {
+                                        hold_hours: number;
+                                    } | null;
+                                    /**
+                                     * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                     *     `refill_below` %, at least `min_gap_minutes` apart.
+                                     */
+                                    water: {
+                                        refill_below: number;
+                                        min_gap_minutes: number;
+                                    } | null;
+                                    /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                    grooming: {
+                                        per_week: number;
+                                    } | null;
+                                    /**
+                                     * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                     *     window is null when not set or quiet hours are off.
+                                     */
+                                    sleep: {
+                                        night: {
+                                            start: string;
+                                            end: string;
+                                        } | null;
+                                        school: {
+                                            start: string;
+                                            end: string;
+                                        } | null;
+                                    };
+                                    /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                    play: {
+                                        sessions_per_day: number;
+                                        min_gap_minutes: number;
+                                    } | null;
+                                    /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                    litter: {
+                                        scoop_within_hours: number;
+                                        change_every_days: number;
+                                    } | null;
+                                    /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                    scratching: boolean;
+                                    /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                    clean_within_hours: number;
+                                    /**
+                                     * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                     *     before the walk; null otherwise.
+                                     */
+                                    digestion_gap_minutes: number | null;
+                                };
                                 /** @description M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too) — same rows. */
                                 preparation: {
                                     /**
@@ -19375,15 +19363,18 @@ export interface operations {
                                     preparing: boolean;
                                     /**
                                      * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
-                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
                                      *     (PetUpdated `pet_ready` + one push to the caretaker children).
                                      */
                                     running: boolean;
-                                    /**
-                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
-                                     */
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
                                     ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
                                 };
                                 traffic_light: {
                                     /** @constant */

@@ -243,6 +243,13 @@
       "grooming_session_active_no_time": "Kužka zdaj češe nekdo drug. Poskusi čez minuto.",
       "care_session_active": "Nekdo drug zdaj nekaj počne s kužkom. Poskusi znova {{when}}.",
       "care_session_active_no_time": "Nekdo drug zdaj nekaj počne s kužkom. Poskusi čez minuto."
+    },
+    "brush": {
+      "holdHint": "Ne moreš potegniti s prstom? Pridrži prst na kužku ali gumb spodaj.",
+      "bar": "Počesano: {{percent}} %",
+      "clean": "Vsa dlaka je počesana! Še trenutek …",
+      "action": "Počeši",
+      "holdA11yHint": "Pridrži za daljše česanje."
     }
   },
   "rules": {

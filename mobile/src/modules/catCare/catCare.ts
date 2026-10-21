@@ -770,6 +770,7 @@ export const CHORE_STRINGS = strings('cat', 'chore', {
   grooming: {
     matted: (seconds: number) => t('cat:chore.grooming.matted', { seconds }),
     week: (done: number, goal: number) => t('cat:chore.grooming.week', { done, goal }),
+    brush: { bar: (percent: number) => t('cat:chore.grooming.brush.bar', { percent }) },
   },
   litter_change: {
     weekOpen: (when: string) => t('cat:chore.litter_change.weekOpen', { when }),

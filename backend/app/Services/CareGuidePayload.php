@@ -63,7 +63,9 @@ final class CareGuidePayload
         $now = CarbonImmutable::instance($now ?? now());
         $profile ??= PetProfilePayload::for($pet, $now);
         $today = $profile->date;
-        $config = $pet->breedConfig();
+        // The profile carries the rows it was built from (no second query, same values).
+        $loaded = $profile->quietHours !== null;
+        $config = $loaded ? $profile->breedConfig : $pet->breedConfig();
         $cat = $pet->isCat();
         $lifeStages = app(LifeStageService::class);
 
@@ -108,7 +110,7 @@ final class CareGuidePayload
                 'min_gap_minutes' => max(0, (int) $config->water_min_gap_minutes),
             ] : null,
             grooming: $groomingGoal > 0 ? ['per_week' => $groomingGoal] : null,
-            sleep: self::sleepOf($pet->quietHours()),
+            sleep: self::sleepOf($profile->quietHours ?? $pet->quietHours()),
             play: $play,
             litter: $litter,
             scratching: $scratching,

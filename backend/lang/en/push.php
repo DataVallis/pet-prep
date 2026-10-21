@@ -216,9 +216,6 @@ return [
             'parent' => 'The cat has gone to a shelter because it went 24 hours without essential care. Choose how to continue in the app.',
         ],
 
-        // M5-T06: the preparation ended (title = name, body without it).
-        'pet_ready' => 'Your cat is ready! Come and say hello.',
-
         'payment_required' => [
             'child' => 'The game is waiting for your parent. Your cat is safe and resting.',
             'parent' => 'The free trial has ended. The cat is waiting safely until you unlock the 12-week challenge in the app.',
@@ -227,8 +224,11 @@ return [
     ],
 
     // M5-T06 (APP_REFINEMENT_SPEC §13, David 2026-10-20): the preparation ended. The title is the
-    // pet's name (when set), the body never names it — and never says how the pet was prepared.
-    'pet_ready' => 'Your pup is ready! Come and say hello.',
+    // pet's name (when set), the body never names it; gender-neutral (David 2026-10-21); never says how the pet was prepared.
+    'pet_ready' => [
+        'child' => 'Everything is ready. Come and say hello!',
+        'parent' => 'Everything is ready. The pet is waiting in the app.',
+    ],
 
     // M2-01d (CERTIFICATE_SPEC, David 2026-10-12): a child's challenge ended — parents only,
     // species-neutral (no cat text needed), no names.

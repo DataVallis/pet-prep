@@ -1065,7 +1065,7 @@ class PetActivityService
                         if ($born !== null) {
                             // M5-T06: the preparation starts at birth when media are still
                             // missing (before queueing, so even a fast queue can't skip it).
-                            app(PetPreparationService::class)->begin($born);
+                            app(PetPreparationService::class)->begin($born, PetPreparationService::BEGIN_BIRTH);
                             app(PetMediaService::class)->queueStateVideos($born);
                         }
                     } catch (\Throwable $e) {

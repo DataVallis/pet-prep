@@ -9,12 +9,21 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-21 — Česanje kot strgalna srečka
+
+**Kaj:** ko otrok češe kužka ali muco, krtača zdaj sledi prstu, iz dlake se pokažejo iskrice, »umazane« lise (šest, dve na vsak korak: glava in vrat, hrbet, boki in rep) z vsako potezo zbledijo, vrstica »Počesano« pa se polni do 100 %. Kdor ne more potegniti s prstom, pridrži prst na ljubljenčku ali gumb »Počeši enkrat« — česanje teče samo. VoiceOver in TalkBack imata dejanje »Počeši«.
+**Zakaj je pomembno:** prej je otrok 30 sekund drgnil po zaslonu in videl samo števec potez; zdaj vidi, kaj je naredil in kaj še manjka — in vidi, da je treba počesati vse dele telesa. Pravila in točke so ostala ista (strežnik ni spremenjen), zato je posodobitev prišla brez nove različice v trgovini.
+- 👩 Starši: tudi otrok, ki ne more potegniti s prstom, lahko češe (držanje namesto potega, bralnik zaslona).
+- 🧒 Otroci: »Počeši vse lise, da bo dlaka mehka in svetleča!«
+- 💼 Investitorji: dostopnost je vgrajena v igre, ne dodana kasneje.
+- 🛠 Tehnično: čista logika (`brushing.ts`) zrcali strežnikovo pravilo (≥ 150 ms med potezami, vsi trije deli, ne strojno enakomerno); iskrice iz bazena 8 pogledov na nativnem gonilniku, brez React posodobitve ob vsakem premiku prsta.
+
 ## 2026-10-21 — »Pripravljamo: Luna«: prve minute z novim ljubljenčkom
 
-**Kaj:** ko otrok podpiše pogodbo in ljubljenček še ni povsem pripravljen, zdaj vidi maskoto Curio, ki se nežno ziba, in »Pripravljamo: Luna — To lahko traja nekaj minut.« Najprej se pripravi to, kar otrok vidi v prvih minutah (kuža stoji, spi, je), nato šola in igre. Kar še ni pripravljeno, je mirno označeno (»Šola se še pripravlja« s pozo, »Igra se še pripravlja«). Ko je vse pripravljeno, otrok enkrat dobi »Luna je pripravljen!« v aplikaciji in kot obvestilo. Zaslon nikoli ne traja več kot 15 minut.
+**Kaj:** ko otrok podpiše pogodbo in ljubljenček še ni povsem pripravljen, zdaj vidi maskoto Curio, ki se nežno ziba, in »Pripravljamo: Luna — To lahko traja nekaj minut.« Najprej se pripravi to, kar otrok vidi v prvih minutah (kuža stoji, spi, je), nato šola in igre. Kar še ni pripravljeno, je mirno označeno (»Šola se še pripravlja« s pozo, »Igra se še pripravlja«). Ko je vse pripravljeno, otrok enkrat dobi »Vse je pripravljeno: Luna« v aplikaciji, otrok in starši pa obvestilo. Zaslon nikoli ne traja več kot 15 minut.
 **Zakaj je pomembno:** prvi stik z ljubljenčkom mora delovati premium in mirno — brez praznih zaslonov, napol delujočih iger ali tehničnih sporočil (David 20. 10.: uporabnik ne sme videti, kako se ljubljenček pripravlja).
-- 👩 Starši: v podrobnostih otroka piše »Pripravljamo: Luna«, dokler ljubljenček ni pripravljen; obvestilo »… je pripravljen« dobi samo otrok.
-- 🧒 Otroci: »Pripravljamo: Luna … To lahko traja nekaj minut.« in potem »Luna je pripravljen!«
+- 👩 Starši: v podrobnostih otroka piše »Pripravljamo: Luna«, dokler ljubljenček ni pripravljen; obvestilo »Vse je pripravljeno« dobite tudi vi (vikanje, brez imena v besedilu).
+- 🧒 Otroci: »Pripravljamo: Luna … To lahko traja nekaj minut.« in potem »Vse je pripravljeno: Luna«
 - 💼 Investitorji: odločitev o modelih (21. 10.) — en model za vse posnetke, krajši posnetki šole in iger (3 s) znižajo ocenjeni strošek paketa na pasmo + barvo + obdobje s ≈ 16,20 $ na ≈ 12,59 $ (cenik fal); vsak naslednji kupec iste pasme in barve ne stane nič dodatnega.
 - 🛠 Tehnično: strežnik pošlje povzetek pripravljenosti v stanju in vsakem dogodku v živo, vrstni red izdelave se spremeni brez novega stroška, obvestilo »pripravljen« je atomsko enkratno na ljubljenčka; čas priprave se meri v administraciji (konec − začetek priprave).
 
