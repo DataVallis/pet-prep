@@ -36,6 +36,24 @@ import { broadcastSocialisation, readChildSocialisation, type ChildSocialisation
 import { broadcastPlay, readChildPlay, type ChildPlay } from '@/modules/play/play';
 import { readChildCertificate, type ChildCertificate } from '@/modules/certificate/certificate';
 
+/** M5-T02 `sleep` of the child state / `PetUpdated`. */
+export interface PetSleep {
+  asleep: boolean;
+  until: string | null;
+}
+
+/** `sleep` of a state / broadcast; missing or malformed → derived from `pet_state` (older server). */
+export function readSleep(raw: unknown, petStateValue: PetState): PetSleep {
+  if (typeof raw === 'object' && raw !== null && !Array.isArray(raw)) {
+    const r = raw as { asleep?: unknown; until?: unknown };
+    if (typeof r.asleep === 'boolean') {
+      const until = r.asleep && typeof r.until === 'string' && !Number.isNaN(Date.parse(r.until)) ? r.until : null;
+      return { asleep: r.asleep, until };
+    }
+  }
+  return { asleep: petStateValue === 'sleeping', until: null };
+}
+
 export type LockReason = 'game_over' | 'inactive' | 'hard_stopped' | 'payment_required' | 'contract_required' | 'ill';
 
 export interface TimeWindow {
@@ -99,6 +117,12 @@ export interface ChildPetView {
   timezone: string;
   /** Server clock of the last HTTP snapshot (ISO with family offset). */
   server_time: string;
+  /**
+   * M5-T02: the pet sleeps now (family quiet hours) and when it wakes (ISO, family offset).
+   * Play and school are off while it sleeps (`actionRules.ts`). An older server sends no
+   * `sleep` → `asleep` follows `pet_state === 'sleeping'`, `until` null.
+   */
+  sleep: PetSleep;
   feeding: {
     /** Local "HH:MM" windows of the breed. */
     windows: TimeWindow[];
@@ -311,6 +335,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
     },
     timezone: raw.timezone,
     server_time: raw.server_time,
+    // M5-T02: an older server sends no `sleep` (typed as required by the current schema).
+    sleep: readSleep((raw as { sleep?: unknown }).sleep, petState(p.pet_state)),
     feeding: {
       windows,
       current_window: windowOrNull(raw.feeding.current_window),
@@ -456,7 +482,10 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
   const lock = lockFromFlags(pet, view.lock);
   const blocked = lock.is_locked || pet.needs_cleaning;
   const behaviour = broadcastBehaviour(view.behaviour, b.behaviour, lock.is_locked);
-  const training = broadcastTraining(view.training, b.training, lock.is_locked);
+  // M5-T02: the broadcast carries `sleep` (an older server's doesn't → follow pet_state, keep the time).
+  const derived = readSleep(b.sleep, pet.pet_state);
+  const sleep = b.sleep !== undefined || !derived.asleep ? derived : { asleep: true, until: view.sleep.until };
+  const training = sleepTraining(broadcastTraining(view.training, b.training, lock.is_locked), sleep);
   // M5-R05: pet-level `can_play`; a lock (incl. this child's own contract) turns it off.
   const play = broadcastPlay(view.play, b.play, lock.is_locked);
   // M5-R06-08b: the cat's wand / litter / grooming / scratching (null blocks for a dog).
@@ -468,6 +497,7 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
     ...view,
     pet,
     lock,
+    sleep,
     feeding: deriveFeeding(view.feeding, pet.hunger_level, blocked),
     water: { ...view.water, can_water: view.water.can_water && !blocked },
     steps: { ...view.steps, energy_level: b.energy_level },
@@ -482,11 +512,22 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
   const refetch =
     lock.reason !== view.lock.reason ||
     pet.needs_cleaning !== view.pet.needs_cleaning ||
+    // M5-T02: falling asleep / waking changes what may start (school, play) — fetch the truth.
+    sleep.asleep !== view.sleep.asleep ||
     // Energy only drops at the family midnight: a new step day → steps / windows / water reset.
     b.energy_level < view.pet.energy_level ||
     (b.event_type !== null && b.event_type !== 'metric_changed');
 
   return { view: next, refetch };
+}
+
+/**
+ * M5-T02: no school while the pet sleeps — a broadcast that says it fell asleep turns
+ * "Začni vajo" off at once with the server's reason and wake time (the refetch confirms).
+ */
+export function sleepTraining(training: ChildTraining, sleep: PetSleep): ChildTraining {
+  if (!sleep.asleep || !training.enabled) return training;
+  return { ...training, can_start: false, blocked_reason: 'training_pet_sleeping', next_allowed_at: sleep.until };
 }
 
 /**
@@ -664,7 +705,9 @@ export function nextRefreshDelay(view: ChildPetView, deviceNowMs: number): numbe
   const groomingAt = view.lock.is_locked ? Number.NaN : at(view.cat.grooming?.next_allowed_at);
   // M5-R17: the puppy's next week (a new "new experience") or the end of quiet hours.
   const socialisationAt = view.lock.is_locked ? Number.NaN : at(view.socialisation?.next_allowed_at ?? view.socialisation?.week_ends_at);
-  const future = [nextWindow, windowEnd, water, accident, illnessEnd, trainingEnd, invitationEnd, wandAt, groomingAt, socialisationAt].filter(
+  // M5-T02: the pet wakes — play and school open again (no broadcast marks the moment by itself).
+  const wakeAt = view.sleep.asleep ? at(view.sleep.until) : Number.NaN;
+  const future = [nextWindow, windowEnd, water, accident, illnessEnd, trainingEnd, invitationEnd, wandAt, groomingAt, socialisationAt, wakeAt].filter(
     (ms) => Number.isFinite(ms) && ms > serverNow,
   );
   future.push(familyCalendar(view.timezone, view.server_time).nextMidnight(serverNow));
@@ -677,6 +720,7 @@ export function nextRefreshDelay(view: ChildPetView, deviceNowMs: number): numbe
     (Number.isFinite(accident) && accident <= serverNow) ||
     (Number.isFinite(illnessEnd) && illnessEnd <= serverNow) ||
     (Number.isFinite(trainingEnd) && trainingEnd <= serverNow) ||
+    (Number.isFinite(wakeAt) && wakeAt <= serverNow) ||
     (Number.isFinite(wandAt) && wandAt <= serverNow && view.cat.wand !== null && !view.cat.wand.can_start && !blocked);
   if (stale) delay = Math.min(delay, BOUNDARY_RETRY_MS);
 

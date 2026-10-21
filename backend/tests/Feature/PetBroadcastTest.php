@@ -219,6 +219,8 @@ describe('PetUpdated event shape', function () {
             'litter', 'grooming', 'scratching',
             // M5-R17 puppy socialisation (additive; null without a task this week)
             'socialisation',
+            // M5-T02 sleep (asleep + wake time)
+            'sleep',
         ]);
         expect(array_keys($payload['behaviour']))->toBe(['take_out', 'active_events', 'scene'])
             ->and(array_keys($payload['training']))->toBe(['enabled', 'commands', 'today_done', 'session_active']);

@@ -11,6 +11,7 @@ use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
 use App\Services\PlayPayload;
 use App\Services\ScratchingPayload;
+use App\Services\SleepPayload;
 use App\Services\SocialisationPayload;
 use App\Services\TrainingPayload;
 use App\Services\WandPayload;
@@ -180,6 +181,8 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             'training' => TrainingPayload::summaryFor($pet)->summary(),
             // M5-R05: play / cuddle possible now (pet level), the dog's invitation, the happy scene; null without play.
             'play' => PlayPayload::for($pet)?->toArray(),
+            // M5-T02: the pet sleeps now (family quiet hours) and when it wakes (family offset).
+            'sleep' => SleepPayload::for($pet)->toArray(),
             // M5-R06-04: the cat's wand play (goal, sessions today, gap, running game); null for a dog.
             'wand' => WandPayload::for($pet)?->toArray(),
             // M5-R06-05: the cat's litter tray, a brushed cat's grooming (M5-R13: also a brushed dog's), the scratching resolve; null otherwise.

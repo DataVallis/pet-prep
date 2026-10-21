@@ -59,8 +59,8 @@ class PlayService
 
     public function __construct(
         private readonly LifeStageService $lifeStages,
-        private readonly DailyWalkService $walks,
         private readonly WandPlayService $wand,
+        private readonly PetSleepService $sleep,
         private ?string $seedSalt = null,
     ) {
         $this->seedSalt ??= (string) config('app.key');
@@ -126,12 +126,13 @@ class PlayService
             return null;
         }
 
-        return $this->walks->endOfQuietStretch($pet->quietHours(), $now);
+        return $this->sleep->wakesAt($pet, $now);
     }
 
+    /** The pet sleeps (PetSleepService, M5-T02) and free play waits for it (D, `play.free_play_in_quiet_hours`). */
     private function sleepsNow(Pet $pet, CarbonInterface $now, ?QuietHours $quiet = null): bool
     {
-        return ! config('play.free_play_in_quiet_hours', false) && ($quiet ?? $pet->quietHours())->isQuietNow($now);
+        return ! config('play.free_play_in_quiet_hours', false) && $this->sleep->asleepAt($pet, $now, $quiet);
     }
 
     /**

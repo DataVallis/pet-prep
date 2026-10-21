@@ -324,6 +324,10 @@
       },
       "hudError": {
         "body": "Muca je v redu. Poskusi znova."
+      },
+      "rules": {
+        "sleeping": "💤 Muca spi",
+        "sleepingUntil": "💤 Muca spi do {{clock}}"
       }
     },
     "play": {

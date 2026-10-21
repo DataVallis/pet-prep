@@ -109,6 +109,7 @@ trait HandlesChildPet
             CareRefusal::TrainingInvalidTaps => 'A tap lies outside the training session.',
             CareRefusal::TrainingDayEnding => 'The day is ending — train again after midnight.',
             CareRefusal::TrainingSessionInterrupted => 'The training session was interrupted.',
+            CareRefusal::TrainingPetSleeping => 'The pet is sleeping — train again when it wakes up.',
             CareRefusal::PlayNotAvailable => 'Playing is not possible right now.',
             CareRefusal::StepsNotApplicable => 'Steps are only counted for dogs.',
             CareRefusal::WandNotAvailable => 'The wand game is not available for this pet.',

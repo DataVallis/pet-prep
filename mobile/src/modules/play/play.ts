@@ -259,7 +259,8 @@ export type PlayBlock = 'sleeping' | 'dirty' | 'other';
 export function playBlock(view: ChildPetView): PlayBlock | null {
   if (view.play === null || view.play.can_play) return null;
   if (view.pet.needs_cleaning || view.pet.hygiene_level <= 0) return 'dirty';
-  if (view.pet.pet_state === 'sleeping') return 'sleeping';
+  // M5-T02: the server's `sleep` (an older server: `pet_state`).
+  if (view.sleep.asleep || view.pet.pet_state === 'sleeping') return 'sleeping';
   return 'other';
 }
 

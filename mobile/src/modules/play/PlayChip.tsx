@@ -54,9 +54,9 @@ export function PlayChip({ block, onPress, label, accessibilityLabel }: PlayChip
 }
 
 /** Why "Igra" is off ("Kuža spi …", "Najprej počisti …"); shown under the chip row. */
-export function PlayBlockedNote({ text }: { text: string }) {
+export function PlayBlockedNote({ text, testID = 'hud-play-blocked' }: { text: string; testID?: string }) {
   return (
-    <Text style={styles.note} testID="hud-play-blocked">
+    <Text style={styles.note} testID={testID}>
       {text}
     </Text>
   );

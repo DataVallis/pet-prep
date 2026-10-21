@@ -322,6 +322,10 @@
       },
       "hudError": {
         "body": "Your kitty is fine. Try again."
+      },
+      "rules": {
+        "sleeping": "💤 Your kitty is asleep",
+        "sleepingUntil": "💤 Your kitty is asleep until {{clock}}"
       }
     },
     "play": {

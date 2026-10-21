@@ -140,6 +140,7 @@ import { HappyBadge, PlayBlockedNote, PlayChip, PlayInvitationCard } from '@/mod
 import HeartsLayer from '@/modules/play/HeartsLayer';
 import PlayOverlay from '@/modules/play/PlayOverlay';
 import { moodSceneAt, playBlockText, playEntry, playRefusalMessage, type PlayKind } from '@/modules/play/play';
+import { actionRules } from '@/modules/childPet/actionRules';
 import { usePlayClock } from '@/modules/play/usePlayClock';
 import DigestionNote from '@/modules/digestion/DigestionNote';
 import { digestionNote } from '@/modules/digestion/digestion';
@@ -601,9 +602,11 @@ export default function ChildHudScreen() {
   const profileRows = pet.profile ? profileSheetRows(breedName(pet.breed_type, pet.species), pet.profile) : [];
   const locked = view.lock.is_locked;
   const opaqueLock = view.lock.reason === 'game_over' || view.lock.reason === 'inactive';
-  const feedDisabled = !view.feeding.can_feed;
-  const waterDisabled = !view.water.can_water;
-  const walkDisabled = locked;
+  // M5-T02: one rules table for every HUD action (server flags + the sleeping / lock reason).
+  const rules = actionRules(view);
+  const feedDisabled = !rules.feed.enabled;
+  const waterDisabled = !rules.water.enabled;
+  const walkDisabled = !rules.walk.enabled;
   const alreadyClean = pet.hygiene_level >= 100 && !pet.needs_cleaning;
   // M5-R02: a chewed slipper is tidied up with its own button — never scrubbed.
   // M5-R06-08b: nor the cat's scratched sofa ("Na praskalnik").
@@ -620,7 +623,7 @@ export default function ChildHudScreen() {
     (needsScrub || (isCleaningOverlayVisible && !chewingOnly && !nothingToScrub));
   const takeOutClock = view.behaviour.take_out;
   const countdown = !locked && takeOutClock !== null ? takeOutCountdown(takeOutClock, serverNow, view.timezone) : null;
-  const takeOutDisabled = !view.behaviour.can_take_out;
+  const takeOutDisabled = !rules.take_out.enabled;
   // M5-R06-08b: the dock per species (a dog's is unchanged; a cat's has "Pesek" + "Igra").
   const dock = dockKinds(view);
   const compactDock = dock.length >= 5;
@@ -642,6 +645,11 @@ export default function ChildHudScreen() {
   // M5-R03: "Šola" only for a pet with training (legacy / older app / older server: nothing).
   // A cat never has dog school (CAT_SPEC Q10).
   const hasTraining = !cat && showTrainingEntry(view.training);
+  // M5-T02 (David 2026-10-20): while the pet sleeps "Šola" and "Igra" stay visible but off,
+  // with one note »💤 Kuža spi do 7:00« (other blocks: the school overlay explains them).
+  const trainingSleeps = hasTraining && rules.training.reason === 'sleeping';
+  const playSleeps = rules.play.reason === 'sleeping';
+  const sleepNote = trainingSleeps ? rules.training.text : playSleeps ? rules.play.text : undefined;
   // M5-R04: today's feed windows ("nahrani starš" for quiet hours) near the feed button.
   // Profiled pets only (a legacy pet keeps the pre-M5 HUD).
   const mealWindows = pet.profile ? buildMealWindows(view) : [];
@@ -1102,7 +1110,9 @@ export default function ChildHudScreen() {
                       {hasTraining && (
                         <TrainingChip
                           todayDone={view.training.today_done}
-                          pending={showTrainingDot(view.training)}
+                          pending={!trainingSleeps && showTrainingDot(view.training)}
+                          disabled={trainingSleeps}
+                          disabledReason={trainingSleeps ? rules.training.text : undefined}
                           onPress={() => setTrainingVisible(true)} />
                       )}
                       {chips.map((chip) => (
@@ -1128,7 +1138,10 @@ export default function ChildHudScreen() {
                   {chipNotes.map((note) => (
                     <CatHudNote key={note.kind} text={note.text} testID={`hud-cat-note-${note.kind}`} />
                   ))}
-                  {entry.kind === 'button' && entry.block !== null && <PlayBlockedNote text={playBlockText(entry.block, playSleepsUntil, view.timezone, playNow)} />}
+                  {sleepNote !== undefined && <PlayBlockedNote text={sleepNote} testID="hud-sleep-note" />}
+                  {entry.kind === 'button' && entry.block !== null && !(sleepNote !== undefined && entry.block === 'sleeping') && (
+                    <PlayBlockedNote text={playBlockText(entry.block, playSleepsUntil, view.timezone, playNow)} />
+                  )}
                 </>
               ) : null
             }

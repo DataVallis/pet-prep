@@ -363,6 +363,7 @@ describe('session', function () {
 
     it('refuses a start whose session + TTL would cross the family-local midnight (also on the 25-hour DST day)', function () {
         [, $child, $pet] = trFamily();
+        withoutQuietHours($pet); // M5-T02: about the clock / budget, not sleep (no school while the pet sleeps)
 
         // 23:58:00 local (CEST) + 50 s + 60 s TTL = 23:59:50 → ok; 23:58:11 → would end 00:00:01.
         trAt('2026-10-08 21:58:11');
@@ -455,6 +456,7 @@ describe('session', function () {
 
     it('limits the dog to 5 minutes of mini-game per family-local day (6 sessions of 50 s)', function () {
         [, $child, $pet] = trFamily();
+        withoutQuietHours($pet); // M5-T02: about the clock / budget, not sleep (no school while the pet sleeps)
         for ($i = 0; $i < 6; $i++) {
             trSession($child, sprintf('2026-10-08 08:%02d:00', $i * 2));
         }
@@ -737,6 +739,7 @@ describe('learning speed', function () {
 describe('decay', function () {
     it('costs every command 2 points per missed training day (tick after midnight), never below 0', function () {
         [, $child, $pet] = trFamily('2026-10-07 05:00:00');
+        withoutQuietHours($pet); // M5-T02: about the clock / budget, not sleep (no school while the pet sleeps)
         trSkill($pet, TrainingCommand::Sit, 50.0);
         trSkill($pet, TrainingCommand::Come, 1.0);
 

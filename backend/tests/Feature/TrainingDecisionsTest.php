@@ -627,6 +627,7 @@ describe('fair share of the daily budget', function () {
 
     it('splits 300 s between 2 children: 150 s = 3 sessions each, then training_child_share_used; the sibling keeps theirs', function () {
         [$parent, $child, $pet] = tdFamily();
+        withoutQuietHours($pet); // M5-T02: about the clock / budget, not sleep (no school while the pet sleeps)
         $sibling = tdSibling($parent, $pet);
 
         tdState($child)

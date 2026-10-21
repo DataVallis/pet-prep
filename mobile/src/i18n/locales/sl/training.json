@@ -26,7 +26,8 @@
       "budget_used": "Kuža je danes že dovolj vadil. Jutri spet!",
       "share_used": "Tvoj današnji čas za šolo je porabljen. Brat ali sestra lahko s kužkom še vadi — ti pa spet jutri!",
       "day_ending": "Dan se izteka — kuža gre spat. Nova vaja jutri!",
-      "unavailable": "Zdaj ni čas za vajo."
+      "unavailable": "Zdaj ni čas za vajo.",
+      "sleeping": "Kuža spi. V šolo gresta, ko se zbudi."
     },
     "starting": "Kuža se pripravlja …",
     "getReady": "Pripravi se …",
@@ -83,7 +84,9 @@
       "training_day_ending": "Dan se izteka — kuža gre spat. Nova vaja jutri!",
       "training_session_interrupted": "Vaja je bila prekinjena, zato tokrat ne šteje. Čas za vajo ti ostane — poskusi znova, ko bo kuža spet prost.",
       "expiredWhileAway": "Vaja se je iztekla, ker je bila aplikacija zaprta. Napredek tokrat ni zapisan — začni novo vajo.",
-      "badResponse": "Nekaj je šlo narobe. Poskusi znova."
+      "badResponse": "Nekaj je šlo narobe. Poskusi znova.",
+      "training_pet_sleeping": "Kuža spi. V šolo gresta, ko se zbudi.",
+      "training_pet_sleeping_until": "Kuža spi do {{clock}}. Takrat spet v šolo!"
     },
     "retry": "Poskusi znova",
     "commands": {

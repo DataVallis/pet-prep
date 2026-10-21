@@ -731,7 +731,8 @@ export interface paths {
          * Training (M5-R03): start a reward-timing session for one command. The
          *     response carries `session` — the server's schedule (cues, whether and
          *     when the dog obeys, the praise window; offsets in ms since start).
-         *     422 training_not_available | training_session_active (next_allowed_at
+         *     422 training_not_available | training_pet_sleeping (quiet hours, M5-T02;
+         *     next_allowed_at = when the pet wakes) | training_session_active (next_allowed_at
          *     = its expiry) | training_day_ending (session + TTL would cross the
          *     family-local midnight; next_allowed_at = midnight) |
          *     training_daily_budget_used (next_allowed_at = local midnight) |
@@ -3669,6 +3670,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -3820,11 +3831,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -4199,6 +4223,16 @@ export interface operations {
                         };
                         timezone: string;
                         server_time: string;
+                        /**
+                         * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                         *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                         */
+                        sleep: {
+                            /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                            asleep: boolean;
+                            /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                            until: string | null;
+                        };
                         feeding: {
                             windows: unknown[];
                             current_window: {
@@ -4350,11 +4384,24 @@ export interface operations {
                             my_seconds_left: number;
                             /**
                              * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                             *     locked, no running session, enough of the dog's budget AND of this
-                             *     child's fair share left for one session, and the session would end
-                             *     before the family-local midnight).
+                             *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                             *     budget AND of this child's fair share left for one session, and the
+                             *     session would end before the family-local midnight) —
+                             *     TrainingService::startRefusal().
                              */
                             can_start: boolean;
+                            /**
+                             * @description M5-T02: why a start would be refused now (null = it may start, or training
+                             *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                             *     sleeps (next_allowed_at = when it wakes).
+                             * @enum {string|null}
+                             */
+                            blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                            /**
+                             * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                             *     local midnight; family offset); null without a time.
+                             */
+                            next_allowed_at: string | null;
                         };
                         /**
                          * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -4749,6 +4796,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -4900,11 +4957,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -5297,6 +5367,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -5448,11 +5528,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -5845,6 +5938,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -5996,11 +6099,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -6393,6 +6509,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -6544,11 +6670,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -6941,6 +7080,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -7092,11 +7241,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -7493,6 +7655,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -7644,11 +7816,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -8045,6 +8230,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -8196,11 +8391,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -8597,6 +8805,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -8748,11 +8966,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -9145,6 +9376,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -9296,11 +9537,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -9697,6 +9951,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -9848,11 +10112,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -10245,6 +10522,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -10396,11 +10683,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -10793,6 +11093,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -10944,11 +11254,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -11345,6 +11668,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -11496,11 +11829,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -11893,6 +12239,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -12044,11 +12400,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -12445,6 +12814,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -12596,11 +12975,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -12993,6 +13385,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -13144,11 +13546,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -13545,6 +13960,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -13696,11 +14121,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -14097,6 +14535,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -14248,11 +14696,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
@@ -14649,6 +15110,16 @@ export interface operations {
                             };
                             timezone: string;
                             server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
                             feeding: {
                                 windows: unknown[];
                                 current_window: {
@@ -14800,11 +15271,24 @@ export interface operations {
                                 my_seconds_left: number;
                                 /**
                                  * @description POST /api/child/pet/training/start would be accepted now (enabled, not
-                                 *     locked, no running session, enough of the dog's budget AND of this
-                                 *     child's fair share left for one session, and the session would end
-                                 *     before the family-local midnight).
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
                                  */
                                 can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
                             };
                             /**
                              * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
