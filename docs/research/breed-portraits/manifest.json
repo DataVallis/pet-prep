@@ -639,6 +639,18 @@
             "prompt_hash": "sha256:ce281c6c50e0116a0332df096160d8cfc57dd3ad15351756126a95216c15724a",
             "generated_at": "2026-10-20T23:54:25+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "dalmatian",
+            "species": "dog",
+            "file": "dog/dalmatian.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:765e44411471bc54cb896b7eb206324120b29bf1bab841e54ca512e285c626a9",
+            "generated_at": "2026-10-21T01:58:13+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
