@@ -426,6 +426,7 @@ const SPECIES = [
       { id: 'newfoundland', synonyms: { en: ['Newfie', 'Newf', 'Terra Nova'], sl: ['novofundlandski pes', 'njufi', 'newfoundland'] } },
       { id: 'dalmatian', synonyms: { en: ['Carriage Dog', 'Spotted Coach Dog', 'Firehouse Dog', 'Dalmatinski pas'], sl: ['dalmatinski pas', 'dalmatinka', 'dalmatin'] } },
       { id: 'australian_cattle_dog', synonyms: { en: ['Blue Heeler', 'Red Heeler', 'Queensland Heeler', 'Cattle Dog', 'ACD'], sl: ['avstralski govedarski pes', 'blue heeler', 'heeler'] } },
+      { id: 'whippet', synonyms: { en: ['Snap dog'], sl: ['whippet', 'vipet', 'angleški hrt'] } },
     ],
   },
   {
@@ -1541,6 +1542,31 @@ const DOG_FACTS = {
       ['bladder_stones', 'health.urinary_stones'],
     ],
   },
+  // M5-R10-54. Height = Kennel Club standard (S443), weight = PDSA 11–18 kg (S444; the standard gives none), lifespan =
+  // the McMillan 2024 median 13.4 y (Dogs Trust table S123) and the PDSA band "Over 12 years" (S444), exercise = PDSA
+  // "Minimum exercise (per day): 1 hour" (S444; the RKC page was not reachable → no RKC coat / grooming / shedding
+  // facts, Newfoundland precedent). FCI origin Great Britain (GB). Not exported: height.pdsa and the PetMD weight
+  // (alternatives), adult_weight.salt_category (our assignment), lifespan.senior_from (derived), health.skin_injuries
+  // (care background), the care needs suitability.pdsa_cold_coat and exercise.off_lead (open for David: a new task).
+  // New health key: mitral_valve_disease (heart_valve_disease says "a big problem in this breed").
+  whippet: {
+    height: ['height.kc_standard'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.pdsa', 'more_than']],
+    exercise: [['@proposed_game_parameters.whippet.exercise_minutes_adult', 'at_least']],
+    coat: [],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['pra_eye_disease', 'health.pra'],
+      ['mitral_valve_disease', 'health.mitral_valve'],
+      ['autoimmune_conditions', 'health.immune_mediated'],
+      ['bloat_gdv', 'health.gdv'],
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+      ['deafness', 'health.deafness'],
+    ],
+  },
 
 };
 
@@ -1942,6 +1968,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.australian_cattle_dog.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.australian_cattle_dog.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.australian_cattle_dog.exercise_minutes_senior',
+  },
+  whippet: {
+    adult_minutes: ['proposed_game_parameters.whippet.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.whippet.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.whippet.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.whippet.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.whippet.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.whippet.exercise_minutes_senior',
   },
 
 };
