@@ -1,5 +1,6 @@
 {
   "hud": {
+    "toastDismissHint": "Tap to close the message.",
     "feed": "Feed",
     "emergencyFeed": "Emergency meal",
     "water": "Water",
@@ -70,6 +71,10 @@
     "emergencyFeedNoTime": "Yum! Your pup is full. This meal came late, so it doesn't count as on time.",
     "emergencyFeedCovers": "Yum! Your pup is full. The missed meal still counts as late, but this one also counts as the {{window}} meal. The next meal is {{when}}.",
     "emergencyFeedCoversNoTime": "Yum! Your pup is full. The missed meal still counts as late, but this one also counts as the {{window}} meal.",
+    "next": {
+      "feed": "The next meal is {{when}}.",
+      "water": "You can give fresh water {{when}}."
+    },
     "refused": {
       "outsideFeedWindow": "The next meal is {{when}}.",
       "outsideFeedWindowNoTime": "It's not mealtime right now.",

@@ -41,6 +41,7 @@ import { Text } from '@/components/ui/Text';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import {
   Beef,
+  Check,
   DoorOpen,
   Droplet,
   Feather,
@@ -91,10 +92,12 @@ import {
   failureMessage,
   feedDockHint,
   feedLabel,
+  confirmationNext,
   feedSuccessMessage,
   successMessage,
   waterDockHint,
 } from '@/modules/childPet/actionMessages';
+import { useMessageQueue } from '@/modules/childPet/messageQueue';
 import {
   BEHAVIOUR_STRINGS,
   cleaningMess,
@@ -192,9 +195,6 @@ function profileSubline(profile: NonNullable<ChildPetView['pet']['profile']>): s
   return parts.length > 0 ? parts.join(' · ') : null;
 }
 
-const TOAST_MS = 3_000;
-
-type Toast = { tone: 'ok' | 'info'; message: string };
 
 /**
  * Realtime status in the top bar: green "V ŽIVO", amber "POVEZUJEM", otherwise only a
@@ -418,7 +418,10 @@ export default function ChildHudScreen() {
     timezone: view?.timezone ?? null,
   });
 
-  const [toast, setToast] = useState<Toast | null>(null);
+  // M5-T03 (spec §12): one message at a time, FIFO, ≥ 2.5 s + 60 ms per character, tap closes.
+  const messages = useMessageQueue();
+  const toast = messages.current;
+  const showToast = messages.show;
   // M5-F05: the header shows one short line; a tap opens the full profile.
   const [isProfileVisible, setProfileVisible] = useState(false);
   /** David 2026-10-12: the child can change the app language from the HUD, not only before sign-in. */
@@ -427,18 +430,6 @@ export default function ChildHudScreen() {
   const [isCertificateVisible, setCertificateVisible] = useState(false);
   // M5-R17: the puppy's weekly "Nova izkušnja" card (UI-only state, like the language sheet).
   const [isSocialisationVisible, setSocialisationVisible] = useState(false);
-  const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const showToast = useCallback((next: Toast) => {
-    if (toastTimer.current) clearTimeout(toastTimer.current);
-    setToast(next);
-    toastTimer.current = setTimeout(() => setToast(null), TOAST_MS);
-  }, []);
-  useEffect(
-    () => () => {
-      if (toastTimer.current) clearTimeout(toastTimer.current);
-    },
-    [],
-  );
 
   // Breathing animation for avatar fallback
   const bounceAnim = useRef(new Animated.Value(0)).current;
@@ -468,11 +459,14 @@ export default function ChildHudScreen() {
   const runAction = (action: CareAction) => {
     mutations[action].mutate(undefined, {
       onSuccess: (response) => {
+        const after = normalizeChildState(response.state);
         const message =
           action === 'feed'
-            ? feedSuccessMessage(response.status, response.feed_mode, normalizeChildState(response.state), response.covers_window)
+            ? feedSuccessMessage(response.status, response.feed_mode, after, response.covers_window)
             : successMessage(action, response.status);
-        showToast({ tone: 'ok', message });
+        // M5-T01 (spec §4): an accepted care is a ✓ confirmation with "next time" where the state knows it.
+        const accepted = response.status === 'accepted';
+        showToast({ tone: 'ok', message, confirm: accepted, next: confirmationNext(action, response.status, after, response.feed_mode) });
       },
       onError: (error) => {
         const message = failureMessage(
@@ -487,7 +481,8 @@ export default function ChildHudScreen() {
   const handleCleaned = useCallback(() => {
     setCleaningOverlayVisible(false);
     clean.mutate(undefined, {
-      onSuccess: (response) => showToast({ tone: 'ok', message: successMessage('clean', response.status) }),
+      onSuccess: (response) =>
+        showToast({ tone: 'ok', message: successMessage('clean', response.status), confirm: response.status === 'accepted' }),
       onError: (error) => {
         const message = failureMessage(
           classifyActionError(error),
@@ -532,7 +527,8 @@ export default function ChildHudScreen() {
     isWalkModalVisible || isCleaningOverlayVisible || isAlbumVisible || isTrainingVisible || playOverlay !== null || catOverlay !== null || messToScrub;
   const facts = useFactMoment({
     view,
-    overlayOpen: dockLayerOpen || isProfileVisible || isLanguageVisible || isCertificateVisible || isSocialisationVisible,
+    // M5-T03: the card also waits until the message queue is empty (care confirmation first).
+    overlayOpen: dockLayerOpen || isProfileVisible || isLanguageVisible || isCertificateVisible || isSocialisationVisible || toast !== null,
     dockCovered: dockLayerOpen,
   });
 
@@ -848,12 +844,38 @@ export default function ChildHudScreen() {
           </View>
         )}
 
-        {/* Feedback toast */}
+        {/* Feedback messages (M5-T03 queue): one at a time, a tap closes it and the next follows.
+            An accepted care is a ✓ confirmation with a "next time" line (M5-T01). */}
         {toast && (
-          <View pointerEvents="none" style={[styles.bannerSlot, styles.toastSlot, { top: layout.bannerTop + 40 }]} testID="hud-toast-slot">
-            <View style={[styles.feedbackToast, toast.tone === 'info' && styles.feedbackToastInfo]} testID="hud-toast">
-              <Text style={styles.feedbackText}>{toast.message}</Text>
-            </View>
+          <View pointerEvents="box-none" style={[styles.bannerSlot, styles.toastSlot, { top: layout.bannerTop + 40 }]} testID="hud-toast-slot">
+            <Pressable
+              key={toast.id}
+              onPress={messages.dismiss}
+              accessibilityRole="button"
+              accessibilityLabel={toast.next ? `${toast.message} ${toast.next}` : toast.message}
+              accessibilityHint={HUD_STRINGS.toastDismissHint}
+              accessibilityLiveRegion="polite"
+              style={[styles.feedbackToast, toast.tone === 'info' && styles.feedbackToastInfo, toast.confirm === true && styles.feedbackConfirm]}
+              testID="hud-toast"
+            >
+              {toast.confirm === true ? (
+                <View style={styles.feedbackConfirmBody} testID="hud-toast-confirm">
+                  <View style={styles.feedbackConfirmRow}>
+                    <View style={styles.feedbackCheck}>
+                      <Check color={palette.mint} size={14} />
+                    </View>
+                    <Text style={[styles.feedbackText, styles.feedbackConfirmText]}>{toast.message}</Text>
+                  </View>
+                  {toast.next ? (
+                    <Text style={styles.feedbackNext} testID="hud-toast-next">
+                      {toast.next}
+                    </Text>
+                  ) : null}
+                </View>
+              ) : (
+                <Text style={styles.feedbackText}>{toast.message}</Text>
+              )}
+            </Pressable>
           </View>
         )}
 
@@ -942,7 +964,9 @@ export default function ChildHudScreen() {
                     due={takeOutDue}
                     busy={takeOut.isPending}
                     hint={countdown?.hint ?? null}
-                    accessibilityHint={countdown?.line}
+                    accessibilityHint={countdown ? (countdown.howTo ? `${countdown.line} ${countdown.howTo}` : countdown.line) : undefined}
+                    // M5-T01: the last 30 min (and overdue) pulse gently — never with reduce motion.
+                    pulse={countdown?.level === 'urgent' && !reduceMotion && !takeOut.isPending}
                     compact
                   />
                 );
@@ -1014,6 +1038,7 @@ export default function ChildHudScreen() {
           <BehaviourPanel
             behaviour={view.behaviour}
             countdown={countdown}
+            reduceMotion={reduceMotion}
             videoState={hudVideoState}
             onResolveChewing={() => runAction('resolve_chewing')}
             resolveBusy={resolveChewing.isPending}
@@ -1488,5 +1513,37 @@ const styles = StyleSheet.create({
   feedbackToastInfo: {
     backgroundColor: palette.warn,
     shadowColor: palette.warn,
+  },
+  feedbackConfirm: {
+    paddingHorizontal: 18,
+    paddingVertical: 12,
+    borderRadius: 22,
+  },
+  feedbackConfirmBody: {
+    alignItems: 'center',
+    gap: 4,
+  },
+  feedbackConfirmRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    maxWidth: '100%',
+  },
+  feedbackCheck: {
+    width: 22,
+    height: 22,
+    borderRadius: 11,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: palette.graphite,
+  },
+  feedbackConfirmText: {
+    flexShrink: 1,
+  },
+  feedbackNext: {
+    textAlign: 'center',
+    color: palette.graphite,
+    fontWeight: '600',
+    fontSize: 13,
   },
 });

@@ -11,7 +11,7 @@ import type { CareAction, ChildPetView, LockReason } from '@/modules/childPet/ch
 import { familyClock, isLaterDay, whenText } from '@/modules/childPet/familyTime';
 import { shortClock } from '@/modules/childPet/mealWindows';
 import { dockText, dockWhen, type DockHint } from '@/modules/childPet/dockHint';
-import { BEHAVIOUR_STRINGS, onlyChewingOpen, onlyScratchingEventsOpen } from '@/modules/behaviour/behaviour';
+import { BEHAVIOUR_STRINGS, nextTakeOutText, onlyChewingOpen, onlyScratchingEventsOpen } from '@/modules/behaviour/behaviour';
 import { onlyScratchingOpen } from '@/modules/catCare/catCare';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
@@ -39,6 +39,10 @@ export const CHILD_ACTION_STRINGS = strings('child', 'actions', {
   emergencyFeed: (when: string) => t('child:actions.emergencyFeed', { when }),
   emergencyFeedCovers: (window: string, when: string) => t('child:actions.emergencyFeedCovers', { window, when }),
   emergencyFeedCoversNoTime: (window: string) => t('child:actions.emergencyFeedCoversNoTime', { window }),
+  next: {
+    feed: (when: string) => t('child:actions.next.feed', { when }),
+    water: (when: string) => t('child:actions.next.water', { when }),
+  },
   refused: {
     outsideFeedWindow: (when: string) => t('child:actions.refused.outsideFeedWindow', { when }),
     alreadyFed: (when: string) => t('child:actions.refused.alreadyFed', { when }),
@@ -226,6 +230,42 @@ export function failureMessage(failure: ActionFailure, view: ChildPetView | null
 /** M5-F13: "PetPrep is updating right now. Try again in a moment." (any child / parent action). */
 export function serverUpdatingActionText(): string {
   return t('common:serverUpdating.actionLater');
+}
+
+/**
+ * "Next time" line of an accepted care confirmation (M5-T01, spec §4) — only from what the
+ * server state that came with the answer already says (`view`), never invented:
+ * take out → the new bladder deadline; feed (a regular meal) → the next feed window; water →
+ * `next_allowed_at` when it is today. Clean / tidy have no next time (null).
+ * An emergency meal's text already names the next meal, so it gets none here.
+ */
+export function confirmationNext(
+  action: CareAction,
+  status: 'accepted' | 'unchanged',
+  view: ChildPetView | null,
+  feedMode?: 'window' | 'emergency' | null,
+): string | null {
+  if (status !== 'accepted' || view === null) return null;
+  const now = view.server_time;
+  const tz = view.timezone;
+  switch (action) {
+    case 'take_out':
+      return nextTakeOutText(view.behaviour.take_out, now, tz);
+    case 'feed': {
+      if (feedMode === 'emergency') return null;
+      const when = whenText(view.feeding.next_feed_window?.start ?? null, now, tz);
+      return when ? CHILD_ACTION_STRINGS.next.feed(when) : null;
+    }
+    case 'water': {
+      const next = view.water.next_allowed_at;
+      if (!next || isLaterDay(next, now, tz)) return null;
+      const when = whenText(next, now, tz);
+      return when ? CHILD_ACTION_STRINGS.next.water(when) : null;
+    }
+    case 'clean':
+    case 'resolve_chewing':
+      return null;
+  }
 }
 
 /** Message after a 200 (`accepted` or `unchanged`). */

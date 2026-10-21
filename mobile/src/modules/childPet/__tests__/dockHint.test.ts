@@ -118,7 +118,7 @@ describe('puppy "take out" dock hint', () => {
     const at = (iso: string) => Date.parse(iso);
     const tomorrow = takeOutCountdown(makeTakeOut({ next_due_at: '2026-10-05T07:10:00+02:00' }), at('2026-10-04T21:00:00+02:00'), TZ);
     expect(tomorrow?.hint).toEqual({ day: 'jutri', text: '07:10', a11y: 'jutri ob 07:10' });
-    expect(tomorrow?.line).toBe('Kuža bo moral ven jutri ob 07:10');
+    expect(tomorrow?.line).toBe('Kuža mora ven najkasneje jutri ob 07:10.');
     await i18n.changeLanguage('en');
     const en = takeOutCountdown(makeTakeOut({ next_due_at: '2026-10-05T07:10:00+02:00' }), at('2026-10-04T21:00:00+02:00'), TZ);
     expect(en?.hint).toEqual({ day: 'tomorrow', text: '07:10', a11y: 'tomorrow at 07:10' });

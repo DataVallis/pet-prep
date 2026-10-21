@@ -1,6 +1,6 @@
 /**
  * Server "now" in ms (device clock + `skewMs`), re-rendering every `intervalMs` while
- * `enabled`. For calm countdowns ("Kuža bo moral ven čez ~1 h 20 min", M5-R02) that only
+ * `enabled`. For calm countdowns ("Kuža mora ven v ~1 h 20 min.", M5-R02 / M5-T01) that only
  * need minute precision — computed from the wall clock on every tick, so a backgrounded
  * app is right again as soon as it ticks.
  */

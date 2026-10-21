@@ -21,7 +21,7 @@
 **David 20. 10.:** »Pelji ven« ostane **ločen gumb**. Sprehod (koraki) **nikoli** ne reši potrebe — koraki se štejejo samodejno, zato otrok ne bi vedel, da je kužka peljal ven.
 
 - Ura je **rok za ukrep**, ne odštevanje do dogodka. Pod uro besedilo, npr. »Kuža mora ven v 1 h 20 min. Pritisni *Pelji ven*, preden se čas izteče.«
-- Barva ure: zelena → oranžna → rdeča; gumb v zadnjih 30 min rahlo utripa **(D: meja 30 min)**.
+- Barva ure: zelena → oranžna → rdeča; gumb v zadnjih 30 min rahlo utripa **(meja 30 min — potrdil David 21. 10. 2026)**. Oranžna od ≤ 60 min ali od zadnje polovice časa zadrževanja, kar je prej (*predlog Claude*). Z vklopljenim »zmanjšaj gibanje« gumb ne utripa. Zgrajeno v M5-T01.
 - **Razlika pelji ven / sprehod** je razložena v mini navodilih (§5) in ob prvem prikazu gumba.
 
 ## 3. Šola — žival se ujema z vajo
@@ -37,6 +37,7 @@
 - Po pritisku kratek zaslon: animacija (kuža na travi) → »✓ Kuža je opravil potrebo. Naslednjič čez ~X h.« + točke.
 - Ura se vidno ponastavi z animacijo, ne »tiho«.
 - Isti vzorec potrditve velja za vsa dejanja (hrana, voda, čiščenje, česanje).
+- *Stanje M5-T01 (21. 10. 2026):* zgrajena potrditvena kartica »✓ … Naslednjič čez ~X h.« (pelji ven; hrana → naslednji obrok, voda → kdaj spet, čiščenje brez »naslednjič«) in kratka animacija ponastavitve ure. **Točk ni**, ker jih odgovor strežnika ne vsebuje; animacija »kuža na travi« čaka na medije (M5-T08). Česanje svojo potrditev že kaže v lastni igri.
 
 ## 5. Mini navodila
 
@@ -86,9 +87,9 @@
 
 ## 12. Hitrost besedil
 
-- Vsako sporočilo ostane najmanj ~2,5 s + čas glede na dolžino besedila **(D: ~60 ms na znak)**.
+- Vsako sporočilo ostane najmanj 2,5 s + čas glede na dolžino besedila **(60 ms na znak — potrdil David 21. 10. 2026)**. Zgrajeno v M5-T03.
 - Sporočila čakajo v vrsti, se ne prekrivajo, zaprejo se s pritiskom.
-- Morda nastavitev »Hitrost besedil: počasi / normalno« **(D)**.
+- Nastavitve »Hitrost besedil« zaenkrat **ni** (potrdil David 21. 10. 2026).
 
 ## 13. Priprava ljubljenčka (ko mediji še niso narejeni)
 

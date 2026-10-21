@@ -126,34 +126,53 @@ describe('ChildHudScreen — behaviour events (M5-R02)', () => {
 
     expect(screen.getByTestId('action-take-out')).toBeTruthy();
     expect(isDisabled('action-take-out')).toBe(false);
-    expect(screen.getByText('Kuža bo moral ven čez ~1 h 20 min')).toBeTruthy();
+    expect(screen.getByText('Kuža mora ven v ~1 h 20 min.')).toBeTruthy();
+    expect(screen.getByTestId('hud-take-out-howto').props.children).toBe(BEHAVIOUR_STRINGS.takeOutHowTo);
     expect(screen.getByText('~1 h 20 min')).toBeTruthy();
+    expect(screen.getByTestId('hud-take-out-level-calm')).toBeTruthy();
+    expect(screen.queryByTestId('action-take-out-pulse')).toBeNull();
 
-    // 25 minutes later (ticks every 15 s): ~55 min.
+    // 25 minutes later (ticks every 15 s): ~55 min, orange.
     await act(async () => {
       await jest.advanceTimersByTimeAsync(25 * 60_000);
     });
-    expect(screen.getByText('Kuža bo moral ven čez ~55 min')).toBeTruthy();
+    expect(screen.getByText('Kuža mora ven v ~55 min.')).toBeTruthy();
+    expect(screen.getByTestId('hud-take-out-level-soon')).toBeTruthy();
+
+    // Last 30 min: red and the button pulses gently.
+    await act(async () => {
+      await jest.advanceTimersByTimeAsync(30 * 60_000);
+    });
+    expect(screen.getByTestId('hud-take-out-level-urgent')).toBeTruthy();
+    expect(screen.getByTestId('action-take-out-pulse')).toBeTruthy();
 
     // Past the due time: calm "wants to go out", hint "zdaj".
     getChildPet.mockResolvedValue(puppy({ server_time: '2026-10-04T13:00:30+02:00' }));
     await act(async () => {
-      await jest.advanceTimersByTimeAsync(56 * 60_000);
+      await jest.advanceTimersByTimeAsync(26 * 60_000);
     });
     expect(screen.getByText(BEHAVIOUR_STRINGS.takeOutNow)).toBeTruthy();
     expect(screen.getByText(BEHAVIOUR_STRINGS.hintNow)).toBeTruthy();
     loopSpy.mockRestore();
   });
 
-  it('take-out success and double tap → friendly toasts', async () => {
+  it('take-out success → ✓ confirmation with the next time; double tap queues the note after it', async () => {
     await renderHud(puppy());
-    takeOutPet.mockResolvedValueOnce({ status: 'accepted', state: puppy() });
+    // The server's answer: taken out at 11:00, next due 13:00 (2 h).
+    takeOutPet.mockResolvedValueOnce({ status: 'accepted', state: puppy({ server_time: '2026-10-04T11:00:00+02:00' }) });
     fireEvent.press(screen.getByTestId('action-take-out'));
     expect(await screen.findByText(BEHAVIOUR_STRINGS.success.take_out)).toBeTruthy();
+    expect(screen.getByTestId('hud-toast-confirm')).toBeTruthy();
+    expect(screen.getByTestId('hud-toast-next').props.children).toBe('Naslednjič čez ~2 h.');
 
     takeOutPet.mockResolvedValueOnce({ status: 'unchanged', state: puppy() });
     fireEvent.press(screen.getByTestId('action-take-out'));
+    await waitFor(() => expect(takeOutPet).toHaveBeenCalledTimes(2));
+    // M5-T03: the confirmation stays; a tap closes it and the queued note follows.
+    expect(screen.getByText(BEHAVIOUR_STRINGS.success.take_out)).toBeTruthy();
+    fireEvent.press(screen.getByTestId('hud-toast'));
     expect(await screen.findByText(BEHAVIOUR_STRINGS.unchanged.take_out)).toBeTruthy();
+    expect(screen.queryByTestId('hud-toast-confirm')).toBeNull();
   });
 
   it('take-out 422 take_out_not_needed: toast, button disappears with the server state', async () => {

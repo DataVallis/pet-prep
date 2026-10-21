@@ -11,9 +11,12 @@
       "resolve_chewing": "There's nothing left to tidy up."
     },
     "takeOutNotNeeded": "Your pup doesn't need to go out right now.",
-    "takeOutIn": "Your pup will need to go out in {{duration}}",
-    "takeOutAt": "Your pup will need to go out {{when}}",
+    "takeOutIn": "Your pup needs to go out within {{duration}}.",
+    "takeOutAt": "Your pup needs to go out {{when}} at the latest.",
     "takeOutNow": "Your pup wants to go outside.",
+    "takeOutHowTo": "Press “Take out” before time runs out.",
+    "nextTakeOutIn": "Next time in {{duration}}.",
+    "nextTakeOutAt": "Next time {{when}}.",
     "hintNow": "now",
     "scene": {
       "accident": "Oops, a puddle! Your pup was too little to hold it.",
