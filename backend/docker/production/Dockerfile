@@ -39,7 +39,7 @@ RUN set -eux; \
     install-php-extensions bcmath exif gd intl opcache pcntl pdo_pgsql pgsql zip; \
     install-php-extensions "redis-${REDIS_VERSION}" \
         || install-php-extensions "phpredis/phpredis@${REDIS_VERSION}"; \
-    php -m | grep -qx redis; \
+    php -r 'exit(extension_loaded("redis") ? 0 : 1);'; \
     apt-get update; \
     apt-get install -y --no-install-recommends libfcgi-bin; \
     rm -rf /var/lib/apt/lists/*; \
