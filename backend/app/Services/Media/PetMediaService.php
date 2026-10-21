@@ -343,6 +343,13 @@ class PetMediaService
         $key = $this->slot($pet, PetMedia::KIND_KEYFRAME, $state);
 
         if ($key->status === PetMedia::STATUS_RUNNING) {
+            // QA: a slot waiting for a shared look row (e.g. while the look image was
+            // regenerated) is re-run now — the job is unique per slot and the claims make
+            // it a no-op for a live claim, so this never pays twice.
+            if ($key->look_media_id !== null) {
+                GeneratePetKeyframe::dispatch($key->id);
+            }
+
             return [$key, false];
         }
 

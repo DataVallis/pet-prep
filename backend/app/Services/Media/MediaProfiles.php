@@ -91,7 +91,12 @@ class MediaProfiles
         $key = (string) config('media.state_media.keyframe_profile', 'nano_banana_pro_edit');
 
         if (! is_array(config("media.profiles.image.{$key}"))) {
-            Log::error('MediaProfiles: unknown key image profile configured, no key images', ['profile' => $key]);
+            // Read on every media payload: log once per process, not per request.
+            static $logged = [];
+            if (! isset($logged[$key])) {
+                $logged[$key] = true;
+                Log::error('MediaProfiles: unknown key image profile configured, no key images', ['profile' => $key]);
+            }
 
             return null;
         }
