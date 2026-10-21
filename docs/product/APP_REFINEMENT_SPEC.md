@@ -68,6 +68,32 @@
 - **Ko ljubljenček spi, sta onemogočeni igra in šola** (David 20. 10.).
 - Onemogočen gumb vedno pokaže razlog, npr. »💤 Kuža spi do 7:00«.
 
+**Zgrajeno (M5-T02, 21. 10. 2026) — kanonična tabela.** Odloča strežnik (zastavice `can_*` v stanju otroka); aplikacija ima eno tabelo (`mobile/src/modules/childPet/actionRules.ts`), ki zastavice samo prebere in doda razlog spanja (z uro bujenja) ali zaklepa.
+
+**Stanja:**
+- **Spi** = tihe ure družine (noč, privzeto 21:00–07:00, in neobvezno šolsko okno), po uri družine. Zbudi se ob koncu tihih ur (šola, ki se nadaljuje v noč ali obratno, šteje kot eno spanje). Ena definicija na strežniku (`PetSleepService`); stanje otroka in `PetUpdated` imata `sleep: {asleep, until}`.
+- **Tihe ure** = isti trenutki kot spanje (upad ×0,1, obroke pokrije starš, brez obvestil).
+- **Bolan** = obisk pri veterinarju (zaklep do `lock.until`).
+- **Na sprehodu** = odprt zaslon sprehoda pokrije HUD (drugega se takrat ne da pritisniti).
+- **Zaklep** = konec igre, neaktivno, starš ustavil, **čaka na plačilo**, pogodba ni podpisana, bolan — pokaže ga zaklenjeni zaslon; tabela vrne razlog zaklepa.
+
+| Dejanje | Spi / tihe ure | Bolan / zaklep (tudi plačilo) | Drugo, kar ga ustavi (razlog pod gumbom) |
+|---|---|---|---|
+| Hrani | dovoljeno, kot reče strežnik (obrok v tihih urah pokrije starš) | ne | nered (»Najprej pospravi«), izven okna (»ob 17:00«) |
+| Voda | dovoljeno, kot reče strežnik | ne | nered, posoda še polna (»ob 15:30« / »jutri«) |
+| Očisti | dovoljeno | ne | nič za čistiti (»Čisto«), samo prežvečen copat / kavč |
+| Pelji ven (mladiček) | ura v tihih urah stoji | ne | — |
+| Sprehod | dovoljeno (koraki štejejo vedno) | ne | — (muca nima sprehoda) |
+| **Igra / crkljanje** | **ne — »💤 Kuža spi do 7:00«** | ne | nered (»Najprej počisti …«) |
+| **Šola** | **ne — »💤 Kuža spi do 7:00«**, strežnik zavrne z `training_pet_sleeping` | ne | nekdo drug vadi, čas dneva porabljen, dan se izteka |
+| Počeši | ne (»💤 … spi do …«) | ne | že danes / ves teden opravljeno |
+| Igra s palico (muca) | ne (»💤 Muca spi do …«) | ne | 2 h premora, druga igra teče |
+| Pesek (muca) | dovoljeno | ne | pesek čist |
+| Nova izkušnja (mladiček) | ne (»💤 Kuža spi do …«) | ne | izkušnja tedna opravljena |
+
+- Med spanjem sta »Šola« in »Igra« **vidni, a onemogočeni**; pod njima ena vrstica »💤 Kuža spi do 7:00« (EN »💤 Your pup is asleep until 7:00«; muca »💤 Muca spi do 7:00«). Ura je ura bujenja po času družine.
+- Brez ure (starejši strežnik): »💤 Kuža spi«.
+
 ## 9. Rojstni dan
 
 **David 20. 10.:** rojstni dan je, ko ljubljenček **doseže 1 leto po formuli starosti simulacije** (ne mesečni, ne tedenski).
