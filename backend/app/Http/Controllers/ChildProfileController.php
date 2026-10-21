@@ -94,10 +94,14 @@ class ChildProfileController extends Controller
      * enters minutes (1–240) for today or yesterday (family time zone); they count as
      * minutes × 100 steps (the step-goal rule) on the child's day of their active pet,
      * on top of any wheelchair pushes from the phone. Idempotent per `entry_id`.
-     * 201 `{status: accepted, entry, steps_today}`; the same `entry_id` again → 200
-     * `{status: unchanged, entry, steps_today}`. 422 `adapted_mode_off` (switch first),
-     * `date_not_allowed` (not today / yesterday), `steps_not_applicable` (a cat);
-     * 423 `{reason}` while the pet is locked; 404 `child_not_found` / `no_pet`.
+     * At most 240 logged minutes per child and family-local day in total (David
+     * 2026-10-21). 201 `{status: accepted, entry, steps_today}`; the same `entry_id`
+     * again (same pet, day, minutes) → 200 `{status: unchanged, entry, steps_today}`
+     * with the original entry. 422 `adapted_mode_off` (switch first), `date_not_allowed`
+     * (not today / yesterday), `daily_limit_reached` + `remaining_minutes`,
+     * `steps_not_applicable` (a cat); 409 `entry_id_conflict` (the id was used for a
+     * different walk); 423 `{reason}` while the pet is locked; 404 `child_not_found` /
+     * `no_pet`.
      *
      * POST /api/parent/children/{child}/walks
      */
@@ -122,6 +126,21 @@ class ChildProfileController extends Controller
 
         if ($result->status === ActionResult::LOCKED) {
             return response()->json(['message' => 'The pet is locked right now.', 'reason' => $result->lockReason?->value], 423);
+        }
+        $walkReason = $result->extra['reason'] ?? null;
+        if ($walkReason === PetActivityService::WALK_ADAPTED_MODE_OFF) {
+            return response()->json(['message' => 'Adapted mode is off for this child.', 'reason' => 'adapted_mode_off'], 422);
+        }
+        if ($walkReason === PetActivityService::WALK_DAILY_LIMIT) {
+            return response()->json([
+                'message' => 'At most 240 walk minutes can be logged for one child and day.',
+                'reason' => 'daily_limit_reached',
+                /** Minutes that can still be logged for this child and day (0–240). */
+                'remaining_minutes' => (int) $result->extra['remaining_minutes'],
+            ], 422);
+        }
+        if ($walkReason === PetActivityService::WALK_ENTRY_CONFLICT) {
+            return response()->json(['message' => 'This entry_id was already used for a different walk.', 'reason' => 'entry_id_conflict'], 409);
         }
         if ($result->status === ActionResult::REFUSED) {
             return response()->json(['message' => 'Steps do not apply to this pet.', 'reason' => $result->refusal?->value], 422);

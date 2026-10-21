@@ -206,11 +206,11 @@
       "off": "Prilagojen način je izklopljen: sprehod šteje korake.",
       "native": "Za potiske potrebuje otrokov telefon najnovejšo različico PetPrep (Zdravje z vklopljenim invalidskim vozičkom in Apple Watch ali Health Connect).",
       "error": "Nastavitev ni shranjena. Poskusite znova.",
-      "consent": "S tem shranimo samo, da je prilagojen način vklopljen. Izklopite ga lahko kadar koli."
+      "consent": "Z vklopom privolite, da hranimo samo to, da je prilagojen način vklopljen, in pri posameznem dnevu, da so šteli potiski. Ko ga izklopite, iz zgodovine odstranimo vse oznake potiskov (ti dnevi štejejo kot koraki); točke, ocena skrbi in vpisani sprehodi ostanejo enaki."
     },
     "logWalk": {
       "title": "Vpiši sprehod",
-      "hint": "Ste bili skupaj na sprehodu? Vpišite minute — vsaka minuta šteje kot 100 korakov. Otroku ni treba storiti ničesar.",
+      "hint": "Ste bili skupaj na sprehodu? Vpišite minute — vsaka minuta šteje kot 100 korakov, največ 240 minut na dan. Otroku ni treba storiti ničesar.",
       "today": "Danes",
       "yesterday": "Včeraj",
       "placeholder": "30",
@@ -222,10 +222,16 @@
       "saved_two": "Shranjeno: {{count}} minuti sprehoda.",
       "saved_few": "Shranjeno: {{count}} minute sprehoda.",
       "saved_other": "Shranjeno: {{count}} minut sprehoda.",
+      "dailyLimit_one": "Za ta dan lahko vpišete še {{count}} minuto (največ 240 minut na dan).",
+      "dailyLimit_two": "Za ta dan lahko vpišete še {{count}} minuti (največ 240 minut na dan).",
+      "dailyLimit_few": "Za ta dan lahko vpišete še {{count}} minute (največ 240 minut na dan).",
+      "dailyLimit_other": "Za ta dan lahko vpišete še {{count}} minut (največ 240 minut na dan).",
       "errors": {
         "adapted_mode_off": "Najprej vklopite prilagojen način.",
         "date_not_allowed": "Vpišete lahko samo današnji ali včerajšnji sprehod.",
         "locked": "Kuža zdaj počiva (veterinar, premor ali konec igre) — sprehoda ni mogoče shraniti.",
+        "daily_limit_reached": "Za ta dan je vpisanih že 240 minut sprehoda (največ na dan).",
+        "entry_id_conflict": "Vpisa ni bilo mogoče shraniti. Vpišite sprehod znova.",
         "other": "Sprehod ni shranjen. Poskusite znova."
       }
     },

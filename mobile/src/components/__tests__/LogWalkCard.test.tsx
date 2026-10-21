@@ -5,7 +5,7 @@
 import { act, fireEvent, screen } from '@testing-library/react-native';
 
 import { ApiError, api } from '@/api/client';
-import LogWalkCard, { parseWalkMinutes, walkDates } from '@/components/parent/LogWalkCard';
+import LogWalkCard, { entryIdFor, parseWalkMinutes, walkDates } from '@/components/parent/LogWalkCard';
 import { newWalkEntryId } from '@/hooks/queries/useFamilyMutations';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
@@ -35,6 +35,20 @@ describe('LogWalkCard helpers', () => {
   it('today / yesterday are family-local (Ljubljana just after midnight is already the next day)', () => {
     const ms = Date.parse('2026-10-14T22:30:00Z'); // 00:30 on the 15th in Ljubljana
     expect(walkDates('Europe/Ljubljana', ms)).toEqual({ today: '2026-10-15', yesterday: '2026-10-14' });
+  });
+
+  it('without a family zone today / yesterday follow Europe/Ljubljana (family default), not the device zone', () => {
+    const ms = Date.parse('2026-10-14T22:30:00Z');
+    expect(walkDates(null, ms)).toEqual({ today: '2026-10-15', yesterday: '2026-10-14' });
+  });
+
+  it('a retry reuses the failed entry id only for the identical entry (same minutes and day)', () => {
+    const failed = { entryId: 'w-old-0001', minutes: 30, day: 'today' as const };
+    const fresh = () => 'w-new-0001';
+    expect(entryIdFor(failed, 30, 'today', fresh)).toBe('w-old-0001');
+    expect(entryIdFor(failed, 31, 'today', fresh)).toBe('w-new-0001');
+    expect(entryIdFor(failed, 30, 'yesterday', fresh)).toBe('w-new-0001');
+    expect(entryIdFor(null, 30, 'today', fresh)).toBe('w-new-0001');
   });
 
   it('entry ids are unique and valid for the server (8–64 of [A-Za-z0-9_-])', () => {
@@ -79,6 +93,28 @@ describe('LogWalkCard', () => {
     fireEvent.press(screen.getByTestId('log-walk-submit'));
     await flush();
     expect((logParentWalk.mock.calls[1][1] as { entry_id: string }).entry_id).toBe((logParentWalk.mock.calls[0][1] as { entry_id: string }).entry_id);
+  });
+
+  it('after a failure, changed minutes are a new entry with a new id', async () => {
+    logParentWalk.mockRejectedValueOnce(new ApiError('x', 500, {}));
+    logParentWalk.mockResolvedValueOnce({ status: 'accepted', entry: { minutes: 25 }, steps_today: 2500 });
+    renderWithQuery(<LogWalkCard childId={2} timezone="Europe/Ljubljana" />);
+    fireEvent.changeText(screen.getByTestId('log-walk-minutes'), '20');
+    fireEvent.press(screen.getByTestId('log-walk-submit'));
+    await flush();
+    fireEvent.changeText(screen.getByTestId('log-walk-minutes'), '25');
+    fireEvent.press(screen.getByTestId('log-walk-submit'));
+    await flush();
+    expect((logParentWalk.mock.calls[1][1] as { entry_id: string }).entry_id).not.toBe((logParentWalk.mock.calls[0][1] as { entry_id: string }).entry_id);
+  });
+
+  it('shows the minutes still allowed when the daily cap is reached', async () => {
+    logParentWalk.mockRejectedValueOnce(new ApiError('x', 422, { reason: 'daily_limit_reached', remaining_minutes: 40 }));
+    renderWithQuery(<LogWalkCard childId={2} timezone="Europe/Ljubljana" />);
+    fireEvent.changeText(screen.getByTestId('log-walk-minutes'), '60');
+    fireEvent.press(screen.getByTestId('log-walk-submit'));
+    await flush();
+    expect(screen.getByTestId('log-walk-error').props.children).toBe('Za ta dan lahko vpišete še 40 minut (največ 240 minut na dan).');
   });
 
   it('invalid minutes disable the button', () => {

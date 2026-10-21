@@ -1,9 +1,11 @@
 /**
  * M5-T12 »Vpiši sprehod« / "Log a walk" (David 2026-10-21): in adapted mode the PARENT can
  * enter walk minutes for the child — on iPhone pushes are recorded automatically only by an
- * Apple Watch, so the child needs to do nothing. Today or yesterday (family time zone),
- * 1–240 minutes; the server counts minutes × 100 steps (the step-goal rule) on top of any
- * pushes from the phone. One entry id per entry, kept across a retry, so it never counts twice.
+ * Apple Watch, so the child needs to do nothing. Today or yesterday (family time zone, default
+ * Europe/Ljubljana), 1–240 minutes, at most 240 logged minutes per child and day in total; the
+ * server counts minutes × 100 steps (the step-goal rule) on top of any pushes from the phone.
+ * A retry of the identical entry (same minutes and day) reuses its entry id, so it never counts
+ * twice; changed minutes or day are a new entry with a new id.
  */
 
 import { useState } from 'react';
@@ -22,6 +24,7 @@ import { strings } from '@/i18n/strings';
 /** All user-visible strings (`family:children.logWalk`). */
 export const LOG_WALK_STRINGS = strings('family', 'children', {
   saved: (minutes: number) => t('family:children.logWalk.saved', { count: minutes }),
+  dailyLimit: (remaining: number) => t('family:children.logWalk.dailyLimit', { count: remaining }),
 });
 
 export const MAX_WALK_MINUTES = 240;
@@ -34,22 +37,53 @@ export function parseWalkMinutes(text: string): number | null {
   return n >= 1 && n <= MAX_WALK_MINUTES ? n : null;
 }
 
-/** Family-local today and yesterday ("Y-m-d"). */
+/** The family default zone (`families.timezone` default) when the family has none set. */
+export const FAMILY_DEFAULT_TIMEZONE = 'Europe/Ljubljana';
+
+/**
+ * Family-local today and yesterday ("Y-m-d"). A null family zone falls back to the family
+ * default (Europe/Ljubljana, as on the server) — never the device zone.
+ */
 export function walkDates(timezone: string | null, nowMs: number = Date.now()): { today: string; yesterday: string } {
-  const cal = familyCalendar(timezone, null);
+  const cal = familyCalendar(timezone ?? FAMILY_DEFAULT_TIMEZONE, null);
   const today = cal.dateOf(nowMs);
   return { today, yesterday: cal.dateOf(cal.startOfDay(nowMs) - 1) };
 }
 
-type ErrorKind = 'adapted_mode_off' | 'date_not_allowed' | 'locked' | 'other';
+type ErrorKind = 'adapted_mode_off' | 'date_not_allowed' | 'daily_limit_reached' | 'entry_id_conflict' | 'locked' | 'other';
 
-function errorKind(error: unknown): ErrorKind {
+interface WalkError {
+  kind: ErrorKind;
+  /** `daily_limit_reached`: minutes still allowed that day. */
+  remaining: number | null;
+}
+
+function walkError(error: unknown): WalkError {
   if (error instanceof ApiError) {
-    const reason = (error.data as { reason?: unknown } | undefined)?.reason;
-    if (reason === 'adapted_mode_off' || reason === 'date_not_allowed') return reason;
-    if (error.status === 423) return 'locked';
+    const data = error.data as { reason?: unknown; remaining_minutes?: unknown } | undefined;
+    const reason = data?.reason;
+    if (reason === 'daily_limit_reached') {
+      return { kind: reason, remaining: typeof data?.remaining_minutes === 'number' ? data.remaining_minutes : null };
+    }
+    if (reason === 'adapted_mode_off' || reason === 'date_not_allowed' || reason === 'entry_id_conflict') return { kind: reason, remaining: null };
+    if (error.status === 423) return { kind: 'locked', remaining: null };
   }
-  return 'other';
+  return { kind: 'other', remaining: null };
+}
+
+/** What one request sent — a retry reuses the entry id only for an identical entry. */
+interface SentEntry {
+  entryId: string;
+  minutes: number;
+  day: 'today' | 'yesterday';
+}
+
+/**
+ * The entry id for this submit: the failed request's id when minutes and day are the same
+ * (a retry of the same walk — the server counts it once), otherwise a new one.
+ */
+export function entryIdFor(failed: SentEntry | null, minutes: number, day: 'today' | 'yesterday', makeId: () => string = newWalkEntryId): string {
+  return failed !== null && failed.minutes === minutes && failed.day === day ? failed.entryId : makeId();
 }
 
 interface LogWalkCardProps {
@@ -63,26 +97,34 @@ export default function LogWalkCard({ childId, timezone, testID = 'log-walk' }: 
   const mutation = useLogParentWalk();
   const [minutes, setMinutes] = useState('');
   const [day, setDay] = useState<'today' | 'yesterday'>('today');
-  // One id per entry: a retry after a failure re-sends the same one (never counted twice).
-  const [entryId, setEntryId] = useState(() => newWalkEntryId());
+  // The last request that failed: re-sending the SAME minutes and day reuses its entry id
+  // (never counted twice); any change is a new entry with a new id.
+  const [failed, setFailed] = useState<SentEntry | null>(null);
   const [saved, setSaved] = useState<number | null>(null);
-  const [error, setError] = useState<ErrorKind | null>(null);
+  const [error, setError] = useState<WalkError | null>(null);
   const parsed = parseWalkMinutes(minutes);
 
   const submit = () => {
     if (parsed === null || mutation.isPending) return;
     const dates = walkDates(timezone);
+    const sent: SentEntry = { entryId: entryIdFor(failed, parsed, day), minutes: parsed, day };
     setError(null);
     setSaved(null);
     mutation.mutate(
-      { childId, minutes: parsed, localDate: day === 'today' ? dates.today : dates.yesterday, entryId },
+      { childId, minutes: parsed, localDate: day === 'today' ? dates.today : dates.yesterday, entryId: sent.entryId },
       {
         onSuccess: (res) => {
           setSaved(res.entry.minutes);
           setMinutes('');
-          setEntryId(newWalkEntryId());
+          setFailed(null);
         },
-        onError: (e) => setError(errorKind(e)),
+        onError: (e) => {
+          const err = walkError(e);
+          setError(err);
+          // Nothing was counted: an identical retry may reuse the id — except after a
+          // conflict (that id already belongs to another walk).
+          setFailed(err.kind === 'entry_id_conflict' ? null : sent);
+        },
       },
     );
   };
@@ -143,7 +185,9 @@ export default function LogWalkCard({ childId, timezone, testID = 'log-walk' }: 
       )}
       {error !== null && (
         <Text style={styles.error} testID={`${testID}-error`}>
-          {S.errors[error]}
+          {error.kind === 'daily_limit_reached' && error.remaining !== null
+            ? LOG_WALK_STRINGS.dailyLimit(error.remaining)
+            : S.errors[error.kind]}
         </Text>
       )}
     </Card>

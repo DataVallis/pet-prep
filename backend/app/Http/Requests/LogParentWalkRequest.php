@@ -8,7 +8,8 @@ use Illuminate\Foundation\Http\FormRequest;
 /**
  * POST /api/parent/children/{child}/walks (M5-T12, David 2026-10-21): a parent logs
  * walk minutes for a child in adapted mode. Body `{minutes: 1–240, local_date:
- * Y-m-d (today or yesterday in the family's time zone — checked by the service),
+ * Y-m-d (today or yesterday in the family's time zone — checked by the service; the
+ * day's total of logged minutes per child is capped at 240 by the service too),
  * entry_id: the app's id of this entry (idempotency, 8–64 of [A-Za-z0-9_-])}`.
  * Parents only (UserPolicy::manageFamily → 403 for a child); the child's family and
  * adapted mode are checked in the controller.
