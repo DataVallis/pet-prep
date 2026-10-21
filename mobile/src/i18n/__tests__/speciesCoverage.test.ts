@@ -51,6 +51,7 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'careGuide:dog': 'care guide (M5-T05) — split by species inside the namespace: a cat reads `careGuide:cat.*`',
   'careGuide:parent.dog': "the parent's care guide (M5-T05b) — split by species: a cat reads `careGuide:parent.cat.*`",
   'preparation:dog': 'pet preparation (M5-T06) — split by species inside the namespace: a cat reads `preparation:cat.*`',
+  'birthday:dog': 'first birthday (M5-T13) — split by species inside the namespace: a cat reads `birthday:cat.*`',
   socialisation: 'puppy socialisation (M5-R17) — dogs only: a cat never gets the weekly "new experience"',
   'family:activities.took_out_pet': 'potty training (take out) — dogs only',
   'family:systemActivities.pet_accident': 'puppy puddle — dogs only',

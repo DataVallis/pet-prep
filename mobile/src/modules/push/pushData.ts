@@ -15,6 +15,8 @@ export const PUSH_TYPES = [
   'challenge_completed',
   // M5-T06: the pet's preparation ended (caretaker children, once per pet).
   'pet_ready',
+  // M5-T13: the pet's first birthday (caretaker children + parents, once per pet).
+  'pet_birthday',
 ] as const;
 
 export type PushType = (typeof PUSH_TYPES)[number];
@@ -48,8 +50,9 @@ export function isUrgentPush(type: PushType | null | undefined): boolean {
     type !== undefined &&
     type !== 'soft_warning' &&
     type !== 'walk_reminder' &&
-    // Good news, never an alarm (M2-01d, M5-T06).
+    // Good news, never an alarm (M2-01d, M5-T06, M5-T13).
     type !== 'challenge_completed' &&
-    type !== 'pet_ready'
+    type !== 'pet_ready' &&
+    type !== 'pet_birthday'
   );
 }

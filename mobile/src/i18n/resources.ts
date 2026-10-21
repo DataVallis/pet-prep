@@ -24,6 +24,7 @@ import en_socialisation from './locales/en/socialisation.json';
 import en_facts from './locales/en/facts.json';
 import en_careGuide from './locales/en/careGuide.json';
 import en_preparation from './locales/en/preparation.json';
+import en_birthday from './locales/en/birthday.json';
 import sl_common from './locales/sl/common.json';
 import sl_auth from './locales/sl/auth.json';
 import sl_child from './locales/sl/child.json';
@@ -44,8 +45,9 @@ import sl_socialisation from './locales/sl/socialisation.json';
 import sl_facts from './locales/sl/facts.json';
 import sl_careGuide from './locales/sl/careGuide.json';
 import sl_preparation from './locales/sl/preparation.json';
+import sl_birthday from './locales/sl/birthday.json';
 
-export const NAMESPACES = ['common', 'auth', 'child', 'behaviour', 'training', 'contract', 'parent', 'family', 'account', 'pet', 'push', 'paywall', 'purchases', 'play', 'cat', 'certificate', 'socialisation', 'facts', 'careGuide', 'preparation'] as const;
+export const NAMESPACES = ['common', 'auth', 'child', 'behaviour', 'training', 'contract', 'parent', 'family', 'account', 'pet', 'push', 'paywall', 'purchases', 'play', 'cat', 'certificate', 'socialisation', 'facts', 'careGuide', 'preparation', 'birthday'] as const;
 export type Namespace = (typeof NAMESPACES)[number];
 
 export const en = {
@@ -69,6 +71,7 @@ export const en = {
   facts: en_facts,
   careGuide: en_careGuide,
   preparation: en_preparation,
+  birthday: en_birthday,
 } as const;
 
 /** Plural suffixes differ per language (sl: _one/_two/_few/_other), so key parity is a test, not a type. */
@@ -93,6 +96,7 @@ const sl = {
   facts: sl_facts,
   careGuide: sl_careGuide,
   preparation: sl_preparation,
+  birthday: sl_birthday,
 };
 
 export const resources = { en, sl } as const;

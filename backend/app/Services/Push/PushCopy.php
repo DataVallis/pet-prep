@@ -188,6 +188,8 @@ final class PushCopy
             PushType::ChallengeCompleted => $line('challenge_completed.'.($metric === 'report' ? 'report' : 'certificate')),
             // M5-T06: the preparation ended. The title carries the name (when set); the body never does.
             PushType::PetReady => $line('pet_ready.'.$audience),
+            // M5-T13: the first birthday; child "ti", parent "vi" (SL). No name in the body.
+            PushType::PetBirthday => $line('pet_birthday.'.$audience),
         };
     }
 
