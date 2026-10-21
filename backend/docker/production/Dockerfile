@@ -30,9 +30,16 @@ COPY --from=mlocati/php-extension-installer:2 /usr/bin/install-php-extensions /u
 # gd + exif (image validation), pcntl (queue:work / reverb signals), opcache.
 # libfcgi-bin: cgi-fcgi for the FPM ping health check (Debian stable package —
 # pinning an exact version would break the build at every Debian point release).
+# redis comes from PECL, which is sometimes down (504 on 2026-10-21 blocked every
+# deploy): PECL first, then the same release built from the phpredis GitHub tag.
+# Keep REDIS_VERSION equal in both sources when bumping it.
+ARG REDIS_VERSION=6.3.0
 # hadolint ignore=DL3008
 RUN set -eux; \
-    install-php-extensions bcmath exif gd intl opcache pcntl pdo_pgsql pgsql redis zip; \
+    install-php-extensions bcmath exif gd intl opcache pcntl pdo_pgsql pgsql zip; \
+    install-php-extensions "redis-${REDIS_VERSION}" \
+        || install-php-extensions "phpredis/phpredis@${REDIS_VERSION}"; \
+    php -r 'exit(extension_loaded("redis") ? 0 : 1);'; \
     apt-get update; \
     apt-get install -y --no-install-recommends libfcgi-bin; \
     rm -rf /var/lib/apt/lists/*; \
