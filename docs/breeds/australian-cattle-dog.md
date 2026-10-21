@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `australian_cattle_dog` (viri S435–S441; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174) |
 | Izvor | FCI št. 287, skupina 1, sekcija 2 (goniči goveda), Avstralija (S435) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 49. mesto »Australian Cattle Dog« (S174) |
-| PR-ji | pet-prep #308 (pasma, združen `3360ca8`) · portret #309 · spletna stran — |
+| PR-ji | pet-prep #308 (pasma, združen `3360ca8`) · portret #309 (združen `9184017`) · spletna stran #84 (združen `0319d77`) |
 
 ## Odločitve (z viri in kdo je odločil)
 
