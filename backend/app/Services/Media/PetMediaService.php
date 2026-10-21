@@ -411,6 +411,12 @@ class PetMediaService
             return true;
         }
 
+        // M5-T08b: state media switched off in /admin — nothing queued before is generated.
+        // The slot stays as it is (pending); switching it on again lets the pipeline / retry resume it.
+        if (! $this->entitlements->stateMediaEnabled()) {
+            return true;
+        }
+
         if ($slot->isLookMedia()) {
             return $slot->look !== null ? $this->generateLookKeyframe($slot, $slot->look) : true;
         }
@@ -423,6 +429,11 @@ class PetMediaService
                 $this->fail($slot, null, 'Pet inactive or state not available for the species — not generated.');
             }
 
+            return true;
+        }
+
+        // M5-T08b: a key image only for a pet that uses state media now (left pending otherwise).
+        if (! $this->entitlements->usesStateMedia($pet)) {
             return true;
         }
 
@@ -490,6 +501,13 @@ class PetMediaService
     public function submitVideo(int $slotId): bool
     {
         $slot = PetMedia::find($slotId);
+
+        // M5-T08b: state media switched off (or the pet does not use it) — a queued transition
+        // is not submitted (stays pending; look rows: submitLookVideo).
+        if ($slot !== null && $slot->isTransition() && (! $this->entitlements->stateMediaEnabled()
+            || ($slot->pet !== null && ! $this->entitlements->usesStateMedia($slot->pet)))) {
+            return true;
+        }
 
         // M4-10: a look row (sweep reclaim) / a pool pet's slot go through the look.
         // M5-T08: transitions take the same path as state videos.
@@ -599,6 +617,12 @@ class PetMediaService
     {
         $pet = $slot->pet;
         $transition = $slot->transition();
+
+        if (! $this->entitlements->stateMediaEnabled()) {
+            $slot->update(['status' => PetMedia::STATUS_PENDING]); // M5-T08b: switched off — release the claim, no fal call
+
+            return true;
+        }
 
         if ($pet === null || ! $pet->is_active || $transition === null) {
             $this->fail($slot, null, 'Pet inactive or unknown transition — not generated.');
@@ -1075,12 +1099,13 @@ class PetMediaService
      *
      * M5-T08: `keyframes` / `transitions` = the state key images and transition
      * clips that would be made; for a pet from before M5-T08 (state media
-     * version 1) the plan is that of version 2 (`upgrade` true) — the admin
-     * "Generate missing" is the only way an existing pet gets them.
+     * version 1) with `$upgradeStateMedia` the plan is that of version 2
+     * (`upgrade` true) — the admin "Upgrade to state media" / media:backfill
+     * --state-media are the only ways an existing pet gets them (M5-T08b).
      *
      * @return array{image: 'ok'|'stage'|'in_flight'|'download'|'generate', videos: list<string>, keyframes: list<string>, transitions: list<string>, upgrade: bool, cost_usd: float}
      */
-    public function planMissing(Pet $pet, bool $upgradeStateMedia = true): array
+    public function planMissing(Pet $pet, bool $upgradeStateMedia = false): array
     {
         $upgrade = $upgradeStateMedia && (int) ($pet->state_media_version ?? 1) < 2 && ! $pet->isLegacyProfile();
         $planned = $upgrade ? (clone $pet)->forceFill(['state_media_version' => 2]) : $pet;
@@ -1148,6 +1173,12 @@ class PetMediaService
         return ['image' => $imageAction, 'videos' => $videos, 'keyframes' => $keyframes, 'transitions' => $transitions, 'upgrade' => $upgrade, 'cost_usd' => round($cost, 4)];
     }
 
+    /** M5-T08b: the superadmin state media switch (MediaEntitlementService::stateMediaEnabled). */
+    public function stateMediaEnabled(): bool
+    {
+        return $this->entitlements->stateMediaEnabled();
+    }
+
     /** M5-T08: estimated cost of one key image (0 when no key image profile is enabled). */
     public function keyframeCostUsd(): float
     {
@@ -1158,12 +1189,13 @@ class PetMediaService
      * Queue whatever is missing for one pet. Videos follow automatically once
      * a new / downloaded image is stored. Returns what was queued.
      *
-     * M5-T08: a pet from before M5-T08 is moved to state media version 2 here
-     * (admin "Generate missing"; media:backfill only with --state-media) — never automatically.
+     * M5-T08: a pet from before M5-T08 is moved to state media version 2 here only
+     * when asked (`$upgradeStateMedia`: admin "Upgrade to state media", media:backfill
+     * --state-media; M5-T08b: admin "Generate missing" never upgrades) — never automatically.
      *
      * @return array{image: bool, videos: int}
      */
-    public function generateMissing(Pet $pet, bool $upgradeStateMedia = true): array
+    public function generateMissing(Pet $pet, bool $upgradeStateMedia = false): array
     {
         if (! $this->fal->isEnabled() || ! $pet->is_active) {
             return ['image' => false, 'videos' => 0];
@@ -1423,6 +1455,8 @@ class PetMediaService
             ->whereNull('request_id')
             ->whereNull('source_url')
             ->where('updated_at', '<', now()->subMinutes(self::STALE_CLAIM_MINUTES))
+            // M5-T08b: state media switched off — key images and transitions are not re-queued.
+            ->when(! $this->entitlements->stateMediaEnabled(), fn ($q) => $q->whereNotIn('kind', [PetMedia::KIND_KEYFRAME, PetMedia::KIND_TRANSITION]))
             ->each(function (PetMedia $slot) use (&$reclaimed): void {
                 // M4-10: a look image has no job of its own — the waiting pets' slots
                 // (reclaimed here too) run it again; the next pet needing it reclaims it.
@@ -1537,6 +1571,17 @@ class PetMediaService
             $this->resetForNewGeneration($row, bump: true);
         }
 
+        // M5-T08b (QA minor 6): a clip marked as a loop is remade as a loop only while an active
+        // state-media pet of the look is at that stage; else it goes back to the pre-M5-T08 clip.
+        foreach ($stages as $stage) {
+            if (! $this->lookStateMediaWanted($look, $stage)) {
+                PetMedia::query()->where('pet_look_id', $look->id)->where('life_stage', $stage)
+                    ->where('kind', PetMedia::KIND_VIDEO)->whereNotNull('recipe')
+                    ->where('status', PetMedia::STATUS_PENDING)->whereNull('request_id')
+                    ->update(['recipe' => null]);
+            }
+        }
+
         $queued = 0;
 
         foreach ($pets as $pet) {
@@ -1572,6 +1617,27 @@ class PetMediaService
             && $row->updated_at !== null && $row->updated_at->lt(now()->subMinutes(self::STALE_CLAIM_MINUTES));
 
         return ! $deadClaim;
+    }
+
+    /**
+     * M5-T08b: does an active pet of the look at this stage use state media (so the
+     * look's key images / transitions of that stage are needed and its clips are made
+     * as loops)? False while the switch is off.
+     */
+    private function lookStateMediaWanted(PetLook $look, string $stage): bool
+    {
+        if (! $this->entitlements->stateMediaEnabled()) {
+            return false;
+        }
+
+        // The pet's stage, or the stage of the look image it shows (a stage change in progress).
+        return Pet::query()->where('pet_look_id', $look->id)->where('is_active', true)
+            ->where('state_media_version', '>=', 2)
+            ->where(fn ($q) => $q->where('life_stage', $stage)
+                ->orWhereExists(fn ($q) => $q->selectRaw('1')->from('pet_media as img')
+                    ->whereColumn('img.pet_id', 'pets.id')->where('img.kind', PetMedia::KIND_IMAGE)->where('img.life_stage', $stage)))
+            ->get()
+            ->contains(fn (Pet $pet): bool => $this->entitlements->usesStateMedia($pet));
     }
 
     /** The look's stored image of the stage a look video row is made for (start frame). */
@@ -1766,6 +1832,23 @@ class PetMediaService
             return true;
         }
 
+        // M5-T08b: state media switched off, or no active state-media pet of the look at this
+        // stage — a look transition is not submitted (stays as it is).
+        if ($row->isTransition() && ($row->look === null || ! $this->lookStateMediaWanted($row->look, (string) $row->life_stage))) {
+            return true;
+        }
+
+        // M5-T08b (QA minor 6): a look clip marked as a loop that no pet can use as a loop any
+        // more (switch off, or no active state-media pet of the look at this stage — e.g. the
+        // only buyer left) goes back to the pre-M5-T08 clip, so pets from before M5-T08 waiting
+        // for it are not stuck behind a key image that will never come.
+        if ($row->isVideo() && $row->recipe !== null && $row->request_id === null && $row->look !== null
+            && ! $this->lookStateMediaWanted($row->look, (string) $row->life_stage)) {
+            PetMedia::query()->whereKey($row->id)->whereIn('status', [PetMedia::STATUS_PENDING, PetMedia::STATUS_FAILED])
+                ->whereNull('request_id')->update(['recipe' => null]);
+            $row->refresh();
+        }
+
         if ($row->status === PetMedia::STATUS_FAILED
             && ! $this->resetForNewGeneration($row, bump: $row->request_id !== null || $row->isServable())) {
             return true; // another worker moved it meanwhile
@@ -1919,6 +2002,12 @@ class PetMediaService
     {
         $state = $row->petState();
         $image = $this->lookImageRow($row);
+
+        // M5-T08b: switched off, or no active state-media pet of the look at this stage
+        // (e.g. a sweep reclaim on a look only older pets use) — the row stays as it is, no fal call.
+        if (! $this->lookStateMediaWanted($look, (string) $row->life_stage)) {
+            return true;
+        }
 
         if ($state === null || $image === null || $image->status !== PetMedia::STATUS_READY || ! $image->isServable()) {
             return true; // the waiting pets are re-run once the look image is stored

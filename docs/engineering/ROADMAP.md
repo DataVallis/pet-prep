@@ -287,6 +287,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [x] M5-T06 Priprava ljubljenčka »Pripravljamo [ime]« + vrstni red generiranja (§13) — 2026-10-21, backend + mobile JS; `preparation` v stanju / pregledu / `PetUpdated` (`PetPreparationService`), vrstni red `config/media.php` `preparation_order`, zaslon s Curiom (`modules/preparation`), en `pet_ready` (dogodek + potisno obvestilo + sporočilo), merjenje v »AI media«
 - [x] ~~M5-T07 AI Lab: primerjava modelov za klipe šole in iger (§14)~~ — **opuščeno** (David 21. 10. 2026): brez primerjave — Kling 3.0 Pro za vse videe, Nano Banana Pro (+ Edit) za vse slike; klipi šole in iger 3 s. M5-T08–T10 niso več blokirani.
 - [x] M5-T08 Mediji po stanjih: ključne slike, zanke, prehodi (§7) — 2026-10-21, strežnik + aplikacija (JS, OTA); samo poln (kupljen) nabor, obstoječi ljubljenčki brez samodejnega dopolnjevanja; 5,38 $ na pasmo + barvo + obdobje
+- [x] M5-T08b Mediji stanj: stikalo v administraciji + popravki QA #327 — 2026-10-21; »Feature switches« (privzeto vklopljeno), izklop ustavi tudi čakajoče (vrsta, retry, sweep), »Upgrade to state media« ločeno od »Generate missing«, aplikacija: ključna slika pod nalagajočo zanko, brez poznega prehoda
 - [ ] M5-T09 Šola: klip za vsak ukaz in fazo (§3)
 - [ ] M5-T10 Igre po fazah (§10)
 - [ ] M5-T11 Preklop slika / video (§1)

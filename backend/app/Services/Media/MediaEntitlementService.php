@@ -8,6 +8,7 @@ use App\Enums\PetPlan;
 use App\Enums\PetStateEnum;
 use App\Enums\PetTransition;
 use App\Models\Pet;
+use App\Services\AppSettingsService;
 
 /**
  * Which AI state videos a pet gets at birth (M4-03).
@@ -55,13 +56,25 @@ use App\Models\Pet;
  * config media.state_media.transitions whose two states it is entitled to
  * ({@see transitionsFor()}). Only the paid full set (the 49,99 € challenge
  * pays for it, §14); the free basic set (idle + sleeping) keeps its pre-M5-T08
- * media (Claude's proposal, open for David). Only pets with
+ * media (confirmed by David 2026-10-21: no sleeping key image for free pets for now). Only pets with
  * `state_media_version = 2` — every pet that existed before M5-T08 keeps
  * its set (no automatic backfill, David 2026-10-21); a new purchase and the
- * admin "Generate missing" move a pet to version 2 (PetMediaService).
+ * admin "Upgrade to state media" move a pet to version 2 (PetMediaService).
+ * M5-T08b: the whole feature is the superadmin switch {@see stateMediaEnabled()}.
  */
 class MediaEntitlementService
 {
+    public function __construct(private readonly AppSettingsService $settings) {}
+
+    /**
+     * M5-T08b: the superadmin switch (/admin → Feature switches, `app_settings.state_media`,
+     * default on). Off = no pet uses state media and nothing already queued is generated.
+     */
+    public function stateMediaEnabled(): bool
+    {
+        return $this->settings->stateMedia();
+    }
+
     public const TIER_BASIC = 'basic';
 
     public const TIER_FULL = 'full';
@@ -111,7 +124,7 @@ class MediaEntitlementService
      */
     public function usesStateMedia(Pet $pet): bool
     {
-        return (bool) config('media.state_media.enabled', true)
+        return $this->stateMediaEnabled()
             && (int) ($pet->state_media_version ?? 1) >= 2
             && ! $pet->isLegacyProfile()
             && $this->tierFor($pet) === self::TIER_FULL

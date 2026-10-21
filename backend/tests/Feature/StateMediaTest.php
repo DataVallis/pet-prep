@@ -7,13 +7,18 @@ use App\Enums\PetOrigin;
 use App\Enums\PetPlan;
 use App\Enums\PetStateEnum;
 use App\Enums\PetTransition;
+use App\Filament\Pages\FeatureSwitches;
 use App\Filament\Resources\PetResource\Pages\EditPet;
 use App\Filament\Resources\PetResource\RelationManagers\MediaRelationManager;
 use App\Jobs\GeneratePetKeyframe;
+use App\Jobs\SubmitPetStateVideo;
 use App\Models\AiSpendLedger;
+use App\Models\AppSetting;
+use App\Models\AppSettingChange;
 use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\User;
+use App\Services\AppSettingsService;
 use App\Services\ChallengeService;
 use App\Services\FalWebhookVerifier;
 use App\Services\FamilyService;
@@ -433,7 +438,7 @@ describe('existing pets', function () {
             ->and(smCalls('https://fal.run/fal-ai/nano-banana-pro/edit')->count())->toBe(0)
             ->and(PetMedia::where('pet_id', $pet->id)->where('kind', 'video')->pluck('recipe')->unique()->all())->toBe([null]);
 
-        $plan = app(PetMediaService::class)->planMissing($pet->fresh());
+        $plan = app(PetMediaService::class)->planMissing($pet->fresh(), upgradeStateMedia: true);
         expect($plan['upgrade'])->toBeTrue()
             ->and($plan['keyframes'])->toHaveCount(5)
             ->and($plan['transitions'])->toHaveCount(2)
@@ -441,8 +446,8 @@ describe('existing pets', function () {
             ->and($plan['cost_usd'])->toBe(round(5 * 0.15 + 8 * 0.56, 4))
             ->and(app(PetMediaService::class)->planMissing($pet->fresh(), upgradeStateMedia: false)['keyframes'])->toBe([]);
 
-        // Admin "Generate missing" = the explicit upgrade.
-        app(PetMediaService::class)->generateMissing($pet->fresh());
+        // Admin "Upgrade to state media" = the explicit upgrade (M5-T08b: "Generate missing" never upgrades).
+        app(PetMediaService::class)->generateMissing($pet->fresh(), upgradeStateMedia: true);
         smCompleteClips();
         expect($pet->fresh()->state_media_version)->toBe(2)
             ->and(PetMedia::where('pet_id', $pet->id)->where('kind', 'keyframe')->where('status', 'ready')->count())->toBe(5)
@@ -521,5 +526,258 @@ describe('superadmin AI media panel', function () {
 
         Queue::assertPushed(GeneratePetKeyframe::class, fn ($job) => $job->petMediaId === $key->id);
         expect($key->fresh()->generation)->toBe(2);
+    });
+});
+
+/* ─────────────────────────── M5-T08b: the superadmin switch stops the spend ─────────────────────────── */
+
+/** M5-T08b: the /admin switch (app_settings.state_media). */
+function smSwitch(bool $on): void
+{
+    AppSetting::updateOrCreate(['key' => AppSettingsService::STATE_MEDIA_KEY], ['value' => ['enabled' => $on]]);
+    Cache::forget(AppSettingsService::cacheKey(AppSettingsService::STATE_MEDIA_KEY));
+}
+
+/** Run every faked media job pushed so far that has not run yet, until none is left. */
+function smDrainJobs(array &$ran): int
+{
+    $count = 0;
+
+    for ($round = 0; $round < 10; $round++) {
+        $todo = collect(Queue::pushedJobs())->flatten(1)->pluck('job')
+            ->reject(fn ($job) => isset($ran[spl_object_id($job)]))->values();
+
+        if ($todo->isEmpty()) {
+            break;
+        }
+
+        foreach ($todo as $job) {
+            $ran[spl_object_id($job)] = true;
+            try {
+                $job->handle(app(PetMediaService::class));
+            } catch (RuntimeException) {
+                // a retryable failure — the test counts fal calls, not retries
+            }
+            $count++;
+        }
+    }
+
+    return $count;
+}
+
+describe('M5-T08b superadmin switch', function () {
+    it('Feature switches: state media is on by default, off is saved audited and turns usesStateMedia off', function () {
+        config(['services.fal_ai.key' => null]);
+        $pet = smPet();
+        $admin = User::factory()->create(['role' => 'parent', 'is_superadmin' => true]);
+        $this->actingAs($admin);
+
+        Livewire::test(FeatureSwitches::class)->assertFormSet(['state_media' => true])->call('save')->assertHasNoFormErrors();
+        expect(AppSetting::find(AppSettingsService::STATE_MEDIA_KEY))->toBeNull(); // unchanged default → no row
+
+        Livewire::test(FeatureSwitches::class)->fillForm(['state_media' => false])->call('save')->assertHasNoFormErrors()->assertNotified();
+
+        expect(app(AppSettingsService::class)->stateMedia())->toBeFalse()
+            ->and(AppSetting::find(AppSettingsService::STATE_MEDIA_KEY)->value)->toBe(['enabled' => false])
+            ->and(AppSettingChange::where('key', AppSettingsService::STATE_MEDIA_KEY)->sole()->user_id)->toBe($admin->id)
+            ->and(app(MediaEntitlementService::class)->usesStateMedia($pet))->toBeFalse()
+            ->and(Livewire::test(FeatureSwitches::class)->instance()->getChanges()->pluck('key')->all())->toContain(AppSettingsService::STATE_MEDIA_KEY);
+
+        smSwitch(true);
+        expect(app(MediaEntitlementService::class)->usesStateMedia($pet))->toBeTrue();
+    });
+
+    it('switched off: a queued key image / transition job, the daily retry and the sweep make zero fal calls; on again resumes', function () {
+        useUniquePetMedia(true);
+        smFakeFal();
+        Queue::fake([GeneratePetKeyframe::class, SubmitPetStateVideo::class]);
+        $pet = smBirth(smPet());
+        $media = app(PetMediaService::class);
+        $key = smSlot($pet, 'keyframe', 'sleeping');
+        $transition = $media->slot($pet, PetMedia::KIND_TRANSITION, PetTransition::IdleToSleeping);
+        $before = smCalls()->count();
+        $pushed = count(Queue::pushedJobs()[GeneratePetKeyframe::class] ?? []) + count(Queue::pushedJobs()[SubmitPetStateVideo::class] ?? []);
+
+        smSwitch(false);
+
+        // Queued jobs: the slots stay pending, nothing reaches fal.
+        (new GeneratePetKeyframe($key->id))->handle($media);
+        (new SubmitPetStateVideo($transition->id))->handle($media);
+        expect($key->fresh()->status)->toBe('pending')
+            ->and($transition->fresh()->status)->toBe('pending');
+
+        // Daily retry: failed key images / transitions are not re-queued.
+        $key->update(['status' => 'failed', 'error_reason' => 'budget_daily']);
+        $transition->update(['status' => 'failed', 'error_reason' => 'budget_daily']);
+        expect(app(ReferenceImageRetryService::class)->retryDueWithVideos()['videos'])->toBe(0)
+            ->and($key->fresh()->status)->toBe('failed');
+
+        // Sweep: dead claims of key images / transitions are not re-queued.
+        PetMedia::whereKey([$key->id, $transition->id])->update(['status' => 'running', 'request_id' => null, 'source_url' => null, 'updated_at' => now()->subHour()]);
+        expect($media->sweepStale()['reclaimed'])->toBe(0);
+
+        $pushedAfter = count(Queue::pushedJobs()[GeneratePetKeyframe::class] ?? []) + count(Queue::pushedJobs()[SubmitPetStateVideo::class] ?? []);
+        expect(smCalls()->count())->toBe($before)
+            ->and($pushedAfter)->toBe($pushed);
+
+        // On again: the sweep re-queues the key image and it is generated.
+        smSwitch(true);
+        expect($media->sweepStale()['reclaimed'])->toBe(2);
+        expect($media->generateKeyframe($key->id))->toBeTrue()
+            ->and(smCalls('https://fal.run/fal-ai/nano-banana-pro/edit')->count())->toBe(1);
+    });
+
+    it('switched off: look rows (shared breed + colour) are not generated either', function () {
+        smFakeFal();
+        Queue::fake([GeneratePetKeyframe::class, SubmitPetStateVideo::class]);
+        $pet = smBirth(smPet('beagle', 'tricolour'));
+        $media = app(PetMediaService::class);
+        $look = $pet->fresh()->look;
+        $row = $media->lookSlot($look, PetMedia::KIND_KEYFRAME, PetStateEnum::Sleeping, LifeStage::Young);
+        $trow = $media->lookSlot($look, PetMedia::KIND_TRANSITION, PetTransition::IdleToSleeping, LifeStage::Young);
+        $before = smCalls()->count();
+
+        smSwitch(false);
+        (new GeneratePetKeyframe($row->id))->handle($media);
+        (new SubmitPetStateVideo($trow->id))->handle($media);
+        (new GeneratePetKeyframe(smSlot($pet, 'keyframe', 'sleeping')->id))->handle($media);
+
+        expect(smCalls()->count())->toBe($before)
+            ->and($row->fresh()->status)->toBe('pending')
+            ->and($trow->fresh()->status)->toBe('pending');
+    });
+});
+
+describe('M5-T08b old pets only', function () {
+    /** A shared look used only by a pet from before M5-T08 (its clips made the old way). */
+    function smOldLookPet(): Pet
+    {
+        smFakeFal();
+        useStateMedia(false);
+        $old = smBirth(smPet('beagle', 'tricolour'));
+        smCompleteClips();
+        $old->forceFill(['state_media_version' => 1])->saveQuietly();
+        useStateMedia();
+
+        return $old->fresh();
+    }
+
+    it('retry, sweep and regenerateLook make no key image / transition call; a clip marked as a loop goes back to the old clip', function () {
+        $old = smOldLookPet();
+        $media = app(PetMediaService::class);
+        $look = $old->look;
+
+        // Leftovers: a key image + transition look row and slots of the old pet, failed / dead.
+        $krow = $media->lookSlot($look, PetMedia::KIND_KEYFRAME, PetStateEnum::Sleeping, LifeStage::Young);
+        $trow = $media->lookSlot($look, PetMedia::KIND_TRANSITION, PetTransition::IdleToSleeping, LifeStage::Young);
+        $kslot = $media->slot($old, PetMedia::KIND_KEYFRAME, PetStateEnum::Sleeping);
+        $tslot = $media->slot($old, PetMedia::KIND_TRANSITION, PetTransition::IdleToSleeping);
+        PetMedia::whereKey([$kslot->id, $tslot->id])->update(['status' => 'failed', 'error_reason' => 'budget_daily']);
+        PetMedia::whereKey([$krow->id, $trow->id])->update(['status' => 'running', 'updated_at' => now()->subHour()]);
+        $before = smCalls()->count();
+
+        expect(app(ReferenceImageRetryService::class)->retryDueWithVideos()['videos'])->toBe(0);
+        $media->sweepStale();
+        expect(smCalls()->count())->toBe($before);
+
+        // A look clip marked as a loop (e.g. by a buyer who is gone) — the old pet's request
+        // falls back to the pre-M5-T08 clip instead of waiting for a key image forever.
+        $idleRow = PetMedia::whereNotNull('pet_look_id')->where('kind', 'video')->where('state', 'idle')->sole();
+        $idleRow->update(['status' => 'failed', 'recipe' => 'loop', 'request_id' => null]);
+        smSlot($old, 'video', 'idle')->update(['status' => 'pending', 'request_id' => null]);
+        $media->submitVideo(smSlot($old, 'video', 'idle')->id);
+
+        $submit = smCalls('https://queue.fal.run/')->last();
+        expect($idleRow->fresh()->recipe)->toBeNull()
+            ->and($idleRow->fresh()->request_id)->not->toBeNull()
+            ->and($submit['end_image_url'] ?? null)->toBeNull();
+        smCompleteClips();
+
+        // regenerateLook: new image + old clips; no key image edit, no transition, no loop marker.
+        PetMedia::whereNotNull('pet_look_id')->where('kind', 'video')->where('state', 'sleeping')->update(['recipe' => 'loop']);
+        $edits = smCalls('https://fal.run/fal-ai/nano-banana-pro/edit')->count();
+        $media->regenerateLook($look->fresh());
+        smCompleteClips();
+
+        $transitionSubmits = smCalls('https://queue.fal.run/')->filter(fn (Request $r) => str_contains((string) $r['prompt'], 'start image'))->count();
+        expect(smCalls('https://fal.run/fal-ai/nano-banana-pro/edit')->count())->toBe($edits)
+            ->and($transitionSubmits)->toBe(0)
+            ->and(PetMedia::whereNotNull('pet_look_id')->where('kind', 'video')->whereNotNull('recipe')->count())->toBe(0)
+            ->and($krow->fresh()->status)->not->toBe('ready');
+    });
+});
+
+describe('M5-T08b concurrent first buyers', function () {
+    it('two first buyers of the same look + stage at the same time → one fal call per item', function () {
+        smFakeFal();
+        Queue::fake([GeneratePetKeyframe::class, SubmitPetStateVideo::class]);
+        $a = smBirth(smPet('beagle', 'tricolour'));
+        $b = smBirth(smPet('beagle', 'tricolour'));
+        $media = app(PetMediaService::class);
+
+        // B's jobs run while A's call of the same look row is in flight (re-entrant fake).
+        $bKey = smSlot($b, 'keyframe', 'sleeping')->id;
+        $bIdle = smSlot($b, 'video', 'idle')->id;
+        $reentered = ['edit' => false, 'queue' => false];
+        Http::fake([
+            'fal.run/fal-ai/nano-banana-pro/edit' => function () use (&$reentered, $bKey, $media) {
+                if (! $reentered['edit']) {
+                    $reentered['edit'] = true;
+                    $media->generateKeyframe($bKey);
+                }
+
+                return Http::response(['images' => [['url' => 'https://v3.fal.media/files/sm/edit-'.uniqid().'.jpg']]]);
+            },
+            'queue.fal.run/*' => function () use (&$reentered, $bIdle, $media) {
+                if (! $reentered['queue']) {
+                    $reentered['queue'] = true;
+                    $media->submitVideo($bIdle);
+                }
+
+                return Http::response(['request_id' => 'sm-req-'.uniqid()]);
+            },
+        ]);
+
+        $ran = [];
+        for ($i = 0; $i < 6; $i++) {
+            smDrainJobs($ran);
+            smCompleteClips();
+        }
+
+        expect($reentered)->toBe(['edit' => true, 'queue' => true])
+            ->and(smCalls('https://fal.run/fal-ai/nano-banana-pro/edit')->count())->toBe(5)
+            ->and(smCalls('https://queue.fal.run/')->count())->toBe(8)
+            ->and(round((float) AiSpendLedger::query()->counted()->sum('cost_usd'), 2))->toBe(5.38)
+            ->and($media->payloadFor($a->fresh())['status'])->toBe('ready')
+            ->and($media->payloadFor($b->fresh())['status'])->toBe('ready');
+    });
+});
+
+describe('M5-T08b admin panel', function () {
+    it('"Generate missing" never upgrades an old pet; "Upgrade to state media" does and shows the cost', function () {
+        useUniquePetMedia(true);
+        smFakeFal();
+        $pet = smPet();
+        $pet->forceFill(['state_media_version' => 1])->saveQuietly();
+        $pet = smBirth($pet->fresh());
+        smCompleteClips();
+        $this->actingAs(User::factory()->create(['role' => 'parent', 'is_superadmin' => true]));
+        Queue::fake([GeneratePetKeyframe::class, SubmitPetStateVideo::class]);
+
+        Livewire::test(MediaRelationManager::class, ['ownerRecord' => $pet, 'pageClass' => EditPet::class])
+            ->assertTableActionVisible('upgradeStateMedia')
+            ->callTableAction('generateMissing');
+        expect($pet->fresh()->state_media_version)->toBe(1);
+        Queue::assertNotPushed(GeneratePetKeyframe::class);
+
+        Livewire::test(MediaRelationManager::class, ['ownerRecord' => $pet, 'pageClass' => EditPet::class])
+            ->mountTableAction('upgradeStateMedia')
+            ->assertSee('$5.23')
+            ->callMountedTableAction();
+        expect($pet->fresh()->state_media_version)->toBe(2);
+        Queue::assertPushed(GeneratePetKeyframe::class);
+
+        Livewire::test(MediaRelationManager::class, ['ownerRecord' => $pet->fresh(), 'pageClass' => EditPet::class])
+            ->assertTableActionHidden('upgradeStateMedia');
     });
 });

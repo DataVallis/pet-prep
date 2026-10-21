@@ -6,10 +6,12 @@
 import { EMPTY_PET_MEDIA, normalizePetMedia, type PetMediaInfo } from '@/modules/petMedia/petMedia';
 import {
   NO_TRANSITION,
+  canStartTransition,
   nextPlayback,
   onTransitionEnd,
   onWantedChange,
   poseImageUrl,
+  settleTransition,
   steadyItem,
   transitionKey,
   type PlaybackInput,
@@ -172,5 +174,40 @@ describe('transition reducer', () => {
 
   it('a lock (wanted null) resets', () => {
     expect(onWantedChange({ shown: 'idle', pending: { from: 'idle', to: 'sleeping' } }, null, has)).toBe(NO_TRANSITION);
+  });
+});
+
+describe('M5-T08b — a late transition never plays minutes later (QA minor 5)', () => {
+  // The sleeping loop is not stored yet: the sleeping key image shows.
+  const noSleepLoop = stateMedia({ videos: { idle: IDLE } });
+  const can = (media: PetMediaInfo) => (from: Parameters<typeof canStartTransition>[1], to: Parameters<typeof canStartTransition>[1]) =>
+    canStartTransition(input(media, to), from);
+
+  it('only a transition into the wanted state\'s own loop can start', () => {
+    expect(canStartTransition(input(stateMedia(), 'sleeping'), 'idle')).toBe(true);
+    expect(canStartTransition(input(noSleepLoop, 'sleeping'), 'idle')).toBe(false);
+    expect(canStartTransition(input(stateMedia({ transitions: {} }), 'sleeping'), 'idle')).toBe(false);
+    expect(canStartTransition(input(stateMedia(), 'sleeping', { canPlayVideo: (url) => url !== IDLE_TO_SLEEPING }), 'idle')).toBe(false);
+  });
+
+  it('idle → sleeping while the sleeping loop is missing settles at once; the loop arriving later plays no transition', () => {
+    let s = onWantedChange({ shown: 'idle', pending: null }, 'sleeping', can(noSleepLoop));
+    expect(s).toEqual({ shown: 'sleeping', pending: null });
+    expect(steadyItem(input(noSleepLoop, 'sleeping'))).toMatchObject({ kind: 'image', url: KEY_SLEEPING });
+
+    // Minutes later the sleeping loop is stored: wanted is unchanged → still no transition.
+    s = onWantedChange(s, 'sleeping', can(stateMedia()));
+    expect(s).toEqual({ shown: 'sleeping', pending: null });
+    expect(s.pending).toBeNull();
+  });
+
+  it('a pending transition the player no longer picks (its clip failed) is settled on the target', () => {
+    const pending = { shown: 'idle' as const, pending: { from: 'idle' as const, to: 'sleeping' as const } };
+    const failed = input(stateMedia(), 'sleeping', { canPlayVideo: (url) => url !== IDLE_TO_SLEEPING });
+    expect(settleTransition(pending, nextPlayback(failed, 'idle'))).toEqual({ shown: 'sleeping', pending: null });
+
+    const playing = nextPlayback(input(stateMedia(), 'sleeping'), 'idle');
+    expect(settleTransition(pending, playing)).toBe(pending);
+    expect(settleTransition(NO_TRANSITION, playing)).toBe(NO_TRANSITION);
   });
 });

@@ -228,6 +228,12 @@ return [
         'unique_media_on' => 'unikatno za vsakega',
         'unique_media_off' => 'skupno za pasmo + barvo',
         'saved_body_media' => 'Mačke: :mode · AI mediji: :media',
+        'state_media_section' => 'Mediji stanj (ključne slike, brezšivne zanke, prehodi)',
+        'state_media_description' => 'Vklopljeno (privzeto): ljubljenčki s kupljenim polnim naborom (mediji stanj različice 2) dobijo ključno sliko za vsako stanje, videe stanj, ki se brezšivno vrtijo od nje in nazaj, ter prehoda mirovanje ↔ spanje (okoli 5,38 $ na pasmo + barvo + življenjsko obdobje, skupni videzi jih naredijo enkrat). Izklopljeno: novih ključnih slik, zank in prehodov se ne ustvarja — tudi tistih, ki že čakajo v vrsti, pri ponovnih poskusih ali čiščenju ne; ljubljenčki obdržijo shranjeno in dobijo starejše posnetke. Ponoven vklop nadaljuje čakajoče ob naslednjem koraku medijev ljubljenčka (ali z »Generate missing«).',
+        'state_media' => 'Mediji stanj vklopljeni',
+        'state_media_on' => 'vklopljeno',
+        'state_media_off' => 'izklopljeno',
+        'saved_body_state_media' => 'Mediji stanj: :state',
     ],
 
     // M5-R21: skupni videzi (PetLookResource).
