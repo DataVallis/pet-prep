@@ -472,6 +472,14 @@ class FalAiService
                 .'low-set tail reaching the hock with a slight curve and a good brush, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-54: Kennel Club standard (S443) — fawn as the anchor (any colour except merle);
+            // elegant, muscular sighthound, fine short coat, rose ears, long tapering tail; healthy lean condition.
+            BreedType::Whippet => 'A gentle, alert Whippet with a fawn coat, '
+                .'fine, short and close coat, elegant and muscular sighthound build with a graceful outline, deep chest and gently arched loin, '
+                .'healthy lean condition, long lean head tapering to the muzzle, oval bright dark eyes, small rose-shaped ears, '
+                .'long tapering tail without feathering, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1134,6 +1142,17 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'smooth, short, hard and weather-resistant double coat',
                 'markings' => 'evenly distributed head markings, full low-set tail with a good brush',
+            ],
+            // M5-R10-54: KC standard S443 "Any colour or mixture of colours, except merle." (never merle).
+            BreedType::Whippet => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'fawn',
+                    1 => 'brindle',
+                    2 => 'fawn and white parti-colour',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'fine, short and close coat',
+                'markings' => 'no merle, long tapering tail without feathering',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

@@ -28235,6 +28235,514 @@
       }
     }
   },
+  "whippet": {
+    "_note": "Added 2026-10-21 (M5-R10-54, unattended run — appended after the Australian Cattle Dog: AKC 2024 No. 50 'Whippet', S174 full-list table '49 Australian Cattle Dog', '50 Whippet'). Quotes as returned by the web-fetch tool on 2026-10-21 (short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S442–S447 (reused S8, S10, S11, S14, S24, S35, S45, S123, S174). No health percentages anywhere. The RKC Breeds A–Z page (both the new royalkennelclub.com address and the older display.aspx?id=1030 address, which redirects to it) could not be fetched on 2026-10-21 → no RKC key facts and no Breed Watch category; exercise from PDSA (S444, runbook fallback RKC → PDSA). Identity from the FCI nomenclature (S442); appearance and heights from the Kennel Club breed standard as reprinted by KUSA (S443). Lifespan: McMillan 2024 median 13.4 y via the Dogs Trust table (S123) — not provisional. Names: FCI / AKC / KC 'Whippet' (S442, S174, S443); Slovenian »mali angleški hrt« (RTV SLO S447, tier C — not checked against KZS, open for David).",
+    "identity": {
+      "value": "FCI No. 162, Group 10 Section 3 (Short-haired Sighthounds), Great Britain",
+      "unit": "—",
+      "source_id": "S442",
+      "quote": "WHIPPET",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S442, French page as returned): name 'WHIPPET', group 'n°10 - Lévriers', section 'Lévriers à poil court' (section 3 of group 10 in the FCI nomenclature; the page gives no section number), country of origin 'GRANDE-BRETAGNE', 'Non soumise à épreuve de travail' (no working trial), definitive acceptance '27/04/1955', valid standard '08/09/2026'. 'Great Britain' is already in FCI_ORIGINS (GB). AKC name: Whippet (S174). Wikipedia (S446, tier C): other name 'Snap dog (archaic)'."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S444",
+      "quote": "Size: Medium",
+      "confidence": "medium",
+      "notes": "PDSA key facts (S444); its page sits under 'medium-dogs'. The RKC 'Size:' field (preferred) could not be fetched on 2026-10-21."
+    },
+    "height": {
+      "kc_standard": {
+        "value": {
+          "male": [
+            47,
+            51
+          ],
+          "female": [
+            44,
+            47
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S443",
+        "quote": "47cm – 51cm (approx. 18½” – 20”).",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard as reprinted by KUSA (S443), Size — height at withers: males '47cm – 51cm (approx. 18½” – 20”).', females '44cm – 47cm (approx. 17½” – 18½”).' (as returned). PDSA (S444) 'Average height: 44-51 cm' (one range); PetMD (S445) 'Standing between 18-22 inches tall at the shoulder.' (46–56 cm, US standard) — alternatives."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            44,
+            51
+          ],
+          "female": [
+            44,
+            51
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S444",
+        "quote": "Average height: 44-51 cm",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S444), one range for both sexes (stored per sex). Alternative to the KC ranges."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            11,
+            18
+          ],
+          "female": [
+            11,
+            18
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S444",
+        "quote": "Average weight: 11-18 kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact (S444), one range for both sexes (stored per sex) — the game range. The KC / FCI standards give no weight. PetMD (S445) 'typically weighing between 25-40 pounds' (11–18 kg) agrees — alternative. Wikipedia (S446, tier C) 'typical 11–18 kg (24–40 lb)' agrees.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                11,
+                18
+              ],
+              "female": [
+                11,
+                18
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S445",
+            "quote": "typically weighing between 25-40 pounds",
+            "notes": "PetMD (S445); 25–40 lb = 11.3–18.1 kg (our conversion, rounded)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "III (10–15 kg) / IV (15–25 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 11–18 kg spans the 10–15 and 15–25 bands. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 11–18 kg (S444) = 24–40 lb → 'Medium (24–59 pounds)'. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Whippet growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 13.4,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": "Whippet 13.4 13.2 - 13.7 4971 1483",
+        "confidence": "high",
+        "notes": "McMillan et al. 2024 (Sci Rep) data as tabled by Dogs Trust (S123, columns Breed | Median Life Expectancy (Years) | Lower and Upper 95% CI | Total Number Individuals (Alive and Deceased) | Number Deceased Individuals), read 2026-10-21. Runbook first choice (McMillan 2024) → not provisional. Wikipedia (S446, tier C): 'A 2024 UK study found a life expectancy of 13.4 years for the breed' — agrees. PetMD (S445, US): 'has a long lifespan of 12-15 years.' — alternative."
+      },
+      "pdsa": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S444",
+        "quote": "Average lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "PDSA key facts (S444). Not shorter_lifespan."
+      },
+      "senior_from": {
+        "value": 10.05,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 13.4 y (McMillan 2024 via S123) → 0.75 × 13.4 = 10.05 y = 120.6 months → 121 (half up). Dogs Trust rule of thumb > 7 y = 84 months (S14). Not chosen: 0.75 × 12 y (PDSA lower bound, S444) = 108.",
+        "derived_from": [
+          "S11",
+          "S123"
+        ],
+        "months": 121,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 60",
+        "unit": "minutes/day",
+        "source_id": "S444",
+        "quote": "Minimum exercise (per day): 1 hour",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S444); PDSA text: 'Your Whippet will need a minimum of an hour exercise every day.' RKC breed page (preferred) not reachable on 2026-10-21 → PDSA (runbook rule). PetMD (S445): they 'don't need to run around for hours' (fragment) — no minutes."
+      },
+      "daily_text": {
+        "value": "a minimum of an hour every day",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Your Whippet will need a minimum of an hour exercise every day.",
+        "confidence": "high",
+        "notes": "PDSA (S444), exercise section; it suggests a shorter morning walk and a longer one later (paraphrase)."
+      },
+      "off_lead": {
+        "value": "needs off-lead running and play in a secure area; on a lead outside secure areas",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "There should also be plenty of chance for your Whippet to run and play off-lead in a secure area.",
+        "confidence": "high",
+        "notes": "PDSA (S444): they 'need to be able to have a really good run as it's in their nature' and should be kept on a lead outside secure areas because 'they have such a high prey drive and love to chase!' (fragments). The game counts steps; a secure off-lead run is not modelled → open for David (needs a new ROADMAP task)."
+      },
+      "after_meals": {
+        "value": "leave a gap between eating and exercising",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Remember to leave a gap between eating and exercising.",
+        "confidence": "medium",
+        "notes": "PDSA (S444), feeding section ('feeding at similar times each day', paraphrase). The PDSA page does not name bloat; PetMD (S445) names gastric dilatation and volvulus (GDV) among the breed's conditions (health.gdv). → proposed_game_parameters.whippet.meal_exercise_gap (built, M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "gentle, affectionate, even disposition; an ideal companion, highly adaptable",
+        "unit": "—",
+        "source_id": "S443",
+        "quote": "Gentle, affectionate, even disposition.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S443), Temperament; Characteristics: 'An ideal companion. Highly adaptable in domestic and sporting surroundings.'"
+      },
+      "family": {
+        "value": "a popular choice for families — calm and gentle around children; a home with slightly older children is recommended",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Whippets are a popular choice for families as they are so calm and gentle around children.",
+        "confidence": "high",
+        "notes": "PDSA (S444): 'we'd recommend a home with slightly older children' (fragment — the full sentence is longer than the quote limit) who can recognise when the dog needs space; always supervise dogs with children (paraphrase). PetMD (S445): 'A home with loud, rambunctious little kids might be too much for these sensitive pups.' → family_pet, children (explicit statement, supervision caveat kept here), sensitive_older_children (new chip); never small_children."
+      },
+      "time_alone": {
+        "value": "dislikes being left alone; can suffer separation anxiety",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Like most dogs, Whippets dislike being left alone and can suffer with separation anxiety.",
+        "confidence": "high",
+        "notes": "PDSA (S444): 'They form strong bonds with their owners and can get very stressed when left alone for any length of time.' WSAVA / IPFD (Bonnett 2022, not numbered): 'somewhat prone to separation anxiety' (read only as a check). Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "really high prey drive — not recommended with smaller pets; may get along with a cat it grew up with (supervise)",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Whippets have a really high prey drive, so we wouldn’t recommend keeping them with smaller pets.",
+        "confidence": "high",
+        "notes": "PDSA (S444); 'Your Whippet may get along with a cat they have grown up with, but you should always supervise them together.' PetMD (S445): 'Whippets have been bred for centuries to chase after prey.' Basis of chases_small_pets; never other_pets."
+      },
+      "socialisation": {
+        "value": "socialise with other dogs from a young age; otherwise can be shy with new people",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "As long as you socialise your Whippet with other dogs from a young age they should be fine meeting them out and about.",
+        "confidence": "high",
+        "notes": "PDSA (S444): socialise from a young age with lots of different experiences, people and dogs (paraphrase). PetMD (S445): 'Training and socialization must start young for Whippet puppies.' → proposed_game_parameters.whippet.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA (S444): when left alone all day they may start destroying things (paraphrase) — not chewing → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch category not fetched (RKC page unreachable) → no welfare chip; the PDSA page names no Kennel Club category. WSAVA / IPFD (Bonnett 2022, read only as a check, not numbered): 'Whippets are a relatively healthy breed'. Breeder checklist: breed club cardiac exam, ophthalmologist evaluation and BAER (AKC K30); Kennel Club advice to auscultate breeding stock (K31).",
+      "pra": {
+        "value": "progressive retinal atrophy — gradual loss of sight; parents should be screened",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Progressive Retinal atrophy – gradual loss of sight over several months or years. Parents should be screened for this.",
+        "confidence": "high",
+        "notes": "PDSA (S444) health list. Register health key pra_eye_disease."
+      },
+      "mitral_valve": {
+        "value": "mitral valve disease (heart)",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Mitral valve disease – a heart condition where the valve is weakened allowing blood to flow back into the heart.",
+        "confidence": "high",
+        "notes": "PDSA (S444) health list; PetMD (S445) names mitral valve disease. Kennel Club statement on Whippet heart health (via The Whippet Club, 2023, breeder-checklist K31): 'There is currently no official heart testing scheme for Whippets in the UK.' Not a fetched Breed Watch point → no heart_and_spine chip. Register health key mitral_valve_disease (new)."
+      },
+      "immune_mediated": {
+        "value": "immune-mediated problems (e.g. immune-mediated haemolytic anaemia)",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S444) health list: immune-mediated problems, where the body reacts against its own cells, such as immune-mediated haemolytic anaemia (paraphrase as returned). Register health key autoimmune_conditions."
+      },
+      "gdv": {
+        "value": "gastric dilatation and volvulus (GDV, bloat)",
+        "unit": "—",
+        "source_id": "S445",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S445) names gastric dilatation and volvulus (GDV) among the breed's conditions (as returned, no full sentence). PDSA (S444) advises a gap between eating and exercising (exercise.after_meals). Register health key bloat_gdv."
+      },
+      "von_willebrand": {
+        "value": "von Willebrand disease (bleeding disorder)",
+        "unit": "—",
+        "source_id": "S445",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S445) names von Willebrand disease (as returned, no full sentence). Register health key bleeding_disorder_vwd."
+      },
+      "deafness": {
+        "value": "deafness",
+        "unit": "—",
+        "source_id": "S445",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S445) names deafness (as returned, no full sentence); the AKC national breed club recommends BAER testing (K30). Register health key deafness."
+      },
+      "skin_injuries": {
+        "value": "thin skin prone to cuts; bones can be damaged on uneven ground",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Whippets can be prone to cutting their skin on thorns, twigs or any other sharp objects.",
+        "confidence": "high",
+        "notes": "PDSA (S444); PetMD (S445) names lacerations. Background for parents (not a register health key)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 51,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "51 | Whippet",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-21): rank 51 'Whippet' (tied with Shar Pei and Wire Fox Terrier), tier 'Average Working/Obedience Intelligence' (ranks 40–54). Coren's own article (S34) not re-read. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 25 to 40 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier 'Average Working/Obedience Intelligence': 'Obey first command: 50% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "can be a little slow to learn; start positive, reward-based training early; be patient and consistent",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Whippets have a reputation to be a little slow learning new things, even though they are thought to be fairly clever dogs.",
+        "confidence": "high",
+        "notes": "PDSA (S444): 'Their medium size makes them popular with first-time owners although training a Whippet can take some time!' — popularity, not a suitability statement → no first_time_owner tag. The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.whippet.learning_multiplier (1.0, runbook rule: Average tier, rank 51).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "balanced combination of muscular power and strength with elegance and grace of outline; built for maximum speed",
+        "unit": "—",
+        "source_id": "S443",
+        "quote": "Balanced combination of muscular power and strength with elegance and grace of outline.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S443), General appearance. A lean sighthound with a deep chest and an arched loin (standard, paraphrase) — never emaciated in the game."
+      },
+      "colours": {
+        "value": [
+          "fawn",
+          "brindle",
+          "black",
+          "blue (grey)",
+          "fawn and white parti-colour",
+          "white with brindle patches"
+        ],
+        "unit": "list",
+        "source_id": "S443",
+        "quote": "Any colour or mixture of colours, except merle.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S443): every colour or mixture except merle (the Kennel Club stopped registering merle Whippets in 2019 — Wikipedia S446, tier C). The listed colours are common examples within the standard (Wikipedia S446: 'ranging from solid black to solid white, with red, fawn, brindle, blue, or cream'); never merle in the game."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Fawn first with the highest weight (the portrait default), then brindle, black, blue and the white particolours."
+      },
+      "coat": {
+        "value": "fine, short, close in texture",
+        "unit": "—",
+        "source_id": "S443",
+        "quote": "Fine, short, close in texture.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S443). PDSA (S444) 'Coat length: Short'; sensitive skin → soft brush (S444)."
+      },
+      "head": {
+        "value": "long and lean, flat on top, tapering to the muzzle with a slight stop",
+        "unit": "—",
+        "source_id": "S443",
+        "quote": "Long and lean, flat on top, tapering to muzzle with slight stop, rather wide between the eyes,",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S443), Head (as returned)."
+      },
+      "ears": {
+        "value": "rose-shaped, small, fine in texture",
+        "unit": "—",
+        "source_id": "S443",
+        "quote": "Rose-shaped, small, fine in texture.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S443)."
+      },
+      "eyes": {
+        "value": "oval, bright, very alert expression",
+        "unit": "—",
+        "source_id": "S443",
+        "quote": "Oval, bright, expression very alert.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S443)."
+      },
+      "tail": {
+        "value": "long, tapering, reaching at least to the hock; no feathering",
+        "unit": "—",
+        "source_id": "S443",
+        "quote": "No feathering. Long, tapering, reaching at least to the hock.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S443)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S444) and PetMD (S445). The RKC breed page (preferred: size of home / garden, grooming, sheds, lifespan band, town or country) could not be fetched on 2026-10-21 → no rkc_* fields; large_home and apartment need the RKC page (runbook) → neither. Woodgreen and VCA not attempted.",
+      "pdsa_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Size: Medium",
+        "confidence": "medium",
+        "notes": "PDSA key facts (S444)."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour per day (minimum)",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Minimum exercise (per day): 1 hour",
+        "confidence": "medium",
+        "notes": "PDSA text: 'Your Whippet will need a minimum of an hour exercise every day.'"
+      },
+      "pdsa_grooming": {
+        "value": "a weekly brush; soft brush (sensitive skin)",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Whippets have short fur, so a weekly brush is usually more than enough to keep it in good condition.",
+        "confidence": "high",
+        "notes": "PDSA (S444): 'They do have quite sensitive skin, though, so it's better to look for a soft brush for them.' → brushing 1× a week (M5-R13 rule 'Once a week' → 1, built)."
+      },
+      "pdsa_shedding": {
+        "value": "sheds, but fairly minimal compared to other breeds",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Your Whippet will shed, but this is fairly minimal compared to other breeds.",
+        "confidence": "high",
+        "notes": "PDSA (S444), more in spring and autumn (paraphrase). PetMD (S445) 'This dog doesn't shed very much.' low_shedding only from RKC 'Sheds: No' (precedent) and the dog sheds → neither sheds nor low_shedding."
+      },
+      "pdsa_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Average lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "Not shorter_lifespan."
+      },
+      "pdsa_family": {
+        "value": "a popular choice for families",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Whippets are a popular choice for families as they are so calm and gentle around children.",
+        "confidence": "high",
+        "notes": "Basis of family_pet and children (explicit statement; supervision caveat in behaviour.family)."
+      },
+      "pdsa_children": {
+        "value": "a home with slightly older children recommended",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "we'd recommend a home with slightly older children",
+        "confidence": "high",
+        "notes": "PDSA (S444), fragment (the full sentence is longer than the quote limit; it continues: children who can recognise when the dog needs space — paraphrase). Basis of sensitive_older_children (new chip)."
+      },
+      "pdsa_company": {
+        "value": "can get very stressed when left alone",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "They form strong bonds with their owners and can get very stressed when left alone for any length of time.",
+        "confidence": "high",
+        "notes": "PDSA (S444): only get one if someone will be at home with them all day (paraphrase). Basis of needs_company (with behaviour.time_alone)."
+      },
+      "pdsa_cold_coat": {
+        "value": "may need a coat in winter; thick, soft, snug bedding",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "your Whippet might need a coat over the winter months",
+        "confidence": "high",
+        "notes": "PDSA (S444), fragment (lean, little body fat); 'Whippets have prominent bones, such as their elbows, shoulders and hips so prefer thick, soft snug bedding to avoid sores.' PetMD (S445): they 'generally don't do well in cold or wet weather'. The game has no weather / coat / bedding mechanic → open for David (needs a new ROADMAP task)."
+      },
+      "petmd_children": {
+        "value": "loud, rambunctious little kids might be too much",
+        "unit": "—",
+        "source_id": "S445",
+        "quote": "A home with loud, rambunctious little kids might be too much for these sensitive pups.",
+        "confidence": "medium",
+        "notes": "PetMD (S445); good with kids when 'the child and dog are introduced slowly' (fragment). Supports sensitive_older_children."
+      },
+      "petmd_grooming": {
+        "value": "weekly grooming check; won't need to be brushed often",
+        "unit": "—",
+        "source_id": "S445",
+        "quote": "Grooming your Whippet on a weekly basis",
+        "confidence": "medium",
+        "notes": "PetMD (S445), fragment; agrees with PDSA's weekly brush."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -42032,6 +42540,262 @@
         "confidence": "high",
         "notes": "Colours of the Kennel Club standard (S436) — blue (mottled / speckled, black, blue or tan head markings) and red speckle. Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): blue is the portrait default (the standard's first colour); standard colours only"
+      }
+    },
+    "whippet": {
+      "_note": "Unattended run M5-R10-54 (2026-10-21): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. One new register health key (mitral_valve_disease) and one new vocabulary key (sensitive_older_children). Sourced needs built from day one: weekly brushing (PDSA S444 'a weekly brush', M5-R13); puppy socialisation (PDSA S444 quote, M5-R17); the digestion warning after a meal (PDSA S444 'Remember to leave a gap between eating and exercising.', M5-R16). Sourced needs without a game mechanic: a coat in winter and thick soft bedding (PDSA S444) and off-lead running in a secure area (PDSA S444) → open for David (needs a new ROADMAP task). Exercise from PDSA (RKC page unreachable). Senior 121 from McMillan 2024 (S123, 13.4 y). No Breed Watch category fetched → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S444",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA 'Minimum exercise (per day): 1 hour' (S444); 'Your Whippet will need a minimum of an hour exercise every day.' RKC breed page not reachable → PDSA (runbook: RKC preferred, else PDSA). Rule: one number N ('minimum N') → N = 60.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S444 'Minimum exercise (per day): 1 hour'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S444",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 121
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 121 = round(0.75 × 13.4 y × 12) = round(120.6) = 121 (S11 + McMillan 2024 median 13.4 y via Dogs Trust S123). Alternative: 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S123"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 121 (0.75 × 13.4 y, McMillan 2024 via S123)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 121
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 121)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 51 (S35), tier 'Average' (40–54) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 51, Average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S444",
+        "quote": "Whippets have short fur, so a weekly brush is usually more than enough to keep it in good condition.",
+        "confidence": "high",
+        "notes": "whippet.suitability.pdsa_grooming. PDSA (S444) 'a weekly brush is usually more than enough' → 1 (runbook dog-grooming rule 'Once a week' → 1); PetMD (S445) 'Grooming your Whippet on a weekly basis' agrees. Soft brush (sensitive skin, S444). Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PDSA »a weekly brush«; PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S444",
+        "quote": "As long as you socialise your Whippet with other dogs from a young age they should be fine meeting them out and about.",
+        "confidence": "high",
+        "notes": "whippet.behaviour.socialisation (PDSA S444); PetMD (S445) agrees. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S444)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S444",
+        "quote": "Remember to leave a gap between eating and exercising.",
+        "confidence": "medium",
+        "notes": "PDSA (S444), feeding section (whippet.exercise.after_meals); PetMD (S445) names GDV (health.gdv). No length in the source. Built in M5-R16 (David 2026-10-12): 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "cold_weather_care": {
+        "value": "a coat in winter; thick, soft, snug bedding",
+        "unit": "weather / bedding care (sourced need)",
+        "source_id": "S444",
+        "quote": "your Whippet might need a coat over the winter months",
+        "confidence": "high",
+        "notes": "PDSA (S444), whippet.suitability.pdsa_cold_coat; PetMD (S445) 'generally don't do well in cold or wet weather'. The game has no weather, coat or bedding mechanic → open for David (needs a new ROADMAP task).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): plašček pozimi in debelo mehko ležišče; mehanike ni → potrebna nova naloga v ROADMAP (David)"
+      },
+      "off_lead_run": {
+        "value": "off-lead running and play in a secure area",
+        "unit": "exercise type (sourced need)",
+        "source_id": "S444",
+        "quote": "There should also be plenty of chance for your Whippet to run and play off-lead in a secure area.",
+        "confidence": "high",
+        "notes": "PDSA (S444), whippet.exercise.off_lead. The game counts steps only; a secure off-lead run is not modelled → open for David (needs a new ROADMAP task).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): tek brez povodca na varovanem prostoru; mehanike ni → potrebna nova naloga v ROADMAP (David)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-54); refs = JSON paths in this file. One new vocabulary key: sensitive_older_children (a sensitive, medium-sized dog — `older_children` names a small dog, `fragile_older_children` fragile bones, `not_for_small_children` a large dog). No percentages in the app.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S444"
+            ],
+            "refs": [
+              "whippet.suitability.pdsa_family",
+              "whippet.behaviour.family"
+            ],
+            "quote": "S444 'Whippets are a popular choice for families as they are so calm and gentle around children.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S444"
+            ],
+            "refs": [
+              "whippet.behaviour.family",
+              "whippet.suitability.pdsa_family"
+            ],
+            "quote": "S444 'Whippets are a popular choice for families as they are so calm and gentle around children.' (supervision caveat in notes)"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sensitive_older_children",
+            "source_ids": [
+              "S444",
+              "S445"
+            ],
+            "refs": [
+              "whippet.suitability.pdsa_children",
+              "whippet.suitability.petmd_children"
+            ],
+            "quote": "S444 'we'd recommend a home with slightly older children'; S445 'A home with loud, rambunctious little kids might be too much for these sensitive pups.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S444"
+            ],
+            "refs": [
+              "whippet.behaviour.time_alone",
+              "whippet.suitability.pdsa_company"
+            ],
+            "quote": "S444 'Like most dogs, Whippets dislike being left alone and can suffer with separation anxiety.'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S444"
+            ],
+            "refs": [
+              "whippet.behaviour.other_pets"
+            ],
+            "quote": "S444 'Whippets have a really high prey drive, so we wouldn’t recommend keeping them with smaller pets.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "PDSA recommends slightly older children; PetMD: loud little kids might be too much.",
+          "not_for_small_children": "No source advises against young children verbatim — older_children says it calmly (Pomeranian precedent).",
+          "active_family": "60 minutes a day (S444) — not a high-exercise statement.",
+          "long_daily_exercise": "60 minutes a day (S444).",
+          "large_home": "No RKC 'Size of home' (page unreachable).",
+          "apartment": "No RKC 'Flat/ Apartment' (page unreachable).",
+          "other_pets": "Really high prey drive (S444).",
+          "first_time_owner": "PDSA 'popular with first-time owners although training a Whippet can take some time!' — popularity, not a suitability statement.",
+          "often_alone": "Dislikes being left alone (S444).",
+          "sheds": "Sheds 'fairly minimal' (S444); PetMD 'doesn't shed very much'.",
+          "low_shedding": "Only from RKC 'Sheds: No' (precedent); the PDSA says the dog sheds.",
+          "frequent_grooming": "A weekly brush (S444).",
+          "shorter_lifespan": "PDSA 'Over 12 years' (S444); McMillan 13.4 y.",
+          "welfare": "No Breed Watch category fetched (RKC page unreachable), no welfare statement → no welfare chip; PRA, mitral valve disease, immune-mediated problems, GDV, von Willebrand disease and deafness are register health keys and breeder-checklist items only.",
+          "older_children": "The chip names a small dog; the Whippet is medium-sized (S444) → the new sensitive_older_children."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children; consider sensitive_older_children (nova oznaka po pravilu runbooka), needs_company, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S444",
+        "quote": "Whippets are a popular choice for families as they are so calm and gentle around children.",
+        "confidence": "medium",
+        "notes": "No Breed Watch category fetched (RKC page unreachable); no source names a conformation welfare problem and no veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92). Marketing never shows it as a dog for small children, for homes with small pets, or as a dog that can be left alone (S444).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Whippet, fawn short coat (default); balanced, muscular yet elegant sighthound with a graceful outline, deep chest and arched loin; long lean head tapering to the muzzle; small rose-shaped ears; oval bright eyes; long tapering tail without feathering; healthy lean condition, never emaciated; never merle",
+        "unit": "—",
+        "source_id": "S443",
+        "quote": "Any colour or mixture of colours, except merle.",
+        "confidence": "high",
+        "notes": "Colours of the Kennel Club standard (S443): any colour or mixture except merle. Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn is the portrait default (a common standard colour); standard colours only, never merle"
       }
     }
   }

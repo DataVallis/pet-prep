@@ -83,6 +83,7 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'pet:breedSuitability.consider.experienced_owner': 'chip of a dog breed only (Rottweiler, PDSA "powerful dog", M5-R10-19)',
   'pet:breedSuitability.consider.not_for_small_children': 'chip of a dog breed only (Cane Corso, PDSA "large dog", M5-R10-23)',
   'pet:breedSuitability.consider.older_children': 'chip of a dog breed only (Pomeranian, AKC "small dog", M5-R10-30)',
+  'pet:breedSuitability.consider.sensitive_older_children': 'chip of a dog breed only (Whippet, PDSA / PetMD "sensitive" dog, M5-R10-54)',
   'family:breeds.bernese_mountain_dog': 'the breed name itself contains "Dog" / "pes" (M5-R10-12)',
   // ── Names the species on purpose ──
   'family:species.dog': 'the species name "Dog" / "Pes"',

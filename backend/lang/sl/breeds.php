@@ -57,6 +57,7 @@ return [
     'newfoundland' => 'Novofundlandec',
     'dalmatian' => 'Dalmatinec',
     'australian_cattle_dog' => 'Avstralski govedar',
+    'whippet' => 'Mali angleški hrt',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
