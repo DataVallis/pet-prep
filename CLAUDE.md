@@ -49,6 +49,7 @@ Dev accounts come from `TestUsersSeeder` (`parent@test.com` / `child@test.com`, 
 5. Tick the task in `ROADMAP.md`, add a dated entry to `HANDOFF.md` (what changed, new debt, next step).
 6. Notable progress → entry in `docs/journey/BUILD_LOG.md` (Slovenian; raw material for social, investor, partner and parent content).
 7. Any user-visible feature added, changed, removed or verified on a device → update its row in `docs/product/FEATURES.md` (status, roadmap ID, date) in the same PR.
+8. **Technical docs gate passed** (Living documentation): every doc describing what changed is updated in this PR, and the PR description lists them under `Docs updated:`.
 
 ## Git
 - Branch from `main`: `feat/M1-07-child-actions`, `fix/M1-01-decay-rounding`, `chore/…`, `docs/…`.
@@ -60,6 +61,15 @@ Dev accounts come from `TestUsersSeeder` (`parent@test.com` / `child@test.com`, 
 - Never merge red CI, never force-push `main`, never merge with unresolved review blockers. Delete nothing in production data without David.
 
 ## Living documentation (mandatory — "za nazaj se ne bomo spomnili")
+> **⛔ Technical documentation gate — EVERY PR, NO EXCEPTIONS (David, 2026-10-21: "tehnična dokumentacija se obvezno skos posodablja, ob vsakem PR, obvezno").**
+> Code and its technical docs change in the **same PR**, never "later". Before opening a PR (and again before merging it):
+> 1. For every behaviour, rule, limit, constant, endpoint, token/session rule, table, job, flow or name you changed, **search the docs** (`grep -rn` in `docs/`, `HANDOFF.md`, every `CLAUDE.md`, `.claude/agents/`) for places that describe it, and fix every one that is now stale — `ARCHITECTURE.md`, `DIAGRAMS.md`, `PRODUCT_SPEC.md`, `DECISIONS.md`, `FEATURES.md`, `backend/CLAUDE.md` / `mobile/CLAUDE.md`, runbooks, audience docs. Bug fixes count: a fix changes behaviour, so its docs change too.
+> 2. The PR description ends with a **`Docs updated:`** list of the files changed, or `Docs: none affected — checked <what you searched>` when truly nothing describes the change.
+> 3. A PR whose docs still describe the old behaviour is **not done** and must not be merged; `qa-reviewer` treats stale docs as a blocker.
+> 4. After the merge, sync the changed `petprep/*.md` copies in the claude.ai Project.
+>
+> The Speed rules' "update only the docs whose content really changed" means *no churn* — it never means skipping a doc that is now wrong.
+
 Documentation is written **while** building, not afterwards. From it we will later produce technical docs, guides for parents and kids, investor and partner material, 2-pagers, decks and diagrams. Every PR updates, in the same PR:
 1. `docs/engineering/ARCHITECTURE.md` + `docs/engineering/DIAGRAMS.md` (Mermaid) when structure, data, API, events or flows change.
 2. `docs/product/DECISIONS.md` — one dated line per decision (who decided, what, why, link to PR). Product rules also go to `PRODUCT_SPEC.md`.
@@ -83,7 +93,7 @@ Do NOT build: AR, GPS maps, weather API, LLM/vision vet, B2B QR coupons. (Cats a
 - **QA review only where risk is real:** auth / sign-in, payments, deletion or export of data, child data / privacy, security, migrations on existing data, money / AI-cost logic. Everything else (UI, copy, small features, docs, breed runs) ships on tests + green CI. Where QA runs: **one round** — fix the blockers/majors, no second full review unless a blocker touched security.
 - **Parallel, not serial:** agree the API contract first, then backend and mobile agents work at the same time.
 - **Small PRs, merge as soon as CI is green;** bring the branch up to date with `main` right before CI, not after.
-- **Docs:** update only the docs whose content really changed (FEATURES for user-visible changes, DECISIONS for decisions, HANDOFF one short line). No doc churn for its own sake.
+- **Docs:** update only the docs whose content really changed (FEATURES for user-visible changes, DECISIONS for decisions, HANDOFF one short line). No doc churn for its own sake — but the **technical documentation gate** (Living documentation) applies to every PR without exception; speed never justifies stale docs.
 - Targets: small task (one screen / one fix) ≤ 45 min from request to merge; medium feature (backend + app) ≤ 2 h.
 
 ## Orchestration

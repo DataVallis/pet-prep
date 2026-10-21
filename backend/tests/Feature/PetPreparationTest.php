@@ -13,10 +13,13 @@ use App\Models\DevicePushToken;
 use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\PushNotification;
+use App\Models\QuietHours;
 use App\Models\User;
 use App\Services\ChallengeService;
 use App\Services\Media\PetMediaService;
 use App\Services\Media\PetPreparationService;
+use App\Services\NotificationService;
+use App\Services\Push\ExpoPushClient;
 use App\Services\Push\PushCopy;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -184,7 +187,7 @@ describe('readiness summary', function () {
         app('auth')->forgetGuards();
         $prep = $this->actingAs($child, 'sanctum')->getJson('/api/child/pet')->assertOk()->json('pet.preparation');
 
-        expect($prep)->toBe(['ready' => false, 'pending' => ['idle', 'sleeping'], 'preparing' => true, 'running' => true, 'ready_at' => null]);
+        expect($prep)->toBe(['ready' => false, 'pending' => ['idle', 'sleeping'], 'preparing' => true, 'running' => true, 'ready_at' => null, 'announce' => false]);
     });
 
     it('stops showing the set-up screen once the first-minutes clips are stored, and flips ready with the last item', function () {
@@ -247,7 +250,7 @@ describe('readiness summary', function () {
         expect($fresh->media_status)->toBe('disabled')
             ->and($fresh->preparation_started_at)->toBeNull()
             ->and(app(PetPreparationService::class)->summary($fresh)->toArray())
-            ->toBe(['ready' => true, 'pending' => [], 'preparing' => false, 'running' => false, 'ready_at' => null]);
+            ->toBe(['ready' => true, 'pending' => [], 'preparing' => false, 'running' => false, 'ready_at' => null, 'announce' => false]);
     });
 
     it('does not start a preparation when everything is already stored at birth (shared look ready)', function () {
@@ -278,7 +281,7 @@ describe('readiness summary', function () {
 });
 
 describe('the single "ready" news', function () {
-    it('announces once: one PetUpdated pet_ready and one push to the caretaker child (title = name, body without it, payload {type, pet_id})', function () {
+    it('announces once: one PetUpdated pet_ready and one push to the caretaker child and the parents (title = name, body without it, payload {type, pet_id})', function () {
         Queue::fake([SubmitPetStateVideo::class]);
         [$parent, $child, $pet] = ppFamily();
         ppStored($pet);
@@ -287,18 +290,21 @@ describe('the single "ready" news', function () {
         ppDevice($parent);
         ppStored($pet, 'idle');
         $last = ppRunning($pet, 'sleeping');
+        $this->travel(2)->minutes(); // the screen was seen
 
         Event::fake([PetUpdated::class]);
         Queue::fake([SendPushNotification::class]);
         ppStore($last);
 
         $fresh = $pet->fresh();
-        expect($fresh->preparation_ready_at)->not->toBeNull();
+        expect($fresh->preparation_ready_at)->not->toBeNull()
+            ->and(app(PetPreparationService::class)->summary($fresh)->announce)->toBeTrue();
         Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'pet_ready' && $e->petId === $pet->id);
         Event::assertDispatchedTimes(PetUpdated::class, 2); // video_ready + pet_ready
 
         $push = PushNotification::where('pet_id', $pet->id)->where('type', PushType::PetReady->value)->sole();
-        expect(collect($push->recipients)->pluck('user_id')->all())->toBe([$child->id])
+        expect(collect($push->recipients)->pluck('user_id')->sort()->values()->all())->toBe(collect([$child->id, $parent->id])->sort()->values()->all())
+            ->and(collect($push->recipients)->firstWhere('user_id', $parent->id)['audience'])->toBe(PushNotification::AUDIENCE_PARENT)
             ->and($push->status)->toBe(PushNotification::STATUS_QUEUED);
         Queue::assertPushed(SendPushNotification::class, 1);
 
@@ -310,14 +316,16 @@ describe('the single "ready" news', function () {
         expect(PushNotification::where('pet_id', $pet->id)->where('type', PushType::PetReady->value)->count())->toBe(1);
     });
 
-    it('sends the name as the title and a body without it; data has only {type, pet_id}', function () {
+    it('sends the name as the title and a neutral body without it (child + formal parent copy); data has only {type, pet_id}', function () {
         Queue::fake([SubmitPetStateVideo::class]);
-        [, $child, $pet] = ppFamily();
+        [$parent, $child, $pet] = ppFamily();
         ppStored($pet);
         ppSign($child);
         ppDevice($child);
+        ppDevice($parent);
         ppStored($pet, 'idle');
         $last = ppRunning($pet, 'sleeping');
+        $this->travel(2)->minutes();
 
         $sent = [];
         Http::fake([
@@ -332,15 +340,35 @@ describe('the single "ready" news', function () {
         ]);
         app(PetMediaService::class)->storeResult($last->id);
 
-        expect($sent)->toHaveCount(1)
-            ->and($sent[0]['title'])->toBe('Luna')
-            ->and($sent[0]['body'])->toBe(PushCopy::body(PushType::PetReady, null, 'child', 'sl'))
-            ->and($sent[0]['body'])->not->toContain('Luna')
-            ->and(array_keys($sent[0]['data']))->toEqualCanonicalizing(['type', 'pet_id'])
-            ->and($sent[0]['data']['type'])->toBe('pet_ready');
+        expect($sent)->toHaveCount(2);
+        $bodies = collect($sent)->pluck('body')->sort()->values()->all();
+        expect($bodies)->toBe(collect([PushCopy::body(PushType::PetReady, null, 'child', 'sl'), PushCopy::body(PushType::PetReady, null, 'parent', 'sl')])->sort()->values()->all());
+        foreach ($sent as $message) {
+            expect($message['title'])->toBe('Luna')
+                ->and($message['body'])->not->toContain('Luna')
+                ->and(array_keys($message['data']))->toEqualCanonicalizing(['type', 'pet_id'])
+                ->and($message['data']['type'])->toBe('pet_ready');
+        }
     });
 
-    it('sends no push for a preparation that ended long after it started (a failed clip retried the next day)', function () {
+    it('announces nothing for a preparation nobody could have seen (ended within seconds)', function () {
+        Queue::fake([SubmitPetStateVideo::class, SendPushNotification::class]);
+        [, $child, $pet] = ppFamily();
+        ppStored($pet);
+        ppSign($child);
+        ppStored($pet, 'idle');
+        ppStored($pet, 'sleeping');
+
+        Event::fake([PetUpdated::class]);
+        expect(app(PetPreparationService::class)->settle($pet->id))->toBeTrue();
+
+        expect($pet->fresh()->preparation_ready_at)->not->toBeNull()
+            ->and(app(PetPreparationService::class)->summary($pet->fresh())->announce)->toBeFalse();
+        Event::assertNotDispatched(PetUpdated::class);
+        expect(PushNotification::where('pet_id', $pet->id)->exists())->toBeFalse();
+    });
+
+    it('announces nothing for a preparation that ended long after it started (a failed clip retried the next day)', function () {
         Queue::fake([SubmitPetStateVideo::class, SendPushNotification::class]);
         [, $child, $pet] = ppFamily();
         ppStored($pet);
@@ -352,19 +380,99 @@ describe('the single "ready" news', function () {
         Event::fake([PetUpdated::class]);
         expect(app(PetPreparationService::class)->settle($pet->id))->toBeTrue();
 
-        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'pet_ready');
+        expect(app(PetPreparationService::class)->summary($pet->fresh())->announce)->toBeFalse();
+        Event::assertNotDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'pet_ready');
         expect(PushNotification::where('pet_id', $pet->id)->where('type', PushType::PetReady->value)->exists())->toBeFalse();
     });
 
-    it('has neutral texts in every language (no AI, no generation) and a cat text for a cat', function () {
+    it('drops the push over quiet hours (the in-app message still says it)', function () {
+        Queue::fake([SubmitPetStateVideo::class, SendPushNotification::class]);
+        [$parent, $child, $pet] = ppFamily();
+        QuietHours::where('family_id', $pet->family_id)->update(['is_active' => true]);
+        Carbon::setTestNow(Carbon::parse('2026-10-22 22:30', 'Europe/Ljubljana')->utc());
+        ppStored($pet);
+        ppSign($child);
+        ppStored($pet, 'idle');
+        ppStored($pet, 'sleeping');
+        $this->travel(2)->minutes();
+
+        expect(app(PetPreparationService::class)->settle($pet->id))->toBeTrue();
+
+        $push = PushNotification::where('pet_id', $pet->id)->where('type', PushType::PetReady->value)->sole();
+        expect($push->status)->toBe(PushNotification::STATUS_SUPPRESSED)
+            ->and($push->suppressed_reason)->toBe('quiet_hours');
+        Queue::assertNotPushed(SendPushNotification::class);
+    });
+
+    it('suppresses the push when the pet is locked at send time', function () {
+        Queue::fake([SubmitPetStateVideo::class]);
+        [, $child, $pet] = ppFamily();
+        ppStored($pet);
+        ppSign($child);
+        ppDevice($child);
+        ppStored($pet, 'idle');
+        ppStored($pet, 'sleeping');
+        $this->travel(2)->minutes();
+        Queue::fake([SendPushNotification::class]);
+        app(PetPreparationService::class)->settle($pet->id);
+        $push = PushNotification::where('pet_id', $pet->id)->where('type', PushType::PetReady->value)->sole();
+
+        Pet::whereKey($pet->id)->update(['is_hard_stopped' => true]);
+        app(NotificationService::class)->deliver($push->id, app(ExpoPushClient::class));
+
+        expect($push->fresh()->status)->toBe(PushNotification::STATUS_SUPPRESSED)
+            ->and($push->fresh()->suppressed_reason)->toBe('pet_locked');
+    });
+
+    it('two stores that both see "everything ready" announce once (row lock)', function () {
+        Queue::fake([SubmitPetStateVideo::class, SendPushNotification::class]);
+        [, $child, $pet] = ppFamily();
+        ppStored($pet);
+        ppSign($child);
+        $a = ppRunning($pet, 'idle');
+        $b = ppRunning($pet, 'sleeping');
+        $this->travel(2)->minutes();
+
+        Event::fake([PetUpdated::class]);
+        // Both files land before either settles (two workers): each settle then sees ready.
+        PetMedia::whereKey($a->id)->update(['status' => 'ready', 'storage_path' => "{$pet->id}/idle-g1.mp4"]);
+        PetMedia::whereKey($b->id)->update(['status' => 'ready', 'storage_path' => "{$pet->id}/sleeping-g1.mp4"]);
+        Storage::disk('pet_media')->put("{$pet->id}/idle-g1.mp4", 'x');
+        Storage::disk('pet_media')->put("{$pet->id}/sleeping-g1.mp4", 'x');
+        $service = app(PetPreparationService::class);
+
+        expect([$service->settle($pet->id), $service->settle($pet->id)])->toBe([true, false]);
+        Event::assertDispatchedTimes(PetUpdated::class, 1);
+        expect(PushNotification::where('pet_id', $pet->id)->where('type', PushType::PetReady->value)->count())->toBe(1);
+    });
+
+    it('begin() right after the last item was stored settles at once (never hangs as running)', function () {
+        Queue::fake([SubmitPetStateVideo::class, SendPushNotification::class]);
+        [, $child, $pet] = ppFamily();
+        ppStored($pet);
+        $pet->forceFill(['born_at' => now(), 'last_decay_at' => now()])->saveQuietly();
+        // Everything but one clip at birth → begin() starts; the clip lands in between.
+        ppStored($pet, 'idle');
+        $service = app(PetPreparationService::class);
+        expect($service->begin($pet->fresh()))->toBeTrue();
+        ppStored($pet, 'sleeping');
+        expect($service->settle($pet->id))->toBeTrue();
+
+        expect($pet->fresh()->preparation_ready_at)->not->toBeNull()
+            ->and($service->summary($pet->fresh())->running)->toBeFalse();
+    });
+
+    it('has neutral texts in every language and audience (no AI, no generation, no gender, no name)', function () {
         foreach (['en', 'sl'] as $locale) {
             foreach ([Species::Dog, Species::Cat] as $species) {
-                $body = PushCopy::body(PushType::PetReady, null, 'child', $locale, null, [], $species);
-                expect($body)->not->toBe('')
-                    ->and(mb_strtolower($body))->not->toMatch('/\b(ai|generat|ustvarj|video|slik)/u');
+                foreach (['child', 'parent'] as $audience) {
+                    $body = PushCopy::body(PushType::PetReady, null, $audience, $locale, null, [], $species);
+                    expect($body)->not->toBe('')
+                        ->and(mb_strtolower($body))->not->toMatch('/\b(ai|generat|ustvarj|video|slik)|pripravljen[a]?\b/u');
+                }
             }
         }
-        expect(PushCopy::body(PushType::PetReady, null, 'child', 'sl', null, [], Species::Cat))->toContain('muca');
+        expect(PushCopy::body(PushType::PetReady, null, 'parent', 'sl'))->toContain('vas');
     });
 
     it('settles a shared look link like a stored file (the look pipeline also announces once)', function () {
@@ -374,6 +482,7 @@ describe('the single "ready" news', function () {
         ppSign($child);
         ppStored($pet, 'idle');
         ppStored($pet, 'sleeping'); // e.g. linked from the look (same servable slot)
+        $this->travel(2)->minutes();
 
         Event::fake([PetUpdated::class]);
         expect(app(PetPreparationService::class)->settle($pet->id))->toBeTrue()
@@ -394,6 +503,36 @@ describe('the single "ready" news', function () {
             ->markPaid(Pet::whereKey($pet->id)->lockForUpdate()->first(), ChallengePaidSource::Purchase, now()));
 
         expect($pet->fresh()->preparation_started_at)->not->toBeNull();
+    });
+
+    it('QA M1: buying a long-born, playing, unlocked pet never starts a preparation', function () {
+        Queue::fake([SubmitPetStateVideo::class, SendPushNotification::class]);
+        [, , $pet] = ppFamily('mutt');
+        ppStored($pet);
+        ppStored($pet, 'idle');
+        ppStored($pet, 'sleeping');
+        // Born weeks ago, playing (pre-M3-13 trial: not locked), now bought → full set missing.
+        $pet->forceFill(['born_at' => now()->subWeeks(3), 'last_decay_at' => now(), 'plan' => 'challenge',
+            'trial_ends_at' => now()->addDay(), 'challenge_paid_at' => null, 'challenge_paid_source' => null, 'breed_type' => 'border_collie'])->saveQuietly();
+        expect($pet->fresh()->awaitsPayment())->toBeFalse();
+
+        Event::fake([PetUpdated::class]);
+        DB::transaction(fn () => app(ChallengeService::class)
+            ->markPaid(Pet::whereKey($pet->id)->lockForUpdate()->first(), ChallengePaidSource::Purchase, now()));
+
+        expect($pet->fresh()->preparation_started_at)->toBeNull()
+            ->and(app(PetPreparationService::class)->summary($pet->fresh())->preparing)->toBeFalse();
+        Event::assertNotDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->eventType === 'pet_ready');
+        expect(PushNotification::where('pet_id', $pet->id)->where('type', PushType::PetReady->value)->exists())->toBeFalse();
+    });
+
+    it('QA M1: a pet born before this release never starts a preparation', function () {
+        [, , $pet] = ppFamily('mutt');
+        ppStored($pet);
+        $pet->forceFill(['born_at' => Carbon::parse(PetPreparationService::SINCE)->subDay(), 'last_decay_at' => now()])->saveQuietly();
+
+        expect(app(PetPreparationService::class)->begin($pet->fresh(), PetPreparationService::BEGIN_PURCHASE))->toBeFalse()
+            ->and($pet->fresh()->preparation_started_at)->toBeNull();
     });
 });
 

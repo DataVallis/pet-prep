@@ -30,8 +30,8 @@ const DPT_FIXTURE = __DIR__.'/../Fixtures/dog_push_texts_snapshot.json';
 function dptRender(?Species $species): array
 {
     // M2-01d: `challenge_completed` (parents, species-neutral) is newer than the snapshot — ChallengeCertificateTest covers it.
-    // M5-T06: `pet_ready` is newer too — PetPreparationTest covers it.
-    $types = array_values(array_filter(PushType::cases(), fn (PushType $t): bool => ! in_array($t, [PushType::PlayReminder, PushType::LitterReminder, PushType::ChallengeCompleted, PushType::PetReady], true)));
+    // M5-T06: `pet_ready` is newer too — PetPreparationTest covers it. M5-T13: `pet_birthday` — PetBirthdayTest.
+    $types = array_values(array_filter(PushType::cases(), fn (PushType $t): bool => ! in_array($t, [PushType::PlayReminder, PushType::LitterReminder, PushType::ChallengeCompleted, PushType::PetReady, PushType::PetBirthday], true)));
     $metrics = [null, 'hunger', 'thirst', 'hygiene', 'energy', 'walk', 'no_trial'];
     $variants = [null, PushCopy::VARIANT_WAIT, PushCopy::VARIANT_CLEAN_FIRST, PushCopy::VARIANT_TIDY, PushCopy::VARIANT_CLEAN_AND_TIDY,
         // M5-R06-06b (David 2026-10-09): tidy first + the *_first_wait variants.

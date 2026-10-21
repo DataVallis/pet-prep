@@ -2,7 +2,9 @@
 
 namespace App\Services;
 
+use App\Models\BreedConfig;
 use App\Models\Pet;
+use App\Models\QuietHours;
 use App\Services\Results\StageRules;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
@@ -44,6 +46,11 @@ final class PetProfilePayload
         public readonly ?int $exerciseMinutes,
         public readonly ?array $sleepHours,
         public readonly bool $behaviourEnabled = false,
+        // M5-T05b: the breed config and quiet hours these rules were read from — not
+        // serialized; handed to CareGuidePayload so the guide neither re-queries them nor
+        // can read a different row than the profile in the same response.
+        public readonly ?BreedConfig $breedConfig = null,
+        public readonly ?QuietHours $quietHours = null,
     ) {}
 
     public static function for(Pet $pet, ?CarbonInterface $now = null): self
@@ -91,6 +98,8 @@ final class PetProfilePayload
             exerciseMinutes: $rules->exerciseMinutes,
             sleepHours: $rules->sleepHours !== null ? ['min' => $rules->sleepHours[0], 'max' => $rules->sleepHours[1]] : null,
             behaviourEnabled: $pet->behaviourEventsEnabled(),
+            breedConfig: $config,
+            quietHours: $quiet,
         );
     }
 

@@ -1,5 +1,5 @@
 /**
- * M5-T06: »[ime] je pripravljen!« is said once per pet on this device. Remembered per pet id
+ * M5-T06: »Vse je pripravljeno: [ime]« is said once per pet on this device. Remembered per pet id
  * (SecureStore, a short list of ids — no personal data). A failing store never repeats the
  * message on every start: an unreadable store counts as "already said".
  */
@@ -69,17 +69,18 @@ export function useReadyAnnouncement(
   const nowRef = useRef(nowMs);
   nowRef.current = nowMs;
   const readyAt = preparation.readyAt;
+  const news = preparation.announce;
 
   useEffect(() => {
-    if (petId === null || readyAt === null || locked) return;
+    if (petId === null || readyAt === null || !news || locked) return;
     let alive = true;
     void wasReadyAnnounced(petId).then(async (said) => {
-      if (!alive || !shouldAnnounceReady({ ...NO_PREPARATION, readyAt }, said, locked, nowRef.current())) return;
+      if (!alive || !shouldAnnounceReady({ ...NO_PREPARATION, readyAt, announce: news }, said, locked, nowRef.current())) return;
       await markReadyAnnounced(petId);
       if (alive) announceRef.current();
     });
     return () => {
       alive = false;
     };
-  }, [petId, readyAt, locked]);
+  }, [petId, readyAt, news, locked]);
 }

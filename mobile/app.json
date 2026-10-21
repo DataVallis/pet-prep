@@ -17,7 +17,7 @@
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
-        "NSHealthShareUsageDescription": "PetPrep reads only today's step count from Apple Health so your virtual dog gets its daily walk. Nothing else is read and nothing is written.",
+        "NSHealthShareUsageDescription": "PetPrep reads only today's step count from Apple Health (or, when a parent turns on Adapted mode, today's wheelchair push count) so your virtual dog gets its daily walk. Nothing else is read and nothing is written.",
         "NSMotionUsageDescription": "PetPrep counts your steps so your virtual dog gets its daily walk.",
         "NSAppTransportSecurity": {
           "NSAllowsArbitraryLoads": true,
@@ -37,7 +37,8 @@
       "predictiveBackGestureEnabled": false,
       "permissions": [
         "android.permission.ACTIVITY_RECOGNITION",
-        "android.permission.health.READ_STEPS"
+        "android.permission.health.READ_STEPS",
+        "android.permission.health.READ_WHEELCHAIR_PUSHES"
       ],
       "blockedPermissions": [
         "com.google.android.gms.permission.AD_ID"

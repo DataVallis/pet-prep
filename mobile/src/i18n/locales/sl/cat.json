@@ -103,6 +103,13 @@
         "successTitle": "Mehka in svetleča!",
         "success": "Muca je počesana. To česanje šteje za ta teden.",
         "failTitle": "To česanje ni štelo"
+      },
+      "brush": {
+        "holdHint": "Ne moreš potegniti s prstom? Pridrži prst na muci ali gumb spodaj.",
+        "bar": "Počesano: {{percent}} %",
+        "clean": "Vsa dlaka je počesana! Še trenutek …",
+        "action": "Počeši",
+        "holdA11yHint": "Pridrži za daljše česanje."
       }
     },
     "litter_change": {

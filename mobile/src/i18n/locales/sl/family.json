@@ -198,6 +198,14 @@
     "awaitingContract": "čaka na podpis pogodbe",
     "gameOver": "igra končana",
     "legacyEmail": "stari račun z e-pošto",
+    "adapted": {
+      "label": "Prilagojen način",
+      "hint": "Namesto korakov štejejo potiski invalidskega vozička (1 potisk = 1 korak). Cilji in ocena skrbi ostanejo enaki. Ne sprašujemo in ne shranjujemo, zakaj.",
+      "on": "Prilagojen način je vklopljen: sprehod šteje potiske vozička.",
+      "off": "Prilagojen način je izklopljen: sprehod šteje korake.",
+      "native": "Za potiske potrebuje otrokov telefon najnovejšo različico PetPrep (Zdravje z vklopljenim invalidskim vozičkom in Apple Watch ali Health Connect).",
+      "error": "Nastavitev ni shranjena. Poskusite znova."
+    },
     "newLoginPin": "Nova koda za prijavo",
     "firstPin": "Ustvari kodo",
     "revokeAll": "Odjavi vse naprave",

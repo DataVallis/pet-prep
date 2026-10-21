@@ -1,0 +1,27 @@
+{
+  "hatA11y": "Party hat. Open the birthday card",
+  "close": "Close",
+  "cakeLabel": "Birthday cake",
+  "tipLabel": "Did you know?",
+  "source": "Source: {{source}}",
+  "dog": {
+    "title": "Happy birthday, pup!",
+    "titleNamed": "Happy birthday, {{name}}!",
+    "age": "Your pup is 1 year old today.",
+    "ageNamed": "{{name}} is 1 year old today.",
+    "cake": "The cake is a dog-safe treat: no chocolate, no sweets.",
+    "tip": "Chocolate is poisonous to dogs. It contains theobromine, and the darker the chocolate, the more dangerous it is.",
+    "parentLine": "The dog turns 1 today.",
+    "parentLineNamed": "{{name}} turns 1 today."
+  },
+  "cat": {
+    "title": "Happy birthday, kitty!",
+    "titleNamed": "Happy birthday, {{name}}!",
+    "age": "Your kitty is 1 year old today.",
+    "ageNamed": "{{name}} is 1 year old today.",
+    "cake": "The cake is a cat-safe treat: no chocolate, no milk.",
+    "tip": "Milk is not a treat for a grown-up cat: adult cats can't digest it well, and it can upset their tummy. Chocolate is poisonous to cats too.",
+    "parentLine": "The kitty turns 1 today.",
+    "parentLineNamed": "{{name}} turns 1 today."
+  }
+}

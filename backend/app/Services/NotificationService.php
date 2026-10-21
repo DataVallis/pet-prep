@@ -237,14 +237,28 @@ class NotificationService
 
     /**
      * M5-T06 (APP_REFINEMENT_SPEC §13): the pet's preparation ended — one push
-     * to the caretaker children (title = the pet's name when set, body without
-     * it; payload {type, pet_id}). Called by PetPreparationService::settle()
+     * to the caretaker children and the family's parents (David 2026-10-21;
+     * title = the pet's name when set, body without it, gender-neutral; payload
+     * {type, pet_id}; held devices follow the usual shared-phone registration). Called by PetPreparationService::settle()
      * inside the transaction that marks the pet ready (queued after commit), so
      * it is decided once per pet (no type dedupe needed).
      */
     public function petReady(Pet $pet): ?PushNotification
     {
         return $this->escalation($pet, PushType::PetReady);
+    }
+
+    /**
+     * M5-T13 (APP_REFINEMENT_SPEC §9): the pet's first birthday — one push to
+     * the caretaker children and the parents (title = the pet's name when set,
+     * body without it; payload {type, pet_id}). Called by
+     * PetBirthdayService::celebrate() inside the transaction that marks the
+     * birthday (queued after commit), so it is decided once per pet. Held over
+     * quiet hours (due at the family-local midnight).
+     */
+    public function petBirthday(Pet $pet): ?PushNotification
+    {
+        return $this->escalation($pet, PushType::PetBirthday);
     }
 
     /** Minutes of outside-quiet time before a scoop deadline when the litter reminder is decided. */
@@ -449,6 +463,10 @@ class NotificationService
         }
         // M5-R06-06: the texts follow the pet's species (cat: push.cat.*).
         $copy['species'] = $pet->speciesValue();
+        // M5-T12: children in adapted mode get the walk reminder about pushes, not steps.
+        $copy['pushes_user_ids'] = $type === PushType::WalkReminder
+            ? User::whereIn('id', collect($notification->recipients)->pluck('user_id')->all())->where('adapted_mode', true)->pluck('id')->map(fn ($id): int => (int) $id)->all()
+            : [];
 
         $audience = collect($notification->recipients)
             ->mapWithKeys(fn (array $r): array => [(int) $r['user_id'] => (string) $r['audience']]);
@@ -571,8 +589,10 @@ class NotificationService
             PushType::TrialEnding => $parents(),
             // M2-01d: the parent generates the certificate / reads the report.
             PushType::ChallengeCompleted => $parents(),
-            // M5-T06: the child waits for the pet (the parent sees it in the app).
-            PushType::PetReady => $children(),
+            // M5-T06 (David 2026-10-21): the children and the family's parents (parent copy formal).
+            PushType::PetReady => $children()->concat($parents()),
+            // M5-T13: the whole family celebrates.
+            PushType::PetBirthday => $parents()->concat($children()),
         };
 
         return $list->unique('user_id')->values()->all();
@@ -590,8 +610,8 @@ class NotificationService
         }
         // M2-01d: once per certificate row (ChallengeCertificateService guards with
         // `notified_at`); two children of a shared pet may finish within minutes.
-        if ($type === PushType::ChallengeCompleted || $type === PushType::PetReady) {
-            return false; // M5-T06: once per pet (`pets.preparation_ready_at` is set once)
+        if ($type === PushType::ChallengeCompleted || $type === PushType::PetReady || $type === PushType::PetBirthday) {
+            return false; // M5-T06 / M5-T13: once per pet (`preparation_ready_at` / `birthday_celebrated_at` are set once)
         }
 
         $since = $type->isDailyReminder()
@@ -610,8 +630,8 @@ class NotificationService
      *  - walk reminder (and the cat's play reminder, M5-R06-04): not before
      *    PushTiming::walkReminderEarliest(); dropped when that is no longer
      *    the day it was decided on;
-     *  - quiet hours: illness / game over held until the stretch ends, the
-     *    rest dropped.
+     *  - quiet hours: illness / game over (lock news) and the birthday held
+     *    until the stretch ends, the rest dropped.
      *
      * @return array{0: 'send'|'defer'|'drop', 1: Carbon|null, 2: string|null}
      */
@@ -633,7 +653,7 @@ class NotificationService
         }
 
         if ($quietHours?->isQuietNow($now) ?? false) {
-            return $type->isLockNews()
+            return $type->holdsOverQuietHours()
                 ? ['defer', PushTiming::quietStretchEnd($quietHours, $now)->utc(), null]
                 : ['drop', null, 'quiet_hours'];
         }
@@ -838,7 +858,7 @@ class NotificationService
      *
      * @param  Collection<int, DevicePushToken>  $chunk
      * @param  Collection<int, string>  $audience  user id → audience
-     * @param  array{variant: string|null, replace: array<string, string>, species: Species, metric?: string}  $copy
+     * @param  array{variant: string|null, replace: array<string, string>, species: Species, metric?: string, pushes_user_ids?: list<int>}  $copy
      */
     private function sendChunk(PushNotification $notification, Collection $chunk, Collection $audience, ExpoPushClient $client, array $copy): void
     {
@@ -880,19 +900,23 @@ class NotificationService
     /**
      * One Expo message. data = {type, pet_id} only (third parties).
      *
-     * @param  array{variant: string|null, replace: array<string, string>, species: Species, metric?: string}  $copy
+     * @param  array{variant: string|null, replace: array<string, string>, species: Species, metric?: string, pushes_user_ids?: list<int>}  $copy
      * @return array<string, mixed>
      */
     private function message(PushNotification $notification, DevicePushToken $device, string $audience, array $copy): array
     {
         $type = $notification->type;
+        $variant = $copy['variant'];
+        if ($type === PushType::WalkReminder && in_array((int) $device->user_id, $copy['pushes_user_ids'] ?? [], true)) {
+            $variant = PushCopy::VARIANT_PUSHES;
+        }
 
         return [
             'to' => $device->expo_push_token,
             // M1-18: in this install's language (null → default).
             // David 2026-10-17: the pet's name as the title when set (else PetPrep).
             'title' => PushCopy::title($device->locale, $notification->pet?->name),
-            'body' => PushCopy::body($type, $copy['metric'] ?? $notification->metric, $audience, $device->locale, $copy['variant'], $copy['replace'], $copy['species']),
+            'body' => PushCopy::body($type, $copy['metric'] ?? $notification->metric, $audience, $device->locale, $variant, $copy['replace'], $copy['species']),
             'data' => [
                 'type' => $type->value,
                 'pet_id' => $notification->pet_id,

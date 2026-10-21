@@ -160,3 +160,86 @@ describe('first launch per pet', () => {
     await expect(markCareGuideSeen(7)).resolves.toBeUndefined();
   });
 });
+
+describe('parent wording (M5-T05b)', () => {
+  it('SL dog: formal »vi«, the child acts, same numbers and sections as the child guide', () => {
+    const guide = readCareGuide(puppy)!;
+    const child = careGuideSections(guide);
+    const parent = careGuideSections(guide, 'parent');
+    expect(parent.map((s) => s.key)).toEqual(child.map((s) => s.key));
+    expect(parent.map((s) => s.label)).toEqual(child.map((s) => s.label));
+    const p = Object.fromEntries(parent.map((s) => [s.key, s.lines.join(' ')]));
+    expect(p.food).toBe(
+      'Kuža dobi 4 obroke na dan. Vaš otrok ga nahrani v teh časih: 7:00–8:00, 15:00–16:00, 19:00–20:00. Obroke med tihimi urami prevzamete vi — aplikacija jih da samodejno: 11:00–12:00.',
+    );
+    expect(p.walk).toBe('Danes potrebuje 1.000 korakov sprehoda. Koraki vašega otroka mu dajo energijo.');
+    expect(p.takeOut).toBe('Mladiček zdrži približno 2 h. Prej ga mora otrok peljati ven s tipko »Pelji ven«.');
+    expect(p.difference).toContain('za to mora otrok vedno pritisniti »Pelji ven«');
+    expect(p.water).toContain('voda 60 % ali manj');
+    expect(p.digestion).toBe('Po obroku naj otrok počaka 1 h, preden gre na sprehod.');
+    expect(p.grooming).toBe('Otrok ga počeše 3-krat na teden.');
+    expect(p.sleep).toBe('Spi od 21:00 do 7:00 (vaše tihe ure). Takrat igra, šola, crkljanje in česanje počakajo do jutra. Spi tudi med šolskim oknom (8:00–13:00).');
+    expect(p.mess).toBe('Če naredi nered, ga mora otrok počistiti najkasneje v 2 h.');
+    // Never the child's informal »ti« imperatives.
+    expect(Object.values(p).join(' ')).not.toMatch(/(?<!\p{L})(Nahrani ga|dolij|Počeši ga|počakaj|ko si v šoli|pritisni)(?!\p{L})/u);
+    expect(careGuideTitle('dog', 'Luna', 'parent')).toBe('Kako skrbim za: ⁨Luna⁩');
+    expect(careGuideTitle('dog', null, 'parent')).toBe('Kako skrbim za kužka');
+  });
+
+  it('EN dog: "your child", same numbers', async () => {
+    await i18n.changeLanguage('en');
+    const p = Object.fromEntries(careGuideSections(readCareGuide(puppy)!, 'parent').map((s) => [s.key, s.lines.join(' ')]));
+    expect(p.food).toBe(
+      'The pup gets 4 meals a day. Your child feeds it at these times: 7:00–8:00, 15:00–16:00, 19:00–20:00. Meals during quiet hours are yours — the app gives them automatically: 11:00–12:00.',
+    );
+    expect(p.walk).toBe("Today it needs 1,000 steps of walking. Your child's steps give it energy.");
+    expect(p.takeOut).toBe('A puppy can hold it for about 2 h. Before that, your child has to press “Take out”.');
+    expect(p.grooming).toBe('Your child brushes it 3 times a week.');
+    expect(careGuideTitle('cat', 'Mici', 'parent')).toBe('How to care for ⁨Mici⁩');
+    expect(careGuideTitle('dog', null, 'parent')).toBe('How to care for the pup');
+  });
+
+  it('SL cat: muca, the child plays / scoops; no dog words', () => {
+    const parent = careGuideSections(readCareGuide(cat)!, 'parent');
+    const p = Object.fromEntries(parent.map((s) => [s.key, s.lines.join(' ')]));
+    expect(Object.keys(p)).toEqual(['food', 'water', 'play', 'litter', 'scratching', 'grooming', 'sleep', 'mess']);
+    expect(p.food).toBe('Muca dobi 2 obroka na dan. Vaš otrok jo nahrani v teh časih: 7:00–9:00, 17:00–19:00.');
+    expect(p.play).toBe('Otrok se z njo vsak dan 2-krat poigra s palico s peresom. Med igrama mine vsaj 2 h.');
+    expect(p.litter).toBe('Otrok pesek počisti v 4 h po uporabi, ves pesek pa zamenja vsakih 7 dni.');
+    expect(p.grooming).toBe('Otrok jo počeše enkrat na teden.');
+    expect(careGuideTitle('cat', null, 'parent')).toBe('Kako skrbim za muco');
+    expect(Object.values(p).join(' ')).not.toMatch(/kuža|kužk|pes\b/i);
+  });
+
+  it('EN cat: kitty, your child; no dog words', async () => {
+    await i18n.changeLanguage('en');
+    const p = Object.fromEntries(careGuideSections(readCareGuide(cat)!, 'parent').map((s) => [s.key, s.lines.join(' ')]));
+    expect(p.play).toBe('Your child plays with it with the feather wand 2 times a day, at least 2 h apart.');
+    expect(p.litter).toBe('Your child scoops the litter within 4 h after the kitty uses it and changes all of it every 7 days.');
+    expect(careGuideTitle('cat', null, 'parent')).toBe('How to care for the kitty');
+    expect(Object.values(p).join(' ')).not.toMatch(/\b(pup|dog|puppy)\b/i);
+  });
+});
+
+describe('M5-T12 adapted mode — the walk is described in wheelchair pushes', () => {
+  afterEach(async () => {
+    await i18n.changeLanguage('sl');
+  });
+
+  it('child and parent texts say "potiski" / "pushes"; the numbers stay the server goal', async () => {
+    const guide = readCareGuide(puppy)!;
+    await i18n.changeLanguage('sl');
+    const sl = Object.fromEntries(careGuideSections(guide, 'child', { pushes: true }).map((s) => [s.key, s.lines.join(' ')]));
+    expect(sl.walk).toBe('Danes potrebuje 1.000 potiskov vozička za sprehod. Potiski mu dajo energijo.');
+    expect(sl.difference).toContain('Potiski sprehoda');
+    const parentSl = Object.fromEntries(careGuideSections(guide, 'parent', { pushes: true }).map((s) => [s.key, s.lines.join(' ')]));
+    expect(parentSl.walk).toContain('potiskov vozička');
+
+    await i18n.changeLanguage('en');
+    const en = Object.fromEntries(careGuideSections(guide, 'child', { pushes: true }).map((s) => [s.key, s.lines.join(' ')]));
+    expect(en.walk).toBe('Today it needs 1,000 wheelchair pushes of walking. Pushes give it energy.');
+    // Without adapted mode: unchanged step texts.
+    const plain = Object.fromEntries(careGuideSections(guide).map((s) => [s.key, s.lines.join(' ')]));
+    expect(plain.walk).toContain('steps');
+  });
+});

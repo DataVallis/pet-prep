@@ -6,7 +6,8 @@
  * activity timeline of the child's pet (`/api/parent/activities?pet_id=`, paginated)
  * with the nicknames of the children who acted. M5-R04: the dog's stage and age
  * ("Mladiček · 3 mesece"), origin, next stage and today's meals — nothing for a
- * legacy pet. M5-R02: the puppy's bladder clock and open messes (luža, pregrizen copat)
+ * legacy pet. M5-T05b: »Kako skrbim za: [ime]« opens the child's care guide (same numbers)
+ * in the parent's wording. M5-R02: the puppy's bladder clock and open messes (luža, pregrizen copat)
  * with deadlines, missed cleans named by their mess, new timeline rows. M5-R03: "Šola" —
  * "Kuža zna: sedi ✓, pridi 60 % …", whether today's session is done, the training routine
  * in the totals (only for a pet with training). M5-F01: "12-week challenge — buy" on top
@@ -44,6 +45,7 @@ import { normalizePetMedia, toBreedType } from '@/modules/petMedia/petMedia';
 import { isSpecies } from '@/modules/species/species';
 import { reportSocialisationLine } from '@/modules/socialisation/socialisation';
 import { parentPreparationTitle, preparationBody, readPreparation } from '@/modules/preparation/preparation';
+import { parentBirthdayLine, readBirthday } from '@/modules/birthday/birthday';
 import PetMediaView from '@/components/PetMediaView';
 import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
 import CertificateCard from '@/components/parent/CertificateCard';
@@ -73,6 +75,8 @@ import {
 import { clockText, localParts } from '@/modules/childPet/familyTime';
 import { mealsLine, nextStageLine, originLine, readPetProfile, stageLine } from '@/modules/petProfile/petProfile';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
+import { careGuideTitle, readCareGuide } from '@/modules/careGuide/careGuide';
+import CareGuideSheet from '@/modules/careGuide/CareGuideSheet';
 import { PARENT_TRAINING_STRINGS, parentTrainingLines } from '@/modules/training/training';
 import { playKindOfActivity } from '@/modules/play/play';
 import { fonts, palette, tightTracking } from '@/theme';
@@ -87,8 +91,14 @@ export const CHILD_DETAIL_STRINGS = strings('parent', 'childDetail', {
   typeLine: (own: number, expected: number) => t('parent:childDetail.typeLine', { own, expected }),
   typeMissed: (n: number) => t('parent:childDetail.typeMissed', { n }),
   typePending: (n: number) => t('parent:childDetail.typePending', { n }),
-  walk: (steps: string, goal: string | null) =>
-    goal ? t('parent:childDetail.walkGoal', { steps, goal }) : t('parent:childDetail.walk', { steps }),
+  walk: (steps: string, goal: string | null, pushes = false) =>
+    pushes
+      ? goal
+        ? t('parent:childDetail.walkGoalPushes', { steps, goal })
+        : t('parent:childDetail.walkPushes', { steps })
+      : goal
+        ? t('parent:childDetail.walkGoal', { steps, goal })
+        : t('parent:childDetail.walk', { steps }),
   /** M5-R06-08b: "Igra 1/2" — the cat's wand games of the day. */
   playDay: (done: number, goal: number) => t('cat:parent.playDay', { done, goal }),
   illnessRow: (from: string, to: string | null) =>
@@ -198,9 +208,15 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
   const media = useMemo(() => (hasPet ? normalizePetMedia(petMediaRaw) : null), [hasPet, petMediaRaw]);
   const albumAvailable = media !== null && hasAlbum(media);
   const preparation = readPreparation((pet as { preparation?: unknown } | null)?.preparation);
+  // M5-T13: the pet's first birthday — one line on the day.
+  const birthday = readBirthday((pet as { birthday?: unknown } | null)?.birthday);
   const petProfileRaw: unknown = pet?.profile;
   const profile = useMemo(() => readPetProfile(petProfileRaw), [petProfileRaw]);
   const showAlbum = albumOpen && albumAvailable;
+  // M5-T05b: the child's care guide (same server numbers), worded for the parent; null from an older server.
+  const careGuideRaw: unknown = (pet as { care_guide?: unknown } | null)?.care_guide;
+  const careGuide = useMemo(() => readCareGuide(careGuideRaw), [careGuideRaw]);
+  const [careGuideOpen, setCareGuideOpen] = useState(false);
   const behaviourLines = pet ? parentBehaviourLines(pet.behaviour, family.timezone) : [];
   const trainingLines = pet ? parentTrainingLines(pet.training) : [];
   const trainingEnabled = pet?.training.enabled ?? false;
@@ -268,6 +284,11 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
               <Text style={styles.muted}>{preparationBody()}</Text>
             </View>
           )}
+          {pet !== null && birthday?.isToday === true && (
+            <View style={styles.preparing} testID="detail-pet-birthday" accessible accessibilityRole="text">
+              <Text style={styles.strong}>{parentBirthdayLine(pet.name, pet.species)}</Text>
+            </View>
+          )}
           {albumAvailable && (
             <Pressable
               onPress={() => setAlbumOpen(true)}
@@ -299,6 +320,18 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
                   </Text>
                 ))}
             </Card>
+          )}
+
+          {careGuide !== null && pet !== null && (
+            <Pressable
+              onPress={() => setCareGuideOpen(true)}
+              accessibilityRole="button"
+              accessibilityHint={t('careGuide:parent.openHint')}
+              testID="detail-care-guide-open"
+              style={({ pressed }) => [styles.moreButton, pressed && styles.pressed]}
+            >
+              <Text style={styles.moreText}>{careGuideTitle(careGuide.species, pet.name, 'parent')}</Text>
+            </Pressable>
           )}
 
           {isCat && (
@@ -439,7 +472,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
                       </Text>
                     ) : (
                       <Text style={[styles.muted, styles.flex, styles.right]}>
-                        {S.walk(formatSteps(d.walk_steps), d.walk_goal === null ? null : formatSteps(d.walk_goal))}
+                        {S.walk(formatSteps(d.walk_steps), d.walk_goal === null ? null : formatSteps(d.walk_goal), d.walk_unit === 'pushes')}
                       </Text>
                     )}
                     {(isCat ? d.play_done : d.walk_done) === true && <Check color={C.green} size={14} />}
@@ -493,6 +526,18 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
           timeZone={family.timezone}
           onGrowthExpired={onGrowthExpired}
           testID="detail-album"
+        />
+      )}
+      {/* M5-T05b: the same care-guide sheet the child sees, worded for the parent (»vi«). */}
+      {careGuide !== null && (
+        <CareGuideSheet
+          visible={careGuideOpen && !showAlbum}
+          guide={careGuide}
+          petName={pet?.name ?? null}
+          audience="parent"
+          pushes={child.adapted_mode}
+          onClose={() => setCareGuideOpen(false)}
+          testID="detail-care-guide"
         />
       )}
     </View>

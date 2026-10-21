@@ -8,6 +8,10 @@
  *
  * Cat wording: »muca« / "kitty" + "it" (`careGuide:cat.*`); dog: »kuža« / "pup" (`careGuide:dog.*`).
  * The pet's name is only used in the title (a label, M5-R08) — never inside a sentence.
+ *
+ * M5-T05b audience: the parent app shows the same guide (same server block, same numbers, same
+ * sections) worded for the parent — formal »vi« in Slovenian, the child as the one who acts
+ * (`careGuide:parent.dog.*` / `careGuide:parent.cat.*`). Only the wording differs.
  */
 
 import { t } from '@/i18n';
@@ -49,6 +53,9 @@ export type CareGuideSectionKey =
   | 'grooming'
   | 'sleep'
   | 'mess';
+
+/** Who reads the guide: the child (HUD, »ti«) or a parent (child / pet detail, »vi«). */
+export type CareGuideAudience = 'child' | 'parent';
 
 export interface CareGuideSection {
   key: CareGuideSectionKey;
@@ -141,20 +148,32 @@ function steps(n: number): string {
   return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, t('common:format.thousands'));
 }
 
-/** The card title: the pet's name (a label) or the species noun when it has none. */
-export function careGuideTitle(species: Species, name: string | null): string {
-  if (name) return t('careGuide:titleNamed', { name: isolatePetName(name) });
-  return species === 'cat' ? t('careGuide:cat.title') : t('careGuide:dog.title');
+/** Key prefix of the audience's texts (`careGuide:` for the child, `careGuide:parent.` for a parent). */
+function prefix(audience: CareGuideAudience): string {
+  return audience === 'parent' ? 'careGuide:parent.' : 'careGuide:';
+}
+
+/** The card title (also the parent's button): the pet's name (a label) or the species noun when it has none. */
+export function careGuideTitle(species: Species, name: string | null, audience: CareGuideAudience = 'child'): string {
+  const p = prefix(audience);
+  if (name) return t(`${p}titleNamed` as 'careGuide:titleNamed', { name: isolatePetName(name) });
+  return species === 'cat' ? t(`${p}cat.title` as 'careGuide:cat.title') : t(`${p}dog.title` as 'careGuide:dog.title');
 }
 
 /**
  * The guide as sections in reading order (screen readers follow it top to bottom). Only the
  * rules that apply to this pet appear (no take-out for an older dog, no steps for a cat …).
  */
-export function careGuideSections(guide: CareGuide): CareGuideSection[] {
-  const ns = guide.species === 'cat' ? 'cat' : 'dog';
+export function careGuideSections(
+  guide: CareGuide,
+  audience: CareGuideAudience = 'child',
+  /** M5-T12: the child's adapted mode — the walk is counted in wheelchair pushes. */
+  options: { pushes?: boolean } = {},
+): CareGuideSection[] {
+  const pushes = options.pushes === true;
+  const ns = `${prefix(audience)}${guide.species === 'cat' ? 'cat' : 'dog'}`;
   const tr = (key: string, options?: Record<string, unknown>): string =>
-    (t as unknown as (k: string, o?: Record<string, unknown>) => string)(`careGuide:${ns}.${key}`, options);
+    (t as unknown as (k: string, o?: Record<string, unknown>) => string)(`${ns}.${key}`, options);
   const label = (key: CareGuideSectionKey): string => t(`careGuide:labels.${key}`);
   const out: CareGuideSection[] = [];
 
@@ -180,11 +199,13 @@ export function careGuideSections(guide: CareGuide): CareGuideSection[] {
   }
 
   if (guide.species === 'dog') {
-    if (guide.steps) out.push({ key: 'walk', label: label('walk'), lines: [tr('walk', { steps: steps(guide.steps.goal) })] });
+    if (guide.steps) {
+      out.push({ key: 'walk', label: label('walk'), lines: [tr(pushes ? 'walkPushes' : 'walk', { steps: steps(guide.steps.goal) })] });
+    }
     if (guide.take_out) {
       out.push({ key: 'takeOut', label: label('takeOut'), lines: [tr('takeOut', { hours: hours(guide.take_out.hold_hours) })] });
       // David 2026-10-20: steps never resolve the potty need — »Pelji ven« is its own button.
-      out.push({ key: 'difference', label: label('difference'), lines: [tr('difference')] });
+      out.push({ key: 'difference', label: label('difference'), lines: [tr(pushes ? 'differencePushes' : 'difference')] });
     }
     if (guide.digestion_gap_minutes !== null) {
       out.push({ key: 'digestion', label: label('digestion'), lines: [tr('digestion', { minutes: duration(guide.digestion_gap_minutes) })] });

@@ -6,6 +6,7 @@ use App\Exceptions\AccountDeletionException;
 use App\Exceptions\FamilyException;
 use App\Http\Requests\ConfirmDeletionRequest;
 use App\Http\Requests\CreateChildRequest;
+use App\Http\Requests\UpdateChildSettingsRequest;
 use App\Models\User;
 use App\Services\AccountDeletionService;
 use App\Services\ChildProfileService;
@@ -45,8 +46,43 @@ class ChildProfileController extends Controller
                 'family_id' => $child->family?->id,
                 'pet_id' => null,
                 'devices' => 0,
+                // M5-T12: a new profile starts without adapted mode.
+                'adapted_mode' => false,
             ],
         ], 201);
+    }
+
+    /**
+     * Parent-only settings of a child profile (M5-T12): `{"adapted_mode": bool}` —
+     * »Prilagojen način«, the child's walk counts wheelchair pushes instead of steps
+     * (1 : 1; goals, points and the Care Score stay the same). Accessibility, not a
+     * diagnosis: no reason is asked for or stored. A change broadcasts
+     * `adapted_mode_changed` on the child's active pet. 200 `{child_id, adapted_mode}`;
+     * 404 `child_not_found` for a child outside the family; child token → 403.
+     *
+     * PATCH /api/parent/children/{child}/settings
+     */
+    public function updateSettings(UpdateChildSettingsRequest $request, string $child): JsonResponse
+    {
+        /** @var User $parent */
+        $parent = $request->user();
+
+        $profile = $this->profiles->childOfParentFamily($parent, $child);
+        if ($profile === null || ! $parent->can('manageChild', $profile)) {
+            return response()->json(['message' => 'No such child in your family.', 'reason' => 'child_not_found'], 404);
+        }
+
+        $updated = $this->profiles->setAdaptedMode($profile, $request->adaptedMode());
+
+        return response()->json([
+            'child_id' => $updated->id,
+            /**
+             * M5-T12: true = the walk counts wheelchair pushes (1 push = 1 step).
+             *
+             * @var bool
+             */
+            'adapted_mode' => (bool) $updated->adapted_mode,
+        ], 200);
     }
 
     /**

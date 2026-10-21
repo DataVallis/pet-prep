@@ -23,6 +23,7 @@ import type { LockState } from '@/store/appStore';
 import { familyCalendar, localParts } from '@/modules/childPet/familyTime';
 import { normalizePetMedia, type PetMediaInfo } from '@/modules/petMedia/petMedia';
 import { readPreparation, type PetPreparation } from '@/modules/preparation/preparation';
+import { readBirthday, type PetBirthday } from '@/modules/birthday/birthday';
 import { readPetProfile, type PetProfileInfo } from '@/modules/petProfile/petProfile';
 import {
   afterClean,
@@ -111,6 +112,8 @@ export interface ChildPetView {
     media: PetMediaInfo;
     /** M5-T06: is the pet ready / still being prepared (never says how). Older server → ready. */
     preparation: PetPreparation;
+    /** M5-T13: the pet's first birthday (null: none in the simulation, or an older server). */
+    birthday: PetBirthday | null;
     /** M5-R01 profile (stage, age, origin, next stage); null for a legacy pet. */
     profile: PetProfileInfo | null;
     /** M3-11 / M3-13: free mutt sandbox or the challenge (payment_required / paid; trial = a pre-M3-13 trial); legacy → paid. */
@@ -165,7 +168,8 @@ export interface ChildPetView {
     can_water: boolean;
     next_allowed_at: string | null;
   };
-  steps: { steps_today: number; my_steps_today: number; goal: number; energy_level: number };
+  /** `adapted_mode` (M5-T12): this child counts wheelchair pushes instead of steps (1 : 1). */
+  steps: { steps_today: number; my_steps_today: number; goal: number; energy_level: number; adapted_mode: boolean };
   contract: { signed: boolean; signed_at: string | null };
   /**
    * M5-R02 behaviour events: puppy bladder clock, open messes, behaviour scene and what
@@ -336,6 +340,7 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
         media_status: p.media_status,
       }),
       preparation: readPreparation((p as { preparation?: unknown }).preparation),
+      birthday: readBirthday((p as { birthday?: unknown }).birthday),
       profile: readPetProfile(p.profile),
     },
     lock: {
@@ -375,6 +380,8 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
       my_steps_today: num(raw.steps.my_steps_today),
       goal: num(raw.steps.goal),
       energy_level: num(raw.steps.energy_level),
+      // M5-T12: older servers send nothing → steps.
+      adapted_mode: (raw.steps as { adapted_mode?: unknown }).adapted_mode === true,
     },
     contract: { signed: bool(raw.contract.signed), signed_at: isoOrNull(raw.contract.signed_at) },
     // Older servers send no `behaviour` (typed as required by the current schema).
@@ -492,6 +499,8 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
     media: b.media ? normalizePetMedia(b.media) : view.pet.media,
     // M5-T06: every current broadcast carries the summary; an older server's doesn't.
     preparation: b.preparation !== undefined ? readPreparation(b.preparation) : view.pet.preparation,
+    // M5-T13: every current broadcast carries it (null = none); an older server's doesn't.
+    birthday: b.birthday !== undefined ? readBirthday(b.birthday) : view.pet.birthday,
   };
   const lock = lockFromFlags(pet, view.lock);
   const blocked = lock.is_locked || pet.needs_cleaning;

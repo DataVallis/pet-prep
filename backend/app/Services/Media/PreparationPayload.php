@@ -22,6 +22,7 @@ final class PreparationPayload
         public readonly bool $preparing,
         public readonly bool $running,
         public readonly ?string $readyAt,
+        public readonly bool $announce = false,
     ) {}
 
     /**
@@ -33,7 +34,7 @@ final class PreparationPayload
     }
 
     /**
-     * @return array{ready: bool, pending: list<string>, preparing: bool, running: bool, ready_at: string|null}
+     * @return array{ready: bool, pending: list<string>, preparing: bool, running: bool, ready_at: string|null, announce: bool}
      */
     public function toArray(): array
     {
@@ -53,12 +54,15 @@ final class PreparationPayload
             // hungry) is still on its way (never for a failed item).
             'preparing' => $this->preparing,
             // The pet's preparation runs (started at birth / purchase, not finished). Goes
-            // true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+            // true → false exactly once, with `ready` true (news: see `announce`)
             // (PetUpdated `pet_ready` + one push to the caretaker children).
             'running' => $this->running,
             // When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
-            // The child app says »[ime] je pripravljen!« once per pet when it sees this.
             'ready_at' => $this->readyAt,
+            // The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+            // ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+            // once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+            'announce' => $this->announce,
         ];
     }
 }

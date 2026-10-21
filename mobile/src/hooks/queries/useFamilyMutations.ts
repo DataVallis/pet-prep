@@ -12,6 +12,7 @@ import {
   type DeleteChildResponse,
   type DeletionProof,
   type RevokeChildTokensResponse,
+  type UpdateChildSettingsResponse,
 } from '@/api/client';
 import { parentDashboardKey } from '@/hooks/queries/useParentDashboard';
 import { deleteConfirmWord } from '@/modules/account/account';
@@ -46,5 +47,19 @@ export function useRevokeChildDevices() {
     mutationFn: (childId) => api.revokeChildTokens(childId),
     retry: false,
     onSuccess: () => queryClient.invalidateQueries({ queryKey: parentDashboardKey }),
+  });
+}
+
+/**
+ * M5-T12: switch a child's »Prilagojen način« (wheelchair pushes instead of steps). Only the
+ * boolean goes to the server. Refreshes the family afterwards (also after a failure: the
+ * switch may have been stored without an answer).
+ */
+export function useSetAdaptedMode() {
+  const queryClient = useQueryClient();
+  return useMutation<UpdateChildSettingsResponse, unknown, { childId: number; adaptedMode: boolean }>({
+    mutationFn: ({ childId, adaptedMode }) => api.updateChildSettings(childId, { adapted_mode: adaptedMode }),
+    retry: false,
+    onSettled: () => queryClient.invalidateQueries({ queryKey: parentDashboardKey }),
   });
 }

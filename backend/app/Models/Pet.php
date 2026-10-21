@@ -292,6 +292,9 @@ class Pet extends Model
         // M5-T06 bookkeeping (the apps get PreparationPayload instead).
         'preparation_started_at',
         'preparation_ready_at',
+        // M5-T13 bookkeeping (the apps get BirthdayPayload instead).
+        'birthday_celebrated_at',
+        'birthday_next_check_at',
     ];
 
     /**
@@ -348,6 +351,8 @@ class Pet extends Model
             'certificate_next_check_at' => 'datetime',
             'preparation_started_at' => 'datetime',
             'preparation_ready_at' => 'datetime',
+            'birthday_celebrated_at' => 'datetime',
+            'birthday_next_check_at' => 'datetime',
         ];
     }
 

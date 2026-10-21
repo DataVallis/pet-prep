@@ -18,6 +18,12 @@
  * the family midnight, so a device in another zone must count from that midnight too.
  * A cached server count from an earlier family day (midnight passed while the app was in
  * the background) is never credited to today.
+ *
+ * Adapted mode (M5-T12, the parent's »Prilagojen način»): the source is the health store's
+ * WHEELCHAIR PUSHES (HealthKit push count / Health Connect WheelchairPushes — its own read
+ * permission) and nothing else: no motion sensor, no live counter (the phone's step
+ * sensor would mix steps into pushes). The total goes to the server as `steps_today` with
+ * `unit: pushes` (1 push = 1 step). Switching the mode re-checks the health access.
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -29,7 +35,7 @@ import { useSyncSteps } from '@/hooks/queries/useChildActions';
 import { familyCalendar } from '@/modules/childPet/familyTime';
 import { registerStepSyncTask } from '@/modules/steps/backgroundSteps';
 import { getHealthAdapter } from '@/modules/steps/health/healthAdapter';
-import type { HealthSource, HealthStepsAdapter } from '@/modules/steps/health/types';
+import type { HealthMeasure, HealthSource, HealthStepsAdapter } from '@/modules/steps/health/types';
 import {
   createDeltaTracker,
   isoWithOffset,
@@ -63,6 +69,8 @@ export interface StepSyncDeps {
   now: () => Date;
   /** Apple Health / Health Connect, or null (none on this device / build). */
   health: HealthStepsAdapter | null;
+  /** M5-T12: the same store's wheelchair-push adapter (adapted mode), or null. */
+  pushesHealth: HealthStepsAdapter | null;
   /** Best-effort background sync registration (iOS). */
   registerBackground: () => Promise<boolean>;
   /** M2-11: the shared-phone step windows (`activeWindows.ts`). */
@@ -75,6 +83,7 @@ const defaultDeps = (): StepSyncDeps => ({
   storage: SecureStore,
   now: () => new Date(),
   health: getHealthAdapter(),
+  pushesHealth: getHealthAdapter('pushes'),
   registerBackground: registerStepSyncTask,
   stepWindows: () => loadStepWindows(),
 });
@@ -88,6 +97,8 @@ interface Options {
   serverTime: string | null;
   /** `state.timezone` — the family's IANA zone. */
   timezone: string | null;
+  /** M5-T12 `state.steps.adapted_mode`: count wheelchair pushes from the health store only. */
+  adaptedMode?: boolean;
   deps?: Partial<StepSyncDeps>;
 }
 
@@ -95,6 +106,8 @@ export interface StepHealth {
   status: HealthStatus;
   /** Which store this device has (null = none). */
   source: HealthSource | null;
+  /** M5-T12: what is read — steps, or wheelchair pushes in adapted mode. */
+  measure: HealthMeasure;
   /** Show the system sheet for step READ access (pre-permission card button). */
   connect: () => Promise<void>;
   /** Health Connect app (Android) / the app's Settings page (iOS) — retry after a refusal. */
@@ -113,6 +126,8 @@ export interface StepSync {
   isSyncing: boolean;
   /** True when at least one source can be read (sensor granted or health connected). */
   canSync: boolean;
+  /** M5-T12: adapted mode — health pushes are the only source (no motion sensor UI). */
+  adaptedMode: boolean;
   health: StepHealth;
 }
 
@@ -128,16 +143,24 @@ async function healthStatusOf(health: HealthStepsAdapter | null): Promise<Health
   return health.access();
 }
 
-export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps: depsOverride }: Options): StepSync {
+export function useStepSync({ enabled, myStepsToday, serverTime, timezone, adaptedMode = false, deps: depsOverride }: Options): StepSync {
   const depsRef = useRef<StepSyncDeps | null>(null) as { current: StepSyncDeps };
   depsRef.current ??= { ...defaultDeps(), ...depsOverride };
+  // M5-T12: which health adapter is current (steps, or wheelchair pushes in adapted mode).
+  const adaptedRef = useRef(adaptedMode);
+  adaptedRef.current = adaptedMode;
+  const currentHealth = useCallback(
+    (): HealthStepsAdapter | null => (adaptedRef.current ? depsRef.current.pushesHealth : depsRef.current.health),
+    [],
+  );
   const userId = useAppStore((s) => s.user?.id ?? null);
   const [permission, setPermission] = useState<StepPermission>('checking');
   const [healthStatus, setHealthStatus] = useState<HealthStatus>('checking');
   const { mutateAsync, isPending } = useSyncSteps();
 
   const healthConnected = healthStatus === 'connected';
-  const canSync = permission === 'granted' || healthConnected;
+  // Adapted mode: the motion sensor never counts (it counts steps, not pushes).
+  const canSync = (!adaptedMode && permission === 'granted') || healthConnected;
 
   const calendar = useMemo(() => familyCalendar(timezone, serverTime), [timezone, serverTime]);
   const calendarRef = useRef(calendar);
@@ -190,15 +213,22 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
   // the child / a parent may have changed it in Health Connect or Settings meanwhile.
   const refreshHealth = useCallback(async () => {
     try {
-      setHealthStatus(await healthStatusOf(depsRef.current.health));
+      setHealthStatus(await healthStatusOf(currentHealth()));
     } catch {
       setHealthStatus('unavailable');
     }
-  }, []);
+  }, [currentHealth]);
+  // M5-T12: a mode switch is another data type with its own permission → forget the old
+  // status (never sync pushes on the steps answer); re-enabling alone keeps it (no extra sync).
+  const checkedModeRef = useRef(adaptedMode);
   useEffect(() => {
     if (!enabled) return;
+    if (checkedModeRef.current !== adaptedMode) {
+      checkedModeRef.current = adaptedMode;
+      setHealthStatus('checking');
+    }
     void refreshHealth();
-  }, [enabled, refreshHealth]);
+  }, [enabled, adaptedMode, refreshHealth]);
 
   // 1c. iOS: once Apple Health is connected, let iOS wake us now and then (best effort).
   useEffect(() => {
@@ -218,9 +248,11 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
   permissionRef.current = permission;
 
   const readToday = useCallback(async (at: Date) => {
-    const { platform, pedometer, health, stepWindows } = depsRef.current;
+    const { platform, pedometer, stepWindows } = depsRef.current;
+    const health = currentHealth();
     const cal = calendarRef.current;
-    const sensorGranted = permissionRef.current === 'granted';
+    // M5-T12: in adapted mode only the health store's pushes count.
+    const sensorGranted = permissionRef.current === 'granted' && !adaptedRef.current;
     const counter = counterRef.current;
     if (platform === 'android' && counter) {
       const server = serverRef.current;
@@ -244,7 +276,7 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
       return readStepsInRanges(sources, windowsInRange(windows, dayStart, at));
     }
     return readTodaySteps(sources, dayStart, at);
-  }, []);
+  }, [currentHealth]);
 
   const runSync = useCallback(
     async (force: boolean) => {
@@ -257,7 +289,13 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
         const reading = await readToday(at);
         const today = calendarRef.current.dateOf(at.getTime());
         if (reading === null || reading.steps <= serverStepsOn(today)) return;
-        await mutateAsync({ stepsToday: reading.steps, recordedAt: isoWithOffset(at), source: reading.source });
+        const pushes = adaptedRef.current && reading.source !== 'pedometer';
+        await mutateAsync({
+          stepsToday: reading.steps,
+          recordedAt: isoWithOffset(at),
+          source: reading.source,
+          ...(pushes ? { unit: 'pushes' as const } : {}),
+        });
         const counter = counterRef.current;
         const owner = counterOwnerRef.current;
         if (counter && owner !== null) persistIfSignedIn(counter, owner);
@@ -279,7 +317,7 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
   // 2. Android: live counter while the app is open, per child, family day.
   useEffect(() => {
     const { platform, pedometer, storage, now } = depsRef.current;
-    if (!enabled || permission !== 'granted' || platform !== 'android' || userId === null) return;
+    if (!enabled || adaptedMode || permission !== 'granted' || platform !== 'android' || userId === null) return;
     const dayKey = (date: Date) => calendarRef.current.dateOf(date.getTime());
     const counter = new LiveStepCounter(storage, liveStepsKey(userId), dayKey, now());
     counterRef.current = counter;
@@ -306,7 +344,7 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
         counterOwnerRef.current = null;
       }
     };
-  }, [enabled, permission, userId, persistIfSignedIn]);
+  }, [enabled, adaptedMode, permission, userId, persistIfSignedIn]);
 
   // 3. Triggers: now, on foreground, every 5 minutes (automatic → throttled).
   useEffect(() => {
@@ -332,12 +370,12 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
 
   // 3b. Foreground: re-check Health access (changed in Health Connect / Settings).
   useEffect(() => {
-    if (!enabled || depsRef.current.health === null) return;
+    if (!enabled || currentHealth() === null) return;
     const subscription = AppState.addEventListener('change', (state: AppStateStatus) => {
       if (state === 'active') void refreshHealth();
     });
     return () => subscription.remove();
-  }, [enabled, refreshHealth]);
+  }, [enabled, adaptedMode, currentHealth, refreshHealth]);
 
   const requestPermission = useCallback(async () => {
     try {
@@ -349,7 +387,8 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
   }, []);
 
   const connect = useCallback(async () => {
-    const { health, platform } = depsRef.current;
+    const { platform } = depsRef.current;
+    const health = currentHealth();
     if (health === null) return;
     try {
       setHealthStatus(await health.requestAccess());
@@ -358,30 +397,32 @@ export function useStepSync({ enabled, myStepsToday, serverTime, timezone, deps:
     }
     // iOS hides a denied Health read (it returns 0 steps): ask for the motion sensor too,
     // right after the Health sheet, so the max-merge always has a real second source.
-    if (platform === 'ios' && permissionRef.current === 'undetermined') await requestPermission();
-  }, [refreshHealth, requestPermission]);
+    // M5-T12: not in adapted mode — the sensor counts steps, never pushes.
+    if (platform === 'ios' && !adaptedRef.current && permissionRef.current === 'undetermined') await requestPermission();
+  }, [currentHealth, refreshHealth, requestPermission]);
 
   const openSettings = useCallback(async () => {
     try {
-      await depsRef.current.health?.openSettings();
+      await currentHealth()?.openSettings();
     } catch {
       // Nothing to open on this device.
     }
-  }, []);
+  }, [currentHealth]);
 
   const openStore = useCallback(async () => {
     try {
-      await depsRef.current.health?.openStore();
+      await currentHealth()?.openStore();
     } catch {
       // No store app (e.g. a phone without Google Play).
     }
-  }, []);
+  }, [currentHealth]);
 
-  const healthSource = depsRef.current.health?.source ?? null;
+  const healthSource = (adaptedMode ? depsRef.current.pushesHealth : depsRef.current.health)?.source ?? null;
+  const measure: HealthMeasure = adaptedMode ? 'pushes' : 'steps';
   const health = useMemo<StepHealth>(
-    () => ({ status: healthStatus, source: healthSource, connect, openSettings, openStore }),
-    [healthStatus, healthSource, connect, openSettings, openStore],
+    () => ({ status: healthStatus, source: healthSource, measure, connect, openSettings, openStore }),
+    [healthStatus, healthSource, measure, connect, openSettings, openStore],
   );
 
-  return { permission, requestPermission, syncNow, isSyncing: isPending, canSync, health };
+  return { permission, requestPermission, syncNow, isSyncing: isPending, canSync, adaptedMode, health };
 }

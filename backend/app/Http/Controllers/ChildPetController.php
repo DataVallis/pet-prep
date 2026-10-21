@@ -346,13 +346,15 @@ class ChildPetController extends Controller
      * Step sync: today's cumulative count from HealthKit / Health Connect.
      * status: accepted | capped (anti-cheat kept part) | rejected | unchanged | stale.
      * 422 steps_not_applicable for a cat (M5-R06-04: steps are dog-only).
+     * Optional `unit` = steps | pushes (M5-T12 adapted mode: wheelchair pushes count
+     * 1 : 1 as steps; only the parent report wording changes).
      *
      * POST /api/child/pet/steps
      */
     public function steps(SyncStepsRequest $request): JsonResponse
     {
         $pet = $this->childPet($request);
-        $result = $this->activities->recordSteps($pet, (int) $request->validated('steps_today'), $request->recordedAt(), $request->user());
+        $result = $this->activities->recordSteps($pet, (int) $request->validated('steps_today'), $request->recordedAt(), $request->user(), $request->unit());
 
         return $this->actionResponse($result, $pet, $request, [
             'accepted_steps' => $result->acceptedSteps,

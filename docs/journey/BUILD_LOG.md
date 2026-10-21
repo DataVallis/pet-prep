@@ -17,13 +17,40 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 🧒 Otroci: »Ko kuža zaspi, vidiš, kako se uleže.«
 - 💼 Investitorji: celoten nabor stanj za pasmo + barvo + obdobje stane po ceniku fal 5,38 $ (slika, 5 poz, 6 posnetkov po 5 s, 2 prehoda) — enkrat; vsak naslednji kupec iste pasme in barve 0 $. Obstoječi ljubljenčki se ne dopolnjujejo samodejno (brez nenačrtovanega stroška).
 - 🛠 Tehnično: pozo naredi Nano Banana Pro Edit iz referenčne slike obdobja; Kling 3.0 Pro dobi isto sliko kot začetni in končni okvir (`end_image_url`, preverjeno v dokumentaciji fal 21. 10. 2026); aplikacija ima čisto stanje predvajalnika (zanka, enkratni prehod s prednaloženo zanko pod njim, poza kot rezerva) s testi; pripravljeno za šolo, igre po fazah in način »Slika« (M5-T09–T11).
+## 2026-10-21 — Prilagojen način: sprehod s potiski vozička
+
+**Kaj:** starš pri otroku vklopi »Prilagojen način« in otrokov sprehod s kužkom potem šteje potiske invalidskega vozička namesto korakov — iz Apple Zdravje (Apple Watch v načinu invalidskega vozička) ali Health Connect. En potisk šteje kot en korak; cilji, energija in ocena skrbi so enaki. Otrok povsod vidi »potiski« (okno sprehoda, navodila, opomnik), starš v poročilu prav tako.
+**Zakaj je pomembno:** izziv »si pripravljen na psa?« mora biti pošten tudi za otroka, ki ne hodi. Ne vprašamo in ne shranimo, zakaj je način vklopljen — to je dostopnost, ne diagnoza.
+- 👩 Starši: »Prilagojen način« je eno stikalo pri otroku; nič ne razlagate in nič o zdravju ne shranimo — samo vklop / izklop.
+- 🧒 Otroci: »Danes potrebuje 6.000 potiskov vozička za sprehod. Potiski mu dajo energijo.«
+- 💼 Investitorji: dostopnost brez novih podatkov o otroku — isti cilji, isti Care Score, en dodaten vir v aplikaciji Zdravje.
+- 🤝 Partnerji (šole, društva): PetPrep lahko uporabljajo tudi otroci na vozičku.
+- 🛠 Tehnično: HealthKit `PushCount` / Health Connect `WheelchairPushes` (vsak s svojim dovoljenjem samo za branje), strežnik dobi `unit: pushes`, protigoljufija in idempotentnost na otroka nespremenjeni; razmerje 1 : 1, ker avtoritativnega vira ni (55 potiskov / min za zmerno intenzivnost — Rice 2021 — je mera intenzivnosti, ne dnevnega cilja). *Branje potiskov pride z naslednjim native buildom.*
+
+## 2026-10-21 — Rojstni dan: ljubljenček dopolni 1 leto
+
+**Kaj:** ko ljubljenček po starosti simulacije dopolni 1 leto, ima ves dan na glavi rojstnodnevni klobuček, otrok pa dobi kartico »Vse najboljše, Luna!« z varno »torto« (pasja ali mačja poslastica brez čokolade) in namigom z virom — »Čokolada je za pse strupena« (FDA), pri muci »Mleko ni poslastica za odraslo muco« (Agriculture Victoria, ASPCA). Enkrat na ljubljenčka dobita obvestilo otrok in starš.
+**Zakaj je pomembno:** praznik, ki ga otrok doživi zaradi svoje skrbi, in hkrati ena resnična, uporabna lekcija o varnosti hrane — ravno takrat, ko bi doma kdo psu ponudil kos torte.
+- 👩 Starši: obvestilo »Kuža danes praznuje prvi rojstni dan.« (zadržano čez tihe ure) in vrstica v podrobnostih otroka.
+- 🧒 Otroci: klobuček, »Vse najboljše, Luna!«, torta brez čokolade in »Ali si vedel?«.
+- 💼 Investitorji: ura simulacije je dovolj natančna, da praznik pride na pravi dan: vsak mladiček psa (dan 70) ali pasemski mucek (dan 63) in vsak mlad pes (dan 21) praznuje v 12-tedenskem izzivu — 50 pasem psov in 7 mačk preverjenih iz istih podatkov, po katerih teče igra.
+- 🛠 Tehnično: datum iz iste formule starosti kot življenjska obdobja (čas čakanja na plačilo ne šteje), praznovanje atomsko enkrat na ljubljenčka, brez novih AI stroškov (klobuček riše aplikacija; posnetek pride z M5-T08+).
+
+## 2026-10-21 — Česanje kot strgalna srečka
+
+**Kaj:** ko otrok češe kužka ali muco, krtača zdaj sledi prstu, iz dlake se pokažejo iskrice, »umazane« lise (šest, dve na vsak korak: glava in vrat, hrbet, boki in rep) z vsako potezo zbledijo, vrstica »Počesano« pa se polni do 100 %. Kdor ne more potegniti s prstom, pridrži prst na ljubljenčku ali gumb »Počeši enkrat« — česanje teče samo. VoiceOver in TalkBack imata dejanje »Počeši«.
+**Zakaj je pomembno:** prej je otrok 30 sekund drgnil po zaslonu in videl samo števec potez; zdaj vidi, kaj je naredil in kaj še manjka — in vidi, da je treba počesati vse dele telesa. Pravila in točke so ostala ista (strežnik ni spremenjen), zato je posodobitev prišla brez nove različice v trgovini.
+- 👩 Starši: tudi otrok, ki ne more potegniti s prstom, lahko češe (držanje namesto potega, bralnik zaslona).
+- 🧒 Otroci: »Počeši vse lise, da bo dlaka mehka in svetleča!«
+- 💼 Investitorji: dostopnost je vgrajena v igre, ne dodana kasneje.
+- 🛠 Tehnično: čista logika (`brushing.ts`) zrcali strežnikovo pravilo (≥ 150 ms med potezami, vsi trije deli, ne strojno enakomerno); iskrice iz bazena 8 pogledov na nativnem gonilniku, brez React posodobitve ob vsakem premiku prsta.
 
 ## 2026-10-21 — »Pripravljamo: Luna«: prve minute z novim ljubljenčkom
 
-**Kaj:** ko otrok podpiše pogodbo in ljubljenček še ni povsem pripravljen, zdaj vidi maskoto Curio, ki se nežno ziba, in »Pripravljamo: Luna — To lahko traja nekaj minut.« Najprej se pripravi to, kar otrok vidi v prvih minutah (kuža stoji, spi, je), nato šola in igre. Kar še ni pripravljeno, je mirno označeno (»Šola se še pripravlja« s pozo, »Igra se še pripravlja«). Ko je vse pripravljeno, otrok enkrat dobi »Luna je pripravljen!« v aplikaciji in kot obvestilo. Zaslon nikoli ne traja več kot 15 minut.
+**Kaj:** ko otrok podpiše pogodbo in ljubljenček še ni povsem pripravljen, zdaj vidi maskoto Curio, ki se nežno ziba, in »Pripravljamo: Luna — To lahko traja nekaj minut.« Najprej se pripravi to, kar otrok vidi v prvih minutah (kuža stoji, spi, je), nato šola in igre. Kar še ni pripravljeno, je mirno označeno (»Šola se še pripravlja« s pozo, »Igra se še pripravlja«). Ko je vse pripravljeno, otrok enkrat dobi »Vse je pripravljeno: Luna« v aplikaciji, otrok in starši pa obvestilo. Zaslon nikoli ne traja več kot 15 minut.
 **Zakaj je pomembno:** prvi stik z ljubljenčkom mora delovati premium in mirno — brez praznih zaslonov, napol delujočih iger ali tehničnih sporočil (David 20. 10.: uporabnik ne sme videti, kako se ljubljenček pripravlja).
-- 👩 Starši: v podrobnostih otroka piše »Pripravljamo: Luna«, dokler ljubljenček ni pripravljen; obvestilo »… je pripravljen« dobi samo otrok.
-- 🧒 Otroci: »Pripravljamo: Luna … To lahko traja nekaj minut.« in potem »Luna je pripravljen!«
+- 👩 Starši: v podrobnostih otroka piše »Pripravljamo: Luna«, dokler ljubljenček ni pripravljen; obvestilo »Vse je pripravljeno« dobite tudi vi (vikanje, brez imena v besedilu).
+- 🧒 Otroci: »Pripravljamo: Luna … To lahko traja nekaj minut.« in potem »Vse je pripravljeno: Luna«
 - 💼 Investitorji: odločitev o modelih (21. 10.) — en model za vse posnetke, krajši posnetki šole in iger (3 s) znižajo ocenjeni strošek paketa na pasmo + barvo + obdobje s ≈ 16,20 $ na ≈ 12,59 $ (cenik fal); vsak naslednji kupec iste pasme in barve ne stane nič dodatnega.
 - 🛠 Tehnično: strežnik pošlje povzetek pripravljenosti v stanju in vsakem dogodku v živo, vrstni red izdelave se spremeni brez novega stroška, obvestilo »pripravljen« je atomsko enkratno na ljubljenčka; čas priprave se meri v administraciji (konec − začetek priprave).
 

@@ -75,6 +75,8 @@ return [
     ],
 
     'walk_reminder' => 'Your dog wants a proper walk – not enough steps yet today. Time for a walk?',
+    // M5-T12: the same reminder for a child in adapted mode (wheelchair pushes count as steps).
+    'walk_reminder_pushes' => 'Your dog wants a proper walk – not enough pushes yet today. Time for a walk?',
 
     'parent_alarm' => 'Your child hasn’t looked after the dog today.',
 
@@ -214,8 +216,11 @@ return [
             'parent' => 'The cat has gone to a shelter because it went 24 hours without essential care. Choose how to continue in the app.',
         ],
 
-        // M5-T06: the preparation ended (title = name, body without it).
-        'pet_ready' => 'Your cat is ready! Come and say hello.',
+        // M5-T13: the first birthday (title = name, body without it).
+        'pet_birthday' => [
+            'child' => 'Happy birthday! Your kitty is 1 year old today. Come and celebrate!',
+            'parent' => 'The kitty turns 1 today. See the celebration in the app.',
+        ],
 
         'payment_required' => [
             'child' => 'The game is waiting for your parent. Your cat is safe and resting.',
@@ -224,9 +229,19 @@ return [
         ],
     ],
 
+    // M5-T13 (APP_REFINEMENT_SPEC §9, David 2026-10-20): the pet turned 1 by the simulation's
+    // age formula. Title = the pet's name (when set); the body never names it.
+    'pet_birthday' => [
+        'child' => 'Happy birthday! Your pup is 1 year old today. Come and celebrate!',
+        'parent' => 'The pup turns 1 today. See the celebration in the app.',
+    ],
+
     // M5-T06 (APP_REFINEMENT_SPEC §13, David 2026-10-20): the preparation ended. The title is the
-    // pet's name (when set), the body never names it — and never says how the pet was prepared.
-    'pet_ready' => 'Your pup is ready! Come and say hello.',
+    // pet's name (when set), the body never names it; gender-neutral (David 2026-10-21); never says how the pet was prepared.
+    'pet_ready' => [
+        'child' => 'Everything is ready. Come and say hello!',
+        'parent' => 'Everything is ready. The pet is waiting in the app.',
+    ],
 
     // M2-01d (CERTIFICATE_SPEC, David 2026-10-12): a child's challenge ended — parents only,
     // species-neutral (no cat text needed), no names.

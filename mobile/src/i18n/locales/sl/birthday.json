@@ -1,0 +1,27 @@
+{
+  "hatA11y": "Rojstnodnevni klobuček. Odpri voščilo",
+  "close": "Zapri",
+  "cakeLabel": "Rojstnodnevna torta",
+  "tipLabel": "Ali si vedel?",
+  "source": "Vir: {{source}}",
+  "dog": {
+    "title": "Vse najboljše, kuža!",
+    "titleNamed": "Vse najboljše, {{name}}!",
+    "age": "Tvoj kuža je danes star 1 leto.",
+    "ageNamed": "{{name}} ima danes 1 leto.",
+    "cake": "Torta je varna pasja poslastica: brez čokolade in brez sladkarij.",
+    "tip": "Čokolada je za pse strupena. Vsebuje teobromin – in temnejša kot je čokolada, bolj je nevarna.",
+    "parentLine": "Kuža danes praznuje prvi rojstni dan.",
+    "parentLineNamed": "{{name}} danes praznuje prvi rojstni dan."
+  },
+  "cat": {
+    "title": "Vse najboljše, muca!",
+    "titleNamed": "Vse najboljše, {{name}}!",
+    "age": "Tvoja muca je danes stara 1 leto.",
+    "ageNamed": "{{name}} ima danes 1 leto.",
+    "cake": "Torta je varna mačja poslastica: brez čokolade in brez mleka.",
+    "tip": "Mleko ni poslastica za odraslo muco: odrasle muce ga ne prebavijo dobro in jih lahko boli trebušček. Tudi čokolada je za muce strupena.",
+    "parentLine": "Muca danes praznuje prvi rojstni dan.",
+    "parentLineNamed": "{{name}} danes praznuje prvi rojstni dan."
+  }
+}

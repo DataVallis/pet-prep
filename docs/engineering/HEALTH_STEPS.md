@@ -9,6 +9,14 @@ Steps from **Apple Health (HealthKit)** on iOS and **Health Connect** on Android
 - Triggers: HUD open, foreground (automatic ≤ 1/min), every 5 min, "Osveži", walk overlay closed. iOS: `expo-background-task` (best effort, ~15 min hint, iOS decides). Android: no background read (would need `READ_HEALTH_DATA_IN_BACKGROUND`); the day is caught up on the next open.
 - Server unchanged: max per child per day; anti-cheat ≤ 200 steps/min measured from the last accepted sync, so a catch-up after hours is accepted (Pest: `EnergyStepsTest` "health-store catch-up").
 
+## Adapted mode — wheelchair pushes (M5-T12, 2026-10-21)
+- Parent-only switch per child (»Prilagojen način«, `PATCH /api/parent/children/{child}/settings {adapted_mode}`; only the boolean is stored, never a reason). The child state carries it as `steps.adapted_mode`.
+- On: the app reads **wheelchair pushes only** — `getHealthAdapter('pushes')`: HealthKit `HKQuantityTypeIdentifierPushCount` (read only), Health Connect `WheelchairPushesRecord` (`android.permission.health.READ_WHEELCHAIR_PUSHES`, read only). Each is its own permission (asking for pushes never asks for steps). No motion sensor, no Android live counter (they count steps). iOS background sync does the same (reads the state, picks the adapter).
+- Both libraries already support the type (`@kingstinct/react-native-healthkit` 16.0.0 has `HKQuantityTypeIdentifierPushCount` in its generated identifiers; `react-native-health-connect` 4.1.3 has `WheelchairPushes` records + `COUNT_TOTAL` aggregate) — no new dependency, but the new Android permission + changed iOS purpose string need a **new native build**.
+- Sync: `POST /api/child/pet/steps {steps_today: <pushes>, source, recorded_at, unit: "pushes"}` — 1 push = 1 step; every server rule unchanged; `pet_daily_steps.unit` names the day for the parent report.
+- Apple records pushes only when Health → Summary → profile → Health Details → **Wheelchair = Yes** and an **Apple Watch** counts them (iPhone alone records none). Health Connect needs a writer that records `WheelchairPushes` (e.g. a wheelchair-aware watch app) — open: which common Android apps write it.
+- Device check (after the native build): parent turns it on → child HUD → »Sprehod« says »potiskov«; card »Štej potiske z aplikacijo Zdravje« → sheet lists only »Potiski invalidskega vozička« (read) → pushes from the watch arrive; turn it off → back to steps.
+
 ## Libraries (2026-10-07)
 | Package | Version | Why |
 |---|---|---|
@@ -20,10 +28,10 @@ Steps from **Apple Health (HealthKit)** on iOS and **Health Connect** on Android
 
 ## Native config (in `mobile/app.json`)
 - Plugin `@kingstinct/react-native-healthkit` with `NSHealthUpdateUsageDescription` set to a purpose string (EN in `app.json`, SL in `locales/sl.json` — App Store Connect ITMS-90683 rejected build 3.0.1 (15) without it on 2026-10-09, because the library references HealthKit write APIs; the app still never requests write access), `background: false` → entitlement `com.apple.developer.healthkit` only (no background-delivery), no write text.
-- `ios.infoPlist.NSHealthShareUsageDescription` (en) + `locales/sl.json` (sl): read-only wording.
+- `ios.infoPlist.NSHealthShareUsageDescription` (en) + `locales/sl.json` (sl): read-only wording (steps, or wheelchair pushes in adapted mode — M5-T12).
 - Plugin `react-native-health-connect` → `ACTION_SHOW_PERMISSIONS_RATIONALE` intent filter on `MainActivity` + Android 14 `ViewPermissionUsageActivity` alias.
 - Plugin `mobile/plugins/withHealthConnectPrivacyRationale.js` (2026-10-19, Play health declaration) moves both entry points to a native `HealthPermissionsRationaleActivity` that opens the privacy policy (`petprep.si/sl/zasebnost` on a Slovenian phone, else `petprep.si/privacy`) and closes. Listed **before** `react-native-health-connect` in app.json — Expo runs manifest mods in reverse order.
-- `android.permissions` + `android.permission.health.READ_STEPS`.
+- `android.permissions` + `android.permission.health.READ_STEPS` (+ `READ_WHEELCHAIR_PUSHES` since M5-T12; Play health declaration must list it too).
 - Plugins `expo-build-properties` (minSdk 26), `expo-background-task` (adds `UIBackgroundModes: processing` + `BGTaskSchedulerPermittedIdentifiers`).
 - Old binaries / dev clients without the task modules don't crash: `backgroundSteps.ts` loads `expo-background-task` / `expo-task-manager` lazily only after `requireOptionalNativeModule('ExpoBackgroundTask' | 'ExpoTaskManager')` finds both; otherwise define / register / unregister are no-ops (tested with an absent-module probe). The health adapters are likewise required lazily in try/catch.
 - `npx expo config --type public` resolves (checked 2026-10-07); introspection shows the HealthKit entitlement, `NSHealthUpdateUsageDescription` present (since 2026-10-09, ITMS-90683), BG modes `fetch` + `processing`.

@@ -6,6 +6,7 @@ use App\Enums\PetLockReason;
 use App\Models\Pet;
 use App\Models\User;
 use App\Services\BehaviourPayload;
+use App\Services\BirthdayPayload;
 use App\Services\CareGuidePayload;
 use App\Services\CareScheduleService;
 use App\Services\ChallengeCertificateService;
@@ -191,6 +192,9 @@ class ChildPetStateResource extends JsonResource
                 // M5-T06: is the pet ready (everything it shows stored), what is still on its way,
                 // whether to show »Pripravljamo …« — never says how it is prepared.
                 'preparation' => PreparationPayload::for($pet, $slots)->toArray(),
+                // M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                // null when it has none in the simulation. `is_today` = party hat all day.
+                'birthday' => BirthdayPayload::for($pet, $now)?->toArray(),
             ],
             'lock' => [
                 'is_locked' => $locked,
@@ -278,6 +282,15 @@ class ChildPetStateResource extends JsonResource
                 // Today's step goal of the dog's life stage (M5-R01).
                 'goal' => $profile->stepGoal,
                 'energy_level' => $pet->displayMetric('energy_level'),
+                /**
+                 * M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
+                 * the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
+                 * app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
+                 * Always false for a parent's view.
+                 *
+                 * @var bool
+                 */
+                'adapted_mode' => (bool) ($actor?->adapted_mode ?? false),
             ],
             'contract' => [
                 'signed' => $contract !== null,

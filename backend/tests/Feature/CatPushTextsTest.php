@@ -44,6 +44,8 @@ use Illuminate\Support\Str;
 /** Keys whose text names the dog but that a cat can never be sent (walk, chewing). */
 const CPT_DOG_ONLY = [
     'walk_reminder',
+    // M5-T12: the walk reminder of a child in adapted mode (pushes).
+    'walk_reminder_pushes',
     'tidy.soft', 'tidy.critical',
     'clean_and_tidy.soft', 'clean_and_tidy.critical',
     // M5-R06-06b (David 2026-10-09): food / water wait for a chewed item to be tidied up.

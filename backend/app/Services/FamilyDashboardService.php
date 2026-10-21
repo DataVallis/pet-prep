@@ -104,7 +104,7 @@ class FamilyDashboardService
         $pets = Pet::where('family_id', $family->id)->orderBy('id')->with(['media', 'paymentLockPeriods'])->get();
         $caretakers = PetCaretaker::whereIn('pet_id', $pets->pluck('id'))->orderBy('id')->get();
         $contracts = PetContract::whereIn('pet_id', $pets->pluck('id'))->get(['pet_id', 'user_id', 'signed_at']);
-        $children = $family->children()->get(['users.id', 'users.name', 'users.birth_year', DB::raw('(users.password IS NULL) AS pin_only')]);
+        $children = $family->children()->get(['users.id', 'users.name', 'users.birth_year', 'users.adapted_mode', DB::raw('(users.password IS NULL) AS pin_only')]);
         // Signed-in devices per child (M2-02) = Sanctum tokens.
         $devices = PersonalAccessToken::query()
             ->where('tokenable_type', User::class)
@@ -169,6 +169,13 @@ class FamilyDashboardService
                     // `email` = legacy child account (deprecated).
                     'login' => $child->getAttribute('pin_only') ? 'pin' : 'email',
                     'devices' => (int) ($devices[$child->id] ?? 0),
+                    /**
+                     * M5-T12 »Prilagojen način« (parent-only switch): the child's walk counts
+                     * wheelchair pushes instead of steps (1 : 1). No reason is stored.
+                     *
+                     * @var bool
+                     */
+                    'adapted_mode' => (bool) $child->adapted_mode,
                     'pet_id' => $current?->id,
                     // M5-F07: true when the child no longer has to sign (born
                     // pet + signed or grandfathered caretaker) — not "a
@@ -198,55 +205,65 @@ class FamilyDashboardService
                     'certificate' => $certificate !== null ? $this->certificates->payload($certificate, $tz)->toArray() : null,
                 ];
             })->values()->all(),
-            'pets' => $pets->map(fn (Pet $pet) => array_merge([
-                /**
-                 * M5-R05: completed ball games / cuddles of today's family-local day
-                 * (all children together); null for a pet without play (free, legacy).
-                 *
-                 * @var array{play: int, cuddle: int}|null
-                 */
-                'play_today' => $playToday[$pet->id] ?? null,
-                'id' => $pet->id,
-                'breed_type' => $pet->breed_type->value,
-                // M5-R06-01: dog | cat.
-                'species' => $pet->speciesValue()->value,
-                // M5-R08: optional name set by a parent (null = none) — a label only.
-                'name' => $pet->name,
-                'born_at' => $pet->born_at?->toIso8601String(),
-                'awaiting_contract' => $pet->isUnborn(),
-                'is_active' => (bool) $pet->is_active,
-                'is_game_over' => (bool) $pet->is_game_over,
-                'is_hard_stopped' => (bool) $pet->is_hard_stopped,
-                'is_ill' => $pet->isIll(),
-                'escalation_level' => (int) $pet->escalation_level,
-                // M3-11: plan + payment status (paywall per pet).
-                'plan' => PetPlanPayload::for($pet, $tz)->toArray(),
-                // M5-R01: origin, age, life stage and today's rules (meals by
-                // child / by parent in quiet hours, step goal).
-                'profile' => PetProfilePayload::for($pet)->toArray(),
-                // Active caretakers only; a deleted child's tombstone (M2-08)
-                // stays in the board for the fair share but is not listed.
-                'caretakers' => $caretakers->where('pet_id', $pet->id)->filter(fn (PetCaretaker $c) => ! $c->isTombstone())->map(fn (PetCaretaker $c) => [
-                    'child_id' => $c->user_id,
-                    'contract_signed' => self::contractSettled($pet, $c->user_id, $caretakers, $contracts),
-                ])->values()->all(),
-                // Displayed metrics (same rounding the child sees).
-                'metrics' => [
-                    'hunger' => $pet->displayMetric('hunger_level'),
-                    'thirst' => $pet->displayMetric('thirst_level'),
-                    'energy' => $pet->displayMetric('energy_level'),
-                    'hygiene' => $pet->displayMetric('hygiene_level'),
-                ],
-                'timeline' => $timelines[$pet->id] ?? [],
-                // M5-R02: puppy bladder clock, open messes, behaviour video (BehaviourPayload).
-                'behaviour' => BehaviourPayload::for($pet)->toArray(),
-                // M5-R03: "Kuža zna: sedi ✓, pridi 60 %" — progress per command, today's routine.
-                'training' => TrainingPayload::summaryFor($pet)->summary(),
-                // AI media (M4-05): signed URLs to our stored copies.
-                'media' => $this->media->mediaFor($pet, $slots = ($pet->relationLoaded('media') ? $pet->getRelation('media') : $pet->media()->get()))->toArray(),
-                // M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too) — same rows.
-                'preparation' => PreparationPayload::for($pet, $slots)->toArray(),
-            ], $this->scores->petSummary($board, $pet)))->values()->all(),
+            'pets' => $pets->map(function (Pet $pet) use ($playToday, $tz, $caretakers, $contracts, $timelines, $board) {
+                // M5-R01 profile, shared with the care guide (one computation per pet).
+                $profile = PetProfilePayload::for($pet);
+
+                return array_merge([
+                    /**
+                     * M5-R05: completed ball games / cuddles of today's family-local day
+                     * (all children together); null for a pet without play (free, legacy).
+                     *
+                     * @var array{play: int, cuddle: int}|null
+                     */
+                    'play_today' => $playToday[$pet->id] ?? null,
+                    'id' => $pet->id,
+                    'breed_type' => $pet->breed_type->value,
+                    // M5-R06-01: dog | cat.
+                    'species' => $pet->speciesValue()->value,
+                    // M5-R08: optional name set by a parent (null = none) — a label only.
+                    'name' => $pet->name,
+                    'born_at' => $pet->born_at?->toIso8601String(),
+                    'awaiting_contract' => $pet->isUnborn(),
+                    'is_active' => (bool) $pet->is_active,
+                    'is_game_over' => (bool) $pet->is_game_over,
+                    'is_hard_stopped' => (bool) $pet->is_hard_stopped,
+                    'is_ill' => $pet->isIll(),
+                    'escalation_level' => (int) $pet->escalation_level,
+                    // M3-11: plan + payment status (paywall per pet).
+                    'plan' => PetPlanPayload::for($pet, $tz)->toArray(),
+                    // M5-R01: origin, age, life stage and today's rules (meals by
+                    // child / by parent in quiet hours, step goal).
+                    'profile' => $profile->toArray(),
+                    // Active caretakers only; a deleted child's tombstone (M2-08)
+                    // stays in the board for the fair share but is not listed.
+                    'caretakers' => $caretakers->where('pet_id', $pet->id)->filter(fn (PetCaretaker $c) => ! $c->isTombstone())->map(fn (PetCaretaker $c) => [
+                        'child_id' => $c->user_id,
+                        'contract_signed' => self::contractSettled($pet, $c->user_id, $caretakers, $contracts),
+                    ])->values()->all(),
+                    // Displayed metrics (same rounding the child sees).
+                    'metrics' => [
+                        'hunger' => $pet->displayMetric('hunger_level'),
+                        'thirst' => $pet->displayMetric('thirst_level'),
+                        'energy' => $pet->displayMetric('energy_level'),
+                        'hygiene' => $pet->displayMetric('hygiene_level'),
+                    ],
+                    'timeline' => $timelines[$pet->id] ?? [],
+                    // M5-R02: puppy bladder clock, open messes, behaviour video (BehaviourPayload).
+                    'behaviour' => BehaviourPayload::for($pet)->toArray(),
+                    // M5-R03: "Kuža zna: sedi ✓, pridi 60 %" — progress per command, today's routine.
+                    'training' => TrainingPayload::summaryFor($pet)->summary(),
+                    // AI media (M4-05): signed URLs to our stored copies.
+                    'media' => $this->media->mediaFor($pet, $slots = ($pet->relationLoaded('media') ? $pet->getRelation('media') : $pet->media()->get()))->toArray(),
+                    // M5-T05b: the care guide »Kako skrbim za …« — the very block the child state
+                    // carries (same CareGuidePayload, same profile), worded for the parent by the app.
+                    'care_guide' => CareGuidePayload::for($pet, null, $profile)->toArray(),
+                    // M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too) — same rows.
+                    'preparation' => PreparationPayload::for($pet, $slots)->toArray(),
+                    // M5-T13: the pet's first birthday (the parent card shows it on the day).
+                    'birthday' => BirthdayPayload::for($pet)?->toArray(),
+                ], $this->scores->petSummary($board, $pet));
+            })->values()->all(),
         ];
     }
 
@@ -280,7 +297,8 @@ class FamilyDashboardService
         $from = Carbon::parse($today, 'UTC')->subDays($days - 1)->toDateString();
 
         $report = [
-            'child' => ['id' => $child->id, 'name' => $child->name],
+            // M5-T12: adapted mode (pushes instead of steps) — the day rows carry `walk_unit`.
+            'child' => ['id' => $child->id, 'name' => $child->name, 'adapted_mode' => (bool) $child->adapted_mode],
             'pet_id' => $pet?->id,
             'timezone' => $tz,
             'days' => $days,

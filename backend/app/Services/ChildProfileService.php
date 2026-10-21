@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Enums\FamilyRole;
 use App\Enums\UserRole;
+use App\Events\PetUpdated;
 use App\Exceptions\FamilyException;
 use App\Models\ChildLoginPin;
 use App\Models\Family;
@@ -122,6 +123,38 @@ class ChildProfileService
         return $isChild ? User::find((int) $childId) : null;
     }
 
+    /** M5-T12: `PetUpdated` event type when a parent switches a caretaker's adapted mode. */
+    public const ADAPTED_MODE_EVENT = 'adapted_mode_changed';
+
+    /**
+     * Switch the child's adapted mode (M5-T12, »Prilagojen način«): their walk counts
+     * wheelchair pushes instead of steps (1 push = 1 step; goals, energy, routines and
+     * the Care Score are unchanged). Only the boolean is stored — never a reason.
+     * A change broadcasts one `PetUpdated` (`adapted_mode_changed`, no child data in
+     * the payload) on the child's active pet after commit, so the child's app refetches
+     * its state and switches the wording / health data type; the same value again
+     * changes nothing.
+     */
+    public function setAdaptedMode(User $child, bool $on): User
+    {
+        $changed = DB::transaction(function () use ($child, $on): bool {
+            $locked = User::whereKey($child->id)->lockForUpdate()->firstOrFail();
+            if ((bool) $locked->adapted_mode === $on) {
+                return false;
+            }
+            $locked->forceFill(['adapted_mode' => $on])->save();
+
+            $pet = $this->families->activePetOf($locked);
+            if ($pet !== null) {
+                PetUpdated::afterCommit($pet, self::ADAPTED_MODE_EVENT);
+            }
+
+            return true;
+        });
+
+        return $changed ? $child->refresh() : $child;
+    }
+
     /**
      * Sign the child out on every device: delete all their tokens and push
      * devices and revoke their open login PINs.
@@ -149,13 +182,22 @@ class ChildProfileService
     }
 
     /**
-     * Keep the child's newest MAX_DEVICES tokens, delete the rest.
+     * Keep the child's newest MAX_DEVICES own-device tokens, delete the rest.
+     *
+     * Shared-phone sessions (»Igraj kot«, token name `shared:p{parentId}:…`) are
+     * NOT counted and never pruned here (fix 2026-10-21): the app reuses that
+     * token for weeks, so it was always the oldest and every new PIN login of
+     * the child on another phone pushed it out — the parent's phone landed on
+     * the start screen every day or two. They are capped separately: one per
+     * (parent, child), replaced by ChildPinLoginService::deviceSession().
      */
     public function pruneDevices(User $child): int
     {
-        $keep = $child->tokens()->orderByDesc('id')->limit(self::MAX_DEVICES)->pluck('id');
+        $shared = addcslashes(ChildPinLoginService::SHARED_TOKEN_PREFIX, '\\%_').'%';
+        $own = fn () => $child->tokens()->where('name', 'not like', $shared);
+        $keep = $own()->orderByDesc('id')->limit(self::MAX_DEVICES)->pluck('id');
 
-        return $child->tokens()->whereNotIn('id', $keep)->delete();
+        return $own()->whereNotIn('id', $keep)->delete();
     }
 
     public function devicesCount(User $child): int

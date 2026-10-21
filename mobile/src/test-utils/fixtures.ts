@@ -98,12 +98,12 @@ export function makeMedia(overrides: Partial<PetMedia> = {}): PetMedia {
 
 /** `preparation` of a pet (M5-T06): ready, nothing shown. */
 export function makePreparation(overrides: Partial<PreparationRaw> = {}): PreparationRaw {
-  return { ready: true, pending: [], preparing: false, running: false, ready_at: null, ...overrides };
+  return { ready: true, pending: [], preparing: false, running: false, ready_at: null, announce: false, ...overrides };
 }
 
 /** A pet whose first things are still on their way (the set-up screen shows). */
 export function makePreparing(pending: PreparationRaw['pending'] = ['idle', 'sleeping']): PreparationRaw {
-  return { ready: false, pending, preparing: true, running: true, ready_at: null };
+  return { ready: false, pending, preparing: true, running: true, ready_at: null, announce: false };
 }
 
 /** `pet.updated` payload for pet 7 (UTC instants, like the backend's broadcast). */
@@ -197,6 +197,8 @@ export function makeChildState(
       media: makeMedia(),
       // M5-T06 (additive): ready (no preparation shown).
       preparation: makePreparation(),
+      // M5-T13 (additive): no birthday today.
+      birthday: null,
       ...petOverrides,
     },
     lock: { is_locked: false, reason: null, until: null },
@@ -228,7 +230,7 @@ export function makeChildState(
       can_water: 'false',
       next_allowed_at: '',
     },
-    steps: { steps_today: 0, my_steps_today: 0, goal: 5000, energy_level: 100 },
+    steps: { steps_today: 0, my_steps_today: 0, goal: 5000, energy_level: 100, adapted_mode: false },
     contract: { signed: true, signed_at: '2026-10-04T09:00:00+00:00' },
     // M5-R02 behaviour events: no bladder clock, nothing open (a legacy-like pet).
     behaviour: { take_out: null, active_events: [], scene: null, can_take_out: false, can_resolve_chewing: false },
@@ -432,6 +434,7 @@ export function makeFamilyChild(overrides: Partial<FamilyChild> = {}): FamilyChi
     birth_year: 2016,
     login: 'pin',
     devices: 0,
+    adapted_mode: false,
     pet_id: null,
     contract_signed: false,
     stats: {
@@ -470,6 +473,7 @@ export function makeDayRow(date: string, overrides: Partial<FamilyChild['last_7_
     walk_steps: 4200,
     walk_goal: 4000,
     walk_done: true,
+    walk_unit: 'steps' as 'steps' | 'pushes',
     // M5-R06-08b: a cat's play of the day (null for a dog).
     play_sessions: null,
     play_goal: null,
@@ -561,6 +565,10 @@ export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetR
     media: makeMedia(),
     // M5-T06: ready.
     preparation: makePreparation(),
+    // M5-T05b: the care guide (same block as the child state).
+    care_guide: makeCareGuide() as unknown as FamilyPetRaw['care_guide'],
+    // M5-T13: no birthday.
+    birthday: null,
     traffic_light: { color: 'green', reasons: [] },
     care_score: { score: null, done: 0, expected: 0, illnesses: 0, since: '2026-10-01T08:00:00+00:00' },
     today: {

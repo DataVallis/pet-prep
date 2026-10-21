@@ -217,7 +217,7 @@ sequenceDiagram
   Parent->>App: Pregled → »Igraj kot {ime}« (child with a pet)
   App->>API: POST /api/parent/children/{child}/device-session {device_name, features}<br/>(parent token, throttle 20/min per parent)
   API->>DB: lock parent → child → family; child of this family? has a pet?<br/>(404 child_not_found / 409 no_pet)
-  API->>DB: delete this parent's previous shared token of the child<br/>create child token "shared:p{parent}:{model}" (ability child), prune to 3 devices
+  API->>DB: keep this parent's newest 2 shared tokens of the child<br/>create child token "shared:p{parent}:{model}" (ability child)<br/>prune own devices to 3 (shared tokens not counted)
   API-->>App: 200 = PIN re-login body {token, abilities [child], user, mode relogin, pet, awaiting_contract}
   App->>App: store the child session (SecureStore), make its token active<br/>(a failed write aborts here — the parent stays signed in)
   App->>API: POST /api/logout (parent token) — the parent token is revoked on the switch<br/>(failed → queued, retried at app start / foreground)
@@ -1334,7 +1334,7 @@ sequenceDiagram
     Q-->>App: PetUpdated video_ready (media.videos, current_video_url, preparation)
     opt last entitled item of a running preparation (M5-T06, once per pet)
       Q->>DB: pets.preparation_ready_at = now (row lock, written once)
-      Q-->>App: PetUpdated pet_ready + push pet_ready to caretaker children<br/>(title = pet name, data {type, pet_id}) → »Luna je pripravljen!«
+      Q-->>App: if announce (10 s ≤ duration ≤ 2 h): PetUpdated pet_ready + push pet_ready<br/>to caretaker children + parents (title = pet name, data {type, pet_id}) → »Vse je pripravljeno: Luna«
     end
   end
   App->>API: GET /api/media/{id}?expires&v&signature (Range) — via Caddy → PHP-FPM
@@ -1888,4 +1888,29 @@ flowchart TD
     GUIDE -->|"tap a fact"| SHEET
     SHEET --> READ["POST /api/breed-facts/{fact}/read<br/>(breed_fact_reads, idempotent)"]
     CHIP --> READ
+```
+
+## 16. First birthday (M5-T13, APP_REFINEMENT_SPEC §9, 2026-10-21)
+
+```mermaid
+sequenceDiagram
+  participant Tick as pets:process-decay (minutely)
+  participant S as PetBirthdayService
+  participant DB as pets
+  participant N as NotificationService
+  participant App as Child / parent app
+  Tick->>S: processDue() — born, profiled, arrival < 12 m, not celebrated, birthday_next_check_at ≤ now
+  S->>S: birthdayAt = anniversary(programBirth, 12 − arrival weeks)<br/>(payment locks before it shift it; open lock counts until now)
+  alt local date in the future
+    S->>DB: birthday_next_check_at = family-local 00:00 of that date
+  else date passed / no birthday
+    S->>DB: birthday_next_check_at = 2999-12-31
+  else today but hard stop / illness / payment lock
+    S->>DB: birthday_next_check_at = now + 5 min
+  else today
+    S->>DB: lockForUpdate → birthday_celebrated_at = now (once)
+    S-->>App: PetUpdated pet_birthday (birthday {date, is_today, celebrated})
+    S->>N: petBirthday → children + parents, held over quiet hours<br/>(title = pet name, data {type, pet_id})
+  end
+  App->>App: is_today → party hat over the pet all day; card once per pet<br/>(safe cake, sourced tip); parent line in child detail
 ```

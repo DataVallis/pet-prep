@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\StepUnit;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
@@ -16,6 +17,7 @@ use Illuminate\Support\Carbon;
  * @property string $local_date
  * @property int $steps
  * @property Carbon|null $last_sync_at
+ * @property StepUnit $unit M5-T12: what the child's phone counted (steps | wheelchair pushes, 1 : 1)
  */
 class PetDailyStep extends Model
 {
@@ -32,6 +34,7 @@ class PetDailyStep extends Model
         return [
             'steps' => 'integer',
             'last_sync_at' => 'datetime',
+            'unit' => StepUnit::class,
         ];
     }
 
