@@ -91,10 +91,23 @@ class MediaEntitlementService
      */
     public function hasStateMediaSet(Pet $pet): bool
     {
-        return (int) ($pet->state_media_version ?? 1) >= 2
+        return (int) ($pet->state_media_version ?? 1) >= self::STATE_MEDIA_VERSION
             && ! $pet->isLegacyProfile()
             && $this->tierFor($pet) === self::TIER_FULL;
     }
+
+    /** M5-T08: key images, loops, transitions from this media version. */
+    public const STATE_MEDIA_VERSION = 2;
+
+    /**
+     * M5-T09 / T10: + school and game phase clips from this media version. A pet on
+     * version 2 (made between the M5-T08 and M5-T09 releases) keeps its set — no
+     * automatic backfill; a purchase or the admin »Upgrade to state media« moves it to 3.
+     */
+    public const PHASE_CLIPS_VERSION = 3;
+
+    /** The version a new profiled pet / a purchase / the admin upgrade gives a pet now. */
+    public const CURRENT_MEDIA_VERSION = self::PHASE_CLIPS_VERSION;
 
     public const TIER_BASIC = 'basic';
 
@@ -219,7 +232,7 @@ class MediaEntitlementService
      */
     public function phaseClipsOfSet(Pet $pet): array
     {
-        if (! $this->hasStateMediaSet($pet)) {
+        if (! $this->hasStateMediaSet($pet) || (int) $pet->state_media_version < self::PHASE_CLIPS_VERSION) {
             return [];
         }
 

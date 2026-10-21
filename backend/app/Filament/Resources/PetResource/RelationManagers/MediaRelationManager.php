@@ -216,7 +216,7 @@ class MediaRelationManager extends RelationManager
             implode(', ', $plan['transitions']) ?: 'none',
             implode(', ', $plan['poses'] ?? []) ?: 'none',
             count($plan['phases'] ?? []) ?: 'none',
-            $plan['upgrade'] ? ' This pet is from before state key images: it gets them now (videos are remade as loops).' : '',
+            $plan['upgrade'] ? ' This pet is on an older media set: it gets the missing state key images / loops / transitions and the school / game phase clips now.' : '',
             $plan['cost_usd'],
         );
     }

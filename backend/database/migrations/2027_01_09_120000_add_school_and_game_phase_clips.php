@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\DB;
  *    image in the pose a phase clip starts / ends in; state = PetPose value)
  *    and `phase` (a 3 s clip played once; state = PetPhaseClip value).
  *  - The unique slot indexes stay (pet, kind, state) / (look, kind, state, stage).
+ *  - pets.state_media_version may be 3 (= + phase clips): only pets created / bought /
+ *    upgraded from now on. Pets on 1 or 2 keep their set — no automatic backfill.
  *
  * Additive: no existing row changes, nothing is generated here (only pets that
  * use state media get them, from their next pipeline run — never automatically
@@ -36,6 +38,9 @@ return new class extends Migration
     {
         DB::statement("SET LOCAL lock_timeout = '5s'");
 
+        DB::statement('ALTER TABLE pets DROP CONSTRAINT IF EXISTS pets_state_media_version_check');
+        DB::statement('ALTER TABLE pets ADD CONSTRAINT pets_state_media_version_check CHECK (state_media_version IN (1, 2, 3))');
+
         DB::statement('ALTER TABLE pet_media DROP CONSTRAINT IF EXISTS pet_media_kind_check');
         DB::statement("ALTER TABLE pet_media ADD CONSTRAINT pet_media_kind_check CHECK (kind IN ('image', 'video', 'keyframe', 'transition', 'pose', 'phase'))");
         DB::statement('ALTER TABLE pet_media DROP CONSTRAINT IF EXISTS pet_media_state_check');
@@ -48,6 +53,10 @@ return new class extends Migration
 
         DB::table('pet_media')->whereIn('kind', ['pose', 'phase'])->whereNotNull('look_media_id')->update(['look_media_id' => null]);
         DB::table('pet_media')->whereIn('kind', ['pose', 'phase'])->delete();
+        // Version 3 pets fall back to the M5-T08 set (their phase rows are gone).
+        DB::table('pets')->where('state_media_version', 3)->update(['state_media_version' => 2]);
+        DB::statement('ALTER TABLE pets DROP CONSTRAINT IF EXISTS pets_state_media_version_check');
+        DB::statement('ALTER TABLE pets ADD CONSTRAINT pets_state_media_version_check CHECK (state_media_version IN (1, 2))');
 
         DB::statement('ALTER TABLE pet_media DROP CONSTRAINT IF EXISTS pet_media_state_check');
         DB::statement('ALTER TABLE pet_media ADD CONSTRAINT pet_media_state_check CHECK ('.self::stateCheck(false).')');

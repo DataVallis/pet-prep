@@ -1199,8 +1199,9 @@ class PetMediaService
      */
     public function planMissing(Pet $pet, bool $upgradeStateMedia = false): array
     {
-        $upgrade = $upgradeStateMedia && (int) ($pet->state_media_version ?? 1) < 2 && ! $pet->isLegacyProfile();
-        $planned = $upgrade ? (clone $pet)->forceFill(['state_media_version' => 2]) : $pet;
+        // M5-T09 / T10: the upgrade also moves a version-2 pet to 3 (school / game phase clips).
+        $upgrade = $upgradeStateMedia && (int) ($pet->state_media_version ?? 1) < MediaEntitlementService::CURRENT_MEDIA_VERSION && ! $pet->isLegacyProfile();
+        $planned = $upgrade ? (clone $pet)->forceFill(['state_media_version' => MediaEntitlementService::CURRENT_MEDIA_VERSION]) : $pet;
         $upgrade = $upgrade && $this->entitlements->usesStateMedia($planned);
         $planned = $upgrade ? $planned : $pet;
 
@@ -1317,7 +1318,7 @@ class PetMediaService
         $plan = $this->planMissing($pet, $upgradeStateMedia);
 
         if ($plan['upgrade']) {
-            $pet->forceFill(['state_media_version' => 2])->saveQuietly();
+            $pet->forceFill(['state_media_version' => MediaEntitlementService::CURRENT_MEDIA_VERSION])->saveQuietly();
         }
 
         if ($plan['image'] === 'stage') {

@@ -16,6 +16,7 @@ use App\Models\FamilyMember;
 use App\Models\Pet;
 use App\Models\User;
 use App\Services\Media\BreedColourCatalogue;
+use App\Services\Media\MediaEntitlementService;
 use App\Services\Media\PetDnaService;
 use App\Services\Media\PetLookPoolService;
 use App\Services\Media\SharedBreedLookService;
@@ -395,7 +396,8 @@ class PairingService
             'socialisation_enabled' => $isDog && $arrivalAge !== null && $profile?->supports(ClientFeature::Socialisation) === true,
             // M5-T08: new profiled pets get key images, loops and transitions (when entitled);
             // a legacy-profile pet keeps the pre-M5-T08 set. Existing pets stay on 1.
-            'state_media_version' => $arrivalAge !== null ? 2 : 1,
+            // M5-T09 / T10: version 3 = + school / game phase clips.
+            'state_media_version' => $arrivalAge !== null ? MediaEntitlementService::CURRENT_MEDIA_VERSION : 1,
         ]);
 
         if ($petDna === null && $hasAppearance) {

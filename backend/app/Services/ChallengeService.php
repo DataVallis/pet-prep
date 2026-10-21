@@ -8,6 +8,7 @@ use App\Enums\PetPlan;
 use App\Enums\PushType;
 use App\Events\PetUpdated;
 use App\Models\Pet;
+use App\Services\Media\MediaEntitlementService;
 use App\Services\Media\PetMediaService;
 use App\Services\Media\PetPreparationService;
 use Carbon\CarbonInterface;
@@ -216,8 +217,9 @@ class ChallengeService
                 if ($paid !== null) {
                     // M5-T08: a purchase brings the key images, loops and transitions
                     // (profiled pets; existing paid pets keep their set — no backfill).
-                    if ($purchase && ! $paid->isLegacyProfile() && (int) $paid->state_media_version < 2) {
-                        $paid->forceFill(['state_media_version' => 2])->saveQuietly();
+                    // M5-T09 / T10: and the school / game phase clips (version 3).
+                    if ($purchase && ! $paid->isLegacyProfile() && (int) $paid->state_media_version < MediaEntitlementService::CURRENT_MEDIA_VERSION) {
+                        $paid->forceFill(['state_media_version' => MediaEntitlementService::CURRENT_MEDIA_VERSION])->saveQuietly();
                     }
                     if ($waited) {
                         app(PetPreparationService::class)->begin($paid, PetPreparationService::BEGIN_PURCHASE);

@@ -220,6 +220,22 @@ describe('phase clips (enum + entitlement)', function () {
             ->and(array_map(fn ($p) => $p->value, $e->posesFor($cat)))->toBe(['crouch', 'catch']);
     });
 
+    it('a pet made between the M5-T08 and M5-T09 releases (version 2) keeps its set — no phase clips until a purchase / admin upgrade', function () {
+        config(['services.fal_ai.key' => null]);
+        $pet = phcPet();
+        expect($pet->state_media_version)->toBe(MediaEntitlementService::PHASE_CLIPS_VERSION);
+
+        $pet->forceFill(['state_media_version' => 2])->saveQuietly();
+        $e = app(MediaEntitlementService::class);
+        expect($e->usesStateMedia($pet->fresh()))->toBeTrue()
+            ->and($e->phaseClipsFor($pet->fresh()))->toBe([])
+            ->and(app(PetMediaService::class)->payloadFor($pet->fresh())['phase_groups'])->toBe([]);
+
+        // The admin »Upgrade to state media« offers and applies version 3.
+        $plan = app(PetMediaService::class)->planMissing($pet->fresh(), upgradeStateMedia: true);
+        expect($plan['upgrade'])->toBeTrue();
+    });
+
     it('none for: an unpaid (trial) pet, a pet from before M5-T08, the free set, the switch off; no school without training', function () {
         config(['services.fal_ai.key' => null]);
         $e = app(MediaEntitlementService::class);
