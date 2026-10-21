@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Enums\CatsAvailability;
 use App\Enums\FamilyRole;
 use App\Enums\UserRole;
+use App\Jobs\ResumeStateMedia;
 use App\Models\AppSetting;
 use App\Models\AppSettingChange;
 use App\Models\Family;
@@ -298,11 +299,15 @@ class AppSettingsService
      * Off also stops what is already queued (PetMediaService, retry, sweep).
      * No row → env AI_STATE_MEDIA_ENABLED (`media.state_media.enabled`, default true).
      */
-    public function stateMedia(): bool
+    public function stateMedia(bool $fresh = false): bool
     {
+        // M5-T08b (QA m4): `$fresh` reads the row itself (no cache) — the fal entry points
+        // use it so queue workers stop spending the moment the switch is turned off.
         /** @var array{enabled?: bool} $value */
-        $value = Cache::remember(self::cacheKey(self::STATE_MEDIA_KEY), self::CACHE_TTL_SECONDS,
-            fn (): array => AppSetting::find(self::STATE_MEDIA_KEY)?->value ?? []);
+        $value = $fresh
+            ? (AppSetting::find(self::STATE_MEDIA_KEY)?->value ?? [])
+            : Cache::remember(self::cacheKey(self::STATE_MEDIA_KEY), self::CACHE_TTL_SECONDS,
+                fn (): array => AppSetting::find(self::STATE_MEDIA_KEY)?->value ?? []);
 
         return array_key_exists('enabled', $value)
             ? (bool) $value['enabled']
@@ -314,8 +319,15 @@ class AppSettingsService
      */
     public function updateStateMedia(User $actor, bool $enabled): void
     {
+        $wasOn = $this->stateMedia(fresh: true);
+
         // No row already means the env default, so saving that over no row is not a change.
         $this->store($actor, self::STATE_MEDIA_KEY, ['enabled' => $enabled], ['enabled' => self::stateMediaDefault()]);
+
+        // M5-T08b (QA M1): off → on resumes what waited while it was off.
+        if ($enabled && ! $wasOn) {
+            ResumeStateMedia::dispatch();
+        }
     }
 
     /** The value "no row" stands for (env AI_STATE_MEDIA_ENABLED, default on). */

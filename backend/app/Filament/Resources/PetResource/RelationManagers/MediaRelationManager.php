@@ -5,6 +5,7 @@ namespace App\Filament\Resources\PetResource\RelationManagers;
 use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\User;
+use App\Services\AppSettingsService;
 use App\Services\Media\MediaProfiles;
 use App\Services\Media\PetMediaService;
 use App\Services\Media\PetPreparationService;
@@ -171,7 +172,9 @@ class MediaRelationManager extends RelationManager
                                 $record->state, $profiles->stateVideo()->estimatedCostUsd()),
                         };
                     })
-                    ->visible(fn (PetMedia $record): bool => self::isSuperadmin() && ! $record->isInFlight())
+                    // M5-T08b (QA m1): no key image / transition regenerate while state media is switched off.
+                    ->visible(fn (PetMedia $record): bool => self::isSuperadmin() && ! $record->isInFlight()
+                        && (! ($record->isKeyframe() || $record->isTransition()) || app(AppSettingsService::class)->stateMedia()))
                     ->action(function (PetMedia $record): void {
                         $queued = app(PetMediaService::class)->regenerate($record);
 

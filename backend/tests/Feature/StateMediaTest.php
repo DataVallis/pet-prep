@@ -11,6 +11,7 @@ use App\Filament\Pages\FeatureSwitches;
 use App\Filament\Resources\PetResource\Pages\EditPet;
 use App\Filament\Resources\PetResource\RelationManagers\MediaRelationManager;
 use App\Jobs\GeneratePetKeyframe;
+use App\Jobs\ResumeStateMedia;
 use App\Jobs\SubmitPetStateVideo;
 use App\Models\AiSpendLedger;
 use App\Models\AppSetting;
@@ -31,6 +32,7 @@ use App\Services\Media\PetPreparationService;
 use App\Services\Media\ReferenceImageRetryService;
 use App\Services\PairingService;
 use App\Services\Results\PetProfileChoice;
+use Illuminate\Bus\UniqueLock;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
@@ -557,6 +559,9 @@ function smDrainJobs(array &$ran): int
                 $job->handle(app(PetMediaService::class));
             } catch (RuntimeException) {
                 // a retryable failure — the test counts fal calls, not retries
+            } finally {
+                // As a real worker does after the job: release its ShouldBeUnique lock.
+                (new UniqueLock(Cache::driver()))->release($job);
             }
             $count++;
         }
@@ -779,5 +784,155 @@ describe('M5-T08b admin panel', function () {
 
         Livewire::test(MediaRelationManager::class, ['ownerRecord' => $pet->fresh(), 'pageClass' => EditPet::class])
             ->assertTableActionHidden('upgradeStateMedia');
+    });
+});
+
+/* ─────────────────────────── M5-T08b QA round: resume, payload, regenerate, fresh read ─────────────────────────── */
+
+describe('M5-T08b QA — turning the switch back on resumes', function () {
+    beforeEach(fn () => useUniquePetMedia(true));
+
+    /** Born pet whose key image jobs ran while the switch was off (slots stay pending, 0 calls). */
+    function smPetWaitingWhileOff(array &$ran): Pet
+    {
+        smFakeFal();
+        Queue::fake([GeneratePetKeyframe::class, SubmitPetStateVideo::class]);
+        $pet = smBirth(smPet());
+
+        smSwitch(false);
+        smDrainJobs($ran);
+
+        expect(smCalls('https://fal.run/fal-ai/nano-banana-pro/edit')->count())->toBe(0)
+            ->and(PetMedia::where('pet_id', $pet->id)->where('kind', 'keyframe')->pluck('status')->unique()->all())->toBe(['pending']);
+
+        return $pet;
+    }
+
+    it('the admin switch off → on queues ResumeStateMedia (only on a real flip to on)', function () {
+        config(['services.fal_ai.key' => null]);
+        Queue::fake([ResumeStateMedia::class]);
+        $admin = User::factory()->create(['role' => 'parent', 'is_superadmin' => true]);
+        $settings = app(AppSettingsService::class);
+
+        $settings->updateStateMedia($admin, true);   // already on (default)
+        Queue::assertNotPushed(ResumeStateMedia::class);
+
+        $settings->updateStateMedia($admin, false);
+        Queue::assertNotPushed(ResumeStateMedia::class);
+
+        $settings->updateStateMedia($admin, true);
+        Queue::assertPushed(ResumeStateMedia::class, 1);
+    });
+
+    it('switch on (ResumeStateMedia) → every key image waiting from the off time is made exactly once, then loops + transitions', function () {
+        $ran = [];
+        $pet = smPetWaitingWhileOff($ran);
+
+        smSwitch(true);
+        (new ResumeStateMedia)->handle(app(PetMediaService::class));
+        for ($i = 0; $i < 6; $i++) {
+            smDrainJobs($ran);
+            smCompleteClips();
+        }
+
+        $edits = smCalls('https://fal.run/fal-ai/nano-banana-pro/edit')->map(fn (Request $r) => (string) $r['prompt']);
+        expect($edits)->toHaveCount(5)
+            ->and($edits->filter(fn (string $p) => str_contains($p, 'asleep')))->toHaveCount(1)
+            ->and(app(PetMediaService::class)->payloadFor($pet->fresh())['status'])->toBe('ready')
+            ->and(app(PetPreparationService::class)->summary($pet->fresh())->ready)->toBeTrue();
+
+        // A second resume / sweep changes nothing (claims + ready slots).
+        (new ResumeStateMedia)->handle(app(PetMediaService::class));
+        $this->travel(15)->minutes();
+        app(PetMediaService::class)->sweepStale();
+        smDrainJobs($ran);
+        expect(smCalls('https://fal.run/fal-ai/nano-banana-pro/edit'))->toHaveCount(5);
+    });
+
+    it('safety net: media:sweep resumes slots left pending while off (older than the claim timeout), once per slot', function () {
+        $ran = [];
+        $pet = smPetWaitingWhileOff($ran);
+        smSwitch(true);
+
+        // Fresh pending slots are not touched by the sweep (a job may be on its way).
+        expect(app(PetMediaService::class)->sweepStale()['resumed'])->toBe(0);
+
+        $this->travel(PetMediaService::STALE_CLAIM_MINUTES + 1)->minutes();
+        expect(app(PetMediaService::class)->sweepStale()['resumed'])->toBe(1);
+        smDrainJobs($ran);
+
+        $edits = smCalls('https://fal.run/fal-ai/nano-banana-pro/edit')->map(fn (Request $r) => (string) $r['prompt']);
+        expect($edits)->toHaveCount(5)
+            ->and($edits->filter(fn (string $p) => str_contains($p, 'asleep')))->toHaveCount(1)
+            ->and(smSlot($pet, 'keyframe', 'sleeping')->status)->toBe('ready');
+    });
+
+    it('while still off the sweep resumes nothing', function () {
+        $ran = [];
+        smPetWaitingWhileOff($ran);
+        $this->travel(PetMediaService::STALE_CLAIM_MINUTES + 1)->minutes();
+
+        expect(app(PetMediaService::class)->sweepStale()['resumed'])->toBe(0);
+        smDrainJobs($ran);
+        expect(smCalls('https://fal.run/fal-ai/nano-banana-pro/edit'))->toHaveCount(0);
+    });
+});
+
+describe('M5-T08b QA — off never downgrades stored media; no regenerate; fresh read', function () {
+    beforeEach(fn () => useUniquePetMedia(true));
+
+    it('switch off: the payload still says state_media and serves the stored key images, transitions and loops', function () {
+        smFakeFal();
+        $pet = smBirth(smPet());
+        smCompleteClips();
+
+        smSwitch(false);
+        $media = app(PetMediaService::class)->payloadFor($pet->fresh());
+        expect($media['state_media'])->toBeTrue()
+            ->and(array_keys((array) $media['keyframes']))->toHaveCount(5)
+            ->and(array_keys((array) $media['transitions']))->toHaveCount(2)
+            ->and($media['loops'])->toHaveCount(6);
+
+        // A pet without the set is unchanged (older clips, no flag).
+        $old = smPet();
+        $old->forceFill(['state_media_version' => 1])->saveQuietly();
+        expect(app(PetMediaService::class)->payloadFor($old->fresh())['state_media'])->toBeFalse();
+    });
+
+    it('switch off: Regenerate of a key image / transition is refused and hidden in the admin panel; a state video still can', function () {
+        smFakeFal();
+        $pet = smBirth(smPet());
+        smCompleteClips();
+        smSwitch(false);
+        $this->actingAs(User::factory()->create(['role' => 'parent', 'is_superadmin' => true]));
+
+        $key = smSlot($pet, 'keyframe', 'sleeping');
+        $transition = smSlot($pet, 'transition', 'idle_to_sleeping');
+        $video = smSlot($pet, 'video', 'hungry');
+
+        expect(app(PetMediaService::class)->regenerate($key))->toBeFalse()
+            ->and(app(PetMediaService::class)->regenerate($transition))->toBeFalse()
+            ->and($key->fresh()->generation)->toBe(1);
+
+        Livewire::test(MediaRelationManager::class, ['ownerRecord' => $pet, 'pageClass' => EditPet::class])
+            ->assertTableActionHidden('regenerate', $key)
+            ->assertTableActionHidden('regenerate', $transition)
+            ->assertTableActionVisible('regenerate', $video);
+    });
+
+    it('the fal entry points read the switch fresh: off stops a worker even while "on" is still cached', function () {
+        smFakeFal();
+        Queue::fake([GeneratePetKeyframe::class, SubmitPetStateVideo::class]);
+        $pet = smBirth(smPet());
+
+        expect(app(AppSettingsService::class)->stateMedia())->toBeTrue(); // "on" cached now
+        AppSetting::updateOrCreate(['key' => AppSettingsService::STATE_MEDIA_KEY], ['value' => ['enabled' => false]]); // no cache forget
+        expect(app(AppSettingsService::class)->stateMedia())->toBeTrue()            // the cached read
+            ->and(app(AppSettingsService::class)->stateMedia(fresh: true))->toBeFalse();
+
+        app(PetMediaService::class)->generateKeyframe(smSlot($pet, 'keyframe', 'sleeping')->id);
+        app(PetMediaService::class)->submitVideo(app(PetMediaService::class)->slot($pet, PetMedia::KIND_TRANSITION, PetTransition::IdleToSleeping)->id);
+        expect(smCalls('https://fal.run/fal-ai/nano-banana-pro/edit'))->toHaveCount(0)
+            ->and(smSlot($pet, 'keyframe', 'sleeping')->status)->toBe('pending');
     });
 });
