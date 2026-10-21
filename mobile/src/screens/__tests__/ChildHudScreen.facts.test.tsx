@@ -123,8 +123,15 @@ async function water(state: ChildPetState = collieState()) {
   fireEvent.press(screen.getByTestId('action-water'));
   await flush(0);
   await flush(0);
-  // The 3 s toast and the settle wait (3.5 s) come first.
+  // The settle wait (3.5 s) and the care confirmation (M5-T03: ≥ 2.5 s + 60 ms per character) come first.
   await flush(4_000);
+  await untilMessageGone();
+}
+
+/** M5-T03: the fact card waits until the HUD message queue is empty. */
+async function untilMessageGone() {
+  for (let i = 0; i < 40 && screen.queryByTestId('hud-toast') !== null; i++) await flush(250);
+  await flush(0);
 }
 
 beforeEach(() => {
@@ -300,6 +307,9 @@ describe('HUD — calm moment', () => {
     await flush(1_000);
     expect(recordFactShown).not.toHaveBeenCalled();
     await flush(3_000);
+    // M5-T03: the confirmation is still on screen — the card waits for it.
+    expect(recordFactShown).not.toHaveBeenCalled();
+    await untilMessageGone();
     expect(recordFactShown).toHaveBeenCalledTimes(1);
   });
 

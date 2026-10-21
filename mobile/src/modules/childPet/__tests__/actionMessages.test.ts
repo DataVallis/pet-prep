@@ -2,6 +2,7 @@ import { ApiError } from '@/api/client';
 import {
   CHILD_ACTION_STRINGS,
   classifyActionError,
+  confirmationNext,
   failureMessage,
   feedHint,
   HUD_HINTS,
@@ -22,6 +23,22 @@ const ny = normalizeChildState(
     feeding: { next_feed_window: { start: '2026-10-04T17:00:00-04:00', end: '2026-10-04T21:00:00-04:00' } },
   }),
 );
+
+describe('confirmationNext (M5-T01 "next time" line, only from the state)', () => {
+  it('feed: the next window; water: next_allowed_at today; clean: none', () => {
+    expect(confirmationNext('feed', 'accepted', lj)).toBe('Naslednji obrok je ob 17:00.');
+    const watered = normalizeChildState(makeLiveChildState({ water: { can_water: false, next_allowed_at: '2026-10-04T15:30:00+02:00' } }));
+    expect(confirmationNext('water', 'accepted', watered)).toBe('Novo vodo lahko daš ob 15:30.');
+    expect(confirmationNext('water', 'accepted', lj)).toBeNull();
+    expect(confirmationNext('clean', 'accepted', lj)).toBeNull();
+  });
+
+  it('nothing for unchanged, an emergency meal (its text names the next meal) or a missing state', () => {
+    expect(confirmationNext('feed', 'unchanged', lj)).toBeNull();
+    expect(confirmationNext('feed', 'accepted', lj, 'emergency')).toBeNull();
+    expect(confirmationNext('take_out', 'accepted', null)).toBeNull();
+  });
+});
 
 describe('classifyActionError', () => {
   it('422 → refused with reason, next time and state', () => {

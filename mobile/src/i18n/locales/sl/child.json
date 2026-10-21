@@ -1,5 +1,6 @@
 {
   "hud": {
+    "toastDismissHint": "Pritisni, da zapreš sporočilo.",
     "feed": "Hrani",
     "emergencyFeed": "Nujni obrok",
     "water": "Voda",
@@ -70,6 +71,10 @@
     "emergencyFeedNoTime": "Njam! Kuža je sit. Ta obrok je bil pozen, zato ne šteje kot pravočasen.",
     "emergencyFeedCovers": "Njam! Kuža je sit. Zamujeni obrok ostane zamujen, ta pa velja tudi kot obrok {{window}}. Naslednji obrok je {{when}}.",
     "emergencyFeedCoversNoTime": "Njam! Kuža je sit. Zamujeni obrok ostane zamujen, ta pa velja tudi kot obrok {{window}}.",
+    "next": {
+      "feed": "Naslednji obrok je {{when}}.",
+      "water": "Novo vodo lahko daš {{when}}."
+    },
     "refused": {
       "outsideFeedWindow": "Naslednji obrok je {{when}}.",
       "outsideFeedWindowNoTime": "Zdaj ni čas za hrano.",

@@ -12,6 +12,7 @@ import {
   durationText,
   hasOpenChewing,
   needsScrubbing,
+  nextTakeOutText,
   onlyChewingOpen,
   panelScene,
   parentBehaviourLines,
@@ -20,6 +21,7 @@ import {
   readPetBehaviour,
   sceneOf,
   takeOutCountdown,
+  takeOutLevel,
   type BehaviourEvent,
   type ChildBehaviour,
 } from '@/modules/behaviour/behaviour';
@@ -152,30 +154,69 @@ describe('calm countdown', () => {
     expect(durationText(0.2)).toBe('~1 min');
   });
 
-  it('under 3 h: "čez ~1 h 20 min"', () => {
+  const HOW_TO = 'Pritisni »Pelji ven«, preden se čas izteče.';
+
+  it('under 3 h: a deadline "mora ven v ~1 h 20 min." + how-to (M5-T01)', () => {
     const c = takeOutCountdown(makeTakeOut(), at('2026-10-04T13:00:00+02:00') - 80 * 60_000, TZ);
-    expect(c).toEqual({ line: 'Kuža bo moral ven čez ~1 h 20 min', hint: '~1 h 20 min', due: false });
+    expect(c).toEqual({ line: 'Kuža mora ven v ~1 h 20 min.', hint: '~1 h 20 min', due: false, level: 'calm', howTo: HOW_TO });
   });
 
-  it('later (quiet hours in between): a family clock time', () => {
+  it('later (quiet hours in between): "najkasneje" + a family clock time', () => {
     const clock = makeTakeOut({ next_due_at: '2026-10-04T13:30:00+02:00' });
     const c = takeOutCountdown(clock, at('2026-10-04T07:00:00+02:00'), TZ);
-    expect(c).toEqual({ line: 'Kuža bo moral ven ob 13:30', hint: 'ob 13:30', due: false });
+    expect(c).toEqual({ line: 'Kuža mora ven najkasneje ob 13:30.', hint: 'ob 13:30', due: false, level: 'calm', howTo: HOW_TO });
     const tomorrow = takeOutCountdown(makeTakeOut({ next_due_at: '2026-10-05T07:10:00+02:00' }), at('2026-10-04T21:00:00+02:00'), TZ);
-    expect(tomorrow?.line).toBe('Kuža bo moral ven jutri ob 07:10');
+    expect(tomorrow?.line).toBe('Kuža mora ven najkasneje jutri ob 07:10.');
   });
 
   it('under a minute left: "wants to go out", not "~1 min"', () => {
     const c = takeOutCountdown(makeTakeOut(), at('2026-10-04T13:00:00+02:00') - 40_000, TZ);
-    expect(c).toEqual({ line: 'Kuža bi rad šel ven.', hint: 'zdaj', due: true });
+    expect(c).toEqual({ line: 'Kuža bi rad šel ven.', hint: 'zdaj', due: true, level: 'urgent', howTo: null });
     const justOver = takeOutCountdown(makeTakeOut(), at('2026-10-04T13:00:00+02:00') - 61_000, TZ);
-    expect(justOver?.line).toBe('Kuža bo moral ven čez ~1 min');
+    expect(justOver?.line).toBe('Kuža mora ven v ~1 min.');
   });
 
   it('due: a calm line, never an alarm', () => {
     const c = takeOutCountdown(makeTakeOut(), at('2026-10-04T13:05:00+02:00'), TZ);
-    expect(c).toEqual({ line: 'Kuža bi rad šel ven.', hint: 'zdaj', due: true });
+    expect(c).toEqual({ line: 'Kuža bi rad šel ven.', hint: 'zdaj', due: true, level: 'urgent', howTo: null });
     expect(c?.line).not.toMatch(/!|nujno|hitro/i);
+  });
+});
+
+describe('clock colour (M5-T01)', () => {
+  it('green → orange at ≤ 60 min (or the last half of a long hold) → red at ≤ 30 min', () => {
+    // 2 h hold: half = 60 min → orange from 60 min.
+    expect(takeOutLevel(61, 2)).toBe('calm');
+    expect(takeOutLevel(60, 2)).toBe('soon');
+    expect(takeOutLevel(31, 2)).toBe('soon');
+    expect(takeOutLevel(30, 2)).toBe('urgent');
+    expect(takeOutLevel(0, 2)).toBe('urgent');
+    // 1 h hold: never shorter than 60 min of orange — so orange from the start.
+    expect(takeOutLevel(59, 1)).toBe('soon');
+    // 4 h hold: orange in the last 2 h.
+    expect(takeOutLevel(121, 4)).toBe('calm');
+    expect(takeOutLevel(120, 4)).toBe('soon');
+  });
+
+  it('the countdown carries the level', () => {
+    const due = at('2026-10-04T13:00:00+02:00');
+    expect(takeOutCountdown(makeTakeOut(), due - 45 * 60_000, TZ)?.level).toBe('soon');
+    expect(takeOutCountdown(makeTakeOut(), due - 20 * 60_000, TZ)?.level).toBe('urgent');
+  });
+});
+
+describe('next take-out line (M5-T01 confirmation)', () => {
+  it('from the state that came with the answer', () => {
+    expect(nextTakeOutText(makeTakeOut(), '2026-10-04T11:00:00+02:00', TZ)).toBe('Naslednjič čez ~2 h.');
+    expect(nextTakeOutText(makeTakeOut({ next_due_at: '2026-10-05T07:10:00+02:00' }), '2026-10-04T21:00:00+02:00', TZ)).toBe(
+      'Naslednjič jutri ob 07:10.',
+    );
+  });
+
+  it('nothing when unknown or already due (never invented)', () => {
+    expect(nextTakeOutText(null, '2026-10-04T11:00:00+02:00', TZ)).toBeNull();
+    expect(nextTakeOutText(makeTakeOut(), null, TZ)).toBeNull();
+    expect(nextTakeOutText(makeTakeOut(), '2026-10-04T13:00:00+02:00', TZ)).toBeNull();
   });
 });
 

@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "c9a0e27734035d77a900f1fcd91650e66968de94277c02b6cb192167d87154e6"
+      "sha256": "3fc180aa5a468cddd8e487f945ccbfd024903a0a1562770b7a9b6d36d1ebe218"
     }
   },
   "suitability_vocabulary": {
@@ -29422,7 +29422,12 @@
           "S437"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "australian-cattle-dog.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

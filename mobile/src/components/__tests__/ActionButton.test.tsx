@@ -128,4 +128,15 @@ describe('ActionButton a11y and dock slots (QA 2026-10-07)', () => {
     expect(hint.props.numberOfLines).toBe(1);
     expect(hint.props.adjustsFontSizeToFit).toBe(true);
   });
+
+  it('M5-T01: pulse only when asked and never while disabled', () => {
+    const on = render(<ActionButton testID="t" icon={<Beef />} label="Take out" onPress={jest.fn()} pulse />);
+    expect(on.getByTestId('t-pulse')).toBeTruthy();
+    on.unmount();
+    const off = render(<ActionButton testID="t" icon={<Beef />} label="Take out" onPress={jest.fn()} />);
+    expect(off.queryByTestId('t-pulse')).toBeNull();
+    off.unmount();
+    const disabled = render(<ActionButton testID="t" icon={<Beef />} label="Take out" onPress={jest.fn()} pulse disabled />);
+    expect(disabled.queryByTestId('t-pulse')).toBeNull();
+  });
 });

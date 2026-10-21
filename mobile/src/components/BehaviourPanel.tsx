@@ -1,6 +1,7 @@
 /**
  * Behaviour panel of the child HUD (M5-R02), just above the action dock — near the dog:
- * - the puppy's calm countdown ("Kuža bo moral ven čez ~1 h 20 min"; no red, no alarm);
+ * - the puppy's deadline (M5-T01: "Kuža mora ven v ~1 h 20 min." + "Pritisni »Pelji ven«, preden
+ *   se čas izteče."), green → orange → red in the last 30 min — calm words, never an alarm;
  * - the scene of an open mess: the free-tier graphic (puddle / chewed slipper, drawn in
  *   `BehaviourGraphics`) unless the premium scene video is already on screen, a short kind
  *   caption, and for a chewed slipper the "Pospravi in daj igračo" button. An accident is
@@ -15,8 +16,8 @@
  * scratching mini-game; cleaning never resolves it.
  */
 
-import type { ReactNode } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { Animated, Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { Cat, DoorOpen, ToyBrick } from 'lucide-react-native';
 
@@ -27,6 +28,7 @@ import {
   panelScene,
   type ChildBehaviour,
   type TakeOutCountdown,
+  type TakeOutLevel,
 } from '@/modules/behaviour/behaviour';
 import type { VideoState } from '@/modules/petMedia/petMedia';
 import { alpha, palette } from '@/theme';
@@ -54,6 +56,66 @@ export interface BehaviourPanelProps {
    * null = no button. `disabled` while the server refuses a carry (another child's game).
    */
   scratcher?: { label: string; a11y: string; disabled: boolean; onPress: () => void } | null;
+  /** System reduce motion: the clock resets without the short pop animation. */
+  reduceMotion?: boolean;
+}
+
+/** M5-T01 clock colours: green (mint) → orange (warn) → red (danger) — dark-theme tokens. */
+const LEVEL_COLOUR: Record<TakeOutLevel, string> = {
+  calm: palette.mint,
+  soon: palette.warnDark,
+  urgent: palette.dangerDark,
+};
+
+/**
+ * The take-out deadline (M5-T01, spec §2/§4): the line ("Kuža mora ven v ~1 h 20 min."), the
+ * how-to under it, coloured by urgency. A new clock (`resetKey` = `clock_started_at` changed,
+ * e.g. after "Pelji ven") pops once so the reset is visible, not silent.
+ */
+function TakeOutClockPill({
+  countdown,
+  resetKey,
+  reduceMotion,
+}: {
+  countdown: TakeOutCountdown;
+  resetKey: string | null;
+  reduceMotion: boolean;
+}) {
+  const pop = useRef(new Animated.Value(1)).current;
+  const lastKey = useRef(resetKey);
+  const [resetting, setResetting] = useState(false);
+  useEffect(() => {
+    if (lastKey.current === resetKey) return;
+    const first = lastKey.current === null;
+    lastKey.current = resetKey;
+    if (first || reduceMotion) return;
+    setResetting(true);
+    pop.setValue(0.85);
+    const anim = Animated.spring(pop, { toValue: 1, friction: 4, tension: 120, useNativeDriver: true });
+    anim.start(() => setResetting(false));
+    return () => anim.stop();
+  }, [resetKey, reduceMotion, pop]);
+  const colour = LEVEL_COLOUR[countdown.level];
+  const label = countdown.howTo ? `${countdown.line} ${countdown.howTo}` : countdown.line;
+  return (
+    <Animated.View
+      style={[styles.countdownPill, { borderColor: alpha(colour, 0.55), transform: [{ scale: pop }] }]}
+      testID="hud-take-out-countdown"
+      accessible
+      accessibilityLabel={label}
+    >
+      <View style={styles.countdownRow} testID={`hud-take-out-level-${countdown.level}`}>
+        <DoorOpen color={colour} size={14} />
+        <Text style={[styles.countdownText, { color: colour }]}>{countdown.line}</Text>
+      </View>
+      {countdown.howTo !== null && (
+        <Text style={styles.countdownHowTo} testID="hud-take-out-howto">
+          {countdown.howTo}
+        </Text>
+      )}
+      {resetting && <View testID="hud-take-out-reset" />}
+    </Animated.View>
+  );
 }
 
 export default function BehaviourPanel({
@@ -68,6 +130,7 @@ export default function BehaviourPanel({
   meals = null,
   notice = null,
   scratcher = null,
+  reduceMotion = false,
 }: BehaviourPanelProps) {
   const scene = panelScene(behaviour);
   const chewing = hasOpenChewing(behaviour) || behaviour.can_resolve_chewing;
@@ -127,10 +190,7 @@ export default function BehaviourPanel({
         </View>
       )}
       {countdown !== null && (
-        <View style={styles.countdownPill} testID="hud-take-out-countdown" accessible accessibilityLabel={countdown.line}>
-          <DoorOpen color={countdown.due ? palette.mint : palette.n400} size={14} />
-          <Text style={styles.countdownText}>{countdown.line}</Text>
-        </View>
+        <TakeOutClockPill countdown={countdown} resetKey={behaviour.take_out?.clock_started_at ?? null} reduceMotion={reduceMotion} />
       )}
       {footer}
       {shownMeals}
@@ -138,7 +198,7 @@ export default function BehaviourPanel({
   );
 }
 
-/** Dark glass, like the header / dock; mint accent (never the danger colour). */
+/** Dark glass, like the header / dock; mint accent (danger only on the last-30-min clock, M5-T01). */
 const styles = StyleSheet.create({
   slot: {
     position: 'absolute',
@@ -185,9 +245,8 @@ const styles = StyleSheet.create({
   },
   countdownPill: {
     maxWidth: '100%',
-    flexDirection: 'row',
     alignItems: 'center',
-    gap: 6,
+    gap: 2,
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 14,
@@ -195,11 +254,23 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: alpha(palette.mint, 0.3),
   },
+  countdownRow: {
+    maxWidth: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
   countdownText: {
     flexShrink: 1,
     color: palette.mint,
     fontSize: 12,
-    fontWeight: '600',
+    fontWeight: '700',
+  },
+  countdownHowTo: {
+    color: palette.n300,
+    fontSize: 11,
+    fontWeight: '500',
+    textAlign: 'center',
   },
   pressed: {
     transform: [{ scale: 0.96 }],
