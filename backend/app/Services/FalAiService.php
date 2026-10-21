@@ -7,11 +7,14 @@ use App\Enums\AiSpendPurpose;
 use App\Enums\BreedType;
 use App\Enums\LifeStage;
 use App\Enums\PetStateEnum;
+use App\Enums\PetTransition;
 use App\Enums\Species;
 use App\Models\Pet;
+use App\Models\PetMedia;
 use App\Services\Media\AiCallException;
 use App\Services\Media\FalGateway;
 use App\Services\Media\MediaProfiles;
+use App\Services\Media\ModelProfile;
 use App\Services\Media\PetAppearancePrompt;
 use Illuminate\Support\Facades\Log;
 
@@ -1201,8 +1204,31 @@ class FalAiService
      */
     public function editReferenceImage(string $prompt, string $sourceImageUrl, int $seed, ?int $petId = null, ?int $petMediaId = null): ?array
     {
-        $profile = $this->profiles->stageEdit();
+        return $this->editImageWith($this->profiles->stageEdit(), $prompt, $sourceImageUrl, $seed, $petId, $petMediaId);
+    }
 
+    /**
+     * M5-T08: a state's KEY IMAGE as an edit of the stage's reference image
+     * (profile media.state_media.keyframe_profile — Nano Banana Pro Edit, David
+     * 2026-10-21). Same budget / ledger as every image (purpose reference_image).
+     * Returns null when the profile is disabled or on a retryable failure.
+     *
+     * @return array{url: string, profile: string}|null
+     *
+     * @throws AiCallException budget / balance / non-retryable failures
+     */
+    public function editKeyframe(string $prompt, string $sourceImageUrl, int $seed, ?int $petId = null, ?int $petMediaId = null): ?array
+    {
+        return $this->editImageWith($this->profiles->keyframe(), $prompt, $sourceImageUrl, $seed, $petId, $petMediaId);
+    }
+
+    /**
+     * @return array{url: string, profile: string}|null
+     *
+     * @throws AiCallException
+     */
+    private function editImageWith(?ModelProfile $profile, string $prompt, string $sourceImageUrl, int $seed, ?int $petId, ?int $petMediaId): ?array
+    {
         if (! $this->isEnabled() || $profile === null) {
             return null;
         }
@@ -1279,6 +1305,67 @@ class FalAiService
         $submitted = $this->gateway->submit(
             $profile,
             $profile->videoInput($startImageUrl, $this->prompts->videoPrompt($breedKey, $state, $traits, $stage), $this->prompts->videoNegativePrompt($species)),
+            AiSpendPurpose::StateVideo,
+            $this->webhookUrl(),
+            petId: $petId,
+            petMediaId: $petMediaId,
+        );
+
+        return [
+            'request_id' => $submitted['request_id'],
+            'profile' => $profile->key,
+            'duration_seconds' => $profile->durationSeconds,
+        ];
+    }
+
+    /**
+     * M5-T08: a state's LOOP video — start frame = the state's key image and,
+     * when the profile takes an end frame (Kling 3.0 Pro `end_image_url`), the
+     * same image as the end frame, so the clip loops without a visible jump.
+     *
+     * @param  array<string, string>  $traits
+     * @return array{request_id: string, profile: string, duration_seconds: int, recipe: string}
+     *
+     * @throws AiCallException
+     */
+    public function submitLoopVideoFor(string $breedKey, array $traits, ?LifeStage $stage, PetStateEnum $state, string $keyImageUrl, ?int $petId = null, ?int $petMediaId = null): array
+    {
+        $profile = $this->profiles->stateVideo();
+        $prompt = $this->prompts->loopVideoPrompt($breedKey, $state, $traits, $stage);
+
+        return $this->submitClip($profile, $breedKey, $prompt, $keyImageUrl, $keyImageUrl, $petId, $petMediaId)
+            + ['recipe' => $profile->supportsEndImage() ? PetMedia::RECIPE_LOOP : PetMedia::RECIPE_POSE];
+    }
+
+    /**
+     * M5-T08: a TRANSITION clip — start = key image of the source state, end =
+     * key image of the target state (played once on a state change). Without
+     * an end-frame profile only the start frame is sent (the prompt names the end pose).
+     *
+     * @param  array<string, string>  $traits
+     * @return array{request_id: string, profile: string, duration_seconds: int}
+     *
+     * @throws AiCallException
+     */
+    public function submitTransitionFor(string $breedKey, array $traits, ?LifeStage $stage, PetTransition $transition, string $startImageUrl, string $endImageUrl, ?int $petId = null, ?int $petMediaId = null): array
+    {
+        $prompt = $this->prompts->transitionVideoPrompt($breedKey, $transition, $traits, $stage);
+
+        return $this->submitClip($this->profiles->stateVideo(), $breedKey, $prompt, $startImageUrl, $endImageUrl, $petId, $petMediaId);
+    }
+
+    /**
+     * @return array{request_id: string, profile: string, duration_seconds: int}
+     *
+     * @throws AiCallException
+     */
+    private function submitClip(ModelProfile $profile, string $breedKey, string $prompt, string $startImageUrl, ?string $endImageUrl, ?int $petId, ?int $petMediaId): array
+    {
+        $species = PetAppearancePrompt::speciesOf($breedKey);
+
+        $submitted = $this->gateway->submit(
+            $profile,
+            $profile->videoInput($startImageUrl, $prompt, $this->prompts->videoNegativePrompt($species), $endImageUrl),
             AiSpendPurpose::StateVideo,
             $this->webhookUrl(),
             petId: $petId,

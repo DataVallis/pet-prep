@@ -4,7 +4,7 @@
  * inspect them (source, play / pause, released) and emit player events.
  */
 
-export type MockPlayerEvent = 'statusChange' | 'playingChange' | 'sourceLoad';
+export type MockPlayerEvent = 'statusChange' | 'playingChange' | 'sourceLoad' | 'playToEnd';
 
 export type MockPlayerStatus = 'idle' | 'loading' | 'readyToPlay' | 'error';
 

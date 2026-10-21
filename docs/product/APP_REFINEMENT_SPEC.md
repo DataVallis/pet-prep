@@ -75,6 +75,17 @@
 - **Prehod** (stoji → leže, vstane) je ločen kratek klip, ki se predvaja enkrat ob spremembi stanja.
 - Mediji se generirajo **ob prvem nakupu pasme + barve** in se delijo z vsemi kasnejšimi kupci (BREED_COLOURS_SHARED_MEDIA.md). Vnaprej se ne generira nič.
 
+**Zgrajeno (M5-T08, 21. 10. 2026) — strežnik + aplikacija (JS, OTA); na telefonu še ni preverjeno.**
+- **Ključne slike:** vsako stanje polnega (kupljenega) nabora razen »stoji« dobi ključno sliko — Nano Banana Pro Edit iz referenčne slike obdobja (isti pes, soba, svetloba in kader, spremeni se samo poza). »Stoji« (`idle`) = sama referenčna slika. Stanja: spi, utrujen, lačen (ob posodi), bolan, igra (poklon), pri mladičku z vedenjskimi dogodki tudi nesreča in grizenje copata, pri muci praskanje.
+- **Zanke:** video stanja (Kling 3.0 Pro, 5 s) se začne na ključni sliki in **konča na isti sliki** (`end_image_url`, preverjeno v dokumentaciji fal 21. 10. 2026) — aplikacija ga predvaja z izvorno zanko brez vidnega ponovnega začetka.
+- **Prehoda:** stoji → spi (`idle_to_sleeping`) in spi → stoji (`sleeping_to_idle`), Kling 3.0 Pro 5 s, začetek = poza A, konec = poza B. Aplikacija ob spremembi stanja prehod predvaja enkrat, zanka ciljnega stanja je že naložena (ustavljena na prvi sličici) in se takoj nadaljuje. Prehod, ki se ne konča v 8 s, aplikacija opusti.
+- **§0 pravilo 1:** dokler klipa stanja ni, aplikacija pokaže ključno sliko tega stanja (ali referenčno sliko) — nikoli klipa drugega stanja. Ljubljenčki s starejšim naborom ohranijo nadomestno verigo (bolan → spi → miruje).
+- **Vrstni red (§13):** referenčna slika → zanka »stoji« (iz nje) in ključne slike v vrstnem redu priprave (spi, lačen, igra, ostalo); vsaka zanka sledi svoji ključni sliki; prehoda šele, ko so na poti vsi klipi prvih minut. Zaslon »Pripravljamo …« čaka na iste stvari kot prej (slika, stoji, spi, lačen); prehoda sta postavki priprave (obvestilo »… je pripravljen!« pride, ko sta tudi ta shranjena).
+- **Kdo:** samo poln nabor (kupljen izziv). Brezplačni nabor (miruje + spi) ostane, kot je — *predlog Claude, čaka Davida*. Obstoječi ljubljenčki **nič samodejno** (glej DECISIONS 21. 10. 2026); nov nakup ali admin »Generate missing« jih nadgradi.
+- **Skupni videz pasme + barve:** ključne slike, zanke in prehodi so vrstice videza na obdobje — ustvari jih prvi kupec, vsak naslednji jih dobi za 0 $.
+- **Administracija:** superadmin → ljubljenček → »AI media« pokaže vse vrstice (vrsta `keyframe` / `video` / `transition`, stolpec »Made as«: loop / from key image / from reference image / pose → pose) in »Regenerate« ključne slike (nato se iz nje znova naredita zanka in prehodi skozi to pozo).
+- **Razširitve (M5-T09 / T10 / T11):** ARCHITECTURE §2 (*Media per state*).
+
 ## 8. Pravila »kaj je dovoljeno kdaj«
 
 - Ena tabela pravil: katera dejanja so dovoljena v katerem stanju (spi, tihe ure, bolan, je, na sprehodu, zaklep do plačila).
@@ -193,6 +204,8 @@
 **Odločitev (David 21. 10. 2026) — brez primerjave modelov:**
 1. Vsi videi: **Kling 3.0 Pro** (image-to-video); vse slike: **Nano Banana Pro**, ključne slike stanj in življenjskih obdobij **Nano Banana Pro Edit**. Primerjava v AI Labu (M5-T07) je **opuščena**.
 2. Novi klipi **šole in iger** (M5-T09 / M5-T10) so dolgi **3 s** namesto 5 s (−40 % pri istem modelu). Klipi stanj (ki jih otrok gleda največ) ostanejo **5 s**.
+
+**Zgrajeno M5-T08 (21. 10. 2026) — dejanski poln nabor stanj na pasmo + barvo + obdobje (cenik fal):** referenčna slika 0,15 $ + 5 ključnih slik × 0,15 $ = 0,75 $ + 6 zank × 0,56 $ = 3,36 $ + 2 prehoda × 0,56 $ = 1,12 $ → **5,38 $** (zanke nadomestijo stare videe stanj; mladiček z vedenjskimi dogodki + 2 ključni sliki + 2 zanki → **6,80 $**). Vsak naslednji kupec iste pasme + barve + obdobja **0 $**. Ključna slika za »stoji« ni potrebna (= referenčna slika), zato 5 namesto 6 ključnih slik. Šola in igre (M5-T09 / T10) spodaj še niso zgrajene.
 
 **Ocena paketa z odločitvijo (cenik fal, Kling 3.0 Pro 0,112 $/s):**
 

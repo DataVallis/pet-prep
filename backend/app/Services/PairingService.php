@@ -393,6 +393,9 @@ class PairingService
             // M5-R17: puppy socialisation (the weekly "new experience") the same way —
             // profile + `socialisation` declared by the parent's PIN and the child's device.
             'socialisation_enabled' => $isDog && $arrivalAge !== null && $profile?->supports(ClientFeature::Socialisation) === true,
+            // M5-T08: new profiled pets get key images, loops and transitions (when entitled);
+            // a legacy-profile pet keeps the pre-M5-T08 set. Existing pets stay on 1.
+            'state_media_version' => $arrivalAge !== null ? 2 : 1,
         ]);
 
         if ($petDna === null && $hasAppearance) {

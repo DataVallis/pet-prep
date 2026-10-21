@@ -63,6 +63,80 @@ enum PetStateEnum: string
     }
 
     /**
+     * M5-T08 (APP_REFINEMENT_SPEC §7): the pose of this state's KEY IMAGE — an
+     * edit of the stage's reference image (Nano Banana Pro Edit), the start and
+     * end frame of the state's loop. `idle` has no key image of its own: the
+     * reference image (standing / sitting calmly) is the idle pose.
+     */
+    public function keyPose(Species $species = Species::Dog): string
+    {
+        if (! $this->appliesTo($species)) {
+            throw new InvalidArgumentException("A {$species->value} has no '{$this->value}' pose.");
+        }
+
+        if ($species === Species::Cat) {
+            return match ($this) {
+                self::Idle => 'sitting calmly and looking around, exactly as in the reference image',
+                self::Sleeping => 'curled up in a tight ball asleep on a soft blanket on the floor, eyes closed, relaxed',
+                self::LowEnergy => 'lying on a windowsill and gazing out of the window with a bored expression',
+                self::Hungry => 'sitting next to an empty cat food bowl on the floor and looking down at it',
+                self::Sick => 'lying quietly in a hunched loaf position with half-closed eyes',
+                self::Playing => 'crouched low and alert, eyes fixed on a feather toy dangling on a string from above the frame',
+                self::Scratching => 'standing on its hind legs with the front claws on the side of a fabric sofa, scratching it',
+                self::Accident, self::Chewing => throw new InvalidArgumentException("A cat has no '{$this->value}' pose."),
+            };
+        }
+
+        return match ($this) {
+            self::Idle => 'standing calmly on all four paws and looking around, exactly as in the reference image',
+            self::Sleeping => 'lying curled up asleep on the floor, eyes closed, relaxed',
+            self::LowEnergy => 'lying down on the floor with the head resting on the front paws and droopy eyelids, tired',
+            self::Hungry => 'sitting next to an empty dog food bowl on the floor and looking down at it',
+            self::Sick => 'lying down quietly on the floor with sad tired eyes and the head low',
+            self::Playing => 'in a playful bow: front legs stretched forward on the floor, rear end up, tail raised, happy open mouth',
+            self::Accident => 'standing next to a small clear puddle on a wooden floor, ears slightly back, a guilty apologetic look',
+            self::Chewing => 'lying on the floor holding a soft house slipper between the front paws and chewing it',
+            self::Scratching => throw new InvalidArgumentException('A dog has no scratching pose.'),
+        };
+    }
+
+    /**
+     * M5-T08: the motion of a SEAMLESS LOOP of this state — subtle movement that
+     * stays in the key pose, because the clip starts and ends on the same frame.
+     */
+    public function loopMotion(Species $species = Species::Dog): string
+    {
+        if (! $this->appliesTo($species)) {
+            throw new InvalidArgumentException("A {$species->value} has no '{$this->value}' loop.");
+        }
+
+        if ($species === Species::Cat) {
+            return match ($this) {
+                self::Idle => 'staying in the same position as in the image, blinking slowly, the tail gently curling, an occasional ear twitch',
+                self::Sleeping => 'asleep and staying curled up the whole time, slow rhythmic breathing, a small ear twitch',
+                self::LowEnergy => 'staying on the windowsill, the tail tip slowly flicking, barely moving',
+                self::Hungry => 'staying seated by the bowl, looking down at it and up again, licking its lips',
+                self::Sick => 'staying in the loaf position, slow calm breathing, not getting up',
+                self::Playing => 'staying crouched, the hindquarters wiggling and the eyes following the dangling toy',
+                self::Scratching => 'scratching the sofa with steady strokes of the front paws, staying on its hind legs',
+                self::Accident, self::Chewing => throw new InvalidArgumentException("A cat has no '{$this->value}' loop."),
+            };
+        }
+
+        return match ($this) {
+            self::Idle => 'standing in the same spot, breathing gently, looking around, an occasional slow tail wag and ear twitch, without sitting or lying down',
+            self::Sleeping => 'asleep and staying curled up the whole time, slow rhythmic breathing, a small ear twitch',
+            self::LowEnergy => 'lying still, slow tired breathing, the eyelids slowly blinking, barely moving',
+            self::Hungry => 'staying seated by the bowl, looking down at it and up again, licking its lips',
+            self::Sick => 'lying still with slow shallow breathing, not getting up',
+            self::Playing => 'bouncing gently on the front paws in the play bow, tail wagging, staying in place',
+            self::Accident => 'standing by the puddle with a slow low tail wag, glancing up and down, staying in place',
+            self::Chewing => 'chewing the slipper, an occasional tail wag, staying lying down',
+            self::Scratching => throw new InvalidArgumentException('A dog has no scratching loop.'),
+        };
+    }
+
+    /**
      * Get a human-readable description of the pet state.
      */
     public function description(): string

@@ -36,6 +36,8 @@ final class ModelProfile
         public readonly string $imageParam,
         /** Video: clip lengths (s) the fal schema accepts; [] = only $durationSeconds. */
         public readonly array $allowedDurations = [],
+        /** Video (M5-T08): input name of the END frame (Kling 3.0 Pro `end_image_url`); null = not supported. */
+        public readonly ?string $endImageParam = null,
     ) {}
 
     /**
@@ -87,7 +89,14 @@ final class ModelProfile
             durationSeconds: (int) ($config['duration_seconds'] ?? 0),
             imageParam: (string) ($config['image_param'] ?? 'image_url'),
             allowedDurations: array_values(array_map('intval', (array) ($config['durations'] ?? []))),
+            endImageParam: isset($config['end_image_param']) && $config['end_image_param'] !== '' ? (string) $config['end_image_param'] : null,
         );
+    }
+
+    /** M5-T08: the model takes an end frame (seamless loops, transitions between two poses). */
+    public function supportsEndImage(): bool
+    {
+        return $this->kind === self::KIND_VIDEO && $this->endImageParam !== null;
     }
 
     /**
@@ -151,6 +160,7 @@ final class ModelProfile
             durationSeconds: $seconds,
             imageParam: $this->imageParam,
             allowedDurations: $this->allowedDurations,
+            endImageParam: $this->endImageParam,
         );
     }
 
@@ -234,9 +244,14 @@ final class ModelProfile
      *
      * @return array<string, mixed>
      */
-    public function videoInput(string $imageUrl, string $prompt, ?string $negativePrompt = null): array
+    public function videoInput(string $imageUrl, string $prompt, ?string $negativePrompt = null, ?string $endImageUrl = null): array
     {
         $input = [$this->imageParam => $imageUrl, 'prompt' => $prompt] + $this->params;
+
+        // M5-T08: end frame (loop = the start image again; transition = the target pose).
+        if ($endImageUrl !== null && $this->supportsEndImage()) {
+            $input[(string) $this->endImageParam] = $endImageUrl;
+        }
 
         if ($this->supportsNegativePrompt && filled($negativePrompt)) {
             $input['negative_prompt'] = $negativePrompt;

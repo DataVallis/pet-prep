@@ -214,6 +214,8 @@ class Pet extends Model
         // since 2026-10-17 (David) the push title (label only, PushCopy::title).
         'name',
         'pet_dna',
+        // M5-T08: 1 = media set from before M5-T08, 2 = key images + loops + transitions (MediaEntitlementService).
+        'state_media_version',
         'current_video_url',
         'media_status',
         'media_error',
@@ -319,6 +321,7 @@ class Pet extends Model
             'training_enabled' => 'boolean',
             'grooming_enabled' => 'boolean',
             'socialisation_enabled' => 'boolean',
+            'state_media_version' => 'integer',
             'training_learning_factor' => 'float',
             'hunger_level' => 'float',
             'thirst_level' => 'float',

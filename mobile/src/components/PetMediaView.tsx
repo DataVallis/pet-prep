@@ -20,6 +20,11 @@
  *   false (screen covered); they don't keep the screen on.
  * - The child never sees a media error: pending shows a gentle "getting ready" hint,
  *   failed / disabled just show the image or the placeholder.
+ * - **State media (M5-T08, `modules/petMedia/statePlayer.ts`):** a state loop that starts and
+ *   ends on its key image plays with the native loop (no visible restart); a state change with
+ *   a stored transition clip plays it ONCE (`playToEnd`), the target loop preloaded hidden
+ *   underneath, then switches to that loop; a missing clip shows the state's key image —
+ *   never a clip of another state (§0 rule 1). `mode="picture"` (M5-T11) shows the key image.
  */
 
 import { memo, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
@@ -39,12 +44,22 @@ import {
   nextFailedExpiry,
   recordVideoError,
   recordVideoReady,
-  selectMediaSource,
   videoStateFor,
   type PetMediaInfo,
   type VideoErrorState,
   type VideoState,
 } from '@/modules/petMedia/petMedia';
+import {
+  NO_TRANSITION,
+  TRANSITION_MAX_MS,
+  nextPlayback,
+  onTransitionEnd,
+  onWantedChange,
+  steadyItem,
+  type MediaMode,
+  type PlayItem,
+  type TransitionState,
+} from '@/modules/petMedia/statePlayer';
 import type { BehaviourScene } from '@/modules/behaviour/behaviour';
 import type { PetState, ShownBreed, Species } from '@/types';
 import { breedName } from '@/modules/species/species';
@@ -88,6 +103,12 @@ interface Layer {
   phase: LayerPhase;
   /** The player failed; the view keeps its last frame until a replacement is ready. */
   errored: boolean;
+  /** M5-T08: false = a transition clip — plays once, reports `playToEnd`. */
+  loop: boolean;
+  /** M5-T08: mounted hidden ahead of time (the loop after a transition) — never shown before its turn. */
+  preload: boolean;
+  /** M5-T08: a preloaded layer already rendered its first frame (shows at once when promoted). */
+  readyEarly: boolean;
 }
 
 export interface PetMediaViewProps {
@@ -123,6 +144,11 @@ export interface PetMediaViewProps {
   onVideoStateChange?: (state: VideoState | null) => void;
   /** `hud`: full-bleed dark (child); `card`: rounded box (parent). */
   variant?: 'hud' | 'card';
+  /**
+   * M5-T08 / M5-T11: `video` (default) plays the state loops and transitions; `picture` shows
+   * the key image of the current state only (the child's »Prikaz: Slika« setting).
+   */
+  mode?: MediaMode;
   /** Custom placeholder (the HUD's animated avatar); default: paw + breed. */
   placeholder?: ReactNode;
   /**
@@ -140,13 +166,16 @@ interface VideoLayerProps {
   url: string;
   opacity: Animated.Value;
   playing: boolean;
+  /** M5-T08: false = play once (transition), report the end. */
+  loop: boolean;
   onReady: (id: string) => void;
   onError: (id: string) => void;
+  onEnd?: (id: string) => void;
   testID: string;
 }
 
 /** One player + view. The source is fixed for the layer's life (no restart on re-sign). */
-const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, onReady, onError, testID }: VideoLayerProps) {
+const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, loop, onReady, onError, onEnd, testID }: VideoLayerProps) {
   // David 2026-10-20: the phone's copy of the file when there is one (survives re-signed
   // URLs); otherwise the remote URL with expo-video's cache, and a copy is made for next time.
   const [source] = useState(() => {
@@ -155,7 +184,8 @@ const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, onReady
   });
   const localSource = isLocalMediaUri(source.uri);
   const player = useVideoPlayer(source, (p) => {
-    p.loop = true;
+    // M5-T08: a state loop starts and ends on its key image → the native loop is seamless.
+    p.loop = loop;
     p.muted = true;
     p.audioMixingMode = 'mixWithOthers';
     p.keepScreenOnWhilePlaying = false;
@@ -186,6 +216,12 @@ const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, onReady
       if (fallback !== null) clearTimeout(fallback);
     };
   }, [player, id, onReady, onError, localSource, url]);
+
+  useEffect(() => {
+    if (loop || onEnd === undefined) return;
+    const sub = player.addListener('playToEnd', () => onEnd(id));
+    return () => sub.remove();
+  }, [player, loop, onEnd, id]);
 
   const onFirstFrameRender = useCallback(() => onReady(id), [onReady, id]);
 
@@ -220,6 +256,15 @@ function DefaultPlaceholder({ label, variant }: { label: string; variant: 'hud' 
 
 let layerSeq = 0;
 
+function sameLayers(a: readonly Layer[], b: readonly Layer[]): boolean {
+  return a.length === b.length && a.every((l, i) => l === b[i]);
+}
+
+function newLayer(key: string, url: string, loop: boolean, preload: boolean): Layer {
+  layerSeq += 1;
+  return { id: `${key}#${layerSeq}`, key, url, opacity: new Animated.Value(0), phase: 'loading', errored: false, loop, preload, readyEarly: false };
+}
+
 function animateTo(value: Animated.Value, toValue: number, done?: () => void): void {
   Animated.timing(value, { toValue, duration: CROSSFADE_MS, useNativeDriver: true }).start(({ finished }) => {
     if (finished) done?.();
@@ -239,6 +284,7 @@ export default function PetMediaView({
   onMediaExpired,
   onVideoStateChange,
   variant = 'hud',
+  mode = 'video',
   placeholder,
   pendingNotice = 'overlay',
   style,
@@ -262,20 +308,42 @@ export default function PetMediaView({
   }, [errors, clock]);
 
   const wanted = videoEnabled ? videoStateFor(petState, lockReason, scene, mood) : null;
-  const target = useMemo(() => {
-    const now = Math.max(clock, Date.now());
-    return selectMediaSource(media, wanted, {
-      canPlayVideo: (url) => canPlayUrl(errors, url, now),
-      sceneFallback: petState,
-    });
-  }, [media, wanted, errors, clock, petState]);
-  const image = useStableUrl(media.referenceImageUrl);
+
+  // M5-T08: transition bookkeeping (derived while rendering — the React derived-state pattern).
+  const [transition, setTransition] = useState<TransitionState>(NO_TRANSITION);
+  const canPlayNow = useCallback((url: string) => canPlayUrl(errors, url, Math.max(clock, Date.now())), [errors, clock]);
+  const nextTransition = onWantedChange(transition, mode === 'picture' ? null : wanted, (from, to) => {
+    const url = media.transitions[`${from}_to_${to}`];
+    return url !== undefined && canPlayNow(url);
+  });
+  if (nextTransition !== transition) setTransition(nextTransition);
+
+  const playback = useMemo(() => {
+    const input = { media, wanted, petState, mode, canPlayVideo: canPlayNow };
+    if (nextTransition.pending === null) return { current: steadyItem(input), preload: null };
+    return nextPlayback(input, nextTransition.pending.from);
+  }, [media, wanted, petState, mode, canPlayNow, nextTransition]);
+  const target: PlayItem = playback.current;
+  const preloadTarget: PlayItem | null = playback.preload;
+
+  const endTransition = useCallback(() => setTransition((t) => onTransitionEnd(t)), []);
+  // Safety net: a transition that never reports its end is given up (the loop takes over).
+  const transitionKey = target.kind === 'clip' ? target.transition : null;
+  useEffect(() => {
+    if (transitionKey === null) return;
+    const timer = setTimeout(endTransition, TRANSITION_MAX_MS);
+    return () => clearTimeout(timer);
+  }, [transitionKey, endTransition]);
+
+  // The still under the clips: the current state's key image (state media) or the reference image.
+  const stillUrl = target.kind === 'image' ? target.url : media.referenceImageUrl;
+  const image = useStableUrl(stillUrl);
   const localImage = useLocalMediaUri(image.uri, 'image');
   const onImageError = useCallback(() => {
     if (!localImage.onLocalError()) image.onError();
   }, [localImage, image]);
 
-  const targetVideoState = target.kind === 'video' ? target.state : null;
+  const targetVideoState = target.kind === 'clip' ? target.state : null;
   const videoStateRef = useRef(onVideoStateChange);
   videoStateRef.current = onVideoStateChange;
   useEffect(() => {
@@ -321,33 +389,54 @@ export default function PetMediaView({
     [removeIfLeaving],
   );
 
-  const targetVideoKey = target.kind === 'video' ? target.key : null;
-  const targetVideoUrl = target.kind === 'video' ? target.url : null;
+  const targetVideoKey = target.kind === 'clip' ? target.key : null;
+  const targetVideoUrl = target.kind === 'clip' ? target.url : null;
+  const targetLoop = target.kind === 'clip' ? target.loop : true;
+  const preloadKey = preloadTarget?.kind === 'clip' ? preloadTarget.key : null;
+  const preloadUrl = preloadTarget?.kind === 'clip' ? preloadTarget.url : null;
   useEffect(() => {
-    const prev = layersRef.current;
+    const current = layersRef.current;
+    // M5-T08: a preloaded loop nobody needs any more is dropped (it never showed).
+    const prev = current.filter((l) => !(l.preload && l.key !== preloadKey && l.key !== targetVideoKey));
+    // The preloaded loop becomes the target (its transition ended): already mounted at its
+    // first frame — it goes on top and plays from there (first frame = the transition's last).
+    const promotedLayer = prev.find((l) => l.preload && l.key === targetVideoKey);
+    const promoted = promotedLayer ? [...prev.filter((l) => l !== promotedLayer), { ...promotedLayer, preload: false }] : prev;
+    // Mount the loop that follows a transition (hidden, paused at frame 0) so the switch is instant.
+    const withPreload =
+      preloadKey !== null && preloadUrl !== null && !promoted.some((l) => l.key === preloadKey && !l.errored)
+        ? [...promoted, newLayer(preloadKey, preloadUrl, true, true)]
+        : promoted;
     if (targetVideoKey === null || targetVideoUrl === null) {
       // No video wanted: drop what never showed, fade out what is visible — except a
       // frozen frame whose media waits for a re-signed URL.
-      const kept = prev.filter((l) => l.phase !== 'loading');
+      const kept = withPreload.filter((l) => l.phase !== 'loading');
       const retiring = kept
         .filter((l) => l.phase === 'visible' && !(l.errored && isWaitingForUrl(errors, l.key)))
         .map((l) => l.id);
-      if (kept.length !== prev.length || retiring.length > 0) commit(retire(retiring, kept));
+      if (!sameLayers(kept, current) || retiring.length > 0) commit(retire(retiring, kept));
       return;
     }
-    const same = prev.find((l) => l.key === targetVideoKey && !l.errored);
-    const othersLoading = prev.filter((l) => l.phase === 'loading' && l.id !== same?.id);
-    const base = prev.filter((l) => !othersLoading.includes(l));
+    const same = withPreload.find((l) => l.key === targetVideoKey && !l.errored);
+    const othersLoading = withPreload.filter((l) => l.phase === 'loading' && l.id !== same?.id && !(l.preload && l.key === preloadKey));
+    const base = withPreload.filter((l) => !othersLoading.includes(l));
+    const changed = !sameLayers(base, current);
 
     if (same?.phase === 'loading') {
-      if (othersLoading.length > 0) commit(base);
+      // A promoted preload that already rendered its first frame shows now.
+      if (same.readyEarly) {
+        commit(base);
+        onReadyRef.current(same.id);
+        return;
+      }
+      if (changed) commit(base);
       return;
     }
     if (same) {
       const shown = base.filter((l) => l.phase !== 'loading');
       if (same.phase === 'visible' && shown[shown.length - 1]?.id === same.id) {
         // Already the newest visible media (maybe a re-signed URL) — keep the player.
-        if (othersLoading.length > 0) commit(base);
+        if (changed) commit(base);
         return;
       }
       // Back to a media that is under a newer one or fading out: stop the newer one's
@@ -358,22 +447,19 @@ export default function PetMediaView({
       animateTo(same.opacity, 1);
       return;
     }
-    layerSeq += 1;
-    const layer: Layer = {
-      id: `${targetVideoKey}#${layerSeq}`,
-      key: targetVideoKey,
-      url: targetVideoUrl,
-      opacity: new Animated.Value(0),
-      phase: 'loading',
-      errored: false,
-    };
-    commit([...base, layer]);
-  }, [targetVideoKey, targetVideoUrl, errors, commit, retire]);
+    // New media on top (order = paint order); a transition covers its preloaded loop.
+    commit([...base, newLayer(targetVideoKey, targetVideoUrl, targetLoop, false)]);
+  }, [targetVideoKey, targetVideoUrl, targetLoop, preloadKey, preloadUrl, errors, commit, retire]);
 
   const onReady = useCallback(
     (id: string) => {
       const layer = layersRef.current.find((l) => l.id === id);
       if (!layer || layer.phase !== 'loading') return;
+      if (layer.preload) {
+        // Hidden until its turn; remember that it can show at once.
+        commit(layersRef.current.map((l) => (l.id === id ? { ...l, readyEarly: true } : l)));
+        return;
+      }
       // Layers shown before this one go away once it is fully visible.
       const older = layersRef.current.filter((l) => l.id !== id && l.phase !== 'loading').map((l) => l.id);
       commit(layersRef.current.map((l) => (l.id === id ? { ...l, phase: 'visible' as const } : l)));
@@ -387,6 +473,16 @@ export default function PetMediaView({
       }
     },
     [commit],
+  );
+  const onReadyRef = useRef(onReady);
+  onReadyRef.current = onReady;
+
+  const onEnd = useCallback(
+    (id: string) => {
+      const layer = layersRef.current.find((l) => l.id === id);
+      if (layer && !layer.loop) endTransition();
+    },
+    [endTransition],
   );
 
   const onError = useCallback(
@@ -404,8 +500,10 @@ export default function PetMediaView({
       errorsRef.current = result.state;
       setErrors(result.state);
       if (result.refetch) expiredRef.current?.();
+      // A transition that fails is skipped (the loop is already preloaded underneath).
+      if (!layer.loop) endTransition();
     },
-    [commit],
+    [commit, endTransition],
   );
 
   const playing = active && appActive;
@@ -441,10 +539,13 @@ export default function PetMediaView({
           id={layer.id}
           url={layer.url}
           opacity={layer.opacity}
-          playing={playing && !layer.errored}
+          // A preloaded loop waits paused at its first frame (= the transition's last frame).
+          playing={playing && !layer.errored && !layer.preload}
+          loop={layer.loop}
           onReady={onReady}
           onError={onError}
-          testID={`${testID}-video-${layer.errored ? 'errored' : layer.phase}`}
+          onEnd={onEnd}
+          testID={`${testID}-video-${layer.errored ? 'errored' : layer.preload ? 'preload' : layer.loop ? layer.phase : `transition-${layer.phase}`}`}
         />
       ))}
 

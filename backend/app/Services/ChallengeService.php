@@ -214,6 +214,11 @@ class ChallengeService
             try {
                 $paid = Pet::find($petId);
                 if ($paid !== null) {
+                    // M5-T08: a purchase brings the key images, loops and transitions
+                    // (profiled pets; existing paid pets keep their set — no backfill).
+                    if ($purchase && ! $paid->isLegacyProfile() && (int) $paid->state_media_version < 2) {
+                        $paid->forceFill(['state_media_version' => 2])->saveQuietly();
+                    }
                     if ($waited) {
                         app(PetPreparationService::class)->begin($paid, PetPreparationService::BEGIN_PURCHASE);
                     }

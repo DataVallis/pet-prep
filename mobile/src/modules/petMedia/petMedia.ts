@@ -39,6 +39,14 @@ export interface PetMediaInfo {
   /** Entitled video states (idle first; behaviour scenes after the six). */
   states: VideoState[];
   expiresAt: string | null;
+  /** M5-T08: stored KEY IMAGE per state (never idle — the reference image is the idle pose). */
+  keyframes: Partial<Record<VideoState, string>>;
+  /** M5-T08: stored transition clips by key (`idle_to_sleeping`, …), played once on that change. */
+  transitions: Record<string, string>;
+  /** M5-T08: states whose video is a seamless loop (starts and ends on its key image). */
+  loops: VideoState[];
+  /** M5-T08: the pet follows the state rules (missing clip → key image, never another state's clip). */
+  stateMedia: boolean;
 }
 
 export const PET_STATES: readonly PetState[] = ['idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing'];
@@ -51,6 +59,10 @@ export const EMPTY_PET_MEDIA: PetMediaInfo = {
   currentVideoUrl: null,
   states: [],
   expiresAt: null,
+  keyframes: {},
+  transitions: {},
+  loops: [],
+  stateMedia: false,
 };
 
 function isPetState(value: unknown): value is PetState {
@@ -98,6 +110,20 @@ export function normalizePetMedia(raw: PetMedia | null | undefined | unknown, le
       if (isVideoState(state) && u !== null) videos[state] = u;
     }
   }
+  const keyframes: Partial<Record<VideoState, string>> = {};
+  if (typeof m.keyframes === 'object' && m.keyframes !== null && !Array.isArray(m.keyframes)) {
+    for (const [state, url] of Object.entries(m.keyframes as Record<string, unknown>)) {
+      const u = urlOrNull(url);
+      if (isVideoState(state) && state !== 'idle' && u !== null) keyframes[state] = u;
+    }
+  }
+  const transitions: Record<string, string> = {};
+  if (typeof m.transitions === 'object' && m.transitions !== null && !Array.isArray(m.transitions)) {
+    for (const [key, url] of Object.entries(m.transitions as Record<string, unknown>)) {
+      const u = urlOrNull(url);
+      if (TRANSITION_KEY.test(key) && u !== null) transitions[key] = u;
+    }
+  }
   const status =
     typeof m.status === 'string' && (STATUSES as readonly string[]).includes(m.status)
       ? (m.status as PetMediaStatus)
@@ -109,8 +135,16 @@ export function normalizePetMedia(raw: PetMedia | null | undefined | unknown, le
     currentVideoUrl: urlOrNull(m.current_video_url),
     states: Array.isArray(m.states) ? m.states.filter(isVideoState) : [],
     expiresAt: urlOrNull(m.expires_at),
+    keyframes,
+    transitions,
+    loops: Array.isArray(m.loops) ? m.loops.filter(isVideoState) : [],
+    // Older servers send no flag → the older rules (substitute chain).
+    stateMedia: m.state_media === true,
   };
 }
+
+/** `<state>_to_<state>` of two known video states. */
+const TRANSITION_KEY = /^(idle|sleeping|low_energy|hungry|sick|playing|accident|chewing|scratching)_to_(idle|sleeping|low_energy|hungry|sick|playing|accident|chewing|scratching)$/;
 
 /**
  * Identity of a signed media URL: everything but the capability part. Keeps the path

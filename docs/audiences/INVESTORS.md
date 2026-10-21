@@ -63,7 +63,7 @@ Goal: extend LTV from the 3-month challenge to the dog's 10–15-year life. One 
 |---|---|
 | Kids drop off in days | That *is* the signal parents pay for; 7-day early win (badge) for the parent. |
 | App-store rules for kids apps | No ads, minimal data, PIN login without email, parent-controlled purchases. |
-| AI media cost | Pre-generate a fixed set per dog at birth (free mutt: image + 2 videos ≈ $1.27; paid breed: image + 6 videos ≈ $3.51 — *estimates*, built 2026-10-05); free pets share a pool of 20 looks per breed, media generated once and reused (≈ $0 per further free pet when the look already has media for that stage, ≤ ≈ $101.60 one-off per free breed — built 2026-10-09); per-call cost ledger with daily / monthly caps (built 2026-10-04); media stored on our own server (no per-view AI cost). |
+| AI media cost | Pre-generate a fixed set per dog at birth (free mutt: image + 2 videos ≈ $1.27; paid breed: image + 6 videos ≈ $3.51 — *estimates*, built 2026-10-05); free pets share a pool of 20 looks per breed, media generated once and reused (≈ $0 per further free pet when the look already has media for that stage, ≤ ≈ $101.60 one-off per free breed — built 2026-10-09); per-call cost ledger with daily / monthly caps (built 2026-10-04); media stored on our own server (no per-view AI cost). **Media per state (built 2026-10-21, M5-T08):** a paid breed + colour + life stage gets 1 image + 5 pose images + 6 seamless 5 s state loops + 2 transitions ≈ **$5.38** (puppy with behaviour scenes ≈ $6.80) *(fal list prices)*, made once on the first purchase and reused for every later buyer of that breed + colour (≈ $0). |
 | Simulation ≠ reality | Conditional guarantee; certificate tied to 12 weeks of objective data. |
 
 ## Team

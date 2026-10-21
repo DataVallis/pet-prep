@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-21 — Vsako stanje svoja poza: posnetki brez skoka
+
+**Kaj:** plačljiv ljubljenček ima zdaj za vsako stanje svojo pozo — stoji, spi, utrujen, ob prazni posodi, bolan, igriv poklon (mladiček tudi luža in copat, muca praskanje), vedno isti kuža v isti sobi in svetlobi. Posnetek stanja se začne in konča točno v tej pozi, zato se ponavlja brez vidnega ponovnega začetka (zvečer kuža spi in se ne uleže znova na začetku vsakega ponavljanja). Ko zaspi ali se zbudi, se enkrat predvaja prehod (leže / vstane), nato posnetek novega stanja. Dokler posnetka stanja še ni, je na zaslonu poza tega stanja — nikoli posnetek drugega stanja.
+**Zakaj je pomembno:** David je zahteval premium in zelo realistično aplikacijo — kar otrok vidi, se mora vedno ujemati s tem, kar piše na zaslonu (»stanje → medij, nikoli obratno«).
+- 👩 Starši: kuža na zaslonu vedno kaže tisto, kar se mu res dogaja — lačen sedi ob prazni posodi, bolan leži.
+- 🧒 Otroci: »Ko kuža zaspi, vidiš, kako se uleže.«
+- 💼 Investitorji: celoten nabor stanj za pasmo + barvo + obdobje stane po ceniku fal 5,38 $ (slika, 5 poz, 6 posnetkov po 5 s, 2 prehoda) — enkrat; vsak naslednji kupec iste pasme in barve 0 $. Obstoječi ljubljenčki se ne dopolnjujejo samodejno (brez nenačrtovanega stroška).
+- 🛠 Tehnično: pozo naredi Nano Banana Pro Edit iz referenčne slike obdobja; Kling 3.0 Pro dobi isto sliko kot začetni in končni okvir (`end_image_url`, preverjeno v dokumentaciji fal 21. 10. 2026); aplikacija ima čisto stanje predvajalnika (zanka, enkratni prehod s prednaloženo zanko pod njim, poza kot rezerva) s testi; pripravljeno za šolo, igre po fazah in način »Slika« (M5-T09–T11).
 ## 2026-10-21 — Prilagojen način: sprehod s potiski vozička
 
 **Kaj:** starš pri otroku vklopi »Prilagojen način« in otrokov sprehod s kužkom potem šteje potiske invalidskega vozička namesto korakov — iz Apple Zdravje (Apple Watch v načinu invalidskega vozička) ali Health Connect. En potisk šteje kot en korak; cilji, energija in ocena skrbi so enaki. Otrok v aplikaciji vidi »potiski« (okno sprehoda, navodila), starš v poročilu prav tako; potisno obvestilo za sprehod je za vse enako in ne omenja enote. Ker na iPhonu potiske samodejno zapiše samo Apple Watch, lahko starš v podrobnostih otroka **vpiše minute sprehoda** (vsaka minuta = 100 korakov, skupaj največ 240 minut na dan) — otroku ni treba ničesar. Ko starš način izklopi, s tem prekliče privolitev: iz zgodovine izginejo vse oznake potiskov (dnevi štejejo kot koraki, točke ostanejo enake).

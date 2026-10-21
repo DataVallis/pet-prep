@@ -22,7 +22,8 @@ class BackfillPetMediaCommand extends Command
     protected $signature = 'media:backfill
         {--pet= : Only this pet id}
         {--limit=50 : Maximum pets to queue}
-        {--dry-run : Show the plan and estimated cost, queue nothing}';
+        {--dry-run : Show the plan and estimated cost, queue nothing}
+        {--state-media : M5-T08: also give pets from before M5-T08 their state key images, loops and transitions}';
 
     protected $description = 'Generate missing AI media (reference image + state videos) for existing pets within the AI budget';
 
@@ -50,9 +51,10 @@ class BackfillPetMediaCommand extends Command
         $stopped = false;
 
         foreach ($pets as $pet) {
-            $plan = $media->planMissing($pet);
+            $upgrade = (bool) $this->option('state-media');
+            $plan = $media->planMissing($pet, $upgrade);
 
-            if ($plan['image'] === 'ok' && $plan['videos'] === []) {
+            if ($plan['image'] === 'ok' && $plan['videos'] === [] && $plan['keyframes'] === [] && $plan['transitions'] === []) {
                 continue;
             }
 
@@ -63,7 +65,7 @@ class BackfillPetMediaCommand extends Command
                     $stopped = true;
                     $status = 'budget — stopped';
                 } else {
-                    $done = $media->generateMissing($pet);
+                    $done = $media->generateMissing($pet, $upgrade);
                     $status = $done['image'] ? 'queued image (videos follow)' : "queued {$done['videos']} video(s)";
                     $queuedPets++;
                     $planned += $plan['cost_usd'];
@@ -77,7 +79,7 @@ class BackfillPetMediaCommand extends Command
                 $pet->breed_type->value,
                 $entitlements->tierFor($pet),
                 $plan['image'],
-                implode(', ', $plan['videos']) ?: '—',
+                implode(', ', [...$plan['videos'], ...array_map(fn ($k) => "key:{$k}", $plan['keyframes']), ...$plan['transitions']]) ?: '—',
                 sprintf('$%.2f', $plan['cost_usd']),
                 $status,
             ];

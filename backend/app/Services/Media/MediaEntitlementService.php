@@ -6,6 +6,7 @@ use App\Enums\ChallengePaidSource;
 use App\Enums\LifeStage;
 use App\Enums\PetPlan;
 use App\Enums\PetStateEnum;
+use App\Enums\PetTransition;
 use App\Models\Pet;
 
 /**
@@ -46,6 +47,18 @@ use App\Models\Pet;
  * M4-10: the tier decides WHICH states a pet gets, never WHERE they come
  * from — a free pool pet's media are its shared look's (PetMediaService,
  * "Shared looks"), generated once per look and reused.
+ *
+ * M5-T08 (APP_REFINEMENT_SPEC §7, David 2026-10-20 / 21) — state media:
+ * a pet that {@see usesStateMedia()} also gets a KEY IMAGE per entitled
+ * state except idle ({@see keyframeStatesFor()}), its state videos are
+ * loops from / to that key image, and it gets the TRANSITION clips of
+ * config media.state_media.transitions whose two states it is entitled to
+ * ({@see transitionsFor()}). Only the paid full set (the 49,99 € challenge
+ * pays for it, §14); the free basic set (idle + sleeping) keeps its pre-M5-T08
+ * media (Claude's proposal, open for David). Only pets with
+ * `state_media_version = 2` — every pet that existed before M5-T08 keeps
+ * its set (no automatic backfill, David 2026-10-21); a new purchase and the
+ * admin "Generate missing" move a pet to version 2 (PetMediaService).
  */
 class MediaEntitlementService
 {
@@ -89,6 +102,64 @@ class MediaEntitlementService
         }
 
         return $states;
+    }
+
+    /**
+     * M5-T08: key images, loops and transitions for this pet — the full
+     * (purchased) set, a profiled pet (stage images), media version 2, the
+     * feature on and a key image profile available.
+     */
+    public function usesStateMedia(Pet $pet): bool
+    {
+        return (bool) config('media.state_media.enabled', true)
+            && (int) ($pet->state_media_version ?? 1) >= 2
+            && ! $pet->isLegacyProfile()
+            && $this->tierFor($pet) === self::TIER_FULL
+            && app(MediaProfiles::class)->keyframe() !== null;
+    }
+
+    /**
+     * M5-T08: the states that get a key image — every entitled video state but
+     * idle (the reference image IS the idle pose). [] without state media.
+     *
+     * @return list<PetStateEnum>
+     */
+    public function keyframeStatesFor(Pet $pet): array
+    {
+        if (! $this->usesStateMedia($pet)) {
+            return [];
+        }
+
+        return array_values(array_filter(
+            $this->videoStatesFor($pet),
+            fn (PetStateEnum $state): bool => $state !== PetStateEnum::Idle,
+        ));
+    }
+
+    /**
+     * M5-T08: the transition clips of the pet — configured, both ends entitled. [] without state media.
+     *
+     * @return list<PetTransition>
+     */
+    public function transitionsFor(Pet $pet): array
+    {
+        if (! $this->usesStateMedia($pet)) {
+            return [];
+        }
+
+        $states = $this->videoStatesFor($pet);
+        $out = [];
+
+        foreach ((array) config('media.state_media.transitions', []) as $value) {
+            $transition = PetTransition::tryFrom((string) $value);
+
+            if ($transition !== null && ! in_array($transition, $out, true)
+                && in_array($transition->fromState(), $states, true) && in_array($transition->toState(), $states, true)) {
+                $out[] = $transition;
+            }
+        }
+
+        return $out;
     }
 
     /**
