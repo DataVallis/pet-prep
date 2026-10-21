@@ -1506,7 +1506,7 @@ flowchart TD
   K --> T[transitions idle_to_sleeping / sleeping_to_idle<br/>start = pose A · end = pose B]
   L0 --> T
   subgraph Gate [MediaEntitlementService::usesStateMedia]
-    G1[paid full set · profiled · state_media_version 2 · AI_STATE_MEDIA_ENABLED]
+    G1[paid full set · profiled · state_media_version 2 · admin switch app_settings.state_media]
   end
   Gate -. decides .-> K
 ```

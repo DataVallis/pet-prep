@@ -77,10 +77,11 @@
 - **Prehoda:** stoji → spi (`idle_to_sleeping`) in spi → stoji (`sleeping_to_idle`), Kling 3.0 Pro 5 s, začetek = poza A, konec = poza B. Aplikacija ob spremembi stanja prehod predvaja enkrat, zanka ciljnega stanja je že naložena (ustavljena na prvi sličici) in se takoj nadaljuje. Prehod, ki se ne konča v 8 s, aplikacija opusti.
 - **§0 pravilo 1:** dokler klipa stanja ni, aplikacija pokaže ključno sliko tega stanja (ali referenčno sliko) — nikoli klipa drugega stanja. Ljubljenčki s starejšim naborom ohranijo nadomestno verigo (bolan → spi → miruje).
 - **Vrstni red (§13):** referenčna slika → zanka »stoji« (iz nje) in ključne slike v vrstnem redu priprave (spi, lačen, igra, ostalo); vsaka zanka sledi svoji ključni sliki; prehoda šele, ko so na poti vsi klipi prvih minut. Zaslon »Pripravljamo …« čaka na iste stvari kot prej (slika, stoji, spi, lačen); prehoda sta postavki priprave (obvestilo »… je pripravljen!« pride, ko sta tudi ta shranjena).
-- **Kdo:** samo poln nabor (kupljen izziv). Brezplačni nabor (miruje + spi) ostane, kot je — *predlog Claude, čaka Davida*. Obstoječi ljubljenčki **nič samodejno** (glej DECISIONS 21. 10. 2026); nov nakup ali admin »Generate missing« jih nadgradi.
+- **Kdo:** samo poln nabor (kupljen izziv). Brezplačni nabor (miruje + spi) ostane, kot je — **potrdil David 21. 10. 2026** (zaenkrat brez ključne slike »spi« za brezplačne). Obstoječi ljubljenčki **nič samodejno** (glej DECISIONS 21. 10. 2026); nov nakup ali admin »Upgrade to state media« (od M5-T08b) jih nadgradi.
 - **Skupni videz pasme + barve:** ključne slike, zanke in prehodi so vrstice videza na obdobje — ustvari jih prvi kupec, vsak naslednji jih dobi za 0 $.
 - **Administracija:** superadmin → ljubljenček → »AI media« pokaže vse vrstice (vrsta `keyframe` / `video` / `transition`, stolpec »Made as«: loop / from key image / from reference image / pose → pose) in »Regenerate« ključne slike (nato se iz nje znova naredita zanka in prehodi skozi to pozo).
 - **Razširitve (M5-T09 / T10 / T11):** ARCHITECTURE §2 (*Media per state*).
+- **Stikalo (M5-T08b, 21. 10. 2026):** vklop / izklop v administraciji (»Feature switches« → »Mediji stanj vklopljeni«, privzeto vklopljeno, revidirano). Izklop ustavi tudi že čakajoče (vrsta, dnevni ponovni poskus, čiščenje); ob vklopu se nadaljuje. Pod nalagajočo zanko je ključna slika istega stanja (ne referenčna slika); prehod se predvaja samo, ko lahko takoj preide v zanko ciljnega stanja (pozen klip ga nikoli ne sproži kasneje).
 
 ## 8. Pravila »kaj je dovoljeno kdaj«
 
