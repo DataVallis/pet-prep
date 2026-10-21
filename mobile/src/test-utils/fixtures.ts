@@ -192,6 +192,8 @@ export function makeChildState(
       media: makeMedia(),
       // M5-T06 (additive): ready (no preparation shown).
       preparation: makePreparation(),
+      // M5-T13 (additive): no birthday today.
+      birthday: null,
       ...petOverrides,
     },
     lock: { is_locked: false, reason: null, until: null },
@@ -556,6 +558,8 @@ export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetR
     media: makeMedia(),
     // M5-T06: ready.
     preparation: makePreparation(),
+    // M5-T13: no birthday.
+    birthday: null,
     traffic_light: { color: 'green', reasons: [] },
     care_score: { score: null, done: 0, expected: 0, illnesses: 0, since: '2026-10-01T08:00:00+00:00' },
     today: {
