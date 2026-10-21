@@ -1496,6 +1496,51 @@ sequenceDiagram
 
 Admin: Feature switches → "Unique AI media per pet" (default off); AI media → Shared looks → Regenerate (one new generation per look row of the stages its active pets are at, for all those pets; other stages stay READY; outcome queued / busy / no active pets / AI off). A paid breed without a colour list still shares (colour from its appearance weights). Free breeds keep §10d.
 
+### 10e. Media per state: key images, seamless loops, transitions (M5-T08, 2026-10-21)
+
+```mermaid
+flowchart TD
+  A[Reference image of the stage<br/>Nano Banana Pro · = idle pose] --> L0[idle loop<br/>Kling 3.0 Pro 5 s<br/>start = end = reference image]
+  A --> K{{Key image per state<br/>Nano Banana Pro Edit of the reference image<br/>sleeping · hungry · playing · low_energy · sick …}}
+  K --> L1[state loop<br/>start = end = key image<br/>end_image_url]
+  K --> T[transitions idle_to_sleeping / sleeping_to_idle<br/>start = pose A · end = pose B]
+  L0 --> T
+  subgraph Gate [MediaEntitlementService::usesStateMedia]
+    G1[paid full set · profiled · state_media_version 2 · AI_STATE_MEDIA_ENABLED]
+  end
+  Gate -. decides .-> K
+```
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant S as queueStateVideos (birth / purchase / stored file)
+  participant KJ as GeneratePetKeyframe
+  participant VJ as SubmitPetStateVideo
+  participant Fal as fal.ai (FalGateway · AiSpendGuard)
+  participant St as StorePetMedia
+  S->>VJ: idle loop (reference image is its pose)
+  S->>KJ: key images in preparation order (sleeping, hungry, playing, …)
+  KJ->>Fal: edit(reference image, pose prompt) — claim, ledger 0.15 $
+  Fal-->>KJ: image URL → St (key image stored) → queueStateVideos again
+  S->>VJ: that state's loop (start = end = key image)
+  Note over S: transitions only after every first-minutes clip (idle, sleeping, hungry) is on its way
+  S->>VJ: transition (start = pose A, end = pose B)
+  VJ->>Fal: submit Kling + webhook — claim, ledger 0.56 $
+  Note over S,St: shared look (breed + colour): the look rows are made once — every later pet links them (0 $)
+```
+
+```mermaid
+stateDiagram-v2
+  [*] --> Loop: first render — the state's loop (or its key image)
+  Loop --> Transition: wanted state changes and A_to_B is stored
+  Loop --> Loop: change without a transition clip (crossfade)
+  Transition --> Loop: playToEnd / error / 8 s safety — preloaded target loop (paused at frame 0) plays
+  Transition --> Loop: state changes again mid-transition (no second transition)
+  Loop --> Still: clip missing → key image of THE SAME state (never another state's clip)
+  Still --> Loop: clip stored (video_ready)
+```
+
 ## 11. Push notifications (M3-02, 2026-10-05)
 
 ### 11a. Escalation → push

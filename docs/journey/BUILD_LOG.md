@@ -9,6 +9,15 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-21 — Vsako stanje svoja poza: posnetki brez skoka
+
+**Kaj:** plačljiv ljubljenček ima zdaj za vsako stanje svojo pozo — stoji, spi, utrujen, ob prazni posodi, bolan, igriv poklon (mladiček tudi luža in copat, muca praskanje), vedno isti kuža v isti sobi in svetlobi. Posnetek stanja se začne in konča točno v tej pozi, zato se ponavlja brez vidnega ponovnega začetka (zvečer kuža spi in se ne uleže znova na začetku vsakega ponavljanja). Ko zaspi ali se zbudi, se enkrat predvaja prehod (leže / vstane), nato posnetek novega stanja. Dokler posnetka stanja še ni, je na zaslonu poza tega stanja — nikoli posnetek drugega stanja.
+**Zakaj je pomembno:** David je zahteval premium in zelo realistično aplikacijo — kar otrok vidi, se mora vedno ujemati s tem, kar piše na zaslonu (»stanje → medij, nikoli obratno«).
+- 👩 Starši: kuža na zaslonu vedno kaže tisto, kar se mu res dogaja — lačen sedi ob prazni posodi, bolan leži.
+- 🧒 Otroci: »Ko kuža zaspi, vidiš, kako se uleže.«
+- 💼 Investitorji: celoten nabor stanj za pasmo + barvo + obdobje stane po ceniku fal 5,38 $ (slika, 5 poz, 6 posnetkov po 5 s, 2 prehoda) — enkrat; vsak naslednji kupec iste pasme in barve 0 $. Obstoječi ljubljenčki se ne dopolnjujejo samodejno (brez nenačrtovanega stroška).
+- 🛠 Tehnično: pozo naredi Nano Banana Pro Edit iz referenčne slike obdobja; Kling 3.0 Pro dobi isto sliko kot začetni in končni okvir (`end_image_url`, preverjeno v dokumentaciji fal 21. 10. 2026); aplikacija ima čisto stanje predvajalnika (zanka, enkratni prehod s prednaloženo zanko pod njim, poza kot rezerva) s testi; pripravljeno za šolo, igre po fazah in način »Slika« (M5-T09–T11).
+
 ## 2026-10-21 — »Pripravljamo: Luna«: prve minute z novim ljubljenčkom
 
 **Kaj:** ko otrok podpiše pogodbo in ljubljenček še ni povsem pripravljen, zdaj vidi maskoto Curio, ki se nežno ziba, in »Pripravljamo: Luna — To lahko traja nekaj minut.« Najprej se pripravi to, kar otrok vidi v prvih minutah (kuža stoji, spi, je), nato šola in igre. Kar še ni pripravljeno, je mirno označeno (»Šola se še pripravlja« s pozo, »Igra se še pripravlja«). Ko je vse pripravljeno, otrok enkrat dobi »Luna je pripravljen!« v aplikaciji in kot obvestilo. Zaslon nikoli ne traja več kot 15 minut.
