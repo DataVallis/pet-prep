@@ -16,6 +16,12 @@
 - Privzeto: **video**.
 - »Slika« prikazuje **ključno sliko trenutnega stanja** (§7), ne ene fiksne fotografije.
 
+**Zgrajeno (M5-T11, 21. 10. 2026) — strežnik + aplikacija (JS, OTA); na telefonu še ni preverjeno.**
+- **Kje:** otrok v otroški aplikaciji → gumb z zobnikom (prej globus) → okno **»Nastavitve«**: »Jezik« in **»Prikaz: Video / Slika«**. Starš za otroka v seznamu otrok (pod »Prilagojen način«) — »Prikaz: Video / Slika«. Shranjeno **na otrokovem profilu na strežniku** (`users.media_display`, `video` | `picture`), zato velja na vseh otrokovih napravah in ga starš lahko nastavi na daljavo; sprememba pride na odprto aplikacijo takoj (`caretaker_settings_changed`). To ni osebni podatek, samo nastavitev prikaza.
+- **Privzeto:** video (vsi obstoječi otroci ostanejo na videu).
+- **»Slika«:** ključna slika trenutnega stanja (spi, lačen, bolan, igra …; »stoji« = referenčna slika). Ljubljenček brez ključnih slik (starejši nabor, v1, brezplačni nabor) in stanje brez ključne slike pokaže referenčno sliko. **Video se ne naloži in ne prenese** (manj mobilnih podatkov — to piše tudi v namigu pod nastavitvijo); prehodi se ne predvajajo.
+- **Šola in igre v načinu »Slika«** — *predlog Claude, čaka Davida:* šola pokaže pozo faze (kuža uboga = poza »igra«, sicer »stoji«), igra z žogo / crkljanje in igre muce pozo »igra«; žoga, palica, srčki in ukazi ostanejo animirani v aplikaciji nad sliko. Brez posnetkov tudi tam (M5-T09 / T10 klipi morajo upoštevati isti način).
+
 ## 2. Pelji ven (potreba) — jasnost
 
 **David 20. 10.:** »Pelji ven« ostane **ločen gumb**. Sprehod (koraki) **nikoli** ne reši potrebe — koraki se štejejo samodejno, zato otrok ne bi vedel, da je kužka peljal ven.

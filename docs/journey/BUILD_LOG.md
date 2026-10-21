@@ -9,6 +9,15 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-21 — Video ali slika: otrok izbere prikaz
+
+**Kaj:** v otroški aplikaciji je nov gumb z zobnikom »Nastavitve« (jezik in **»Prikaz: Video / Slika«**); isto izbiro ima starš pri vsakem otroku. »Slika« pokaže pozo tega, kar ljubljenček ravno počne (spi, je lačen, bolan …), in ne prenese nobenega videa. Privzeto ostane video.
+**Zakaj je pomembno:** beta testerji so želeli mirnejši prikaz in manj porabe podatkov; ker ima vsako stanje svojo pozo (M5-T08), slika še vedno pove resnico o kužku (»stanje → medij«).
+- 👩 Starši: na mobilnih podatkih brez Wi-Fi izberite »Slika« — aplikacija ne prenaša videov. Nastavite jo lahko na daljavo, iz svojega telefona.
+- 🧒 Otroci: »Hočeš videti kužka, kako spi? Izberi Slika ali Video.«
+- 💼 Investitorji: ista vsebina, manj prenosa — en nabor poz (5 slik po 0,15 $) zadošča za način brez videa.
+- 🛠 Tehnično: `users.media_display` (`video` | `picture`), `PATCH /api/child/settings` in razširjen `PATCH /api/parent/children/{child}/settings`; aplikacija v načinu slike ne ustvari predvajalnika (`PetMediaView mode="picture"`), zato se video ne prenese.
+
 ## 2026-10-21 — Vsako stanje svoja poza: posnetki brez skoka
 
 **Kaj:** plačljiv ljubljenček ima zdaj za vsako stanje svojo pozo — stoji, spi, utrujen, ob prazni posodi, bolan, igriv poklon (mladiček tudi luža in copat, muca praskanje), vedno isti kuža v isti sobi in svetlobi. Posnetek stanja se začne in konča točno v tej pozi, zato se ponavlja brez vidnega ponovnega začetka (zvečer kuža spi in se ne uleže znova na začetku vsakega ponavljanja). Ko zaspi ali se zbudi, se enkrat predvaja prehod (leže / vstane), nato posnetek novega stanja. Dokler posnetka stanja še ni, je na zaslonu poza tega stanja — nikoli posnetek drugega stanja.
