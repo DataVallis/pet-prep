@@ -55,9 +55,12 @@ import {
 import {
   NO_TRANSITION,
   TRANSITION_MAX_MS,
+  canStartTransition,
   nextPlayback,
   onTransitionEnd,
   onWantedChange,
+  poseImageUrl,
+  settleTransition,
   steadyItem,
   type MediaMode,
   type PlayItem,
@@ -315,17 +318,19 @@ export default function PetMediaView({
   // M5-T08: transition bookkeeping (derived while rendering — the React derived-state pattern).
   const [transition, setTransition] = useState<TransitionState>(NO_TRANSITION);
   const canPlayNow = useCallback((url: string) => canPlayUrl(errors, url, Math.max(clock, Date.now())), [errors, clock]);
-  const nextTransition = onWantedChange(transition, mode === 'picture' ? null : wanted, (from, to) => {
-    const url = media.transitions[`${from}_to_${to}`];
-    return url !== undefined && canPlayNow(url);
-  });
-  if (nextTransition !== transition) setTransition(nextTransition);
+  // M5-T08b: a transition is marked pending only when it can play NOW into the target's own loop.
+  const wantedTransition = onWantedChange(transition, mode === 'picture' ? null : wanted, (from, to) =>
+    canStartTransition({ media, wanted: to, petState, mode, canPlayVideo: canPlayNow }, from),
+  );
 
   const playback = useMemo(() => {
     const input = { media, wanted, petState, mode, canPlayVideo: canPlayNow };
-    if (nextTransition.pending === null) return { current: steadyItem(input), preload: null };
-    return nextPlayback(input, nextTransition.pending.from);
-  }, [media, wanted, petState, mode, canPlayNow, nextTransition]);
+    if (wantedTransition.pending === null) return { current: steadyItem(input), preload: null };
+    return nextPlayback(input, wantedTransition.pending.from);
+  }, [media, wanted, petState, mode, canPlayNow, wantedTransition]);
+  // …and a pending one the player no longer picks (clip failed / loop gone) is settled, never played later.
+  const nextTransition = settleTransition(wantedTransition, playback);
+  if (nextTransition !== transition) setTransition(nextTransition);
   const target: PlayItem = playback.current;
   const preloadTarget: PlayItem | null = playback.preload;
 
@@ -339,7 +344,14 @@ export default function PetMediaView({
   }, [transitionKey, endTransition]);
 
   // The still under the clips: the current state's key image (state media) or the reference image.
-  const stillUrl = target.kind === 'image' ? target.url : media.referenceImageUrl;
+  // M5-T08b (QA minor 4, §0 rule 1): under a loading clip of a state-media pet the still is the
+  // wanted state's own pose (its key image), never the standing reference image.
+  const stillUrl =
+    target.kind === 'image'
+      ? target.url
+      : media.stateMedia
+        ? (poseImageUrl(media, target.kind === 'clip' ? target.state : wanted) ?? media.referenceImageUrl)
+        : media.referenceImageUrl;
   const image = useStableUrl(stillUrl);
   const localImage = useLocalMediaUri(image.uri, 'image');
   const onImageError = useCallback(() => {

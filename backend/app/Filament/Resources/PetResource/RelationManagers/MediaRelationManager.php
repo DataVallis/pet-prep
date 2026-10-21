@@ -129,35 +129,29 @@ class MediaRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('completed_at')->dateTime()->placeholder('—'),
             ])
             ->headerActions([
+                // M5-T08b (QA minor 7): "Generate missing" never upgrades a pet from before
+                // state media; the upgrade is its own action with its cost.
                 Tables\Actions\Action::make('generateMissing')
                     ->label('Generate missing')
                     ->icon('heroicon-o-sparkles')
                     ->requiresConfirmation()
-                    ->modalDescription(function (): string {
-                        /** @var Pet $pet */
-                        $pet = $this->getOwnerRecord();
-                        $plan = app(PetMediaService::class)->planMissing($pet);
-
-                        return sprintf(
-                            'Image: %s. Videos: %s. Key images: %s. Transitions: %s.%s Estimated cost $%.2f (counts against the AI budget).',
-                            $plan['image'],
-                            implode(', ', $plan['videos']) ?: 'none',
-                            implode(', ', $plan['keyframes']) ?: 'none',
-                            implode(', ', $plan['transitions']) ?: 'none',
-                            $plan['upgrade'] ? ' This pet is from before state key images: it gets them now (videos are remade as loops).' : '',
-                            $plan['cost_usd'],
-                        );
-                    })
+                    ->modalDescription(fn (): string => self::planText(app(PetMediaService::class)->planMissing($this->pet(), upgradeStateMedia: false)))
                     ->visible(fn (): bool => self::isSuperadmin())
                     ->action(function (): void {
-                        /** @var Pet $pet */
-                        $pet = $this->getOwnerRecord();
-                        $done = app(PetMediaService::class)->generateMissing($pet);
-
-                        Notification::make()
-                            ->title($done['image'] ? 'Reference image queued (videos follow)' : "{$done['videos']} item(s) queued (key images first, their loops and transitions follow)")
-                            ->status($done['image'] || $done['videos'] > 0 ? 'success' : 'warning')
-                            ->send();
+                        $done = app(PetMediaService::class)->generateMissing($this->pet(), upgradeStateMedia: false);
+                        self::queuedNotification($done);
+                    }),
+                Tables\Actions\Action::make('upgradeStateMedia')
+                    ->label('Upgrade to state media')
+                    ->icon('heroicon-o-arrow-up-circle')
+                    ->color('warning')
+                    ->requiresConfirmation()
+                    ->modalDescription(fn (): string => self::planText(app(PetMediaService::class)->planMissing($this->pet(), upgradeStateMedia: true)))
+                    // Only a pet from before state media that would get them now.
+                    ->visible(fn (): bool => self::isSuperadmin() && app(PetMediaService::class)->planMissing($this->pet(), upgradeStateMedia: true)['upgrade'])
+                    ->action(function (): void {
+                        $done = app(PetMediaService::class)->generateMissing($this->pet(), upgradeStateMedia: true);
+                        self::queuedNotification($done);
                     }),
             ])
             ->actions([
@@ -187,5 +181,38 @@ class MediaRelationManager extends RelationManager
                             ->send();
                     }),
             ]);
+    }
+
+    private function pet(): Pet
+    {
+        /** @var Pet $pet */
+        $pet = $this->getOwnerRecord();
+
+        return $pet;
+    }
+
+    /**
+     * @param  array{image: string, videos: list<string>, keyframes: list<string>, transitions: list<string>, upgrade: bool, cost_usd: float}  $plan
+     */
+    private static function planText(array $plan): string
+    {
+        return sprintf(
+            'Image: %s. Videos: %s. Key images: %s. Transitions: %s.%s Estimated cost $%.2f (counts against the AI budget).',
+            $plan['image'],
+            implode(', ', $plan['videos']) ?: 'none',
+            implode(', ', $plan['keyframes']) ?: 'none',
+            implode(', ', $plan['transitions']) ?: 'none',
+            $plan['upgrade'] ? ' This pet is from before state key images: it gets them now (videos are remade as loops).' : '',
+            $plan['cost_usd'],
+        );
+    }
+
+    /** @param  array{image: bool, videos: int}  $done */
+    private static function queuedNotification(array $done): void
+    {
+        Notification::make()
+            ->title($done['image'] ? 'Reference image queued (videos follow)' : "{$done['videos']} item(s) queued (key images first, their loops and transitions follow)")
+            ->status($done['image'] || $done['videos'] > 0 ? 'success' : 'warning')
+            ->send();
     }
 }

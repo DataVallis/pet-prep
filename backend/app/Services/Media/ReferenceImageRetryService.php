@@ -93,11 +93,20 @@ class ReferenceImageRetryService
     public function videoRetryCandidates(): Builder
     {
         // M5-T08: transitions and key images are retried like state videos.
+        // M5-T08b: while state media is switched off in /admin, only state videos.
+        $kinds = $this->media->stateMediaEnabled()
+            ? [PetMedia::KIND_VIDEO, PetMedia::KIND_TRANSITION, PetMedia::KIND_KEYFRAME]
+            : [PetMedia::KIND_VIDEO];
+
         return PetMedia::query()
-            ->whereIn('kind', [PetMedia::KIND_VIDEO, PetMedia::KIND_TRANSITION, PetMedia::KIND_KEYFRAME])
+            ->whereIn('kind', $kinds)
             ->where('status', PetMedia::STATUS_FAILED)
             ->whereIn('error_reason', self::reasons())
             ->whereHas('pet', fn (Builder $q) => $q->where('is_active', true))
+            // M5-T08b: key images / transitions only of pets on state media version 2 (an older
+            // pet's leftover slot is never retried — it would not be generated anyway).
+            ->where(fn (Builder $q) => $q->where('kind', PetMedia::KIND_VIDEO)
+                ->orWhereHas('pet', fn (Builder $q) => $q->where('state_media_version', '>=', 2)))
             ->whereExists(fn ($q) => $q->selectRaw('1')->from('pet_media as img')
                 ->whereColumn('img.pet_id', 'pet_media.pet_id')
                 ->where('img.kind', PetMedia::KIND_IMAGE)

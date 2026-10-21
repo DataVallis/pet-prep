@@ -376,6 +376,8 @@ function useUniquePetMedia(bool $on): void
  * M5-T08: turn the state media (key images, seamless loops, transitions) on
  * for a test. phpunit.xml sets AI_STATE_MEDIA_ENABLED=false so the tests of
  * the pre-M5-T08 pipeline keep their numbers; production default is on.
+ * M5-T08b: this is the no-row default of the /admin switch
+ * (`app_settings.state_media`, AppSettingsService::stateMedia()); a stored row wins.
  */
 function useStateMedia(bool $on = true): void
 {
