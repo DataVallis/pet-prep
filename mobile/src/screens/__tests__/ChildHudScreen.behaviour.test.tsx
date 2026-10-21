@@ -5,7 +5,7 @@
  * vs premium scene video, realtime behaviour from PetUpdated.
  */
 import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
-import { Animated } from 'react-native';
+import { Animated, StyleSheet, type ViewStyle } from 'react-native';
 
 import { ApiError, api } from '@/api/client';
 import ChildHudScreen, { HUD_STRINGS } from '@/screens/ChildHudScreen';
@@ -173,6 +173,29 @@ describe('ChildHudScreen — behaviour events (M5-R02)', () => {
     fireEvent.press(screen.getByTestId('hud-toast'));
     expect(await screen.findByText(BEHAVIOUR_STRINGS.unchanged.take_out)).toBeTruthy();
     expect(screen.queryByTestId('hud-toast-confirm')).toBeNull();
+  });
+
+  it('the "×" closes the message and the queued one follows (David 2026-10-21)', async () => {
+    await renderHud(puppy());
+    takeOutPet.mockResolvedValueOnce({ status: 'accepted', state: puppy({ server_time: '2026-10-04T11:00:00+02:00' }) });
+    fireEvent.press(screen.getByTestId('action-take-out'));
+    expect(await screen.findByText(BEHAVIOUR_STRINGS.success.take_out)).toBeTruthy();
+    takeOutPet.mockResolvedValueOnce({ status: 'unchanged', state: puppy() });
+    fireEvent.press(screen.getByTestId('action-take-out'));
+    await waitFor(() => expect(takeOutPet).toHaveBeenCalledTimes(2));
+
+    const close = screen.getByTestId('hud-toast-close');
+    expect(close.props.accessibilityRole).toBe('button');
+    expect(close.props.accessibilityLabel).toBe(HUD_STRINGS.toastClose);
+    const area = StyleSheet.flatten(close.props.style) as ViewStyle;
+    expect(area.width).toBeGreaterThanOrEqual(44);
+    expect(area.minHeight).toBeGreaterThanOrEqual(44);
+
+    fireEvent.press(close);
+    expect(await screen.findByText(BEHAVIOUR_STRINGS.unchanged.take_out)).toBeTruthy();
+    expect(screen.queryByText(BEHAVIOUR_STRINGS.success.take_out)).toBeNull();
+    fireEvent.press(screen.getByTestId('hud-toast-close'));
+    await waitFor(() => expect(screen.queryByTestId('hud-toast')).toBeNull());
   });
 
   it('take-out 422 take_out_not_needed: toast, button disappears with the server state', async () => {

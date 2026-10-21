@@ -43,6 +43,7 @@ import {
   Beef,
   Check,
   DoorOpen,
+  X,
   Droplet,
   Feather,
   Footprints,
@@ -172,6 +173,8 @@ const _hudTexts: { moods: Record<PetState, string> } = HUD_STRINGS;
 void _hudTexts;
 
 const CHALLENGE_WEEKS = 12;
+/** Hit area of the HUD message's "×" (≥ 44 pt, David 2026-10-21). */
+export const FEEDBACK_CLOSE_SIZE = 44;
 
 /**
  * Legacy pet (no profile = no real age): the server's `virtual_age_months` is the
@@ -848,34 +851,52 @@ export default function ChildHudScreen() {
             An accepted care is a ✓ confirmation with a "next time" line (M5-T01). */}
         {toast && (
           <View pointerEvents="box-none" style={[styles.bannerSlot, styles.toastSlot, { top: layout.bannerTop + 40 }]} testID="hud-toast-slot">
-            <Pressable
-              key={toast.id}
-              onPress={messages.dismiss}
-              accessibilityRole="button"
-              accessibilityLabel={toast.next ? `${toast.message} ${toast.next}` : toast.message}
-              accessibilityHint={HUD_STRINGS.toastDismissHint}
-              accessibilityLiveRegion="polite"
-              style={[styles.feedbackToast, toast.tone === 'info' && styles.feedbackToastInfo, toast.confirm === true && styles.feedbackConfirm]}
-              testID="hud-toast"
-            >
-              {toast.confirm === true ? (
-                <View style={styles.feedbackConfirmBody} testID="hud-toast-confirm">
-                  <View style={styles.feedbackConfirmRow}>
-                    <View style={styles.feedbackCheck}>
-                      <Check color={palette.mint} size={14} />
+            <View key={toast.id} pointerEvents="box-none" style={styles.feedbackWrap}>
+              <Pressable
+                onPress={messages.dismiss}
+                accessibilityRole="button"
+                accessibilityLabel={toast.next ? `${toast.message} ${toast.next}` : toast.message}
+                accessibilityHint={HUD_STRINGS.toastDismissHint}
+                accessibilityLiveRegion="polite"
+                style={[
+                  styles.feedbackToast,
+                  toast.tone === 'info' && styles.feedbackToastInfo,
+                  toast.confirm === true && styles.feedbackConfirm,
+                  styles.feedbackWithClose,
+                ]}
+                testID="hud-toast"
+              >
+                {toast.confirm === true ? (
+                  <View style={styles.feedbackConfirmBody} testID="hud-toast-confirm">
+                    <View style={styles.feedbackConfirmRow}>
+                      <View style={styles.feedbackCheck}>
+                        <Check color={palette.mint} size={14} />
+                      </View>
+                      <Text style={[styles.feedbackText, styles.feedbackConfirmText]}>{toast.message}</Text>
                     </View>
-                    <Text style={[styles.feedbackText, styles.feedbackConfirmText]}>{toast.message}</Text>
+                    {toast.next ? (
+                      <Text style={styles.feedbackNext} testID="hud-toast-next">
+                        {toast.next}
+                      </Text>
+                    ) : null}
                   </View>
-                  {toast.next ? (
-                    <Text style={styles.feedbackNext} testID="hud-toast-next">
-                      {toast.next}
-                    </Text>
-                  ) : null}
+                ) : (
+                  <Text style={styles.feedbackText}>{toast.message}</Text>
+                )}
+              </Pressable>
+              {/* Visible "×" (David 2026-10-21): a sibling of the message, so screen readers reach it; 44 pt hit area. */}
+              <Pressable
+                onPress={messages.dismiss}
+                accessibilityRole="button"
+                accessibilityLabel={HUD_STRINGS.toastClose}
+                style={styles.feedbackClose}
+                testID="hud-toast-close"
+              >
+                <View style={styles.feedbackCloseIcon}>
+                  <X color={palette.graphite} size={14} strokeWidth={2.5} />
                 </View>
-              ) : (
-                <Text style={styles.feedbackText}>{toast.message}</Text>
-              )}
-            </Pressable>
+              </Pressable>
+            </View>
           </View>
         )}
 
@@ -1539,6 +1560,31 @@ const styles = StyleSheet.create({
   },
   feedbackConfirmText: {
     flexShrink: 1,
+  },
+  feedbackWrap: {
+    maxWidth: '100%',
+    justifyContent: 'center',
+  },
+  feedbackWithClose: {
+    paddingRight: FEEDBACK_CLOSE_SIZE,
+  },
+  feedbackClose: {
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    bottom: 0,
+    minHeight: FEEDBACK_CLOSE_SIZE,
+    width: FEEDBACK_CLOSE_SIZE,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  feedbackCloseIcon: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: alpha(palette.graphite, 0.12),
   },
   feedbackNext: {
     textAlign: 'center',
