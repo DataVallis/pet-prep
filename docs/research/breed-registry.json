@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "4644f60ae2f8e3eda7e2dc2427982974eb9d556634e71c9170e260f5df6570ae"
+      "sha256": "c9a0e27734035d77a900f1fcd91650e66968de94277c02b6cb192167d87154e6"
     }
   },
   "suitability_vocabulary": {
@@ -28834,7 +28834,12 @@
           "S429"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "dalmatian.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
