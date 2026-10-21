@@ -87,11 +87,11 @@
 | Očisti | dovoljeno | ne | nič za čistiti (»Čisto«), samo prežvečen copat / kavč |
 | Pelji ven (mladiček) | ura v tihih urah stoji | ne | — |
 | Sprehod | dovoljeno (koraki štejejo vedno) | ne | — (muca nima sprehoda) |
-| **Igra** | **ne — »💤 Kuža spi do 7:00«**, strežnik zavrne z `play_pet_sleeping` | ne | nered (»Najprej počisti …«) |
-| **Crkljanje** (pes in muca) | **ne — »💤 Kuža / Muca spi do 7:00«**, strežnik zavrne z `play_pet_sleeping` (21. 10.) | ne | nered (»Najprej počisti …«) |
+| **Igra** | **ne — »💤 Kuža spi do 7:00«**, strežnik zavrne z `play_pet_sleeping` | ne | nered (»Najprej počisti …«), klipi še niso pripravljeni (»Igra se še pripravlja«, 422 `media_not_ready`, M5-T04) |
+| **Crkljanje** (pes in muca) | **ne — »💤 Kuža / Muca spi do 7:00«**, strežnik zavrne z `play_pet_sleeping` (21. 10.) | ne | nered (»Najprej počisti …«), klipi še niso pripravljeni (»Igra se še pripravlja«, M5-T04) |
 | **Šola** | **ne — »💤 Kuža spi do 7:00«**, strežnik zavrne z `training_pet_sleeping` | ne | nekdo drug vadi, čas dneva porabljen, dan se izteka |
 | **Počeši** (pes in muca) | **ne — »💤 Kuža / Muca spi do 7:00«**, strežnik zavrne z `grooming_quiet_hours` pred vsemi drugimi razlogi (21. 10.); česanje, ki ga spanje onemogoči, se nikoli ne šteje kot zamujeno | ne | že danes / ves teden opravljeno, druga igra teče |
-| Igra s palico (muca) | ne (»💤 Muca spi do …«) | ne | 2 h premora, druga igra teče |
+| Igra s palico (muca) | ne (»💤 Muca spi do …«) | ne | 2 h premora, druga igra teče, klipi še niso pripravljeni (»Igra se še pripravlja«, `media_not_ready`, M5-T04) |
 | Pesek (muca) | dovoljeno | ne | pesek čist |
 | Nova izkušnja (mladiček) | ne (»💤 Kuža spi do …«) | ne | izkušnja tedna opravljena |
 
@@ -109,6 +109,7 @@
 ## 10. Igre
 
 - Kratkoročno: če manjka katerikoli klip igre, je igra **onemogočena** (»Igra se še pripravlja«), nikoli napol delujoča.
+  - *Stanje M5-T04 (21. 10. 2026):* zgrajeno za vse igre z mediji — žoga in crkljanje (pes, crkljanje tudi muca) ter palica s peresom (muca). Odloča strežnik: igra potrebuje vse klipe svoje scene, do katerih je ljubljenček upravičen (`config/media.php` `game_clips`: `playing` + `idle`; brezplačni nabor nima `playing`, zato potrebuje samo `idle`), šteje pa ljubljenčkov dejanski nabor (lastni ali skupni videz pasme + barve). Dokler kateri manjka, je gumb viden, a onemogočen z »Igra se še pripravlja« (EN »The game is still getting ready«), začetek pa strežnik zavrne (422 `media_not_ready`). Ko je zadnji klip shranjen, ga `PetUpdated` (`video_ready`) prinese v aplikacijo in igra se omogoči brez ponovnega zagona. Ljubljenček brez AI medijev (narisana scena) igra kot doslej. Besedilo nikoli ne omenja slik, videov ali generiranja (§13).
 - Dolgoročno: klip za vsako fazo igre (čaka → teče → prinese; muca: preži → skoči → ulovi); žogo ali list animira aplikacija sama, zato se besedilo vedno ujema s tem, kar se vidi. Most do načrtovanega 2.5D pristopa.
 
 ## 11. Krtača in kretnje
