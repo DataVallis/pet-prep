@@ -1,6 +1,7 @@
 {
   "hud": {
     "toastDismissHint": "Tap to close the message.",
+    "toastClose": "Close message",
     "feed": "Feed",
     "emergencyFeed": "Emergency meal",
     "water": "Water",

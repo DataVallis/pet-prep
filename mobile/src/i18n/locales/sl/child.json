@@ -1,6 +1,7 @@
 {
   "hud": {
     "toastDismissHint": "Pritisni, da zapreš sporočilo.",
+    "toastClose": "Zapri sporočilo",
     "feed": "Hrani",
     "emergencyFeed": "Nujni obrok",
     "water": "Voda",
