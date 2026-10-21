@@ -229,7 +229,7 @@ return [
         'unique_media_off' => 'skupno za pasmo + barvo',
         'saved_body_media' => 'Mačke: :mode · AI mediji: :media',
         'state_media_section' => 'Mediji stanj (ključne slike, brezšivne zanke, prehodi)',
-        'state_media_description' => 'Vklopljeno (privzeto): ljubljenčki s kupljenim polnim naborom (mediji stanj različice 2) dobijo ključno sliko za vsako stanje, videe stanj, ki se brezšivno vrtijo od nje in nazaj, ter prehoda mirovanje ↔ spanje (okoli 5,38 $ na pasmo + barvo + življenjsko obdobje, skupni videzi jih naredijo enkrat). Izklopljeno: novih ključnih slik, zank in prehodov se ne ustvarja — tudi tistih, ki že čakajo v vrsti, pri ponovnih poskusih ali čiščenju ne; ljubljenčki obdržijo shranjeno in dobijo starejše posnetke. Ponoven vklop nadaljuje čakajoče ob naslednjem koraku medijev ljubljenčka (ali z »Generate missing«).',
+        'state_media_description' => 'Vklopljeno (privzeto): ljubljenčki s kupljenim polnim naborom (mediji stanj različice 2) dobijo ključno sliko za vsako stanje, videe stanj, ki se brezšivno vrtijo od nje in nazaj, ter prehoda mirovanje ↔ spanje (okoli 5,38 $ na pasmo + barvo + življenjsko obdobje, skupni videzi jih naredijo enkrat). Izklopljeno: novih ključnih slik, zank in prehodov se ne ustvarja — tudi tistih, ki že čakajo v vrsti, pri ponovnih poskusih ali čiščenju ne; ljubljenčki obdržijo shranjeno in dobijo starejše posnetke. Ponoven vklop takoj nadaljuje čakajoče in posnetke, narejene na star način med izklopom, naredi znova kot zanke (to stane: okoli 0,56 $ na posnetek, 0,15 $ na ključno sliko, šteje v AI proračun).',
         'state_media' => 'Mediji stanj vklopljeni',
         'state_media_on' => 'vklopljeno',
         'state_media_off' => 'izklopljeno',

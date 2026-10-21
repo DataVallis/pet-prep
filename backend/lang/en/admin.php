@@ -230,7 +230,7 @@ return [
         'unique_media_off' => 'shared per breed + colour',
         'saved_body_media' => 'Cats: :mode · AI media: :media',
         'state_media_section' => 'State media (key images, seamless loops, transitions)',
-        'state_media_description' => 'On (default): pets with the purchased full set (state media version 2) get a key image per state, state videos that loop seamlessly from / to it and the idle ↔ sleeping transitions (about $5.38 per breed + colour + life stage, shared looks make them once). Off: no new key images, loops or transitions are generated — also nothing that is already queued, retried or swept; pets keep what is stored and get the older clips. Turning it on again resumes the waiting items with the next media step of the pet (or its »Generate missing«).',
+        'state_media_description' => 'On (default): pets with the purchased full set (state media version 2) get a key image per state, state videos that loop seamlessly from / to it and the idle ↔ sleeping transitions (about $5.38 per breed + colour + life stage, shared looks make them once). Off: no new key images, loops or transitions are generated — also nothing that is already queued, retried or swept; pets keep what is stored and get the older clips. Turning it on again resumes the waiting items at once and remakes the clips made the old way while it was off as loops (that costs: about $0.56 per clip, $0.15 per key image, counted against the AI budget).',
         'state_media' => 'State media on',
         'state_media_on' => 'on',
         'state_media_off' => 'off',

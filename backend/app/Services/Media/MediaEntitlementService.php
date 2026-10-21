@@ -70,9 +70,21 @@ class MediaEntitlementService
      * M5-T08b: the superadmin switch (/admin → Feature switches, `app_settings.state_media`,
      * default on). Off = no pet uses state media and nothing already queued is generated.
      */
-    public function stateMediaEnabled(): bool
+    public function stateMediaEnabled(bool $fresh = false): bool
     {
-        return $this->settings->stateMedia();
+        return $this->settings->stateMedia($fresh);
+    }
+
+    /**
+     * M5-T08b (QA m3): does the pet HAVE the state media set (version 2, profiled, full
+     * set) — independent of the switch and the key image profile. The app payload uses
+     * this, so turning the switch off never changes how already stored media are shown.
+     */
+    public function hasStateMediaSet(Pet $pet): bool
+    {
+        return (int) ($pet->state_media_version ?? 1) >= 2
+            && ! $pet->isLegacyProfile()
+            && $this->tierFor($pet) === self::TIER_FULL;
     }
 
     public const TIER_BASIC = 'basic';
@@ -125,9 +137,7 @@ class MediaEntitlementService
     public function usesStateMedia(Pet $pet): bool
     {
         return $this->stateMediaEnabled()
-            && (int) ($pet->state_media_version ?? 1) >= 2
-            && ! $pet->isLegacyProfile()
-            && $this->tierFor($pet) === self::TIER_FULL
+            && $this->hasStateMediaSet($pet)
             && app(MediaProfiles::class)->keyframe() !== null;
     }
 
