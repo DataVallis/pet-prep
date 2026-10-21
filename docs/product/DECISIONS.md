@@ -685,6 +685,7 @@
 | 2026-10-02 | Claude | fal.ai webhooki z ED25519 podpisom (brez skupne skrivnosti), mediji samo s `*.fal.media`. | Uradni mehanizem fal.ai; varnost otrok. | PR #1 |
 | 2026-10-02 | Claude | CI na PostgreSQL + mobilni testi; deploy prek GitHub Actions. | Prejšnji workflow je bil neveljaven in ni nikoli tekel. | PR #2 |
 | 2026-10-21 | Claude (popravek, prijava Davida) | **Seja »Igraj kot« ne šteje več med 3 naprave otroka:** `pruneDevices` omejuje in briše samo žetone otrokovih lastnih telefonov; deljene seje so posebej omejene na 3 na (starša, otroka), po eno na telefon. Isti starš na drugem telefonu (npr. Applov pregled na demo računu) prej ni smel narediti nove seje, ne da bi izbrisal vse ostale. Prej je bil ponovno uporabljeni žeton deljene seje vedno najstarejši, zato ga je vsaka nova PIN prijava otroka na drugem telefonu izbrisala in telefon starša je vsak 1–2 dni pristal na začetnem zaslonu. | Otrok ostane prijavljen trajno (odločitev 2026-10-17), tudi na deljenem telefonu. | fix/M2-11-shared-session-prune |
+| 2026-10-21 | David | **Tehnična dokumentacija se obvezno posodablja ob vsakem PR-ju, brez izjem:** koda in njena dokumentacija se spremenita v istem PR-ju (tudi pri popravkih napak); opis PR-ja ima seznam »Docs updated:«; zastarela dokumentacija = PR ni končan in se ne združi (qa-reviewer: blocker). | Dokumentacija je opisovala staro delovanje sej »Igraj kot« (PR #321). | docs/technical-docs-every-pr |
 
 ## Odprta vprašanja (za Davida)
 
