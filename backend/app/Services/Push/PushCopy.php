@@ -56,12 +56,6 @@ final class PushCopy
     public const VARIANT_CLEAN_FIRST = 'clean_first';
 
     /**
-     * M5-T12: the walk reminder for a child in adapted mode (wheelchair pushes instead of
-     * steps) says "potiski" / "pushes" — `push.walk_reminder_pushes` (dog-only, like the walk).
-     */
-    public const VARIANT_PUSHES = 'pushes';
-
-    /**
      * M5-R06-06 (QA m3 of R06-05): food / water are refused while a cat's scratching is
      * open, but cleaning does not resolve it (POST /pet/clean leaves it) — "first carry
      * it to the scratcher"; with a mess next to the tray as well, "clean and scratcher".
@@ -174,7 +168,7 @@ final class PushCopy
         return match ($type) {
             PushType::SoftWarning => $line("soft.{$phaseMetric}"),
             PushType::CriticalAlert => $line("critical.{$phaseMetric}"),
-            PushType::WalkReminder => $line($variant === self::VARIANT_PUSHES ? 'walk_reminder_pushes' : 'walk_reminder'),
+            PushType::WalkReminder => $line('walk_reminder'),
             // M5-R06-04: the cat's daily play reminder (push.cat.play_reminder).
             PushType::PlayReminder => $line('play_reminder'),
             // M5-R06-05: an open litter use is due within the hour (push.cat.litter_reminder).

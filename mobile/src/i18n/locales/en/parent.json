@@ -153,6 +153,7 @@
     "walk": "{{steps}} steps",
     "walkGoalPushes": "{{steps}} / {{goal}} pushes",
     "walkPushes": "{{steps}} pushes",
+    "walkLogged": "incl. {{minutes}} min logged",
     "noRoutines": "no routines",
     "missed": "Missed routines",
     "noMissed": "No routine was missed in this period.",

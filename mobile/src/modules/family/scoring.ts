@@ -85,6 +85,8 @@ export interface DayRow {
   walk_done: boolean | null;
   /** M5-T12: `pushes` = the child's phone counted wheelchair pushes that day (wording only). */
   walk_unit: 'steps' | 'pushes';
+  /** M5-T12: walk minutes a parent logged that day (part of `walk_steps`); 0 from older servers. */
+  walk_logged_minutes: number;
   /** M5-R06-08b: a cat's wand games of the day (all children); null for a dog / no play routine / older server. */
   play_sessions: number | null;
   play_goal: number | null;
@@ -264,6 +266,7 @@ export function readDayRows(value: unknown): DayRow[] {
         walk_goal: numOrNull(item.walk_goal),
         walk_done: boolOrNull(item.walk_done),
         walk_unit: item.walk_unit === 'pushes' ? 'pushes' : 'steps',
+        walk_logged_minutes: num(item.walk_logged_minutes),
         play_sessions: numOrNull(item.play_sessions),
         play_goal: numOrNull(item.play_goal),
         play_done: boolOrNull(item.play_done),
@@ -535,6 +538,10 @@ export function activityText(
   // M5-R17: "Nova izkušnja: nov zvok · Mia" (value = the experience code).
   const socialised = socialisationTimelineText(entry.activity_type, entry.actor_nickname, entry.value ?? null);
   if (socialised !== null) return socialised;
+  // M5-T12: "Mama Ana je vpisal(a) sprehod" — a parent's logged walk; no name → "Starš".
+  if (entry.activity_type === 'parent_logged_walk') {
+    return t('family:parentLoggedWalk', { name: entry.actor_nickname ?? t('family:parentFallback') });
+  }
   // M5-R13: "Kužku se je zavozlala dlaka" (dog) / the cat's override "Muci …" for a cat.
   if (SYSTEM_ACTIVITY_LABELS[entry.activity_type]) return tSpecies(`family:systemActivities.${entry.activity_type}`, species);
   // A cat's wording where it differs ("nahranil(a) muco") is `cat:override.family.activities.*` (M5-R06-08c).

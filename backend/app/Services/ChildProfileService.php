@@ -3,12 +3,15 @@
 namespace App\Services;
 
 use App\Enums\FamilyRole;
+use App\Enums\StepUnit;
 use App\Enums\UserRole;
 use App\Events\PetUpdated;
 use App\Exceptions\FamilyException;
 use App\Models\ChildLoginPin;
 use App\Models\Family;
 use App\Models\FamilyMember;
+use App\Models\Pet;
+use App\Models\PetDailyStep;
 use App\Models\User;
 use App\Services\Push\PushDeviceService;
 use Illuminate\Support\Facades\DB;
@@ -123,17 +126,27 @@ class ChildProfileService
         return $isChild ? User::find((int) $childId) : null;
     }
 
-    /** M5-T12: `PetUpdated` event type when a parent switches a caretaker's adapted mode. */
-    public const ADAPTED_MODE_EVENT = 'adapted_mode_changed';
+    /** M5-T12: `PetUpdated` event type when a parent changes a caretaker's settings (adapted mode). */
+    public const SETTINGS_EVENT = 'caretaker_settings_changed';
 
     /**
      * Switch the child's adapted mode (M5-T12, »Prilagojen način«): their walk counts
      * wheelchair pushes instead of steps (1 push = 1 step; goals, energy, routines and
      * the Care Score are unchanged). Only the boolean is stored — never a reason.
-     * A change broadcasts one `PetUpdated` (`adapted_mode_changed`, no child data in
+     * A change broadcasts one `PetUpdated` (`caretaker_settings_changed`, no child data in
      * the payload) on the child's active pet after commit, so the child's app refetches
      * its state and switches the wording / health data type; the same value again
      * changes nothing.
+     *
+     * Switching OFF withdraws the parent's consent (GDPR Art. 9, David 2026-10-21): in
+     * the same transaction every `pet_daily_steps` row of the child with `unit = pushes`
+     * becomes `steps` (counts unchanged — 1 push = 1 step — so energy, routines, points
+     * and the Care Score do not move). That unit is the only stored trace of the mode
+     * besides the flag: the report's `walk_unit` and the export's `unit` are derived from
+     * it. Parent-logged walk minutes (`manual_minutes`, `parent_walk_entries`) are walks
+     * and stay. Lock order child → pet rows (as PetActivityService::logParentWalk), so a
+     * step sync or walk entry running at the same time either finishes first (its row is
+     * converted here) or sees the switch off.
      */
     public function setAdaptedMode(User $child, bool $on): User
     {
@@ -144,15 +157,39 @@ class ChildProfileService
             }
             $locked->forceFill(['adapted_mode' => $on])->save();
 
+            if (! $on) {
+                $this->forgetPushes($locked);
+            }
+
             $pet = $this->families->activePetOf($locked);
             if ($pet !== null) {
-                PetUpdated::afterCommit($pet, self::ADAPTED_MODE_EVENT);
+                PetUpdated::afterCommit($pet, self::SETTINGS_EVENT);
             }
 
             return true;
         });
 
         return $changed ? $child->refresh() : $child;
+    }
+
+    /**
+     * M5-T12 consent withdrawal: the child's push days become step days (caller holds
+     * the child row lock). The pets of those rows (and the active pet) are locked first
+     * in id order — step writers hold the pet lock.
+     */
+    private function forgetPushes(User $child): void
+    {
+        $petIds = PetDailyStep::where('user_id', $child->id)->where('unit', StepUnit::Pushes->value)
+            ->distinct()->pluck('pet_id')
+            ->push($this->families->activePetOf($child)?->id)
+            ->filter()->map(fn ($id): int => (int) $id)->unique()->sort()->values()->all();
+        if ($petIds === []) {
+            return;
+        }
+        Pet::whereIn('id', $petIds)->orderBy('id')->lockForUpdate()->pluck('id');
+
+        PetDailyStep::where('user_id', $child->id)->where('unit', StepUnit::Pushes->value)
+            ->update(['unit' => StepUnit::Steps->value]);
     }
 
     /**

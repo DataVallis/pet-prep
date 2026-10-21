@@ -745,8 +745,8 @@ describe('state, export, data', function () {
         Pet::factory()->mutt()->create(['user_id' => $dogChild->id, 'arrival_age_months' => 2]);
         test()->actingAs($dogParent, 'sanctum');
         $dogRow = test()->getJson("/api/parent/children/{$dogChild->id}/report?days=7")->assertOk()->json('daily.0');
-        // M5-T12 added `walk_unit` (steps | pushes) for every pet.
-        expect(array_keys($dogRow))->toBe(['date', 'expected', 'fair_expected', 'done', 'done_by_child', 'missed', 'pending', 'walk_steps', 'walk_goal', 'walk_done', 'walk_unit']);
+        // M5-T12 added `walk_unit` (steps | pushes) and `walk_logged_minutes` for every pet.
+        expect(array_keys($dogRow))->toBe(['date', 'expected', 'fair_expected', 'done', 'done_by_child', 'missed', 'pending', 'walk_steps', 'walk_goal', 'walk_done', 'walk_unit', 'walk_logged_minutes']);
     });
 
     it('names the end of every timed blocked_reason in wand.next_allowed_at (QA M5-R06-08a m5)', function () {

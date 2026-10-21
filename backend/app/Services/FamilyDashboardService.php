@@ -116,7 +116,8 @@ class FamilyDashboardService
 
         // Routines, Care Score, traffic light (M2-06): one board for the family.
         $board = $this->scores->board($pets, $tz, $caretakers, $contracts);
-        $timelines = $this->timelines($pets, $children->pluck('name', 'id')->all());
+        // M5-T12: a parent can act too (a logged walk) — the timeline names this family's parents as well.
+        $timelines = $this->timelines($pets, $children->pluck('name', 'id')->all() + $parents->pluck('name', 'id')->all());
         // M5-R05: today's ball games / cuddles per pet (all children, one query).
         $playToday = $this->play->todayCounts($pets);
         // M2-01d: finished challenges (certificate / report rows) of the family, one query.
@@ -382,7 +383,7 @@ class FamilyDashboardService
      * acting child's nickname (null for system rows / unknown actors).
      *
      * @param  Collection<int, Pet>  $pets
-     * @param  array<int, string>  $nicknames  child id → nickname (this family only)
+     * @param  array<int, string>  $nicknames  child id → nickname, parent id → name (this family only)
      * @return array<int, list<array<string, mixed>>>
      */
     public function timelines(Collection $pets, array $nicknames, int $limit = self::TIMELINE_ITEMS): array

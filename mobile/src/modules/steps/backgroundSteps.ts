@@ -141,7 +141,8 @@ export async function runBackgroundStepSync(overrides: Partial<BackgroundSyncDep
     const calendar = familyCalendar(view.timezone, view.server_time);
     const today = calendar.dateOf(at.getTime());
     const serverDay = calendar.dateOf(Date.parse(view.server_time));
-    const serverSteps = serverDay === today ? view.steps.my_steps_today : 0;
+    // M5-T12: compare with the device part only (walk minutes a parent logged are on top).
+    const serverSteps = serverDay === today ? view.steps.my_device_steps_today : 0;
 
     let pedometerGranted = false;
     try {

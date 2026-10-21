@@ -900,6 +900,8 @@ erDiagram
   PETS ||--|{ PET_CARETAKERS : "1..n children"
   USERS ||--o{ PET_CARETAKERS : "child, max 1 active pet"
   PETS ||--o{ PET_DAILY_STEPS : "steps per child per day"
+  PETS ||--o{ PARENT_WALK_ENTRIES : "walks a parent logged (M5-T12)"
+  USERS ||--o{ PARENT_WALK_ENTRIES : "child / parent (M5-T12)"
   USERS ||--o{ ACTIVITIES_LOG : "actor (child)"
   USERS ||--o{ USERS : "parent_id (deprecated)"
   USERS ||--o{ PETS : "user_id (deprecated, primary caretaker)"
@@ -978,6 +980,9 @@ erDiagram
     date local_date
     int steps
     timestamp last_sync_at
+    string unit "M5-T12: steps or pushes (report wording)"
+    int manual_steps "M5-T12: part of steps parents logged"
+    int manual_minutes "M5-T12: those minutes"
   }
   ACTIVITIES_LOG {
     bigint pet_id
@@ -995,6 +1000,16 @@ erDiagram
     string timezone "parent: mirror of family"
     string pairing_pin
     bigint pairing_pet_id "join PIN target"
+    boolean adapted_mode "M5-T12: child, parent switch (pushes instead of steps)"
+  }
+  PARENT_WALK_ENTRIES {
+    bigint pet_id
+    bigint child_user_id
+    bigint parent_user_id "nullable"
+    date local_date "family today or yesterday"
+    smallint minutes "1-240"
+    int steps "minutes x 100"
+    string entry_id "unique per child (idempotency)"
   }
   PETS {
     bigint id
@@ -1913,4 +1928,32 @@ sequenceDiagram
     S->>N: petBirthday → children + parents, held over quiet hours<br/>(title = pet name, data {type, pet_id})
   end
   App->>App: is_today → party hat over the pet all day; card once per pet<br/>(safe cake, sourced tip); parent line in child detail
+```
+
+## 17. Adapted mode: parent-logged walks and consent withdrawal (M5-T12, David 2026-10-21)
+
+```mermaid
+sequenceDiagram
+  participant P as Parent app
+  participant C as ChildProfileController
+  participant W as PetActivityService::logParentWalk
+  participant S as ChildProfileService::setAdaptedMode
+  participant DB as users / pets / pet_daily_steps / parent_walk_entries
+  P->>C: POST /parent/children/{child}/walks {minutes 1–240, local_date, entry_id}
+  C->>W: family + adapted mode checked, active pet found (else 404 / 422)
+  W->>DB: lock child row → lock pet row (same order as the switch)
+  alt entry_id exists
+    W-->>C: same pet + day + minutes → 200 unchanged (original entry), else 409 entry_id_conflict
+  else switch off / pet locked / cat / not the family's today
+    W-->>C: 422 adapted_mode_off · 423 reason · 422 steps_not_applicable · 422 date_not_allowed
+  else sum of the day's minutes + minutes > 240
+    W-->>C: 422 daily_limit_reached {remaining_minutes}
+  else
+    W->>DB: steps = minutes × 100 → child's day row (steps, manual_steps, manual_minutes) + entry + parent_logged_walk
+    W->>DB: today only: daily_step_count / energy / walked_pet (actor child) — past days never written
+    W-->>C: 201 accepted {entry, steps_today} (+ PetUpdated parent_logged_walk)
+  end
+  P->>S: PATCH /parent/children/{child}/settings {adapted_mode: false}
+  S->>DB: lock child row → flag false → lock pets of its push rows (id order) → pet_daily_steps unit pushes → steps
+  S-->>P: 200 (one PetUpdated caretaker_settings_changed); counts, points and Care Score unchanged, logged walks kept
 ```

@@ -157,6 +157,7 @@
     "walk": "{{steps}} korakov",
     "walkGoalPushes": "{{steps}} / {{goal}} potiskov",
     "walkPushes": "{{steps}} potiskov",
+    "walkLogged": "od tega {{minutes}} min vpisanih",
     "noRoutines": "brez rutin",
     "missed": "Zamujene rutine",
     "noMissed": "V tem obdobju ni zamujene rutine.",

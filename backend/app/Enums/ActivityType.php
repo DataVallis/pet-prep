@@ -56,6 +56,10 @@ enum ActivityType: string
     // (1 person, 2 dog, 3 sound, 4 place). Parent timeline + the report's
     // weekly socialisation row only — never a routine, score or stat.
     case SocialisedPet = 'socialised_pet';
+    // M5-T12 (David 2026-10-21): a PARENT logged walk minutes for a child in
+    // adapted mode. actor = the parent, value = minutes; the steps they count
+    // for are added to that child's day (pet_daily_steps.manual_steps).
+    case ParentLoggedWalk = 'parent_logged_walk';
 
     /**
      * Rows that describe something that happened to the dog, not a care

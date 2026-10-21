@@ -101,6 +101,8 @@ class GameDataResetService
         'pet_contracts',
         'pet_daily_routines',
         'pet_daily_steps',
+        // M5-T12: walks a parent logged (→ pets, users)
+        'parent_walk_entries',
         'pet_daily_walks',
         'pet_hygiene_events',
         'pet_media_history',

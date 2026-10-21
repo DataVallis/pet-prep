@@ -61,6 +61,10 @@ export default function AdaptedModeRow({ childId, childName, enabled }: AdaptedM
         />
       </View>
       <Text style={styles.hint}>{S.hint}</Text>
+      {/* QA M5-T12 / David 2026-10-21: the switch itself is the parent's explicit consent (GDPR Art. 9). */}
+      <Text style={styles.hint} testID={`adapted-mode-consent-${childId}`}>
+        {S.consent}
+      </Text>
       {shown && <Text style={styles.hint} testID={`adapted-mode-native-${childId}`}>{S.native}</Text>}
       {failed && (
         <Text style={styles.error} testID={`adapted-mode-error-${childId}`}>

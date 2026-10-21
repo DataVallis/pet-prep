@@ -8,11 +8,13 @@ use App\Enums\CareSessionKind;
 use App\Enums\PetLockReason;
 use App\Enums\PlayKind;
 use App\Enums\SocialisationExperience;
+use App\Enums\StageParamKey;
 use App\Enums\StepUnit;
 use App\Enums\TrainingCommand;
 use App\Events\PetUpdated;
 use App\Models\ActivityLog;
 use App\Models\BreedConfig;
+use App\Models\ParentWalkEntry;
 use App\Models\Pet;
 use App\Models\PetCareSession;
 use App\Models\PetContract;
@@ -53,6 +55,25 @@ class PetActivityService
      * many steps per minute since the last accepted sync are refused.
      */
     public const MAX_STEPS_PER_MINUTE = 200;
+
+    /**
+     * M5-T12: steps per logged walk minute when the breed has no stage data (legacy
+     * profile) — the same 100 steps / min the stage goals use (S45, David 2026-10-05).
+     */
+    public const STEPS_PER_WALK_MINUTE = 100;
+
+    /**
+     * M5-T12 (David 2026-10-21): at most this many parent-logged walk minutes per
+     * child and family-local day — the SUM of all entries, not one entry.
+     */
+    public const PARENT_WALK_MINUTES_PER_DAY = 240;
+
+    /** M5-T12: `logParentWalk` refusals (extra.reason; the HTTP layer maps them). */
+    public const WALK_ADAPTED_MODE_OFF = 'adapted_mode_off';
+
+    public const WALK_DAILY_LIMIT = 'daily_limit_reached';
+
+    public const WALK_ENTRY_CONFLICT = 'entry_id_conflict';
 
     /** "Pelji ven" twice within this many seconds counts once (double tap, M5-R02). */
     public const TAKE_OUT_DEDUPE_SECONDS = 60;
@@ -118,6 +139,14 @@ class PetActivityService
             }
 
             $actorId = $actor?->id ?? $locked->user_id;
+            // M5-T12 (QA): `pushes` only counts as pushes for a child in adapted mode —
+            // anything else is a step day (the unit only names the day in the report).
+            // Read the flag fresh under the pet lock: switching it off converts the
+            // child's push days while holding this pet's lock, so a sync that waited
+            // for it must not write a new push day afterwards.
+            if ($unit === StepUnit::Pushes && ($actor === null || ! (bool) User::whereKey($actor->id)->value('adapted_mode'))) {
+                $unit = StepUnit::Steps;
+            }
 
             // Device clocks can run ahead; never accept time from the future.
             $at = Carbon::instance($recordedAt)->utc()->startOfSecond();
@@ -136,7 +165,10 @@ class PetActivityService
 
             $row = $this->childStepRow($locked, $actorId, $today);
             $petCount = (int) $locked->daily_step_count;
-            $current = (int) $row->steps;
+            // M5-T12: walk minutes a parent logged are on top of the device's reading
+            // (day = max(device readings) + parent entries): compare without them.
+            $manual = (int) $row->manual_steps;
+            $current = (int) $row->steps - $manual;
             $increment = $stepsToday - $current;
             if ($increment <= 0) {
                 return $this->unchanged(ActionResult::UNCHANGED, $locked);
@@ -170,7 +202,7 @@ class PetActivityService
 
             // M5-T12: a day with accepted wheelchair pushes reads "potiski" in the parent
             // report; it never switches back to steps that day (the unit is wording only).
-            $row->forceFill(['steps' => $current + $accepted, 'last_sync_at' => $at]);
+            $row->forceFill(['steps' => $current + $manual + $accepted, 'last_sync_at' => $at]);
             if ($unit === StepUnit::Pushes) {
                 $row->unit = StepUnit::Pushes;
             }
@@ -193,6 +225,122 @@ class PetActivityService
 
             return $this->result($accepted < $increment ? ActionResult::CAPPED : ActionResult::ACCEPTED, $locked, $accepted);
         });
+    }
+
+    /**
+     * M5-T12 (David 2026-10-21): a PARENT logs walk minutes for a child in adapted mode
+     * (on iPhone pushes are recorded automatically only with an Apple Watch).
+     *
+     * - Minutes → steps with the rule of the step goal: minutes × the breed's
+     *   `steps_per_exercise_minute` that day (100, LifeStageService), so 30 minutes
+     *   are worth the same share of the goal as 30 minutes of a sourced walk.
+     * - Added to that child's day on this pet (`pet_daily_steps.steps` and
+     *   `.manual_steps`); a later health sync compares with `steps − manual_steps`,
+     *   so the day = max(device readings) + parent entries — never counted twice.
+     * - Idempotent per (child, `$entryId`): a retried request (same pet, day and
+     *   minutes) changes nothing and returns the original entry; the same id with a
+     *   different pet / day / minutes (e.g. one child, two pets) is refused
+     *   (`entry_id_conflict`, HTTP 409), never a 500.
+     * - Daily cap (David 2026-10-21): the SUM of parent-logged minutes for the child
+     *   and that family-local day is at most PARENT_WALK_MINUTES_PER_DAY (240);
+     *   more → refused `daily_limit_reached` with `remaining_minutes`.
+     * - Adapted mode is re-checked on the locked child row (lock order child → pet,
+     *   like the switch) → `adapted_mode_off`.
+     * - TODAY only (family time zone, David 2026-10-21) — any other date → stale
+     *   (`date_not_allowed`); past `pet_daily_steps` / `pet_daily_walks` are never written.
+     * - Energy, the daily walk and `walked_pet` (actor = the child, as for steps) exactly
+     *   like a step sync; no anti-cheat cap (the parent is the source).
+     * - One `parent_logged_walk` activity row (actor = the parent, value = minutes).
+     *
+     * @param  string  $localDate  family-local Y-m-d; must be today
+     */
+    public function logParentWalk(Pet $pet, User $child, User $parent, string $localDate, int $minutes, string $entryId): ActionResult
+    {
+        // Lock order child → pet (as ChildProfileService::setAdaptedMode): every entry of
+        // this child is serialised on the child row, so the entry-id check, the daily
+        // cap and the adapted-mode check cannot race — also across two pets.
+        return DB::transaction(function () use ($pet, $child, $parent, $localDate, $minutes, $entryId): ActionResult {
+            $lockedChild = User::whereKey($child->id)->lockForUpdate()->firstOrFail();
+
+            return $this->withLockedPet($pet, ActivityType::ParentLoggedWalk, fn (Pet $locked): ActionResult => $this->logParentWalkLocked($locked, $lockedChild, $parent, $localDate, $minutes, $entryId));
+        });
+    }
+
+    private function logParentWalkLocked(Pet $locked, User $child, User $parent, string $localDate, int $minutes, string $entryId): ActionResult
+    {
+        $now = now()->startOfSecond();
+
+        $existing = ParentWalkEntry::where('child_user_id', $child->id)->where('entry_id', $entryId)->first();
+        if ($existing !== null) {
+            $same = (int) $existing->pet_id === (int) $locked->id
+                && $existing->local_date->toDateString() === $localDate
+                && (int) $existing->minutes === $minutes;
+
+            return $same
+                ? $this->unchanged(ActionResult::UNCHANGED, $locked, ['entry' => $existing->toPayload()])
+                : $this->unchanged(ActionResult::REFUSED, $locked, ['reason' => self::WALK_ENTRY_CONFLICT]);
+        }
+        // Locked child row: the switch may have been turned off since the request was authorised.
+        if (! (bool) $child->adapted_mode) {
+            return $this->unchanged(ActionResult::REFUSED, $locked, ['reason' => self::WALK_ADAPTED_MODE_OFF]);
+        }
+        if ($reason = $locked->actionLockReasonFor($child)) {
+            return $this->locked($locked, $reason);
+        }
+        if ($locked->isCat()) {
+            return $this->refused($locked, CareRefusal::StepsNotApplicable);
+        }
+
+        $this->dailyWalks->closeDayIfNeeded($locked, $now, allowIllness: true);
+        // David 2026-10-21: today only (family time zone) — past days are never written.
+        $today = $locked->localDate($now);
+        if ($localDate !== $today) {
+            return $this->unchanged(ActionResult::STALE, $locked);
+        }
+
+        $loggedThatDay = (int) ParentWalkEntry::where('child_user_id', $child->id)->where('local_date', $localDate)->sum('minutes');
+        if ($loggedThatDay + $minutes > self::PARENT_WALK_MINUTES_PER_DAY) {
+            return $this->unchanged(ActionResult::REFUSED, $locked, [
+                'reason' => self::WALK_DAILY_LIMIT,
+                'remaining_minutes' => max(0, self::PARENT_WALK_MINUTES_PER_DAY - $loggedThatDay),
+            ]);
+        }
+
+        $perMinute = $this->lifeStages->stageValueOn($locked, $localDate, StageParamKey::StepsPerExerciseMinute)['value'] ?? null;
+        $steps = $minutes * (is_int($perMinute) && $perMinute > 0 ? $perMinute : self::STEPS_PER_WALK_MINUTE);
+
+        $row = $this->childStepRow($locked, $child->id, $today);
+        $row->forceFill([
+            'steps' => (int) $row->steps + $steps,
+            'manual_steps' => (int) $row->manual_steps + $steps,
+            'manual_minutes' => (int) $row->manual_minutes + $minutes,
+        ])->save();
+
+        $entry = ParentWalkEntry::create([
+            'pet_id' => $locked->id,
+            'child_user_id' => $child->id,
+            'parent_user_id' => $parent->id,
+            'local_date' => $localDate,
+            'minutes' => $minutes,
+            'steps' => $steps,
+            'entry_id' => $entryId,
+        ]);
+        $this->logActivity($locked, ActivityType::ParentLoggedWalk, $minutes, $parent->id);
+
+        $goal = $this->lifeStages->rulesOn($locked, $today, $this->breedConfigOf($locked))->stepGoal;
+        $petCount = (int) $locked->daily_step_count;
+        $newCount = $petCount + $steps;
+        $locked->forceFill([
+            'daily_step_count' => $newCount,
+            'energy_level' => max((float) $locked->energy_level, self::energyForSteps($newCount, $goal)),
+            'energy_zero_since' => null,
+        ]);
+        $locked->saveQuietly();
+        if ($goal > 0 && $petCount < $goal && $newCount >= $goal) {
+            $this->logActivity($locked, ActivityType::WalkedPet, $newCount, $child->id);
+        }
+
+        return $this->result(ActionResult::ACCEPTED, $locked, $steps, extra: ['entry' => $entry->toPayload()]);
     }
 
     /**

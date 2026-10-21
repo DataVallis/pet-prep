@@ -18,6 +18,8 @@ use Illuminate\Support\Carbon;
  * @property int $steps
  * @property Carbon|null $last_sync_at
  * @property StepUnit $unit M5-T12: what the child's phone counted (steps | wheelchair pushes, 1 : 1)
+ * @property int $manual_steps M5-T12: the part of `steps` parents logged as walk minutes
+ * @property int $manual_minutes M5-T12: those minutes (parent report)
  */
 class PetDailyStep extends Model
 {
@@ -33,6 +35,8 @@ class PetDailyStep extends Model
     {
         return [
             'steps' => 'integer',
+            'manual_steps' => 'integer',
+            'manual_minutes' => 'integer',
             'last_sync_at' => 'datetime',
             'unit' => StepUnit::class,
         ];

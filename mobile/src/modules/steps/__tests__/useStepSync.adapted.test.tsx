@@ -36,7 +36,7 @@ function makePedometer(steps = 2400) {
 
 const store: KeyValueStore = { getItemAsync: jest.fn(async () => null), setItemAsync: jest.fn(async () => undefined) };
 
-function setup(deps: Partial<StepSyncDeps>, adaptedMode: boolean) {
+function setup(deps: Partial<StepSyncDeps>, adaptedMode: boolean, myStepsToday = 0) {
   const client = new QueryClient({
     defaultOptions: { queries: { retry: false, gcTime: Infinity }, mutations: { retry: false, gcTime: Infinity } },
   });
@@ -46,7 +46,7 @@ function setup(deps: Partial<StepSyncDeps>, adaptedMode: boolean) {
     ({ adapted }: { adapted: boolean }) =>
       useStepSync({
         enabled: true,
-        myStepsToday: 0,
+        myStepsToday,
         serverTime: '2026-10-04T12:00:00+02:00',
         timezone: 'Europe/Ljubljana',
         adaptedMode: adapted,
@@ -156,5 +156,14 @@ describe('useStepSync — adapted mode (wheelchair pushes)', () => {
     expect(hook.result.current.health.measure).toBe('steps');
     expect(last).toEqual(expect.objectContaining({ steps_today: 5200, source: 'healthkit' }));
     expect(last).not.toHaveProperty('unit');
+  });
+
+  it('M5-T12 QA M1: watch pushes above the device count sync even when a parent-logged walk makes the total higher', async () => {
+    // Server: my_steps_today 3000 = 2000 logged by the parent + 1000 device; the hook gets the device part.
+    const pushesHealth = makeFakeHealth({ steps: 1500, measure: 'pushes' });
+    setup({ platform: 'ios', pedometer: makePedometer(), health: makeFakeHealth(), pushesHealth }, true, 1000);
+    await flush();
+    expect(syncSteps).toHaveBeenCalledTimes(1);
+    expect(syncSteps.mock.calls[0][0]).toEqual(expect.objectContaining({ steps_today: 1500, unit: 'pushes' }));
   });
 });

@@ -428,7 +428,8 @@ export default function ChildHudScreen() {
     // M5-R06-08b: a cat has no steps (the server refuses them, CAT_SPEC §5.3) — never ask
     // for the step permission or sync.
     enabled: view !== undefined && !view.lock.is_locked && !cat,
-    myStepsToday: view?.steps.my_steps_today ?? 0,
+    // M5-T12: the device part (without parent-logged walk minutes) gates syncs and the counter.
+    myStepsToday: view?.steps.my_device_steps_today ?? 0,
     serverTime: view?.server_time ?? null,
     timezone: view?.timezone ?? null,
     // M5-T12: the parent's adapted mode — wheelchair pushes from the health store.
