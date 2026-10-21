@@ -290,7 +290,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [ ] M5-T09 Šola: klip za vsak ukaz in fazo (§3)
 - [ ] M5-T10 Igre po fazah (§10)
 - [ ] M5-T11 Preklop slika / video (§1)
-- [ ] M5-T12 Prilagojen način: potiski vozička (§6)
+- [x] M5-T12 Prilagojen način: potiski vozička (§6) — 2026-10-21, `feat/M5-T12-wheelchair-pushes` (backend + mobile; **native build za branje potiskov**): stikalo starša na otroka, `unit: pushes` 1 : 1, besedila »potiski«
 - [ ] M5-T13 Rojstni dan pri 1 letu (§9)
 - [x] M5-T14 Krtača in kretnje (§11) — 2026-10-21, `feat/M5-T14-brush-gestures` (mobile JS, OTA): lise kot strgalna srečka, iskrice, vrstica napredka, držanje namesto potega, VoiceOver/TalkBack dejanje
 

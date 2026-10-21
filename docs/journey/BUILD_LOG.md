@@ -9,6 +9,16 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-21 — Prilagojen način: sprehod s potiski vozička
+
+**Kaj:** starš pri otroku vklopi »Prilagojen način« in otrokov sprehod s kužkom potem šteje potiske invalidskega vozička namesto korakov — iz Apple Zdravje (Apple Watch v načinu invalidskega vozička) ali Health Connect. En potisk šteje kot en korak; cilji, energija in ocena skrbi so enaki. Otrok povsod vidi »potiski« (okno sprehoda, navodila, opomnik), starš v poročilu prav tako.
+**Zakaj je pomembno:** izziv »si pripravljen na psa?« mora biti pošten tudi za otroka, ki ne hodi. Ne vprašamo in ne shranimo, zakaj je način vklopljen — to je dostopnost, ne diagnoza.
+- 👩 Starši: »Prilagojen način« je eno stikalo pri otroku; nič ne razlagate in nič o zdravju ne shranimo — samo vklop / izklop.
+- 🧒 Otroci: »Danes potrebuje 6.000 potiskov vozička za sprehod. Potiski mu dajo energijo.«
+- 💼 Investitorji: dostopnost brez novih podatkov o otroku — isti cilji, isti Care Score, en dodaten vir v aplikaciji Zdravje.
+- 🤝 Partnerji (šole, društva): PetPrep lahko uporabljajo tudi otroci na vozičku.
+- 🛠 Tehnično: HealthKit `PushCount` / Health Connect `WheelchairPushes` (vsak s svojim dovoljenjem samo za branje), strežnik dobi `unit: pushes`, protigoljufija in idempotentnost na otroka nespremenjeni; razmerje 1 : 1, ker avtoritativnega vira ni (55 potiskov / min za zmerno intenzivnost — Rice 2021 — je mera intenzivnosti, ne dnevnega cilja). *Branje potiskov pride z naslednjim native buildom.*
+
 ## 2026-10-21 — Česanje kot strgalna srečka
 
 **Kaj:** ko otrok češe kužka ali muco, krtača zdaj sledi prstu, iz dlake se pokažejo iskrice, »umazane« lise (šest, dve na vsak korak: glava in vrat, hrbet, boki in rep) z vsako potezo zbledijo, vrstica »Počesano« pa se polni do 100 %. Kdor ne more potegniti s prstom, pridrži prst na ljubljenčku ali gumb »Počeši enkrat« — česanje teče samo. VoiceOver in TalkBack imata dejanje »Počeši«.
