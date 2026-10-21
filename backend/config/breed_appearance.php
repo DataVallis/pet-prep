@@ -472,6 +472,12 @@
 | "loose eyelids", S425): small, deep-set eyes with closely fitting eyelids (`eye_color`) and a moderate, deep muzzle
 | (dog trait `muzzle`). Colour weights are unsourced → `verified => false`.
 |
+| Dalmatian (M5-R10-52, docs/research/dog-data dalmatian.appearance): "The body is rectangular, strong, muscled and
+| distinctively spotted." (FCI 153, S428); short, shiny, hard dense coat; pure white ground colour with black spots or
+| liver (brown) spots (S428 "Black spotted variety with black spots, liver spotted variety with brown spots.") —
+| black-spotted weighted highest (the register portrait); never patches, tricolour, lemon / blue spots or blue eyes
+| (disqualifying, S428). Breed Watch Category 1 (S429) — not a welfare breed. Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2331,6 +2337,39 @@ return [
             'muzzle' => ['broad, deep, clean-cut muzzle of moderate length with a black nose and open nostrils, no loose jowls'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'muzzle'],
+    ],
+    // M5-R10-52 (docs/research/dog-data/data.json dalmatian.appearance; runbook rules 2026-10-10:
+    // standard colours only — black-spotted, liver-spotted; never patches, tricolour or blue eyes).
+    'dalmatian' => [
+        'display_name' => 'Dalmatian',
+        // Colour frequencies are in no source (dalmatian.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 153 (S428), RKC breed page (S429), PDSA (S430) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S429 "Size: Large"; S428 "Height at the withers: Males 56 – 62 cms. Females 54 – 60 cms."',
+            'build' => 'S428 "The body is rectangular, strong, muscled and distinctively spotted."; "The movement must be elegant."',
+            'coat_length' => 'S428 "Short, shiny, hard and dense all over the body."',
+            'coat_color' => 'S428 "The ground colour is pure white."; "Black spotted variety with black spots, liver spotted variety with brown spots." (weights unsourced)',
+            'ear_carriage' => 'S428 "It is very important that the ears are spotted"',
+            'eye_color' => 'S428 "The eye colour is in accordance with the spotting."; "Eyelids are close to the eyeball and not loose."',
+            'tail' => 'S428 "Reaching approximately to the hock or slightly longer."; "Carried sabre-shaped."',
+            'nose' => 'S428 "Large with wide open nostrils, it must be completely pigmented."',
+        ],
+        'traits' => [
+            'size' => ['medium-large, athletic'],
+            'build' => [['value' => 'rectangular, strong and muscular, elegant and well balanced', 'weight' => 3], 'lean, athletic and strong, standing alert'],
+            'coat_length' => ['short, shiny, hard and dense coat'],
+            // FCI (S428) colours; black-spotted highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'pure white with round, clearly defined black spots', 'weight' => 75],
+                ['value' => 'pure white with round, clearly defined liver (brown) spots', 'weight' => 25],
+            ],
+            'ear_carriage' => ['hanging ears, spotted, set fairly high'],
+            'eye_color' => ['oval eyes matching the spotting (dark brown, amber with liver), closely fitting eyelids, pigmented eye rims'],
+            'tail' => ['tail reaching about to the hock, carried in a slight sabre curve, spotted'],
+            'nose' => ['large nose with open nostrils, fully pigmented to match the spots'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

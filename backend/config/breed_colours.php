@@ -310,6 +310,11 @@ return [
         ['key' => 'landseer', 'value' => 'white and black (Landseer): white body with a black head and white blaze, black saddle and black rump', 'en' => 'Landseer (white and black)', 'sl' => 'Landseer (belo-črn)'],
         ['key' => 'brown', 'value' => 'solid brown (chocolate to bronze)', 'en' => 'Brown', 'sl' => 'Rjav'],
     ],
+    // M5-R10-52: FCI S428 "Black spotted variety with black spots, liver spotted variety with brown spots."
+    'dalmatian' => [
+        ['key' => 'black-spotted', 'value' => 'pure white with round, clearly defined black spots', 'en' => 'Black-spotted', 'sl' => 'Črno pikast'],
+        ['key' => 'liver-spotted', 'value' => 'pure white with round, clearly defined liver (brown) spots', 'en' => 'Liver-spotted', 'sl' => 'Rjavo pikast'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

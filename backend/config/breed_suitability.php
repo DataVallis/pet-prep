@@ -1376,5 +1376,29 @@ return [
             ],
         ],
 
+        // M5-R10-52: dalmatian.* (S427–S434), runbook rules (data.json
+        // proposed_game_parameters.dalmatian.suitability_tags). RKC (S429) + PDSA (S430) + PetMD (S431).
+        // RKC Breed Watch Category 1 (S429) → no welfare chip. A large dog: not older_children (that chip names a
+        // small dog) → not_for_small_children (Vizsla / Ridgeback precedent). No other_pets (PDSA supervise with
+        // smaller pets vs PetMD good with other pets — conflicting), no chases_small_pets (no "high prey drive" quote).
+        'dalmatian' => [
+            'suits' => [
+                // S429 "Exercise: More than 2 hours per day"; S430 "Dalmatians can be great pets for active households".
+                ['tag' => 'active_family', 'source_ids' => ['S429', 'S430'], 'refs' => ['dalmatian.exercise.adult', 'dalmatian.suitability.pdsa_active_family']],
+                // S429 "Size of home: Large house" / "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S429'], 'refs' => ['dalmatian.suitability.rkc_size_of_home', 'dalmatian.suitability.rkc_size_of_garden']],
+            ],
+            'consider' => [
+                // S429 "More than 2 hours per day"; S430 "a minimum of two hours of exercise every day".
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S429', 'S430'], 'refs' => ['dalmatian.exercise.adult', 'dalmatian.suitability.pdsa_exercise']],
+                // S430 "They tend to be better suited to households with older children".
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S430'], 'refs' => ['dalmatian.suitability.pdsa_children', 'dalmatian.behaviour.family']],
+                // S430 "Dalmatians need company …"; "you should never leave your dog alone for more than four hours".
+                ['tag' => 'needs_company', 'source_ids' => ['S430'], 'refs' => ['dalmatian.behaviour.time_alone', 'dalmatian.suitability.pdsa_company']],
+                // S429 "Sheds: Yes"; S430 "Unfortunately, they are really big shedders!"
+                ['tag' => 'sheds', 'source_ids' => ['S429', 'S430'], 'refs' => ['dalmatian.suitability.rkc_shedding', 'dalmatian.suitability.pdsa_shedding']],
+            ],
+        ],
+
     ],
 ];

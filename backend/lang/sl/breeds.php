@@ -55,6 +55,7 @@ return [
     'portuguese_water_dog' => 'Portugalski vodni pes',
     'bichon_frise' => 'Kodrasti bišon',
     'newfoundland' => 'Novofundlandec',
+    'dalmatian' => 'Dalmatinec',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
