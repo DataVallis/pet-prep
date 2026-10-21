@@ -49,6 +49,7 @@ import { parentBirthdayLine, readBirthday } from '@/modules/birthday/birthday';
 import PetMediaView from '@/components/PetMediaView';
 import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
 import CertificateCard from '@/components/parent/CertificateCard';
+import LogWalkCard from '@/components/parent/LogWalkCard';
 import { canBuyChallenge } from '@/modules/plan/purchaseEntry';
 import { parentPetGrowthKey, useGrowthRefresh, useParentPetGrowth } from '@/hooks/queries/usePetGrowth';
 import PetAlbum from '@/components/PetAlbum';
@@ -91,6 +92,8 @@ export const CHILD_DETAIL_STRINGS = strings('parent', 'childDetail', {
   typeLine: (own: number, expected: number) => t('parent:childDetail.typeLine', { own, expected }),
   typeMissed: (n: number) => t('parent:childDetail.typeMissed', { n }),
   typePending: (n: number) => t('parent:childDetail.typePending', { n }),
+  /** M5-T12: "od tega 30 min vpisanih" — walk minutes a parent logged that day. */
+  walkLogged: (minutes: number) => t('parent:childDetail.walkLogged', { minutes }),
   walk: (steps: string, goal: string | null, pushes = false) =>
     pushes
       ? goal
@@ -258,6 +261,10 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
             onOpenReport={() => setDays(84)}
             testID="detail-certificate"
           />
+          {/* M5-T12: in adapted mode the parent can log walk minutes (no Apple Watch needed). */}
+          {child.adapted_mode && pet !== null && !isCat && (
+            <LogWalkCard childId={child.id} timezone={family.timezone} testID="detail-log-walk" />
+          )}
           {onOpenChallenge && canBuyChallenge(pet) && (
             <ChallengeBuyButton onPress={onOpenChallenge} childName={child.name} species={pet?.species ?? null} testID="detail-buy-challenge" />
           )}
@@ -473,6 +480,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
                     ) : (
                       <Text style={[styles.muted, styles.flex, styles.right]}>
                         {S.walk(formatSteps(d.walk_steps), d.walk_goal === null ? null : formatSteps(d.walk_goal), d.walk_unit === 'pushes')}
+                        {d.walk_logged_minutes > 0 ? ` · ${S.walkLogged(d.walk_logged_minutes)}` : ''}
                       </Text>
                     )}
                     {(isCat ? d.play_done : d.walk_done) === true && <Check color={C.green} size={14} />}

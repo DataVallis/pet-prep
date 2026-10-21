@@ -88,6 +88,7 @@
     "watered_pet": "nalil(a) vodo",
     "cleaned_poop": "počistil(a)",
     "walked_pet": "dosegel(a) cilj sprehoda",
+    "parent_logged_walk": "vpisal(a) sprehod",
     "signed_contract": "podpisal(a) pogodbo",
     "took_out_pet": "peljal(a) kužka ven",
     "resolved_chewing": "pospravil(a) copat in dal(a) igračo",
@@ -204,7 +205,29 @@
       "on": "Prilagojen način je vklopljen: sprehod šteje potiske vozička.",
       "off": "Prilagojen način je izklopljen: sprehod šteje korake.",
       "native": "Za potiske potrebuje otrokov telefon najnovejšo različico PetPrep (Zdravje z vklopljenim invalidskim vozičkom in Apple Watch ali Health Connect).",
-      "error": "Nastavitev ni shranjena. Poskusite znova."
+      "error": "Nastavitev ni shranjena. Poskusite znova.",
+      "consent": "S tem shranimo samo, da je prilagojen način vklopljen. Izklopite ga lahko kadar koli."
+    },
+    "logWalk": {
+      "title": "Vpiši sprehod",
+      "hint": "Ste bili skupaj na sprehodu? Vpišite minute — vsaka minuta šteje kot 100 korakov. Otroku ni treba storiti ničesar.",
+      "today": "Danes",
+      "yesterday": "Včeraj",
+      "placeholder": "30",
+      "minutesLabel": "Minute sprehoda",
+      "unit": "min",
+      "submit": "Shrani",
+      "invalid": "Vpišite od 1 do 240 minut.",
+      "saved_one": "Shranjeno: {{count}} minuta sprehoda.",
+      "saved_two": "Shranjeno: {{count}} minuti sprehoda.",
+      "saved_few": "Shranjeno: {{count}} minute sprehoda.",
+      "saved_other": "Shranjeno: {{count}} minut sprehoda.",
+      "errors": {
+        "adapted_mode_off": "Najprej vklopite prilagojen način.",
+        "date_not_allowed": "Vpišete lahko samo današnji ali včerajšnji sprehod.",
+        "locked": "Kuža zdaj počiva (veterinar, premor ali konec igre) — sprehoda ni mogoče shraniti.",
+        "other": "Sprehod ni shranjen. Poskusite znova."
+      }
     },
     "newLoginPin": "Nova koda za prijavo",
     "firstPin": "Ustvari kodo",

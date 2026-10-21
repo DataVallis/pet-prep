@@ -80,6 +80,7 @@
     "watered_pet": "refilled the water",
     "cleaned_poop": "cleaned up",
     "walked_pet": "reached the walk goal",
+    "parent_logged_walk": "logged a walk",
     "signed_contract": "signed the contract",
     "took_out_pet": "took the dog out",
     "resolved_chewing": "tidied up the slipper and gave a toy",
@@ -194,7 +195,27 @@
       "on": "Adapted mode is on: the walk counts wheelchair pushes.",
       "off": "Adapted mode is off: the walk counts steps.",
       "native": "Pushes need the newest PetPrep version on the child's phone (Apple Health with Wheelchair on and an Apple Watch, or Health Connect).",
-      "error": "The setting wasn't saved. Please try again."
+      "error": "The setting wasn't saved. Please try again.",
+      "consent": "We only store that adapted mode is on. You can turn it off at any time."
+    },
+    "logWalk": {
+      "title": "Log a walk",
+      "hint": "Did you go for a walk together? Enter the minutes — each minute counts like 100 steps. Your child doesn't need to do anything.",
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "placeholder": "30",
+      "minutesLabel": "Walk minutes",
+      "unit": "min",
+      "submit": "Save",
+      "invalid": "Enter 1 to 240 minutes.",
+      "saved_one": "Saved: {{count}} minute of walking.",
+      "saved_other": "Saved: {{count}} minutes of walking.",
+      "errors": {
+        "adapted_mode_off": "Turn on adapted mode first.",
+        "date_not_allowed": "Only today or yesterday can be logged.",
+        "locked": "The pet is resting right now (vet, pause or game over) — the walk can't be saved.",
+        "other": "The walk wasn't saved. Please try again."
+      }
     },
     "newLoginPin": "New sign-in code",
     "firstPin": "Create a code",

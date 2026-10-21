@@ -123,14 +123,14 @@ class ChildProfileService
         return $isChild ? User::find((int) $childId) : null;
     }
 
-    /** M5-T12: `PetUpdated` event type when a parent switches a caretaker's adapted mode. */
-    public const ADAPTED_MODE_EVENT = 'adapted_mode_changed';
+    /** M5-T12: `PetUpdated` event type when a parent changes a caretaker's settings (adapted mode). */
+    public const SETTINGS_EVENT = 'caretaker_settings_changed';
 
     /**
      * Switch the child's adapted mode (M5-T12, »Prilagojen način«): their walk counts
      * wheelchair pushes instead of steps (1 push = 1 step; goals, energy, routines and
      * the Care Score are unchanged). Only the boolean is stored — never a reason.
-     * A change broadcasts one `PetUpdated` (`adapted_mode_changed`, no child data in
+     * A change broadcasts one `PetUpdated` (`caretaker_settings_changed`, no child data in
      * the payload) on the child's active pet after commit, so the child's app refetches
      * its state and switches the wording / health data type; the same value again
      * changes nothing.
@@ -146,7 +146,7 @@ class ChildProfileService
 
             $pet = $this->families->activePetOf($locked);
             if ($pet !== null) {
-                PetUpdated::afterCommit($pet, self::ADAPTED_MODE_EVENT);
+                PetUpdated::afterCommit($pet, self::SETTINGS_EVENT);
             }
 
             return true;

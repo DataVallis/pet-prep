@@ -44,6 +44,10 @@ describe('FamilyChildrenCard — adapted mode', () => {
     expect(screen.getByText('Prilagojen način')).toBeTruthy();
     expect(screen.getByText(/Ne sprašujemo in ne shranjujemo, zakaj/)).toBeTruthy();
     expect(screen.queryByTestId('adapted-mode-native-2')).toBeNull();
+    // The parent's explicit consent text (David 2026-10-21) sits under the switch.
+    expect(screen.getByTestId('adapted-mode-consent-2').props.children).toBe(
+      'S tem shranimo samo, da je prilagojen način vklopljen. Izklopite ga lahko kadar koli.',
+    );
 
     fireEvent(sw, 'valueChange', true);
     await flush();

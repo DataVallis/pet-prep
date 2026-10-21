@@ -900,6 +900,8 @@ erDiagram
   PETS ||--|{ PET_CARETAKERS : "1..n children"
   USERS ||--o{ PET_CARETAKERS : "child, max 1 active pet"
   PETS ||--o{ PET_DAILY_STEPS : "steps per child per day"
+  PETS ||--o{ PARENT_WALK_ENTRIES : "walks a parent logged (M5-T12)"
+  USERS ||--o{ PARENT_WALK_ENTRIES : "child / parent (M5-T12)"
   USERS ||--o{ ACTIVITIES_LOG : "actor (child)"
   USERS ||--o{ USERS : "parent_id (deprecated)"
   USERS ||--o{ PETS : "user_id (deprecated, primary caretaker)"
@@ -978,6 +980,9 @@ erDiagram
     date local_date
     int steps
     timestamp last_sync_at
+    string unit "M5-T12: steps or pushes (report wording)"
+    int manual_steps "M5-T12: part of steps parents logged"
+    int manual_minutes "M5-T12: those minutes"
   }
   ACTIVITIES_LOG {
     bigint pet_id
@@ -995,6 +1000,16 @@ erDiagram
     string timezone "parent: mirror of family"
     string pairing_pin
     bigint pairing_pet_id "join PIN target"
+    boolean adapted_mode "M5-T12: child, parent switch (pushes instead of steps)"
+  }
+  PARENT_WALK_ENTRIES {
+    bigint pet_id
+    bigint child_user_id
+    bigint parent_user_id "nullable"
+    date local_date "family today or yesterday"
+    smallint minutes "1-240"
+    int steps "minutes x 100"
+    string entry_id "unique per child (idempotency)"
   }
   PETS {
     bigint id

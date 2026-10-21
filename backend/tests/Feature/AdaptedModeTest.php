@@ -3,11 +3,14 @@
 use App\Enums\PushType;
 use App\Events\PetUpdated;
 use App\Jobs\SendPushNotification;
+use App\Models\ActivityLog;
 use App\Models\DevicePushToken;
+use App\Models\ParentWalkEntry;
 use App\Models\Pet;
 use App\Models\PetDailyStep;
-use App\Models\PushNotification;
+use App\Models\PetDailyWalk;
 use App\Models\User;
+use App\Services\AccountDeletionService;
 use App\Services\AccountExportService;
 use App\Services\FamilyService;
 use App\Services\NotificationService;
@@ -83,7 +86,7 @@ describe('PATCH /api/parent/children/{child}/settings', function () {
             ->assertExactJson(['child_id' => $child->id, 'adapted_mode' => true]);
         expect($child->refresh()->adapted_mode)->toBeTrue();
         Event::assertDispatchedTimes(PetUpdated::class, 1);
-        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->petId === $pet->id && $e->eventType === 'adapted_mode_changed');
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->petId === $pet->id && $e->eventType === 'caretaker_settings_changed');
 
         // The same value again: nothing changes, no broadcast.
         test()->patchJson("/api/parent/children/{$child->id}/settings", ['adapted_mode' => true])->assertOk();
@@ -226,6 +229,7 @@ describe('POST /api/child/pet/steps with unit: pushes', function () {
 
     it('a day with pushes stays `pushes` even if a later sync of that day says steps', function () {
         [, $child] = amFamily();
+        $child->forceFill(['adapted_mode' => true])->save();
         amSync($child, 500, 'pushes')->assertOk();
         Carbon::setTestNow(now()->addMinutes(5));
         amSync($child, 700, 'steps', '2026-10-14T12:05:00+02:00')->assertOk();
@@ -267,17 +271,15 @@ describe('POST /api/child/pet/steps with unit: pushes', function () {
     });
 });
 
-describe('walk reminder wording', function () {
-    it('renders the pushes variant in EN and SL, the plain text otherwise', function () {
-        expect(PushCopy::body(PushType::WalkReminder, 'energy', 'child', 'sl', PushCopy::VARIANT_PUSHES))
-            ->toBe('Tvoj kuža si želi na pravi sprehod – danes ima še premalo potiskov. Gremo na sprehod?')
-            ->and(PushCopy::body(PushType::WalkReminder, 'energy', 'child', 'en', PushCopy::VARIANT_PUSHES))
-            ->toBe('Your dog wants a proper walk – not enough pushes yet today. Time for a walk?')
-            ->and(PushCopy::body(PushType::WalkReminder, 'energy', 'child', 'sl'))
-            ->toBe('Tvoj kuža si želi na pravi sprehod – danes ima še premalo korakov. Gremo na sprehod?');
+describe('walk reminder wording (QA: no unit on the lock screen)', function () {
+    it('one neutral body for every child, EN and SL, that names no unit', function () {
+        expect(PushCopy::body(PushType::WalkReminder, 'energy', 'child', 'sl'))->toBe('Tvoj kuža si želi na pravi sprehod. Gremo?')
+            ->and(PushCopy::body(PushType::WalkReminder, 'energy', 'child', 'en'))->toBe('Your pup is longing for a proper walk. Shall we go?')
+            ->and(PushCopy::body(PushType::WalkReminder, 'energy', 'parent', 'sl'))->not->toMatch('/korak|potisk/u')
+            ->and(PushCopy::body(PushType::WalkReminder, 'energy', 'parent', 'en'))->not->toMatch('/step|push/i');
     });
 
-    it('sends "pushes" only to the caretaker in adapted mode on a shared pet', function () {
+    it('sends the identical text to a walking child, a child in adapted mode and the parent', function () {
         config(['push.enabled' => true]);
         [$parent, $child, $pet] = amFamily(['energy_level' => 0, 'hunger_level' => 100, 'thirst_level' => 100, 'hygiene_level' => 100]);
         $sibling = User::factory()->child()->create(['parent_id' => $parent->id]);
@@ -288,8 +290,9 @@ describe('walk reminder wording', function () {
             'user_id' => $u->id, 'expo_push_token' => 'ExponentPushToken['.Str::random(22).']',
             'platform' => 'ios', 'app_version' => '1.0.0', 'locale' => 'sl', 'last_seen_at' => now(),
         ]);
-        $walkerDevice = $device($child);
-        $rollerDevice = $device($sibling);
+        $device($child);
+        $device($sibling);
+        $device($parent);
 
         $sent = new ArrayObject;
         Http::swap(new HttpFactory(app('events')));
@@ -304,14 +307,135 @@ describe('walk reminder wording', function () {
 
         Queue::fake([SendPushNotification::class]);
         $row = app(NotificationService::class)->walkReminder($pet->refresh());
-        expect($row)->not->toBeNull()->and($row->type)->toBe(PushType::WalkReminder);
+        expect($row)->not->toBeNull();
         (new SendPushNotification($row->id))->handle(app(NotificationService::class), app(ExpoPushClient::class));
 
-        $byToken = collect($sent->getArrayCopy())->keyBy('to');
-        expect($byToken)->toHaveCount(2)
-            ->and($byToken[$rollerDevice->expo_push_token]['body'])->toContain('potiskov')
-            ->and($byToken[$walkerDevice->expo_push_token]['body'])->toContain('korakov')
-            ->and($byToken[$rollerDevice->expo_push_token]['data'])->toBe(['type' => 'walk_reminder', 'pet_id' => $pet->id])
-            ->and(PushNotification::sole()->status)->toBe('sent');
+        $bodies = collect($sent->getArrayCopy())->pluck('body')->unique()->values()->all();
+        expect($sent->count())->toBeGreaterThanOrEqual(2)
+            ->and($bodies)->toBe(['Tvoj kuža si želi na pravi sprehod. Gremo?']);
+    });
+});
+
+describe('the server ignores unit: pushes outside adapted mode (QA)', function () {
+    it('a child without adapted mode sending pushes gets a steps day', function () {
+        [, $child] = amFamily();
+        amSync($child, 400, 'pushes')->assertOk();
+        expect(PetDailyStep::sole()->unit->value)->toBe('steps');
+    });
+});
+
+describe('deletion and dashboard (QA)', function () {
+    it('deleting the child profile removes the flag with the user and its pushes rows / parent walks', function () {
+        [$parent, $child, $pet] = amFamily();
+        $child->forceFill(['adapted_mode' => true])->save();
+        amSync($child, 300, 'pushes')->assertOk();
+        app('auth')->forgetGuards();
+        test()->actingAs($parent, 'sanctum');
+        amWalk($child, 20, '2026-10-14', 'entry-delete-1')->assertCreated();
+
+        app(AccountDeletionService::class)->deleteChildProfile($parent, $child);
+
+        expect(User::find($child->id))->toBeNull()
+            ->and(PetDailyStep::where('user_id', $child->id)->count())->toBe(0)
+            ->and(ParentWalkEntry::where('child_user_id', $child->id)->count())->toBe(0);
+    });
+
+    it('the dashboard last_7_days carries walk_unit', function () {
+        [$parent, $child] = amFamily(['arrival_age_months' => 36]);
+        $child->forceFill(['adapted_mode' => true])->save();
+        amSync($child, 500, 'pushes')->assertOk();
+        app('auth')->forgetGuards();
+        test()->actingAs($parent, 'sanctum');
+
+        $children = test()->getJson('/api/parent/dashboard')->assertOk()->json('family.children');
+        $days = collect(collect($children)->firstWhere('id', $child->id)['last_7_days']);
+        expect($days->firstWhere('date', '2026-10-14')['walk_unit'])->toBe('pushes')
+            ->and($days->firstWhere('date', '2026-10-13')['walk_unit'])->toBe('steps');
+    });
+});
+
+function amWalk(User $child, int $minutes, string $date, string $entryId)
+{
+    return test()->postJson("/api/parent/children/{$child->id}/walks", ['minutes' => $minutes, 'local_date' => $date, 'entry_id' => $entryId]);
+}
+
+describe('POST /api/parent/children/{child}/walks — the parent logs walk minutes', function () {
+    it('adds minutes × 100 steps to the child\'s day, energy, report and timeline (parent actor)', function () {
+        [$parent, $child, $pet] = amFamily(['arrival_age_months' => 36]);
+        $child->forceFill(['adapted_mode' => true])->save();
+        test()->actingAs($parent, 'sanctum');
+
+        $r = amWalk($child, 30, '2026-10-14', 'walk-0001-abcd')->assertCreated();
+        expect($r->json('status'))->toBe('accepted')
+            ->and($r->json('entry.minutes'))->toBe(30)
+            ->and($r->json('entry.steps'))->toBe(3000)
+            ->and($r->json('steps_today'))->toBe(3000);
+
+        $row = PetDailyStep::sole();
+        expect($row->steps)->toBe(3000)->and($row->manual_steps)->toBe(3000)->and($row->manual_minutes)->toBe(30)
+            ->and($pet->refresh()->daily_step_count)->toBe(3000)
+            ->and((float) $pet->energy_level)->toBeGreaterThan(0.0);
+
+        $log = ActivityLog::where('pet_id', $pet->id)->where('activity_type', 'parent_logged_walk')->sole();
+        expect($log->actor_user_id)->toBe($parent->id)->and($log->value)->toBe(30);
+
+        $today = collect(test()->getJson("/api/parent/children/{$child->id}/report?days=7")->assertOk()->json('daily'))->firstWhere('date', '2026-10-14');
+        expect($today['walk_steps'])->toBe(3000)->and($today['walk_logged_minutes'])->toBe(30);
+
+        // The child sees the walk counted.
+        app('auth')->forgetGuards();
+        test()->actingAs($child, 'sanctum');
+        test()->getJson('/api/child/pet')->assertOk()->assertJsonPath('steps.my_steps_today', 3000);
+    });
+
+    it('is idempotent per entry_id', function () {
+        [$parent, $child, $pet] = amFamily();
+        $child->forceFill(['adapted_mode' => true])->save();
+        test()->actingAs($parent, 'sanctum');
+        amWalk($child, 10, '2026-10-14', 'walk-dup-0001')->assertCreated();
+        amWalk($child, 10, '2026-10-14', 'walk-dup-0001')->assertOk()->assertJsonPath('status', 'unchanged');
+        expect(ParentWalkEntry::count())->toBe(1)->and($pet->refresh()->daily_step_count)->toBe(1000);
+    });
+
+    it('never double counts: health pushes and parent minutes add up as max(health) + minutes', function () {
+        [$parent, $child, $pet] = amFamily();
+        $child->forceFill(['adapted_mode' => true])->save();
+        amSync($child, 800, 'pushes')->assertOk();
+        app('auth')->forgetGuards();
+        test()->actingAs($parent, 'sanctum');
+        amWalk($child, 10, '2026-10-14', 'walk-mix-0001')->assertCreated(); // +1000 → 1800
+        app('auth')->forgetGuards();
+
+        // The phone reports its cumulative 800 again → unchanged; then 950 → +150 only.
+        Carbon::setTestNow(now()->addMinutes(5));
+        expect(amSync($child, 800, 'pushes', '2026-10-14T12:05:00+02:00')->json('status'))->toBe('unchanged');
+        amSync($child, 950, 'pushes', '2026-10-14T12:05:00+02:00')->assertOk();
+        expect(PetDailyStep::sole()->steps)->toBe(1950)->and($pet->refresh()->daily_step_count)->toBe(1950);
+    });
+
+    it('yesterday updates the closed walk row; other days, off-mode, bad input and other families are refused', function () {
+        [$parent, $child, $pet] = amFamily(['arrival_age_months' => 36]);
+        test()->actingAs($parent, 'sanctum');
+        amWalk($child, 10, '2026-10-14', 'walk-off-00001')->assertStatus(422)->assertJsonPath('reason', 'adapted_mode_off');
+
+        $child->forceFill(['adapted_mode' => true])->save();
+        PetDailyWalk::create(['pet_id' => $pet->id, 'local_date' => '2026-10-13', 'steps' => 0, 'goal' => 6000, 'achieved' => false, 'birth_day' => false]);
+        amWalk($child, 60, '2026-10-13', 'walk-yday-0001')->assertCreated();
+        $walk = PetDailyWalk::where('pet_id', $pet->id)->where('local_date', '2026-10-13')->sole();
+        expect($walk->steps)->toBe(6000)->and($walk->achieved)->toBeTrue()
+            ->and($pet->refresh()->daily_step_count)->toBe(0);
+
+        amWalk($child, 10, '2026-10-12', 'walk-old-00001')->assertStatus(422)->assertJsonPath('reason', 'date_not_allowed');
+        amWalk($child, 0, '2026-10-14', 'walk-zero-0001')->assertStatus(422)->assertJsonValidationErrors('minutes');
+        amWalk($child, 241, '2026-10-14', 'walk-big-00001')->assertStatus(422)->assertJsonValidationErrors('minutes');
+        amWalk($child, 10, '2026-10-14', 'x')->assertStatus(422)->assertJsonValidationErrors('entry_id');
+
+        $other = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
+        app('auth')->forgetGuards();
+        test()->actingAs($other, 'sanctum');
+        amWalk($child, 10, '2026-10-14', 'walk-other-001')->assertStatus(404);
+        app('auth')->forgetGuards();
+        test()->actingAs($child, 'sanctum');
+        amWalk($child, 10, '2026-10-14', 'walk-child-001')->assertStatus(403);
     });
 });

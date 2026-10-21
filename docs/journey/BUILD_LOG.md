@@ -11,13 +11,13 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ## 2026-10-21 — Prilagojen način: sprehod s potiski vozička
 
-**Kaj:** starš pri otroku vklopi »Prilagojen način« in otrokov sprehod s kužkom potem šteje potiske invalidskega vozička namesto korakov — iz Apple Zdravje (Apple Watch v načinu invalidskega vozička) ali Health Connect. En potisk šteje kot en korak; cilji, energija in ocena skrbi so enaki. Otrok povsod vidi »potiski« (okno sprehoda, navodila, opomnik), starš v poročilu prav tako.
+**Kaj:** starš pri otroku vklopi »Prilagojen način« in otrokov sprehod s kužkom potem šteje potiske invalidskega vozička namesto korakov — iz Apple Zdravje (Apple Watch v načinu invalidskega vozička) ali Health Connect. En potisk šteje kot en korak; cilji, energija in ocena skrbi so enaki. Otrok v aplikaciji vidi »potiski« (okno sprehoda, navodila), starš v poročilu prav tako; potisno obvestilo za sprehod je za vse enako in ne omenja enote. Ker na iPhonu potiske samodejno zapiše samo Apple Watch, lahko starš v podrobnostih otroka **vpiše minute sprehoda** (vsaka minuta = 100 korakov) — otroku ni treba ničesar.
 **Zakaj je pomembno:** izziv »si pripravljen na psa?« mora biti pošten tudi za otroka, ki ne hodi. Ne vprašamo in ne shranimo, zakaj je način vklopljen — to je dostopnost, ne diagnoza.
-- 👩 Starši: »Prilagojen način« je eno stikalo pri otroku; nič ne razlagate in nič o zdravju ne shranimo — samo vklop / izklop.
+- 👩 Starši: »Prilagojen način« je eno stikalo pri otroku (vklop je vaša privolitev); nič ne razlagate in nič o zdravju razen vklopa ne shranimo. Brez Apple Watch tapnete »Vpiši sprehod«.
 - 🧒 Otroci: »Danes potrebuje 6.000 potiskov vozička za sprehod. Potiski mu dajo energijo.«
 - 💼 Investitorji: dostopnost brez novih podatkov o otroku — isti cilji, isti Care Score, en dodaten vir v aplikaciji Zdravje.
 - 🤝 Partnerji (šole, društva): PetPrep lahko uporabljajo tudi otroci na vozičku.
-- 🛠 Tehnično: HealthKit `PushCount` / Health Connect `WheelchairPushes` (vsak s svojim dovoljenjem samo za branje), strežnik dobi `unit: pushes`, protigoljufija in idempotentnost na otroka nespremenjeni; razmerje 1 : 1, ker avtoritativnega vira ni (55 potiskov / min za zmerno intenzivnost — Rice 2021 — je mera intenzivnosti, ne dnevnega cilja). *Branje potiskov pride z naslednjim native buildom.*
+- 🛠 Tehnično: HealthKit `PushCount` / Health Connect `WheelchairPushes` (vsak s svojim dovoljenjem samo za branje), strežnik dobi `unit: pushes`, protigoljufija in idempotentnost na otroka nespremenjeni; razmerje 1 : 1 (David potrdil 21. 10.), ker avtoritativnega vira ni (55 potiskov / min za zmerno intenzivnost — Rice 2021 — je mera intenzivnosti, ne dnevnega cilja). *Branje potiskov pride z naslednjim native buildom.*
 
 ## 2026-10-21 — Rojstni dan: ljubljenček dopolni 1 leto
 

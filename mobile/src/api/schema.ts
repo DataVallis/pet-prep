@@ -1144,11 +1144,38 @@ export interface paths {
          *     »Prilagojen način«, the child's walk counts wheelchair pushes instead of steps
          *     (1 : 1; goals, points and the Care Score stay the same). Accessibility, not a
          *     diagnosis: no reason is asked for or stored. A change broadcasts
-         *     `adapted_mode_changed` on the child's active pet. 200 `{child_id, adapted_mode}`;
+         *     `caretaker_settings_changed` on the child's active pet. 200 `{child_id, adapted_mode}`;
          *     404 `child_not_found` for a child outside the family; child token → 403
          * @description PATCH /api/parent/children/{child}/settings
          */
         patch: operations["childProfile.updateSettings"];
+        trace?: never;
+    };
+    "/parent/children/{child}/walks": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * M5-T12 (David 2026-10-21): log a walk for a child in adapted mode — the parent
+         *     enters minutes (1–240) for today or yesterday (family time zone); they count as
+         *     minutes × 100 steps (the step-goal rule) on the child's day of their active pet,
+         *     on top of any wheelchair pushes from the phone. Idempotent per `entry_id`.
+         *     201 `{status: accepted, entry, steps_today}`; the same `entry_id` again → 200
+         *     `{status: unchanged, entry, steps_today}`. 422 `adapted_mode_off` (switch first),
+         *     `date_not_allowed` (not today / yesterday), `steps_not_applicable` (a cat);
+         *     423 `{reason}` while the pet is locked; 404 `child_not_found` / `no_pet`
+         * @description POST /api/parent/children/{child}/walks
+         */
+        post: operations["childProfile.logWalk"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
         trace?: never;
     };
     "/parent/children/{child}": {
@@ -1976,6 +2003,21 @@ export interface components {
          * @enum {string}
          */
         LifeStage: "puppy" | "young" | "adult" | "senior";
+        /**
+         * LogParentWalkRequest
+         * @description POST /api/parent/children/{child}/walks (M5-T12, David 2026-10-21): a parent logs
+         *     walk minutes for a child in adapted mode. Body `{minutes: 1–240, local_date:
+         *     Y-m-d (today or yesterday in the family's time zone — checked by the service),
+         *     entry_id: the app's id of this entry (idempotency, 8–64 of [A-Za-z0-9_-])}`.
+         *     Parents only (UserPolicy::manageFamily → 403 for a child); the child's family and
+         *     adapted mode are checked in the controller.
+         */
+        LogParentWalkRequest: {
+            minutes: number;
+            /** Format: date */
+            local_date: string;
+            entry_id: string;
+        };
         /** LoginRequest */
         LoginRequest: {
             /** Format: email */
@@ -18730,6 +18772,64 @@ export interface operations {
                 };
             };
             422: components["responses"]["ValidationException"];
+        };
+    };
+    "childProfile.logWalk": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                child: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["LogParentWalkRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": string;
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "This child has no pet yet.";
+                        /** @constant */
+                        reason: "no_pet";
+                    } | {
+                        /** @constant */
+                        message: "No such child in your family.";
+                        /** @constant */
+                        reason: "child_not_found";
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+            423: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "The pet is locked right now.";
+                        reason: string | null;
+                    };
+                };
+            };
         };
     };
     "childProfile.destroy": {

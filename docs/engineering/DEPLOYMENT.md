@@ -68,6 +68,11 @@ An installed build only ever accepts updates for its own runtime version, so a w
 
 **Product rule (Apple / Google):** OTA is for fixes, texts, translations, small UI changes and new breeds. Big new features (a new species, a new payment flow, a large new screen) go through store review even when the fingerprint would allow OTA — merge them together with a native change or ship a store build first.
 
+**Next store release — checklist (David 2026-10-21):**
+- [ ] Google Play Console → App content → **Health apps declaration**: add `READ_WHEELCHAIR_PUSHES` (wheelchair pushes, M5-T12) next to `READ_STEPS` (read only; purpose: the child's daily walk in adapted mode).
+- [ ] App Store Connect: the **Health permission text changed** (`NSHealthShareUsageDescription` EN + SL now mention wheelchair pushes, M5-T12) — re-check the App Privacy answers (Health & Fitness, read only, not linked to tracking).
+- [ ] M5-T12 changes both native fingerprints (ios `18c9650c…`, android `9a1b20a5…`; main before it: ios `bc3f9402…`, android `26425689…`): after it is merged **no JS OTA reaches the current store builds** until this store release ships.
+
 **Before every `eas build` on the Mac:** `cd mobile && yarn install` (EAS compares the runtime the Mac resolves with the one the build server resolves — a stale `node_modules` without a newly added native module, e.g. `expo-updates` or `expo-clipboard`, fails the build with "Runtime version calculated on local machine not equal to runtime version calculated during build"). The APNs mode comes from `PETPREP_APNS_MODE` in each `eas.json` profile `env` (applied on the Mac and on the server), not from `EAS_BUILD_PROFILE` (server only) — fixed 2026-10-12 after the first failed build.
 
 **Setup (David, once):** (1) EAS robot token as the GitHub secret `EXPO_TOKEN` (without it the workflow only prints a notice); (2) one new store build (iOS + Android) from `main` — it is the first build with `expo-updates`, every later JS-only merge goes OTA. Manual check: Actions → "Mobile OTA update" → Run workflow with `dry_run`.

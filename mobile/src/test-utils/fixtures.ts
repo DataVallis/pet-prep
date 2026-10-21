@@ -469,6 +469,7 @@ export function makeDayRow(date: string, overrides: Partial<FamilyChild['last_7_
     walk_goal: 4000,
     walk_done: true,
     walk_unit: 'steps' as 'steps' | 'pushes',
+    walk_logged_minutes: 0,
     // M5-R06-08b: a cat's play of the day (null for a dog).
     play_sessions: null,
     play_goal: null,

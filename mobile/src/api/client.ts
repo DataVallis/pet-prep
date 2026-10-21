@@ -188,6 +188,22 @@ export interface ChildActionResponse {
 export type SyncStepsRequest = components['schemas']['SyncStepsRequest'];
 export type UpdateChildSettingsRequest = components['schemas']['UpdateChildSettingsRequest'];
 export type UpdateChildSettingsResponse = { child_id: number; adapted_mode: boolean };
+export type LogParentWalkRequest = components['schemas']['LogParentWalkRequest'];
+export interface ParentWalkEntry {
+  id: number;
+  entry_id: string;
+  pet_id: number;
+  child_id: number;
+  local_date: string;
+  minutes: number;
+  steps: number;
+  created_at: string | null;
+}
+export interface LogParentWalkResponse {
+  status: 'accepted' | 'unchanged';
+  entry: ParentWalkEntry;
+  steps_today: number;
+}
 
 /** What the server did with a step sync — every one of them is a 200. */
 export type StepSyncStatus = 'accepted' | 'capped' | 'rejected' | 'unchanged' | 'stale';
@@ -947,6 +963,14 @@ export const api = {
    */
   updateChildSettings: (childId: number, body: UpdateChildSettingsRequest) =>
     apiRequest<UpdateChildSettingsResponse>(`/api/parent/children/${childId}/settings`, { method: 'PATCH', body }),
+
+  /**
+   * POST /api/parent/children/{child}/walks (M5-T12) — the parent logs walk minutes for a child
+   * in adapted mode (today / yesterday, 1–240 min; `entry_id` makes a retry harmless).
+   * 422 `adapted_mode_off` / `date_not_allowed`, 423 locked, 404 `child_not_found` / `no_pet`.
+   */
+  logParentWalk: (childId: number, body: LogParentWalkRequest) =>
+    apiRequest<LogParentWalkResponse>(`/api/parent/children/${childId}/walks`, { method: 'POST', body }),
 
   /** DELETE /api/parent/children/{child}/tokens — sign the child out on every device. */
   revokeChildTokens: (childId: number) =>
