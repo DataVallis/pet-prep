@@ -279,6 +279,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 
 - [x] M5-T01 Pelji ven: ura kot rok, barve, potrditveni zaslon po dejanju (spec §2, §4) — 2026-10-21, mobile JS (OTA); točke in animacija »kuža na travi« še ne (odgovor nima točk, mediji M5-T08)
 - [x] M5-T02 Tabela dovoljenih dejanj po stanjih; spanje onemogoči igro in šolo, gumb pokaže razlog (§8) — 2026-10-21, backend + mobile JS; `sleep` v stanju, 422 `training_pet_sleeping`, `actionRules.ts`
+  - [x] M5-T02b (David 21. 10.) med spanjem tudi crkljanje in česanje (pes + muca): 422 `play_pet_sleeping` / `grooming_quiet_hours` (najprej), česanje nikoli zamujeno zaradi spanja (`feasibleGroomingDays`); ure »7:00« povsod (`clockText` / `ClockText`); šolsko okno ostane spanje
 - [x] M5-T03 Vrsta sporočil z minimalnim časom prikaza (§12) — 2026-10-21, `messageQueue.ts` (2,5 s + 60 ms/znak, FIFO, pritisk zapre)
 - [ ] M5-T04 Igra onemogočena, dokler niso pripravljeni vsi njeni klipi (§10)
 - [ ] M5-T05 Mini navodila iz parametrov simulacije (§5)

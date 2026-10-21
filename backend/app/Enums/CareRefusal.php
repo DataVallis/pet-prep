@@ -89,10 +89,17 @@ enum CareRefusal: string
 
     /**
      * Play & cuddle (M5-R05) is not possible now: the pet has no play (free
-     * mutt, legacy pet), it is quiet hours (next_allowed_at = their end) or a
-     * mess waits to be cleaned.
+     * mutt, legacy pet) or a mess waits to be cleaned (sleep: PlayPetSleeping).
      */
     case PlayNotAvailable = 'play_not_available';
+
+    /**
+     * M5-T02b (David 2026-10-21, »spečo žival ne motimo«): the pet sleeps
+     * (PetSleepService — family quiet hours) — no ball game and no cuddle.
+     * next_allowed_at = when it wakes. Older apps read any 422 of the play
+     * endpoint by its next_allowed_at, so they keep »Kuža spi do …«.
+     */
+    case PlayPetSleeping = 'play_pet_sleeping';
 
     /**
      * M5-R06-04: phone steps are dog-only (CAT_SPEC Q1, §5.3) — a cat's daily
@@ -165,7 +172,12 @@ enum CareRefusal: string
     /** All of this program week's groomings are done (next_allowed_at = the next week). */
     case GroomingWeekDone = 'grooming_week_done';
 
-    /** The pet sleeps in quiet hours — no grooming (like the wand game; next_allowed_at = their end). */
+    /**
+     * The pet sleeps (PetSleepService — family quiet hours, M5-T02b: checked
+     * before every other grooming block) or a session would run into quiet
+     * hours — no grooming (»spečo žival ne motimo«); next_allowed_at = when
+     * it wakes.
+     */
     case GroomingQuietHours = 'grooming_quiet_hours';
 
     /** Another child is grooming the pet (next_allowed_at = its expiry). */

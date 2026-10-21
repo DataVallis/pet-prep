@@ -55,7 +55,7 @@ Na desni strani zaslona vidiš štiri stolpce. **Zelena** = kuža je vesel. **Ru
 Dvakrat na teden se zanimivost pokaže sama — ampak samo, ko je mirno: ko je ljubljenček pravkar dobil tvojo skrb in je z njim vse v redu. Če takrat ni mirno, nad gumbi piše **»Nekaj novega o tvoji pasmi«** — tapni, ko imaš čas. Zanimivost ti pove tudi, **zakaj je to pomembno zate** (npr. zakaj ima tvoj ljubljenček tak cilj korakov). Mešanček in domača mačka tega nimata.
 
 ## Ko si v šoli ali spiš
-Starši nastavijo **tihe ure**. Takrat kuža počiva in te ne moti — tudi obvestil ne pošilja.
+Starši nastavijo **tihe ure**. Takrat kuža počiva in te ne moti — tudi obvestil ne pošilja. Spečega kužka (ali muce) ne motimo: **igra, šola, crkljanje in česanje počakajo**, da se zbudi — pod gumbom piše, do kdaj spi, npr. »💤 Kuža spi do 7:00« *(od 21. 10. 2026)*.
 
 ## Kaj, če pozabiš
 - Najprej te kuža **opomni** — ko podpišeš pogodbo, te aplikacija vpraša, ali te kuža sme poklicati z obvestilom (npr. »Tvoj kuža te milo gleda in kaže na posodo s hrano.«). Če je zelo nujno, obvestilo tudi zazvoni. Za sprehod te pokliče največ enkrat na dan — po šoli. Tapni ga in že si pri kužku. *(na telefonu z naslednjo novo različico aplikacije)*

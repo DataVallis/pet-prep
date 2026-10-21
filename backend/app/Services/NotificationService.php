@@ -19,6 +19,7 @@ use App\Services\Push\ExpoPushClient;
 use App\Services\Push\PushCopy;
 use App\Services\Push\PushDeviceService;
 use App\Services\Push\PushTiming;
+use App\Support\ClockText;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
@@ -716,14 +717,14 @@ class NotificationService
                 return ['variant' => $variant, 'replace' => []];
             }
             if ($this->schedule->allowedToday($after, $pet, $now)) {
-                return ['variant' => $variant.PushCopy::WAIT_SUFFIX, 'replace' => ['time' => $after->nextAllowedAt->copy()->setTimezone($tz)->format('H:i')]];
+                return ['variant' => $variant.PushCopy::WAIT_SUFFIX, 'replace' => ['time' => ClockText::at($after->nextAllowedAt, $tz)]];
             }
 
             return ['variant' => $this->hygieneVariant($pet), 'replace' => [], 'metric' => 'hygiene'];
         }
 
         if ($this->schedule->allowedToday($check, $pet, $now)) {
-            return ['variant' => PushCopy::VARIANT_WAIT, 'replace' => ['time' => $check->nextAllowedAt->copy()->setTimezone($tz)->format('H:i')]];
+            return ['variant' => PushCopy::VARIANT_WAIT, 'replace' => ['time' => ClockText::at($check->nextAllowedAt, $tz)]];
         }
 
         return null;

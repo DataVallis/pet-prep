@@ -220,7 +220,7 @@ describe('API result handling', () => {
   });
 
   it('422 text names the end of quiet hours when given', () => {
-    expect(playRefusalMessage('2026-10-05T07:00:00+02:00', 'Europe/Ljubljana')).toBe('Kuža spi do 07:00. Potem se igrata.');
+    expect(playRefusalMessage('2026-10-05T07:00:00+02:00', 'Europe/Ljubljana')).toBe('Kuža spi do 7:00. Potem se igrata.');
     expect(playRefusalMessage(null, 'Europe/Ljubljana')).toBe('Zdaj se ne moreta igrati.');
   });
 

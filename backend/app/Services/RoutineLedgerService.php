@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Enums\ActivityType;
+use App\Enums\CareSessionKind;
 use App\Enums\HygieneEventKind;
 use App\Enums\HygieneEventStatus;
 use App\Enums\RoutineStatus;
@@ -79,7 +80,10 @@ use Throwable;
  *    family-local date: one litter change (`changed_litter` inside the
  *    period) and, for a brushed cat, `grooming_sessions_per_week` grooming
  *    slots (slot i = the period's i-th `groomed_pet`) — M5-R13: the same
- *    grooming slots for a dog with `grooming_enabled` and a breed row. Not expected when
+ *    grooming slots for a dog with `grooming_enabled` and a breed row
+ *    (M5-T02b: capped at the days whose awake time leaves room for one
+ *    grooming — CatChoreService::feasibleGroomingDays; never missed only
+ *    because the pet slept). Not expected when
  *    hard stop / vet / game over cover ≥ 50 % of the period's non-quiet
  *    PROGRAM time (like the walk); a payment lock already lengthens the
  *    period, so it is neither blocked nor period time (David 2026-10-12,
@@ -697,6 +701,13 @@ class RoutineLedgerService
             if ($type === RoutineType::Grooming) {
                 $value = $this->lifeStages->stageValueOn($pet, $pet->localDate($opens), StageParamKey::GroomingSessionsPerWeek)['value'] ?? 0;
                 $goal = is_int($value) ? $value : 0;
+                // M5-T02b (David 2026-10-21): no grooming while the pet sleeps, one per
+                // day — a slot the family's quiet hours leave no day for is not expected
+                // (never missed only because of sleep; like the wand's feasibleSessions).
+                if ($goal > 0) {
+                    $need = max(1, (int) config('cat_care.grooming.session_seconds', 30)) + CatChoreService::graceSeconds(CareSessionKind::Grooming);
+                    $goal = min($goal, CatChoreService::feasibleGroomingDays($quiet, $opens, $due, $pet->familyTimezone(), $need, $goal));
+                }
             }
             if ($goal <= 0 || ! $opens->lessThan($due)) {
                 continue;

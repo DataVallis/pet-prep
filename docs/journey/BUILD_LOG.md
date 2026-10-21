@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-21 — Spečega ljubljenčka ne motimo
+
+**Kaj:** ko kuža ali muca spi (tihe ure družine — noč in šolsko okno), otrok zdaj ne more niti crkljati niti česati; gumba sta vidna, a siva, pod njima piše »💤 Kuža spi do 7:00«. Strežnik ta dejanja med spanjem zavrne z uro bujenja. Česanje, ki ga spanje onemogoči, se nikoli ne šteje kot zamujeno. Vse ure v aplikaciji so zdaj zapisane kot »7:00« namesto »07:00«.
+**Zakaj je pomembno:** pravi pes ali mačka potrebuje miren spanec — otrok se nauči, da žival, ki spi, pustimo pri miru, in da pravila ne kaznujejo za to, česar ni bilo mogoče narediti.
+- 👩 Starši: tihe ure, ki jih nastavite (npr. šola 8–14), veljajo za vse igre in nego, ki bi ljubljenčka zbudila.
+- 🧒 Otroci: »Muca spi do 7:00 — takrat jo pocrkljaš.«
+- 🛠 Tehnično: ena definicija spanja (`PetSleepService`) za šolo, igro, crkljanje in česanje; teden pričakuje največ toliko česanj, kolikor je dni s prostim časom izven tihih ur; ena funkcija za zapis ure v aplikaciji in na strežniku.
+
 ## 2026-10-20 — Sit kuža ne je spet čez pol ure
 
 **Kaj:** Pri testiranju na telefonu je otrok zamudil kosilo (13–15) in kužka nahranil z nujnim obrokom ob 18:09 — po starem pravilu bi ga lahko spet nahranil že ob 19:00. Zdaj nujni obrok, ki je največ 2 uri pred naslednjim oknom, velja kot obrok tega okna: okno dobi kljukico, naslednji obrok je šele naslednje okno, zamujeni obrok pa ostane zamujen. Popravljeno je tudi sporočilo po nujnem obroku (»Ta obrok je bil pozen …« namesto »Obrok je bil zamujen«, ki je zvenelo, kot da obroka sploh ni bilo).

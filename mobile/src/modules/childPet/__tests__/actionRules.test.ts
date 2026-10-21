@@ -132,6 +132,51 @@ describe('actionRule — every HUD action', () => {
   });
 });
 
+describe('M5-T02b — cuddling and brushing while the pet sleeps (David 2026-10-21)', () => {
+  it('cuddle (dog + cat) is off with the sleep text and the wake time', () => {
+    const dog = view({ sleep: ASLEEP, play: makePlayState({ can_play: false }) });
+    expect(actionRule(dog, 'cuddle')).toEqual({ enabled: false, reason: 'sleeping', until: WAKE, text: '💤 Kuža spi do 7:00' });
+    const cat = view({ pet: { breed_type: 'domestic_cat', species: 'cat' }, sleep: ASLEEP, play: makePlayState({ can_play: false }) });
+    setTextSpecies('cat');
+    expect(actionRule(cat, 'cuddle')).toEqual({ enabled: false, reason: 'sleeping', until: WAKE, text: '💤 Muca spi do 7:00' });
+  });
+
+  it('sleep wins over a mess for play / cuddle (the server refuses with play_pet_sleeping first)', () => {
+    const v = view({ sleep: ASLEEP, pet: { hygiene_level: 0, needs_cleaning: true }, play: makePlayState({ can_play: false }) });
+    expect(actionRule(v, 'cuddle').reason).toBe('sleeping');
+  });
+
+  it('brushing a dog: grooming_quiet_hours → »💤 Kuža spi do 7:00« with the server time', () => {
+    const v = view({ sleep: ASLEEP, grooming: makeGroomingState({ can_start: false, blocked_reason: 'grooming_quiet_hours', next_allowed_at: WAKE }) });
+    expect(actionRule(v, 'grooming')).toEqual({ enabled: false, reason: 'sleeping', until: WAKE, text: '💤 Kuža spi do 7:00' });
+  });
+
+  it('brushing a cat: »💤 Muca spi do 7:00«; EN keeps the 24 h clock without the leading zero', async () => {
+    const cat = view({
+      pet: { breed_type: 'maine_coon', species: 'cat' },
+      sleep: ASLEEP,
+      grooming: makeGroomingState({ can_start: false, blocked_reason: 'grooming_quiet_hours', next_allowed_at: WAKE }),
+    });
+    setTextSpecies('cat');
+    expect(actionRule(cat, 'grooming').text).toBe('💤 Muca spi do 7:00');
+    await i18n.changeLanguage('en');
+    expect(actionRule(cat, 'grooming').text).toBe('💤 Your kitty is asleep until 7:00');
+  });
+
+  it('an older server that names another block while asleep: the sleep still explains it (wake time from `sleep`)', () => {
+    const v = view({ sleep: ASLEEP, grooming: makeGroomingState({ can_start: false, blocked_reason: 'grooming_done_today', next_allowed_at: '2026-10-05T00:00:00+02:00' }) });
+    expect(actionRule(v, 'grooming')).toEqual({ enabled: false, reason: 'sleeping', until: WAKE, text: '💤 Kuža spi do 7:00' });
+  });
+
+  it('awake: brushing blocks stay the server\'s; a running own session stays on; a lock wins', () => {
+    const done = view({ grooming: makeGroomingState({ can_start: false, blocked_reason: 'grooming_done_today', next_allowed_at: '2026-10-05T00:00:00+02:00' }) });
+    expect(actionRule(done, 'grooming')).toEqual({ enabled: false, reason: 'server', until: '2026-10-05T00:00:00+02:00' });
+    expect(actionRule(view({ grooming: makeGroomingState() }), 'grooming')).toEqual({ enabled: true });
+    const ill = view({ sleep: ASLEEP, lock: { is_locked: true, reason: 'ill', until: '2026-10-04T18:30:00+02:00' }, grooming: makeGroomingState({ can_start: false }) });
+    expect(actionRule(ill, 'grooming').reason).toBe('locked');
+  });
+});
+
 describe('texts (EN + SL)', () => {
   it('sleepingText names the family-local wake time, or none', async () => {
     expect(sleepingText(WAKE, 'Europe/Ljubljana')).toBe('💤 Kuža spi do 7:00');
@@ -142,9 +187,9 @@ describe('texts (EN + SL)', () => {
   });
 
   it('the 422 training_pet_sleeping toast names the wake time', async () => {
-    expect(trainingRefusalMessage('training_pet_sleeping', WAKE, 'Europe/Ljubljana')).toBe('Kuža spi do 07:00. Takrat spet v šolo!');
+    expect(trainingRefusalMessage('training_pet_sleeping', WAKE, 'Europe/Ljubljana')).toBe('Kuža spi do 7:00. Takrat spet v šolo!');
     expect(trainingRefusalMessage('training_pet_sleeping', null, 'Europe/Ljubljana')).toBe('Kuža spi. V šolo gresta, ko se zbudi.');
     await i18n.changeLanguage('en');
-    expect(trainingRefusalMessage('training_pet_sleeping', WAKE, 'Europe/Ljubljana')).toBe('Your pup is asleep until 07:00. School then!');
+    expect(trainingRefusalMessage('training_pet_sleeping', WAKE, 'Europe/Ljubljana')).toBe('Your pup is asleep until 7:00. School then!');
   });
 });

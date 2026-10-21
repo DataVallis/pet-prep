@@ -69,7 +69,7 @@ import {
   type DayRow,
   type ReportDays,
 } from '@/modules/family/scoring';
-import { localParts } from '@/modules/childPet/familyTime';
+import { clockText, localParts } from '@/modules/childPet/familyTime';
 import { mealsLine, nextStageLine, originLine, readPetProfile, stageLine } from '@/modules/petProfile/petProfile';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
 import { PARENT_TRAINING_STRINGS, parentTrainingLines } from '@/modules/training/training';
@@ -112,7 +112,7 @@ export function formatSteps(n: number): string {
 function instantText(iso: string | null, timezone: string): string {
   if (!iso) return '';
   const p = localParts(iso, timezone);
-  return p ? t('family:date.dateTime', { date: dayLabel(p.date), time: p.time }) : iso;
+  return p ? t('family:date.dateTime', { date: dayLabel(p.date), time: clockText(p.time) }) : iso;
 }
 
 /** A cat's day: "Igra 1/2" (null without a play routine that day). */

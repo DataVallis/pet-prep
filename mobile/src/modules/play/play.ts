@@ -11,7 +11,8 @@
  * Sources (backend `PlayPayload`):
  * - child state `play` and `PetUpdated.play` (pet level): null for a pet without play
  *   (free mutt, legacy, unpaid) → no "Igra" on the HUD;
- * - `POST /api/child/pet/play` bodies (`status`, `play`, `state`, 422 `play_not_available`);
+ * - `POST /api/child/pet/play` bodies (`status`, `play`, `state`, 422 `play_pet_sleeping` /
+ *   `play_not_available` — read by their `next_allowed_at`);
  * - parent dashboard `family.pets[].play_today` and timeline rows `played_with_pet` /
  *   `cuddled_pet` (`value` = merged count within the hour).
  *
@@ -258,9 +259,10 @@ export type PlayBlock = 'sleeping' | 'dirty' | 'other';
 
 export function playBlock(view: ChildPetView): PlayBlock | null {
   if (view.play === null || view.play.can_play) return null;
-  if (view.pet.needs_cleaning || view.pet.hygiene_level <= 0) return 'dirty';
-  // M5-T02: the server's `sleep` (an older server: `pet_state`).
+  // M5-T02: the server's `sleep` (an older server: `pet_state`). M5-T02b (David 2026-10-21):
+  // the sleep wins over a mess, as on the server (`play_pet_sleeping` first).
   if (view.sleep.asleep || view.pet.pet_state === 'sleeping') return 'sleeping';
+  if (view.pet.needs_cleaning || view.pet.hygiene_level <= 0) return 'dirty';
   return 'other';
 }
 
@@ -347,7 +349,7 @@ export function doneText(kind: PlayKind): string {
 }
 
 /**
- * Text for a 422 of the play endpoint: "Kuža spi do 07:00. …" when the server names the
+ * Text for a 422 of the play endpoint: "Kuža spi do 7:00. …" when the server names the
  * time (quiet hours), else the reason read from the server state that came with it
  * ("Najprej počisti …"), else the neutral "Zdaj se ne moreta igrati.".
  */
@@ -360,7 +362,7 @@ export function playRefusalMessage(nextAllowedAt: string | null, timezone: strin
 
 /**
  * The note under a disabled "Igra". The child state carries no end of quiet hours, so the
- * time ("Kuža spi do 07:00.") is shown only when a 422 of this session named it
+ * time ("Kuža spi do 7:00.") is shown only when a 422 of this session named it
  * (`sleepsUntil` = its `next_allowed_at`) and it is still ahead; otherwise the timeless text.
  */
 export function playBlockText(block: PlayBlock, sleepsUntil: string | null, timezone: string | null, serverNowMs: number): string {

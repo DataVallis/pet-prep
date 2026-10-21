@@ -145,8 +145,8 @@ describe('child state blocks', () => {
 describe('catWhen (family timezone)', () => {
   it('today / tomorrow / weekday — Slovenian', () => {
     expect(catWhen('2026-10-04T17:00:00+02:00', NOW, TZ)).toBe('ob 17:00');
-    expect(catWhen('2026-10-05T06:00:00+02:00', NOW, TZ)).toBe('jutri ob 06:00');
-    expect(catWhen('2026-10-07T09:30:00+02:00', NOW, TZ)).toBe('v sredo ob 09:30');
+    expect(catWhen('2026-10-05T06:00:00+02:00', NOW, TZ)).toBe('jutri ob 6:00');
+    expect(catWhen('2026-10-07T09:30:00+02:00', NOW, TZ)).toBe('v sredo ob 9:30');
     // A UTC instant is shown in the family zone.
     expect(catWhen('2026-10-04T15:00:00Z', NOW, TZ)).toBe('ob 17:00');
     expect(catWhen(null, NOW, TZ)).toBeNull();
@@ -155,8 +155,8 @@ describe('catWhen (family timezone)', () => {
   it('English', async () => {
     await i18n.changeLanguage('en');
     expect(catWhen('2026-10-04T17:00:00+02:00', NOW, TZ)).toBe('at 17:00');
-    expect(catWhen('2026-10-05T06:00:00+02:00', NOW, TZ)).toBe('tomorrow at 06:00');
-    expect(catWhen('2026-10-10T08:00:00+02:00', NOW, TZ)).toBe('on Saturday at 08:00');
+    expect(catWhen('2026-10-05T06:00:00+02:00', NOW, TZ)).toBe('tomorrow at 6:00');
+    expect(catWhen('2026-10-10T08:00:00+02:00', NOW, TZ)).toBe('on Saturday at 8:00');
   });
 });
 
@@ -183,9 +183,9 @@ describe('refusal texts', () => {
   it('names the family-local time when the server sends one (Slovenian, feminine "muca")', () => {
     expect(catRefusalMessage('wand_too_soon', NEXT, ctx)).toBe('Muca po zadnji igri počiva. Igrata se lahko spet ob 16:20.');
     expect(catRefusalMessage('wand_too_soon', null, ctx)).toBe('Muca po zadnji igri počiva. Igrata se lahko malo kasneje.');
-    expect(catRefusalMessage('wand_quiet_hours', '2026-10-05T07:00:00+02:00', ctx)).toBe('Muca zdaj spi. Igrata se lahko spet jutri ob 07:00.');
+    expect(catRefusalMessage('wand_quiet_hours', '2026-10-05T07:00:00+02:00', ctx)).toBe('Muca zdaj spi. Igrata se lahko spet jutri ob 7:00.');
     expect(catRefusalMessage('grooming_week_done', '2026-10-08T09:30:00+02:00', ctx)).toBe(
-      'Vsa česanja ta teden so opravljena. Naslednje česanje v četrtek ob 09:30.',
+      'Vsa česanja ta teden so opravljena. Naslednje česanje v četrtek ob 9:30.',
     );
   });
 
@@ -193,7 +193,7 @@ describe('refusal texts', () => {
     await i18n.changeLanguage('en');
     expect(catRefusalMessage('wand_session_active', '2026-10-04T12:02:00+02:00', ctx)).toBe('Someone else is playing with your kitty. Try again at 12:02.');
     expect(catRefusalMessage('litter_change_done', '2026-10-08T09:30:00+02:00', ctx)).toBe(
-      'You already changed the litter this week. The next change is on Thursday at 09:30.',
+      'You already changed the litter this week. The next change is on Thursday at 9:30.',
     );
   });
 

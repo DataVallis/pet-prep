@@ -2,7 +2,8 @@
  * Wall-clock helpers in the family's timezone (PRODUCT_SPEC §4: every window, limit
  * and midnight is family-local). The server sends instants as ISO 8601 with the
  * family offset (`2026-10-04T17:00:00+02:00`); broadcasts send UTC. Both are shown
- * as the family's local "HH:MM" using `state.timezone`.
+ * as the family's local clock using `state.timezone` — to people always as "7:00"
+ * (`clockText`, David 2026-10-21).
  *
  * The `en-GB` formatter below only extracts numeric date/time parts (language-neutral);
  * visible phrases come from `child:time` (M1-18).
@@ -96,15 +97,28 @@ export function localParts(iso: string, timeZone: string | null): LocalParts | n
   return match ? { date: match[1], time: `${match[2]}:${match[3]}` } : null;
 }
 
-/** "17:00" in the family timezone, or null for a missing / broken instant. */
+/**
+ * THE clock text shown to people (David 2026-10-21): "7:00", "9:30", "17:00" — 24 h,
+ * minutes always two digits, no leading zero on the hour, Slovenian and English alike
+ * (EN already used the 24 h clock; only the leading zero is gone). Input: a wall clock
+ * "HH:MM" (`LocalParts.time`, a feed window bound …); anything else is returned as is.
+ * `LocalParts.time` itself stays "HH:MM" data (compared as strings) — format only for display.
+ */
+export function clockText(hhmm: string): string {
+  const match = /^(\d{1,2}):(\d{2})$/.exec(hhmm);
+  return match ? `${Number(match[1])}:${match[2]}` : hhmm;
+}
+
+/** "17:00" / "7:00" in the family timezone (display, `clockText`), or null for a missing / broken instant. */
 export function familyClock(iso: string | null, timeZone: string | null): string | null {
   if (!iso) return null;
-  return localParts(iso, timeZone)?.time ?? null;
+  const time = localParts(iso, timeZone)?.time;
+  return time ? clockText(time) : null;
 }
 
 /**
  * "ob 17:00" / "at 17:00" when `iso` is on the same family-local day as `nowIso`,
- * "jutri ob 06:00" / "tomorrow at 06:00" the next day, else just "ob 17:00" (the child
+ * "jutri ob 6:00" / "tomorrow at 6:00" the next day, else just "ob 17:00" (the child
  * only needs the hour). Current language (`child:time`, M1-18).
  */
 export function whenText(iso: string | null, nowIso: string | null, timeZone: string | null): string | null {
@@ -113,7 +127,7 @@ export function whenText(iso: string | null, nowIso: string | null, timeZone: st
 }
 
 /**
- * "18:30" for a lock end in the family zone (N1). The string's own clock time is used
+ * "18:30" / "7:00" for a lock end in the family zone (N1; display, `clockText`). The string's own clock time is used
  * only when its offset IS the family offset at that instant (`state.lock.until`), or
  * when the device can't resolve the zone; a UTC value (`illness_until` from a broadcast,
  * `+00:00` / `Z`) for a family elsewhere goes through Intl.
@@ -126,7 +140,7 @@ export function lockClock(iso: string | null, timeZone: string | null): string |
   const family = timeZone ? zoneOffsetMinutes(ms, timeZone) : null;
   if (written !== null && (family === null || family === written)) {
     const match = ISO_WALL_CLOCK.exec(iso);
-    if (match) return `${match[2]}:${match[3]}`;
+    if (match) return clockText(`${match[2]}:${match[3]}`);
   }
   return familyClock(iso, timeZone);
 }
@@ -142,7 +156,7 @@ export function deviceTimeZone(): string | null {
 }
 
 /**
- * Lock end "HH:MM" when the family zone may be unknown (session restored, no state
+ * Lock end "7:00" (display) when the family zone may be unknown (session restored, no state
  * loaded yet — hotfix 2026-10-06): the family zone if known, else the device zone, else
  * the device's local clock. Never the UTC wall clock of a `+00:00` instant.
  */
@@ -157,7 +171,7 @@ export function lockClockWithFallback(
   const zone = familyZone ?? deviceZone;
   if (zone !== null && zoneOffsetMinutes(ms, zone) !== null) return lockClock(iso, zone);
   const local = new Date(ms);
-  return `${String(local.getHours()).padStart(2, '0')}:${String(local.getMinutes()).padStart(2, '0')}`;
+  return clockText(`${local.getHours()}:${String(local.getMinutes()).padStart(2, '0')}`);
 }
 
 /** Minutes east of UTC written in an ISO string (`Z` → 0), or null without one. */

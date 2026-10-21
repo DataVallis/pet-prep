@@ -138,7 +138,7 @@ describe('texts', () => {
 
   it('missed routine time in the family wall clock (device on UTC)', () => {
     expect(missedWhenText(makeMissed('feed', '2026-10-04T07:00:00+02:00', '2026-10-04T09:00:00+02:00'), TZ)).toBe(
-      'okno 07:00–09:00',
+      'okno 7:00–9:00',
     );
     // UTC instants are shown in Ljubljana time.
     expect(missedWhenText(makeMissed('clean', '2026-10-04T10:00:00Z', '2026-10-04T12:30:00Z'), TZ)).toBe('rok 14:30');
@@ -146,7 +146,7 @@ describe('texts', () => {
     // Yesterday's mess with a deadline today gets its date.
     expect(
       missedWhenText(makeMissed('clean', '2026-10-03T21:50:00+02:00', '2026-10-04T07:50:00+02:00', '2026-10-03'), TZ, '2026-10-04'),
-    ).toBe('sob 3. 10. · rok 07:50');
+    ).toBe('sob 3. 10. · rok 7:50');
   });
 
   it('timeline texts with nickname, family clock, today / yesterday', () => {
@@ -154,7 +154,7 @@ describe('texts', () => {
     expect(activityText({ activity_type: 'watered_pet', actor_nickname: null })).toBe('Nalil(a) vodo');
     expect(activityText({ activity_type: 'ignored_warning', actor_nickname: null })).toBe('Opozorilo ni bilo upoštevano');
     expect(activityText({ activity_type: 'parent_fed_pet', actor_nickname: null })).toBe('Obrok med tihimi urami (nahrani starš)');
-    expect(activityWhenText('2026-10-04T05:15:00Z', TZ, '2026-10-04')).toBe('07:15');
+    expect(activityWhenText('2026-10-04T05:15:00Z', TZ, '2026-10-04')).toBe('7:15');
     expect(activityWhenText('2026-10-03T18:00:00+02:00', TZ, '2026-10-04')).toBe('včeraj 18:00');
     expect(activityWhenText('2026-10-01T18:00:00+02:00', TZ, '2026-10-04')).toBe('1. 10. 18:00');
     expect(activityWhenText(null, TZ, '2026-10-04')).toBe('');

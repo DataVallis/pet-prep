@@ -132,7 +132,7 @@ describe('texts (SL child, EN)', () => {
   it('explains a refusal with its family-local time', () => {
     const now = '2026-10-04T22:30:00+02:00';
     expect(socialisationRefusalText('socialisation_quiet_hours', '2026-10-05T07:00:00+02:00', now, 'Europe/Ljubljana')).toBe(
-      'Kuža zdaj spi. Novo izkušnjo mu pokaži jutri ob 07:00.',
+      'Kuža zdaj spi. Novo izkušnjo mu pokaži jutri ob 7:00.',
     );
     expect(socialisationRefusalText('socialisation_week_done', null, now, 'Europe/Ljubljana')).toBe('Nova izkušnja za ta teden je že opravljena. Bravo!');
     expect(socialisationRefusalText('socialisation_not_available', null, now, 'Europe/Ljubljana')).toBe('Ta teden kuža nima nove izkušnje.');
@@ -248,7 +248,7 @@ describe('the card (one tap records the experience)', () => {
     const { client: queryClient } = renderSheet();
     fireEvent.press(screen.getByTestId('hud-socialisation-sheet-option-dog'));
     await flush();
-    expect(screen.getByText('Kuža zdaj spi. Novo izkušnjo mu pokaži jutri ob 07:00.')).toBeTruthy();
+    expect(screen.getByText('Kuža zdaj spi. Novo izkušnjo mu pokaži jutri ob 7:00.')).toBeTruthy();
     expect(queryClient.getQueryData<ChildPetView>(childPetKey)?.socialisation).toMatchObject({ done: false, blocked_reason: 'socialisation_quiet_hours' });
   });
 

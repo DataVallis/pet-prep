@@ -374,8 +374,9 @@ class PetActivityService
     /**
      * Play & cuddle (M5-R05, PLAY_CUDDLE_SPEC §12.5): the child finished a
      * ball game or a cuddle. Locks first (423, incl. this child's contract),
-     * then 422 play_not_available (no play for this pet, quiet hours —
-     * next_allowed_at = their end — or a mess to clean). Completes the shown
+     * then 422 play_pet_sleeping (the pet sleeps — PetSleepService, ball
+     * game and cuddle, M5-T02b; next_allowed_at = when it wakes), else
+     * play_not_available (no play for this pet, or a mess to clean). Completes the shown
      * invitation of that kind or records a free play; the dog is happy for
      * `play.happy_minutes`; one timeline row per child + kind per merge
      * window. A repeat by the same child and kind within `play.repeat_seconds`
@@ -400,6 +401,11 @@ class PetActivityService
                 return $this->refused($locked, CareRefusal::PlayNotAvailable);
             }
 
+            // M5-T02b (David 2026-10-21): the sleeping pet is not disturbed — its own reason
+            // (ball game and cuddle), next_allowed_at = when it wakes.
+            if (($wakes = $this->play->sleepRefusalUntil($locked, $now)) !== null) {
+                return $this->refused($locked, CareRefusal::PlayPetSleeping, $wakes);
+            }
             if (! $this->play->canPlayNow($locked, $now)) {
                 return $this->refused($locked, CareRefusal::PlayNotAvailable, $this->play->nextPlayAt($locked, $now));
             }

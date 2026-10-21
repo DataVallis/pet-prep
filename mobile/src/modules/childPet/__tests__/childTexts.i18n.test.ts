@@ -23,13 +23,13 @@ afterEach(async () => {
 describe('time phrases', () => {
   it('Slovenian (test device default)', () => {
     expect(whenText('2026-10-04T17:00:00+02:00', NOW, TZ)).toBe('ob 17:00');
-    expect(whenText('2026-10-05T06:00:00+02:00', NOW, TZ)).toBe('jutri ob 06:00');
+    expect(whenText('2026-10-05T06:00:00+02:00', NOW, TZ)).toBe('jutri ob 6:00');
   });
 
   it('English', async () => {
     await i18n.changeLanguage('en');
     expect(whenText('2026-10-04T17:00:00+02:00', NOW, TZ)).toBe('at 17:00');
-    expect(whenText('2026-10-05T06:00:00+02:00', NOW, TZ)).toBe('tomorrow at 06:00');
+    expect(whenText('2026-10-05T06:00:00+02:00', NOW, TZ)).toBe('tomorrow at 6:00');
   });
 });
 

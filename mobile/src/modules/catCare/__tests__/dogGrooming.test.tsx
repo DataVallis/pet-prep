@@ -129,7 +129,7 @@ describe('the brushing game for a dog (ChoreOverlay, same session as the cat)', 
       dogState(makeGroomingState({ can_start: false, blocked_reason: 'grooming_quiet_hours', next_allowed_at: '2026-10-05T07:00:00+02:00' })),
     );
     renderWithQuery(<ChoreOverlay kind="grooming" view={view} onClose={jest.fn()} reduceMotion />);
-    expect(screen.getByTestId('cat-grooming-blocked').props.children).toBe('Kuža zdaj spi. Počeši ga jutri ob 07:00.');
+    expect(screen.getByTestId('cat-grooming-blocked').props.children).toBe('Kuža zdaj spi. Počeši ga jutri ob 7:00.');
   });
 
   it('the host opens it for a brushed dog (and still closes it for a dog without the block)', async () => {
@@ -152,7 +152,7 @@ describe('texts per species', () => {
 
   it('dog refusals name the dog; neutral ones stay shared; the cat is unchanged', () => {
     expect(catRefusalMessage('grooming_session_active', null, { ...ctx, dog: true })).toBe('Kužka zdaj češe nekdo drug. Poskusi čez minuto.');
-    expect(catRefusalMessage('grooming_done_today', '2026-10-05T07:00:00+02:00', { ...ctx, dog: true })).toBe('Kuža je danes že počesan. Spet ga počeši jutri ob 07:00.');
+    expect(catRefusalMessage('grooming_done_today', '2026-10-05T07:00:00+02:00', { ...ctx, dog: true })).toBe('Kuža je danes že počesan. Spet ga počeši jutri ob 7:00.');
     expect(catRefusalMessage('grooming_week_done', null, { ...ctx, dog: true })).toBe('Vsa česanja ta teden so opravljena. Bravo!');
     expect(catRefusalMessage('grooming_session_active', null, ctx)).toBe('Muco zdaj češe nekdo drug. Poskusi čez minuto.');
   });

@@ -568,7 +568,7 @@ export function trainingRefusalMessage(reason: string | null, nextAllowedAt: str
     return clock ? TRAINING_STRINGS.errors.training_session_active_until(clock) : TRAINING_STRINGS.errors.training_session_active;
   }
   if (reason === 'training_pet_sleeping') {
-    // M5-T02: "Kuža spi do 07:00. Takrat spet v šolo!" (the wake time is the server's next_allowed_at).
+    // M5-T02: "Kuža spi do 7:00. Takrat spet v šolo!" (the wake time is the server's next_allowed_at).
     const clock = familyClock(nextAllowedAt, timezone);
     return clock ? TRAINING_STRINGS.errors.training_pet_sleeping_until(clock) : TRAINING_STRINGS.errors.training_pet_sleeping;
   }

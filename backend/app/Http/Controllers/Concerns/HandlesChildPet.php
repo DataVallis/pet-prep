@@ -111,6 +111,7 @@ trait HandlesChildPet
             CareRefusal::TrainingSessionInterrupted => 'The training session was interrupted.',
             CareRefusal::TrainingPetSleeping => 'The pet is sleeping — train again when it wakes up.',
             CareRefusal::PlayNotAvailable => 'Playing is not possible right now.',
+            CareRefusal::PlayPetSleeping => 'The pet is sleeping — play and cuddle when it wakes up.',
             CareRefusal::StepsNotApplicable => 'Steps are only counted for dogs.',
             CareRefusal::WandNotAvailable => 'The wand game is not available for this pet.',
             CareRefusal::WandTooSoon => 'The cat needs a rest after the last game.',

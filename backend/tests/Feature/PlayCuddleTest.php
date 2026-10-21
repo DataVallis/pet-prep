@@ -320,12 +320,12 @@ describe('eligibility (§2, §3.1)', function () {
         ['ill', 'ill'],
     ]);
 
-    it('refuses play in quiet hours with next_allowed_at = their end (D)', function () {
+    it('refuses play in quiet hours (the pet sleeps): play_pet_sleeping, next_allowed_at = the wake time (M5-T02b)', function () {
         [, $child, $pet] = plFamily();
         plNow($pet, '2026-10-07 20:00:00'); // 22:00 local, bedtime 21–07
 
         plPlay($child)->assertStatus(422)
-            ->assertJsonPath('reason', 'play_not_available')
+            ->assertJsonPath('reason', 'play_pet_sleeping')
             ->assertJsonPath('next_allowed_at', '2026-10-08T07:00:00+02:00')
             ->assertJsonPath('state.play.can_play', false);
     });

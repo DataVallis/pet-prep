@@ -166,7 +166,7 @@ describe('calm countdown', () => {
     const c = takeOutCountdown(clock, at('2026-10-04T07:00:00+02:00'), TZ);
     expect(c).toEqual({ line: 'Kuža mora ven najkasneje ob 13:30.', hint: 'ob 13:30', due: false, level: 'calm', howTo: HOW_TO });
     const tomorrow = takeOutCountdown(makeTakeOut({ next_due_at: '2026-10-05T07:10:00+02:00' }), at('2026-10-04T21:00:00+02:00'), TZ);
-    expect(tomorrow?.line).toBe('Kuža mora ven najkasneje jutri ob 07:10.');
+    expect(tomorrow?.line).toBe('Kuža mora ven najkasneje jutri ob 7:10.');
   });
 
   it('under a minute left: "wants to go out", not "~1 min"', () => {
@@ -209,7 +209,7 @@ describe('next take-out line (M5-T01 confirmation)', () => {
   it('from the state that came with the answer', () => {
     expect(nextTakeOutText(makeTakeOut(), '2026-10-04T11:00:00+02:00', TZ)).toBe('Naslednjič čez ~2 h.');
     expect(nextTakeOutText(makeTakeOut({ next_due_at: '2026-10-05T07:10:00+02:00' }), '2026-10-04T21:00:00+02:00', TZ)).toBe(
-      'Naslednjič jutri ob 07:10.',
+      'Naslednjič jutri ob 7:10.',
     );
   });
 
@@ -249,7 +249,7 @@ describe('parent lines', () => {
       TZ,
       '2026-10-04T21:00:00+02:00',
     );
-    expect(lines).toEqual(['Mladiček mora ven jutri ob 07:10 (zdrži ~2 h)', 'Kakec']);
+    expect(lines).toEqual(['Mladiček mora ven jutri ob 7:10 (zdrži ~2 h)', 'Kakec']);
     expect(PARENT_BEHAVIOUR_STRINGS.openEvent('Luža', null)).toBe('Luža');
   });
 

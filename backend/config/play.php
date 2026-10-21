@@ -14,8 +14,8 @@ return [
     // (D) Q2: legacy-profile pets (created before the puppy picker) get no play.
     'legacy_pets' => false,
 
-    // (D) §3.1: free play is not possible during quiet hours (the dog sleeps).
-    'free_play_in_quiet_hours' => false,
+    // §3.1: no ball game / cuddle while the pet sleeps (quiet hours) — David
+    // 2026-10-20 / 2026-10-21, a fixed rule now (PetSleepService), not a switch.
 
     // (D) §3.2: invitations per family-local day per pet — 1 ball game + 1 cuddle
     // (at most 2: one per kind and day).
