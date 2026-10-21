@@ -14,6 +14,7 @@ use App\Services\GroomingPayload;
 use App\Services\LitterPayload;
 use App\Services\Media\PetMediaPayload;
 use App\Services\Media\PetMediaService;
+use App\Services\Media\PreparationPayload;
 use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
 use App\Services\PlayPayload;
@@ -131,7 +132,8 @@ class ChildPetStateResource extends JsonResource
         $waterCheck = $config && $water ? $schedule->waterCheck($pet, $config, $now, $water) : null;
         $canFeed = ! $locked && (bool) $feedCheck?->allowed;
         $contract = $actor !== null ? $pet->contractOf($actor) : $pet->contract;
-        $media = PetMediaPayload::for($pet);
+        $slots = $pet->relationLoaded('media') ? $pet->getRelation('media') : $pet->media()->get();
+        $media = PetMediaPayload::for($pet, $slots);
         $profile = PetProfilePayload::for($pet, $now);
         $behaviour = BehaviourPayload::for($pet, $now);
         $hasOpenChewing = in_array('chewing', array_column($behaviour->activeEvents, 'kind'), true);
@@ -186,6 +188,9 @@ class ChildPetStateResource extends JsonResource
                 'reference_image_url' => $media->referenceImageUrl,
                 // AI media (M4-03 / M4-05): signed, expiring URLs (re-issued with every state).
                 'media' => $media->toArray(),
+                // M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                // whether to show »Pripravljamo …« — never says how it is prepared.
+                'preparation' => PreparationPayload::for($pet, $slots)->toArray(),
             ],
             'lock' => [
                 'is_locked' => $locked,

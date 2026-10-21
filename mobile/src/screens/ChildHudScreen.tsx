@@ -100,6 +100,10 @@ import {
   waterDockHint,
 } from '@/modules/childPet/actionMessages';
 import { useMessageQueue } from '@/modules/childPet/messageQueue';
+import PetPreparationScreen from '@/modules/preparation/PetPreparationScreen';
+import { NO_PREPARATION, readyMessage, showPreparationScreen } from '@/modules/preparation/preparation';
+import { useReadyAnnouncement } from '@/modules/preparation/readyAnnounced';
+import { usePreparationScreen } from '@/modules/preparation/usePreparationScreen';
 import {
   BEHAVIOUR_STRINGS,
   cleaningMess,
@@ -439,7 +443,18 @@ export default function ChildHudScreen() {
   const [isSocialisationVisible, setSocialisationVisible] = useState(false);
   // M5-T05: the care guide »Kako skrbim za …« — opens by itself once per pet on this device,
   // then from the »?« button (never over a lock).
-  const careGuide = useCareGuide(view?.pet.id ?? null, view?.care_guide != null && !view.lock.is_locked);
+  // M5-T06: the set-up screen covers the HUD (capped: a clip that hangs never blocks the pet).
+  const preparingNow = usePreparationScreen(view?.pet.id ?? null, view ? showPreparationScreen(view.pet.preparation, view.lock.is_locked) : false);
+  const careGuide = useCareGuide(view?.pet.id ?? null, view?.care_guide != null && !view.lock.is_locked && !preparingNow);
+  // M5-T06 (spec §13): »[ime] je pripravljen!« once per pet when the shown preparation ends
+  // (the server also sends one push). Through the message queue like every HUD message.
+  const skewMs = view?.clockSkewMs ?? 0;
+  const readyNow = useCallback(() => Date.now() + skewMs, [skewMs]);
+  const readyName = view?.pet.name ?? null;
+  const readySpecies = view?.pet.species ?? null;
+  useReadyAnnouncement(view?.pet.id ?? null, view?.pet.preparation ?? NO_PREPARATION, view?.lock.is_locked ?? true, readyNow, () =>
+    showToast({ tone: 'ok', message: readyMessage(readyName, readySpecies) }),
+  );
 
   // Breathing animation for avatar fallback
   const bounceAnim = useRef(new Animated.Value(0)).current;
@@ -538,7 +553,7 @@ export default function ChildHudScreen() {
   const facts = useFactMoment({
     view,
     // M5-T03: the card also waits until the message queue is empty (care confirmation first).
-    overlayOpen: dockLayerOpen || isProfileVisible || isLanguageVisible || isCertificateVisible || isSocialisationVisible || careGuide.visible || toast !== null,
+    overlayOpen: dockLayerOpen || isProfileVisible || isLanguageVisible || isCertificateVisible || isSocialisationVisible || careGuide.visible || toast !== null || preparingNow,
     dockCovered: dockLayerOpen,
   });
 
@@ -646,7 +661,8 @@ export default function ChildHudScreen() {
   // The deploy banner replaces the amber "no connection" one (never both).
   const stale = petQuery.isError && !serverUpdating;
   const albumAvailable = hasAlbum(pet.media);
-  const mediaPending = isMediaPending(pet.media);
+  // M5-T06: the set-up screen replaces the old »Kuža se pripravlja…« pill while it shows.
+  const mediaPending = isMediaPending(pet.media) && !preparingNow;
   const showAlbum = isAlbumVisible && !locked && albumAvailable;
   // M5-R03: "Šola" only for a pet with training (legacy / older app / older server: nothing).
   // A cat never has dog school (CAT_SPEC Q10).
@@ -696,7 +712,7 @@ export default function ChildHudScreen() {
   // The free tier has no `playing` video: the usual one plays and the app draws hearts.
   const showHearts = moodScene !== null && hudVideoState !== 'playing' && !coveredByOverlay;
   // Android: TalkBack must not reach the HUD under the album / training game (iOS: accessibilityViewIsModal).
-  const hiddenUnderAlbum = showAlbum || showTraining || showPlay || showCatGame || showGuide
+  const hiddenUnderAlbum = showAlbum || showTraining || showPlay || showCatGame || showGuide || preparingNow
     ? ({ importantForAccessibility: 'no-hide-descendants', accessibilityElementsHidden: true } as const)
     : ({ importantForAccessibility: 'auto', accessibilityElementsHidden: false } as const);
 
@@ -715,7 +731,7 @@ export default function ChildHudScreen() {
           // Vet visit / hard stop: the sick / sleeping video keeps playing under the
           // translucent grey lock (PRODUCT_SPEC §7). Paused under the opaque game-over /
           // inactive screen, the walk tracker, the album (one player at a time) and in the background.
-          active={!opaqueLock && !isWalkModalVisible && !showAlbum && !showTraining && !showPlay && !showCatGame && !showGuide}
+          active={!opaqueLock && !isWalkModalVisible && !showAlbum && !showTraining && !showPlay && !showCatGame && !showGuide && !preparingNow}
           onMediaExpired={onMediaExpired}
           // The vet veil darkens when a substitute (sleeping / idle) stands in for `sick`.
           onVideoStateChange={setHudVideoState}
@@ -1205,6 +1221,8 @@ export default function ChildHudScreen() {
           />
         )}
       </View>
+      {/* M5-T06: »Pripravljamo …« while the pet's first things are on their way (never over a lock). */}
+      {preparingNow && <PetPreparationScreen name={pet.name} species={pet.species} reduceMotion={reduceMotion} />}
       {/* Outside hud-content, so hiding the HUD from TalkBack never hides the game. */}
       {showTraining && <TrainingOverlay view={view} onClose={closeTraining} />}
       {/* M5-R06-08b: the cat mini-games (wand, scoop, litter change, grooming, scratcher). */}

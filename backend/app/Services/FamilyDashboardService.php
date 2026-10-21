@@ -15,6 +15,7 @@ use App\Models\PetDailyStep;
 use App\Models\PetStatusPeriod;
 use App\Models\User;
 use App\Services\Media\PetMediaService;
+use App\Services\Media\PreparationPayload;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -242,7 +243,9 @@ class FamilyDashboardService
                 // M5-R03: "Kuža zna: sedi ✓, pridi 60 %" — progress per command, today's routine.
                 'training' => TrainingPayload::summaryFor($pet)->summary(),
                 // AI media (M4-05): signed URLs to our stored copies.
-                'media' => $this->media->mediaFor($pet)->toArray(),
+                'media' => $this->media->mediaFor($pet, $slots = ($pet->relationLoaded('media') ? $pet->getRelation('media') : $pet->media()->get()))->toArray(),
+                // M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too) — same rows.
+                'preparation' => PreparationPayload::for($pet, $slots)->toArray(),
             ], $this->scores->petSummary($board, $pet)))->values()->all(),
         ];
     }

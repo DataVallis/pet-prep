@@ -68,6 +68,7 @@ class PetMediaService
         private readonly MediaDownloader $downloader,
         private readonly PetAppearancePrompt $prompts,
         private readonly Mp4FastStart $fastStart,
+        private readonly PetPreparationService $preparation,
     ) {}
 
     public function disk(): Filesystem
@@ -247,6 +248,11 @@ class PetMediaService
      *
      * Only once the reference image is stored AND the pet is born (signContract()
      * calls this after the birth commits). Returns how many were queued.
+     *
+     * M5-T06 (APP_REFINEMENT_SPEC §13): queued in preparation order — what the
+     * child sees in the first minutes first (idle, sleeping, hungry), then the
+     * games (playing), then the rest (PetPreparationService::order). Only the
+     * order changes: the same entitled states, the same claims.
      */
     public function queueStateVideos(Pet $pet, bool $includeFailed = false): int
     {
@@ -260,7 +266,7 @@ class PetMediaService
 
         $queued = 0;
 
-        foreach ($this->entitlements->videoStatesFor($pet) as $state) {
+        foreach (PetPreparationService::order($this->entitlements->videoStatesFor($pet)) as $state) {
             $slot = $this->slot($pet, PetMedia::KIND_VIDEO, $state);
 
             $neverSubmitted = $slot->status === PetMedia::STATUS_PENDING && $slot->request_id === null;
@@ -555,6 +561,11 @@ class PetMediaService
 
         if ($image && ($pet = Pet::find($slot->pet_id)) !== null) {
             $this->queueStateVideos($pet);
+        }
+
+        // M5-T06: the last item of a running preparation → »… je pripravljen!« (once).
+        if ($slot->pet_id !== null) {
+            $this->preparation->settle((int) $slot->pet_id);
         }
 
         return true;
@@ -878,7 +889,9 @@ class PetMediaService
         $status = match (true) {
             $imageUrl !== null => count(array_diff($states, array_keys($videos))) === 0 ? 'ready' : 'partial',
             $image?->status === PetMedia::STATUS_FAILED, $pet->media_status === 'failed' => 'failed',
-            $image === null && $pet->media_status === 'disabled' => 'disabled',
+            // M5-T06: an image slot without a file (created at birth by queueStateVideos) does not
+            // make a pet without AI media `pending` — it never gets any (`media_status` stays disabled).
+            $pet->media_status === 'disabled' => 'disabled',
             default => 'pending',
         };
 
@@ -1478,6 +1491,11 @@ class PetMediaService
 
         if ($linkedPet !== null && $slot->isImage()) {
             $this->queueStateVideos($linkedPet->fresh());
+        }
+
+        // M5-T06: a shared look's file completed the pet's preparation → announce once.
+        if ($linkedPet !== null) {
+            $this->preparation->settle($linkedPet->id);
         }
 
         return true;

@@ -43,6 +43,7 @@ import { parentDashboardKey } from '@/modules/family/live';
 import { normalizePetMedia, toBreedType } from '@/modules/petMedia/petMedia';
 import { isSpecies } from '@/modules/species/species';
 import { reportSocialisationLine } from '@/modules/socialisation/socialisation';
+import { parentPreparationTitle, preparationBody, readPreparation } from '@/modules/preparation/preparation';
 import PetMediaView from '@/components/PetMediaView';
 import ChallengeBuyButton from '@/components/parent/ChallengeBuyButton';
 import CertificateCard from '@/components/parent/CertificateCard';
@@ -196,6 +197,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
   const petMediaRaw = pet?.media;
   const media = useMemo(() => (hasPet ? normalizePetMedia(petMediaRaw) : null), [hasPet, petMediaRaw]);
   const albumAvailable = media !== null && hasAlbum(media);
+  const preparation = readPreparation((pet as { preparation?: unknown } | null)?.preparation);
   const petProfileRaw: unknown = pet?.profile;
   const profile = useMemo(() => readPetProfile(petProfileRaw), [petProfileRaw]);
   const showAlbum = albumOpen && albumAvailable;
@@ -258,6 +260,13 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
               style={styles.petMedia}
               testID="detail-pet-media"
             />
+          )}
+          {/* M5-T06: while the pet's first things are on their way — the same neutral words the child sees. */}
+          {pet !== null && preparation.preparing && (
+            <View style={styles.preparing} testID="detail-pet-preparing" accessible accessibilityRole="text">
+              <Text style={styles.strong}>{parentPreparationTitle(pet.name, pet.species)}</Text>
+              <Text style={styles.muted}>{preparationBody()}</Text>
+            </View>
           )}
           {albumAvailable && (
             <Pressable
@@ -509,6 +518,7 @@ const styles = StyleSheet.create({
   headerTitle: { flex: 1, fontSize: 20, letterSpacing: tightTracking(20), fontFamily: fonts.display, color: C.text },
   content: { padding: 16, gap: 14, paddingBottom: 32 },
   petMedia: { height: 220 },
+  preparing: { alignItems: 'center', gap: 2, marginTop: -4 },
   label: { fontSize: 12, fontWeight: '700', color: C.muted, textTransform: 'uppercase', letterSpacing: 0.4 },
   score: { fontSize: 48, fontWeight: '800', color: C.text, fontVariant: ['tabular-nums'] },
   noScore: { fontSize: 18, fontWeight: '700', color: C.text },

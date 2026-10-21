@@ -13,6 +13,8 @@ export const PUSH_TYPES = [
   'game_over_virtual_shelter',
   // M2-01d: a child's 12-week challenge ended (parents only, once per child).
   'challenge_completed',
+  // M5-T06: the pet's preparation ended (caretaker children, once per pet).
+  'pet_ready',
 ] as const;
 
 export type PushType = (typeof PUSH_TYPES)[number];
@@ -46,7 +48,8 @@ export function isUrgentPush(type: PushType | null | undefined): boolean {
     type !== undefined &&
     type !== 'soft_warning' &&
     type !== 'walk_reminder' &&
-    // Good news, never an alarm (M2-01d).
-    type !== 'challenge_completed'
+    // Good news, never an alarm (M2-01d, M5-T06).
+    type !== 'challenge_completed' &&
+    type !== 'pet_ready'
   );
 }

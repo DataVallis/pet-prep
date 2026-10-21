@@ -77,6 +77,24 @@ return [
     ],
 
     /*
+    | M5-T06 (David 2026-10-20, APP_REFINEMENT_SPEC §13): the ORDER the entitled
+    | state videos are queued in (PetPreparationService::order). What the child
+    | sees in the first minutes first — standing (idle), sleeping, eating
+    | (hungry) — then the games (playing), then the rest. The reference image
+    | always comes before every video (videos are made from it). Changes only
+    | the order, never which states a pet gets (MediaEntitlementService) or
+    | their number; states not listed keep their entitlement order at the end.
+    */
+    'preparation_order' => ['idle', 'sleeping', 'hungry', 'playing', 'low_energy', 'sick', 'accident', 'chewing', 'scratching'],
+
+    /*
+    | M5-T06: while the image or one of these clips is still on its way the
+    | apps show »Pripravljamo [ime] … to lahko traja nekaj minut«; after that
+    | only the features still waiting say »… se še pripravlja«.
+    */
+    'preparation_essentials' => ['idle', 'sleeping', 'hungry'],
+
+    /*
     | Our copy of every generated file (M4-05). fal.media URLs are never given
     | to the apps: a queued job downloads the result to a private disk and the
     | apps get signed, expiring URLs to GET /api/media/{media}.

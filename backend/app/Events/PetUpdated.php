@@ -7,6 +7,7 @@ use App\Services\BehaviourPayload;
 use App\Services\GroomingPayload;
 use App\Services\LitterPayload;
 use App\Services\Media\PetMediaPayload;
+use App\Services\Media\PreparationPayload;
 use App\Services\PetPlanPayload;
 use App\Services\PetProfilePayload;
 use App\Services\PlayPayload;
@@ -147,7 +148,9 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
      */
     public static function payloadFor(Pet $pet, ?string $eventType = null): array
     {
-        $media = PetMediaPayload::for($pet);
+        // One read of the media rows for both the media and the preparation summary (M5-T06).
+        $slots = $pet->relationLoaded('media') ? $pet->getRelation('media') : $pet->media()->get();
+        $media = PetMediaPayload::for($pet, $slots);
 
         return [
             'pet_id' => $pet->id,
@@ -197,6 +200,8 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             'media_status' => $pet->media_status,
             'reference_image_url' => $media->referenceImageUrl,
             'media' => $media->toArray(),
+            // M5-T06: readiness summary (ready / pending / preparing / running / ready_at).
+            'preparation' => PreparationPayload::for($pet, $slots)->toArray(),
             'event_type' => $eventType,
             'updated_at' => $pet->updated_at?->toIso8601String(),
             'emitted_at' => now()->toRfc3339String(true),

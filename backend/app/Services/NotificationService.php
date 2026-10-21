@@ -235,6 +235,18 @@ class NotificationService
         return $this->escalation($pet, PushType::ChallengeCompleted, $outcome === 'report' ? 'report' : 'certificate');
     }
 
+    /**
+     * M5-T06 (APP_REFINEMENT_SPEC §13): the pet's preparation ended — one push
+     * to the caretaker children (title = the pet's name when set, body without
+     * it; payload {type, pet_id}). Called by PetPreparationService::settle()
+     * inside the transaction that marks the pet ready (queued after commit), so
+     * it is decided once per pet (no type dedupe needed).
+     */
+    public function petReady(Pet $pet): ?PushNotification
+    {
+        return $this->escalation($pet, PushType::PetReady);
+    }
+
     /** Minutes of outside-quiet time before a scoop deadline when the litter reminder is decided. */
     public const LITTER_REMINDER_MINUTES = 60;
 
@@ -559,6 +571,8 @@ class NotificationService
             PushType::TrialEnding => $parents(),
             // M2-01d: the parent generates the certificate / reads the report.
             PushType::ChallengeCompleted => $parents(),
+            // M5-T06: the child waits for the pet (the parent sees it in the app).
+            PushType::PetReady => $children(),
         };
 
         return $list->unique('user_id')->values()->all();
@@ -576,8 +590,8 @@ class NotificationService
         }
         // M2-01d: once per certificate row (ChallengeCertificateService guards with
         // `notified_at`); two children of a shared pet may finish within minutes.
-        if ($type === PushType::ChallengeCompleted) {
-            return false;
+        if ($type === PushType::ChallengeCompleted || $type === PushType::PetReady) {
+            return false; // M5-T06: once per pet (`pets.preparation_ready_at` is set once)
         }
 
         $since = $type->isDailyReminder()

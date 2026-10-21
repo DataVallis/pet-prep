@@ -1318,9 +1318,9 @@ sequenceDiagram
   Q->>Disk: {pet}/reference-g1.jpg
   Q->>DB: slot ready, pets.media_status = ready
   Q-->>App: PetUpdated reference_image_ready (media.reference_image_url signed)
-  Note over Pair,Q: videos only once the pet is born:<br/>first contract → signContract → queueStateVideos (after commit)<br/>(image stored first? then StorePetMedia queues them)
-  Q->>DB: queueStateVideos: slots per MediaEntitlementService<br/>(basic: idle + sleeping · challenge paid by a purchase, M3-11 P6: all 6<br/>+ behaviour per species — dog accident / chewing, cat scratching, M5-R06-07)
-  loop each entitled state
+  Note over Pair,Q: videos only once the pet is born:<br/>first contract → signContract → PetPreparationService::begin (M5-T06:<br/>something missing? preparation_started_at = now → app shows »Pripravljamo …«)<br/>→ queueStateVideos (after commit) (image stored first? then StorePetMedia queues them)
+  Q->>DB: queueStateVideos: slots per MediaEntitlementService<br/>(basic: idle + sleeping · challenge paid by a purchase, M3-11 P6: all 6<br/>+ behaviour per species — dog accident / chewing, cat scratching, M5-R06-07)<br/>queued in preparation order (M5-T06): idle, sleeping, hungry, playing, rest
+  loop each entitled state (in that order)
     Q->>DB: SubmitPetStateVideo: claim slot
     Q->>FAL: queue.fal.run kling-video/v3/pro/image-to-video<br/>start_image_url = our signed URL (6 h), 5 s, no audio, fal_webhook
     FAL->>API: GET /api/media/{image}?signature (start frame)
@@ -1331,7 +1331,11 @@ sequenceDiagram
     Q->>FAL: GET video (≤ 60 MB, video/mp4)
     Q->>Disk: {pet}/{state}-g1.mp4
     Q->>DB: slot ready
-    Q-->>App: PetUpdated video_ready (media.videos, current_video_url)
+    Q-->>App: PetUpdated video_ready (media.videos, current_video_url, preparation)
+    opt last entitled item of a running preparation (M5-T06, once per pet)
+      Q->>DB: pets.preparation_ready_at = now (row lock, written once)
+      Q-->>App: PetUpdated pet_ready + push pet_ready to caretaker children<br/>(title = pet name, data {type, pet_id}) → »Luna je pripravljen!«
+    end
   end
   App->>API: GET /api/media/{id}?expires&v&signature (Range) — via Caddy → PHP-FPM
   API-->>App: 403 expired / tampered / other family token · 404 no stored file

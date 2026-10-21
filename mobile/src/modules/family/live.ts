@@ -8,6 +8,7 @@
  * refreshes every 3 min (feed windows / deadlines pass without any event).
  */
 
+import { preparationPayload, readPreparation } from '@/modules/preparation/preparation';
 import { readPetName } from '@/modules/petName/petName';
 import { readPetTraining } from '@/modules/training/training';
 import type { QueryClient } from '@tanstack/react-query';
@@ -61,6 +62,8 @@ export function patchDashboardPet(
     born_at: event.born_at !== undefined ? event.born_at : pet.born_at,
     // Freshly signed media (M4-05) — e.g. the reference image appears on `reference_image_ready`.
     media: event.media ?? pet.media,
+    // M5-T06: the pet's preparation (the detail card shows »Pripravljamo …«).
+    preparation: event.preparation !== undefined && event.preparation !== null ? preparationPayload(readPreparation(event.preparation)) : pet.preparation,
     // M5-R02: bladder clock / open messes — an accident arrives with a plain decay tick.
     behaviour: event.behaviour ?? pet.behaviour,
     // M5-R08: `pet_renamed` (and every current broadcast) carries the name; an older server's doesn't.

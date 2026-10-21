@@ -213,6 +213,8 @@ describe('PetUpdated event shape', function () {
             'training',
             // M5-R05 play & cuddle (null without play)
             'play',
+            // M5-T06: readiness summary.
+            'preparation',
             // M5-R06-04 cat wand play (additive; null for a dog)
             'wand',
             // M5-R06-05 cat litter / grooming / scratching (additive; null for a dog)

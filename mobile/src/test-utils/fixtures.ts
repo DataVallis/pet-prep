@@ -75,6 +75,9 @@ export function makeLegacyPetProfile(
   });
 }
 
+/** `preparation` as the schema types it (M5-T06). */
+export type PreparationRaw = ChildPetState['pet']['preparation'];
+
 /** `media` of a pet (M4-05): nothing stored yet. */
 export function makeMedia(overrides: Partial<PetMedia> = {}): PetMedia {
   return {
@@ -86,6 +89,16 @@ export function makeMedia(overrides: Partial<PetMedia> = {}): PetMedia {
     expires_at: null,
     ...overrides,
   };
+}
+
+/** `preparation` of a pet (M5-T06): ready, nothing shown. */
+export function makePreparation(overrides: Partial<PreparationRaw> = {}): PreparationRaw {
+  return { ready: true, pending: [], preparing: false, running: false, ready_at: null, ...overrides };
+}
+
+/** A pet whose first things are still on their way (the set-up screen shows). */
+export function makePreparing(pending: PreparationRaw['pending'] = ['idle', 'sleeping']): PreparationRaw {
+  return { ready: false, pending, preparing: true, running: true, ready_at: null };
 }
 
 /** `pet.updated` payload for pet 7 (UTC instants, like the backend's broadcast). */
@@ -177,6 +190,8 @@ export function makeChildState(
       media_status: 'disabled',
       reference_image_url: null,
       media: makeMedia(),
+      // M5-T06 (additive): ready (no preparation shown).
+      preparation: makePreparation(),
       ...petOverrides,
     },
     lock: { is_locked: false, reason: null, until: null },
@@ -539,6 +554,8 @@ export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetR
     // M5-R05 play & cuddle: none (mutt).
     play_today: null,
     media: makeMedia(),
+    // M5-T06: ready.
+    preparation: makePreparation(),
     traffic_light: { color: 'green', reasons: [] },
     care_score: { score: null, done: 0, expected: 0, illnesses: 0, since: '2026-10-01T08:00:00+00:00' },
     today: {
