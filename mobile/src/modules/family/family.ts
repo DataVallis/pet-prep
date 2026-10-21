@@ -206,7 +206,8 @@ export function petOfChild(child: FamilyChild, family: FamilyOverview): FamilyPe
 /** Nickname of a family child by id (timeline items from `/activities` carry only the id). */
 export function nicknameOf(childId: number | null, family: FamilyOverview | null): string | null {
   if (childId === null || !family) return null;
-  return family.children.find((c) => c.id === childId)?.name ?? null;
+  // M5-T12: a parent can be the actor too (a logged walk).
+  return family.children.find((c) => c.id === childId)?.name ?? family.parents.find((p) => p.id === childId)?.name ?? null;
 }
 
 /** What the parent should know about a pet's state, most important first (null = playing normally). */

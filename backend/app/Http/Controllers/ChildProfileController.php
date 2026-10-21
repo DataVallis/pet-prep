@@ -6,10 +6,14 @@ use App\Exceptions\AccountDeletionException;
 use App\Exceptions\FamilyException;
 use App\Http\Requests\ConfirmDeletionRequest;
 use App\Http\Requests\CreateChildRequest;
+use App\Http\Requests\LogParentWalkRequest;
 use App\Http\Requests\UpdateChildSettingsRequest;
 use App\Models\User;
 use App\Services\AccountDeletionService;
 use App\Services\ChildProfileService;
+use App\Services\FamilyService;
+use App\Services\PetActivityService;
+use App\Services\Results\ActionResult;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -19,7 +23,11 @@ use Illuminate\Http\Request;
  */
 class ChildProfileController extends Controller
 {
-    public function __construct(private readonly ChildProfileService $profiles) {}
+    public function __construct(
+        private readonly ChildProfileService $profiles,
+        private readonly FamilyService $families,
+        private readonly PetActivityService $activities,
+    ) {}
 
     /**
      * Create a child profile in the parent's family: nickname (≤ 30
@@ -57,7 +65,7 @@ class ChildProfileController extends Controller
      * »Prilagojen način«, the child's walk counts wheelchair pushes instead of steps
      * (1 : 1; goals, points and the Care Score stay the same). Accessibility, not a
      * diagnosis: no reason is asked for or stored. A change broadcasts
-     * `adapted_mode_changed` on the child's active pet. 200 `{child_id, adapted_mode}`;
+     * `caretaker_settings_changed` on the child's active pet. 200 `{child_id, adapted_mode}`;
      * 404 `child_not_found` for a child outside the family; child token → 403.
      *
      * PATCH /api/parent/children/{child}/settings
@@ -83,6 +91,82 @@ class ChildProfileController extends Controller
              */
             'adapted_mode' => (bool) $updated->adapted_mode,
         ], 200);
+    }
+
+    /**
+     * M5-T12 (David 2026-10-21): log a walk for a child in adapted mode — the parent
+     * enters minutes (1–240) for TODAY only (family time zone, David 2026-10-21); they count as
+     * minutes × 100 steps (the step-goal rule) on the child's day of their active pet,
+     * on top of any wheelchair pushes from the phone. Idempotent per `entry_id`.
+     * At most 240 logged minutes per child and family-local day in total (David
+     * 2026-10-21). 201 `{status: accepted, entry, steps_today}`; the same `entry_id`
+     * again (same pet, day, minutes) → 200 `{status: unchanged, entry, steps_today}`
+     * with the original entry. 422 `adapted_mode_off` (switch first), `date_not_allowed`
+     * (`local_date` is not the family's today), `daily_limit_reached` + `remaining_minutes`,
+     * `steps_not_applicable` (a cat); 409 `entry_id_conflict` (the id was used for a
+     * different walk); 423 `{reason}` while the pet is locked; 404 `child_not_found` /
+     * `no_pet`.
+     *
+     * POST /api/parent/children/{child}/walks
+     */
+    public function logWalk(LogParentWalkRequest $request, string $child): JsonResponse
+    {
+        /** @var User $parent */
+        $parent = $request->user();
+
+        $profile = $this->profiles->childOfParentFamily($parent, $child);
+        if ($profile === null || ! $parent->can('manageChild', $profile)) {
+            return response()->json(['message' => 'No such child in your family.', 'reason' => 'child_not_found'], 404);
+        }
+        if (! (bool) $profile->adapted_mode) {
+            return response()->json(['message' => 'Adapted mode is off for this child.', 'reason' => 'adapted_mode_off'], 422);
+        }
+        $pet = $this->families->activePetOf($profile);
+        if ($pet === null) {
+            return response()->json(['message' => 'This child has no pet yet.', 'reason' => 'no_pet'], 404);
+        }
+
+        $result = $this->activities->logParentWalk($pet, $profile, $parent, $request->localDate(), $request->minutes(), $request->entryId());
+
+        if ($result->status === ActionResult::LOCKED) {
+            return response()->json(['message' => 'The pet is locked right now.', 'reason' => $result->lockReason?->value], 423);
+        }
+        $walkReason = $result->extra['reason'] ?? null;
+        if ($walkReason === PetActivityService::WALK_ADAPTED_MODE_OFF) {
+            return response()->json(['message' => 'Adapted mode is off for this child.', 'reason' => 'adapted_mode_off'], 422);
+        }
+        if ($walkReason === PetActivityService::WALK_DAILY_LIMIT) {
+            return response()->json([
+                'message' => 'At most 240 walk minutes can be logged for one child and day.',
+                'reason' => 'daily_limit_reached',
+                /** Minutes that can still be logged for this child and day (0–240). */
+                'remaining_minutes' => (int) $result->extra['remaining_minutes'],
+            ], 422);
+        }
+        if ($walkReason === PetActivityService::WALK_ENTRY_CONFLICT) {
+            return response()->json(['message' => 'This entry_id was already used for a different walk.', 'reason' => 'entry_id_conflict'], 409);
+        }
+        if ($result->status === ActionResult::REFUSED) {
+            return response()->json(['message' => 'Steps do not apply to this pet.', 'reason' => $result->refusal?->value], 422);
+        }
+        if ($result->status === ActionResult::STALE) {
+            return response()->json(['message' => 'Only today can be logged.', 'reason' => 'date_not_allowed'], 422);
+        }
+
+        $pet->refresh();
+
+        return response()->json([
+            /** @var 'accepted'|'unchanged' */
+            'status' => $result->status,
+            /**
+             * The logged walk (`steps` = minutes × 100).
+             *
+             * @var array{id: int, entry_id: string, pet_id: int, child_id: int, local_date: string, minutes: int, steps: int, created_at: string|null}
+             */
+            'entry' => $result->extra['entry'],
+            /** The child's own steps today on the pet after the entry. */
+            'steps_today' => $pet->stepsTodayOf($profile),
+        ], $result->status === ActionResult::ACCEPTED ? 201 : 200);
     }
 
     /**

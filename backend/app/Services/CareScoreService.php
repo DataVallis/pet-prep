@@ -124,11 +124,16 @@ class CareScoreService
         $steps = [];
         // M5-T12: the child-days whose phone counted wheelchair pushes (report wording only).
         $pushDays = [];
-        foreach (PetDailyStep::whereIn('pet_id', $ids)->where('local_date', '>=', $from)->get(['pet_id', 'user_id', 'local_date', 'steps', 'unit']) as $row) {
+        // M5-T12: walk minutes a parent logged per child-day (report).
+        $loggedMinutes = [];
+        foreach (PetDailyStep::whereIn('pet_id', $ids)->where('local_date', '>=', $from)->get(['pet_id', 'user_id', 'local_date', 'steps', 'unit', 'manual_minutes']) as $row) {
             $date = substr((string) $row->local_date, 0, 10);
             $steps[$row->pet_id][$row->user_id][$date] = (int) $row->steps;
             if ($row->unit === StepUnit::Pushes) {
                 $pushDays[$row->pet_id][$row->user_id][$date] = true;
+            }
+            if ((int) $row->manual_minutes > 0) {
+                $loggedMinutes[$row->pet_id][$row->user_id][$date] = (int) $row->manual_minutes;
             }
         }
 
@@ -164,6 +169,7 @@ class CareScoreService
             'illnesses' => $illnesses->map(fn ($rows) => $rows->map(fn ($r) => CarbonImmutable::instance($r->started_at)->utc())->values()->all())->all(),
             'steps' => $steps,
             'push_days' => $pushDays,
+            'logged_minutes' => $loggedMinutes,
             'plays' => $plays,
         ];
     }
@@ -405,6 +411,8 @@ class CareScoreService
             'walk_unit' => $pet !== null && isset($board['push_days'][$pet->id][$childId][$date])
                 ? StepUnit::Pushes->value
                 : StepUnit::Steps->value,
+            // M5-T12: walk minutes a parent logged for this child that day (part of walk_steps).
+            'walk_logged_minutes' => $pet !== null ? (int) ($board['logged_minutes'][$pet->id][$childId][$date] ?? 0) : 0,
         ];
         // M5-R06-08b: a cat's day carries its wand play (all children together; null
         // while no play routine exists that day) — dogs' rows stay byte-identical.

@@ -1144,11 +1144,42 @@ export interface paths {
          *     »Prilagojen način«, the child's walk counts wheelchair pushes instead of steps
          *     (1 : 1; goals, points and the Care Score stay the same). Accessibility, not a
          *     diagnosis: no reason is asked for or stored. A change broadcasts
-         *     `adapted_mode_changed` on the child's active pet. 200 `{child_id, adapted_mode}`;
+         *     `caretaker_settings_changed` on the child's active pet. 200 `{child_id, adapted_mode}`;
          *     404 `child_not_found` for a child outside the family; child token → 403
          * @description PATCH /api/parent/children/{child}/settings
          */
         patch: operations["childProfile.updateSettings"];
+        trace?: never;
+    };
+    "/parent/children/{child}/walks": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * M5-T12 (David 2026-10-21): log a walk for a child in adapted mode — the parent
+         *     enters minutes (1–240) for TODAY only (family time zone, David 2026-10-21); they count as
+         *     minutes × 100 steps (the step-goal rule) on the child's day of their active pet,
+         *     on top of any wheelchair pushes from the phone. Idempotent per `entry_id`.
+         *     At most 240 logged minutes per child and family-local day in total (David
+         *     2026-10-21). 201 `{status: accepted, entry, steps_today}`; the same `entry_id`
+         *     again (same pet, day, minutes) → 200 `{status: unchanged, entry, steps_today}`
+         *     with the original entry. 422 `adapted_mode_off` (switch first), `date_not_allowed`
+         *     (`local_date` is not the family's today), `daily_limit_reached` + `remaining_minutes`,
+         *     `steps_not_applicable` (a cat); 409 `entry_id_conflict` (the id was used for a
+         *     different walk); 423 `{reason}` while the pet is locked; 404 `child_not_found` /
+         *     `no_pet`
+         * @description POST /api/parent/children/{child}/walks
+         */
+        post: operations["childProfile.logWalk"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
         trace?: never;
     };
     "/parent/children/{child}": {
@@ -1976,6 +2007,22 @@ export interface components {
          * @enum {string}
          */
         LifeStage: "puppy" | "young" | "adult" | "senior";
+        /**
+         * LogParentWalkRequest
+         * @description POST /api/parent/children/{child}/walks (M5-T12, David 2026-10-21): a parent logs
+         *     walk minutes for a child in adapted mode. Body `{minutes: 1–240, local_date:
+         *     Y-m-d (must be TODAY in the family's time zone — David 2026-10-21, checked by the service; the
+         *     day's total of logged minutes per child is capped at 240 by the service too),
+         *     entry_id: the app's id of this entry (idempotency, 8–64 of [A-Za-z0-9_-])}`.
+         *     Parents only (UserPolicy::manageFamily → 403 for a child); the child's family and
+         *     adapted mode are checked in the controller.
+         */
+        LogParentWalkRequest: {
+            minutes: number;
+            /** Format: date */
+            local_date: string;
+            entry_id: string;
+        };
         /** LoginRequest */
         LoginRequest: {
             /** Format: email */
@@ -3911,6 +3958,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -4636,6 +4689,12 @@ export interface operations {
                         steps: {
                             steps_today: number;
                             my_steps_today: number;
+                            /**
+                             * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                             *     minus walk minutes a parent logged). The app compares its health / sensor
+                             *     reading with this number; `my_steps_today` is for display.
+                             */
+                            my_device_steps_today: number;
                             /** @description Today's step goal of the dog's life stage (M5-R01). */
                             goal: number;
                             energy_level: number;
@@ -5381,6 +5440,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -6124,6 +6189,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -6867,6 +6938,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -7610,6 +7687,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -8353,6 +8436,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -9100,6 +9189,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -9847,6 +9942,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -10594,6 +10695,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -11337,6 +11444,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -12084,6 +12197,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -12827,6 +12946,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -13570,6 +13695,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -14317,6 +14448,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -15060,6 +15197,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -15807,6 +15950,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -16550,6 +16699,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -17297,6 +17452,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -18044,6 +18205,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -18791,6 +18958,12 @@ export interface operations {
                             steps: {
                                 steps_today: number;
                                 my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
                                 /** @description Today's step goal of the dog's life stage (M5-R01). */
                                 goal: number;
                                 energy_level: number;
@@ -19325,6 +19498,77 @@ export interface operations {
                 };
             };
             422: components["responses"]["ValidationException"];
+        };
+    };
+    "childProfile.logWalk": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                child: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["LogParentWalkRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": string;
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "This child has no pet yet.";
+                        /** @constant */
+                        reason: "no_pet";
+                    } | {
+                        /** @constant */
+                        message: "No such child in your family.";
+                        /** @constant */
+                        reason: "child_not_found";
+                    };
+                };
+            };
+            409: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "This entry_id was already used for a different walk.";
+                        /** @constant */
+                        reason: "entry_id_conflict";
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
+            423: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "The pet is locked right now.";
+                        reason: string | null;
+                    };
+                };
+            };
         };
     };
     "childProfile.destroy": {

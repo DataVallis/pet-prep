@@ -44,6 +44,10 @@ describe('FamilyChildrenCard — adapted mode', () => {
     expect(screen.getByText('Prilagojen način')).toBeTruthy();
     expect(screen.getByText(/Ne sprašujemo in ne shranjujemo, zakaj/)).toBeTruthy();
     expect(screen.queryByTestId('adapted-mode-native-2')).toBeNull();
+    // The parent's explicit consent text (David 2026-10-21) sits under the switch.
+    expect(screen.getByTestId('adapted-mode-consent-2').props.children).toBe(
+      'Z vklopom privolite, da hranimo samo to, da je prilagojen način vklopljen, in pri posameznem dnevu, da so šteli potiski. Ko ga izklopite, iz zgodovine odstranimo vse oznake potiskov (ti dnevi štejejo kot koraki); točke, ocena skrbi in vpisani sprehodi ostanejo enaki.',
+    );
 
     fireEvent(sw, 'valueChange', true);
     await flush();

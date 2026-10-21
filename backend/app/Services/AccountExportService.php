@@ -160,7 +160,7 @@ class AccountExportService
         }
 
         $rows = 0;
-        foreach (['activities_log', 'pet_daily_steps', 'pet_daily_walks', 'pet_daily_routines', 'pet_status_periods', 'pet_hygiene_events', 'pet_training_sessions', 'pet_care_sessions'] as $table) {
+        foreach (['activities_log', 'pet_daily_steps', 'parent_walk_entries', 'pet_daily_walks', 'pet_daily_routines', 'pet_status_periods', 'pet_hygiene_events', 'pet_training_sessions', 'pet_care_sessions'] as $table) {
             $rows += DB::table($table)->whereIn('pet_id', $petIds)->count();
         }
         // M5-R05: free plays are exported as daily counts — only invitations are rows.
@@ -306,7 +306,8 @@ class AccountExportService
         $caretakers = $byPet('pet_caretakers', ['user_id', 'requires_contract', 'created_at', 'ended_at']);
         $contracts = $byPet('pet_contracts', ['user_id', 'signature_format', 'signature', 'signed_at'], 'signed_at');
         $activities = $byPet('activities_log', ['actor_user_id', 'activity_type', 'value', 'created_at'], 'created_at');
-        $steps = $byPet('pet_daily_steps', ['user_id', 'local_date', 'steps', 'unit'], 'local_date');
+        $steps = $byPet('pet_daily_steps', ['user_id', 'local_date', 'steps', 'unit', 'manual_minutes'], 'local_date');
+        $parentWalks = $byPet('parent_walk_entries', ['child_user_id', 'parent_user_id', 'local_date', 'minutes', 'steps', 'created_at'], 'local_date');
         $walks = $byPet('pet_daily_walks', ['local_date', 'steps', 'goal', 'achieved', 'illness_started_at'], 'local_date');
         $routines = $byPet('pet_daily_routines', ['local_date', 'routine_type', 'slot', 'status', 'opens_at', 'due_at', 'done_at', 'actor_user_id'], 'local_date');
         $periods = $byPet('pet_status_periods', ['kind', 'started_at', 'ended_at'], 'started_at');
@@ -330,7 +331,7 @@ class AccountExportService
         // M2-01d: finished challenges (certificate / report) per pet, with the printed names.
         $certificates = ChallengeCertificate::whereIn('pet_id', $petIds)->orderBy('id')->get()->groupBy('pet_id');
 
-        return $pets->map(function (Pet $pet) use ($certificates, $caretakers, $contracts, $activities, $steps, $walks, $routines, $periods, $hygiene, $skills, $sessions, $careSessions, $plays, $freePlays, $expires): array {
+        return $pets->map(function (Pet $pet) use ($certificates, $caretakers, $contracts, $activities, $steps, $parentWalks, $walks, $routines, $periods, $hygiene, $skills, $sessions, $careSessions, $plays, $freePlays, $expires): array {
             $dna = is_array($pet->pet_dna) ? $pet->pet_dna : [];
             $rows = fn (Collection $group) => $group->get($pet->id, collect());
             $album = $this->growth->albumFor($pet, $expires)->toArray()['growth'];
@@ -383,6 +384,17 @@ class AccountExportService
                     'steps' => (int) $r->steps,
                     // M5-T12: steps | pushes (wheelchair pushes, adapted mode).
                     'unit' => (string) $r->unit,
+                    // M5-T12: walk minutes a parent logged (part of `steps`).
+                    'logged_minutes' => (int) $r->manual_minutes,
+                ])->values()->all(),
+                // M5-T12: walks a parent logged for a child in adapted mode.
+                'parent_walks' => $rows($parentWalks)->map(fn ($r) => [
+                    'child_id' => (int) $r->child_user_id,
+                    'parent_id' => $r->parent_user_id === null ? null : (int) $r->parent_user_id,
+                    'local_date' => $this->date($r->local_date),
+                    'minutes' => (int) $r->minutes,
+                    'steps' => (int) $r->steps,
+                    'at' => $this->iso($r->created_at),
                 ])->values()->all(),
                 'daily_walks' => $rows($walks)->map(fn ($r) => [
                     'local_date' => $this->date($r->local_date),

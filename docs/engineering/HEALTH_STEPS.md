@@ -15,6 +15,9 @@ Steps from **Apple Health (HealthKit)** on iOS and **Health Connect** on Android
 - Both libraries already support the type (`@kingstinct/react-native-healthkit` 16.0.0 has `HKQuantityTypeIdentifierPushCount` in its generated identifiers; `react-native-health-connect` 4.1.3 has `WheelchairPushes` records + `COUNT_TOTAL` aggregate) — no new dependency, but the new Android permission + changed iOS purpose string need a **new native build**.
 - Sync: `POST /api/child/pet/steps {steps_today: <pushes>, source, recorded_at, unit: "pushes"}` — 1 push = 1 step; every server rule unchanged; `pet_daily_steps.unit` names the day for the parent report.
 - Apple records pushes only when Health → Summary → profile → Health Details → **Wheelchair = Yes** and an **Apple Watch** counts them (iPhone alone records none). Health Connect needs a writer that records `WheelchairPushes` (e.g. a wheelchair-aware watch app) — open: which common Android apps write it.
+- Parent-logged walks (David 2026-10-21): `POST /api/parent/children/{child}/walks` (minutes × 100 steps, today only, at most 240 logged minutes per child and family-local day in total) — the iPhone without an Apple Watch has no pushes source, so the parent enters the walk. The device sync compares its reading with `steps − manual_steps`, so the two never double count.
+- The walk reminder push is one neutral text for everyone (it names no unit — lock-screen privacy).
+- Switching the mode **off** withdraws the parent's consent: the server turns the child's `unit = pushes` days into `steps` in the same request (counts unchanged), so nothing in the report or export says »pushes« afterwards.
 - Device check (after the native build): parent turns it on → child HUD → »Sprehod« says »potiskov«; card »Štej potiske z aplikacijo Zdravje« → sheet lists only »Potiski invalidskega vozička« (read) → pushes from the watch arrive; turn it off → back to steps.
 
 ## Libraries (2026-10-07)

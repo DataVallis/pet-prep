@@ -176,6 +176,21 @@ describe('useStepSync with Apple Health / Health Connect', () => {
       expect(lastBody().steps_today).toBe(7150);
     });
 
+    it('M5-T12 QA M1: Android raises the live counter only to the DEVICE steps (never parent-logged minutes)', async () => {
+      // Server total 3000 = 2500 logged by a parent + 500 device: the hook gets 500 (my_device_steps_today).
+      const { pedometer, emit } = makePedometer('granted');
+      setup({ platform: 'android', pedometer, health: null }, { mine: 500 });
+      await flush();
+      act(() => emit(100)); // live 500 + 100 = 600 — the parent's 2500 are never counted again
+      jest.setSystemTime(Date.now() + MIN_AUTO_SYNC_GAP_MS);
+      await act(async () => {
+        fireAppState('active');
+        await jest.advanceTimersByTimeAsync(0);
+      });
+      await flush();
+      expect(lastBody()).toEqual(expect.objectContaining({ steps_today: 600, source: 'pedometer' }));
+    });
+
     it('a Health read that throws falls back to the sensor this time', async () => {
       const health = makeFakeHealth({ steps: 9000 });
       health.readSteps.mockRejectedValueOnce(new Error('Protected health data is inaccessible'));

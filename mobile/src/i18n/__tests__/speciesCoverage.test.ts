@@ -33,6 +33,7 @@ const CHECKED = NAMESPACES.filter((ns) => ns !== 'cat');
 const DOG_ONLY: Readonly<Record<string, string>> = {
   // ── Dog-only features: a cat never sees them ──
   'child:walk': 'walk / steps — a cat plays with the feather wand instead (CAT_SPEC Q1)',
+  'family:children.logWalk': 'M5-T12 parent-logged walk — only offered for a dog (a cat has no steps)',
   'child:grooming': "dog brushing (M5-R13) — a brushed cat reads its own `cat:chore.grooming` / `cat:hud.chips` texts",
   'contract:screen.bodyWithBrushing': "a brushed dog's contract (M5-R13) — a brushed cat has `cat:contract.bodyWithBrushing`",
   'child:actions.refused.needsTidying': 'chewed slipper — a cat scratches the sofa instead ("Najprej praskalnik")',
