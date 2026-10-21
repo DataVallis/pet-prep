@@ -282,7 +282,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
   - [x] M5-T02b (David 21. 10.) med spanjem tudi crkljanje in česanje (pes + muca): 422 `play_pet_sleeping` / `grooming_quiet_hours` (najprej), česanje nikoli zamujeno zaradi spanja (`feasibleGroomingDays`); ure »7:00« povsod (`clockText` / `ClockText`); šolsko okno ostane spanje
 - [x] M5-T03 Vrsta sporočil z minimalnim časom prikaza (§12) — 2026-10-21, `messageQueue.ts` (2,5 s + 60 ms/znak, FIFO, pritisk zapre)
 - [ ] M5-T04 Igra onemogočena, dokler niso pripravljeni vsi njeni klipi (§10)
-- [ ] M5-T05 Mini navodila iz parametrov simulacije (§5)
+- [x] M5-T05 Mini navodila iz parametrov simulacije (§5) — 2026-10-21, `care_guide` v stanju otroka (`CareGuidePayload`) + kartica »Kako skrbim za …« (`modules/careGuide`), gumb »?«; branje na glas kasneje (David 21. 10.), starševski prikaz *načrt*
 - [ ] M5-T06 Priprava ljubljenčka »Pripravljamo [ime]« + vrstni red generiranja (§13)
 - [ ] M5-T07 AI Lab: primerjava modelov za klipe šole in iger (§14) — pred T08
 - [ ] M5-T08 Mediji po stanjih: ključne slike, zanke, prehodi (§7)
