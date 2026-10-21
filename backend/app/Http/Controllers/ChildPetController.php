@@ -111,7 +111,8 @@ class ChildPetController extends Controller
      * Training (M5-R03): start a reward-timing session for one command. The
      * response carries `session` — the server's schedule (cues, whether and
      * when the dog obeys, the praise window; offsets in ms since start).
-     * 422 training_not_available | training_session_active (next_allowed_at
+     * 422 training_not_available | training_pet_sleeping (quiet hours, M5-T02;
+     * next_allowed_at = when the pet wakes) | training_session_active (next_allowed_at
      * = its expiry) | training_day_ending (session + TTL would cross the
      * family-local midnight; next_allowed_at = midnight) |
      * training_daily_budget_used (next_allowed_at = local midnight) |

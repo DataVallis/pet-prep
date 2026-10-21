@@ -18,6 +18,7 @@ use App\Services\PetProfilePayload;
 use App\Services\PlayPayload;
 use App\Services\Results\WaterStatus;
 use App\Services\ScratchingPayload;
+use App\Services\SleepPayload;
 use App\Services\SocialisationPayload;
 use App\Services\TrainingPayload;
 use App\Services\TrainingService;
@@ -55,6 +56,11 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * `training` (M5-R03): progress per command, today's routine, the running
  * session, the dog's daily mini-game budget and whether a session can start
  * now — {@see TrainingPayload}.
+ *
+ * `sleep` (M5-T02): whether the pet sleeps now (family quiet hours,
+ * PetSleepService) and when it wakes — play and school are off while it
+ * sleeps; `training.blocked_reason` / `training.next_allowed_at` explain a
+ * false `training.can_start` (TrainingService::startRefusal).
  *
  * `play` (M5-R05): whether the child can play / cuddle now, the dog's
  * invitation and the happy scene — {@see PlayPayload}; null without play.
@@ -124,6 +130,10 @@ class ChildPetStateResource extends JsonResource
         $behaviour = BehaviourPayload::for($pet, $now);
         $hasOpenChewing = in_array('chewing', array_column($behaviour->activeEvents, 'kind'), true);
         $training = TrainingPayload::for($pet, $actor, $now);
+        // M5-T02: the one start rule (sleep, running session, day ending, budget, share).
+        $trainingRefusal = $training->enabled && ! $pet->isUnborn()
+            ? app(TrainingService::class)->startRefusal($pet, $actor, $now)
+            : null;
 
         return [
             'pet' => [
@@ -180,6 +190,9 @@ class ChildPetStateResource extends JsonResource
             ],
             'timezone' => $tz,
             'server_time' => $iso($now),
+            // M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+            // wakes — play and school are off while asleep ({@see SleepPayload}).
+            'sleep' => SleepPayload::for($pet, $now)->toArray(),
             'feeding' => [
                 'windows' => array_map(
                     fn (array $window): array => ['start' => $window[0], 'end' => $window[1]],
@@ -284,16 +297,29 @@ class ChildPetStateResource extends JsonResource
             'training' => array_merge($training->toArray(), [
                 /**
                  * POST /api/child/pet/training/start would be accepted now (enabled, not
-                 * locked, no running session, enough of the dog's budget AND of this
-                 * child's fair share left for one session, and the session would end
-                 * before the family-local midnight).
+                 * locked, the pet awake — M5-T02, no running session, enough of the dog's
+                 * budget AND of this child's fair share left for one session, and the
+                 * session would end before the family-local midnight) —
+                 * TrainingService::startRefusal().
                  *
                  * @var bool
                  */
-                'can_start' => (bool) (! $locked && $training->enabled && $training->session === null
-                    && $training->dailyBudgetLeftSeconds >= TrainingPayload::sessionSeconds()
-                    && $training->mySecondsLeft >= TrainingPayload::sessionSeconds()
-                    && ! app(TrainingService::class)->dayEndingAt($pet, $now)),
+                'can_start' => ! $locked && $actor !== null && $training->enabled && $trainingRefusal === null,
+                /**
+                 * M5-T02: why a start would be refused now (null = it may start, or training
+                 * is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                 * sleeps (next_allowed_at = when it wakes).
+                 *
+                 * @var 'training_not_available'|'training_pet_sleeping'|'training_session_active'|'training_day_ending'|'training_daily_budget_used'|'training_child_share_used'|null
+                 */
+                'blocked_reason' => $training->enabled ? $trainingRefusal['refusal']->value ?? null : null,
+                /**
+                 * M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                 * local midnight; family offset); null without a time.
+                 *
+                 * @var string|null
+                 */
+                'next_allowed_at' => $training->enabled ? $iso($trainingRefusal['next_allowed_at'] ?? null) : null,
             ]),
             // M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
             // the 30-minute happy scene. Null for a pet without play (free mutt, legacy, unpaid).

@@ -831,6 +831,10 @@
                     },
                     "timezone": "Europe/Ljubljana",
                     "server_time": "2026-10-24T23:30:00+02:00",
+                    "sleep": {
+                        "asleep": true,
+                        "until": "2026-10-25T07:00:00+01:00"
+                    },
                     "feeding": {
                         "windows": [
                             {
@@ -936,13 +940,16 @@
                         "children_sharing": 1,
                         "my_share_seconds": 300,
                         "my_seconds_left": 250,
-                        "can_start": true
+                        "can_start": false,
+                        "blocked_reason": "training_pet_sleeping",
+                        "next_allowed_at": "2026-10-25T07:00:00+01:00"
                     },
                     "play": null,
                     "wand": null,
                     "litter": null,
                     "grooming": null,
                     "scratching": null,
+                    "certificate": null,
                     "socialisation": null
                 }
             },
@@ -1364,6 +1371,10 @@
                     },
                     "timezone": "Europe/Ljubljana",
                     "server_time": "2026-10-24T23:30:00+02:00",
+                    "sleep": {
+                        "asleep": true,
+                        "until": "2026-10-25T06:00:00+01:00"
+                    },
                     "feeding": {
                         "windows": [
                             {
@@ -1425,13 +1436,16 @@
                         "children_sharing": 0,
                         "my_share_seconds": 0,
                         "my_seconds_left": 0,
-                        "can_start": false
+                        "can_start": false,
+                        "blocked_reason": null,
+                        "next_allowed_at": null
                     },
                     "play": null,
                     "wand": null,
                     "litter": null,
                     "grooming": null,
                     "scratching": null,
+                    "certificate": null,
                     "socialisation": null
                 }
             }
@@ -2312,6 +2326,10 @@
                     },
                     "timezone": "Europe/Ljubljana",
                     "server_time": "2026-10-25T23:30:00+01:00",
+                    "sleep": {
+                        "asleep": true,
+                        "until": "2026-10-26T07:00:00+01:00"
+                    },
                     "feeding": {
                         "windows": [
                             {
@@ -2417,13 +2435,16 @@
                         "children_sharing": 1,
                         "my_share_seconds": 300,
                         "my_seconds_left": 250,
-                        "can_start": true
+                        "can_start": false,
+                        "blocked_reason": "training_pet_sleeping",
+                        "next_allowed_at": "2026-10-26T07:00:00+01:00"
                     },
                     "play": null,
                     "wand": null,
                     "litter": null,
                     "grooming": null,
                     "scratching": null,
+                    "certificate": null,
                     "socialisation": null
                 }
             },
@@ -3114,6 +3135,10 @@
                     },
                     "timezone": "Europe/Ljubljana",
                     "server_time": "2026-10-25T23:30:00+01:00",
+                    "sleep": {
+                        "asleep": true,
+                        "until": "2026-10-26T06:00:00+01:00"
+                    },
                     "feeding": {
                         "windows": [
                             {
@@ -3181,13 +3206,16 @@
                         "children_sharing": 0,
                         "my_share_seconds": 0,
                         "my_seconds_left": 0,
-                        "can_start": false
+                        "can_start": false,
+                        "blocked_reason": null,
+                        "next_allowed_at": null
                     },
                     "play": null,
                     "wand": null,
                     "litter": null,
                     "grooming": null,
                     "scratching": null,
+                    "certificate": null,
                     "socialisation": null
                 }
             }
@@ -4207,6 +4235,10 @@
                     },
                     "timezone": "Europe/Ljubljana",
                     "server_time": "2026-10-26T09:30:00+01:00",
+                    "sleep": {
+                        "asleep": true,
+                        "until": "2026-10-26T13:00:00+01:00"
+                    },
                     "feeding": {
                         "windows": [
                             {
@@ -4312,13 +4344,16 @@
                         "children_sharing": 1,
                         "my_share_seconds": 300,
                         "my_seconds_left": 300,
-                        "can_start": true
+                        "can_start": false,
+                        "blocked_reason": "training_pet_sleeping",
+                        "next_allowed_at": "2026-10-26T13:00:00+01:00"
                     },
                     "play": null,
                     "wand": null,
                     "litter": null,
                     "grooming": null,
                     "scratching": null,
+                    "certificate": null,
                     "socialisation": null
                 }
             },
@@ -5097,6 +5132,10 @@
                     },
                     "timezone": "Europe/Ljubljana",
                     "server_time": "2026-10-26T09:30:00+01:00",
+                    "sleep": {
+                        "asleep": false,
+                        "until": null
+                    },
                     "feeding": {
                         "windows": [
                             {
@@ -5161,13 +5200,16 @@
                         "children_sharing": 0,
                         "my_share_seconds": 0,
                         "my_seconds_left": 0,
-                        "can_start": false
+                        "can_start": false,
+                        "blocked_reason": null,
+                        "next_allowed_at": null
                     },
                     "play": null,
                     "wand": null,
                     "litter": null,
                     "grooming": null,
                     "scratching": null,
+                    "certificate": null,
                     "socialisation": null
                 }
             }

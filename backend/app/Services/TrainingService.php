@@ -131,6 +131,7 @@ class TrainingService
     public function __construct(
         private readonly LifeStageService $lifeStages,
         private readonly RoutineLedgerService $ledger,
+        private readonly PetSleepService $sleep,
         private ?string $seedSalt = null,
     ) {
         $this->seedSalt ??= (string) config('app.key');
@@ -433,26 +434,38 @@ class TrainingService
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * Start a session. Refusals: training_not_available (no training for
-     * this pet), training_session_active (next_allowed = its expiry),
-     * training_day_ending (the session + TTL would run past the
-     * family-local midnight; next_allowed = midnight — PR #53 m1),
-     * training_daily_budget_used (next_allowed = next local midnight),
-     * training_child_share_used (this child's fair share of the budget is
-     * used — M5-R03b; next_allowed = next local midnight).
+     * Would a session started by $child now be refused, and until when?
+     * Null = it may start (the caller adds the locks, 423). Shared by start()
+     * and the child state (`training.can_start` / `blocked_reason` /
+     * `next_allowed_at`, M5-T02) so the app never offers what the server
+     * refuses. Read only. The first that applies:
      *
-     * @return array{refusal: CareRefusal|null, next_allowed_at: CarbonInterface|null, session: PetTrainingSession|null}
+     * - training_not_available — no training for this pet (also: no budget
+     *   data, or $child is not one of the children who can train it);
+     * - training_pet_sleeping — the pet sleeps (PetSleepService: family
+     *   quiet hours); next_allowed = when it wakes (M5-T02, David 2026-10-20);
+     * - training_session_active — next_allowed = its expiry;
+     * - training_day_ending — the session + TTL would run past the
+     *   family-local midnight; next_allowed = midnight (PR #53 m1);
+     * - training_daily_budget_used — next_allowed = next local midnight;
+     * - training_child_share_used — this child's fair share of the budget
+     *   is used (M5-R03b); next_allowed = next local midnight.
+     *
+     * With $child null (no viewing child) the per-child checks are skipped.
+     *
+     * @return array{refusal: CareRefusal, next_allowed_at: CarbonInterface|null}|null
      */
-    public function start(Pet $pet, User $child, TrainingCommand $command, CarbonInterface $now): array
+    public function startRefusal(Pet $pet, ?User $child, CarbonInterface $now, bool $logMissingData = false): ?array
     {
         $now = CarbonImmutable::instance($now)->utc()->startOfSecond();
-        $refuse = fn (CareRefusal $r, ?CarbonInterface $next = null): array => ['refusal' => $r, 'next_allowed_at' => $next, 'session' => null];
+        $refuse = fn (CareRefusal $r, ?CarbonInterface $next = null): array => ['refusal' => $r, 'next_allowed_at' => $next];
 
         if (! $pet->trainingEnabled()) {
             return $refuse(CareRefusal::TrainingNotAvailable);
         }
-
-        $this->expireStale($pet, $now);
+        if (($wakes = $this->sleep->wakesAt($pet, $now)) !== null) {
+            return $refuse(CareRefusal::TrainingPetSleeping, $wakes);
+        }
         $live = $this->liveSession($pet, $now);
         if ($live !== null) {
             return $refuse(CareRefusal::TrainingSessionActive, $live->expires_at);
@@ -462,17 +475,21 @@ class TrainingService
         }
 
         $today = $pet->localDate($now);
-        $durationMs = self::sessionDurationMs();
         $budget = $this->dailyBudgetSeconds($pet, $today);
         if ($budget <= 0) {
-            Log::warning('TrainingService: no training budget data', ['pet_id' => $pet->id, 'breed' => $pet->breed_type->value]);
+            if ($logMissingData) {
+                Log::warning('TrainingService: no training budget data', ['pet_id' => $pet->id, 'breed' => $pet->breed_type->value]);
+            }
 
             return $refuse(CareRefusal::TrainingNotAvailable);
         }
-        $sessionSeconds = intdiv($durationMs + 999, 1000);
+        $sessionSeconds = self::sessionSeconds();
         $midnight = Carbon::parse($today, $pet->familyTimezone())->addDay()->startOfDay()->utc();
         if ($this->usedSecondsOn($pet, $today) + $sessionSeconds > $budget) {
             return $refuse(CareRefusal::TrainingDailyBudgetUsed, $midnight);
+        }
+        if ($child === null) {
+            return null;
         }
         // M5-R03b fair share: budget / n children who can train — the same
         // trainerIds() rule as the payload (QA n1). A child who is not one of
@@ -484,6 +501,29 @@ class TrainingService
         if ($this->usedSecondsOn($pet, $today, $child) + $sessionSeconds > $this->childShareSeconds($pet, $today, $child, $trainers)) {
             return $refuse(CareRefusal::TrainingChildShareUsed, $midnight);
         }
+
+        return null;
+    }
+
+    /**
+     * Start a session; refusals as startRefusal() (stale sessions are
+     * expired first).
+     *
+     * @return array{refusal: CareRefusal|null, next_allowed_at: CarbonInterface|null, session: PetTrainingSession|null}
+     */
+    public function start(Pet $pet, User $child, TrainingCommand $command, CarbonInterface $now): array
+    {
+        $now = CarbonImmutable::instance($now)->utc()->startOfSecond();
+
+        if ($pet->trainingEnabled()) {
+            $this->expireStale($pet, $now);
+        }
+        if (($refusal = $this->startRefusal($pet, $child, $now, true)) !== null) {
+            return [...$refusal, 'session' => null];
+        }
+
+        $today = $pet->localDate($now);
+        $durationMs = self::sessionDurationMs();
 
         $this->learningFactor($pet); // drawn and stored on the first session
         $progress = $this->progressOf($pet, $command);

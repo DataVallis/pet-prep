@@ -74,6 +74,13 @@ enum CareRefusal: string
      */
     case TrainingDayEnding = 'training_day_ending';
 
+    /**
+     * M5-T02 (David 2026-10-20, APP_REFINEMENT_SPEC §8): the pet sleeps
+     * (family quiet hours, PetSleepService) — no school while it sleeps.
+     * next_allowed_at = when it wakes.
+     */
+    case TrainingPetSleeping = 'training_pet_sleeping';
+
     /** A lock (hard stop, vet, game over) began during the session: it does not count, its time is refunded. */
     case TrainingSessionInterrupted = 'training_session_interrupted';
 
