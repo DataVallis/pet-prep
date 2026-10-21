@@ -4,6 +4,7 @@ namespace App\Events;
 
 use App\Models\Pet;
 use App\Services\BehaviourPayload;
+use App\Services\BirthdayPayload;
 use App\Services\GroomingPayload;
 use App\Services\LitterPayload;
 use App\Services\Media\PetMediaPayload;
@@ -202,6 +203,8 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             'media' => $media->toArray(),
             // M5-T06: readiness summary (ready / pending / preparing / running / ready_at).
             'preparation' => PreparationPayload::for($pet, $slots)->toArray(),
+            // M5-T13: first birthday {date, is_today, celebrated} (null when none).
+            'birthday' => BirthdayPayload::for($pet)?->toArray(),
             'event_type' => $eventType,
             'updated_at' => $pet->updated_at?->toIso8601String(),
             'emitted_at' => now()->toRfc3339String(true),

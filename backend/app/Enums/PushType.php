@@ -81,10 +81,19 @@ enum PushType: string
      */
     case PetReady = 'pet_ready';
 
+    /**
+     * M5-T13 (APP_REFINEMENT_SPEC §9, David 2026-10-20): the pet turns 1 by the
+     * simulation's age formula — caretaker children + parents, once per pet
+     * (PetBirthdayService::celebrate). Good news, normal priority; held (not
+     * dropped) over quiet hours — the day starts at the family-local midnight,
+     * which is usually inside the night window — and dropped while the pet is locked.
+     */
+    case PetBirthday = 'pet_birthday';
+
     /** Phase 2 and above (not the walk reminder, not billing news): high priority, Android channel "alarm". */
     public function isUrgent(): bool
     {
-        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted, self::PetReady], true);
+        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted, self::PetReady, self::PetBirthday], true);
     }
 
     /**
@@ -96,6 +105,15 @@ enum PushType: string
     public function isLockNews(): bool
     {
         return in_array($this, [self::Illness, self::GameOver, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted], true);
+    }
+
+    /**
+     * Held until the quiet stretch ends instead of being dropped: the lock news
+     * and (M5-T13) the birthday, which becomes due at the family-local midnight.
+     */
+    public function holdsOverQuietHours(): bool
+    {
+        return $this->isLockNews() || $this === self::PetBirthday;
     }
 
     /**
@@ -136,6 +154,8 @@ enum PushType: string
             self::Illness, self::GameOver, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted => 12 * 3600,
             // "Ready" hours later is stale — the app shows it anyway.
             self::PetReady => 3600,
+            // M5-T13: still news later that day.
+            self::PetBirthday => 12 * 3600,
         };
     }
 }
