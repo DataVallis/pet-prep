@@ -197,6 +197,13 @@
       "error": "The setting wasn't saved. Please try again.",
       "consent": "By turning it on you agree that we store only that adapted mode is on and, for each day, that pushes were counted. When you turn it off, we remove every push marker from the history (those days count as steps); points, the Care Score and logged walks stay the same."
     },
+    "display": {
+      "label": "Display",
+      "video": "Video",
+      "picture": "Picture",
+      "hint": "Picture shows a still of what the pet is doing right now instead of video — the app downloads no videos, so it uses less mobile data. Your child can change this too.",
+      "error": "The setting wasn't saved. Please try again."
+    },
     "logWalk": {
       "title": "Log a walk",
       "hint": "Did you go for a walk together? Enter the minutes — each minute counts like 100 steps, at most 240 minutes a day. Your child doesn't need to do anything.",

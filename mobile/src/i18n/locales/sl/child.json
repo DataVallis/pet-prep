@@ -27,10 +27,19 @@
         "meals": "Obroki na dan"
       }
     },
-    "languageSheet": {
-      "open": "Spremeni jezik",
-      "title": "Jezik",
-      "close": "Zapri"
+    "settingsSheet": {
+      "open": "Nastavitve",
+      "title": "Nastavitve",
+      "close": "Zapri",
+      "language": "Jezik",
+      "display": {
+        "label": "Prikaz",
+        "video": "Video",
+        "picture": "Slika",
+        "hintVideo": "Video pokaže, kako se tvoj ljubljenček premika.",
+        "hintPicture": "Slika pokaže, kaj tvoj ljubljenček ravno počne — brez videa, zato porabiš manj mobilnih podatkov.",
+        "error": "Nisem mogel shraniti. Poskusi znova."
+      }
     },
     "loading": "Nalagam kužka …",
     "loadFailed": "Kužka ni bilo mogoče naložiti.",

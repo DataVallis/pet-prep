@@ -57,7 +57,7 @@ import {
   RefreshCw,
   Sparkles,
   WifiOff,
-  Globe,
+  Settings,
   Award,
   BookOpen,
 } from 'lucide-react-native';
@@ -139,7 +139,8 @@ import BirthdayCard from '@/modules/birthday/BirthdayCard';
 import BirthdayHat from '@/modules/birthday/BirthdayHat';
 import { showBirthdayHat } from '@/modules/birthday/birthday';
 import { useBirthdayCard } from '@/modules/birthday/birthdaySeen';
-import ChildLanguageSheet from '@/components/ChildLanguageSheet';
+import ChildSettingsSheet from '@/components/ChildSettingsSheet';
+import { mediaModeOf } from '@/modules/display/display';
 import ChildCertificateSheet from '@/components/ChildCertificateSheet';
 import { CERTIFICATE_CHILD_STRINGS, childCertificateEntry } from '@/modules/certificate/certificate';
 import TrainingChip from '@/modules/training/TrainingChip';
@@ -443,7 +444,7 @@ export default function ChildHudScreen() {
   // M5-F05: the header shows one short line; a tap opens the full profile.
   const [isProfileVisible, setProfileVisible] = useState(false);
   /** David 2026-10-12: the child can change the app language from the HUD, not only before sign-in. */
-  const [isLanguageVisible, setLanguageVisible] = useState(false);
+  const [isSettingsVisible, setSettingsVisible] = useState(false);
   // M2-01d: the finished challenge (certificate / "the parent will prepare it" / kind note).
   const [isCertificateVisible, setCertificateVisible] = useState(false);
   // M5-R17: the puppy's weekly "Nova izkušnja" card (UI-only state, like the language sheet).
@@ -563,7 +564,7 @@ export default function ChildHudScreen() {
   const facts = useFactMoment({
     view,
     // M5-T03: the card also waits until the message queue is empty (care confirmation first).
-    overlayOpen: dockLayerOpen || isProfileVisible || isLanguageVisible || isCertificateVisible || isSocialisationVisible || careGuide.visible || birthdayCard.visible || toast !== null || preparingNow,
+    overlayOpen: dockLayerOpen || isProfileVisible || isSettingsVisible || isCertificateVisible || isSocialisationVisible || careGuide.visible || birthdayCard.visible || toast !== null || preparingNow,
     dockCovered: dockLayerOpen,
   });
 
@@ -745,6 +746,8 @@ export default function ChildHudScreen() {
           onMediaExpired={onMediaExpired}
           // The vet veil darkens when a substitute (sleeping / idle) stands in for `sick`.
           onVideoStateChange={setHudVideoState}
+          // M5-T11 »Prikaz: Slika«: the key image of the current state, no video download.
+          mode={mediaModeOf(view)}
           variant="hud"
           // M5-F06: the "getting ready" notice is stacked above the dock (BehaviourPanel), not on the media.
           // Under a translucent lock (vet, hard stop, payment) the panel is hidden → keep it on the media.
@@ -854,13 +857,13 @@ export default function ChildHudScreen() {
             <WsStatusDot status={wsStatus} />
             <Pressable
               accessibilityRole="button"
-              accessibilityLabel={t('child:hud.languageSheet.open')}
-              testID="hud-language-open"
+              accessibilityLabel={t('child:hud.settingsSheet.open')}
+              testID="hud-settings-open"
               hitSlop={5}
               style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
-              onPress={() => setLanguageVisible(true)}
+              onPress={() => setSettingsVisible(true)}
             >
-              <Globe color={palette.n400} size={16} />
+              <Settings color={palette.n400} size={16} />
             </Pressable>
             {childCertificateEntry(view.certificate).kind !== 'none' && (
               <Pressable
@@ -1254,7 +1257,7 @@ export default function ChildHudScreen() {
           reduceMotion={reduceMotion}
         />
       )}
-      <ChildLanguageSheet visible={isLanguageVisible} onClose={() => setLanguageVisible(false)} />
+      <ChildSettingsSheet visible={isSettingsVisible} onClose={() => setSettingsVisible(false)} mediaDisplay={view.settings.media_display} />
       <ChildCertificateSheet
         visible={isCertificateVisible}
         certificate={view.certificate}

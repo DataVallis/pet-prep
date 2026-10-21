@@ -24,7 +24,10 @@
  *   ends on its key image plays with the native loop (no visible restart); a state change with
  *   a stored transition clip plays it ONCE (`playToEnd`), the target loop preloaded hidden
  *   underneath, then switches to that loop; a missing clip shows the state's key image —
- *   never a clip of another state (§0 rule 1). `mode="picture"` (M5-T11) shows the key image.
+ *   never a clip of another state (§0 rule 1). `mode="picture"` (M5-T11, the child's »Prikaz: Slika«)
+ *   shows the key image of the current state only (idle / older set / v1 pet = the reference image):
+ *   no player is mounted, so no video is downloaded, and transitions are skipped;
+ *   `onVideoStateChange` then reports the state of the key image shown.
  */
 
 import { memo, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
@@ -343,7 +346,13 @@ export default function PetMediaView({
     if (!localImage.onLocalError()) image.onError();
   }, [localImage, image]);
 
-  const targetVideoState = target.kind === 'clip' ? target.state : null;
+  // M5-T11: in picture mode the state's OWN key image is its media (the vet veil / scene card read
+  // it); the reference image standing in for a missing key image reports null, like a substitute.
+  const pictureState =
+    mode === 'picture' && target.kind === 'image' && target.state !== null && (target.state === 'idle' || media.keyframes[target.state] === target.url)
+      ? target.state
+      : null;
+  const targetVideoState = target.kind === 'clip' ? target.state : pictureState;
   const videoStateRef = useRef(onVideoStateChange);
   videoStateRef.current = onVideoStateChange;
   useEffect(() => {

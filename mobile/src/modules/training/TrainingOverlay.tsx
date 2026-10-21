@@ -16,6 +16,7 @@
  * The overlay can't be closed while a session runs or is being saved.
  */
 
+import { mediaModeOf } from '@/modules/display/display';
 import { useEffect, useMemo, useRef } from 'react';
 import { ActivityIndicator, Animated, Pressable, ScrollView, StyleSheet, View, type GestureResponderEvent } from 'react-native';
 import { Text } from '@/components/ui/Text';
@@ -426,6 +427,8 @@ function RunningView({
             media={view.pet.media}
             petState={frame.dog === 'obeying' ? 'playing' : 'idle'}
             videoEnabled={!posePending}
+            // M5-T11 »Prikaz: Slika«: the pose image of the phase (obeying = playing pose), no clip.
+            mode={mediaModeOf(view)}
             breed={view.pet.breed_type}
             species={view.pet.species}
             onMediaExpired={onMediaExpired}

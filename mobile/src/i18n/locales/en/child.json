@@ -27,10 +27,19 @@
         "meals": "Meals per day"
       }
     },
-    "languageSheet": {
-      "open": "Change language",
-      "title": "Language",
-      "close": "Close"
+    "settingsSheet": {
+      "open": "Settings",
+      "title": "Settings",
+      "close": "Close",
+      "language": "Language",
+      "display": {
+        "label": "Display",
+        "video": "Video",
+        "picture": "Picture",
+        "hintVideo": "Video shows your pet moving.",
+        "hintPicture": "Picture shows what your pet is doing right now — no video, so it uses less mobile data.",
+        "error": "Couldn't save that. Try again."
+      }
     },
     "loading": "Fetching your pup …",
     "loadFailed": "We couldn't load your pup.",

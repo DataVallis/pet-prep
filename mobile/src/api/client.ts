@@ -187,7 +187,10 @@ export interface ChildActionResponse {
 /** `POST /api/child/pet/steps` body (M1-04 / M1-07). */
 export type SyncStepsRequest = components['schemas']['SyncStepsRequest'];
 export type UpdateChildSettingsRequest = components['schemas']['UpdateChildSettingsRequest'];
-export type UpdateChildSettingsResponse = { child_id: number; adapted_mode: boolean };
+export type UpdateChildSettingsResponse = { child_id: number; adapted_mode: boolean; media_display: 'video' | 'picture' };
+/** `PATCH /api/child/settings` body (M5-T11). */
+export type UpdateChildDisplayRequest = components['schemas']['UpdateChildDisplayRequest'];
+export type UpdateChildDisplayResponse = { media_display: 'video' | 'picture' };
 export type LogParentWalkRequest = components['schemas']['LogParentWalkRequest'];
 export interface ParentWalkEntry {
   id: number;
@@ -956,6 +959,13 @@ export const api = {
    * with `readShownRefusal`).
    */
   recordFactShown: () => apiRequest<FactShownResponse>('/api/child/fact-of-the-day/shown', { method: 'POST' }),
+
+  /**
+   * PATCH /api/child/settings (M5-T11) — the child's own »Prikaz: Video / Slika«.
+   * 200 `{media_display}`; 422 for an unknown value.
+   */
+  updateChildDisplay: (body: UpdateChildDisplayRequest) =>
+    apiRequest<UpdateChildDisplayResponse>('/api/child/settings', { method: 'PATCH', body }),
 
   /**
    * PATCH /api/parent/children/{child}/settings (M5-T12) — »Prilagojen način«: the child's walk

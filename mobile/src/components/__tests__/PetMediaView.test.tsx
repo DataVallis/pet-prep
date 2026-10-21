@@ -655,4 +655,27 @@ describe('M5-T08 state media: seamless loops, transitions, key image fallback', 
     expect(mockVideoPlayers).toHaveLength(0);
     expect(screen.getByTestId('pet-media-image').props.source).toEqual({ uri: KEY_SLEEPING });
   });
+
+  it('switching to picture mode releases the playing loop and reports the key image state (M5-T11)', async () => {
+    const onVideoStateChange = jest.fn();
+    const { update } = renderMedia({ media: stateMedia(), petState: 'idle', onVideoStateChange });
+    await showFirstFrame();
+    expect(liveVideoPlayers()).toHaveLength(1);
+    update({ media: stateMedia(), petState: 'sleeping', mode: 'picture', onVideoStateChange });
+    await act(async () => {
+      jest.advanceTimersByTime(CROSSFADE_MS + 50);
+    });
+    expect(liveVideoPlayers()).toHaveLength(0);
+    expect(screen.getByTestId('pet-media-image').props.source).toEqual({ uri: KEY_SLEEPING });
+    expect(onVideoStateChange).toHaveBeenLastCalledWith('sleeping');
+  });
+
+  it('picture mode for an older (v1) set shows the reference image, never a clip', () => {
+    const onVideoStateChange = jest.fn();
+    renderMedia({ media: { ...stateMedia(), stateMedia: false, keyframes: {} }, petState: 'sleeping', mode: 'picture', onVideoStateChange });
+    expect(mockVideoPlayers).toHaveLength(0);
+    expect(screen.getByTestId('pet-media-image').props.source).toEqual({ uri: IMAGE });
+    // A substitute picture is not the state's own media (the vet veil darkens as for a substitute).
+    expect(onVideoStateChange).toHaveBeenLastCalledWith(null);
+  });
 });

@@ -5,6 +5,7 @@
  * styles. All text comes from the `cat` namespace.
  */
 
+import { mediaModeOf } from '@/modules/display/display';
 import { useEffect, useMemo, useRef, type ReactNode } from 'react';
 import { AccessibilityInfo, ActivityIndicator, Animated, Platform, Pressable, StyleSheet, View } from 'react-native';
 import { X } from 'lucide-react-native';
@@ -110,6 +111,8 @@ export function CatStage({ view, petState, scene = null, illustration, onMediaEx
           media={view.pet.media}
           petState={petState}
           scene={scene}
+          // M5-T11 »Prikaz: Slika«: the pose image; the app-animated wand / layers stay on top.
+          mode={mediaModeOf(view)}
           breed={view.pet.breed_type}
           species={view.pet.species}
           onMediaExpired={onMediaExpired}
