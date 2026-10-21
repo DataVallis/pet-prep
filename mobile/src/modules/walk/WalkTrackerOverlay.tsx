@@ -17,7 +17,30 @@ export const WALK_STRINGS = strings('child', 'walk', {
   steps: (steps: string, goal: string) => t('child:walk.steps', { steps, goal }),
   energy: (pct: number) => t('child:walk.energy', { pct }),
   mine: (steps: string) => t('child:walk.mine', { steps }),
+  pushes: {
+    steps: (steps: string, goal: string) => t('child:walk.pushes.steps', { steps, goal }),
+    mine: (steps: string) => t('child:walk.pushes.mine', { steps }),
+  },
 });
+
+/**
+ * M5-T12: the overlay's wording for steps or wheelchair pushes (adapted mode). Pushes keep
+ * the step texts that are not about counting (energy, goal reached, health store buttons).
+ */
+export function walkWords(pushes: boolean) {
+  const P = WALK_STRINGS.pushes;
+  return {
+    count: pushes ? P.steps : WALK_STRINGS.steps,
+    mine: pushes ? P.mine : WALK_STRINGS.mine,
+    refresh: pushes ? P.refresh : WALK_STRINGS.refresh,
+    unavailable: pushes ? P.unavailable : WALK_STRINGS.unavailable,
+    healthTitle: (key: 'ios' | 'android') => (pushes ? P.health.title[key] : WALK_STRINGS.health.title[key]),
+    healthBody: pushes ? P.health.body : WALK_STRINGS.health.body,
+    healthConnected: (key: 'ios' | 'android') => (pushes ? P.health.connected[key] : WALK_STRINGS.health.connected[key]),
+    iosHelp: pushes ? P.health.iosHelp : WALK_STRINGS.health.iosHelp,
+    healthDenied: pushes ? P.health.denied : WALK_STRINGS.health.denied,
+  };
+}
 
 export interface WalkTrackerOverlayProps {
   view: ChildPetView;
@@ -37,14 +60,15 @@ function platformKey(health: StepHealth): 'ios' | 'android' {
  */
 function HealthCard({ health }: { health: StepHealth }) {
   const key = platformKey(health);
+  const words = walkWords(health.measure === 'pushes');
   if (health.status === 'connected') {
     return (
       <View style={styles.healthCard} testID="walk-health-connected">
         <View style={styles.healthTitleRow}>
           <HeartPulse color={palette.mint} size={16} />
-          <Text style={styles.healthConnected}>{WALK_STRINGS.health.connected[key]}</Text>
+          <Text style={styles.healthConnected}>{words.healthConnected(key)}</Text>
         </View>
-        {key === 'ios' && <Text style={styles.healthBody}>{WALK_STRINGS.health.iosHelp}</Text>}
+        {key === 'ios' && <Text style={styles.healthBody}>{words.iosHelp}</Text>}
       </View>
     );
   }
@@ -53,9 +77,9 @@ function HealthCard({ health }: { health: StepHealth }) {
       <View style={styles.healthCard} testID="walk-health-card">
         <View style={styles.healthTitleRow}>
           <HeartPulse color={palette.mint} size={18} />
-          <Text style={styles.healthTitle}>{WALK_STRINGS.health.title[key]}</Text>
+          <Text style={styles.healthTitle}>{words.healthTitle(key)}</Text>
         </View>
-        <Text style={styles.healthBody}>{WALK_STRINGS.health.body}</Text>
+        <Text style={styles.healthBody}>{words.healthBody}</Text>
         <Pressable
           onPress={() => {
             void health.connect();
@@ -73,7 +97,7 @@ function HealthCard({ health }: { health: StepHealth }) {
     const denied = health.status === 'denied';
     return (
       <View style={styles.healthCard} testID={denied ? 'walk-health-denied' : 'walk-health-update'}>
-        <Text style={styles.healthBody}>{denied ? WALK_STRINGS.health.denied : WALK_STRINGS.health.needsUpdate}</Text>
+        <Text style={styles.healthBody}>{denied ? words.healthDenied : WALK_STRINGS.health.needsUpdate}</Text>
         <Pressable
           onPress={() => {
             void (denied ? health.openSettings() : health.openStore());
@@ -100,6 +124,9 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
   const progressPct = goal > 0 ? Math.min(100, Math.round((steps / goal) * 100)) : 0;
   const shared = view.pet.caretakers_count > 1;
   const { permission, health } = stepSync;
+  // M5-T12: adapted mode counts wheelchair pushes from the health store only (no motion sensor).
+  const adapted = stepSync.adaptedMode;
+  const words = walkWords(adapted);
   // The health card already offers a way to count steps → no "can't count" dead end.
   const healthOffered = health.status === 'undetermined' || health.status === 'denied' || health.status === 'needs_update';
   // M5-R16: after a meal of a breed with the GDV advice — a calm note; steps still count.
@@ -130,10 +157,10 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
 
         <View style={styles.stats}>
           <Text style={styles.steps} adjustsFontSizeToFit numberOfLines={1}>
-            {WALK_STRINGS.steps(formatSteps(steps), formatSteps(goal))}
+            {words.count(formatSteps(steps), formatSteps(goal))}
           </Text>
           <Text style={styles.energy}>{WALK_STRINGS.energy(energy)}</Text>
-          {shared && <Text style={styles.mine}>{WALK_STRINGS.mine(formatSteps(mine))}</Text>}
+          {shared && <Text style={styles.mine}>{words.mine(formatSteps(mine))}</Text>}
         </View>
 
         <View style={styles.progressTrack} testID="walk-progress">
@@ -143,7 +170,7 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
 
         <View style={styles.actions}>
           <HealthCard health={health} />
-          {permission === 'undetermined' && (
+          {!adapted && permission === 'undetermined' && (
             // Always offered while undetermined — also when Health is connected: a denied iOS
             // Health read or an empty Health Connect gives 0, the sensor is the fallback.
             <>
@@ -180,15 +207,18 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
               >
                 <RefreshCw color={palette.white} size={18} />
                 <Text style={styles.buttonText}>
-                  {stepSync.isSyncing ? WALK_STRINGS.syncing : WALK_STRINGS.refresh}
+                  {stepSync.isSyncing ? WALK_STRINGS.syncing : words.refresh}
                 </Text>
               </Pressable>
-              {Platform.OS === 'android' && health.status !== 'connected' && (
+              {!adapted && Platform.OS === 'android' && health.status !== 'connected' && (
                 <Text style={styles.footnote}>{WALK_STRINGS.androidNote}</Text>
               )}
             </>
+          ) : adapted ? (
+            // Pushes come only from the health store: nothing to count without it.
+            healthOffered ? null : <Text style={styles.note}>{words.unavailable}</Text>
           ) : permission === 'unavailable' ? (
-            healthOffered ? null : <Text style={styles.note}>{WALK_STRINGS.unavailable}</Text>
+            healthOffered ? null : <Text style={styles.note}>{words.unavailable}</Text>
           ) : permission === 'denied' ? (
             <Text style={styles.note}>{WALK_STRINGS.denied}</Text>
           ) : null}

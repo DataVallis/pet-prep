@@ -26,8 +26,8 @@ jest.mock('react-native-health-connect', () => ({
 import * as HK from '@kingstinct/react-native-healthkit';
 import * as HC from 'react-native-health-connect';
 
-import { createHealthConnectAdapter, HC_REQUESTED_KEY } from '@/modules/steps/health/healthConnectAdapter';
-import { createHealthKitAdapter, HK_STEP_COUNT } from '@/modules/steps/health/healthKitAdapter';
+import { createHealthConnectAdapter, HC_PUSHES_REQUESTED_KEY, HC_REQUESTED_KEY } from '@/modules/steps/health/healthConnectAdapter';
+import { createHealthKitAdapter, HK_PUSH_COUNT, HK_STEP_COUNT } from '@/modules/steps/health/healthKitAdapter';
 
 const START = new Date('2026-10-03T22:00:00Z');
 const END = new Date('2026-10-04T10:00:00Z');
@@ -135,5 +135,47 @@ describe('Health Connect adapter (Android)', () => {
     await hc.openStore();
     expect(openURL).toHaveBeenNthCalledWith(1, expect.stringMatching(/^market:\/\/details\?id=com\.google\.android\.apps\.healthdata/));
     expect(openURL).toHaveBeenNthCalledWith(2, 'https://play.google.com/store/apps/details?id=com.google.android.apps.healthdata');
+  });
+});
+
+describe('M5-T12 adapted mode: wheelchair pushes', () => {
+  it('HealthKit: asks for READ access to push count only and sums pushes', async () => {
+    const hk = createHealthKitAdapter('pushes');
+    expect(hk.measure).toBe('pushes');
+    expect(hk.source).toBe('healthkit');
+    await hk.requestAccess();
+    expect(HK.requestAuthorization).toHaveBeenCalledWith({ toRead: [HK_PUSH_COUNT] });
+    expect(HK.getRequestStatusForAuthorization).toHaveBeenCalledWith({ toRead: [HK_PUSH_COUNT] });
+    expect(await hk.readSteps(START, END)).toBe(5321);
+    expect(HK.queryStatisticsForQuantity).toHaveBeenCalledWith(HK_PUSH_COUNT, ['cumulativeSum'], {
+      unit: 'count',
+      filter: { date: { startDate: START, endDate: END } },
+    });
+    // The steps adapter is unchanged.
+    expect(createHealthKitAdapter().measure).toBe('steps');
+  });
+
+  it('Health Connect: asks for WheelchairPushes only, its own "asked" flag, aggregates pushes', async () => {
+    const store = memoryStore();
+    const hc = createHealthConnectAdapter(store, 'pushes');
+    expect(hc.measure).toBe('pushes');
+    expect(await hc.access()).toBe('undetermined');
+    expect(await hc.requestAccess()).toBe('denied');
+    expect(HC.requestPermission).toHaveBeenCalledWith([{ accessType: 'read', recordType: 'WheelchairPushes' }]);
+    expect(store.data[HC_PUSHES_REQUESTED_KEY]).toBe('1');
+    expect(store.data[HC_REQUESTED_KEY]).toBeUndefined();
+
+    // A granted STEPS permission does not connect the pushes source.
+    (HC.getGrantedPermissions as jest.Mock).mockResolvedValueOnce([{ accessType: 'read', recordType: 'Steps' }]);
+    expect(await hc.access()).toBe('denied');
+    (HC.getGrantedPermissions as jest.Mock).mockResolvedValueOnce([{ accessType: 'read', recordType: 'WheelchairPushes' }]);
+    expect(await hc.access()).toBe('connected');
+
+    (HC.aggregateRecord as jest.Mock).mockResolvedValueOnce({ recordType: 'WheelchairPushes', COUNT_TOTAL: 431.9, dataOrigins: [] });
+    expect(await hc.readSteps(START, END)).toBe(431);
+    expect(HC.aggregateRecord).toHaveBeenLastCalledWith({
+      recordType: 'WheelchairPushes',
+      timeRangeFilter: { operator: 'between', startTime: START.toISOString(), endTime: END.toISOString() },
+    });
   });
 });

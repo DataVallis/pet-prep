@@ -189,3 +189,41 @@ describe('task registration', () => {
     expect(await stepSyncTaskBody()).toBe(1); // BackgroundTaskResult.Success
   });
 });
+
+describe('runBackgroundStepSync — M5-T12 adapted mode (wheelchair pushes)', () => {
+  it('reads the pushes adapter only (no motion sensor) and sends unit: pushes', async () => {
+    const pushesHealth = makeFakeHealth({ steps: 900, measure: 'pushes' });
+    const d = deps({
+      pushesHealth,
+      getChildPet: jest.fn(async () => childState({ steps: { my_steps_today: 100, adapted_mode: true } })),
+    });
+    expect(await runBackgroundStepSync(d)).toBe('synced');
+    expect(d.syncSteps).toHaveBeenCalledWith({
+      steps_today: 900,
+      source: 'healthkit',
+      recorded_at: '2026-10-04T10:00:00+00:00',
+      unit: 'pushes',
+    });
+    // Neither the steps store nor the step sensor counts in adapted mode.
+    expect((d.health as ReturnType<typeof makeFakeHealth>).readSteps).not.toHaveBeenCalled();
+    expect((d.pedometer as unknown as { getStepCountAsync: jest.Mock }).getStepCountAsync).not.toHaveBeenCalled();
+  });
+
+  it('adapted mode without pushes access → skipped (never falls back to steps)', async () => {
+    const pushesHealth = makeFakeHealth({ steps: 900, measure: 'pushes', access: 'undetermined' });
+    const d = deps({
+      pushesHealth,
+      getChildPet: jest.fn(async () => childState({ steps: { my_steps_today: 100, adapted_mode: true } })),
+    });
+    expect(await runBackgroundStepSync(d)).toBe('skipped');
+    expect(d.syncSteps).not.toHaveBeenCalled();
+  });
+
+  it('adapted mode off → steps as before, no unit', async () => {
+    const pushesHealth = makeFakeHealth({ steps: 900, measure: 'pushes' });
+    const d = deps({ pushesHealth });
+    expect(await runBackgroundStepSync(d)).toBe('synced');
+    expect(d.syncSteps).toHaveBeenCalledWith({ steps_today: 6400, source: 'healthkit', recorded_at: '2026-10-04T10:00:00+00:00' });
+    expect(pushesHealth.readSteps).not.toHaveBeenCalled();
+  });
+});
