@@ -182,13 +182,22 @@ class ChildProfileService
     }
 
     /**
-     * Keep the child's newest MAX_DEVICES tokens, delete the rest.
+     * Keep the child's newest MAX_DEVICES own-device tokens, delete the rest.
+     *
+     * Shared-phone sessions (»Igraj kot«, token name `shared:p{parentId}:…`) are
+     * NOT counted and never pruned here (fix 2026-10-21): the app reuses that
+     * token for weeks, so it was always the oldest and every new PIN login of
+     * the child on another phone pushed it out — the parent's phone landed on
+     * the start screen every day or two. They are capped separately: one per
+     * (parent, child), replaced by ChildPinLoginService::deviceSession().
      */
     public function pruneDevices(User $child): int
     {
-        $keep = $child->tokens()->orderByDesc('id')->limit(self::MAX_DEVICES)->pluck('id');
+        $shared = addcslashes(ChildPinLoginService::SHARED_TOKEN_PREFIX, '\\%_').'%';
+        $own = fn () => $child->tokens()->where('name', 'not like', $shared);
+        $keep = $own()->orderByDesc('id')->limit(self::MAX_DEVICES)->pluck('id');
 
-        return $child->tokens()->whereNotIn('id', $keep)->delete();
+        return $own()->whereNotIn('id', $keep)->delete();
     }
 
     public function devicesCount(User $child): int

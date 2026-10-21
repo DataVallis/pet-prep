@@ -217,7 +217,7 @@ sequenceDiagram
   Parent->>App: Pregled → »Igraj kot {ime}« (child with a pet)
   App->>API: POST /api/parent/children/{child}/device-session {device_name, features}<br/>(parent token, throttle 20/min per parent)
   API->>DB: lock parent → child → family; child of this family? has a pet?<br/>(404 child_not_found / 409 no_pet)
-  API->>DB: delete this parent's previous shared token of the child<br/>create child token "shared:p{parent}:{model}" (ability child), prune to 3 devices
+  API->>DB: keep this parent's newest 2 shared tokens of the child<br/>create child token "shared:p{parent}:{model}" (ability child)<br/>prune own devices to 3 (shared tokens not counted)
   API-->>App: 200 = PIN re-login body {token, abilities [child], user, mode relogin, pet, awaiting_contract}
   App->>App: store the child session (SecureStore), make its token active<br/>(a failed write aborts here — the parent stays signed in)
   App->>API: POST /api/logout (parent token) — the parent token is revoked on the switch<br/>(failed → queued, retried at app start / foreground)
