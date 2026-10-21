@@ -14,6 +14,12 @@
  * M5-R13 (David 2026-10-12, "kot pri mački"): a brushed dog plays the same grooming game —
  * same session, steps and verdict; only the words ("Počeši kužka", `child:grooming`) and the
  * drawing (the dog emoji instead of the cat) differ.
+ *
+ * M5-T14 (APP_REFINEMENT_SPEC §11 + §6): grooming plays as a scratch card (`BrushArea`) — the
+ * brush follows the finger, sparkles, dirty patches fade per counted stroke, a bar fills; a
+ * held finger / held "Počeši" button brushes too (no swiping needed). Same strokes, same
+ * server verdict; a clean coat finishes up to 2 s early (`brushFinishAt`). The litter change
+ * keeps the plain stroke stage.
  */
 
 import { useMemo, useRef } from 'react';
@@ -37,6 +43,7 @@ import {
 } from '@/modules/catCare/catCare';
 import { addStroke, beginRub, choreProgress, choreStepAt, endRub, moveRub, sessionTime, type RubTracker } from '@/modules/catCare/catGames';
 import { Busy, CatOverlayFrame, CatStage, FailedView, PrimaryButton, SecondaryButton, SegmentDots, styles, useAnnounce } from '@/modules/catCare/CatGameParts';
+import { BrushArea, type BrushTexts } from '@/modules/catCare/BrushArea';
 import { DOG_GROOMING_STRINGS } from '@/modules/catCare/dogGrooming';
 import { useChoreGame } from '@/modules/catCare/useCatGames';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
@@ -264,6 +271,7 @@ function ChoreRunning({
   msAtRef.current = msAt;
   const rub = useRef<RubTracker | null>(null);
   const origin = useRef({ x: 0, y: 0 });
+  const brushTexts: BrushTexts | null = kind === 'grooming' ? (dog ? D.brush : S.grooming.brush) : null;
 
   const responder = useMemo(
     () =>
@@ -319,18 +327,39 @@ function ChoreRunning({
           {C.resumed}
         </Text>
       )}
-      <View style={styles.running} {...responder.panHandlers} testID={`${testID}-stage-touch`}>
-        <View style={styles.running} pointerEvents="none">
-          <CatStage
-            view={view}
-            petState="idle"
-            illustration={illustration}
-            onMediaExpired={onMediaExpired}
-            accessibilityLabel={texts.stageA11y}
-            testID={`${testID}-stage`}
-          />
+      {brushTexts !== null ? (
+        <BrushArea
+          rules={session}
+          texts={brushTexts}
+          stageA11y={texts.stageA11y}
+          strokeLabel={texts.stroke}
+          strokeA11y={texts.strokeA11y}
+          disabled={disabled}
+          hideButton={finishing}
+          reduceMotion={reduceMotion}
+          msAt={msAt}
+          onStroke={onStroke}
+          renderStage={(layers) => (
+            <CatStage view={view} petState="idle" illustration={illustration} onMediaExpired={onMediaExpired} testID={`${testID}-stage`}>
+              {layers}
+            </CatStage>
+          )}
+          testID={testID}
+        />
+      ) : (
+        <View style={styles.running} {...responder.panHandlers} testID={`${testID}-stage-touch`}>
+          <View style={styles.running} pointerEvents="none">
+            <CatStage
+              view={view}
+              petState="idle"
+              illustration={illustration}
+              onMediaExpired={onMediaExpired}
+              accessibilityLabel={texts.stageA11y}
+              testID={`${testID}-stage`}
+            />
+          </View>
         </View>
-      </View>
+      )}
       <Text style={styles.statusLine} testID={`${testID}-step`} accessibilityLiveRegion="polite">
         {stepText}
       </Text>
@@ -339,7 +368,7 @@ function ChoreRunning({
       </Text>
       {finishing ? (
         <Busy text={C.finishing} testID={`${testID}-finishing`} />
-      ) : (
+      ) : brushTexts !== null ? null : (
         <SecondaryButton
           label={texts.stroke}
           accessibilityLabel={texts.strokeA11y}

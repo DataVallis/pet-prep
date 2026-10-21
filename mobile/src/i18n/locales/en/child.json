@@ -224,6 +224,13 @@
       "grooming_session_active_no_time": "Someone else is brushing your pup. Try again in a minute.",
       "care_session_active": "Someone else is doing something with your pup right now. Try again {{when}}.",
       "care_session_active_no_time": "Someone else is doing something with your pup right now. Try again in a minute."
+    },
+    "brush": {
+      "holdHint": "Can't swipe? Hold your finger on your pup, or hold the button below.",
+      "bar": "Brushed: {{percent}} %",
+      "clean": "Its whole coat is brushed! Just a moment …",
+      "action": "Brush",
+      "holdA11yHint": "Hold to keep brushing."
     }
   },
   "rules": {
