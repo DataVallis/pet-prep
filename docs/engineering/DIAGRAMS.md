@@ -1334,7 +1334,7 @@ sequenceDiagram
     Q-->>App: PetUpdated video_ready (media.videos, current_video_url, preparation)
     opt last entitled item of a running preparation (M5-T06, once per pet)
       Q->>DB: pets.preparation_ready_at = now (row lock, written once)
-      Q-->>App: PetUpdated pet_ready + push pet_ready to caretaker children<br/>(title = pet name, data {type, pet_id}) → »Luna je pripravljen!«
+      Q-->>App: if announce (10 s ≤ duration ≤ 2 h): PetUpdated pet_ready + push pet_ready<br/>to caretaker children + parents (title = pet name, data {type, pet_id}) → »Vse je pripravljeno: Luna«
     end
   end
   App->>API: GET /api/media/{id}?expires&v&signature (Range) — via Caddy → PHP-FPM

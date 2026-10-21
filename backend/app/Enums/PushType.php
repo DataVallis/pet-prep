@@ -74,8 +74,9 @@ enum PushType: string
 
     /**
      * M5-T06 (APP_REFINEMENT_SPEC §13, David 2026-10-20): the pet's preparation
-     * ended — »[ime] je pripravljen!« to the caretaker children, once per pet
-     * (only when the preparation was shown, PetPreparationService::settle).
+     * ended — »Vse je pripravljeno« to the caretaker children and the family's
+     * parents (David 2026-10-21), once per pet, only when the preparation was
+     * shown and ended within 2 h (PetPreparationService::announces).
      * Good news, normal priority; dropped over quiet hours (the in-app message
      * still says it) and while the pet is locked.
      */
