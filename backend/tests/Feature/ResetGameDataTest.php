@@ -122,11 +122,6 @@ function rgSeed(): array
     PetContract::create(['pet_id' => $pet->id, 'user_id' => $child->id, 'signature_format' => 'svg_path', 'signature' => 'M1 1 L2 2', 'signed_at' => $now]);
     ActivityLog::create(['pet_id' => $pet->id, 'actor_user_id' => $child->id, 'activity_type' => 'fed_pet', 'value' => 40]);
     PetDailyStep::create(['pet_id' => $pet->id, 'user_id' => $child->id, 'local_date' => $today, 'steps' => 1200]);
-    // M5-T12: a walk a parent logged for the child (adapted mode) goes with the game data.
-    rgInsert('parent_walk_entries', [
-        'pet_id' => $pet->id, 'child_user_id' => $child->id, 'parent_user_id' => $parent->id, 'local_date' => $today,
-        'minutes' => 10, 'steps' => 1000, 'entry_id' => 'reset-walk-0001',
-    ]);
     rgInsert('pet_daily_walks', ['pet_id' => $pet->id, 'local_date' => $today, 'steps' => 1200, 'goal' => 5000, 'achieved' => false]);
     rgInsert('pet_daily_routines', [
         'pet_id' => $pet->id, 'local_date' => $today, 'routine_type' => 'feed', 'slot' => 1, 'opens_at' => $now, 'due_at' => $now,
