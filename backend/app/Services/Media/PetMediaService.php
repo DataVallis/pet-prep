@@ -1806,8 +1806,10 @@ class PetMediaService
      * look's key images / transitions of that stage are needed and its clips are made
      * as loops)? False while the switch is off.
      */
-    private function lookStateMediaWanted(PetLook $look, string $stage): bool
+    private function lookStateMediaWanted(PetLook $look, string $stage, ?PetMedia $row = null): bool
     {
+        // M5-T09 / T10: a pose / phase look row only while a pet of the look at the stage wants it
+        // (state media version 3 + the clip's group) — never for a look only older pets use.
         if (! $this->entitlements->stateMediaEnabled(fresh: true)) {
             return false;
         }
@@ -1819,7 +1821,9 @@ class PetMediaService
                 ->orWhereExists(fn ($q) => $q->selectRaw('1')->from('pet_media as img')
                     ->whereColumn('img.pet_id', 'pets.id')->where('img.kind', PetMedia::KIND_IMAGE)->where('img.life_stage', $stage)))
             ->get()
-            ->contains(fn (Pet $pet): bool => $this->entitlements->usesStateMedia($pet));
+            ->contains(fn (Pet $pet): bool => $row !== null && ($row->isPose() || $row->isPhase())
+                ? $this->wantsPoseMedia($pet, $row)
+                : $this->entitlements->usesStateMedia($pet));
     }
 
     /** The look's stored image of the stage a look video row is made for (start frame). */
@@ -2017,7 +2021,7 @@ class PetMediaService
 
         // M5-T08b: state media switched off, or no active state-media pet of the look at this
         // stage — a look transition is not submitted (stays as it is).
-        if ($row->isPoseClip() && ($row->look === null || ! $this->lookStateMediaWanted($row->look, (string) $row->life_stage))) {
+        if ($row->isPoseClip() && ($row->look === null || ! $this->lookStateMediaWanted($row->look, (string) $row->life_stage, $row))) {
             return true;
         }
 
@@ -2200,7 +2204,7 @@ class PetMediaService
 
         // M5-T08b: switched off, or no active state-media pet of the look at this stage
         // (e.g. a sweep reclaim on a look only older pets use) — the row stays as it is, no fal call.
-        if (! $this->lookStateMediaWanted($look, (string) $row->life_stage)) {
+        if (! $this->lookStateMediaWanted($look, (string) $row->life_stage, $row)) {
             return true;
         }
 

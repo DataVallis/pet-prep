@@ -475,6 +475,25 @@ describe('shared look of breed + colour', function () {
             ->and(app(GameMediaReadiness::class)->ready($b->fresh(), GameMediaReadiness::PLAY))->toBeTrue();
     });
 
+    it('a look row of a phase clip / pose is never generated for a look whose only pet is on version 2 (sweep reclaim, 0 calls)', function () {
+        phcFakeFal();
+        Queue::fake([GeneratePetKeyframe::class, SubmitPetStateVideo::class]);
+        $pet = phcBirth(phcPet('beagle', 'tricolour'));
+        $pet->forceFill(['state_media_version' => 2])->saveQuietly();
+        $media = app(PetMediaService::class);
+        $look = $pet->fresh()->look;
+        $pose = $media->lookSlot($look, PetMedia::KIND_POSE, PetPose::Sit, LifeStage::Young);
+        $clip = $media->lookSlot($look, PetMedia::KIND_PHASE, PetPhaseClip::BallRunning, LifeStage::Young);
+        $before = phcCalls()->count();
+
+        (new GeneratePetKeyframe($pose->id))->handle($media);
+        (new SubmitPetStateVideo($clip->id))->handle($media);
+
+        expect(phcCalls()->count())->toBe($before)
+            ->and($pose->fresh()->status)->toBe('pending')
+            ->and($clip->fresh()->status)->toBe('pending');
+    });
+
     it('a cat: wand clips from the crouch, no dog clip ever; payload only the cat\'s', function () {
         phcFakeFal();
         $cat = phcBirth(phcPet('maine_coon', 'brown'));
