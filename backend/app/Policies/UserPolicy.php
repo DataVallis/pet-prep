@@ -63,6 +63,15 @@ class UserPolicy
     }
 
     /**
+     * M5-T11: a child changes their own »Prikaz: Video / Slika« (display preference only —
+     * never adapted mode or anything a parent decides).
+     */
+    public function updateOwnDisplay(User $user, User $target): bool
+    {
+        return $user->isChild() && $user->is($target);
+    }
+
+    /**
      * A child profile's devices / PINs (M2-02): any parent of the child's
      * family — never by users.parent_id.
      */

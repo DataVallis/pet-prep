@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\MediaDisplay;
 use App\Exceptions\AccountDeletionException;
 use App\Exceptions\FamilyException;
 use App\Http\Requests\ConfirmDeletionRequest;
@@ -56,17 +57,23 @@ class ChildProfileController extends Controller
                 'devices' => 0,
                 // M5-T12: a new profile starts without adapted mode.
                 'adapted_mode' => false,
+                // M5-T11: a new profile shows video.
+                'media_display' => MediaDisplay::Video->value,
             ],
         ], 201);
     }
 
     /**
-     * Parent-only settings of a child profile (M5-T12): `{"adapted_mode": bool}` —
-     * »Prilagojen način«, the child's walk counts wheelchair pushes instead of steps
-     * (1 : 1; goals, points and the Care Score stay the same). Accessibility, not a
-     * diagnosis: no reason is asked for or stored. A change broadcasts
-     * `caretaker_settings_changed` on the child's active pet. 200 `{child_id, adapted_mode}`;
-     * 404 `child_not_found` for a child outside the family; child token → 403.
+     * Settings of a child profile, set by a parent of the family. Body: at least one of
+     * - `adapted_mode` (bool, M5-T12) — »Prilagojen način«, the child's walk counts wheelchair
+     *   pushes instead of steps (1 : 1; goals, points and the Care Score stay the same).
+     *   Accessibility, not a diagnosis: no reason is asked for or stored.
+     * - `media_display` (`video` | `picture`, M5-T11) — »Prikaz: Video / Slika« in the child
+     *   app: `picture` shows the key image of the pet's current state and downloads no video.
+     *   The child can change it too (`PATCH /api/child/settings`).
+     * A change broadcasts `caretaker_settings_changed` on the child's active pet.
+     * 200 `{child_id, adapted_mode, media_display}`; 404 `child_not_found` for a child outside
+     * the family; child token → 403.
      *
      * PATCH /api/parent/children/{child}/settings
      */
@@ -80,7 +87,14 @@ class ChildProfileController extends Controller
             return response()->json(['message' => 'No such child in your family.', 'reason' => 'child_not_found'], 404);
         }
 
-        $updated = $this->profiles->setAdaptedMode($profile, $request->adaptedMode());
+        $updated = $profile;
+        if ($request->adaptedMode() !== null) {
+            $updated = $this->profiles->setAdaptedMode($updated, $request->adaptedMode());
+        }
+        if ($request->mediaDisplay() !== null) {
+            $updated = $this->profiles->setMediaDisplay($updated, $request->mediaDisplay());
+        }
+        $updated->refresh();
 
         return response()->json([
             'child_id' => $updated->id,
@@ -90,6 +104,12 @@ class ChildProfileController extends Controller
              * @var bool
              */
             'adapted_mode' => (bool) $updated->adapted_mode,
+            /**
+             * M5-T11 »Prikaz«: `video` (default) or `picture` (key image of the current state).
+             *
+             * @var 'video'|'picture'
+             */
+            'media_display' => ($updated->media_display ?? MediaDisplay::Video)->value,
         ], 200);
     }
 

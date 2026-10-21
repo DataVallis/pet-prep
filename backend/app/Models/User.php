@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\MediaDisplay;
 use App\Enums\UserRole;
 use App\Services\FamilyService;
 use Database\Factories\UserFactory;
@@ -113,6 +114,8 @@ class User extends Authenticatable implements FilamentUser
             'birth_year' => 'integer',
             // M5-T12: parent-only accessibility switch on a child profile (pushes instead of steps).
             'adapted_mode' => 'boolean',
+            // M5-T11: »Prikaz: Video / Slika« of a child profile (display preference).
+            'media_display' => MediaDisplay::class,
         ];
     }
 
