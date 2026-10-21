@@ -22,6 +22,7 @@ import type { PetState, PetUpdatedBroadcast, ShownBreed, Species } from '@/types
 import type { LockState } from '@/store/appStore';
 import { familyCalendar, localParts } from '@/modules/childPet/familyTime';
 import { normalizePetMedia, type PetMediaInfo } from '@/modules/petMedia/petMedia';
+import { readPreparation, type PetPreparation } from '@/modules/preparation/preparation';
 import { readPetProfile, type PetProfileInfo } from '@/modules/petProfile/petProfile';
 import {
   afterClean,
@@ -108,6 +109,8 @@ export interface ChildPetView {
     reference_image_url: string | null;
     /** AI media (M4-03 / M4-05): state videos + reference image, signed URLs. */
     media: PetMediaInfo;
+    /** M5-T06: is the pet ready / still being prepared (never says how). Older server → ready. */
+    preparation: PetPreparation;
     /** M5-R01 profile (stage, age, origin, next stage); null for a legacy pet. */
     profile: PetProfileInfo | null;
     /** M3-11 / M3-13: free mutt sandbox or the challenge (payment_required / paid; trial = a pre-M3-13 trial); legacy → paid. */
@@ -332,6 +335,7 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
         reference_image_url: p.reference_image_url,
         media_status: p.media_status,
       }),
+      preparation: readPreparation((p as { preparation?: unknown }).preparation),
       profile: readPetProfile(p.profile),
     },
     lock: {
@@ -486,6 +490,8 @@ export function applyBroadcast(view: ChildPetView, b: PetUpdatedBroadcast): Broa
     // Every broadcast since M4-05 carries the full `media` (freshly signed); an older
     // server's event without it keeps what the view has.
     media: b.media ? normalizePetMedia(b.media) : view.pet.media,
+    // M5-T06: every current broadcast carries the summary; an older server's doesn't.
+    preparation: b.preparation !== undefined ? readPreparation(b.preparation) : view.pet.preparation,
   };
   const lock = lockFromFlags(pet, view.lock);
   const blocked = lock.is_locked || pet.needs_cleaning;

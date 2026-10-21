@@ -1,0 +1,18 @@
+{
+  "titleNamed": "Pripravljamo: {{name}}",
+  "body": "To lahko traja nekaj minut.",
+  "a11y": "Pripravljamo aplikacijo. To lahko traja nekaj minut.",
+  "school": "Šola se še pripravlja",
+  "dog": {
+    "title": "Pripravljamo tvojega kužka",
+    "ready": "Tvoj kuža je pripravljen!",
+    "readyNamed": "{{name}} je pripravljen!",
+    "parentTitle": "Pripravljamo kužka"
+  },
+  "cat": {
+    "title": "Pripravljamo tvojo muco",
+    "ready": "Tvoja muca je pripravljena!",
+    "readyNamed": "{{name}} je pripravljena!",
+    "parentTitle": "Pripravljamo muco"
+  }
+}

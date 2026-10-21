@@ -1,0 +1,18 @@
+{
+  "titleNamed": "Getting {{name}} ready",
+  "body": "This can take a few minutes.",
+  "a11y": "Getting the app ready. This can take a few minutes.",
+  "school": "School is still getting ready",
+  "dog": {
+    "title": "Getting your pup ready",
+    "ready": "Your pup is ready!",
+    "readyNamed": "{{name}} is ready!",
+    "parentTitle": "Getting the dog ready"
+  },
+  "cat": {
+    "title": "Getting your cat ready",
+    "ready": "Your cat is ready!",
+    "readyNamed": "{{name}} is ready!",
+    "parentTitle": "Getting the cat ready"
+  }
+}

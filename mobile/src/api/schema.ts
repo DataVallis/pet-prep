@@ -3664,6 +3664,39 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
+                                };
                             };
                             lock: {
                                 is_locked: boolean;
@@ -4299,6 +4332,39 @@ export interface operations {
                                 states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                 /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                 expires_at: string | null;
+                            };
+                            /**
+                             * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                             *     whether to show »Pripravljamo …« — never says how it is prepared.
+                             */
+                            preparation: {
+                                /**
+                                 * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                 *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                 */
+                                ready: boolean;
+                                /**
+                                 * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                 *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                 */
+                                pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                /**
+                                 * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                 *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                 *     (never for a failed item).
+                                 */
+                                preparing: boolean;
+                                /**
+                                 * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                 *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                 *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                 */
+                                running: boolean;
+                                /**
+                                 * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                 *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                 */
+                                ready_at: string | null;
                             };
                         };
                         lock: {
@@ -4956,6 +5022,39 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
+                                };
                             };
                             lock: {
                                 is_locked: boolean;
@@ -5609,6 +5708,39 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
                                 };
                             };
                             lock: {
@@ -6264,6 +6396,39 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
+                                };
                             };
                             lock: {
                                 is_locked: boolean;
@@ -6918,6 +7083,39 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
+                                };
                             };
                             lock: {
                                 is_locked: boolean;
@@ -7571,6 +7769,39 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
                                 };
                             };
                             lock: {
@@ -8230,6 +8461,39 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
+                                };
                             };
                             lock: {
                                 is_locked: boolean;
@@ -8887,6 +9151,39 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
                                 };
                             };
                             lock: {
@@ -9546,6 +9843,39 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
+                                };
                             };
                             lock: {
                                 is_locked: boolean;
@@ -10199,6 +10529,39 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
                                 };
                             };
                             lock: {
@@ -10858,6 +11221,39 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
+                                };
                             };
                             lock: {
                                 is_locked: boolean;
@@ -11512,6 +11908,39 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
+                                };
                             };
                             lock: {
                                 is_locked: boolean;
@@ -12165,6 +12594,39 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
                                 };
                             };
                             lock: {
@@ -12824,6 +13286,39 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
+                                };
                             };
                             lock: {
                                 is_locked: boolean;
@@ -13477,6 +13972,39 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
                                 };
                             };
                             lock: {
@@ -14136,6 +14664,39 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
+                                };
                             };
                             lock: {
                                 is_locked: boolean;
@@ -14789,6 +15350,39 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
                                 };
                             };
                             lock: {
@@ -15448,6 +16042,39 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
+                                };
                             };
                             lock: {
                                 is_locked: boolean;
@@ -16106,6 +16733,39 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
+                                };
                             };
                             lock: {
                                 is_locked: boolean;
@@ -16763,6 +17423,39 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
                                 };
                             };
                             lock: {
@@ -18126,6 +18819,36 @@ export interface operations {
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
                                 };
+                                /** @description M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too). */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
+                                };
                                 traffic_light: {
                                     /** @constant */
                                     color: "yellow";
@@ -18385,6 +19108,36 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                };
+                                /** @description M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too). */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …). Empty when ready.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     and the pose or a first-minutes clip (idle, sleeping, hungry) is still on its way
+                                     *     (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true: »[ime] je pripravljen!«
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /**
+                                     * @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs.
+                                     *     The child app says »[ime] je pripravljen!« once per pet when it sees this.
+                                     */
+                                    ready_at: string | null;
                                 };
                                 traffic_light: {
                                     /** @constant */

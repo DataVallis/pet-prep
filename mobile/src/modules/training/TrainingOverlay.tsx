@@ -26,6 +26,7 @@ import PetMediaView from '@/components/PetMediaView';
 import { childPetKey } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { selectMediaSource } from '@/modules/petMedia/petMedia';
+import { schoolClipsPending, schoolPreparingText } from '@/modules/preparation/preparation';
 import {
   feedbackAt,
   firstTapsBySlot,
@@ -268,6 +269,9 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
   const { phase, elapsedMs } = game;
   const busy = phase.kind === 'running' || phase.kind === 'finishing' || phase.kind === 'starting';
   const premiumVideo = useMemo(() => selectMediaSource(view.pet.media, 'idle').kind === 'video', [view.pet.media]);
+  // M5-T06 (spec §13): school clips still on their way → the pose (reference image) on the
+  // stage and »Šola se še pripravlja«; the practice itself works as always.
+  const schoolPreparing = schoolClipsPending(view.pet.preparation) && view.pet.media.referenceImageUrl !== null;
   const serverNow = (clock?.wall() ?? Date.now()) + view.clockSkewMs;
   const dayEnding = isDayEnding(training, serverNow, familyCalendar(view.timezone, view.server_time).nextMidnight(serverNow));
   const block = startBlock(training, dayEnding);
@@ -306,6 +310,11 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
               {S.blocked[block]}
             </Text>
           )}
+          {schoolPreparing && (
+            <Text style={styles.muted} testID="training-preparing">
+              {schoolPreparingText()}
+            </Text>
+          )}
           {training.commands.map((item) => (
             <CommandRow key={item.command} item={item} canStart={training.can_start} onStart={() => game.start(item.command)} />
           ))}
@@ -328,6 +337,7 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
           finishing={phase.kind === 'finishing'}
           resumedAtMs={phase.resumedAtMs}
           premiumVideo={premiumVideo}
+          posePending={schoolPreparing}
           view={view}
           onPraise={game.praise}
           onMediaExpired={() => void queryClient.invalidateQueries({ queryKey: childPetKey })}
@@ -367,6 +377,7 @@ function RunningView({
   finishing,
   resumedAtMs,
   premiumVideo,
+  posePending,
   view,
   onPraise,
   onMediaExpired,
@@ -378,6 +389,8 @@ function RunningView({
   /** ms into the session when it was resumed after an app restart (null = played from the start). */
   resumedAtMs: number | null;
   premiumVideo: boolean;
+  /** M5-T06: the school clips are on their way — show the still pose, no clip. */
+  posePending: boolean;
   view: ChildPetView;
   onPraise: (touchTimestamp?: number | null) => void;
   onMediaExpired: () => void;
@@ -408,10 +421,11 @@ function RunningView({
       )}
 
       <View style={styles.stage}>
-        {premiumVideo ? (
+        {premiumVideo || posePending ? (
           <PetMediaView
             media={view.pet.media}
             petState={frame.dog === 'obeying' ? 'playing' : 'idle'}
+            videoEnabled={!posePending}
             breed={view.pet.breed_type}
             species={view.pet.species}
             onMediaExpired={onMediaExpired}

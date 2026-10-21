@@ -169,6 +169,8 @@ export interface PetUpdatedBroadcast {
    * no task, missing from older servers. Read via `broadcastSocialisation` (`modules/socialisation`).
    */
   socialisation?: unknown;
+  /** M5-T06 `{ready, pending, preparing, running, ready_at}`; missing from older servers. Read via `readPreparation`. */
+  preparation?: unknown;
   event_type: string | null;
   updated_at: string | null;
   /** When the server emitted this snapshot (ms precision); newer wins. */
