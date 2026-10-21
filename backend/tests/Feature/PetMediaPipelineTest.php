@@ -872,7 +872,7 @@ describe('media:sweep', function () {
         $dead = PetMedia::create(['pet_id' => $pet->id, 'kind' => 'image', 'status' => 'running']);
         PetMedia::whereKey([$waiting->id, $download->id, $dead->id])->update(['updated_at' => now()->subHours(3)]);
 
-        $this->artisan('media:sweep')->assertSuccessful()->expectsOutputToContain('Timed out 1, re-queued 1 download(s) and 1 stale claim(s), deleted 0 stale temp file(s).');
+        $this->artisan('media:sweep')->assertSuccessful()->expectsOutputToContain('Timed out 1, re-queued 1 download(s) and 1 stale claim(s), resumed the state media of 0 pet(s), deleted 0 stale temp file(s).');
 
         expect($waiting->fresh())->status->toBe('failed')->error_reason->toBe('timed_out')
             ->and($fresh->fresh()->status)->toBe('running');

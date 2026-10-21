@@ -411,9 +411,10 @@ class PetMediaService
             return true;
         }
 
-        // M5-T08b: state media switched off in /admin — nothing queued before is generated.
-        // The slot stays as it is (pending); switching it on again lets the pipeline / retry resume it.
-        if (! $this->entitlements->stateMediaEnabled()) {
+        // M5-T08b: state media switched off in /admin — nothing queued before is generated
+        // (fresh read, no cache). The slot stays pending; switching it on again resumes it
+        // (ResumeStateMedia job on the switch, media:sweep for stale pending slots).
+        if (! $this->entitlements->stateMediaEnabled(fresh: true)) {
             return true;
         }
 
@@ -504,7 +505,7 @@ class PetMediaService
 
         // M5-T08b: state media switched off (or the pet does not use it) — a queued transition
         // is not submitted (stays pending; look rows: submitLookVideo).
-        if ($slot !== null && $slot->isTransition() && (! $this->entitlements->stateMediaEnabled()
+        if ($slot !== null && $slot->isTransition() && (! $this->entitlements->stateMediaEnabled(fresh: true)
             || ($slot->pet !== null && ! $this->entitlements->usesStateMedia($slot->pet)))) {
             return true;
         }
@@ -618,7 +619,7 @@ class PetMediaService
         $pet = $slot->pet;
         $transition = $slot->transition();
 
-        if (! $this->entitlements->stateMediaEnabled()) {
+        if (! $this->entitlements->stateMediaEnabled(fresh: true)) {
             $slot->update(['status' => PetMedia::STATUS_PENDING]); // M5-T08b: switched off — release the claim, no fal call
 
             return true;
@@ -1031,6 +1032,11 @@ class PetMediaService
             return false;
         }
 
+        // M5-T08b (QA m1): no key image / transition while state media is switched off.
+        if (($slot->isKeyframe() || $slot->isTransition()) && ! $this->entitlements->stateMediaEnabled(fresh: true)) {
+            return false;
+        }
+
         if (! $this->resetForNewGeneration($slot, bump: true)) {
             return false;
         }
@@ -1322,7 +1328,8 @@ class PetMediaService
             keyframes: $keyframes,
             transitions: $transitions,
             loops: array_values(array_intersect(array_keys($videos), $loops)),
-            stateMedia: $this->entitlements->usesStateMedia($pet),
+            // M5-T08b (QA m3): the pet's set, not the switch — off never downgrades stored media.
+            stateMedia: $this->entitlements->hasStateMediaSet($pet),
         );
     }
 
@@ -1423,7 +1430,9 @@ class PetMediaService
      *  - a claim of a dead worker → its job again (which adopts an accepted request id);
      *  - stale download temp files are deleted.
      *
-     * @return array{timed_out: int, downloads: int, reclaimed: int, temp_files: int}
+     *  - M5-T08b: state media slots left pending while the switch was off → the pet's pipeline again.
+     *
+     * @return array{timed_out: int, downloads: int, reclaimed: int, resumed: int, temp_files: int}
      */
     public function sweepStale(): array
     {
@@ -1471,7 +1480,58 @@ class PetMediaService
                 $reclaimed++;
             });
 
-        return ['timed_out' => $timedOut, 'downloads' => $downloads, 'reclaimed' => $reclaimed, 'temp_files' => $this->cleanupTempFiles()];
+        // M5-T08b (QA M1): slots left `pending` while state media was off (their job ran and
+        // returned without a fal call) are resumed once it is on again.
+        $resumed = $this->entitlements->stateMediaEnabled(fresh: true)
+            ? $this->resumeStateMedia(staleOnly: true)
+            : 0;
+
+        return ['timed_out' => $timedOut, 'downloads' => $downloads, 'reclaimed' => $reclaimed, 'resumed' => $resumed, 'temp_files' => $this->cleanupTempFiles()];
+    }
+
+    /**
+     * M5-T08b (QA M1): re-run the media pipeline (queueStateVideos) of every active, born
+     * pet that uses state media and has work left — key images, loops and transitions
+     * in the usual order; the slot claims and unique jobs make a duplicate harmless.
+     *
+     * `staleOnly` (media:sweep): only pets with a key image / transition / state video slot
+     * that is `pending` without a fal request for longer than STALE_CLAIM_MINUTES — a slot
+     * whose job ran while the switch was off. Without it (the admin switch turned on, job
+     * ResumeStateMedia) every such pet — which also remakes clips made the old way while
+     * the switch was off as loops (costs, shown in the switch description).
+     *
+     * @return int pets whose pipeline was re-run
+     */
+    public function resumeStateMedia(bool $staleOnly = false): int
+    {
+        if (! $this->fal->isEnabled() || ! $this->entitlements->stateMediaEnabled(fresh: true)) {
+            return 0;
+        }
+
+        $resumed = 0;
+
+        Pet::query()
+            ->where('is_active', true)
+            ->whereNotNull('born_at')
+            ->where('state_media_version', '>=', 2)
+            ->when($staleOnly, fn ($q) => $q->whereExists(fn ($q) => $q->selectRaw('1')->from('pet_media as s')
+                ->whereColumn('s.pet_id', 'pets.id')
+                ->whereIn('s.kind', [PetMedia::KIND_KEYFRAME, PetMedia::KIND_TRANSITION, PetMedia::KIND_VIDEO])
+                ->where('s.status', PetMedia::STATUS_PENDING)
+                ->whereNull('s.request_id')
+                ->where('s.updated_at', '<', now()->subMinutes(self::STALE_CLAIM_MINUTES))))
+            ->orderBy('id')
+            ->each(function (Pet $pet) use (&$resumed): void {
+                if ($this->entitlements->usesStateMedia($pet) && $this->queueStateVideos($pet) > 0) {
+                    $resumed++;
+                }
+            });
+
+        if ($resumed > 0) {
+            Log::info('PetMediaService: state media resumed', ['pets' => $resumed, 'stale_only' => $staleOnly]);
+        }
+
+        return $resumed;
     }
 
     /**
@@ -1626,7 +1686,7 @@ class PetMediaService
      */
     private function lookStateMediaWanted(PetLook $look, string $stage): bool
     {
-        if (! $this->entitlements->stateMediaEnabled()) {
+        if (! $this->entitlements->stateMediaEnabled(fresh: true)) {
             return false;
         }
 
