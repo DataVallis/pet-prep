@@ -211,3 +211,61 @@ describe('cat', function () {
             ->and(cgGuide($child)['grooming'])->toBeNull(); // the domestic cat has no brushing routine
     });
 });
+
+/*
+| M5-T05b — the same guide for the parent: GET /api/parent/dashboard carries the
+| very `care_guide` block per pet (CareGuidePayload, same numbers as the child
+| state); the app words it for the parent. Family-scoped like every parent GET.
+*/
+function cgParentGuide(User $parent, Pet $pet): ?array
+{
+    test()->actingAs($parent, 'sanctum');
+    $pets = test()->getJson('/api/parent/dashboard')->assertOk()->json('family.pets') ?? [];
+    app('auth')->forgetGuards();
+
+    return collect($pets)->firstWhere('id', $pet->id)['care_guide'] ?? null;
+}
+
+describe('parent dashboard (M5-T05b)', function () {
+    it('gives the parent exactly the child guide of a puppy (meals, steps, take-out, sleep)', function () {
+        [$parent, $child, $pet] = cgFamily(BreedType::PembrokeWelshCorgi, 2, ['behaviour_events_enabled' => true, 'grooming_enabled' => true], [
+            'bedtime_start' => '21:00', 'bedtime_end' => '07:00', 'school_start' => '08:00', 'school_end' => '13:00',
+        ]);
+        cgAt('2026-10-20 14:00');
+
+        $parentGuide = cgParentGuide($parent, $pet);
+
+        expect($parentGuide)->not->toBeNull()
+            ->and($parentGuide)->toBe(cgGuide($child))
+            ->and($parentGuide['take_out']['hold_hours'])->toBe(app(BehaviourEventService::class)->holdHoursOn($pet->fresh(), $pet->fresh()->localDate(now())))
+            ->and($parentGuide['meals']['by_parent'])->toBeGreaterThanOrEqual(0)
+            ->and($parentGuide['sleep']['school'])->toBe(['start' => '08:00', 'end' => '13:00']);
+    });
+
+    it('gives the parent exactly the child guide of a cat', function () {
+        [$parent, $child, $cat] = cgFamily(BreedType::MaineCoon, 12);
+        cgAt('2026-10-20 14:00');
+
+        $parentGuide = cgParentGuide($parent, $cat);
+
+        expect($parentGuide)->toBe(cgGuide($child))
+            ->and($parentGuide['species'])->toBe('cat')
+            ->and($parentGuide['play']['sessions_per_day'])->toBeGreaterThan(0);
+    });
+
+    it('follows a rule change on the next read, like the child guide', function () {
+        [$parent, , $pet] = cgFamily(BreedType::PembrokeWelshCorgi, 12);
+        BreedConfig::where('breed_slug', $pet->breed_type->slug())->update(['water_refill_below' => 45, 'water_min_gap_minutes' => 150]);
+
+        expect(cgParentGuide($parent, $pet)['water'])->toBe(['refill_below' => 45, 'min_gap_minutes' => 150]);
+    });
+
+    it('never shows another family\'s pet (dashboard) and refuses its pet_id (404)', function () {
+        [, , $pet] = cgFamily(BreedType::PembrokeWelshCorgi, 12);
+        [$otherParent] = cgFamily(BreedType::Mutt, 12);
+
+        expect(cgParentGuide($otherParent, $pet))->toBeNull();
+        test()->actingAs($otherParent, 'sanctum');
+        test()->getJson("/api/parent/activities?pet_id={$pet->id}")->assertNotFound();
+    });
+});

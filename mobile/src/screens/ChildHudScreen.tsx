@@ -453,7 +453,7 @@ export default function ChildHudScreen() {
   // M5-T13 (spec §9): the first birthday — party hat all day, the card opens by itself once per pet.
   const birthdayToday = view ? showBirthdayHat(view.pet.birthday, view.lock.is_locked) && !preparingNow : false;
   const birthdayCard = useBirthdayCard(view?.pet.id ?? null, birthdayToday && !careGuide.visible);
-  // M5-T06 (spec §13): »[ime] je pripravljen!« once per pet when the shown preparation ends
+  // M5-T06 (spec §13): »Vse je pripravljeno: [ime]« once per pet when the shown preparation ends
   // (the server also sends one push). Through the message queue like every HUD message.
   const skewMs = view?.clockSkewMs ?? 0;
   const readyNow = useCallback(() => Date.now() + skewMs, [skewMs]);

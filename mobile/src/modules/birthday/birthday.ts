@@ -9,8 +9,9 @@
  * An older server sends no `birthday` → null (nothing shown).
  *
  * Wording rules: the Slovenian name is never declined — it stands as the subject in the
- * nominative (»Luna je danes star 1 leto«) or as the address (»Vse najboljše, Luna!«).
- * Without a name the species noun is used (kuža / muca, "pup" / "kitty"). No new AI media:
+ * nominative (»Luna ima danes 1 leto«) or as the address (»Vse najboljše, Luna!«), and a named
+ * line is gender-neutral (the app does not know the pet's sex, David 2026-10-21). Without a
+ * name the species noun is used (kuža / muca, "pup" / "kitty"). No new AI media:
  * the hat is drawn by the app over the existing pet media (a birthday clip is future work).
  */
 
@@ -64,7 +65,7 @@ export function birthdayTitle(name: string | null, species: string | null | unde
   return named('title', name, species);
 }
 
-/** »Luna je danes star 1 leto.« / "Luna is 1 year old today." (SL agreement follows the species). */
+/** »Luna ima danes 1 leto.« (neutral) / »Tvoj kuža je danes star 1 leto.« / "Luna is 1 year old today." */
 export function birthdayAgeLine(name: string | null, species: string | null | undefined): string {
   return named('age', name, species);
 }

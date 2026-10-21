@@ -67,7 +67,7 @@ it('shows the hat and opens the card once per pet on the birthday', async () => 
   expect(screen.getByTestId('birthday-hat')).toBeTruthy();
   expect(await screen.findByTestId('birthday-card')).toBeTruthy();
   expect(screen.getByTestId('birthday-card-title').props.children).toBe(`Vse najboljše, ${FSI}Luna${PDI}!`);
-  expect(screen.getByTestId('birthday-card-age').props.children).toBe(`${FSI}Luna${PDI} je danes star 1 leto.`);
+  expect(screen.getByTestId('birthday-card-age').props.children).toBe(`${FSI}Luna${PDI} ima danes 1 leto.`);
   expect(screen.getByTestId('birthday-card-cake').props.accessibilityLabel).toContain('brez čokolade');
   expect(screen.getByTestId('birthday-card-source').props.children).toContain('FDA');
 

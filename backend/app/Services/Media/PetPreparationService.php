@@ -73,6 +73,23 @@ class PetPreparationService
      */
     public const PUSH_MAX_HOURS = 2;
 
+    /**
+     * A preparation that ended this fast was never seen (the screen needs a state
+     * fetch to appear): no `pet_ready` event, no push, no in-app message (QA m4).
+     */
+    public const MIN_SHOWN_SECONDS = 10;
+
+    /**
+     * QA M1: pets born before this release never get a preparation (their media
+     * were made long ago; a later purchase only adds clips, which the games mark
+     * »… se še pripravlja«). Release date of M5-T06 (migration 2027_01_04_120000).
+     */
+    public const SINCE = '2026-10-21T00:00:00Z';
+
+    public const BEGIN_BIRTH = 'birth';
+
+    public const BEGIN_PURCHASE = 'purchase';
+
     public function __construct(
         private readonly MediaEntitlementService $entitlements,
         private readonly FalAiService $fal,
@@ -159,21 +176,48 @@ class PetPreparationService
             preparing: $screenOpen && array_intersect($inProgress, [self::IMAGE, ...$essentials]) !== [],
             running: $active,
             readyAt: $pet->preparation_ready_at?->copy()->utc()->toIso8601String(),
+            announce: $this->announces($pet),
         );
     }
 
     /**
-     * Birth (first contract), or the purchase of a pet that waited for it: if
-     * something is still being made, the pet's preparation starts now (the
-     * apps show it; its end is announced once). Idempotent: a pet whose
-     * preparation started — or ended — before is left alone. Never generates.
+     * The end of the pet's preparation is news (the `pet_ready` event, the push and
+     * the in-app »Vse je pripravljeno …«): it ended, it lasted long enough for the
+     * screen to have been seen (≥ MIN_SHOWN_SECONDS) and not longer than
+     * PUSH_MAX_HOURS (a clip stored by the next day's retry is no news). The apps
+     * additionally show the message only within 12 h of `ready_at`.
      */
-    public function begin(Pet $pet, ?CarbonImmutable $now = null): bool
+    public function announces(Pet $pet): bool
+    {
+        if ($pet->preparation_started_at === null || $pet->preparation_ready_at === null) {
+            return false;
+        }
+        $seconds = (int) $pet->preparation_started_at->diffInSeconds($pet->preparation_ready_at, true);
+
+        return $seconds >= self::MIN_SHOWN_SECONDS && $seconds <= self::PUSH_MAX_HOURS * 3600;
+    }
+
+    /**
+     * Birth (first contract), or the purchase of a pet that waited behind the
+     * payment lock (`$reason` = purchase — the caller decides it waited, QA M1):
+     * if something is still being made, the pet's preparation starts now (the
+     * apps show it; its end is announced once). Never for a pet born before
+     * SINCE. Idempotent: a pet whose preparation started — or ended — before is
+     * left alone. Never generates.
+     *
+     * @param  self::BEGIN_*  $reason
+     */
+    public function begin(Pet $pet, string $reason = self::BEGIN_BIRTH, ?CarbonImmutable $now = null): bool
     {
         // A pet waiting for the purchase is behind the lock screen: its preparation
         // starts with the purchase (ChallengeService::markPaid), so the child sees it.
         if ($pet->isUnborn() || ! $pet->is_active || $pet->awaitsPayment()
-            || $pet->preparation_started_at !== null || $pet->preparation_ready_at !== null) {
+            || $pet->preparation_started_at !== null || $pet->preparation_ready_at !== null
+            || $pet->born_at->lessThan(CarbonImmutable::parse(self::SINCE))) {
+            return false;
+        }
+        // At birth only right after the contract (a late call — retry, backfill — is no birth).
+        if ($reason === self::BEGIN_BIRTH && $pet->born_at->lessThan(now()->subMinutes(self::SCREEN_MAX_MINUTES))) {
             return false;
         }
 
@@ -200,8 +244,9 @@ class PetPreparationService
     /**
      * A media item of the pet was stored (StorePetMedia / look link, after
      * commit): if the pet's preparation is running and now everything is
-     * stored, mark it ready ONCE (atomic update) — one PetUpdated
-     * `pet_ready` and one push to the caretaker children. Never generates.
+     * stored, mark it ready ONCE (row lock) — and, when announces(), one
+     * PetUpdated `pet_ready` and one push to the caretaker children and the
+     * family's parents. Never generates.
      */
     public function settle(int $petId): bool
     {
@@ -227,8 +272,10 @@ class PetPreparationService
                 'seconds' => (int) $locked->preparation_started_at->diffInSeconds($locked->preparation_ready_at, true),
             ]);
 
-            PetUpdated::afterCommit($locked, self::EVENT_READY);
-            if ($locked->preparation_started_at->greaterThanOrEqualTo(now()->subHours(self::PUSH_MAX_HOURS))) {
+            // News only when the preparation was seen and is still fresh (announces());
+            // otherwise the readiness change rides on the item's own `video_ready`.
+            if ($this->announces($locked)) {
+                PetUpdated::afterCommit($locked, self::EVENT_READY);
                 app(NotificationService::class)->petReady($locked);
             }
 

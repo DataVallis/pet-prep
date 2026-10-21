@@ -57,8 +57,10 @@ describe('showBirthdayHat', () => {
 describe('wording', () => {
   it('SL: the name stays in the nominative (address / subject), species agreement, no declension', () => {
     expect(birthdayTitle('Luna', 'dog')).toBe(`Vse najboljše, ${FSI}Luna${PDI}!`);
-    expect(birthdayAgeLine('Luna', 'dog')).toBe(`${FSI}Luna${PDI} je danes star 1 leto.`);
-    expect(birthdayAgeLine('Luna', 'cat')).toBe(`${FSI}Luna${PDI} je danes stara 1 leto.`);
+    // David 2026-10-21: the app does not know the pet's sex — a named line is gender-neutral.
+    expect(birthdayAgeLine('Luna', 'dog')).toBe(`${FSI}Luna${PDI} ima danes 1 leto.`);
+    expect(birthdayAgeLine('Luna', 'cat')).toBe(`${FSI}Luna${PDI} ima danes 1 leto.`);
+    expect(birthdayAgeLine(null, 'cat')).toBe('Tvoja muca je danes stara 1 leto.');
     expect(birthdayTitle(null, 'dog')).toBe('Vse najboljše, kuža!');
     expect(birthdayTitle(null, 'cat')).toBe('Vse najboljše, muca!');
     expect(parentBirthdayLine('Luna', 'cat')).toBe(`${FSI}Luna${PDI} danes praznuje prvi rojstni dan.`);

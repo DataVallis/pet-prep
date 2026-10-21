@@ -45,9 +45,11 @@ export interface PetPreparation {
   running: boolean;
   /** When the shown preparation ended (ISO); null when it never ran / still runs. */
   readyAt: string | null;
+  /** The end is news (server: seen ≥ 10 s and ended ≤ 2 h after its start). */
+  announce: boolean;
 }
 
-export const NO_PREPARATION: PetPreparation = { ready: true, pending: [], preparing: false, running: false, readyAt: null };
+export const NO_PREPARATION: PetPreparation = { ready: true, pending: [], preparing: false, running: false, readyAt: null, announce: false };
 
 function isItem(value: unknown): value is PreparationItem {
   return typeof value === 'string' && (ITEMS as readonly string[]).includes(value);
@@ -66,12 +68,20 @@ export function readPreparation(raw: unknown): PetPreparation {
     preparing: p.preparing === true && !ready,
     running: p.running === true,
     readyAt,
+    announce: p.announce === true && readyAt !== null,
   };
 }
 
 /** Back to the wire shape (the parent dashboard cache keeps raw payloads, validated). */
-export function preparationPayload(p: PetPreparation): { ready: boolean; pending: PreparationItem[]; preparing: boolean; running: boolean; ready_at: string | null } {
-  return { ready: p.ready, pending: p.pending, preparing: p.preparing, running: p.running, ready_at: p.readyAt };
+export function preparationPayload(p: PetPreparation): {
+  ready: boolean;
+  pending: PreparationItem[];
+  preparing: boolean;
+  running: boolean;
+  ready_at: string | null;
+  announce: boolean;
+} {
+  return { ready: p.ready, pending: p.pending, preparing: p.preparing, running: p.running, ready_at: p.readyAt, announce: p.announce };
 }
 
 /**
@@ -115,27 +125,26 @@ export function preparationBody(): string {
 }
 
 /**
- * »Luna je pripravljen!« / "Luna is ready!" — the name as the subject (nominative). SL
- * agreement follows the species (kuža → pripravljen, muca → pripravljena), like every other
- * child text (the app has no pet sex).
+ * »Vse je pripravljeno: Luna« / "Luna is ready!" (David 2026-10-21: gender-neutral; the SL
+ * name after a colon, never declined). Without a name »Vse je pripravljeno za tvojega
+ * kužka / tvojo muco« / "Your pup / cat is ready!".
  */
 export function readyMessage(name: string | null, species: string | null | undefined): string {
-  const key = speciesKey(species);
   return name
-    ? tr(`preparation:${key}.readyNamed`, { name: isolatePetName(name) })
-    : tr(`preparation:${key}.ready`);
+    ? tr('preparation:readyNamed', { name: isolatePetName(name) })
+    : tr(`preparation:${speciesKey(species)}.ready`);
 }
 
-/** »… je pripravljen!« belongs to the day of the preparation — a sign-in days later gets no news. */
+/** The in-app news belongs to the day of the preparation — a sign-in days later gets none. */
 export const READY_NEWS_MAX_AGE_MS = 12 * 60 * 60 * 1000;
 
 /**
- * The child is told »… je pripravljen!« once per pet: when the server marks the shown
- * preparation as ended (`ready_at`, at most `READY_NEWS_MAX_AGE_MS` before `nowMs`), the HUD
- * is not locked and this device has not said it for that pet yet.
+ * The child is told »Vse je pripravljeno …« once per pet: when the server says the end is news
+ * (`announce`), it ended at most `READY_NEWS_MAX_AGE_MS` before `nowMs`, the HUD is not locked
+ * and this device has not said it for that pet yet.
  */
 export function shouldAnnounceReady(preparation: PetPreparation, alreadyAnnounced: boolean, locked: boolean, nowMs: number): boolean {
-  if (preparation.readyAt === null || alreadyAnnounced || locked) return false;
+  if (!preparation.announce || preparation.readyAt === null || alreadyAnnounced || locked) return false;
   const readyMs = Date.parse(preparation.readyAt);
   return !Number.isNaN(readyMs) && nowMs - readyMs <= READY_NEWS_MAX_AGE_MS;
 }
@@ -145,7 +154,11 @@ export function schoolPreparingText(): string {
   return tr('preparation:school');
 }
 
-/** School stage while its clips are on their way: show the pose (reference image), not a clip. */
+/**
+ * School stage while its clips are on their way (QA m2): only during the pet's running
+ * preparation and only while `idle` / `playing` are really still coming (not failed or never
+ * made for an older pet — that pet keeps its usual stage).
+ */
 export function schoolClipsPending(preparation: PetPreparation): boolean {
-  return preparation.pending.includes('idle') || preparation.pending.includes('playing');
+  return preparation.running && (preparation.pending.includes('idle') || preparation.pending.includes('playing'));
 }

@@ -222,9 +222,6 @@ return [
             'parent' => 'Muca danes praznuje prvi rojstni dan. Praznovanje si oglejte v aplikaciji.',
         ],
 
-        // M5-T06: priprava je končana (naslov je ime, besedilo brez imena).
-        'pet_ready' => 'Tvoja muca je pripravljena! Pridi jo pogledat.',
-
         'payment_required' => [
             'child' => 'Igra počaka na starša. Tvoja muca je na varnem in počiva.',
             'parent' => 'Brezplačni preizkus je končan. Muca varno čaka, dokler v aplikaciji ne odklenete 12-tedenskega izziva.',
@@ -240,8 +237,11 @@ return [
     ],
 
     // M5-T06 (APP_REFINEMENT_SPEC §13, David 20. 10. 2026): priprava je končana. Naslov je ime
-    // ljubljenčka (če ga ima), besedilo nikoli — in nikjer ni omembe, kako se pripravlja.
-    'pet_ready' => 'Tvoj kuža je pripravljen! Pridi ga pogledat.',
+    // ljubljenčka (če ga ima), besedilo nikoli; spolno nevtralno (David 21. 10.) — nikjer ni omembe, kako se pripravlja. Staršem vikamo.
+    'pet_ready' => [
+        'child' => 'Vse je pripravljeno. Pridi pogledat!',
+        'parent' => 'Vse je pripravljeno. Ljubljenček vas čaka v aplikaciji.',
+    ],
 
     // M2-01d (CERTIFICATE_SPEC, David 2026-10-12): a child's challenge ended — parents only,
     // species-neutral (no cat text needed), no names.

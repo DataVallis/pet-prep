@@ -93,12 +93,12 @@ export function makeMedia(overrides: Partial<PetMedia> = {}): PetMedia {
 
 /** `preparation` of a pet (M5-T06): ready, nothing shown. */
 export function makePreparation(overrides: Partial<PreparationRaw> = {}): PreparationRaw {
-  return { ready: true, pending: [], preparing: false, running: false, ready_at: null, ...overrides };
+  return { ready: true, pending: [], preparing: false, running: false, ready_at: null, announce: false, ...overrides };
 }
 
 /** A pet whose first things are still on their way (the set-up screen shows). */
 export function makePreparing(pending: PreparationRaw['pending'] = ['idle', 'sleeping']): PreparationRaw {
-  return { ready: false, pending, preparing: true, running: true, ready_at: null };
+  return { ready: false, pending, preparing: true, running: true, ready_at: null, announce: false };
 }
 
 /** `pet.updated` payload for pet 7 (UTC instants, like the backend's broadcast). */
@@ -558,6 +558,8 @@ export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetR
     media: makeMedia(),
     // M5-T06: ready.
     preparation: makePreparation(),
+    // M5-T05b: the care guide (same block as the child state).
+    care_guide: makeCareGuide() as unknown as FamilyPetRaw['care_guide'],
     // M5-T13: no birthday.
     birthday: null,
     traffic_light: { color: 'green', reasons: [] },
