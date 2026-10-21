@@ -568,3 +568,91 @@ describe('battery', () => {
     expect(liveVideoPlayers()).toHaveLength(0);
   });
 });
+
+describe('M5-T08 state media: seamless loops, transitions, key image fallback', () => {
+  const KEY_SLEEPING = url(10, 'ksleep');
+  const KEY_HUNGRY = url(11, 'khungry');
+  const IDLE_TO_SLEEPING = url(12, 'its');
+
+  const stateMedia = (overrides: Partial<PetMediaInfo> = {}): PetMediaInfo =>
+    media({
+      stateMedia: true,
+      videos: { idle: IDLE, sleeping: SLEEPING },
+      keyframes: { sleeping: KEY_SLEEPING, hungry: KEY_HUNGRY },
+      transitions: { idle_to_sleeping: IDLE_TO_SLEEPING },
+      loops: ['idle', 'sleeping'],
+      ...overrides,
+    });
+
+  it('plays the state loop with the native loop (no restart)', async () => {
+    renderMedia({ media: stateMedia() });
+    await showFirstFrame();
+    expect(liveVideoPlayers()).toHaveLength(1);
+    expect(mockVideoPlayers[0].loop).toBe(true);
+    expect(sourceUri(mockVideoPlayers[0])).toBe(IDLE);
+  });
+
+  it('a state change plays the transition ONCE over the preloaded (paused) loop, then the loop takes over', async () => {
+    const { update } = renderMedia({ media: stateMedia() });
+    await showFirstFrame();
+
+    update({ media: stateMedia(), petState: 'sleeping' });
+    // Transition + preloaded sleeping loop mounted; the loop waits paused.
+    expect(playerUris()).toEqual([IDLE, SLEEPING, IDLE_TO_SLEEPING]);
+    const [, loop, transition] = mockVideoPlayers;
+    expect(transition.loop).toBe(false);
+    expect(loop.loop).toBe(true);
+    expect(loop.playing).toBe(false);
+    expect(screen.getByTestId('pet-media-video-preload')).toBeTruthy();
+
+    await showFirstFrame('pet-media-video-transition-loading');
+    expect(idlePlayer().released).toBe(true); // the old loop is gone once the transition shows
+
+    // The transition ends → the preloaded loop is promoted and plays.
+    act(() => transition.emit('playToEnd', {}));
+    fireEvent(screen.getByTestId('pet-media-video-loading'), 'firstFrameRender');
+    await act(async () => {
+      jest.advanceTimersByTime(CROSSFADE_MS + 50);
+    });
+    expect(loop.playing).toBe(true);
+    expect(transition.released).toBe(true);
+    expect(liveVideoPlayers()).toEqual([loop]);
+
+    function idlePlayer() {
+      return mockVideoPlayers[0];
+    }
+  });
+
+  it('a transition that never ends is given up after the safety timeout', async () => {
+    const { update } = renderMedia({ media: stateMedia() });
+    await showFirstFrame();
+    update({ media: stateMedia(), petState: 'sleeping' });
+    await showFirstFrame('pet-media-video-transition-loading');
+
+    await act(async () => {
+      jest.advanceTimersByTime(8_100);
+    });
+    fireEvent(screen.getByTestId('pet-media-video-loading'), 'firstFrameRender');
+    await act(async () => {
+      jest.advanceTimersByTime(CROSSFADE_MS + 50);
+    });
+    expect(liveVideoPlayers().map(sourceUri)).toEqual([SLEEPING]);
+  });
+
+  it('a state without its clip shows its key image — never another state\'s clip (§0 rule 1)', async () => {
+    const { update } = renderMedia({ media: stateMedia() });
+    await showFirstFrame();
+    update({ media: stateMedia(), petState: 'hungry' });
+    await act(async () => {
+      jest.advanceTimersByTime(CROSSFADE_MS + 50);
+    });
+    expect(liveVideoPlayers()).toHaveLength(0);
+    expect(screen.getByTestId('pet-media-image').props.source).toEqual({ uri: KEY_HUNGRY });
+  });
+
+  it('picture mode shows the key image of the state, no player', () => {
+    renderMedia({ media: stateMedia(), petState: 'sleeping', mode: 'picture' });
+    expect(mockVideoPlayers).toHaveLength(0);
+    expect(screen.getByTestId('pet-media-image').props.source).toEqual({ uri: KEY_SLEEPING });
+  });
+});

@@ -2085,6 +2085,33 @@ export interface components {
                 states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                 /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                 expires_at: string | null;
+                /**
+                 * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                 *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                 *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                 */
+                keyframes: {
+                    [key: string]: string;
+                };
+                /**
+                 * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                 *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                 *     then the target state's loop. Always an object.
+                 */
+                transitions: {
+                    [key: string]: string;
+                };
+                /**
+                 * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                 *     without a visible restart); other videos are older clips.
+                 */
+                loops: string[];
+                /**
+                 * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                 *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                 *     false = the older set (substitute clips sick → sleeping → idle).
+                 */
+                state_media: boolean;
             };
             /**
              * @description M5-R13: the weekly brushing routine can apply to this pet (every profiled
@@ -2159,6 +2186,7 @@ export interface components {
             grooming_enabled: boolean;
             socialisation_enabled: boolean;
             coat_colour: string | null;
+            state_media_version: number;
         };
         /**
          * PetOrigin
@@ -3663,6 +3691,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -3678,7 +3733,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -4332,6 +4387,33 @@ export interface operations {
                                 states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                 /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                 expires_at: string | null;
+                                /**
+                                 * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                 *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                 *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                 */
+                                keyframes: {
+                                    [key: string]: string;
+                                };
+                                /**
+                                 * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                 *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                 *     then the target state's loop. Always an object.
+                                 */
+                                transitions: {
+                                    [key: string]: string;
+                                };
+                                /**
+                                 * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                 *     without a visible restart); other videos are older clips.
+                                 */
+                                loops: string[];
+                                /**
+                                 * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                 *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                 *     false = the older set (substitute clips sick → sleeping → idle).
+                                 */
+                                state_media: boolean;
                             };
                             /**
                              * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -4347,7 +4429,7 @@ export interface operations {
                                  * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                  *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                  */
-                                pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                 /**
                                  * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                  *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -5021,6 +5103,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -5036,7 +5145,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -5708,6 +5817,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -5723,7 +5859,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -6395,6 +6531,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -6410,7 +6573,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -7082,6 +7245,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -7097,7 +7287,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -7769,6 +7959,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -7784,7 +8001,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -8460,6 +8677,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -8475,7 +8719,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -9151,6 +9395,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -9166,7 +9437,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -9842,6 +10113,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -9857,7 +10155,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -10529,6 +10827,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -10544,7 +10869,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -11220,6 +11545,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -11235,7 +11587,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -11907,6 +12259,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -11922,7 +12301,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -12594,6 +12973,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -12609,7 +13015,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -13285,6 +13691,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -13300,7 +13733,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -13972,6 +14405,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -13987,7 +14447,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -14663,6 +15123,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -14678,7 +15165,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -15350,6 +15837,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -15365,7 +15879,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -16041,6 +16555,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -16056,7 +16597,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -16732,6 +17273,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -16747,7 +17315,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -17423,6 +17991,33 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -17438,7 +18033,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -18591,6 +19186,33 @@ export interface operations {
                                 states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                 /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                 expires_at: string | null;
+                                /**
+                                 * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                 *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                 *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                 */
+                                keyframes: {
+                                    [key: string]: string;
+                                };
+                                /**
+                                 * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                 *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                 *     then the target state's loop. Always an object.
+                                 */
+                                transitions: {
+                                    [key: string]: string;
+                                };
+                                /**
+                                 * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                 *     without a visible restart); other videos are older clips.
+                                 */
+                                loops: string[];
+                                /**
+                                 * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                 *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                 *     false = the older set (substitute clips sick → sleeping → idle).
+                                 */
+                                state_media: boolean;
                             };
                         };
                         child: {
@@ -18818,8 +19440,35 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
-                                /** @description M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too). */
+                                /** @description M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too) — same rows. */
                                 preparation: {
                                     /**
                                      * @description Everything the pet shows is stored (or nothing will come). Turns true with the
@@ -18830,7 +19479,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
@@ -19108,8 +19757,35 @@ export interface operations {
                                     states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
                                     /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
                                     expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
+                                     *     without a visible restart); other videos are older clips.
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
                                 };
-                                /** @description M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too). */
+                                /** @description M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too) — same rows. */
                                 preparation: {
                                     /**
                                      * @description Everything the pet shows is stored (or nothing will come). Turns true with the
@@ -19120,7 +19796,7 @@ export interface operations {
                                      * @description What is not stored yet, in the order it is made: `image` (the pose), then video
                                      *     states (idle, sleeping, hungry, playing, …). Empty when ready.
                                      */
-                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
                                     /**
                                      * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
                                      *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
