@@ -262,10 +262,10 @@ class ChildPinLoginService
      * revokes the parent token when it switches to the child. Same result as a PIN re-login (`mode: relogin`): a `child`
      * token through issueChildToken() (MAX_DEVICES rule included).
      *
-     * One shared-phone session per (parent, child): the token name starts with
-     * sharedTokenPrefix($parent); a new device session replaces the previous
-     * one, so switching back and forth never pushes the child's own phones out
-     * of the device limit. Only a child that already cares for a pet (409
+     * Shared-phone sessions per (parent, child): the token name starts with
+     * sharedTokenPrefix($parent); at most MAX_SHARED_SESSIONS (one per phone —
+     * the app reuses its stored token), the oldest dropped first. They are
+     * outside the child's own-device limit (pruneDevices). Only a child that already cares for a pet (409
      * `no_pet` otherwise — the first pairing still goes through a PIN, which
      * carries the pet profile). Lock order parent → child → family.
      *
@@ -297,8 +297,15 @@ class ChildPinLoginService
                 throw new ChildLoginException('app_update_required', 'Update the app to look after this pet.');
             }
 
+            // Keep this parent's newest MAX_SHARED_SESSIONS - 1 shared sessions of the child,
+            // then add one (fix 2026-10-21): the same parent account can play as the child on
+            // several phones (a family's two phones, App Store review on the demo account).
+            // Replacing ALL of them signed every other phone out — the app reuses its stored
+            // token, so a fresh session here means a phone that has none yet.
             $prefix = self::sharedTokenPrefix($parent);
-            $lockedChild->tokens()->where('name', 'like', addcslashes($prefix, '\\%_').'%')->delete();
+            $shared = fn () => $lockedChild->tokens()->where('name', 'like', addcslashes($prefix, '\\%_').'%');
+            $keep = $shared()->orderByDesc('id')->limit(self::MAX_SHARED_SESSIONS - 1)->pluck('id');
+            $shared()->whereNotIn('id', $keep)->delete();
             $token = $this->issueChildToken($lockedChild, $prefix.ChildProfileService::deviceLabel($deviceName));
 
             return new ChildSession($token, $lockedChild, $pet, self::MODE_RELOGIN, false);
@@ -310,6 +317,9 @@ class ChildPinLoginService
     {
         return self::SHARED_TOKEN_PREFIX.$parent->id.':';
     }
+
+    /** Shared-phone sessions one parent may hold for one child (one per phone; fix 2026-10-21). */
+    public const MAX_SHARED_SESSIONS = 3;
 
     /** Child tokens named `shared:p{parentId}:{label}` = a parent's shared-phone session (M2-11). */
     public const SHARED_TOKEN_PREFIX = 'shared:p';
