@@ -291,7 +291,7 @@ Legenda: `[ ]` odprto · `[~]` v delu · `[x]` končano · **(D)** = čaka na Da
 - [ ] M5-T10 Igre po fazah (§10)
 - [ ] M5-T11 Preklop slika / video (§1)
 - [ ] M5-T12 Prilagojen način: potiski vozička (§6)
-- [ ] M5-T13 Rojstni dan pri 1 letu (§9)
+- [x] M5-T13 Rojstni dan pri 1 letu (§9) — 2026-10-21, backend + mobile JS; `PetBirthdayService` (1 leto po formuli starosti, programska ura), `birthday {date, is_today, celebrated}` v stanju / pregledu / `PetUpdated`, en `pet_birthday` (dogodek + obvestilo otrokom in staršem, zadržano čez tihe ure), klobuček + kartica (varna torta, namig z virom); rojstnodnevni klip *načrt* (M5-T08+)
 - [ ] M5-T14 Krtača in kretnje (§11)
 
 ## Po MVP (backlog)

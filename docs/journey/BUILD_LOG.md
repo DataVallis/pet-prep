@@ -9,6 +9,15 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-21 — Rojstni dan: ljubljenček dopolni 1 leto
+
+**Kaj:** ko ljubljenček po starosti simulacije dopolni 1 leto, ima ves dan na glavi rojstnodnevni klobuček, otrok pa dobi kartico »Vse najboljše, Luna!« z varno »torto« (pasja ali mačja poslastica brez čokolade) in namigom z virom — »Čokolada je za pse strupena« (FDA), pri muci »Mleko ni poslastica za odraslo muco« (Agriculture Victoria, ASPCA). Enkrat na ljubljenčka dobita obvestilo otrok in starš.
+**Zakaj je pomembno:** praznik, ki ga otrok doživi zaradi svoje skrbi, in hkrati ena resnična, uporabna lekcija o varnosti hrane — ravno takrat, ko bi doma kdo psu ponudil kos torte.
+- 👩 Starši: obvestilo »Kuža danes praznuje prvi rojstni dan.« (zadržano čez tihe ure) in vrstica v podrobnostih otroka.
+- 🧒 Otroci: klobuček, »Vse najboljše, Luna!«, torta brez čokolade in »Ali si vedel?«.
+- 💼 Investitorji: ura simulacije je dovolj natančna, da praznik pride na pravi dan: vsak mladiček psa (dan 70) ali pasemski mucek (dan 63) in vsak mlad pes (dan 21) praznuje v 12-tedenskem izzivu — 50 pasem psov in 7 mačk preverjenih iz istih podatkov, po katerih teče igra.
+- 🛠 Tehnično: datum iz iste formule starosti kot življenjska obdobja (čas čakanja na plačilo ne šteje), praznovanje atomsko enkrat na ljubljenčka, brez novih AI stroškov (klobuček riše aplikacija; posnetek pride z M5-T08+).
+
 ## 2026-10-21 — »Pripravljamo: Luna«: prve minute z novim ljubljenčkom
 
 **Kaj:** ko otrok podpiše pogodbo in ljubljenček še ni povsem pripravljen, zdaj vidi maskoto Curio, ki se nežno ziba, in »Pripravljamo: Luna — To lahko traja nekaj minut.« Najprej se pripravi to, kar otrok vidi v prvih minutah (kuža stoji, spi, je), nato šola in igre. Kar še ni pripravljeno, je mirno označeno (»Šola se še pripravlja« s pozo, »Igra se še pripravlja«). Ko je vse pripravljeno, otrok enkrat dobi »Luna je pripravljen!« v aplikaciji in kot obvestilo. Zaslon nikoli ne traja več kot 15 minut.

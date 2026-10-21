@@ -1844,3 +1844,28 @@ flowchart TD
     SHEET --> READ["POST /api/breed-facts/{fact}/read<br/>(breed_fact_reads, idempotent)"]
     CHIP --> READ
 ```
+
+## 16. First birthday (M5-T13, APP_REFINEMENT_SPEC §9, 2026-10-21)
+
+```mermaid
+sequenceDiagram
+  participant Tick as pets:process-decay (minutely)
+  participant S as PetBirthdayService
+  participant DB as pets
+  participant N as NotificationService
+  participant App as Child / parent app
+  Tick->>S: processDue() — born, profiled, arrival < 12 m, not celebrated, birthday_next_check_at ≤ now
+  S->>S: birthdayAt = anniversary(programBirth, 12 − arrival weeks)<br/>(payment locks before it shift it; open lock counts until now)
+  alt local date in the future
+    S->>DB: birthday_next_check_at = family-local 00:00 of that date
+  else date passed / no birthday
+    S->>DB: birthday_next_check_at = 2999-12-31
+  else today but hard stop / illness / payment lock
+    S->>DB: birthday_next_check_at = now + 5 min
+  else today
+    S->>DB: lockForUpdate → birthday_celebrated_at = now (once)
+    S-->>App: PetUpdated pet_birthday (birthday {date, is_today, celebrated})
+    S->>N: petBirthday → children + parents, held over quiet hours<br/>(title = pet name, data {type, pet_id})
+  end
+  App->>App: is_today → party hat over the pet all day; card once per pet<br/>(safe cake, sourced tip); parent line in child detail
+```
