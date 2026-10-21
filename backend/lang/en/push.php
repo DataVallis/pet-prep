@@ -75,6 +75,8 @@ return [
     ],
 
     'walk_reminder' => 'Your dog wants a proper walk – not enough steps yet today. Time for a walk?',
+    // M5-T12: the same reminder for a child in adapted mode (wheelchair pushes count as steps).
+    'walk_reminder_pushes' => 'Your dog wants a proper walk – not enough pushes yet today. Time for a walk?',
 
     'parent_alarm' => 'Your child hasn’t looked after the dog today.',
 

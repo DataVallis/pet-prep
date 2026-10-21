@@ -122,6 +122,8 @@ class AccountExportService
                 'id' => $u->id,
                 'nickname' => $u->name,
                 'birth_year' => $u->birth_year,
+                // M5-T12: the parent's accessibility switch (no reason is ever stored).
+                'adapted_mode' => (bool) $u->adapted_mode,
                 // PIN-only profile (M2-02) vs. a legacy child account with e-mail.
                 'login' => $u->password === null ? 'pin' : 'email',
                 'email' => $u->email,
@@ -304,7 +306,7 @@ class AccountExportService
         $caretakers = $byPet('pet_caretakers', ['user_id', 'requires_contract', 'created_at', 'ended_at']);
         $contracts = $byPet('pet_contracts', ['user_id', 'signature_format', 'signature', 'signed_at'], 'signed_at');
         $activities = $byPet('activities_log', ['actor_user_id', 'activity_type', 'value', 'created_at'], 'created_at');
-        $steps = $byPet('pet_daily_steps', ['user_id', 'local_date', 'steps'], 'local_date');
+        $steps = $byPet('pet_daily_steps', ['user_id', 'local_date', 'steps', 'unit'], 'local_date');
         $walks = $byPet('pet_daily_walks', ['local_date', 'steps', 'goal', 'achieved', 'illness_started_at'], 'local_date');
         $routines = $byPet('pet_daily_routines', ['local_date', 'routine_type', 'slot', 'status', 'opens_at', 'due_at', 'done_at', 'actor_user_id'], 'local_date');
         $periods = $byPet('pet_status_periods', ['kind', 'started_at', 'ended_at'], 'started_at');
@@ -379,6 +381,8 @@ class AccountExportService
                     'child_id' => (int) $r->user_id,
                     'local_date' => $this->date($r->local_date),
                     'steps' => (int) $r->steps,
+                    // M5-T12: steps | pushes (wheelchair pushes, adapted mode).
+                    'unit' => (string) $r->unit,
                 ])->values()->all(),
                 'daily_walks' => $rows($walks)->map(fn ($r) => [
                     'local_date' => $this->date($r->local_date),

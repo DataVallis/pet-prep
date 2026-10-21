@@ -76,6 +76,8 @@ return [
 
     // David 17. 10. 2026: o korakih, ne »ven« — »Pelji ven« (lulanje mladička) sprehoda ne šteje.
     'walk_reminder' => 'Tvoj kuža si želi na pravi sprehod – danes ima še premalo korakov. Gremo na sprehod?',
+    // M5-T12: isti opomnik za otroka v prilagojenem načinu (potiski vozička štejejo kot koraki).
+    'walk_reminder_pushes' => 'Tvoj kuža si želi na pravi sprehod – danes ima še premalo potiskov. Gremo na sprehod?',
 
     // David 9. 10. 2026: staršem vikamo (brand/README, glas) — pri obeh vrstah.
     'parent_alarm' => 'Vaš otrok danes ni poskrbel za psa.',

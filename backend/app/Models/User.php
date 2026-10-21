@@ -111,6 +111,8 @@ class User extends Authenticatable implements FilamentUser
             'is_superadmin' => 'boolean',
             'pin_expires_at' => 'datetime',
             'birth_year' => 'integer',
+            // M5-T12: parent-only accessibility switch on a child profile (pushes instead of steps).
+            'adapted_mode' => 'boolean',
         ];
     }
 

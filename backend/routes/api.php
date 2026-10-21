@@ -113,6 +113,8 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
         Route::post('children', [ChildProfileController::class, 'store'])
             ->middleware('throttle:pairing');
         Route::delete('children/{child}/tokens', [ChildProfileController::class, 'revokeTokens']);
+        // M5-T12: parent-only child settings — adapted mode (wheelchair pushes instead of steps).
+        Route::patch('children/{child}/settings', [ChildProfileController::class, 'updateSettings']);
         // M2-11: profile switching on one phone — the parent opens the child's
         // profile here (child token, no PIN). Own limiter (20 / min per parent).
         Route::post('children/{child}/device-session', [ChildAuthController::class, 'deviceSession'])

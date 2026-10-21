@@ -896,7 +896,7 @@ describe('GET /api/parent/children/{child}/report', function () {
             ->and($res->json('daily'))->toHaveCount(30)
             ->and($res->json('from'))->toBe('2026-09-15')
             ->and($res->json('to'))->toBe('2026-10-14')
-            ->and($res->json('child'))->toBe(['id' => $child->id, 'name' => 'Maja'])
+            ->and($res->json('child'))->toBe(['id' => $child->id, 'name' => 'Maja', 'adapted_mode' => false])
             // today's (14th) routines are still pending
             ->and($res->json('by_type.feed'))->toMatchArray(['expected' => 6, 'done' => 2, 'missed' => 2, 'pending' => 2])
             ->and($res->json('by_type.clean'))->toMatchArray(['expected' => 1, 'missed' => 1])
