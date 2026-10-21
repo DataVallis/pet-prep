@@ -18,6 +18,7 @@ use App\Services\ChallengeService;
 use App\Services\Media\PetMediaService;
 use App\Services\Media\PetPreparationService;
 use App\Services\Push\PushCopy;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Http;
@@ -382,6 +383,7 @@ describe('the single "ready" news', function () {
 
 describe('admin measurement', function () {
     it('measures preparation = ready_at − started_at and the pipeline span', function () {
+        Carbon::setTestNow(Carbon::parse('2026-10-21 10:00:00', 'UTC'));
         [, , $pet] = ppFamily();
         $pet->forceFill(['preparation_started_at' => now()->subMinutes(7)->subSeconds(5), 'preparation_ready_at' => now()])->saveQuietly();
         $image = ppStored($pet);
