@@ -429,6 +429,30 @@ describe('ChildDetailScreen', () => {
     spy.mockRestore();
   });
 
+  it('M5-T05b: »Kako skrbim za: [ime]« opens the child\'s care guide in the parent\'s wording; none from an older server', async () => {
+    const named = familyFromDashboard(
+      makeScoredDashboard([LUKA], [makeFamilyPet({ id: 7, name: 'Luna', caretakers: [{ child_id: 2, contract_signed: true }] })]) as never,
+    ) as FamilyOverview;
+    const { unmount } = renderWithQuery(<ChildDetailScreen child={LUKA} family={named} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.queryByTestId('detail-care-guide')).toBeNull();
+    const button = screen.getByTestId('detail-care-guide-open');
+    expect(button).toHaveTextContent('Kako skrbim za: ⁨Luna⁩');
+    fireEvent.press(button);
+    expect(screen.getByTestId('detail-care-guide-title')).toHaveTextContent('Kako skrbim za: ⁨Luna⁩');
+    expect(screen.getByTestId('detail-care-guide-food')).toHaveTextContent(/Vaš otrok ga nahrani v teh časih/);
+    fireEvent.press(screen.getByTestId('detail-care-guide-close'));
+    expect(screen.queryByTestId('detail-care-guide')).toBeNull();
+    unmount();
+
+    const older = familyFromDashboard(
+      makeScoredDashboard([LUKA], [makeFamilyPet({ id: 7, care_guide: undefined, caretakers: [{ child_id: 2, contract_signed: true }] })]) as never,
+    ) as FamilyOverview;
+    renderWithQuery(<ChildDetailScreen child={LUKA} family={older} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.queryByTestId('detail-care-guide-open')).toBeNull();
+  });
+
   it('no album link while the pet has no media', async () => {
     renderWithQuery(<ChildDetailScreen child={LUKA} family={FAMILY} onBack={jest.fn()} />);
     await flush();

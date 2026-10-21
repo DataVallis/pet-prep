@@ -556,6 +556,8 @@ export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetR
     media: makeMedia(),
     // M5-T06: ready.
     preparation: makePreparation(),
+    // M5-T05b: the care guide (same block as the child state).
+    care_guide: makeCareGuide() as unknown as FamilyPetRaw['care_guide'],
     traffic_light: { color: 'green', reasons: [] },
     care_score: { score: null, done: 0, expected: 0, illnesses: 0, since: '2026-10-01T08:00:00+00:00' },
     today: {

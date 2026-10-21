@@ -2,7 +2,8 @@
  * M5-T05 — the care guide card »Kako skrbim za …« / "How I care for …" (APP_REFINEMENT_SPEC §5).
  * Dark glass bottom sheet like `PetProfileSheet`; one block per rule in reading order (each
  * block is one screen-reader element: label + sentences), scrolls with large fonts, close ≥ 44 pt.
- * Every number comes from the server's `care_guide` (`careGuide.ts`).
+ * Every number comes from the server's `care_guide` (`careGuide.ts`). M5-T05b: the parent's child /
+ * pet detail opens the same sheet with `audience="parent"` (the parent's wording).
  */
 
 import { useContext } from 'react';
@@ -14,22 +15,24 @@ import { X } from 'lucide-react-native';
 import { Text } from '@/components/ui/Text';
 import { t } from '@/i18n';
 import { MIN_TOUCH, alpha, dark, fonts, palette, radius, tightTracking } from '@/theme';
-import { careGuideSections, careGuideTitle, type CareGuide } from './careGuide';
+import { careGuideSections, careGuideTitle, type CareGuide, type CareGuideAudience } from './careGuide';
 
 interface CareGuideSheetProps {
   visible: boolean;
   guide: CareGuide;
   petName: string | null;
   onClose: () => void;
+  /** M5-T05b: `parent` = the parent's wording (child / pet detail); same numbers and sections. */
+  audience?: CareGuideAudience;
   testID?: string;
 }
 
-export default function CareGuideSheet({ visible, guide, petName, onClose, testID = 'care-guide' }: CareGuideSheetProps) {
+export default function CareGuideSheet({ visible, guide, petName, onClose, audience = 'child', testID = 'care-guide' }: CareGuideSheetProps) {
   // Re-render on a language switch (the texts are read at render time).
   useTranslation();
   const bottomInset = useContext(SafeAreaInsetsContext)?.bottom ?? 0;
-  const sections = careGuideSections(guide);
-  const title = careGuideTitle(guide.species, petName);
+  const sections = careGuideSections(guide, audience);
+  const title = careGuideTitle(guide.species, petName, audience);
   return (
     <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose} statusBarTranslucent>
       <View style={styles.backdrop}>
