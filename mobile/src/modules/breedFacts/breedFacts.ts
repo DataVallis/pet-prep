@@ -50,8 +50,10 @@ export function breedFactsBreed(breed: string | null | undefined): BreedType | n
 /** No automatic sheet within this long after the app opened / came back from the background. */
 export const APP_OPEN_QUIET_MS = 10_000;
 /**
- * The sheet waits this long after the newest care success: the HUD's 3 s toast (`TOAST_MS`) and
- * the filling meter come first. Every newer success restarts the wait.
+ * The sheet waits at least this long after the newest care success (the filling meter comes
+ * first); every newer success restarts the wait. M5-T03: it also waits while a HUD message is
+ * on screen or queued (`messageQueue.ts`, ≥ 2.5 s + 60 ms per character) — the HUD passes an
+ * open message as `overlayOpen`, so the card opens only after the queue is empty.
  */
 export const CARE_SETTLE_MS = 3_500;
 /** A care success older than this no longer makes the moment calm (the child moved on). */

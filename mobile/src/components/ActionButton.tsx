@@ -1,5 +1,5 @@
-import type { ReactNode } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { useEffect, useRef, type ReactNode } from 'react';
+import { Animated, Easing, Pressable, StyleSheet, View } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { alpha, palette } from '@/theme';
 import { toDockHint, type DockHint } from '@/modules/childPet/dockHint';
@@ -37,7 +37,38 @@ export interface ActionButtonProps {
   accessibilityHint?: string;
   /** Numeric hint (walk counter "4.857/4.000"): one line that shrinks, never wraps. */
   hintSingleLine?: boolean;
+  /**
+   * M5-T01: a gentle pulse (scale 1 → 1.08, ~1.2 s) — "Pelji ven" in the last 30 min. Pass
+   * false when the system's reduce motion is on; never pulses while disabled.
+   */
+  pulse?: boolean;
   testID?: string;
+}
+
+const PULSE_SCALE = 1.08;
+const PULSE_HALF_MS = 600;
+
+/** The scale of a gently pulsing button (1 when not pulsing). */
+function usePulse(active: boolean): Animated.Value {
+  const scale = useRef(new Animated.Value(1)).current;
+  useEffect(() => {
+    if (!active) {
+      scale.setValue(1);
+      return;
+    }
+    const loop = Animated.loop(
+      Animated.sequence([
+        Animated.timing(scale, { toValue: PULSE_SCALE, duration: PULSE_HALF_MS, easing: Easing.inOut(Easing.ease), useNativeDriver: true }),
+        Animated.timing(scale, { toValue: 1, duration: PULSE_HALF_MS, easing: Easing.inOut(Easing.ease), useNativeDriver: true }),
+      ]),
+    );
+    loop.start();
+    return () => {
+      loop.stop();
+      scale.setValue(1);
+    };
+  }, [active, scale]);
+  return scale;
 }
 
 /**
@@ -54,12 +85,16 @@ export default function ActionButton({
   compact,
   accessibilityHint,
   hintSingleLine,
+  pulse,
   testID,
 }: ActionButtonProps) {
   const blocked = disabled === true || busy === true;
   const dock = toDockHint(hint);
+  const pulsing = pulse === true && disabled !== true;
+  const scale = usePulse(pulsing);
   return (
     <View style={[styles.container, compact && styles.containerCompact]} testID={testID ? `${testID}-slot` : undefined}>
+      <Animated.View style={{ transform: [{ scale }] }} testID={testID && pulsing ? `${testID}-pulse` : undefined}>
       <Pressable
         testID={testID}
         onPress={onPress}
@@ -78,6 +113,7 @@ export default function ActionButton({
       >
         {icon}
       </Pressable>
+      </Animated.View>
 
       {/* Visible texts are hidden from the screen reader: the Pressable's label says it all. */}
       <View

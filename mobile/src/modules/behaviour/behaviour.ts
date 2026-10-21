@@ -236,13 +236,16 @@ export function afterResolveChewing(b: ChildBehaviour): ChildBehaviour {
 // ── Texts (child) ─────────────────────────────────────────────
 
 /**
- * Child texts (`behaviour:child`, M1-18): `takeOutIn` / `takeOutAt` are the calm countdown
- * above the dock, `hintNow` the short hint under the button, `cleanChewing` the hint under
- * the disabled "Očisti" when only a slipper is open.
+ * Child texts (`behaviour:child`, M1-18): `takeOutIn` / `takeOutAt` are the deadline line
+ * above the dock (M5-T01: "Kuža mora ven v ~1 h 20 min." + `takeOutHowTo`), `nextTakeOut*` the
+ * "next time" line of the take-out confirmation, `hintNow` the short hint under the button,
+ * `cleanChewing` the hint under the disabled "Očisti" when only a slipper is open.
  */
 export const BEHAVIOUR_STRINGS = strings('behaviour', 'child', {
   takeOutIn: (duration: string) => t('behaviour:child.takeOutIn', { duration }),
   takeOutAt: (when: string) => t('behaviour:child.takeOutAt', { when }),
+  nextTakeOutIn: (duration: string) => t('behaviour:child.nextTakeOutIn', { duration }),
+  nextTakeOutAt: (when: string) => t('behaviour:child.nextTakeOutAt', { when }),
 });
 
 /** Every scene has a caption and a screen-reader label (compile-time check). */
@@ -275,12 +278,34 @@ export interface TakeOutCountdown {
   hint: string | DockHint;
   /** The puppy should go out now (the accident is due / overdue). */
   due: boolean;
+  /**
+   * M5-T01 (spec §2): colour of the clock — `calm` green (mint) → `soon` orange → `urgent`
+   * red (last {@link TAKE_OUT_URGENT_MIN} min and overdue; the "Pelji ven" button pulses).
+   */
+  level: TakeOutLevel;
+  /** "Pritisni »Pelji ven«, preden se čas izteče." under the deadline (null when due — the line says it). */
+  howTo: string | null;
+}
+
+export type TakeOutLevel = 'calm' | 'soon' | 'urgent';
+
+/** Last 30 min (and overdue): red clock + gently pulsing button (David 2026-10-21). */
+export const TAKE_OUT_URGENT_MIN = 30;
+/** Orange from 60 min left, or from the last half of the hold time when that is longer (Claude's proposal, 2026-10-21). */
+export const TAKE_OUT_SOON_MIN = 60;
+
+/** Minutes left (server time) + the hold time → colour of the clock. */
+export function takeOutLevel(minutesLeft: number, holdHours: number): TakeOutLevel {
+  if (minutesLeft <= TAKE_OUT_URGENT_MIN) return 'urgent';
+  const soon = Math.max(TAKE_OUT_SOON_MIN, (holdHours * 60) / 2);
+  return minutesLeft <= soon ? 'soon' : 'calm';
 }
 
 /**
- * Countdown to the next accident in SERVER time (`serverNowMs` = device clock + skew).
- * Under 3 h: "čez ~1 h 20 min"; later (quiet hours in between, a long hold): "ob 14:30"
- * / "jutri ob 07:10" in the family clock; due: a calm "Kuža bi rad šel ven."
+ * Deadline for "Pelji ven" in SERVER time (`serverNowMs` = device clock + skew). M5-T01: the
+ * clock is a deadline for the child's action, not a countdown to an event.
+ * Under 3 h: "Kuža mora ven v ~1 h 20 min."; later (quiet hours in between, a long hold):
+ * "najkasneje ob 14:30" / "jutri ob 07:10" in the family clock; due: a calm "Kuža bi rad šel ven."
  */
 export function takeOutCountdown(clock: TakeOutClock, serverNowMs: number, timezone: string | null): TakeOutCountdown | null {
   const dueMs = Date.parse(clock.next_due_at);
@@ -288,17 +313,35 @@ export function takeOutCountdown(clock: TakeOutClock, serverNowMs: number, timez
   const minutes = (dueMs - serverNowMs) / 60_000;
   // Under a minute left: "~1 min" would be a race — the puppy simply wants out now.
   if (minutes < 1) {
-    return { line: BEHAVIOUR_STRINGS.takeOutNow, hint: BEHAVIOUR_STRINGS.hintNow, due: true };
+    return { line: BEHAVIOUR_STRINGS.takeOutNow, hint: BEHAVIOUR_STRINGS.hintNow, due: true, level: 'urgent', howTo: null };
   }
+  const level = takeOutLevel(minutes, clock.hold_hours);
+  const howTo = BEHAVIOUR_STRINGS.takeOutHowTo;
   if (minutes <= TAKE_OUT_DURATION_MAX_MIN) {
     const d = durationText(minutes);
-    return { line: BEHAVIOUR_STRINGS.takeOutIn(d), hint: d, due: false };
+    return { line: BEHAVIOUR_STRINGS.takeOutIn(d), hint: d, due: false, level, howTo };
   }
   const nowIso = new Date(serverNowMs).toISOString();
   const when = whenText(clock.next_due_at, nowIso, timezone);
   const dock = dockWhen(clock.next_due_at, nowIso, timezone);
   if (when === null || dock === null) return null;
-  return { line: BEHAVIOUR_STRINGS.takeOutAt(when), hint: dock.day === null ? dock.text : dock, due: false };
+  return { line: BEHAVIOUR_STRINGS.takeOutAt(when), hint: dock.day === null ? dock.text : dock, due: false, level, howTo };
+}
+
+/**
+ * "Naslednjič čez ~2 h." / "Naslednjič jutri ob 07:10." for the take-out confirmation (M5-T01,
+ * spec §4), from the server state that came with the answer — null without a clock or time.
+ */
+export function nextTakeOutText(clock: TakeOutClock | null, serverNowIso: string | null, timezone: string | null): string | null {
+  if (clock === null || serverNowIso === null) return null;
+  const dueMs = Date.parse(clock.next_due_at);
+  const nowMs = Date.parse(serverNowIso);
+  if (Number.isNaN(dueMs) || Number.isNaN(nowMs)) return null;
+  const minutes = (dueMs - nowMs) / 60_000;
+  if (minutes < 1) return null;
+  if (minutes <= TAKE_OUT_DURATION_MAX_MIN) return BEHAVIOUR_STRINGS.nextTakeOutIn(durationText(minutes));
+  const when = whenText(clock.next_due_at, serverNowIso, timezone);
+  return when === null ? null : BEHAVIOUR_STRINGS.nextTakeOutAt(when);
 }
 
 // ── Texts (parent) ────────────────────────────────────────────

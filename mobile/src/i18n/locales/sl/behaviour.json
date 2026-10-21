@@ -11,9 +11,12 @@
       "resolve_chewing": "Ni več kaj pospraviti."
     },
     "takeOutNotNeeded": "Kuža zdaj ne rabi ven.",
-    "takeOutIn": "Kuža bo moral ven čez {{duration}}",
-    "takeOutAt": "Kuža bo moral ven {{when}}",
+    "takeOutIn": "Kuža mora ven v {{duration}}.",
+    "takeOutAt": "Kuža mora ven najkasneje {{when}}.",
     "takeOutNow": "Kuža bi rad šel ven.",
+    "takeOutHowTo": "Pritisni »Pelji ven«, preden se čas izteče.",
+    "nextTakeOutIn": "Naslednjič čez {{duration}}.",
+    "nextTakeOutAt": "Naslednjič {{when}}.",
     "hintNow": "zdaj",
     "scene": {
       "accident": "Ups, luža! Kuža je bil premajhen, da bi zdržal.",

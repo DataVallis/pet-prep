@@ -5,7 +5,7 @@
  * "Kuža je vesel" + hearts for 30 minutes (timer), live invitations via the Echo handler,
  * a 422 closing the layer with a kind text, and a lock closing it.
  */
-import { act, fireEvent, screen } from '@testing-library/react-native';
+import { act, fireEvent, screen, within } from '@testing-library/react-native';
 
 import { ApiError, api } from '@/api/client';
 import ChildHudScreen from '@/screens/ChildHudScreen';
@@ -269,7 +269,7 @@ describe('ChildHudScreen — play & cuddle (M5-R05)', () => {
     await flush();
     expect(playWithPet).toHaveBeenCalledWith('cuddle');
     expect(screen.queryByTestId('play-overlay')).toBeNull();
-    expect(screen.getByTestId('hud-toast').props.children.props.children).toBe('Kuža spi do 20:00. Potem se igrata.');
+    expect(within(screen.getByTestId('hud-toast')).getByText('Kuža spi do 20:00. Potem se igrata.')).toBeTruthy();
     expect(isDisabled('hud-play-open')).toBe(true);
     // The disabled chip now knows when the dog wakes up.
     expect(screen.getByTestId('hud-play-blocked').props.children).toBe('Kuža spi do 20:00. Potem se igrata.');
