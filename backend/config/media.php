@@ -75,6 +75,14 @@ return [
         'play' => ['playing', 'idle'],
         'wand' => ['idle', 'playing'],
     ],
+    // M5-T10: + the phase clips of the game (PetPhaseClip groups) for a pet that gets
+    // them (MediaEntitlementService::phaseClipsFor — state media version 2); others keep
+    // the list above. `school` = the school's clips (not a start condition, §13).
+    'game_phase_groups' => [
+        'play' => ['ball'],
+        'wand' => ['wand'],
+        'school' => ['school'],
+    ],
 
     /*
     | M5-T06 (David 2026-10-20, APP_REFINEMENT_SPEC §13): the ORDER the entitled
@@ -111,6 +119,27 @@ return [
         'keyframe_profile' => env('AI_KEYFRAME_PROFILE', 'nano_banana_pro_edit'),
         // Order = queue order, after every first-minutes clip (preparation_essentials).
         'transitions' => ['idle_to_sleeping', 'sleeping_to_idle'],
+        /*
+        | M5-T09 / M5-T10 (APP_REFINEMENT_SPEC §3 / §10, David 2026-10-21): PHASE clips of
+        | the school (per command: attention → performing → success) and the games (dog
+        | ball: waiting → running → fetching; cat wand: stalking → pouncing → catching),
+        | from / to POSE images (Nano Banana Pro Edit of the reference image). Order =
+        | queue order after the transitions: school, then the games (§13). A group a pet
+        | cannot use is skipped (school: training on; ball: dog; wand: cat) —
+        | MediaEntitlementService::phaseClipsFor(). Remove a group here = it is not made.
+        */
+        'phase_clips' => ['school', 'ball', 'wand'],
+        /*
+        | Clip length per purpose (seconds; David 2026-10-21): state loops and transitions
+        | 5 s, school and game phase clips 3 s (−40 % at the same model). The video profile
+        | must accept the length (`durations`); otherwise its own `duration_seconds` is used.
+        */
+        'clip_seconds' => [
+            'state' => 5,
+            'transition' => 5,
+            'school' => 3,
+            'game' => 3,
+        ],
     ],
 
     /*

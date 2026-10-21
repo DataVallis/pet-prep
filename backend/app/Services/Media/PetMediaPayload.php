@@ -31,6 +31,10 @@ final class PetMediaPayload
         public readonly array $loops = [],
         /** M5-T08: the pet gets key images / loops / transitions (MediaEntitlementService::usesStateMedia) */
         public readonly bool $stateMedia = false,
+        /** @var array<string, string> M5-T09 / T10: pose (sit, come, place, door, empty, crouch, catch) => signed URL */
+        public readonly array $poses = [],
+        /** @var array<string, string> M5-T09 / T10: phase clip (school_sit_attention, ball_running, …) => signed URL */
+        public readonly array $phases = [],
     ) {}
 
     /**
@@ -44,7 +48,7 @@ final class PetMediaPayload
     }
 
     /**
-     * @return array{status: string, reference_image_url: string|null, videos: object, current_video_url: string|null, states: list<string>, expires_at: string|null, keyframes: object, transitions: object, loops: list<string>, state_media: bool}
+     * @return array{status: string, reference_image_url: string|null, videos: object, current_video_url: string|null, states: list<string>, expires_at: string|null, keyframes: object, transitions: object, loops: list<string>, state_media: bool, poses: object, phases: object}
      */
     public function toArray(): array
     {
@@ -106,6 +110,24 @@ final class PetMediaPayload
              * false = the older set (substitute clips sick → sleeping → idle).
              */
             'state_media' => $this->stateMedia,
+            /**
+             * M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+             * starts or ends in (sit, come, place, door, empty = the room without the dog;
+             * cat: crouch, catch). The standing pose is the reference image. Shown while a
+             * phase clip is missing and in picture mode. Always an object.
+             *
+             * @var array<string, string>
+             */
+            'poses' => (object) $this->poses,
+            /**
+             * M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+             * its last frame — school `school_<command>_<attention|performing|success>`, dog
+             * ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+             * Always an object.
+             *
+             * @var array<string, string>
+             */
+            'phases' => (object) $this->phases,
         ];
     }
 }

@@ -54,7 +54,7 @@ class BackfillPetMediaCommand extends Command
             $upgrade = (bool) $this->option('state-media');
             $plan = $media->planMissing($pet, $upgrade);
 
-            if ($plan['image'] === 'ok' && $plan['videos'] === [] && $plan['keyframes'] === [] && $plan['transitions'] === []) {
+            if ($plan['image'] === 'ok' && $plan['videos'] === [] && $plan['keyframes'] === [] && $plan['transitions'] === [] && $plan['poses'] === [] && $plan['phases'] === []) {
                 continue;
             }
 
@@ -79,7 +79,7 @@ class BackfillPetMediaCommand extends Command
                 $pet->breed_type->value,
                 $entitlements->tierFor($pet),
                 $plan['image'],
-                implode(', ', [...$plan['videos'], ...array_map(fn ($k) => "key:{$k}", $plan['keyframes']), ...$plan['transitions']]) ?: '—',
+                implode(', ', [...$plan['videos'], ...array_map(fn ($k) => "key:{$k}", $plan['keyframes']), ...$plan['transitions'], ...array_map(fn ($p) => "pose:{$p}", $plan['poses']), ...$plan['phases']]) ?: '—',
                 sprintf('$%.2f', $plan['cost_usd']),
                 $status,
             ];

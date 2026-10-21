@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Enums\PetPhaseClip;
+use App\Enums\PetPose;
 use App\Enums\PetStateEnum;
 use App\Enums\PetTransition;
 use Illuminate\Database\Eloquent\Builder;
@@ -33,6 +35,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * reference image of the same stage, the start / end frame of that state's
  * loop) and `transition` (a clip from one pose to another, state = PetTransition).
  * isImage() / isVideo() keep meaning the reference image / a state video.
+ *
+ * M5-T09 / M5-T10 kinds: `pose` (a pose image a school / game phase clip
+ * starts or ends in — an edit of the reference image like a key image; state =
+ * PetPose) and `phase` (a 3 s school / game phase clip played once; state =
+ * PetPhaseClip). Key images and poses are "pose stills" (isPoseStill()),
+ * transitions and phase clips "pose clips" (isPoseClip(): start / end frame).
  *
  * @property int $id
  * @property int|null $pet_id
@@ -68,6 +76,12 @@ class PetMedia extends Model
 
     /** M5-T08: a TRANSITION clip between two poses (state = PetTransition value). */
     public const KIND_TRANSITION = 'transition';
+
+    /** M5-T09 / T10: a POSE image of a phase clip (state = PetPose value). */
+    public const KIND_POSE = 'pose';
+
+    /** M5-T09 / T10: a school / game PHASE clip, played once (state = PetPhaseClip value). */
+    public const KIND_PHASE = 'phase';
 
     /** M5-T08 `recipe`: a state video made from its key image only (no end frame). */
     public const RECIPE_POSE = 'pose';
@@ -174,27 +188,78 @@ class PetMedia extends Model
         return $this->kind === self::KIND_TRANSITION;
     }
 
-    /** A picture (reference image or a key image): sync image call, image mimes. */
+    public function isPose(): bool
+    {
+        return $this->kind === self::KIND_POSE;
+    }
+
+    public function isPhase(): bool
+    {
+        return $this->kind === self::KIND_PHASE;
+    }
+
+    /** A picture (reference image, key image or pose image): sync image call, image mimes. */
     public function isStill(): bool
     {
-        return $this->isImage() || $this->isKeyframe();
+        return $this->isImage() || $this->isKeyframe() || $this->isPose();
     }
 
-    /** A clip (state video or transition): fal queue + webhook, video mimes. */
+    /** An EDIT of the reference image (key image or pose image) — GeneratePetKeyframe. */
+    public function isPoseStill(): bool
+    {
+        return $this->isKeyframe() || $this->isPose();
+    }
+
+    /** A clip (state video, transition, phase clip): fal queue + webhook, video mimes. */
     public function isClip(): bool
     {
-        return $this->isVideo() || $this->isTransition();
+        return $this->isVideo() || $this->isTransition() || $this->isPhase();
     }
 
-    /** The state of a video / key image slot (null for the reference image and transitions). */
+    /** A clip from a start frame to an end frame (transition or phase clip). */
+    public function isPoseClip(): bool
+    {
+        return $this->isTransition() || $this->isPhase();
+    }
+
+    /** The state of a video / key image slot (null for every other kind). */
     public function petState(): ?PetStateEnum
     {
-        return $this->state !== null && ! $this->isTransition() ? PetStateEnum::tryFrom($this->state) : null;
+        return $this->state !== null && ($this->isVideo() || $this->isKeyframe()) ? PetStateEnum::tryFrom($this->state) : null;
     }
 
     public function transition(): ?PetTransition
     {
         return $this->isTransition() && $this->state !== null ? PetTransition::tryFrom($this->state) : null;
+    }
+
+    public function pose(): ?PetPose
+    {
+        return $this->isPose() && $this->state !== null ? PetPose::tryFrom($this->state) : null;
+    }
+
+    public function phaseClip(): ?PetPhaseClip
+    {
+        return $this->isPhase() && $this->state !== null ? PetPhaseClip::tryFrom($this->state) : null;
+    }
+
+    /**
+     * The start and end frames of a pose clip: PetStateEnum (a state pose, idle =
+     * the reference image) or PetPose (null = the reference image). Null for other kinds.
+     *
+     * @return array{0: PetStateEnum|PetPose|null, 1: PetStateEnum|PetPose|null}|null
+     */
+    public function frames(): ?array
+    {
+        if (($transition = $this->transition()) !== null) {
+            return [$transition->fromState(), $transition->toState()];
+        }
+
+        if (($clip = $this->phaseClip()) !== null) {
+            return [$clip->startPose(), $clip->endPose()];
+        }
+
+        return null;
     }
 
     /** A stored file exists (possibly of an older generation while a new one is pending). */
@@ -215,6 +280,8 @@ class PetMedia extends Model
             self::KIND_IMAGE => 'reference image',
             self::KIND_KEYFRAME => "{$this->state} key image",
             self::KIND_TRANSITION => "{$this->state} transition",
+            self::KIND_POSE => "{$this->state} pose image",
+            self::KIND_PHASE => "{$this->state} phase clip",
             default => "{$this->state} video",
         };
     }
@@ -238,14 +305,14 @@ class PetMedia extends Model
     }
 
     /**
-     * M5-T08: state videos and transitions (everything that goes through the fal queue + webhook).
+     * M5-T08: state videos, transitions and (M5-T09 / T10) phase clips (everything that goes through the fal queue + webhook).
      *
      * @param  Builder<PetMedia>  $query
      * @return Builder<PetMedia>
      */
     public function scopeClips(Builder $query): Builder
     {
-        return $query->whereIn('kind', [self::KIND_VIDEO, self::KIND_TRANSITION]);
+        return $query->whereIn('kind', [self::KIND_VIDEO, self::KIND_TRANSITION, self::KIND_PHASE]);
     }
 
     /**

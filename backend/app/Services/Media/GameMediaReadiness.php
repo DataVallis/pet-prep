@@ -2,6 +2,7 @@
 
 namespace App\Services\Media;
 
+use App\Enums\PetPhaseClip;
 use App\Enums\PetStateEnum;
 use App\Models\Pet;
 use App\Models\PetMedia;
@@ -27,6 +28,16 @@ use Illuminate\Support\Collection;
  *   `media_status = disabled`: AI media off, a breed without appearance data)
  *   never will: its games use the drawn stage and are always ready.
  *
+ * - M5-T10 (APP_REFINEMENT_SPEC §10 long term): a pet that gets phase clips
+ *   (MediaEntitlementService::phaseClipsFor — state media version 2, the switch
+ *   on) needs the PHASE clips of its game instead (`media.game_phase_groups`:
+ *   play → ball (dog; a cat's play is cuddles only → the old list), wand → wand).
+ *   Every other pet (v1, free set, switch off) keeps the list above — the
+ *   switch off never leaves a game disabled for clips that will not come.
+ * - M5-T09: `school` = every school phase clip of the pet (§3: school readiness
+ *   = all its clips). Not a start condition — practice works without clips; the
+ *   app shows the pose and »Šola se še pripravlja« while preparation runs.
+ *
  * Pure read; no personal data.
  */
 class GameMediaReadiness
@@ -36,6 +47,9 @@ class GameMediaReadiness
 
     /** The cat's feather wand. */
     public const WAND = 'wand';
+
+    /** M5-T09: the school (informational — never blocks a session). */
+    public const SCHOOL = 'school';
 
     public function __construct(
         private readonly MediaEntitlementService $entitlements,
@@ -75,7 +89,7 @@ class GameMediaReadiness
         }
 
         $stored = $slots
-            ->filter(fn (PetMedia $m) => $m->isVideo() && $m->isServable())
+            ->filter(fn (PetMedia $m) => ($m->isVideo() || $m->isPhase()) && $m->isServable())
             ->map(fn (PetMedia $m) => (string) $m->state)
             ->all();
 
@@ -89,6 +103,17 @@ class GameMediaReadiness
      */
     public function requiredClips(Pet $pet, string $game): array
     {
+        // M5-T10: the game's phase clips for a pet that gets them (v2, switch on).
+        $groups = array_map('strval', (array) config("media.game_phase_groups.{$game}", []));
+        $phases = array_values(array_map(fn (PetPhaseClip $c) => $c->value, array_filter(
+            $this->entitlements->phaseClipsFor($pet),
+            fn (PetPhaseClip $c) => in_array($c->group(), $groups, true),
+        )));
+
+        if ($phases !== [] || $game === self::SCHOOL) {
+            return $phases;
+        }
+
         $entitled = array_map(fn (PetStateEnum $s) => $s->value, $this->entitlements->videoStatesFor($pet));
         $clips = array_map('strval', (array) config("media.game_clips.{$game}", []));
 

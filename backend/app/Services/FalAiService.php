@@ -6,6 +6,7 @@ use App\Enums\AiCallFailure;
 use App\Enums\AiSpendPurpose;
 use App\Enums\BreedType;
 use App\Enums\LifeStage;
+use App\Enums\PetPhaseClip;
 use App\Enums\PetStateEnum;
 use App\Enums\PetTransition;
 use App\Enums\Species;
@@ -1351,7 +1352,24 @@ class FalAiService
     {
         $prompt = $this->prompts->transitionVideoPrompt($breedKey, $transition, $traits, $stage);
 
-        return $this->submitClip($this->profiles->stateVideo(), $breedKey, $prompt, $startImageUrl, $endImageUrl, $petId, $petMediaId);
+        return $this->submitClip($this->profiles->clipVideo('transition'), $breedKey, $prompt, $startImageUrl, $endImageUrl, $petId, $petMediaId);
+    }
+
+    /**
+     * M5-T09 / T10: a school / game PHASE clip (3 s — media.state_media.clip_seconds,
+     * David 2026-10-21): start = the clip's start pose, end = its end pose (Kling 3.0 Pro
+     * `end_image_url`). Played once by the app, held on the last frame.
+     *
+     * @param  array<string, string>  $traits
+     * @return array{request_id: string, profile: string, duration_seconds: int}
+     *
+     * @throws AiCallException
+     */
+    public function submitPhaseClipFor(string $breedKey, array $traits, ?LifeStage $stage, PetPhaseClip $clip, string $startImageUrl, string $endImageUrl, ?int $petId = null, ?int $petMediaId = null): array
+    {
+        $prompt = $this->prompts->phaseVideoPrompt($breedKey, $clip, $traits, $stage);
+
+        return $this->submitClip($this->profiles->clipVideo($clip->purpose()), $breedKey, $prompt, $startImageUrl, $endImageUrl, $petId, $petMediaId);
     }
 
     /**

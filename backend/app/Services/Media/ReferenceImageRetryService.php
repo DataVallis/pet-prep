@@ -94,8 +94,9 @@ class ReferenceImageRetryService
     {
         // M5-T08: transitions and key images are retried like state videos.
         // M5-T08b: while state media is switched off in /admin, only state videos.
+        // M5-T09 / T10: pose images and phase clips too.
         $kinds = $this->media->stateMediaEnabled()
-            ? [PetMedia::KIND_VIDEO, PetMedia::KIND_TRANSITION, PetMedia::KIND_KEYFRAME]
+            ? [PetMedia::KIND_VIDEO, PetMedia::KIND_TRANSITION, PetMedia::KIND_KEYFRAME, PetMedia::KIND_POSE, PetMedia::KIND_PHASE]
             : [PetMedia::KIND_VIDEO];
 
         return PetMedia::query()
@@ -175,8 +176,10 @@ class ReferenceImageRetryService
         }
 
         foreach ($this->videoRetryCandidates()->limit(max(0, $limit - $images - $stages))->get() as $slot) {
-            $keyframe = $slot->isKeyframe();
-            $cost = $this->sharedLookCovered($slot->look_media_id, $seenLookRows) ? 0.0 : ($keyframe ? $this->media->keyframeCostUsd() : $videoCost);
+            $keyframe = $slot->isPoseStill();
+            $clip = $slot->phaseClip();
+            $cost = $this->sharedLookCovered($slot->look_media_id, $seenLookRows) ? 0.0
+                : ($keyframe ? $this->media->keyframeCostUsd() : ($clip !== null ? $this->media->phaseClipCostUsd($clip) : $videoCost));
 
             if ($cost > 0 && $this->guard->refusalFor($planned + $cost, $keyframe ? AiSpendPurpose::ReferenceImage : AiSpendPurpose::StateVideo) !== null) {
                 break;

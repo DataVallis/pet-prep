@@ -4,6 +4,8 @@ namespace App\Services\Media;
 
 use App\Enums\AiCallFailure;
 use App\Enums\LifeStage;
+use App\Enums\PetPhaseClip;
+use App\Enums\PetPose;
 use App\Enums\PetStateEnum;
 use App\Enums\PetTransition;
 use App\Events\PetUpdated;
@@ -90,7 +92,7 @@ class PetMediaService
     /**
      * The slot row, created as `pending` if missing (race-safe: insert-or-ignore on the unique slot index).
      */
-    public function slot(Pet $pet, string $kind, PetStateEnum|PetTransition|null $state): PetMedia
+    public function slot(Pet $pet, string $kind, PetStateEnum|PetTransition|PetPose|PetPhaseClip|null $state): PetMedia
     {
         $query = PetMedia::query()->where('pet_id', $pet->id)->where('kind', $kind)
             ->when($state === null, fn ($q) => $q->whereNull('state'), fn ($q) => $q->where('state', $state->value));
@@ -278,7 +280,7 @@ class PetMediaService
             if ($loops && $state !== PetStateEnum::Idle && $this->poseImage($pet, $state, $image) === null) {
                 // The loop starts and ends on the state's key image: that comes first
                 // (in the same preparation order); the video follows once it is stored.
-                [$key, $dispatched] = $this->queueKeyframe($pet, $state, $image, $includeFailed);
+                [$key, $dispatched] = $this->queuePoseStill($pet, PetMedia::KIND_KEYFRAME, $state, $image, $includeFailed);
                 $queued += $dispatched ? 1 : 0;
                 $essentialWaiting = $essentialWaiting || (in_array($state->value, $essentials, true) && $key->isInFlight());
 
@@ -301,6 +303,26 @@ class PetMediaService
             }
 
             if ($this->queueClip($this->slot($pet, PetMedia::KIND_TRANSITION, $transition), $image, $includeFailed)) {
+                $queued++;
+            }
+        }
+
+        // M5-T09 / T10 (§13 order): school, then game phase clips — after the first-minutes
+        // clips, like the transitions. Each clip's pose images first (in clip order), the
+        // clip once both of its frames are stored.
+        foreach ($essentialWaiting ? [] : $this->entitlements->phaseClipsFor($pet) as $clip) {
+            $framesReady = true;
+
+            foreach ([$clip->startPose(), $clip->endPose()] as $pose) {
+                if ($pose === null || $this->frameImage($pet, $pose, $image) !== null) {
+                    continue;
+                }
+                $framesReady = false;
+                [, $dispatched] = $this->queuePoseStill($pet, PetMedia::KIND_POSE, $pose, $image, $includeFailed);
+                $queued += $dispatched ? 1 : 0;
+            }
+
+            if ($framesReady && $this->queueClip($this->slot($pet, PetMedia::KIND_PHASE, $clip), $image, $includeFailed)) {
                 $queued++;
             }
         }
@@ -332,15 +354,16 @@ class PetMediaService
     }
 
     /**
-     * M5-T08: queue the key image of a state when it is missing or older than
-     * the current reference image. Pending slots are (re)dispatched — the job
-     * is unique per slot and the claim makes a duplicate harmless.
+     * M5-T08: queue the key image of a state (M5-T09 / T10: or a pose image of a
+     * phase clip) when it is missing or older than the current reference image.
+     * Pending slots are (re)dispatched — the job is unique per slot and the claim
+     * makes a duplicate harmless.
      *
-     * @return array{0: PetMedia, 1: bool} the key image slot, whether a job was dispatched
+     * @return array{0: PetMedia, 1: bool} the slot, whether a job was dispatched
      */
-    private function queueKeyframe(Pet $pet, PetStateEnum $state, PetMedia $image, bool $includeFailed): array
+    private function queuePoseStill(Pet $pet, string $kind, PetStateEnum|PetPose $state, PetMedia $image, bool $includeFailed): array
     {
-        $key = $this->slot($pet, PetMedia::KIND_KEYFRAME, $state);
+        $key = $this->slot($pet, $kind, $state);
 
         if ($key->status === PetMedia::STATUS_RUNNING) {
             // QA: a slot waiting for a shared look row (e.g. while the look image was
@@ -392,6 +415,40 @@ class PetMediaService
             && (int) $key->source_generation >= $image->generation ? $key : null;
     }
 
+    /**
+     * M5-T09 / T10: the stored picture of a clip frame made from the CURRENT reference
+     * image — null = the reference image itself (idle pose), a PetStateEnum = that
+     * state's pose (poseImage()), a PetPose = its pose image (ready, not older than the
+     * image). Null while it is missing.
+     */
+    public function frameImage(Pet $pet, PetStateEnum|PetPose|null $frame, ?PetMedia $image = null): ?PetMedia
+    {
+        $image ??= $this->imageSlot($pet);
+
+        if (! $frame instanceof PetPose) {
+            return $this->poseImage($pet, $frame ?? PetStateEnum::Idle, $image);
+        }
+
+        if ($image->status !== PetMedia::STATUS_READY || ! $image->isServable()) {
+            return null;
+        }
+
+        $row = PetMedia::query()->where('pet_id', $pet->id)->where('kind', PetMedia::KIND_POSE)->where('state', $frame->value)->first();
+
+        return $row !== null && $row->status === PetMedia::STATUS_READY && $row->isServable()
+            && (int) $row->source_generation >= $image->generation ? $row : null;
+    }
+
+    /** M5-T09 / T10: is a pose image / phase clip (or key image / transition) part of the pet's set now? */
+    private function wantsPoseMedia(Pet $pet, PetMedia $slot): bool
+    {
+        return match ($slot->kind) {
+            PetMedia::KIND_POSE => in_array($slot->pose(), $this->entitlements->posesFor($pet), true),
+            PetMedia::KIND_PHASE => in_array($slot->phaseClip(), $this->entitlements->phaseClipsFor($pet), true),
+            default => $this->entitlements->usesStateMedia($pet),
+        };
+    }
+
     // ──────────────────────────────────────────────────────────────
     //  Key images (M5-T08, GeneratePetKeyframe)
     // ──────────────────────────────────────────────────────────────
@@ -407,7 +464,8 @@ class PetMediaService
     {
         $slot = PetMedia::find($slotId);
 
-        if ($slot === null || ! $slot->isKeyframe()) {
+        // M5-T09 / T10: pose images of the phase clips take the same path as key images.
+        if ($slot === null || ! $slot->isPoseStill()) {
             return true;
         }
 
@@ -424,17 +482,21 @@ class PetMediaService
 
         $pet = $slot->pet;
         $state = $slot->petState();
+        $pose = $slot->pose();
 
-        if ($pet === null || ! $pet->is_active || $state === null || ! $state->appliesTo($pet->speciesValue())) {
+        if ($pet === null || ! $pet->is_active || ($state === null && $pose === null)
+            || ($state !== null && ! $state->appliesTo($pet->speciesValue()))
+            || ($pose !== null && $pose->species() !== $pet->speciesValue())) {
             if ($slot->status !== PetMedia::STATUS_READY) {
-                $this->fail($slot, null, 'Pet inactive or state not available for the species — not generated.');
+                $this->fail($slot, null, 'Pet inactive or pose not available for the species — not generated.');
             }
 
             return true;
         }
 
         // M5-T08b: a key image only for a pet that uses state media now (left pending otherwise).
-        if (! $this->entitlements->usesStateMedia($pet)) {
+        // M5-T09 / T10: a pose image only while one of the pet's phase clips needs it.
+        if (! $this->wantsPoseMedia($pet, $slot)) {
             return true;
         }
 
@@ -467,7 +529,9 @@ class PetMediaService
 
         try {
             $result = $this->fal->editKeyframe(
-                $this->prompts->keyframePrompt($breedKey, $state, $traits, $pet->life_stage),
+                $pose !== null
+                    ? $this->prompts->posePrompt($breedKey, $pose, $traits, $pet->life_stage)
+                    : $this->prompts->keyframePrompt($breedKey, $state, $traits, $pet->life_stage),
                 $this->falFetchUrl($image),
                 (int) ($dna['seed'] ?? 0),
                 $pet->id,
@@ -476,7 +540,7 @@ class PetMediaService
         } catch (AiCallException $e) {
             $this->syncCost($slot);
             $this->fail($slot, $e->reason, $e->getMessage());
-            Log::warning('PetMediaService: key image not generated', ['pet_id' => $pet->id, 'state' => $state->value, 'reason' => $e->reason->value]);
+            Log::warning('PetMediaService: key / pose image not generated', ['pet_id' => $pet->id, 'state' => $slot->state, 'reason' => $e->reason->value]);
 
             return true;
         }
@@ -504,9 +568,9 @@ class PetMediaService
         $slot = PetMedia::find($slotId);
 
         // M5-T08b: state media switched off (or the pet does not use it) — a queued transition
-        // is not submitted (stays pending; look rows: submitLookVideo).
-        if ($slot !== null && $slot->isTransition() && (! $this->entitlements->stateMediaEnabled(fresh: true)
-            || ($slot->pet !== null && ! $this->entitlements->usesStateMedia($slot->pet)))) {
+        // (M5-T09 / T10: or phase clip) is not submitted (stays pending; look rows: submitLookVideo).
+        if ($slot !== null && $slot->isPoseClip() && (! $this->entitlements->stateMediaEnabled(fresh: true)
+            || ($slot->pet !== null && ! $this->wantsPoseMedia($slot->pet, $slot)))) {
             return true;
         }
 
@@ -532,7 +596,7 @@ class PetMediaService
             return true; // no second paid submit (PR #24 review m1)
         }
 
-        if ($slot->isTransition()) {
+        if ($slot->isPoseClip()) {
             return $this->submitTransition($slot);
         }
 
@@ -613,11 +677,14 @@ class PetMediaService
      * M5-T08: submit a claimed transition slot of a pet with its own media —
      * start = pose of the source state, end = pose of the target state (both
      * from the current reference image). Waits (pending) while a pose is missing.
+     * M5-T09 / T10: phase clips the same way (start / end = their pose images, 3 s).
      */
     private function submitTransition(PetMedia $slot): bool
     {
         $pet = $slot->pet;
         $transition = $slot->transition();
+        $clip = $slot->phaseClip();
+        $frames = $slot->frames();
 
         if (! $this->entitlements->stateMediaEnabled(fresh: true)) {
             $slot->update(['status' => PetMedia::STATUS_PENDING]); // M5-T08b: switched off — release the claim, no fal call
@@ -625,15 +692,15 @@ class PetMediaService
             return true;
         }
 
-        if ($pet === null || ! $pet->is_active || $transition === null) {
-            $this->fail($slot, null, 'Pet inactive or unknown transition — not generated.');
+        if ($pet === null || ! $pet->is_active || $frames === null || ($clip !== null && $clip->species() !== $pet->speciesValue())) {
+            $this->fail($slot, null, 'Pet inactive or unknown transition / phase clip — not generated.');
 
             return true;
         }
 
         $image = $this->imageSlot($pet);
-        $start = $this->poseImage($pet, $transition->fromState(), $image);
-        $end = $this->poseImage($pet, $transition->toState(), $image);
+        $start = $this->frameImage($pet, $frames[0], $image);
+        $end = $this->frameImage($pet, $frames[1], $image);
 
         if ($start === null || $end === null) {
             $slot->update(['status' => PetMedia::STATUS_PENDING]);
@@ -644,7 +711,9 @@ class PetMediaService
         [$breedKey, $traits] = $this->prompts->subjectOf($pet);
 
         try {
-            $submitted = $this->fal->submitTransitionFor($breedKey, $traits, $pet->life_stage, $transition, $this->falFetchUrl($start), $this->falFetchUrl($end), $pet->id, $slot->id);
+            $submitted = $clip !== null
+                ? $this->fal->submitPhaseClipFor($breedKey, $traits, $pet->life_stage, $clip, $this->falFetchUrl($start), $this->falFetchUrl($end), $pet->id, $slot->id)
+                : $this->fal->submitTransitionFor($breedKey, $traits, $pet->life_stage, $transition, $this->falFetchUrl($start), $this->falFetchUrl($end), $pet->id, $slot->id);
         } catch (AiCallException $e) {
             $this->syncCost($slot);
 
@@ -813,6 +882,8 @@ class PetMediaService
         $name = match ($slot->kind) {
             PetMedia::KIND_IMAGE => 'reference',
             PetMedia::KIND_KEYFRAME => 'key-'.$slot->state,
+            // M5-T09 / T10: pose images `pose-<pose>`, phase clips `<group>_<…>` (never a state name).
+            PetMedia::KIND_POSE => 'pose-'.$slot->state,
             default => (string) $slot->state,
         };
         $path = $slot->isLookMedia()
@@ -1033,7 +1104,7 @@ class PetMediaService
         }
 
         // M5-T08b (QA m1): no key image / transition while state media is switched off.
-        if (($slot->isKeyframe() || $slot->isTransition()) && ! $this->entitlements->stateMediaEnabled(fresh: true)) {
+        if (($slot->isPoseStill() || $slot->isPoseClip()) && ! $this->entitlements->stateMediaEnabled(fresh: true)) {
             return false;
         }
 
@@ -1058,6 +1129,18 @@ class PetMediaService
             PetMedia::query()->where('pet_id', $pet->id)
                 ->where(fn ($q) => $q->where(fn ($q) => $q->where('kind', PetMedia::KIND_VIDEO)->where('state', $slot->state))
                     ->orWhere(fn ($q) => $q->where('kind', PetMedia::KIND_TRANSITION)->whereIn('state', $through)))
+                ->get()
+                ->each(fn (PetMedia $dependant) => $this->resetForNewGeneration($dependant, bump: true));
+            GeneratePetKeyframe::dispatch($slot->id);
+
+            return true;
+        }
+
+        if ($slot->isPose()) {
+            // M5-T09 / T10: the phase clips starting or ending in this pose follow the new image.
+            $pose = $slot->pose();
+            $through = array_map(fn (PetPhaseClip $c) => $c->value, array_filter(PetPhaseClip::cases(), fn (PetPhaseClip $c) => $c->startPose() === $pose || $c->endPose() === $pose));
+            PetMedia::query()->where('pet_id', $pet->id)->where('kind', PetMedia::KIND_PHASE)->whereIn('state', $through)
                 ->get()
                 ->each(fn (PetMedia $dependant) => $this->resetForNewGeneration($dependant, bump: true));
             GeneratePetKeyframe::dispatch($slot->id);
@@ -1109,7 +1192,10 @@ class PetMediaService
      * (`upgrade` true) — the admin "Upgrade to state media" / media:backfill
      * --state-media are the only ways an existing pet gets them (M5-T08b).
      *
-     * @return array{image: 'ok'|'stage'|'in_flight'|'download'|'generate', videos: list<string>, keyframes: list<string>, transitions: list<string>, upgrade: bool, cost_usd: float}
+     * M5-T09 / T10: `poses` / `phases` = the pose images and school / game phase clips
+     * that would be made (3 s clips, priced per purpose).
+     *
+     * @return array{image: 'ok'|'stage'|'in_flight'|'download'|'generate', videos: list<string>, keyframes: list<string>, transitions: list<string>, poses: list<string>, phases: list<string>, upgrade: bool, cost_usd: float}
      */
     public function planMissing(Pet $pet, bool $upgradeStateMedia = false): array
     {
@@ -1164,25 +1250,46 @@ class PetMediaService
             }
         }
 
+        $poses = [];
+        $phases = [];
+        foreach ($later ? [] : $this->entitlements->posesFor($planned) as $pose) {
+            if ($missing($slots->first(fn (PetMedia $m) => $m->isPose() && $m->state === $pose->value))) {
+                $poses[] = $pose->value;
+            }
+        }
+        foreach ($later ? [] : $this->entitlements->phaseClipsFor($planned) as $clip) {
+            if ($missing($slots->first(fn (PetMedia $m) => $m->isPhase() && $m->state === $clip->value))) {
+                $phases[] = $clip->value;
+            }
+        }
+
         if ($pet->usesLookPool()) {
             // M4-10: only what the shared look does not have yet costs anything.
-            $cost = $this->lookPlanCostUsd($pet, $imageAction, $videos, $keyframes, $transitions, $loops);
+            $cost = $this->lookPlanCostUsd($pet, $imageAction, $videos, $keyframes, $transitions, $loops, $poses, $phases);
         } else {
             $cost = match ($imageAction) {
                 'generate' => $this->profiles->referenceImage()->estimatedCostUsd(),
                 'stage' => $this->stageImageCostUsd(),
                 default => 0.0,
-            } + (count($videos) + count($transitions)) * $this->profiles->stateVideo()->estimatedCostUsd()
-                + count($keyframes) * $this->keyframeCostUsd();
+            } + count($videos) * $this->profiles->stateVideo()->estimatedCostUsd()
+                + count($transitions) * $this->profiles->clipVideo('transition')->estimatedCostUsd()
+                + (count($keyframes) + count($poses)) * $this->keyframeCostUsd()
+                + array_sum(array_map(fn (string $c) => $this->phaseClipCostUsd(PetPhaseClip::from($c)), $phases));
         }
 
-        return ['image' => $imageAction, 'videos' => $videos, 'keyframes' => $keyframes, 'transitions' => $transitions, 'upgrade' => $upgrade, 'cost_usd' => round($cost, 4)];
+        return ['image' => $imageAction, 'videos' => $videos, 'keyframes' => $keyframes, 'transitions' => $transitions, 'poses' => $poses, 'phases' => $phases, 'upgrade' => $upgrade, 'cost_usd' => round($cost, 4)];
     }
 
     /** M5-T08b: the superadmin state media switch (MediaEntitlementService::stateMediaEnabled). */
     public function stateMediaEnabled(): bool
     {
         return $this->entitlements->stateMediaEnabled();
+    }
+
+    /** M5-T09 / T10: estimated cost of one phase clip (3 s school / game clip). */
+    public function phaseClipCostUsd(PetPhaseClip $clip): float
+    {
+        return $this->profiles->clipVideo($clip->purpose())->estimatedCostUsd();
     }
 
     /** M5-T08: estimated cost of one key image (0 when no key image profile is enabled). */
@@ -1301,9 +1408,20 @@ class PetMediaService
         }
 
         $transitions = [];
+        // M5-T09 / T10: pose images and school / game phase clips (only the pet's own species).
+        $poses = [];
+        $phases = [];
+        $species = $pet->speciesValue();
         foreach ($slots as $m) {
-            if ($m->isTransition() && $m->isServable() && $m->transition() !== null) {
+            if (! $m->isServable()) {
+                continue;
+            }
+            if ($m->isTransition() && $m->transition() !== null) {
                 $transitions[$m->state] = $this->signedUrl($m, $expires);
+            } elseif ($m->isPose() && $m->pose()?->species() === $species) {
+                $poses[$m->state] = $this->signedUrl($m, $expires);
+            } elseif ($m->isPhase() && $m->phaseClip()?->species() === $species) {
+                $phases[$m->state] = $this->signedUrl($m, $expires);
             }
         }
 
@@ -1328,6 +1446,8 @@ class PetMediaService
             keyframes: $keyframes,
             transitions: $transitions,
             loops: array_values(array_intersect(array_keys($videos), $loops)),
+            poses: $poses,
+            phases: $phases,
             // M5-T08b (QA m3): the pet's set, not the switch — off never downgrades stored media.
             stateMedia: $this->entitlements->hasStateMediaSet($pet),
         );
@@ -1465,7 +1585,7 @@ class PetMediaService
             ->whereNull('source_url')
             ->where('updated_at', '<', now()->subMinutes(self::STALE_CLAIM_MINUTES))
             // M5-T08b: state media switched off — key images and transitions are not re-queued.
-            ->when(! $this->entitlements->stateMediaEnabled(), fn ($q) => $q->whereNotIn('kind', [PetMedia::KIND_KEYFRAME, PetMedia::KIND_TRANSITION]))
+            ->when(! $this->entitlements->stateMediaEnabled(fresh: true), fn ($q) => $q->whereNotIn('kind', [PetMedia::KIND_KEYFRAME, PetMedia::KIND_TRANSITION, PetMedia::KIND_POSE, PetMedia::KIND_PHASE]))
             ->each(function (PetMedia $slot) use (&$reclaimed): void {
                 // M4-10: a look image has no job of its own — the waiting pets' slots
                 // (reclaimed here too) run it again; the next pet needing it reclaims it.
@@ -1474,7 +1594,7 @@ class PetMediaService
                 }
                 match ($slot->kind) {
                     PetMedia::KIND_IMAGE => GeneratePetReferenceImage::dispatch($slot->pet_id),
-                    PetMedia::KIND_KEYFRAME => GeneratePetKeyframe::dispatch($slot->id),
+                    PetMedia::KIND_KEYFRAME, PetMedia::KIND_POSE => GeneratePetKeyframe::dispatch($slot->id),
                     default => SubmitPetStateVideo::dispatch($slot->id),
                 };
                 $reclaimed++;
@@ -1516,7 +1636,7 @@ class PetMediaService
             ->where('state_media_version', '>=', 2)
             ->when($staleOnly, fn ($q) => $q->whereExists(fn ($q) => $q->selectRaw('1')->from('pet_media as s')
                 ->whereColumn('s.pet_id', 'pets.id')
-                ->whereIn('s.kind', [PetMedia::KIND_KEYFRAME, PetMedia::KIND_TRANSITION, PetMedia::KIND_VIDEO])
+                ->whereIn('s.kind', [PetMedia::KIND_KEYFRAME, PetMedia::KIND_TRANSITION, PetMedia::KIND_VIDEO, PetMedia::KIND_POSE, PetMedia::KIND_PHASE])
                 ->where('s.status', PetMedia::STATUS_PENDING)
                 ->whereNull('s.request_id')
                 ->where('s.updated_at', '<', now()->subMinutes(self::STALE_CLAIM_MINUTES))))
@@ -1566,7 +1686,7 @@ class PetMediaService
      * The look row of (look, kind, state, stage), created as `pending` if
      * missing (race-safe: insert-or-ignore on pet_media_look_slot_unique).
      */
-    public function lookSlot(PetLook $look, string $kind, PetStateEnum|PetTransition|null $state, LifeStage $stage): PetMedia
+    public function lookSlot(PetLook $look, string $kind, PetStateEnum|PetTransition|PetPose|PetPhaseClip|null $state, LifeStage $stage): PetMedia
     {
         $query = PetMedia::query()->where('pet_look_id', $look->id)->where('kind', $kind)->where('life_stage', $stage->value)
             ->when($state === null, fn ($q) => $q->whereNull('state'), fn ($q) => $q->where('state', $state->value));
@@ -1810,7 +1930,8 @@ class PetMediaService
      */
     private function videoFromLook(Pet $pet, PetMedia $slot): bool
     {
-        if ($slot->isTransition()) {
+        // M5-T09 / T10: phase clips take the transition path (start / end frame).
+        if ($slot->isPoseClip()) {
             return $this->transitionFromLook($pet, $slot);
         }
 
@@ -1894,7 +2015,7 @@ class PetMediaService
 
         // M5-T08b: state media switched off, or no active state-media pet of the look at this
         // stage — a look transition is not submitted (stays as it is).
-        if ($row->isTransition() && ($row->look === null || ! $this->lookStateMediaWanted($row->look, (string) $row->life_stage))) {
+        if ($row->isPoseClip() && ($row->look === null || ! $this->lookStateMediaWanted($row->look, (string) $row->life_stage))) {
             return true;
         }
 
@@ -1927,8 +2048,11 @@ class PetMediaService
         $look = $row->look;
         $state = $row->petState();
         $transition = $row->transition();
+        $clip = $row->phaseClip();
+        $frames = $row->frames();
 
-        if ($look === null || ($transition === null && ($state === null || ! $state->appliesTo($look->breed_type->species())))) {
+        if ($look === null || ($frames === null && ($state === null || ! $state->appliesTo($look->breed_type->species())))
+            || ($clip !== null && $clip->species() !== $look->breed_type->species())) {
             $this->fail($row, null, 'Look video state not available for the species — not generated.');
 
             return true;
@@ -1947,12 +2071,13 @@ class PetMediaService
         $stage = LifeStage::from((string) $row->life_stage);
 
         // M5-T08: a transition from pose A to pose B, or a loop from / to the state's key image.
-        $start = $transition !== null ? $this->lookPoseRow($look, $transition->fromState(), $stage, $image) : null;
-        $end = $transition !== null ? $this->lookPoseRow($look, $transition->toState(), $stage, $image) : null;
+        // M5-T09 / T10: a phase clip from its start pose to its end pose.
+        $start = $frames !== null ? $this->lookPoseRow($look, $frames[0], $stage, $image) : null;
+        $end = $frames !== null ? $this->lookPoseRow($look, $frames[1], $stage, $image) : null;
         // A row a state-media pet asked for (recipe set) is always made from its key image.
-        $pose = $transition === null && $row->recipe !== null ? $this->lookPoseRow($look, $state, $stage, $image) : null;
+        $pose = $frames === null && $row->recipe !== null ? $this->lookPoseRow($look, $state, $stage, $image) : null;
 
-        if (($transition !== null && ($start === null || $end === null)) || ($transition === null && $row->recipe !== null && $pose === null)) {
+        if (($frames !== null && ($start === null || $end === null)) || ($frames === null && $row->recipe !== null && $pose === null)) {
             $row->update(['status' => PetMedia::STATUS_PENDING]); // the next pet that needs it re-runs it
 
             return true;
@@ -1960,6 +2085,10 @@ class PetMediaService
 
         try {
             $submitted = match (true) {
+                $clip !== null => $this->fal->submitPhaseClipFor(
+                    $look->breed_type->value, $look->traits(), $stage, $clip,
+                    $this->falFetchUrl($start), $this->falFetchUrl($end), null, $row->id,
+                ) + ['recipe' => null],
                 $transition !== null => $this->fal->submitTransitionFor(
                     $look->breed_type->value, $look->traits(), $stage, $transition,
                     $this->falFetchUrl($start), $this->falFetchUrl($end), null, $row->id,
@@ -1990,7 +2119,7 @@ class PetMediaService
             'profile' => $submitted['profile'],
             'duration_seconds' => $submitted['duration_seconds'],
             'source_generation' => $image->generation,
-            'recipe' => $transition !== null ? null : $submitted['recipe'],
+            'recipe' => $frames !== null ? null : $submitted['recipe'],
         ]);
         $this->syncCost($row);
 
@@ -2002,13 +2131,15 @@ class PetMediaService
      * image for idle, else the look's key image made from that look image
      * generation. Null while it is missing.
      */
-    private function lookPoseRow(PetLook $look, PetStateEnum $state, LifeStage $stage, PetMedia $lookImage): ?PetMedia
+    private function lookPoseRow(PetLook $look, PetStateEnum|PetPose|null $state, LifeStage $stage, PetMedia $lookImage): ?PetMedia
     {
-        if ($state === PetStateEnum::Idle) {
+        // M5-T09 / T10: null = the look image (idle pose); a PetPose = the look's pose image.
+        if ($state === null || $state === PetStateEnum::Idle) {
             return $lookImage;
         }
 
-        $key = PetMedia::query()->where('pet_look_id', $look->id)->keyframes()
+        $key = PetMedia::query()->where('pet_look_id', $look->id)
+            ->where('kind', $state instanceof PetPose ? PetMedia::KIND_POSE : PetMedia::KIND_KEYFRAME)
             ->where('state', $state->value)->where('life_stage', $stage->value)->first();
 
         return $key !== null && $key->status === PetMedia::STATUS_READY && $key->isServable()
@@ -2022,7 +2153,8 @@ class PetMediaService
     private function keyframeFromLook(Pet $pet, PetMedia $slot): bool
     {
         $image = $this->imageSlot($pet);
-        $state = $slot->petState();
+        // M5-T09 / T10: a pose image the same way (kind pose).
+        $state = $slot->petState() ?? $slot->pose();
 
         if ($image->status !== PetMedia::STATUS_READY || $image->look_media_id === null || $image->life_stage === null || $pet->look === null || $state === null) {
             if ($slot->status !== PetMedia::STATUS_READY) {
@@ -2033,7 +2165,7 @@ class PetMediaService
         }
 
         $look = $pet->look;
-        $row = $this->lookSlot($look, PetMedia::KIND_KEYFRAME, $state, LifeStage::from($image->life_stage));
+        $row = $this->lookSlot($look, $slot->kind, $state, LifeStage::from($image->life_stage));
         $lookImage = $this->lookImageRow($row);
 
         // A key image of an older look image generation (admin regenerate) is remade once.
@@ -2061,6 +2193,7 @@ class PetMediaService
     private function generateLookKeyframe(PetMedia $row, PetLook $look): bool
     {
         $state = $row->petState();
+        $pose = $row->pose();
         $image = $this->lookImageRow($row);
 
         // M5-T08b: switched off, or no active state-media pet of the look at this stage
@@ -2069,8 +2202,14 @@ class PetMediaService
             return true;
         }
 
-        if ($state === null || $image === null || $image->status !== PetMedia::STATUS_READY || ! $image->isServable()) {
+        if (($state === null && $pose === null) || $image === null || $image->status !== PetMedia::STATUS_READY || ! $image->isServable()) {
             return true; // the waiting pets are re-run once the look image is stored
+        }
+
+        if ($pose !== null && $pose->species() !== $look->breed_type->species()) {
+            $this->fail($row, null, 'Pose not available for the species — not generated.');
+
+            return true;
         }
 
         if ($this->profiles->keyframe() === null) {
@@ -2085,7 +2224,9 @@ class PetMediaService
 
         try {
             $result = $this->fal->editKeyframe(
-                $this->prompts->keyframePrompt($look->breed_type->value, $state, $look->traits(), LifeStage::from((string) $row->life_stage)),
+                $pose !== null
+                    ? $this->prompts->posePrompt($look->breed_type->value, $pose, $look->traits(), LifeStage::from((string) $row->life_stage))
+                    : $this->prompts->keyframePrompt($look->breed_type->value, $state, $look->traits(), LifeStage::from((string) $row->life_stage)),
                 $this->falFetchUrl($image),
                 $look->seed(),
                 null,
@@ -2094,7 +2235,7 @@ class PetMediaService
         } catch (AiCallException $e) {
             $this->syncCost($row);
             $this->fail($row, $e->reason, $e->getMessage()); // fails the waiting pets too
-            Log::warning('PetMediaService: look key image not generated', ['pet_look_id' => $look->id, 'state' => $state->value, 'reason' => $e->reason->value]);
+            Log::warning('PetMediaService: look key / pose image not generated', ['pet_look_id' => $look->id, 'state' => $row->state, 'reason' => $e->reason->value]);
 
             return true;
         }
@@ -2119,12 +2260,13 @@ class PetMediaService
      */
     private function transitionFromLook(Pet $pet, PetMedia $slot): bool
     {
-        $transition = $slot->transition();
+        $frames = $slot->frames();
         $image = $this->imageSlot($pet);
 
-        $posesReady = $transition !== null
-            && $this->poseImage($pet, $transition->fromState(), $image) !== null
-            && $this->poseImage($pet, $transition->toState(), $image) !== null;
+        // M5-T09 / T10: a phase clip from its start pose to its end pose, like a transition.
+        $posesReady = $frames !== null
+            && $this->frameImage($pet, $frames[0], $image) !== null
+            && $this->frameImage($pet, $frames[1], $image) !== null;
 
         if (! $pet->is_active || ! $posesReady || $image->look_media_id === null || $image->life_stage === null || $pet->look === null) {
             if ($slot->status !== PetMedia::STATUS_READY) {
@@ -2134,7 +2276,7 @@ class PetMediaService
             return true;
         }
 
-        $row = $this->lookSlot($pet->look, PetMedia::KIND_TRANSITION, $transition, LifeStage::from($image->life_stage));
+        $row = $this->lookSlot($pet->look, $slot->kind, $slot->transition() ?? $slot->phaseClip(), LifeStage::from($image->life_stage));
 
         if ($this->linkToLook($slot, $row, $image->generation)) {
             return true;
@@ -2259,7 +2401,7 @@ class PetMediaService
         PetMedia::query()->where('look_media_id', $row->id)
             ->where(fn ($q) => $q->whereIn('status', [PetMedia::STATUS_RUNNING, PetMedia::STATUS_FAILED])
                 // M5-T08: pets still showing the row's previous clip (a loop replaced an older clip).
-                ->orWhere(fn ($q) => $q->where('status', PetMedia::STATUS_READY)->whereIn('kind', [PetMedia::KIND_VIDEO, PetMedia::KIND_TRANSITION])
+                ->orWhere(fn ($q) => $q->where('status', PetMedia::STATUS_READY)->whereIn('kind', [PetMedia::KIND_VIDEO, PetMedia::KIND_TRANSITION, PetMedia::KIND_PHASE])
                     ->where('storage_path', '!=', $row->storage_path)))
             ->orderBy('id')
             ->each(function (PetMedia $waiting) use ($row): void {
@@ -2311,8 +2453,10 @@ class PetMediaService
      * @param  list<string>  $videos
      * @param  list<string>  $keyframes
      * @param  list<string>  $transitions
+     * @param  list<string>  $poses
+     * @param  list<string>  $phases
      */
-    private function lookPlanCostUsd(Pet $pet, string $imageAction, array $videos, array $keyframes = [], array $transitions = [], bool $loops = false): float
+    private function lookPlanCostUsd(Pet $pet, string $imageAction, array $videos, array $keyframes = [], array $transitions = [], bool $loops = false, array $poses = [], array $phases = []): float
     {
         $look = $pet->look;
         $stage = $pet->life_stage;
@@ -2353,7 +2497,19 @@ class PetMediaService
 
         foreach ($transitions as $transition) {
             if (! $has(PetMedia::KIND_TRANSITION, $transition)) {
-                $cost += $this->profiles->stateVideo()->estimatedCostUsd();
+                $cost += $this->profiles->clipVideo('transition')->estimatedCostUsd();
+            }
+        }
+
+        foreach ($poses as $pose) {
+            if (! $has(PetMedia::KIND_POSE, $pose)) {
+                $cost += $this->keyframeCostUsd();
+            }
+        }
+
+        foreach ($phases as $phase) {
+            if (! $has(PetMedia::KIND_PHASE, $phase)) {
+                $cost += $this->phaseClipCostUsd(PetPhaseClip::from($phase));
             }
         }
 
@@ -2418,7 +2574,7 @@ class PetMediaService
     {
         return match ($slot->kind) {
             PetMedia::KIND_IMAGE => 'reference_image_ready',
-            PetMedia::KIND_KEYFRAME => 'keyframe_ready',
+            PetMedia::KIND_KEYFRAME, PetMedia::KIND_POSE => 'keyframe_ready',
             default => 'video_ready',
         };
     }

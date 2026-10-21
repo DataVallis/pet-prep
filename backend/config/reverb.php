@@ -36,7 +36,9 @@ return [
             'options' => [
                 'tls' => [],
             ],
-            'max_request_size' => env('REVERB_MAX_REQUEST_SIZE', 10_000),
+            // M5-T09 / T10: the HTTP publish (headers + PetUpdated, which carries one signed URL per
+            // stored clip — ≈ 9 kB for a dog with school + ball clips) must fit; 10 000 was too tight.
+            'max_request_size' => env('REVERB_MAX_REQUEST_SIZE', 65_536),
             'scaling' => [
                 'enabled' => env('REVERB_SCALING_ENABLED', false),
                 'channel' => env('REVERB_SCALING_CHANNEL', 'reverb'),

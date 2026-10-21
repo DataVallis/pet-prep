@@ -75,6 +75,8 @@ beforeEach(function () {
         'media.budget.timezone' => 'UTC',
     ]);
     useStateMedia();
+    // M5-T09 / T10 phase clips have their own tests (PhaseClipsTest).
+    usePhaseClips(false);
     seedBreedConfigs();
     seedStageParams();
 });
