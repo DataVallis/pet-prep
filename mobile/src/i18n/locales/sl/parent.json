@@ -155,6 +155,8 @@
     "daily": "Po dnevih",
     "walkGoal": "{{steps}} / {{goal}} korakov",
     "walk": "{{steps}} korakov",
+    "walkGoalPushes": "{{steps}} / {{goal}} potiskov",
+    "walkPushes": "{{steps}} potiskov",
     "noRoutines": "brez rutin",
     "missed": "Zamujene rutine",
     "noMissed": "V tem obdobju ni zamujene rutine.",

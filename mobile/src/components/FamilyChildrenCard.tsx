@@ -14,6 +14,7 @@ import { Text } from '@/components/ui/Text';
 import { KeyRound, LogOut, Smartphone, Trash2, UserPlus, Users } from 'lucide-react-native';
 
 import type { DeletionProof } from '@/api/client';
+import AdaptedModeRow from '@/components/parent/AdaptedModeRow';
 import DeletionConfirmForm from '@/components/parent/DeletionConfirmForm';
 import { useDeleteChild, useRevokeChildDevices } from '@/hooks/queries/useFamilyMutations';
 import {
@@ -241,6 +242,9 @@ export default function FamilyChildrenCard({ family, onAddChild, onChildPin }: F
                 </Pressable>
               </View>
             )}
+
+            {/* M5-T12: parent-only accessibility switch (pushes instead of steps). */}
+            <AdaptedModeRow childId={child.id} childName={child.name} enabled={child.adapted_mode} />
 
             {result?.childId === child.id && (
               <Text style={[styles.result, result.isError && styles.resultError]} testID={`revoke-result-${child.id}`}>

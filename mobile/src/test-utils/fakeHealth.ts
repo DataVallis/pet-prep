@@ -4,10 +4,12 @@
  * take this through `deps.health`.
  */
 
-import type { HealthAccess, HealthAvailability, HealthSource, HealthStepsAdapter } from '@/modules/steps/health/types';
+import type { HealthAccess, HealthAvailability, HealthMeasure, HealthSource, HealthStepsAdapter } from '@/modules/steps/health/types';
 
 export interface FakeHealthOptions {
   source?: HealthSource;
+  /** M5-T12: `pushes` = the wheelchair-push adapter. */
+  measure?: HealthMeasure;
   availability?: HealthAvailability;
   access?: HealthAccess;
   /** What `requestAccess()` resolves to (default `connected`). */
@@ -28,6 +30,7 @@ export function makeFakeHealth(options: FakeHealthOptions = {}): FakeHealth {
   let access: HealthAccess = options.access ?? 'connected';
   return {
     source: options.source ?? 'healthkit',
+    measure: options.measure ?? 'steps',
     availability: jest.fn(async () => options.availability ?? 'available'),
     access: jest.fn(async () => access),
     requestAccess: jest.fn(async () => {

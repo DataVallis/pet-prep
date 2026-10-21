@@ -431,6 +431,8 @@ export default function ChildHudScreen() {
     myStepsToday: view?.steps.my_steps_today ?? 0,
     serverTime: view?.server_time ?? null,
     timezone: view?.timezone ?? null,
+    // M5-T12: the parent's adapted mode — wheelchair pushes from the health store.
+    adaptedMode: view?.steps.adapted_mode ?? false,
   });
 
   // M5-T03 (spec §12): one message at a time, FIFO, ≥ 2.5 s + 60 ms per character, tap closes.
@@ -1276,6 +1278,7 @@ export default function ChildHudScreen() {
           visible={careGuide.visible && !locked && !coveredByOverlay && !showGuide}
           guide={view.care_guide}
           petName={pet.name}
+          pushes={view.steps.adapted_mode}
           onClose={careGuide.close}
         />
       )}

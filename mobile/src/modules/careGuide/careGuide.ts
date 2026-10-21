@@ -164,7 +164,13 @@ export function careGuideTitle(species: Species, name: string | null, audience: 
  * The guide as sections in reading order (screen readers follow it top to bottom). Only the
  * rules that apply to this pet appear (no take-out for an older dog, no steps for a cat …).
  */
-export function careGuideSections(guide: CareGuide, audience: CareGuideAudience = 'child'): CareGuideSection[] {
+export function careGuideSections(
+  guide: CareGuide,
+  audience: CareGuideAudience = 'child',
+  /** M5-T12: the child's adapted mode — the walk is counted in wheelchair pushes. */
+  options: { pushes?: boolean } = {},
+): CareGuideSection[] {
+  const pushes = options.pushes === true;
   const ns = `${prefix(audience)}${guide.species === 'cat' ? 'cat' : 'dog'}`;
   const tr = (key: string, options?: Record<string, unknown>): string =>
     (t as unknown as (k: string, o?: Record<string, unknown>) => string)(`${ns}.${key}`, options);
@@ -193,11 +199,13 @@ export function careGuideSections(guide: CareGuide, audience: CareGuideAudience 
   }
 
   if (guide.species === 'dog') {
-    if (guide.steps) out.push({ key: 'walk', label: label('walk'), lines: [tr('walk', { steps: steps(guide.steps.goal) })] });
+    if (guide.steps) {
+      out.push({ key: 'walk', label: label('walk'), lines: [tr(pushes ? 'walkPushes' : 'walk', { steps: steps(guide.steps.goal) })] });
+    }
     if (guide.take_out) {
       out.push({ key: 'takeOut', label: label('takeOut'), lines: [tr('takeOut', { hours: hours(guide.take_out.hold_hours) })] });
       // David 2026-10-20: steps never resolve the potty need — »Pelji ven« is its own button.
-      out.push({ key: 'difference', label: label('difference'), lines: [tr('difference')] });
+      out.push({ key: 'difference', label: label('difference'), lines: [tr(pushes ? 'differencePushes' : 'difference')] });
     }
     if (guide.digestion_gap_minutes !== null) {
       out.push({ key: 'digestion', label: label('digestion'), lines: [tr('digestion', { minutes: duration(guide.digestion_gap_minutes) })] });

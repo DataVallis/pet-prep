@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Enums\ActivityType;
 use App\Enums\PetStatusPeriodKind;
 use App\Enums\RoutineType;
+use App\Enums\StepUnit;
 use App\Models\ActivityLog;
 use App\Models\Pet;
 use App\Models\PetCaretaker;
@@ -121,8 +122,14 @@ class CareScoreService
             ->groupBy('pet_id');
 
         $steps = [];
-        foreach (PetDailyStep::whereIn('pet_id', $ids)->where('local_date', '>=', $from)->get(['pet_id', 'user_id', 'local_date', 'steps']) as $row) {
-            $steps[$row->pet_id][$row->user_id][substr((string) $row->local_date, 0, 10)] = (int) $row->steps;
+        // M5-T12: the child-days whose phone counted wheelchair pushes (report wording only).
+        $pushDays = [];
+        foreach (PetDailyStep::whereIn('pet_id', $ids)->where('local_date', '>=', $from)->get(['pet_id', 'user_id', 'local_date', 'steps', 'unit']) as $row) {
+            $date = substr((string) $row->local_date, 0, 10);
+            $steps[$row->pet_id][$row->user_id][$date] = (int) $row->steps;
+            if ($row->unit === StepUnit::Pushes) {
+                $pushDays[$row->pet_id][$row->user_id][$date] = true;
+            }
         }
 
         // M5-R06-04: successful cat wand sessions per child and family-local day
@@ -156,6 +163,7 @@ class CareScoreService
             'ends' => $ends,
             'illnesses' => $illnesses->map(fn ($rows) => $rows->map(fn ($r) => CarbonImmutable::instance($r->started_at)->utc())->values()->all())->all(),
             'steps' => $steps,
+            'push_days' => $pushDays,
             'plays' => $plays,
         ];
     }
@@ -392,6 +400,11 @@ class CareScoreService
             'walk_steps' => $pet !== null ? (int) ($board['steps'][$pet->id][$childId][$date] ?? 0) : 0,
             'walk_goal' => null,
             'walk_done' => null,
+            // M5-T12: `pushes` when this child's phone counted wheelchair pushes that day
+            // (adapted mode, 1 push = 1 step) — the report says "potiski"; numbers unchanged.
+            'walk_unit' => $pet !== null && isset($board['push_days'][$pet->id][$childId][$date])
+                ? StepUnit::Pushes->value
+                : StepUnit::Steps->value,
         ];
         // M5-R06-08b: a cat's day carries its wand play (all children together; null
         // while no play routine exists that day) — dogs' rows stay byte-identical.

@@ -220,3 +220,26 @@ describe('parent wording (M5-T05b)', () => {
     expect(Object.values(p).join(' ')).not.toMatch(/\b(pup|dog|puppy)\b/i);
   });
 });
+
+describe('M5-T12 adapted mode — the walk is described in wheelchair pushes', () => {
+  afterEach(async () => {
+    await i18n.changeLanguage('sl');
+  });
+
+  it('child and parent texts say "potiski" / "pushes"; the numbers stay the server goal', async () => {
+    const guide = readCareGuide(puppy)!;
+    await i18n.changeLanguage('sl');
+    const sl = Object.fromEntries(careGuideSections(guide, 'child', { pushes: true }).map((s) => [s.key, s.lines.join(' ')]));
+    expect(sl.walk).toBe('Danes potrebuje 1.000 potiskov vozička za sprehod. Potiski mu dajo energijo.');
+    expect(sl.difference).toContain('Potiski sprehoda');
+    const parentSl = Object.fromEntries(careGuideSections(guide, 'parent', { pushes: true }).map((s) => [s.key, s.lines.join(' ')]));
+    expect(parentSl.walk).toContain('potiskov vozička');
+
+    await i18n.changeLanguage('en');
+    const en = Object.fromEntries(careGuideSections(guide, 'child', { pushes: true }).map((s) => [s.key, s.lines.join(' ')]));
+    expect(en.walk).toBe('Today it needs 1,000 wheelchair pushes of walking. Pushes give it energy.');
+    // Without adapted mode: unchanged step texts.
+    const plain = Object.fromEntries(careGuideSections(guide).map((s) => [s.key, s.lines.join(' ')]));
+    expect(plain.walk).toContain('steps');
+  });
+});

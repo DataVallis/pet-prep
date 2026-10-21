@@ -91,8 +91,14 @@ export const CHILD_DETAIL_STRINGS = strings('parent', 'childDetail', {
   typeLine: (own: number, expected: number) => t('parent:childDetail.typeLine', { own, expected }),
   typeMissed: (n: number) => t('parent:childDetail.typeMissed', { n }),
   typePending: (n: number) => t('parent:childDetail.typePending', { n }),
-  walk: (steps: string, goal: string | null) =>
-    goal ? t('parent:childDetail.walkGoal', { steps, goal }) : t('parent:childDetail.walk', { steps }),
+  walk: (steps: string, goal: string | null, pushes = false) =>
+    pushes
+      ? goal
+        ? t('parent:childDetail.walkGoalPushes', { steps, goal })
+        : t('parent:childDetail.walkPushes', { steps })
+      : goal
+        ? t('parent:childDetail.walkGoal', { steps, goal })
+        : t('parent:childDetail.walk', { steps }),
   /** M5-R06-08b: "Igra 1/2" — the cat's wand games of the day. */
   playDay: (done: number, goal: number) => t('cat:parent.playDay', { done, goal }),
   illnessRow: (from: string, to: string | null) =>
@@ -466,7 +472,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
                       </Text>
                     ) : (
                       <Text style={[styles.muted, styles.flex, styles.right]}>
-                        {S.walk(formatSteps(d.walk_steps), d.walk_goal === null ? null : formatSteps(d.walk_goal))}
+                        {S.walk(formatSteps(d.walk_steps), d.walk_goal === null ? null : formatSteps(d.walk_goal), d.walk_unit === 'pushes')}
                       </Text>
                     )}
                     {(isCat ? d.play_done : d.walk_done) === true && <Check color={C.green} size={14} />}
@@ -529,6 +535,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
           guide={careGuide}
           petName={pet?.name ?? null}
           audience="parent"
+          pushes={child.adapted_mode}
           onClose={() => setCareGuideOpen(false)}
           testID="detail-care-guide"
         />

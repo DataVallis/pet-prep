@@ -184,6 +184,25 @@
       "needsUpdate": "Health Connect needs to be installed or updated first. Ask a parent to help.",
       "openStore": "Open Google Play"
     },
+    "pushes": {
+      "steps": "{{steps}} / {{goal}} pushes",
+      "mine": "Your pushes today: {{steps}}",
+      "refresh": "Refresh pushes",
+      "unavailable": "Pushes are counted by Apple Health or Health Connect. This phone has neither.",
+      "health": {
+        "title": {
+          "ios": "Count pushes with Apple Health",
+          "android": "Count pushes with Health Connect"
+        },
+        "body": "Your wheelchair pushes count for the walk, also when PetPrep is closed. Only today's number of pushes goes to your pup — nothing else.",
+        "connected": {
+          "ios": "Pushes from Apple Health",
+          "android": "Pushes from Health Connect"
+        },
+        "iosHelp": "No pushes? In Health → Summary → your picture → Health Details, a parent can set Wheelchair to Yes. An Apple Watch counts the pushes; Settings → Health → Data Access & Devices → PetPrep shows the access.",
+        "denied": "Health Connect can't share pushes yet. Ask a parent to allow \"Wheelchair pushes\" for PetPrep in Health Connect."
+      }
+    },
     "digesting": {
       "title": "Wait with the walk",
       "body": "Your pup is digesting. Wait a little before the walk.",

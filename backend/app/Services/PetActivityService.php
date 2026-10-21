@@ -8,6 +8,7 @@ use App\Enums\CareSessionKind;
 use App\Enums\PetLockReason;
 use App\Enums\PlayKind;
 use App\Enums\SocialisationExperience;
+use App\Enums\StepUnit;
 use App\Enums\TrainingCommand;
 use App\Events\PetUpdated;
 use App\Models\ActivityLog;
@@ -94,14 +95,17 @@ class PetActivityService
      *   (energy, daily walk goal) is the sum of all caretakers' steps that
      *   day. Steps the pet already has that no child row explains (data from
      *   before M2-01) belong to the primary caretaker.
+     * - Adapted mode (M5-T12): `$unit` = pushes when the phone counted wheelchair
+     *   pushes (1 push = 1 step) — every rule above applies unchanged; the unit
+     *   is kept on the child's day row for the parent report wording only.
      */
-    public function recordSteps(Pet $pet, int $stepsToday, CarbonInterface $recordedAt, ?User $actor = null): ActionResult
+    public function recordSteps(Pet $pet, int $stepsToday, CarbonInterface $recordedAt, ?User $actor = null, StepUnit $unit = StepUnit::Steps): ActionResult
     {
         if ($stepsToday < 0) {
             throw new InvalidArgumentException('stepsToday must be >= 0.');
         }
 
-        return $this->withLockedPet($pet, ActivityType::WalkedPet, function (Pet $locked) use ($stepsToday, $recordedAt, $actor): ActionResult {
+        return $this->withLockedPet($pet, ActivityType::WalkedPet, function (Pet $locked) use ($stepsToday, $recordedAt, $actor, $unit): ActionResult {
             $now = now()->startOfSecond();
 
             if ($reason = $locked->actionLockReasonFor($actor)) {
@@ -164,7 +168,13 @@ class PetActivityService
             // Today's goal of the dog's life stage (M5-R01).
             $goal = $this->lifeStages->rulesOn($locked, $today, $breedConfig)->stepGoal;
 
-            $row->forceFill(['steps' => $current + $accepted, 'last_sync_at' => $at])->save();
+            // M5-T12: a day with accepted wheelchair pushes reads "potiski" in the parent
+            // report; it never switches back to steps that day (the unit is wording only).
+            $row->forceFill(['steps' => $current + $accepted, 'last_sync_at' => $at]);
+            if ($unit === StepUnit::Pushes) {
+                $row->unit = StepUnit::Pushes;
+            }
+            $row->save();
 
             $newCount = $petCount + $accepted;
             $energy = max((float) $locked->energy_level, self::energyForSteps($newCount, $goal));

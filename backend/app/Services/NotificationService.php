@@ -463,6 +463,10 @@ class NotificationService
         }
         // M5-R06-06: the texts follow the pet's species (cat: push.cat.*).
         $copy['species'] = $pet->speciesValue();
+        // M5-T12: children in adapted mode get the walk reminder about pushes, not steps.
+        $copy['pushes_user_ids'] = $type === PushType::WalkReminder
+            ? User::whereIn('id', collect($notification->recipients)->pluck('user_id')->all())->where('adapted_mode', true)->pluck('id')->map(fn ($id): int => (int) $id)->all()
+            : [];
 
         $audience = collect($notification->recipients)
             ->mapWithKeys(fn (array $r): array => [(int) $r['user_id'] => (string) $r['audience']]);
@@ -854,7 +858,7 @@ class NotificationService
      *
      * @param  Collection<int, DevicePushToken>  $chunk
      * @param  Collection<int, string>  $audience  user id → audience
-     * @param  array{variant: string|null, replace: array<string, string>, species: Species, metric?: string}  $copy
+     * @param  array{variant: string|null, replace: array<string, string>, species: Species, metric?: string, pushes_user_ids?: list<int>}  $copy
      */
     private function sendChunk(PushNotification $notification, Collection $chunk, Collection $audience, ExpoPushClient $client, array $copy): void
     {
@@ -896,19 +900,23 @@ class NotificationService
     /**
      * One Expo message. data = {type, pet_id} only (third parties).
      *
-     * @param  array{variant: string|null, replace: array<string, string>, species: Species, metric?: string}  $copy
+     * @param  array{variant: string|null, replace: array<string, string>, species: Species, metric?: string, pushes_user_ids?: list<int>}  $copy
      * @return array<string, mixed>
      */
     private function message(PushNotification $notification, DevicePushToken $device, string $audience, array $copy): array
     {
         $type = $notification->type;
+        $variant = $copy['variant'];
+        if ($type === PushType::WalkReminder && in_array((int) $device->user_id, $copy['pushes_user_ids'] ?? [], true)) {
+            $variant = PushCopy::VARIANT_PUSHES;
+        }
 
         return [
             'to' => $device->expo_push_token,
             // M1-18: in this install's language (null → default).
             // David 2026-10-17: the pet's name as the title when set (else PetPrep).
             'title' => PushCopy::title($device->locale, $notification->pet?->name),
-            'body' => PushCopy::body($type, $copy['metric'] ?? $notification->metric, $audience, $device->locale, $copy['variant'], $copy['replace'], $copy['species']),
+            'body' => PushCopy::body($type, $copy['metric'] ?? $notification->metric, $audience, $device->locale, $variant, $copy['replace'], $copy['species']),
             'data' => [
                 'type' => $type->value,
                 'pet_id' => $notification->pet_id,

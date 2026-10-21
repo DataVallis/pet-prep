@@ -282,6 +282,15 @@ class ChildPetStateResource extends JsonResource
                 // Today's step goal of the dog's life stage (M5-R01).
                 'goal' => $profile->stepGoal,
                 'energy_level' => $pet->displayMetric('energy_level'),
+                /**
+                 * M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
+                 * the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
+                 * app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
+                 * Always false for a parent's view.
+                 *
+                 * @var bool
+                 */
+                'adapted_mode' => (bool) ($actor?->adapted_mode ?? false),
             ],
             'contract' => [
                 'signed' => $contract !== null,

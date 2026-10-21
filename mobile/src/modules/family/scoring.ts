@@ -83,6 +83,8 @@ export interface DayRow {
   walk_steps: number;
   walk_goal: number | null;
   walk_done: boolean | null;
+  /** M5-T12: `pushes` = the child's phone counted wheelchair pushes that day (wording only). */
+  walk_unit: 'steps' | 'pushes';
   /** M5-R06-08b: a cat's wand games of the day (all children); null for a dog / no play routine / older server. */
   play_sessions: number | null;
   play_goal: number | null;
@@ -261,6 +263,7 @@ export function readDayRows(value: unknown): DayRow[] {
         walk_steps: num(item.walk_steps),
         walk_goal: numOrNull(item.walk_goal),
         walk_done: boolOrNull(item.walk_done),
+        walk_unit: item.walk_unit === 'pushes' ? 'pushes' : 'steps',
         play_sessions: numOrNull(item.play_sessions),
         play_goal: numOrNull(item.play_goal),
         play_done: boolOrNull(item.play_done),

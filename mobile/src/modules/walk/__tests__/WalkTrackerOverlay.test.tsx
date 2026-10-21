@@ -10,10 +10,15 @@ import type { HealthStatus, StepHealth, StepPermission, StepSync } from '@/modul
 import WalkTrackerOverlay, { WALK_STRINGS } from '@/modules/walk/WalkTrackerOverlay';
 import { makeLiveChildState } from '@/test-utils/fixtures';
 
-function makeHealth(status: HealthStatus = 'unavailable', source: StepHealth['source'] = 'healthkit'): StepHealth {
+function makeHealth(
+  status: HealthStatus = 'unavailable',
+  source: StepHealth['source'] = 'healthkit',
+  measure: StepHealth['measure'] = 'steps',
+): StepHealth {
   return {
     status,
     source,
+    measure,
     connect: jest.fn(() => Promise.resolve()),
     openSettings: jest.fn(() => Promise.resolve()),
     openStore: jest.fn(() => Promise.resolve()),
@@ -28,6 +33,7 @@ function makeStepSync(permission: StepPermission, overrides: Partial<StepSync> =
     syncNow: jest.fn(() => Promise.resolve()),
     isSyncing: false,
     canSync: permission === 'granted' || health.status === 'connected',
+    adaptedMode: false,
     ...overrides,
     health,
   };
@@ -198,5 +204,32 @@ describe('WalkTrackerOverlay', () => {
       expect(screen.queryByTestId('walk-health-card')).toBeNull();
       expect(screen.queryByTestId('walk-health-connected')).toBeNull();
     });
+  });
+});
+
+describe('WalkTrackerOverlay — M5-T12 adapted mode (wheelchair pushes)', () => {
+  it('says "potiskov", offers the pushes health card and no motion-sensor button', () => {
+    renderOverlay('undetermined', {
+      sync: { adaptedMode: true, canSync: false, health: makeHealth('undetermined', 'healthkit', 'pushes') },
+    });
+    expect(screen.getByText(/1.250 \/ 4.000 potiskov/)).toBeTruthy();
+    expect(screen.getByText('Štej potiske z aplikacijo Zdravje')).toBeTruthy();
+    expect(screen.queryByTestId('walk-allow')).toBeNull();
+    expect(screen.queryByText(/korak/)).toBeNull();
+  });
+
+  it('connected: "Potiski iz aplikacije Zdravje" and "Osveži potiske"; shared pet shows my pushes', () => {
+    renderOverlay('granted', {
+      caretakers: 2,
+      sync: { adaptedMode: true, canSync: true, health: makeHealth('connected', 'healthkit', 'pushes') },
+    });
+    expect(screen.getByText('Potiski iz aplikacije Zdravje')).toBeTruthy();
+    expect(screen.getByText('Osveži potiske')).toBeTruthy();
+    expect(screen.getByText('Tvoji potiski danes: 800')).toBeTruthy();
+  });
+
+  it('no health store: explains that pushes need Apple Health / Health Connect', () => {
+    renderOverlay('granted', { sync: { adaptedMode: true, canSync: false, health: makeHealth('unavailable', null, 'pushes') } });
+    expect(screen.getByText(/Potiske štejeta aplikacija Zdravje ali Health Connect/)).toBeTruthy();
   });
 });

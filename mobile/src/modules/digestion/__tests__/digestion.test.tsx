@@ -55,9 +55,11 @@ function stepSync(): StepSync {
     syncNow: jest.fn(() => Promise.resolve()),
     isSyncing: false,
     canSync: true,
+    adaptedMode: false,
     health: {
       status: 'unavailable',
       source: 'healthkit',
+      measure: 'steps',
       connect: jest.fn(() => Promise.resolve()),
       openSettings: jest.fn(() => Promise.resolve()),
       openStore: jest.fn(() => Promise.resolve()),

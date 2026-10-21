@@ -78,6 +78,8 @@ export interface FamilyChild {
   login: 'pin' | 'email';
   /** Signed-in devices (Sanctum tokens). */
   devices: number;
+  /** M5-T12 »Prilagojen način«: the walk counts wheelchair pushes (1 : 1); false from older servers. */
+  adapted_mode: boolean;
   pet_id: number | null;
   contract_signed: boolean;
   stats: FamilyChildStats;
@@ -153,6 +155,7 @@ function normalizeChild(raw: FamilyChild): FamilyChild {
   const c = raw as unknown as Record<string, unknown>;
   return {
     ...raw,
+    adapted_mode: c.adapted_mode === true,
     stats: readStats(c.stats),
     traffic_light: readTrafficLight(c.traffic_light),
     care_score: readCareScore(c.care_score),

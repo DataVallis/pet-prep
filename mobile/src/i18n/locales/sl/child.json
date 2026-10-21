@@ -184,6 +184,25 @@
       "needsUpdate": "Najprej je treba namestiti ali posodobiti Health Connect. Prosi starša za pomoč.",
       "openStore": "Odpri Google Play"
     },
+    "pushes": {
+      "steps": "{{steps}} / {{goal}} potiskov",
+      "mine": "Tvoji potiski danes: {{steps}}",
+      "refresh": "Osveži potiske",
+      "unavailable": "Potiske štejeta aplikacija Zdravje ali Health Connect. Ta telefon nima nobene od njiju.",
+      "health": {
+        "title": {
+          "ios": "Štej potiske z aplikacijo Zdravje",
+          "android": "Štej potiske s Health Connect"
+        },
+        "body": "Tvoji potiski vozička štejejo za sprehod, tudi ko je PetPrep zaprt. Kužku gre samo današnje število potiskov — nič drugega.",
+        "connected": {
+          "ios": "Potiski iz aplikacije Zdravje",
+          "android": "Potiski iz Health Connect"
+        },
+        "iosHelp": "Ni potiskov? Starš lahko v aplikaciji Zdravje → Povzetek → tvoja slika → Podrobnosti o zdravju nastavi Invalidski voziček na Da. Potiske šteje Apple Watch; dostop je v Nastavitve → Zdravje → Dostop do podatkov in naprave → PetPrep.",
+        "denied": "Health Connect še ne deli potiskov. Prosi starša, da v Health Connect dovoli »Potiski invalidskega vozička« za PetPrep."
+      }
+    },
     "digesting": {
       "title": "Počakaj s sprehodom",
       "body": "Kuža prebavlja. S sprehodom še malo počakaj.",

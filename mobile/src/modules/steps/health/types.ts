@@ -9,6 +9,15 @@
 export type HealthSource = 'healthkit' | 'health_connect';
 
 /**
+ * What the adapter reads (M5-T12): `steps`, or `pushes` — wheelchair pushes for a child in
+ * the parent's »Prilagojen način« (HealthKit `HKQuantityTypeIdentifierPushCount`, recorded
+ * by an Apple Watch in Health's wheelchair mode; Health Connect `WheelchairPushesRecord`).
+ * One push counts as one step (server `unit: pushes`). Each measure has its own read
+ * permission — asking for pushes never asks for steps and vice versa.
+ */
+export type HealthMeasure = 'steps' | 'pushes';
+
+/**
  * - `available` — the platform store exists and can be asked.
  * - `needs_update` — Android only: Health Connect isn't installed or is too old (Android
  *   9–13 get it from Google Play; the app offers to open the store).
@@ -30,14 +39,16 @@ export type HealthAccess = 'connected' | 'undetermined' | 'denied';
 
 export interface HealthStepsAdapter {
   readonly source: HealthSource;
+  /** What `readSteps` counts (M5-T12). */
+  readonly measure: HealthMeasure;
   /** Whether a health store exists on this device (no prompt). */
   availability(): Promise<HealthAvailability>;
   /** Current access to step data (no prompt). */
   access(): Promise<HealthAccess>;
-  /** Show the system permission sheet for step READ access only. */
+  /** Show the system permission sheet for READ access to this measure only. */
   requestAccess(): Promise<HealthAccess>;
   /**
-   * Total steps in [start, end] — de-duplicated across phone / watch by the platform
+   * Total steps (or wheelchair pushes, per `measure`) in [start, end] — de-duplicated across phone / watch by the platform
    * (HealthKit statistics query, Health Connect aggregate). Throws when it can't read
    * (device locked, revoked, store gone): callers treat that as "no reading".
    */

@@ -225,7 +225,7 @@ export function makeChildState(
       can_water: 'false',
       next_allowed_at: '',
     },
-    steps: { steps_today: 0, my_steps_today: 0, goal: 5000, energy_level: 100 },
+    steps: { steps_today: 0, my_steps_today: 0, goal: 5000, energy_level: 100, adapted_mode: false },
     contract: { signed: true, signed_at: '2026-10-04T09:00:00+00:00' },
     // M5-R02 behaviour events: no bladder clock, nothing open (a legacy-like pet).
     behaviour: { take_out: null, active_events: [], scene: null, can_take_out: false, can_resolve_chewing: false },
@@ -429,6 +429,7 @@ export function makeFamilyChild(overrides: Partial<FamilyChild> = {}): FamilyChi
     birth_year: 2016,
     login: 'pin',
     devices: 0,
+    adapted_mode: false,
     pet_id: null,
     contract_signed: false,
     stats: {
@@ -467,6 +468,7 @@ export function makeDayRow(date: string, overrides: Partial<FamilyChild['last_7_
     walk_steps: 4200,
     walk_goal: 4000,
     walk_done: true,
+    walk_unit: 'steps' as 'steps' | 'pushes',
     // M5-R06-08b: a cat's play of the day (null for a dog).
     play_sessions: null,
     play_goal: null,

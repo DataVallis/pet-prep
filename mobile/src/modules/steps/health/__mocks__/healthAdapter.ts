@@ -4,6 +4,6 @@
  * through `deps.health` (see `test-utils/fakeHealth.ts`).
  */
 
-import type { HealthStepsAdapter } from '../types';
+import type { HealthMeasure, HealthStepsAdapter } from '../types';
 
-export const getHealthAdapter = jest.fn((): HealthStepsAdapter | null => null);
+export const getHealthAdapter = jest.fn((_measure?: HealthMeasure): HealthStepsAdapter | null => null);

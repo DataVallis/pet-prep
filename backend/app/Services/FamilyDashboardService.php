@@ -104,7 +104,7 @@ class FamilyDashboardService
         $pets = Pet::where('family_id', $family->id)->orderBy('id')->with(['media', 'paymentLockPeriods'])->get();
         $caretakers = PetCaretaker::whereIn('pet_id', $pets->pluck('id'))->orderBy('id')->get();
         $contracts = PetContract::whereIn('pet_id', $pets->pluck('id'))->get(['pet_id', 'user_id', 'signed_at']);
-        $children = $family->children()->get(['users.id', 'users.name', 'users.birth_year', DB::raw('(users.password IS NULL) AS pin_only')]);
+        $children = $family->children()->get(['users.id', 'users.name', 'users.birth_year', 'users.adapted_mode', DB::raw('(users.password IS NULL) AS pin_only')]);
         // Signed-in devices per child (M2-02) = Sanctum tokens.
         $devices = PersonalAccessToken::query()
             ->where('tokenable_type', User::class)
@@ -169,6 +169,13 @@ class FamilyDashboardService
                     // `email` = legacy child account (deprecated).
                     'login' => $child->getAttribute('pin_only') ? 'pin' : 'email',
                     'devices' => (int) ($devices[$child->id] ?? 0),
+                    /**
+                     * M5-T12 »Prilagojen način« (parent-only switch): the child's walk counts
+                     * wheelchair pushes instead of steps (1 : 1). No reason is stored.
+                     *
+                     * @var bool
+                     */
+                    'adapted_mode' => (bool) $child->adapted_mode,
                     'pet_id' => $current?->id,
                     // M5-F07: true when the child no longer has to sign (born
                     // pet + signed or grandfathered caretaker) — not "a
@@ -290,7 +297,8 @@ class FamilyDashboardService
         $from = Carbon::parse($today, 'UTC')->subDays($days - 1)->toDateString();
 
         $report = [
-            'child' => ['id' => $child->id, 'name' => $child->name],
+            // M5-T12: adapted mode (pushes instead of steps) — the day rows carry `walk_unit`.
+            'child' => ['id' => $child->id, 'name' => $child->name, 'adapted_mode' => (bool) $child->adapted_mode],
             'pet_id' => $pet?->id,
             'timezone' => $tz,
             'days' => $days,

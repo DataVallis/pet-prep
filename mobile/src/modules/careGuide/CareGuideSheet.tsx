@@ -24,14 +24,24 @@ interface CareGuideSheetProps {
   onClose: () => void;
   /** M5-T05b: `parent` = the parent's wording (child / pet detail); same numbers and sections. */
   audience?: CareGuideAudience;
+  /** M5-T12: the child's adapted mode — the walk line speaks of wheelchair pushes. */
+  pushes?: boolean;
   testID?: string;
 }
 
-export default function CareGuideSheet({ visible, guide, petName, onClose, audience = 'child', testID = 'care-guide' }: CareGuideSheetProps) {
+export default function CareGuideSheet({
+  visible,
+  guide,
+  petName,
+  onClose,
+  audience = 'child',
+  pushes = false,
+  testID = 'care-guide',
+}: CareGuideSheetProps) {
   // Re-render on a language switch (the texts are read at render time).
   useTranslation();
   const bottomInset = useContext(SafeAreaInsetsContext)?.bottom ?? 0;
-  const sections = careGuideSections(guide, audience);
+  const sections = careGuideSections(guide, audience, { pushes });
   const title = careGuideTitle(guide.species, petName, audience);
   return (
     <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose} statusBarTranslucent>

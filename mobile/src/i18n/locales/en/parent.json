@@ -151,6 +151,8 @@
     "daily": "By day",
     "walkGoal": "{{steps}} / {{goal}} steps",
     "walk": "{{steps}} steps",
+    "walkGoalPushes": "{{steps}} / {{goal}} pushes",
+    "walkPushes": "{{steps}} pushes",
     "noRoutines": "no routines",
     "missed": "Missed routines",
     "noMissed": "No routine was missed in this period.",
