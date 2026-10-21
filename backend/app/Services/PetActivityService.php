@@ -19,6 +19,7 @@ use App\Models\PetDailyStep;
 use App\Models\PetTrainingSession;
 use App\Models\User;
 use App\Services\Media\PetMediaService;
+use App\Services\Media\PetPreparationService;
 use App\Services\Results\ActionResult;
 use Carbon\CarbonInterface;
 use Closure;
@@ -1052,6 +1053,9 @@ class PetActivityService
                         $born = Pet::find($petId);
 
                         if ($born !== null) {
+                            // M5-T06: the preparation starts at birth when media are still
+                            // missing (before queueing, so even a fast queue can't skip it).
+                            app(PetPreparationService::class)->begin($born);
                             app(PetMediaService::class)->queueStateVideos($born);
                         }
                     } catch (\Throwable $e) {

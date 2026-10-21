@@ -68,7 +68,9 @@ class GameMediaReadiness
         $slots ??= $pet->relationLoaded('media') ? $pet->getRelation('media') : $pet->media()->get();
 
         $image = $slots->first(fn (PetMedia $m) => $m->isImage());
-        if ($image === null && $pet->media_status === 'disabled') {
+        // M5-T06: not "no image row" — the birth (queueStateVideos) creates a pending
+        // image slot even for a pet that never gets media; `media_status` stays `disabled`.
+        if ($pet->media_status === 'disabled' && ! ($image?->isServable() ?? false)) {
             return [];
         }
 

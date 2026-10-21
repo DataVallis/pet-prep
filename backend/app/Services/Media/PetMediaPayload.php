@@ -3,6 +3,8 @@
 namespace App\Services\Media;
 
 use App\Models\Pet;
+use App\Models\PetMedia;
+use Illuminate\Support\Collection;
 
 /**
  * The `media` object of a pet in every API response and in PetUpdated (M4-05).
@@ -25,10 +27,12 @@ final class PetMediaPayload
 
     /**
      * The payload for a pet (resolves PetMediaService from the container).
+     *
+     * @param  Collection<int, PetMedia>|null  $slots  the pet's media rows when already loaded (M5-T06: one read for media + preparation)
      */
-    public static function for(Pet $pet): self
+    public static function for(Pet $pet, ?Collection $slots = null): self
     {
-        return app(PetMediaService::class)->mediaFor($pet);
+        return app(PetMediaService::class)->mediaFor($pet, $slots);
     }
 
     /**

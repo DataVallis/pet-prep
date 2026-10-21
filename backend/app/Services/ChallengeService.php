@@ -9,6 +9,7 @@ use App\Enums\PushType;
 use App\Events\PetUpdated;
 use App\Models\Pet;
 use App\Services\Media\PetMediaService;
+use App\Services\Media\PetPreparationService;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -200,20 +201,24 @@ class ChallengeService
 
         // P6: a purchase entitles the pet to the full video set — queue what is
         // missing (born pets only; queueStateVideos skips stored / running slots).
-        if ($source === ChallengePaidSource::Purchase) {
-            $petId = $pet->id;
-            DB::afterCommit(function () use ($petId): void {
-                try {
-                    $paid = Pet::find($petId);
-                    if ($paid !== null) {
+        // M5-T06: a pet that waited behind the payment lock starts its preparation
+        // now (any source — the lock is gone), before the videos are queued.
+        $petId = $pet->id;
+        $purchase = $source === ChallengePaidSource::Purchase;
+        DB::afterCommit(function () use ($petId, $purchase): void {
+            try {
+                $paid = Pet::find($petId);
+                if ($paid !== null) {
+                    app(PetPreparationService::class)->begin($paid);
+                    if ($purchase) {
                         app(PetMediaService::class)->queueStateVideos($paid);
                     }
-                } catch (\Throwable $e) {
-                    Log::error('Challenge: full media set not queued', ['pet_id' => $petId, 'error' => $e->getMessage()]);
-                    report($e);
                 }
-            });
-        }
+            } catch (\Throwable $e) {
+                Log::error('Challenge: full media set not queued', ['pet_id' => $petId, 'error' => $e->getMessage()]);
+                report($e);
+            }
+        });
 
         return true;
     }

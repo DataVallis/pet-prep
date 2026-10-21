@@ -72,10 +72,19 @@ enum PushType: string
      */
     case ChallengeCompleted = 'challenge_completed';
 
+    /**
+     * M5-T06 (APP_REFINEMENT_SPEC §13, David 2026-10-20): the pet's preparation
+     * ended — »[ime] je pripravljen!« to the caretaker children, once per pet
+     * (only when the preparation was shown, PetPreparationService::settle).
+     * Good news, normal priority; dropped over quiet hours (the in-app message
+     * still says it) and while the pet is locked.
+     */
+    case PetReady = 'pet_ready';
+
     /** Phase 2 and above (not the walk reminder, not billing news): high priority, Android channel "alarm". */
     public function isUrgent(): bool
     {
-        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted], true);
+        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted, self::PetReady], true);
     }
 
     /**
@@ -125,6 +134,8 @@ enum PushType: string
             self::SoftWarning, self::CriticalAlert, self::WalkReminder, self::PlayReminder, self::LitterReminder => 3600,
             self::ParentAlarm => 3 * 3600,
             self::Illness, self::GameOver, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted => 12 * 3600,
+            // "Ready" hours later is stale — the app shows it anyway.
+            self::PetReady => 3600,
         };
     }
 }

@@ -287,6 +287,9 @@ class Pet extends Model
         'grooming_weeks_checked',
         // M2-01d bookkeeping: when ChallengeCertificateService looks at the pet again.
         'certificate_next_check_at',
+        // M5-T06 bookkeeping (the apps get PreparationPayload instead).
+        'preparation_started_at',
+        'preparation_ready_at',
     ];
 
     /**
@@ -340,6 +343,8 @@ class Pet extends Model
             'coat_matted_at' => 'datetime',
             'grooming_weeks_checked' => 'integer',
             'certificate_next_check_at' => 'datetime',
+            'preparation_started_at' => 'datetime',
+            'preparation_ready_at' => 'datetime',
         ];
     }
 

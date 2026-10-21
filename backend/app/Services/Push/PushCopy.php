@@ -186,6 +186,8 @@ final class PushCopy
             PushType::PaymentRequired => $line('payment_required.'.$audience.($metric === 'no_trial' && $audience === PushNotification::AUDIENCE_PARENT ? '_no_trial' : '')),
             // M2-01d: parents only; species-neutral, no names (`report` = no certificate this time).
             PushType::ChallengeCompleted => $line('challenge_completed.'.($metric === 'report' ? 'report' : 'certificate')),
+            // M5-T06: the preparation ended. The title carries the name (when set); the body never does.
+            PushType::PetReady => $line('pet_ready'),
         };
     }
 

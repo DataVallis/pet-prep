@@ -15,6 +15,7 @@ use App\Models\PetDailyStep;
 use App\Models\PetStatusPeriod;
 use App\Models\User;
 use App\Services\Media\PetMediaService;
+use App\Services\Media\PreparationPayload;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -243,6 +244,8 @@ class FamilyDashboardService
                 'training' => TrainingPayload::summaryFor($pet)->summary(),
                 // AI media (M4-05): signed URLs to our stored copies.
                 'media' => $this->media->mediaFor($pet)->toArray(),
+                // M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too).
+                'preparation' => PreparationPayload::for($pet)->toArray(),
             ], $this->scores->petSummary($board, $pet)))->values()->all(),
         ];
     }
