@@ -17,6 +17,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 🧒 Otroci: »Reci Sedi! in poglej, kako se kuža usede. Ko ti prinese žogo, ga pohvali!«
 - 💼 Investitorji: šola + igre dodajo po ceniku fal 5,79 $ na pasmo + barvo + obdobje (5 poz, 15 posnetkov po 3 s); poln pes skupaj 11,17 $, muca 7,40 $ — enkrat, vsak naslednji kupec iste pasme in barve 0 $. Krajši posnetki (3 s namesto 5 s) prihranijo 40 %.
 - 🛠 Tehnično: Kling 3.0 Pro z začetno in končno sliko (`end_image_url`) od poze do poze, poze kot Nano Banana Pro Edit referenčne slike; aplikacija preslika urnik vaje (strežnik) na fazo in posnetek predvaja enkrat; v načinu »Slika« samo poze. Na telefonu še ni preverjeno.
+- 🔍 Neodvisni pregled (QA PR #332): gib »izvaja« se zdaj konča tik pred trenutkom, ko kuža uboga, zato je ves čas, ko pohvala šteje (150–1500 ms), na sliki končni položaj; posnetki iger se naredijo pred šolo in neuspel posnetek igre nikoli ne zaklene; priprava »Pripravljamo …« (in njena novica v 2 h) ne čaka več na šolo in igre; David ima za posnetke šole in iger svoje stikalo v administraciji (privzeto vklopljeno). Izmerjeno: največja posodobitev v živo (mladiček z vsemi posnetki) 8,8 kB.
 
 ## 2026-10-21 — Video ali slika: otrok izbere prikaz
 

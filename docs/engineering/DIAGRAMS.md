@@ -1567,8 +1567,23 @@ flowchart LR
   P --> SS[school_X_success<br/>pose → same pose]
   R --> BW[ball_waiting] --> BR[ball_running<br/>stands → empty room] --> BF[ball_fetching<br/>empty room → stands]
   R --> WS[wand_stalking<br/>stands → crouch] --> WP[wand_pouncing<br/>crouch → crouch, per pounce] --> WC[wand_catching<br/>crouch → catch]
-  subgraph Gate [phaseClipsFor = usesStateMedia + group]
-    G[school: training on · ball: dog · wand: cat · 3 s Kling 3.0 Pro, 0.336 $ each]
+  subgraph Gate [phaseClipsFor = switch »School & game clips« + usesStateMedia + version 3 + group]
+    G[ball: dog · wand: cat · school: training on · 3 s Kling 3.0 Pro, 0.336 $ each]
+  end
+```
+
+```mermaid
+flowchart TD
+  T[Trial i of the server schedule] --> A[attention<br/>after trial i-1's praise window]
+  A --> PF[performing 3 s<br/>start = max(prev window end, obey_at − 3 s − 100 ms)]
+  PF --> SU[success: end pose held<br/>obey_at … window_end = praise counts]
+  SU --> N[next trial's attention]
+  T -->|dog ignores| ST[standing pose from the cue]
+  subgraph Ready [GameMediaReadiness v3]
+    RP[play = ball phases + playing + idle]
+    RW[wand = wand phases]
+    RF[a FAILED phase clip / pose → the M5-T04 list]
+    RS[school = informational → preparation.school_pending]
   end
 ```
 
@@ -1579,8 +1594,8 @@ sequenceDiagram
   participant K as GeneratePetKeyframe (key + pose images)
   participant V as SubmitPetStateVideo
   participant App as phasePlayer.ts (app)
-  Note over S: after loops + transitions (§13): school, then games
-  S->>K: missing poses of the next clip (claim, 0.15 $)
+  Note over S: after loops + transitions (§13): games, then school (QA m1) — not part of the preparation (m6)
+  S->>K: missing poses of the next clip (claim, 0.15 $; switch read fresh before fal)
   K-->>S: stored → queueStateVideos again
   S->>V: phase clip (start / end = its poses, duration "3")
   V-->>App: phases[clip] in PetUpdated / child state

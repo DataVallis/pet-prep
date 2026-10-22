@@ -35,16 +35,16 @@
 **David 20. 10.:** **klip za vsak ukaz in vsako fazo** (ne ena poza).
 
 - Ukazi danes: sedi, pridi, prostor, potreba (`TrainingCommand`).
-- Faze **(D)**: čaka/pozornost → izvaja → uspeh (drži položaj). Klip faze se predvaja enkrat in se ustavi na zadnji sličici; nikoli ne teče v zanki, ki bi kazala drugo dejanje.
+- Faze **(potrdil David 21. 10. 2026)**: pozornost → izvaja → uspeh (drži položaj); ukaz, ki ga kuža ne uboga = poza »stoji«; lulat zunaj = kuža gre do vrat. Klip faze se predvaja enkrat in se ustavi na zadnji sličici; nikoli ne teče v zanki, ki bi kazala drugo dejanje.
 - Šola je onemogočena, ko ljubljenček spi (§8).
 
-**Zgrajeno (M5-T09, 21. 10. 2026) — strežnik + aplikacija (JS, OTA); na telefonu še ni preverjeno; faze so predlog Claude (DECISIONS 21. 10.).**
+**Zgrajeno (M5-T09, 21. 10. 2026) — strežnik + aplikacija (JS, OTA); na telefonu še ni preverjeno; faze potrdil David 21. 10. 2026.**
 - **Ukazi:** sedi (`sit`), pridi (`come`), prostor (`place`), lulat zunaj (`potty`) — `TrainingCommand`, preverjeno.
 - **Poze** (Nano Banana Pro Edit iz referenčne slike obdobja; isti pes, soba, svetloba, kader): sedi, stoji pred kamero (pridi), leži na sivi blazini (prostor), stoji pri vratih (lulat zunaj). »Stoji« = referenčna slika.
 - **Posnetki** (Kling 3.0 Pro, **3 s**, od poze do poze z `end_image_url`): pozornost (stoji → stoji, pogleda gor in čaka), izvaja (stoji → poza ukaza), uspeh (poza → ista poza, drži položaj). 12 posnetkov na psa; predvaja se enkrat, obstane na zadnji sličici.
-- **Kdaj kaj (urnik strežnika):** začetek in ukaz → pozornost; kuža uboga → izvaja (3 s) → uspeh do naslednjega ukaza; kuža ne uboga → mirna slika »stoji« (besedilo »Kuža voha naokrog …« — noben posnetek ne pokaže pozornosti ali česa drugega). »Lulat zunaj« v sobi = kuža gre k vratom.
-- **§0 pravilo 1:** dokler posnetka ni, poza faze (npr. sedi) — nikoli posnetek stanja ali druge faze. V načinu »Slika« (M5-T11) samo poze, brez prenosa. Med pripravo (§13) poza + »Šola se še pripravlja« (dokler prihajajo posnetki šole); vaja deluje ves čas.
-- **Kdo:** samo pes s šolanjem in mediji stanj (poln kupljen nabor, različica 2, stikalo vklopljeno); obstoječi ljubljenčki nič samodejno (»Upgrade to state media«).
+- **Kdaj kaj (urnik strežnika):** začetek in ukaz → pozornost; izvaja (3 s) je časovno tako, da se **konča tik pred trenutkom, ko kuža uboga** (besedilo »uboga« in vse okno pohvale, 150–1500 ms po tem trenutku, kažeta končno pozo — QA PR #332 M1; kuža uboga 0,8–2,5 s po ukazu, zato se gib začne okoli ukaza, nikoli pred koncem okna pohvale prejšnjega ukaza) → uspeh skozi okno pohvale do pozornosti naslednjega ukaza; kuža ne uboga → mirna slika »stoji« (besedilo »Kuža voha naokrog …« — noben posnetek ne pokaže pozornosti ali česa drugega). »Lulat zunaj« v sobi = kuža gre k vratom.
+- **§0 pravilo 1:** dokler posnetka ni, poza faze (npr. sedi) — nikoli posnetek stanja ali druge faze. V načinu »Slika« (M5-T11) samo poze, brez prenosa. Dokler prihajajo posnetki šole: poze + »Šola se še pripravlja« (strežnik `preparation.school_pending`, tudi po koncu priprave — posnetki šole niso del priprave §13); vaja deluje ves čas.
+- **Kdo:** samo pes s šolanjem in mediji stanj (poln kupljen nabor, **različica 3**, stikali »Mediji stanj« in »Posnetki šole in iger« vklopljeni); obstoječi ljubljenčki nič samodejno — tudi ljubljenčki različice 2 (narejeni med M5-T08 in M5-T09) samo ob nakupu ali »Upgrade to state media« (potrdil David 21. 10. 2026).
 
 ## 4. Odziv po »Pelji ven«
 
@@ -170,8 +170,8 @@
 
 - Kratkoročno: če manjka katerikoli klip igre, je igra **onemogočena** (»Igra se še pripravlja«), nikoli napol delujoča.
   - *Stanje M5-T04 (21. 10. 2026):* zgrajeno za vse igre z mediji — žoga in crkljanje (pes, crkljanje tudi muca) ter palica s peresom (muca). Odloča strežnik: igra potrebuje vse klipe svoje scene, do katerih je ljubljenček upravičen (`config/media.php` `game_clips`: `playing` + `idle`; brezplačni nabor nima `playing`, zato potrebuje samo `idle`), šteje pa ljubljenčkov dejanski nabor (lastni ali skupni videz pasme + barve). Dokler kateri manjka, je gumb viden, a onemogočen z »Igra se še pripravlja« (EN »The game is still getting ready«), začetek pa strežnik zavrne (422 `media_not_ready`). Ko je zadnji klip shranjen, ga `PetUpdated` (`video_ready`) prinese v aplikacijo in igra se omogoči brez ponovnega zagona. Ljubljenček brez AI medijev (narisana scena) igra kot doslej. Besedilo nikoli ne omenja slik, videov ali generiranja (§13).
-- Dolgoročno: klip za vsako fazo igre (čaka → teče → prinese; muca: preži → skoči → ulovi); žogo ali list animira aplikacija sama, zato se besedilo vedno ujema s tem, kar se vidi. Most do načrtovanega 2.5D pristopa.
-  - *Stanje M5-T10 (21. 10. 2026) — zgrajeno, strežnik + aplikacija (JS, OTA); na telefonu še ni preverjeno; faze so predlog Claude (DECISIONS 21. 10.):* **žoga (pes):** čaka (stoji → stoji) → teče (iz »stoji« v prazno sobo — kuža izgine iz slike; poza »prazna soba«) → prinese (iz prazne sobe nazaj v »stoji«); žoga je v zraku toliko, kot trajata posnetka (6 s). **Palica s peresom (muca):** preži (iz »stoji« v pritajeno) → skoči (iz pritajene v pritajeno, ob vsakem skoku urnika; med skoki mirna pritajena poza) → ulovi (iz pritajene v »ulovljeno«, zadnji 2 s). Posnetki 3 s, predvajajo se enkrat. Žogo in pero riše aplikacija; pozivi modelu igrače ne omenjajo. Crkljanje ostane na posnetkih stanj. **Pripravljenost:** ljubljenček s posnetki faz potrebuje vse posnetke faz svoje igre (`config/media.php` `game_phase_groups`), vsi drugi (starejši nabor, brezplačni, stikalo izklopljeno) ostanejo pri pravilu M5-T04. Način »Slika«: poze faz.
+- Dolgoročno: klip za vsako fazo igre (čaka → teče → prinese; muca: preži → skoči → ulovi — **potrdil David 21. 10. 2026**, tudi 6 s žoge v zraku); žogo ali list animira aplikacija sama, zato se besedilo vedno ujema s tem, kar se vidi. Most do načrtovanega 2.5D pristopa.
+  - *Stanje M5-T10 (21. 10. 2026) — zgrajeno, strežnik + aplikacija (JS, OTA); na telefonu še ni preverjeno; faze potrdil David 21. 10. 2026:* **žoga (pes):** čaka (stoji → stoji) → teče (iz »stoji« v prazno sobo — kuža izgine iz slike; poza »prazna soba«) → prinese (iz prazne sobe nazaj v »stoji«); žoga je v zraku toliko, kot trajata posnetka (6 s). **Palica s peresom (muca):** preži (iz »stoji« v pritajeno) → skoči (iz pritajene v pritajeno, ob vsakem skoku urnika; med skoki mirna pritajena poza) → ulovi (iz pritajene v »ulovljeno«, zadnji 2 s). Posnetki 3 s, predvajajo se enkrat. Žogo in pero riše aplikacija; pozivi modelu igrače ne omenjajo. Crkljanje ostane na posnetkih stanj. Z »zmanjšaj gibanje« žoga ne leti: kratko izgine in se ob koncu vrne (čas igre ostane 6 s). **Pripravljenost:** ljubljenček s posnetki faz potrebuje vse posnetke faz svoje igre (`config/media.php` `game_phase_groups`) — žoga **in** posnetka stanj igre (`playing`, `idle`; crkljanje si deli oder); neuspel posnetek faze ali poza igre → spet pravilo M5-T04 (igra nikoli ne obvisi). Posnetki iger se naredijo pred šolo. Vsi drugi (različica 1 / 2, brezplačni, katerokoli stikalo izklopljeno) ostanejo pri pravilu M5-T04. Način »Slika«: poze faz.
 
 ## 11. Krtača in kretnje
 
@@ -192,7 +192,7 @@
 
 - Po nakupu: zaslon **»Pripravljamo [ime] … to lahko traja nekaj minut«** z animacijo Curia (nastavljanje aplikacije v ozadju).
 - Vse, kar še ni pripravljeno, je označeno nevtralno: »Šola se še pripravlja«, »Igra se še pripravlja«. V šoli se do takrat prikaže poza.
-- Vrstni red priprave: najprej to, kar otrok vidi v prvih minutah (stoji, spi, je), nato šola in igre.
+- Vrstni red priprave: najprej to, kar otrok vidi v prvih minutah (stoji, spi, je), nato šola in igre. *(QA PR #332, 21. 10. 2026: posnetki faz šole in iger se naredijo po prehodih — igre pred šolo — in niso del priprave: zaslon »Pripravljamo …« in novica »Vse je pripravljeno« ne čakata nanje; igre čakajo s »Igra se še pripravlja«, šola s »Šola se še pripravlja« (`preparation.school_pending`).)*
 - Obvestilo, ko je vse pripravljeno: »Vse je pripravljeno: [ime]« *(David 21. 10.: spolno nevtralno; prej »[ime] je pripravljen!«)*
 - Vsi uporabniki vidijo enako; pri pasmi/barvi z že narejenimi mediji priprava traja nekaj sekund.
 - Za razvoj izmeriti: koliko traja priprava celotnega paketa (fal izvaja videe vzporedno).
@@ -247,7 +247,7 @@
 | Igra (3 faze, 3 s) | žoga 3 × 0,336 $ = 1,01 $ | palica 3 × 0,336 $ = 1,01 $ |
 | **Skupaj** | **11,17 $** (mladiček 12,59 $) | **7,40 $** |
 
-Vsak naslednji kupec iste pasme + barve + obdobja **0 $**. Rojstnodnevni klip (0,56 $) še ni zgrajen. 12-tedenski izziv z mladičem (2 obdobji) ≈ 25,18 $ ≈ 22 € — prvi kupec ≈ 13 € v plusu, vsak naslednji iste pasme in barve ≈ 34,80 € (ocena po ceniku; resnica je račun fal).
+Vsak naslednji kupec iste pasme + barve + obdobja **0 $**. Rojstnodnevni klip (0,56 $) še ni zgrajen. **Dnevna meja AI (privzeto 5 $ / dan v produkciji):** prvi kupec nove pasme + barve + obdobja psa (11,17 $) svoj nabor dobi v ≈ 3 dneh — najprej slika, ključne slike in zanke, nato igre in šola; igre medtem ne obvisijo, šola kaže poze. Za vse v enem dnevu David dvigne mejo v »AI budget«. 12-tedenski izziv z mladičem (2 obdobji) ≈ 25,18 $ ≈ 22 € — prvi kupec ≈ 13 € v plusu, vsak naslednji iste pasme in barve ≈ 34,80 € (ocena po ceniku; resnica je račun fal).
 
 ## 15. Prioritete
 
