@@ -480,6 +480,15 @@ class FalAiService
                 .'long tapering tail without feathering, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-55: FCI standard (S449) — steel grey with brown (liver) patches as the anchor (never black);
+            // vigorous, rustic pointing dog, harsh wiry coat with moustache and eyebrows, brown nose, natural tail.
+            BreedType::WirehairedPointingGriffon => 'A gentle, alert Wirehaired Pointing Griffon with a steel grey coat with brown (liver) patches, '
+                .'harsh, wiry medium-length coat with a soft undercoat, a moustache and bushy eyebrows, '
+                .'vigorous, rustic and athletic pointing dog, slightly longer than tall, strong limbs, '
+                .'long square muzzle with a brown nose, large rounded dark-yellow eyes, medium-sized flat ears set level with the eyes, '
+                .'natural tail carried horizontally, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1153,6 +1162,17 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'fine, short and close coat',
                 'markings' => 'no merle, long tapering tail without feathering',
+            ],
+            // M5-R10-55: FCI standard S449 colours (never black — AKC S451 / UKC S452).
+            BreedType::WirehairedPointingGriffon => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'steel grey with brown (liver) patches',
+                    1 => 'liver roan',
+                    2 => 'white and orange',
+                },
+                'eye_color' => 'dark yellow or brown',
+                'fur_texture' => 'harsh, wiry medium-length coat with a soft undercoat',
+                'markings' => 'moustache and bushy eyebrows, brown nose, natural tail carried horizontally',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

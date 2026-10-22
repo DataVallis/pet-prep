@@ -587,6 +587,8 @@ it('gives chases_small_pets only to the ten breeds whose own entry quotes a high
         BreedType::RhodesianRidgeback->value => 'rhodesian_ridgeback.behaviour.other_pets',
         // M5-R10-54: PDSA S444 "Whippets have a really high prey drive".
         BreedType::Whippet->value => 'whippet.behaviour.other_pets',
+        // M5-R10-55: PetMD S453 "these pups can have a strong prey drive".
+        BreedType::WirehairedPointingGriffon->value => 'wirehaired_pointing_griffon.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {

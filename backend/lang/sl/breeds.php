@@ -58,6 +58,7 @@ return [
     'dalmatian' => 'Dalmatinec',
     'australian_cattle_dog' => 'Avstralski govedar',
     'whippet' => 'Mali angleški hrt',
+    'wirehaired_pointing_griffon' => 'Francoski ostrodlaki ptičar',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

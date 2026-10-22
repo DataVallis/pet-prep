@@ -329,6 +329,15 @@ return [
         ['key' => 'fawn-white', 'value' => 'fawn and white parti-colour', 'en' => 'Fawn and white', 'sl' => 'Plavo rjav z belo'],
         ['key' => 'brindle-white', 'value' => 'white with brindle patches', 'en' => 'Brindle and white', 'sl' => 'Tigrasto-bel'],
     ],
+    // M5-R10-55: FCI standard S449 — steel grey with liver patches (preferred), liver roan, solid liver, white and
+    // liver, white and orange; never black (AKC S451, UKC S452).
+    'wirehaired_pointing_griffon' => [
+        ['key' => 'steel-grey-liver', 'value' => 'steel grey with brown (liver) patches', 'en' => 'Steel grey with liver', 'sl' => 'Jekleno siv z jetrno rjavimi lisami'],
+        ['key' => 'liver-roan', 'value' => 'liver roan', 'en' => 'Liver roan', 'sl' => 'Jetrni roan'],
+        ['key' => 'liver', 'value' => 'solid liver (brown)', 'en' => 'Liver', 'sl' => 'Jetrno rjav'],
+        ['key' => 'liver-white', 'value' => 'white and brown (liver)', 'en' => 'Liver and white', 'sl' => 'Jetrno-bel'],
+        ['key' => 'orange-white', 'value' => 'white and orange', 'en' => 'Orange and white', 'sl' => 'Oranžno-bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

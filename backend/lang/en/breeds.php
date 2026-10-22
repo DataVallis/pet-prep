@@ -58,6 +58,7 @@ return [
     'dalmatian' => 'Dalmatian',
     'australian_cattle_dog' => 'Australian Cattle Dog',
     'whippet' => 'Whippet',
+    'wirehaired_pointing_griffon' => 'Wirehaired Pointing Griffon',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

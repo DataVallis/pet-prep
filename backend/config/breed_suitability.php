@@ -1453,5 +1453,29 @@ return [
             ],
         ],
 
+        // M5-R10-55: wirehaired_pointing_griffon.* (S448–S456), runbook rules (data.json
+        // proposed_game_parameters.wirehaired_pointing_griffon.suitability_tags). RKC key facts (S450) + FCI / UKC
+        // standards (S449, S452) + PetMD (S453). No Breed Watch category, no welfare statement → no welfare chip.
+        // Never small_children (PetMD: when socialised as puppies), other_pets (strong prey drive), needs_company
+        // (PetMD and VCA differ), sheds / low_shedding (RKC "Yes" vs PetMD / VCA low shedding).
+        'wirehaired_pointing_griffon' => [
+            'suits' => [
+                // S450 "Exercise: More than 2 hours per day"
+                ['tag' => 'active_family', 'source_ids' => ['S450'], 'refs' => ['wirehaired_pointing_griffon.exercise.adult', 'wirehaired_pointing_griffon.suitability.rkc_exercise']],
+                // S452 "which makes it suitable as a family pet and guardian"
+                ['tag' => 'family_pet', 'source_ids' => ['S452'], 'refs' => ['wirehaired_pointing_griffon.suitability.ukc_family']],
+                // S449 "Very gentle with children." (PetMD's socialisation condition in wirehaired_pointing_griffon.behaviour.family).
+                ['tag' => 'children', 'source_ids' => ['S449'], 'refs' => ['wirehaired_pointing_griffon.behaviour.family']],
+                // S450 "Size of home: Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S450'], 'refs' => ['wirehaired_pointing_griffon.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                // S450 "Exercise: More than 2 hours per day"
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S450'], 'refs' => ['wirehaired_pointing_griffon.exercise.adult', 'wirehaired_pointing_griffon.suitability.rkc_exercise']],
+                // S453 "Their hunting history also means these pups can have a strong prey drive."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S453'], 'refs' => ['wirehaired_pointing_griffon.behaviour.other_pets']],
+            ],
+        ],
+
     ],
 ];
