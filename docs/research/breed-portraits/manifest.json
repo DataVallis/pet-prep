@@ -663,6 +663,18 @@
             "prompt_hash": "sha256:7d1149bbbaea483c56a26c95c8cfaf835322d522c7b1067a63e0df354f557bec",
             "generated_at": "2026-10-21T03:50:20+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "whippet",
+            "species": "dog",
+            "file": "dog/whippet.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:7387c6fcf12c509066864930b921280259fabf8e98bb684c7890619cde653422",
+            "generated_at": "2026-10-21T23:55:46+00:00",
+            "cost_usd": 0.15
         }
     ]
 }

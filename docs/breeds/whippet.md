@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `whippet` (viri S442–S447; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174) |
 | Izvor | FCI št. 162, skupina 10, sekcija 3 (kratkodlaki hrti), Velika Britanija (S442) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 50. mesto »Whippet« (S174) |
-| PR-ji | pet-prep #333 (pasma) · portret — · spletna stran — |
+| PR-ji | pet-prep #333 (pasma, združen `bf206e6`) · portret #334 · spletna stran — |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -30,6 +30,7 @@
 | 2026-10-21 | pravilo runbooka (§3) | marketing: **v aplikaciji da, v marketingu da** — nikoli kot pes za majhne otroke, za dom z malimi živalmi ali pes, ki je lahko sam | veterinarsko odsvetovanje oglaševanja velja le za pse s sploščenim obrazom (BVA S92) | #333 |
 | 2026-10-21 | pravilo runbooka (§3) | barve za AI in izbirnik: **plavo rjav** (portret), tigrast, črn, moder (siv), plavo rjav z belo, tigrasto-bel; nikoli merle; zdravo vitek hrt, nikoli shujšan | standard Kennel Club S443 »Any colour or mixture of colours, except merle.« (uteži barv brez vira → `verified: false`) | #333 |
 | 2026-10-21 | predlog Claude, David lahko spremeni | ime SL »mali angleški hrt« (slug `mali-angleski-hrt`); iskalni ključi tudi »whippet«, »vipet«, »angleški hrt«, »hrt«, »snap dog« | RTV SLO S447 »Mali angleški hrti ali whippeti …« (tier C); KZS ni preverjen | #333 |
+| 2026-10-21 | pravilo runbooka (§8) | AI portret: realistična fotografija odraslega psa, plavo rjav, siva studijska podlaga, zdravo vitek, naravna razmerja, rožasta ušesa; sprejet v prvem poskusu (zagon 39696461560, koda `bf206e6`, brez produkcijske namestitve) | barva portreta = najtežja barva iz `breed_appearance.php` | #334 |
 | 2026-10-21 | pravilo runbooka (§2.3) | seznam za vzreditelja: pregled srca (avskultacija) plemenskih psov, pregled oči pri veterinarskem oftalmologu, test sluha BAER — vse `other_scheme`. Brez novega ključa | AKC Hound Group (K30) »Cardiac Exam«, »Ophthalmologist Evaluation«, »BAER Testing«; izjava Kennel Club o srcu (K31) »all breeding stock should be auscultated prior to breeding« (nasvet, uradne sheme za srce v VB ni). Stran RKC nedosegljiva | #333 |
 
 ## Kaj je v aplikaciji (v slogu FEATURES)
@@ -41,7 +42,7 @@
 | Česanje 1× na teden (rutina »Počeši«), opozorilo »počakaj s sprehodom« po obroku, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R16 / M5-R17 | 2026-10-21 |
 | Barva (izbirnik barve: plavo rjav, tigrast, črn, moder, plavo rjav z belo, tigrasto-bel) | 🛠 | 💶 izziv | M5-R21 | 2026-10-21 |
 | Nova oznaka »občutljiv pes — bolje za starejše otroke« | 🛠 | — | M5-R10-54 | 2026-10-21 |
-| AI portret v registru | 🗓 | — | M5-R11-04 | — |
+| AI portret v registru (plavo rjav, sprejet v prvem poskusu, zagon 39696461560) | ✅ | — | M5-R11-04 | 2026-10-21 |
 | Stran na petprep.si (`/animals/dogs/whippet`, `/sl/zivali/psi/mali-angleski-hrt`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
