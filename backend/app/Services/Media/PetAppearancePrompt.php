@@ -5,6 +5,8 @@ namespace App\Services\Media;
 use App\Enums\BreedType;
 use App\Enums\LifeStage;
 use App\Enums\PetOrigin;
+use App\Enums\PetPhaseClip;
+use App\Enums\PetPose;
 use App\Enums\PetStateEnum;
 use App\Enums\PetTransition;
 use App\Enums\Species;
@@ -466,6 +468,48 @@ class PetAppearancePrompt
 
         return 'The same '.$subject.' as in the start image '.$transition->motion($species)
             .', ending exactly in the pose of the end image. '.$style;
+    }
+
+    /**
+     * M5-T09 / T10: a POSE image of a school / game phase clip — an edit of the
+     * stage's reference image (same animal, room, light, framing); only the pose
+     * changes. The empty-room pose removes the animal. No toy, no person, no text.
+     *
+     * @param  array<string, string>  $traits
+     */
+    public function posePrompt(string $breedKey, PetPose $pose, array $traits = [], ?LifeStage $stage = null): string
+    {
+        $species = self::speciesOf($breedKey);
+        $this->refuseCatWithoutTraits($species, $traits);
+        $noun = $species === Species::Cat ? 'cat' : 'dog';
+
+        if ($pose === PetPose::Empty) {
+            return 'The same room as in the reference image, now WITHOUT the '.$noun.': the '.$noun.' has left the frame. '
+                .'Keep the same room, floor, background, natural light, camera position and framing exactly. '
+                .'Realistic 35mm photograph, sharp focus. No animal, no people, no hands, no toys, no text, no watermark, no logo.';
+        }
+
+        $subject = $traits !== [] ? $this->describe($breedKey, $traits, $stage) : $this->displayName($breedKey);
+
+        return 'The same '.$noun.' as in the reference image ('.$subject.'), now '.$pose->prompt().'. '
+            .self::KEYFRAME_KEEP.' No toys. '.self::KEYFRAME_STYLE;
+    }
+
+    /**
+     * M5-T09 / T10: a school / game PHASE clip (3 s, played once): start frame →
+     * end frame, natural motion, same camera and safety rules as a transition. The
+     * app draws the ball / feather over the clip, so no toy is named.
+     *
+     * @param  array<string, string>  $traits
+     */
+    public function phaseVideoPrompt(string $breedKey, PetPhaseClip $clip, array $traits = [], ?LifeStage $stage = null): string
+    {
+        $species = self::speciesOf($breedKey);
+        $subject = $this->clipSubject($breedKey, $species, $traits, $stage);
+        $style = $species === Species::Cat ? self::CAT_CUSTOM_MOTION_STYLE : self::CUSTOM_MOTION_STYLE;
+
+        return 'The same '.$subject.' as in the start image '.$clip->motion()
+            .', ending exactly in the frame of the end image. No toys, no ball, no feather. '.$style;
     }
 
     /** @param  array<string, string>  $traits */

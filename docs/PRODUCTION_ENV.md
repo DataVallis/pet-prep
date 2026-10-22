@@ -64,6 +64,7 @@ This document describes all environment variables used by the PetPrep production
 | `REVERB_SCHEME` | Required | No | Public scheme (`https` / `wss`) | `https` |
 | `REVERB_SERVER_HOST` | Required | No | Internal binding host | `0.0.0.0` |
 | `REVERB_SERVER_PORT` | Required | No | Internal listening port | `8080` |
+| `REVERB_MAX_REQUEST_SIZE` | Optional | No | Max HTTP request Reverb accepts (the server's event publish). Default 65 536 since M5-T09 / T10 — a `PetUpdated` with every school / game clip URL is ≈ 9 kB (measured largest: 8 768 B payload / 9 677 B publish body for a puppy with every clip; the old default 10 000 was too tight). Not to be confused with `REVERB_APP_MAX_MESSAGE_SIZE` (default 10 000), which only limits messages a **client** sends over the WebSocket — never the server's broadcasts. A change of `config/**` or `/opt/petprep/.env` recreates Reverb on the next deploy (fingerprint D19) | `65536` |
 
 ---
 
@@ -81,6 +82,7 @@ This document describes all environment variables used by the PetPrep production
 | `AI_STATE_VIDEO_PROFILE` | Optional | No | Video profile for the pet state videos (M4-03; David 2026-10-05: Kling 3.0 Pro, 5 s, no audio). `kling_v16_legacy` no longer exists (falls back to the default + error log) | `kling_v3_pro` |
 | `AI_KEYFRAME_PROFILE` | Optional | No | Image-edit profile for the state KEY IMAGES (M5-T08; David 2026-10-21: Nano Banana Pro Edit, ~$0.15 each). An unknown / disabled key → no key images (pets fall back to the pre-M5-T08 clips) | `nano_banana_pro_edit` |
 | `AI_STATE_MEDIA_ENABLED` | Optional | No | **Do not use as the switch.** State media (key images, loops, transitions) is switched by the superadmin in `/admin → Feature switches` (`app_settings.state_media`, audited — M5-T08b, David 2026-10-21). This env value is only the default while no row exists; off in the panel also stops what is already queued, retried and swept (read uncached by the workers); back on resumes the waiting items at once (`ResumeStateMedia` job, queue worker needed) | `true` |
+| `AI_PHASE_CLIPS_ENABLED` | Optional | No | **Do not use as the switch.** School & game phase clips + their pose images (M5-T09 / T10) are switched by the superadmin in `/admin → Feature switches` → »School & game clips« (`app_settings.phase_clips`, audited — QA PR #332 M2, David 2026-10-21). This env value is only the default while no row exists; off in the panel also stops what is already queued, retried and swept (read uncached by the workers); back on resumes the waiting items (`ResumeStateMedia`). Needs state media on too | `true` |
 | `PET_MEDIA_DISK` | Optional | No | Filesystem disk for stored pet images / videos (M4-05); `pet_media` = `storage/app/pet-media` on the `app_storage` volume | `pet_media` |
 | `PET_MEDIA_MAX_IMAGE_MB` | Optional | No | Largest image downloaded from fal | `25` |
 | `PET_MEDIA_MAX_VIDEO_MB` | Optional | No | Largest video downloaded from fal | `60` |

@@ -27,6 +27,7 @@ import PetMediaView from '@/components/PetMediaView';
 import { childPetKey } from '@/hooks/queries/useChildPet';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { selectMediaSource } from '@/modules/petMedia/petMedia';
+import { phasePlayback, schoolMomentAt, usesPhaseClips } from '@/modules/petMedia/phasePlayer';
 import { schoolClipsPending, schoolPreparingText } from '@/modules/preparation/preparation';
 import {
   feedbackAt,
@@ -269,10 +270,12 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
   const game = useTrainingGame({ clockSkewMs: view.clockSkewMs, timezone: view.timezone, clock, resume: ownSchedule });
   const { phase, elapsedMs } = game;
   const busy = phase.kind === 'running' || phase.kind === 'finishing' || phase.kind === 'starting';
-  const premiumVideo = useMemo(() => selectMediaSource(view.pet.media, 'idle').kind === 'video', [view.pet.media]);
-  // M5-T06 (spec §13): school clips still on their way → the pose (reference image) on the
-  // stage and »Šola se še pripravlja«; the practice itself works as always.
-  const schoolPreparing = schoolClipsPending(view.pet.preparation) && view.pet.media.referenceImageUrl !== null;
+  // M5-T09: a pet with school phase clips plays the clip of each command phase (or its pose).
+  const phaseClips = usesPhaseClips(view.pet.media, 'school');
+  const premiumVideo = useMemo(() => phaseClips || selectMediaSource(view.pet.media, 'idle').kind === 'video', [view.pet.media, phaseClips]);
+  // M5-T06 (spec §13): school clips still on their way → the pose on the stage and »Šola se še
+  // pripravlja«; the practice itself works as always (M5-T09: the phase poses, never a wrong clip).
+  const schoolPreparing = schoolClipsPending(view.pet.preparation, phaseClips) && view.pet.media.referenceImageUrl !== null;
   const serverNow = (clock?.wall() ?? Date.now()) + view.clockSkewMs;
   const dayEnding = isDayEnding(training, serverNow, familyCalendar(view.timezone, view.server_time).nextMidnight(serverNow));
   const block = startBlock(training, dayEnding);
@@ -338,6 +341,7 @@ export default function TrainingOverlay({ view, onClose, clock, testID = 'traini
           finishing={phase.kind === 'finishing'}
           resumedAtMs={phase.resumedAtMs}
           premiumVideo={premiumVideo}
+          phaseClips={phaseClips}
           posePending={schoolPreparing}
           view={view}
           onPraise={game.praise}
@@ -378,6 +382,7 @@ function RunningView({
   finishing,
   resumedAtMs,
   premiumVideo,
+  phaseClips,
   posePending,
   view,
   onPraise,
@@ -390,6 +395,8 @@ function RunningView({
   /** ms into the session when it was resumed after an app restart (null = played from the start). */
   resumedAtMs: number | null;
   premiumVideo: boolean;
+  /** M5-T09: the pet has school phase clips (attention → performing → success per trial). */
+  phaseClips: boolean;
   /** M5-T06: the school clips are on their way — show the still pose, no clip. */
   posePending: boolean;
   view: ChildPetView;
@@ -401,6 +408,16 @@ function RunningView({
   const text = S.commands[session.command];
   const trialNo = frame.slot === null ? 0 : frame.slot + 1;
   const praiseDisabled = finishing || frame.over;
+  // M5-T09: the phase of the trial (server schedule) → its clip once, else / in picture mode its pose.
+  const moment = phaseClips ? schoolMomentAt(session, elapsedMs) : null;
+  const mode = mediaModeOf(view);
+  // Re-derived per phase instance (the game re-renders every frame; the item stays the same).
+  const momentKey = moment === null ? null : `${moment.instance}|${moment.clip ?? ''}|${moment.pose ?? ''}`;
+  const phase = useMemo(
+    () => (moment === null ? null : phasePlayback(view.pet.media, moment, posePending ? 'picture' : mode)),
+    // `moment` is new every frame; `momentKey` carries what matters.
+    [view.pet.media, momentKey, mode, posePending], // eslint-disable-line react-hooks/exhaustive-deps
+  );
   /** A touch is down: its release (onPress) is the same tap, however long it was held. */
   const touchActive = useRef(false);
 
@@ -427,6 +444,7 @@ function RunningView({
             media={view.pet.media}
             petState={frame.dog === 'obeying' ? 'playing' : 'idle'}
             videoEnabled={!posePending}
+            phase={phase}
             // M5-T11 »Prikaz: Slika«: the pose image of the phase (obeying = playing pose), no clip.
             mode={mediaModeOf(view)}
             breed={view.pet.breed_type}

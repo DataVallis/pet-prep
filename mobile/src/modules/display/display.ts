@@ -11,10 +11,10 @@
  * (`PATCH /api/parent/children/{child}/settings`). Read it from the child state
  * (`view.settings.media_display`) — never keep a local copy.
  *
- * Claude's proposal (M5-T11, waits for David): in picture mode school and games show the
- * pose image of the phase (school: `playing` key image while the dog obeys, else idle; play /
- * cat games: the `playing` key image) with the app-animated layers (ball, wand, cue) on top —
- * no clips there either.
+ * Confirmed by David 2026-10-21: in picture mode school and games show the pose image of the
+ * phase with the app-animated layers (ball, wand, cue) on top — no clips there either. A pet
+ * with phase clips (M5-T09 / T10) gets the phase's own pose (`phasePlayer.ts`: sitting, the dog
+ * out of frame, the cat crouched …); older sets the `playing` key image / idle as before.
  */
 
 import type { MediaMode } from '@/modules/petMedia/statePlayer';

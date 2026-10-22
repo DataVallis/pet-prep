@@ -35,6 +35,7 @@ describe('readPreparation', () => {
       running: true,
       readyAt: null,
       announce: false,
+      schoolPending: false,
     });
   });
 
@@ -53,7 +54,7 @@ describe('readPreparation', () => {
   });
 
   it('round-trips to the wire shape', () => {
-    const raw = { ready: false, pending: ['image' as const], preparing: true, running: true, ready_at: null, announce: false };
+    const raw = { ready: false, pending: ['image' as const], preparing: true, running: true, ready_at: null, announce: false, school_pending: true };
     expect(preparationPayload(readPreparation(raw))).toEqual(raw);
   });
 });
@@ -126,5 +127,18 @@ describe('schoolClipsPending', () => {
     expect(schoolClipsPending(NO_PREPARATION)).toBe(false);
     // QA m2: an older pet with a missing / failed clip (no running preparation) keeps its stage.
     expect(schoolClipsPending(readPreparation({ ready: false, pending: ['playing'], preparing: false, running: false, ready_at: null }))).toBe(false);
+  });
+
+  it('M5-T09 (QA m6): a pet with school phase clips follows school_pending — also after the preparation ended', () => {
+    const ended = readPreparation({ ready: true, pending: [], preparing: false, running: false, ready_at: '2026-10-21T10:00:00Z', school_pending: true });
+    expect(ended.schoolPending).toBe(true);
+    expect(schoolClipsPending(ended, true)).toBe(true);
+    // The older stage rule is unchanged for a pet without phase clips.
+    expect(schoolClipsPending(ended, false)).toBe(false);
+    expect(schoolClipsPending(readPreparation({ ready: true, pending: [], preparing: false, running: false, ready_at: null, school_pending: false }), true)).toBe(false);
+    // Phase clips are never preparation items (an older server's keys are dropped); missing flag → false.
+    const older = readPreparation({ ready: false, pending: ['school_sit_attention', 'idle'], preparing: false, running: true, ready_at: null });
+    expect(older.pending).toEqual(['idle']);
+    expect(older.schoolPending).toBe(false);
   });
 });

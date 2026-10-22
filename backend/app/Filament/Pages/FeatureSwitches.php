@@ -29,7 +29,8 @@ use InvalidArgumentException;
  * e-mail) / everyone. Stored in app_settings via AppSettingsService
  * (cached ≤ 60 s, busted on save, every change audited in
  * app_setting_changes + the log). Existing cats keep working in every mode.
- * Also: unique vs shared AI media (M5-R21) and state media on / off (M5-T08b).
+ * Also: unique vs shared AI media (M5-R21), state media on / off (M5-T08b) and
+ * school & game phase clips on / off (M5-T09 / T10 QA M2).
  *
  * @property Form $form
  */
@@ -77,6 +78,7 @@ class FeatureSwitches extends Page implements HasForms
             'cats_test_parent_ids' => array_map('strval', $stored['test_parent_ids']),
             'unique_pet_media' => $settings->uniquePetMedia(),
             'state_media' => $settings->stateMedia(),
+            'phase_clips' => $settings->phaseClips(),
         ]);
     }
 
@@ -128,6 +130,14 @@ class FeatureSwitches extends Page implements HasForms
                             ->label(__('admin.features.state_media'))
                             ->default(true),
                     ]),
+                // M5-T09 / T10 (QA M2, David 2026-10-21): school & game phase clips.
+                Section::make(__('admin.features.phase_clips_section'))
+                    ->description(__('admin.features.phase_clips_description'))
+                    ->schema([
+                        Toggle::make('phase_clips')
+                            ->label(__('admin.features.phase_clips'))
+                            ->default(true),
+                    ]),
             ]);
     }
 
@@ -145,6 +155,7 @@ class FeatureSwitches extends Page implements HasForms
         sort($newIds);
         $unique = (bool) ($data['unique_pet_media'] ?? false);
         $stateMedia = (bool) ($data['state_media'] ?? AppSettingsService::stateMediaDefault());
+        $phaseClips = (bool) ($data['phase_clips'] ?? AppSettingsService::phaseClipsDefault());
 
         try {
             // Each switch is written only when its own fields changed, so saving
@@ -158,6 +169,9 @@ class FeatureSwitches extends Page implements HasForms
             if ($stateMedia !== $settings->stateMedia()) {
                 $settings->updateStateMedia($this->admin(), $stateMedia);
             }
+            if ($phaseClips !== $settings->phaseClips()) {
+                $settings->updatePhaseClips($this->admin(), $phaseClips);
+            }
         } catch (InvalidArgumentException $e) {
             Notification::make()->title(__('admin.features.not_saved'))->body($e->getMessage())->danger()->send();
 
@@ -166,7 +180,10 @@ class FeatureSwitches extends Page implements HasForms
 
         $media = $settings->uniquePetMedia() ? __('admin.features.unique_media_on') : __('admin.features.unique_media_off');
         $states = $settings->stateMedia() ? __('admin.features.state_media_on') : __('admin.features.state_media_off');
-        Notification::make()->title(__('admin.features.saved'))->body(__('admin.features.saved_body_media', ['mode' => $mode->label(), 'media' => $media]).' · '.__('admin.features.saved_body_state_media', ['state' => $states]))->success()->send();
+        $phases = $settings->phaseClips() ? __('admin.features.state_media_on') : __('admin.features.state_media_off');
+        Notification::make()->title(__('admin.features.saved'))->body(__('admin.features.saved_body_media', ['mode' => $mode->label(), 'media' => $media])
+            .' · '.__('admin.features.saved_body_state_media', ['state' => $states])
+            .' · '.__('admin.features.saved_body_phase_clips', ['state' => $phases]))->success()->send();
     }
 
     /**
@@ -175,7 +192,7 @@ class FeatureSwitches extends Page implements HasForms
     public function getChanges(): Collection
     {
         return AppSettingChange::with('user:id,name,email')
-            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY, AppSettingsService::STATE_MEDIA_KEY])
+            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY, AppSettingsService::STATE_MEDIA_KEY, AppSettingsService::PHASE_CLIPS_KEY])
             ->latest('id')->limit(20)->get();
     }
 

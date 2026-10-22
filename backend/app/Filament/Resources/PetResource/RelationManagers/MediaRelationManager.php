@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\PetResource\RelationManagers;
 
+use App\Enums\PetPhaseClip;
 use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\User;
@@ -32,6 +33,19 @@ class MediaRelationManager extends RelationManager
     public static function canViewForRecord(Model $ownerRecord, string $pageClass): bool
     {
         return self::isSuperadmin();
+    }
+
+    /** QA nit: the cost of one phase clip made from this pose image (the wand's are priced as game clips). */
+    private static function poseClipCostUsd(PetMedia $record): float
+    {
+        $pose = $record->pose();
+        foreach (PetPhaseClip::cases() as $clip) {
+            if ($pose !== null && ($clip->startPose() === $pose || $clip->endPose() === $pose)) {
+                return app(PetMediaService::class)->phaseClipCostUsd($clip);
+            }
+        }
+
+        return app(MediaProfiles::class)->clipVideo('school')->estimatedCostUsd();
     }
 
     private static function isSuperadmin(): bool
@@ -75,9 +89,10 @@ class MediaRelationManager extends RelationManager
     {
         return $table
             ->defaultSort('id')
-            // M5-T08: a full set is 1 image + 5 key images + 6 loops + 2 transitions (+ behaviour) — one page.
-            ->paginated([25, 50])
-            ->defaultPaginationPageOption(25)
+            // M5-T08: 1 image + 5 key images + 6 loops + 2 transitions (+ behaviour); M5-T09 / T10:
+            // + 7 pose images + 15 school / ball clips (dog) — one page.
+            ->paginated([50, 100])
+            ->defaultPaginationPageOption(50)
             // M5-T06: how long the media took (measured, no external call).
             ->description(fn (): string => self::timingLine($this->getOwnerRecord()))
             ->columns([
@@ -92,6 +107,9 @@ class MediaRelationManager extends RelationManager
                     ->color(fn (string $state): string => match ($state) {
                         PetMedia::KIND_KEYFRAME => 'info',
                         PetMedia::KIND_TRANSITION => 'warning',
+                        // M5-T09 / T10: pose images of the phase clips, school / game phase clips.
+                        PetMedia::KIND_POSE => 'info',
+                        PetMedia::KIND_PHASE => 'success',
                         default => 'gray',
                     }),
                 Tables\Columns\TextColumn::make('state')->placeholder('—'),
@@ -101,7 +119,8 @@ class MediaRelationManager extends RelationManager
                         $record->isVideo() && $record->recipe === PetMedia::RECIPE_POSE => 'from key image',
                         $record->isVideo() => 'from reference image',
                         $record->isTransition() => 'pose → pose',
-                        $record->isKeyframe() => 'edit of reference',
+                        $record->isPhase() => sprintf('phase clip %ss (pose → pose, plays once)', rtrim(rtrim(number_format((float) $record->duration_seconds, 1), '0'), '.') ?: '3'),
+                        $record->isKeyframe(), $record->isPose() => 'edit of reference',
                         default => null,
                     })
                     ->placeholder('—'),
@@ -168,13 +187,17 @@ class MediaRelationManager extends RelationManager
                                 $profiles->referenceImage()->estimatedCostUsd(), app(PetMediaService::class)->keyframeCostUsd(), $profiles->stateVideo()->estimatedCostUsd()),
                             $record->isKeyframe() => sprintf('New %s key image (~$%.2f), then its loop and transitions are remade from it (~$%.2f each). The current files stay visible until the new ones are stored.',
                                 $record->state, app(PetMediaService::class)->keyframeCostUsd(), $profiles->stateVideo()->estimatedCostUsd()),
+                            $record->isPose() => sprintf('New %s pose image (~$%.2f), then the school / game phase clips through it are remade (~$%.2f each). The current files stay visible until the new ones are stored.',
+                                $record->state, app(PetMediaService::class)->keyframeCostUsd(), self::poseClipCostUsd($record)),
+                            $record->isPhase() => sprintf('New %s phase clip (~$%.2f). The current clip stays visible until the new one is stored.',
+                                $record->state, $record->phaseClip() !== null ? app(PetMediaService::class)->phaseClipCostUsd($record->phaseClip()) : $profiles->clipVideo('school')->estimatedCostUsd()),
                             default => sprintf('New %s clip (~$%.2f). The current clip stays visible until the new one is stored.',
                                 $record->state, $profiles->stateVideo()->estimatedCostUsd()),
                         };
                     })
                     // M5-T08b (QA m1): no key image / transition regenerate while state media is switched off.
                     ->visible(fn (PetMedia $record): bool => self::isSuperadmin() && ! $record->isInFlight()
-                        && (! ($record->isKeyframe() || $record->isTransition()) || app(AppSettingsService::class)->stateMedia()))
+                        && (! ($record->isPoseStill() || $record->isPoseClip()) || app(AppSettingsService::class)->stateMedia()))
                     ->action(function (PetMedia $record): void {
                         $queued = app(PetMediaService::class)->regenerate($record);
 
@@ -195,17 +218,19 @@ class MediaRelationManager extends RelationManager
     }
 
     /**
-     * @param  array{image: string, videos: list<string>, keyframes: list<string>, transitions: list<string>, upgrade: bool, cost_usd: float}  $plan
+     * @param  array{image: string, videos: list<string>, keyframes: list<string>, transitions: list<string>, poses?: list<string>, phases?: list<string>, upgrade: bool, cost_usd: float}  $plan
      */
     private static function planText(array $plan): string
     {
         return sprintf(
-            'Image: %s. Videos: %s. Key images: %s. Transitions: %s.%s Estimated cost $%.2f (counts against the AI budget).',
+            'Image: %s. Videos: %s. Key images: %s. Transitions: %s. Pose images: %s. School / game clips: %s.%s Estimated cost $%.2f (counts against the AI budget).',
             $plan['image'],
             implode(', ', $plan['videos']) ?: 'none',
             implode(', ', $plan['keyframes']) ?: 'none',
             implode(', ', $plan['transitions']) ?: 'none',
-            $plan['upgrade'] ? ' This pet is from before state key images: it gets them now (videos are remade as loops).' : '',
+            implode(', ', $plan['poses'] ?? []) ?: 'none',
+            count($plan['phases'] ?? []) ?: 'none',
+            $plan['upgrade'] ? ' This pet is on an older media set: it gets the missing state key images / loops / transitions and the school / game phase clips now.' : '',
             $plan['cost_usd'],
         );
     }

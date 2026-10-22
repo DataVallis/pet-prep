@@ -92,18 +92,22 @@ export function makeMedia(overrides: Partial<PetMedia> = {}): PetMedia {
     transitions: {},
     loops: [],
     state_media: false,
+    // M5-T09 / T10 (additive): no school / game phase clips.
+    poses: {},
+    phases: {},
+    phase_groups: [],
     ...overrides,
   };
 }
 
 /** `preparation` of a pet (M5-T06): ready, nothing shown. */
 export function makePreparation(overrides: Partial<PreparationRaw> = {}): PreparationRaw {
-  return { ready: true, pending: [], preparing: false, running: false, ready_at: null, announce: false, ...overrides };
+  return { ready: true, pending: [], preparing: false, running: false, ready_at: null, announce: false, school_pending: false, ...overrides };
 }
 
 /** A pet whose first things are still on their way (the set-up screen shows). */
 export function makePreparing(pending: PreparationRaw['pending'] = ['idle', 'sleeping']): PreparationRaw {
-  return { ready: false, pending, preparing: true, running: true, ready_at: null, announce: false };
+  return { ready: false, pending, preparing: true, running: true, ready_at: null, announce: false, school_pending: false };
 }
 
 /** `pet.updated` payload for pet 7 (UTC instants, like the backend's broadcast). */

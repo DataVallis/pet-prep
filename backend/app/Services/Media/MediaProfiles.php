@@ -106,6 +106,33 @@ class MediaProfiles
         return $profile->enabled ? $profile : null;
     }
 
+    /**
+     * M5-T09 / T10 (David 2026-10-21): the state video profile with the clip length of
+     * a purpose (media.state_media.clip_seconds: state / transition 5 s, school / game
+     * 3 s). A length the model does not accept keeps the profile's own length (logged).
+     */
+    public function clipVideo(string $purpose): ModelProfile
+    {
+        $profile = $this->stateVideo();
+        $seconds = (int) config("media.state_media.clip_seconds.{$purpose}", 0);
+
+        if ($seconds <= 0 || $seconds === $profile->durationSeconds) {
+            return $profile;
+        }
+
+        if (! $profile->supportsDuration($seconds)) {
+            static $logged = [];
+            if (! isset($logged[$profile->key.$seconds])) {
+                $logged[$profile->key.$seconds] = true;
+                Log::error('MediaProfiles: clip length not supported by the video profile, using its default', ['profile' => $profile->key, 'seconds' => $seconds, 'purpose' => $purpose]);
+            }
+
+            return $profile;
+        }
+
+        return $profile->withDuration($seconds);
+    }
+
     public function stateVideo(): ModelProfile
     {
         return $this->video($this->configured(ModelProfile::KIND_VIDEO, 'media.state_video_profile', self::DEFAULT_STATE_VIDEO));

@@ -75,6 +75,8 @@ beforeEach(function () {
         'media.budget.timezone' => 'UTC',
     ]);
     useStateMedia();
+    // M5-T09 / T10 phase clips have their own tests (PhaseClipsTest).
+    usePhaseClips(false);
     seedBreedConfigs();
     seedStageParams();
 });
@@ -207,7 +209,7 @@ describe('entitlement (MediaEntitlementService)', function () {
         $pet = smPet();
         $e = app(MediaEntitlementService::class);
 
-        expect($pet->state_media_version)->toBe(2)
+        expect($pet->state_media_version)->toBe(MediaEntitlementService::CURRENT_MEDIA_VERSION)
             ->and($e->usesStateMedia($pet))->toBeTrue()
             ->and(array_map(fn ($s) => $s->value, $e->keyframeStatesFor($pet)))->toBe(['sleeping', 'low_energy', 'hungry', 'sick', 'playing'])
             ->and($e->transitionsFor($pet))->toBe([PetTransition::IdleToSleeping, PetTransition::SleepingToIdle]);
@@ -251,7 +253,7 @@ describe('entitlement (MediaEntitlementService)', function () {
 
     it('new pets are version 2 only with a profile; existing pets stay version 1 (column default)', function () {
         config(['services.fal_ai.key' => null]);
-        expect(smPet()->state_media_version)->toBe(2)
+        expect(smPet()->state_media_version)->toBe(MediaEntitlementService::CURRENT_MEDIA_VERSION)
             ->and(Pet::factory()->create(['user_id' => createChildUser()->id])->fresh()->state_media_version)->toBe(1);
     });
 });
@@ -451,7 +453,7 @@ describe('existing pets', function () {
         // Admin "Upgrade to state media" = the explicit upgrade (M5-T08b: "Generate missing" never upgrades).
         app(PetMediaService::class)->generateMissing($pet->fresh(), upgradeStateMedia: true);
         smCompleteClips();
-        expect($pet->fresh()->state_media_version)->toBe(2)
+        expect($pet->fresh()->state_media_version)->toBe(MediaEntitlementService::CURRENT_MEDIA_VERSION)
             ->and(PetMedia::where('pet_id', $pet->id)->where('kind', 'keyframe')->where('status', 'ready')->count())->toBe(5)
             ->and(smSlot($pet, 'video', 'idle')->recipe)->toBe('loop');
     });
@@ -463,7 +465,7 @@ describe('existing pets', function () {
 
         DB::transaction(fn () => app(ChallengeService::class)->markPaid(Pet::whereKey($pet->id)->lockForUpdate()->first(), ChallengePaidSource::Purchase, now()));
 
-        expect($pet->fresh()->state_media_version)->toBe(2);
+        expect($pet->fresh()->state_media_version)->toBe(MediaEntitlementService::CURRENT_MEDIA_VERSION);
     });
 });
 
@@ -779,7 +781,7 @@ describe('M5-T08b admin panel', function () {
             ->mountTableAction('upgradeStateMedia')
             ->assertSee('$5.23')
             ->callMountedTableAction();
-        expect($pet->fresh()->state_media_version)->toBe(2);
+        expect($pet->fresh()->state_media_version)->toBe(MediaEntitlementService::CURRENT_MEDIA_VERSION);
         Queue::assertPushed(GeneratePetKeyframe::class);
 
         Livewire::test(MediaRelationManager::class, ['ownerRecord' => $pet->fresh(), 'pageClass' => EditPet::class])

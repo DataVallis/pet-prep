@@ -4,7 +4,9 @@ namespace App\Services\Media;
 
 use App\Enums\ChallengePaidSource;
 use App\Enums\LifeStage;
+use App\Enums\PetPhaseClip;
 use App\Enums\PetPlan;
+use App\Enums\PetPose;
 use App\Enums\PetStateEnum;
 use App\Enums\PetTransition;
 use App\Models\Pet;
@@ -61,6 +63,15 @@ use App\Services\AppSettingsService;
  * its set (no automatic backfill, David 2026-10-21); a new purchase and the
  * admin "Upgrade to state media" move a pet to version 2 (PetMediaService).
  * M5-T08b: the whole feature is the superadmin switch {@see stateMediaEnabled()}.
+ *
+ * M5-T09 / M5-T10 (APP_REFINEMENT_SPEC §3 / §10, David 2026-10-21): a pet that
+ * uses state media also gets the PHASE clips of the school (per command and
+ * phase — only with training on) and of its game (dog: ball, cat: wand) —
+ * {@see phaseClipsFor()} — and the POSE images those clips start / end in
+ * ({@see posesFor()}). Same rule as the key images: the paid full set, version 3,
+ * the state media switch on — plus their own superadmin switch »School & game
+ * clips« ({@see phaseClipsEnabled()}, QA M2); existing pets get nothing automatically
+ * (a v2 pet only on a purchase or the admin upgrade, David 2026-10-21).
  */
 class MediaEntitlementService
 {
@@ -76,16 +87,39 @@ class MediaEntitlementService
     }
 
     /**
+     * M5-T09 / T10 (QA M2): the superadmin switch »School & game clips« (`app_settings.phase_clips`,
+     * default on). Off = no pose image / phase clip is generated (nothing already queued either)
+     * and readiness / the app payload use the M5-T08 rules.
+     */
+    public function phaseClipsEnabled(bool $fresh = false): bool
+    {
+        return $this->settings->phaseClips($fresh);
+    }
+
+    /**
      * M5-T08b (QA m3): does the pet HAVE the state media set (version 2, profiled, full
      * set) — independent of the switch and the key image profile. The app payload uses
      * this, so turning the switch off never changes how already stored media are shown.
      */
     public function hasStateMediaSet(Pet $pet): bool
     {
-        return (int) ($pet->state_media_version ?? 1) >= 2
+        return (int) ($pet->state_media_version ?? 1) >= self::STATE_MEDIA_VERSION
             && ! $pet->isLegacyProfile()
             && $this->tierFor($pet) === self::TIER_FULL;
     }
+
+    /** M5-T08: key images, loops, transitions from this media version. */
+    public const STATE_MEDIA_VERSION = 2;
+
+    /**
+     * M5-T09 / T10: + school and game phase clips from this media version. A pet on
+     * version 2 (made between the M5-T08 and M5-T09 releases) keeps its set — no
+     * automatic backfill; a purchase or the admin »Upgrade to state media« moves it to 3.
+     */
+    public const PHASE_CLIPS_VERSION = 3;
+
+    /** The version a new profiled pet / a purchase / the admin upgrade gives a pet now. */
+    public const CURRENT_MEDIA_VERSION = self::PHASE_CLIPS_VERSION;
 
     public const TIER_BASIC = 'basic';
 
@@ -179,6 +213,80 @@ class MediaEntitlementService
             if ($transition !== null && ! in_array($transition, $out, true)
                 && in_array($transition->fromState(), $states, true) && in_array($transition->toState(), $states, true)) {
                 $out[] = $transition;
+            }
+        }
+
+        return $out;
+    }
+
+    /**
+     * M5-T09 / T10: the phase clips of the pet in queue order (config
+     * media.state_media.phase_clips: the games, then the school — QA m1). A group only where the
+     * pet can use it: school = training on (dogs), ball = a dog, wand = a cat.
+     * [] without state media or with the »School & game clips« switch off (QA M2).
+     * The single source of the generation, preparation, game readiness and the app
+     * payload's `phase_groups` (QA m2), so server and app always agree.
+     *
+     * @return list<PetPhaseClip>
+     */
+    public function phaseClipsFor(Pet $pet): array
+    {
+        // usesStateMedia first: a pet without state media never reads the phase switch (no query).
+        if (! $this->usesStateMedia($pet) || ! $this->phaseClipsEnabled()) {
+            return [];
+        }
+
+        return $this->phaseClipsOfSet($pet);
+    }
+
+    /**
+     * The phase clips the pet's state media set has (version 3, profiled, full set, its
+     * species / training), independent of the switches — the admin panel's view.
+     *
+     * @return list<PetPhaseClip>
+     */
+    public function phaseClipsOfSet(Pet $pet): array
+    {
+        if (! $this->hasStateMediaSet($pet) || (int) $pet->state_media_version < self::PHASE_CLIPS_VERSION) {
+            return [];
+        }
+
+        $species = $pet->speciesValue();
+        $out = [];
+
+        foreach ((array) config('media.state_media.phase_clips', []) as $group) {
+            $usable = match ((string) $group) {
+                PetPhaseClip::GROUP_SCHOOL => $pet->trainingEnabled(),
+                PetPhaseClip::GROUP_BALL => $pet->isDog(),
+                PetPhaseClip::GROUP_WAND => $pet->isCat(),
+                default => false,
+            };
+
+            foreach ($usable ? PetPhaseClip::ofGroup((string) $group) : [] as $clip) {
+                if ($clip->species() === $species && ! in_array($clip, $out, true)) {
+                    $out[] = $clip;
+                }
+            }
+        }
+
+        return $out;
+    }
+
+    /**
+     * M5-T09 / T10: the pose images the pet's phase clips start / end in, in the
+     * order the clips need them. [] without state media.
+     *
+     * @return list<PetPose>
+     */
+    public function posesFor(Pet $pet): array
+    {
+        $out = [];
+
+        foreach ($this->phaseClipsFor($pet) as $clip) {
+            foreach ([$clip->startPose(), $clip->endPose()] as $pose) {
+                if ($pose !== null && ! in_array($pose, $out, true)) {
+                    $out[] = $pose;
+                }
             }
         }
 

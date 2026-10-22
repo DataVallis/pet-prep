@@ -89,6 +89,34 @@ export const THROW_MIN_FLICK = 15;
 export const FETCH_MS = 1_800;
 export const FETCH_MS_REDUCED = 600;
 
+/** One step of the ball's out-and-back animation (`flight` 0 = in the hand, 1 = away). */
+export interface BallFlightStep {
+  toValue: 0 | 1;
+  duration: number;
+  /** Wait before this step (ms). */
+  delay: number;
+}
+
+/**
+ * The ball's animation for a throw that is away `fetchMs` (M5-T10 QA m3). Normally it flies
+ * out and back over the whole time. With "reduce motion" it never travels: a short fade
+ * (FETCH_MS_REDUCED / 2) out, held away, and a short fade back at the end — also when the
+ * game timing is longer (the 6 s run + fetch phase clips), so nothing moves slowly on screen.
+ */
+export function ballFlightSteps(fetchMs: number, reduceMotion: boolean): BallFlightStep[] {
+  if (!reduceMotion) {
+    return [
+      { toValue: 1, duration: fetchMs / 2, delay: 0 },
+      { toValue: 0, duration: fetchMs / 2, delay: 0 },
+    ];
+  }
+  const fade = Math.min(FETCH_MS_REDUCED / 2, fetchMs / 2);
+  return [
+    { toValue: 1, duration: fade, delay: 0 },
+    { toValue: 0, duration: fade, delay: Math.max(0, fetchMs - 2 * fade) },
+  ];
+}
+
 /** Cuddle: five strokes, each at least ~60 pt of finger path, any direction (D). */
 export const CUDDLE_STROKES = 5;
 export const STROKE_MIN_PT = 60;

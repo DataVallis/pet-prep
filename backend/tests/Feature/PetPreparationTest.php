@@ -187,7 +187,7 @@ describe('readiness summary', function () {
         app('auth')->forgetGuards();
         $prep = $this->actingAs($child, 'sanctum')->getJson('/api/child/pet')->assertOk()->json('pet.preparation');
 
-        expect($prep)->toBe(['ready' => false, 'pending' => ['idle', 'sleeping'], 'preparing' => true, 'running' => true, 'ready_at' => null, 'announce' => false]);
+        expect($prep)->toBe(['ready' => false, 'pending' => ['idle', 'sleeping'], 'preparing' => true, 'running' => true, 'ready_at' => null, 'announce' => false, 'school_pending' => false]);
     });
 
     it('stops showing the set-up screen once the first-minutes clips are stored, and flips ready with the last item', function () {
@@ -250,7 +250,7 @@ describe('readiness summary', function () {
         expect($fresh->media_status)->toBe('disabled')
             ->and($fresh->preparation_started_at)->toBeNull()
             ->and(app(PetPreparationService::class)->summary($fresh)->toArray())
-            ->toBe(['ready' => true, 'pending' => [], 'preparing' => false, 'running' => false, 'ready_at' => null, 'announce' => false]);
+            ->toBe(['ready' => true, 'pending' => [], 'preparing' => false, 'running' => false, 'ready_at' => null, 'announce' => false, 'school_pending' => false]);
     });
 
     it('does not start a preparation when everything is already stored at birth (shared look ready)', function () {

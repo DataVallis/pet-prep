@@ -30,9 +30,11 @@ export type PreparationItem =
   | 'playing'
   | 'accident'
   | 'chewing'
-  | 'scratching';
+  | 'scratching'
+  | 'idle_to_sleeping'
+  | 'sleeping_to_idle';
 
-const ITEMS: readonly PreparationItem[] = ['image', 'idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing', 'accident', 'chewing', 'scratching'];
+const ITEMS: readonly PreparationItem[] = ['image', 'idle', 'sleeping', 'low_energy', 'hungry', 'sick', 'playing', 'accident', 'chewing', 'scratching', 'idle_to_sleeping', 'sleeping_to_idle'];
 
 export interface PetPreparation {
   /** Everything the pet shows is there (or nothing will come). */
@@ -47,9 +49,15 @@ export interface PetPreparation {
   readyAt: string | null;
   /** The end is news (server: seen ≥ 10 s and ended ≤ 2 h after its start). */
   announce: boolean;
+  /**
+   * M5-T09 (QA m6): a school phase clip is still on its way (not stored, not failed) — the
+   * school shows the poses and »Šola se še pripravlja«. Not part of the preparation (the
+   * preparation and its news end without the school / game clips).
+   */
+  schoolPending: boolean;
 }
 
-export const NO_PREPARATION: PetPreparation = { ready: true, pending: [], preparing: false, running: false, readyAt: null, announce: false };
+export const NO_PREPARATION: PetPreparation = { ready: true, pending: [], preparing: false, running: false, readyAt: null, announce: false, schoolPending: false };
 
 function isItem(value: unknown): value is PreparationItem {
   return typeof value === 'string' && (ITEMS as readonly string[]).includes(value);
@@ -69,6 +77,7 @@ export function readPreparation(raw: unknown): PetPreparation {
     running: p.running === true,
     readyAt,
     announce: p.announce === true && readyAt !== null,
+    schoolPending: p.school_pending === true,
   };
 }
 
@@ -80,8 +89,9 @@ export function preparationPayload(p: PetPreparation): {
   running: boolean;
   ready_at: string | null;
   announce: boolean;
+  school_pending: boolean;
 } {
-  return { ready: p.ready, pending: p.pending, preparing: p.preparing, running: p.running, ready_at: p.readyAt, announce: p.announce };
+  return { ready: p.ready, pending: p.pending, preparing: p.preparing, running: p.running, ready_at: p.readyAt, announce: p.announce, school_pending: p.schoolPending };
 }
 
 /**
@@ -155,10 +165,14 @@ export function schoolPreparingText(): string {
 }
 
 /**
- * School stage while its clips are on their way (QA m2): only during the pet's running
- * preparation and only while `idle` / `playing` are really still coming (not failed or never
- * made for an older pet — that pet keeps its usual stage).
+ * School stage while its clips are on their way (QA m2): only while they are really still
+ * coming (not failed or never made for an older pet — that pet keeps its usual stage).
+ * M5-T09 (QA m6): a pet with school phase clips → the server's `school_pending` (the school
+ * clips come after the preparation, so not tied to `running`); others: during the running
+ * preparation while `idle` / `playing` are still coming, as before.
  */
-export function schoolClipsPending(preparation: PetPreparation): boolean {
-  return preparation.running && (preparation.pending.includes('idle') || preparation.pending.includes('playing'));
+export function schoolClipsPending(preparation: PetPreparation, phaseClips = false): boolean {
+  if (phaseClips) return preparation.schoolPending;
+  if (!preparation.running) return false;
+  return preparation.pending.includes('idle') || preparation.pending.includes('playing');
 }

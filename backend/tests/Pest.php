@@ -383,3 +383,15 @@ function useStateMedia(bool $on = true): void
 {
     config(['media.state_media.enabled' => $on]);
 }
+
+/**
+ * M5-T09 / T10: the school / game phase clips of state-media pets (config
+ * media.state_media.phase_clips). Off = only the M5-T08 set (StateMediaTest);
+ * PhaseClipsTest turns them on.
+ *
+ * @param  list<string>  $groups
+ */
+function usePhaseClips(bool $on = true, array $groups = ['ball', 'wand', 'school']): void
+{
+    config(['media.state_media.phase_clips' => $on ? $groups : []]);
+}

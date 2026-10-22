@@ -235,6 +235,10 @@ return [
         'state_media_on' => 'on',
         'state_media_off' => 'off',
         'saved_body_state_media' => 'State media: :state',
+        'phase_clips_section' => 'School & game clips (phase clips)',
+        'phase_clips_description' => 'On (default, David 2026-10-21): pets on state media version 3 (purchased full set) also get a short 3 s clip per school command phase (attention → performing → success; potty = the dog goes to the door) and per game phase (dog ball: waiting → runs out of frame → brings it back; cat wand: crouch → pounce → catch), with their pose images (about $0.34 per 3 s clip, $0.15 per pose image; shared looks make them once). Needs »State media on« too. Off: no pose images or phase clips are generated — also nothing already queued, retried or swept; the games and the school use the older clips and rules. Turning it on again resumes the waiting items at once.',
+        'phase_clips' => 'School & game clips on',
+        'saved_body_phase_clips' => 'School & game clips: :state',
     ],
 
     // M5-R21: shared looks (PetLookResource).

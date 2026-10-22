@@ -13,8 +13,10 @@ import {
 } from '@/modules/childPet/childPetView';
 import {
   ballFetched,
+  ballFlightSteps,
   BALL_START,
   BALL_THROWS,
+  FETCH_MS_REDUCED,
   broadcastPlay,
   HAPPY_MINUTES,
   isBallDone,
@@ -367,5 +369,20 @@ describe('video: the happy mood between the behaviour scene and the pet state', 
     expect(videoStateFor('idle', 'hard_stopped', null, 'playing')).toBe('sleeping');
     expect(videoStateFor('idle', null, null, null)).toBe('idle');
     expect(videoChain('playing')).toEqual(['playing', 'idle']);
+  });
+});
+
+describe('ballFlightSteps (QA m3)', () => {
+  it('flies out and back over the whole time; with reduce motion two short fades and a hold', () => {
+    expect(ballFlightSteps(1_800, false)).toEqual([
+      { toValue: 1, duration: 900, delay: 0 },
+      { toValue: 0, duration: 900, delay: 0 },
+    ]);
+    expect(ballFlightSteps(6_000, true)).toEqual([
+      { toValue: 1, duration: FETCH_MS_REDUCED / 2, delay: 0 },
+      { toValue: 0, duration: FETCH_MS_REDUCED / 2, delay: 6_000 - FETCH_MS_REDUCED },
+    ]);
+    // The drawn reduced timing stays a plain fade out and in.
+    expect(ballFlightSteps(FETCH_MS_REDUCED, true).map((s) => s.delay)).toEqual([0, 0]);
   });
 });
