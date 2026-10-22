@@ -687,6 +687,18 @@
             "prompt_hash": "sha256:a44780b779db87c69e3b1923b8deac1e74afcd46991875751e72e71e699b3479",
             "generated_at": "2026-10-22T01:58:30+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "chesapeake_bay_retriever",
+            "species": "dog",
+            "file": "dog/chesapeake-bay-retriever.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:a04278467f7da72ebcc2d7a46e1841333ada8de2e6a7a579a97ce458c87131e5",
+            "generated_at": "2026-10-22T03:51:37+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
