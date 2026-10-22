@@ -134,6 +134,7 @@
       "australian_cattle_dog": "Part of the 12-week challenge · brushing 1× a week",
       "whippet": "Part of the 12-week challenge · brushing 1× a week",
       "wirehaired_pointing_griffon": "Part of the 12-week challenge · brushing 1× a week",
+      "chesapeake_bay_retriever": "Part of the 12-week challenge · brushing 1× a week",
       "domestic_cat": "Short coat · free",
       "maine_coon": "Long coat · brushing 3× a week",
       "british_shorthair": "Short, dense coat · brushing 1× a week",
@@ -341,6 +342,12 @@
         "senior": "2 meals a day; shorter walks — 9,000 steps a day."
       },
       "wirehaired_pointing_griffon": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
+        "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
+        "adult": "2 meals a day; walks of 12,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 9,000 steps a day."
+      },
+      "chesapeake_bay_retriever": {
         "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
         "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
         "adult": "2 meals a day; walks of 12,000 steps a day.",
