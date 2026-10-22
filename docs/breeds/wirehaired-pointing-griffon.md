@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `wirehaired_pointing_griffon` (viri S448–S456; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174) |
 | Izvor | FCI št. 107, skupina 7, sekcija 1 (celinski ptičarji), Francija (S448) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 51. mesto »Wirehaired Pointing Griffon« (S174) |
-| PR-ji | pet-prep #336 (pasma, združen `c8bbaa4`) · portret #337 · spletna stran — |
+| PR-ji | pet-prep #336 (pasma, združen `c8bbaa4`) · portret #337 (združen `692ecfa`) · spletna stran #88 (združen `d36df69`) |
 
 ## Odločitve (z viri in kdo je odločil)
 
