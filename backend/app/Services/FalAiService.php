@@ -490,6 +490,15 @@ class FalAiService
                 .'natural tail carried horizontally, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-56: FCI standard No. 263 (S458) — solid brown as the anchor (never black, no white except a small chest
+            // spot); powerful working water retriever, thick short wavy coat with a woolly undercoat, yellowish or amber eyes.
+            BreedType::ChesapeakeBayRetriever => 'A friendly, alert Chesapeake Bay Retriever with a solid brown coat, '
+                .'thick, short, slightly wavy coat with a dense woolly undercoat, '
+                .'powerful, athletic working water retriever with a strong, deep chest, size and substance not excessive, '
+                .'broad round skull, muzzle about as long as the skull, tapering, clear yellowish or amber eyes, small ears hanging loosely, '
+                .'natural tail of medium length, straight or slightly curved, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1174,6 +1183,17 @@ class FalAiService
                 'eye_color' => 'dark yellow or brown',
                 'fur_texture' => 'harsh, wiry medium-length coat with a soft undercoat',
                 'markings' => 'moustache and bushy eyebrows, brown nose, natural tail carried horizontally',
+            ],
+            // M5-R10-56: FCI standard No. 263 S458 colours (never black, no white except a small chest spot).
+            BreedType::ChesapeakeBayRetriever => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'solid brown',
+                    1 => 'solid sedge (reddish gold)',
+                    2 => 'solid deadgrass (straw to dull tan)',
+                },
+                'eye_color' => 'clear yellowish or amber',
+                'fur_texture' => 'thick, short, slightly wavy coat with a dense woolly undercoat',
+                'markings' => 'no white except at most a small spot on the chest or toes, natural tail of medium length',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

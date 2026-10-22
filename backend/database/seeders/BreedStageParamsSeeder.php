@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -653,6 +653,17 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_WIREHAIRED_POINTING_GRIFFON = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-55)';
 
     /**
+     * M5-R10-56 Chesapeake Bay Retriever (unattended run 2026-10-22, data.json
+     * proposed_game_parameters.chesapeake_bay_retriever.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 120 min (RKC S459
+     * "Exercise: More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages young 9 /
+     * adult 36 / senior 90 (0.75 × RKC lower bound "Over 10 years", S459 — the Dogs Trust McMillan 2024 table S123
+     * could not be fetched), arrival 2 / 9 / 36 / 90, learning multiplier 1.2 (Coren rank 27, Above average); care
+     * rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_CHESAPEAKE_BAY_RETRIEVER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-56)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -812,6 +823,7 @@ class BreedStageParamsSeeder extends Seeder
         'australian_cattle_dog' => [1, 'S437', 'Once a week', 'high', false],
         'whippet' => [1, 'S444', 'Whippets have short fur, so a weekly brush is usually more than enough to keep it in good condition.', 'high', false],
         'wirehaired_pointing_griffon' => [1, 'S454', 'The Wirehaired Pointing Griffon is an easy-care pet, demanding only weekly brushing, with a bonus of minimal shedding.', 'high', false],
+        'chesapeake_bay_retriever' => [1, 'S459', 'Grooming: Once a week', 'high', false],
     ];
 
     /**
@@ -845,6 +857,7 @@ class BreedStageParamsSeeder extends Seeder
         'rhodesian_ridgeback' => ['S390', 'Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.'],
         'newfoundland' => ['S424', 'Avoiding exercising their dog an hour before or after a meal'],
         'whippet' => ['S444', 'Remember to leave a gap between eating and exercising.'],
+        'chesapeake_bay_retriever' => ['S461', 'Do not let your dog exercise directly before or after eating.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -911,13 +924,14 @@ class BreedStageParamsSeeder extends Seeder
         'australian_cattle_dog' => ['S438', 'socialisation with children and training at a young age can help to overcome these possible problems'],
         'whippet' => ['S444', 'As long as you socialise your Whippet with other dogs from a young age they should be fine meeting them out and about.'],
         'wirehaired_pointing_griffon' => ['S453', 'Wirehaired Pointing Griffons are generally patient and gentle with children when socialized as puppies.'],
+        'chesapeake_bay_retriever' => ['S461', 'With proper introductions and socialization, Chessies would be a great addition to a family.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1569,6 +1583,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-55 (docs/research/dog-data/data.json wirehaired_pointing_griffon,
             // S448–S456; runbook rules in proposed_game_parameters.wirehaired_pointing_griffon).
             BreedType::WirehairedPointingGriffon => self::wirehairedPointingGriffonProfile(),
+            // M5-R10-56 (docs/research/dog-data/data.json chesapeake_bay_retriever,
+            // S457–S462; runbook rules in proposed_game_parameters.chesapeake_bay_retriever).
+            BreedType::ChesapeakeBayRetriever => self::chesapeakeBayRetrieverProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -5314,6 +5331,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'wirehaired_pointing_griffon.lifespan.rkc',
                 'quote' => 'Lifespan: Over 10 years',
                 'notes' => 'RKC breed page lower bound (S450). No McMillan 2024 row (Dogs Trust table S123) and no VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Chesapeake Bay Retriever (M5-R10-56). Stage boundaries, arrival ages, exercise minutes and the learning
+     * multiplier follow the runbook's standing rules (CONFIRMED_R10_CHESAPEAKE_BAY_RETRIEVER); weight, growth,
+     * Coren rank and lifespan are sourced. The senior boundary uses the RKC lower bound "Over 10 years" (S459) — the
+     * Dogs Trust McMillan 2024 table (S123) could not be fetched and no VetCompass median was found.
+     *
+     * @return array<string, mixed>
+     */
+    private static function chesapeakeBayRetrieverProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_CHESAPEAKE_BAY_RETRIEVER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S459', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.chesapeake_bay_retriever.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog reaches adult weight at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lifespan lower bound "Over 10 years" (S459) = 7.5 y = 90 months. The Dogs Trust McMillan 2024 table (S123) could not be fetched; no VetCompass median was found. Not chosen: 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chesapeake_bay_retriever.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S459', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chesapeake_bay_retriever.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "Exercise: More than 2 hours per day" (S459) → 120 min = 12,000 steps (runbook rule: "more than N" → N). VCA and PetMD (S460, S461) give no minutes.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chesapeake_bay_retriever.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[25.0, 36.5], [
+                'unit' => 'kg', 'source_id' => 'S458', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'chesapeake_bay_retriever.adult_weight.fci',
+                'quote' => 'Males should weigh 65 to 80 pounds (29,5-36,5kg).',
+                'notes' => 'FCI standard No. 263 (S458): males 29.5–36.5 kg, females 25–32 kg ("Females should weigh 55 to 70 pounds (25-32kg).") → 25–36.5 kg for both sexes. VCA and PetMD 55–80 lb (S460, S461) agree.',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'chesapeake_bay_retriever.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (FCI males 65–80 lb, S458 — the Large class of S10; females 55–70 lb straddle Medium and Large).',
+            ]],
+            'coren_rank' => [27, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'chesapeake_bay_retriever.trainability.coren_rank',
+                'quote' => 'Chesapeake Bay Retriever',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 27 (tied with the Puli and the Yorkshire Terrier), tier "Above Average Working Dogs" (ranks 27–39).',
+            ]],
+            'learning_multiplier' => [1.2, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chesapeake_bay_retriever.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 27 (S35) in the "Above average" tier (ranks 27–39) → 1.2. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S459', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'chesapeake_bay_retriever.lifespan.rkc',
+                'quote' => 'Lifespan: Over 10 years',
+                'notes' => 'RKC breed page lower bound (S459). The McMillan 2024 table (Dogs Trust S123) could not be fetched; no VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

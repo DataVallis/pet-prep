@@ -497,6 +497,14 @@
 | solid liver, white and liver, white and orange; never black (AKC S451 / UKC S452 disqualify it). Natural tail
 | (docking is not shown). No welfare concern found (RKC S450). Colour weights unsourced → `verified => false`.
 |
+| Chesapeake Bay Retriever (M5-R10-56, docs/research/dog-data chesapeake_bay_retriever.appearance): "Equally proficient
+| on land and in the water"; "Size and substance should not be excessive as this is a working retriever of an active
+| nature." (FCI standard No. 263, S458); thick, short coat (never over 4 cm) with a dense, woolly undercoat; yellowish or
+| amber eyes; "Any colour of brown, sedge or deadgrass is acceptable, self-coloured Chesapeakes being preferred." (S458) —
+| brown weighted highest (the register portrait; the standard prefers no colour), then sedge, deadgrass; never black, no
+| white except a small spot on the chest or toes (disqualifications, S458). RKC Breed Watch Category 1 (S459) — no
+| welfare concern. Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2491,6 +2499,41 @@ return [
             'eye_color' => ['large, rounded dark-yellow or brown eyes with an intelligent expression'],
             'tail' => ['natural tail carried horizontally, covered with harsh hair, without a plume'],
             'head' => ['long, square muzzle with a brown nose and a slightly convex bridge'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-56 (docs/research/dog-data/data.json chesapeake_bay_retriever.appearance; runbook rules 2026-10-10:
+    // standard colours only — never black, no white except a small chest spot).
+    'chesapeake_bay_retriever' => [
+        'display_name' => 'Chesapeake Bay Retriever',
+        // Colour frequencies are in no source (chesapeake_bay_retriever.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI standard No. 263 (S458), RKC breed page (S459) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S459 "Size: Large"; S458 "Males should measure 23 to 26 inches; (58 - 66cm)."',
+            'build' => 'S458 "Size and substance should not be excessive as this is a working retriever of an active nature."',
+            'coat_length' => 'S458 "Coat should be thick and short, nowhere over 1 1/2 inches (4 cm) long, with a dense, fine, woolly undercoat."; S459 "Coat length: Short"',
+            'coat_color' => 'S458 "Any colour of brown, sedge or deadgrass is acceptable, self-coloured Chesapeakes being preferred." (weights unsourced; never black — S458)',
+            'ear_carriage' => 'S458 "Are to be small, set well up on the head, hanging loosely, and of medium leather."',
+            'eye_color' => 'S458 "Are to be medium large, very clear of yellowish or amber color and wide apart."',
+            'tail' => 'S458 "The tail should be straight or slightly curved and should not curl over back or side kink."',
+            'head' => 'S458 "Approximately the same length as the skull, tapering pointed but not sharp."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'powerful, athletic working water retriever with a strong, deep chest, size and substance not excessive', 'weight' => 3], 'well-muscled, balanced retriever standing calmly'],
+            'coat_length' => ['thick, short, slightly wavy coat with a dense woolly undercoat'],
+            // FCI standard (S458): brown, sedge or deadgrass, self-coloured preferred; no colour preferred → brown
+            // weighted highest (the register portrait); never black.
+            'coat_color' => [
+                ['value' => 'solid brown', 'weight' => 50],
+                ['value' => 'solid sedge (reddish gold)', 'weight' => 25],
+                ['value' => 'solid deadgrass (straw to dull tan)', 'weight' => 25],
+            ],
+            'ear_carriage' => ['small ears set well up on the head, hanging loosely'],
+            'eye_color' => ['clear yellowish or amber eyes set wide apart'],
+            'tail' => ['natural tail of medium length, straight or slightly curved'],
+            'head' => ['broad, round skull, muzzle about as long as the skull, tapering, pointed but not sharp'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],

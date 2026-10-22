@@ -1477,5 +1477,30 @@ return [
             ],
         ],
 
+        // M5-R10-56: chesapeake_bay_retriever.* (S457–S462), runbook rules (data.json
+        // proposed_game_parameters.chesapeake_bay_retriever.suitability_tags). RKC key facts (S459) + VCA (S460) + PetMD (S461).
+        // RKC Breed Watch Category 1 → no welfare chip. Never small_children (PetMD: supervise), other_pets (VCA "fairly
+        // well"), chases_small_pets (no prey-drive statement), frequent_grooming (RKC "Once a week").
+        'chesapeake_bay_retriever' => [
+            'suits' => [
+                // S459 "Exercise: More than 2 hours per day"
+                ['tag' => 'active_family', 'source_ids' => ['S459'], 'refs' => ['chesapeake_bay_retriever.exercise.adult', 'chesapeake_bay_retriever.suitability.rkc_exercise']],
+                // S461 "With proper introductions and socialization, Chessies would be a great addition to a family."
+                ['tag' => 'family_pet', 'source_ids' => ['S461'], 'refs' => ['chesapeake_bay_retriever.suitability.petmd_family', 'chesapeake_bay_retriever.behaviour.socialisation']],
+                // S460 "Playful and generally good with children." (PetMD's supervision caveat in chesapeake_bay_retriever.behaviour.family).
+                ['tag' => 'children', 'source_ids' => ['S460'], 'refs' => ['chesapeake_bay_retriever.suitability.vca_children', 'chesapeake_bay_retriever.behaviour.family']],
+                // S459 "Size of home: Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S459'], 'refs' => ['chesapeake_bay_retriever.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                // S459 "Exercise: More than 2 hours per day"
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S459'], 'refs' => ['chesapeake_bay_retriever.exercise.adult', 'chesapeake_bay_retriever.suitability.rkc_exercise']],
+                // S461 "will become destructive and mischievous if they're not stimulated properly or if they're left alone for too long."
+                ['tag' => 'needs_company', 'source_ids' => ['S461'], 'refs' => ['chesapeake_bay_retriever.behaviour.time_alone']],
+                // S459 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S459'], 'refs' => ['chesapeake_bay_retriever.suitability.rkc_shedding']],
+            ],
+        ],
+
     ],
 ];

@@ -59,6 +59,7 @@ return [
     'australian_cattle_dog' => 'Avstralski govedar',
     'whippet' => 'Mali angleški hrt',
     'wirehaired_pointing_griffon' => 'Francoski ostrodlaki ptičar',
+    'chesapeake_bay_retriever' => 'Chesapeake Bay retriver',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',
