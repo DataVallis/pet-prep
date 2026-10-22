@@ -9,6 +9,13 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-22 — Opozorilo, ko ostane le še 20 % proračuna za AI (M5-T15)
+
+**Kaj:** proračuni za AI ostanejo omejeni (dobroimetje fal.ai polnimo sami), zato sistem zdaj opozori, ko dnevni ali mesečni proračun doseže 80 %, in še enkrat pri 100 % (takrat so novi klici zavrnjeni). Velja za produkcijo in AI Lab posebej, v odstotkih — ne glede na to, kakšen znesek je nastavljen. Pasica na nadzorni plošči in v »System health« (zelena / rumena / rdeča), obvestilo superadminom v administraciji, vsak prag največ enkrat na dan / mesec. Novo: stanje računa fal.ai iz fal Platform API z opozorilom pod 20 $ (nastavljivo).
+**Zakaj je pomembno:** prvi kupec nove pasme + barve + obdobja psa stane ≈ 11,17 $ medijev; brez opozorila bi ob polnem proračunu ali praznem računu fal mediji novih kupcev tiho počakali na naslednji dan.
+- 💼 Investitorji: stroški AI so pod nadzorom — trdna dnevna in mesečna meja, opozorilo pri 80 %, enkraten strošek na videz (vsak naslednji kupec istega videza 0 $).
+- 🛠 Tehnično: Laravel `AiBudgetMonitor` (odstotki od meje, deduplikacija v tabeli `ai_budget_alerts`), čakalno opravilo vsakih 5 min, Filament database notifications, fal Platform API `GET /v1/account/billing?expand=credits`.
+
 ## 2026-10-22 — Sklop M5-T končan: 16 izboljšav po prvem testiranju s testerji v enem dnevu
 
 **Kaj:** vse, kar so beta testerji opazili 20. 10. 2026 (spec `APP_REFINEMENT_SPEC.md`), je v kodi: ura »Pelji ven« kot rok (rdeča zadnjih 30 min), sporočila v vrsti (najmanj 2,5 s + 60 ms na znak, viden »×«), ena tabela, kaj je dovoljeno kdaj (speč kuža se ne igra, ne hodi v šolo, ga ne crkljamo in ne češemo), ure »7:00«, kartica »Kako skrbim za …« za otroka in starša, igre čakajo na vse svoje posnetke, zaslon »Pripravljamo: …« z novico »Vse je pripravljeno«, česanje kot strgalna srečka z možnostjo držanja, rojstni dan pri 1 letu, prilagojen način s potiski vozička in starševim vpisom sprehoda (samo danes, največ 240 min na dan), poze in brezšivni posnetki vsakega stanja s prehodi, izbira »Video / Slika« ter posnetki šole in iger po fazah. Ena naloga (primerjava modelov, M5-T07) je odpadla — David je izbral Kling 3.0 Pro in Nano Banana Pro za vse. 19 PR-jev v aplikaciji (21. 10. 04:51 → 22. 10. 04:38 UTC) in 2 na spletni strani (politika zasebnosti: zdravje in prilagojen način).

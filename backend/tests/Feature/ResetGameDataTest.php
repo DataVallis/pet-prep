@@ -194,6 +194,12 @@ function rgSeed(): array
     rgInsert('breed_fact_reads', ['user_id' => $child->id, 'breed_fact_id' => $factId, 'read_at' => $now]);
     rgInsert('breed_fact_shows', ['user_id' => $child->id, 'pet_id' => $pet->id, 'breed_fact_id' => $factId, 'program_week' => 1, 'local_date' => $today, 'shown_at' => $now]);
 
+    // M5-T15: an AI budget warning (dedupe row) and the admin's bell notification.
+    rgInsert('ai_budget_alerts', ['budget' => 'production', 'period' => 'day', 'period_key' => $today, 'threshold' => 80, 'spent_usd' => 8, 'cap_usd' => 10]);
+    DB::table('notifications')->insert([
+        'id' => (string) Str::uuid(), 'type' => 'App\\Notifications\\AiBudgetAlertNotification', 'notifiable_type' => User::class,
+        'notifiable_id' => $admin->id, 'data' => json_encode(['format' => 'filament']), 'created_at' => $now, 'updated_at' => $now,
+    ]);
     rgInsert('sessions', ['id' => Str::random(40), 'user_id' => $admin->id, 'payload' => 'x', 'last_activity' => $now->timestamp]);
     rgInsert('password_reset_tokens', ['email' => 'mama@example.com', 'token' => 'hash', 'created_at' => $now]);
     rgInsert('cache', ['key' => 'petprep:throttle', 'value' => 'i:1;', 'expiration' => $now->timestamp + 60]);

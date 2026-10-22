@@ -87,6 +87,10 @@ class GameDataResetService
         'purchase_events',
         // AI spend + AI Lab (ledger → lab results → lab runs)
         'ai_spend_ledger',
+        // M5-T15: budget warning dedupe (the ledger restarts, so do its warnings)
+        // and the Filament database notifications (superadmin bell, no game data kept)
+        'ai_budget_alerts',
+        'notifications',
         'media_lab_results',
         'media_lab_runs',
         // M5-R09b: reads / automatic sheets of breed facts (→ users, pets, breed_facts)

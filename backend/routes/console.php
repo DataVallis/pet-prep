@@ -90,3 +90,12 @@ Schedule::command('system-health:prune')
     ->withoutOverlapping()
     ->name('prune-system-errors')
     ->description('Delete old resolved / stale rows of the system error log');
+
+// Every 5 min (M5-T15, David 2026-10-22): queue the AI budget warning check —
+// ≥ 80 % / 100 % of the production and AI Lab daily / monthly caps and a low
+// fal.ai balance → Filament notification (+ e-mail with a real mailer) to the
+// superadmins, once per threshold per budget day / month. Off the 5-minute mark.
+Schedule::command('ai:budget-check')
+    ->cron('3-59/5 * * * *')
+    ->name('ai-budget-check')
+    ->description('Warn the superadmins when an AI budget reaches 80 % / 100 % or the fal.ai balance is low');
