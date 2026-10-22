@@ -2250,6 +2250,51 @@
           "quote": "Eye testing using the BVA/RKC/ISDS Eye Scheme"
         }
       ]
+    },
+    "samoyed": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K32",
+        "quote": "Recommended Health Tests from the National Breed Club:"
+      },
+      "tests": [
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip X-ray screening of all breeding Samoyeds through the BVA/Kennel Club Hip Dysplasia Scheme (PDSA; US breed club: hip evaluation)",
+          "source_id": "S467",
+          "quote": "All breeding Samoyeds should have their hips x-rayed through the BVA/Kennel Club Hip Dysplasia Scheme."
+        },
+        {
+          "key": "eye_scheme",
+          "level": "other_scheme",
+          "name": "Eye screening (BVA/KC scheme; US breed club: ophthalmologist evaluation)",
+          "source_id": "S467",
+          "quote": "There is BVA/KC screening available for eye problems."
+        },
+        {
+          "key": "heart_scheme",
+          "level": "other_scheme",
+          "name": "Heart check (cardiac exam) of breeding stock (US breed club recommendation)",
+          "source_id": "K32",
+          "quote": "Cardiac Exam"
+        },
+        {
+          "key": "dna_rd_osd",
+          "level": "other_scheme",
+          "name": "DNA test for retinal dysplasia / oculoskeletal dysplasia 2 (RD/OSD2) (US breed club recommendation)",
+          "source_id": "K32",
+          "quote": "Retinal Dysplasia/Oculoskeletal Dysplasia 2 (RD/OSD, OSD2) - DNA Test"
+        },
+        {
+          "key": "dna_xlpra1",
+          "level": "other_scheme",
+          "name": "DNA test for X-linked progressive retinal atrophy (XLPRA1) (US breed club recommendation)",
+          "source_id": "K32",
+          "quote": "Progressive Retinal Atrophy, X-Linked1 (XLPRA1) - DNA Test"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (royalkennelclub.com …/pastoral/samoyed; the older display.aspx?id=5139 address redirects there) could not be fetched on 2026-10-22 → no minimum / best_practice level. PDSA (dog-data S467): 'All breeding Samoyeds should have their hips x-rayed through the BVA/Kennel Club Hip Dysplasia Scheme.' and 'There is BVA/KC screening available for eye problems.' → hip_scheme, eye_scheme (other_scheme). AKC Working Group health testing page (K32, 2026-10-22): Samoyed — 'Hip Evaluation', 'Cardiac Exam', 'Ophthalmologist Evaluation', 'Retinal Dysplasia/Oculoskeletal Dysplasia 2 (RD/OSD, OSD2) - DNA Test', 'Progressive Retinal Atrophy, X-Linked1 (XLPRA1) - DNA Test' → other_scheme (hip and eye merged with the PDSA rows; heart_scheme reused as in the Whippet — the cardiac exam is a general heart check, not specifically mitral valve disease). Woodgreen (dog-data S468): 'Reputable breeders should have their dogs scored under the BVA/KC hip scheme before breeding.' and for eye conditions 'DNA testing is available and responsible breeders should test for these before breeding.' PetMD (dog-data S469): a DNA test exists for Samoyed hereditary glomerulopathy (paraphrase, no A/B test list) → not listed. Two new test keys: dna_rd_osd, dna_xlpra1 (website words needed). Re-read the RKC page when it is reachable (open for David)."
     }
   }
 }
