@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "0cc6b84440e802cc8859162b80fdab0fb5d9911c909169414bed91f68e26848f"
+      "sha256": "8bfcc0c731589c7ecbb1916c489446d654d2c6313fa72763e71a6c36b21b9745"
     }
   },
   "suitability_vocabulary": {
@@ -30543,7 +30543,12 @@
           "S454"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "wirehaired-pointing-griffon.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
