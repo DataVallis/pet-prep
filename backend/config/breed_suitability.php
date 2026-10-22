@@ -155,6 +155,12 @@ return [
         // have the patience and consistency"). Not `experienced_owner` — that chip names a powerful dog, which no
         // source says of this breed. A calm chip, never a number.
         'independent_experienced_owner' => 'consider',
+        // M5-R10-54 (runbook "new tag" rule, 2026-10-21): a sensitive, medium-sized dog that is a better fit for a home
+        // with older children (Whippet: PDSA S444 "we'd recommend a home with slightly older children" — who recognise
+        // when the dog needs space; PetMD S445 "A home with loud, rambunctious little kids might be too much for these
+        // sensitive pups."). Not `older_children` — that chip names a small dog — nor `fragile_older_children` (fragile
+        // bones) or `not_for_small_children` (a large dog). A calm chip, never a number.
+        'sensitive_older_children' => 'consider',
     ],
 
     'breeds' => [
@@ -1421,6 +1427,53 @@ return [
                 ['tag' => 'may_herd_children', 'source_ids' => ['S438'], 'refs' => ['australian_cattle_dog.behaviour.herding_children', 'australian_cattle_dog.suitability.pdsa_children']],
                 // S437 "Sheds: Yes".
                 ['tag' => 'sheds', 'source_ids' => ['S437'], 'refs' => ['australian_cattle_dog.suitability.rkc_shedding']],
+            ],
+        ],
+
+        // M5-R10-54: whippet.* (S442–S447), runbook rules (data.json proposed_game_parameters.whippet.suitability_tags).
+        // PDSA (S444) + PetMD (S445); the RKC breed page was not reachable → no large_home / apartment / sheds /
+        // low_shedding (RKC-only criteria). No Breed Watch category fetched, no welfare statement → no welfare chip.
+        // children from the explicit PDSA statement (supervision and "slightly older children" caveat → the new
+        // sensitive_older_children — `older_children` names a small dog);
+        // never small_children, other_pets (really high prey drive) or first_time_owner (popularity only).
+        'whippet' => [
+            'suits' => [
+                // S444 "Whippets are a popular choice for families as they are so calm and gentle around children."
+                ['tag' => 'family_pet', 'source_ids' => ['S444'], 'refs' => ['whippet.suitability.pdsa_family', 'whippet.behaviour.family']],
+                // S444 "… so calm and gentle around children." (supervision caveat in whippet.behaviour.family).
+                ['tag' => 'children', 'source_ids' => ['S444'], 'refs' => ['whippet.behaviour.family', 'whippet.suitability.pdsa_family']],
+            ],
+            'consider' => [
+                // S444 "we'd recommend a home with slightly older children"; S445 "A home with loud, rambunctious little kids might be too much …".
+                ['tag' => 'sensitive_older_children', 'source_ids' => ['S444', 'S445'], 'refs' => ['whippet.suitability.pdsa_children', 'whippet.suitability.petmd_children']],
+                // S444 "Like most dogs, Whippets dislike being left alone and can suffer with separation anxiety."
+                ['tag' => 'needs_company', 'source_ids' => ['S444'], 'refs' => ['whippet.behaviour.time_alone', 'whippet.suitability.pdsa_company']],
+                // S444 "Whippets have a really high prey drive, so we wouldn’t recommend keeping them with smaller pets."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S444'], 'refs' => ['whippet.behaviour.other_pets']],
+            ],
+        ],
+
+        // M5-R10-55: wirehaired_pointing_griffon.* (S448–S456), runbook rules (data.json
+        // proposed_game_parameters.wirehaired_pointing_griffon.suitability_tags). RKC key facts (S450) + FCI / UKC
+        // standards (S449, S452) + PetMD (S453). No Breed Watch category, no welfare statement → no welfare chip.
+        // Never small_children (PetMD: when socialised as puppies), other_pets (strong prey drive), needs_company
+        // (PetMD and VCA differ), sheds / low_shedding (RKC "Yes" vs PetMD / VCA low shedding).
+        'wirehaired_pointing_griffon' => [
+            'suits' => [
+                // S450 "Exercise: More than 2 hours per day"
+                ['tag' => 'active_family', 'source_ids' => ['S450'], 'refs' => ['wirehaired_pointing_griffon.exercise.adult', 'wirehaired_pointing_griffon.suitability.rkc_exercise']],
+                // S452 "which makes it suitable as a family pet and guardian"
+                ['tag' => 'family_pet', 'source_ids' => ['S452'], 'refs' => ['wirehaired_pointing_griffon.suitability.ukc_family']],
+                // S449 "Very gentle with children." (PetMD's socialisation condition in wirehaired_pointing_griffon.behaviour.family).
+                ['tag' => 'children', 'source_ids' => ['S449'], 'refs' => ['wirehaired_pointing_griffon.behaviour.family']],
+                // S450 "Size of home: Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S450'], 'refs' => ['wirehaired_pointing_griffon.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                // S450 "Exercise: More than 2 hours per day"
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S450'], 'refs' => ['wirehaired_pointing_griffon.exercise.adult', 'wirehaired_pointing_griffon.suitability.rkc_exercise']],
+                // S453 "Their hunting history also means these pups can have a strong prey drive."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S453'], 'refs' => ['wirehaired_pointing_griffon.behaviour.other_pets']],
             ],
         ],
 

@@ -484,6 +484,19 @@
 | highest (the register portrait); never cream, white or merle. Breed Watch Category 1 (S437) — not a welfare breed.
 | Colour weights unsourced → `verified => false`.
 |
+| Whippet (M5-R10-54, docs/research/dog-data whippet.appearance): "Balanced combination of muscular power and
+| strength with elegance and grace of outline." (Kennel Club standard, S443); fine, short, close coat; "Any colour or
+| mixture of colours, except merle." (S443) — fawn weighted highest (the register portrait), then brindle, black, blue
+| and white parti-colours; never merle; a healthy lean sighthound, never emaciated. No welfare concern found (RKC page
+| not reachable). Colour weights unsourced → `verified => false`.
+|
+| Wirehaired Pointing Griffon (M5-R10-55, docs/research/dog-data wirehaired_pointing_griffon.appearance): "Vigorous
+| dog, rustic of medium size. Longer than tall." (FCI standard, S449); harsh, coarse, wiry coat of medium length with a
+| soft undercoat; nose always brown; "Preferably steel grey shade with brown (liver) patches or self-coloured brown
+| (liver) coat." (S449) — steel grey with liver patches weighted highest (the register portrait), then liver roan,
+| solid liver, white and liver, white and orange; never black (AKC S451 / UKC S452 disqualify it). Natural tail
+| (docking is not shown). No welfare concern found (RKC S450). Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2407,6 +2420,79 @@ return [
             'tail' => ['low-set natural tail reaching the hock, hanging in a slight curve, with a good brush'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-54 (docs/research/dog-data/data.json whippet.appearance; runbook rules 2026-10-10:
+    // standard colours only — any colour or mixture except merle).
+    'whippet' => [
+        'display_name' => 'Whippet',
+        // Colour frequencies are in no source (whippet.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'Kennel Club breed standard (S443), PDSA (S444) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S444 "Size: Medium"; S443 "47cm – 51cm (approx. 18½” – 20”)." (females 44–47 cm)',
+            'build' => 'S443 "Balanced combination of muscular power and strength with elegance and grace of outline."',
+            'coat_length' => 'S443 "Fine, short, close in texture."',
+            'coat_color' => 'S443 "Any colour or mixture of colours, except merle." (weights unsourced)',
+            'ear_carriage' => 'S443 "Rose-shaped, small, fine in texture."',
+            'eye_color' => 'S443 "Oval, bright, expression very alert."',
+            'tail' => 'S443 "No feathering. Long, tapering, reaching at least to the hock."',
+            'head' => 'S443 "Long and lean, flat on top, tapering to muzzle with slight stop, rather wide between the eyes,"',
+        ],
+        'traits' => [
+            'size' => ['medium-sized'],
+            'build' => [['value' => 'elegant, muscular sighthound with a graceful outline, deep chest and gently arched loin, in healthy lean condition', 'weight' => 3], 'athletic and balanced sighthound, lean but well-muscled, standing calmly'],
+            'coat_length' => ['fine, short, close coat'],
+            // KC standard (S443): any colour except merle; fawn highest → the register portrait.
+            'coat_color' => [
+                ['value' => 'fawn', 'weight' => 35],
+                ['value' => 'brindle', 'weight' => 25],
+                ['value' => 'black', 'weight' => 10],
+                ['value' => 'blue (grey)', 'weight' => 10],
+                ['value' => 'fawn and white parti-colour', 'weight' => 10],
+                ['value' => 'white with brindle patches', 'weight' => 10],
+            ],
+            'ear_carriage' => ['small, fine, rose-shaped ears folded back'],
+            'eye_color' => ['oval, bright dark eyes with a very alert expression'],
+            'tail' => ['long, tapering tail without feathering, reaching the hock'],
+            'head' => ['long, lean head, flat on top, tapering to the muzzle with a slight stop'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-55 (docs/research/dog-data/data.json wirehaired_pointing_griffon.appearance; runbook rules 2026-10-10:
+    // standard colours only — never black; natural tail).
+    'wirehaired_pointing_griffon' => [
+        'display_name' => 'Wirehaired Pointing Griffon',
+        // Colour frequencies are in no source (wirehaired_pointing_griffon.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI standard (S449), AKC standard (S451), RKC breed page (S450) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S450 "Size: Large"; S449 "About 55 to 60 cm for males and 50 to 55 cm for females."',
+            'build' => 'S449 "Vigorous dog, rustic of medium size. Longer than tall. The skull is not too broad. The muzzle is long and square."',
+            'coat_length' => 'S449 "Harsh and coarse, reminding of the touch of a wild boar\'s bristles. Never curly or woolly."; S450 "Coat length: Medium"',
+            'coat_color' => 'S449 "Preferably steel grey shade with brown (liver) patches or self-coloured brown (liver) coat." (weights unsourced; never black — S451)',
+            'ear_carriage' => 'S449 "Of medium size, not curled inwards, flat, set on level line with the eyes,"',
+            'eye_color' => 'S449 "Dark yellow or brown, large, rounded surmounted but not covered by the eyebrows, very intelligent expression."',
+            'tail' => 'S449 "Carried horizontally or with the tip slightly raised, covered with thick hair but without fringing," (natural tail shown)',
+            'head' => 'S449 "Long and square, of the same length as the skull, bridge of the nose slightly convex."; nose "Always brown."',
+        ],
+        'traits' => [
+            'size' => ['medium-to-large'],
+            'build' => [['value' => 'vigorous, rustic and athletic pointing dog, slightly longer than tall, strong limbs', 'weight' => 3], 'sturdy, well-muscled versatile gundog standing calmly'],
+            'coat_length' => ['harsh, wiry medium-length coat with a soft undercoat, a moustache and bushy eyebrows'],
+            // FCI standard (S449): steel grey with liver patches preferred → the register portrait; never black.
+            'coat_color' => [
+                ['value' => 'steel grey with brown (liver) patches', 'weight' => 40],
+                ['value' => 'liver roan', 'weight' => 20],
+                ['value' => 'solid liver (brown)', 'weight' => 15],
+                ['value' => 'white and brown (liver)', 'weight' => 15],
+                ['value' => 'white and orange', 'weight' => 10],
+            ],
+            'ear_carriage' => ['medium-sized flat ears set level with the eyes'],
+            'eye_color' => ['large, rounded dark-yellow or brown eyes with an intelligent expression'],
+            'tail' => ['natural tail carried horizontally, covered with harsh hair, without a plume'],
+            'head' => ['long, square muzzle with a brown nose and a slightly convex bridge'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

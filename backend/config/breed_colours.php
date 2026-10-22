@@ -320,6 +320,24 @@ return [
         ['key' => 'blue-speckled', 'value' => 'blue speckled with black and tan markings on the head', 'en' => 'Blue speckled', 'sl' => 'Modro pegast'],
         ['key' => 'red-speckle', 'value' => 'even red speckle with darker red markings on the head', 'en' => 'Red speckle', 'sl' => 'Rdeče pegast'],
     ],
+    // M5-R10-54: KC standard S443 "Any colour or mixture of colours, except merle." — common standard colours.
+    'whippet' => [
+        ['key' => 'fawn', 'value' => 'fawn', 'en' => 'Fawn', 'sl' => 'Plavo rjav'],
+        ['key' => 'brindle', 'value' => 'brindle', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'blue', 'value' => 'blue (grey)', 'en' => 'Blue', 'sl' => 'Moder (siv)'],
+        ['key' => 'fawn-white', 'value' => 'fawn and white parti-colour', 'en' => 'Fawn and white', 'sl' => 'Plavo rjav z belo'],
+        ['key' => 'brindle-white', 'value' => 'white with brindle patches', 'en' => 'Brindle and white', 'sl' => 'Tigrasto-bel'],
+    ],
+    // M5-R10-55: FCI standard S449 — steel grey with liver patches (preferred), liver roan, solid liver, white and
+    // liver, white and orange; never black (AKC S451, UKC S452).
+    'wirehaired_pointing_griffon' => [
+        ['key' => 'steel-grey-liver', 'value' => 'steel grey with brown (liver) patches', 'en' => 'Steel grey with liver', 'sl' => 'Jekleno siv z jetrno rjavimi lisami'],
+        ['key' => 'liver-roan', 'value' => 'liver roan', 'en' => 'Liver roan', 'sl' => 'Jetrni roan'],
+        ['key' => 'liver', 'value' => 'solid liver (brown)', 'en' => 'Liver', 'sl' => 'Jetrno rjav'],
+        ['key' => 'liver-white', 'value' => 'white and brown (liver)', 'en' => 'Liver and white', 'sl' => 'Jetrno-bel'],
+        ['key' => 'orange-white', 'value' => 'white and orange', 'en' => 'Orange and white', 'sl' => 'Oranžno-bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

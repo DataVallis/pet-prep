@@ -639,6 +639,26 @@ class PetFactory extends Factory
     }
 
     /**
+     * Indicate the pet is a Whippet (paid breed, M5-R10-54).
+     */
+    public function whippet(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::Whippet->value,
+        ]);
+    }
+
+    /**
+     * Indicate the pet is a Wirehaired Pointing Griffon (paid breed, M5-R10-55).
+     */
+    public function wirehairedPointingGriffon(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'breed_type' => BreedType::WirehairedPointingGriffon->value,
+        ]);
+    }
+
+    /**
      * Indicate the pet is a British Shorthair (paid cat breed, M5-R10-14; species follows the breed).
      */
     public function britishShorthair(): static

@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "c26522bd53afda7e7b5e7ec859fb8ab156aa00c7c8a3b5f557808d6ef132c41b"
+      "sha256": "ea600d15f0bef217dd38936d1e1cb3d9f71a6d94e72607d8d91b9b9d80d6fa29"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "c5af00699f9fe5fa498c591d9cdce29546683b4eda2b9a6f0b6ead15b55f7ca2"
+      "sha256": "eb20fd781977a24f2a5b20bd44bdb29e9002ebe46345cf342c5ea23218cf8137"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,35 +25,35 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "e64fe53698f091fc28f6c76c4def864cdba604255c1861112ec9c8f6c570e9b3"
+      "sha256": "56bdee6f9c91293d54eb14466b2fdab0254eeef9bf05ef1c28cfee454e9cc24a"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "c2097bf9b458bb67c85e8d9fffd1d3cdd6c53ccc6a12a5f60c8dad104b48dfdf"
+      "sha256": "23fd4b33a94c8e64803deb1e0033466a108ad6645690cc344f369333a4572a2f"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "ab2eef1146b57b9329229a89c2ef47645d418a8ef397db6e0638f89bc091b36f"
+      "sha256": "15a94278de858dc54d94057417c3fddef8d13db1db7d33d339e37c4ab764496d"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "abbedc272b0bf7b0844991b23cffcec040e3bbb630f1eed91399e9af3c9dd98e"
+      "sha256": "a83b7dfae9f1735313ac785ef6ad7e75a94ccadb1872bb915b3eb843c91845ee"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "7dbc210f9213836f13303be13f921049d6ef83a8f8fd89bae9c00fbebc543082"
+      "sha256": "83309531d6dfaac6769d8dde827d920bb834babaf448b48d5fe4419bb74e0e57"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "a2b3208293d5cb7015670a2bca9697d607ea8c97e15ab177d828a48e010f55f5"
+      "sha256": "004188bff93b617d267147dc59e6c1ddfb18a69a3abfe4e5db50a29dca19dac6"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "b35515d92dbca6959ac974e2078bf36e3081ff53ad36a1eb32c22f648c2481d4"
+      "sha256": "7ca2f7111f68c8d688f847201fc21489669350ea7ca7d487a687027e17b43fc6"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "3fc180aa5a468cddd8e487f945ccbfd024903a0a1562770b7a9b6d36d1ebe218"
+      "sha256": "8bfcc0c731589c7ecbb1916c489446d654d2c6313fa72763e71a6c36b21b9745"
     }
   },
   "suitability_vocabulary": {
@@ -95,6 +95,7 @@
     "older_owners": "suits",
     "other_pets": "suits",
     "secure_fencing": "consider",
+    "sensitive_older_children": "consider",
     "sensitive_skin": "consider",
     "sheds": "consider",
     "short_muzzle_breathing": "consider",
@@ -136,6 +137,7 @@
         "older_owners": "older owners",
         "other_pets": "homes with other pets",
         "secure_fencing": "escapes easily — needs a secure, high fence",
+        "sensitive_older_children": "sensitive dog — better with older children",
         "sensitive_skin": "sensitive skin — prone to itching and inflammation",
         "sheds": "sheds",
         "short_muzzle_breathing": "shorter muzzle — can have breathing problems",
@@ -177,6 +179,7 @@
         "older_owners": "starejše lastnike",
         "other_pets": "dom z drugimi ljubljenčki",
         "secure_fencing": "rad pobegne — potrebuje varno, visoko ograjo",
+        "sensitive_older_children": "občutljiv pes — bolje za starejše otroke",
         "sensitive_skin": "občutljiva koža — nagnjenost k srbenju in vnetjem",
         "sheds": "izpada mu dlaka",
         "short_muzzle_breathing": "krajši gobček — lahko težje diha",
@@ -203,7 +206,7 @@
         }
       },
       "status": "available",
-      "breed_count": 49,
+      "breed_count": 51,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -29508,6 +29511,1103 @@
       ]
     },
     {
+      "id": "whippet",
+      "species": "dog",
+      "order": 49,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Whippet",
+        "sl": "Mali angleški hrt"
+      },
+      "slug": {
+        "en": "whippet",
+        "sl": "mali-angleski-hrt"
+      },
+      "synonyms": {
+        "en": [
+          "Snap dog"
+        ],
+        "sl": [
+          "whippet",
+          "vipet",
+          "angleški hrt"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "h1_2"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S444"
+          ],
+          "ref": "whippet.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              47,
+              51
+            ],
+            "female": [
+              44,
+              47
+            ]
+          },
+          "source_ids": [
+            "S443"
+          ],
+          "ref": "whippet.height.kc_standard",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              11,
+              18
+            ],
+            "female": [
+              11,
+              18
+            ]
+          },
+          "source_ids": [
+            "S444"
+          ],
+          "ref": "whippet.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "whippet.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 13.4,
+          "source_ids": [
+            "S123"
+          ],
+          "ref": "whippet.lifespan.median_uk",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S444"
+          ],
+          "ref": "whippet.lifespan.pdsa",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 60,
+          "source_ids": [
+            "S444"
+          ],
+          "ref": "proposed_game_parameters.whippet.exercise_minutes_adult",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 51,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "whippet.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 162,
+            "group": 10,
+            "section": 3,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S442"
+          ],
+          "ref": "whippet.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "pra_eye_disease",
+          "source_ids": [
+            "S444"
+          ],
+          "ref": "whippet.health.pra",
+          "confidence": "high"
+        },
+        {
+          "key": "mitral_valve_disease",
+          "source_ids": [
+            "S444"
+          ],
+          "ref": "whippet.health.mitral_valve",
+          "confidence": "high"
+        },
+        {
+          "key": "autoimmune_conditions",
+          "source_ids": [
+            "S444"
+          ],
+          "ref": "whippet.health.immune_mediated",
+          "confidence": "medium"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S445"
+          ],
+          "ref": "whippet.health.gdv",
+          "confidence": "medium"
+        },
+        {
+          "key": "bleeding_disorder_vwd",
+          "source_ids": [
+            "S445"
+          ],
+          "ref": "whippet.health.von_willebrand",
+          "confidence": "medium"
+        },
+        {
+          "key": "deafness",
+          "source_ids": [
+            "S445"
+          ],
+          "ref": "whippet.health.deafness",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S444"
+            ],
+            "refs": [
+              "whippet.suitability.pdsa_family",
+              "whippet.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S444"
+            ],
+            "refs": [
+              "whippet.behaviour.family",
+              "whippet.suitability.pdsa_family"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "sensitive_older_children",
+            "source_ids": [
+              "S444",
+              "S445"
+            ],
+            "refs": [
+              "whippet.suitability.pdsa_children",
+              "whippet.suitability.petmd_children"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S444"
+            ],
+            "refs": [
+              "whippet.behaviour.time_alone",
+              "whippet.suitability.pdsa_company"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S444"
+            ],
+            "refs": [
+              "whippet.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 121
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 121
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.whippet.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S444"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S444 'Minimum exercise (per day): 1 hour'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.whippet.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.whippet.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S123"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 121 (0.75 × 13.4 y, McMillan 2024 via S123)"
+          },
+          {
+            "ref": "proposed_game_parameters.whippet.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 51, Average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.whippet.grooming",
+            "basis_source_ids": [
+              "S444"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PDSA »a weekly brush«; PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S123",
+          "S444"
+        ]
+      },
+      "portrait": {
+        "file": "whippet.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "heart_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K31"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K30"
+            ]
+          },
+          {
+            "key": "hearing_baer",
+            "level": "other_scheme",
+            "source_ids": [
+              "K30"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K30"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S123",
+        "S442",
+        "S443",
+        "S444",
+        "S445",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K30",
+        "K31"
+      ]
+    },
+    {
+      "id": "wirehaired_pointing_griffon",
+      "species": "dog",
+      "order": 50,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Wirehaired Pointing Griffon",
+        "sl": "Francoski ostrodlaki ptičar"
+      },
+      "slug": {
+        "en": "wirehaired-pointing-griffon",
+        "sl": "francoski-ostrodlaki-pticar"
+      },
+      "synonyms": {
+        "en": [
+          "Korthals Griffon",
+          "Wire-haired Pointing Griffon Korthals",
+          "Griff"
+        ],
+        "sl": [
+          "korthalsov grifon",
+          "grifon",
+          "korthals"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S450"
+          ],
+          "ref": "wirehaired_pointing_griffon.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              55,
+              60
+            ],
+            "female": [
+              50,
+              55
+            ]
+          },
+          "source_ids": [
+            "S449"
+          ],
+          "ref": "wirehaired_pointing_griffon.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              16,
+              32
+            ],
+            "female": [
+              16,
+              32
+            ]
+          },
+          "source_ids": [
+            "S453"
+          ],
+          "ref": "wirehaired_pointing_griffon.adult_weight.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "wirehaired_pointing_griffon.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S450"
+          ],
+          "ref": "wirehaired_pointing_griffon.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S450"
+          ],
+          "ref": "wirehaired_pointing_griffon.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S450"
+          ],
+          "ref": "wirehaired_pointing_griffon.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S450"
+          ],
+          "ref": "wirehaired_pointing_griffon.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S450"
+          ],
+          "ref": "wirehaired_pointing_griffon.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 46,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "wirehaired_pointing_griffon.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 107,
+            "group": 7,
+            "section": 1,
+            "origin": "FR"
+          },
+          "source_ids": [
+            "S448"
+          ],
+          "ref": "wirehaired_pointing_griffon.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S453"
+          ],
+          "ref": "wirehaired_pointing_griffon.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_eye_disease",
+          "source_ids": [
+            "S453"
+          ],
+          "ref": "wirehaired_pointing_griffon.health.pra",
+          "confidence": "high"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S453"
+          ],
+          "ref": "wirehaired_pointing_griffon.health.cataracts",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S453"
+          ],
+          "ref": "wirehaired_pointing_griffon.health.gdv",
+          "confidence": "medium"
+        },
+        {
+          "key": "eyelids_turned",
+          "source_ids": [
+            "S454"
+          ],
+          "ref": "wirehaired_pointing_griffon.health.eyelids",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S450"
+            ],
+            "refs": [
+              "wirehaired_pointing_griffon.exercise.adult",
+              "wirehaired_pointing_griffon.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S452"
+            ],
+            "refs": [
+              "wirehaired_pointing_griffon.suitability.ukc_family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S449"
+            ],
+            "refs": [
+              "wirehaired_pointing_griffon.behaviour.family"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S450"
+            ],
+            "refs": [
+              "wirehaired_pointing_griffon.suitability.rkc_size_of_home"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S450"
+            ],
+            "refs": [
+              "wirehaired_pointing_griffon.exercise.adult",
+              "wirehaired_pointing_griffon.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S453"
+            ],
+            "refs": [
+              "wirehaired_pointing_griffon.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.wirehaired_pointing_griffon.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S450"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S450 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.wirehaired_pointing_griffon.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.wirehaired_pointing_griffon.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S450"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S450)"
+          },
+          {
+            "ref": "proposed_game_parameters.wirehaired_pointing_griffon.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 46, Average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.wirehaired_pointing_griffon.grooming",
+            "basis_source_ids": [
+              "S454"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »More than once a week« brez števila → VCA »weekly brushing« → 1; PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S450",
+          "S454"
+        ]
+      },
+      "portrait": {
+        "file": "wirehaired-pointing-griffon.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S450"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S450"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S450"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S450"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S448",
+        "S449",
+        "S450",
+        "S452",
+        "S453",
+        "S454",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -33827,6 +34927,76 @@
       "url": "https://www.petmd.com/dog/breeds/australian-cattle-dog"
     },
     {
+      "id": "S442",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — WHIPPET (162)",
+      "url": "https://www.fci.be/EN/nomenclature/WHIPPET-162.html"
+    },
+    {
+      "id": "S443",
+      "tier": "A",
+      "publisher": "The Kennel Club (UK) breed standard, reprinted by the Kennel Union of Southern Africa",
+      "title": "Whippet — breed standard (KC 01/2020, PDF)",
+      "url": "https://kusa.co.za/images/HOUND%20GROUP%202025/Whippet%20-%20KC%20[01-2020].pdf"
+    },
+    {
+      "id": "S444",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Whippet breed information",
+      "url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/whippet"
+    },
+    {
+      "id": "S445",
+      "tier": "B",
+      "publisher": "PetMD — K. Arford, reviewed by B. J. Morrison, DVM (updated Feb. 16, 2023)",
+      "title": "Whippet",
+      "url": "https://www.petmd.com/dog/breeds/whippet"
+    },
+    {
+      "id": "S448",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature: WIRE-HAIRED POINTING GRIFFON KORTHALS (107)",
+      "url": "https://www.fci.be/en/nomenclature/GRIFFON-A-POIL-DUR-KORTHALS-107.html"
+    },
+    {
+      "id": "S449",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 107 — Wire-haired Pointing Griffon Korthals (PDF, English)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/107g07-en.pdf"
+    },
+    {
+      "id": "S450",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Korthals Griffon (Imp)",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/korthals-griffon-imp/"
+    },
+    {
+      "id": "S452",
+      "tier": "A",
+      "publisher": "United Kennel Club",
+      "title": "Wirehaired Pointing Griffon — official UKC breed standard (PDF)",
+      "url": "https://www.UKCDogs.com/docs/breeds/wirehaired-pointing-griffon.pdf"
+    },
+    {
+      "id": "S453",
+      "tier": "B",
+      "publisher": "PetMD — Virginia LaMon, DVM (published Dec. 4, 2023)",
+      "title": "Wirehaired Pointing Griffon Dog Breed Health and Care",
+      "url": "https://www.petmd.com/dog/breeds/wirehaired-pointing-griffon"
+    },
+    {
+      "id": "S454",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (LifeLearn, created 2014-06-02)",
+      "title": "Wirehaired Pointing Griffon — \"The Supreme Gundog\"",
+      "url": "https://vcahospitals.com/know-your-pet/wirehaired-pointing-griffon"
+    },
+    {
       "id": "C1",
       "tier": "A (via B summary)",
       "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
@@ -34210,6 +35380,20 @@
       "publisher": "The Kennel Club (hosted by The Newfoundland Club)",
       "title": "Newfoundland Breed Health and Conservation Plan (version 1, August 2018) (PDF)",
       "url": "https://www.thenewfoundlandclub.co.uk/files/health/Newfoundland_BHCP.pdf"
+    },
+    {
+      "id": "K30",
+      "tier": "B",
+      "publisher": "American Kennel Club",
+      "title": "Hound Group Health Testing Requirements (breeder programs)",
+      "url": "https://www.akc.org/breeder-programs/breed-health-testing-requirements/hound-group-health-testing-requirements/"
+    },
+    {
+      "id": "K31",
+      "tier": "B",
+      "publisher": "The Kennel Club (statement approved by its consultant cardiologists; posted by The Whippet Club, 2023-07-03)",
+      "title": "The Kennel Club: Statement on Whippet Heart Health",
+      "url": "https://www.thewhippetclub.com/?p=11623"
     }
   ]
 }
