@@ -9,6 +9,16 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-22 — Sklop M5-T končan: 16 izboljšav po prvem testiranju s testerji v enem dnevu
+
+**Kaj:** vse, kar so beta testerji opazili 20. 10. 2026 (spec `APP_REFINEMENT_SPEC.md`), je v kodi: ura »Pelji ven« kot rok (rdeča zadnjih 30 min), sporočila v vrsti (najmanj 2,5 s + 60 ms na znak, viden »×«), ena tabela, kaj je dovoljeno kdaj (speč kuža se ne igra, ne hodi v šolo, ga ne crkljamo in ne češemo), ure »7:00«, kartica »Kako skrbim za …« za otroka in starša, igre čakajo na vse svoje posnetke, zaslon »Pripravljamo: …« z novico »Vse je pripravljeno«, česanje kot strgalna srečka z možnostjo držanja, rojstni dan pri 1 letu, prilagojen način s potiski vozička in starševim vpisom sprehoda (samo danes, največ 240 min na dan), poze in brezšivni posnetki vsakega stanja s prehodi, izbira »Video / Slika« ter posnetki šole in iger po fazah. Ena naloga (primerjava modelov, M5-T07) je odpadla — David je izbral Kling 3.0 Pro in Nano Banana Pro za vse. 19 PR-jev v aplikaciji (21. 10. 04:51 → 22. 10. 04:38 UTC) in 2 na spletni strani (politika zasebnosti: zdravje in prilagojen način).
+**Zakaj je pomembno:** od testiranja do celotnega sklopa v kodi je minil en dan; vsaka sprememba ima teste in dokumentacijo v istem PR-ju. Na telefonu še ni preverjena nobena — pride z naslednjo izdajo v trgovinah (sprememba prilagojenega načina potrebuje nov native build, zato posodobitve »po zraku« do takrat ne pridejo).
+- 👩 Starši: aplikacija zdaj pove, zakaj gumb ne dela (»💤 Kuža spi do 7:00«), pokaže pravila skrbi za vašega ljubljenčka in omogoča prilagojen način za otroka na vozičku (vklop je vaša izrecna privolitev; hranimo samo, da je vklopljen). Pri slabem signalu izberite »Slika« — brez prenosa videov.
+- 🧒 Otroci: »Ko je ura rdeča, hitro peljimo kužka ven! In poglej, kako se v šoli usede, ko mu rečeš Sedi.«
+- 💼 Investitorji: poln nabor medijev za psa (stanja + šola + igre) stane po ceniku fal 11,17 $ na pasmo + barvo + obdobje, za muco 7,40 $ — enkrat; vsak naslednji kupec iste pasme in barve 0 $. David je dnevno mejo porabe AI v produkciji določil na 25 $ (22. 10.), da nov nabor nastane v enem dnevu.
+- 🤝 Partnerji (šole, društva): prilagojen način — sprehod z vozičkom šteje enako kot koraki (1 potisk = 1 korak), starš lahko vpiše minute sprehoda.
+- 🛠 Tehnično: Laravel storitve (`PetSleepService`, `PetPreparationService`, `PetBirthdayService`, `GameMediaReadiness`), Kling 3.0 Pro z `end_image_url` za zanke in posnetke od poze do poze, stikali v superadmin panelu (»Mediji stanj«, »Posnetki šole in iger«), največja posodobitev v živo 8,8 kB (Reverb meja dvignjena na 64 kB). Pravi klic fal za nove vrste medijev še ni bil narejen — prvi pravi nakup bo prvi test.
+
 ## 2026-10-21 — Šola in igre: kuža res naredi, kar piše
 
 **Kaj:** plačljiv pes ima v »Šoli« za vsak ukaz tri kratke posnetke (3 s) svojega psa — čaka na ukaz, ga izvede (se usede, pride, gre na blazino, gre k vratom) in drži položaj; pri igri z žogo steče iz slike in žogo prinese nazaj, plačljiva muca se pri palici s peresom pritaji, skoči in pero ulovi. Žogo in pero nariše aplikacija sama.
