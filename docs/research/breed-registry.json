@@ -49,7 +49,7 @@
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "c981f8157552880077c1b93a1676d89654341e16ae8f6262311733f9b09d1675"
+      "sha256": "9ee3393c5cac81c02ac5f7666eabd4f62fab164ee12ddde8e7196db886dcccf4"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -31743,7 +31743,7 @@
             ]
           },
           {
-            "key": "heart_scheme",
+            "key": "cardiac_exam",
             "level": "other_scheme",
             "source_ids": [
               "K32"

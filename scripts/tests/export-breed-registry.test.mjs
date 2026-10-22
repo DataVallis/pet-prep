@@ -1905,7 +1905,7 @@ test('Samoyed (M5-R10-57): at least 2 hours (PDSA), FCI height, PDSA weight, FCI
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'family_pet', 'children']);
   assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'needs_mental_stimulation', 'needs_company', 'secure_fencing', 'may_herd_children', 'sheds', 'frequent_grooming', 'heat_sensitive', 'chases_small_pets']);
   assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia', 'cataracts', 'diabetes_mellitus', 'hereditary_nephritis', 'certain_cancers']);
-  assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['hip_scheme', 'other_scheme'], ['eye_scheme', 'other_scheme'], ['heart_scheme', 'other_scheme'], ['dna_rd_osd', 'other_scheme'], ['dna_xlpra1', 'other_scheme']]);
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => [t.key, t.level]), [['hip_scheme', 'other_scheme'], ['eye_scheme', 'other_scheme'], ['cardiac_exam', 'other_scheme'], ['dna_rd_osd', 'other_scheme'], ['dna_xlpra1', 'other_scheme']]);
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a percentage, a prevalence or a ratio; never beige or blue eyes.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|prevalence|times more likely|\d %\)|\d%|beige|blue eyes/i);
