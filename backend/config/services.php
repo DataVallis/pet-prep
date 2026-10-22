@@ -46,6 +46,9 @@ return [
     */
     'fal_ai' => [
         'key' => env('FAL_AI_API_KEY'),
+        // M5-T15: optional key with the `billing:usage:read` scope (fal presets
+        // BILLING / READONLY / FULL) to read the account balance; empty → FAL_AI_API_KEY.
+        'billing_key' => env('FAL_AI_BILLING_KEY'),
         // Webhooks are verified with fal.ai's ED25519 signature (no shared secret).
         'jwks_url' => env('FAL_AI_JWKS_URL', 'https://rest.fal.ai/.well-known/jwks.json'),
         'webhook_tolerance_seconds' => (int) env('FAL_AI_WEBHOOK_TOLERANCE', 300),

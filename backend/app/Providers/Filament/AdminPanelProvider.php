@@ -69,6 +69,9 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
-            ->authGuard('web');
+            ->authGuard('web')
+            // M5-T15: AI budget / fal balance warnings land in the bell (notifications table).
+            ->databaseNotifications()
+            ->databaseNotificationsPolling('60s');
     }
 }

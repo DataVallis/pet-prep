@@ -24,7 +24,7 @@
 | M5 Production + beta | 2 done / 3 partial (M5-03, M5-04, M5-09) / 4 open (M5-05, M5-06, M5-07, M5-08) | ~45 % |
 | M5-R Realism | 72 done / 8 partial / 12 open (M5-R07, R12, R14, R15, R18–R20 need David) | ~80 % |
 | M5-F Device fixes | 12 done / 1 open (M5-F10 OTA — `EXPO_TOKEN` + store build) | ~90 % |
-| M5-T Refinement | 17 done / 0 open (T07 cancelled) | code 100 %, **device 0 %** |
+| M5-T Refinement | 18 done / 0 open (T07 cancelled; T15 AI budget warnings added 22. 10.) | code 100 %, **device 0 %** |
 
 ## 2. Decisions
 
@@ -94,6 +94,10 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 5. **Before the beta (ROADMAP):** M0-15 test accounts out of production, M5-06 legal review + App Store Kids / Play Families check (privacy policy text is live), M5-07 TestFlight + Play internal testing with 20–50 families, D5 off-site backups setup (David), M5-05 mobile error reporting. Open »čaka Davida« items: M5-R14 / R15 / R18 / R19 / R20 breed care needs, M5-R12 fetch spec.
 
 ## 6. Session log
+
+### 2026-10-22 (cloud, backend) — M5-T15 AI budget warnings (`feat/M5-T15-ai-budget-warning`)
+- David 22. 10.: budgets stay capped, warn at ≥ 80 % (20 % left). Built: `AiBudgetMonitor` / `AiBudgetStatus` (80 % yellow, 100 % red, percentages of the configured cap; production + AI Lab, day + month), banner `AiBudgetBanner` on the dashboard + System health, queued `CheckAiBudgetAlerts` (`ai:budget-check` every 5 min) → Filament database notification to superadmins (+ e-mail only with a real `MAIL_MAILER` — production is `log`, so bell only), dedupe `ai_budget_alerts`; fal.ai balance via Platform API (`GET api.fal.ai/v1/account/billing?expand=credits`, needs scope `billing:usage:read`) with a low-balance warning (`/admin → AI budget`, default 20 $) + `fal_balance` refusals in 24 h; AI budget help text now ≈ 11,17 $ / 12,59 $ / 7,40 $ per NEW breed + colour + stage. Pest `AiBudgetWarningTest`.
+- **David:** the balance shows *unknown* until a fal key with `billing:usage:read` is set as `FAL_AI_BILLING_KEY` in `/opt/petprep/.env` (unless the current key already has that scope); for e-mails a real mailer (`MAIL_MAILER` + `MAIL_*`) is needed. Not verified on production.
 
 ### 2026-10-21 → 2026-10-22 (cloud, orchestrator + backend / mobile engineers + qa-reviewer) — M5-T block
 - **Merged (pet-prep, all by David after green `CI OK`):** #311 + #312 M5-T01 / T03 (take-out deadline clock mint → orange → red ≤ 30 min, ✓ confirmation, message queue 2,5 s + 60 ms/char, visible ×); #313 + #314 M5-T02 / T02b (one action-rules table; sleep disables play / school / cuddle / grooming, `sleep {asleep, until}`, 422 `training_pet_sleeping` / `play_pet_sleeping`, »7:00« clock everywhere); #315 M5-T05 care guide »Kako skrbim za …« from simulation numbers; #316 M5-T04 games wait for all their clips (`play.media_ready`, 422 `media_not_ready`); #317 + #318 M5-T06 preparation screen (QA: buying an already-playing pet no longer starts a preparation; »Vse je pripravljeno: [ime]« to children + parents); #319 M5-T14 brush scratch card + hold; #320 M5-T05b parent care guide; #322 + #324 M5-T13 first birthday (push to children + parents, held over quiet hours); #323 + #326 M5-T12 adapted mode (wheelchair pushes 1 : 1, neutral walk-reminder push, consent copy = GDPR Art. 9 legal basis, parent logs walk minutes for TODAY only ≤ 240 / child / day, device-steps sync gate `steps.my_device_steps_today`); #327 + #329 + #331 M5-T08 / T08b state media (key images, seamless loops via Kling `end_image_url`, idle ↔ sleeping transitions; admin switch »Mediji po stanjih« read fresh by workers; resume on re-enable; 5,38 $ per breed + colour + stage); #330 M5-T11 picture / video mode per child; #332 M5-T09 / T10 school + game phase clips (3 s, switch »Posnetki šole in iger«, `state_media_version` 3, 11,17 $ dog / 7,40 $ cat, Reverb `max_request_size` 65 536, largest `PetUpdated` 8 768 B).

@@ -45,6 +45,9 @@ use InvalidArgumentException;
  * school and game phase clips + their pose images (MediaEntitlementService::
  * phaseClipsFor). Needs state media on as well. No row → env AI_PHASE_CLIPS_ENABLED
  * (default true).
+ *
+ * `fal_balance_alert` (M5-T15, David 2026-10-22) = {min_usd: float|null}: warn the
+ * superadmins when the fal.ai account balance is below it. No row → 20 $.
  */
 class AppSettingsService
 {
@@ -71,6 +74,14 @@ class AppSettingsService
 
     /** M5-T09 / T10 (QA M2): `{enabled: bool}` — school & game phase clips on / off (no row → env default, on). */
     public const PHASE_CLIPS_KEY = 'phase_clips';
+
+    /** M5-T15: `{min_usd}` — warn the superadmins when the fal.ai balance drops below it. */
+    public const FAL_BALANCE_ALERT_KEY = 'fal_balance_alert';
+
+    /** M5-T15 default low-balance threshold (no row / empty), USD. */
+    public const FAL_BALANCE_ALERT_DEFAULT_USD = 20.0;
+
+    public const FAL_BALANCE_ALERT_MAX_USD = 10000.0;
 
     public const AI_LAB_MAX_DAILY_USD = 200.0;
 
@@ -243,6 +254,40 @@ class AppSettingsService
             'monthly_usd' => $fmt($monthlyUsd),
             'max_run_usd' => $fmt($maxRunUsd),
         ]);
+    }
+
+    /**
+     * M5-T15: the stored low-balance threshold of the fal.ai account (null = default).
+     */
+    public function storedFalBalanceAlertUsd(): ?float
+    {
+        /** @var array{min_usd?: float|int|string|null} $value */
+        $value = Cache::remember(self::cacheKey(self::FAL_BALANCE_ALERT_KEY), self::CACHE_TTL_SECONDS,
+            fn (): array => AppSetting::find(self::FAL_BALANCE_ALERT_KEY)?->value ?? []);
+
+        $v = $value['min_usd'] ?? null;
+
+        return is_numeric($v) ? max(0.0, (float) $v) : null;
+    }
+
+    /** The effective low-balance threshold (admin value, else 20 $). */
+    public function falBalanceAlertUsd(): float
+    {
+        return $this->storedFalBalanceAlertUsd() ?? self::FAL_BALANCE_ALERT_DEFAULT_USD;
+    }
+
+    /**
+     * Save the fal.ai low-balance threshold (superadmin), audited. Null = default.
+     *
+     * @throws InvalidArgumentException negative or above the sanity ceiling
+     */
+    public function updateFalBalanceAlert(User $actor, ?float $minUsd): void
+    {
+        if ($minUsd !== null && (! is_finite($minUsd) || $minUsd < 0 || $minUsd > self::FAL_BALANCE_ALERT_MAX_USD)) {
+            throw new InvalidArgumentException('The fal.ai low-balance warning must be between 0 and '.self::FAL_BALANCE_ALERT_MAX_USD.' USD.');
+        }
+
+        $this->store($actor, self::FAL_BALANCE_ALERT_KEY, ['min_usd' => $minUsd === null ? null : sprintf('%.2f', $minUsd)]);
     }
 
     /**

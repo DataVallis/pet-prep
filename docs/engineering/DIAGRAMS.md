@@ -1310,6 +1310,12 @@ flowchart TD
   S2 -.-> W["POST /api/webhooks/fal-ai (ED25519, fail closed)<br/>pet_media → StorePetMedia (§10a)<br/>else media_lab_results → lab gallery"]
   S2 -.-> PL["AI Lab 'Check pending' → PollMediaLabResult<br/>(free status read, queue.fal.run only)"]
   C --> WG["Filament AiSpendOverview: today / month vs caps, fal balance"]
+  C -.-> BW[["M5-T15: ai:budget-check every 5 min → CheckAiBudgetAlerts (queued)<br/>AiBudgetMonitor: production + lab, day + month<br/>≥ 80 % warning · 100 % blocked (percent of the cap)"]]
+  BW --> BD{"ai_budget_alerts row new?<br/>(budget, period, key, threshold)"}
+  BD -- yes --> BN["AiBudgetAlertNotification → superadmins<br/>Filament bell (+ mail if MAIL_MAILER is real)"]
+  BD -- "no (already sent)" --> BX[nothing]
+  BW --> FB["FalGateway::accountBalance()<br/>GET api.fal.ai/v1/account/billing?expand=credits (≤ every 15 min)<br/>low &lt; admin threshold (20 $) / exhausted → once a day"]
+  BW -.-> BB["AiBudgetBanner: dashboard + System health<br/>green / yellow / red, link /admin/ai-budget"]
 ```
 
 ## 10a. Pet media at birth + own storage (M4-03 / M4-05, 2026-10-05)

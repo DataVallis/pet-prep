@@ -35,6 +35,9 @@ class FalGateway
 
     public const QUEUE_BASE_URL = 'https://queue.fal.run';
 
+    /** fal Platform API (account billing, M5-T15) — free reads only. */
+    public const PLATFORM_BASE_URL = 'https://api.fal.ai';
+
     public const BALANCE_FLAG_KEY = 'ai:fal_balance_exhausted_at';
 
     private const BALANCE_LOG_KEY = 'ai:fal_balance_logged';
@@ -222,6 +225,50 @@ class FalGateway
         $body = strtolower($response->body());
 
         return str_contains($body, 'balance') || str_contains($body, 'exhausted') || str_contains($body, 'locked');
+    }
+
+    /**
+     * M5-T15: the fal account's credit balance — a free read of
+     * GET https://api.fal.ai/v1/account/billing?expand=credits (fal Platform API,
+     * docs fal.ai/docs/platform-apis/v1/account/billing, checked 2026-10-22).
+     * Needs a key with the `billing:usage:read` scope (presets BILLING / READONLY /
+     * FULL): FAL_AI_BILLING_KEY if set, else FAL_AI_API_KEY. Never inside a
+     * transaction; reserves nothing (no model call, no cost).
+     *
+     * @return array{status: 'ok'|'no_access'|'disabled'|'error', balance_usd: float|null, currency: string|null, error: string|null}
+     */
+    public function accountBalance(): array
+    {
+        if (DB::transactionLevel() > (int) config('media.ambient_transaction_level', 0)) {
+            throw new LogicException('FalGateway must not be called inside a database transaction — dispatch a queued job after commit.');
+        }
+
+        $key = config('services.fal_ai.billing_key') ?: config('services.fal_ai.key');
+        if (! filled($key)) {
+            return ['status' => 'disabled', 'balance_usd' => null, 'currency' => null, 'error' => null];
+        }
+
+        try {
+            $response = Http::withHeaders(['Authorization' => 'Key '.$key])
+                ->acceptJson()
+                ->timeout(15)
+                ->get(self::PLATFORM_BASE_URL.'/v1/account/billing', ['expand' => 'credits']);
+        } catch (Throwable $e) {
+            return ['status' => 'error', 'balance_usd' => null, 'currency' => null, 'error' => mb_substr($e->getMessage(), 0, 200)];
+        }
+
+        if (in_array($response->status(), [401, 403], true)) {
+            return ['status' => 'no_access', 'balance_usd' => null, 'currency' => null, 'error' => 'HTTP '.$response->status()];
+        }
+
+        $balance = $response->json('credits.current_balance');
+        if (! $response->successful() || ! is_numeric($balance)) {
+            return ['status' => 'error', 'balance_usd' => null, 'currency' => null, 'error' => 'HTTP '.$response->status()];
+        }
+
+        $currency = $response->json('credits.currency');
+
+        return ['status' => 'ok', 'balance_usd' => round((float) $balance, 2), 'currency' => is_string($currency) ? $currency : 'USD', 'error' => null];
     }
 
     public static function balanceExhaustedAt(): ?string

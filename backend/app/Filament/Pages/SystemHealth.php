@@ -2,6 +2,7 @@
 
 namespace App\Filament\Pages;
 
+use App\Filament\Widgets\AiBudgetBanner;
 use App\Filament\Widgets\SystemHealth\ErrorsPerHourChart;
 use App\Filament\Widgets\SystemHealth\FailedJobsTable;
 use App\Filament\Widgets\SystemHealth\SystemHealthStats;
@@ -24,7 +25,7 @@ use Throwable;
  * System health (David 2026-10-19, superadmin only): whether production has
  * errors, at a glance and without SSH — status tiles (errors, failed jobs,
  * queue backlog, stuck routine ledgers, AI media failures, scheduler
- * heartbeat, disk), errors per hour, the error list (from `system_errors`,
+ * heartbeat, disk), the AI budget / fal balance banner (M5-T15), errors per hour, the error list (from `system_errors`,
  * written by ErrorRecorder) with details + resolve, and failed jobs with
  * retry / forget. Chosen over Sentry / Grafana: no external service and no
  * error data leaves the server.
@@ -107,7 +108,8 @@ class SystemHealth extends Page implements HasTable
 
     protected function getHeaderWidgets(): array
     {
-        return [SystemHealthStats::class, ErrorsPerHourChart::class];
+        // M5-T15: AI budget / fal balance banner first.
+        return [AiBudgetBanner::class, SystemHealthStats::class, ErrorsPerHourChart::class];
     }
 
     protected function getFooterWidgets(): array

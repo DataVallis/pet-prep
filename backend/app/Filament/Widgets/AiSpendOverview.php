@@ -5,6 +5,8 @@ namespace App\Filament\Widgets;
 use App\Enums\AiSpendPurpose;
 use App\Models\Pet;
 use App\Models\User;
+use App\Services\Media\AiBudgetMonitor;
+use App\Services\Media\AiBudgetStatus;
 use App\Services\Media\AiSpendGuard;
 use App\Services\Media\FalGateway;
 use Filament\Widgets\StatsOverviewWidget;
@@ -34,6 +36,9 @@ class AiSpendOverview extends StatsOverviewWidget
     protected function getStats(): array
     {
         $guard = app(AiSpendGuard::class);
+        // M5-T15: the same levels as the AI budget banner / warnings (≥ 80 % yellow, 100 % red).
+        $monitor = app(AiBudgetMonitor::class);
+        $statuses = $monitor->statuses();
         $today = $guard->spentTodayUsd();
         $month = $guard->spentThisMonthUsd();
         $daily = $guard->dailyCapUsd();
@@ -53,15 +58,24 @@ class AiSpendOverview extends StatsOverviewWidget
                     'videos' => sprintf('%.2f', $guard->spentThisMonthUsdFor(AiSpendPurpose::StateVideo)),
                     'tz' => $guard->timezone(),
                 ]))
-                ->color(($today >= $daily || $month >= $monthly) ? 'danger' : (($today >= 0.8 * $daily || $month >= 0.8 * $monthly) ? 'warning' : 'success')),
+                ->color(self::colorOf($monitor->worstLevel([$statuses[0], $statuses[1]]))),
             Stat::make(__('admin.dashboard.ai.lab_today'), sprintf('$%.2f / $%.2f', $labToday, $guard->labDailyCapUsd()))
                 ->description(__('admin.dashboard.ai.lab_month', ['month' => sprintf('%.2f', $labMonth), 'cap' => sprintf('%.2f', $guard->labMonthlyCapUsd())]))
-                ->color(($labToday >= $guard->labDailyCapUsd() || $labMonth >= $guard->labMonthlyCapUsd()) ? 'danger' : 'success'),
+                ->color(self::colorOf($monitor->worstLevel([$statuses[2], $statuses[3]]))),
             Stat::make(__('admin.dashboard.ai.balance'), $balanceAt ? __('admin.dashboard.ai.exhausted') : __('admin.dashboard.ai.ok'))
                 ->description($balanceAt
                     ? __('admin.dashboard.ai.exhausted_desc', ['at' => $balanceAt])
                     : __('admin.dashboard.ai.errors_desc', ['count' => $mediaErrors]))
                 ->color($balanceAt ? 'danger' : ($mediaErrors > 0 ? 'warning' : 'success')),
         ];
+    }
+
+    private static function colorOf(string $level): string
+    {
+        return match ($level) {
+            AiBudgetStatus::BLOCKED => 'danger',
+            AiBudgetStatus::WARNING => 'warning',
+            default => 'success',
+        };
     }
 }

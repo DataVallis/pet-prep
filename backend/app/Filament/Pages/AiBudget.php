@@ -6,6 +6,7 @@ use App\Models\AppSettingChange;
 use App\Models\User;
 use App\Services\AppSettingsService;
 use App\Services\FalAiService;
+use App\Services\Media\AiBudgetMonitor;
 use App\Services\Media\AiSpendGuard;
 use App\Services\Media\FalGateway;
 use App\Services\Media\ReferenceImageRetryService;
@@ -19,6 +20,7 @@ use Filament\Forms\Form;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use InvalidArgumentException;
@@ -30,7 +32,9 @@ use InvalidArgumentException;
  * app_settings via AppSettingsService (cached ≤ 60 s, busted on save, every
  * change audited). "Retry blocked media now" re-queues what the budget /
  * fal balance refused — the same as the nightly `media:retry`, within the
- * budget left today. The AI Lab budget stays in the env.
+ * budget left today. The AI Lab budget has its own section (M4-07c); M5-T15
+ * adds the fal.ai balance and its low-balance warning threshold. Warnings at
+ * ≥ 80 % / 100 % of every cap: AiBudgetMonitor (banner + notifications).
  *
  * @property Form $form
  */
@@ -77,6 +81,7 @@ class AiBudget extends Page implements HasForms
             'daily_usd' => $stored['daily_usd'],
             'monthly_usd' => $stored['monthly_usd'],
             ...self::prefixed('lab_', $settings->storedAiLabBudget()),
+            'fal_balance_alert_usd' => $settings->storedFalBalanceAlertUsd(),
         ]);
     }
 
@@ -140,6 +145,31 @@ class AiBudget extends Page implements HasForms
                         self::amountInput('lab_monthly_usd', __('admin.ai_budget.monthly'), AppSettingsService::AI_LAB_MAX_MONTHLY_USD, $guard->envLabMonthlyCapUsd(), 'AI_LAB_MONTHLY_USD'),
                         self::amountInput('lab_max_run_usd', __('admin.ai_budget.lab_max_run'), AppSettingsService::AI_LAB_MAX_RUN_CEILING_USD, $guard->envLabMaxRunUsd(), 'AI_LAB_MAX_RUN_USD'),
                     ]),
+                // M5-T15: the fal.ai account balance (Platform API) + its low-balance warning.
+                Section::make(__('admin.ai_budget.fal_section'))
+                    ->description(__('admin.ai_budget.fal_description'))
+                    ->schema([
+                        Placeholder::make('fal_balance')
+                            ->label(__('admin.ai_budget.fal_balance'))
+                            ->content(function (): string {
+                                $balance = app(AiBudgetMonitor::class)->falBalance();
+                                if ($balance === null || $balance['status'] !== 'ok') {
+                                    return __('admin.ai_alerts.banner.fal_unknown_'.($balance['status'] ?? 'never'));
+                                }
+
+                                return sprintf('$%.2f', $balance['balance_usd']).' · '.Carbon::parse($balance['checked_at'])->timezone('Europe/Ljubljana')->format('Y-m-d H:i');
+                            }),
+                        TextInput::make('fal_balance_alert_usd')
+                            ->label(__('admin.ai_budget.fal_alert'))
+                            ->numeric()
+                            ->prefix('$')
+                            ->minValue(0)
+                            ->maxValue(AppSettingsService::FAL_BALANCE_ALERT_MAX_USD)
+                            ->step(0.01)
+                            ->nullable()
+                            ->placeholder(sprintf('%.2f', AppSettingsService::FAL_BALANCE_ALERT_DEFAULT_USD))
+                            ->helperText(__('admin.ai_budget.fal_alert_help', ['value' => sprintf('%.2f', AppSettingsService::FAL_BALANCE_ALERT_DEFAULT_USD)])),
+                    ]),
             ]);
     }
 
@@ -186,6 +216,7 @@ class AiBudget extends Page implements HasForms
                     self::amount($data['lab_monthly_usd'] ?? null),
                     self::amount($data['lab_max_run_usd'] ?? null),
                 );
+                $settings->updateFalBalanceAlert($this->admin(), self::amount($data['fal_balance_alert_usd'] ?? null));
             });
         } catch (InvalidArgumentException $e) {
             Notification::make()->title(__('admin.ai_budget.not_saved'))->body($e->getMessage())->danger()->send();
@@ -279,7 +310,7 @@ class AiBudget extends Page implements HasForms
     public function getChanges(): Collection
     {
         return AppSettingChange::with('user:id,name,email')
-            ->whereIn('key', [AppSettingsService::AI_BUDGET_KEY, AppSettingsService::AI_LAB_BUDGET_KEY])
+            ->whereIn('key', [AppSettingsService::AI_BUDGET_KEY, AppSettingsService::AI_LAB_BUDGET_KEY, AppSettingsService::FAL_BALANCE_ALERT_KEY])
             ->latest('id')->limit(20)->get();
     }
 

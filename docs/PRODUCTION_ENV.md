@@ -73,6 +73,7 @@ This document describes all environment variables used by the PetPrep production
 | Variable | Required | Secret | Purpose | Example / Format |
 | :--- | :--- | :--- | :--- | :--- |
 | `FAL_AI_API_KEY` | Optional | **Yes** | fal.ai API key for Kling 3.0 / Flux | `fal_key_...` |
+| `FAL_AI_BILLING_KEY` | Optional (M5-T15) | **Yes** | fal.ai key with the **`billing:usage:read`** scope (fal key presets *BILLING*, *READONLY* or *FULL*), used only to read the account balance (`GET api.fal.ai/v1/account/billing?expand=credits`) shown on `/admin/system-health` / dashboard and for the low-balance warning. Empty → `FAL_AI_API_KEY` is tried; if that key lacks the scope (fal answers 401 / 403) the balance shows as *unknown* and only the existing `fal_balance` refusals warn. The warning threshold is set in `/admin → AI budget` (default 20 $), not here | `fal_key_...` |
 | `FAL_AI_JWKS_URL` | Optional | No | fal.ai public keys for ED25519 webhook verification (no shared secret needed) | `https://rest.fal.ai/.well-known/jwks.json` |
 | `FAL_AI_MEDIA_HOSTS` | Optional | No | Allowed hosts for generated media | `fal.media` |
 | `AI_DAILY_BUDGET_USD` | Optional | No | Cap on **estimated** fal.ai spend per day (M4-07); calls over it are refused (fail closed), pets work without media. `0` = no AI calls. **Default only** — since M4-07b the superadmin sets the budget in `/admin → AI budget` (no restart); an empty admin field falls back to this value | `5` |
@@ -110,7 +111,7 @@ This document describes all environment variables used by the PetPrep production
 | `APPLE_TEAM_ID` | Optional | No (public id) | Apple Developer Team ID for the revocation `client_secret` (`iss`). Default `4345XU4MU8` — no server change needed | `4345XU4MU8` |
 | `APPLE_KEY_ID` | Optional | No (public id) | Key ID of the Sign in with Apple key (`kid`). Default `Z8WR3WL68G` | `Z8WR3WL68G` |
 | `APPLE_CLIENT_ID` | Optional | No (public id) | **Override only:** `client_id` of Apple's `/auth/token` and `/auth/revoke`. Unset → the `aud` of the Apple token the parent re-authenticated with for the deletion (the id the code was issued to), else `com.datavallis.petprep` | (unset) |
-| `MAIL_MAILER` | Optional | No | Mail driver (`log`, `smtp`, `resend`, `ses`) | `log` |
+| `MAIL_MAILER` | Optional | No | Mail driver (`log`, `smtp`, `resend`, `ses`). **No production mailer is documented or set up by the deploy (default `log`)** — with `log` / `array` the M5-T15 AI budget warnings go only to the Filament bell (database notifications); set a real mailer (+ its `MAIL_*` keys) to also e-mail them to the superadmins | `log` |
 
 ---
 
