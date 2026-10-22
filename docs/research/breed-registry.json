@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "126fce11af8cf7a17ba7e07ce4ca7a45c7c4551a460b7ff4b14d7ed69b22a275"
+      "sha256": "eb814e12034b478409e356728db6006320fcdad38f684b705aa67dbc16770381"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "40fb6274772a3cca6108624a9b706f22e51238a6a7d728c57b199a0ee8c3e3f8"
+      "sha256": "39bf9c33d2ec68379c9146fd04c767968d6f6d87354a2fdd5bb846f67a9e9d20"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,35 +25,35 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "57d0aae130c491abfdd5542e64761a9babe510560f334fee926ea446c58b6ded"
+      "sha256": "52db586d41ca031cb32843563fb957cf130f8a8f9774bb5487789547b53a56fc"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "23fd4b33a94c8e64803deb1e0033466a108ad6645690cc344f369333a4572a2f"
+      "sha256": "bebece81d38cf5fa10ba4ee5c536b3fdd2b296f8bda0b6363be331a7f257a23b"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "15a94278de858dc54d94057417c3fddef8d13db1db7d33d339e37c4ab764496d"
+      "sha256": "383d15acf844056baeb5fa2777e6c942bf421862298e143e688d07bb342b4890"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "4d6e93f5f247199656a6207e956fc0316441bf443e58045281e8f90427e88d1f"
+      "sha256": "02fa223be86c768597b64a804c192096801a6802690b1d629ff2a3e8c05333f6"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "21a5c3ad44c1c15aa2fd0dc65989b4640f65ffab77eb6c01e253a47ed0248f58"
+      "sha256": "d5ae66269331b9a6bdb6ac7649cb3b3809a2a482562b44012b33de1217d44896"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "43541d88dced1f4a33c7625de6380dbe8a1c5fda3d3c428f6686b3da249ab825"
+      "sha256": "c981f8157552880077c1b93a1676d89654341e16ae8f6262311733f9b09d1675"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "7ca2f7111f68c8d688f847201fc21489669350ea7ca7d487a687027e17b43fc6"
+      "sha256": "e46e91bcbd8455226173dbe56846c6d9f47a62b18bcde3166b4c53e4db85cc1f"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -81,6 +81,7 @@
     "fragile_older_children": "consider",
     "frequent_grooming": "consider",
     "heart_and_spine": "consider",
+    "heat_sensitive": "consider",
     "hips_hind_legs": "consider",
     "independent_experienced_owner": "consider",
     "large_home": "suits",
@@ -123,6 +124,7 @@
         "fragile_older_children": "fragile bones — better with older children",
         "frequent_grooming": "needs brushing several times a week",
         "heart_and_spine": "heart and spine — check health tests",
+        "heat_sensitive": "thick coat — struggles in hot weather",
         "hips_hind_legs": "hips and hind legs — check joint health",
         "independent_experienced_owner": "independent and stubborn — best with an experienced owner",
         "large_home": "a large house and garden",
@@ -165,6 +167,7 @@
         "fragile_older_children": "krhke kosti — bolje za starejše otroke",
         "frequent_grooming": "potrebuje česanje večkrat na teden",
         "heart_and_spine": "srce in hrbtenjača — preverite zdravstvene teste",
+        "heat_sensitive": "gost kožuh — slabo prenaša vročino",
         "hips_hind_legs": "kolki in zadnje noge — preverite zdravje sklepov",
         "independent_experienced_owner": "samostojen in trmast — najbolje z izkušenim lastnikom",
         "large_home": "veliko hišo z vrtom",
@@ -206,7 +209,7 @@
         }
       },
       "status": "available",
-      "breed_count": 52,
+      "breed_count": 53,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -31206,6 +31209,595 @@
       ]
     },
     {
+      "id": "samoyed",
+      "species": "dog",
+      "order": 52,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Samoyed",
+        "sl": "Samojed"
+      },
+      "slug": {
+        "en": "samoyed",
+        "sl": "samojed"
+      },
+      "synonyms": {
+        "en": [
+          "Sammy",
+          "Samoyede",
+          "Samoiedskaïa Sabaka"
+        ],
+        "sl": [
+          "samojed",
+          "samojedski pes",
+          "sammy"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "over_2h"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S467"
+          ],
+          "ref": "samoyed.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              54,
+              60
+            ],
+            "female": [
+              50,
+              56
+            ]
+          },
+          "source_ids": [
+            "S464"
+          ],
+          "ref": "samoyed.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              16,
+              29
+            ],
+            "female": [
+              16,
+              29
+            ]
+          },
+          "source_ids": [
+            "S467"
+          ],
+          "ref": "samoyed.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "samoyed.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S467"
+          ],
+          "ref": "samoyed.lifespan.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 120,
+          "source_ids": [
+            "S467"
+          ],
+          "ref": "proposed_game_parameters.samoyed.exercise_minutes_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 33,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "samoyed.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 212,
+            "group": 5,
+            "section": 1,
+            "origin": "RU"
+          },
+          "source_ids": [
+            "S463"
+          ],
+          "ref": "samoyed.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S467"
+          ],
+          "ref": "samoyed.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S467"
+          ],
+          "ref": "samoyed.health.eye_problems",
+          "confidence": "high"
+        },
+        {
+          "key": "diabetes_mellitus",
+          "source_ids": [
+            "S468"
+          ],
+          "ref": "samoyed.health.diabetes",
+          "confidence": "high"
+        },
+        {
+          "key": "hereditary_nephritis",
+          "source_ids": [
+            "S469"
+          ],
+          "ref": "samoyed.health.kidney",
+          "confidence": "high"
+        },
+        {
+          "key": "certain_cancers",
+          "source_ids": [
+            "S467"
+          ],
+          "ref": "samoyed.health.cancer",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.exercise.adult",
+              "samoyed.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S467",
+              "S469"
+            ],
+            "refs": [
+              "samoyed.suitability.pdsa_family",
+              "samoyed.suitability.petmd_family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.suitability.pdsa_children",
+              "samoyed.behaviour.family"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.exercise.adult",
+              "samoyed.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S468"
+            ],
+            "refs": [
+              "samoyed.exercise.mental_stimulation"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.behaviour.escaping",
+              "samoyed.suitability.pdsa_secure_garden"
+            ]
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S468"
+            ],
+            "refs": [
+              "samoyed.behaviour.herding_children"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.suitability.pdsa_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "heat_sensitive",
+            "source_ids": [
+              "S469"
+            ],
+            "refs": [
+              "samoyed.exercise.heat"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.samoyed.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S467"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (PDSA S467 'a minimum of two hours exercise every day'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.samoyed.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.samoyed.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S467"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.samoyed.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 33, Above average tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.samoyed.grooming",
+            "basis_source_ids": [
+              "S467"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden) (PDSA »grooming on daily basis«; PetMD »daily brushing«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S467"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "hip_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "S467"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "S467"
+            ]
+          },
+          {
+            "key": "heart_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K32"
+            ]
+          },
+          {
+            "key": "dna_rd_osd",
+            "level": "other_scheme",
+            "source_ids": [
+              "K32"
+            ]
+          },
+          {
+            "key": "dna_xlpra1",
+            "level": "other_scheme",
+            "source_ids": [
+              "K32"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K32"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S463",
+        "S464",
+        "S467",
+        "S468",
+        "S469",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K32"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -35630,6 +36222,41 @@
       "url": "https://www.petmd.com/dog/breeds/chesapeake-bay-retriever"
     },
     {
+      "id": "S463",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature: SAMOIEDSKAÏA SABAKA / SAMOYED (212)",
+      "url": "https://www.fci.be/en/nomenclature/SAMOYED-212.html"
+    },
+    {
+      "id": "S464",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Standard FCI N° 212: Samoyède (French PDF, official valid standard 04.09.2019)",
+      "url": "https://FCI.BE/Nomenclature/Standards/212g05-fr.pdf"
+    },
+    {
+      "id": "S467",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Samoyed Breed Information",
+      "url": "https://Pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/samoyed"
+    },
+    {
+      "id": "S468",
+      "tier": "B",
+      "publisher": "Woodgreen Pets Charity",
+      "title": "Pet Explorer — Samoyed",
+      "url": "https://ask.woodgreen.org.uk/pet-explorer/results/samoyed"
+    },
+    {
+      "id": "S469",
+      "tier": "B",
+      "publisher": "PetMD — Janelle Priestas, DVM, reviewed by Jo Cornett, DVM (updated Oct. 2, 2024)",
+      "title": "Samoyed",
+      "url": "https://www.petmd.com/dog/breeds/samoyed"
+    },
+    {
       "id": "C1",
       "tier": "A (via B summary)",
       "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
@@ -36027,6 +36654,13 @@
       "publisher": "The Kennel Club (statement approved by its consultant cardiologists; posted by The Whippet Club, 2023-07-03)",
       "title": "The Kennel Club: Statement on Whippet Heart Health",
       "url": "https://www.thewhippetclub.com/?p=11623"
+    },
+    {
+      "id": "K32",
+      "tier": "B",
+      "publisher": "American Kennel Club",
+      "title": "Working Group Health Testing Requirements (breeder programs)",
+      "url": "https://www.akc.org/breeder-programs/breed-health-testing-requirements/working-group-health-testing-requirements/"
     }
   ]
 }

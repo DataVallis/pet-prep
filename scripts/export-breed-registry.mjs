@@ -429,6 +429,7 @@ const SPECIES = [
       { id: 'whippet', synonyms: { en: ['Snap dog'], sl: ['whippet', 'vipet', 'angleški hrt'] } },
       { id: 'wirehaired_pointing_griffon', synonyms: { en: ['Korthals Griffon', 'Wire-haired Pointing Griffon Korthals', 'Griff'], sl: ['korthalsov grifon', 'grifon', 'korthals'] } },
       { id: 'chesapeake_bay_retriever', synonyms: { en: ['Chessie', 'Chesapeake', 'Retriever (Chesapeake Bay)'], sl: ['chessie', 'chesapeake'] } },
+      { id: 'samoyed', synonyms: { en: ['Sammy', 'Samoyede', 'Samoiedskaïa Sabaka'], sl: ['samojed', 'samojedski pes', 'sammy'] } },
     ],
   },
   {
@@ -453,7 +454,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -1614,6 +1615,29 @@ const DOG_FACTS = {
       ['bloat_gdv', 'health.gdv'],
     ],
   },
+  // M5-R10-57. Height = FCI standard No. 212 (S464), weight = PDSA 16–29 kg (S467; no standard gives one), lifespan =
+  // the PDSA band "Over 10 years" (S467; the McMillan 2024 table S123 and the RKC page could not be fetched), exercise =
+  // PDSA "a minimum of two hours" (S467). FCI origin Northern Russia, Siberia (RU, new). Not exported: the PetMD /
+  // Woodgreen weight + lifespan (alternatives), adult_weight.salt_category (our assignment), lifespan.senior_from
+  // (derived), health.heart (fragment of a list) and health.skin (no quote), the care needs professional_grooming /
+  // nails_ears_teeth / heat_care (open for David: M5-R18 / R19 / R20 / R15 / R14). New health key: hereditary_nephritis.
+  samoyed: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.pdsa', 'more_than']],
+    exercise: [['@proposed_game_parameters.samoyed.exercise_minutes_adult', 'at_least']],
+    coat: [],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['cataracts', 'health.eye_problems'],
+      ['diabetes_mellitus', 'health.diabetes'],
+      ['hereditary_nephritis', 'health.kidney'],
+      ['certain_cancers', 'health.cancer'],
+    ],
+  },
 
 };
 
@@ -2039,6 +2063,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.chesapeake_bay_retriever.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.chesapeake_bay_retriever.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.chesapeake_bay_retriever.exercise_minutes_senior',
+  },
+  samoyed: {
+    adult_minutes: ['proposed_game_parameters.samoyed.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.samoyed.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.samoyed.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.samoyed.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.samoyed.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.samoyed.exercise_minutes_senior',
   },
 
 };
