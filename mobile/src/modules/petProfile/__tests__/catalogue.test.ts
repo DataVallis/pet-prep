@@ -556,7 +556,8 @@ describe('breed search', () => {
 
   it('M5-R10-03: finds the French Bulldog by its SL / EN name and "frenchie"', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
-    expect(find('francoski')).toEqual(['french_bulldog']);
+    // M5-R10-55: »francoski« is also the start of the Wirehaired Pointing Griffon's SL name (»francoski ostrodlaki ptičar«).
+    expect(find('francoski')).toEqual(['french_bulldog', 'wirehaired_pointing_griffon']);
     expect(find('Francoski buldog')).toEqual(['french_bulldog']);
     expect(find('frenchie')).toEqual(['french_bulldog']);
     // M5-R10-20: "buldog" also finds the (English) Bulldog.
@@ -727,8 +728,9 @@ describe('breed search', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('nemški kratkodlaki ptičar')).toEqual(['german_shorthaired_pointer']);
     // M5-R10-36: the Brittany (»bretonski ptičar«) is a pointer too — never the German Shepherd.
-    // M5-R10-40: … and the Hungarian Vizsla (»madžarski kratkodlaki ptičar«, »Hungarian Pointer«).
-    expect(find('pticar')).toEqual(['german_shorthaired_pointer', 'brittany', 'hungarian_vizsla']);
+    // M5-R10-40: … and the Hungarian Vizsla (»madžarski kratkodlaki ptičar«, »Hungarian Pointer«);
+    // M5-R10-55: … and the Wirehaired Pointing Griffon (»francoski ostrodlaki ptičar«).
+    expect(find('pticar')).toEqual(['german_shorthaired_pointer', 'brittany', 'hungarian_vizsla', 'wirehaired_pointing_griffon']);
     expect(find('kurzhaar')).toEqual(['german_shorthaired_pointer']);
     expect(find('pointer')).toEqual(['german_shorthaired_pointer', 'hungarian_vizsla']);
     expect(find('gsp')).toEqual(['german_shorthaired_pointer']);

@@ -28743,6 +28743,472 @@
       }
     }
   },
+  "wirehaired_pointing_griffon": {
+    "_note": "Added 2026-10-22 (M5-R10-55, unattended run — appended after the Whippet: AKC 2024 No. 51 'Wirehaired Pointing Griffon', S174 full-list table '50 Whippet', '51 Wirehaired Pointing Griffon', '52 Chesapeake Bay Retriever'). Quotes as returned by the web-fetch tool on 2026-10-22 (short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S448–S456 (reused S8, S10, S11, S14, S24, S35, S45, S123, S174). No health percentages anywhere. RKC Breeds A–Z page 'Korthals Griffon (Imp)' (S450) reached: key facts and health-testing list; no breed-specific temperament text and no Breed Watch category on the page. Identity from the FCI nomenclature (S448); appearance, heights and temperament from the FCI standard (S449), AKC standard (S451) and UKC standard (S452) — none gives a weight → weight from PetMD (S453, DVM author). Lifespan: the Dogs Trust McMillan 2024 table (S123) has no Korthals / Wirehaired Pointing Griffon row and no VetCompass median was found → RKC lower bound 'Over 10 years' (runbook order; Siberian Husky precedent). Names: FCI 'WIRE-HAIRED POINTING GRIFFON KORTHALS' (S448), AKC 'Wirehaired Pointing Griffon' (S174, S451), RKC 'Korthals Griffon' (S450); Slovenian »francoski ostrodlaki ptičar« (smrcek.si S456, tier C — not checked against KZS, open for David).",
+    "identity": {
+      "value": "FCI No. 107, Group 7 Section 1 (Continental Pointing Dogs), France",
+      "unit": "—",
+      "source_id": "S448",
+      "quote": "WIRE-HAIRED POINTING GRIFFON KORTHALS",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S448): number '107', group 'n°7 - Pointing Dogs', section 'Continental Pointing Dogs' (section 1 of group 7 in the FCI nomenclature; the page gives no section number), country of origin 'FRANCE'; French name 'GRIFFON A POIL DUR KORTHALS', German 'FRANZÖSISCHER RAUHHAARIGER VORSTEHHUND (KORTHALS)'; standard dated '9/5/2023'. 'France' is already in FCI_ORIGINS (FR). AKC name 'Wirehaired Pointing Griffon' (S174, S451); RKC 'Korthals Griffon (Imp)' (S450). Wikipedia (S455, tier C): other names 'Korthals Griffon', 'Griffon d'arrêt à poil dur Korthals'."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S450",
+      "quote": "Size: Large",
+      "confidence": "medium",
+      "notes": "RKC breed page key fact (S450). The FCI standard (S449) says 'rustic of medium size'; PetMD (S453) 'As a medium-size dog' — the RKC field is the runbook's preferred source."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            55,
+            60
+          ],
+          "female": [
+            50,
+            55
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S449",
+        "quote": "About 55 to 60 cm for males and 50 to 55 cm for females.",
+        "confidence": "high",
+        "notes": "FCI standard (S449), Size (as returned). AKC standard (S451) 'Size-22 to 24 inches for males, 20 to 22 inches for females.' (56–61 / 51–56 cm); UKC (S452) males 21½–23½ in, females 19½–21½ in; PetMD (S453) 20–24 inches; VCA (S454) '20 to 24 inches' — alternatives."
+      }
+    },
+    "adult_weight": {
+      "petmd": {
+        "value": {
+          "male": [
+            16,
+            32
+          ],
+          "female": [
+            16,
+            32
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S453",
+        "quote": "As a medium-size dog, Wirehaired Pointing Griffons stand 20–24 inches tall and weigh 35–70 pounds.",
+        "confidence": "medium",
+        "notes": "PetMD (S453, V. LaMon, DVM), one range for both sexes (stored per sex); 35–70 lb = 15.9–31.8 kg → 16–32 kg (our conversion, rounded) — the game range. The FCI (S449), AKC (S451) and UKC (S452) standards give no weight. VCA (S454) '50 to 60 pounds' (23–27 kg) — alternative inside this range. Wikipedia (S455, tier C) '35-50 pounds for females and 50-70 pounds for males' agrees.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                23,
+                27
+              ],
+              "female": [
+                23,
+                27
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S454",
+            "quote": "50 to 60 pounds",
+            "notes": "VCA quick facts (S454); 50–60 lb = 22.7–27.2 kg (our conversion, rounded)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "IV (15–25 kg) / V (25–40 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 16–32 kg spans the 15–25 and 25–40 bands. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. VCA 50–60 lb (S454) lies in 'Medium (24–59 pounds)'; PetMD's upper 70 lb (S453) would be the Large class (15–18 months) — alternative. The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Wirehaired Pointing Griffon growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S450",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "RKC breed page key fact (S450). PetMD (S453): 'They have a typical lifespan of 12–15 years.'; VCA (S454) '10 to 12 years' — alternatives (US pages, no median)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Dogs Trust table of McMillan et al. 2024 data (S123, read 2026-10-22): no Korthals Griffon / Wirehaired Pointing Griffon row (the only Griffon row is 'Petite Basset Griffon Vendeen'). No VetCompass median found (search 2026-10-22). UNSOURCED value."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 10 y (S450) → 0.75 × 10 = 7.5 y = 90 months. Runbook order: McMillan 2024 (no row in S123) → VetCompass median (none found) → RKC lower bound. Alternative: 84 (Dogs Trust > 7 y, S14). Not chosen: 0.75 × 12 y (PetMD lower bound, S453) = 108.",
+        "derived_from": [
+          "S11",
+          "S450"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S450",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S450) — the runbook's preferred source. PetMD (S453): 'At a minimum, Wirehaired Pointing Griffons need 20 minutes of activity twice a day.' (40 min, a minimum) — alternative; VCA (S454) 'High - needs to walk every day, plus some running and play' (no minutes)."
+      },
+      "daily_text": {
+        "value": "high — walk every day, plus some running and play",
+        "unit": "—",
+        "source_id": "S454",
+        "quote": "High - needs to walk every day, plus some running and play",
+        "confidence": "medium",
+        "notes": "VCA quick facts (S454). A versatile hunting dog (FCI S449 'Essentially a versatile pointing dog.')."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "gentle and proud, very attached to his master; outgoing, eager to please, trustworthy",
+        "unit": "—",
+        "source_id": "S449",
+        "quote": "Gentle and proud, excellent hunter, very attached to his master and his territory which he guards with vigilance.",
+        "confidence": "high",
+        "notes": "FCI standard (S449), Behaviour / temperament. AKC standard (S451): 'He is outgoing, shows a tremendous willingness to please and is trustworthy.' UKC (S452): a biddable, affectionate nature (paraphrase)."
+      },
+      "family": {
+        "value": "very gentle with children; suitable as a family pet; patient and gentle with children when socialised as puppies",
+        "unit": "—",
+        "source_id": "S449",
+        "quote": "Very gentle with children.",
+        "confidence": "high",
+        "notes": "FCI standard (S449). UKC standard (S452): 'which makes it suitable as a family pet and guardian' (fragment). PetMD (S453): 'Wirehaired Pointing Griffons are generally patient and gentle with children when socialized as puppies.' (condition kept here). VCA (S454) 'With Kids: Excellent'. → family_pet, children; not small_children (PetMD's socialisation condition)."
+      },
+      "time_alone": {
+        "value": "do not like being left alone for long; VCA: fine with lots of exercise first",
+        "unit": "—",
+        "source_id": "S453",
+        "quote": "They love spending time with their humans and do not appreciate being left alone for extended periods.",
+        "confidence": "medium",
+        "notes": "PetMD (S453); leaving a Griff alone too often without stimulation can lead to separation-related anxiety (paraphrase). VCA (S454) 'Home Alone: Fine with lots of exercise first' — the sources differ → neither needs_company nor often_alone."
+      },
+      "other_pets": {
+        "value": "strong prey drive — may chase cats and rabbits; usually fine with other friendly dogs",
+        "unit": "—",
+        "source_id": "S453",
+        "quote": "Their hunting history also means these pups can have a strong prey drive.",
+        "confidence": "high",
+        "notes": "PetMD (S453): 'A Griff might see smaller animals, such as cats and rabbits, as something to chase.' VCA (S454): 'Cats may prove too great a temptation, as this dog can't resist a boisterous romp around the house.' and 'Most Wirehaired Pointing Griffons are social enough to fit well into a household with other friendly dogs,' (fragment). Basis of chases_small_pets; never other_pets."
+      },
+      "socialisation": {
+        "value": "socialise as a puppy",
+        "unit": "—",
+        "source_id": "S453",
+        "quote": "Wirehaired Pointing Griffons are generally patient and gentle with children when socialized as puppies.",
+        "confidence": "high",
+        "notes": "PetMD (S453), a condition ('when socialized as puppies'). VCA (S454): 'Some members of the breed can be aloof with strangers.' → proposed_game_parameters.wirehaired_pointing_griffon.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S453): too little stimulation can lead to destructive behaviour (paraphrase) — not chewing → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. The RKC page (S450) shows no Breed Watch category and no welfare statement → no welfare chip. PetMD (S453): the breed is 'generally a healthy breed' (fragment). Breeder checklist: RKC best practice BVA/KC hip and elbow schemes, minimum 'Prioritising genetic diversity' (S450).",
+      "hip_dysplasia": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S453",
+        "quote": null,
+        "confidence": "high",
+        "notes": "PetMD (S453) names hip dysplasia (an inherited loose hip joint that can lead to arthritis — paraphrase, sentence longer than the quote limit); RKC best practice: hip and elbow scoring of the parents (S450). Register health key hip_dysplasia."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy — inherited retinal disorders leading to blindness",
+        "unit": "—",
+        "source_id": "S453",
+        "quote": null,
+        "confidence": "high",
+        "notes": "PetMD (S453) names progressive retinal atrophy (paraphrase — sentence longer than the quote limit). Register health key pra_eye_disease."
+      },
+      "cataracts": {
+        "value": "cataracts",
+        "unit": "—",
+        "source_id": "S453",
+        "quote": "Cataracts occur more frequently in Wirehaired Pointing Griffons than in many other dog breeds.",
+        "confidence": "high",
+        "notes": "PetMD (S453). A comparison without a number — never shown as a statistic. Register health key cataracts."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (GDV, bloat)",
+        "unit": "—",
+        "source_id": "S453",
+        "quote": "Using a slow feeder bowl can help to pace your Griff when they eat, which can help prevent bloat and GDV.",
+        "confidence": "medium",
+        "notes": "PetMD (S453); also 'Do not feed your Wirehaired Pointing Griffon from a raised food bowl, as this can increase the risk of bloat and GDV.' and smaller, more frequent meals for older deep-chested dogs. No gap between eating and exercise is given → no meal_exercise_gap row (runbook: quote required). Register health key bloat_gdv."
+      },
+      "eyelids": {
+        "value": "entropion or ectropion (eyelids turned in or out)",
+        "unit": "—",
+        "source_id": "S454",
+        "quote": "Occasionally, entropion or ectropion occurs – don't buy a pup that will suffer from painful eyes.",
+        "confidence": "medium",
+        "notes": "VCA (S454). Register health key eyelids_turned."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 46,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Wirehaired Pointing Griffon",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-22): rank 46 'Wirehaired Pointing Griffon' (tied with Tibetan Spaniel, English Foxhound, Otterhound, Jack Russell Terrier, American Foxhound and Greyhound), tier 'Average Working/Obedience Intelligence' (ranks 40–54). Coren's own article (S34) not re-read. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 25 to 40 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier 'Average Working/Obedience Intelligence': 'Obey first command: 50% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "eager to please, trustworthy",
+        "unit": "—",
+        "source_id": "S451",
+        "quote": "He is outgoing, shows a tremendous willingness to please and is trustworthy.",
+        "confidence": "high",
+        "notes": "AKC standard (S451). The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.wirehaired_pointing_griffon.learning_multiplier (1.0, runbook rule: Average tier, rank 46).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "vigorous, rustic dog of medium size, longer than tall; long, square muzzle",
+        "unit": "—",
+        "source_id": "S449",
+        "quote": "Vigorous dog, rustic of medium size. Longer than tall. The skull is not too broad. The muzzle is long and square.",
+        "confidence": "high",
+        "notes": "FCI standard (S449), General appearance. AKC standard (S451): 'Medium sized, with a noble, square-shaped head, strong of limb.'"
+      },
+      "colours": {
+        "value": [
+          "steel grey with brown (liver) patches",
+          "liver roan",
+          "solid liver (brown)",
+          "white and brown (liver)",
+          "white and orange"
+        ],
+        "unit": "list",
+        "source_id": "S449",
+        "quote": "Preferably steel grey shade with brown (liver) patches or self-coloured brown (liver) coat.",
+        "confidence": "high",
+        "notes": "FCI standard (S449): also 'Frequently liver-roan or a close mixture of brown (liver) and white hairs.' and 'Equally permissible white and brown and white and orange coats.' AKC standard (S451): 'A black coat disqualifies.'; UKC (S452) disqualifies 'Black coat or nose color.' → never black in the game; nose always brown."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Steel grey with liver patches first with the highest weight (the standard's preferred colour, the portrait default), then liver roan, solid liver, white and liver, white and orange."
+      },
+      "coat": {
+        "value": "harsh, coarse, wiry outer coat of medium length, never curly or woolly; soft dense undercoat",
+        "unit": "—",
+        "source_id": "S449",
+        "quote": "Harsh and coarse, reminding of the touch of a wild boar's bristles. Never curly or woolly.",
+        "confidence": "high",
+        "notes": "FCI standard (S449). AKC standard (S451): 'The outer coat is medium length, straight and wiry, never curly or woolly.' with a soft, dense undercoat (paraphrase). RKC (S450) 'Coat length: Medium'."
+      },
+      "head": {
+        "value": "long, square muzzle of the same length as the skull; nose always brown; moustache and eyebrows",
+        "unit": "—",
+        "source_id": "S449",
+        "quote": "Long and square, of the same length as the skull, bridge of the nose slightly convex.",
+        "confidence": "high",
+        "notes": "FCI standard (S449), Muzzle; Nose 'Always brown.'"
+      },
+      "ears": {
+        "value": "medium-sized, flat, set level with the eyes",
+        "unit": "—",
+        "source_id": "S449",
+        "quote": "Of medium size, not curled inwards, flat, set on level line with the eyes,",
+        "confidence": "high",
+        "notes": "FCI standard (S449, fragment as returned)."
+      },
+      "eyes": {
+        "value": "large, rounded, dark yellow or brown, very intelligent expression",
+        "unit": "—",
+        "source_id": "S449",
+        "quote": "Dark yellow or brown, large, rounded surmounted but not covered by the eyebrows, very intelligent expression.",
+        "confidence": "high",
+        "notes": "FCI standard (S449)."
+      },
+      "tail": {
+        "value": "carried horizontally or with the tip slightly raised, thick harsh hair, no fringing",
+        "unit": "—",
+        "source_id": "S449",
+        "quote": "Carried horizontally or with the tip slightly raised, covered with thick hair but without fringing,",
+        "confidence": "high",
+        "notes": "FCI standard (S449, fragment). The standards say the tail is generally docked (FCI 'generally should be docked by a third or a quarter'; AKC 'docked by one-third to one-half length'); the game and the portrait show a natural tail (Claude 2026-10-22, moderate depiction; docking is not shown)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S450), PetMD (S453), VCA (S454), UKC standard (S452). RKC key facts reached on 2026-10-22.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S450",
+        "quote": "Size: Large",
+        "confidence": "medium",
+        "notes": "RKC key fact (S450)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S450",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S450). Basis of active_family and long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S450",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key fact (S450). Basis of large_home."
+      },
+      "rkc_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S450",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S450)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S450",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S450) — no number → the grooming rule takes the most specific number of another A/B source: VCA (S454) 'weekly brushing' → 1 (Brittany precedent)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S450",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S450)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S450",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S450). PetMD (S453): 'The Wirehaired Pointing Griffon is a low-shedding breed.'; VCA (S454) 'minimal shedding' — the sources differ → neither sheds nor low_shedding."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S450",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "RKC key fact (S450). Not shorter_lifespan (that needs 'Under 10 years')."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S450",
+        "quote": "Town or country: Country",
+        "confidence": "high",
+        "notes": "RKC key fact (S450)."
+      },
+      "ukc_family": {
+        "value": "suitable as a family pet and guardian",
+        "unit": "—",
+        "source_id": "S452",
+        "quote": "which makes it suitable as a family pet and guardian",
+        "confidence": "high",
+        "notes": "UKC standard (S452), Characteristics (fragment): a biddable, affectionate nature (paraphrase). Basis of family_pet."
+      },
+      "vca_grooming": {
+        "value": "only weekly brushing; minimal shedding",
+        "unit": "—",
+        "source_id": "S454",
+        "quote": "The Wirehaired Pointing Griffon is an easy-care pet, demanding only weekly brushing, with a bonus of minimal shedding.",
+        "confidence": "high",
+        "notes": "VCA (S454). Its quick-facts table says 'Brush a few times a week' (no number). PetMD (S453): weekly brushing, some dogs need hand stripping (paraphrase — sentence longer than the quote limit). → brushing 1× a week (M5-R13 rule)."
+      },
+      "vca_children": {
+        "value": "With Kids: Excellent",
+        "unit": "—",
+        "source_id": "S454",
+        "quote": "Excellent",
+        "confidence": "medium",
+        "notes": "VCA quick facts (S454) 'With Kids'; the Ideal Owner table adds 'Any age is fine.' Supports children; small_children not proposed (PetMD's socialisation condition, S453)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -42796,6 +43262,265 @@
         "confidence": "high",
         "notes": "Colours of the Kennel Club standard (S443): any colour or mixture except merle. Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn is the portrait default (a common standard colour); standard colours only, never merle"
+      }
+    },
+    "wirehaired_pointing_griffon": {
+      "_note": "Unattended run M5-R10-55 (2026-10-22): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new register health key, no new vocabulary key. Sourced needs built from day one: weekly brushing (VCA S454 'demanding only weekly brushing', M5-R13); puppy socialisation (PetMD S453 quote, M5-R17). No meal gap quote (PetMD gives bowl / meal-size advice only) → no digestion warning. Sourced needs without a game mechanic: a slow feeder and no raised bowl (PetMD S453, bloat) and hand stripping of the coat for some dogs (PetMD S453) → open for David (needs a new ROADMAP task). Exercise from RKC (S450, more than 2 hours). Senior 90 from the RKC lower bound 'Over 10 years' (S450; no McMillan row in S123, no VetCompass median). No Breed Watch category, no welfare statement → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S450",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'More than 2 hours per day' (S450). Rule: one number N ('more than N') → N = 120.",
+        "alternatives": [
+          {
+            "value": 40,
+            "source_id": "S453",
+            "quote": "At a minimum, Wirehaired Pointing Griffons need 20 minutes of activity twice a day.",
+            "notes": "PetMD minimum (2 × 20 min) — not chosen: the runbook prefers the RKC value when sources conflict."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S450 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S450",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S450). The Dogs Trust McMillan 2024 table (S123) has no row for the breed; no VetCompass median found. Alternative: 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S450"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S450)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 46 (S35), tier 'Average' (40–54) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 46, Average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S454",
+        "quote": "The Wirehaired Pointing Griffon is an easy-care pet, demanding only weekly brushing, with a bonus of minimal shedding.",
+        "confidence": "high",
+        "notes": "wirehaired_pointing_griffon.suitability.vca_grooming. RKC 'More than once a week' (S450) has no number → the most specific number of another A/B source: VCA 'weekly brushing' → 1 (runbook dog-grooming rule; Brittany precedent). PetMD (S453) also weekly. VCA quick facts 'Brush a few times a week' (no number) — noted. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »More than once a week« brez števila → VCA »weekly brushing« → 1; PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S453",
+        "quote": "Wirehaired Pointing Griffons are generally patient and gentle with children when socialized as puppies.",
+        "confidence": "high",
+        "notes": "wirehaired_pointing_griffon.behaviour.socialisation (PetMD S453, a condition). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S453)"
+      },
+      "bloat_feeding": {
+        "value": "slow feeder bowl; no raised food bowl",
+        "unit": "feeding equipment (sourced need)",
+        "source_id": "S453",
+        "quote": "Using a slow feeder bowl can help to pace your Griff when they eat, which can help prevent bloat and GDV.",
+        "confidence": "medium",
+        "notes": "PetMD (S453), wirehaired_pointing_griffon.health.gdv; also 'Do not feed your Wirehaired Pointing Griffon from a raised food bowl, as this can increase the risk of bloat and GDV.' The game has no bowl / feeder mechanic → open for David (needs a new ROADMAP task). No gap after meals is quoted → no meal_exercise_gap row.",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): počasna skleda, ne dvignjena skleda; mehanike ni → potrebna nova naloga v ROADMAP (David)"
+      },
+      "hand_stripping": {
+        "value": "hand stripping of the coat for some dogs",
+        "unit": "grooming type (sourced need)",
+        "source_id": "S453",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S453): weekly brushing, and some Griffs need the dead hair pulled out by hand (hand stripping) rather than trimmed (paraphrase — the sentence is longer than the quote limit). The game models brushing only → open for David (needs a new ROADMAP task).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ročno trimanje dlake pri nekaterih psih; mehanike ni → potrebna nova naloga v ROADMAP (David)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-55); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S450"
+            ],
+            "refs": [
+              "wirehaired_pointing_griffon.exercise.adult",
+              "wirehaired_pointing_griffon.suitability.rkc_exercise"
+            ],
+            "quote": "S450 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S452"
+            ],
+            "refs": [
+              "wirehaired_pointing_griffon.suitability.ukc_family"
+            ],
+            "quote": "S452 'which makes it suitable as a family pet and guardian'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S449"
+            ],
+            "refs": [
+              "wirehaired_pointing_griffon.behaviour.family"
+            ],
+            "quote": "S449 'Very gentle with children.' (PetMD socialisation condition in notes)"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S450"
+            ],
+            "refs": [
+              "wirehaired_pointing_griffon.suitability.rkc_size_of_home"
+            ],
+            "quote": "S450 'Size of home: Large house'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S450"
+            ],
+            "refs": [
+              "wirehaired_pointing_griffon.exercise.adult",
+              "wirehaired_pointing_griffon.suitability.rkc_exercise"
+            ],
+            "quote": "S450 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S453"
+            ],
+            "refs": [
+              "wirehaired_pointing_griffon.behaviour.other_pets"
+            ],
+            "quote": "S453 'Their hunting history also means these pups can have a strong prey drive.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "VCA 'With Kids: Excellent' (S454), but PetMD makes it conditional on socialisation as a puppy (S453) → not without a caveat.",
+          "needs_company": "PetMD 'do not appreciate being left alone for extended periods' (S453) vs VCA 'Fine with lots of exercise first' (S454) — the sources differ.",
+          "often_alone": "See needs_company.",
+          "other_pets": "Strong prey drive; cats may prove too great a temptation (S453, S454).",
+          "apartment": "RKC 'Large house' (S450).",
+          "sheds": "RKC 'Sheds: Yes' (S450) vs PetMD / VCA low / minimal shedding (S453, S454) — conflicting → neither.",
+          "low_shedding": "See sheds.",
+          "frequent_grooming": "RKC 'More than once a week' (S450) but VCA / PetMD weekly — not clearly more than once a week (German Shorthaired Pointer precedent).",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No source.",
+          "shorter_lifespan": "RKC 'Over 10 years' (S450).",
+          "secure_fencing": "No fence advice.",
+          "welfare": "No Breed Watch category on the RKC page (S450), no conformation welfare statement → no welfare chip; hip dysplasia, PRA, cataracts, GDV and eyelid problems are register health keys and breeder-checklist items only."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, children, large_home; consider long_daily_exercise, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S452",
+        "quote": "which makes it suitable as a family pet and guardian",
+        "confidence": "medium",
+        "notes": "No Breed Watch category and no welfare statement (S450); no veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92). Marketing never shows it as a dog for a small flat, for homes with small pets or as a low-exercise dog (S450, S453).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Wirehaired Pointing Griffon, steel grey coat with brown (liver) patches (default); vigorous, rustic medium-large pointing dog, longer than tall; harsh, wiry medium-length coat with moustache and eyebrows; long square muzzle, brown nose; large rounded dark-yellow or brown eyes; flat medium ears level with the eyes; natural tail carried horizontally; never black",
+        "unit": "—",
+        "source_id": "S449",
+        "quote": "Preferably steel grey shade with brown (liver) patches or self-coloured brown (liver) coat.",
+        "confidence": "high",
+        "notes": "Colours of the FCI standard (S449); AKC (S451) and UKC (S452) disqualify black. Weights unsourced in prompts. Natural (undocked) tail — Claude's choice for a moderate depiction.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): steel grey with brown patches is the portrait default (the standard's preferred colour); standard colours only, never black"
       }
     }
   }

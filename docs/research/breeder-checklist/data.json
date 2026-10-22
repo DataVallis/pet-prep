@@ -2163,6 +2163,39 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (royalkennelclub.com; the older display.aspx?id=1030 address redirects there) could not be fetched on 2026-10-21 → no minimum / best_practice level. AKC Hound Group health testing page (K30, 2026-10-21): Whippet — 'Recommended Health Tests from the National Breed Club:' 'Cardiac Exam', 'Ophthalmologist Evaluation', 'BAER Testing' → other_scheme. Kennel Club statement on Whippet heart health (K31, approved by its consultant cardiologists, posted by The Whippet Club on 2023-07-03): breeding stock auscultated before breeding is 'current advice by the breed and Kennel Club Assured Breeders Scheme' (advice, not a requirement); 'There is currently no official heart testing scheme for Whippets in the UK.' → heart_scheme as other_scheme (the cardiac exam of K30 is the same check). PDSA (dog-data S444): for PRA 'Parents should be screened for this.' (covered by the eye examination). Re-read the RKC page when it is reachable (open for David). No new test key."
+    },
+    "wirehaired_pointing_griffon": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S450",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "To support the breed’s health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S450",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S450",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S450",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ]
     }
   }
 }

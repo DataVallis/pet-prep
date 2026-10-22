@@ -490,6 +490,13 @@
 | and white parti-colours; never merle; a healthy lean sighthound, never emaciated. No welfare concern found (RKC page
 | not reachable). Colour weights unsourced → `verified => false`.
 |
+| Wirehaired Pointing Griffon (M5-R10-55, docs/research/dog-data wirehaired_pointing_griffon.appearance): "Vigorous
+| dog, rustic of medium size. Longer than tall." (FCI standard, S449); harsh, coarse, wiry coat of medium length with a
+| soft undercoat; nose always brown; "Preferably steel grey shade with brown (liver) patches or self-coloured brown
+| (liver) coat." (S449) — steel grey with liver patches weighted highest (the register portrait), then liver roan,
+| solid liver, white and liver, white and orange; never black (AKC S451 / UKC S452 disqualify it). Natural tail
+| (docking is not shown). No welfare concern found (RKC S450). Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2448,6 +2455,42 @@ return [
             'eye_color' => ['oval, bright dark eyes with a very alert expression'],
             'tail' => ['long, tapering tail without feathering, reaching the hock'],
             'head' => ['long, lean head, flat on top, tapering to the muzzle with a slight stop'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-55 (docs/research/dog-data/data.json wirehaired_pointing_griffon.appearance; runbook rules 2026-10-10:
+    // standard colours only — never black; natural tail).
+    'wirehaired_pointing_griffon' => [
+        'display_name' => 'Wirehaired Pointing Griffon',
+        // Colour frequencies are in no source (wirehaired_pointing_griffon.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI standard (S449), AKC standard (S451), RKC breed page (S450) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S450 "Size: Large"; S449 "About 55 to 60 cm for males and 50 to 55 cm for females."',
+            'build' => 'S449 "Vigorous dog, rustic of medium size. Longer than tall. The skull is not too broad. The muzzle is long and square."',
+            'coat_length' => 'S449 "Harsh and coarse, reminding of the touch of a wild boar\'s bristles. Never curly or woolly."; S450 "Coat length: Medium"',
+            'coat_color' => 'S449 "Preferably steel grey shade with brown (liver) patches or self-coloured brown (liver) coat." (weights unsourced; never black — S451)',
+            'ear_carriage' => 'S449 "Of medium size, not curled inwards, flat, set on level line with the eyes,"',
+            'eye_color' => 'S449 "Dark yellow or brown, large, rounded surmounted but not covered by the eyebrows, very intelligent expression."',
+            'tail' => 'S449 "Carried horizontally or with the tip slightly raised, covered with thick hair but without fringing," (natural tail shown)',
+            'head' => 'S449 "Long and square, of the same length as the skull, bridge of the nose slightly convex."; nose "Always brown."',
+        ],
+        'traits' => [
+            'size' => ['medium-to-large'],
+            'build' => [['value' => 'vigorous, rustic and athletic pointing dog, slightly longer than tall, strong limbs', 'weight' => 3], 'sturdy, well-muscled versatile gundog standing calmly'],
+            'coat_length' => ['harsh, wiry medium-length coat with a soft undercoat, a moustache and bushy eyebrows'],
+            // FCI standard (S449): steel grey with liver patches preferred → the register portrait; never black.
+            'coat_color' => [
+                ['value' => 'steel grey with brown (liver) patches', 'weight' => 40],
+                ['value' => 'liver roan', 'weight' => 20],
+                ['value' => 'solid liver (brown)', 'weight' => 15],
+                ['value' => 'white and brown (liver)', 'weight' => 15],
+                ['value' => 'white and orange', 'weight' => 10],
+            ],
+            'ear_carriage' => ['medium-sized flat ears set level with the eyes'],
+            'eye_color' => ['large, rounded dark-yellow or brown eyes with an intelligent expression'],
+            'tail' => ['natural tail carried horizontally, covered with harsh hair, without a plume'],
+            'head' => ['long, square muzzle with a brown nose and a slightly convex bridge'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
