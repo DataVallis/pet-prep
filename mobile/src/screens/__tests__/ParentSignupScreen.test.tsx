@@ -7,7 +7,8 @@ import * as SecureStore from 'expo-secure-store';
 import { Linking } from 'react-native';
 
 import { ApiError, api } from '@/api/client';
-import { PRIVACY_URL, SIGNUP_STRINGS as S, TERMS_URL } from '@/modules/auth/signup';
+import { i18n } from '@/i18n';
+import { privacyUrl, SIGNUP_STRINGS as S, termsUrl } from '@/modules/auth/signup';
 import AppNavigator from '@/navigation/AppNavigator';
 import { PARENT_LOGIN_STRINGS } from '@/screens/ParentLoginScreen';
 import ParentSignupScreen from '@/screens/ParentSignupScreen';
@@ -88,9 +89,20 @@ describe('ParentSignupScreen', () => {
     renderWithQuery(<ParentSignupScreen onBack={jest.fn()} onLogin={jest.fn()} />);
     fireEvent.press(screen.getByText(S.termsLink));
     fireEvent.press(screen.getByText(S.privacyLink));
-    expect(open).toHaveBeenCalledWith(TERMS_URL);
-    expect(open).toHaveBeenCalledWith(PRIVACY_URL);
+    expect(open).toHaveBeenCalledWith(termsUrl());
+    expect(open).toHaveBeenCalledWith(privacyUrl());
     open.mockRestore();
+  });
+
+  it('links the legal pages in the app language', async () => {
+    const before = i18n.language;
+    await i18n.changeLanguage('en');
+    expect(termsUrl()).toBe('https://petprep.si/terms');
+    expect(privacyUrl()).toBe('https://petprep.si/privacy');
+    await i18n.changeLanguage('sl');
+    expect(termsUrl()).toBe('https://petprep.si/sl/pogoji');
+    expect(privacyUrl()).toBe('https://petprep.si/sl/zasebnost');
+    await i18n.changeLanguage(before);
   });
 
   it('success: sends the normalised payload with the device timezone, stores the token, signs the parent in', async () => {

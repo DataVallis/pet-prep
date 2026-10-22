@@ -19,7 +19,7 @@ import {
 } from '@/api/client';
 import type { SignInPayload } from '@/store/appStore';
 import { saveSignInMethod } from '@/modules/session/signInMethod';
-import { t } from '@/i18n';
+import { currentLanguage, t } from '@/i18n';
 import { strings } from '@/i18n/strings';
 
 /** All user-visible strings of the sign-up flow (`auth:signup`, M1-18). */
@@ -30,11 +30,22 @@ export const SIGNUP_STRINGS = strings('auth', 'signup', {
 });
 
 /**
- * Legal texts. TODO(M2-10a): placeholders — the real terms of use and privacy policy
- * must be written (growth-marketer + lawyer) and published before the beta.
+ * Legal texts on petprep.si, in the app's language (English pages have no prefix, Slovenian
+ * pages live under /sl/). Google Play review opens the privacy link in the app, so an English
+ * app must open the English policy (2026-10-22, Play rejection "missing Health Data disclosure").
  */
-export const TERMS_URL = 'https://petprep.si/pogoji';
-export const PRIVACY_URL = 'https://petprep.si/zasebnost';
+const LEGAL_URLS = {
+  en: { terms: 'https://petprep.si/terms', privacy: 'https://petprep.si/privacy' },
+  sl: { terms: 'https://petprep.si/sl/pogoji', privacy: 'https://petprep.si/sl/zasebnost' },
+} as const;
+
+export function termsUrl(): string {
+  return LEGAL_URLS[currentLanguage()].terms;
+}
+
+export function privacyUrl(): string {
+  return LEGAL_URLS[currentLanguage()].privacy;
+}
 
 export const NAME_MAX_LENGTH = 60;
 export const PASSWORD_MIN_LENGTH = 10;
