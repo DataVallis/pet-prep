@@ -428,6 +428,7 @@ const SPECIES = [
       { id: 'australian_cattle_dog', synonyms: { en: ['Blue Heeler', 'Red Heeler', 'Queensland Heeler', 'Cattle Dog', 'ACD'], sl: ['avstralski govedarski pes', 'blue heeler', 'heeler'] } },
       { id: 'whippet', synonyms: { en: ['Snap dog'], sl: ['whippet', 'vipet', 'angleški hrt'] } },
       { id: 'wirehaired_pointing_griffon', synonyms: { en: ['Korthals Griffon', 'Wire-haired Pointing Griffon Korthals', 'Griff'], sl: ['korthalsov grifon', 'grifon', 'korthals'] } },
+      { id: 'chesapeake_bay_retriever', synonyms: { en: ['Chessie', 'Chesapeake', 'Retriever (Chesapeake Bay)'], sl: ['chessie', 'chesapeake'] } },
     ],
   },
   {
@@ -1590,6 +1591,29 @@ const DOG_FACTS = {
       ['eyelids_turned', 'health.eyelids'],
     ],
   },
+  // M5-R10-56. Height + weight = FCI standard No. 263 (S458, KUSA copy), lifespan = the RKC band "Over 10 years"
+  // (S459; the McMillan 2024 table S123 could not be fetched), exercise = RKC "More than 2 hours per day" (S459),
+  // coat / grooming / shedding = RKC key facts (S459). FCI origin USA (US). Not exported: adult_weight.salt_category
+  // (our assignment), lifespan.senior_from (derived), the care need bloat_feeding (open for David: a new task).
+  // New health key: exercise_induced_collapse.
+  chesapeake_bay_retriever: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_elbow'],
+      ['degenerative_myelopathy', 'health.degenerative_myelopathy'],
+      ['pra_eye_disease', 'health.pra'],
+      ['cataracts', 'health.cataracts'],
+      ['exercise_induced_collapse', 'health.eic'],
+      ['bloat_gdv', 'health.gdv'],
+    ],
+  },
 
 };
 
@@ -2007,6 +2031,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.wirehaired_pointing_griffon.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.wirehaired_pointing_griffon.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.wirehaired_pointing_griffon.exercise_minutes_senior',
+  },
+  chesapeake_bay_retriever: {
+    adult_minutes: ['proposed_game_parameters.chesapeake_bay_retriever.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.chesapeake_bay_retriever.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.chesapeake_bay_retriever.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.chesapeake_bay_retriever.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.chesapeake_bay_retriever.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.chesapeake_bay_retriever.exercise_minutes_senior',
   },
 
 };

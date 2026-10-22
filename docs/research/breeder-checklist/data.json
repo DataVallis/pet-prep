@@ -2196,6 +2196,60 @@
           "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
         }
       ]
+    },
+    "chesapeake_bay_retriever": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S459",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "To support the breed’s health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S459",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "minimum",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/RKC Elbow Dysplasia Scheme",
+          "source_id": "S459",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/RKC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/RKC Hip Dysplasia Scheme",
+          "source_id": "S459",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/RKC Hip Dysplasia Scheme"
+        },
+        {
+          "key": "dna_dm",
+          "level": "minimum",
+          "name": "DNA test for Degenerative myelopathy (DM)",
+          "source_id": "S459",
+          "quote": "DNA test for Degenerative myelopathy (DM)."
+        },
+        {
+          "key": "dna_prcd_pra",
+          "level": "best_practice",
+          "name": "DNA test for Progressive retinal atrophy (prcd-PRA)",
+          "source_id": "S459",
+          "quote": "DNA test for Progressive retinal atrophy (prcd-PRA)"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/RKC/ISDS Eye Scheme",
+          "source_id": "S459",
+          "quote": "Eye testing using the BVA/RKC/ISDS Eye Scheme"
+        }
+      ]
     }
   }
 }

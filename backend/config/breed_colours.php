@@ -338,6 +338,13 @@ return [
         ['key' => 'liver-white', 'value' => 'white and brown (liver)', 'en' => 'Liver and white', 'sl' => 'Jetrno-bel'],
         ['key' => 'orange-white', 'value' => 'white and orange', 'en' => 'Orange and white', 'sl' => 'Oranžno-bel'],
     ],
+    // M5-R10-56: FCI standard No. 263 S458 — brown, sedge, deadgrass (self-coloured preferred, no colour preferred over
+    // another); never black, no white except a small spot on the chest or toes.
+    'chesapeake_bay_retriever' => [
+        ['key' => 'brown', 'value' => 'solid brown', 'en' => 'Brown', 'sl' => 'Rjav'],
+        ['key' => 'sedge', 'value' => 'solid sedge (reddish gold)', 'en' => 'Sedge', 'sl' => 'Rdečkasto zlat'],
+        ['key' => 'deadgrass', 'value' => 'solid deadgrass (straw to dull tan)', 'en' => 'Deadgrass', 'sl' => 'Barve suhe trave'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
