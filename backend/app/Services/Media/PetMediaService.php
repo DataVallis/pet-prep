@@ -1207,9 +1207,15 @@ class PetMediaService
      * M5-T09 / T10: `poses` / `phases` = the pose images and school / game phase clips
      * that would be made (3 s clips, priced per purpose).
      *
+     * M5-T16 (QA M2): `$stageRemake` prices a pet whose image is behind its life stage
+     * (`stage`) with the FULL set of its new stage — the stage image re-queues every clip /
+     * key image of the pet once it is stored, so all of them count (look rows that already
+     * exist at the new stage stay free). Default off: »Generate missing« / media:backfill
+     * keep listing only the stage image for such a pet.
+     *
      * @return array{image: 'ok'|'stage'|'in_flight'|'download'|'generate', videos: list<string>, keyframes: list<string>, transitions: list<string>, poses: list<string>, phases: list<string>, upgrade: bool, cost_usd: float}
      */
-    public function planMissing(Pet $pet, bool $upgradeStateMedia = false): array
+    public function planMissing(Pet $pet, bool $upgradeStateMedia = false, bool $stageRemake = false): array
     {
         // M5-T09 / T10: the upgrade also moves a version-2 pet to 3 (school / game phase clips).
         $upgrade = $upgradeStateMedia && (int) ($pet->state_media_version ?? 1) < MediaEntitlementService::CURRENT_MEDIA_VERSION && ! $pet->isLegacyProfile();
@@ -1217,7 +1223,8 @@ class PetMediaService
         $upgrade = $upgrade && $this->entitlements->usesStateMedia($planned);
         $planned = $upgrade ? $planned : $pet;
 
-        $slots = $pet->media()->get();
+        // M5-T16 (QA m7): the bulk preview eager-loads `media` for all eligible pets.
+        $slots = $pet->relationLoaded('media') ? $pet->media : $pet->media()->get();
         $image = $slots->first(fn (PetMedia $m) => $m->isImage());
         $legacyUrl = $pet->pet_dna['reference_image_url'] ?? null;
 
@@ -1229,7 +1236,9 @@ class PetMediaService
             default => 'generate',
         };
 
+        // A stage remake makes a new image generation: every stored clip of the pet is redone.
         $currentImageGeneration = $imageAction === 'ok' ? $image->generation : PHP_INT_MAX;
+        $remake = $stageRemake && $imageAction === 'stage';
         $loops = $this->entitlements->usesStateMedia($planned);
         $missing = fn (?PetMedia $slot, bool $recipeStale = false): bool => $slot === null
             || $slot->status === PetMedia::STATUS_FAILED
@@ -1241,7 +1250,7 @@ class PetMediaService
 
         // Unborn pets get no videos yet (they follow the first contract); a
         // stage image re-queues its videos itself once stored.
-        $later = $pet->isUnborn() || $imageAction === 'stage';
+        $later = $pet->isUnborn() || ($imageAction === 'stage' && ! $remake);
 
         foreach ($later ? [] : $this->entitlements->videoStatesFor($planned) as $state) {
             $slot = $slots->first(fn (PetMedia $m) => $m->isVideo() && $m->state === $state->value);
@@ -2487,11 +2496,43 @@ class PetMediaService
      */
     private function lookPlanCostUsd(Pet $pet, string $imageAction, array $videos, array $keyframes = [], array $transitions = [], bool $loops = false, array $poses = [], array $phases = []): float
     {
+        return array_sum(array_column($this->lookPlanItems($pet, $imageAction, $videos, $keyframes, $transitions, $loops, $poses, $phases), 'cost_usd'));
+    }
+
+    /**
+     * M5-T16: what a (union) plan of pets of ONE shared look + life stage still costs at
+     * look level — every look item once, however many pets show the look (the claims make
+     * one fal call per look row). `$pet` is any pet of the look at that stage; `$plan` has
+     * the planMissing() shape (lists merged over the pets).
+     *
+     * @param  array{image: string, videos: list<string>, keyframes: list<string>, transitions: list<string>, poses: list<string>, phases: list<string>, upgrade: bool}  $plan
+     * @return list<array{kind: string, state: string|null, cost_usd: float}>
+     */
+    public function lookMissingItems(Pet $pet, array $plan): array
+    {
+        $planned = $plan['upgrade'] ? (clone $pet)->forceFill(['state_media_version' => MediaEntitlementService::CURRENT_MEDIA_VERSION]) : $pet;
+
+        return $this->lookPlanItems($pet, $plan['image'], $plan['videos'], $plan['keyframes'], $plan['transitions'],
+            $this->entitlements->usesStateMedia($planned), $plan['poses'], $plan['phases']);
+    }
+
+    /**
+     * The look items of a plan that the look does not have yet, each with its price.
+     *
+     * @param  list<string>  $videos
+     * @param  list<string>  $keyframes
+     * @param  list<string>  $transitions
+     * @param  list<string>  $poses
+     * @param  list<string>  $phases
+     * @return list<array{kind: string, state: string|null, cost_usd: float}>
+     */
+    private function lookPlanItems(Pet $pet, string $imageAction, array $videos, array $keyframes = [], array $transitions = [], bool $loops = false, array $poses = [], array $phases = []): array
+    {
         $look = $pet->look;
         $stage = $pet->life_stage;
 
         if ($look === null || $stage === null) {
-            return 0.0;
+            return [];
         }
 
         // Stored rows are reused for free; a row being generated right now (claimed,
@@ -2508,41 +2549,38 @@ class PetMediaService
             ->whereIn('life_stage', array_map(fn (LifeStage $s) => $s->value, array_slice(LifeStage::ordered(), 0, self::stageRank($stage->value))))
             ->exists();
 
-        $cost = in_array($imageAction, ['generate', 'stage', 'download'], true) && ! $has(PetMedia::KIND_IMAGE, null)
-            ? ($growsFromEarlier ? $this->stageImageCostUsd() : $this->profiles->referenceImage()->estimatedCostUsd())
-            : 0.0;
+        $items = [];
+        $add = function (string $kind, ?string $state, float $cost) use (&$items, $has): void {
+            if (! $has($kind, $state)) {
+                $items[] = ['kind' => $kind, 'state' => $state, 'cost_usd' => $cost];
+            }
+        };
+
+        if (in_array($imageAction, ['generate', 'stage', 'download'], true)) {
+            $add(PetMedia::KIND_IMAGE, null, $growsFromEarlier ? $this->stageImageCostUsd() : $this->profiles->referenceImage()->estimatedCostUsd());
+        }
 
         foreach ($videos as $state) {
-            if (! $has(PetMedia::KIND_VIDEO, $state)) {
-                $cost += $this->profiles->stateVideo()->estimatedCostUsd();
-            }
+            $add(PetMedia::KIND_VIDEO, $state, $this->profiles->stateVideo()->estimatedCostUsd());
         }
 
         foreach ($keyframes as $state) {
-            if (! $has(PetMedia::KIND_KEYFRAME, $state)) {
-                $cost += $this->keyframeCostUsd();
-            }
+            $add(PetMedia::KIND_KEYFRAME, $state, $this->keyframeCostUsd());
         }
 
         foreach ($transitions as $transition) {
-            if (! $has(PetMedia::KIND_TRANSITION, $transition)) {
-                $cost += $this->profiles->clipVideo('transition')->estimatedCostUsd();
-            }
+            $add(PetMedia::KIND_TRANSITION, $transition, $this->profiles->clipVideo('transition')->estimatedCostUsd());
         }
 
         foreach ($poses as $pose) {
-            if (! $has(PetMedia::KIND_POSE, $pose)) {
-                $cost += $this->keyframeCostUsd();
-            }
+            $add(PetMedia::KIND_POSE, $pose, $this->keyframeCostUsd());
         }
 
         foreach ($phases as $phase) {
-            if (! $has(PetMedia::KIND_PHASE, $phase)) {
-                $cost += $this->phaseClipCostUsd(PetPhaseClip::from($phase));
-            }
+            $add(PetMedia::KIND_PHASE, $phase, $this->phaseClipCostUsd(PetPhaseClip::from($phase)));
         }
 
-        return $cost;
+        return $items;
     }
 
     // ──────────────────────────────────────────────────────────────

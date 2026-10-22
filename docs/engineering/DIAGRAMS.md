@@ -1372,6 +1372,7 @@ flowchart LR
   F --> D["download 4xx / too big / wrong type"] --> DF["failed invalid_response<br/>(image: fal URL forgotten)"]
   F --> L["lost webhook / job / worker"] --> SW["hourly media:sweep:<br/>2 h → timed_out · re-queue download · reclaim after 10 min"]
   GF & TK & EF & DF & SW -.-> AD["media:backfill / Filament Generate missing / Regenerate"]
+  UP["M5-T16 /admin → Upgrade to new media / media:backfill --state-media:<br/>preview (no spend, per look) → confirm (frozen set, recomputed) →<br/>UpgradePetsToStateMedia chunks → generateMissing(upgrade)"] -.-> RT
 ```
 
 ## 10b. App playback of pet media (M4-03 app side, 2026-10-05)

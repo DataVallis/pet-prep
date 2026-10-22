@@ -12,7 +12,7 @@ use Illuminate\Console\Command;
  */
 class RetryReferenceImagesCommand extends Command
 {
-    protected $signature = 'media:retry {--limit=100 : Maximum media items to re-queue}';
+    protected $signature = 'media:retry {--limit='.ReferenceImageRetryService::DEFAULT_LIMIT.' : Maximum media items to re-queue}';
 
     /** @var list<string> */
     protected $aliases = ['media:retry-references'];

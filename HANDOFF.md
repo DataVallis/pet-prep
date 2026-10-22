@@ -24,7 +24,7 @@
 | M5 Production + beta | 2 done / 3 partial (M5-03, M5-04, M5-09) / 4 open (M5-05, M5-06, M5-07, M5-08) | ~45 % |
 | M5-R Realism | 72 done / 8 partial / 12 open (M5-R07, R12, R14, R15, R18–R20 need David) | ~80 % |
 | M5-F Device fixes | 12 done / 1 open (M5-F10 OTA — `EXPO_TOKEN` + store build) | ~90 % |
-| M5-T Refinement | 18 done / 0 open (T07 cancelled; T15 AI budget warnings added 22. 10.) | code 100 %, **device 0 %** |
+| M5-T Refinement | 19 done / 0 open (T07 cancelled; T15 AI budget warnings + T16 bulk media upgrade added 22. 10.) | code 100 %, **device 0 %** |
 
 ## 2. Decisions
 
@@ -94,6 +94,10 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 5. **Before the beta (ROADMAP):** M0-15 test accounts out of production, M5-06 legal review + App Store Kids / Play Families check (privacy policy text is live), M5-07 TestFlight + Play internal testing with 20–50 families, D5 off-site backups setup (David), M5-05 mobile error reporting. Open »čaka Davida« items: M5-R14 / R15 / R18 / R19 / R20 breed care needs, M5-R12 fetch spec.
 
 ## 6. Session log
+
+### 2026-10-22 (cloud, backend) — M5-T16 bulk upgrade to the new media (`feat/M5-T16-bulk-state-media-upgrade`)
+- David 22. 10.: existing paid pets get no v3 media automatically — calculation first, then a click. Built `/admin → AI media → Upgrade to new media` (`StateMediaUpgradePlanner` preview per shared look + stage, `lookMissingItems()` prices each look item once, unique-media pets per pet, budget days at the daily cap; »Upgrade« with confirmed total → `UpgradePetsToStateMedia` chunks of 25 → `generateMissing(upgradeStateMedia: true)`; audit `app_setting_changes` `state_media_bulk_upgrade`); `media:backfill --state-media --dry-run` prints the same preview. Pest `StateMediaBulkUpgradeTest` (0 fal calls in preview; 3 pets / 1 look → 20 calls; complete look 0 $; switches off; non-eligible untouched). **Not run on production; David decides when to upgrade** (after the first real purchase confirms media quality).
+- QA round (PR #344): confirmation freezes + signs the shown pet ids / total, »Upgrade« recomputes and refuses »Numbers changed, check again« (M1; `only_complete` passed into chunks); stage-behind pets priced with the full new-stage set (M2); `media:backfill --state-media` real run = the planner (M3, `--limit` ignored); `fal_balance` block, chunk logs + 3 tries, per-pet catch with version rollback, cache lock, eager-loaded media, days estimate with monthly cap + nightly retry limit; David 22. 10.: a bulk upgrade may use the whole daily budget (confirmation shows today's %). **Run upgrades outside children's peak hours:** while an upgraded pet's ball-game clips are generated, the game shows »se še pripravlja« (M5-T04 readiness).
 
 ### 2026-10-22 (cloud, backend) — M5-T15 AI budget warnings (`feat/M5-T15-ai-budget-warning`)
 - David 22. 10.: budgets stay capped, warn at ≥ 80 % (20 % left). Built: `AiBudgetMonitor` / `AiBudgetStatus` (80 % yellow, 100 % red, percentages of the configured cap; production + AI Lab, day + month), banner `AiBudgetBanner` on the dashboard + System health, queued `CheckAiBudgetAlerts` (`ai:budget-check` every 5 min) → Filament database notification to superadmins (+ e-mail only with a real `MAIL_MAILER` — production is `log`, so bell only), dedupe `ai_budget_alerts`; fal.ai balance via Platform API (`GET api.fal.ai/v1/account/billing?expand=credits`, needs scope `billing:usage:read`) with a low-balance warning (`/admin → AI budget`, default 20 $) + `fal_balance` refusals in 24 h; AI budget help text now ≈ 11,17 $ / 12,59 $ / 7,40 $ per NEW breed + colour + stage. Pest `AiBudgetWarningTest`.
