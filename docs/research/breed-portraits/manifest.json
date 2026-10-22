@@ -675,6 +675,18 @@
             "prompt_hash": "sha256:7387c6fcf12c509066864930b921280259fabf8e98bb684c7890619cde653422",
             "generated_at": "2026-10-21T23:55:46+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "wirehaired_pointing_griffon",
+            "species": "dog",
+            "file": "dog/wirehaired-pointing-griffon.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:a44780b779db87c69e3b1923b8deac1e74afcd46991875751e72e71e699b3479",
+            "generated_at": "2026-10-22T01:58:30+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
