@@ -29914,7 +29914,7 @@
         "source_id": "S467",
         "quote": "We would recommend an experienced owner for this breed,",
         "confidence": "high",
-        "notes": "PDSA (S467, fragment). Woodgreen (S468): 'Getting support from a professional trainer early on is a really good idea for this breed.'; training 'Moderately hard'. Basis of experienced_owner."
+        "notes": "PDSA (S467, fragment). Woodgreen (S468): 'Getting support from a professional trainer early on is a really good idea for this breed.'; training 'Moderately hard'. No chip: the experienced_owner chip names a powerful dog (open for David)."
       },
       "chewing": {
         "value": null,
@@ -30179,7 +30179,7 @@
         "source_id": "S467",
         "quote": "We would recommend an experienced owner for this breed,",
         "confidence": "high",
-        "notes": "PDSA (S467, fragment). Basis of experienced_owner."
+        "notes": "PDSA (S467, fragment). No chip: the experienced_owner chip names a powerful dog (open for David)."
       },
       "pdsa_meal_gap": {
         "value": "leave a gap after eating and before exercising",
@@ -45076,17 +45076,6 @@
             "quote": "S468 'Puzzle feeders, scent work, and short training sessions help to keep a Sammy's curious mind productively occupied.'"
           },
           {
-            "tag": "experienced_owner",
-            "source_ids": [
-              "S467"
-            ],
-            "refs": [
-              "samoyed.behaviour.experienced_owner",
-              "samoyed.suitability.pdsa_experienced_owner"
-            ],
-            "quote": "S467 'We would recommend an experienced owner for this breed,'"
-          },
-          {
             "tag": "needs_company",
             "source_ids": [
               "S467"
@@ -45178,9 +45167,10 @@
           "food_motivated_weight": "No source.",
           "shorter_lifespan": "PDSA 'Over 10 years' (S467) — criterion is 'Under 10 years'.",
           "hips_hind_legs": "Hip dysplasia and hip scoring as for many breeds (S467, S468); no conformation point → register health + breeder checklist only.",
-          "welfare": "No veterinary association names the breed for conformation-related welfare problems; RKC Breed Watch category unknown (page not reachable) → no welfare chip."
+          "welfare": "No veterinary association names the breed for conformation-related welfare problems; RKC Breed Watch category unknown (page not reachable) → no welfare chip.",
+          "experienced_owner": "PDSA 'We would recommend an experienced owner for this breed,' (S467) — but the experienced_owner chip says 'powerful dog', which no source says of the Samoyed, and independent_experienced_owner needs a stubborn / independent quote (not returned verbatim) → no chip; the PDSA advice stays in the register text. Open for David (Shiba Inu precedent)."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, children; consider long_daily_exercise, needs_mental_stimulation, experienced_owner, needs_company, secure_fencing, may_herd_children, sheds, frequent_grooming, heat_sensitive (new), chases_small_pets"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, children; consider long_daily_exercise, needs_mental_stimulation, needs_company, secure_fencing, may_herd_children, sheds, frequent_grooming, heat_sensitive (new), chases_small_pets"
       },
       "marketing": {
         "value": "in the app: yes; in marketing: yes (not a welfare breed)",
