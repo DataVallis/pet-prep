@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `chesapeake_bay_retriever` (viri S457–S462; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174) |
 | Izvor | FCI št. 263, skupina 8, sekcija 1 (prinašalci), ZDA (S457) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 52. mesto »Chesapeake Bay Retriever« (S174) |
-| PR-ji | pet-prep #339 (pasma) · portret — · spletna stran — |
+| PR-ji | pet-prep #339 (pasma, združen `7165b66`) · portret (ta PR) · spletna stran — |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -29,6 +29,7 @@
 | 2026-10-22 | pravilo runbooka (§3) | marketing: **v aplikaciji da, v marketingu da** — nikoli kot pes za stanovanje, pes z malo gibanja ali pes, ki je lahko dolgo sam | veterinarsko odsvetovanje oglaševanja velja le za pse s sploščenim obrazom (BVA S92) | #339 |
 | 2026-10-22 | pravilo runbooka (§3) | barve za AI in izbirnik: **rjav** (portret), rdečkasto zlat (sedge), barve suhe trave (deadgrass); nikoli črn, belo le majhna lisa na prsih ali prstih | FCI S458 »Any colour of brown, sedge or deadgrass is acceptable, self-coloured Chesapeakes being preferred.«; diskvalifikacija »Black coloured.« (uteži barv brez vira → `verified: false`; standard nobene barve ne daje prednosti — rjava za portret je predlog Claude) | #339 |
 | 2026-10-22 | predlog Claude, David lahko spremeni | ime SL »Chesapeake Bay retriver« (slug `chesapeake-bay-retriver`); iskalni ključi tudi »chessie«, »chesapeake«, »chesapeake retriever« | slovenskega imena nisem našel (KZS ni dosegljiv); angleško ime s slovensko besedo »retriver« | #339 |
+| 2026-10-22 | pravilo runbooka (§8) | AI portret: realistična fotografija odraslega psa, enotno rjav, gosta kratka valovita dlaka, jantarne oči, naraven rep, siva studijska podlaga, naravna razmerja; sprejet v prvem poskusu (zagon 39719092132, koda `7165b66`, brez produkcijske namestitve) | barva portreta = najtežja barva iz `breed_appearance.php` | portret |
 | 2026-10-22 | pravilo runbooka (§2.3) | seznam za vzreditelja: najmanj genetska raznolikost, BVA/RKC shema za komolce, BVA/RKC shema za kolke, DNK test za degenerativno mielopatijo (DM); najboljša praksa DNK test prcd-PRA, pregled oči BVA/RKC/ISDS | RKC S459 (»We strongly recommend that breeders, at a minimum, conduct these tests before breeding« / »To support the breed’s health, responsible breeders should ensure they complete all tests in both categories.«). Brez novega ključa | #339 |
 | 2026-10-22 | pravilo runbooka | nov zdravstveni ključ registra **`exercise_induced_collapse`** (kolaps ob naporu, EIC) — mirna povedi brez številk | PetMD S461 »This neuromuscular condition can cause Chessies to collapse.« | #339 |
 
@@ -40,7 +41,7 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 90 mesecev; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-56 | 2026-10-22 |
 | Česanje 1× na teden (rutina »Počeši«), opozorilo po obroku (60 min), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R16 / M5-R17 | 2026-10-22 |
 | Barva (izbirnik barve: rjav, rdečkasto zlat, barve suhe trave) | 🛠 | 💶 izziv | M5-R21 | 2026-10-22 |
-| AI portret v registru | 🗓 | — | M5-R11-04 | — |
+| AI portret v registru (enotno rjav, sprejet v prvem poskusu, zagon 39719092132) | ✅ | — | M5-R11-04 | 2026-10-22 |
 | Stran na petprep.si (`/animals/dogs/chesapeake-bay-retriever`, `/sl/zivali/psi/chesapeake-bay-retriver`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)

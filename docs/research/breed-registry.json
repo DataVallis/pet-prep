@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "8bfcc0c731589c7ecbb1916c489446d654d2c6313fa72763e71a6c36b21b9745"
+      "sha256": "fdd9dbaaccc22a36687c77bc9c2ecf39ee251f834d10420abf4cc77a58c10a8d"
     }
   },
   "suitability_vocabulary": {
@@ -31121,7 +31121,12 @@
           "S459"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "chesapeake-bay-retriever.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
