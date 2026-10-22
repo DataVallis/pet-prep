@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `whippet` (viri S442–S447; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174) |
 | Izvor | FCI št. 162, skupina 10, sekcija 3 (kratkodlaki hrti), Velika Britanija (S442) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 50. mesto »Whippet« (S174) |
-| PR-ji | pet-prep #333 (pasma, združen `bf206e6`) · portret #334 · spletna stran — |
+| PR-ji | pet-prep #333 (pasma, združen `bf206e6`) · portret #334 (združen `5af3607`) · spletna stran #87 (združen `d911e49`) |
 
 ## Odločitve (z viri in kdo je odločil)
 
