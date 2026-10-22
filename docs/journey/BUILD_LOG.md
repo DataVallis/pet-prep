@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-22 — Najprej izračun, nato klik: nadgradnja obstoječih ljubljenčkov na nove medije (M5-T16)
+
+**Kaj:** David je odločil, da obstoječi plačani ljubljenčki novih medijev (ključne slike, brezšivne zanke, prehodi, posnetki šole in iger) ne dobijo samodejno. V administraciji je zdaj stran »Nadgradnja na nove medije«: najprej pokaže izračun, ki nič ne porabi — koliko ljubljenčkov, po videzu (pasma + barva + obdobje), kaj manjka in koliko bi stalo (0 $, ko videz to že ima), primerjavo s preostankom proračuna in koliko dni bi trajalo pri trenutni dnevni meji — nato superadmin klikne »Nadgradi« in potrdi znesek. Ustvarjanje teče v ozadju, en klic AI na element videza, ne glede na število ljubljenčkov; proračun in stikala veljajo, zavrnjeno se ponovi ponoči.
+**Zakaj je pomembno:** strošek nadgradnje je znan vnaprej (npr. videz psa iz prejšnje različice ≈ 5,79 $ za poze in posnetke šole in iger, vsak naslednji ljubljenček istega videza 0 $) in odločitev ostane pri človeku.
+- 💼 Investitorji: stroški AI so predvidljivi — izračun pred porabo, enkraten strošek na videz, dnevna meja.
+- 👩 Starši: obstoječi ljubljenčki lahko dobijo nove posnetke brez dodatnega plačila, ko jih vključimo (*načrt*: po prvem pravem nakupu in preverjanju kakovosti).
+- 🛠 Tehnično: Laravel `StateMediaUpgradePlanner` (predogled po skupnem videzu, postavke brez dvojnega štetja), Filament stran, čakalna opravila po 25 ljubljenčkov, revizija v `app_setting_changes`; Pest dokazuje: predogled 0 klicev fal, 3 ljubljenčki istega videza → 20 klicev (5 poz + 15 posnetkov), ne 60.
+
 ## 2026-10-22 — Opozorilo, ko ostane le še 20 % proračuna za AI (M5-T15)
 
 **Kaj:** proračuni za AI ostanejo omejeni (dobroimetje fal.ai polnimo sami), zato sistem zdaj opozori, ko dnevni ali mesečni proračun doseže 80 %, in še enkrat pri 100 % (takrat so novi klici zavrnjeni). Velja za produkcijo in AI Lab posebej, v odstotkih — ne glede na to, kakšen znesek je nastavljen. Pasica na nadzorni plošči in v »System health« (zelena / rumena / rdeča), obvestilo superadminom v administraciji, vsak prag največ enkrat na dan / mesec. Novo: stanje računa fal.ai iz fal Platform API z opozorilom pod 20 $ (nastavljivo).

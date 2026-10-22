@@ -9,6 +9,7 @@ use App\Services\Media\AiSpendGuard;
 use App\Services\Media\FalGateway;
 use App\Services\Media\MediaEntitlementService;
 use App\Services\Media\PetMediaService;
+use App\Services\Media\StateMediaUpgradePlanner;
 use Illuminate\Console\Command;
 
 /**
@@ -16,6 +17,10 @@ use Illuminate\Console\Command;
  * birth (M4-03 / M4-05) — store their fal reference image on our disk (free)
  * or generate one, then the entitled state videos — within the production AI
  * budget. `--dry-run` only prints the plan and the estimated cost.
+ *
+ * M5-T16: `--state-media --dry-run` prints the same calculation as /admin → »Upgrade
+ * existing pets to new media« (StateMediaUpgradePlanner::preview — eligible pets only,
+ * grouped per shared look + stage, each look item priced once, budget days).
  */
 class BackfillPetMediaCommand extends Command
 {
@@ -30,6 +35,10 @@ class BackfillPetMediaCommand extends Command
     public function handle(PetMediaService $media, MediaEntitlementService $entitlements, AiSpendGuard $guard, FalAiService $fal): int
     {
         $dryRun = (bool) $this->option('dry-run');
+
+        if ($dryRun && $this->option('state-media')) {
+            return $this->stateMediaPreview(app(StateMediaUpgradePlanner::class));
+        }
 
         if (! $dryRun && (! $fal->isEnabled() || FalGateway::balanceExhaustedAt() !== null)) {
             $this->error('fal.ai is disabled (FAL_AI_API_KEY) or its balance is flagged as exhausted — nothing queued.');
@@ -104,6 +113,49 @@ class BackfillPetMediaCommand extends Command
         }
 
         $this->info(sprintf('Queued %d pet(s), estimated $%.2f.%s', $queuedPets, $planned, $stopped ? ' Stopped at the AI budget — run again tomorrow.' : ''));
+
+        return self::SUCCESS;
+    }
+
+    /** M5-T16: the bulk upgrade calculation (no fal call, nothing written). */
+    private function stateMediaPreview(StateMediaUpgradePlanner $planner): int
+    {
+        $petId = $this->option('pet');
+        $p = $planner->preview(petId: $petId !== null ? (int) $petId : null, limit: max(1, (int) $this->option('limit')));
+
+        if ($p['blocked'] !== null) {
+            $this->warn("Nothing would be generated: {$p['blocked']}.");
+        }
+
+        if ($p['groups'] === []) {
+            $this->info(sprintf('Nothing to upgrade (%d eligible pet(s)).', $p['eligible']));
+
+            return self::SUCCESS;
+        }
+
+        $this->table(
+            ['Look', 'Breed', 'Colour', 'Stage', 'Pets', ...array_values(StateMediaUpgradePlanner::CATEGORIES), 'Est. cost'],
+            array_map(fn (array $g): array => [
+                $g['unique'] ? "pet #{$g['pet_id']} (unique)" : "#{$g['look_id']}",
+                $g['breed'],
+                $g['colour'] ?? '—',
+                $g['stage'] ?? '—',
+                $g['pets'],
+                ...array_values($g['items']),
+                sprintf('$%.2f', $g['cost_usd']),
+            ], $p['groups']),
+        );
+
+        $b = $p['budget'];
+        $this->info(sprintf(
+            'Dry run (state media upgrade): %d pet(s) in %d look(s) (%d already complete), estimated $%.2f. Budget left today: $%.2f of $%.2f; this month $%.2f of $%.2f. %s',
+            $p['pets'], $p['looks'], $p['complete_looks'], $p['cost_usd'], $b['left_today_usd'], $b['daily_cap_usd'], $b['left_month_usd'], $b['monthly_cap_usd'],
+            match (true) {
+                $b['days'] === null => 'Daily cap 0 $ — never.',
+                $b['fits_today'] => 'Fits today.',
+                default => "About {$b['days']} budget day(s) at the current daily cap.",
+            },
+        ));
 
         return self::SUCCESS;
     }
