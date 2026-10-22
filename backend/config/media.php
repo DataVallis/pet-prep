@@ -76,8 +76,11 @@ return [
         'wand' => ['idle', 'playing'],
     ],
     // M5-T10: + the phase clips of the game (PetPhaseClip groups) for a pet that gets
-    // them (MediaEntitlementService::phaseClipsFor — state media version 2); others keep
-    // the list above. `school` = the school's clips (not a start condition, §13).
+    // them (MediaEntitlementService::phaseClipsFor — state media version 3, both
+    // switches on); others keep the list above. `play` needs its list above too (the
+    // cuddles share the stage and play the `playing` loop); `wand` only its phases.
+    // A failed phase clip / pose of the game → the list above again (GameMediaReadiness).
+    // `school` = the school's clips (not a start condition, §13).
     'game_phase_groups' => [
         'play' => ['ball'],
         'wand' => ['wand'],
@@ -116,6 +119,9 @@ return [
         // M5-T08b: only the default while /admin → Feature switches has no `state_media`
         // row (AppSettingsService::stateMedia()) — switch it in the panel, not here.
         'enabled' => filter_var(env('AI_STATE_MEDIA_ENABLED', true), FILTER_VALIDATE_BOOL),
+        // M5-T09 / T10 (QA M2): only the default while /admin → Feature switches has no
+        // `phase_clips` row (AppSettingsService::phaseClips()) — switch it in the panel.
+        'phase_clips_enabled' => filter_var(env('AI_PHASE_CLIPS_ENABLED', true), FILTER_VALIDATE_BOOL),
         'keyframe_profile' => env('AI_KEYFRAME_PROFILE', 'nano_banana_pro_edit'),
         // Order = queue order, after every first-minutes clip (preparation_essentials).
         'transitions' => ['idle_to_sleeping', 'sleeping_to_idle'],
@@ -124,11 +130,13 @@ return [
         | the school (per command: attention → performing → success) and the games (dog
         | ball: waiting → running → fetching; cat wand: stalking → pouncing → catching),
         | from / to POSE images (Nano Banana Pro Edit of the reference image). Order =
-        | queue order after the transitions: school, then the games (§13). A group a pet
-        | cannot use is skipped (school: training on; ball: dog; wand: cat) —
+        | queue order after the transitions: the games first (their readiness gates the
+        | game), then the school (never blocks practice) — QA m1. A group a pet cannot use
+        | is skipped (school: training on; ball: dog; wand: cat) —
         | MediaEntitlementService::phaseClipsFor(). Remove a group here = it is not made.
+        | On / off: the superadmin switch »School & game clips« (`app_settings.phase_clips`).
         */
-        'phase_clips' => ['school', 'ball', 'wand'],
+        'phase_clips' => ['ball', 'wand', 'school'],
         /*
         | Clip length per purpose (seconds; David 2026-10-21): state loops and transitions
         | 5 s, school and game phase clips 3 s (−40 % at the same model). The video profile

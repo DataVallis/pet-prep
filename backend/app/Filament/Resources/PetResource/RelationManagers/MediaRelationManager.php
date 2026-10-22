@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\PetResource\RelationManagers;
 
+use App\Enums\PetPhaseClip;
 use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\User;
@@ -32,6 +33,19 @@ class MediaRelationManager extends RelationManager
     public static function canViewForRecord(Model $ownerRecord, string $pageClass): bool
     {
         return self::isSuperadmin();
+    }
+
+    /** QA nit: the cost of one phase clip made from this pose image (the wand's are priced as game clips). */
+    private static function poseClipCostUsd(PetMedia $record): float
+    {
+        $pose = $record->pose();
+        foreach (PetPhaseClip::cases() as $clip) {
+            if ($pose !== null && ($clip->startPose() === $pose || $clip->endPose() === $pose)) {
+                return app(PetMediaService::class)->phaseClipCostUsd($clip);
+            }
+        }
+
+        return app(MediaProfiles::class)->clipVideo('school')->estimatedCostUsd();
     }
 
     private static function isSuperadmin(): bool
@@ -174,9 +188,9 @@ class MediaRelationManager extends RelationManager
                             $record->isKeyframe() => sprintf('New %s key image (~$%.2f), then its loop and transitions are remade from it (~$%.2f each). The current files stay visible until the new ones are stored.',
                                 $record->state, app(PetMediaService::class)->keyframeCostUsd(), $profiles->stateVideo()->estimatedCostUsd()),
                             $record->isPose() => sprintf('New %s pose image (~$%.2f), then the school / game phase clips through it are remade (~$%.2f each). The current files stay visible until the new ones are stored.',
-                                $record->state, app(PetMediaService::class)->keyframeCostUsd(), $profiles->clipVideo('school')->estimatedCostUsd()),
+                                $record->state, app(PetMediaService::class)->keyframeCostUsd(), self::poseClipCostUsd($record)),
                             $record->isPhase() => sprintf('New %s phase clip (~$%.2f). The current clip stays visible until the new one is stored.',
-                                $record->state, $profiles->clipVideo('school')->estimatedCostUsd()),
+                                $record->state, $record->phaseClip() !== null ? app(PetMediaService::class)->phaseClipCostUsd($record->phaseClip()) : $profiles->clipVideo('school')->estimatedCostUsd()),
                             default => sprintf('New %s clip (~$%.2f). The current clip stays visible until the new one is stored.',
                                 $record->state, $profiles->stateVideo()->estimatedCostUsd()),
                         };

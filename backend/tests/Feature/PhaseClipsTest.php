@@ -8,14 +8,19 @@ use App\Enums\PetPhaseClip;
 use App\Enums\PetPlan;
 use App\Enums\PetPose;
 use App\Enums\PetStateEnum;
+use App\Enums\PetTransition;
 use App\Enums\TrainingCommand;
 use App\Events\PetUpdated;
+use App\Filament\Pages\FeatureSwitches;
 use App\Jobs\GeneratePetKeyframe;
+use App\Jobs\ResumeStateMedia;
 use App\Jobs\SubmitPetStateVideo;
 use App\Models\AiSpendLedger;
 use App\Models\AppSetting;
+use App\Models\AppSettingChange;
 use App\Models\Pet;
 use App\Models\PetMedia;
+use App\Models\User;
 use App\Services\AppSettingsService;
 use App\Services\FalWebhookVerifier;
 use App\Services\FamilyService;
@@ -45,9 +50,9 @@ use Illuminate\Support\Facades\Storage;
 |
 | APP_REFINEMENT_SPEC §3 / §10 (David 2026-10-20 / 21): 3 s Kling 3.0 Pro clips
 | from / to POSE images (Nano Banana Pro Edit of the reference image), played
-| once by the app. Only pets that use state media (paid full set, version 2,
-| switch on); made on the first purchase of breed + colour + stage and shared
-| (0 $ later); after the first-minutes set: school, then the games.
+| once by the app. Only pets that use state media (paid full set, version 3,
+| both switches on); made on the first purchase of breed + colour + stage and
+| shared (0 $ later); after the first-minutes set: the games, then the school (QA m1).
 */
 
 const PHC_JPEG = "\xFF\xD8\xFF\xE0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00";
@@ -178,9 +183,9 @@ describe('phase clips (enum + entitlement)', function () {
 
         foreach (TrainingCommand::cases() as $command) {
             $pose = PetPhaseClip::commandPose($command);
-            $attention = PetPhaseClip::school($command, 'attention');
-            $performing = PetPhaseClip::school($command, 'performing');
-            $success = PetPhaseClip::school($command, 'success');
+            $attention = PetPhaseClip::from("school_{$command->value}_attention");
+            $performing = PetPhaseClip::from("school_{$command->value}_performing");
+            $success = PetPhaseClip::from("school_{$command->value}_success");
 
             // attention: idle → idle · performing: idle → held pose · success: held pose → held pose.
             expect([$attention->startPose(), $attention->endPose()])->toBe([null, null])
@@ -199,16 +204,18 @@ describe('phase clips (enum + entitlement)', function () {
             ->and(PetPhaseClip::BallWaiting->purpose())->toBe('game');
     });
 
-    it('a paid dog with training gets 12 school clips then 3 ball clips (school first, §13) and their 5 poses', function () {
+    it('a paid dog with training gets 3 ball clips then 12 school clips (the game first, QA m1) and their 5 poses', function () {
         config(['services.fal_ai.key' => null]);
         $pet = phcPet();
         $e = app(MediaEntitlementService::class);
 
         $clips = array_map(fn ($c) => $c->value, $e->phaseClipsFor($pet));
         expect($clips)->toHaveCount(15)
-            ->and(array_slice($clips, 0, 12))->each->toStartWith('school_')
-            ->and(array_slice($clips, 12))->toBe(['ball_waiting', 'ball_running', 'ball_fetching'])
-            ->and(array_map(fn ($p) => $p->value, $e->posesFor($pet)))->toBe(['sit', 'come', 'place', 'door', 'empty']);
+            ->and(array_slice($clips, 0, 3))->toBe(['ball_waiting', 'ball_running', 'ball_fetching'])
+            ->and(array_slice($clips, 3))->each->toStartWith('school_')
+            ->and(array_map(fn ($p) => $p->value, $e->posesFor($pet)))->toBe(['empty', 'sit', 'come', 'place', 'door'])
+            // The shipped config has the same order (the helper only mirrors it).
+            ->and((require config_path('media.php'))['state_media']['phase_clips'])->toBe(['ball', 'wand', 'school']);
     });
 
     it('a paid cat gets the 3 wand clips and 2 poses — no school, no ball', function () {
@@ -254,9 +261,10 @@ describe('phase clips (enum + entitlement)', function () {
         phcSwitch(false);
         expect($e->phaseClipsFor($pet))->toBe([])
             ->and($e->posesFor($pet))->toBe([])
-            // The set itself (payload / readiness) does not depend on the switch.
+            // The set itself (admin) does not depend on the switch …
             ->and($e->phaseClipsOfSet($pet))->toHaveCount(15)
-            ->and(app(PetMediaService::class)->payloadFor($pet)['phase_groups'])->toBe(['school', 'ball']);
+            // … but the payload follows readiness (QA m2): off → the M5-T08 stage in the app.
+            ->and(app(PetMediaService::class)->payloadFor($pet)['phase_groups'])->toBe([]);
     });
 
     it('school and game clips are 3 s (0.336 $), state clips stay 5 s (0.56 $) — a per-purpose length', function () {
@@ -280,7 +288,7 @@ describe('phase clips (enum + entitlement)', function () {
 describe('pipeline for a dog with its own media', function () {
     beforeEach(fn () => useUniquePetMedia(true));
 
-    it('order: first-minutes set → transitions → school → ball; poses before their clips; 3 s clips from pose to pose; cost', function () {
+    it('order: first-minutes set → transitions → ball → school; poses before their clips; 3 s clips from pose to pose; cost', function () {
         phcFakeFal();
         $pet = phcBirth(phcPet());
         phcCompleteClips();
@@ -294,7 +302,7 @@ describe('pipeline for a dog with its own media', function () {
         };
         $kinds = $prompts->map($kind)->values()->all();
 
-        // Every loop and transition is queued before the first phase clip; school before ball.
+        // Every loop and transition is queued before the first phase clip; the ball before the school.
         $firstPhase = array_search('phase', $kinds, true);
         expect($firstPhase)->not->toBeFalse()
             ->and(array_slice($kinds, $firstPhase))->each->toBe('phase')
@@ -321,8 +329,8 @@ describe('pipeline for a dog with its own media', function () {
         // Pose images: Nano Banana Pro Edit of the reference image, after the key images.
         $edits = phcCalls('https://fal.run/fal-ai/nano-banana-pro/edit')->map(fn (Request $r) => (string) $r['prompt'])->values();
         expect($edits)->toHaveCount(5 + 5)
-            ->and($edits->slice(5)->values()[0])->toContain('sitting upright')
-            ->and($edits->last())->toContain('WITHOUT the dog')
+            ->and($edits->slice(5)->values()[0])->toContain('WITHOUT the dog')
+            ->and($edits->slice(5)->values()[1])->toContain('sitting upright')
             ->and($edits->implode(' '))->not->toContain('ball');
 
         // 1 + 5 key images + 5 poses (0.15 $) · 6 loops + 2 transitions (0.56 $) · 15 phase clips (0.336 $).
@@ -337,18 +345,19 @@ describe('pipeline for a dog with its own media', function () {
         expect(array_keys((array) $media['poses']))->toEqualCanonicalizing(['sit', 'come', 'place', 'door', 'empty'])
             ->and(array_keys((array) $media['phases']))->toHaveCount(15)
             ->and(collect((array) $media['phases'])->first())->toStartWith('https://api.petprep.si/api/media/')
-            ->and($media['phase_groups'])->toBe(['school', 'ball'])
+            ->and($media['phase_groups'])->toBe(['ball', 'school'])
             ->and(json_encode($media))->not->toContain('fal.media');
 
         // The broadcast of the full dog set fits Reverb's HTTP publish limit with room for headers.
         $publish = json_encode(['name' => 'pet.updated', 'data' => json_encode(PetUpdated::payloadFor($pet->fresh(), 'video_ready')), 'channels' => ["private-pet.{$pet->id}"]]);
         expect(strlen($publish))->toBeLessThan((int) config('reverb.servers.reverb.max_request_size') - 4096);
 
-        // Preparation ends with them (school after the transitions, then the games).
+        // QA m6: the preparation ends with the transitions as before (no phase clip in it).
         $keys = app(PetPreparationService::class)->expectedKeys($pet->fresh());
-        expect(array_slice($keys, -15, 1))->toBe(['school_sit_attention'])
-            ->and(end($keys))->toBe('ball_fetching')
-            ->and(app(PetPreparationService::class)->summary($pet->fresh())->ready)->toBeTrue();
+        expect(end($keys))->toBe('sleeping_to_idle')
+            ->and(array_filter($keys, fn (string $k) => PetPhaseClip::tryFrom($k) !== null))->toBe([])
+            ->and(app(PetPreparationService::class)->summary($pet->fresh())->ready)->toBeTrue()
+            ->and(app(PetPreparationService::class)->summary($pet->fresh())->schoolPending)->toBeFalse();
     });
 
     it('claims: a duplicate pose job or phase submit is harmless (one fal call per slot)', function () {
@@ -364,24 +373,32 @@ describe('pipeline for a dog with its own media', function () {
             ->and(phcCalls()->count())->toBe($before);
     });
 
-    it('the readiness of the school = all its clips; the ball game needs its phase clips (v2) — the old list for v1', function () {
+    it('the readiness of the school = all its clips; play needs its ball phase clips AND the playing loop (v3) — the old list for v1', function () {
         phcFakeFal();
         Queue::fake([GeneratePetKeyframe::class, SubmitPetStateVideo::class]);
         $pet = phcBirth(phcPet());
         $readiness = app(GameMediaReadiness::class);
 
         expect($readiness->requiredClips($pet, GameMediaReadiness::SCHOOL))->toHaveCount(12)
-            ->and($readiness->requiredClips($pet, GameMediaReadiness::PLAY))->toBe(['ball_waiting', 'ball_running', 'ball_fetching'])
+            // QA m1: the cuddles share the play stage — the playing loop (and idle) stay required.
+            ->and($readiness->requiredClips($pet, GameMediaReadiness::PLAY))->toBe(['ball_waiting', 'ball_running', 'ball_fetching', 'playing', 'idle'])
             ->and($readiness->ready($pet, GameMediaReadiness::PLAY))->toBeFalse()
             ->and(app(PlayService::class)->mediaReady($pet))->toBeFalse();
 
-        // Stored (own or linked) phase clips make it ready.
+        // Stored (own or linked) phase clips alone are not enough: the playing loop too.
         foreach (['ball_waiting', 'ball_running', 'ball_fetching'] as $clip) {
             app(PetMediaService::class)->slot($pet, PetMedia::KIND_PHASE, PetPhaseClip::from($clip))
                 ->update(['status' => 'ready', 'storage_path' => "{$pet->id}/{$clip}-g1.mp4"]);
         }
+        expect($readiness->missing($pet->fresh(), GameMediaReadiness::PLAY))->toEqualCanonicalizing(['playing', 'idle']);
+        foreach ([PetStateEnum::Playing, PetStateEnum::Idle] as $state) {
+            app(PetMediaService::class)->slot($pet, PetMedia::KIND_VIDEO, $state)
+                ->update(['status' => 'ready', 'storage_path' => "{$pet->id}/{$state->value}-g1.mp4"]);
+        }
         expect($readiness->ready($pet->fresh(), GameMediaReadiness::PLAY))->toBeTrue()
-            ->and($readiness->missing($pet->fresh(), GameMediaReadiness::SCHOOL))->toHaveCount(12);
+            ->and($readiness->missing($pet->fresh(), GameMediaReadiness::SCHOOL))->toHaveCount(12)
+            // QA m6: the school clips still coming are reported to the app (»Šola se še pripravlja«).
+            ->and(app(PetPreparationService::class)->summary($pet->fresh())->toArray()['school_pending'])->toBeTrue();
 
         // A pet from before M5-T08 keeps the M5-T04 rule (playing + idle videos).
         $old = phcPet();
@@ -533,5 +550,149 @@ describe('prompts (no personal data, no toy)', function () {
 
     it('a state the M5-T08 key images use is unchanged (pose images are a separate kind)', function () {
         expect(PetStateEnum::Playing->keyPose())->toContain('playful bow');
+    });
+});
+
+/* ─────────────────────────── QA fixes (PR #332 review) ─────────────────────────── */
+
+function phcPhaseSwitch(bool $on): void
+{
+    AppSetting::updateOrCreate(['key' => AppSettingsService::PHASE_CLIPS_KEY], ['value' => ['enabled' => $on]]);
+    Cache::forget(AppSettingsService::cacheKey(AppSettingsService::PHASE_CLIPS_KEY));
+}
+
+describe('QA M2: »School & game clips« superadmin switch', function () {
+    beforeEach(fn () => useUniquePetMedia(true));
+
+    it('Feature switches: on by default; off is saved audited; the payload / readiness use the M5-T08 rules', function () {
+        config(['services.fal_ai.key' => null]);
+        $pet = phcPet();
+        $admin = User::factory()->create(['role' => 'parent', 'is_superadmin' => true]);
+        $this->actingAs($admin);
+        $readiness = app(GameMediaReadiness::class);
+
+        Livewire\Livewire::test(FeatureSwitches::class)->assertFormSet(['phase_clips' => true])->call('save')->assertHasNoFormErrors();
+        expect(AppSetting::find(AppSettingsService::PHASE_CLIPS_KEY))->toBeNull()
+            ->and($readiness->requiredClips($pet, GameMediaReadiness::PLAY))->toContain('ball_running');
+
+        Livewire\Livewire::test(FeatureSwitches::class)->fillForm(['phase_clips' => false])->call('save')->assertHasNoFormErrors()->assertNotified();
+
+        expect(app(AppSettingsService::class)->phaseClips())->toBeFalse()
+            ->and(app(AppSettingsService::class)->phaseClips(fresh: true))->toBeFalse()
+            ->and(AppSettingChange::where('key', AppSettingsService::PHASE_CLIPS_KEY)->sole()->user_id)->toBe($admin->id)
+            // State media stays on — only the phase clips are off.
+            ->and(app(MediaEntitlementService::class)->usesStateMedia($pet))->toBeTrue()
+            ->and(app(MediaEntitlementService::class)->phaseClipsFor($pet))->toBe([])
+            // Server and app agree (QA m2): no phase group, the v2 game list, no school readiness.
+            ->and(app(PetMediaService::class)->payloadFor($pet)['phase_groups'])->toBe([])
+            ->and($readiness->requiredClips($pet, GameMediaReadiness::PLAY))->toEqualCanonicalizing(['playing', 'idle'])
+            ->and($readiness->requiredClips($pet, GameMediaReadiness::SCHOOL))->toBe([]);
+    });
+
+    it('off: zero pose / phase fal calls — queue, queued jobs, retry, sweep, regenerate; on again resumes them', function () {
+        phcFakeFal();
+        Queue::fake([GeneratePetKeyframe::class, SubmitPetStateVideo::class, ResumeStateMedia::class]);
+        phcPhaseSwitch(false);
+        $pet = phcBirth(phcPet());
+        $media = app(PetMediaService::class);
+
+        // The pipeline queues no pose image / phase clip (state media itself still runs).
+        expect(PetMedia::where('pet_id', $pet->id)->whereIn('kind', ['pose', 'phase'])->count())->toBe(0)
+            ->and(PetMedia::where('pet_id', $pet->id)->where('kind', 'keyframe')->count())->toBeGreaterThan(0);
+
+        // Slots queued while it was on: their jobs make no fal call.
+        $pose = $media->slot($pet, PetMedia::KIND_POSE, PetPose::Sit);
+        $phase = $media->slot($pet, PetMedia::KIND_PHASE, PetPhaseClip::BallWaiting);
+        $before = phcCalls()->count();
+        (new GeneratePetKeyframe($pose->id))->handle($media);
+        (new SubmitPetStateVideo($phase->id))->handle($media);
+        expect($pose->fresh()->status)->toBe('pending')
+            ->and($phase->fresh()->status)->toBe('pending');
+
+        $pose->update(['status' => 'failed', 'error_reason' => 'budget_daily']);
+        $phase->update(['status' => 'failed', 'error_reason' => 'budget_daily']);
+        expect(app(ReferenceImageRetryService::class)->videoRetryCandidates()->whereIn('kind', ['pose', 'phase'])->count())->toBe(0);
+        app(ReferenceImageRetryService::class)->retryDueWithVideos();
+
+        PetMedia::whereKey([$pose->id, $phase->id])->update(['status' => 'running', 'request_id' => null, 'source_url' => null, 'updated_at' => now()->subHour()]);
+        $media->sweepStale();
+        expect($pose->fresh()->status)->toBe('running')
+            ->and($media->regenerate($pose->fresh()))->toBeFalse()
+            ->and(phcCalls()->filter(fn (Request $r) => str_contains((string) ($r['prompt'] ?? ''), 'sitting upright') || str_contains((string) ($r['prompt'] ?? ''), 'No toys, no ball'))->count())->toBe(0)
+            ->and(phcCalls()->count())->toBe($before);
+
+        // On again (the admin switch): the waiting items are resumed.
+        $admin = User::factory()->create(['role' => 'parent', 'is_superadmin' => true]);
+        app(AppSettingsService::class)->updatePhaseClips($admin, true);
+        Queue::assertPushed(ResumeStateMedia::class);
+    });
+});
+
+describe('QA m1: game readiness for v3 pets', function () {
+    beforeEach(fn () => useUniquePetMedia(true));
+
+    it('a FAILED ball phase clip or pose never blocks the game forever — the M5-T08 list again (pending ones are waited for)', function () {
+        phcFakeFal();
+        Queue::fake([GeneratePetKeyframe::class, SubmitPetStateVideo::class]);
+        $pet = phcBirth(phcPet());
+        $media = app(PetMediaService::class);
+        $readiness = app(GameMediaReadiness::class);
+        foreach ([PetStateEnum::Playing, PetStateEnum::Idle] as $state) {
+            $media->slot($pet, PetMedia::KIND_VIDEO, $state)->update(['status' => 'ready', 'storage_path' => "{$pet->id}/{$state->value}-g1.mp4"]);
+        }
+
+        // Pending ball clips: waited for.
+        expect($readiness->ready($pet->fresh(), GameMediaReadiness::PLAY))->toBeFalse();
+
+        // fal reported a failed generation (no automatic retry for it) → the game is not stuck.
+        $media->slot($pet, PetMedia::KIND_PHASE, PetPhaseClip::BallRunning)->update(['status' => 'failed', 'error_reason' => 'generation_failed']);
+        expect($readiness->requiredClips($pet->fresh(), GameMediaReadiness::PLAY))->toEqualCanonicalizing(['playing', 'idle'])
+            ->and($readiness->ready($pet->fresh(), GameMediaReadiness::PLAY))->toBeTrue();
+
+        // The same for a failed pose image a ball clip is made from (the empty room).
+        $media->slot($pet, PetMedia::KIND_PHASE, PetPhaseClip::BallRunning)->update(['status' => 'pending', 'error_reason' => null]);
+        expect($readiness->ready($pet->fresh(), GameMediaReadiness::PLAY))->toBeFalse();
+        $media->slot($pet, PetMedia::KIND_POSE, PetPose::Empty)->update(['status' => 'failed', 'error_reason' => 'generation_failed']);
+        expect($readiness->ready($pet->fresh(), GameMediaReadiness::PLAY))->toBeTrue()
+            // The app still has the ball group: it shows the phase's pose image for the missing clip.
+            ->and(app(PetMediaService::class)->payloadFor($pet->fresh())['phase_groups'])->toContain('ball');
+    });
+});
+
+describe('QA m6: preparation without the phase clips', function () {
+    beforeEach(fn () => useUniquePetMedia(true));
+
+    it('the preparation (and its 2 h push) ends with the first-minutes set + transitions; the school reports school_pending', function () {
+        phcFakeFal();
+        Queue::fake([GeneratePetKeyframe::class, SubmitPetStateVideo::class]);
+        $pet = phcBirth(phcPet());
+        $media = app(PetMediaService::class);
+        $prep = app(PetPreparationService::class);
+
+        // Store the image + every expected item; every phase clip is still pending.
+        foreach ($prep->expectedKeys($pet->fresh()) as $key) {
+            if ($key === PetPreparationService::IMAGE) {
+                continue;
+            }
+            $transition = PetTransition::tryFrom($key);
+            $slot = $transition !== null
+                ? $media->slot($pet, PetMedia::KIND_TRANSITION, $transition)
+                : $media->slot($pet, PetMedia::KIND_VIDEO, PetStateEnum::from($key));
+            $slot->update(['status' => 'ready', 'storage_path' => "{$pet->id}/{$key}-g1.mp4"]);
+        }
+
+        $summary = $prep->summary($pet->fresh());
+        expect(PetMedia::where('pet_id', $pet->id)->where('kind', 'phase')->where('status', 'ready')->count())->toBe(0)
+            ->and($summary->ready)->toBeTrue()
+            ->and($summary->pending)->toBe([])
+            ->and($summary->toArray()['school_pending'])->toBeTrue();
+
+        // A failed school clip is no longer "on its way".
+        foreach (app(MediaEntitlementService::class)->phaseClipsFor($pet->fresh()) as $clip) {
+            if ($clip->group() === PetPhaseClip::GROUP_SCHOOL) {
+                $media->slot($pet, PetMedia::KIND_PHASE, $clip)->update(['status' => 'failed', 'error_reason' => 'generation_failed']);
+            }
+        }
+        expect($prep->summary($pet->fresh())->toArray()['school_pending'])->toBeFalse();
     });
 });

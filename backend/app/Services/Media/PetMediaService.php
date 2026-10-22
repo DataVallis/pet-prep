@@ -307,7 +307,7 @@ class PetMediaService
             }
         }
 
-        // M5-T09 / T10 (§13 order): school, then game phase clips — after the first-minutes
+        // M5-T09 / T10 (§13 order): game, then school phase clips (QA m1) — after the first-minutes
         // clips, like the transitions. Each clip's pose images first (in clip order), the
         // clip once both of its frames are stored.
         foreach ($essentialWaiting ? [] : $this->entitlements->phaseClipsFor($pet) as $clip) {
@@ -476,6 +476,11 @@ class PetMediaService
             return true;
         }
 
+        // QA M2: a pose image while »School & game clips« is off — no fal call, the slot waits.
+        if ($slot->isPose() && ! $this->entitlements->phaseClipsEnabled(fresh: true)) {
+            return true;
+        }
+
         if ($slot->isLookMedia()) {
             return $slot->look !== null ? $this->generateLookKeyframe($slot, $slot->look) : true;
         }
@@ -570,6 +575,7 @@ class PetMediaService
         // M5-T08b: state media switched off (or the pet does not use it) — a queued transition
         // (M5-T09 / T10: or phase clip) is not submitted (stays pending; look rows: submitLookVideo).
         if ($slot !== null && $slot->isPoseClip() && (! $this->entitlements->stateMediaEnabled(fresh: true)
+            || ($slot->isPhase() && ! $this->entitlements->phaseClipsEnabled(fresh: true))
             || ($slot->pet !== null && ! $this->wantsPoseMedia($slot->pet, $slot)))) {
             return true;
         }
@@ -686,8 +692,9 @@ class PetMediaService
         $clip = $slot->phaseClip();
         $frames = $slot->frames();
 
-        if (! $this->entitlements->stateMediaEnabled(fresh: true)) {
-            $slot->update(['status' => PetMedia::STATUS_PENDING]); // M5-T08b: switched off — release the claim, no fal call
+        if (! $this->entitlements->stateMediaEnabled(fresh: true)
+            || ($clip !== null && ! $this->entitlements->phaseClipsEnabled(fresh: true))) {
+            $slot->update(['status' => PetMedia::STATUS_PENDING]); // M5-T08b / QA M2: switched off — release the claim, no fal call
 
             return true;
         }
@@ -1108,6 +1115,11 @@ class PetMediaService
             return false;
         }
 
+        // QA M2: no pose image / phase clip while »School & game clips« is off.
+        if (($slot->isPose() || $slot->isPhase()) && ! $this->entitlements->phaseClipsEnabled(fresh: true)) {
+            return false;
+        }
+
         if (! $this->resetForNewGeneration($slot, bump: true)) {
             return false;
         }
@@ -1287,6 +1299,12 @@ class PetMediaService
         return $this->entitlements->stateMediaEnabled();
     }
 
+    /** QA M2: the superadmin »School & game clips« switch (MediaEntitlementService::phaseClipsEnabled). */
+    public function phaseClipsEnabled(): bool
+    {
+        return $this->entitlements->phaseClipsEnabled();
+    }
+
     /** M5-T09 / T10: estimated cost of one phase clip (3 s school / game clip). */
     public function phaseClipCostUsd(PetPhaseClip $clip): float
     {
@@ -1449,7 +1467,9 @@ class PetMediaService
             loops: array_values(array_intersect(array_keys($videos), $loops)),
             poses: $poses,
             phases: $phases,
-            phaseGroups: array_values(array_unique(array_map(fn (PetPhaseClip $c) => $c->group(), $this->entitlements->phaseClipsOfSet($pet)))),
+            // QA m2: the same switch-aware source as readiness / preparation (phaseClipsFor) —
+            // a switch off → [] → the app shows the M5-T08 stage, the server checks the v2 rules.
+            phaseGroups: array_values(array_unique(array_map(fn (PetPhaseClip $c) => $c->group(), $this->entitlements->phaseClipsFor($pet)))),
             // M5-T08b (QA m3): the pet's set, not the switch — off never downgrades stored media.
             stateMedia: $this->entitlements->hasStateMediaSet($pet),
         );
@@ -1588,6 +1608,8 @@ class PetMediaService
             ->where('updated_at', '<', now()->subMinutes(self::STALE_CLAIM_MINUTES))
             // M5-T08b: state media switched off — key images and transitions are not re-queued.
             ->when(! $this->entitlements->stateMediaEnabled(fresh: true), fn ($q) => $q->whereNotIn('kind', [PetMedia::KIND_KEYFRAME, PetMedia::KIND_TRANSITION, PetMedia::KIND_POSE, PetMedia::KIND_PHASE]))
+            // QA M2: »School & game clips« off — pose images / phase clips are not re-queued.
+            ->when(! $this->entitlements->phaseClipsEnabled(fresh: true), fn ($q) => $q->whereNotIn('kind', [PetMedia::KIND_POSE, PetMedia::KIND_PHASE]))
             ->each(function (PetMedia $slot) use (&$reclaimed): void {
                 // M4-10: a look image has no job of its own — the waiting pets' slots
                 // (reclaimed here too) run it again; the next pet needing it reclaims it.
@@ -1810,7 +1832,8 @@ class PetMediaService
     {
         // M5-T09 / T10: a pose / phase look row only while a pet of the look at the stage wants it
         // (state media version 3 + the clip's group) — never for a look only older pets use.
-        if (! $this->entitlements->stateMediaEnabled(fresh: true)) {
+        if (! $this->entitlements->stateMediaEnabled(fresh: true)
+            || ($row !== null && ($row->isPose() || $row->isPhase()) && ! $this->entitlements->phaseClipsEnabled(fresh: true))) {
             return false;
         }
 

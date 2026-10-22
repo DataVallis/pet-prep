@@ -68,8 +68,10 @@ use App\Services\AppSettingsService;
  * uses state media also gets the PHASE clips of the school (per command and
  * phase — only with training on) and of its game (dog: ball, cat: wand) —
  * {@see phaseClipsFor()} — and the POSE images those clips start / end in
- * ({@see posesFor()}). Same rule as the key images: the paid full set, version 2,
- * the switch on; existing pets get nothing automatically.
+ * ({@see posesFor()}). Same rule as the key images: the paid full set, version 3,
+ * the state media switch on — plus their own superadmin switch »School & game
+ * clips« ({@see phaseClipsEnabled()}, QA M2); existing pets get nothing automatically
+ * (a v2 pet only on a purchase or the admin upgrade, David 2026-10-21).
  */
 class MediaEntitlementService
 {
@@ -82,6 +84,16 @@ class MediaEntitlementService
     public function stateMediaEnabled(bool $fresh = false): bool
     {
         return $this->settings->stateMedia($fresh);
+    }
+
+    /**
+     * M5-T09 / T10 (QA M2): the superadmin switch »School & game clips« (`app_settings.phase_clips`,
+     * default on). Off = no pose image / phase clip is generated (nothing already queued either)
+     * and readiness / the app payload use the M5-T08 rules.
+     */
+    public function phaseClipsEnabled(bool $fresh = false): bool
+    {
+        return $this->settings->phaseClips($fresh);
     }
 
     /**
@@ -209,15 +221,17 @@ class MediaEntitlementService
 
     /**
      * M5-T09 / T10: the phase clips of the pet in queue order (config
-     * media.state_media.phase_clips: school, then the games). A group only where the
+     * media.state_media.phase_clips: the games, then the school — QA m1). A group only where the
      * pet can use it: school = training on (dogs), ball = a dog, wand = a cat.
-     * [] without state media.
+     * [] without state media or with the »School & game clips« switch off (QA M2).
+     * The single source of the generation, preparation, game readiness and the app
+     * payload's `phase_groups` (QA m2), so server and app always agree.
      *
      * @return list<PetPhaseClip>
      */
     public function phaseClipsFor(Pet $pet): array
     {
-        if (! $this->usesStateMedia($pet)) {
+        if (! $this->phaseClipsEnabled() || ! $this->usesStateMedia($pet)) {
             return [];
         }
 
@@ -225,8 +239,8 @@ class MediaEntitlementService
     }
 
     /**
-     * The phase clips of the pet's state media set, independent of the switch (the
-     * payload / readiness: switching off never changes what a pet is shown or needs).
+     * The phase clips the pet's state media set has (version 3, profiled, full set, its
+     * species / training), independent of the switches — the admin panel's view.
      *
      * @return list<PetPhaseClip>
      */

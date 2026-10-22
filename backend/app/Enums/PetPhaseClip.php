@@ -11,11 +11,12 @@ use InvalidArgumentException;
  * its last frame — never looped into another action.
  *
  * - School (dog, per TrainingCommand): attention (waits for the command) →
- *   performing (does it) → success (holds the position). Phases are Claude's
- *   proposal (spec (D), DECISIONS 2026-10-21).
+ *   performing (does it) → success (holds the position); a cue it ignores = the
+ *   standing pose; potty = the dog goes to the door (David approved 2026-10-21).
  * - Ball game (dog): waiting → running (out of frame after the ball) → fetching (back).
  * - Wand game (cat): stalking (into the crouch) → pouncing (leaps, lands back in the
  *   crouch — repeatable) → catching (from the crouch, ends holding the catch).
+ *   Ball and wand phases approved by David 2026-10-21 (ball airtime 6 s OK).
  *
  * Start / end frame = pose images: null = the stage's reference image (the
  * standing / idle pose), else a PetPose image (pet_media kind `pose`). The
@@ -85,11 +86,6 @@ enum PetPhaseClip: string
         $parts = explode('_', $this->value);
 
         return (string) end($parts);
-    }
-
-    public static function school(TrainingCommand $command, string $phase): self
-    {
-        return self::from("school_{$command->value}_{$phase}");
     }
 
     /** The pose the command ends in (performing → end, success → start and end). */

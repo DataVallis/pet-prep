@@ -29,14 +29,21 @@ use Illuminate\Support\Collection;
  *   never will: its games use the drawn stage and are always ready.
  *
  * - M5-T10 (APP_REFINEMENT_SPEC §10 long term): a pet that gets phase clips
- *   (MediaEntitlementService::phaseClipsFor — state media version 2, the switch
- *   on) needs the PHASE clips of its game instead (`media.game_phase_groups`:
- *   play → ball (dog; a cat's play is cuddles only → the old list), wand → wand).
- *   Every other pet (v1, free set, switch off) keeps the list above — the
- *   switch off never leaves a game disabled for clips that will not come.
+ *   (MediaEntitlementService::phaseClipsFor — state media version 3, both
+ *   switches on) needs the PHASE clips of its game (`media.game_phase_groups`:
+ *   play → ball (dog), wand → wand). `play` keeps its list above as well (QA m1:
+ *   the cuddles share the stage and play the `playing` loop) — a cat's play has
+ *   no phase group, so it keeps the list above only. Every other pet (v1, v2,
+ *   free set, a switch off) keeps the list above — a switch off never leaves a
+ *   game disabled for clips that will not come.
+ * - QA m1: a phase clip of the game — or a pose image it is made from — that
+ *   FAILED (any reason) never blocks the game: the game falls back to the list
+ *   above (the app shows the phase's pose image for the missing clip, §0 rule 1).
+ *   Pending / running ones are waited for (they are queued before the school).
  * - M5-T09: `school` = every school phase clip of the pet (§3: school readiness
  *   = all its clips). Not a start condition — practice works without clips; the
- *   app shows the pose and »Šola se še pripravlja« while preparation runs.
+ *   app shows the poses and »Šola se še pripravlja« while they are on their way
+ *   (`preparation.school_pending`).
  *
  * Pure read; no personal data.
  */
@@ -74,12 +81,12 @@ class GameMediaReadiness
      */
     public function missing(Pet $pet, string $game, ?Collection $slots = null): array
     {
-        $required = $this->requiredClips($pet, $game);
+        $slots ??= $pet->relationLoaded('media') ? $pet->getRelation('media') : $pet->media()->get();
+
+        $required = $this->requiredClips($pet, $game, $slots);
         if ($required === []) {
             return [];
         }
-
-        $slots ??= $pet->relationLoaded('media') ? $pet->getRelation('media') : $pet->media()->get();
 
         $image = $slots->first(fn (PetMedia $m) => $m->isImage());
         // M5-T06: not "no image row" — the birth (queueStateVideos) creates a pending
@@ -97,26 +104,62 @@ class GameMediaReadiness
     }
 
     /**
-     * The clips $game shows for this pet: the configured list ∩ the pet's entitled states.
+     * The clips $game shows for this pet: the configured list ∩ the pet's entitled states —
+     * for a pet with the game's phase clips those phase clips (+ the list for `play`).
      *
+     * @param  Collection<int, PetMedia>|null  $slots  the pet's media rows when already loaded
      * @return list<string>
      */
-    public function requiredClips(Pet $pet, string $game): array
+    public function requiredClips(Pet $pet, string $game, ?Collection $slots = null): array
     {
-        // M5-T10: the game's phase clips for a pet that gets them (v2, switch on).
+        $entitled = array_map(fn (PetStateEnum $s) => $s->value, $this->entitlements->videoStatesFor($pet));
+        $classic = array_values(array_unique(array_intersect(array_map('strval', (array) config("media.game_clips.{$game}", [])), $entitled)));
+
+        // M5-T10: the game's phase clips for a pet that gets them (v3, both switches on).
         $groups = array_map('strval', (array) config("media.game_phase_groups.{$game}", []));
-        $phases = array_values(array_map(fn (PetPhaseClip $c) => $c->value, array_filter(
+        $clips = array_values(array_filter(
             $this->entitlements->phaseClipsFor($pet),
             fn (PetPhaseClip $c) => in_array($c->group(), $groups, true),
-        )));
+        ));
 
-        if ($phases !== [] || $game === self::SCHOOL) {
-            return $phases;
+        if ($clips === []) {
+            return $game === self::SCHOOL ? [] : $classic;
         }
 
-        $entitled = array_map(fn (PetStateEnum $s) => $s->value, $this->entitlements->videoStatesFor($pet));
-        $clips = array_map('strval', (array) config("media.game_clips.{$game}", []));
+        // QA m1: a failed phase clip / pose of the game → the older rules (never blocked forever).
+        if ($game !== self::SCHOOL && $this->phaseFailed($pet, $clips, $slots)) {
+            return $classic;
+        }
 
-        return array_values(array_unique(array_intersect($clips, $entitled)));
+        $phases = array_map(fn (PetPhaseClip $c) => $c->value, $clips);
+
+        return match ($game) {
+            self::SCHOOL, self::WAND => $phases,
+            // QA m1: the cuddles share the play stage and play the `playing` loop.
+            default => array_values(array_unique([...$phases, ...$classic])),
+        };
+    }
+
+    /**
+     * QA m1: has one of these phase clips — or a pose image one of them is made from — failed?
+     *
+     * @param  list<PetPhaseClip>  $clips
+     * @param  Collection<int, PetMedia>|null  $slots
+     */
+    private function phaseFailed(Pet $pet, array $clips, ?Collection $slots): bool
+    {
+        $slots ??= $pet->relationLoaded('media') ? $pet->getRelation('media') : $pet->media()->get();
+        $values = array_map(fn (PetPhaseClip $c) => $c->value, $clips);
+        $poses = [];
+        foreach ($clips as $clip) {
+            foreach ([$clip->startPose(), $clip->endPose()] as $pose) {
+                if ($pose !== null) {
+                    $poses[] = $pose->value;
+                }
+            }
+        }
+
+        return $slots->contains(fn (PetMedia $m) => $m->status === PetMedia::STATUS_FAILED && ! $m->isServable()
+            && (($m->isPhase() && in_array($m->state, $values, true)) || ($m->isPose() && in_array($m->state, $poses, true))));
     }
 }

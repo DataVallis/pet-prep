@@ -132,9 +132,10 @@ class PetPreparationService
             // M5-T08: transition clips come after every state video (key images are not
             // items of their own — a loop waits for its key image).
             ...array_map(fn (PetTransition $t) => $t->value, $this->entitlements->transitionsFor($pet)),
-            // M5-T09 / T10 (§13): then the school and game phase clips (pose images are not
-            // items of their own — a clip waits for its poses).
-            ...array_map(fn (PetPhaseClip $c) => $c->value, $this->entitlements->phaseClipsFor($pet)),
+            // M5-T09 / T10 (QA m6): NOT the school / game phase clips — the preparation (and its
+            // »… je pripravljen« push within PUSH_MAX_HOURS) ends with the first-minutes set and
+            // the transitions as before; the games wait with `media_ready`, the school with
+            // `school_pending` ({@see schoolPending()}).
         ];
     }
 
@@ -158,11 +159,9 @@ class PetPreparationService
         $inProgress = [];
         foreach ($this->expectedKeys($pet) as $key) {
             $transition = PetTransition::tryFrom($key);
-            $clip = PetPhaseClip::tryFrom($key);
             $slot = match (true) {
                 $key === self::IMAGE => $image,
                 $transition !== null => $slots->first(fn (PetMedia $m) => $m->isTransition() && $m->state === $key),
-                $clip !== null => $slots->first(fn (PetMedia $m) => $m->isPhase() && $m->state === $key),
                 default => $slots->first(fn (PetMedia $m) => $m->isVideo() && $m->state === $key),
             };
 
@@ -174,12 +173,10 @@ class PetPreparationService
             // M5-T08: a loop / transition whose key image failed waits for the daily retry too.
             $poses = match (true) {
                 $transition !== null => [$transition->fromState()->value, $transition->toState()->value],
-                $clip !== null => array_values(array_filter([$clip->startPose()?->value, $clip->endPose()?->value])),
                 $key === self::IMAGE => [],
                 default => [$key],
             };
-            $keyFailed = $slots->contains(fn (PetMedia $m) => $m->isPoseStill() && in_array($m->state, $poses, true) && $m->status === PetMedia::STATUS_FAILED
-                && ($clip !== null ? $m->isPose() : $m->isKeyframe()));
+            $keyFailed = $slots->contains(fn (PetMedia $m) => $m->isKeyframe() && in_array($m->state, $poses, true) && $m->status === PetMedia::STATUS_FAILED);
 
             $failed = $slot?->status === PetMedia::STATUS_FAILED
                 || $keyFailed
@@ -204,7 +201,36 @@ class PetPreparationService
             running: $active,
             readyAt: $pet->preparation_ready_at?->copy()->utc()->toIso8601String(),
             announce: $this->announces($pet),
+            schoolPending: ! $nothingComing && $this->schoolPending($pet, $slots),
         );
+    }
+
+    /**
+     * M5-T09 (QA m6): a school phase clip of the pet — or a pose image it is made from — is
+     * still on its way (not stored, not failed). The app then shows the poses and »Šola se še
+     * pripravlja«; practice works as always. Not part of the preparation (no wait, no push).
+     *
+     * @param  Collection<int, PetMedia>  $slots
+     */
+    public function schoolPending(Pet $pet, Collection $slots): bool
+    {
+        foreach ($this->entitlements->phaseClipsFor($pet) as $clip) {
+            if ($clip->group() !== PetPhaseClip::GROUP_SCHOOL) {
+                continue;
+            }
+            $slot = $slots->first(fn (PetMedia $m) => $m->isPhase() && $m->state === $clip->value);
+            if ($slot?->isServable()) {
+                continue;
+            }
+            $poses = array_values(array_filter([$clip->startPose()?->value, $clip->endPose()?->value]));
+            $failed = $slot?->status === PetMedia::STATUS_FAILED
+                || $slots->contains(fn (PetMedia $m) => $m->isPose() && in_array($m->state, $poses, true) && $m->status === PetMedia::STATUS_FAILED && ! $m->isServable());
+            if (! $failed) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**

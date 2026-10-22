@@ -23,6 +23,7 @@ final class PreparationPayload
         public readonly bool $running,
         public readonly ?string $readyAt,
         public readonly bool $announce = false,
+        public readonly bool $schoolPending = false,
     ) {}
 
     /**
@@ -34,7 +35,7 @@ final class PreparationPayload
     }
 
     /**
-     * @return array{ready: bool, pending: list<string>, preparing: bool, running: bool, ready_at: string|null, announce: bool}
+     * @return array{ready: bool, pending: list<string>, preparing: bool, running: bool, ready_at: string|null, announce: bool, school_pending: bool}
      */
     public function toArray(): array
     {
@@ -44,10 +45,11 @@ final class PreparationPayload
             'ready' => $this->ready,
             /**
              * What is not stored yet, in the order it is made: `image` (the pose), then video
-             * states (idle, sleeping, hungry, playing, …), transitions, then (M5-T09 / T10) the school
-             * and game phase clips. Empty when ready.
+             * states (idle, sleeping, hungry, playing, …), then the transitions. Empty when ready.
+             * Never the school / game phase clips (QA m6): games report `media_ready`, the school
+             * `school_pending`.
              *
-             * @var list<'image'|'idle'|'sleeping'|'low_energy'|'hungry'|'sick'|'playing'|'accident'|'chewing'|'scratching'|'idle_to_sleeping'|'sleeping_to_idle'|'school_sit_attention'|'school_sit_performing'|'school_sit_success'|'school_come_attention'|'school_come_performing'|'school_come_success'|'school_place_attention'|'school_place_performing'|'school_place_success'|'school_potty_attention'|'school_potty_performing'|'school_potty_success'|'ball_waiting'|'ball_running'|'ball_fetching'|'wand_stalking'|'wand_pouncing'|'wand_catching'>
+             * @var list<'image'|'idle'|'sleeping'|'low_energy'|'hungry'|'sick'|'playing'|'accident'|'chewing'|'scratching'|'idle_to_sleeping'|'sleeping_to_idle'>
              */
             'pending' => $this->pending,
             // Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
@@ -64,6 +66,10 @@ final class PreparationPayload
             // ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
             // once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
             'announce' => $this->announce,
+            // M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
+            // failed) — the app shows the poses and »Šola se še pripravlja«; practice works.
+            // Independent of `running`: the school clips come after the preparation ended.
+            'school_pending' => $this->schoolPending,
         ];
     }
 }

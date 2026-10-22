@@ -39,6 +39,12 @@ use InvalidArgumentException;
  * superadmin panel; on from the start) = {enabled: bool}: state key images,
  * seamless loops and transitions (MediaEntitlementService::usesStateMedia).
  * No row → env AI_STATE_MEDIA_ENABLED (default true).
+ *
+ * `phase_clips` (M5-T09 / T10 QA M2, David 2026-10-21: product switches in the
+ * superadmin panel; on from the start — the phases are approved) = {enabled: bool}:
+ * school and game phase clips + their pose images (MediaEntitlementService::
+ * phaseClipsFor). Needs state media on as well. No row → env AI_PHASE_CLIPS_ENABLED
+ * (default true).
  */
 class AppSettingsService
 {
@@ -62,6 +68,9 @@ class AppSettingsService
 
     /** M5-T08b: `{enabled: bool}` — state media on / off (no row → env default, on). */
     public const STATE_MEDIA_KEY = 'state_media';
+
+    /** M5-T09 / T10 (QA M2): `{enabled: bool}` — school & game phase clips on / off (no row → env default, on). */
+    public const PHASE_CLIPS_KEY = 'phase_clips';
 
     public const AI_LAB_MAX_DAILY_USD = 200.0;
 
@@ -334,6 +343,47 @@ class AppSettingsService
     public static function stateMediaDefault(): bool
     {
         return (bool) config('media.state_media.enabled', true);
+    }
+
+    /**
+     * M5-T09 / T10 (QA M2): school and game phase clips (+ their pose images) on (default)
+     * or off. Off: no pose image / phase clip is generated — also nothing already queued,
+     * retried or swept — and readiness / the app payload use the M5-T08 (v2) rules.
+     * `$fresh` reads the row itself (the fal entry points). No row → env
+     * AI_PHASE_CLIPS_ENABLED (`media.state_media.phase_clips_enabled`, default true).
+     */
+    public function phaseClips(bool $fresh = false): bool
+    {
+        /** @var array{enabled?: bool} $value */
+        $value = $fresh
+            ? (AppSetting::find(self::PHASE_CLIPS_KEY)?->value ?? [])
+            : Cache::remember(self::cacheKey(self::PHASE_CLIPS_KEY), self::CACHE_TTL_SECONDS,
+                fn (): array => AppSetting::find(self::PHASE_CLIPS_KEY)?->value ?? []);
+
+        return array_key_exists('enabled', $value)
+            ? (bool) $value['enabled']
+            : self::phaseClipsDefault();
+    }
+
+    /**
+     * Save the phase clips switch (superadmin), audit it and bust the cache. Off → on
+     * resumes what waited while it was off (the same job as the state media switch).
+     */
+    public function updatePhaseClips(User $actor, bool $enabled): void
+    {
+        $wasOn = $this->phaseClips(fresh: true);
+
+        $this->store($actor, self::PHASE_CLIPS_KEY, ['enabled' => $enabled], ['enabled' => self::phaseClipsDefault()]);
+
+        if ($enabled && ! $wasOn) {
+            ResumeStateMedia::dispatch();
+        }
+    }
+
+    /** The value "no row" stands for (env AI_PHASE_CLIPS_ENABLED, default on). */
+    public static function phaseClipsDefault(): bool
+    {
+        return (bool) config('media.state_media.phase_clips_enabled', true);
     }
 
     /** Equal settings values, ignoring the key order of (nested) arrays. */

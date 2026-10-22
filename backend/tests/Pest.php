@@ -391,7 +391,7 @@ function useStateMedia(bool $on = true): void
  *
  * @param  list<string>  $groups
  */
-function usePhaseClips(bool $on = true, array $groups = ['school', 'ball', 'wand']): void
+function usePhaseClips(bool $on = true, array $groups = ['ball', 'wand', 'school']): void
 {
     config(['media.state_media.phase_clips' => $on ? $groups : []]);
 }
