@@ -20,9 +20,11 @@ use App\Services\FamilyService;
 use App\Services\Media\FalGateway;
 use App\Services\Media\MediaEntitlementService;
 use App\Services\Media\PetMediaService;
+use App\Services\Media\ReferenceImageRetryService;
 use App\Services\Media\StateMediaUpgradePlanner;
 use App\Services\PairingService;
 use App\Services\Results\PetProfileChoice;
+use Carbon\CarbonImmutable;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
@@ -166,8 +168,8 @@ function buPlanner(): StateMediaUpgradePlanner
 function buUpgradeAll(?User $admin = null, bool $onlyComplete = false): array
 {
     $p = buPlanner()->preview(onlyComplete: $onlyComplete);
-    $ids = array_merge([], ...array_map(fn (array $g) => $g['pet_ids'], $p['groups']));
-    buPlanner()->upgrade($admin ?? buAdmin(), $ids, ['only_complete' => $onlyComplete], $p['cost_usd']);
+    buPlanner()->upgrade($admin ?? buAdmin(), ['only_complete' => $onlyComplete], $p['pet_ids'], $p['cost_usd']);
+    Cache::lock(StateMediaUpgradePlanner::LOCK_KEY)->forceRelease();
     buCompleteClips();
 
     return $p;
@@ -226,9 +228,10 @@ describe('preview (no spend)', function () {
 
         $b = buPlanner()->preview()['budget'];
 
-        // the set-up already spent today's 2 $: 5.79 $ at 2 $ / day = today (0 $ left) + 3 more days
+        // the set-up already spent today's 2 $: today does not count (0 $ left), 5.79 $ at 2 $ / day = 3 days
         expect($b['left_today_usd'])->toBe(0.0)
-            ->and($b['days'])->toBe(4)
+            ->and($b['today_share_percent'])->toBeNull()
+            ->and($b['days'])->toBe(3)
             ->and($b['fits_today'])->toBeFalse()
             ->and($b['daily_cap_usd'])->toBe(2.0);
 
@@ -316,9 +319,9 @@ describe('upgrade', function () {
 
         // a chunk queued before the switch went off moves nothing either
         Queue::fake([UpgradePetsToStateMedia::class]);
-        expect(buPlanner()->upgrade(buAdmin(), [$pet->id], [], 5.79))->toBe(0);
+        expect(buPlanner()->upgrade(buAdmin(), [], [$pet->id], 5.79))->toMatchArray(['status' => 'blocked', 'reason' => 'state_media_off']);
         Queue::assertNothingPushed();
-        expect(buPlanner()->upgradeChunk([$pet->id]))->toBe(0)
+        expect(buPlanner()->upgradeChunk([$pet->id]))->toBe(['done' => 0, 'skipped' => 1, 'failed' => 0])
             ->and(buCalls())->toBe($calls)
             ->and($pet->fresh()->state_media_version)->toBe(2);
     });
@@ -352,7 +355,7 @@ describe('upgrade', function () {
 
         $ids = [$unpaid->id, $over->id, $unborn->id, $legacy->id, $current->id];
         expect(buPlanner()->preview()['eligible'])->toBe(0)
-            ->and(buPlanner()->upgradeChunk($ids))->toBe(0)
+            ->and(buPlanner()->upgradeChunk($ids))->toBe(['done' => 0, 'skipped' => 5, 'failed' => 0])
             ->and(buCalls())->toBe($calls);
 
         foreach ([$unpaid, $over, $unborn, $legacy] as $pet) {
@@ -407,8 +410,203 @@ describe('admin page', function () {
         $pet = buExistingPet();
         $ids = array_merge([$pet->id], range(900001, 900000 + StateMediaUpgradePlanner::CHUNK));
 
-        buPlanner()->upgrade(buAdmin(), $ids, [], 1.0);
+        buPlanner()->dispatchChunks($ids);
 
         Queue::assertPushed(UpgradePetsToStateMedia::class, 2);
+    });
+});
+
+describe('QA round (#344)', function () {
+    it('M1: a pet that became eligible after the confirmation opened → refused »numbers changed«, nothing queued', function () {
+        $a = buExistingPet();
+        $admin = buAdmin();
+        $this->actingAs($admin);
+        Queue::fake([UpgradePetsToStateMedia::class]);
+
+        $page = Livewire::test(StateMediaUpgrade::class)->mountAction('upgrade')
+            ->assertSee('1 pet(s) in 1 look(s), estimated $5.79');
+        $frozen = $page->get('confirmed');
+        expect($frozen['pet_ids'])->toBe([$a->id]);
+
+        buExistingPet(); // a new eligible pet of the same look (0 $ more — the look is shared)
+
+        $page->callMountedAction()->assertNotified('Numbers changed, check again');
+
+        Queue::assertNothingPushed();
+        expect(AppSettingChange::where('key', StateMediaUpgradePlanner::AUDIT_KEY)->exists())->toBeFalse()
+            ->and($a->fresh()->state_media_version)->toBe(2);
+    });
+
+    it('M1: a tampered confirmation (more pet ids than were shown) is refused', function () {
+        $a = buExistingPet();
+        $b = buExistingPet();
+        $this->actingAs(buAdmin());
+        Queue::fake([UpgradePetsToStateMedia::class]);
+
+        $page = Livewire::test(StateMediaUpgrade::class)->mountAction('upgrade');
+        $page->set('confirmed.pet_ids', [$a->id, $b->id, 999999])->callMountedAction()->assertNotified('Numbers changed, check again');
+
+        Queue::assertNothingPushed();
+    });
+
+    it('M1: a total above the shown one is refused; a smaller set queues only the intersection', function () {
+        $a = buExistingPet();
+        $b = buExistingPet();
+        Queue::fake([UpgradePetsToStateMedia::class]);
+
+        expect(buPlanner()->upgrade(buAdmin(), [], [$a->id, $b->id], 1.00))->toMatchArray(['status' => 'changed'])
+            ->and(buPlanner()->upgrade(buAdmin(), [], [$a->id], BU_V2_TO_V3_DOG_USD))->toMatchArray(['status' => 'changed']);
+        Queue::assertNothingPushed();
+
+        // $b left the eligible set (game over) after the preview: only $a is queued
+        $b->forceFill(['is_game_over' => true])->saveQuietly();
+        $r = buPlanner()->upgrade(buAdmin(), [], [$a->id, $b->id], BU_V2_TO_V3_DOG_USD);
+
+        expect($r)->toMatchArray(['status' => 'queued', 'pets' => 1]);
+        Queue::assertPushed(UpgradePetsToStateMedia::class, fn ($job) => $job->petIds === [$a->id] && $job->onlyComplete === false);
+        $audit = AppSettingChange::where('key', StateMediaUpgradePlanner::AUDIT_KEY)->sole()->new;
+        expect($audit)->toMatchArray(['pets' => 1, 'shown_pets' => 2, 'recomputed_pets' => 1, 'pet_ids' => [$a->id]])
+            ->and((float) $audit['estimate_usd'])->toBe(BU_V2_TO_V3_DOG_USD)
+            ->and((float) $audit['recomputed_usd'])->toBe(BU_V2_TO_V3_DOG_USD);
+    });
+
+    it('M1: »only complete« chunks skip a pet whose fresh plan costs money', function () {
+        $paying = buExistingPet(version: 2, breed: 'beagle', colour: 'tricolour');
+        $calls = buCalls();
+
+        expect(buPlanner()->upgradeChunk([$paying->id], onlyComplete: true))->toBe(['done' => 0, 'skipped' => 1, 'failed' => 0])
+            ->and(buCalls())->toBe($calls)
+            ->and($paying->fresh()->state_media_version)->toBe(2);
+    });
+
+    it('m6: a double submission is refused while the lock holds', function () {
+        $a = buExistingPet();
+        Queue::fake([UpgradePetsToStateMedia::class]);
+
+        expect(buPlanner()->upgrade(buAdmin(), [], [$a->id], BU_V2_TO_V3_DOG_USD)['status'])->toBe('queued')
+            ->and(buPlanner()->upgrade(buAdmin(), [], [$a->id], BU_V2_TO_V3_DOG_USD)['status'])->toBe('busy');
+        Queue::assertPushed(UpgradePetsToStateMedia::class, 1);
+    });
+
+    it('M2: a pet whose image is behind its life stage is priced with the full set of its new stage — preview = real spend', function () {
+        $pet = buExistingPet();
+        $pet->forceFill(['life_stage' => LifeStage::Adult])->saveQuietly();
+
+        $p = buPlanner()->preview();
+        $g = $p['groups'][0];
+        expect($g)->toMatchArray(['stage' => 'adult', 'stage_remake' => 1])
+            ->and($g['items']['image'])->toBe(1)
+            ->and($g['items']['keyframes'])->toBeGreaterThan(0)
+            ->and($g['items']['loops'])->toBeGreaterThan(0)
+            ->and($g['items']['phases'])->toBe(15)
+            ->and($p['cost_usd'])->toBeGreaterThan(BU_V2_TO_V3_DOG_USD);
+
+        $spent = buSpent();
+        buUpgradeAll();
+
+        expect(round(buSpent() - $spent, 2))->toBe($p['cost_usd'])
+            ->and($pet->fresh()->state_media_version)->toBe(MediaEntitlementService::CURRENT_MEDIA_VERSION);
+    });
+
+    it('m8: a version 1 pet — preview = real spend', function () {
+        $pet = buExistingPet(version: 1);
+
+        $p = buPlanner()->preview();
+        expect($p['cost_usd'])->toBeGreaterThan(BU_V2_TO_V3_DOG_USD);
+
+        $spent = buSpent();
+        buUpgradeAll();
+
+        expect(round(buSpent() - $spent, 2))->toBe($p['cost_usd'])
+            ->and($pet->fresh()->state_media_version)->toBe(MediaEntitlementService::CURRENT_MEDIA_VERSION);
+    });
+
+    it('m8: unique-media pets — preview = real spend', function () {
+        useUniquePetMedia(true);
+        buExistingPet();
+        buExistingPet();
+
+        $p = buPlanner()->preview();
+        $spent = buSpent();
+        buUpgradeAll();
+
+        expect($p['cost_usd'])->toBe(round(2 * BU_V2_TO_V3_DOG_USD, 2))
+            ->and(round(buSpent() - $spent, 2))->toBe($p['cost_usd']);
+    });
+
+    it('m1: an exhausted fal balance blocks the preview and the upgrade', function () {
+        $pet = buExistingPet();
+        Cache::put(FalGateway::BALANCE_FLAG_KEY, now()->toIso8601String());
+        Queue::fake([UpgradePetsToStateMedia::class]);
+
+        expect(buPlanner()->preview()['blocked'])->toBe('fal_balance')
+            ->and(buPlanner()->upgrade(buAdmin(), [], [$pet->id], BU_V2_TO_V3_DOG_USD))->toMatchArray(['status' => 'blocked', 'reason' => 'fal_balance']);
+        Queue::assertNothingPushed();
+        $this->actingAs(buAdmin())->get('/admin/state-media-upgrade')->assertSee('The fal.ai balance is flagged as exhausted');
+    });
+
+    it('m3: a pet whose queueing fails is rolled back to its media version; the others go on', function () {
+        $a = buExistingPet();
+        $b = buExistingPet();
+        $ctor = (new ReflectionClass(PetMediaService::class))->getConstructor();
+        $media = Mockery::mock(PetMediaService::class, array_map(fn (ReflectionParameter $p) => app($p->getType()->getName()), $ctor->getParameters()))->makePartial();
+        $media->shouldReceive('generateMissing')->andReturnUsing(function (Pet $pet) use ($a) {
+            $pet->forceFill(['state_media_version' => MediaEntitlementService::CURRENT_MEDIA_VERSION])->saveQuietly();
+            if ($pet->id === $a->id) {
+                throw new RuntimeException('queue down');
+            }
+
+            return ['image' => false, 'videos' => 0];
+        });
+        app()->instance(PetMediaService::class, $media);
+
+        expect(app(StateMediaUpgradePlanner::class)->upgradeChunk([$a->id, $b->id]))->toBe(['done' => 1, 'skipped' => 0, 'failed' => 1])
+            ->and($a->fresh()->state_media_version)->toBe(2)
+            ->and($b->fresh()->state_media_version)->toBe(MediaEntitlementService::CURRENT_MEDIA_VERSION);
+    });
+
+    it('M3: the console real run queues exactly the dry run (same pets, same spend, audited)', function () {
+        buExistingPet();
+        buExistingPet();
+        $calls = buCalls();
+        $spent = buSpent();
+
+        $this->artisan('media:backfill', ['--state-media' => true, '--dry-run' => true, '--limit' => 1])
+            ->expectsOutputToContain('2 pet(s) in 1 look(s) (0 already complete), estimated $5.79 (all 2 eligible; --limit is ignored)')
+            ->assertSuccessful();
+        expect(buCalls())->toBe($calls);
+
+        $this->artisan('media:backfill', ['--state-media' => true, '--limit' => 1])
+            ->expectsOutputToContain('Queued the state media upgrade of 2 pet(s), estimated $5.79')
+            ->assertSuccessful();
+        buCompleteClips();
+
+        $audit = AppSettingChange::where('key', StateMediaUpgradePlanner::AUDIT_KEY)->sole();
+        expect(round(buSpent() - $spent, 2))->toBe(BU_V2_TO_V3_DOG_USD)
+            ->and($audit->user_id)->toBeNull()
+            ->and($audit->new['filters']['source'])->toBe('console')
+            ->and(buPlanner()->preview()['pets'])->toBe(0);
+    });
+
+    it('m5: the days estimate stops at the monthly cap and resumes on the 1st; confirmation shows today\'s share', function () {
+        $this->travelTo(CarbonImmutable::parse('2026-10-30 12:00:00', 'UTC'));
+        buExistingPet();
+        AiSpendLedger::query()->delete(); // nothing spent yet today / this month
+        config(['media.budget.daily_usd' => 2.0, 'media.budget.monthly_usd' => 3.0]);
+
+        // Oct 30: 2 $ · Oct 31: 1 $ (month cap) · Nov 1: 2 $ · Nov 2: 0.79 $
+        $b = buPlanner()->preview()['budget'];
+        expect($b['days'])->toBe(4)
+            ->and($b['today_usd'])->toBe(2.0)
+            ->and($b['today_share_percent'])->toBe(100)
+            ->and($b['over_month'])->toBeTrue();
+
+        config(['media.budget.daily_usd' => 20.0, 'media.budget.monthly_usd' => 100.0]);
+        expect(buPlanner()->preview()['budget'])->toMatchArray(['days' => 1, 'today_share_percent' => 29, 'today_usd' => 5.79]);
+
+        // 100 $ in 100 slots (1 $ each): the nightly retry is not the limit — today 20 $ + 4 × 20 $
+        expect(buPlanner()->budgetFor(100.0, ReferenceImageRetryService::DEFAULT_LIMIT))->toMatchArray(['days' => 5])
+            // 100 $ in 10 × DEFAULT_LIMIT slots (0.10 $ each): one nightly retry re-queues 10 $ — today 20 $ + 8 × 10 $
+            ->and(buPlanner()->budgetFor(100.0, 10 * ReferenceImageRetryService::DEFAULT_LIMIT))->toMatchArray(['days' => 9]);
     });
 });

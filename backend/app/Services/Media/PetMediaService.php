@@ -1207,9 +1207,15 @@ class PetMediaService
      * M5-T09 / T10: `poses` / `phases` = the pose images and school / game phase clips
      * that would be made (3 s clips, priced per purpose).
      *
+     * M5-T16 (QA M2): `$stageRemake` prices a pet whose image is behind its life stage
+     * (`stage`) with the FULL set of its new stage — the stage image re-queues every clip /
+     * key image of the pet once it is stored, so all of them count (look rows that already
+     * exist at the new stage stay free). Default off: »Generate missing« / media:backfill
+     * keep listing only the stage image for such a pet.
+     *
      * @return array{image: 'ok'|'stage'|'in_flight'|'download'|'generate', videos: list<string>, keyframes: list<string>, transitions: list<string>, poses: list<string>, phases: list<string>, upgrade: bool, cost_usd: float}
      */
-    public function planMissing(Pet $pet, bool $upgradeStateMedia = false): array
+    public function planMissing(Pet $pet, bool $upgradeStateMedia = false, bool $stageRemake = false): array
     {
         // M5-T09 / T10: the upgrade also moves a version-2 pet to 3 (school / game phase clips).
         $upgrade = $upgradeStateMedia && (int) ($pet->state_media_version ?? 1) < MediaEntitlementService::CURRENT_MEDIA_VERSION && ! $pet->isLegacyProfile();
@@ -1217,7 +1223,8 @@ class PetMediaService
         $upgrade = $upgrade && $this->entitlements->usesStateMedia($planned);
         $planned = $upgrade ? $planned : $pet;
 
-        $slots = $pet->media()->get();
+        // M5-T16 (QA m7): the bulk preview eager-loads `media` for all eligible pets.
+        $slots = $pet->relationLoaded('media') ? $pet->media : $pet->media()->get();
         $image = $slots->first(fn (PetMedia $m) => $m->isImage());
         $legacyUrl = $pet->pet_dna['reference_image_url'] ?? null;
 
@@ -1229,7 +1236,9 @@ class PetMediaService
             default => 'generate',
         };
 
+        // A stage remake makes a new image generation: every stored clip of the pet is redone.
         $currentImageGeneration = $imageAction === 'ok' ? $image->generation : PHP_INT_MAX;
+        $remake = $stageRemake && $imageAction === 'stage';
         $loops = $this->entitlements->usesStateMedia($planned);
         $missing = fn (?PetMedia $slot, bool $recipeStale = false): bool => $slot === null
             || $slot->status === PetMedia::STATUS_FAILED
@@ -1241,7 +1250,7 @@ class PetMediaService
 
         // Unborn pets get no videos yet (they follow the first contract); a
         // stage image re-queues its videos itself once stored.
-        $later = $pet->isUnborn() || $imageAction === 'stage';
+        $later = $pet->isUnborn() || ($imageAction === 'stage' && ! $remake);
 
         foreach ($later ? [] : $this->entitlements->videoStatesFor($planned) as $state) {
             $slot = $slots->first(fn (PetMedia $m) => $m->isVideo() && $m->state === $state->value);

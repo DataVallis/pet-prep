@@ -16,6 +16,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 - 💼 Investitorji: stroški AI so predvidljivi — izračun pred porabo, enkraten strošek na videz, dnevna meja.
 - 👩 Starši: obstoječi ljubljenčki lahko dobijo nove posnetke brez dodatnega plačila, ko jih vključimo (*načrt*: po prvem pravem nakupu in preverjanju kakovosti).
 - 🛠 Tehnično: Laravel `StateMediaUpgradePlanner` (predogled po skupnem videzu, postavke brez dvojnega štetja), Filament stran, čakalna opravila po 25 ljubljenčkov, revizija v `app_setting_changes`; Pest dokazuje: predogled 0 klicev fal, 3 ljubljenčki istega videza → 20 klicev (5 poz + 15 posnetkov), ne 60.
+- 🔒 Neodvisni QA pregled: potrjeni znesek je zdaj meja — če se med potrditvijo pojavi nov ljubljenček ali znesek zraste, se nič ne uvrsti; Pest dokazuje, da je pravi strošek enak predogledu tudi za ljubljenčke prve različice, unikatne medije in ljubljenčke, ki so zrasli v novo obdobje. David: nadgradnja sme porabiti ves dnevni proračun, potrditev pokaže delež.
 
 ## 2026-10-22 — Opozorilo, ko ostane le še 20 % proračuna za AI (M5-T15)
 

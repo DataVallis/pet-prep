@@ -28,6 +28,9 @@ use Illuminate\Support\Facades\Log;
  */
 class ReferenceImageRetryService
 {
+    /** Media items one nightly `media:retry` re-queues at most (its `--limit` default; M5-T16 days estimate). */
+    public const DEFAULT_LIMIT = 100;
+
     /** Failures that resolve themselves once the budget / balance allows. */
     public const AUTO_RETRY_REASONS = [
         AiCallFailure::BudgetDaily,
@@ -131,7 +134,7 @@ class ReferenceImageRetryService
      *
      * @return array{images: int, stages: int, videos: int}
      */
-    public function retryDueWithVideos(int $limit = 100): array
+    public function retryDueWithVideos(int $limit = self::DEFAULT_LIMIT): array
     {
         if (! $this->fal->isEnabled() || FalGateway::balanceExhaustedAt() !== null) {
             return ['images' => 0, 'stages' => 0, 'videos' => 0];

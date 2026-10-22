@@ -15,22 +15,26 @@ use Illuminate\Queue\SerializesModels;
  * version 3 and its pipeline queued through PetMediaService::generateMissing — the media
  * jobs claim their (look) slots, go through FalGateway / AiSpendGuard and read both
  * superadmin switches fresh, so running a chunk twice never pays twice.
+ *
+ * QA m2: idempotent (a pet already on version 3 is no longer eligible) → 3 tries; the
+ * planner logs done / skipped / failed per chunk. QA M1: `onlyComplete` skips any pet whose
+ * fresh plan would cost money.
  */
 class UpgradePetsToStateMedia implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    public int $tries = 1;
+    public int $tries = 3;
 
     public int $timeout = 120;
 
     /**
      * @param  list<int>  $petIds
      */
-    public function __construct(public readonly array $petIds) {}
+    public function __construct(public readonly array $petIds, public readonly bool $onlyComplete = false) {}
 
     public function handle(StateMediaUpgradePlanner $planner): void
     {
-        $planner->upgradeChunk($this->petIds);
+        $planner->upgradeChunk($this->petIds, $this->onlyComplete);
     }
 }

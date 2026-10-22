@@ -30,6 +30,9 @@
                     · {{ __('admin.state_upgrade.over_month') }}
                 @endif
             </p>
+            @if ($p['budget']['today_share_percent'] !== null && $p['cost_usd'] > 0)
+                <p>{{ __('admin.state_upgrade.today_share', ['today' => sprintf('%.2f', $p['budget']['today_usd']), 'share' => $p['budget']['today_share_percent'].' %']) }}</p>
+            @endif
             @unless ($p['phase_clips'])
                 <p class="text-warning-600">{{ __('admin.state_upgrade.phase_clips_off') }}</p>
             @endunless
@@ -57,6 +60,9 @@
                                     <span class="text-gray-500">({{ __('admin.state_upgrade.unique', ['id' => $g['pet_id']]) }})</span>
                                 @else
                                     <span class="text-gray-500">(#{{ $g['look_id'] }})</span>
+                                @endif
+                                @if ($g['stage_remake'] > 0)
+                                    <span class="text-warning-600">· {{ __('admin.state_upgrade.stage_remake', ['pets' => $g['stage_remake']]) }}</span>
                                 @endif
                             </td>
                             <td class="py-1 pr-3">{{ $g['stage'] ?? '—' }}</td>

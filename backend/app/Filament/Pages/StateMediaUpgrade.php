@@ -42,6 +42,17 @@ class StateMediaUpgrade extends Page implements HasForms
     /** @var array<string, mixed>|null */
     public ?array $filters = [];
 
+    /**
+     * QA M1: the calculation the admin confirms — frozen (and signed) when the confirmation
+     * opens, so »Upgrade« can never queue more pets or money than the modal showed. Public
+     * Livewire state survives the round trip; the signature makes a tampered copy useless.
+     *
+     * @var array{filters: array<string, mixed>, pet_ids: list<int>, cost_usd: float, pets: int, looks: int, left_today_usd: float, today_usd: float, today_share_percent: int|null, days: int|null}|array{}
+     */
+    public array $confirmed = [];
+
+    public string $confirmedSignature = '';
+
     /** @var array<string, mixed>|null */
     private ?array $previewCache = null;
 
@@ -125,48 +136,97 @@ class StateMediaUpgrade extends Page implements HasForms
             ->visible(fn (): bool => static::canAccess())
             ->disabled(fn (): bool => $this->getPreview()['pets'] === 0 || $this->getPreview()['blocked'] !== null)
             ->requiresConfirmation()
+            ->mountUsing(fn () => $this->freezeConfirmation())
             ->modalHeading(__('admin.state_upgrade.confirm_heading'))
             ->modalDescription(function (): string {
-                $p = $this->getPreview();
+                $c = $this->confirmed;
+                if ($c === []) {
+                    return '';
+                }
 
                 return __('admin.state_upgrade.confirm', [
-                    'pets' => $p['pets'],
-                    'looks' => $p['looks'],
-                    'cost' => sprintf('%.2f', $p['cost_usd']),
-                    'left' => sprintf('%.2f', $p['budget']['left_today_usd']),
-                    'days' => $p['budget']['days'] ?? '∞',
+                    'pets' => $c['pets'],
+                    'looks' => $c['looks'],
+                    'cost' => sprintf('%.2f', $c['cost_usd']),
+                    'today' => sprintf('%.2f', $c['today_usd']),
+                    'left' => sprintf('%.2f', $c['left_today_usd']),
+                    'share' => $c['today_share_percent'] === null ? __('admin.state_upgrade.share_none') : $c['today_share_percent'].' %',
+                    'days' => $c['days'] ?? '∞',
                 ]);
             })
             ->modalSubmitActionLabel(__('admin.state_upgrade.upgrade'))
             ->action(fn () => $this->runUpgrade());
     }
 
+    /** QA M1: freeze the numbers the confirmation shows (fresh calculation at modal mount). */
+    protected function freezeConfirmation(): void
+    {
+        $this->previewCache = null;
+        $p = $this->getPreview();
+
+        $this->confirmed = [
+            'filters' => $this->currentFilters(),
+            'pet_ids' => $p['pet_ids'],
+            'cost_usd' => (float) $p['cost_usd'],
+            'pets' => $p['pets'],
+            'looks' => $p['looks'],
+            'left_today_usd' => (float) $p['budget']['left_today_usd'],
+            'today_usd' => (float) $p['budget']['today_usd'],
+            'today_share_percent' => $p['budget']['today_share_percent'],
+            'days' => $p['budget']['days'],
+        ];
+        $this->confirmedSignature = $this->sign($this->confirmed);
+    }
+
     protected function runUpgrade(): void
     {
         $this->authorizeAccess();
-        $planner = app(StateMediaUpgradePlanner::class);
+        $confirmed = $this->confirmed;
+        $valid = $confirmed !== [] && hash_equals($this->sign($confirmed), $this->confirmedSignature);
+        $this->confirmed = [];
+        $this->confirmedSignature = '';
         $this->previewCache = null;
-        $preview = $this->getPreview();
 
-        if (($reason = $planner->blockedReason(fresh: true)) !== null) {
-            Notification::make()->title(__('admin.state_upgrade.blocked.'.$reason))->warning()->send();
+        $result = $valid
+            ? app(StateMediaUpgradePlanner::class)->upgrade($this->admin(), $confirmed['filters'], $confirmed['pet_ids'], (float) $confirmed['cost_usd'])
+            : ['status' => 'changed', 'pets' => 0, 'cost_usd' => 0.0, 'reason' => null];
 
-            return;
-        }
+        $notification = match ($result['status']) {
+            'queued' => Notification::make()->title(__('admin.state_upgrade.queued'))->success()
+                ->body(__('admin.state_upgrade.queued_body', ['pets' => $result['pets'], 'cost' => sprintf('%.2f', $result['cost_usd'])])),
+            'changed' => Notification::make()->title(__('admin.state_upgrade.changed'))->danger(),
+            'blocked' => Notification::make()->title(__('admin.state_upgrade.blocked.'.$result['reason']))->warning(),
+            'busy' => Notification::make()->title(__('admin.state_upgrade.busy'))->warning(),
+            default => Notification::make()->title(__('admin.state_upgrade.nothing'))->warning(),
+        };
+        $notification->send();
+    }
 
-        $petIds = array_merge(...array_map(fn (array $g): array => $g['pet_ids'], $preview['groups'] ?: [['pet_ids' => []]]));
-        $queued = $planner->upgrade($this->admin(), $petIds, [
-            'species' => $this->filters['species'] ?? null,
-            'breed' => $this->filters['breed'] ?? null,
+    /** @return array{species: string|null, breed: string|null, only_complete: bool} */
+    private function currentFilters(): array
+    {
+        return [
+            'species' => Species::tryFrom((string) ($this->filters['species'] ?? ''))?->value,
+            'breed' => BreedType::tryFrom((string) ($this->filters['breed'] ?? ''))?->value,
             'only_complete' => (bool) ($this->filters['only_complete'] ?? false),
-        ], (float) $preview['cost_usd']);
-        $this->previewCache = null;
+        ];
+    }
 
-        Notification::make()
-            ->title($queued > 0 ? __('admin.state_upgrade.queued') : __('admin.state_upgrade.nothing'))
-            ->body(__('admin.state_upgrade.queued_body', ['pets' => $queued, 'cost' => sprintf('%.2f', $preview['cost_usd'])]))
-            ->status($queued > 0 ? 'success' : 'warning')
-            ->send();
+    /** @param  array<string, mixed>  $confirmed */
+    private function sign(array $confirmed): string
+    {
+        // Only what upgrade() acts on, normalised (Livewire turns 0.0 into 0 on the round trip).
+        $canonical = [
+            'filters' => [
+                'species' => $confirmed['filters']['species'] ?? null,
+                'breed' => $confirmed['filters']['breed'] ?? null,
+                'only_complete' => (bool) ($confirmed['filters']['only_complete'] ?? false),
+            ],
+            'pet_ids' => array_map('intval', (array) ($confirmed['pet_ids'] ?? [])),
+            'cost' => sprintf('%.2f', (float) ($confirmed['cost_usd'] ?? 0)),
+        ];
+
+        return hash_hmac('sha256', self::class.'|'.auth()->id().'|'.json_encode($canonical), (string) config('app.key'));
     }
 
     /**
