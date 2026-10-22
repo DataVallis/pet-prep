@@ -29209,6 +29209,468 @@
       }
     }
   },
+  "chesapeake_bay_retriever": {
+    "_note": "Added 2026-10-22 (M5-R10-56, unattended run — appended after the Wirehaired Pointing Griffon: AKC 2024 No. 52 'Chesapeake Bay Retriever', S174 full-list table as recorded on 2026-10-21 / 2026-10-22 ('51 Wirehaired Pointing Griffon', '52 Chesapeake Bay Retriever'; the AKC page was not re-fetched — refused by the fetch tool as not in provenance). Quotes as returned by the web-fetch tool on 2026-10-22 (short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S457–S462 (reused S8, S10, S11, S14, S24, S35, S45, S123, S174). No health percentages anywhere. RKC Breeds A–Z page 'Retriever (Chesapeake Bay)' (S459) reached: key facts, Breed Watch Category 1 and the health-testing list; no breed-specific temperament text. Identity from the FCI nomenclature (S457); appearance, heights and weights from the FCI standard No. 263 (S458, the KUSA copy of the FCI standard — the fci.be PDF was refused by the fetch tool as not in provenance). Lifespan: the Dogs Trust McMillan 2024 table (S123) could not be fetched on 2026-10-22 (refused as not in provenance; the paper on PMC returned a captcha) and no VetCompass median was found → RKC lower bound 'Over 10 years' (runbook order; Wirehaired Pointing Griffon precedent). Names: FCI / AKC / RKC 'Chesapeake Bay Retriever' / 'Retriever (Chesapeake Bay)'; nickname 'Chessie' (S461, S462); Slovenian: no Slovenian common name found (KZS not reachable) → »chesapeake bay retriver« (the English name with the Slovenian word 'retriver', open for David).",
+    "identity": {
+      "value": "FCI No. 263, Group 8 Section 1 (Retrievers), USA",
+      "unit": "—",
+      "source_id": "S457",
+      "quote": "CHESAPEAKE BAY RETRIEVER",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S457): number '263', group 'n°8 - Retrievers - Flushing Dogs - Water Dogs', section 'Retrievers' (section 1 of group 8; the page gives no section number), country of origin 'UNITED STATES OF AMERICA'; French 'RETRIEVER DE LA BAIE DE CHESAPEAKE'; English standard published 3/12/1999 (official valid standard 2/14/1995). 'USA' is already in FCI_ORIGINS (US). RKC 'Retriever (Chesapeake Bay)' (S459)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S459",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S459). FCI standard (S458): 'Size and substance should not be excessive as this is a working retriever of an active nature.'"
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            58,
+            66
+          ],
+          "female": [
+            53,
+            61
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S458",
+        "quote": "Males should measure 23 to 26 inches; (58 - 66cm).",
+        "confidence": "high",
+        "notes": "FCI standard No. 263 (S458, KUSA copy), Size; females 'Females should measure 21 to 24 inches; (53 - 61cm).' VCA (S460) '21 - 26 inches' and PetMD (S461) 21–26 inches — alternatives."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            29.5,
+            36.5
+          ],
+          "female": [
+            25,
+            32
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S458",
+        "quote": "Males should weigh 65 to 80 pounds (29,5-36,5kg).",
+        "confidence": "high",
+        "notes": "FCI standard No. 263 (S458, KUSA copy); females 'Females should weigh 55 to 70 pounds (25-32kg).' The game range 25–36.5 kg spans both sexes. VCA (S460) '55 - 80 pounds' and PetMD (S461) 55–80 pounds agree."
+      },
+      "salt_category": {
+        "value": "IV (15–<30 kg) / V (30–<40 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 25–36.5 kg spans the bands. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: FCI males 65–80 lb (S458) are 'Large (59–99 pounds)'; females 55–70 lb straddle Medium (24–59 lb: 12–15 months) and Large (Labrador Retriever precedent). The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Chesapeake Bay Retriever growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S459",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "RKC breed page key fact (S459). VCA (S460): '10 - 13 years' — alternative (US page, no median). Wikipedia (S462, tier C): a UK Kennel Club survey median of 10.75 years (KC Purebred Dog Health Survey, not fetched) — background only."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Dogs Trust table of McMillan et al. 2024 data (S123): not fetchable on 2026-10-22 (refused by the fetch tool as not in provenance); the paper on PMC (S54 / PMC10834484) returned a captcha page. Whether the table has a Chesapeake row is unknown → open for David. Teng et al. 2022 (PMC9050668) has no breed row (gundog group only). UNSOURCED value."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 10 y (S459) → 0.75 × 10 = 7.5 y = 90 months. Runbook order: McMillan 2024 (table not reachable) → VetCompass median (none found) → RKC lower bound. Alternative: 84 (Dogs Trust > 7 y, S14). Not chosen: 0.75 × 10.75 y (KC survey via Wikipedia, tier C) = 97.",
+        "derived_from": [
+          "S11",
+          "S459"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S459",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S459) — the runbook's preferred source. VCA (S460): 'Needs daily walks, jogs, hikes or play sessions.' (no minutes); PetMD (S461): 'pet parents should be dedicated to providing constant exercise and stimulation.' (fragment, no minutes)."
+      },
+      "daily_text": {
+        "value": "daily walks, jogs, hikes or play sessions",
+        "unit": "—",
+        "source_id": "S460",
+        "quote": "Needs daily walks, jogs, hikes or play sessions.",
+        "confidence": "medium",
+        "notes": "VCA (S460). A working water retriever (FCI S458 'Equally proficient on land and in the water')."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "bright, cheerful and extremely affectionate; adventurous and loyal; may be aloof towards strangers",
+        "unit": "—",
+        "source_id": "S461",
+        "quote": "Chesapeake Bay Retrievers have a bright and cheerful disposition.",
+        "confidence": "high",
+        "notes": "PetMD (S461); also 'extremely affectionate' (fragment). VCA (S460): 'Makes an adventurous and loyal companion.' and 'Aloof toward strangers.' FCI standard (S458): 'Extreme shyness or extreme aggressive tendencies are not desirable in the breed' (fragment). AKC (S174 is the ranking only — the AKC breed page, not numbered, calls the breed 'loyal, upbeat, affectionate, and tireless')."
+      },
+      "family": {
+        "value": "playful and generally good with children; a great family addition with proper introductions and socialisation",
+        "unit": "—",
+        "source_id": "S460",
+        "quote": "Playful and generally good with children.",
+        "confidence": "medium",
+        "notes": "VCA (S460). PetMD (S461): 'With proper introductions and socialization, Chessies would be a great addition to a family.' (condition kept here) and 'Interactions between kids and all dogs, Chessie or not, should be supervised.' → family_pet, children (supervision caveat); not small_children."
+      },
+      "time_alone": {
+        "value": "becomes destructive and mischievous if left alone for too long",
+        "unit": "—",
+        "source_id": "S461",
+        "quote": "will become destructive and mischievous if they're not stimulated properly or if they're left alone for too long.",
+        "confidence": "medium",
+        "notes": "PetMD (S461, fragment). VCA (S460) has no home-alone statement. Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "gets along fairly well with other pets and dogs",
+        "unit": "—",
+        "source_id": "S460",
+        "quote": "Gets along fairly well with other pets and dogs.",
+        "confidence": "medium",
+        "notes": "VCA (S460). 'Fairly well' is a qualified statement → no other_pets chip. No source names a high prey drive (PetMD S461: bred to help hunt ducks and other birds — paraphrase) → no chases_small_pets."
+      },
+      "socialisation": {
+        "value": "socialise properly as a puppy",
+        "unit": "—",
+        "source_id": "S461",
+        "quote": "With proper introductions and socialization, Chessies would be a great addition to a family.",
+        "confidence": "high",
+        "notes": "PetMD (S461), a condition. VCA (S460): 'Aloof toward strangers.' Wikipedia (S462, tier C): 'Chesapeake Bay Retrievers can make excellent family dogs when socialized properly.' → proposed_game_parameters.chesapeake_bay_retriever.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S461): 'If they're bored, they can become destructive.' (fragment) — not chewing → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag. VCA (S460): fed so they do not become overweight (paraphrase, general advice)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S459: no breed-specific points of concern) → no welfare chip. Breeder checklist: RKC minimum genetic diversity, BVA/RKC elbow and hip schemes, DNA test DM; best practice DNA prcd-PRA, BVA/RKC/ISDS eye scheme (S459).",
+      "hip_elbow": {
+        "value": "hip and elbow dysplasia",
+        "unit": "—",
+        "source_id": "S461",
+        "quote": "Hip dysplasia stems from the loosening of the hip joints.",
+        "confidence": "high",
+        "notes": "PetMD (S461). RKC minimum tests: 'Hip testing (for hip dysplasia) using the BVA/RKC Hip Dysplasia Scheme' and 'Elbow testing (for elbow dysplasia) using the BVA/RKC Elbow Dysplasia Scheme' (S459). Register health key hip_elbow_dysplasia."
+      },
+      "degenerative_myelopathy": {
+        "value": "degenerative myelopathy (DM) — a spinal cord disease that slowly weakens the hind legs",
+        "unit": "—",
+        "source_id": "S459",
+        "quote": "Due to the high prevalence of degenerative myelopathy in the Retriever (Chesapeake Bay), it’s important that breeders",
+        "confidence": "high",
+        "notes": "RKC breed page (S459, fragment — the first 120 characters of a longer sentence); RKC minimum test 'DNA test for Degenerative myelopathy (DM).' Wikipedia (S462, tier C): one of the breeds more commonly affected. A prevalence statement without a number — never shown as a statistic. Register health key degenerative_myelopathy."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy (prcd-PRA) — an inherited eye disease that can lead to blindness",
+        "unit": "—",
+        "source_id": "S461",
+        "quote": "PRA causes cells in the eyes to eventually disintegrate.",
+        "confidence": "high",
+        "notes": "PetMD (S461). RKC best practice: 'DNA test for Progressive retinal atrophy (prcd-PRA)' and 'Eye testing using the BVA/RKC/ISDS Eye Scheme' (S459). Register health key pra_eye_disease."
+      },
+      "cataracts": {
+        "value": "cataracts",
+        "unit": "—",
+        "source_id": "S461",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S461) names cataracts (no short sentence returned — paraphrase). Wikipedia (S462, tier C) also lists cataract. Register health key cataracts."
+      },
+      "eic": {
+        "value": "exercise-induced collapse (EIC)",
+        "unit": "—",
+        "source_id": "S461",
+        "quote": "This neuromuscular condition can cause Chessies to collapse.",
+        "confidence": "high",
+        "notes": "PetMD (S461): an inherited neuromuscular condition; collapse after intense exercise (paraphrase). Wikipedia (S462, tier C) lists it too. New register health key exercise_induced_collapse (calm sentence, no numbers). No game mechanic (the game never pushes a dog to intense exercise)."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (GDV, bloat)",
+        "unit": "—",
+        "source_id": "S461",
+        "quote": "GDV is a medical emergency and can kill a pet in as little as 30 minutes if left untreated.",
+        "confidence": "medium",
+        "notes": "PetMD (S461); feeding advice 'Do not let your dog exercise directly before or after eating.', 'Introduce a slow feeder bowl if your dog is eating too quickly.' and 'Avoid using raised food bowls.' → meal_exercise_gap row (M5-R16); slow feeder / no raised bowl open for David. The '30 minutes' is a clinical urgency, not a breed statistic — not exported. Register health key bloat_gdv."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 27,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Chesapeake Bay Retriever",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-22): rank 27 'Chesapeake Bay Retriever' (tied with the Puli and the Yorkshire Terrier), tier 'Above Average Working Dogs' (ranks 27–39). Coren's own article (S34) not re-read. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Above average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "15 to 25 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier 'Above Average Working Dogs': understanding of new commands '15 to 25 repetitions.'"
+      },
+      "training_notes": {
+        "value": "may be assertive and wilful",
+        "unit": "—",
+        "source_id": "S462",
+        "quote": "Some Chesapeakes are assertive and willful and may be reserved with strangers",
+        "confidence": "low",
+        "notes": "Wikipedia (S462, tier C) — background only. The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.chesapeake_bay_retriever.learning_multiplier (1.2, runbook rule: Above average tier, rank 27).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "powerful working retriever, equally at home on land and in water; size and substance not excessive",
+        "unit": "—",
+        "source_id": "S458",
+        "quote": "Size and substance should not be excessive as this is a working retriever of an active nature.",
+        "confidence": "high",
+        "notes": "FCI standard No. 263 (S458): 'Equally proficient on land and in the water'."
+      },
+      "colours": {
+        "value": [
+          "brown",
+          "sedge",
+          "deadgrass"
+        ],
+        "unit": "list",
+        "source_id": "S458",
+        "quote": "Any colour of brown, sedge or deadgrass is acceptable, self-coloured Chesapeakes being preferred.",
+        "confidence": "high",
+        "notes": "FCI standard (S458): 'One colour is not to be preferred over another.'; disqualifying 'Black coloured.' and 'White on any part of the body except breast, belly, toes, or back of feet.' → never black, at most a small white spot on the chest or toes. Wikipedia (S462, tier C) infobox: reddish gold, dead-grass and liver."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). The standard prefers no colour; brown first with the highest weight (the portrait default — the most familiar Chessie colour, Claude 2026-10-22), then deadgrass, sedge."
+      },
+      "coat": {
+        "value": "thick, short, wavy outer coat (never over 4 cm) with a dense, fine, woolly undercoat — waterproof",
+        "unit": "—",
+        "source_id": "S458",
+        "quote": "Coat should be thick and short, nowhere over 1 1/2 inches (4 cm) long, with a dense, fine, woolly undercoat.",
+        "confidence": "high",
+        "notes": "FCI standard (S458); 'Moderate feathering on rear of hindquarters and tail is permissible.'; disqualifying 'Coat curly or with a tendency to curl all over the body.' RKC (S459) 'Coat length: Short'. AKC breed page: 'famous for his waterproof coat' (fragment)."
+      },
+      "head": {
+        "value": "muzzle about as long as the skull, tapering, pointed but not sharp",
+        "unit": "—",
+        "source_id": "S458",
+        "quote": "Approximately the same length as the skull, tapering pointed but not sharp.",
+        "confidence": "high",
+        "notes": "FCI standard (S458), Muzzle."
+      },
+      "ears": {
+        "value": "small, set well up on the head, hanging loosely",
+        "unit": "—",
+        "source_id": "S458",
+        "quote": "Are to be small, set well up on the head, hanging loosely, and of medium leather.",
+        "confidence": "high",
+        "notes": "FCI standard (S458)."
+      },
+      "eyes": {
+        "value": "medium large, very clear, yellowish or amber, wide apart",
+        "unit": "—",
+        "source_id": "S458",
+        "quote": "Are to be medium large, very clear of yellowish or amber color and wide apart.",
+        "confidence": "high",
+        "notes": "FCI standard (S458)."
+      },
+      "tail": {
+        "value": "medium length, medium heavy at the base, straight or slightly curved",
+        "unit": "—",
+        "source_id": "S458",
+        "quote": "The tail should be straight or slightly curved and should not curl over back or side kink.",
+        "confidence": "high",
+        "notes": "FCI standard (S458); 'Of medium length; medium heavy at the base.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S459), VCA (S460), PetMD (S461). RKC key facts reached on 2026-10-22.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S459",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "RKC key fact (S459)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S459",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S459). Basis of active_family and long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S459",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key fact (S459). Basis of large_home."
+      },
+      "rkc_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S459",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S459)."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S459",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S459) → brushing 1× a week (M5-R13 rule 'Once a week' → 1). VCA (S460) 'Brushing once a week is adequate; more during shedding seasons.' and PetMD (S461) 'They need to be brushed weekly.' agree."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S459",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "RKC key fact (S459)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S459",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S459). VCA (S460) 'Shedding is average.'; PetMD (S461) sheds more in spring — consistent → sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S459",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "RKC key fact (S459). Not shorter_lifespan (that needs 'Under 10 years')."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S459",
+        "quote": "Town or country: Country",
+        "confidence": "high",
+        "notes": "RKC key fact (S459)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S459",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S459): Category 1 — no points of concern specific to the breed identified for special attention by judges (paraphrase). → no welfare chip."
+      },
+      "petmd_family": {
+        "value": "a great addition to a family with proper introductions and socialisation",
+        "unit": "—",
+        "source_id": "S461",
+        "quote": "With proper introductions and socialization, Chessies would be a great addition to a family.",
+        "confidence": "medium",
+        "notes": "PetMD (S461), a family statement with a socialisation condition (kept in notes; Brittany precedent for a PetMD family statement). Basis of family_pet."
+      },
+      "vca_children": {
+        "value": "playful and generally good with children",
+        "unit": "—",
+        "source_id": "S460",
+        "quote": "Playful and generally good with children.",
+        "confidence": "medium",
+        "notes": "VCA (S460). PetMD (S461): 'Interactions between kids and all dogs, Chessie or not, should be supervised.' → children (supervision caveat), not small_children."
+      },
+      "vca_grooming": {
+        "value": "brushing once a week; more during shedding seasons",
+        "unit": "—",
+        "source_id": "S460",
+        "quote": "Brushing once a week is adequate; more during shedding seasons.",
+        "confidence": "high",
+        "notes": "VCA (S460). The out-of-season number 1 is the game value (shedding seasons are not modelled)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -43521,6 +43983,270 @@
         "confidence": "high",
         "notes": "Colours of the FCI standard (S449); AKC (S451) and UKC (S452) disqualify black. Weights unsourced in prompts. Natural (undocked) tail — Claude's choice for a moderate depiction.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): steel grey with brown patches is the portrait default (the standard's preferred colour); standard colours only, never black"
+      }
+    },
+    "chesapeake_bay_retriever": {
+      "_note": "Unattended run M5-R10-56 (2026-10-22): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. One new register health key (exercise_induced_collapse); no new vocabulary key. Sourced needs built from day one: weekly brushing (RKC S459 'Grooming: Once a week', M5-R13); puppy socialisation (PetMD S461 quote, M5-R17); the digestion warning (PetMD S461 'Do not let your dog exercise directly before or after eating.', M5-R16). Sourced need without a game mechanic: a slow feeder and no raised bowl (PetMD S461, bloat) → open for David (needs a new ROADMAP task). Exercise from RKC (S459, more than 2 hours). Senior 90 from the RKC lower bound 'Over 10 years' (S459; the McMillan 2024 table S123 was not reachable, no VetCompass median). RKC Breed Watch Category 1 → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S459",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'More than 2 hours per day' (S459). Rule: one number N ('more than N') → N = 120.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S459 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S459",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S459). The Dogs Trust McMillan 2024 table (S123) could not be fetched; no VetCompass median found. Alternative: 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S459"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S459)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 27 (S35), tier 'Above average' (27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 27, Above average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S459",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "chesapeake_bay_retriever.suitability.rkc_grooming. RKC 'Once a week' → 1 (runbook dog-grooming rule). VCA (S460) 'Brushing once a week is adequate; more during shedding seasons.' and PetMD (S461) weekly agree; shedding seasons are not modelled. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«; VCA, PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S461",
+        "quote": "With proper introductions and socialization, Chessies would be a great addition to a family.",
+        "confidence": "high",
+        "notes": "chesapeake_bay_retriever.behaviour.socialisation (PetMD S461, a condition). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S461)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S461",
+        "quote": "Do not let your dog exercise directly before or after eating.",
+        "confidence": "medium",
+        "notes": "PetMD (S461), chesapeake_bay_retriever.health.gdv (bloat / GDV). The source gives no length of the gap. Built in M5-R16 (David 2026-10-12): for 60 minutes after a meal the child app shows a calm 'wait with the walk, the dog is digesting' warning; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "bloat_feeding": {
+        "value": "slow feeder bowl when eating too quickly; no raised food bowl",
+        "unit": "feeding equipment (sourced need)",
+        "source_id": "S461",
+        "quote": "Introduce a slow feeder bowl if your dog is eating too quickly.",
+        "confidence": "medium",
+        "notes": "PetMD (S461), chesapeake_bay_retriever.health.gdv; also 'Avoid using raised food bowls.' The game has no bowl / feeder mechanic → open for David (needs a new ROADMAP task; Wirehaired Pointing Griffon precedent).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): počasna skleda, ne dvignjena skleda; mehanike ni → potrebna nova naloga v ROADMAP (David)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-56); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S459"
+            ],
+            "refs": [
+              "chesapeake_bay_retriever.exercise.adult",
+              "chesapeake_bay_retriever.suitability.rkc_exercise"
+            ],
+            "quote": "S459 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S461"
+            ],
+            "refs": [
+              "chesapeake_bay_retriever.suitability.petmd_family",
+              "chesapeake_bay_retriever.behaviour.family"
+            ],
+            "quote": "S461 'With proper introductions and socialization, Chessies would be a great addition to a family.' (condition in notes)"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S460"
+            ],
+            "refs": [
+              "chesapeake_bay_retriever.suitability.vca_children",
+              "chesapeake_bay_retriever.behaviour.family"
+            ],
+            "quote": "S460 'Playful and generally good with children.' (PetMD supervision caveat in notes)"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S459"
+            ],
+            "refs": [
+              "chesapeake_bay_retriever.suitability.rkc_size_of_home"
+            ],
+            "quote": "S459 'Size of home: Large house'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S459"
+            ],
+            "refs": [
+              "chesapeake_bay_retriever.exercise.adult",
+              "chesapeake_bay_retriever.suitability.rkc_exercise"
+            ],
+            "quote": "S459 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S461"
+            ],
+            "refs": [
+              "chesapeake_bay_retriever.behaviour.time_alone"
+            ],
+            "quote": "S461 'will become destructive and mischievous if they're not stimulated properly or if they're left alone for too long.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S459"
+            ],
+            "refs": [
+              "chesapeake_bay_retriever.suitability.rkc_shedding"
+            ],
+            "quote": "S459 'Sheds: Yes'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "VCA 'generally good with children' (S460), but PetMD asks for supervision (S461) → not without a caveat.",
+          "other_pets": "VCA 'Gets along fairly well with other pets and dogs.' (S460) — a qualified statement.",
+          "chases_small_pets": "No source names a high prey drive.",
+          "often_alone": "See needs_company.",
+          "apartment": "RKC 'Large house' (S459).",
+          "low_shedding": "RKC 'Sheds: Yes' (S459).",
+          "frequent_grooming": "RKC 'Once a week' (S459).",
+          "needs_mental_stimulation": "PetMD 'constant exercise and stimulation' (S461) is covered by long_daily_exercise; no separate mental-work statement.",
+          "first_time_owner": "No source.",
+          "experienced_owner": "Only Wikipedia (S462, tier C: assertive and wilful) — not alone.",
+          "shorter_lifespan": "RKC 'Over 10 years' (S459).",
+          "secure_fencing": "No fence advice.",
+          "welfare": "RKC Breed Watch Category 1 (S459), no conformation welfare statement → no welfare chip; hip / elbow dysplasia, DM, PRA, cataracts, EIC and GDV are register health keys and breeder-checklist items only."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, children, large_home; consider long_daily_exercise, needs_company, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S459",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 1 (S459); no veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92). Marketing never shows it as a dog for a small flat, a low-exercise dog or a dog to leave alone for long (S459, S461).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Chesapeake Bay Retriever, solid brown coat (default); powerful, athletic working water retriever; thick, short, slightly wavy oily coat with a woolly undercoat; muzzle about as long as the skull, tapering; clear yellowish or amber eyes; small ears hanging loosely; tail of medium length, straight or slightly curved; never black, no white except a small chest spot",
+        "unit": "—",
+        "source_id": "S458",
+        "quote": "Any colour of brown, sedge or deadgrass is acceptable, self-coloured Chesapeakes being preferred.",
+        "confidence": "high",
+        "notes": "Colours of the FCI standard (S458); black disqualifies, white only on breast, belly, toes or back of feet. Weights unsourced in prompts. Brown as the portrait default: the standard prefers no colour — Claude's choice (the most familiar colour).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): brown is the portrait default; standard colours only (brown, sedge, deadgrass), never black"
       }
     }
   }
