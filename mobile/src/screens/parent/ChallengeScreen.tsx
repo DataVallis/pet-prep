@@ -29,7 +29,7 @@ import { Card, PARENT_COLORS as C } from '@/components/parent/ParentUi';
 import { currentLanguageTag, t, tPets, tSpecies, type PetGroup } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { parentDashboardKey } from '@/hooks/queries/useParentDashboard';
-import { PRIVACY_URL, TERMS_URL } from '@/modules/auth/signup';
+import { privacyUrl, termsUrl } from '@/modules/auth/signup';
 import { breedLabel, caretakerNames, type FamilyOverview } from '@/modules/family/family';
 import { challengePets, isBillingPetPurchasable } from '@/modules/plan/purchaseEntry';
 import { petGroup } from '@/modules/species/species';
@@ -319,10 +319,10 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
         </Pressable>
         <Text style={styles.muted}>{S.storeNote}</Text>
         <View style={styles.links}>
-          <Text style={styles.link} onPress={() => void Linking.openURL(TERMS_URL)} accessibilityRole="link">
+          <Text style={styles.link} onPress={() => void Linking.openURL(termsUrl())} accessibilityRole="link">
             {S.terms}
           </Text>
-          <Text style={styles.link} onPress={() => void Linking.openURL(PRIVACY_URL)} accessibilityRole="link">
+          <Text style={styles.link} onPress={() => void Linking.openURL(privacyUrl())} accessibilityRole="link">
             {S.privacy}
           </Text>
         </View>

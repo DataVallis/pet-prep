@@ -8,7 +8,7 @@ import { Linking, Pressable, StyleSheet, View } from 'react-native';
 import { Check } from 'lucide-react-native';
 
 import { Text } from '@/components/ui/Text';
-import { PRIVACY_URL, SIGNUP_STRINGS as S, TERMS_URL } from '@/modules/auth/signup';
+import { privacyUrl, SIGNUP_STRINGS as S, termsUrl } from '@/modules/auth/signup';
 import { light, palette } from '@/theme';
 
 interface TermsCheckboxProps {
@@ -41,11 +41,11 @@ export default function TermsCheckbox({ checked, onToggle, disabled = false, inv
       </Pressable>
       <Text style={styles.text}>
         {S.termsPrefix}
-        <Text style={styles.link} onPress={() => openLink(TERMS_URL)} accessibilityRole="link">
+        <Text style={styles.link} onPress={() => openLink(termsUrl())} accessibilityRole="link">
           {S.termsLink}
         </Text>
         {S.termsMiddle}
-        <Text style={styles.link} onPress={() => openLink(PRIVACY_URL)} accessibilityRole="link">
+        <Text style={styles.link} onPress={() => openLink(privacyUrl())} accessibilityRole="link">
           {S.privacyLink}
         </Text>
         {S.termsSuffix}
