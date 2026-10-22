@@ -345,6 +345,12 @@ return [
         ['key' => 'sedge', 'value' => 'solid sedge (reddish gold)', 'en' => 'Sedge', 'sl' => 'Rdečkasto zlat'],
         ['key' => 'deadgrass', 'value' => 'solid deadgrass (straw to dull tan)', 'en' => 'Deadgrass', 'sl' => 'Barve suhe trave'],
     ],
+    // M5-R10-57: FCI standard No. 212 S464 — pure white, cream, white and biscuit (never beige, no other colour).
+    'samoyed' => [
+        ['key' => 'white', 'value' => 'pure white', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Krem'],
+        ['key' => 'white-biscuit', 'value' => 'white and biscuit', 'en' => 'White and biscuit', 'sl' => 'Belo-piškotni'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

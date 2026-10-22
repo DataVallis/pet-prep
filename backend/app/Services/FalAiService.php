@@ -499,6 +499,16 @@ class FalAiService
                 .'natural tail of medium length, straight or slightly curved, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-57: FCI standard No. 212 (S464) — pure white as the anchor (never beige, never blue eyes; cream and
+            // white and biscuit are the other standard colours); elegant medium-sized Arctic spitz, the "Samoyed smile".
+            BreedType::Samoyed => 'A friendly, alert Samoyed with a pure white coat, '
+                .'abundant, thick, dense double coat standing off the body with a silver sheen and a ruff around the neck, '
+                .'elegant, medium-sized Arctic spitz, strong and agile, never clumsy, '
+                .'strong muzzle about as long as the skull, black lips slightly upturned at the corners in the "Samoyed smile", black nose, '
+                .'dark brown almond-shaped eyes with black rims, small, thick, erect triangular ears slightly rounded at the tips, '
+                .'plumed tail carried curved forward over the back, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1194,6 +1204,17 @@ class FalAiService
                 'eye_color' => 'clear yellowish or amber',
                 'fur_texture' => 'thick, short, slightly wavy coat with a dense woolly undercoat',
                 'markings' => 'no white except at most a small spot on the chest or toes, natural tail of medium length',
+            ],
+            // M5-R10-57: FCI standard No. 212 S464 colours (pure white, cream, white and biscuit; never beige, never blue eyes).
+            BreedType::Samoyed => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'pure white',
+                    1 => 'cream',
+                    2 => 'white and biscuit',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'abundant, thick, dense double coat with a silver sheen',
+                'markings' => 'black lips upturned in the "Samoyed smile", black eye rims, plumed tail curved over the back',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

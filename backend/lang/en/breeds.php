@@ -60,6 +60,7 @@ return [
     'whippet' => 'Whippet',
     'wirehaired_pointing_griffon' => 'Wirehaired Pointing Griffon',
     'chesapeake_bay_retriever' => 'Chesapeake Bay Retriever',
+    'samoyed' => 'Samoyed',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

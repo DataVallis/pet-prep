@@ -161,6 +161,11 @@ return [
         // sensitive pups."). Not `older_children` — that chip names a small dog — nor `fragile_older_children` (fragile
         // bones) or `not_for_small_children` (a large dog). A calm chip, never a number.
         'sensitive_older_children' => 'consider',
+        // M5-R10-57 (runbook "new tag" rule, 2026-10-22): a thick-coated dog that struggles in hot weather (Samoyed: PetMD
+        // S469 "Samoyed dogs require daily brushing and do not do well in hot temperatures."; Woodgreen S468 shaded outdoor
+        // space). Not `brachycephalic_breathing` / `short_muzzle_breathing` — those name a short face. A calm chip, never a
+        // number.
+        'heat_sensitive' => 'consider',
     ],
 
     'breeds' => [
@@ -1499,6 +1504,42 @@ return [
                 ['tag' => 'needs_company', 'source_ids' => ['S461'], 'refs' => ['chesapeake_bay_retriever.behaviour.time_alone']],
                 // S459 "Sheds: Yes"
                 ['tag' => 'sheds', 'source_ids' => ['S459'], 'refs' => ['chesapeake_bay_retriever.suitability.rkc_shedding']],
+            ],
+        ],
+
+        // M5-R10-57: samoyed.* (S463–S471), runbook rules (data.json proposed_game_parameters.samoyed.suitability_tags).
+        // PDSA (S467) + Woodgreen (S468) + PetMD (S469) — the RKC breed page was not reachable. No welfare chip (no
+        // veterinary association names the breed). Never hypoallergenic / low_shedding (PDSA "They shed very often"),
+        // small_children (supervise), other_pets (Woodgreen "Moderate", strong prey drive), experienced_owner (the chip
+        // names a powerful dog — PDSA's experienced-owner advice is open for David).
+        'samoyed' => [
+            'suits' => [
+                // S467 "We recommend a minimum of two hours exercise every day for your Samoyed."
+                ['tag' => 'active_family', 'source_ids' => ['S467'], 'refs' => ['samoyed.exercise.adult', 'samoyed.suitability.pdsa_exercise']],
+                // S467 "… will be very loyal to the whole family"; S469 "Samoyeds can make excellent family companions …"
+                ['tag' => 'family_pet', 'source_ids' => ['S467', 'S469'], 'refs' => ['samoyed.suitability.pdsa_family', 'samoyed.suitability.petmd_family']],
+                // S467 "they are usually great with children" (supervision caveat in samoyed.behaviour.family).
+                ['tag' => 'children', 'source_ids' => ['S467'], 'refs' => ['samoyed.suitability.pdsa_children', 'samoyed.behaviour.family']],
+            ],
+            'consider' => [
+                // S467 "We recommend a minimum of two hours exercise every day for your Samoyed."
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S467'], 'refs' => ['samoyed.exercise.adult', 'samoyed.suitability.pdsa_exercise']],
+                // S468 "Puzzle feeders, scent work, and short training sessions help to keep a Sammy's curious mind productively occupied."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S468'], 'refs' => ['samoyed.exercise.mental_stimulation']],
+                // S467 "never leave them alone for more than four hours as they can become stressed and anxious."
+                ['tag' => 'needs_company', 'source_ids' => ['S467'], 'refs' => ['samoyed.behaviour.time_alone']],
+                // S467 "Make sure your garden is very secure as Samoyeds are very accomplished escape artists."
+                ['tag' => 'secure_fencing', 'source_ids' => ['S467'], 'refs' => ['samoyed.behaviour.escaping', 'samoyed.suitability.pdsa_secure_garden']],
+                // S468 "… they may try to "round up" younger children by nudging or circling them."
+                ['tag' => 'may_herd_children', 'source_ids' => ['S468'], 'refs' => ['samoyed.behaviour.herding_children']],
+                // S467 "They shed very often, …"
+                ['tag' => 'sheds', 'source_ids' => ['S467'], 'refs' => ['samoyed.suitability.pdsa_shedding']],
+                // S467 "… they'll need grooming on daily basis."
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S467'], 'refs' => ['samoyed.suitability.pdsa_grooming']],
+                // S469 "Samoyed dogs require daily brushing and do not do well in hot temperatures."
+                ['tag' => 'heat_sensitive', 'source_ids' => ['S469'], 'refs' => ['samoyed.exercise.heat']],
+                // S467 "Be careful on walks though as they have a strong prey drive"
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S467'], 'refs' => ['samoyed.behaviour.other_pets']],
             ],
         ],
 

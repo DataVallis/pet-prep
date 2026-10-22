@@ -505,6 +505,13 @@
 | white except a small spot on the chest or toes (disqualifications, S458). RKC Breed Watch Category 1 (S459) — no
 | welfare concern. Colour weights unsourced → `verified => false`.
 |
+| Samoyed (M5-R10-57, docs/research/dog-data samoyed.appearance): "Spitz de l'Arctique blanc, élégant, de taille
+| moyenne." (FCI standard No. 212, S464); abundant, thick, dense polar double coat; strong muzzle with the "Samoyed
+| smile"; dark brown eyes; small, thick, erect triangular ears; tail carried curved forward. "Blanc pur, crème ou blanc
+| et biscuit" (S464) — pure white weighted highest (the register portrait), then cream, white and biscuit; never beige,
+| never another colour or blue / odd eyes (disqualifications, S464); the AKC's "all biscuit" (S465) is not in the FCI
+| standard → not used. No welfare concern found. Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2534,6 +2541,41 @@ return [
             'eye_color' => ['clear yellowish or amber eyes set wide apart'],
             'tail' => ['natural tail of medium length, straight or slightly curved'],
             'head' => ['broad, round skull, muzzle about as long as the skull, tapering, pointed but not sharp'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-57 (docs/research/dog-data/data.json samoyed.appearance; runbook rules 2026-10-10:
+    // standard colours only — pure white, cream, white and biscuit; never beige, never blue eyes).
+    'samoyed' => [
+        'display_name' => 'Samoyed',
+        // Colour frequencies are in no source (samoyed.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI standard No. 212 (S464), PDSA (S467), AKC standard (S465) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S467 "Medium"; S464 "Spitz de l\'Arctique blanc, élégant, de taille moyenne."',
+            'build' => 'S464 "Spitz de l\'Arctique blanc, élégant, de taille moyenne."; S465 "The Samoyed should never be so heavy as to appear clumsy nor so light as to appear racy."',
+            'coat_length' => 'S464 "Fourrure polaire, abondante, épaisse, souple et dense."; S465 "The Samoyed is a doublecoated dog."',
+            'coat_color' => 'S464 "Blanc pur, crème ou blanc et biscuit" (weights unsourced; never beige, no other colour — S464)',
+            'ear_carriage' => 'S464 "Droites, plutôt petites, épaisses, triangulaires et légèrement arrondies à l\'extrémité."',
+            'eye_color' => 'S464 "De couleur brun foncé, bien enchâssés dans les orbites." (blue or odd eyes disqualify, S464)',
+            'tail' => 'S464 "la queue est portée courbée vers l\'avant à partir de la base"',
+            'head' => 'S464 "Les commissures des lèvres sont légèrement retroussées pour former le « sourire du Samoyède » caractéristique."',
+        ],
+        'traits' => [
+            'size' => ['medium'],
+            'build' => [['value' => 'elegant, strong and agile Arctic spitz, neither heavy nor racy', 'weight' => 3], 'well-balanced spitz standing calmly'],
+            'coat_length' => ['abundant, thick, dense double coat standing off the body with a silver sheen and a ruff'],
+            // FCI standard (S464): pure white, cream, white and biscuit; pure white weighted highest (the register
+            // portrait); never beige.
+            'coat_color' => [
+                ['value' => 'pure white', 'weight' => 70],
+                ['value' => 'cream', 'weight' => 15],
+                ['value' => 'white and biscuit', 'weight' => 15],
+            ],
+            'ear_carriage' => ['small, thick, erect triangular ears slightly rounded at the tips'],
+            'eye_color' => ['dark brown almond-shaped eyes with black rims'],
+            'tail' => ['plumed tail carried curved forward over the back'],
+            'head' => ['strong muzzle about as long as the skull, black lips slightly upturned in the "Samoyed smile", black nose'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
