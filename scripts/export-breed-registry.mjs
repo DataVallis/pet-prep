@@ -427,6 +427,7 @@ const SPECIES = [
       { id: 'dalmatian', synonyms: { en: ['Carriage Dog', 'Spotted Coach Dog', 'Firehouse Dog', 'Dalmatinski pas'], sl: ['dalmatinski pas', 'dalmatinka', 'dalmatin'] } },
       { id: 'australian_cattle_dog', synonyms: { en: ['Blue Heeler', 'Red Heeler', 'Queensland Heeler', 'Cattle Dog', 'ACD'], sl: ['avstralski govedarski pes', 'blue heeler', 'heeler'] } },
       { id: 'whippet', synonyms: { en: ['Snap dog'], sl: ['whippet', 'vipet', 'angleški hrt'] } },
+      { id: 'wirehaired_pointing_griffon', synonyms: { en: ['Korthals Griffon', 'Wire-haired Pointing Griffon Korthals', 'Griff'], sl: ['korthalsov grifon', 'grifon', 'korthals'] } },
     ],
   },
   {
@@ -1567,6 +1568,28 @@ const DOG_FACTS = {
       ['deafness', 'health.deafness'],
     ],
   },
+  // M5-R10-55. Height = FCI standard (S449), weight = PetMD 35–70 lb ≈ 16–32 kg (S453; the FCI / AKC / UKC standards
+  // give none), lifespan = the RKC band "Over 10 years" (S450; no McMillan 2024 row in S123), exercise = RKC "More than
+  // 2 hours per day" (S450), coat / grooming / shedding = RKC key facts (S450). FCI origin France (FR). Not exported:
+  // the VCA weight (alternative), adult_weight.salt_category (our assignment), lifespan.senior_from (derived), the care
+  // needs bloat_feeding and hand_stripping (open for David: a new task). No new health key.
+  wirehaired_pointing_griffon: {
+    height: ['height.fci'],
+    weight: [['adult_weight.petmd', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['pra_eye_disease', 'health.pra'],
+      ['cataracts', 'health.cataracts'],
+      ['bloat_gdv', 'health.gdv'],
+      ['eyelids_turned', 'health.eyelids'],
+    ],
+  },
 
 };
 
@@ -1976,6 +1999,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.whippet.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.whippet.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.whippet.exercise_minutes_senior',
+  },
+  wirehaired_pointing_griffon: {
+    adult_minutes: ['proposed_game_parameters.wirehaired_pointing_griffon.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.wirehaired_pointing_griffon.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.wirehaired_pointing_griffon.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.wirehaired_pointing_griffon.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.wirehaired_pointing_griffon.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.wirehaired_pointing_griffon.exercise_minutes_senior',
   },
 
 };
