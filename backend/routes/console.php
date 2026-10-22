@@ -97,6 +97,5 @@ Schedule::command('system-health:prune')
 // superadmins, once per threshold per budget day / month. Off the 5-minute mark.
 Schedule::command('ai:budget-check')
     ->cron('3-59/5 * * * *')
-    ->withoutOverlapping()
     ->name('ai-budget-check')
     ->description('Warn the superadmins when an AI budget reaches 80 % / 100 % or the fal.ai balance is low');

@@ -183,9 +183,10 @@ class AiBudgetMonitor
             }
 
             // 70 % → 100 % in one step: both thresholds are claimed, only the 100 % goes out.
-            $threshold = max($new);
-            $this->send(AiBudgetAlertNotification::budget($status, $threshold), [$status->budget, $status->period, $status->periodKey, $new]);
-            $sent++;
+            // One failing budget never stops the others (QA M2).
+            if ($this->send(AiBudgetAlertNotification::budget($status, max($new)), [$status->budget, $status->period, $status->periodKey, $new])) {
+                $sent++;
+            }
         }
 
         return $sent + $this->checkFalBalance();
@@ -206,9 +207,7 @@ class AiBudgetMonitor
             return 0;
         }
 
-        $this->send(AiBudgetAlertNotification::falBalance($level, $balance, $this->falBalanceAlertUsd()), [AiBudgetAlert::BUDGET_FAL_BALANCE, 'day', $day, [$threshold]]);
-
-        return 1;
+        return $this->send(AiBudgetAlertNotification::falBalance($level, $balance, $this->falBalanceAlertUsd()), [AiBudgetAlert::BUDGET_FAL_BALANCE, 'day', $day, [$threshold]]) ? 1 : 0;
     }
 
     /** Insert the dedupe row; false when this threshold was already announced. */
@@ -226,25 +225,62 @@ class AiBudgetMonitor
     }
 
     /**
-     * @param  array{0: string, 1: string, 2: string, 3: list<int>}  $claimed  released again if sending fails, so the next run retries
+     * The database notification (the bell) first: if it fails, the claim is
+     * released so the next run retries, and false is returned (reported, not
+     * thrown — the other budgets are still checked). Once the bell row is
+     * written the claim stays; the e-mail goes separately and a mail failure is
+     * only reported (QA M2: no bell repeats every 5 minutes because of mail).
+     *
+     * @param  array{0: string, 1: string, 2: string, 3: list<int>}  $claimed
      */
-    private function send(AiBudgetAlertNotification $notification, array $claimed): void
+    private function send(AiBudgetAlertNotification $notification, array $claimed): bool
     {
         $admins = User::query()->where('is_superadmin', true)->get();
+        [$budget, $period, $periodKey, $thresholds] = $claimed;
 
         try {
             if ($admins->isNotEmpty()) {
-                Notification::send($admins, $notification);
+                Notification::sendNow($admins, $notification, ['database']);
             }
         } catch (Throwable $e) {
-            [$budget, $period, $periodKey, $thresholds] = $claimed;
             AiBudgetAlert::query()
                 ->where(['budget' => $budget, 'period' => $period, 'period_key' => $periodKey])
                 ->whereIn('threshold', $thresholds)
                 ->delete();
-            throw $e;
+            report($e);
+
+            return false;
         }
 
-        Log::warning('AI budget warning sent', ['budget' => $claimed[0], 'period' => $claimed[1], 'period_key' => $claimed[2], 'thresholds' => $claimed[3], 'admins' => $admins->count()]);
+        if (AiBudgetAlertNotification::mailConfigured()) {
+            foreach ($admins->filter(fn (User $u): bool => filled($u->email)) as $admin) {
+                try {
+                    Notification::sendNow($admin, $notification, ['mail']);
+                } catch (Throwable $e) {
+                    report($e);
+                }
+            }
+        }
+
+        Log::warning('AI budget warning sent', ['budget' => $budget, 'period' => $period, 'period_key' => $periodKey, 'thresholds' => $thresholds, 'admins' => $admins->count()]);
+
+        return true;
+    }
+
+    /**
+     * QA M1: a changed cap starts the announcements of that budget's current
+     * day and month again (the old warnings were about the old cap). Called by
+     * AppSettingsService inside the transaction that saves the cap (DB only).
+     */
+    public static function forgetCurrentPeriod(string $budget): void
+    {
+        $now = CarbonImmutable::now((string) config('media.budget.timezone', 'UTC'));
+
+        AiBudgetAlert::query()
+            ->where('budget', $budget)
+            ->where(fn ($q) => $q
+                ->where(fn ($q) => $q->where('period', 'day')->where('period_key', $now->format('Y-m-d')))
+                ->orWhere(fn ($q) => $q->where('period', 'month')->where('period_key', $now->format('Y-m'))))
+            ->delete();
     }
 }

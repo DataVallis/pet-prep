@@ -157,7 +157,9 @@ class AiBudget extends Page implements HasForms
                                     return __('admin.ai_alerts.banner.fal_unknown_'.($balance['status'] ?? 'never'));
                                 }
 
-                                return sprintf('$%.2f', $balance['balance_usd']).' · '.Carbon::parse($balance['checked_at'])->timezone('Europe/Ljubljana')->format('Y-m-d H:i');
+                                $tz = app(AiSpendGuard::class)->timezone();
+
+                                return sprintf('$%.2f', $balance['balance_usd']).' · '.Carbon::parse($balance['checked_at'])->timezone($tz)->format('Y-m-d H:i').' '.$tz;
                             }),
                         TextInput::make('fal_balance_alert_usd')
                             ->label(__('admin.ai_budget.fal_alert'))

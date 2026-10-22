@@ -24,14 +24,15 @@ final readonly class AiBudgetStatus
         public float $capUsd,
     ) {}
 
-    /** Percent of the cap used; a cap of 0 (no AI calls allowed) counts as 100 %. */
+    /** Percent of the cap used (floored to 0.1); a cap of 0 (no AI calls allowed) counts as 100 %. */
     public function percent(): float
     {
         if ($this->capUsd <= 0) {
             return 100.0;
         }
 
-        return round(100 * $this->spentUsd / $this->capUsd, 1);
+        // Floored to one decimal (QA m3): 79.96 % shows 79.9 %, never a green "80 %".
+        return floor(1000 * $this->spentUsd / $this->capUsd + 1e-9) / 10;
     }
 
     /**

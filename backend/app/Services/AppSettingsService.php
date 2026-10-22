@@ -6,11 +6,13 @@ use App\Enums\CatsAvailability;
 use App\Enums\FamilyRole;
 use App\Enums\UserRole;
 use App\Jobs\ResumeStateMedia;
+use App\Models\AiBudgetAlert;
 use App\Models\AppSetting;
 use App\Models\AppSettingChange;
 use App\Models\Family;
 use App\Models\FamilyMember;
 use App\Models\User;
+use App\Services\Media\AiBudgetMonitor;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -207,7 +209,7 @@ class AppSettingsService
         $this->store($actor, self::AI_BUDGET_KEY, [
             'daily_usd' => $dailyUsd === null ? null : sprintf('%.2f', $dailyUsd),
             'monthly_usd' => $monthlyUsd === null ? null : sprintf('%.2f', $monthlyUsd),
-        ]);
+        ], afterWrite: fn () => AiBudgetMonitor::forgetCurrentPeriod(AiBudgetAlert::BUDGET_PRODUCTION));
     }
 
     /**
@@ -253,7 +255,7 @@ class AppSettingsService
             'daily_usd' => $fmt($dailyUsd),
             'monthly_usd' => $fmt($monthlyUsd),
             'max_run_usd' => $fmt($maxRunUsd),
-        ]);
+        ], afterWrite: fn () => AiBudgetMonitor::forgetCurrentPeriod(AiBudgetAlert::BUDGET_LAB));
     }
 
     /**
@@ -296,10 +298,11 @@ class AppSettingsService
      *
      * @param  array<string, mixed>  $new
      * @param  array<string, mixed>|null  $default  the value "no row" stands for (saving it over no row is no change)
+     * @param  (callable(): void)|null  $afterWrite  runs inside the same transaction, only when the value changed (M5-T15)
      */
-    private function store(User $actor, string $key, array $new, ?array $default = null): void
+    private function store(User $actor, string $key, array $new, ?array $default = null, ?callable $afterWrite = null): void
     {
-        DB::transaction(function () use ($actor, $key, $new, $default): void {
+        DB::transaction(function () use ($actor, $key, $new, $default, $afterWrite): void {
             $row = AppSetting::whereKey($key)->lockForUpdate()->first();
             $old = $row?->value;
             // "No row" and "every value empty" mean the same (env defaults):
@@ -320,6 +323,10 @@ class AppSettingsService
                 'old' => $old,
                 'new' => $new,
             ]);
+
+            if ($afterWrite !== null) {
+                $afterWrite();
+            }
         });
 
         Cache::forget(self::cacheKey($key));

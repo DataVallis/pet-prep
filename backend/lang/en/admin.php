@@ -230,6 +230,7 @@ return [
             'fal_unknown_no_access' => 'fal.ai balance unknown — the key lacks the billing:usage:read scope (set FAL_AI_BILLING_KEY)',
             'fal_unknown_disabled' => 'fal.ai balance unknown — no fal key on the server',
             'fal_unknown_error' => 'fal.ai balance unknown — the last read failed',
+            'timezone' => 'Budget day and month in :tz',
             'fal_exhausted' => 'exhausted, AI media paused',
             'fal_failures' => '{0} no fal_balance refusals in 24 h|{1} :count fal_balance refusal in 24 h|[2,*] :count fal_balance refusals in 24 h',
         ],

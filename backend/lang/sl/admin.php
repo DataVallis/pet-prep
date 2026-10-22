@@ -229,6 +229,7 @@ return [
             'fal_unknown_no_access' => 'Stanje fal.ai neznano — ključ nima dovoljenja billing:usage:read (nastavi FAL_AI_BILLING_KEY)',
             'fal_unknown_disabled' => 'Stanje fal.ai neznano — na strežniku ni ključa fal',
             'fal_unknown_error' => 'Stanje fal.ai neznano — zadnje branje ni uspelo',
+            'timezone' => 'Proračunski dan in mesec v :tz',
             'fal_exhausted' => 'porabljeno, AI mediji čakajo',
             'fal_failures' => '{0} brez zavrnitev fal_balance v 24 h|{1} :count zavrnitev fal_balance v 24 h|[2,*] :count zavrnitev fal_balance v 24 h',
         ],

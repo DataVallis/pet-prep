@@ -5,6 +5,7 @@ namespace App\Filament\Widgets;
 use App\Models\User;
 use App\Services\Media\AiBudgetMonitor;
 use App\Services\Media\AiBudgetStatus;
+use App\Services\Media\AiSpendGuard;
 use Filament\Widgets\Widget;
 
 /**
@@ -57,6 +58,8 @@ class AiBudgetBanner extends Widget
             'warnPercent' => AiBudgetMonitor::WARN_PERCENT,
             'okLevel' => AiBudgetStatus::OK,
             'budgetUrl' => url('/admin/ai-budget'),
+            // QA m2: the budget day / month boundaries (AI_BUDGET_TIMEZONE), also for the times shown.
+            'timezone' => app(AiSpendGuard::class)->timezone(),
         ];
     }
 }

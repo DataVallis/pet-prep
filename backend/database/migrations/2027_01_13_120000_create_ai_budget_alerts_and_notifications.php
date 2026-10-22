@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Schema;
  *  - `ai_budget_alerts`: one row per (budget, period, period key, threshold) that
  *    was announced to the superadmins — the dedupe, so every threshold is sent at
  *    most once per budget day / month (or per day for the fal balance).
+ *  - index (error_reason, created_at) on ai_spend_ledger for the 24 h fal_balance count.
  *  - `notifications`: Laravel's standard table, for Filament database
  *    notifications (the bell in /admin). Only superadmins get rows; no child data.
  *
@@ -35,20 +36,26 @@ return new class extends Migration
         DB::statement("ALTER TABLE ai_budget_alerts ADD CONSTRAINT ai_budget_alerts_budget_check CHECK (budget IN ('production', 'lab', 'fal_balance'))");
         DB::statement("ALTER TABLE ai_budget_alerts ADD CONSTRAINT ai_budget_alerts_period_check CHECK (period IN ('day', 'month'))");
 
-        if (! Schema::hasTable('notifications')) {
-            Schema::create('notifications', function (Blueprint $table) {
-                $table->uuid('id')->primary();
-                $table->string('type');
-                $table->morphs('notifiable');
-                $table->text('data');
-                $table->timestamp('read_at')->nullable();
-                $table->timestamps();
-            });
-        }
+        Schema::create('notifications', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->string('type');
+            $table->morphs('notifiable');
+            $table->text('data');
+            $table->timestamp('read_at')->nullable();
+            $table->timestamps();
+        });
+
+        // System health counts fal_balance refusals of the last 24 h.
+        Schema::table('ai_spend_ledger', function (Blueprint $table) {
+            $table->index(['error_reason', 'created_at'], 'ai_spend_ledger_error_reason_created_at_index');
+        });
     }
 
     public function down(): void
     {
+        Schema::table('ai_spend_ledger', function (Blueprint $table) {
+            $table->dropIndex('ai_spend_ledger_error_reason_created_at_index');
+        });
         Schema::dropIfExists('notifications');
         Schema::dropIfExists('ai_budget_alerts');
     }

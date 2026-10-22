@@ -15,7 +15,8 @@ use Illuminate\Notifications\Notification;
  * database notification (the bell in /admin), plus an e-mail when a real
  * mailer is configured (MAIL_MAILER not `log` / `array`). Amounts only, no
  * pet, family or child data. Sent synchronously from the queued
- * CheckAiBudgetAlerts job (already off the request and outside transactions).
+ * CheckAiBudgetAlerts job (already off the request and outside transactions),
+ * the database channel first and mail separately (a mail failure is only reported).
  */
 class AiBudgetAlertNotification extends Notification
 {
@@ -68,6 +69,7 @@ class AiBudgetAlertNotification extends Notification
      */
     public function via(User $notifiable): array
     {
+        // AiBudgetMonitor sends the channels one by one (database first, then mail) via sendNow($u, $n, [channel]).
         return self::mailConfigured() && filled($notifiable->email) ? ['database', 'mail'] : ['database'];
     }
 

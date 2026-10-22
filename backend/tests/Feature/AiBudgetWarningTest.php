@@ -199,27 +199,80 @@ it('shows a cap of 0 as blocked but does not announce it', function () {
         ->and(bwMonitor()->check())->toBe(0);
 });
 
-it('sends e-mail only when a real mailer is configured', function () {
+it('sends e-mail only when a real mailer is configured — bell first, mail separately', function () {
     Notification::fake();
     $admin = bwAdmin();
     bwSpend(8.0);
 
     bwMonitor()->check();
     Notification::assertSentTo($admin, AiBudgetAlertNotification::class, fn ($n, array $channels) => $channels === ['database']);
+    Notification::assertSentTimes(AiBudgetAlertNotification::class, 1);
 
     config(['mail.default' => 'smtp']);
     bwSpend(2.0);
     bwMonitor()->check();
-    Notification::assertSentTo($admin, AiBudgetAlertNotification::class, fn ($n, array $channels) => $channels === ['database', 'mail']);
+    Notification::assertSentTo($admin, AiBudgetAlertNotification::class, fn ($n, array $channels) => $channels === ['mail']);
+    Notification::assertSentTimes(AiBudgetAlertNotification::class, 3);
 });
 
-it('releases the claim when sending fails, so the next run retries', function () {
+it('a failing mailer never repeats the bell and never stops the other budgets (QA M2)', function () {
+    $admin = bwAdmin();
+    config([
+        'mail.default' => 'broken',
+        'mail.mailers.broken' => ['transport' => 'smtp', 'host' => '127.0.0.1', 'port' => 1, 'timeout' => 1],
+    ]);
+    bwSpend(8.0);
+    bwSpend(8.0, purpose: 'lab');
+
+    expect(bwMonitor()->check())->toBe(2)
+        ->and(bwMonitor()->check())->toBe(0)
+        ->and($admin->notifications()->count())->toBe(2)
+        ->and(AiBudgetAlert::count())->toBe(2);
+});
+
+it('releases the claim when the bell fails and still checks the other budgets', function () {
     bwAdmin();
     bwSpend(8.0);
-    Notification::shouldReceive('send')->once()->andThrow(new RuntimeException('mail down'));
+    bwSpend(8.0, purpose: 'lab');
+    $calls = 0;
+    Notification::shouldReceive('sendNow')->andReturnUsing(function () use (&$calls): void {
+        if (++$calls === 1) {
+            throw new RuntimeException('database down');
+        }
+    });
 
-    expect(fn () => bwMonitor()->check())->toThrow(RuntimeException::class)
-        ->and(AiBudgetAlert::count())->toBe(0);
+    expect(bwMonitor()->check())->toBe(1)
+        ->and(AiBudgetAlert::pluck('budget')->all())->toBe(['lab']);
+});
+
+it('warns again after the cap is changed in the same period (QA M1)', function () {
+    $admin = bwAdmin();
+    bwSpend(10.0); // 100 % of 10 → blocked warning (80 + 100 claimed)
+
+    expect(bwMonitor()->check())->toBe(1);
+
+    app(AppSettingsService::class)->updateAiBudget($admin, 20.0, null); // 50 %
+    expect(AiBudgetAlert::where('budget', 'production')->count())->toBe(0)
+        ->and(bwMonitor()->check())->toBe(0);
+
+    bwSpend(6.0); // 16 of 20 = 80 %
+    expect(bwMonitor()->check())->toBe(1)
+        ->and($admin->notifications()->count())->toBe(2)
+        ->and(bwMonitor()->check())->toBe(0);
+
+    // A lab cap change forgets only the lab rows.
+    bwSpend(9.0, purpose: 'lab');
+    bwMonitor()->check();
+    app(AppSettingsService::class)->updateAiLabBudget($admin, 50.0, null, null);
+    expect(AiBudgetAlert::where('budget', 'lab')->count())->toBe(0)
+        ->and(AiBudgetAlert::where('budget', 'production')->count())->toBe(1);
+});
+
+it('floors the shown percentage so 79.96 % is never "80 %"', function () {
+    bwSpend(7.996);
+
+    expect(bwStatus('production', 'day')->percent())->toBe(79.9)
+        ->and(bwStatus('production', 'day')->level())->toBe(AiBudgetStatus::OK);
 });
 
 it('reads the fal.ai balance from the Platform API and warns once a day below the threshold', function () {

@@ -24,6 +24,7 @@
                 <p class="text-base font-semibold" style="color: rgb(var(--{{ $color }}-600));">
                     {{ __('admin.ai_alerts.banner.'.$level, ['percent' => $warnPercent]) }}
                 </p>
+                <p class="text-xs text-gray-500">{{ __('admin.ai_alerts.banner.timezone', ['tz' => $timezone]) }}</p>
                 <ul class="text-sm space-y-0.5">
                     @foreach ($statuses as $status)
                         @php $c = $palette[$status->level()] ?? 'gray'; @endphp
@@ -31,13 +32,13 @@
                             <span style="color: rgb(var(--{{ $c }}-600));">●</span>
                             {{ __('admin.ai_alerts.budgets.'.$status->budget.'_'.$status->period) }}:
                             <strong>${{ sprintf('%.2f', $status->spentUsd) }}</strong> / ${{ sprintf('%.2f', $status->capUsd) }}
-                            ({{ rtrim(rtrim(sprintf('%.1f', $status->percent()), '0'), '.') }} %)
+                            ({{ str_replace('.0', '', sprintf('%.1f', $status->percent())) }} %)
                         </li>
                     @endforeach
                     <li>
                         <span style="color: rgb(var(--{{ $falColor }}-600));">●</span>
                         @if ($falBalance !== null && $falBalance['status'] === 'ok')
-                            {{ __('admin.ai_alerts.banner.fal_balance', ['balance' => sprintf('%.2f', $falBalance['balance_usd']), 'threshold' => sprintf('%.2f', $falThreshold), 'at' => \Illuminate\Support\Carbon::parse($falBalance['checked_at'])->timezone('Europe/Ljubljana')->format('Y-m-d H:i')]) }}
+                            {{ __('admin.ai_alerts.banner.fal_balance', ['balance' => sprintf('%.2f', $falBalance['balance_usd']), 'threshold' => sprintf('%.2f', $falThreshold), 'at' => \Illuminate\Support\Carbon::parse($falBalance['checked_at'])->timezone($timezone)->format('Y-m-d H:i').' '.$timezone]) }}
                         @else
                             {{ __('admin.ai_alerts.banner.fal_unknown_'.($falBalance['status'] ?? 'never')) }}
                         @endif
