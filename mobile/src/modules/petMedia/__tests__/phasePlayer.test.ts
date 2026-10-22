@@ -3,7 +3,9 @@ import {
   BALL_CLIP_FETCH_MS,
   PHASE_CLIP_MS,
   WAND_CATCH_LEAD_MS,
+  PERFORMING_END_MARGIN_MS,
   ballMomentAt,
+  performingStartMs,
   phasePlayback,
   schoolMomentAt,
   usesPhaseClips,
@@ -42,12 +44,12 @@ function media(overrides: Parameters<typeof makeMedia>[0] = {}) {
   );
 }
 
-/** Lead-in 2 s, cue every 6 s; trial 0 obeys after 1 s, trial 1 ignores. */
+/** Lead-in 2 s, cue every 6 s; trial 0 obeys after 2 s, trial 1 ignores, trial 2 obeys after 1,5 s. */
 const session: Pick<TrainingSession, 'command' | 'trials' | 'duration_ms'> = {
   command: 'sit',
   duration_ms: 50_000,
   trials: [
-    { index: 0, cue_at_ms: 2_000, obeys: true, obey_at_ms: 3_000, window_end_ms: 4_500 },
+    { index: 0, cue_at_ms: 2_000, obeys: true, obey_at_ms: 4_000, window_end_ms: 5_500 },
     { index: 1, cue_at_ms: 8_000, obeys: false, obey_at_ms: null, window_end_ms: null },
     { index: 2, cue_at_ms: 14_000, obeys: true, obey_at_ms: 15_500, window_end_ms: 17_000 },
   ],
@@ -67,13 +69,43 @@ describe('normalizePetMedia (M5-T09 / T10 keys)', () => {
 });
 
 describe('school: command phase → clip (server schedule)', () => {
-  it('lead-in and cue → attention; obeys → performing for 3 s, then success (held pose) until the next cue', () => {
+  it('attention → performing (ends at the obey moment) → success held through the praise window', () => {
+    // performing of trial 0 starts at obey − 3 s − margin = 900 ms.
     expect(schoolMomentAt(session, 500)).toMatchObject({ phase: 'attention', clip: 'school_sit_attention', pose: null });
-    expect(schoolMomentAt(session, 2_400)).toMatchObject({ phase: 'attention', clip: 'school_sit_attention' });
-    expect(schoolMomentAt(session, 3_000)).toMatchObject({ phase: 'performing', clip: 'school_sit_performing', pose: 'sit' });
-    expect(schoolMomentAt(session, 3_000 + PHASE_CLIP_MS - 1).phase).toBe('performing');
-    expect(schoolMomentAt(session, 3_000 + PHASE_CLIP_MS)).toMatchObject({ phase: 'success', clip: 'school_sit_success', pose: 'sit' });
-    expect(schoolMomentAt(session, 7_999).phase).toBe('success');
+    expect(schoolMomentAt(session, 899).phase).toBe('attention');
+    expect(schoolMomentAt(session, 900)).toMatchObject({ phase: 'performing', clip: 'school_sit_performing', pose: 'sit' });
+    expect(schoolMomentAt(session, 900 + PHASE_CLIP_MS - 1).phase).toBe('performing');
+    expect(schoolMomentAt(session, 900 + PHASE_CLIP_MS)).toMatchObject({ phase: 'success', clip: 'school_sit_success', pose: 'sit' });
+    expect(schoolMomentAt(session, 5_499).phase).toBe('success');
+    // After the praise window: the next trial's attention (the dog waits for the next cue).
+    expect(schoolMomentAt(session, 5_500)).toMatchObject({ phase: 'attention', instance: '1:attention' });
+  });
+
+  it('QA M1: the end pose is on screen at obey_at and through the whole server praise window', () => {
+    for (const [i, trial] of session.trials.entries()) {
+      if (!trial.obeys || trial.obey_at_ms === null || trial.window_end_ms === null) continue;
+      const start = performingStartMs(session.trials, i);
+      expect(start).not.toBeNull();
+      // The clip has finished (end frame held) just before the text says the dog obeys…
+      expect((start as number) + PHASE_CLIP_MS).toBe(trial.obey_at_ms - PERFORMING_END_MARGIN_MS);
+      // …and every moment a praise counts (obey + 150 … window end) shows the held pose.
+      for (let t = trial.obey_at_ms; t < trial.window_end_ms; t += 50) {
+        expect(schoolMomentAt(session, t)).toMatchObject({ phase: 'success', pose: 'sit' });
+      }
+    }
+  });
+
+  it('QA M1: performing never starts inside the previous trial\'s praise window (end lands as soon as it can)', () => {
+    const tight = {
+      ...session,
+      trials: [
+        { index: 0, cue_at_ms: 2_000, obeys: true, obey_at_ms: 4_500, window_end_ms: 6_000 },
+        { index: 1, cue_at_ms: 8_000, obeys: true, obey_at_ms: 8_800, window_end_ms: 10_300 },
+      ],
+    };
+    expect(performingStartMs(tight.trials, 1)).toBe(6_000);
+    expect(schoolMomentAt(tight, 5_999)).toMatchObject({ phase: 'success', instance: '0:success' });
+    expect(schoolMomentAt(tight, 6_000)).toMatchObject({ phase: 'performing', instance: '1:performing' });
   });
 
   it('a cue the dog ignores → the standing pose only (no clip that would show it attending)', () => {
@@ -82,14 +114,14 @@ describe('school: command phase → clip (server schedule)', () => {
   });
 
   it('each trial is its own instance: the same clip replays from the start for the next obey', () => {
-    expect(schoolMomentAt(session, 3_100).instance).not.toBe(schoolMomentAt(session, 15_600).instance);
-    const a = phasePlayback(media(), schoolMomentAt(session, 3_100)).current;
-    const b = phasePlayback(media(), schoolMomentAt(session, 15_600)).current;
+    expect(schoolMomentAt(session, 1_000).instance).not.toBe(schoolMomentAt(session, 13_000).instance);
+    const a = phasePlayback(media(), schoolMomentAt(session, 1_000)).current;
+    const b = phasePlayback(media(), schoolMomentAt(session, 13_000)).current;
     expect(a.kind === 'clip' && b.kind === 'clip' && a.key !== b.key).toBe(true);
   });
 
   it('a phase clip plays once (loop false) with its pose under it; never a state clip', () => {
-    const p = phasePlayback(media(), schoolMomentAt(session, 3_100));
+    const p = phasePlayback(media(), schoolMomentAt(session, 1_000));
     expect(p.current).toMatchObject({ kind: 'clip', url: url('school_sit_performing'), loop: false, transition: null, state: null });
     expect(p.still).toBe(url('pose-sit'));
   });
@@ -102,12 +134,12 @@ describe('school: command phase → clip (server schedule)', () => {
   });
 
   it('picture mode: pose images only — no clip is mounted (nothing downloaded)', () => {
-    expect(phasePlayback(media(), schoolMomentAt(session, 3_100), 'picture').current).toMatchObject({ kind: 'image', url: url('pose-sit') });
+    expect(phasePlayback(media(), schoolMomentAt(session, 1_000), 'picture').current).toMatchObject({ kind: 'image', url: url('pose-sit') });
     expect(phasePlayback(media(), schoolMomentAt(session, 500), 'picture').current).toMatchObject({ kind: 'image', url: url('ref') });
   });
 
   it('a clip the player failed on → the pose', () => {
-    expect(phasePlayback(media(), schoolMomentAt(session, 3_100), 'video', () => false).current.kind).toBe('image');
+    expect(phasePlayback(media(), schoolMomentAt(session, 1_000), 'video', () => false).current.kind).toBe('image');
   });
 });
 

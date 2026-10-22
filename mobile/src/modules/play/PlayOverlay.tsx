@@ -41,6 +41,7 @@ import {
   BALL_START,
   BALL_THROWS,
   ballFetched,
+  ballFlightSteps,
   CUDDLE_STRINGS,
   CUDDLE_STROKES,
   doneText,
@@ -174,11 +175,13 @@ function BallGame({ view, reduceMotion, onDone, onMediaExpired }: GameProps) {
     }
     drag.setValue({ x: 0, y: 0 });
     flight.setValue(0);
-    // Out and back: the ball flies up (or just fades with reduce motion) and the dog brings it.
-    Animated.sequence([
-      Animated.timing(flight, { toValue: 1, duration: fetchMs / 2, useNativeDriver: true }),
-      Animated.timing(flight, { toValue: 0, duration: fetchMs / 2, useNativeDriver: true }),
-    ]).start();
+    // Out and back: the ball flies up and the dog brings it — with reduce motion only a short
+    // fade out and back (QA m3: also over the 6 s phase clip timing, never a slow flight).
+    Animated.sequence(
+      ballFlightSteps(fetchMs, reduceMotion).map((step) =>
+        Animated.timing(flight, { toValue: step.toValue, duration: step.duration, delay: step.delay, useNativeDriver: true }),
+      ),
+    ).start();
     // The game state moves on by the clock (not the animation callback): testable, never stuck.
     if (timer.current) clearTimeout(timer.current);
     timer.current = setTimeout(() => {

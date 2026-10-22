@@ -16,8 +16,9 @@
  *   earlier stage (state clips idle / playing).
  *
  * School (per trial of the server schedule, `TrainingSession`):
- *   lead-in / cue → `attention` (waits for the command) · the dog obeys → `performing`
- *   (3 s, ends in the held pose) → `success` (holds the position) until the next cue ·
+ *   lead-in / cue → `attention` (waits for the command) → `performing` (3 s, timed so it ENDS
+ *   in the held pose at `obey_at_ms`, QA M1) → `success` (holds the position through the
+ *   praise window) until the next trial's attention ·
  *   a cue the dog ignores → the standing pose image (the text says it sniffs around —
  *   no clip that could show attention instead).
  * Ball (dog): waiting → running (out of frame) → fetching (back) — the app throws and
@@ -94,24 +95,71 @@ export function phasePlayback(media: PetMediaInfo, moment: PhaseMoment, mode: Me
 
 // ── School ───────────────────────────────────────────────────
 
-/** The school phase at `elapsedMs` of a session (local game clock). */
+/**
+ * QA M1: the `performing` clip ends this long BEFORE `obey_at_ms`, so the held end pose
+ * (sitting, at the door, …) is on screen when the text says the dog obeys and during the whole
+ * praise window (server: obey_at + 150 … window_end_ms); the margin covers the clip's start-up.
+ */
+export const PERFORMING_END_MARGIN_MS = 100;
+
+/** Server praise window when a trial carries no `window_end_ms` (TrainingService::PRAISE_WINDOW_MS). */
+const PRAISE_WINDOW_FALLBACK_MS = 1_500;
+
+type SchoolTrial = TrainingSession['trials'][number];
+
+function obeyAt(t: SchoolTrial | undefined): number | null {
+  return t !== undefined && t.obeys && t.obey_at_ms !== null ? t.obey_at_ms : null;
+}
+
+/** Until when the previous trial keeps the stage: its praise window (obeys) or its cue (ignores). */
+function holdEnd(prev: SchoolTrial | undefined): number {
+  if (prev === undefined) return 0;
+  const at = obeyAt(prev);
+  return at === null ? prev.cue_at_ms : (prev.window_end_ms ?? at + PRAISE_WINDOW_FALLBACK_MS);
+}
+
+/**
+ * QA M1: when trial `i`'s `performing` clip starts — so that it ENDS at `obey_at − margin`
+ * (a 3 s clip, the dog obeys 0,8–2,5 s after the cue, so the motion begins around the cue),
+ * never before the previous trial's praise window is over. null = the dog ignores this cue.
+ */
+export function performingStartMs(trials: readonly SchoolTrial[], i: number): number | null {
+  const at = obeyAt(trials[i]);
+  if (at === null) return null;
+  return Math.max(holdEnd(trials[i - 1]), at - PHASE_CLIP_MS - PERFORMING_END_MARGIN_MS);
+}
+
+/** When trial `i` takes the stage (its `attention`): after the previous trial's hold, latest at its cue / performing. */
+function trialStartMs(trials: readonly SchoolTrial[], i: number): number {
+  if (i === 0) return 0; // the lead-in belongs to trial 0
+  const own = Math.min(trials[i].cue_at_ms, performingStartMs(trials, i) ?? trials[i].cue_at_ms);
+  return obeyAt(trials[i - 1]) !== null ? Math.min(holdEnd(trials[i - 1]), own) : own;
+}
+
+/**
+ * The school phase at `elapsedMs` of a session (local game clock). Per trial: `attention`
+ * (waits for the command) → `performing` (ends at the obey moment, QA M1) → `success` (holds
+ * the position through the praise window, until the next trial's attention). A cue the dog
+ * ignores → the standing pose from the cue on.
+ */
 export function schoolMomentAt(session: Pick<TrainingSession, 'command' | 'trials' | 'duration_ms'>, elapsedMs: number): PhaseMoment & { phase: SchoolPhase | null } {
   const e = Math.max(0, Math.min(elapsedMs, session.duration_ms));
   const pose = COMMAND_POSE[session.command];
   const clip = (phase: SchoolPhase) => `school_${session.command}_${phase}`;
-  // The current trial = the last cue at or before now (the lead-in belongs to trial 0).
-  let index = -1;
-  session.trials.forEach((t, i) => {
-    if (t.cue_at_ms <= e) index = i;
+  const trials = session.trials;
+  if (trials.length === 0) return { phase: 'attention', clip: clip('attention'), pose: null, instance: 'lead-in' };
+  // The current trial = the last one whose stage time has begun.
+  let index = 0;
+  trials.forEach((_, i) => {
+    if (trialStartMs(trials, i) <= e) index = i;
   });
-  if (index < 0) return { phase: 'attention', clip: clip('attention'), pose: null, instance: 'lead-in' };
-  const trial = session.trials[index];
-  if (trial.obeys && trial.obey_at_ms !== null && e >= trial.obey_at_ms) {
-    const performing = e < trial.obey_at_ms + PHASE_CLIP_MS;
-    const phase: SchoolPhase = performing ? 'performing' : 'success';
+  const trial = trials[index];
+  const start = performingStartMs(trials, index);
+  if (start !== null && e >= start) {
+    const phase: SchoolPhase = e < start + PHASE_CLIP_MS ? 'performing' : 'success';
     return { phase, clip: clip(phase), pose, instance: `${index}:${phase}` };
   }
-  if (!trial.obeys) return { phase: null, clip: null, pose: null, instance: `${index}:ignores` };
+  if (start === null && e >= trial.cue_at_ms) return { phase: null, clip: null, pose: null, instance: `${index}:ignores` };
   return { phase: 'attention', clip: clip('attention'), pose: null, instance: `${index}:attention` };
 }
 

@@ -9,6 +9,7 @@
 import { act, fireEvent, render, screen } from '@testing-library/react-native';
 import {
   AccessibilityInfo,
+  Animated,
   BackHandler,
   PanResponder,
   Platform,
@@ -317,5 +318,20 @@ describe('PlayOverlay ball game with phase clips (M5-T10)', () => {
     expect(screen.getByTestId('play-dog-video-image').props.source).toEqual({ uri: u('pose-empty') });
     await advance(BALL_CLIP_FETCH_MS);
     expect(screen.getByTestId('play-dog-video-image').props.source).toEqual({ uri: u('ref') });
+  });
+
+  it('QA m3: reduce motion keeps the clip timing but the ball only fades (short fades, held away)', async () => {
+    const timing = jest.spyOn(Animated, 'timing');
+    render(<PlayOverlay view={phaseView()} mode="play" reduceMotion onPick={jest.fn()} onFinished={jest.fn()} onClose={jest.fn()} />);
+    fireEvent.press(screen.getByTestId('play-throw'));
+    const durations = timing.mock.calls.map(([, config]) => (config as Animated.TimingAnimationConfig).duration);
+    expect(durations).toEqual([FETCH_MS_REDUCED / 2, FETCH_MS_REDUCED / 2]);
+    expect((timing.mock.calls[1][1] as Animated.TimingAnimationConfig).delay).toBe(BALL_CLIP_FETCH_MS - FETCH_MS_REDUCED);
+    // The game still follows the run + fetch clips: the dog is away for the whole 6 s.
+    await advance(FETCH_MS_REDUCED);
+    expect(screen.getByText('Kuža teče po žogo …')).toBeTruthy();
+    await advance(BALL_CLIP_FETCH_MS - FETCH_MS_REDUCED);
+    expect(screen.getByText('Met 1 od 3')).toBeTruthy();
+    timing.mockRestore();
   });
 });
