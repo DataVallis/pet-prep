@@ -231,7 +231,8 @@ class MediaEntitlementService
      */
     public function phaseClipsFor(Pet $pet): array
     {
-        if (! $this->phaseClipsEnabled() || ! $this->usesStateMedia($pet)) {
+        // usesStateMedia first: a pet without state media never reads the phase switch (no query).
+        if (! $this->usesStateMedia($pet) || ! $this->phaseClipsEnabled()) {
             return [];
         }
 

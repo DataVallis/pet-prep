@@ -81,12 +81,12 @@ class GameMediaReadiness
      */
     public function missing(Pet $pet, string $game, ?Collection $slots = null): array
     {
-        $slots ??= $pet->relationLoaded('media') ? $pet->getRelation('media') : $pet->media()->get();
-
         $required = $this->requiredClips($pet, $game, $slots);
         if ($required === []) {
             return [];
         }
+
+        $slots ??= $pet->relationLoaded('media') ? $pet->getRelation('media') : $pet->media()->get();
 
         $image = $slots->first(fn (PetMedia $m) => $m->isImage());
         // M5-T06: not "no image row" — the birth (queueStateVideos) creates a pending
