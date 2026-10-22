@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `wirehaired_pointing_griffon` (viri S448–S456; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174) |
 | Izvor | FCI št. 107, skupina 7, sekcija 1 (celinski ptičarji), Francija (S448) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 51. mesto »Wirehaired Pointing Griffon« (S174) |
-| PR-ji | pet-prep #336 (pasma) · portret — · spletna stran — |
+| PR-ji | pet-prep #336 (pasma, združen `c8bbaa4`) · portret #337 · spletna stran — |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -30,6 +30,7 @@
 | 2026-10-22 | pravilo runbooka (§3) | barve za AI in izbirnik: **jekleno siv z jetrno rjavimi lisami** (portret), jetrni roan, jetrno rjav, jetrno-bel, oranžno-bel; nikoli črn; nos vedno rjav | FCI S449 »Preferably steel grey shade with brown (liver) patches or self-coloured brown (liver) coat.«; AKC S451 »A black coat disqualifies.« (uteži barv brez vira → `verified: false`) | #336 |
 | 2026-10-22 | predlog Claude, David lahko spremeni | v AI podobi in portretu **naravni (nekupiran) rep** | standarda FCI in AKC pravita, da se rep »običajno kupira«; prikazujemo zmerno, naravno podobo psa brez posega | #336 |
 | 2026-10-22 | predlog Claude, David lahko spremeni | ime SL »francoski ostrodlaki ptičar« (slug `francoski-ostrodlaki-pticar`); iskalni ključi tudi »korthals«, »korthals griffon«, »griffon«, »griff«, »korthalsov grifon«, »grifon«, »ostrodlaki ptičar« | smrcek.si S456 »FRANCOSKI OSTRODLAKI PTIČAR – GRIFON« (tier C); stran lovske družine »korthalov grifon«; KZS ni preverjen | #336 |
+| 2026-10-22 | pravilo runbooka (§8) | AI portret: realistična fotografija odraslega psa, jekleno siv z jetrno rjavimi lisami, rjav nos, brki in obrvi, naraven rep, siva studijska podlaga, naravna razmerja; sprejet v prvem poskusu (zagon 39708692955, koda `c8bbaa4`, brez produkcijske namestitve) | barva portreta = najtežja barva iz `breed_appearance.php` | #337 |
 | 2026-10-22 | pravilo runbooka (§2.3) | seznam za vzreditelja: najmanj »Prioritising genetic diversity«, najboljša praksa BVA/KC shema za komolce in BVA/KC shema za kolke | RKC S450 (»We strongly recommend that breeders, at a minimum, conduct these tests before breeding« / »To support the breed’s health, responsible breeders should ensure they complete all tests in both categories.«). Brez novega ključa | #336 |
 
 ## Kaj je v aplikaciji (v slogu FEATURES)
@@ -40,7 +41,7 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 90 mesecev; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-55 | 2026-10-22 |
 | Česanje 1× na teden (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-22 |
 | Barva (izbirnik barve: jekleno siv z jetrno rjavimi lisami, jetrni roan, jetrno rjav, jetrno-bel, oranžno-bel) | 🛠 | 💶 izziv | M5-R21 | 2026-10-22 |
-| AI portret v registru | 🗓 po združitvi | — | M5-R11-04 | — |
+| AI portret v registru (jekleno siv z jetrno rjavimi lisami, sprejet v prvem poskusu, zagon 39708692955) | ✅ | — | M5-R11-04 | 2026-10-22 |
 | Stran na petprep.si (`/animals/dogs/wirehaired-pointing-griffon`, `/sl/zivali/psi/francoski-ostrodlaki-pticar`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
