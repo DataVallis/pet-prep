@@ -138,8 +138,17 @@ jobs:
 
       # Clip quality check (David 2026-10-23): MediaQualityCheckTest renders tiny MP4 fixtures
       # with ffmpeg and measures them with ffprobe (the tests skip with a reason without it).
+      # 2026-10-23: `apt-get update` took 25–28 min on the runner (slow mirror) and the job hit its
+      # 30 min limit → install from the image's package lists first, update only if that fails, and
+      # never let this step block the suite (5 min cap; without ffmpeg those tests skip, the
+      # production-image job still proves ffmpeg / ffprobe are in the app image).
       - name: Install ffmpeg
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg
+        timeout-minutes: 5
+        continue-on-error: true
+        run: |
+          sudo apt-get install -y -qq --no-install-recommends ffmpeg \
+            || (sudo apt-get update -qq -o Acquire::Retries=2 -o Acquire::http::Timeout=20 && sudo apt-get install -y -qq --no-install-recommends ffmpeg)
+          ffprobe -hide_banner -version | head -1
 
       - name: Install PHP Dependencies
         working-directory: backend
