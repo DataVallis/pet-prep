@@ -63,7 +63,7 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 14. **i18n (M1-18) not verified on a device** (Hermes plurals, Android channel names after a switch, iOS SL permission texts); English copy awaits David's read-through.
 15. **Security / hygiene before beta:** test accounts in the production DB (M0-15), EAS signing passwords in old repo history (M0-12), PHP 8.3 prod vs 8.5 Sail (M0-11), move `PRODUCTION_SSH_PRIVATE_KEY` into the `production` environment (DEPLOYMENT D20).
 16. **Android payments / sign-in (David):** RevenueCat Play service-account JSON, Android product in the current offering's package, Android OAuth client with the Play signing SHA-1.
-17. **OTA pipeline:** `docs/research/app-release.json` still records only store build 3.1.3 — no OTA has been recorded; check `EXPO_TOKEN` and that the next store build gets recorded (`scripts/record-app-release.mjs`), otherwise the website register keeps showing newer breeds as »kmalu«.
+17. **OTA pipeline:** first production OTA sent 2026-10-23 for **iOS only** (`3fb6d12`, manual run; Android runtime `69eaf3ff…` has no production build → needs a new Android build). The automatic OTA after that deploy was skipped by a transient jobs-API answer — the plan now re-reads up to 5× (`fix/ota-plan-retry`). Not recorded in `app-release.json` (records only when both platforms got it); check `EXPO_TOKEN` and that the next store build gets recorded (`scripts/record-app-release.mjs`), otherwise the website register keeps showing newer breeds as »kmalu«.
 18. **Breeds are hard-coded in the app** — every new breed needs an app release to be pickable (candidate: server-driven breed catalogue).
 19. **Shared looks (M5-R21):** old look files stay after regenerate; regenerate does not fix earlier stages; `auto-` keys not migrated when a colour list is added later.
 20. **Media storage:** pet media on the server disk (`app_storage` volume); object storage + CDN (M4-05) before many families (SCALING.md).
@@ -95,6 +95,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ### 2026-10-23 (cloud, backend) — hotfix: /admin 500 from the Filament bell (`fix/notifications-data-jsonb`)
 Since the M5-T15 deploy every /admin page showed a 500 popup: Filament's `DatabaseNotifications` filters `data->format` and `notifications.data` was `text` (`text ->> unknown` has no operator on PostgreSQL). New migration `2027_01_18_120000_change_notifications_data_to_jsonb` (`USING data::jsonb`, pgsql only; runs with the next deploy's `migrate --force`). Test `AdminDatabaseNotificationsTest`. Debt: none.
+
+### 2026-10-23 (cloud, orchestrator) — OTA plan re-reads the deploy jobs (`fix/ota-plan-retry`)
+David saw no changes after the manual production deploy of `3fb6d12`: the automatic OTA plan got "without a production deploy" from the jobs API although the deploy job had succeeded. Published by hand (Mobile OTA update → production): iOS OTA sent, Android needs a new build. Fix: `mobile-ota-plan.sh` re-reads the jobs up to 5× / 20 s; new CI harness `scripts/tests/mobile-ota-plan.test.sh`. Next: David confirms the iOS OTA on his phone; Android build.
 
 ### 2026-10-23 (cloud, mobile) — child HUD top bar decluttered (`fix/child-hud-topbar-declutter`)
 David's iPhone screenshot: name / stage / breed truncated. Album, »?« (care guide) and the exit moved from the bar into `ChildSettingsSheet` rows (Album → Kako skrbim → Odjava at the bottom; same testIDs, `useChildExit` unchanged). JS only → OTA. Debt: not on a device — check the Modal hand-off (settings → care guide / parental gate) on iOS + Android.

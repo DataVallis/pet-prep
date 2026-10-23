@@ -223,7 +223,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Shellcheck
-        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh scripts/restore-production-db.sh scripts/backup-production-db.sh scripts/tests/backup-production-db.test.sh scripts/backup-offsite.sh scripts/tests/backup-offsite.test.sh scripts/ci-deploy-target.sh scripts/ci-remote-deploy.sh scripts/mobile-ota-plan.sh scripts/mobile-ota.sh scripts/daily-deploy.sh scripts/tests/daily-deploy.test.sh
+        run: shellcheck scripts/deploy-production.sh scripts/tests/deploy-production.test.sh scripts/ci-plan.sh scripts/tests/ci-plan.test.sh scripts/ci-deploy-guard.sh scripts/reset-game-data.sh scripts/tests/reset-game-data.test.sh scripts/restore-production-db.sh scripts/backup-production-db.sh scripts/tests/backup-production-db.test.sh scripts/backup-offsite.sh scripts/tests/backup-offsite.test.sh scripts/ci-deploy-target.sh scripts/ci-remote-deploy.sh scripts/mobile-ota-plan.sh scripts/tests/mobile-ota-plan.test.sh scripts/mobile-ota.sh scripts/daily-deploy.sh scripts/tests/daily-deploy.test.sh
 
       # Stubbed docker/git/curl in a temp dir; needs only bash, git and rsync.
       - name: Harness (deploy-production.sh)
@@ -237,6 +237,11 @@ jobs:
       # Stubbed gh over JSON fixtures (real jq filters) + date; D21 daily 06:00 deploy trigger.
       - name: Harness (daily-deploy.sh)
         run: bash scripts/tests/daily-deploy.test.sh
+
+      # Stubbed gh over job fixtures (real jq filter): the OTA plan re-reads the CI run's jobs
+      # before "without a production deploy" (2026-10-23).
+      - name: Harness (mobile-ota-plan.sh)
+        run: bash scripts/tests/mobile-ota-plan.test.sh
 
       # Stubbed docker + backup script (D17 production reset wrapper).
       - name: Harness (reset-game-data.sh)

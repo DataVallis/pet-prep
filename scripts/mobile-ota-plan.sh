@@ -18,7 +18,8 @@
 #
 # Env: EVENT_NAME (workflow_run | workflow_dispatch), WR_EVENT, WR_CONCLUSION, WR_RUN_ID
 # (the CI run), INPUT_CHANNEL, DRY_RUN (true|false), REPO, GH_TOKEN, GITHUB_OUTPUT.
-# Test hooks: OTA_PLAN_GH (gh binary), OTA_PLAN_REMOTE (default origin).
+# Test hooks: OTA_PLAN_GH (gh binary), OTA_PLAN_REMOTE (default origin), OTA_PLAN_JOB_TRIES (5) /
+# OTA_PLAN_JOB_WAIT (20 s): re-reads of the CI run's jobs before "without a production deploy".
 # Output: mobile=true|false, channel=production|preview|"".
 set -Eeuo pipefail
 
@@ -75,11 +76,24 @@ elif [ "${WR_CONCLUSION:-}" != success ]; then
 elif [ "${WR_EVENT:-}" = workflow_dispatch ]; then
   REPO="${REPO:?REPO is required}"
   WR_RUN_ID="${WR_RUN_ID:?WR_RUN_ID is required}"
-  if ! prod="$("$GH" api "repos/${REPO}/actions/runs/${WR_RUN_ID}/jobs?per_page=100" \
-        --jq '[.jobs[] | select(.name == "'"${PROD_JOB}"'" and .conclusion == "success")] | length' 2>/dev/null)"; then
-    echo "::error::cannot read the jobs of CI run ${WR_RUN_ID} — not publishing to production"
-    exit 1
-  fi
+  # 2026-10-23: right after the run completed, the jobs API once answered without the
+  # successful production deploy job (run 39913945780 → OTA skipped as "without a production
+  # deploy"; a re-read a few minutes later showed it). Re-read a few times before deciding.
+  tries="${OTA_PLAN_JOB_TRIES:-5}"
+  wait_s="${OTA_PLAN_JOB_WAIT:-20}"
+  prod=0
+  for ((try = 1; try <= tries; try++)); do
+    if ! prod="$("$GH" api "repos/${REPO}/actions/runs/${WR_RUN_ID}/jobs?per_page=100" \
+          --jq '[.jobs[] | select(.name == "'"${PROD_JOB}"'" and .conclusion == "success")] | length' 2>/dev/null)"; then
+      echo "::error::cannot read the jobs of CI run ${WR_RUN_ID} — not publishing to production"
+      exit 1
+    fi
+    [ "${prod:-0}" -gt 0 ] && break
+    if [ "$try" -lt "$tries" ]; then
+      echo "Production deploy job of CI run ${WR_RUN_ID} not seen as successful yet (try ${try}/${tries}) — re-reading in ${wait_s} s"
+      sleep "$wait_s"
+    fi
+  done
   if [ "${prod:-0}" -gt 0 ]; then
     channel=production
     last="$(node -e 'try{process.stdout.write(require(process.argv[1]).commit||"")}catch{}' "$PWD/${RELEASE_FILE}" 2>/dev/null || true)"
