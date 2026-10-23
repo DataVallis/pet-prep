@@ -2326,6 +2326,38 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (display.aspx?id=3076 → royalkennelclub.com …/terrier/scottish-terrier) could not be fetched on 2026-10-23 → no minimum / best_practice level. Scottish Terrier Club of America CHIC requirements 2026 (K34, hosted by the AKC): mandatory 'Von Willibrand's Disease III Scottish Terrier Type' (sic), 'Patellar Luxation', 'Craniomandibular Osteopathy (CMO)'; elective (one of) thyroid, ACVO eye examination, Legg-Calvé-Perthes, serum bile acids, kidney UP/UC screening — not listed (elective). AKC Terrier Group health testing page (K33): 'Recommended Health Tests from the National Breed Club' — 'Patella Evaluation', 'Von Willebrand Disease III (Scottish Terrier) (VWDIII) - DNA Test', 'Craniomandibular Osteopathy' (agrees). PDSA (dog-data S474): check that the puppy's parents were screened under the Canine Health Schemes (general advice, no named scheme). New test key dna_cmo."
+    },
+    "weimaraner": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S479",
+        "level_quotes": {
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in Best Practice."
+        }
+      },
+      "tests": [
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S479",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S479",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S479",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ]
     }
   }
 }
