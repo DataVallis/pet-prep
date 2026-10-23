@@ -237,7 +237,7 @@ export function makeChildState(
     steps: { steps_today: 0, my_steps_today: 0, my_device_steps_today: 0, goal: 5000, energy_level: 100, adapted_mode: false },
     contract: { signed: true, signed_at: '2026-10-04T09:00:00+00:00' },
     // M5-T11: »Prikaz« default.
-    settings: { media_display: 'video' },
+    settings: { media_display: 'video', easy_gestures: false },
     // M5-R02 behaviour events: no bladder clock, nothing open (a legacy-like pet).
     behaviour: { take_out: null, active_events: [], scene: null, can_take_out: false, can_resolve_chewing: false },
     // M5-R03 training: off (pet created by an app without the `training` feature).
