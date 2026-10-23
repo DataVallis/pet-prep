@@ -74,6 +74,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   wirehaired_pointing_griffon: 'dog',
   chesapeake_bay_retriever: 'dog',
   samoyed: 'dog',
+  scottish_terrier: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -152,6 +153,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'wirehaired_pointing_griffon',
   'chesapeake_bay_retriever',
   'samoyed',
+  'scottish_terrier',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */

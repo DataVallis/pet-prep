@@ -430,6 +430,7 @@ const SPECIES = [
       { id: 'wirehaired_pointing_griffon', synonyms: { en: ['Korthals Griffon', 'Wire-haired Pointing Griffon Korthals', 'Griff'], sl: ['korthalsov grifon', 'grifon', 'korthals'] } },
       { id: 'chesapeake_bay_retriever', synonyms: { en: ['Chessie', 'Chesapeake', 'Retriever (Chesapeake Bay)'], sl: ['chessie', 'chesapeake'] } },
       { id: 'samoyed', synonyms: { en: ['Sammy', 'Samoyede', 'Samoiedskaïa Sabaka'], sl: ['samojed', 'samojedski pes', 'sammy'] } },
+      { id: 'scottish_terrier', synonyms: { en: ['Scottie', 'Aberdeen Terrier'], sl: ['scottie', 'škotski terier', 'skotski terier'] } },
     ],
   },
   {
@@ -1638,6 +1639,31 @@ const DOG_FACTS = {
       ['certain_cancers', 'health.cancer'],
     ],
   },
+  // M5-R10-58. Height + weight = Kennel Club standard (S473, reprinted by KUSA), lifespan = the PDSA band "Over 10 years"
+  // (S474; the McMillan 2024 table S123 and the RKC page could not be fetched), exercise = PDSA "Minimum exercise (per
+  // day) 1 hour" (S474). FCI origin Great Britain. Not exported: the PetMD / Wikipedia alternatives,
+  // adult_weight.salt_category (our assignment), lifespan.senior_from (derived), health.cushings (no quote),
+  // health.whelping (breeding background only), the care need professional_grooming (open for David: M5-R18). Bladder
+  // cancer is never recorded (tier C with a risk multiple). New health key: scottie_cramp.
+  scottish_terrier: {
+    height: ['height.kc_standard'],
+    weight: [['adult_weight.kc_standard', null]],
+    lifespan: [['lifespan.pdsa', 'more_than']],
+    exercise: [['@proposed_game_parameters.scottish_terrier.exercise_minutes_adult', 'at_least']],
+    coat: [],
+    grooming: [],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+      ['scottie_cramp', 'health.scottie_cramp'],
+      ['kneecap_luxation', 'health.patella'],
+      ['heart_muscle_disease', 'health.cardiomyopathy'],
+      ['cataracts_lens_luxation', 'health.eyes'],
+      ['itchy_skin_allergy', 'health.atopy'],
+      ['deafness', 'health.deafness'],
+    ],
+  },
 
 };
 
@@ -2071,6 +2097,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.samoyed.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.samoyed.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.samoyed.exercise_minutes_senior',
+  },
+  scottish_terrier: {
+    adult_minutes: ['proposed_game_parameters.scottish_terrier.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.scottish_terrier.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.scottish_terrier.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.scottish_terrier.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.scottish_terrier.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.scottish_terrier.exercise_minutes_senior',
   },
 
 };

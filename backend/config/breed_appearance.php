@@ -512,6 +512,13 @@
 | never another colour or blue / odd eyes (disqualifications, S464); the AKC's "all biscuit" (S465) is not in the FCI
 | standard → not used. No welfare concern found. Colour weights unsourced → `verified => false`.
 |
+| Scottish Terrier (M5-R10-58, docs/research/dog-data scottish_terrier.appearance): "Short-legged, alert in carriage,
+| and suggestive of great power and activity in small compass." (Kennel Club standard, S473); close-lying double coat with
+| a harsh, wiry outer coat; long head, skull and foreface of equal length, large black nose; almond-shaped dark brown
+| eyes; neat, pointed, erect ears; tail of moderate length carried upright. "Black, wheaten, or brindle of any shade."
+| (S473) — black weighted highest (the register portrait), then brindle, wheaten; "Any other colour or combination of
+| colours unacceptable." (S473). No welfare concern found. Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2576,6 +2583,41 @@ return [
             'eye_color' => ['dark brown almond-shaped eyes with black rims'],
             'tail' => ['plumed tail carried curved forward over the back'],
             'head' => ['strong muzzle about as long as the skull, black lips slightly upturned in the "Samoyed smile", black nose'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-58 (docs/research/dog-data/data.json scottish_terrier.appearance; runbook rules 2026-10-10:
+    // standard colours only — black, wheaten, brindle of any shade; no other colour, no white patches).
+    'scottish_terrier' => [
+        'display_name' => 'Scottish Terrier',
+        // Colour frequencies are in no source (scottish_terrier.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'Kennel Club breed standard (S473), PDSA (S474) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S473 "Thick-set, of suitable size to go to ground"; S473 height "25cm – 28cm (approx. 10” – 11”)"',
+            'build' => 'S473 "Short-legged, alert in carriage, and suggestive of great power and activity in small compass."',
+            'coat_length' => 'S473 "Close-lying, double coat; undercoat short, dense and soft; outercoat harsh, dense and wiry,"',
+            'coat_color' => 'S473 "Black, wheaten, or brindle of any shade." (weights unsourced; "Any other colour or combination of colours unacceptable.")',
+            'ear_carriage' => 'S473 "Neat, fine texture, pointed, erect, and set on top of skull but not too close together."',
+            'eye_color' => 'S473 "Almond-shaped, dark brown, fairly wide apart, well-set under eyebrows with keen, intelligent expression."',
+            'tail' => 'S473 "Moderate length giving general balance to dog, thick at root and tapering towards tip."',
+            'head' => 'S473 "Skull and foreface of equal length."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'thick-set, short-legged and sturdy terrier, alert and agile', 'weight' => 3], 'compact, powerful little terrier standing alertly'],
+            'coat_length' => ['harsh, dense, wiry close-lying double coat, neatly trimmed with the usual beard, eyebrows and leg furnishings'],
+            // Kennel Club standard (S473): black, wheaten, brindle of any shade; black weighted highest (the register
+            // portrait); no other colour, no white patches.
+            'coat_color' => [
+                ['value' => 'black', 'weight' => 60],
+                ['value' => 'brindle', 'weight' => 25],
+                ['value' => 'wheaten', 'weight' => 15],
+            ],
+            'ear_carriage' => ['small, neat, pointed erect ears set on top of the skull'],
+            'eye_color' => ['dark brown almond-shaped eyes set under the eyebrows'],
+            'tail' => ['tail of moderate length, thick at the root, carried upright or with a slight bend'],
+            'head' => ['long head with a nearly flat skull, skull and foreface of equal length, large black nose'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],

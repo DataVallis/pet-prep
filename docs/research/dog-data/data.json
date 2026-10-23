@@ -30231,6 +30231,526 @@
       }
     }
   },
+  "scottish_terrier": {
+    "_note": "Added 2026-10-23 (M5-R10-58, unattended run — appended after the Samoyed: AKC 2024 No. 54 'Scottish Terrier', S174 full-list table as recorded on 2026-10-22 '54 Scottish Terrier'). Quotes as returned by the web-fetch tool on 2026-10-23 (short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S472–S476 (reused S8, S10, S11, S14, S24, S35, S45, S54, S123, S174). No health percentages anywhere. The RKC Breeds A–Z page (display.aspx?id=3076 redirects to royalkennelclub.com …/terrier/scottish-terrier, refused by the fetch tool) and the RKC breed-standard page (redirect refused) could not be read → no RKC key facts and no Breed Watch category; exercise from PDSA (S474, runbook fallback RKC → PDSA). Identity from the FCI nomenclature (S472); appearance, height and weight from the Kennel Club breed standard as reprinted by KUSA (S473, 01-2026). Lifespan: the McMillan 2024 table (S123) was refused by the fetch tool and the paper (S54) has the breed only in Supplementary Table 3 → the senior boundary is Claude's suggestion (verified=false, Samoyed precedent). Names: FCI / AKC / KC 'Scottish Terrier' (S472, S174, S473); Slovenian »škotski terier« (no Slovenian source found — not checked against KZS, open for David).",
+    "identity": {
+      "value": "FCI No. 73, Group 3 Section 2 (Small-sized Terriers), Great Britain",
+      "unit": "—",
+      "source_id": "S472",
+      "quote": "Scottish Terrier",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S472, as returned): 'Scottish Terrier (FCI No. 73)', Group 3 Terriers, section 'Small-sized terriers' (section 2 of group 3), country of origin Great Britain, no working trial, definitive acceptance 18/10/1954, valid standard 08/09/2026. 'Great Britain' is already in FCI_ORIGINS (GB). Other names: Terrier Écossais (FR), Schottischer Terrier (DE). AKC name: Scottish Terrier (S174). Wikipedia (S476, tier C): 'Scottie', 'Aberdeen Terrier' (paraphrase as returned)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S474",
+      "quote": "Size | Medium",
+      "confidence": "medium",
+      "notes": "PDSA key facts table (S474; the page sits under 'medium-dogs'). The RKC 'Size:' field (preferred) could not be fetched. Note: by weight (8.5–10.5 kg, S473) the breed is in PetMD's 'Small' growth class (growth.adult_weight_reached) — the size chip follows PDSA."
+    },
+    "height": {
+      "kc_standard": {
+        "value": {
+          "male": [
+            25,
+            28
+          ],
+          "female": [
+            25,
+            28
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S473",
+        "quote": "25cm – 28cm (approx. 10” – 11”)",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard as reprinted by KUSA (S473, 01-2026), Size — height at withers, one range for both sexes (stored per sex). PDSA (S474) 'Average height | 25-28 cm' agrees; PetMD (S475) 'Standing just 10 inches tall' (US) — alternative."
+      }
+    },
+    "adult_weight": {
+      "kc_standard": {
+        "value": {
+          "male": [
+            8.5,
+            10.5
+          ],
+          "female": [
+            8.5,
+            10.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S473",
+        "quote": "8.5kg – 10.5kg.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S473), Size — weight, one range for both sexes (stored per sex) — the game range. PDSA (S474) 'Average weight | 8.5-10.5 kg' agrees. PetMD (S475) 'weighing 18–22 pounds' (8.2–10.0 kg, our conversion) — alternative. Wikipedia (S476, tier C) infobox males 8.5–10 kg, females 8–9.5 kg — background only.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                8.5,
+                10.5
+              ],
+              "female": [
+                8.5,
+                10.5
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S474",
+            "quote": "Average weight | 8.5-10.5 kg",
+            "notes": "PDSA key facts table (S474)."
+          },
+          {
+            "value": {
+              "male": [
+                8.2,
+                10.0
+              ],
+              "female": [
+                8.2,
+                10.0
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S475",
+            "quote": "Standing just 10 inches tall and weighing 18–22 pounds",
+            "notes": "PetMD (S475, fragment); 18–22 lb = 8.2–10.0 kg (our conversion, rounded)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "II (5–10 kg) / III (10–15 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 8.5–10.5 kg spans the 5–10 and 10–15 bands. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. KC 8.5–10.5 kg (S473) = 18.7–23.1 lb → the 'Small (12–24 pounds)' class. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Scottish Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S474",
+        "quote": "Average lifespan | Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S474). The RKC band (the runbook's third option) could not be read (page not reachable). PetMD (S475): 'Scottish Terriers are generally a healthy breed that usually live to be around 12 years old, on average.' — alternative (no median). Wikipedia (S476, tier C): a 2024 UK study gives 12.7 years for the breed (paraphrase as returned; = McMillan 2024, not verified in S123) — background only."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024 (S54; full paper at researchonline.ljmu.ac.uk eprint 22506, re-read 2026-10-23): the Scottish Terrier appears only as a label of the Fig. 5 phylogeny, without a number; the breed estimates are in Supplementary Table 3 (not reached). The Dogs Trust table of the same data (S123) was refused by the fetch tool as not in provenance. Wikipedia (S476, tier C) gives 12.7 y. UNSOURCED value → open for David (check the S123 row)."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × PDSA lower bound 10 y (S474) → 0.75 × 10 = 7.5 y = 90 months. The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: S123 not reachable, no VetCompass median, RKC page not reachable → closest row (Miniature American Shepherd / Samoyed precedent): the PDSA band of the same form as the RKC band, seeded verified=false (Claude's suggestion, open for David). Alternatives: PetMD 'around 12 years' (S475) → 108; McMillan 2024 12.7 y via Wikipedia (S476, tier C) → round(114.3) = 114; Dogs Trust > 7 y (S14) = 84.",
+        "derived_from": [
+          "S11",
+          "S474"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 60",
+        "unit": "minutes/day",
+        "source_id": "S474",
+        "quote": "Minimum exercise (per day) | 1 hour",
+        "confidence": "high",
+        "notes": "PDSA key facts table (S474); PDSA text: 'Scotties need around an hour of exercise daily.' The RKC breed page (preferred) was not reachable → PDSA (runbook rule). PetMD (S475): 'They need regular, but not constant, exercise and stimulation to live a happy life.' — no minutes."
+      },
+      "daily_text": {
+        "value": "around an hour of exercise daily",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Scotties need around an hour of exercise daily.",
+        "confidence": "high",
+        "notes": "PDSA (S474), exercise section."
+      },
+      "digging": {
+        "value": "notorious diggers",
+        "unit": "—",
+        "source_id": "S475",
+        "quote": "Scotties are notorious diggers.",
+        "confidence": "medium",
+        "notes": "PetMD (S475). Not an escape statement (no fence / tunnelling quote) → no secure_fencing chip; the game has no digging mechanic and digging is not a care need."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "loyal and faithful; dignified, independent and reserved, but courageous and highly intelligent; bold, never aggressive",
+        "unit": "—",
+        "source_id": "S473",
+        "quote": "Loyal and faithful. Dignified, independent, and reserved, but courageous and highly intelligent.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S473), Characteristics; Temperament: 'Bold, but never aggressive.' PDSA (S474): bred as hardy, brave hunting dogs; 'quite bold, determined dogs' (paraphrase / fragment as returned)."
+      },
+      "family": {
+        "value": "can be good dogs for families with the right training and socialisation; loyal and devoted to their family",
+        "unit": "—",
+        "source_id": "S475",
+        "quote": "With the right training and socialization, Scottish Terriers can be good dogs for families.",
+        "confidence": "high",
+        "notes": "PetMD (S475) — a condition, not a child rating. PDSA (S474): 'Although they can be independent, they're loyal and devoted to their family and get on well with other pets.' No A/B statement about children → family_pet only, never children / small_children."
+      },
+      "time_alone": {
+        "value": "should not be left alone for extended periods",
+        "unit": "—",
+        "source_id": "S475",
+        "quote": "you shouldn’t leave your dog alone for extended periods",
+        "confidence": "medium",
+        "notes": "PetMD (S475, fragment); the article puts 'extended' at more than four hours at once, citing the Scottish Terrier Club of America (paraphrase). PDSA (S474) has no sentence about time alone. Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "conflicting: PDSA says they get on well with other pets; PetMD names a strong prey drive and slow introductions to cats and smaller animals",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Although they can be independent, they're loyal and devoted to their family and get on well with other pets.",
+        "confidence": "medium",
+        "notes": "PDSA (S474). PetMD (S475): Scotties are 'natural-born hunters with a strong prey drive.' and introductions to smaller animals, including cats, 'should be done properly and slowly' (fragments). Conflicting sources → neither other_pets nor chases_small_pets (runbook: conflicting sources → neither tag); open for David.",
+        "alternatives": [
+          {
+            "value": "strong prey drive; introduce to smaller animals properly and slowly",
+            "source_id": "S475",
+            "quote": "natural-born hunters with a strong prey drive",
+            "notes": "PetMD (S475, fragment)."
+          }
+        ]
+      },
+      "socialisation": {
+        "value": "puppy socialisation is important for a well-mannered, confident dog",
+        "unit": "—",
+        "source_id": "S475",
+        "quote": "Socializing your Scottish Terrier puppy is important for having a well-mannered, confident dog.",
+        "confidence": "high",
+        "notes": "PetMD (S475). → proposed_game_parameters.scottish_terrier.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "training": {
+        "value": "can be stubborn; needs patience and commitment; reward-based training",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Scotties can be stubborn so will need patience and commitment when training",
+        "confidence": "high",
+        "notes": "PDSA (S474, fragment); PDSA recommends reward-based techniques (paraphrase). PetMD (S475): 'Though Scottish Terriers are smart, training can take time and patience due to their independent nature.' No 'better for an experienced owner' statement → no independent_experienced_owner chip."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag. PetMD (S475): 'Scotties do well with at least two meals each day, instead of eating one large meal.' (feeding, not food motivation)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch category unknown (RKC page not reachable); no veterinary association named by the runbook (BVA, UK BWG, UFAW, RVC/VetCompass, RKC) was found naming the breed for conformation-related welfare problems → no welfare chip (PDSA's note on difficult births, health.whelping, is recorded but is not one of those bodies). Bladder cancer: Wikipedia only (S476, tier C, with a risk multiple) → not recorded as a fact, never shown. Breeder checklist: PDSA (S474) Canine Health Schemes advice; AKC national breed club list (K33) and the STCA CHIC requirements (K34): DNA vWD III, patella evaluation, craniomandibular osteopathy (CMO).",
+      "von_willebrand": {
+        "value": "von Willebrand's disease — a bleeding disorder",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Von Willebrand's disease – deficiency in blood platelet function resulting in excessive bleeding.",
+        "confidence": "high",
+        "notes": "PDSA (S474) health list. PetMD (S475): 'Von Willebrand Disease is a genetic condition that makes it difficult for blood to clot properly.' A DNA test exists (breeder checklist dna_vwd3, K33 / K34). Register health key bleeding_disorder_vwd."
+      },
+      "scottie_cramp": {
+        "value": "Scottie cramp — periodic cramping of the muscles, usually brought on by excitement",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Scottie cramp – periodic cramping of the muscles, usually brought on by excitement",
+        "confidence": "high",
+        "notes": "PDSA (S474) health list. PetMD (S475): the condition 'isn’t painful and won’t affect a dog’s quality of life.' (fragment). NEW register health key scottie_cramp (calm sentence, no numbers)."
+      },
+      "patella": {
+        "value": "luxating patellas — kneecaps slipping out of place",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Luxating patellas – the kneecaps slipping temporarily out of place.",
+        "confidence": "high",
+        "notes": "PDSA (S474) health list; breed club patella evaluation (K33 / K34). Register health key kneecap_luxation."
+      },
+      "deafness": {
+        "value": "deafness",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Deafness",
+        "confidence": "medium",
+        "notes": "PDSA (S474) health list (single word). Register health key deafness."
+      },
+      "atopy": {
+        "value": "atopy — allergic itchy skin",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Atopy – hypersensitivity to certain allergens, causing itching and skin trauma.",
+        "confidence": "high",
+        "notes": "PDSA (S474) health list. Not a fetched Breed Watch point → no sensitive_skin chip (Westie precedent needs RKC Breed Watch). Register health key itchy_skin_allergy."
+      },
+      "cardiomyopathy": {
+        "value": "cardiomyopathy — heart muscle disease",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Cardiomyopathy – enlarged heart due to degeneration of the heart muscle.",
+        "confidence": "high",
+        "notes": "PDSA (S474) health list. Register health key heart_muscle_disease."
+      },
+      "cushings": {
+        "value": "Cushing's syndrome (hyperadrenocorticism) — a hormonal disorder",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S474) health list: 'Cushing's syndrome (Hyperadrenocorticism) - hormonal disorder which results in the production off too much cortisol.' (as returned, 118 characters — kept in notes; no register key: background only)."
+      },
+      "eyes": {
+        "value": "cataracts and lens luxation",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Lens luxation – dislocation of the lens of the eye.",
+        "confidence": "high",
+        "notes": "PDSA (S474) health list: also 'Cataracts – opacity of the lens of the eye – giving a ‘cloudy’ appearance.' Register health key cataracts_lens_luxation."
+      },
+      "whelping": {
+        "value": "difficulty giving birth naturally (large shoulders relative to the hindquarters and pelvis)",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Scotties have quite large shoulders relative to their smaller hind quarters and pelvic bones.",
+        "confidence": "medium",
+        "notes": "PDSA (S474) health list (first sentence of the item). Breeding background only — not shown in the app or the register."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 65,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 65 | Scottish Terrier |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-23): rank 65 'Scottish Terrier' (table row '| 65 | Scottish Terrier |'; Saint Bernard listed on the next line shares rank 65), tier 'Fair Working/Obedience Intelligence' (ranks 55–69). Coren's own article (S34) not re-read. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Fair",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 40 to 80 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier 'Fair Working/Obedience Intelligence' ('Obey first command: 30% of the time or better.')."
+      },
+      "training_notes": {
+        "value": "smart but independent and can be stubborn; patience, commitment and reward-based training",
+        "unit": "—",
+        "source_id": "S475",
+        "quote": "Though Scottish Terriers are smart, training can take time and patience due to their independent nature.",
+        "confidence": "medium",
+        "notes": "PetMD (S475); PDSA (S474) 'Scotties can be stubborn so will need patience and commitment when training' (fragment). The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.scottish_terrier.learning_multiplier (0.7, runbook rule: Fair tier, rank 65).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "thick-set, short-legged terrier, alert in carriage; great power and activity in small compass",
+        "unit": "—",
+        "source_id": "S473",
+        "quote": "Short-legged, alert in carriage, and suggestive of great power and activity in small compass.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S473), General Appearance; also 'Thick-set, of suitable size to go to ground, …' and 'Very agile and active in spite of short legs.'"
+      },
+      "colours": {
+        "value": [
+          "black",
+          "wheaten",
+          "brindle"
+        ],
+        "unit": "list",
+        "source_id": "S473",
+        "quote": "Black, wheaten, or brindle of any shade.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S473), Colour; 'Any other colour or combination of colours unacceptable.' Wikipedia (S476, tier C) infobox: black, brindle, wheaten. No white markings in the prompt (not in the standard)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Black first with the highest weight (the most typical Scottie — the portrait default; Claude), then brindle, wheaten. Suggested 60 / 25 / 15."
+      },
+      "coat": {
+        "value": "close-lying double coat: short, dense, soft undercoat; harsh, dense, wiry outer coat",
+        "unit": "—",
+        "source_id": "S473",
+        "quote": "Close-lying, double coat; undercoat short, dense and soft; outercoat harsh, dense and wiry,",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S473), Coat (fragment; continues 'together making a weatherresisting covering.'). Furnishings (beard, eyebrows, leg hair) come from the usual trim — not in the standard text returned; the prompt says 'neatly trimmed'."
+      },
+      "head": {
+        "value": "long head, skull nearly flat, skull and foreface of equal length; large black nose",
+        "unit": "—",
+        "source_id": "S473",
+        "quote": "Skull and foreface of equal length.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S473), Head: 'Long without being out of proportion to size of dog.'; 'Skull nearly flat and cheek bones not protruding.'; 'Nose large, black and, …' (fragment)."
+      },
+      "ears": {
+        "value": "neat, fine, pointed and erect, set on top of the skull",
+        "unit": "—",
+        "source_id": "S473",
+        "quote": "Neat, fine texture, pointed, erect, and set on top of skull but not too close together.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S473), Ears; 'Large, wide-based ears undesirable.'"
+      },
+      "eyes": {
+        "value": "almond-shaped, dark brown, fairly wide apart, under the eyebrows; keen, intelligent expression",
+        "unit": "—",
+        "source_id": "S473",
+        "quote": "Almond-shaped, dark brown, fairly wide apart, well-set under eyebrows with keen, intelligent expression.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S473), Eyes."
+      },
+      "tail": {
+        "value": "moderate length, thick at the root and tapering, carried upright or with a slight bend",
+        "unit": "—",
+        "source_id": "S473",
+        "quote": "Moderate length giving general balance to dog, thick at root and tapering towards tip.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S473), Tail; 'Set on with upright carriage or slight bend.'"
+      },
+      "nose": {
+        "value": "large and black",
+        "unit": "—",
+        "source_id": "S473",
+        "quote": null,
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S473), Head: 'Nose large, black and, in profile, the line from nose towards chin appears to slope backwards.' (as returned, kept in notes)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S474), PetMD (S475). The RKC breed page (the usual suitability source) was not reachable on 2026-10-23 → no rkc_* rows (no apartment / large_home chip).",
+      "pdsa_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Size | Medium",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S474)."
+      },
+      "pdsa_exercise": {
+        "value": "around an hour of exercise daily",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Scotties need around an hour of exercise daily.",
+        "confidence": "high",
+        "notes": "PDSA (S474). One hour is not long daily exercise → no active_family / long_daily_exercise."
+      },
+      "pdsa_grooming": {
+        "value": "daily grooming; stripping and clipping by a professional groomer every two to three months",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Scotties need daily grooming and will require stripping and clipping by a professional groomer every two-three months.",
+        "confidence": "high",
+        "notes": "PDSA (S474) → brushing 7× a week (M5-R13 rule 'daily' → 7) and frequent_grooming. PetMD (S475): owners should 'keep their dog’s fur brushed at home every few days' (fragment) — alternative without a number. The professional stripping / clipping → professional_grooming (M5-R18, open for David)."
+      },
+      "pdsa_coat_length": {
+        "value": "Long",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Coat length | Long",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S474). No shedding statement in any source → neither sheds nor low_shedding."
+      },
+      "pdsa_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Average lifespan | Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key facts table (S474). Not shorter_lifespan (that needs 'Under 10 years')."
+      },
+      "pdsa_family": {
+        "value": "loyal and devoted to their family",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": "Although they can be independent, they're loyal and devoted to their family and get on well with other pets.",
+        "confidence": "high",
+        "notes": "PDSA (S474). Together with PetMD's family statement (petmd_family) → family_pet."
+      },
+      "petmd_family": {
+        "value": "can be good dogs for families with the right training and socialisation",
+        "unit": "—",
+        "source_id": "S475",
+        "quote": "With the right training and socialization, Scottish Terriers can be good dogs for families.",
+        "confidence": "high",
+        "notes": "PetMD (S475). Basis of family_pet (condition kept here)."
+      },
+      "petmd_grooming": {
+        "value": "bathed, hand-stripped and/or clipped every two or three months; brushed at home every few days",
+        "unit": "—",
+        "source_id": "S475",
+        "quote": "bathed, hand-stripped, and/or clipped every two or three months",
+        "confidence": "high",
+        "notes": "PetMD (S475, fragment)."
+      },
+      "petmd_time_alone": {
+        "value": "not alone for extended periods",
+        "unit": "—",
+        "source_id": "S475",
+        "quote": "you shouldn’t leave your dog alone for extended periods",
+        "confidence": "medium",
+        "notes": "PetMD (S475, fragment). Basis of needs_company."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -45189,6 +45709,252 @@
         "confidence": "high",
         "notes": "Colours of the FCI standard (S464): pure white, cream, white and biscuit; any other colour and blue / odd eyes disqualify; 'never beige'. The AKC 'all biscuit' (S465) is not in the FCI standard → not used. Weights unsourced in prompts. Pure white as the portrait default: the most typical colour (Claude).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): pure white is the portrait default; standard colours only (white, cream, white and biscuit), never other colours or blue eyes"
+      }
+    },
+    "scottish_terrier": {
+      "_note": "Unattended run M5-R10-58 (2026-10-23): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry — except the senior boundary (closest row, Claude's suggestion, seeded verified=false). The RKC breed page was not reachable → exercise from PDSA (S474, 1 hour). One new register health key (scottie_cramp); no new vocabulary key. Sourced needs built from day one: daily grooming (PDSA S474 'daily grooming', M5-R13 → 7); puppy socialisation (PetMD S475 quote, M5-R17). No meal / exercise gap quote → no digestion warning. Sourced need without a game mechanic → open for David: stripping / clipping by a professional groomer every two to three months (PDSA S474, PetMD S475 — ROADMAP M5-R18). No welfare chip; in marketing. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S474",
+        "quote": "Minimum exercise (per day) | 1 hour",
+        "confidence": "high",
+        "notes": "PDSA key facts '1 hour' (S474) and 'Scotties need around an hour of exercise daily.' — the RKC page (preferred) was not reachable. Rule: one number N ('minimum N') → N = 60.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S474 'Minimum exercise (per day) 1 hour'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S474",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + PDSA lower bound 'Over 10 years', S474 — the McMillan 2024 table S123 was not reachable, no VetCompass median, the RKC page was not reachable). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S474"
+        ],
+        "alternatives": {
+          "senior_petmd_12_y": 108,
+          "senior_mcmillan_via_wikipedia_12_7_y": 114,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 90,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 10 y × 12) = 90 (AAHA last 25 % of lifespan S11 × PDSA lower bound 10 y, S474). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: the Dogs Trust table S123 and the RKC page were refused by the fetch tool, the McMillan 2024 paper (S54) has the breed only in Supplementary Table 3 (not reached), no VetCompass paper. Closest rule row (Miniature American Shepherd / Samoyed precedent) = the PDSA band of the same form as the RKC band. Alternatives: PetMD 'around 12 years' (S475) → 108; McMillan 2024 12.7 y via Wikipedia (S476, tier C) → 114; Dogs Trust > 7 y (S14) = 84. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S474"
+        ],
+        "alternatives": {
+          "senior_petmd_12_y": 108,
+          "senior_mcmillan_via_wikipedia_12_7_y": 114,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "predlog Claude 2026-10-23 (najbližja vrstica pravila runbooka, M5-R10-58) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 90 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 65 (S35), tier 'Fair' (55–69) → 0.7. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 65, Fair tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S474",
+        "quote": "Scotties need daily grooming and will require stripping and clipping by a professional groomer every two-three months.",
+        "confidence": "high",
+        "notes": "scottish_terrier.suitability.pdsa_grooming. PDSA 'daily grooming' → 7 (runbook dog-grooming rule 'daily' → 7). PetMD (S475) 'brushed at home every few days' (no number) → alternative. Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": "every few days",
+            "source_id": "S475",
+            "quote": "keep their dog’s fur brushed at home every few days",
+            "notes": "PetMD (S475, fragment) — no number."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden) (PDSA »daily grooming«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S475",
+        "quote": "Socializing your Scottish Terrier puppy is important for having a well-mannered, confident dog.",
+        "confidence": "high",
+        "notes": "scottish_terrier.behaviour.socialisation (PetMD S475). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S475)"
+      },
+      "professional_grooming": {
+        "value": "stripping and clipping by a professional groomer every two to three months",
+        "unit": "groomer visit (sourced need)",
+        "source_id": "S474",
+        "quote": "Scotties need daily grooming and will require stripping and clipping by a professional groomer every two-three months.",
+        "confidence": "high",
+        "notes": "PDSA (S474), scottish_terrier.suitability.pdsa_grooming; PetMD (S475) 'bathed, hand-stripped, and/or clipped every two or three months' (fragment). No groomer mechanic → open for David (ROADMAP M5-R18).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): trimanje / striženje pri pasjem frizerju na 2–3 mesece; mehanike ni → ROADMAP M5-R18 (David)"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-58); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic, never low_shedding.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S475",
+              "S474"
+            ],
+            "refs": [
+              "scottish_terrier.suitability.petmd_family",
+              "scottish_terrier.suitability.pdsa_family"
+            ],
+            "quote": "S475 'With the right training and socialization, Scottish Terriers can be good dogs for families.'; S474 'they're loyal and devoted to their family'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S474"
+            ],
+            "refs": [
+              "scottish_terrier.suitability.pdsa_grooming"
+            ],
+            "quote": "S474 'Scotties need daily grooming and will require stripping and clipping by a professional groomer every two-three months.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S475"
+            ],
+            "refs": [
+              "scottish_terrier.behaviour.time_alone",
+              "scottish_terrier.suitability.petmd_time_alone"
+            ],
+            "quote": "S475 'you shouldn’t leave your dog alone for extended periods'"
+          }
+        ],
+        "not_proposed": {
+          "children": "No A/B statement about children (PDSA has none; PetMD speaks of families with a condition) → family_pet only.",
+          "small_children": "No rating, no statement.",
+          "other_pets": "PDSA 'get on well with other pets' (S474) vs PetMD 'a strong prey drive' (S475) — conflicting sources → no.",
+          "chases_small_pets": "Conflicting sources (PDSA S474 'get on well with other pets' vs PetMD S475 'a strong prey drive') → neither tag (runbook rule); open for David.",
+          "active_family": "One hour a day (S474) is not long daily exercise.",
+          "long_daily_exercise": "One hour a day (S474).",
+          "apartment": "No RKC 'Flat/ Apartment' (RKC page not reachable).",
+          "large_home": "No RKC 'Large house' (RKC page not reachable).",
+          "first_time_owner": "No source; PDSA: stubborn, needs patience and commitment (S474).",
+          "independent_experienced_owner": "Stubborn / independent (S474, S475) but no source says 'better for an experienced owner' → no chip.",
+          "often_alone": "See needs_company.",
+          "sheds": "No shedding statement in any source.",
+          "low_shedding": "No source.",
+          "hypoallergenic": "Never a tag (runbook).",
+          "secure_fencing": "PetMD 'Scotties are notorious diggers.' (S475) is not an escape / fence statement → no.",
+          "sensitive_skin": "PDSA atopy (S474) is a health-list item, not an RKC Breed Watch point (page not reachable) → register health only.",
+          "shorter_lifespan": "PDSA 'Over 10 years' (S474) — criterion is 'Under 10 years'.",
+          "welfare": "No veterinary association named by the runbook names the breed for conformation-related welfare problems; RKC Breed Watch category unknown (page not reachable) → no welfare chip."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet; consider frequent_grooming, needs_company"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S474",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); RKC Breed Watch category unknown (page not reachable). Marketing never presents the Scottish Terrier as hypoallergenic, low-shedding, low-maintenance or a dog to leave alone for long (S474, S475).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Scottish Terrier, black coat (default); small, thick-set, short-legged terrier, alert carriage; harsh, dense, wiry close-lying double coat, neatly trimmed with the usual beard, eyebrows and leg furnishings; long head with a nearly flat skull, skull and foreface of equal length, large black nose; dark brown almond eyes under the eyebrows; small, pointed, erect ears on top of the skull; tail of moderate length, thick at the root, carried upright or with a slight bend; no colours other than black, wheaten or brindle, no white patches",
+        "unit": "—",
+        "source_id": "S473",
+        "quote": "Black, wheaten, or brindle of any shade.",
+        "confidence": "high",
+        "notes": "Colours of the Kennel Club standard (S473): black, wheaten, brindle of any shade; 'Any other colour or combination of colours unacceptable.' Weights unsourced in prompts. Black as the portrait default: the most typical colour (Claude). The trimmed furnishings are the usual show trim (not in the returned standard text).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black is the portrait default; standard colours only (black, wheaten, brindle), never other colours or white patches"
       }
     }
   }

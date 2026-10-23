@@ -509,6 +509,16 @@ class FalAiService
                 .'plumed tail carried curved forward over the back, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-58: Kennel Club standard (S473) — black as the anchor (wheaten and brindle are the other standard
+            // colours; no other colour, no white patches); thick-set, short-legged terrier with a long head.
+            BreedType::ScottishTerrier => 'A friendly, alert Scottish Terrier with a black coat, '
+                .'harsh, dense, wiry close-lying double coat, neatly trimmed with the usual beard, eyebrows and leg furnishings, '
+                .'small, thick-set, short-legged terrier, sturdy, agile and alert in carriage, '
+                .'long head with a nearly flat skull, skull and foreface of equal length, large black nose, '
+                .'dark brown almond-shaped eyes set under the eyebrows, small, neat, pointed erect ears set on top of the skull, '
+                .'tail of moderate length, thick at the root, carried upright, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1215,6 +1225,17 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'abundant, thick, dense double coat with a silver sheen',
                 'markings' => 'black lips upturned in the "Samoyed smile", black eye rims, plumed tail curved over the back',
+            ],
+            // M5-R10-58: Kennel Club standard S473 colours (black, brindle, wheaten; no other colour, no white patches).
+            BreedType::ScottishTerrier => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'black',
+                    1 => 'brindle',
+                    2 => 'wheaten',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'harsh, dense, wiry close-lying double coat',
+                'markings' => 'trimmed beard, eyebrows and leg furnishings, small pointed erect ears, tail carried upright',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

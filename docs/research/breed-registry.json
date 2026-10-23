@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "eb814e12034b478409e356728db6006320fcdad38f684b705aa67dbc16770381"
+      "sha256": "6441a6d0b38cc8f365062b4b620492a390b3a764731a7bf096c246ed6e158f4c"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "39bf9c33d2ec68379c9146fd04c767968d6f6d87354a2fdd5bb846f67a9e9d20"
+      "sha256": "eaf04409ccc8d63469cc781ec635542dda73f42a51cfc6b51586f1ebdf388381"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "52db586d41ca031cb32843563fb957cf130f8a8f9774bb5487789547b53a56fc"
+      "sha256": "f99f97cc1ab7f4ebb16eb63b51fea8b361b3b8c57e0714ca5b255c42cae3362e"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "02fa223be86c768597b64a804c192096801a6802690b1d629ff2a3e8c05333f6"
+      "sha256": "1cc38012707b6068b9971a7a0da3ff7705e951d7c86d6916e9b89bb327aac55c"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "d5ae66269331b9a6bdb6ac7649cb3b3809a2a482562b44012b33de1217d44896"
+      "sha256": "3facdfdee8ca70c809aa4ef3eba022607748176a4da2ce56dd0ec97f50e69a81"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "9ee3393c5cac81c02ac5f7666eabd4f62fab164ee12ddde8e7196db886dcccf4"
+      "sha256": "52a2930dabea22f75043e6eefe16327a8724182eaf13e828b54025b3eb3ee42c"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "e46e91bcbd8455226173dbe56846c6d9f47a62b18bcde3166b4c53e4db85cc1f"
+      "sha256": "78d88d89816484b3fbde01ae2328fe04d7db1239e94a3c0c13341597942d9909"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -209,7 +209,7 @@
         }
       },
       "status": "available",
-      "breed_count": 53,
+      "breed_count": 54,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -31803,6 +31803,510 @@
       ]
     },
     {
+      "id": "scottish_terrier",
+      "species": "dog",
+      "order": 53,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Scottish Terrier",
+        "sl": "Škotski terier"
+      },
+      "slug": {
+        "en": "scottish-terrier",
+        "sl": "skotski-terier"
+      },
+      "synonyms": {
+        "en": [
+          "Scottie",
+          "Aberdeen Terrier"
+        ],
+        "sl": [
+          "scottie",
+          "škotski terier",
+          "skotski terier"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "h1_2"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S474"
+          ],
+          "ref": "scottish_terrier.size_class",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              25,
+              28
+            ],
+            "female": [
+              25,
+              28
+            ]
+          },
+          "source_ids": [
+            "S473"
+          ],
+          "ref": "scottish_terrier.height.kc_standard",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              8.5,
+              10.5
+            ],
+            "female": [
+              8.5,
+              10.5
+            ]
+          },
+          "source_ids": [
+            "S473"
+          ],
+          "ref": "scottish_terrier.adult_weight.kc_standard",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            9,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "scottish_terrier.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S474"
+          ],
+          "ref": "scottish_terrier.lifespan.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 60,
+          "source_ids": [
+            "S474"
+          ],
+          "ref": "proposed_game_parameters.scottish_terrier.exercise_minutes_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 65,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "scottish_terrier.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 73,
+            "group": 3,
+            "section": 2,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S472"
+          ],
+          "ref": "scottish_terrier.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "bleeding_disorder_vwd",
+          "source_ids": [
+            "S474"
+          ],
+          "ref": "scottish_terrier.health.von_willebrand",
+          "confidence": "high"
+        },
+        {
+          "key": "scottie_cramp",
+          "source_ids": [
+            "S474"
+          ],
+          "ref": "scottish_terrier.health.scottie_cramp",
+          "confidence": "high"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S474"
+          ],
+          "ref": "scottish_terrier.health.patella",
+          "confidence": "high"
+        },
+        {
+          "key": "heart_muscle_disease",
+          "source_ids": [
+            "S474"
+          ],
+          "ref": "scottish_terrier.health.cardiomyopathy",
+          "confidence": "high"
+        },
+        {
+          "key": "cataracts_lens_luxation",
+          "source_ids": [
+            "S474"
+          ],
+          "ref": "scottish_terrier.health.eyes",
+          "confidence": "high"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S474"
+          ],
+          "ref": "scottish_terrier.health.atopy",
+          "confidence": "high"
+        },
+        {
+          "key": "deafness",
+          "source_ids": [
+            "S474"
+          ],
+          "ref": "scottish_terrier.health.deafness",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S474",
+              "S475"
+            ],
+            "refs": [
+              "scottish_terrier.suitability.petmd_family",
+              "scottish_terrier.suitability.pdsa_family"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S474"
+            ],
+            "refs": [
+              "scottish_terrier.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S475"
+            ],
+            "refs": [
+              "scottish_terrier.behaviour.time_alone",
+              "scottish_terrier.suitability.petmd_time_alone"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.7
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.scottish_terrier.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S474"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S474 'Minimum exercise (per day) 1 hour'; RKC page not reachable)"
+          },
+          {
+            "ref": "proposed_game_parameters.scottish_terrier.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.scottish_terrier.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S474"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.scottish_terrier.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 65, Fair tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.scottish_terrier.grooming",
+            "basis_source_ids": [
+              "S474"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden) (PDSA »daily grooming«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S474"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "dna_vwd3",
+            "level": "other_scheme",
+            "source_ids": [
+              "K34"
+            ]
+          },
+          {
+            "key": "patella_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K34"
+            ]
+          },
+          {
+            "key": "dna_cmo",
+            "level": "other_scheme",
+            "source_ids": [
+              "K34"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K34"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S472",
+        "S473",
+        "S474",
+        "S475",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K34"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -36262,6 +36766,34 @@
       "url": "https://www.petmd.com/dog/breeds/samoyed"
     },
     {
+      "id": "S472",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — Scottish Terrier (73)",
+      "url": "https://www.fci.be/EN/nomenclature/TERRIER-ECOSSAIS-73.html"
+    },
+    {
+      "id": "S473",
+      "tier": "A",
+      "publisher": "The Kennel Club (reprinted by the Kennel Union of Southern Africa)",
+      "title": "Scottish Terrier — Kennel Club breed standard (01-2026) (PDF)",
+      "url": "https://www.kusa.co.za/images/breed%20stds%20djaki/Scottish%20Terrier%20-%20KC%20[01-2026].pdf"
+    },
+    {
+      "id": "S474",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Scottish Terrier breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/scottish-terrier"
+    },
+    {
+      "id": "S475",
+      "tier": "B",
+      "publisher": "PetMD",
+      "title": "Scottish Terrier",
+      "url": "https://petmd.com/dog/breeds/scottish-terrier"
+    },
+    {
       "id": "C1",
       "tier": "A (via B summary)",
       "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
@@ -36666,6 +37198,13 @@
       "publisher": "American Kennel Club",
       "title": "Working Group Health Testing Requirements (breeder programs)",
       "url": "https://www.akc.org/breeder-programs/breed-health-testing-requirements/working-group-health-testing-requirements/"
+    },
+    {
+      "id": "K34",
+      "tier": "B",
+      "publisher": "Scottish Terrier Club of America (hosted by the American Kennel Club)",
+      "title": "STCA CHIC Requirements 2026 (PDF)",
+      "url": "https://www.akc.org/wp-content/uploads/2026/03/STCA-CHIC-Requirements-2026.pdf"
     }
   ]
 }

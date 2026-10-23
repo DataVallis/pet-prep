@@ -2295,6 +2295,37 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (royalkennelclub.com …/pastoral/samoyed; the older display.aspx?id=5139 address redirects there) could not be fetched on 2026-10-22 → no minimum / best_practice level. PDSA (dog-data S467): 'All breeding Samoyeds should have their hips x-rayed through the BVA/Kennel Club Hip Dysplasia Scheme.' and 'There is BVA/KC screening available for eye problems.' → hip_scheme, eye_scheme (other_scheme). AKC Working Group health testing page (K32, 2026-10-22): Samoyed — 'Hip Evaluation', 'Cardiac Exam', 'Ophthalmologist Evaluation', 'Retinal Dysplasia/Oculoskeletal Dysplasia 2 (RD/OSD, OSD2) - DNA Test', 'Progressive Retinal Atrophy, X-Linked1 (XLPRA1) - DNA Test' → other_scheme (hip and eye merged with the PDSA rows; new key cardiac_exam — the breed club's general heart check; not heart_scheme, whose wording names mitral valve disease). Woodgreen (dog-data S468): 'Reputable breeders should have their dogs scored under the BVA/KC hip scheme before breeding.' and for eye conditions 'DNA testing is available and responsible breeders should test for these before breeding.' PetMD (dog-data S469): a DNA test exists for Samoyed hereditary glomerulopathy (paraphrase, no A/B test list) → not listed. Three new test keys: cardiac_exam, dna_rd_osd, dna_xlpra1 (website words needed). Re-read the RKC page when it is reachable (open for David)."
+    },
+    "scottish_terrier": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K34",
+        "quote": "Von Willibrand's Disease III Scottish Terrier Type"
+      },
+      "tests": [
+        {
+          "key": "dna_vwd3",
+          "level": "other_scheme",
+          "name": "DNA test for von Willebrand disease type III (Scottish Terrier type) (US breed club: mandatory for CHIC)",
+          "source_id": "K34",
+          "quote": "Von Willibrand's Disease III Scottish Terrier Type"
+        },
+        {
+          "key": "patella_scheme",
+          "level": "other_scheme",
+          "name": "Patellar luxation evaluation (US breed club: mandatory for CHIC)",
+          "source_id": "K34",
+          "quote": "Patellar Luxation"
+        },
+        {
+          "key": "dna_cmo",
+          "level": "other_scheme",
+          "name": "Craniomandibular osteopathy (CMO) test (US breed club: mandatory for CHIC)",
+          "source_id": "K34",
+          "quote": "Craniomandibular Osteopathy (CMO)"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (display.aspx?id=3076 → royalkennelclub.com …/terrier/scottish-terrier) could not be fetched on 2026-10-23 → no minimum / best_practice level. Scottish Terrier Club of America CHIC requirements 2026 (K34, hosted by the AKC): mandatory 'Von Willibrand's Disease III Scottish Terrier Type' (sic), 'Patellar Luxation', 'Craniomandibular Osteopathy (CMO)'; elective (one of) thyroid, ACVO eye examination, Legg-Calvé-Perthes, serum bile acids, kidney UP/UC screening — not listed (elective). AKC Terrier Group health testing page (K33): 'Recommended Health Tests from the National Breed Club' — 'Patella Evaluation', 'Von Willebrand Disease III (Scottish Terrier) (VWDIII) - DNA Test', 'Craniomandibular Osteopathy' (agrees). PDSA (dog-data S474): check that the puppy's parents were screened under the Canine Health Schemes (general advice, no named scheme). New test key dna_cmo."
     }
   }
 }
