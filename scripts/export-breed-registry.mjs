@@ -431,6 +431,7 @@ const SPECIES = [
       { id: 'chesapeake_bay_retriever', synonyms: { en: ['Chessie', 'Chesapeake', 'Retriever (Chesapeake Bay)'], sl: ['chessie', 'chesapeake'] } },
       { id: 'samoyed', synonyms: { en: ['Sammy', 'Samoyede', 'Samoiedskaïa Sabaka'], sl: ['samojed', 'samojedski pes', 'sammy'] } },
       { id: 'scottish_terrier', synonyms: { en: ['Scottie', 'Aberdeen Terrier'], sl: ['scottie', 'škotski terier', 'skotski terier'] } },
+      { id: 'weimaraner', synonyms: { en: ['Weimaraner Pointer', 'Weim'], sl: ['weimarski ptičar', 'weimarski pticar', 'vajmarski ptičar'] } },
     ],
   },
   {
@@ -1664,6 +1665,29 @@ const DOG_FACTS = {
       ['deafness', 'health.deafness'],
     ],
   },
+  // M5-R10-59. Height + weight = FCI standard No. 99 (S478), lifespan = the RKC band "Over 10 years" (S479; the McMillan
+  // 2024 table S123 could not be fetched, 12.8 y only via Wikipedia), exercise = RKC "More than 2 hours per day" (S479),
+  // coat / grooming / shedding = RKC key facts (S479). FCI origin Germany (DE). Not exported: the PDSA / PetMD
+  // alternatives, adult_weight.salt_category (our assignment), lifespan.senior_from (derived), the care need
+  // ear_care_bathing (open for David: M5-R20). New health key: extra_eyelashes.
+  weimaraner: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['bloat_gdv', 'health.gdv'],
+      ['certain_cancers', 'health.cancer'],
+      ['extra_eyelashes', 'health.distichiasis'],
+      ['entropion', 'health.entropion'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+    ],
+  },
 
 };
 
@@ -2105,6 +2129,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.scottish_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.scottish_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.scottish_terrier.exercise_minutes_senior',
+  },
+  weimaraner: {
+    adult_minutes: ['proposed_game_parameters.weimaraner.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.weimaraner.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.weimaraner.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.weimaraner.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.weimaraner.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.weimaraner.exercise_minutes_senior',
   },
 
 };

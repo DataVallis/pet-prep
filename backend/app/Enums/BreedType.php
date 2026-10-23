@@ -69,6 +69,7 @@ enum BreedType: string
     case ChesapeakeBayRetriever = 'chesapeake_bay_retriever';
     case Samoyed = 'samoyed';
     case ScottishTerrier = 'scottish_terrier';
+    case Weimaraner = 'weimaraner';
     case DomesticCat = 'domestic_cat';
     case MaineCoon = 'maine_coon';
     case BritishShorthair = 'british_shorthair';
@@ -138,6 +139,7 @@ enum BreedType: string
             self::ChesapeakeBayRetriever => 'chesapeake-bay-retriever',
             self::Samoyed => 'samoyed',
             self::ScottishTerrier => 'scottish-terrier',
+            self::Weimaraner => 'weimaraner',
             self::DomesticCat => 'domestic-cat',
             self::MaineCoon => 'maine-coon',
             self::BritishShorthair => 'british-shorthair',
@@ -162,7 +164,7 @@ enum BreedType: string
     public function species(): Species
     {
         return match ($this) {
-            self::Mutt, self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::Rottweiler, self::Bulldog, self::GermanShorthairedPointer, self::YorkshireTerrier, self::CaneCorso, self::PembrokeWelshCorgi, self::Dobermann, self::Boxer, self::MiniatureSchnauzer, self::ShihTzu, self::GreatDane, self::Pomeranian, self::BostonTerrier, self::MiniatureAmericanShepherd, self::Chihuahua, self::EnglishSpringerSpaniel, self::ShetlandSheepdog, self::Brittany, self::AmericanCockerSpaniel, self::BelgianMalinois, self::BassetHound, self::HungarianVizsla, self::EnglishCockerSpaniel, self::Maltese, self::Pug, self::RoughCollie, self::Mastiff, self::ShibaInu, self::RhodesianRidgeback, self::Papillon, self::PortugueseWaterDog, self::BichonFrise, self::Newfoundland, self::Dalmatian, self::AustralianCattleDog, self::Whippet, self::WirehairedPointingGriffon, self::ChesapeakeBayRetriever, self::Samoyed, self::ScottishTerrier => Species::Dog,
+            self::Mutt, self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::Rottweiler, self::Bulldog, self::GermanShorthairedPointer, self::YorkshireTerrier, self::CaneCorso, self::PembrokeWelshCorgi, self::Dobermann, self::Boxer, self::MiniatureSchnauzer, self::ShihTzu, self::GreatDane, self::Pomeranian, self::BostonTerrier, self::MiniatureAmericanShepherd, self::Chihuahua, self::EnglishSpringerSpaniel, self::ShetlandSheepdog, self::Brittany, self::AmericanCockerSpaniel, self::BelgianMalinois, self::BassetHound, self::HungarianVizsla, self::EnglishCockerSpaniel, self::Maltese, self::Pug, self::RoughCollie, self::Mastiff, self::ShibaInu, self::RhodesianRidgeback, self::Papillon, self::PortugueseWaterDog, self::BichonFrise, self::Newfoundland, self::Dalmatian, self::AustralianCattleDog, self::Whippet, self::WirehairedPointingGriffon, self::ChesapeakeBayRetriever, self::Samoyed, self::ScottishTerrier, self::Weimaraner => Species::Dog,
             self::DomesticCat, self::MaineCoon, self::BritishShorthair, self::Ragdoll, self::SiberianCat, self::NorwegianForestCat, self::Bengal => Species::Cat,
         };
     }
@@ -188,7 +190,7 @@ enum BreedType: string
     {
         return match ($this) {
             self::Mutt, self::DomesticCat => false,
-            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::Rottweiler, self::Bulldog, self::GermanShorthairedPointer, self::YorkshireTerrier, self::CaneCorso, self::PembrokeWelshCorgi, self::Dobermann, self::Boxer, self::MiniatureSchnauzer, self::ShihTzu, self::GreatDane, self::Pomeranian, self::BostonTerrier, self::MiniatureAmericanShepherd, self::Chihuahua, self::EnglishSpringerSpaniel, self::ShetlandSheepdog, self::Brittany, self::AmericanCockerSpaniel, self::BelgianMalinois, self::BassetHound, self::HungarianVizsla, self::EnglishCockerSpaniel, self::Maltese, self::Pug, self::RoughCollie, self::Mastiff, self::ShibaInu, self::RhodesianRidgeback, self::Papillon, self::PortugueseWaterDog, self::BichonFrise, self::Newfoundland, self::Dalmatian, self::AustralianCattleDog, self::Whippet, self::WirehairedPointingGriffon, self::ChesapeakeBayRetriever, self::Samoyed, self::ScottishTerrier, self::MaineCoon, self::BritishShorthair, self::Ragdoll, self::SiberianCat, self::NorwegianForestCat, self::Bengal => true,
+            self::BorderCollie, self::LabradorRetriever, self::GoldenRetriever, self::FrenchBulldog, self::GermanShepherd, self::CavalierKingCharlesSpaniel, self::Beagle, self::StandardPoodle, self::Dachshund, self::AustralianShepherd, self::Havanese, self::WestHighlandWhiteTerrier, self::BerneseMountainDog, self::SiberianHusky, self::Rottweiler, self::Bulldog, self::GermanShorthairedPointer, self::YorkshireTerrier, self::CaneCorso, self::PembrokeWelshCorgi, self::Dobermann, self::Boxer, self::MiniatureSchnauzer, self::ShihTzu, self::GreatDane, self::Pomeranian, self::BostonTerrier, self::MiniatureAmericanShepherd, self::Chihuahua, self::EnglishSpringerSpaniel, self::ShetlandSheepdog, self::Brittany, self::AmericanCockerSpaniel, self::BelgianMalinois, self::BassetHound, self::HungarianVizsla, self::EnglishCockerSpaniel, self::Maltese, self::Pug, self::RoughCollie, self::Mastiff, self::ShibaInu, self::RhodesianRidgeback, self::Papillon, self::PortugueseWaterDog, self::BichonFrise, self::Newfoundland, self::Dalmatian, self::AustralianCattleDog, self::Whippet, self::WirehairedPointingGriffon, self::ChesapeakeBayRetriever, self::Samoyed, self::ScottishTerrier, self::Weimaraner, self::MaineCoon, self::BritishShorthair, self::Ragdoll, self::SiberianCat, self::NorwegianForestCat, self::Bengal => true,
         };
     }
 

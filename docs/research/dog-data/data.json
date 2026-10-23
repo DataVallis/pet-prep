@@ -30751,6 +30751,484 @@
       }
     }
   },
+  "weimaraner": {
+    "_note": "Added 2026-10-23 (M5-R10-59, unattended run — appended after the Scottish Terrier: AKC 2024 No. 55 'Weimaraner', S174 full-list table fetched 2026-10-23 '55 | Weimaraner'). Quotes as returned by the web-fetch tool on 2026-10-23 (short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S477–S483 (reused S10, S11, S14, S24, S35, S45, S123, S174). No health percentages anywhere. Identity from the FCI nomenclature (S477); appearance, heights and weights from the FCI standard No. 99 (S478, fci.be English PDF). RKC Breeds A–Z page 'Weimaraner' (S479) reached: key facts, Breed Watch Category 1 and the Best Practice health tests; no breed-specific temperament text. The game models the short-haired variety (the FCI standard has a short-haired and a long-haired variety; the RKC lists 'Short & long'; the AKC recognises the short coat only) — open for David. Lifespan: the Dogs Trust McMillan 2024 table (S123) was refused by the fetch tool (not in provenance); McMillan 2024's 12.8 years only via Wikipedia (S483, tier C) → RKC lower bound 'Over 10 years' (runbook order; Chesapeake Bay Retriever precedent). Names: FCI / RKC / AKC 'Weimaraner'; nickname 'Weim' / 'grey ghost' not sourced; Slovenian »weimarski ptičar« (common name, not checked against KZS — open for David).",
+    "identity": {
+      "value": "FCI No. 99, Group 7 Section 1.1 (Continental Pointing Dogs, Braque type), Germany",
+      "unit": "—",
+      "source_id": "S477",
+      "quote": "WEIMARANER",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S477): heading 'WEIMARANER (99)', group 'n°7 - Pointing Dogs', section 'Continental Pointing Dogs', country of origin 'GERMANY', varieties 'a) Short-haired' and 'b) Long-haired'; English standard 5/26/2015, official valid standard 3/19/2015. FCI standard (S478): 'Section 1.1 Continental Pointing Dogs,' 'Type \"Braque\".' 'With working trial.' 'Germany' is already in FCI_ORIGINS (DE). RKC 'Weimaraner' (S479)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S479",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S479). PDSA (S480) 'Large'; FCI standard (S478): 'Medium to large size hunting dog.'"
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            59,
+            70
+          ],
+          "female": [
+            57,
+            65
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S478",
+        "quote": "59 – 70 cm.",
+        "confidence": "high",
+        "notes": "FCI standard No. 99 (S478), Height at withers: males '59 – 70 cm.', females '57 – 65 cm.' (as returned, fragments). PDSA (S480) '56-69 cm'; PetMD (S481) males 25–27 in, females 23–25 in — alternatives."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            30,
+            40
+          ],
+          "female": [
+            25,
+            35
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S478",
+        "quote": "about 30 – 40 kg.",
+        "confidence": "high",
+        "notes": "FCI standard No. 99 (S478): males 'about 30 – 40 kg.', females 'about 25 – 35 kg.' (as returned, fragments). The game range 25–40 kg spans both sexes. PDSA (S480) '25-40 kg' agrees; PetMD (S481) males 70–90 lb, females 55–75 lb — alternative."
+      },
+      "salt_category": {
+        "value": "IV (15–<30 kg) / V (30–<40 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 25–40 kg spans the bands. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: FCI males about 30–40 kg (≈ 66–88 lb, S478) are 'Large (59–99 pounds)'; females about 25–35 kg straddle Medium and Large (Chesapeake Bay Retriever precedent). The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Weimaraner growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S479",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "RKC breed page key fact (S479). PDSA (S480) 'Over 10 years' agrees; Dogs Trust (S482) 'typically 10+ years'; PetMD (S481): 'the lifespan of Weimaraner dogs is 10–13 years' (fragment) — alternatives without a median. Wikipedia (S483, tier C): McMillan et al. 2024 'a median lifespan of 12.8 years for the breed' — background only (not the paper itself)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Dogs Trust table of McMillan et al. 2024 data (S123): refused by the fetch tool on 2026-10-23 (not in provenance). Wikipedia (S483, tier C) cites McMillan 2024 with a Weimaraner median of 12.8 years — not verified in the paper or the table → open for David (0.75 × 12.8 × 12 = 115.2 → senior 115 if confirmed). UNSOURCED value."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 10 y (S479) → 0.75 × 10 = 7.5 y = 90 months. Runbook order: McMillan 2024 (table not reachable, value only via Wikipedia tier C) → VetCompass median (none found) → RKC lower bound. Alternatives: 84 (Dogs Trust > 7 y, S14); 115 (0.75 × 12.8 y McMillan 2024 via Wikipedia S483, tier C — not chosen).",
+        "derived_from": [
+          "S11",
+          "S479"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S479",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S479) — the runbook's preferred source. PDSA (S480): 'Your Weimaraner will need a minimum of two hours exercise every day.' and 'Weimaraners don’t tire out easily, so it’s important to remember that two hours is the minimum they need!'; PetMD (S481): 'at least two hours every day' (fragment) — all agree on 120."
+      },
+      "daily_text": {
+        "value": "long walks and off-lead running and play in a secure area, plus playtime and training",
+        "unit": "—",
+        "source_id": "S480",
+        "quote": "This will need to include some long walks and plenty of opportunity to run and play off-lead in a secure area.",
+        "confidence": "high",
+        "notes": "PDSA (S480). Also 'On top of this, your Weimaraner will need lots of playtime with you and training sessions.'"
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "loving and loyal, thrives in active families; active and very intelligent; can be a little wilful; takes time to warm to new people",
+        "unit": "—",
+        "source_id": "S480",
+        "quote": "Weimaraners are known for their beautifully striking looks and loyalty to their owners.",
+        "confidence": "high",
+        "notes": "PDSA (S480); also 'They’re active and very intelligent dogs so can be easy to train with experienced owners.' and 'Because they can be a little wilful at times, Weimaraners do best with owners familiar with the breed and their needs.' PetMD (S481): 'The Weimaraner is a friendly, fearless, and obedient dog.' FCI standard (S478): 'Versatile, easily trained steady and passionate hunting dog.' (fragment)."
+      },
+      "experienced_owner": {
+        "value": "does best with owners familiar with the breed and its needs",
+        "unit": "—",
+        "source_id": "S480",
+        "quote": "Because they can be a little wilful at times, Weimaraners do best with owners familiar with the breed and their needs.",
+        "confidence": "high",
+        "notes": "PDSA (S480). Basis of experienced_owner."
+      },
+      "family": {
+        "value": "fairly good around children, but not recommended with smaller children (a large dog can knock them over); always supervise",
+        "unit": "—",
+        "source_id": "S480",
+        "quote": "we wouldn’t recommend getting a Weimaraner if you have smaller children as they could accidentally knock them over.",
+        "confidence": "high",
+        "notes": "PDSA (S480, fragment of a longer sentence that starts 'Weimaraners are fairly good around children as they enjoy playtime, although due to their larger size…'); also 'Always supervise your dog with children and vulnerable adults.' PetMD (S481): 'When well socialized, they do great with people of all ages but should be supervised around babies and toddlers.' → family_pet, not_for_small_children; never children / small_children (Hungarian Vizsla precedent)."
+      },
+      "time_alone": {
+        "value": "can develop separation anxiety; best to have someone with them all day",
+        "unit": "—",
+        "source_id": "S481",
+        "quote": "Weimaraners can develop separation anxiety.",
+        "confidence": "high",
+        "notes": "PetMD (S481). PDSA (S480): 'For this reason and due to their exercise needs, it’s best to have someone with them all day.' and 'If left alone, Weimaraners can develop separation anxiety and may bark or chew anything they can get their paws on…' (fragment). Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "very strong prey drive — not recommended with smaller pets",
+        "unit": "—",
+        "source_id": "S480",
+        "quote": "They have a very strong prey drive and are likely to chase anything that moves!",
+        "confidence": "high",
+        "notes": "PDSA (S480); also 'For this reason, we wouldn’t recommend having them with smaller pets.' PetMD (S481): 'Their prey drive might make it difficult for Weimaraners to live in the same home as smaller animals,' (fragment). Basis of chases_small_pets (a high prey drive named in this breed's own entry); never other_pets."
+      },
+      "socialisation": {
+        "value": "socialise from a young age with a variety of people, dogs and experiences",
+        "unit": "—",
+        "source_id": "S480",
+        "quote": "Weimaraners tend to be a little cautious of unfamiliar dogs, so socialisation from a young age is really important.",
+        "confidence": "high",
+        "notes": "PDSA (S480), a need; also 'Weimaraners can take a while to warm to new people (and dogs) so it’s really important to socialise them…' / '…with a variety of people, dogs and experiences from a young age.' (fragments). PetMD (S481): 'If properly socialized, they get along well with other dogs.' → proposed_game_parameters.weimaraner.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA (S480): when left alone they 'may bark or chew anything they can get their paws on…' (fragment — a separation-anxiety statement, covered by needs_company) → no chews_when_bored tag (open for David)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S479: no breed-specific points of concern) → no welfare chip. Breeder checklist: RKC Best Practice elbow, eye and hip schemes (S479).",
+      "hip_dysplasia": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S480",
+        "quote": "where the hip joint doesn’t fit together perfectly, which will eventually lead to arthritis.",
+        "confidence": "high",
+        "notes": "PDSA (S480, fragment after 'Hip dysplasia'). PetMD (S481): 'Hip dysplasia in dogs is a degenerative joint disease that affects the hind limbs.' RKC Best Practice hip and elbow schemes (S479). Register health key hip_dysplasia."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (GDV, bloat)",
+        "unit": "—",
+        "source_id": "S480",
+        "quote": "Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.",
+        "confidence": "high",
+        "notes": "PDSA (S480): 'Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.'; GDV 'where a dog’s stomach bloats and twists around on itself, which can be fatal.' (fragment). PetMD (S481): 'To limit the risk of GDV, do not feed your Weimaraner dog immediately before or after exercise; allow one to two hours.' → meal_exercise_gap row (M5-R16; PetMD's 'one to two hours' recorded as an alternative — the game uses David's 60 min). Register health key bloat_gdv."
+      },
+      "cancer": {
+        "value": "certain cancers",
+        "unit": "—",
+        "source_id": "S480",
+        "quote": "Certain cancers.",
+        "confidence": "medium",
+        "notes": "PDSA (S480) lists 'Certain cancers.' without detail. Register health key certain_cancers (Samoyed precedent)."
+      },
+      "distichiasis": {
+        "value": "distichiasis — extra small eyelashes on the inner surface or the edge of the eyelid",
+        "unit": "—",
+        "source_id": "S480",
+        "quote": "a condition in which small eyelashes grow on the inner surface or the very edge of the eye…",
+        "confidence": "high",
+        "notes": "PDSA (S480, fragment). RKC Best Practice eye scheme (S479). New register health key extra_eyelashes (calm sentence, no numbers)."
+      },
+      "entropion": {
+        "value": "entropion — the eyelid rolls inwards",
+        "unit": "—",
+        "source_id": "S481",
+        "quote": "Entropion is the most common eyelid abnormality in dogs.",
+        "confidence": "medium",
+        "notes": "PetMD (S481) names entropion for the breed (the eyelid rolling inwards — paraphrase). Register health key entropion."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S481",
+        "quote": "Hypothyroidism is a common endocrine disease where the dog's body functions, including metabolism,",
+        "confidence": "medium",
+        "notes": "PetMD (S481, fragment). Register health key hypothyroidism."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 21,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Weimaraner",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-23): rank 21 'Weimaraner' (no other breed shares the rank), tier 'Excellent Working Dogs' (ranks 11–26). Coren's own article (S34) not re-read. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Excellent",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 5 to 15 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier 'Excellent Working Dogs': 'Obey first command: 85% of the time or better.'"
+      },
+      "training_notes": {
+        "value": "easy to train with experienced owners; can be a little wilful",
+        "unit": "—",
+        "source_id": "S480",
+        "quote": "They’re active and very intelligent dogs so can be easy to train with experienced owners.",
+        "confidence": "medium",
+        "notes": "PDSA (S480). The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.weimaraner.learning_multiplier (1.5, runbook rule: Excellent tier, rank 21).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium to large, functional working hunting dog; sinewy and very muscular",
+        "unit": "—",
+        "source_id": "S478",
+        "quote": "Medium to large size hunting dog. Functional working type, pleasing in shape, sinewy and very muscular.",
+        "confidence": "high",
+        "notes": "FCI standard No. 99 (S478)."
+      },
+      "colours": {
+        "value": [
+          "silver grey",
+          "roe grey",
+          "mouse grey"
+        ],
+        "unit": "list",
+        "source_id": "S478",
+        "quote": "Silver, roe or mouse grey, as well as shades of these colours. Head and leathers generally slightly paler.",
+        "confidence": "high",
+        "notes": "FCI standard (S478): 'Only small white markings on chest and toes permitted.'; disqualifying 'Deviations from grey tones, such as yellow or brownish, tan brand.' and 'Colour other than grey. Blue colouring.' → grey only, never blue, brown or tan markings."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Silver grey first with the highest weight (the portrait default — the colour most associated with the breed, Claude 2026-10-23), then roe grey, mouse grey."
+      },
+      "coat": {
+        "value": "short-haired variety: short, strong, very dense, smooth-lying topcoat (a long-haired variety also exists)",
+        "unit": "—",
+        "source_id": "S478",
+        "quote": "Short (but longer and thicker than with most comparable breeds), strong, very dense, smooth lying topcoat.",
+        "confidence": "high",
+        "notes": "FCI standard (S478), short-haired variety; long-haired 'Soft, long topcoat with or without undercoat. Smooth or slightly wavy.' The game shows the short-haired variety (open for David). RKC (S479) 'Coat length: Short & long'."
+      },
+      "head": {
+        "value": "long muzzle, powerful especially in the male, almost angular in profile",
+        "unit": "—",
+        "source_id": "S478",
+        "quote": "Long and, especially in the male, powerful, seen from profile appearing almost angular.",
+        "confidence": "high",
+        "notes": "FCI standard (S478), Muzzle."
+      },
+      "nose": {
+        "value": "large nose leather, dark flesh colour merging into grey",
+        "unit": "—",
+        "source_id": "S478",
+        "quote": "Dark flesh colour, merging gradually into gray towards the rear.",
+        "confidence": "high",
+        "notes": "FCI standard (S478); 'Nose leather large, protruding over the under jaw.'"
+      },
+      "ears": {
+        "value": "broad, fairly long, set on high, reaching the corner of the mouth",
+        "unit": "—",
+        "source_id": "S478",
+        "quote": "EARS: Broad and fairly long, just reaching to corner of mouth.",
+        "confidence": "high",
+        "notes": "FCI standard (S478); 'Set on high and narrow, forming a rounded off point at tip.'"
+      },
+      "eyes": {
+        "value": "amber, dark to pale (sky blue in puppies)",
+        "unit": "—",
+        "source_id": "S478",
+        "quote": "EYES: Amber colour, dark to pale, with intelligent expression.",
+        "confidence": "high",
+        "notes": "FCI standard (S478); 'Skyblue in puppies.'"
+      },
+      "tail": {
+        "value": "natural tail, hanging down in repose, carried level or higher when alert",
+        "unit": "—",
+        "source_id": "S478",
+        "quote": "Carried hanging down in repose.",
+        "confidence": "high",
+        "notes": "FCI standard (S478); 'When alert or working, carried level or higher.' The standard permits docking for hunting dogs where legal ('appropriate tail docking is permissible for shorthaired Weimaraner used for hunting.') — the game shows the natural tail (runbook: never a docked tail as a goal)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S479), PDSA (S480), PetMD (S481). RKC key facts reached on 2026-10-23.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S479",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "RKC key fact (S479)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S479",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S479). Basis of active_family and long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S479",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key fact (S479). Basis of large_home."
+      },
+      "rkc_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S479",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S479)."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S479",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S479) → brushing 1× a week (M5-R13 rule 'Once a week' → 1). PDSA (S480) 'A weekly brush should be plenty to keep on top of any dead hairs.' and PetMD (S481) 'once a week' agree."
+      },
+      "rkc_coat_length": {
+        "value": "Short & long",
+        "unit": "—",
+        "source_id": "S479",
+        "quote": "Coat length: Short & long",
+        "confidence": "high",
+        "notes": "RKC key fact (S479) — both varieties; the game shows the short-haired one."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S479",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S479). PDSA (S480): 'They do shed all year round, but as long as you keep on top of the hoovering you won’t really notice it much.' — consistent → sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S479",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "medium",
+        "notes": "RKC key fact (S479). Not shorter_lifespan (that needs 'Under 10 years')."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S479",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S479)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S479",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S479): 'Category 1'. → no welfare chip."
+      },
+      "pdsa_family": {
+        "value": "wonderful family pets in the right hands",
+        "unit": "—",
+        "source_id": "S480",
+        "quote": "In the right hands, Weimaraners make wonderful family pets and can be very good natured dogs.",
+        "confidence": "medium",
+        "notes": "PDSA (S480), a family statement with a condition ('in the right hands'; also 'thrive in active families'). Basis of family_pet."
+      },
+      "pdsa_children": {
+        "value": "not recommended with smaller children",
+        "unit": "—",
+        "source_id": "S480",
+        "quote": "we wouldn’t recommend getting a Weimaraner if you have smaller children as they could accidentally knock them over.",
+        "confidence": "high",
+        "notes": "PDSA (S480, fragment). Basis of not_for_small_children."
+      },
+      "petmd_grooming": {
+        "value": "brushing once a week; a bath once a month; ears cleaned once a month",
+        "unit": "—",
+        "source_id": "S481",
+        "quote": "Bathing your dog once a month is sufficient to keep their coat and skin healthy and hydrated.",
+        "confidence": "high",
+        "notes": "PetMD (S481); also 'brushing with a rubber curry comb once a week helps decrease shedding and keeps their coat shiny.' and 'Use a vet-approved ear cleanser to clean your dog's ears once a month.' Bath and ear cleaning → proposed_game_parameters.weimaraner.ear_care_bathing (no mechanic yet — ROADMAP M5-R20)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -45955,6 +46433,289 @@
         "confidence": "high",
         "notes": "Colours of the Kennel Club standard (S473): black, wheaten, brindle of any shade; 'Any other colour or combination of colours unacceptable.' Weights unsourced in prompts. Black as the portrait default: the most typical colour (Claude). The trimmed furnishings are the usual show trim (not in the returned standard text).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black is the portrait default; standard colours only (black, wheaten, brindle), never other colours or white patches"
+      }
+    },
+    "weimaraner": {
+      "_note": "Unattended run M5-R10-59 (2026-10-23): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. One new register health key (extra_eyelashes); no new vocabulary key. Sourced needs built from day one: weekly brushing (RKC S479 'Grooming: Once a week', M5-R13); puppy socialisation (PDSA S480 quote, M5-R17); the digestion warning (PDSA S480 'Remember to leave a gap between eating and exercising…', M5-R16). Sourced needs without a game mechanic: a monthly bath and monthly ear cleaning (PetMD S481) → open for David (ROADMAP M5-R20). Exercise from RKC (S479, more than 2 hours; PDSA / PetMD agree). Senior 90 from the RKC lower bound 'Over 10 years' (S479; the McMillan 2024 table S123 was not reachable, 12.8 y only via Wikipedia). RKC Breed Watch Category 1 → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S479",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'More than 2 hours per day' (S479). Rule: one number N ('more than N') → N = 120. PDSA (S480) 'a minimum of two hours' and PetMD (S481) 'at least two hours' agree.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S479 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S479",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S479). The Dogs Trust McMillan 2024 table (S123) could not be fetched; no VetCompass median found. Alternatives: 84 (Dogs Trust > 7 y, S14); 115 (McMillan 2024 12.8 y via Wikipedia S483, tier C — open for David).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S479"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84,
+          "senior_mcmillan_via_wikipedia_12_8_y": 115
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S479)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 21 (S35), tier 'Excellent' (11–26) → 1.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 21, Excellent tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S479",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "weimaraner.suitability.rkc_grooming. RKC 'Once a week' → 1 (runbook dog-grooming rule). PDSA (S480) weekly brush and PetMD (S481) once a week agree. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«; PDSA, PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S480",
+        "quote": "Weimaraners tend to be a little cautious of unfamiliar dogs, so socialisation from a young age is really important.",
+        "confidence": "high",
+        "notes": "weimaraner.behaviour.socialisation (PDSA S480, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S480)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S480",
+        "quote": "Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.",
+        "confidence": "high",
+        "notes": "PDSA (S480), weimaraner.health.gdv (bloat / GDV). PetMD (S481) 'To limit the risk of GDV, do not feed your Weimaraner dog immediately before or after exercise; allow one to two hours.' — alternative (60–120 min); the game uses David's 60 min. Built in M5-R16 (David 2026-10-12): for 60 minutes after a meal the child app shows a calm 'wait with the walk, the dog is digesting' warning; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "ear_care_bathing": {
+        "value": "ear cleaning once a month; a bath once a month",
+        "unit": "care routine (sourced need)",
+        "source_id": "S481",
+        "quote": "Use a vet-approved ear cleanser to clean your dog's ears once a month.",
+        "confidence": "high",
+        "notes": "PetMD (S481), weimaraner.suitability.petmd_grooming; also 'Bathing your dog once a month is sufficient to keep their coat and skin healthy and hydrated.' The game has no ear-care / bath mechanic → open for David (ROADMAP M5-R20; Chihuahua / Basset Hound precedent).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): čiščenje ušes in kopanje 1× na mesec; mehanike ni → ROADMAP M5-R20 (David)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-59); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S479"
+            ],
+            "refs": [
+              "weimaraner.exercise.adult",
+              "weimaraner.suitability.rkc_exercise"
+            ],
+            "quote": "S479 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S480"
+            ],
+            "refs": [
+              "weimaraner.suitability.pdsa_family"
+            ],
+            "quote": "S480 'In the right hands, Weimaraners make wonderful family pets and can be very good natured dogs.' (condition in notes)"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S479"
+            ],
+            "refs": [
+              "weimaraner.suitability.rkc_size_of_home"
+            ],
+            "quote": "S479 'Size of home: Large house'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S479"
+            ],
+            "refs": [
+              "weimaraner.exercise.adult",
+              "weimaraner.suitability.rkc_exercise"
+            ],
+            "quote": "S479 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S480"
+            ],
+            "refs": [
+              "weimaraner.behaviour.experienced_owner"
+            ],
+            "quote": "S480 'Because they can be a little wilful at times, Weimaraners do best with owners familiar with the breed and their needs.'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S480"
+            ],
+            "refs": [
+              "weimaraner.suitability.pdsa_children",
+              "weimaraner.behaviour.family"
+            ],
+            "quote": "S480 'we wouldn’t recommend getting a Weimaraner if you have smaller children as they could accidentally knock them over.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S481"
+            ],
+            "refs": [
+              "weimaraner.behaviour.time_alone"
+            ],
+            "quote": "S481 'Weimaraners can develop separation anxiety.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S479"
+            ],
+            "refs": [
+              "weimaraner.suitability.rkc_shedding"
+            ],
+            "quote": "S479 'Sheds: Yes'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S480"
+            ],
+            "refs": [
+              "weimaraner.behaviour.other_pets"
+            ],
+            "quote": "S480 'They have a very strong prey drive and are likely to chase anything that moves!'"
+          }
+        ],
+        "not_proposed": {
+          "children": "PDSA 'fairly good around children' (S480) but 'we wouldn’t recommend getting a Weimaraner if you have smaller children' → not_for_small_children instead (Hungarian Vizsla precedent); open for David.",
+          "small_children": "PDSA advises against smaller children (S480).",
+          "other_pets": "PDSA: not with smaller pets, a very strong prey drive (S480).",
+          "apartment": "RKC 'Large house' (S479).",
+          "low_shedding": "RKC 'Sheds: Yes' (S479).",
+          "frequent_grooming": "RKC 'Once a week' (S479).",
+          "needs_mental_stimulation": "PDSA 'lots of playtime with you and training sessions' (S480) is covered by long_daily_exercise; no separate mental-work statement.",
+          "chews_when_bored": "PDSA names chewing only when left alone (separation anxiety, S480) — covered by needs_company; open for David.",
+          "first_time_owner": "PDSA: owners familiar with the breed (S480).",
+          "shorter_lifespan": "RKC 'Over 10 years' (S479).",
+          "secure_fencing": "PDSA 'off-lead in a secure area' (S480) is exercise advice, not fence advice.",
+          "welfare": "RKC Breed Watch Category 1 (S479), no conformation welfare statement → no welfare chip; hip dysplasia, GDV, cancers, distichiasis, entropion and hypothyroidism are register health keys and breeder-checklist items only."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, large_home; consider long_daily_exercise, experienced_owner, not_for_small_children, needs_company, sheds, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S479",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 1 (S479); no veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92). Marketing never shows it as a dog for small children, first-time owners or a small flat, a low-exercise dog, a dog to leave alone for long or with a docked tail as a goal (S479, S480, S481).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult short-haired Weimaraner, silver grey coat (default); medium to large, sinewy and very muscular working pointer; short, very dense, smooth-lying coat; long muzzle; large nose of dark flesh colour merging into grey; amber eyes; broad, fairly long high-set ears; natural undocked tail; grey only — never blue, brown or tan markings; at most small white markings on the chest and toes",
+        "unit": "—",
+        "source_id": "S478",
+        "quote": "Silver, roe or mouse grey, as well as shades of these colours. Head and leathers generally slightly paler.",
+        "confidence": "high",
+        "notes": "Colours of the FCI standard (S478); disqualifying colours other than grey, blue colouring, yellow or brownish tones, tan markings. Weights unsourced in prompts. Silver grey as the portrait default: the standard prefers no shade — Claude's choice (the colour most associated with the breed).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): silver grey is the portrait default; standard colours only (silver, roe, mouse grey), never blue or brown"
       }
     }
   }
