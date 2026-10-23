@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `scottish_terrier` (viri S472–S476; ponovno S8, S10, S11, S14, S24, S35, S45, S54, S123, S174) |
 | Izvor | FCI št. 73, skupina 3, sekcija 2 (mali terierji), Velika Britanija (S472) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 54. mesto »Scottish Terrier« (S174) |
-| PR-ji | pet-prep #348 (pasma, združen `aecd0bb`) · portret (ta PR) · spletna stran (sledi) |
+| PR-ji | pet-prep #348 (pasma, združen `aecd0bb`) · portret #350 (združen `2425100`) · spletna stran pet-prep-website #92 (združen `2cceba7`) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -31,7 +31,7 @@
 | 2026-10-23 | pravilo runbooka (§3) | marketing: **v aplikaciji da, v marketingu da** — nikoli kot hipoalergen pes, pes, ki se ne lisa, pes brez nege ali pes, ki je lahko dolgo sam | veterinarsko odsvetovanje oglaševanja velja le za pse s sploščenim obrazom (BVA S92) | #348 |
 | 2026-10-23 | pravilo runbooka (§3) | barve za AI in izbirnik: **črn** (portret), tigrast, pšenično rumen; nobena druga barva, brez belih lis | standard Kennel Cluba S473 »Black, wheaten, or brindle of any shade.« in »Any other colour or combination of colours unacceptable.« (uteži barv brez vira → `verified: false`) | #348 |
 | 2026-10-23 | predlog Claude, David lahko spremeni | ime SL »škotski terier« (slug `skotski-terier`); iskalni ključi tudi »scottie«, »skotski terier«, »aberdeen terrier« | slovenskega vira za ime ni bilo mogoče najti; KZS ni bil preverjen | #348 |
-| 2026-10-23 | pravilo runbooka (§8) | AI portret: realistična fotografija odraslega psa, črna trda žičnata dlaka z brado, obrvmi in dlako na nogah, pokončni koničasti uhlji, rep pokonci, temne oči, siva studijska podlaga, naravna razmerja; sprejet v prvem poskusu (zagon 39887587278, koda `aecd0bb`, brez produkcijske namestitve) | barva portreta = najtežja barva iz `breed_appearance.php` | portret |
+| 2026-10-23 | pravilo runbooka (§8) | AI portret: realistična fotografija odraslega psa, črna trda žičnata dlaka z brado, obrvmi in dlako na nogah, pokončni koničasti uhlji, rep pokonci, temne oči, siva studijska podlaga, naravna razmerja; sprejet v prvem poskusu (zagon 39887587278, koda `aecd0bb`, brez produkcijske namestitve) | barva portreta = najtežja barva iz `breed_appearance.php` | #350 |
 | 2026-10-23 | pravilo runbooka (§2.3) | seznam za vzreditelja (vse »other_scheme«): DNK test von Willebrandove bolezni tip III, pregled pogačice, test kraniomandibularne osteopatije (CMO) | ameriški klub pasme — obvezni testi CHIC 2026 (K34), AKC (K33). Nov ključ testa `dna_cmo` | #348 |
 | 2026-10-23 | pravilo runbooka | nov zdravstveni ključ registra **`scottie_cramp`** (»škotski krč«) — mirna poved brez številk; poleg tega `bleeding_disorder_vwd`, `kneecap_luxation`, `heart_muscle_disease`, `cataracts_lens_luxation`, `itchy_skin_allergy`, `deafness`. Rak sečnega mehurja ni zapisan (le Wikipedija s faktorjem tveganja) | PDSA S474 (seznam bolezni); PetMD S475 | #348 |
 
@@ -44,7 +44,7 @@
 | Česanje vsak dan (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-23 |
 | Barva (izbirnik barve: črn, tigrast, pšenično rumen) | 🛠 | 💶 izziv | M5-R21 | 2026-10-23 |
 | AI portret v registru (črn, trimana brada in obrvi, pokončni uhlji; sprejet v prvem poskusu, zagon 39887587278) | ✅ | — | M5-R11-04 | 2026-10-23 |
-| Stran na petprep.si (`/animals/dogs/scottish-terrier`, `/sl/zivali/psi/skotski-terier`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| Stran na petprep.si (`/animals/dogs/scottish-terrier`, `/sl/zivali/psi/skotski-terier`) s portretom — oznaka »Kmalu«, dokler pasma ni v izdaji aplikacije | ✅ (stran) | — | M5-R11 | 2026-10-23 |
 
 ## Zgodba (v slogu BUILD_LOG)
 
