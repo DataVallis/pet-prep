@@ -1724,7 +1724,8 @@ class PetMediaService
      * Recover slots a lost job / webhook left behind:
      *  - submitted videos without a webhook after 2 h → failed `timed_out`
      *    (cost kept; media:backfill / Filament can regenerate);
-     *  - a result URL whose download job got lost → StorePetMedia again;
+     *  - a result URL whose download job got lost → StorePetMedia again (quality check: a
+     *    downloaded candidate whose check job got lost → its check again, no new download);
      *  - a claim of a dead worker → its job again (which adopts an accepted request id);
      *  - stale download temp files are deleted.
      *

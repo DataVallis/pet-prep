@@ -49,8 +49,11 @@ const BU_JPEG = "\xFF\xD8\xFF\xE0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x0
 
 const BU_MP4 = "\x00\x00\x00\x18ftypmp42\x00\x00\x00\x00mp42isom";
 
-/** 5 pose images (0.15 $) + 15 school / ball phase clips (3 s × 0.112 $) of a dog with training. */
-const BU_V2_TO_V3_DOG_USD = 5.79;
+/**
+ * 5 pose images (0.15 $) + 11 school / ball phase clips (3 s × 0.112 $) + 4 school performing
+ * clips (5 s × 0.112 $ since David 2026-10-23) of a dog with training.
+ */
+const BU_V2_TO_V3_DOG_USD = 6.69;
 
 beforeEach(function () {
     Http::preventStrayRequests();
@@ -218,7 +221,7 @@ describe('preview (no spend)', function () {
         expect($p['looks'])->toBe(2)
             ->and(collect($p['groups'])->pluck('unique')->unique()->all())->toBe([true])
             ->and(collect($p['groups'])->pluck('pet_id')->all())->toEqualCanonicalizing([$a->id, $b->id])
-            ->and($p['cost_usd'])->toBe(round(2 * BU_V2_TO_V3_DOG_USD, 2))
+            ->and($p['cost_usd'])->toBe(13.37) // 2 × 6.686 $ (unrounded per pet)
             ->and($p['groups'][0]['cost_usd'])->toBe(round(app(PetMediaService::class)->planMissing($a->fresh(), upgradeStateMedia: true)['cost_usd'], 4));
     });
 
@@ -228,10 +231,10 @@ describe('preview (no spend)', function () {
 
         $b = buPlanner()->preview()['budget'];
 
-        // the set-up already spent today's 2 $: today does not count (0 $ left), 5.79 $ at 2 $ / day = 3 days
+        // the set-up already spent today's 2 $: today does not count (0 $ left), 6.69 $ at 2 $ / day = 4 days
         expect($b['left_today_usd'])->toBe(0.0)
             ->and($b['today_share_percent'])->toBeNull()
-            ->and($b['days'])->toBe(3)
+            ->and($b['days'])->toBe(4)
             ->and($b['fits_today'])->toBeFalse()
             ->and($b['daily_cap_usd'])->toBe(2.0);
 
@@ -253,7 +256,7 @@ describe('preview (no spend)', function () {
         $calls = buCalls();
 
         $this->artisan('media:backfill', ['--state-media' => true, '--dry-run' => true])
-            ->expectsOutputToContain('2 pet(s) in 1 look(s) (0 already complete), estimated $5.79')
+            ->expectsOutputToContain('2 pet(s) in 1 look(s) (0 already complete), estimated $6.69')
             ->assertSuccessful();
 
         expect(buCalls())->toBe($calls);
@@ -319,7 +322,7 @@ describe('upgrade', function () {
 
         // a chunk queued before the switch went off moves nothing either
         Queue::fake([UpgradePetsToStateMedia::class]);
-        expect(buPlanner()->upgrade(buAdmin(), [], [$pet->id], 5.79))->toMatchArray(['status' => 'blocked', 'reason' => 'state_media_off']);
+        expect(buPlanner()->upgrade(buAdmin(), [], [$pet->id], 6.69))->toMatchArray(['status' => 'blocked', 'reason' => 'state_media_off']);
         Queue::assertNothingPushed();
         expect(buPlanner()->upgradeChunk([$pet->id]))->toBe(['done' => 0, 'skipped' => 1, 'failed' => 0])
             ->and(buCalls())->toBe($calls)
@@ -390,9 +393,9 @@ describe('admin page', function () {
         Queue::fake([UpgradePetsToStateMedia::class]);
 
         Livewire::test(StateMediaUpgrade::class)
-            ->assertSee('$5.79')
+            ->assertSee('$6.69')
             ->mountAction('upgrade')
-            ->assertSee('2 pet(s) in 1 look(s), estimated $5.79')
+            ->assertSee('2 pet(s) in 1 look(s), estimated $6.69')
             ->callMountedAction()
             ->assertNotified();
 
@@ -424,7 +427,7 @@ describe('QA round (#344)', function () {
         Queue::fake([UpgradePetsToStateMedia::class]);
 
         $page = Livewire::test(StateMediaUpgrade::class)->mountAction('upgrade')
-            ->assertSee('1 pet(s) in 1 look(s), estimated $5.79');
+            ->assertSee('1 pet(s) in 1 look(s), estimated $6.69');
         $frozen = $page->get('confirmed');
         expect($frozen['pet_ids'])->toBe([$a->id]);
 
@@ -530,7 +533,7 @@ describe('QA round (#344)', function () {
         $spent = buSpent();
         buUpgradeAll();
 
-        expect($p['cost_usd'])->toBe(round(2 * BU_V2_TO_V3_DOG_USD, 2))
+        expect($p['cost_usd'])->toBe(13.37) // 2 × 6.686 $ (unrounded per pet)
             ->and(round(buSpent() - $spent, 2))->toBe($p['cost_usd']);
     });
 
@@ -572,12 +575,12 @@ describe('QA round (#344)', function () {
         $spent = buSpent();
 
         $this->artisan('media:backfill', ['--state-media' => true, '--dry-run' => true, '--limit' => 1])
-            ->expectsOutputToContain('2 pet(s) in 1 look(s) (0 already complete), estimated $5.79 (all 2 eligible; --limit is ignored)')
+            ->expectsOutputToContain('2 pet(s) in 1 look(s) (0 already complete), estimated $6.69 (all 2 eligible; --limit is ignored)')
             ->assertSuccessful();
         expect(buCalls())->toBe($calls);
 
         $this->artisan('media:backfill', ['--state-media' => true, '--limit' => 1])
-            ->expectsOutputToContain('Queued the state media upgrade of 2 pet(s), estimated $5.79')
+            ->expectsOutputToContain('Queued the state media upgrade of 2 pet(s), estimated $6.69')
             ->assertSuccessful();
         buCompleteClips();
 
@@ -594,15 +597,15 @@ describe('QA round (#344)', function () {
         AiSpendLedger::query()->delete(); // nothing spent yet today / this month
         config(['media.budget.daily_usd' => 2.0, 'media.budget.monthly_usd' => 3.0]);
 
-        // Oct 30: 2 $ · Oct 31: 1 $ (month cap) · Nov 1: 2 $ · Nov 2: 0.79 $
+        // Oct 30: 2 $ · Oct 31: 1 $ (month cap) · Nov 1: 2 $ · Nov 2: 1 $ (month cap) · Dec 1: 0.69 $ = 33 days
         $b = buPlanner()->preview()['budget'];
-        expect($b['days'])->toBe(4)
+        expect($b['days'])->toBe(33)
             ->and($b['today_usd'])->toBe(2.0)
             ->and($b['today_share_percent'])->toBe(100)
             ->and($b['over_month'])->toBeTrue();
 
         config(['media.budget.daily_usd' => 20.0, 'media.budget.monthly_usd' => 100.0]);
-        expect(buPlanner()->preview()['budget'])->toMatchArray(['days' => 1, 'today_share_percent' => 29, 'today_usd' => 5.79]);
+        expect(buPlanner()->preview()['budget'])->toMatchArray(['days' => 1, 'today_share_percent' => 33, 'today_usd' => 6.69]);
 
         // 100 $ in 100 slots (1 $ each): the nightly retry is not the limit — today 20 $ + 4 × 20 $
         expect(buPlanner()->budgetFor(100.0, ReferenceImageRetryService::DEFAULT_LIMIT))->toMatchArray(['days' => 5])

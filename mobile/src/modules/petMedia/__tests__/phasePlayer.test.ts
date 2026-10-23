@@ -145,7 +145,7 @@ describe('school: command phase → clip (server schedule)', () => {
 });
 
 describe('school: 5 s performing clips (David 2026-10-23)', () => {
-  const five = () => media({ phase_seconds: { school_sit_performing: 5, school_sit_success: 3 } } as never);
+  const five = () => media({ phase_seconds: { school_sit_performing: 5, school_sit_success: 3 } });
 
   it('normalizePetMedia reads phase_seconds (ms); unknown keys / bad values are dropped; older server → 3 s', () => {
     const m = normalizePetMedia(makeMedia({ phases: { school_sit_performing: url('p') }, phase_seconds: { school_sit_performing: 5, ball_running: 'x', school_jump_attention: 4, wand_pouncing: 99 } } as never));

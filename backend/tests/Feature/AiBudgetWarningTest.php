@@ -370,8 +370,8 @@ it('the AI budget page explains the cost per new breed + colour + stage and save
     $this->actingAs($admin);
 
     Livewire::test(AiBudget::class)
-        ->assertSee('11.17')
-        ->assertSee('12.59')
+        ->assertSee('12.07')
+        ->assertSee('13.49')
         ->assertSee('7.40')
         ->assertSee('80 %')
         ->assertDontSee('4.63')

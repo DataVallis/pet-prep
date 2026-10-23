@@ -918,7 +918,10 @@ describe('pet_media migration', function () {
     it('moves pet_media_jobs rows into pet_media and back (rollback)', function () {
         [, , $pet] = pmFamilyPet();
         $migration = 'database/migrations/2026_10_07_120000_create_pet_media_table.php';
+        // Quality check (2026-10-23): pet_media_quality_checks references pet_media — roll it back first.
+        $quality = 'database/migrations/2027_01_20_120000_add_media_quality_check.php';
 
+        $this->artisan('migrate:rollback', ['--path' => $quality])->assertSuccessful();
         $this->artisan('migrate:rollback', ['--path' => $migration])->assertSuccessful();
         expect(Schema::hasTable('pet_media'))->toBeFalse();
 
@@ -930,6 +933,7 @@ describe('pet_media migration', function () {
         $this->artisan('migrate', ['--path' => $migration])->assertSuccessful();
 
         expect(Schema::hasTable('pet_media_jobs'))->toBeFalse();
+        $this->artisan('migrate', ['--path' => $quality])->assertSuccessful();
         // Still waiting → running with the same request id (a late webhook matches);
         // completed but never downloaded → failed (media:backfill regenerates).
         expect(PetMedia::where('state', 'idle')->sole())->status->toBe('running')->request_id->toBe('old-pending')->source_generation->toBe(1)
