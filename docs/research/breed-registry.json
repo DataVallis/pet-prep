@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "5a718dc62a450ce5c4db800ecdf860c6ccf9faf92b6829cfb6a46e9ac9e7ce77"
+      "sha256": "1525dfab3dd29e2dc89bb995fe727e72477e118518dbaf274111dce1326faa05"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "317a2a829b3236a83ae935fb7ac1246970c991e932865dd19ec22e0d4042efa6"
+      "sha256": "152a891bff5dc40ccea12e042ee3559502920f1a1cd53851b9af5596b7794c53"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,31 +25,31 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "2fb449a789439473b45497fd6d9714f988771c6c5af8d754762a2cabf1b062a1"
+      "sha256": "7931624378e22ede3b2de62379b16b8dd951dd2e3a6ddfd5992dc3c02537f370"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "bebece81d38cf5fa10ba4ee5c536b3fdd2b296f8bda0b6363be331a7f257a23b"
+      "sha256": "de2d4eea4864dda510ea833886c13a281c20d2e613910c32668630e9c7781224"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "383d15acf844056baeb5fa2777e6c942bf421862298e143e688d07bb342b4890"
+      "sha256": "fbc561fddc67b01026935293afdb9e2e00c731bb53089c21c4f27bc7857b33d8"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "ea29f891df80b2386ce16fd750e844b9855712926c3a91a16c13039b9facffb8"
+      "sha256": "643ace6dd7c67f51410b22df42836dcd02d842a8c36f8a65e3cfc706c0f98921"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "5d4f106b6870a8031441cc95268326c875a080443141ee270c7c5efdfd7d76bc"
+      "sha256": "cc199c8ba193b2016f6d64a703cb051127268bfedb1a1b7094631d9c4bd51de8"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "9c9aef1850f2265b4e881bf09acc1f6cdec149765a1eb28199d474b0b8e58ec1"
+      "sha256": "f883889dc41d9b9ffc8e425a29bfc2673debe3d3c118df01bcfba7a1def9c436"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -72,6 +72,7 @@
     "chases_small_pets": "consider",
     "chews_when_bored": "consider",
     "children": "suits",
+    "cold_sensitive": "consider",
     "drools": "consider",
     "experienced_owner": "consider",
     "eyelid_problems": "consider",
@@ -115,6 +116,7 @@
         "chases_small_pets": "strong prey drive — may chase small pets",
         "chews_when_bored": "chews things when bored",
         "children": "families with children",
+        "cold_sensitive": "thin coat — feels the cold",
         "drools": "drools — keep a cloth at hand",
         "experienced_owner": "powerful dog — needs an experienced owner",
         "eyelid_problems": "eyelids and eyes — check eye tests",
@@ -158,6 +160,7 @@
         "chases_small_pets": "močan lovski nagon — lahko lovi manjše živali",
         "chews_when_bored": "ko se dolgočasi, grize stvari",
         "children": "družino z otroki",
+        "cold_sensitive": "tanka dlaka — občutljiv na mraz",
         "drools": "se slini — imejte pri roki krpo",
         "experienced_owner": "močan pes — potrebuje izkušenega lastnika",
         "eyelid_problems": "veke in oči — preverite preglede oči",
@@ -209,7 +212,7 @@
         }
       },
       "status": "available",
-      "breed_count": 55,
+      "breed_count": 56,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -32906,6 +32909,543 @@
       ]
     },
     {
+      "id": "italian_greyhound",
+      "species": "dog",
+      "order": 55,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Italian Greyhound",
+        "sl": "Mali italijanski hrt"
+      },
+      "slug": {
+        "en": "italian-greyhound",
+        "sl": "mali-italijanski-hrt"
+      },
+      "synonyms": {
+        "en": [
+          "Italian Sighthound",
+          "Piccolo Levriero Italiano",
+          "Iggy"
+        ],
+        "sl": [
+          "italijanski hrt",
+          "italijanski hrtek",
+          "mali italijanski hrt"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S486"
+          ],
+          "ref": "italian_greyhound.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              32,
+              38
+            ],
+            "female": [
+              32,
+              38
+            ]
+          },
+          "source_ids": [
+            "S485"
+          ],
+          "ref": "italian_greyhound.height.kc_standard",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              3.6,
+              4.5
+            ],
+            "female": [
+              3.6,
+              4.5
+            ]
+          },
+          "source_ids": [
+            "S485"
+          ],
+          "ref": "italian_greyhound.adult_weight.kc_standard",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            8,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "italian_greyhound.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S486"
+          ],
+          "ref": "italian_greyhound.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S486"
+          ],
+          "ref": "italian_greyhound.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S486"
+          ],
+          "ref": "italian_greyhound.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S486"
+          ],
+          "ref": "italian_greyhound.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S486"
+          ],
+          "ref": "italian_greyhound.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 60,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "italian_greyhound.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 200,
+            "group": 10,
+            "section": 3,
+            "origin": "IT"
+          },
+          "source_ids": [
+            "S484"
+          ],
+          "ref": "italian_greyhound.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "periodontal_disease",
+          "source_ids": [
+            "S487"
+          ],
+          "ref": "italian_greyhound.health.periodontal_disease",
+          "confidence": "high"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S487"
+          ],
+          "ref": "italian_greyhound.health.epilepsy",
+          "confidence": "high"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S487"
+          ],
+          "ref": "italian_greyhound.health.patella",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_eye_disease",
+          "source_ids": [
+            "S487"
+          ],
+          "ref": "italian_greyhound.health.pra",
+          "confidence": "high"
+        },
+        {
+          "key": "autoimmune_conditions",
+          "source_ids": [
+            "S488"
+          ],
+          "ref": "italian_greyhound.health.autoimmune",
+          "confidence": "medium"
+        },
+        {
+          "key": "legg_perthes",
+          "source_ids": [
+            "S488"
+          ],
+          "ref": "italian_greyhound.health.legg_calve_perthes",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S488"
+          ],
+          "ref": "italian_greyhound.health.hypothyroidism",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S488"
+            ],
+            "refs": [
+              "italian_greyhound.suitability.petmd_children",
+              "italian_greyhound.behaviour.family"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S486"
+            ],
+            "refs": [
+              "italian_greyhound.suitability.rkc_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "fragile_older_children",
+            "source_ids": [
+              "S487"
+            ],
+            "refs": [
+              "italian_greyhound.behaviour.fragile_bones",
+              "italian_greyhound.suitability.pdsa_children"
+            ]
+          },
+          {
+            "tag": "cold_sensitive",
+            "source_ids": [
+              "S488"
+            ],
+            "refs": [
+              "italian_greyhound.suitability.petmd_cold"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.7
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.italian_greyhound.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S486"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S486 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.italian_greyhound.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.italian_greyhound.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S486"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S486)"
+          },
+          {
+            "ref": "proposed_game_parameters.italian_greyhound.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 60, Fair tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.italian_greyhound.grooming",
+            "basis_source_ids": [
+              "S486"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«; PDSA, PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S486"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S486"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S486"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S484",
+        "S485",
+        "S486",
+        "S487",
+        "S488",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -37426,6 +37966,41 @@
       "publisher": "PetMD — Barri J. Morrison, DVM, reviewed by Jo Cornett, DVM (updated Jan. 3, 2025)",
       "title": "Weimaraner",
       "url": "https://www.petmd.com/dog/breeds/weimaraner"
+    },
+    {
+      "id": "S484",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — PICCOLO LEVRIERO ITALIANO (200)",
+      "url": "https://www.fci.be/EN/nomenclature/LEVRETTE-D-ITALIE-200.html"
+    },
+    {
+      "id": "S485",
+      "tier": "A",
+      "publisher": "The Kennel Club (UK) breed standard, reprinted by the Kennel Union of Southern Africa",
+      "title": "Italian Greyhound — breed standard (KC 07/2025, PDF)",
+      "url": "https://www.kusa.co.za/images/BREED%20STANDARDS%20EFFECTIVE%2001%20JULY%202025/Italian%20Greyhound%20-%20KC%20[07-2025].pdf"
+    },
+    {
+      "id": "S486",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Italian Greyhound",
+      "url": "https://thekennelclub.org.uk/search/breeds-a-to-z/breeds/toy/italian-greyhound"
+    },
+    {
+      "id": "S487",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Italian Greyhound breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/italian-greyhound"
+    },
+    {
+      "id": "S488",
+      "tier": "B",
+      "publisher": "PetMD — Teresa Kho-Pelfrey, DVM (published Feb. 8, 2023)",
+      "title": "Italian Greyhound",
+      "url": "https://www.petmd.com/dog/breeds/italian-greyhound"
     },
     {
       "id": "C1",
