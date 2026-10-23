@@ -1147,8 +1147,10 @@ export interface paths {
          *     - `media_display` (`video` | `picture`, M5-T11) — »Prikaz: Video / Slika« in the child
          *       app: `picture` shows the key image of the pet's current state and downloads no video.
          *       The child can change it too (`PATCH /api/child/settings`).
+         *     - `easy_gestures` (bool, M5-T17) — »Lažje kretnje«: the child app uses press-and-hold
+         *       instead of swipe in every swipe game. Parent only; game rules and scores are the same.
          *     A change broadcasts `caretaker_settings_changed` on the child's active pet.
-         *     200 `{child_id, adapted_mode, media_display}`; 404 `child_not_found` for a child outside
+         *     200 `{child_id, adapted_mode, media_display, easy_gestures}`; 404 `child_not_found` for a child outside
          *     the family; child token → 403
          * @description PATCH /api/parent/children/{child}/settings
          */
@@ -2614,7 +2616,9 @@ export interface components {
          *     2026-10-21). Body: at least one of
          *      - `adapted_mode` (bool) — »Prilagojen način«: the child's walk counts wheelchair
          *        pushes instead of steps;
-         *      - `media_display` (`video` | `picture`) — »Prikaz: Video / Slika« in the child app.
+         *      - `media_display` (`video` | `picture`) — »Prikaz: Video / Slika« in the child app;
+         *      - `easy_gestures` (bool, M5-T17 2026-10-23) — »Lažje kretnje«: press-and-hold instead
+         *        of swipe in every swipe game of the child app.
          *     Parents only (UserPolicy::manageFamily → 403 for a child; the route group also needs
          *     the `parent` token ability); whether the child belongs to the parent's family is
          *     checked in the controller (another family's child looks exactly like a missing one, 404).
@@ -2625,6 +2629,7 @@ export interface components {
         UpdateChildSettingsRequest: {
             adapted_mode?: boolean;
             media_display?: components["schemas"]["MediaDisplay"];
+            easy_gestures?: boolean;
         };
         /** UpdateParentSettingsRequest */
         UpdateParentSettingsRequest: {
@@ -4083,7 +4088,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -4092,6 +4097,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -4856,7 +4868,7 @@ export interface operations {
                              */
                             adapted_mode: boolean;
                         };
-                        /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                        /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                         settings: {
                             /**
                              * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -4865,6 +4877,13 @@ export interface operations {
                              * @enum {string}
                              */
                             media_display: "video" | "picture";
+                            /**
+                             * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                             *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                             *     (default) = swipe only. The app also uses hold when the phone's screen
+                             *     reader is on. Always false for a parent's view.
+                             */
+                            easy_gestures: boolean;
                         };
                         contract: {
                             signed: boolean;
@@ -5649,7 +5668,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -5658,6 +5677,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -6440,7 +6466,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -6449,6 +6475,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -7231,7 +7264,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -7240,6 +7273,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -8022,7 +8062,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -8031,6 +8071,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -8813,7 +8860,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -8822,6 +8869,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -9608,7 +9662,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -9617,6 +9671,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -10403,7 +10464,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -10412,6 +10473,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -11198,7 +11266,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -11207,6 +11275,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -11989,7 +12064,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -11998,6 +12073,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -12784,7 +12866,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -12793,6 +12875,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -13575,7 +13664,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -13584,6 +13673,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -14366,7 +14462,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -14375,6 +14471,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -15161,7 +15264,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -15170,6 +15273,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -15952,7 +16062,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -15961,6 +16071,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -16747,7 +16864,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -16756,6 +16873,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -17538,7 +17662,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -17547,6 +17671,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -18333,7 +18464,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -18342,6 +18473,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -19128,7 +19266,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -19137,6 +19275,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -19923,7 +20068,7 @@ export interface operations {
                                  */
                                 adapted_mode: boolean;
                             };
-                            /** @description M5-T11 settings of the requesting child (set by the child or a parent of the family). */
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
                             settings: {
                                 /**
                                  * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
@@ -19932,6 +20077,13 @@ export interface operations {
                                  * @enum {string}
                                  */
                                 media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
                             };
                             contract: {
                                 signed: boolean;
@@ -20353,6 +20505,8 @@ export interface operations {
                             adapted_mode: boolean;
                             /** @description M5-T11: a new profile shows video. */
                             media_display: string;
+                            /** @description M5-T17: a new profile swipes (no »Lažje kretnje«). */
+                            easy_gestures: boolean;
                         };
                     };
                 };
@@ -20444,6 +20598,8 @@ export interface operations {
                          * @enum {string}
                          */
                         media_display: "video" | "picture";
+                        /** @description M5-T17 »Lažje kretnje«: true = hold instead of swipe in the child's swipe games. */
+                        easy_gestures: boolean;
                     };
                 };
             };

@@ -304,7 +304,7 @@ class ChildPetStateResource extends JsonResource
                 'adapted_mode' => (bool) ($actor?->adapted_mode ?? false),
             ],
             /**
-             * M5-T11 settings of the requesting child (set by the child or a parent of the family).
+             * M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only).
              */
             'settings' => [
                 /**
@@ -315,6 +315,15 @@ class ChildPetStateResource extends JsonResource
                  * @var 'video'|'picture'
                  */
                 'media_display' => ($actor?->media_display ?? MediaDisplay::Video)->value,
+                /**
+                 * M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                 * swipe in every swipe game (brushing, wand, litter change, ball play); false
+                 * (default) = swipe only. The app also uses hold when the phone's screen
+                 * reader is on. Always false for a parent's view.
+                 *
+                 * @var bool
+                 */
+                'easy_gestures' => (bool) ($actor?->easy_gestures ?? false),
             ],
             'contract' => [
                 'signed' => $contract !== null,

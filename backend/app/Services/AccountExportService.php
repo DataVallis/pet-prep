@@ -127,6 +127,8 @@ class AccountExportService
                 'adapted_mode' => (bool) $u->adapted_mode,
                 // M5-T11: »Prikaz: Video / Slika« (display preference).
                 'media_display' => ($u->media_display ?? MediaDisplay::Video)->value,
+                // M5-T17: »Lažje kretnje« (hold instead of swipe; input preference).
+                'easy_gestures' => (bool) $u->easy_gestures,
                 // PIN-only profile (M2-02) vs. a legacy child account with e-mail.
                 'login' => $u->password === null ? 'pin' : 'email',
                 'email' => $u->email,
