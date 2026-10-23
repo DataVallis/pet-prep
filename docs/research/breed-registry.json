@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "a06ccbcf921b04c5ad2471f4564abb6f90ae7c08c8c421cfa78e3b0fded8b2b2"
+      "sha256": "ab8e47ff59abeb953424298bf868cac2b9373af1b4be234f8dd1128ffa751240"
     }
   },
   "suitability_vocabulary": {
@@ -32248,7 +32248,12 @@
           "S474"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "scottish-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
