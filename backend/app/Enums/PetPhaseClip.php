@@ -6,7 +6,8 @@ use InvalidArgumentException;
 
 /**
  * A PHASE clip of the school or a mini-game (M5-T09 / M5-T10, APP_REFINEMENT_SPEC
- * §3 / §10, David 2026-10-20 / 21): one short clip (3 s — media.state_media.clip_seconds)
+ * §3 / §10, David 2026-10-20 / 21): one short clip (3 s; school performing 5 s since
+ * David 2026-10-23 — media.state_media.clip_seconds)
  * per command and phase, played ONCE by the app at the right moment and held on
  * its last frame — never looped into another action.
  *
@@ -63,10 +64,17 @@ enum PetPhaseClip: string
         return explode('_', $this->value, 2)[0];
     }
 
-    /** media.state_media.clip_seconds purpose: school | game. */
+    /**
+     * media.state_media.clip_seconds purpose: school | school_performing | game. David
+     * 2026-10-23: the school PERFORMING clips (into sit / come / place / door) are 5 s.
+     */
     public function purpose(): string
     {
-        return $this->group() === self::GROUP_SCHOOL ? 'school' : 'game';
+        if ($this->group() !== self::GROUP_SCHOOL) {
+            return 'game';
+        }
+
+        return $this->phase() === self::PHASE_PERFORMING ? 'school_performing' : 'school';
     }
 
     public function species(): Species
@@ -158,11 +166,13 @@ enum PetPhaseClip: string
         if ($command !== null) {
             return match ($this->phase()) {
                 self::PHASE_ATTENTION => 'stands in the same spot, sniffs the air and looks around the room, then looks up at the camera eagerly with the ears perked and the tail wagging, waiting, not sitting or lying down',
+                // David 2026-10-23 (5 s): one natural, continuous movement into the end pose —
+                // production media 123 stood still and then »melted« into the sit in the last frames.
                 self::PHASE_PERFORMING => match ($command) {
-                    TrainingCommand::Sit => 'sits down on command in the same spot and looks up at the camera',
-                    TrainingCommand::Come => 'trots toward the camera on command and stops close in front of it, looking up',
-                    TrainingCommand::Place => 'walks to the dog mat on command and lies down on it',
-                    TrainingCommand::Potty => 'walks to the door on command and stops there with the nose close to the door',
+                    TrainingCommand::Sit => 'hears the command and sits down in the same spot: it slowly lowers its hindquarters, the back legs fold first, the front legs stay straight, then it sits upright and looks up at the camera; one smooth natural movement that starts right away, the body and legs keep their shape the whole time',
+                    TrainingCommand::Come => 'hears the command and walks toward the camera with natural steps, the legs moving one after the other, then stops close in front of it and looks up; one smooth natural movement that starts right away, the body and legs keep their shape the whole time',
+                    TrainingCommand::Place => 'hears the command, walks to the dog mat with natural steps, steps onto it, then lowers itself front legs first and lies down on it; one smooth natural movement that starts right away, the body and legs keep their shape the whole time',
+                    TrainingCommand::Potty => 'hears the command, turns and walks to the door with natural steps and stops there with the nose close to the door; one smooth natural movement that starts right away, the body and legs keep their shape the whole time',
                 },
                 default => match ($command) {
                     TrainingCommand::Sit => 'stays sitting proudly, looking up at the camera happily, the tail wagging clearly across the floor, the head tilting, not getting up',

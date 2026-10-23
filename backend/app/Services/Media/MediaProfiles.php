@@ -14,7 +14,7 @@ class MediaProfiles
     {
         $config = config("media.profiles.{$kind}.{$key}");
 
-        if (! in_array($kind, [ModelProfile::KIND_IMAGE, ModelProfile::KIND_VIDEO], true) || ! is_array($config)) {
+        if (! in_array($kind, [ModelProfile::KIND_IMAGE, ModelProfile::KIND_VIDEO, ModelProfile::KIND_VISION], true) || ! is_array($config)) {
             throw new InvalidArgumentException("Unknown media profile {$kind}.{$key}.");
         }
 
@@ -131,6 +131,24 @@ class MediaProfiles
         }
 
         return $profile->withDuration($seconds);
+    }
+
+    /**
+     * Quality check (David 2026-10-23): the vision LLM profile (media.quality_check.vision_profile),
+     * or null when it is unknown or disabled — then clips are judged by the technical check only
+     * and flagged »not AI-checked«.
+     */
+    public function vision(): ?ModelProfile
+    {
+        $key = (string) config('media.quality_check.vision_profile', 'openrouter_vision_gemini_flash');
+
+        if (! is_array(config("media.profiles.vision.{$key}"))) {
+            return null;
+        }
+
+        $profile = $this->get(ModelProfile::KIND_VISION, $key);
+
+        return $profile->enabled ? $profile : null;
     }
 
     public function stateVideo(): ModelProfile

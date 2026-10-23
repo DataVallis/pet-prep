@@ -28,6 +28,8 @@
         <env name="PULSE_ENABLED" value="false"/>
         <env name="PETPREP_CATS_ENABLED" value="false"/>
         <env name="AI_STATE_MEDIA_ENABLED" value="false"/>
+        <!-- Clip quality check (David 2026-10-23): off for the suite (the old store-at-once path); MediaQualityCheckTest turns it on with useQualityCheck(). -->
+        <env name="AI_QUALITY_CHECK_ENABLED" value="false"/>
         <env name="PUSH_ENABLED" value="false"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>

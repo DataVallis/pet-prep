@@ -165,7 +165,7 @@ class PetPreparationService
                 default => $slots->first(fn (PetMedia $m) => $m->isVideo() && $m->state === $key),
             };
 
-            if ($slot?->isServable()) {
+            if ($slot?->isShown()) {
                 continue;
             }
             $pending[] = $key;
@@ -178,7 +178,9 @@ class PetPreparationService
             };
             $keyFailed = $slots->contains(fn (PetMedia $m) => $m->isKeyframe() && in_array($m->state, $poses, true) && $m->status === PetMedia::STATUS_FAILED);
 
+            // Quality check (David 2026-10-23): a flagged clip is not coming back on its own.
             $failed = $slot?->status === PetMedia::STATUS_FAILED
+                || $slot?->quality === PetMedia::QUALITY_FLAGGED
                 || $keyFailed
                 || ($key === self::IMAGE && $slot === null && $pet->media_status === 'failed');
             if (! $nothingComing && ! $failed) {
@@ -219,11 +221,12 @@ class PetPreparationService
                 continue;
             }
             $slot = $slots->first(fn (PetMedia $m) => $m->isPhase() && $m->state === $clip->value);
-            if ($slot?->isServable()) {
+            if ($slot?->isShown()) {
                 continue;
             }
             $poses = array_values(array_filter([$clip->startPose()?->value, $clip->endPose()?->value]));
             $failed = $slot?->status === PetMedia::STATUS_FAILED
+                || $slot?->quality === PetMedia::QUALITY_FLAGGED
                 || $slots->contains(fn (PetMedia $m) => $m->isPose() && in_array($m->state, $poses, true) && $m->status === PetMedia::STATUS_FAILED && ! $m->isServable());
             if (! $failed) {
                 return true;

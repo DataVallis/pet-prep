@@ -385,6 +385,15 @@ function useStateMedia(bool $on = true): void
 }
 
 /**
+ * Clip quality check (David 2026-10-23): phpunit.xml sets AI_QUALITY_CHECK_ENABLED=false (a
+ * downloaded clip is stored at once, as before); tests about the check turn it on.
+ */
+function useQualityCheck(bool $on = true): void
+{
+    config(['media.quality_check.enabled' => $on]);
+}
+
+/**
  * M5-T09 / T10: the school / game phase clips of state-media pets (config
  * media.state_media.phase_clips). Off = only the M5-T08 set (StateMediaTest);
  * PhaseClipsTest turns them on.

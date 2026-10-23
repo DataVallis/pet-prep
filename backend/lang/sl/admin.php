@@ -73,6 +73,8 @@ return [
             'heading' => 'Potrebuje pozornost',
             'sick' => 'Bolni ljubljenčki',
             'sick_desc' => 'Trenutno v stanju bolezni',
+            'media_review' => 'AI posnetki: potrebujejo pregled',
+            'media_review_desc' => 'Dvakrat padli na preverjanju kakovosti — niso prikazani; odpri ljubljenčka → AI mediji',
             'locked' => 'Čakajo na plačilo',
             'locked_desc' => 'Izziv je ustavljen, dokler starš ne kupi',
             'game_over' => 'Konec igre',
@@ -275,6 +277,10 @@ return [
         'phase_clips_description' => 'Vklopljeno (privzeto, David 21. 10. 2026): ljubljenčki z mediji stanj različice 3 (kupljen polni nabor) dobijo še kratek 3-sekundni posnetek za vsako fazo ukaza v šoli (pozornost → izvedba → uspeh; potrebica = kuža gre do vrat) in za vsako fazo igre (žoga: čaka → steče iz kadra → jo prinese nazaj; palica s peresom: preža → skok → ulov) ter njihove slike poz (okoli 0,34 $ na 3-sekundni posnetek, 0,15 $ na sliko poze; skupni videzi jih naredijo enkrat). Potrebuje tudi »Mediji stanj vklopljeni«. Izklopljeno: slik poz in posnetkov faz se ne ustvarja — tudi tistih, ki že čakajo v vrsti, pri ponovnih poskusih ali čiščenju ne; igre in šola uporabljajo starejše posnetke in pravila. Ponoven vklop takoj nadaljuje čakajoče.',
         'phase_clips' => 'Posnetki šole in iger vklopljeni',
         'saved_body_phase_clips' => 'Posnetki šole in iger: :state',
+        'quality_check_section' => 'Preverjanje kakovosti posnetkov',
+        'quality_check_description' => 'Vklopljeno (privzeto, David 23. 10. 2026): vsak nov AI posnetek je preverjen, preden ga otroci vidijo — brezplačno tehnično preverjanje (ffmpeg: dolžina, zamrznjena slika, nenadni skoki, gibanje zgoščeno na koncu, zadnja sličica proti končni sliki) in AI preverjanje 6 sličic (anatomija, ista žival, dejanje se res zgodi, napake; šteje v produkcijski AI proračun, ocena ≤ 0,01 $ na posnetek; brez proračuna ali z izklopljenim modelom odloča samo tehnično preverjanje, posnetek je označen »ni AI-preverjen«). Dokler nov posnetek ne prestane preverjanja, ostane viden stari (če obstaja). Neuspešen posnetek se samodejno ustvari ENKRAT znova; če spet pade, se ne prikaže (aplikacija uporabi nadomestek) in je naveden pod »Potrebuje pregled« v Ljubljenček → AI mediji. Izklopljeno: novi posnetki se prikažejo takoj, brez preverjanja (staro delovanje).',
+        'quality_check' => 'Preverjanje kakovosti vklopljeno',
+        'saved_body_quality_check' => 'Preverjanje kakovosti: :state',
     ],
 
     // M5-R21: skupni videzi (PetLookResource).
@@ -390,6 +396,8 @@ return [
             'stuck_ledger_ids' => 'Ljubljenčki :ids',
             'media' => 'Napake AI medijev (24 h)',
             'media_desc' => 'Neuspele slike / videi ljubljenčkov',
+            'needs_review' => 'AI posnetki: potrebujejo pregled',
+            'needs_review_desc' => 'Dvakrat padli na preverjanju kakovosti ali označeni z media:quality-check — niso prikazani',
             'disk' => 'Zasedenost diska',
             'disk_desc' => ':free prostega od :total',
             'disk_unknown' => 'Velikost diska ni na voljo',

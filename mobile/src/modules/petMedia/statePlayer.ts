@@ -36,7 +36,16 @@ import type { PetState } from '@/types';
 /** What the player shows now. */
 export type PlayItem =
   /** A clip: `loop` true = the state loop; false = play once (transition), then `then`. */
-  | { kind: 'clip'; url: string; key: string; state: VideoState | null; loop: boolean; transition: string | null }
+  | {
+      kind: 'clip';
+      url: string;
+      key: string;
+      state: VideoState | null;
+      loop: boolean;
+      transition: string | null;
+      /** David 2026-10-23: start this many ms into the clip (a school performing clip with a short window). */
+      startAtMs?: number;
+    }
   | { kind: 'image'; url: string; key: string; state: VideoState | null }
   | { kind: 'placeholder' };
 

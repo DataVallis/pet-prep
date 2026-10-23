@@ -54,6 +54,7 @@ class SystemHealthStats extends StatsOverviewWidget
         $known = array_filter($backlog, fn (?int $n): bool => $n !== null);
         $stuck = $health->stuckLedgerPetIds();
         $media = $health->failedMediaCount(24);
+        $needsReview = $health->needsReviewMediaCount();
         $beat = $health->lastHeartbeat();
         $stale = $health->heartbeatIsStale();
         $disk = $health->diskUsage();
@@ -90,6 +91,12 @@ class SystemHealthStats extends StatsOverviewWidget
                 ->description(__('admin.system_health.stats.media_desc'))
                 ->descriptionIcon('heroicon-m-photo')
                 ->color($media > 0 ? 'warning' : 'success'),
+            // Quality check (David 2026-10-23): clips that failed the check twice / were flagged.
+            Stat::make(__('admin.system_health.stats.needs_review'), $needsReview)
+                ->description(__('admin.system_health.stats.needs_review_desc'))
+                ->descriptionIcon('heroicon-m-eye')
+                ->color($needsReview > 0 ? 'warning' : 'success')
+                ->url(PetResource::getUrl()),
             Stat::make(__('admin.system_health.stats.disk'), $disk === null ? '—' : $disk['used_percent'].' %')
                 ->description($disk === null
                     ? __('admin.system_health.stats.disk_unknown')

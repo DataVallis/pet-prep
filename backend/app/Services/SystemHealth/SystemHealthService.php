@@ -286,6 +286,18 @@ class SystemHealthService
     }
 
     /**
+     * Quality check (David 2026-10-23): AI clips waiting for a superadmin — failed the check
+     * twice (»Needs review«) or flagged by media:quality-check. Pet slots and look rows; a pool
+     * pet's slot that only mirrors its look row is not counted twice.
+     */
+    public function needsReviewMediaCount(): int
+    {
+        return PetMedia::query()->needingReview()
+            ->where(fn ($q) => $q->whereNull('look_media_id')->orWhereNull('pet_id'))
+            ->count();
+    }
+
+    /**
      * @return array{free: int, total: int, used_percent: float}|null
      */
     public function diskUsage(): ?array

@@ -74,6 +74,8 @@ return [
             'heading' => 'Needs attention',
             'sick' => 'Sick pets',
             'sick_desc' => 'Pet state is sick right now',
+            'media_review' => 'AI clips: needs review',
+            'media_review_desc' => 'Failed the quality check twice — not shown; open the pet → AI media',
             'locked' => 'Waiting for payment',
             'locked_desc' => 'Challenge paused until a parent buys',
             'game_over' => 'Game over',
@@ -276,6 +278,10 @@ return [
         'phase_clips_description' => 'On (default, David 2026-10-21): pets on state media version 3 (purchased full set) also get a short 3 s clip per school command phase (attention → performing → success; potty = the dog goes to the door) and per game phase (dog ball: waiting → runs out of frame → brings it back; cat wand: crouch → pounce → catch), with their pose images (about $0.34 per 3 s clip, $0.15 per pose image; shared looks make them once). Needs »State media on« too. Off: no pose images or phase clips are generated — also nothing already queued, retried or swept; the games and the school use the older clips and rules. Turning it on again resumes the waiting items at once.',
         'phase_clips' => 'School & game clips on',
         'saved_body_phase_clips' => 'School & game clips: :state',
+        'quality_check_section' => 'Clip quality check',
+        'quality_check_description' => 'On (default, David 2026-10-23): every new AI clip is checked before children see it — a free technical check (ffmpeg: length, frozen picture, sudden jumps, motion bunched up at the end, last frame vs the end image) and an AI vision check of 6 frames (anatomy, same animal, the action really happens, glitches; counts against the production AI budget, estimated ≤ $0.01 per clip; without budget or with the vision model off only the technical check decides and the clip is marked »not AI-checked«). Until a new clip passes, the old one (if any) stays visible. A failed clip is regenerated automatically ONCE; if it fails again it is not shown (the app uses its fallback) and the slot is listed under »Needs review« in Pet → AI media. Off: new clips are shown at once without a check (the old behaviour).',
+        'quality_check' => 'Quality check on',
+        'saved_body_quality_check' => 'Quality check: :state',
     ],
 
     // M5-R21: shared looks (PetLookResource).
@@ -391,6 +397,8 @@ return [
             'stuck_ledger_ids' => 'Pets :ids',
             'media' => 'AI media failures (24 h)',
             'media_desc' => 'Pet images / videos that failed',
+            'needs_review' => 'AI clips: needs review',
+            'needs_review_desc' => 'Failed the quality check twice or flagged by media:quality-check — not shown',
             'disk' => 'Disk used',
             'disk_desc' => ':free free of :total',
             'disk_unknown' => 'Disk size not available',

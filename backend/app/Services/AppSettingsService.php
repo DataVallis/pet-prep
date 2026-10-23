@@ -50,6 +50,10 @@ use InvalidArgumentException;
  *
  * `fal_balance_alert` (M5-T15, David 2026-10-22) = {min_usd: float|null}: warn the
  * superadmins when the fal.ai account balance is below it. No row → 20 $.
+ *
+ * `quality_check` (David 2026-10-23: automatic technical + AI vision check of every new
+ * clip; on by default) = {enabled: bool}. Off = the old behaviour: a downloaded clip is
+ * served at once. No row → env AI_QUALITY_CHECK_ENABLED (default true).
  */
 class AppSettingsService
 {
@@ -76,6 +80,9 @@ class AppSettingsService
 
     /** M5-T09 / T10 (QA M2): `{enabled: bool}` — school & game phase clips on / off (no row → env default, on). */
     public const PHASE_CLIPS_KEY = 'phase_clips';
+
+    /** David 2026-10-23: `{enabled: bool}` — automatic clip quality check on / off (no row → env default, on). */
+    public const QUALITY_CHECK_KEY = 'quality_check';
 
     /** M5-T15: `{min_usd}` — warn the superadmins when the fal.ai balance drops below it. */
     public const FAL_BALANCE_ALERT_KEY = 'fal_balance_alert';
@@ -436,6 +443,36 @@ class AppSettingsService
     public static function phaseClipsDefault(): bool
     {
         return (bool) config('media.state_media.phase_clips_enabled', true);
+    }
+
+    /**
+     * David 2026-10-23: automatic clip quality check on (default) or off. Off: a downloaded
+     * clip becomes servable at once (the pre-check behaviour); clips already flagged
+     * »Needs review« stay flagged. `$fresh` reads the row itself (queue workers).
+     */
+    public function qualityCheck(bool $fresh = false): bool
+    {
+        /** @var array{enabled?: bool} $value */
+        $value = $fresh
+            ? (AppSetting::find(self::QUALITY_CHECK_KEY)?->value ?? [])
+            : Cache::remember(self::cacheKey(self::QUALITY_CHECK_KEY), self::CACHE_TTL_SECONDS,
+                fn (): array => AppSetting::find(self::QUALITY_CHECK_KEY)?->value ?? []);
+
+        return array_key_exists('enabled', $value)
+            ? (bool) $value['enabled']
+            : self::qualityCheckDefault();
+    }
+
+    /** Save the quality check switch (superadmin), audit it and bust the cache. */
+    public function updateQualityCheck(User $actor, bool $enabled): void
+    {
+        $this->store($actor, self::QUALITY_CHECK_KEY, ['enabled' => $enabled], ['enabled' => self::qualityCheckDefault()]);
+    }
+
+    /** The value "no row" stands for (env AI_QUALITY_CHECK_ENABLED, default on). */
+    public static function qualityCheckDefault(): bool
+    {
+        return (bool) config('media.quality_check.enabled', true);
     }
 
     /** Equal settings values, ignoring the key order of (nested) arrays. */

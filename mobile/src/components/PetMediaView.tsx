@@ -116,6 +116,8 @@ interface Layer {
   preload: boolean;
   /** M5-T08: a preloaded layer already rendered its first frame (shows at once when promoted). */
   readyEarly: boolean;
+  /** David 2026-10-23: start this many ms into the clip (school performing clip, short window). */
+  startAtMs?: number;
 }
 
 export interface PetMediaViewProps {
@@ -181,6 +183,8 @@ interface VideoLayerProps {
   playing: boolean;
   /** M5-T08: false = play once (transition), report the end. */
   loop: boolean;
+  /** David 2026-10-23: start this many ms into the clip (set once, before it plays). */
+  startAtMs?: number;
   onReady: (id: string) => void;
   onError: (id: string) => void;
   onEnd?: (id: string) => void;
@@ -188,7 +192,7 @@ interface VideoLayerProps {
 }
 
 /** One player + view. The source is fixed for the layer's life (no restart on re-sign). */
-const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, loop, onReady, onError, onEnd, testID }: VideoLayerProps) {
+const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, loop, startAtMs, onReady, onError, onEnd, testID }: VideoLayerProps) {
   // David 2026-10-20: the phone's copy of the file when there is one (survives re-signed
   // URLs); otherwise the remote URL with expo-video's cache, and a copy is made for next time.
   const [source] = useState(() => {
@@ -199,6 +203,8 @@ const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, loop, o
   const player = useVideoPlayer(source, (p) => {
     // M5-T08: a state loop starts on its key image and ends close to it → native loop.
     p.loop = loop;
+    // David 2026-10-23: a 5 s school performing clip in a shorter window starts later so its end lands on time.
+    if (startAtMs !== undefined && startAtMs > 0) p.currentTime = startAtMs / 1000;
     p.muted = true;
     p.audioMixingMode = 'mixWithOthers';
     p.keepScreenOnWhilePlaying = false;
@@ -273,9 +279,9 @@ function sameLayers(a: readonly Layer[], b: readonly Layer[]): boolean {
   return a.length === b.length && a.every((l, i) => l === b[i]);
 }
 
-function newLayer(key: string, url: string, loop: boolean, preload: boolean): Layer {
+function newLayer(key: string, url: string, loop: boolean, preload: boolean, startAtMs?: number): Layer {
   layerSeq += 1;
-  return { id: `${key}#${layerSeq}`, key, url, opacity: new Animated.Value(0), phase: 'loading', errored: false, loop, preload, readyEarly: false };
+  return { id: `${key}#${layerSeq}`, key, url, opacity: new Animated.Value(0), phase: 'loading', errored: false, loop, preload, readyEarly: false, ...(startAtMs !== undefined ? { startAtMs } : {}) };
 }
 
 function animateTo(value: Animated.Value, toValue: number, done?: () => void): void {
@@ -423,6 +429,7 @@ export default function PetMediaView({
   const targetVideoKey = target.kind === 'clip' ? target.key : null;
   const targetVideoUrl = target.kind === 'clip' ? target.url : null;
   const targetLoop = target.kind === 'clip' ? target.loop : true;
+  const targetStartAt = target.kind === 'clip' ? target.startAtMs : undefined;
   const preloadKey = preloadTarget?.kind === 'clip' ? preloadTarget.key : null;
   const preloadUrl = preloadTarget?.kind === 'clip' ? preloadTarget.url : null;
   useEffect(() => {
@@ -479,8 +486,9 @@ export default function PetMediaView({
       return;
     }
     // New media on top (order = paint order); a transition covers its preloaded loop.
-    commit([...base, newLayer(targetVideoKey, targetVideoUrl, targetLoop, false)]);
-  }, [targetVideoKey, targetVideoUrl, targetLoop, preloadKey, preloadUrl, errors, commit, retire]);
+    commit([...base, newLayer(targetVideoKey, targetVideoUrl, targetLoop, false, targetStartAt)]);
+    // targetStartAt belongs to the clip key (a new phase instance = a new key): read when the layer is created.
+  }, [targetVideoKey, targetVideoUrl, targetLoop, preloadKey, preloadUrl, errors, commit, retire]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const onReady = useCallback(
     (id: string) => {
@@ -573,6 +581,7 @@ export default function PetMediaView({
           // A preloaded loop waits paused at its first frame (= the transition's last frame).
           playing={playing && !layer.errored && !layer.preload}
           loop={layer.loop}
+          startAtMs={layer.startAtMs}
           onReady={onReady}
           onError={onError}
           onEnd={onEnd}

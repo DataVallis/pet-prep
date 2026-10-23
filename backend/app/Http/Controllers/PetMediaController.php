@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\PetMediaHistory;
+use App\Models\PetMediaQualityCheck;
 use App\Models\User;
 use App\Services\Media\PetMediaService;
+use Dedoc\Scramble\Attributes\ExcludeRouteFromDocs;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -63,6 +65,21 @@ class PetMediaController extends Controller
     public function showHistory(PetMediaHistory $history, PetMediaService $service): Response
     {
         return $this->serve($history->pet, true, $history->storage_path, (string) $history->mime, $service);
+    }
+
+    /**
+     * GET /api/media/quality-sheets/{check}?expires=…&signature=… (quality check, David 2026-10-23)
+     *
+     * The contact sheet (frames of an AI clip — the AI pet only) of one quality check: fetched
+     * by the vision model through fal, opened by a superadmin from /admin. Same capability
+     * rules as show(); excluded from the public API docs (internal).
+     */
+    #[ExcludeRouteFromDocs]
+    public function showQualitySheet(PetMediaQualityCheck $check, PetMediaService $service): Response
+    {
+        $media = $check->media;
+
+        return $this->serve($media?->pet, $media !== null && filled($check->sheet_path), (string) $check->sheet_path, 'image/jpeg', $service);
     }
 
     private function serve(?Pet $pet, bool $servable, string $path, string $mime, PetMediaService $service): Response

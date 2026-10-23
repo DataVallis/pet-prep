@@ -8,12 +8,14 @@ use App\Filament\Pages\FeatureSwitches;
 use App\Filament\Resources\PetResource;
 use App\Models\Pet;
 use App\Services\AppSettingsService;
+use App\Services\SystemHealth\SystemHealthService;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 
 /**
  * "Needs attention" row of the dashboard (David 2026-10-11): pets that are
- * sick, paused waiting for payment or game over, plus the current cats
+ * sick, paused waiting for payment or game over, AI clips that need review
+ * (quality check, David 2026-10-23), plus the current cats
  * switch with a link to Feature switches. Counts are "right now" (the
  * period filter does not apply).
  */
@@ -41,6 +43,8 @@ class AttentionOverview extends StatsOverviewWidget
         $gameOver = Pet::where('is_game_over', true)->count();
         $hardStopped = Pet::where('is_hard_stopped', true)->count();
         $cats = app(AppSettingsService::class)->catsMode();
+        // Quality check (David 2026-10-23): AI clips waiting for a superadmin.
+        $needsReview = app(SystemHealthService::class)->needsReviewMediaCount();
 
         return [
             Stat::make(__('admin.dashboard.attention.sick'), $sick)
@@ -57,6 +61,11 @@ class AttentionOverview extends StatsOverviewWidget
                 ->description(__('admin.dashboard.attention.game_over_desc', ['hard' => $hardStopped, 'total' => Pet::count()]))
                 ->descriptionIcon('heroicon-m-x-circle')
                 ->color($gameOver > 0 ? 'gray' : 'success'),
+            Stat::make(__('admin.dashboard.attention.media_review'), $needsReview)
+                ->description(__('admin.dashboard.attention.media_review_desc'))
+                ->descriptionIcon('heroicon-m-eye')
+                ->color($needsReview > 0 ? 'warning' : 'success')
+                ->url(PetResource::getUrl()),
             Stat::make(__('admin.dashboard.attention.cats'), $cats->label())
                 ->description(__('admin.dashboard.attention.cats_desc'))
                 ->descriptionIcon('heroicon-m-adjustments-horizontal')

@@ -97,6 +97,10 @@ Route::get('media/{media}', [PetMediaController::class, 'show'])
 Route::get('media/history/{history}', [PetMediaController::class, 'showHistory'])
     ->middleware(['signed:relative', 'throttle:media'])
     ->name('media.history.show');
+// Quality check (David 2026-10-23): a clip's contact sheet for the vision model (via fal) and /admin.
+Route::get('media/quality-sheets/{check}', [PetMediaController::class, 'showQualitySheet'])
+    ->middleware(['signed:relative', 'throttle:media'])
+    ->name('media.quality-sheet');
 // M2-01d: Responsibility Certificate PDF (parents of the family + the child of the row).
 Route::get('certificates/{certificate}/pdf', [CertificateController::class, 'pdf'])
     ->middleware(['signed:relative', 'throttle:media'])

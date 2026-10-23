@@ -14,6 +14,8 @@ export interface MockVideoPlayer {
   status: MockPlayerStatus;
   loop: boolean;
   muted: boolean;
+  /** David 2026-10-23: seek position (s) — a school performing clip may start later. */
+  currentTime: number;
   playing: boolean;
   released: boolean;
   play: jest.Mock<void, []>;
@@ -35,6 +37,7 @@ export function createMockVideoPlayer(source: unknown): MockVideoPlayer {
     status: 'idle',
     loop: false,
     muted: false,
+    currentTime: 0,
     playing: false,
     released: false,
     play: jest.fn(() => {

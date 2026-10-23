@@ -39,6 +39,9 @@ enum AiCallFailure: string
     /** fal.ai reported the generation as failed (webhook ERROR / status poll). */
     case GenerationFailed = 'generation_failed';
 
+    /** The clip failed the automatic quality check twice (David 2026-10-23) — »Needs review« in /admin. */
+    case QualityFailed = 'quality_failed';
+
     /**
      * Only transient failures are worth a queue retry; budget and balance
      * failures wait for the next budget day / month or a top-up.
@@ -61,6 +64,7 @@ enum AiCallFailure: string
             self::InvalidResponse => 'fal.ai response had no usable media',
             self::Disabled => 'fal.ai disabled (no API key or profile disabled)',
             self::GenerationFailed => 'fal.ai reported a failed generation',
+            self::QualityFailed => 'Clip failed the quality check twice — needs review',
         };
     }
 
