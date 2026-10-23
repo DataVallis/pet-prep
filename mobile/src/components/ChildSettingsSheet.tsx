@@ -5,14 +5,21 @@
  * - **Prikaz: Video / Slika** (APP_REFINEMENT_SPEC §1) — stored on the child's profile
  *   (`PATCH /api/child/settings`, a parent can set it too); `picture` shows the key image of
  *   the current state and downloads no video (the hint says so).
+ * - rows that used to be icons in the HUD top bar (David 2026-10-23, the bar truncated the
+ *   name / stage / breed): **Album**, **Kako skrbim** (the M5-T05 care guide) and, last, the
+ *   exit (**Odjava**, or »Nazaj k staršu« in a shared »Igraj kot« session).
+ * A row closes the sheet first. The album is an in-screen layer and opens at once; the care
+ * guide and the exit open a `Modal` (care guide sheet, parental gate), so they run once this
+ * sheet is gone (iOS `onDismiss`, else after the slide-out) — iOS can't present a modal while
+ * another one is still dismissing.
  * Opened from the gear button in the HUD header; same dark glass bottom sheet as
  * `PetProfileSheet` (RN `Modal`: Android back button and an accessibility-modal container).
  */
 
-import { useContext } from 'react';
+import { useCallback, useContext, useEffect, useRef, type ReactNode } from 'react';
 import { Modal, Pressable, StyleSheet, View } from 'react-native';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
-import { X } from 'lucide-react-native';
+import { ChevronRight, CircleQuestionMark, Images, LogOut, X } from 'lucide-react-native';
 
 import LanguageSwitch from '@/components/LanguageSwitch';
 import MediaDisplaySwitch from '@/components/MediaDisplaySwitch';
@@ -31,16 +38,63 @@ interface ChildSettingsSheetProps {
   onClose: () => void;
   /** The child's display from the server state (`view.settings.media_display`). */
   mediaDisplay: MediaDisplay;
+  /** »Album« row — omitted when the pet has no album media yet. */
+  album?: { label: string; onOpen: () => void };
+  /** »Kako skrbim« row (care guide) — omitted on an older server without `care_guide`. */
+  careGuide?: { label: string; hint: string; onOpen: () => void };
+  /** The exit row at the bottom (»Odjava« / »Nazaj k staršu«). */
+  exit?: { label: string; onPress: () => void };
   testID?: string;
 }
 
-export default function ChildSettingsSheet({ visible, onClose, mediaDisplay, testID = 'hud-settings-sheet' }: ChildSettingsSheetProps) {
+/** Fallback when the platform reports no dismissal (Android; iOS `onDismiss` is faster). */
+export const AFTER_CLOSE_MS = 350;
+
+export default function ChildSettingsSheet({
+  visible,
+  onClose,
+  mediaDisplay,
+  album,
+  careGuide,
+  exit,
+  testID = 'hud-settings-sheet',
+}: ChildSettingsSheetProps) {
   const S = CHILD_SETTINGS_STRINGS.settingsSheet;
   const bottomInset = useContext(SafeAreaInsetsContext)?.bottom ?? 0;
   const setDisplay = useSetMediaDisplay();
 
+  // A row's action waits until this sheet is dismissed: iOS can't present a modal while another one closes.
+  const pending = useRef<(() => void) | null>(null);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const runPending = useCallback(() => {
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = null;
+    const action = pending.current;
+    pending.current = null;
+    action?.();
+  }, []);
+  useEffect(
+    () => () => {
+      if (timer.current) clearTimeout(timer.current);
+    },
+    [],
+  );
+  const closeThen = (action: () => void) => {
+    pending.current = action;
+    onClose();
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = setTimeout(runPending, AFTER_CLOSE_MS);
+  };
+
   return (
-    <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose} statusBarTranslucent>
+    <Modal
+      visible={visible}
+      transparent
+      animationType="slide"
+      onRequestClose={onClose}
+      onDismiss={runPending}
+      statusBarTranslucent
+    >
       <View style={styles.backdrop}>
         <Pressable
           style={StyleSheet.absoluteFill}
@@ -87,9 +141,66 @@ export default function ChildSettingsSheet({ visible, onClose, mediaDisplay, tes
               {S.display.error}
             </Text>
           )}
+
+          {(album || careGuide) && (
+            <View style={styles.rows}>
+              {album && (
+                <SettingsRow
+                  icon={<Images color={palette.mint} size={18} />}
+                  label={album.label}
+                  onPress={() => {
+                    onClose();
+                    album.onOpen();
+                  }}
+                  testID="hud-album-open"
+                />
+              )}
+              {careGuide && (
+                <SettingsRow
+                  icon={<CircleQuestionMark color={palette.mint} size={18} />}
+                  label={careGuide.label}
+                  hint={careGuide.hint}
+                  onPress={() => closeThen(careGuide.onOpen)}
+                  testID="hud-care-guide-open"
+                />
+              )}
+            </View>
+          )}
+
+          {exit && (
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={exit.label}
+              onPress={() => closeThen(exit.onPress)}
+              style={({ pressed }) => [styles.exit, pressed && styles.pressed]}
+              testID="hud-logout"
+            >
+              <LogOut color={palette.n400} size={16} />
+              <Text style={styles.exitText}>{exit.label}</Text>
+            </Pressable>
+          )}
         </View>
       </View>
     </Modal>
+  );
+}
+
+function SettingsRow({ icon, label, hint, onPress, testID }: { icon: ReactNode; label: string; hint?: string; onPress: () => void; testID: string }) {
+  return (
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={label}
+      accessibilityHint={hint}
+      onPress={onPress}
+      style={({ pressed }) => [styles.row, pressed && styles.pressed]}
+      testID={testID}
+    >
+      <View style={styles.rowIcon}>{icon}</View>
+      <Text style={styles.rowLabel} numberOfLines={1}>
+        {label}
+      </Text>
+      <ChevronRight color={alpha(palette.white, 0.5)} size={18} />
+    </Pressable>
   );
 }
 
@@ -118,5 +229,36 @@ const styles = StyleSheet.create({
   },
   hint: { color: palette.n400, fontSize: 13 },
   error: { color: palette.danger, fontSize: 13 },
+  rows: {
+    marginTop: 4,
+    borderRadius: radius.card,
+    borderWidth: 1,
+    borderColor: dark.glassBorder,
+    backgroundColor: alpha(palette.white, 0.06),
+    overflow: 'hidden',
+  },
+  row: { minHeight: MIN_TOUCH + 8, flexDirection: 'row', alignItems: 'center', gap: 12, paddingHorizontal: 14 },
+  rowIcon: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: alpha(palette.mint, 0.12),
+  },
+  rowLabel: { flex: 1, color: palette.white, fontSize: 15, fontWeight: '600' },
+  // Secondary, quiet exit at the bottom (brand: danger red is for real errors, not for signing out).
+  exit: {
+    minHeight: MIN_TOUCH,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    marginTop: 4,
+    borderRadius: radius.pill,
+    borderWidth: 1,
+    borderColor: dark.glassBorder,
+  },
+  exitText: { color: palette.n400, fontSize: 15, fontWeight: '600' },
   pressed: { opacity: 0.8 },
 });

@@ -20,6 +20,7 @@ import { CONTRACT_STRINGS } from '@/screens/ContractScreen';
 import { isAwaitingContract, useAppStore } from '@/store/appStore';
 import { makeBroadcast, makeLegacyPetProfile, makeLiveChildState, makeMedia, makePet } from '@/test-utils/fixtures';
 import { liveVideoPlayers, mockVideoPlayers, playerUris, resetMockVideoPlayers } from '@/test-utils/videoPlayers';
+import { findHudSettingsRow, pressHudSettingsRow } from '@/test-utils/hudSettings';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import type { PetUpdatedBroadcast } from '@/types';
 import { configure } from '@testing-library/react-native';
@@ -146,19 +147,21 @@ describe('ChildHudScreen', () => {
   it('M2-11: in a shared session the same button (»Nazaj k staršu«) opens the parent login — no gate, no logout', async () => {
     useAppStore.setState({ sharedSession: true });
     await renderHud();
-    expect(screen.getByTestId('hud-logout').props.accessibilityLabel).toBe(PARENTAL_GATE_STRINGS.backToParent);
+    expect(findHudSettingsRow('hud-logout')?.props.accessibilityLabel).toBe(PARENTAL_GATE_STRINGS.backToParent);
 
     fireEvent.press(screen.getByTestId('hud-logout'));
+    await waitFor(() => expect(useAppStore.getState().parentLoginOpen).toBe(true));
     expect(screen.queryByTestId('parental-gate')).toBeNull();
-    expect(useAppStore.getState().parentLoginOpen).toBe(true);
     expect(useAppStore.getState().user?.role).toBe('child');
     expect(api.logout).not.toHaveBeenCalled();
   });
 
   it('David 2026-10-14: the logout icon goes through the parental gate (no accidental logout)', async () => {
     await renderHud();
-    fireEvent.press(screen.getByTestId('hud-logout'));
-    expect(screen.getByTestId('parental-gate')).toBeTruthy();
+    expect(screen.queryByTestId('hud-logout')).toBeNull(); // not in the top bar any more (David 2026-10-23)
+    pressHudSettingsRow('hud-logout');
+    expect(await screen.findByTestId('parental-gate')).toBeTruthy();
+    expect(screen.queryByTestId('hud-settings-sheet')).toBeNull();
 
     fireEvent.changeText(screen.getByTestId('parental-gate-input'), '1');
     fireEvent.press(screen.getByTestId('parental-gate-submit'));
@@ -638,6 +641,7 @@ describe('ChildHudScreen — AI dog media (M4-03)', () => {
         const hudPlayer = liveVideoPlayers()[0];
         expect(hudPlayer.playing).toBe(true);
 
+        fireEvent.press(screen.getByTestId('hud-settings-open'));
         fireEvent.press(screen.getByLabelText(ALBUM_STRINGS.open));
         expect(screen.getByTestId('hud-album')).toBeTruthy();
         expect(useAppStore.getState().isAlbumVisible).toBe(true);
@@ -652,7 +656,7 @@ describe('ChildHudScreen — AI dog media (M4-03)', () => {
         await renderHud(makeLiveChildState({ pet: { pet_state: 'idle', media: album } }));
         const hudPlayer = liveVideoPlayers()[0];
 
-        fireEvent.press(screen.getByTestId('hud-album-open'));
+        pressHudSettingsRow('hud-album-open');
         fireEvent.press(screen.getByTestId('album-item-sleeping'));
         const playing = liveVideoPlayers().filter((p) => p.playing);
         expect(playing).toHaveLength(1);
@@ -666,7 +670,7 @@ describe('ChildHudScreen — AI dog media (M4-03)', () => {
 
       it('an expired album video refetches the child state', async () => {
         await renderHud(makeLiveChildState({ pet: { pet_state: 'idle', media: album } }));
-        fireEvent.press(screen.getByTestId('hud-album-open'));
+        pressHudSettingsRow('hud-album-open');
         fireEvent.press(screen.getByTestId('album-item-sleeping'));
         const calls = getChildPet.mock.calls.length;
         const albumPlayer = liveVideoPlayers().find((p) => p.playing);
@@ -691,7 +695,7 @@ describe('ChildHudScreen — AI dog media (M4-03)', () => {
         getChildPet.mockResolvedValue(makeLiveChildState({ pet: { media: album } }));
         renderWithQuery(<AppNavigator />);
         await screen.findByTestId('action-feed');
-        fireEvent.press(screen.getByTestId('hud-album-open'));
+        pressHudSettingsRow('hud-album-open');
         expect(screen.getByTestId('hud-album')).toBeTruthy();
 
         getChildPet.mockResolvedValue(
@@ -717,7 +721,7 @@ describe('ChildHudScreen — AI dog media (M4-03)', () => {
         });
         await waitFor(() => expect(screen.queryByTestId('locked-screen')).toBeNull());
         expect(screen.queryByTestId('hud-album')).toBeNull();
-        expect(screen.getByTestId('hud-album-open')).toBeTruthy();
+        expect(findHudSettingsRow('hud-album-open')).toBeTruthy();
       });
 
       it('PR #31: no album button while nothing is stored and generation is disabled / failed', async () => {
@@ -725,18 +729,18 @@ describe('ChildHudScreen — AI dog media (M4-03)', () => {
           // Realistic backend payload: `states` present, nothing stored.
           const media = makeMedia({ status, states: ['idle', 'sleeping'] });
           const { unmount } = await renderHud(makeLiveChildState({ pet: { media } }));
-          expect(screen.queryByTestId('hud-album-open')).toBeNull();
+          expect(findHudSettingsRow('hud-album-open')).toBeNull();
           unmount();
         }
         // Still generating → the album shows the greyed tiles.
         await renderHud(makeLiveChildState({ pet: { media: makeMedia({ status: 'pending', states: ['idle', 'sleeping'] }) } }));
-        fireEvent.press(screen.getByTestId('hud-album-open'));
+        pressHudSettingsRow('hud-album-open');
         expect(screen.getAllByText(ALBUM_STRINGS.missing)).toHaveLength(2);
       });
 
       it('PR #31: leaving the HUD clears the album flag', async () => {
         const { unmount } = await renderHud(makeLiveChildState({ pet: { media: album } }));
-        fireEvent.press(screen.getByTestId('hud-album-open'));
+        pressHudSettingsRow('hud-album-open');
         expect(useAppStore.getState().isAlbumVisible).toBe(true);
         unmount();
         expect(useAppStore.getState().isAlbumVisible).toBe(false);
@@ -745,7 +749,7 @@ describe('ChildHudScreen — AI dog media (M4-03)', () => {
       it('PR #31: the HUD is hidden from TalkBack / VoiceOver while the album is open', async () => {
         await renderHud(makeLiveChildState({ pet: { media: album } }));
         expect(screen.getByTestId('hud-content').props.importantForAccessibility).toBe('auto');
-        fireEvent.press(screen.getByTestId('hud-album-open'));
+        pressHudSettingsRow('hud-album-open');
         const content = screen.getByTestId('hud-content', { includeHiddenElements: true });
         expect(content.props.importantForAccessibility).toBe('no-hide-descendants');
         expect(content.props.accessibilityElementsHidden).toBe(true);

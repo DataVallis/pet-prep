@@ -50,9 +50,6 @@ import {
   Shovel,
   Heart,
   ChevronDown,
-  Images,
-  LogOut,
-  CircleQuestionMark,
   PawPrint,
   RefreshCw,
   Sparkles,
@@ -827,19 +824,6 @@ export default function ChildHudScreen() {
           </Pressable>
 
           <View style={styles.topBarRight}>
-            {view.care_guide !== null && (
-              <Pressable
-                accessibilityRole="button"
-                accessibilityLabel={t('careGuide:open')}
-                accessibilityHint={t('careGuide:openHint')}
-                testID="hud-care-guide-open"
-                hitSlop={5}
-                style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
-                onPress={careGuide.open}
-              >
-                <CircleQuestionMark color={palette.mint} size={18} />
-              </Pressable>
-            )}
             {facts.showBook && (
               <Pressable
                 accessibilityRole="button"
@@ -880,26 +864,8 @@ export default function ChildHudScreen() {
                 <Award color={palette.graphite} size={16} />
               </Pressable>
             )}
-            {albumAvailable && (
-              <Pressable
-                accessibilityRole="button"
-                accessibilityLabel={ALBUM_STRINGS.open}
-                testID="hud-album-open"
-                style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
-                onPress={() => setAlbumVisible(true)}
-              >
-                <Images color={palette.mint} size={16} />
-              </Pressable>
-            )}
-            <Pressable
-              accessibilityRole="button"
-              accessibilityLabel={childExit.shared ? PARENTAL_GATE_STRINGS.backToParent : HUD_STRINGS.logout}
-              style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}
-              onPress={handleLogout}
-              testID="hud-logout"
-            >
-              <LogOut color={palette.n400} size={16} />
-            </Pressable>
+            {/* David 2026-10-23: album, »?« (care guide) and the exit moved into the settings sheet —
+                the bar truncated the name / stage / breed. The gate stays mounted here. */}
             <ParentalGate {...childExit.gateProps} />
           </View>
         </View>
@@ -1257,7 +1223,16 @@ export default function ChildHudScreen() {
           reduceMotion={reduceMotion}
         />
       )}
-      <ChildSettingsSheet visible={isSettingsVisible} onClose={() => setSettingsVisible(false)} mediaDisplay={view.settings.media_display} />
+      <ChildSettingsSheet
+        visible={isSettingsVisible}
+        onClose={() => setSettingsVisible(false)}
+        mediaDisplay={view.settings.media_display}
+        album={albumAvailable ? { label: ALBUM_STRINGS.open, onOpen: () => setAlbumVisible(true) } : undefined}
+        careGuide={
+          view.care_guide !== null ? { label: t('careGuide:open'), hint: t('careGuide:openHint'), onOpen: careGuide.open } : undefined
+        }
+        exit={{ label: childExit.shared ? PARENTAL_GATE_STRINGS.backToParent : HUD_STRINGS.logout, onPress: handleLogout }}
+      />
       <ChildCertificateSheet
         visible={isCertificateVisible}
         certificate={view.certificate}
