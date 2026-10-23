@@ -699,6 +699,18 @@
             "prompt_hash": "sha256:a04278467f7da72ebcc2d7a46e1841333ada8de2e6a7a579a97ce458c87131e5",
             "generated_at": "2026-10-22T03:51:37+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "samoyed",
+            "species": "dog",
+            "file": "dog/samoyed.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:d8557d53bdf75d5a304458c387acd18e9a9bc7a696244818f081553087b174c9",
+            "generated_at": "2026-10-23T00:35:58+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
