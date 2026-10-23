@@ -31229,6 +31229,571 @@
       }
     }
   },
+  "italian_greyhound": {
+    "_note": "Added 2026-10-23 (M5-R10-60, unattended run — appended after the Weimaraner: AKC 2024 No. 56 'Italian Greyhound', S174 full-list table fetched 2026-10-23 '56 | Italian Greyhound'). Quotes as returned by the web-fetch tool on 2026-10-23 (short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S484–S490 (reused S8, S10, S11, S14, S24, S35, S45, S123, S174). No health percentages anywhere. Identity from the FCI nomenclature (S484, FCI name 'PICCOLO LEVRIERO ITALIANO', English 'ITALIAN SIGHTHOUND'); appearance, heights and weights from the Kennel Club breed standard as reprinted by KUSA (S485, effective 01/07/2025). RKC Breeds A–Z page (S486) reached: key facts, Breed Watch Category 1 and the Best Practice eye test. Lifespan: the Dogs Trust McMillan 2024 table (S123) was refused by the fetch tool (not in provenance); McMillan 2024's 'about 14 years' only via Wikipedia (S489, tier C) → RKC lower bound 'Over 12 years' (runbook order; Papillon / Weimaraner precedent). Names: AKC / KC 'Italian Greyhound' (S174, S485); Slovenian »mali italijanski hrt« (MrPet.si S490, tier C — common name, not checked against KZS, open for David).",
+    "identity": {
+      "value": "FCI No. 200, Group 10 Section 3 (Short-haired Sighthounds), Italy",
+      "unit": "—",
+      "source_id": "S484",
+      "quote": "PICCOLO LEVRIERO ITALIANO",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S484, as returned): name 'PICCOLO LEVRIERO ITALIANO', English name 'ITALIAN SIGHTHOUND', group 'n°10 - Lévriers', section 'Lévriers à poil court' (section 3 of group 10, Short-haired Sighthounds — the page gives no section number), country of origin 'ITALIE', no working trial, definitive acceptance '22/10/1956', valid standard '13/11/2015'. Italy is already in FCI_ORIGINS (IT, Cane Corso). AKC / KC name: Italian Greyhound (S174, S485). Wikipedia (S489, tier C): other names 'Italian Sighthound; Piccolo Levriero Italiano'."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S486",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S486); PDSA (S487) 'Small' (its page sits under 'small-dogs'). KC weight 3.6–4.5 kg (S485) = 7.9–9.9 lb → the 'Toy (5–12 pounds)' class of S10 for growth. RKC places the breed in the Toy group."
+    },
+    "height": {
+      "kc_standard": {
+        "value": {
+          "male": [
+            32,
+            38
+          ],
+          "female": [
+            32,
+            38
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S485",
+        "quote": "32cm – 38cm (approx. 12½” – 15”).",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard as reprinted by KUSA (S485, effective 01/07/2025), Size — height at withers, one range for both sexes (stored per sex). PDSA (S487) 'Average height 32-38 cm' agrees; PetMD (S488) 'Italian Greyhounds stand only 13-15 inches tall.' (33–38 cm) — alternative. Wikipedia (S489, tier C) '32 to 38 cm' agrees."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            32,
+            38
+          ],
+          "female": [
+            32,
+            38
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S487",
+        "quote": "32-38 cm",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average height' (S487), one range for both sexes. Same as the KC standard."
+      }
+    },
+    "adult_weight": {
+      "kc_standard": {
+        "value": {
+          "male": [
+            3.6,
+            4.5
+          ],
+          "female": [
+            3.6,
+            4.5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S485",
+        "quote": "3.6kg – 4.5kg.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S485), Size — weight, one range for both sexes (stored per sex) — the game range (adult_weight_kg). PDSA (S487) 'Average weight 3-4.5kg'; PetMD (S488) 'weighing between 7-14 pounds' (3.2–6.4 kg, US dogs); Wikipedia (S489, tier C) 'not over 5 kg' (FCI) — alternatives.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                3,
+                4.5
+              ],
+              "female": [
+                3,
+                4.5
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S487",
+            "quote": "3-4.5kg",
+            "notes": "PDSA key fact 'Average weight' (S487), one range for both sexes."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "I",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 3.6–4.5 kg = the smallest band. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "8–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Toy (5–12 pounds): 8–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. KC 3.6–4.5 kg (S485) = 7.9–9.9 lb → 'Toy (5–12 pounds)'. The game is unaffected (the puppy cap of 60 min is reached at 6 months). PDSA (S487) warns of bone fragility during growth (behaviour.family)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Italian Greyhound growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S486",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S486). PDSA (S487) 'Average lifespan Over 12 years' agrees. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "pdsa": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S487",
+        "quote": "Over 12 years",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average lifespan' (S487). Same lower bound as the RKC."
+      },
+      "petmd": {
+        "value": "14–15",
+        "unit": "years",
+        "source_id": "S488",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S488): the breed is said to 'live to be 14-15 years old' (fragment as returned). Alternative only (lower bound 14 y → 126 months)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Dogs Trust table of McMillan et al. 2024 data (S123): refused by the fetch tool on 2026-10-23 (not in provenance). Wikipedia (S489, tier C) cites McMillan 2024: 'Median longevity is about 14 years, compared to an average of 12.5 for all dogs.' — not verified in the paper or the table → open for David (0.75 × 14 × 12 = 126 → senior 126 if confirmed). UNSOURCED value."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 12 y (S486) → 0.75 × 12 = 9 y = 108 months. Runbook order: McMillan 2024 (table not reachable, value only via Wikipedia tier C) → VetCompass median (none found) → RKC lower bound. Alternatives: 126 (McMillan 2024 about 14 y via Wikipedia S489, and the PetMD 14 y lower bound S488); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S486"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S486",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S486), runbook first choice → 60 min. PDSA (S487) 'Minimum exercise (per day) 1 hour' and 'Italian Greyhounds are full of energy, requiring around an hour of exercise per day.' agree. PetMD (S488): energy needs 'can be easily met with a daily walk or outdoor playtime' (fragment) — no minutes."
+      },
+      "daily_text": {
+        "value": "around an hour of exercise per day",
+        "unit": "—",
+        "source_id": "S487",
+        "quote": "Italian Greyhounds are full of energy, requiring around an hour of exercise per day.",
+        "confidence": "high",
+        "notes": "PDSA (S487), exercise section."
+      },
+      "off_lead": {
+        "value": "exercise in a confined area — hard to call back once they see prey",
+        "unit": "—",
+        "source_id": "S487",
+        "quote": "exercise in a confined area is recommended.",
+        "confidence": "high",
+        "notes": "PDSA (S487, fragment): 'if they catch sight of potential prey you may find it hard to get them back' (fragment). The game counts steps; off-lead running only in a confined area is not modelled → open for David (needs a new ROADMAP task; Whippet precedent)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No advice to leave a gap between eating and exercising found (PDSA S487, PetMD S488: two meals a day for adults, paraphrase) → no meal_exercise_gap row."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "intelligent, affectionate and vivacious; may appear aloof; elegant, graceful and quick-moving",
+        "unit": "—",
+        "source_id": "S485",
+        "quote": "Intelligent, affectionate, and vivacious; may appear aloof.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S485), Temperament; Characteristics: 'Elegant, graceful, and quick-moving.'"
+      },
+      "family": {
+        "value": "do well with children who know how to treat a dog, but avoid small, rambunctious children; bones fragile during growth — not ideal with young children",
+        "unit": "—",
+        "source_id": "S488",
+        "quote": "Though Italian Greyhounds do well with children who understand how to appropriately interact with dogs, they will often…",
+        "confidence": "high",
+        "notes": "PetMD (S488, fragment as returned): the breed tends to avoid smaller, rambunctious children and interactions with kids should be supervised (paraphrase). PDSA (S487): 'Due to their bone fragility during growth, they may not be the ideal breed to live with other pets or young children.' → children (explicit statement, caveat kept here) + fragile_older_children; never small_children."
+      },
+      "fragile_bones": {
+        "value": "bones fragile during growth — not ideal with young children or other pets",
+        "unit": "—",
+        "source_id": "S487",
+        "quote": "Due to their bone fragility during growth, they may not be the ideal breed to live with other pets or young children.",
+        "confidence": "high",
+        "notes": "PDSA (S487), children and other pets. Basis of fragile_older_children (Yorkshire Terrier precedent); never other_pets."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No time-alone statement found (PDSA S487, PetMD S488: without enough attention the dog may become shy or hyper, paraphrase) → no needs_company tag."
+      },
+      "other_pets": {
+        "value": "has a prey drive (small, fast-moving animals); not ideal with other pets while growing",
+        "unit": "—",
+        "source_id": "S488",
+        "quote": "It’s also important to note that Italian Greyhounds have a prey drive, thanks to their history as hunters.",
+        "confidence": "high",
+        "notes": "PetMD (S488): small, fast-moving animals such as cats, rabbits or squirrels can trigger it; owners with smaller pets should teach the dog not to chase them (paraphrase). Not a 'high prey drive' statement → no chases_small_pets (runbook rule); PDSA (S487) bone fragility → never other_pets."
+      },
+      "socialisation": {
+        "value": "can be quite timid — early socialisation is essential",
+        "unit": "—",
+        "source_id": "S487",
+        "quote": "They can also be quite timid, so early socialisation is essential.",
+        "confidence": "high",
+        "notes": "PDSA (S487). → proposed_game_parameters.italian_greyhound.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "bonding": {
+        "value": "slow to form a bond, then a fantastic companion",
+        "unit": "—",
+        "source_id": "S487",
+        "quote": "They can be slow to form a bond but make a fantastic companion once the bond is established.",
+        "confidence": "high",
+        "notes": "PDSA (S487)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S486) → no welfare chip. Breeder checklist: RKC Best Practice eye testing (BVA/KC/ISDS Eye Scheme, S486).",
+      "periodontal_disease": {
+        "value": "periodontal disease (teeth and gums)",
+        "unit": "—",
+        "source_id": "S487",
+        "quote": null,
+        "confidence": "high",
+        "notes": "PDSA (S487) health list: 'infection and inflammation of the periodontium (tissues that surround and support the teeth).' (fragment). Register health key periodontal_disease (new). No tooth-brushing advice with a frequency in the sources fetched (PetMD S488 does not mention teeth)."
+      },
+      "epilepsy": {
+        "value": "epilepsy",
+        "unit": "—",
+        "source_id": "S487",
+        "quote": "a brain disorder which can lead to seizures.",
+        "confidence": "high",
+        "notes": "PDSA (S487) health list (fragment). Register health key epilepsy."
+      },
+      "patella": {
+        "value": "luxating patellas (kneecaps slipping out of place)",
+        "unit": "—",
+        "source_id": "S487",
+        "quote": "the kneecaps slipping temporarily out of place.",
+        "confidence": "high",
+        "notes": "PDSA (S487) health list (fragment). Register health key kneecap_luxation."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy — gradual loss of sight",
+        "unit": "—",
+        "source_id": "S487",
+        "quote": "gradual deterioration of the retina of the eye. Symptoms can start with night blindness and progress to total blindness.",
+        "confidence": "high",
+        "notes": "PDSA (S487) health list (fragment); PetMD (S488) names it too. RKC Best Practice eye testing (S486). Register health key pra_eye_disease."
+      },
+      "autoimmune": {
+        "value": "autoimmune disorders",
+        "unit": "—",
+        "source_id": "S488",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S488): the breed is 'susceptible to different conditions in which the immune system confuses vital tissues' (fragment). Register health key autoimmune_conditions."
+      },
+      "legg_calve_perthes": {
+        "value": "Legg-Calvé-Perthes disease (hip joint)",
+        "unit": "—",
+        "source_id": "S488",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S488): the femoral head degenerates, causing 'joint failure' over time (fragment). Register health key legg_perthes."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S488",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S488): 'a fairly common condition in which the thyroid gland is underactive' (fragment). Register health key hypothyroidism."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 60,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "60 | Italian Greyhound",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-23): rank 60 'Italian Greyhound', tier 'Fair Working/Obedience Intelligence' (ranks 55–69). Coren's own article (S34) not re-read. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Fair",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier 'Fair Working/Obedience Intelligence' (ranks 55–69)."
+      },
+      "training_notes": {
+        "value": "often prefer to do their own thing and can be difficult to train; positive reinforcement",
+        "unit": "—",
+        "source_id": "S487",
+        "quote": "they often prefer to do their own thing and can be difficult to train.",
+        "confidence": "high",
+        "notes": "PDSA (S487, fragment). PetMD (S488): use positive reinforcement — the breed may 'shut down' after negative feedback (fragment). The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.italian_greyhound.learning_multiplier (0.7, runbook rule: Fair tier, rank 60).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "a Greyhound in miniature, more slender in all proportions; elegant, graceful and quick-moving",
+        "unit": "—",
+        "source_id": "S485",
+        "quote": "A Greyhound in miniature, more slender in all proportions.",
+        "confidence": "high",
+        "notes": "Kennel Club breed standard (S485), General Appearance. Slender, never emaciated in the game."
+      },
+      "colours": {
+        "value": [
+          "fawn",
+          "blue (grey)",
+          "black",
+          "cream",
+          "red",
+          "white",
+          "fawn and white"
+        ],
+        "unit": "list",
+        "source_id": "S485",
+        "quote": "Black, blue, cream, fawn, red, white, or any of these colours broken with white.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S485), Colour; also 'White dogs may be broken with one of these colours.' and 'Merle, black or blue with tan markings, brindle or any other colour or combination of colours unacceptable.' → never merle, brindle or tan markings in the game. Wikipedia (S489, tier C, FCI): 'solid black, grey or isabelline'."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Fawn first with the highest weight (the portrait default), then blue, black, cream, red, white and fawn broken with white."
+      },
+      "coat": {
+        "value": "skin fine and supple; hair short, fine and glossy",
+        "unit": "—",
+        "source_id": "S485",
+        "quote": "Skin fine and supple. Hair, short, fine, and glossy.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S485). RKC 'Coat length: Short' (S486); PetMD (S488): 'their coat does not insulate them well' (cold)."
+      },
+      "head": {
+        "value": "skull long, flat and narrow, slight stop; muzzle fine and long; dark nose",
+        "unit": "—",
+        "source_id": "S485",
+        "quote": "Skull long, flat, and narrow, slight stop. Muzzle fine and long. Nose dark in colour.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S485)."
+      },
+      "ears": {
+        "value": "rose-shaped, placed well back, soft and fine, not pricked",
+        "unit": "—",
+        "source_id": "S485",
+        "quote": "Rose-shaped, placed well back, soft and fine, not pricked.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S485)."
+      },
+      "eyes": {
+        "value": "rather large, bright, full of expression",
+        "unit": "—",
+        "source_id": "S485",
+        "quote": "Rather large, bright; full of expression.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S485)."
+      },
+      "tail": {
+        "value": "low-set, long, fine, carried low",
+        "unit": "—",
+        "source_id": "S485",
+        "quote": "Low-set, long, fine, carried low.",
+        "confidence": "high",
+        "notes": "Kennel Club standard (S485)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S486), PDSA (S487), PetMD (S488). RKC key facts reached on 2026-10-23. Woodgreen and VCA not attempted.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S486",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "RKC key fact (S486)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S486",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S486). Not long_daily_exercise / active_family."
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S486",
+        "quote": "Size of home: Small house",
+        "confidence": "high",
+        "notes": "RKC key fact (S486) → neither apartment nor large_home."
+      },
+      "rkc_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S486",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S486)."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S486",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S486) → brushing 1× a week (M5-R13 rule 'Once a week' → 1). PDSA (S487) 'Italian Greyhounds have a short coat and weekly grooming is sufficient to keep their coat in top condition.' and PetMD (S488) 'a gentle weekly brushing can help remove any dead hair.' agree."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S486",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "RKC key fact (S486); PDSA (S487) 'Short'."
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S486",
+        "quote": "Sheds: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S486). Basis of low_shedding (the honest wording — never hypoallergenic). No other A/B source says it sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S486",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S486). Not shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S486",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S486)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S486",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S486): Category 1 — no breed-specific points of concern for judges (paraphrase as returned). → no welfare chip."
+      },
+      "pdsa_children": {
+        "value": "may not be ideal with young children or other pets (bone fragility during growth)",
+        "unit": "—",
+        "source_id": "S487",
+        "quote": "Due to their bone fragility during growth, they may not be the ideal breed to live with other pets or young children.",
+        "confidence": "high",
+        "notes": "PDSA (S487). Basis of fragile_older_children."
+      },
+      "petmd_children": {
+        "value": "do well with children who know how to interact with dogs; supervise",
+        "unit": "—",
+        "source_id": "S488",
+        "quote": "Though Italian Greyhounds do well with children who understand how to appropriately interact with dogs, they will often…",
+        "confidence": "high",
+        "notes": "PetMD (S488, fragment): an explicit statement with a caveat (avoids smaller, rambunctious children; supervise — paraphrase). Basis of children."
+      },
+      "petmd_cold": {
+        "value": "the coat does not insulate well — easily affected by the cold; sweaters and coats",
+        "unit": "—",
+        "source_id": "S488",
+        "quote": "However, their coat does not insulate them well, and combined with their slender bodies, they can be easily affected by the cold.",
+        "confidence": "high",
+        "notes": "PetMD (S488): owners should consider sweaters and coats (paraphrase). Basis of the new cold_sensitive chip; a coat in cold weather → proposed_game_parameters.italian_greyhound.cold_weather_coat (no mechanic — needs a new ROADMAP task, David)."
+      },
+      "petmd_grooming": {
+        "value": "occasional baths and nail trims; routine ear and eye cleaning",
+        "unit": "—",
+        "source_id": "S488",
+        "quote": "Aside from occasional baths and nail trims, they don’t require much routine grooming.",
+        "confidence": "high",
+        "notes": "PetMD (S488); also 'Routine ear cleaning with a veterinary-approved ear cleanser is important to maintain healthy ear canals.' and 'Routine eye cleaning with a soft, damp cloth or veterinary-approved wipe will help prevent tear stains from building…' (fragment). → proposed_game_parameters.italian_greyhound.ear_eye_nail_care (no mechanic — ROADMAP M5-R19 / M5-R20 / M5-R14)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -46716,6 +47281,251 @@
         "confidence": "high",
         "notes": "Colours of the FCI standard (S478); disqualifying colours other than grey, blue colouring, yellow or brownish tones, tan markings. Weights unsourced in prompts. Silver grey as the portrait default: the standard prefers no shade — Claude's choice (the colour most associated with the breed).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): silver grey is the portrait default; standard colours only (silver, roe, mouse grey), never blue or brown"
+      }
+    },
+    "italian_greyhound": {
+      "_note": "Unattended run M5-R10-60 (2026-10-23): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. One new vocabulary key (cold_sensitive, PetMD S488); one new register health key (periodontal_disease). Sourced needs built from day one: weekly brushing (RKC S486 'Grooming: Once a week', M5-R13); puppy socialisation (PDSA S487 quote, M5-R17). Sourced needs without a game mechanic: a coat in cold weather (PetMD S488) and off-lead running only in a confined area (PDSA S487) → need a new ROADMAP task (David); nail trims, ear cleaning, eye / tear-stain cleaning (PetMD S488) → ROADMAP M5-R19 / M5-R20 / M5-R14. No meal / walk gap quote → no digestion warning. Exercise from RKC (S486, up to 1 hour; PDSA agrees). Senior 108 from the RKC lower bound 'Over 12 years' (S486; McMillan 2024 about 14 y only via Wikipedia). RKC Breed Watch Category 1 → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S486",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S486). Rule: one number N ('up to N') → N = 60. PDSA (S487) 'Minimum exercise (per day) 1 hour' agrees.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S486 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S486",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + RKC lower bound 'Over 12 years', S486; PDSA 'Over 12 years', S487, agrees). The Dogs Trust McMillan 2024 table (S123) could not be fetched; no VetCompass median found. Alternatives: 126 (McMillan 2024 about 14 y via Wikipedia S489, tier C; PetMD 14–15 y lower bound S488 — open for David); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S486"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia_14_y": 126,
+          "senior_petmd_lower_bound": 126,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S486)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 60 (S35), tier 'Fair' (55–69) → 0.7. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 60, Fair tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S486",
+        "quote": "Grooming: Once a week",
+        "confidence": "high",
+        "notes": "italian_greyhound.suitability.rkc_grooming. RKC 'Once a week' → 1 (runbook dog-grooming rule). PDSA (S487) weekly grooming and PetMD (S488) weekly brushing agree. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«; PDSA, PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S487",
+        "quote": "They can also be quite timid, so early socialisation is essential.",
+        "confidence": "high",
+        "notes": "italian_greyhound.behaviour.socialisation (PDSA S487, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S487)"
+      },
+      "cold_weather_coat": {
+        "value": "a sweater or coat in cold weather",
+        "unit": "care need (sourced)",
+        "source_id": "S488",
+        "quote": "However, their coat does not insulate them well, and combined with their slender bodies, they can be easily affected by the cold.",
+        "confidence": "high",
+        "notes": "PetMD (S488), italian_greyhound.suitability.petmd_cold: owners should consider sweaters and coats (paraphrase). The game has no weather / clothing mechanic → shown as the cold_sensitive chip; the care routine needs a new ROADMAP task (David; Whippet winter-coat precedent).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): čip cold_sensitive zgrajen; mehanike plaščka ni → nova naloga v ROADMAP (David)"
+      },
+      "confined_off_lead": {
+        "value": "off-lead running only in a confined area",
+        "unit": "care need (sourced)",
+        "source_id": "S487",
+        "quote": "exercise in a confined area is recommended.",
+        "confidence": "high",
+        "notes": "PDSA (S487, fragment), italian_greyhound.exercise.off_lead. The game counts steps; a confined off-lead run is not modelled → needs a new ROADMAP task (David; Whippet precedent).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): mehanike ni → nova naloga v ROADMAP (David)"
+      },
+      "ear_eye_nail_care": {
+        "value": "routine ear cleaning; routine eye cleaning against tear stains; occasional nail trims and baths",
+        "unit": "care routine (sourced need)",
+        "source_id": "S488",
+        "quote": "Routine ear cleaning with a veterinary-approved ear cleanser is important to maintain healthy ear canals.",
+        "confidence": "high",
+        "notes": "PetMD (S488), italian_greyhound.suitability.petmd_grooming; no frequency given. The game has no ear / eye / nail mechanic → open for David (ROADMAP M5-R20 ears and baths, M5-R19 nails, M5-R14 tear stains; Bichon Frise precedent).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): mehanike ni → ROADMAP M5-R20 / M5-R19 / M5-R14 (David)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-60); refs = JSON paths in this file. One new vocabulary key: cold_sensitive. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S488"
+            ],
+            "refs": [
+              "italian_greyhound.suitability.petmd_children",
+              "italian_greyhound.behaviour.family"
+            ],
+            "quote": "S488 'Though Italian Greyhounds do well with children who understand how to appropriately interact with dogs, they will often…' (caveat in notes)"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S486"
+            ],
+            "refs": [
+              "italian_greyhound.suitability.rkc_shedding"
+            ],
+            "quote": "S486 'Sheds: No'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "fragile_older_children",
+            "source_ids": [
+              "S487"
+            ],
+            "refs": [
+              "italian_greyhound.behaviour.fragile_bones",
+              "italian_greyhound.suitability.pdsa_children"
+            ],
+            "quote": "S487 'Due to their bone fragility during growth, they may not be the ideal breed to live with other pets or young children.'"
+          },
+          {
+            "tag": "cold_sensitive",
+            "source_ids": [
+              "S488"
+            ],
+            "refs": [
+              "italian_greyhound.suitability.petmd_cold"
+            ],
+            "quote": "S488 'However, their coat does not insulate them well, and combined with their slender bodies, they can be easily affected by the cold.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "PDSA: not ideal with young children (bone fragility, S487); PetMD: avoids small, rambunctious children (S488).",
+          "family_pet": "PetMD 'suited to family life' was returned as paraphrase only (S488) — no verbatim family statement; children covers it.",
+          "other_pets": "PDSA: not ideal with other pets while the bones are fragile (S487); PetMD prey drive (S488).",
+          "chases_small_pets": "PetMD 'have a prey drive' (S488) is not a high-prey-drive statement (runbook rule); PDSA names prey only for recall (S487).",
+          "apartment": "RKC 'Small house' (S486), not 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S486).",
+          "active_family": "Up to 1 hour a day (S486).",
+          "long_daily_exercise": "Up to 1 hour a day (S486).",
+          "needs_company": "No time-alone statement found.",
+          "sheds": "RKC 'Sheds: No' (S486) → low_shedding.",
+          "frequent_grooming": "Once a week (S486).",
+          "first_time_owner": "No statement; PDSA 'can be difficult to train' (S487).",
+          "older_children": "fragile_older_children is the sourced wording (bone fragility, S487; Yorkshire Terrier precedent).",
+          "shorter_lifespan": "RKC 'Over 12 years' (S486).",
+          "welfare": "RKC Breed Watch Category 1 (S486), no conformation welfare statement → no welfare chip; periodontal disease, epilepsy, luxating patellas, PRA, autoimmune disorders, Legg-Calvé-Perthes disease and hypothyroidism are register health keys and breeder-checklist items only."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits children, low_shedding; consider fragile_older_children, cold_sensitive (new tag, PetMD S488)"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S486",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 1 (S486); no veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92). Marketing never shows it as a dog for small children, a dog to carry around like a toy, a dog off lead in the open, or as hypoallergenic (S486, S487, S488).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Italian Greyhound, fawn coat (default); a Greyhound in miniature, more slender in all proportions; elegant and graceful; short, fine, glossy coat over fine skin; long, flat, narrow skull with a slight stop; fine long muzzle; dark nose; rather large bright eyes; small rose-shaped ears folded back; low-set long fine tail carried low; slender but healthy, never emaciated; never merle, brindle or tan markings",
+        "unit": "—",
+        "source_id": "S485",
+        "quote": "Black, blue, cream, fawn, red, white, or any of these colours broken with white.",
+        "confidence": "high",
+        "notes": "Colours of the Kennel Club standard (S485); unacceptable: merle, black or blue with tan markings, brindle. Weights unsourced in prompts. Fawn as the portrait default: the standard prefers no colour — Claude's choice (a solid colour also in the FCI list as isabelline, S489).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn is the portrait default; standard colours only (black, blue, cream, fawn, red, white, or broken with white), never merle, brindle or tan markings"
       }
     }
   }
