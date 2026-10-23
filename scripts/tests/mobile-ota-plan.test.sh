@@ -88,4 +88,5 @@ else
   echo "ok   api-error"
 fi
 
-[ "$fails" -eq 0 ] && echo "all mobile-ota-plan cases passed" || { echo "$fails case(s) failed"; exit 1; }
+if [ "$fails" -ne 0 ]; then echo "$fails case(s) failed"; exit 1; fi
+echo "all mobile-ota-plan cases passed"
