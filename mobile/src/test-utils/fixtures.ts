@@ -450,6 +450,7 @@ export function makeFamilyChild(overrides: Partial<FamilyChild> = {}): FamilyChi
     devices: 0,
     adapted_mode: false,
     media_display: 'video',
+    easy_gestures: false,
     pet_id: null,
     contract_signed: false,
     stats: {
@@ -985,4 +986,9 @@ export function makeFactOfTheDay(overrides: Partial<FactOfTheDayResponse> = {}):
     total_count: 1,
     ...overrides,
   };
+}
+
+/** M5-T17: the same child view with »Lažje kretnje« on (hold / button mode in the games). */
+export function withEasyGestures<V extends { settings: { media_display: 'video' | 'picture'; easy_gestures: boolean } }>(view: V, on = true): V {
+  return { ...view, settings: { ...view.settings, easy_gestures: on } };
 }

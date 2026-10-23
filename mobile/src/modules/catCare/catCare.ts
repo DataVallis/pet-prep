@@ -774,6 +774,8 @@ export const CHORE_STRINGS = strings('cat', 'chore', {
   },
   litter_change: {
     weekOpen: (when: string) => t('cat:chore.litter_change.weekOpen', { when }),
+    // M5-T17: the hold scrub (patches + bar) of the weekly change.
+    scrub: { bar: (percent: number) => t('cat:chore.litter_change.scrub.bar', { percent }) },
   },
 });
 

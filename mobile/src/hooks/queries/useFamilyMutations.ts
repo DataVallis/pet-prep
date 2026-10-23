@@ -79,6 +79,20 @@ export function useSetChildMediaDisplay() {
   });
 }
 
+/**
+ * M5-T17: a parent switches »Lažje kretnje« (hold / button instead of swipes in the child's
+ * games). Only the boolean goes to the server; the family refreshes afterwards (also after a
+ * failure: the value may have been stored without an answer).
+ */
+export function useSetEasyGestures() {
+  const queryClient = useQueryClient();
+  return useMutation<UpdateChildSettingsResponse, unknown, { childId: number; easyGestures: boolean }>({
+    mutationFn: ({ childId, easyGestures }) => api.updateChildSettings(childId, { easy_gestures: easyGestures }),
+    retry: false,
+    onSettled: () => queryClient.invalidateQueries({ queryKey: parentDashboardKey }),
+  });
+}
+
 /** A new id for one walk entry (idempotency of retries — not a secret). */
 export function newWalkEntryId(now: number = Date.now(), random: () => number = Math.random): string {
   return `w${now.toString(36)}${Math.floor(random() * 36 ** 6).toString(36).padStart(6, '0')}`;

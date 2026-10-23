@@ -13,6 +13,7 @@
  */
 
 import { readMediaDisplay, type MediaDisplay } from '@/modules/display/display';
+import { readEasyGestures } from '@/modules/gestures/easyGestures';
 import { readCareGuide, type CareGuide } from '@/modules/careGuide/careGuide';
 import { isPaymentRequired, readPetPlan, type PetPlan } from '@/modules/plan/plan';
 import type { ChildPetState } from '@/api/client';
@@ -181,7 +182,7 @@ export interface ChildPetView {
    * M5-T11 settings of this child: `media_display` »Prikaz: Video / Slika« (`readMediaDisplay`;
    * an older server sends nothing → `video`).
    */
-  settings: { media_display: MediaDisplay };
+  settings: { media_display: MediaDisplay; easy_gestures: boolean };
   /**
    * M5-R02 behaviour events: puppy bladder clock, open messes, behaviour scene and what
    * the child may do. `EMPTY_BEHAVIOUR` for a legacy pet / an older server.
@@ -404,7 +405,11 @@ export function normalizeChildState(raw: ChildPetState, lastEmittedMs = 0, recei
     },
     contract: { signed: bool(raw.contract.signed), signed_at: isoOrNull(raw.contract.signed_at) },
     // M5-T11: older servers send no `settings` → video.
-    settings: { media_display: readMediaDisplay((raw as { settings?: { media_display?: unknown } }).settings?.media_display) },
+    // M5-T17: `easy_gestures` »Lažje kretnje« (parent switch per child); older servers → false.
+    settings: {
+      media_display: readMediaDisplay((raw as { settings?: { media_display?: unknown } }).settings?.media_display),
+      easy_gestures: readEasyGestures((raw as { settings?: { easy_gestures?: unknown } }).settings?.easy_gestures),
+    },
     // Older servers send no `behaviour` (typed as required by the current schema).
     behaviour: readChildBehaviour((raw as { behaviour?: unknown }).behaviour),
     // Older servers send no `training` (typed as required by the current schema).

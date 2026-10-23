@@ -47,6 +47,10 @@
     "feedbackPounce": "Odličen umik!",
     "pullAway": "Umakni pero",
     "pullAwayA11y": "Umakni pero stran od muce",
+    "waveWand": "Pomigaj s palico",
+    "waveWandA11y": "Pomigaj s palico — pero zbeži stran od muce",
+    "holdHint": "Drži prst na zaslonu ali gumb spodaj — pero bo samo bežalo pred muco.",
+    "holdA11yHint": "Pridrži, da pero bega dlje.",
     "stageA11y": "Prostor za igro: muca in pero na palici. Vleci pero stran od nje.",
     "quarterA11y": "{{n}}. četrtina igre",
     "result": {
@@ -105,7 +109,8 @@
         "failTitle": "To česanje ni štelo"
       },
       "brush": {
-        "holdHint": "Ne moreš potegniti s prstom? Pridrži prst na muci ali gumb spodaj.",
+        "holdHint": "Pridrži prst na muci ali gumb spodaj.",
+        "swipeHint": "Povleci s prstom po muci, od glave do repa.",
         "bar": "Počesano: {{percent}} %",
         "clean": "Vsa dlaka je počesana! Še trenutek …",
         "action": "Počeši",
@@ -131,6 +136,14 @@
         "successTitle": "Sveže in čisto!",
         "success": "Ves pesek je svež. Menjava za ta teden je opravljena.",
         "failTitle": "Menjava ni štela"
+      },
+      "scrub": {
+        "holdHint": "Pridrži prst na stranišču ali gumb spodaj.",
+        "swipeHint": "Drgni stranišče s prstom.",
+        "bar": "Očiščeno: {{percent}} %",
+        "clean": "Vse je čisto! Počakaj do konca menjave …",
+        "action": "Podrgni",
+        "holdA11yHint": "Pridrži za daljše drgnjenje."
       }
     },
     "mattedFixed": "Vozla ni več!",

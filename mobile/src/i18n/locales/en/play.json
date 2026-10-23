@@ -7,8 +7,11 @@
     "invite": "Your pup brought you a ball. Want to play?",
     "start": "Play",
     "hint": "Swipe the ball up to throw it.",
+    "holdHint": "Hold the ball or the button to build up power, let go to throw.",
     "throwButton": "Throw the ball",
     "throwA11y": "Throw the ball for your pup",
+    "charging": "Throw power: {{percent}} %",
+    "holdA11yHint": "Hold for a stronger throw, let go to throw.",
     "progress": "Throw {{n}} of 3",
     "fetching": "Your pup runs after the ball …",
     "done": "Thanks for playing! Your pup is so happy."

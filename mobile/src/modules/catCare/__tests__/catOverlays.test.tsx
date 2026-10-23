@@ -14,6 +14,7 @@ import ChoreOverlay from '@/modules/catCare/ChoreOverlay';
 import ScoopOverlay, { clumpCount } from '@/modules/catCare/ScoopOverlay';
 import ScratchingOverlay from '@/modules/catCare/ScratchingOverlay';
 import WandOverlay from '@/modules/catCare/WandOverlay';
+import { scoreWand, type WandMove } from '@/modules/catCare/catGames';
 import { normalizeChildState, type ChildPetView } from '@/modules/childPet/childPetView';
 import { useAppStore } from '@/store/appStore';
 import {
@@ -27,6 +28,7 @@ import {
   makeScratchingState,
   makeWandSession,
   makeWandState,
+  withEasyGestures,
 } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
@@ -62,8 +64,9 @@ function catState(o: { wand?: unknown; litter?: unknown; grooming?: unknown; scr
   });
 }
 
-function viewOf(state: ChildPetState): ChildPetView {
-  return normalizeChildState(state, 0, T0);
+// M5-T17: these tests use the stroke / wand buttons → hold mode (»Lažje kretnje« on).
+function viewOf(state: ChildPetState, easyGestures = true): ChildPetView {
+  return withEasyGestures(normalizeChildState(state, 0, T0), easyGestures);
 }
 
 async function advance(ms: number) {
@@ -159,7 +162,7 @@ describe('WandOverlay', () => {
     expect(screen.getByTestId('cat-wand-start').props.accessibilityState?.disabled).toBe(true);
   });
 
-  it('play: dragging away from the cat records "away" moves, the button too; finishes with them at 60 s', async () => {
+  it('play: dragging away from the cat records "away" moves, the hold-mode button too; finishes with them at 60 s', async () => {
     mocked.startWand.mockResolvedValue({ status: 'accepted', session: makeWandSession(), state: catState() });
     mocked.finishWand.mockResolvedValue({
       status: 'accepted',
@@ -189,7 +192,7 @@ describe('WandOverlay', () => {
     expect(screen.getByText('Skok! Umakni pero!')).toBeTruthy();
     // QA m2: the pounce cue shows while an answer counts (free drawing here).
     expect(screen.getByTestId('cat-wand-pounce-cue', { includeHiddenElements: true })).toBeTruthy();
-    fireEvent.press(screen.getByLabelText('Umakni pero stran od muce'));
+    fireEvent.press(screen.getByLabelText('Pomigaj s palico — pero zbeži stran od muce'));
     expect(screen.getByTestId('cat-wand-feedback').props.children).toBe('Odličen umik!');
     expect(screen.getByTestId('cat-wand-stop')).toBeTruthy();
 
@@ -204,6 +207,45 @@ describe('WandOverlay', () => {
     expect(screen.getByTestId('cat-wand-result-title').props.children).toBe('Kakšen lov!');
     fireEvent.press(screen.getByTestId('cat-wand-done'));
     expect(onClose).toHaveBeenCalled();
+  });
+
+  it('M5-T17 hold mode: holding a finger on the stage makes the feather run on its own — the server scorer passes', async () => {
+    mocked.startWand.mockResolvedValue({ status: 'accepted', session: makeWandSession(), state: catState() });
+    mocked.finishWand.mockResolvedValue({
+      status: 'accepted',
+      result: { session_id: makeWandSession().id, success: true, reason: null, away_moves: 80, toward_moves: 0, segments_hit: 4, segments: 4, pounces_hit: 3, pounces: 3 },
+      state: catState(),
+    });
+    renderWithQuery(<WandOverlay view={viewOf(catState())} onClose={jest.fn()} reduceMotion clock={clock} />);
+    fireEvent.press(screen.getByTestId('cat-wand-start'));
+    await advance(0);
+    fireEvent(screen.getByTestId('cat-wand-stage-touch'), 'layout', { nativeEvent: { layout: { x: 0, y: 0, width: 300, height: 400 } } });
+    expect(screen.getByTestId('cat-wand-hold-hint')).toBeTruthy();
+    const config = configs[configs.length - 1];
+    act(() => config.onPanResponderGrant?.(at(150, 200), gesture({})));
+    await advance(30_000);
+    // Lift for a moment, then hold the »Pomigaj s palico« button for the rest of the minute.
+    act(() => config.onPanResponderRelease?.(at(150, 200), gesture({})));
+    fireEvent(screen.getByTestId('cat-wand-wave'), 'pressIn');
+    await advance(31_000);
+    expect(mocked.finishWand).toHaveBeenCalledTimes(1);
+    const [, moves] = mocked.finishWand.mock.calls[0] as [string, WandMove[]];
+    expect(moves.every((m) => m.away)).toBe(true);
+    // The unchanged server rules: enough moves, all quarters, every pounce answered, not regular.
+    expect(scoreWand(moves, makeWandSession())).toMatchObject({ success: true, reason: null });
+  });
+
+  it('M5-T17 swipe mode: no »Pomigaj s palico« button, a resting finger moves nothing', async () => {
+    mocked.startWand.mockResolvedValue({ status: 'accepted', session: makeWandSession(), state: catState() });
+    renderWithQuery(<WandOverlay view={viewOf(catState(), false)} onClose={jest.fn()} reduceMotion clock={clock} />);
+    fireEvent.press(screen.getByTestId('cat-wand-start'));
+    await advance(0);
+    expect(screen.queryByTestId('cat-wand-wave')).toBeNull();
+    expect(screen.queryByTestId('cat-wand-hold-hint')).toBeNull();
+    const config = configs[configs.length - 1];
+    act(() => config.onPanResponderGrant?.(at(150, 200), gesture({})));
+    await advance(5_000);
+    expect(screen.queryByTestId('cat-wand-feedback')).toBeNull();
   });
 
   it('"Ustavi" mid-game: back to the intro, nothing sent', async () => {

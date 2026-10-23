@@ -254,7 +254,8 @@
       "care_session_active_no_time": "Someone else is doing something with your pup right now. Try again in a minute."
     },
     "brush": {
-      "holdHint": "Can't swipe? Hold your finger on your pup, or hold the button below.",
+      "holdHint": "Hold your finger on your pup, or hold the button below.",
+      "swipeHint": "Swipe your finger over your pup, from head to tail.",
       "bar": "Brushed: {{percent}} %",
       "clean": "Its whole coat is brushed! Just a moment …",
       "action": "Brush",

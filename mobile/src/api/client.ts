@@ -187,7 +187,7 @@ export interface ChildActionResponse {
 /** `POST /api/child/pet/steps` body (M1-04 / M1-07). */
 export type SyncStepsRequest = components['schemas']['SyncStepsRequest'];
 export type UpdateChildSettingsRequest = components['schemas']['UpdateChildSettingsRequest'];
-export type UpdateChildSettingsResponse = { child_id: number; adapted_mode: boolean; media_display: 'video' | 'picture' };
+export type UpdateChildSettingsResponse = { child_id: number; adapted_mode: boolean; media_display: 'video' | 'picture'; easy_gestures?: boolean };
 /** `PATCH /api/child/settings` body (M5-T11). */
 export type UpdateChildDisplayRequest = components['schemas']['UpdateChildDisplayRequest'];
 export type UpdateChildDisplayResponse = { media_display: 'video' | 'picture' };
@@ -970,6 +970,7 @@ export const api = {
   /**
    * PATCH /api/parent/children/{child}/settings (M5-T12) — »Prilagojen način«: the child's walk
    * counts wheelchair pushes instead of steps. Only the boolean is sent — never a reason.
+   * Also `media_display` (M5-T11) and `easy_gestures` (M5-T17 »Lažje kretnje«).
    */
   updateChildSettings: (childId: number, body: UpdateChildSettingsRequest) =>
     apiRequest<UpdateChildSettingsResponse>(`/api/parent/children/${childId}/settings`, { method: 'PATCH', body }),
