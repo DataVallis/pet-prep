@@ -30971,7 +30971,7 @@
         "source_id": "S480",
         "quote": "Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.",
         "confidence": "high",
-        "notes": "PDSA (S480): GDV 'where a dog’s stomach bloats and twists around on itself, which can be fatal.' (fragment). PetMD (S481): 'To limit the risk of GDV, do not feed your Weimaraner dog immediately before or after exercise; allow one to two hours.' → meal_exercise_gap row (M5-R16; PetMD's 'one to two hours' recorded as an alternative — the game uses David's 60 min). Register health key bloat_gdv."
+        "notes": "PDSA (S480): 'Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.'; GDV 'where a dog’s stomach bloats and twists around on itself, which can be fatal.' (fragment). PetMD (S481): 'To limit the risk of GDV, do not feed your Weimaraner dog immediately before or after exercise; allow one to two hours.' → meal_exercise_gap row (M5-R16; PetMD's 'one to two hours' recorded as an alternative — the game uses David's 60 min). Register health key bloat_gdv."
       },
       "cancer": {
         "value": "certain cancers",
