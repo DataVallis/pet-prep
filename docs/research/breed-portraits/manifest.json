@@ -711,6 +711,18 @@
             "prompt_hash": "sha256:d8557d53bdf75d5a304458c387acd18e9a9bc7a696244818f081553087b174c9",
             "generated_at": "2026-10-23T00:35:58+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "scottish_terrier",
+            "species": "dog",
+            "file": "dog/scottish-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:c4a777085f2974c43d32fb84c062225f26da5e2d335e68be132d67ffbace0045",
+            "generated_at": "2026-10-23T02:05:23+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
