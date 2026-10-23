@@ -1,0 +1,522 @@
+<?php
+
+use App\Enums\BreedType;
+use App\Enums\ChallengePaidSource;
+use App\Enums\LifeStage;
+use App\Enums\PetOrigin;
+use App\Enums\PetPlan;
+use App\Enums\Species;
+use App\Enums\StageParamKey;
+use App\Models\BreedConfig;
+use App\Models\BreedStageParam;
+use App\Models\Pet;
+use App\Models\User;
+use App\Services\BreedSuitability;
+use App\Services\ChildProfileService;
+use App\Services\FalAiService;
+use App\Services\LifeStageService;
+use App\Services\Media\BreedPortraitService;
+use App\Services\Media\MediaEntitlementService;
+use App\Services\Media\PetAppearancePrompt;
+use App\Services\Media\PetDnaService;
+use App\Services\TrainingService;
+use Database\Seeders\BreedConfigsSeeder;
+use Database\Seeders\BreedStageParamsSeeder;
+use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Testing\TestResponse;
+
+use function Pest\Laravel\getJson;
+use function Pest\Laravel\postJson;
+
+/*
+|--------------------------------------------------------------------------
+| M5-R10-60 — Italian Greyhound (appended after the Weimaraner: AKC 2024 No. 56)
+|--------------------------------------------------------------------------
+| Sourced data: docs/research/dog-data/data.json `italian_greyhound` (S484–S490) and the runbook's standing rules
+| (confirmed by David 2026-10-10) in `proposed_game_parameters.italian_greyhound` (exercise 60 min — RKC "Exercise: Up
+| to 1 hour per day" —, senior 45 min, puppy 10 min × age capped at 60, stages 9 / 36 / 108 — 0.75 × RKC lower bound
+| "Over 12 years"; the Dogs Trust McMillan 2024 table could not be fetched —, arrival 2 / 9 / 36 / 108, learning × 0.7
+| (Coren rank 60, Fair), paid breed, Border Collie care rates, brushing once a week (RKC "Grooming: Once a week",
+| M5-R13), puppy socialisation with the PDSA quote (M5-R17), no digestion warning (no source); suitability: suits
+| children / low_shedding, consider fragile_older_children / cold_sensitive (new chip, PetMD S488); fawn portrait
+| (never merle, brindle or tan markings); RKC Breed Watch Category 1, in marketing).
+*/
+
+beforeEach(function () {
+    seedLifeStageData();
+});
+
+/** A value at a dotted path of the dog data.json. */
+function igData(string $path): mixed
+{
+    static $data = null;
+    $data ??= json_decode((string) file_get_contents(base_path('../docs/research/dog-data/data.json')), true, flags: JSON_THROW_ON_ERROR);
+
+    $node = $data;
+    foreach (explode('.', $path) as $segment) {
+        expect($node)->toHaveKey($segment);
+        $node = $node[$segment];
+    }
+
+    return $node;
+}
+
+/** @return array<string, mixed> the Italian Greyhound seeder row of (stage, from, key) */
+function igRow(string $stage, int $from, StageParamKey $key): array
+{
+    $row = collect(BreedStageParamsSeeder::rows())->first(fn (array $r) => $r['breed_slug'] === 'italian-greyhound'
+        && $r['stage'] === $stage && $r['age_from_months'] === $from && $r['key'] === $key->value);
+    expect($row)->not->toBeNull("italian_greyhound.{$stage}.{$from}.{$key->value}");
+
+    return $row;
+}
+
+function igPet(int $arrivalMonths, array $attributes = []): Pet
+{
+    $child = User::factory()->child()->create();
+
+    return disableHygieneEvents(Pet::factory()->italianGreyhound()->create(array_merge([
+        'user_id' => $child->id,
+        'born_at' => now(),
+        'arrival_age_months' => $arrivalMonths,
+    ], $attributes)))->fresh();
+}
+
+/** @param array<string, mixed> $body */
+function igPin(User $parent, array $body): TestResponse
+{
+    $child = app(ChildProfileService::class)->createChild($parent, 'Kid'.random_int(100, 999), null);
+    app('auth')->forgetGuards();
+    actingAsRole($parent);
+
+    return postJson('/api/parent/generate-pin', array_merge(['child_id' => $child->id], $body));
+}
+
+function igLogin(string $pin): TestResponse
+{
+    app('auth')->forgetGuards();
+    test()->withHeaders(['Authorization' => '']);
+
+    return postJson('/api/child/pin-login', ['pin' => $pin, 'device_name' => 'Tablet', 'features' => []]);
+}
+
+describe('breed, config and database', function () {
+    it('is a paid dog breed with its own slug and a seeded breed config', function () {
+        $breed = BreedType::ItalianGreyhound;
+        $config = BreedConfig::where('breed_slug', 'italian-greyhound')->sole();
+
+        expect($breed->value)->toBe('italian_greyhound')
+            ->and($breed->slug())->toBe('italian-greyhound')
+            ->and(BreedType::fromSlug('italian-greyhound'))->toBe($breed)
+            ->and($breed->species())->toBe(Species::Dog)
+            ->and($breed->defaultPremium())->toBeTrue()
+            ->and($breed->isPremium())->toBeTrue()
+            ->and([$config->species, $config->premium_unlock, $config->sort_order, $config->label_key])
+            ->toBe([Species::Dog, true, 560, 'breeds.italian_greyhound'])
+            ->and($config->search_keywords)->toBe(['italian greyhound', 'mali italijanski hrt', 'italijanski hrt', 'italijanski hrtek', 'piccolo levriero italiano', 'italian sighthound', 'iggy'])
+            // Legacy fallback = the adult step goal (60 min × 100 steps).
+            ->and($config->daily_steps_required)->toBe((int) igData('proposed_game_parameters.italian_greyhound.step_goal_adult.value'))
+            ->and($config->daily_steps_required)->toBe(6000);
+
+        // No per-breed hunger / thirst / water data → the Border Collie's paid-breed rhythm.
+        $collie = BreedConfig::where('breed_slug', 'border-collie')->sole();
+        foreach (['hunger_decay_rate', 'thirst_decay_rate', 'poops_per_day', 'water_times_per_day', 'water_min_gap_minutes', 'feed_windows'] as $field) {
+            expect($config->{$field})->toBe($collie->{$field}, $field);
+        }
+        $care = igData('proposed_game_parameters.italian_greyhound.care_rates.value');
+        expect([$config->hunger_decay_rate, $config->thirst_decay_rate, $config->poops_per_day, $config->water_times_per_day, $config->water_min_gap_minutes])
+            ->toBe([(float) $care['hunger_decay_per_hour'], (float) $care['thirst_decay_per_hour'], $care['poops_per_day'], $care['water_per_day'], $care['water_min_gap_minutes']]);
+    });
+
+    it('accepts an Italian Greyhound pet only as a dog (breed / species CHECKs) and the migration is reversible', function () {
+        $pet = igPet(36);
+        expect($pet->species)->toBe(Species::Dog)
+            ->and(DB::table('pets')->where('id', $pet->id)->value('breed_type'))->toBe('italian_greyhound');
+
+        $refused = fn (array $values) => fn () => DB::transaction(fn () => DB::table('pets')->where('id', $pet->id)->update($values));
+        expect($refused(['species' => 'cat']))->toThrow(QueryException::class)
+            // Other names are no breed keys (only search keywords).
+            ->and($refused(['breed_type' => 'piccolo_levriero_italiano']))->toThrow(QueryException::class)
+            ->and($refused(['breed_type' => 'iggy']))->toThrow(QueryException::class);
+
+        $migration = require database_path('migrations/2027_01_21_120000_add_italian_greyhound_breed.php');
+        // down() refuses while an Italian Greyhound exists (no silent data loss).
+        expect(fn () => DB::transaction(fn () => $migration->down()))->toThrow(QueryException::class);
+        DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'border_collie']);
+        $migration->down();
+        expect($refused(['breed_type' => 'italian_greyhound']))->toThrow(QueryException::class);
+        // The Weimaraner (previous dog migration) stays allowed after the rollback.
+        DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'weimaraner']);
+        $migration->up();
+        DB::table('pets')->where('id', $pet->id)->update(['breed_type' => 'italian_greyhound']);
+        expect(Pet::findOrFail($pet->id)->breed_type)->toBe(BreedType::ItalianGreyhound);
+        // The cat list of pets_species_breed_check is untouched: a Bengal is still a cat.
+        expect($refused(['breed_type' => 'bengal']))->toThrow(QueryException::class);
+    });
+
+    it('seeds insert-only: a second deploy run adds nothing and keeps admin edits', function () {
+        $count = BreedStageParam::where('breed_slug', 'italian-greyhound')->count();
+        expect($count)->toBe(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'italian-greyhound')->count());
+
+        BreedConfig::where('breed_slug', 'italian-greyhound')->sole()->update(['daily_steps_required' => 5000]);
+        (new BreedConfigsSeeder)->run();
+
+        expect(BreedStageParam::where('breed_slug', 'italian-greyhound')->count())->toBe($count)
+            ->and(BreedConfig::where('breed_slug', 'italian-greyhound')->value('daily_steps_required'))->toBe(5000);
+    });
+
+    it('leaves every other breed\'s seeded rows untouched', function () {
+        $others = collect(BreedStageParamsSeeder::rows())->where('breed_slug', '!=', 'italian-greyhound');
+        $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'italian-greyhound');
+
+        expect($others->pluck('breed_slug')->unique()->values()->all())->toBe(breedSlugsOf(Species::Dog, 'italian-greyhound'))
+            ->and($others->where('decision', BreedStageParamsSeeder::CONFIRMED_R10_ITALIAN_GREYHOUND)->all())->toBe([]);
+        // Every other R10 decision constant, found by reflection, is absent from this breed's rows.
+        $constants = collect((new ReflectionClass(BreedStageParamsSeeder::class))->getConstants())
+            ->filter(fn ($value, string $name) => is_string($value) && (str_starts_with($name, 'CONFIRMED_R10') || str_starts_with($name, 'PROPOSED_R10')) && $name !== 'CONFIRMED_R10_ITALIAN_GREYHOUND');
+        expect($constants->count())->toBeGreaterThan(5);
+        foreach ($constants as $name => $value) {
+            expect($mine->where('decision', $value)->all())->toBe([], $name);
+        }
+    });
+});
+
+describe('life-stage data against data.json', function () {
+    it('takes the stage boundaries, arrival ages, exercise minutes and learning multiplier from the runbook rules confirmed by David 2026-10-10', function () {
+        $pgp = 'proposed_game_parameters.italian_greyhound';
+
+        foreach (['young', 'adult', 'senior'] as $stage) {
+            expect(igRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(igData("{$pgp}.stage_boundaries_months.value.{$stage}"))
+                ->and(igRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(igData("{$pgp}.arrival_age_months.value.{$stage}"));
+        }
+        expect(igRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(igData("{$pgp}.arrival_age_months.value.puppy"))
+            // Senior = 0.75 × 12 y (RKC lower bound "Over 12 years", S486) = 108 — the runbook's third choice.
+            ->and(igRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(igData('italian_greyhound.lifespan.senior_from.months'))
+            ->and(igRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * igRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
+            ->and(igData('italian_greyhound.lifespan.senior_from.derived_from'))->toBe(['S11', 'S486'])
+            ->and(igData('italian_greyhound.lifespan.mcmillan_2024.value'))->toBeNull()
+            ->and(igRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe('S11,S10,S486')
+            ->and(igRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeTrue()
+            ->and(igRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(108);
+
+        expect(igRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(igData("{$pgp}.exercise_minutes_adult.value"))
+            ->and(igRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
+            ->and(igRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(igData('italian_greyhound.exercise.adult.quote'))
+            ->and(igRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S486')
+            ->and(igRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
+            // 75 % of 60 = 45.
+            ->and(igRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(igData("{$pgp}.exercise_minutes_senior.value"))
+            ->and(igRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(45)
+            // Puppy rule 10 min × age, capped at the adult minutes.
+            ->and(igRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
+            ->and(igData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(60)
+            ->and(igRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(igData("{$pgp}.learning_multiplier.value"))
+            ->and(igRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(0.7);
+
+        // Every decision row of this breed cites the data.json entry that records it.
+        $decided = 0;
+        foreach (BreedStageParamsSeeder::rows() as $row) {
+            if ($row['decision'] === BreedStageParamsSeeder::CONFIRMED_R10_ITALIAN_GREYHOUND) {
+                $decided++;
+                expect($row['breed_slug'])->toBe('italian-greyhound')
+                    ->and($row['ref'])->toStartWith('proposed_game_parameters.italian_greyhound.')
+                    ->and($row['verified'])->toBeTrue()
+                    ->and((string) igData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
+            }
+        }
+        expect($decided)->toBeGreaterThan(0);
+
+        // No "proposal, not built" left in the research; every sourced need with a game mechanic is built (brushing
+        // M5-R13, socialisation M5-R17); the cold-weather coat and a confined off-lead run need a new ROADMAP task, ears /
+        // eyes / nails M5-R20 / M5-R14 / M5-R19 (David). No meal / walk gap quote → no digestion warning.
+        expect(json_encode([igData('italian_greyhound'), igData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('awaiting David')->not->toContain('PROPOSAL')->not->toContain('not built"')
+            ->and(igData("{$pgp}.grooming.value"))->toBe(1)
+            ->and(igData("{$pgp}.grooming.decision"))->toContain('M5-R13')->not->toContain('čaka Davida')
+            ->and(igData("{$pgp}.ear_eye_nail_care.decision"))->toContain('M5-R20')->toContain('M5-R19')->toContain('M5-R14')
+            ->and(igData("{$pgp}.cold_weather_coat.decision"))->toContain('ROADMAP')
+            ->and(igData("{$pgp}.confined_off_lead.decision"))->toContain('ROADMAP')
+            ->and(igData($pgp))->not->toHaveKey('meal_exercise_gap')
+            ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP)->not->toHaveKey('italian_greyhound')
+            ->and(igData('italian_greyhound.exercise.after_meals.source_id'))->toBeNull()
+            ->and(igData("{$pgp}.socialisation.quote"))->toBe(BreedStageParamsSeeder::DOG_SOCIALISATION['italian_greyhound'][1])
+            ->and(igData('italian_greyhound.behaviour.socialisation.quote'))->toBe(BreedStageParamsSeeder::DOG_SOCIALISATION['italian_greyhound'][1]);
+    });
+
+    it('takes the breed-level numbers from the sourced italian_greyhound entries', function () {
+        // Kennel Club standard (S485): 3.6–4.5 kg.
+        expect(igRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([3.6, 4.5])
+            ->and(igData('italian_greyhound.adult_weight.kc_standard.value'))->toEqual(['male' => [3.6, 4.5], 'female' => [3.6, 4.5]])
+            ->and(igRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(igData('italian_greyhound.adult_weight.kc_standard.source_id'))
+            ->and(igRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(igData('italian_greyhound.adult_weight.kc_standard.quote'))
+            ->and(igRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([8, 12])
+            ->and(igData('italian_greyhound.growth.adult_weight_reached.value'))->toStartWith('8–12 months')
+            // Coren rank 60 (S35), Fair tier → learning 0.7.
+            ->and(igRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(60)
+            ->and(igRow('all', 0, StageParamKey::CorenRank)['quote'])->toBe(igData('italian_greyhound.trainability.coren_rank.quote'))
+            ->and(igData('italian_greyhound.trainability.coren_rank.value'))->toBe(60)
+            ->and(igRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('italian_greyhound.lifespan.rkc')
+            ->and(igRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S486')
+            ->and(igRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(12.0)
+            ->and(igRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(igData('italian_greyhound.lifespan.rkc.quote'));
+
+        // Brushing once a week (RKC "Grooming: Once a week" → 1) — the rule, verified.
+        $grooming = igRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
+        expect($grooming['value'])->toBe(1)
+            ->and($grooming['source_id'])->toBe('S486')
+            ->and($grooming['quote'])->toBe(igData('italian_greyhound.suitability.rkc_grooming.quote'))
+            ->and($grooming['quote'])->toBe(igData('proposed_game_parameters.italian_greyhound.grooming.quote'))
+            ->and($grooming['verified'])->toBeTrue()
+            ->and($grooming['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R13_DOG_GROOMING)
+            // The puppy's weekly "new experience" (M5-R17) with the breed's own PDSA quote.
+            ->and(igRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
+            ->and(igRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S487');
+
+        $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'italian-greyhound');
+        // Like the other pedigree breeds: no individual variation row; no digestion warning (no source).
+        expect($mine->where('key', StageParamKey::TrainingIndividualVariation->value)->all())->toBe([])
+            ->and($mine->where('key', StageParamKey::MealExerciseGapMinutes->value)->all())->toBe([]);
+
+        // Open proposals: only the general teething chewing chance (as for every dog).
+        $open = $mine->where('verified', false);
+        expect($open->map(fn (array $r) => $r['stage'].'.'.$r['key'])->values()->all())
+            ->toBe(['puppy.'.StageParamKey::ChewingChancePerDay->value]);
+    });
+
+    it('shares the general dog rows with the Border Collie (only the breed profile differs)', function () {
+        $profileKeys = [StageParamKey::StartsAtMonths, StageParamKey::ArrivalAgeMonths, StageParamKey::ExerciseMinutesPerDay,
+            StageParamKey::ExerciseMinutesPerAgeMonth, StageParamKey::AdultWeightKg, StageParamKey::GrowthEndMonths,
+            StageParamKey::CorenRank, StageParamKey::TrainingLearningMultiplier, StageParamKey::LifespanYears,
+            // M5-R13: the breed's brushing routine (the Border Collie has none).
+            StageParamKey::GroomingSessionsPerWeek,
+            // M5-R17: the puppy's weekly "new experience" with the breed's own PDSA quote (S487).
+            StageParamKey::SocialisationTasksPerWeek,
+        ];
+        $general = fn (string $slug) => collect(BreedStageParamsSeeder::rows())
+            ->where('breed_slug', $slug)
+            ->reject(fn (array $r) => in_array(StageParamKey::from($r['key']), $profileKeys, true))
+            ->map(fn (array $r) => array_diff_key($r, ['breed_slug' => true]))
+            ->values()->all();
+
+        expect($general('italian-greyhound'))->toBe($general('border-collie'));
+    });
+});
+
+describe('stage rules', function () {
+    it('walks 10 min × age up to 60 minutes = 6,000 steps and 45 minutes = 4,500 steps as senior', function (int $arrival, LifeStage $stage, int $minutes, int $steps) {
+        $pet = igPet($arrival);
+        $rules = app(LifeStageService::class)->rulesOn($pet, $pet->localDate(now()));
+
+        expect($rules->lifeStage)->toBe($stage)
+            ->and($rules->exerciseMinutes)->toBe($minutes)
+            ->and($rules->stepGoal)->toBe($steps)
+            ->and($rules->verified())->toBeTrue()
+            ->and($rules->unverifiedKeys())->toBe([]);
+    })->with([
+        'puppy 2 months (10 min × age)' => [2, LifeStage::Puppy, 20, 2000],
+        'puppy 5 months (10 min × age)' => [5, LifeStage::Puppy, 50, 5000],
+        'puppy 6 months (capped)' => [6, LifeStage::Puppy, 60, 6000],
+        'puppy 8 months (capped)' => [8, LifeStage::Puppy, 60, 6000],
+        'young 9 months (capped)' => [9, LifeStage::Young, 60, 6000],
+        'adult 36 months' => [36, LifeStage::Adult, 60, 6000],
+        'adult 107 months' => [107, LifeStage::Adult, 60, 6000],
+        'senior 108 months' => [108, LifeStage::Senior, 45, 4500],
+    ]);
+
+    it('becomes senior at 108 months, like the Papillon and 13 months before the Whippet (121)', function () {
+        $service = app(LifeStageService::class);
+
+        expect($service->stageForAge('italian-greyhound', 107))->toBe(LifeStage::Adult)
+            ->and($service->stageForAge('italian-greyhound', 108))->toBe(LifeStage::Senior)
+            ->and($service->stageForAge('papillon', 108))->toBe(LifeStage::Senior)
+            ->and($service->stageForAge('whippet', 120))->toBe(LifeStage::Adult)
+            ->and($service->stageForAge('whippet', 121))->toBe(LifeStage::Senior);
+    });
+
+    it('learns slower than a mixed breed (Coren Fair tier, × 0.7) with no individual factor', function () {
+        $training = app(TrainingService::class);
+        $dog = igPet(36);
+        $date = $dog->localDate(now());
+
+        // learningFactor() is the individual factor (none for a pedigree breed); the breed multiplier is in the gain.
+        expect($training->learningFactor($dog))->toBe(1.0)
+            ->and($training->gainPerSuccess($dog, $date))->toBe(0.7);
+    });
+});
+
+describe('generate-pin: paid like the Border Collie', function () {
+    it('applies the paid-breed rule (challenge, free plan refused)', function (?string $plan, ?string $reason, ?string $petPlan) {
+        $parent = User::factory()->parent()->create();
+        $body = ['breed' => 'italian_greyhound', 'origin' => 'bought', 'age_stage' => 'puppy'];
+        if ($plan !== null) {
+            $body['plan'] = $plan;
+        }
+
+        $response = igPin($parent, $body);
+
+        if ($reason !== null) {
+            $response->assertStatus(422)->assertJsonPath('reason', $reason);
+
+            return;
+        }
+
+        $response->assertOk()->assertJsonPath('plan', $petPlan);
+        $pet = Pet::findOrFail(igLogin($response->json('pin'))->assertOk()->json('pet.id'));
+        expect($pet->plan->value)->toBe($petPlan)
+            ->and($pet->breed_type)->toBe(BreedType::ItalianGreyhound)
+            ->and($pet->species)->toBe(Species::Dog)
+            ->and($pet->arrival_age_months)->toBe(2);
+    })->with([
+        'free plan' => ['free', 'breed_locked', null],
+        'challenge' => ['challenge', null, 'challenge'],
+        'old app (no plan)' => [null, null, 'challenge'],
+    ]);
+
+    it('starts the challenge exactly like a Border Collie challenge, arriving as a senior at 108 months', function () {
+        $parent = User::factory()->parent()->create();
+        $pets = [];
+        foreach (['border_collie', 'italian_greyhound'] as $breed) {
+            $pin = igPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
+            $pets[$breed] = Pet::findOrFail(igLogin($pin)->assertOk()->json('pet.id'));
+        }
+
+        $dog = $pets['italian_greyhound'];
+        expect($dog->challengeStatus())->toBe($pets['border_collie']->challengeStatus())
+            ->and($dog->plan)->toBe(PetPlan::Challenge)
+            ->and($dog->arrival_age_months)->toBe(108)
+            ->and($dog->origin)->toBe(PetOrigin::Adopted)
+            // DNA v2 from the appearance data.
+            ->and($dog->pet_dna['breed'])->toBe('italian_greyhound')
+            ->and((int) $dog->pet_dna['version'])->toBe(2);
+    });
+
+    it('gets the full media set once the challenge is bought', function () {
+        $pet = igPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
+        $entitlement = app(MediaEntitlementService::class);
+
+        expect($entitlement->tierFor($pet))->toBe(MediaEntitlementService::TIER_FULL)
+            ->and($entitlement->videoStatesFor($pet))->toBe(array_values(array_filter(
+                MediaEntitlementService::statesOfTier(MediaEntitlementService::TIER_FULL),
+                fn ($state) => $entitlement->behaviourApplies($pet, $state),
+            )));
+    });
+});
+
+describe('GET /api/breeds', function () {
+    it('lists the Italian Greyhound after the Weimaraner with its suitability tags', function () {
+        $parent = User::factory()->parent()->create();
+        app('auth')->forgetGuards();
+        actingAsRole($parent);
+
+        $breeds = getJson('/api/breeds')->assertOk()->json('breeds');
+
+        $i = expectListedAfter($breeds, 'italian_greyhound', 'weimaraner');
+
+        expect(collect($breeds[$i])->except('colours')->all())->toBe([
+            'breed' => 'italian_greyhound', 'slug' => 'italian-greyhound', 'species' => 'dog', 'premium' => true,
+            'free_plan_allowed' => false, 'challenge_allowed' => true, 'label_key' => 'breeds.italian_greyhound',
+            'search_keywords' => seededBreedConfig('italian_greyhound')['search_keywords'], 'sort_order' => 560,
+            'suitability' => [
+                'suits' => ['children', 'low_shedding'],
+                'consider' => ['fragile_older_children', 'cold_sensitive'],
+            ],
+        ]);
+    });
+});
+
+describe('AI appearance (runbook rule: standard colours only — never merle, brindle or tan markings)', function () {
+    it('samples DNA in the seven standard colours of the appearance block only', function () {
+        $dna = app(PetDnaService::class);
+        $prompts = app(PetAppearancePrompt::class);
+        expect($dna->breeds())->toContain('italian_greyhound')
+            ->and(PetDnaService::hasAppearance('italian_greyhound'))->toBeTrue()
+            ->and(config('breed_appearance.italian_greyhound.verified'))->toBeFalse()
+            ->and(config('breed_appearance.italian_greyhound.prompt_order'))->toContain('head')->toContain('ear_carriage')->toContain('tail');
+
+        $colours = [];
+        foreach (range(1, 400) as $seed) {
+            $traits = $dna->sample('italian_greyhound', $seed)['traits'];
+            $colours[$traits['coat_color']] = true;
+            expect($traits['coat_length'])->toContain('short')
+                ->and($traits['tail'])->toContain('low')
+                ->and($traits['ear_carriage'])->toContain('rose');
+
+            $prompt = $prompts->imagePrompt('italian_greyhound', $traits);
+            expect($prompt)->toContain('Italian Greyhound')
+                ->not->toMatch('/\b(merle|brindle|tan|emaciated|skeletal|Whippet|docked|cropped)\b/i')
+                ->not->toContain(' cat')
+                ->not->toContain('hypoallergenic');
+        }
+        // The standard colours of the appearance block (= the colour picker, BreedColourSharedMediaTest).
+        $standard = ['fawn', 'blue grey', 'black', 'cream', 'red', 'white', 'fawn broken with white'];
+        expect(array_keys($colours))->toEqualCanonicalizing($standard)
+            ->and(array_column(config('breed_colours.italian_greyhound'), 'value'))->toBe($standard)
+            ->and(array_column(config('breed_colours.italian_greyhound'), 'key'))->toBe(['fawn', 'blue', 'black', 'cream', 'red', 'white', 'fawn-white']);
+    });
+
+    it('draws the register portrait fawn', function () {
+        $portrait = app(BreedPortraitService::class);
+        $traits = $portrait->portraitTraits(BreedType::ItalianGreyhound);
+
+        expect($traits['coat_color'])->toBe('fawn')
+            ->and($portrait->prompt(BreedType::ItalianGreyhound))->toContain('Italian Greyhound')->toContain('fawn')
+            ->and(BreedPortraitService::relativeFile(BreedType::ItalianGreyhound))->toBe('dog/italian-greyhound.webp');
+    });
+
+    it('has a legacy DNA v1 prompt and stage prompts like every dog', function () {
+        $v1 = app(FalAiService::class)->generateInitialPetDna(BreedType::ItalianGreyhound);
+        expect($v1['prompt_anchor'])->toContain('Italian Greyhound')->toContain('fawn')
+            ->not->toMatch('/\b(merle|brindle|tan)\b/i')
+            ->and($v1['visual_traits']['color_scheme'])->toBeIn(['fawn', 'blue grey', 'black'])
+            ->and($v1['visual_traits']['eye_color'])->toBe('dark');
+
+        $pet = igPet(108, ['origin' => PetOrigin::Adopted]);
+        $prompt = app(PetAppearancePrompt::class)->imagePromptForPet($pet->forceFill(['pet_dna' => app(PetDnaService::class)->forNewPet($pet)]), LifeStage::Senior);
+        expect($prompt)->toContain('Italian Greyhound')->toContain(PetAppearancePrompt::ADOPTED_AVOID)->toContain(PetAppearancePrompt::STYLE);
+    });
+});
+
+describe('no health statistics in the app; no welfare chip, in marketing (runbook §1, §3)', function () {
+    it('keeps the app config free of statistics, shows no welfare chip and stays in marketing', function () {
+        $app = json_encode([
+            config('breed_appearance.italian_greyhound'),
+            config('breed_suitability.breeds.italian_greyhound'),
+            collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'italian-greyhound')->where('key', '!=', StageParamKey::LifespanYears->value)->values()->all(),
+        ], JSON_UNESCAPED_UNICODE);
+
+        foreach (['odds ratio', 'hypoallergenic', 'times higher', '%)', 'prevalence', '5%', '30%'] as $forbidden) {
+            expect((string) $app)->not->toContain($forbidden);
+        }
+        $tags = app(BreedSuitability::class)->for(BreedType::ItalianGreyhound);
+        expect(array_keys(config('breed_suitability.vocabulary')))->not->toContain('hypoallergenic')
+            // RKC Breed Watch Category 1 (S486) → no welfare chip; RKC "Over 12 years" → no shorter_lifespan.
+            ->and(array_intersect($tags['consider'], ['brachycephalic_breathing', 'short_muzzle_breathing', 'back_spine', 'hips_hind_legs', 'heart_and_spine', 'sensitive_skin', 'eyelid_problems', 'shorter_lifespan']))->toBe([])
+            ->and(igData('italian_greyhound.suitability.rkc_breed_watch.value'))->toBe('Category 1')
+            ->and(igData('proposed_game_parameters.italian_greyhound.marketing.source_id'))->toBe('S486')
+            ->and(igData('proposed_game_parameters.italian_greyhound.marketing.value'))->toContain('in marketing: yes')
+            // The Dogs Trust rule of thumb (84) and McMillan 2024 via Wikipedia (126) are alternatives only — never seeded.
+            ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'italian-greyhound')->where('key', StageParamKey::StartsAtMonths->value)->pluck('value')->all())->not->toContain(84)->not->toContain(126);
+    });
+});
+
+describe('suitability tags (own file, runbook "Own files only")', function () {
+    it('gives the children and low-shedding chips plus fragile bones and the new cold_sensitive chip; never small_children, other_pets, apartment or chases_small_pets', function () {
+        $tags = app(BreedSuitability::class)->for(BreedType::ItalianGreyhound);
+        expect($tags['suits'])->toBe(['children', 'low_shedding'])
+            ->and($tags['suits'])->not->toContain('small_children')->not->toContain('apartment')->not->toContain('family_pet')
+            ->not->toContain('other_pets')->not->toContain('first_time_owner')->not->toContain('often_alone')->not->toContain('large_home')
+            ->and($tags['consider'])->toBe(['fragile_older_children', 'cold_sensitive'])
+            ->and($tags['consider'])->not->toContain('sheds')->not->toContain('chases_small_pets')->not->toContain('long_daily_exercise')
+            ->not->toContain('frequent_grooming')->not->toContain('older_children')->not->toContain('heat_sensitive')
+            ->and(config('breed_suitability.vocabulary.cold_sensitive'))->toBe('consider');
+
+        expect(igData('italian_greyhound.suitability.rkc_exercise.quote'))->toBe('Exercise: Up to 1 hour per day')
+            ->and(igData('italian_greyhound.suitability.rkc_size_of_home.quote'))->toBe('Size of home: Small house')
+            ->and(igData('italian_greyhound.suitability.rkc_shedding.quote'))->toBe('Sheds: No')
+            ->and(igData('italian_greyhound.behaviour.fragile_bones.quote'))->toContain('bone fragility')
+            ->and(igData('italian_greyhound.suitability.petmd_cold.quote'))->toContain('easily affected by the cold')
+            ->and(igData('italian_greyhound.suitability.petmd_children.quote'))->toContain('do well with children')
+            // "have a prey drive" is not a high prey drive (runbook rule) → no chases_small_pets.
+            ->and(igData('italian_greyhound.behaviour.other_pets.quote'))->not->toContain('high prey drive');
+    });
+});

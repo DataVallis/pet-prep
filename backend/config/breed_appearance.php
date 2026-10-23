@@ -527,6 +527,14 @@
 | roe, mouse grey; never blue, brown or tan markings (disqualifications, S478). RKC Breed Watch Category 1 (S479) — no
 | welfare concern. Colour weights unsourced → `verified => false`.
 |
+| Italian Greyhound (M5-R10-60, docs/research/dog-data italian_greyhound.appearance): "A Greyhound in miniature, more
+| slender in all proportions." / "Elegant, graceful, and quick-moving." (Kennel Club standard, S485); short, fine, glossy
+| coat over fine skin; long, flat, narrow skull, fine long muzzle, dark nose; rather large bright eyes; rose-shaped ears
+| placed well back; low-set, long, fine tail carried low. "Black, blue, cream, fawn, red, white, or any of these colours
+| broken with white." (S485) — fawn weighted highest (the register portrait), then blue, black, cream, red, white and fawn
+| broken with white; never merle, brindle or black / blue with tan markings (unacceptable, S485). Slender but healthy, never
+| emaciated. RKC Breed Watch Category 1 (S486) — no welfare concern. Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2662,6 +2670,44 @@ return [
             'nose' => ['large nose of dark flesh colour merging into grey'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
+    ],
+    // M5-R10-60 (docs/research/dog-data/data.json italian_greyhound.appearance; runbook rules 2026-10-10:
+    // standard colours only — never merle, brindle or tan markings).
+    'italian_greyhound' => [
+        'display_name' => 'Italian Greyhound',
+        // Colour frequencies are in no source (italian_greyhound.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'Kennel Club breed standard (S485), RKC breed page (S486) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S486 "Size: Small"; S485 "3.6kg – 4.5kg."',
+            'build' => 'S485 "A Greyhound in miniature, more slender in all proportions." / "Elegant, graceful, and quick-moving."',
+            'coat_length' => 'S485 "Skin fine and supple. Hair, short, fine, and glossy."',
+            'coat_color' => 'S485 "Black, blue, cream, fawn, red, white, or any of these colours broken with white." (weights unsourced; never merle, brindle or tan markings — S485)',
+            'head' => 'S485 "Skull long, flat, and narrow, slight stop. Muzzle fine and long. Nose dark in colour."',
+            'ear_carriage' => 'S485 "Rose-shaped, placed well back, soft and fine, not pricked."',
+            'eye_color' => 'S485 "Rather large, bright; full of expression."',
+            'tail' => 'S485 "Low-set, long, fine, carried low."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'a Greyhound in miniature, more slender in all proportions, elegant and graceful, slender but healthy', 'weight' => 3], 'fine-boned, elegant little sighthound standing alert'],
+            'coat_length' => ['short, fine, glossy coat over fine, supple skin'],
+            // Kennel Club standard (S485); fawn weighted highest (the register portrait).
+            'coat_color' => [
+                ['value' => 'fawn', 'weight' => 30],
+                ['value' => 'blue grey', 'weight' => 20],
+                ['value' => 'black', 'weight' => 15],
+                ['value' => 'cream', 'weight' => 10],
+                ['value' => 'red', 'weight' => 10],
+                ['value' => 'white', 'weight' => 5],
+                ['value' => 'fawn broken with white', 'weight' => 10],
+            ],
+            'head' => ['long, flat, narrow skull with a slight stop, fine long muzzle and a dark nose'],
+            'ear_carriage' => ['small, soft rose-shaped ears folded back'],
+            'eye_color' => ['rather large, bright, dark eyes full of expression'],
+            'tail' => ['low-set, long, fine tail carried low'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

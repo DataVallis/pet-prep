@@ -528,6 +528,15 @@ class FalAiService
                 .'natural undocked tail hanging down in repose, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-60: Kennel Club standard (S485) — fawn as the anchor (black, blue, cream, red, white or any of these
+            // broken with white are the other standard colours; never merle, brindle or tan markings); slender but healthy.
+            BreedType::ItalianGreyhound => 'A friendly, alert Italian Greyhound with a fawn coat, '
+                .'short, fine, glossy coat over fine, supple skin, '
+                .'a Greyhound in miniature, more slender in all proportions, elegant and graceful, slender but healthy, '
+                .'long, flat, narrow skull with a slight stop, fine long muzzle, dark nose, rather large bright eyes, '
+                .'small rose-shaped ears folded back, low-set long fine tail carried low, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1257,6 +1266,18 @@ class FalAiService
                 'eye_color' => 'amber',
                 'fur_texture' => 'short, strong, very dense, smooth-lying coat',
                 'markings' => 'grey only, at most small white marks on the chest and toes, natural undocked tail',
+            ],
+            // M5-R10-60: Kennel Club standard S485 colours (black, blue, cream, fawn, red, white, or any of these broken
+            // with white; never merle, brindle or tan markings).
+            BreedType::ItalianGreyhound => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'fawn',
+                    1 => 'blue grey',
+                    2 => 'black',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'short, fine, glossy coat',
+                'markings' => 'solid colour, at most white on the chest and feet, small rose-shaped ears, long fine low-carried tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
