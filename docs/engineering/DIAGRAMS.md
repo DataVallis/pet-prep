@@ -1001,6 +1001,8 @@ erDiagram
     string pairing_pin
     bigint pairing_pet_id "join PIN target"
     boolean adapted_mode "M5-T12: child, parent switch (pushes instead of steps)"
+    string media_display "M5-T11: child, video or picture"
+    boolean easy_gestures "M5-T17: child, parent switch (hold instead of swipe)"
   }
   PARENT_WALK_ENTRIES {
     bigint pet_id

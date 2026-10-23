@@ -116,6 +116,8 @@ class User extends Authenticatable implements FilamentUser
             'adapted_mode' => 'boolean',
             // M5-T11: »Prikaz: Video / Slika« of a child profile (display preference).
             'media_display' => MediaDisplay::class,
+            // M5-T17: »Lažje kretnje« — parent-only switch on a child profile (hold instead of swipe).
+            'easy_gestures' => 'boolean',
         ];
     }
 

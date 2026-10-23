@@ -202,6 +202,34 @@ class ChildProfileService
     }
 
     /**
+     * M5-T17 »Lažje kretnje« (David 2026-10-23): the child app uses press-and-hold instead
+     * of swipe in every swipe game (brushing, wand, litter change, dog ball play). Parent
+     * only; independent of adapted mode; not health data (no consent, no reason stored).
+     * Game rules and server validation do not change. A change broadcasts one `PetUpdated`
+     * (`caretaker_settings_changed`) on the child's active pet after commit so a running
+     * child app refetches its state; the same value again changes nothing.
+     */
+    public function setEasyGestures(User $child, bool $on): User
+    {
+        $changed = DB::transaction(function () use ($child, $on): bool {
+            $locked = User::whereKey($child->id)->lockForUpdate()->firstOrFail();
+            if ((bool) $locked->easy_gestures === $on) {
+                return false;
+            }
+            $locked->forceFill(['easy_gestures' => $on])->save();
+
+            $pet = $this->families->activePetOf($locked);
+            if ($pet !== null) {
+                PetUpdated::afterCommit($pet, self::SETTINGS_EVENT);
+            }
+
+            return true;
+        });
+
+        return $changed ? $child->refresh() : $child;
+    }
+
+    /**
      * M5-T12 consent withdrawal: the child's push days become step days (caller holds
      * the child row lock). The pets of those rows (and the active pet) are locked first
      * in id order — step writers hold the pet lock.

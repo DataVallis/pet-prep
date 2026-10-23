@@ -59,6 +59,8 @@ class ChildProfileController extends Controller
                 'adapted_mode' => false,
                 // M5-T11: a new profile shows video.
                 'media_display' => MediaDisplay::Video->value,
+                // M5-T17: a new profile swipes (no »Lažje kretnje«).
+                'easy_gestures' => false,
             ],
         ], 201);
     }
@@ -71,8 +73,10 @@ class ChildProfileController extends Controller
      * - `media_display` (`video` | `picture`, M5-T11) — »Prikaz: Video / Slika« in the child
      *   app: `picture` shows the key image of the pet's current state and downloads no video.
      *   The child can change it too (`PATCH /api/child/settings`).
+     * - `easy_gestures` (bool, M5-T17) — »Lažje kretnje«: the child app uses press-and-hold
+     *   instead of swipe in every swipe game. Parent only; game rules and scores are the same.
      * A change broadcasts `caretaker_settings_changed` on the child's active pet.
-     * 200 `{child_id, adapted_mode, media_display}`; 404 `child_not_found` for a child outside
+     * 200 `{child_id, adapted_mode, media_display, easy_gestures}`; 404 `child_not_found` for a child outside
      * the family; child token → 403.
      *
      * PATCH /api/parent/children/{child}/settings
@@ -94,6 +98,9 @@ class ChildProfileController extends Controller
         if ($request->mediaDisplay() !== null) {
             $updated = $this->profiles->setMediaDisplay($updated, $request->mediaDisplay());
         }
+        if ($request->easyGestures() !== null) {
+            $updated = $this->profiles->setEasyGestures($updated, $request->easyGestures());
+        }
         $updated->refresh();
 
         return response()->json([
@@ -110,6 +117,12 @@ class ChildProfileController extends Controller
              * @var 'video'|'picture'
              */
             'media_display' => ($updated->media_display ?? MediaDisplay::Video)->value,
+            /**
+             * M5-T17 »Lažje kretnje«: true = hold instead of swipe in the child's swipe games.
+             *
+             * @var bool
+             */
+            'easy_gestures' => (bool) $updated->easy_gestures,
         ], 200);
     }
 
