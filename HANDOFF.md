@@ -93,6 +93,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-23 (cloud, backend) — hotfix: /admin 500 from the Filament bell (`fix/notifications-data-jsonb`)
+Since the M5-T15 deploy every /admin page showed a 500 popup: Filament's `DatabaseNotifications` filters `data->format` and `notifications.data` was `text` (`text ->> unknown` has no operator on PostgreSQL). New migration `2027_01_18_120000_change_notifications_data_to_jsonb` (`USING data::jsonb`, pgsql only; runs with the next deploy's `migrate --force`). Test `AdminDatabaseNotificationsTest`. Debt: none.
+
 ### 2026-10-23 (cloud, orchestrator) — OTA plan re-reads the deploy jobs (`fix/ota-plan-retry`)
 David saw no changes after the manual production deploy of `3fb6d12`: the automatic OTA plan got "without a production deploy" from the jobs API although the deploy job had succeeded. Published by hand (Mobile OTA update → production): iOS OTA sent, Android needs a new build. Fix: `mobile-ota-plan.sh` re-reads the jobs up to 5× / 20 s; new CI harness `scripts/tests/mobile-ota-plan.test.sh`. Next: David confirms the iOS OTA on his phone; Android build.
 
