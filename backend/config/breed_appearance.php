@@ -519,6 +519,14 @@
 | (S473) — black weighted highest (the register portrait), then brindle, wheaten; "Any other colour or combination of
 | colours unacceptable." (S473). No welfare concern found. Colour weights unsourced → `verified => false`.
 |
+| Weimaraner (M5-R10-59, docs/research/dog-data weimaraner.appearance): "Medium to large size hunting dog. Functional
+| working type, pleasing in shape, sinewy and very muscular." (FCI standard No. 99, S478); the short-haired variety
+| (short, strong, very dense, smooth-lying topcoat — the long-haired variety is not modelled); long muzzle, large nose of
+| dark flesh colour merging into grey; amber eyes; broad, fairly long ears set on high; natural tail. "Silver, roe or
+| mouse grey, as well as shades of these colours." (S478) — silver grey weighted highest (the register portrait), then
+| roe, mouse grey; never blue, brown or tan markings (disqualifications, S478). RKC Breed Watch Category 1 (S479) — no
+| welfare concern. Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2620,6 +2628,40 @@ return [
             'head' => ['long head with a nearly flat skull, skull and foreface of equal length, large black nose'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-59 (docs/research/dog-data/data.json weimaraner.appearance; runbook rules 2026-10-10:
+    // standard colours only — silver, roe or mouse grey; never blue, brown or tan markings).
+    'weimaraner' => [
+        'display_name' => 'Weimaraner',
+        // Colour frequencies are in no source (weimaraner.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI standard No. 99 (S478), RKC breed page (S479) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S479 "Size: Large"; S478 "Medium to large size hunting dog."',
+            'build' => 'S478 "Medium to large size hunting dog. Functional working type, pleasing in shape, sinewy and very muscular."',
+            'coat_length' => 'S478 "Short (but longer and thicker than with most comparable breeds), strong, very dense, smooth lying topcoat."',
+            'coat_color' => 'S478 "Silver, roe or mouse grey, as well as shades of these colours. Head and leathers generally slightly paler." (weights unsourced; never blue or brown — S478)',
+            'ear_carriage' => 'S478 "EARS: Broad and fairly long, just reaching to corner of mouth."',
+            'eye_color' => 'S478 "EYES: Amber colour, dark to pale, with intelligent expression."',
+            'tail' => 'S478 "Carried hanging down in repose."',
+            'nose' => 'S478 "Dark flesh colour, merging gradually into gray towards the rear."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'medium to large, sinewy and very muscular working pointer, functional and athletic', 'weight' => 3], 'lean, well-muscled hunting dog standing alert'],
+            'coat_length' => ['short, strong, very dense, smooth-lying coat'],
+            // FCI standard (S478): silver, roe or mouse grey; silver grey weighted highest (the register portrait).
+            'coat_color' => [
+                ['value' => 'silver grey', 'weight' => 50],
+                ['value' => 'roe grey', 'weight' => 25],
+                ['value' => 'mouse grey', 'weight' => 25],
+            ],
+            'ear_carriage' => ['broad, fairly long ears set on high, hanging to the corner of the mouth'],
+            'eye_color' => ['amber eyes with an intelligent expression'],
+            'tail' => ['natural, undocked tail hanging down in repose'],
+            'nose' => ['large nose of dark flesh colour merging into grey'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'ear_carriage', 'eye_color', 'tail', 'nose'],
     ],
     'domestic_cat' => [
         'display_name' => 'domestic mixed-breed cat',

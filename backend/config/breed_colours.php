@@ -357,6 +357,12 @@ return [
         ['key' => 'brindle', 'value' => 'brindle', 'en' => 'Brindle', 'sl' => 'Tigrast'],
         ['key' => 'wheaten', 'value' => 'wheaten', 'en' => 'Wheaten', 'sl' => 'Pšenično rumen'],
     ],
+    // M5-R10-59: FCI standard No. 99 S478 — silver, roe or mouse grey (grey only, never blue or brown).
+    'weimaraner' => [
+        ['key' => 'silver-grey', 'value' => 'silver grey', 'en' => 'Silver grey', 'sl' => 'Srebrno siv'],
+        ['key' => 'roe-grey', 'value' => 'roe grey', 'en' => 'Roe grey', 'sl' => 'Srnje siv'],
+        ['key' => 'mouse-grey', 'value' => 'mouse grey', 'en' => 'Mouse grey', 'sl' => 'Mišje siv'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

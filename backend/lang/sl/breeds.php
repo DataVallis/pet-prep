@@ -62,6 +62,7 @@ return [
     'chesapeake_bay_retriever' => 'Chesapeake Bay retriver',
     'samoyed' => 'Samojed',
     'scottish_terrier' => 'Škotski terier',
+    'weimaraner' => 'Weimarski ptičar',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

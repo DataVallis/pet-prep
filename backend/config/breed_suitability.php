@@ -1562,5 +1562,35 @@ return [
             ],
         ],
 
+        // M5-R10-59: weimaraner.* (S477–S483), runbook rules (data.json
+        // proposed_game_parameters.weimaraner.suitability_tags). RKC key facts (S479) + PDSA (S480) + PetMD (S481).
+        // RKC Breed Watch Category 1 → no welfare chip. Never children / small_children (PDSA: not with smaller
+        // children → not_for_small_children, Hungarian Vizsla precedent), other_pets (PDSA: not with smaller pets),
+        // frequent_grooming (RKC "Once a week"). No new vocabulary key.
+        'weimaraner' => [
+            'suits' => [
+                // S479 "Exercise: More than 2 hours per day"
+                ['tag' => 'active_family', 'source_ids' => ['S479'], 'refs' => ['weimaraner.exercise.adult', 'weimaraner.suitability.rkc_exercise']],
+                // S480 "In the right hands, Weimaraners make wonderful family pets and can be very good natured dogs."
+                ['tag' => 'family_pet', 'source_ids' => ['S480'], 'refs' => ['weimaraner.suitability.pdsa_family']],
+                // S479 "Size of home: Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S479'], 'refs' => ['weimaraner.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                // S479 "Exercise: More than 2 hours per day"
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S479'], 'refs' => ['weimaraner.exercise.adult', 'weimaraner.suitability.rkc_exercise']],
+                // S480 "Because they can be a little wilful at times, Weimaraners do best with owners familiar with the breed and their needs."
+                ['tag' => 'experienced_owner', 'source_ids' => ['S480'], 'refs' => ['weimaraner.behaviour.experienced_owner']],
+                // S480 "we wouldn’t recommend getting a Weimaraner if you have smaller children as they could accidentally knock them over."
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S480'], 'refs' => ['weimaraner.suitability.pdsa_children', 'weimaraner.behaviour.family']],
+                // S481 "Weimaraners can develop separation anxiety."
+                ['tag' => 'needs_company', 'source_ids' => ['S481'], 'refs' => ['weimaraner.behaviour.time_alone']],
+                // S479 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S479'], 'refs' => ['weimaraner.suitability.rkc_shedding']],
+                // S480 "They have a very strong prey drive and are likely to chase anything that moves!"
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S480'], 'refs' => ['weimaraner.behaviour.other_pets']],
+            ],
+        ],
+
     ],
 ];

@@ -519,6 +519,15 @@ class FalAiService
                 .'tail of moderate length, thick at the root, carried upright, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-59: FCI standard No. 99 (S478) — silver grey as the anchor (roe and mouse grey are the other standard
+            // shades; grey only, never blue, brown or tan markings); short-haired variety, natural undocked tail.
+            BreedType::Weimaraner => 'A friendly, alert short-haired Weimaraner with a silver grey coat, '
+                .'short, strong, very dense, smooth-lying coat, '
+                .'medium to large, sinewy and very muscular working pointer, functional and athletic, '
+                .'long muzzle, large nose of dark flesh colour merging into grey, amber eyes, broad, fairly long ears set on high, '
+                .'natural undocked tail hanging down in repose, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1236,6 +1245,18 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'harsh, dense, wiry close-lying double coat',
                 'markings' => 'trimmed beard, eyebrows and leg furnishings, small pointed erect ears, tail carried upright',
+            ],
+            // M5-R10-59: FCI standard No. 99 S478 colours (silver, roe or mouse grey; grey only, small white marks on
+            // the chest and toes at most).
+            BreedType::Weimaraner => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'silver grey',
+                    1 => 'roe grey',
+                    2 => 'mouse grey',
+                },
+                'eye_color' => 'amber',
+                'fur_texture' => 'short, strong, very dense, smooth-lying coat',
+                'markings' => 'grey only, at most small white marks on the chest and toes, natural undocked tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
