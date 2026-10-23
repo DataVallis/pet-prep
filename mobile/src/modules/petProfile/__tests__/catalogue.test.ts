@@ -733,7 +733,8 @@ describe('breed search', () => {
     // M5-R10-36: the Brittany (»bretonski ptičar«) is a pointer too — never the German Shepherd.
     // M5-R10-40: … and the Hungarian Vizsla (»madžarski kratkodlaki ptičar«, »Hungarian Pointer«);
     // M5-R10-55: … and the Wirehaired Pointing Griffon (»francoski ostrodlaki ptičar«).
-    expect(find('pticar')).toEqual(['german_shorthaired_pointer', 'brittany', 'hungarian_vizsla', 'wirehaired_pointing_griffon']);
+    // M5-R10-59: … and the Weimaraner (»weimarski ptičar«).
+    expect(find('pticar')).toEqual(['german_shorthaired_pointer', 'brittany', 'hungarian_vizsla', 'wirehaired_pointing_griffon', 'weimaraner']);
     expect(find('kurzhaar')).toEqual(['german_shorthaired_pointer']);
     expect(find('pointer')).toEqual(['german_shorthaired_pointer', 'hungarian_vizsla']);
     expect(find('gsp')).toEqual(['german_shorthaired_pointer']);
