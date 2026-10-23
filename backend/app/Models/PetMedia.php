@@ -9,6 +9,7 @@ use App\Enums\PetTransition;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * One AI media slot of a pet (M4-03 / M4-05): the reference image
@@ -65,6 +66,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property float $cost_usd
  * @property string|null $error_reason
  * @property string|null $error
+ * @property string|null $candidate_path
+ * @property int|null $candidate_bytes
+ * @property string|null $candidate_mime
+ * @property string|null $quality
+ * @property string|null $quality_reason
+ * @property int|null $quality_retry_generation
+ * @property float|null $stored_duration_seconds
  */
 class PetMedia extends Model
 {
@@ -103,6 +111,32 @@ class PetMedia extends Model
 
     /** @var list<string> recipes of a state loop (made from the state's key image as a loop) */
     public const LOOP_RECIPES = [self::RECIPE_LOOP, self::RECIPE_START_ONLY];
+
+    /*
+     * Quality check (David 2026-10-23) — `quality` = verdict of the STORED file (like
+     * stored_recipe: written only when a file is stored / linked / checked; null = stored
+     * before the check existed or with the check switched off):
+     *   passed            technical + AI vision check passed
+     *   passed_technical  technical check passed, NOT AI-checked (budget out / vision profile off / vision error)
+     *   unchecked         the check could not run (ffmpeg missing) — served
+     *   flagged           a stored clip failed `media:quality-check` in enforce mode — NOT shown (isShown)
+     *   shadow_failed     failed in shadow mode (QA #363 M1) — still shown, the would-be verdict
+     *   approved          a superadmin approved it (»Approve anyway«)
+     * »Needs review« (needsReview()): the candidate failed twice — slot `failed` with
+     * error_reason `quality_failed`, the candidate kept in `candidate_path` for »Approve anyway«.
+     */
+    public const QUALITY_PASSED = 'passed';
+
+    public const QUALITY_PASSED_TECHNICAL = 'passed_technical';
+
+    public const QUALITY_UNCHECKED = 'unchecked';
+
+    public const QUALITY_FLAGGED = 'flagged';
+
+    /** QA #363 M1: failed the check in SHADOW mode — still shown (the would-be verdict, for calibration). */
+    public const QUALITY_SHADOW_FAILED = 'shadow_failed';
+
+    public const QUALITY_APPROVED = 'approved';
 
     public const STATUS_PENDING = 'pending';
 
@@ -145,6 +179,14 @@ class PetMedia extends Model
         'completed_at',
         // M5-R01: life stage the current generation depicts (image).
         'life_stage',
+        // Quality check (David 2026-10-23): the downloaded clip waiting for its check.
+        'candidate_path',
+        'candidate_bytes',
+        'candidate_mime',
+        'quality',
+        'quality_reason',
+        'quality_retry_generation',
+        'stored_duration_seconds',
     ];
 
     /**
@@ -158,6 +200,9 @@ class PetMedia extends Model
             'attempts' => 'integer',
             'bytes' => 'integer',
             'duration_seconds' => 'float',
+            'stored_duration_seconds' => 'float',
+            'candidate_bytes' => 'integer',
+            'quality_retry_generation' => 'integer',
             'cost_usd' => 'float',
             'completed_at' => 'datetime',
         ];
@@ -166,6 +211,49 @@ class PetMedia extends Model
     public function pet(): BelongsTo
     {
         return $this->belongsTo(Pet::class);
+    }
+
+    /** @return HasMany<PetMediaQualityCheck, $this> */
+    public function qualityChecks(): HasMany
+    {
+        return $this->hasMany(PetMediaQualityCheck::class);
+    }
+
+    /** Quality check: the candidate failed twice and waits for a superadmin (never shown to children). */
+    public function needsReview(): bool
+    {
+        return $this->error_reason === 'quality_failed' && filled($this->candidate_path);
+    }
+
+    /** A stored clip with a failed verdict (enforce: flagged / hidden; shadow: would fail, shown). */
+    public function isFlaggedQuality(): bool
+    {
+        return in_array($this->quality, [self::QUALITY_FLAGGED, self::QUALITY_SHADOW_FAILED], true);
+    }
+
+    /**
+     * Quality check: the admin »Needs review« list — a twice-failed candidate, a stored clip
+     * flagged by media:quality-check, or (QA #363 M1) a clip that failed in shadow mode.
+     *
+     * @param  Builder<PetMedia>  $query
+     * @return Builder<PetMedia>
+     */
+    public function scopeNeedingReview(Builder $query): Builder
+    {
+        return $query->where(fn (Builder $q) => $q->where(fn (Builder $q) => $q->where('error_reason', 'quality_failed')->whereNotNull('candidate_path'))
+            ->orWhereIn('quality', [self::QUALITY_FLAGGED, self::QUALITY_SHADOW_FAILED]));
+    }
+
+    /**
+     * Withheld from children by the check (enforce mode): twice-failed candidates and flagged clips.
+     *
+     * @param  Builder<PetMedia>  $query
+     * @return Builder<PetMedia>
+     */
+    public function scopeWithheldByQuality(Builder $query): Builder
+    {
+        return $query->where(fn (Builder $q) => $q->where(fn (Builder $q) => $q->where('error_reason', 'quality_failed')->whereNotNull('candidate_path'))
+            ->orWhere('quality', self::QUALITY_FLAGGED));
     }
 
     public function look(): BelongsTo
@@ -309,6 +397,15 @@ class PetMedia extends Model
     public function isServable(): bool
     {
         return filled($this->storage_path);
+    }
+
+    /**
+     * The stored file may be shown to the apps: servable and not flagged by the quality check
+     * (David 2026-10-23 — a flagged clip is treated like a failed slot: the app's fallback).
+     */
+    public function isShown(): bool
+    {
+        return $this->isServable() && $this->quality !== self::QUALITY_FLAGGED;
     }
 
     /** Generation is under way (nothing to do for a sweep / backfill). */

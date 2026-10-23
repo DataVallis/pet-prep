@@ -54,6 +54,8 @@ class SystemHealthStats extends StatsOverviewWidget
         $known = array_filter($backlog, fn (?int $n): bool => $n !== null);
         $stuck = $health->stuckLedgerPetIds();
         $media = $health->failedMediaCount(24);
+        $needsReview = $health->needsReviewMediaCount();
+        $unchecked = $health->uncheckedMediaCount(24);
         $beat = $health->lastHeartbeat();
         $stale = $health->heartbeatIsStale();
         $disk = $health->diskUsage();
@@ -90,6 +92,17 @@ class SystemHealthStats extends StatsOverviewWidget
                 ->description(__('admin.system_health.stats.media_desc'))
                 ->descriptionIcon('heroicon-m-photo')
                 ->color($media > 0 ? 'warning' : 'success'),
+            // Quality check (David 2026-10-23): clips that failed the check twice / were flagged.
+            Stat::make(__('admin.system_health.stats.needs_review'), $needsReview)
+                ->description(__('admin.system_health.stats.needs_review_desc'))
+                ->descriptionIcon('heroicon-m-eye')
+                ->color($needsReview > 0 ? 'warning' : 'success')
+                ->url(SystemHealthService::needsReviewUrl()),
+            // QA #363 m1: clips served without a check (ffmpeg missing / nothing measurable).
+            Stat::make(__('admin.system_health.stats.unchecked'), $unchecked)
+                ->description(__('admin.system_health.stats.unchecked_desc'))
+                ->descriptionIcon('heroicon-m-question-mark-circle')
+                ->color($unchecked > 0 ? 'danger' : 'success'),
             Stat::make(__('admin.system_health.stats.disk'), $disk === null ? '—' : $disk['used_percent'].' %')
                 ->description($disk === null
                     ? __('admin.system_health.stats.disk_unknown')

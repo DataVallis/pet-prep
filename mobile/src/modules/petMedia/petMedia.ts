@@ -49,10 +49,12 @@ export interface PetMediaInfo {
   stateMedia: boolean;
   /** M5-T09 / T10: stored POSE images of the school / game phase clips (`sit`, `empty`, `crouch`, …). */
   poses: Record<string, string>;
-  /** M5-T09 / T10: stored 3 s PHASE clips (`school_sit_attention`, `ball_running`, `wand_pouncing`, …), played once. */
+  /** M5-T09 / T10: stored PHASE clips (`school_sit_attention`, `ball_running`, `wand_pouncing`, …), played once (`phaseMs`). */
   phases: Record<string, string>;
   /** M5-T09 / T10: phase clip groups of the pet's set (`school`, `ball`, `wand`) — then never a state clip there. */
   phaseGroups: PhaseGroup[];
+  /** David 2026-10-23: length (ms) of each stored phase clip — school performing 5 s, others 3 s; missing = 3 s. */
+  phaseMs: Record<string, number>;
 }
 
 /** M5-T09 / T10 phase clip groups. */
@@ -61,6 +63,16 @@ export type PhaseGroup = 'school' | 'ball' | 'wand';
 const PHASE_GROUPS: readonly PhaseGroup[] = ['school', 'ball', 'wand'];
 const POSE_KEY = /^(sit|come|place|door|empty|crouch|catch)$/;
 const PHASE_KEY = /^(school_(sit|come|place|potty)_(attention|performing|success)|ball_(waiting|running|fetching)|wand_(stalking|pouncing|catching))$/;
+
+/** `phase_seconds` → ms per known phase key (1–15 s; anything else is dropped → the 3 s default). */
+function secondsMap(raw: unknown, key: RegExp): Record<string, number> {
+  const out: Record<string, number> = {};
+  if (typeof raw !== 'object' || raw === null || Array.isArray(raw)) return out;
+  for (const [k, v] of Object.entries(raw as Record<string, unknown>)) {
+    if (key.test(k) && typeof v === 'number' && Number.isFinite(v) && v >= 1 && v <= 15) out[k] = Math.round(v * 1000);
+  }
+  return out;
+}
 
 function urlMap(raw: unknown, key: RegExp): Record<string, string> {
   const out: Record<string, string> = {};
@@ -89,6 +101,7 @@ export const EMPTY_PET_MEDIA: PetMediaInfo = {
   poses: {},
   phases: {},
   phaseGroups: [],
+  phaseMs: {},
 };
 
 function isPetState(value: unknown): value is PetState {
@@ -170,6 +183,8 @@ export function normalizePetMedia(raw: PetMedia | null | undefined | unknown, le
     poses: urlMap(m.poses, POSE_KEY),
     phases: urlMap(m.phases, PHASE_KEY),
     phaseGroups: Array.isArray(m.phase_groups) ? PHASE_GROUPS.filter((g) => (m.phase_groups as unknown[]).includes(g)) : [],
+    // David 2026-10-23: older servers send none → every phase clip is 3 s.
+    phaseMs: secondsMap(m.phase_seconds, PHASE_KEY),
   };
 }
 

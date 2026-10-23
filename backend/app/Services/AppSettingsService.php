@@ -50,6 +50,11 @@ use InvalidArgumentException;
  *
  * `fal_balance_alert` (M5-T15, David 2026-10-22) = {min_usd: float|null}: warn the
  * superadmins when the fal.ai account balance is below it. No row → 20 $.
+ *
+ * `quality_check` (David 2026-10-23: automatic technical + AI vision check of every new
+ * clip; QA #363 M1: three modes) = {mode: off|shadow|enforce}. Shadow (default until the
+ * thresholds are calibrated) records verdicts and always serves; enforce regenerates once
+ * and hides a second failure; off = the old behaviour. No row → env AI_QUALITY_CHECK_MODE.
  */
 class AppSettingsService
 {
@@ -76,6 +81,18 @@ class AppSettingsService
 
     /** M5-T09 / T10 (QA M2): `{enabled: bool}` — school & game phase clips on / off (no row → env default, on). */
     public const PHASE_CLIPS_KEY = 'phase_clips';
+
+    /** David 2026-10-23 / QA #363 M1: `{mode: off|shadow|enforce}` — clip quality check (no row → env default, shadow). */
+    public const QUALITY_CHECK_KEY = 'quality_check';
+
+    public const QUALITY_OFF = 'off';
+
+    public const QUALITY_SHADOW = 'shadow';
+
+    public const QUALITY_ENFORCE = 'enforce';
+
+    /** @var list<string> */
+    public const QUALITY_CHECK_MODES = [self::QUALITY_OFF, self::QUALITY_SHADOW, self::QUALITY_ENFORCE];
 
     /** M5-T15: `{min_usd}` — warn the superadmins when the fal.ai balance drops below it. */
     public const FAL_BALANCE_ALERT_KEY = 'fal_balance_alert';
@@ -436,6 +453,51 @@ class AppSettingsService
     public static function phaseClipsDefault(): bool
     {
         return (bool) config('media.state_media.phase_clips_enabled', true);
+    }
+
+    /**
+     * Clip quality check mode (David 2026-10-23; QA #363 M1): `off` (a downloaded clip is
+     * served at once, the pre-check behaviour), `shadow` (DEFAULT until the thresholds are
+     * calibrated on production clips: checks run and record the would-be verdict + metrics,
+     * the clip is ALWAYS served, no automatic regeneration, nothing hidden) or `enforce`
+     * (a failed clip is regenerated once, a second failure is hidden — »Needs review«).
+     * `$fresh` reads the row itself (queue workers). No row → env AI_QUALITY_CHECK_MODE.
+     */
+    public function qualityCheckMode(bool $fresh = false): string
+    {
+        /** @var array{mode?: string, enabled?: bool} $value */
+        $value = $fresh
+            ? (AppSetting::find(self::QUALITY_CHECK_KEY)?->value ?? [])
+            : Cache::remember(self::cacheKey(self::QUALITY_CHECK_KEY), self::CACHE_TTL_SECONDS,
+                fn (): array => AppSetting::find(self::QUALITY_CHECK_KEY)?->value ?? []);
+
+        $mode = $value['mode'] ?? null;
+
+        return in_array($mode, self::QUALITY_CHECK_MODES, true) ? $mode : self::qualityCheckDefault();
+    }
+
+    /** The check runs at all (shadow or enforce). */
+    public function qualityCheck(bool $fresh = false): bool
+    {
+        return $this->qualityCheckMode($fresh) !== self::QUALITY_OFF;
+    }
+
+    /** Save the quality check mode (superadmin), audit it and bust the cache. */
+    public function updateQualityCheck(User $actor, string $mode): void
+    {
+        if (! in_array($mode, self::QUALITY_CHECK_MODES, true)) {
+            throw new InvalidArgumentException("Unknown quality check mode {$mode}.");
+        }
+
+        $this->store($actor, self::QUALITY_CHECK_KEY, ['mode' => $mode], ['mode' => self::qualityCheckDefault()]);
+    }
+
+    /** The mode "no row" stands for (env AI_QUALITY_CHECK_MODE, default shadow). */
+    public static function qualityCheckDefault(): string
+    {
+        $mode = (string) config('media.quality_check.mode', self::QUALITY_SHADOW);
+
+        return in_array($mode, self::QUALITY_CHECK_MODES, true) ? $mode : self::QUALITY_SHADOW;
     }
 
     /** Equal settings values, ignoring the key order of (nested) arrays. */

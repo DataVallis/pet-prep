@@ -146,8 +146,60 @@ return [
             'state' => 5,
             'transition' => 5,
             'school' => 3,
+            // David 2026-10-23: the school PERFORMING clips (sit / come / place / door) are 5 s
+            // (a natural, unhurried movement into the pose — no morphing in the last frames).
+            // Attention / success and every game clip stay 3 s. Existing 3 s performing clips
+            // stay valid until regenerated; the app reads each stored clip's length
+            // (`media.phase_seconds`).
+            'school_performing' => 5,
             'game' => 3,
         ],
+    ],
+
+    /*
+    | Automatic clip quality check (David 2026-10-23, MediaQualityService): every downloaded
+    | clip (state video, transition, school / game phase clip) is a CANDIDATE until it passes
+    |  1. a free technical check (ffmpeg / ffprobe in the app image): duration, motion (mean
+    |     frame difference — frozen clips had YDIF ~0.08 / 255), sudden jumps (max vs median
+    |     frame difference), motion bunched up at the end (morph into the end frame) and, for a
+    |     clip with an end frame, last frame vs the end image (SSIM);
+    |  2. an AI vision check (`vision_profile`, fal through FalGateway, production budget,
+    |     purpose quality_check) of ~6 frames against a fixed rubric.
+    | Enforce: pass → the candidate becomes the servable file; fail → ONE automatic regeneration
+    | (new fal request); a second fail → »Needs review« in /admin, not shown (the app's fallback).
+    | Shadow (default until calibrated, QA #363 M1): verdict + metrics recorded, the clip is
+    | always served. Mode: /admin → Feature switches »Quality check« (app_settings `quality_check`).
+    */
+    'quality_check' => [
+        // QA #363 M1: off | shadow | enforce — only the default while /admin → Feature switches has
+        // no `quality_check` row. Shadow (record verdicts, always serve) until the thresholds below
+        // are calibrated on production clips; David switches to enforce in the panel.
+        'mode' => env('AI_QUALITY_CHECK_MODE', 'shadow'),
+        'vision_profile' => env('AI_QUALITY_VISION_PROFILE', 'openrouter_vision_gemini_flash'),
+        // Frames sent to the vision model (one contact sheet, `sheet_columns` per row).
+        'frames' => 6,
+        'sheet_columns' => 3,
+        'sheet_frame_width' => 240,
+        // ffmpeg / ffprobe binaries (production image: Debian `ffmpeg`, backend/docker/production).
+        'ffmpeg' => env('FFMPEG_BINARY', 'ffmpeg'),
+        'ffprobe' => env('FFPROBE_BINARY', 'ffprobe'),
+        // Per ffmpeg / ffprobe call; the job's worst case (4 calls + vision) stays below its 85 s timeout.
+        'timeout_seconds' => 12,
+        'vision_timeout_seconds' => 30,
+        // Technical thresholds (luma 0–255 on a 128 px wide grey copy). Env knobs so they can be
+        // tuned from `media:quality-check --dry-run` numbers without a code change (QA #363 M1).
+        'max_duration_drift_seconds' => (float) env('AI_QC_MAX_DURATION_DRIFT', 1.0),
+        'min_mean_frame_diff' => (float) env('AI_QC_MIN_MEAN_DIFF', 0.25),
+        // Clips that should barely move (QA measured a 2 px breathing motion at YDIF 0.06).
+        'min_mean_frame_diff_low_motion' => (float) env('AI_QC_MIN_MEAN_DIFF_LOW_MOTION', 0.03),
+        'low_motion_states' => ['sleeping', 'low_energy', 'sick'],
+        'low_motion_phases' => ['ball_waiting', 'school_sit_attention', 'school_come_attention', 'school_place_attention', 'school_potty_attention'],
+        'spike_min_frame_diff' => (float) env('AI_QC_SPIKE_MIN_DIFF', 12.0),
+        'spike_ratio' => (float) env('AI_QC_SPIKE_RATIO', 8.0),
+        // Share of all motion in the last 25 % of a clip WITH an end frame (morph into the end pose).
+        'max_tail_motion_share' => (float) env('AI_QC_MAX_TAIL_SHARE', 0.7),
+        // Last frame vs the end image (SSIM 0–1, 144 × 256 grey) for clips with an end frame.
+        'min_end_frame_ssim' => (float) env('AI_QC_MIN_END_SSIM', 0.45),
     ],
 
     /*
@@ -268,6 +320,37 @@ return [
     ],
 
     'profiles' => [
+
+        /*
+        | Vision LLMs for the clip quality check (David 2026-10-23). fal's OpenRouter router:
+        | endpoint `openrouter/router/vision` — schema checked on
+        | https://fal.ai/models/openrouter/router/vision/api (2026-10-23): prompt (required),
+        | model (required, e.g. google/gemini-2.5-flash, the page default), system_prompt,
+        | image_urls (list), temperature, max_tokens; output `output` (text) + `usage`
+        | {prompt_tokens, completion_tokens, cost}. PRICE NOT VERIFIED: fal bills it per input
+        | and output token ("charged based on the number of input and output tokens") but lists
+        | no rates (the page's sample request reports usage.cost 0.0008 $; OpenRouter lists
+        | Gemini 2.5 Flash at 0.30 $ / 2.50 $ per 1M in / out tokens). So the profile is OFF
+        | until David confirms the cost on the fal dashboard (AI_QUALITY_VISION_ENABLED=true);
+        | `usd` is a deliberately high per-call RESERVATION (≈ 10 × the expected cost) — the
+        | reported usage.cost of every call is stored in pet_media_quality_checks.
+        */
+        'vision' => [
+            'openrouter_vision_gemini_flash' => [
+                'label' => 'Gemini 2.5 Flash via fal OpenRouter vision (quality check)',
+                'endpoint' => env('FAL_MODEL_OPENROUTER_VISION', 'openrouter/router/vision'),
+                'enabled' => filter_var(env('AI_QUALITY_VISION_ENABLED', false), FILTER_VALIDATE_BOOL),
+                'verified' => false,
+                'lab' => false,
+                'source' => 'https://fal.ai/models/openrouter/router/vision/api (2026-10-23: billed per input / output token, no list rate; sample usage.cost $0.0008)',
+                'pricing' => ['unit' => 'request', 'usd' => 0.01],
+                'params' => [
+                    'model' => 'google/gemini-2.5-flash',
+                    'temperature' => 0,
+                    'max_tokens' => 400,
+                ],
+            ],
+        ],
 
         'image' => [
 

@@ -96,7 +96,8 @@ class GameMediaReadiness
         }
 
         $stored = $slots
-            ->filter(fn (PetMedia $m) => ($m->isVideo() || $m->isPhase()) && $m->isServable())
+            // Quality check (David 2026-10-23): a flagged clip is not shown, so it does not count.
+            ->filter(fn (PetMedia $m) => ($m->isVideo() || $m->isPhase()) && $m->isShown())
             ->map(fn (PetMedia $m) => (string) $m->state)
             ->all();
 
@@ -159,7 +160,9 @@ class GameMediaReadiness
             }
         }
 
-        return $slots->contains(fn (PetMedia $m) => $m->status === PetMedia::STATUS_FAILED && ! $m->isServable()
+        // Quality check (David 2026-10-23): a »Needs review« clip without an old file (failed,
+        // not servable) or a flagged one (not shown) counts as failed → the older rules.
+        return $slots->contains(fn (PetMedia $m) => (($m->status === PetMedia::STATUS_FAILED && ! $m->isServable()) || $m->quality === PetMedia::QUALITY_FLAGGED)
             && (($m->isPhase() && in_array($m->state, $values, true)) || ($m->isPose() && in_array($m->state, $poses, true))));
     }
 }

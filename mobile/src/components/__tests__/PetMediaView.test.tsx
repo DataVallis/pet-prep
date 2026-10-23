@@ -724,6 +724,16 @@ describe('M5-T09 / T10 phase clips (phase prop)', () => {
     expect(playerUris()).not.toContain(IDLE);
   });
 
+  it('David 2026-10-23: a 5 s performing clip in a short window starts later into the clip (seek before play)', () => {
+    const m = phaseMedia();
+    const { update } = renderMedia({ media: m, petState: 'idle', variant: 'card', phase: phasePlayback(m, { clip: 'school_sit_performing', pose: 'sit', instance: '0:performing', startAtMs: 1_100 }) });
+    expect(playerUris()).toEqual([SIT_DOWN]);
+    expect(mockVideoPlayers[0].currentTime).toBeCloseTo(1.1);
+    // A normal instance starts at the beginning.
+    update({ phase: phasePlayback(m, { clip: 'school_sit_performing', pose: 'sit', instance: '2:performing' }) });
+    expect(mockVideoPlayers[1].currentTime).toBe(0);
+  });
+
   it('picture mode / a missing clip: only the pose image — no player at all', () => {
     const m = phaseMedia();
     renderMedia({ media: m, petState: 'idle', mode: 'picture', phase: phasePlayback(m, { clip: 'school_sit_performing', pose: 'sit', instance: 'x' }, 'picture') });

@@ -179,7 +179,7 @@ describe('submit: same frame → start frame only', function () {
         }
 
         // Different frames keep the end frame.
-        foreach (['sits down on command', 'sprints out of the frame', 'trots back into the frame'] as $needle) {
+        foreach (['and sits down in the same spot', 'sprints out of the frame', 'trots back into the frame'] as $needle) {
             $r = $phase($needle);
             expect($r['end_image_url'])->not->toBeNull()->not->toBe($r['start_image_url'])
                 ->and((string) $r['prompt'])->toContain('ending exactly in the frame of the end image');

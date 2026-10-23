@@ -81,6 +81,8 @@ describe('normalizePetMedia', () => {
       poses: {},
       phases: {},
       phaseGroups: [],
+      // David 2026-10-23: no phase_seconds → every phase clip is 3 s.
+      phaseMs: {},
     });
   });
 

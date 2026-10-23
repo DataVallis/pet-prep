@@ -56,6 +56,8 @@ class AiSpendOverview extends StatsOverviewWidget
                     'cap' => sprintf('%.2f', $monthly),
                     'images' => sprintf('%.2f', $guard->spentThisMonthUsdFor(AiSpendPurpose::ReferenceImage)),
                     'videos' => sprintf('%.2f', $guard->spentThisMonthUsdFor(AiSpendPurpose::StateVideo)),
+                    // Clip quality check (2026-10-23): the vision calls, production budget.
+                    'checks' => sprintf('%.2f', $guard->spentThisMonthUsdFor(AiSpendPurpose::QualityCheck)),
                     'tz' => $guard->timezone(),
                 ]))
                 ->color(self::colorOf($monitor->worstLevel([$statuses[0], $statuses[1]]))),

@@ -9,6 +9,7 @@ use App\Enums\PetPose;
 use App\Enums\PetStateEnum;
 use App\Enums\PetTransition;
 use App\Events\PetUpdated;
+use App\Jobs\CheckPetMediaQuality;
 use App\Jobs\GeneratePetKeyframe;
 use App\Jobs\GeneratePetReferenceImage;
 use App\Jobs\RegeneratePetStageMedia;
@@ -19,6 +20,7 @@ use App\Models\Pet;
 use App\Models\PetLook;
 use App\Models\PetMedia;
 use App\Models\PetMediaHistory;
+use App\Services\AppSettingsService;
 use App\Services\FalAiService;
 use App\Services\Results\LookRegeneration;
 use Carbon\CarbonImmutable;
@@ -73,6 +75,7 @@ class PetMediaService
         private readonly PetAppearancePrompt $prompts,
         private readonly Mp4FastStart $fastStart,
         private readonly PetPreparationService $preparation,
+        private readonly AppSettingsService $settings,
     ) {}
 
     public function disk(): Filesystem
@@ -339,9 +342,14 @@ class PetMediaService
     {
         $neverSubmitted = $slot->status === PetMedia::STATUS_PENDING && $slot->request_id === null;
         $stale = ! $slot->isInFlight() && ((int) $slot->source_generation < $image->generation || $recipeStale);
-        $retry = $includeFailed && $slot->status === PetMedia::STATUS_FAILED;
+        // QA #363 M4: »Needs review« (quality_failed) is never retried / remade automatically.
+        $reviewing = $slot->status === PetMedia::STATUS_FAILED && $slot->error_reason === AiCallFailure::QualityFailed->value;
+        $retry = $includeFailed && $slot->status === PetMedia::STATUS_FAILED && ! $reviewing;
 
-        if (! $neverSubmitted && ! $stale && ! $retry) {
+        // A new reference image (life-stage growth) starts a new chain — that one still remakes it.
+        $newImage = ! $slot->isInFlight() && (int) $slot->source_generation < $image->generation;
+
+        if (! $neverSubmitted && ! $retry && (! $stale || ($reviewing && ! $newImage))) {
             return false;
         }
 
@@ -868,6 +876,14 @@ class PetMediaService
             return true;
         }
 
+        // Quality check (David 2026-10-23): already downloaded and waiting for its check
+        // (a lost check job, re-run by media:sweep) — check it, never download it again.
+        if (filled($slot->candidate_path)) {
+            CheckPetMediaQuality::dispatch((int) $slot->id);
+
+            return true;
+        }
+
         $sourceUrl = (string) $slot->source_url;
         // M5-T08: a key image is a picture too (image mimes / limits), a transition a clip.
         $image = $slot->isStill();
@@ -915,6 +931,13 @@ class PetMediaService
             @unlink($file['path']);
         }
 
+        // Quality check (David 2026-10-23): a clip is a CANDIDATE until it passes the
+        // technical + AI vision check (MediaQualityService); the servable file stays the old
+        // one until then. Switch off (/admin → Feature switches) = served at once, as before.
+        if ($slot->isClip() && $this->qualityCheckEnabled()) {
+            return $this->stageCandidate($slot, $sourceUrl, $path, $file['bytes'], $file['mime']);
+        }
+
         $previous = null;
         $stored = DB::transaction(function () use ($slot, $sourceUrl, $path, $file, &$previous): bool {
             $locked = PetMedia::whereKey($slot->id)->lockForUpdate()->first();
@@ -924,51 +947,158 @@ class PetMediaService
             }
 
             $previous = $locked->storage_path;
-            $locked->update([
-                'status' => PetMedia::STATUS_READY,
-                'storage_path' => $path,
-                // QA #361 M1: how THIS file was made — only now, never at submit (a failed remake keeps the old one).
-                'stored_recipe' => $locked->recipe,
-                'bytes' => $file['bytes'],
-                'mime' => $file['mime'],
-                'error_reason' => null,
-                'error' => null,
-                'completed_at' => now(),
-            ]);
-
-            $pet = Pet::find($locked->pet_id);
-
-            if ($pet !== null) {
-                if ($locked->isImage()) {
-                    $pet->updateQuietly(['media_status' => 'ready', 'media_error' => null]);
-                }
-
-                PetUpdated::afterCommit($pet, self::readyEvent($locked));
-            }
+            $this->markStored($locked, $path, $file['bytes'], $file['mime'], null);
 
             return true;
         });
 
         if (! $stored) {
-            if ($path !== $previous) {
-                $this->disk()->delete($path);
-            }
-
-            // The pet was deleted while we downloaded (M2-08): its directory may
-            // already be gone or hold only this file — leave nothing behind.
-            if ($slot->pet_id !== null && ! Pet::whereKey($slot->pet_id)->exists()) {
-                $this->deleteFilesOf($slot->pet_id);
-            }
+            $this->discardDownloaded($slot, $path, $previous);
 
             return true;
         }
+
+        $this->afterStored($slot, $previous);
+
+        return true;
+    }
+
+    /** Quality check on — shadow or enforce (fresh read — a worker stops checking the moment it is switched off). */
+    public function qualityCheckEnabled(): bool
+    {
+        return $this->settings->qualityCheck(fresh: true);
+    }
+
+    /** QA #363 M1: off | shadow | enforce (fresh read). */
+    public function qualityCheckMode(): string
+    {
+        return $this->settings->qualityCheckMode(fresh: true);
+    }
+
+    /**
+     * Quality check: remember the downloaded clip as the slot's candidate (the slot stays
+     * `running`, the old `storage_path` servable) and queue its check. Idempotent.
+     */
+    private function stageCandidate(PetMedia $slot, string $sourceUrl, string $path, int $bytes, string $mime): bool
+    {
+        $staged = DB::transaction(function () use ($slot, $sourceUrl, $path, $bytes, $mime): bool {
+            $locked = PetMedia::whereKey($slot->id)->lockForUpdate()->first();
+
+            if ($locked === null || $locked->status !== PetMedia::STATUS_RUNNING || $locked->source_url !== $sourceUrl || filled($locked->candidate_path)) {
+                return false;
+            }
+
+            $locked->update(['candidate_path' => $path, 'candidate_bytes' => $bytes, 'candidate_mime' => $mime]);
+
+            return true;
+        });
+
+        if (! $staged) {
+            $fresh = $slot->fresh();
+            $this->discardDownloaded($slot, $path, $fresh?->storage_path, $fresh?->candidate_path);
+
+            return true;
+        }
+
+        CheckPetMediaQuality::dispatch((int) $slot->id);
+
+        return true;
+    }
+
+    /**
+     * Quality check passed (or »Approve anyway«): the candidate becomes the servable file.
+     * Conditional on the row still holding this candidate in one of `$fromStatuses`
+     * (running = a fresh check, failed = an approval of a »Needs review« slot).
+     *
+     * @param  list<string>  $fromStatuses
+     */
+    public function promoteCandidate(PetMedia $slot, string $candidatePath, string $quality, ?string $reason, array $fromStatuses = [PetMedia::STATUS_RUNNING]): bool
+    {
+        $previous = null;
+        $promoted = DB::transaction(function () use ($slot, $candidatePath, $quality, $reason, $fromStatuses, &$previous): bool {
+            $locked = PetMedia::whereKey($slot->id)->lockForUpdate()->first();
+
+            if ($locked === null || ! in_array($locked->status, $fromStatuses, true) || $locked->candidate_path !== $candidatePath) {
+                return false;
+            }
+
+            $previous = $locked->storage_path;
+            $this->markStored($locked, $candidatePath, (int) $locked->candidate_bytes, (string) $locked->candidate_mime, $quality, $reason);
+
+            return true;
+        });
+
+        if (! $promoted) {
+            return false;
+        }
+
+        $this->afterStored($slot->fresh() ?? $slot, $previous);
+
+        return true;
+    }
+
+    /**
+     * Write a stored file into a LOCKED slot row (inside the caller's transaction) and
+     * broadcast once after commit.
+     */
+    private function markStored(PetMedia $locked, string $path, int $bytes, string $mime, ?string $quality, ?string $qualityReason = null): void
+    {
+        $locked->update([
+            'status' => PetMedia::STATUS_READY,
+            'storage_path' => $path,
+            // QA #361 M1: how THIS file was made — only now, never at submit (a failed remake keeps the old one).
+            'stored_recipe' => $locked->recipe,
+            // Quality check / David 2026-10-23: the length of THIS file (5 s school performing vs older 3 s).
+            'stored_duration_seconds' => $locked->duration_seconds,
+            'bytes' => $bytes,
+            'mime' => $mime,
+            'candidate_path' => null,
+            'candidate_bytes' => null,
+            'candidate_mime' => null,
+            'quality' => $quality,
+            'quality_reason' => $quality === null ? null : $qualityReason,
+            'error_reason' => null,
+            'error' => null,
+            'completed_at' => now(),
+        ]);
+
+        $pet = Pet::find($locked->pet_id);
+
+        if ($pet !== null) {
+            if ($locked->isImage()) {
+                $pet->updateQuietly(['media_status' => 'ready', 'media_error' => null]);
+            }
+
+            PetUpdated::afterCommit($pet, self::readyEvent($locked));
+        }
+    }
+
+    /** A downloaded file nobody takes (regenerated / finished meanwhile). */
+    private function discardDownloaded(PetMedia $slot, string $path, ?string ...$keep): void
+    {
+        if (! in_array($path, $keep, true)) {
+            $this->disk()->delete($path);
+        }
+
+        // The pet was deleted while we downloaded (M2-08): its directory may
+        // already be gone or hold only this file — leave nothing behind.
+        if ($slot->pet_id !== null && ! Pet::whereKey($slot->pet_id)->exists()) {
+            $this->deleteFilesOf($slot->pet_id);
+        }
+    }
+
+    /** What follows a newly stored file (old file, look fan-out, dependants, preparation). */
+    private function afterStored(PetMedia $slot, ?string $previous): void
+    {
+        $path = (string) PetMedia::whereKey($slot->id)->value('storage_path');
+        $image = $slot->isStill();
 
         // M4-10: a look file is never replaced (pets of the look point at it);
         // the waiting pets get the new file.
         if ($slot->isLookMedia()) {
             $this->fanOutReady((int) $slot->id);
 
-            return true;
+            return;
         }
 
         // An image archived at a life-stage change (M5-R01) stays on the disk
@@ -986,8 +1116,6 @@ class PetMediaService
         if ($slot->pet_id !== null) {
             $this->preparation->settle((int) $slot->pet_id);
         }
-
-        return true;
     }
 
     private function failStore(PetMedia $slot, string $message): void
@@ -1185,6 +1313,8 @@ class PetMediaService
      */
     public function resetForNewGeneration(PetMedia $slot, bool $bump): bool
     {
+        $candidate = PetMedia::whereKey($slot->id)->value('candidate_path');
+
         $reset = PetMedia::query()
             ->whereKey($slot->id)
             ->whereNotIn('status', [PetMedia::STATUS_PENDING, PetMedia::STATUS_RUNNING])
@@ -1195,11 +1325,21 @@ class PetMediaService
                 'source_url' => null,
                 'error_reason' => null,
                 'error' => null,
+                // Quality check: a »Needs review« candidate is dropped with the new generation
+                // (an admin Regenerate starts a new chain with its own one automatic retry).
+                // `quality` stays: it describes the STORED file, which stays servable.
+                'candidate_path' => null,
+                'candidate_bytes' => null,
+                'candidate_mime' => null,
                 'updated_at' => now(),
             ]) === 1;
 
         if ($reset) {
             $slot->refresh();
+
+            if (is_string($candidate) && $candidate !== '' && $candidate !== $slot->storage_path) {
+                $this->disk()->delete($candidate);
+            }
         }
 
         return $reset;
@@ -1253,8 +1393,10 @@ class PetMediaService
         $currentImageGeneration = $imageAction === 'ok' ? $image->generation : PHP_INT_MAX;
         $remake = $stageRemake && $imageAction === 'stage';
         $loops = $this->entitlements->usesStateMedia($planned);
+        // QA #363 M4: a clip the quality check failed twice (»Needs review«) is never re-made here —
+        // only an explicit Regenerate or »Approve anyway« touches it (no re-spend in a loop).
         $missing = fn (?PetMedia $slot, bool $recipeStale = false): bool => $slot === null
-            || $slot->status === PetMedia::STATUS_FAILED
+            || ($slot->status === PetMedia::STATUS_FAILED && $slot->error_reason !== AiCallFailure::QualityFailed->value)
             || ($slot->status === PetMedia::STATUS_PENDING && $slot->request_id === null)
             || (! $slot->isInFlight() && ((int) $slot->source_generation < $currentImageGeneration || $recipeStale));
         $videos = [];
@@ -1425,7 +1567,8 @@ class PetMediaService
             }
             $slot = $slots->first(fn (PetMedia $m) => $m->isVideo() && $m->state === $state->value);
 
-            if ($slot?->isServable()) {
+            // Quality check (David 2026-10-23): a clip flagged by media:quality-check is not shown.
+            if ($slot?->isShown()) {
                 $videos[$state->value] = $this->signedUrl($slot, $expires);
             }
         }
@@ -1437,7 +1580,7 @@ class PetMediaService
         foreach ($slots as $m) {
             $state = $m->petState();
 
-            if ($state === null || ! $m->isServable() || ($state->isBehaviour() && ! $this->entitlements->behaviourApplies($pet, $state))) {
+            if ($state === null || ! $m->isShown() || ($state->isBehaviour() && ! $this->entitlements->behaviourApplies($pet, $state))) {
                 continue;
             }
 
@@ -1452,9 +1595,10 @@ class PetMediaService
         // M5-T09 / T10: pose images and school / game phase clips (only the pet's own species).
         $poses = [];
         $phases = [];
+        $phaseSeconds = [];
         $species = $pet->speciesValue();
         foreach ($slots as $m) {
-            if (! $m->isServable()) {
+            if (! $m->isShown()) {
                 continue;
             }
             if ($m->isTransition() && $m->transition() !== null) {
@@ -1463,6 +1607,8 @@ class PetMediaService
                 $poses[$m->state] = $this->signedUrl($m, $expires);
             } elseif ($m->isPhase() && $m->phaseClip()?->species() === $species) {
                 $phases[$m->state] = $this->signedUrl($m, $expires);
+                // David 2026-10-23: school performing clips are 5 s now, older stored ones 3 s.
+                $phaseSeconds[$m->state] = (float) ($m->stored_duration_seconds ?? $m->duration_seconds ?? 3);
             }
         }
 
@@ -1489,6 +1635,7 @@ class PetMediaService
             loops: array_values(array_intersect(array_keys($videos), $loops)),
             poses: $poses,
             phases: $phases,
+            phaseSeconds: $phaseSeconds,
             // QA m2: the same switch-aware source as readiness / preparation (phaseClipsFor) —
             // a switch off → [] → the app shows the M5-T08 stage, the server checks the v2 rules.
             phaseGroups: array_values(array_unique(array_map(fn (PetPhaseClip $c) => $c->group(), $this->entitlements->phaseClipsFor($pet)))),
@@ -1590,7 +1737,8 @@ class PetMediaService
      * Recover slots a lost job / webhook left behind:
      *  - submitted videos without a webhook after 2 h → failed `timed_out`
      *    (cost kept; media:backfill / Filament can regenerate);
-     *  - a result URL whose download job got lost → StorePetMedia again;
+     *  - a result URL whose download job got lost → StorePetMedia again (quality check: a
+     *    downloaded candidate whose check job got lost → its check again, no new download);
      *  - a claim of a dead worker → its job again (which adopts an accepted request id);
      *  - stale download temp files are deleted.
      *
@@ -1872,6 +2020,57 @@ class PetMediaService
     }
 
     /** The look's stored image of the stage a look video row is made for (start frame). */
+    /**
+     * Quality check (David 2026-10-23): the stored still a clip ENDS in when it was made with
+     * an end frame (transition / performing / ball running …) — the end pose picture of the
+     * pet (or of the look at the row's stage). Null for start-only clips (loops, same-pose
+     * phase clips) or when the picture is not stored.
+     */
+    public function clipEndFrameImage(PetMedia $clip, bool $stored = false): ?PetMedia
+    {
+        // `$stored`: the STORED file (stored_recipe); else the candidate being checked (recipe).
+        $recipe = $stored ? $clip->stored_recipe : $clip->recipe;
+
+        if (! $clip->isPoseClip() || $recipe === PetMedia::RECIPE_START_ONLY || ($clip->phaseClip()?->sharesFrames() ?? false)) {
+            return null;
+        }
+
+        $frames = $clip->frames();
+        if ($frames === null) {
+            return null;
+        }
+
+        if ($clip->isLookMedia()) {
+            $image = $this->lookImageRow($clip);
+            $look = $clip->look;
+            $end = $image !== null && $look !== null && $clip->life_stage !== null && $image->isServable()
+                ? $this->lookPoseRow($look, $frames[1], LifeStage::from((string) $clip->life_stage), $image)
+                : null;
+        } else {
+            $end = $clip->pet !== null ? $this->frameImage($clip->pet, $frames[1]) : null;
+        }
+
+        // QA #363 m8: only the pose image version the clip was made from — a pose stored after the
+        // clip's submit (stored check: after the clip's file) would be compared with the wrong picture.
+        $madeAt = $stored
+            ? $clip->completed_at
+            : AiSpendLedger::query()->where('pet_media_id', $clip->id)->where('purpose', 'state_video')->latest('id')->first()?->created_at;
+
+        if ($end !== null && $madeAt !== null && $end->completed_at !== null && $end->completed_at->greaterThan($madeAt)) {
+            return null;
+        }
+
+        return $end;
+    }
+
+    /** Quality check: the stored reference image of a clip's animal (pet or look stage), for »same animal«. */
+    public function clipReferenceImage(PetMedia $clip): ?PetMedia
+    {
+        $image = $clip->isLookMedia() ? $this->lookImageRow($clip) : ($clip->pet !== null ? $this->imageSlot($clip->pet) : null);
+
+        return $image?->isServable() ? $image : null;
+    }
+
     public function lookImageRow(PetMedia $row): ?PetMedia
     {
         return PetMedia::query()->where('pet_look_id', $row->pet_look_id)->images()
@@ -2023,7 +2222,8 @@ class PetMediaService
 
             // The look's clip was made the pre-M5-T08 way: remake it once as a loop
             // (every pet of the look gets the new file — 0 $ for them).
-            if ($row->recipe === null) {
+            // Quality check: a look row waiting for review is never remade by another pet.
+            if ($row->recipe === null && ! $row->needsReview()) {
                 if ($row->status === PetMedia::STATUS_READY || $row->status === PetMedia::STATUS_FAILED) {
                     $this->resetForNewGeneration($row, bump: $row->isServable() || $row->request_id !== null);
                 }
@@ -2079,6 +2279,15 @@ class PetMediaService
             PetMedia::query()->whereKey($row->id)->whereIn('status', [PetMedia::STATUS_PENDING, PetMedia::STATUS_FAILED])
                 ->whereNull('request_id')->update(['recipe' => null]);
             $row->refresh();
+        }
+
+        // Quality check (David 2026-10-23): a look clip that failed the check twice waits for a
+        // superadmin (»Needs review«) — another pet of the look never regenerates it (no loop,
+        // no spend); the waiting pet slots fail with it (the app's fallback).
+        if ($row->needsReview()) {
+            $this->fanOutFailure($row);
+
+            return true;
         }
 
         if ($row->status === PetMedia::STATUS_FAILED
@@ -2403,6 +2612,13 @@ class PetMediaService
                 'source_generation' => $locked->isImage() ? null : $sourceGeneration,
                 'recipe' => $row->recipe,
                 'stored_recipe' => $row->stored_recipe,
+                'stored_duration_seconds' => $row->stored_duration_seconds,
+                // Quality check: the look row's verdict (checked once per look row).
+                'quality' => $row->quality,
+                'quality_reason' => $row->quality_reason,
+                'candidate_path' => null,
+                'candidate_bytes' => null,
+                'candidate_mime' => null,
                 'request_id' => null,
                 'source_url' => null,
                 'error_reason' => null,
@@ -2554,7 +2770,9 @@ class PetMediaService
         // `running`) is already paid by the pet that claimed it (QA M4-10 n1).
         // M5-T08: a stored look clip made the pre-M5-T08 way is remade once as a loop.
         $covered = PetMedia::query()->where('pet_look_id', $look->id)->where('life_stage', $stage->value)
-            ->whereIn('status', [PetMedia::STATUS_READY, PetMedia::STATUS_RUNNING])->get();
+            ->where(fn ($q) => $q->whereIn('status', [PetMedia::STATUS_READY, PetMedia::STATUS_RUNNING])
+                // QA #363 M4: a look row in »Needs review« is not re-made (or priced) by a plan.
+                ->orWhere('error_reason', AiCallFailure::QualityFailed->value))->get();
         $has = fn (string $kind, ?string $state) => $covered->contains(fn (PetMedia $m) => $m->kind === $kind && $m->state === $state
             && ! ($loops && $kind === PetMedia::KIND_VIDEO && $m->status === PetMedia::STATUS_READY && $m->recipe === null));
 

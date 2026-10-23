@@ -110,6 +110,8 @@ class GameDataResetService
         'pet_daily_walks',
         'pet_hygiene_events',
         'pet_media_history',
+        // Clip quality check (2026-10-23): one row per checked clip generation (→ pet_media)
+        'pet_media_quality_checks',
         'pet_media',
         'pet_play_events',
         'pet_status_periods',

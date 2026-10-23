@@ -9,6 +9,16 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-23 — Vsak AI posnetek je preverjen, preden ga otrok vidi
+
+**Kaj:** na testnem dobermančku v produkciji je posnetek »sedi« pokazal kužka, ki stoji, nato pa se mu v zadnjih ~0,7 s noge »stopijo« v sedečo pozo. David je odločil: vsak nov AI posnetek gre najprej skozi samodejno preverjanje — brezplačno tehnično (ffmpeg: zamrznjena slika, nenadni skoki, gibanje zgoščeno v zadnji četrtini, zadnja sličica proti končni pozi, dolžina) in AI pregled 6 sličic (anatomija, ista žival, dejanje se res zgodi, napake). Neuspešen posnetek se samodejno ustvari **enkrat** znova; če spet pade, ga otrok ne vidi (aplikacija pokaže pozo ali starejša pravila) in čaka na pregled v administraciji. Posnetki šole »izvaja« so zdaj dolgi **5 s** namesto 3 s, z navodilom za naravno gibanje (»počasi spusti zadnji del, najprej se zložijo zadnje noge …«).
+**Zakaj je pomembno:** otrok ne sme videti žival, ki se »tali« — vseh posnetkov pa ne moremo gledati ročno. Strošek: tehnični del 0 $, AI pregled ≤ 0,01 $ na posnetek (*ocena; AI pregled bo vklopljen, ko David potrdi ceno*); daljši posnetki šole dvignejo nabor psa z 11,17 $ na 12,07 $ (enkrat na pasmo + barvo + obdobje).
+- 👩 Starši: »Kar vidi vaš otrok, je preverjeno — posnetke z napako zadržimo.«
+- 💼 Investitorji: kakovost AI medijev je avtomatiziran proces z merili, ne ročni pregled; strošek preverjanja je zanemarljiv glede na strošek posnetka.
+- 🛠 Tehnično: najprej v načinu »senca« (samo beleži, vse prikaže), dokler meje niso umerjene na pravih posnetkih — šele nato »uveljavi«; kandidat (`candidate_path`) do odločitve, zahtevek preverjanja je vrstica z unikatnim ključem (brez dvojne porabe), ena ponovitev na verigo generiranja, `media:quality-check --dry-run` za obstoječe posnetke. Ni še preverjeno s pravim klicem fal.
+
+---
+
 ## 2026-10-23 — Kuža se spet premika: popravek »zamrznjenih« posnetkov
 
 **Kaj:** na prvem pravem plačljivem ljubljenčku v produkciji (testni uporabnik, doberman mladiček) so bili posnetki stanj in del posnetkov šole skoraj negibni — 73 sličic s povprečno razliko ~0,08 / 255 med sličicami. Vzrok: model Kling 3.0 Pro dobi isto sliko kot začetek in konec posnetka in vrne skoraj mirujočo sliko. Zdaj dobi samo začetno sliko in jasno navodilo za naravno gibanje (dihanje, mahanje z repom, obračanje glave, vohanje); že narejene posnetke administrator z enim ukazom ali gumbom naredi znova (pred zagonom vidi ceno — za enega psa 17 posnetkov ≈ 7,50 $).

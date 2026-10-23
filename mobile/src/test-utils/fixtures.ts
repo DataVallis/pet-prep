@@ -96,6 +96,8 @@ export function makeMedia(overrides: Partial<PetMedia> = {}): PetMedia {
     poses: {},
     phases: {},
     phase_groups: [],
+    // David 2026-10-23 (additive): no stored phase clips → no lengths.
+    phase_seconds: {},
     ...overrides,
   };
 }

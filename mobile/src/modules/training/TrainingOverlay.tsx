@@ -409,9 +409,11 @@ function RunningView({
   const trialNo = frame.slot === null ? 0 : frame.slot + 1;
   const praiseDisabled = finishing || frame.over;
   // M5-T09: the phase of the trial (server schedule) → its clip once, else / in picture mode its pose.
-  const moment = phaseClips ? schoolMomentAt(session, elapsedMs) : null;
+  // David 2026-10-23: timed by the stored performing clip's own length (5 s new, 3 s older).
+  const moment = phaseClips ? schoolMomentAt(session, elapsedMs, view.pet.media) : null;
   const mode = mediaModeOf(view);
   // Re-derived per phase instance (the game re-renders every frame; the item stays the same).
+  // startAtMs is fixed per instance (the trial's schedule), so the key need not carry it.
   const momentKey = moment === null ? null : `${moment.instance}|${moment.clip ?? ''}|${moment.pose ?? ''}`;
   const phase = useMemo(
     () => (moment === null ? null : phasePlayback(view.pet.media, moment, posePending ? 'picture' : mode)),

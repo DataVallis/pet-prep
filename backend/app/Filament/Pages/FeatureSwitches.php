@@ -30,7 +30,8 @@ use InvalidArgumentException;
  * (cached ≤ 60 s, busted on save, every change audited in
  * app_setting_changes + the log). Existing cats keep working in every mode.
  * Also: unique vs shared AI media (M5-R21), state media on / off (M5-T08b) and
- * school & game phase clips on / off (M5-T09 / T10 QA M2).
+ * school & game phase clips on / off (M5-T09 / T10 QA M2) and the automatic clip
+ * quality check on / off (David 2026-10-23).
  *
  * @property Form $form
  */
@@ -79,6 +80,7 @@ class FeatureSwitches extends Page implements HasForms
             'unique_pet_media' => $settings->uniquePetMedia(),
             'state_media' => $settings->stateMedia(),
             'phase_clips' => $settings->phaseClips(),
+            'quality_check' => $settings->qualityCheckMode(),
         ]);
     }
 
@@ -138,6 +140,21 @@ class FeatureSwitches extends Page implements HasForms
                             ->label(__('admin.features.phase_clips'))
                             ->default(true),
                     ]),
+                // David 2026-10-23: automatic technical + AI vision check of every new clip.
+                Section::make(__('admin.features.quality_check_section'))
+                    ->description(__('admin.features.quality_check_description'))
+                    ->schema([
+                        // QA #363 M1: off / shadow (default until calibrated) / enforce.
+                        Radio::make('quality_check')
+                            ->label(__('admin.features.quality_check'))
+                            ->options([
+                                AppSettingsService::QUALITY_OFF => __('admin.features.quality_check_off'),
+                                AppSettingsService::QUALITY_SHADOW => __('admin.features.quality_check_shadow'),
+                                AppSettingsService::QUALITY_ENFORCE => __('admin.features.quality_check_enforce'),
+                            ])
+                            ->in(AppSettingsService::QUALITY_CHECK_MODES)
+                            ->required(),
+                    ]),
             ]);
     }
 
@@ -156,6 +173,7 @@ class FeatureSwitches extends Page implements HasForms
         $unique = (bool) ($data['unique_pet_media'] ?? false);
         $stateMedia = (bool) ($data['state_media'] ?? AppSettingsService::stateMediaDefault());
         $phaseClips = (bool) ($data['phase_clips'] ?? AppSettingsService::phaseClipsDefault());
+        $qualityCheck = (string) ($data['quality_check'] ?? AppSettingsService::qualityCheckDefault());
 
         try {
             // Each switch is written only when its own fields changed, so saving
@@ -172,6 +190,9 @@ class FeatureSwitches extends Page implements HasForms
             if ($phaseClips !== $settings->phaseClips()) {
                 $settings->updatePhaseClips($this->admin(), $phaseClips);
             }
+            if ($qualityCheck !== $settings->qualityCheckMode()) {
+                $settings->updateQualityCheck($this->admin(), $qualityCheck);
+            }
         } catch (InvalidArgumentException $e) {
             Notification::make()->title(__('admin.features.not_saved'))->body($e->getMessage())->danger()->send();
 
@@ -183,7 +204,8 @@ class FeatureSwitches extends Page implements HasForms
         $phases = $settings->phaseClips() ? __('admin.features.state_media_on') : __('admin.features.state_media_off');
         Notification::make()->title(__('admin.features.saved'))->body(__('admin.features.saved_body_media', ['mode' => $mode->label(), 'media' => $media])
             .' · '.__('admin.features.saved_body_state_media', ['state' => $states])
-            .' · '.__('admin.features.saved_body_phase_clips', ['state' => $phases]))->success()->send();
+            .' · '.__('admin.features.saved_body_phase_clips', ['state' => $phases])
+            .' · '.__('admin.features.saved_body_quality_check', ['state' => __('admin.features.quality_check_'.$settings->qualityCheckMode())]))->success()->send();
     }
 
     /**
@@ -192,7 +214,7 @@ class FeatureSwitches extends Page implements HasForms
     public function getChanges(): Collection
     {
         return AppSettingChange::with('user:id,name,email')
-            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY, AppSettingsService::STATE_MEDIA_KEY, AppSettingsService::PHASE_CLIPS_KEY])
+            ->whereIn('key', [AppSettingsService::CATS_KEY, AppSettingsService::UNIQUE_MEDIA_KEY, AppSettingsService::STATE_MEDIA_KEY, AppSettingsService::PHASE_CLIPS_KEY, AppSettingsService::QUALITY_CHECK_KEY])
             ->latest('id')->limit(20)->get();
     }
 

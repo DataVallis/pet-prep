@@ -13,6 +13,9 @@ final class ModelProfile
 
     public const KIND_VIDEO = 'video';
 
+    /** A vision LLM (quality check, David 2026-10-23): priced per request. */
+    public const KIND_VISION = 'vision';
+
     /**
      * @param  array{unit: string, usd: float, usd_additional?: float}  $pricing
      * @param  array<string, mixed>  $params
@@ -55,8 +58,12 @@ final class ModelProfile
         $pricing = (array) ($config['pricing'] ?? []);
         $unit = (string) ($pricing['unit'] ?? '');
 
-        if (! in_array($unit, ['image', 'megapixel', 'second'], true) || ! is_numeric($pricing['usd'] ?? null)) {
-            throw new InvalidArgumentException("Media profile {$kind}.{$key}: pricing needs unit image|megapixel|second and usd.");
+        if (! in_array($unit, ['image', 'megapixel', 'second', 'request'], true) || ! is_numeric($pricing['usd'] ?? null)) {
+            throw new InvalidArgumentException("Media profile {$kind}.{$key}: pricing needs unit image|megapixel|second|request and usd.");
+        }
+
+        if (($kind === self::KIND_VISION) !== ($unit === 'request')) {
+            throw new InvalidArgumentException("Media profile {$kind}.{$key}: vision profiles (and only they) are priced per request.");
         }
 
         if ((float) $pricing['usd'] < 0 || (isset($pricing['usd_additional']) && (! is_numeric($pricing['usd_additional']) || (float) $pricing['usd_additional'] < 0))) {
@@ -170,12 +177,12 @@ final class ModelProfile
     }
 
     /**
-     * Billable units of ONE call: 1 image, started megapixels (fal rounds up), or seconds.
+     * Billable units of ONE call: 1 image, started megapixels (fal rounds up), seconds, or 1 request (vision).
      */
     public function units(): float
     {
         return match ($this->unit()) {
-            'image' => 1.0,
+            'image', 'request' => 1.0,
             'megapixel' => (float) max(1, (int) ceil(($this->width * $this->height) / 1_000_000)),
             'second' => (float) max(1, $this->durationSeconds),
         };

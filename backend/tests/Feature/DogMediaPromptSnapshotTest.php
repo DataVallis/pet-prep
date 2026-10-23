@@ -28,6 +28,8 @@ use App\Services\Media\PetDnaService;
 |
 | Re-recorded on purpose 2026-10-23 (frozen same-frame clips fix, PR #361): added the
 | loop / phase clip prompts and the start-only negative; every earlier key unchanged.
+| Re-recorded on purpose 2026-10-23 (David: 5 s school performing clips with natural
+| movement — media 123 »melted« into the sit): ONLY the 4 `phase|school_*_performing` keys changed.
 */
 
 const DMP_FIXTURE = __DIR__.'/../Fixtures/dog_media_prompts_snapshot.json';

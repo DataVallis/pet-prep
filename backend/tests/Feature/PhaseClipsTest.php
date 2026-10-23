@@ -267,10 +267,13 @@ describe('phase clips (enum + entitlement)', function () {
             ->and(app(PetMediaService::class)->payloadFor($pet)['phase_groups'])->toBe([]);
     });
 
-    it('school and game clips are 3 s (0.336 $), state clips stay 5 s (0.56 $) — a per-purpose length', function () {
+    it('school and game clips are 3 s (0.336 $), school performing + state clips 5 s (0.56 $) — a per-purpose length', function () {
         $profiles = app(MediaProfiles::class);
 
         expect($profiles->clipVideo('school')->durationSeconds)->toBe(3)
+            // David 2026-10-23: the school PERFORMING clips (into sit / come / place / door) are 5 s.
+            ->and($profiles->clipVideo('school_performing')->durationSeconds)->toBe(5)
+            ->and($profiles->clipVideo('school_performing')->estimatedCostUsd())->toBe(0.56)
             ->and($profiles->clipVideo('game')->estimatedCostUsd())->toBe(0.336)
             ->and($profiles->clipVideo('school')->videoInput('https://a/s.jpg', 'p', null, 'https://a/e.jpg'))->toMatchArray(['duration' => '3', 'end_image_url' => 'https://a/e.jpg'])
             ->and($profiles->clipVideo('state')->durationSeconds)->toBe(5)
@@ -311,16 +314,17 @@ describe('pipeline for a dog with its own media', function () {
         $phaseRows = PetMedia::where('pet_id', $pet->id)->where('kind', 'phase')->orderBy('id')->get();
         expect($phaseRows)->toHaveCount(15)
             ->and($phaseRows->pluck('status')->unique()->all())->toBe(['ready'])
-            ->and($phaseRows->pluck('duration_seconds')->unique()->all())->toBe([3.0]);
+            // 4 school performing clips 5 s (David 2026-10-23), the other 11 phase clips 3 s.
+            ->and($phaseRows->countBy(fn (PetMedia $r) => (string) $r->duration_seconds)->sortKeys()->all())->toBe(['3' => 11, '5' => 4]);
 
-        // 3 s at Kling (duration "3"), start / end frame = the clip's poses.
+        // 3 s at Kling (duration "3"; performing "5"), start / end frame = the clip's poses.
         $phaseSubmits = $queue->filter(fn (Request $r) => $kind((string) $r['prompt']) === 'phase')->values();
-        expect($phaseSubmits->pluck('duration')->unique()->all())->toBe(['3'])
+        expect($phaseSubmits->pluck('duration')->countBy()->sortKeys()->all())->toBe(['3' => 11, '5' => 4])
             // The toy is drawn by the app: the prompt only forbids it.
             ->and((string) $phaseSubmits[0]['prompt'])->toContain('No toys, no ball, no feather');
 
         $byPrompt = fn (string $needle) => $phaseSubmits->first(fn (Request $r) => str_contains((string) $r['prompt'], $needle));
-        $sitDown = $byPrompt('sits down on command');
+        $sitDown = $byPrompt('and sits down in the same spot');
         $sitHold = $byPrompt('stays sitting proudly');
         // Fix 2026-10-23: a same-pose clip (success pose → pose) gets NO end frame; performing keeps it.
         expect($sitDown['end_image_url'])->toBe($sitHold['start_image_url'])
@@ -334,10 +338,10 @@ describe('pipeline for a dog with its own media', function () {
             ->and($edits->slice(5)->values()[1])->toContain('sitting upright')
             ->and($edits->implode(' '))->not->toContain('ball');
 
-        // 1 + 5 key images + 5 poses (0.15 $) · 6 loops + 2 transitions (0.56 $) · 15 phase clips (0.336 $).
-        $expected = round(11 * 0.15 + 8 * 0.56 + 15 * 0.336, 2);
+        // 1 + 5 key images + 5 poses (0.15 $) · 6 loops + 2 transitions + 4 school performing (0.56 $) · 11 phase clips (0.336 $).
+        $expected = round(11 * 0.15 + 12 * 0.56 + 11 * 0.336, 2);
         expect(round((float) AiSpendLedger::query()->counted()->sum('cost_usd'), 2))->toBe($expected)
-            ->and($expected)->toBe(11.17)
+            ->and($expected)->toBe(12.07)
             ->and(phcSlot($pet, 'pose', 'sit')->storage_path)->toBe("{$pet->id}/pose-sit-g1.jpg")
             ->and(phcSlot($pet, 'phase', 'school_sit_success')->storage_path)->toBe("{$pet->id}/school_sit_success-g1.mp4");
 
@@ -453,7 +457,7 @@ describe('pipeline for a dog with its own media', function () {
         $plan = app(PetMediaService::class)->planMissing($pet->fresh(), upgradeStateMedia: true);
         expect($plan['poses'])->toHaveCount(5)
             ->and($plan['phases'])->toHaveCount(15)
-            ->and($plan['cost_usd'])->toBe(round(10 * 0.15 + 8 * 0.56 + 15 * 0.336, 4))
+            ->and($plan['cost_usd'])->toBe(round(10 * 0.15 + 12 * 0.56 + 11 * 0.336, 4))
             ->and(app(PetMediaService::class)->planMissing($pet->fresh())['phases'])->toBe([]);
     });
 
@@ -478,7 +482,7 @@ describe('shared look of breed + colour', function () {
         $first = round((float) AiSpendLedger::query()->counted()->sum('cost_usd'), 2);
         $calls = phcCalls()->count();
 
-        expect($first)->toBe(11.17)
+        expect($first)->toBe(12.07)
             ->and(PetMedia::whereNotNull('pet_look_id')->where('kind', 'pose')->count())->toBe(5)
             ->and(PetMedia::whereNotNull('pet_look_id')->where('kind', 'phase')->count())->toBe(15);
 

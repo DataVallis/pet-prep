@@ -136,6 +136,11 @@ jobs:
           key: composer-${{ runner.os }}-php8.3-${{ hashFiles('backend/composer.lock') }}
           restore-keys: composer-${{ runner.os }}-php8.3-
 
+      # Clip quality check (David 2026-10-23): MediaQualityCheckTest renders tiny MP4 fixtures
+      # with ffmpeg and measures them with ffprobe (the tests skip with a reason without it).
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg
+
       - name: Install PHP Dependencies
         working-directory: backend
         run: |
@@ -355,6 +360,8 @@ jobs:
         run: |
           set -eux
           test "$(docker run --rm petprep-app:ci id -u)" = 1000
+          # Clip quality check (David 2026-10-23): ffmpeg + ffprobe in the app image.
+          docker run --rm --entrypoint sh petprep-app:ci -c 'ffmpeg -hide_banner -version > /dev/null && ffprobe -hide_banner -version > /dev/null'
           docker run --rm --entrypoint php-fpm petprep-app:ci -t
           # Every extension the app needs (OPcache is listed as "Zend OPcache").
           docker run --rm --entrypoint php petprep-app:ci -m > php-modules.txt

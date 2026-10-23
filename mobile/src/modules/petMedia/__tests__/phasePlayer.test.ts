@@ -4,8 +4,10 @@ import {
   PHASE_CLIP_MS,
   WAND_CATCH_LEAD_MS,
   PERFORMING_END_MARGIN_MS,
+  PERFORMING_CUE_LEAD_MS,
   ballMomentAt,
   performingStartMs,
+  phaseClipMs,
   phasePlayback,
   schoolMomentAt,
   usesPhaseClips,
@@ -140,6 +142,61 @@ describe('school: command phase → clip (server schedule)', () => {
 
   it('a clip the player failed on → the pose', () => {
     expect(phasePlayback(media(), schoolMomentAt(session, 1_000), 'video', () => false).current.kind).toBe('image');
+  });
+});
+
+describe('school: 5 s performing clips (David 2026-10-23)', () => {
+  const five = () => media({ phase_seconds: { school_sit_performing: 5, school_sit_success: 3 } });
+
+  it('normalizePetMedia reads phase_seconds (ms); unknown keys / bad values are dropped; older server → 3 s', () => {
+    const m = normalizePetMedia(makeMedia({ phases: { school_sit_performing: url('p') }, phase_seconds: { school_sit_performing: 5, ball_running: 'x', school_jump_attention: 4, wand_pouncing: 99 } } as never));
+    expect(m.phaseMs).toEqual({ school_sit_performing: 5_000 });
+    expect(phaseClipMs(m, 'school_sit_performing')).toBe(5_000);
+    expect(phaseClipMs(m, 'ball_running')).toBe(PHASE_CLIP_MS);
+    expect(phaseClipMs(media(), 'school_sit_performing')).toBe(PHASE_CLIP_MS);
+  });
+
+  it('QA #363 M2: trial 2 after an IGNORED trial — the 5 s clip starts at the cue − lead, skips its slow start, ends in the pose at obey − margin', () => {
+    // cue 14 000, obey 15 500: the natural 5 s start (10 400) would be 3.6 s before the cue.
+    expect(performingStartMs(session.trials, 2, 5_000)).toBe(14_000 - PERFORMING_CUE_LEAD_MS);
+    expect(schoolMomentAt(session, 13_699, five()).phase).not.toBe('performing');
+    const p = schoolMomentAt(session, 13_700, five());
+    expect(p).toMatchObject({ phase: 'performing', clip: 'school_sit_performing', instance: '2:performing' });
+    // Window 13 700 … 15 400 = 1 700 ms of a 5 000 ms clip → start 3 300 ms into it.
+    expect(p.startAtMs).toBe(3_300);
+    expect(schoolMomentAt(session, 15_399, five()).phase).toBe('performing');
+    for (let t = 15_400; t < 17_000; t += 100) expect(schoolMomentAt(session, t, five())).toMatchObject({ phase: 'success', pose: 'sit' });
+  });
+
+  it('a window shorter than the clip: it starts later INTO the clip so the pose still lands on time (seek clamped to the clip)', () => {
+    // Trial 0: lead-in, cue 2 000, obey 4 000 → start 1 700 (cue − lead), 2 200 ms window → skip 2 800.
+    expect(schoolMomentAt(session, 1_699, five())).toMatchObject({ phase: 'attention' });
+    const p = schoolMomentAt(session, 1_700, five());
+    expect(p).toMatchObject({ phase: 'performing', startAtMs: 2_800 });
+    expect(phasePlayback(five(), p).current).toMatchObject({ kind: 'clip', url: url('school_sit_performing'), startAtMs: 2_800, loop: false });
+    expect(schoolMomentAt(session, 3_899, five()).phase).toBe('performing');
+    expect(schoolMomentAt(session, 3_900, five())).toMatchObject({ phase: 'success', pose: 'sit' });
+    // Never inside the previous trial's praise window; attention in between; never before cue − lead.
+    const tight = { ...session, trials: [
+      { index: 0, cue_at_ms: 2_000, obeys: true, obey_at_ms: 4_500, window_end_ms: 6_000 },
+      { index: 1, cue_at_ms: 8_000, obeys: true, obey_at_ms: 8_800, window_end_ms: 10_300 },
+    ] };
+    expect(schoolMomentAt(tight, 5_999, five())).toMatchObject({ phase: 'success', instance: '0:success' });
+    expect(schoolMomentAt(tight, 6_500, five())).toMatchObject({ phase: 'attention', instance: '1:attention' });
+    expect(schoolMomentAt(tight, 7_700, five())).toMatchObject({ phase: 'performing', instance: '1:performing', startAtMs: 5_000 - (8_700 - 7_700) });
+    // A praise window that ends after obey − margin: the seek never passes the clip's end.
+    const late = { ...session, trials: [
+      { index: 0, cue_at_ms: 2_000, obeys: true, obey_at_ms: 4_000, window_end_ms: 9_000 },
+      { index: 1, cue_at_ms: 8_000, obeys: true, obey_at_ms: 8_800, window_end_ms: 10_300 },
+    ] };
+    const m = schoolMomentAt(late, 9_000, five());
+    expect(m.phase === 'performing' ? (m.startAtMs ?? 0) : 0).toBeLessThanOrEqual(5_000);
+  });
+
+  it('an older 3 s performing clip (no phase_seconds) keeps the 3 s timing', () => {
+    expect(schoolMomentAt(session, 12_399, media()).phase).not.toBe('performing');
+    expect(schoolMomentAt(session, 12_400, media())).toMatchObject({ phase: 'performing' });
+    expect(schoolMomentAt(session, 12_400, media()).startAtMs).toBeUndefined();
   });
 });
 

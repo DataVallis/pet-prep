@@ -438,6 +438,15 @@ docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app 
 docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:regenerate-frozen --pet=<id>
 ```
 
+**Clip quality check (David 2026-10-23).** Every new AI clip is checked before children see it (ffmpeg technical check + AI vision check; one automatic regeneration, a second failure → »Needs review« in `/admin` Pet → AI media, counted on the dashboard and System health). The production app image ships **ffmpeg / ffprobe** (Debian package in `backend/docker/production/Dockerfile`, ~+250 MB uncompressed; check: `docker compose … exec -T app ffprobe -version`). The AI part stays off until the vision profile price is confirmed — then set `AI_QUALITY_VISION_ENABLED=true` in `/opt/petprep/.env` and redeploy (without it the technical check alone decides and clips are marked »not AI-checked«). **Mode** (`/admin → Feature switches → Quality check`, QA #363 M1): **shadow** is the default — every verdict and its measurements are recorded (Pet → AI media column »Quality«: »would fail (shadow)«, filter »Needs review / would fail«) but every clip is still shown and nothing is regenerated. Calibrate first: run the dry run below on Suki (pet 8) and a few other pets, compare the printed metrics with what you see in the clips, and tune the `AI_QC_*` thresholds in `/opt/petprep/.env` (PRODUCTION_ENV.md; redeploy). Then switch the radio to **enforce** (one automatic regeneration, a second failure is hidden — »Needs review«, »Approve anyway« with »Open candidate« / »Open contact sheet« links). **off** = no check. Already stored clips — dry run first (technical only, free, writes nothing), then the real run (AI check cost printed first; failures are flagged and hidden), `--regenerate` remakes each failure once:
+
+```bash
+docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:quality-check --pet=<id> --dry-run
+docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:quality-check --pet=<id> --regenerate
+```
+
+`--regenerate` prints the cost and refuses when it does not fit the budget (QA #363 m5). In shadow mode a real run marks failures »would fail« (still shown); in enforce mode it hides them. `--pet` of a pet on a shared look checks that look's rows once; `--look=<id>` a look; no option = every stored clip without a verdict (`--recheck` also the checked ones). »Approve anyway« (superadmin) in Pet → AI media shows a »Needs review« / flagged clip anyway.
+
 ---
 
 ## 9. DNS & Domain Configuration

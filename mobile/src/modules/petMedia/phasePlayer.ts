@@ -31,8 +31,18 @@ import { mediaKey, type PetMediaInfo, type PhaseGroup } from '@/modules/petMedia
 import type { MediaMode, PlayItem } from '@/modules/petMedia/statePlayer';
 import type { TrainingCommand, TrainingSession } from '@/modules/training/training';
 
-/** Length of a school / game phase clip (server `media.state_media.clip_seconds`). */
+/**
+ * Default length of a school / game phase clip (server `media.state_media.clip_seconds`);
+ * the server sends each stored clip's real length (`media.phaseMs`) — David 2026-10-23:
+ * school PERFORMING clips are 5 s (older stored ones stay 3 s until regenerated).
+ */
 export const PHASE_CLIP_MS = 3_000;
+
+/** Length of a stored phase clip (ms): the server's `phase_seconds`, else 3 s. */
+export function phaseClipMs(media: Pick<PetMediaInfo, 'phaseMs'> | null | undefined, clip: string): number {
+  const ms = media?.phaseMs?.[clip];
+  return typeof ms === 'number' && ms > 0 ? ms : PHASE_CLIP_MS;
+}
 
 /** The ball's flight out and back while the run + fetch clips play (2 × 3 s). */
 export const BALL_CLIP_FETCH_MS = 2 * PHASE_CLIP_MS;
@@ -55,6 +65,11 @@ export interface PhaseMoment {
   pose: string | null;
   /** Changes for every new instance (a new trial / pounce / throw) so a clip replays. */
   instance: string;
+  /**
+   * David 2026-10-23: start the clip this many ms in (a 5 s performing clip whose trial left
+   * less than 5 s before the obey moment — its END, the pose, must land on time). 0 / absent = from the start.
+   */
+  startAtMs?: number;
 }
 
 const COMMAND_POSE: Record<TrainingCommand, string> = { sit: 'sit', come: 'come', place: 'place', potty: 'door' };
@@ -85,8 +100,9 @@ export function phasePlayback(media: PetMediaInfo, moment: PhaseMoment, mode: Me
   const still = phasePoseUrl(media, moment.pose);
   const url = moment.clip !== null ? media.phases[moment.clip] : undefined;
   if (mode === 'video' && present(url) && (canPlayVideo?.(url) ?? true)) {
+    const startAt = moment.startAtMs !== undefined && moment.startAtMs > 0 ? moment.startAtMs : undefined;
     return {
-      current: { kind: 'clip', url, key: `${mediaKey(url)}#${moment.instance}`, state: null, loop: false, transition: null },
+      current: { kind: 'clip', url, key: `${mediaKey(url)}#${moment.instance}`, state: null, loop: false, transition: null, ...(startAt !== undefined ? { startAtMs: startAt } : {}) },
       still,
     };
   }
@@ -101,6 +117,13 @@ export function phasePlayback(media: PetMediaInfo, moment: PhaseMoment, mode: Me
  * praise window (server: obey_at + 150 … window_end_ms); the margin covers the clip's start-up.
  */
 export const PERFORMING_END_MARGIN_MS = 100;
+
+/**
+ * QA #363 M2: a clip LONGER than the 3 s default (the 5 s performing clips) never starts more
+ * than this long before the cue — the dog waits for the command (attention) first; the clip's
+ * slow beginning is skipped instead (`startAtMs`), so its end pose still lands at obey − margin.
+ */
+export const PERFORMING_CUE_LEAD_MS = 300;
 
 /** Server praise window when a trial carries no `window_end_ms` (TrainingService::PRAISE_WINDOW_MS). */
 const PRAISE_WINDOW_FALLBACK_MS = 1_500;
@@ -120,19 +143,22 @@ function holdEnd(prev: SchoolTrial | undefined): number {
 
 /**
  * QA M1: when trial `i`'s `performing` clip starts — so that it ENDS at `obey_at − margin`
- * (a 3 s clip, the dog obeys 0,8–2,5 s after the cue, so the motion begins around the cue),
- * never before the previous trial's praise window is over. null = the dog ignores this cue.
+ * (the dog obeys 0,8–2,5 s after the cue, so the motion begins around the cue), never before
+ * the previous trial's praise window is over. null = the dog ignores this cue.
+ * `clipMs` = the stored performing clip's length (3 s; 5 s since David 2026-10-23).
  */
-export function performingStartMs(trials: readonly SchoolTrial[], i: number): number | null {
+export function performingStartMs(trials: readonly SchoolTrial[], i: number, clipMs: number = PHASE_CLIP_MS): number | null {
   const at = obeyAt(trials[i]);
   if (at === null) return null;
-  return Math.max(holdEnd(trials[i - 1]), at - PHASE_CLIP_MS - PERFORMING_END_MARGIN_MS);
+  const natural = Math.max(holdEnd(trials[i - 1]), at - clipMs - PERFORMING_END_MARGIN_MS);
+  // QA #363 m3: 3 s clips keep their earlier timing exactly; only longer clips are capped at the cue.
+  return clipMs > PHASE_CLIP_MS ? Math.max(natural, trials[i].cue_at_ms - PERFORMING_CUE_LEAD_MS) : natural;
 }
 
 /** When trial `i` takes the stage (its `attention`): after the previous trial's hold, latest at its cue / performing. */
-function trialStartMs(trials: readonly SchoolTrial[], i: number): number {
+function trialStartMs(trials: readonly SchoolTrial[], i: number, clipMs: number): number {
   if (i === 0) return 0; // the lead-in belongs to trial 0
-  const own = Math.min(trials[i].cue_at_ms, performingStartMs(trials, i) ?? trials[i].cue_at_ms);
+  const own = Math.min(trials[i].cue_at_ms, performingStartMs(trials, i, clipMs) ?? trials[i].cue_at_ms);
   return obeyAt(trials[i - 1]) !== null ? Math.min(holdEnd(trials[i - 1]), own) : own;
 }
 
@@ -142,22 +168,33 @@ function trialStartMs(trials: readonly SchoolTrial[], i: number): number {
  * the position through the praise window, until the next trial's attention). A cue the dog
  * ignores → the standing pose from the cue on.
  */
-export function schoolMomentAt(session: Pick<TrainingSession, 'command' | 'trials' | 'duration_ms'>, elapsedMs: number): PhaseMoment & { phase: SchoolPhase | null } {
+export function schoolMomentAt(
+  session: Pick<TrainingSession, 'command' | 'trials' | 'duration_ms'>,
+  elapsedMs: number,
+  media?: Pick<PetMediaInfo, 'phaseMs'> | null,
+): PhaseMoment & { phase: SchoolPhase | null } {
   const e = Math.max(0, Math.min(elapsedMs, session.duration_ms));
   const pose = COMMAND_POSE[session.command];
   const clip = (phase: SchoolPhase) => `school_${session.command}_${phase}`;
+  // David 2026-10-23: the stored performing clip's own length (5 s new, 3 s older).
+  const clipMs = phaseClipMs(media, clip('performing'));
   const trials = session.trials;
   if (trials.length === 0) return { phase: 'attention', clip: clip('attention'), pose: null, instance: 'lead-in' };
   // The current trial = the last one whose stage time has begun.
   let index = 0;
   trials.forEach((_, i) => {
-    if (trialStartMs(trials, i) <= e) index = i;
+    if (trialStartMs(trials, i, clipMs) <= e) index = i;
   });
   const trial = trials[index];
-  const start = performingStartMs(trials, index);
+  const start = performingStartMs(trials, index, clipMs);
   if (start !== null && e >= start) {
-    const phase: SchoolPhase = e < start + PHASE_CLIP_MS ? 'performing' : 'success';
-    return { phase, clip: clip(phase), pose, instance: `${index}:${phase}` };
+    // The clip must END at obey − margin; when the previous praise window left less time than
+    // the clip lasts, it starts that much later INTO the clip (the pose still lands on time).
+    const end = (obeyAt(trial) as number) - PERFORMING_END_MARGIN_MS;
+    // Clamped to the clip (never a seek past its end; the last frame = the held pose).
+    const skip = Math.min(clipMs, Math.max(0, clipMs - (end - start)));
+    const phase: SchoolPhase = e < Math.max(end, start + 1) ? 'performing' : 'success';
+    return { phase, clip: clip(phase), pose, instance: `${index}:${phase}`, ...(phase === 'performing' && skip > 0 ? { startAtMs: skip } : {}) };
   }
   if (start === null && e >= trial.cue_at_ms) return { phase: null, clip: null, pose: null, instance: `${index}:ignores` };
   return { phase: 'attention', clip: clip('attention'), pose: null, instance: `${index}:attention` };

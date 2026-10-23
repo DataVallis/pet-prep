@@ -2202,7 +2202,7 @@ export interface components {
                 expires_at: string | null;
                 /**
                  * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                 *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                 *     loop starts in). Never `idle` — the reference image is the idle pose.
                  *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                  */
                 keyframes: {
@@ -2237,13 +2237,22 @@ export interface components {
                     [key: string]: string;
                 };
                 /**
-                 * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                 * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                  *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                  *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                  *     Always an object.
                  */
                 phases: {
                     [key: string]: string;
+                };
+                /**
+                 * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                 *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                 *     made before) 3 s. The app times the school from it (the performing clip ends at
+                 *     the obey moment). Missing key (older server) = 3. Always an object.
+                 */
+                phase_seconds: {
+                    [key: string]: number;
                 };
                 /**
                  * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -3873,7 +3882,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -3908,13 +3917,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -4653,7 +4671,7 @@ export interface operations {
                                 expires_at: string | null;
                                 /**
                                  * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                 *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                 *     loop starts in). Never `idle` — the reference image is the idle pose.
                                  *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                  */
                                 keyframes: {
@@ -4688,13 +4706,22 @@ export interface operations {
                                     [key: string]: string;
                                 };
                                 /**
-                                 * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                 * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                  *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                  *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                  *     Always an object.
                                  */
                                 phases: {
                                     [key: string]: string;
+                                };
+                                /**
+                                 * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                 *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                 *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                 *     the obey moment). Missing key (older server) = 3. Always an object.
+                                 */
+                                phase_seconds: {
+                                    [key: string]: number;
                                 };
                                 /**
                                  * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -5453,7 +5480,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -5488,13 +5515,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -6251,7 +6287,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -6286,13 +6322,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -7049,7 +7094,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -7084,13 +7129,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -7847,7 +7901,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -7882,13 +7936,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -8645,7 +8708,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -8680,13 +8743,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -9447,7 +9519,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -9482,13 +9554,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -10249,7 +10330,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -10284,13 +10365,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -11051,7 +11141,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -11086,13 +11176,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -11849,7 +11948,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -11884,13 +11983,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -12651,7 +12759,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -12686,13 +12794,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -13449,7 +13566,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -13484,13 +13601,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -14247,7 +14373,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -14282,13 +14408,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -15049,7 +15184,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -15084,13 +15219,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -15847,7 +15991,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -15882,13 +16026,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -16649,7 +16802,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -16684,13 +16837,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -17447,7 +17609,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -17482,13 +17644,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -18249,7 +18420,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -18284,13 +18455,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -19051,7 +19231,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -19086,13 +19266,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -19853,7 +20042,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -19888,13 +20077,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -21290,7 +21488,7 @@ export interface operations {
                                 expires_at: string | null;
                                 /**
                                  * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                 *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                 *     loop starts in). Never `idle` — the reference image is the idle pose.
                                  *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                  */
                                 keyframes: {
@@ -21325,13 +21523,22 @@ export interface operations {
                                     [key: string]: string;
                                 };
                                 /**
-                                 * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                 * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                  *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                  *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                  *     Always an object.
                                  */
                                 phases: {
                                     [key: string]: string;
+                                };
+                                /**
+                                 * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                 *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                 *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                 *     the obey moment). Missing key (older server) = 3. Always an object.
+                                 */
+                                phase_seconds: {
+                                    [key: string]: number;
                                 };
                                 /**
                                  * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -21568,7 +21775,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -21603,13 +21810,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
@@ -22020,7 +22236,7 @@ export interface operations {
                                     expires_at: string | null;
                                     /**
                                      * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-                                     *     loop starts and ends in). Never `idle` — the reference image is the idle pose.
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
                                      *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
                                      */
                                     keyframes: {
@@ -22055,13 +22271,22 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
                                      *     its last frame — school `school_<command>_<attention|performing|success>`, dog
                                      *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
                                      *     Always an object.
                                      */
                                     phases: {
                                         [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
                                     };
                                     /**
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like

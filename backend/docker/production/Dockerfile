@@ -30,6 +30,10 @@ COPY --from=mlocati/php-extension-installer:2 /usr/bin/install-php-extensions /u
 # gd + exif (image validation), pcntl (queue:work / reverb signals), opcache.
 # libfcgi-bin: cgi-fcgi for the FPM ping health check (Debian stable package —
 # pinning an exact version would break the build at every Debian point release).
+# ffmpeg (ffmpeg + ffprobe, David 2026-10-23): the automatic clip quality check
+# (MediaQualityService — frame differences, end-frame SSIM, the contact sheet for the
+# vision check). Debian bookworm package without recommends: ~+250 MB uncompressed
+# (codec libraries), pulled once per Debian update — same unpinned rule as above.
 # redis comes from PECL, which is sometimes down (504 on 2026-10-21 blocked every
 # deploy): PECL first, then the same release built from the phpredis GitHub tag.
 # Keep REDIS_VERSION equal in both sources when bumping it.
@@ -41,7 +45,9 @@ RUN set -eux; \
         || install-php-extensions "phpredis/phpredis@${REDIS_VERSION}"; \
     php -r 'exit(extension_loaded("redis") ? 0 : 1);'; \
     apt-get update; \
-    apt-get install -y --no-install-recommends libfcgi-bin; \
+    apt-get install -y --no-install-recommends libfcgi-bin ffmpeg; \
+    ffmpeg -hide_banner -version > /dev/null; \
+    ffprobe -hide_banner -version > /dev/null; \
     rm -rf /var/lib/apt/lists/*; \
     cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"; \
     rm -f /usr/local/etc/php-fpm.d/*.conf; \

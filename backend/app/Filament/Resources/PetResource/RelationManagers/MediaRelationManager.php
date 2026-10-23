@@ -9,12 +9,14 @@ use App\Models\User;
 use App\Services\AppSettingsService;
 use App\Services\Media\FrozenClipRegenerator;
 use App\Services\Media\MediaProfiles;
+use App\Services\Media\MediaQualityService;
 use App\Services\Media\PetMediaService;
 use App\Services\Media\PetPreparationService;
 use Filament\Notifications\Notification;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Number;
 
@@ -24,6 +26,9 @@ use Illuminate\Support\Number;
  * (signed, expiring) and — superadmin only — Regenerate / Generate missing.
  * M5-T08: also the state key images (kind keyframe), how each video was made
  * (loop / from key image / from reference image) and the transition clips.
+ * Quality check (David 2026-10-23): a »Quality« column per clip, a »Needs review« filter
+ * and »Approve anyway« (superadmin, audited) for a clip that failed the check twice or
+ * was flagged by media:quality-check; »Regenerate« starts a new chain (one auto retry).
  */
 class MediaRelationManager extends RelationManager
 {
@@ -122,7 +127,7 @@ class MediaRelationManager extends RelationManager
                         $record->isVideo() && self::madeAs($record) === PetMedia::RECIPE_POSE => 'from key image',
                         $record->isVideo() => 'from reference image',
                         $record->isTransition() => 'pose → pose',
-                        $record->isPhase() => sprintf('phase clip %ss (pose → pose, plays once)', rtrim(rtrim(number_format((float) $record->duration_seconds, 1), '0'), '.') ?: '3'),
+                        $record->isPhase() => sprintf('phase clip %ss (pose → pose, plays once)', rtrim(rtrim(number_format((float) ($record->stored_duration_seconds ?? $record->duration_seconds), 1), '0'), '.') ?: '3'),
                         $record->isKeyframe(), $record->isPose() => 'edit of reference',
                         default => null,
                     })
@@ -136,6 +141,33 @@ class MediaRelationManager extends RelationManager
                         default => 'warning',
                     })
                     ->description(fn (PetMedia $record): ?string => $record->error_reason ?? ($record->status === PetMedia::STATUS_FAILED ? $record->error : null)),
+                // Quality check (David 2026-10-23): the verdict of the stored file / the waiting candidate.
+                Tables\Columns\TextColumn::make('quality')->label('Quality')
+                    ->badge()
+                    ->getStateUsing(fn (PetMedia $record): ?string => self::qualityLabel($record))
+                    ->color(fn (?string $state): string => match ($state) {
+                        'passed', 'approved' => 'success',
+                        'needs review', 'flagged' => 'danger',
+                        'would fail (shadow)' => 'warning',
+                        'checking', 'retrying' => 'info',
+                        null => 'gray',
+                        default => 'warning',
+                    })
+                    ->description(fn (PetMedia $record): ?string => self::qualityDetail($record))
+                    ->placeholder('—'),
+                // QA #363 M3: what »Approve anyway« would approve — the candidate and the contact sheet.
+                Tables\Columns\TextColumn::make('review_candidate')->label('Candidate')
+                    ->getStateUsing(fn (PetMedia $record): ?string => app(MediaQualityService::class)->candidateUrl(self::qualityRow($record)) !== null ? 'Open candidate' : null)
+                    ->url(fn (PetMedia $record): ?string => self::isSuperadmin() ? app(MediaQualityService::class)->candidateUrl(self::qualityRow($record)) : null, shouldOpenInNewTab: true)
+                    ->placeholder('—'),
+                Tables\Columns\TextColumn::make('review_sheet')->label('Frames')
+                    ->getStateUsing(fn (PetMedia $record): ?string => app(MediaQualityService::class)->latestSheetCheck(self::qualityRow($record)) !== null ? 'Open contact sheet' : null)
+                    ->url(function (PetMedia $record): ?string {
+                        $check = self::isSuperadmin() ? app(MediaQualityService::class)->latestSheetCheck(self::qualityRow($record)) : null;
+
+                        return $check !== null ? app(MediaQualityService::class)->sheetUrl($check) : null;
+                    }, shouldOpenInNewTab: true)
+                    ->placeholder('—'),
                 Tables\Columns\TextColumn::make('profile')->placeholder('—'),
                 Tables\Columns\TextColumn::make('generation')->label('Gen.'),
                 Tables\Columns\TextColumn::make('cost_usd')
@@ -150,6 +182,11 @@ class MediaRelationManager extends RelationManager
                     ->placeholder('—')
                     ->url(fn (PetMedia $record): ?string => $record->isServable() ? app(PetMediaService::class)->signedUrl($record) : null, shouldOpenInNewTab: true),
                 Tables\Columns\TextColumn::make('completed_at')->dateTime()->placeholder('—'),
+            ])
+            ->filters([
+                Tables\Filters\Filter::make('needs_review')
+                    ->label('Needs review / would fail (quality check)')
+                    ->query(fn (Builder $query): Builder => $query->needingReview()),
             ])
             ->headerActions([
                 // M5-T08b (QA minor 7): "Generate missing" never upgrades a pet from before
@@ -210,6 +247,26 @@ class MediaRelationManager extends RelationManager
                     }),
             ])
             ->actions([
+                // Quality check (David 2026-10-23): show a clip that failed the check twice /
+                // was flagged anyway. Superadmin only (also for a direct Livewire call), audited.
+                Tables\Actions\Action::make('approveQuality')
+                    ->label('Approve anyway')
+                    ->icon('heroicon-o-check-badge')
+                    ->color('warning')
+                    ->requiresConfirmation()
+                    ->modalDescription(fn (PetMedia $record): string => sprintf('This clip failed the quality check (%s). Approving shows it to the children as it is. Open the file first.',
+                        self::qualityDetail($record) ?? 'no reason recorded'))
+                    ->visible(fn (PetMedia $record): bool => self::isSuperadmin() && self::reviewable($record))
+                    ->authorize(fn (): bool => self::isSuperadmin())
+                    ->action(function (PetMedia $record): void {
+                        $user = auth()->user();
+                        $done = $user instanceof User && app(MediaQualityService::class)->approve($record, $user);
+
+                        Notification::make()
+                            ->title($done ? 'Approved — the clip is shown now' : 'Nothing to approve (changed meanwhile)')
+                            ->status($done ? 'success' : 'warning')
+                            ->send();
+                    }),
                 Tables\Actions\Action::make('regenerate')
                     ->label('Regenerate')
                     ->icon('heroicon-o-arrow-path')
@@ -242,6 +299,52 @@ class MediaRelationManager extends RelationManager
                             ->send();
                     }),
             ]);
+    }
+
+    /** The row the quality check ran on: a pool pet's slot → its look row (checked once per look row). */
+    private static function qualityRow(PetMedia $record): PetMedia
+    {
+        return $record->look_media_id !== null && $record->lookMedia !== null ? $record->lookMedia : $record;
+    }
+
+    /** A slot (or the look row it mirrors) whose clip waits for »Approve anyway«. */
+    private static function reviewable(PetMedia $record): bool
+    {
+        $row = self::qualityRow($record);
+
+        return $record->needsReview() || $record->isFlaggedQuality() || $row->needsReview() || $row->isFlaggedQuality();
+    }
+
+    /** Quality badge: the waiting candidate first, else the verdict of the stored file. */
+    private static function qualityLabel(PetMedia $record): ?string
+    {
+        if (! $record->isClip()) {
+            return null;
+        }
+
+        $row = self::qualityRow($record);
+
+        return match (true) {
+            $row->needsReview() => 'needs review',
+            $row->status === PetMedia::STATUS_RUNNING && filled($row->candidate_path) => 'checking',
+            $row->isInFlight() && $row->quality_retry_generation !== null && (int) $row->quality_retry_generation === (int) $row->generation => 'retrying',
+            $row->quality === PetMedia::QUALITY_PASSED => 'passed',
+            $row->quality === PetMedia::QUALITY_PASSED_TECHNICAL => 'not AI-checked',
+            $row->quality === PetMedia::QUALITY_UNCHECKED => 'unchecked',
+            $row->quality === PetMedia::QUALITY_FLAGGED => 'flagged',
+            // QA #363 M1: shadow mode — the would-be verdict (the clip is shown).
+            $row->quality === PetMedia::QUALITY_SHADOW_FAILED => 'would fail (shadow)',
+            $row->quality === PetMedia::QUALITY_APPROVED => 'approved',
+            default => null,
+        };
+    }
+
+    private static function qualityDetail(PetMedia $record): ?string
+    {
+        $row = $record->look_media_id !== null && $record->lookMedia !== null ? $record->lookMedia : $record;
+        $text = $row->needsReview() ? $row->error : ($row->quality_reason ?? ($row->isInFlight() && $row->quality_retry_generation === $row->generation ? $row->error : null));
+
+        return $text !== null ? mb_strimwidth($text, 0, 160, '…') : null;
     }
 
     /** How the shown file was made (stored_recipe; nothing stored yet → how it is being submitted). */

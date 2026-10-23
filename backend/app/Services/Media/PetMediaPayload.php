@@ -37,6 +37,8 @@ final class PetMediaPayload
         public readonly array $phases = [],
         /** @var list<string> M5-T09 / T10: phase clip groups of the pet's set (school, ball, wand) */
         public readonly array $phaseGroups = [],
+        /** @var array<string, float> David 2026-10-23: phase clip => length of its STORED file in seconds */
+        public readonly array $phaseSeconds = [],
     ) {}
 
     /**
@@ -50,7 +52,7 @@ final class PetMediaPayload
     }
 
     /**
-     * @return array{status: string, reference_image_url: string|null, videos: object, current_video_url: string|null, states: list<string>, expires_at: string|null, keyframes: object, transitions: object, loops: list<string>, state_media: bool, poses: object, phases: object, phase_groups: list<string>}
+     * @return array{status: string, reference_image_url: string|null, videos: object, current_video_url: string|null, states: list<string>, expires_at: string|null, keyframes: object, transitions: object, loops: list<string>, state_media: bool, poses: object, phases: object, phase_seconds: object, phase_groups: list<string>}
      */
     public function toArray(): array
     {
@@ -122,7 +124,7 @@ final class PetMediaPayload
              */
             'poses' => (object) $this->poses,
             /**
-             * M5-T09 / T10: signed URL of each stored 3 s PHASE clip, played once and held on
+             * M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
              * its last frame — school `school_<command>_<attention|performing|success>`, dog
              * ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
              * Always an object.
@@ -130,6 +132,15 @@ final class PetMediaPayload
              * @var array<string, string>
              */
             'phases' => (object) $this->phases,
+            /**
+             * David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+             * PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+             * made before) 3 s. The app times the school from it (the performing clip ends at
+             * the obey moment). Missing key (older server) = 3. Always an object.
+             *
+             * @var array<string, float>
+             */
+            'phase_seconds' => (object) $this->phaseSeconds,
             /**
              * M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
              * `state_media`). For a listed group the app shows the phase clip — or, while it is

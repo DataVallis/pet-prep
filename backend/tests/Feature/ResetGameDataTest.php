@@ -87,6 +87,14 @@ function rgSeed(): array
             'storage_path' => "{$p->id}/reference-g1.jpg", 'mime' => 'image/jpeg', 'bytes' => 68, 'profile' => 'nano_banana_pro',
         ]);
     }
+    // Clip quality check (2026-10-23): one decided check of the pet's idle clip.
+    $clipId = PetMedia::create([
+        'pet_id' => $pet->id, 'kind' => 'video', 'state' => 'idle', 'status' => 'ready', 'generation' => 1,
+        'storage_path' => "{$pet->id}/video-idle-g1.mp4", 'mime' => 'video/mp4', 'bytes' => 44, 'profile' => 'kling_v3_pro', 'quality' => 'passed',
+    ])->id;
+    rgInsert('pet_media_quality_checks', [
+        'pet_media_id' => $clipId, 'generation' => 1, 'trigger' => 'pipeline', 'status' => 'decided', 'ai_status' => 'passed', 'ai_cost_usd' => 0.01, 'verdict' => 'pass',
+    ]);
     Storage::disk('pet_media')->put("{$pet->id}/history/reference-g0.jpg", "\xFF\xD8\xFF\xE0".str_repeat("\x00", 16));
     rgInsert('pet_media_history', [
         'pet_id' => $pet->id, 'kind' => 'image', 'generation' => 0, 'storage_path' => "{$pet->id}/history/reference-g0.jpg",
