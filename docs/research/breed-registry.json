@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "ab8e47ff59abeb953424298bf868cac2b9373af1b4be234f8dd1128ffa751240"
+      "sha256": "a3a1cf2219b21d96af5123baaff0438d676e9cbb7622a59e7a491c9d028c3f27"
     }
   },
   "suitability_vocabulary": {
@@ -32842,7 +32842,12 @@
           "S479"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "weimaraner.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
