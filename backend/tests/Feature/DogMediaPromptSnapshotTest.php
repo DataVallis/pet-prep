@@ -3,6 +3,7 @@
 use App\Enums\BreedType;
 use App\Enums\LifeStage;
 use App\Enums\PetOrigin;
+use App\Enums\PetPhaseClip;
 use App\Enums\PetStateEnum;
 use App\Enums\Species;
 use App\Models\Pet;
@@ -24,6 +25,9 @@ use App\Services\Media\PetDnaService;
 | prompt (with and without traits), the negative prompts, the stage /
 | origin cues and the state video sets per tier. Every value must stay
 | byte-identical when cats get their own templates.
+|
+| Re-recorded on purpose 2026-10-23 (frozen same-frame clips fix, PR #361): added the
+| loop / phase clip prompts and the start-only negative; every earlier key unchanged.
 */
 
 const DMP_FIXTURE = __DIR__.'/../Fixtures/dog_media_prompts_snapshot.json';
@@ -111,6 +115,17 @@ function dmpRender(): array
 
     $out['origin_cue|bought'] = PetOrigin::Bought->promptCue();
     $out['origin_cue|adopted'] = PetOrigin::Adopted->promptCue();
+    // Fix 2026-10-23 (QA #361 m5, recorded on purpose): the start-only loop / phase prompts.
+    foreach (dmpDogStates() as $state) {
+        $out["loop|{$state->value}"] = $prompts->loopVideoPrompt('mutt', $state);
+        $out["loop_traits|{$state->value}"] = $prompts->loopVideoPrompt('border_collie', $state, $dna->sample('border_collie', 42)['traits']);
+    }
+    foreach (PetPhaseClip::cases() as $clip) {
+        if ($clip->species() === Species::Dog) {
+            $out["phase|{$clip->value}"] = $prompts->phaseVideoPrompt('mutt', $clip);
+        }
+    }
+    $out['loop_negative'] = $prompts->loopNegativePrompt();
     $out['negative'] = $prompts->negativePrompt();
     $out['video_negative'] = $prompts->videoNegativePrompt();
     $out['tier|basic'] = array_map(fn (PetStateEnum $s) => $s->value, MediaEntitlementService::statesOfTier(MediaEntitlementService::TIER_BASIC));

@@ -54,6 +54,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property int $generation
  * @property int|null $source_generation
  * @property string|null $recipe
+ * @property string|null $stored_recipe
  * @property int $attempts
  * @property string|null $request_id
  * @property string|null $source_url
@@ -129,6 +130,8 @@ class PetMedia extends Model
         'source_generation',
         // M5-T08: how a state video was made (null = from the reference image, before M5-T08).
         'recipe',
+        // Fix 2026-10-23 (QA #361 M1): how the STORED file was made — written only when a file is stored / linked.
+        'stored_recipe',
         'attempts',
         'request_id',
         'source_url',
@@ -236,28 +239,30 @@ class PetMedia extends Model
         return $this->isTransition() || $this->isPhase();
     }
 
-    /** A state video made as a loop from its key image (old start = end frame, or start-only since 2026-10-23). */
+    /** The STORED state video is a loop from its key image (old start = end frame, or start-only since 2026-10-23). */
     public function isStateLoop(): bool
     {
-        return $this->isVideo() && in_array($this->recipe, self::LOOP_RECIPES, true);
+        return $this->isVideo() && in_array($this->stored_recipe, self::LOOP_RECIPES, true);
     }
 
     /**
-     * A STORED clip made the frozen way (fix 2026-10-23): a loop with the same image as
-     * start and end frame (recipe `loop`), or a same-pose phase clip sent with an end
-     * frame (recipe null). media:regenerate-frozen remakes exactly these.
+     * The STORED file was made the frozen way (fix 2026-10-23): a loop with the same image
+     * as start and end frame (stored_recipe `loop`), or a same-pose phase clip made with an
+     * end frame (stored_recipe null; `$endFrameProfile` = its profile took an end frame —
+     * QA #361 m3, never a paid remake of a clip that could not freeze). Any status: a remake
+     * that failed (webhook error, sweep timeout) still shows the frozen file (QA #361 M1).
      */
-    public function isFrozenSameFrameClip(): bool
+    public function isFrozenSameFrameClip(bool $endFrameProfile = true): bool
     {
-        if ($this->status !== self::STATUS_READY || ! $this->isServable()) {
+        if (! $this->isServable()) {
             return false;
         }
 
         if ($this->isVideo()) {
-            return $this->recipe === self::RECIPE_LOOP;
+            return $this->stored_recipe === self::RECIPE_LOOP;
         }
 
-        return $this->isPhase() && $this->recipe === null && ($this->phaseClip()?->sharesFrames() ?? false);
+        return $this->isPhase() && $this->stored_recipe === null && $endFrameProfile && ($this->phaseClip()?->sharesFrames() ?? false);
     }
 
     /** The state of a video / key image slot (null for every other kind). */

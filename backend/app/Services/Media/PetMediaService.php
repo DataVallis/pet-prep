@@ -278,7 +278,7 @@ class PetMediaService
             $slot = $this->slot($pet, PetMedia::KIND_VIDEO, $state);
 
             if ($loops && $state !== PetStateEnum::Idle && $this->poseImage($pet, $state, $image) === null) {
-                // The loop starts and ends on the state's key image: that comes first
+                // The loop starts in the state's key image (and ends close to it): that comes first
                 // (in the same preparation order); the video follows once it is stored.
                 [$key, $dispatched] = $this->queuePoseStill($pet, PetMedia::KIND_KEYFRAME, $state, $image, $includeFailed);
                 $queued += $dispatched ? 1 : 0;
@@ -287,7 +287,8 @@ class PetMediaService
                 continue;
             }
 
-            // A clip made the pre-M5-T08 way (from the reference image) is remade as a loop.
+            // A clip made the pre-M5-T08 way (from the reference image) is remade as a loop
+            // (from its key image, start frame only since 2026-10-23).
             $recipeStale = $loops && $slot->status === PetMedia::STATUS_READY && $slot->recipe === null;
 
             if ($this->queueClip($slot, $image, $includeFailed, $recipeStale)) {
@@ -633,7 +634,7 @@ class PetMediaService
             return true;
         }
 
-        // M5-T08: a seamless loop from / to the state's key image (idle: the reference image).
+        // M5-T08: a loop from the state's key image (idle: the reference image) — start frame only since 2026-10-23.
         $loops = $this->entitlements->usesStateMedia($pet);
         $pose = $loops ? $this->poseImage($pet, $state, $image) : null;
 
@@ -926,6 +927,8 @@ class PetMediaService
             $locked->update([
                 'status' => PetMedia::STATUS_READY,
                 'storage_path' => $path,
+                // QA #361 M1: how THIS file was made — only now, never at submit (a failed remake keeps the old one).
+                'stored_recipe' => $locked->recipe,
                 'bytes' => $file['bytes'],
                 'mime' => $file['mime'],
                 'error_reason' => null,
@@ -1440,7 +1443,7 @@ class PetMediaService
 
             if ($m->isKeyframe()) {
                 $keyframes[$state->value] = $this->signedUrl($m, $expires);
-            } elseif ($m->isStateLoop() && isset($videos[$state->value])) {
+            } elseif ($m->isStateLoop() && isset($videos[$state->value])) { // the stored file (stored_recipe)
                 $loops[] = $state->value;
             }
         }
@@ -2007,7 +2010,7 @@ class PetMediaService
         $stage = LifeStage::from($image->life_stage);
         $row = $this->lookSlot($pet->look, PetMedia::KIND_VIDEO, $state, $stage);
 
-        // M5-T08: this pet wants a seamless loop from / to the state's key image.
+        // M5-T08: this pet wants a loop from the state's key image (start frame only since 2026-10-23).
         if ($this->entitlements->usesStateMedia($pet)) {
             if ($state !== PetStateEnum::Idle && $this->poseImage($pet, $state, $image) === null) {
                 // The key image comes first (queueStateVideos); this clip follows once it is stored.
@@ -2399,6 +2402,7 @@ class PetMediaService
                 'life_stage' => $row->life_stage,
                 'source_generation' => $locked->isImage() ? null : $sourceGeneration,
                 'recipe' => $row->recipe,
+                'stored_recipe' => $row->stored_recipe,
                 'request_id' => null,
                 'source_url' => null,
                 'error_reason' => null,

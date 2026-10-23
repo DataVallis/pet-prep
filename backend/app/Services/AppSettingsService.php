@@ -39,7 +39,7 @@ use InvalidArgumentException;
  *
  * `state_media` (M5-T08b, David 2026-10-21: product switches belong in the
  * superadmin panel; on from the start) = {enabled: bool}: state key images,
- * seamless loops and transitions (MediaEntitlementService::usesStateMedia).
+ * state loops and transitions (MediaEntitlementService::usesStateMedia).
  * No row → env AI_STATE_MEDIA_ENABLED (default true).
  *
  * `phase_clips` (M5-T09 / T10 QA M2, David 2026-10-21: product switches in the

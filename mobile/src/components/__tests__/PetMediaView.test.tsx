@@ -570,7 +570,7 @@ describe('battery', () => {
   });
 });
 
-describe('M5-T08 state media: seamless loops, transitions, key image fallback', () => {
+describe('M5-T08 state media: state loops, transitions, key image fallback', () => {
   const KEY_SLEEPING = url(10, 'ksleep');
   const KEY_HUNGRY = url(11, 'khungry');
   const IDLE_TO_SLEEPING = url(12, 'its');

@@ -93,7 +93,7 @@ final class ModelProfile
         );
     }
 
-    /** M5-T08: the model takes an end frame (seamless loops, transitions between two poses). */
+    /** M5-T08: the model takes an end frame (transitions between two different poses — never the start image again, FalAiService::endFrameUrl). */
     public function supportsEndImage(): bool
     {
         return $this->kind === self::KIND_VIDEO && $this->endImageParam !== null;

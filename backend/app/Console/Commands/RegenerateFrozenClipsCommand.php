@@ -24,6 +24,12 @@ class RegenerateFrozenClipsCommand extends Command
 
     public function handle(FrozenClipRegenerator $regenerator, AiSpendGuard $guard): int
     {
+        if ($this->option('pet') !== null && $this->option('look') !== null) {
+            $this->error('Use --pet or --look, not both (--pet of a pet on a shared look already means that look).');
+
+            return self::INVALID;
+        }
+
         $petId = $this->option('pet') !== null ? (int) $this->option('pet') : null;
         $lookId = $this->option('look') !== null ? (int) $this->option('look') : null;
         $plan = $regenerator->plan($petId, $lookId);
@@ -49,8 +55,10 @@ class RegenerateFrozenClipsCommand extends Command
             sprintf('$%.3f', $regenerator->costOf($r)),
         ])->all());
 
-        $summary = sprintf('%d loop(s) + %d phase clip(s), estimated $%.2f. Budget left today: $%.2f of $%.2f.',
-            $plan['loops'], $plan['phases'], $plan['cost_usd'], max(0, $guard->dailyCapUsd() - $guard->spentTodayUsd()), $guard->dailyCapUsd());
+        $summary = sprintf('%d loop(s) + %d phase clip(s), estimated $%.2f. Budget left today: $%.2f of $%.2f, this month: $%.2f of $%.2f.',
+            $plan['loops'], $plan['phases'], $plan['cost_usd'],
+            max(0, $guard->dailyCapUsd() - $guard->spentTodayUsd()), $guard->dailyCapUsd(),
+            max(0, $guard->monthlyCapUsd() - $guard->spentThisMonthUsd()), $guard->monthlyCapUsd());
 
         if ($this->option('dry-run')) {
             $this->info('Dry run: '.$summary);
@@ -61,7 +69,8 @@ class RegenerateFrozenClipsCommand extends Command
         $result = $regenerator->regenerate(null, $petId, $lookId);
 
         return match ($result['outcome']) {
-            'queued' => tap(self::SUCCESS, fn () => $this->info(sprintf('Queued %d clip(s), estimated $%.2f. The current files stay visible until the new ones are stored.', $result['queued'], $result['cost_usd']))),
+            'queued' => tap(self::SUCCESS, fn () => $this->info(sprintf('Queued %d clip(s) (%d loop(s) + %d phase clip(s)), estimated $%.2f — pre-checked against the budget; each clip is still checked by the guard at its submit. The current files stay visible until the new ones are stored.', $result['queued'], $result['loops'], $result['phases'], $result['cost_usd']))),
+            'busy' => tap(self::FAILURE, fn () => $this->error('Another regenerate-frozen run is in progress — try again in a minute.')),
             'budget' => tap(self::FAILURE, fn () => $this->error(sprintf('Estimated $%.2f does not fit the AI budget now — nothing queued. %s', $result['cost_usd'], $summary))),
             'ai_off' => tap(self::FAILURE, fn () => $this->error('fal.ai is disabled (FAL_AI_API_KEY) or its balance is flagged as exhausted — nothing queued.')),
             default => tap(self::SUCCESS, fn () => $this->info('No frozen clips found.')),

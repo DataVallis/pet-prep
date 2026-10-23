@@ -147,8 +147,8 @@ function fzMakeFrozen(?Pet $pet = null): void
 {
     $same = array_map(fn (PetPhaseClip $c) => $c->value, PetPhaseClip::sameFrameCases());
     $scope = fn ($q) => $pet !== null ? $q->where('pet_id', $pet->id) : $q;
-    PetMedia::query()->tap($scope)->where('kind', 'video')->where('recipe', 'start_only')->update(['recipe' => 'loop']);
-    PetMedia::query()->tap($scope)->where('kind', 'phase')->whereIn('state', $same)->update(['recipe' => null]);
+    PetMedia::query()->tap($scope)->where('kind', 'video')->where('recipe', 'start_only')->update(['recipe' => 'loop', 'stored_recipe' => 'loop']);
+    PetMedia::query()->tap($scope)->where('kind', 'phase')->whereIn('state', $same)->update(['recipe' => null, 'stored_recipe' => null]);
 }
 
 describe('submit: same frame → start frame only', function () {
@@ -254,7 +254,7 @@ describe('media:regenerate-frozen', function () {
 
         Queue::fake([SubmitPetStateVideo::class]);
         $this->artisan('media:regenerate-frozen', ['--pet' => $pet->id])
-            ->expectsOutputToContain('Queued 17 clip(s), estimated $7.50')
+            ->expectsOutputToContain('Queued 17 clip(s) (8 loop(s) + 9 phase clip(s)), estimated $7.50')
             ->assertSuccessful();
 
         Queue::assertPushed(SubmitPetStateVideo::class, 17);
@@ -285,6 +285,54 @@ describe('media:regenerate-frozen', function () {
         fzCompleteClips();
         expect(PetMedia::whereKey($frozenIds)->pluck('recipe')->unique()->all())->toBe(['start_only'])
             ->and(app(FrozenClipRegenerator::class)->plan($pet->id)['rows'])->toHaveCount(0);
+    });
+
+    it('QA M1: a remake that fails keeps the frozen file and is offered again; a second run queues nothing', function () {
+        fzFakeFal();
+        $pet = fzPet();
+        fzCompleteClips();
+        fzMakeFrozen($pet);
+        $media = app(PetMediaService::class);
+        $regen = app(FrozenClipRegenerator::class);
+
+        $idle = PetMedia::where('pet_id', $pet->id)->where('kind', 'video')->where('state', 'idle')->sole();
+        $oldPath = $idle->storage_path;
+        Queue::fake([SubmitPetStateVideo::class]);
+        expect($regen->regenerate(null, $pet->id))->toMatchArray(['outcome' => 'queued', 'queued' => 17, 'loops' => 8, 'phases' => 9]);
+
+        // While queued (pending) nothing is offered again: a second run spends nothing.
+        $calls = fzQueueCalls()->count();
+        expect($regen->plan($pet->id)['rows'])->toHaveCount(0)
+            ->and($regen->regenerate(null, $pet->id)['outcome'])->toBe('nothing')
+            ->and(AppSettingChange::where('key', FrozenClipRegenerator::AUDIT_KEY)->count())->toBe(1);
+
+        // The remake is submitted (start-only), then fal reports an error.
+        $media->submitVideo($idle->id);
+        $idle->refresh();
+        expect($idle->recipe)->toBe('start_only')->and($idle->stored_recipe)->toBe('loop');
+        sendFalWebhook(['request_id' => $idle->request_id, 'status' => 'ERROR', 'error' => 'boom'])->assertOk();
+
+        $idle->refresh();
+        expect($idle->status)->toBe('failed')
+            ->and($idle->storage_path)->toBe($oldPath)
+            ->and($idle->stored_recipe)->toBe('loop')
+            ->and(fzQueueCalls()->count())->toBe($calls + 1);
+
+        // Still frozen on screen → listed again (failedRetry path), and the »Made as« label says so.
+        expect($regen->plan($pet->id)['rows']->pluck('id')->all())->toBe([$idle->id]);
+        $this->actingAs(User::factory()->create(['role' => 'parent', 'is_superadmin' => true]));
+        Livewire::test(MediaRelationManager::class, ['ownerRecord' => $pet, 'pageClass' => EditPet::class])
+            ->assertTableColumnStateSet('recipe', 'loop (key image → key image, frozen — regenerate)', $idle);
+    });
+
+    it('QA m3: a same-pose phase clip made by a profile without an end frame was never frozen', function () {
+        fzFakeFal();
+        $pet = fzPet();
+        fzCompleteClips();
+        fzMakeFrozen($pet);
+        PetMedia::where('pet_id', $pet->id)->where('kind', 'phase')->update(['profile' => 'veo31_fast']);
+
+        expect(app(FrozenClipRegenerator::class)->plan($pet->id))->toMatchArray(['loops' => 8, 'phases' => 0]);
     });
 
     it('respects the switches and the budget; a fixed pet has nothing to do', function () {
@@ -354,8 +402,14 @@ describe('media:regenerate-frozen', function () {
         Queue::assertPushed(SubmitPetStateVideo::class, 17);
         expect(AppSettingChange::where('key', FrozenClipRegenerator::AUDIT_KEY)->sole()->user_id)->toBe($admin->id);
 
-        // A non-superadmin parent never sees it (the panel itself is superadmin only).
+        // A non-superadmin admin user can neither see nor call it (nothing queued, no audit).
+        fzMakeFrozen($pet);
+        PetMedia::where('pet_id', $pet->id)->where('status', 'pending')->update(['status' => 'ready']);
         $this->actingAs(User::factory()->create(['role' => 'parent']));
         expect(MediaRelationManager::canViewForRecord($pet, EditPet::class))->toBeFalse();
+        Livewire::test(MediaRelationManager::class, ['ownerRecord' => $pet, 'pageClass' => EditPet::class])
+            ->assertTableActionHidden('regenerateFrozen'); // also ->authorize(): Filament refuses a hidden / unauthorized call
+        Queue::assertPushed(SubmitPetStateVideo::class, 17);
+        expect(AppSettingChange::where('key', FrozenClipRegenerator::AUDIT_KEY)->count())->toBe(1);
     });
 });

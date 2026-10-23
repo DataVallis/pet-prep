@@ -116,10 +116,10 @@ class MediaRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('state')->placeholder('—'),
                 Tables\Columns\TextColumn::make('recipe')->label('Made as')
                     ->getStateUsing(fn (PetMedia $record): ?string => match (true) {
-                        $record->isVideo() && $record->recipe === PetMedia::RECIPE_LOOP => 'loop (key image → key image, frozen — regenerate)',
-                        $record->isVideo() && $record->recipe === PetMedia::RECIPE_START_ONLY => 'loop (from key image, start frame only)',
-                        $record->isPhase() && $record->recipe === PetMedia::RECIPE_START_ONLY => 'start frame only',
-                        $record->isVideo() && $record->recipe === PetMedia::RECIPE_POSE => 'from key image',
+                        $record->isVideo() && self::madeAs($record) === PetMedia::RECIPE_LOOP => 'loop (key image → key image, frozen — regenerate)',
+                        $record->isVideo() && self::madeAs($record) === PetMedia::RECIPE_START_ONLY => 'loop (from key image, start frame only)',
+                        $record->isPhase() && self::madeAs($record) === PetMedia::RECIPE_START_ONLY => 'start frame only',
+                        $record->isVideo() && self::madeAs($record) === PetMedia::RECIPE_POSE => 'from key image',
                         $record->isVideo() => 'from reference image',
                         $record->isTransition() => 'pose → pose',
                         $record->isPhase() => sprintf('phase clip %ss (pose → pose, plays once)', rtrim(rtrim(number_format((float) $record->duration_seconds, 1), '0'), '.') ?: '3'),
@@ -191,13 +191,16 @@ class MediaRelationManager extends RelationManager
                             $plan['looks'] !== [] ? ' This pet shows a shared look: the look\'s clips are remade once and every pet on that look gets them.' : '');
                     })
                     ->visible(fn (): bool => self::isSuperadmin() && app(FrozenClipRegenerator::class)->plan($this->pet()->id)['rows']->isNotEmpty())
+                    // QA #361 m5: superadmin only, also for a direct Livewire call (not just hidden).
+                    ->authorize(fn (): bool => self::isSuperadmin())
                     ->action(function (): void {
                         $user = auth()->user();
                         $result = app(FrozenClipRegenerator::class)->regenerate($user instanceof User ? $user : null, $this->pet()->id);
 
                         Notification::make()
                             ->title(match ($result['outcome']) {
-                                'queued' => "{$result['queued']} frozen clip(s) queued",
+                                'queued' => sprintf('%d frozen clip(s) queued (~$%.2f; pre-checked against the budget, each clip is still checked by the guard)', $result['queued'], $result['cost_usd']),
+                                'busy' => 'Another run is in progress — try again in a minute',
                                 'budget' => sprintf('Not queued: $%.2f does not fit the AI budget now', $result['cost_usd']),
                                 'ai_off' => 'Not queued: fal.ai disabled or its balance exhausted',
                                 default => 'No frozen clips',
@@ -239,6 +242,12 @@ class MediaRelationManager extends RelationManager
                             ->send();
                     }),
             ]);
+    }
+
+    /** How the shown file was made (stored_recipe; nothing stored yet → how it is being submitted). */
+    private static function madeAs(PetMedia $record): ?string
+    {
+        return $record->isServable() ? $record->stored_recipe : $record->recipe;
     }
 
     private function pet(): Pet
