@@ -48,7 +48,7 @@ beforeEach(function () {
 });
 
 /** A value at a dotted path of the dog data.json. */
-function stData(string $path): mixed
+function scotData(string $path): mixed
 {
     static $data = null;
     $data ??= json_decode((string) file_get_contents(base_path('../docs/research/dog-data/data.json')), true, flags: JSON_THROW_ON_ERROR);
@@ -63,7 +63,7 @@ function stData(string $path): mixed
 }
 
 /** @return array<string, mixed> the Scottish Terrier seeder row of (stage, from, key) */
-function stRow(string $stage, int $from, StageParamKey $key): array
+function scotRow(string $stage, int $from, StageParamKey $key): array
 {
     $row = collect(BreedStageParamsSeeder::rows())->first(fn (array $r) => $r['breed_slug'] === 'scottish-terrier'
         && $r['stage'] === $stage && $r['age_from_months'] === $from && $r['key'] === $key->value);
@@ -72,7 +72,7 @@ function stRow(string $stage, int $from, StageParamKey $key): array
     return $row;
 }
 
-function stPet(int $arrivalMonths, array $attributes = []): Pet
+function scotPet(int $arrivalMonths, array $attributes = []): Pet
 {
     $child = User::factory()->child()->create();
 
@@ -84,7 +84,7 @@ function stPet(int $arrivalMonths, array $attributes = []): Pet
 }
 
 /** @param array<string, mixed> $body */
-function stPin(User $parent, array $body): TestResponse
+function scotPin(User $parent, array $body): TestResponse
 {
     $child = app(ChildProfileService::class)->createChild($parent, 'Kid'.random_int(100, 999), null);
     app('auth')->forgetGuards();
@@ -93,7 +93,7 @@ function stPin(User $parent, array $body): TestResponse
     return postJson('/api/parent/generate-pin', array_merge(['child_id' => $child->id], $body));
 }
 
-function stLogin(string $pin): TestResponse
+function scotLogin(string $pin): TestResponse
 {
     app('auth')->forgetGuards();
     test()->withHeaders(['Authorization' => '']);
@@ -116,7 +116,7 @@ describe('breed, config and database', function () {
             ->toBe([Species::Dog, true, 540, 'breeds.scottish_terrier'])
             ->and($config->search_keywords)->toBe(['scottish terrier', 'skotski terier', 'škotski terier', 'scottie', 'scotty', 'aberdeen terrier', 'scottish'])
             // Legacy fallback = the adult step goal (60 min × 100 steps).
-            ->and($config->daily_steps_required)->toBe((int) stData('proposed_game_parameters.scottish_terrier.step_goal_adult.value'))
+            ->and($config->daily_steps_required)->toBe((int) scotData('proposed_game_parameters.scottish_terrier.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(6000);
 
         // No per-breed hunger / thirst / water data → the Border Collie's paid-breed rhythm.
@@ -124,13 +124,13 @@ describe('breed, config and database', function () {
         foreach (['hunger_decay_rate', 'thirst_decay_rate', 'poops_per_day', 'water_times_per_day', 'water_min_gap_minutes', 'feed_windows'] as $field) {
             expect($config->{$field})->toBe($collie->{$field}, $field);
         }
-        $care = stData('proposed_game_parameters.scottish_terrier.care_rates.value');
+        $care = scotData('proposed_game_parameters.scottish_terrier.care_rates.value');
         expect([$config->hunger_decay_rate, $config->thirst_decay_rate, $config->poops_per_day, $config->water_times_per_day, $config->water_min_gap_minutes])
             ->toBe([(float) $care['hunger_decay_per_hour'], (float) $care['thirst_decay_per_hour'], $care['poops_per_day'], $care['water_per_day'], $care['water_min_gap_minutes']]);
     });
 
     it('accepts a Scottish Terrier pet only as a dog (breed / species CHECKs) and the migration is reversible', function () {
-        $pet = stPet(36);
+        $pet = scotPet(36);
         expect($pet->species)->toBe(Species::Dog)
             ->and(DB::table('pets')->where('id', $pet->id)->value('breed_type'))->toBe('scottish_terrier');
 
@@ -188,36 +188,36 @@ describe('life-stage data against data.json', function () {
         $pgp = 'proposed_game_parameters.scottish_terrier';
 
         foreach (['young', 'adult', 'senior'] as $stage) {
-            expect(stRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(stData("{$pgp}.stage_boundaries_months.value.{$stage}"))
-                ->and(stRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(stData("{$pgp}.arrival_age_months.value.{$stage}"));
+            expect(scotRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(scotData("{$pgp}.stage_boundaries_months.value.{$stage}"))
+                ->and(scotRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(scotData("{$pgp}.arrival_age_months.value.{$stage}"));
         }
-        expect(stRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(stData("{$pgp}.arrival_age_months.value.puppy"))
+        expect(scotRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(scotData("{$pgp}.arrival_age_months.value.puppy"))
             // Senior = 0.75 × 10 y (PDSA lower bound "Over 10 years", S474) = 90 — the closest rule row, Claude's
             // suggestion (no McMillan 2024 / VetCompass / RKC value reachable) → verified=false, open for David.
-            ->and(stRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(stData('scottish_terrier.lifespan.senior_from.months'))
-            ->and(stRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(stData("{$pgp}.senior_boundary_months.value"))
-            ->and(stRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * stRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
-            ->and(stData('scottish_terrier.lifespan.senior_from.derived_from'))->toBe(['S11', 'S474'])
-            ->and(stData('scottish_terrier.lifespan.mcmillan_2024.value'))->toBeNull()
-            ->and(stRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe('S11,S474')
-            ->and(stRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeFalse()
-            ->and(stRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::PROPOSED_R10_SCOTTISH_TERRIER_SENIOR)
-            ->and(stData("{$pgp}.senior_boundary_months.decision"))->toStartWith(BreedStageParamsSeeder::PROPOSED_R10_SCOTTISH_TERRIER_SENIOR)
-            ->and(stRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(90);
+            ->and(scotRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(scotData('scottish_terrier.lifespan.senior_from.months'))
+            ->and(scotRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(scotData("{$pgp}.senior_boundary_months.value"))
+            ->and(scotRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * scotRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
+            ->and(scotData('scottish_terrier.lifespan.senior_from.derived_from'))->toBe(['S11', 'S474'])
+            ->and(scotData('scottish_terrier.lifespan.mcmillan_2024.value'))->toBeNull()
+            ->and(scotRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe('S11,S474')
+            ->and(scotRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeFalse()
+            ->and(scotRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::PROPOSED_R10_SCOTTISH_TERRIER_SENIOR)
+            ->and(scotData("{$pgp}.senior_boundary_months.decision"))->toStartWith(BreedStageParamsSeeder::PROPOSED_R10_SCOTTISH_TERRIER_SENIOR)
+            ->and(scotRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(90);
 
-        expect(stRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(stData("{$pgp}.exercise_minutes_adult.value"))
-            ->and(stRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
-            ->and(stRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(stData('scottish_terrier.exercise.adult.quote'))
-            ->and(stRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S474')
-            ->and(stRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
+        expect(scotRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(scotData("{$pgp}.exercise_minutes_adult.value"))
+            ->and(scotRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
+            ->and(scotRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(scotData('scottish_terrier.exercise.adult.quote'))
+            ->and(scotRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S474')
+            ->and(scotRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
             // 75 % of 60 = 45.
-            ->and(stRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(stData("{$pgp}.exercise_minutes_senior.value"))
-            ->and(stRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(45)
+            ->and(scotRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(scotData("{$pgp}.exercise_minutes_senior.value"))
+            ->and(scotRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(45)
             // Puppy rule 10 min × age, capped at the adult minutes.
-            ->and(stRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
-            ->and(stData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(60)
-            ->and(stRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(stData("{$pgp}.learning_multiplier.value"))
-            ->and(stRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(0.7);
+            ->and(scotRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
+            ->and(scotData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(60)
+            ->and(scotRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(scotData("{$pgp}.learning_multiplier.value"))
+            ->and(scotRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(0.7);
 
         // Every decision row of this breed cites the data.json entry that records it.
         $decided = 0;
@@ -227,7 +227,7 @@ describe('life-stage data against data.json', function () {
                 expect($row['breed_slug'])->toBe('scottish-terrier')
                     ->and($row['ref'])->toStartWith('proposed_game_parameters.scottish_terrier.')
                     ->and($row['verified'])->toBeTrue()
-                    ->and((string) stData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
+                    ->and((string) scotData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
             }
         }
         expect($decided)->toBeGreaterThan(0);
@@ -235,44 +235,44 @@ describe('life-stage data against data.json', function () {
         // No "proposal, not built" left in the research; every sourced need with a game mechanic is built
         // (brushing M5-R13, socialisation M5-R17); the professional groomer has no mechanic → open for David (M5-R18).
         // No meal-gap quote → no digestion warning (never invent a quote).
-        expect(json_encode([stData('scottish_terrier'), stData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('awaiting David')->not->toContain('PROPOSAL')->not->toContain('not built"')
-            ->and(stData("{$pgp}.grooming.value"))->toBe(7)
-            ->and(stData("{$pgp}.grooming.decision"))->toContain('M5-R13')->not->toContain('čaka Davida')
-            ->and(stData("{$pgp}.professional_grooming.decision"))->toContain('M5-R18')
-            ->and(stData($pgp))->not->toHaveKey('meal_exercise_gap')
+        expect(json_encode([scotData('scottish_terrier'), scotData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('awaiting David')->not->toContain('PROPOSAL')->not->toContain('not built"')
+            ->and(scotData("{$pgp}.grooming.value"))->toBe(7)
+            ->and(scotData("{$pgp}.grooming.decision"))->toContain('M5-R13')->not->toContain('čaka Davida')
+            ->and(scotData("{$pgp}.professional_grooming.decision"))->toContain('M5-R18')
+            ->and(scotData($pgp))->not->toHaveKey('meal_exercise_gap')
             ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP)->not->toHaveKey('scottish_terrier')
-            ->and(stData("{$pgp}.socialisation.quote"))->toBe(BreedStageParamsSeeder::DOG_SOCIALISATION['scottish_terrier'][1])
-            ->and(stData('scottish_terrier.behaviour.socialisation.quote'))->toBe(BreedStageParamsSeeder::DOG_SOCIALISATION['scottish_terrier'][1]);
+            ->and(scotData("{$pgp}.socialisation.quote"))->toBe(BreedStageParamsSeeder::DOG_SOCIALISATION['scottish_terrier'][1])
+            ->and(scotData('scottish_terrier.behaviour.socialisation.quote'))->toBe(BreedStageParamsSeeder::DOG_SOCIALISATION['scottish_terrier'][1]);
     });
 
     it('takes the breed-level numbers from the sourced scottish_terrier entries', function () {
         // Kennel Club standard (S473) "8.5kg – 10.5kg." for both sexes.
-        expect(stRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([8.5, 10.5])
-            ->and(stData('scottish_terrier.adult_weight.kc_standard.value'))->toEqual(['male' => [8.5, 10.5], 'female' => [8.5, 10.5]])
-            ->and(stRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(stData('scottish_terrier.adult_weight.kc_standard.source_id'))
-            ->and(stRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(stData('scottish_terrier.adult_weight.kc_standard.quote'))
-            ->and(stRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([9, 12])
-            ->and(stData('scottish_terrier.growth.adult_weight_reached.value'))->toStartWith('9–12 months')
+        expect(scotRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([8.5, 10.5])
+            ->and(scotData('scottish_terrier.adult_weight.kc_standard.value'))->toEqual(['male' => [8.5, 10.5], 'female' => [8.5, 10.5]])
+            ->and(scotRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(scotData('scottish_terrier.adult_weight.kc_standard.source_id'))
+            ->and(scotRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(scotData('scottish_terrier.adult_weight.kc_standard.quote'))
+            ->and(scotRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([9, 12])
+            ->and(scotData('scottish_terrier.growth.adult_weight_reached.value'))->toStartWith('9–12 months')
             // Coren rank 65 (S35), Fair tier → learning 0.7.
-            ->and(stRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(65)
-            ->and(stRow('all', 0, StageParamKey::CorenRank)['quote'])->toBe(stData('scottish_terrier.trainability.coren_rank.quote'))
-            ->and(stData('scottish_terrier.trainability.coren_rank.value'))->toBe(65)
-            ->and(stRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('scottish_terrier.lifespan.pdsa')
-            ->and(stRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S474')
-            ->and(stRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(10.0)
-            ->and(stRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(stData('scottish_terrier.lifespan.pdsa.quote'));
+            ->and(scotRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(65)
+            ->and(scotRow('all', 0, StageParamKey::CorenRank)['quote'])->toBe(scotData('scottish_terrier.trainability.coren_rank.quote'))
+            ->and(scotData('scottish_terrier.trainability.coren_rank.value'))->toBe(65)
+            ->and(scotRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('scottish_terrier.lifespan.pdsa')
+            ->and(scotRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S474')
+            ->and(scotRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(10.0)
+            ->and(scotRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(scotData('scottish_terrier.lifespan.pdsa.quote'));
 
         // Brushing every day (PDSA "daily grooming" → 7) — the rule, verified.
-        $grooming = stRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
+        $grooming = scotRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
         expect($grooming['value'])->toBe(7)
             ->and($grooming['source_id'])->toBe('S474')
-            ->and($grooming['quote'])->toBe(stData('scottish_terrier.suitability.pdsa_grooming.quote'))
-            ->and($grooming['quote'])->toBe(stData('proposed_game_parameters.scottish_terrier.grooming.quote'))
+            ->and($grooming['quote'])->toBe(scotData('scottish_terrier.suitability.pdsa_grooming.quote'))
+            ->and($grooming['quote'])->toBe(scotData('proposed_game_parameters.scottish_terrier.grooming.quote'))
             ->and($grooming['verified'])->toBeTrue()
             ->and($grooming['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R13_DOG_GROOMING)
             // The puppy's weekly "new experience" (M5-R17) with the breed's own PetMD quote.
-            ->and(stRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
-            ->and(stRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S475');
+            ->and(scotRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
+            ->and(scotRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S475');
 
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'scottish-terrier');
         // Like the other pedigree breeds: no individual variation row; no digestion warning (no meal-gap quote).
@@ -287,7 +287,7 @@ describe('life-stage data against data.json', function () {
         foreach ($open->where('stage', 'senior') as $row) {
             expect($row['decision'])->toBe(BreedStageParamsSeeder::PROPOSED_R10_SCOTTISH_TERRIER_SENIOR)
                 ->and($row['ref'])->toBe('proposed_game_parameters.scottish_terrier.senior_boundary_months')
-                ->and($row['value'])->toBe(stData('proposed_game_parameters.scottish_terrier.senior_boundary_months.value'));
+                ->and($row['value'])->toBe(scotData('proposed_game_parameters.scottish_terrier.senior_boundary_months.value'));
         }
     });
 
@@ -312,7 +312,7 @@ describe('life-stage data against data.json', function () {
 
 describe('stage rules', function () {
     it('walks 10 min × age up to 60 minutes = 6,000 steps and 45 minutes = 4,500 steps as senior', function (int $arrival, LifeStage $stage, int $minutes, int $steps) {
-        $pet = stPet($arrival);
+        $pet = scotPet($arrival);
         $rules = app(LifeStageService::class)->rulesOn($pet, $pet->localDate(now()));
 
         expect($rules->lifeStage)->toBe($stage)
@@ -346,7 +346,7 @@ describe('stage rules', function () {
 
     it('learns slower than a mixed breed (Coren Fair tier, × 0.7) with no individual factor', function () {
         $training = app(TrainingService::class);
-        $dog = stPet(36);
+        $dog = scotPet(36);
         $date = $dog->localDate(now());
 
         // learningFactor() is the individual factor (none for a pedigree breed); the breed multiplier is in the gain.
@@ -363,7 +363,7 @@ describe('generate-pin: paid like the Border Collie', function () {
             $body['plan'] = $plan;
         }
 
-        $response = stPin($parent, $body);
+        $response = scotPin($parent, $body);
 
         if ($reason !== null) {
             $response->assertStatus(422)->assertJsonPath('reason', $reason);
@@ -372,7 +372,7 @@ describe('generate-pin: paid like the Border Collie', function () {
         }
 
         $response->assertOk()->assertJsonPath('plan', $petPlan);
-        $pet = Pet::findOrFail(stLogin($response->json('pin'))->assertOk()->json('pet.id'));
+        $pet = Pet::findOrFail(scotLogin($response->json('pin'))->assertOk()->json('pet.id'));
         expect($pet->plan->value)->toBe($petPlan)
             ->and($pet->breed_type)->toBe(BreedType::ScottishTerrier)
             ->and($pet->species)->toBe(Species::Dog)
@@ -387,8 +387,8 @@ describe('generate-pin: paid like the Border Collie', function () {
         $parent = User::factory()->parent()->create();
         $pets = [];
         foreach (['border_collie', 'scottish_terrier'] as $breed) {
-            $pin = stPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
-            $pets[$breed] = Pet::findOrFail(stLogin($pin)->assertOk()->json('pet.id'));
+            $pin = scotPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
+            $pets[$breed] = Pet::findOrFail(scotLogin($pin)->assertOk()->json('pet.id'));
         }
 
         $dog = $pets['scottish_terrier'];
@@ -402,7 +402,7 @@ describe('generate-pin: paid like the Border Collie', function () {
     });
 
     it('gets the full media set once the challenge is bought', function () {
-        $pet = stPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
+        $pet = scotPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
         $entitlement = app(MediaEntitlementService::class);
 
         expect($entitlement->tierFor($pet))->toBe(MediaEntitlementService::TIER_FULL)
@@ -481,7 +481,7 @@ describe('AI appearance (runbook rule: standard colours only — black, wheaten,
             ->and($v1['visual_traits']['color_scheme'])->toBeIn(['black', 'brindle', 'wheaten'])
             ->and($v1['visual_traits']['eye_color'])->toBe('dark brown');
 
-        $pet = stPet(90, ['origin' => PetOrigin::Adopted]);
+        $pet = scotPet(90, ['origin' => PetOrigin::Adopted]);
         $prompt = app(PetAppearancePrompt::class)->imagePromptForPet($pet->forceFill(['pet_dna' => app(PetDnaService::class)->forNewPet($pet)]), LifeStage::Senior);
         expect($prompt)->toContain('Scottish Terrier')->toContain(PetAppearancePrompt::ADOPTED_AVOID)->toContain(PetAppearancePrompt::STYLE);
     });
@@ -502,14 +502,14 @@ describe('no health statistics in the app; no welfare chip, in marketing (runboo
         expect(array_keys(config('breed_suitability.vocabulary')))->not->toContain('hypoallergenic')
             // No veterinary association named by the runbook names the breed → no welfare chip; PDSA "Over 10 years" → no shorter_lifespan.
             ->and(array_intersect($tags['consider'], ['brachycephalic_breathing', 'short_muzzle_breathing', 'back_spine', 'hips_hind_legs', 'heart_and_spine', 'sensitive_skin', 'eyelid_problems', 'shorter_lifespan']))->toBe([])
-            ->and(stData('proposed_game_parameters.scottish_terrier.marketing.source_id'))->toBe('S474')
-            ->and(stData('proposed_game_parameters.scottish_terrier.marketing.value'))->toContain('in marketing: yes')
+            ->and(scotData('proposed_game_parameters.scottish_terrier.marketing.source_id'))->toBe('S474')
+            ->and(scotData('proposed_game_parameters.scottish_terrier.marketing.value'))->toContain('in marketing: yes')
             // Never hypoallergenic or low-shedding (no shedding source at all).
             ->and($tags['suits'])->not->toContain('low_shedding')
             // The alternatives (84 Dogs Trust, 108 PetMD, 114 via Wikipedia) are never seeded.
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'scottish-terrier')->where('key', StageParamKey::StartsAtMonths->value)->pluck('value')->all())->not->toContain(84)->not->toContain(108)->not->toContain(114)
             // Bladder cancer is a tier-C claim with a risk multiple → never recorded as a health fact.
-            ->and(stData('scottish_terrier.health'))->not->toHaveKey('bladder_cancer');
+            ->and(scotData('scottish_terrier.health'))->not->toHaveKey('bladder_cancer');
     });
 });
 
@@ -524,12 +524,12 @@ describe('suitability tags (own file, runbook "Own files only")', function () {
             ->and($tags['consider'])->not->toContain('chases_small_pets')->not->toContain('secure_fencing')->not->toContain('long_daily_exercise')
             ->not->toContain('independent_experienced_owner')->not->toContain('sheds');
 
-        expect(stData('scottish_terrier.exercise.adult.quote'))->toBe('Minimum exercise (per day) | 1 hour')
-            ->and(stData('scottish_terrier.suitability.pdsa_grooming.quote'))->toStartWith('Scotties need daily grooming')
-            ->and(stData('scottish_terrier.suitability.petmd_family.quote'))->toBe('With the right training and socialization, Scottish Terriers can be good dogs for families.')
-            ->and(stData('scottish_terrier.behaviour.time_alone.quote'))->toContain('alone for extended periods')
-            ->and(stData('scottish_terrier.behaviour.other_pets.quote'))->toContain('get on well with other pets')
-            ->and(stData('scottish_terrier.behaviour.other_pets.alternatives.0.quote'))->toContain('strong prey drive')
-            ->and(stData('proposed_game_parameters.scottish_terrier.suitability_tags.not_proposed.chases_small_pets'))->toContain('open for David');
+        expect(scotData('scottish_terrier.exercise.adult.quote'))->toBe('Minimum exercise (per day) | 1 hour')
+            ->and(scotData('scottish_terrier.suitability.pdsa_grooming.quote'))->toStartWith('Scotties need daily grooming')
+            ->and(scotData('scottish_terrier.suitability.petmd_family.quote'))->toBe('With the right training and socialization, Scottish Terriers can be good dogs for families.')
+            ->and(scotData('scottish_terrier.behaviour.time_alone.quote'))->toContain('alone for extended periods')
+            ->and(scotData('scottish_terrier.behaviour.other_pets.quote'))->toContain('get on well with other pets')
+            ->and(scotData('scottish_terrier.behaviour.other_pets.alternatives.0.quote'))->toContain('strong prey drive')
+            ->and(scotData('proposed_game_parameters.scottish_terrier.suitability_tags.not_proposed.chases_small_pets'))->toContain('open for David');
     });
 });
