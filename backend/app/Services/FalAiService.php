@@ -1442,12 +1442,15 @@ class FalAiService
     }
 
     /**
-     * M5-T08: a state's LOOP video — start frame = the state's key image and,
-     * when the profile takes an end frame (Kling 3.0 Pro `end_image_url`), the
-     * same image as the end frame, so the clip loops without a visible jump.
+     * M5-T08: a state's LOOP video — start frame = the state's key image. Fix
+     * 2026-10-23 (David »uredi«): sent with the START frame only. Kling 3.0 Pro
+     * given the same image as `end_image_url` returned an almost frozen clip
+     * (production pet #8, mean frame difference ~0.08 / 255), so a loop now gets
+     * a clearly-visible-motion prompt that ends close to the start pose instead
+     * (recipe `start_only`; the seam is no longer pixel-identical).
      *
      * @param  array<string, string>  $traits
-     * @return array{request_id: string, profile: string, duration_seconds: int, recipe: string}
+     * @return array{request_id: string, profile: string, duration_seconds: int, recipe: string|null}
      *
      * @throws AiCallException
      */
@@ -1456,8 +1459,7 @@ class FalAiService
         $profile = $this->profiles->stateVideo();
         $prompt = $this->prompts->loopVideoPrompt($breedKey, $state, $traits, $stage);
 
-        return $this->submitClip($profile, $breedKey, $prompt, $keyImageUrl, $keyImageUrl, $petId, $petMediaId)
-            + ['recipe' => $profile->supportsEndImage() ? PetMedia::RECIPE_LOOP : PetMedia::RECIPE_POSE];
+        return $this->submitClip($profile, $breedKey, $prompt, $keyImageUrl, $keyImageUrl, $petId, $petMediaId, sameFrame: true);
     }
 
     /**
@@ -1480,10 +1482,12 @@ class FalAiService
     /**
      * M5-T09 / T10: a school / game PHASE clip (3 s — media.state_media.clip_seconds,
      * David 2026-10-21): start = the clip's start pose, end = its end pose (Kling 3.0 Pro
-     * `end_image_url`). Played once by the app, held on the last frame.
+     * `end_image_url`). Played once by the app, held on the last frame. A clip whose
+     * start and end pose are the same picture (PetPhaseClip::sharesFrames) is sent
+     * with the start frame only (fix 2026-10-23, see submitLoopVideoFor).
      *
      * @param  array<string, string>  $traits
-     * @return array{request_id: string, profile: string, duration_seconds: int}
+     * @return array{request_id: string, profile: string, duration_seconds: int, recipe: string|null}
      *
      * @throws AiCallException
      */
@@ -1491,21 +1495,37 @@ class FalAiService
     {
         $prompt = $this->prompts->phaseVideoPrompt($breedKey, $clip, $traits, $stage);
 
-        return $this->submitClip($this->profiles->clipVideo($clip->purpose()), $breedKey, $prompt, $startImageUrl, $endImageUrl, $petId, $petMediaId);
+        return $this->submitClip($this->profiles->clipVideo($clip->purpose()), $breedKey, $prompt, $startImageUrl, $endImageUrl, $petId, $petMediaId, sameFrame: $clip->sharesFrames());
     }
 
     /**
-     * @return array{request_id: string, profile: string, duration_seconds: int}
+     * THE one place that decides whether a clip gets an end frame (fix 2026-10-23):
+     * same start and end picture (a loop, a same-pose phase clip, or two identical
+     * URLs) → no `end_image_url` — Kling 3.0 Pro freezes such a clip; different
+     * pictures (transitions, performing, ball running / fetching, wand stalking /
+     * catching) → the end frame as before.
+     */
+    public static function endFrameUrl(string $startImageUrl, ?string $endImageUrl, bool $sameFrame): ?string
+    {
+        return $sameFrame || $endImageUrl === $startImageUrl ? null : $endImageUrl;
+    }
+
+    /**
+     * @return array{request_id: string, profile: string, duration_seconds: int, recipe: string|null}
      *
      * @throws AiCallException
      */
-    private function submitClip(ModelProfile $profile, string $breedKey, string $prompt, string $startImageUrl, ?string $endImageUrl, ?int $petId, ?int $petMediaId): array
+    private function submitClip(ModelProfile $profile, string $breedKey, string $prompt, string $startImageUrl, ?string $endImageUrl, ?int $petId, ?int $petMediaId, bool $sameFrame = false): array
     {
         $species = PetAppearancePrompt::speciesOf($breedKey);
+        $end = self::endFrameUrl($startImageUrl, $endImageUrl, $sameFrame);
+        $startOnly = $end === null;
+        // A start-only clip must move: no "fast motion" in its negative prompt (loop / same-pose phase).
+        $negative = $startOnly ? $this->prompts->loopNegativePrompt($species) : $this->prompts->videoNegativePrompt($species);
 
         $submitted = $this->gateway->submit(
             $profile,
-            $profile->videoInput($startImageUrl, $prompt, $this->prompts->videoNegativePrompt($species), $endImageUrl),
+            $profile->videoInput($startImageUrl, $prompt, $negative, $end),
             AiSpendPurpose::StateVideo,
             $this->webhookUrl(),
             petId: $petId,
@@ -1516,6 +1536,8 @@ class FalAiService
             'request_id' => $submitted['request_id'],
             'profile' => $profile->key,
             'duration_seconds' => $profile->durationSeconds,
+            // pet_media.recipe: `start_only` = made from the start frame alone (fix 2026-10-23).
+            'recipe' => $startOnly ? PetMedia::RECIPE_START_ONLY : null,
         ];
     }
 

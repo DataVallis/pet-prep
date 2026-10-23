@@ -86,8 +86,22 @@ class PetMedia extends Model
     /** M5-T08 `recipe`: a state video made from its key image only (no end frame). */
     public const RECIPE_POSE = 'pose';
 
-    /** M5-T08 `recipe`: a seamless loop — start AND end frame = the state's key image. */
+    /**
+     * M5-T08 `recipe`: a loop made with start AND end frame = the state's key image.
+     * Kling 3.0 Pro froze those clips (production 2026-10-23) — rows with this recipe
+     * are what `media:regenerate-frozen` remakes; new loops are RECIPE_START_ONLY.
+     */
     public const RECIPE_LOOP = 'loop';
+
+    /**
+     * Fix 2026-10-23: a clip whose start and end picture are the same (a state loop, a
+     * same-pose phase clip — PetPhaseClip::sharesFrames) made from the START frame only
+     * (no end_image_url) with a clearly-visible-motion prompt (FalAiService::endFrameUrl).
+     */
+    public const RECIPE_START_ONLY = 'start_only';
+
+    /** @var list<string> recipes of a state loop (made from the state's key image as a loop) */
+    public const LOOP_RECIPES = [self::RECIPE_LOOP, self::RECIPE_START_ONLY];
 
     public const STATUS_PENDING = 'pending';
 
@@ -220,6 +234,30 @@ class PetMedia extends Model
     public function isPoseClip(): bool
     {
         return $this->isTransition() || $this->isPhase();
+    }
+
+    /** A state video made as a loop from its key image (old start = end frame, or start-only since 2026-10-23). */
+    public function isStateLoop(): bool
+    {
+        return $this->isVideo() && in_array($this->recipe, self::LOOP_RECIPES, true);
+    }
+
+    /**
+     * A STORED clip made the frozen way (fix 2026-10-23): a loop with the same image as
+     * start and end frame (recipe `loop`), or a same-pose phase clip sent with an end
+     * frame (recipe null). media:regenerate-frozen remakes exactly these.
+     */
+    public function isFrozenSameFrameClip(): bool
+    {
+        if ($this->status !== self::STATUS_READY || ! $this->isServable()) {
+            return false;
+        }
+
+        if ($this->isVideo()) {
+            return $this->recipe === self::RECIPE_LOOP;
+        }
+
+        return $this->isPhase() && $this->recipe === null && ($this->phaseClip()?->sharesFrames() ?? false);
     }
 
     /** The state of a video / key image slot (null for every other kind). */

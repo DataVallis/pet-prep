@@ -129,7 +129,27 @@ enum PetPhaseClip: string
     }
 
     /**
+     * Start and end frame are the same picture (school attention ref → ref, school
+     * success pose → pose, ball waiting ref → ref, wand pouncing crouch → crouch).
+     * Kling 3.0 Pro given the same image as start AND end frame returns an almost
+     * frozen clip (production 2026-10-23), so such a clip is submitted with its
+     * start frame only (FalAiService::endFrameUrl) and a "clearly visible motion" prompt.
+     */
+    public function sharesFrames(): bool
+    {
+        return $this->startPose() === $this->endPose();
+    }
+
+    /** @return list<self> the clips whose start and end frame are the same picture */
+    public static function sameFrameCases(): array
+    {
+        return array_values(array_filter(self::cases(), fn (self $c) => $c->sharesFrames()));
+    }
+
+    /**
      * What the animal does in the clip (video prompt; no people, no toy, no text).
+     * Same-frame clips (sharesFrames) describe clearly visible motion that stays in
+     * the start pose — they get no end frame, so the motion text has to carry it.
      */
     public function motion(): string
     {
@@ -137,7 +157,7 @@ enum PetPhaseClip: string
 
         if ($command !== null) {
             return match ($this->phase()) {
-                self::PHASE_ATTENTION => 'stands in the same spot, glances around and then looks up at the camera with the ears perked, waiting, not sitting or lying down',
+                self::PHASE_ATTENTION => 'stands in the same spot, sniffs the air and looks around the room, then looks up at the camera eagerly with the ears perked and the tail wagging, waiting, not sitting or lying down',
                 self::PHASE_PERFORMING => match ($command) {
                     TrainingCommand::Sit => 'sits down on command in the same spot and looks up at the camera',
                     TrainingCommand::Come => 'trots toward the camera on command and stops close in front of it, looking up',
@@ -145,16 +165,16 @@ enum PetPhaseClip: string
                     TrainingCommand::Potty => 'walks to the door on command and stops there with the nose close to the door',
                 },
                 default => match ($command) {
-                    TrainingCommand::Sit => 'holds the sit proudly, looking up at the camera, the tail gently wagging, not getting up',
-                    TrainingCommand::Come => 'stays close in front of the camera, looking up happily, the tail wagging, not walking away',
-                    TrainingCommand::Place => 'stays lying on the mat, calm and proud, the tail gently wagging, not getting up',
-                    TrainingCommand::Potty => 'waits at the door, looking back at the camera, the tail wagging, staying there',
+                    TrainingCommand::Sit => 'stays sitting proudly, looking up at the camera happily, the tail wagging clearly across the floor, the head tilting, not getting up',
+                    TrainingCommand::Come => 'stays close in front of the camera, looking up happily, the tail wagging hard, the body wiggling with joy, not walking away',
+                    TrainingCommand::Place => 'stays lying on the mat, happy and proud, the tail wagging clearly, the head lifting and turning, not getting up',
+                    TrainingCommand::Potty => 'waits at the door, looking back at the camera happily, the tail wagging clearly, staying there',
                 },
             };
         }
 
         return match ($this) {
-            self::BallWaiting => 'stands alert in the same spot looking up, the tail wagging, ready to run, not moving away',
+            self::BallWaiting => 'stands alert in the same spot looking up, bouncing excitedly on the front paws, the tail wagging fast, ready to run, not leaving the spot',
             self::BallRunning => 'turns and sprints out of the frame to the side, as if chasing something thrown, until the room is empty',
             self::BallFetching => 'trots back into the frame from the side and stops in its spot, happy and panting',
             self::WandStalking => 'slowly lowers itself into a crouch, eyes locked on something just above the frame, the tail tip twitching',

@@ -43,7 +43,7 @@ export interface PetMediaInfo {
   keyframes: Partial<Record<VideoState, string>>;
   /** M5-T08: stored transition clips by key (`idle_to_sleeping`, …), played once on that change. */
   transitions: Record<string, string>;
-  /** M5-T08: states whose video is a seamless loop (starts and ends on its key image). */
+  /** M5-T08: states whose video is a loop made from its key image (start frame only since 2026-10-23). */
   loops: VideoState[];
   /** M5-T08: the pet follows the state rules (missing clip → key image, never another state's clip). */
   stateMedia: boolean;

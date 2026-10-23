@@ -9,6 +9,15 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-23 — Kuža se spet premika: popravek »zamrznjenih« posnetkov
+
+**Kaj:** na prvem pravem plačljivem ljubljenčku v produkciji (testni uporabnik, doberman mladiček) so bili posnetki stanj in del posnetkov šole skoraj negibni — 73 sličic s povprečno razliko ~0,08 / 255 med sličicami. Vzrok: model Kling 3.0 Pro dobi isto sliko kot začetek in konec posnetka in vrne skoraj mirujočo sliko. Zdaj dobi samo začetno sliko in jasno navodilo za naravno gibanje (dihanje, mahanje z repom, obračanje glave, vohanje); že narejene posnetke administrator z enim ukazom ali gumbom naredi znova (pred zagonom vidi ceno — za enega psa 17 posnetkov ≈ 7,50 $).
+**Zakaj je pomembno:** ljubljenček mora delovati živo, sicer otrok ne verjame, da skrbi zanj. Napaka je bila najdena na testnem računu, preden jo je videla katera koli družina.
+- 💼 Investitorji: kakovost AI medijev merimo (razlika med sličicami), popravek stane enkrat na videz.
+- 🛠 Tehnično: »isti okvir → brez `end_image_url`« na enem mestu (`FalAiService::endFrameUrl`), `recipe start_only`, ukaz `media:regenerate-frozen` (suho izvajanje brez klica fal).
+
+---
+
 ## 2026-10-23 — »Lažje kretnje«: igre brez potega s prstom, kadar jih otrok potrebuje (M5-T17)
 
 **Kaj:** David je odločil, da ima starš za vsakega otroka posebno stikalo **»Lažje kretnje«** (ločeno od »Prilagojenega načina«). Ko je vklopljeno, otrok v vseh štirih igrah s potegom namesto potega drži prst ali pritisne gumb: pri **česanju** krtača češe sama, pri **palici s peresom** pero samo beži pred muco (gumb »Pomigaj s palico«), pri **menjavi peska** se stranišče z držanjem postopoma čisti z vrstico napredka, pri **žogi** otrok z držanjem nabere moč meta in jo s spustom vrže. Ko je na telefonu vklopljen VoiceOver ali TalkBack, aplikacija držanje uporabi sama. Brez stikala ostane samo poteg — tudi pri česanju, kjer je bilo držanje od 21. 10. na voljo vsem.

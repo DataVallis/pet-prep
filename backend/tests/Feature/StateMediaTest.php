@@ -48,7 +48,7 @@ use Livewire\Livewire;
 |--------------------------------------------------------------------------
 |
 | Key image per state (Nano Banana Pro Edit of the reference image), state
-| videos that start AND end on that key image (Kling 3.0 Pro end_image_url),
+| videos made from that key image (fix 2026-10-23: start frame only — the same image as Kling end_image_url froze the clip),
 | transitions idle ↔ sleeping (start = pose A, end = pose B). Entitlement
 | only in MediaEntitlementService; order fits PetPreparationService; claims
 | and budget unchanged; a shared look (breed + colour) makes them once —
@@ -182,7 +182,7 @@ function smSlot(Pet $pet, string $kind, ?string $state): ?PetMedia
 /* ─────────────────────────── Profile + fal input ─────────────────────────── */
 
 describe('Kling end frame', function () {
-    it('the production video profile sends end_image_url (fal docs, 2026-10-21) — a loop gets the same image as start and end', function () {
+    it('the production video profile sends end_image_url (fal docs, 2026-10-21) for different frames', function () {
         $profile = app(MediaProfiles::class)->stateVideo();
         expect($profile->key)->toBe('kling_v3_pro')
             ->and($profile->supportsEndImage())->toBeTrue()
@@ -285,13 +285,17 @@ describe('pipeline for a pet with its own media', function () {
         $keyOrder = PetMedia::where('pet_id', $pet->id)->where('kind', 'keyframe')->orderBy('completed_at')->orderBy('id')->pluck('state')->all();
         expect($keyOrder)->toBe(['sleeping', 'hungry', 'playing', 'low_energy', 'sick']);
 
-        // Every loop starts AND ends on its key image.
+        // Fix 2026-10-23: every loop starts on its key image WITHOUT an end frame (the same
+        // image as end frame froze the clip on Kling) and asks for clearly visible motion.
         $loopSubmits = smCalls('https://queue.fal.run/')->filter(fn (Request $r) => ! str_contains((string) $r['prompt'], 'start image'))->values();
         expect($loopSubmits)->toHaveCount(6);
         foreach ($loopSubmits as $r) {
-            expect($r['end_image_url'])->toBe($r['start_image_url'])
-                ->and($r['prompt'])->toContain('loop seamlessly');
+            expect($r->data())->not->toHaveKey('end_image_url')
+                ->and($r['prompt'])->toContain('clearly visible')->toContain('close to the starting pose so it can loop')
+                ->and($r['prompt'])->not->toContain('Subtle, slow')
+                ->and($r['negative_prompt'])->not->toContain('fast motion');
         }
+        expect(PetMedia::where('pet_id', $pet->id)->where('kind', 'video')->whereNotNull('request_id')->pluck('recipe')->unique()->all())->toBe(['start_only']);
 
         // Transitions are submitted only after every first-minutes clip, from two different poses.
         $transitions = smCalls('https://queue.fal.run/')->filter(fn (Request $r) => str_contains((string) $r['prompt'], 'start image'))->values();
@@ -417,7 +421,7 @@ describe('shared look of breed + colour', function () {
         smCompleteClips();
 
         $row = PetMedia::whereNotNull('pet_look_id')->where('kind', 'video')->where('state', 'idle')->sole();
-        expect($row->recipe)->toBe('loop')
+        expect($row->recipe)->toBe('start_only')
             ->and(smSlot($new, 'video', 'idle')->storage_path)->toBe($row->storage_path)
             ->and($row->storage_path)->not->toBe($oldPath)
             // The pre-M5-T08 pet shows the remade shared clip too (one file per look) — no extra cost.
@@ -455,7 +459,7 @@ describe('existing pets', function () {
         smCompleteClips();
         expect($pet->fresh()->state_media_version)->toBe(MediaEntitlementService::CURRENT_MEDIA_VERSION)
             ->and(PetMedia::where('pet_id', $pet->id)->where('kind', 'keyframe')->where('status', 'ready')->count())->toBe(5)
-            ->and(smSlot($pet, 'video', 'idle')->recipe)->toBe('loop');
+            ->and(smSlot($pet, 'video', 'idle')->recipe)->toBe('start_only');
     });
 
     it('a new purchase of a pet from before M5-T08 upgrades it (the purchase pays for the full set)', function () {
@@ -487,7 +491,7 @@ describe('prompts', function () {
             expect($p)->not->toContain('Luna')->and($p)->toContain('Labrador');
         }
         expect($key)->toContain('Change only the pose')
-            ->and($loop)->toContain('loop seamlessly')
+            ->and($loop)->toContain('so it can loop')->not->toContain('Subtle, slow')
             ->and($move)->toContain('ending exactly in the pose of the end image');
     });
 
@@ -523,7 +527,7 @@ describe('superadmin AI media panel', function () {
         Livewire::test(MediaRelationManager::class, ['ownerRecord' => $pet, 'pageClass' => EditPet::class])
             ->assertOk()
             ->assertCanSeeTableRecords([$key, $transition, $loop])
-            ->assertTableColumnStateSet('recipe', 'loop (key image → key image)', $loop)
+            ->assertTableColumnStateSet('recipe', 'loop (from key image, start frame only)', $loop)
             ->assertTableColumnStateSet('recipe', 'pose → pose', $transition)
             ->assertTableColumnStateSet('recipe', 'edit of reference', $key)
             ->callTableAction('regenerate', $key);

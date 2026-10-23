@@ -8,8 +8,9 @@
  *   the state's KEY IMAGE (idle: the reference image) — never a clip of another state.
  *   Pets with the older set keep the substitute chain (sick → sleeping → idle) of
  *   `VIDEO_FALLBACKS`, which was David's call for that set (2026-10-06).
- * - **Seamless loop:** a state video in `media.loops` starts and ends on its key image —
- *   the native player loops it (`loop = true`) with no visible restart. An older clip
+ * - **Loop:** a state video in `media.loops` starts on its key image (since 2026-10-23 the
+ *   server sends Kling the start frame only — the same start + end frame froze the clip —
+ *   so the seam is close, not pixel-identical); the native player loops it (`loop = true`). An older clip
  *   (not in `loops`) is looped the same way (it was made "loopable" by prompt).
  * - **Transition once:** on a state change A → B with a stored `A_to_B` clip, that clip
  *   plays ONCE (no loop), then B's loop. The B loop is mounted (preloaded, hidden) while
