@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "6441a6d0b38cc8f365062b4b620492a390b3a764731a7bf096c246ed6e158f4c"
+      "sha256": "5a718dc62a450ce5c4db800ecdf860c6ccf9faf92b6829cfb6a46e9ac9e7ce77"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "eaf04409ccc8d63469cc781ec635542dda73f42a51cfc6b51586f1ebdf388381"
+      "sha256": "317a2a829b3236a83ae935fb7ac1246970c991e932865dd19ec22e0d4042efa6"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "f99f97cc1ab7f4ebb16eb63b51fea8b361b3b8c57e0714ca5b255c42cae3362e"
+      "sha256": "2fb449a789439473b45497fd6d9714f988771c6c5af8d754762a2cabf1b062a1"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "1cc38012707b6068b9971a7a0da3ff7705e951d7c86d6916e9b89bb327aac55c"
+      "sha256": "ea29f891df80b2386ce16fd750e844b9855712926c3a91a16c13039b9facffb8"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "3facdfdee8ca70c809aa4ef3eba022607748176a4da2ce56dd0ec97f50e69a81"
+      "sha256": "5d4f106b6870a8031441cc95268326c875a080443141ee270c7c5efdfd7d76bc"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "52a2930dabea22f75043e6eefe16327a8724182eaf13e828b54025b3eb3ee42c"
+      "sha256": "9c9aef1850f2265b4e881bf09acc1f6cdec149765a1eb28199d474b0b8e58ec1"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -209,7 +209,7 @@
         }
       },
       "status": "available",
-      "breed_count": 54,
+      "breed_count": 55,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -32312,6 +32312,595 @@
       ]
     },
     {
+      "id": "weimaraner",
+      "species": "dog",
+      "order": 54,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Weimaraner",
+        "sl": "Weimarski ptičar"
+      },
+      "slug": {
+        "en": "weimaraner",
+        "sl": "weimarski-pticar"
+      },
+      "synonyms": {
+        "en": [
+          "Weimaraner Pointer",
+          "Weim"
+        ],
+        "sl": [
+          "weimarski ptičar",
+          "weimarski pticar",
+          "vajmarski ptičar"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S479"
+          ],
+          "ref": "weimaraner.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              59,
+              70
+            ],
+            "female": [
+              57,
+              65
+            ]
+          },
+          "source_ids": [
+            "S478"
+          ],
+          "ref": "weimaraner.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              30,
+              40
+            ],
+            "female": [
+              25,
+              35
+            ]
+          },
+          "source_ids": [
+            "S478"
+          ],
+          "ref": "weimaraner.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "weimaraner.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S479"
+          ],
+          "ref": "weimaraner.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S479"
+          ],
+          "ref": "weimaraner.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short_long"
+          ],
+          "source_ids": [
+            "S479"
+          ],
+          "ref": "weimaraner.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S479"
+          ],
+          "ref": "weimaraner.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S479"
+          ],
+          "ref": "weimaraner.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 21,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "weimaraner.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 99,
+            "group": 7,
+            "section": 1,
+            "origin": "DE"
+          },
+          "source_ids": [
+            "S477"
+          ],
+          "ref": "weimaraner.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S480"
+          ],
+          "ref": "weimaraner.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S480"
+          ],
+          "ref": "weimaraner.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "certain_cancers",
+          "source_ids": [
+            "S480"
+          ],
+          "ref": "weimaraner.health.cancer",
+          "confidence": "medium"
+        },
+        {
+          "key": "extra_eyelashes",
+          "source_ids": [
+            "S480"
+          ],
+          "ref": "weimaraner.health.distichiasis",
+          "confidence": "high"
+        },
+        {
+          "key": "entropion",
+          "source_ids": [
+            "S481"
+          ],
+          "ref": "weimaraner.health.entropion",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S481"
+          ],
+          "ref": "weimaraner.health.hypothyroidism",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S479"
+            ],
+            "refs": [
+              "weimaraner.exercise.adult",
+              "weimaraner.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S480"
+            ],
+            "refs": [
+              "weimaraner.suitability.pdsa_family"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S479"
+            ],
+            "refs": [
+              "weimaraner.suitability.rkc_size_of_home"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S479"
+            ],
+            "refs": [
+              "weimaraner.exercise.adult",
+              "weimaraner.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S480"
+            ],
+            "refs": [
+              "weimaraner.behaviour.experienced_owner"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S480"
+            ],
+            "refs": [
+              "weimaraner.suitability.pdsa_children",
+              "weimaraner.behaviour.family"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S481"
+            ],
+            "refs": [
+              "weimaraner.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S479"
+            ],
+            "refs": [
+              "weimaraner.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S480"
+            ],
+            "refs": [
+              "weimaraner.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.weimaraner.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S479"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S479 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.weimaraner.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.weimaraner.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S479"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S479)"
+          },
+          {
+            "ref": "proposed_game_parameters.weimaraner.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 21, Excellent tier, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.weimaraner.grooming",
+            "basis_source_ids": [
+              "S479"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«; PDSA, PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S479"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S479"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S479"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S479"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S479"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S477",
+        "S478",
+        "S479",
+        "S480",
+        "S481",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -36797,6 +37386,41 @@
       "publisher": "PetMD",
       "title": "Scottish Terrier",
       "url": "https://petmd.com/dog/breeds/scottish-terrier"
+    },
+    {
+      "id": "S477",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature: WEIMARANER (99)",
+      "url": "https://fci.be/en/nomenclature/WEIMARANER-99.html"
+    },
+    {
+      "id": "S478",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI Standard N° 99: Weimaraner (English PDF, official valid standard 19.03.2015)",
+      "url": "https://WWW.FCI.BE/Nomenclature/Standards/099g07-en.pdf"
+    },
+    {
+      "id": "S479",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Weimaraner",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/weimaraner/"
+    },
+    {
+      "id": "S480",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Weimaraner breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/weimaraner"
+    },
+    {
+      "id": "S481",
+      "tier": "B",
+      "publisher": "PetMD — Barri J. Morrison, DVM, reviewed by Jo Cornett, DVM (updated Jan. 3, 2025)",
+      "title": "Weimaraner",
+      "url": "https://www.petmd.com/dog/breeds/weimaraner"
     },
     {
       "id": "C1",
