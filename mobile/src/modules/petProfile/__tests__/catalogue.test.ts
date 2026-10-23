@@ -471,7 +471,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(26);
+    expect(CONSIDER_TAGS).toHaveLength(27);
+    // M5-R10-60 (runbook new-tag rule): thin coat — feels the cold (the Italian Greyhound, PetMD S488); no numbers.
+    expect(CONSIDER_TAGS).toContain('cold_sensitive');
     // M5-R10-57 (runbook new-tag rule): thick coat — struggles in hot weather (the Samoyed, PetMD S469); no numbers.
     expect(CONSIDER_TAGS).toContain('heat_sensitive');
     // M5-R10-54 (runbook new-tag rule): sensitive dog — better with older children (the Whippet, PDSA S444 / PetMD S445); no numbers.
@@ -713,7 +715,8 @@ describe('breed search', () => {
     const find = (query: string) => searchBreeds(FALLBACK_CATALOGUE.breeds, query).map((b) => b.breed);
     expect(find('cane corso')).toEqual(['cane_corso']);
     expect(find('korzo')).toEqual(['cane_corso']);
-    expect(find('italijanski')).toEqual(['cane_corso']);
+    // M5-R10-60: … and the Italian Greyhound (»mali italijanski hrt«) shares the adjective.
+    expect(find('italijanski')).toEqual(['cane_corso', 'italian_greyhound']);
     // "Italian mastiff" is left out on purpose — it usually means the Neapolitan Mastiff.
     expect(find('italian mastiff')).toEqual([]);
   });
