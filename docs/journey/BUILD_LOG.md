@@ -9,6 +9,16 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-23 — »Lažje kretnje«: igre brez potega s prstom, kadar jih otrok potrebuje (M5-T17)
+
+**Kaj:** David je odločil, da ima starš za vsakega otroka posebno stikalo **»Lažje kretnje«** (ločeno od »Prilagojenega načina«). Ko je vklopljeno, otrok v vseh štirih igrah s potegom namesto potega drži prst ali pritisne gumb: pri **česanju** krtača češe sama, pri **palici s peresom** pero samo beži pred muco (gumb »Pomigaj s palico«), pri **menjavi peska** se stranišče z držanjem postopoma čisti z vrstico napredka, pri **žogi** otrok z držanjem nabere moč meta in jo s spustom vrže. Ko je na telefonu vklopljen VoiceOver ali TalkBack, aplikacija držanje uporabi sama. Brez stikala ostane samo poteg — tudi pri česanju, kjer je bilo držanje od 21. 10. na voljo vsem.
+**Zakaj je pomembno:** otrok, ki mu potegi delajo težave (motorika, bralnik zaslona), lahko igra iste igre po istih pravilih — točke, čas in to, kar gre na strežnik, so enaki (testi preverijo, da strežnikov ocenjevalnik sprejme držanje: npr. pri palici premiki vsakih 0,56–0,90 s, nikoli strojno enakomerno).
+- 👩 Starši: eno stikalo v seznamu otrok; ničesar ne sprašujemo in ne shranjujemo, zakaj.
+- 🧒 Otroci: »Pridrži in spusti« namesto »povleci«.
+- 🛠 Tehnično: `useGestureMode` = stikalo strežnika ALI `AccessibilityInfo.isScreenReaderEnabled` + `screenReaderChanged`; samo JS, pride z OTA. *Načrt:* značka dostopnosti v nogi petprep.si, ko bo to pri uporabnikih (samo dejstva, brez »certificirano«).
+
+---
+
 ## 2026-10-22 — Najprej izračun, nato klik: nadgradnja obstoječih ljubljenčkov na nove medije (M5-T16)
 
 **Kaj:** David je odločil, da obstoječi plačani ljubljenčki novih medijev (ključne slike, brezšivne zanke, prehodi, posnetki šole in iger) ne dobijo samodejno. V administraciji je zdaj stran »Nadgradnja na nove medije«: najprej pokaže izračun, ki nič ne porabi — koliko ljubljenčkov, po videzu (pasma + barva + obdobje), kaj manjka in koliko bi stalo (0 $, ko videz to že ima), primerjavo s preostankom proračuna in koliko dni bi trajalo pri trenutni dnevni meji — nato superadmin klikne »Nadgradi« in potrdi znesek. Ustvarjanje teče v ozadju, en klic AI na element videza, ne glede na število ljubljenčkov; proračun in stikala veljajo, zavrnjeno se ponovi ponoči.

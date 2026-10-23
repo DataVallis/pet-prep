@@ -50,24 +50,23 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 4. **Off-site backups (D5)** are built but still need David's one-time setup (PRODUCTION_DEPLOYMENT §6b), although the privacy policy already states that deleted data leaves backups within 35 days. No deletion log yet (a restore brings back families deleted after the snapshot).
 5. **Adapted mode (M5-T12):** which Android apps actually write Health Connect `WheelchairPushes` is unknown; turning the mode on mid-day keeps the day's max (pushes count only above steps already synced); a yesterday parent entry never rewrites closed routine rows.
 6. **School performing clip** can start up to ~2 s before the cue (it now ends at `obey_at − 100 ms`); if David dislikes it → shorter clip or seek.
-7. **Swipe games without a hold alternative:** wand (cat play), litter change and dog play still need a swipe (APP_REFINEMENT_SPEC §6 / §11 — only brushing got one in M5-T14).
-8. **Process:** orchestrator subagents often cannot spawn `qa-reviewer` themselves → the orchestrator must run QA. David merged #317 / #323 / #329 before their QA fixes landed (fixed in #318 / #326 / #331) — **recommendation: let Claude merge after the QA round.**
-9. **Daily deploy cron fires ~5 h late** (GitHub scheduled runs 09:08 / 09:59 UTC instead of 04:00) — the deploy itself works; users get merges late morning, not at 06:00.
-10. M5-T06 preparation timing has not been measured on production yet (admin »AI media« shows Preparation / Media pipeline times).
+7. **Process:** orchestrator subagents often cannot spawn `qa-reviewer` themselves → the orchestrator must run QA. David merged #317 / #323 / #329 before their QA fixes landed (fixed in #318 / #326 / #331) — **recommendation: let Claude merge after the QA round.**
+8. **Daily deploy cron fires ~5 h late** (GitHub scheduled runs 09:08 / 09:59 UTC instead of 04:00) — the deploy itself works; users get merges late morning, not at 06:00.
+9. M5-T06 preparation timing has not been measured on production yet (admin »AI media« shows Preparation / Media pipeline times).
 
 **Older, still valid:**
 
-11. **Push registration edge case (Android):** a real token rotation arriving as the first event inside the 10 s echo window is taken as the echo → registered only at next app start / login.
-12. **No mobile crash reporter:** backend errors go to `/admin/system-health` (PR #281, instead of Sentry); RN render errors only reach the device console; external uptime check missing (M5-05).
-13. **Training:** schedule is sent to the app (modified app can fake praise — accepted by David); taps before an app restart are lost on resume; potty "asked to go out" only logged; minors m3 / m4 in DECISIONS.
-14. **Tests / tooling:** Pint may still fail repo-wide on untouched files (use `pint --test --dirty`); two Pest runs in one checkout share `storage/framework/testing/disks` (use separate worktrees); cold-cache Jest timeout in `ChildHudScreen.behaviour.test.tsx`; `actions/checkout@v4` on deprecated Node 20.
-15. **i18n (M1-18) not verified on a device** (Hermes plurals, Android channel names after a switch, iOS SL permission texts); English copy awaits David's read-through.
-16. **Security / hygiene before beta:** test accounts in the production DB (M0-15), EAS signing passwords in old repo history (M0-12), PHP 8.3 prod vs 8.5 Sail (M0-11), move `PRODUCTION_SSH_PRIVATE_KEY` into the `production` environment (DEPLOYMENT D20).
-17. **Android payments / sign-in (David):** RevenueCat Play service-account JSON, Android product in the current offering's package, Android OAuth client with the Play signing SHA-1.
-18. **OTA pipeline:** `docs/research/app-release.json` still records only store build 3.1.3 — no OTA has been recorded; check `EXPO_TOKEN` and that the next store build gets recorded (`scripts/record-app-release.mjs`), otherwise the website register keeps showing newer breeds as »kmalu«.
-19. **Breeds are hard-coded in the app** — every new breed needs an app release to be pickable (candidate: server-driven breed catalogue).
-20. **Shared looks (M5-R21):** old look files stay after regenerate; regenerate does not fix earlier stages; `auto-` keys not migrated when a colour list is added later.
-21. **Media storage:** pet media on the server disk (`app_storage` volume); object storage + CDN (M4-05) before many families (SCALING.md).
+10. **Push registration edge case (Android):** a real token rotation arriving as the first event inside the 10 s echo window is taken as the echo → registered only at next app start / login.
+11. **No mobile crash reporter:** backend errors go to `/admin/system-health` (PR #281, instead of Sentry); RN render errors only reach the device console; external uptime check missing (M5-05).
+12. **Training:** schedule is sent to the app (modified app can fake praise — accepted by David); taps before an app restart are lost on resume; potty "asked to go out" only logged; minors m3 / m4 in DECISIONS.
+13. **Tests / tooling:** Pint may still fail repo-wide on untouched files (use `pint --test --dirty`); two Pest runs in one checkout share `storage/framework/testing/disks` (use separate worktrees); cold-cache Jest timeout in `ChildHudScreen.behaviour.test.tsx`; `actions/checkout@v4` on deprecated Node 20.
+14. **i18n (M1-18) not verified on a device** (Hermes plurals, Android channel names after a switch, iOS SL permission texts); English copy awaits David's read-through.
+15. **Security / hygiene before beta:** test accounts in the production DB (M0-15), EAS signing passwords in old repo history (M0-12), PHP 8.3 prod vs 8.5 Sail (M0-11), move `PRODUCTION_SSH_PRIVATE_KEY` into the `production` environment (DEPLOYMENT D20).
+16. **Android payments / sign-in (David):** RevenueCat Play service-account JSON, Android product in the current offering's package, Android OAuth client with the Play signing SHA-1.
+17. **OTA pipeline:** `docs/research/app-release.json` still records only store build 3.1.3 — no OTA has been recorded; check `EXPO_TOKEN` and that the next store build gets recorded (`scripts/record-app-release.mjs`), otherwise the website register keeps showing newer breeds as »kmalu«.
+18. **Breeds are hard-coded in the app** — every new breed needs an app release to be pickable (candidate: server-driven breed catalogue).
+19. **Shared looks (M5-R21):** old look files stay after regenerate; regenerate does not fix earlier stages; `auto-` keys not migrated when a colour list is added later.
+20. **Media storage:** pet media on the server disk (`app_storage` volume); object storage + CDN (M4-05) before many families (SCALING.md).
 
 ## 4. Environment & configuration
 
@@ -90,10 +89,12 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 1. **Device test of all M5-T features on a new native build** (David + Claude checklist from FEATURES rows M5-T01 … T14): take-out clock + message queue + ×, sleep rules + »7:00«, care guide (child + parent), games wait for media, preparation »Pripravljamo: …« + »Vse je pripravljeno«, brush scratch card + hold, birthday, adapted mode (iPhone PushCount / Android WheelchairPushes, parent walk entry), state media loops + transitions, picture mode, school + ball / wand phase clips. On confirmation → FEATURES status 📱 with date + build.
 2. **Next store release (iOS + Android)** per the DEPLOYMENT.md "Next store release" checklist (Play health declaration `READ_WHEELCHAIR_PUSHES`, App Store Health text / App Privacy), then record it in `docs/research/app-release.json` and confirm OTA works again (M5-F10: `EXPO_TOKEN`).
 3. **First real purchase on production** (after the deploy of #327–#332 and the 25 $ cap): watch `/admin → AI budget` ledger, »AI media« preparation time and media quality (key image consistency, seamless loops, transitions, poses, 3 s phase clips, school cue timing); adjust prompts / clip timing with David.
-4. **Hold alternative for the remaining swipe games** (wand, litter change, dog play — APP_REFINEMENT_SPEC §6 follow-up of M5-T14); ask David for a roadmap ID first.
-5. **Before the beta (ROADMAP):** M0-15 test accounts out of production, M5-06 legal review + App Store Kids / Play Families check (privacy policy text is live), M5-07 TestFlight + Play internal testing with 20–50 families, D5 off-site backups setup (David), M5-05 mobile error reporting. Open »čaka Davida« items: M5-R14 / R15 / R18 / R19 / R20 breed care needs, M5-R12 fetch spec.
+4. **Before the beta (ROADMAP):** M0-15 test accounts out of production, M5-06 legal review + App Store Kids / Play Families check (privacy policy text is live), M5-07 TestFlight + Play internal testing with 20–50 families, D5 off-site backups setup (David), M5-05 mobile error reporting. Open »čaka Davida« items: M5-R14 / R15 / R18 / R19 / R20 breed care needs, M5-R12 fetch spec.
 
 ## 6. Session log
+
+### 2026-10-23 (cloud, mobile) — M5-T17 »Lažje kretnje« app (`feat/M5-T17-easy-gestures-app`, backend #354)
+Parent switch per child (`EasyGesturesRow`, `settings.easy_gestures`); hold mode = switch OR live screen reader (`modules/gestures/easyGestures.ts`). Hold for brushing (now gated), wand (»Pomigaj s palico«), litter change (BrushArea scrub), ball (charge + release) — same server inputs. Debt: not on a device; ARCHITECTURE.md still names the old »Umakni pero« button (not edited per instruction).
 
 ### 2026-10-22 (cloud, mobile) — legal links follow the app language (`fix/legal-links-app-language`)
 Google Play rejected 1.0 (privacy policy missing a Health Data disclosure). Website PR #90 adds an explicit "Health and fitness data" section; this PR makes the in-app terms/privacy links open the page in the app's language (`termsUrl()` / `privacyUrl()` in `modules/auth/signup.ts`, was always Slovenian `petprep.si/zasebnost`). JS only → OTA. Next: David re-submits in Play Console (Data safety: Health & fitness → Fitness info; health declaration incl. READ_WHEELCHAIR_PUSHES).
