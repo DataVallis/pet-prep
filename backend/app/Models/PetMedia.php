@@ -119,7 +119,8 @@ class PetMedia extends Model
      *   passed            technical + AI vision check passed
      *   passed_technical  technical check passed, NOT AI-checked (budget out / vision profile off / vision error)
      *   unchecked         the check could not run (ffmpeg missing) — served
-     *   flagged           a stored clip failed `media:quality-check` — NOT shown (isShown)
+     *   flagged           a stored clip failed `media:quality-check` in enforce mode — NOT shown (isShown)
+     *   shadow_failed     failed in shadow mode (QA #363 M1) — still shown, the would-be verdict
      *   approved          a superadmin approved it (»Approve anyway«)
      * »Needs review« (needsReview()): the candidate failed twice — slot `failed` with
      * error_reason `quality_failed`, the candidate kept in `candidate_path` for »Approve anyway«.
@@ -131,6 +132,9 @@ class PetMedia extends Model
     public const QUALITY_UNCHECKED = 'unchecked';
 
     public const QUALITY_FLAGGED = 'flagged';
+
+    /** QA #363 M1: failed the check in SHADOW mode — still shown (the would-be verdict, for calibration). */
+    public const QUALITY_SHADOW_FAILED = 'shadow_failed';
 
     public const QUALITY_APPROVED = 'approved';
 
@@ -221,14 +225,32 @@ class PetMedia extends Model
         return $this->error_reason === 'quality_failed' && filled($this->candidate_path);
     }
 
+    /** A stored clip with a failed verdict (enforce: flagged / hidden; shadow: would fail, shown). */
+    public function isFlaggedQuality(): bool
+    {
+        return in_array($this->quality, [self::QUALITY_FLAGGED, self::QUALITY_SHADOW_FAILED], true);
+    }
+
     /**
-     * Quality check: the admin »Needs review« list — a twice-failed candidate or a stored
-     * clip flagged by media:quality-check.
+     * Quality check: the admin »Needs review« list — a twice-failed candidate, a stored clip
+     * flagged by media:quality-check, or (QA #363 M1) a clip that failed in shadow mode.
      *
      * @param  Builder<PetMedia>  $query
      * @return Builder<PetMedia>
      */
     public function scopeNeedingReview(Builder $query): Builder
+    {
+        return $query->where(fn (Builder $q) => $q->where(fn (Builder $q) => $q->where('error_reason', 'quality_failed')->whereNotNull('candidate_path'))
+            ->orWhereIn('quality', [self::QUALITY_FLAGGED, self::QUALITY_SHADOW_FAILED]));
+    }
+
+    /**
+     * Withheld from children by the check (enforce mode): twice-failed candidates and flagged clips.
+     *
+     * @param  Builder<PetMedia>  $query
+     * @return Builder<PetMedia>
+     */
+    public function scopeWithheldByQuality(Builder $query): Builder
     {
         return $query->where(fn (Builder $q) => $q->where(fn (Builder $q) => $q->where('error_reason', 'quality_failed')->whereNotNull('candidate_path'))
             ->orWhere('quality', self::QUALITY_FLAGGED));

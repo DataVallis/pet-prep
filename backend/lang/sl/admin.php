@@ -154,7 +154,7 @@ return [
 
         'ai' => [
             'pets_today' => 'AI stroški ljubljenčkov danes (ocena)',
-            'pets_month' => 'Ta mesec $:month / $:cap · slike $:images · videi $:videos (:tz)',
+            'pets_month' => 'Ta mesec $:month / $:cap · slike $:images · videi $:videos · preverjanja kakovosti $:checks (:tz)',
             'lab_today' => 'AI Lab stroški danes (ocena)',
             'lab_month' => 'Ta mesec $:month / $:cap — ločeno od proračuna ljubljenčkov',
             'balance' => 'Stanje fal.ai',
@@ -278,8 +278,11 @@ return [
         'phase_clips' => 'Posnetki šole in iger vklopljeni',
         'saved_body_phase_clips' => 'Posnetki šole in iger: :state',
         'quality_check_section' => 'Preverjanje kakovosti posnetkov',
-        'quality_check_description' => 'Vklopljeno (privzeto, David 23. 10. 2026): vsak nov AI posnetek je preverjen, preden ga otroci vidijo — brezplačno tehnično preverjanje (ffmpeg: dolžina, zamrznjena slika, nenadni skoki, gibanje zgoščeno na koncu, zadnja sličica proti končni sliki) in AI preverjanje 6 sličic (anatomija, ista žival, dejanje se res zgodi, napake; šteje v produkcijski AI proračun, ocena ≤ 0,01 $ na posnetek; brez proračuna ali z izklopljenim modelom odloča samo tehnično preverjanje, posnetek je označen »ni AI-preverjen«). Dokler nov posnetek ne prestane preverjanja, ostane viden stari (če obstaja). Neuspešen posnetek se samodejno ustvari ENKRAT znova; če spet pade, se ne prikaže (aplikacija uporabi nadomestek) in je naveden pod »Potrebuje pregled« v Ljubljenček → AI mediji. Izklopljeno: novi posnetki se prikažejo takoj, brez preverjanja (staro delovanje).',
-        'quality_check' => 'Preverjanje kakovosti vklopljeno',
+        'quality_check_description' => 'David 23. 10. 2026: vsak nov AI posnetek je preverjen — brezplačno tehnično (ffmpeg: dolžina, zamrznjena slika, nenadni skoki, gibanje zgoščeno na koncu, zadnja sličica proti končni sliki) in AI preverjanje 6 sličic (anatomija, ista žival, dejanje se res zgodi, napake; produkcijski AI proračun, ocena ≤ 0,01 $ na posnetek; brez proračuna ali z izklopljenim modelom odloča samo tehnično — »ni AI-preverjen«). SENCA (privzeto, dokler meje niso umerjene na pravih posnetkih): rezultati in meritve se zapišejo in vidijo v Ljubljenček → AI mediji (»bi padel«), vsak posnetek se še vedno prikaže, nič se ne ustvari znova. UVELJAVI: dokler nov posnetek ne prestane preverjanja, ostane viden stari; neuspešen se ENKRAT samodejno ustvari znova, drugi neuspeh se ne prikaže (aplikacija uporabi nadomestek) in je »Potrebuje pregled«. IZKLOP: brez preverjanja (staro delovanje).',
+        'quality_check_off' => 'Izklop — brez preverjanja',
+        'quality_check_shadow' => 'Senca — zapiši rezultate, vedno prikaži (privzeto)',
+        'quality_check_enforce' => 'Uveljavi — enkrat znova, nato skrij neuspešne',
+        'quality_check' => 'Način preverjanja kakovosti',
         'saved_body_quality_check' => 'Preverjanje kakovosti: :state',
     ],
 
@@ -398,6 +401,8 @@ return [
             'media_desc' => 'Neuspele slike / videi ljubljenčkov',
             'needs_review' => 'AI posnetki: potrebujejo pregled',
             'needs_review_desc' => 'Dvakrat padli na preverjanju kakovosti ali označeni z media:quality-check — niso prikazani',
+            'unchecked' => 'AI posnetki brez preverjanja (24 h)',
+            'unchecked_desc' => 'ffmpeg manjka ali ni bilo mogoče meriti — preveri sliko aplikacije',
             'disk' => 'Zasedenost diska',
             'disk_desc' => ':free prostega od :total',
             'disk_unknown' => 'Velikost diska ni na voljo',

@@ -165,13 +165,16 @@ return [
     |     clip with an end frame, last frame vs the end image (SSIM);
     |  2. an AI vision check (`vision_profile`, fal through FalGateway, production budget,
     |     purpose quality_check) of ~6 frames against a fixed rubric.
-    | Pass → the candidate becomes the servable file. Fail → ONE automatic regeneration (new
-    | fal request); a second fail → the slot is »Needs review« in /admin and the app keeps its
-    | fallback. On / off: /admin → Feature switches »Quality check« (app_settings
-    | `quality_check`); `enabled` is only the no-row default.
+    | Enforce: pass → the candidate becomes the servable file; fail → ONE automatic regeneration
+    | (new fal request); a second fail → »Needs review« in /admin, not shown (the app's fallback).
+    | Shadow (default until calibrated, QA #363 M1): verdict + metrics recorded, the clip is
+    | always served. Mode: /admin → Feature switches »Quality check« (app_settings `quality_check`).
     */
     'quality_check' => [
-        'enabled' => filter_var(env('AI_QUALITY_CHECK_ENABLED', true), FILTER_VALIDATE_BOOL),
+        // QA #363 M1: off | shadow | enforce — only the default while /admin → Feature switches has
+        // no `quality_check` row. Shadow (record verdicts, always serve) until the thresholds below
+        // are calibrated on production clips; David switches to enforce in the panel.
+        'mode' => env('AI_QUALITY_CHECK_MODE', 'shadow'),
         'vision_profile' => env('AI_QUALITY_VISION_PROFILE', 'openrouter_vision_gemini_flash'),
         // Frames sent to the vision model (one contact sheet, `sheet_columns` per row).
         'frames' => 6,
@@ -180,16 +183,23 @@ return [
         // ffmpeg / ffprobe binaries (production image: Debian `ffmpeg`, backend/docker/production).
         'ffmpeg' => env('FFMPEG_BINARY', 'ffmpeg'),
         'ffprobe' => env('FFPROBE_BINARY', 'ffprobe'),
-        'timeout_seconds' => 20,
-        // Technical thresholds (luma 0–255 on a 128 px wide grey copy).
-        'max_duration_drift_seconds' => 1.0,
-        'min_mean_frame_diff' => 0.25,
-        'spike_min_frame_diff' => 12.0,
-        'spike_ratio' => 8.0,
+        // Per ffmpeg / ffprobe call; the job's worst case (4 calls + vision) stays below its 85 s timeout.
+        'timeout_seconds' => 12,
+        'vision_timeout_seconds' => 30,
+        // Technical thresholds (luma 0–255 on a 128 px wide grey copy). Env knobs so they can be
+        // tuned from `media:quality-check --dry-run` numbers without a code change (QA #363 M1).
+        'max_duration_drift_seconds' => (float) env('AI_QC_MAX_DURATION_DRIFT', 1.0),
+        'min_mean_frame_diff' => (float) env('AI_QC_MIN_MEAN_DIFF', 0.25),
+        // Clips that should barely move (QA measured a 2 px breathing motion at YDIF 0.06).
+        'min_mean_frame_diff_low_motion' => (float) env('AI_QC_MIN_MEAN_DIFF_LOW_MOTION', 0.03),
+        'low_motion_states' => ['sleeping', 'low_energy', 'sick'],
+        'low_motion_phases' => ['ball_waiting', 'school_sit_attention', 'school_come_attention', 'school_place_attention', 'school_potty_attention'],
+        'spike_min_frame_diff' => (float) env('AI_QC_SPIKE_MIN_DIFF', 12.0),
+        'spike_ratio' => (float) env('AI_QC_SPIKE_RATIO', 8.0),
         // Share of all motion in the last 25 % of a clip WITH an end frame (morph into the end pose).
-        'max_tail_motion_share' => 0.7,
+        'max_tail_motion_share' => (float) env('AI_QC_MAX_TAIL_SHARE', 0.7),
         // Last frame vs the end image (SSIM 0–1, 144 × 256 grey) for clips with an end frame.
-        'min_end_frame_ssim' => 0.45,
+        'min_end_frame_ssim' => (float) env('AI_QC_MIN_END_SSIM', 0.45),
     ],
 
     /*

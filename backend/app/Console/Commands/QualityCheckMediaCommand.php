@@ -6,7 +6,9 @@ use App\Enums\AiSpendPurpose;
 use App\Models\AppSettingChange;
 use App\Models\Pet;
 use App\Models\PetMedia;
+use App\Services\AppSettingsService;
 use App\Services\Media\AiSpendGuard;
+use App\Services\Media\FrozenClipRegenerator;
 use App\Services\Media\MediaQualityService;
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Builder;
@@ -18,9 +20,10 @@ use Illuminate\Support\Collection;
  *
  *   --dry-run      technical check only (ffmpeg, free) — nothing written, no paid call
  *   (real run)     technical + AI check (production budget, cost printed before); a failure
- *                  flags the stored file (`quality = flagged` — not shown, the app's fallback)
- *   --regenerate   also re-queue every flagged clip ONCE (new generation; a second failure
- *                  → »Needs review« in /admin)
+ *                  flags the stored file — enforce mode `flagged` (not shown, the app's fallback),
+ *                  shadow mode `shadow_failed` (still shown; QA #363 M1)
+ *   --regenerate   also re-queue every failed clip ONCE (cost printed + budget pre-check,
+ *                  QA #363 m5; a second failure → »Needs review« in enforce mode)
  *
  * `--pet` of a pet on a shared look = that look's rows (checked once per look row).
  */
@@ -35,7 +38,7 @@ class QualityCheckMediaCommand extends Command
 
     protected $description = 'Run the clip quality check (technical + AI vision) on stored AI clips; optionally regenerate failures once';
 
-    public function handle(MediaQualityService $quality, AiSpendGuard $guard): int
+    public function handle(MediaQualityService $quality, AiSpendGuard $guard, FrozenClipRegenerator $prices, AppSettingsService $settings): int
     {
         if ($this->option('pet') !== null && $this->option('look') !== null) {
             $this->error('Use --pet or --look, not both (--pet of a pet on a shared look already means that look).');
@@ -94,18 +97,29 @@ class QualityCheckMediaCommand extends Command
         }
 
         $this->table(['Media', 'Owner', 'Kind', 'State', 'Length', 'Result', 'AI', 'Reason'], $table);
+        $enforce = $settings->qualityCheckMode(fresh: true) === AppSettingsService::QUALITY_ENFORCE;
         $this->info(sprintf('%d passed, %d failed%s. AI cost (estimated): $%.4f.',
-            $rows->count() - $failed->count(), $failed->count(), $dryRun ? ' (technical only)' : ' — failed clips are flagged and not shown', $cost));
+            $rows->count() - $failed->count(), $failed->count(),
+            $dryRun ? ' (technical only)' : ($enforce ? ' — failed clips are flagged and not shown' : ' — shadow mode: failed clips are marked »would fail« and still shown'), $cost));
 
         $queued = 0;
         if ($this->option('regenerate')) {
             if ($dryRun) {
                 $this->warn('--regenerate is ignored with --dry-run (nothing is flagged in a dry run).');
-            } else {
-                foreach ($failed as $row) {
-                    $queued += $quality->regenerateFlagged($row) ? 1 : 0;
+            } elseif ($failed->isNotEmpty()) {
+                // QA #363 m5: price it and pre-check the budget first (like media:regenerate-frozen).
+                $regenCost = round((float) $failed->sum(fn (PetMedia $r): float => $prices->costOf($r)), 4);
+                $this->line(sprintf('Regenerating %d clip(s) once ≈ $%.2f (production budget; left today $%.2f of $%.2f).',
+                    $failed->count(), $regenCost, max(0, $guard->dailyCapUsd() - $guard->spentTodayUsd()), $guard->dailyCapUsd()));
+
+                if ($guard->refusalFor($regenCost, AiSpendPurpose::StateVideo) !== null) {
+                    $this->error(sprintf('Estimated $%.2f does not fit the AI budget now — nothing re-queued. Run --regenerate again after the budget day / with a higher cap.', $regenCost));
+                } else {
+                    foreach ($failed as $row) {
+                        $queued += $quality->regenerateFlagged($row) ? 1 : 0;
+                    }
+                    $this->info("Re-queued {$queued} clip(s) once (normal pipeline + budget guard; a second failure → »Needs review« in /admin in enforce mode).");
                 }
-                $this->info("Re-queued {$queued} clip(s) once (normal pipeline + budget guard; a second failure → »Needs review« in /admin).");
             }
         }
 

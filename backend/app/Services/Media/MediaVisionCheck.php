@@ -80,7 +80,7 @@ class MediaVisionCheck
         ] + $profile->params;
 
         try {
-            $call = $this->gateway->run($profile, $input, AiSpendPurpose::QualityCheck, petId: $clip->pet_id, timeoutSeconds: 45, petMediaId: $clip->id);
+            $call = $this->gateway->run($profile, $input, AiSpendPurpose::QualityCheck, petId: $clip->pet_id, timeoutSeconds: (int) config('media.quality_check.vision_timeout_seconds', 30), petMediaId: $clip->id);
         } catch (AiCallException $e) {
             $budget = in_array($e->reason, [AiCallFailure::BudgetDaily, AiCallFailure::BudgetMonthly, AiCallFailure::FalBalance], true);
 
@@ -117,14 +117,14 @@ class MediaVisionCheck
     {
         $animal = $species === Species::Cat ? 'cat' : 'dog';
 
-        return "Image 1 is a contact sheet: frames of one short clip in time order (left to right, then the next row). "
+        return 'Image 1 is a contact sheet: frames of one short clip in time order (left to right, then the next row). '
             ."Image 2 is the reference photo of the {$animal}."
             .($hasEndImage ? ' Image 3 is the pose the clip must END in.' : '')
             ." The clip should show the same {$animal} doing this: {$intent}.\n"
             ."Check:\n"
             ."- anatomy_ok: in EVERY frame the {$animal} has a normal body: four normal legs, one head, one tail, no melting, merging, stretching or morphing body parts, no legs that dissolve or appear.\n"
             ."- same_animal: it is the same {$animal} as in the reference photo (breed, colour, markings) in every frame.\n"
-            ."- action_done: the clip really shows the action with natural movement".($hasEndImage ? ' and ends in the pose of image 3 by moving into it, not by morphing' : '').".\n"
+            .'- action_done: the clip really shows the action with natural movement'.($hasEndImage ? ' and ends in the pose of image 3 by moving into it, not by morphing' : '').".\n"
             ."- artifacts: true if there are visual glitches (flicker, a second animal, people, hands, text, sudden cuts, objects appearing).\n"
             .'Answer only: {"anatomy_ok": true|false, "same_animal": true|false, "action_done": true|false, "artifacts": true|false, "verdict": "pass"|"fail", "reason": "<one short sentence>"}';
     }

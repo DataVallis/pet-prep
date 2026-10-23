@@ -155,7 +155,7 @@ return [
 
         'ai' => [
             'pets_today' => 'Pets AI spend today (est.)',
-            'pets_month' => 'This month $:month / $:cap · images $:images · videos $:videos (:tz)',
+            'pets_month' => 'This month $:month / $:cap · images $:images · videos $:videos · quality checks $:checks (:tz)',
             'lab_today' => 'AI Lab spend today (est.)',
             'lab_month' => 'This month $:month / $:cap — separate from the pets budget',
             'balance' => 'fal.ai balance',
@@ -279,8 +279,11 @@ return [
         'phase_clips' => 'School & game clips on',
         'saved_body_phase_clips' => 'School & game clips: :state',
         'quality_check_section' => 'Clip quality check',
-        'quality_check_description' => 'On (default, David 2026-10-23): every new AI clip is checked before children see it — a free technical check (ffmpeg: length, frozen picture, sudden jumps, motion bunched up at the end, last frame vs the end image) and an AI vision check of 6 frames (anatomy, same animal, the action really happens, glitches; counts against the production AI budget, estimated ≤ $0.01 per clip; without budget or with the vision model off only the technical check decides and the clip is marked »not AI-checked«). Until a new clip passes, the old one (if any) stays visible. A failed clip is regenerated automatically ONCE; if it fails again it is not shown (the app uses its fallback) and the slot is listed under »Needs review« in Pet → AI media. Off: new clips are shown at once without a check (the old behaviour).',
-        'quality_check' => 'Quality check on',
+        'quality_check_description' => 'David 2026-10-23: every new AI clip is checked — a free technical check (ffmpeg: length, frozen picture, sudden jumps, motion bunched up at the end, last frame vs the end image) and an AI vision check of 6 frames (anatomy, same animal, the action really happens, glitches; production AI budget, estimated ≤ $0.01 per clip; without budget or with the vision model off only the technical check decides — »not AI-checked«). SHADOW (default until the thresholds are calibrated on real clips): verdicts and measurements are recorded and shown in Pet → AI media (»would fail«), every clip is still shown, nothing is regenerated. ENFORCE: until a new clip passes, the old one (if any) stays visible; a failed clip is regenerated automatically ONCE, a second failure is not shown (the app uses its fallback) and is listed as »Needs review«. OFF: no check (the old behaviour).',
+        'quality_check_off' => 'Off — no check',
+        'quality_check_shadow' => 'Shadow — record verdicts, always show (default)',
+        'quality_check_enforce' => 'Enforce — regenerate once, then hide failures',
+        'quality_check' => 'Quality check mode',
         'saved_body_quality_check' => 'Quality check: :state',
     ],
 
@@ -399,6 +402,8 @@ return [
             'media_desc' => 'Pet images / videos that failed',
             'needs_review' => 'AI clips: needs review',
             'needs_review_desc' => 'Failed the quality check twice or flagged by media:quality-check — not shown',
+            'unchecked' => 'AI clips served unchecked (24 h)',
+            'unchecked_desc' => 'ffmpeg missing or nothing measurable — check the app image',
             'disk' => 'Disk used',
             'disk_desc' => ':free free of :total',
             'disk_unknown' => 'Disk size not available',

@@ -65,7 +65,7 @@ class AttentionOverview extends StatsOverviewWidget
                 ->description(__('admin.dashboard.attention.media_review_desc'))
                 ->descriptionIcon('heroicon-m-eye')
                 ->color($needsReview > 0 ? 'warning' : 'success')
-                ->url(PetResource::getUrl()),
+                ->url(SystemHealthService::needsReviewUrl()),
             Stat::make(__('admin.dashboard.attention.cats'), $cats->label())
                 ->description(__('admin.dashboard.attention.cats_desc'))
                 ->descriptionIcon('heroicon-m-adjustments-horizontal')

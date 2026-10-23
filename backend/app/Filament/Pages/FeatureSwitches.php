@@ -80,7 +80,7 @@ class FeatureSwitches extends Page implements HasForms
             'unique_pet_media' => $settings->uniquePetMedia(),
             'state_media' => $settings->stateMedia(),
             'phase_clips' => $settings->phaseClips(),
-            'quality_check' => $settings->qualityCheck(),
+            'quality_check' => $settings->qualityCheckMode(),
         ]);
     }
 
@@ -144,9 +144,16 @@ class FeatureSwitches extends Page implements HasForms
                 Section::make(__('admin.features.quality_check_section'))
                     ->description(__('admin.features.quality_check_description'))
                     ->schema([
-                        Toggle::make('quality_check')
+                        // QA #363 M1: off / shadow (default until calibrated) / enforce.
+                        Radio::make('quality_check')
                             ->label(__('admin.features.quality_check'))
-                            ->default(true),
+                            ->options([
+                                AppSettingsService::QUALITY_OFF => __('admin.features.quality_check_off'),
+                                AppSettingsService::QUALITY_SHADOW => __('admin.features.quality_check_shadow'),
+                                AppSettingsService::QUALITY_ENFORCE => __('admin.features.quality_check_enforce'),
+                            ])
+                            ->in(AppSettingsService::QUALITY_CHECK_MODES)
+                            ->required(),
                     ]),
             ]);
     }
@@ -166,7 +173,7 @@ class FeatureSwitches extends Page implements HasForms
         $unique = (bool) ($data['unique_pet_media'] ?? false);
         $stateMedia = (bool) ($data['state_media'] ?? AppSettingsService::stateMediaDefault());
         $phaseClips = (bool) ($data['phase_clips'] ?? AppSettingsService::phaseClipsDefault());
-        $qualityCheck = (bool) ($data['quality_check'] ?? AppSettingsService::qualityCheckDefault());
+        $qualityCheck = (string) ($data['quality_check'] ?? AppSettingsService::qualityCheckDefault());
 
         try {
             // Each switch is written only when its own fields changed, so saving
@@ -183,7 +190,7 @@ class FeatureSwitches extends Page implements HasForms
             if ($phaseClips !== $settings->phaseClips()) {
                 $settings->updatePhaseClips($this->admin(), $phaseClips);
             }
-            if ($qualityCheck !== $settings->qualityCheck()) {
+            if ($qualityCheck !== $settings->qualityCheckMode()) {
                 $settings->updateQualityCheck($this->admin(), $qualityCheck);
             }
         } catch (InvalidArgumentException $e) {
@@ -198,7 +205,7 @@ class FeatureSwitches extends Page implements HasForms
         Notification::make()->title(__('admin.features.saved'))->body(__('admin.features.saved_body_media', ['mode' => $mode->label(), 'media' => $media])
             .' · '.__('admin.features.saved_body_state_media', ['state' => $states])
             .' · '.__('admin.features.saved_body_phase_clips', ['state' => $phases])
-            .' · '.__('admin.features.saved_body_quality_check', ['state' => $settings->qualityCheck() ? __('admin.features.state_media_on') : __('admin.features.state_media_off')]))->success()->send();
+            .' · '.__('admin.features.saved_body_quality_check', ['state' => __('admin.features.quality_check_'.$settings->qualityCheckMode())]))->success()->send();
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Services\SystemHealth;
 
+use App\Filament\Resources\PetResource;
 use App\Models\FailedJob;
 use App\Models\Pet;
 use App\Models\PetMedia;
@@ -292,9 +293,24 @@ class SystemHealthService
      */
     public function needsReviewMediaCount(): int
     {
-        return PetMedia::query()->needingReview()
+        return PetMedia::query()->withheldByQuality()
             ->where(fn ($q) => $q->whereNull('look_media_id')->orWhereNull('pet_id'))
             ->count();
+    }
+
+    /** QA #363 m1: clips served UNCHECKED in the last $hours (ffmpeg missing / nothing measurable). */
+    public function uncheckedMediaCount(int $hours = 24): int
+    {
+        return PetMedia::query()->where('quality', PetMedia::QUALITY_UNCHECKED)
+            ->where(fn ($q) => $q->whereNull('look_media_id')->orWhereNull('pet_id'))
+            ->where('updated_at', '>=', Carbon::now()->subHours($hours))
+            ->count();
+    }
+
+    /** URL of the pet list filtered to pets with an AI clip that needs review (QA #363 m7). */
+    public static function needsReviewUrl(): string
+    {
+        return PetResource::getUrl('index', ['tableFilters' => ['media_needs_review' => ['isActive' => true]]]);
     }
 
     /**

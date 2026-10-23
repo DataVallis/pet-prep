@@ -118,6 +118,13 @@ export function phasePlayback(media: PetMediaInfo, moment: PhaseMoment, mode: Me
  */
 export const PERFORMING_END_MARGIN_MS = 100;
 
+/**
+ * QA #363 M2: a clip LONGER than the 3 s default (the 5 s performing clips) never starts more
+ * than this long before the cue — the dog waits for the command (attention) first; the clip's
+ * slow beginning is skipped instead (`startAtMs`), so its end pose still lands at obey − margin.
+ */
+export const PERFORMING_CUE_LEAD_MS = 300;
+
 /** Server praise window when a trial carries no `window_end_ms` (TrainingService::PRAISE_WINDOW_MS). */
 const PRAISE_WINDOW_FALLBACK_MS = 1_500;
 
@@ -143,7 +150,9 @@ function holdEnd(prev: SchoolTrial | undefined): number {
 export function performingStartMs(trials: readonly SchoolTrial[], i: number, clipMs: number = PHASE_CLIP_MS): number | null {
   const at = obeyAt(trials[i]);
   if (at === null) return null;
-  return Math.max(holdEnd(trials[i - 1]), at - clipMs - PERFORMING_END_MARGIN_MS);
+  const natural = Math.max(holdEnd(trials[i - 1]), at - clipMs - PERFORMING_END_MARGIN_MS);
+  // QA #363 m3: 3 s clips keep their earlier timing exactly; only longer clips are capped at the cue.
+  return clipMs > PHASE_CLIP_MS ? Math.max(natural, trials[i].cue_at_ms - PERFORMING_CUE_LEAD_MS) : natural;
 }
 
 /** When trial `i` takes the stage (its `attention`): after the previous trial's hold, latest at its cue / performing. */
@@ -182,7 +191,8 @@ export function schoolMomentAt(
     // The clip must END at obey − margin; when the previous praise window left less time than
     // the clip lasts, it starts that much later INTO the clip (the pose still lands on time).
     const end = (obeyAt(trial) as number) - PERFORMING_END_MARGIN_MS;
-    const skip = Math.max(0, clipMs - (end - start));
+    // Clamped to the clip (never a seek past its end; the last frame = the held pose).
+    const skip = Math.min(clipMs, Math.max(0, clipMs - (end - start)));
     const phase: SchoolPhase = e < Math.max(end, start + 1) ? 'performing' : 'success';
     return { phase, clip: clip(phase), pose, instance: `${index}:${phase}`, ...(phase === 'performing' && skip > 0 ? { startAtMs: skip } : {}) };
   }

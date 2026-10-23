@@ -1585,7 +1585,7 @@ flowchart LR
 ```mermaid
 flowchart TD
   T[Trial i of the server schedule] --> A[attention<br/>after trial i-1's praise window]
-  A --> PF[performing (stored length: 5 s new, 3 s older — media.phase_seconds)<br/>start = max(prev window end, obey_at − length − 100 ms)<br/>short window → startAtMs into the clip, the end lands at obey_at − 100 ms]
+  A --> PF[performing (stored length: 5 s new, 3 s older — media.phase_seconds)<br/>start = max(prev window end, obey_at − length − 100 ms; clips > 3 s also ≥ cue − 300 ms)<br/>short window → startAtMs into the clip (≤ length), the end lands at obey_at − 100 ms]
   PF --> SU[success: end pose held<br/>obey_at … window_end = praise counts]
   SU --> N[next trial's attention]
   T -->|dog ignores| ST[standing pose from the cue]
@@ -1619,9 +1619,9 @@ Every new AI clip is a candidate until it passes; the old file stays visible mea
 ```mermaid
 flowchart TD
   W[fal webhook OK] --> D[StorePetMedia: download + faststart]
-  D --> SW{switch »Quality check« on?}
+  D --> SW{mode »Quality check«}
   SW -->|off| SV[stored at once — old behaviour]
-  SW -->|on| C[candidate_path set<br/>slot running, old storage_path still served]
+  SW -->|shadow default / enforce| C[candidate_path set<br/>slot running, old storage_path still served]
   C --> J[CheckPetMediaQuality]
   J --> CL{claim pet_media_quality_checks<br/>unique media + generation + trigger}
   CL -->|taken / decided| AP[apply the decided verdict only — never a 2nd measure / spend]
@@ -1635,11 +1635,13 @@ flowchart TD
   AI -->|rubric fail| F
   AI -->|error / bad JSON| P1
   P0 & P1 & P2 --> PR[promoteCandidate: candidate → storage_path · one PetUpdated video_ready · look fan-out]
-  F{generation == quality_retry_generation?}
-  F -->|no — first fail| R[ONE auto regeneration: generation + 1, quality_retry_generation = it<br/>SubmitPetStateVideo → normal pipeline + budget guard]
+  F{mode?}
+  F -->|shadow — default until calibrated| SH[promote anyway: quality shadow_failed = »would fail«<br/>shown · no regeneration · listed for calibration]
+  F -->|enforce| F2{generation == quality_retry_generation?}
+  F2 -->|no — first fail| R[ONE auto regeneration: generation + 1, quality_retry_generation = it<br/>SubmitPetStateVideo → normal pipeline + budget guard]
   R --> W
-  F -->|yes — the retry failed too| NR[»Needs review«: slot failed quality_failed, candidate kept<br/>payload / readiness / preparation = fallback · media:retry skips it · look rows not re-submitted]
-  NR --> ADM[/admin Pet → AI media: filter »Needs review« · »Approve anyway« (superadmin, audited) · »Regenerate« (new chain)<br/>count on dashboard + System health/]
+  F2 -->|yes — the retry failed too| NR[»Needs review«: slot failed quality_failed, candidate kept<br/>payload / readiness / preparation = fallback · media:retry, Generate missing, backfill, bulk upgrade, regenerate-frozen skip it]
+  NR --> ADM[/admin Pet → AI media: »Open candidate« · »Open contact sheet« · »Approve anyway« (superadmin, audited) · »Regenerate« (new chain)<br/>count on dashboard + System health → filtered pet list/]
 ```
 
 ```mermaid
@@ -1647,8 +1649,9 @@ flowchart LR
   CMD[media:quality-check --pet --look] --> DRY{--dry-run?}
   DRY -->|yes| TO[technical only · nothing written · no paid call]
   DRY -->|no| FULL[technical + AI · cost printed first]
-  FULL -->|fail| FL[quality = flagged → not shown]
-  FL -->|--regenerate| RG[re-queued ONCE as the chain's retry → a 2nd fail = »Needs review«]
+  FULL -->|fail, enforce| FL[quality = flagged → not shown]
+  FULL -->|fail, shadow| SF[quality = shadow_failed → still shown]
+  FL & SF -->|--regenerate: cost + budget pre-check| RG[re-queued ONCE as the chain's retry → a 2nd fail = »Needs review« in enforce]
 ```
 
 ## 11. Push notifications (M3-02, 2026-10-05)

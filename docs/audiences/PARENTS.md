@@ -118,7 +118,7 @@ Kot v resnici: dva psa iste pasme nista enaka. Ob rojstvu vsak kuža dobi svojo 
 
 **Šola in igre s posnetki po fazah** *(v aplikaciji od 21. 10. 2026 — še ni v trgovini, še ni preverjeno na telefonu)*: pri plačljivem izzivu (novi ljubljenčki) otrok v »Šoli« vidi, kako kuža čaka na ukaz, ga izvede (se usede, pride, gre na blazino, gre k vratom) in drži položaj — vsak kratek posnetek se predvaja enkrat ob pravem trenutku vaje. Pri igri z žogo kuža steče iz slike in žogo prinese nazaj, plačljiva muca se pri palici s peresom pritaji, skoči in pero ulovi; žogo in pero nariše aplikacija. V načinu »Slika« samo slike poz (brez prenosa videov). Dokler posnetki prihajajo, piše »Šola se še pripravlja« / »Igra se še pripravlja«; vaja deluje ves čas.
 
-**Preverjeni posnetki** *(na strežniku od 23. 10. 2026 — še ni preverjeno s pravim posnetkom)*: vsak nov AI posnetek se samodejno preveri, preden ga otrok vidi (zamrznjena slika, nenaravno gibanje, »taljenje« telesa, napake). Posnetek z napako se enkrat naredi znova; če je spet slab, ga otrok ne vidi — namesto njega vidi sliko poze, dokler posnetka ne pregledamo. Posnetek »izvede ukaz« v šoli traja 5 sekund, da je gib naraven.
+**Preverjeni posnetki** *(na strežniku od 23. 10. 2026 — za zdaj v poskusnem načinu, ki samo beleži; še ni preverjeno s pravim posnetkom)*: vsak nov AI posnetek se samodejno preveri (zamrznjena slika, nenaravno gibanje, »taljenje« telesa, napake). *Načrt (ko bodo meje umerjene):* posnetek z napako se enkrat naredi znova; če je spet slab, ga otrok ne vidi — namesto njega vidi sliko poze, dokler posnetka ne pregledamo. Posnetek »izvede ukaz« v šoli traja 5 sekund, da je gib naraven.
 
 ## Kaj vidite vi
 - **Semafor** za vsakega otroka in vsakega psa, za današnji dan po vašem času:

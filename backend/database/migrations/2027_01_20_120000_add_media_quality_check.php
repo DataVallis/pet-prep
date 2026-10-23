@@ -16,8 +16,9 @@ use Illuminate\Support\Facades\Schema;
  * trigger `pipeline` = a new clip, `command` = media:quality-check on a stored clip).
  * `quality` = verdict of the STORED file (like stored_recipe — changes only when a file is
  * stored / linked / checked): passed | passed_technical (not AI-checked) | unchecked
- * (ffmpeg missing) | flagged (a stored clip failed media:quality-check — not shown) |
- * approved (superadmin). »Needs review« = `error_reason` quality_failed + a kept candidate.
+ * (ffmpeg missing) | flagged (a stored clip failed media:quality-check in enforce mode — not
+ * shown) | shadow_failed (failed in shadow mode — still shown, QA #363 M1) | approved (superadmin).
+ * `ai_status` `calling` = the paid vision call is in flight (a takeover never calls again). »Needs review« = `error_reason` quality_failed + a kept candidate.
  *
  * `stored_duration_seconds` = length of the STORED file (like stored_recipe; the app plays
  * 5 s school performing clips and older 3 s ones side by side). Existing files: copied
@@ -54,7 +55,7 @@ return new class extends Migration
             $table->decimal('stored_duration_seconds', 6, 2)->nullable()->after('duration_seconds');
         });
 
-        DB::statement("ALTER TABLE pet_media ADD CONSTRAINT pet_media_quality_check CHECK (quality IS NULL OR quality IN ('passed', 'passed_technical', 'unchecked', 'flagged', 'approved'))");
+        DB::statement("ALTER TABLE pet_media ADD CONSTRAINT pet_media_quality_check CHECK (quality IS NULL OR quality IN ('passed', 'passed_technical', 'unchecked', 'flagged', 'shadow_failed', 'approved'))");
         DB::statement('CREATE INDEX pet_media_quality_index ON pet_media (quality) WHERE quality IS NOT NULL');
 
         DB::table('pet_media')->whereNotNull('storage_path')->whereNotNull('duration_seconds')
@@ -86,7 +87,7 @@ return new class extends Migration
 
         DB::statement("ALTER TABLE pet_media_quality_checks ADD CONSTRAINT pet_media_quality_checks_trigger_check CHECK (trigger IN ('pipeline', 'command'))");
         DB::statement("ALTER TABLE pet_media_quality_checks ADD CONSTRAINT pet_media_quality_checks_status_check CHECK (status IN ('running', 'decided'))");
-        DB::statement("ALTER TABLE pet_media_quality_checks ADD CONSTRAINT pet_media_quality_checks_ai_status_check CHECK (ai_status IN ('passed', 'failed', 'skipped_budget', 'disabled', 'error', 'not_run'))");
+        DB::statement("ALTER TABLE pet_media_quality_checks ADD CONSTRAINT pet_media_quality_checks_ai_status_check CHECK (ai_status IN ('passed', 'failed', 'skipped_budget', 'disabled', 'error', 'not_run', 'calling'))");
         DB::statement("ALTER TABLE pet_media_quality_checks ADD CONSTRAINT pet_media_quality_checks_verdict_check CHECK (verdict IS NULL OR verdict IN ('pass', 'fail'))");
 
         DB::statement('ALTER TABLE ai_spend_ledger DROP CONSTRAINT IF EXISTS ai_spend_ledger_purpose_check');
@@ -110,7 +111,9 @@ return new class extends Migration
             DB::statement("ALTER TABLE {$table} ADD CONSTRAINT {$name} CHECK ({$column} IS NULL OR {$column} IN (".self::FAILURES_OLD.'))');
         }
 
-        DB::table('ai_spend_ledger')->where('purpose', 'quality_check')->delete();
+        // QA #363 m6: spend history is never deleted — the vision calls stay counted as production spend.
+        DB::table('ai_spend_ledger')->where('purpose', 'quality_check')->update(['purpose' => 'state_video']);
+        DB::table('ai_spend_ledger')->where('unit', 'request')->update(['unit' => 'image']);
         DB::statement('ALTER TABLE ai_spend_ledger DROP CONSTRAINT IF EXISTS ai_spend_ledger_purpose_check');
         DB::statement("ALTER TABLE ai_spend_ledger ADD CONSTRAINT ai_spend_ledger_purpose_check CHECK (purpose IN ('lab', 'reference_image', 'state_video'))");
         DB::statement('ALTER TABLE ai_spend_ledger DROP CONSTRAINT IF EXISTS ai_spend_ledger_unit_check');

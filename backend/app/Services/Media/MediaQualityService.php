@@ -12,6 +12,7 @@ use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\PetMediaQualityCheck;
 use App\Models\User;
+use App\Services\AppSettingsService;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\URL;
@@ -111,13 +112,15 @@ class MediaQualityService
         }
 
         if ($check->verdict === PetMediaQualityCheck::VERDICT_PASS) {
-            $quality = match (true) {
-                $check->ai_status === PetMediaQualityCheck::AI_PASSED => PetMedia::QUALITY_PASSED,
-                $check->technical_ok === null => PetMedia::QUALITY_UNCHECKED,
-                default => PetMedia::QUALITY_PASSED_TECHNICAL,
-            };
+            return $this->media->promoteCandidate($slot, $candidate, self::passQuality($check), $check->reason) ? 'promoted' : 'skipped';
+        }
 
-            return $this->media->promoteCandidate($slot, $candidate, $quality, $check->reason) ? 'promoted' : 'skipped';
+        // QA #363 M1: shadow mode (default until calibrated) — record the would-be verdict, always
+        // serve the clip, never regenerate, never hide.
+        if ($this->media->qualityCheckMode() === AppSettingsService::QUALITY_SHADOW) {
+            Log::warning('MediaQualityService: clip would fail the quality check (shadow mode — served anyway)', ['pet_media_id' => $slot->id, 'reason' => $check->reason]);
+
+            return $this->media->promoteCandidate($slot, $candidate, PetMedia::QUALITY_SHADOW_FAILED, $check->reason) ? 'promoted' : 'skipped';
         }
 
         // One automatic regeneration per generation chain (never for the retry itself).
@@ -126,6 +129,16 @@ class MediaQualityService
         }
 
         return $this->autoRetry($slot, $candidate, (string) $check->reason) ? 'retrying' : 'skipped';
+    }
+
+    /** The `quality` of a passed check. */
+    private static function passQuality(PetMediaQualityCheck $check): string
+    {
+        return match (true) {
+            $check->ai_status === PetMediaQualityCheck::AI_PASSED => PetMedia::QUALITY_PASSED,
+            $check->technical_ok === null => PetMedia::QUALITY_UNCHECKED,
+            default => PetMedia::QUALITY_PASSED_TECHNICAL,
+        };
     }
 
     /**
@@ -211,20 +224,22 @@ class MediaQualityService
 
         // A pool / shared-look pet's slot failed with its look row: approve the look row
         // (checked once per look row; every pet of the look gets the file through the fan-out).
-        if (! $slot->needsReview() && $slot->quality !== PetMedia::QUALITY_FLAGGED && $slot->look_media_id !== null
-            && ($row = PetMedia::find($slot->look_media_id)) !== null && ($row->needsReview() || $row->quality === PetMedia::QUALITY_FLAGGED)) {
+        if (! $slot->needsReview() && ! $slot->isFlaggedQuality() && $slot->look_media_id !== null
+            && ($row = PetMedia::find($slot->look_media_id)) !== null && ($row->needsReview() || $row->isFlaggedQuality())) {
             return $this->approve($row, $actor);
         }
 
         $approved = false;
         $what = null;
+        $before = null;
 
         if ($slot->needsReview()) {
             $approved = $this->media->promoteCandidate($slot, (string) $slot->candidate_path, PetMedia::QUALITY_APPROVED,
                 "Approved by superadmin #{$actor->id}", [PetMedia::STATUS_FAILED]);
             $what = 'candidate';
-        } elseif ($slot->quality === PetMedia::QUALITY_FLAGGED && $slot->isServable()) {
-            $approved = PetMedia::whereKey($slot->id)->where('quality', PetMedia::QUALITY_FLAGGED)
+        } elseif ($slot->isFlaggedQuality() && $slot->isServable()) {
+            $before = $slot->quality;
+            $approved = PetMedia::whereKey($slot->id)->where('quality', $before)
                 ->update(['quality' => PetMedia::QUALITY_APPROVED, 'quality_reason' => "Approved by superadmin #{$actor->id}"]) === 1;
             if ($approved) {
                 $this->propagateQuality($slot->fresh() ?? $slot);
@@ -237,7 +252,7 @@ class MediaQualityService
             AppSettingChange::create([
                 'key' => self::AUDIT_APPROVE,
                 'user_id' => $actor->id,
-                'old' => ['quality' => $what === 'candidate' ? 'needs_review' : PetMedia::QUALITY_FLAGGED, 'reason' => $slot->error ?? $slot->quality_reason],
+                'old' => ['quality' => $what === 'candidate' ? 'needs_review' : ($before ?? PetMedia::QUALITY_FLAGGED), 'reason' => $slot->error ?? $slot->quality_reason],
                 'new' => ['pet_media_id' => $slot->id, 'pet_id' => $slot->pet_id, 'pet_look_id' => $slot->pet_look_id, 'kind' => $slot->kind, 'state' => $slot->state, 'generation' => $slot->generation, 'quality' => PetMedia::QUALITY_APPROVED],
             ]);
         }
@@ -277,11 +292,11 @@ class MediaQualityService
         }
 
         $ok = $check->verdict === PetMediaQualityCheck::VERDICT_PASS;
+        // QA #363 M1: shadow mode records the would-be verdict, never hides a stored clip.
+        $enforce = $this->media->qualityCheckMode() === AppSettingsService::QUALITY_ENFORCE;
         $quality = match (true) {
-            ! $ok => PetMedia::QUALITY_FLAGGED,
-            $check->ai_status === PetMediaQualityCheck::AI_PASSED => PetMedia::QUALITY_PASSED,
-            $check->technical_ok === null => PetMedia::QUALITY_UNCHECKED,
-            default => PetMedia::QUALITY_PASSED_TECHNICAL,
+            ! $ok => $enforce ? PetMedia::QUALITY_FLAGGED : PetMedia::QUALITY_SHADOW_FAILED,
+            default => self::passQuality($check),
         };
 
         // Only the file that was checked; an approved file stays approved.
@@ -291,7 +306,7 @@ class MediaQualityService
 
         if ($changed) {
             $this->propagateQuality($row->fresh() ?? $row);
-            if (! $ok) {
+            if (! $ok && $enforce) {
                 // The app drops the flagged clip (its fallback) with this state.
                 $this->broadcastFor($row, self::EVENT_FAILED);
             }
@@ -309,7 +324,7 @@ class MediaQualityService
     {
         $row->refresh();
 
-        if ($row->quality !== PetMedia::QUALITY_FLAGGED || $row->isInFlight()
+        if (! $row->isFlaggedQuality() || $row->isInFlight()
             || ($row->quality_retry_generation !== null && (int) $row->quality_retry_generation === (int) $row->generation)) {
             return false;
         }
@@ -383,15 +398,23 @@ class MediaQualityService
         $tech = $this->technical($slot, $path, $check, $stored);
         $ai = ['status' => PetMediaQualityCheck::AI_NOT_RUN, 'verdict' => null, 'reason' => null, 'cost_usd' => 0.0, 'reported_cost_usd' => null];
 
-        if ($tech['ok'] === true && $withAi) {
+        // QA #363 m2: a takeover of a dead worker never pays for the vision call twice — a call
+        // that was in flight (`calling`) or already settled is reused / counted as not AI-checked.
+        if ($check->ai_status === PetMediaQualityCheck::AI_CALLING) {
+            $ai = ['status' => PetMediaQualityCheck::AI_ERROR, 'verdict' => null, 'reason' => 'the vision call of a dead worker (not repeated)', 'cost_usd' => (float) $check->ai_cost_usd, 'reported_cost_usd' => null];
+        } elseif ($check->ai_status !== PetMediaQualityCheck::AI_NOT_RUN) {
+            $ai = ['status' => $check->ai_status, 'verdict' => $check->ai_verdict, 'reason' => $check->ai_status === PetMediaQualityCheck::AI_FAILED ? 'AI check: '.($check->ai_verdict['reason'] ?? 'failed the rubric') : null, 'cost_usd' => (float) $check->ai_cost_usd, 'reported_cost_usd' => $check->ai_reported_cost_usd];
+        } elseif ($tech['ok'] === true && $withAi) {
             $ai = $this->aiCheck($slot, $tech['sheet'], $check, $stored);
+            // Settle the paid part at once (before the decision) — a crash after this never re-calls.
+            $check->update(['ai_status' => $ai['status'], 'ai_verdict' => $ai['verdict'], 'ai_cost_usd' => round((float) $ai['cost_usd'], 4), 'ai_reported_cost_usd' => $ai['reported_cost_usd']]);
         }
 
         $pass = $tech['ok'] !== false && $ai['status'] !== PetMediaQualityCheck::AI_FAILED;
         $reason = match (true) {
             $tech['ok'] === false => 'Technical check: '.$tech['reason'],
             $ai['status'] === PetMediaQualityCheck::AI_FAILED => (string) $ai['reason'],
-            $tech['ok'] === null => 'Not checked: ffmpeg / ffprobe not available',
+            $tech['ok'] === null => 'Not checked: '.($tech['reason'] ?? 'ffmpeg / ffprobe not available'),
             $ai['status'] === PetMediaQualityCheck::AI_PASSED => null,
             default => 'Not AI-checked ('.$ai['status'].($ai['reason'] !== null ? ': '.$ai['reason'] : '').')',
         };
@@ -416,6 +439,11 @@ class MediaQualityService
             $check->update(['sheet_path' => null]);
         }
 
+        // QA #363 m1: a clip that could not be checked at all is worth an error in System health.
+        if ($tech['ok'] === null) {
+            Log::error('MediaQualityService: clip could not be checked (served unchecked)', ['pet_media_id' => $slot->id, 'generation' => $slot->generation, 'reason' => $reason]);
+        }
+
         Log::info('MediaQualityService: clip checked', ['pet_media_id' => $slot->id, 'generation' => $slot->generation, 'verdict' => $pass ? 'pass' : 'fail', 'ai' => $ai['status'], 'reason' => $reason]);
     }
 
@@ -437,22 +465,28 @@ class MediaQualityService
             $measured = $this->analyzer->measure($local, $endLocal);
 
             if ($measured === null) {
-                return ['ok' => null, 'reason' => null, 'failures' => [], 'metrics' => [], 'sheet' => null, 'sheet_path' => null];
+                return ['ok' => null, 'reason' => 'ffmpeg / ffprobe not available', 'failures' => [], 'metrics' => [], 'sheet' => null, 'sheet_path' => null];
             }
 
             $expected = $stored ? ($slot->stored_duration_seconds ?? $slot->duration_seconds) : $slot->duration_seconds;
-            $result = MediaClipAnalyzer::evaluate($measured, $expected, $endImage !== null);
+            $result = MediaClipAnalyzer::evaluate($measured, $expected, $endImage !== null, MediaClipAnalyzer::isLowMotion($slot));
+
+            if ($result['ok'] === null) {
+                return ['ok' => null, 'reason' => 'no video frames could be measured', 'failures' => [], 'metrics' => $result['metrics'], 'sheet' => null, 'sheet_path' => null];
+            }
             $sheet = null;
             $sheetPath = null;
 
             if ($result['ok'] && $check !== null) {
-                $tmp = tempnam(sys_get_temp_dir(), MediaDownloader::TEMP_PREFIX).'.jpg';
+                $base = tempnam(sys_get_temp_dir(), MediaDownloader::TEMP_PREFIX);
+                $tmp = $base.'.jpg';
                 if ($this->analyzer->contactSheet($local, (float) ($measured['duration'] ?? $slot->duration_seconds ?? 3), $tmp)) {
                     $sheetPath = sprintf('%s/qc-%s-g%d-%s.jpg', dirname($path), $slot->state, $slot->generation, $check->trigger);
                     $disk->put($sheetPath, (string) file_get_contents($tmp));
                     $sheet = $sheetPath;
                 }
                 @unlink($tmp);
+                @unlink($base);
             }
 
             return ['ok' => $result['ok'], 'reason' => $result['failures'] === [] ? null : implode('; ', $result['failures']), 'failures' => $result['failures'], 'metrics' => $result['metrics'], 'sheet' => $sheet, 'sheet_path' => $sheetPath];
@@ -480,8 +514,9 @@ class MediaQualityService
             return ['status' => PetMediaQualityCheck::AI_ERROR, 'verdict' => null, 'reason' => 'no contact sheet / reference image', 'cost_usd' => 0.0, 'reported_cost_usd' => null];
         }
 
-        $check->update(['sheet_path' => $sheetPath]);
         $end = $this->media->clipEndFrameImage($slot, $stored);
+        // QA #363 m2: mark the paid call in flight — a stale takeover never repeats it.
+        $check->update(['sheet_path' => $sheetPath, 'ai_status' => PetMediaQualityCheck::AI_CALLING]);
         $urls = [$this->sheetUrl($check), $this->media->falFetchUrl($reference)];
         if ($end !== null) {
             $urls[] = $this->media->falFetchUrl($end);
@@ -496,6 +531,24 @@ class MediaQualityService
         $path = URL::temporarySignedRoute('media.quality-sheet', $this->media->urlExpiry(60), ['check' => $check->id], absolute: false);
 
         return rtrim((string) config('app.url'), '/').$path;
+    }
+
+    /** QA #363 M3: superadmin link to a slot's candidate clip (null without one). Short-lived. */
+    public function candidateUrl(PetMedia $slot): ?string
+    {
+        if (blank($slot->candidate_path)) {
+            return null;
+        }
+
+        $path = URL::temporarySignedRoute('media.candidate', $this->media->urlExpiry(30), ['media' => $slot->id, 'v' => substr(sha1((string) $slot->candidate_path), 0, 10)], absolute: false);
+
+        return rtrim((string) config('app.url'), '/').$path;
+    }
+
+    /** QA #363 M3: the latest failed check of the slot that kept its contact sheet. */
+    public function latestSheetCheck(PetMedia $slot): ?PetMediaQualityCheck
+    {
+        return PetMediaQualityCheck::query()->where('pet_media_id', $slot->id)->whereNotNull('sheet_path')->latest('id')->first();
     }
 
     /** What the clip should show (the prompt's motion) — the rubric's »action_done«. */

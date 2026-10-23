@@ -15,7 +15,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 **Zakaj je pomembno:** otrok ne sme videti žival, ki se »tali« — vseh posnetkov pa ne moremo gledati ročno. Strošek: tehnični del 0 $, AI pregled ≤ 0,01 $ na posnetek (*ocena; AI pregled bo vklopljen, ko David potrdi ceno*); daljši posnetki šole dvignejo nabor psa z 11,17 $ na 12,07 $ (enkrat na pasmo + barvo + obdobje).
 - 👩 Starši: »Kar vidi vaš otrok, je preverjeno — posnetke z napako zadržimo.«
 - 💼 Investitorji: kakovost AI medijev je avtomatiziran proces z merili, ne ročni pregled; strošek preverjanja je zanemarljiv glede na strošek posnetka.
-- 🛠 Tehnično: kandidat (`candidate_path`) do odločitve, zahtevek preverjanja je vrstica z unikatnim ključem (brez dvojne porabe), ena ponovitev na verigo generiranja, `media:quality-check --dry-run` za obstoječe posnetke. Ni še preverjeno s pravim klicem fal.
+- 🛠 Tehnično: najprej v načinu »senca« (samo beleži, vse prikaže), dokler meje niso umerjene na pravih posnetkih — šele nato »uveljavi«; kandidat (`candidate_path`) do odločitve, zahtevek preverjanja je vrstica z unikatnim ključem (brez dvojne porabe), ena ponovitev na verigo generiranja, `media:quality-check --dry-run` za obstoječe posnetke. Ni še preverjeno s pravim klicem fal.
 
 ---
 

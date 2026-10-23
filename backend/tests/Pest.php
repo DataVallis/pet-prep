@@ -385,12 +385,13 @@ function useStateMedia(bool $on = true): void
 }
 
 /**
- * Clip quality check (David 2026-10-23): phpunit.xml sets AI_QUALITY_CHECK_ENABLED=false (a
- * downloaded clip is stored at once, as before); tests about the check turn it on.
+ * Clip quality check (David 2026-10-23): phpunit.xml sets AI_QUALITY_CHECK_MODE=off (a
+ * downloaded clip is stored at once, as before); tests about the check pick a mode
+ * (off | shadow | enforce — QA #363 M1).
  */
-function useQualityCheck(bool $on = true): void
+function useQualityCheck(string $mode = 'enforce'): void
 {
-    config(['media.quality_check.enabled' => $on]);
+    config(['media.quality_check.mode' => $mode]);
 }
 
 /**

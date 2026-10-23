@@ -212,7 +212,25 @@ describe('technical metrics (pure)', function () {
         expect(MediaClipAnalyzer::evaluate($m(array_fill(0, 59, 2.0), 0.2), 5.0, true)['failures'])->toContain('last frame does not match the end image (SSIM 0.20)')
             ->and(MediaClipAnalyzer::evaluate($m(array_fill(0, 59, 2.0), 0.2), 5.0, false)['ok'])->toBeTrue()
             ->and(MediaClipAnalyzer::evaluate($m(array_fill(0, 30, 2.0), null, 2.5), 5.0, false)['failures'])->toContain('duration 2.50 s instead of 5 s')
-            ->and(MediaClipAnalyzer::evaluate(['duration' => null, 'frames' => 0, 'diffs' => [], 'end_ssim' => null], 5.0, false)['ok'])->toBeFalse();
+            // QA #363 M1: nothing measurable is NOT a fail (ok null — logged, served unchecked).
+            ->and(MediaClipAnalyzer::evaluate(['duration' => null, 'frames' => 0, 'diffs' => [], 'end_ssim' => null], 5.0, false)['ok'])->toBeNull()
+            ->and(MediaClipAnalyzer::evaluate(['duration' => 5.0, 'frames' => 2, 'diffs' => [1.0], 'end_ssim' => null], 5.0, false)['ok'])->toBeNull();
+    });
+
+    it('QA #363 M1: low-motion clips (sleeping, waiting) have their own lower frozen threshold; knobs come from config', function () use ($m) {
+        // A 2 px breathing motion measured at YDIF ~0.06.
+        $breathing = $m(array_fill(0, 59, 0.06));
+        expect(MediaClipAnalyzer::evaluate($breathing, 5.0, false, lowMotion: true)['ok'])->toBeTrue()
+            ->and(MediaClipAnalyzer::evaluate($breathing, 5.0, false)['ok'])->toBeFalse()
+            ->and(MediaClipAnalyzer::evaluate($m(array_fill(0, 59, 0.01)), 5.0, false, lowMotion: true)['ok'])->toBeFalse();
+
+        expect(MediaClipAnalyzer::isLowMotion(new PetMedia(['kind' => 'video', 'state' => 'sleeping'])))->toBeTrue()
+            ->and(MediaClipAnalyzer::isLowMotion(new PetMedia(['kind' => 'phase', 'state' => 'ball_waiting'])))->toBeTrue()
+            ->and(MediaClipAnalyzer::isLowMotion(new PetMedia(['kind' => 'phase', 'state' => 'school_sit_attention'])))->toBeTrue()
+            ->and(MediaClipAnalyzer::isLowMotion(new PetMedia(['kind' => 'video', 'state' => 'playing'])))->toBeFalse();
+
+        config(['media.quality_check.min_mean_frame_diff' => 0.05]);
+        expect(MediaClipAnalyzer::evaluate($breathing, 5.0, false)['ok'])->toBeTrue();
     });
 
     it('reads the rubric JSON (also in a ``` fence) and fails on any bad field', function () {
@@ -387,6 +405,22 @@ describe('pipeline: candidate → check → servable / one retry / needs review'
         expect(PetMediaQualityCheck::count())->toBe(1)->and(mqVisionCalls())->toBe(1);
     });
 
+    it('QA #363 m2: a stale takeover never repeats a paid vision call that was in flight', function () {
+        mqFakeFal(['moving'], [mqVisionAnswer(true)]);
+        $pet = mqPet();
+        $slot = app(PetMediaService::class)->slot($pet, 'video', PetStateEnum::Idle);
+        // A dead worker claimed generation 1 and was inside the vision call.
+        PetMediaQualityCheck::query()->insert(['pet_media_id' => $slot->id, 'generation' => 1, 'trigger' => 'pipeline', 'status' => 'running',
+            'ai_status' => 'calling', 'ai_cost_usd' => 0.01, 'created_at' => now()->subMinutes(20), 'updated_at' => now()->subMinutes(20)]);
+
+        app(PetMediaService::class)->submitVideo($slot->id);
+        mqRun($slot);
+
+        expect($slot->fresh())->status->toBe('ready')->quality->toBe('passed_technical')
+            ->and(mqVisionCalls())->toBe(0)
+            ->and(PetMediaQualityCheck::sole())->ai_status->toBe('error')->status->toBe('decided');
+    });
+
     it('»Approve anyway« (superadmin, audited) serves the twice-failed candidate', function () {
         mqFakeFal(['frozen', 'frozen']);
         $pet = mqPet();
@@ -394,6 +428,9 @@ describe('pipeline: candidate → check → servable / one retry / needs review'
         app(PetMediaService::class)->submitVideo($slot->id);
         mqRun($slot);
         expect($slot->fresh()->needsReview())->toBeTrue();
+
+        // QA #363 m7: the dashboard / System health count links to the filtered pet list.
+        expect(SystemHealthService::needsReviewUrl())->toContain('media_needs_review');
 
         $admin = User::factory()->create(['role' => 'parent', 'is_superadmin' => true]);
         $this->actingAs($admin);
@@ -420,9 +457,107 @@ describe('pipeline: candidate → check → servable / one retry / needs review'
     });
 });
 
+describe('mode »shadow« (QA #363 M1 — the default until calibrated)', function () {
+    beforeEach(function () {
+        if (! mqHasFfmpeg()) {
+            $this->markTestSkipped('ffmpeg / ffprobe not installed (CI installs it; production image has it).');
+        }
+    });
+
+    it('is the default without a row', function () {
+        config(['media.quality_check.mode' => 'shadow']);
+        expect(AppSettingsService::qualityCheckDefault())->toBe('shadow')
+            ->and(app(AppSettingsService::class)->qualityCheckMode(fresh: true))->toBe('shadow');
+        config(['media.quality_check.mode' => 'bogus']);
+        expect(AppSettingsService::qualityCheckDefault())->toBe('shadow');
+    });
+
+    it('records the would-be verdict, ALWAYS serves the candidate, never regenerates or hides', function () {
+        useQualityCheck('shadow');
+        mqFakeFal(['frozen']);
+        $pet = mqPet();
+        $slot = app(PetMediaService::class)->slot($pet, 'video', PetStateEnum::Idle);
+        app(PetMediaService::class)->submitVideo($slot->id);
+        mqRun($slot);
+
+        expect($slot->fresh())->status->toBe('ready')->quality->toBe('shadow_failed')->generation->toBe(1)
+            ->storage_path->toBe("{$pet->id}/idle-g1.mp4")
+            ->and((string) $slot->fresh()->quality_reason)->toContain('frozen')
+            ->and(mqQueueCalls())->toBe(1)
+            ->and((array) app(PetMediaService::class)->payloadFor($pet->fresh())['videos'])->toHaveKey('idle')
+            ->and(app(SystemHealthService::class)->needsReviewMediaCount())->toBe(0)
+            ->and(PetMedia::query()->needingReview()->pluck('id')->all())->toBe([$slot->id]);
+
+        $this->actingAs(User::factory()->create(['role' => 'parent', 'is_superadmin' => true]));
+        Livewire::test(MediaRelationManager::class, ['ownerRecord' => $pet, 'pageClass' => EditPet::class])
+            ->assertTableColumnStateSet('quality', 'would fail (shadow)', $slot->fresh());
+    });
+
+    it('media:quality-check in shadow marks failures »would fail« but keeps them shown', function () {
+        useQualityCheck('shadow');
+        mqFakeFal(['moving']);
+        $pet = mqPet();
+        $clip = mqStoredClip($pet, 'frozen');
+
+        $this->artisan('media:quality-check', ['--pet' => $pet->id])->expectsOutputToContain('shadow mode')->assertSuccessful();
+
+        expect($clip->fresh()->quality)->toBe('shadow_failed')
+            ->and((array) app(PetMediaService::class)->payloadFor($pet->fresh())['videos'])->toHaveKey('idle');
+    });
+});
+
+describe('QA #363 M4 / M3: »Needs review« slots', function () {
+    beforeEach(function () {
+        if (! mqHasFfmpeg()) {
+            $this->markTestSkipped('ffmpeg / ffprobe not installed (CI installs it; production image has it).');
+        }
+    });
+
+    it('Generate missing, media:backfill and regenerate-frozen never re-spend on a quality_failed slot', function () {
+        mqFakeFal(['frozen', 'frozen']);
+        $pet = mqPet();
+        $service = app(PetMediaService::class);
+        $slot = $service->slot($pet, 'video', PetStateEnum::Idle);
+        $service->submitVideo($slot->id);
+        mqRun($slot);
+        expect($slot->fresh()->needsReview())->toBeTrue();
+        $ledger = fn () => AiSpendLedger::where('pet_media_id', $slot->id)->where('purpose', 'state_video')->count();
+        expect($ledger())->toBe(2);
+
+        expect($service->planMissing($pet->fresh())['videos'])->not->toContain('idle');
+        $service->generateMissing($pet->fresh());
+        $this->artisan('media:backfill', ['--pet' => $pet->id])->assertSuccessful();
+        $this->artisan('media:regenerate-frozen', ['--pet' => $pet->id])->assertSuccessful();
+
+        expect($ledger())->toBe(2)->and($slot->fresh()->needsReview())->toBeTrue();
+
+        // The explicit Regenerate still works (a new chain).
+        expect($service->regenerate($slot->fresh()))->toBeTrue()->and($ledger())->toBe(3);
+    });
+
+    it('the admin panel links the candidate (signed) and the contact sheet of a reviewable clip', function () {
+        mqFakeFal(['spike', 'spike']);
+        $pet = mqPet();
+        $slot = app(PetMediaService::class)->slot($pet, 'video', PetStateEnum::Idle);
+        app(PetMediaService::class)->submitVideo($slot->id);
+        mqRun($slot);
+        $slot->refresh();
+
+        $url = app(MediaQualityService::class)->candidateUrl($slot);
+        expect($url)->toContain('/api/media/candidates/');
+        $parts = parse_url((string) $url);
+        $this->get($parts['path'].'?'.$parts['query'])->assertOk();
+        $this->get($parts['path'])->assertForbidden();
+
+        $this->actingAs(User::factory()->create(['role' => 'parent', 'is_superadmin' => true]));
+        Livewire::test(MediaRelationManager::class, ['ownerRecord' => $pet, 'pageClass' => EditPet::class])
+            ->assertTableColumnStateSet('review_candidate', 'Open candidate', $slot);
+    });
+});
+
 describe('switch »Quality check« off = the old behaviour', function () {
     it('a downloaded clip is stored at once, unchecked (no ffmpeg, no vision call, no check row)', function () {
-        app(AppSettingsService::class)->updateQualityCheck(User::factory()->create(['role' => 'parent', 'is_superadmin' => true]), false);
+        app(AppSettingsService::class)->updateQualityCheck(User::factory()->create(['role' => 'parent', 'is_superadmin' => true]), 'off');
         mqFakeFal(['moving']);
         if (! mqHasFfmpeg()) {
             Http::fake(['v3.fal.media/files/mq/*' => Http::response("\x00\x00\x00\x18ftypmp42\x00\x00\x00\x00mp42isom".str_repeat("\x00", 512), 200, ['Content-Type' => 'video/mp4'])]);
@@ -471,6 +606,8 @@ describe('media:quality-check (stored clips)', function () {
 
         $this->artisan('media:quality-check', ['--regenerate' => true])
             ->expectsOutputToContain('2 clip(s) to check')
+            // QA #363 m5: priced + budget pre-checked before anything is re-queued.
+            ->expectsOutputToContain('Regenerating 1 clip(s) once ≈ $0.56')
             ->expectsOutputToContain('Re-queued 1 clip(s) once')
             ->assertSuccessful();
 

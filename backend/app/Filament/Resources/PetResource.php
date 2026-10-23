@@ -20,6 +20,7 @@ use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\HtmlString;
 
@@ -342,6 +343,12 @@ class PetResource extends Resource
                     ->label('Active'),
                 Tables\Filters\TernaryFilter::make('is_game_over')
                     ->label('Game Over'),
+                // QA #363 m7: pets with an AI clip that needs review (quality check) — own or of their shared look.
+                Tables\Filters\Filter::make('media_needs_review')
+                    ->label('AI clip needs review')
+                    ->query(fn (Builder $query) => $query->whereHas('media', fn ($q) => $q->where(fn ($q) => $q
+                        ->where(fn ($q) => $q->needingReview())
+                        ->orWhereHas('lookMedia', fn ($q) => $q->needingReview())))),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

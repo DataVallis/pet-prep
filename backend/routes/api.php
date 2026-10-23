@@ -101,6 +101,10 @@ Route::get('media/history/{history}', [PetMediaController::class, 'showHistory']
 Route::get('media/quality-sheets/{check}', [PetMediaController::class, 'showQualitySheet'])
     ->middleware(['signed:relative', 'throttle:media'])
     ->name('media.quality-sheet');
+// QA #363 M3: a slot's quality-check candidate clip, for the superadmin's »Approve anyway«.
+Route::get('media/candidates/{media}', [PetMediaController::class, 'showCandidate'])
+    ->middleware(['signed:relative', 'throttle:media'])
+    ->name('media.candidate');
 // M2-01d: Responsibility Certificate PDF (parents of the family + the child of the row).
 Route::get('certificates/{certificate}/pdf', [CertificateController::class, 'pdf'])
     ->middleware(['signed:relative', 'throttle:media'])

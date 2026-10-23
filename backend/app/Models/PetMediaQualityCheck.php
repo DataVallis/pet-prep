@@ -49,6 +49,9 @@ class PetMediaQualityCheck extends Model
     /** The vision call failed or its answer was unusable — technical result decides. */
     public const AI_ERROR = 'error';
 
+    /** QA #363 m2: the paid vision call is in flight (a stale takeover never calls again). */
+    public const AI_CALLING = 'calling';
+
     /** Not run (technical fail, or a dry run). */
     public const AI_NOT_RUN = 'not_run';
 

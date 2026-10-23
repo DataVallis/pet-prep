@@ -25,12 +25,13 @@ class CheckPetMediaQuality implements ShouldBeUnique, ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    public int $tries = 2;
+    /** QA #363 m2: room for a release() while another worker holds the check. */
+    public int $tries = 4;
 
     /** @var list<int> */
     public array $backoff = [60];
 
-    /** Below the queue's retry_after (90 s): ffmpeg (≤ 20 s per call) + the vision call (≤ 45 s). */
+    /** Below the queue's retry_after (90 s): worst case 4 ffmpeg calls × 12 s + the vision call 30 s = 78 s. */
     public int $timeout = 85;
 
     public int $uniqueFor = 900;
@@ -44,7 +45,10 @@ class CheckPetMediaQuality implements ShouldBeUnique, ShouldQueue
 
     public function handle(MediaQualityService $quality): void
     {
-        $quality->checkCandidate($this->petMediaId);
+        // QA #363 m2: another worker holds the check right now — come back later instead of dropping it.
+        if ($quality->checkCandidate($this->petMediaId) === 'busy') {
+            $this->release(MediaQualityService::STALE_CHECK_MINUTES * 60 + 30);
+        }
     }
 
     public function failed(?Throwable $exception): void

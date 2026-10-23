@@ -8,8 +8,8 @@ use App\Models\PetMedia;
 use App\Models\User;
 use App\Services\AppSettingsService;
 use App\Services\Media\FrozenClipRegenerator;
-use App\Services\Media\MediaQualityService;
 use App\Services\Media\MediaProfiles;
+use App\Services\Media\MediaQualityService;
 use App\Services\Media\PetMediaService;
 use App\Services\Media\PetPreparationService;
 use Filament\Notifications\Notification;
@@ -148,11 +148,25 @@ class MediaRelationManager extends RelationManager
                     ->color(fn (?string $state): string => match ($state) {
                         'passed', 'approved' => 'success',
                         'needs review', 'flagged' => 'danger',
+                        'would fail (shadow)' => 'warning',
                         'checking', 'retrying' => 'info',
                         null => 'gray',
                         default => 'warning',
                     })
                     ->description(fn (PetMedia $record): ?string => self::qualityDetail($record))
+                    ->placeholder('—'),
+                // QA #363 M3: what »Approve anyway« would approve — the candidate and the contact sheet.
+                Tables\Columns\TextColumn::make('review_candidate')->label('Candidate')
+                    ->getStateUsing(fn (PetMedia $record): ?string => app(MediaQualityService::class)->candidateUrl(self::qualityRow($record)) !== null ? 'Open candidate' : null)
+                    ->url(fn (PetMedia $record): ?string => self::isSuperadmin() ? app(MediaQualityService::class)->candidateUrl(self::qualityRow($record)) : null, shouldOpenInNewTab: true)
+                    ->placeholder('—'),
+                Tables\Columns\TextColumn::make('review_sheet')->label('Frames')
+                    ->getStateUsing(fn (PetMedia $record): ?string => app(MediaQualityService::class)->latestSheetCheck(self::qualityRow($record)) !== null ? 'Open contact sheet' : null)
+                    ->url(function (PetMedia $record): ?string {
+                        $check = self::isSuperadmin() ? app(MediaQualityService::class)->latestSheetCheck(self::qualityRow($record)) : null;
+
+                        return $check !== null ? app(MediaQualityService::class)->sheetUrl($check) : null;
+                    }, shouldOpenInNewTab: true)
                     ->placeholder('—'),
                 Tables\Columns\TextColumn::make('profile')->placeholder('—'),
                 Tables\Columns\TextColumn::make('generation')->label('Gen.'),
@@ -171,7 +185,7 @@ class MediaRelationManager extends RelationManager
             ])
             ->filters([
                 Tables\Filters\Filter::make('needs_review')
-                    ->label('Needs review (quality check)')
+                    ->label('Needs review / would fail (quality check)')
                     ->query(fn (Builder $query): Builder => $query->needingReview()),
             ])
             ->headerActions([
@@ -287,16 +301,18 @@ class MediaRelationManager extends RelationManager
             ]);
     }
 
+    /** The row the quality check ran on: a pool pet's slot → its look row (checked once per look row). */
+    private static function qualityRow(PetMedia $record): PetMedia
+    {
+        return $record->look_media_id !== null && $record->lookMedia !== null ? $record->lookMedia : $record;
+    }
+
     /** A slot (or the look row it mirrors) whose clip waits for »Approve anyway«. */
     private static function reviewable(PetMedia $record): bool
     {
-        if ($record->needsReview() || $record->quality === PetMedia::QUALITY_FLAGGED) {
-            return true;
-        }
+        $row = self::qualityRow($record);
 
-        $row = $record->look_media_id !== null ? $record->lookMedia : null;
-
-        return $row !== null && ($row->needsReview() || $row->quality === PetMedia::QUALITY_FLAGGED);
+        return $record->needsReview() || $record->isFlaggedQuality() || $row->needsReview() || $row->isFlaggedQuality();
     }
 
     /** Quality badge: the waiting candidate first, else the verdict of the stored file. */
@@ -306,7 +322,7 @@ class MediaRelationManager extends RelationManager
             return null;
         }
 
-        $row = $record->look_media_id !== null && $record->lookMedia !== null ? $record->lookMedia : $record;
+        $row = self::qualityRow($record);
 
         return match (true) {
             $row->needsReview() => 'needs review',
@@ -316,6 +332,8 @@ class MediaRelationManager extends RelationManager
             $row->quality === PetMedia::QUALITY_PASSED_TECHNICAL => 'not AI-checked',
             $row->quality === PetMedia::QUALITY_UNCHECKED => 'unchecked',
             $row->quality === PetMedia::QUALITY_FLAGGED => 'flagged',
+            // QA #363 M1: shadow mode — the would-be verdict (the clip is shown).
+            $row->quality === PetMedia::QUALITY_SHADOW_FAILED => 'would fail (shadow)',
             $row->quality === PetMedia::QUALITY_APPROVED => 'approved',
             default => null,
         };

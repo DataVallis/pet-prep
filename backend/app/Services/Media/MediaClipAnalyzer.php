@@ -2,6 +2,7 @@
 
 namespace App\Services\Media;
 
+use App\Models\PetMedia;
 use Illuminate\Support\Facades\Process;
 use Throwable;
 
@@ -25,14 +26,23 @@ use Throwable;
  */
 class MediaClipAnalyzer
 {
+    /** @var array<string, bool> binaries already probed in this worker process */
+    private static array $available = [];
+
     public function available(): bool
     {
-        try {
-            return Process::timeout(10)->run([$this->ffprobe(), '-version'])->successful()
-                && Process::timeout(10)->run([$this->ffmpeg(), '-version'])->successful();
-        } catch (Throwable) {
-            return false;
+        $key = $this->ffmpeg().'|'.$this->ffprobe();
+
+        if (! array_key_exists($key, self::$available)) {
+            try {
+                self::$available[$key] = Process::timeout(5)->run([$this->ffprobe(), '-version'])->successful()
+                    && Process::timeout(5)->run([$this->ffmpeg(), '-version'])->successful();
+            } catch (Throwable) {
+                self::$available[$key] = false;
+            }
         }
+
+        return self::$available[$key];
     }
 
     /**
@@ -44,7 +54,7 @@ class MediaClipAnalyzer
             return null;
         }
 
-        $timeout = (int) config('media.quality_check.timeout_seconds', 40);
+        $timeout = (int) config('media.quality_check.timeout_seconds', 12);
 
         $probe = Process::timeout($timeout)->run([
             $this->ffprobe(), '-v', 'error', '-show_entries', 'format=duration', '-of', 'default=nw=1:nk=1', $clipPath,
@@ -81,14 +91,17 @@ class MediaClipAnalyzer
     /**
      * PURE: judge measured numbers. `$expectedSeconds` = the requested clip length,
      * `$hasEndFrame` = the clip was made with an end frame (a transition / performing /
-     * ball running …), `$endSsim` only for such clips.
+     * ball running …), `$endSsim` only for such clips. `$lowMotion` = a clip that should
+     * barely move (sleeping, sick, waiting — its own lower frozen threshold, QA #363 M1).
+     * ok null = nothing could be measured (never a fail — the caller logs it).
      *
      * @param  array{duration: float|null, frames: int, diffs: list<float>, end_ssim: float|null}  $m
-     * @return array{ok: bool, failures: list<string>, metrics: array<string, float|int|null>}
+     * @return array{ok: bool|null, failures: list<string>, metrics: array<string, float|int|null>}
      */
-    public static function evaluate(array $m, ?float $expectedSeconds, bool $hasEndFrame): array
+    public static function evaluate(array $m, ?float $expectedSeconds, bool $hasEndFrame, bool $lowMotion = false): array
     {
         $cfg = (array) config('media.quality_check', []);
+        $minMean = (float) ($lowMotion ? ($cfg['min_mean_frame_diff_low_motion'] ?? 0.03) : ($cfg['min_mean_frame_diff'] ?? 0.25));
         $diffs = array_values($m['diffs']);
         $n = count($diffs);
         $mean = $n > 0 ? array_sum($diffs) / $n : 0.0;
@@ -100,21 +113,35 @@ class MediaClipAnalyzer
 
         $failures = [];
 
+        $metrics = [
+            'duration' => $m['duration'] !== null ? round($m['duration'], 3) : null,
+            'frames' => $m['frames'],
+            'mean_diff' => round($mean, 3),
+            'median_diff' => round($median, 3),
+            'max_diff' => round($max, 3),
+            'tail_motion_share' => round($tailShare, 3),
+            'end_ssim' => $m['end_ssim'] !== null ? round($m['end_ssim'], 3) : null,
+            'low_motion' => $lowMotion ? 1 : 0,
+        ];
+
+        // QA #363 M1: no metrics is not a verdict.
         if ($m['duration'] === null || $n < 2) {
-            $failures[] = 'unreadable: no video frames could be measured';
-        } elseif ($expectedSeconds !== null && abs($m['duration'] - $expectedSeconds) > (float) ($cfg['max_duration_drift_seconds'] ?? 1.0)) {
+            return ['ok' => null, 'failures' => [], 'metrics' => $metrics];
+        }
+
+        if ($expectedSeconds !== null && abs($m['duration'] - $expectedSeconds) > (float) ($cfg['max_duration_drift_seconds'] ?? 1.0)) {
             $failures[] = sprintf('duration %.2f s instead of %.0f s', $m['duration'], $expectedSeconds);
         }
 
-        if ($n >= 2 && $mean < (float) ($cfg['min_mean_frame_diff'] ?? 0.25)) {
-            $failures[] = sprintf('frozen: mean frame difference %.2f / 255', $mean);
+        if ($mean < $minMean) {
+            $failures[] = sprintf('frozen: mean frame difference %.2f / 255 (minimum %.2f%s)', $mean, $minMean, $lowMotion ? ', low-motion clip' : '');
         }
 
-        if ($n >= 2 && $max >= (float) ($cfg['spike_min_frame_diff'] ?? 12.0) && $max >= (float) ($cfg['spike_ratio'] ?? 8.0) * max($median, 0.05)) {
+        if ($max >= (float) ($cfg['spike_min_frame_diff'] ?? 12.0) && $max >= (float) ($cfg['spike_ratio'] ?? 8.0) * max($median, 0.05)) {
             $failures[] = sprintf('sudden jump: one frame difference %.1f vs median %.2f (cut / morph)', $max, $median);
         }
 
-        if ($hasEndFrame && $n >= 8 && $mean >= (float) ($cfg['min_mean_frame_diff'] ?? 0.25) && $tailShare > (float) ($cfg['max_tail_motion_share'] ?? 0.7)) {
+        if ($hasEndFrame && $n >= 8 && $mean >= $minMean && $tailShare > (float) ($cfg['max_tail_motion_share'] ?? 0.7)) {
             $failures[] = sprintf('motion bunched at the end: %.0f %% of all motion in the last quarter (morph into the end frame)', $tailShare * 100);
         }
 
@@ -122,19 +149,7 @@ class MediaClipAnalyzer
             $failures[] = sprintf('last frame does not match the end image (SSIM %.2f)', $m['end_ssim']);
         }
 
-        return [
-            'ok' => $failures === [],
-            'failures' => $failures,
-            'metrics' => [
-                'duration' => $m['duration'] !== null ? round($m['duration'], 3) : null,
-                'frames' => $m['frames'],
-                'mean_diff' => round($mean, 3),
-                'median_diff' => round($median, 3),
-                'max_diff' => round($max, 3),
-                'tail_motion_share' => round($tailShare, 3),
-                'end_ssim' => $m['end_ssim'] !== null ? round($m['end_ssim'], 3) : null,
-            ],
-        ];
+        return ['ok' => $failures === [], 'failures' => $failures, 'metrics' => $metrics];
     }
 
     /**
@@ -151,7 +166,7 @@ class MediaClipAnalyzer
         $rate = $frames / max(0.5, $durationSeconds);
 
         try {
-            $result = Process::timeout((int) config('media.quality_check.timeout_seconds', 40))->run([
+            $result = Process::timeout((int) config('media.quality_check.timeout_seconds', 12))->run([
                 $this->ffmpeg(), '-v', 'error', '-y', '-i', $clipPath,
                 '-vf', sprintf('fps=%.5f,scale=%d:-2,tile=%dx%d', $rate, $width, $columns, $rows),
                 '-frames:v', '1', '-q:v', '4', $outPath,
@@ -161,6 +176,18 @@ class MediaClipAnalyzer
         }
 
         return $result->successful() && is_file($outPath) && filesize($outPath) > 0;
+    }
+
+    /** QA #363 M1: a clip that should barely move (config low_motion_states / low_motion_phases). */
+    public static function isLowMotion(PetMedia $clip): bool
+    {
+        $cfg = (array) config('media.quality_check', []);
+
+        return match (true) {
+            $clip->isVideo() => in_array($clip->state, (array) ($cfg['low_motion_states'] ?? []), true),
+            $clip->isPhase() => in_array($clip->state, (array) ($cfg['low_motion_phases'] ?? []), true),
+            default => false,
+        };
     }
 
     /** @param  list<float>  $values */

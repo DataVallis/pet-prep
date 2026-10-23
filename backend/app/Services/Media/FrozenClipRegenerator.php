@@ -213,6 +213,8 @@ class FrozenClipRegenerator
         $kinds = fn (Builder $q) => $q->where(fn ($q) => $q->where(fn ($q) => $q->where('kind', PetMedia::KIND_VIDEO)->where('stored_recipe', PetMedia::RECIPE_LOOP))
             ->orWhere(fn ($q) => $q->where('kind', PetMedia::KIND_PHASE)->whereNull('stored_recipe')->whereIn('state', $sameFramePhases)))
             ->whereIn('status', [PetMedia::STATUS_READY, PetMedia::STATUS_FAILED])
+            // QA #363 M4: a slot in quality »Needs review« is only touched by Regenerate / Approve.
+            ->where(fn ($q) => $q->whereNull('error_reason')->orWhere('error_reason', '!=', 'quality_failed'))
             ->whereNotNull('storage_path');
 
         $pet = $petId !== null ? Pet::find($petId) : null;

@@ -342,9 +342,14 @@ class PetMediaService
     {
         $neverSubmitted = $slot->status === PetMedia::STATUS_PENDING && $slot->request_id === null;
         $stale = ! $slot->isInFlight() && ((int) $slot->source_generation < $image->generation || $recipeStale);
-        $retry = $includeFailed && $slot->status === PetMedia::STATUS_FAILED;
+        // QA #363 M4: »Needs review« (quality_failed) is never retried / remade automatically.
+        $reviewing = $slot->status === PetMedia::STATUS_FAILED && $slot->error_reason === AiCallFailure::QualityFailed->value;
+        $retry = $includeFailed && $slot->status === PetMedia::STATUS_FAILED && ! $reviewing;
 
-        if (! $neverSubmitted && ! $stale && ! $retry) {
+        // A new reference image (life-stage growth) starts a new chain — that one still remakes it.
+        $newImage = ! $slot->isInFlight() && (int) $slot->source_generation < $image->generation;
+
+        if (! $neverSubmitted && ! $retry && (! $stale || ($reviewing && ! $newImage))) {
             return false;
         }
 
@@ -958,10 +963,16 @@ class PetMediaService
         return true;
     }
 
-    /** Quality check on (fresh read — a worker stops checking the moment it is switched off). */
+    /** Quality check on — shadow or enforce (fresh read — a worker stops checking the moment it is switched off). */
     public function qualityCheckEnabled(): bool
     {
         return $this->settings->qualityCheck(fresh: true);
+    }
+
+    /** QA #363 M1: off | shadow | enforce (fresh read). */
+    public function qualityCheckMode(): string
+    {
+        return $this->settings->qualityCheckMode(fresh: true);
     }
 
     /**
@@ -1382,8 +1393,10 @@ class PetMediaService
         $currentImageGeneration = $imageAction === 'ok' ? $image->generation : PHP_INT_MAX;
         $remake = $stageRemake && $imageAction === 'stage';
         $loops = $this->entitlements->usesStateMedia($planned);
+        // QA #363 M4: a clip the quality check failed twice (»Needs review«) is never re-made here —
+        // only an explicit Regenerate or »Approve anyway« touches it (no re-spend in a loop).
         $missing = fn (?PetMedia $slot, bool $recipeStale = false): bool => $slot === null
-            || $slot->status === PetMedia::STATUS_FAILED
+            || ($slot->status === PetMedia::STATUS_FAILED && $slot->error_reason !== AiCallFailure::QualityFailed->value)
             || ($slot->status === PetMedia::STATUS_PENDING && $slot->request_id === null)
             || (! $slot->isInFlight() && ((int) $slot->source_generation < $currentImageGeneration || $recipeStale));
         $videos = [];
@@ -2030,13 +2043,24 @@ class PetMediaService
         if ($clip->isLookMedia()) {
             $image = $this->lookImageRow($clip);
             $look = $clip->look;
-
-            return $image !== null && $look !== null && $clip->life_stage !== null && $image->isServable()
+            $end = $image !== null && $look !== null && $clip->life_stage !== null && $image->isServable()
                 ? $this->lookPoseRow($look, $frames[1], LifeStage::from((string) $clip->life_stage), $image)
                 : null;
+        } else {
+            $end = $clip->pet !== null ? $this->frameImage($clip->pet, $frames[1]) : null;
         }
 
-        return $clip->pet !== null ? $this->frameImage($clip->pet, $frames[1]) : null;
+        // QA #363 m8: only the pose image version the clip was made from — a pose stored after the
+        // clip's submit (stored check: after the clip's file) would be compared with the wrong picture.
+        $madeAt = $stored
+            ? $clip->completed_at
+            : AiSpendLedger::query()->where('pet_media_id', $clip->id)->where('purpose', 'state_video')->latest('id')->first()?->created_at;
+
+        if ($end !== null && $madeAt !== null && $end->completed_at !== null && $end->completed_at->greaterThan($madeAt)) {
+            return null;
+        }
+
+        return $end;
     }
 
     /** Quality check: the stored reference image of a clip's animal (pet or look stage), for »same animal«. */
@@ -2746,7 +2770,9 @@ class PetMediaService
         // `running`) is already paid by the pet that claimed it (QA M4-10 n1).
         // M5-T08: a stored look clip made the pre-M5-T08 way is remade once as a loop.
         $covered = PetMedia::query()->where('pet_look_id', $look->id)->where('life_stage', $stage->value)
-            ->whereIn('status', [PetMedia::STATUS_READY, PetMedia::STATUS_RUNNING])->get();
+            ->where(fn ($q) => $q->whereIn('status', [PetMedia::STATUS_READY, PetMedia::STATUS_RUNNING])
+                // QA #363 M4: a look row in »Needs review« is not re-made (or priced) by a plan.
+                ->orWhere('error_reason', AiCallFailure::QualityFailed->value))->get();
         $has = fn (string $kind, ?string $state) => $covered->contains(fn (PetMedia $m) => $m->kind === $kind && $m->state === $state
             && ! ($loops && $kind === PetMedia::KIND_VIDEO && $m->status === PetMedia::STATUS_READY && $m->recipe === null));
 

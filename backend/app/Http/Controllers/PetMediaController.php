@@ -82,6 +82,19 @@ class PetMediaController extends Controller
         return $this->serve($media?->pet, $media !== null && filled($check->sheet_path), (string) $check->sheet_path, 'image/jpeg', $service);
     }
 
+    /**
+     * GET /api/media/candidates/{media}?expires=…&signature=… (QA #363 M3)
+     *
+     * The CANDIDATE clip of a slot (downloaded, waiting for or failed in the quality check) —
+     * issued only to superadmins in Pet → AI media so »Approve anyway« shows what is approved.
+     * Same capability rules as show(); 404 without a candidate. Internal (not in the API docs).
+     */
+    #[ExcludeRouteFromDocs]
+    public function showCandidate(PetMedia $media, PetMediaService $service): Response
+    {
+        return $this->serve($media->pet, filled($media->candidate_path), (string) $media->candidate_path, (string) ($media->candidate_mime ?? 'video/mp4'), $service);
+    }
+
     private function serve(?Pet $pet, bool $servable, string $path, string $mime, PetMediaService $service): Response
     {
         $user = Auth::guard('sanctum')->user();
