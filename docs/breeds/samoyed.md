@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `samoyed` (viri S463–S471; ponovno S10, S11, S14, S24, S35, S45, S54, S123, S174) |
 | Izvor | FCI št. 212, skupina 5, sekcija 1 (nordijski vlečni psi), severna Rusija in Sibirija (S463) — nov izvor `RU` |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 53. mesto »Samoyed« (S174) |
-| PR-ji | pet-prep #346 (pasma, združen `c5c6bc6`) · portret (ta PR) · spletna stran (sledi) |
+| PR-ji | pet-prep #346 (pasma, združen `c5c6bc6`) · portret #347 (združen `46f8adf`) · spletna stran #91 (združen `cfab30b`) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -31,7 +31,7 @@
 | 2026-10-22 | pravilo runbooka (§3) | marketing: **v aplikaciji da, v marketingu da** — nikoli kot hipoalergen pes, pes, ki se ne lisa, pes z malo gibanja, pes, ki je lahko dolgo sam, ali pes za vroče podnebje | veterinarsko odsvetovanje oglaševanja velja le za pse s sploščenim obrazom (BVA S92) | #346 |
 | 2026-10-22 | pravilo runbooka (§3) | barve za AI in izbirnik: **bel** (portret), krem, belo-piškotni; nikoli bež, nobena druga barva, nikoli modre ali raznobarvne oči | FCI S464 »Blanc pur, crème ou blanc et biscuit« (uteži barv brez vira → `verified: false`); AKC-jev »all biscuit« (S465) ni v standardu FCI → ni uporabljen | #346 |
 | 2026-10-22 | predlog Claude, David lahko spremeni | ime SL »samojed« (slug `samojed`); iskalni ključi tudi »sammy«, »samojedski pes«, »samoyede« | splošno rabljeno slovensko ime (siol.net S471, tier C); KZS ni bil preverjen | #346 |
-| 2026-10-23 | pravilo runbooka (§8) | AI portret: realistična fotografija odraslega psa, čisto bel gost kožuh z ovratnikom, temne oči, črn nos in ustnice v »nasmešku«, pokončni uhlji, rep zavihan čez hrbet, siva studijska podlaga, naravna razmerja; sprejet v prvem poskusu (zagon 39879002227, koda `c5c6bc6`, brez produkcijske namestitve) | barva portreta = najtežja barva iz `breed_appearance.php` | portret |
+| 2026-10-23 | pravilo runbooka (§8) | AI portret: realistična fotografija odraslega psa, čisto bel gost kožuh z ovratnikom, temne oči, črn nos in ustnice v »nasmešku«, pokončni uhlji, rep zavihan čez hrbet, siva studijska podlaga, naravna razmerja; sprejet v prvem poskusu (zagon 39879002227, koda `c5c6bc6`, brez produkcijske namestitve) | barva portreta = najtežja barva iz `breed_appearance.php` | #347 |
 | 2026-10-22 | pravilo runbooka (§2.3) | seznam za vzreditelja (vse »other_scheme«): rentgen kolkov (shema BVA/KC), pregled oči (BVA/KC), pregled srca, DNK test RD/OSD, DNK test XLPRA1 | PDSA S467 (kolki, oči), ameriški klub pasme (K32). Novi ključi testov `cardiac_exam` (splošen pregled srca — ne `heart_scheme`, ki navaja bolezen mitralne zaklopke), `dna_rd_osd`, `dna_xlpra1` | #346 |
 | 2026-10-22 | pravilo runbooka | nov zdravstveni ključ registra **`hereditary_nephritis`** (dedna bolezen ledvic) — mirna poved brez številk; poleg tega `hip_dysplasia`, `cataracts`, `diabetes_mellitus`, `certain_cancers` | PetMD S469 »SHG is a genetic kidney disorder often seen in Samoyeds.«; Woodgreen S468 (X-vezani dedni nefritis) | #346 |
 
@@ -44,7 +44,7 @@
 | Česanje vsak dan (rutina »Počeši«), opozorilo po obroku (60 min), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R16 / M5-R17 | 2026-10-22 |
 | Barva (izbirnik barve: bel, krem, belo-piškotni) | 🛠 | 💶 izziv | M5-R21 | 2026-10-22 |
 | AI portret v registru (čisto bel, »nasmešek«, rep čez hrbet; sprejet v prvem poskusu, zagon 39879002227) | ✅ | — | M5-R11-04 | 2026-10-23 |
-| Stran na petprep.si (`/animals/dogs/samoyed`, `/sl/zivali/psi/samojed`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| Stran na petprep.si (`/animals/dogs/samoyed`, `/sl/zivali/psi/samojed`) s portretom; oznaka »Kmalu«, dokler pasma ni v izdaji aplikacije | ✅ (stran) · 🗓 (v aplikaciji) | — | M5-R11 | 2026-10-23 |
 
 ## Zgodba (v slogu BUILD_LOG)
 
