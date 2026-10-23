@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `weimaraner` (viri S477–S483; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174) |
 | Izvor | FCI št. 99, skupina 7, sekcija 1.1 (celinski ptičarji, tip »braque«), Nemčija (S477, S478) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 55. mesto »Weimaraner« (S174, prebrano 2026-10-23) |
-| PR-ji | pet-prep #352 (pasma, združen `8eda9d4`) · portret #353 · spletna stran — |
+| PR-ji | pet-prep #352 (pasma, združen `8eda9d4`) · portret #353 (združen `210efaf`) · spletna stran #93 (združen `6b3d9cd`) |
 
 ## Odločitve (z viri in kdo je odločil)
 
