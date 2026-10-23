@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -664,6 +664,24 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_CHESAPEAKE_BAY_RETRIEVER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-56)';
 
     /**
+     * M5-R10-57 Samoyed (unattended run 2026-10-22, data.json proposed_game_parameters.samoyed.*.decision): every value
+     * follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise
+     * 120 min (PDSA S467 "a minimum of two hours exercise every day"; RKC page not reachable), senior 90 min, puppy
+     * 10 min × age capped at 120, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 1.2 (Coren rank 33,
+     * Above average); care rates the Border Collie's. The senior boundary uses the closest rule row (PDSA lower bound
+     * "Over 10 years", S467) and is NOT covered by the confirmation: see PROPOSED_R10_SAMOYED_SENIOR.
+     */
+    public const CONFIRMED_R10_SAMOYED = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-57)';
+
+    /**
+     * M5-R10-57 Samoyed senior boundary / senior arrival (90 months): Claude's suggestion from the closest rule row
+     * (0.75 × PDSA lower bound 10 y, S467) — no runbook rule produced a value (the Dogs Trust McMillan 2024 table S123 and
+     * the RKC page were not reachable, no VetCompass median), so the rows are verified=false until David decides (data.json
+     * proposed_game_parameters.samoyed.senior_boundary_months).
+     */
+    public const PROPOSED_R10_SAMOYED_SENIOR = 'predlog Claude 2026-10-22 (najbližja vrstica pravila runbooka, M5-R10-57) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -824,6 +842,7 @@ class BreedStageParamsSeeder extends Seeder
         'whippet' => [1, 'S444', 'Whippets have short fur, so a weekly brush is usually more than enough to keep it in good condition.', 'high', false],
         'wirehaired_pointing_griffon' => [1, 'S454', 'The Wirehaired Pointing Griffon is an easy-care pet, demanding only weekly brushing, with a bonus of minimal shedding.', 'high', false],
         'chesapeake_bay_retriever' => [1, 'S459', 'Grooming: Once a week', 'high', false],
+        'samoyed' => [7, 'S467', 'They shed very often, but even when they’re not shedding they’ll need grooming on daily basis.', 'high', false],
     ];
 
     /**
@@ -858,6 +877,7 @@ class BreedStageParamsSeeder extends Seeder
         'newfoundland' => ['S424', 'Avoiding exercising their dog an hour before or after a meal'],
         'whippet' => ['S444', 'Remember to leave a gap between eating and exercising.'],
         'chesapeake_bay_retriever' => ['S461', 'Do not let your dog exercise directly before or after eating.'],
+        'samoyed' => ['S467', 'Remember to leave a gap after eating and before exercising.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -925,13 +945,14 @@ class BreedStageParamsSeeder extends Seeder
         'whippet' => ['S444', 'As long as you socialise your Whippet with other dogs from a young age they should be fine meeting them out and about.'],
         'wirehaired_pointing_griffon' => ['S453', 'Wirehaired Pointing Griffons are generally patient and gentle with children when socialized as puppies.'],
         'chesapeake_bay_retriever' => ['S461', 'With proper introductions and socialization, Chessies would be a great addition to a family.'],
+        'samoyed' => ['S469', 'As with all dog breeds, Samoyed puppies respond best to training and socialization early in life.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1586,6 +1607,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-56 (docs/research/dog-data/data.json chesapeake_bay_retriever,
             // S457–S462; runbook rules in proposed_game_parameters.chesapeake_bay_retriever).
             BreedType::ChesapeakeBayRetriever => self::chesapeakeBayRetrieverProfile(),
+            // M5-R10-57 (docs/research/dog-data/data.json samoyed,
+            // S463–S471; runbook rules in proposed_game_parameters.samoyed).
+            BreedType::Samoyed => self::samoyedProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -5406,6 +5430,91 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'chesapeake_bay_retriever.lifespan.rkc',
                 'quote' => 'Lifespan: Over 10 years',
                 'notes' => 'RKC breed page lower bound (S459). The McMillan 2024 table (Dogs Trust S123) could not be fetched; no VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Samoyed (M5-R10-57). Stage boundaries young / adult, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_SAMOYED); weight, growth, Coren rank and lifespan are sourced.
+     * The senior boundary is Claude's suggestion (PROPOSED_R10_SAMOYED_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function samoyedProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_SAMOYED;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S467', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.samoyed.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog reaches adult weight at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, [
+                    'unit' => 'months', 'source_id' => 'S11,S467', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.samoyed.senior_boundary_months', 'decision' => self::PROPOSED_R10_SAMOYED_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × PDSA lower bound "Over 10 years" (S467) = 7.5 y = 90 months. The Dogs Trust McMillan 2024 table (S123) and the RKC breed page could not be fetched; no VetCompass median. Alternatives: PetMD / Woodgreen 12–14 y (S469, S468) → 108; McMillan 2024 13.1 y via Wikipedia (tier C, S470) → 118; Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.samoyed.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.samoyed.senior_boundary_months', 'decision' => self::PROPOSED_R10_SAMOYED_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 90 months (0.75 × 10 y, S467).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S467', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.samoyed.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'We recommend a minimum of two hours exercise every day for your Samoyed.',
+                'notes' => 'PDSA "a minimum of two hours exercise every day" (S467) → 120 min = 12,000 steps (runbook rule: "minimum N" → N; the RKC page was not reachable). Woodgreen "90-120 minutes" (S468) and PetMD "at least two hours a day" (S469) are alternatives.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.samoyed.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[16.0, 29.0], [
+                'unit' => 'kg', 'source_id' => 'S467', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'samoyed.adult_weight.pdsa',
+                'quote' => '16-29 kg',
+                'notes' => 'PDSA "Average weight" (S467), one range for both sexes — no breed standard gives a weight (FCI S464, AKC S465). Woodgreen 16–30 kg (S468) and PetMD 35–65 lb (S469) agree.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'samoyed.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA 16–29 kg, S467 = mostly the Medium class of S10; the heaviest dogs reach the Large class, 15–18 months).',
+            ]],
+            'coren_rank' => [33, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'samoyed.trainability.coren_rank',
+                'quote' => '33 | Samoyed',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 33, tier "Above Average Working Dogs" (ranks 27–39).',
+            ]],
+            'learning_multiplier' => [1.2, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.samoyed.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 33 (S35) in the "Above average" tier (ranks 27–39) → 1.2. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S467', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'samoyed.lifespan.pdsa',
+                'quote' => 'Over 10 years',
+                'notes' => 'PDSA "Average lifespan" lower bound (S467). The McMillan 2024 table (Dogs Trust S123) and the RKC page could not be fetched; no VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

@@ -60,6 +60,7 @@ return [
     'whippet' => 'Mali angleški hrt',
     'wirehaired_pointing_griffon' => 'Francoski ostrodlaki ptičar',
     'chesapeake_bay_retriever' => 'Chesapeake Bay retriver',
+    'samoyed' => 'Samojed',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

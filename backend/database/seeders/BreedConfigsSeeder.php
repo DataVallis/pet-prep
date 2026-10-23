@@ -1187,6 +1187,27 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.chesapeake_bay_retriever',
                 'search_keywords' => ['chesapeake bay retriever', 'chesapeake', 'chessie', 'chesapeake retriever', 'chesapeake bay retriver', 'chesapeake retriver'],
             ],
+            // M5-R10-57 Samoyed (docs/research/dog-data/data.json samoyed, sources S463–S471; runbook rules
+            // confirmed by David 2026-10-10: paid).
+            // daily_steps_required = the adult step goal (proposed_game_parameters.samoyed.step_goal_adult:
+            // 120 min × 100 steps/min — PDSA S467 "a minimum of two hours exercise every day") — only the legacy-profile
+            // fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::Samoyed->slug(),
+                'daily_steps_required' => 12000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 530,
+                'label_key' => 'breeds.samoyed',
+                'search_keywords' => ['samoyed', 'samojed', 'sammy', 'samoyede', 'samojede', 'samojedski pes', 'samoyed dog'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

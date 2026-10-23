@@ -29671,6 +29671,566 @@
       }
     }
   },
+  "samoyed": {
+    "_note": "Added 2026-10-22 (M5-R10-57, unattended run — appended after the Chesapeake Bay Retriever: AKC 2024 No. 53 'Samoyed', S174 full-list table as recorded on 2026-10-22 ('52 Chesapeake Bay Retriever', '53 Samoyed'; the AKC page was not re-fetched in this run). Quotes as returned by the web-fetch tool on 2026-10-22 (short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S463–S471 (reused S10, S11, S14, S35, S45, S54, S123, S174). No health percentages anywhere. The RKC Breeds A–Z page (royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/samoyed; the older thekennelclub.org.uk display.aspx?id=5139 address redirects there) was refused by the fetch tool as not in provenance → no RKC key facts, no Breed Watch category, no RKC health-testing list; exercise, lifespan band, size and suitability from PDSA (S467) and Woodgreen (S468). Identity from the FCI nomenclature (S463); appearance and heights from the FCI standard No. 212 (S464, the French version — the English PDF was refused by the fetch tool), checked against the AKC (S465) and UKC (S466) standards. No standard gives a weight (FCI, AKC, UKC) → PDSA (S467). Lifespan: the Dogs Trust McMillan 2024 table (S123) was refused by the fetch tool; the McMillan 2024 paper (S54 repository copy) names the Samoyed only as a tip label of Fig. 5 (the breed table is Supplementary Table 3, not reached); no VetCompass median found; RKC page not reachable → closest row: the PDSA band 'Over 10 years' (S467), seeded verified=false (Miniature American Shepherd precedent). Not hypoallergenic (PetMD S469 says so explicitly; Wikipedia S470 notes the breed is 'touted as' hypoallergenic) — never tagged. Names: FCI 'SAMOIEDSKAÏA SABAKA' (English 'SAMOYED'), AKC / RKC 'Samoyed'; nickname 'Sammy' (Woodgreen S468 'Sammy smile'); Slovenian »samojed« (siol.net S471, tier C; KZS not checked).",
+    "identity": {
+      "value": "FCI No. 212, Group 5 Section 1 (Nordic Sledge Dogs), Russia",
+      "unit": "—",
+      "source_id": "S463",
+      "quote": "Group: n°5 - Spitz and primitive types; Section: Nordic Sledge Dogs; Country of origin: NORTHERN RUSSIA, SIBERIA",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S463): number '212', breed name 'SAMOIEDSKAÏA SABAKA', English 'SAMOYED', French 'SAMOYEDE', German 'SAMOJEDE', Spanish 'SAMOYEDO'; official valid standard '9/4/2019'. FCI standard (S464, French): 'CLASSIFICATION FCI : Groupe 5 Chiens de type Spitz et de type primitif.' 'Section 1 Chiens nordiques de traîneau.' 'ORIGINE : Russie septentrionale et Sibérie.' Quote assembled from the nomenclature fields as returned (Siberian Husky precedent). 'Russia' is NOT yet in FCI_ORIGINS of scripts/export-breed-registry.mjs → add Russia: 'RU' (+ EN/SL words on the website: Russia / Rusija)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S467",
+      "quote": "Medium",
+      "confidence": "high",
+      "notes": "PDSA table 'Size' (S467); Woodgreen at-a-glance 'Size: Medium' (S468); FCI standard (S464): 'Spitz de l'Arctique blanc, élégant, de taille moyenne.' PetMD (S469): 'They are medium- to large-sized dogs; …' (fragment). The RKC page (the usual size source) was not reachable."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            54,
+            60
+          ],
+          "female": [
+            50,
+            56
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S464",
+        "quote": "La taille idéale chez le mâle est de 57cm, avec une tolérance de +/- 3cm.",
+        "confidence": "high",
+        "notes": "FCI standard No. 212 (S464, French): males ideal 57 cm ± 3 cm → 54–60; females 'Chez la femelle, elle est de 53cm, avec une tolérance de +/- 3cm.' → 50–56. AKC (S465) 'Males: 21 to 23½ inches; females: 19 to 21 inches at the withers.' (53–60 / 48–53 cm) and UKC (S466) agree; PDSA (S467) '46-56 cm' — alternatives."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            16,
+            29
+          ],
+          "female": [
+            16,
+            29
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S467",
+        "quote": "16-29 kg",
+        "confidence": "medium",
+        "notes": "PDSA table 'Average weight' (S467), one range for both sexes (stored per sex) — the game range. No standard gives a weight: FCI (S464) none; AKC (S465) 'The weight should be in proportion to the height.'; UKC (S466) heights only. Woodgreen (S468) '16-30 kg' and PetMD (S469) 'Samoyeds weigh 35–65 pounds' (16–29 kg, our conversion) agree. Wikipedia (S470, tier C) infobox: males 20–30 kg, females 16–20 kg — background only.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                16,
+                30
+              ],
+              "female": [
+                16,
+                30
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S468",
+            "quote": "16-30 kg",
+            "notes": "Woodgreen at-a-glance (S468)."
+          },
+          {
+            "value": {
+              "male": [
+                16,
+                29
+              ],
+              "female": [
+                16,
+                29
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S469",
+            "quote": "They are medium- to large-sized dogs; Samoyeds weigh 35–65 pounds and confidently stand 19–23.5 inches tall.",
+            "notes": "PetMD (S469); 35–65 lb = 15.9–29.5 kg (our conversion, rounded)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "IV (15–25 kg) / V (25–40 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 16–29 kg spans the 15–25 and 25–40 bands. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 16–29 kg (S467) = 35–64 lb → mostly 'Medium (24–59 pounds)'; the heaviest dogs reach 'Large (59–99 pounds): 15–18 months'. The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Samoyed growth curve found."
+      }
+    },
+    "lifespan": {
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S467",
+        "quote": "Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA table 'Average lifespan' (S467). The RKC band (the runbook's third option) could not be read (page not reachable). PetMD (S469): 'they can live for 12–14 years' (fragment); Woodgreen (S468) '12-14 years' — alternatives (no median). Wikipedia (S470, tier C): 'a life expectancy of 13.1 years for the breed' from a 2024 UK study (= McMillan 2024, not verified in S123) — background only."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024 (S54; full paper at researchonline.ljmu.ac.uk eprint 22506, re-read 2026-10-22): the Samoyed appears only as a tip label of the Fig. 5 phylogeny ('Samoyed Alaskan Malamute Siberian Husky'), colour-coded without a number; the breed estimates are in Supplementary Table 3 (not reached). The Dogs Trust table of the same data (S123) was refused by the fetch tool as not in provenance. Wikipedia (S470, tier C) quotes 13.1 y. UNSOURCED value → open for David (check the S123 row)."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × PDSA lower bound 10 y (S467) → 0.75 × 10 = 7.5 y = 90 months. The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: S123 not reachable, no VetCompass median, RKC page not reachable → closest row (Miniature American Shepherd precedent): the PDSA band of the same form as the RKC band, seeded verified=false (Claude's suggestion, open for David). Alternatives: PetMD / Woodgreen lower bound 12 y (S469, S468) → 108; McMillan 2024 13.1 y via Wikipedia (S470, tier C) → round(117.9) = 118; Dogs Trust > 7 y (S14) = 84.",
+        "derived_from": [
+          "S11",
+          "S467"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 120",
+        "unit": "minutes/day",
+        "source_id": "S467",
+        "quote": "We recommend a minimum of two hours exercise every day for your Samoyed.",
+        "confidence": "high",
+        "notes": "PDSA (S467) — the RKC page (preferred) was not reachable. PetMD (S469): 'They need regular exercise (at least two hours a day!)' (fragment) agrees; Woodgreen (S468) at-a-glance '90-120 minutes' and 'Samoyeds are active dogs who need at least one to two hours of good exercise every day.' — alternatives."
+      },
+      "mental_stimulation": {
+        "value": "puzzle feeders, scent work and short training sessions",
+        "unit": "—",
+        "source_id": "S468",
+        "quote": "Puzzle feeders, scent work, and short training sessions help to keep a Sammy's curious mind productively occupied.",
+        "confidence": "high",
+        "notes": "Woodgreen (S468). PetMD (S469): 'need lots of exercise and mental stimulation to prevent boredom' (fragment). Basis of needs_mental_stimulation."
+      },
+      "heat": {
+        "value": "struggles in hot weather; can develop heatstroke; needs shaded outdoor space",
+        "unit": "—",
+        "source_id": "S469",
+        "quote": "Samoyed dogs require daily brushing and do not do well in hot temperatures.",
+        "confidence": "high",
+        "notes": "PetMD (S469); also 'a Samoyed can develop heatstroke in hot weather' (fragment). Woodgreen (S468): 'Their thick coats mean they can struggle in the heat, so shaded outdoor space' (fragment) and 'Never shave a Samoyed's coat, even in warm weather, as their double coat is essential for regulating their temperature.' The game has no weather / heat mechanic → open for David."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "friendly, open, alert and lively; never fearful or aggressive; loving and loyal",
+        "unit": "—",
+        "source_id": "S464",
+        "quote": "Amical, ouvert, éveillé et vif.",
+        "confidence": "high",
+        "notes": "FCI standard (S464, French — 'friendly, open, alert and lively'); also 'Jamais craintif ni agressif, il ne convient pas comme chien de garde.' PDSA (S467): 'Samoyeds are a loving and loyal breed with big personalities to match their fluffy coats.' AKC (S465): 'Intelligent, gentle, loyal, adaptable, alert, full of action, eager to serve,' (fragment). UKC (S466): 'The Samoyed is affectionate, gentle, intelligent and adaptable.' Woodgreen (S468): vocal (paraphrase)."
+      },
+      "family": {
+        "value": "usually great with children and loyal to the whole family; supervise children",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "they are usually great with children and will be very loyal to the whole family",
+        "confidence": "high",
+        "notes": "PDSA (S467, fragment of a longer sentence); also 'Always supervise children and vulnerable people with your Samoyed' (fragment) — size and boisterous nature (paraphrase). Woodgreen (S468): 'They usually get on well with children' (fragment) and 'interactions with young children should always be supervised to ensure both parties are behaving safely and respectfully.' PetMD (S469): 'Yes, Samoyeds can make excellent family companions as long as their needs are met.' UKC (S466): 'They are extremely sociable and live very easily with children and other dogs.' → family_pet, children (supervision caveat); not small_children."
+      },
+      "herding_children": {
+        "value": "may try to round up younger children by nudging or circling them",
+        "unit": "—",
+        "source_id": "S468",
+        "quote": "Samoyeds’ herding history means they may try to \"round up\" younger children by nudging or circling them.",
+        "confidence": "high",
+        "notes": "Woodgreen (S468); not aggression (paraphrase). PetMD (S469): 'they may try to herd these critters and even small children' (fragment). Basis of may_herd_children."
+      },
+      "time_alone": {
+        "value": "should not be left alone for more than four hours; becomes stressed and anxious",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "never leave them alone for more than four hours as they can become stressed and anxious.",
+        "confidence": "high",
+        "notes": "PDSA (S467, fragment). Woodgreen (S468): 'they really don't like being left alone for long periods.' and 'Samoyeds do best in active homes where someone is around for most of the day.' Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "strong prey drive — care on walks; supervise around smaller animals",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "Be careful on walks though as they have a strong prey drive",
+        "confidence": "high",
+        "notes": "PDSA (S467, fragment). Woodgreen (S468): 'Samoyeds also have a strong prey drive and a love of exploring.'; at-a-glance 'Sociable with pets: Moderate'. PetMD (S469): 'Supervise your Samoyed when they’re around smaller animals like cats, rabbits, or neighborhood squirrels' (fragment). Basis of chases_small_pets (strong = high prey drive)."
+      },
+      "escaping": {
+        "value": "accomplished escape artists — need a very secure garden",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "Make sure your garden is very secure as Samoyeds are very accomplished escape artists.",
+        "confidence": "high",
+        "notes": "PDSA (S467). Woodgreen (S468): 'A fully secure garden is essential as they're natural explorers' (fragment). Basis of secure_fencing."
+      },
+      "socialisation": {
+        "value": "socialise and train early in life",
+        "unit": "—",
+        "source_id": "S469",
+        "quote": "As with all dog breeds, Samoyed puppies respond best to training and socialization early in life.",
+        "confidence": "high",
+        "notes": "PetMD (S469). Woodgreen (S468): 'Early socialisation is key, and training should continue well beyond puppyhood' (fragment). PDSA (S467): 'As long as they have been properly socialised they should love trips to the local dog park' (fragment, a condition). → proposed_game_parameters.samoyed.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "experienced_owner": {
+        "value": "an experienced owner is recommended",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "We would recommend an experienced owner for this breed,",
+        "confidence": "high",
+        "notes": "PDSA (S467, fragment). Woodgreen (S468): 'Getting support from a professional trainer early on is a really good idea for this breed.'; training 'Moderately hard'. No chip: the experienced_owner chip names a powerful dog (open for David)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Woodgreen (S468): 'Separation-related issues can include excessive barking, digging, or destructive chewing.' — a separation-anxiety statement, not chewing from boredom → covered by needs_company; no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific appetite statement found → no food_motivated_weight tag. PDSA (S467): split the daily allowance into two meals (paraphrase)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch category unknown (RKC page not reachable); no veterinary association names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: PDSA (S467) BVA/KC hip scheme for all breeding Samoyeds and BVA/KC eye screening; AKC national breed club list (K32): hip evaluation, cardiac exam, ophthalmologist evaluation, DNA RD/OSD2, DNA XLPRA1.",
+      "hip_dysplasia": {
+        "value": "hip dysplasia — hip screening of breeding dogs",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "All breeding Samoyeds should have their hips x-rayed through the BVA/Kennel Club Hip Dysplasia Scheme.",
+        "confidence": "high",
+        "notes": "PDSA (S467): hip dysplasia 'a condition where the hip joints don’t fit together properly, which causes pain, swelling and eventually, arthritis.' Woodgreen (S468): 'Reputable breeders should have their dogs scored under the BVA/KC hip scheme before breeding.' PetMD (S469) lists hip dysplasia. Register health key hip_dysplasia."
+      },
+      "diabetes": {
+        "value": "diabetes mellitus",
+        "unit": "—",
+        "source_id": "S468",
+        "quote": "Samoyeds are considered a higher-risk breed for diabetes.",
+        "confidence": "high",
+        "notes": "Woodgreen (S468) — a risk statement without a number, never shown as a statistic. PDSA (S467): 'not being able to produce or use insulin, causing a high blood sugar level.' Register health key diabetes_mellitus."
+      },
+      "cancer": {
+        "value": "certain cancers",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "Certain cancers.",
+        "confidence": "medium",
+        "notes": "PDSA (S467) health list. Register health key certain_cancers."
+      },
+      "eye_problems": {
+        "value": "eye problems including cataracts, eye ulcers and progressive retinal atrophy",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "Eye problems, including cataracts and eye ulcers.",
+        "confidence": "high",
+        "notes": "PDSA (S467); 'There is BVA/KC screening available for eye problems.' PetMD (S469): retinal dysplasia, progressive retinal atrophy, uveodermatologic syndrome (paraphrase). Woodgreen (S468): 'DNA testing is available and responsible breeders should test for these before breeding.' AKC breed club (K32): DNA XLPRA1, RD/OSD2. Register health keys cataracts and pra_eye_disease."
+      },
+      "kidney": {
+        "value": "Samoyed hereditary glomerulopathy (X-linked hereditary nephritis) — an inherited kidney disease",
+        "unit": "—",
+        "source_id": "S469",
+        "quote": "SHG is a genetic kidney disorder often seen in Samoyeds.",
+        "confidence": "high",
+        "notes": "PetMD (S469); a DNA test exists (paraphrase). Woodgreen (S468): X-linked hereditary nephritis 'a serious inherited kidney condition that can affect Samoyeds.' (fragment). NEW register health key hereditary_nephritis (calm sentence, no numbers)."
+      },
+      "heart": {
+        "value": "heart problems (e.g. pulmonic stenosis)",
+        "unit": "—",
+        "source_id": "S469",
+        "quote": "Potential genetic predisposition to eye problems, heart problems, hip dysplasia, and kidney disease.",
+        "confidence": "medium",
+        "notes": "PetMD (S469); several heart defects (paraphrase). Wikipedia (S470, tier C): pulmonary stenosis. AKC breed club (K32): 'Cardiac Exam'. Not a register health key (breeder checklist heart_scheme only)."
+      },
+      "skin": {
+        "value": "sebaceous adenitis",
+        "unit": "—",
+        "source_id": "S468",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Woodgreen (S468) names sebaceous adenitis, a skin condition (paraphrase — no quote returned); Wikipedia (S470, tier C) too. Not a register key."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 33,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "33 | Samoyed",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-22): rank 33 'Samoyed' (table row '| 33 | Samoyed |'), tier 'Above Average Working Dogs' (ranks 27–39). Coren's own article (S34) not re-read. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Above average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 15 to 25 repetitions.",
+        "confidence": "medium",
+        "notes": "S35 tier 'Above Average Working Dogs'."
+      },
+      "training_notes": {
+        "value": "intelligent but independent and sometimes mischievous; reward-based training; a professional trainer early on",
+        "unit": "—",
+        "source_id": "S468",
+        "quote": "Getting support from a professional trainer early on is a really good idea for this breed.",
+        "confidence": "medium",
+        "notes": "Woodgreen (S468); training 'Moderately hard' (at-a-glance). PetMD (S469): 'Samoyeds are clever, quick-witted, and even mischievous,' (fragment, citing the breed club). The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.samoyed.learning_multiplier (1.2, runbook rule: Above average tier, rank 33).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "white, elegant Arctic spitz of medium size",
+        "unit": "—",
+        "source_id": "S464",
+        "quote": "Spitz de l'Arctique blanc, élégant, de taille moyenne.",
+        "confidence": "high",
+        "notes": "FCI standard No. 212 (S464, French — 'white, elegant Arctic spitz of medium size'). AKC (S465): 'The Samoyed should never be so heavy as to appear clumsy nor so light as to appear racy.'"
+      },
+      "colours": {
+        "value": [
+          "white",
+          "cream",
+          "white_and_biscuit"
+        ],
+        "unit": "list",
+        "source_id": "S464",
+        "quote": "Blanc pur, crème ou blanc et biscuit",
+        "confidence": "high",
+        "notes": "FCI standard (S464, French — 'pure white, cream or white and biscuit'); fault 'Ne doit jamais donner l'impression d'être beige.' (never beige); disqualifying 'Autre couleur de robe que celles décrites dans le standard.' (any other colour) and 'Yeux bleus ou de couleurs différentes.' (blue or odd eyes). AKC (S465) also allows 'all biscuit' ('Samoyeds should be pure white, white and biscuit, cream, or all biscuit.') — not in the FCI standard → not used. Wikipedia (S470) infobox: 'White, Cream, White and Biscuit'."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Pure white first with the highest weight (the most typical Samoyed — the portrait default; PetMD / Wikipedia note pure white dogs are common, S470 'pure white and all biscuit dogs are common' — tier C), then cream, white and biscuit. Suggested 70 / 15 / 15."
+      },
+      "coat": {
+        "value": "abundant, thick, soft and dense polar coat (double coat) with a silver sheen",
+        "unit": "—",
+        "source_id": "S464",
+        "quote": "Fourrure polaire, abondante, épaisse, souple et dense.",
+        "confidence": "high",
+        "notes": "FCI standard (S464, French — 'polar fur, abundant, thick, pliable and dense'). AKC (S465): 'The Samoyed is a doublecoated dog.' and 'The coat should glisten with a silver sheen.' Woodgreen (S468): 'Their thick double coat needs brushing several times a week' (fragment)."
+      },
+      "head": {
+        "value": "strong, deep muzzle about as long as the skull; black lips slightly upturned at the corners — the 'Samoyed smile'",
+        "unit": "—",
+        "source_id": "S464",
+        "quote": "Les commissures des lèvres sont légèrement retroussées pour former le « sourire du Samoyède » caractéristique.",
+        "confidence": "high",
+        "notes": "FCI standard (S464, French — the corners of the lips are slightly upturned to form the characteristic 'Samoyed smile'); muzzle 'Fort et haut, à peu près de la même longueur que le crâne' (fragment). AKC (S465): lips 'Should be black for preference and slightly curved up at the corners of the mouth, giving the \"Samoyed smile.\"'"
+      },
+      "ears": {
+        "value": "erect, rather small, thick, triangular, slightly rounded at the tips",
+        "unit": "—",
+        "source_id": "S464",
+        "quote": "Droites, plutôt petites, épaisses, triangulaires et légèrement arrondies à l'extrémité.",
+        "confidence": "high",
+        "notes": "FCI standard (S464, French). AKC (S465): 'Strong and thick, erect, triangular and slightly rounded at the tips;'"
+      },
+      "eyes": {
+        "value": "dark brown, almond-shaped, well set; never blue",
+        "unit": "—",
+        "source_id": "S464",
+        "quote": "De couleur brun foncé, bien enchâssés dans les orbites.",
+        "confidence": "high",
+        "notes": "FCI standard (S464, French — 'dark brown, well set in the sockets'); disqualifying 'Yeux bleus ou de couleurs différentes.' AKC (S465): 'Should be dark for preference;' and 'Blue eyes disqualifying.'"
+      },
+      "tail": {
+        "value": "carried curved forward over the back or side; moderately long",
+        "unit": "—",
+        "source_id": "S464",
+        "quote": "la queue est portée courbée vers l'avant à partir de la base",
+        "confidence": "high",
+        "notes": "FCI standard (S464, French, fragment — the tail is carried curved forward from the root). AKC (S465): 'The tail should be moderately long with the tail bone terminating approximately at the hock when down.'"
+      },
+      "nose": {
+        "value": "black preferred",
+        "unit": "—",
+        "source_id": "S465",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "AKC standard (S465): nose black preferred (paraphrase — not returned verbatim). FCI (S464): depigmented eyelid rims or lips are a serious fault ('Zones nettement dépigmentées sur le bord des paupières ou sur les lèvres.')."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S467), Woodgreen (S468), PetMD (S469). The RKC breed page (the usual suitability source) was not reachable on 2026-10-22 → no rkc_* rows.",
+      "pdsa_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "PDSA table 'Size' (S467)."
+      },
+      "pdsa_exercise": {
+        "value": "a minimum of two hours exercise every day",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "We recommend a minimum of two hours exercise every day for your Samoyed.",
+        "confidence": "high",
+        "notes": "PDSA (S467). Basis of active_family and long_daily_exercise."
+      },
+      "pdsa_grooming": {
+        "value": "grooming on a daily basis, even when not shedding",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "They shed very often, but even when they’re not shedding they’ll need grooming on daily basis.",
+        "confidence": "high",
+        "notes": "PDSA (S467) → brushing 7× a week (M5-R13 rule 'daily' → 7). PetMD (S469) 'Samoyed dogs require daily brushing and do not do well in hot temperatures.' agrees; Woodgreen (S468) 'Their thick double coat needs brushing several times a week' (fragment; daily during the spring and autumn moults) — alternative without a number. Also 'Samoyeds are very high maintenance when it comes to grooming because of their thick, fluffy coats.' (PDSA)."
+      },
+      "pdsa_shedding": {
+        "value": "sheds very often",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "They shed very often, but even when they’re not shedding they’ll need grooming on daily basis.",
+        "confidence": "high",
+        "notes": "PDSA (S467). Woodgreen (S468) at-a-glance 'Shedding: High'; PetMD (S469) 'These dogs shed regularly year-round and require consistent brushing.' — consistent → sheds; never low_shedding, never hypoallergenic (PetMD: 'No, Samoyeds are not considered to be a hypoallergenic dog breed.')."
+      },
+      "pdsa_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA table 'Average lifespan' (S467). Not shorter_lifespan (that needs 'Under 10 years')."
+      },
+      "pdsa_children": {
+        "value": "usually great with children; always supervise",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "they are usually great with children and will be very loyal to the whole family",
+        "confidence": "high",
+        "notes": "PDSA (S467, fragment); 'Always supervise children and vulnerable people with your Samoyed' (fragment) → children (supervision caveat), not small_children."
+      },
+      "pdsa_family": {
+        "value": "loyal to the whole family",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "they are usually great with children and will be very loyal to the whole family",
+        "confidence": "high",
+        "notes": "PDSA (S467, fragment). Basis of family_pet with petmd_family."
+      },
+      "pdsa_secure_garden": {
+        "value": "very secure garden — accomplished escape artists",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "Make sure your garden is very secure as Samoyeds are very accomplished escape artists.",
+        "confidence": "high",
+        "notes": "PDSA (S467). Basis of secure_fencing."
+      },
+      "pdsa_experienced_owner": {
+        "value": "experienced owner recommended",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "We would recommend an experienced owner for this breed,",
+        "confidence": "high",
+        "notes": "PDSA (S467, fragment). No chip: the experienced_owner chip names a powerful dog (open for David)."
+      },
+      "pdsa_meal_gap": {
+        "value": "leave a gap after eating and before exercising",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S467); the page gives no length of the gap and does not name bloat. → proposed_game_parameters.samoyed.meal_exercise_gap (M5-R16)."
+      },
+      "petmd_family": {
+        "value": "excellent family companions when their needs are met",
+        "unit": "—",
+        "source_id": "S469",
+        "quote": "Yes, Samoyeds can make excellent family companions as long as their needs are met.",
+        "confidence": "high",
+        "notes": "PetMD (S469). Basis of family_pet."
+      },
+      "woodgreen_grooming": {
+        "value": "brushing several times a week; daily during the spring and autumn moults; professional grooming every six to eight weeks",
+        "unit": "—",
+        "source_id": "S468",
+        "quote": "Their thick double coat needs brushing several times a week",
+        "confidence": "high",
+        "notes": "Woodgreen (S468, fragment); 'daily brushing during their heavy seasonal moults in spring and autumn' (fragment); 'Professional grooming every six to eight weeks is recommended.'; at-a-glance 'Grooming needs: High'. 'Several times a week' has no number → the PDSA daily value is used (M5-R13 rule)."
+      },
+      "woodgreen_professional_grooming": {
+        "value": "professional grooming every six to eight weeks",
+        "unit": "—",
+        "source_id": "S468",
+        "quote": "Professional grooming every six to eight weeks is recommended.",
+        "confidence": "high",
+        "notes": "Woodgreen (S468). No groomer mechanic → open for David (ROADMAP M5-R18)."
+      },
+      "woodgreen_care": {
+        "value": "regular nail trims, ear checks and dental care",
+        "unit": "—",
+        "source_id": "S468",
+        "quote": "Regular nail trims, ear checks, and dental care are also important.",
+        "confidence": "high",
+        "notes": "Woodgreen (S468). PetMD (S469): 'Samoyeds should have their ears cleaned with a dog-specific ear cleaner' (fragment). No nail / ear / tooth mechanic → open for David (ROADMAP M5-R19, M5-R20, M5-R15)."
+      },
+      "woodgreen_sociable_with_pets": {
+        "value": "Moderate",
+        "unit": "—",
+        "source_id": "S468",
+        "quote": "Moderate",
+        "confidence": "medium",
+        "notes": "Woodgreen at-a-glance 'Sociable with pets' (S468) — no other_pets tag."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -44247,6 +44807,388 @@
         "confidence": "high",
         "notes": "Colours of the FCI standard (S458); black disqualifies, white only on breast, belly, toes or back of feet. Weights unsourced in prompts. Brown as the portrait default: the standard prefers no colour — Claude's choice (the most familiar colour).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): brown is the portrait default; standard colours only (brown, sedge, deadgrass), never black"
+      }
+    },
+    "samoyed": {
+      "_note": "Unattended run M5-R10-57 (2026-10-22): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry — except the senior boundary (closest row, Claude's suggestion, seeded verified=false). The RKC breed page was not reachable → exercise from PDSA (S467, a minimum of two hours). One new register health key (hereditary_nephritis); one new vocabulary key (heat_sensitive, consider). Sourced needs built from day one: daily brushing (PDSA S467 'grooming on daily basis', M5-R13 → 7); puppy socialisation (PetMD S469 quote, M5-R17); the digestion warning (PDSA S467 'Remember to leave a gap after eating and before exercising.', M5-R16). Sourced needs without a game mechanic → open for David: professional grooming every 6–8 weeks (Woodgreen S468, M5-R18), nail trims (M5-R19), ear checks / cleaning (M5-R20), dental care (M5-R15), heat / shade / never shave (PetMD S469, Woodgreen S468 — M5-R14 covers walks outside the heat only for flat-faced breeds → needs a ROADMAP task or an M5-R14 extension). No welfare chip; in marketing. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S467",
+        "quote": "We recommend a minimum of two hours exercise every day for your Samoyed.",
+        "confidence": "high",
+        "notes": "PDSA 'a minimum of two hours' (S467) — the RKC page (preferred) was not reachable. Rule: one number N ('minimum N') → N = 120.",
+        "alternatives": [
+          {
+            "value": 90,
+            "source_id": "S468",
+            "quote": "90-120 minutes",
+            "notes": "Woodgreen at-a-glance (S468): range A–B → A = 90."
+          },
+          {
+            "value": 120,
+            "source_id": "S469",
+            "quote": "They need regular exercise (at least two hours a day!)",
+            "notes": "PetMD (S469, fragment)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (PDSA S467 'a minimum of two hours exercise every day'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S467",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + PDSA lower bound 'Over 10 years', S467 — the McMillan 2024 table S123 was not reachable, no VetCompass median, the RKC page was not reachable). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S467"
+        ],
+        "alternatives": {
+          "senior_petmd_woodgreen_12_y": 108,
+          "senior_mcmillan_via_wikipedia_13_1_y": 118,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 90,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 10 y × 12) = 90 (AAHA last 25 % of lifespan S11 × PDSA lower bound 10 y, S467). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: the Dogs Trust table S123 and the RKC page were refused by the fetch tool, the McMillan 2024 paper (S54) has the breed only in Supplementary Table 3 (not reached), no VetCompass paper. Closest rule row (Miniature American Shepherd precedent) = the PDSA band of the same form as the RKC band. Alternatives: PetMD / Woodgreen lower bound 12 y (S469, S468) → 108; McMillan 2024 13.1 y via Wikipedia (S470, tier C) → 118; Dogs Trust > 7 y (S14) = 84. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S467"
+        ],
+        "alternatives": {
+          "senior_petmd_woodgreen_12_y": 108,
+          "senior_mcmillan_via_wikipedia_13_1_y": 118,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "predlog Claude 2026-10-22 (najbližja vrstica pravila runbooka, M5-R10-57) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 90 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 33 (S35), tier 'Above average' (27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 33, Above average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S467",
+        "quote": "They shed very often, but even when they’re not shedding they’ll need grooming on daily basis.",
+        "confidence": "high",
+        "notes": "samoyed.suitability.pdsa_grooming. PDSA 'grooming on daily basis' → 7 (runbook dog-grooming rule 'daily' → 7); PetMD (S469) 'Samoyed dogs require daily brushing …' agrees. Woodgreen (S468) 'several times a week' (no number; daily during moults) → alternative. Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": "several times a week",
+            "source_id": "S468",
+            "quote": "Their thick double coat needs brushing several times a week",
+            "notes": "Woodgreen (S468, fragment), samoyed.suitability.woodgreen_grooming — no number."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden) (PDSA »grooming on daily basis«; PetMD »daily brushing«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S469",
+        "quote": "As with all dog breeds, Samoyed puppies respond best to training and socialization early in life.",
+        "confidence": "high",
+        "notes": "samoyed.behaviour.socialisation (PetMD S469). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S469)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S467",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S467), samoyed.suitability.pdsa_meal_gap. The source gives no length of the gap. Built in M5-R16 (David 2026-10-12): for 60 minutes after a meal the child app shows a calm 'wait with the walk, the dog is digesting' warning; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "professional_grooming": {
+        "value": "professional grooming every six to eight weeks; never shave the coat",
+        "unit": "groomer visit (sourced need)",
+        "source_id": "S468",
+        "quote": "Professional grooming every six to eight weeks is recommended.",
+        "confidence": "high",
+        "notes": "Woodgreen (S468), samoyed.suitability.woodgreen_professional_grooming; also 'Never shave a Samoyed's coat, even in warm weather, …' (samoyed.exercise.heat notes). No groomer mechanic → open for David (ROADMAP M5-R18).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): obisk pasjega frizerja na 6–8 tednov, kožuha nikoli ne strižemo na kratko; mehanike ni → ROADMAP M5-R18 (David)"
+      },
+      "nails_ears_teeth": {
+        "value": "regular nail trims, ear checks / cleaning and dental care",
+        "unit": "care routines (sourced need)",
+        "source_id": "S468",
+        "quote": "Regular nail trims, ear checks, and dental care are also important.",
+        "confidence": "high",
+        "notes": "Woodgreen (S468), samoyed.suitability.woodgreen_care; PetMD (S469) ear cleaning (fragment). No mechanic → open for David (ROADMAP M5-R19 nails, M5-R20 ears, M5-R15 teeth).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): kremplji, ušesa, zobje; mehanike ni → ROADMAP M5-R19, M5-R20, M5-R15 (David)"
+      },
+      "heat_care": {
+        "value": "avoid heat; shaded outdoor space; watch for heatstroke",
+        "unit": "weather care (sourced need)",
+        "source_id": "S469",
+        "quote": "Samoyed dogs require daily brushing and do not do well in hot temperatures.",
+        "confidence": "high",
+        "notes": "PetMD (S469), samoyed.exercise.heat; Woodgreen (S468) shaded outdoor space (fragment). The game has no weather / heat mechanic; M5-R14 (walks outside the heat) is written for flat-faced breeds → open for David (extend M5-R14 or a new ROADMAP task).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): izogibanje vročini, senca; mehanike ni → M5-R14 (razširitev) ali nova naloga v ROADMAP (David)"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-57); refs = JSON paths in this file. One new vocabulary key heat_sensitive (consider). No percentages in the app. Never hypoallergenic, never low_shedding.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.exercise.adult",
+              "samoyed.suitability.pdsa_exercise"
+            ],
+            "quote": "S467 'We recommend a minimum of two hours exercise every day for your Samoyed.'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S467",
+              "S469"
+            ],
+            "refs": [
+              "samoyed.suitability.pdsa_family",
+              "samoyed.suitability.petmd_family"
+            ],
+            "quote": "S467 'they are usually great with children and will be very loyal to the whole family'; S469 'Yes, Samoyeds can make excellent family companions as long as their needs are met.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.suitability.pdsa_children",
+              "samoyed.behaviour.family"
+            ],
+            "quote": "S467 'they are usually great with children and will be very loyal to the whole family' (supervision caveat in notes)"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.exercise.adult",
+              "samoyed.suitability.pdsa_exercise"
+            ],
+            "quote": "S467 'We recommend a minimum of two hours exercise every day for your Samoyed.'"
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S468"
+            ],
+            "refs": [
+              "samoyed.exercise.mental_stimulation"
+            ],
+            "quote": "S468 'Puzzle feeders, scent work, and short training sessions help to keep a Sammy's curious mind productively occupied.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.behaviour.time_alone"
+            ],
+            "quote": "S467 'never leave them alone for more than four hours as they can become stressed and anxious.'"
+          },
+          {
+            "tag": "secure_fencing",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.behaviour.escaping",
+              "samoyed.suitability.pdsa_secure_garden"
+            ],
+            "quote": "S467 'Make sure your garden is very secure as Samoyeds are very accomplished escape artists.'"
+          },
+          {
+            "tag": "may_herd_children",
+            "source_ids": [
+              "S468"
+            ],
+            "refs": [
+              "samoyed.behaviour.herding_children"
+            ],
+            "quote": "S468 'Samoyeds’ herding history means they may try to \"round up\" younger children by nudging or circling them.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.suitability.pdsa_shedding"
+            ],
+            "quote": "S467 'They shed very often, but even when they’re not shedding they’ll need grooming on daily basis.'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.suitability.pdsa_grooming"
+            ],
+            "quote": "S467 'They shed very often, but even when they’re not shedding they’ll need grooming on daily basis.'"
+          },
+          {
+            "tag": "heat_sensitive",
+            "source_ids": [
+              "S469"
+            ],
+            "refs": [
+              "samoyed.exercise.heat"
+            ],
+            "quote": "S469 'Samoyed dogs require daily brushing and do not do well in hot temperatures.'",
+            "new_vocabulary": {
+              "kind": "consider",
+              "en": "thick coat — struggles in hot weather",
+              "sl": "gost kožuh — slabo prenaša vročino"
+            },
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka, nova oznaka): nobena obstoječa oznaka ne opisuje občutljivosti na vročino pri gostem kožuhu (PetMD S469, Woodgreen S468)"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S467"
+            ],
+            "refs": [
+              "samoyed.behaviour.other_pets"
+            ],
+            "quote": "S467 'Be careful on walks though as they have a strong prey drive'",
+            "decision": "potrdil David 2026-10-12: nova oznaka »močan lovski nagon — lahko lovi manjše živali« — citat iz vnosa te pasme navaja močan lovski nagon (na koncu seznama »Upoštevajte«)"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "PDSA (S467) and Woodgreen (S468) ask to supervise children; Woodgreen: may round up younger children → not without a caveat.",
+          "other_pets": "Woodgreen 'Sociable with pets: Moderate' (S468); strong prey drive (S467) → no.",
+          "first_time_owner": "PDSA recommends an experienced owner (S467).",
+          "apartment": "No RKC 'Flat/ Apartment' (RKC page not reachable).",
+          "large_home": "No RKC 'Large house' (RKC page not reachable); Woodgreen only asks for a fully secure garden and shade (S468).",
+          "often_alone": "See needs_company.",
+          "low_shedding": "PDSA 'They shed very often' (S467).",
+          "hypoallergenic": "Never a tag (runbook); PetMD: 'No, Samoyeds are not considered to be a hypoallergenic dog breed.' (S469).",
+          "chews_when_bored": "Woodgreen's destructive chewing is a separation-related issue (S468) → covered by needs_company.",
+          "food_motivated_weight": "No source.",
+          "shorter_lifespan": "PDSA 'Over 10 years' (S467) — criterion is 'Under 10 years'.",
+          "hips_hind_legs": "Hip dysplasia and hip scoring as for many breeds (S467, S468); no conformation point → register health + breeder checklist only.",
+          "welfare": "No veterinary association names the breed for conformation-related welfare problems; RKC Breed Watch category unknown (page not reachable) → no welfare chip.",
+          "experienced_owner": "PDSA 'We would recommend an experienced owner for this breed,' (S467) — but the experienced_owner chip says 'powerful dog', which no source says of the Samoyed, and independent_experienced_owner needs a stubborn / independent quote (not returned verbatim) → no chip; the PDSA advice stays in the register text. Open for David (Shiba Inu precedent)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, children; consider long_daily_exercise, needs_mental_stimulation, needs_company, secure_fencing, may_herd_children, sheds, frequent_grooming, heat_sensitive (new), chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S467",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); RKC Breed Watch category unknown (page not reachable). Marketing never presents the Samoyed as hypoallergenic, low-shedding, a low-exercise dog, a dog to leave alone for long or a dog for hot climates (S467, S468, S469).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Samoyed, pure white coat (default); elegant, medium-sized Arctic spitz; abundant, thick, dense double coat standing off the body with a silver sheen and a ruff; strong muzzle about as long as the skull with black lips slightly upturned — the 'Samoyed smile'; dark brown almond eyes with black rims; erect, rather small, thick triangular ears slightly rounded at the tips; plumed tail carried curved over the back or side; never beige, never blue eyes, no colours other than white, cream or white and biscuit",
+        "unit": "—",
+        "source_id": "S464",
+        "quote": "Blanc pur, crème ou blanc et biscuit",
+        "confidence": "high",
+        "notes": "Colours of the FCI standard (S464): pure white, cream, white and biscuit; any other colour and blue / odd eyes disqualify; 'never beige'. The AKC 'all biscuit' (S465) is not in the FCI standard → not used. Weights unsourced in prompts. Pure white as the portrait default: the most typical colour (Claude).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): pure white is the portrait default; standard colours only (white, cream, white and biscuit), never other colours or blue eyes"
       }
     }
   }

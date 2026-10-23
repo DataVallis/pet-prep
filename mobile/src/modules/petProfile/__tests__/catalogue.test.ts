@@ -471,7 +471,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(25);
+    expect(CONSIDER_TAGS).toHaveLength(26);
+    // M5-R10-57 (runbook new-tag rule): thick coat — struggles in hot weather (the Samoyed, PetMD S469); no numbers.
+    expect(CONSIDER_TAGS).toContain('heat_sensitive');
     // M5-R10-54 (runbook new-tag rule): sensitive dog — better with older children (the Whippet, PDSA S444 / PetMD S445); no numbers.
     expect(CONSIDER_TAGS).toContain('sensitive_older_children');
     // M5-R10-46 (runbook new-tag rule): independent and stubborn — best with an experienced owner (the Shiba Inu, AKC S383); no numbers.
