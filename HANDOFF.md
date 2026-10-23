@@ -93,6 +93,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-23 (cloud, backend) — hotfix: /admin 500 from the Filament bell (`fix/notifications-data-jsonb`)
+Since the M5-T15 deploy every /admin page showed a 500 popup: Filament's `DatabaseNotifications` filters `data->format` and `notifications.data` was `text` (`text ->> unknown` has no operator on PostgreSQL). New migration `2027_01_18_120000_change_notifications_data_to_jsonb` (`USING data::jsonb`, pgsql only; runs with the next deploy's `migrate --force`). Test `AdminDatabaseNotificationsTest`. Debt: none.
+
 ### 2026-10-23 (cloud, mobile) — child HUD top bar decluttered (`fix/child-hud-topbar-declutter`)
 David's iPhone screenshot: name / stage / breed truncated. Album, »?« (care guide) and the exit moved from the bar into `ChildSettingsSheet` rows (Album → Kako skrbim → Odjava at the bottom; same testIDs, `useChildExit` unchanged). JS only → OTA. Debt: not on a device — check the Modal hand-off (settings → care guide / parental gate) on iOS + Android.
 
