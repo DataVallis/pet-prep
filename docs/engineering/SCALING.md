@@ -5,6 +5,7 @@
 ## 0. Izhodišče (oktober 2026)
 - En strežnik Hetzner CX23 (Nemčija): Caddy, Laravel, Reverb, queue, scheduler, PostgreSQL 18, Redis — vse v Docker Compose.
 - AI mediji na lokalnem disku (`app_storage`), ocena ~7–49 MB na psa → disk zadošča za ~1.000–2.000 psov.
+- *2026-10-23 (David, preverjanje kakovosti posnetkov):* produkcijska slika aplikacije ima zdaj **ffmpeg / ffprobe** (Debian, ~+250 MB nestisnjeno; ena kopija slike na strežnik). Preverjanje enega posnetka: nekaj sekund CPU v vrsti `default` (ffmpeg na 128 px sivi kopiji) + en klic modela za slike prek fal (≤ 0,01 $, produkcijski proračun); pri veliko novih pasmah hkrati je to dodatno delo za delavca vrste — ob rasti ločen delavec za `default`. Neuspešni posnetki se enkrat ustvarijo znova (≤ 1 dodaten posnetek na neuspeh).
 - Minutni tick (razpad, eskalacija, zapiranje dni) teče za vse pse; varnostna kopija = `pg_dump` na istem strežniku.
 - ✅ *Narejeno v kodi 2026-10-05 (M4-05b, veja `feat/M4-05b-prod-runtime`, deploy ob združitvi):* produkcijski PHP runtime — **PHP-FPM 8.3 + OPcache** v lastni sliki (koda + `vendor` brez razvojnih paketov), Caddy sam streže statične datoteke (Filament) in **videe / slike psov** (X-Accel-Redirect, PHP samo preveri podpis in pravice). Lokalno izmerjeno: med 4 hkratnimi prenosi 10 MB videa je `GET /up` trajal 4,4 s na starem `php artisan serve` in 0,01–0,02 s na Caddy + FPM. Odprto: omejitev hkratnih povezav na IP (vtičnik za Caddy ali Cloudflare, §1).
 

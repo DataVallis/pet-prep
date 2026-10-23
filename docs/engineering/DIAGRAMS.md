@@ -1577,7 +1577,7 @@ flowchart LR
   R --> BW[ball_waiting] --> BR[ball_running<br/>stands → empty room] --> BF[ball_fetching<br/>empty room → stands]
   R --> WS[wand_stalking<br/>stands → crouch] --> WP[wand_pouncing<br/>crouch → crouch, per pounce] --> WC[wand_catching<br/>crouch → catch]
   subgraph Gate [phaseClipsFor = switch »School & game clips« + usesStateMedia + version 3 + group]
-    G[ball: dog · wand: cat · school: training on · 3 s Kling 3.0 Pro, 0.336 $ each]
+    G[ball: dog · wand: cat · school: training on · 3 s Kling 3.0 Pro, 0.336 $ each · school performing 5 s, 0.56 $ (David 2026-10-23)]
   end
   N[same start + end pose: attention · success · ball_waiting · wand_pouncing<br/>→ start frame only, motion prompt — fix 2026-10-23]
 ```
@@ -1585,7 +1585,7 @@ flowchart LR
 ```mermaid
 flowchart TD
   T[Trial i of the server schedule] --> A[attention<br/>after trial i-1's praise window]
-  A --> PF[performing 3 s<br/>start = max(prev window end, obey_at − 3 s − 100 ms)]
+  A --> PF[performing (stored length: 5 s new, 3 s older — media.phase_seconds)<br/>start = max(prev window end, obey_at − length − 100 ms)<br/>short window → startAtMs into the clip, the end lands at obey_at − 100 ms]
   PF --> SU[success: end pose held<br/>obey_at … window_end = praise counts]
   SU --> N[next trial's attention]
   T -->|dog ignores| ST[standing pose from the cue]
@@ -1607,9 +1607,48 @@ sequenceDiagram
   Note over S: after loops + transitions (§13): games, then school (QA m1) — not part of the preparation (m6)
   S->>K: missing poses of the next clip (claim, 0.15 $; switch read fresh before fal)
   K-->>S: stored → queueStateVideos again
-  S->>V: phase clip (start / end = its poses, duration "3")
-  V-->>App: phases[clip] in PetUpdated / child state
+  S->>V: phase clip (start / end = its poses, duration "3"; school performing "5")
+  V-->>App: phases[clip] + phase_seconds[clip] in PetUpdated / child state (after the quality check, §10g)
   App->>App: schedule moment → clip once (new instance replays) · missing / picture → pose image
+```
+
+### 10g. Clip quality check (David 2026-10-23)
+
+Every new AI clip is a candidate until it passes; the old file stays visible meanwhile. One automatic regeneration per generation chain; a second failure is »Needs review« (not shown, the app's fallback). See ARCHITECTURE *Clip quality check*.
+
+```mermaid
+flowchart TD
+  W[fal webhook OK] --> D[StorePetMedia: download + faststart]
+  D --> SW{switch »Quality check« on?}
+  SW -->|off| SV[stored at once — old behaviour]
+  SW -->|on| C[candidate_path set<br/>slot running, old storage_path still served]
+  C --> J[CheckPetMediaQuality]
+  J --> CL{claim pet_media_quality_checks<br/>unique media + generation + trigger}
+  CL -->|taken / decided| AP[apply the decided verdict only — never a 2nd measure / spend]
+  CL -->|ours| T[technical: ffprobe duration · ffmpeg YDIF frozen / jump / tail motion · end-frame SSIM]
+  T -->|fail| F
+  T -->|no ffmpeg| P2[pass, quality unchecked]
+  T -->|pass| V{vision profile on + budget?}
+  V -->|no| P1[pass, quality passed_technical = not AI-checked]
+  V -->|yes| AI[6-frame contact sheet + reference + end image → FalGateway → openrouter/router/vision<br/>purpose quality_check, production budget]
+  AI -->|rubric pass| P0[pass, quality passed]
+  AI -->|rubric fail| F
+  AI -->|error / bad JSON| P1
+  P0 & P1 & P2 --> PR[promoteCandidate: candidate → storage_path · one PetUpdated video_ready · look fan-out]
+  F{generation == quality_retry_generation?}
+  F -->|no — first fail| R[ONE auto regeneration: generation + 1, quality_retry_generation = it<br/>SubmitPetStateVideo → normal pipeline + budget guard]
+  R --> W
+  F -->|yes — the retry failed too| NR[»Needs review«: slot failed quality_failed, candidate kept<br/>payload / readiness / preparation = fallback · media:retry skips it · look rows not re-submitted]
+  NR --> ADM[/admin Pet → AI media: filter »Needs review« · »Approve anyway« (superadmin, audited) · »Regenerate« (new chain)<br/>count on dashboard + System health/]
+```
+
+```mermaid
+flowchart LR
+  CMD[media:quality-check --pet --look] --> DRY{--dry-run?}
+  DRY -->|yes| TO[technical only · nothing written · no paid call]
+  DRY -->|no| FULL[technical + AI · cost printed first]
+  FULL -->|fail| FL[quality = flagged → not shown]
+  FL -->|--regenerate| RG[re-queued ONCE as the chain's retry → a 2nd fail = »Needs review«]
 ```
 
 ## 11. Push notifications (M3-02, 2026-10-05)
