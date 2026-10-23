@@ -1520,6 +1520,12 @@ class FalAiService
         $species = PetAppearancePrompt::speciesOf($breedKey);
         $end = self::endFrameUrl($startImageUrl, $endImageUrl, $sameFrame);
         $startOnly = $end === null;
+
+        if ($startOnly && ! $sameFrame && $endImageUrl !== null) {
+            // QA #361 m4: two different frames resolved to the same picture — sent start-only
+            // (would freeze otherwise); the prompt still names an end frame, so log it.
+            Log::warning('FalAiService: clip frames resolved to the same image — sent without end frame', ['pet_id' => $petId, 'pet_media_id' => $petMediaId]);
+        }
         // A start-only clip must move: no "fast motion" in its negative prompt (loop / same-pose phase).
         $negative = $startOnly ? $this->prompts->loopNegativePrompt($species) : $this->prompts->videoNegativePrompt($species);
 

@@ -431,7 +431,7 @@ docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app 
 
 Never use raw SQL to change `premium_unlock`: the model refuses any change that leaves a species without exactly one free breed (existing pets read it live for refunds and plan display) — raw SQL bypasses that check. A cache outage never blocks the game: the catalogue then reads the table directly (logged as a warning).
 
-**Frozen same-frame clips (fix 2026-10-23).** Loops and same-pose school / game clips made before the fix play almost frozen (Kling got the same image as start and end frame). Remake them — dry run first (no fal call), then the real run (budget-checked, audited, the old clip stays visible until the new one is stored). `--pet` of a pet on a shared look remakes that look's clips once for every pet on it; without options = every affected pet and look. Same as Pet → »AI media« → »Regenerate frozen clips« in `/admin`.
+**Frozen same-frame clips (fix 2026-10-23).** Loops and same-pose school / game clips made before the fix play almost frozen (Kling got the same image as start and end frame). Remake them — dry run first (no fal call), then the real run (budget-checked, audited, the old clip stays visible until the new one is stored). `--pet` of a pet on a shared look remakes that look's clips once for every pet on it (`--pet` and `--look` are exclusive); without options = every affected pet and look. A remake that fails keeps the frozen clip and shows up in the next dry run again. Same as Pet → »AI media« → »Regenerate frozen clips« in `/admin`.
 
 ```bash
 docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app php artisan media:regenerate-frozen --pet=<id> --dry-run

@@ -13,20 +13,27 @@ use App\Models\User;
 use App\Services\FalAiService;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
+use InvalidArgumentException;
 
 /**
  * Fix 2026-10-23 (David »uredi«): Kling 3.0 Pro given the same image as start AND end
  * frame returned almost frozen clips (production pet #8, mean frame difference
  * ~0.08 / 255). New clips are made from the start frame only (FalAiService::endFrameUrl);
  * this remakes the clips that were already stored the frozen way
- * (PetMedia::isFrozenSameFrameClip): state loops with recipe `loop` and same-pose phase
- * clips (PetPhaseClip::sharesFrames) made with an end frame (recipe null).
+ * (PetMedia::isFrozenSameFrameClip, read from `stored_recipe` = how the STORED file was
+ * made): state loops with `loop` and same-pose phase clips (PetPhaseClip::sharesFrames)
+ * made with an end-frame profile (null). A remake that fails keeps the old file and its
+ * stored_recipe, so it is listed again (QA #361 M1).
  *
  * `plan()` only reads (never a fal call). `regenerate()` re-queues exactly the planned
  * rows as a NEW generation through the normal pipeline (resetForNewGeneration bump →
  * SubmitPetStateVideo → FalGateway + AiSpendGuard; the old file stays servable until the
- * new one is stored), audited to app_setting_changes `media_regenerate_frozen`.
+ * new one is stored), audited to app_setting_changes `media_regenerate_frozen`. The total
+ * is PRE-CHECKED against the budget; each clip is still checked by the guard at its submit
+ * (a refused one fails, keeps its frozen file and is listed again). Cache lock LOCK_KEY
+ * against double submits.
  *
  * Shared looks: the look rows are remade once (pets on the look follow through the
  * fan-out); a pool pet's own slots are never touched. Both superadmin switches apply
@@ -37,6 +44,11 @@ class FrozenClipRegenerator
 {
     /** app_setting_changes key of the audit row of one real run. */
     public const AUDIT_KEY = 'media_regenerate_frozen';
+
+    /** QA #361 m2: one real run at a time (seconds). */
+    public const LOCK_KEY = 'media-regenerate-frozen';
+
+    public const LOCK_SECONDS = 30;
 
     public function __construct(
         private readonly PetMediaService $media,
@@ -60,7 +72,7 @@ class FrozenClipRegenerator
 
         if ($stateOn) {
             $rows = $this->candidates($petId, $lookId)
-                ->filter(fn (PetMedia $row): bool => $row->isFrozenSameFrameClip() || $this->failedRetry($row))
+                ->filter(fn (PetMedia $row): bool => $row->isFrozenSameFrameClip($this->madeWithEndFrame($row)))
                 ->filter(fn (PetMedia $row): bool => ! $row->isPhase() || $phasesOn)
                 ->filter(fn (PetMedia $row): bool => $this->stillWanted($row))
                 ->values();
@@ -87,51 +99,98 @@ class FrozenClipRegenerator
      * off / its balance is flagged, or the estimated total does not fit today's / this
      * month's production AI budget.
      *
-     * @return array{outcome: 'queued'|'nothing'|'ai_off'|'budget', queued: int, cost_usd: float}
+     * @return array{outcome: 'queued'|'nothing'|'ai_off'|'budget'|'busy', queued: int, loops: int, phases: int, cost_usd: float}
      */
     public function regenerate(?User $actor, ?int $petId = null, ?int $lookId = null): array
     {
+        $lock = Cache::lock(self::LOCK_KEY, self::LOCK_SECONDS);
+
+        if (! $lock->get()) {
+            return ['outcome' => 'busy', 'queued' => 0, 'loops' => 0, 'phases' => 0, 'cost_usd' => 0.0];
+        }
+
+        try {
+            return $this->regenerateLocked($actor, $petId, $lookId);
+        } finally {
+            $lock->release();
+        }
+    }
+
+    /**
+     * @return array{outcome: 'queued'|'nothing'|'ai_off'|'budget', queued: int, loops: int, phases: int, cost_usd: float}
+     */
+    private function regenerateLocked(?User $actor, ?int $petId, ?int $lookId): array
+    {
         $plan = $this->plan($petId, $lookId);
+        $none = ['queued' => 0, 'loops' => 0, 'phases' => 0];
 
         if ($plan['rows']->isEmpty()) {
-            return ['outcome' => 'nothing', 'queued' => 0, 'cost_usd' => 0.0];
+            return ['outcome' => 'nothing'] + $none + ['cost_usd' => 0.0];
         }
 
         if (! $this->fal->isEnabled() || FalGateway::balanceExhaustedAt() !== null) {
-            return ['outcome' => 'ai_off', 'queued' => 0, 'cost_usd' => $plan['cost_usd']];
+            return ['outcome' => 'ai_off'] + $none + ['cost_usd' => $plan['cost_usd']];
         }
 
         if ($this->guard->refusalFor($plan['cost_usd'], AiSpendPurpose::StateVideo) !== null) {
-            return ['outcome' => 'budget', 'queued' => 0, 'cost_usd' => $plan['cost_usd']];
+            return ['outcome' => 'budget'] + $none + ['cost_usd' => $plan['cost_usd']];
         }
 
-        $queued = [];
+        $queued = collect();
 
         foreach ($plan['rows'] as $row) {
             // Conditional reset: a row another worker claimed meanwhile is left alone.
             if ($this->media->resetForNewGeneration($row, bump: true)) {
                 SubmitPetStateVideo::dispatch($row->id);
-                $queued[] = $row->id;
+                $queued->push($row);
             }
         }
+
+        if ($queued->isEmpty()) {
+            return ['outcome' => 'nothing'] + $none + ['cost_usd' => 0.0];
+        }
+
+        // QA #361 m2: report / audit what was really queued, not the plan.
+        $loops = $queued->filter(fn (PetMedia $r) => $r->isVideo())->count();
+        $phases = $queued->filter(fn (PetMedia $r) => $r->isPhase())->count();
+        $cost = round((float) $queued->sum(fn (PetMedia $r): float => $this->costOf($r)), 4);
 
         AppSettingChange::create([
             'key' => self::AUDIT_KEY,
             'user_id' => $actor?->id,
             'old' => null,
             'new' => [
-                'pet_media_ids' => $queued,
-                'pets' => $plan['pets'],
-                'looks' => $plan['looks'],
-                'loops' => $plan['loops'],
-                'phases' => $plan['phases'],
-                'estimated_usd' => $plan['cost_usd'],
+                'pet_media_ids' => $queued->pluck('id')->all(),
+                'pets' => $queued->pluck('pet_id')->filter()->unique()->sort()->values()->all(),
+                'looks' => $queued->pluck('pet_look_id')->filter()->unique()->sort()->values()->all(),
+                'loops' => $loops,
+                'phases' => $phases,
+                // Pre-checked against the budget; each clip is still checked by the guard at its submit.
+                'estimated_usd' => $cost,
                 'filter' => ['pet' => $petId, 'look' => $lookId],
             ],
         ]);
-        Log::info('FrozenClipRegenerator: frozen clips re-queued', ['count' => count($queued), 'estimated_usd' => $plan['cost_usd'], 'pet' => $petId, 'look' => $lookId]);
+        Log::info('FrozenClipRegenerator: frozen clips re-queued', ['count' => $queued->count(), 'estimated_usd' => $cost, 'pet' => $petId, 'look' => $lookId]);
 
-        return ['outcome' => 'queued', 'queued' => count($queued), 'cost_usd' => $plan['cost_usd']];
+        return ['outcome' => 'queued', 'queued' => $queued->count(), 'loops' => $loops, 'phases' => $phases, 'cost_usd' => $cost];
+    }
+
+    /**
+     * QA #361 m3: was this stored clip made by a profile that takes an end frame? Only
+     * then could a same-pose phase clip have been sent with one (and frozen). Unknown
+     * profile (removed from config) → assume yes, the production default did.
+     */
+    private function madeWithEndFrame(PetMedia $row): bool
+    {
+        if ($row->profile === null) {
+            return true;
+        }
+
+        try {
+            return $this->profiles->video($row->profile)->supportsEndImage();
+        } catch (InvalidArgumentException) {
+            return true;
+        }
     }
 
     /** Estimated cost of remaking one row (loop: state video profile; phase: its 3 s clip). */
@@ -150,8 +209,9 @@ class FrozenClipRegenerator
     private function candidates(?int $petId, ?int $lookId): Collection
     {
         $sameFramePhases = array_map(fn (PetPhaseClip $c) => $c->value, PetPhaseClip::sameFrameCases());
-        $kinds = fn (Builder $q) => $q->where(fn ($q) => $q->where(fn ($q) => $q->where('kind', PetMedia::KIND_VIDEO)->where('recipe', PetMedia::RECIPE_LOOP))
-            ->orWhere(fn ($q) => $q->where('kind', PetMedia::KIND_PHASE)->whereNull('recipe')->whereIn('state', $sameFramePhases)))
+        // stored_recipe = how the STORED file was made; a failed remake keeps it (QA #361 M1).
+        $kinds = fn (Builder $q) => $q->where(fn ($q) => $q->where(fn ($q) => $q->where('kind', PetMedia::KIND_VIDEO)->where('stored_recipe', PetMedia::RECIPE_LOOP))
+            ->orWhere(fn ($q) => $q->where('kind', PetMedia::KIND_PHASE)->whereNull('stored_recipe')->whereIn('state', $sameFramePhases)))
             ->whereIn('status', [PetMedia::STATUS_READY, PetMedia::STATUS_FAILED])
             ->whereNotNull('storage_path');
 
@@ -178,17 +238,6 @@ class FrozenClipRegenerator
             ->with('look')->orderBy('pet_look_id')->orderBy('id')->get();
 
         return $petRows->concat($lookRows)->values();
-    }
-
-    /** A row this tool queued earlier that the budget / fal refused (still the frozen file). */
-    private function failedRetry(PetMedia $row): bool
-    {
-        if ($row->status !== PetMedia::STATUS_FAILED || ! $row->isServable()) {
-            return false;
-        }
-
-        return $row->isVideo() ? $row->recipe === PetMedia::RECIPE_LOOP
-            : ($row->isPhase() && $row->recipe === null && ($row->phaseClip()?->sharesFrames() ?? false));
     }
 
     /** Only rows the pet (or an active state-media pet of the look at that stage) still uses. */

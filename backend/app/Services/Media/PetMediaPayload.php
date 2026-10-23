@@ -27,7 +27,7 @@ final class PetMediaPayload
         public readonly array $keyframes = [],
         /** @var array<string, string> M5-T08: transition (idle_to_sleeping, …) => signed URL */
         public readonly array $transitions = [],
-        /** @var list<string> M5-T08: states whose stored video is a seamless loop */
+        /** @var list<string> M5-T08: states whose stored video is a loop made from its key image */
         public readonly array $loops = [],
         /** M5-T08: the pet gets key images / loops / transitions (MediaEntitlementService::usesStateMedia) */
         public readonly bool $stateMedia = false,
@@ -85,7 +85,7 @@ final class PetMediaPayload
             'expires_at' => $this->expiresAt,
             /**
              * M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
-             * loop starts and ends in). Never `idle` — the reference image is the idle pose.
+             * loop starts in). Never `idle` — the reference image is the idle pose.
              * Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
              *
              * @var array<string, string>
