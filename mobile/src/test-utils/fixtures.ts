@@ -306,6 +306,8 @@ export interface LiveStateOverrides {
   sleep?: unknown;
   /** M5-T05 `care_guide` (raw); omitted = null (older server, no »?« button). */
   care_guide?: unknown;
+  /** M5-T11 / M5-T17 child settings (merged into the default `video` / no easy gestures). */
+  settings?: Partial<RawState['settings']>;
   timezone?: string;
   server_time?: string;
 }
@@ -415,6 +417,7 @@ export function makeLiveChildState(o: LiveStateOverrides = {}): ChildPetState {
     ...(o.socialisation !== undefined ? { socialisation: o.socialisation } : {}),
     sleep: o.sleep === 'absent' ? undefined : o.sleep === undefined ? base.sleep : o.sleep,
     ...(o.care_guide !== undefined ? { care_guide: o.care_guide } : {}),
+    settings: { ...base.settings, ...o.settings },
   };
   return raw as unknown as ChildPetState;
 }
