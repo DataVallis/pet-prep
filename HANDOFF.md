@@ -93,6 +93,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-10-23 (cloud, mobile) — child HUD top bar decluttered (`fix/child-hud-topbar-declutter`)
+David's iPhone screenshot: name / stage / breed truncated. Album, »?« (care guide) and the exit moved from the bar into `ChildSettingsSheet` rows (Album → Kako skrbim → Odjava at the bottom; same testIDs, `useChildExit` unchanged). JS only → OTA. Debt: not on a device — check the Modal hand-off (settings → care guide / parental gate) on iOS + Android.
+
 ### 2026-10-23 (cloud, mobile) — M5-T17 »Lažje kretnje« app (`feat/M5-T17-easy-gestures-app`, backend #354)
 Parent switch per child (`EasyGesturesRow`, `settings.easy_gestures`); hold mode = switch OR live screen reader (`modules/gestures/easyGestures.ts`). Hold for brushing (now gated), wand (»Pomigaj s palico«), litter change (BrushArea scrub), ball (charge + release) — same server inputs. Debt: not on a device; ARCHITECTURE.md still names the old »Umakni pero« button (not edited per instruction).
 

@@ -2,13 +2,14 @@
  * HUD settings sheet: the child can change the app language from the HUD (David 2026-10-12)
  * and »Prikaz: Video / Slika« (M5-T11, APP_REFINEMENT_SPEC §1) — gear button → sheet.
  */
-import { act, fireEvent, screen, waitFor } from '@testing-library/react-native';
+import { act, fireEvent, screen, waitFor, within } from '@testing-library/react-native';
 
 import { api } from '@/api/client';
 import ChildHudScreen from '@/screens/ChildHudScreen';
 import { useAppStore } from '@/store/appStore';
 import { currentLanguage, i18n } from '@/i18n';
-import { makeLiveChildState, makeMedia, makePet } from '@/test-utils/fixtures';
+import { setCareGuideStoreForTests } from '@/modules/careGuide/careGuideSeen';
+import { makeCareGuide, makeLiveChildState, makeMedia, makePet } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import { liveVideoPlayers } from '@/test-utils/videoPlayers';
 
@@ -45,7 +46,40 @@ beforeEach(() => {
 });
 
 afterEach(async () => {
+  setCareGuideStoreForTests(null);
   await i18n.changeLanguage('sl');
+});
+
+it('David 2026-10-23: the top bar keeps only name, LIVE and the gear; album, »?« and the exit are settings rows', async () => {
+  // Care guide already seen for pet 7 → it doesn't open by itself.
+  setCareGuideStoreForTests({ getItemAsync: () => Promise.resolve('[7]'), setItemAsync: () => Promise.resolve() });
+  const base = makeLiveChildState({ care_guide: makeCareGuide() });
+  const media = makeMedia({ reference_image_url: 'https://cdn.test/ref.png' });
+  (api.getChildPet as jest.Mock).mockResolvedValue({ ...base, pet: { ...base.pet, media } });
+  renderWithQuery(<ChildHudScreen />);
+  await screen.findByTestId('action-feed');
+
+  const header = screen.getByTestId('hud-header');
+  for (const id of ['hud-album-open', 'hud-care-guide-open', 'hud-logout']) {
+    expect(within(header).queryByTestId(id)).toBeNull();
+  }
+  expect(within(header).getByTestId('hud-settings-open')).toBeTruthy();
+
+  fireEvent.press(screen.getByTestId('hud-settings-open'));
+  const sheet = screen.getByTestId('hud-settings-sheet');
+  const order = within(sheet)
+    .getAllByRole('button')
+    .map((b) => b.props.testID as string | undefined)
+    .filter((id): id is string => id === 'hud-album-open' || id === 'hud-care-guide-open' || id === 'hud-logout');
+  expect(order).toEqual(['hud-album-open', 'hud-care-guide-open', 'hud-logout']);
+  expect(screen.getByTestId('hud-album-open').props.accessibilityLabel).toBe('Odpri album');
+  expect(screen.getByTestId('hud-care-guide-open').props.accessibilityLabel).toBe('Kako skrbim');
+  expect(screen.getByTestId('hud-logout').props.accessibilityLabel).toBe('Odjava');
+
+  // The album is an in-screen layer: the sheet closes and the album opens at once.
+  fireEvent.press(screen.getByTestId('hud-album-open'));
+  expect(screen.queryByTestId('hud-settings-sheet')).toBeNull();
+  expect(useAppStore.getState().isAlbumVisible).toBe(true);
 });
 
 it('the gear button opens the settings sheet; picking English switches the HUD language', async () => {

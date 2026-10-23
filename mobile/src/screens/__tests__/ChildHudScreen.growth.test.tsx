@@ -18,6 +18,7 @@ import {
   makePetProfile,
   makeTwoStageGrowth,
 } from '@/test-utils/fixtures';
+import { pressHudSettingsRow } from '@/test-utils/hudSettings';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
 jest.mock('@/api/client', () => {
@@ -69,7 +70,7 @@ describe('ChildHudScreen — "Album rasti"', () => {
     await renderHud();
     expect(getChildPetGrowth).not.toHaveBeenCalled();
 
-    fireEvent.press(screen.getByTestId('hud-album-open'));
+    pressHudSettingsRow('hud-album-open');
     expect(await screen.findByText(GROWTH_STRINGS.section)).toBeTruthy();
     expect(getChildPetGrowth).toHaveBeenCalledTimes(1);
     expect(within(screen.getByTestId('album-growth-2')).getByText(GROWTH_STRINGS.current)).toBeTruthy();
@@ -82,7 +83,7 @@ describe('ChildHudScreen — "Album rasti"', () => {
   it('an error hides the section silently; the album still works', async () => {
     getChildPetGrowth.mockRejectedValue(new Error('offline'));
     await renderHud();
-    fireEvent.press(screen.getByTestId('hud-album-open'));
+    pressHudSettingsRow('hud-album-open');
     await waitFor(() => expect(getChildPetGrowth).toHaveBeenCalled());
     await waitFor(() => expect(screen.getByTestId('album-item-photo')).toBeTruthy());
     expect(screen.queryByTestId('album-growth')).toBeNull();

@@ -18,6 +18,7 @@ import {
   makeScratchingState,
   makeWandState,
 } from '@/test-utils/fixtures';
+import { pressHudSettingsRow } from '@/test-utils/hudSettings';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 import type { PetUpdatedBroadcast } from '@/types';
 
@@ -138,7 +139,7 @@ describe('ChildHudScreen — pet name (M5-R08)', () => {
   it('the album is titled with the name', async () => {
     const media = makeMedia({ reference_image_url: 'https://cdn.test/ref.png' });
     await renderHud(dogState({ pet: { name: 'Luna', media } }));
-    fireEvent.press(screen.getByTestId('hud-album-open'));
+    pressHudSettingsRow('hud-album-open');
     await flush();
     expect(screen.getByTestId('hud-album')).toHaveTextContent(/Luna/);
   });

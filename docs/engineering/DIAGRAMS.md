@@ -1426,7 +1426,7 @@ flowchart TD
   T --> T1["stored → playable tile"]
   T --> T2["entitled, not stored → grey 'Še ni posnetka'"]
   T --> T3["not entitled → hidden"]
-  HUD["Child HUD header: album button"] -->|"isAlbumVisible"| G["PetAlbum grid (no players)"]
+  HUD["Child HUD settings sheet: Album row"] -->|"isAlbumVisible"| G["PetAlbum grid (no players)"]
   PD["Parent child detail: 'Vsi posnetki kužka' (read-only)"] --> G
   HUD -. "HUD video paused · HUD hidden from a11y" .-> G
   G -->|"tap playable tile"| VW["viewer: photo or ONE looping video (muted + sound toggle, cache)"]

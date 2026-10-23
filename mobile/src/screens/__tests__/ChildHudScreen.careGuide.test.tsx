@@ -9,6 +9,7 @@ import ChildHudScreen from '@/screens/ChildHudScreen';
 import { setCareGuideStoreForTests } from '@/modules/careGuide/careGuideSeen';
 import { useAppStore } from '@/store/appStore';
 import { makeCareGuide, makeLiveChildState, makePet } from '@/test-utils/fixtures';
+import { findHudSettingsRow, pressHudSettingsRow } from '@/test-utils/hudSettings';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
 jest.mock('@/api/client', () => {
@@ -73,7 +74,9 @@ it('opens by itself on the first launch for this pet, then stays closed', async 
     await Promise.resolve();
   });
   expect(screen.queryByTestId('care-guide')).toBeNull();
-  fireEvent.press(screen.getByTestId('hud-care-guide-open'));
+  pressHudSettingsRow('hud-care-guide-open');
+  // The guide waits until the settings sheet is gone (iOS can't stack two modals).
+  expect(screen.queryByTestId('hud-settings-sheet')).toBeNull();
   expect(await screen.findByTestId('care-guide')).toBeTruthy();
 });
 
@@ -92,6 +95,6 @@ it('a cat gets the kitty guide (no walk, wand play instead)', async () => {
 
 it('an older server (no care_guide) shows no »?« button and no card', async () => {
   await renderHud(makeLiveChildState());
-  expect(screen.queryByTestId('hud-care-guide-open')).toBeNull();
+  expect(findHudSettingsRow('hud-care-guide-open')).toBeNull();
   expect(screen.queryByTestId('care-guide')).toBeNull();
 });
