@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `weimaraner` (viri S477–S483; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174) |
 | Izvor | FCI št. 99, skupina 7, sekcija 1.1 (celinski ptičarji, tip »braque«), Nemčija (S477, S478) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 55. mesto »Weimaraner« (S174, prebrano 2026-10-23) |
-| PR-ji | pet-prep #352 (pasma) · portret — · spletna stran — |
+| PR-ji | pet-prep #352 (pasma, združen `8eda9d4`) · portret #353 · spletna stran — |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -29,6 +29,7 @@
 | 2026-10-23 | pravilo runbooka (§3) | marketing: **v aplikaciji da, v marketingu da** — nikoli kot pes za majhne otroke, začetnike ali stanovanje, pes z malo gibanja, pes, ki je lahko dolgo sam, ali s kupiranim repom kot ciljem | veterinarsko odsvetovanje oglaševanja velja le za pse s sploščenim obrazom (BVA S92) | #352 |
 | 2026-10-23 | pravilo runbooka (§3) | barve za AI in izbirnik: **srebrno siv** (portret), srnje siv, mišje siv; nikoli moder, rjav ali s porjavelimi oznakami; belo le majhne lise na prsih in prstih; kratkodlaka različica, naraven (nekupiran) rep | FCI S478 »Silver, roe or mouse grey, as well as shades of these colours.«; diskvalifikacija »Colour other than grey. Blue colouring.« (uteži barv brez vira → `verified: false`; srebrno siva za portret je predlog Claude) | #352 |
 | 2026-10-23 | predlog Claude, David lahko spremeni | ime SL »weimarski ptičar« (slug `weimarski-pticar`); iskalni ključi tudi »vajmarski ptičar«, »weim« | običajno slovensko ime; pri KZS ni preverjeno | #352 |
+| 2026-10-23 | pravilo runbooka (§8) | AI portret: realistična fotografija odraslega psa, srebrno siva kratka dlaka, jantarne oči, naraven (nekupiran) rep, svetla studijska podlaga, naravna razmerja; sprejet v prvem poskusu (zagon 39898014999, koda `8eda9d4`, brez produkcijske namestitve). Odtenek je bolj proti mišje sivi, konica repa malo temnejša — sprejemljivo | barva portreta = najtežja barva iz `breed_appearance.php` | #353 |
 | 2026-10-23 | pravilo runbooka (§2.3) | seznam za vzreditelja (najboljša praksa): BVA/KC shema za komolce, pregled oči BVA/KC/ISDS, BVA/KC shema za kolke | RKC S479 »To support the breed's health, responsible breeders should ensure they complete all tests in Best Practice.« Brez novega ključa | #352 |
 | 2026-10-23 | pravilo runbooka | nov zdravstveni ključ registra **`extra_eyelashes`** (distihiaza — dodatne trepalnice) — mirna poved brez številk | PDSA S480 »a condition in which small eyelashes grow on the inner surface or the very edge of the eye…« | #352 |
 
@@ -40,7 +41,7 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 90 mesecev; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-59 | 2026-10-23 |
 | Česanje 1× na teden (rutina »Počeši«), opozorilo po obroku (60 min), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R16 / M5-R17 | 2026-10-23 |
 | Barva (izbirnik barve: srebrno siv, srnje siv, mišje siv) | 🛠 | 💶 izziv | M5-R21 | 2026-10-23 |
-| AI portret v registru | 🗓 po združitvi (§8) | — | M5-R11-04 | — |
+| AI portret v registru (srebrno siv, sprejet v prvem poskusu, zagon 39898014999) | ✅ | — | M5-R11-04 | 2026-10-23 |
 | Stran na petprep.si (`/animals/dogs/weimaraner`, `/sl/zivali/psi/weimarski-pticar`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
