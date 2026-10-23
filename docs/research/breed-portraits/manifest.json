@@ -723,6 +723,18 @@
             "prompt_hash": "sha256:c4a777085f2974c43d32fb84c062225f26da5e2d335e68be132d67ffbace0045",
             "generated_at": "2026-10-23T02:05:23+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "weimaraner",
+            "species": "dog",
+            "file": "dog/weimaraner.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:701caf8c35ff90c7bfa79971714b91e44e8d8777f0b7bb3278de0cd794cc8e28",
+            "generated_at": "2026-10-23T04:01:21+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
