@@ -1543,5 +1543,24 @@ return [
             ],
         ],
 
+        // M5-R10-58: scottish_terrier.* (S472–S476), runbook rules (data.json
+        // proposed_game_parameters.scottish_terrier.suitability_tags). PDSA (S474) + PetMD (S475); the RKC page was not
+        // reachable (no apartment / large_home). `family_pet` from PetMD (condition: the right training and socialisation)
+        // + PDSA (loyal and devoted to their family), never `children` / `small_children` (no statement). Neither
+        // `other_pets` nor `chases_small_pets`: PDSA "get on well with other pets" vs PetMD "a strong prey drive" —
+        // conflicting sources (runbook rule). No welfare chip, no new vocabulary key.
+        'scottish_terrier' => [
+            'suits' => [
+                // S475 "With the right training and socialization, Scottish Terriers can be good dogs for families."; S474 "… loyal and devoted to their family …"
+                ['tag' => 'family_pet', 'source_ids' => ['S475', 'S474'], 'refs' => ['scottish_terrier.suitability.petmd_family', 'scottish_terrier.suitability.pdsa_family']],
+            ],
+            'consider' => [
+                // S474 "Scotties need daily grooming and will require stripping and clipping by a professional groomer every two-three months."
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S474'], 'refs' => ['scottish_terrier.suitability.pdsa_grooming']],
+                // S475 "you shouldn’t leave your dog alone for extended periods"
+                ['tag' => 'needs_company', 'source_ids' => ['S475'], 'refs' => ['scottish_terrier.behaviour.time_alone', 'scottish_terrier.suitability.petmd_time_alone']],
+            ],
+        ],
+
     ],
 ];

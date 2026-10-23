@@ -61,6 +61,7 @@ return [
     'wirehaired_pointing_griffon' => 'Francoski ostrodlaki ptičar',
     'chesapeake_bay_retriever' => 'Chesapeake Bay retriver',
     'samoyed' => 'Samojed',
+    'scottish_terrier' => 'Škotski terier',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

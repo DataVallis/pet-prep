@@ -351,6 +351,12 @@ return [
         ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Krem'],
         ['key' => 'white-biscuit', 'value' => 'white and biscuit', 'en' => 'White and biscuit', 'sl' => 'Belo-piškotni'],
     ],
+    // M5-R10-58: Kennel Club standard S473 — black, wheaten, brindle of any shade (no other colour).
+    'scottish_terrier' => [
+        ['key' => 'black', 'value' => 'black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'brindle', 'value' => 'brindle', 'en' => 'Brindle', 'sl' => 'Tigrast'],
+        ['key' => 'wheaten', 'value' => 'wheaten', 'en' => 'Wheaten', 'sl' => 'Pšenično rumen'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

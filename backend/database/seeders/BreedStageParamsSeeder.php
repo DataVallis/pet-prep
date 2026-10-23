@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -682,6 +682,24 @@ class BreedStageParamsSeeder extends Seeder
     public const PROPOSED_R10_SAMOYED_SENIOR = 'predlog Claude 2026-10-22 (najbližja vrstica pravila runbooka, M5-R10-57) — čaka Davida';
 
     /**
+     * M5-R10-58 Scottish Terrier (unattended run 2026-10-23, data.json proposed_game_parameters.scottish_terrier.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min (PDSA S474 "Minimum exercise (per day) 1 hour"; RKC page not reachable), senior 45 min, puppy
+     * 10 min × age capped at 60, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 0.7 (Coren rank 65,
+     * Fair); care rates the Border Collie's. The senior boundary uses the closest rule row (PDSA lower bound
+     * "Over 10 years", S474) and is NOT covered by the confirmation: see PROPOSED_R10_SCOTTISH_TERRIER_SENIOR.
+     */
+    public const CONFIRMED_R10_SCOTTISH_TERRIER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-58)';
+
+    /**
+     * M5-R10-58 Scottish Terrier senior boundary / senior arrival (90 months): Claude's suggestion from the closest rule
+     * row (0.75 × PDSA lower bound 10 y, S474) — no runbook rule produced a value (the Dogs Trust McMillan 2024 table S123
+     * and the RKC page were not reachable, no VetCompass median), so the rows are verified=false until David decides
+     * (data.json proposed_game_parameters.scottish_terrier.senior_boundary_months).
+     */
+    public const PROPOSED_R10_SCOTTISH_TERRIER_SENIOR = 'predlog Claude 2026-10-23 (najbližja vrstica pravila runbooka, M5-R10-58) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -843,6 +861,7 @@ class BreedStageParamsSeeder extends Seeder
         'wirehaired_pointing_griffon' => [1, 'S454', 'The Wirehaired Pointing Griffon is an easy-care pet, demanding only weekly brushing, with a bonus of minimal shedding.', 'high', false],
         'chesapeake_bay_retriever' => [1, 'S459', 'Grooming: Once a week', 'high', false],
         'samoyed' => [7, 'S467', 'They shed very often, but even when they’re not shedding they’ll need grooming on daily basis.', 'high', false],
+        'scottish_terrier' => [7, 'S474', 'Scotties need daily grooming and will require stripping and clipping by a professional groomer every two-three months.', 'high', false],
     ];
 
     /**
@@ -946,13 +965,14 @@ class BreedStageParamsSeeder extends Seeder
         'wirehaired_pointing_griffon' => ['S453', 'Wirehaired Pointing Griffons are generally patient and gentle with children when socialized as puppies.'],
         'chesapeake_bay_retriever' => ['S461', 'With proper introductions and socialization, Chessies would be a great addition to a family.'],
         'samoyed' => ['S469', 'As with all dog breeds, Samoyed puppies respond best to training and socialization early in life.'],
+        'scottish_terrier' => ['S475', 'Socializing your Scottish Terrier puppy is important for having a well-mannered, confident dog.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1610,6 +1630,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-57 (docs/research/dog-data/data.json samoyed,
             // S463–S471; runbook rules in proposed_game_parameters.samoyed).
             BreedType::Samoyed => self::samoyedProfile(),
+            // M5-R10-58 (docs/research/dog-data/data.json scottish_terrier,
+            // S472–S476; runbook rules in proposed_game_parameters.scottish_terrier).
+            BreedType::ScottishTerrier => self::scottishTerrierProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -5515,6 +5538,91 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'samoyed.lifespan.pdsa',
                 'quote' => 'Over 10 years',
                 'notes' => 'PDSA "Average lifespan" lower bound (S467). The McMillan 2024 table (Dogs Trust S123) and the RKC page could not be fetched; no VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Scottish Terrier (M5-R10-58). Stage boundaries young / adult, arrival ages, exercise minutes and the learning
+     * multiplier follow the runbook's standing rules (CONFIRMED_R10_SCOTTISH_TERRIER); weight, growth, Coren rank and
+     * lifespan are sourced. The senior boundary is Claude's suggestion (PROPOSED_R10_SCOTTISH_TERRIER_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function scottishTerrierProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_SCOTTISH_TERRIER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S474', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.scottish_terrier.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a small dog reaches adult weight at 9–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, [
+                    'unit' => 'months', 'source_id' => 'S11,S474', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.scottish_terrier.senior_boundary_months', 'decision' => self::PROPOSED_R10_SCOTTISH_TERRIER_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × PDSA lower bound "Over 10 years" (S474) = 7.5 y = 90 months. The Dogs Trust McMillan 2024 table (S123) and the RKC breed page could not be fetched; no VetCompass median. Alternatives: PetMD "around 12 years" (S475) → 108; McMillan 2024 12.7 y via Wikipedia (tier C, S476) → 114; Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.scottish_terrier.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.scottish_terrier.senior_boundary_months', 'decision' => self::PROPOSED_R10_SCOTTISH_TERRIER_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 90 months (0.75 × 10 y, S474).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (9–12 months for a small dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S474', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.scottish_terrier.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Minimum exercise (per day) | 1 hour',
+                'notes' => 'PDSA "Minimum exercise (per day) 1 hour" and "Scotties need around an hour of exercise daily." (S474) → 60 min = 6,000 steps (runbook rule: "minimum N" → N; the RKC page was not reachable).',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.scottish_terrier.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[8.5, 10.5], [
+                'unit' => 'kg', 'source_id' => 'S473', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'scottish_terrier.adult_weight.kc_standard',
+                'quote' => '8.5kg – 10.5kg.',
+                'notes' => 'Kennel Club breed standard (S473), one range for both sexes. PDSA 8.5–10.5 kg (S474) agrees; PetMD 18–22 lb (S475) is an alternative.',
+            ]],
+            'growth_end' => [[9, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'scottish_terrier.growth.adult_weight_reached',
+                'quote' => 'Small (12–24 pounds): 9–12 months',
+                'notes' => 'Size-class value, not breed-specific (KC 8.5–10.5 kg, S473 = the Small class of S10).',
+            ]],
+            'coren_rank' => [65, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'scottish_terrier.trainability.coren_rank',
+                'quote' => '| 65 | Scottish Terrier |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 65, tier "Fair Working/Obedience Intelligence" (ranks 55–69).',
+            ]],
+            'learning_multiplier' => [0.7, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.scottish_terrier.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 65 (S35) in the "Fair" tier (ranks 55–69) → 0.7. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10.0, [
+                'unit' => 'years', 'source_id' => 'S474', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'scottish_terrier.lifespan.pdsa',
+                'quote' => 'Average lifespan | Over 10 years',
+                'notes' => 'PDSA "Average lifespan" lower bound (S474). The McMillan 2024 table (Dogs Trust S123) and the RKC page could not be fetched; no VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
