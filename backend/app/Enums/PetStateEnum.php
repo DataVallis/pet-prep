@@ -101,8 +101,9 @@ enum PetStateEnum: string
     }
 
     /**
-     * M5-T08: the motion of a SEAMLESS LOOP of this state — subtle movement that
-     * stays in the key pose, because the clip starts and ends on the same frame.
+     * M5-T08: the motion of the LOOP of this state — clearly visible natural movement
+     * that stays in the key pose (fix 2026-10-23: the loop is sent with its key image as
+     * the start frame only; a same start / end frame froze the clip on Kling 3.0 Pro).
      */
     public function loopMotion(Species $species = Species::Dog): string
     {
@@ -112,26 +113,26 @@ enum PetStateEnum: string
 
         if ($species === Species::Cat) {
             return match ($this) {
-                self::Idle => 'staying in the same position as in the image, blinking slowly, the tail gently curling, an occasional ear twitch',
-                self::Sleeping => 'asleep and staying curled up the whole time, slow rhythmic breathing, a small ear twitch',
-                self::LowEnergy => 'staying on the windowsill, the tail tip slowly flicking, barely moving',
-                self::Hungry => 'staying seated by the bowl, looking down at it and up again, licking its lips',
-                self::Sick => 'staying in the loaf position, slow calm breathing, not getting up',
-                self::Playing => 'staying crouched, the hindquarters wiggling and the eyes following the dangling toy',
+                self::Idle => 'staying in the same position as in the image, turning the head to look around, blinking, the ears swivelling, the tail curling and flicking, a visible breath and a small shift of weight',
+                self::Sleeping => 'asleep and staying curled up the whole time, the flank clearly rising and falling with each breath, small twitches of the ears, whiskers and paws',
+                self::LowEnergy => 'staying on the windowsill, the tail tip flicking, the head turning to look outside and back, slow visible breathing',
+                self::Hungry => 'staying seated by the bowl, looking down at it, sniffing it and looking up again, licking its lips, the tail swishing',
+                self::Sick => 'staying in the loaf position, visible slow breathing, the eyes half closing and opening, a small ear twitch, not getting up',
+                self::Playing => 'staying crouched, the hindquarters wiggling clearly, the head and eyes following something moving above the frame, the tail twitching',
                 self::Scratching => 'scratching the sofa with steady strokes of the front paws, staying on its hind legs',
                 self::Accident, self::Chewing => throw new InvalidArgumentException("A cat has no '{$this->value}' loop."),
             };
         }
 
         return match ($this) {
-            self::Idle => 'standing in the same spot, breathing gently, looking around, an occasional slow tail wag and ear twitch, without sitting or lying down',
-            self::Sleeping => 'asleep and staying curled up the whole time, slow rhythmic breathing, a small ear twitch',
-            self::LowEnergy => 'lying still, slow tired breathing, the eyelids slowly blinking, barely moving',
-            self::Hungry => 'staying seated by the bowl, looking down at it and up again, licking its lips',
-            self::Sick => 'lying still with slow shallow breathing, not getting up',
-            self::Playing => 'bouncing gently on the front paws in the play bow, tail wagging, staying in place',
-            self::Accident => 'standing by the puddle with a slow low tail wag, glancing up and down, staying in place',
-            self::Chewing => 'chewing the slipper, an occasional tail wag, staying lying down',
+            self::Idle => 'standing in the same spot, breathing visibly, turning the head to look around and sniffing the air, the tail wagging, the ears moving, shifting its weight from paw to paw, without sitting or lying down',
+            self::Sleeping => 'asleep and staying curled up the whole time, the chest clearly rising and falling with each breath, small dreaming twitches of the ears, lips and paws',
+            self::LowEnergy => 'lying down, slow visible tired breathing, the eyelids drooping and blinking, the head lifting a little and resting again, a weak tail thump',
+            self::Hungry => 'staying seated by the bowl, sniffing the bowl, looking up again and licking its lips, the tail sweeping the floor',
+            self::Sick => 'lying down with visible slow breathing, the eyes blinking, the head lifting a little and resting again, not getting up',
+            self::Playing => 'bouncing excitedly on the front paws in the play bow, the tail wagging fast, the head tilting, staying in place',
+            self::Accident => 'standing by the puddle, the tail wagging low, glancing down at the puddle and up at the camera, the ears moving, staying in place',
+            self::Chewing => 'chewing and tugging at the slipper with clear jaw and head movement, the tail wagging, staying lying down',
             self::Scratching => throw new InvalidArgumentException('A dog has no scratching loop.'),
         };
     }

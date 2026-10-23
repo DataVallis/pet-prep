@@ -100,8 +100,8 @@ final class PetMediaPayload
              */
             'transitions' => (object) $this->transitions,
             /**
-             * M5-T08: states whose stored video starts and ends on its key image (loops
-             * without a visible restart); other videos are older clips.
+             * M5-T08: states whose stored video is a loop made from its key image (loop the
+             * native way; since 2026-10-23 start frame only, the seam may differ slightly).
              *
              * @var list<string>
              */

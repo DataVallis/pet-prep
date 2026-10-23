@@ -377,6 +377,12 @@ class PetAppearancePrompt
         return $species === Species::Cat ? self::CAT_VIDEO_NEGATIVE : self::VIDEO_NEGATIVE;
     }
 
+    /** Negative prompt of a start-only clip (a loop / same-pose phase clip, fix 2026-10-23): no "fast motion". */
+    public function loopNegativePrompt(Species $species = Species::Dog): string
+    {
+        return $species === Species::Cat ? self::CAT_LOOP_NEGATIVE : self::LOOP_NEGATIVE;
+    }
+
     /**
      * State video prompt from the pet's DNA (breed + traits) and the state —
      * the start image fixes the look, the text repeats it so the model keeps it.
@@ -417,8 +423,31 @@ class PetAppearancePrompt
     public const KEYFRAME_STYLE = 'Realistic 35mm photograph, sharp focus, true-to-life fur texture and colours. '
         .'Only the animal: no people, no children, no hands, no text, no watermark, no logo.';
 
-    /** Loop clip: start and end frame are the same key image (Kling end_image_url). */
-    public const LOOP_NOTE = 'The clip starts and ends in exactly the pose of the image, so it can loop seamlessly.';
+    /**
+     * Loop clip (fix 2026-10-23): sent with the key image as the START frame only —
+     * Kling 3.0 Pro froze clips whose end frame was the same image. The motion must
+     * be clearly visible; the clip comes back close to the start pose so it can loop.
+     */
+    public const LOOP_NOTE = 'The movement is clearly visible and natural, never a still image; the clip ends close to the starting pose so it can loop.';
+
+    /** Loop style: VIDEO_STYLE's look lock, camera and safety rules — without "subtle, slow". */
+    public const LOOP_STYLE = 'Keep the dog\'s exact appearance, size, coat colours and markings from the image; the same single dog throughout. '
+        .'Static locked-off camera, no zoom, no pan, no cuts, same room and natural light. '
+        .'Realistic, natural, lively dog motion with correct anatomy and weight. No people, no hands, no other animals, no text.';
+
+    public const CAT_LOOP_STYLE = 'Keep the cat\'s exact appearance, size, coat colours and markings from the image; the same single cat throughout. '
+        .'Static locked-off camera, no zoom, no pan, no cuts, same room and natural light. '
+        .'Realistic, natural, lively cat motion with correct anatomy and weight. No people, no hands, no other animals, no text.';
+
+    /** Negative prompt of a start-only clip (loop / same-pose phase): VIDEO_NEGATIVE without "fast motion". */
+    public const LOOP_NEGATIVE = self::NEGATIVE.', camera movement, camera shake, zoom, pan, scene cut, morphing, '
+        .'second dog, other animals, changing fur colour, changing markings, frozen frame, still image, no movement';
+
+    public const CAT_LOOP_NEGATIVE = self::CAT_NEGATIVE.', camera movement, camera shake, zoom, pan, scene cut, morphing, '
+        .'second cat, other animals, changing fur colour, changing markings, frozen frame, still image, no movement';
+
+    /** Phase clip without an end frame (PetPhaseClip::sharesFrames, fix 2026-10-23). */
+    public const SAME_FRAME_PHASE_NOTE = 'The movement is clearly visible and natural, never a still image; it ends close to the starting pose.';
 
     /**
      * M5-T08: the edit prompt of a state's KEY IMAGE — the animal of the
@@ -439,8 +468,9 @@ class PetAppearancePrompt
     }
 
     /**
-     * M5-T08: a state's loop video — subtle motion that stays in the key pose
-     * (start = end = the key image). Same look lock and camera rules as videoPrompt().
+     * M5-T08: a state's loop video — clearly visible natural motion that stays in
+     * the key pose and comes back close to it (start frame = the key image, no end
+     * frame since the fix of 2026-10-23). Same look lock and camera rules as videoPrompt().
      *
      * @param  array<string, string>  $traits
      */
@@ -448,7 +478,7 @@ class PetAppearancePrompt
     {
         $species = self::speciesOf($breedKey);
         $subject = $this->clipSubject($breedKey, $species, $traits, $stage);
-        $style = $species === Species::Cat ? self::CAT_VIDEO_STYLE : self::VIDEO_STYLE;
+        $style = $species === Species::Cat ? self::CAT_LOOP_STYLE : self::LOOP_STYLE;
 
         return 'The same '.$subject.' as in the image, '.$state->loopMotion($species).'. '.self::LOOP_NOTE.' '.$style;
     }
@@ -508,8 +538,11 @@ class PetAppearancePrompt
         $subject = $this->clipSubject($breedKey, $species, $traits, $stage);
         $style = $species === Species::Cat ? self::CAT_CUSTOM_MOTION_STYLE : self::CUSTOM_MOTION_STYLE;
 
+        // Fix 2026-10-23: a same-pose clip gets no end frame — it must move visibly and come back.
+        $ending = $clip->sharesFrames() ? '. '.self::SAME_FRAME_PHASE_NOTE : ', ending exactly in the frame of the end image.';
+
         return 'The same '.$subject.' as in the start image '.$clip->motion()
-            .', ending exactly in the frame of the end image. No toys, no ball, no feather. '.$style;
+            .$ending.' No toys, no ball, no feather. '.$style;
     }
 
     /** @param  array<string, string>  $traits */

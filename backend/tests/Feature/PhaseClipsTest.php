@@ -296,7 +296,7 @@ describe('pipeline for a dog with its own media', function () {
         $queue = phcCalls('https://queue.fal.run/')->values();
         $prompts = $queue->map(fn (Request $r) => (string) $r['prompt']);
         $kind = fn (string $p): string => match (true) {
-            str_contains($p, 'end of the') || str_contains($p, 'frame of the end image') => 'phase',
+            str_contains($p, 'No toys, no ball, no feather') => 'phase',
             str_contains($p, 'pose of the end image') => 'transition',
             default => 'loop',
         };
@@ -321,9 +321,10 @@ describe('pipeline for a dog with its own media', function () {
 
         $byPrompt = fn (string $needle) => $phaseSubmits->first(fn (Request $r) => str_contains((string) $r['prompt'], $needle));
         $sitDown = $byPrompt('sits down on command');
-        $sitHold = $byPrompt('holds the sit');
+        $sitHold = $byPrompt('stays sitting proudly');
+        // Fix 2026-10-23: a same-pose clip (success pose → pose) gets NO end frame; performing keeps it.
         expect($sitDown['end_image_url'])->toBe($sitHold['start_image_url'])
-            ->and($sitHold['start_image_url'])->toBe($sitHold['end_image_url'])
+            ->and($sitHold->data())->not->toHaveKey('end_image_url')
             ->and($sitDown['start_image_url'])->not->toBe($sitDown['end_image_url']);
 
         // Pose images: Nano Banana Pro Edit of the reference image, after the key images.

@@ -1520,13 +1520,13 @@ sequenceDiagram
 
 Admin: Feature switches → "Unique AI media per pet" (default off); AI media → Shared looks → Regenerate (one new generation per look row of the stages its active pets are at, for all those pets; other stages stay READY; outcome queued / busy / no active pets / AI off). A paid breed without a colour list still shares (colour from its appearance weights). Free breeds keep §10d.
 
-### 10e. Media per state: key images, seamless loops, transitions (M5-T08, 2026-10-21)
+### 10e. Media per state: key images, loops, transitions (M5-T08, 2026-10-21; loops start-only since 2026-10-23)
 
 ```mermaid
 flowchart TD
-  A[Reference image of the stage<br/>Nano Banana Pro · = idle pose] --> L0[idle loop<br/>Kling 3.0 Pro 5 s<br/>start = end = reference image]
+  A[Reference image of the stage<br/>Nano Banana Pro · = idle pose] --> L0[idle loop<br/>Kling 3.0 Pro 5 s<br/>start = reference image · no end frame]
   A --> K{{Key image per state<br/>Nano Banana Pro Edit of the reference image<br/>sleeping · hungry · playing · low_energy · sick …}}
-  K --> L1[state loop<br/>start = end = key image<br/>end_image_url]
+  K --> L1[state loop<br/>start = key image · no end_image_url<br/>same start/end froze the clip — fix 2026-10-23]
   K --> T[transitions idle_to_sleeping / sleeping_to_idle<br/>start = pose A · end = pose B]
   L0 --> T
   subgraph Gate [MediaEntitlementService::usesStateMedia]
@@ -1547,7 +1547,7 @@ sequenceDiagram
   S->>KJ: key images in preparation order (sleeping, hungry, playing, …)
   KJ->>Fal: edit(reference image, pose prompt) — claim, ledger 0.15 $
   Fal-->>KJ: image URL → St (key image stored) → queueStateVideos again
-  S->>VJ: that state's loop (start = end = key image)
+  S->>VJ: that state's loop (start = key image, no end frame — fix 2026-10-23)
   Note over S: transitions only after every first-minutes clip (idle, sleeping, hungry) is on its way
   S->>VJ: transition (start = pose A, end = pose B)
   VJ->>Fal: submit Kling + webhook — claim, ledger 0.56 $
@@ -1579,6 +1579,7 @@ flowchart LR
   subgraph Gate [phaseClipsFor = switch »School & game clips« + usesStateMedia + version 3 + group]
     G[ball: dog · wand: cat · school: training on · 3 s Kling 3.0 Pro, 0.336 $ each]
   end
+  N[same start + end pose: attention · success · ball_waiting · wand_pouncing<br/>→ start frame only, motion prompt — fix 2026-10-23]
 ```
 
 ```mermaid

@@ -440,7 +440,7 @@ class PetMediaService
     }
 
     /** M5-T09 / T10: is a pose image / phase clip (or key image / transition) part of the pet's set now? */
-    private function wantsPoseMedia(Pet $pet, PetMedia $slot): bool
+    public function wantsPoseMedia(Pet $pet, PetMedia $slot): bool
     {
         return match ($slot->kind) {
             PetMedia::KIND_POSE => in_array($slot->pose(), $this->entitlements->posesFor($pet), true),
@@ -740,6 +740,8 @@ class PetMediaService
             'profile' => $submitted['profile'],
             'duration_seconds' => $submitted['duration_seconds'],
             'source_generation' => $image->generation,
+            // Fix 2026-10-23: `start_only` for a same-pose phase clip (no end frame), else null.
+            'recipe' => $submitted['recipe'],
         ]);
         $this->syncCost($slot);
 
@@ -785,15 +787,23 @@ class PetMediaService
         return true;
     }
 
-    /** M5-T08: the recipe a state video submit of this slot uses now (see submitVideo / submitLookVideo). */
+    /**
+     * M5-T08: the recipe a clip submit of this slot uses now (see submitVideo / submitLookVideo /
+     * submitTransition). Fix 2026-10-23: loops and same-pose phase clips are `start_only`.
+     */
     private function adoptedRecipe(PetMedia $slot): ?string
     {
+        if ($slot->isPhase()) {
+            return ($slot->phaseClip()?->sharesFrames() ?? false) ? PetMedia::RECIPE_START_ONLY : null;
+        }
+
         if (! $slot->isVideo()) {
             return null;
         }
 
         if ($slot->isLookMedia()) {
-            return $slot->recipe;
+            // A look row marked for a loop (recipe set) is submitted as a start-only loop.
+            return $slot->recipe !== null ? PetMedia::RECIPE_START_ONLY : null;
         }
 
         $pet = $slot->pet;
@@ -803,7 +813,7 @@ class PetMediaService
             return null;
         }
 
-        return $this->profiles->stateVideo()->supportsEndImage() ? PetMedia::RECIPE_LOOP : PetMedia::RECIPE_POSE;
+        return PetMedia::RECIPE_START_ONLY;
     }
 
     /**
@@ -1418,7 +1428,7 @@ class PetMediaService
         }
 
         // M5-T08: key images of the states (idle = the reference image), transition
-        // clips and which stored videos are seamless loops (start = end = key image).
+        // clips and which stored videos are loops made from the key image (PetMedia::isStateLoop).
         $keyframes = [];
         $loops = [];
         foreach ($slots as $m) {
@@ -1430,7 +1440,7 @@ class PetMediaService
 
             if ($m->isKeyframe()) {
                 $keyframes[$state->value] = $this->signedUrl($m, $expires);
-            } elseif ($m->isVideo() && $m->recipe === PetMedia::RECIPE_LOOP && isset($videos[$state->value])) {
+            } elseif ($m->isStateLoop() && isset($videos[$state->value])) {
                 $loops[] = $state->value;
             }
         }
@@ -1837,7 +1847,7 @@ class PetMediaService
      * look's key images / transitions of that stage are needed and its clips are made
      * as loops)? False while the switch is off.
      */
-    private function lookStateMediaWanted(PetLook $look, string $stage, ?PetMedia $row = null): bool
+    public function lookStateMediaWanted(PetLook $look, string $stage, ?PetMedia $row = null): bool
     {
         // M5-T09 / T10: a pose / phase look row only while a pet of the look at the stage wants it
         // (state media version 3 + the clip's group) — never for a look only older pets use.
@@ -2016,7 +2026,7 @@ class PetMediaService
                 }
 
                 PetMedia::query()->whereKey($row->id)->where('status', PetMedia::STATUS_PENDING)->whereNull('request_id')
-                    ->update(['recipe' => PetMedia::RECIPE_LOOP]);
+                    ->update(['recipe' => PetMedia::RECIPE_START_ONLY]);
                 $row->refresh();
             }
         }
@@ -2126,11 +2136,11 @@ class PetMediaService
                 $clip !== null => $this->fal->submitPhaseClipFor(
                     $look->breed_type->value, $look->traits(), $stage, $clip,
                     $this->falFetchUrl($start), $this->falFetchUrl($end), null, $row->id,
-                ) + ['recipe' => null],
+                ),
                 $transition !== null => $this->fal->submitTransitionFor(
                     $look->breed_type->value, $look->traits(), $stage, $transition,
                     $this->falFetchUrl($start), $this->falFetchUrl($end), null, $row->id,
-                ) + ['recipe' => null],
+                ),
                 $pose !== null => $this->fal->submitLoopVideoFor(
                     $look->breed_type->value, $look->traits(), $stage, $state, $this->falFetchUrl($pose), null, $row->id,
                 ),
@@ -2157,7 +2167,8 @@ class PetMediaService
             'profile' => $submitted['profile'],
             'duration_seconds' => $submitted['duration_seconds'],
             'source_generation' => $image->generation,
-            'recipe' => $frames !== null ? null : $submitted['recipe'],
+            // Fix 2026-10-23: `start_only` for loops / same-pose phase clips, null otherwise.
+            'recipe' => $submitted['recipe'],
         ]);
         $this->syncCost($row);
 

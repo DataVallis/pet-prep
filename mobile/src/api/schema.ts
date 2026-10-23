@@ -2217,8 +2217,8 @@ export interface components {
                     [key: string]: string;
                 };
                 /**
-                 * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                 *     without a visible restart); other videos are older clips.
+                 * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                 *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                  */
                 loops: string[];
                 /**
@@ -3888,8 +3888,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -4668,8 +4668,8 @@ export interface operations {
                                     [key: string]: string;
                                 };
                                 /**
-                                 * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                 *     without a visible restart); other videos are older clips.
+                                 * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                 *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                  */
                                 loops: string[];
                                 /**
@@ -5468,8 +5468,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -6266,8 +6266,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -7064,8 +7064,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -7862,8 +7862,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -8660,8 +8660,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -9462,8 +9462,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -10264,8 +10264,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -11066,8 +11066,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -11864,8 +11864,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -12666,8 +12666,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -13464,8 +13464,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -14262,8 +14262,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -15064,8 +15064,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -15862,8 +15862,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -16664,8 +16664,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -17462,8 +17462,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -18264,8 +18264,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -19066,8 +19066,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -19868,8 +19868,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -21305,8 +21305,8 @@ export interface operations {
                                     [key: string]: string;
                                 };
                                 /**
-                                 * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                 *     without a visible restart); other videos are older clips.
+                                 * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                 *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                  */
                                 loops: string[];
                                 /**
@@ -21583,8 +21583,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**
@@ -22035,8 +22035,8 @@ export interface operations {
                                         [key: string]: string;
                                     };
                                     /**
-                                     * @description M5-T08: states whose stored video starts and ends on its key image (loops
-                                     *     without a visible restart); other videos are older clips.
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
                                      */
                                     loops: string[];
                                     /**

@@ -7,6 +7,7 @@ use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\User;
 use App\Services\AppSettingsService;
+use App\Services\Media\FrozenClipRegenerator;
 use App\Services\Media\MediaProfiles;
 use App\Services\Media\PetMediaService;
 use App\Services\Media\PetPreparationService;
@@ -115,7 +116,9 @@ class MediaRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('state')->placeholder('—'),
                 Tables\Columns\TextColumn::make('recipe')->label('Made as')
                     ->getStateUsing(fn (PetMedia $record): ?string => match (true) {
-                        $record->isVideo() && $record->recipe === PetMedia::RECIPE_LOOP => 'loop (key image → key image)',
+                        $record->isVideo() && $record->recipe === PetMedia::RECIPE_LOOP => 'loop (key image → key image, frozen — regenerate)',
+                        $record->isVideo() && $record->recipe === PetMedia::RECIPE_START_ONLY => 'loop (from key image, start frame only)',
+                        $record->isPhase() && $record->recipe === PetMedia::RECIPE_START_ONLY => 'start frame only',
                         $record->isVideo() && $record->recipe === PetMedia::RECIPE_POSE => 'from key image',
                         $record->isVideo() => 'from reference image',
                         $record->isTransition() => 'pose → pose',
@@ -172,6 +175,35 @@ class MediaRelationManager extends RelationManager
                     ->action(function (): void {
                         $done = app(PetMediaService::class)->generateMissing($this->pet(), upgradeStateMedia: true);
                         self::queuedNotification($done);
+                    }),
+                // Fix 2026-10-23: remake loops / same-pose phase clips stored the frozen way
+                // (same start + end frame on Kling) — FrozenClipRegenerator, audited.
+                Tables\Actions\Action::make('regenerateFrozen')
+                    ->label('Regenerate frozen clips')
+                    ->icon('heroicon-o-play')
+                    ->color('warning')
+                    ->requiresConfirmation()
+                    ->modalDescription(function (): string {
+                        $plan = app(FrozenClipRegenerator::class)->plan($this->pet()->id);
+
+                        return sprintf('%d loop(s) + %d school / game clip(s) were made with the same start and end frame and play almost frozen. They are remade from the start frame only (estimated $%.2f, counts against the AI budget).%s The current clips stay visible until the new ones are stored.',
+                            $plan['loops'], $plan['phases'], $plan['cost_usd'],
+                            $plan['looks'] !== [] ? ' This pet shows a shared look: the look\'s clips are remade once and every pet on that look gets them.' : '');
+                    })
+                    ->visible(fn (): bool => self::isSuperadmin() && app(FrozenClipRegenerator::class)->plan($this->pet()->id)['rows']->isNotEmpty())
+                    ->action(function (): void {
+                        $user = auth()->user();
+                        $result = app(FrozenClipRegenerator::class)->regenerate($user instanceof User ? $user : null, $this->pet()->id);
+
+                        Notification::make()
+                            ->title(match ($result['outcome']) {
+                                'queued' => "{$result['queued']} frozen clip(s) queued",
+                                'budget' => sprintf('Not queued: $%.2f does not fit the AI budget now', $result['cost_usd']),
+                                'ai_off' => 'Not queued: fal.ai disabled or its balance exhausted',
+                                default => 'No frozen clips',
+                            })
+                            ->status($result['outcome'] === 'queued' ? 'success' : 'warning')
+                            ->send();
                     }),
             ])
             ->actions([

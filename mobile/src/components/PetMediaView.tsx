@@ -197,7 +197,7 @@ const VideoLayer = memo(function VideoLayer({ id, url, opacity, playing, loop, o
   });
   const localSource = isLocalMediaUri(source.uri);
   const player = useVideoPlayer(source, (p) => {
-    // M5-T08: a state loop starts and ends on its key image → the native loop is seamless.
+    // M5-T08: a state loop starts on its key image and ends close to it → native loop.
     p.loop = loop;
     p.muted = true;
     p.audioMixingMode = 'mixWithOthers';
