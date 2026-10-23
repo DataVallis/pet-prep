@@ -7,8 +7,11 @@
     "invite": "Kuža ti prinaša žogo. Se igrava?",
     "start": "Igraj se",
     "hint": "Povleci žogo navzgor, da jo vržeš.",
+    "holdHint": "Pridrži žogo ali gumb, da nabereš moč, in spusti, da jo vržeš.",
     "throwButton": "Vrzi žogo",
     "throwA11y": "Vrzi žogo kužku",
+    "charging": "Moč meta: {{percent}} %",
+    "holdA11yHint": "Pridrži za močnejši met, spusti za met.",
     "progress": "Met {{n}} od 3",
     "fetching": "Kuža teče po žogo …",
     "done": "Hvala za igro! Kuža je ves vesel."

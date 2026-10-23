@@ -4,11 +4,14 @@
  * - Swipe: the same `beginRub` / `moveRub` / `endRub` strokes as before (server unchanged);
  *   the brush follows the finger, sparkles come out of the coat, the patch nearest to the
  *   finger fades with every counted stroke, the bar fills (`brushing.ts`).
- * - Hold (no swiping needed): a finger resting on the pet for `HOLD_START_MS`, or holding the
+ * - Hold (no swiping needed) — only in `gestureMode="hold"` (M5-T17 »Lažje kretnje« or a
+ *   running screen reader): a finger resting on the pet for `HOLD_START_MS`, or holding the
  *   "Počeši" button, brushes on its own at the irregular `HOLD_GAPS_MS` rhythm; a short tap
- *   on the button is one stroke (as before).
- * - VoiceOver / TalkBack: the stage is one element with the "activate" action (= one stroke)
- *   and the button keeps its label; the bar is a `progressbar` with its value.
+ *   on the button is one stroke. In `swipe` mode there is no hold and no button.
+ * - VoiceOver / TalkBack (always hold mode): the stage is one element with the "activate"
+ *   action (= one stroke) and the button keeps its label; the bar is a `progressbar`.
+ * - The same component scrubs the weekly litter change in hold mode (M5-T17): patches on the
+ *   box, the bar fills, same strokes.
  * - Reduce motion: no sparkles, patches change without a fade.
  */
 
@@ -31,10 +34,13 @@ import {
 } from '@/modules/catCare/brushing';
 import { beginRub, endRub, moveRub, type ChoreRules, type Point, type RubTracker } from '@/modules/catCare/catGames';
 import { styles as partStyles } from '@/modules/catCare/CatGameParts';
+import type { GestureMode } from '@/modules/gestures/easyGestures';
 import { alpha, palette, radius } from '@/theme';
 
 export interface BrushTexts {
   holdHint: string;
+  /** The hint in swipe mode (no hold, no button). */
+  swipeHint: string;
   clean: string;
   action: string;
   holdA11yHint: string;
@@ -53,13 +59,18 @@ export interface BrushAreaProps {
   /** Hide the stroke button (while finishing). */
   hideButton: boolean;
   reduceMotion: boolean;
+  /** M5-T17: `hold` = hold on the stage + the stroke button + the "activate" action; `swipe` = swipe only. */
+  gestureMode: GestureMode;
   msAt: (touchTimestamp?: number | null) => number;
   /** Record a stroke (ms on the game clock) — the same input the server scores. */
   onStroke: (ms: number) => void;
   testID: string;
 }
 
-export function BrushArea({ rules, renderStage, texts, stageA11y, strokeLabel, strokeA11y, disabled, hideButton, reduceMotion, msAt, onStroke, testID }: BrushAreaProps) {
+export function BrushArea({ rules, renderStage, texts, stageA11y, strokeLabel, strokeA11y, disabled, hideButton, reduceMotion, gestureMode, msAt, onStroke, testID }: BrushAreaProps) {
+  const holdMode = gestureMode === 'hold';
+  const holdModeRef = useRef(holdMode);
+  holdModeRef.current = holdMode;
   const patches = useMemo(() => layoutPatches(rules.segments), [rules.segments]);
   const [brush, setBrush] = useState<BrushState>(() => initialBrush(patches.length));
   const brushRef = useRef(brush);
@@ -114,8 +125,8 @@ export function BrushArea({ rules, renderStage, texts, stageA11y, strokeLabel, s
   );
   useEffect(() => stopHold, [stopHold]);
   useEffect(() => {
-    if (disabled) stopHold();
-  }, [disabled, stopHold]);
+    if (disabled || !holdMode) stopHold();
+  }, [disabled, holdMode, stopHold]);
 
   // ── Swipe ──
   const rub = useRef<RubTracker | null>(null);
@@ -133,11 +144,13 @@ export function BrushArea({ rules, renderStage, texts, stageA11y, strokeLabel, s
           lastPoint.current = origin.current;
           rub.current = beginRub(origin.current, msAtRef.current(e.nativeEvent.timestamp));
           fx.move(origin.current, e.nativeEvent.timestamp ?? 0);
-          // A finger that rests on the pet starts the hold brushing.
-          holdCount.current = 0;
-          holdPoint.current = origin.current;
-          holding.current = true;
-          scheduleHold(HOLD_START_MS);
+          // Hold mode: a finger that rests on the pet starts the hold brushing.
+          if (holdModeRef.current) {
+            holdCount.current = 0;
+            holdPoint.current = origin.current;
+            holding.current = true;
+            scheduleHold(HOLD_START_MS);
+          }
         },
         onPanResponderMove: (e, g) => {
           if (rub.current === null) return;
@@ -205,11 +218,11 @@ export function BrushArea({ rules, renderStage, texts, stageA11y, strokeLabel, s
         onLayout={onLayout}
         {...responder.panHandlers}
         accessible
-        accessibilityRole="button"
+        accessibilityRole={holdMode ? 'button' : undefined}
         accessibilityLabel={stageA11y}
-        accessibilityHint={texts.holdA11yHint}
-        accessibilityActions={[{ name: 'activate', label: texts.action }]}
-        onAccessibilityAction={onA11yAction}
+        accessibilityHint={holdMode ? texts.holdA11yHint : undefined}
+        accessibilityActions={holdMode ? [{ name: 'activate', label: texts.action }] : undefined}
+        onAccessibilityAction={holdMode ? onA11yAction : undefined}
         testID={`${testID}-stage-touch`}
       >
         <View style={partStyles.running} pointerEvents="none">
@@ -227,9 +240,9 @@ export function BrushArea({ rules, renderStage, texts, stageA11y, strokeLabel, s
         <View style={[brushStyles.fill, { width: `${Math.round(progress.fraction * 100)}%` }]} testID={`${testID}-bar-fill`} />
       </View>
       <Text style={[partStyles.muted, brushStyles.center, progress.allClean && partStyles.doneText]} testID={`${testID}-brush-hint`} accessibilityLiveRegion="polite">
-        {progress.allClean ? texts.clean : texts.holdHint}
+        {progress.allClean ? texts.clean : holdMode ? texts.holdHint : texts.swipeHint}
       </Text>
-      {!hideButton && (
+      {holdMode && !hideButton && (
         <Pressable
           accessibilityRole="button"
           accessibilityLabel={strokeA11y}

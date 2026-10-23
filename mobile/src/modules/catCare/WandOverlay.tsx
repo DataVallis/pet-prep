@@ -9,14 +9,18 @@
  *    feather (`moveWandStroke`) with `away` = it got further from the cat. The cat stalks,
  *    crouches and pounces at the server's `pounces_ms` (an "away" move within 2 s answers a
  *    pounce) and catches the feather at the end. Quarter dots show the spread over the minute.
- *    "Umakni pero" records an away move for VoiceOver / TalkBack and anyone who can't drag.
+ *    M5-T17 »Lažje kretnje« (hold mode = the parent's switch or a running screen reader): a
+ *    finger held on the stage, or the »Pomigaj s palico« button held, makes the feather run
+ *    from the cat on its own (an "away" move at the irregular `WAND_HOLD_GAPS_MS`); a tap on
+ *    the button = one move; the button keeps its screen-reader label. Swipe mode = drag only.
+ *    Same `{t, away}` moves, same server verdict.
  * 3. The server's verdict: counts (meter, routine) or a friendly "try again" — never shaming;
  *    an aborted / failed game has no consequence (CAT_SPEC §5.2).
  * "Ustavi" (×) during the game stops it locally (nothing sent, no penalty).
  */
 
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { Animated, PanResponder, Pressable, ScrollView, View, type LayoutChangeEvent } from 'react-native';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Animated, PanResponder, Pressable, ScrollView, StyleSheet, View, type LayoutChangeEvent } from 'react-native';
 import { Feather, MoveUpRight } from 'lucide-react-native';
 import { useQueryClient } from '@tanstack/react-query';
 
@@ -56,6 +60,9 @@ import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { mediaModeOf } from '@/modules/display/display';
 import { phasePlayback, usesPhaseClips, wandMomentAt } from '@/modules/petMedia/phasePlayer';
 import type { ClockSources } from '@/modules/training/game';
+import { useGestureMode, type GestureMode } from '@/modules/gestures/easyGestures';
+import { WAND_HOLD_FIRST_MS, wandHoldFeatherAt, wandHoldGap } from '@/modules/gestures/holdPlay';
+import { HOLD_SLOP_PT } from '@/modules/catCare/brushing';
 import { palette } from '@/theme';
 
 const W = WAND_STRINGS;
@@ -92,6 +99,7 @@ function poseOf(action: CatAction): CatPose {
 export default function WandOverlay({ view, onClose, reduceMotion, clock, testID = 'cat-wand' }: WandOverlayProps) {
   const queryClient = useQueryClient();
   const game = useWandGame(view, { clock });
+  const gestureMode = useGestureMode(view);
   const { phase } = game;
   const wand = view.cat.wand;
   const busy = phase.kind === 'starting' || phase.kind === 'finishing';
@@ -139,6 +147,7 @@ export default function WandOverlay({ view, onClose, reduceMotion, clock, testID
           finishing={phase.kind === 'finishing'}
           resumed={phase.resumedAtMs !== null}
           reduceMotion={reduceMotion}
+          gestureMode={gestureMode}
           msAt={game.msAt}
           onMove={(move) => game.setInput((moves) => addWandMove(moves, move, phase.session.duration_ms))}
           onMediaExpired={onMediaExpired}
@@ -211,6 +220,7 @@ function WandRunning({
   finishing,
   resumed,
   reduceMotion,
+  gestureMode,
   msAt,
   onMove,
   onMediaExpired,
@@ -223,6 +233,7 @@ function WandRunning({
   finishing: boolean;
   resumed: boolean;
   reduceMotion: boolean;
+  gestureMode: GestureMode;
   msAt: (touchTimestamp?: number | null) => number;
   onMove: (move: WandMove) => void;
   onMediaExpired: () => void;
@@ -233,6 +244,8 @@ function WandRunning({
   const feedback = wandFeedbackAt(session, moves, elapsedMs);
   const status = catLine(frame.cat);
   useAnnounce(status);
+  const reduceMotionRef = useRef(reduceMotion);
+  reduceMotionRef.current = reduceMotion;
 
   const [size, setSize] = useState({ width: 0, height: 0 });
   const sizeRef = useRef(size);
@@ -248,6 +261,44 @@ function WandRunning({
   const disabled = finishing || frame.over;
   const disabledRef = useRef(disabled);
   disabledRef.current = disabled;
+  const holdMode = gestureMode === 'hold';
+  const holdModeRef = useRef(holdMode);
+  holdModeRef.current = holdMode;
+
+  // ── M5-T17 hold: the feather runs from the cat on its own while a finger is held ──
+  const holdTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const holdCount = useRef(0);
+  const stopHold = useCallback(() => {
+    if (holdTimer.current !== null) clearTimeout(holdTimer.current);
+    holdTimer.current = null;
+  }, []);
+  /** One "away" move: the feather jumps further from the cat (animated unless reduce motion). */
+  const holdMove = useCallback(() => {
+    if (disabledRef.current) return;
+    const at = wandHoldFeatherAt(holdCount.current);
+    const target = { x: at.x * sizeRef.current.width - FEATHER_SIZE / 2, y: Math.max(0, at.y * sizeRef.current.height - FEATHER_SIZE / 2) };
+    if (reduceMotionRef.current) feather.setValue(target);
+    else Animated.timing(feather, { toValue: target, duration: 260, useNativeDriver: true }).start();
+    onMoveRef.current({ t: msAtRef.current(null), away: true });
+    holdCount.current += 1;
+  }, [feather]);
+  const scheduleHold = useCallback(
+    (delay: number) => {
+      stopHold();
+      holdTimer.current = setTimeout(() => {
+        holdTimer.current = null;
+        if (disabledRef.current) return;
+        holdMove();
+        scheduleHold(wandHoldGap(holdCount.current));
+      }, delay);
+    },
+    [holdMove, stopHold],
+  );
+  useEffect(() => stopHold, [stopHold]);
+  useEffect(() => {
+    if (disabled || !holdMode) stopHold();
+  }, [disabled, holdMode, stopHold]);
+  const holding = useRef(false);
 
   const onLayout = (e: LayoutChangeEvent) => {
     const { width, height } = e.nativeEvent.layout;
@@ -266,8 +317,19 @@ function WandRunning({
           origin.current = p;
           feather.setValue({ x: p.x - FEATHER_SIZE / 2, y: p.y - FEATHER_SIZE / 2 });
           tracker.current = beginWandStroke(p, msAtRef.current(e.nativeEvent.timestamp), catAt());
+          // Hold mode: a finger resting on the stage makes the feather run on its own.
+          if (holdModeRef.current) {
+            holding.current = true;
+            scheduleHold(WAND_HOLD_FIRST_MS);
+          }
         },
         onPanResponderMove: (e, g) => {
+          if (holding.current && Math.hypot(g.dx, g.dy) > HOLD_SLOP_PT) {
+            // It's a drag (the swipe game takes over).
+            holding.current = false;
+            stopHold();
+          }
+          if (holding.current) return;
           const p = { x: origin.current.x + g.dx, y: origin.current.y + g.dy };
           feather.setValue({ x: p.x - FEATHER_SIZE / 2, y: p.y - FEATHER_SIZE / 2 });
           if (tracker.current === null) return;
@@ -276,18 +338,26 @@ function WandRunning({
           if (step.move !== null) onMoveRef.current(step.move);
         },
         onPanResponderRelease: (e, g) => {
-          if (tracker.current === null) return;
+          const wasHolding = holding.current;
+          holding.current = false;
+          stopHold();
+          if (tracker.current === null || wasHolding) {
+            tracker.current = null;
+            return;
+          }
           const p = { x: origin.current.x + g.dx, y: origin.current.y + g.dy };
           const move = endWandStroke(tracker.current, p, msAtRef.current(e.nativeEvent.timestamp), catAt());
           tracker.current = null;
           if (move !== null) onMoveRef.current(move);
         },
         onPanResponderTerminate: () => {
+          holding.current = false;
+          stopHold();
           tracker.current = null;
         },
       }),
     // `catAt` reads refs only.
-    [feather],
+    [feather, scheduleHold, stopHold],
   );
 
   // The cat leaps up a little when it pounces (no movement with "reduce motion").
@@ -368,22 +438,43 @@ function WandRunning({
           </Text>
         )}
       </View>
+      {holdMode && !finishing && (
+        <Text style={[styles.muted, wandStyles.center]} testID={`${testID}-hold-hint`}>
+          {W.holdHint}
+        </Text>
+      )}
       {finishing ? (
         <Busy text={C.finishing} testID={`${testID}-finishing`} />
-      ) : (
+      ) : holdMode ? (
+        // M5-T17: a tap = one move; holding = the feather keeps running from the cat.
         <Pressable
-          testID={`${testID}-pull-away`}
+          testID={`${testID}-wave`}
           accessibilityRole="button"
-          accessibilityLabel={W.pullAwayA11y}
+          accessibilityLabel={W.waveWandA11y}
+          accessibilityHint={W.holdA11yHint}
           accessibilityState={{ disabled }}
           disabled={disabled}
-          onPress={() => onMove({ t: msAt(null), away: true })}
+          onPressIn={() => {
+            if (disabledRef.current) return;
+            holdCount.current = 0;
+            scheduleHold(WAND_HOLD_FIRST_MS);
+          }}
+          onPressOut={stopHold}
+          onPress={() => {
+            // A short tap (no held move yet) = one move, as the old button.
+            if (holdCount.current === 0) holdMove();
+            holdCount.current = 0;
+          }}
           style={({ pressed }) => [styles.secondaryButton, disabled && styles.disabled, pressed && styles.pressed]}
         >
           <MoveUpRight color={palette.mint} size={18} />
-          <Text style={styles.secondaryText}>{W.pullAway}</Text>
+          <Text style={styles.secondaryText}>{W.waveWand}</Text>
         </Pressable>
-      )}
+      ) : null}
     </View>
   );
 }
+
+const wandStyles = StyleSheet.create({
+  center: { textAlign: 'center' },
+});

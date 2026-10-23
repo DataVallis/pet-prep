@@ -5,8 +5,12 @@
  *
  * - `pick`: Žoga / Crkljanje.
  * - Ball game (§4.2): swipe the ball up and let go → the dog runs after it and brings it
- *   back; 3 throws = done. Every throw counts (no miss, no score). "Vrzi žogo" does the
- *   same for VoiceOver / TalkBack and anyone who can't swipe; no time limit between throws.
+ *   back; 3 throws = done. Every throw counts (no miss, no score); no time limit between
+ *   throws. M5-T17 »Lažje kretnje« (hold mode = the parent's switch or a running screen
+ *   reader): press and hold the ball or »Vrzi žogo« to charge the throw (a power bar fills
+ *   over `BALL_CHARGE_MS`), let go to throw; a screen reader's tap throws at once. The power
+ *   only changes how high the drawn ball flies — the throw, its timing and the report are the
+ *   same. Swipe mode = swipe only (no button).
  * - Cuddles (§4.3): stroke the dog with a finger (≥ 60 pt of path per stroke, any
  *   direction); a heart per stroke; 5 strokes = done. "Drži in pobožaj" — holding it 3 s
  *   replaces the strokes; a screen reader's activate action cuddles at once.
@@ -61,6 +65,8 @@ import {
   type PlayKind,
 } from '@/modules/play/play';
 import type { PlayOverlayMode } from '@/store/appStore';
+import { useGestureMode, type GestureMode } from '@/modules/gestures/easyGestures';
+import { BALL_CHARGE_MS, ballFlightHeight, chargePower } from '@/modules/gestures/holdPlay';
 import { MIN_TOUCH, alpha, fonts, palette, radius, tightTracking } from '@/theme';
 
 export interface PlayOverlayProps {
@@ -135,11 +141,16 @@ function DogEmoji({ offset, cat = false }: { offset: Animated.Value | Animated.A
 interface GameProps {
   view: ChildPetView;
   reduceMotion: boolean;
+  /** M5-T17: only the ball game uses it (cuddles keep their own hold). */
+  gestureMode?: GestureMode;
   onDone: () => void;
   onMediaExpired?: () => void;
 }
 
-function BallGame({ view, reduceMotion, onDone, onMediaExpired }: GameProps) {
+function BallGame({ view, reduceMotion, gestureMode = 'swipe', onDone, onMediaExpired }: GameProps) {
+  const holdMode = gestureMode === 'hold';
+  const holdModeRef = useRef(holdMode);
+  holdModeRef.current = holdMode;
   const [ball, setBall] = useState<BallState>(BALL_START);
   const ballRef = useRef(ball);
   ballRef.current = ball;
@@ -160,11 +171,24 @@ function BallGame({ view, reduceMotion, onDone, onMediaExpired }: GameProps) {
     [],
   );
 
-  const doThrow = useCallback(() => {
+  // M5-T17 hold: the charge (0…1) of the throw being held; null = not charging.
+  const [power, setPower] = useState<number | null>(null);
+  const [lastPower, setLastPower] = useState(1);
+  const chargeStart = useRef<number | null>(null);
+  const charge = useRef(new Animated.Value(0)).current;
+  const chargeTick = useRef<ReturnType<typeof setInterval> | null>(null);
+  const stopChargeTick = useCallback(() => {
+    if (chargeTick.current !== null) clearInterval(chargeTick.current);
+    chargeTick.current = null;
+  }, []);
+  useEffect(() => stopChargeTick, [stopChargeTick]);
+
+  const doThrow = useCallback((throwPower = 1) => {
     const next = throwBall(ballRef.current);
     if (next === ballRef.current) return;
     ballRef.current = next;
     setBall(next);
+    setLastPower(throwPower);
     // M5-T10: with phase clips the ball is out as long as the run + fetch clips (the text
     // »… teče po žogo« matches what is seen); else the drawn timing.
     const fetchMs = phaseClips ? BALL_CLIP_FETCH_MS : reduceMotion ? FETCH_MS_REDUCED : FETCH_MS;
@@ -195,23 +219,67 @@ function BallGame({ view, reduceMotion, onDone, onMediaExpired }: GameProps) {
   const doThrowRef = useRef(doThrow);
   doThrowRef.current = doThrow;
 
+  /** M5-T17: a finger went down on the ball / the button — the power starts to build. */
+  const startCharge = () => {
+    if (ballRef.current.fetching || ballRef.current.throws >= BALL_THROWS) return;
+    chargeStart.current = Date.now();
+    setPower(0);
+    charge.setValue(0);
+    if (!reduceMotion) Animated.timing(charge, { toValue: 1, duration: BALL_CHARGE_MS, useNativeDriver: false }).start();
+    stopChargeTick();
+    // The percentage for the text / screen reader (4 updates a second is enough).
+    chargeTick.current = setInterval(() => {
+      if (chargeStart.current === null) return;
+      setPower(chargePower(Date.now() - chargeStart.current));
+    }, 250);
+  };
+  const cancelCharge = () => {
+    chargeStart.current = null;
+    stopChargeTick();
+    charge.stopAnimation();
+    charge.setValue(0);
+    setPower(null);
+  };
+  /** Let go: the same throw as a swipe, with the held power for the picture. */
+  const releaseCharge = () => {
+    if (chargeStart.current === null) return;
+    const held = chargePower(Date.now() - chargeStart.current);
+    cancelCharge();
+    doThrowRef.current(held);
+  };
+  const startChargeRef = useRef(startCharge);
+  startChargeRef.current = startCharge;
+  const cancelChargeRef = useRef(cancelCharge);
+  cancelChargeRef.current = cancelCharge;
+  const releaseChargeRef = useRef(releaseCharge);
+  releaseChargeRef.current = releaseCharge;
+
   const responder = useMemo(
     () =>
       PanResponder.create({
         onStartShouldSetPanResponder: () => !ballRef.current.fetching && ballRef.current.throws < BALL_THROWS,
         onMoveShouldSetPanResponder: () => !ballRef.current.fetching && ballRef.current.throws < BALL_THROWS,
+        onPanResponderGrant: () => {
+          if (holdModeRef.current) startChargeRef.current();
+        },
         onPanResponderMove: (_e, g) => {
           // The ball follows the finger upwards only (a little sideways).
           drag.setValue({ x: g.dx * 0.5, y: Math.min(0, g.dy) });
         },
         onPanResponderRelease: (_e, g) => {
           if (isThrowRelease(g.dy, g.vy)) {
+            cancelChargeRef.current();
             doThrowRef.current();
+          } else if (holdModeRef.current && chargeStart.current !== null) {
+            // M5-T17: letting go of a held ball throws it.
+            drag.setValue({ x: 0, y: 0 });
+            releaseChargeRef.current();
           } else {
             Animated.spring(drag, { toValue: { x: 0, y: 0 }, useNativeDriver: true }).start();
           }
         },
         onPanResponderTerminate: () => {
+          cancelChargeRef.current();
           Animated.spring(drag, { toValue: { x: 0, y: 0 }, useNativeDriver: true }).start();
         },
       }),
@@ -227,12 +295,21 @@ function BallGame({ view, reduceMotion, onDone, onMediaExpired }: GameProps) {
     ? { opacity: flight.interpolate({ inputRange: [0, 1], outputRange: [1, 0.15] }) }
     : {
         transform: [
-          { translateY: flight.interpolate({ inputRange: [0, 1], outputRange: [0, -220] }) },
+          // M5-T17: a held throw flies as high as its power (a swipe = full height, as before).
+          { translateY: flight.interpolate({ inputRange: [0, 1], outputRange: [0, -ballFlightHeight(lastPower)] }) },
           { scale: flight.interpolate({ inputRange: [0, 1], outputRange: [1, 0.55] }) },
         ],
       };
   const dogRun = reduceMotion ? 0 : flight.interpolate({ inputRange: [0, 1], outputRange: [0, -40] });
-  const status = ball.fetching ? PLAY_STRINGS.fetching : ball.throws === 0 ? PLAY_STRINGS.hint : PLAY_STRINGS.progress(ball.throws);
+  const status = ball.fetching
+    ? PLAY_STRINGS.fetching
+    : power !== null
+      ? PLAY_STRINGS.charging(Math.round(power * 100))
+      : ball.throws === 0
+        ? holdMode
+          ? PLAY_STRINGS.holdHint
+          : PLAY_STRINGS.hint
+        : PLAY_STRINGS.progress(ball.throws);
   useAnnounce(status);
 
   // M5-T10: the phase item (its 3 s clip once, else / in picture mode its pose).
@@ -262,18 +339,33 @@ function BallGame({ view, reduceMotion, onDone, onMediaExpired }: GameProps) {
           </Animated.View>
         </Animated.View>
       </View>
-      <Pressable
-        testID="play-throw"
-        accessibilityRole="button"
-        accessibilityLabel={PLAY_STRINGS.throwA11y}
-        accessibilityState={{ disabled: ball.fetching }}
-        disabled={ball.fetching}
-        onPress={doThrow}
-        style={({ pressed }) => [styles.secondaryButton, ball.fetching && styles.disabled, pressed && styles.pressed]}
-      >
-        <CircleDot color={palette.mint} size={18} />
-        <Text style={styles.secondaryText}>{PLAY_STRINGS.throwButton}</Text>
-      </Pressable>
+      {holdMode && (
+        // M5-T17: hold = charge, let go = throw; a screen reader's activate (no press-in) throws at once.
+        <Pressable
+          testID="play-throw"
+          accessibilityRole="button"
+          accessibilityLabel={PLAY_STRINGS.throwA11y}
+          accessibilityHint={PLAY_STRINGS.holdA11yHint}
+          accessibilityState={{ disabled: ball.fetching }}
+          disabled={ball.fetching}
+          onPressIn={() => startChargeRef.current()}
+          onPressOut={() => releaseChargeRef.current()}
+          onPress={() => {
+            if (chargeStart.current === null) doThrowRef.current(1);
+          }}
+          style={({ pressed }) => [styles.secondaryButton, ball.fetching && styles.disabled, pressed && styles.pressed]}
+        >
+          {power !== null && (
+            <Animated.View
+              pointerEvents="none"
+              testID={reduceMotion ? 'play-charge-fill-static' : 'play-charge-fill'}
+              style={[styles.holdFill, reduceMotion ? styles.holdFillStatic : { transform: [{ scaleX: charge }] }]}
+            />
+          )}
+          <CircleDot color={palette.mint} size={18} />
+          <Text style={styles.secondaryText}>{PLAY_STRINGS.throwButton}</Text>
+        </Pressable>
+      )}
     </View>
   );
 }
@@ -450,6 +542,7 @@ export default function PlayOverlay({
   onMediaExpired,
   testID = 'play-overlay',
 }: PlayOverlayProps) {
+  const gestureMode = useGestureMode(view);
   const [doneKind, setDoneKind] = useState<PlayKind | null>(null);
   const reported = useRef<PlayKind | null>(null);
   const finishedRef = useRef(onFinished);
@@ -550,7 +643,7 @@ export default function PlayOverlay({
           </Pressable>
         </View>
       ) : mode === 'play' ? (
-        <BallGame view={view} reduceMotion={reduceMotion} onDone={finishBall} onMediaExpired={onMediaExpired} />
+        <BallGame view={view} reduceMotion={reduceMotion} gestureMode={gestureMode} onDone={finishBall} onMediaExpired={onMediaExpired} />
       ) : (
         <CuddleGame view={view} reduceMotion={reduceMotion} onDone={finishCuddle} onMediaExpired={onMediaExpired} />
       )}

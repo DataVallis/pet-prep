@@ -213,6 +213,12 @@
       "error": "Nastavitev ni shranjena. Poskusite znova.",
       "consent": "Z vklopom privolite, da hranimo samo to, da je prilagojen način vklopljen, in pri posameznem dnevu, da so šteli potiski. Ko ga izklopite, iz zgodovine odstranimo vse oznake potiskov (ti dnevi štejejo kot koraki); točke, ocena skrbi in vpisani sprehodi ostanejo enaki."
     },
+    "easyGestures": {
+      "label": "Lažje kretnje",
+      "hint": "Namesto potegov s prstom otrok drži prst ali pritisne gumb. Za otroke, ki jim potegi delajo težave.",
+      "screenReader": "Ko je na otrokovem telefonu vklopljen VoiceOver ali TalkBack, so lažje kretnje vedno vklopljene.",
+      "error": "Nastavitev ni shranjena. Poskusite znova."
+    },
     "display": {
       "label": "Prikaz",
       "video": "Video",

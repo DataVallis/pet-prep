@@ -18,13 +18,18 @@
  * M5-T14 (APP_REFINEMENT_SPEC §11 + §6): grooming plays as a scratch card (`BrushArea`) — the
  * brush follows the finger, sparkles, dirty patches fade per counted stroke, a bar fills; a
  * held finger / held "Počeši" button brushes too (no swiping needed). Same strokes, same
- * server verdict; a clean coat finishes up to 2 s early (`brushFinishAt`). The litter change
- * keeps the plain stroke stage.
+ * server verdict; a clean coat finishes up to 2 s early (`brushFinishAt`).
+ *
+ * M5-T17 »Lažje kretnje« (David 2026-10-23): the hold / button alternative is offered only in
+ * hold mode (`useGestureMode`: the parent's switch or a running screen reader); otherwise
+ * swipe only. In hold mode the weekly litter change plays on the same `BrushArea` (hold on the
+ * box scrubs it gradually, patches fade, a bar fills) — same strokes, same server verdict, it
+ * still finishes at the session's end. In swipe mode the litter change keeps its plain stage.
  */
 
 import { useMemo, useRef } from 'react';
 import { PanResponder, ScrollView, StyleSheet, View } from 'react-native';
-import { Brush, Hand, Sparkles } from 'lucide-react-native';
+import { Brush, Sparkles } from 'lucide-react-native';
 import { useQueryClient } from '@tanstack/react-query';
 
 import { CatFigure, TrayGraphic } from '@/components/CatGraphics';
@@ -46,6 +51,7 @@ import { Busy, CatOverlayFrame, CatStage, FailedView, PrimaryButton, SecondaryBu
 import { BrushArea, type BrushTexts } from '@/modules/catCare/BrushArea';
 import { DOG_GROOMING_STRINGS } from '@/modules/catCare/dogGrooming';
 import { useChoreGame } from '@/modules/catCare/useCatGames';
+import { useGestureMode, type GestureMode } from '@/modules/gestures/easyGestures';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import type { ClockSources } from '@/modules/training/game';
 import { palette } from '@/theme';
@@ -115,6 +121,7 @@ function introFor(kind: ChoreKind, view: ChildPetView): { lines: { text: string;
 export default function ChoreOverlay({ kind, view, onClose, reduceMotion, clock, testID = `cat-${kind}` }: ChoreOverlayProps) {
   const queryClient = useQueryClient();
   const game = useChoreGame(kind, view, { clock });
+  const gestureMode = useGestureMode(view);
   const { phase } = game;
   const dog = isDogChore(kind, view);
   const texts = choreTexts(kind, view);
@@ -162,6 +169,7 @@ export default function ChoreOverlay({ kind, view, onClose, reduceMotion, clock,
           finishing={phase.kind === 'finishing'}
           resumed={phase.resumedAtMs !== null}
           reduceMotion={reduceMotion}
+          gestureMode={gestureMode}
           msAt={game.msAt}
           onStroke={(ms) => game.setInput((strokes) => addStroke(strokes, ms, phase.session.duration_ms))}
           onMediaExpired={onMediaExpired}
@@ -237,6 +245,7 @@ function ChoreRunning({
   finishing,
   resumed,
   reduceMotion,
+  gestureMode,
   msAt,
   onStroke,
   onMediaExpired,
@@ -252,6 +261,7 @@ function ChoreRunning({
   finishing: boolean;
   resumed: boolean;
   reduceMotion: boolean;
+  gestureMode: GestureMode;
   msAt: (touchTimestamp?: number | null) => number;
   onStroke: (ms: number) => void;
   onMediaExpired: () => void;
@@ -271,7 +281,9 @@ function ChoreRunning({
   msAtRef.current = msAt;
   const rub = useRef<RubTracker | null>(null);
   const origin = useRef({ x: 0, y: 0 });
-  const brushTexts: BrushTexts | null = kind === 'grooming' ? (dog ? D.brush : S.grooming.brush) : null;
+  // Grooming always brushes on the scratch card; the litter change only in hold mode (M5-T17).
+  const brushTexts: BrushTexts | null =
+    kind === 'grooming' ? (dog ? D.brush : S.grooming.brush) : gestureMode === 'hold' ? S.litter_change.scrub : null;
 
   const responder = useMemo(
     () =>
@@ -337,6 +349,7 @@ function ChoreRunning({
           disabled={disabled}
           hideButton={finishing}
           reduceMotion={reduceMotion}
+          gestureMode={gestureMode}
           msAt={msAt}
           onStroke={onStroke}
           renderStage={(layers) => (
@@ -368,16 +381,7 @@ function ChoreRunning({
       </Text>
       {finishing ? (
         <Busy text={C.finishing} testID={`${testID}-finishing`} />
-      ) : brushTexts !== null ? null : (
-        <SecondaryButton
-          label={texts.stroke}
-          accessibilityLabel={texts.strokeA11y}
-          disabled={disabled}
-          icon={<Hand color={palette.mint} size={18} />}
-          onPress={() => onStroke(msAt(null))}
-          testID={`${testID}-stroke`}
-        />
-      )}
+      ) : null}
     </View>
   );
 }

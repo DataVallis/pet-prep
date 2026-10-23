@@ -63,7 +63,7 @@ Brez zastavice `features` iz aplikacije: igra nima posledic, zato stara različi
 ### 4.2 Igra z žogo (mini-igra, ~20 s)
 - Celozaslonska plast v slogu »Šole« (temno steklo). Spodaj žoga; otrok jo **povleče s prstom navzgor in spusti** (»vrže«). Kuža steče po žogo in jo prinese nazaj (pes s polnim naborom: video `playing`; ostali: obstoječi video + animirana žoga).
 - **3 meti** = konec. Vsak met šteje, ne glede na moč ali smer — ni zgrešenega meta, ni točk.
-- **Dostopnost:** gumb **»Vrzi žogo«** namesto potega (VoiceOver / TalkBack: dvojni dotik); pri vklopljenem »zmanjšaj gibanje« žoga ne leti po zaslonu, samo kratek prelivni prikaz. Ni časovne omejitve med meti.
+- **Dostopnost:** gumb **»Vrzi žogo«** namesto potega — od M5-T17 (David 23. 10. 2026) samo z »Lažjimi kretnjami« ali vklopljenim VoiceOver / TalkBack: pridrži žogo ali gumb, moč meta se polni 1,2 s, spust vrže (bralnik zaslona: dvojni dotik vrže takoj); brez tega samo poteg; pri vklopljenem »zmanjšaj gibanje« žoga ne leti po zaslonu, samo kratek prelivni prikaz. Ni časovne omejitve med meti.
 - Konec: »Hvala za igro! Kuža je ves vesel.« Igro je mogoče kadarkoli zapreti (»×«); nedokončana igra se ne šteje in nima posledic.
 
 ### 4.3 Crkljanje (božanje, ~10 s)

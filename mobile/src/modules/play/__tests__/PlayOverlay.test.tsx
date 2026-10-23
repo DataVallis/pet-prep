@@ -21,12 +21,14 @@ import {
 import PlayOverlay from '@/modules/play/PlayOverlay';
 import { normalizeChildState } from '@/modules/childPet/childPetView';
 import { DONE_AUTO_CLOSE_MS, FETCH_MS, FETCH_MS_REDUCED, HOLD_MS } from '@/modules/play/play';
+import { BALL_CHARGE_MS } from '@/modules/gestures/holdPlay';
 import type { PlayOverlayMode } from '@/store/appStore';
-import { makeLiveChildState, makeMedia, makePlayState } from '@/test-utils/fixtures';
+import { makeLiveChildState, makeMedia, makePlayState, withEasyGestures } from '@/test-utils/fixtures';
 import { BALL_CLIP_FETCH_MS, PHASE_CLIP_MS } from '@/modules/petMedia/phasePlayer';
 import { mockVideoPlayers, playerUris, resetMockVideoPlayers } from '@/test-utils/videoPlayers';
 
-const view = normalizeChildState(makeLiveChildState({ play: makePlayState() }), 0, Date.parse('2026-10-04T12:00:00+02:00'));
+// M5-T17: the button tests run in hold mode (»Lažje kretnje« on); swipe mode is tested below.
+const view = withEasyGestures(normalizeChildState(makeLiveChildState({ play: makePlayState() }), 0, Date.parse('2026-10-04T12:00:00+02:00')));
 
 function renderOverlay(mode: PlayOverlayMode, reduceMotion = false) {
   const props = { onPick: jest.fn(), onFinished: jest.fn(), onClose: jest.fn() };
@@ -59,7 +61,7 @@ describe('PlayOverlay', () => {
 
   it('ball: three throws with "Vrzi žogo", one at a time; reported once; the card closes itself', async () => {
     const { onFinished, onClose } = renderOverlay('play');
-    expect(screen.getByText('Povleci žogo navzgor, da jo vržeš.')).toBeTruthy();
+    expect(screen.getByText('Pridrži žogo ali gumb, da nabereš moč, in spusti, da jo vržeš.')).toBeTruthy();
     expect(screen.getByLabelText('Vrzi žogo kužku')).toBeTruthy();
 
     fireEvent.press(screen.getByTestId('play-throw'));
@@ -82,6 +84,30 @@ describe('PlayOverlay', () => {
     expect(onClose).not.toHaveBeenCalled();
     await advance(DONE_AUTO_CLOSE_MS);
     expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('M5-T17: holding »Vrzi žogo« fills the power bar, letting go throws; 3 held throws finish the same game', async () => {
+    const { onFinished } = renderOverlay('play');
+    for (let i = 0; i < 3; i += 1) {
+      fireEvent(screen.getByTestId('play-throw'), 'pressIn');
+      expect(screen.getByTestId('play-charge-fill')).toBeTruthy();
+      await advance(BALL_CHARGE_MS + 500);
+      expect(screen.getByText('Moč meta: 100 %')).toBeTruthy();
+      fireEvent(screen.getByTestId('play-throw'), 'pressOut');
+      fireEvent.press(screen.getByTestId('play-throw'));
+      expect(screen.getByText('Kuža teče po žogo …')).toBeTruthy();
+      await advance(FETCH_MS);
+    }
+    expect(onFinished).toHaveBeenCalledTimes(1);
+    expect(onFinished).toHaveBeenCalledWith('play');
+  });
+
+  it('M5-T17: a screen reader turns hold mode on by itself (switch off) — the button is there', async () => {
+    (AccessibilityInfo.isScreenReaderEnabled as jest.Mock).mockResolvedValueOnce(true);
+    render(<PlayOverlay view={withEasyGestures(view, false)} mode="play" reduceMotion={false} onPick={jest.fn()} onFinished={jest.fn()} onClose={jest.fn()} />);
+    expect(screen.queryByTestId('play-throw')).toBeNull();
+    await advance(0);
+    expect(screen.getByLabelText('Vrzi žogo kužku')).toBeTruthy();
   });
 
   it('reduce motion: the dog is back sooner (fade only)', async () => {
@@ -170,7 +196,9 @@ describe('PlayOverlay', () => {
     };
 
     it('ball: a short drag springs back; an upward release ≥ 60 pt or a quick flick throws', async () => {
-      renderOverlay('play');
+      // M5-T17 swipe mode (the switch off): swipe only.
+      render(<PlayOverlay view={withEasyGestures(view, false)} mode="play" reduceMotion={false} onPick={jest.fn()} onFinished={jest.fn()} onClose={jest.fn()} />);
+      expect(screen.queryByTestId('play-throw')).toBeNull();
       act(() => last().onPanResponderRelease?.(event, gesture({ dy: -20, vy: -0.1 })));
       expect(screen.getByText('Povleci žogo navzgor, da jo vržeš.')).toBeTruthy();
       act(() => last().onPanResponderRelease?.(event, gesture({ dy: 80, vy: 1 })));
@@ -185,6 +213,25 @@ describe('PlayOverlay', () => {
 
       act(() => last().onPanResponderRelease?.(event, gesture({ dy: -20, vy: -0.8 })));
       expect(screen.getByText('Kuža teče po žogo …')).toBeTruthy();
+    });
+
+    it('M5-T17 hold mode: holding the ball charges the throw, letting go throws (no swipe needed)', async () => {
+      renderOverlay('play');
+      act(() => last().onPanResponderGrant?.(event, gesture({})));
+      await advance(BALL_CHARGE_MS / 2);
+      expect(screen.getByText(/^Moč meta: [1-9]\d %$/)).toBeTruthy();
+      act(() => last().onPanResponderRelease?.(event, gesture({})));
+      expect(screen.getByText('Kuža teče po žogo …')).toBeTruthy();
+      await advance(FETCH_MS);
+      expect(screen.getByText('Met 1 od 3')).toBeTruthy();
+    });
+
+    it('M5-T17 swipe mode: a resting finger released without a swipe does not throw', async () => {
+      render(<PlayOverlay view={withEasyGestures(view, false)} mode="play" reduceMotion={false} onPick={jest.fn()} onFinished={jest.fn()} onClose={jest.fn()} />);
+      act(() => last().onPanResponderGrant?.(event, gesture({})));
+      await advance(BALL_CHARGE_MS);
+      act(() => last().onPanResponderRelease?.(event, gesture({})));
+      expect(screen.getByText('Povleci žogo navzgor, da jo vržeš.')).toBeTruthy();
     });
 
     it('cuddles: a stroke needs ≥ 60 pt of finger path (back and forth counts); 5 strokes finish', () => {
@@ -267,7 +314,7 @@ describe('PlayOverlay', () => {
 describe('PlayOverlay ball game with phase clips (M5-T10)', () => {
   const u = (n: string) => `https://api.petprep.si/api/media/${n}?v=${n}&expires=1&signature=s`;
   const phaseView = (displayPicture = false) =>
-    normalizeChildState(
+    withEasyGestures(normalizeChildState(
       {
         ...makeLiveChildState({ play: makePlayState(), pet: {
           media: makeMedia({
@@ -284,7 +331,7 @@ describe('PlayOverlay ball game with phase clips (M5-T10)', () => {
       } as Parameters<typeof normalizeChildState>[0],
       0,
       Date.parse('2026-10-04T12:00:00+02:00'),
-    );
+    ));
 
   beforeEach(() => {
     jest.useFakeTimers({ doNotFake: ['nextTick', 'setImmediate'] });

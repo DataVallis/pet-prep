@@ -101,7 +101,8 @@ describe('ChildHudScreen — play & cuddle (M5-R05)', () => {
   it('a whole ball game: pick, 3 throws, one request, optimistic happy dog, then the server state', async () => {
     let resolve: (value: unknown) => void = () => undefined;
     playWithPet.mockReturnValueOnce(new Promise((res) => (resolve = res)));
-    await renderHud(makeLiveChildState({ play: makePlayState() }));
+    // M5-T17: »Vrzi žogo« is offered in hold mode (»Lažje kretnje« on).
+    await renderHud(makeLiveChildState({ play: makePlayState(), settings: { easy_gestures: true } }));
     expect(screen.queryByTestId('hud-happy')).toBeNull();
 
     fireEvent.press(screen.getByTestId('hud-play-open'));

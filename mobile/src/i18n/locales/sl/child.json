@@ -254,7 +254,8 @@
       "care_session_active_no_time": "Nekdo drug zdaj nekaj počne s kužkom. Poskusi čez minuto."
     },
     "brush": {
-      "holdHint": "Ne moreš potegniti s prstom? Pridrži prst na kužku ali gumb spodaj.",
+      "holdHint": "Pridrži prst na kužku ali gumb spodaj.",
+      "swipeHint": "Povleci s prstom po kužku, od glave do repa.",
       "bar": "Počesano: {{percent}} %",
       "clean": "Vsa dlaka je počesana! Še trenutek …",
       "action": "Počeši",

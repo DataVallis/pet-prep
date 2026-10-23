@@ -362,6 +362,7 @@ export function optimisticPlay(view: ChildPetView, kind: PlayKind, serverNowMs: 
 
 export const PLAY_STRINGS = strings('play', 'play', {
   progress: (n: number) => t('play:play.progress', { n }),
+  charging: (percent: number) => t('play:play.charging', { percent }),
 });
 export const CUDDLE_STRINGS = strings('play', 'cuddle', {
   progress: (n: number) => t('play:cuddle.progress', { n }),

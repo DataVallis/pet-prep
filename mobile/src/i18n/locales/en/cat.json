@@ -47,6 +47,10 @@
     "feedbackPounce": "Great dodge!",
     "pullAway": "Pull the feather away",
     "pullAwayA11y": "Pull the feather away from your kitty",
+    "waveWand": "Wave the wand",
+    "waveWandA11y": "Wave the wand — the feather escapes from your kitty",
+    "holdHint": "Hold your finger on the screen or the button below — the feather will run from your kitty on its own.",
+    "holdA11yHint": "Hold to keep the feather moving.",
     "stageA11y": "Play area: your kitty and a feather on a wand. Drag the feather away from it.",
     "quarterA11y": "Quarter {{n}} of the game",
     "result": {
@@ -103,7 +107,8 @@
         "failTitle": "This brushing didn't count"
       },
       "brush": {
-        "holdHint": "Can't swipe? Hold your finger on your kitty, or hold the button below.",
+        "holdHint": "Hold your finger on your kitty, or hold the button below.",
+        "swipeHint": "Swipe your finger over your kitty, from head to tail.",
         "bar": "Brushed: {{percent}} %",
         "clean": "All the fur is brushed! Just a moment …",
         "action": "Brush",
@@ -129,6 +134,14 @@
         "successTitle": "Fresh and clean!",
         "success": "All the litter is fresh. This week's change is done.",
         "failTitle": "The change didn't count"
+      },
+      "scrub": {
+        "holdHint": "Hold your finger on the litter box, or hold the button below.",
+        "swipeHint": "Scrub the litter box with your finger.",
+        "bar": "Clean: {{percent}} %",
+        "clean": "All clean! Wait for the change to finish …",
+        "action": "Scrub",
+        "holdA11yHint": "Hold to keep scrubbing."
       }
     },
     "mattedFixed": "The knot is gone!",

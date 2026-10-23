@@ -13,7 +13,7 @@ import { scoreStrokes } from '@/modules/catCare/catGames';
 import { normalizeChildState, type ChildPetView } from '@/modules/childPet/childPetView';
 import { i18n } from '@/i18n';
 import { useAppStore } from '@/store/appStore';
-import { makeChoreSession, makeGroomingState, makeLitterState, makeLiveChildState, makePet } from '@/test-utils/fixtures';
+import { makeChoreSession, makeGroomingState, makeLitterState, makeLiveChildState, makePet, withEasyGestures } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
 jest.mock('@/api/client', () => {
@@ -37,8 +37,9 @@ function state(species: 'dog' | 'cat', extra: Record<string, unknown> = {}): Chi
   });
 }
 
-function viewOf(s: ChildPetState): ChildPetView {
-  return normalizeChildState(s, 0, T0);
+// M5-T17: these tests use the stroke / wand buttons → hold mode (»Lažje kretnje« on).
+function viewOf(s: ChildPetState, easyGestures = true): ChildPetView {
+  return withEasyGestures(normalizeChildState(s, 0, T0), easyGestures);
 }
 
 async function advance(ms: number) {
@@ -83,7 +84,7 @@ describe('grooming as a scratch card (M5-T14)', () => {
   it('holding "Počeši" brushes on its own; the clean coat finishes with strokes the server counts', async () => {
     await startGame('dog');
     expect(screen.getByTestId('cat-grooming-bar').props.accessibilityValue).toEqual({ min: 0, max: 100, now: 0 });
-    expect(screen.getByTestId('cat-grooming-brush-hint').props.children).toBe('Ne moreš potegniti s prstom? Pridrži prst na kužku ali gumb spodaj.');
+    expect(screen.getByTestId('cat-grooming-brush-hint').props.children).toBe('Pridrži prst na kužku ali gumb spodaj.');
 
     fireEvent(screen.getByTestId('cat-grooming-stroke'), 'pressIn');
     await advance(HOLD_START_MS + 2_000);
@@ -124,7 +125,7 @@ describe('grooming as a scratch card (M5-T14)', () => {
     const stage = screen.getByTestId('cat-grooming-stage-touch');
     expect(stage.props.accessibilityLabel).toBe('Tvoja muca. Pobožaj jo s prstom, da ji počešeš dlako.');
     expect(stage.props.accessibilityActions).toEqual([{ name: 'activate', label: 'Počeši' }]);
-    expect(screen.getByTestId('cat-grooming-brush-hint').props.children).toBe('Ne moreš potegniti s prstom? Pridrži prst na muci ali gumb spodaj.');
+    expect(screen.getByTestId('cat-grooming-brush-hint').props.children).toBe('Pridrži prst na muci ali gumb spodaj.');
     await advance(1_000);
     fireEvent(stage, 'accessibilityAction', { nativeEvent: { actionName: 'activate' } });
     expect(screen.getByTestId('cat-grooming-progress').props.children).toBe('Poteze: 1 od 10');
@@ -139,7 +140,7 @@ describe('grooming as a scratch card (M5-T14)', () => {
     });
     try {
       await startGame('cat');
-      expect(screen.getByTestId('cat-grooming-brush-hint').props.children).toBe("Can't swipe? Hold your finger on your kitty, or hold the button below.");
+      expect(screen.getByTestId('cat-grooming-brush-hint').props.children).toBe('Hold your finger on your kitty, or hold the button below.');
       expect(screen.getByTestId('cat-grooming-bar').props.accessibilityLabel).toBe('Brushed: 0 %');
     } finally {
       await act(async () => {
@@ -159,8 +160,8 @@ describe('grooming as a scratch card (M5-T14)', () => {
     expect(screen.queryByTestId('cat-grooming-patch-0')).toBeNull();
   });
 
-  it('the litter change keeps its plain stroke stage (no bar)', async () => {
-    const view = viewOf(state('cat', { litter: makeLitterState() }));
+  it('M5-T17 swipe mode: the litter change keeps its plain stroke stage (no bar, no button)', async () => {
+    const view = viewOf(state('cat', { litter: makeLitterState() }), false);
     const session = makeChoreSession('litter_change');
     mocked.startCareChore.mockResolvedValue({ status: 'accepted', session, state: state('cat') });
     renderWithQuery(<ChoreOverlay kind="litter_change" view={view} onClose={jest.fn()} reduceMotion clock={clock} />);
@@ -168,6 +169,50 @@ describe('grooming as a scratch card (M5-T14)', () => {
     await advance(0);
     expect(screen.getByTestId('cat-litter_change-stage-touch')).toBeTruthy();
     expect(screen.queryByTestId('cat-litter_change-bar')).toBeNull();
-    expect(screen.getByTestId('cat-litter_change-stroke')).toBeTruthy();
+    expect(screen.queryByTestId('cat-litter_change-stroke')).toBeNull();
+  });
+
+  it('M5-T17 hold mode: holding on the litter box scrubs it gradually (bar), the same strokes reach the server at the end', async () => {
+    const view = viewOf(state('cat', { litter: makeLitterState() }));
+    const session = makeChoreSession('litter_change');
+    mocked.startCareChore.mockResolvedValue({ status: 'accepted', session, state: state('cat') });
+    mocked.finishCareChore.mockResolvedValue({
+      status: 'accepted',
+      result: { session_id: session.id, success: true, reason: null, strokes: 30, min_strokes: 10, segments_hit: 3, segments: 3, matted: false },
+      state: state('cat'),
+    });
+    renderWithQuery(<ChoreOverlay kind="litter_change" view={view} onClose={jest.fn()} reduceMotion clock={clock} />);
+    fireEvent.press(screen.getByTestId('cat-litter_change-start'));
+    await advance(0);
+    expect(screen.getByTestId('cat-litter_change-bar').props.accessibilityLabel).toBe('Očiščeno: 0 %');
+    expect(screen.getByTestId('cat-litter_change-brush-hint').props.children).toBe('Pridrži prst na stranišču ali gumb spodaj.');
+    const stage = screen.getByTestId('cat-litter_change-stage-touch');
+    expect(stage.props.accessibilityActions).toEqual([{ name: 'activate', label: 'Podrgni' }]);
+    // A finger resting on the box (no travel) scrubs on its own.
+    fireEvent(stage, 'responderGrant', { nativeEvent: { locationX: 150, locationY: 200, timestamp: 0, touches: [], changedTouches: [] }, touchHistory: { touchBank: [] } });
+    await advance(HOLD_START_MS + 4_000);
+    expect(screen.getByTestId('cat-litter_change-bar').props.accessibilityValue.now).toBeGreaterThan(0);
+    // Hold the button through the rest of the game.
+    fireEvent(screen.getByTestId('cat-litter_change-stroke'), 'pressIn');
+    await advance(30_000);
+    expect(mocked.finishCareChore).toHaveBeenCalledTimes(1);
+    const strokes = sentStrokes();
+    // Same scorer as the server: spread over all three steps, not machine-regular.
+    expect(scoreStrokes(strokes, RULES)).toMatchObject({ success: true });
+    // The litter change still finishes at the session's end (no early finish like brushing).
+    expect(Math.max(...strokes)).toBeLessThanOrEqual(RULES.duration_ms);
+  });
+
+  it('M5-T17 swipe mode: grooming offers no hold — no button, a resting finger does not brush, no a11y action', async () => {
+    renderWithQuery(<ChoreOverlay kind="grooming" view={viewOf(state('dog'), false)} onClose={jest.fn()} reduceMotion clock={clock} />);
+    fireEvent.press(screen.getByTestId('cat-grooming-start'));
+    await advance(0);
+    expect(screen.queryByTestId('cat-grooming-stroke')).toBeNull();
+    expect(screen.getByTestId('cat-grooming-brush-hint').props.children).toBe('Povleci s prstom po kužku, od glave do repa.');
+    const stage = screen.getByTestId('cat-grooming-stage-touch');
+    expect(stage.props.accessibilityActions).toBeUndefined();
+    fireEvent(stage, 'responderGrant', { nativeEvent: { locationX: 150, locationY: 200, timestamp: 0, touches: [], changedTouches: [] }, touchHistory: { touchBank: [] } });
+    await advance(HOLD_START_MS + 4_000);
+    expect(screen.getByTestId('cat-grooming-progress').props.children).toBe('Poteze: 0 od 10');
   });
 });

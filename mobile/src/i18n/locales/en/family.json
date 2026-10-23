@@ -203,6 +203,12 @@
       "error": "The setting wasn't saved. Please try again.",
       "consent": "By turning it on you agree that we store only that adapted mode is on and, for each day, that pushes were counted. When you turn it off, we remove every push marker from the history (those days count as steps); points, the Care Score and logged walks stay the same."
     },
+    "easyGestures": {
+      "label": "Easier gestures",
+      "hint": "Your child holds a finger or taps a button instead of swiping. For children who find swiping hard.",
+      "screenReader": "When VoiceOver or TalkBack is on on your child's phone, easier gestures are always on.",
+      "error": "The setting wasn't saved. Please try again."
+    },
     "display": {
       "label": "Display",
       "video": "Video",

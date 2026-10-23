@@ -4,6 +4,7 @@
  */
 
 import { readMediaDisplay, type MediaDisplay } from '@/modules/display/display';
+import { readEasyGestures } from '@/modules/gestures/easyGestures';
 import { readPetPlan, type PetPlan } from '@/modules/plan/plan';
 import { ApiError, type ParentDashboardResponse } from '@/api/client';
 import { reasonOf } from '@/modules/pairing/pin';
@@ -83,6 +84,8 @@ export interface FamilyChild {
   adapted_mode: boolean;
   /** M5-T11 »Prikaz: Video / Slika« of the child app; `video` from older servers. */
   media_display: MediaDisplay;
+  /** M5-T17 »Lažje kretnje«: hold / button instead of swipes in the child's games; false from older servers. */
+  easy_gestures: boolean;
   pet_id: number | null;
   contract_signed: boolean;
   stats: FamilyChildStats;
@@ -160,6 +163,7 @@ function normalizeChild(raw: FamilyChild): FamilyChild {
     ...raw,
     adapted_mode: c.adapted_mode === true,
     media_display: readMediaDisplay(c.media_display),
+    easy_gestures: readEasyGestures(c.easy_gestures),
     stats: readStats(c.stats),
     traffic_light: readTrafficLight(c.traffic_light),
     care_score: readCareScore(c.care_score),

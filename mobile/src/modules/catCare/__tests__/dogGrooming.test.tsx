@@ -18,7 +18,7 @@ import { activityText, reportRoutineTypes, type RoutineType, type TypeTotals } f
 import { BREED_SPECIES, GROOMING_DOG_BREEDS, hasGroomingRoutine, KNOWN_BREEDS } from '@/modules/species/species';
 import { i18n, t } from '@/i18n';
 import { useAppStore } from '@/store/appStore';
-import { makeChoreSession, makeGroomingState, makeLiveChildState, makePet } from '@/test-utils/fixtures';
+import { makeChoreSession, makeGroomingState, makeLiveChildState, makePet, withEasyGestures } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
 jest.mock('@/api/client', () => {
@@ -38,8 +38,9 @@ function dogState(grooming: unknown = makeGroomingState(), o: Parameters<typeof 
   return makeLiveChildState({ ...o, pet: { breed_type: 'rottweiler', species: 'dog', ...o.pet } as Partial<ChildPetState['pet']>, grooming });
 }
 
-function viewOf(state: ChildPetState): ChildPetView {
-  return normalizeChildState(state, 0, T0);
+// M5-T17: these tests use the stroke / wand buttons → hold mode (»Lažje kretnje« on).
+function viewOf(state: ChildPetState, easyGestures = true): ChildPetView {
+  return withEasyGestures(normalizeChildState(state, 0, T0), easyGestures);
 }
 
 async function advance(ms: number) {
