@@ -31794,6 +31794,583 @@
       }
     }
   },
+  "giant_schnauzer": {
+    "_note": "Added 2026-10-24 (M5-R10-61, unattended run — appended after the Italian Greyhound: AKC 2024 No. 57 'Giant Schnauzer', S174 full-list table fetched 2026-10-24 '57 | Giant Schnauzer'). Quotes as returned by the web-fetch tool on 2026-10-24 (short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S491–S499 (reused S8, S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Identity from the FCI nomenclature (S491, 'RIESENSCHNAUZER (181)', English 'GIANT SCHNAUZER', valid standard 5/25/2021, colours pepper and salt, pure black, black and silver); weight from the FCI standard (S492, German, 06.03.2007 — the only standard with a weight); heights, colours and appearance from the Royal Kennel Club breed standard (S494, last updated 1 April 2026). RKC Breeds A–Z page (S495) reached: key facts, Breed Watch Category 1 and the health tests. Lifespan: the Dogs Trust McMillan 2024 table (S123) not reachable; McMillan 2024's 12.1 years only via Wikipedia (S498, tier C) → RKC lower bound 'Over 12 years' (runbook order; Italian Greyhound precedent). Names: AKC / RKC 'Giant Schnauzer' (S174, S494); Slovenian »veliki šnavcer« (MrPet.si S499, tier C — common name, not checked against KZS, open for David).",
+    "identity": {
+      "value": "FCI No. 181, Group 2 Section 1 (Pinscher and Schnauzer type), Germany",
+      "unit": "—",
+      "source_id": "S491",
+      "quote": "RIESENSCHNAUZER (181)",
+      "confidence": "high",
+      "notes": "FCI nomenclature, group 2 page (S491, as returned): 'RIESENSCHNAUZER (181)', English name 'GIANT SCHNAUZER', 'Group 2 : Pinscher and Schnauzer - Molossoid and Swiss Mountain and Cattledogs', 'Section 1 : Pinscher and Schnauzer type', subsection '1.2 Schnauzer', country of origin 'GERMANY', no working trial, valid standard '5/25/2021'. The FCI standard PDF (S492, German) 'Gruppe 2 Pinscher und Schnauzer', 'Sektion 1 Pinscher und Schnauzer.', 'Deutschland.'. Germany is already in FCI_ORIGINS (DE). Wikipedia (S498, tier C) other names 'Riesenschnauzer; Munich Schnauzer; Munchener ; Russian Bear Schnauzer;'."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S495",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S495); PDSA (S496) 'Size: Large' (its page sits under 'large-dogs'). FCI 35–47 kg (S492) = 77–104 lb → mostly the 'Large' class of S10 for growth. RKC places the breed in the Working group."
+    },
+    "height": {
+      "rkc_standard": {
+        "value": {
+          "male": [
+            65,
+            70
+          ],
+          "female": [
+            60,
+            65
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S494",
+        "quote": "65-70 cms (25½-27½ ins)",
+        "confidence": "high",
+        "notes": "Royal Kennel Club breed standard (S494, last updated 1 April 2026), Size: dogs '65-70 cms (25½-27½ ins)', bitches '60-65 cms (23½-25½ ins)'; 'Variations outside these limits undesirable.' FCI (S492) 'Rüden und Hündinnen : 60 bis 70 cm.'; PDSA (S496) 'Average height: 60-70 cm'; PetMD (S497) '23.5-28.5 inches' — alternatives."
+      },
+      "fci": {
+        "value": {
+          "male": [
+            60,
+            70
+          ],
+          "female": [
+            60,
+            70
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S492",
+        "quote": "Rüden und Hündinnen : 60 bis 70 cm.",
+        "confidence": "high",
+        "notes": "FCI standard No. 181 (S492, German, published 06.03.2007), Widerristhöhe — one range for both sexes (stored per sex)."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            35,
+            47
+          ],
+          "female": [
+            35,
+            47
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S492",
+        "quote": "Rüden und Hündinnen : 35 bis 47 kg.",
+        "confidence": "high",
+        "notes": "FCI standard No. 181 (S492, German), Gewicht — one range for both sexes (stored per sex), the game range (adult_weight_kg). The RKC standard (S494) gives no weight. PDSA (S496) 'Average weight: 40-45 kg'; PetMD (S497) 'weigh up to 85 pounds' (≈ 39 kg, US dogs); Wikipedia (S498, tier C) '35–47 kg' — alternatives.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                40,
+                45
+              ],
+              "female": [
+                40,
+                45
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S496",
+            "quote": "Average weight: 40-45 kg",
+            "notes": "PDSA key fact 'Average weight' (S496), one range for both sexes."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "V (30–<40 kg) / VI (>40 kg, no curve)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 35–47 kg spans the bands. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 35–47 kg (S492) = 77–104 lb → mostly 'Large (59–99 pounds)' (the heaviest dogs reach the 'Giant' class, 18–24 months — alternative; Dobermann precedent). The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Giant Schnauzer growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S495",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S495). PDSA (S496) 'Average lifespan: Over 12 years' agrees. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "pdsa": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S496",
+        "quote": "Over 12 years",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average lifespan' (S496). Same lower bound as the RKC."
+      },
+      "petmd": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S497",
+        "quote": "The Giant Schnauzer lifespan is typically 12-15 years, and they are a generally healthy breed.",
+        "confidence": "medium",
+        "notes": "PetMD (S497). Alternative only (lower bound 12 y → the same 108 months)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Dogs Trust table of McMillan et al. 2024 data (S123): not reachable this run (fetch refused in every earlier run). Wikipedia (S498, tier C): 'A 2024 UK study found a life expectancy for the Giant Schnauzer of 12.1 years' — not verified in the paper or the table → open for David (0.75 × 12.1 × 12 = 108.9 → senior 109 if confirmed). UNSOURCED value."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 12 y (S495) → 0.75 × 12 = 9 y = 108 months. Runbook order: McMillan 2024 (table not reachable, value only via Wikipedia tier C) → VetCompass median (none found) → RKC lower bound. Alternatives: 109 (McMillan 2024 12.1 y via Wikipedia S498); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S495"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S495",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S495), runbook first choice → 120 min. PDSA (S496) 'Minimum exercise (per day): 2 hours' and 'Giant Schnauzers are large, highly energetic dogs that require plenty of exercise – ideally more than 2 hours per day.' agree. PetMD (S497): owners need 'the ability to give their dog at least 40-60 minutes of exercise and play every day.' (fragment) — alternative (40)."
+      },
+      "daily_text": {
+        "value": "ideally more than 2 hours per day",
+        "unit": "—",
+        "source_id": "S496",
+        "quote": "Giant Schnauzers are large, highly energetic dogs that require plenty of exercise – ideally more than 2 hours per day.",
+        "confidence": "high",
+        "notes": "PDSA (S496), exercise requirements."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No advice to leave a gap between eating and exercising found: PDSA (S496) names GDV only in its health list (no feeding sentence); PetMD (S497) advises measured meals twice daily (paraphrase) and does not address bloat → no meal_exercise_gap row (never invent a quote)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "bold, reliable, good natured and composed; versatile, strong, hardy, intelligent and vigorous",
+        "unit": "—",
+        "source_id": "S494",
+        "quote": "Bold, reliable, good natured and composed.",
+        "confidence": "high",
+        "notes": "Royal Kennel Club standard (S494), Temperament; Characteristics: 'Versatile, strong, hardy, intelligent and vigorous.' FCI (S492): 'Typische Wesenszüge sind sein gutartiger, ausgeglichener Charakter und seine unbestechliche Treue zum Herrn.'"
+      },
+      "experienced_owner": {
+        "value": "strong-minded — ideally suited to experienced dog owners",
+        "unit": "—",
+        "source_id": "S496",
+        "quote": "They're quite strong-minded, and are ideally suited to experienced dog owners.",
+        "confidence": "high",
+        "notes": "PDSA (S496). PetMD (S497): 'not recommended for first-time pet parents' (fragment) agrees. Basis of experienced_owner."
+      },
+      "family": {
+        "value": "lovable pets for families with older children, given the right socialisation as puppies",
+        "unit": "—",
+        "source_id": "S496",
+        "quote": "Giant Schnauzers can make lovable pets for families with older children, given the right socialisation as puppies.",
+        "confidence": "high",
+        "notes": "PDSA (S496). PetMD (S497): 'they generally do best in homes with older kids' (fragment). Basis of family_pet (older children, socialised) and of the puppy socialisation row; never children / small_children."
+      },
+      "small_children": {
+        "value": "not recommended for first-time owners or families with small children, small dogs or cats",
+        "unit": "—",
+        "source_id": "S497",
+        "quote": "not recommended for first-time pet parents or families with small children, small dogs, or cats.",
+        "confidence": "high",
+        "notes": "PetMD (S497, fragment as returned). Basis of not_for_small_children (Weimaraner precedent); never small_children or other_pets."
+      },
+      "time_alone": {
+        "value": "does not do well where people are not home much",
+        "unit": "—",
+        "source_id": "S497",
+        "quote": "Giant Schnauzers don't do well in apartments or in homes where people aren't home much.",
+        "confidence": "high",
+        "notes": "PetMD (S497). Basis of needs_company; never apartment or often_alone."
+      },
+      "other_pets": {
+        "value": "not recommended with small dogs or cats (no prey-drive statement)",
+        "unit": "—",
+        "source_id": "S497",
+        "quote": "not recommended for first-time pet parents or families with small children, small dogs, or cats.",
+        "confidence": "medium",
+        "notes": "PetMD (S497, fragment). No A/B source names a high prey drive → no chases_small_pets (runbook rule); never other_pets."
+      },
+      "socialisation": {
+        "value": "needs the right socialisation as a puppy; socialise as early as possible",
+        "unit": "—",
+        "source_id": "S496",
+        "quote": "Giant Schnauzers can make lovable pets for families with older children, given the right socialisation as puppies.",
+        "confidence": "high",
+        "notes": "PDSA (S496, a condition — runbook M5-R17: 'given the right socialisation as puppies'). PetMD (S497): 'Pet parents must socialize their Giant Schnauzer puppy as early as possible' (fragment). → proposed_game_parameters.giant_schnauzer.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S495: no breed-specific points of concern) → no welfare chip. Breeder checklist: RKC minimum tests (genetic diversity, BVA/RKC elbow and hip schemes, DNA prcd-PRA) and Best Practice tests (DCM, PRA5, BVA/KC/ISDS eye scheme, HUU) (S495; DCM DNA scheme also BSAVA K35).",
+      "hip_dysplasia": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S496",
+        "quote": "hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
+        "confidence": "high",
+        "notes": "PDSA (S496, fragment after 'Hip dysplasia'). PetMD (S497) names it too. RKC minimum hip and elbow schemes (S495). Register health key hip_dysplasia."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (GDV, bloat)",
+        "unit": "—",
+        "source_id": "S496",
+        "quote": "often known as 'bloat', this is a condition where the stomach twists, trapping the contents and gases.",
+        "confidence": "high",
+        "notes": "PDSA (S496, fragment after 'Gastric Dilatation Volvulus (GDV)'); the page adds that it 'is an emergency and requires urgent veterinary attention.' No gap-after-meals advice on the page → no meal_exercise_gap row. Register health key bloat_gdv."
+      },
+      "cardiomyopathy": {
+        "value": "dilated cardiomyopathy (heart muscle)",
+        "unit": "—",
+        "source_id": "S496",
+        "quote": "enlarged heart due to degeneration of the heart muscle.",
+        "confidence": "high",
+        "notes": "PDSA (S496, fragment after 'Cardiomyopathy'). RKC Best Practice 'Dilated cardiomyopathy (DCM)' (S495); BSAVA (K35): 'a new official DNA testing scheme for dilated cardiomyopathy (DCM) in Giant Schnauzers' (fragment, 14 December 2018). Register health key dilated_cardiomyopathy."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S496",
+        "quote": "a condition in which there's a decrease in thyroid hormone production.",
+        "confidence": "high",
+        "notes": "PDSA (S496, fragment); PetMD (S497) names it too. Register health key hypothyroidism."
+      },
+      "panosteitis": {
+        "value": "panosteitis (bone inflammation in young dogs)",
+        "unit": "—",
+        "source_id": "S496",
+        "quote": "a painful, inflammatory bone disease.",
+        "confidence": "high",
+        "notes": "PDSA (S496, fragment after 'Panosteitis'). Register health key panosteitis."
+      },
+      "urinary_incontinence": {
+        "value": "urinary incontinence",
+        "unit": "—",
+        "source_id": "S496",
+        "quote": "uncontrollable leakage of urine.",
+        "confidence": "high",
+        "notes": "PDSA (S496, fragment). Register health key urinary_incontinence."
+      },
+      "urolithiasis": {
+        "value": "bladder stones (urolithiasis)",
+        "unit": "—",
+        "source_id": "S496",
+        "quote": "stone formation in urine.",
+        "confidence": "high",
+        "notes": "PDSA (S496, fragment). RKC Best Practice 'Hyperuricosuria (HUU)' DNA test (S495) is related (urate stones). Register health key bladder_stones."
+      },
+      "osteochondritis_dissecans": {
+        "value": "osteochondritis dissecans (OCD, joint cartilage)",
+        "unit": "—",
+        "source_id": "S497",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S497) health list 'Osteochondritis Dissecans (OCD)' (heading only). Register health key osteochondritis."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy — gradual loss of sight",
+        "unit": "—",
+        "source_id": "S495",
+        "quote": "DNA Test - prcd-PRA",
+        "confidence": "high",
+        "notes": "RKC minimum DNA test prcd-PRA and Best Practice 'Progressive retinal atrophy (PRA5)' and eye scheme (S495). Register health key pra_eye_disease."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 28,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "28 | Giant Schnauzer",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, re-read 2026-10-24): rank 28 'Giant Schnauzer', tier 'Above Average Working Dogs' (ranks 27–39). Coren's own article (S34) not re-read. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Above average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier 'Above Average Working Dogs' (ranks 27–39)."
+      },
+      "training_notes": {
+        "value": "can be trained, though it may take more effort; strong-minded",
+        "unit": "—",
+        "source_id": "S496",
+        "quote": "They can be trained, although it may take more effort than some other breeds.",
+        "confidence": "high",
+        "notes": "PDSA (S496). PetMD (S497) 'Giant Schnauzers are easily trained because they are eager to please and attentive to their family.' — differs; the game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.giant_schnauzer.learning_multiplier (1.2, runbook rule: Above average tier, rank 28).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "powerfully built, robust, sinewy, almost square; the enlarged, powerful image of the Schnauzer; rough (wiry) coated",
+        "unit": "—",
+        "source_id": "S494",
+        "quote": "Powerfully built, robust, sinewy, appearing almost square.",
+        "confidence": "high",
+        "notes": "Royal Kennel Club standard (S494), General Appearance; 'Imposing, with keen expression and alert attitude.' FCI (S492): 'Gross, kräftig, eher gedrungen als schlank, rauhhaarig; das vergrösserte, kraftvolle Abbild des Schnauzers.'"
+      },
+      "colours": {
+        "value": [
+          "black",
+          "pepper_and_salt",
+          "black_and_silver"
+        ],
+        "unit": "list (dark facial mask in pepper and salt)",
+        "source_id": "S494",
+        "quote": "Any other colour or combination of colours unacceptable.",
+        "confidence": "high",
+        "notes": "Royal Kennel Club standard (S494), Colour: 'Pure black'; pepper and salt 'Shades range from dark iron grey to light grey; hairs banded black/light/black.' with 'Dark facial mask essential, harmonising with corresponding body colour.'; black and silver 'solid black with silver markings on eyebrows, muzzle, chest, forelegs below point of elbow,' (fragment); 'Good pigmentation essential in all colours'. FCI nomenclature (S491) and FCI news (S493, 'black and silver (new)' 'as from July 1st, 2021') list the same three. Never white, merle, brown or patches."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Black first with the highest weight (the portrait default), then pepper and salt, then black and silver."
+      },
+      "coat": {
+        "value": "harsh, wiry top coat, just short enough for smartness; good undercoat",
+        "unit": "—",
+        "source_id": "S494",
+        "quote": "Top coat harsh and wiry, just short enough for smartness on body.",
+        "confidence": "high",
+        "notes": "Royal Kennel Club standard (S494); 'Good undercoat.' FCI (S492): 'Das Haar soll drahtig hart und dicht sein.' RKC 'Coat length: Medium' (S495)."
+      },
+      "head": {
+        "value": "strong head of good length, narrowing toward the nose; flat forehead; stop accentuated by the eyebrows; blunt wedge-shaped muzzle",
+        "unit": "—",
+        "source_id": "S494",
+        "quote": "Head strong, of good length, narrowing from ears to eyes and then gradually toward end of nose.",
+        "confidence": "high",
+        "notes": "Royal Kennel Club standard (S494). FCI (S492): stop 'Erscheint durch die Brauen deutlich ausgeprägt.'; muzzle 'Er endet in einem stumpfen Keil.'"
+      },
+      "nose": {
+        "value": "well developed, always black",
+        "unit": "—",
+        "source_id": "S492",
+        "quote": "Die Nasenkuppe ist gut ausgebildet, mit grossen Öffnungen und ist stets schwarz.",
+        "confidence": "high",
+        "notes": "FCI standard (S492)."
+      },
+      "ears": {
+        "value": "V-shaped, set high, dropping forward to the temple (natural, never cropped)",
+        "unit": "—",
+        "source_id": "S494",
+        "quote": "Neat, V-shaped, set high and dropping forward to temple.",
+        "confidence": "high",
+        "notes": "Royal Kennel Club standard (S494). FCI (S492): 'Klappohren, hoch angesetzt, V-förmig, …' (drop ears). Never cropped in the game."
+      },
+      "eyes": {
+        "value": "medium sized, dark, oval, set forward",
+        "unit": "—",
+        "source_id": "S494",
+        "quote": "Medium sized, dark, oval, set forward, with lower lid fitting closely.",
+        "confidence": "high",
+        "notes": "Royal Kennel Club standard (S494)."
+      },
+      "tail": {
+        "value": "natural tail in balance with the rest of the dog, sabre or sickle shaped (never docked)",
+        "unit": "—",
+        "source_id": "S494",
+        "quote": "In balance with the rest of the dog.",
+        "confidence": "high",
+        "notes": "Royal Kennel Club standard (S494), undocked tail ('Previously customarily docked.'). FCI (S492): 'Naturbelassen: Zuchtziel ist die Säbel- oder Sichelrute.' Never docked in the game."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page (S495), PDSA (S496), PetMD (S497). RKC key facts reached on 2026-10-24. Woodgreen and VCA not attempted.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S495",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "RKC key fact (S495)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S495",
+        "quote": "Exercise: More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S495). Basis of active_family and long_daily_exercise."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S495",
+        "quote": "Size of home: Large house",
+        "confidence": "high",
+        "notes": "RKC key fact (S495) → large_home; never apartment."
+      },
+      "rkc_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S495",
+        "quote": "Size of garden: Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S495)."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S495",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "RKC key fact (S495) → brushing 7× a week (M5-R13 rule 'Every day' → 7) and frequent_grooming. PDSA (S496) daily grooming agrees; PetMD (S497) 'Weekly brushing is required to help prevent the Giant Schnauzer's coat from matting.' — alternative (1)."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S495",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S495); PDSA (S496) 'Coat length: Medium'."
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S495",
+        "quote": "Sheds: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S495). Basis of low_shedding (the honest wording — never hypoallergenic). No other A/B source says it sheds."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S495",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S495). Not shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S495",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S495)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S495",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S495): no points of concern specific to this breed identified for judges (paraphrase as returned). → no welfare chip."
+      },
+      "pdsa_family": {
+        "value": "lovable pets for families with older children, given the right socialisation as puppies",
+        "unit": "—",
+        "source_id": "S496",
+        "quote": "Giant Schnauzers can make lovable pets for families with older children, given the right socialisation as puppies.",
+        "confidence": "high",
+        "notes": "PDSA (S496). Basis of family_pet (with the older-children caveat → not_for_small_children)."
+      },
+      "pdsa_grooming": {
+        "value": "daily grooming and regular trimming",
+        "unit": "—",
+        "source_id": "S496",
+        "quote": "The coat of Giant Schnauzers requires daily grooming and regular trimming.",
+        "confidence": "high",
+        "notes": "PDSA (S496). Daily → agrees with the RKC 'Every day' (S495); regular trimming → proposed_game_parameters.giant_schnauzer.professional_grooming (no mechanic — ROADMAP M5-R18)."
+      },
+      "petmd_children": {
+        "value": "best with older kids; not for families with small children",
+        "unit": "—",
+        "source_id": "S497",
+        "quote": "not recommended for first-time pet parents or families with small children, small dogs, or cats.",
+        "confidence": "high",
+        "notes": "PetMD (S497, fragment); also 'they generally do best in homes with older kids' (fragment). Basis of not_for_small_children."
+      },
+      "petmd_grooming": {
+        "value": "weekly brushing; professional grooming with stripping every two to four months; weekly ear checks",
+        "unit": "—",
+        "source_id": "S497",
+        "quote": "Every few months, your dog will need to be professionally groomed, where the coat will be stripped out.",
+        "confidence": "high",
+        "notes": "PetMD (S497): 'Weekly brushing is required to help prevent the Giant Schnauzer's coat from matting.'; 'professional grooming every two to four months' (fragment); 'Shaving or clipping the coat can damage the texture, leading to more matting.'; 'Their ears should be checked weekly for discharge, redness, or odors' (fragment). → professional_grooming (ROADMAP M5-R18) and ear_checks (ROADMAP M5-R20); no nail / teeth advice."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -47526,6 +48103,302 @@
         "confidence": "high",
         "notes": "Colours of the Kennel Club standard (S485); unacceptable: merle, black or blue with tan markings, brindle. Weights unsourced in prompts. Fawn as the portrait default: the standard prefers no colour — Claude's choice (a solid colour also in the FCI list as isabelline, S489).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn is the portrait default; standard colours only (black, blue, cream, fawn, red, white, or broken with white), never merle, brindle or tan markings"
+      }
+    },
+    "giant_schnauzer": {
+      "_note": "Unattended run M5-R10-61 (2026-10-24): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12); recorded as `decision` per entry. No new vocabulary key; new register health keys only where the export needs them. Sourced needs built from day one: daily brushing (RKC S495 'Grooming: Every day', PDSA S496 daily, M5-R13 → 7); puppy socialisation (PDSA S496 quote, M5-R17). Sourced needs without a game mechanic: professional grooming with hand-stripping every two to four months / regular trimming (PetMD S497, PDSA S496) → ROADMAP M5-R18; weekly ear checks (PetMD S497) → ROADMAP M5-R20. No meal / walk gap quote → no digestion warning. Exercise from RKC (S495, more than 2 hours; PDSA agrees). Senior 108 from the RKC lower bound 'Over 12 years' (S495; McMillan 2024 12.1 y only via Wikipedia). RKC Breed Watch Category 1 → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S495",
+        "quote": null,
+        "confidence": "high",
+        "notes": "RKC 'More than 2 hours per day' (S495). Rule: one number N ('more than N') → N = 120. PDSA (S496) 'Minimum exercise (per day): 2 hours' agrees; PetMD (S497) 'at least 40-60 minutes' → alternative.",
+        "alternatives": [
+          {
+            "value": 40,
+            "source_id": "S497",
+            "notes": "PetMD 'at least 40-60 minutes of exercise and play every day' (fragment) — lower bound."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S495 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S495",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + RKC lower bound 'Over 12 years', S495; PDSA 'Over 12 years', S496, and PetMD 12–15 y, S497, agree). The Dogs Trust McMillan 2024 table (S123) could not be fetched; no VetCompass median found. Alternatives: 109 (McMillan 2024 12.1 y via Wikipedia S498, tier C — open for David); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S495"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia_12_1_y": 109,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S495)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 28 (S35), tier 'Above average' (27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 28, Above average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S495",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "giant_schnauzer.suitability.rkc_grooming. RKC 'Every day' → 7 (runbook dog-grooming rule). PDSA (S496) 'The coat of Giant Schnauzers requires daily grooming and regular trimming.' agrees; PetMD (S497) weekly brushing → alternative. Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 1,
+            "source_id": "S497",
+            "quote": "Weekly brushing is required to help prevent the Giant Schnauzer's coat from matting."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 7× na teden (RKC »Every day«; PDSA dnevno enako; PetMD tedensko kot alternativa); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S496",
+        "quote": "Giant Schnauzers can make lovable pets for families with older children, given the right socialisation as puppies.",
+        "confidence": "high",
+        "notes": "giant_schnauzer.behaviour.socialisation (PDSA S496, a condition). PetMD (S497) 'socialize … as early as possible' agrees. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S496)"
+      },
+      "professional_grooming": {
+        "value": "professional grooming with hand-stripping every two to four months; regular trimming; never shaved or clipped",
+        "unit": "care routine (sourced need)",
+        "source_id": "S497",
+        "quote": "Every few months, your dog will need to be professionally groomed, where the coat will be stripped out.",
+        "confidence": "high",
+        "notes": "PetMD (S497), giant_schnauzer.suitability.petmd_grooming; PDSA (S496) 'regular trimming'. The game has no groomer mechanic → open for David (ROADMAP M5-R18).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): mehanike ni → ROADMAP M5-R18 (David)"
+      },
+      "ear_checks": {
+        "value": "ears checked weekly for discharge, redness or odours",
+        "unit": "care routine (sourced need)",
+        "source_id": "S497",
+        "quote": "Their ears should be checked weekly for discharge, redness, or odors",
+        "confidence": "high",
+        "notes": "PetMD (S497, fragment), giant_schnauzer.suitability.petmd_grooming. The game has no ear mechanic → open for David (ROADMAP M5-R20).",
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): mehanike ni → ROADMAP M5-R20 (David)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-61); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S495"
+            ],
+            "refs": [
+              "giant_schnauzer.exercise.adult",
+              "giant_schnauzer.suitability.rkc_exercise"
+            ],
+            "quote": "S495 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S496"
+            ],
+            "refs": [
+              "giant_schnauzer.suitability.pdsa_family"
+            ],
+            "quote": "S496 'Giant Schnauzers can make lovable pets for families with older children, given the right socialisation as puppies.' (caveat → not_for_small_children)"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S495"
+            ],
+            "refs": [
+              "giant_schnauzer.suitability.rkc_size_of_home"
+            ],
+            "quote": "S495 'Size of home: Large house'"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S495"
+            ],
+            "refs": [
+              "giant_schnauzer.suitability.rkc_shedding"
+            ],
+            "quote": "S495 'Sheds: No'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S495"
+            ],
+            "refs": [
+              "giant_schnauzer.exercise.adult",
+              "giant_schnauzer.suitability.rkc_exercise"
+            ],
+            "quote": "S495 'Exercise: More than 2 hours per day'"
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S496"
+            ],
+            "refs": [
+              "giant_schnauzer.behaviour.experienced_owner"
+            ],
+            "quote": "S496 'They're quite strong-minded, and are ideally suited to experienced dog owners.'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S497"
+            ],
+            "refs": [
+              "giant_schnauzer.suitability.petmd_children",
+              "giant_schnauzer.behaviour.small_children"
+            ],
+            "quote": "S497 'not recommended for first-time pet parents or families with small children, small dogs, or cats.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S497"
+            ],
+            "refs": [
+              "giant_schnauzer.behaviour.time_alone"
+            ],
+            "quote": "S497 'Giant Schnauzers don't do well in apartments or in homes where people aren't home much.'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S495",
+              "S496"
+            ],
+            "refs": [
+              "giant_schnauzer.suitability.rkc_grooming",
+              "giant_schnauzer.suitability.pdsa_grooming"
+            ],
+            "quote": "S495 'Grooming: Every day'; S496 'The coat of Giant Schnauzers requires daily grooming and regular trimming.'"
+          }
+        ],
+        "not_proposed": {
+          "children": "Only with older children after puppy socialisation (PDSA S496); PetMD 'do best in homes with older kids' (S497) → not_for_small_children; older_children names a small dog (not this breed).",
+          "small_children": "PetMD: not recommended for families with small children (S497).",
+          "first_time_owner": "PDSA: ideally suited to experienced dog owners (S496); PetMD: not recommended for first-time pet parents (S497).",
+          "apartment": "RKC 'Large house' (S495); PetMD: don't do well in apartments (S497).",
+          "other_pets": "PetMD: not recommended with small dogs or cats (S497).",
+          "chases_small_pets": "No A/B source names a high prey drive (PetMD names none, S497) — runbook rule.",
+          "often_alone": "PetMD: don't do well where people aren't home much (S497) → needs_company.",
+          "sheds": "RKC 'Sheds: No' (S495) → low_shedding.",
+          "needs_mental_stimulation": "No explicit statement on the pages read.",
+          "shorter_lifespan": "RKC 'Over 12 years' (S495).",
+          "welfare": "RKC Breed Watch Category 1 (S495), no conformation welfare statement → no welfare chip; hip dysplasia, GDV, cardiomyopathy, hypothyroidism, panosteitis, urinary incontinence, bladder stones, OCD and PRA are register health keys and breeder-checklist items only."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, large_home, low_shedding; consider long_daily_exercise, experienced_owner, not_for_small_children, needs_company, frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S495",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 1 (S495); no veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92). Marketing never shows it as a dog for small children or first-time owners, as a dog left alone all day, as hypoallergenic, or with cropped ears or a docked tail (S494, S496, S497).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Giant Schnauzer, solid black coat (default); powerfully built, robust, sinewy, almost square; harsh wiry top coat with a good undercoat, bushy eyebrows and a beard on a blunt wedge-shaped muzzle; strong long head, flat forehead; black nose; medium oval dark eyes; natural V-shaped drop ears folded forward (never cropped); natural sabre-shaped tail (never docked); never white, merle, brown or patches",
+        "unit": "—",
+        "source_id": "S494",
+        "quote": "Any other colour or combination of colours unacceptable.",
+        "confidence": "high",
+        "notes": "Colours of the Royal Kennel Club standard (S494) and FCI (S491, S493): pure black, pepper and salt (dark facial mask), black and silver. Weights unsourced in prompts. Black as the portrait default — Claude's choice (the standard prefers no colour; listed first by the RKC).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black is the portrait default; standard colours only (black, pepper and salt, black and silver), natural ears and tail"
       }
     }
   }
