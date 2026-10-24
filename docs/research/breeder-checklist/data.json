@@ -2445,6 +2445,47 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (dog-data S495, 2026-10-24): minimum (Good Practice) — genetic diversity (inbreeding_coi, Shetland Sheepdog precedent), BVA/RKC elbow and hip schemes, DNA prcd-PRA; Best Practice — DCM, PRA5, the BVA/KC/ISDS eye scheme including litter screening, HUU. DCM is an official Kennel Club DNA testing scheme for the breed (BSAVA K35, 'a new official DNA testing scheme for dilated cardiomyopathy (DCM) in Giant Schnauzers', 14 December 2018) → key dna_dcm. New test keys: dna_dcm, dna_pra5."
+    },
+    "bloodhound": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S502",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "Best Practice"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S502",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "minimum",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S502",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S502",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S502",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (dog-data S502, 2026-10-24): minimum (Good Practice) — genetic diversity (inbreeding_coi), BVA/KC elbow and hip schemes; Best Practice — the BVA/KC/ISDS eye scheme. No new test key."
     }
   }
 }
