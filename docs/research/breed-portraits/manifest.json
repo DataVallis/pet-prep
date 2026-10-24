@@ -747,6 +747,18 @@
             "prompt_hash": "sha256:d3eda7679eae76985cfed5b08b63aa4c2103a0db64a07b2c8cfee2859ef08f8f",
             "generated_at": "2026-10-24T00:03:31+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "giant_schnauzer",
+            "species": "dog",
+            "file": "dog/giant-schnauzer.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:4591bed9c84d6837ece2bccd565b890b5884fe49ab67a3caa95d8ad73e7256da",
+            "generated_at": "2026-10-24T02:04:02+00:00",
+            "cost_usd": 0.15
         }
     ]
 }

@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `giant_schnauzer` (viri S491–S499; ponovno S8, S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja K35 |
 | Izvor | FCI št. 181 »Riesenschnauzer«, skupina 2, sekcija 1 (pinčerji in šnavcerji, 1.2 šnavcerji), Nemčija (S491) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 57. mesto »Giant Schnauzer« (S174, prebrano 2026-10-24) |
-| PR-ji | pet-prep #367 (pasma) · portret: sledi · spletna stran: sledi |
+| PR-ji | pet-prep #367 (pasma, združen `6dba4d5`) · portret #368 · spletna stran: pet-prep-website, veja `feat/register-giant-schnauzer` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -29,6 +29,7 @@
 | 2026-10-24 | pravilo runbooka (§3) | marketing: **v aplikaciji da, v marketingu da** — nikoli kot pes za majhne otroke ali začetnike, pes, ki je ves dan sam, »hipoalergen«, ali s kupiranimi uhlji / repom | veterinarsko odsvetovanje oglaševanja velja le za pse s sploščenim obrazom (BVA S92) | #367 |
 | 2026-10-24 | pravilo runbooka (§3) | barve za AI in izbirnik: **črn** (portret), poper in sol (s temno masko), črno-srebrn; nikoli bel, rjav ali lisast; naravni uhlji in rep (nikoli kupirani) | RKC S494 »Any other colour or combination of colours unacceptable.«; FCI S491 / S493 (črno-srebrna od 1. 7. 2021). Uteži barv brez vira → `verified: false`; črna za portret je predlog Claude | #367 |
 | 2026-10-24 | predlog Claude, David lahko spremeni | ime SL »veliki šnavcer« (slug `veliki-snavcer`); iskalni ključi tudi »veliki snavcer«, »riesenschnauzer«, »riesen«, »munich schnauzer« | običajno slovensko ime (MrPet.si S499, tier C); pri KZS ni preverjeno | #367 |
+| 2026-10-24 | pravilo runbooka (§8) | AI portret: realistična fotografija odraslega psa, črna žičasta dlaka z obrvmi in brado, naravni povešeni uhlji in nekupiran rep, svetla studijska podlaga, naravna razmerja (dlaka nekoliko daljša, netrimana); sprejet v prvem poskusu (zagon 40052551564, koda `6dba4d5`, brez produkcijske namestitve, 0,15 $) | barva portreta = najtežja barva iz `breed_appearance.php` | #368 |
 | 2026-10-24 | pravilo runbooka (§2.3) | seznam za vzreditelja — minimum: genetska raznolikost, komolci in kolki (BVA/RKC), DNK prcd-PRA; najboljša praksa: DCM, PRA5, pregled oči BVA/KC/ISDS (tudi legla), HUU. Nova ključa testov `dna_dcm`, `dna_pra5` | RKC S495; BSAVA K35 (uradna DNK shema za DCM pri velikem šnavcerju, 2018) | #367 |
 | 2026-10-24 | pravilo runbooka | novi zdravstveni ključi registra **`panosteitis`**, **`urinary_incontinence`**, **`osteochondritis`** — mirne povedi brez številk; ostali: `hip_dysplasia`, `bloat_gdv`, `heart_muscle_disease`, `hypothyroidism`, `bladder_stones`, `pra_eye_disease` | PDSA S496, PetMD S497, RKC S495 | #367 |
 
@@ -40,7 +41,7 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 108 mesecev; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-61 | 2026-10-24 |
 | Česanje vsak dan (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-24 |
 | Barva (izbirnik barve: črn, poper in sol, črno-srebrn) | 🛠 | 💶 izziv | M5-R21 | 2026-10-24 |
-| AI portret v registru | 🗓 sledi (§8) | — | M5-R11-04 | — |
+| AI portret v registru (črn, sprejet v prvem poskusu, zagon 40052551564) | ✅ | — | M5-R11-04 | 2026-10-24 |
 | Stran na petprep.si (`/animals/dogs/giant-schnauzer`, `/sl/zivali/psi/veliki-snavcer`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
