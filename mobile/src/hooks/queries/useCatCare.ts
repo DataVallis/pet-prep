@@ -66,7 +66,7 @@ function settleCatError(client: ReturnType<typeof useQueryClient>, error: unknow
   settleFromError(client, error, null, context);
 }
 
-function useSessionMutation<V, T extends { state: ChildPetState }>(key: readonly string[], call: (variables: V) => Promise<unknown>, read: (raw: unknown) => T | null) {
+export function useSessionMutation<V, T extends { state: ChildPetState }>(key: readonly string[], call: (variables: V) => Promise<unknown>, read: (raw: unknown) => T | null) {
   const client = useQueryClient();
   return useMutation<T, unknown, V, SessionContext>({
     mutationKey: ['child', 'pet', ...key],

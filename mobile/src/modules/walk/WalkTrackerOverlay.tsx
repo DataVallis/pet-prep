@@ -4,6 +4,9 @@ import { Footprints, HeartPulse, RefreshCw, X } from 'lucide-react-native';
 
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import DigestionNote from '@/modules/digestion/DigestionNote';
+import HeatNote from '@/modules/careTasks/HeatNote';
+import { heatWarningActive } from '@/modules/careTasks/careTasks';
+import { useHeatClock } from '@/modules/careTasks/useHeatClock';
 import { digestionNote } from '@/modules/digestion/digestion';
 import { useDigestionClock } from '@/modules/digestion/useDigestionClock';
 import { formatSteps } from '@/modules/steps/stepCounter';
@@ -132,6 +135,9 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
   // M5-R16: after a meal of a breed with the GDV advice — a calm note; steps still count.
   const digestionNow = useDigestionClock(view);
   const digestion = digestionNote(view, digestionNow);
+  // M5-R14: a flat-faced breed at summer midday — a calm note; steps still count, no penalty.
+  const heatNow = useHeatClock(view);
+  const heat = heatWarningActive(view.walkHeat, heatNow);
 
   return (
     <View style={styles.backdrop} testID="walk-overlay" accessibilityViewIsModal>
@@ -154,6 +160,7 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
         </View>
 
         {digestion !== null && <DigestionNote note={digestion} testID="walk-digesting" />}
+        {heat && <HeatNote testID="walk-heat" />}
 
         <View style={styles.stats}>
           <Text style={styles.steps} adjustsFontSizeToFit numberOfLines={1}>

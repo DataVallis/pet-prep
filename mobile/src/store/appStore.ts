@@ -10,6 +10,7 @@ import { create } from 'zustand';
 import type { Pet, PetUpdatedBroadcast } from '@/types';
 import type { VideoState } from '@/modules/petMedia/petMedia';
 import type { CatGameKind } from '@/modules/catCare/catCare';
+import type { CareTaskKey } from '@/modules/careTasks/careTasks';
 import type { SignInMethod } from '@/modules/session/signInMethod';
 import { readAuthMethods, type AuthMethods } from '@/modules/session/authMethods';
 
@@ -220,6 +221,13 @@ interface AppStore {
   /** Open a cat game; false (nothing changes) while a different one is open. */
   openCatGame: (kind: CatGameKind) => boolean;
   closeCatGame: () => void;
+  /**
+   * M5-R14 / R15 / R19 / R20: the breed care mini-game over the HUD (teeth, folds, ears,
+   * nails); null = closed. One game at a time: refused while a cat game is open.
+   */
+  careTaskOverlay: CareTaskKey | null;
+  openCareTask: (task: CareTaskKey) => boolean;
+  closeCareTask: () => void;
   /** Session ids of cat games the child stopped (never resumed; session UI state, cleared on sign-out). */
   abandonedCatSessions: readonly string[];
   abandonCatSession: (id: string) => void;
@@ -364,6 +372,14 @@ export const useAppStore = create<AppStore>((set, get) => ({
     return true;
   },
   closeCatGame: () => set({ catOverlay: null }),
+  careTaskOverlay: null,
+  openCareTask: (task) => {
+    const { careTaskOverlay, catOverlay } = get();
+    if (catOverlay !== null || (careTaskOverlay !== null && careTaskOverlay !== task)) return false;
+    if (careTaskOverlay !== task) set({ careTaskOverlay: task });
+    return true;
+  },
+  closeCareTask: () => set({ careTaskOverlay: null }),
   abandonedCatSessions: [],
   abandonCatSession: (id) =>
     set((state) =>
@@ -408,6 +424,7 @@ export const useAppStore = create<AppStore>((set, get) => ({
       dismissedPlayInvitations: [],
       pushTarget: null,
       catOverlay: null,
+      careTaskOverlay: null,
       abandonedCatSessions: [],
       factSheetId: null,
       isBreedGuideVisible: false,

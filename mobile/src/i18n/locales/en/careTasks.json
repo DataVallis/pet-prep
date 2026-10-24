@@ -1,0 +1,210 @@
+{
+  "common": {
+    "starting": "Your pup is getting ready …",
+    "finishing": "Saving …",
+    "again": "Try again",
+    "done": "Done",
+    "noPenalty": "No problem — nothing bad happens. You can try again right away.",
+    "stored": "This one is already saved. Here's how it went.",
+    "progress": "{{done}} / {{min}}",
+    "count": "Counted: {{strokes}}",
+    "stepA11y": "Step {{n}}",
+    "reasons": {
+      "too_few_strokes": "Not quite enough this time. Give it another go — slowly and gently.",
+      "not_spread": "Every step needs a little care. Next time keep going until the end.",
+      "too_uniform": "Let's do it by hand, nice and calm. Try again.",
+      "unknown": "That didn't count this time. Try again."
+    },
+    "brush": {
+      "holdHint": "Hold your finger on your pup, or hold the button below.",
+      "swipeHint": "Swipe your finger gently, back and forth.",
+      "bar": "Done: {{percent}} %",
+      "clean": "All clean! Just a moment …",
+      "action": "Clean",
+      "holdA11yHint": "Hold to keep going."
+    },
+    "nails": {
+      "hint": "Tap each claw once — just the very tip.",
+      "holdHint": "Hold the button: it trims one claw after another.",
+      "clawA11y": "Claw {{n}} of {{total}}",
+      "clawDoneA11y": "Claw {{n}} of {{total}}, trimmed",
+      "next": "Trim the next claw",
+      "nextA11yHint": "Trims the next claw. Hold to keep going.",
+      "allDone": "All claws trimmed! Just a moment …",
+      "leftPaw": "Left front paw",
+      "rightPaw": "Right front paw"
+    }
+  },
+  "tasks": {
+    "tooth_brushing": {
+      "title": "Brush teeth",
+      "chipA11y": "Brush your pup's teeth.",
+      "intro": "Your pup's breed needs its teeth brushed. Brush gently with a dog toothbrush — never use human toothpaste.",
+      "start": "Start brushing",
+      "stroke": "Brush once",
+      "strokeA11y": "Brush the teeth once",
+      "stageA11y": "Your pup's mouth. Swipe to brush its teeth.",
+      "steps": {
+        "1": "Front teeth",
+        "2": "Left side",
+        "3": "Right side"
+      },
+      "successTitle": "Sparkling teeth!",
+      "success": "Well done — clean teeth help keep your pup healthy.",
+      "failTitle": "Almost"
+    },
+    "fold_cleaning": {
+      "title": "Wipe the folds",
+      "chipA11y": "Wipe your pup's skin folds.",
+      "intro": "Your pup's breed has skin folds that need gentle cleaning. Wipe softly with a damp cloth, then pat dry.",
+      "start": "Start wiping",
+      "stroke": "Wipe once",
+      "strokeA11y": "Wipe the folds once",
+      "stageA11y": "Your pup's face. Swipe to wipe the folds.",
+      "steps": {
+        "1": "Above the nose",
+        "2": "Cheeks",
+        "3": "Pat dry"
+      },
+      "successTitle": "Clean and dry!",
+      "success": "Well done — clean, dry folds keep the skin happy.",
+      "failTitle": "Almost"
+    },
+    "ear_cleaning": {
+      "title": "Clean the ears",
+      "chipA11y": "Check and clean your pup's ears.",
+      "intro": "Your pup's breed needs its ears checked and cleaned. Look inside, then wipe only the outer ear gently — never push anything into the ear.",
+      "start": "Start cleaning",
+      "stroke": "Wipe once",
+      "strokeA11y": "Wipe the ear once",
+      "stageA11y": "Your pup's ears. Swipe to clean them.",
+      "steps": {
+        "1": "Left ear",
+        "2": "Right ear",
+        "3": "A last look"
+      },
+      "successTitle": "Clean ears!",
+      "success": "Well done — you checked and cleaned both ears.",
+      "failTitle": "Almost"
+    },
+    "nail_trim": {
+      "title": "Trim the nails",
+      "chipA11y": "Trim your pup's nails.",
+      "intro": "Your pup's breed needs its nails trimmed. In real life a grown-up helps: only the very tip, never the pink part.",
+      "start": "Start trimming",
+      "stroke": "Trim a claw",
+      "strokeA11y": "Trim the next claw",
+      "stageA11y": "Your pup's front paws. Tap each claw.",
+      "steps": {
+        "1": "Every claw",
+        "2": "Every claw",
+        "3": "Every claw"
+      },
+      "successTitle": "Nails trimmed!",
+      "success": "Well done — short nails make walking comfortable.",
+      "failTitle": "Almost"
+    }
+  },
+  "period": {
+    "open": {
+      "week": "This week: {{done}} of {{goal}}",
+      "twoWeeks": "These two weeks: {{done}} of {{goal}}",
+      "month": "This month: {{done}} of {{goal}}",
+      "longer": "This time: {{done}} of {{goal}}"
+    },
+    "done": {
+      "week": "All done this week ✓",
+      "twoWeeks": "All done for these two weeks ✓",
+      "month": "All done this month ✓",
+      "longer": "All done for now ✓"
+    }
+  },
+  "frequency": {
+    "daily": "every day",
+    "perWeek_one": "once a week",
+    "perWeek_other": "{{count}} times a week",
+    "perMonth_one": "once a month",
+    "perMonth_other": "{{count}} times a month",
+    "everyMonths_one": "every month",
+    "everyMonths_other": "every {{count}} months",
+    "everyWeeks_one": "every week",
+    "everyWeeks_other": "every {{count}} weeks",
+    "everyDays_one": "every day",
+    "everyDays_other": "every {{count}} days"
+  },
+  "errors": {
+    "care_task_not_available": "Your pup doesn't need this right now.",
+    "care_task_period_done": "That's all done for now. The next one is {{when}}.",
+    "care_task_period_done_no_time": "That's all done for now. Well done!",
+    "care_task_done_today": "Done for today. Again {{when}}.",
+    "care_task_done_today_no_time": "Done for today. Again tomorrow.",
+    "care_task_quiet_hours": "Your pup is sleeping now. Let it rest — you can do it {{when}}.",
+    "care_task_quiet_hours_no_time": "Your pup is sleeping now. Let it rest — you can do it after quiet hours.",
+    "care_task_session_active": "Someone else is doing this with your pup right now. Try {{when}}.",
+    "care_task_session_active_no_time": "Someone else is doing this with your pup right now. Try a little later."
+  },
+  "heat": {
+    "title": "Too hot for a walk",
+    "text": "It's summer and the middle of the day. Your pup's flat face makes heat hard — walk in the cool morning or evening and bring water.",
+    "short": "☀️ Too hot — walk in the morning or evening"
+  },
+  "guide": {
+    "child": {
+      "tooth_brushing": "Brush its teeth {{frequency}}.",
+      "fold_cleaning": "Wipe its skin folds {{frequency}}.",
+      "ear_cleaning": "Check and clean its ears {{frequency}}.",
+      "nail_trim": "Trim its nails {{frequency}}.",
+      "groomer_visit": "A grown-up takes it to the dog groomer {{frequency}}.",
+      "bath": "A grown-up gives it a bath {{frequency}}.",
+      "heat": "In summer ({{months}}) no walks between {{from}} and {{to}} — go in the cool morning or evening."
+    },
+    "parent": {
+      "tooth_brushing": "Your child brushes its teeth {{frequency}}.",
+      "fold_cleaning": "Your child wipes its skin folds {{frequency}}.",
+      "ear_cleaning": "Your child checks and cleans its ears {{frequency}}.",
+      "nail_trim": "Your child trims its nails {{frequency}}.",
+      "groomer_visit": "Reminder for you: a professional groomer {{frequency}} — confirm it in the app.",
+      "bath": "Reminder for you: a bath {{frequency}} — confirm it in the app.",
+      "heat": "In summer ({{months}}) the app warns before a walk between {{from}} and {{to}}."
+    },
+    "months": {
+      "north": "June–August",
+      "south": "December–February"
+    }
+  },
+  "parent": {
+    "title": "Care reminders",
+    "note": "Reminders for you. They don't affect the Care Score.",
+    "tasks": {
+      "groomer_visit": "Professional groomer",
+      "bath": "Bath"
+    },
+    "every": "Recommended {{frequency}}",
+    "dueBy": "Due by {{when}}",
+    "doneOn": "Done ✓ {{when}}",
+    "confirm": "Mark done",
+    "confirmA11y": "Mark as done for this period",
+    "error": "That didn't work. Try again.",
+    "reportTitle": "Care reminders (for parents)",
+    "status": {
+      "done": "done",
+      "open": "open",
+      "not_done": "not done"
+    }
+  },
+  "report": {
+    "tooth_brushing": "Brushing teeth",
+    "fold_cleaning": "Wiping folds",
+    "ear_cleaning": "Cleaning ears",
+    "nail_trim": "Trimming nails"
+  },
+  "timeline": {
+    "brushed_teeth": "Brushed teeth",
+    "cleaned_folds": "Wiped the folds",
+    "cleaned_ears": "Cleaned the ears",
+    "trimmed_nails": "Trimmed the nails",
+    "parent_groomer_visit": "Groomer visit",
+    "parent_bathed_pet": "Bath",
+    "by": "{{text}} · {{child}}"
+  }
+}

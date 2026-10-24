@@ -15,7 +15,9 @@
     "mess": "Cleaning up",
     "play": "Play",
     "litter": "Litter tray",
-    "scratching": "Scratching"
+    "scratching": "Scratching",
+    "care": "Care",
+    "heat": "Heat"
   },
   "units": {
     "hours": "{{value}} h",

@@ -68,6 +68,11 @@ import { useLongOutage, useServerOutage } from '@/store/serverStatusStore';
 import { applyBroadcastToCache, childPetKey, isRecoverableError, useChildPet } from '@/hooks/queries/useChildPet';
 import { useClean, useFeed, useResolveChewing, useTakeOut, useWater } from '@/hooks/queries/useChildActions';
 import CatCareOverlay from '@/modules/catCare/CatCareOverlay';
+import { CareTaskChip } from '@/modules/careTasks/CareTaskChip';
+import { CareTaskOverlayHost } from '@/modules/careTasks/CareTaskOverlay';
+import HeatNote from '@/modules/careTasks/HeatNote';
+import { heatWarningActive, showCareTaskChip } from '@/modules/careTasks/careTasks';
+import { useHeatClock } from '@/modules/careTasks/useHeatClock';
 import { CatHudChip, CatHudNote, FirstAidNote } from '@/modules/catCare/CatHudChips';
 import SocialisationSheet, { SocialisationChip } from '@/modules/socialisation/SocialisationSheet';
 import { showSocialisationChip } from '@/modules/socialisation/socialisation';
@@ -308,6 +313,9 @@ export default function ChildHudScreen() {
   const openCatGame = useAppStore((s) => s.openCatGame);
   const closeCatGame = useAppStore((s) => s.closeCatGame);
   const abandonedCatSessions = useAppStore((s) => s.abandonedCatSessions);
+  // M5-R14 / R15 / R19 / R20: the breed care mini-game open over the HUD.
+  const careTaskOverlay = useAppStore((s) => s.careTaskOverlay);
+  const openCareTask = useAppStore((s) => s.openCareTask);
   const setHudVideoState = useAppStore((s) => s.setHudVideoState);
   const hudVideoState = useAppStore((s) => s.hudVideoState);
   // No HUD → no video under the lock veil.
@@ -380,6 +388,8 @@ export default function ChildHudScreen() {
   const playNow = usePlayClock(view);
   // M5-R16: the "wait with the walk — digesting" note ends by the clock (one timer).
   const digestionNow = useDigestionClock(view);
+  // M5-R14: re-render when the summer midday heat window opens / closes.
+  const heatNow = useHeatClock(view);
   const reduceMotion = useReduceMotion();
   const play = usePlay();
   // "Mogoče kasneje" lives in the session store (survives the HUD remounting).
@@ -390,7 +400,7 @@ export default function ChildHudScreen() {
   // (like a lock does) — otherwise it would reappear when that layer closes.
   const messToScrub = view ? needsScrubbing(view.pet.needs_cleaning, view.behaviour) : false;
   const otherLayerOpen =
-    isWalkModalVisible || isCleaningOverlayVisible || isAlbumVisible || isTrainingVisible || catOverlay !== null || messToScrub;
+    isWalkModalVisible || isCleaningOverlayVisible || isAlbumVisible || isTrainingVisible || catOverlay !== null || careTaskOverlay !== null || messToScrub;
   useEffect(() => {
     if (otherLayerOpen) setPlayOverlay(null);
   }, [otherLayerOpen, setPlayOverlay]);
@@ -557,7 +567,7 @@ export default function ChildHudScreen() {
 
   // M5-R09c »Ali si vedel?«: never over a game, a layer or another sheet; the chip waits under a layer.
   const dockLayerOpen =
-    isWalkModalVisible || isCleaningOverlayVisible || isAlbumVisible || isTrainingVisible || playOverlay !== null || catOverlay !== null || messToScrub;
+    isWalkModalVisible || isCleaningOverlayVisible || isAlbumVisible || isTrainingVisible || playOverlay !== null || catOverlay !== null || careTaskOverlay !== null || messToScrub;
   const facts = useFactMoment({
     view,
     // M5-T03: the card also waits until the message queue is empty (care confirmation first).
@@ -643,7 +653,7 @@ export default function ChildHudScreen() {
   const nothingToScrub = pet.needs_cleaning && !needsScrub;
   const chewingOnly = pet.needs_cleaning && onlyChewingOpen(view.behaviour);
   const cleanDisabled = locked || alreadyClean || chewingOnly || nothingToScrub;
-  const catGameOpen = catOverlay !== null && !locked;
+  const catGameOpen = (catOverlay !== null || careTaskOverlay !== null) && !locked;
   // A mess that appears during a training session / cat game waits until the game is closed.
   const showCleaning =
     !locked &&
@@ -695,8 +705,10 @@ export default function ChildHudScreen() {
   // M5-R05: the play layer (never together with the album / training / a mess to scrub / a cat game).
   const showPlay = playOverlay !== null && !locked && view.play !== null && !showAlbum && !showTraining && !showCleaning && !catGameOpen;
   // M5-R06-08b: a cat game covers the HUD (the album closes it from the dock side — never both).
-  const showCatGame = catGameOpen && !showAlbum && !showTraining;
-  const coveredByOverlay = isWalkModalVisible || showCleaning || showTraining || showAlbum || showPlay || showCatGame;
+  const showCatGame = catOverlay !== null && catGameOpen && !showAlbum && !showTraining;
+  // M5-R14 / R15 / R19 / R20: a breed care mini-game covers the HUD like a cat game.
+  const showCareTask = careTaskOverlay !== null && catGameOpen && !showAlbum && !showTraining && !showCatGame;
+  const coveredByOverlay = isWalkModalVisible || showCleaning || showTraining || showAlbum || showPlay || showCatGame || showCareTask;
   // M5-R09c: the »Moja pasma« layer covers the HUD like the album (video paused, hidden from TalkBack).
   const showGuide = facts.guideOpen && !locked;
   const factChip = facts.showChip && !coveredByOverlay && !locked;
@@ -712,6 +724,10 @@ export default function ChildHudScreen() {
   const firstAid = showFirstAid(view);
   // M5-R16: after a meal of a breed with the GDV advice — only a note, the walk stays enabled.
   const digestion = !cat && !coveredByOverlay ? digestionNote(view, digestionNow) : null;
+  // M5-R14 / R15 / R19 / R20: the breed care chips while a period still has an open slot.
+  const careTaskChips = !cat && !coveredByOverlay ? view.careTasks.filter((c) => showCareTaskChip(c, locked)) : [];
+  // M5-R14: a flat-faced breed at summer midday — a calm note; the walk stays enabled.
+  const heat = !cat && !coveredByOverlay && heatWarningActive(view.walkHeat, heatNow);
   const openCat = (kind: CatGameKind) => {
     openCatGame(kind);
   };
@@ -1115,7 +1131,7 @@ export default function ChildHudScreen() {
                 : null
             }
             footer={
-              hasTraining || entry.kind !== 'hidden' || moodScene !== null || chips.length > 0 || socialisationChip || firstAid || digestion !== null || factChip ? (
+              hasTraining || entry.kind !== 'hidden' || moodScene !== null || chips.length > 0 || careTaskChips.length > 0 || socialisationChip || firstAid || digestion !== null || heat || factChip ? (
                 <>
                   {factChip && (
                     <View style={styles.chipRow}>
@@ -1124,6 +1140,7 @@ export default function ChildHudScreen() {
                   )}
                   {firstAid && <FirstAidNote />}
                   {digestion !== null && <DigestionNote note={digestion} />}
+                  {heat && <HeatNote />}
                   {moodScene !== null && <HappyBadge />}
                   {entry.kind === 'invitation' && (
                     <PlayInvitationCard
@@ -1133,7 +1150,7 @@ export default function ChildHudScreen() {
                       reduceMotion={reduceMotion}
                     />
                   )}
-                  {(hasTraining || entry.kind === 'button' || chips.length > 0 || socialisationChip) && (
+                  {(hasTraining || entry.kind === 'button' || chips.length > 0 || careTaskChips.length > 0 || socialisationChip) && (
                     <View style={styles.chipRow}>
                       {hasTraining && (
                         <TrainingChip
@@ -1152,6 +1169,18 @@ export default function ChildHudScreen() {
                           onPress={() => openCat(chip.kind)}
                         />
                       ))}
+                      {careTaskChips.map((task) => {
+                        const sleeps = rules[task.task].reason === 'sleeping';
+                        return (
+                          <CareTaskChip
+                            key={task.task}
+                            task={task}
+                            disabled={sleeps}
+                            disabledReason={sleeps ? rules[task.task].text : undefined}
+                            onPress={() => openCareTask(task.task)}
+                          />
+                        );
+                      })}
                       {socialisationChip && view.socialisation !== null && (
                         <SocialisationChip pending={view.socialisation.can_record} onPress={() => setSocialisationVisible(true)} />
                       )}
@@ -1212,6 +1241,8 @@ export default function ChildHudScreen() {
       {showTraining && <TrainingOverlay view={view} onClose={closeTraining} />}
       {/* M5-R06-08b: the cat mini-games (wand, scoop, litter change, grooming, scratcher). */}
       {showCatGame && <CatCareOverlay view={view} />}
+      {/* M5-R14 / R15 / R19 / R20: the breed care mini-games (teeth, folds, ears, nails). */}
+      {showCareTask && <CareTaskOverlayHost view={view} />}
       {showPlay && playOverlay !== null && (
         <PlayOverlay
           view={view}

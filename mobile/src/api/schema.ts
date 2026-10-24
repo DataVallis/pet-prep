@@ -425,6 +425,29 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/parent/pets/{pet}/care-reminders": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Confirm `task` (groomer_visit | bath) done for the pet's current period.
+         *     200 `{status: accepted | unchanged, care_reminders}` (unchanged = already
+         *     confirmed in this period). 422 `care_task_not_available` (the pet has no
+         *     such reminder). Another family's pet → 404 `pet_not_found`
+         * @description POST /api/parent/pets/{pet}/care-reminders
+         */
+        post: operations["careReminder.confirm"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/certificates/{certificate}/pdf": {
         parameters: {
             query?: never;
@@ -1051,6 +1074,55 @@ export interface paths {
          * @description POST /api/child/pet/socialisation
          */
         post: operations["childPet.socialise"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/child/pet/care-task/start": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Breed care mini-game (M5-R14 / R15 / R19 / R20, David 2026-10-24): start
+         *     `task` = tooth_brushing | fold_cleaning | ear_cleaning (30 s brush strokes)
+         *     or nail_trim (12 s, one tap per claw) — only a dog whose breed's source
+         *     states that task's frequency. 422 care_task_not_available | needs_cleaning |
+         *     care_task_period_done | care_task_done_today | care_task_session_active |
+         *     care_session_active | care_task_quiet_hours (the pet sleeps — checked
+         *     first — or the session would run into quiet hours; next_allowed_at = when
+         *     it wakes); 423 while locked
+         * @description POST /api/child/pet/care-task/start
+         */
+        post: operations["childPet.startCareTask"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/child/pet/care-task/finish": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Breed care mini-game: finish with the strokes / claw taps. `accepted` =
+         *     one of the period's sessions (a ledger slot); `rejected` = not enough (no
+         *     penalty). 422 care_task_not_available | care_session_*; 423 while locked
+         * @description POST /api/child/pet/care-task/finish
+         */
+        post: operations["childPet.finishCareTask"];
         delete?: never;
         options?: never;
         head?: never;
@@ -1816,6 +1888,20 @@ export interface components {
             features?: string[] | null;
         };
         /**
+         * ConfirmCareReminderRequest
+         * @description POST /api/parent/pets/{pet}/care-reminders (M5-R18 / R20): the parent
+         *     confirms a reminder "done" for the current period. Parents only
+         *     (UserPolicy::viewBilling → 403 for a child); whether the pet belongs to the
+         *     parent's family is checked in the controller (PetPolicy::manage → 404).
+         */
+        ConfirmCareReminderRequest: {
+            /**
+             * @description groomer_visit | bath
+             * @enum {string}
+             */
+            task: "groomer_visit" | "bath";
+        };
+        /**
          * ConfirmDeletionRequest
          * @description Body of every irreversible deletion (M2-08):
          *     `POST /api/parent/account/delete` and `DELETE /api/parent/children/{child}`.
@@ -1908,6 +1994,26 @@ export interface components {
          *     (422 care_session_invalid_input).
          */
         FinishCareChoreRequest: {
+            /** Format: uuid */
+            session_id: string;
+            /** @description May be empty (the child did nothing → not counted). */
+            strokes: {
+                t: number;
+            }[];
+        };
+        /**
+         * FinishCareTaskRequest
+         * @description POST /api/child/pet/care-task/finish (M5-R14 / R15 / R19 / R20): the task,
+         *     the session id from start and the strokes / claw taps the app saw — whole
+         *     milliseconds since the session start (`t`). Offsets beyond the session's
+         *     own length are refused by CareTaskService (422 care_session_invalid_input).
+         */
+        FinishCareTaskRequest: {
+            /**
+             * @description tooth_brushing | fold_cleaning | ear_cleaning | nail_trim
+             * @enum {string}
+             */
+            task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
             /** Format: uuid */
             session_id: string;
             /** @description May be empty (the child did nothing → not counted). */
@@ -2335,6 +2441,7 @@ export interface components {
             socialisation_enabled: boolean;
             coat_colour: string | null;
             state_media_version: number;
+            care_tasks_enabled: boolean;
         };
         /**
          * PetOrigin
@@ -2541,6 +2648,19 @@ export interface components {
          * @enum {string}
          */
         Species: "dog" | "cat";
+        /**
+         * StartCareTaskRequest
+         * @description POST /api/child/pet/care-task/start (M5-R14 / R15 / R19 / R20): which breed
+         *     care mini-game the child starts. Only children (PetPolicy); whether the pet
+         *     has that task is CareTaskService's (422 care_task_not_available).
+         */
+        StartCareTaskRequest: {
+            /**
+             * @description tooth_brushing | fold_cleaning | ear_cleaning | nail_trim
+             * @enum {string}
+             */
+            task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+        };
         /**
          * StartTrainingRequest
          * @description POST /api/child/pet/training/start (M5-R03): the command to train.
@@ -3439,6 +3559,53 @@ export interface operations {
                 };
             };
             401: components["responses"]["AuthenticationException"];
+        };
+    };
+    "careReminder.confirm": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                pet: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ConfirmCareReminderRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @enum {string} */
+                        status: "accepted" | "unchanged";
+                        pet_id: number;
+                        /** @description The pet's reminders after the confirmation (same shape as the dashboard's pet `care_reminders`). */
+                        care_reminders: unknown[];
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "No such pet in your family.";
+                        /** @constant */
+                        reason: "pet_not_found";
+                    };
+                };
+            };
+            422: components["responses"]["ValidationException"];
         };
     };
     "certificates.pdf": {
@@ -4418,6 +4585,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -4498,6 +4705,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -5207,6 +5436,46 @@ export interface operations {
                             /** @description POST /api/child/pet/socialisation would be accepted now. */
                             can_record: boolean;
                         } | null;
+                        /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                        care_tasks: {
+                            task: string;
+                            /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                            times: string;
+                            period_days: string;
+                            done_this_period: string;
+                            period_started_at: string;
+                            period_ends_at: string;
+                            session_seconds: number;
+                            /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                            next_allowed_at: string | null;
+                            /** @description Why a start would be refused now (not the lock); null = it may start. */
+                            blocked_reason: string | null;
+                            /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                            can_start: string;
+                            /** @description The viewing child's running session (as returned by start), else null. */
+                            session: {
+                                id: string;
+                                /** @enum {string} */
+                                task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                started_at: string;
+                                /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                ends_at: string;
+                                /** @description Last moment a finish is accepted (TTL). */
+                                expires_at: string;
+                                duration_ms: number;
+                                /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                min_strokes: number;
+                                segments: number;
+                                min_stroke_interval_ms: number;
+                            } | null;
+                            session_running: boolean;
+                        }[];
+                        /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                        walk_heat: {
+                            starts_at: string;
+                            ends_at: string;
+                            active: string;
+                        } | null;
                         /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                         care_guide: {
                             /** @enum {string} */
@@ -5287,6 +5556,28 @@ export interface operations {
                              *     before the walk; null otherwise.
                              */
                             digestion_gap_minutes: number | null;
+                            /**
+                             * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                             *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                             *     `period_days` program days (7 = week, 28 = month). [] without one.
+                             */
+                            care_tasks: {
+                                /** @enum {string} */
+                                task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                /** @enum {string} */
+                                actor: "child" | "parent";
+                                times: number;
+                                period_days: number;
+                            }[];
+                            /**
+                             * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                             *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                             */
+                            walk_heat: {
+                                months: number[];
+                                from: string;
+                                to: string;
+                            } | null;
                         };
                     };
                 };
@@ -6016,6 +6307,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -6096,6 +6427,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -6823,6 +7176,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -6903,6 +7296,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -7630,6 +8045,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -7710,6 +8165,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -8437,6 +8914,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -8517,6 +9034,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -9244,6 +9783,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -9324,6 +9903,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -10055,6 +10656,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -10135,6 +10776,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -10866,6 +11529,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -10946,6 +11649,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -11677,6 +12402,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -11757,6 +12522,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -12484,6 +13271,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -12564,6 +13391,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -13295,6 +14144,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -13375,6 +14264,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -14102,6 +15013,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -14182,6 +15133,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -14909,6 +15882,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -14989,6 +16002,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -15720,6 +16755,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -15800,6 +16875,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -16527,6 +17624,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -16607,6 +17744,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -17338,6 +18497,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -17418,6 +18617,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -18145,6 +19366,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -18225,6 +19486,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -18956,6 +20239,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -19036,6 +20359,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -19767,6 +21112,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -19847,6 +21232,1774 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
+                            };
+                        };
+                    };
+                };
+            };
+        };
+    };
+    "childPet.startCareTask": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["StartCareTaskRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown[] | string;
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            422: components["responses"]["ValidationException"];
+            423: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "The pet is locked right now.";
+                        status: string;
+                        reason: string | null;
+                        /** @description End of the vet visit; null for locks without an end time. */
+                        locked_until: string | null;
+                        state: {
+                            pet: {
+                                id: number;
+                                breed_type: string;
+                                /** @description M5-R06-01: dog | cat. */
+                                species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
+                                /** @description null until the first contract is signed (unborn, M1-07b). */
+                                born_at: string | null;
+                                /**
+                                 * @description This child must sign before acting (pet unborn, or this
+                                 *     child joined a shared pet and hasn't signed yet — M2-01).
+                                 */
+                                awaiting_contract: boolean;
+                                caretakers_count: number;
+                                /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
+                                virtual_age_months: number;
+                                /**
+                                 * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
+                                 *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
+                                 */
+                                age_months: number | null;
+                                /** @enum {string|null} */
+                                origin: "bought" | "adopted" | null;
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                profile: {
+                                    /**
+                                     * @description True for a pet created before M5-R01 (no profile choice): it keeps the pre-M5 rules
+                                     *     until its challenge ends; origin / ages / stage are null.
+                                     */
+                                    legacy: boolean;
+                                    /** @enum {string|null} */
+                                    origin: "bought" | "adopted" | null;
+                                    /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
+                                    arrival_age_months: number | null;
+                                    /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
+                                    age_months: number | null;
+                                    /**
+                                     * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
+                                     *     null for a legacy pet or a breed without life-stage data (pre-M5 rules).
+                                     * @enum {string|null}
+                                     */
+                                    life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                    /** @description The next stage and the family-local date its rules start; null for an unborn / legacy pet or a senior. */
+                                    next_stage: {
+                                        /** @enum {string} */
+                                        life_stage: "puppy" | "young" | "adult" | "senior";
+                                        from_date: string;
+                                    } | null;
+                                    /** @description True when every number of today's rules is backed by a source (docs/research/dog-data). */
+                                    data_verified: boolean;
+                                    /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
+                                    unverified: string[];
+                                    /**
+                                     * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                                     *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                                     */
+                                    behaviour_enabled: boolean;
+                                    today: {
+                                        /** @description Family-local date (Y-m-d) these rules are for. */
+                                        date: string;
+                                        meals_per_day: number;
+                                        /** @description Meals the child is expected to give (windows not covered by the parent). */
+                                        meals_by_child: number;
+                                        /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
+                                        meals_by_parent: number;
+                                        /**
+                                         * @description Today's feed windows, family-local "HH:MM", [start, end).
+                                         *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                                         *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                                         *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                                         *     lag the start by up to one tick). False for an unborn pet and for windows
+                                         *     not reached yet.
+                                         */
+                                        feed_windows: {
+                                            start: string;
+                                            end: string;
+                                            parent_covered: boolean;
+                                            fed: boolean;
+                                        }[];
+                                        /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
+                                        step_goal: number;
+                                        exercise_minutes: number | null;
+                                        /** @description Typical sleep hours per day at this age (sourced); null when no number exists. */
+                                        sleep_hours: {
+                                            min: number;
+                                            max: number;
+                                        } | null;
+                                    };
+                                };
+                                hunger_level: number;
+                                thirst_level: number;
+                                energy_level: number;
+                                hygiene_level: number;
+                                pet_state: string;
+                                escalation_level: number;
+                                needs_cleaning: boolean;
+                                is_active: boolean;
+                                is_hard_stopped: boolean;
+                                is_ill: boolean;
+                                illness_until: string | null;
+                                is_game_over: boolean;
+                                certificate_eligible: boolean;
+                                /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
+                                plan: {
+                                    type: string;
+                                    /** @enum {string|null} */
+                                    status: "trial" | "payment_required" | "paid" | null;
+                                    trial_ends_at: string | null;
+                                    paid_at: string | null;
+                                    payments_enforced: boolean;
+                                    /**
+                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                                     * @enum {string}
+                                     */
+                                    display_type: "free" | "challenge";
+                                };
+                                /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
+                                current_video_url: string | null;
+                                media_status: string;
+                                reference_image_url: string | null;
+                                /** @description AI media (M4-03 / M4-05): signed, expiring URLs (re-issued with every state). */
+                                media: {
+                                    /**
+                                     * @description pending: reference image not stored yet · failed: no image (budget, fal error) ·
+                                     *     disabled: AI media off · partial: image stored, some videos missing · ready: all stored.
+                                     * @enum {string}
+                                     */
+                                    status: "disabled" | "pending" | "failed" | "partial" | "ready";
+                                    /** @description Signed URL of our stored reference image (null until stored). */
+                                    reference_image_url: string | null;
+                                    /**
+                                     * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Always a JSON object ({} when empty).
+                                     */
+                                    videos: {
+                                        [key: string]: string;
+                                    };
+                                    /** @description Video for the current pet_state, falling back to idle; null if none is stored. */
+                                    current_video_url: string | null;
+                                    /**
+                                     * @description Video states this pet is entitled to (basic: idle + sleeping; full: all six +
+                                     *     M5-R02 behaviour videos accident (non-legacy puppy) / chewing (non-legacy dog);
+                                     *     M5-R06-07: a cat's full set has scratching (non-legacy cat), never accident / chewing).
+                                     */
+                                    states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
+                                    expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
+                                };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …), then the transitions. Empty when ready.
+                                     *     Never the school / game phase clips (QA m6): games report `media_ready`, the school
+                                     *     `school_pending`.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
+                                     *     hungry) is still on its way (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
+                                    ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
+                                    /**
+                                     * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
+                                     *     failed) — the app shows the poses and »Šola se še pripravlja«; practice works.
+                                     *     Independent of `running`: the school clips come after the preparation ended.
+                                     */
+                                    school_pending: boolean;
+                                };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
+                            };
+                            lock: {
+                                is_locked: boolean;
+                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
+                                reason: string | null;
+                                /** @description End of the vet visit; null for locks without an end time. */
+                                until: string | null;
+                            };
+                            timezone: string;
+                            server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
+                            feeding: {
+                                windows: unknown[];
+                                current_window: {
+                                    start: string;
+                                    end: string;
+                                } | null;
+                                fed_in_current_window: boolean;
+                                can_feed: string;
+                                /**
+                                 * @description M3-12: how a feed now would count — `window` (inside an unused meal
+                                 *     window, on time) or `emergency` (outside a window because hunger shows
+                                 *     ≤ `emergency_threshold` %; the missed window stays missed). Null when
+                                 *     feeding is not possible now.
+                                 * @enum {string|null}
+                                 */
+                                feed_mode: "window" | "emergency" | null;
+                                /**
+                                 * @description M3-12 rule A: displayed hunger (%) at or below which an emergency meal
+                                 *     is allowed — sent only while the last ended meal window was missed
+                                 *     (nothing fed since its start) and no window is open; null otherwise.
+                                 *     The app compares the live hunger with it and nothing else.
+                                 */
+                                emergency_threshold: number | null;
+                                /** @description The current window while unused, otherwise the next one. */
+                                next_feed_window: {
+                                    start: string;
+                                    end: string;
+                                } | null;
+                                last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
+                            };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
+                            water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
+                                times_per_day: string | 0;
+                                min_gap_minutes: string | 0;
+                                used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
+                                remaining_today: string | 0;
+                                last_watered_at: string;
+                                can_water: string;
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
+                                next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
+                            };
+                            steps: {
+                                steps_today: number;
+                                my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
+                                /** @description Today's step goal of the dog's life stage (M5-R01). */
+                                goal: number;
+                                energy_level: number;
+                                /**
+                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
+                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
+                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
+                                 *     Always false for a parent's view.
+                                 */
+                                adapted_mode: boolean;
+                            };
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
+                            };
+                            contract: {
+                                signed: boolean;
+                                signed_at: string;
+                            };
+                            /**
+                             * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
+                             *     (poop / accident / chewing) with their 2-hour deadline, the behaviour video.
+                             */
+                            behaviour: {
+                                take_out: {
+                                    hold_hours: number;
+                                    clock_started_at: string;
+                                    next_due_at: string;
+                                    last_taken_out_at: string | null;
+                                } | null;
+                                active_events: {
+                                    id: number;
+                                    /** @enum {string} */
+                                    kind: "poop" | "accident" | "chewing" | "litter_accident" | "scratching";
+                                    started_at: string;
+                                    due_at: string;
+                                }[];
+                                /** @enum {string|null} */
+                                scene: "accident" | "chewing" | "scratching" | null;
+                                /** @description POST /api/child/pet/take-out would be accepted (puppy, not locked). */
+                                can_take_out: boolean;
+                                /** @description POST /api/child/pet/resolve-chewing has something to tidy up. */
+                                can_resolve_chewing: boolean;
+                            };
+                            /**
+                             * @description M5-R03 training: progress per command (sit, come, place, potty), today's
+                             *     routine, the running session and the dog's daily mini-game budget.
+                             */
+                            training: {
+                                /** @description Training exists for this pet (new pet + app feature `training`); false for legacy pets. */
+                                enabled: boolean;
+                                /** @description Every command with displayed progress 0–100 (empty when not enabled). */
+                                commands: {
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    progress: number;
+                                    learned: boolean;
+                                    last_practised_at: string | null;
+                                }[];
+                                /** @description A session was completed today (the daily training routine). */
+                                today_done: boolean;
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                /** @description Length of one session in seconds. */
+                                session_seconds: number;
+                                /** @description The dog's mini-game seconds per family-local day, and what is left today. */
+                                daily_budget_seconds: number;
+                                daily_budget_left_seconds: number;
+                                /** @description M5-R03b fair share: children who can train this dog (signed caretakers) — the budget is split equally. */
+                                children_sharing: number;
+                                /** @description This child's share of the daily budget (max(budget / children_sharing, one session); 0 if this child cannot train). */
+                                my_share_seconds: number;
+                                /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
+                                my_seconds_left: number;
+                                /**
+                                 * @description POST /api/child/pet/training/start would be accepted now (enabled, not
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
+                                 */
+                                can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
+                            };
+                            /**
+                             * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
+                             *     the 30-minute happy scene. Null for a pet without play (free mutt, legacy, unpaid).
+                             */
+                            play: {
+                                /** @description POST /api/child/pet/play would be accepted now. */
+                                can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
+                                /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
+                                invitation: {
+                                    id: number;
+                                    /** @enum {string} */
+                                    kind: "play" | "cuddle";
+                                    expires_at: string;
+                                } | null;
+                                mood: {
+                                    /** @description End of the happy scene (30 min after the last play); null when not happy. */
+                                    happy_until: string | null;
+                                    /**
+                                     * @description Video scene: `playing` while happy and no lock / need / sleep shows.
+                                     * @enum {string|null}
+                                     */
+                                    scene: "playing" | null;
+                                };
+                            } | null;
+                            /** @description M5-R06-04 cat wand play (the cat's daily play routine); null for a dog. */
+                            wand: {
+                                /** @description Successful sessions the cat needs today (kitten 3, grown cat 2). */
+                                goal: number;
+                                /** @description Today's successful sessions (all children); the meter is pet.energy_level. */
+                                sessions_today: number;
+                                /** @description The viewing child's own successful sessions today (null in the broadcast). */
+                                my_sessions_today: number | null;
+                                min_gap_minutes: number;
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/wand/start would be accepted now. */
+                                can_start: boolean;
+                                /** @description The viewing child's running game (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                session_running: boolean;
+                                /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
+                                missed_yesterday: boolean;
+                            } | null;
+                            /** @description M5-R06-05 cat litter tray (uses, scoop deadlines, weekly change); null for a dog. */
+                            litter: {
+                                /** @description Litter uses the cat has today (kitten 3, grown cat 2). */
+                                uses_per_day: number;
+                                /** @description Unscooped uses, oldest first; `expired` = deadline passed (the mess is a litter_accident). */
+                                open_uses: {
+                                    id: number;
+                                    used_at: string;
+                                    due_at: string | null;
+                                    expired: boolean;
+                                }[];
+                                /** @description The earliest scoop deadline still ahead. */
+                                next_due_at: string | null;
+                                /** @description Hours a use happening now gets to be scooped (4; 2 while the weekly change is overdue). */
+                                scoop_deadline_hours: number;
+                                /** @description POST /api/child/pet/litter/scoop has something to scoop now. */
+                                can_scoop: boolean;
+                                /** @description The weekly full change (POST /api/child/pet/litter-change/start|finish). */
+                                change: {
+                                    week_started_at: string;
+                                    due_at: string;
+                                    done: boolean;
+                                    overdue: boolean;
+                                    blocked_reason: string | null;
+                                    can_start: boolean;
+                                    session: {
+                                        [key: string]: unknown;
+                                    } | null;
+                                    session_running: boolean;
+                                } | null;
+                            } | null;
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
+                            grooming: {
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
+                                goal_per_week: number;
+                                done_this_week: number;
+                                week_started_at: string;
+                                week_ends_at: string;
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
+                                matted: boolean;
+                                matted_since: string | null;
+                                /** @description Length of the next grooming (~2× while matted). */
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next week / end of quiet hours). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/grooming/start would be accepted now. */
+                                can_start: boolean;
+                                /** @description The viewing child's running grooming (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                session_running: boolean;
+                            } | null;
+                            /** @description M5-R06-05 cat scratching (open mess, redirect + praise session); null for a dog. */
+                            scratching: {
+                                /** @description The open "scratched the sofa" mess with its 2 h deadline; null when none. */
+                                active: {
+                                    id: number;
+                                    started_at: string;
+                                    due_at: string;
+                                } | null;
+                                /** @description Why a carry would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/scratching/start would be accepted now. */
+                                can_start: boolean;
+                                /** @description The viewing child's running carry (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                session_running: boolean;
+                            } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
+                            /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
+                            socialisation: {
+                                /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
+                                goal_per_week: number;
+                                done_this_week: number;
+                                /** @description This week's task is done. */
+                                done: boolean;
+                                /** @description Program week number (1 = the week from birth). */
+                                week: number;
+                                week_started_at: string;
+                                week_ends_at: string;
+                                /** @description The last experience recorded this week, else null. */
+                                experience: string | null;
+                                /** @description What the child can pick: a new person, another dog, a new sound, a new place. */
+                                experiences: string[];
+                                /** @description When the refusal in blocked_reason ends (next puppy week / end of quiet hours); null = never this stage. */
+                                next_allowed_at: string | null;
+                                /** @description Why recording would be refused now (not the lock); null = it may be recorded. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/socialisation would be accepted now. */
+                                can_record: boolean;
+                            } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
+                            };
+                        };
+                    };
+                };
+            };
+        };
+    };
+    "childPet.finishCareTask": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["FinishCareTaskRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown[] | string;
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            422: components["responses"]["ValidationException"];
+            423: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @constant */
+                        message: "The pet is locked right now.";
+                        status: string;
+                        reason: string | null;
+                        /** @description End of the vet visit; null for locks without an end time. */
+                        locked_until: string | null;
+                        state: {
+                            pet: {
+                                id: number;
+                                breed_type: string;
+                                /** @description M5-R06-01: dog | cat. */
+                                species: string;
+                                /** @description M5-R08: optional name set by a parent (null = none) — a label only. */
+                                name: string | null;
+                                /** @description null until the first contract is signed (unborn, M1-07b). */
+                                born_at: string | null;
+                                /**
+                                 * @description This child must sign before acting (pet unborn, or this
+                                 *     child joined a shared pet and hasn't signed yet — M2-01).
+                                 */
+                                awaiting_contract: boolean;
+                                caretakers_count: number;
+                                /** @description Months (= program weeks) since birth: the 12-week challenge clock (payment-lock time excluded, M3-11b). */
+                                virtual_age_months: number;
+                                /**
+                                 * @description M5-R01: the dog's age (arrival age + weeks since birth), origin, stage;
+                                 *     null for a legacy pet (pre-M5 rules, `profile.legacy`).
+                                 */
+                                age_months: number | null;
+                                /** @enum {string|null} */
+                                origin: "bought" | "adopted" | null;
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                profile: {
+                                    /**
+                                     * @description True for a pet created before M5-R01 (no profile choice): it keeps the pre-M5 rules
+                                     *     until its challenge ends; origin / ages / stage are null.
+                                     */
+                                    legacy: boolean;
+                                    /** @enum {string|null} */
+                                    origin: "bought" | "adopted" | null;
+                                    /** @description Age in months when the dog came home (parent's choice: puppy 2, young 9, adult 36, senior 108 / 118); null = legacy. */
+                                    arrival_age_months: number | null;
+                                    /** @description The dog's age now: arrival age + one month per program week since birth (contract; payment-lock time excluded, M3-11b); null = legacy. */
+                                    age_months: number | null;
+                                    /**
+                                     * @description Stage of today's rules (switches at the family-local midnight after the weekly birthday);
+                                     *     null for a legacy pet or a breed without life-stage data (pre-M5 rules).
+                                     * @enum {string|null}
+                                     */
+                                    life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                    /** @description The next stage and the family-local date its rules start; null for an unborn / legacy pet or a senior. */
+                                    next_stage: {
+                                        /** @enum {string} */
+                                        life_stage: "puppy" | "young" | "adult" | "senior";
+                                        from_date: string;
+                                    } | null;
+                                    /** @description True when every number of today's rules is backed by a source (docs/research/dog-data). */
+                                    data_verified: boolean;
+                                    /** @description Rule keys whose value is a proposal (UNSOURCED) — never show these as facts. */
+                                    unverified: string[];
+                                    /**
+                                     * @description M5-R02: this pet has behaviour events (puppy accidents, chewing, take-out) —
+                                     *     only when its creating app build sent generate-pin `features: ["behaviour_events"]`.
+                                     */
+                                    behaviour_enabled: boolean;
+                                    today: {
+                                        /** @description Family-local date (Y-m-d) these rules are for. */
+                                        date: string;
+                                        meals_per_day: number;
+                                        /** @description Meals the child is expected to give (windows not covered by the parent). */
+                                        meals_by_child: number;
+                                        /** @description Meals in quiet hours (school / sleep): the parent feeds, never a child routine. */
+                                        meals_by_parent: number;
+                                        /**
+                                         * @description Today's feed windows, family-local "HH:MM", [start, end).
+                                         *     `fed`: the dog got a meal inside this window (now or earlier today) — fed by
+                                         *     any caretaker child (`fed_pet`) or, in a parent_covered window, by the parent
+                                         *     (`parent_fed_pet`, written by the server tick at the window start, so it can
+                                         *     lag the start by up to one tick). False for an unborn pet and for windows
+                                         *     not reached yet.
+                                         */
+                                        feed_windows: {
+                                            start: string;
+                                            end: string;
+                                            parent_covered: boolean;
+                                            fed: boolean;
+                                        }[];
+                                        /** @description Steps for 100 % energy today (exercise minutes × 100 steps). */
+                                        step_goal: number;
+                                        exercise_minutes: number | null;
+                                        /** @description Typical sleep hours per day at this age (sourced); null when no number exists. */
+                                        sleep_hours: {
+                                            min: number;
+                                            max: number;
+                                        } | null;
+                                    };
+                                };
+                                hunger_level: number;
+                                thirst_level: number;
+                                energy_level: number;
+                                hygiene_level: number;
+                                pet_state: string;
+                                escalation_level: number;
+                                needs_cleaning: boolean;
+                                is_active: boolean;
+                                is_hard_stopped: boolean;
+                                is_ill: boolean;
+                                illness_until: string | null;
+                                is_game_over: boolean;
+                                certificate_eligible: boolean;
+                                /** @description M3-11 / M3-13: free | challenge, payment_required / paid (trial only for a pre-M3-13 trial; null for free). */
+                                plan: {
+                                    type: string;
+                                    /** @enum {string|null} */
+                                    status: "trial" | "payment_required" | "paid" | null;
+                                    trial_ends_at: string | null;
+                                    paid_at: string | null;
+                                    payments_enforced: boolean;
+                                    /**
+                                     * @description M5-F02: the plan a parent sees (a mutt nobody bought a challenge for is `free`).
+                                     * @enum {string}
+                                     */
+                                    display_type: "free" | "challenge";
+                                };
+                                /** @description Legacy fields (pre-M4-05 builds): now our signed URLs, never fal URLs. */
+                                current_video_url: string | null;
+                                media_status: string;
+                                reference_image_url: string | null;
+                                /** @description AI media (M4-03 / M4-05): signed, expiring URLs (re-issued with every state). */
+                                media: {
+                                    /**
+                                     * @description pending: reference image not stored yet · failed: no image (budget, fal error) ·
+                                     *     disabled: AI media off · partial: image stored, some videos missing · ready: all stored.
+                                     * @enum {string}
+                                     */
+                                    status: "disabled" | "pending" | "failed" | "partial" | "ready";
+                                    /** @description Signed URL of our stored reference image (null until stored). */
+                                    reference_image_url: string | null;
+                                    /**
+                                     * @description Signed URL per stored state video, keyed by pet state (idle, sleeping, …).
+                                     *     Always a JSON object ({} when empty).
+                                     */
+                                    videos: {
+                                        [key: string]: string;
+                                    };
+                                    /** @description Video for the current pet_state, falling back to idle; null if none is stored. */
+                                    current_video_url: string | null;
+                                    /**
+                                     * @description Video states this pet is entitled to (basic: idle + sleeping; full: all six +
+                                     *     M5-R02 behaviour videos accident (non-legacy puppy) / chewing (non-legacy dog);
+                                     *     M5-R06-07: a cat's full set has scratching (non-legacy cat), never accident / chewing).
+                                     */
+                                    states: ("idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching")[];
+                                    /** @description When the URLs above stop working (ISO 8601); fetch the state again before. */
+                                    expires_at: string | null;
+                                    /**
+                                     * @description M5-T08: signed URL of the stored KEY IMAGE per state (the pose the state's
+                                     *     loop starts in). Never `idle` — the reference image is the idle pose.
+                                     *     Shown while a state's clip is missing and in picture mode (M5-T11). Always an object.
+                                     */
+                                    keyframes: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: signed URL per stored TRANSITION clip, keyed `<from>_to_<to>`
+                                     *     (idle_to_sleeping, sleeping_to_idle). Played once on that state change,
+                                     *     then the target state's loop. Always an object.
+                                     */
+                                    transitions: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T08: states whose stored video is a loop made from its key image (loop the
+                                     *     native way; since 2026-10-23 start frame only, the seam may differ slightly).
+                                     */
+                                    loops: string[];
+                                    /**
+                                     * @description M5-T08: this pet's media follow the state rules — a missing clip shows the state's
+                                     *     key image (or the still reference image), never a clip of another state (§0 rule 1).
+                                     *     false = the older set (substitute clips sick → sleeping → idle).
+                                     */
+                                    state_media: boolean;
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored POSE image a school / game phase clip
+                                     *     starts or ends in (sit, come, place, door, empty = the room without the dog;
+                                     *     cat: crouch, catch). The standing pose is the reference image. Shown while a
+                                     *     phase clip is missing and in picture mode. Always an object.
+                                     */
+                                    poses: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: signed URL of each stored PHASE clip (3 s; school performing 5 s since 2026-10-23 — `phase_seconds`), played once and held on
+                                     *     its last frame — school `school_<command>_<attention|performing|success>`, dog
+                                     *     ball `ball_<waiting|running|fetching>`, cat wand `wand_<stalking|pouncing|catching>`.
+                                     *     Always an object.
+                                     */
+                                    phases: {
+                                        [key: string]: string;
+                                    };
+                                    /**
+                                     * @description David 2026-10-23: length in seconds of each stored phase clip in `phases` — school
+                                     *     PERFORMING clips are 5 s since then, every other phase clip (and performing clips
+                                     *     made before) 3 s. The app times the school from it (the performing clip ends at
+                                     *     the obey moment). Missing key (older server) = 3. Always an object.
+                                     */
+                                    phase_seconds: {
+                                        [key: string]: number;
+                                    };
+                                    /**
+                                     * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
+                                     *     `state_media`). For a listed group the app shows the phase clip — or, while it is
+                                     *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     */
+                                    phase_groups: ("school" | "ball" | "wand")[];
+                                };
+                                /**
+                                 * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
+                                 *     whether to show »Pripravljamo …« — never says how it is prepared.
+                                 */
+                                preparation: {
+                                    /**
+                                     * @description Everything the pet shows is stored (or nothing will come). Turns true with the
+                                     *     `video_ready` PetUpdated of the last item (then `pet_ready` once, if `running`).
+                                     */
+                                    ready: boolean;
+                                    /**
+                                     * @description What is not stored yet, in the order it is made: `image` (the pose), then video
+                                     *     states (idle, sleeping, hungry, playing, …), then the transitions. Empty when ready.
+                                     *     Never the school / game phase clips (QA m6): games report `media_ready`, the school
+                                     *     `school_pending`.
+                                     */
+                                    pending: ("image" | "idle" | "sleeping" | "low_energy" | "hungry" | "sick" | "playing" | "accident" | "chewing" | "scratching" | "idle_to_sleeping" | "sleeping_to_idle")[];
+                                    /**
+                                     * @description Show »Pripravljamo [ime] … to lahko traja nekaj minut«: the pet's preparation runs
+                                     *     (started ≤ 15 min ago) and the pose or a first-minutes clip (idle, sleeping,
+                                     *     hungry) is still on its way (never for a failed item).
+                                     */
+                                    preparing: boolean;
+                                    /**
+                                     * @description The pet's preparation runs (started at birth / purchase, not finished). Goes
+                                     *     true → false exactly once, with `ready` true (news: see `announce`)
+                                     *     (PetUpdated `pet_ready` + one push to the caretaker children).
+                                     */
+                                    running: boolean;
+                                    /** @description When the shown preparation ended (ISO 8601, UTC); null when it never ran or still runs. */
+                                    ready_at: string | null;
+                                    /**
+                                     * @description The end is news (QA m1/m4, server decides): the preparation was seen (≥ 10 s) and
+                                     *     ended ≤ 2 h after it started. The child app then says »Vse je pripravljeno: Luna«
+                                     *     once per pet (within 12 h of `ready_at`); the same rule sends `pet_ready` + push.
+                                     */
+                                    announce: boolean;
+                                    /**
+                                     * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
+                                     *     failed) — the app shows the poses and »Šola se še pripravlja«; practice works.
+                                     *     Independent of `running`: the school clips come after the preparation ended.
+                                     */
+                                    school_pending: boolean;
+                                };
+                                /**
+                                 * @description M5-T13: the pet's first birthday (1 year by the simulation's age formula) —
+                                 *     null when it has none in the simulation. `is_today` = party hat all day.
+                                 */
+                                birthday: {
+                                    /**
+                                     * @description The family-local date (Y-m-d) the pet turns 1 by the simulation's age formula
+                                     *     (arrival age + one month per program week; payment-lock time does not count, so
+                                     *     the date moves later while the pet waits for payment).
+                                     */
+                                    date: string;
+                                    /**
+                                     * @description Today (family-local) is the birthday: show the party hat, the safe treat and the
+                                     *     tip the whole day. False while the pet waits for payment.
+                                     */
+                                    is_today: boolean;
+                                    /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
+                                    celebrated: boolean;
+                                } | null;
+                            };
+                            lock: {
+                                is_locked: boolean;
+                                /** @description game_over | inactive | hard_stopped | payment_required | contract_required | ill | null */
+                                reason: string | null;
+                                /** @description End of the vet visit; null for locks without an end time. */
+                                until: string | null;
+                            };
+                            timezone: string;
+                            server_time: string;
+                            /**
+                             * @description M5-T02 (David 2026-10-20): the pet sleeps now (family quiet hours) and when it
+                             *     wakes — play and school are off while asleep ({@see SleepPayload}).
+                             */
+                            sleep: {
+                                /** @description The pet sleeps now (family quiet hours): play and school are off. */
+                                asleep: boolean;
+                                /** @description When it wakes (end of the quiet stretch, family offset); null while awake. */
+                                until: string | null;
+                            };
+                            feeding: {
+                                windows: unknown[];
+                                current_window: {
+                                    start: string;
+                                    end: string;
+                                } | null;
+                                fed_in_current_window: boolean;
+                                can_feed: string;
+                                /**
+                                 * @description M3-12: how a feed now would count — `window` (inside an unused meal
+                                 *     window, on time) or `emergency` (outside a window because hunger shows
+                                 *     ≤ `emergency_threshold` %; the missed window stays missed). Null when
+                                 *     feeding is not possible now.
+                                 * @enum {string|null}
+                                 */
+                                feed_mode: "window" | "emergency" | null;
+                                /**
+                                 * @description M3-12 rule A: displayed hunger (%) at or below which an emergency meal
+                                 *     is allowed — sent only while the last ended meal window was missed
+                                 *     (nothing fed since its start) and no window is open; null otherwise.
+                                 *     The app compares the live hunger with it and nothing else.
+                                 */
+                                emergency_threshold: number | null;
+                                /** @description The current window while unused, otherwise the next one. */
+                                next_feed_window: {
+                                    start: string;
+                                    end: string;
+                                } | null;
+                                last_fed_at: string;
+                                /**
+                                 * @description M5-R16 (David 2026-10-12): until this instant the app shows the digestion
+                                 *     warning (wait with the walk, the dog is digesting): last meal + the breed's
+                                 *     meal / exercise gap (Cane Corso, Dobermann, Boxer 60 min). Null for every other
+                                 *     breed, a cat, a legacy pet, or once the gap has passed. Only a warning:
+                                 *     steps still count.
+                                 */
+                                digesting_until: string | null;
+                            };
+                            /**
+                             * @description M5-F11 (David 2026-10-12, "Dolij, ko se prazni"): no daily cap — water when the
+                             *     live thirst shows ≤ `refill_below` and `min_gap_minutes` have passed.
+                             */
+                            water: {
+                                /** @description Expected refills per day for the Care Score (a minimum, not a cap). */
+                                times_per_day: string | 0;
+                                min_gap_minutes: string | 0;
+                                used_today: string | 0;
+                                /** @description Expected refills still open for the score today: max(0, times_per_day − used_today). Not a cap. */
+                                remaining_today: string | 0;
+                                last_watered_at: string;
+                                can_water: string;
+                                /**
+                                 * @description Earliest next refill (later of the gap end and the minute thirst shows ≤ refill_below);
+                                 *     null when allowed now or when no time can be forecast (frozen pet, > 48 h).
+                                 */
+                                next_allowed_at: string;
+                                /**
+                                 * @description M5-F11: displayed thirst (%) at or below which water is allowed (breed
+                                 *     `water_refill_below`, default 60).
+                                 */
+                                refill_below: number;
+                            };
+                            steps: {
+                                steps_today: number;
+                                my_steps_today: number;
+                                /**
+                                 * @description M5-T12: the child's own steps today from a device only (`my_steps_today`
+                                 *     minus walk minutes a parent logged). The app compares its health / sensor
+                                 *     reading with this number; `my_steps_today` is for display.
+                                 */
+                                my_device_steps_today: number;
+                                /** @description Today's step goal of the dog's life stage (M5-R01). */
+                                goal: number;
+                                energy_level: number;
+                                /**
+                                 * @description M5-T12 »Prilagojen način« of the requesting child (set by a parent): true =
+                                 *     the phone reads wheelchair pushes instead of steps (1 push = 1 step) and the
+                                 *     app says "potiski" / "pushes"; goal, energy and scores are the same numbers.
+                                 *     Always false for a parent's view.
+                                 */
+                                adapted_mode: boolean;
+                            };
+                            /** @description M5-T11 / M5-T17 settings of the requesting child (display: the child or a parent; easy gestures: a parent only). */
+                            settings: {
+                                /**
+                                 * @description »Prikaz: Video / Slika«: `video` (default) plays the state videos; `picture`
+                                 *     shows the key image of the current state and downloads no video. Always
+                                 *     `video` for a parent's view.
+                                 * @enum {string}
+                                 */
+                                media_display: "video" | "picture";
+                                /**
+                                 * @description M5-T17 »Lažje kretnje« (set by a parent): true = press-and-hold instead of
+                                 *     swipe in every swipe game (brushing, wand, litter change, ball play); false
+                                 *     (default) = swipe only. The app also uses hold when the phone's screen
+                                 *     reader is on. Always false for a parent's view.
+                                 */
+                                easy_gestures: boolean;
+                            };
+                            contract: {
+                                signed: boolean;
+                                signed_at: string;
+                            };
+                            /**
+                             * @description M5-R02 behaviour events: puppy bladder clock ("Pelji ven"), open messes
+                             *     (poop / accident / chewing) with their 2-hour deadline, the behaviour video.
+                             */
+                            behaviour: {
+                                take_out: {
+                                    hold_hours: number;
+                                    clock_started_at: string;
+                                    next_due_at: string;
+                                    last_taken_out_at: string | null;
+                                } | null;
+                                active_events: {
+                                    id: number;
+                                    /** @enum {string} */
+                                    kind: "poop" | "accident" | "chewing" | "litter_accident" | "scratching";
+                                    started_at: string;
+                                    due_at: string;
+                                }[];
+                                /** @enum {string|null} */
+                                scene: "accident" | "chewing" | "scratching" | null;
+                                /** @description POST /api/child/pet/take-out would be accepted (puppy, not locked). */
+                                can_take_out: boolean;
+                                /** @description POST /api/child/pet/resolve-chewing has something to tidy up. */
+                                can_resolve_chewing: boolean;
+                            };
+                            /**
+                             * @description M5-R03 training: progress per command (sit, come, place, potty), today's
+                             *     routine, the running session and the dog's daily mini-game budget.
+                             */
+                            training: {
+                                /** @description Training exists for this pet (new pet + app feature `training`); false for legacy pets. */
+                                enabled: boolean;
+                                /** @description Every command with displayed progress 0–100 (empty when not enabled). */
+                                commands: {
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    progress: number;
+                                    learned: boolean;
+                                    last_practised_at: string | null;
+                                }[];
+                                /** @description A session was completed today (the daily training routine). */
+                                today_done: boolean;
+                                /**
+                                 * @description The running session (any caretaker), `mine` = started by this child; else null.
+                                 *     For `mine` also the schedule (duration_ms, praise_window_ms, min_reaction_ms, trials) to resume.
+                                 */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                /** @description Length of one session in seconds. */
+                                session_seconds: number;
+                                /** @description The dog's mini-game seconds per family-local day, and what is left today. */
+                                daily_budget_seconds: number;
+                                daily_budget_left_seconds: number;
+                                /** @description M5-R03b fair share: children who can train this dog (signed caretakers) — the budget is split equally. */
+                                children_sharing: number;
+                                /** @description This child's share of the daily budget (max(budget / children_sharing, one session); 0 if this child cannot train). */
+                                my_share_seconds: number;
+                                /** @description Seconds this child may still start today (own share minus own sessions, capped by the dog's budget left). */
+                                my_seconds_left: number;
+                                /**
+                                 * @description POST /api/child/pet/training/start would be accepted now (enabled, not
+                                 *     locked, the pet awake — M5-T02, no running session, enough of the dog's
+                                 *     budget AND of this child's fair share left for one session, and the
+                                 *     session would end before the family-local midnight) —
+                                 *     TrainingService::startRefusal().
+                                 */
+                                can_start: boolean;
+                                /**
+                                 * @description M5-T02: why a start would be refused now (null = it may start, or training
+                                 *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
+                                 *     sleeps (next_allowed_at = when it wakes).
+                                 * @enum {string|null}
+                                 */
+                                blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
+                                /**
+                                 * @description M5-T02: when `blocked_reason` ends (wake time, the running session's expiry,
+                                 *     local midnight; family offset); null without a time.
+                                 */
+                                next_allowed_at: string | null;
+                            };
+                            /**
+                             * @description M5-R05 play & cuddle: can the child play now, the dog's invitation shown now,
+                             *     the 30-minute happy scene. Null for a pet without play (free mutt, legacy, unpaid).
+                             */
+                            play: {
+                                /** @description POST /api/child/pet/play would be accepted now. */
+                                can_play: boolean;
+                                /** @description M5-T04: every clip of the play stage is stored; false = »Igra se še pripravlja«. */
+                                media_ready: boolean;
+                                /** @description The dog's invitation shown now (kind: play | cuddle), else null. */
+                                invitation: {
+                                    id: number;
+                                    /** @enum {string} */
+                                    kind: "play" | "cuddle";
+                                    expires_at: string;
+                                } | null;
+                                mood: {
+                                    /** @description End of the happy scene (30 min after the last play); null when not happy. */
+                                    happy_until: string | null;
+                                    /**
+                                     * @description Video scene: `playing` while happy and no lock / need / sleep shows.
+                                     * @enum {string|null}
+                                     */
+                                    scene: "playing" | null;
+                                };
+                            } | null;
+                            /** @description M5-R06-04 cat wand play (the cat's daily play routine); null for a dog. */
+                            wand: {
+                                /** @description Successful sessions the cat needs today (kitten 3, grown cat 2). */
+                                goal: number;
+                                /** @description Today's successful sessions (all children); the meter is pet.energy_level. */
+                                sessions_today: number;
+                                /** @description The viewing child's own successful sessions today (null in the broadcast). */
+                                my_sessions_today: number | null;
+                                min_gap_minutes: number;
+                                /** @description When blocked_reason ends (gap, quiet hours, another game's TTL, midnight); else the gap's end; null when none. */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/wand/start would be accepted now. */
+                                can_start: boolean;
+                                /** @description The viewing child's running game (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                session_running: boolean;
+                                /** @description Yesterday's play routine was missed (M5-R06-05: scratching). */
+                                missed_yesterday: boolean;
+                            } | null;
+                            /** @description M5-R06-05 cat litter tray (uses, scoop deadlines, weekly change); null for a dog. */
+                            litter: {
+                                /** @description Litter uses the cat has today (kitten 3, grown cat 2). */
+                                uses_per_day: number;
+                                /** @description Unscooped uses, oldest first; `expired` = deadline passed (the mess is a litter_accident). */
+                                open_uses: {
+                                    id: number;
+                                    used_at: string;
+                                    due_at: string | null;
+                                    expired: boolean;
+                                }[];
+                                /** @description The earliest scoop deadline still ahead. */
+                                next_due_at: string | null;
+                                /** @description Hours a use happening now gets to be scooped (4; 2 while the weekly change is overdue). */
+                                scoop_deadline_hours: number;
+                                /** @description POST /api/child/pet/litter/scoop has something to scoop now. */
+                                can_scoop: boolean;
+                                /** @description The weekly full change (POST /api/child/pet/litter-change/start|finish). */
+                                change: {
+                                    week_started_at: string;
+                                    due_at: string;
+                                    done: boolean;
+                                    overdue: boolean;
+                                    blocked_reason: string | null;
+                                    can_start: boolean;
+                                    session: {
+                                        [key: string]: unknown;
+                                    } | null;
+                                    session_running: boolean;
+                                } | null;
+                            } | null;
+                            /** @description M5-R06-05 grooming of a brushed cat (M5-R13: also a brushed dog — week, matted coat, session); null for every other pet. */
+                            grooming: {
+                                /** @description Groomings per program week, per breed (cats: Maine Coon 3, Ragdoll 2, British Shorthair 1; dogs (M5-R13): e.g. Rottweiler 1, Pembroke Welsh Corgi 3, Yorkshire Terrier 7; ≥ 1 day apart). */
+                                goal_per_week: number;
+                                done_this_week: number;
+                                week_started_at: string;
+                                week_ends_at: string;
+                                /** @description Matted coat (≥ half of last week's groomings missed — ceil(goal / 2)): visible only, no penalty. */
+                                matted: boolean;
+                                matted_since: string | null;
+                                /** @description Length of the next grooming (~2× while matted). */
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next week / end of quiet hours). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/grooming/start would be accepted now. */
+                                can_start: boolean;
+                                /** @description The viewing child's running grooming (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                session_running: boolean;
+                            } | null;
+                            /** @description M5-R06-05 cat scratching (open mess, redirect + praise session); null for a dog. */
+                            scratching: {
+                                /** @description The open "scratched the sofa" mess with its 2 h deadline; null when none. */
+                                active: {
+                                    id: number;
+                                    started_at: string;
+                                    due_at: string;
+                                } | null;
+                                /** @description Why a carry would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/scratching/start would be accepted now. */
+                                can_start: boolean;
+                                /** @description The viewing child's running carry (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    command: "sit" | "come" | "place" | "potty";
+                                    started_at: string;
+                                    ends_at: string;
+                                    expires_at: string;
+                                    mine: boolean;
+                                    duration_ms: number | null;
+                                    praise_window_ms: number | null;
+                                    min_reaction_ms: number | null;
+                                    trials: {
+                                        index: number;
+                                        cue_at_ms: number;
+                                        obeys: boolean;
+                                        obey_at_ms: number | null;
+                                        window_end_ms: number | null;
+                                    }[] | null;
+                                } | null;
+                                session_running: boolean;
+                            } | null;
+                            /** @description M2-01d: this child's 12-week challenge end on this pet (null while it runs). */
+                            certificate: string | null;
+                            /** @description M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task. */
+                            socialisation: {
+                                /** @description New experiences per program week while a puppy (1, the breed's puppy-stage row). */
+                                goal_per_week: number;
+                                done_this_week: number;
+                                /** @description This week's task is done. */
+                                done: boolean;
+                                /** @description Program week number (1 = the week from birth). */
+                                week: number;
+                                week_started_at: string;
+                                week_ends_at: string;
+                                /** @description The last experience recorded this week, else null. */
+                                experience: string | null;
+                                /** @description What the child can pick: a new person, another dog, a new sound, a new place. */
+                                experiences: string[];
+                                /** @description When the refusal in blocked_reason ends (next puppy week / end of quiet hours); null = never this stage. */
+                                next_allowed_at: string | null;
+                                /** @description Why recording would be refused now (not the lock); null = it may be recorded. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/socialisation would be accepted now. */
+                                can_record: boolean;
+                            } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
+                            /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
+                            care_guide: {
+                                /** @enum {string} */
+                                species: "dog" | "cat";
+                                /** @enum {string|null} */
+                                life_stage: "puppy" | "young" | "adult" | "senior" | null;
+                                /**
+                                 * @description Today's meals of THIS pet: count, who gives them (quiet-hour meals are the
+                                 *     parent's) and the family-local windows "HH:MM" [start, end).
+                                 */
+                                meals: {
+                                    per_day: number;
+                                    by_child: number;
+                                    by_parent: number;
+                                    windows: {
+                                        start: string;
+                                        end: string;
+                                        parent_covered: boolean;
+                                    }[];
+                                };
+                                /**
+                                 * @description Dog: today's step goal of its life stage (100 % energy) and the sourced
+                                 *     exercise minutes; null for a cat.
+                                 */
+                                steps: {
+                                    goal: number;
+                                    exercise_minutes: number | null;
+                                } | null;
+                                /**
+                                 * @description Puppy with behaviour events: hours it holds today ("Pelji ven" before they run
+                                 *     out; steps never reset it); null otherwise.
+                                 */
+                                take_out: {
+                                    hold_hours: number;
+                                } | null;
+                                /**
+                                 * @description Water rule (M5-F11 "dolij, ko se prazni"): refill when thirst shows ≤
+                                 *     `refill_below` %, at least `min_gap_minutes` apart.
+                                 */
+                                water: {
+                                    refill_below: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Groomings per program week (brushed cat / brushed dog); null without a routine. */
+                                grooming: {
+                                    per_week: number;
+                                } | null;
+                                /**
+                                 * @description The family's quiet hours = when the pet sleeps (family-local "HH:MM"); a
+                                 *     window is null when not set or quiet hours are off.
+                                 */
+                                sleep: {
+                                    night: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                    school: {
+                                        start: string;
+                                        end: string;
+                                    } | null;
+                                };
+                                /** @description Cat: successful wand sessions per day and the gap between them; null for a dog. */
+                                play: {
+                                    sessions_per_day: number;
+                                    min_gap_minutes: number;
+                                } | null;
+                                /** @description Cat: scoop within this many hours of a use, change all litter every N days; null for a dog. */
+                                litter: {
+                                    scoop_within_hours: number;
+                                    change_every_days: number;
+                                } | null;
+                                /** @description Cat: a missed play day leads to a scratched sofa (take it to the scratching post). */
+                                scratching: boolean;
+                                /** @description A mess must be cleaned within this many hours (outside quiet hours). */
+                                clean_within_hours: number;
+                                /**
+                                 * @description Dog breeds with a meal / exercise gap (bloat): wait this long after a meal
+                                 *     before the walk; null otherwise.
+                                 */
+                                digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -20578,6 +23731,46 @@ export interface operations {
                                 /** @description POST /api/child/pet/socialisation would be accepted now. */
                                 can_record: boolean;
                             } | null;
+                            /** @description M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one. */
+                            care_tasks: {
+                                task: string;
+                                /** @description The breed's sourced frequency: `times` per `period_days` program days (at most 1 per day). */
+                                times: string;
+                                period_days: string;
+                                done_this_period: string;
+                                period_started_at: string;
+                                period_ends_at: string;
+                                session_seconds: number;
+                                /** @description When the refusal in blocked_reason ends (next day / next period / when the pet wakes). */
+                                next_allowed_at: string | null;
+                                /** @description Why a start would be refused now (not the lock); null = it may start. */
+                                blocked_reason: string | null;
+                                /** @description POST /api/child/pet/care-task/start would be accepted now. */
+                                can_start: string;
+                                /** @description The viewing child's running session (as returned by start), else null. */
+                                session: {
+                                    id: string;
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim";
+                                    started_at: string;
+                                    /** @description The game has run its course; finish from here on (up to 3 s earlier is accepted). */
+                                    ends_at: string;
+                                    /** @description Last moment a finish is accepted (TTL). */
+                                    expires_at: string;
+                                    duration_ms: number;
+                                    /** @description What the server checks at finish: strokes / claw taps, spread over `segments` equal parts. */
+                                    min_strokes: number;
+                                    segments: number;
+                                    min_stroke_interval_ms: number;
+                                } | null;
+                                session_running: boolean;
+                            }[];
+                            /** @description M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise. */
+                            walk_heat: {
+                                starts_at: string;
+                                ends_at: string;
+                                active: string;
+                            } | null;
                             /** @description M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose. */
                             care_guide: {
                                 /** @enum {string} */
@@ -20658,6 +23851,28 @@ export interface operations {
                                  *     before the walk; null otherwise.
                                  */
                                 digestion_gap_minutes: number | null;
+                                /**
+                                 * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                 *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                 *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                 */
+                                care_tasks: {
+                                    /** @enum {string} */
+                                    task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                    /** @enum {string} */
+                                    actor: "child" | "parent";
+                                    times: number;
+                                    period_days: number;
+                                }[];
+                                /**
+                                 * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                 *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                 */
+                                walk_heat: {
+                                    months: number[];
+                                    from: string;
+                                    to: string;
+                                } | null;
                             };
                         };
                     };
@@ -21917,6 +25132,28 @@ export interface operations {
                                      *     before the walk; null otherwise.
                                      */
                                     digestion_gap_minutes: number | null;
+                                    /**
+                                     * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                     *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                     *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                     */
+                                    care_tasks: {
+                                        /** @enum {string} */
+                                        task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                        /** @enum {string} */
+                                        actor: "child" | "parent";
+                                        times: number;
+                                        period_days: number;
+                                    }[];
+                                    /**
+                                     * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                     *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                     */
+                                    walk_heat: {
+                                        months: number[];
+                                        from: string;
+                                        to: string;
+                                    } | null;
                                 };
                                 /** @description M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too) — same rows. */
                                 preparation: {
@@ -21975,6 +25212,12 @@ export interface operations {
                                     /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
                                     celebrated: boolean;
                                 } | null;
+                                /**
+                                 * @description M5-R18 / R20 (David 2026-10-24): groomer visit / bath reminders of the current
+                                 *     period — the parent confirms them (POST /api/parent/pets/{pet}/care-reminders);
+                                 *     never scored. [] when the breed's source gives no frequency.
+                                 */
+                                care_reminders: unknown[];
                                 traffic_light: {
                                     /** @constant */
                                     color: "yellow";
@@ -22378,6 +25621,28 @@ export interface operations {
                                      *     before the walk; null otherwise.
                                      */
                                     digestion_gap_minutes: number | null;
+                                    /**
+                                     * @description M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks — `actor` child =
+                                     *     a mini-game in the app, parent = a reminder the parent confirms; `times` per
+                                     *     `period_days` program days (7 = week, 28 = month). [] without one.
+                                     */
+                                    care_tasks: {
+                                        /** @enum {string} */
+                                        task: "tooth_brushing" | "fold_cleaning" | "ear_cleaning" | "nail_trim" | "groomer_visit" | "bath";
+                                        /** @enum {string} */
+                                        actor: "child" | "parent";
+                                        times: number;
+                                        period_days: number;
+                                    }[];
+                                    /**
+                                     * @description M5-R14: flat-faced breed — no walk in the heat: the family-local summer `months`
+                                     *     and the midday window `from`–`to` ("HH:MM") when the app warns; null otherwise.
+                                     */
+                                    walk_heat: {
+                                        months: number[];
+                                        from: string;
+                                        to: string;
+                                    } | null;
                                 };
                                 /** @description M5-T06: the pet's preparation (»Pripravljamo …« on the parent card too) — same rows. */
                                 preparation: {
@@ -22436,6 +25701,12 @@ export interface operations {
                                     /** @description The server has celebrated it (PetUpdated `pet_birthday` + one push) — once per pet. */
                                     celebrated: boolean;
                                 } | null;
+                                /**
+                                 * @description M5-R18 / R20 (David 2026-10-24): groomer visit / bath reminders of the current
+                                 *     period — the parent confirms them (POST /api/parent/pets/{pet}/care-reminders);
+                                 *     never scored. [] when the breed's source gives no frequency.
+                                 */
+                                care_reminders: unknown[];
                                 traffic_light: {
                                     /** @constant */
                                     color: "yellow";

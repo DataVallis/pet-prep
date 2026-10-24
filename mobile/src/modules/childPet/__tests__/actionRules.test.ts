@@ -9,6 +9,7 @@ import { applyBroadcast, nextRefreshDelay, normalizeChildState, readSleep, type 
 import { startBlock, trainingRefusalMessage } from '@/modules/training/training';
 import {
   makeBroadcast,
+  makeCareTask,
   makeEnabledTraining,
   makeGroomingState,
   makeLiveChildState,
@@ -244,5 +245,24 @@ describe('M5-T04 — a game waits for all its clips (David 2026-10-20, spec §10
     });
     const ready = applyBroadcast(cat, makeBroadcast({ pet_id: cat.pet.id, wand: makeWandState(), emitted_at: '2026-10-04T19:00:01.000+00:00' }));
     expect(actionRule(ready!.view, 'wand')).toEqual({ enabled: true });
+  });
+});
+
+describe('M5-R14 / R15 / R19 / R20 breed care tasks', () => {
+  it('follows the server flag; sleeping names the wake time; a pet without the task is off', () => {
+    const awake = view({ care_tasks: [makeCareTask()] });
+    expect(actionRule(awake, 'tooth_brushing')).toEqual({ enabled: true });
+    expect(actionRule(awake, 'nail_trim')).toEqual({ enabled: false });
+
+    const asleep = view({
+      sleep: ASLEEP,
+      care_tasks: [makeCareTask({ can_start: false, blocked_reason: 'care_task_quiet_hours', next_allowed_at: WAKE })],
+    });
+    const rule = actionRule(asleep, 'tooth_brushing');
+    expect(rule).toMatchObject({ enabled: false, reason: 'sleeping', until: WAKE });
+    expect(rule.text).toBe('💤 Kuža spi do 7:00');
+
+    const doneToday = view({ care_tasks: [makeCareTask({ can_start: false, blocked_reason: 'care_task_done_today', next_allowed_at: '2026-10-05T00:00:00+02:00' })] });
+    expect(actionRule(doneToday, 'tooth_brushing')).toEqual({ enabled: false, reason: 'server', until: '2026-10-05T00:00:00+02:00' });
   });
 });

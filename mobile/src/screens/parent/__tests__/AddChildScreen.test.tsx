@@ -844,7 +844,7 @@ describe('AddChildScreen', () => {
       expect(screen.getByTestId('dog-picker')).toBeTruthy();
       expect(screen.queryByTestId('breed-option-domestic_cat')).toBeNull();
       expect(getBreedCatalogue).toHaveBeenCalledTimes(1);
-      expect(getBreedCatalogue.mock.calls[0][0]).toEqual(['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation']);
+      expect(getBreedCatalogue.mock.calls[0][0]).toEqual(['behaviour_events', 'training', 'species_cat', 'dog_grooming', 'socialisation', 'care_tasks']);
       await pickDog('adopted', 'puppy');
       expect(generatePin).toHaveBeenCalledWith({
         child_id: 5,

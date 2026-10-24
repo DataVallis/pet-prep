@@ -16,7 +16,11 @@
     "play": "Igra",
     "litter_scoop": "Pesek",
     "litter_change": "Menjava peska",
-    "grooming": "Česanje"
+    "grooming": "Česanje",
+    "tooth_brushing": "Zobje",
+    "fold_cleaning": "Kožne gube",
+    "ear_cleaning": "Ušesa",
+    "nail_trim": "Kremplji"
   },
   "score": {
     "routinesOf_one": "{{done}} od {{expected}} rutine",
