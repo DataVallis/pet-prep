@@ -9,8 +9,15 @@
  *    (`SEND_TIMEOUT_MS`). Sent (2xx) or refused for good (4xx other than 408 / 429) → removed;
  *    offline / 429 / 5xx / timeout → kept for the next flush (app start, foreground, next
  *    report).
- *  - The stored session token is sent when there is one (the server reads only the role);
- *    a keychain error just sends the report anonymously. A 401 never signs out.
+ *  - QA #375 B1: nothing is queued or sent while the server's switch is off
+ *    (`GET /api/user` → `app_error_reports`, default off; errorQueue).
+ *  - QA #375 m1: the session role is stored with each report when it is queued; the stored
+ *    token is sent only while the session still has that role (else anonymously), so a
+ *    report from a child session never goes out with a parent token or vice versa. A
+ *    keychain error sends it anonymously. A 401 never signs out.
+ *  - QA #375 m3: a 429 (Retry-After, else 60 s) or a 5xx / network failure pauses flushing
+ *    with a backoff (doubling, ≤ 30 min); `silentStatus` keeps these requests out of the
+ *    outage banner (m2).
  */
 
 import { Platform } from 'react-native';
@@ -20,13 +27,18 @@ import { ApiError, api, getAuthToken } from '@/api/client';
 import { getBuildInfo } from '@/config/buildInfo';
 import { withTimeoutOr } from '@/utils/withTimeout';
 import { buildReport, dedupeKey, type AppErrorScope, type AppIdentity } from '@/modules/errorReporting/errorReport';
-import { enqueueReport, peekReport, removeReport } from '@/modules/errorReporting/errorQueue';
+import { enqueueReport, peekReport, removeReport, reportingAllowed, type QueuedRole } from '@/modules/errorReporting/errorQueue';
 
 export const SEND_TIMEOUT_MS = 10_000;
 export const FLUSH_DELAY_MS = 2_000;
 const TOKEN_TIMEOUT_MS = 2_000;
+export const BACKOFF_MIN_MS = 60_000;
+export const BACKOFF_MAX_MS = 30 * 60_000;
 
 let route: string | null = null;
+let sessionRole: QueuedRole = null;
+let pausedUntil = 0;
+let backoffMs = 0;
 let flushing: Promise<void> | null = null;
 let flushTimer: ReturnType<typeof setTimeout> | null = null;
 let identityOverride: AppIdentity | null = null;
@@ -44,6 +56,11 @@ export function setErrorRoute(name: string | null): void {
 
 export function currentErrorRoute(): string | null {
   return route;
+}
+
+/** The role of the signed-in session (AppNavigator), null when signed out. */
+export function setErrorSession(role: QueuedRole): void {
+  sessionRole = role;
 }
 
 interface UpdatesConstants {
@@ -90,12 +107,12 @@ export interface ReportOptions {
 /** Report one error. Returns whether it was queued (false: duplicate, unsupported platform or a failure). */
 export function reportAppError(scope: AppErrorScope, error: unknown, options: ReportOptions = {}): boolean {
   try {
-    if (!enabled) return false;
+    if (!enabled || !reportingAllowed()) return false;
     const identity = appIdentity();
     if (identity === null) return false;
     const now = new Date();
     const report = buildReport({ scope, error, componentStack: options.componentStack, fatal: options.fatal, route, identity, now });
-    const queued = enqueueReport(report, dedupeKey(report), now.getTime());
+    const queued = enqueueReport(report, dedupeKey(report), now.getTime(), sessionRole);
     if (queued) scheduleFlush(options.immediate ? 0 : FLUSH_DELAY_MS);
     return queued;
   } catch {
@@ -130,19 +147,31 @@ function refusedForGood(error: unknown): boolean {
   return error instanceof ApiError && error.status >= 400 && error.status < 500 && error.status !== 408 && error.status !== 429;
 }
 
+function pause(error: unknown): void {
+  const retryAfter = error instanceof ApiError && error.status === 429 ? error.retryAfterSeconds : null;
+  backoffMs = Math.min(BACKOFF_MAX_MS, backoffMs === 0 ? BACKOFF_MIN_MS : backoffMs * 2);
+  const wait = retryAfter !== null && retryAfter > 0 ? Math.min(BACKOFF_MAX_MS, retryAfter * 1000) : backoffMs;
+  pausedUntil = Date.now() + wait;
+}
+
 async function drain(): Promise<void> {
+  if (Date.now() < pausedUntil || !reportingAllowed()) return;
   // At most one full pass over the queue per flush.
   for (let sent = 0; sent < 20; sent++) {
-    const report = peekReport();
-    if (report === null) return;
+    const entry = peekReport();
+    if (entry === null) return;
     try {
-      await api.reportAppError(report, { token: await sessionToken(), timeoutMs: SEND_TIMEOUT_MS });
-      removeReport(report);
+      // m1: the token only while the session still has the role the report was queued under.
+      const token = entry.role !== null && entry.role === sessionRole ? await sessionToken() : null;
+      await api.reportAppError(entry.report, { token, timeoutMs: SEND_TIMEOUT_MS });
+      removeReport(entry);
+      backoffMs = 0;
     } catch (error) {
       if (refusedForGood(error)) {
-        removeReport(report);
+        removeReport(entry);
         continue;
       }
+      pause(error);
       return; // Offline, throttled, server down: keep it for the next flush.
     }
   }
@@ -165,6 +194,9 @@ export function resetErrorReporterForTests(identity: AppIdentity | null = null, 
   identityOverride = identity;
   enabled = on;
   route = null;
+  sessionRole = null;
+  pausedUntil = 0;
+  backoffMs = 0;
   flushing = null;
   if (flushTimer !== null) clearTimeout(flushTimer);
   flushTimer = null;

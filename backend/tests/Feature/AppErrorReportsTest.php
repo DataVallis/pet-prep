@@ -1,16 +1,23 @@
 <?php
 
 use App\Enums\AdminAlertKind;
+use App\Filament\Pages\FeatureSwitches;
 use App\Filament\Pages\SystemHealth;
 use App\Filament\Widgets\SystemHealth\AppErrorsTable;
 use App\Jobs\SendAppErrorAlert;
+use App\Jobs\SendAppErrorSuppressedNotice;
 use App\Models\AppErrorFingerprint;
 use App\Models\AppErrorReport;
+use App\Models\AppSetting;
+use App\Models\AppSettingChange;
 use App\Models\User;
+use App\Services\Alerts\DiscordWebhook;
 use App\Services\AppErrors\AppErrorReportService;
 use App\Services\AppErrors\AppErrorText;
+use App\Services\AppSettingsService;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Queue;
@@ -36,7 +43,15 @@ beforeEach(function () {
     Http::preventStrayRequests();
     Sleep::fake();
     config(['services.discord.alerts_webhook_url' => null]);
+    aeSwitch(true);
 });
+
+/** QA #375 B1: the superadmin switch »App error reports« (default off). */
+function aeSwitch(bool $on): void
+{
+    AppSetting::updateOrCreate(['key' => AppSettingsService::APP_ERROR_REPORTS_KEY], ['value' => ['enabled' => $on]]);
+    Cache::forget(AppSettingsService::cacheKey(AppSettingsService::APP_ERROR_REPORTS_KEY));
+}
 
 /** @return array<string, mixed> */
 function aeBody(array $overrides = []): array
@@ -122,13 +137,61 @@ describe('POST /api/app-errors', function () {
         'occurred far in the future' => [['occurred_at' => '2026-11-30T00:00:00Z'], 'occurred_at'],
     ]);
 
-    it('throttles per IP at 30 reports a minute', function () {
-        for ($i = 0; $i < 30; $i++) {
+    it('throttles signed-out reports per IP at 10 a minute and writes nothing when throttled', function () {
+        for ($i = 0; $i < 10; $i++) {
             $this->postJson('/api/app-errors', aeBody(['message' => "boom {$i}"]))->assertNoContent();
         }
-        $this->postJson('/api/app-errors', aeBody())->assertTooManyRequests();
+        $before = AppErrorFingerprint::sum('occurrences');
+        $this->postJson('/api/app-errors', aeBody(['message' => 'one too many']))->assertTooManyRequests();
+        expect(AppErrorFingerprint::sum('occurrences'))->toBe($before)
+            ->and(AppErrorFingerprint::where('message', 'one too many')->exists())->toBeFalse();
         // Another client address has its own bucket.
         $this->withServerVariables(['REMOTE_ADDR' => '203.0.113.9'])->postJson('/api/app-errors', aeBody())->assertNoContent();
+    });
+
+    it('caps signed-out reports per IP at 300 a day', function () {
+        for ($i = 0; $i < 300; $i++) {
+            if ($i > 0 && $i % 10 === 0) {
+                Carbon::setTestNow(Carbon::now()->addMinutes(2));
+            }
+            $this->postJson('/api/app-errors', aeBody())->assertNoContent();
+        }
+        Carbon::setTestNow(Carbon::now()->addMinutes(2));
+        $this->postJson('/api/app-errors', aeBody())->assertTooManyRequests();
+    });
+
+    it('refuses a body over 16 KB with 413', function () {
+        $this->call('POST', '/api/app-errors', [], [], [], ['CONTENT_TYPE' => 'application/json', 'HTTP_ACCEPT' => 'application/json'], json_encode(aeBody(['pad' => str_repeat('x', 17000)])))
+            ->assertStatus(413);
+        expect(AppErrorReport::count())->toBe(0);
+    });
+
+    it('stores nothing while the switch is off (default) and tells the app via /api/user', function () {
+        AppSetting::query()->whereKey(AppSettingsService::APP_ERROR_REPORTS_KEY)->delete();
+        Cache::forget(AppSettingsService::cacheKey(AppSettingsService::APP_ERROR_REPORTS_KEY));
+
+        $this->postJson('/api/app-errors', aeBody())->assertNoContent();
+        expect(AppErrorFingerprint::count())->toBe(0);
+
+        $parent = createParentUser();
+        $this->actingAs($parent, 'sanctum')->getJson('/api/user')->assertOk()->assertJsonPath('app_error_reports', false);
+        aeSwitch(true);
+        $this->actingAs($parent, 'sanctum')->getJson('/api/user')->assertJsonPath('app_error_reports', true);
+    });
+
+    it('stores an expired or revoked real token as a signed-out report', function () {
+        $child = createChildUser();
+        $revoked = $child->createToken('device', ['child']);
+        $plain = $revoked->plainTextToken;
+        $revoked->accessToken->delete();
+        $this->withToken($plain)->postJson('/api/app-errors', aeBody())->assertNoContent();
+
+        app('auth')->forgetGuards();
+        $expired = $child->createToken('device2', ['child'], Carbon::now()->subMinute());
+        $this->withToken($expired->plainTextToken)->postJson('/api/app-errors', aeBody())->assertNoContent();
+
+        $report = AppErrorReport::sole();
+        expect($report->anonymous_count)->toBe(2)->and($report->child_count)->toBe(0);
     });
 
     it('throttles per signed-in user across addresses', function () {
@@ -196,6 +259,67 @@ describe('dedupe and growth', function () {
     });
 });
 
+describe('scrubbing (QA #375 M2)', function () {
+    it('scrubs each probe before storing', function (string $message, array $absent, array $present) {
+        app(AppErrorReportService::class)->record(aeBody(['message' => $message, 'stack' => "Error: {$message}\n    at f (index.android.bundle:1:23456)"]), null);
+
+        $report = AppErrorReport::sole();
+        $stored = $report->sample['message'].' '.$report->sample['stack'].' '.AppErrorFingerprint::sole()->message;
+        foreach ($absent as $value) {
+            expect($stored)->not->toContain($value);
+        }
+        foreach ($present as $value) {
+            expect($report->sample['message'])->toContain($value);
+        }
+        // The bundle position is kept (fingerprint strips it itself).
+        expect($report->sample['stack'])->toContain('index.android.bundle:1:23456');
+    })->with([
+        'PIN digits' => ['Invalid PIN 4821', ['4821'], ['Invalid PIN']],
+        'url query' => ['GET https://api.petprep.si/api/x?name=Rex&email=ana%40example.com failed', ['Rex', 'ana', 'example.com', 'name='], ['?[query]']],
+        'encoded e-mail' => ['user ana%40example.com', ['ana', 'example.com'], ['[email]']],
+        'phone' => ['call +38640221931 now', ['38640221931', '40221931'], ['{phone}']],
+        'quoted value in evaluating' => ["undefined is not a function (evaluating 'Rex')", ['Rex'], ['{s}']],
+        'dotted code in evaluating stays' => ["undefined is not an object (evaluating 'pet.media.idle')", [], ['`pet.media.idle`']],
+    ]);
+
+    it('cannot remove free-text names — app code never interpolates them (DECISIONS 2026-10-24)', function () {
+        app(AppErrorReportService::class)->record(aeBody(['message' => 'Pet Rex not found for Ana Novak']), null);
+
+        // Documented limitation: plain words are not data the scrubber can recognise.
+        // The guard is on the app side (errorReporting/__tests__/noNamesInErrors.test.ts).
+        expect(AppErrorReport::sole()->sample['message'])->toBe('Pet Rex not found for Ana Novak');
+    });
+
+    it('keeps only identifier error names, else Error', function (string $name, string $stored) {
+        app(AppErrorReportService::class)->record(aeBody(['name' => $name]), null);
+        expect(AppErrorFingerprint::sole()->error_name)->toBe($stored);
+    })->with([
+        'type error' => ['TypeError', 'TypeError'],
+        'api error with space' => ['Api Error', 'Api Error'],
+        'e-mail' => ['ana@example.com', 'Error'],
+        'quoted name' => ["Error 'Rex'", 'Error'],
+        'digits' => ['Error4821', 'Error{n}'],
+        'empty' => ['   ', 'Error'],
+    ]);
+
+    it('counts new fingerprints above the hourly cap into overflow, without alerts', function () {
+        config(['system_health.app_errors.new_fingerprints_per_hour' => 3]);
+        $service = app(AppErrorReportService::class);
+        foreach (['a', 'b', 'c', 'd', 'e'] as $word) {
+            $result = $service->record(aeBody(['message' => "distinct {$word}", 'stack' => "E\n    at {$word} (index.bundle:1:2)"]), null);
+        }
+
+        $overflow = AppErrorFingerprint::find(AppErrorReportService::OVERFLOW);
+        expect(AppErrorFingerprint::count())->toBe(4)
+            ->and($overflow->occurrences)->toBe(2)
+            ->and($overflow->message)->not->toContain('distinct')
+            ->and($result->alert)->toBeNull();
+        // A known fingerprint is still recorded as itself.
+        $service->record(aeBody(['message' => 'distinct a', 'stack' => "E\n    at a (index.bundle:1:2)"]), null);
+        expect(AppErrorFingerprint::where('message', 'distinct a')->sole()->occurrences)->toBe(2);
+    });
+});
+
 describe('Discord', function () {
     beforeEach(function () {
         config(['services.discord.alerts_webhook_url' => AE_DISCORD]);
@@ -244,6 +368,24 @@ describe('Discord', function () {
         $this->postJson('/api/app-errors', aeBody())->assertNoContent();
 
         Queue::assertPushed(SendAppErrorAlert::class, 1);
+        Queue::assertPushedOn('alerts', SendAppErrorAlert::class);
+    });
+
+    it('posts at most 10 app error alerts an hour, then one suppressed summary', function () {
+        Queue::fake([SendAppErrorSuppressedNotice::class]);
+        $service = app(AppErrorReportService::class);
+        foreach (range('a', 'm') as $word) {
+            $r = $service->record(aeBody(['message' => "distinct {$word}", 'stack' => "E\n    at f{$word} (index.bundle:1:2)"]), null);
+            SendAppErrorAlert::dispatchSync($r->fingerprint, $r->alert);
+        }
+
+        Http::assertSentCount(10);
+        Queue::assertPushed(SendAppErrorSuppressedNotice::class, 1);
+        Queue::assertPushedOn('alerts', SendAppErrorSuppressedNotice::class);
+
+        (new SendAppErrorSuppressedNotice(Carbon::now()->utc()->format('YmdH')))->handle(app(DiscordWebhook::class));
+        Http::assertSentCount(11);
+        Http::assertSent(fn (Request $r): bool => str_contains($r['content'], '3 more app error alerts suppressed'));
     });
 
     it('does nothing without a webhook URL and keeps the claim free', function () {
@@ -293,6 +435,25 @@ describe('admin', function () {
         $this->get('/admin/system-health')->assertOk();
         $footer = (new ReflectionMethod(SystemHealth::class, 'getFooterWidgets'))->invoke(new SystemHealth);
         expect($footer)->toContain(AppErrorsTable::class);
+    });
+
+    it('the Feature switches toggle turns reports on, audited, default off', function () {
+        AppSetting::query()->whereKey(AppSettingsService::APP_ERROR_REPORTS_KEY)->delete();
+        Cache::forget(AppSettingsService::cacheKey(AppSettingsService::APP_ERROR_REPORTS_KEY));
+        expect(app(AppSettingsService::class)->appErrorReports())->toBeFalse();
+        $admin = aeAdmin();
+        $this->actingAs($admin);
+
+        Livewire::test(FeatureSwitches::class)
+            ->assertSee('App error reports')
+            ->assertFormSet(['app_error_reports' => false])
+            ->fillForm(['app_error_reports' => true])
+            ->call('save')
+            ->assertHasNoFormErrors();
+
+        expect(app(AppSettingsService::class)->appErrorReports(fresh: true))->toBeTrue();
+        $change = AppSettingChange::query()->where('key', AppSettingsService::APP_ERROR_REPORTS_KEY)->sole();
+        expect($change->user_id)->toBe($admin->id)->and($change->new)->toBe(['enabled' => true]);
     });
 
     it('refuses the section for anyone but a superadmin', function () {

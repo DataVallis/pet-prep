@@ -44,6 +44,19 @@ return [
         'retention_days' => 30,
         // Reports per minute per client IP (IPv6 /64) and per signed-in user.
         'per_minute' => 30,
+        // Signed-out reports (no user limit applies) per client IP: per minute and per day.
+        'anonymous_per_minute' => 10,
+        'anonymous_per_day' => 300,
+        // Largest accepted request body (bytes) → 413 above it.
+        'max_body_bytes' => 16384,
+        // NEW fingerprints accepted per clock hour across all clients; above it the
+        // reports are counted into the fixed `overflow` fingerprint (no alert).
+        'new_fingerprints_per_hour' => 200,
+        // Discord app_error_* posts per hour across all fingerprints; above it one
+        // »N more suppressed« post when the hour is over.
+        'discord_per_hour' => 10,
+        // Queue of SendAppErrorAlert (low priority, never `default`).
+        'alert_queue' => 'alerts',
         // Discord `app_error_spike` when one fingerprint reaches this many reports in one clock hour.
         'spike_per_hour' => 20,
         // At most one Discord post per fingerprint in this many hours (new or spike).

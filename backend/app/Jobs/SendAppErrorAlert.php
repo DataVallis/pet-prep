@@ -13,6 +13,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 
 /**
@@ -22,6 +24,12 @@ use Illuminate\Support\Str;
  * (AppErrorReportService::claimAlert; a claimed alert is never released, a
  * failed post is report()ed). Only operational facts: error name, scrubbed
  * message, scope, versions, platforms, counts — no user, family or pet.
+ *
+ * QA #375 M1: runs on its own low-priority queue (`system_health.app_errors.alert_queue`,
+ * `alerts`, last in the production worker's list — never `default`), and at most
+ * `discord_per_hour` (10) app error posts go out per clock hour across all
+ * fingerprints; the rest are counted and summed in ONE `app_error_suppressed` post
+ * (SendAppErrorSuppressedNotice, delayed to the end of that hour).
  */
 class SendAppErrorAlert implements ShouldQueue
 {
@@ -32,7 +40,21 @@ class SendAppErrorAlert implements ShouldQueue
     public function __construct(
         public readonly string $fingerprint,
         public readonly AdminAlertKind $kind,
-    ) {}
+    ) {
+        $this->onQueue((string) config('system_health.app_errors.alert_queue', 'alerts'));
+    }
+
+    /** Cache key of the posts sent in the clock hour of `$at`. */
+    public static function sentKey(Carbon $at): string
+    {
+        return 'app-errors:discord:sent:'.$at->copy()->utc()->format('YmdH');
+    }
+
+    /** Cache key of the posts suppressed in the clock hour of `$at`. */
+    public static function suppressedKey(Carbon $at): string
+    {
+        return 'app-errors:discord:suppressed:'.$at->copy()->utc()->format('YmdH');
+    }
 
     public function handle(AppErrorReportService $errors, DiscordWebhook $discord): void
     {
@@ -42,6 +64,18 @@ class SendAppErrorAlert implements ShouldQueue
 
         $error = AppErrorFingerprint::query()->find($this->fingerprint);
         if ($error === null || ! $errors->claimAlert($this->fingerprint)) {
+            return;
+        }
+
+        $now = Carbon::now();
+        Cache::add(self::sentKey($now), 0, 7200);
+        if ((int) Cache::increment(self::sentKey($now)) > (int) config('system_health.app_errors.discord_per_hour')) {
+            Cache::add(self::suppressedKey($now), 0, 7200);
+            if ((int) Cache::increment(self::suppressedKey($now)) === 1) {
+                SendAppErrorSuppressedNotice::dispatch($now->copy()->utc()->format('YmdH'))
+                    ->delay($now->copy()->utc()->startOfHour()->addHour()->addMinute());
+            }
+
             return;
         }
 

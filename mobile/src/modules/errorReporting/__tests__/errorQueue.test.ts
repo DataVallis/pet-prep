@@ -29,7 +29,7 @@ describe('error queue', () => {
     setQueueFileStoreForTests(fakeFile());
     for (let i = 0; i < MAX_QUEUE + 5; i++) enqueueReport(report(`e${i}`), `k${i}`, 1_000 + i);
     expect(queuedCount()).toBe(MAX_QUEUE);
-    expect(peekReport()?.message).toBe('e5');
+    expect(peekReport()?.report.message).toBe('e5');
   });
 
   it('skips the same error within 10 minutes, queues it again after', () => {
@@ -47,7 +47,7 @@ describe('error queue', () => {
     expect(file.content).toContain('crash');
 
     setQueueFileStoreForTests(file); // new JS start
-    expect(peekReport()?.message).toBe('crash');
+    expect(peekReport()?.report.message).toBe('crash');
     // Dedupe survives too.
     expect(enqueueReport(report('crash'), 'k', 1)).toBe(false);
   });
@@ -57,7 +57,7 @@ describe('error queue', () => {
     enqueueReport(report('a'), 'a', 0);
     enqueueReport(report('b'), 'b', 0);
     removeReport(peekReport()!);
-    expect(peekReport()?.message).toBe('b');
+    expect(peekReport()?.report.message).toBe('b');
   });
 
   it('treats a broken file as empty and a failing disk as memory-only', () => {

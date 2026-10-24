@@ -58,3 +58,50 @@ describe('dedupeKey', () => {
     expect(dedupeKey(a)).not.toBe(dedupeKey(c));
   });
 });
+
+describe('client-side scrubbing before the queue (QA #375 M2)', () => {
+  const build = (message: string, name = 'Error') =>
+    buildReport({
+      scope: 'app',
+      error: Object.assign(new Error(message), { name, stack: `${name}: ${message}\n    at f (index.android.bundle:1:23456)` }),
+      route: null,
+      identity: IDENTITY,
+      now: NOW,
+    });
+
+  it.each([
+    ['Invalid PIN 4821', ['4821'], 'Invalid PIN'],
+    ['GET https://api.petprep.si/api/x?name=Rex&email=ana%40example.com failed', ['Rex', 'ana', 'example.com', 'name='], '?[query]'],
+    ['user ana%40example.com', ['ana', 'example.com'], '[email]'],
+    ['call +38640221931 now', ['38640221931'], '{phone}'],
+    ["undefined is not a function (evaluating 'Rex')", ['Rex'], '{s}'],
+  ])('%s', (message, absent, present) => {
+    const report = build(message);
+    for (const value of absent) {
+      expect(report.message).not.toContain(value);
+      expect(report.stack).not.toContain(value);
+    }
+    expect(report.message).toContain(present);
+    expect(report.stack).toContain('index.android.bundle:1:23456');
+  });
+
+  it('keeps a dotted code path in evaluating', () => {
+    expect(build("undefined is not an object (evaluating 'pet.media.idle')").message).toContain('`pet.media.idle`');
+  });
+
+  it('cannot recognise free-text names (documented; see noNamesInErrors.test.ts)', () => {
+    expect(build('Pet Rex not found for Ana Novak').message).toBe('Pet Rex not found for Ana Novak');
+  });
+
+  it('sends only identifier error names', () => {
+    expect(build('x', 'TypeError').name).toBe('TypeError');
+    expect(build('x', 'ana@example.com').name).toBe('Error');
+    expect(build('x', "Error 'Rex'").name).toBe('Error');
+    expect(build('x', 'Error4821').name).toBe('Error'); // a digit run makes it data, not an identifier
+  });
+
+  it('dedupes errors that differ only in numbers or quoted values', () => {
+    expect(dedupeKey(build('timeout after 12 ms'))).toBe(dedupeKey(build('timeout after 99 ms')));
+    expect(dedupeKey(build('Network request failed'))).not.toBe(dedupeKey(build('Aborted')));
+  });
+});

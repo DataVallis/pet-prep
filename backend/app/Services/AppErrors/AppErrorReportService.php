@@ -10,6 +10,7 @@ use App\Models\AppErrorFingerprint;
 use App\Models\AppErrorReport;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\RateLimiter;
 
 /**
  * Mobile app crash / render-error reports (M5-05, David 2026-10-19: our own
@@ -29,9 +30,18 @@ use Illuminate\Support\Facades\DB;
  *    fingerprint → `app_error_new`; the hourly bucket reaching
  *    `spike_per_hour` → `app_error_spike`. The once-per-day limit is the
  *    claim in claimAlert(), done by the job.
+ *  - Global cap (QA #375 M1): at most `new_fingerprints_per_hour` NEW
+ *    fingerprints per clock hour across all clients; above it the report is
+ *    counted into the fixed OVERFLOW fingerprint (no sample text, no alert),
+ *    so a flood of distinct messages cannot grow the tables or spam Discord.
  */
 class AppErrorReportService
 {
+    /** The fixed fingerprint that counts reports above the new-fingerprint cap. */
+    public const OVERFLOW = 'overflow';
+
+    private const NEW_FINGERPRINTS_KEY = 'app-errors:new-fingerprints';
+
     /**
      * @param  array{scope: string, name: string, message: string, stack?: string|null, app_version: string, runtime_version?: string|null, update_id?: string|null, build?: string|null, platform: string, os_version?: string|null, route?: string|null, occurred_at: string, fatal?: bool|null}  $data
      */
@@ -41,12 +51,20 @@ class AppErrorReportService
         $scope = AppErrorScope::from($data['scope']);
         $platform = DevicePlatform::from($data['platform']);
 
-        $name = mb_substr(trim($data['name']) !== '' ? trim($data['name']) : 'Error', 0, 100);
+        $name = AppErrorText::name($data['name']);
         $message = AppErrorText::message($data['message']);
         $stack = AppErrorText::stack($data['stack'] ?? null);
         $firstFrame = AppErrorText::firstFrame($stack);
         $fingerprint = AppErrorText::fingerprint($name, $message, $firstFrame);
         $hour = $now->copy()->startOfHour();
+
+        if (! $this->admitFingerprint($fingerprint, $now)) {
+            $fingerprint = self::OVERFLOW;
+            $name = 'Overflow';
+            $message = 'New app error fingerprints above the hourly cap (texts not stored).';
+            $stack = null;
+            $firstFrame = null;
+        }
 
         $sample = [
             'scope' => $scope->value,
@@ -103,6 +121,7 @@ class AppErrorReportService
 
             $isNew = (bool) ($row->inserted ?? false);
             $alert = match (true) {
+                $fingerprint === self::OVERFLOW => null,
                 $isNew => AdminAlertKind::AppErrorNew,
                 (int) ($bucket->occurrences ?? 0) === (int) config('system_health.app_errors.spike_per_hour') => AdminAlertKind::AppErrorSpike,
                 default => null,
@@ -110,6 +129,25 @@ class AppErrorReportService
 
             return new AppErrorRecordResult($fingerprint, $isNew, $alert);
         });
+    }
+
+    /**
+     * Known fingerprint → always admitted. A new one uses one slot of the global
+     * hourly cap; none left → false (the caller counts it as OVERFLOW).
+     */
+    private function admitFingerprint(string $fingerprint, Carbon $now): bool
+    {
+        if (DB::table('app_error_fingerprints')->where('fingerprint', $fingerprint)->exists()) {
+            return true;
+        }
+        $key = self::NEW_FINGERPRINTS_KEY.':'.$now->format('YmdH');
+        $max = (int) config('system_health.app_errors.new_fingerprints_per_hour');
+        if (RateLimiter::tooManyAttempts($key, $max)) {
+            return false;
+        }
+        RateLimiter::hit($key, 3600);
+
+        return true;
     }
 
     /**

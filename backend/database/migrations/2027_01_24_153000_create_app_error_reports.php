@@ -39,6 +39,8 @@ return new class extends Migration
         });
 
         DB::statement("ALTER TABLE app_error_fingerprints ADD CONSTRAINT app_error_fingerprints_scope_check CHECK (scope IN ('app', 'child-hud', 'locked-overlay', 'global', 'unhandled-rejection'))");
+        // QA #375 m7: keep the CHECK and its two mirrors in step.
+        DB::statement("COMMENT ON CONSTRAINT app_error_fingerprints_scope_check ON app_error_fingerprints IS 'Mirrors App\\Enums\\AppErrorScope and the app''s AppErrorScope (mobile/src/modules/errorReporting/errorReport.ts) — a new scope needs all three + a migration.'");
 
         Schema::create('app_error_reports', function (Blueprint $table) {
             $table->id();

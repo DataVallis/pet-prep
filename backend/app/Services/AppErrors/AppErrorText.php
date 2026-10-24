@@ -20,18 +20,60 @@ final class AppErrorText
 
     public const FRAME_MAX = 300;
 
+    public const NAME_MAX = 100;
+
+    /** Error names are identifiers (`TypeError`, `ApiError`); anything else → `Error`. */
+    public const NAME_PATTERN = '/^[A-Za-z0-9_$.\- ]{1,100}$/';
+
+    /** Scrubbed error name: identifier characters only (else `Error`), digit runs replaced. */
+    public static function name(string $name): string
+    {
+        $name = trim($name);
+        if (preg_match(self::NAME_PATTERN, $name) !== 1) {
+            return 'Error';
+        }
+        $name = self::digits($name);
+
+        return $name === '' ? 'Error' : mb_substr($name, 0, self::NAME_MAX);
+    }
+
     /** Scrubbed message (≤ 500 chars). */
     public static function message(string $message): string
     {
         // JS engines quote the failing expression (`evaluating 'pet.media.idle'`) —
-        // source code, not data — keep it readable when it is only code characters.
+        // source code, not data. QA #375 M2: kept only for a DOTTED identifier path
+        // (`a.b`, `a.b.c`); `evaluating 'Rex'` is a quoted value like any other → {s}.
         $message = (string) preg_replace_callback(
-            "/(evaluating )'([A-Za-z0-9_$.\\[\\]()]{1,120})'/",
+            "/(evaluating )'([A-Za-z_$][A-Za-z0-9_$]*(?:\\.[A-Za-z_$][A-Za-z0-9_$]*)+)'/",
             fn (array $m): string => $m[1].'`'.$m[2].'`',
-            $message,
+            self::prepare($message),
         );
 
-        return ErrorText::scrub(self::stripPaths($message), self::MESSAGE_MAX);
+        return self::digits(ErrorText::scrub(self::stripPaths($message), self::MESSAGE_MAX));
+    }
+
+    /**
+     * Before the shared scrub rules (QA #375 M2): URL query strings / fragments
+     * dropped (they carry parameters such as `?name=…&email=…`), percent-encoding
+     * decoded so an encoded e-mail is caught by the e-mail rule.
+     */
+    private static function prepare(string $text): string
+    {
+        $text = (string) preg_replace('~((?:[a-z][a-z0-9+.\-]*://|/)[^\s?#()\'"]*)[?#][^\s()\'"]*~i', '$1?[query]', $text);
+        $text = (string) preg_replace('~\?[A-Za-z0-9_\-\[\]]+=[^\s()\'"]*~', '?[query]', $text);
+
+        return rawurldecode($text);
+    }
+
+    /**
+     * Phone numbers → `{phone}`, other digit runs of 4+ (PINs, ids, years) → `{n}` —
+     * but never a `:line:col` position of a stack frame (`index.android.bundle:1:23456`).
+     */
+    private static function digits(string $text): string
+    {
+        $text = (string) preg_replace('/(?<![:\d])\+?\d[\d \-\/]{6,}\d(?![:\d])/', '{phone}', $text);
+
+        return (string) preg_replace('/(?<![:\d])\d{4,}/', '{n}', $text);
     }
 
     /** Scrubbed stack: line by line, device paths reduced to file names, ≤ 2 KB. */
@@ -44,7 +86,7 @@ final class AppErrorText
         $lines = [];
         $length = 0;
         foreach (preg_split('/\R/', $stack) ?: [] as $line) {
-            $line = ErrorText::scrub(self::stripPaths($line), self::FRAME_MAX);
+            $line = self::digits(ErrorText::scrub(self::stripPaths(self::prepare($line)), self::FRAME_MAX));
             if ($line === '') {
                 continue;
             }

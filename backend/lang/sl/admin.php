@@ -292,6 +292,10 @@ return [
         'quality_check_enforce' => 'Uveljavi — enkrat znova, nato skrij neuspešne',
         'quality_check' => 'Način preverjanja kakovosti',
         'saved_body_quality_check' => 'Preverjanje kakovosti: :state',
+        'saved_body_app_error_reports' => 'Poročila o napakah iz aplikacije: :state',
+        'app_error_reports_section' => 'Poročila o napakah iz aplikacije',
+        'app_error_reports_description' => 'Poročila o sesutjih in napakah prikaza iz mobilne aplikacije v »Zdravje sistema« (samo tehnični podatki, brez povezave z uporabnikom). Vklopite šele, ko politika zasebnosti na spletni strani in obrazca o zasebnosti v App Store / Google Play navajajo podatke o sesutjih. Izklopljeno: aplikacija ne pošlje ničesar, strežnik ne shrani ničesar.',
+        'app_error_reports' => 'Zbiraj poročila o napakah iz aplikacije',
     ],
 
     // M5-R21: skupni videzi (PetLookResource).
@@ -559,6 +563,8 @@ return [
         'discord' => [
             'new_title' => 'Nova napaka v aplikaciji: :name',
             'spike_title' => 'Val napak v aplikaciji: :name (:count+ v eni uri)',
+            'suppressed_title' => 'Še :count opozoril o napakah v aplikaciji ni bilo poslanih',
+            'suppressed_body' => 'Več kot :max opozoril o napakah v aplikaciji v eni uri — ostale so samo v »Zdravje sistema« → »Napake v aplikaciji«.',
         ],
     ],
 ];

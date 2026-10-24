@@ -24,6 +24,7 @@ use App\Http\Controllers\PetMediaController;
 use App\Http\Controllers\PetNameController;
 use App\Http\Controllers\QuietHoursController;
 use App\Http\Controllers\RevenueCatWebhookController;
+use App\Http\Middleware\LimitRequestBody;
 use App\Http\Middleware\VerifyRevenueCatWebhook;
 use Illuminate\Support\Facades\Route;
 
@@ -52,9 +53,10 @@ Route::post('child/pin-login', [ChildAuthController::class, 'pinLogin'])
 
 // M5-05: crash / render-error reports from the app, with or without a token
 // (a token only gives the role; an invalid one is ignored, never a 401).
-// Throttled per IP (IPv6 /64) and per signed-in user.
+// Throttled per IP (IPv6 /64; tighter when signed out) and per signed-in user;
+// body ≤ 16 KB (checked before the throttle so oversized bodies are not parsed).
 Route::post('app-errors', [AppErrorController::class, 'store'])
-    ->middleware('throttle:app-errors');
+    ->middleware([LimitRequestBody::class.':'.config('system_health.app_errors.max_body_bytes', 16384), 'throttle:app-errors']);
 
 /*
 |--------------------------------------------------------------------------

@@ -20,7 +20,7 @@ import LockedScreen from '@/screens/LockedScreen';
 import ChildHudScreen from '@/screens/ChildHudScreen';
 import HudErrorBoundary from '@/components/HudErrorBoundary';
 import { logRenderError } from '@/utils/logRenderError';
-import { setErrorRoute } from '@/modules/errorReporting/reporter';
+import { setErrorRoute, setErrorSession } from '@/modules/errorReporting/reporter';
 import ParentDashboardScreen from '@/screens/parent/ParentDashboardScreen';
 import { palette } from '@/theme';
 import { useDarkStatusBar } from '@/components/ui/useDarkStatusBar';
@@ -148,6 +148,7 @@ export default function AppNavigator() {
   if (bootStatus !== 'ready') {
     // M5-05: the screen NAME in error reports (never a param / id).
     setErrorRoute('splash');
+    setErrorSession(null);
     return (
       <>
         <SplashScreen mode={bootStatus} updating={serverUpdating} onRetry={retry} onLogout={splashSignOut.open} />
@@ -165,6 +166,8 @@ export default function AppNavigator() {
   setTextSpecies(isAuthenticated && user.role !== 'parent' ? (pet?.species ?? null) : null);
   // M5-05: the screen NAME in error reports (never a param / id).
   setErrorRoute(routeName(isAuthenticated ? user.role : null, parentLoginOpen, pet === null ? null : isAwaitingContract(pet), isLocked));
+  // QA #375 m1: the role a queued report belongs to (its token is sent only while it matches).
+  setErrorSession(isAuthenticated && (user.role === 'parent' || user.role === 'child') ? user.role : null);
 
   return (
     <ErrorBoundary>

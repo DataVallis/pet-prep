@@ -293,6 +293,10 @@ return [
         'quality_check_enforce' => 'Enforce — regenerate once, then hide failures',
         'quality_check' => 'Quality check mode',
         'saved_body_quality_check' => 'Quality check: :state',
+        'saved_body_app_error_reports' => 'App error reports: :state',
+        'app_error_reports_section' => 'App error reports',
+        'app_error_reports_description' => 'Crash and render-error reports from the mobile app to System health (technical data only, no user link). Turn on only after the website privacy policy and the App Store / Google Play privacy forms list crash data. Off: the app sends nothing and the server stores nothing.',
+        'app_error_reports' => 'Collect app error reports',
     ],
 
     // M5-R21: shared looks (PetLookResource).
@@ -560,6 +564,8 @@ return [
         'discord' => [
             'new_title' => 'New app error: :name',
             'spike_title' => 'App error spike: :name (:count+ in one hour)',
+            'suppressed_title' => ':count more app error alerts suppressed',
+            'suppressed_body' => 'More than :max app error alerts in one hour — the rest are only in System health → App errors.',
         ],
     ],
 ];

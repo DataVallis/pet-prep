@@ -102,7 +102,9 @@ async function restoreOnce(): Promise<RestoreResult> {
 
   try {
     // `awaiting_contract` is per child (M2-02): it must not end up on the user.
-    const { pet, awaiting_contract: awaitingContract, ...user } = await api.getUser({ timeoutMs: USER_REQUEST_TIMEOUT_MS });
+    // `app_error_reports` is consumed by the api wrapper (M5-05), not session state.
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { pet, awaiting_contract: awaitingContract, app_error_reports: _errorReports, ...user } = await api.getUser({ timeoutMs: USER_REQUEST_TIMEOUT_MS });
     // Hotfix 2026-10-06: the lock overlay needs the family zone before the child state loads.
     const familyTimezone = user.role === 'child' ? await withTimeoutOr(loadFamilyTimezone(), OPTIONAL_READ_TIMEOUT_MS, null) : null;
     // M2-10c: password vs. Google / Apple decides how a parent confirms a deletion.

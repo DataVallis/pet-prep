@@ -151,14 +151,21 @@ class AppServiceProvider extends ServiceProvider
         // /64) and per signed-in user (a token only resolves the user here —
         // the route has no auth middleware). Live in testing too.
         RateLimiter::for('app-errors', function (Request $request) {
-            $perMinute = (int) config('system_health.app_errors.per_minute');
-            $limits = [Limit::perMinute($perMinute)->by('app-errors:ip:'.ClientIp::rateLimitKey($request->ip()))];
+            $ip = 'app-errors:ip:'.ClientIp::rateLimitKey($request->ip());
             $user = $request->user('sanctum');
-            if ($user !== null) {
-                $limits[] = Limit::perMinute($perMinute)->by('app-errors:user:'.$user->getAuthIdentifier());
+            if ($user === null) {
+                // QA #375 M1: signed out = no user limit applies → tighter per IP.
+                return [
+                    Limit::perMinute((int) config('system_health.app_errors.anonymous_per_minute'))->by($ip.':anon:minute'),
+                    Limit::perDay((int) config('system_health.app_errors.anonymous_per_day'))->by($ip.':anon:day'),
+                ];
             }
+            $perMinute = (int) config('system_health.app_errors.per_minute');
 
-            return $limits;
+            return [
+                Limit::perMinute($perMinute)->by($ip),
+                Limit::perMinute($perMinute)->by('app-errors:user:'.$user->getAuthIdentifier()),
+            ];
         });
 
         // Parent self-registration (M2-10a): unauthenticated, creates rows →

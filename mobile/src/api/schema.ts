@@ -91,7 +91,11 @@ export interface paths {
          *     token only tells the server the role (parent | child); a missing,
          *     expired or revoked token is ignored — never a 401 (the app must not
          *     sign out because of an error report). Only the role is stored, never
-         *     the user. Throttled per IP (IPv6 /64) and per signed-in user.
+         *     the user. Throttled per IP (IPv6 /64; signed out 10 / min + 300 / day)
+         *     and per signed-in user (30 / min); body ≤ 16 KB (413). While the
+         *     superadmin switch »App error reports« is off (default) the report is
+         *     accepted (204) and NOTHING is stored; the app learns the switch from
+         *     `GET /api/user` (`app_error_reports`) and then sends nothing.
          *     204 on success; 422 for an invalid body; 429 when throttled
          * @description POST /api/app-errors
          */
@@ -3063,6 +3067,8 @@ export interface operations {
                         linked_providers: string[];
                         pet: components["schemas"]["Pet"] | null;
                         awaiting_contract: boolean | null;
+                        /** @description M5-05 (QA #375 B1): may the app queue / send error reports (superadmin switch, default off). */
+                        app_error_reports: boolean;
                     };
                 };
             };

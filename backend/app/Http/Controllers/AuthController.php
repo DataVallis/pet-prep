@@ -10,6 +10,7 @@ use App\Http\Requests\RegisterParentRequest;
 use App\Http\Requests\SocialSignInRequest;
 use App\Models\Pet;
 use App\Models\User;
+use App\Services\AppSettingsService;
 use App\Services\Auth\SocialSignInService;
 use App\Services\Auth\SocialTokenVerifier;
 use App\Services\ChildProfileService;
@@ -213,6 +214,7 @@ class AuthController extends Controller
 
         $activePet = $this->sessionPet($user);
         $awaiting = $this->awaitingContract($user, $activePet);
+        $appErrorReports = (bool) app(AppSettingsService::class)->appErrorReports();
 
         return response()->json([
             'id' => $user->id,
@@ -224,6 +226,8 @@ class AuthController extends Controller
             'linked_providers' => $user->linkedProviders(),
             'pet' => $this->petPayload($activePet, $awaiting),
             'awaiting_contract' => $awaiting,
+            // M5-05 (QA #375 B1): may the app queue / send error reports (superadmin switch, default off).
+            'app_error_reports' => $appErrorReports,
         ], 200);
     }
 
