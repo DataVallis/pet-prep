@@ -52,9 +52,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest / AkitaBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer / Bloodhound rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer / Bloodhound / Akita rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -749,6 +749,25 @@ class BreedStageParamsSeeder extends Seeder
     public const PROPOSED_R10_BLOODHOUND_SENIOR = 'predlog Claude 2026-10-24 (najbližja vrstica pravila runbooka, M5-R10-62) — čaka Davida';
 
     /**
+     * M5-R10-63 Akita (unattended run 2026-10-24, data.json proposed_game_parameters.akita.*.decision): every value
+     * follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min (PDSA S508 "Minimum exercise (per day): 2 hours"; RKC page not reachable), senior 90 min, puppy
+     * 10 min × age capped at 120, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 1.0 (Coren rank 54,
+     * Average); care rates the Border Collie's. The senior boundary uses the closest rule row (Kennel Club / BSAVA 2004
+     * survey median 9 y 11 m, S511 — PDSA "Under 10 years" has no lower bound) and is NOT covered by the confirmation:
+     * see PROPOSED_R10_AKITA_SENIOR.
+     */
+    public const CONFIRMED_R10_AKITA = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-63)';
+
+    /**
+     * M5-R10-63 Akita senior boundary / senior arrival (89 months): Claude's suggestion from the closest rule row
+     * (0.75 × Kennel Club / BSAVA 2004 survey median 9.92 y, S511) — no runbook rule produced a value (the Dogs Trust
+     * McMillan 2024 table S123 could not be fetched, no VetCompass median, no RKC page), so the rows are verified=false
+     * until David decides (data.json proposed_game_parameters.akita.senior_boundary_months).
+     */
+    public const PROPOSED_R10_AKITA_SENIOR = 'predlog Claude 2026-10-24 (najbližja vrstica pravila runbooka, M5-R10-63) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -956,6 +975,9 @@ class BreedStageParamsSeeder extends Seeder
         'giant_schnauzer' => [
             'ear_cleaning' => [1, 'week', 'S497', 'Their ears should be checked weekly for discharge, redness, or odors', 'proposed_game_parameters.giant_schnauzer.ear_checks', '"weekly" → once a week (the groomer "every few months" has no number → no reminder)'],
         ],
+        'akita' => [
+            'groomer_visit' => [1, 'three_months', 'S508', 'You might like to get your Akita professionally groomed every three months or so.', 'proposed_game_parameters.akita.professional_grooming', '"every three months or so" → 12 program weeks (ear cleaning "occasional", PetMD S510, has no number → no task)'],
+        ],
     ];
 
     /**
@@ -1037,6 +1059,7 @@ class BreedStageParamsSeeder extends Seeder
         'italian_greyhound' => [1, 'S486', 'Grooming: Once a week', 'high', false],
         'giant_schnauzer' => [7, 'S495', 'Grooming: Every day', 'high', false],
         'bloodhound' => [1, 'S502', 'Grooming: Once a week', 'high', false],
+        'akita' => [1, 'S508', 'at minimum a weekly brush to help get rid of dead hairs.', 'medium', false],
     ];
 
     /**
@@ -1074,6 +1097,7 @@ class BreedStageParamsSeeder extends Seeder
         'samoyed' => ['S467', 'Remember to leave a gap after eating and before exercising.'],
         'weimaraner' => ['S480', 'Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.'],
         'bloodhound' => ['S503', 'Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.'],
+        'akita' => ['S508', 'Remember to leave a gap after eating and before exercising.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -1147,13 +1171,14 @@ class BreedStageParamsSeeder extends Seeder
         'italian_greyhound' => ['S487', 'They can also be quite timid, so early socialisation is essential.'],
         'giant_schnauzer' => ['S496', 'Giant Schnauzers can make lovable pets for families with older children, given the right socialisation as puppies.'],
         'bloodhound' => ['S503', 'Generally speaking, Bloodhounds aren’t aggressive dogs but can sometimes be nervous so it’s important to socialise your Bloodhound from a young age with lots of people, dogs and experiences.'],
+        'akita' => ['S508', 'your dog will need to be well socialised from a young age'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1891,6 +1916,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-62 (docs/research/dog-data/data.json bloodhound,
             // S500–S505; runbook rules in proposed_game_parameters.bloodhound).
             BreedType::Bloodhound => self::bloodhoundProfile(),
+            // M5-R10-63 (docs/research/dog-data/data.json akita,
+            // S506–S512; runbook rules in proposed_game_parameters.akita).
+            BreedType::Akita => self::akitaProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -6191,6 +6219,91 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'bloodhound.lifespan.median_kc_survey',
                 'quote' => 'The median age at death for Bloodhounds was six years and nine months',
                 'notes' => 'Kennel Club Breed Health and Conservation Plan (S505), 2004 survey median. RKC / PDSA "Under 10 years" (S502, S503); McMillan 2024 9.3 y only via Wikipedia (tier C). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Akita (M5-R10-63). Stage boundaries young / adult, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_AKITA); weight, growth, Coren rank and lifespan are sourced.
+     * The senior boundary is Claude's suggestion (PROPOSED_R10_AKITA_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function akitaProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_AKITA;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S511', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.akita.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog reaches adult weight at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [89, [
+                    'unit' => 'months', 'source_id' => 'S11,S511', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.akita.senior_boundary_months', 'decision' => self::PROPOSED_R10_AKITA_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × Kennel Club / BSAVA 2004 survey median 9 y 11 m (S511) = 7.44 y = 89.25 → 89 months. The Dogs Trust McMillan 2024 table (S123) could not be fetched; no VetCompass median; no RKC page (PDSA "Under 10 years", S508, has no lower bound). Alternatives: PetMD lower bound 10 y (S510) → 90; McMillan 2024 11.4 y via Wikipedia (tier C, S512) → 103; Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 89],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.akita.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.akita.senior_boundary_months', 'decision' => self::PROPOSED_R10_AKITA_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 89 months (0.75 × 9.92 y, S511).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S508', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.akita.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Minimum exercise (per day): 2 hours',
+                'notes' => 'PDSA "Minimum exercise (per day): 2 hours" (S508) → 120 min = 12,000 steps (runbook rule: "minimum N" → N; RKC page not reachable → PDSA).',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.akita.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[31, 59], [
+                'unit' => 'kg', 'source_id' => 'S508', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'akita.adult_weight.pdsa',
+                'quote' => 'Average weight: 31-59 kg',
+                'notes' => 'PDSA key fact (S508), one range for both sexes; the FCI (S507) and AKC (S509) standards give no weight. PetMD 70–130 lb (S510) — agrees.',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'akita.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA 31–59 kg ≈ 68–130 lb, S508 — mostly the Large class of S10; heavy males Giant, 18–24 months).',
+            ]],
+            'coren_rank' => [54, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'akita.trainability.coren_rank',
+                'quote' => '| 54 | Akita |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 54 (shared with the Boston Terrier), tier "Average Working/Obedience Intelligence" (ranks 40–54).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.akita.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 54 (S35) in the "Average" tier (ranks 40–54) → 1.0. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [9.9167, [
+                'unit' => 'years', 'source_id' => 'S511', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'akita.lifespan.median_kc_survey',
+                'quote' => 'The median age at death for the Akita breed was 9 years and 11 months (min = 4 months, max = 13 years and 8 months)',
+                'notes' => 'Kennel Club / BSAVA 2004 survey median (S511, 28 deaths). PDSA "Under 10 years" (S508); PetMD 10–14 years (S510); McMillan 2024 11.4 y only via Wikipedia (tier C). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

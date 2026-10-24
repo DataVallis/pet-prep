@@ -550,6 +550,13 @@
 | Breed Watch Category 2 (S502) / PDSA eye problems (S503) → moderate skin and healthy eyelids, never exaggerated
 | wrinkles or drooping eyelids. Colour weights unsourced → `verified => false`.
 |
+| Akita (M5-R10-63, docs/research/dog-data akita.appearance): "Large-sized dog, sturdily built, well balanced, with much
+| substance and heavy bone." (FCI standard No. 344 American Akita, S507); double coat with a straight, harsh outer coat;
+| broad, black nose; dark brown, small, almost triangular eyes; strongly erect, small ears; large tail carried over the
+| back in a curl. Colours: "Any colour like red, fawn, white, etc; or even pinto and brindle." (S507) — red fawn with a
+| black mask weighted highest (the register portrait), then pinto, brindle, white; never merle or liver (disqualifying,
+| S507 / AKC S509). No Breed Watch category reachable (RKC page refused). Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2789,6 +2796,41 @@ return [
             'ear_carriage' => ['long, thin, velvety low-set ears'],
             'eye_color' => ['healthy dark brown eyes with normal eyelids'],
             'tail' => ['long, strong tail set high'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-63 (docs/research/dog-data/data.json akita.appearance; runbook rules 2026-10-10:
+    // standard colours only — red fawn with a black mask, pinto, brindle, white; never merle or liver).
+    'akita' => [
+        'display_name' => 'Akita',
+        // Colour frequencies are in no source (akita.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 344 American Akita (S507), FCI nomenclature (S506), AKC standard (S509), PDSA (S508) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S508 "Size: Large"; S507 height males 66–71 cm, females 61–66 cm',
+            'build' => 'S507 "Large-sized dog, sturdily built, well balanced, with much substance and heavy bone."',
+            'coat_length' => 'S507 "Outer coat straight, harsh/stiff and standing somewhat off body."; "Undercoat thick, soft, dense and shorter than outer coat."',
+            'coat_color' => 'S507 "Any colour like red, fawn, white, etc; or even pinto and brindle."; disqualifying "Merle marking pattern; Liver color." (weights unsourced)',
+            'head' => 'S509 "The broad head, forming a blunt triangle, with deep muzzle, small eyes and erect ears carried forward"; S507 nose "Broad and black."',
+            'ear_carriage' => 'S507 "Strongly erect and small in relation to the rest of the head."',
+            'eye_color' => 'S507 "Dark brown, relatively small, not prominent, almost triangular in shape."',
+            'tail' => 'S507 "Large and well furnished with hair, set high and carried over back or against flank"',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'large, sturdy, well balanced dog with heavy bone', 'weight' => 3], 'powerful, substantial spitz-type dog with a level back'],
+            'coat_length' => ['thick double coat with a straight, harsh outer coat'],
+            // FCI standard (S507); red fawn with a black mask weighted highest (the register portrait). Never merle or liver.
+            'coat_color' => [
+                ['value' => 'red fawn with a black mask', 'weight' => 4],
+                ['value' => 'pinto (white with large, evenly placed patches on the head and body)', 'weight' => 3],
+                ['value' => 'brindle with a black mask', 'weight' => 2],
+                ['value' => 'solid white with no mask', 'weight' => 1],
+            ],
+            'head' => ['broad head forming a blunt triangle with a deep muzzle and a black nose'],
+            'ear_carriage' => ['small, strongly erect ears carried forward'],
+            'eye_color' => ['small, dark brown, almost triangular eyes'],
+            'tail' => ['large, well-furnished tail curled over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
