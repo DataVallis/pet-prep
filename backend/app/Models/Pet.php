@@ -299,6 +299,7 @@ class Pet extends Model
         'birthday_next_check_at',
         // M5-R14 – R20 follow-up: when an existing dog's care tasks start (apps get the tasks themselves).
         'care_tasks_since',
+        'care_reminder_check_at',
     ];
 
     /**
@@ -358,6 +359,7 @@ class Pet extends Model
             'preparation_ready_at' => 'datetime',
             'birthday_celebrated_at' => 'datetime',
             'care_tasks_since' => 'datetime',
+            'care_reminder_check_at' => 'datetime',
             'birthday_next_check_at' => 'datetime',
         ];
     }
@@ -736,7 +738,7 @@ class Pet extends Model
 
     /**
      * M5-R14 – R20 follow-up (David 2026-10-24, answer (e)): an EXISTING dog
-     * switched on later by `pets:activate-care-tasks` has its care tasks, parent
+     * switched on later by `pets:care-tasks` has its care tasks, parent
      * reminders and heat warning only from `care_tasks_since` (a family-local
      * midnight) — never for an earlier day. Null = from the birth.
      */
@@ -745,15 +747,22 @@ class Pet extends Model
         return $this->care_tasks_since !== null ? CarbonImmutable::instance($this->care_tasks_since)->utc() : null;
     }
 
-    /** Care tasks apply on this family-local date (enabled and on / after `care_tasks_since`). */
+    /**
+     * Care tasks apply on this family-local date: enabled, and the day STARTS
+     * at or after `care_tasks_since` (instants, QA PR #377 m1) — a later change
+     * of the family timezone can only move the first day later, never earlier.
+     */
     public function careTasksActiveOn(string $localDate): bool
     {
         if (! $this->careTasksEnabled()) {
             return false;
         }
         $since = $this->careTasksSince();
+        if ($since === null) {
+            return true;
+        }
 
-        return $since === null || $localDate >= $this->localDate($since);
+        return CarbonImmutable::parse($localDate, $this->familyTimezone())->startOfDay()->getTimestamp() >= $since->getTimestamp();
     }
 
     /** M5-R06: the dog rules (walk / steps, training, ball play) apply. */

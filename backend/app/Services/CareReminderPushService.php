@@ -8,6 +8,7 @@ use App\Models\Pet;
 use App\Models\PushNotification;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Throwable;
@@ -28,8 +29,18 @@ use Throwable;
  *  - Copy: title = the pet's name (when set), body without it, formal "vi";
  *    payload {type, pet_id}; parents only, devices of signed-in parents only
  *    (NotificationService / PushDeviceService rules).
- *  - An existing dog switched on later: its first period starts at
- *    `care_tasks_since` (CareTaskService::periodAt), so the push comes then.
+ *  - The first reminder comes with the first FULL period (David 2026-10-24):
+ *    `period_days` after the birth, or after `care_tasks_since` for an existing
+ *    dog switched on later (CareTaskService::periodAt) — never at either.
+ *  - Recipients: the parents whose app declares `care_tasks` (QA PR #377 m2);
+ *    all parents when none does (NotificationService::recipientsFor).
+ *
+ * Which dogs a run reads (QA PR #377 M2): only those whose
+ * `care_reminder_check_at` is due (null = now) — after a look, it is set to the
+ * end of the current reminder period (when the next one starts), at most
+ * CHECK_HORIZON_HOURS ahead (a stage / timezone change can move the grid). The
+ * due dogs are read in id chunks until the run's time budget is spent; the rest
+ * stay due and come first in the next run — nobody is starved by a fixed cap.
  *
  * Run by `pets:care-tasks` every 5 minutes.
  */
@@ -38,8 +49,20 @@ class CareReminderPushService
     /** No push for a period that started longer ago than this. */
     public const PUSH_WINDOW_HOURS = 24;
 
-    /** Dogs looked at per run. */
-    public const MAX_PETS_PER_RUN = 1000;
+    /** A dog is looked at again at the latest after this many hours. */
+    public const CHECK_HORIZON_HOURS = 12;
+
+    /** A dog whose look failed is tried again after this many minutes. */
+    public const RETRY_MINUTES = 60;
+
+    /** Dogs read per query. */
+    public const CHUNK = 200;
+
+    /** Dogs read per query in this instance (tests set a small one). */
+    public int $chunk = self::CHUNK;
+
+    /** Seconds one run may spend (the schedule runs every 5 minutes). */
+    public const TIME_BUDGET_SECONDS = 120;
 
     public function __construct(
         private readonly CareTaskService $careTasks,
@@ -57,7 +80,7 @@ class CareReminderPushService
      *
      * @return array{pets: int, pushed: int}
      */
-    public function processDue(?CarbonInterface $now = null): array
+    public function processDue(?CarbonInterface $now = null, ?float $budgetSeconds = null): array
     {
         $now = CarbonImmutable::instance($now ?? now())->utc();
         // Only breeds with a groomer / bath row (most care breeds have child tasks only).
@@ -65,7 +88,45 @@ class CareReminderPushService
         if ($breeds === []) {
             return ['pets' => 0, 'pushed' => 0];
         }
-        $pets = Pet::born()
+        $deadline = microtime(true) + ($budgetSeconds ?? self::TIME_BUDGET_SECONDS);
+        $looked = 0;
+        $pushed = 0;
+
+        $this->due($breeds, $now)->with(['family', 'paymentLockPeriods'])->chunkById($this->chunk, function ($pets) use ($now, $deadline, &$looked, &$pushed): bool {
+            foreach ($pets as $pet) {
+                if (microtime(true) > $deadline) {
+                    return false; // the rest stays due — the next run continues
+                }
+                $looked++;
+                try {
+                    foreach ($this->careTasks->remindersFor($pet, $now) as $reminder) {
+                        $pushed += $this->maybePush($pet, $reminder, $now) ? 1 : 0;
+                    }
+                    $next = $this->nextCheck($pet, $now);
+                } catch (Throwable $e) {
+                    // One dog never stops the run; it is looked at again a little later.
+                    Log::error('CareReminderPushService: reminder push failed', ['pet_id' => $pet->id, 'error' => $e->getMessage()]);
+                    report($e);
+                    $next = $now->addMinutes(self::RETRY_MINUTES);
+                }
+                Pet::whereKey($pet->id)->update(['care_reminder_check_at' => $next]);
+            }
+
+            return true;
+        });
+
+        return ['pets' => $looked, 'pushed' => $pushed];
+    }
+
+    /**
+     * Dogs whose reminder look is due.
+     *
+     * @param  list<string>  $breeds
+     * @return Builder<Pet>
+     */
+    public function due(array $breeds, CarbonInterface $now): Builder
+    {
+        return Pet::born()
             ->whereIn('breed_type', $breeds)
             ->where('is_active', true)
             ->where('is_game_over', false)
@@ -73,25 +134,26 @@ class CareReminderPushService
             ->where('species', 'dog')
             ->whereNotNull('arrival_age_months')
             ->where(fn ($q) => $q->whereNull('care_tasks_since')->orWhere('care_tasks_since', '<=', $now))
-            ->orderBy('id')
-            ->limit(self::MAX_PETS_PER_RUN)
-            ->with(['family', 'paymentLockPeriods'])
-            ->get();
+            ->where(fn ($q) => $q->whereNull('care_reminder_check_at')->orWhere('care_reminder_check_at', '<=', $now));
+    }
 
-        $pushed = 0;
-        foreach ($pets as $pet) {
-            try {
-                foreach ($this->careTasks->remindersFor($pet, $now) as $reminder) {
-                    $pushed += $this->maybePush($pet, $reminder, $now) ? 1 : 0;
-                }
-            } catch (Throwable $e) {
-                // One dog never stops the run; it is looked at again on the next run.
-                Log::error('CareReminderPushService: reminder push failed', ['pet_id' => $pet->id, 'error' => $e->getMessage()]);
-                report($e);
+    /**
+     * When the dog's next reminder period may start: the earliest end of its
+     * current reminder periods (period 0 included), capped at CHECK_HORIZON_HOURS.
+     * A payment lock only moves a period end later — an early look just
+     * recomputes.
+     */
+    public function nextCheck(Pet $pet, CarbonImmutable $now): CarbonImmutable
+    {
+        $next = $now->addHours(self::CHECK_HORIZON_HOURS);
+        foreach (CareTask::parentTasks() as $task) {
+            $grid = $this->careTasks->reminderGridAt($pet, $task, $now);
+            if ($grid !== null && $grid['end']->greaterThan($now) && $grid['end']->lessThan($next)) {
+                $next = $grid['end'];
             }
         }
 
-        return ['pets' => $pets->count(), 'pushed' => $pushed];
+        return $next;
     }
 
     /**

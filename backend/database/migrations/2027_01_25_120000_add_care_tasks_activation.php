@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Schema;
  * M5-R14 / R15 / R18 / R19 / R20 follow-up (David 2026-10-24, answers (d) + (e)).
  *
  *  - pets.care_tasks_since: for an EXISTING dog switched on later
- *    (`pets:activate-care-tasks`), the family-local midnight from which its
+ *    (`pets:care-tasks`), the family-local midnight from which its
  *    care tasks, parent reminders and heat warning apply — never before (no
  *    slots / missed routines for earlier days). Null = from the birth (a dog
  *    created with `care_tasks_enabled`).
@@ -19,10 +19,17 @@ use Illuminate\Support\Facades\Schema;
  *    only once every caretaker child's app AND a parent's app declare
  *    `care_tasks`, so an old build never shows a child a slot it cannot do.
  *    Technical data about the app build only (no personal data).
+ *  - pets.care_reminder_check_at: when `pets:care-tasks` next looks at the
+ *    dog's groomer / bath reminder push (CareReminderPushService — the end of
+ *    the current reminder period, at most 12 h ahead; null = at the next run),
+ *    so a run only reads the dogs whose period may just have started.
  *  - push_notifications type `care_reminder`: the parent's groomer / bath
  *    reminder push at the start of a period.
  *
  * Additive; existing rows unchanged (every pet: since = null, every user: null).
+ * Rollback (QA PR #377, M1): a dog switched on later (`care_tasks_since` set)
+ * is switched OFF again before the column goes, otherwise it would count as
+ * "since birth" — retroactive slots and missed routines for the days before.
  * The CHECK is widened from its CURRENT definition, so a parallel migration
  * that adds another value is never undone.
  */
@@ -34,6 +41,7 @@ return new class extends Migration
     {
         Schema::table('pets', function (Blueprint $table) {
             $table->timestamp('care_tasks_since')->nullable();
+            $table->timestamp('care_reminder_check_at')->nullable()->index();
         });
         Schema::table('users', function (Blueprint $table) {
             $table->json('client_features')->nullable();
@@ -54,8 +62,11 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn(['client_features', 'client_features_at']);
         });
+        // Never "since birth" after a rollback: switched-on existing dogs go back to off.
+        DB::table('pets')->whereNotNull('care_tasks_since')->update(['care_tasks_enabled' => false]);
         Schema::table('pets', function (Blueprint $table) {
-            $table->dropColumn('care_tasks_since');
+            $table->dropIndex(['care_reminder_check_at']);
+            $table->dropColumn(['care_tasks_since', 'care_reminder_check_at']);
         });
     }
 

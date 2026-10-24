@@ -70,10 +70,13 @@ Schedule::command('media:faststart')
 // Every 5 min (M5-R14 – R20 follow-up, David 2026-10-24): switch breed care tasks on
 // for existing dogs once their apps declare `care_tasks` (from the next family-local
 // midnight, never retroactively) and push the parent groomer / bath reminder when a
-// period starts (once per period). Off the 5-minute mark.
+// period starts (once per period). Off the 5-minute mark; each step has a time
+// budget (CareTaskActivationService / CareReminderPushService) and the overlap
+// lock expires after 10 min, so a crashed run never blocks it for a day.
 Schedule::command('pets:care-tasks')
     ->cron('1-59/5 * * * *')
-    ->withoutOverlapping()
+    ->withoutOverlapping(10)
+    ->runInBackground()
     ->name('pets-care-tasks')
     ->description('Switch care tasks on for existing dogs and push parent care reminders');
 

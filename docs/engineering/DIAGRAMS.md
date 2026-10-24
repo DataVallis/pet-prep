@@ -1901,14 +1901,14 @@ flowchart TD
 
 ### 12f. Breed care tasks, parent reminders and the heat warning (M5-R14 / R15 / R18 / R19 / R20, David 2026-10-24)
 
-A task exists only where the breed's source states a frequency (`breed_stage_params` `*_frequency` = [times, period_days]); child tasks are ledger slots like grooming, parent reminders are never scored (but pushed to the parents when a period starts). Existing dogs are switched on from the next family-local midnight once their apps support it; the first period expects only its share (`CareTaskService::timesFrom`).
+A task exists only where the breed's source states a frequency (`breed_stage_params` `*_frequency` = [times, period_days]); child tasks are ledger slots like grooming, parent reminders are never scored (but pushed to the parents when a period starts). Existing dogs are switched on from the next family-local midnight once their apps support it; a child task's first period expects only its share (`CareTaskService::timesFrom`); a parent reminder's first one comes one full period after the birth / switch-on.
 
 ```mermaid
 flowchart TD
   SRC["data.json: source quote with a frequency"] --> SEED["BreedStageParamsSeeder::DOG_CARE_TASKS<br/>*_frequency [times, period_days] · no_walk_in_heat"]
   SEED --> G{"pets.care_tasks_enabled?<br/>(both apps sent care_tasks, new dog)"}
   EX["Existing dog · pets:care-tasks every 5 min<br/>every caretaker child's + a parent's app sent<br/>X-PetPrep-Features: care_tasks (users.client_features)"] --> ON["care_tasks_enabled = true<br/>care_tasks_since = next family-local midnight"]
-  ON --> SINCE{"date ≥ care_tasks_since?"}
+  ON --> SINCE{"local day starts ≥ care_tasks_since?"}
   SINCE -- no --> NONE
   SINCE -- yes --> G
   G -- no --> NONE["care_tasks [] · care_reminders [] · walk_heat null"]
@@ -1927,7 +1927,9 @@ flowchart TD
   ACT --> LED["RoutineLedgerService::careTaskRoutines<br/>times slots due at the period end · fair share · report"]
   PR --> CARD["Parent: CareRemindersCard »Opravljeno«"] --> CF["POST /api/parent/pets/{pet}/care-reminders {task}"]
   CF --> PA["parent_groomer_visit / parent_bathed_pet (actor = parent)<br/>report care_reminders · never a routine / score"]
-  PR --> PP["Period starts (≤ 24 h ago, not confirmed) → care_reminder push to parents<br/>once per task + period · held over quiet hours · already_done at delivery"]
+  PR --> P0{"period 0?<br/>(first period_days after the birth / care_tasks_since)"}
+  P0 -- yes --> NOREM["no reminder, no push (David 2026-10-24: first FULL period)"]
+  P0 -- no --> PP["Period starts (≤ 24 h ago, not confirmed) → care_reminder push to parents with the app (all if none)<br/>once per task + period · held over quiet hours · already_done at delivery<br/>dogs read by care_reminder_check_at (period end, ≤ 12 h)"]
   H --> HN["walk_heat window → calm note on the HUD + walk tracker<br/>steps still count · no penalty"]
 ```
 
