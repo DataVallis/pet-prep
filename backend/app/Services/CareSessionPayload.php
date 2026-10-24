@@ -107,4 +107,51 @@ final class CareSessionPayload
             'praise_window_ms' => (int) ($r['praise_window_ms'] ?? 0),
         ];
     }
+
+    /**
+     * M5-R14 / R15 / R19 / R20: a breed care mini-game session (teeth, folds,
+     * ears — strokes on the brush scratch card; nails — one tap per claw).
+     *
+     * @return array{id: string, task: 'tooth_brushing'|'fold_cleaning'|'ear_cleaning'|'nail_trim', started_at: string, ends_at: string, expires_at: string, duration_ms: int, min_strokes: int, segments: int, min_stroke_interval_ms: int}
+     */
+    public static function careTask(PetCareSession $session, string $tz): array
+    {
+        $schedule = $session->schedule;
+
+        return [
+            'id' => $session->public_id,
+            /** @var 'tooth_brushing'|'fold_cleaning'|'ear_cleaning'|'nail_trim' */
+            'task' => $session->kind->value,
+            'started_at' => $session->started_at->copy()->setTimezone($tz)->toIso8601String(),
+            // The game has run its course; finish from here on (up to 3 s earlier is accepted).
+            'ends_at' => $session->ends_at->copy()->setTimezone($tz)->toIso8601String(),
+            // Last moment a finish is accepted (TTL).
+            'expires_at' => $session->expires_at->copy()->setTimezone($tz)->toIso8601String(),
+            'duration_ms' => $session->duration_ms,
+            // What the server checks at finish: strokes / claw taps, spread over `segments` equal parts.
+            'min_strokes' => (int) ($schedule['min_strokes'] ?? 0),
+            'segments' => (int) ($schedule['segments'] ?? 1),
+            'min_stroke_interval_ms' => (int) ($schedule['min_stroke_interval_ms'] ?? 0),
+        ];
+    }
+
+    /**
+     * The verdict of a care task finish.
+     *
+     * @return array{session_id: string, success: bool, reason: 'too_few_strokes'|'not_spread'|'too_uniform'|null, strokes: int, min_strokes: int, segments_hit: int, segments: int}
+     */
+    public static function careTaskResult(PetCareSession $session): array
+    {
+        $r = $session->result ?? [];
+
+        return [
+            'session_id' => $session->public_id,
+            'success' => (bool) ($r['success'] ?? false),
+            'reason' => $r['reason'] ?? null,
+            'strokes' => (int) ($r['strokes'] ?? 0),
+            'min_strokes' => (int) ($r['min_strokes'] ?? 0),
+            'segments_hit' => (int) ($r['segments_hit'] ?? 0),
+            'segments' => (int) ($r['segments'] ?? 0),
+        ];
+    }
 }

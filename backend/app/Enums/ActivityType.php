@@ -60,6 +60,19 @@ enum ActivityType: string
     // adapted mode. actor = the parent, value = minutes; the steps they count
     // for are added to that child's day (pet_daily_steps.manual_steps).
     case ParentLoggedWalk = 'parent_logged_walk';
+    // M5-R14 / R15 / R19 / R20 (David 2026-10-24): a child completed a breed care
+    // mini-game — brushed the teeth, wiped the face / skin folds, cleaned the ears,
+    // trimmed the nails (value = its number in the task's period). The rows make the
+    // task's ledger slots (CareTaskService, like `groomed_pet`).
+    case BrushedTeeth = 'brushed_teeth';
+    case CleanedFolds = 'cleaned_folds';
+    case CleanedEars = 'cleaned_ears';
+    case TrimmedNails = 'trimmed_nails';
+    // M5-R18 / R20 (David 2026-10-24): a PARENT confirmed the reminder "done" — the
+    // professional groomer visit / the bath. actor = the parent, value = the period's
+    // number. Parent timeline + report only — never a routine, score or stat.
+    case ParentGroomerVisit = 'parent_groomer_visit';
+    case ParentBathedPet = 'parent_bathed_pet';
 
     /**
      * Rows that describe something that happened to the dog, not a care

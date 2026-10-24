@@ -10,6 +10,7 @@ use App\Services\BehaviourPayload;
 use App\Services\BirthdayPayload;
 use App\Services\CareGuidePayload;
 use App\Services\CareScheduleService;
+use App\Services\CareTasksPayload;
 use App\Services\ChallengeCertificateService;
 use App\Services\ChildCertificatePayload;
 use App\Services\GroomingPayload;
@@ -81,6 +82,12 @@ use Illuminate\Http\Resources\Json\JsonResource;
  * `socialisation` (M5-R17, David 2026-10-12): the puppy's weekly "new
  * experience" — {@see SocialisationPayload}; null when this program week has
  * no task (not a puppy week, no breed row, a cat, `socialisation_enabled` off).
+ *
+ * `care_tasks` (M5-R14 / R15 / R19 / R20, David 2026-10-24): the child's breed
+ * care mini-games (teeth, folds, ears, nails) — {@see CareTasksPayload}; an empty
+ * list when the breed's source states no frequency or `care_tasks_enabled` is off.
+ * `walk_heat` (M5-R14): today's summer midday window of a flat-faced breed whose
+ * source says not to exercise it in the heat (calm warning, no penalty); null otherwise.
  *
  * `feeding.digesting_until` (M5-R16): end of the "wait with the walk, the dog
  * is digesting" warning after a meal, for breeds whose source advises a gap
@@ -393,6 +400,10 @@ class ChildPetStateResource extends JsonResource
             'certificate' => $actor !== null ? app(ChallengeCertificateService::class)->childPayload($pet, $actor, $tz)?->toArray() : null,
             // M5-R17 the puppy's weekly "new experience" (socialisation); null when this week has no task.
             'socialisation' => SocialisationPayload::for($pet, $actor, $now)?->toArray(),
+            // M5-R14 / R15 / R19 / R20 the child's breed care mini-games (teeth, folds, ears, nails); [] without one.
+            'care_tasks' => CareTasksPayload::tasks($pet, $actor, $now),
+            // M5-R14 summer midday heat warning before a walk (flat-faced breeds with a sourced rule); null otherwise.
+            'walk_heat' => CareTasksPayload::walkHeat($pet, $now),
             // M5-T05 care guide ("Kako skrbim za …"): numbers + keys from the simulation's own rules, no prose.
             'care_guide' => CareGuidePayload::for($pet, $now, $profile)->toArray(),
         ];

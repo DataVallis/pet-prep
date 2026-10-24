@@ -56,6 +56,7 @@
  *                                   full_change
  *        grooming (pedigree cats) . cat <breed>.grooming.game_sessions_per_week (Maine Coon, British Shorthair, Ragdoll, Siberian, Norwegian Forest Cat, Bengal)
  *  dogs  grooming (M5-R13) ........ dog proposed_game_parameters.<breed>.grooming (every brushed dog breed; not the mutt / Border Collie)
+ *  dogs  care tasks (M5-R14–R20) .. DOG_CARE_TASKS / DOG_NO_WALK_IN_HEAT (rules `care_task`, `no_walk_in_heat`; only sourced frequencies)
  *
  * Breed portraits (M5-R11, David 2026-10-10 — optional input):
  *   docs/research/breed-portraits/manifest.json      written by `php artisan breeds:portraits`
@@ -1770,6 +1771,53 @@ const DOG_FACTS = {
 };
 
 /** Per-breed game refs (dog data.json). */
+/**
+ * M5-R14 / R15 / R18 / R19 / R20 (David 2026-10-24): breed care tasks — ONLY where the breed's
+ * source states a frequency. breed → [task, times, period_days, data.json ref]; the same table
+ * as BreedStageParamsSeeder::DOG_CARE_TASKS (the export test compares both ways with PHP).
+ * Child tasks (tooth_brushing, fold_cleaning, ear_cleaning, nail_trim) are mini-games; groomer_visit
+ * and bath are reminders the parent confirms (never scored). A month = 4 program weeks (28 days).
+ */
+export const DOG_CARE_TASKS = {
+  bulldog: [['fold_cleaning', 7, 7, 'proposed_game_parameters.bulldog.face_fold_cleaning']],
+  yorkshire_terrier: [['tooth_brushing', 7, 7, 'proposed_game_parameters.yorkshire_terrier.tooth_brushing']],
+  pomeranian: [['groomer_visit', 1, 28, 'proposed_game_parameters.pomeranian.professional_grooming']],
+  english_springer_spaniel: [['groomer_visit', 1, 84, 'proposed_game_parameters.english_springer_spaniel.professional_grooming']],
+  brittany: [['nail_trim', 1, 28, 'proposed_game_parameters.brittany.nail_trimming']],
+  american_cocker_spaniel: [['ear_cleaning', 1, 7, 'proposed_game_parameters.american_cocker_spaniel.ear_care_bathing'], ['groomer_visit', 1, 28, 'proposed_game_parameters.american_cocker_spaniel.professional_grooming']],
+  belgian_malinois: [['tooth_brushing', 7, 7, 'proposed_game_parameters.belgian_malinois.dental_care'], ['ear_cleaning', 1, 28, 'proposed_game_parameters.belgian_malinois.ear_care']],
+  basset_hound: [['fold_cleaning', 7, 7, 'proposed_game_parameters.basset_hound.skin_fold_care']],
+  english_cocker_spaniel: [['groomer_visit', 1, 84, 'proposed_game_parameters.english_cocker_spaniel.professional_grooming']],
+  maltese: [['tooth_brushing', 7, 7, 'proposed_game_parameters.maltese.tooth_brushing']],
+  pug: [['fold_cleaning', 7, 7, 'proposed_game_parameters.pug.face_fold_cleaning'], ['tooth_brushing', 7, 7, 'proposed_game_parameters.pug.tooth_brushing']],
+  rough_collie: [['nail_trim', 1, 14, 'proposed_game_parameters.rough_collie.nail_care'], ['bath', 1, 28, 'rough_collie.suitability.petmd_grooming']],
+  mastiff: [['fold_cleaning', 7, 7, 'proposed_game_parameters.mastiff.face_fold_cleaning']],
+  shiba_inu: [['tooth_brushing', 7, 7, 'proposed_game_parameters.shiba_inu.tooth_brushing']],
+  rhodesian_ridgeback: [['ear_cleaning', 1, 7, 'proposed_game_parameters.rhodesian_ridgeback.ear_care'], ['bath', 1, 28, 'rhodesian_ridgeback.suitability.petmd_grooming']],
+  papillon: [['tooth_brushing', 7, 7, 'proposed_game_parameters.papillon.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.papillon.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.papillon.nail_trimming']],
+  portuguese_water_dog: [['tooth_brushing', 7, 7, 'proposed_game_parameters.portuguese_water_dog.tooth_brushing'], ['groomer_visit', 1, 28, 'portuguese_water_dog.suitability.petmd_grooming']],
+  bichon_frise: [['ear_cleaning', 1, 28, 'proposed_game_parameters.bichon_frise.ear_care'], ['groomer_visit', 1, 56, 'proposed_game_parameters.bichon_frise.professional_grooming'], ['bath', 1, 28, 'bichon_frise.suitability.petmd_ears']],
+  newfoundland: [['bath', 1, 28, 'proposed_game_parameters.newfoundland.ear_care']],
+  dalmatian: [['nail_trim', 1, 28, 'proposed_game_parameters.dalmatian.nail_care']],
+  samoyed: [['groomer_visit', 1, 42, 'proposed_game_parameters.samoyed.professional_grooming']],
+  scottish_terrier: [['groomer_visit', 1, 56, 'proposed_game_parameters.scottish_terrier.professional_grooming']],
+  weimaraner: [['ear_cleaning', 1, 28, 'proposed_game_parameters.weimaraner.ear_care_bathing'], ['bath', 1, 28, 'weimaraner.suitability.petmd_grooming']],
+  giant_schnauzer: [['ear_cleaning', 1, 7, 'proposed_game_parameters.giant_schnauzer.ear_checks']],
+};
+
+/** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
+export const DOG_NO_WALK_IN_HEAT = {
+  french_bulldog: 'french_bulldog.exercise.heat_and_walk_timing',
+  bulldog: 'proposed_game_parameters.bulldog.no_exercise_in_heat',
+  boston_terrier: 'proposed_game_parameters.boston_terrier.no_exercise_in_heat',
+  pug: 'proposed_game_parameters.pug.no_exercise_in_heat',
+};
+
+/** M5-R14: the summer midday window of the heat warning (config/care_tasks.php heat; no weather data). */
+const HEAT_WINDOW = { months_north: [6, 7, 8], months_south: [12, 1, 2], from: '11:00', to: '16:00' };
+
+const CHILD_CARE_TASKS = new Set(['tooth_brushing', 'fold_cleaning', 'ear_cleaning', 'nail_trim']);
+
 const DOG_GAME = {
   border_collie: {
     adult_minutes: ['border_collie.exercise.adult', (e, ref) => parseMoreThan(e.value, ref)],
@@ -2385,6 +2433,15 @@ function dogGame(R) {
       const groom = read([`proposed_game_parameters.${id}.grooming`]);
       values.push(groom.meta);
       extraRules.push({ key: 'grooming_rule', params: { per_week: groom.value } });
+    }
+    // M5-R14 / R15 / R18 / R19 / R20: the sourced care tasks (child mini-game / parent reminder).
+    for (const [task, times, periodDays, ref] of DOG_CARE_TASKS[id] ?? []) {
+      values.push(R.game(ref).meta);
+      extraRules.push({ key: 'care_task', params: { task, actor: CHILD_CARE_TASKS.has(task) ? 'child' : 'parent', times, period_days: periodDays } });
+    }
+    if (DOG_NO_WALK_IN_HEAT[id]) {
+      values.push(R.game(DOG_NO_WALK_IN_HEAT[id]).meta);
+      extraRules.push({ key: 'no_walk_in_heat', params: { ...HEAT_WINDOW } });
     }
     return {
       stages: [

@@ -5,6 +5,7 @@ namespace App\Events;
 use App\Models\Pet;
 use App\Services\BehaviourPayload;
 use App\Services\BirthdayPayload;
+use App\Services\CareTasksPayload;
 use App\Services\GroomingPayload;
 use App\Services\LitterPayload;
 use App\Services\Media\PetMediaPayload;
@@ -195,6 +196,10 @@ class PetUpdated implements ShouldBroadcast, ShouldDispatchAfterCommit
             'scratching' => ScratchingPayload::for($pet)?->toArray(),
             // M5-R17: the puppy's weekly "new experience" (pet-level `can_record`); null when this week has no task.
             'socialisation' => SocialisationPayload::for($pet)?->toArray(),
+            // M5-R14 / R15 / R19 / R20: the breed care mini-games (pet-level `can_start`); [] without one.
+            'care_tasks' => CareTasksPayload::tasks($pet),
+            // M5-R14: the parent's groomer / bath reminders of the current period (never scored); [] without one.
+            'care_reminders' => CareTasksPayload::reminders($pet),
             // AI media (M4-05): signed URLs (≤ 90 min) to our copies — the channel is
             // private to the pet's caretakers and family parents; legacy fields mirror it.
             'current_video_url' => $media->currentVideoUrl,

@@ -234,4 +234,26 @@ enum CareRefusal: string
      * Play endpoint (ball game, cuddles) and the cat's wand start.
      */
     case MediaNotReady = 'media_not_ready';
+
+    /**
+     * M5-R14 / R15 / R19 / R20: the pet has no such care task — its breed's source
+     * states no frequency for it, it is a cat / legacy pet, or the pet was created
+     * without `care_tasks_enabled` (an older app).
+     */
+    case CareTaskNotAvailable = 'care_task_not_available';
+
+    /** All of the task's sessions of the current period are done (next_allowed_at = the next period). */
+    case CareTaskPeriodDone = 'care_task_period_done';
+
+    /** At most one of a task per family-local day (next_allowed_at = the next local midnight). */
+    case CareTaskDoneToday = 'care_task_done_today';
+
+    /**
+     * The pet sleeps (PetSleepService, checked first) or the session would run into
+     * quiet hours — no care while it sleeps, like grooming; next_allowed_at = when it wakes.
+     */
+    case CareTaskQuietHours = 'care_task_quiet_hours';
+
+    /** Another child is doing this task with the pet (next_allowed_at = its expiry). */
+    case CareTaskSessionActive = 'care_task_session_active';
 }

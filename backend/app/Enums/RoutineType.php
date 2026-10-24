@@ -55,4 +55,16 @@ enum RoutineType: string
      * the week's i-th completed grooming. Counted at the end of the week.
      */
     case Grooming = 'grooming';
+
+    /**
+     * M5-R15 / R14 / R20 / R19 (David 2026-10-24) — the breed care mini-games of the
+     * child: N slots per task period (`*_frequency` = [times, period_days] from the
+     * breed's source; weekly 7, monthly 28 days …), on the day the period ends;
+     * slot i is done by the period's i-th completed task — the grooming model
+     * (CareTaskService, RoutineLedgerService::careTaskRoutines).
+     */
+    case ToothBrushing = 'tooth_brushing';
+    case FoldCleaning = 'fold_cleaning';
+    case EarCleaning = 'ear_cleaning';
+    case NailTrim = 'nail_trim';
 }

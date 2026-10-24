@@ -3409,6 +3409,23 @@
             "params": {
               "per_week": 1
             }
+          },
+          {
+            "key": "no_walk_in_heat",
+            "params": {
+              "months_north": [
+                6,
+                7,
+                8
+              ],
+              "months_south": [
+                12,
+                1,
+                2
+              ],
+              "from": "11:00",
+              "to": "16:00"
+            }
           }
         ],
         "values": [
@@ -3478,6 +3495,13 @@
               "S78"
             ],
             "decision": "potrdil David 2026-10-12 (pravilo runbooka (David 2026-10-11/12: »enkrat na teden« → 1, »vsak dan« → 7, razpon A–B → B)): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "french_bulldog.exercise.heat_and_walk_timing",
+            "basis_source_ids": [
+              "S81"
+            ],
+            "decision": null
           }
         ],
         "basis_source_ids": [
@@ -10235,6 +10259,32 @@
             "params": {
               "per_week": 1
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "fold_cleaning",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "no_walk_in_heat",
+            "params": {
+              "months_north": [
+                6,
+                7,
+                8
+              ],
+              "months_south": [
+                12,
+                1,
+                2
+              ],
+              "from": "11:00",
+              "to": "16:00"
+            }
           }
         ],
         "values": [
@@ -10301,6 +10351,20 @@
               "S177"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.bulldog.face_fold_cleaning",
+            "basis_source_ids": [
+              "S180"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan; mehanika čiščenja gub še ni zgrajena → ROADMAP M5-R14 (needs-david)"
+          },
+          {
+            "ref": "proposed_game_parameters.bulldog.no_exercise_in_heat",
+            "basis_source_ids": [
+              "S180"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ne v vročini dneva; mehanika še ni zgrajena → ROADMAP M5-R14 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -10314,7 +10378,8 @@
           "S35",
           "S45",
           "S54",
-          "S177"
+          "S177",
+          "S180"
         ]
       },
       "portrait": {
@@ -11330,6 +11395,15 @@
             "params": {
               "per_week": 7
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
           }
         ],
         "values": [
@@ -11396,6 +11470,13 @@
               "S192"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.yorkshire_terrier.tooth_brushing",
+            "basis_source_ids": [
+              "S196"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ščetkanje zob vsak dan (7× na teden); mehanike ni → ROADMAP M5-R15 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -11409,7 +11490,8 @@
           "S35",
           "S45",
           "S192",
-          "S195"
+          "S195",
+          "S196"
         ]
       },
       "portrait": {
@@ -15919,6 +16001,15 @@
             "params": {
               "per_week": 3
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
           }
         ],
         "values": [
@@ -15985,6 +16076,13 @@
               "S250"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 3× na teden (PDSA »two-three times per week« → zgornja meja); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.pomeranian.professional_grooming",
+            "basis_source_ids": [
+              "S251"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): obisk pasjega frizerja vsakih 4–6 tednov; mehanike ni → ROADMAP M5-R18 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -15998,7 +16096,8 @@
           "S35",
           "S45",
           "S247",
-          "S250"
+          "S250",
+          "S251"
         ]
       },
       "portrait": {
@@ -16434,6 +16533,23 @@
             "params": {
               "per_week": 1
             }
+          },
+          {
+            "key": "no_walk_in_heat",
+            "params": {
+              "months_north": [
+                6,
+                7,
+                8
+              ],
+              "months_south": [
+                12,
+                1,
+                2
+              ],
+              "from": "11:00",
+              "to": "16:00"
+            }
           }
         ],
         "values": [
@@ -16500,6 +16616,13 @@
               "S255"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden; mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.boston_terrier.no_exercise_in_heat",
+            "basis_source_ids": [
+              "S259"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ne v vročini dneva; mehanika še ni zgrajena → ROADMAP M5-R14 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -16512,7 +16635,8 @@
           "S24",
           "S35",
           "S45",
-          "S255"
+          "S255",
+          "S259"
         ]
       },
       "portrait": {
@@ -18117,6 +18241,15 @@
             "params": {
               "per_week": 2
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 84
+            }
           }
         ],
         "values": [
@@ -18183,6 +18316,13 @@
               "S285"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2× na teden (RKC »More than once a week« brez števila → PDSA »once or twice a week« → 2); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.english_springer_spaniel.professional_grooming",
+            "basis_source_ids": [
+              "S285"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): striženje vsake 3 mesece; mehanike ni → ROADMAP M5-R18 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -19323,6 +19463,15 @@
             "params": {
               "per_week": 1
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
           }
         ],
         "values": [
@@ -19389,6 +19538,13 @@
               "S301"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »More than once a week« brez števila → AKC »Weekly brushing« → 1; PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.brittany.nail_trimming",
+            "basis_source_ids": [
+              "S301"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): striženje krempljev enkrat na mesec po potrebi; mehanike ni → ROADMAP M5-R19 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -19868,6 +20024,24 @@
             "params": {
               "per_week": 7
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
           }
         ],
         "values": [
@@ -19934,6 +20108,20 @@
               "S305"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (RKC »Grooming: Every day« → 7× na teden); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.american_cocker_spaniel.ear_care_bathing",
+            "basis_source_ids": [
+              "S310"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): pregled ušes enkrat na teden in čiščenje; mehanike ni → ROADMAP M5-R20 (needs-david)"
+          },
+          {
+            "ref": "proposed_game_parameters.american_cocker_spaniel.professional_grooming",
+            "basis_source_ids": [
+              "S310"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): pasji frizer in striženje enkrat na mesec; mehanike ni → ROADMAP M5-R18 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -19946,7 +20134,8 @@
           "S24",
           "S35",
           "S45",
-          "S305"
+          "S305",
+          "S310"
         ]
       },
       "portrait": {
@@ -20472,6 +20661,24 @@
             "params": {
               "per_week": 2
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
           }
         ],
         "values": [
@@ -20538,6 +20745,20 @@
               "S314"
             ],
             "decision": "predlog Claude 2026-10-14: česanje 2× na teden (RKC »More than once a week« brez števila, AKC / PetMD »occasional«) — čaka Davida (mehanika česanja psa zgrajena v ROADMAP M5-R13)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_malinois.dental_care",
+            "basis_source_ids": [
+              "S317"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsakodnevna nega zob; mehanike ni → ROADMAP M5-R15 (needs-david)"
+          },
+          {
+            "ref": "proposed_game_parameters.belgian_malinois.ear_care",
+            "basis_source_ids": [
+              "S317"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): čiščenje ušes enkrat na mesec; mehanike ni → ROADMAP M5-R20 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -20550,7 +20771,8 @@
           "S24",
           "S35",
           "S45",
-          "S314"
+          "S314",
+          "S317"
         ]
       },
       "portrait": {
@@ -21070,6 +21292,15 @@
             "params": {
               "per_week": 1
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "fold_cleaning",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
           }
         ],
         "values": [
@@ -21136,6 +21367,13 @@
               "S321"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week« → 1; PDSA in AKC enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.basset_hound.skin_fold_care",
+            "basis_source_ids": [
+              "S323"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsakodnevni pregled kožnih gub; mehanike ni → ROADMAP M5-R14 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -21148,7 +21386,8 @@
           "S24",
           "S35",
           "S45",
-          "S321"
+          "S321",
+          "S323"
         ]
       },
       "portrait": {
@@ -22336,6 +22575,15 @@
             "params": {
               "per_week": 7
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 84
+            }
           }
         ],
         "values": [
@@ -22402,6 +22650,13 @@
               "S337"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (RKC »Grooming: Every day« → 7× na teden; PDSA enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.english_cocker_spaniel.professional_grooming",
+            "basis_source_ids": [
+              "S339"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): pasji frizer in striženje približno vsake tri mesece; mehanike ni → ROADMAP M5-R18 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -22415,6 +22670,7 @@
           "S35",
           "S45",
           "S337",
+          "S339",
           "S342"
         ]
       },
@@ -22925,6 +23181,15 @@
             "params": {
               "per_week": 7
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
           }
         ],
         "values": [
@@ -22991,6 +23256,13 @@
               "S347"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (RKC »Grooming: Every day« → 7× na teden; PDSA in PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.maltese.tooth_brushing",
+            "basis_source_ids": [
+              "S351"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ščetkanje zob vsak dan (7× na teden); mehanike ni → ROADMAP M5-R15 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -23003,7 +23275,8 @@
           "S24",
           "S35",
           "S45",
-          "S347"
+          "S347",
+          "S351"
         ]
       },
       "portrait": {
@@ -23523,6 +23796,41 @@
             "params": {
               "per_week": 1
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "fold_cleaning",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "no_walk_in_heat",
+            "params": {
+              "months_north": [
+                6,
+                7,
+                8
+              ],
+              "months_south": [
+                12,
+                1,
+                2
+              ],
+              "from": "11:00",
+              "to": "16:00"
+            }
           }
         ],
         "values": [
@@ -23589,6 +23897,27 @@
               "S355"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Grooming: Once a week«; PDSA in PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.pug.face_fold_cleaning",
+            "basis_source_ids": [
+              "S359"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan; mehanika čiščenja gub še ni zgrajena → ROADMAP M5-R14 (needs-david)"
+          },
+          {
+            "ref": "proposed_game_parameters.pug.tooth_brushing",
+            "basis_source_ids": [
+              "S359"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ščetkanje zob vsak dan (7× na teden); mehanike ni → ROADMAP M5-R15 (needs-david)"
+          },
+          {
+            "ref": "proposed_game_parameters.pug.no_exercise_in_heat",
+            "basis_source_ids": [
+              "S357"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ne v vročini; mehanika še ni zgrajena → ROADMAP M5-R14 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -23602,7 +23931,9 @@
           "S35",
           "S45",
           "S54",
-          "S355"
+          "S355",
+          "S357",
+          "S359"
         ]
       },
       "portrait": {
@@ -24097,6 +24428,24 @@
             "params": {
               "per_week": 7
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 14
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
           }
         ],
         "values": [
@@ -24163,6 +24512,20 @@
               "S365"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 7× na teden (RKC »Every day«, PetMD »Daily brushing is recommended«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.rough_collie.nail_care",
+            "basis_source_ids": [
+              "S368"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): striženje krempljev približno vsak drugi teden; mehanike ni → ROADMAP M5-R19 (needs-david)"
+          },
+          {
+            "ref": "rough_collie.suitability.petmd_grooming",
+            "basis_source_ids": [
+              "S368"
+            ],
+            "decision": null
           }
         ],
         "basis_source_ids": [
@@ -24175,7 +24538,8 @@
           "S24",
           "S35",
           "S45",
-          "S365"
+          "S365",
+          "S368"
         ]
       },
       "portrait": {
@@ -24703,6 +25067,15 @@
             "params": {
               "per_week": 1
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "fold_cleaning",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
           }
         ],
         "values": [
@@ -24769,6 +25142,13 @@
               "S370"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PDSA »grooming just once a week«; PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.mastiff.face_fold_cleaning",
+            "basis_source_ids": [
+              "S370"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan; mehanika čiščenja gub še ni zgrajena → ROADMAP M5-R14 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -25219,6 +25599,15 @@
             "params": {
               "per_week": 1
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
           }
         ],
         "values": [
@@ -25285,6 +25674,13 @@
               "S378"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Grooming: Once a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.shiba_inu.tooth_brushing",
+            "basis_source_ids": [
+              "S381"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan; mehanika ščetkanja zob še ni zgrajena → ROADMAP M5-R15 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -25298,7 +25694,8 @@
           "S35",
           "S45",
           "S376",
-          "S378"
+          "S378",
+          "S381"
         ]
       },
       "portrait": {
@@ -25812,6 +26209,24 @@
             "params": {
               "per_week": 1
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
           }
         ],
         "values": [
@@ -25878,6 +26293,20 @@
               "S387"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Grooming: Once a week«; PDSA, Woodgreen, PetMD, AKC enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.rhodesian_ridgeback.ear_care",
+            "basis_source_ids": [
+              "S392"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): pregled in čiščenje ušes enkrat na teden, kopanje vsaj enkrat na mesec; mehanike ni → ROADMAP M5-R20 (needs-david)"
+          },
+          {
+            "ref": "rhodesian_ridgeback.suitability.petmd_grooming",
+            "basis_source_ids": [
+              "S391"
+            ],
+            "decision": null
           }
         ],
         "basis_source_ids": [
@@ -25890,7 +26319,9 @@
           "S24",
           "S35",
           "S45",
-          "S387"
+          "S387",
+          "S391",
+          "S392"
         ]
       },
       "portrait": {
@@ -25956,6 +26387,7 @@
         "S385",
         "S387",
         "S390",
+        "S391",
         "S392",
         "K1",
         "K2",
@@ -26425,6 +26857,33 @@
             "params": {
               "per_week": 3
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
           }
         ],
         "values": [
@@ -26491,6 +26950,27 @@
               "S398"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 3× na teden (RKC »More than once a week« brez števila → PDSA »two-three times per week« → zgornja meja 3); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.papillon.tooth_brushing",
+            "basis_source_ids": [
+              "S400"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ščetkanje zob vsak dan (7× na teden); mehanike ni → ROADMAP M5-R15 (needs-david)"
+          },
+          {
+            "ref": "proposed_game_parameters.papillon.ear_care",
+            "basis_source_ids": [
+              "S400"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): pregled ušes vsak teden; mehanike ni → ROADMAP M5-R20 (needs-david)"
+          },
+          {
+            "ref": "proposed_game_parameters.papillon.nail_trimming",
+            "basis_source_ids": [
+              "S400"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): striženje krempljev na 4–6 tednov; mehanike ni → ROADMAP M5-R19 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -26504,7 +26984,8 @@
           "S35",
           "S45",
           "S397",
-          "S398"
+          "S398",
+          "S400"
         ]
       },
       "portrait": {
@@ -27003,6 +27484,24 @@
             "params": {
               "per_week": 7
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
           }
         ],
         "values": [
@@ -27069,6 +27568,20 @@
               "S404"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden, RKC »Every day«; PDSA »a daily requirement«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.portuguese_water_dog.tooth_brushing",
+            "basis_source_ids": [
+              "S407"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): ščetkanje zob vsak dan (7× na teden); mehanike ni → ROADMAP M5-R15 (needs-david)"
+          },
+          {
+            "ref": "portuguese_water_dog.suitability.petmd_grooming",
+            "basis_source_ids": [
+              "S407"
+            ],
+            "decision": null
           }
         ],
         "basis_source_ids": [
@@ -27081,7 +27594,8 @@
           "S24",
           "S35",
           "S45",
-          "S404"
+          "S404",
+          "S407"
         ]
       },
       "portrait": {
@@ -27612,6 +28126,33 @@
             "params": {
               "per_week": 7
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 56
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
           }
         ],
         "values": [
@@ -27678,6 +28219,27 @@
               "S411"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden, RKC »Every day«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.bichon_frise.ear_care",
+            "basis_source_ids": [
+              "S416"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): čiščenje ušes enkrat na mesec in kopanje vsaj enkrat na mesec; mehanike ni → ROADMAP M5-R20 (needs-david)"
+          },
+          {
+            "ref": "proposed_game_parameters.bichon_frise.professional_grooming",
+            "basis_source_ids": [
+              "S413"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): striženje dlake na vsakih nekaj mesecev, pogosto pri pasjem frizerju (PetMD mesečno); mehanike ni → ROADMAP M5-R18 (needs-david)"
+          },
+          {
+            "ref": "bichon_frise.suitability.petmd_ears",
+            "basis_source_ids": [
+              "S416"
+            ],
+            "decision": null
           }
         ],
         "basis_source_ids": [
@@ -27690,7 +28252,9 @@
           "S24",
           "S35",
           "S45",
-          "S411"
+          "S411",
+          "S413",
+          "S416"
         ]
       },
       "portrait": {
@@ -28172,6 +28736,15 @@
             "params": {
               "per_week": 7
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
           }
         ],
         "values": [
@@ -28238,6 +28811,13 @@
               "S423"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden, PDSA »Grooming is a daily task«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.newfoundland.ear_care",
+            "basis_source_ids": [
+              "S424"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): kopanje približno enkrat na mesec, čiščenje ušes po nasvetu veterinarja; mehanike ni → ROADMAP M5-R20 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -28251,7 +28831,8 @@
           "S35",
           "S45",
           "S123",
-          "S423"
+          "S423",
+          "S424"
         ]
       },
       "portrait": {
@@ -28761,6 +29342,15 @@
             "params": {
               "per_week": 1
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
           }
         ],
         "values": [
@@ -28827,6 +29417,13 @@
               "S429"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Grooming: Once a week«; PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.dalmatian.nail_care",
+            "basis_source_ids": [
+              "S431"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): striženje krempljev enkrat na mesec; mehanike ni → ROADMAP M5-R19 (needs-david)"
           }
         ],
         "basis_source_ids": [
@@ -28840,7 +29437,8 @@
           "S35",
           "S45",
           "S123",
-          "S429"
+          "S429",
+          "S431"
         ]
       },
       "portrait": {
@@ -28885,6 +29483,7 @@
         "S428",
         "S429",
         "S430",
+        "S431",
         "K1",
         "K2",
         "K3",
@@ -31646,6 +32245,15 @@
             "params": {
               "per_week": 7
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 42
+            }
           }
         ],
         "values": [
@@ -31712,6 +32320,13 @@
               "S467"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden) (PDSA »grooming on daily basis«; PetMD »daily brushing«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.samoyed.professional_grooming",
+            "basis_source_ids": [
+              "S468"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): obisk pasjega frizerja na 6–8 tednov, kožuha nikoli ne strižemo na kratko; mehanike ni → ROADMAP M5-R18 (David)"
           }
         ],
         "basis_source_ids": [
@@ -31724,7 +32339,8 @@
           "S24",
           "S35",
           "S45",
-          "S467"
+          "S467",
+          "S468"
         ]
       },
       "portrait": {
@@ -32170,6 +32786,15 @@
             "params": {
               "per_week": 7
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 56
+            }
           }
         ],
         "values": [
@@ -32236,6 +32861,13 @@
               "S474"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden) (PDSA »daily grooming«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.scottish_terrier.professional_grooming",
+            "basis_source_ids": [
+              "S474"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): trimanje / striženje pri pasjem frizerju na 2–3 mesece; mehanike ni → ROADMAP M5-R18 (David)"
           }
         ],
         "basis_source_ids": [
@@ -32764,6 +33396,24 @@
             "params": {
               "per_week": 1
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
           }
         ],
         "values": [
@@ -32830,6 +33480,20 @@
               "S479"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«; PDSA, PetMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.weimaraner.ear_care_bathing",
+            "basis_source_ids": [
+              "S481"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): čiščenje ušes in kopanje 1× na mesec; mehanike ni → ROADMAP M5-R20 (David)"
+          },
+          {
+            "ref": "weimaraner.suitability.petmd_grooming",
+            "basis_source_ids": [
+              "S481"
+            ],
+            "decision": null
           }
         ],
         "basis_source_ids": [
@@ -32842,7 +33506,8 @@
           "S24",
           "S35",
           "S45",
-          "S479"
+          "S479",
+          "S481"
         ]
       },
       "portrait": {
@@ -33926,6 +34591,15 @@
             "params": {
               "per_week": 7
             }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
           }
         ],
         "values": [
@@ -33992,6 +34666,13 @@
               "S495"
             ],
             "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 7× na teden (RKC »Every day«; PDSA dnevno enako; PetMD tedensko kot alternativa); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.giant_schnauzer.ear_checks",
+            "basis_source_ids": [
+              "S497"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): mehanike ni → ROADMAP M5-R20 (David)"
           }
         ],
         "basis_source_ids": [
@@ -34004,7 +34685,8 @@
           "S24",
           "S35",
           "S45",
-          "S495"
+          "S495",
+          "S497"
         ]
       },
       "portrait": {
@@ -38821,6 +39503,13 @@
       "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/rhodesian-ridgeback"
     },
     {
+      "id": "S391",
+      "tier": "B",
+      "publisher": "PetMD — L. Jones, VMD, reviewed by B. J. Morrison, DVM (updated Aug. 30, 2024)",
+      "title": "Rhodesian Ridgeback",
+      "url": "https://petmd.com/dog/breeds/rhodesian-ridgeback"
+    },
+    {
       "id": "S392",
       "tier": "B",
       "publisher": "Woodgreen Pets Charity",
@@ -38994,6 +39683,13 @@
       "publisher": "PDSA",
       "title": "Dalmatian breed information",
       "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/dalmatian"
+    },
+    {
+      "id": "S431",
+      "tier": "B",
+      "publisher": "PetMD — K. Arford, reviewed by B. J. Morrison, DVM (updated Feb. 16, 2023)",
+      "title": "Dalmatian",
+      "url": "https://www.petmd.com/dog/breeds/dalmatian"
     },
     {
       "id": "S435",

@@ -223,6 +223,8 @@ describe('PetUpdated event shape', function () {
             'litter', 'grooming', 'scratching',
             // M5-R17 puppy socialisation (additive; null without a task this week)
             'socialisation',
+            // M5-R14 / R15 / R18 / R19 / R20 breed care tasks + parent reminders (additive; [] without one)
+            'care_tasks', 'care_reminders',
             // M5-T02 sleep (asleep + wake time)
             'sleep',
         ]);
