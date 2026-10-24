@@ -535,6 +535,14 @@
 | broken with white; never merle, brindle or black / blue with tan markings (unacceptable, S485). Slender but healthy, never
 | emaciated. RKC Breed Watch Category 1 (S486) — no welfare concern. Colour weights unsourced → `verified => false`.
 |
+| Giant Schnauzer (M5-R10-61, docs/research/dog-data giant_schnauzer.appearance): "Powerfully built, robust, sinewy,
+| appearing almost square." (Royal Kennel Club standard, S494); harsh, wiry top coat with a good undercoat; strong head of
+| good length, stop accentuated by the eyebrows, blunt wedge muzzle, black nose (FCI S492); medium, dark, oval eyes;
+| V-shaped ears set high and dropping forward (natural, never cropped); natural tail (never docked). Colours pure black,
+| pepper and salt (dark facial mask), black and silver (S494; FCI S491, S493) — black weighted highest (the register
+| portrait); "Any other colour or combination of colours unacceptable." RKC Breed Watch Category 1 (S495) — no welfare
+| concern. Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2706,6 +2714,40 @@ return [
             'ear_carriage' => ['small, soft rose-shaped ears folded back'],
             'eye_color' => ['rather large, bright, dark eyes full of expression'],
             'tail' => ['low-set, long, fine tail carried low'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-61 (docs/research/dog-data/data.json giant_schnauzer.appearance; runbook rules 2026-10-10:
+    // standard colours only — pure black, pepper and salt, black and silver; natural ears and tail).
+    'giant_schnauzer' => [
+        'display_name' => 'Giant Schnauzer',
+        // Colour frequencies are in no source (giant_schnauzer.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'Royal Kennel Club breed standard (S494), FCI-Standard Nr. 181 (S492), FCI nomenclature (S491), RKC breed page (S495) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S495 "Size: Large"; S494 "65-70 cms (25½-27½ ins)"',
+            'build' => 'S494 "Powerfully built, robust, sinewy, appearing almost square."',
+            'coat_length' => 'S494 "Top coat harsh and wiry, just short enough for smartness on body."; S492 stop "Erscheint durch die Brauen deutlich ausgeprägt."',
+            'coat_color' => 'S494 "Pure black"; pepper and salt "Dark facial mask essential, harmonising with corresponding body colour."; black and silver; "Any other colour or combination of colours unacceptable." (weights unsourced)',
+            'head' => 'S494 "Head strong, of good length, narrowing from ears to eyes and then gradually toward end of nose."; S492 muzzle "Er endet in einem stumpfen Keil." nose "stets schwarz"',
+            'ear_carriage' => 'S494 "Neat, V-shaped, set high and dropping forward to temple."',
+            'eye_color' => 'S494 "Medium sized, dark, oval, set forward, with lower lid fitting closely."',
+            'tail' => 'S494 undocked "In balance with the rest of the dog."; S492 "Naturbelassen: Zuchtziel ist die Säbel- oder Sichelrute."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'powerfully built, robust and sinewy, almost square', 'weight' => 3], 'strong, imposing working dog with an alert attitude'],
+            'coat_length' => ['harsh, wiry, dense coat with bushy eyebrows and a beard'],
+            // Royal Kennel Club standard (S494); black weighted highest (the register portrait). Never white, brown or patches.
+            'coat_color' => [
+                ['value' => 'solid black', 'weight' => 5],
+                ['value' => 'pepper and salt (banded grey) with a dark facial mask', 'weight' => 3],
+                ['value' => 'black and silver', 'weight' => 2],
+            ],
+            'head' => ['strong, long head with a flat forehead, a blunt wedge-shaped muzzle and a black nose'],
+            'ear_carriage' => ['natural uncropped V-shaped ears folding forward'],
+            'eye_color' => ['dark, oval eyes'],
+            'tail' => ['natural undocked sabre-shaped tail'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],

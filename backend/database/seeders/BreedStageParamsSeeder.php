@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -720,6 +720,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_ITALIAN_GREYHOUND = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-60)';
 
     /**
+     * M5-R10-61 Giant Schnauzer (unattended run 2026-10-24, data.json proposed_game_parameters.giant_schnauzer.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on
+     * 2026-10-10 — exercise 120 min (RKC S495 "Exercise: More than 2 hours per day"), senior 90 min, puppy 10 min × age
+     * capped at 120, stages young 9 / adult 36 / senior 108 (0.75 × RKC lower bound "Over 12 years", S495 — the Dogs
+     * Trust McMillan 2024 table S123 could not be fetched), arrival 2 / 9 / 36 / 108, learning multiplier 1.2 (Coren
+     * rank 28, Above average); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_GIANT_SCHNAUZER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-61)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -884,6 +894,7 @@ class BreedStageParamsSeeder extends Seeder
         'scottish_terrier' => [7, 'S474', 'Scotties need daily grooming and will require stripping and clipping by a professional groomer every two-three months.', 'high', false],
         'weimaraner' => [1, 'S479', 'Grooming: Once a week', 'high', false],
         'italian_greyhound' => [1, 'S486', 'Grooming: Once a week', 'high', false],
+        'giant_schnauzer' => [7, 'S495', 'Grooming: Every day', 'high', false],
     ];
 
     /**
@@ -991,13 +1002,14 @@ class BreedStageParamsSeeder extends Seeder
         'scottish_terrier' => ['S475', 'Socializing your Scottish Terrier puppy is important for having a well-mannered, confident dog.'],
         'weimaraner' => ['S480', 'Weimaraners tend to be a little cautious of unfamiliar dogs, so socialisation from a young age is really important.'],
         'italian_greyhound' => ['S487', 'They can also be quite timid, so early socialisation is essential.'],
+        'giant_schnauzer' => ['S496', 'Giant Schnauzers can make lovable pets for families with older children, given the right socialisation as puppies.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1664,6 +1676,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-60 (docs/research/dog-data/data.json italian_greyhound,
             // S484–S490; runbook rules in proposed_game_parameters.italian_greyhound).
             BreedType::ItalianGreyhound => self::italianGreyhoundProfile(),
+            // M5-R10-61 (docs/research/dog-data/data.json giant_schnauzer,
+            // S491–S499; runbook rules in proposed_game_parameters.giant_schnauzer).
+            BreedType::GiantSchnauzer => self::giantSchnauzerProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -5804,6 +5819,81 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'italian_greyhound.lifespan.rkc',
                 'quote' => 'Lifespan: Over 12 years',
                 'notes' => 'RKC breed page lower bound (S486). The McMillan 2024 table (Dogs Trust S123) could not be fetched (about 14 y only via Wikipedia, tier C); no VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Giant Schnauzer (M5-R10-61). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow
+     * the runbook's standing rules (CONFIRMED_R10_GIANT_SCHNAUZER); weight, growth, Coren rank and lifespan are sourced.
+     * The senior boundary uses the RKC lower bound "Over 12 years" (S495) — the Dogs Trust McMillan 2024 table (S123)
+     * could not be fetched (12.1 years only via Wikipedia, tier C) and no VetCompass median was found.
+     *
+     * @return array<string, mixed>
+     */
+    private static function giantSchnauzerProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_GIANT_SCHNAUZER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S495', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.giant_schnauzer.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog reaches adult weight at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lifespan lower bound "Over 12 years" (S495) = 9 y = 108 months. The Dogs Trust McMillan 2024 table (S123) could not be fetched (12.1 y only via Wikipedia, tier C); no VetCompass median was found. Not chosen: 84 (Dogs Trust > 7 y, S14), 109 (12.1 y via Wikipedia).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.giant_schnauzer.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S495', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.giant_schnauzer.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "Exercise: More than 2 hours per day" (S495) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA "Minimum exercise (per day): 2 hours" (S496) agrees; PetMD "at least 40-60 minutes" (S497) — alternative.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.giant_schnauzer.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[35, 47], [
+                'unit' => 'kg', 'source_id' => 'S492', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'giant_schnauzer.adult_weight.fci',
+                'quote' => 'Rüden und Hündinnen : 35 bis 47 kg.',
+                'notes' => 'FCI standard No. 181 (S492): 35–47 kg for both sexes. PDSA 40–45 kg (S496) — alternative; the RKC standard gives no weight.',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'giant_schnauzer.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (FCI 35–47 kg ≈ 77–104 lb, S492 — mostly the Large class of S10).',
+            ]],
+            'coren_rank' => [28, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'giant_schnauzer.trainability.coren_rank',
+                'quote' => '28 | Giant Schnauzer',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 28, tier "Above Average Working Dogs" (ranks 27–39).',
+            ]],
+            'learning_multiplier' => [1.2, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.giant_schnauzer.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 28 (S35) in the "Above average" tier (ranks 27–39) → 1.2. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12.0, [
+                'unit' => 'years', 'source_id' => 'S495', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'giant_schnauzer.lifespan.rkc',
+                'quote' => 'Lifespan: Over 12 years',
+                'notes' => 'RKC breed page lower bound (S495). The McMillan 2024 table (Dogs Trust S123) could not be fetched (12.1 y only via Wikipedia, tier C); no VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }
