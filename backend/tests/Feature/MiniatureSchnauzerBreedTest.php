@@ -269,7 +269,10 @@ describe('life-stage data against data.json', function () {
             // M5-R13: the breed's brushing routine (the Border Collie has none).
             StageParamKey::GroomingSessionsPerWeek,
             // M5-R17: the puppy's weekly "new experience" — David's general row, the same as the Border Collie's
-            // (no breed quote), so it is compared, not skipped. No meal / exercise gap (no quote).
+            // (no breed quote), so it is compared, not skipped. No meal / exercise gap (no quote).,
+            // M5-R14 / R15 / R18 / R19 / R20: the breed's sourced care tasks / heat rule (the Border Collie has none).
+            StageParamKey::ToothBrushingFrequency, StageParamKey::FoldCleaningFrequency, StageParamKey::EarCleaningFrequency,
+            StageParamKey::NailTrimFrequency, StageParamKey::GroomerVisitFrequency, StageParamKey::BathFrequency, StageParamKey::NoWalkInHeat,
         ];
         $general = fn (string $slug) => collect(BreedStageParamsSeeder::rows())
             ->where('breed_slug', $slug)

@@ -437,8 +437,10 @@ describe('migration 2026_10_25_120000_add_cat_stage_param_keys', function () {
     it('down() removes only the rows of the new keys and restores the old check; up() again lets the seeder re-add them', function () {
         seedLifeStageData();
         $migration = require database_path('migrations/2026_10_25_120000_add_cat_stage_param_keys.php');
-        // M5-R16 / M5-R17: later key migrations are rolled back first, newest first (as
+        // M5-R16 / M5-R17 / M5-R14–R20: later key migrations are rolled back first, newest first (as
         // `migrate:rollback` would) — the old check does not know their keys.
+        $careTasks = require database_path('migrations/2027_01_24_120000_add_breed_care_tasks.php');
+        $careTasks->down();
         $socialisation = require database_path('migrations/2026_11_30_120000_add_puppy_socialisation.php');
         $socialisation->down();
         $later = require database_path('migrations/2026_11_29_130000_add_meal_exercise_gap_key.php');
@@ -458,6 +460,7 @@ describe('migration 2026_10_25_120000_add_cat_stage_param_keys', function () {
         $migration->up();
         $later->up();
         $socialisation->up();
+        $careTasks->up();
         (new BreedStageParamsSeeder)->run();
         expect(BreedStageParam::count())->toBe(count(BreedStageParamsSeeder::allRows()));
     });

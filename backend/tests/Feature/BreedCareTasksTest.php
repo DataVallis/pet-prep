@@ -37,7 +37,7 @@ afterEach(function () {
     Carbon::setTestNow();
 });
 
-function ctAt(string $local, string $tz = 'Europe/Ljubljana'): void
+function bctAt(string $local, string $tz = 'Europe/Ljubljana'): void
 {
     Carbon::setTestNow(Carbon::parse($local, $tz)->utc());
 }
@@ -47,10 +47,10 @@ function ctAt(string $local, string $tz = 'Europe/Ljubljana'): void
  *
  * @return array{0: User, 1: User, 2: Pet}
  */
-function ctFamily(BreedType $breed, bool $enabled = true, string $bornLocal = '2026-10-20 08:00', string $tz = 'Europe/Ljubljana'): array
+function bctFamily(BreedType $breed, bool $enabled = true, string $bornLocal = '2026-10-20 08:00', string $tz = 'Europe/Ljubljana'): array
 {
     seedLifeStageData();
-    ctAt($bornLocal, $tz);
+    bctAt($bornLocal, $tz);
     $parent = User::factory()->parent()->create(['timezone' => $tz]);
     $child = User::factory()->child()->create(['parent_id' => $parent->id, 'name' => 'Mia']);
     setQuietHours(['parent_id' => $parent->id, 'bedtime_start' => '21:00', 'bedtime_end' => '07:00']);
@@ -69,7 +69,7 @@ function ctFamily(BreedType $breed, bool $enabled = true, string $bornLocal = '2
     return [$parent, $child, $dog->fresh()];
 }
 
-function ctSibling(User $parent, Pet $pet, string $name = 'Tim'): User
+function bctSibling(User $parent, Pet $pet, string $name = 'Tim'): User
 {
     $child = User::factory()->child()->create(['parent_id' => $parent->id, 'name' => $name]);
     app(FamilyService::class)->addCaretaker($pet, $child, true);
@@ -78,7 +78,7 @@ function ctSibling(User $parent, Pet $pet, string $name = 'Tim'): User
     return $child;
 }
 
-function ctPost(User $user, string $uri, array $body = [])
+function bctPost(User $user, string $uri, array $body = [])
 {
     test()->actingAs($user, 'sanctum');
     $response = test()->postJson($uri, $body);
@@ -87,7 +87,7 @@ function ctPost(User $user, string $uri, array $body = [])
     return $response;
 }
 
-function ctGet(User $user, string $uri): array
+function bctGet(User $user, string $uri): array
 {
     test()->actingAs($user, 'sanctum');
     $json = test()->getJson($uri)->assertOk()->json();
@@ -97,7 +97,7 @@ function ctGet(User $user, string $uri): array
 }
 
 /** Human-like strokes / taps over the whole session. */
-function ctStrokes(int $durationMs, int $count): array
+function bctStrokes(int $durationMs, int $count): array
 {
     $strokes = [];
     for ($i = 0; $i < $count; $i++) {
@@ -108,21 +108,21 @@ function ctStrokes(int $durationMs, int $count): array
 }
 
 /** Start + finish a care task with good input; returns the finish response. */
-function ctDo(User $child, string $task, ?int $count = null)
+function bctDo(User $child, string $task, ?int $count = null)
 {
-    $session = ctPost($child, '/api/child/pet/care-task/start', ['task' => $task])->assertOk()->json('session');
+    $session = bctPost($child, '/api/child/pet/care-task/start', ['task' => $task])->assertOk()->json('session');
     expect($session['task'])->toBe($task);
     Carbon::setTestNow(now()->addMilliseconds($session['duration_ms']));
 
-    return ctPost($child, '/api/child/pet/care-task/finish', [
+    return bctPost($child, '/api/child/pet/care-task/finish', [
         'task' => $task,
         'session_id' => $session['id'],
-        'strokes' => ctStrokes($session['duration_ms'], $count ?? $session['min_strokes'] + 4),
+        'strokes' => bctStrokes($session['duration_ms'], $count ?? $session['min_strokes'] + 4),
     ]);
 }
 
 /** @return list<array{0: string, 1: int, 2: string, 3: int|null}> */
-function ctRoutines(Pet $dog, string $date, RoutineType $type): array
+function bctRoutines(Pet $dog, string $date, RoutineType $type): array
 {
     $routines = app(RoutineLedgerService::class)->routinesFor(collect([$dog->fresh()]), $date, $date)[$dog->id] ?? [];
 
@@ -132,7 +132,7 @@ function ctRoutines(Pet $dog, string $date, RoutineType $type): array
     ));
 }
 
-function ctData(string $path): mixed
+function bctData(string $path): mixed
 {
     static $data = null;
     $data ??= json_decode((string) file_get_contents(base_path('../docs/research/dog-data/data.json')), true, flags: JSON_THROW_ON_ERROR);
@@ -185,7 +185,7 @@ describe('frequencies only where the source states one (data.json)', function ()
         $rows = collect(BreedStageParamsSeeder::rows())->filter(fn ($r) => StageParamKey::from($r['key'])->isCareTaskFrequency() || $r['key'] === StageParamKey::NoWalkInHeat->value);
         expect($rows)->not->toBeEmpty();
         foreach ($rows as $row) {
-            $entry = ctData($row['ref']);
+            $entry = bctData($row['ref']);
             $label = "{$row['breed_slug']}.{$row['key']}";
             expect($entry)->not->toBeNull($label)
                 ->and($entry['source_id'] ?? null)->toBe($row['source_id'], $label)
@@ -221,79 +221,79 @@ describe('the gate (ClientFeature care_tasks → pets.care_tasks_enabled)', func
     });
 
     it('gives a dog without the gate no care tasks, no reminders and no heat warning', function () {
-        [$parent, $child] = ctFamily(BreedType::Pug, enabled: false, bornLocal: '2026-07-10 08:00');
-        ctAt('2026-07-11 12:00');
-        $state = ctGet($child, '/api/child/pet');
+        [$parent, $child] = bctFamily(BreedType::Pug, enabled: false, bornLocal: '2026-07-10 08:00');
+        bctAt('2026-07-11 12:00');
+        $state = bctGet($child, '/api/child/pet');
         expect($state['care_tasks'])->toBe([])
             ->and($state['walk_heat'])->toBeNull()
             ->and($state['care_guide']['care_tasks'])->toBe([]);
-        ctPost($child, '/api/child/pet/care-task/start', ['task' => 'tooth_brushing'])->assertStatus(422)->assertJsonPath('reason', 'care_task_not_available');
+        bctPost($child, '/api/child/pet/care-task/start', ['task' => 'tooth_brushing'])->assertStatus(422)->assertJsonPath('reason', 'care_task_not_available');
     });
 });
 
 describe('the child mini-games', function () {
     it('brushes a Yorkshire Terrier\'s teeth once per day, seven per week, judged on the server', function () {
-        [, $child, $dog] = ctFamily(BreedType::YorkshireTerrier);
-        ctAt('2026-10-20 10:00');
-        $task = collect(ctGet($child, '/api/child/pet')['care_tasks'])->firstWhere('task', 'tooth_brushing');
+        [, $child, $dog] = bctFamily(BreedType::YorkshireTerrier);
+        bctAt('2026-10-20 10:00');
+        $task = collect(bctGet($child, '/api/child/pet')['care_tasks'])->firstWhere('task', 'tooth_brushing');
         expect($task)->toMatchArray(['times' => 7, 'period_days' => 7, 'done_this_period' => 0, 'can_start' => true, 'blocked_reason' => null]);
         // Only the sourced task: no folds, ears or nails for a Yorkie.
-        expect(collect(ctGet($child, '/api/child/pet')['care_tasks'])->pluck('task')->all())->toBe(['tooth_brushing']);
+        expect(collect(bctGet($child, '/api/child/pet')['care_tasks'])->pluck('task')->all())->toBe(['tooth_brushing']);
 
-        ctDo($child, 'tooth_brushing')->assertOk()->assertJsonPath('status', 'accepted')->assertJsonPath('result.success', true);
+        bctDo($child, 'tooth_brushing')->assertOk()->assertJsonPath('status', 'accepted')->assertJsonPath('result.success', true);
         expect(ActivityLog::where('pet_id', $dog->id)->where('activity_type', 'brushed_teeth')->value('actor_user_id'))->toBe($child->id);
 
         // Once per family-local day.
-        ctPost($child, '/api/child/pet/care-task/start', ['task' => 'tooth_brushing'])->assertStatus(422)->assertJsonPath('reason', 'care_task_done_today');
+        bctPost($child, '/api/child/pet/care-task/start', ['task' => 'tooth_brushing'])->assertStatus(422)->assertJsonPath('reason', 'care_task_done_today');
         // Too few strokes → rejected, nothing counts.
-        ctAt('2026-10-21 10:00');
-        ctDo($child, 'tooth_brushing', 3)->assertOk()->assertJsonPath('status', 'rejected')->assertJsonPath('result.reason', 'too_few_strokes');
-        ctDo($child, 'tooth_brushing')->assertOk()->assertJsonPath('status', 'accepted');
-        expect(collect(ctGet($child, '/api/child/pet')['care_tasks'])->firstWhere('task', 'tooth_brushing')['done_this_period'])->toBe(2);
+        bctAt('2026-10-21 10:00');
+        bctDo($child, 'tooth_brushing', 3)->assertOk()->assertJsonPath('status', 'rejected')->assertJsonPath('result.reason', 'too_few_strokes');
+        bctDo($child, 'tooth_brushing')->assertOk()->assertJsonPath('status', 'accepted');
+        expect(collect(bctGet($child, '/api/child/pet')['care_tasks'])->firstWhere('task', 'tooth_brushing')['done_this_period'])->toBe(2);
     });
 
     it('refuses care while the pet sleeps and a session that would run into quiet hours', function () {
-        [, $child] = ctFamily(BreedType::Pug);
-        ctAt('2026-10-20 22:30');
-        $response = ctPost($child, '/api/child/pet/care-task/start', ['task' => 'fold_cleaning'])->assertStatus(422)->assertJsonPath('reason', 'care_task_quiet_hours');
+        [, $child] = bctFamily(BreedType::Pug);
+        bctAt('2026-10-20 22:30');
+        $response = bctPost($child, '/api/child/pet/care-task/start', ['task' => 'fold_cleaning'])->assertStatus(422)->assertJsonPath('reason', 'care_task_quiet_hours');
         expect(Carbon::parse($response->json('next_allowed_at'))->utc()->toIso8601String())
             ->toBe(Carbon::parse('2026-10-21 07:00', 'Europe/Ljubljana')->utc()->toIso8601String());
-        $task = collect(ctGet($child, '/api/child/pet')['care_tasks'])->firstWhere('task', 'fold_cleaning');
+        $task = collect(bctGet($child, '/api/child/pet')['care_tasks'])->firstWhere('task', 'fold_cleaning');
         expect($task['can_start'])->toBeFalse()->and($task['blocked_reason'])->toBe('care_task_quiet_hours');
         // 30 s game + 60 s grace would touch 21:00.
-        ctAt('2026-10-21 20:59');
-        ctPost($child, '/api/child/pet/care-task/start', ['task' => 'tooth_brushing'])->assertStatus(422)->assertJsonPath('reason', 'care_task_quiet_hours');
-        ctAt('2026-10-21 07:05');
-        ctDo($child, 'fold_cleaning')->assertOk()->assertJsonPath('status', 'accepted');
+        bctAt('2026-10-21 20:59');
+        bctPost($child, '/api/child/pet/care-task/start', ['task' => 'tooth_brushing'])->assertStatus(422)->assertJsonPath('reason', 'care_task_quiet_hours');
+        bctAt('2026-10-21 07:05');
+        bctDo($child, 'fold_cleaning')->assertOk()->assertJsonPath('status', 'accepted');
     });
 
     it('trims nails with one tap per claw (12 s, 8 claws, one step)', function () {
-        [, $child] = ctFamily(BreedType::Brittany);
-        ctAt('2026-10-20 10:00');
-        $session = ctPost($child, '/api/child/pet/care-task/start', ['task' => 'nail_trim'])->assertOk()->json('session');
+        [, $child] = bctFamily(BreedType::Brittany);
+        bctAt('2026-10-20 10:00');
+        $session = bctPost($child, '/api/child/pet/care-task/start', ['task' => 'nail_trim'])->assertOk()->json('session');
         expect($session)->toMatchArray(['duration_ms' => 12000, 'min_strokes' => 8, 'segments' => 1]);
         Carbon::setTestNow(now()->addMilliseconds(9000)); // up to 3 s early is accepted
-        ctPost($child, '/api/child/pet/care-task/finish', [
+        bctPost($child, '/api/child/pet/care-task/finish', [
             'task' => 'nail_trim', 'session_id' => $session['id'], 'strokes' => array_map(fn ($t) => ['t' => $t], [700, 1300, 2150, 2800, 3700, 4400, 5150, 6000]),
         ])->assertOk()->assertJsonPath('status', 'accepted');
         // Once a month (28 program days): the next one waits for the next period.
-        ctAt('2026-10-22 10:00');
-        ctPost($child, '/api/child/pet/care-task/start', ['task' => 'nail_trim'])->assertStatus(422)->assertJsonPath('reason', 'care_task_period_done');
+        bctAt('2026-10-22 10:00');
+        bctPost($child, '/api/child/pet/care-task/start', ['task' => 'nail_trim'])->assertStatus(422)->assertJsonPath('reason', 'care_task_period_done');
         // A finish for the wrong task is never accepted.
-        ctPost($child, '/api/child/pet/care-task/start', ['task' => 'tooth_brushing'])->assertStatus(422)->assertJsonPath('reason', 'care_task_not_available');
+        bctPost($child, '/api/child/pet/care-task/start', ['task' => 'tooth_brushing'])->assertStatus(422)->assertJsonPath('reason', 'care_task_not_available');
     });
 
     it('makes ledger slots per period with a fair share per child; missed slots are reported, never an illness', function () {
-        [$parent, $mia, $dog] = ctFamily(BreedType::YorkshireTerrier);
-        $tim = ctSibling($parent, $dog);
-        ctAt('2026-10-20 10:00');
-        ctDo($mia, 'tooth_brushing')->assertJsonPath('status', 'accepted');
-        ctAt('2026-10-21 10:00');
-        ctDo($tim, 'tooth_brushing')->assertJsonPath('status', 'accepted');
+        [$parent, $mia, $dog] = bctFamily(BreedType::YorkshireTerrier);
+        $tim = bctSibling($parent, $dog);
+        bctAt('2026-10-20 10:00');
+        bctDo($mia, 'tooth_brushing')->assertJsonPath('status', 'accepted');
+        bctAt('2026-10-21 10:00');
+        bctDo($tim, 'tooth_brushing')->assertJsonPath('status', 'accepted');
 
         // The week (Tue 08:00 → Tue 08:00) ends on 27 Oct: 7 slots, 2 done (who did them), 5 missed.
-        ctAt('2026-10-27 09:00');
-        $slots = ctRoutines($dog, '2026-10-27', RoutineType::ToothBrushing);
+        bctAt('2026-10-27 09:00');
+        $slots = bctRoutines($dog, '2026-10-27', RoutineType::ToothBrushing);
         expect($slots)->toHaveCount(7)
             ->and(array_column($slots, 2))->toBe(['done', 'done', 'missed', 'missed', 'missed', 'missed', 'missed'])
             ->and(array_column($slots, 3))->toBe([$mia->id, $tim->id, null, null, null, null, null]);
@@ -307,41 +307,41 @@ describe('the child mini-games', function () {
     });
 
     it('gives a 28-day task one slot per month, due at its end', function () {
-        [, $child, $dog] = ctFamily(BreedType::Brittany);
-        ctAt('2026-10-21 10:00');
-        ctDo($child, 'nail_trim')->assertJsonPath('status', 'accepted');
+        [, $child, $dog] = bctFamily(BreedType::Brittany);
+        bctAt('2026-10-21 10:00');
+        bctDo($child, 'nail_trim')->assertJsonPath('status', 'accepted');
         // 20 Oct 08:00 + 28 days = 17 Nov 08:00.
-        ctAt('2026-11-17 09:00');
-        expect(ctRoutines($dog, '2026-11-17', RoutineType::NailTrim))->toBe([['2026-11-17', 0, 'done', $child->id]])
-            ->and(ctRoutines($dog, '2026-10-27', RoutineType::NailTrim))->toBe([]);
+        bctAt('2026-11-17 09:00');
+        expect(bctRoutines($dog, '2026-11-17', RoutineType::NailTrim))->toBe([['2026-11-17', 0, 'done', $child->id]])
+            ->and(bctRoutines($dog, '2026-10-27', RoutineType::NailTrim))->toBe([]);
     });
 });
 
 describe('the parent reminders (groomer visit, bath)', function () {
     it('shows the groomer reminder to the parent, confirms it once per period and never scores it', function () {
-        [$parent, $child, $dog] = ctFamily(BreedType::Pomeranian);
-        ctAt('2026-10-21 10:00');
-        $reminders = ctGet($parent, '/api/parent/dashboard')['family']['pets'][0]['care_reminders'];
+        [$parent, $child, $dog] = bctFamily(BreedType::Pomeranian);
+        bctAt('2026-10-21 10:00');
+        $reminders = bctGet($parent, '/api/parent/dashboard')['family']['pets'][0]['care_reminders'];
         expect($reminders)->toHaveCount(1)
             ->and($reminders[0])->toMatchArray(['task' => 'groomer_visit', 'period_days' => 28, 'done' => false]);
         // The child has no groomer task (it is the parent's errand).
-        expect(ctGet($child, '/api/child/pet')['care_tasks'])->toBe([]);
+        expect(bctGet($child, '/api/child/pet')['care_tasks'])->toBe([]);
 
         $scoreBefore = app(CareScoreService::class)->board(collect([$dog->fresh()]), 'Europe/Ljubljana');
-        ctPost($parent, "/api/parent/pets/{$dog->id}/care-reminders", ['task' => 'groomer_visit'])->assertOk()
+        bctPost($parent, "/api/parent/pets/{$dog->id}/care-reminders", ['task' => 'groomer_visit'])->assertOk()
             ->assertJsonPath('status', 'accepted')->assertJsonPath('care_reminders.0.done', true);
-        ctPost($parent, "/api/parent/pets/{$dog->id}/care-reminders", ['task' => 'groomer_visit'])->assertOk()->assertJsonPath('status', 'unchanged');
+        bctPost($parent, "/api/parent/pets/{$dog->id}/care-reminders", ['task' => 'groomer_visit'])->assertOk()->assertJsonPath('status', 'unchanged');
         expect(ActivityLog::where('pet_id', $dog->id)->where('activity_type', 'parent_groomer_visit')->value('actor_user_id'))->toBe($parent->id);
         // A reminder is never a routine: the board is unchanged.
         $scoreAfter = app(CareScoreService::class)->board(collect([$dog->fresh()]), 'Europe/Ljubljana');
         expect(count($scoreAfter['routines'][$dog->id] ?? []))->toBe(count($scoreBefore['routines'][$dog->id] ?? []));
 
         // No bath for a Pomeranian (no sourced frequency); a child cannot confirm.
-        ctPost($parent, "/api/parent/pets/{$dog->id}/care-reminders", ['task' => 'bath'])->assertStatus(422)->assertJsonPath('reason', 'care_task_not_available');
-        ctPost($child, "/api/parent/pets/{$dog->id}/care-reminders", ['task' => 'groomer_visit'])->assertForbidden();
+        bctPost($parent, "/api/parent/pets/{$dog->id}/care-reminders", ['task' => 'bath'])->assertStatus(422)->assertJsonPath('reason', 'care_task_not_available');
+        bctPost($child, "/api/parent/pets/{$dog->id}/care-reminders", ['task' => 'groomer_visit'])->assertForbidden();
         // Another family's pet looks missing.
         $stranger = User::factory()->parent()->create(['timezone' => 'Europe/Ljubljana']);
-        ctPost($stranger, "/api/parent/pets/{$dog->id}/care-reminders", ['task' => 'groomer_visit'])->assertNotFound();
+        bctPost($stranger, "/api/parent/pets/{$dog->id}/care-reminders", ['task' => 'groomer_visit'])->assertNotFound();
 
         // The report lists it (done), outside the scored types.
         actingAsRole($parent);
@@ -352,28 +352,28 @@ describe('the parent reminders (groomer visit, bath)', function () {
             ->and($report['by_type'])->not->toHaveKey('groomer_visit');
 
         // The next period opens a new reminder.
-        ctAt('2026-11-18 10:00');
-        expect(ctGet($parent, '/api/parent/dashboard')['family']['pets'][0]['care_reminders'][0]['done'])->toBeFalse();
+        bctAt('2026-11-18 10:00');
+        expect(bctGet($parent, '/api/parent/dashboard')['family']['pets'][0]['care_reminders'][0]['done'])->toBeFalse();
     });
 });
 
 describe('the summer heat warning (flat-faced breeds, no weather data)', function () {
     it('warns 11:00–16:00 family time in June–August for a Pug', function () {
-        [, $child] = ctFamily(BreedType::Pug, bornLocal: '2026-07-10 08:00');
-        ctAt('2026-07-11 12:00');
-        $heat = ctGet($child, '/api/child/pet')['walk_heat'];
+        [, $child] = bctFamily(BreedType::Pug, bornLocal: '2026-07-10 08:00');
+        bctAt('2026-07-11 12:00');
+        $heat = bctGet($child, '/api/child/pet')['walk_heat'];
         expect($heat['active'])->toBeTrue()
             ->and(Carbon::parse($heat['starts_at'])->setTimezone('Europe/Ljubljana')->format('H:i'))->toBe('11:00')
             ->and(Carbon::parse($heat['ends_at'])->setTimezone('Europe/Ljubljana')->format('H:i'))->toBe('16:00');
-        ctAt('2026-07-11 10:59');
-        expect(ctGet($child, '/api/child/pet')['walk_heat']['active'])->toBeFalse();
-        ctAt('2026-07-11 16:00');
-        expect(ctGet($child, '/api/child/pet')['walk_heat']['active'])->toBeFalse();
-        $guide = ctGet($child, '/api/child/pet')['care_guide']['walk_heat'];
+        bctAt('2026-07-11 10:59');
+        expect(bctGet($child, '/api/child/pet')['walk_heat']['active'])->toBeFalse();
+        bctAt('2026-07-11 16:00');
+        expect(bctGet($child, '/api/child/pet')['walk_heat']['active'])->toBeFalse();
+        $guide = bctGet($child, '/api/child/pet')['care_guide']['walk_heat'];
         expect($guide)->toBe(['months' => [6, 7, 8], 'from' => '11:00', 'to' => '16:00']);
         // Not in autumn.
-        ctAt('2026-10-15 12:00');
-        expect(ctGet($child, '/api/child/pet')['walk_heat'])->toBeNull();
+        bctAt('2026-10-15 12:00');
+        expect(bctGet($child, '/api/child/pet')['walk_heat'])->toBeNull();
     });
 
     it('uses the southern summer for a family in Australia and no rule for a Boxer', function () {
@@ -384,21 +384,21 @@ describe('the summer heat warning (flat-faced breeds, no weather data)', functio
             ->and(WalkHeatService::isSummerMonth(7, 'Australia/Sydney'))->toBeFalse()
             ->and(WalkHeatService::isSummerMonth(7, 'UTC'))->toBeTrue();
 
-        [, $child] = ctFamily(BreedType::Bulldog, bornLocal: '2027-01-10 08:00', tz: 'Australia/Sydney');
-        ctAt('2027-01-11 13:00', 'Australia/Sydney');
-        expect(ctGet($child, '/api/child/pet')['walk_heat']['active'])->toBeTrue();
+        [, $child] = bctFamily(BreedType::Bulldog, bornLocal: '2027-01-10 08:00', tz: 'Australia/Sydney');
+        bctAt('2027-01-11 13:00', 'Australia/Sydney');
+        expect(bctGet($child, '/api/child/pet')['walk_heat']['active'])->toBeTrue();
 
-        [, $boxerChild] = ctFamily(BreedType::Boxer, bornLocal: '2026-07-10 08:00');
-        ctAt('2026-07-11 12:00');
-        expect(ctGet($boxerChild, '/api/child/pet')['walk_heat'])->toBeNull();
+        [, $boxerChild] = bctFamily(BreedType::Boxer, bornLocal: '2026-07-10 08:00');
+        bctAt('2026-07-11 12:00');
+        expect(bctGet($boxerChild, '/api/child/pet')['walk_heat'])->toBeNull();
     });
 });
 
 describe('the care guide', function () {
     it('lists who does which sourced task and how often', function () {
-        [, $child] = ctFamily(BreedType::AmericanCockerSpaniel);
-        ctAt('2026-10-21 10:00');
-        expect(ctGet($child, '/api/child/pet')['care_guide']['care_tasks'])->toBe([
+        [, $child] = bctFamily(BreedType::AmericanCockerSpaniel);
+        bctAt('2026-10-21 10:00');
+        expect(bctGet($child, '/api/child/pet')['care_guide']['care_tasks'])->toBe([
             ['task' => 'ear_cleaning', 'actor' => 'child', 'times' => 1, 'period_days' => 7],
             ['task' => 'groomer_visit', 'actor' => 'parent', 'times' => 1, 'period_days' => 28],
         ]);
