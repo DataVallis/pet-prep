@@ -735,6 +735,18 @@
             "prompt_hash": "sha256:701caf8c35ff90c7bfa79971714b91e44e8d8777f0b7bb3278de0cd794cc8e28",
             "generated_at": "2026-10-23T04:01:21+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "italian_greyhound",
+            "species": "dog",
+            "file": "dog/italian-greyhound.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:d3eda7679eae76985cfed5b08b63aa4c2103a0db64a07b2c8cfee2859ef08f8f",
+            "generated_at": "2026-10-24T00:03:31+00:00",
+            "cost_usd": 0.15
         }
     ]
 }
