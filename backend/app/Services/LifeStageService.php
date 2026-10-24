@@ -189,9 +189,14 @@ class LifeStageService
      * wall-clock hour (anniversaries are local). A lock still open at $at
      * counts until $at (its real end is not known yet). Null when unborn.
      *
+     * $anchor (M5-R18 / R20, QA PR #377): count the periods from that real
+     * instant instead of the birth (an existing dog's `care_tasks_since`) —
+     * same program clock, same wall-clock rule; index 0 = from the anchor.
+     * An anchor at / before the birth is the birth.
+     *
      * @return array{index: int, start: CarbonImmutable, end: CarbonImmutable}|null
      */
-    public function programPeriodAt(Pet $pet, CarbonInterface $at, int $days = 7): ?array
+    public function programPeriodAt(Pet $pet, CarbonInterface $at, int $days = 7, ?CarbonInterface $anchor = null): ?array
     {
         if ($pet->born_at === null) {
             return null;
@@ -203,13 +208,17 @@ class LifeStageService
         $atTs = CarbonImmutable::instance($at)->getTimestamp();
         // Where the program clock stands at $at, as an instant on the lock-free timeline.
         $virtual = CarbonImmutable::createFromTimestampUTC($born->getTimestamp() + $pet->programSecondsAt($at))->setTimezone($tz);
+        // The first period's start on the lock-free timeline (the birth, or the anchor's program instant).
+        $origin = $anchor !== null && $anchor->getTimestamp() > $born->getTimestamp()
+            ? CarbonImmutable::createFromTimestampUTC($born->getTimestamp() + $pet->programSecondsAt($anchor))->setTimezone($tz)
+            : $born;
 
         $index = 0;
-        if ($virtual->greaterThan($born)) {
-            $elapsed = (int) CarbonImmutable::parse($born->toDateString(), 'UTC')
+        if ($virtual->greaterThan($origin)) {
+            $elapsed = (int) CarbonImmutable::parse($origin->toDateString(), 'UTC')
                 ->diffInDays(CarbonImmutable::parse($virtual->toDateString(), 'UTC'), false);
             $index = intdiv(max(0, $elapsed), $days);
-            while ($index > 0 && $virtual->lessThan($this->periodStart($born, $index * $days, $tz))) {
+            while ($index > 0 && $virtual->lessThan($this->periodStart($origin, $index * $days, $tz))) {
                 $index--;
             }
         }
@@ -228,8 +237,8 @@ class LifeStageService
 
         return [
             'index' => $index,
-            'start' => $real($this->periodStart($born, $index * $days, $tz)),
-            'end' => $real($this->periodStart($born, ($index + 1) * $days, $tz)),
+            'start' => $real($this->periodStart($origin, $index * $days, $tz)),
+            'end' => $real($this->periodStart($origin, ($index + 1) * $days, $tz)),
         ];
     }
 

@@ -126,6 +126,20 @@ class UserResource extends Resource
                     ->label('RevenueCat ID')
                     ->unique(User::class, 'revenuecat_id', ignoreRecord: true)
                     ->maxLength(255),
+
+                // M5-R14 – R20 follow-up (QA PR #377 m3): what the user's app build declared
+                // in `X-PetPrep-Features` on its latest authenticated request — read-only,
+                // one value per USER (the latest request from any of their devices).
+                Forms\Components\Placeholder::make('app_features')
+                    ->label('App features (latest request)')
+                    ->content(fn (?User $record): string => $record?->client_features ? implode(', ', $record->client_features) : '—')
+                    ->helperText('Per user, not per device: the latest request from any of the user\'s phones wins.')
+                    ->hiddenOn('create'),
+
+                Forms\Components\Placeholder::make('app_features_at')
+                    ->label('App features reported at (UTC)')
+                    ->content(fn (?User $record): string => $record?->client_features_at?->utc()->format('Y-m-d H:i:s') ?? '—')
+                    ->hiddenOn('create'),
             ]);
     }
 

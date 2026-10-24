@@ -96,7 +96,10 @@ use Throwable;
  *    `times` slots (slot i = the period's i-th completed task, actor = its
  *    child), capped like grooming at the days whose awake time leaves room for
  *    one session (feasibleGroomingDays) and excused the same way. Only breeds
- *    whose source states the frequency have a row (CareTask).
+ *    whose source states the frequency have a row (CareTask). An existing dog
+ *    switched on later (`care_tasks_since`, a family-local midnight): no slot
+ *    before it; its first period opens then and expects only the share of
+ *    `times` left (CareTaskService::timesFrom).
  *
  * Not expected at all: before birth (an unborn pet has none), before
  * FIRST_LEDGER_DATE, and — unless it was done anyway — any routine whose
@@ -754,7 +757,7 @@ class RoutineLedgerService
         return array_values(array_filter($routines));
     }
 
-    /** M5-R14 / R15 / R19 / R20: a profiled dog created with `care_tasks_enabled`. */
+    /** M5-R14 / R15 / R19 / R20: a profiled dog with `care_tasks_enabled` (at creation, or switched on later — `care_tasks_since`). */
     private function hasCareTaskRoutines(Pet $pet): bool
     {
         return $pet->careTasksEnabled();
@@ -767,6 +770,10 @@ class RoutineLedgerService
      */
     private function careTaskFrequency(Pet $pet, string $date, CareTask $task): ?array
     {
+        // An existing dog switched on later: no slot on a day before `care_tasks_since`.
+        if (! $pet->careTasksActiveOn($date)) {
+            return null;
+        }
         $value = $this->lifeStages->stageValueOn($pet, $date, $task->stageParamKey())['value'] ?? null;
 
         return StageParamKey::validFrequency($value) ? [$value[0], $value[1]] : null;
@@ -805,6 +812,17 @@ class RoutineLedgerService
             }
             $opens = $period['start']->lessThan($born) ? $born : $period['start'];
             $due = $ending['start'];
+            // An existing dog switched on later (David 2026-10-24, answer (e)): never
+            // retroactive — the period opens at `care_tasks_since` and expects only its
+            // share of the period that is left (same number as CareTaskService::periodAt).
+            $since = $pet->careTasksSince();
+            if ($since !== null && $since->greaterThan($opens)) {
+                if (! $since->lessThan($due)) {
+                    continue;
+                }
+                $times = CareTaskService::timesFrom($times, $days, $period['start'], $since);
+                $opens = $since;
+            }
             if (! $opens->lessThan($due)) {
                 continue;
             }

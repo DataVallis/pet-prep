@@ -43,6 +43,15 @@ use Illuminate\Support\Str;
  * PARENT reminders (groomer visit, bath): the parent confirms "done" once per
  * period (ParentGroomerVisit / ParentBathedPet row, actor = the parent); never
  * a routine, never in the Care Score or the traffic light (reminderFor()).
+ * The first reminder comes with the first FULL period (David 2026-10-24):
+ * `period_days` after the birth / the switch-on, not at either (periodAt()).
+ *
+ * EXISTING dogs (David 2026-10-24, answer (e)): `pets:care-tasks`
+ * (CareTaskActivationService) switches a dog on once its children's and a
+ * parent's apps declare `care_tasks`, from the next family-local midnight
+ * (`care_tasks_since`): nothing applies before it; a child task's period it
+ * falls in starts there and expects only its share of `times` (timesFrom());
+ * the parent reminders count their periods from it (reminderGridAt()).
  *
  * Every caller that writes holds the pet's row lock (backend/CLAUDE.md).
  */
@@ -66,7 +75,8 @@ class CareTaskService
      */
     public function frequencyOn(Pet $pet, string $localDate, CareTask $task): ?array
     {
-        if (! $pet->careTasksEnabled()) {
+        // An existing dog switched on later: nothing before its `care_tasks_since` midnight.
+        if (! $pet->careTasksActiveOn($localDate)) {
             return null;
         }
         $value = $this->lifeStages->stageValueOn($pet, $localDate, $task->stageParamKey())['value'] ?? null;
@@ -91,10 +101,21 @@ class CareTaskService
     /**
      * The task's program period at $at, or null when the task does not apply.
      *
+     * A PARENT reminder (groomer, bath) has no period 0 (David 2026-10-24): the
+     * first reminder comes with the first FULL period — `period_days` after the
+     * birth, or after `care_tasks_since` for an existing dog switched on later
+     * (reminderGridAt()). E.g. groomer every 8 weeks → the first reminder 8 weeks
+     * after the birth / the switch-on, never at either.
+     *
      * @return array{index: int, start: CarbonImmutable, end: CarbonImmutable, times: int, period_days: int}|null
      */
     public function periodAt(Pet $pet, CareTask $task, CarbonInterface $at): ?array
     {
+        if (! $task->isChildTask()) {
+            $period = $this->reminderGridAt($pet, $task, $at);
+
+            return $period !== null && $period['index'] > 0 ? $period : null;
+        }
         if ($pet->isUnborn()) {
             return null;
         }
@@ -103,8 +124,67 @@ class CareTaskService
             return null;
         }
         $period = $this->lifeStages->programPeriodAt($pet, $at, $frequency['period_days']);
+        if ($period === null) {
+            return null;
+        }
+        $period += $frequency;
+
+        // The period an existing dog was switched on in (David 2026-10-24, answer (e)):
+        // it starts at `care_tasks_since` and expects only its share of the period
+        // that is left (timesFrom — 0 → the task starts with the next period).
+        $since = $pet->careTasksSince();
+        if ($since !== null && $since->greaterThan($period['start'])) {
+            $period['times'] = self::timesFrom($period['times'], $period['period_days'], $period['start'], $since);
+            if ($period['times'] <= 0) {
+                return null;
+            }
+            $period['start'] = $since;
+        }
+
+        return $period;
+    }
+
+    /**
+     * A parent reminder's period grid at $at, INCLUDING period 0 (no reminder):
+     * program periods of `period_days` from the birth, or from `care_tasks_since`
+     * for an existing dog switched on later (LifeStageService::programPeriodAt
+     * with that anchor — payment-lock time is not program time). Null when the
+     * task does not apply on that day. CareReminderPushService uses period 0's
+     * end to know when the first reminder starts.
+     *
+     * @return array{index: int, start: CarbonImmutable, end: CarbonImmutable, times: int, period_days: int}|null
+     */
+    public function reminderGridAt(Pet $pet, CareTask $task, CarbonInterface $at): ?array
+    {
+        if ($task->isChildTask() || $pet->isUnborn()) {
+            return null;
+        }
+        $frequency = $this->frequencyOn($pet, $pet->localDate($at), $task);
+        if ($frequency === null) {
+            return null;
+        }
+        $period = $this->lifeStages->programPeriodAt($pet, $at, $frequency['period_days'], $pet->careTasksSince());
 
         return $period === null ? null : $period + $frequency;
+    }
+
+    /**
+     * How many of a child task's `times` the period an existing dog was switched
+     * on in still expects: `times` × the share of the period's nominal length
+     * (`period_days`) left after `$since`, rounded half up — never more than a
+     * full period, never retroactive (David 2026-10-24, answer (e)). The share is
+     * measured from the period START, which later locks never move, so the live
+     * check and the ledger (RoutineLedgerService::careTaskRoutines) always agree.
+     */
+    public static function timesFrom(int $times, int $periodDays, CarbonInterface $periodStart, ?CarbonInterface $since): int
+    {
+        if ($since === null || ! $since->greaterThan($periodStart)) {
+            return $times;
+        }
+        $length = max(1, $periodDays) * 86400;
+        $left = max(0.0, 1.0 - ($since->getTimestamp() - $periodStart->getTimestamp()) / $length);
+
+        return min($times, (int) round($times * $left, 0, PHP_ROUND_HALF_UP));
     }
 
     /** Completed tasks (the task's activity rows) in [$from, $to). */
@@ -427,8 +507,8 @@ class CareTaskService
                     'done_at' => $doneAt,
                     'status' => $doneAt !== null ? 'done' : ($period['end']->greaterThan($now) ? 'open' : 'not_done'),
                 ];
-                if ($period['index'] === 0) {
-                    break;
+                if ($period['index'] <= 1) {
+                    break; // period 0 has no reminder (first FULL period, David 2026-10-24)
                 }
                 $at = $period['start']->subSecond();
             }

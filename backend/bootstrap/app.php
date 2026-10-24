@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\RecordClientFeatures;
 use App\Http\Middleware\SetRequestLocale;
 use App\Http\Middleware\TrustProxies;
 use App\Services\SystemHealth\ErrorRecorder;
@@ -40,6 +41,10 @@ return Application::configure(basePath: dirname(__DIR__))
         // M1-18: Accept-Language → App::setLocale() for every API request
         // (also /api/broadcasting/auth, which uses the `api` group).
         $middleware->api(prepend: [SetRequestLocale::class]);
+
+        // M5-R14 – R20 follow-up: `X-PetPrep-Features` → users.client_features
+        // (what the app on that phone can show now; existing dogs' care tasks).
+        $middleware->api(append: [RecordClientFeatures::class]);
 
         // M5-R08: the pet name has its own trimming (PetNameService::normalize).
         // Laravel's TrimStrings would silently strip a leading / trailing BOM,

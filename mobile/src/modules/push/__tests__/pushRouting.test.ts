@@ -37,6 +37,8 @@ describe('parsePushData', () => {
     expect(parsePushData({ type: 'walk_reminder', pet_id: 3 })).toEqual({ type: 'walk_reminder', petId: 3 });
     // M2-01d
     expect(parsePushData({ type: 'challenge_completed', pet_id: 5 })).toEqual({ type: 'challenge_completed', petId: 5 });
+    // M5-R18 / R20: the parent's groomer / bath reminder.
+    expect(parsePushData({ type: 'care_reminder', pet_id: 9 })).toEqual({ type: 'care_reminder', petId: 9 });
   });
 
   it.each([null, 'x', {}, { type: 'marketing', pet_id: 1 }, { type: 'soft_warning' }, { type: 'soft_warning', pet_id: -1 }, { type: 'soft_warning', pet_id: 1.5 }])(
@@ -52,6 +54,7 @@ describe('parsePushData', () => {
     expect(isUrgentPush('walk_reminder')).toBe(false);
     // M2-01d: good news — no alarm sound.
     expect(isUrgentPush('challenge_completed')).toBe(false);
+    expect(isUrgentPush('care_reminder')).toBe(false);
     expect(isUrgentPush('parent_intervention_alarm')).toBe(true);
     expect(isUrgentPush(null)).toBe(false);
   });

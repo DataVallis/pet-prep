@@ -229,6 +229,13 @@ return [
         ],
     ],
 
+    // M5-R18 / R20 follow-up (David 2026-10-24): a new period of the parent's care reminder.
+    // Parents only; title = the pet's name (when set), the body never names it.
+    'care_reminder' => [
+        'groomer_visit' => "It's time for a visit to the dog groomer. Confirm it in the app once it's done.",
+        'bath' => "It's time for a bath. Confirm it in the app once it's done.",
+    ],
+
     // M5-T13 (APP_REFINEMENT_SPEC §9, David 2026-10-20): the pet turned 1 by the simulation's
     // age formula. Title = the pet's name (when set); the body never names it.
     'pet_birthday' => [
