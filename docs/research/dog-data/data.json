@@ -32997,10 +32997,7 @@
         "notes": "PDSA key fact (S508). No lower bound → not usable for the senior boundary. Conflicts with PetMD 10–14 years (S510) and McMillan 2024 11.4 y (only via Wikipedia, S512) → no shorter_lifespan chip (conflicting sources), open for David."
       },
       "petmd": {
-        "value": [
-          10,
-          14
-        ],
+        "value": "10–14",
         "unit": "years",
         "source_id": "S510",
         "quote": "The Akita lifespan is typically 10–14 years.",
