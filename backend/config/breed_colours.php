@@ -381,6 +381,12 @@ return [
         ['key' => 'pepper-salt', 'value' => 'pepper and salt (banded grey) with a dark facial mask', 'en' => 'Pepper and salt', 'sl' => 'Poper in sol'],
         ['key' => 'black-silver', 'value' => 'black and silver', 'en' => 'Black and silver', 'sl' => 'Črno-srebrn'],
     ],
+    // M5-R10-62: FCI standard S501 — black and tan, liver and tan, red.
+    'bloodhound' => [
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črno-rjav'],
+        ['key' => 'liver-tan', 'value' => 'liver and tan', 'en' => 'Liver and tan', 'sl' => 'Jetrno-rjav'],
+        ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

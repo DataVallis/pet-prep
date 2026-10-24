@@ -51,9 +51,9 @@ use InvalidArgumentException;
  * CavalierKingCharlesSpanielBreedTest / BeagleBreedTest / StandardPoodleBreedTest /
  * DachshundBreedTest / AustralianShepherdBreedTest / HavaneseBreedTest /
  * WestHighlandWhiteTerrierBreedTest / BerneseMountainDogBreedTest / SiberianHuskyBreedTest /
- * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest cross-check the Labrador /
+ * RottweilerBreedTest / BulldogBreedTest / GermanShorthairedPointerBreedTest / YorkshireTerrierBreedTest / CaneCorsoBreedTest / PembrokeWelshCorgiBreedTest / DobermannBreedTest / BoxerBreedTest / MiniatureSchnauzerBreedTest / ShihTzuBreedTest / GreatDaneBreedTest / PomeranianBreedTest / BostonTerrierBreedTest / MiniatureAmericanShepherdBreedTest / ChihuahuaBreedTest / EnglishSpringerSpanielBreedTest / ShetlandSheepdogBreedTest / BrittanyBreedTest / AmericanCockerSpanielBreedTest / BelgianMalinoisBreedTest / BassetHoundBreedTest / HungarianVizslaBreedTest / EnglishCockerSpanielBreedTest / MalteseBreedTest / PugBreedTest / RoughCollieBreedTest / MastiffBreedTest / ShibaInuBreedTest / RhodesianRidgebackBreedTest / PapillonBreedTest / PortugueseWaterDogBreedTest / BichonFriseBreedTest / NewfoundlandBreedTest / DalmatianBreedTest / AustralianCattleDogBreedTest / WhippetBreedTest / WirehairedPointingGriffonBreedTest / ChesapeakeBayRetrieverBreedTest / SamoyedBreedTest / ScottishTerrierBreedTest / WeimaranerBreedTest / ItalianGreyhoundBreedTest / GiantSchnauzerBreedTest / BloodhoundBreedTest cross-check the Labrador /
  * Golden / French Bulldog / German Shepherd / Cavalier / Beagle / Standard Poodle / Dachshund /
- * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer rows
+ * Australian Shepherd / Havanese / West Highland White Terrier / Bernese Mountain Dog / Siberian Husky / Rottweiler / Bulldog / German Shorthaired Pointer / Yorkshire Terrier / Cane Corso / Pembroke Welsh Corgi / Dobermann / Boxer / Miniature Schnauzer / Shih Tzu / Great Dane / Pomeranian / Boston Terrier / Miniature American Shepherd / Chihuahua / English Springer Spaniel / Shetland Sheepdog / Brittany / American Cocker Spaniel / Belgian Malinois / Basset Hound / Hungarian Vizsla / English Cocker Spaniel / Maltese / Pug / Rough Collie / Mastiff / Shiba Inu / Rhodesian Ridgeback / Papillon / Portuguese Water Dog / Bichon Frise / Newfoundland / Dalmatian / Australian Cattle Dog / Whippet / Wirehaired Pointing Griffon / Chesapeake Bay Retriever / Samoyed / Scottish Terrier / Weimaraner / Italian Greyhound / Giant Schnauzer / Bloodhound rows
  * against data.json).
  *
  * CATS (M5-R06-03, M5-R06_PLAN T10): a separate rowset, catRows(), from
@@ -730,6 +730,24 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_GIANT_SCHNAUZER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-61)';
 
     /**
+     * M5-R10-62 Bloodhound (unattended run 2026-10-24, data.json proposed_game_parameters.bloodhound.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on
+     * 2026-10-10 — exercise 120 min (RKC S502 "Exercise: More than 2 hours per day"), senior 90 min, puppy 10 min × age
+     * capped at 120, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 0.5 (Coren rank 74, Lowest); care
+     * rates the Border Collie's. The senior boundary uses the closest rule row (Kennel Club survey median 6 y 9 m, S505 —
+     * RKC "Under 10 years" has no lower bound) and is NOT covered by the confirmation: see PROPOSED_R10_BLOODHOUND_SENIOR.
+     */
+    public const CONFIRMED_R10_BLOODHOUND = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-62)';
+
+    /**
+     * M5-R10-62 Bloodhound senior boundary / senior arrival (61 months): Claude's suggestion from the closest rule row
+     * (0.75 × Kennel Club 2004 survey median 6.75 y, S505) — no runbook rule produced a value (the Dogs Trust McMillan
+     * 2024 table S123 could not be fetched, no VetCompass median, the RKC band "Under 10 years" has no lower bound), so
+     * the rows are verified=false until David decides (data.json proposed_game_parameters.bloodhound.senior_boundary_months).
+     */
+    public const PROPOSED_R10_BLOODHOUND_SENIOR = 'predlog Claude 2026-10-24 (najbližja vrstica pravila runbooka, M5-R10-62) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -895,6 +913,7 @@ class BreedStageParamsSeeder extends Seeder
         'weimaraner' => [1, 'S479', 'Grooming: Once a week', 'high', false],
         'italian_greyhound' => [1, 'S486', 'Grooming: Once a week', 'high', false],
         'giant_schnauzer' => [7, 'S495', 'Grooming: Every day', 'high', false],
+        'bloodhound' => [1, 'S502', 'Grooming: Once a week', 'high', false],
     ];
 
     /**
@@ -931,6 +950,7 @@ class BreedStageParamsSeeder extends Seeder
         'chesapeake_bay_retriever' => ['S461', 'Do not let your dog exercise directly before or after eating.'],
         'samoyed' => ['S467', 'Remember to leave a gap after eating and before exercising.'],
         'weimaraner' => ['S480', 'Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.'],
+        'bloodhound' => ['S503', 'Remember to leave a gap between eating and exercising as this is thought to reduce the risk of GDV.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -1003,13 +1023,14 @@ class BreedStageParamsSeeder extends Seeder
         'weimaraner' => ['S480', 'Weimaraners tend to be a little cautious of unfamiliar dogs, so socialisation from a young age is really important.'],
         'italian_greyhound' => ['S487', 'They can also be quite timid, so early socialisation is essential.'],
         'giant_schnauzer' => ['S496', 'Giant Schnauzers can make lovable pets for families with older children, given the right socialisation as puppies.'],
+        'bloodhound' => ['S503', 'Generally speaking, Bloodhounds aren’t aggressive dogs but can sometimes be nervous so it’s important to socialise your Bloodhound from a young age with lots of people, dogs and experiences.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -1679,6 +1700,9 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-61 (docs/research/dog-data/data.json giant_schnauzer,
             // S491–S499; runbook rules in proposed_game_parameters.giant_schnauzer).
             BreedType::GiantSchnauzer => self::giantSchnauzerProfile(),
+            // M5-R10-62 (docs/research/dog-data/data.json bloodhound,
+            // S500–S505; runbook rules in proposed_game_parameters.bloodhound).
+            BreedType::Bloodhound => self::bloodhoundProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -5894,6 +5918,91 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'giant_schnauzer.lifespan.rkc',
                 'quote' => 'Lifespan: Over 12 years',
                 'notes' => 'RKC breed page lower bound (S495). The McMillan 2024 table (Dogs Trust S123) could not be fetched (12.1 y only via Wikipedia, tier C); no VetCompass median. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Bloodhound (M5-R10-62). Stage boundaries young / adult, arrival ages, exercise minutes and the learning multiplier
+     * follow the runbook's standing rules (CONFIRMED_R10_BLOODHOUND); weight, growth, Coren rank and lifespan are
+     * sourced. The senior boundary is Claude's suggestion (PROPOSED_R10_BLOODHOUND_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function bloodhoundProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BLOODHOUND;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S505', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.bloodhound.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a giant dog reaches adult weight at 18–24 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [61, [
+                    'unit' => 'months', 'source_id' => 'S11,S505', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.bloodhound.senior_boundary_months', 'decision' => self::PROPOSED_R10_BLOODHOUND_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × Kennel Club 2004 survey median 6 y 9 m (S505) = 5.06 y = 60.75 → 61 months. The Dogs Trust McMillan 2024 table (S123) could not be fetched; no VetCompass median; the RKC band "Under 10 years" (S502) has no lower bound. Alternatives: McMillan 2024 9.3 y via Wikipedia (tier C, S504) → 84; Dogs Trust > 7 y (S14) → 84.',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 61],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bloodhound.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.bloodhound.senior_boundary_months', 'decision' => self::PROPOSED_R10_BLOODHOUND_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 61 months (0.75 × 6.75 y, S505).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (18–24 months for a giant dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S502', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bloodhound.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: More than 2 hours per day',
+                'notes' => 'RKC "Exercise: More than 2 hours per day" (S502) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA "Minimum exercise (per day): 2 hours" (S503) agrees.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bloodhound.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[40, 54], [
+                'unit' => 'kg', 'source_id' => 'S501', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'bloodhound.adult_weight.fci',
+                'quote' => 'Males about 46 - 54 kg.',
+                'notes' => 'FCI standard No. 84 (S501): males about 46–54 kg, females about 40–48 kg (range of both sexes). PDSA 45–50 kg (S503) — alternative.',
+            ]],
+            'growth_end' => [[18, 24], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bloodhound.growth.adult_weight_reached',
+                'quote' => 'Giant (over 100 pounds) | 18–24 months',
+                'notes' => 'Size-class value, not breed-specific (FCI males 46–54 kg ≈ 101–119 lb, S501 — the Giant class of S10; females partly Large).',
+            ]],
+            'coren_rank' => [74, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bloodhound.trainability.coren_rank',
+                'quote' => '| 74 | Bloodhound |',
+                'notes' => 'Wikipedia table of Coren\'s ranking (S35), rank 74, tier "Lowest Degree of Working/Obedience Intelligence" (ranks 70–79).',
+            ]],
+            'learning_multiplier' => [0.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.bloodhound.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 74 (S35) in the "Lowest" tier (ranks 70–79) → 0.5. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [6.75, [
+                'unit' => 'years', 'source_id' => 'S505', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'bloodhound.lifespan.median_kc_survey',
+                'quote' => 'The median age at death for Bloodhounds was six years and nine months',
+                'notes' => 'Kennel Club Breed Health and Conservation Plan (S505), 2004 survey median. RKC / PDSA "Under 10 years" (S502, S503); McMillan 2024 9.3 y only via Wikipedia (tier C). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

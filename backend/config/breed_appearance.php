@@ -543,6 +543,13 @@
 | portrait); "Any other colour or combination of colours unacceptable." RKC Breed Watch Category 1 (S495) — no welfare
 | concern. Colour weights unsourced → `verified => false`.
 |
+| Bloodhound (M5-R10-62, docs/research/dog-data bloodhound.appearance): "Large-sized hound and massive leash hound, the
+| most powerful of all the scent hounds." (FCI standard No. 84, S501); short, dense, quite harsh, weatherproof coat;
+| supple, loose skin; black or brown nose; dark brown or hazel eyes; thin, supple, velvety ears; long, strong tail set
+| high. Colours black and tan, liver and tan, red (S501) — black and tan weighted highest (the register portrait). RKC
+| Breed Watch Category 2 (S502) / PDSA eye problems (S503) → moderate skin and healthy eyelids, never exaggerated
+| wrinkles or drooping eyelids. Colour weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -2748,6 +2755,40 @@ return [
             'ear_carriage' => ['natural uncropped V-shaped ears folding forward'],
             'eye_color' => ['dark, oval eyes'],
             'tail' => ['natural undocked sabre-shaped tail'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-62 (docs/research/dog-data/data.json bloodhound.appearance; runbook rules 2026-10-10:
+    // standard colours only — black and tan, liver and tan, red; welfare breed: moderate skin, healthy eyelids).
+    'bloodhound' => [
+        'display_name' => 'Bloodhound',
+        // Colour frequencies are in no source (bloodhound.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 84 (S501), FCI nomenclature (S500), RKC breed page (S502), PDSA (S503) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S502 "Size: Large"; S501 ideal height 68 cm (males), 62 cm (females)',
+            'build' => 'S501 "Large-sized hound and massive leash hound, the most powerful of all the scent hounds."',
+            'coat_length' => 'S501 "On the body, the close-lying hair is short, dense, quite harsh and weatherproof."',
+            'coat_color' => 'S501 "There are three distinct coat colours: the bicolours black and tan and liver and tan and the unicolour red." (weights unsourced)',
+            'head' => 'S501 nose "Black or brown, always black on black and tan dogs."; skin "Supple over all the body, loose and elastic." (moderate — welfare, S502 / S503)',
+            'ear_carriage' => 'S501 "Thin and supple, covered in short hair, delicate and velvety to the touch"',
+            'eye_color' => 'S501 "Dark brown or hazel, of a lighter hue (amber) in dogs without black saddle or mantle."; healthy eyelids (S503 eye problems — welfare)',
+            'tail' => 'S501 "Long, strong, thick, set high, in continuation of the dorsal line"',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'large, powerful scent hound with moderate loose skin', 'weight' => 3], 'massive but balanced hound with a level back'],
+            'coat_length' => ['short, dense, weatherproof coat'],
+            // FCI standard (S501); black and tan weighted highest (the register portrait). Never merle, brindle or white.
+            'coat_color' => [
+                ['value' => 'black and tan', 'weight' => 5],
+                ['value' => 'liver and tan', 'weight' => 3],
+                ['value' => 'red', 'weight' => 2],
+            ],
+            'head' => ['long head with moderate folds, never exaggerated wrinkles, and a black nose'],
+            'ear_carriage' => ['long, thin, velvety low-set ears'],
+            'eye_color' => ['healthy dark brown eyes with normal eyelids'],
+            'tail' => ['long, strong tail set high'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],

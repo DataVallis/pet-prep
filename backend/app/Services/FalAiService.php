@@ -546,6 +546,15 @@ class FalAiService
                 .'natural uncropped V-shaped ears folding forward, natural undocked sabre-shaped tail, '
                 .'photorealistic, studio quality, natural lighting',
 
+            // M5-R10-62: FCI standard No. 84 (S501) — black and tan as the anchor (liver and tan and red are the other
+            // standard colours); welfare (RKC Breed Watch Category 2, S502): moderate skin, healthy eyelids.
+            BreedType::Bloodhound => 'A gentle, calm Bloodhound with a black and tan coat, '
+                .'short, dense, weatherproof coat, '
+                .'large, powerful scent hound with moderate loose skin, never exaggerated wrinkles, '
+                .'long head with moderate folds, black nose, healthy dark brown eyes with normal eyelids, '
+                .'long, thin, velvety low-set ears, long strong tail set high, '
+                .'photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1299,6 +1308,17 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'harsh, wiry, dense coat with bushy eyebrows and a beard',
                 'markings' => 'no white patches, natural uncropped V-shaped ears, natural undocked tail',
+            ],
+            // M5-R10-62: FCI standard S501 colours (black and tan, liver and tan, red; no excessive white).
+            BreedType::Bloodhound => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'black and tan',
+                    1 => 'liver and tan',
+                    2 => 'red',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short, dense, weatherproof coat with moderate loose skin',
+                'markings' => 'no excessive white, long low-set velvety ears, healthy eyelids',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
