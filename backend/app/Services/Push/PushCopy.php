@@ -190,6 +190,8 @@ final class PushCopy
             PushType::PetReady => $line('pet_ready.'.$audience),
             // M5-T13: the first birthday; child "ti", parent "vi" (SL). No name in the body.
             PushType::PetBirthday => $line('pet_birthday.'.$audience),
+            // M5-R18 / R20: the parent's groomer / bath reminder (metric `<task>:<period>`); formal, no name.
+            PushType::CareReminder => $line('care_reminder.'.(str_starts_with((string) $metric, 'bath') ? 'bath' : 'groomer_visit')),
         };
     }
 

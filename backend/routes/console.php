@@ -67,6 +67,16 @@ Schedule::command('media:faststart')
     ->name('faststart-pet-media')
     ->description('Move the MP4 index to the front of stored pet videos');
 
+// Every 5 min (M5-R14 – R20 follow-up, David 2026-10-24): switch breed care tasks on
+// for existing dogs once their apps declare `care_tasks` (from the next family-local
+// midnight, never retroactively) and push the parent groomer / bath reminder when a
+// period starts (once per period). Off the 5-minute mark.
+Schedule::command('pets:care-tasks')
+    ->cron('1-59/5 * * * *')
+    ->withoutOverlapping()
+    ->name('pets-care-tasks')
+    ->description('Switch care tasks on for existing dogs and push parent care reminders');
+
 // Every minute (M3-02, PR #35 review): queue held pushes that are due (illness /
 // game over after quiet hours, the daily walk reminder at its earliest time).
 Schedule::command('push:dispatch-scheduled')

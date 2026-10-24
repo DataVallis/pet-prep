@@ -2,20 +2,30 @@
 
 use App\Enums\BreedType;
 use App\Enums\CareTask;
+use App\Enums\ClientFeature;
+use App\Enums\PushType;
 use App\Enums\RoutineStatus;
 use App\Enums\RoutineType;
 use App\Enums\StageParamKey;
+use App\Jobs\SendPushNotification;
 use App\Models\ActivityLog;
 use App\Models\Pet;
 use App\Models\PetContract;
+use App\Models\PushNotification;
 use App\Models\User;
+use App\Services\CareReminderPushService;
 use App\Services\CareScoreService;
+use App\Services\CareTaskActivationService;
 use App\Services\ChildProfileService;
 use App\Services\FamilyService;
+use App\Services\NotificationService;
+use App\Services\Push\ExpoPushClient;
+use App\Services\Push\PushCopy;
 use App\Services\RoutineLedgerService;
 use App\Services\WalkHeatService;
 use Database\Seeders\BreedStageParamsSeeder;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Queue;
 
 use function Pest\Laravel\postJson;
 
@@ -404,5 +414,242 @@ describe('the care guide', function () {
         ]);
         expect(CareTask::GroomerVisit->routineType())->toBeNull()
             ->and(RoutineStatus::Missed->value)->toBe('missed');
+    });
+});
+
+/*
+| Follow-up (David 2026-10-24): (b) care mini-games count in the Care Score like
+| grooming, (d) the parent reminder push, (e) existing dogs from the next midnight.
+*/
+
+/** The user's app declared these features (as RecordClientFeatures stores them). */
+function bctApps(User ...$users): void
+{
+    foreach ($users as $user) {
+        $user->forceFill(['client_features' => ['care_tasks', 'training'], 'client_features_at' => now()])->saveQuietly();
+    }
+}
+
+describe('care mini-games in the Care Score (answer b)', function () {
+    it('scores done and missed tooth brushing slots exactly like any routine (fair share)', function () {
+        [, $child, $dog] = bctFamily(BreedType::YorkshireTerrier);
+        bctAt('2026-10-20 10:00');
+        bctDo($child, 'tooth_brushing')->assertJsonPath('status', 'accepted');
+        bctAt('2026-10-27 09:00');
+        $board = app(CareScoreService::class)->board(collect([$dog->fresh()]), 'Europe/Ljubljana');
+        $brushing = array_values(array_filter($board['routines'][$dog->id], fn ($r) => $r->type === RoutineType::ToothBrushing));
+        expect($brushing)->toHaveCount(7)
+            ->and(count(array_filter($brushing, fn ($r) => $r->isDone())))->toBe(1)
+            ->and(count(array_filter($brushing, fn ($r) => $r->isMissed())))->toBe(6);
+        // Every brushing slot is one of the child's scored routines (1 done, 6 missed) — like grooming.
+        $scored = app(CareScoreService::class)->childScore($board, $child->id, $dog->fresh());
+        $board['routines'][$dog->id] = array_values(array_filter($board['routines'][$dog->id], fn ($r) => $r->type !== RoutineType::ToothBrushing));
+        $without = app(CareScoreService::class)->childScore($board, $child->id, $dog->fresh());
+        expect($scored['routines'] - $without['routines'])->toBe(7)
+            ->and($scored['done'] - $without['done'])->toBe(1);
+    });
+});
+
+describe('the app features header (X-PetPrep-Features)', function () {
+    it('stores the known features of an authenticated request and only when they changed', function () {
+        [, $child] = bctFamily(BreedType::YorkshireTerrier, enabled: false);
+        bctAt('2026-10-21 10:00');
+        test()->actingAs($child, 'sanctum');
+        test()->withHeaders(['X-PetPrep-Features' => 'care_tasks, training,future_thing'])->getJson('/api/child/pet')->assertOk();
+        app('auth')->forgetGuards();
+        expect($child->fresh()->client_features)->toBe(['training', 'care_tasks'])
+            ->and($child->fresh()->appSupports(ClientFeature::CareTasks))->toBeTrue();
+
+        // A request without the header (an older build's other phone) leaves it alone.
+        bctAt('2026-10-21 11:00');
+        bctGet($child, '/api/child/pet');
+        expect($child->fresh()->client_features)->toBe(['training', 'care_tasks'])
+            ->and($child->fresh()->client_features_at->toIso8601String())->toBe(Carbon::parse('2026-10-21 10:00', 'Europe/Ljubljana')->utc()->toIso8601String());
+
+        // A guest request stores nothing (and fails as before).
+        test()->withHeaders(['X-PetPrep-Features' => 'care_tasks', 'Authorization' => ''])->getJson('/api/child/pet')->assertUnauthorized();
+    });
+});
+
+describe('existing dogs get care tasks from the next midnight (answer e)', function () {
+    it('waits for the apps, then switches on from the next family-local midnight, never retroactively', function () {
+        [$parent, $child, $dog] = bctFamily(BreedType::YorkshireTerrier, enabled: false);
+        $service = app(CareTaskActivationService::class);
+
+        // No app declares care_tasks yet → nothing changes.
+        bctAt('2026-10-22 10:00');
+        expect($service->run())->toMatchArray(['activated' => 0, 'waiting' => 1])
+            ->and($dog->fresh()->care_tasks_enabled)->toBeFalse();
+        // Only the child's app → still waiting for a parent's app.
+        bctApps($child);
+        expect($service->run()['activated'])->toBe(0);
+
+        bctApps($parent);
+        bctAt('2026-10-22 15:00');
+        expect($service->run()['activated'])->toBe(1);
+        $dog = $dog->fresh();
+        expect($dog->care_tasks_enabled)->toBeTrue()
+            ->and($dog->care_tasks_since->toIso8601String())->toBe(Carbon::parse('2026-10-23 00:00', 'Europe/Ljubljana')->utc()->toIso8601String());
+
+        // Before the midnight: nothing for the child.
+        expect(bctGet($child, '/api/child/pet')['care_tasks'])->toBe([]);
+        bctPost($child, '/api/child/pet/care-task/start', ['task' => 'tooth_brushing'])->assertStatus(422)->assertJsonPath('reason', 'care_task_not_available');
+
+        // Idempotent: a second run changes nothing.
+        bctAt('2026-10-22 23:30');
+        expect($service->run())->toMatchArray(['candidates' => 0, 'activated' => 0])
+            ->and($dog->fresh()->care_tasks_since->toIso8601String())->toBe($dog->care_tasks_since->toIso8601String());
+
+        // From the midnight: the rest of the week (Tue 08:00 → Tue 08:00) expects its share:
+        // 7 × (1 − 2 d 16 h / 7 d) = 4.33 → 4; the period starts at the midnight.
+        bctAt('2026-10-23 10:00');
+        $task = collect(bctGet($child, '/api/child/pet')['care_tasks'])->firstWhere('task', 'tooth_brushing');
+        expect($task)->toMatchArray(['times' => 4, 'done_this_period' => 0, 'can_start' => true])
+            ->and(Carbon::parse($task['period_started_at'])->utc()->toIso8601String())->toBe(Carbon::parse('2026-10-23 00:00', 'Europe/Ljubljana')->utc()->toIso8601String());
+        bctDo($child, 'tooth_brushing')->assertJsonPath('status', 'accepted');
+
+        bctAt('2026-10-27 09:00');
+        expect(array_column(bctRoutines($dog, '2026-10-27', RoutineType::ToothBrushing), 2))->toBe(['done', 'missed', 'missed', 'missed']);
+        // No slot for any day before the activation.
+        foreach (['2026-10-20', '2026-10-21', '2026-10-22'] as $date) {
+            expect(bctRoutines($dog, $date, RoutineType::ToothBrushing))->toBe([]);
+        }
+        // The next week is a full one again.
+        bctAt('2026-11-03 09:00');
+        expect(bctRoutines($dog, '2026-11-03', RoutineType::ToothBrushing))->toHaveCount(7);
+    });
+
+    it('starts a task with too little of its period left at the next period; reminders and heat apply from the midnight', function () {
+        [$parent, $child, $dog] = bctFamily(BreedType::AmericanCockerSpaniel, enabled: false);
+        bctApps($parent, $child);
+        bctAt('2026-10-25 10:00');
+        app(CareTaskActivationService::class)->run();
+
+        // Ear cleaning once a week: 1 × (1 − 5 d 17 h / 7 d) = 0.19 → 0 in this week.
+        bctAt('2026-10-26 12:00');
+        expect(bctGet($child, '/api/child/pet')['care_tasks'])->toBe([]);
+        // The groomer reminder applies from the midnight (never scored).
+        $reminder = bctGet($parent, '/api/parent/dashboard')['family']['pets'][0]['care_reminders'][0];
+        expect($reminder)->toMatchArray(['task' => 'groomer_visit', 'done' => false])
+            ->and(Carbon::parse($reminder['period_started_at'])->utc()->toIso8601String())->toBe(Carbon::parse('2026-10-26 00:00', 'Europe/Ljubljana')->utc()->toIso8601String());
+        bctAt('2026-10-27 09:00');
+        expect(bctRoutines($dog, '2026-10-27', RoutineType::EarCleaning))->toBe([]);
+        expect(collect(bctGet($child, '/api/child/pet')['care_tasks'])->firstWhere('task', 'ear_cleaning'))->toMatchArray(['times' => 1, 'can_start' => true]);
+    });
+
+    it('starts the heat warning only from the midnight', function () {
+        [$parent, $child, $dog] = bctFamily(BreedType::Pug, enabled: false, bornLocal: '2026-07-10 08:00');
+        bctApps($parent, $child);
+        bctAt('2026-07-11 12:00');
+        app(CareTaskActivationService::class)->run();
+        expect(bctGet($child, '/api/child/pet')['walk_heat'])->toBeNull();
+        bctAt('2026-07-12 12:00');
+        expect(bctGet($child, '/api/child/pet')['walk_heat']['active'])->toBeTrue();
+    });
+
+    it('leaves unborn, game-over, inactive, legacy and non-care-breed dogs alone', function () {
+        [$parent, $child, $dog] = bctFamily(BreedType::YorkshireTerrier, enabled: false);
+        bctApps($parent, $child);
+        $make = function (array $attributes) use ($parent): Pet {
+            $kid = User::factory()->child()->create(['parent_id' => $parent->id, 'name' => 'Kid']);
+            bctApps($kid);
+
+            return Pet::factory()->create(array_merge([
+                'breed_type' => BreedType::YorkshireTerrier->value, 'user_id' => $kid->id, 'born_at' => now(),
+                'arrival_age_months' => 12, 'origin' => 'adopted', 'care_tasks_enabled' => false,
+                'plan' => 'challenge', 'challenge_paid_at' => now(), 'challenge_paid_source' => 'purchase',
+            ], $attributes));
+        };
+        $unborn = $make(['born_at' => null]);
+        $over = $make(['is_game_over' => true]);
+        $inactive = $make(['is_active' => false]);
+        $legacy = $make(['arrival_age_months' => null]);
+        $boxer = $make(['breed_type' => BreedType::Boxer->value]);
+
+        bctAt('2026-10-22 10:00');
+        expect(app(CareTaskActivationService::class)->run()['activated'])->toBe(1);
+        foreach ([$unborn, $over, $inactive, $legacy, $boxer] as $pet) {
+            expect($pet->fresh()->care_tasks_enabled)->toBeFalse()->and($pet->fresh()->care_tasks_since)->toBeNull();
+        }
+        expect($dog->fresh()->care_tasks_enabled)->toBeTrue();
+        // A dog created with the feature keeps `since` null (from its birth).
+        [, , $new] = bctFamily(BreedType::YorkshireTerrier);
+        expect($new->care_tasks_since)->toBeNull();
+    });
+
+    it('waits while a sibling caretaker still uses an older app', function () {
+        [$parent, $mia, $dog] = bctFamily(BreedType::YorkshireTerrier, enabled: false);
+        $tim = bctSibling($parent, $dog);
+        bctApps($parent, $mia);
+        bctAt('2026-10-22 10:00');
+        expect(app(CareTaskActivationService::class)->run()['activated'])->toBe(0);
+        bctApps($tim);
+        expect(app(CareTaskActivationService::class)->run()['activated'])->toBe(1);
+    });
+});
+
+describe('the parent reminder push (answer d)', function () {
+    beforeEach(function () {
+        config(['push.enabled' => true]);
+        Queue::fake([SendPushNotification::class]);
+    });
+
+    it('pushes the parents once when a groomer period starts, never after a confirmation', function () {
+        [$parent, $child, $dog] = bctFamily(BreedType::Pomeranian);
+        $pushes = fn () => PushNotification::where('pet_id', $dog->id)->where('type', PushType::CareReminder->value)->orderBy('id')->get();
+
+        bctAt('2026-10-20 08:03');
+        app(CareReminderPushService::class)->processDue();
+        app(CareReminderPushService::class)->processDue();
+        expect($pushes())->toHaveCount(1);
+        $push = $pushes()->first();
+        expect($push->metric)->toBe('groomer_visit:0')
+            ->and($push->status)->toBe(PushNotification::STATUS_QUEUED)
+            ->and(collect($push->recipients)->pluck('audience')->unique()->all())->toBe([PushNotification::AUDIENCE_PARENT])
+            ->and(collect($push->recipients)->pluck('user_id')->all())->toBe([$parent->id]);
+
+        // Confirmed meanwhile → the queued push is dropped at delivery.
+        bctPost($parent, "/api/parent/pets/{$dog->id}/care-reminders", ['task' => 'groomer_visit'])->assertOk();
+        app(NotificationService::class)->deliver($push->id, app(ExpoPushClient::class));
+        expect($push->fresh()->status)->toBe(PushNotification::STATUS_SUPPRESSED)
+            ->and($push->fresh()->suppressed_reason)->toBe('already_done');
+
+        // Next period (17 Nov 08:00): confirmed before the run → no push.
+        bctAt('2026-11-17 08:01');
+        bctPost($parent, "/api/parent/pets/{$dog->id}/care-reminders", ['task' => 'groomer_visit'])->assertOk();
+        bctAt('2026-11-17 08:05');
+        app(CareReminderPushService::class)->processDue();
+        expect($pushes())->toHaveCount(1);
+
+        // A period that started more than a day ago is not pushed late.
+        bctAt('2026-12-17 10:00');
+        app(CareReminderPushService::class)->processDue();
+        expect($pushes())->toHaveCount(1);
+    });
+
+    it('holds the push of a period that starts in quiet hours until they end', function () {
+        [$parent, $child, $dog] = bctFamily(BreedType::Pomeranian, enabled: false);
+        bctApps($parent, $child);
+        bctAt('2026-10-22 15:00');
+        app(CareTaskActivationService::class)->run();
+        // The activation period starts at the midnight (inside 21:00–07:00).
+        bctAt('2026-10-22 23:59');
+        app(CareReminderPushService::class)->processDue();
+        expect(PushNotification::where('pet_id', $dog->id)->where('type', 'care_reminder')->count())->toBe(0);
+        bctAt('2026-10-23 00:01');
+        app(CareReminderPushService::class)->processDue();
+        $push = PushNotification::where('pet_id', $dog->id)->where('type', 'care_reminder')->sole();
+        expect($push->status)->toBe(PushNotification::STATUS_SCHEDULED)
+            ->and($push->send_after->toIso8601String())->toBe(Carbon::parse('2026-10-23 07:00', 'Europe/Ljubljana')->utc()->toIso8601String());
+    });
+
+    it('uses a formal parent text without the pet name and a normal priority', function () {
+        expect(PushCopy::body(PushType::CareReminder, 'groomer_visit:3', PushNotification::AUDIENCE_PARENT, 'sl'))
+            ->toBe('Čas je za obisk pri pasjem frizerju. Ko ga opravite, to potrdite v aplikaciji.')
+            ->and(PushCopy::body(PushType::CareReminder, 'bath:1', PushNotification::AUDIENCE_PARENT, 'en'))
+            ->toBe("It's time for a bath. Confirm it in the app once it's done.")
+            ->and(PushType::CareReminder->isUrgent())->toBeFalse()
+            ->and(PushType::CareReminder->holdsOverQuietHours())->toBeTrue()
+            ->and(PushType::CareReminder->androidChannel())->toBe('default');
     });
 });

@@ -44,6 +44,12 @@ use Illuminate\Support\Str;
  * period (ParentGroomerVisit / ParentBathedPet row, actor = the parent); never
  * a routine, never in the Care Score or the traffic light (reminderFor()).
  *
+ * EXISTING dogs (David 2026-10-24, answer (e)): `pets:activate-care-tasks`
+ * (CareTaskActivationService) switches a dog on once its children's and a
+ * parent's apps declare `care_tasks`, from the next family-local midnight
+ * (`care_tasks_since`): nothing applies before it, the period it falls in
+ * starts there and expects only its share of `times` (timesFrom()).
+ *
  * Every caller that writes holds the pet's row lock (backend/CLAUDE.md).
  */
 class CareTaskService
@@ -66,7 +72,8 @@ class CareTaskService
      */
     public function frequencyOn(Pet $pet, string $localDate, CareTask $task): ?array
     {
-        if (! $pet->careTasksEnabled()) {
+        // An existing dog switched on later: nothing before its `care_tasks_since` midnight.
+        if (! $pet->careTasksActiveOn($localDate)) {
             return null;
         }
         $value = $this->lifeStages->stageValueOn($pet, $localDate, $task->stageParamKey())['value'] ?? null;
@@ -103,8 +110,45 @@ class CareTaskService
             return null;
         }
         $period = $this->lifeStages->programPeriodAt($pet, $at, $frequency['period_days']);
+        if ($period === null) {
+            return null;
+        }
+        $period += $frequency;
 
-        return $period === null ? null : $period + $frequency;
+        // The period an existing dog was switched on in (David 2026-10-24, answer (e)):
+        // it starts at `care_tasks_since`; a child task expects only its share of the
+        // period that is left (timesFrom — 0 → the task starts with the next period).
+        $since = $pet->careTasksSince();
+        if ($since !== null && $since->greaterThan($period['start'])) {
+            if ($task->isChildTask()) {
+                $period['times'] = self::timesFrom($period['times'], $period['period_days'], $period['start'], $since);
+                if ($period['times'] <= 0) {
+                    return null;
+                }
+            }
+            $period['start'] = $since;
+        }
+
+        return $period;
+    }
+
+    /**
+     * How many of a child task's `times` the period an existing dog was switched
+     * on in still expects: `times` × the share of the period's nominal length
+     * (`period_days`) left after `$since`, rounded half up — never more than a
+     * full period, never retroactive (David 2026-10-24, answer (e)). The share is
+     * measured from the period START, which later locks never move, so the live
+     * check and the ledger (RoutineLedgerService::careTaskRoutines) always agree.
+     */
+    public static function timesFrom(int $times, int $periodDays, CarbonInterface $periodStart, ?CarbonInterface $since): int
+    {
+        if ($since === null || ! $since->greaterThan($periodStart)) {
+            return $times;
+        }
+        $length = max(1, $periodDays) * 86400;
+        $left = max(0.0, 1.0 - ($since->getTimestamp() - $periodStart->getTimestamp()) / $length);
+
+        return min($times, (int) round($times * $left, 0, PHP_ROUND_HALF_UP));
     }
 
     /** Completed tasks (the task's activity rows) in [$from, $to). */

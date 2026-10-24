@@ -261,6 +261,16 @@ class NotificationService
         return $this->escalation($pet, PushType::PetBirthday);
     }
 
+    /**
+     * M5-R18 / R20 follow-up (David 2026-10-24): a parent reminder's new period
+     * started — to the family's parents, metric `<task>:<period index>`. Called by
+     * CareReminderPushService under the pet's row lock (once per period).
+     */
+    public function careReminder(Pet $pet, string $metric): ?PushNotification
+    {
+        return $this->escalation($pet, PushType::CareReminder, $metric);
+    }
+
     /** Minutes of outside-quiet time before a scoop deadline when the litter reminder is decided. */
     public const LITTER_REMINDER_MINUTES = 60;
 
@@ -417,6 +427,12 @@ class NotificationService
         // M5-R06-05: the tray was scooped (or its deadline passed) since the decision.
         if ($type === PushType::LitterReminder && ! $this->litterStillOpen($pet, $notification->metric)) {
             $this->markSuppressed($notification, 'scooped');
+
+            return;
+        }
+        // M5-R18 / R20: the parent confirmed the groomer / bath meanwhile (or the period is over).
+        if ($type === PushType::CareReminder && ! app(CareReminderPushService::class)->stillDue($pet, (string) $notification->metric)) {
+            $this->markSuppressed($notification, 'already_done');
 
             return;
         }
@@ -589,6 +605,8 @@ class NotificationService
             PushType::PetReady => $children()->concat($parents()),
             // M5-T13: the whole family celebrates.
             PushType::PetBirthday => $parents()->concat($children()),
+            // M5-R18 / R20: the groomer / bath is the parent's errand.
+            PushType::CareReminder => $parents(),
         };
 
         return $list->unique('user_id')->values()->all();
@@ -608,6 +626,10 @@ class NotificationService
         // `notified_at`); two children of a shared pet may finish within minutes.
         if ($type === PushType::ChallengeCompleted || $type === PushType::PetReady || $type === PushType::PetBirthday) {
             return false; // M5-T06 / M5-T13: once per pet (`preparation_ready_at` / `birthday_celebrated_at` are set once)
+        }
+        // M5-R18 / R20: once per (task, period) — CareReminderPushService guards with the metric.
+        if ($type === PushType::CareReminder) {
+            return false;
         }
 
         $since = $type->isDailyReminder()

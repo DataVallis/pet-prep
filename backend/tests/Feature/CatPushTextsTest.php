@@ -50,6 +50,8 @@ const CPT_DOG_ONLY = [
     'tidy_first.hunger', 'tidy_first.thirst', 'clean_and_tidy_first.hunger', 'clean_and_tidy_first.thirst',
     'tidy_first_wait.hunger', 'tidy_first_wait.thirst', 'clean_and_tidy_first_wait.hunger', 'clean_and_tidy_first_wait.thirst',
     'illness.child.walk', 'illness.parent.walk',
+    // M5-R18 / R20: the parent's groomer / bath reminder — breed care tasks are dog-only.
+    'care_reminder.groomer_visit', 'care_reminder.bath',
 ];
 
 /** A dog noun (EN) or a Slovenian dog noun / masculine agreement that must not reach a cat. */
@@ -313,7 +315,7 @@ describe('rendering per species (EN + SL)', function () {
     ]);
 
     it('never sends a cat a dog word, whatever the type, metric, audience, variant or language', function () {
-        $types = array_values(array_filter(PushType::cases(), fn (PushType $t): bool => $t !== PushType::WalkReminder));
+        $types = array_values(array_filter(PushType::cases(), fn (PushType $t): bool => ! in_array($t, [PushType::WalkReminder, PushType::CareReminder], true)));
         $variants = [null, PushCopy::VARIANT_WAIT, PushCopy::VARIANT_CLEAN_FIRST, PushCopy::VARIANT_SCRATCHER_FIRST,
             PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST, PushCopy::VARIANT_SCRATCHER, PushCopy::VARIANT_CLEAN_AND_SCRATCHER,
             PushCopy::VARIANT_CLEAN_FIRST_WAIT, PushCopy::VARIANT_SCRATCHER_FIRST_WAIT, PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST_WAIT];

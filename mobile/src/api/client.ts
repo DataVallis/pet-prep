@@ -348,6 +348,13 @@ export function clientFeatures(catUiReady: boolean = CAT_UI_READY): readonly Cli
 export const CLIENT_FEATURES: readonly ClientFeature[] = clientFeatures();
 
 /**
+ * Header that carries {@link CLIENT_FEATURES} (comma separated) on every request
+ * (backend `RecordClientFeatures`): an existing dog gets its breed care tasks only once
+ * every caretaker child's app and a parent's app declare `care_tasks`.
+ */
+export const CLIENT_FEATURES_HEADER = 'X-PetPrep-Features';
+
+/**
  * The JSON body of a generate-pin request: profile fields only for a new pet, always the
  * full set plus the plan (M3-09) and the species (M5-R06-02), together with `features`
  * (never with `pet_id`, never without the profile). The breed is sent as chosen — the
@@ -750,6 +757,9 @@ async function sendRequest<T>(path: string, options: RequestOptions): Promise<T>
     Accept: 'application/json',
     // App language (M1-18): server texts; stored per device on push registration.
     'Accept-Language': currentLanguageTag(),
+    // M5-R14 – R20 follow-up: what this build can show, on every request — the server
+    // switches breed care tasks on for an existing dog only once its apps declare them.
+    [CLIENT_FEATURES_HEADER]: CLIENT_FEATURES.join(','),
   };
 
   if (token) {

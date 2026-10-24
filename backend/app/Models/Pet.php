@@ -297,6 +297,8 @@ class Pet extends Model
         // M5-T13 bookkeeping (the apps get BirthdayPayload instead).
         'birthday_celebrated_at',
         'birthday_next_check_at',
+        // M5-R14 – R20 follow-up: when an existing dog's care tasks start (apps get the tasks themselves).
+        'care_tasks_since',
     ];
 
     /**
@@ -355,6 +357,7 @@ class Pet extends Model
             'preparation_started_at' => 'datetime',
             'preparation_ready_at' => 'datetime',
             'birthday_celebrated_at' => 'datetime',
+            'care_tasks_since' => 'datetime',
             'birthday_next_check_at' => 'datetime',
         ];
     }
@@ -721,13 +724,36 @@ class Pet extends Model
      * M5-R14 / R15 / R18 / R19 / R20 breed care tasks (David 2026-10-24): the
      * child's care mini-games, the parent's groomer / bath reminders and the
      * summer heat warning can apply — a profiled dog whose creating app builds
-     * (parent and child) declared `care_tasks`. Fixed at creation; existing
-     * pets: off. Which tasks a breed has are its `*_frequency` rows
+     * (parent and child) declared `care_tasks` — set at creation, or later for
+     * an existing dog by `pets:care-tasks` (with `care_tasks_since`, see
+     * careTasksActiveOn()). Which tasks a breed has are its `*_frequency` rows
      * (CareTaskService::frequencyOn).
      */
     public function careTasksEnabled(): bool
     {
         return (bool) $this->care_tasks_enabled && ! $this->isLegacyProfile() && $this->isDog();
+    }
+
+    /**
+     * M5-R14 – R20 follow-up (David 2026-10-24, answer (e)): an EXISTING dog
+     * switched on later by `pets:activate-care-tasks` has its care tasks, parent
+     * reminders and heat warning only from `care_tasks_since` (a family-local
+     * midnight) — never for an earlier day. Null = from the birth.
+     */
+    public function careTasksSince(): ?CarbonImmutable
+    {
+        return $this->care_tasks_since !== null ? CarbonImmutable::instance($this->care_tasks_since)->utc() : null;
+    }
+
+    /** Care tasks apply on this family-local date (enabled and on / after `care_tasks_since`). */
+    public function careTasksActiveOn(string $localDate): bool
+    {
+        if (! $this->careTasksEnabled()) {
+            return false;
+        }
+        $since = $this->careTasksSince();
+
+        return $since === null || $localDate >= $this->localDate($since);
     }
 
     /** M5-R06: the dog rules (walk / steps, training, ball play) apply. */

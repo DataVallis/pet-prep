@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\ClientFeature;
 use App\Enums\MediaDisplay;
 use App\Enums\UserRole;
 use App\Services\FamilyService;
@@ -83,6 +84,9 @@ class User extends Authenticatable implements FilamentUser
         'pin_expires_at',
         'pairing_pet_id',
         'revenuecat_id',
+        // M5-R14 – R20 follow-up: the app build's features (RecordClientFeatures), server-side only.
+        'client_features',
+        'client_features_at',
     ];
 
     /**
@@ -118,7 +122,19 @@ class User extends Authenticatable implements FilamentUser
             'media_display' => MediaDisplay::class,
             // M5-T17: »Lažje kretnje« — parent-only switch on a child profile (hold instead of swipe).
             'easy_gestures' => 'boolean',
+            // M5-R14 – R20 follow-up: ClientFeature values of the latest authenticated request.
+            'client_features' => 'array',
+            'client_features_at' => 'datetime',
         ];
+    }
+
+    /**
+     * M5-R14 – R20 follow-up: the user's app build declared $feature on its
+     * latest authenticated request (`X-PetPrep-Features`, RecordClientFeatures).
+     */
+    public function appSupports(ClientFeature $feature): bool
+    {
+        return in_array($feature->value, (array) ($this->client_features ?? []), true);
     }
 
     // ──────────────────────────────────────────────────────────────
