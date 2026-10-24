@@ -49,7 +49,7 @@ beforeEach(function () {
 });
 
 /** A value at a dotted path of the dog data.json. */
-function gsData(string $path): mixed
+function gizData(string $path): mixed
 {
     static $data = null;
     $data ??= json_decode((string) file_get_contents(base_path('../docs/research/dog-data/data.json')), true, flags: JSON_THROW_ON_ERROR);
@@ -64,7 +64,7 @@ function gsData(string $path): mixed
 }
 
 /** @return array<string, mixed> the Giant Schnauzer seeder row of (stage, from, key) */
-function gsRow(string $stage, int $from, StageParamKey $key): array
+function gizRow(string $stage, int $from, StageParamKey $key): array
 {
     $row = collect(BreedStageParamsSeeder::rows())->first(fn (array $r) => $r['breed_slug'] === 'giant-schnauzer'
         && $r['stage'] === $stage && $r['age_from_months'] === $from && $r['key'] === $key->value);
@@ -73,7 +73,7 @@ function gsRow(string $stage, int $from, StageParamKey $key): array
     return $row;
 }
 
-function gsPet(int $arrivalMonths, array $attributes = []): Pet
+function gizPet(int $arrivalMonths, array $attributes = []): Pet
 {
     $child = User::factory()->child()->create();
 
@@ -85,7 +85,7 @@ function gsPet(int $arrivalMonths, array $attributes = []): Pet
 }
 
 /** @param array<string, mixed> $body */
-function gsPin(User $parent, array $body): TestResponse
+function gizPin(User $parent, array $body): TestResponse
 {
     $child = app(ChildProfileService::class)->createChild($parent, 'Kid'.random_int(100, 999), null);
     app('auth')->forgetGuards();
@@ -94,7 +94,7 @@ function gsPin(User $parent, array $body): TestResponse
     return postJson('/api/parent/generate-pin', array_merge(['child_id' => $child->id], $body));
 }
 
-function gsLogin(string $pin): TestResponse
+function gizLogin(string $pin): TestResponse
 {
     app('auth')->forgetGuards();
     test()->withHeaders(['Authorization' => '']);
@@ -117,7 +117,7 @@ describe('breed, config and database', function () {
             ->toBe([Species::Dog, true, 570, 'breeds.giant_schnauzer'])
             ->and($config->search_keywords)->toBe(['giant schnauzer', 'veliki šnavcer', 'veliki snavcer', 'riesenschnauzer', 'riesen', 'munich schnauzer'])
             // Legacy fallback = the adult step goal (120 min × 100 steps).
-            ->and($config->daily_steps_required)->toBe((int) gsData('proposed_game_parameters.giant_schnauzer.step_goal_adult.value'))
+            ->and($config->daily_steps_required)->toBe((int) gizData('proposed_game_parameters.giant_schnauzer.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(12000);
 
         // No per-breed hunger / thirst / water data → the Border Collie's paid-breed rhythm.
@@ -125,13 +125,13 @@ describe('breed, config and database', function () {
         foreach (['hunger_decay_rate', 'thirst_decay_rate', 'poops_per_day', 'water_times_per_day', 'water_min_gap_minutes', 'feed_windows'] as $field) {
             expect($config->{$field})->toBe($collie->{$field}, $field);
         }
-        $care = gsData('proposed_game_parameters.giant_schnauzer.care_rates.value');
+        $care = gizData('proposed_game_parameters.giant_schnauzer.care_rates.value');
         expect([$config->hunger_decay_rate, $config->thirst_decay_rate, $config->poops_per_day, $config->water_times_per_day, $config->water_min_gap_minutes])
             ->toBe([(float) $care['hunger_decay_per_hour'], (float) $care['thirst_decay_per_hour'], $care['poops_per_day'], $care['water_per_day'], $care['water_min_gap_minutes']]);
     });
 
     it('accepts an Giant Schnauzer pet only as a dog (breed / species CHECKs) and the migration is reversible', function () {
-        $pet = gsPet(36);
+        $pet = gizPet(36);
         expect($pet->species)->toBe(Species::Dog)
             ->and(DB::table('pets')->where('id', $pet->id)->value('breed_type'))->toBe('giant_schnauzer');
 
@@ -188,32 +188,32 @@ describe('life-stage data against data.json', function () {
         $pgp = 'proposed_game_parameters.giant_schnauzer';
 
         foreach (['young', 'adult', 'senior'] as $stage) {
-            expect(gsRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(gsData("{$pgp}.stage_boundaries_months.value.{$stage}"))
-                ->and(gsRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(gsData("{$pgp}.arrival_age_months.value.{$stage}"));
+            expect(gizRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(gizData("{$pgp}.stage_boundaries_months.value.{$stage}"))
+                ->and(gizRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(gizData("{$pgp}.arrival_age_months.value.{$stage}"));
         }
-        expect(gsRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(gsData("{$pgp}.arrival_age_months.value.puppy"))
+        expect(gizRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(gizData("{$pgp}.arrival_age_months.value.puppy"))
             // Senior = 0.75 × 12 y (RKC lower bound "Over 12 years", S495) = 108 — the runbook's third choice.
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(gsData('giant_schnauzer.lifespan.senior_from.months'))
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * gsRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
-            ->and(gsData('giant_schnauzer.lifespan.senior_from.derived_from'))->toBe(['S11', 'S495'])
-            ->and(gsData('giant_schnauzer.lifespan.mcmillan_2024.value'))->toBeNull()
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe('S11,S10,S495')
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeTrue()
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(108);
+            ->and(gizRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(gizData('giant_schnauzer.lifespan.senior_from.months'))
+            ->and(gizRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * gizRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
+            ->and(gizData('giant_schnauzer.lifespan.senior_from.derived_from'))->toBe(['S11', 'S495'])
+            ->and(gizData('giant_schnauzer.lifespan.mcmillan_2024.value'))->toBeNull()
+            ->and(gizRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe('S11,S10,S495')
+            ->and(gizRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeTrue()
+            ->and(gizRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(108);
 
-        expect(gsRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(gsData("{$pgp}.exercise_minutes_adult.value"))
-            ->and(gsRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(120)
-            ->and(gsRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(gsData('giant_schnauzer.exercise.adult.quote'))
-            ->and(gsRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S495')
-            ->and(gsRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(120)
+        expect(gizRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(gizData("{$pgp}.exercise_minutes_adult.value"))
+            ->and(gizRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(120)
+            ->and(gizRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(gizData('giant_schnauzer.exercise.adult.quote'))
+            ->and(gizRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S495')
+            ->and(gizRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(120)
             // 75 % of 120 = 90.
-            ->and(gsRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(gsData("{$pgp}.exercise_minutes_senior.value"))
-            ->and(gsRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(90)
+            ->and(gizRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(gizData("{$pgp}.exercise_minutes_senior.value"))
+            ->and(gizRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(90)
             // Puppy rule 10 min × age, capped at the adult minutes.
-            ->and(gsRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
-            ->and(gsData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(120)
-            ->and(gsRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(gsData("{$pgp}.learning_multiplier.value"))
-            ->and(gsRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.2);
+            ->and(gizRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
+            ->and(gizData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(120)
+            ->and(gizRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(gizData("{$pgp}.learning_multiplier.value"))
+            ->and(gizRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.2);
 
         // Every decision row of this breed cites the data.json entry that records it.
         $decided = 0;
@@ -223,7 +223,7 @@ describe('life-stage data against data.json', function () {
                 expect($row['breed_slug'])->toBe('giant-schnauzer')
                     ->and($row['ref'])->toStartWith('proposed_game_parameters.giant_schnauzer.')
                     ->and($row['verified'])->toBeTrue()
-                    ->and((string) gsData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
+                    ->and((string) gizData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
             }
         }
         expect($decided)->toBeGreaterThan(0);
@@ -231,46 +231,46 @@ describe('life-stage data against data.json', function () {
         // No "proposal, not built" left in the research; every sourced need with a game mechanic is built (brushing
         // M5-R13, socialisation M5-R17); professional grooming / stripping → M5-R18, weekly ear checks → M5-R20 (David).
         // No meal / walk gap quote → no digestion warning.
-        expect(json_encode([gsData('giant_schnauzer'), gsData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('awaiting David')->not->toContain('PROPOSAL')->not->toContain('not built"')
-            ->and(gsData("{$pgp}.grooming.value"))->toBe(7)
-            ->and(gsData("{$pgp}.grooming.decision"))->toContain('M5-R13')->not->toContain('čaka Davida')
-            ->and(gsData("{$pgp}.professional_grooming.decision"))->toContain('M5-R18')
-            ->and(gsData("{$pgp}.ear_checks.decision"))->toContain('M5-R20')
-            ->and(gsData($pgp))->not->toHaveKey('meal_exercise_gap')
+        expect(json_encode([gizData('giant_schnauzer'), gizData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('awaiting David')->not->toContain('PROPOSAL')->not->toContain('not built"')
+            ->and(gizData("{$pgp}.grooming.value"))->toBe(7)
+            ->and(gizData("{$pgp}.grooming.decision"))->toContain('M5-R13')->not->toContain('čaka Davida')
+            ->and(gizData("{$pgp}.professional_grooming.decision"))->toContain('M5-R18')
+            ->and(gizData("{$pgp}.ear_checks.decision"))->toContain('M5-R20')
+            ->and(gizData($pgp))->not->toHaveKey('meal_exercise_gap')
             ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP)->not->toHaveKey('giant_schnauzer')
-            ->and(gsData('giant_schnauzer.exercise.after_meals.source_id'))->toBeNull()
-            ->and(gsData("{$pgp}.socialisation.quote"))->toBe(BreedStageParamsSeeder::DOG_SOCIALISATION['giant_schnauzer'][1])
-            ->and(gsData('giant_schnauzer.behaviour.socialisation.quote'))->toBe(BreedStageParamsSeeder::DOG_SOCIALISATION['giant_schnauzer'][1]);
+            ->and(gizData('giant_schnauzer.exercise.after_meals.source_id'))->toBeNull()
+            ->and(gizData("{$pgp}.socialisation.quote"))->toBe(BreedStageParamsSeeder::DOG_SOCIALISATION['giant_schnauzer'][1])
+            ->and(gizData('giant_schnauzer.behaviour.socialisation.quote'))->toBe(BreedStageParamsSeeder::DOG_SOCIALISATION['giant_schnauzer'][1]);
     });
 
     it('takes the breed-level numbers from the sourced giant_schnauzer entries', function () {
         // FCI standard (S492): 35–47 kg.
-        expect(gsRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([35, 47])
-            ->and(gsData('giant_schnauzer.adult_weight.fci.value'))->toEqual(['male' => [35, 47], 'female' => [35, 47]])
-            ->and(gsRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(gsData('giant_schnauzer.adult_weight.fci.source_id'))
-            ->and(gsRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(gsData('giant_schnauzer.adult_weight.fci.quote'))
-            ->and(gsRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([15, 18])
-            ->and(gsData('giant_schnauzer.growth.adult_weight_reached.value'))->toStartWith('15–18 months')
+        expect(gizRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([35, 47])
+            ->and(gizData('giant_schnauzer.adult_weight.fci.value'))->toEqual(['male' => [35, 47], 'female' => [35, 47]])
+            ->and(gizRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(gizData('giant_schnauzer.adult_weight.fci.source_id'))
+            ->and(gizRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(gizData('giant_schnauzer.adult_weight.fci.quote'))
+            ->and(gizRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([15, 18])
+            ->and(gizData('giant_schnauzer.growth.adult_weight_reached.value'))->toStartWith('15–18 months')
             // Coren rank 28 (S35), Above average tier → learning 1.2.
-            ->and(gsRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(28)
-            ->and(gsRow('all', 0, StageParamKey::CorenRank)['quote'])->toBe(gsData('giant_schnauzer.trainability.coren_rank.quote'))
-            ->and(gsData('giant_schnauzer.trainability.coren_rank.value'))->toBe(28)
-            ->and(gsRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('giant_schnauzer.lifespan.rkc')
-            ->and(gsRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S495')
-            ->and(gsRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(12.0)
-            ->and(gsRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(gsData('giant_schnauzer.lifespan.rkc.quote'));
+            ->and(gizRow('all', 0, StageParamKey::CorenRank)['value'])->toBe(28)
+            ->and(gizRow('all', 0, StageParamKey::CorenRank)['quote'])->toBe(gizData('giant_schnauzer.trainability.coren_rank.quote'))
+            ->and(gizData('giant_schnauzer.trainability.coren_rank.value'))->toBe(28)
+            ->and(gizRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('giant_schnauzer.lifespan.rkc')
+            ->and(gizRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S495')
+            ->and(gizRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(12.0)
+            ->and(gizRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(gizData('giant_schnauzer.lifespan.rkc.quote'));
 
         // Brushing every day (RKC "Grooming: Every day" → 7) — the rule, verified.
-        $grooming = gsRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
+        $grooming = gizRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
         expect($grooming['value'])->toBe(7)
             ->and($grooming['source_id'])->toBe('S495')
-            ->and($grooming['quote'])->toBe(gsData('giant_schnauzer.suitability.rkc_grooming.quote'))
-            ->and($grooming['quote'])->toBe(gsData('proposed_game_parameters.giant_schnauzer.grooming.quote'))
+            ->and($grooming['quote'])->toBe(gizData('giant_schnauzer.suitability.rkc_grooming.quote'))
+            ->and($grooming['quote'])->toBe(gizData('proposed_game_parameters.giant_schnauzer.grooming.quote'))
             ->and($grooming['verified'])->toBeTrue()
             ->and($grooming['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R13_DOG_GROOMING)
             // The puppy's weekly "new experience" (M5-R17) with the breed's own PDSA quote.
-            ->and(gsRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
-            ->and(gsRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S496');
+            ->and(gizRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
+            ->and(gizRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S496');
 
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'giant-schnauzer');
         // Like the other pedigree breeds: no individual variation row; no digestion warning (no source).
@@ -304,7 +304,7 @@ describe('life-stage data against data.json', function () {
 
 describe('stage rules', function () {
     it('walks 10 min × age up to 120 minutes = 12,000 steps and 90 minutes = 9,000 steps as senior', function (int $arrival, LifeStage $stage, int $minutes, int $steps) {
-        $pet = gsPet($arrival);
+        $pet = gizPet($arrival);
         $rules = app(LifeStageService::class)->rulesOn($pet, $pet->localDate(now()));
 
         expect($rules->lifeStage)->toBe($stage)
@@ -335,7 +335,7 @@ describe('stage rules', function () {
 
     it('learns faster than a mixed breed (Coren Above average tier, × 1.2) with no individual factor', function () {
         $training = app(TrainingService::class);
-        $dog = gsPet(36);
+        $dog = gizPet(36);
         $date = $dog->localDate(now());
 
         // learningFactor() is the individual factor (none for a pedigree breed); the breed multiplier is in the gain.
@@ -352,7 +352,7 @@ describe('generate-pin: paid like the Border Collie', function () {
             $body['plan'] = $plan;
         }
 
-        $response = gsPin($parent, $body);
+        $response = gizPin($parent, $body);
 
         if ($reason !== null) {
             $response->assertStatus(422)->assertJsonPath('reason', $reason);
@@ -361,7 +361,7 @@ describe('generate-pin: paid like the Border Collie', function () {
         }
 
         $response->assertOk()->assertJsonPath('plan', $petPlan);
-        $pet = Pet::findOrFail(gsLogin($response->json('pin'))->assertOk()->json('pet.id'));
+        $pet = Pet::findOrFail(gizLogin($response->json('pin'))->assertOk()->json('pet.id'));
         expect($pet->plan->value)->toBe($petPlan)
             ->and($pet->breed_type)->toBe(BreedType::GiantSchnauzer)
             ->and($pet->species)->toBe(Species::Dog)
@@ -376,8 +376,8 @@ describe('generate-pin: paid like the Border Collie', function () {
         $parent = User::factory()->parent()->create();
         $pets = [];
         foreach (['border_collie', 'giant_schnauzer'] as $breed) {
-            $pin = gsPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
-            $pets[$breed] = Pet::findOrFail(gsLogin($pin)->assertOk()->json('pet.id'));
+            $pin = gizPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
+            $pets[$breed] = Pet::findOrFail(gizLogin($pin)->assertOk()->json('pet.id'));
         }
 
         $dog = $pets['giant_schnauzer'];
@@ -391,7 +391,7 @@ describe('generate-pin: paid like the Border Collie', function () {
     });
 
     it('gets the full media set once the challenge is bought', function () {
-        $pet = gsPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
+        $pet = gizPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
         $entitlement = app(MediaEntitlementService::class);
 
         expect($entitlement->tierFor($pet))->toBe(MediaEntitlementService::TIER_FULL)
@@ -471,7 +471,7 @@ describe('AI appearance (runbook rule: standard colours only — black, pepper a
             ->and($v1['visual_traits']['color_scheme'])->toBeIn(['solid black', 'pepper and salt with a dark facial mask', 'black and silver'])
             ->and($v1['visual_traits']['eye_color'])->toBe('dark');
 
-        $pet = gsPet(108, ['origin' => PetOrigin::Adopted]);
+        $pet = gizPet(108, ['origin' => PetOrigin::Adopted]);
         $prompt = app(PetAppearancePrompt::class)->imagePromptForPet($pet->forceFill(['pet_dna' => app(PetDnaService::class)->forNewPet($pet)]), LifeStage::Senior);
         expect($prompt)->toContain('Giant Schnauzer')->toContain(PetAppearancePrompt::ADOPTED_AVOID)->toContain(PetAppearancePrompt::STYLE);
     });
@@ -492,9 +492,9 @@ describe('no health statistics in the app; no welfare chip, in marketing (runboo
         expect(array_keys(config('breed_suitability.vocabulary')))->not->toContain('hypoallergenic')
             // RKC Breed Watch Category 1 (S495) → no welfare chip; RKC "Over 12 years" → no shorter_lifespan.
             ->and(array_intersect($tags['consider'], ['brachycephalic_breathing', 'short_muzzle_breathing', 'back_spine', 'hips_hind_legs', 'heart_and_spine', 'sensitive_skin', 'eyelid_problems', 'shorter_lifespan']))->toBe([])
-            ->and(gsData('giant_schnauzer.suitability.rkc_breed_watch.value'))->toBe('Category 1')
-            ->and(gsData('proposed_game_parameters.giant_schnauzer.marketing.source_id'))->toBe('S495')
-            ->and(gsData('proposed_game_parameters.giant_schnauzer.marketing.value'))->toContain('in marketing: yes')
+            ->and(gizData('giant_schnauzer.suitability.rkc_breed_watch.value'))->toBe('Category 1')
+            ->and(gizData('proposed_game_parameters.giant_schnauzer.marketing.source_id'))->toBe('S495')
+            ->and(gizData('proposed_game_parameters.giant_schnauzer.marketing.value'))->toContain('in marketing: yes')
             // The Dogs Trust rule of thumb (84) and McMillan 2024 via Wikipedia (109) are alternatives only — never seeded.
             ->and(collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'giant-schnauzer')->where('key', StageParamKey::StartsAtMonths->value)->pluck('value')->all())->not->toContain(84)->not->toContain(109);
     });
@@ -510,14 +510,14 @@ describe('suitability tags (own file, runbook "Own files only")', function () {
             ->and($tags['consider'])->not->toContain('sheds')->not->toContain('chases_small_pets')->not->toContain('older_children')
             ->not->toContain('shorter_lifespan');
 
-        expect(gsData('giant_schnauzer.suitability.rkc_exercise.quote'))->toBe('Exercise: More than 2 hours per day')
-            ->and(gsData('giant_schnauzer.suitability.rkc_size_of_home.quote'))->toBe('Size of home: Large house')
-            ->and(gsData('giant_schnauzer.suitability.rkc_shedding.quote'))->toBe('Sheds: No')
-            ->and(gsData('giant_schnauzer.suitability.rkc_grooming.quote'))->toBe('Grooming: Every day')
-            ->and(gsData('giant_schnauzer.behaviour.experienced_owner.quote'))->toContain('experienced dog owners')
-            ->and(gsData('giant_schnauzer.suitability.petmd_children.quote'))->toContain('small children')
-            ->and(gsData('giant_schnauzer.behaviour.time_alone.quote'))->toContain("aren't home much")
+        expect(gizData('giant_schnauzer.suitability.rkc_exercise.quote'))->toBe('Exercise: More than 2 hours per day')
+            ->and(gizData('giant_schnauzer.suitability.rkc_size_of_home.quote'))->toBe('Size of home: Large house')
+            ->and(gizData('giant_schnauzer.suitability.rkc_shedding.quote'))->toBe('Sheds: No')
+            ->and(gizData('giant_schnauzer.suitability.rkc_grooming.quote'))->toBe('Grooming: Every day')
+            ->and(gizData('giant_schnauzer.behaviour.experienced_owner.quote'))->toContain('experienced dog owners')
+            ->and(gizData('giant_schnauzer.suitability.petmd_children.quote'))->toContain('small children')
+            ->and(gizData('giant_schnauzer.behaviour.time_alone.quote'))->toContain("aren't home much")
             // No high-prey-drive statement → no chases_small_pets.
-            ->and(gsData('giant_schnauzer.behaviour.other_pets.quote'))->not->toContain('prey drive');
+            ->and(gizData('giant_schnauzer.behaviour.other_pets.quote'))->not->toContain('prey drive');
     });
 });
