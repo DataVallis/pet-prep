@@ -20,7 +20,7 @@
 | M1 Core loop | 20 done / 4 partial (M1-10 no »24-h day« test, M1-11 no nav library, M1-17 responses hand-typed, M1-19) / 0 open | ~90 % |
 | M2 Parent + auth | 21 done / 6 partial / 11 open (M2-01b, M2-03 rest, M2-07, M2-08a/b, M2-10b, Facebook, several (D)) | ~75 % |
 | M3 Notifications, sensors, payments | 8 done / 5 partial (M3-01 no `expo-dev-client`, M3-04 … M3-07 not device-verified) / 1 open (M3-03 local reminders) | ~75 % |
-| M4 AI media | 10 done / 1 partial (M4-05b: only per-IP limit left) / 3 open (M4-05 object storage, M4-06 fallback, M4-09 tokens) | ~80 % |
+| M4 AI media | 10 done / 1 partial (M4-05b: only per-IP limit left) / 3 open (M4-05 object storage — code built 24. 10., waits for David's switch D23, CDN open; M4-06 fallback, M4-09 tokens) | ~80 % |
 | M5 Production + beta | 3 done / 5 partial (M5-04, M5-05, M5-06, M5-07, M5-09) / 1 open (M5-08 analytics) | ~55 % |
 | M5-R Realism | 75 done / 5 partial / 11 open (R07, R09 parent + sources, R11-07, R12, R14, R15, R18–R20) | ~80 % |
 | M5-F Device fixes | 13 done / 0 open (M5-F10 OTA done 24. 10.) | 100 % |
@@ -62,7 +62,7 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 16. **Android payments / sign-in (David):** RevenueCat Play service-account JSON, Android product in the current offering's package, Android OAuth client with the Play signing SHA-1.
 17. **Breeds are hard-coded in the app** (`mobile/src/modules/species/species.ts` `KNOWN_BREEDS`) — a new breed reaches iOS with the next OTA, Android only with a new build until Android has OTA (candidate: server-driven breed catalogue). `app-release.json` (website »V aplikaciji« / »Kmalu«) is recorded only when both platforms got the update.
 18. **Shared looks (M5-R21):** old look files stay after regenerate; regenerate does not fix earlier stages; `auto-` keys not migrated when a colour list is added later.
-19. **Media storage:** pet media on the server disk (`app_storage` volume); object storage + CDN (M4-05) before many families (SCALING.md); no per-IP connection limit in Caddy (M4-05b).
+19. **Media storage:** pet media on the server disk (`app_storage` volume); object storage built behind `PET_MEDIA_DISK=s3` (M4-05, 24. 10., off — David's runbook DEPLOYMENT D23), CDN still open (SCALING.md §1); no per-IP connection limit in Caddy (M4-05b).
 20. **Small code debt found in the audit:** `backend/.env.example` lacks `REVERB_*` (M0-06); `pestphp/*` still in `require` (M0-07); `expo-dev-client` missing (M3-01); no »24-h day« integration test (M1-10); 9 services still call `isParent()` / `isChild()` (M2-03).
 
 ## 4. Environment & configuration
