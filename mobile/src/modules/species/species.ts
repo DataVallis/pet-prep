@@ -77,6 +77,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   scottish_terrier: 'dog',
   weimaraner: 'dog',
   italian_greyhound: 'dog',
+  giant_schnauzer: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -158,6 +159,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'scottish_terrier',
   'weimaraner',
   'italian_greyhound',
+  'giant_schnauzer',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */
