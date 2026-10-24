@@ -61,7 +61,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "a3a1cf2219b21d96af5123baaff0438d676e9cbb7622a59e7a491c9d028c3f27"
+      "sha256": "14b9ca8e26f99701cb5dde44152c9d3a1a8342a8b7718ecdd3fff522c3009054"
     }
   },
   "suitability_vocabulary": {
@@ -33401,7 +33401,12 @@
           "S486"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "italian-greyhound.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `italian_greyhound` (viri S484–S490; ponovno S8, S10, S11, S14, S24, S35, S45, S123, S174) |
 | Izvor | FCI št. 200 »Piccolo Levriero Italiano«, skupina 10, sekcija 3 (kratkodlaki hrti), Italija (S484) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 56. mesto »Italian Greyhound« (S174, prebrano 2026-10-23) |
-| PR-ji | pet-prep #365 (pasma) · portret — · spletna stran — |
+| PR-ji | pet-prep #365 (pasma, združen `0ad5e09`) · portret #366 · spletna stran: pet-prep-website, veja `feat/register-italian-greyhound` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -30,6 +30,7 @@
 | 2026-10-23 | pravilo runbooka (§3) | marketing: **v aplikaciji da, v marketingu da** — nikoli kot pes za majhne otroke, »igrača« za nošenje, pes brez povodca na odprtem ali »hipoalergen« | veterinarsko odsvetovanje oglaševanja velja le za pse s sploščenim obrazom (BVA S92) | #365 |
 | 2026-10-23 | pravilo runbooka (§3) | barve za AI in izbirnik: **rumenorjav** (portret), modrosiv, črn, kremast, rdeč, bel, rumenorjavo-bel; nikoli merle, tigrast ali s porjavelimi oznakami; vitek, a zdrav (nikoli shujšan) | KC S485 »Black, blue, cream, fawn, red, white, or any of these colours broken with white.« in »Merle, black or blue with tan markings, brindle … unacceptable.« (uteži barv brez vira → `verified: false`; rumenorjava za portret je predlog Claude) | #365 |
 | 2026-10-23 | predlog Claude, David lahko spremeni | ime SL »mali italijanski hrt« (slug `mali-italijanski-hrt`); iskalni ključi tudi »italijanski hrt«, »italijanski hrtek«, »piccolo levriero italiano«, »iggy« | običajno slovensko ime (MrPet.si S490, tier C); pri KZS ni preverjeno | #365 |
+| 2026-10-24 | pravilo runbooka (§8) | AI portret: realistična fotografija odraslega psa, rumenorjava kratka fina dlaka, vitka postava hrta v malem, zavihani uhlji, dolg nizko nošen rep, svetla studijska podlaga, naravna razmerja; sprejet v prvem poskusu (zagon 40042977749, koda `0ad5e09`, brez produkcijske namestitve, 0,15 $) | barva portreta = najtežja barva iz `breed_appearance.php` | #366 |
 | 2026-10-23 | pravilo runbooka (§2.3) | seznam za vzreditelja (najboljša praksa): pregled oči BVA/KC/ISDS | RKC S486 »To support the breed’s health, responsible breeders should ensure they complete all tests in best practice.« Brez novega ključa | #365 |
 | 2026-10-23 | pravilo runbooka | nov zdravstveni ključ registra **`periodontal_disease`** (bolezen obzobnih tkiv) — mirna poved brez številk; ostali: `epilepsy`, `kneecap_luxation`, `pra_eye_disease`, `autoimmune_conditions`, `legg_perthes`, `hypothyroidism` | PDSA S487, PetMD S488 | #365 |
 
@@ -41,7 +42,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 108 mesecev; 4 → 3 → 2 obroka) | 🛠 | 💶 izziv | M5-R10-60 | 2026-10-23 |
 | Česanje 1× na teden (rutina »Počeši«), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-10-23 |
 | Barva (izbirnik barve: rumenorjav, modrosiv, črn, kremast, rdeč, bel, rumenorjavo-bel) | 🛠 | 💶 izziv | M5-R21 | 2026-10-23 |
-| AI portret v registru | 🗓 | — | M5-R11-04 | — |
+| AI portret v registru (rumenorjav, sprejet v prvem poskusu, zagon 40042977749) | ✅ | — | M5-R11-04 | 2026-10-24 |
 | Stran na petprep.si (`/animals/dogs/italian-greyhound`, `/sl/zivali/psi/mali-italijanski-hrt`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
