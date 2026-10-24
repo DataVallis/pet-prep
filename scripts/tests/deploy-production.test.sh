@@ -224,6 +224,21 @@ check "no docker/git/curl call at all" test ! -s "$CALL_LOG"
 check "no env secret in output" no_secret
 finish
 
+start pet_media_s3_keys "PET_MEDIA_DISK=s3 without bucket keys → preflight error, nothing called"
+new_root dir; printf 'PET_MEDIA_DISK=s3\nPET_MEDIA_S3_BUCKET=petprep-media\nPET_MEDIA_S3_KEY=kid\n' >> "$ROOT/.env"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "no docker/git/curl call at all" test ! -s "$CALL_LOG"
+check "names the missing key" out_has "PET_MEDIA_DISK=s3 needs PET_MEDIA_S3_SECRET"
+check "no env secret in output" no_secret
+finish
+
+start pet_media_s3_ok "PET_MEDIA_DISK=s3 with bucket + keys → deploy continues"
+new_root dir; printf 'PET_MEDIA_DISK=s3\nPET_MEDIA_S3_BUCKET=petprep-media\nPET_MEDIA_S3_KEY=kid\nPET_MEDIA_S3_SECRET=sec\n' >> "$ROOT/.env"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+finish
+
 start serve_via_php "PET_MEDIA_SERVE_VIA=php in .env (emergency fallback) → warning, deploy continues"
 new_root dir; echo "PET_MEDIA_SERVE_VIA=php" >> "$ROOT/.env"
 run_deploy -- --from "$ROOT/incoming" sha-v2

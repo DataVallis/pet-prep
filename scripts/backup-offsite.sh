@@ -254,6 +254,10 @@ if [ "$MODE" = "verify" ]; then
         if [ "$live_objects" -gt 0 ] && [ "$mirrored" -eq 0 ]; then
             fail "media mirror holds no files while the bucket has ${live_objects}."
         fi
+        # QA #374 m6: files added since last night are expected to be missing — not more than 5 %.
+        if [ $(( mirrored * 100 )) -lt $(( live_objects * 95 )) ]; then
+            fail "media mirror holds only ${mirrored} of ${live_objects} bucket files (< 95 %)."
+        fi
     fi
     log "Restore test passed."
     exit 0
@@ -321,19 +325,36 @@ log "DB snapshot ${db_id:0:8} stored."
 log "Pet media → restic…"
 restic_run "$MEDIA_TIMEOUT" backup "$MEDIA_PATH" --tag media --ignore-ctime --quiet || fail "media backup failed."
 
+# Media mirror problems are collected and reported AFTER the restic retention (QA #374 m5):
+# a bad night of the mirror must never skip pruning the restic snapshots (35-day rule).
+MIRROR_FAILURE=""
 if [ "$OBJECT_MEDIA" = "1" ]; then
     [ -z "$MIRROR_PROBLEM" ] || fail "$MIRROR_PROBLEM"
     today="$(date -u +%Y-%m-%d)"
-    log "Pet media bucket → mirror (rclone sync, changed / deleted files kept under deleted/${today})…"
-    rclone_run "$MEDIA_TIMEOUT" sync "$MEDIA_SRC" "$MEDIA_DST" --backup-dir "mirror:${MIRROR_BUCKET}/deleted/${today}" --fast-list --stats-one-line --stats 0 \
-        || fail "media mirror (rclone sync) failed."
+    live_objects="$(rclone_count "$MEDIA_SRC" || true)"
+    mirrored="$(rclone_count "$MEDIA_DST" || true)"
+    case "${live_objects}" in ''|*[!0-9]*) live_objects="" ;; esac
+    case "${mirrored}" in ''|*[!0-9]*) mirrored="" ;; esac
+    if [ -z "$live_objects" ] || [ -z "$mirrored" ]; then
+        MIRROR_FAILURE="could not count the media bucket / mirror objects — mirror not synced."
+    elif [ "$live_objects" -eq 0 ] && [ "$mirrored" -gt 0 ]; then
+        # QA #374 m6: an empty / wrong source must never empty the mirror.
+        MIRROR_FAILURE="media bucket is EMPTY but the mirror holds ${mirrored} files — sync skipped (wrong bucket / prefix? check before anything else)."
+    else
+        # Never delete more than 10 % of the mirror (min 50) in one night; a bigger loss stops for a human.
+        max_delete=$(( mirrored / 10 )); [ "$max_delete" -ge 50 ] || max_delete=50
+        log "Pet media bucket (${live_objects}) → mirror (${mirrored}) (rclone sync, max ${max_delete} deletions, changed / deleted files kept under deleted/${today})…"
+        rclone_run "$MEDIA_TIMEOUT" sync "$MEDIA_SRC" "$MEDIA_DST" --backup-dir "mirror:${MIRROR_BUCKET}/deleted/${today}" --max-delete "$max_delete" --fast-list --stats-one-line --stats 0 \
+            || MIRROR_FAILURE="media mirror (rclone sync) failed (more than ${max_delete} deletions are refused on purpose)."
+    fi
     # Deleted families leave the mirror within 35 days, like the restic snapshots.
     cutoff="$(date -u -d "${MEDIA_RETENTION_DAYS} days ago" +%Y-%m-%d)"
     for day in $(rclone_run "$SHORT_TIMEOUT" lsf --dirs-only "mirror:${MIRROR_BUCKET}/deleted" || true); do
         day="${day%/}"
         case "$day" in [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]) ;; *) continue ;; esac
         if [[ "$day" < "$cutoff" ]]; then
-            rclone_run "$SHORT_TIMEOUT" purge "mirror:${MIRROR_BUCKET}/deleted/${day}" || fail "could not purge the media mirror's deleted/${day}."
+            rclone_run "$SHORT_TIMEOUT" purge "mirror:${MIRROR_BUCKET}/deleted/${day}" \
+                || MIRROR_FAILURE="${MIRROR_FAILURE:+${MIRROR_FAILURE} }could not purge the media mirror's deleted/${day}."
         fi
     done
 fi
@@ -346,6 +367,8 @@ if [ "$(date -u +%u)" = "7" ]; then
     log "Sunday: restic check (5 % data sample)…"
     restic_run "$MEDIA_TIMEOUT" check --read-data-subset=5% || fail "restic check found a problem."
 fi
+
+[ -z "$MIRROR_FAILURE" ] || fail "$MIRROR_FAILURE"
 
 mkdir -p "$(dirname "$STATUS_FILE")"
 date -u +%Y-%m-%dT%H:%M:%SZ > "$STATUS_FILE"

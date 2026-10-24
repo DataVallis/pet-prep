@@ -47,7 +47,12 @@ case "\$*" in
             printf -- '$DUMP_OK'
         fi ;;
     *"rclone/rclone"*" size --json "*)
-        if [[ "\$*" == *"mirror:"* ]] && [ -e "\$WORK/mirror-empty" ]; then echo '{"count":0,"bytes":0}'; else echo '{"count":4,"bytes":1234}'; fi ;;
+        if [[ "\$*" == *"mirror:"* ]]; then
+            if [ -e "\$WORK/mirror-empty" ]; then echo '{"count":0,"bytes":0}'; elif [ -e "\$WORK/mirror-partial" ]; then echo '{"count":90,"bytes":1}'; else echo '{"count":100,"bytes":1234}'; fi
+        else
+            if [ -e "\$WORK/bucket-empty" ]; then echo '{"count":0,"bytes":0}'; else echo '{"count":100,"bytes":1234}'; fi
+        fi ;;
+    *"rclone/rclone"*" purge "*) [ -e "\$WORK/purge-fails" ] && exit 1; true ;;
     *"rclone/rclone"*" lsf --dirs-only "*) printf '2020-01-01/\n%s/\nnot-a-date/\n' "\$(/bin/date -u +%Y-%m-%d)" ;;
     *"rclone/rclone"*" sync "*)
         cp "\$(echo "\$*" | sed -n 's/.*--env-file \([^ ]*\).*/\1/p')" "\$WORK/rclone-env-seen" 2>/dev/null || true
@@ -216,7 +221,7 @@ MEDIA_MIRROR_S3_SECRET=dst-secret
 ENV
 run
 check "s3 run exits 0" '[ "$rc" -eq 0 ]'
-check "s3: bucket synced to mirror current/ with a dated deleted/ dir" 'grep -q "rclone/rclone:[0-9.]* sync media:petprep-media/pet-media mirror:petprep-media-mirror/current --backup-dir mirror:petprep-media-mirror/deleted/$(/bin/date -u +%Y-%m-%d)" "$LOG"'
+check "s3: bucket synced to mirror current/ with a dated deleted/ dir and a deletion cap" 'grep -q "rclone/rclone:[0-9.]* sync media:petprep-media/pet-media mirror:petprep-media-mirror/current --backup-dir mirror:petprep-media-mirror/deleted/$(/bin/date -u +%Y-%m-%d) --max-delete 50" "$LOG"'
 check "s3: secrets never on a command line" '! grep -q "src-secret\|dst-secret" "$LOG"'
 check "s3: rclone gets both remotes from the env-file" 'grep -q "RCLONE_CONFIG_MEDIA_SECRET_ACCESS_KEY=src-secret" "$WORK/rclone-env-seen" && grep -q "RCLONE_CONFIG_MIRROR_ENDPOINT=https://nbg1.your-objectstorage.com" "$WORK/rclone-env-seen"'
 check "s3: deleted/ older than 35 days purged, today and junk kept" 'grep -q "purge mirror:petprep-media-mirror/deleted/2020-01-01" "$LOG" && [ "$(grep -c " purge " "$LOG")" -eq 1 ]'
@@ -227,11 +232,24 @@ run
 rm -f "$WORK/rclone-fails"
 check "s3: failed sync → exit 1 + fail ping, no status" '[ "$rc" -eq 1 ] && grep -q "media mirror (rclone sync) failed" <<<"$out" && grep -q "ping/fail" "$LOG"'
 run verify
-check "s3 verify counts bucket and mirror" '[ "$rc" -eq 0 ] && grep -q "Media objects: bucket 4, mirror 4" <<<"$out"'
+check "s3 verify counts bucket and mirror" '[ "$rc" -eq 0 ] && grep -q "Media objects: bucket 100, mirror 100" <<<"$out"'
 touch "$WORK/mirror-empty"
 run verify
 rm -f "$WORK/mirror-empty"
 check "s3 verify: empty mirror of a non-empty bucket fails" '[ "$rc" -eq 1 ] && grep -q "mirror holds no files" <<<"$out"'
+touch "$WORK/mirror-partial"
+run verify
+rm -f "$WORK/mirror-partial"
+check "s3 verify: mirror < 95 % of the bucket fails" '[ "$rc" -eq 1 ] && grep -q "only 90 of 100" <<<"$out"'
+touch "$WORK/bucket-empty"
+run
+rm -f "$WORK/bucket-empty"
+check "s3: empty bucket + full mirror → no sync, run fails" '[ "$rc" -eq 1 ] && ! grep -q " sync media:" "$LOG" && grep -q "bucket is EMPTY" <<<"$out"'
+check "s3: empty bucket → restic retention still ran" 'grep -q "forget --group-by host,tags --keep-within 35d" "$LOG"'
+touch "$WORK/purge-fails"
+run
+rm -f "$WORK/purge-fails"
+check "s3: purge failure → retention still runs, run fails at the end" '[ "$rc" -eq 1 ] && grep -q "forget --group-by host,tags --keep-within 35d" "$LOG" && grep -q "could not purge" <<<"$out" && [ "$(line_of "purge mirror:")" -lt "$(line_of "forget --group-by")" ]'
 cp "$WORK/env.app.bak" "$WORK/root/.env"
 
 echo "backup-offsite harness: ${PASS} passed, ${FAIL} failed"

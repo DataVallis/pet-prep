@@ -11,7 +11,7 @@ use Illuminate\Support\Number;
  * M4-05: copy the pet media files from the local disk (storage/app/pet-media) to the
  * private object storage bucket (disk pet_media_s3, PET_MEDIA_S3_*) — same relative
  * paths, no DB change, zero AI spend. Only files a DB row points at (pet / look media,
- * candidates, growth album, contact sheets); orphans are reported, never copied. Manual only (David, runbook DEPLOYMENT.md D22).
+ * candidates, growth album, contact sheets); orphans are reported, never copied. Manual only (David, runbook DEPLOYMENT.md D23).
  *
  *   --dry-run      list what would be copied; writes nothing
  *   --limit=N      copy at most N files this run (resumable: the next run continues)
@@ -57,7 +57,8 @@ class MoveMediaToObjectStorageCommand extends Command
             return self::FAILURE;
         }
 
-        $status = $storage->status(fresh: true);
+        // QA #374 M1: prove the keys can write (put + read + delete of a probe object).
+        $status = $storage->status(fresh: true, write: true);
         if ($status['reachable'] !== true) {
             $this->error('Bucket not reachable: '.($status['error'] ?? 'unknown error'));
 
@@ -72,10 +73,10 @@ class MoveMediaToObjectStorageCommand extends Command
             }
         });
 
-        $this->table(['files', 'copied', 'already there', 'would copy', 'remaining (limit)', 'verified', 'mismatched', 'repaired', 'failed', 'bytes moved', 'DB paths on neither disk', 'orphans (not copied)'], [[
+        $this->table(['files', 'copied', 'already there', 'would copy', 'remaining (limit)', 'verified', 'mismatched', 'repaired', 'failed', 'bytes moved', 'DB paths on neither disk', 'orphans (not copied)', 'vanished'], [[
             $counts['total'], $counts['copied'], $counts['already'], $counts['would_copy'], $counts['remaining'],
             $verify ? $counts['verified'] : '—', $verify ? $counts['mismatched'] : '—', $verify ? $counts['repaired'] : '—',
-            $counts['failed'], Number::fileSize($counts['bytes'], 1), $counts['missing_in_db'], $counts['orphans'],
+            $counts['failed'], Number::fileSize($counts['bytes'], 1), $counts['missing_in_db'], $counts['orphans'], $counts['vanished'],
         ]]);
 
         $unresolved = $counts['failed'] + ($counts['mismatched'] - $counts['repaired']);

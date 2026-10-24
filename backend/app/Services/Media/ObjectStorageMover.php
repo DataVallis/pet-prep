@@ -123,7 +123,7 @@ class ObjectStorageMover
 
     /**
      * @param  callable(string, string): void|null  $report  ($path, outcome) per file
-     * @return array{total: int, copied: int, already: int, would_copy: int, failed: int, verified: int, mismatched: int, repaired: int, bytes: int, missing_in_db: int, remaining: int, orphans: int}
+     * @return array{total: int, copied: int, already: int, would_copy: int, failed: int, verified: int, mismatched: int, repaired: int, bytes: int, missing_in_db: int, remaining: int, orphans: int, vanished: int}
      */
     public function run(bool $dryRun = false, ?int $limit = null, bool $verify = false, ?callable $report = null): array
     {
@@ -131,15 +131,21 @@ class ObjectStorageMover
         $this->verified = [];
         $source = $this->source();
         $target = $this->target();
-        $counts = ['total' => 0, 'copied' => 0, 'already' => 0, 'would_copy' => 0, 'failed' => 0, 'verified' => 0, 'mismatched' => 0, 'repaired' => 0, 'bytes' => 0, 'missing_in_db' => 0, 'remaining' => 0, 'orphans' => 0];
+        $counts = ['total' => 0, 'copied' => 0, 'already' => 0, 'would_copy' => 0, 'failed' => 0, 'verified' => 0, 'mismatched' => 0, 'repaired' => 0, 'bytes' => 0, 'missing_in_db' => 0, 'remaining' => 0, 'orphans' => 0, 'vanished' => 0];
 
         $budget = $limit !== null ? max(0, $limit) : null;
 
         foreach ($this->files() as $path) {
-            $counts['total']++;
-            $size = (int) $source->size($path);
-
+            // QA #374 m3: a file deleted since the listing (pet deleted meanwhile) is not an error.
             try {
+                if (! $source->exists($path)) {
+                    $counts['vanished']++;
+                    $report($path, 'vanished (deleted locally meanwhile)');
+
+                    continue;
+                }
+                $counts['total']++;
+                $size = (int) $source->size($path);
                 $present = $this->sameSize($target, $path, $size);
             } catch (Throwable $e) {
                 $counts['failed']++;

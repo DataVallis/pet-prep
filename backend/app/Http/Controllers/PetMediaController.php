@@ -40,7 +40,7 @@ use Symfony\Component\HttpFoundation\Response;
  * Object storage (M4-05, PET_MEDIA_DISK=s3): after the same checks the answer is
  * a `302` to a short-lived presigned URL of the private bucket
  * (MediaStorage::presignedUrl(), ≤ PET_MEDIA_S3_URL_TTL_SECONDS and never past our
- * own URL's expiry) with `Cache-Control: no-store` — players / downloaders follow
+ * own URL's expiry; HEAD → a presigned HeadObject; < 5 s left → 403) with `Cache-Control: no-store` — players / downloaders follow
  * it (Range is answered by the bucket), the app's media cache keys on OUR URL
  * (path + v), and the redirect itself is never cached past the presigned lifetime.
  * No HEAD to the bucket per request: a missing object is the bucket's 404.
@@ -120,8 +120,11 @@ class PetMediaController extends Controller
             abort_unless($servable && $path !== '', 404);
 
             $notAfter = $expires > 0 ? CarbonImmutable::createFromTimestampUTC($expires) : null;
+            // HEAD gets a presigned HeadObject (a presigned GET refuses HEAD); < 5 s left → 403.
+            $target = $storage->presignedUrl($path, $mime, $notAfter, request()->getMethod());
+            abort_if($target === null, 403);
 
-            return redirect()->away($storage->presignedUrl($path, $mime, $notAfter), 302, [
+            return redirect()->away($target, 302, [
                 'Cache-Control' => 'no-store, private',
                 'Referrer-Policy' => 'no-referrer',
             ]);

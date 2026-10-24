@@ -261,7 +261,7 @@ ls -lh /opt/petprep/backups/
 
 Any S3 repository works instead (`RESTIC_REPOSITORY=s3:https://…/bucket` + `AWS_ACCESS_KEY_ID` / `AWS_SECRET_ACCESS_KEY` in `backup.env`, no `backup-ssh/`).
 
-**Pet media on object storage (M4-05, `PET_MEDIA_DISK=s3` in `/opt/petprep/.env`):** restic can only back up the volume, so the script additionally mirrors the media bucket with rclone (`rclone/rclone:1.68.2`, Docker) to a **second bucket in another location** — add to `backup.env`:
+**Pet media on object storage (M4-05, `PET_MEDIA_DISK=s3` in `/opt/petprep/.env`):** restic can only back up the volume, so the script additionally mirrors the media bucket with rclone (`rclone/rclone:1.68.2`, Docker) to a **second bucket in another location, in a separate Hetzner Console project with its own credentials** (QA #374 M4: the mirror keys live only in `backup.env` — never in `/opt/petprep/.env`, never mounted into the app containers — so a leaked app key cannot delete the backup) — add to `backup.env`:
 ```
 MEDIA_MIRROR_S3_BUCKET=petprep-media-mirror
 MEDIA_MIRROR_S3_KEY=<access key of the mirror bucket>
@@ -269,7 +269,7 @@ MEDIA_MIRROR_S3_SECRET=<secret>
 MEDIA_MIRROR_S3_ENDPOINT=https://nbg1.your-objectstorage.com
 MEDIA_MIRROR_S3_REGION=nbg1
 ```
-(`_ENDPOINT` / `_REGION` default to nbg1.) Nightly, after the DB and the volume: `rclone sync` bucket → `mirror:<bucket>/current`, files deleted / overwritten that night go to `deleted/<YYYY-MM-DD>/`, folders older than 35 days are purged (same retention as restic). The credentials reach rclone only through a 600 env-file that is removed at exit. Missing mirror keys → the DB is still backed up, then the run fails (fail ping). `verify` also checks that the mirror holds files when the bucket has some. The volume step keeps running for the local copies until `--prune-local`.
+(`_ENDPOINT` / `_REGION` default to nbg1.) Nightly, after the DB and the volume: `rclone sync` bucket → `mirror:<bucket>/current`, files deleted / overwritten that night go to `deleted/<YYYY-MM-DD>/`, folders older than 35 days are purged (same retention as restic). Guards: an **empty bucket while the mirror has files → no sync** (wrong bucket / prefix must never empty the mirror), at most 10 % of the mirror (min 50 files) deleted per night (`--max-delete`; more → the run fails for a human); mirror / purge failures are reported after the restic retention, so the 35-day rule still runs. The credentials reach rclone only through a 600 env-file that is removed at exit. Missing mirror keys → the DB is still backed up, then the run fails (fail ping). `verify` also checks that the mirror holds ≥ 95 % of the bucket's files. The volume step keeps running for the local copies until `--prune-local`.
 
 **Commands:** `backup-offsite.sh snapshots` (list), `backup-offsite.sh verify` (latest `db` snapshot is a complete pg_dump; latest media snapshot holds files when the volume has some) — **run `verify` monthly**. A run killed hard can leave a stale restic lock; restic ignores locks older than ~30 min, otherwise `docker run --rm -i --env-file /opt/petprep/backup.env -v /opt/petprep/backup-ssh:/root/.ssh:ro restic/restic:0.17.3 -o "sftp.command=ssh -F /root/.ssh/config storagebox -s sftp" unlock`. Restore: §7 "Off-site restore".
 

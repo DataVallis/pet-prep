@@ -1379,11 +1379,11 @@ sequenceDiagram
   Q->>S3: StorePetMedia: putFileAs {pet}/{state}-gN.mp4 (faststart first)
   App->>API: GET /api/media/{id}?expires&v&signature (cache key = path + v)
   API->>API: signature + optional token → PetPolicy::listen (unchanged)
-  API-->>App: 403 / 404 (no stored file) — or 302 Location: presigned bucket URL<br/>(≤ 300 s, ≤ expires, no-store, no-referrer)
+  API-->>App: 403 (also < 5 s left) / 404 (no stored file) — or 302 Location: presigned bucket URL<br/>(≤ 300 s, ≤ expires, HEAD → HeadObject, no-store, no-referrer)
   App->>S3: GET presigned URL (Range 206 for AVPlayer)
   S3-->>App: bytes (Content-Type / inline / private max-age from the presign)
   Note over API,S3: fal fetches start frames through the same redirect.<br/>media:move-to-object-storage copies the local files first (same keys, --verify MD5, never deletes);<br/>--prune-local only after the switch.
-  Q->>Mirror: nightly backup-offsite.sh: rclone sync → current/, deleted/<date>/ kept 35 days
+  Q->>Mirror: nightly backup-offsite.sh: rclone sync → current/, deleted/<date>/ kept 35 days<br/>(empty bucket → no sync; ≤ 10 % deletions; mirror bucket in a separate Hetzner project)
 ```
 
 ```mermaid

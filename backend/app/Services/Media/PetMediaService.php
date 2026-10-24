@@ -1663,9 +1663,16 @@ class PetMediaService
         return $this->fileModifiedAt((string) $slot->storage_path);
     }
 
-    /** Modification time of a file on the pet-media disk (null if missing / unreadable). */
+    /**
+     * Modification time of a file on the pet-media disk (null if missing / unreadable).
+     * On object storage always null (QA #374 m4: no HEAD per row — callers use DB times).
+     */
     public function fileModifiedAt(string $path): ?CarbonImmutable
     {
+        if (app(MediaStorage::class)->usesObjectStorage()) {
+            return null;
+        }
+
         try {
             return $this->disk()->exists($path)
                 ? CarbonImmutable::createFromTimestampUTC($this->disk()->lastModified($path))
@@ -1867,17 +1874,27 @@ class PetMediaService
     }
 
     /**
-     * Stored files of a deleted pet (rows go with the FK cascade). M4-05: on object storage
-     * the local copies left from before the move (until `--prune-local`) go too, so a deleted
-     * family's media never stay on the server.
+     * Stored files of a deleted pet (rows go with the FK cascade) on EVERY media disk (M4-05):
+     * the active one, local copies left from before the move (until `--prune-local`) and a
+     * configured bucket that is not active yet — a deleted family's media stay nowhere.
      */
     public function deleteFilesOf(int $petId): void
     {
         $this->disk()->deleteDirectory((string) $petId);
 
-        $local = (string) config('media.storage.local_disk', 'pet_media');
-        if ($local !== (string) config('media.storage.disk', 'pet_media') && config("filesystems.disks.{$local}.driver") === 'local') {
+        $storage = app(MediaStorage::class);
+        $active = $storage->activeDiskName();
+        $local = $storage->localDiskName();
+        if ($local !== $active && $storage->driver($local) === 'local') {
             Storage::disk($local)->deleteDirectory((string) $petId);
+        }
+
+        // QA #374 M2: a configured but inactive bucket (after the copy, before the switch, or
+        // after a rollback) may hold copies too — they go as well. A bucket error fails the
+        // job (it retries; visible in System health) instead of leaving a family's media there.
+        $object = $storage->objectDiskName();
+        if ($object !== $active && $storage->objectStorageConfigured()) {
+            Storage::disk($object)->deleteDirectory((string) $petId);
         }
     }
 

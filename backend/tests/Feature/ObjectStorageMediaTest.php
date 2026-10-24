@@ -7,7 +7,15 @@ use App\Models\PetMediaHistory;
 use App\Models\User;
 use App\Services\Media\MediaStorage;
 use App\Services\Media\ObjectStorageMover;
+use App\Services\Media\PetGrowthService;
 use App\Services\Media\PetMediaService;
+use Aws\Handler\Guzzle\GuzzleHandler;
+use GuzzleHttp\Client as GuzzleClient;
+use GuzzleHttp\Exception\ConnectException;
+use GuzzleHttp\Handler\MockHandler;
+use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Psr7\Request as PsrRequest;
+use GuzzleHttp\Psr7\Response as PsrResponse;
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
@@ -90,6 +98,32 @@ function osPath(string $url): string
     return $parts['path'].'?'.$parts['query'];
 }
 
+/**
+ * A REAL S3 disk (aws-sdk + Flysystem) whose HTTP answers come from a Guzzle MockHandler,
+ * installed as pet_media_s3. Returns the request log.
+ *
+ * @param  list<PsrResponse|Throwable>  $answers
+ */
+function osRealS3(array $answers): ArrayObject
+{
+    $log = new ArrayObject;
+    $stack = HandlerStack::create(new MockHandler($answers));
+    $stack->push(function (callable $next) use ($log) {
+        return function ($request, array $options) use ($next, $log) {
+            $log[] = $request->getMethod().' '.$request->getUri()->getPath().($request->getUri()->getQuery() !== '' ? '?'.$request->getUri()->getQuery() : '');
+
+            return $next($request, $options);
+        };
+    });
+    $config = array_merge(config('filesystems.disks.pet_media_s3'), [
+        'http_handler' => new GuzzleHandler(new GuzzleClient(['handler' => $stack])),
+        'retries' => 0,
+    ]);
+    Storage::set('pet_media_s3', Storage::build($config));
+
+    return $log;
+}
+
 function osUseObjectStorage(): void
 {
     config(['media.storage.disk' => 'pet_media_s3']);
@@ -149,6 +183,35 @@ describe('serving from object storage', function () {
         $this->actingAs($child, 'sanctum')->get($url)->assertStatus(302);
         app('auth')->forgetGuards();
         $this->actingAs($parent, 'sanctum')->get($url)->assertStatus(302);
+    });
+
+    it('presigns at most the rest of our URL\'s lifetime, and refuses (403) when < 5 s are left', function () {
+        [, , $pet] = osFamilyPet();
+        $video = osStored($pet, 'pet_media_s3');
+        $url = osPath(app(PetMediaService::class)->signedUrl($video, now()->addSeconds(30)->toImmutable()));
+
+        $this->travel(20)->seconds();
+        $this->get($url)->assertStatus(302);
+        expect(osLast($this->presigned)['expires'] - now()->getTimestamp())->toBeLessThanOrEqual(10)->toBeGreaterThan(0);
+
+        $this->travel(7)->seconds(); // 3 s left
+        $this->get($url)->assertForbidden()->assertHeaderMissing('Location');
+    });
+
+    it('answers HEAD with a presigned HeadObject (a presigned GET refuses HEAD)', function () {
+        osUseObjectStorage();
+        osRealS3([]);
+        [, , $pet] = osFamilyPet();
+        $video = osStored($pet, 'pet_media'); // row only matters; the bucket is never called
+        $url = osPath(app(PetMediaService::class)->signedUrl($video));
+
+        $head = $this->call('HEAD', $url)->assertStatus(302)->headers->get('Location');
+        $get = $this->get($url)->assertStatus(302)->headers->get('Location');
+
+        expect($head)->toStartWith("https://petprep-media.fsn1.your-objectstorage.com/pet-media/{$pet->id}/idle-g1.mp4?")
+            ->not->toContain('response-content-type')
+            ->and($get)->toContain('response-content-type=video%2Fmp4')
+            ->and(parse_url($head, PHP_URL_QUERY))->not->toBe(parse_url($get, PHP_URL_QUERY));
     });
 
     it('also redirects range requests — the bucket answers the Range (AVPlayer)', function () {
@@ -340,6 +403,19 @@ describe('media:move-to-object-storage', function () {
             ->and(Storage::disk('pet_media_s3')->exists("{$pet->id}/idle-g1.mp4"))->toBeTrue();
     });
 
+    it('counts a file deleted between listing and copy as vanished, not failed', function () {
+        [, , $pet] = osFamilyPet();
+        osStored($pet);
+        osStored($pet, kind: 'image');
+        $mover = app(ObjectStorageMover::class);
+
+        $counts = $mover->run(report: function (string $path) use ($pet) {
+            Storage::disk('pet_media')->delete("{$pet->id}/reference-g1.jpg");
+        });
+
+        expect($counts)->toMatchArray(['total' => 1, 'copied' => 1, 'vanished' => 1, 'failed' => 0]);
+    });
+
     it('makes no HTTP call (zero AI spend)', function () {
         [, , $pet] = osFamilyPet();
         osStored($pet);
@@ -356,6 +432,42 @@ it('media:faststart does nothing on object storage', function () {
     Storage::disk('pet_media_s3')->put('1/idle-g1.mp4', OS_MP4);
 
     $this->artisan('media:faststart')->assertSuccessful()->expectsOutputToContain('object storage');
+});
+
+it('deleting a pet\'s files with the local disk active also empties a configured bucket (copy before the switch / after a rollback)', function () {
+    Storage::disk('pet_media')->put('5/idle-g1.mp4', OS_MP4);
+    Storage::disk('pet_media_s3')->put('5/idle-g1.mp4', OS_MP4);
+    Storage::disk('pet_media_s3')->put('6/idle-g1.mp4', OS_MP4);
+
+    app(PetMediaService::class)->deleteFilesOf(5);
+
+    expect(Storage::disk('pet_media')->exists('5/idle-g1.mp4'))->toBeFalse()
+        ->and(Storage::disk('pet_media_s3')->exists('5/idle-g1.mp4'))->toBeFalse()
+        ->and(Storage::disk('pet_media_s3')->exists('6/idle-g1.mp4'))->toBeTrue();
+});
+
+it('deleting a pet\'s files leaves an unconfigured bucket alone', function () {
+    config(['filesystems.disks.pet_media_s3.bucket' => null]);
+    Storage::disk('pet_media_s3')->put('5/idle-g1.mp4', OS_MP4);
+
+    app(PetMediaService::class)->deleteFilesOf(5);
+
+    expect(Storage::disk('pet_media_s3')->exists('5/idle-g1.mp4'))->toBeTrue();
+});
+
+it('the growth album trusts the DB on object storage (no per-row HEAD)', function () {
+    osUseObjectStorage();
+    [, , $pet] = osFamilyPet();
+    PetMediaHistory::create(['pet_id' => $pet->id, 'kind' => 'image', 'life_stage' => 'puppy', 'generation' => 1,
+        'storage_path' => "{$pet->id}/reference-g1-puppy.jpg", 'bytes' => 20, 'mime' => 'image/jpeg', 'archived_at' => now()]);
+    $spy = Mockery::mock(Filesystem::class);
+    $spy->shouldNotReceive('exists');
+    $spy->shouldNotReceive('lastModified');
+    Storage::set('pet_media_s3', $spy);
+
+    $payload = app(PetGrowthService::class)->albumFor($pet);
+
+    expect($payload->entries)->toHaveCount(1);
 });
 
 it('deleting a pet\'s files on object storage also removes its local leftovers', function () {
@@ -388,6 +500,48 @@ describe('System health: storage driver + bucket', function () {
 
         expect($status)->toMatchArray(['driver' => 's3', 'reachable' => false])
             ->and($status['error'])->toBe('RuntimeException: 403 Forbidden')->not->toContain('test-key-id');
+    });
+
+    it('probes a real S3 client: 200 → reachable (HeadBucket, not a swallowed fileExists)', function () {
+        $log = osRealS3([new PsrResponse(200)]);
+
+        expect(app(MediaStorage::class)->status(fresh: true))->toMatchArray(['reachable' => true, 'error' => null])
+            ->and($log->getArrayCopy())->toBe(['HEAD /']);
+    });
+
+    it('probes a real S3 client: 403, 404 and a connection error are all NOT reachable', function (Closure $answer, string $error) {
+        osRealS3([$answer()]);
+
+        $status = app(MediaStorage::class)->status(fresh: true);
+
+        expect($status['reachable'])->toBeFalse()
+            ->and($status['error'])->toStartWith($error)->not->toContain('test-key-id')->not->toContain('test-secret');
+    })->with([
+        'access denied' => [fn () => new PsrResponse(403), 'S3 403'],
+        'no such bucket' => [fn () => new PsrResponse(404), 'S3 404'],
+        'connection refused' => [fn () => new ConnectException('Connection refused', new PsrRequest('HEAD', 'https://fsn1.your-objectstorage.com/')), 'S3 no-response'],
+    ]);
+
+    it('the write probe puts, reads back and deletes a probe object', function () {
+        $log = osRealS3([
+            new PsrResponse(200),                      // HeadBucket
+            new PsrResponse(200, ['ETag' => '"x"']),   // PutObject
+            fn ($request) => new PsrResponse(200, [], 'wrong-bytes'), // GetObject → mismatch
+            new PsrResponse(204),                      // DeleteObject
+        ]);
+
+        $status = app(MediaStorage::class)->status(fresh: true, write: true);
+
+        expect($status['reachable'])->toBeFalse()->and($status['error'])->toContain('different bytes')
+            ->and($log->getArrayCopy())->toBe(['HEAD /', 'PUT /pet-media/.petprep-health-probe', 'GET /pet-media/.petprep-health-probe', 'DELETE /pet-media/.petprep-health-probe']);
+    });
+
+    it('the write probe fails when the keys may read but not write', function () {
+        osRealS3([new PsrResponse(200), new PsrResponse(403)]);
+
+        $status = app(MediaStorage::class)->status(fresh: true, write: true);
+
+        expect($status['reachable'])->toBeFalse()->and($status['error'])->toStartWith('S3 403');
     });
 
     it('reports no bucket when PET_MEDIA_S3_* is not set', function () {
