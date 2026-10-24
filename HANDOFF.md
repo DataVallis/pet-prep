@@ -58,7 +58,7 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 **Older, still valid:**
 
 10. **Push registration edge case (Android):** a real token rotation arriving as the first event inside the 10 s echo window is taken as the echo → registered only at next app start / login.
-11. **No mobile crash reporter:** backend errors go to `/admin/system-health` (PR #281, instead of Sentry); RN render errors only reach the device console; external uptime check missing (M5-05).
+11. **Mobile crash reporter built, not verified on a phone (M5-05, 2026-10-24):** app render / uncaught / unhandled-rejection errors → `POST /api/app-errors` → System health »App errors« + Discord; release builds only, reaches phones with the next OTA. Privacy policy needs one sentence about technical error data (DECISIONS 2026-10-24, text in the PR). External uptime check still missing (M5-05).
 12. **Training:** schedule is sent to the app (modified app can fake praise — accepted by David); taps before an app restart are lost on resume; potty "asked to go out" only logged; minors m3 / m4 in DECISIONS.
 13. **Tests / tooling:** Pint may still fail repo-wide on untouched files (use `pint --test --dirty`); two Pest runs in one checkout share `storage/framework/testing/disks` (use separate worktrees); cold-cache Jest timeout in `ChildHudScreen.behaviour.test.tsx`; `actions/checkout@v4` on deprecated Node 20.
 14. **i18n (M1-18) not verified on a device** (Hermes plurals, Android channel names after a switch, iOS SL permission texts); English copy awaits David's read-through.
@@ -93,6 +93,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 4. **Before the beta (ROADMAP):** M0-15 test accounts out of production, M5-06 legal review + App Store Kids / Play Families check (privacy policy text is live), M5-07 TestFlight + Play internal testing with 20–50 families, D5 off-site backups setup (David), M5-05 mobile error reporting. Open »čaka Davida« items: M5-R14 / R15 / R18 / R19 / R20 breed care needs, M5-R12 fetch spec.
 
 ## 6. Session log
+
+### 2026-10-24 (cloud, backend + mobile) — M5-05 app error reports (`feat/M5-05-app-error-reports`)
+- Mobile: `modules/errorReporting/` (boundaries via `logRenderError`, `ErrorUtils` global handler, Hermes rejection tracker; persisted queue max 20, 10 min device dedupe, never throws, `__DEV__` off). Backend: `POST /api/app-errors` (no auth needed, token → role only, never 401; 30 / min per IP + per user), `app_error_fingerprints` / `app_error_reports` / `app_error_hours` (upsert, 30-day prune in `system-health:prune`), System health »App errors« + tile, Discord `app_error_new` / `app_error_spike` (≤ 1 / fingerprint / day). Tests `AppErrorReportsTest`, Jest `modules/errorReporting`. **Debt:** not verified on a device; no uptime check; privacy policy sentence pending (David, website repo). **Next:** after the OTA, trigger a test crash on a preview build and check »App errors« + Discord.
 
 ### 2026-10-24 (cloud, backend) — M5-T19 admin alerts in Discord (`feat/M5-T19-discord-alerts`)
 - David 24. 10.: admin alerts go to Discord instead of e-mail (`MAIL_MAILER` stays `log`). Built `Alerts\DiscordWebhook` (10 s timeout, 429 → `retry_after`, never in a transaction, URL never in errors / logs) + `AdminAlertKind` / `AdminAlert`; `AiBudgetMonitor` posts every newly claimed budget / fal balance warning once after the bell (failure only reported); System health *Test Discord*. Task ID **M5-T19** (T17 / T18 were taken). Tests `DiscordAlertsTest`. **Debt:** a Discord post that fails is not retried (the bell has it). **David:** create the webhook (§5). Not verified on production.

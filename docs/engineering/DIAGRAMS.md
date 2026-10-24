@@ -2056,3 +2056,35 @@ sequenceDiagram
   S->>DB: lock child row → flag false → lock pets of its push rows (id order) → pet_daily_steps unit pushes → steps
   S-->>P: 200 (one PetUpdated caretaker_settings_changed); counts, points and Care Score unchanged, logged walks kept
 ```
+
+## 18. App error reports: app → own server → System health / Discord (M5-05, David 2026-10-19 »no Sentry«, built 2026-10-24)
+
+No third-party SDK; release builds only. The report carries technical facts only; the server keeps the role of the token, never the user.
+
+```mermaid
+sequenceDiagram
+  participant B as Error boundary / ErrorUtils / Hermes tracker
+  participant R as modules/errorReporting (reporter)
+  participant Q as Queue file (max 20, dedupe 10 min)
+  participant S as POST /api/app-errors
+  participant DB as app_error_fingerprints / _reports / _hours
+  participant J as SendAppErrorAlert (queued)
+  participant D as Discord
+  B->>R: reportAppError(scope, error) — never throws
+  R->>Q: buildReport (name, message ≤ 500, stack ≤ 2 KB, versions, platform, screen name) → write sync
+  Note over R,Q: same error within 10 min → skipped; > 20 → oldest dropped
+  R->>S: flush (2 s after a report · 5 s after launch · on foreground), oldest first, 10 s timeout, token if any
+  alt 204 / 4xx for good
+    R->>Q: remove
+  else offline / 429 / 5xx
+    R->>Q: keep for the next flush
+  end
+  S->>S: throttle 30/min per IP (/64) + per user · validate · token → role only (invalid token ignored, never 401)
+  S->>DB: scrub → fingerprint(name, message, first frame) → upsert fingerprint +1, (version, platform) row +1 + sample, hour +1
+  alt new fingerprint or hourly bucket = 20
+    S->>J: dispatch(app_error_new | app_error_spike)
+    J->>DB: claim last_alerted_at (≤ 1 per fingerprint per 24 h)
+    J->>D: embed: name, message, scope, versions, platforms, 24 h count — no user / family / pet
+  end
+  Note over DB: system-health:prune (03:29 UTC) deletes everything not seen for 30 days · /admin/system-health »App errors« (superadmin, 24 h / 7 d)
+```

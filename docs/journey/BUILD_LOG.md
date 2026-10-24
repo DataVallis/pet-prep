@@ -9,6 +9,14 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-24 — Ko se aplikacija zatakne, to izvemo mi, ne pa tuje podjetje (M5-05)
+
+**Kaj:** mobilna aplikacija zdaj sama sporoči, ko se zaslon sesuje, ko pride do neujete napake ali ko obljuba (promise) ostane brez obravnave. Kratko tehnično poročilo (vrsta in besedilo napake, del sklada klicev, različica aplikacije, iOS / Android, ime zaslona) gre neposredno na strežnik PetPrep in se pokaže v »Zdravje sistema« → »Napake v aplikaciji«, nova napaka pa takoj tudi v kanalu Discord. Brez povezave telefon hrani do 20 poročil, ista napaka v 10 minutah gre samo enkrat; poročanje nikoli ne ustavi aplikacije. Pride s posodobitvijo OTA, brez nove gradnje.
+**Zakaj je pomembno:** pred beto z 20–50 družinami moramo sesutja videti, preden jih starši prijavijo — brez Sentryja ali drugega zunanjega orodja (David, 19. 10.), torej noben podatek o napakah ne zapusti naših strežnikov.
+- 👩 Starši: poročilo ne vsebuje imen, e-pošte ali česar koli o ljubljenčku; ne shranimo niti, kdo ga je poslal — samo, ali je bil prijavljen starš ali otrok. Po 30 dneh se izbriše.
+- 💼 Investitorji: lasten nadzor kakovosti aplikacije (napake po različicah in platformah, 24 h / 7 dni) brez stroška zunanjega orodja in brez deljenja podatkov otrok s tretjimi.
+- 🛠 Tehnično: React Native (meje napak, `ErrorUtils`, Hermes sledenje zavrnitvam), trajna vrsta v datoteki (zapis takoj, tudi tik pred sesutjem), Laravel (`POST /api/app-errors`, omejitev 30 / min na IP in uporabnika, prstni odtis napake, 3 tabele z združevanjem namesto vrstice na dogodek), Filament, Discord. Ni še preverjeno na telefonu.
+
 ## 2026-10-24 — Opozorila za administratorje v Discord (M5-T19)
 
 **Kaj:** opozorila, ki so doslej prišla le v zvonček administracije (proračun za AI pri 80 % in 100 %, nizko ali porabljeno dobroimetje fal.ai), gredo zdaj — ko je nastavljen webhook — enkrat tudi v administratorski kanal Discord: rumeno ali rdeče sporočilo z zneski in povezavo na pravo stran administracije. Gumb »Test Discord« v »Zdravje sistema« preveri povezavo. Odločil David 24. 10. namesto e-pošte (produkcija nima poštnega strežnika).
