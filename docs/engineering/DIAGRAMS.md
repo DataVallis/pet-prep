@@ -1879,6 +1879,33 @@ flowchart TD
   OK --> RP["Child report: socialisation.weeks (done / open / missed)<br/>— not in by_type, daily, missed, Care Score, light"]
 ```
 
+### 12f. Breed care tasks, parent reminders and the heat warning (M5-R14 / R15 / R18 / R19 / R20, David 2026-10-24)
+
+A task exists only where the breed's source states a frequency (`breed_stage_params` `*_frequency` = [times, period_days]); child tasks are ledger slots like grooming, parent reminders are never scored.
+
+```mermaid
+flowchart TD
+  SRC["data.json: source quote with a frequency"] --> SEED["BreedStageParamsSeeder::DOG_CARE_TASKS<br/>*_frequency [times, period_days] · no_walk_in_heat"]
+  SEED --> G{"pets.care_tasks_enabled?<br/>(both apps sent care_tasks, new dog)"}
+  G -- no --> NONE["care_tasks [] · care_reminders [] · walk_heat null"]
+  G -- yes --> C["Child task: teeth / folds / ears / nails"]
+  G -- yes --> PR["Parent reminder: groomer visit / bath"]
+  G -- yes --> H["no_walk_in_heat: summer month (hemisphere of the family tz)<br/>11:00–16:00 family time"]
+  C --> ST["POST /api/child/pet/care-task/start {task}"]
+  ST --> SL{"Pet asleep (PetSleepService)?"}
+  SL -- yes --> Q["422 care_task_quiet_hours (next_allowed_at = wake)"]
+  SL -- no --> R{"mess · period done · done today ·<br/>another game · quiet hours ahead?"}
+  R -- yes --> RF["422 care_task_* / needs_cleaning / care_session_active"]
+  R -- no --> S["session (brush 30 s / nails 12 s)"] --> FI["POST …/finish {task, session_id, strokes}"]
+  FI --> SC{"CatChoreService::score"}
+  SC -- fail --> RJ["200 rejected — no penalty, try again"]
+  SC -- ok --> ACT["activities_log brushed_teeth / cleaned_folds / cleaned_ears / trimmed_nails<br/>(actor = child)"]
+  ACT --> LED["RoutineLedgerService::careTaskRoutines<br/>times slots due at the period end · fair share · report"]
+  PR --> CARD["Parent: CareRemindersCard »Opravljeno«"] --> CF["POST /api/parent/pets/{pet}/care-reminders {task}"]
+  CF --> PA["parent_groomer_visit / parent_bathed_pet (actor = parent)<br/>report care_reminders · never a routine / score"]
+  H --> HN["walk_heat window → calm note on the HUD + walk tracker<br/>steps still count · no penalty"]
+```
+
 ## 13. Purchases: RevenueCat → webhook → challenge credit → pet (M3-08 ledger, M3-11 per-pet consumable, 2026-10-07)
 
 The app (M3-07, not built yet) logs in to RevenueCat with `appUserID = <parent user id>`. One purchase of the consumable `petprep_challenge_12w` = one challenge credit of the family, assigned to one pet (PAYMENTS_SPEC P1).

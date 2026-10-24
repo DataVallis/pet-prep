@@ -63,7 +63,11 @@ Na desni strani zaslona vidiš štiri stolpce. **Zelena** = kuža je vesel. **Ru
 Dvakrat na teden se zanimivost pokaže sama — ampak samo, ko je mirno: ko je ljubljenček pravkar dobil tvojo skrb in je z njim vse v redu. Če takrat ni mirno, nad gumbi piše **»Nekaj novega o tvoji pasmi«** — tapni, ko imaš čas. Zanimivost ti pove tudi, **zakaj je to pomembno zate** (npr. zakaj ima tvoj ljubljenček tak cilj korakov). Mešanček in domača mačka tega nimata.
 
 ## Ko si v šoli ali spiš
-Starši nastavijo **tihe ure**. Takrat kuža počiva in te ne moti — tudi obvestil ne pošilja. Spečega kužka (ali muce) ne motimo: **igra, šola, crkljanje in česanje počakajo**, da se zbudi — pod gumbom piše, do kdaj spi, npr. »💤 Kuža spi do 7:00« *(od 21. 10. 2026)*.
+**Posebna nega** 🪥 *(od 24. 10. 2026, samo za nekatere pasme)* Nekateri kužki potrebujejo še drugo nego. Če jo tvoj, vidiš nad gumbi **»Umij zobke«**, **»Obriši gubice«**, **»Očisti ušesa«** ali **»Pristriži kremplje«**. Zobe, gubice in ušesa očistiš s prstom kot pri česanju, pri krempljih tapneš vsak kremplj posebej (pri pravem psu ti pri tem pomaga odrasel). Enkrat na dan je dovolj. Če kdaj pozabiš, se ne zgodi nič hudega — samo starši vidijo, da je bilo zamujeno. Za frizerja in kopanje poskrbijo starši.
+
+**Prevroče za sprehod** ☀️ *(od 24. 10. 2026)* Kužki s ploščatim obrazom (npr. mops, buldog) se v vročini težko ohladijo. Poleti sredi dneva ti aplikacija pove: »Prevroče za sprehod« — pojdita raje zjutraj ali zvečer in vzemi vodo. Tvoji koraki se štejejo tudi takrat.
+
+Starši nastavijo **tihe ure**. Takrat kuža počiva in te ne moti — tudi obvestil ne pošilja. Spečega kužka (ali muce) ne motimo: **igra, šola, crkljanje, česanje in posebna nega počakajo**, da se zbudi — pod gumbom piše, do kdaj spi, npr. »💤 Kuža spi do 7:00« *(od 21. 10. 2026)*.
 
 ## Kaj, če pozabiš
 - Najprej te kuža **opomni** — ko podpišeš pogodbo, te aplikacija vpraša, ali te kuža sme poklicati z obvestilom (npr. »Tvoj kuža te milo gleda in kaže na posodo s hrano.«). Če je zelo nujno, obvestilo tudi zazvoni. Za sprehod te pokliče največ enkrat na dan — po šoli. Tapni ga in že si pri kužku. *(na telefonu z naslednjo novo različico aplikacije)*

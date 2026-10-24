@@ -8,6 +8,8 @@ Order = ROADMAP M5-R10 (David 2026-10-09: most popular first). Cats are built be
 Status: `done` · `in-progress` · `blocked` (research could not source a required field — reason) ·
 `needs-david` (CI failed twice for code reasons or an unfixable review blocker — PR left open) · `todo`.
 
+**24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20):** the `needs-david` notes about face folds / heat, teeth, groomer, nails, ears / bathing in the rows below are **resolved** — a task is built only where the source states a frequency (per breed: `docs/breeds/<slug>.md` »Rešeno 24. 10. 2026«, ROADMAP M5-R14 … R20); the others stay facts without a task.
+
 | # | Breed (EN / SL) | Key | Species | Status | Notes |
 |---|---|---|---|---|---|
 | — | Border Collie / Border collie | `border_collie` | dog | done | original paid dog (M5-R01) |

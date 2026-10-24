@@ -53,6 +53,8 @@
 
 ## Odprto za Davida
 
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #PRNUM):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): čiščenje ušes, striženje krempljev. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+
 - **Potreba brez mehanike (potrebuje novo nalogo v ROADMAP):** plašček / pulover v mrazu (PetMD S488) — v igri le oznaka `cold_sensitive`.
 - **Potreba brez mehanike (potrebuje novo nalogo v ROADMAP):** tek brez povodca samo v zaprtem prostoru (PDSA S487 »exercise in a confined area is recommended.«; kot pri malem angleškem hrtu).
 - **Potrebe brez mehanike (ROADMAP M5-R20 / M5-R19 / M5-R14):** čiščenje ušes in občasno kopanje, striženje krempljev, čiščenje oči proti madežem solz (PetMD S488, brez pogostosti).

@@ -49,8 +49,10 @@
 
 ## Odprto za Davida
 
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #PRNUM):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: striženje krempljev vsaka 2 tedna (mini-igra otroka); kopanje enkrat na 4 tedne (mesec) (opomnik staršu, ne šteje v oceno); brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): čiščenje ušes, pasji frizer. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+
 - **Meja starejšega psa 108 je začasna:** spodnja meja RKC (12 let). McMillan 2024 za to pasmo ni bil dosegljiv; preveriti v tabeli Dogs Trust (S123), ko bo dosegljiva.
-- **Potrebe brez mehanike (needs-david):** striženje krempljev približno vsak drugi teden (PetMD S368) → **M5-R19**; čiščenje ušes ob kopanju in kopanje enkrat na mesec (PetMD S368) → **M5-R20**; pasji frizer med linjenjem (PetMD S368, brez pogostosti, parafraza) → **M5-R18**.
+- **Potrebe brez mehanike (needs-david → rešeno 24. 10. 2026):** striženje krempljev približno vsak drugi teden (PetMD S368) → **M5-R19**; čiščenje ušes ob kopanju in kopanje enkrat na mesec (PetMD S368) → **M5-R20**; pasji frizer med linjenjem (PetMD S368, brez pogostosti, parafraza) → **M5-R18**.
 - **Breed Watch kategorija 2** brez imenovane točke (S365) → brez oznake dobrobiti (kot pri šetlandskem ovčarju).
 - **Oznake:** `family_pet` (»great companion dog«, S366) in `needs_mental_stimulation` (»can quickly become bored«, S368) nista dodani — ali naj ju dobi?
 - **Vrsta AKC »Collie«** zajema obe različici dlake; zgrajen je samo dolgodlaki (FCI 156). Kratkodlaki (FCI 296) bi bil ločena pasma.

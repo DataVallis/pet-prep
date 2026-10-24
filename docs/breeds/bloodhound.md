@@ -53,6 +53,8 @@
 
 ## Odprto za Davida
 
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #PRNUM):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): čiščenje ušes, čiščenje gub. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+
 - **Meja starejšega psa (61 mesecev, `verified=false`):** predlog iz mediane ankete Kennel Club 2004 (6 let in 9 mesecev, S505). Če potrdite McMillan 2024 (9,3 leta, zdaj le prek Wikipedije), bi bil starejši od 84 mesecev (podatkovna migracija ali urejanje v Filamentu).
 - **Breed Watch:** RKC stran (S502) navaja kategorijo 2, PDSA (S503) »Category Three«; posameznih točk RKC zagon ni mogel prebrati. Oznaka dobrobiti je `eyelid_problems`; ali želite še `sensitive_skin` (atopija, kožne gube)?
 - **Potreba brez mehanike (ROADMAP M5-R14):** kožne gube čiste in suhe (PDSA S503), brez pogostosti v viru.

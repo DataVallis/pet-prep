@@ -9,6 +9,15 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-10-24 — Nega po pasmi: zobje, gube, ušesa, kremplji, frizer, kopanje in vročina (M5-R14 / R15 / R18 / R19 / R20)
+
+**Kaj:** David je odločil, kako igra vodi preostale potrebe pasem iz virov: zobe, gube, ušesa in kremplje opravi **otrok** kot kratko igro (strgalna srečka kot pri česanju; pri krempljih tapne vsak kremplj), pasjega frizerja in kopanje dobi **starš kot opomnik** z gumbom »Opravljeno«, psi s sploščenim obrazom pa poleti med 11. in 16. uro pred sprehodom dobijo mirno opozorilo na vročino. Naloga obstaja **samo, kjer vir pove pogostost**: od 36 pasem s potrebo iz virov jih ima 26 vsaj eno nalogo ali opozorilo — 7 pasem ščetkanje zob vsak dan, 4 brisanje gub vsak dan, 7 čiščenje ušes, 4 striženje krempljev, 8 obisk frizerja, 5 kopanje, 4 opozorilo na vročino (angleški buldog, francoski buldog, bostonski terier, mops). Pri ostalih vir pogostosti ne navede, zato naloge ni — dejstvo ostane v opisu pasme.
+**Zakaj je pomembno:** pravi mops potrebuje vsak dan čiste gubice, pravi papiljon vsak dan umite zobe in buldog ne sme na sprehod v vročini — otrok to izkusi, preden pes pride domov; staršu pa aplikacija pove, kaj bo moral urediti sam (frizer, kopanje). Vsaka številka ima vir in citat.
+- 👩 Starši: »Opomniki za nego« v podrobnostih otroka (frizer, kopanje), potrdite z »Opravljeno« — ne vplivajo na oceno skrbi; zamujena nega otroka je vidna v poročilu, brez kazni.
+- 🧒 Otroci: nova kratka igra »Umij zobke« / »Obriši gubice« / »Očisti ušesa« / »Pristriži kremplje«; ko kuža spi, počaka; poleti sredi dneva »Prevroče za sprehod«.
+- 💼 Investitorji: igra sledi resnični negi po pasmi iz veterinarskih virov (PDSA, AKC, PetMD, VCA, RVC VetCompass) — razlika med »tamagočijem« in pripravo na pravega psa; brez vremenskih podatkov in brez novih zunanjih storitev.
+- 🛠 Tehnično: Laravel + Expo, en splošen model nalog (pogostost [koliko, dni obdobja] v `breed_stage_params`, sledljiva do `data.json`), ponovna uporaba sej in ocenjevanja česanja, reže v ledgerju, opomniki zunaj ocene, polobla iz časovnega pasu družine; vse samo JS (OTA). Na telefonu še ni preverjeno.
+
 ## 2026-10-24 — Posodobitve »po zraku« delujejo; dokumenti usklajeni z resničnim stanjem
 
 **Kaj:** revizija vseh odprtih nalog v načrtu proti kodi in GitHubu. Ugotovitev: posodobitve aplikacije brez trgovine (OTA) že tečejo po vsakem posodabljanju strežnika — iPhone jih dobiva od 23. 10. 2026, Android pa pravilno počaka na novo gradnjo, ker se je spremenila izvorna koda. Dokument je trdil, da OTA »čaka na žeton«. Poleg tega je bilo v kodi že narejenih več nalog, ki so bile v načrtu odprte (podpis pogodbe s prstom, izbira pasme pred rojstvom, zaklep pri ustavitvi igre, 20 pasem, portreti pasem na spletu).

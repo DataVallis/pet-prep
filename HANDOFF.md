@@ -22,7 +22,7 @@
 | M3 Notifications, sensors, payments | 8 done / 5 partial (M3-01 no `expo-dev-client`, M3-04 … M3-07 not device-verified) / 1 open (M3-03 local reminders) | ~75 % |
 | M4 AI media | 10 done / 1 partial (M4-05b: only per-IP limit left) / 3 open (M4-05 object storage, M4-06 fallback, M4-09 tokens) | ~80 % |
 | M5 Production + beta | 3 done / 5 partial (M5-04, M5-05, M5-06, M5-07, M5-09) / 1 open (M5-08 analytics) | ~55 % |
-| M5-R Realism | 75 done / 5 partial / 11 open (R07, R09 parent + sources, R11-07, R12, R14, R15, R18–R20) | ~80 % |
+| M5-R Realism | 80 done / 5 partial / 6 open (R07, R09 parent + sources, R11-07, R12) | ~85 % |
 | M5-F Device fixes | 13 done / 0 open (M5-F10 OTA done 24. 10.) | 100 % |
 | M5-T Refinement | 21 done / 1 partial (T18 shadow mode) / 1 open (accessibility badge on the website) | code ~95 %, **device 0 %** |
 
@@ -86,9 +86,12 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 1. **Device test of all M5-T features** — on iOS now possible through OTA (David's iPhone; checklist from FEATURES rows M5-T01 … T19): take-out clock + message queue, sleep rules + »7:00«, care guide (child + parent), games wait for media, preparation screen, brush, birthday, adapted mode, state media loops + transitions, picture mode, school + ball / wand phase clips, easy gestures. On confirmation → FEATURES 📱 with date + build.
 2. **New Android production build** (EAS, `mobile/`) → Android gets OTA again; then Play re-submission (health declaration incl. `READ_WHEELCHAIR_PUSHES`, Data safety) and record the release (`scripts/record-app-release.mjs`).
 3. **First real purchase on production** (cap 25 $ set?): watch `/admin → AI budget` ledger, »AI media« preparation time and media quality; calibrate the quality check and switch it to enforce.
-4. **Before the beta:** M5-06 legal review + App Store Kids / Play Families check; M5-07 Play internal testing + 20–50 families (David adds testers); D5 off-site backup setup (David); M5-05 mobile error reporting + uptime check; delete the dev test accounts in `/admin → Users`. Open »čaka Davida«: M5-R14 / R15 / R18 / R19 / R20 breed care needs, M5-R12 fetch spec, M2-07 / M2-01 (D) rules for a new pet after game over.
+4. **Before the beta:** M5-06 legal review + App Store Kids / Play Families check; M5-07 Play internal testing + 20–50 families (David adds testers); D5 off-site backup setup (David); M5-05 mobile error reporting + uptime check; delete the dev test accounts in `/admin → Users`. Open »čaka Davida«: M5-R12 fetch spec, the M5-R14–R20 implementation choices (DECISIONS »Odprta vprašanja« 2026-10-24), M2-07 / M2-01 (D) rules for a new pet after game over.
 
 ## 6. Session log
+
+### 2026-10-24 (cloud, backend + mobile) — M5-R14 / R15 / R18 / R19 / R20 breed care tasks (`feat/M5-R14-R20-breed-care`, PR #PRNUM)
+- David's four decisions built: child mini-games teeth / folds / ears / nails (grooming model, ledger slots, report, no penalty), parent reminders groomer / bath (»Opravljeno«, never scored), summer 11–16 h heat note for Bulldog / French Bulldog / Boston Terrier / Pug; tasks only where the source states a frequency (26 of 36 breeds with a sourced need). New dogs only (`care_tasks`). Not on a device yet. Next: device test (FEATURES rows M5-R14 … R20); David to answer the open implementation choices (month = 4 weeks, care slots in the Care Score, no push for reminders, existing dogs not enabled).
 
 ### 2026-10-24 (cloud, orchestrator) — docs vs reality audit (`docs/roadmap-reality-audit`)
 - David: docs said things were not done that were (M5-F10 »čaka EXPO_TOKEN« while `mobile-ota.yml` already ran after every deploy). Every open / partial ROADMAP row and HANDOFF §3 / §5 checked against code, `git log`, merged PRs and Actions annotations. Ticked: M0-09, M1-16, M2-04, M3-10, M5-03, M5-F10, M5-R10, M5-R11-03 / 04; M0-15 dropped (David: testers added by him; security note kept); partial with exact remainder: M0-06, M1-10, M1-11, M1-17, M2-09, M2-10, M3-01, M4-05b, M5-05, M5-06, M5-07; stale wording fixed (M5-R06, R06-09, M3-05, M3-07, M2-10c, backlog certificate). FEATURES: new OTA row, Facebook row instead of the contradicting »Apple / Google 🗓«, deploy / backup / error-reporting rows. DECISIONS row 2026-10-24; CLAUDE.md »verify before saying not done«. *Unverified (server / store state):* M0-12, M5-04 off-site setup, M5-09 reset, AI cap 25 $, D20.

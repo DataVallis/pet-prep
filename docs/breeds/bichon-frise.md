@@ -49,8 +49,10 @@
 
 ## Odprto za Davida
 
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #PRNUM):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — zgrajeno: čiščenje ušes enkrat na 4 tedne (mesec) (mini-igra otroka); pasji frizer na 8 tednov (opomnik staršu, ne šteje v oceno); kopanje enkrat na 4 tedne (mesec) (opomnik staršu, ne šteje v oceno); brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): čiščenje gub, striženje krempljev, ščetkanje zob. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+
 - **Meja starejšega psa 108 je začasna:** spodnja meja RKC (12 let). McMillan 2024 (12,5 leta → 113) le prek Wikipedije; preveriti v tabeli Dogs Trust (S123), ko bo dosegljiva.
-- **Potrebe brez mehanike (needs-david):** striženje dlake **pri pasjem frizerju** na vsakih nekaj mesecev (PDSA S413; PetMD S416 mesečno) → **M5-R18**; ščetkanje zob (PetMD S416, VCA S414, brez pogostosti) → **M5-R15**; čiščenje ušes enkrat na mesec in kopanje vsaj enkrat na mesec (PetMD S416) → **M5-R20**; striženje krempljev (VCA S414, brez pogostosti) → **M5-R19**; čiščenje madežev od solz okoli oči (VCA S414, brez pogostosti) → **M5-R14**.
+- **Potrebe brez mehanike (needs-david → rešeno 24. 10. 2026):** striženje dlake **pri pasjem frizerju** na vsakih nekaj mesecev (PDSA S413; PetMD S416 mesečno) → **M5-R18**; ščetkanje zob (PetMD S416, VCA S414, brez pogostosti) → **M5-R15**; čiščenje ušes enkrat na mesec in kopanje vsaj enkrat na mesec (PetMD S416) → **M5-R20**; striženje krempljev (VCA S414, brez pogostosti) → **M5-R19**; čiščenje madežev od solz okoli oči (VCA S414, brez pogostosti) → **M5-R14**.
 - **Majhni otroci:** PetMD (S416) piše »highly suitable for families with younger children«; brez ocene oznake `small_children` nismo dali — ali jo želite?
 - **Teža:** v igri razpon PDSA 4–7 kg (FCI navaja le približno 5 kg).
 - **Ime:** »kodrasti bišon« ni preverjeno pri KZS (vir le slovenski tisk).

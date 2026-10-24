@@ -51,7 +51,9 @@
 
 ## Odprto za Davida
 
-- **Potrebe brez mehanike (needs-david):** redno čiščenje ušes, zlasti ob kopanju, in občasno kopanje (PetMD S439) → **M5-R20**; redno striženje krempljev (PetMD S439) → **M5-R19**.
+- **Rešeno 24. 10. 2026 (David, M5-R14 / R15 / R18 / R19 / R20 — PR #PRNUM):** naloga samo, kjer vir navaja pogostost (razpon → spodnja meja); mini-igre otroka po modelu česanja (pošten delež, reže, poročilo, brez kazni), pasji frizer in kopanje = opomnik staršu, ne šteje v oceno; samo novi psi. Za to pasmo — brez pogostosti v viru → brez naloge (dejstvo ostane v besedilu): kopanje, čiščenje ušes, striženje krempljev. Spodnje točke M5-R14 / R15 / R18 / R19 / R20 so s tem zaprte.
+
+- **Potrebe brez mehanike (needs-david → rešeno 24. 10. 2026):** redno čiščenje ušes, zlasti ob kopanju, in občasno kopanje (PetMD S439) → **M5-R20**; redno striženje krempljev (PetMD S439) → **M5-R19**.
 - **Česanje:** RKC in PDSA »enkrat na teden« (zgrajeno 1×); PetMD S439 »will benefit from daily brushing« — če želite več, odločite vi.
 - **Življenjska doba:** mediana McMillan 2024 (14,0 leta) temelji na majhnem vzorcu (117 psov, 50 umrlih); starejši od 126 mesecev.
 - **Ime:** »avstralski govedar« ni preverjeno pri KZS (vir le Siol.net, tier C).
