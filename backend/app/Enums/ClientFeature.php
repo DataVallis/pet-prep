@@ -57,6 +57,9 @@ enum ClientFeature: string
      * /api/child/pet/care-task/start|finish), the parent's groomer / bath reminders
      * (POST /api/parent/pets/{pet}/care-reminders) and the summer heat warning
      * before a walk → `pets.care_tasks_enabled` (a NEW profiled dog, both devices).
+     * An EXISTING dog is switched on from the next family-local midnight once every
+     * caretaker child's and a parent's app send it in `X-PetPrep-Features`
+     * (CareTaskActivationService, David 2026-10-24).
      */
     case CareTasks = 'care_tasks';
 

@@ -29,7 +29,8 @@ class WalkHeatService
 
     public function appliesTo(Pet $pet, string $localDate): bool
     {
-        if (! $pet->careTasksEnabled()) {
+        // An existing dog switched on later: from its `care_tasks_since` midnight on.
+        if (! $pet->careTasksActiveOn($localDate)) {
             return false;
         }
 

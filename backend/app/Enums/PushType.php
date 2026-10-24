@@ -91,10 +91,20 @@ enum PushType: string
      */
     case PetBirthday = 'pet_birthday';
 
+    /**
+     * M5-R18 / R20 follow-up (David 2026-10-24, answer (d)): a parent reminder
+     * (groomer visit, bath) of a dog with care tasks — a new period started.
+     * Parents only (formal copy, no name in the body), once per (pet, task,
+     * period) — metric `<task>:<period index>` (CareReminderPushService); not
+     * sent when the parent already confirmed it, dropped while the pet is locked.
+     * Normal priority; held (not dropped) over quiet hours, like the birthday.
+     */
+    case CareReminder = 'care_reminder';
+
     /** Phase 2 and above (not the walk reminder, not billing news): high priority, Android channel "alarm". */
     public function isUrgent(): bool
     {
-        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted, self::PetReady, self::PetBirthday], true);
+        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted, self::PetReady, self::PetBirthday, self::CareReminder], true);
     }
 
     /**
@@ -109,12 +119,13 @@ enum PushType: string
     }
 
     /**
-     * Held until the quiet stretch ends instead of being dropped: the lock news
-     * and (M5-T13) the birthday, which becomes due at the family-local midnight.
+     * Held until the quiet stretch ends instead of being dropped: the lock news,
+     * (M5-T13) the birthday, which becomes due at the family-local midnight, and
+     * (M5-R18 / R20) the parent's care reminder (a period may start at night).
      */
     public function holdsOverQuietHours(): bool
     {
-        return $this->isLockNews() || $this === self::PetBirthday;
+        return $this->isLockNews() || $this === self::PetBirthday || $this === self::CareReminder;
     }
 
     /**
@@ -157,6 +168,8 @@ enum PushType: string
             self::PetReady => 3600,
             // M5-T13: still news later that day.
             self::PetBirthday => 12 * 3600,
+            // A reminder for a period of weeks: still useful hours later.
+            self::CareReminder => 12 * 3600,
         };
     }
 }

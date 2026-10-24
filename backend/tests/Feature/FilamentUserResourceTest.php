@@ -67,3 +67,17 @@ it('M2-10c: a parent with a linked Google / Apple identity may have no e-mail; o
         ->assertHasFormErrors(['email' => 'required']);
     expect($plain->fresh()->email)->toBe('plain@example.com');
 });
+
+it('M5-R14 – R20 follow-up: shows the app features of the latest request read-only, and saving keeps them', function () {
+    $parent = User::factory()->create(['role' => 'parent', 'email' => 'apps@example.com']);
+    $parent->forceFill(['client_features' => ['training', 'care_tasks'], 'client_features_at' => '2026-10-24 08:15:00'])->saveQuietly();
+
+    Livewire::test(EditUser::class, ['record' => $parent->getRouteKey()])
+        ->assertSee('App features (latest request)')
+        ->assertSee('training, care_tasks')
+        ->assertSee('2026-10-24 08:15:00')
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    expect($parent->fresh()->client_features)->toBe(['training', 'care_tasks']);
+});

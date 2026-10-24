@@ -1,7 +1,7 @@
 import * as SecureStore from 'expo-secure-store';
 
 import { CAT_UI_READY } from '@/config/features';
-import { ApiError, CLIENT_FEATURES, api, breedCataloguePath, clientFeatures, generatePinBody, setUnauthorizedHandler } from '@/api/client';
+import { ApiError, CLIENT_FEATURES, CLIENT_FEATURES_HEADER, api, breedCataloguePath, clientFeatures, generatePinBody, setUnauthorizedHandler } from '@/api/client';
 
 const getItem = SecureStore.getItemAsync as jest.Mock;
 
@@ -30,6 +30,16 @@ describe('api client', () => {
     const [url, init] = fetchMock.mock.calls[0] as [string, RequestInit & { headers: Record<string, string> }];
     expect(url).toMatch(/\/api\/user$/);
     expect(init.headers.Authorization).toBe('Bearer tok');
+  });
+
+  it('declares the build features on every request (X-PetPrep-Features, M5-R14 – R20 existing dogs)', async () => {
+    getItem.mockResolvedValueOnce('tok');
+    const fetchMock = mockFetch(200, { id: 1, name: 'Starš', email: 'p@x.si', role: 'parent', pet: null });
+
+    await api.getUser();
+    const [, init] = fetchMock.mock.calls[0] as [string, RequestInit & { headers: Record<string, string> }];
+    expect(init.headers[CLIENT_FEATURES_HEADER]).toBe(CLIENT_FEATURES.join(','));
+    expect(init.headers[CLIENT_FEATURES_HEADER]).toContain('care_tasks');
   });
 
   it('unregisters a push device with the token in the POST body, never in the URL (M3-02, PR #35)', async () => {

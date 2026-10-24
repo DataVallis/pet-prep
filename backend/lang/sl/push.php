@@ -231,6 +231,13 @@ return [
         ],
     ],
 
+    // M5-R18 / R20 (David 24. 10. 2026): novo obdobje opomnika staršu. Samo starši (»vi«);
+    // naslov je ime ljubljenčka (če ga ima), besedilo nikoli.
+    'care_reminder' => [
+        'groomer_visit' => 'Čas je za obisk pri pasjem frizerju. Ko ga opravite, to potrdite v aplikaciji.',
+        'bath' => 'Čas je za kopanje. Ko ga opravite, to potrdite v aplikaciji.',
+    ],
+
     // M5-T13 (APP_REFINEMENT_SPEC §9, David 20. 10. 2026): ljubljenček je po formuli starosti
     // simulacije dopolnil 1 leto. Naslov je ime (če ga ima), besedilo nikoli. Staršem »vi«.
     'pet_birthday' => [
