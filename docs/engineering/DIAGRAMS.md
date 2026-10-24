@@ -2070,20 +2070,21 @@ sequenceDiagram
   participant DB as app_error_fingerprints / _reports / _hours
   participant J as SendAppErrorAlert (queued)
   participant D as Discord
+  Note over R,S: switch »App error reports« (app_settings, default OFF) ← GET /api/user app_error_reports — off: nothing queued, nothing stored
   B->>R: reportAppError(scope, error) — never throws
-  R->>Q: buildReport (name, message ≤ 500, stack ≤ 2 KB, versions, platform, screen name) → write sync
+  R->>Q: buildReport (scrubbed name / message ≤ 500 / stack ≤ 2 KB, versions, platform, screen name) + session role → write sync (cache folder)
   Note over R,Q: same error within 10 min → skipped; > 20 → oldest dropped
-  R->>S: flush (2 s after a report · 5 s after launch · on foreground), oldest first, 10 s timeout, token if any
+  R->>S: flush (2 s after a report · 5 s after launch · on foreground), oldest first, 10 s timeout, token only if the role still matches, silentStatus
   alt 204 / 4xx for good
     R->>Q: remove
   else offline / 429 / 5xx
-    R->>Q: keep for the next flush
+    R->>Q: keep — backoff (Retry-After, else 60 s doubling ≤ 30 min)
   end
-  S->>S: throttle 30/min per IP (/64) + per user · validate · token → role only (invalid token ignored, never 401)
-  S->>DB: scrub → fingerprint(name, message, first frame) → upsert fingerprint +1, (version, platform) row +1 + sample, hour +1
+  S->>S: body ≤ 16 KB · throttle (signed in 30/min per IP + per user; signed out 10/min + 300/day per IP) · validate · token → role only (never 401)
+  S->>DB: scrub → fingerprint(name, message, first frame); > 200 new / h → overflow · upsert fingerprint +1, (version, platform) row +1 + sample, hour +1
   alt new fingerprint or hourly bucket = 20
-    S->>J: dispatch(app_error_new | app_error_spike)
-    J->>DB: claim last_alerted_at (≤ 1 per fingerprint per 24 h)
+    S->>J: dispatch(app_error_new | app_error_spike) on queue alerts
+    J->>DB: claim last_alerted_at (≤ 1 per fingerprint per 24 h); > 10 posts / h → counted, one suppressed summary
     J->>D: embed: name, message, scope, versions, platforms, 24 h count — no user / family / pet
   end
   Note over DB: system-health:prune (03:29 UTC) deletes everything not seen for 30 days · /admin/system-health »App errors« (superadmin, 24 h / 7 d)
