@@ -32891,6 +32891,510 @@
       }
     }
   },
+  "akita": {
+    "_note": "Added 2026-10-24 (M5-R10-63, unattended run — appended after the Bloodhound: AKC 2024 No. 59 'Akita', S174 full-list table fetched 2026-10-24 '59 | Akita'). The AKC 'Akita' is the American type: AKC, The Kennel Club and the FCI treat the American Akita and the Japanese Akita Inu as separate breeds (Wikipedia S512, tier C, background only); FCI No. 344 'AMERICAN AKITA' (S506). Quotes as returned by the web-fetch tool on 2026-10-24 (short quotes; fragments marked as such); paraphrase only in notes. Sources S506–S511 (+ S512 tier C; reused S8, S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. Identity, height, colours and appearance from the FCI nomenclature (S506) and the FCI standard in English (S507, published 11.02.2026; no weight in the standard). The RKC Breeds A–Z page (royalkennelclub.com …/utility/akita) was refused by the fetch tool (provenance; both old thekennelclub.org.uk addresses redirect there) → PDSA (S508) for key facts, exercise, grooming and chips; PetMD (S510) for the second view; AKC standard (S509) for height and colours. Lifespan: PDSA 'Under 10 years' has no lower bound, the Dogs Trust McMillan 2024 table (S123) was refused by the fetch tool (11.4 years only via Wikipedia, S512, tier C) → the Kennel Club / BSAVA 2004 survey median 9 y 11 m (S511, 28 deaths) as the closest row; the senior boundary is Claude's suggestion (verified=false, open for David). Names: AKC / RKC 'Akita', FCI 'American Akita'; Slovenian »ameriška akita« (FCI name) — no KZS page checked, open for David.",
+    "identity": {
+      "value": "FCI No. 344, Group 5 Section 5 (Asian Spitz and related breeds), Japan",
+      "unit": "—",
+      "source_id": "S506",
+      "quote": "AMERICAN AKITA",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S506, as returned): breed 'AMERICAN AKITA' (No. 344), group 'n°5 - Spitz and primitive types', section 'Asian Spitz and related breeds', country of origin 'JAPAN.' with the country of development 'UNITED STATES OF AMERICA.'; date of publication of the official valid standard '2/11/2026'; 'Recognized on a definitive basis', no working trial. Japan is already in FCI_ORIGINS (JP, Shiba Inu). The section number 5 is the FCI's 'Asian Spitz and related breeds' section (as for the Shiba Inu, S377). AKC and RKC name: 'Akita' (S174, S509)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S508",
+      "quote": "Size: Large",
+      "confidence": "high",
+      "notes": "PDSA key fact 'Size: Large' (S508; its page sits under 'large-dogs'). PDSA 31–59 kg (S508) = 68–130 lb → mostly the 'Large' class of S10 for growth (heavy males 'Giant')."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            66,
+            71
+          ],
+          "female": [
+            61,
+            66
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S507",
+        "quote": "Height at withers: For males: 66 to 71 cm",
+        "confidence": "high",
+        "notes": "FCI standard No. 344 (S507, English, published 11.02.2026): 'Height at withers: For males: 66 to 71 cm' and 'for females: 61 to 66 cm' (as returned); disqualifying 'Males under 63,5 cm; females under 58,5 cm.' AKC standard (S509): 'Males 26 to 28 inches at the withers; bitches 24 to 26 inches.' (66–71 / 61–66 cm) — agrees. PDSA (S508) 'Average height: 61-71 cm'."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": [
+          31,
+          59
+        ],
+        "unit": "kg",
+        "source_id": "S508",
+        "quote": "Average weight: 31-59 kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact (S508), one range for both sexes — the game range (adult_weight_kg). The FCI standard (S507) and the AKC standard (S509) give no weight. PetMD (S510): 'they weigh 70–130 pounds and stand 24–28 inches tall.' (32–59 kg) — agrees.",
+        "alternatives": [
+          {
+            "value": [
+              32,
+              59
+            ],
+            "unit": "kg",
+            "source_id": "S510",
+            "quote": "they weigh 70–130 pounds and stand 24–28 inches tall.",
+            "notes": "PetMD (S510), 70–130 lb = 31.8–59.0 kg, no sex split."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "V–VI (30–40 and >40 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 31–59 kg spans the bands 30–40 and '>40 (no curve)'. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 31–59 kg (S508) = 68–130 lb → mostly 'Large'; heavy males 'Giant (over 100 pounds) | 18–24 months' — alternative. The game is unaffected (the puppy cap of 120 min is reached at 12 months).",
+        "alternatives": [
+          {
+            "value": "18–24 months",
+            "source_id": "S10",
+            "quote": "Giant (over 100 pounds) | 18–24 months",
+            "notes": "Heavy males over 100 lb (45 kg)."
+          }
+        ]
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Akita growth curve found."
+      }
+    },
+    "lifespan": {
+      "pdsa": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S508",
+        "quote": "Average lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact (S508). No lower bound → not usable for the senior boundary. Conflicts with PetMD 10–14 years (S510) and McMillan 2024 11.4 y (only via Wikipedia, S512) → no shorter_lifespan chip (conflicting sources), open for David."
+      },
+      "petmd": {
+        "value": [
+          10,
+          14
+        ],
+        "unit": "years",
+        "source_id": "S510",
+        "quote": "The Akita lifespan is typically 10–14 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S510) — tier B; its page treats the American and the Japanese type together ('considered the same breed', FAQ, paraphrase). Not in the runbook's lifespan order (McMillan → VetCompass → RKC lower bound); alternative for the senior boundary (0.75 × 10 × 12 = 90)."
+      },
+      "median_kc_survey": {
+        "value": 9.9167,
+        "unit": "years",
+        "source_id": "S511",
+        "quote": "The median age at death for the Akita breed was 9 years and 11 months (min = 4 months, max = 13 years and 8 months)",
+        "confidence": "medium",
+        "notes": "Kennel Club / BSAVA Scientific Committee, Purebred Dog Health Survey 2004, Akita section (S511): 'A total of 28 deaths were reported …' (fragment). An older, owner-reported UK survey of 28 deaths — the closest breed median reachable in this run (Bloodhound precedent, S505); never shown as a statistic in the app. Causes of death (research only): cancer, cardiac and gastrointestinal (incl. GDV) the leading groups."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S123",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Dogs Trust table of McMillan et al. 2024 data (S123): not reachable this run (provenance refusal). Wikipedia (S512, tier C): 'A UK study found a life expectancy of 11.4 years for the breed' — not verified in the paper or the table → open for David (0.75 × 11.4 × 12 = 102.6 → senior 103 if confirmed). UNSOURCED value."
+      },
+      "senior_from": {
+        "value": 7.4375,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × Kennel Club 2004 survey median 9 y 11 m (S511) → 0.75 × 9.9167 = 7.44 y = 89.25 → 89 months. The runbook rule yields no value: McMillan 2024 not reachable (S123), no VetCompass Akita median found, no RKC page (PDSA 'Under 10 years' has no lower bound) → closest row (Bernese Mountain Dog / Bloodhound precedent): a published breed median, seeded verified=false (Claude's suggestion, open for David). Alternatives: PetMD lower bound 10 y (S510) → 90; McMillan 2024 11.4 y via Wikipedia (S512, tier C) → 103; Dogs Trust > 7 y (S14) = 84.",
+        "derived_from": [
+          "S11",
+          "S511"
+        ],
+        "months": 89,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 120",
+        "unit": "minutes/day",
+        "source_id": "S508",
+        "quote": "Minimum exercise (per day): 2 hours",
+        "confidence": "high",
+        "notes": "PDSA key fact (S508); PDSA text: 'Your Akita will need a minimum of two hours of exercise every day – this can be spent running and walking.' The RKC breed page (preferred) was refused by the fetch tool → PDSA (runbook rule). PetMD (S510) gives no minutes."
+      },
+      "daily_text": {
+        "value": "a minimum of two hours every day, running and walking; many enjoy a swim",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "Your Akita will need a minimum of two hours of exercise every day – this can be spent running and walking.",
+        "confidence": "high",
+        "notes": "PDSA (S508); 'Akitas tend to love water so many enjoy a swim every now and again.'; 'It’s best to keep them on a lead when walking just in case they smell or spot something to chase!'"
+      },
+      "after_meals": {
+        "value": "leave a gap after eating and before exercising (GDV / bloat)",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S508), feeding section; the same page lists GDV ('bloat', an emergency, health.gdv). PetMD (S510): 'Large dogs with deep chests, including the Akita, are at an increased risk of gastric dilatation-volvulus.' The source gives no length of the gap → proposed_game_parameters.akita.meal_exercise_gap (built, M5-R16)."
+      },
+      "heat": {
+        "value": "prone to overheating in very hot weather",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "they are prone to overheating in very hot weather.",
+        "confidence": "high",
+        "notes": "PDSA (S508, fragment). Not a flat-faced breed → no DOG_NO_WALK_IN_HEAT row (runbook §3: that row is for flat-faced breeds); a fact for the breed text only."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "loyal, independent and intelligent; alert, dignified and courageous; can be reserved with new people",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "Originating from Japan, Akitas are known for being incredibly loyal family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S508); 'Akitas are independent and due to their intelligence this is often mistaken for stubbornness.' FCI standard (S507): 'Alert and responsive, dignified and courageous.' PetMD (S510): 'Akitas are strong-willed dogs bred to work independently.'; they 'can be reserved or even uncomfortable around new people at first.' (fragment)."
+      },
+      "experienced_owner": {
+        "value": "very large — best with experienced owners; not for inexperienced owners",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "While Akitas adapt well to family life, they are also very large and therefore would do best with experienced owners.",
+        "confidence": "high",
+        "notes": "PDSA (S508); also 'they’re not suitable for inexperienced owners' (fragment). PetMD (S510): 'An experienced pet parent is best for raising an Akita puppy.' Basis of experienced_owner."
+      },
+      "family": {
+        "value": "loyal family pets that adapt well to family life, but best with experienced owners and not with young children",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "Originating from Japan, Akitas are known for being incredibly loyal family pets.",
+        "confidence": "medium",
+        "notes": "PDSA (S508). The family statement comes with the advice against young children and for experienced owners → no family_pet chip (Bloodhound / Giant Schnauzer precedent: an A/B family statement with a strong caveat is not used as a 'suits' chip; open for David)."
+      },
+      "small_children": {
+        "value": "not recommended with young children — could knock them over; protective of toys and food",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "we wouldn’t recommend an Akita if you have young children",
+        "confidence": "high",
+        "notes": "PDSA (S508, fragment; continues 'as they could accidentally knock them over…'); 'Akitas can also be protective and possessive with toys and food, which younger children may not understand.'; 'Always supervise children and vulnerable adults with your Akita' (fragment). PetMD (S510): 'Akitas may also not have much patience for young children.' Basis of not_for_small_children; never small_children or children."
+      },
+      "time_alone": {
+        "value": "strongly attached to the family; many don’t cope well alone — never more than four hours",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "we wouldn’t recommend leaving them alone as many don’t cope well with this",
+        "confidence": "high",
+        "notes": "PDSA (S508, fragment); 'this should never be for more than four hours' (fragment). Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "high prey drive — not with smaller pets; wary of unfamiliar dogs (ongoing socialisation)",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "Akitas were often used for hunting in the past and so have a high prey drive.",
+        "confidence": "high",
+        "notes": "PDSA (S508, fragment as returned); 'we wouldn’t recommend keeping an Akita with smaller pets.' (fragment); 'Akitas tend to be naturally wary of unfamiliar dogs so socialisation will need to be ongoing throughout their lives.' FCI (S507): 'American Akitas may be highly responsive of other dogs, particularly of the same sex.' PetMD (S510): 'Akita dogs may do best as the only pet at home.' High prey drive → chases_small_pets (runbook rule, appended at the end of the consider list). Never other_pets."
+      },
+      "socialisation": {
+        "value": "well socialised from a young age, and ongoing throughout life",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "your dog will need to be well socialised from a young age",
+        "confidence": "high",
+        "notes": "PDSA (S508, fragment as returned). A need (runbook M5-R17) → proposed_game_parameters.akita.socialisation (DOG_SOCIALISATION row). PetMD (S510): 'Begin training and socializing your Akita puppy as soon as you bring them home.'"
+      },
+      "drooling": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No drooling statement on the pages read → no drools tag."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found → no chews_when_bored tag. PDSA (S508): puzzles and rotating toys help prevent boredom (paraphrase) — no explicit need statement → no needs_mental_stimulation tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement found → no food_motivated_weight tag. PDSA (S508): feed at the same time every day; treats no more than 10 % of the daily calories (general advice)."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. The RKC Breeds A–Z page (Breed Watch category, health tests) was not reachable → no welfare chip and no breeder-checklist tests (open for David). PDSA (S508) and PetMD (S510) health lists.",
+      "hip_dysplasia": {
+        "value": "hip dysplasia (can lead to arthritis)",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "Hip dysplasia",
+        "confidence": "high",
+        "notes": "PDSA (S508) health list item (as returned; paraphrase in the second fetch: 'which can lead to arthritis'). PetMD (S510): 'Akitas can be prone to hip dysplasia, an orthopedic condition that affects the hip joints.' Register health key hip_dysplasia_arthritis."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (GDV, bloat)",
+        "unit": "—",
+        "source_id": "S510",
+        "quote": "Large dogs with deep chests, including the Akita, are at an increased risk of gastric dilatation-volvulus.",
+        "confidence": "high",
+        "notes": "PetMD (S510); PDSA (S508): GDV, often known as bloat, 'This is an emergency and requires urgent veterinary attention.' → meal_exercise_gap (M5-R16). Register health key bloat_gdv."
+      },
+      "eyes": {
+        "value": "eye problems — cataracts, multifocal retinal dysplasia, progressive retinal atrophy, glaucoma, entropion, ectropion",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "Eye problems, including cataracts and multifocal retinal dysplasia",
+        "confidence": "high",
+        "notes": "PDSA (S508) health list (as returned; also 'Progressive retinal atrophy', 'Glaucoma', 'Entropion', 'Ectropion' as items). PetMD (S510): microphthalmia, 'a congenital (present at birth) disorder in which one or both eyes are smaller than usual.' (fragment). Register health key eye_problems_pra_cataracts_entropion. No eyelid chip: the welfare rule needs a Breed Watch / BVA conformation point (RKC page not reachable)."
+      },
+      "autoimmune": {
+        "value": "autoimmune diseases, including sebaceous adenitis (skin glands) and VKH-type syndrome",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "Autoimmune diseases, including sebaceous adenitis and hypothyroidism",
+        "confidence": "high",
+        "notes": "PDSA (S508) health list (as returned); also 'VKH-type syndrome' (Vogt-Koyanagi-Harada). PetMD (S510): 'Sebaceous adenitis … is a disease that affects a dog's skin glands.' (paraphrase of the returned fragment). Register health key autoimmune_conditions."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism (underactive thyroid)",
+        "unit": "—",
+        "source_id": "S510",
+        "quote": "Hypothyroidism is common in the Akita dog breed.",
+        "confidence": "medium",
+        "notes": "PetMD (S510, as returned: '… is common in the Akita dog breed.'); PDSA (S508) lists it under autoimmune diseases. Register health key hypothyroidism (no number)."
+      },
+      "skin": {
+        "value": "skin problems",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "Skin problems",
+        "confidence": "medium",
+        "notes": "PDSA (S508) health list item. Not a separate register key (covered by autoimmune_conditions / hypothyroidism sentences)."
+      },
+      "breed_watch": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — the RKC Breeds A–Z page (Breed Watch category and points of concern) was refused by the fetch tool on 2026-10-24. No welfare chip without it (runbook §3); open for David."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 54,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 54 | Akita |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-10-13 for the Boston Terrier): rank 54, shared with the Boston Terrier, under 'Average Working/Obedience Intelligence' (ranks 40–54). Coren's own top / bottom-10 article (S34) does not list the breed (runbook: rank from S35). Coren ranked the 'Akita' before the FCI split — applied to the AKC Akita. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": "Understanding of new commands: 25 to 40 repetitions.; Obey first command: 50% of the time or better.;",
+        "confidence": "medium",
+        "notes": "Tier 'Average Working/Obedience Intelligence' = ranks 40–54 (S35, as returned for the Boston Terrier). Tier definitions from Wikipedia; verify in book."
+      },
+      "training_notes": {
+        "value": "learns quickly, also bad habits — consistent, positive, reward-based training with clear boundaries",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "Akitas are independent and due to their intelligence this is often mistaken for stubbornness.",
+        "confidence": "medium",
+        "notes": "PDSA (S508); training advice paraphrased (reward-based, firm but fair, an accredited trainer for inexperienced owners)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.akita.learning_multiplier (1.0, runbook rule: Average tier, rank 54).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "large-sized, sturdily built, well balanced dog with much substance and heavy bone; broad head, small eyes, erect ears, large curled tail",
+        "unit": "—",
+        "source_id": "S507",
+        "quote": "Large-sized dog, sturdily built, well balanced, with much substance and heavy bone.",
+        "confidence": "high",
+        "notes": "FCI standard (S507), general appearance. AKC standard (S509): 'Large, powerful, alert, with much substance and heavy bone.'; 'The broad head, forming a blunt triangle, with deep muzzle, small eyes and erect ears carried forward' (fragment)."
+      },
+      "colours": {
+        "value": [
+          "red_fawn_black_mask",
+          "pinto",
+          "brindle",
+          "white"
+        ],
+        "unit": "list",
+        "source_id": "S507",
+        "quote": "Any colour like red, fawn, white, etc; or even pinto and brindle.",
+        "confidence": "high",
+        "notes": "FCI standard (S507), colour: 'Colours are brilliant and clear, and markings are well balanced, with or without mask or blaze.'; 'White dogs (solid in colour) have no mask.'; 'Pinto have a white ground colour with large, evenly placed patches covering head and more than one-third of body.' Disqualifying (S507): 'Merle marking pattern; Liver color.' AKC (S509): 'Any coloring including white; brindle; or pinto. Exceptions: Merle marking pattern. Liver color.' The game offers four typical standard colours; never merle or liver."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Red fawn with a black mask first with the highest weight (the portrait default), then pinto, brindle, white."
+      },
+      "coat": {
+        "value": "double coat: straight, harsh outer coat standing somewhat off the body; thick, soft, dense, shorter undercoat",
+        "unit": "—",
+        "source_id": "S507",
+        "quote": "Outer coat straight, harsh/stiff and standing somewhat off body.",
+        "confidence": "high",
+        "notes": "FCI standard (S507); 'Undercoat thick, soft, dense and shorter than outer coat.' AKC (S509): 'Double-coated.' PDSA (S508) 'Coat length: Short'."
+      },
+      "nose": {
+        "value": "broad and black",
+        "unit": "—",
+        "source_id": "S507",
+        "quote": "Broad and black.",
+        "confidence": "high",
+        "notes": "FCI standard (S507); slight lack of pigment acceptable in white dogs only (paraphrase)."
+      },
+      "eyes": {
+        "value": "dark brown, relatively small, not prominent, almost triangular",
+        "unit": "—",
+        "source_id": "S507",
+        "quote": "Dark brown, relatively small, not prominent, almost triangular in shape.",
+        "confidence": "high",
+        "notes": "FCI standard (S507)."
+      },
+      "ears": {
+        "value": "strongly erect, small in relation to the head",
+        "unit": "—",
+        "source_id": "S507",
+        "quote": "Strongly erect and small in relation to the rest of the head.",
+        "confidence": "high",
+        "notes": "FCI standard (S507); disqualifying 'Drop, hanging or folded ears.'"
+      },
+      "tail": {
+        "value": "large, well furnished, set high, carried over the back in a three-quarter, full or double curl",
+        "unit": "—",
+        "source_id": "S507",
+        "quote": "Large and well furnished with hair, set high and carried over back or against flank",
+        "confidence": "high",
+        "notes": "FCI standard (S507, fragment); 'in a three-quarter, full, or double curl, always dipping to or below level of back.'; disqualifying 'Sickle or uncurled tail.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA (S508) and PetMD (S510): the RKC Breeds A–Z page was refused by the fetch tool on 2026-10-24, so there are no rkc_* fields (no 'Size of home', no 'Grooming' key fact). Woodgreen not attempted.",
+      "pdsa_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "Size: Large",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Size'."
+      },
+      "pdsa_exercise": {
+        "value": "a minimum of two hours every day",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "Minimum exercise (per day): 2 hours",
+        "confidence": "high",
+        "notes": "PDSA key fact (S508). Basis of active_family and long_daily_exercise."
+      },
+      "pdsa_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "at minimum a weekly brush to help get rid of dead hairs.",
+        "confidence": "high",
+        "notes": "PDSA (S508, fragment as returned) — 'a weekly brush' read as the category 'Once a week' (our wording; quote verbatim); 'You may want to brush your Akita more regularly during the warmer months when they shed more.' (seasonal, not modelled). PetMD (S510) 'Daily brushing is best to reduce shedding and prevent matting.' conflicts → no frequent_grooming chip; brushing 1× a week by the source order (PDSA before PetMD), PetMD daily listed for David."
+      },
+      "pdsa_professional_grooming": {
+        "value": "a professional groomer every three months or so (optional)",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "You might like to get your Akita professionally groomed every three months or so.",
+        "confidence": "medium",
+        "notes": "PDSA (S508). A stated frequency → groomer reminder every 12 program weeks (runbook §3 'Breed care tasks', M5-R18; '3 months' → 84 days)."
+      },
+      "pdsa_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "Although their fur is short, it's dense, so Akitas shed a lot!",
+        "confidence": "high",
+        "notes": "Read as 'sheds: yes' (our wording; quote verbatim). PetMD (S510): 'Akitas have a thick double coat that sheds year-round, with heavy shedding in the spring and fall.' Basis of sheds."
+      },
+      "pdsa_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "Coat length: Short",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Coat length'."
+      },
+      "pdsa_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "Average lifespan: Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact. shorter_lifespan criterion (A/B upper bound ≤ 10 years) met, but PetMD 10–14 years (S510) conflicts → no chip (open for David)."
+      },
+      "petmd_ears": {
+        "value": "occasional ear cleanings; ask the vet how often",
+        "unit": "—",
+        "source_id": "S510",
+        "quote": "Akitas can also benefit from occasional ear cleanings.",
+        "confidence": "medium",
+        "notes": "PetMD (S510); 'Talk to your vet about how and how often you should clean your dog's ears.' No frequency → no task (runbook §3 'Breed care tasks')."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -49242,6 +49746,306 @@
         "confidence": "high",
         "notes": "Colours of the FCI standard (S501): black and tan, liver and tan, red. Welfare (RKC Breed Watch Category 2, S502; PDSA eye problems, S503): moderate skin, eyelids in normal contact. Weights unsourced in prompts. Black and tan as the portrait default — Claude's choice (listed first by the FCI).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black and tan is the portrait default; standard colours only (black and tan, liver and tan, red); moderate skin and healthy eyelids"
+      }
+    },
+    "akita": {
+      "_note": "Unattended run M5-R10-63 (2026-10-24): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry — except the senior boundary (Claude's suggestion, verified=false). No new vocabulary key, no new register health key. Sourced needs built from day one: weekly brushing (PDSA S508 'at minimum a weekly brush', M5-R13 → 1); puppy socialisation (PDSA S508 quote, M5-R17); the 'wait with the walk' digestion warning (PDSA S508 gap quote, M5-R16); a groomer reminder every three months (PDSA S508, M5-R18 care task, 84 days). Exercise from PDSA (S508, minimum 2 hours; RKC page not reachable). Senior 89 from the Kennel Club / BSAVA 2004 survey median 9 y 11 m (S511) — closest row, open for David (PetMD lower bound 10 y → 90; McMillan 2024 11.4 y only via Wikipedia → 103). No RKC Breed Watch → no welfare chip; in marketing.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S508",
+        "quote": null,
+        "confidence": "high",
+        "notes": "PDSA 'Minimum exercise (per day): 2 hours' (S508); 'Your Akita will need a minimum of two hours of exercise every day'. RKC breed page not reachable → PDSA (runbook: RKC preferred, else PDSA). Rule: one number N ('minimum N') → N = 120.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (PDSA S508 'Minimum exercise (per day): 2 hours'; RKC page not reachable)"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S508",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 89
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 89 = round(0.75 × 9.9167 y × 12) = round(89.25) (S11 + Kennel Club / BSAVA 2004 survey median 9 y 11 m, S511 — no McMillan 2024 value reachable, no VetCompass median, no RKC page). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S511"
+        ],
+        "alternatives": {
+          "senior_petmd_lower_bound_10_y": 90,
+          "senior_mcmillan_via_wikipedia_11_4_y": 103,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 89 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 89,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 9.9167 y × 12) = 89 (AAHA last 25 % of lifespan S11 × Kennel Club / BSAVA 2004 survey median 9 y 11 m, S511). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: the Dogs Trust table S123 was refused by the fetch tool, no VetCompass Akita median found, and the RKC page was not reachable (PDSA 'Under 10 years' has no lower bound). Closest row (Bernese Mountain Dog / Bloodhound precedent) = a published breed median. Alternatives: PetMD lower bound 10 y (S510) → 90; McMillan 2024 11.4 y via Wikipedia (S512, tier C) → round(102.6) = 103; Dogs Trust > 7 y (S14) = 84. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S511"
+        ],
+        "alternatives": {
+          "senior_petmd_lower_bound_10_y": 90,
+          "senior_mcmillan_via_wikipedia_11_4_y": 103,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "predlog Claude 2026-10-24 (najbližja vrstica pravila runbooka, M5-R10-63) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 89
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 89 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 54 (S35), tier 'Average' (40–54) → 1.0 (as the Boston Terrier r54). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 54, Average tier, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources. PDSA (S508): feed at the same time every day (general advice — the game keeps its meal windows).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S508",
+        "quote": "at minimum a weekly brush to help get rid of dead hairs.",
+        "confidence": "medium",
+        "notes": "akita.suitability.pdsa_grooming. PDSA 'at minimum a weekly brush' → 1 (runbook dog-grooming rule: 'Once a week' → 1; no RKC key fact reachable). PetMD (S510) 'Daily brushing is best to reduce shedding and prevent matting.' → 7 (alternative, listed for David). Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": 7,
+            "source_id": "S510",
+            "quote": "Daily brushing is best to reduce shedding and prevent matting.",
+            "notes": "PetMD (S510) — open for David."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (PDSA »at minimum a weekly brush«; PetMD vsak dan — za Davida); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S508",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S508), akita.exercise.after_meals; the same page lists GDV (health.gdv). Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S508",
+        "quote": "your dog will need to be well socialised from a young age",
+        "confidence": "high",
+        "notes": "akita.behaviour.socialisation (PDSA S508, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PDSA S508)"
+      },
+      "professional_grooming": {
+        "value": "a professional groomer every three months or so",
+        "unit": "groomer visit (sourced need)",
+        "source_id": "S508",
+        "quote": "You might like to get your Akita professionally groomed every three months or so.",
+        "confidence": "medium",
+        "notes": "PDSA (S508), akita.suitability.pdsa_professional_grooming. Built as the parent's groomer reminder (M5-R18): 1 per 84 program days ('every three months' → 12 program weeks; English Springer / English Cocker precedent). Never scored.",
+        "decision": "potrdil David 24. 10. 2026 (M5-R18, pravilo runbooka »Breed care tasks«): opomnik za obisk pasjega frizerja vsakih 12 programskih tednov (PDSA »every three months or so«)"
+      },
+      "ear_care": {
+        "value": "occasional ear cleaning (no frequency)",
+        "unit": "care fact (no task)",
+        "source_id": "S510",
+        "quote": "Akitas can also benefit from occasional ear cleanings.",
+        "confidence": "medium",
+        "notes": "PetMD (S510), akita.suitability.petmd_ears; 'Talk to your vet about how and how often you should clean your dog's ears.' No frequency → no task (runbook §3 'Breed care tasks', David 2026-10-24); a fact for the breed text only.",
+        "decision": "potrdil David 24. 10. 2026 (pravilo runbooka »Breed care tasks«): brez pogostosti v viru → brez naloge"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-63); refs = JSON paths in this file. No new vocabulary key. No percentages in the app.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S508"
+            ],
+            "refs": [
+              "akita.exercise.adult",
+              "akita.suitability.pdsa_exercise"
+            ],
+            "quote": "S508 'Minimum exercise (per day): 2 hours'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S508"
+            ],
+            "refs": [
+              "akita.exercise.adult",
+              "akita.suitability.pdsa_exercise"
+            ],
+            "quote": "S508 'Minimum exercise (per day): 2 hours'"
+          },
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S508"
+            ],
+            "refs": [
+              "akita.behaviour.experienced_owner"
+            ],
+            "quote": "S508 'While Akitas adapt well to family life, they are also very large and therefore would do best with experienced owners.'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S508"
+            ],
+            "refs": [
+              "akita.behaviour.small_children"
+            ],
+            "quote": "S508 'we wouldn’t recommend an Akita if you have young children'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S508"
+            ],
+            "refs": [
+              "akita.behaviour.time_alone"
+            ],
+            "quote": "S508 'we wouldn’t recommend leaving them alone as many don’t cope well with this'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S508"
+            ],
+            "refs": [
+              "akita.suitability.pdsa_shedding"
+            ],
+            "quote": "S508 'Although their fur is short, it's dense, so Akitas shed a lot!'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S508"
+            ],
+            "refs": [
+              "akita.behaviour.other_pets"
+            ],
+            "quote": "S508 'Akitas were often used for hunting in the past and so have a high prey drive.'",
+            "note": "Runbook rule (David 2026-10-12): high prey drive → appended at the end of the consider list."
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "PDSA 'incredibly loyal family pets' (S508) comes with 'not with young children' and 'experienced owners' (S508); PetMD: best as the only pet, patience for young children limited (S510) → no suits chip (open for David).",
+          "children": "PDSA advises against young children (S508) → not_for_small_children; PetMD: may live well with older children (S510) — no explicit children rating.",
+          "small_children": "PDSA: not recommended with young children (S508).",
+          "first_time_owner": "PDSA: not suitable for inexperienced owners (S508).",
+          "apartment": "No RKC 'Size of home' key fact (page not reachable); a very large dog (S508).",
+          "large_home": "Only from the RKC key fact 'Large house' (runbook) — not reachable.",
+          "other_pets": "PDSA: high prey drive, not with smaller pets (S508); PetMD best as the only pet (S510) → chases_small_pets.",
+          "frequent_grooming": "PDSA weekly (S508) vs PetMD daily (S510) — conflicting sources → no chip.",
+          "low_shedding": "PDSA 'shed a lot' (S508) → sheds.",
+          "shorter_lifespan": "PDSA 'Under 10 years' (S508) vs PetMD 10–14 years (S510) and McMillan 2024 11.4 y (only via Wikipedia, S512) — conflicting sources → no chip (open for David).",
+          "needs_mental_stimulation": "PDSA mentions puzzles and rotating toys against boredom (paraphrase only) — no explicit need statement returned verbatim.",
+          "drools": "No drooling statement.",
+          "heat": "PDSA: prone to overheating in very hot weather (S508) — not a flat-faced breed, no chip in the vocabulary for it (breed text only).",
+          "welfare": "No RKC Breed Watch category reachable; not flat-faced → no welfare chip (open for David)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family; consider long_daily_exercise, experienced_owner, not_for_small_children, needs_company, sheds, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (no veterinary advice against advertising the breed type)",
+        "unit": "—",
+        "source_id": "S508",
+        "quote": "would do best with experienced owners",
+        "confidence": "medium",
+        "notes": "Not flat-faced; the only veterinary advice against advertising a breed type is for flat-faced breeds (BVA S92). Marketing never promises health; never with small children (S508), never next to small pets (S508), never as a guard dog or as a beginner's dog (S508), never confused with the Japanese Akita Inu.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (not flat-faced, no veterinary advice against advertising)"
+      },
+      "ai_appearance": {
+        "value": "adult Akita (American type), red fawn with a black mask (default); large, sturdy, well balanced dog with heavy bone; broad head forming a blunt triangle, deep muzzle, small dark brown eyes; strongly erect small ears; thick double coat; large tail curled over the back; never merle or liver",
+        "unit": "—",
+        "source_id": "S507",
+        "quote": "Any colour like red, fawn, white, etc; or even pinto and brindle.",
+        "confidence": "high",
+        "notes": "Colours of the FCI standard (S507) / AKC standard (S509): any colour incl. white, pinto and brindle, with or without mask; disqualifying merle and liver. The game offers four typical standard colours (red fawn with a black mask, pinto, brindle, white). Weights unsourced in prompts. Red fawn with a black mask as the portrait default — Claude's choice.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): red fawn with a black mask is the portrait default; standard colours only (never merle or liver); natural erect ears and curled tail"
       }
     }
   }
